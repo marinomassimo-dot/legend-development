@@ -5080,3 +5080,154 @@ inverte**. È la stessa amputazione di clausola trovata oggi su `CORPUS-STUB-139
 porti figure e bibliografia (HTML/PDF dell'editore), e serve a una sola domanda precisa: **quali
 primari reggano l'arco HIF1α**. Finché resta aperto, l'arco va citato per quello che la prosa nomina
 e non oltre.
+
+---
+
+## FT-112 — `PMID 42464650` · l'avviso di **ritrattazione** di `PMID 23446842` · voce di stato, non debito di lettura
+
+**Paper:** PMID 42464650 — *"[Retracted] p73 participates in WWOX-mediated apoptosis in leukemia
+cells"*, *Int J Mol Med* 2026, PMCID `PMC13384538`, **CC BY 4.0, open access verificato**
+([DOI](https://doi.org/10.3892/ijmm.2026.5925)). Lin D, …, Lan F.
+
+**Che cos'è.** È l'**avviso editoriale** che ritratta `PMID 23446842` (Lin D *et al.*, *Int J Mol
+Med* 2013;31(4):849–54, [DOI](https://doi.org/10.3892/ijmm.2013.1289)). **Non è l'articolo
+ritrattato.** La distinzione è la stessa che `FT-088` tiene per l'*Expression of Concern* del PNAS:
+un avviso è una fonte a sé, con una propria identità bibliografica.
+
+**Il motivo dichiarato, dal record PubMed dell'avviso:** nella Fig. 4C p. 853, linea Jurkat, *"the
+p73 bands shown to portray the 72 and 96 h experiments for pGC‑FU‑WWOX were strikingly similar to
+the p73 bands shown to represent the 48 and 72 h experiments for pGC‑FU‑GFP"* — duplicazione di
+bande, giudicata dall'Editorial Office una preoccupazione legittima. ⚠️ **Questa frase viene
+dall'abstract/nota del record, non da una lettura del corpo:** l'avviso **non è stato letto** e
+questa voce **non lo promuove a lettura**.
+
+**Perché non è un debito di lettura.** Lo stato che l'avviso certifica **è già registrato e già
+operativo** nel repository, e lo era prima che l'avviso entrasse in coda:
+[[paper_registry_current#CORPUS-STUB-179]] porta `🔴 PUBLICATION_INTEGRITY_HOLD — retracted`, con
+`No canonical claim rests on this record`, e la ricevuta legacy `FTR-20260726-23446842-01` è stata
+messa in quarantena append-only da `FTR-20260806-23446842-02`. **Nessuna claim canonica poggia su
+quell'articolo, né direttamente né per un hop.** Leggere l'avviso non cambierebbe nulla di
+canonico; ometterlo dalla coda lascerebbe invece un PMID citato nel livello di ragionamento senza
+ancoraggio, che è esattamente ciò che il cricchetto `UNREAD_PREMISE` esiste per impedire — **e che
+ha correttamente segnalato oggi**, su questo PMID e su nessun altro.
+
+**Come è stato trovato.** Spazzata di integrità del 2026-09-21 sull'intera letteratura WWOX:
+`WWOX AND (Retracted Publication[pt] OR Retraction of Publication[pt] OR Expression of Concern[pt]
+OR Published Erratum[pt])` → **12 record in tutto PubMed**, di cui **quattro** riguardano carta che
+LEGEND tiene (`38355659`, `30470736`, `28373548`, `23446842`). 🟢 **Tutti e quattro erano già
+classificati correttamente**; l'unico residuo è l'identità bibliografica di questo avviso.
+**Risultato della spazzata: zero difetti nuovi.** Vedi
+[[next_node_scout_20260921_orchestrator]] § 1.
+
+**Priorità:** BASSA come lettura, ALTA come voce di stato. **Current status:** ⬜ permanente.
+**Next action:** nessuna. Non ri-eseguire la spazzata di integrità senza nuova letteratura datata.
+
+---
+
+## FT-113 — `NODE_WWOX_HUMAN_PRENATAL_AND_INFANT_PHENOTYPE` · Wave 1, cinque paper, acquisizione verificata
+
+**Papers:** PMID 28763065 · PMID 41378749 · PMID 37974179 · PMID 35712340 · PMID 42589397 — cinque
+voci, tutte open access verificate il 2026-09-21 con `convert_article_ids` + `get_copyright_status`.
+
+**Che cos'è.** La coda di lettura del nodo selezionato dallo scout del 2026-09-21
+([[next_node_scout_20260921_orchestrator]] § 3–§ 4). Domanda di ricerca: **che cosa è
+misurabilmente diverso nel cervello umano, prima della nascita e nell'infanzia, quando WWOX è
+perso o variato — e qualcosa di tutto ciò discrimina le classi genotipiche?**
+
+Il nodo vince **sulla fase di vita**, non sul volume: ogni voce è umana e misurata in epoca
+prenatale, neonatale o infantile — cioè *prima* della finestra che il batch Chang aveva superato.
+
+| # | PMID | PMCID | Tenuto da LEGEND? | Stato |
+|---|---|---|---|---|
+| W-1 | `28763065` | `PMC5611727` ✅ OA | 🔴 **no, in nessuna superficie** | assegnato, in lettura |
+| W-2 | `41378749` | `PMC12697008` ✅ OA | 🔴 **no** | assegnato, in lettura |
+| W-3 | `37974179` | `PMC10652538` ✅ OA | `CORPUS-STUB-096` / `LIT-0118`, `not_processed` | ⬜ da assegnare |
+| W-4 | `35712340` | `PMC9193507` ✅ OA | `CORPUS-STUB-141` / `LIT-0160`, `not_processed` | ⬜ da assegnare |
+| W-5 | `42589397` | `PMC13467099` ✅ OA | 🔴 **no** | ⬜ da assegnare |
+
+**Perché W-5 è in coda anche se è oncologico.** `42589397` (Hammouz RY, …, Bednarek AK, *IJMS*
+2026, [DOI](https://doi.org/10.3390/ijms27156740)) testa su TCGA — BRCA n=390, OV n=228 — **la
+quantità di cui parla [[claim_registry_current#CLAIM 025]]**, il rapporto WWOX/HIF1A come marcatore
+di stato. Una claim viva ha ora un test indipendente, più recente e più grande, che LEGEND non ha
+letto. ⚠️ **Il rapporto è qui misurato in tessuto tumorale**: la trasferibilità a una claim CNS non
+tumorale va argomentata, mai assunta.
+
+**Regole che la wave eredita, non negoziabili.** Lettura **Results-first** — sei inversioni
+abstract-vs-Results su sei paper diversi in questa letteratura. **Il modo grammaticale si
+conserva**: *"neared significance"* non diventa *"significant"*, *"nominal"* non diventa
+*"associated"*. **Associazione ≠ causalità**: W-1, W-2 e W-5 sono studi di associazione, senza
+perturbazione. 🔴 **Varianti comuni ≠ malattia da null biallelico**: nessun segnale di variante
+comune può diventare evidenza su WOREE senza che l'argomento sia fatto esplicitamente e la sua
+debolezza nominata. L'estrattore MCP cancella token in corsivo, apici **e i numeri di citazione**:
+nessun conteggio a zero regge un negativo.
+
+**Priorità:** ALTA. **Current status:** 🟨 in corso. **Next action:** W-3, W-4, W-5 da assegnare
+quando uno slot Scientist si libera.
+
+---
+
+## FT-114 — 🔴 Quattro paper **letti integralmente oggi** di cui **nessuno può essere ricevutato**: il buco di persistenza dell'artefatto · voce di stato, non debito di lettura
+
+**Papers:** PMID 26302329 · PMID 34210081 · PMID 32389029 · PMID 33520443 — tutti e quattro
+recuperati via PubMed MCP dal sottoinsieme open access di PMC e **letti end-to-end il 2026-09-21**,
+Results-first, da due Scientist in parallelo.
+
+| PMID | PMCID | Corpo misurato | Lettore | Dossier |
+|---|---|---|---|---|
+| `26302329` | `PMC4547717` | **37.561 char** | Scientist A | [[adelaide_node_discriminator_20260921]] |
+| `34210081` | `PMC8305172` | **26.370 char** | Scientist A | [[adelaide_node_discriminator_20260921]] |
+| `32389029` | `PMC7400721` | **20.388 char** | Scientist B | [[lodz_node_discriminator_20260921]] |
+| `33520443` | `PMC7811782` | **52.463 char** | Scientist B | [[lodz_node_discriminator_20260921]] |
+
+**Questa non è una voce di debito di lettura. I paper sono stati letti.** È la registrazione
+durevole del motivo per cui **non portano ricevuta**, e il motivo è ambientale, non epistemico.
+
+### Il fatto, e non era vero nelle sessioni precedenti
+
+🔴 **`files/` in questo checkout era VUOTA all'avvio.** Il container è nuovo e `files/` è in
+`.gitignore`: i **29 artefatti estratti** su cui poggiavano le letture precedenti — e su cui
+`extraction_damage_report.py` aveva misurato «29/29 conteggi in corsivo INAMMISSIBILI, 29/29
+bibliografie ASSENTI» — **non esistono più in questo albero**. Nessuno di essi è recuperabile,
+perché non furono mai sotto controllo di versione.
+
+**Conseguenza operativa.** Gli Scientist di questa wave hanno ricevuto il corpo del paper nel
+proprio contesto via MCP e **non sono stati istruiti a scriverlo su disco**. Il contesto si chiude
+con l'agente. Una ricevuta è un'impronta su dei byte: **senza artefatto persistito non c'è
+`source_fingerprint`, e una ricevuta con impronta nulla per una lettura che l'Orchestrator non ha
+eseguito sarebbe una promessa su byte che nessuno può più esibire.** Si è scelto di **non**
+scriverla. `D-15` vale anche contro di noi: dichiarare il debito è legittimo, tacerlo no.
+
+### Che cosa è stato fatto invece, e che cosa resta valido
+
+- **Le letture valgono e sono documentate**, con tabelle di locator verbatim nei due dossier.
+  Scientist A ha ri-verificato i propri programmaticamente contro il testo recuperato: **15/15,
+  zero mismatch**. Quelle citazioni restano utilizzabili **come citate nei dossier**, che è dove
+  la loro provenienza è dichiarata.
+- **Nessuna claim canonica è stata creata da queste letture**, e nessuna deve esserlo finché la
+  ricevuta non esiste. Entrambi i verdetti sono **negativi** (nodo Adelaide: NO; nodo Lodz: NO su
+  entrambe le gambe), quindi nulla di canonico dipende dal recuperare questi byte.
+- 🔴 **`PMID 33520443` ha fatto scattare il cricchetto `UNREAD_PREMISE` (1/0)** ed è stato lo
+  Scientist B a dichiararlo spontaneamente nel proprio file, rifiutando esplicitamente di eludere
+  il rilevatore riscrivendo la citazione come `PMC7811782` o come DOI nudo. **Quel rifiuto è il
+  comportamento corretto e va registrato come tale.** Questa voce chiude il blocco per la via che
+  il rilevatore stesso ammette — una voce di coda — **senza dichiarare non letto ciò che è letto**.
+
+### La regola che ne discende, per ogni wave successiva
+
+> 🔴 **Un brief che assegna un paper DEVE ordinare la persistenza dell'artefatto come primo passo**,
+> prima dell'analisi: scrivere il corpo verbatim in `files/fulltext/PMID<PMID>_PMC_MCPtext.txt` e
+> riportare **byte, char e `sha256`**. Senza quel passo la lettura non è ricevutabile, e lo si
+> scopre **dopo** che il contesto dell'agente è chiuso — cioè quando costa una rilettura intera.
+
+Applicata a partire dal brief di `FT-113` W-3/W-4/W-5, che la porta esplicitamente.
+
+⚠️ **E la persistenza su `files/` non basta da sola**, perché `files/` non sopravvive al container:
+ciò che rende la lettura riproducibile è la **ricetta di acquisizione** (`acquisition_recipe` nel
+manifest) — qui `mcp__PubMed__get_full_text_article(pmc_ids=[<PMCID>])` — insieme all'impronta.
+`session_self_eval.py` segnala già `acquisition_recipe` assente su **66 manifest**; questa voce è
+un argomento in più perché i manifest nuovi la dichiarino.
+
+**Priorità:** ALTA come voce di stato. **Current status:** ⬜ permanente.
+**Next action:** nessuna rilettura. Se e quando uno di questi quattro paper dovesse reggere una
+claim canonica — oggi nessuno lo fa — **allora** va ri-recuperato con la ricetta sopra, persistito,
+impronta presa e ricevuta scritta. Non prima.
