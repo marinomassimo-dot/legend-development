@@ -870,5 +870,83 @@ rule — `NO RECORD MATCHED` ≠ `NOT HELD` — arrived mid-reading and was appl
 
 ---
 
+## 11 · Receipt status and the `DL-MECH-053` evidence base
+
+**Appended 2026-09-21 by Scientist B acting as RECEIPT VERIFIER, not as the reader.** The three
+readings reported above were performed earlier today under a read-only brief that omitted **step 7
+of the paper-processing pipeline — "create receipt"** (the omission is recorded at
+[`full_text_queue_current.md`](../research/full_text_queue_current.md) entry **`FT-114`**). § 10
+item 11 above states the gap in the reader's own words. This section closes it and records what the
+closing did and did not establish. **Nothing in this section edits any registry, ledger or claim.**
+
+### 11.1 The receipts now on the ledger
+
+Written one JSON at a time and appended **only** through the validated writer
+`framework/scripts/fulltext_receipts.py record`; `verify` was run before the first append and after
+every single one. **Ledger 188 → 193 chained receipts, `OK` at every step.** The writer computed
+each `ledger_prev_hash` and re-anchored `framework/state/state_manifest_current.md`
+(`fulltext_ledger_events: 188 → 193`) by itself — **the anchor was not hand-edited, and neither was
+the ledger.**
+
+| Paper | `event_id` | Depth | Artefact sha256 | Locators re-matched by the verifier |
+|---|---|---|---|---|
+| W-3 · `37974179` | `FTR-20260921-37974179-01` | `partial_fulltext_read` | `50a6174f…2ef979fb` | **19/19 exact** (L01–L19; 17 body + L18/L19 abstract sidecar) |
+| W-4 · `35712340` | `FTR-20260921-35712340-01` | `partial_fulltext_read` | `777ca3f9…d616355e` | **18/18 exact** (L20–L36, L64; 17 body + L64 sidecar) |
+| W-5 · `42589397` | `FTR-20260921-42589397-01` | `partial_fulltext_read` | `572a7e6b…c43e6e16` | **27/27 exact** (L37–L63) |
+
+**Zero unmatched. Zero whitespace-only near-misses** — every failed literal was re-tested with a
+U+0020/U+00A0/U+2009/U+202F/U+200A-interchangeable pattern and that pattern fired on nothing,
+confirming § 4's declared repair of 16 quotes had already been written back into the table as the
+exact artefact strings. 64/64 for this file, independently reproduced.
+
+🔴 **Why `partial_fulltext_read` and not `complete`, for all three.** Three independent reasons,
+each sufficient: no deep-dive work manifest exists at
+`disease-models/wwox/research/deepdive_manifests/PMID<pmid>.json` for any of the three, so
+`require_work_manifest` makes `complete_fulltext_read` **mechanically unavailable**, not merely
+unclaimed; the **reference list is absent** from every artefact (§ 1.4), so no multi-hop expansion
+was possible; and **no figure image was inspectable and no supplementary content was retrieved**
+(§ 1.5). Under-claiming is the safe direction and it is the one taken. Coverage was derived from
+§ 4's locator table and this file's prose, cross-checked against each artefact's own heading
+structure; no section was upgraded to `read` on a general assertion of full reading.
+
+### 11.2 The `staging/` dossier cited by `DL-MECH-053`
+
+`DL-MECH-053` (`discovery_ledger_current.md:1340`, status `promoted-to-CC`) cites
+`staging/deepdive_PMID37974179_Dong2023.md`. **`disease-models/wwox/research/staging/` does not
+exist in this tree**, and the string `deepdive_PMID37974179` occurs in exactly one file — the ledger
+entry that cites it.
+
+🔴 **This is reported as ABSENT FROM THIS TREE, which is not the same as lost.** Per
+`reading_state.py`'s own header warning, a count taken over unmerged state is not evidence of
+absence: that dossier may sit on an **unmerged branch** or in the **private edition**, both of which
+are ordinary and expected. **No conclusion is drawn about whether it exists.** What *is* now true
+and was not true this morning: `37974179` has a receipt and a fingerprinted artefact in this tree,
+so `DL-MECH-053`'s main-text statements are checkable here regardless of where that dossier lives.
+
+### 11.3 🔴 The allele-descriptor discrepancy — stated, not resolved
+
+`DL-MECH-053`'s DATO line describes the proband as carrying
+*"un allele di sito accettore `del ex6-8` e un allele missense"*.
+
+**PMID 37974179 describes neither.** It describes an **in-frame genomic deletion of exons 6–8**
+(`c.517_1056del`, `His173_Met352del` — `L09`) on the maternal allele, and **two discontinuous
+genomic deletions** (intron 5 and exon 6 — `L05`, `L06`) on the paternal allele. There is no
+splice-acceptor variant and no missense variant anywhere in the paper. All 19 locators re-match the
+fingerprinted artefact exactly, so this is not a transcription question about the source.
+
+**Two readings are open and both are plausible:**
+
+| Reading | What it would mean | What supports it |
+|---|---|---|
+| **(a) Scientific error** | The lead assigns this proband to two genotype classes the source does not support, and the assignment should be corrected at the ledger. | The descriptors are flatly contradicted by the paper's own text, and the lead is `promoted-to-CC` — i.e. already load-bearing. |
+| **(b) De-identification substitution artefact** | *"allele di sito accettore"* and *"allele missense"* are precisely the two class names the **public edition** uses for the reference genotype; the substitution would have been introduced when the private record was rewritten for this edition, leaving the private text correct. | The public edition demonstrably substitutes reference-genotype class names elsewhere, and the rest of `DL-MECH-053` — the WES/qPCR-vs-WGS inversion, *"nessun RNA, proteina o funzione"*, residual function *"soltanto predetta"*, even the published size-swap defect — is **confirmed character-for-character** by this reading. A lead that accurate elsewhere is unlikely to have simply invented two allele classes. |
+
+🔴 **I do not choose between them, and no ledger was edited.** The two readings imply opposite
+repairs — (a) corrects the ledger, (b) corrects the de-identification mapping and leaves the science
+alone — and only the Operator can see both editions. **OPERATOR DECISION.** Recorded here so the
+question is visible on a surface a reader of this reading will reach.
+
+---
+
 *Non-canonical analysis file. Read-only toward every canonical registry, ledger, claim and current
 file. No commit candidate. Not medical advice.*
