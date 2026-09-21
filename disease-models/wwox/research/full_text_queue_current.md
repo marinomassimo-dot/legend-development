@@ -5332,3 +5332,76 @@ that gap is fatal to the strategy is these three papers, and none has been read 
 **Next action:** `25866966` first — it is the one whose design LEGEND would actually copy, and the
 only one whose result is phenotype-resolved.
 
+
+---
+
+## FT-119 — PMID 30949922: biallelic WWOX without encephalopathy, harvested in 2026 and never registered
+
+**Papers:** PMID 30949922 · DOI 10.1007/s10519-019-09957-8
+**Opened:** 2026-09-21 · **Actor:** Orchestrator, from Scientist A's resilience census · **Priority:** MEDIUM
+
+Peter B, Dinu V, Liu L, Huentelman M, Naymik M, Lancaster H, Vose C, Schrauwen I — *"Exome
+Sequencing of Two Siblings with Sporadic Autism Spectrum Disorder and Severe Speech Sound Disorder
+Suggests Pleiotropic and Complex Effects."* *Behav Genet* 2019;**49**(4):399–414.
+
+**Why it is queued.** Two siblings with a **rare deleterious compound heterozygous** `WWOX`
+genotype presenting as **autism spectrum disorder and severe speech sound disorder** — **no
+epileptic encephalopathy**. If that holds on reading, it sits further toward the mild end of the
+WWOX spectrum than SCAR12, and the repository's spectrum runs WOREE → SCAR12 with nothing beyond.
+
+🔴 **Its registry state is the finding that made it worth an entry of its own.** It is **present in
+the 2026-08-06 corpus harvest** and has **no `CORPUS` record, no `PAPER` record, no `LIT` record and
+no receipt** — `registry_records.py get --pmid 30949922` returns no record;
+`fulltext_receipts.py status` returns `[]`; the seed file contains it. **So the gap is not between
+the field and LEGEND — it is between LEGEND's own harvest and LEGEND's own registry.** The harvest
+holds 706 records and the corpus registry holds 361; this paper is one of the ~345 that were
+harvested and never placed. **`unread_gold.py` cannot see it either, because that tool reads
+`CORPUS` placeholders and this paper never became one.** Three instruments, none of which was
+looking at the space between the other two.
+
+⚠️ **Two reasons not to get excited before reading it, both from the abstract itself.**
+1. **The causal attribution is not clean and the authors do not claim it is.** One affected child
+   *also* carries *"a rare deleterious **de novo** mutation in the ASD candidate gene `RIMS1`"*,
+   and the paper's own conclusion is *"pleiotropic gene effects, and potentially additional,
+   complex genetic effects"* — its title says **"Suggests"**. This is a multi-hit family study, not
+   a WWOX genotype–phenotype report, and the grammatical mood must survive into any use of it.
+2. **It is NOT the discordant-sibling design this node was looking for.** The unaffected sibling
+   **does not carry** the WWOX genotype — *"The affected siblings but not the unaffected sibling
+   share a rare deleterious compound heterozygous mutation in WWOX"*. Same family, **different
+   genotype**, so it cannot separate a modifier from the allele. Scientist A's finding stands: **no
+   discordant pair — same genotype, different outcome — is established anywhere in this
+   literature.**
+
+**What a reading would settle:** the exact variants and whether either is a null; whether seizures
+were ever present, looked for, or excluded by EEG; the ages; and whether the parents are
+heterozygous carriers and unaffected. **That last one bears on `CLAIM 032`**, whose
+`PREMISE: NOBODY_LOOKED` records that no published heterozygous carrier has had a systematic
+neurological or neuropsychological assessment — and this is a family study of speech and language
+phenotypes, which is exactly the instrument that absence is about.
+
+**Retrievability:** untested. Springer, 2019; no PMCID checked.
+
+
+---
+
+## FT-120 — PMID 26070663, the sole hit for "WWOX paralog", and why a negative still needs its source named
+
+**Papers:** PMID 26070663
+**Opened:** 2026-09-21 · **Actor:** Orchestrator · **Priority:** LOW · **Expected outcome: closed
+as irrelevant.**
+
+Weckselblatt 2015, *Genome Res*. It is the **only** record returned by a `WWOX paralog` census, and
+Scientist A's abstract-level assessment is that the hit is **incidental** — "paralogous repeats" in
+a structural-variant context, plus a `SIRPG`–`WWOX` fusion — **not a WWOX paralogue**.
+
+**Why it is queued rather than dropped.** It is the single record standing behind a stated negative:
+**`WWOX` has no paralogue and no documented functional backup**, which is load-bearing in the
+resilience census (if a paralogue existed, its expression would be the first modifier to look for,
+and the whole Domain-F negative would need reopening). A negative resting on "the one hit was
+irrelevant" needs the one hit **named**, so that the next reader can check the judgement instead of
+inheriting it.
+
+**Next action:** one abstract confirmation retires it. ⚠️ If it turns out to describe an actual
+WWOX paralogue or a functional homologue, **the resilience census's central negative reopens** — so
+the cheap check is worth making rather than assuming.
+
