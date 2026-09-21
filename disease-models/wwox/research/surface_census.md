@@ -11,26 +11,26 @@
 > A photograph, not an invariant. `files/fulltext/` is gitignored and grows between sessions, so these numbers describe the corpus on the census date and nothing re-checks them afterwards — compare the listing digest below against your own copy before trusting a row. This page blocks nothing and has no threshold: it exists so that rule 5d's *"record the absence"* is a fact in the state instead of a rediscovery made three papers into a reading.
 
 **Census date:** 2026-09-21  
-**Corpus:** `fulltext` — 31 entries, 30 papers, listing digest `b238cfaf6177904f`  
-**Sentinel:** `deepdive_manifest._refuse_suspect_surface`, PDF text via none
+**Corpus:** `fulltext` — 14 entries, 8 papers, listing digest `cd381ef603f42eab`  
+**Sentinel:** `deepdive_manifest._refuse_suspect_surface`, PDF text via PyMuPDF 1.28.2
 
 ### Totals
 
 | Surface | Papers | What it means |
 |---|---:|---|
 | `structured` | 0 | publisher XML/HTML present — read this one (rule 5d) |
-| `pdf_only` | 30 | no structured surface locally — acquire XML/HTML before reading |
-| `absent` | 117 | queued, nothing local at all — retrieve first |
+| `pdf_only` | 8 | no structured surface locally — acquire XML/HTML before reading |
+| `absent` | 146 | queued, nothing local at all — retrieve first |
 
 Sentinel over the surface each paper would actually be read from — the structured file where one exists, the PDF otherwise. Structured markup is screened too, because a suffix is not a surface; see the note below:
 
 | Verdict | Papers | What it means |
 |---|---:|---|
-| `SUSPECT` | 2 | the text carries a known corruption signature — do not quote it; adjudicate against the rendered page, or re-acquire the paper structured |
-| `clean` | 28 | no known signature found — this is not a verification |
+| `SUSPECT` | 1 | the text carries a known corruption signature — do not quote it; adjudicate against the rendered page, or re-acquire the paper structured |
+| `clean` | 7 | no known signature found — this is not a verification |
 | `not_screened` | 0 | no deterministic extractor available, or extraction failed |
 
-🔴 **2 of the 30 PDF-only papers cannot be read from their text layer at all**, and all of them should be acquired as XML/HTML rather than read from the PDF. A `clean` PDF is still a PDF: `deepdive_manifest` refuses it as a text surface, and a locator drawn from one has to be anchored to the page.
+🔴 **1 of the 8 PDF-only papers cannot be read from their text layer at all**, and all of them should be acquired as XML/HTML rather than read from the PDF. A `clean` PDF is still a PDF: `deepdive_manifest` refuses it as a text surface, and a locator drawn from one has to be anchored to the page.
 
 ### Per paper
 
@@ -40,7 +40,7 @@ Sentinel over the surface each paper would actually be read from — the structu
 | PMID 32581702 | FT-002 | `absent` | — | — |
 | PMID 30853297 | FT-003 | `absent` | — | — |
 | PMID 36779245 | FT-004, FT-029 | `absent` | — | — |
-| PMID 31543760 | FT-005 | `pdf_only` | `clean` | PMID31543760_PMC_MCPtext.txt |
+| PMID 31543760 | FT-005 | `absent` | — | — |
 | PMID 26390919 | FT-006 | `absent` | — | — |
 | PMID 30290271 | FT-008 | `absent` | — | — |
 | PMID 42397075 | FT-010 | `absent` | — | — |
@@ -72,13 +72,13 @@ Sentinel over the surface each paper would actually be read from — the structu
 | PMID 17360458 | FT-032, FT-064 | `absent` | — | — |
 | PMID 26345274 | FT-032 | `absent` | — | — |
 | PMID 30094525 | FT-032 | `absent` | — | — |
-| PMID 35573960 | FT-032 | `pdf_only` | `clean` | PMID35573960_PMC_MCPtext.txt |
+| PMID 35573960 | FT-032 | `absent` | — | — |
 | PMID 40875931 | FT-035 | `absent` | — | — |
 | PMID 10861292 | FT-036, FT-080 | `absent` | — | — |
 | PMID 36499501 | FT-037 | `absent` | — | — |
 | PMID 30619736 | FT-038 | `absent` | — | — |
 | PMID 24871327 | FT-039, FT-046, FT-049 | `absent` | — | — |
-| PMID 31340538 | FT-040 | `pdf_only` | `clean` | PMID31340538_PMC_MCPtext.txt |
+| PMID 31340538 | FT-040 | `absent` | — | — |
 | PMID 17803050 | FT-041 | `absent` | — | — |
 | PMID 19500159 | FT-042 | `absent` | — | — |
 | PMID 19936220 | FT-043 | `absent` | — | — |
@@ -115,7 +115,7 @@ Sentinel over the surface each paper would actually be read from — the structu
 | PMID 25411445 | FT-057 | `absent` | — | — |
 | PMID 29808465 | FT-057 | `absent` | — | — |
 | PMID 30158849 | FT-057 | `absent` | — | — |
-| PMID 30356099 | FT-057 | `absent` | — | — |
+| PMID 30356099 | FT-057 | `pdf_only` | `clean` | PMID30356099_PMC_MCPtext.txt |
 | PMID 34268881 | FT-059 | `absent` | — | — |
 | PMID 23435430 | FT-061 | `absent` | — | — |
 | PMID 23370280 | FT-062 | `absent` | — | — |
@@ -124,9 +124,9 @@ Sentinel over the surface each paper would actually be read from — the structu
 | PMID 39416860 | FT-065 | `absent` | — | — |
 | PMID 26675548 | FT-067 | `absent` | — | — |
 | PMID 18487609 | FT-068, FT-063 | `absent` | — | — |
-| PMID 27869163 | FT-070 | `pdf_only` | `clean` | PMID27869163_PMC_MCPtext.txt |
+| PMID 27869163 | FT-070 | `absent` | — | — |
 | PMID 18674750 | FT-071 | `absent` | — | — |
-| PMID 27845895 | FT-073 | `pdf_only` | `clean` | PMID27845895_PMC_MCPtext.txt |
+| PMID 27845895 | FT-073 | `absent` | — | — |
 | PMID 31966718 | FT-074 | `absent` | — | — |
 | PMID 18931939 | FT-075 | `absent` | — | — |
 | PMID 16223882 | FT-076, FT-088 | `absent` | — | — |
@@ -142,7 +142,7 @@ Sentinel over the surface each paper would actually be read from — the structu
 | PMID 25238781 | FT-089 | `absent` | — | — |
 | PMID 25416187 | FT-090 | `absent` | — | — |
 | PMID 25245215 | FT-091 | `absent` | — | — |
-| PMID 25238782 | FT-092 | `pdf_only` | `clean` | PMID25238782_PMC_MCPtext.txt |
+| PMID 25238782 | FT-092 | `absent` | — | — |
 | PMID 20164920 | FT-093 | `absent` | — | — |
 | PMID 18000379 | FT-094 | `absent` | — | — |
 | PMID 25216703 | FT-095 | `absent` | — | — |
@@ -153,36 +153,43 @@ Sentinel over the surface each paper would actually be read from — the structu
 | PMID 25297918 | FT-095 | `absent` | — | — |
 | PMID 25300511 | FT-095 | `absent` | — | — |
 | PMID 20146584 | FT-096 | `absent` | — | — |
-| PMID 41390778 | FT-097 | `pdf_only` | `clean` | PMID41390778_PMC_MCPtext.txt |
-| PMID 33134515 | FT-098 | `pdf_only` | `clean` | PMID33134515_PMC_MCPtext.txt |
-| PMID 21766012 | FT-099 | `pdf_only` | `clean` | PMID21766012_PMC_MCPtext.txt |
+| PMID 41390778 | FT-097 | `absent` | — | — |
+| PMID 33134515 | FT-098 | `absent` | — | — |
+| PMID 21766012 | FT-099 | `absent` | — | — |
 | PMID 32020597 | FT-100 | `absent` | — | — |
 | PMID 9918798 | FT-101 | `absent` | — | — |
-| PMID 25650666 | FT-102 | `pdf_only` | `clean` | PMID25650666_PMC_MCPtext.txt |
+| PMID 25650666 | FT-102 | `absent` | — | — |
 | PMID 27569545 | FT-103, FT-105 | `absent` | — | — |
-| PMID 29067327 | FT-104 | `pdf_only` | `clean` | PMID29067327_PMC_MCPtext.txt |
-| PMID 42092735 | FT-106 | `pdf_only` | `clean` | PMID42092735_PMC_MCPtext.txt |
-| PMID 41153369 | FT-107 | `pdf_only` | `clean` | PMID41153369_PMC_MCPtext.txt |
-| PMID 19484134 | FT-108 | `pdf_only` | `clean` | PMID19484134_PMC_MCPtext.txt |
+| PMID 29067327 | FT-104 | `absent` | — | — |
+| PMID 42092735 | FT-106 | `absent` | — | — |
+| PMID 41153369 | FT-107 | `absent` | — | — |
+| PMID 19484134 | FT-108 | `absent` | — | — |
 | PMID 18371080 | FT-109 | `absent` | — | — |
 | PMID 38902482 | FT-110 | `absent` | — | — |
 | PMID 42721537 | FT-110 | `absent` | — | — |
-| PMID 35328751 | FT-111 | `pdf_only` | `clean` | PMID35328751_PMC_MCPtext.txt |
-| PMID 24008736 | — | `pdf_only` | `clean` | PMID24008736_PMC_MCPtext.txt |
-| PMID 24932569 | — | `pdf_only` | `clean` | PMID24932569_PMC_MCPtext.txt |
-| PMID 25649963 | — | `pdf_only` | `clean` | PMID25649963_PMC_MCPtext.txt |
-| PMID 26355344 | — | `pdf_only` | `clean` | PMID26355344_PMC_MCPtext.txt |
-| PMID 27551439 | — | `pdf_only` | `clean` | PMID27551439_PMC_MCPtext.txt |
-| PMID 31752354 | — | `pdf_only` | `clean` | PMID31752354_PMC_MCPtext.txt |
-| PMID 32764489 | — | `pdf_only` | `clean` | PMID32764489_PMC_MCPtext.txt |
-| PMID 34140629 | — | `pdf_only` | `clean` | PMID34140629_PMC_MCPtext.txt |
-| PMID 34359949 | — | `pdf_only` | `clean` | PMID34359949_PMC_MCPtext.txt |
-| PMID 35984507 | — | `pdf_only` | `SUSPECT` — PMID35984507_OPERATOR_PDFtext.txt: contains the C0 control U+001F | PMID35984507_OPERATOR_PDFtext.txt, PMID35984507_SUPP_PDFtext.txt |
-| PMID 36271927 | — | `pdf_only` | `SUSPECT` — uses statistical language (16 mentions) and contains none of < > ≤ ≥ ± × − | PMID36271927_PMC_MCPtext.txt |
-| PMID 36498839 | — | `pdf_only` | `clean` | PMID36498839_PMC_MCPtext.txt |
-| PMID 39101447 | — | `pdf_only` | `clean` | PMID39101447_PMC_MCPtext.txt |
-| PMID 41124647 | — | `pdf_only` | `clean` | PMID41124647_PMC_MCPtext.txt |
-| PMID 41677633 | — | `pdf_only` | `clean` | PMID41677633_PMC_MCPtext.txt |
+| PMID 35328751 | FT-111 | `absent` | — | — |
+| PMID 42464650 | FT-112 | `absent` | — | — |
+| PMID 28763065 | FT-113 | `absent` | — | — |
+| PMID 35712340 | FT-113 | `pdf_only` | `clean` | PMID35712340_PMC_MCPabstract.txt, PMID35712340_PMC_MCPtext.txt |
+| PMID 37974179 | FT-113 | `pdf_only` | `clean` | PMID37974179_PMC_MCPabstract.txt, PMID37974179_PMC_MCPtext.txt |
+| PMID 41378749 | FT-113 | `absent` | — | — |
+| PMID 42589397 | FT-113 | `pdf_only` | `clean` | PMID42589397_PMC_MCPabstract.txt, PMID42589397_PMC_MCPtext.txt |
+| PMID 26302329 | FT-114 | `absent` | — | — |
+| PMID 32389029 | FT-114 | `absent` | — | — |
+| PMID 33520443 | FT-114 | `absent` | — | — |
+| PMID 34210081 | FT-114 | `absent` | — | — |
+| PMID 29785012 | FT-115 | `absent` | — | — |
+| PMID 34314704 | FT-115 | `absent` | — | — |
+| PMID 39319420 | FT-115 | `absent` | — | — |
+| PMID 40463067 | FT-115 | `pdf_only` | `clean` | PMID40463067_PMC_MCPabstract.txt, PMID40463067_PMC_MCPtext.txt |
+| PMID 42425971 | FT-115 | `pdf_only` | `SUSPECT` — PMID42425971_PMC_MCPabstract.txt: uses statistical language (6 mentions) and contains none of < > ≤ ≥ ± × − | PMID42425971_PMC_MCPabstract.txt, PMID42425971_PMC_MCPtext.txt |
+| PMID 31618474 | FT-116 | `absent` | — | — |
+| PMID 32214227 | FT-116 | `absent` | — | — |
+| PMID 35715422 | FT-116 | `absent` | — | — |
+| PMID 37095367 | FT-116 | `absent` | — | — |
+| PMID 37583270 | FT-116 | `absent` | — | — |
+| PMID 42523332 | FT-117 | `pdf_only` | `clean` | PMID42523332_PMC_MCPabstract.txt, PMID42523332_PMC_MCPtext.txt |
+| PMID 41228229 | — | `pdf_only` | `clean` | PMID41228229_PMC_MCPtext.txt |
 
 ### Loss ledger — queue entries this census cannot join to a local surface
 
@@ -198,7 +205,7 @@ Not all of these are defects. An entry resolved by DOI alone says exactly what i
 | FT-066 | `doi_only` | DOI 10.1038/onc.2013.52 — Santini S *et al.*, *Oncogene* 2014;33(9):1113–1123 — |
 | FT-069 | `not_an_article` | `NOT_AN_ARTICLE` — un contratto, non un paper: `framework/scripts/deepdive_manifest.py` su `main`, |
 
-**Accounting.** Rows: 30 corpus papers + 132 queued papers − 15 in both = **147** emitted. ✓ Entries: 104 resolved + 7 unjoined = **111** queue entries. ✓
+**Accounting.** Rows: 8 corpus papers + 153 queued papers − 7 in both = **154** emitted. ✓ Entries: 110 resolved + 7 unjoined = **117** queue entries. ✓
 
 *Not medical advice. This page describes file formats, not findings.*
 

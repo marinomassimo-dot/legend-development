@@ -505,7 +505,30 @@ Derived by decomposing what actually made the TSC2 pS6 assay work (§ 3.1):
 | **F1** | **A downstream molecular consequence of the protein's activity that changes in a single cell when the protein is lost.** TSC2 → pS6. | 🔴 **ABSENT.** `TX-003`: *"WWOX is an oxidoreductase with undefined physiological substrate/activity"*; the Adelaide review: *"the substrate and product of the enzyme reaction that it catalyses are yet to be discovered."* | **Nobody, today.** This is the binding item. |
 | **F2** | **That consequence must be detectable by a flow-cytometry-compatible reagent** — an antibody to a post-translational mark, or a fluorescent reporter. TSC2 → CST 5316S anti-pS6, fixed/permeabilised. | 🔴 **ABSENT.** No validated WWOX-activity-dependent epitope exists. The candidates the matrix names (tau, GSK3β, POLE4 binding; WW1-partner binding as control) are **binding assays**, which are **co-IP/western readouts, not per-cell fluorescence readouts.** | Would require a new reporter — e.g. a split-fluorophore or FRET PPI sensor for an SDR-domain partner, **validated first at low throughput**. **This does not exist and building it is itself a research programme.** |
 | **F3** | **The phenotype must be cell-autonomous in a cultured, editable, expandable cell type.** TSC2 → primary CD4 T cells and HAP1. | ❓ **UNKNOWN and plausibly adverse.** The disease phenotype is neuronal and developmental; `seizure` and `neuron` occur 0 times in `41124647`'s body. A WWOX function that only manifests in post-mitotic neurons cannot be pooled in an editable proliferating line. | Unresolved. |
-| **F4** | **The direction of the signal should ideally be a GAIN on loss of function** (easier sorting). TSC2 is a negative regulator → pS6 **rises**. | ⚠️ **Adverse.** WWOX appears to act positively in its characterised interactions, so loss would most likely **remove** a signal. Sorting on signal loss is harder and more confounded by abundance. | Design constraint, not a blocker. |
+| **F4** | **The direction of the signal should ideally be a GAIN on loss of function** (easier sorting). TSC2 is a negative regulator → pS6 **rises**. | 🔴 **SUPERSEDED — see the correction below. This cell read ⚠️ *Adverse* and that was wrong.** Now 🟢 **FAVOURABLE.** | Design constraint, not a blocker. |
+
+> ### 🔴 CORRECTION to `F4`, appended 2026-09-21 by a second reader, against this file
+>
+> This row originally read: *"⚠️ **Adverse.** WWOX appears to act positively in its characterised
+> interactions, so loss would most likely **remove** a signal."*
+>
+> **That premise conflated WWOX's *binding* role — positive, scaffolding — with its *regulatory*
+> role, which is suppressive.** Three independent axes are **gain-on-loss**, i.e. the same easy
+> sorting direction TSC2's pS6 gave:
+> - **surface lectin binding (HPA, GNL) UP** on WWOX knockdown — `PMID 42523332` `[PREPRINT]`
+> - **Wnt/β-catenin transcriptional output UP** on WWOX knockdown — `PMID 19465938`, and this one is
+>   **bidirectionally validated**: *"enforced WWOX expression inhibited, and inhibition of endogenous
+>   WWOX expression stimulated"* Wnt transcriptional activity
+> - **HIF1α glycolytic output UP** in WWOX-silenced fibroblasts — `PMID 35328751`
+>
+> **Revised standing of the five requirements:** `F1` 🔴→🟠 (a nearest-thing candidate now exists) ·
+> `F2` 🔴→🟠 (a reagent class now exists) · `F3` ❓ unchanged · **`F4` ⚠️→🟢** · `F5` ✅ unchanged.
+>
+> 🔴 **The § 6.C gate conclusion STANDS** — a WWOX function MAVE is still not portable today, and
+> `F1`/`F2` are still the binding constraint. What is no longer true is the stronger claim that
+> *nothing in the literature points at what such a sensor might read.* Full evidence, with all 24
+> queries written out and their counts, in
+> [`wwox_activity_sensor_census_20260921.md`](wwox_activity_sensor_census_20260921.md).
 | **F5** | **Endogenous-locus editing (SGE/cliPE) so genotype is recoverable from the sorted cells.** | ✅ **Available.** `WWOX` is editable; SGE and cliPE are published, generic methods. | A MAVE lab. **This is the one function-half item that IS supplied today.** |
 
 ### 6.C 🔴 The pooled-format problem, stated exactly

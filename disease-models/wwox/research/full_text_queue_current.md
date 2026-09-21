@@ -5289,3 +5289,123 @@ bibliografia). **Current status:** ⬜ da assegnare. **Next action:** stabilire 
 un fetch, poi `42425971` per primo. 🔴 **Aprire un MAVE su WWOX sarebbe un programma di ricerca
 materialmente nuovo e NON è una decisione autonoma:** questa voce registra che l'opzione esiste e
 che cosa costerebbe valutarla; **non la propone.**
+
+---
+
+## FT-116 — 🔴 **39 record neuro-rilevanti del corpus non sono mai stati triati** · e la coda "vuota" era vera in un senso più stretto di come si legge
+
+**Papers:** PMID 32214227 · PMID 35715422 · PMID 37583270 · PMID 31618474 · PMID 37095367 ·
+PMID 29390993 · PMID 33919646 · PMID 30783266 — le otto righe con PMCID, che sono l'oggetto
+azionabile di questa voce. Le altre 31 sono elencate sotto per completezza della misura.
+**Nessuno dei 39** ha un record in `paper_registry_current.md` né in
+`literature_tracking_log_current.md`: non sono *non letti*, sono **mai guardati**.
+
+**La misura, riproducibile.** Passata sul seed `corpus_seed_pubmed_20260806.jsonl` (706 record):
+titolo/abstract neuro-rilevante, titolo non oncologico, **nessuna ricevuta full-text** → **64**.
+Di questi, **25** hanno un record di registro; **39** non ne hanno alcuno; **~14 dei 39 portano un
+PMCID** e non sono mai stati testati per retrievability.
+
+**Che cosa NON dice questa voce.** La continuazione precedente registrava *«The accessible reading
+queue is EMPTY … Every copyright-verified open paper carrying no receipt has been read.»*
+🟢 **Quella frase è vera**, ed è più stretta di come si legge: riguarda i paper la cui apertura era
+stata **verificata**. Questi 39 non erano stati verificati **perché non erano mai stati triati**.
+Le due affermazioni convivono. **Ma la caratterizzazione del residuo era sbagliata.**
+
+🔴 **Il residuo utile non è «case report di singole famiglie ridondanti con le coorti WOREE».**
+È un'altra cosa: **coorti di epilessia multi-gene in cui WWOX è uno dei geni causativi.** Non sono
+ridondanti con le coorti WOREE — sono **dove vengono riportati altri pazienti WOREE e le loro
+varianti**, su scala di popolazione, incluse popolazioni ad alta consanguineità dove la malattia è
+arricchita. Questo è esattamente il **denominatore** che mancava al censimento delle classi
+terapeutiche, a cui sono stati passati in corso di task.
+
+| PMID | PMCID | Perché conta |
+|---|---|---|
+| `32214227` | `PMC7382450` | esoma di prima linea, arabi palestinesi e israeliani — **alta consanguineità** |
+| `35715422` | `PMC9205988` | 36 bambini, epilessia dell'infanzia con crisi focali migranti — spettro genotipico |
+| `37583270` | `PMC10690684` | 124 bambini, spasmi epilettici infantili, India |
+| `31618474` | `PMC7423163` | landscape genetico EIMFS |
+| `37095367` | `PMC10293429` | WGS, bambini kazaki, epilessia a esordio precoce |
+| `29390993` | `PMC5796507` | pannello mirato, epilessia intrattabile a esordio precoce |
+| `33919646` | `PMC8072943` | review sistematica, epilessie neonatali genetiche e DEE con disturbi del movimento |
+| `30783266` | `PMC7608131` | ⚠️ **erratum**, vedi sotto — il **parent** è la fonte di varianti, non questo |
+
+**Senza PMCID, solo abstract — non spendere tentativi di fetch:** `28721938` · `32051108` ·
+`31353122` · `39933386` · `40088508` · `34034642` · `35792847` · `39039877` · `29852413` ·
+`28130116` · `34673242` · `35363364` · `30949922` · `24949445` · `31669195` (più i già noti
+`15026124`, `25716914`, `30094525`).
+**Fuori asse, non ri-proporre:** `31370128` (otite esterna) · `35738035` (piRNA testicoli suini) ·
+`37501399` (marmoset) · `35764069`/`39223676`/`42231860` (differenze dello sviluppo sessuale) ·
+`23028374` (CNV in ES cells) · `42031263` · `39955305` · `33958783` · `32081867` · `42266427`.
+
+### 🔴 La cautela che questa misura ha guadagnato, e che mi ha preso due volte
+
+**«Nessuna ricevuta» NON è «non processato».** Un paper può essere triato, registrato e
+`integrated` **dall'abstract**, senza ricevuta full-text. Due dei 64 sembravano scoperte e non lo
+erano:
+- **`41442931`** (anomalie RM cerebrali associate a vigabatrin in due bambini WWOX) sembrava un
+  segnale di sicurezza BLOCK-1 non tenuto. È **`PAPER 003`**, *«safety anchor paper»*,
+  `Status: integrated`, `clinical relevance: HIGH`, legato a `CLAIM 001`, processato il
+  **2026-03-27**. ⚠️ **Resta a livello di abstract e una lettura integrale avrebbe valore** — gli
+  autori chiedono se i bambini con epilessia genetica **della via GABAergica o con mielinizzazione
+  ritardata** siano più suscettibili, e WOREE ha entrambe — **ma non è una scoperta.**
+- **`30783266`** sembrava un erratum mai letto su una coorte WOREE che LEGEND ha letto. È un
+  **Published Erratum il cui contenuto è per intero una rettifica di metodo**: un paziente studiato
+  con sequenziamento del genoma anziché dell'esoma, con abstract, Methods e authorship emendati.
+  **Nessuna variante cambia.** Il verdetto «zero difetti nuovi» della spazzata di integrità regge;
+  la formulazione esatta è *quattro paper tenuti, più un erratum il cui parent è tenuto*.
+
+> **Regola di metodo:** misurare il lavoro non processato con lo **`Status` di registro**, non con
+> la presenza di ricevuta. La ricevuta misura la **profondità di lettura**; lo status di registro
+> misura se **qualcuno ha guardato**.
+
+**Priorità:** MEDIA. **Current status:** ⬜ da triare. **Next action:** triage bibliografico delle
+otto righe con PMCID **prima** di qualunque nuova wave — sono il denominatore, non una batch.
+
+---
+
+## FT-117 — `PMID 42523332` letto e ricevutato a profondità parziale · **debito residuo dichiarato**, non lettura mancante
+
+**Paper:** PMID 42523332 · PMCID `PMC13405132` · [DOI](https://doi.org/10.64898/2026.06.16.732723) —
+Aragon-Ramirez WS, …, Lupashin VV, *bioRxiv* 2026, *"Golgi CATCHR complexes function as organizing
+hubs for vesicle tethering and fusion"*. ⚠️ **PREPRINT, non sottoposto a peer review.** Ogni uso a
+valle eredita questo stato.
+
+**Stato:** letto il 2026-09-21 nel censimento dei sensori
+([[wwox_activity_sensor_census_20260921]]), artefatto persistito
+(`files/fulltext/PMID42523332_PMC_MCPtext.txt`, 50.075 byte / 50.049 char,
+sha256 `7f2da97ba52357412af1e8f5e6b8c746e305b91197f4cad98ebe3af89f14bcbd`), **ricevuta
+`FTR-20260921-42523332-01`, `partial_fulltext_read`**, verificata da un secondo attore.
+
+**Perché questa voce esiste, e non è una finzione.** Il cricchetto `UNREAD_PREMISE` si chiude per
+tre sole vie: una ricevuta `complete_fulltext_read`, una dichiarazione «full text reviewed» nel
+paper registry, o **una voce di coda**. Una ricevuta `partial_fulltext_read` non ne chiude nessuna —
+e `complete_fulltext_read` era **meccanicamente indisponibile**, perché `require_work_manifest`
+esige un manifest in `deepdive_manifests/PMID42523332.json` che non esiste. 🔴 **Dichiarare una
+lettura completa che nessuno ha eseguito sarebbe la bugia che il cricchetto esiste per impedire.**
+Questa voce è la via onesta: registra **che cosa è stato letto e che cosa no**.
+
+**Il debito, preciso.** Le citazioni verificate ancorano **Results** e **Discussion**, più una
+didascalia di figura supplementare (`supplementary: captions_only`). **`abstract`, `introduction`,
+`methods` e `limitations` sono `not_read`** — l'artefatto si apre a "Introduction" e nessun locator
+vi atterra. Bibliografia assente dall'estrazione.
+
+⚠️ **Due anomalie sulle citazioni, registrate nella ricevuta e non fatali.** (a) La citazione di
+punta corrisponde **in tre segmenti esatti, non come stringa unica**: il corpo legge
+`the lectins HPA (and) and GNL ()`, con parentesi vuote dove l'estrattore ha rimosso i richiami
+bibliografici. Ogni parola, numero e ordine è fedele; il difetto è un'**elisione non marcata** dove
+serviva un'ellissi. (b) L'esemplare di danno-estrattivo citato nel § 1.3 del censimento **non esiste
+nel corpo** — ma la regola che illustra regge, verificata per altra via (`yeastand`,
+`subcompartmentsand`, `mammalianand`, `developmentand`). Quella citazione è **decorativa, non
+probatoria**.
+
+🔴 **Che cosa NON autorizza questa voce.** Il dato per cui il paper è in coda — *"WWOX KD caused N-
+and O-glycosylation defects as revealed by the increased plasma membrane binding of the lectins HPA
+and GNL"* — è **un'osservazione laterale non replicata** dentro un paper sul tethering golgiano:
+microscopia, **n = 30 cellule**, siRNA con efficienza misurata solo in RT-PCR, linea RPE1, e
+`WWOX glycosylation Golgi lectin` = **0** su PubMed. Gli autori **lasciano aperta** l'attribuzione
+WW-vs-SDR. **Se il fenotipo fosse WW-dipendente non potrebbe riportare nulla su un missense dello
+span SDR** — che è l'unico motivo per cui interessa.
+
+**Priorità:** MEDIA. **Current status:** 🟨 debito dichiarato. **Next action:** nessuna rilettura
+automatica. Il debito si chiude solo se questo dato deve reggere qualcosa di canonico — e allora
+servono Methods e Introduction, non una rilettura integrale.

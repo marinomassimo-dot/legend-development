@@ -278,6 +278,58 @@ dissociate in this exact domain.
 
 ---
 
+## § 5b · 🔴 THE ACCESSIBLE READING QUEUE IS NOT EMPTY — measured, not assumed
+
+The previous continuation recorded, in bold: *"The accessible reading queue is EMPTY, and that is
+measured rather than assumed. Every copyright-verified open paper carrying no receipt has been
+read."* **That sentence is true and much narrower than it reads, and the gap between the two is
+39 papers.**
+
+A data-driven pass over `corpus_seed_pubmed_20260806.jsonl` (706 records), run today:
+
+| Filter | Count |
+|---|---|
+| Corpus records total | **706** |
+| …neuro-relevant by title+abstract, non-cancer title, **and carrying no full-text receipt** | **64** |
+| …of those, **holding a record** in `paper_registry_current` or `literature_tracking_log_current` | **25** |
+| …of those, holding **NO registry record of any kind** — never triaged, never queued, never filtered | 🔴 **39** |
+| …of the 39, carrying a **PMCID** (i.e. plausibly retrievable, never tested) | **~14** |
+
+**The reconciliation, stated so nobody reads a contradiction where there is none:** the previous
+claim was about papers whose openness had been **copyright-verified**. These 39 were never
+copyright-verified **because they were never triaged at all**. "No verified-open unread paper
+remains" and "39 neuro-relevant corpus records have never been looked at" are both true.
+
+🔴 **And the prior characterisation of the residue is wrong.** The earlier scout described the
+unread remainder as *"small single-family case reports redundant with the large WOREE cohorts
+LEGEND has already read."* On inspection the most useful part of it is a different thing:
+**multi-gene epilepsy cohorts in which WWOX is one of the causative genes.** Those are not
+redundant with the WOREE cohorts — they are where **additional WOREE patients and their variants
+are reported at population scale**, including from high-consanguinity populations where the disease
+is enriched. Examples, all with PMCIDs and none held: `32214227` (Palestinian and Israeli Arabs,
+first-line exome) · `35715422` (36 children, epilepsy of infancy with migrating focal seizures) ·
+`37583270` (124 children, infantile epileptic spasms, India) · `31618474` · `37095367`
+(Kazakhstani children) · `29390993` · `33919646`. **These were handed to the therapeutic-class
+census mid-task, because they are exactly its missing denominator.**
+
+### 🔴 And a caution about this very measurement, which caught me out twice
+**"No receipt" is NOT "unprocessed."** A paper can be fully triaged, registered and `integrated`
+from its abstract with no full-text receipt. Two of the 64 looked like discoveries and were not:
+- **`41442931`** (vigabatrin-associated brain MRI abnormalities in two WWOX children) looked like an
+  unheld BLOCK-1 safety signal. It is **`PAPER 003`**, *"safety anchor paper"*, `Status: integrated`,
+  `clinical relevance: HIGH`, linked to `CLAIM 001`, processed **2026-03-27**. It remains worth a
+  full read — it is abstract-level — but it is not a finding.
+- **`30783266`** looked like an unread correction to a WOREE cohort LEGEND has read. It is a
+  **Published Erratum whose entire content is a sequencing-method attribution fix** — one patient
+  investigated by genome rather than exome sequencing, with abstract, Methods and authorship
+  amended. **No variant changes.** The § 1 integrity sweep's verdict of zero new defects survives;
+  what it should have said is *four papers held, plus one erratum whose parent is held*.
+
+**Method rule:** measure unprocessed work by **registry `Status`**, not by receipt presence. Receipt
+presence measures reading depth; registry status measures whether anyone has looked at all.
+
+---
+
 ## § 6 · Why the other framings lose — stated so they are not re-proposed
 
 - **"Pick a famous WWOX PI."** No WWOX laboratory has an unread corpus that can carry a batch. That
