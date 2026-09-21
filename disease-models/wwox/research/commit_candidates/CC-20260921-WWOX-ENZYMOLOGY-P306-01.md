@@ -76,6 +76,37 @@ half:
 `TX-003` is blocked on — still exists nowhere, for any allele.** `PROTEIN AMOUNT` and `PROTEIN
 FUNCTION` remain different questions, and only the first has ever been measured on a WOREE allele.
 
+## 2bis · 🔴 The two halves stated as a rule, on Operator note (2026-09-21)
+
+Both halves are already argued above; they are restated here as a standing rule because they are
+the two ways this finding will be mis-carried, and they fail in **opposite** directions.
+
+> ✅ **HALF ONE — treat the 2011 Km / cofactor / substrate evidence as a REAL HISTORICAL
+> BIOCHEMICAL RESULT until a primary reading determines otherwise.** It is a peer-reviewed primary
+> reporting cloned fusion proteins, a defined steroid-substrate panel, cofactor dependence and Km
+> values. **It is abstract-only from here, which is a statement about this environment, not about
+> the paper.** It must not be discounted, hedged into vagueness, or described as "claimed" —
+> `PREMISE: UNREAD_PRIMARY` is the correct tag, and it means *owed a reading*, **not** *doubted*.
+
+> 🔴 **HALF TWO — do NOT infer that it provides a validated functional assay for disease alleles.**
+> Crude extract, **wild-type protein only**, **no disease allele of any kind**, no
+> catalytically-dead triad control, no folded-monomer normalisation, and **no physiological
+> substrate assigned**. An activity **report** is not an **assay**. Nothing about `Q230P`,
+> `P47T`, `G372R` or any other variant follows from it.
+
+**Why both are needed together.** Half one alone invites *"WWOX catalysis is characterised"*, which
+would make `TX-003` look unblocked when it is not. Half two alone invites *"there is no WWOX
+enzymology"*, which is the sentence this candidate exists to withdraw. 🔵 **The honest position is
+the narrow one: an assay of WWOX CATALYSIS exists once, and an assay of FUNCTION PER MOLECULE
+exists nowhere, for any allele.**
+
+⚠️ **And one live contradiction sits across the substrate question** and must travel with any use of
+this result: a 2015 **review** proposes the catalytic domain is a **retinal** oxidoreductase acting
+**reversibly** on all-trans-retinal, while the 2011 primary observed **oxidation only** — *"with the
+same substrates and reduced cofactors (NADH and NADPH) reduction activity was not observed."*
+**They disagree on reversibility, which is the one property an assay design must choose, and no
+experiment has ever been run that could tell them apart.**
+
 ## 3 · How it was missed, and the root cause that is now fixed
 
 `unread_gold.py` exists precisely to catch this (failure mode `FM-011`). It missed this paper on

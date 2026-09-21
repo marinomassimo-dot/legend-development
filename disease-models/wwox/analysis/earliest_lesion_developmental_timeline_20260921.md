@@ -388,3 +388,37 @@ manifests** and are labelled as such. `PMID 42397075` has no PMC deposit and was
 ---
 
 **End.** Not medical advice. Read-only toward every canonical file; nothing promoted, nothing committed.
+
+
+---
+
+## 🔴 ORCHESTRATOR ADDENDUM — *first observed abnormal* is not *onset*, and the qualifier that would change it
+
+**Added 2026-09-21 on Operator note, after this file was accepted and landed.**
+
+The file's headline is already a looking limit rather than an onset. The Operator's sharpening makes
+the condition explicit and **testable**:
+
+> **`E12.5` and `GW21` are OBSERVATION FLOORS — unless an EARLIER measurement exists and was
+> NORMAL.**
+
+**That is the whole difference, and it is one question, not a programme:**
+
+- If the earliest examination is **E12.5 and already abnormal**, the lesion began **at or before**
+  E12.5 and the floor says nothing about how much earlier. **This is the current state.**
+- If someone had examined **E10.5 and found it normal**, then E12.5 would bound a real onset
+  **between** the two — a genuinely different fact, and the first thing any window argument needs.
+
+🔴 **The discriminating question, named so a later wave can close it:** *does any WWOX study report
+a measurement at an earlier stage that was NORMAL?* Candidate stages: gastrulation and early
+neurulation in mouse (`E7.5`–`E10.5`); pre-`30 hpf` in zebrafish; any human tissue before `GW21`.
+**A normal earlier measurement is as valuable as an abnormal one here — arguably more so, because
+it is the only thing that converts a floor into a bound.**
+
+⚠️ **Until that question is answered, every stage in the timeline above is reported as the earliest
+anyone LOOKED, never as the earliest anything WENT WRONG** — and the two lesions already on the
+record that precede every examination (*"some very severely affected embryos died embryonically"*
+and **holoprosencephaly**, a forebrain-**patterning** defect, and patterning precedes neurogenesis)
+are the standing reason to expect the true onset is earlier than any floor in this file.
+
+*No canonical file edited by this addendum. Not medical advice.*

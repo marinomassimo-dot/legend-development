@@ -126,7 +126,39 @@ the body **and the two supplementary file names with no content**. **The recompu
 blocked and no direction is asserted** — `FT-122` stands, and it is an **open-access** file, so the
 obstacle is a route, not a paywall.
 
+## 4ter · 🔵 CREDIT: LEGEND held the both-tails datum already, under a different claim
+
+Recorded because this session nearly reported it as a discovery.
+
+`CLAIM 019` — not `CLAIM 033`, and not the claim this node was examining — already carries, in its
+own body:
+
+> *"nella coorte Oliver 2023 un paziente **Q230P omozigote** è il **più anziano dello studio
+> (23 anni e 11 mesi, vivo)**; un altro Q230P omozigote è **morto a 8 anni**; il paziente con
+> **Q230P + delezione** … è **vivo a 4 anni e 7 mesi**. La variabilità individuale è ampia."*
+
+**All three `Q230P` patients, with their outcomes, and the conclusion drawn.** LEGEND wrote it
+first, and this is the second time in one session that a finding presented as new turned out to be
+held — the first was `CLAIM 030`'s 2026-09-09 note that *Q230P is severe without being deterministic
+for early death*.
+
+**What this node genuinely adds**, kept honest by the above: verification from **Table 1 at source**
+with the alignment established against three anchors; the **denominators** (45 / 15 / 15 of 75);
+the **replication failure** in the registry cohort; the **ascertainment asymmetry** between the two
+pooled strata; and the **censoring definition**. The *datum* was held; the *arithmetic around it*
+was not.
+
+🔴 **And it is a sixth instance of this session's structural pattern, in a new form.** The others
+were *existence without a record*; this is **existence in the wrong place** — a finding filed under
+`CLAIM 019` that the `CLAIM 033` analysis needed, with nothing connecting them. `CLAIM 033`'s
+`Wikilinks` do not reach `CLAIM 019`. ⇒ **added to the proposal: cross-link the two claims**, so the
+next reader of the prognostic claim meets the allele that spans both its tails.
+
 ## 5 · What is proposed
+
+**(a0) `CLAIM 033` ↔ `CLAIM 019` — add the missing cross-link** (see §4ter): the claim that
+stratifies survival by allele class must reach the claim recording that its flagship missense allele
+spans both tails.
 
 **(a) `CLAIM 033` — add a fifth reservation: *the association does not replicate*.** Naming the
 registry cohort's non-significant result, its zero null/null deaths, its single death carrying

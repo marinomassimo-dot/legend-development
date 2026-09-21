@@ -5608,3 +5608,152 @@ at abstract level by the delegate. **No receipt persisted for any of the four.**
 delegate rather than smoothed: a `convert_article_ids` pass over all seven PMIDs returned
 `API_ERROR`; `42714273` returns no DOI from the converter but `10.1128/jvi.01042-26` from metadata.
 
+
+---
+
+## FT-124 — The CDK9 class, and the schedule finding that indicts the experiment it was meant to improve
+
+**Papers:** PMID 34523672 · PMID 38159337 · PMID 38658199
+**Opened:** 2026-09-21 · **Actor:** Orchestrator, from Scientist B's CDK9 census
+**Full context:** [`cdk9_selective_arm_census_20260921.md`](../analysis/cdk9_selective_arm_census_20260921.md)
+
+🔵 **`CDK9` appeared nowhere in this repository before today.** The class was entirely absent from
+the model, and it is the mechanism the only working pharmacological arm most likely acts through.
+
+### 🔴 The finding that matters most, and it cuts against the lead rather than for it
+
+From the zebrafish CDK9 paper, read in full in-act (≈28,000 characters):
+
+> *"We showed that continuous AT7519 or FVP treatments result in **developmental** and
+> injury-associated adverse effects, **including reduced cardiomyocyte number expansion**…"*
+> *"By limiting the CDK9i treatment period to a **2-h window**, we were able to enhance the
+> resolution of neutrophilic inflammation while **avoiding all adverse effects**."*
+> *"the **timing, duration** and selectivity of CDK9 inhibitor treatment is imperative"*
+
+🔴 **A51 was given to the organoids continuously from week 8 to week 15 — seven weeks. That is the
+regimen this literature identifies as the harmful one.** And `AZD4573` was independently engineered
+for *"transient inhibition of CDK9"* — the same design principle arrived at from a different
+direction.
+
+⇒ **A51's `SOX2⁺` fall from ≈60 % to ≈33 %, with `SATB2⁺`/`CTIP2⁺` unmoved, cannot be distinguished
+from an anti-proliferative effect using the published data.** That experiment has **no proliferation
+index and no cell-death readout**, and in such a dataset *"normalisation of a progenitor pool"* and
+*"suppression of a progenitor pool"* look identical. **This lowers confidence in `TX-004`'s only
+supporting experiment.**
+
+### The class, and one agent with genetic proof of selectivity
+
+**`AT7519`** is the only member in the census with **genetically demonstrated** selectivity:
+*"Using cdk9−/− knockout mutants, we showed that AT7519 is a selective CDK9 inhibitor"* — with
+flavopiridol **failing** the same test. **`AT7519` and `LDC000067` are procurable for a dish
+experiment today.** `AZD4573` (Phase I, `NCT03263637`) and `JSH-009` also identified.
+
+⚠️ **The CDK7 problem is mechanism, not caveat:** *"The majority of CDK9 inhibitors act by
+competitively inhibiting the ATP-binding domain, **which is conserved between all CDKs**."*
+🔴 **No abstract in the census states a CDK7 fold-selectivity figure** — those panels are in full
+texts not read. **Declared gap.** So the honest formulation is **not** *"use a selective CDK9
+inhibitor"* but *"use the most CDK9-selective agent available **and demonstrate the selectivity in
+the assay system itself**."*
+
+### 🔴 The safety signal that must travel with every citation of this class
+
+**Zotiraciclib (TG02)**, EORTC 1608 STEAM, `NCT03224104`, glioblastoma — *"an oral **multi-cyclin
+dependent kinase (CDK) inhibitor**"*, i.e. **the same non-selectivity trap as A51**:
+
+> *"Two dose-limiting toxicities were observed at 150 mg: **one in group A (grade 3 seizure)**, one
+> in group B… Main toxicities included neutropenia, gastrointestinal disorders and hepatotoxicity.
+> PFS-6 in group C was 6.7%."*
+
+⚠️ **Bounded, and the bound is real:** a seizure DLT in a glioblastoma cohort has an obvious
+competing explanation and is **not** evidence of proconvulsant pharmacology. **But in a disease
+defined by pharmacoresistant epilepsy it must travel with every citation of this class.**
+🔴 A published **corrigendum exists (`PMID 38658199`) and was not read** — it is queued here for
+that reason. **CNS use of the class exists; CNS use of a *selective* member does not.**
+
+### 🟢 A transferable method LEGEND has no equivalent of
+
+The **`cdk9` knockout selectivity assay**: treat a homozygous knockout of the nominal target and
+read a health surrogate — **any effect is off-target**. The authors generalise it explicitly to
+other targets at ≤2 h throughput. 🔴 **LEGEND has no in-system selectivity control of any kind, for
+any candidate compound**, and this is the cheapest one in the literature.
+
+**Read depth:** `34523672` read in full in-act (≈28,000 chars) by the delegate; the others at
+abstract level; **`38658199` not read at all**. **No receipt persisted for any.**
+
+
+---
+
+## FT-125 — PMID 36537114 (Chong 2023): already read, and the second-highest-value target is a RE-read
+
+**Papers:** PMID 36537114 · DOI 10.1002/ajmg.a.63074
+**Opened:** 2026-09-21 · **Actor:** Orchestrator, from Scientist A's `FT-117` tier work
+**Priority:** 🎯 **HIGH — and it needs NO acquisition.**
+
+**Status:** receipt `FTR-20260726-36537114-01`, **`partial_fulltext_read`**; registry records exist.
+`convert_article_ids` returns the PMID alone; `get_copyright_status` gives
+**DOI `10.1002/ajmg.a.63074`**, `pmc_id: null`, `found_in_pmc: 0`, *"© 2022 Wiley Periodicals
+LLC."* ⇒ **no PMC body; the existing partial read is the surface LEGEND has.**
+
+🔵 **The point of this entry:** *a receipt records that a paper was read, not that everything in it
+was extracted.* Three findings were surfaced from **corpus passages** of this already-read paper
+while working a different node, and none is in LEGEND.
+
+### 🔴 N-33 — ADJUDICATED BY THE ORCHESTRATOR, and it does NOT hold for WWOX
+
+The flag: a passage states RNA sequencing was done in **blood and skin fibroblasts** and that
+neither gene *"is normally expressed in these tissue types and therefore could not be"* [sentence
+**truncated** in the passage]. **If that applied to WWOX, `DL-BIO-003` (RT-qPCR on fibroblasts/LCL)
+and `HYP-20260709-08` (donor-derived fibroblasts) would return uninterpretable results rather than
+negatives.**
+
+> ✅ **It cannot apply to WWOX, and LEGEND's own canonical record settles it.** `CLAIM 019` holds,
+> from Johannsen 2018 (`PMID 29808465`): *"Nei **fibroblasti di paziente**: **qRT-PCR → livelli di
+> trascritto WWOX normali**; Western blot → proteina WWOX non rilevata."*
+> 🔴 **WWOX transcript was measured at NORMAL levels in patient fibroblasts.** Had WWOX not been
+> expressed there, that qRT-PCR could not have returned normal levels — **and the entire `Q230P`
+> functional endpoint, on which `CLAIM 019` and half of `CLAIM 030` rest, would be void.**
+> LEGEND additionally holds WWOX-knockdown work performed *in* human skin fibroblasts.
+
+⇒ **The truncated sentence refers to the OTHER gene(s) in that patient's report, not to WWOX.**
+**`DL-BIO-003` and `HYP-20260709-08` stand unaltered.** The delegate was right to flag it and right
+to mark it contestable and unscored; the adjudication was available inside LEGEND and is recorded
+here so the flag is not re-raised.
+
+### The two that DO stand, both new to LEGEND
+
+- **N-34 — a heterozygous `Q230P` brother**, clinically *"similar to his brother's"*, **died at 10
+  years**, reported as a carrier with *"further testing underway"* for a second allele. ⚠️ **Most
+  likely a missed variant, not a modifier** — but it touches the sibling domain Scientist A's
+  resilience census closed, and that census found no discordant pair.
+- **N-35 — `GRIA4` appears nowhere in this repository.** A *de novo* likely-pathogenic **intronic**
+  variant in a WWOX compound-heterozygous patient, predicted by six algorithms to activate a cryptic
+  acceptor. **The nearest thing this session has found to an oligogenic modifier candidate**, and it
+  is sitting inside a paper LEGEND has already read.
+
+**Next action: a targeted RE-read of the existing surface** for N-34's genotype and outcome, N-35's
+variant and zygosity, and the reported `Q230P` + 36.3 kb exon-5 deletion genotype for the allelic
+series. **No acquisition required.**
+
+---
+
+## FT-126 — 🔴 Two instrument defects found today in the exact token class this repository is most fragile on
+
+**Papers:** NOT_AN_ARTICLE — this entry records instrument behaviour, not a source.
+**Opened:** 2026-09-21 · **Actor:** Orchestrator
+
+1. 🔴 **The Scholar Gateway surface silently deletes hyphens and asterisks inside variant strings.**
+   `c.606-1G>A` came back as **`c.6061G>A`** — not valid HGVS — and `p.Arg54*` as `p.Arg54`. Caught
+   only because LEGEND already held the correct string from another source. **This is the
+   `+5` → `−3` class**, the failure this repository has been burned by before. ⇒ **No variant
+   coordinate may be quoted from that surface, by anyone, ever.** It is not a parser to be fixed; it
+   is a surface to be refused for this token class.
+2. ⚠️ **`lookup_article_by_citation` transposes its `pmid` and `key` fields.** A session reading the
+   response literally would conclude the lookup failed when it succeeded.
+
+🔵 **And the general lesson, which cost this session three separate errors:** **a missing identifier
+from ONE route is not an absence.** `convert_article_ids` omits DOIs that `get_article_metadata` and
+`get_copyright_status` both return — demonstrated today on `PMID 30853297`
+(**DOI `10.1016/j.ejpn.2019.02.003`, verified by two independent routes**) and on `PMID 36537114`
+(**DOI `10.1002/ajmg.a.63074`**). **The Orchestrator asserted both were absent on the strength of
+the converter alone, and was wrong both times.**
+
