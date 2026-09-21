@@ -12,47 +12,38 @@ resumes from here. **Not a handoff and not a stop.**
   calls blocked (with `36621327` read if its body is non-empty), and a **census of WWOX splice
   transcript evidence** for `DL-BIO-002` / `TX-001`.
 
-## 🛑 HUMAN_REQUIRED — the publication gate is BLOCKING and nothing can be pushed until it clears
+## ✅ RESOLVED — the publication-gate blocker (kept as a worked example, not a precedent)
 
-**Status: one block, self-inflicted, two words wide, and I must not fix it myself.**
+**2026-09-21. Operator-authorized, scope-limited, closed.** The gate had blocked on the ledger tail
+`FTR-20260921-39101447-01`, where a published study's parental attribution for a chromosome-16
+uniparental disomy sat in the same JSONL record as reference-genotype language. Two words were
+removed, leaving `homozygous through uniparental disomy of chromosome 16`; the ledger was
+re-anchored and the chain re-validated at **182**; gate **PASS, 0 blocks**.
 
-`public_release_gate.py` returns `BLOCK_PUBLICATION` on
-`disease-models/wwox/registries/fulltext_read_receipts.jsonl`, **last line**, rule
-`PARENT_OF_ORIGIN_REFERENCE_GENOTYPE`.
+**How the edit was made safe.** It ran under a **programmatic scope assertion that refused to write**
+unless exactly one `evidence_basis` element differed and every other field was byte-identical —
+`study_id`, `evidence_depth`, `source_locator`, `source_fingerprint`, `coverage`, `prior_receipt`,
+`ledger_prev_hash`, `outputs`, `workflow`. **It caught my own first attempt**, which named the wrong
+element index, and wrote nothing. Worth reusing: when an authorized edit is narrow, encode the
+narrowness as an assertion rather than as care.
 
-**What happened.** That line is `FTR-20260921-39101447-01`, the receipt for the splice-minigene
-paper. Its `evidence_basis` states how that published study's proband came to be homozygous — by
-uniparental disomy of chromosome 16 — and names **which parent** the disomy came from. The same
-record elsewhere refers to the reference genotype's allele class. The gate scans one JSONL record as
-one window, sees both together, and blocks. **It is right to be conservative**: the co-occurrence is
-real. The linkage it fears is not — the parental fact belongs entirely to `PMID 39101447` — but the
-gate cannot know that, and it has **no allowlist and no waiver, by design**.
+🔴 **Not a precedent, and the Operator said so explicitly.** This authorises nothing about historical
+receipts, ledger rewriting, parent-of-origin removal elsewhere, gate bypass, allowlists or waivers.
+**A later case of the same shape gets judged again on its own terms.**
 
-**Why I did not fix it.** The receipt ledger is **append-only and hash-chained**, and the
-environment refused the edit as audit tampering — correctly. `CLAUDE.md` says such an edit halts
-LEGEND *"until the edit is undone or **authorized** and re-anchored"*, and that authorisation is the
-Operator's, not mine. The gate's only sanctioned escape, an explicit decoupling sentence, must sit
-**inside the same record**, so it too means touching that line.
+### The rule that prevents the recurrence
 
-**The remedy, exact and minimal — two words deleted.** On the **last line** of
-`disease-models/wwox/registries/fulltext_read_receipts.jsonl`, in the clause describing how the
-proband became homozygous, **delete the two capitalised words that name the parental side**, leaving
-`homozygous through uniparental disomy of chromosome 16`. Then run:
+**Keep inheritance-side attribution out of receipts entirely** — including for a published study's
+proband, not only for this model's own genotype. The gate reads one JSONL record as a single window
+and cannot tell whose family is meant, so the mere co-occurrence blocks publication; and because the
+ledger is append-only, **by the time the gate tells you, the record can no longer be fixed without an
+authorisation.** The scientific content almost never needs the side: write the mechanism — *"disomy
+produced homozygosity"*, *"biallelic, both alleles inherited"* — and stop there.
 
-```bash
-python3 framework/scripts/fulltext_receipts.py anchor
-python3 scripts/public_release_gate.py      # expect PASS, 0 blocks
-python3 framework/scripts/safe_push.py origin main
-```
-
-It is the **tail** record, so **no other line's `ledger_prev_hash` changes**, and the science is
-untouched: the mechanism — disomy producing homozygosity — survives intact; only the attribution of
-side goes.
-
-**Until then:** commits land **locally**; **nothing is pushed**, because `safe_push.py` publishes
-only on a `PASS`. `legend_lint.py` is **PASS** and the ledger **validates at 182 chained receipts**.
-**One commit is unpushed**, and this container is ephemeral — *that* is the reason this cannot simply
-wait.
+⚠️ **And the same restraint applies to prose that merely explains the rule.** The first version of
+this very note tripped the same check three more times by reproducing the offending words, and a
+second version tripped it once more; the wording above is the third attempt. **Describe the shape,
+never quote the phrase.**
 
 ---
 
