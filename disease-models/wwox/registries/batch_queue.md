@@ -8,15 +8,15 @@
 
 ## ▶ Start here
 
-**413 records have not been processed.** **219** of them have a free full text and can be worked immediately.
+**412 records have not been processed.** **219** of them have a free full text and can be worked immediately.
 
 | Verdict | Records | What it means |
 |---|---:|---|
-| 🟢 **`NEW`** | 69 | never seen by the system — **the front of the queue** |
+| 🟢 **`NEW`** | 68 | never seen by the system — **the front of the queue** |
 | 🟢 **`CORPUS_CATALOGUED`** | 344 | catalogued and deduplicated, never analytically processed |
 | 🟡 `OUT_OF_SCOPE_LIKELY` | 218 | no scope signal in the title — later in the queue, **never discarded** |
 | 🟡 `AMBIGUOUS` | 6 | identifiers must be resolved before ingest |
-| ⏳ `IN_PIPELINE` | 28 | already in flight |
+| ⏳ `IN_PIPELINE` | 29 | already in flight |
 | ✅ `KNOWN_INTEGRATED` | 41 | done — read depth in the table below |
 
 The two green rows are the answer to *"where do I start?"*. The table further down lists
@@ -142,7 +142,6 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [42101182](https://pubmed.ncbi.nlm.nih.gov/42101182/) | 2026 | — | Journal Article | unmatched | Expression of sulfate pathway genes in human neurodevelopment. |
 | [42190144](https://pubmed.ncbi.nlm.nih.gov/42190144/) | 2026 | — | Journal Article | unmatched | Burst-Suppression EEG in Early Infantile Developmental and Epileptic Encephalopathies: Phenotype, Genotype, and Outcome. |
 | [42231860](https://pubmed.ncbi.nlm.nih.gov/42231860/) | 2026 | — | Journal Article | unmatched | WWOX Exon 4 Copy Number Gain in Dogs With Testicular or Ovotesticular XX (SRY-Negative) Disorder of Sex Development. |
-| [38902482](https://pubmed.ncbi.nlm.nih.gov/38902482/) | 2025 | — | Journal Article | unmatched | Molecular Mechanism of WWOX Inhibiting the Development of Esophageal Cancer by Inhibiting Hippo Signaling Pathway. |
 | [33629514](https://pubmed.ncbi.nlm.nih.gov/33629514/) | 2022 | — | Journal Article | unmatched | Expression of WW domain-containing oxidoreductase and its clinical implication in endometrial adenocarcinoma patients with metabolic syndrome. |
 | [34673242](https://pubmed.ncbi.nlm.nih.gov/34673242/) | 2021 | — | Journal Article | unmatched | Clinical next generation sequencing in developmental and epileptic encephalopathies: Diagnostic relevance of data re-analysis and variants re-interpretation. |
 | [31230746](https://pubmed.ncbi.nlm.nih.gov/31230746/) | 2019 | — | Journal Article | unmatched | A long non-coding RNA TSLD8 inhibits hepatocellular carcinoma by stabilizing WWOX. |
@@ -681,6 +680,7 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [17823927](https://pubmed.ncbi.nlm.nih.gov/17823927/) | 2007 | ✅ | Journal Article; Research Support, N.I.H., Extramural | unmatched | WWOX hypomorphic mice display a higher incidence of B-cell lymphomas and develop testicular atrophy. |
 | [15126504](https://pubmed.ncbi.nlm.nih.gov/15126504/) | 2004 | ✅ | Journal Article; Research Support, Non-U.S. Gov't; Research Support, U.S. Gov't, Non-P.H.S.; Research Support, U.S. Gov't, P.H.S. | unmatched | Down-regulation of WW domain-containing oxidoreductase induces Tau phosphorylation in vitro. A potential role in Alzheimer's disease. |
 | [12514174](https://pubmed.ncbi.nlm.nih.gov/12514174/) | 2003 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | unmatched | JNK1 physically interacts with WW domain-containing oxidoreductase (WOX1) and inhibits WOX1-mediated apoptosis. |
+| [38902482](https://pubmed.ncbi.nlm.nih.gov/38902482/) | 2025 | — | Journal Article | unmatched | Molecular Mechanism of WWOX Inhibiting the Development of Esophageal Cancer by Inhibiting Hippo Signaling Pathway. |
 | [32051108](https://pubmed.ncbi.nlm.nih.gov/32051108/) | 2020 | — | Case Reports; Journal Article | unmatched | A Chinese patient with epilepsy and WWOX compound heterozygous mutations. |
 | [30094525](https://pubmed.ncbi.nlm.nih.gov/30094525/) | 2018 | — | Case Reports; Journal Article | unmatched | WWOX-associated encephalopathies: identification of the phenotypic spectrum and the resulting genotype-phenotype correlation. |
 | [25716914](https://pubmed.ncbi.nlm.nih.gov/25716914/) | 2015 | — | Case Reports; Journal Article | unmatched | WWOX and severe autosomal recessive epileptic encephalopathy: first case in the prenatal period. |
