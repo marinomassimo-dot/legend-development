@@ -246,3 +246,46 @@ factor of 31 in length and by their entire structural context.**
 is unchanged. The correction runs in one direction only: the site is **better predicted** and
 **better placed** than the repository claimed, so "structurally contested" overstated the doubt —
 while §4.2's six lost contacts, which nobody had inventoried, understated a different one.
+
+---
+
+## 9 · A limitation this analysis shares with every other structural claim here — added after Scientist S
+
+Scientist S's missense census raises a critique of the `Q230P` structural work that **applies with
+equal force to §4 above, and I am recording it against my own analysis rather than only theirs**:
+
+> **WWOX homodimerises through its SDR domain, and `WWOX_Q9NZC7_AlphaFold.pdb` is a MONOMER with the
+> dimer interface unmodelled.**
+
+So the burial numbers in §4.1 and the contact inventory in §4.2 are computed against **one chain**.
+If helix 352–363, or the 110–143 element it staples to, contributes to the dimer interface, then:
+
+- the burial of 355–363 is **under-estimated** (an interface residue reads as partly exposed in a
+  monomer), which would make §4.1's register argument **more** consequential, not less; and
+- the six lost contacts in §4.2 are an **incomplete inventory** — an interface contact cannot appear
+  in a monomer at all.
+
+**Neither direction is measured here, and I cannot resolve it with a monomer model.** The correct
+label for §4 is therefore: *a lower bound on burial and a lower bound on lost contacts.*
+
+🔴 **And S's transferred evidence makes this the question with the highest therapeutic stakes in the
+whole node.** In a fungal SDR homodimer (`PMID 18775764`, `PREMISE: UNREAD_PRIMARY`, abstract-depth),
+substitutions **at the dimer interface** produced *"inactive aggregates and oligomers with high
+molecular masses"* — whereas the fold family's default elsewhere is **degradation**. The two have
+**opposite** therapeutic consequences:
+
+| if the lesion is… | consequence | therapeutic reading |
+|---|---|---|
+| degradation-prone, interface intact | cleared | 🟢 proteostasis / chaperone route is coherent |
+| **interface-disrupting** | **aggregation** | 🔴 **a boost is actively dangerous** |
+
+> **Whether Gln230 — or residues 353/354 — lie at the dimer interface is a single structural fact
+> that flips the sign of the reopened upregulation axis.** It is not established for either site, and
+> no monomer model can establish it.
+
+⚠️ Note also `PMID 35716775`'s unprompted warning, which S surfaced: *"AlphaFold2 cannot be used to
+assess effects of point mutations, since it relates to point mutations as 'local noise'."* §5 above
+already refuses ΔΔG-style scoring for a **deletion**; this is the adjacent caution for the model
+itself, and §4's two-sided reading was built from **backbone geometry and a contact list**, not from
+a predictor's score — which is why it survives that warning. **It does not survive the monomer
+limitation, and nothing above should be read as if it did.**

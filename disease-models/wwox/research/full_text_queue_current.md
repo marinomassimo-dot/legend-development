@@ -6459,3 +6459,71 @@ establishes `NEVER TESTED` for NMD assays across every WWOX allele, species and 
 somatic deletion — it transfers nothing to a germline neuronal genotype**, and is queued for its
 **instrument**, not its finding.
 **Disposition:** unacquirable by attempt, not by licence.
+
+---
+
+## FT-137
+**Papers:** PMID 17314322 — 11β-HSD2 (SDR), missense half-life and chemical-chaperone rescue ·
+PMID 18775764 — fungal 17β-HSD (SDR homodimer), dimer-interface substitutions ·
+PMID 28888424 — HSD17B10/SDR5C1, two patient missense failing by two different mechanisms ·
+PMID 25925575 — HSD17B10 homotetramerisation
+**Title:** SDR fold-family transfer set — **transferred evidence, NOT WWOX evidence**
+**Priority:** MEDIUM
+**Why:** Declared by
+[`wwox_missense_stability_census_20260922.md`](../analysis/wwox_missense_stability_census_20260922.md),
+which establishes that **no WWOX missense variant has ever had stability, solubility, aggregation or
+turnover measured** — so the only available prior for `Q230P`'s folding fate is the SDR fold family.
+All four are **`abstract-depth` only**: `PREMISE: UNREAD_PRIMARY` ×4.
+⚠️ **They must never be cited as WWOX evidence.** The fold-family default is **degradation**
+(11β-HSD2: WT `t½` 21 h → 3–4 h for two missense, rescued by chemical chaperones, **proteasomal**) —
+but the route does **not** transfer: WWOX `P252A`'s demonstrated route is **lysosomal**, not
+proteasomal. **The fold fixes neither the route nor the outcome.**
+🔴 **The exception that decides the therapeutic sign:** PMID 18775764 reports that substitutions **at
+the dimer interface** of a fungal SDR homodimer produce *"inactive aggregates and oligomers with high
+molecular masses"*. **WWOX homodimerises through its SDR**, and this repository's structural work was
+run on an **AlphaFold monomer with the interface unmodelled**. Whether Gln230 lies at that interface
+is the single unknown that flips the transferred prior from *degradation* (proteostasis viable) to
+*aggregation* (**a boost is dangerous**).
+
+---
+
+## FT-138
+**Papers:** PMID 41957021 — *Nat Commun* 2026 · PMID 38515655 — *Heliyon* 2024
+**Title:** The `Q230P` namespace trap — **GTPBP3, not WWOX**
+**Priority:** LOW to read; **HIGH to keep declared**
+**Why:** Declared by the missense-stability census as a **recorded false positive**, so that a future
+search finds the warning rather than the trap. A bare `"Q230P"` PubMed query returns **2 records,
+neither of them WWOX**: both are **GTPBP3**, at an *identical* `c.689A>C (p.Q230P)`, and PMID 41957021
+carries a **measured aggregation-and-degradation result**.
+🔴 **It is the most citable-looking false positive in this search space** — a measured folding result
+at the same protein-level variant string as the reference genotype's missense allele. **Entered here
+as a tripwire, not as evidence.** Neither paper is evidence about WWOX in any respect.
+
+---
+
+## FT-139
+**Papers:** PMID 17200365 — Iliopoulos 2007, *Clin Cancer Res*, breast · PMID 17019711 — Cantor 2007,
+*Int J Cancer*, lung H1299 · PMID 23464470 — Yan & Zhang 2012, *APJCP*, sodium valproate / HO8910 ·
+PMID 25708809 — Hua 2015, *Oncotarget*, miR-153→WWOX (**PMC4414157, open**) · PMID 25024751 —
+Stewart 2014, *Clin Epigenetics*, decitabine IHC in **clinical tumour samples**
+**Title:** The WWOX expression-boost agent set — declared reading debt behind a **negative** verdict
+**Priority:** MEDIUM; **PMID 23464470 and 25708809 HIGH**
+**Why:** Declared by
+[`wwox_expression_boost_census_20260922.md`](../analysis/wwox_expression_boost_census_20260922.md),
+whose verdict is that **no credible boost lead exists**: ten agents have a measured direction, **all
+oncology, none in a neuron, none in a WWOX-DEE genotype**, and **abundance is never once tied to
+function**. A negative verdict rests on these records, so the debt is declared rather than left
+implicit.
+⭐ **PMID 23464470 is the one that matters clinically and is the least retrievable** (*APJCP* 2012,
+**no PMC**, zero replication, probably not independent of the 5-Aza row from the same group). Sodium
+valproate is the **only** agent in the census that is approved, BBB-penetrant, paediatric and
+**already given to WWOX-DEE patients** — and it raised WWOX transcript **and** protein in HO8910 and
+in xenografts. ⚠️ **An unmeasured variable, NOT a treatment suggestion. Nothing here is medical
+advice and no medication decision follows from it.** The action it implies is a *measurement*:
+`±valproate` WWOX Western on carrier-derived LCLs.
+🟢 **PMID 25708809 is open access and has never been read here** — the only experiment where
+inhibiting a repressor raised WWOX protein **in a living animal**, and the repository holds only
+second-hand prose about it.
+🟢 **Retrievability update:** PMID **18460020** (already queued) now carries **PMC11159152** — its
+**body** is open even though its supplementary figure remains at a dead `blackwell-synergy.com`
+domain. ⚠️ A PMCID **orders an attempt**; it does not promise a body.
