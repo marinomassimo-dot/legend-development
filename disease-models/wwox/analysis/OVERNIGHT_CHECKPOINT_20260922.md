@@ -204,3 +204,62 @@ And **both** of the two resolve benignly:
 > 🟢 **VERDICT: the invisibility is exactly ONE paper, and it is principled.** The evidence chain is not systematically leaking, `unread_premises` is not silently wrong, and no census landed tonight needs revisiting on this account. **Direction closed.** Recorded so it is not re-investigated: re-run the cross-check above before reopening it.
 
 🔴 **What this does NOT clear**, stated so the closure is not over-read: it bounds `learning/`, and nothing else. `files/` and `staging/` are **gitignored**, so a fresh clone still has no text surface for `33914858`, and that reachability defect stands exactly as recorded.
+
+---
+
+# FINAL STATE — overnight run closed 2026-09-22
+
+**Stop condition: `STOP-B` — `ALL_HIGH_VALUE_NEXT_STEPS_HUMAN_REQUIRED`.** Not time exhaustion and
+not a lack of ideas. Every remaining high-value step now needs a human: **25 papers** with every
+automated route exhausted (PMC body, copyright probe, id conversion **and** Scholar Gateway), tissue
+custody at **two** separate institutions, two deposit requests, and one governance decision. No
+external action was taken on any of them.
+
+## Gates at close — all green
+`LINT PASS` · `growth anchors PASS`, `unread_premises: 0` · `release gate PASS`, `BLOCKS: 0` ·
+**201 receipts, chained and tail-anchored, unchanged all night** · working tree clean · branch synced.
+
+## 🔴 THE RATCHET, BROKEN TWICE BY ME AND REPAIRED TWICE
+Landing nine analysis files took `unread_premises` from 0 → 12, then 0 → 1, turning `growth_anchors`
+to `BLOCK: RATCHET_VIOLATION`. **Both times the repair was to declare the reading debt
+(`FT-158`–`FT-170`), never to delete the citation.** The citations are honest; deleting them to clear
+a gate would game the gate the repository built to catch exactly this. Authority `LEGEND_CORE` §21d,
+following the precedent set by `FT-156`/`FT-157`, whose own standard — *"I did not commit anything
+that flips LINT from PASS to BLOCK"* — is the standard I failed and then met.
+
+## Verification: 9 nominated claims checked, 3 broke
+Each Scientist named the claim it would least like to be wrong about. **Three did not survive**, and
+two of those three were **the Orchestrator's own framings**:
+1. *"`PMID 33914858` was never read"* → it was, 810 lines, 30 locators, un-receipted by **principled
+   abstention**. The real defect is **reachability**, which is the stronger claim.
+2. *"Aldaz + Shetty are one existing collaboration"* (mine) → **no Shetty author on the 2023 paper**;
+   a re-activation across two institutions, and the 2018 archive holds **no cerebellum at all**.
+3. *"L5 spared / L2/3 fails"* (mine, handed to S6 as its explanandum) → **a category error**,
+   pairing a structural rat count with mouse electrophysiology. Bursting occurs in **both** layers.
+
+Every correction made the underlying result **stronger**, not weaker.
+
+## One verification that did NOT come out clean, recorded as such
+S9's claim that Tabarki 2015 asserts cerebellar sparing for **two of five** patients is 🔴 **NOT
+verified at the primary** — that paper's Results chunk would not return. It is 🟢 **independently
+corroborated**: Shaukat 2018 tabulates Tabarki's cohort with cranial MRI present for **cases 1 and 2
+only**, cases 3–5 *"Not done"*, ages *"0 m and 11 m"*. And Tabarki's abstract, which did return,
+**generalises to the cohort**. ⇒ The human "cerebellum is spared" datum rests on qualitative imaging
+in **2 of 5 children, both under twelve months**, while its abstract phrases it as a cohort property.
+
+## Nodes closed tonight, with revival triggers
+| Node | State | Reopens when |
+|---|---|---|
+| **Metabolic / bioenergetic ceiling** (brief P1) | 🔴 **CLOSED on measured evidence** — the highest-mitochondrial-content neuron is the one measured *intact* | Five triggers in the node file. 🔴 Closed against the **bioenergetic ceiling only**, explicitly **NOT** against terminal mitochondrial logistics — do not conflate |
+| **Expression-level rival** | 🔴 **Refuted** on a measurement | — |
+| **Cerebellum systematically unmeasured** | 🔴 **Refuted as stated** → real result is an **allele asymmetry** | — |
+| **Amygdala expression coincidence** | 🔴 **Closed** — five grounds, base rate ≈ 0.58 | A nucleus-resolved lesion record, or a numeric BLA value |
+| **Q230P** | Unchanged · `ENVIRONMENT-SATURATED` · **no trigger fired** | MD on SASA/RMSF of residues 187–191 |
+| **Purkinje / TX-007** (P2) · **Peripheral qPCR** (P3) | 🔴 **Frozen, `HUMAN_REQUIRED`** | `A-f4` answered. 🎯 Now known to gate **only** vector arrival — *not* whether WWOX loss damages the cerebellum, which has a published answer |
+
+## The routing rule worth keeping
+`convert_article_ids` → `get_full_text_article` **and measure `len(full_text)`** (a PMCID is not a
+body) → 🎯 **is the journal served from onlinelibrary.wiley.com? yes → `semanticSearch`; no → stop,
+`HUMAN_REQUIRED`** → **never dispatch `find-fulltext` here**, every tier of its cascade is an
+egress-blocked fetch. Wiley 4/4 recoverable, everything else 0/25. **Journal host predicts, DOI
+prefix does not.**
