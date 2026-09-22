@@ -918,3 +918,47 @@ have now failed against a **proven blanket egress block**; it is routed to the h
 packet and is `ALL_HIGH_VALUE_EVIDENCE_BLOCKED` **for that item only**, not for the session.
 
 **No row is canonical; none is proposed for `BATCH_COMMIT`.**
+
+## V8 · 🔴 CORRECTION — condition (d) is overstated, and the repository already holds the accurate version
+
+§5 states that **(d) a functional readout exists = NOT SATISFIED, for any WWOX allele, at any
+price.** That absolute does not survive the repository's own record.
+
+`wwox_sdr_function_per_molecule_census_20260921.md:91` scores the **GSK3β pull-down + inhibition of
+Tau S396/S404 phosphorylation** (`CLAIM 035`, `PMID 22193544`) as *"still the only WWOX-function
+readout with residue resolution"*, **passing criteria 1–3 and conditional on criterion 4** — *"only
+in a purified format with activity normalised to folded monomer, which nobody has run."*
+
+And the primary did run it on **purified protein at defined amounts**: *"GST-tagged WWOX protein
+(0.3 µg) and His-GSK3β protein (30 ng) … before adding 0.5 µg His-Tau"*; *"completely abolished in
+the presence of excess WWOX, **but not GST or WWOX L404A**"*; *"reduced in a **dose-dependent
+manner**"*; and on a **second substrate** — *"WT but not mutant WWOX inhibits GSK3β phosphorylation
+of GS-1"*.
+
+**So the accurate statement is not *"no readout exists"* but *"a readout exists, discriminates
+alleles, has never been run on a disease allele, and has never been normalised to folded monomer."***
+Those are different claims with different consequences: the first says build one, the second says
+**run the one that exists, on the allele nobody has tested**.
+
+🟡 **Three bounds that keep this from being a green light**, and B's caution is right even where its
+absolute is not:
+1. The docking determinant is **`L404` in 388–407**, a linear C-terminal motif; `Δ389` abolishes
+   binding. **An assay reading that motif is not automatically a report on the SDR core fold where
+   `Q230` sits.** It is a ruler for *global* integrity, in the strong direction only — exactly the
+   narrowing V4 already endorsed.
+2. Criterion 4 is genuinely unmet: **total-protein** normalisation is achievable, **folded-monomer**
+   normalisation is not without a folding measurement.
+3. The assay's conditions are **not uniquely reconstructible** across Methods, Results and legend —
+   a cost, and possibly a fatal one, which is being adjudicated separately.
+
+🎯 **The asymmetry worth testing, and it is why the bounds do not close the route.** Under
+total-protein normalisation, **equal specific activity per µg is informative** — the fold must be
+adequate to present the motif — while **reduced specific activity is ambiguous** between fold and
+species composition. A one-directional readout is still a readout. This is the same logical shape as
+the Purkinje morphology argument (*a positive refutes; a negative stays ambiguous*), and it is now
+being tested directly rather than asserted.
+
+**This correction does not change any other section of this file.** §5's *classification* —
+`CHAPERONE PROGRAM — MECHANISTIC QUALIFICATION`, no compound screen — stands, and stands for the
+better reason: not that function cannot be measured, but that it **has never been measured on this
+allele**.
