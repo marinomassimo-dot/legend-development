@@ -232,3 +232,88 @@ third point on an uncalibrated ruler.**
 scale even if the exponents and units were settled** — 2021 injected **~1 µL/hemisphere free-hand**,
 2026 **2.0 µL/hemisphere stereotaxically**. Volume and technique both change CSF distribution, and
 settling the exponents would not fix it.
+
+---
+
+## 9 · 🔴 APPEND-ONLY CORRECTION — §4a's arithmetic is right and its interpretation overreached
+
+Scientist M retrieved `PMC8649866` and verified §4a number by number. **The Orchestrator then
+retrieved the same body independently and confirms every item below.** According to PubMed, Repudi
+*et al.* 2021, *EMBO Mol Med* ([DOI](https://doi.org/10.15252/emmm.202114599)).
+
+### 9a · The legends, verbatim — every number in §4a is CORRECT
+
+> **Fig 1C:** *"Kaplan–Meier survival graph indicates prolonged life span of knockout mice injected
+> with AAV9‐hSynI‐mWwox [**total= 18, spontaneously dead= 6**, mice taken out for
+> electrophysiology/electron microscopy/analysis, **are shown in yellow,= 12**] compared to mice
+> injected with AAV9‐hSynI‐GFP (= 6) or the non‐injected (= 8); **< 0.0001, log‐rank Mantel–Cox
+> test**."*
+
+> **Fig 2C:** *"…AAV9‐hWWOX [**total= 16, alive= 6, spontaneously dead= 6, 4 mice (shown in yellow)
+> were taken out for analysis**) compared to the non‐injected (= 8)] (**< 0.0001, log‐rank
+> Mantel–Cox test**)."*
+
+18 / 6 / 12 and 16 / 6 / 6 / 4 — **all verified.** (The extractor deletes every `n` token, so
+`total= 18` is `total n = 18`; the numerals are intact and the deletion is stated, not repaired.)
+The equivalence sentence is verbatim too: *"No difference was noted when using the murine or human
+WWOX vectors"*, and in the Discussion *"our analyses did not reveal any difference between mWwox and
+hWWOX vectors."*
+
+### 9b · 🔴 But §4a's interpretation is wrong in three ways, and the first is the important one
+
+**1. It IS a Kaplan–Meier, and the censoring IS marked.** Both arms are KM curves with a log-rank
+Mantel–Cox test at `p < 0.0001`, and both legends state the removed animals are ***"shown in
+yellow"*** on the curve. **Kaplan–Meier is the standard handling of animals withdrawn before the
+event** — they are censored at withdrawal and displayed. **§4a's framing that the survival analysis
+is "conditioned on a non-random removal" is withdrawn.** It is not a naive proportion among the
+non-removed; it is a time-to-event estimate that censors and marks them.
+
+**2. *"Removed at scheduled times"* is not in the paper.** Fig 1C says only *"taken out for
+electrophysiology/electron microscopy/analysis"*; Fig 2C says only *"taken out for analysis"*.
+**No age, no schedule and no criterion is stated for any removal.** That was the delegate's
+inference and is withdrawn as a quotation.
+
+**3. The direction of bias is undetermined, and for much of the cohort it points the other way.**
+The adult experiments that consumed those animals are at **6 months** (adult cell-attached
+recordings; corpus-callosum EM) and **8–9 months** (aged open field) — verified verbatim in the
+figure legends. **Late censoring does not inflate a survival curve the way early censoring does.**
+§4a's *"in the direction that flatters survival"* is withdrawn as unestablished.
+
+### 9c · 🎯 What survives is a better finding than the one it replaces
+
+**What remains true, and is the real defect:** the paper **never states that censoring is
+non-informative**, never gives the age or selection criterion for a single removal, and runs **no
+sensitivity analysis** — the Statistical analysis section names only *"The two‐tailed unpaired
+Student's‐test or two‐way ANOVA with Bonferroni for post hoc comparisons."* **Kaplan–Meier is
+unbiased only if withdrawal is independent of prognosis, and that assumption is neither stated nor
+tested.** The Discussion's limitations concern oligodendrocyte function, tumour surveillance in
+*"the limited number of adult"* mice *"(age 8–11 months)"* and the P0 treatment age — **not the
+survival cohort.**
+
+🔴 **And the sharper point, which replaces the 100%-vs-50% contrast entirely:**
+
+> **Nobody compared the two vectors, in either direction.** The paper asserts *"No difference was
+> noted…"* **while running no statistical comparison between the two arms** — each arm is tested
+> only against its own untreated controls. *An untested equivalence is not equivalence.* **But
+> §4a's counter-evidence is not a valid time-to-event comparison either:** *"mortality among
+> non-removed"* is a statistic with **no time axis**, neither legend reports a death time, and the
+> cheapest explanation of 100% versus 50% is **follow-up duration** — the hWWOX arm still had
+> `alive= 6` at write-up while the mWwox arm was carried to 6–9 months. A cohort followed longer
+> accrues more deaths.
+
+**Both the paper's claim and the candidate's counter-claim are unsupported. That is the finding.**
+
+### 9d · Two further items verified in the same read
+
+- ✅ **The 2021 paper never mentions WPRE.** Its vectors are `AAV9‐hSynI‐mWwox‐IRES‐EGFP`,
+  `AAV9‐hSynI‐hWWOX` and `AAV9‐hSynI‐EGFP`. So the repository's *"the configuration of the 2021
+  proof-of-concept"* **is an inference from the 2026 paper's framing, not a 2021 statement** —
+  confirmed, and it should be labelled as such.
+- ✅ **The dose and its unit, verbatim:** *"Approximately 1 µl (2 × 10GC/hemisphere)"* — exponent
+  deleted by the extractor, **and explicitly per hemisphere, free-hand.** This confirms §4b's unit
+  point from the other side: the 2021 paper states its unit and the 2026 paper does not.
+- 🔵 **And a contrast worth recording:** 2021 declares *"The authors declare that they have no
+  conflict of interest."* The 2026 paper carries three Mahzi Therapeutics co-authors. **Not a defect
+  in either paper — a fact about how the axis's evidence base changed between them.**
+
+**§4a is therefore replaced by §9. The arithmetic stands; the interpretation does not.**
