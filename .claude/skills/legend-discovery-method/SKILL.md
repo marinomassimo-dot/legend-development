@@ -225,8 +225,21 @@ grade below is unreliable, and the recorded failures of this pair are all baseli
 **Correct behaviour on a question the first read already answered: `NO NEW INFORMATION`, reported
 as a success.**
 
-**Uses `FULLTEXT_READ_RECEIPT` with a `reread_reason` — machinery that already exists.** This
-primitive needs no new store at all.
+**Receipt obligation — this primitive re-opens an already-read paper, so it must not be
+memoryless.** It reuses rather than replaces: locate the **`prior_receipt`** for that paper first,
+and emit a new `FULLTEXT_READ_RECEIPT` carrying a `reread_reason` and a reference to that
+`prior_receipt`. A re-read that appends no receipt is indistinguishable from no re-read at the next
+session, and a re-read that omits its `prior_receipt` reports itself as a first read — which is how
+a re-read's rediscoveries get scored as discoveries.
+
+**Persist it.** An emitted receipt is not a durable one:
+
+```bash
+python3 framework/scripts/fulltext_receipts.py record --receipt <file>
+```
+
+Hand-editing the ledger breaks its hash chain and halts LEGEND. **This primitive needs no new store
+at all** — the machinery already exists, which is a point in its favour.
 
 **Do not let it become a gate.** No re-read quota, and no rule that a paper must be re-read before
 a claim moves.
