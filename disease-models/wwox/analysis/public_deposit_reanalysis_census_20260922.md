@@ -471,3 +471,68 @@ exception:
 | No cerebellar result is reported | Same body, Results §2.8 heading — *"in forebrains of Wwox P47T mice"* — and the three DEG counts 425 / 363 / 1508 |
 | The 2021 gene-therapy paper has no deposit | Fetch `PMC8649866` and search for `availab` — it occurs nowhere in the body |
 | The repositories are unreachable | `curl -sS -o /dev/null -w "%{http_code}" "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE156243"` → `000`, with `CONNECT tunnel failed, response 403` |
+
+---
+
+# 🔴 CORRECTION — appended by the Orchestrator, 2026-09-22, same session
+
+> **This file's most striking finding is WRONG, and the correction is recorded here rather than by
+> editing the claim in place, so that the reasoning and its refutation both stay legible.**
+
+## What this file claimed
+
+> *"A `Wwox^P47T/P47T` **CEREBELLAR** bulk RNA-seq exists and appears never to have been reported.
+> PMID 36828035 … Methods §4.14: `"RNA was isolated from HPC, PFC, (parietal) CTX, **and CB**"` …
+> Results §2.8 is titled `"…in **forebrains**…"` and reports only PFC/CTX/HPC."*
+
+## What is actually the case
+
+🟢 **Verified by the Orchestrator at 🟢 direct-read depth this act** — `PMC10835625` fetched through
+PubMed, **60,088 characters**, after Scientist 5 reached the same text independently by a different
+route. According to PubMed, PMID 36828035, [DOI](https://doi.org/10.1016/j.pneurobio.2023.102425):
+
+1. 🎯 **The paper's TITLE is** *"WWOX P47T partial loss-of-function mutation induces epilepsy,
+   progressive neuroinflammation, and **cerebellar degeneration** in mice phenocopying human
+   SCAR12."*
+2. **Results §2.9 is a dedicated cerebellar section**, *"Transcriptome profiling of Wwox P47T
+   cerebella provides further evidence of dysfunction"*: *"EdgeR analysis identified a total of
+   **1059 DEGs (376 genes upregulated, 683 genes downregulated)** comparing both groups at an
+   FDR < 0.01."* With IPA, GSEA (lipid metabolism and ROS topmost) and a separate cytokine qRT-PCR arm.
+3. **And Purkinje cells are not merely sampled, they are the phenotype:** *"Since [these] mice
+   displayed motor abnormalities along with evidence of significant **cerebellar atrophy and PC
+   degeneration**, we sought to evaluate the transcriptional changes associated with WW domain LoF
+   in CB."*
+
+## Why the error happened, and what survives
+
+**The observation was true; the inference was not.** §2.8 *is* titled "forebrains" and *does* report
+only three regions. What the reasoning missed is that §2.8 opens *"we **first** performed…"* — it is
+the first of two sections by design, and §2.9 is the second. 🔴 **An absent section heading in a
+served text was read as an absent experiment.** That is the same false-negative mode this session
+recorded twice elsewhere tonight: *treating a surface one did not reach as evidence that nothing was
+there.*
+
+**What survives unchanged:** everything else in this file. The census counts, the `NOT VERIFIED`
+access statuses, the egress-blockage evidence, the measured negative that **neither WWOX
+gene-therapy paper deposited anything**, and the conclusion that the reanalysis class is nearly
+empty — none of these rest on the `36828035` lead, and the lead was correctly **frozen and
+deliberately NOT ranked** as an opportunity, which limited the damage to this one section.
+
+🎯 **And the correction is worth more than the claim it replaces.** Put beside Scientist 5's
+independent read of `PMID 18676360` — whose entire sampling frame is blood → reproductive organ
+weights → testes → pituitary, with **cerebellum, brainstem, cord, nerve and muscle all absent** —
+the real result is a **sampling asymmetry between alleles**, not a field-wide blind spot:
+
+| Allele | Cerebellar sampling |
+|---|---|
+| **`lde/lde` rat** | 🔴 never sectioned — confirmed independently twice |
+| **`P47T` mouse** | 🟢 cerebellum is the title subject; atrophy, PC degeneration, 1059-DEG transcriptome |
+
+⚠️ **Consequence for `A-f4`, stated carefully.** The custody unknown is **not** the blocker for
+*"does WWOX loss damage the cerebellum"* — that has a published answer in `P47T`. It may still gate
+the **TX-007** question, which is **vector arrival at Purkinje cells at therapeutic dose** — a
+different question that a degeneration phenotype does not answer. The two must not be merged.
+
+**The one real methodological caveat in `36828035`**, which replaces the withdrawn claim: §2.8 reads
+*cerebellar biofunctions* out of **parietal cortex** GSEA — a cross-region inference that should be
+labelled as such wherever it is used.
