@@ -137,9 +137,17 @@ receipts, analysis and one harness upgrade.
    imported from an over-expressing line; Schultz 2018 on endogenous protein in primary patient
    fibroblasts has **bafilomycin positive, chloroquine not**. Add bafilomycin. And the step order is
    not executable: a chase from an undetectable band is undetectable at every timepoint.
-6. 🔴 **Nobody has ever audiogenically provoked a Wwox mouse**, and **`Wwox^gt/gt` — viable 2 years,
-   `Epilepsy` cell empty — has never been observed, EEG'd or provoked.** The survival-confound
+6. 🔴 **Nobody has ever audiogenically provoked a Wwox mouse**, and **`Wwox^gt/gt` has never been
+   observed, EEG'd or provoked** (`Epilepsy` cell empty in Suzuki's Table 2). The survival-confound
    explanation is an *unattempted experiment on an available animal*, not an open question.
+   ⚠️ **CORRECTED 2026-09-22:** I wrote *"viable 2 years"* here. That is **Suzuki's Table 2, a
+   secondary source at `panel` depth**, and the **primary contradicts it** — Ludes-Meyers 2007's own
+   abstract says the `gt/gt` mice *"had a **significantly shorter lifespan**."* Both are on file,
+   never reconciled; neither is a read of the primary's body. **Stop using the 2-year figure
+   unqualified.** Also corrected: `gt/gt` is **not** established as *"a hypomorph with residual
+   protein"* in brain — the primary says *"no detectable Wwox protein in most tissues examined,
+   although a low level could be detected in a minority of tissues"*, and **names no tissue and not
+   brain.**
 7. **Domain G returned NEGATIVE.** No node superior to the portfolio. Three near-exclusive filters
    explain why; the binding one is **"is anything still plastic after diagnosis?"** — now the
    running Scientist's question.
