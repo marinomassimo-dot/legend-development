@@ -592,3 +592,45 @@ census was done properly.
 
 **No row is canonical; none is proposed for `BATCH_COMMIT`.** Acquiring patient lines remains
 `HUMAN_REQUIRED` and was correctly not attempted.
+
+---
+
+# 🔴 ORCHESTRATOR AMENDMENT — 2026-09-22, later the same day
+
+## A name is not a composition, and §1 classifies partly by name
+
+A recursive re-read of `PMID 22193544` (`recursive_reread_2_cdd2011_20260922.md`) found this, in a
+paper this repository has held at `complete_fulltext_read` since July. According to PubMed,
+[DOI](https://doi.org/10.1038/cdd.2011.188):
+
+> *"lysed in ice-cold **RIPA buffer** (100 mM HEPES pH 7.4, 150 mM NaCl, 2 mM EDTA, **0.5% Tween 20,
+> 0.1% Triton X-100**, 1 mM DTT, …)"*
+
+**RIPA is defined by SDS and sodium deoxycholate. That buffer contains neither.** It is a mild
+non-ionic Tween/Triton buffer carrying the name of a stringent one.
+
+**Consequence for this census.** §1 places rows in a stringent or mild class partly on the strength
+of the word the authors used. **Every row whose buffer is recorded by NAME rather than by RECIPE is
+hereby re-graded `COMPOSITION UNVERIFIED`** — including the row recorded as *"Schrock 2016
+commercial RIPA"*. Rows with a verbatim recipe (Zhang 2025's `1% NP-40, 0.1% SDS, 0.5% sodium
+deoxycholate`; Hussain 2023's `1% NP-40`; Steinberg 2021's `0.5% Nonidet P-40`) are unaffected.
+
+🟢 **This strengthens the file's headline rather than weakening it.** A row that looked stringent may
+have been mild. The count *"0 of 12 rows can separate degraded from insoluble as run"* stands, and
+the reason a reader might have discounted it — *"but some of them used RIPA"* — is now closed.
+
+## Two further Methods facts from the same re-read, both on this census's axis
+
+- **A GST pull-down with no lysis step written down at all.** *"GST or GST–WWOX proteins expressed
+  in BL21 (DE3) were adsorbed to glutathione-agarose beads … after three washes with PBS."* No
+  sonication, no lysozyme, no buffer, no clarifying spin. Whether the construct came from the
+  soluble fraction or from washed inclusion bodies is `METHODS_INVISIBLE`.
+- **A direct-to-SDS whole-cell western lysis with an unquantified spin.** *"disrupted in 2X sample
+  buffer (… **4% SDS** …), **boiled for 10 min, centrifuged**"* — maximally denaturing, therefore
+  much less prone to a solubility artefact than this census's mild-buffer rows; but *"centrifuged"*
+  carries **no g-force, no time and no statement of which fraction was loaded**, so the same 0/12
+  defect applies even here.
+
+**Neither changes §3.** The three-branch analysis and the Orchestrator's correction to it (the
+translation branch is where the *"functionally null/null"* inference weakens, by an amount
+unquantifiable because no floor was ever set) are untouched.
