@@ -197,3 +197,95 @@ lesson** — and every query-count negative this repository holds was produced w
 - **No receipt is claimed for PMID 30362252 in this candidate.** The body was retrieved to adjudicate
   two named sentences; that is a targeted adjudication, not a complete read, and `PAPER 044` already
   declares a prior full-text read whose depth is not in question — **only its quotation is.**
+
+---
+
+## 7 · ✅ APPEND-ONLY — §5's open item is RESOLVED, from the repository's own data, the same day
+
+Scientist E called the `+8` frame call *"the cheapest open item in the whole document"* and declined
+to adjudicate it, on the grounds that the raw SpliceAI `DP_AG` field would have to be re-read.
+
+🔴 **The raw field cannot be re-read here, by design.** Its provenance is
+`discovery_ledger_current.md:43`: *"**ESEGUITO 2026-07-04** … vedi **inbox entry INBOX-005 (private
+quarantine log)**"*. That log is part of the **private overlay, which is excluded from this edition**.
+The public edition retains the derived label — *"sito criptico +8"*, `DS_AG 0.64` — and **not the
+field the label was derived from**. So a conclusion in `DL-MECH-045` rests on a datum this edition's
+readers cannot reach: the session's recurring pattern, in its most consequential instance.
+
+**But the question does not need the raw field. It can be settled from coordinates.**
+
+### 7a · The `+8` position, fixed exactly by three independent anchors
+
+All from `WWOX_clinvar_all_variants.csv`. SPDI is **0-based**, so 1-based = SPDI + 1:
+
+| record | SPDI | 1-based | cDNA |
+|---|---|---:|---|
+| `c.1057-2A>G` | `…:79211605:A:G` | **79,211,606** | the allele — ✅ matches `DL-BIO-002`'s recorded coordinate |
+| `c.1057C>T` | `…:79211607:C:T` | 79,211,608 | `c.1057` |
+| `c.1063G>A` | `…:79211613:G:A` | **79,211,614** | `c.1063` |
+
+`79,211,606 + 8 = 79,211,614`. 🎯 **`+8` from the variant is `c.1063`, exactly.** The ladder closes
+with no slack: `c.1057-2` = 606, `c.1057-1` = 607, `c.1057` = 608, and every intervening cDNA
+position that ClinVar covers (`1059`, `1060`, `1062`, `1063`) sits where it should.
+
+### 7b · 🔴 The reference bases exclude every competing reading
+
+A gained acceptor requires an **`AG`** immediately 5′ of the new first exonic base. Reference bases
+recoverable from ClinVar's deleted-allele field: **`c.1057=C`, `c.1059=A`, `c.1060=C`, `c.1062=G`,
+`c.1063=G`** (`c.1058` and `c.1061` are not covered by any record).
+
+| if the new exon starts at… | required `AG` at | reference says | verdict |
+|---|---|---|---|
+| **`c.1063`** (⇒ **6 nt** lost) | `c.1061`, `c.1062` | `?`, **`G`** ✅ | 🟢 **the only survivor** |
+| `c.1064` (⇒ 7 nt) | `c.1062`, `c.1063` | **`G`**, `G` | ⛔ first base is `G`, not `A` |
+| `c.1065` (⇒ **8 nt**, the frameshift reading) | `c.1063`, `c.1064` | **`G`**, `?` | ⛔ first base is `G`, not `A` |
+| `c.1062` (⇒ 5 nt) | `c.1060`, `c.1061` | **`C`**, `?` | ⛔ first base is `C`, not `A` |
+
+**`c.1063` is the only start position in the neighbourhood whose upstream dinucleotide can be `AG`** —
+and its second base is confirmed `G`. **The 8-nt frameshift reading is excluded by the reference
+sequence**, not by a convention argument.
+
+⚠️ **The one unverified base is `c.1061`, which must be `A`.** No ClinVar record covers it, and
+direct sequence egress is 403 at CONNECT. If `c.1061 ≠ A` then *no* reading in the table works and
+the `+8` label itself would need re-deriving. **Stated as the single remaining check, and it is one
+base.**
+
+### 7c · What the surviving reading means — and it moves `TX-001`
+
+New exon start `c.1063` ⇒ **`c.1057`–`c.1062` lost = 6 nt**. And the frame is clean:
+`(1057 − 1) / 3 = 352` exactly, so **`c.1057` is the first base of codon 353**. The loss is therefore
+**exactly codons 353 and 354 — an in-frame two-residue deletion, `p.353_354del`, in a 414-aa
+protein.**
+
+🎯 **No frameshift. No premature termination codon. No NMD question at all.** Under this prediction
+the acceptor allele of the reference genotype does not produce a truncated unstable protein — it
+produces a **near-full-length protein two residues short**, which is a **hypomorph**, and the most
+favourable prediction any allele in this genotype has ever carried.
+
+🔴 **This contradicts `DL-MECH-045`**, whose position is *"probabilmente produce una **proteina
+tronca instabile**"* and whose causal statement reads *"(predetto) → frameshift/PTC → NMD or
+truncated_protein"*. **Proposed:** `DL-MECH-045`'s predicted outcome is **withdrawn and replaced**
+by the in-frame two-codon deletion, with the coordinate derivation above recorded in place of the
+unreachable `DP_AG` label, and `c.1061` named as the one base that would falsify it.
+
+### 7d · What this does NOT license, stated because the temptation is obvious
+
+- ❌ **It remains `PREDICTED`.** `DS_AG 0.64` is a **moderate** score: SpliceAI predicting an
+  acceptor gain is not the site being used. Acceptor **loss** is the confident call (`DS_AL 0.96`,
+  MaxEntScan Δ −7.95, two orthogonal methods); what happens *instead* is the uncertain part, and
+  cryptic-acceptor use competes with exon-9 outcomes that are not even definable (no exon 10) and
+  with intron-8 read-through.
+- ❌ **Nobody has measured this allele's RNA** — the census stands at **zero** for it. A better
+  prediction is still a prediction, and `PREMISE: NOBODY_LOOKED` is untouched.
+- ❌ **No claim about protein function.** A two-residue in-frame deletion can still abolish folding
+  or binding; `p.353_354del` sits in the SDR span and the repository has learned twice this session
+  that predicted structural consequence does not track measured outcome.
+- ✅ **What it does do is raise the value of the experiment `TX-001` already specifies** — and
+  sharpen it. Under this prediction the aberrant product differs from normal by **6 nt**, which is
+  precisely why §3's resolution correction is not pedantry: **on agarose this allele would look
+  normal.** A laboratory running the obvious gel would report wild-type splicing and be wrong.
+
+**Provenance:** every coordinate and reference base above was read by the Orchestrator directly from
+`disease-models/wwox/analysis/data/WWOX_clinvar_all_variants.csv` in this session. Nothing is
+reconstructed from memory, and the SpliceAI positional convention is **not relied upon** — the
+adjudication rests on which dinucleotides the reference sequence permits.
