@@ -1,7 +1,7 @@
 # DISCOVERY_TRACE — is survival in the Wwox-null mouse gated by a centrally-controlled metabolic variable?
 
 **Date:** 2026-09-22 · **Actor:** Orchestrator · **Cycle:** 1 of this run
-**Status:** 🟡 **HYPOTHESIS ONLY.** Not a claim, not a candidate, not canonical.
+**Status:** 🔴 **H1 REFUTED AS NOVEL — re-graded to `REDISCOVERY`.** One by-product survives at grade **E** (§ 7bis). Not a claim, not a candidate, not canonical.
 🔴 **NOTHING HERE IS MEDICAL ADVICE.** This is a hypothesis about a **mouse model's proximate cause
 of death**. It makes no recommendation about any person's care, and §§ 5–6 below deliberately do not
 name a clinical action.
@@ -83,9 +83,93 @@ the endpoint. **H1 predicts improved survival; D2, D3 and D4 predict none.**
 **glucose correction** more closely than it tracks **regional WWOX protein**? And does **weight**
 separate the arms on the same schedule as glucose (H1/D1) or lag it (D4)?
 
-## 7 · RESULT — outcomes of the searches
+## 7 · RESULT — outcomes, recorded after the searches
 
-*(deliberately empty at the moment of writing and committing)*
+### 7.1 Prediction-by-prediction
+
+| # | outcome | evidence |
+|---|---|---|
+| **P1** | 🟢 **SUPPORTED, and it pre-empts me** | According to PubMed, Abu-Remaileh & Aqeilan 2014, *Exp Biol Med* ([DOI](https://doi.org/10.1177/1535370214561956), PMC4935230), abstract, verbatim: *"Wwox-knockout mice develop normally in utero but **succumb to hypoglycemia** and other metabolic defects early in life resulting in their death by 3-4 weeks of age."* |
+| **P2** | 🟢 **REDISCOVERY, exactly as predicted in advance** | The repository already held *"ipoglicemia reversibile da restauro CNS-only (controllo centrale del glucosio)"*. |
+| **P3** | ⚪ **NOT TESTED, as predicted** | No glucose-supplementation, feeding or dextrose arm in any WWOX model. *(A GTT exists — but in the **muscle-specific** KO, and a challenge test is not an intervention.)* |
+| **P4** | 🟢 **SUPPORTED** | Ludes-Meyers 2009 ties *"severe metabolic defect(s)"* directly to *"growth retardation"*. |
+| **P5** | 🔴 **Branch (a) — the translational claim COLLAPSES** | Hypoglycaemia is reported in human WOREE, in the repository's own record: *"A few hours after birth, he presented **hypoglycemia**, respiratory distress associated to tonic-clonic seizures."* And the field already says the mice *"succumb to hypoglycemia"*. |
+
+### 7.2 🔴 THE HEADLINE HYPOTHESIS IS REFUTED AS NOVEL — re-grading myself
+
+**`H1` is `REDISCOVERY`.** A 2014 review abstract states my "discovery" in five words. § 8 committed
+in advance to re-grading if this happened, and it happened. **Re-graded.**
+
+### 7.3 🎯 And the DIVERGE step beat my own chosen hypothesis — which is the method working
+
+According to PubMed, Ludes-Meyers et al. 2009, *PLoS One* ([DOI](https://doi.org/10.1371/journal.pone.0007775),
+PMC2777388) reports that `Wwox`-KO mice show, **concurrently**:
+
+> *"significant **hypocapnia** suggesting a state of **metabolic acidosis**"* · *"impaired
+> hematopoiesis, **leukopenia**, and **splenic atrophy**"* · *"**Hypoglycemia and hypocalcemia**"* ·
+> *"bone metabolic defects … reduced bone volume … a defect in **mineralization**"*
+
+— and proposes that *"impaired hematopoiesis can also be a contributing factor to metabolic acidosis
+and death."*
+
+> 🔴 **So hypoglycaemia is ONE limb of a multi-system metabolic derangement, not the proximate cause.
+> That is `D3`, which I did NOT choose — and it is now better supported than `D1`, which I did.**
+
+**A second, independent line cuts the same way**, and it was already in the repository: the rat
+`lde/lde` is recorded as **uremic WITHOUT being hypoglycaemic**. A model with the neurological
+phenotype and no hypoglycaemia shows glucose is **not necessary** for that phenotype.
+
+⚠️ **Consequence for `P3`:** its "not tested" is now *less* interesting, not more — under `D3` a
+glucose-only intervention is **predicted to fail**, so its absence is unsurprising rather than a gap.
+
+### 7.4 🎯 What SURVIVES, and it is a question nobody appears to have asked
+
+If death is driven substantially by **acidosis, impaired haematopoiesis, hypocalcaemia and bone
+mineralisation failure** — all **peripheral** — then:
+
+> **How does a NEURON-SPECIFIC vector (`hSynI`, CNS-only) rescue a death with large peripheral
+> components?**
+
+The repository answers this for **glucose** (central control, recorded). It does not answer it for
+acidosis, calcium, haematopoiesis or bone. **And those endpoints appear never to have been measured in
+treated animals.** Counted across the TX-007 analyses and the claim registry:
+
+| term | count |
+|---|---|
+| `hypocapnia` · `hypocalc` · `calcium` · `leukopenia` · `h(a)ematopoi` · `bone volume` · `mineralis/z` | **0 each** |
+| `acidosis` · `splenic` | **1 each** |
+
+⇒ **The gene therapy is evaluated on survival, growth, glucose, seizures, myelin, gliosis and
+behaviour — and NOT on the other derangements the same field named as contributors to death.**
+
+**Two readings, and they are cheap to separate:** either neuronal WWOX restoration **corrects** the
+peripheral derangements (which would be a striking and unreported central-control result), or it
+**rescues survival despite them** (which would mean they were never the lethal limb, and would
+narrow the field's own "succumb to metabolic defects" framing).
+
+### 7.5 The experiment this produces
+
+> **Measure serum bicarbonate/pH, calcium, and a basic haematology panel in ALREADY-BANKED
+> AAV-treated versus untreated `Wwox`-null animals.**
+
+**Cost class: `NEW ANALYSIS ONLY`** — serum and blood are routinely banked, and the assays are
+standard clinical chemistry, not new methodology. **No new animal cohort.** One panel discriminates
+both readings in § 7.4 at once, and it also tests `D3` directly.
+
+## 7bis · HONEST SCORECARD for this cycle
+
+| | grade | justification |
+|---|---|---|
+| **The headline hypothesis `H1`** | 🔴 **A — REDISCOVERY** | stated in a 2014 review abstract |
+| **The `D3` promotion** | **C — NOVEL CONNECTION** | the multi-system framing exists in the 2009 primary; **connecting it to the CNS-only rescue puzzle does not appear to** |
+| **The § 7.5 experiment** | 🟢 **E — EXPERIMENT-GENERATING INSIGHT** | changes what should be measured, in existing material, at analysis-only cost |
+| **Therapeutic expansion (F)** | ❌ **NOT claimed** | the glucose-adjunct idea **died** with `D1`; claiming F here would be inflation |
+
+🎯 **Method note for Objective B — the load-bearing observation of this cycle.** **The DIVERGE step is
+what saved it.** I chose `D1`; the evidence promoted `D3`, which I had generated but not favoured.
+**Had I skipped divergence and searched only for my preferred mechanism, I would have found the 2014
+abstract, felt confirmed, and recorded a rediscovery as a discovery.** The cost of the diverge step
+was a few minutes; the error it prevented was the whole cycle.
 
 ## 8 · NOVELTY ORIGIN — declared in advance, to be corrected afterwards if wrong
 
