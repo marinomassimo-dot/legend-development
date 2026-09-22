@@ -6824,3 +6824,54 @@ controls**, with the meta-analysis **homozygous model null** (GG vs CC OR 1.36, 
 ⚠️ **`21340167`, `22579964` and `9707624` are all `MODEL`-only or REVERSE-direction** (a native
 proline **removed**, rather than one introduced) — they bound the proline argument and must not be
 read as supporting it.
+
+---
+
+## FT-152
+**Papers:** PMID 34747138 — Repudi et al. 2021, *EMBO Mol Med* 13(12):e14599,
+[DOI](https://doi.org/10.15252/emmm.202114599) — **Appendix Table S1 and Appendix Figs S2–S4**
+**Title:** 🔴 The founding study's Appendix decides whether the programme's Purkinje blind spot is
+reagent-level or measurement-level
+**Priority:** **HIGH** — two of the three open boundaries on `FT-148` live in this one Appendix
+**Why:** Declared by
+[`recursive_reread_repudi2021_20260922.md`](../research/recursive_reread_repudi2021_20260922.md),
+a recursive re-read of a paper already at `complete_fulltext_read`.
+
+🔴 **The finding that raises this entry.** `FT-148` established that TX-007's ≈61 % cerebellar
+`NeuN⁺WWOX⁺` fraction cannot see Purkinje cells. The re-read establishes that **the same gate is
+in the 2021 proof-of-concept, applied to the same three regions**: Fig 1E is *"the percentage of
+NeuN and WWOX double-positive cells in different parts of the brain (cortex, hippocampus, and
+**cerebellum**)"*, Fig 2F is a dedicated cerebellum panel, Fig 2G repeats it for the human vector.
+**The blind spot is the programme's convention, inherited unchanged across five years and two
+papers, not a defect of TX-007.** `PREMISE: NOBODY_LOOKED` for Purkinje transduction now covers
+both studies.
+
+**What this Appendix would settle, in order:**
+1. **Appendix Table S1 — the antibody list.** Whether Repudi 2021's NeuN is clone `A60` (as
+   TX-007's `MAB377` is). Until then the clone attribution for *this* paper is `PREMISE: UNVERIFIED`;
+   only the **antigen-level** Purkinje-negativity is assertable, and the re-read file says so.
+2. **Appendix Fig S3 — the hindlimb clasping test.** The only motor endpoint in the paper that may
+   carry a **KO comparator**. Rotarod and open-field are `rescued-vs-WT only`, by the authors'
+   stated necessity (*"we could not assess behavior of Wwox-null mice due to their poor conditions
+   and premature death"*). If S3 has no KO arm either, the 2021 ataxia rescue is **NOT TESTED**
+   against untreated animals on every instrumented measure.
+3. **Fig 1E / Fig 2G bar values.** The text reports only *"range between 60 and 70 %"* across three
+   regions and two vectors. The **cerebellar** value is a figure datum and is unread.
+
+⚠️ **What this entry does NOT assert.** Nothing here shows Purkinje cells are poorly transduced,
+and nothing shows `hSynI` is inactive in them — both remain unmeasured in both papers. It also does
+**not** revive any claim that scheduled removals biased the 2021 survival comparison; that exit
+accounting is fully recorded elsewhere and is not at issue here.
+
+🟢 **Why this is cheap and why it matters more than a new experiment.** Repudi 2021 cut **sagittal**
+sections at P17/P19, `n` = 3 per vector, two vectors, with cerebellum demonstrably in frame. That is
+a **second, older archive**, independent of TX-007's material and held by the originating
+laboratory — so the calbindin / `PCP2` / `Car8` co-stain that `FT-148` asks for has a fallback
+source. `REVIVAL_TRIGGER`: Appendix retrieval by any route, or any Purkinje-resolved measurement in
+either study.
+
+🟡 **A second, unmeasured axis this re-read opened.** Every electrophysiological recording in Repudi
+2021 is **neocortical by stated coordinates** — *"1.6–2 mm posterior to the bregma and 4 mm lateral
+to the midline"*, depth 300 µm, legend *"spontaneous neocortical activity"*. There is **no cerebellar
+physiology** in the paper. A Purkinje-resolved *functional* readout is therefore a **different**
+unperformed experiment from the transduction stain, and neither has been done.
