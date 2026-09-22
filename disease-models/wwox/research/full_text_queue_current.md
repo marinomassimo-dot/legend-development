@@ -6083,3 +6083,73 @@ finding obtainable entirely from papers we can read.
 **Canonical repair proposed meanwhile:** `CC-20260922-CLAIM005-CHAIN-NAMING-01` (`D-25`) — names the
 third link inside the claim, records the contradiction, adds a `REVIVAL_TRIGGER` on acquisition.
 **The prohibition is not lifted.**
+
+---
+
+## FT-129 — The Domain D method set: ten citations declared at their true depth, because the ratchet caught me claiming zero
+
+**Papers:** PMID 30202070 · PMID 26780369 · PMID 18216017 · PMID 24891511 · PMID 22113611 ·
+PMID 16563356 · PMID 19305406 · PMID 35159129 · PMID 31511325 · PMID 22160674
+**Opened:** 2026-09-22 · **Actor:** Orchestrator, from Scientist C's Domain D wave
+**Full context:** [`proteostasis_discrimination_protocols_20260922.md`](../analysis/proteostasis_discrimination_protocols_20260922.md)
+**Candidate served:** `CC-20260922-HYP08-LYSOSOMAL-ARM-01` (`D-26`)
+
+### 🔴 Why this entry exists — the machine was right and I was wrong
+
+I wrote, in the first draft of `CC-20260922-HYP08-LYSOSOMAL-ARM-01` §5: *"`UNREAD_PREMISE` impact:
+**none**."* `growth_anchors.py check` then returned:
+
+```
+[BLOCK] RATCHET_VIOLATION: 10 new unread premises
+(16563356, 18216017, 19305406, 22113611, 22160674, 24891511,
+ 26780369, 30202070, 31511325, 35159129). This ratchet may only fall.
+```
+
+**A candidate that reasons from ten papers with no receipt, no registry full-text declaration and no
+queue entry is leaning on papers nobody opened — including, embarrassingly, one I opened myself and
+never declared.** This entry converts all ten from hidden premises into declared debt, which is the
+only move the ratchet accepts and the correct one. The candidate's §5 is corrected accordingly.
+
+🔵 **Worth recording as method, not as apology:** this is the **second** machine catch this session
+(after the publication gate's email block) and the first by a ratchet. Both caught defects in *my*
+output, both were cheap, and in both cases my own prediction of the check's result was wrong. The
+declared-debt ratchets are earning their place.
+
+### Depth of each, declared
+
+| PMID | What it is | Depth **now** | Debt |
+|---|---|---|---|
+| **30202070** | Schultz 2018, *Nat Commun* — NPC1 `I1061T` degradation in primary patient fibroblasts. **The source of the bafilomycin finding, and the only load-bearing paper in `D-26`.** | 🔴 **body read in full this session by the Orchestrator** via `get_full_text_article(["PMC6131187"])`, CC BY — **and no receipt was persisted** | **A `FULLTEXT_READ_RECEIPT` is owed.** Until it exists, `D-26` must not propagate. |
+| **26780369** | *J Vis Exp* — sequential soluble/insoluble extraction protocol (α-synuclein, parkinsonian brain) | body read by Scientist C, CC BY | receipt owed if used; **post-mortem brain, not fibroblasts** |
+| **18216017** | Gelsthorpe 2008, *JBC* — permissive-temperature rescue, *"human fibroblasts homozygous for the mutation"* | ⛔ `abstract-depth`. `is_open_access: false`; `PMC2276376` returned `full_text: ""` | **unacquirable by any route here.** Its abstract's WT half-life (42 h) and Schultz's body (~9 h) disagree — **unadjudicated, and used by neither side** |
+| **24891511** | Nakasone 2014, *JBC* — GGA/Hsp70 *increased* mutant protein in patient fibroblasts | ⛔ `abstract-depth` | points **opposite** to the HSC70 concern behind the arimoclomol withdrawal. **Not promoted; the withdrawal is not disturbed.** Full-text attempt queued |
+| **22113611** | Koch 2011, *Nature* — SDS-insoluble species *"not observed in iPSCs, fibroblasts or glia"* | ⛔ `abstract-depth` | if it holds, **a negative solubility result in fibroblasts cannot close branch (c)**. Load-bearing if ever used — **read before using** |
+| **16563356** | Koyama 2006, *BBRC* | ⛔ `abstract-depth` | the second of the two hits in the near-absence query below |
+| **19305406** | SUnSET original, *Nat Methods* | ⛔ `abstract-depth` | supplies only the verbatim *"global protein synthesis"* scope note |
+| **35159129** | *Cells* 2022 | ⛔ `abstract-depth` | background |
+| **31511325** · **22160674** | Merrill 2019; OP-puro original | ⛔ **not attempted** — `is_open_access: false` on the one-call pre-test | not pursued; nothing rests on them |
+
+### The near-absence claim, with its query and count
+
+Scientist C's branch-(c) claim is a claim of near-absence, so it carries its query:
+PubMed `SDS-insoluble aggregates patient fibroblasts disease` → **`total_count: 2`**
+(PMIDs 22113611, 16563356) — neither a positive detection in primary fibroblasts, one an explicit
+fibroblast-negative. **Parser shown to be reading:** adjacent queries in the same session returned
+8, 12, 29 and 30. Four earlier queries returned 0 because this tool ANDs every term; they were
+shortened and re-run **rather than reported as absence** — which is the rule working rather than
+being recited.
+
+### Next actions, in order
+
+1. **Persist the `FULLTEXT_READ_RECEIPT` for `30202070`.** It is the only paper `D-26` rests on, it
+   was read in full, and the receipt is the difference between a read and a claim about a read.
+   Declare honestly what the route returned: **body sequential and complete; figures and
+   supplementary stripped by the extraction route** — every `(Fig.)` and `(Supplementary Fig.)`
+   cross-reference in the returned text has had its number deleted, which is the known
+   token-deletion defect of `FT-126` appearing in a new token class. Depth is therefore
+   `partial_fulltext_read`, **not** `complete_fulltext_read`, and `D-26` must say so.
+2. **22113611** — highest-value of the abstract-depth set. It decides whether branch (c) is testable
+   in the matrix we have.
+3. **24891511** — it contradicts a withdrawal we already made. Contradictions of our own decisions
+   outrank confirmations of them.
+4. **18216017** — record as **unacquirable**, not as unread, and stop spending routes on it.
