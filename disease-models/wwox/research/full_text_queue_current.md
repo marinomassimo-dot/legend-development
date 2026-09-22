@@ -6875,3 +6875,55 @@ either study.
 to the midline"*, depth 300 µm, legend *"spontaneous neocortical activity"*. There is **no cerebellar
 physiology** in the paper. A Purkinje-resolved *functional* readout is therefore a **different**
 unperformed experiment from the transduction stain, and neither has been done.
+
+---
+
+## FT-153
+**Papers:** PMID 19088074 · PMID 22611163 · PMID 20062057 · PMID 31605637 · PMID 28911204 · PMID 30518535 · PMID 30279493 · PMID 34934109 · PMID 35065072 · PMID 38131282 · PMID 31271415
+— the **cross-domain pharmacological-rescue precedent set**, eleven records, all cited at
+`abstract-depth` by
+[`q230p_pharmacological_precedents_20260922.md`](../analysis/q230p_pharmacological_precedents_20260922.md)
+and **all eleven metadata-verified first-hand by the Orchestrator on 2026-09-22**. According to
+PubMed:
+
+| PMID | Protein / variant | What it supplies | DOI |
+|---|---|---|---|
+| **19088074** | ETFβ `D128N` (MADD) | *"FAD exerts the effect of a pharmacological chaperone … yielding a more stable **and active** enzyme"*; explicit **39 °C fever arm** | [DOI](https://doi.org/10.1074/jbc.M805719200) |
+| **22611163** | ETF:QO patient variants | riboflavin **and temperature**, with **steady-state level AND activity in the same HEK-293 system** — the cleanest abundance-plus-function pair in the set | [DOI](https://doi.org/10.1093/hmg/dds175) |
+| **20062057** | `ALDH2*2` `E487K` | Alda-1 *"restores near-wild-type activity … by acting as a **structural chaperone**"*, with structures | [DOI](https://doi.org/10.1038/nsmb.1737) |
+| **31605637** | NQO1 `P187S` | a **designed small molecule** *"repopulates the native … conformation"* and activity is *"strongly improved"* | [DOI](https://doi.org/10.1002/1873-3468.13636) |
+| **28911204** | NQO1 `P187S` + `H80R`/`E247Q` | **suppressor-mutation** rescue, not a drug — the genetic mirror of the chaperone route | [DOI](https://doi.org/10.1093/hmg/ddx238) |
+| **30518535** | NQO1 (review) | *"needs just enough mobility, in just the right places"* — the conceptual frame for stability-vs-activity | [DOI](https://doi.org/10.1042/BSR20180459) |
+| **30279493** | G6PD Canton `R459L` | **AG1**, a small-molecule activator at the structural NADP⁺ site | [DOI](https://doi.org/10.1038/s41467-018-06447-z) |
+| **34934109** | G6PD variants | 🔴 **the independent replication that qualifies the row above**: AG1 *"only marginally increased G6PD enzymatic activity and stability"* | [DOI](https://doi.org/10.1038/s41598-021-03800-z) |
+| **35065072** | G6PD oligomers | **oligomer stabilisation** as the therapeutic strategy — relevant to any WWOX quaternary question, and **only** if one is ever established | [DOI](https://doi.org/10.1016/j.jbc.2022.101610) |
+| **38131282** | MVK `V377I` (MKD-HIDS) | 🚫 **THE WARNING CASE.** An FDA-library screen whose hits acted **transcriptionally** (`GR`/`SREBP-2`), not as chaperones — a rescue screen that found the wrong mechanism | [DOI](https://doi.org/10.1002/jimd.12698) |
+| **31271415** | `HSD3B1` `1245A>C` (an **SDR**) | 🚫 **sign control only** — a *natural* stabilising variant giving *more* stable protein **and** more product. Direction, never magnitude, and never a rescue precedent | [DOI](https://doi.org/10.1210/en.2019-00366) |
+
+**Title:** The precedent set that makes the Q230P chaperone question answerable — and the two rows
+that are cautions, not precedents
+**Priority:** **MEDIUM** — the set's *function* is already established at abstract depth; body reads
+change how much weight each row carries, not whether the class exists
+**Why:** Before this set, the chaperone argument for `Q230P` rested on no case of a **pathogenic
+human missense** being restored to **measured function**. It now rests on several, in four protein
+families. `P6` is **SUPPORTED as an absence** and stays so: **nobody has ever drugged a pathogenic
+human SDR missense back to function** — the one SDR case (`PMID 17314322`, already carried
+separately) used an osmolyte, a steroid and a permissive temperature, not a designed drug.
+
+🔴 **What a body read would settle, and it is the same gap in every row:** whether **abundance
+under rescue** was measured alongside activity. `22611163` is the row most likely to close it, and
+is the recommended first body read of the set.
+
+⚠️ **Bounds carried forward, not to be lost if these are promoted.** All eleven are
+`abstract-depth` ⇒ `PREMISE: UNREAD_PRIMARY`. None is a WWOX paper; every transfer must carry its
+protein of origin. `38131282` and `31271415` are flagged 🚫 **in the analysis file and must keep
+that flag** — one is a mechanism-failure warning, the other a sign control. And the standing
+principle applies to the whole table: **stability or solubility rescue is not a surrogate for
+functional rescue**, which is exactly why every row above was required to carry a function readout
+before being admitted.
+
+🟡 **Method finding attached to this entry.** The headline SDR precedent was invisible to a
+family-level query because PubMed tokenises `11beta-hydroxysteroid` as a single term, so
+`"hydroxysteroid dehydrogenase"` does not match it — hiding every `11beta-`/`17beta-`/`3beta-`
+HSD paper. **Rule adopted: an SDR family sweep enumerates gene symbols beside the family phrase.**
+This is a **seventh** distinct way a PubMed zero can be meaningless in this corpus.
