@@ -6419,3 +6419,43 @@ remaining routes are the **bioRxiv preprint** of PMID 38122823 (`10.1101/2022.03
 differential-expression gene tables over the EC-stream and whole datasets and would answer a narrower
 question — *is there a `WWOX` row?* — without any accession at all. `40659844` should be re-opened
 separately, on its own scientific merits, as a postnatal-SVZ source rather than as a citation route.
+
+---
+
+## FT-135
+**Papers:** PMID 38407561 — WWOX `c.516+1G>A` donor allele, patient blood mRNA-seq reporting exon 5
+deleted · PMID 30853297 — WWOX `c.517-2A>G`, the **other** acceptor allele, cDNA sequencing reporting
+skipping of exon 6
+**Title:** The two published WWOX splice-allele RNA measurements — declared unread, not unfound
+**Priority:** MEDIUM
+**Why:** Opened by
+[`nmd_adjudication_reference_allele_20260922.md`](../analysis/nmd_adjudication_reference_allele_20260922.md).
+These are the **only two WWOX splice alleles whose RNA consequence has actually been measured in a
+patient**, so they are the field's entire empirical prior for what the reference-genotype acceptor
+allele might do. Both were classified `NMD NOT PRESENT` **from the abstract alone**.
+🔴 **Neither has a PMCID and neither body is reachable here** ⇒ `PREMISE: UNREAD_PRIMARY` ×2. Their
+Methods are unread and could contain an unindexed NMD arm — which matters exactly because
+[§2 of `CC-20260922-NMD-PREMISE-WITHDRAWAL-01`](commit_candidates/CC-20260922-NMD-PREMISE-WITHDRAWAL-01.md)
+establishes that a reagent named only in Methods is **invisible to a PubMed `[All Fields]` search**.
+⚠️ **Both measured outcomes are exon skipping — the one outcome that CANNOT occur at the reference
+genotype's allele**, because exon 9 is terminal. So the prior is architecturally inapplicable and must
+not be transferred; the reason to read them is their **method**, not their result.
+**Disposition:** unacquirable by attempt so far, **not** by licence — `is_open_access` is a licence
+field and was not used to skip either. Re-attempt on any new route.
+
+---
+
+## FT-136
+**Papers:** PMID 18273838 — Alsop et al. 2008, allele-specific expression at WWOX in HCT116 with an
+exon 6–8 deletion
+**Title:** The only allele-specific-expression paper in the entire WWOX literature
+**Priority:** MEDIUM
+**Why:** Opened by
+[`wwox_nmd_assay_census_20260922.md`](../analysis/wwox_nmd_assay_census_20260922.md). That census
+establishes `NEVER TESTED` for NMD assays across every WWOX allele, species and class; this paper is the
+**single closest near-miss** — allele-specific expression is the one method class that can distinguish
+*degraded* from *never transcribed*, and this is the only WWOX paper that runs it.
+🔴 `pmc_id: null`, body unreachable here ⇒ `PREMISE: UNREAD_PRIMARY`. ⚠️ **Oncology material (HCT116),
+somatic deletion — it transfers nothing to a germline neuronal genotype**, and is queued for its
+**instrument**, not its finding.
+**Disposition:** unacquirable by attempt, not by licence.
