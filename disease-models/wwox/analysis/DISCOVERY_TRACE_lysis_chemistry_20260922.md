@@ -168,6 +168,58 @@ bound**, which is §4.4.
   whether the manifest schema has a slot for it. **If C is real, the answer is no for all three.**
   If any has a slot, C is narrower than claimed.
 
+---
+
+## 5 · FOLLOW-UP EXECUTED — and it **weakens** cause C, as pre-stated it should be allowed to
+
+§4.4 pre-stated the test: *"pick another Methods-level datum that changed a conclusion — antibody
+catalogue number, fixation protocol, animal age at sacrifice — and ask whether the manifest schema
+has a slot for it. **If C is real, the answer is no for all three.**"*
+
+Run over the same 81 manifests:
+
+| Methods datum | Manifests | Verdict against the pre-stated criterion |
+|---|---|---|
+| detergent / lysis chemistry | **0** | the original instance |
+| antibody catalogue / RRID | **2** | 🔴 not zero |
+| fixation protocol (PFA / formalin) | **3** | 🔴 not zero |
+| animal age at sacrifice | **13** | 🔴 not zero, and not rare |
+
+🔴 **C IN ITS STRONG FORM IS REFUTED, by the test I wrote to refute it.** I claimed the datum was
+*never capturable*. It is captured — sporadically. The criterion was "no for all three"; the answer
+is yes for all three.
+
+**The surviving, weaker form.** There is no **dedicated field**, so capture is **incidental**: a
+Methods datum reaches the repository only when a reader quotes it into `verbatim_locators` for some
+*other* purpose. That predicts presence that is uneven rather than absent — which is what the
+gradient shows.
+
+🎯 **And the gradient is the actual finding, better than the one I predicted.** Capture probability
+tracks **how close the datum sits to the question the first reader was asking**:
+
+```
+age at sacrifice   13   ← a DESIGN variable; readers quote it to describe the experiment
+fixation            3
+antibody catalogue  2
+detergent           0   ← a BENCH variable; no reader's question ever made it relevant
+```
+
+This is the `recursive_reread` thesis, measured: **value sits in the part of the paper the first
+reader's question made irrelevant** — and the census shows *which* parts those are, corpus-wide.
+Bench chemistry is the systematically invisible class.
+
+**One concrete bound, immediately usable.** 🔴 **Eleven manifests mention an antibody; zero record a
+catalogue number.** The repository therefore **cannot identify which antibody any study used.**
+Given that a published "no protein" finding has already reversed on a change of antibody, any
+epitope-geometry reasoning over held artefacts is unsupported — that too must return to the papers.
+
+**Status of C:** strong form refuted; weak form ("incidental capture, gradient by reader-question
+proximity") has **two** instances and remains a candidate. Still no schema change. The honest note
+is that the gradient hypothesis was **generated after seeing the data** and is therefore not
+pre-registered — it must be tested on a fourth datum before it counts as anything.
+
+---
+
 ### 4.5 Honest limits of this cycle
 
 - This measured **81 deep-dive manifests**, not the full repository. Dossiers, receipts and queue
