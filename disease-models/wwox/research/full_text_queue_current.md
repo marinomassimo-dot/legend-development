@@ -7025,3 +7025,58 @@ the cleaner half** of that precedent and is the half that transfers.
 ⚠️ `abstract-depth` ⇒ `PREMISE: UNREAD_PRIMARY`. Not a WWOX paper: every transfer carries its
 system of origin (`CHO-K1`, `P19`, `3T3` — none of them human fibroblasts, which is the system the
 `Q230P` design targets).
+
+---
+
+## FT-156
+**Papers:** PMID 25775042 · PMID 32844746 · PMID 31290739 · PMID 32435426 · PMID 34590282 ·
+PMID 40084072 — the **nascent-protein methodology set**, six records, cited by
+[`q230p_nascent_synthesis_discriminator_20260922.md`](../analysis/q230p_nascent_synthesis_discriminator_20260922.md)
+(Scientist A). **All six metadata-verified first-hand by the Orchestrator on 2026-09-22.**
+According to PubMed:
+
+| PMID | What it is | Depth cited | DOI |
+|---|---|---|---|
+| **25775042** | tom Dieck 2015, *Nat Methods* 12(5):411–4, PMC4414919 — **the Puro-PLA / FUNCAT-PLA founding paper.** Abstract confirms it *"couples noncanonical amino acid tagging or puromycylation with the proximity ligation assay to visualize specific newly synthesized proteins and monitor their origin, redistribution and **turnover** in situ"* | 🟢 **FULL TEXT, read in act by Scientist A** | [DOI](https://doi.org/10.1038/nmeth.3319) |
+| **32844746** | Hobson 2020, *eLife* 9:e60048, PMC7490010 — the paper usually cited as *"Puro-PLA is broken"* | 🟢 **FULL TEXT, read in act by Scientist A** | [DOI](https://doi.org/10.7554/eLife.60048) |
+| **31290739** | Moissoglu 2019, *eLife* 8:e44752, PMC6639073 — Puro-PLA in human/mouse migrating mesenchymal cells | `abstract-depth` | [DOI](https://doi.org/10.7554/eLife.44752) |
+| **32435426** | Aviner 2020, *Comput Struct Biotechnol J* 18:1074–1083, PMC7229235 — **review** of puromycin methodology (SUnSET, OPP, PUNCH-P, puro-PLA) | `abstract-depth`, **and it is a review** | [DOI](https://doi.org/10.1016/j.csbj.2020.04.014) |
+| **34590282** | Chin & Lécuyer 2021, *Methods Mol Biol* 2381:267–284 — Puro-PLA protocol, *Drosophila* embryos and human cells. **No PMCID** | `abstract-depth` | [DOI](https://doi.org/10.1007/978-1-0716-1740-3_15) |
+| **40084072** | De Pace, Bonifacino & Ghosh 2025, *Bio-protocol* 15(5):e5224, PMC11896778 — Puro-PLA protocol **in human iPSC-derived i3Neurons** | `abstract-depth` | [DOI](https://doi.org/10.21769/BioProtoc.5224) |
+
+**Why queued rather than read:** these are **methodology** citations supporting technique selection,
+not WWOX evidence. None of them mentions WWOX. They are declared here so that no conclusion leans
+on an unopened paper, which is precisely what the `UNREAD_PREMISE` gate exists to prevent —
+🟢 **and the gate fired correctly on exactly this file**, at `6` above a baseline of `0`.
+
+### 🔴 The Orchestrator's addition — the answer to the matrix's own blind spot is in its reference list
+
+`q230p_nascent_synthesis_discriminator_20260922.md` §6.3 names **`D6`** as a degeneracy affecting
+**every row** of its matrix: *"A fibroblast is not a neuron, and a negative in cell ④ cannot close
+`H5` for the disease-relevant cell type"*, with the remedy recorded as *"the same matrix in a
+neuronal model. **Out of scope here.**"* The counterweight it cites is Koch 2011 (`PMID 22113611`),
+where a disease-relevant insoluble species forms **only in patient neurons**, *"not observed in
+iPSCs, fibroblasts or glia"*.
+
+🎯 **`PMID 40084072` is a published, step-by-step Puro-PLA protocol in human iPSC-derived neurons**,
+whose abstract states *"Puro-PLA is a sensitive method for detecting new protein synthesis occurring
+within minutes in neurons, enabling precise temporal analysis of translation dynamics"*, and that it
+*"can also be applied to rodent neurons in primary culture, enabling the investigation of axonal
+protein synthesis across species and disease models."*
+
+**Scientist A cites this record — in its provenance list, for the technique — and never connects it
+to `D6`.** The file declares its principal scope limit *out of scope* while holding, in its own
+reference list, a protocol for the exact assay in the exact cell class that would lift it.
+⇒ 🟢 **`D6` is downgraded from `OUT OF SCOPE` to `ROUTE EXISTS, UNCOSTED`.** The matrix is portable
+to a neuronal model by a published protocol rather than by a method-development project.
+
+⚠️ **What this does NOT license.** It is `abstract-depth`; no i3Neuron carries a WWOX allele; no
+WWOX-DEE iPSC line is established as available in this repository (`HUMAN_REQUIRED`, and it is a
+different and larger cost than the assay); and Koch 2011 is itself `abstract-depth`, so *"insoluble
+only in neurons"* is an attestation, not a verified measurement. **The route is named, not costed,
+and nothing about `H5` changes.**
+
+⚠️ `abstract-depth` ⇒ `PREMISE: UNREAD_PRIMARY` on the four records not read in full. **None is a
+WWOX paper:** every transfer carries its system of origin (rat/mouse hippocampal neurons, migrating
+mesenchymal cells, *Drosophila* embryos, human i3Neurons — **none of them human fibroblasts**, which
+is the system the `Q230P` design targets).
