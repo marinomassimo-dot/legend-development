@@ -7244,3 +7244,31 @@ cohort*, *Brain Commun* 2026;8:fcag189, [DOI](https://doi.org/10.1093/braincomms
 🔴 **Not a WWOX-disease paper**: **LATE-NC in the oldest old**. A `WWOX` locus appearing in an
 age-related proteinopathy cohort is a bibliographic fact about the locus and **carries nothing** to a
 paediatric WWOX-DEE genotype class. Recorded so the citation cannot later be mistaken for support.
+
+---
+
+## FT-170
+**Paper:** PMID 33963278 — Wuchty S, Myers AJ, … Ressler KJ, Nemeroff CB, *Integration of peripheral
+transcriptomics, genomics, and interactomics following trauma identifies causal genes for symptoms of
+post-traumatic stress and major depression*, *Mol Psychiatry* 2021;26(7):3077–3092,
+[DOI](https://doi.org/10.1038/s41380-021-01084-3)
+**Title:** The twelfth reading debt of 2026-09-22, declared with `FT-158`–`FT-169`
+**Priority:** **LOW**
+**Why:** Cited at abstract depth by [[amygdala_expression_lesion_node_20260922]], which reached
+`WWOX` through this paper's amygdala-adjacent framing. Declared under the same authority and for the
+same reason as `FT-158`–`FT-169`: the citation is honest and the gate is right, so the debt is
+declared rather than the citation deleted. **No PMCID** on the record returned; not fetched.
+
+🔴 **Not a WWOX-disease paper, and the distance is large.** It is a **human peripheral-blood**
+transcriptomic/genomic/interactomic study in **PTSD and major depressive disorder** after trauma
+(>700 enrolled; 297 with genotype, transcriptome and phenotype). `WWOX` appears only as **one of four
+shared "driver causal genes"** — with `ESR1`, `RUNX1` and `PPARA` — emerging from a **current-flow
+algorithm over eQTL-annotated networks**. That is a **computational inference from peripheral blood**,
+not a measurement in brain, and certainly not in a WWOX-DEE genotype class.
+
+⚠️ **The trap this entry exists to prevent.** The paper's own discussion links its pathways to
+*"preclinical models of **amygdala** function and fear regulation"*. A reader scanning for
+`WWOX` + `amygdala` will land here and find an apparent convergence with the `lde/lde` amygdalar
+lesion. 🔴 **There is none.** Different species, different tissue, different disease, different
+evidence class — an algorithmic driver-gene call in adult human blood versus a histological vacuole in
+a rat forebrain. **Never pooled, and never cited as support for the amygdala node.**
