@@ -93,9 +93,33 @@ match a **superstring of itself** and that your matcher cannot **match itself**.
 query is the degenerate case where enumeration and reading agree and are both wrong. *The first
 number a tool hands you is not the measurement.*
 
+**Step 3 — ask how deeply the load-bearing source was actually read.** Enumerating and reading
+*our own artefacts* answers *"what does LEGEND hold?"* It does not answer *"what does the
+literature say?"* Those separate the moment a load-bearing source was never read past its abstract.
+
+Classify the depth where it is knowable:
+
+`TITLE_ONLY` · `ABSTRACT_ONLY` · `FULL_TEXT_PARTIAL` · `FULL_TEXT_COMPLETE` · `METHODS_READ` ·
+`SUPPLEMENT_READ` · `FIGURE/CAPTION_VERIFIED`
+
+> 🔴 **The fixture.** A census found **0 of 81 manifests** naming a detergent and **0** recording a
+> pellet step, and was one step from licensing *"no WWOX abundance study examined the insoluble
+> fraction."* The load-bearing source for that question — the paper reporting normal transcript and
+> undetected protein — was `abstract_only`, with no manifest at all. **The absence was a property
+> of our reading depth, not of the literature.** An absence measured over artefacts whose sources
+> were never read is a measurement of the reader.
+
 **Bound the absence.** An absence claim states its scope, and the honest ones name at least:
-`FILE TYPE` · `LANGUAGE` · `DOCUMENT CLASS` · `SOURCE/QUERY SCOPE`. "No WWOX study examined the
-pellet" is not a finding until it says which corpus, which document class, and which query.
+`FILE TYPE` · `LANGUAGE` · `DOCUMENT CLASS` · `SOURCE/QUERY SCOPE` · **`SOURCE DEPTH`**. Preferred
+form:
+
+> *No X was identified in **[scope]**, at **[source depth]**, using **[route/query]**.*
+
+🔴 **Never silently promote `NOT PRESENT IN OUR CORPUS` to `NOT PRESENT IN THE LITERATURE`.** They
+are different claims with different evidence, and only the first is usually supported.
+
+**This is not a new gate.** It is one extra question inside a primitive that is itself optional, and
+it applies to consequential negatives — not to every grep.
 
 **Proportionality.** This is for claims that carry weight. Do not turn every grep into a forensic
 project; a search that supports no novelty claim needs no enumeration.
