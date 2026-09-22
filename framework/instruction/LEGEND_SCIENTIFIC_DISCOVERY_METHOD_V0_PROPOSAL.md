@@ -12,7 +12,7 @@ committed against itself and recorded.
 
 ## §0 · The one design constraint that outranks everything below
 
-`LEGEND_CORE` **§26** forbids answering a scientific mistake with a new gate, authority, auditor,
+The operator's standing directive **§26** forbids answering a scientific mistake with a new gate, authority, auditor,
 registry or workflow. **Every primitive here is therefore proposed as a habit, never as a check.**
 A primitive that becomes a gate has failed, because a gate converts a thinking move into a
 compliance move, and a compliance move is satisfied by the cheapest output that passes it.
