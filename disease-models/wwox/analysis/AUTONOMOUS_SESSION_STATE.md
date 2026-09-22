@@ -845,7 +845,10 @@ touched** — no authorisation was given for it.
    being degraded proteasomally in that system), **not** established in neural tissue, and the
    **mTOR-mediated route is asserted, never tested**. The two-directions standoff now reduces to
    **one** discordant paper, `36621327`, whose acquisition priority rises above the other two.
-6. **`PMID 27869163`** (Wwox–Brca1, CC BY-NC-ND) — copyright-verified open, never dispatched.
+6. ~~**`PMID 27869163`** (Wwox–Brca1, CC BY-NC-ND) — copyright-verified open, never dispatched.~~
+   🔴 **STALE WHEN WRITTEN — CORRECTED 2026-09-22.** It was dispatched and read on **2026-09-21**,
+   receipt **`FTR-20260921-27869163-01`**, `evidence_depth: partial_fulltext_read`. The line above
+   survived the read because **nothing updates this checkpoint when a receipt is appended**.
 
 ## Permanently evidence-blocked — do not retry automated routes
 `15126504` (`FT-024`, no PMCID) · `27569545` (`FT-105`, **licence wall**, verified) · `15026124`
@@ -885,7 +888,44 @@ exists**. `PMC4935222` resolves, round-trips through `convert_article_ids`, and 
 with `"full_text":""`. **Check `get_copyright_status` for `found_in_pmc` and `is_open_access` before
 dispatching a read**, and treat an empty body as a licence wall, not a transient failure.
 
-**Copyright-verified OPEN and still unread:** `27869163` (Wwox–Brca1, CC BY-NC-ND 4.0, PMC5398941) ·
+~~**Copyright-verified OPEN and still unread:** `27869163` (Wwox–Brca1, CC BY-NC-ND 4.0, PMC5398941) ·
 `35573960` (Front Pediatr 2022, `PMC9100683` — the tool reports `is_open_access:false` with a null
 licence field, but Frontiers deposits full text, **so this one is worth exactly one fetch
-attempt**).
+attempt**).~~
+
+🔴 **BOTH ROWS WERE STALE, AND BOTH WERE ALREADY READ — CORRECTED 2026-09-22 BY THE SESSION THEY
+MISLED.** This section invited a fresh session to spend acquisition acts on two papers the
+repository had already read the previous day:
+
+| PMID | This section said | Actually | Receipt |
+|---|---|---|---|
+| `27869163` | "still unread", "never dispatched" | **read 2026-09-21** | `FTR-20260921-27869163-01` (`partial_fulltext_read`) |
+| `35573960` | "worth exactly one fetch attempt" | **read 2026-09-21 in full**, and it carries a dedicated audit, [`woree_phenotypic_approach_audit_20260921.md`](woree_phenotypic_approach_audit_20260921.md) | `FTR-20260921-35573960-01` |
+
+**The fetch attempt this section invited was made on 2026-09-22 and returned the full body of
+`35573960` (~16 k characters).** Every finding in it — including the two that looked most promising
+on a fresh read, the **age-dependent MR-spectroscopy lactate** (present at 4 months, absent at
+2 y 4 m) and the authors' own open question about the **periventricular-leukomalacia-like late
+pattern** — was already held, the first at
+[`woree_phenotypic_approach_audit_20260921.md:298`](woree_phenotypic_approach_audit_20260921.md)
+("a detail LEGEND should not lose"), the second at `:247`. ⇒ 🟢 **The repository was right and this
+checkpoint was wrong.** Grade **A — REDISCOVERY**. The cost was one acquisition act, and the cause
+was this file.
+
+🔴 **The defect class, named so it is not rediscovered:** an *"X is unread"* assertion frozen as a
+literal in a state file is the **append-only negative** that
+[`scripts/test_no_closed_world_assertions_on_live_state.py`](../../../scripts/test_no_closed_world_assertions_on_live_state.py)
+already forbids — *"`X has NO complete receipt` — becomes false the moment X is read. Never safe to
+pin."* That guard inspects **test functions only**, as its own docstring states, so a prose
+checkpoint falls straight through the documented gap.
+
+⚠️ **A guard for the prose surface was prototyped on 2026-09-22 and DELIBERATELY NOT SHIPPED.**
+Scanning every markdown file under `disease-models/wwox/` for an unread-assertion phrase on the same
+line as a PMID that carries a `complete_`/`partial_fulltext_read` receipt returns **12 candidates, of
+which roughly 4 are true**. The false positives are structural, not tunable away cheaply: the word
+**"unreadable"** matching an `is unread` substring; an explicit **negation** (*"non è né irrisolto né
+non letto"*); an **actor-scoped** qualifier (*"remains unread **by me**"*); and a **quoted claim that
+the same line then refutes** (*"**Falso**"*). A guard at ~40 % precision would be allow-listed into
+uselessness, which is worse than no guard. 🔴 **Recorded as a measured negative, not as a TODO** —
+the cheap and correct fix is the one applied here: **correct the stale lines**. Do not re-prototype
+the scanner without a higher-precision signal than same-line prose.
