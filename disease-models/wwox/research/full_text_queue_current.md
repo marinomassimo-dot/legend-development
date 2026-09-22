@@ -7072,3 +7072,175 @@ salt wasting, hypomagnesaemia, metabolic alkalosis and hypokalaemia"*, while *"m
 have severe renal phenotype that, apart from hypokalaemia, is the opposite"* — corroborating FT-156
 at abstract depth from an independent record. 🔴 It is a **review**: it is a pointer to primaries,
 never a primary itself, and must not be cited as evidence for a measurement.
+
+---
+
+# FT-158 … FT-169 — twelve reading debts declared in one act, 2026-09-22
+
+🔴 **Why these twelve arrive together.** An overnight autonomous run landed six analysis files, and
+`legend_lint.py` raised `BLOCK_BATCH_COMMIT: UNREAD_PREMISE` at **12 above a baseline of 0**, with
+`growth_anchors.py` additionally reporting `RATCHET_VIOLATION` — *"this ratchet may only fall."*
+**The gate is right**, and the Orchestrator that landed those files is the one that broke it: the
+standard set by `FT-156`/`FT-157` was *"I did not commit anything that flips LINT from PASS to
+BLOCK"*, and tonight that standard was not met. Declared here rather than repaired by deleting the
+citations, because the citations are honest and **deleting them to clear a gate would be gaming the
+gate the repository built to catch exactly this**.
+
+**Authority:** `LEGEND_CORE` §21d, on the same reading `FT-156` recorded — publication, history
+rewrite, irreversible deletion, guarantee changes, spend and data exposure are reserved; everything
+else is *decide, act, record*. **A queue entry is none of those.** Reversible by deleting
+`FT-158`–`FT-169`.
+
+⚠️ **A queue entry is a declaration of reading debt, not a read.** Every PMID below is
+`PREMISE: UNREAD_PRIMARY` at the depth stated, and several are **not WWOX papers** — each of those
+carries its system of origin, and no mechanism transfers from it.
+
+🔴 **Four of these were in fact read tonight and are UNDER-declared here on purpose.** Scientist 5
+proposed receipt payloads for `18676360`, `19918364`, `36828035` and `36247526` as field tables and
+**did not write them**, because `fulltext_receipts.py record` is not an act to take unsupervised at
+the close of an autonomous run. A queue entry is the reversible repair; **the receipts are the
+operator's call**, and the proposed payloads are in
+[[acquisition_wave_20260922]] § 6. Where a read happened, it is stated in the entry.
+
+---
+
+## FT-158
+**Paper:** PMID 18676360 — Takenaka M, … Suzuki H, *Retarded differentiation of Leydig cells and
+increased apoptosis of germ cells in the initial round of spermatogenesis in lde/lde rats*,
+*J Androl* 2008;29(6):669–78, [DOI](https://doi.org/10.2164/jandrol.108.005066)
+**Title:** 🎯 The `lde/lde` primary that was in **zero** repository files
+**Priority:** **HIGH** — an allele primary from the founding laboratory, absent from the entire corpus
+**Why:** Cited by [[ataxia_without_cerebellar_lesion_20260922]], [[cerebellar_measurement_census_20260922]],
+[[public_deposit_reanalysis_census_20260922]] and [[acquisition_wave_20260922]]. Verified by the
+Orchestrator across every `.md` and `.jsonl`: **zero prior occurrences**.
+🟡 **Partially read 2026-09-22** — no PMCID exists and every scholarly host is egress-blocked here, so
+Scientist 5 obtained it publisher-side: abstract, introduction, **complete Materials and Methods**,
+results with figure legends. **No receipt written.**
+🎯 **What the read settled.** The sampling frame, verbatim: *"rats were sacrificed … and autopsied to
+determine the weights of the male reproductive organs … **all testes were fixed in Bouin solution**"*,
+plus *"Three normal and 3 mutant **pituitary glands at 28 days of age**."* ⇒ **cerebellum NO ·
+brainstem NO · spinal cord NO · peripheral nerve NO · muscle NO**; no gait or coordination measure; no
+myelin readout. Ages 21/28/35/56 d.
+🔴 **Two corrections it forces.** (1) The hippocampal/amygdaloid vacuoles are **not this paper's data**
+— cited to *Suzuki 2007*; any row leaning on `18676360` for `lde/lde` brain pathology is a citation of
+a citation. ⚠️ Unresolved tension recorded rather than hidden: the **abstract** says *"**our**
+histological examination detected … vacuoles"* in the first person, while the body cites Suzuki 2007.
+(2) 🎯 **The retrieval hazard at its root** — the paper names **no gene at all**, only *"rat chromosome
+19 (Suzuki et al, in preparation)"*. **There is no `Wwox` token to match, so every `Wwox`-keyed
+negative in this repository under-counts by an unknown amount.**
+
+## FT-159
+**Paper:** PMID 19918364 / PMCID PMC2771921 — Li M-Y, … Chang N-S, *WWOX/WOX1 in dorsal root ganglia
+after sciatic nerve transection*, *PLoS ONE* 2009, [DOI](https://doi.org/10.1371/journal.pone.0007820)
+**Priority:** **LOW** — read at served depth; the debt is formal
+**Why:** Cited by [[ataxia_without_cerebellar_lesion_20260922]] to **weaken its own** proprioceptive
+hypothesis. 🟢 Served surface read in full (48,831 chars) 2026-09-22; **no receipt written**.
+🔴 **The citing use is PARTIALLY SUPPORTED and the paper is harder on that hypothesis than the citing
+file knew.** Sciatic transection ✅, wild-type Sprague-Dawley ✅, *"small neurons (<20 µm in diameter),
+rather than in medium (20–30 µm)-to-large (>30 µm)"* ✅. **But "nociceptive" appears nowhere** —
+`nocicept*` 0, `proprio*` 0, `myelin` 0, all roman-class so admissible. The paper classifies by soma
+diameter only and **never assigns modality**; the size→modality step is the citing Scientist's
+conventional inference and must be attributed to it. Counter-detail: injured-side WOX1⁺ neurons average
+**28.8 ± 1.8 µm** — the *medium* band — and immuno-EM found protein **higher** in medium-to-large neurons.
+
+## FT-160
+**Paper:** PMID 36247526 / PMCID PMC9561749 — *IBRO Neurosci Rep* 2022,
+[DOI](https://doi.org/10.1016/j.ibneur.2022.09.009) — LCM RNA-seq of **rat** CA1/CA2/CA3/DG
+**Priority:** 🎯 **HIGH** — the species-matched dataset that would score an open prediction
+**Why:** Cited by [[wwox_subfield_celltype_expression_20260922]] as the one perfectly species-matched
+source for subfield-resolved `Wwox`. 🟡 Partially read; **no receipt written**.
+🔴 **It yielded zero values, and the zero measures the extractor, not the biology.** Reproduced
+verbatim twice: *"we have identified the gene (peroxisomal biogenesis factor 5-like)"* — **symbol
+deleted** — and *"…Gene Expression Omnibus (GEO), accession number."* — **accession deleted, sentence
+ends at the full stop.** `extraction_damage_report.py` independently returns
+`ITALIC-CLASS COUNTS INADMISSIBLE`. ⇒ The citing Scientist was **right to refuse to report a zero**,
+and `P7`'s numeric half stays open. **Unblock:** recover the GEO accession off-harness.
+
+## FT-161
+**Paper:** PMID 40235507 / PMCID PMC11998783 — *Research Square* preprint,
+[DOI](https://doi.org/10.21203/rs.3.rs-6264481/v1)
+**Priority:** **LOW** · 🔴 `HUMAN_REQUIRED`
+**Why:** Cited by [[public_deposit_reanalysis_census_20260922]] and [[acquisition_wave_20260922]].
+`PMC11998783` resolves but serves **`"full_text": ""`** — the stub trap. **Abstract only, and an
+abstract is not a read.** ⚠️ Also a **preprint, not peer-reviewed**, and must never be weighted as one.
+**No receipt proposed**, correctly.
+
+## FT-162
+**Paper:** PMID 41776383 — Corona A, … Martinelli Boneschi F, *Pharmacogenomics of response to
+interferon-beta and glatiramer acetate in Multiple Sclerosis*, *Mult Scler* 2026;32(6):747–758,
+[DOI](https://doi.org/10.1177/13524585261417130)
+**Priority:** **LOW** · 🔴 `HUMAN_REQUIRED`
+**Why:** Cited by [[ataxia_without_cerebellar_lesion_20260922]]. **No PMCID**; SAGE-walled; absent from
+the one publisher-side surface reachable here. 🔴 **Not a WWOX-disease paper** — a pharmacogenomics
+study in **multiple sclerosis**, an entirely different disease and population; nothing transfers.
+**Needed to use it at all:** the WWOX rs number, effect size and p-value for the glatiramer arm, none
+of which the abstract discloses.
+
+## FT-163
+**Paper:** PMID 28742274 / PMCID PMC5603408 — Ma D, … Zhou L, *Whole exome sequencing identified
+genetic variations in Chinese hemangioblastoma patients*, *Am J Med Genet A* 2017;173(10):2605–2613,
+[DOI](https://doi.org/10.1002/ajmg.a.38350)
+**Priority:** **LOW** — cited by [[cerebellar_measurement_census_20260922]] at abstract depth
+**Why:** 🔴 **Not a WWOX-disease paper** — a **tumour** exome series. Citable only as a *bibliographic*
+fact about where a `WWOX` variant has been reported, **never** as evidence about a WWOX-DEE genotype
+class, and never pooled with any animal allele.
+
+## FT-164
+**Paper:** PMID 30820047 / PMCID PMC6463297 — Kunkle BW, *et al.*, *Genetic meta-analysis of diagnosed
+Alzheimer's disease identifies new risk loci and implicates Aβ, tau, immunity and lipid processing*,
+*Nat Genet* 2019;51(3):414–430, [DOI](https://doi.org/10.1038/s41588-019-0358-2)
+**Priority:** **LOW** — cited by [[cerebellar_measurement_census_20260922]] at abstract depth
+**Why:** 🔴 **Not a WWOX-disease paper** — a **late-onset Alzheimer's** GWAS in 94,437 individuals.
+Same restriction as `FT-163`: bibliographic only.
+
+---
+
+# FT-165 … FT-168 — the four metabolic comparators
+Cited by [[metabolic_differential_vulnerability_reposed_20260922]], all **abstract depth**, all
+🔴 **non-WWOX**, each carrying its own system of origin. § 8 of that file leans on this set, and says so.
+
+## FT-165
+**Paper:** PMID 34190042 / PMCID PMC8294849 — Kontou G, … Kittler JT, *Miro1-dependent mitochondrial
+dynamics in parvalbumin interneurons*, *eLife* 2021;10:e65215,
+[DOI](https://doi.org/10.7554/eLife.65215)
+**Priority:** **LOW**
+**Why:** Source of *"PV⁺ interneurons have a high mitochondrial content"* — one of the two
+energy-demand anchors on which the § 8 closure rests. 🔴 Mouse PV interneuron cell biology; no WWOX.
+
+## FT-166
+**Paper:** PMID 34616292 / PMCID PMC8488267 — Pinna A, … Colasanti A, *The Neurometabolic Basis of Mood
+Instability: The Parvalbumin Interneuron Link*, *Front Pharmacol* 2021;12:689473,
+[DOI](https://doi.org/10.3389/fphar.2021.689473)
+**Priority:** **LOW**
+**Why:** The second energy-demand anchor. 🔴 **A systematic review and meta-analysis** — a pointer to
+primaries, never a primary — and its subject is **mood instability**, not epilepsy.
+
+## FT-167
+**Paper:** PMID 35053314 / PMCID PMC8774027 — Ferraro F, … Reinders M, *Correcting Differential Gene
+Expression Analysis for Cyto-Architectural Alterations in Substantia Nigra of Parkinson's Disease*,
+*Cells* 2022;11(2):198, [DOI](https://doi.org/10.3390/cells11020198)
+**Priority:** **LOW**
+**Why:** 🎯 **Method-only transfer** — the cell-composition-deconvolution caveat the metabolic node
+turns against its **own best datum**. 🔴 **Parkinson's substantia nigra**; no biology transfers.
+
+## FT-168
+**Paper:** PMID 36882863 / PMCID PMC9990224 — Ghirardini E, … Baroncelli L, *Cell-specific
+vulnerability to metabolic failure: the crucial role of parvalbumin expressing neurons in creatine
+transporter deficiency*, *Acta Neuropathol Commun* 2023;11:34,
+[DOI](https://doi.org/10.1186/s40478-023-01533-w)
+**Priority:** 🎯 **MEDIUM — read this one first if any of the four is read**
+**Why:** **The worked comparator.** The monogenic paediatric disorder in which cell-type metabolic
+vulnerability **is** demonstrated (PV interneuron hypofunctional; PV-restricted deletion reproduces
+disease) — and against which the WWOX signature runs **opposite on all three rows**, which is the
+second of the three measurement-based reasons the metabolic node was closed. 🔴 **`Slc6a8`/CTD is a
+different gene and a different disease**: only the *shape of the argument* transfers, never its
+mechanism.
+
+## FT-169
+**Paper:** PMID 42266427 / PMC13245399 — Mikhailenko E, … Kaivola K, *Genetic analysis of
+limbic-predominant age-related TDP-43 encephalopathy neuropathologic change in a population-based
+cohort*, *Brain Commun* 2026;8:fcag189, [DOI](https://doi.org/10.1093/braincomms/fcag189)
+**Priority:** **LOW** · cited at abstract depth.
+🔴 **Not a WWOX-disease paper**: **LATE-NC in the oldest old**. A `WWOX` locus appearing in an
+age-related proteinopathy cohort is a bibliographic fact about the locus and **carries nothing** to a
+paediatric WWOX-DEE genotype class. Recorded so the citation cannot later be mistaken for support.
