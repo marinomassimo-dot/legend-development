@@ -1,5 +1,90 @@
 # Autonomous session — continuation state
 
+> 🔴 **2026-09-22, SIXTH BLOCK — WRITTEN LAST, READ FIRST.** Supersedes the blocks below where they
+> disagree. **Not a handoff and not a stop.** Two Scientists running as this is written.
+
+## State — head `d49040d`, `HEAD == origin/main == origin/<branch>`, tree clean
+
+Gates at every landing: **LINT PASS · growth anchors PASS (claims=40, papers=87, corpus=361,
+literature=398, registry_only=13, unread_premises=0 — measured, never predicted) · publication gate
+PASS 0 blocks · prose `FT-` refs unresolved 0**.
+
+### 🔴 THREE THINGS I WROTE AND REPORTED TO THE OPERATOR WERE WRONG — all three corrected today
+
+1. **"The unit ambiguity is the size of the effect it is being used to measure" is a CATEGORY ERROR.**
+   `HD/LD = (u·2.63e11)/(u·1.23e11) = 2.1382` — **`u` cancels**. The ratio is degenerate in the
+   unit under *every* permitted reading. The defect is confined to the **absolute** axis, and there
+   it is exactly `2×`: LD ∈ [1.23, 2.46]e11, HD ∈ [2.63, 5.26]e11. Classification
+   **`AMBIGUOUS BUT BOUNDED`**, not "internally inconsistent". `CC-20260922-TX007-DOSE-CHALLENGE-01`
+   §10. Two structural findings fell out: **`PMID 42422765` states no dose in its Methods at all**,
+   and **`LD` denotes two different doses ~1,000 characters apart in the same document**.
+2. **`gt/gt` is not established as "a hypomorph with residual protein."** Primary text:
+   *"no detectable Wwox protein in most tissues examined, although a low level could be detected in
+   a minority of tissues"* — **naming no tissue, and not brain**. Permitted statement only: *low Wwox
+   protein was reported in a minority of tissues; residual brain protein is not established.*
+3. **"Viable to 2 years" is a secondary-panel reading** contradicted by the primary's *"significantly
+   shorter lifespan"*. **Withdrawn**; must not propagate until Suzuki Table 2 vs abstract is
+   reconciled.
+
+### ✅ Closed today, with measurements
+
+- **`H11` closed by a measured negative.** `Wwox gene-trap hypomorphic mice` → 1 (the primary);
+  `Wwox hypomorph AND (brain OR cerebellum OR neuron OR CNS)` → 1 (a human cohort); **positive
+  control `Wwox knockout AND (…)` → 14**. `PMC4143238` attempted → `full_text: ""`. **Nobody has ever
+  measured brain WWOX in the `gt/gt` mouse.** The model is **not** a validated hypomorph for CNS
+  therapeutic rescue.
+- **Nascimento data route resolved without the Scientist that was lost to it.** Its premise was
+  falsifiable directly: cloning `ECstream` gives `WWOX` case-sensitive **0**, case-insensitive **7 —
+  all seven inside `data:image/png;base64` payloads**. 🔴 **New extraction-damage class: a
+  case-insensitive grep of a notebook searches base64.** `gsm_samples.RData` holds
+  `GSM8002943–GSM8002960` including `EC_Stream`; `1.merging.rmd:81–91` imports **GSE186538**
+  (Franjic) via **GSE199762** into the same `matrices/` folder — so **Supplementary Table 5
+  ("all samples") includes 50–79-year-old adult cortex**. Recorded under **explicit attribution**:
+  the bound existed to prevent **mis-attribution**, not to prevent knowledge.
+- **Non-monotonicity in TX-007 survives the dose audit** (the bridge sentence excludes a per-figure
+  unit switch) — but **must not be read as biology**. Leading alternative: **follow-up-horizon
+  mismatch**, not a dose-response inversion.
+
+### 🎯 The live node — a therapeutic class is closed on a premise this repo contradicts twice
+
+`therapeutic_hypotheses_ledger_current.md:216` rules out **non-allele-specific WWOX upregulation**
+because the reference-genotype acceptor allele *"produce trascritto aberrante **destinato a NMD**"*.
+But `paper_registry_current.md:6469` and `:6535` both say **exon 9 is the LAST exon and a PTC there
+ESCAPES NMD** (`DL-MECH-045`) — and this session's own adjudication makes the cryptic-acceptor event
+**in-frame** (`p.Gln353_Gln354del`), i.e. **no PTC at all**. **If the NMD premise is wrong, the
+asymmetry argument collapses and the axis reopens.** Both Scientist slots are on it: **P** =
+mechanistic adjudication per splice event (50–55 nt rule, arithmetic shown); **Q** = has *any* WWOX
+allele, any class, any species, **ever** been assayed with an NMD reagent. ⚠️ **In-frame is about
+the frame, not the fold** (`D-30`) — "no NMD" must not become "functional protein".
+
+### Rules carried forward, all learned the hard way
+
+- **`is_open_access: false` is a LICENCE field, not a retrievability verdict.** ORDER attempts with
+  it; **never SKIP**. A PMCID is not a body.
+- **Four proven ways a query-count zero is meaningless:** (a) punctuation ⇒ query echoed
+  **unexpanded** ⇒ 0; (b) a **bare number** ⇒ `NNNN[UID]`, a record-ID lookup; (c) `[All Fields]`
+  **does not index Methods** or supplements; (d) a **wrong expansion** must be discarded, not
+  counted. **Read `query_translation`; always carry a positive control.**
+- **E-notation (`4E10`) is the only exponent-safe dose form** — `1.23 × 10¹¹ vg` extracts as
+  `1.23 × 10vg`.
+- **Model horizon and therapeutic window are distinct variables.** Never infer *not performed
+  because the animal could not survive long enough* ⇒ *biologically ineffective after that age*.
+- **Do not downgrade measured rescue merely because replication is absent.** Downgrade
+  **confidence / independence** language only.
+- §26: do **not** answer a scientific mistake with a new gate, authority, auditor or registry.
+  §27: `TOOL_PERMISSION_BLOCKED` is **not** a scientific `HUMAN_REQUIRED`.
+
+### Immediately next
+
+- **Running:** Scientist P — NMD adjudication for the reference allele. Scientist Q — WWOX NMD-assay
+  census. **Verify both against primary sources before use; refill on return.**
+- Standing: `VERIFY → LAND → SAFE_PUSH MAIN → REASSESS → REFILL`. **QUEUE EMPTY ≠ SESSION DONE.**
+- Delegate base rate: **fourteen waves — three clean, six corrected, one false alarm, two lost to
+  529s, two lost to a 429.**
+
+---
+
+
 > 🔴 **2026-09-22, FIFTH BLOCK — WRITTEN LAST, READ FIRST.** Supersedes the blocks below where they
 > disagree. **Not a handoff and not a stop.** Two Scientists running as this is written.
 

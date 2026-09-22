@@ -4,7 +4,7 @@
 ## WWOX — Literature Tracking Log
 **Version:** v1.5
 **Date baseline:** 2026-03-28
-**Last update:** 2026-07-10 — URG_2026-07-09_001 category 5: LIT-0085 Maroni 2017 declassato `background_only / dependency-contaminated`; creato LIT-0401 per il primario ritirato PMID 28151481. Nessun claim baseline contaminato.
+**Last update:** 2026-09-22 — `BATCH_20260922_BIBLIO` (**traceability repair, no scientific change**): the `PAPER 011` record carried the wrong expansion of `OMTA` (*Methods & Clinical Development* is `omtm`, a different journal) **and** still declared *«PMID/DOI da confermare quando indicizzato su PubMed»* although PMID 42422765 / PMC13343157 / DOI 10.1016/j.omta.2026.201791 have been confirmed and recorded in [[paper_registry_current#PAPER 011]] since `BATCH_20260710_A`. Both corrected. **No screening decision, tier or status changed.** Prev: 2026-07-10 — URG_2026-07-09_001 category 5: LIT-0085 Maroni 2017 declassato `background_only / dependency-contaminated`; creato LIT-0401 per il primario ritirato PMID 28151481. Nessun claim baseline contaminato.
 
 ---
 
@@ -360,9 +360,9 @@ Serves to:
 **Authors:** Obeid et al.
 **Year:** 2026
 **Source type:** preclinical gene therapy study (peer-reviewed; era preprint bioRxiv)
-**Journal/source:** Molecular Therapy - Methods & Clinical Development (OMTA) 2026;34 (Cell Press)
+**Journal/source:** Molecular Therapy Advances (OMTA — *Mol Ther Adv*) 2026;34 (Cell Press)
 **Identifier type:** Journal (published) — era Preprint DOI
-**Identifier value:** OMTA vol 34 (2026); PMID/DOI da confermare quando indicizzato su PubMed (aggiornato preprint→published 2026-07-04, CC-2026-07-03-001)
+**Identifier value:** OMTA vol 34 (2026) — **identificatori confermati:** PMID 42422765 / PMCID PMC13343157 / DOI 10.1016/j.omta.2026.201791, *Mol Ther Adv* 2026;34(3):201791 (aggiornato preprint→published 2026-07-04, CC-2026-07-03-001; identificatori confermati e allineati a [[paper_registry_current#PAPER 011]] in `BATCH_20260922_BIBLIO`)
 **Date discovered:** 2026-03-28
 **Date screened:** 2026-03-28
 **Date processed:** 2026-03-28

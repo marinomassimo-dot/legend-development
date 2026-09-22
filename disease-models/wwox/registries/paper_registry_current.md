@@ -4,7 +4,7 @@
 ## WWOX Paper Registry
 **Version:** v1.8.2
 **Date baseline:** 2026-03-28  
-**Last update:** 2026-07-25 — `BATCH_20260725_001` (public audit, **traceability repair, no scientific change**): the historical CLAIM 028 source typo 213→207 was resolved against the tracking log and CORPUS P207; the superseded 213 pointer remains visibly withdrawn in the batch summary. Prev: `BATCH_20260725_DEPTH` normalized PAPER 005 evidence-depth metadata without scientific change. Prev: 2026-07-10 — URG_2026-07-09_001 category 5 invalidated the retracted/dependency-contaminated source line without affecting a baseline claim.
+**Last update:** 2026-09-22 — `BATCH_20260922_BIBLIO` (**traceability repair, no scientific change**): `PAPER 011`'s Journal/source line expanded `OMTA` as *Molecular Therapy - Methods & Clinical Development* — a **different Cell Press journal** (`omtm`) — and so contradicted the correct name already printed on the Identifier line directly beneath it. Now ***Molecular Therapy Advances*** (`Mol Ther Adv`, DOI code `omta`) in both places. **No note, boundary, number or evidence-depth field changed.** Prev: 2026-07-25 — `BATCH_20260725_001` (public audit, **traceability repair, no scientific change**): the historical CLAIM 028 source typo 213→207 was resolved against the tracking log and CORPUS P207; the superseded 213 pointer remains visibly withdrawn in the batch summary. Prev: `BATCH_20260725_DEPTH` normalized PAPER 005 evidence-depth metadata without scientific change. Prev: 2026-07-10 — URG_2026-07-09_001 category 5 invalidated the retracted/dependency-contaminated source line without affecting a baseline claim.
 
 ---
 
@@ -257,7 +257,7 @@ A paper integrated is not necessarily a paper that changes BLOCCO 1.
 **Authors:** Obeid et al.
 **Year:** 2026
 **Source type:** preclinical gene therapy study (peer-reviewed)
-**Journal/source:** Molecular Therapy - Methods & Clinical Development (OMTA) 2026;34 (Cell Press)
+**Journal/source:** Molecular Therapy Advances (OMTA — *Mol Ther Adv*) 2026;34 (Cell Press)
 **Identifier:** PMID 42422765 / PMCID PMC13343157 / DOI 10.1016/j.omta.2026.201791 — *Mol Ther Adv* 2026;34(3):201791. Identifier normalizzato in BATCH_20260710_A (era "da confermare"); main text full letto integralmente. Versione published del preprint bioRxiv omonimo.
 **Status:** integrated
 **Evidence depth:** complete_fulltext_read — article and S1–S8; latest receipt `FTR-20260814-42422765-06`; strict schema-v2 manifest `deepdive_manifests/PMID42422765.json`
