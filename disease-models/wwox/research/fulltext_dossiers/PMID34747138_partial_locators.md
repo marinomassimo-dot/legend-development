@@ -164,3 +164,26 @@ may be issued. Reading debt for PMID 34747138 stays open.
 their result. That is exactly the configuration in which this repository has twice been burned
 (Wang 2012's caption, the 42397075 Fig. 6 brackets), so the finding is recorded as
 `PREMISE: INFERENZA` pending inspection of those panels, not as `DATO`.
+
+---
+
+## 🔴 Appended 2026-09-22 — this is the SECOND dossier for this PMID, and it is superseded on coverage
+
+**Read this before using the coverage table above.** There are two dossiers for PMID 34747138 in
+this directory, and this one — captured 2026-08-09 at `partial_fulltext_read` — is the earlier.
+The reading debt it declares open was **closed the next day**: `PMID34747138_locators.md`,
+receipt `FTR-20260810-34747138-01`, `complete_fulltext_read`, 20 verified locators in
+`deepdive_manifests/PMID34747138.json`, validator PASS, 0 gaps. **The coverage table above is
+history, not current state.**
+
+**Its locators `L1`–`L9` are not superseded** and remain the only home in this repository for
+several of them (the Leydig / cortical-bone / fertility rescue; `L7`'s WT-only adult comparator).
+That is precisely why this file must not be read as merely stale.
+
+**Why this note exists.** On 2026-09-22 a baseline for a recursive re-read of this paper was built
+from `PMID34747138_locators.md` and the manifest, and **missed this file**, because the baseline
+was assembled from guessed filenames instead of from a listing. Two facts already held here were
+within one step of being scored as new discoveries. `PMID 34747138` is the **only** PMID in
+`fulltext_dossiers/` with more than one dossier — verified by enumeration, 54 files, all
+`PMID<id>*` — so the exposure is bounded to this one identifier, and this note is the fix.
+See [`recursive_reread_repudi2021_20260922.md`](../recursive_reread_repudi2021_20260922.md) §5.4.
