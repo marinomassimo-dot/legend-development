@@ -90,7 +90,7 @@ Table 2 uses. Nobody has applied the acoustic stimulus to either mouse.
 > provoked** (`PREMISE: NOBODY_LOOKED`). The only provocation ever applied to a Wwox mouse is
 > chemoconvulsant (pilocarpine/PTZ, `PMID 32000863`) — and that same paper reports seizures
 > *"frequently induced by mild stressors including noise"* without measuring one. Separately,
-> **`Wwox^gt/gt` — viable to two years, `Epilepsy` row empty in the same Table 2 — has never been
+> **`Wwox^gt/gt` — which survives where the null does not, `Epilepsy` row empty in the same Table 2 — has never been
 > observed, recorded or provoked at all**, so the "dies before it can seize" explanation has an
 > untouched test bed.
 
@@ -165,3 +165,43 @@ usable.
 - **`UNREAD_PREMISE`: to be measured with `growth_anchors.py check` before this lands, not
   predicted.** The last time this candidate's author predicted that number, the ratchet returned
   `10`.
+
+
+---
+
+## 7 · 🔴 APPEND-ONLY — the *"2 years"* figure is WITHDRAWN from the proposed canonical text
+
+**Operator instruction, 2026-09-22: do not propagate *"viable to 2 years"* until the Suzuki Table 2 /
+abstract discrepancy is reconciled. It is not reconciled, so it is withdrawn here before propagation.**
+
+| source | says | depth |
+|---|---|---|
+| **Suzuki 2009, Table 2 `Viability` row** | `gt/gt` = **2 years** | 🔴 **secondary**, `panel` depth — a table *about* another lab's mouse |
+| **Ludes-Meyers 2007, the primary's own abstract** | *"We observed that the Wwox(gt/gt) mice had **a significantly shorter lifespan**"* | primary, `abstract-depth` — **the body serves `full_text: ""`** |
+
+**Both are on file and neither is a read of the primary's body.** §1's table row and prose are
+corrected to drop the number; **the proposed canonical addition no longer contains it.**
+
+🔵 **The ARGUMENT survives intact, and on the primary's own words rather than on the disputed
+number.** Ludes-Meyers 2007, verbatim: *"Remarkably, **Wwox hypomorphic mice are viable in contrast
+to the recently reported postnatal lethality of Wwox knockout mice**."* That is the whole load the
+argument needs: **`gt/gt` outlives the null, which dies at 3–4 weeks, by enough to make the
+survival-confound question testable.** *"Significantly shorter than wild type"* and *"long enough to
+seize"* are not in conflict — the null's ceiling is three to four **weeks**.
+
+🔴 **And a second overstatement, this one already in CANONICAL text.** `claim_registry_current.md`
+`CLAIM 032` states: *"il topo **ipomorfo** `Wwox^gt/gt` (**proteina bassa ma rilevabile**) è
+**vitale**"*. The primary says *"**no detectable Wwox protein in most tissues examined**, although,
+**a low level could be detected in a minority of tissues**"* — and **names no tissue, and not
+brain**. *"Proteina bassa ma rilevabile"*, unqualified, generalises a minority-of-tissues finding to
+the animal.
+
+⚠️ **Not repaired here — it is outside this candidate's authorized scope** (the operator
+authorization covered the seizure statements only), and
+**`CC-20260921-CLAIM032-HYPOMORPH-PREMISE-01` already queues exactly this defect.** Recorded so the
+two are visibly linked.
+
+> **The only statement currently permitted about this animal's protein:** *low Wwox protein was
+> reported in a minority of tissues; **residual brain protein is not established**.* And therefore:
+> **`Wwox^gt/gt` must not be called a validated hypomorph for CNS therapeutic rescue** unless and
+> until CNS residual expression is demonstrated.
