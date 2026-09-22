@@ -102,6 +102,7 @@ Run everything as `python3 <path> --help` first. Paths are repo-relative.
 | replay an acquisition recipe and diff the digest | `framework/scripts/reacquire.py` |
 | the case where every DOI-keyed open-access index says CLOSED and all of them are wrong | `framework/scripts/oa_status_dissent.py` |
 | which external extractors this deployment actually has | `framework/scripts/tool_preflight.py` |
+| a variant label, superscript or figure legend that the PMC/abstract extraction silently DELETED | re-query the same body through `Scholar_Gateway semanticSearch` — publisher-side text keeps superscripts as `^…^` and retains figure legends (passage retrieval, not a whole-body fetch; no substitute for a read or a receipt) |
 | whether a claimed term census reproduces at a git ref — and which files contaminate the working tree you were about to check it on | `framework/scripts/census_verify.py` |
 
 ## 5 · Bring literature in
