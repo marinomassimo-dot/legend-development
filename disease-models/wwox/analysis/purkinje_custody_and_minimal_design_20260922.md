@@ -555,3 +555,88 @@ doses, though the pairing would have read more strongly.
 file was written: this one.
 
 **Nothing here is medical advice.**
+
+---
+
+# ORCHESTRATOR VERIFICATION — 2026-09-22
+
+## V1 · 🎯 The channel arithmetic is CONFIRMED, and it converts a design choice into a constraint
+
+Verified at source: exactly **two** secondaries exist programme-wide — *"goat anti-rabbit Alexa
+fluor 647"*, *"goat anti-mouse Alexa fluor 488"* — plus *"Hoechst 33258"*
+(`purkinje_existing_asset_ceiling_20260922.md:38`, tracing `purkinje_existing_material_experiment:244`).
+And the anti-WWOX primary is **rabbit** (`HPA050992`, `wwox_antibody_epitope_census:399`).
+
+So the slots are forced:
+
+```
+Hoechst        nuclear        free
+AF488 (mouse)  one slot   ←── native EGFP also lands here (green)
+AF647 (rabbit) one slot   ←── WWOX is rabbit, so it owns this
+```
+
+🔴 **Identity is the only signal with a free choice of host, and whichever slot calbindin takes it
+evicts one of the other two. Therefore arrival, expression and identity cannot coexist on one
+3-channel section — ever, under this reagent set.**
+
+🎯 **This retro-justifies the earlier cut of the reporter channel as arithmetic, not oversight.** A
+sibling cut that channel and stated its blind spot; this shows the cut was **forced**, not chosen.
+
+**And the resolution is genuinely elegant:** *the reagent Section A forbids is the reagent Section B
+requires.* Section A uses **mouse** anti-calbindin (AF488) beside rabbit-WWOX (AF647). Section B
+drops the antibody entirely on the green side — **native EGFP, uncontested** — which frees the mouse
+slot and lets calbindin move to **rabbit** (AF647). Two sections, no new secondary.
+
+## V2 · 🟢 NA is the wrong question — the binding constraint is pixel sampling
+
+Worth carrying beyond this file. At 520 nm, `0.61λ/NA` gives ≈1.06 µm even at NA 0.30, so **every
+realistic whole-slide objective resolves these objects laterally with an order of magnitude to
+spare.** The limit is how finely the image was **sampled**, not how well it was **resolved**.
+
+| Task | Requirement |
+|---|---|
+| layer segmentation | ≤ 2 µm/px |
+| soma masking | ≤ 1.0 (trustworthy ≤ 0.5) |
+| Purkinje vs Bergmann identity | ≤ 0.5 for size; ≤ 0.25–0.3 before chromatin texture helps |
+
+🔴 **The dangerous case, and the reason `Q2` is the decisive question:** a 20× scan exported at 2–4×
+downsample lands at **1–2 µm/px and crosses the floor invisibly** — the file still looks like a 20×
+scan. This is why the custody list asks for `MICROMETER_PER_PIXEL_X` **from the header**, not for
+the objective from memory.
+
+Consequence: `Q4` (single plane vs z-stack/extended focus) matters **more** than `Q3` (NA), because
+NA bites only on depth of field in a 14 µm widefield section. The file asks Q3 *in order to retire
+it*, which is the right use of a question.
+
+## V3 · The hard stop is a MATERIAL limit, not a channel limit — and the distinction is load-bearing
+
+🔴 At the **therapeutic** dose, vector arrival is unreachable on existing material by **any** channel
+arrangement — not for want of a channel, but because **no reporter animal at that dose was ever
+sectioned.** Section B answers at `2E10` and **does not transfer** to `1.23E11`/`2.63E11`.
+
+That is a different class of limit from everything else in this file, and collapsing the two would
+be the error. No amount of cleverness with three channels reaches it; only the named `J3` ISH pass
+on the therapeutic sections does, and it is credited rather than re-proposed.
+
+## V4 · The functional void, stated plainly
+
+🔴 **No cerebellum-localising functional endpoint exists anywhere in this corpus.** Recordings
+neocortical by stated coordinates; ECoG over right dorsal cortex; video-EEG frontal/parietal; the
+one slice study removed the cerebellum outright; the "ataxia score" is a hindlimb clasping test;
+rotarod reads supra-WT; and SARA/ICARS/BARS/posturography/oculomotor/eyeblink are **zero** in both
+human cohorts.
+
+**So `VECTOR ARRIVAL` / `WWOX EXPRESSION` / `FUNCTION` are not merely conceptually separate here —
+the third has no instrument at all in this programme.** A stain that establishes expression could
+not become a functional claim even if someone wished it to.
+
+## V5 · Status
+
+`Q2 ∧ Q8 ∧ Q12` must hold **simultaneously**; any one false collapses the marker-free route.
+**`Q13` (raw files / blocks / unstained serial neighbours retained) is orthogonal and should be
+asked first**, because it gates the stored-section design regardless of every image answer — and
+that design answers, at any pixel size, the question the images cannot answer at all.
+
+Absence of a specification in this repository is recorded throughout as a fact about **our records**,
+never as a scientific negative. `PREMISE: NOBODY_LOOKED` intact at both ends.
+LINT `PASS`, growth anchors `PASS`, `unread_premises 0`.
