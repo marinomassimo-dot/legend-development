@@ -6373,3 +6373,49 @@ identifiers would have been the failure the check exists to prevent.
 intervals) and, above all, its **data-availability statement**, which is the one artefact that would convert
 the standing tissue request into a desk reanalysis. Then `16941225` by any route that serves a body, to put a
 **donor age** on the only human ependymal WWOX-protein observation that exists.
+
+---
+
+## FT-134
+**Papers:** PMID 40659844 / DOI 10.1038/s41593-025-01987-2 — *An expanded subventricular zone supports
+postnatal cortical interneuron migration in gyrencephalic brains*, *Nat Neurosci* 2025 ·
+PMID 41659519 / DOI 10.64898/2026.01.28.702385 — *A Single-Cell and Spatial 3D Multi-omic Atlas of
+Developing Human Basal Ganglia and Inhibitory Neurons*, 2026 ·
+PMID 41538440 — *Subventricular zone radial glial cells maintain inhibitory neuron production in the
+human brain*, *Science* 2026
+**Title:** Declared reading debt opened by the search for the Nascimento 2023 snRNA-seq **data
+accession** — three non-WWOX papers consulted only as accession-citation routes
+**Priority:** LOW for all three
+**Why:** Opened by
+[`nascimento_accession_and_g372r_20260922.md`](../analysis/nascimento_accession_and_g372r_20260922.md),
+which had to test whether any paper citing or reanalysing PMID 38122823 names its data accession,
+because the accession is **not in the PMC body of `PMC10901738` as served** (that body defers data and
+code availability to the publisher DOI, which is `403` at CONNECT). 🔴 **None of these three is a WWOX
+paper. None may ever support a WWOX claim.** Each was consulted for exactly one question — *does this
+paper name Nascimento's accession?* — and each answered **no**.
+- 🟢 **`40659844` was READ IN SERVED FULL TEXT** (`PMC12321571`, 55,611 characters). It is declared here
+  because it carries no receipt and no registry record, and because its **figures and supplementary
+  files were not retrieved**. Result used: **zero occurrences of `GSE`, `phs` or `EGA`** in its body, and
+  its own data-availability statement is deferred to the publisher in the identical Nature-portfolio
+  pattern. ⚠️ Its reference markers are deleted by the extraction route, so it does not even render the
+  Nascimento citation as text. Its scientific content — postnatal interneuron migration through an
+  expanded SVZ in gyrencephalic brains — is **adjacent to the postnatal-germinal-compartment question**
+  and would repay a proper read on its own merits; that read has **not** been done.
+- 🟢 **`41659519` was READ IN SERVED FULL TEXT** (`PMC12874046`). Result used: the string `Nascimento`
+  does **not occur** in its served body, and it contains no `GSE`/`phs` token. Declared for the same
+  reason: full body read, no figures, no supplements, no receipt, no registry record.
+- 🔴 **`41538440` is metadata-only and unreachable.** `convert_article_ids` returns **no PMCID**, and the
+  publisher host is `403` at CONNECT from this deployment. It was surfaced by title search as a
+  same-topic 2026 *Science* paper from the relevant lineage of groups and is therefore the most likely
+  remaining place a reanalysis would name the accession. 🔴 **It is recorded as an unexhausted route, not
+  as evidence.** Nothing in the analysis rests on it.
+**Current status:** 🔴 **declared debt.** Two read in served full text without figures or supplements;
+one metadata-only and licence/egress-blocked. Logged because the reasoning layer now names all three
+PMIDs and `UNREAD_PREMISE` is a ratchet, not a wall — **stripping the identifiers to keep the ratchet at
+zero would have been the failure the check exists to prevent**, and the `FT-133` precedent governs.
+**Next action:** none of these is worth acquiring for the accession question alone — the cheapest
+remaining routes are the **bioRxiv preprint** of PMID 38122823 (`10.1101/2022.03.19.484996`, host
+`EGRESS_BLOCKED` here) and that paper's own **free Supplementary Tables 4 and 5**, which are
+differential-expression gene tables over the EC-stream and whole datasets and would answer a narrower
+question — *is there a `WWOX` row?* — without any accession at all. `40659844` should be re-opened
+separately, on its own scientific merits, as a postnatal-SVZ source rather than as a citation route.

@@ -148,7 +148,7 @@ having to contradict a narrative.
 
 ### `L-011-a` · spike-wave discharges in a `Wwox`-null mouse, and their rescue
 
-- **SOURCE_ID:** PMID 42422765 — Obeid et al. 2026, *Mol Ther Methods Clin Dev* 34:201791
+- **SOURCE_ID:** PMID 42422765 — Obeid et al. 2026, *Mol Ther Adv* 34:201791
 - **ARTIFACT:** `files/fulltext/PMID42422765_Obeid2026_PMC.html` · `structured_text` ·
   `sha256 00fadaf411998f4e453f…`
 - **FIGURE:** Figure 7, panel **E** (legend)

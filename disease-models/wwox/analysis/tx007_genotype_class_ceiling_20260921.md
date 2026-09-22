@@ -19,7 +19,7 @@
 | PMID | Identity | Depth reached **in this session** | Returned body length | Figure access |
 |---|---|---|---|---|
 | **42397075** | Steinberg/Zonca … Aqeilan 2026, *Brain* — WWOX–MYC organoids | 🔴 **not fetchable.** `convert_article_ids` returns pmid + doi only — **no PMCID exists**, so the PMC route is unavailable, not untested. Worked from LEGEND's receipt `FTR-20260810-42397075-04` (`complete_fulltext_read`, coverage all-`read`) and its **30-locator** manifest | **0 bytes** | 🔴 **none, and this is load-bearing.** Every number in §1 is a **figure attestation captured by a prior session that had the rendered supplementary volume** (170 ppi, key pages re-read at 258 ppi). It is LEGEND's record. **I have not seen a pixel of it and do not present any of it as a fresh measurement.** |
-| **42422765** | Obeid *et al.* 2026, *Mol Ther Oncol* — dose-ranged neuronal WWOX gene therapy | **full body read in-act** and re-analysed here for dose/WPRE/safety language | **48 780 characters (measured exactly)** | none this session. Panel values from LEGEND manifest `PMID42422765.json` (29 locators; receipt `FTR-20260814-42422765-06`, `complete_fulltext_read`, S1–S5 = 31 panels inspected) |
+| **42422765** | Obeid *et al.* 2026, *Mol Ther Adv* — dose-ranged neuronal WWOX gene therapy | **full body read in-act** and re-analysed here for dose/WPRE/safety language | **48 780 characters (measured exactly)** | none this session. Panel values from LEGEND manifest `PMID42422765.json` (29 locators; receipt `FTR-20260814-42422765-06`, `complete_fulltext_read`, S1–S5 = 31 panels inspected) |
 | **34747138** | Repudi *et al.* 2021, *EMBO Mol Med* | full body read in-act (Wave 2), re-queried here | ≈19 000 characters (approximate; not instrumented) | none |
 | **22534828** | Chang J-Y *et al.* 2012, *Cell Death Dis* | **abstract only** | n/a | none |
 | — | PubMed `WWOX AND (overexpression OR ectopic expression) AND (apoptosis OR neuron…)` | executed | **74 records** | n/a |
@@ -367,7 +367,7 @@ receipt-backed locator manifests** and are labelled as such wherever they appear
 | PMID | Citation | DOI |
 |---|---|---|
 | 42397075 | Steinberg DJ, Zonca A, Abdellatif D *et al.* Disrupted WWOX-MYC interplay impairs neurogenesis in human brain organoids. *Brain* 2026 | [10.1093/brain/awag239](https://doi.org/10.1093/brain/awag239) |
-| 42422765 | Obeid M *et al.* Neuron-specific WWOX gene therapy produces dose-dependent, durable rescue in a model of WWOX-related epileptic encephalopathy. *Mol Ther Oncol* 2026 | [10.1016/j.omta.2026.201791](https://doi.org/10.1016/j.omta.2026.201791) |
+| 42422765 | Obeid M *et al.* Neuron-specific WWOX gene therapy produces dose-dependent, durable rescue in a model of WWOX-related epileptic encephalopathy. *Mol Ther Adv* 2026 | [10.1016/j.omta.2026.201791](https://doi.org/10.1016/j.omta.2026.201791) |
 | 34747138 | Repudi S *et al.* Neonatal neuronal WWOX gene therapy rescues Wwox-null phenotypes. *EMBO Mol Med* 2021 | [10.15252/emmm.202114599](https://doi.org/10.15252/emmm.202114599) |
 | 34268881 | Steinberg DJ *et al.* Modeling genetic epileptic encephalopathies using brain organoids. *EMBO Mol Med* 2021 | [10.15252/emmm.202013610](https://doi.org/10.15252/emmm.202013610) |
 | 22534828 | Chang J-Y *et al.* TIAF1 self-aggregation in peritumor capsule formation… and cell death. *Cell Death Dis* 2012 — **abstract only; COS/cancer/neuroblastoma, not neurons; Chang/NCKU line, independence caution applies** | [10.1038/cddis.2012.36](https://doi.org/10.1038/cddis.2012.36) |

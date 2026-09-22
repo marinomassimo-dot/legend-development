@@ -41,7 +41,7 @@ not two, and the earliest primary evidence is six years older than the candidate
 
 | Source | Artifact | SHA-256 | Surface | Status |
 |---|---|---|---|---|
-| PMID 42422765 — Obeid 2026, *Mol Ther Methods Clin Dev* 34:201791 | `files/fulltext/PMID42422765_Obeid2026_PMC.html` | `00fadaf411998f4e453f…` | structured PMC text | re-adjudicated here |
+| PMID 42422765 — Obeid 2026, *Mol Ther Adv* 34:201791 | `files/fulltext/PMID42422765_Obeid2026_PMC.html` | `00fadaf411998f4e453f…` | structured PMC text | re-adjudicated here |
 | PMID 32000863 — Cheng 2020, *Acta Neuropathol Commun* 8:6 | `files/fulltext/PMID32000863_Cheng2020_PMC.xml` | as declared in `deepdive_manifests/PMID32000863.json` | structured PMC XML | re-adjudicated here |
 | PMID 34747138 — Repudi 2021, *EMBO Mol Med* 13 | `files/fulltext/PMID34747138_Repudi2021_PMC.xml` | as declared in `deepdive_manifests/PMID34747138.json` | structured PMC XML | re-adjudicated here |
 | PMID 36828035 — Hussain 2023, *Prog Neurobiol* 223:102425 | `files/fulltext/PMID36828035_Hussain2023_PMC.xml` | `004c59b54b5f57e462ccb39643b5f3adb44e7ecaef5eff8d786cb77c3568fd22` | structured PMC XML (NIHMS1957654) | **new acquisition**, see [`CC-20260826-PMID36828035-01`](CC-20260826-PMID36828035-01.md) |

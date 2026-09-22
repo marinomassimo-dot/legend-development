@@ -1,4 +1,4 @@
-# PMID 42422765 — Obeid et al. 2026, *Mol Ther Methods Clin Dev* (PAPER 011)
+# PMID 42422765 — Obeid et al. 2026, *Mol Ther Adv* (PAPER 011)
 
 **Neuron-specific WWOX gene therapy produces dose-dependent, durable rescue in a model of
 WWOX-related encephalopathy** · PMCID from local PMC HTML · Aqeilan laboratory, with

@@ -360,7 +360,7 @@ fingerprinted, receipt-backed locator manifests and are labelled as such whereve
 | 34268881 | Steinberg DJ *et al.* Modeling genetic epileptic encephalopathies using brain organoids. *EMBO Mol Med* 2021 | [10.15252/emmm.202013610](https://doi.org/10.15252/emmm.202013610) |
 | 33914858 | Repudi S *et al.* Neuronal deletion of Wwox, associated with WOREE syndrome, causes epilepsy and myelin defects. *Brain* 2021 | [10.1093/brain/awab174](https://doi.org/10.1093/brain/awab174) |
 | 34747138 | Repudi S *et al.* *EMBO Mol Med* 2021 (AAV9-hSynI-WWOX) | [10.15252/emmm.202114599](https://doi.org/10.15252/emmm.202114599) |
-| 42422765 | Obeid M *et al.* *Mol Ther Oncol* 2026 | [10.1016/j.omta.2026.201791](https://doi.org/10.1016/j.omta.2026.201791) |
+| 42422765 | Obeid M *et al.* *Mol Ther Adv* 2026 | [10.1016/j.omta.2026.201791](https://doi.org/10.1016/j.omta.2026.201791) |
 | 35328751 | Baryła I *et al.* *Int J Mol Sci* 2022 (WWOX/HIF1A, human fibroblast line) | [10.3390/ijms23063326](https://doi.org/10.3390/ijms23063326) |
 | 36271927 | Baryła I *et al.* *J Mol Med* 2022 (review, same group) | [10.1007/s00109-022-02265-5](https://doi.org/10.1007/s00109-022-02265-5) |
 | 29724996 | Abu-Remaileh M *et al.* *Cell Death Dis* 2018 | [10.1038/s41419-018-0510-4](https://doi.org/10.1038/s41419-018-0510-4) |
@@ -413,7 +413,7 @@ bounded as translation. It is `SYMPTOMATIC`, and `N-15` bars it from being count
 
 | PMID | Identity | Depth **this session** | Returned body length | Figure access |
 |---|---|---|---|---|
-| **42422765** | Obeid *et al.* 2026, *Mol Ther Oncol* — dose-ranged neuronal WWOX gene therapy | **full body read in-act** (Intro → Results → Discussion → Methods) | **48 780 characters (measured exactly)** | none. Panel values re-used from LEGEND manifest `PMID42422765.json` (`FTR`-backed, 29 locators) |
+| **42422765** | Obeid *et al.* 2026, *Mol Ther Adv* — dose-ranged neuronal WWOX gene therapy | **full body read in-act** (Intro → Results → Discussion → Methods) | **48 780 characters (measured exactly)** | none. Panel values re-used from LEGEND manifest `PMID42422765.json` (`FTR`-backed, 29 locators) |
 | **34747138** | Repudi *et al.* 2021, *EMBO Mol Med* — AAV9-hSynI-WWOX | **full body read in-act** | non-empty, ≈19 000 characters (approximate; not instrumented) | none |
 | 32000863 · 36779245 · 39507621 · 33916893 · 19500159 · 31543760 · 25649963 | LEGEND-held reads | **locator manifests + receipts consulted**, not re-fetched | n/a | n/a — all panel values carry their originating receipt |
 | — | PubMed query `WWOX AND (CACNA1G OR CACNA1H OR CACNA1I OR "T-type" OR Cav3.1 OR Cav3.2 OR "calcium channel")` | executed | **1 record, `total_count: 1`** | n/a |
@@ -727,7 +727,7 @@ Retrieved from **PubMed / PubMed Central**.
 
 | PMID | Citation | DOI |
 |---|---|---|
-| 42422765 | Obeid M *et al.* Neuron-specific WWOX gene therapy produces dose-dependent, durable rescue in a model of WWOX-related epileptic encephalopathy. *Mol Ther Oncol* 2026 | [10.1016/j.omta.2026.201791](https://doi.org/10.1016/j.omta.2026.201791) |
+| 42422765 | Obeid M *et al.* Neuron-specific WWOX gene therapy produces dose-dependent, durable rescue in a model of WWOX-related epileptic encephalopathy. *Mol Ther Adv* 2026 | [10.1016/j.omta.2026.201791](https://doi.org/10.1016/j.omta.2026.201791) |
 | 34747138 | Repudi S *et al.* Neonatal neuronal WWOX gene therapy rescues Wwox-null phenotypes. *EMBO Mol Med* 2021 | [10.15252/emmm.202114599](https://doi.org/10.15252/emmm.202114599) |
 | 36779245 | Oliver KL *et al.* *Epilepsia* 2023 — WWOX-DEE cohort; LGS excluded on the EEG hallmark | [10.1111/epi.17542](https://doi.org/10.1111/epi.17542) |
 | 39507621 | Teplyshova AM *et al.* *Front Genet* 2024 — adult WWOX-DEE case; ethosuximide among seven ASMs | [10.3389/fgene.2024.1477466](https://doi.org/10.3389/fgene.2024.1477466) |

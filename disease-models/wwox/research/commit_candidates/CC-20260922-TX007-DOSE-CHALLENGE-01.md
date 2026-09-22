@@ -92,7 +92,15 @@ According to PubMed, PMID 42422765 is ***Molecular therapy. Advances*** (`Mol Th
 | ✅ *"Mol Ther Adv"* | `discovery_ledger_current:714` | 1 |
 
 **Three wrong variants, mutually inconsistent, and the correct name sits in the same file as one of
-them.** The DOI is correct everywhere — so the drift is purely in the human-readable name, expanded
+them.** ⚠️ **Repaired 2026-09-22 — and the census undercounted.** The delegate named 11 occurrences in
+7 files; a repository-wide sweep found **14 in 10** — the three extra being
+`CC-20260826-CLAIM037-01.md` (a superseded candidate),
+`denominator_audit_therapeutic_portfolio_20260922.md` and
+`postdiagnosis_window_evidence_20260922.md`. **All 14 corrected.** ⚠️ **My own first count of this
+was 13 in 9** — the third file surfaced only on re-running the sweep after the first repair pass,
+which is the argument for re-running a sweep rather than trusting its first result. The occurrences in the
+table above are deliberately left as written: they are the record of the defect, and repairing them
+would erase it. The DOI is correct everywhere — so the drift is purely in the human-readable name, expanded
 from `omta` by recall, three separate times. ⚠️ **On the very paper whose own near-miss record is
 about a DOI reconstructed from memory of the journal.** Same failure class, same paper, still live.
 

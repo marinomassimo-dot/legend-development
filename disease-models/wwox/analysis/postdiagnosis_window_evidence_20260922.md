@@ -512,7 +512,7 @@ Central**.
 | 21788513 | Petanjek Z, Judaš M, … Rakic P. Extraordinary neoteny of synaptic spines in the human prefrontal cortex. *PNAS* 2011 | [10.1073/pnas.1105108108](https://doi.org/10.1073/pnas.1105108108) | **abstract-depth** |
 | 9336221 | Huttenlocher PR, Dabholkar AS. Regional differences in synaptogenesis in human cerebral cortex. *J Comp Neurol* 1997 | — (no DOI returned; `pmc_id: null`) | 🔴 **never opened** — quoted only as reported in PMID 23583307 |
 | 40875931 | Gao K, Riley LG, … Gold WA. WWOX-related developmental and epileptic encephalopathy. *Neurology* 2025 | [10.1212/WNL.0000000000213883](https://doi.org/10.1212/WNL.0000000000213883) | 🔴 **not fetched** — LEGEND manifest + PAPER 014 only |
-| 42422765 | Obeid M, Akkawi R, Repudi S, … Aqeilan RI. *Mol Ther Oncol* 2026 | [10.1016/j.omta.2026.201791](https://doi.org/10.1016/j.omta.2026.201791) | 🔴 **not fetched** — LEGEND locator file only |
+| 42422765 | Obeid M, Akkawi R, Repudi S, … Aqeilan RI. *Mol Ther Adv* 2026 | [10.1016/j.omta.2026.201791](https://doi.org/10.1016/j.omta.2026.201791) | 🔴 **not fetched** — LEGEND locator file only |
 | 31340538 | Tochigi Y, et al. *Int J Mol Sci* 2019 | [10.3390/ijms20143596](https://doi.org/10.3390/ijms20143596) | 🔴 **not fetched** — `DL-MECH-027` only |
 | 30361190 | Shaukat Q, et al. *Epileptic Disord* 2018 | [10.1684/epd.2018.1005](https://doi.org/10.1684/epd.2018.1005) | 🔴 **not fetched** — registry note only |
 | 42397075 · 32581702 · 32000863 | Steinberg 2026 *Brain* · Iacomino 2020 *Front Neurosci* · Cheng 2020 *Acta Neuropathol Commun* | held in LEGEND | 🔴 **not fetched** — quoted through `earliest_lesion_developmental_timeline_20260921.md` |

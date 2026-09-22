@@ -229,7 +229,7 @@ LEGEND already holds. DOIs carry two routes each; ⚠️ `convert_article_ids` i
 | 42397075 | Steinberg DJ *et al.* *Brain* 2026 — the A51 arm | [10.1093/brain/awag239](https://doi.org/10.1093/brain/awag239) | converter ⛔ silent · manifest `doi` field ✅ + metadata ✅ (earlier wave) |
 | 32000863 | Cheng Y-Y *et al.* *Acta Neuropathol Commun* 2020 — lithium/ethosuximide PTZ panels | [10.1186/s40478-020-0883-3](https://doi.org/10.1186/s40478-020-0883-3) | converter ✅ (`PMC6990504`) + in-act body ✅ |
 | 34747138 | Repudi S *et al.* *EMBO Mol Med* 2021 — the Kaplan–Meier arms | [10.15252/emmm.202114599](https://doi.org/10.15252/emmm.202114599) | converter ✅ + in-act body ✅ |
-| 42422765 | Obeid M *et al.* *Mol Ther Oncol* 2026 — the dose threshold and S5 | [10.1016/j.omta.2026.201791](https://doi.org/10.1016/j.omta.2026.201791) | converter ✅ + in-act body ✅ |
+| 42422765 | Obeid M *et al.* *Mol Ther Adv* 2026 — the dose threshold and S5 | [10.1016/j.omta.2026.201791](https://doi.org/10.1016/j.omta.2026.201791) | converter ✅ + in-act body ✅ |
 | 36779245 | Oliver KL *et al.* *Epilepsia* 2023 — cohort denominators, cited for contrast | [10.1111/epi.17542](https://doi.org/10.1111/epi.17542) | converter ✅ + in-act body ✅ |
 
 ---

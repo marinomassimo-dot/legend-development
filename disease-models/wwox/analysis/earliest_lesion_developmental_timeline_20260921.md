@@ -18,7 +18,7 @@
 |---|---|---|---|---|
 | **32000863** | Cheng/Chang *et al.* 2020, *Acta Neuropathol Commun* — *Wwox*-null mouse | body **read in-act** (Wave 2 fetch, re-analysed here for stage tokens) | ≈24 000 characters (approximate; not instrumented) | none. Panel values from LEGEND manifest `PMID32000863.json` (25 entries; receipt `FTR-20260804-32000863-01`, `complete_fulltext_read`) |
 | **34747138** | Repudi *et al.* 2021, *EMBO Mol Med* | body **read in-act** (Wave 2 fetch, re-analysed) | ≈19 000 characters (approximate) | none |
-| **42422765** | Obeid *et al.* 2026, *Mol Ther Oncol* | body **read in-act** (Wave 3 fetch, re-analysed) | **48 780 characters (measured exactly)** | none. Panels from manifest (29 entries) |
+| **42422765** | Obeid *et al.* 2026, *Mol Ther Adv* | body **read in-act** (Wave 3 fetch, re-analysed) | **48 780 characters (measured exactly)** | none. Panels from manifest (29 entries) |
 | **32581702** | Iacomino *et al.* 2020, *Front Neurosci* — `lde` rat + **human fetal tissue** | 🔴 **not re-fetched.** Worked from receipt `FTR-20260810-32581702-01` (`complete_fulltext_read`) and its **21-entry** manifest | 0 bytes this session | none. Every value is a **prior-session figure attestation**, attributed as such |
 | **42397075** | Steinberg … Aqeilan 2026, *Brain* | 🔴 **not fetchable — no PMCID exists.** Receipt `FTR-20260810-42397075-04`, **30-entry** manifest | 0 bytes | none. Prior-session attestations only |
 | 31543760 · 19936220 · 17803050 · 25649963 · 34634460 · 34268881 | LEGEND-held reads, all receipt-backed | manifests + receipts consulted | n/a | n/a |
@@ -373,7 +373,7 @@ manifests** and are labelled as such. `PMID 42397075` has no PMC deposit and was
 | 32000863 | Cheng Y-Y *et al.* Wwox deficiency leads to neurodevelopmental and degenerative neuropathies and GSK3β-mediated epileptic seizure activity in mice. *Acta Neuropathol Commun* 2020 | [10.1186/s40478-020-0883-3](https://doi.org/10.1186/s40478-020-0883-3) |
 | 32581702 | Iacomino M *et al.* Loss of Wwox Perturbs Neuronal Migration and Impairs Early Cortical Development. *Front Neurosci* 2020 | [10.3389/fnins.2020.00644](https://doi.org/10.3389/fnins.2020.00644) |
 | 42397075 | Steinberg DJ, Zonca A, Abdellatif D *et al.* Disrupted WWOX-MYC interplay impairs neurogenesis in human brain organoids. *Brain* 2026 | [10.1093/brain/awag239](https://doi.org/10.1093/brain/awag239) |
-| 42422765 | Obeid M *et al.* Neuron-specific WWOX gene therapy produces dose-dependent, durable rescue in a model of WWOX-related epileptic encephalopathy. *Mol Ther Oncol* 2026 | [10.1016/j.omta.2026.201791](https://doi.org/10.1016/j.omta.2026.201791) |
+| 42422765 | Obeid M *et al.* Neuron-specific WWOX gene therapy produces dose-dependent, durable rescue in a model of WWOX-related epileptic encephalopathy. *Mol Ther Adv* 2026 | [10.1016/j.omta.2026.201791](https://doi.org/10.1016/j.omta.2026.201791) |
 | 34747138 | Repudi S *et al.* Neonatal neuronal WWOX gene therapy rescues Wwox-null phenotypes. *EMBO Mol Med* 2021 | [10.15252/emmm.202114599](https://doi.org/10.15252/emmm.202114599) |
 | 19936220 | Ludes-Meyers JH *et al.* 2009, *PLoS One* — EIIA-Cre Wwox knockout, systemic phenotype | [10.1371/journal.pone.0007775](https://doi.org/10.1371/journal.pone.0007775) |
 | 31543760 | Kośla K *et al.* *Front Cell Neurosci* 2019 — WWOX-silenced human neural progenitors | [10.3389/fncel.2019.00391](https://doi.org/10.3389/fncel.2019.00391) |
