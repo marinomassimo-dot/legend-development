@@ -6735,3 +6735,32 @@ transduction. `REVIVAL_TRIGGER`: any Purkinje-resolved transduction measurement 
 `PCP2` or `Car8` co-staining.
 ⚠️ `abstract-depth` ⇒ `PREMISE: UNREAD_PRIMARY`; the clone-A60 attribution is the delegate's
 first-hand read of that paper, carried here as its attestation.
+
+---
+
+## FT-149
+**Papers:** PMID 17470496 — Gribaa et al. 2007, *Brain*, [DOI](https://doi.org/10.1093/brain/awm078)
+**Title:** 🔴 The SCAR12 imaging primary — and a SECONDARY that diverges from it in two ways
+**Priority:** **HIGH** — it is the sole imaging source for the SCAR12 pole
+**Why:** Declared by
+[`purkinje_cerebellar_celltype_wwox_census_20260922.md`](../analysis/purkinje_cerebellar_celltype_wwox_census_20260922.md).
+This is the **only** imaging source for the **SCAR12 (ataxia) pole** of WWOX disease, and the
+repository has been reading it through a secondary.
+
+🔴 **The divergence, and it runs in two directions at once.** Aldaz & Hussain 2020 § 3.1 states
+*"Mild cerebellar atrophy … in MRI of **two** affected children."* Gribaa's **own abstract** states
+that *"MRI … of **ONE** patient revealed … **POSTERIOR WHITE MATTER HYPERINTENSITIES**."*
+So the secondary differs from the primary on **the patient count** *and* on **the named finding** —
+cerebellar atrophy versus posterior white-matter hyperintensity are not the same observation, and the
+second is not a cerebellar finding at all. `PREMISE: SECONDARY_UNVERIFIED`.
+
+⚠️ **Gribaa has NO PMCID**, so the body is unobtainable on every route available here; the abstract
+is the deepest surface reached. `SOURCE_BLOCKED → REVIVAL_TRIGGER → CONTINUE`.
+🔴 **Consequence to carry now:** any statement that the SCAR12 pole shows cerebellar atrophy on
+imaging currently rests on a secondary that its own primary's abstract does not match. **And there is
+no imaging at all for `G372R`.**
+
+⭐ **The wider finding this sits inside:** the SCAR12 pole supplies **less** cerebellar evidence than
+WOREE, not more — **zero neuropathology, zero post-mortem, zero cell-type observation**, and the
+reason is mundane and decisive: the reported patients are **alive at 17–26 years**, so **no autopsy
+exists**. Only tissue assay is patient fibroblasts; the only biopsy is **muscle**.
