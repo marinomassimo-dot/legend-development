@@ -547,3 +547,51 @@ the harder direction: the file's own headline is a precedent it found by escapin
 diagnosed, and it kept the abundance-under-rescue gap open rather than closing it by assumption.
 The correction in §4.4 is narrow and correctly flagged. **No row of this file is canonical, and
 none is proposed for `BATCH_COMMIT` here.**
+
+---
+
+# 🔴 ORCHESTRATOR WITHDRAWAL — 2026-09-22, same day
+
+## §V3 IS WITHDRAWN. The 26–30 °C arm I added is confounded at its root.
+
+Scientist B refuted it and I have verified the refutation at first hand. According to PubMed —
+Roobol A, Carden MJ, Newsam RJ, Smales CM, *Biochemical insights into the mechanisms central to the
+response of mammalian cells to cold stress and subsequent rewarming*, **FEBS J 2008;276(1):286–302**,
+`PMID 19054067`, [DOI](https://doi.org/10.1111/j.1742-4658.2008.06781.x). Abstract, verbatim:
+
+> *"The **degradation rates of all mRNAs and proteins examined were much reduced at 27 °C**, and
+> overall protein synthesis rates were gradually reduced with temperature down to 20 °C."*
+
+with mild hypothermia defined there as **27–32 °C**, across three mammalian lines, and *"Many of
+these proteins were molecular chaperones."* 🟢 **VERIFIED VERBATIM.**
+
+**Why this kills the arm as I specified it.** I proposed 26–30 °C as the separator between
+*foldable-but-unstable* (`H3`) and *fold-incompetent*. But **mild hypothermia is itself a global
+degradation inhibitor.** A band appearing at 30 °C is therefore ambiguous between *"it folded"* and
+*"it stopped being cleared"* — **precisely the pair the experiment exists to separate.** My table in
+§V3 read a rise in the soluble fraction as evidence about folding. It is not; it is evidence about
+temperature.
+
+🔴 **I was wrong, and the error had a specific shape worth naming:** I imported the arm from
+Atanasov 2007 because that is the arm Atanasov used, and I checked whether the *lesion classes*
+transferred without checking whether the *readout* did. **`connect_domains` requires a
+`WHAT TRANSFERS` / `WHAT DOES NOT` split on the instrument as well as on the biology.** My own
+§V2 above makes that split for the lesion and not for the assay.
+
+**What replaces it.** Nothing needs to. Scientist B's kept components do the same job **cleanly at
+37 °C**: a bafilomycin arm and an MG-132 arm interrogate clearance **directly**, without moving a
+variable that changes synthesis, degradation and the chaperone complement at once. The
+block-and-rescue architecture is the better instrument, and the temperature arm was a worse
+proxy for it.
+
+**What survives of the Atanasov precedent.** The **existence proof** is untouched: a pathogenic
+human SDR missense was functionally rescued by osmolyte and permissive temperature. ⚠️ But its
+26 °C arm carries the same confound in the original paper, and at abstract depth it cannot be told
+whether activity was normalised to protein. **`PREMISE: METHODS_INVISIBLE` now attaches to the
+Atanasov temperature arm too**, and the glycerol (osmolyte) arm is the cleaner half of that
+precedent.
+
+**Propagated withdrawal.** The same recommendation appears in
+`q230p_three_designs_one_experiment_20260922.md` §4 and on the primitive scorecard; both are
+corrected in the same commit. A withdrawn recommendation left standing in a sibling file is how a
+retraction fails.

@@ -6978,3 +6978,50 @@ failed on 2026-09-22: PMC/PubMed full text; and a well-formed `Scholar_Gateway s
 returned eight on-topic WWOX-DEE records and not this one. `REVIVAL_TRIGGER`: any Springer route,
 an author-hosted copy, an institutional holding, or a later paper quoting Johannsen's buffer or
 antibody.
+
+---
+
+## FT-155
+**Papers:** PMID 19054067 — Roobol A, Carden MJ, Newsam RJ, Smales CM, *Biochemical insights into
+the mechanisms central to the response of mammalian cells to cold stress and subsequent rewarming*,
+*FEBS J* 2008;276(1):286–302, [DOI](https://doi.org/10.1111/j.1742-4658.2008.06781.x)
+**Title:** 🔴 The paper that killed a permissive-temperature arm the Orchestrator had added to a
+`Q230P` design
+**Priority:** **MEDIUM** — its decisive sentence is already verified at abstract depth and has
+already been acted on; a body read would bound the magnitude, not the direction
+**Why:** Found by Scientist B; verified first-hand by the Orchestrator. According to PubMed, the
+abstract states verbatim:
+
+> *"The **degradation rates of all mRNAs and proteins examined were much reduced at 27 °C**, and
+> overall protein synthesis rates were gradually reduced with temperature down to 20 °C."*
+
+with mild hypothermia defined as **27–32 °C**, across three mammalian lines (`CHO`, `3T3` and one
+further line), and *"Many of these proteins were **molecular chaperones**"*.
+
+🔴 **Consequence, already propagated.** A permissive-temperature arm at 26–30 °C **cannot** separate
+*foldable-but-unstable* from *fold-incompetent*, because mild hypothermia is itself a **global
+degradation inhibitor**: a band appearing at 30 °C is ambiguous between *"it folded"* and *"it
+stopped being cleared"* — the exact pair such an arm exists to separate. The arm is **withdrawn**
+from `q230p_pharmacological_precedents_20260922.md` §V3 and from
+`q230p_three_designs_one_experiment_20260922.md` §4, and replaced by a bafilomycin + MG-132
+block-and-rescue arm at **37 °C**, which interrogates clearance directly.
+
+🟡 **Second consequence — it supersedes an Orchestrator correction made earlier the same day.** In
+verifying `cerebellar_functional_readout_census_20260922.md` I noted that the Chen 2024 cold-shock
+housekeeping confounder was demonstrated at **4–22 °C** and that **30 °C was not among the
+temperatures studied**, so the total-protein-stain rule rested on `NOBODY_LOOKED`. **Roobol 2008
+covers the mild band (27–32 °C) directly**, so that rule now rests on evidence rather than on an
+absence. ⚠️ The abstract names `p53`, `Grp75` and `eIF3i` among the changed proteins; the claim that
+**actin and tubulin specifically** change at 27–32 °C is Scientist B's passage-depth attestation and
+is **not** verified by the Orchestrator. `REVIVAL_TRIGGER`: the body, for that identification.
+
+🔴 **Third consequence — a bound on the Atanasov precedent.** `PMID 17314322` (11β-HSD2 `Y338H`)
+rescued activity *"at 26 °C or in the presence of the chemical chaperones glycerol and
+dexamethasone"*. **The 26 °C arm of that precedent carries the same confound**, and at abstract
+depth it cannot be established whether activity was normalised to protein. `PREMISE:
+METHODS_INVISIBLE` now attaches to the Atanasov temperature arm; **the glycerol (osmolyte) arm is
+the cleaner half** of that precedent and is the half that transfers.
+
+⚠️ `abstract-depth` ⇒ `PREMISE: UNREAD_PRIMARY`. Not a WWOX paper: every transfer carries its
+system of origin (`CHO-K1`, `P19`, `3T3` — none of them human fibroblasts, which is the system the
+`Q230P` design targets).

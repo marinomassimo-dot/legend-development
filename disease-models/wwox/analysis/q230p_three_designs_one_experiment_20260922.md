@@ -79,10 +79,13 @@ route, an author-hosted copy, or a later paper quoting Johannsen's buffer.
   **denaturing whole-cell lysate** and keep the **pellet**, rather than a cleared soluble lysate
   alone. If the original used a denaturing buffer, that step is free and the result already
   excludes `M2` — which is why the buffer line is worth chasing before designing anything.
-- The **permissive-temperature arm (26–30 °C)** proposed in the orchestrator verification of
-  Scientist K's file gains a second justification: it is the arm Atanasov 2007 actually used on
-  11β-HSD2 `Y338H`, and it separates foldable-but-unstable from fold-incompetent, which the
-  soluble/pellet split alone does not.
+- 🔴 ~~The **permissive-temperature arm (26–30 °C)**…~~ **WITHDRAWN 2026-09-22, same day.** Mild
+  hypothermia (27–32 °C) is itself a **global degradation inhibitor** — Roobol 2008, `PMID 19054067`,
+  [DOI](https://doi.org/10.1111/j.1742-4658.2008.06781.x): *"the degradation rates of all mRNAs and
+  proteins examined were much reduced at 27 °C"*. A band appearing at 30 °C is ambiguous between
+  *folded* and *no longer cleared* — the exact pair the experiment exists to separate. **Replaced by
+  a bafilomycin + MG-132 block-and-rescue arm at 37 °C**, which interrogates clearance directly.
+  Full withdrawal in `q230p_pharmacological_precedents_20260922.md`.
 
 **Does not change:**
 - 🔴 The assumption flagged in `DL-MECH-029` is untouched and remains the binding one: **that
