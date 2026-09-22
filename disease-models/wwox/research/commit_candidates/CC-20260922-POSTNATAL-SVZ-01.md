@@ -176,3 +176,122 @@ unattempted.**
 
 **BLOCK-1 observed throughout: no molecule, no dose, no route, no safety claim. Nothing here is
 medical advice.**
+
+---
+
+## 7 · 🔴 APPEND-ONLY CORRECTION — §4(c) was wrong, and §2's bounds were too generous
+
+Scientist L arbitrated §4(c) and re-read the Nascimento body end to end. **Every point below was
+re-verified by the Orchestrator in the two bodies already retrieved this session.**
+
+### 7a · 🔴 §4(c) is tightened: Aldaz & Hussain is NOT a measurement
+
+§4(c) framed the `G372R` disagreement as *"different matrices… both stand, bounded."* **That treats
+Aldaz & Hussain as one of two measurements. It is not a measurement at all.**
+
+Verified in `PMC7727818`: the protein-level sentence is **explicitly a description of Mallaret
+2014** — the paragraph opens *"**In the same study**, a second consanguineous Israeli-Palestinian
+family…"* — it **ends in a citation marker**, it names **no method** (the word *"Western"* never
+appears), **no `n`** and **no controls**. And **two sentences earlier the same authors write that
+`G372R`'s *"functional consequence is **unclear at this point**"***. ⚠️ Mitigating: Aldaz is a
+co-author of Mallaret 2014, so it is a **self-report** — which raises credibility and still does not
+convert it into a measurement or supply the missing fields.
+
+**Against one readable measurement:** Steinberg 2021 (`PMC8350905`), variant given by the primary as
+`c.1114G>C (G372R)`, verbatim — *"…while in the VZ of WPM F2 and WPM M3, WWOX was detected, **barely
+any signal was observed in WPM D1 and S1**, consistent with WWOX levels in the iPSCs."* Matrix:
+iPSC-derived forebrain **organoid ventricular zone** — a progenitor compartment. Method:
+**immunofluorescence, unquantified** — no densitometry, no statistic. `n` = 2 affected vs 2
+comparators. 🔴 **And the comparators are the heterozygous carrier parents, not wild type** —
+against a baseline the same paper calls widely variable among healthy heterozygotes. **That weakens
+the datum from both directions and is new to this repository.**
+
+**Verdict: (2) — the review extends to `G372R` a fibroblast coverage the primary is documented to
+have for `P47T` only.** `paper_registry_current.md` PAPER 042 holds Mallaret's Western verbatim on
+the **`P47T`** patient's fibroblasts (passages 10/13/14 vs 4 controls, *"the mutation does not alter
+global protein levels"*) and **documents no `G372R` blot**.
+
+⚠️ **Held as `PREMISE: UNVERIFIED`, not as a demonstrated misstatement** — our Mallaret record is
+`legacy_reconstruction` / `partial_fulltext_read` with all coverage fields `unknown_legacy`, and
+**absence of a `G372R` blot from a partial read is not absence from the paper.** Same rule as
+everywhere else today: a zero is not absence. **Option (3) is excluded outright** — two things
+cannot conflict on the same measurement when only one of them is a measurement.
+
+### 7b · 🔴 And the tidy consequence is refused
+
+**`DL-MECH-037`'s `G372R` row must NOT be flipped to "protein normal", and the burial argument must
+NOT be simplified.** Doing so would overturn a *measured* IF result on the strength of a *review
+sentence* whose primary nobody here has read at complete depth and whose documented fibroblast
+measurement covers a **different variant**. **Correct status: matrix-split and unresolved** — keep
+the measured cell, re-label it with its full bound, add the Aldaz assertion as a flagged
+`P47T`-documented / `G372R`-unverified counter-statement.
+
+🟢 **And the argument's spine is untouched either way:** `DL-MECH-037`'s decisive control is
+**`P47T`/`P47R`** — same residue, near-identical ΔΔG, opposite phenotypes — **not `G372R`**. So the
+burial argument neither gains the simplification nor loses its basis. **One question decides (2)
+versus (1):** does Mallaret 2014 contain a fibroblast Western for the `G372R` family, with `n`,
+passages and controls? Added to `FT-128`.
+
+### 7c · 🔴 §2's bounds were too generous — three corrections
+
+**(i) The authors' own negative result blocks the onward claim.** Verified verbatim:
+
+> *"In the EC stream microdissection, **we did not find intermediate progenitors for interneurons or
+> a differentiation trajectory connecting the local RG to the immature inhibitory neurons**."*
+
+So *"the first WWOX measurement in a human postnatal periventricular compartment"* **survives** —
+the RG cluster is real and postnatal. But **any onward reading that WWOX there speaks to
+neurogenesis *feeding the stream* is blocked by the authors themselves.** It must be read as
+**"WWOX in postnatal human periventricular radial glia"**, never *"WWOX in the progenitor supplying
+the stream."* No repository text asserts the stronger version — **but §2's framing invites it, and
+it is closed here before a reanalysis gets designed around it.**
+
+**(ii) The `n = 1` bound is right for the wrong object.** It holds for the **stream
+microdissection** (one 14-day-old). But the merged object's postnatal EC arm is an **age series** —
+verbatim: *"nuclei from the postnatal EC **between 14 days and 27 years of age**"*. So the
+achievable scope is **larger** than §2 recorded; the periventricular compartment itself does remain
+`n = 1`.
+
+**(iii) The cost label understates it.** §6's `D1` was *"hours"*. Its blocker is **not only egress**:
+the data-availability statement in the PMC body is a **bare deferral** — verbatim, *"statements of
+data and code availability are available at 10.1038/s41586-023-06981-x"* — and an exhaustive token
+sweep of the body returns **`GSE` 0, `phs`/`dbGaP` 0, `EGA` 0, `accession` 0, `deposit` 0**. With 53
+post-mortem specimens under four human-subjects protocols, clinical histories in Supplementary Table
+1, and **genetic demultiplexing against a 1000 Genomes VCF** (so the libraries carry donor germline
+genotype), the **controlled-access** profile is the prediction. ⚠️ **Predicted, and no identifier is
+named.** `D1` must not be scheduled as hours-scale until an accession is in hand.
+
+### 7d · 🟢 The operational win: three accession-free routes, named by caption
+
+The body's own supplementary captions, verified verbatim:
+
+| table | caption | what a `WWOX` row would be |
+|---|---|---|
+| **Supp. Table 4** | *"DE genes in EC stream dataset. Results of a differential gene-expression test (Wilcoxon rank sum) in the dataset containing the EC stream microdissection."* | 🎯 **a WWOX measurement in this object** |
+| **Supp. Table 5** | *"DE genes in the main dataset… (quasi-likelihood F-test and Wilcoxon rank sum) in the dataset comprising all samples."* | same, whole object |
+| **Supp. Table 6** | *"DE genes in the interneuron maturation dataset…"* | 🔵 **a third route the delegate did not name** |
+
+**Free supplementary files — no accession, no raw data, no access application.** 🔴 **Bounds that
+must travel:** `WWOX` **absent** from a DE table is `PREMISE: NOT_TESTED_OR_NOT_SIGNIFICANT`, **not**
+non-expression; and **a DE table cannot supply a dropout control**, so it bounds *presence* and
+never *abundance*. **The dropout constraint from §2 stands unchanged and applies to any reanalysis.**
+
+### 7e · 🔴 A mis-attribution trap inside the one paper where it matters most
+
+The body's only `GEO` mention, verified verbatim:
+
+> *"FASTQ files generated in this study and those **retrieved from the Gene Expression Omnibus (GEO)
+> from a previous study from the adult EC**were aligned and pre-processed using the same workflow."*
+
+That is **someone else's adult-EC dataset, re-used** — **not this study's deposit.** ⚠️ **And the
+citation marker identifying it has been deleted by the extraction route** — note the collision
+`adult EC**were**`, the deletion happening mid-sentence. **This is the GEO-deletion hazard operating
+live inside the very paper whose accession we are hunting**, and it is the concrete mechanism by
+which a future reanalysis would be pointed at the wrong dataset. **Neither the delegate nor I name
+that accession.**
+
+🟢 **Best unexhausted route for anyone with egress:** the bioRxiv preprint,
+*"Persistent postnatal migration of interneurons into the human entorhinal cortex"*,
+`10.1101/2022.03.19.484996` — host `EGRESS_BLOCKED` here, and bioRxiv is not in PMC. **Twelve routes
+were exhausted and each is recorded with its result; no accession was guessed, constructed or
+pattern-matched.**
