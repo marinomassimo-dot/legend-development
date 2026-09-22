@@ -26,7 +26,7 @@
 | Receipt chain | 🟢 **201 chained receipts, tail-anchored** in the state manifest |
 | LINT | 🟢 `PASS` (one INFO: `CLAIM 010` background-only, wikilink not required) |
 | Growth anchors | 🟢 `PASS` — claims **40** · papers **87** · corpus **361** · literature **398** · registry_only **13** · **`unread_premises = 0`** |
-| Public release gate | 🟢 `PASS`, **`BLOCKS: 0`** (REVIEW rows only: parent-of-origin pairs attributed to published non-reference genotypes) |
+| Public release gate | 🟢 `PASS`, **`BLOCKS: 0`** — REVIEW rows only, unchanged in number and kind from session start |
 | Q230P | `ENVIRONMENT-SATURATED / REVIVAL-READY` — **no revival trigger fired** |
 | Discovery Method V0 | stable · **`V0 CHANGE = NONE`** · no modification warranted or made |
 
