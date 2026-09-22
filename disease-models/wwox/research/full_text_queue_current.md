@@ -6927,3 +6927,54 @@ family-level query because PubMed tokenises `11beta-hydroxysteroid` as a single 
 `"hydroxysteroid dehydrogenase"` does not match it — hiding every `11beta-`/`17beta-`/`3beta-`
 HSD paper. **Rule adopted: an SDR family sweep enumerates gene symbols beside the family phrase.**
 This is a **seventh** distinct way a PubMed zero can be meaningless in this corpus.
+
+---
+
+## FT-154
+**Papers:** PMID 29808465 — Johannsen J, Kortüm F, Rosenberger G, Bokelmann K, Schirmer MA,
+Denecke J, Santer R, *Neurogenetics* 2018;19(3):151–156,
+[DOI](https://doi.org/10.1007/s10048-018-0549-5)
+**Title:** 🔴 The indexers say this closed paper contains a HEK293 experiment the abstract never
+mentions — and it is about the reference genotype's own missense allele
+**Priority:** 🔴 **HIGHEST UNREAD ITEM FOR THE MISSENSE ALLELE.** This paper is already the single
+most load-bearing measurement in the model; the new finding is that we have been reasoning from a
+fraction of it.
+**Why:** Declared by
+[`wwox_missense_abundance_lysis_census_20260922.md`](../analysis/wwox_missense_abundance_lysis_census_20260922.md)
+and **verified first-hand by the Orchestrator** from the PubMed record, 2026-09-22.
+
+🔴 **The MeSH list carries `HEK293 Cells` and `RNA Stability`. Neither word appears anywhere in the
+abstract.** Indexers assign `HEK293 Cells` when a paper reports work in them. So:
+1. **A heterologous `Q230P` expression arm very probably exists in the closed body.** That would be
+   a *second*, independent measurement of the allele — in a system where transfection level can be
+   controlled — and this laboratory has never seen it.
+2. **`RNA Stability` suggests the transcript work went beyond one steady-state qPCR.** A decay
+   measurement would make *"normal levels of WWOX transcripts"* a materially stronger statement
+   than it currently reads, and would bear directly on `DL-MECH-029`'s *impaired translation*
+   branch.
+
+⚠️ **Both are `INFERENZA` from an indexing field, per `FM-009`, and may not be cited as results.**
+An indexing term is evidence that an experiment exists, not evidence of what it found.
+
+🆕 **Two corrections to the repository's record of this paper, both verified from the abstract:**
+- 🔴 **The functional data are `n = 1`:** *"Functional WWOX analysis was performed in **fibroblasts
+  of one patient**."* Two sisters are homozygous; **one** was assayed. `DL-MECH-029` says
+  *"fibroblasti donor-derived"* without a number and should carry the `n = 1` — the most
+  load-bearing measurement for the missense allele is unreplicated, one cell type, one individual.
+- 🔴 **The title — *"leads to complete loss of WWOX protein"* — is a conclusion, not a measurement.**
+  The census found **0 of 12** WWOX missense-abundance rows anywhere in the field that examined a
+  pellet or insoluble fraction, and **0 of 12** that stated a detection floor. The experiment
+  measured a property of a **supernatant**; the title asserts a property of the **cell**. Demoted
+  from quoted-as-`DATO` to `INFERENZA`.
+
+🔴 **What a body read must extract, in priority order:** (1) the **lysis buffer and whether any
+pellet was kept** — the one line that separates *insolubility* from *degradation* and that the
+authors' own disjunction omits; (2) the **antibody and its epitope position relative to Gln230**;
+(3) whether a detection floor or dilution series was run; (4) the HEK293 arm in full; (5) whether
+the `RNA Stability` term reflects a decay experiment.
+
+**Retrieval state: `EGRESS_BLOCKED` / `METHODS_INVISIBLE`.** Springer-closed, no PMCID. Tried and
+failed on 2026-09-22: PMC/PubMed full text; and a well-formed `Scholar_Gateway semanticSearch` that
+returned eight on-topic WWOX-DEE records and not this one. `REVIVAL_TRIGGER`: any Springer route,
+an author-hosted copy, an institutional holding, or a later paper quoting Johannsen's buffer or
+antibody.
