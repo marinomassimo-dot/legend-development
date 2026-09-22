@@ -3,7 +3,14 @@
 > 🔴 **2026-09-22, SIXTH BLOCK — WRITTEN LAST, READ FIRST.** Supersedes the blocks below where they
 > disagree. **Not a handoff and not a stop.** Two Scientists running as this is written.
 
-## State — head `d49040d`, `HEAD == origin/main == origin/<branch>`, tree clean
+## State — head `0e13f9e`, `HEAD == origin/main == origin/<branch>`, tree clean
+
+> **Six landings after this block was first written** (`d49040d` → `8d0caf6` → `36ee7bb` → `6c8bdfc`
+> → `0e13f9e`): the dose-forensics correction; `BATCH_20260922_BIBLIO`; the **NMD premise
+> withdrawal** that reopened a therapeutic axis; `census_verify.py` + the fourth-run self-evaluation;
+> and the **`TX-001` ceiling reassessment**. Scientists **R** (expression-boost census) and **S**
+> (missense stability census) were running when this line was written. See § "Since the sixth block"
+> at the end of this block.
 
 Gates at every landing: **LINT PASS · growth anchors PASS (claims=40, papers=87, corpus=361,
 literature=398, registry_only=13, unread_premises=0 — measured, never predicted) · publication gate
@@ -73,6 +80,39 @@ the frame, not the fold** (`D-30`) — "no NMD" must not become "functional prot
   **confidence / independence** language only.
 - §26: do **not** answer a scientific mistake with a new gate, authority, auditor or registry.
   §27: `TOOL_PERMISSION_BLOCKED` is **not** a scientific `HUMAN_REQUIRED`.
+
+### Since the sixth block — what the NMD wave established
+
+- 🟢 **A therapeutic axis reopened.** `therapeutic_hypotheses_ledger:216` closed non-allele-specific
+  WWOX upregulation on an **unsourced, untagged** premise that collapsed `DL-BIO-002`'s hedged
+  disjunction into an assertion — and `DL-MECH-045` reversed that premise **one day later**, never
+  propagated. The architecture excludes NMD under **every** producible outcome (exon 9 is terminal),
+  so `DL-MECH-045` was **right for the wrong reason**: verdict upheld, mechanism withdrawn.
+- 🔴 **`NEVER TESTED`.** No WWOX allele, any class, any species, has ever met an NMD reagent.
+  `PMID 32581702` autopsied a homozygous `R264*` fetus at 21 weeks, **took brain tissue, and
+  extracted no RNA.**
+- 🔴 **A FIFTH way a query-zero lies, and the dangerous one.** `WWOX AND cycloheximide` → **0** with
+  a *flawless* expansion of both terms, while ≥3 indexed WWOX papers ran it. **A reagent named only
+  in Methods is invisible to `[All Fields]`. Miss rate in this gene: 100%.** The four known modes are
+  query defects visible in `query_translation`; **this one is an indexing-depth defect and the
+  translation looks perfect.**
+- 🟢 **`p.Gln353_Gln354del` measured, not quoted.** The repo's *"mid-α-helix … confidence lowest
+  exactly there"* is **false in all three parts**: helix **352–363**, deletion at positions **2–3**
+  (N-terminal **edge**, against a coil), pLDDT **85.8/87.3** — and the quoted *"60–76"* is residues
+  **350/351**, an **off-by-three**. Span test: only `352→355` is strained, by **1.17 Å**, and the
+  adjacent coil has slack ⇒ **the fold is not required to collapse**. But six polar contacts are
+  lost, including the helix's own **N-cap**, and the site is **>20 Å** from the SDR tetrad ⇒ a
+  **packing lesion, not an active-site lesion**.
+- 🟢 **Transferable:** *a deletion is a geometry problem before it is an energetics problem.* Span
+  feasibility + register exposure + lost-contact inventory are valid; **ΔΔG and the relSASA of a
+  deleted residue are not.** Closes the gap `D-30`'s corollary opened.
+- 🔴 **`TX-001`'s design prior is architecturally inapplicable** — all four published WWOX splice
+  measurements report **skipping**, which **cannot happen** at a terminal exon. Its expected value is
+  **bimodal**, and the resolving experiment is its own mandatory gate. **Not re-scored.**
+- 🔴 **A census cannot be verified on a tree that already holds the census.** Shipped
+  `framework/scripts/census_verify.py` (12 tests, mutation-tested 3 ways, routed). It found a second
+  defect on first use: **"count" is ambiguous** — `78`/`22` are **line** counts; as **occurrences**
+  the same terms are `91`/`27`.
 
 ### Immediately next
 
