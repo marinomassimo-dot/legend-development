@@ -1,5 +1,87 @@
 # Autonomous session — continuation state
 
+> 🔴 **2026-09-22 — THIRD BLOCK, WRITTEN LAST, READ FIRST.** Everything below remains accurate
+> except where this block supersedes it. **Not a handoff and not a stop.** Two Scientists are
+> running as this is written; the session continues.
+
+## Where the work stands — head `cb4ae25`, landed on canonical `main` and on the task branch
+
+Gates at every landing: **LINT PASS · growth anchors PASS (`unread_premises=0`) · publication gate
+PASS, 0 blocks · ledger 188 chained, tail anchored.** No canonical registry file was modified today;
+everything is candidates, queue entries and analysis.
+
+### The four findings that would be expensive to lose
+
+1. 🔴 **A MAJOR commit candidate has been queued and unapplied for 27 days, and it is the most
+   important open item in the repository.** `CC-20260826-SEIZURE-RECONCILIATION-01` establishes that
+   `CLAIM 005`'s prohibition — *"No canonical statement may describe a Wwox-null mouse as showing
+   epileptogenesis"* — **forbids statements three canonical claims already make** (`CLAIM 004`,
+   `011`, `016`), and that `CLAIM 037`'s headline *"explicitly absent in Wwox-null mice"* is **false
+   against four first-hand datasets, earliest 2020.** It states that it requires operator
+   authorization, which is why it has not been applied. **This needs an operator decision, not
+   another candidate.** It is an R4 item.
+
+2. 🔴 **The decisive animal has existed since 2007 and nobody has looked at it.** Suzuki's own
+   Table 2: `Wwox^gt/gt` viability **2 years**, `Epilepsy` cell **empty**. An animal that lives two
+   years cannot "die before it seizes" — so the field's standing survival-confound explanation for
+   the mouse/rat discordance is **an unattempted experiment, not an open question.** And **no Wwox
+   mouse of any allele has ever been audiogenically provoked**, so the species contrast under a
+   canonical claim has never been run with the same stimulus. → `CC-20260922-SEIZURE-ASCERTAINMENT-01`
+   (`D-27`).
+
+3. 🔴 **`HYP-20260709-08`'s lysosomal arm would have returned a false negative.** It specifies
+   chloroquine + NH₄Cl, imported from a paper run in **over-expressing CAL-62 cells**. Schultz 2018
+   (PMID 30202070, read in full this session) ran the comparison on **endogenous protein in primary
+   patient fibroblasts**: bafilomycin A1 recovered the mutant to WT levels, chloroquine *"did not
+   significantly alter"* them. **Add bafilomycin.** Also: the minimal experiment's step order is not
+   executable — a chase from an undetectable band is undetectable at every timepoint, so inhibitors
+   must come first. → `CC-20260922-HYP08-LYSOSOMAL-ARM-01` (`D-26`). ⛔ **Blocked on a receipt**:
+   30202070 was read in full and no receipt was persisted; depth is `partial_fulltext_read` because
+   the route stripped every figure number.
+
+4. 🟢 **`TX-003`'s in-silico support does not discriminate, and `DL-MECH-037` already said so.**
+   `il ΔΔG non discrimina`; burial discriminates, ΔΔG does not; and a **buried proline in an α-helix
+   imposes a backbone constraint a chaperone cannot remove.** I nearly landed a false finding that
+   this had never been propagated — see below.
+
+### What I got wrong today, recorded because the corpus is only as honest as this list
+
+- 🔴 **I nearly landed a false "never propagated" finding.** Having found `DL-MECH-033` calling an
+  in-silico test *"il prossimo passo prioritario"*, I drafted the conclusion that it was run and
+  never propagated back. `DL-MECH-037`, 87 lines below in the same file, **is** the propagation, and
+  is better than what I was about to write. Caught by checking before writing it up. Census: `self`,
+  `severity_high`.
+- 🔴 **I wrote `UNREAD_PREMISE impact: none` and the ratchet returned `10`** — naming a paper I had
+  read myself and never declared. All ten now declared in `FT-129`; ratchet back to 0.
+  **Never predict that number again; measure it.**
+- 🔴 **I framed `D-25`'s seizure section as a new discovery** when a MAJOR candidate had held it for
+  27 days, and I ranked a paywalled abstract above full-text mouse data from 2020. Corrected
+  append-only; §1 (chain naming) stands, §2 withdrawn.
+- 🟢 **Scientist C's headline survived verification unchanged** — the first delegate lead item today
+  that needed no correction. Verified by retrieving the primary body myself.
+
+### The standing rules that paid out today
+
+- *Check the repository before reporting anything as absent.* Paid out **five times**; twice it found
+  the repository at fault, once it found **me**, mid-sentence.
+- *A query-count negative about a METHOD is not evidence the method was not performed* — PubMed
+  `[All Fields]` does not read Methods, **proven from inside Scientist D's own census**.
+- `get_copyright_status` as a one-call pre-test: **6/6**. **A PMCID is not a body** — six instances.
+- **A paywall is not a route failure.** PMID 24369382 and 21476439 are unacquirable here; PMID
+  36779245's Table S1 was open access and unreachable, which is a different problem.
+
+### Immediately next
+
+- ⛔ **Persist the `FULLTEXT_READ_RECEIPT` for PMID 30202070.** `D-26` may not propagate without it.
+- Two Scientists running: **E** — what the field has actually *measured* about WWOX splice-allele
+  transcripts (`splice_allele_rna_evidence_20260922.md`); **F** — Domain G, the superior unknown node
+  (`superior_node_search_20260922.md`). **Verify both against primary sources before landing, and
+  refill each slot on return.**
+- Standing: `VERIFY → LAND → REASSESS → NEXT TASK`. **QUEUE EMPTY ≠ SESSION DONE.**
+
+---
+
+
 > 🔴 **2026-09-21, SECOND autonomous run (operator in transit). READ THIS BLOCK FIRST.**
 > The sections below it are the *previous* run's state and remain accurate except where this
 > block says otherwise. **Not a handoff and not a stop.**
