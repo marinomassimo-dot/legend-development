@@ -1,5 +1,100 @@
 # Autonomous session — continuation state
 
+> 🔴 **2026-09-22, FOURTH BLOCK — WRITTEN LAST, READ FIRST.** Supersedes the blocks below where
+> they disagree. **Not a handoff and not a stop.** One Scientist running as this is written.
+
+## State — head `51b4204`, landed on canonical `main` and on the task branch
+
+Gates at every landing: **LINT PASS · growth anchors PASS (`unread_premises=0`, measured never
+predicted) · receipts verify 189 chained, tail anchored · publication gate PASS 0 blocks · prose
+`FT-` references unresolved 0 · release regressions clean** (only declared environment skips: no
+PyMuPDF, no numpy, shallow clone, `files/` gitignored — the KNOWN ENVIRONMENT class).
+**No canonical registry file has been modified today.** Everything is candidates, queue entries,
+receipts, analysis and one harness upgrade.
+
+### The items an operator decision is owed on
+
+1. 🔴 **`CC-20260826-SEIZURE-RECONCILIATION-01` — MAJOR, queued unapplied for 27 days.** It shows
+   `CLAIM 005`'s prohibition forbids statements three canonical claims already make (`004`, `011`,
+   `016`), and `CLAIM 037`'s headline is false against four first-hand datasets, earliest 2020. It
+   states it requires operator authorization. **Needs a decision, not another candidate.** R4.
+2. **`D-17` remains reserved (operator-deferred).** `D-18`…`D-30` are proposed across ten
+   candidates, none propagated.
+
+### The live science, ranked
+
+1. 🎯 **`c.1057-2A>G` — the reference genotype's own splice allele — predicts an IN-FRAME two-codon
+   deletion (`p.353_354del`), not a truncation.** Adjudicated from our own ClinVar export: `+8` from
+   the variant is `c.1063` exactly (three SPDI anchors), and the reference bases **exclude** every
+   competing reading (`c.1062=G`, `c.1063=G`; an acceptor needs `AG`, so starts at `c.1064`/`c.1065`
+   are impossible). **Contradicts `DL-MECH-045`'s "truncated unstable protein".** ⚠️ One base
+   unverified: **`c.1061` must be `A`** — no ClinVar record covers it, sequence egress is 403.
+   Still `PREDICTED`; `DS_AG 0.64` is moderate and nobody has measured this allele's RNA.
+2. 🔴 **The exon-7 hypomorph is DEAD — I proposed it and killed it the same day.** The skip deletes
+   residues 203–263 (62 codons, 414→352 aa). Triad `S281/Y293/K297` and region `388–407` are spared
+   **in sequence only**: the deletion removes ~62 residues from the interior of the ADH/SDR domain
+   (110–414 a.a., verbatim `PMC3354054`), and a Rossmann fold positions its catalytic residues by
+   the scaffold around them. The natural experiment agrees — `PMID 30361190`'s `c.606-1G>A`
+   homozygote had cluster spasms at 11 months on four antiepileptics, filed as `null biallelici`.
+   **`D-30`: in-frame is a statement about the reading frame, not about the fold.**
+3. 🔴 **Tau-lowering must NOT be imported into WWOX-DEE.** The pathway looks like a tauopathy, and
+   the arrow points the other way: *"Neither WWOX overexpression nor GSK3β knockdown promoted
+   neurite outgrowth in the Tau knockdown condition, indicating that Tau is the effector of both"*
+   (`PMC3354054`, read in full by me). **No repository text said this.**
+4. 🔴 **`PAPER 044`'s "nonsense-mediated decay" is from the abstract.** The body says *"not expressed
+   **or** were degraded"* — two alternatives, unresolved — and **no NMD inhibitor was used**. With it
+   withdrawn, **no WWOX allele of any class has ever been assayed with an NMD inhibitor.**
+5. 🔴 **`HYP-08`'s lysosomal arm would have returned a false negative** — chloroquine + NH₄Cl,
+   imported from an over-expressing line; Schultz 2018 on endogenous protein in primary patient
+   fibroblasts has **bafilomycin positive, chloroquine not**. Add bafilomycin. And the step order is
+   not executable: a chase from an undetectable band is undetectable at every timepoint.
+6. 🔴 **Nobody has ever audiogenically provoked a Wwox mouse**, and **`Wwox^gt/gt` — viable 2 years,
+   `Epilepsy` cell empty — has never been observed, EEG'd or provoked.** The survival-confound
+   explanation is an *unattempted experiment on an available animal*, not an open question.
+7. **Domain G returned NEGATIVE.** No node superior to the portfolio. Three near-exclusive filters
+   explain why; the binding one is **"is anything still plastic after diagnosis?"** — now the
+   running Scientist's question.
+
+### Two instrument defects proven today, both of which invalidate classes of negative
+
+- 🔴 **PubMed returns a FALSE ZERO on punctuated variant strings.** `WWOX AND "c.606-1G>A"` → **0**
+  with `query_translation` echoing the raw string **unexpanded**; `WWOX AND "606-1G"` → the paper,
+  fully expanded. **Read `query_translation` before believing any zero.**
+- 🔴 **PubMed `[All Fields]` does not index Methods**, so a query-count negative about a *method*
+  proves nothing — proven from inside Scientist D's own census.
+
+### What I got wrong today — the list is the point
+
+- Nearly landed *"the experiment was run and never propagated"*; **`DL-MECH-037` is the
+  propagation**, and better than my version. Caught while writing it.
+- Wrote `UNREAD_PREMISE impact: none`; the ratchet returned **10**, naming a paper I had read
+  myself and never declared. **Never predict that number; measure it.**
+- Framed `D-25`'s seizure section as new when a MAJOR candidate had held it 27 days, and ranked a
+  paywalled abstract above full-text mouse data from 2020.
+- Attached a five-patient count from `PMID 26345274` to a quotation from `PMID 30361190` — the exact
+  defect class I had corrected in two delegates hours earlier.
+- Proposed the exon-7 hypomorph and killed it four hours later with data that was in the repository
+  the whole time.
+
+### Delegate base rate, recorded because it matters
+
+**Eight waves: two clean** (Scientist C bafilomycin, Scientist F Tau direction — both verified
+unchanged), **three corrected**, **one false alarm** (`C-2`), **two lost to server 529s** with no
+output (LOST, not PARTIAL — nothing to distrust).
+
+### Immediately next
+
+- **Running:** Scientist G — is anything still developmentally plastic at diagnosis
+  (`postdiagnosis_window_evidence_20260922.md`). **Verify against primary sources before landing;
+  refill the slot on return.**
+- **Second slot open** — 529s have been rejecting launches; retry.
+- ⛔ **Highest-value unacquired paper: `PMID 26345274`** (Tabarki 2015, five `c.606-1G>A`
+  homozygotes, `FT-032` / packet `A8`). Never read; the natural experiment is only as good as it.
+- Standing: `VERIFY → LAND → REASSESS → NEXT TASK`. **QUEUE EMPTY ≠ SESSION DONE.**
+
+---
+
+
 > 🔴 **2026-09-22 — THIRD BLOCK, WRITTEN LAST, READ FIRST.** Everything below remains accurate
 > except where this block supersedes it. **Not a handoff and not a stop.** Two Scientists are
 > running as this is written; the session continues.
