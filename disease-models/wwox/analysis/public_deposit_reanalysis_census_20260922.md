@@ -536,3 +536,28 @@ different question that a degeneration phenotype does not answer. The two must n
 **The one real methodological caveat in `36828035`**, which replaces the withdrawn claim: §2.8 reads
 *cerebellar biofunctions* out of **parietal cortex** GSEA — a cross-region inference that should be
 labelled as such wherever it is used.
+
+## 🔴 Addendum to the correction — the repository already held the answer, and that is the lesson
+
+No fetch was needed to catch this. **The `P47T` cerebellar phenotype was already in the repository,
+in four places**, and each contradicts the withdrawn lead on its own:
+
+| Where | What it already said |
+|---|---|
+| `research/discovery_ledger_current.md:2375` | `Wwox^P47T/P47T` → *"epilessia ad esordio adulto, **neurodegenerazione cerebellare**, atassia, neuroinfiammazione progressiva"* |
+| `research/discovery_ledger_current.md:217` | *"cervelletto: astro-microgliosi progressiva + **perdita Purkinje** (`Wwox^P47T`)"* |
+| `research/discovery_ledger_current.md:134` | proposes an experiment in `P47T` mice measuring *"rallenta la **perdita di Purkinje**"* — i.e. the laboratory was already designing around this phenotype |
+| `research/commit_candidates/CC-20260826-CLAIM006-HARDENING-01.md:64,144` | audits **Fig. 9** by name — *"…further evidence of severe dysfunction in Wwox P47T **cerebella**"* — and already lodges the sharper caveat that the cerebellar inflammation measurement *"has **no declared age**"* and *"cannot support any progression claim in the cerebellum"* |
+
+⇒ 🎯 **The cheapest prevention was the mandatory step, not a better tool.** `enumerate_baseline_before_scoring`
+run over `research/` would have surfaced all four rows before any conclusion was formed, and the
+lead would never have been written. The failure was not one of retrieval, of egress, or of the
+served surface — **it was skipping the baseline on one specific claim** while performing it
+faithfully everywhere else in this file.
+
+⚠️ **And the same discipline bounds this correction too.** Because the phenotype was already held,
+**nothing in the working model changes**, and none of tonight's other findings rest on the withdrawn
+lead. What is genuinely new from the full read is narrower and is recorded as such: the **1059-DEG
+cerebellar transcriptome of §2.9**, the **cross-region inference in §2.8**, and — already lodged
+independently by `CC-20260826-CLAIM006-HARDENING-01` — that the cerebellar inflammation arm carries
+**no declared age**.
