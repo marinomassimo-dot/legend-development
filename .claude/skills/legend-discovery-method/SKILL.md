@@ -102,14 +102,39 @@ match a **superstring of itself** and that your matcher cannot **match itself**.
 query is the degenerate case where enumeration and reading agree and are both wrong. *The first
 number a tool hands you is not the measurement.*
 
-**Step 3 — ask how deeply the load-bearing source was actually read.** Enumerating and reading
-*our own artefacts* answers *"what does LEGEND hold?"* It does not answer *"what does the
-literature say?"* Those separate the moment a load-bearing source was never read past its abstract.
+**Step 3 — ask which of THREE depths is actually missing.** A single `READ`/`UNREAD` state is not
+enough to reason with. Three depths vary **independently**, and confusing them produces opposite
+errors:
 
-Classify the depth where it is knowable:
+```
+SOURCE DEPTH       how much primary evidence we actually acquired
+                   TITLE · ABSTRACT · PASSAGE · METHODS · FULL BODY · SUPPLEMENT · FIGURE/CAPTION
 
-`TITLE_ONLY` · `ABSTRACT_ONLY` · `FULL_TEXT_PARTIAL` · `FULL_TEXT_COMPLETE` · `METHODS_READ` ·
-`SUPPLEMENT_READ` · `FIGURE/CAPTION_VERIFIED`
+ANALYSIS DEPTH     which questions LEGEND already investigated using that material
+                   e.g. acquisition cascade · lysis chemistry · antibody geometry · experiment design
+
+PROPAGATION DEPTH  where the derived knowledge reached
+                   ANALYSIS ONLY · CANDIDATE · LEDGER · REGISTRY · CANONICAL CLAIM · COMMUNITY FOLLOW-UP
+```
+
+🔴 **Both directions are real failures, and this session committed one of each:**
+
+> **Low source depth ⇏ no prior analysis.** A paper recorded `abstract_only` had **~700 lines** of
+> existing analysis — a full acquisition cascade with an egress control, plus a ranked human
+> packet. Reading the receipt and concluding *"the programme has not looked at this"* duplicated a
+> day of work. **A receipt records what was read, not what was worked out.**
+>
+> **High analysis depth ⇏ the source was read.** The same paper's Methods remain unread, and every
+> prediction about them is still `UNTESTED`. Volume of derived analysis must never be mistaken for
+> possession of the primary evidence.
+
+**Which depth is missing decides what to do next**, and they route to different actions: low
+**source** depth → acquisition; low **analysis** depth → reasoning; low **propagation** depth →
+the ordinary commit pipeline. Diagnosing the wrong one wastes a wave.
+
+🔴 **This is conceptual, not a schema.** No depth registry, no manifest migration, no receipt
+rewriting, no mandatory field. Use it prospectively where it is material, and only adopt more if
+the distinction repeatedly prevents errors.
 
 > 🔴 **The fixture.** A census found **0 of 81 manifests** naming a detergent and **0** recording a
 > pellet step, and was one step from licensing *"no WWOX abundance study examined the insoluble
@@ -352,8 +377,32 @@ Each primitive's own discard criterion, written so that it can actually fire:
 
 🔴 **Honest state at V0.** Most of these have never been observed to fail. That is not evidence
 they are sound — it is evidence that too few cases have been built that could break them.
-`enumerate_baseline_before_scoring` is the opposite case: its entire evidence base is **negative**
-(three failures, no clean success), which makes it the least proven and the most honest entry here.
+
+### 🟢 `preregister_prediction` — **KEEP**, on the strongest evidence any primitive here has
+
+**The case that settled it.** A prediction was persisted, in a commit, before the search. The
+search then **refuted the session's own wave**, which was downgraded from *finding* to
+`REDISCOVERY` **before it propagated**.
+
+🎯 **The mechanism matters more than the outcome.** The author did not read the evidence and then
+elegantly narrate having expected it. A **falsifiable trace of the prior state** had been left
+where the author could not reach it, and **that trace turned on its author.** Self-correction was
+structural rather than virtuous — which is the only kind that survives a tired session.
+
+**Verdict: `KEEP`. Effect class: `PREVENTED FALSE DISCOVERY` / `PREVENTED POST-HOC
+RATIONALISATION`.** Still **not** mandatory: reserve it for high-value uncertain claims, because a
+pre-registration written for a trivial lookup is the ceremony this method exists to avoid.
+
+### 🟢 `enumerate_baseline_before_scoring` — **KEEP / REFINE**
+
+Its evidence base was entirely **negative** (three failures, no clean success) at first writing.
+It now has both: it caught two rediscoveries in one session — one with external provenance, which
+is the hardest kind to doubt — and it also produced the session's worst failure, the
+filter-as-hypothesis empty baseline. **Refined three times from real defects, never redesigned.**
+
+> 🔴 **The standard this sets for the rest.** A primitive is not judged by how many discoveries it
+> produces. It is judged by whether it stops LEGEND fooling itself. By that standard the two above
+> are the load-bearing primitives in V0, and neither produced a single new fact.
 
 ---
 
