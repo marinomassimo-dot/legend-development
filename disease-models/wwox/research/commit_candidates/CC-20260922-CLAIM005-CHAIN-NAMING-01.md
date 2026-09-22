@@ -154,3 +154,73 @@ the published record without acquiring Mallaret**, and is dispatched as a census
 - **Date/cohort integrity:** *Brain* 2014;137(Pt 2):411–9, PubMed `publication_date` 2013-12-24
   (online) — **the 2013 copyright year and the 2014 issue year are the same paper**, recorded here
   explicitly because a year mismatch of exactly this shape produced a defect earlier in this session.
+
+---
+
+## 🔴 APPEND-ONLY CORRECTION — same day, before propagation
+
+**§2 of this candidate is framed wrongly and is superseded. §1 stands unchanged.**
+
+I wrote §2 as though the contradiction were newly found, and as though Mallaret's abstract were the
+evidence opposing the prohibition. Scientist D's census, verified against the repository, shows both
+framings are wrong:
+
+### (a) The contradiction was found 27 days ago, and the candidate for it is still queued
+
+**`CC-20260826-SEIZURE-RECONCILIATION-01`** (2026-08-26, **MAJOR**, status *"queued; no canonical
+scientific file modified"*) already establishes, in its own words:
+
+> *"`CLAIM 005` contains the sentence **"No canonical statement may describe a Wwox-null mouse as
+> showing epileptogenesis"**, and **three canonical claims in the same file already do** — `CLAIM 004`
+> (`consolidated baseline`), `CLAIM 011` and `CLAIM 016` — while `CLAIM 037`'s title asserts the
+> phenotype is *"explicitly absent in Wwox-null mice"* against four independent primary datasets, the
+> earliest from **2020**."*
+
+So the prohibition is not merely *contested*. It is **malformed**: it forbids statements that three
+canonical claims already make, and the claim whose headline it protects is false against four
+first-hand datasets. That candidate is **MAJOR and states that it requires operator authorization**,
+which is why it has not been applied — but it has now been queued for **27 days**, and in the
+meantime I nearly proposed a weaker, overlapping repair to the same two claims in ignorance of it.
+
+### (b) Mallaret's abstract is the *weakest* evidence against the prohibition, not the strongest
+
+The strongest is **full-text mouse data from 2020**. Cheng 2020 (PMID 32000863, read in full,
+CC BY) reports — verbatim, verified in `deepdive_manifests/PMID32000863.json` and already quoted in
+the 2026-08-26 candidate:
+
+> *"Seizures were frequently induced by mild stressors including **noise**, strobe lights and novel
+> cage during routine handling."*
+
+That is a **reflex, sensory-evoked seizure in a Wwox-null mouse, recorded in a full text six years
+before Mallaret entered this session's reasoning** — and Mallaret's paywalled abstract is
+single-source with no inspectable method. My §2 put the weak evidence in front and never found the
+strong evidence, because I reasoned from the chain I was chasing instead of from the claims that
+share the entity. **That is the same error the 2026-08-26 candidate diagnoses in its own
+predecessor** — *"it enumerated the papers it remembered rather than the claims that share the
+entity"* — committed again, by me, against the candidate that names it.
+
+### (c) What of §2 survives
+
+- ✅ **The `REVIVAL_TRIGGER` on acquiring PMID 24369382** — still worth carrying, now as a minor
+  corroborant rather than as the pivot.
+- ✅ **The append-only correction to `fulltext_dossiers/PMID30370248.md`** — independently correct.
+  That dossier's "miscitation" diagnosis is still wrong and is still worth correcting.
+- ✅ **The paywall-vs-route distinction and the 6/6 copyright pre-test** — unaffected.
+- ❌ **§2c's proposed evidence-boundary text is withdrawn.** It would have written *"the prohibition
+  stands"* into two claims whose prohibition a queued MAJOR candidate shows is malformed. **Adding a
+  softening caveat to a sentence that needs removing is worse than leaving it alone**, because it
+  makes the claim look reviewed.
+- ❌ **§2d's *"no demotion of `CLAIM 037`"*** — withdrawn as a promise I had no standing to make.
+  `CLAIM 037`'s headline is a separate, older, larger finding and is not mine to protect.
+
+### (d) What this candidate is now
+
+**`D-25` is narrowed to §1 alone: the chain-naming repair.** That repair is real, independent of the
+seizure question, and costs one sentence. The seizure question belongs to
+`CC-20260826-SEIZURE-RECONCILIATION-01`, which needs an **operator decision, not another candidate**,
+and to `CC-20260922-SEIZURE-ASCERTAINMENT-01` for what is genuinely new.
+
+**`D-25` is restated:** *"before proposing a repair to a claim, look for the candidate already
+queued against it."* The lesson I first drew — about chains named in batch logs rather than in
+claims — is the same lesson one level up: **a repair queued and unapplied is a finding stored where
+its reader will not be standing.**
