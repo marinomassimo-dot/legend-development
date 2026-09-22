@@ -34,7 +34,7 @@
 
 ### B.3 The junction and the amplicons
 - **The affected junction** is the intron 8 / exon 9 acceptor. The public worked-example allele of this class is `c.1057-2A>G`.
-- **Junction amplicon:** forward primer in **exon 8**, reverse primer in **exon 9**, positioned so the amplicon **spans the exon 8→9 junction**. Exon 9 skipping yields a shorter product (exon 8→exon 10); a cryptic acceptor yields an intermediate product; intron 8 retention is **not detectable with this pair** — intron 8 is **778,856 bp**, so a retention event requires an intron-anchored reverse primer as a separate reaction.
+- **Junction amplicon:** forward primer in **exon 8**, reverse primer in **exon 9**, positioned so the amplicon **spans the exon 8→9 junction**. 🔴 **CORRECTED 2026-09-22 — read this, not what it replaced.** **WWOX has NINE exons: there is no exon 10, so "exon 9 skipping" is not a definable outcome.** Real outcome set: **cryptic acceptor at `c.1063`** — the only available `AG` — giving a product **6 nt SHORTER** than normal; **intron-8 read-through/retention** (778,856 nt, cannot be a mature mRNA, and **carries no exon 9, so the exon-9 reverse primer has no site and this species is simply ABSENT from the trace — its absence must NOT be read as support for the cryptic-acceptor outcome**); **intronic polyadenylation or an alternative terminal exon** (documented in this gene by Schirmer).
 - **Normaliser amplicon:** **exons 4–6** ("core"), which lie upstream of the affected junction and report total WWOX transcript.
 - 🔴 **A published assay of exactly this shape already exists and should be redesigned from, not reinvented:** Schirmer MA *et al.* 2016, *J Natl Cancer Inst* (`PMID 26857392`, PMC4859408) quantifies **exon 8→9 junction transcripts against core exon 4–6 transcripts**, reporting a ratio of **~67 %** with intra-line correlation **r = 0.68** (r = 0.80 under gemcitabine), in **89 lymphoblastoid lines**. It also documents alternative transcripts **terminating within intron 8**. `DL-BIO-003` already names it as the template.
 - ⚠️ **No primer sequences are given in this packet, deliberately.** They are not derivable with certainty from the records held here, the exon 8/9 boundary is the object under test, and a wrong primer placement would silently answer a different question. **Design them from the canonical transcript (`NM_016373.4`) and the Schirmer assay, and validate on the healthy control first.**
@@ -59,8 +59,8 @@
 | Event | Junction amplicon | Detectable here? |
 |---|---|---|
 | Correct splicing | full-length exon 8→9 | ✅ primary readout |
-| **Exon 9 skipping** (SpliceAI/Pangolin prediction) | shorter, exon 8→10 | ✅ |
-| **Cryptic acceptor** (a +8 site is predicted) | intermediate, +8 nt | ✅ — **only Sanger distinguishes it from correct splicing on a gel** |
+| ~~**Exon 9 skipping**~~ 🔴 **NOT A DEFINABLE OUTCOME — there is no exon 10** | ~~shorter, exon 8→10~~ **withdrawn 2026-09-22** | ⛔ |
+| **Cryptic acceptor at `c.1063`** (SpliceAI `DS_AG 0.64`; `+8` is a **genomic offset from the variant**, **not** an amplicon size change) | 🔴 **CORRECTED 2026-09-22: 6 nt SHORTER, not `+8 nt`.** The old entry was wrong in **sign and magnitude** — a downstream cryptic acceptor loses `c.1057–1062`. **A lab sizing against the old row would look 8 nt ABOVE normal while the real species sits 6 nt BELOW, and would score the assay negative while the predicted event was occurring.** | ✅ — but **not on a gel and not on native PAGE**: 6 nt is 2.2% of a ~271 nt amplicon, and a 6-nt heteroduplex migrates anomalously. **Capillary electrophoresis / GeneScan (denaturing, ±1 nt), with a known 6-nt indel sizing standard on the same run**, and **Sanger every band including the apparently-normal one** |
 | **Intron 8 retention** | — | ❌ **requires a separate intron-anchored reaction**; intron 8 is 778,856 bp |
 | Transcript terminating within intron 8 | — | ❌ separate 3′-anchored reaction; Schirmer documents these exist |
 

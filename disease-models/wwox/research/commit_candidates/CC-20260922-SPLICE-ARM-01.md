@@ -319,3 +319,111 @@ fold.**
 🔵 **And §7's prediction for the reference genotype's own allele is untouched and gains value** —
 `c.1057-2A>G`'s cryptic product is **two** codons in the **last** exon, not 62 from a domain
 interior. The reason exon 7 dies is fold-dependent, and does not transfer.
+---
+
+## 9 · ✅ APPEND-ONLY — `c.1061` RESOLVED, and §7c's framing must be narrowed
+
+Scientist I attacked §7 adversarially. **The transcript conclusion survived and got stronger; the
+therapeutic framing did not.** Every item below was re-verified by the Orchestrator.
+
+### 9a · 🟢 `c.1061 = A`. Established deductively from local data, verified twice
+
+The route I proposed — a multi-base ClinVar deleted-allele string spanning the base — **fails**:
+no record covers `79,211,612`. But **ClinVar's protein-consequence column is a second, independent
+channel**, blind to any splicing prediction, and it settles it. Verified in the export:
+
+| accession | cDNA | protein | what it forces |
+|---|---|---|---|
+| `VCV002438615` | `c.1060C>T` | **`p.Gln354Ter`** | codon 354 = `c.1060,1061,1062` = `C,?,G`. Gln with third base `G` ⇒ **`CAG`** ⇒ `c.1061 = A`. And the mutant `T,A,G` = **`TAG`**, a stop ⇒ consistent **in both directions at once** |
+| `VCV003756655` | `c.1062G>A` | **`p.Gln354=`** | mutant codon `C,?,A` must still be Gln ⇒ **`CAA`** ⇒ `c.1061 = A`. Different record, different submitter, **opposite direction** |
+
+🎯 **Codon 354 = `CAG`. The `AG` that Reading A requires at `c.1061/c.1062` exists.** §7's one hole
+is closed. A third channel agrees — the local `WWOX_Q9NZC7_AlphaFold.pdb` carries residue 354 = Gln
+— and a 13-residue frame check (353–365 = `QQGAATTVYCAAV`) reconciles ClinVar and the structure file
+**13/13**, independently confirming that `c.1057` opens codon 353.
+
+⚠️ **Derived, not read.** Egress stayed 403 throughout. But each derivation leaves exactly one base
+possible, and the reconstructed ladder has **zero conflicts**.
+
+### 9b · 🔵 The site is now over-determined, and SpliceAI is no longer load-bearing
+
+Expanding every deleted-allele string reconstructs **intron 8's last ~29 nt with zero conflicts**.
+It contains **exactly two adenines** — at `−8` (followed by `T`) and at `−2` (the canonical one, the
+variant's own position). **There is no `AG` in the last ~31 nt**, which **comprehensively excludes an
+upstream cryptic acceptor** and retires a declared limitation in
+`splice_allele_rna_evidence_20260922.md`.
+
+And applying the **first-AG-downstream scanning rule** to that reconstructed sequence reaches
+`A,G` at `c.1061/62` first ⇒ **exon starts at `c.1063`** — identical to `+8`, **by a route that never
+uses SpliceAI.** The unreachable private-edition `DP_AG` field is no longer load-bearing for anything.
+The 8-nt frameshift reading is now dead at **both** required bases (`c.1063 = G`, `c.1064 = G`).
+
+### 9c · 🔴 And the protein-level conclusion is CONTESTED — §7c is narrowed
+
+**`p.Gln353_Gln354del` is not a benign-looking two-residue nibble.** Residues 353/354 sit **inside an
+α-helix (351–363), not a loop**, and the next helical turn is **fully buried core** (355 relSASA
+0.000, 356 0.000, 357 0.009). A two-residue deletion mid-helix is a **register shift of ≈200° plus
+~3 Å axial shortening** — not an excision. It would rotate a small-residue buried face into solvent
+and drive **Y361** into a core evolved for alanines. 353/354 also carry long-range contacts to
+residues 109–114, 136–140 and 323–324: this helix is packed against the fold.
+
+**Against that:** the helix begins at **351** and **350 is already coil**, so the protein may fray
+351–352 into the existing loop and start the helix at 355, preserving downstream register entirely.
+Neither functional site is touched — **14–16 Å to the catalytic triad, 21–24 Å to 388–407, >31 Å to
+L404** — and the triad sits in **exon 8**, so no exon-9 lesion can remove it.
+
+🔴 **`D-30` applies one level up, and this is a methodological correction worth keeping.**
+`DL-MECH-037`'s burial discriminator was calibrated on **missense substitutions**, where a
+substituted side chain's burial predicts folding impact. **A deletion is a different lesion class:**
+what matters is downstream register and topology, not the burial of the deleted residues.
+> **Corollary to `D-30`: the relSASA of a *deleted* residue is a claim about that side chain, not
+> about the fold.** Reading *"353/354 are only partially exposed, therefore mild"* would be exactly
+> that error — and it is the reading the `+8` result invites.
+
+⚠️ **The structure is least reliable exactly where the answer lives:** pLDDT 60.5 at 350 and 76.4 at
+351, against 93–98 further in, with 340–349 predicted-disordered (35–53).
+
+> **Verdict: nobody can tell without the wet experiment.**
+
+### 9d · §7c is narrowed accordingly
+
+§7c called this *"the most favourable prediction any allele in this genotype has ever carried."*
+**That is defensible about the TRANSCRIPT and about nothing else.** If it migrates to protein
+function or to prognosis it becomes a folding claim nothing supports.
+
+**Correct label, and the one that must travel:
+`PREDICTED at transcript level — PROTEIN CONSEQUENCE UNKNOWN AND STRUCTURALLY CONTESTED`.**
+
+### 9e · 🔴 Two errors in the document a laboratory would execute — corrected at the point of error
+
+Both verified in `tx001_experiment_decision_packet_20260921.md` and **repaired in place**, because a
+lab reading a table does not scroll to an appendix:
+
+1. **The packet asserted an exon 10, twice** — *"Exon 9 skipping yields a shorter product (exon
+   8→exon 10)"* and a table row *"shorter, exon 8→10"*. **WWOX has nine exons.**
+2. 🔴 **The consequential one.** The table read *"Cryptic acceptor (a +8 site is predicted) |
+   intermediate, **+8 nt**"*. **Wrong in sign and magnitude.** A downstream cryptic acceptor makes
+   the product **6 nt SHORTER**; `+8` is a **genomic offset from the variant**, not an amplicon size
+   change. **A lab sizing against that row would look 8 nt above normal while the real species sits
+   6 nt below — and would score the assay negative while the predicted event was occurring.**
+
+The corrected rows now also carry the method constraint: **6 nt is 2.2% of a ~271 nt amplicon**, so
+**not agarose and not native PAGE** (a 6-nt heteroduplex migrates anomalously) — **capillary
+electrophoresis / GeneScan, denaturing, ±1 nt, with a known 6-nt indel sizing standard on the same
+run**, and **Sanger on every band including the apparently-normal one**.
+
+🔵 **And a blind spot the packet had no row for:** an intron-8-terminating transcript **has no exon
+9**, so the exon-9 reverse primer has no site and the species is **absent from the trace** — where
+its absence would be silently read as support for the cryptic-acceptor outcome. That now needs an
+intron-8-anchored reaction plus 3′ RACE, normalised to the exons 4–6 core amplicon. ⚠️ Note also
+that under the surviving outcome there is **no PTC**, so the ±cycloheximide arm has **less power
+than the packet implies** — retained only to catch a competing PTC-containing species.
+
+### 9f · A third instrument defect, distinct from the two already recorded
+
+🔴 **`WWOX AND 1057` translates to `1057[UID]`** — a record-ID lookup, **not a text search**.
+**A zero from a bare-number query carries no information at all.** Distinct from the punctuation
+trap (`"c.606-1G>A"` → 0 unexpanded) and from `[All Fields]` not indexing Methods. **Three proven
+ways for a query-count zero to be meaningless.** The `PREMISE: NOBODY_LOOKED` on this allele is
+nonetheless sound: `WWOX AND "1057-2"` → 0 with the **same query shape** as the positive control
+`WWOX AND "606-1G"` → PMID 26345274.
