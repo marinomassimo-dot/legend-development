@@ -6153,3 +6153,94 @@ being recited.
 3. **24891511** — it contradicts a withdrawal we already made. Contradictions of our own decisions
    outrank confirmations of them.
 4. **18216017** — record as **unacquirable**, not as unread, and stop spending routes on it.
+
+---
+
+## FT-130 — PMID 21476439: unacquirable, confirmed on two routes — and the laboratory that measured WWOX catalysis is the one Domain C names
+
+**Paper:** PMID 21476439 · no DOI · no PMCID
+
+Sałuda-Gorgul A, Seta K, Nowakowska M, **Bednarek AK** — *"WWOX oxidoreductase — substrate and
+enzymatic characterization."* *Z Naturforsch C J Biosci* 2011;**66**(1–2):73–82.
+Medical University of Łódź, Department of Analytical Chemistry.
+**Opened:** 2026-09-22 · **Actor:** Orchestrator, closing an Operator-flagged follow-up
+**Replaces a dangling reference:** `CC-20260921-WWOX-ENZYMOLOGY-P306-01` §151 points at
+*"`FT-112` / packet item `A11`"*. 🔴 **`FT-112` does not exist in this queue** — `grep` returns zero
+occurrences. The candidate has been pointing at an entry that was never written. **That is the same
+"existence in the wrong place" pattern as everything else this session**, in its cheapest form: a
+pointer to nothing. This entry is that entry.
+
+### Acquisition verdict: **unacquirable here, and confirmed on two independent routes**
+
+| route | result |
+|---|---|
+| `get_copyright_status(["21476439"])` | `source: "not_available"` · `pmc_id: null` · `is_open_access: false` · `checked_sources: ["pubmed"]` |
+| `get_article_metadata(["21476439"])` | `identifiers: {"pmid": "21476439"}` — **no `doi` key, no `pmc` key** |
+
+🔵 **Two routes, deliberately, because this is the exact error class this session has made three
+times** — declaring a paper DOI-less on one tool's silence and being corrected. `convert_article_ids`
+and `get_article_metadata` and `get_copyright_status` have each returned identifiers the others
+missed. Here **all consulted routes agree**: no DOI, no PMC deposit. The paper is a 2011
+*Z Naturforsch C* article with no digital deposit reachable from this deployment.
+
+⚠️ **Note on `checked_sources`, refining a rule this session has been leaning on.** The earlier
+reading was *"`checked_sources: ["pubmed"]` alone means PMC was never consulted."* Comparing this
+record against PMID 24369382's (`checked_sources: ["pubmed","pmc"]`, `pmc_id: "PMC3914474"`) shows
+the likely mechanism: **PMC is consulted only when PubMed exposes a PMCID to consult it with.** So
+the omission of `pmc` is informative — it means *no PMC deposit is indexed*, which is a stronger
+statement than "PMC was not searched" — but it is **not** the same as "PMC was searched and the
+paper is absent." Recorded as a refinement, not a correction; the operational rule is unchanged.
+
+### What the abstract establishes, and the line it does not cross
+
+According to PubMed, verbatim:
+
+> *"using two bacterial expression systems, we have **cloned WWOX fusion proteins showing
+> oxidoreductase activity in a crude extract**, defined a course of enzymatic reactions for selected
+> steroid substrates, and **determined related Km values**."*
+
+> *"the SDR domain of the WWOX protein **has dehydrogenase activity and is reactive both in the
+> presence of NAD⁺ and NADP⁺** for all examined steroid substrates. On the other hand, with the same
+> substrates and **reduced cofactors (NADH and NADPH) reduction activity was not observed**."*
+
+🟢 **Treated as a real historical biochemical result**, per the Operator's standing instruction, and
+not diminished for being old or for being unreadable here. It is the **only published measurement of
+WWOX catalysis that exists.**
+
+🔴 **And it is not a functional assay for disease alleles, which is the inference to refuse.** The
+measurement is on **bacterially expressed fusion proteins in crude extract** — not endogenous
+protein, not human cells, not patient-derived material, and **not a single disease allele**. It
+cannot answer `HYP-20260709-08`'s load-bearing untested question — *is rescued Q230P protein
+functional?* — and nothing in this queue entry may be cited as though it could.
+
+🔵 **What it does establish is the precondition.** A functional readout needs three things: a
+measurable activity, defined substrates, and a cofactor requirement. This paper supplies all three,
+including the asymmetry — **oxidation yes, reduction no**, across every substrate tested — which is
+a real constraint on assay design and is the kind of detail that disappears when a gene is described
+merely as "an oxidoreductase."
+
+### 🎯 The connection worth recording, which is why this entry is more than an acquisition note
+
+**The senior author is Andrzej K. Bednarek, Łódź** — the group named in the Operator's required
+Domain C coverage, and confirmed by Scientist D's secondary sweep as active (38 records), working on
+human cells, hNPC, GBM specimens and bioinformatics, **with no rodent colony**.
+
+So: **the only laboratory that has ever measured WWOX catalytic activity is the Łódź group**, it is
+still active, and its methods are biochemical and human-cell rather than animal — which is the
+matrix `HYP-20260709-08` and Scientist C's Domain D shortlist both need. The capability that the
+proteostasis programme's step 5 (*"if protein increases: function, localization and partner binding
+are obligatory"*) requires is **identified and extant**, and it was never connected to that step
+because the enzymology sat in a `C`/`LOW`-tiered corpus stub while the proteostasis work happened
+somewhere else.
+
+⛔ **No contact is proposed, attempted or implied.** Contacting researchers is `HUMAN_REQUIRED` and
+is not this actor's to initiate. What is recorded is a capability mapping, nothing more.
+
+### Next actions
+
+1. **Record `21476439` as unacquirable**, not as unread — the same disposition as PMID 24369382
+   (`FT-128`) and PMID 18216017 (`FT-129`). Stop spending routes on all three.
+2. Carry the **oxidation-only / no-reduction** asymmetry into any future functional-readout design.
+   It is already in `CC-20260921-WWOX-ENZYMOLOGY-P306-01`; this entry is where a reader looking for
+   the paper will land, so it is restated here rather than pointed at.
+3. Repair the dangling `FT-112` pointer in that candidate to name **`FT-130`**.

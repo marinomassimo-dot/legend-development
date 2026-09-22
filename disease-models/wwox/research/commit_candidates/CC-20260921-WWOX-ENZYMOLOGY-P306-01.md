@@ -148,7 +148,7 @@ and the tool now **cross-checks the receipt ledger**. Effects, measured:
 **(a) `CORPUS P306` → full-text queue at HIGH, and acquisition packet.** It is **not** promoted to
 a `PAPER` record: no reading stands behind it and it must not acquire the appearance of one.
 
-> **`FT-112` / packet item `A11` — `PMID 21476439`.** Re-tier `CORPUS P306` from `C` / `LOW` to
+> **`FT-130` (was written here as `FT-112`, an entry that never existed — see `FT-130`) / packet item `A11` — `PMID 21476439`.** Re-tier `CORPUS P306` from `C` / `LOW` to
 > **`Tier: A` / `clinical relevance: HIGH`**, `Filter decision: **deep-dive — full text required**`,
 > with the re-tier reason recorded in `Note`. **Acquisition status:** `convert_article_ids` returns
 > the PMID alone — **no PMCID**; the metadata record carries **no DOI**; *Z Naturforsch C*
