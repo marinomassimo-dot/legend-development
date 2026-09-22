@@ -6527,3 +6527,92 @@ second-hand prose about it.
 🟢 **Retrievability update:** PMID **18460020** (already queued) now carries **PMC11159152** — its
 **body** is open even though its supplementary figure remains at a dead `blackwell-synergy.com`
 domain. ⚠️ A PMCID **orders an attempt**; it does not promise a body.
+
+---
+
+## FT-140
+**Papers:** PMID 31618474 (*Ann Neurol*, DOI 10.1002/ana.25619, PMC7423163) · PMID 32214227 ·
+PMID 35715422 / PMC9205988 · PMID 37095367 (Bayanova et al. 2023 WGS)
+**Title:** The FT-116 human cohort-triage set — imported with the branch reconciliation
+**Priority:** MEDIUM
+**Why:** Declared by [`ft116_cohort_triage_20260921.md`](../analysis/ft116_cohort_triage_20260921.md),
+imported from sibling branch `f7595f6` when the receipt-ledger fork was reconciled. The merged ledger
+now asserts reads for these papers, so the reading debt is declared here rather than left implicit.
+🔴 **Two bounds the sibling's own work states and that must travel with these records:**
+1. **`PMID 31618474`'s receipt declares itself a VERIFICATION, NOT A FIRST-HAND READ** — verbatim:
+   *"I … DID NOT READ THIS PAPER"*; the reading was done by another actor under a READ-ONLY,
+   NO-RECEIPT brief. The receipt attests the **artefact** (26,045 bytes, sha256 `36ee5733…`), not a
+   reading.
+2. 🔴 **The extractor ELIDED THE GENE SYMBOLS in that artefact** — re-counted: `WWOX = 0`,
+   `GABRA1 = 0`, `PIGA = 0`, `ITPA = 0` tokens. **This bounds every downstream use**: the paper
+   cannot be searched for gene content on that surface.
+⚠️ `PMID 37095367` is **not** a corrigendum; it is the primary Bayanova WGS report.
+⚠️ `PMID 31618474` reports a second, **overlap-confounded** occurrence of `p.(Glu17Lys)`.
+
+---
+
+## FT-141
+**Papers:** PMID 40463067 / PMC12132302 · PMID 42425971 / PMC13478581
+**Title:** The MAVE / VAMP-seq portability pair — can variant effect be measured at scale for WWOX
+**Priority:** 🎯 **HIGH — directly on the live Q230P frontier**
+**Why:** Declared by [`mave_portability_to_wwox_20260921.md`](../analysis/mave_portability_to_wwox_20260921.md).
+This is the **instrument question** behind the whole missense arm: today's independent census
+established that **no WWOX missense variant has ever had stability, solubility, aggregation or
+turnover measured**, and a multiplexed assay of variant effect is the one methodology that could
+change that at scale.
+⚠️ **`PMID 42425971` is a bioRxiv PREPRINT, not peer reviewed** — the sibling file marks every
+conclusion resting on it `[PREPRINT]` and that weight must be preserved.
+⚠️ The sibling's verdict is **`CONDITIONAL`**, and explicitly *"the condition is unchanged by these
+two papers"* — so this pair does **not** close the question; it characterises the instrument.
+🔴 **No MAVE programme is proposed here.** The sibling file states that a sensor or MAVE programme is
+a materially new research programme and **the Operator's decision**.
+
+---
+
+## FT-142
+**Papers:** PMID 28763065 / PMC5611727 (DOI 10.1038/tp.2017.159) · PMID 41378749 / PMC12697008
+(DOI 10.1002/bdr2.70007)
+**Title:** Human prenatal / infant wave — developmental-window records
+**Priority:** MEDIUM
+**Why:** Declared by [`human_prenatal_infant_wave1_20260921.md`](../analysis/human_prenatal_infant_wave1_20260921.md).
+Bears on the therapeutic-window question, which this branch has open from two directions: the
+**post-diagnosis window** (`D-31` — `P1–P5` is the set of ages tested, **not** a window) and the
+**model-horizon versus therapeutic-window** distinction (`D-36`).
+⚠️ **Neither paper is a WWOX paper.** They are queued as **developmental-timing context**, and must
+never be cited as WWOX evidence.
+
+---
+
+## FT-143
+**Papers:** PMID 11058590 · PMID 42523332
+**Title:** Lectin readout domain-dependence — the assay-validity pair
+**Priority:** MEDIUM
+**Why:** Declared by [`lectin_readout_domain_dependence_20260921.md`](../analysis/lectin_readout_domain_dependence_20260921.md).
+⭐ **The reason this matters is a discriminator, not a finding:** the sibling records that the lesion
+in question predicts a **mitochondrial** defect, not a **glycosylation** one — *"An SDR lesion would
+predict a mitochondrial, not a glycosylation, defect."* So a lectin-based readout may be measuring
+the wrong compartment, which is exactly the class of error that invalidates an assay before it is
+run. Relevant to the standing requirement that **abundance be tied to a functional readout**.
+
+---
+
+## FT-144
+**Papers:** PMID 28416821 · PMID 33520443 · PMID 37583270 · PMID 42464650 · PMID 42589397 / PMC13467099
+**Title:** Singleton records from four imported sibling nodes
+**Priority:** MEDIUM; **42464650 HIGH**
+**Why:** Declared by, respectively,
+[`missense_splice_reclassification_risk_20260921.md`](../analysis/missense_splice_reclassification_risk_20260921.md) ·
+[`human_genotype_and_claim025_wave1b_20260921.md`](../analysis/human_genotype_and_claim025_wave1b_20260921.md) ·
+[`c517_minus3_rna_rescue_handle_20260921.md`](../analysis/c517_minus3_rna_rescue_handle_20260921.md) ·
+[`missense_rescue_methodology_census_20260921.md`](../analysis/missense_rescue_methodology_census_20260921.md).
+🔴 **`PMID 28416821`'s provenance is weak and the sibling says so:** *"title, year and PMID from a
+web-search result"* — the author list and page range were never confirmed. **Verify identity before
+any use.**
+⚠️ **`PMID 33520443` is a GDM (gestational diabetes) association record** — not WWOX-neurological,
+and not transferable to the CNS phenotype.
+🎯 **`PMID 42464650`** is cited by the missense-rescue methodology census, which asks the question
+this branch independently re-derived today: *can anyone measure whether a re-stabilised missense
+protein is FUNCTIONAL — function per molecule, at matched abundance?* Its answer, verbatim: **"No
+functional measurement has ever been made on a WWOX missense protein whose abundance was
+restored."** 🔴 **That census is built from titles and abstracts — "an abstract is not a read"** — so
+nothing in it may be promoted without a full-text read and a receipt.
