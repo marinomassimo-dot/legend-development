@@ -41,9 +41,12 @@ extent because no ClinVar SNV sits on their terminal base; **exon 7 is not.**
 
 ### Why this matters therapeutically
 
-🔴 **The acceptor of exon 7 is `c.606-1G>A` — a five-patient homozygous allele**, already in this
-repository: `paper_registry_current.md:6398`, *"caso 2: **splice acceptor omozigote c.606-1G>A**
-(introne 6…)"*, and counted in `FT-110`'s ten-patients argument. Intron 6 is the intron immediately
+🔴 **The acceptor of exon 7 is `c.606-1G>A`**, already in this repository and published in **at
+least six homozygotes across two papers**. ⚠️ **Corrected in `CC-20260922-EXON7-NATURAL-EXPERIMENT-01`
+§1: the draft of this paragraph attached a count from one paper to a quotation from another.** The
+five-patient count is **PMID 26345274** (Tabarki 2015, two consanguineous families; `FT-110`'s
+ten-patients argument); the quotation *"caso 2: splice acceptor omozigote c.606-1G>A (introne 6…)"*
+at `paper_registry_current.md:6398` is **PMID 30361190**, a sixth and separate patient. Intron 6 is the intron immediately
 5′ of exon 7, so the mapping closes.
 
 If that allele causes exon-7 skipping, the product is a **352-aa internally deleted protein with no
@@ -289,3 +292,30 @@ unreachable `DP_AG` label, and `c.1061` named as the one base that would falsify
 `disease-models/wwox/analysis/data/WWOX_clinvar_all_variants.csv` in this session. Nothing is
 reconstructed from memory, and the SpliceAI positional convention is **not relied upon** — the
 adjudication rests on which dinucleotides the reference sequence permits.
+
+
+---
+
+## 8 · 🔴 APPEND-ONLY — §1's therapeutic inference is WITHDRAWN, same day
+
+`CC-20260922-EXON7-NATURAL-EXPERIMENT-01` tested §1's prediction and it fails, twice over.
+
+**Structurally:** the skip deletes residues **203–263** (62 codons, 414 → 352 aa). The catalytic
+triad `S281/Y293/K297` and the GSK3β region `388–407` are spared **in sequence** — but the deletion
+removes ~62 residues from the interior of the **ADH/SDR domain (110–414 a.a.**, verbatim from
+`PMC3354054`). A Rossmann fold positions its catalytic residues by the surrounding scaffold; sparing
+them in sequence does not preserve them in space. **`Q230` is deleted, and its own recorded context
+— relSASA 0.000, 22 heavy contacts within 5 Å — says 61 of its neighbours are structural too.**
+
+**Empirically:** the natural experiment agrees. `PMID 30361190`'s `c.606-1G>A` homozygote had
+*"a 11 mesi spasmi in cluster nonostante 4 antiepilettici"*, and that paper files the allele as
+**`null biallelici`**. Severe, typical WOREE — not mild.
+
+**So §1's claim that this allele *"is not a null"* and is *"a structurally defined hypomorph in a
+different therapeutic class"* is withdrawn.** What survives: the exon-7 in-frame arithmetic itself,
+and the three-regime point. **`D-30`: in-frame is a statement about the reading frame, not about the
+fold.**
+
+🔵 **And §7's prediction for the reference genotype's own allele is untouched and gains value** —
+`c.1057-2A>G`'s cryptic product is **two** codons in the **last** exon, not 62 from a domain
+interior. The reason exon 7 dies is fold-dependent, and does not transfer.
