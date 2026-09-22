@@ -145,3 +145,31 @@ DOIs — [17823927](https://doi.org/10.1002/gcc.20497) ·
 [19936220](https://doi.org/10.1371/journal.pone.0007775) ·
 [24932569](https://doi.org/10.1016/j.bbcan.2014.06.001).
 Not medical advice.*
+
+---
+
+## Cross-reference added 2026-09-22 — bind this to the CNS qualification candidate
+
+This candidate and [`CC-20260922-GTGT-CNS-QUALIFICATION-01`](CC-20260922-GTGT-CNS-QUALIFICATION-01.md)
+are about **the same animal and the same unperformed measurement**, and must be read together so
+their wordings cannot drift:
+
+- **This candidate** removes the unsupported generalisation from `CLAIM 032` — *"proteina bassa ma
+  rilevabile"* is asserted as a **general property of the `gt/gt`**, whereas the primary says only
+  *low level in a minority of tissues*, **naming no tissue and not naming brain**.
+- **The CNS candidate** (see its **§1b**) establishes the complementary fact and its correct framing:
+  **no published evidence quantifies WWOX in `gt/gt` brain or cerebellum at all.**
+
+> 🔴 **Both must be stated as an ABSENCE OF MEASUREMENT, never as a property of the animal.**
+> Neither candidate licenses *"the `gt/gt` has no residual brain WWOX."* That sentence is unsupported
+> in exactly the same way as the one this candidate removes — it merely errs in the opposite
+> direction.
+
+⭐ **And the retained option value carries across.** The `gt/gt` is disqualified **today** as a
+platform for CNS protein rescue, but the disqualifier is **one unperformed Western**, not an adverse
+result. A single quantification on `gt/gt` brain and cerebellum would settle **both** candidates at
+once: it would tell us whether brain is in the *minority* the abstract refers to, and whether the
+animal is a usable `TX-002`/`TX-003` platform.
+
+⚠️ Unchanged and still required by this candidate independently: the *"vitale"* / **"viable to 2
+years"** reading must not propagate while the primary reports a **significantly shorter lifespan**.

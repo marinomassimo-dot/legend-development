@@ -49,6 +49,41 @@ exists in any supplement anywhere."* The stronger claim is not made.
 
 ---
 
+## 1b · 🔴 OPERATOR CORRECTION (2026-09-22) — this is a MISSING EXPERIMENT, not a negative biological result
+
+The wording below was returned by the Operator as **too easily read as a finding about the animal**.
+It is not. The rigorous statement is:
+
+> **Non esiste evidenza pubblicata che quantifichi WWOX residua nel cervello/cervelletto del `gt/gt`.**
+> *(No published evidence quantifies residual WWOX in `gt/gt` brain or cerebellum.)*
+
+**It is an absence of measurement — NOT evidence of absence of brain protein.** Two readings must be
+kept apart, and only the first is supported:
+
+| reading | status |
+|---|---|
+| *nobody has measured residual WWOX in `gt/gt` CNS* | ✅ **this is what was established** |
+| *`gt/gt` has no residual WWOX in the CNS* | ❌ **NOT established, and must never be written** |
+
+🔴 **And the consequence is two-sided, where §3 below records only one side.** What follows is:
+
+1. **`Wwox^gt/gt` cannot be used TODAY as a qualified model of CNS protein rescue.** (§2's prohibition
+   stands unchanged.)
+2. ⭐ **But it remains potentially the MOST INTERESTING such model available** — precisely because the
+   disqualifying fact is a **single unperformed measurement**, not an adverse result. **One Western
+   blot or one quantification on `gt/gt` brain and cerebellum would decide it.**
+
+> **The retained option value is part of the finding.** A candidate that records only the prohibition
+> would send the next reader past the cheapest decisive experiment in the `TX-002` / `TX-003` platform
+> question. `H11` is closed **as a question about the literature**; it is **wide open as a question
+> about the animal**.
+
+⚠️ `REVIVAL_TRIGGER`: **any quantification of WWOX protein in `Wwox^gt/gt` brain or cerebellum**, at
+any age, by any method, published or generated. That single datum re-qualifies or disqualifies the
+model for CNS rescue and reopens the highest-value row of the horizon table.
+
+---
+
 ## 2 · The only permitted statement, and the prohibition that follows
 
 > **Low Wwox protein was reported in a minority of tissues; residual BRAIN protein is not
@@ -68,7 +103,10 @@ divergent fixes for one problem.
 
 ---
 
-## 3 · 🎯 What this closes — `H11`, and the closure is now measured
+## 3 · 🎯 What this closes — `H11` **as a question about the literature**, with a measured search-negative
+
+> ⚠️ **Read §1b first.** *Measured negative* below describes the **literature search** (a verified
+> zero with a positive control), **not** a measurement on the animal. Nobody has measured the animal.
 
 `H11` is the highest-value row of `CC-20260922-MODEL-HORIZON-01`'s horizon table: **`TX-002`
 (CRISPRa) and `TX-003` (proteostatic boost) require an animal that HAS residual protein to boost.**

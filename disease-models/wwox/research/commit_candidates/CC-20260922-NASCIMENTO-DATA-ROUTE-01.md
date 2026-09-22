@@ -164,3 +164,40 @@ progenitor supplying the stream."*
 **`D-37`: when a paper's data are unreachable, look for the authors' code before concluding the data
 are closed.** Two prior waves exhausted twenty routes between them and concluded the accession did
 not exist here. **It was in a public GitHub repository the whole time, and GitHub was never blocked.**
+
+---
+
+## Operator bound, recorded verbatim 2026-09-22 — the permitted sentence IF the tables are ever read
+
+🔴 **First, a correction to the premise of the question as posed.** The Operator's framing was
+conditional — *"if WWOX really does not appear in the three DE tables"*. **That antecedent is not
+established.** Per §1 above, **no table was ever acquired**; `PREMISE: UNVERIFIED`. We do not have the
+observation, in either direction. *(And there are **four** DE tables, not three — though §6 confirms
+Tables 4–6 were the correct selection, because Table 8's contrast explicitly excludes the EC stream.)*
+
+**When the tables are acquired, the ONLY permitted conclusion is:**
+
+> **WWOX non compare tra le feature riportate come differential-expression hits nelle comparazioni
+> ispezionate.**
+> *(WWOX does not appear among the features reported as differential-expression hits in the
+> comparisons inspected.)*
+
+**NOT permitted, in any wording:**
+
+| forbidden | why |
+|---|---|
+| *WWOX non è espresso* / *WWOX is not expressed* | a DE table is not an abundance measurement |
+| *WWOX non cambia* / *WWOX does not change* | the table may be filtered by significance or effect size |
+
+**Because a DE table can be filtered by:** significance threshold · effect-size threshold · QC
+exclusion · a pre-selected gene subset · expression floor. **Any one of these removes a gene that is
+both expressed and changing.** Absence from such a table is `NOT_TESTED_OR_NOT_SIGNIFICANT` and
+nothing stronger.
+
+🎯 **And for a ~6 TPM gene, filter-exclusion is the EXPECTED outcome** (§ above). So the informative
+direction is asymmetric: **presence** in a DE table would be a strong positive; **absence** is close
+to uninformative.
+
+🟢 **What the Operator affirms as sound, and it is the technical half:** the case-insensitive `WWOX`
+hits in the `ECstream` repository were **seven, all inside `data:image/png;base64` payloads** — a
+verified false-positive class, not evidence of any kind. That check stands.
