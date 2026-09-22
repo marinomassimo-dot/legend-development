@@ -114,6 +114,62 @@ Persisted for the composite **H3+H5**. Each will be classified afterwards as `PR
 | **P5** | **No WWOX protein quantification exists at P7–P14 at either dose**, so the early-window protein state is unmeasured and H3 cannot be refuted from the existing record. |
 | **P6** | If the authors ran a **glucose-rescue or feeding intervention** arm, survival would improve **without** a proportional change in regional WWOX protein. *(Expected to be `NOT TESTED` — recorded because a refutation here would be decisive against H5.)* |
 
-## 6 · VERIFY — outcomes
+## 6 · VERIFY — outcomes, recorded after the searches
 
-*(to be appended after the searches; deliberately empty at the moment of writing)*
+| # | outcome | evidence |
+|---|---|---|
+| **P1** | 🟢 **SUPPORTED — and more strongly than predicted** | Glucose at P20 carries a **formally tested** pattern: **`*` WT-vs-LD · `**` LD-vs-HD · `ns` WT-vs-HD.** Not a trend — the two doses are **statistically separated**, and **HD is indistinguishable from wild type** while LD is not. |
+| **P2** | 🟡 **SUPPORTED for the bulk of mortality, AMBIGUOUS at onset** | LD *"declines from ~20 d, 0% by ~80 d"*; glucose is measured at **P10 and P20**. So the glucose divergence is established **by P20** and most LD mortality accrues **after** it — but onset **coincides with** P20 rather than clearly following it. The ordering is **consistent**, not **proven**. |
+| **P3** | 🟢 **SUPPORTED, weakly — two arms only** | Glucose ordering (HD = WT > LD) **matches** survival ordering (HD ≈80%, LD 0%). Protein ordering does not: *"a trend"*, **1 of 4** regions significant. **So glucose tracks survival better than regional protein does** — on `n = 2` arms, so the inference is directional, not quantitative. |
+| **P4** | 🟢 **SUPPORTED (the "not assayed" branch)** | **Hypothalamus was never assayed for WWOX**, nor brainstem, thalamus or striatum — while all were assayed for myelin, so the omission is a selection. |
+| **P5** | 🔴 **REFUTED in part — I was wrong, and the correction is informative** | The early window is **not** unmeasured. **Glucose is measured at P10 and P14**, and a **WWOX IF panel** exists in the injection-window experiment. ⚠️ **But that experiment is HD-ONLY**, so it still cannot compare LD vs HD early. **H3's discriminator remains unavailable — for a different reason than I predicted:** not *never measured early*, but *measured early in only one arm*. |
+| **P6** | ⚪ **NOT TESTED, as expected** | No dextrose, feeding, glucose-tolerance or glucose-rescue arm found. Recorded because a **refutation here would have been decisive against H5**, and none is available either way. |
+
+## 7 · 🎯 WHAT THIS CHANGES — the mismatch largely dissolves, and it was my framing that was wrong
+
+> **There IS a categorical, formally tested, early LD-vs-HD difference. It is on GLUCOSE AT P20
+> (`**`), not on regional protein.**
+
+And the repository already held the decisive qualifier, independently: the two earliest endpoints —
+**ECoG at P14–P21 and glucose at P10/P20** — are **free of survivor conditioning**, and P20 glucose is
+*"the one arm-separating endpoint that survival cannot have manufactured."*
+
+So the anomaly in § 1 was **an artefact of comparing the wrong pair of measurements**:
+
+| | timing | survivor-conditioned? | separates LD from HD? |
+|---|---|---|---|
+| **regional WWOX protein** | P30 and P300 | 🔴 **yes** | ✗ only 1 of 4 regions |
+| **glucose** | **P10 / P20** | 🟢 **no** | ✅ **`**`, and HD `ns` vs WT** |
+
+🔴 **My § 1 framing — "a categorical survival outcome across a step that produces only a graded
+protein difference" — set survival against the LATE, survivor-conditioned axis and ignored the EARLY,
+clean one that does separate the arms.** The composite **H3+H5 is substantially supported**, and the
+supporting evidence was in the repository before this pass began.
+
+### The residual question, now much sharper
+
+The dissolution relocates the question rather than closing it:
+
+> **Why does a 2.14× dose step produce a CATEGORICAL metabolic correction?**
+
+The surviving live hypotheses are the two that speak to that, and they are **not** resolved:
+- **H1 (wrong place)** — 🔴 the glucose-sensing region, **hypothalamus, was never assayed for WWOX at any dose**. The endpoint that separates the arms is metabolic; the region that would explain it is the one nobody measured.
+- **H4 (wrong statistic)** — a fraction-above-threshold effect would produce a categorical organismal outcome from a small shift in a homogenate mean.
+
+**H2 (cohort) and H6 (maternal) remain live and independent** — both would undermine the survival numbers themselves, and neither is touched by this dissolution.
+
+### Smallest experiment that discriminates what is left
+
+> **Quantify WWOX protein in HYPOTHALAMUS (and brainstem) at P14–P20, at BOTH doses, per cell rather
+> than per homogenate.**
+
+One measurement, three discriminations: it tests **H1** (is the survival-critical region the
+unassayed one?), **H4** (is the per-cell distribution bimodal where the mean is not?), and the
+**H3+H5 composite** (does early protein in the metabolic region separate the arms where late cortical
+protein does not?). ⚠️ It requires early material at **both** doses — which the window experiment,
+being HD-only, does not supply. `REVIVAL_TRIGGER`: any LD early-timepoint tissue, or any per-cell
+WWOX quantification in a glucose-regulating nucleus.
+
+⚠️ **Standing bound:** all of this is `IPOTESI`. The glucose→survival **causal** step is still not
+demonstrated — a correlation between two endpoints in two arms is not mediation, and no intervention
+arm exists to test it. **Nothing here is medical advice.**
