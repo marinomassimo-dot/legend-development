@@ -79,6 +79,11 @@ grading a re-read's return as new.
 > re-read that enumerated four artefacts correctly and then measured only one, building a baseline
 > that omitted four facts it went on to score as new.
 
+**Never narrow the enumeration to what you expect.** `ls <dir> | grep <what I think is there>`
+returns a confidently empty baseline that reads exactly like a clean field. **List first, filter
+after** — and list the directory you are writing into, which is the one you are likeliest to
+assume you already know.
+
 **Step 0 — check the matcher before believing the count.** Reading what you enumerated is necessary
 and not sufficient: the count can be wrong before any reading happens. Two recorded instances, same
 family:
@@ -86,7 +91,11 @@ family:
 ```
 grep -i lysis     matched  ana-LYSIS     — the pattern hit an unrelated superstring  (48 vs 1)
 pgrep -f <job>    matched  the asker     — the pattern hit the query itself (false RUNNING, 2h)
+ls | grep <mine>  matched  only my own   — THE FILTER WAS THE HYPOTHESIS (a whole wave duplicated)
 ```
+
+The third is the most dangerous: the first two return a wrong number, which invites a second look.
+This one returns an **empty** baseline, which invites none.
 
 Before believing any count — **including zero, including one** — establish that your pattern cannot
 match a **superstring of itself** and that your matcher cannot **match itself**. A self-matching
