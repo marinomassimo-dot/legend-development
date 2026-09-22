@@ -85,6 +85,7 @@ Run everything as `python3 <path> --help` first. Paths are repo-relative.
 | does any locator stand on a panel its own erratum corrected | `framework/scripts/erratum_scope_check.py` |
 | a manifest flag that IMPROVED without the work behind it | `framework/scripts/manifest_flag_drift.py` |
 | does a manifest's queued multi-hop id name **this** paper's debt | `framework/scripts/manifest_queue_id_crosscheck.py` |
+| does a candidate, ledger or analysis file cite an `FT-` entry that was never written | `framework/scripts/manifest_queue_id_crosscheck.py --prose` |
 | does the registry's declared locator count still match the manifest it names | `framework/scripts/locator_count_crosscheck.py` |
 | every number in an orchestration record sitting beside what produced it | `framework/scripts/record_number_provenance.py` |
 

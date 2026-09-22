@@ -180,5 +180,93 @@ class TheCorpusIsClean(unittest.TestCase):
         self.assertEqual(offenders, [], "the corpus baseline was 0/0 on 2026-09-10")
 
 
+class TheProseSurfacesAreScanned(unittest.TestCase):
+    """`--prose`, added 2026-09-22 after a candidate was found citing an entry that never existed.
+
+    The manifest audit above reads only `multihop.queued[].queue` fields. On 2026-09-22
+    `CC-20260921-WWOX-ENZYMOLOGY-P306-01` was found pointing at *"`FT-112` / packet item
+    `A11`"* and `grep` returned **zero** occurrences of `FT-112` in the queue. Every gate
+    was green, because a reference living in a candidate's prose is invisible to a checker
+    that only reads manifest fields. These pin the wider surface.
+    """
+
+    def _workspace(self, root: Path, files: dict[str, str]) -> None:
+        (root / "disease-models/wwox/research/commit_candidates").mkdir(parents=True)
+        (root / "disease-models/wwox/analysis").mkdir(parents=True)
+        (root / "disease-models/wwox/research/full_text_queue_current.md").write_text(
+            QUEUE, encoding="utf-8")
+        for name, body in files.items():
+            (root / name).write_text(body, encoding="utf-8")
+
+    def test_a_candidate_citing_a_nonexistent_entry_is_reported(self) -> None:
+        import tempfile
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self._workspace(root, {
+                "disease-models/wwox/research/commit_candidates/CC-X.md":
+                    "See FT-112 for the acquisition packet.\n"})
+            found = check.scan_prose(root, "wwox", check.load_queue(root, "wwox"))
+            self.assertEqual([r["queue_id"] for r in found], ["FT-112"])
+            self.assertEqual(found[0]["line"], 1)
+
+    def test_a_candidate_citing_a_live_entry_is_silent(self) -> None:
+        import tempfile
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self._workspace(root, {
+                "disease-models/wwox/research/commit_candidates/CC-X.md":
+                    "Carried on FT-071, which exists.\n"})
+            self.assertEqual(
+                check.scan_prose(root, "wwox", check.load_queue(root, "wwox")), [])
+
+    def test_the_zero_padding_is_not_part_of_the_address_in_prose_either(self) -> None:
+        import tempfile
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self._workspace(root, {
+                "disease-models/wwox/analysis/note.md": "Handled under FT-71.\n"})
+            self.assertEqual(
+                check.scan_prose(root, "wwox", check.load_queue(root, "wwox")), [])
+
+    def test_the_queue_file_does_not_audit_itself(self) -> None:
+        """Its own headings define the addresses; scanning it would be circular."""
+        import tempfile
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self._workspace(root, {})
+            queue = root / "disease-models/wwox/research/full_text_queue_current.md"
+            queue.write_text(QUEUE + "\nA dangling FT-999 inside the queue itself.\n",
+                             encoding="utf-8")
+            self.assertEqual(
+                check.scan_prose(root, "wwox", check.load_queue(root, "wwox")), [])
+
+    def test_the_file_and_line_are_reported_so_the_finding_is_actionable(self) -> None:
+        import tempfile
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self._workspace(root, {
+                "disease-models/wwox/analysis/note.md":
+                    "line one\nline two\nthe dead one is FT-500 here\n"})
+            found = check.scan_prose(root, "wwox", check.load_queue(root, "wwox"))
+            self.assertEqual(len(found), 1)
+            self.assertEqual(found[0]["line"], 3)
+            self.assertTrue(found[0]["file"].endswith("note.md"))
+            self.assertIn("FT-500", found[0]["context"])
+
+
+class TheProseCorpusIsClean(unittest.TestCase):
+    """The live measurement, kept executable rather than as a prose number."""
+
+    def test_no_prose_surface_cites_an_entry_that_does_not_exist(self) -> None:
+        root = HERE.parents[1]
+        entries = check.load_queue(root, "wwox")
+        if entries is None:  # pragma: no cover - only in a stripped workspace
+            self.skipTest("no full-text queue in this workspace")
+        found = check.scan_prose(root, "wwox", entries)
+        self.assertEqual(
+            [(r.get("file"), r.get("queue_id")) for r in found], [],
+            "the prose baseline was 0 once FT-112's dead pointer was repaired on 2026-09-22")
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

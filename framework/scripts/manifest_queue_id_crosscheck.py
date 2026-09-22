@@ -57,6 +57,15 @@ from pathlib import Path
 QUEUE_RELATIVE = "disease-models/{disease}/research/full_text_queue_current.md"
 MANIFEST_RELATIVE = "disease-models/{disease}/research/deepdive_manifests"
 
+# The prose surfaces that cite FT identifiers in running text rather than in a manifest
+# field. `--prose` scans these; the queue file itself is excluded because its own
+# headings are what define the addresses.
+PROSE_GLOBS = (
+    "disease-models/{disease}/research/commit_candidates/*.md",
+    "disease-models/{disease}/research/*_current.md",
+    "disease-models/{disease}/analysis/*.md",
+)
+
 # A queue heading. The file writes `## FT-001` through `## FT-096`; the width is a house
 # convention and is normalised away below so `FT-71` and `FT-071` are the same address.
 QUEUE_HEADING_RE = re.compile(r"(?m)^##\s+(FT-\d+)")
@@ -162,6 +171,48 @@ def audit(manifest: dict, queue_entries: dict[str, str]) -> dict:
     }
 
 
+def scan_prose(root: Path, disease: str,
+               queue_entries: dict[str, str]) -> list[dict]:
+    """Every FT reference in a prose surface that resolves to no `## FT-` heading.
+
+    🔴 WHY THIS MODE EXISTS, and it is a found defect rather than a hypothetical.
+
+    On 2026-09-22 `CC-20260921-WWOX-ENZYMOLOGY-P306-01` was found pointing at
+    *"`FT-112` / packet item `A11`"*. `grep` returned **zero** occurrences of `FT-112`
+    anywhere in the queue: the candidate had been citing an entry that was never written.
+    Every gate was green, because the manifest check above only reads
+    `multihop.queued[].queue` fields inside deepdive manifests — a reference in a
+    candidate's prose is invisible to it.
+
+    The RESOLVES question is the same one, asked of a wider surface. BELONGS is
+    deliberately NOT asked here: prose cites an entry for many legitimate reasons, so
+    "this entry does not name that PMID" is not a defect the way it is in a manifest field.
+    """
+    findings: list[dict] = []
+    queue_path = (root / QUEUE_RELATIVE.format(disease=disease)).resolve()
+    seen: set[Path] = set()
+    for pattern in PROSE_GLOBS:
+        for path in sorted(root.glob(pattern.format(disease=disease))):
+            resolved = path.resolve()
+            if resolved == queue_path or resolved in seen:
+                continue
+            seen.add(resolved)
+            try:
+                text = path.read_text(encoding="utf-8", errors="replace")
+            except OSError as exc:
+                findings.append({"file": str(path), "line": 0, "queue_id": None,
+                                 "error": str(exc)})
+                continue
+            for number, line in enumerate(text.splitlines(), start=1):
+                for match in FT_REFERENCE_RE.finditer(line):
+                    identifier = canonical(match.group(1))
+                    if identifier not in queue_entries:
+                        findings.append({"file": str(path.relative_to(root)),
+                                         "line": number, "queue_id": identifier,
+                                         "context": line.strip()[:120]})
+    return findings
+
+
 def errors_for(manifest: dict, queue_entries: dict[str, str]) -> list[str]:
     """BLOCK-grade messages for `deepdive_manifest.validate` to append."""
     report = audit(manifest, queue_entries)
@@ -195,6 +246,10 @@ def main() -> int:
     parser.add_argument("--json", action="store_true")
     parser.add_argument("--strict", action="store_true",
                         help="exit 1 when any identifier is unresolved or foreign")
+    parser.add_argument("--prose", action="store_true",
+                        help="scan commit candidates, ledgers and analysis files for FT "
+                             "references that resolve to no queue heading, instead of "
+                             "auditing manifests")
     args = parser.parse_args()
 
     root = Path(args.root).resolve()
@@ -203,6 +258,24 @@ def main() -> int:
         print(f"ERROR: no full-text queue at "
               f"{root / QUEUE_RELATIVE.format(disease=args.disease)}", file=sys.stderr)
         return 2
+
+    if args.prose:
+        findings = scan_prose(root, args.disease, queue_entries)
+        if args.json:
+            print(json.dumps({"queue_entries": len(queue_entries),
+                              "unresolved": findings}, indent=1))
+        else:
+            for row in findings:
+                if row.get("error"):
+                    print(f"{row['file']}  [UNREADABLE] {row['error']}")
+                    continue
+                print(f"{row['file']}:{row['line']}  [UNRESOLVED] {row['queue_id']} "
+                      f"— {row['context']}")
+            print(f"queue entries: {len(queue_entries)} | "
+                  f"prose FT references unresolved: {len(findings)}")
+            print("NOTE: RESOLVES only. A prose citation may legitimately name an entry "
+                  "about another paper, so BELONGS is not asked here.")
+        return 1 if (args.strict and findings) else 0
 
     if args.manifest:
         paths = [Path(p) for p in args.manifest]
