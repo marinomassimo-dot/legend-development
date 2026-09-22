@@ -79,6 +79,20 @@ grading a re-read's return as new.
 > re-read that enumerated four artefacts correctly and then measured only one, building a baseline
 > that omitted four facts it went on to score as new.
 
+**Step 0 — check the matcher before believing the count.** Reading what you enumerated is necessary
+and not sufficient: the count can be wrong before any reading happens. Two recorded instances, same
+family:
+
+```
+grep -i lysis     matched  ana-LYSIS     — the pattern hit an unrelated superstring  (48 vs 1)
+pgrep -f <job>    matched  the asker     — the pattern hit the query itself (false RUNNING, 2h)
+```
+
+Before believing any count — **including zero, including one** — establish that your pattern cannot
+match a **superstring of itself** and that your matcher cannot **match itself**. A self-matching
+query is the degenerate case where enumeration and reading agree and are both wrong. *The first
+number a tool hands you is not the measurement.*
+
 **Bound the absence.** An absence claim states its scope, and the honest ones name at least:
 `FILE TYPE` · `LANGUAGE` · `DOCUMENT CLASS` · `SOURCE/QUERY SCOPE`. "No WWOX study examined the
 pellet" is not a finding until it says which corpus, which document class, and which query.

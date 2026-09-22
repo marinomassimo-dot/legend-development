@@ -220,6 +220,43 @@ pre-registered — it must be tested on a fourth datum before it counts as anyth
 
 ---
 
+## 6 · A SECOND INSTANCE OF THE SAME SEARCH DEFECT — from the harness, not the corpus
+
+The `ana-lysis` false positive in §3 has a sibling, found the same day in tooling rather than in
+literature. Recorded here because it is the **same failure family**, and the pair generalises the
+lesson better than either alone.
+
+Two background waiters were left polling `until ! pgrep -f run_release_regressions; do sleep; done`.
+Each waiter's **own command line contains the string `run_release_regressions`**, so `pgrep -f`
+matched the asker. The exit condition — *"no such process exists"* — was asked by a process that
+made it exist. Both waited **2h08m and 2h04m**, consuming **1 second of CPU between them**, for
+themselves to die. Meanwhile foreground checks using the same pattern reported `RUNNING` for a
+suite that had already completed, so a **false liveness claim** was made twice from a query
+matching only its own asker.
+
+**The generalisation, which is what makes this worth keeping:**
+
+```
+§3  grep -i lysis          matched  ana-LYSIS        — the pattern hit an unrelated superstring
+§6  pgrep -f <job>         matched  the asker        — the pattern hit the query itself
+```
+
+Both are **false positives from a pattern matching something other than what was meant**, and both
+would have been caught by the same discipline: *the first number a tool hands you is not the
+measurement.* §3's `48` and §6's `RUNNING` were each a count of the wrong thing.
+
+🎯 **This sharpens `enumerate_baseline_before_scoring` step 2.** "Read what you enumerated" is
+necessary but not sufficient. The stronger form is: **establish that your matcher cannot match
+itself, and that your pattern cannot match a superstring of itself**, before believing any count —
+including a count of zero, and including a count of one. A self-matching query is the degenerate
+case where enumeration and reading agree and are both wrong.
+
+**Scope of this instance:** harness/tooling, not the WWOX corpus. It changes no scientific claim in
+this file. It is recorded because the primitive it strengthens is used on the corpus, and because a
+method that only collects its successes is not a method.
+
+---
+
 ### 4.5 Honest limits of this cycle
 
 - This measured **81 deep-dive manifests**, not the full repository. Dossiers, receipts and queue
