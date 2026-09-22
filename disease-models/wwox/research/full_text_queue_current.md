@@ -6323,3 +6323,53 @@ ratchet, not a wall — stripping the identifiers would have been the failure th
 R package's own documentation on CRAN, which reproduces the model). Nothing else here needs acquiring unless
 a WWOX result is ever proposed to rest on general developmental timing — which
 `postdiagnosis_window_evidence_20260922.md` §5 forbids by construction.
+
+---
+
+## FT-133
+**Papers:** PMID 38122823 / DOI 10.1038/s41586-023-06981-x — Nascimento et al. 2023, *Nature* 626:1056–1065 ·
+PMID 27846470 / DOI 10.1126/science.aaf7073 — Paredes et al. 2016, *Science* 354:6308 ·
+PMID 39308952 / DOI 10.3389/fnins.2024.1434508 — Sorrells 2024, *Front Neurosci* 18:1434508 ·
+PMID 32139519 / DOI 10.1126/science.aay5947 — Sjöstedt et al. 2020, *Science* 367:6482 ·
+PMID 16941225 / DOI 10.1007/s10735-006-9046-5 — Nunez et al. 2006, *J Mol Histol* 37:115–125 ·
+PMID 42101182 / DOI 10.1080/01677063.2026.2649162 — Vijayakumar et al. 2026, *J Neurogenet* 40:60–79
+**Title:** Declared reading debt opened by the search for public WWOX data in the human postnatal
+germinal compartment — the postnatal human SVZ/stream resource set and the atlas-sampling sources
+**Priority:** HIGH for `38122823`; MEDIUM for `27846470`; LOW for the rest
+**Why:** Opened by
+[`wwox_postnatal_svz_expression_20260922.md`](../analysis/wwox_postnatal_svz_expression_20260922.md), which
+had to establish, per resource, **whether a resource sampled a postnatal human germinal zone at all** before
+its silence about WWOX could be interpreted. 🔴 **None of these is a WWOX paper. None may ever support a WWOX
+claim** — `38122823` and `27846470` contain **zero occurrences of "WWOX"**, which is precisely the finding.
+- 🟢 **`38122823` and `27846470` were READ IN SERVED FULL TEXT in that act** (PMC10901738, PMC5436574) and are
+  declared here because they carry no receipt and no registry record, and because **figures and supplementary
+  tables were not retrieved** — a WWOX row in a supplement would not have been seen. `38122823` is the
+  load-bearing one: it is the **single-nucleus RNA-seq of the entorhinal-cortex migratory stream
+  microdissected from a two-week-old human infant**, the only accessible dataset covering the right species,
+  the right compartment and an age inside the WOREE presentation window. 🔴 **Its data-availability statement
+  is NOT in the PMC body as served, so no GEO/dbGaP accession is named anywhere in that analysis and none was
+  reconstructed.** `27846470` establishes that postnatal human SVZ tissue at birth, 1, 1.5, 3, 5, 7 months,
+  2 y, 6 y and 15 y has already been collected, sectioned and banked.
+- `39308952` is a **review (secondary)**, read in full, used only for the postnatal-stream inventory and the
+  EC-stream duration; every primary it restates is cited to its own primary or left unclaimed.
+- `32139519` is at **abstract-depth** and is cited for one purpose only: what the Human Protein Atlas brain
+  resource **sampled** ("10 major brain regions and multiple subregions", human/pig/mouse), so that HPA
+  silence about WWOX is never misread as an HPA negative. 🔴 The HPA host is `403` at CONNECT from this
+  deployment, so the manifest was never read directly.
+- 🔴 **`16941225` is the human WWOX-protein IHC paper and it FAILED to serve.** `get_full_text_article` on
+  **PMC4144810** returns **`full_text: ""`** — a valid PMCID with an empty body, the same defect `FT-132`
+  recorded twice. Its result — WWOX protein in human "neurons, **ependymal cells** and astrocytes" — is
+  therefore **abstract-depth**, with **no donor age**, no region list and no image inspected. This is the
+  closest human anatomical near-hit to the ventricular wall in the entire literature, and it is undated.
+- 🟡 **`42101182` is unresolved, not evidence.** It is the only indexed record joining `WWOX` to `BrainSpan`,
+  but the served abstract has every italic gene token silently deleted (bare comma runs), so **why it matched
+  could not be determined**, and `convert_article_ids` returns **no PMCID**. Even at its best its window is
+  8–37 post-conception weeks — prenatal, and the wrong side of birth for the question asked.
+**Current status:** 🔴 **declared debt.** Two read in served full text without figures or supplements, one
+review read in full, two abstract-depth, one measured-unretrievable-and-undated, one unresolved. Logged
+because the reasoning layer now names them and `UNREAD_PREMISE` is a ratchet, not a wall — stripping the
+identifiers would have been the failure the check exists to prevent.
+**Next action:** `38122823` first — its figures, its supplementary case list (donor ages and post-mortem
+intervals) and, above all, its **data-availability statement**, which is the one artefact that would convert
+the standing tissue request into a desk reanalysis. Then `16941225` by any route that serves a body, to put a
+**donor age** on the only human ependymal WWOX-protein observation that exists.
