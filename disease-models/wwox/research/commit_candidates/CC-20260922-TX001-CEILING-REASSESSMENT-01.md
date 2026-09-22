@@ -121,3 +121,76 @@ A non-zero scientific delta on a therapeutic strategy record, outside the curren
 scope. And §2 rests on a prediction whose measurement is precisely the experiment under discussion —
 propagating a ceiling revision from an unmeasured branch would commit the error this candidate is
 written to prevent.
+
+---
+
+## 8 · ⭐ CONVERGENT CONFIRMATION — two branches broke the same normaliser by two different mechanisms
+
+Added 2026-09-22 after the branch reconciliation imported
+[`c517_minus3_rna_rescue_handle_20260921.md`](../../analysis/c517_minus3_rna_rescue_handle_20260921.md)
+(sibling branch `f7595f6`, landed here at `b30dfbf`). **Another actor's work — attested, not read
+first-hand here.**
+
+§ 4 constraint 4 above says: *do not normalise to the exon 4–6 core, because the short isoform's
+exon 5–6 junction **rises** when the long isoform is lost, so that denominator moves with the
+lesion.* That was derived from Davids (`PMID 30362252`).
+
+The sibling reached the same prohibition from a **completely different direction**:
+
+> The packet's normaliser is *"**Normaliser amplicon:** exons 4–6 ('core')"*, chosen *"upstream of
+> the affected junction"*. 🔴 **But an exons 4–6 amplicon SPANS the exon 5 → exon 6 junction — which
+> is the `c.517` acceptor.** So in any sample where an allele skips exon 6, the "core" amplicon is
+> **not constant**.
+
+### 8.1 Two independent failure modes of one denominator
+
+| route | mechanism | fails when |
+|---|---|---|
+| **this branch** (Davids, `PMID 30362252`) | the **short isoform's** exon 5–6 junction **rises** as the long isoform is lost — an **isoform-composition shift** | the long isoform is depleted, by any cause |
+| **sibling branch** (`c.517` geometry) | the amplicon **physically spans the affected acceptor** — a **junction-overlap** error | any allele skips or removes **exon 6** |
+
+> 🟢 **Neither derivation knew of the other, and they are not the same argument.** One is about
+> isoform abundance, the other about amplicon placement. **The exon 4–6 normaliser is therefore
+> unsafe in two disjoint ways, and the case against it is considerably stronger than § 4 constraint
+> 4 stated alone.**
+
+### 8.2 The scope, stated precisely — this is NOT a defect in the packet's own worked example
+
+🔴 **For the packet's stated subject, `c.1057-2A>G`, the junction-overlap mode does not fire**: that
+allele has **no exon-6 lesion**, so the exon 4–6 amplicon does not span its affected junction.
+*(The isoform-shift mode from this branch's route is not so limited and can still fire.)*
+
+**It becomes a defect the moment the assay is run on any exon-6-affecting allele**, which includes at
+least: `c.517-2A>G` · `c.517-3C>A` · `c.516+1G>A` · `c.606-1G>A` · the **exon 6–8 deletion** · and
+the allele in trans in the sibling's Patient 39, `(516+1_517–1)_(1056+1_1057-1)del`, **which removes
+exon 6 under either exon-boundary reading** — so that conclusion does not depend on resolving the
+exons 5–8 versus 6–8 discrepancy in the source.
+
+### 8.3 What else the comparison establishes about assay reuse
+
+🔴 **The `TX-001` junction assay does NOT read `c.517-3C>A` unmodified, and the premise that it would
+is wrong on the record.** The packet specifies *"forward primer in **exon 8**, reverse primer in
+**exon 9**"* for the intron 8 / exon 9 acceptor. **An amplicon anchored in exons 8 and 9 cannot
+report an exon-5/exon-6 event at all.**
+
+What would have to change: a **new primer pair** (forward exon 5, reverse exon 6 or 7 — no sequences
+asserted, as the packet itself withholds them and for the same reason); a **new normaliser**, per
+§ 8.1; and a **new expected-product table**, because the packet's shift table is computed for exon 9
+while **exon 6 skipping removes 89 nt** — a different product and a different frame consequence.
+
+🟢 **Everything else transfers unchanged at near-zero marginal cost:** the ±cycloheximide arm, the
+vehicle twins, the endogenous NMD-sensitive positive control, the healthy-donor baseline, capillary
+electrophoresis and densitometry, and escalation to long-read cDNA if multiple species appear.
+
+⚠️ **And the standing bound on all of it:** *"This is a property of a genotype, not an opportunity
+that exists."* No RNA, no cells and no material from that patient exist in any form this repository
+can see, **and none is sought here.**
+
+### 8.4 Consequence for § 4 of this candidate
+
+Constraint 4 is **upgraded from one mechanism to two, and its scope is widened**: it now applies not
+only to the reference genotype's assay but to **every WWOX splice assay this repository might design
+on an exon-6-affecting allele**. 🔴 **It also means the defect was latent in a document a laboratory
+was meant to execute** — the same class as the `+8`-versus-6-nt sign error repaired in that packet
+earlier this session, and found the same way: by comparing the packet against a second allele rather
+than re-reading it alone.
