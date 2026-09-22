@@ -6641,3 +6641,97 @@ no orthologue alignment was obtainable.
 locate the interface would have failed **even if the download had worked**. The conclusion therefore
 rests on **geometry, not conservation**, and residue-level conservation at 230 remains the one
 genuinely unfilled gap in that node.
+
+---
+
+## FT-146
+**Papers:** PMID 35243249 / PMC8866893 (Omachi 2022, *iScience* — Alport PTC readthrough) ·
+PMID 32810216 (`KCNJ2` p.Glu293Lys NanoBiT) · PMID 39550037 (`PNPLA3` I148M) ·
+PMID 39623381 (`ACKR4` C-terminal tag) · PMID 28540421 (`ENV9`/`RDH12`) ·
+PMID 34314704 (Amorosi 2021, *AJHG*, `CYP2C9`/`CYP2C19` variant-effect maps) ·
+PMID 39319420 (Boyle 2024, *Genetics*) · PMID 41908531
+**Title:** The function-per-molecule analogical-transfer set — **method transfer only, never disease conclusion**
+**Priority:** **HIGH for 35243249 and 39550037**; MEDIUM for the rest
+**Why:** Declared by
+[`function_per_molecule_assay_design_20260922.md`](../analysis/function_per_molecule_assay_design_20260922.md).
+None is a WWOX paper. Each is queued for a **method, pattern or standard of proof**, and each carries
+an explicit `WHAT TRANSFERS` / `WHAT DOES NOT` in that file. **They must never be cited as WWOX
+evidence.**
+
+🟢 **`PMID 35243249` was fetched and read in full (47,282 characters) by the delegate**, and is the
+structural analogue of the whole question — a paired amount-reporter plus split-assembly-reporter
+design built to ask *"if our therapy restores the protein, is the restored protein functional?"*, with
+the authors' own sentence: *"it may be difficult to rescue the variant phenotype even if a full-length
+protein is produced."* ⚠️ **It carries NO receipt on this branch**, because the delegate's brief
+forbade touching the ledger — so from the ledger's point of view it is `PREMISE: UNREAD_PRIMARY`
+despite having been read. **Receipt candidate.**
+
+🔴 **`PMID 39550037` cuts AGAINST the recommendation it was found in support of**, and is queued for
+that reason: a NanoBiT interaction readout scored a genuinely pathogenic variant as **entirely
+normal**. So a normal engagement curve for `Q230P` would establish only that *that particular
+engagement* is intact — never that the protein is functional.
+🔴 **`PMID 32810216`** is why a two-terminus tag pilot is mandatory rather than optional: the **same**
+variant scored **dead** with intracellular tags and **normal** with extracellular ones. **Tag topology
+decided the answer.** `PMID 39623381` is a second published instance of a C-terminal tag silently
+changing a protein's biology.
+⚠️ **`PMID 28540421`** sets the standard of proof for calling a cellular readout SDR-dependent —
+**active-site AND cofactor-site mutants must both abolish it** — and the file records that **WWOX does
+not currently meet it**.
+
+---
+
+## FT-147
+**Papers:** PMID 21476439 — Sałuda-Gorgul, Seta, Nowakowska & Bednarek 2011, *Z Naturforsch C J Biosci*
+66(1–2):73–82 — *"WWOX oxidoreductase — substrate and enzymatic characterization"*
+**Title:** 🔴 **A CORRECTION I OWE THE RECORD** — heterologous WWOX expression has been reported; only purification has not
+**Priority:** **HIGH** — it is a named falsifier of the recommended assay
+**Why:** *(This paper is already named in `FT-130`. This entry exists for the correction, not to
+re-declare the paper.)*
+
+I asserted, in two delegate briefs, that **"the SDR domain has never been expressed or purified by
+anyone."** 🔴 **That is too strong, and Scientist D caught it.** According to PubMed, this paper's
+abstract states verbatim:
+
+> *"Due to its potential role in sex-steroid metabolism, using **two bacterial expression systems**, we
+> have cloned **WWOX fusion proteins showing oxidoreductase activity in a crude extract**, defined a
+> course of enzymatic reactions for selected steroid substrates, and determined related Km values."*
+
+**The corrected statement:** *no purified, folded, biophysically characterised WWOX SDR protein
+exists — but **heterologous expression has been reported at least twice**.* A GST-fused SDR fragment
+was also used in a pull-down (`PMID 27869163`, *Oncogene*, PMC5398941 — the delegate's attestation,
+not verified here).
+
+**Why it matters rather than being pedantry:** it **lowers the cost estimate** for any
+purified-protein route, which had been costed as new protein production from zero. ⚠️ **And it
+licenses nothing further:** the activity was in **crude extract**, and **no yield, purity, Tm or
+monomer fraction is reported anywhere**; the construct boundaries are unread. `pmc_id: null` ⇒
+`PREMISE: UNREAD_PRIMARY`.
+⭐ **This is the Łódź group** (Medical University of Łódź, Bednarek) — so the `§13` enzymology bridge
+and this correction are the same source. `REVIVAL_TRIGGER`: **if this body reports purified enzyme
+with a dead-triad control, purified-protein specific activity becomes the recommended assay** and
+displaces the engagement assay.
+
+---
+
+## FT-148
+**Papers:** PMID 17291468 — *Brain Res* 2007, [DOI](https://doi.org/10.1016/j.brainres.2007.01.027) —
+NeuN antibody clone characterisation
+**Title:** 🔴 A REAGENT fact that disqualifies a headline datum from the ataxia question
+**Priority:** **HIGH** — it is load-bearing, and it is one sentence
+**Why:** Declared by
+[`cerebellum_layer_localisation_20260922.md`](../analysis/cerebellum_layer_localisation_20260922.md),
+which reports verbatim that **`MAB377` is clone A60, and clone A60 does NOT label Purkinje cells.**
+
+🔴 **Consequence: the ≈61% cerebellar `NeuN⁺WWOX⁺` fraction excludes Purkinje cells from its own
+denominator by construction.** That fraction is the single datum arguing hardest **against** a
+delivery-limited account of the cerebellar deficit — *"cerebellar transduction is not deficient, it is
+the highest of three regions"* — and it is therefore **inapplicable to the ataxia question**, because
+the cell type ataxia would implicate is the one the antibody cannot see.
+
+⚠️ **This is a reagent-level finding, not a biological one.** It does not show that Purkinje cells are
+poorly transduced; it shows that **nobody has measured whether they are**, and that a number widely
+read as evidence they are fine **cannot bear on them at all**. `PREMISE: NOBODY_LOOKED` for Purkinje
+transduction. `REVIVAL_TRIGGER`: any Purkinje-resolved transduction measurement — **calbindin**,
+`PCP2` or `Car8` co-staining.
+⚠️ `abstract-depth` ⇒ `PREMISE: UNREAD_PRIMARY`; the clone-A60 attribution is the delegate's
+first-hand read of that paper, carried here as its attestation.
