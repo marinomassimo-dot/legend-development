@@ -1,8 +1,22 @@
 # LEGEND SCIENTIFIC DISCOVERY METHOD — V0 PROPOSAL
 
-**Status:** 🔴 **PROPOSAL. READ-ONLY. NOT IMPLEMENTED, NOT NORMATIVE, NOT A GATE.**
+**Status:** 🟠 **EVIDENCE RECORD. READ-ONLY, NOT NORMATIVE, NOT A GATE.**
 No code, no governance, no registry and no workflow is created by this file. It has no authority
-over any actor and nothing in LEGEND reads it. It exists to be argued with.
+over any actor. It exists to be argued with.
+
+> **Superseded as a proposal on 2026-09-22.** The Operator authorized implementation, and V0 now
+> exists as an **optional** skill: [`.claude/skills/legend-discovery-method/SKILL.md`](../../.claude/skills/legend-discovery-method/SKILL.md).
+> **This file remains the evidence base** — the real session instances, the counter-instances and
+> the honest admissions of what is unproven. The skill says how to *use* the primitives; this file
+> says *why they exist* and *on what evidence*. Read this before arguing that a primitive should
+> be kept or dropped.
+>
+> 🔴 **Two recommendations in §9 below were overridden by the Operator's authorization, and the
+> disagreement is preserved rather than edited away.** §9 concluded *"V0 should not be implemented
+> on this evidence"* and proposed only four primitives; the implemented skill carries seven, with
+> `recursive_reread` and `enumerate_baseline_before_scoring` promoted out of candidacy. §6's
+> recommendation was **upheld**: `adversarial_verify` was *not* implemented as a new primitive, and
+> survives in the skill only as a habit pointing at `legend-locator-audit`.
 
 **Date:** 2026-09-22 · **Author:** Orchestrator · **Evidence base:** one long autonomous session —
 roughly a dozen delegate waves, two deliberate recursive re-reads, and the defects the session

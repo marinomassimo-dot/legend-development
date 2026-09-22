@@ -89,6 +89,11 @@ Three facts bind before you have finished reading anything else:
 | Every analytical batch or completed full-text read, **before** takeaways | [`legend-session-self-eval`](.claude/skills/legend-session-self-eval/SKILL.md) — the upgrade is the answer, not the promise of one |
 | Every session, before closing | [`legend-capability-scout`](.claude/skills/legend-capability-scout/SKILL.md) |
 | Every session, final response | [`legend-session-takeaways`](.claude/skills/legend-session-takeaways/SKILL.md) |
+| ⚪ **Optional, never required** — about to write *first / novel / absent / untested / unique*; one mechanism reached too fast; an adjacent literature may hold the assay; a prediction should be fixed before searching; an experiment must discriminate rather than measure; a new question makes a read paper worth reopening | [`legend-discovery-method`](.claude/skills/legend-discovery-method/SKILL.md) — pick one primitive; using one alone is the normal case |
+
+> ⚪ **The last row is the only optional entry in this table.** `legend-discovery-method` is a
+> toolkit, not a bootstrap: it gates nothing, is required by nothing, and a session that never
+> invokes it has broken no rule. Every other row above applies without being asked.
 
 ---
 
