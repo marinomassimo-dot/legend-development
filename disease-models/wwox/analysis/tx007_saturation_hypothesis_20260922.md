@@ -210,8 +210,35 @@ is a live confound on the headline phenotype.
 ### 7.4 `censor*` appears **0 times**, yet animals are harvested at P30 / 3 mo / P180 / P240 / P300
 
 The predecessor paper carries a documented **censored-as-event** Kaplan–Meier inconsistency
-(`CC-20260826` § 7). This likely explains **vehicle-injected WT+RI sitting at ≈72% at 300 days** — a
-wild-type arm should not lose a quarter of its animals.
+(`CC-20260826` § 7), and **vehicle-injected WT+RI sits at ≈72% at 300 days** — a wild-type arm should
+not lose a quarter of its animals.
+
+🔴 **CORRECTED 2026-09-22 by Scientist A's animal-flow reconstruction. My "this likely explains it"
+was too strong, and harvest-plotted-as-death is now the LESS favoured reading.** The argument needs
+no new data:
+
+- HD's curve is **flat from ~85 d to 300 d** while HD tissue was demonstrably taken **terminally** at
+  ~P90/P180/P240/P300 ⇒ **harvest-as-event is refused** (each harvest would step the curve down).
+- LD's curve **reaches 0%** while LD tissue was taken at P30 ⇒ **harvest-as-censored is refused**
+  (a censored animal holds a KM estimate above zero permanently).
+
+⇒ **Under a single uniform convention, the harvested animals were never in the Fig 3B denominators at
+all.** Conditional on one inherited pixel attestation, and stated as conditional.
+
+**The space is now exactly two readings**, not one:
+| | reading | support |
+|---|---|---|
+| **R1** | the ≈72% are **real events** (~5–6 of 20) | shape-consistent with **neonatal ICV procedure attrition** — both drops early, then ~250 flat days, which is **not** an aging hazard; and favoured by the argument above |
+| **R2** | an **internally inconsistent** convention | has **precedent in this very lab** (`CC-20260826` § 7) |
+
+🎯 **And there is a free discriminator that needs no new data.** With no censoring a KM estimate can
+only take **multiples of 1/n**. Verified arithmetic: `14/20 = 70%`, `15/20 = 75%` — so **≈72% is
+unreachable with n = 20**; `23/30 = 76.67%`, `24/30 = 80%` — so **≈78% is unreachable with n = 30**.
+**Reading either plateau against the panel's gridlines therefore tests for censoring directly.**
+⚠️ Pixel-read error is a live alternative and this is recorded as a **discriminant, not a result**.
+
+⚠️ **And the paper runs the control that would settle it** — *"WT littermates received identical
+injections to control for procedural effects"* — **and never reports its survival result.**
 
 ### 7.5 🟢 `VG_DOSE_ALONE_IS_NOT_TRANSFERABLE` extends to **vg/µL**
 

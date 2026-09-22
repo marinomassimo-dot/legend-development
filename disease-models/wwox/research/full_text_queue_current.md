@@ -6616,3 +6616,28 @@ protein is FUNCTIONAL — function per molecule, at matched abundance?* Its answ
 functional measurement has ever been made on a WWOX missense protein whose abundance was
 restored."** 🔴 **That census is built from titles and abstracts — "an abstract is not a read"** — so
 nothing in it may be promoted without a full-text read and a receipt.
+
+---
+
+## FT-145
+**Papers:** PMID 17258342 · PMID 37285720 · PMID 11007791 · PMID 11306088 · PMID 17567906
+**Title:** SDR dimerisation-mode set — the two documented interfaces, used to EXCLUDE a residue
+**Priority:** LOW to read; **HIGH to keep declared**
+**Why:** Declared by
+[`q230p_structural_mechanism_20260922.md`](../analysis/q230p_structural_mechanism_20260922.md), which
+used them to cross-check that `Gln230` is excluded from **both** SDR dimerisation modes the literature
+documents: the **αE/αF four-helix bundle** (`17258342`, `37285720`) and the **αG/βG P-axis**
+(`11007791`, `11306088`).
+🟢 **They were used only as a topology inventory, and the exclusion does not depend on them.** The
+load-bearing fact is that `Gln230`'s **SASA in the free monomer is 0.00 Å²** — independently
+re-measured by the Orchestrator with a Shrake–Rupley implementation — and an interface residue must
+have `SASA_monomer > 0` to be buried by a partner. **The argument is topology-independent**; these
+records merely confirm no documented mode places an exposed face there.
+🔴 **All five are `abstract-depth`** ⇒ `PREMISE: UNREAD_PRIMARY` ×5. **RCSB, UniProt and EBI are all
+`connect_rejected`** (with `example.com` as the confirming control), so no deposited SDR homodimer and
+no orthologue alignment was obtainable.
+⭐ **And one of them forecloses a route the brief had proposed:** `PMID 37285720` reports that SDR
+**interface residues are not conserved even between orthologues** — so an alignment-transfer route to
+locate the interface would have failed **even if the download had worked**. The conclusion therefore
+rests on **geometry, not conservation**, and residue-level conservation at 230 remains the one
+genuinely unfilled gap in that node.

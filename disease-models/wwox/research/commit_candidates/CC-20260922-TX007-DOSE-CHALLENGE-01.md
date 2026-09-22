@@ -292,7 +292,14 @@ survival cohort.**
 
 🔴 **And the sharper point, which replaces the 100%-vs-50% contrast entirely:**
 
-> **Nobody compared the two vectors, in either direction.** The paper asserts *"No difference was
+> **Nobody compared the two vectors, in either direction.**
+>
+> 🔴 **SCOPE CLARIFIED 2026-09-22 (Scientist A).** This finding is about the **two VECTORS in the
+> 2021 paper**. It must **not** be read as applying to the 2026 **dose** arms: **LD vs HD *is*
+> formally compared there, `p < 0.0001`** (inherited caption attestation). Two different comparisons,
+> and conflating them would understate what the 2026 paper actually tested. ⚠️ Note also that **HD's
+> own sentence in the running text carries no comparator and no statistic** — it is `NOT TESTED` as
+> written, and becomes `FORMALLY COMPARED` only via that caption. The paper asserts *"No difference was
 > noted…"* **while running no statistical comparison between the two arms** — each arm is tested
 > only against its own untreated controls. *An untested equivalence is not equivalence.* **But
 > §4a's counter-evidence is not a valid time-to-event comparison either:** *"mortality among

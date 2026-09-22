@@ -283,6 +283,41 @@ molecular masses"* — whereas the fold family's default elsewhere is **degradat
 > that flips the sign of the reopened upregulation axis.** It is not established for either site, and
 > no monomer model can establish it.
 
+### 🔴 CORRECTED 2026-09-22 — the sentence above is wrong in two ways, and both corrections are mine
+
+**(a) A monomer model CANNOT locate an interface, but it CAN exclude a residue from one.** Scientist B
+supplied the argument and I verified it with an independent Shrake–Rupley implementation:
+
+| residue | SASA (Å², measured here) | interface-capable? |
+|---|---|---|
+| **Gln230** | **0.00** | 🟢 **NO — excluded** |
+| Gln353 | **30.01** | ⚠️ yes, cannot be excluded |
+| Gln354 | **38.71** | ⚠️ yes, cannot be excluded |
+
+**An interface residue must be solvent-accessible in the free monomer to be buried by a partner**
+(ΔSASA > 0 requires SASA_monomer > 0). A residue already fully occluded by its own chain **cannot be
+buried further, wherever the interface is** — so the exclusion is **topology-independent**. And the
+monomer bias runs toward **under**-counting exposure, so it cannot lift a residue from exactly 0.00.
+*(Context: only 4 of 60 sampled residues fall below 1.0 Å²; median 54.9 Å².)*
+
+⇒ **For `Q230P` the interface→aggregation branch is CLOSED NEGATIVE, and the therapeutic red flag it
+carried is removed.** ⇒ **For 353/354 the limitation in this § STANDS**, now with numbers instead of
+a worry.
+
+**(b) 🔴 The premise I built the fork on is itself unsourced, and I amplified it.**
+`discovery_ledger_current.md:852` asserts *"WWOX **omodimerizza via SDR**"* as a bare clause inside a
+limitations bullet — **no source, no PMID, no wikilink, no tag.** Scientist B's fully-expanded query
+census (OR blocks checked term-by-term, positive control firing) found **no published source
+establishing that WWOX homodimerises through its SDR at all**: the one dimerisation hit is
+**p-WWOX/p-p53 *hetero*-dimers** (PMID 39894307), and the self-association hits are about TIAF1 and
+Zfra, not WWOX.
+
+**I wrote that premise into this file as though established, built the "interface ⇒ aggregation ⇒ a
+boost is dangerous" fork on it, and reported that fork as the highest-value open fact.** Its correct
+label is **`PREMISE: UNVERIFIED`**, and it is bounded as a query census — `[All Fields]` cannot see
+Methods. ⚠️ **Unverified is not false:** the fork is unsupported, **not** refuted, and 353/354's
+exposure means an interface role for *them* remains genuinely open.
+
 ⚠️ Note also `PMID 35716775`'s unprompted warning, which S surfaced: *"AlphaFold2 cannot be used to
 assess effects of point mutations, since it relates to point mutations as 'local noise'."* §5 above
 already refuses ΔΔG-style scoring for a **deletion**; this is the adjacent caution for the model
