@@ -76,3 +76,36 @@ run has been made.
   law for this session, not a candidate primitive.
 - **`stage explicit paths, never `git add -A` while delegates write`** is an operating rule adopted
   after a real incident; it is process hygiene, not a method.
+
+---
+
+## §4 · Addendum — the fifth autonomous run (2026-09-22, later)
+
+**Same scoring rule.** A primitive earns a count only from an instance that **changed an outcome**.
+Failures count equally. Zero recorded failures = *untested against failure*, not clean.
+
+| primitive | new instance this run | count before → after | status change |
+|---|---|---|---|
+| **`enumerate_baseline_before_scoring`** | 🟢 **SECOND SUCCESS, and the first on the Orchestrator.** Run *before* writing, it surfaced a commit candidate for the same defect and the same glucose argument already held in a sibling audit. **Two findings demoted to `REDISCOVERY` before publication.** 🔴 No delegate and no hand-back is involved — which **answers the standing objection** that its instances might measure hand-back compression rather than the corpus | 4 → **5** (3 failures, **2 successes**) | 🟡 → 🟢 **strong candidate.** Two independent successes, three failures, four distinct actors |
+| **`verify_the_omitted_clause`** | **Two, both cleanly SOURCE-SIDE.** (g) Hobson 2020's headline reads *"Puro-PLA is broken"*; the adjacent sentence affirms *"reports primarily on the **cytoplasmic abundance** of puromycylated NPCs"* — **the critique validates the design it appeared to kill.** (h) 🔴 **On our own evidence chain:** a page adjudication restored `±`, `<`, `⁺`, `⁻` on a table row and **never named that row's unit**, while the needle resolving the row was made of the character in doubt | 6 → **8**; 🔴 **source-side subtotal 2 → 4** | 🟢 **strongest on the page, and the objection is now half-answered:** the source-side count has **doubled without a single new delegate correction** |
+| **`gate_is_not_quantity`** | (f) **Puro-PLA destroys the molecule it counts** — *"puromycin incorporation results in premature truncation… and degradation of truncated proteins is enhanced"* ⇒ it reports production and **cannot** follow fate. (g) A page adjudication structurally reports **the characters its locators were about**, so a unit never carried by a locator is outside what it can certify | 5 → **7** | 🟢 unchanged — **six domains now** (antibody, metadata API, query tokenisation, fluorophore channel, labelling chemistry, evidence chain) |
+| **`preregister_prediction`** | 🎯 **`P1` REFUTED, and the refutation IS the finding.** Had the question been written afterwards I would have reported *"the repository mistranscribed"* — which is **false**. The pre-registration is what forced branch C to exist | 2 → **3** | 🟢 unchanged. ⚠️ Still **untested against failure** |
+| **`diverge_hypotheses`** | The existing candidate allowed **two** branches and blocked itself between them. Divergence produced a **third** — `TRANSCRIBED FAITHFULLY AND UNADJUDICATED` — which is the one that held and the one that makes candidate 7 propagatable | 2 → **3** | 🟢 unchanged |
+| **`connect_domains`** | Puro-PLA / FUNCAT-PLA imported from **synaptic neuroscience** into a fibroblast proteostasis question, with the `WHAT DOES NOT TRANSFER` half carried explicitly (**a fibroblast is not a neuron**; every source system named) | 2 → **3** | 🟢 unchanged |
+| **`recursive_reread`** | Cycles 3–4: **two `REDISCOVERY`, six `NEW DETAIL`/`NEW CONNECTION`, one claim-changing.** Yield profile consistent with the prior round — a mixture, and the mixture is the honest result | 1 → **2** | 🟡 → 🟢 **promoted.** Two rounds, different questions, both outcome-changing |
+| **`outcome_distribution_width`** | 🎯 **FIRST PROSPECTIVE TEST OF THE REVISED RULE, and it fired to REJECT.** Scientist C scored **platelet count** — *never counted in any WWOX animal, ever*, i.e. maximally **WIDE** — as **`WIDE × LOW ⇒ LOW`**, because cytopenias follow undernutrition, marrow failure and chronic illness alike and **no CBC result separates `R1` from `R3`**. The endpoint most tempting to promote as a novelty is the one the revision demoted | 1 (+1 failure) → **2** (+1 failure) | 🟡 → 🟡 **REFINE holding.** The repair now has one **prospective** confirmation, not merely a retrospective repair |
+| **`compress_experiment`** | Enters with its **first** instance: one matrix, five cells, **eight observation patterns and six named degeneracies**, each degeneracy mapped to the measurement that would break it | — → **1** | 🟠 **new, under-evidenced** |
+| **`adversarial_verify`** | **No instance.** §2.1 of the shadow-mode spec records why: `legend-locator-audit` already ships a **blind** version that is strictly stronger | — → **0** | 🟠 **`PROVISIONAL — SUSPECTED DUPLICATE`** |
+
+### §4.1 · What the addendum changes about the page's honesty
+
+🟢 **The correlation objection recorded in §2 is now half-answered on evidence rather than argument.**
+`verify_the_omitted_clause`'s **source-side** subtotal went **2 → 4** with **no new delegate
+correction**: one instance is a published paper's adjacent sentence, the other is our own
+adjudication record. The headline count of 8 still is not the number that supports adoption; **the
+number is 4**, and it is now the number that grew.
+
+🔴 **And the missing instrument is still missing.** No primitive has yet been run **deliberately on a
+case where it should not help**, with the null result recorded. Five rows still carry zero failures
+and remain *untested against failure*, not clean. **Nothing here is implemented and nothing is
+recommended for implementation** — §24 is unchanged.

@@ -1,5 +1,76 @@
 # Autonomous session — continuation state
 
+> 🔴 **2026-09-22, SEVENTH BLOCK — WRITTEN LAST, READ FIRST.** Supersedes the blocks below where they
+> disagree. **Not a handoff and not a stop.**
+
+## State — head `2982b91`+, `HEAD == origin/<branch>`, tree clean
+
+Gates at every landing: **LINT PASS · growth anchors PASS (claims=40, papers=87, corpus=361,
+literature=398, registry_only=13, unread_premises=0 — measured, never predicted) · publication gate
+PASS 0 blocks · receipt chain 201 tail-anchored · tool routing 7/7.**
+
+### The six results that would be expensive to lose
+
+1. 🟢 **A positional discriminator for `Q230P`.** A **two-epitope Puro-PLA ratio straddling residue
+   230**, which repurposes tom Dieck 2015's own **N-versus-C specificity control** as a measurement.
+   Puro-PLA signal requires the POI epitope to be **already synthesised in the truncated chain**, so
+   epitope position is a **length gate** and two epitopes straddling 230 report **where chains are
+   being lost**. A CHX chase structurally cannot do this. `HPA050992` (aa 32–110) is the N-arm and is
+   **already in this repository**; the C-arm is the problem — see (3).
+2. 🟢 **The paper that "breaks" Puro-PLA validates it here.** Hobson 2020 (`PMID 32844746`) refutes
+   the **spatial** claim; the adjacent sentence affirms the signal *"reports primarily on the
+   **cytoplasmic abundance** of puromycylated NPCs"*. ⇒ **Drop tom Dieck's CHX pre-treatment** — it
+   existed only for localisation, Hobson shows stalling does not happen, and dropping it removes a
+   perturbation. Pulse short, wash fast, fix fast (complex half-life **< 40 s**).
+3. 🔴 **The flanking antibody pair two prior designs specify CANNOT BE BUILT.** Of 17 censused
+   anti-WWOX primaries the epitope-documented ones are **N-terminal** (32–110, 12–94, exons 1–5) or
+   **span 230** (full-length 1–414, exons 1–7). **The C-terminal-only class is empty.** Those designs
+   are **unexecutable as written**, not unfunded. Bounded to what this repository holds — vendor
+   datasheets are `EGRESS_BLOCKED`.
+4. 🔴 **The intersection is empty.** Organs with **unrescued** peripheral phenotypes (bone, spleen,
+   thymus, marrow) vs organs ever **assayed** in a treated animal (liver, pancreas, kidney, testis,
+   ovary, sciatic nerve): **no overlap.** And **every** peripheral WWOX measurement in a treated
+   animal is a **protein blot** — *"no WWOX protein in liver"* bounds **expression**, never **vector
+   arrival**, and the two have been used interchangeably. The five-organ negative is **Appendix Fig
+   S2B–C, never opened at panel level**.
+5. 🟢 **The cheapest decisive systemic experiment needs NO treated animal.** The **untreated-null time
+   course** at P3/P7/P10/P14/P18. Only route to `R5`; converts the baseline from a **point** to a
+   **distribution** (`±3.5` at `n=4` is equally a shifted mean and a **mixture of two populations**);
+   orders the derangements in time without survivor conditioning. 🔴 **Run it BEFORE the treated panel.**
+6. 🟡 **`CLAIM 038`'s unit is `TRANSCRIBED FAITHFULLY AND UNADJUDICATED`** — neither branch the prior
+   candidate allowed. And **creatinine was never measured in the mouse**, found twice the same day by
+   two actors who did not read each other.
+
+### Rules carried forward, added this run
+
+- 🔴 **A check inherits its confidence from the surface it ran on — name the surface, and name why
+  that surface is the one the claim is about.** The working tree is **wrong** for verifying a census
+  already in it and **right** for a gate on a file about to be committed. Neither is the default.
+- 🔴 **An instrument pointed at the right place is not evidence about what it did not report.**
+- 🔴 **A hand-back is a deliverable, and it is produced last.** Three heavy delegates at once cost two
+  hand-backs to a session rate limit; both files survived **by luck**, not design. **Stagger.**
+- **Never `git add -A` while delegates write.** Held all run.
+- **`\bCRE\b` matches `Cre` recombinase at 100% FP in this corpus.** Search `creatinin|creatinina`.
+- **`EGRESS_BLOCKED ≠ DATA_ABSENT`** — the WWOX sequence was on disk in a `.pdb` an `--include=*.md`
+  sweep cannot see, through sessions that recorded the sequence as unobtainable.
+- **`Q230P` → Pro ABOLISHES a chymotryptic site at F229.** A `→Pro` variant can **delete** a protease
+  site, not merely shift a mass. Generalises to every `→Pro` allele in any gene.
+
+### Immediately next
+
+- **`D6` is now `ROUTE EXISTS, UNCOSTED`**, not out of scope: `PMID 40084072` is a published Puro-PLA
+  protocol in **human iPSC-derived i3Neurons**. Costing it is the open item. ⚠️ No i3Neuron carries a
+  WWOX allele and no WWOX-DEE iPSC line is established as available here (`HUMAN_REQUIRED`).
+- **`D2` is the matrix's principal blind spot**: `H3a` vs `H3b` needs a **collided-ribosome/disome**
+  readout, which is a sequencing-scale experiment outside the matrix.
+- **Operator packet 7** is the standing decision object. **Waiting on it has never stopped the science.**
+- Standing: `VERIFY → LAND → SAFE_PUSH → REASSESS → REFILL`. **QUEUE EMPTY ≠ SESSION DONE.**
+- Delegate base rate: **seventeen waves — four clean, six corrected, one false alarm, two lost to
+  529s, three lost to a 429** (two of those three wrote complete files first).
+
+---
+
+
 > 🔴 **2026-09-22, SIXTH BLOCK — WRITTEN LAST, READ FIRST.** Supersedes the blocks below where they
 > disagree. **Not a handoff and not a stop.** Two Scientists running as this is written.
 
