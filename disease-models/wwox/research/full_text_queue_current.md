@@ -6244,3 +6244,34 @@ is not this actor's to initiate. What is recorded is a capability mapping, nothi
    It is already in `CC-20260921-WWOX-ENZYMOLOGY-P306-01`; this entry is where a reader looking for
    the paper will land, so it is restated here rather than pointed at.
 3. Repair the dangling `FT-112` pointer in that candidate to name **`FT-130`**.
+
+---
+
+## FT-131
+**Papers:** PMID 28097321 / DOI 10.1001/jamapsychiatry.2016.3798 — Reuter et al. 2017, *JAMA Psychiatry* ·
+PMID 24522181 / DOI 10.1242/jcs.138784 — Klinkenberg et al. 2014, *J Cell Sci* ·
+PMID 40463098 / DOI 10.1101/2025.05.07.652703 — Long et al. 2025, *bioRxiv* preprint ·
+PMID 42486260 / DOI 10.1016/j.jbc.2026.113356 — Hirata et al. 2026, *J Biol Chem* ·
+PMID 35363364 / DOI 10.26355/eurrev_202203_28362 — Younis et al. 2022, *Eur Rev Med Pharmacol Sci*
+**Title:** Declared reading debt opened by the Domain-G superior-node search — SEC23IP/COPII as a WWOX
+binding-partner axis, and the single co-listing of WWOX with KCNJ10
+**Priority:** LOW
+**Why:** Opened by [`superior_node_search_20260922.md`](../analysis/superior_node_search_20260922.md),
+which cites all five at **abstract / metadata depth only** and says so at every use. None is load-bearing
+for a canonical claim; each supports a **flag**, never a scored candidate.
+- `28097321` is the only outside-field human-genetics datum under `NODE 3`: SEC23IP appears among homozygous
+  truncating candidates in a consanguineous intellectual-disability cohort, and the authors themselves class
+  it as *awaiting confirmation in independent families*. `get_copyright_status` → `pmc_id: null`,
+  `is_open_access: false` → **not retrievable through this deployment**.
+- `24522181`, `40463098`, `42486260` are the COPII / ER-exit-site cell-biology background that gives
+  SEC23IP (p125A) its function; all three are outside the WWOX field entirely.
+- `35363364` is cited **only** to report a query census: it is the sole PubMed record returned by
+  `WWOX KCNJ10`, and it merely **co-lists** both genes among 45 others with no mechanistic statement.
+  It is quoted as the *absence* of a link, not as evidence of one.
+**Current status:** 🔴 **declared debt, unread.** Logged here because the reasoning layer now names them and
+`UNREAD_PREMISE` is a ratchet, not a wall — silence would have been the failure. The honest disposition is
+that `28097321` is likely **unacquirable** here (same class as `FT-128`/`FT-129`); the three COPII papers are
+open and cheap if and only if `NODE 3`'s killer experiment (ERES count + cargo transit in WWOX-KO human
+neural cells) ever returns a positive.
+**Next action:** none unless `NODE 3` is promoted above flag status. Do not spend acquisition routes on
+`28097321` before then.
