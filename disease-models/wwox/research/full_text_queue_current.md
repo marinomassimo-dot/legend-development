@@ -6764,3 +6764,63 @@ no imaging at all for `G372R`.**
 WOREE, not more — **zero neuropathology, zero post-mortem, zero cell-type observation**, and the
 reason is mundane and decisive: the reported patients are **alive at 17–26 years**, so **no autopsy
 exists**. Only tissue assay is patient fibroblasts; the only biopsy is **muscle**.
+
+---
+
+## FT-150
+**Papers:** PMID 29141528 — Lou 2018, *Protein Pept Lett* 25(3):230–235,
+[DOI](https://doi.org/10.2174/0929866524666171113113100) · PMID 18983987 — Miura 2008,
+*Chem Biol Interact* 178:211–4, [DOI](https://doi.org/10.1016/j.cbi.2008.10.005)
+**Title:** 🔴 The two SDR fold-family records that most constrain a WWOX stabilisation strategy
+**Priority:** **HIGH for 29141528** — it is the strongest cross-domain caution found this session
+**Why:** Declared by
+[`q230p_therapeutic_mechanism_expansion_20260922.md`](../analysis/q230p_therapeutic_mechanism_expansion_20260922.md).
+Both abstracts were read first-hand by the Orchestrator via PubMed; **neither body has been read**
+⇒ `PREMISE: UNREAD_PRIMARY` ×2.
+
+🔴 **`29141528` is a fold-matched warning against the stabilisation axis.** In *C. absonum* 7α-HSDH —
+an **SDR** — *"most of the mutations in β-sheet core … became more stable than wild type,
+unfortunately, **all the mutations suffered dramatic activity loss**"*; *"**Although all the mutants'
+activities decreased**"*; and the best case, `L197E`, *"maximally maintained **28.7%** of catalytic
+efficiency."* Proline substitution at a coil gave thermostability *"decreased significantly"* and
+activity that *"cannot be detected"*, the authors concluding **"structural destruction"**.
+> **In this SDR, across the whole engineered panel, stabilisation and activity were ANTI-CORRELATED.**
+⚠️ **Firewalls:** bacterial enzyme · **engineered** mutations, not disease variants · thermostability
+engineering, **not** pharmacological chaperoning · activity assayed on **taurocholic acid**, which
+WWOX does not share · and WWOX has **no validated activity assay at all**. `WHAT TRANSFERS`: the
+anti-correlation pattern and the design warning. `WHAT DOES NOT`: any quantitative expectation.
+
+🔴 **`18983987` is a COINCIDENCE TRAP, queued as a tripwire rather than as evidence.** Human **CBR3**,
+another SDR, *"possesses rigid amino acid, **proline**, at that position [230] instead"* — **as wild
+type** — and *"the substitution of the amino acid residue at position 230 alone has **no apparent
+impact**."* A search for *"proline 230 SDR"* surfaces this first and it says **nothing about WWOX**:
+different protein, different numbering, different position in the fold. **A number coinciding is not
+a position coinciding.** Kept beside the `GTPBP3 p.Q230P` namespace trap (`FT-138`).
+
+---
+
+## FT-151
+**Papers:** PMID 27595938 — Kabir 2016, *Protein Science* · PMID 28779490 — Kampmeyer 2017,
+*Genes Chromosomes Cancer* 56(12):823–31 · PMID 36205620 — *Proteomics* 22(23–24),
+[DOI](https://doi.org/10.1002/pmic.202200222) · PMID 30013442 — Su 2018, *Int J Med Sci*,
+[DOI](https://doi.org/10.7150/ijms.25553) · PMID 21340167 — Lusa 2010,
+[DOI](https://doi.org/10.1590/s0004-27302010000800018) · PMID 22579964 — Rabbani 2012,
+[DOI](https://doi.org/10.1016/j.gene.2012.04.080) · PMID 9707624 — Wilson 1998, PMC21485,
+[DOI](https://doi.org/10.1073/pnas.95.17.10200)
+**Title:** The proteostasis-route and population-frequency set behind the `Q230P` therapeutic verdict
+**Priority:** **HIGH for 27595938 and 28779490**; MEDIUM otherwise
+**Why:** Declared by the same file. All `abstract-depth` ⇒ `PREMISE: UNREAD_PRIMARY`.
+
+🔴 **`27595938` is the reason a cofactor-stabilisation arm was REFUSED rather than ranked.** In
+NAD(P)-dependent oxidoreductases **the SIGN of a stabiliser INVERTS with cofactor occupancy**, with
+all four combinations observed. **WWOX's cofactor state is unknown**, so the sign of any WWOX
+stabiliser is **undetermined by construction** — and a screen run in the wrong state could **select
+destabilisers silently**. This is a design-killing caution, not a caveat.
+**`28779490`** is the closest disease-class analogue — degradation suppression in **cytosolic tumour
+suppressors** (VHL/BRCA1/MSH2) — and the only ranked route whose **compartment matches**.
+**`30013442`, and the other case–control cohorts**, supply the `rs3764340` **genotype counts** that
+resolved the `P282A` control question: **18 homozygotes enrolled as healthy adult cancer-free
+controls**, with the meta-analysis **homozygous model null** (GG vs CC OR 1.36, CI 0.90–2.04).
+⚠️ **`21340167`, `22579964` and `9707624` are all `MODEL`-only or REVERSE-direction** (a native
+proline **removed**, rather than one introduced) — they bound the proline argument and must not be
+read as supporting it.
