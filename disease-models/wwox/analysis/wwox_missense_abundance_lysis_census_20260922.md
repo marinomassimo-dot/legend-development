@@ -634,3 +634,43 @@ the reason a reader might have discounted it — *"but some of them used RIPA"* 
 **Neither changes §3.** The three-branch analysis and the Orchestrator's correction to it (the
 translation branch is where the *"functionally null/null"* inference weakens, by an amount
 unquantifiable because no floor was ever set) are untouched.
+
+---
+
+# 🔴 ORCHESTRATOR AMENDMENT 2 — a thirteenth row, and it is the one the census needed
+
+**Tochigi 2019**, `PMID 31340538` / `PMC6678113`, According to PubMed,
+[DOI](https://doi.org/10.3390/ijms20143596). Retrieved and read by the Orchestrator.
+
+| field | value |
+|---|---|
+| allele | rat `lde/lde` — `c.1190_1202del`, exon 9 frameshift, `p.Leu371Thrfs*53` |
+| system | whole brain and cerebral cortex, PND 5–21 |
+| **lysis, verbatim** | *"organs were minced and **sonicated** in RIPA lysis buffer (50 mM Tris-HCl pH 7.6, 150 mM NaCl, 1 mM EDTA, **1% sodium deoxycholate, 0.1% Triton X-100, and 0.1% SDS**)"* |
+| denaturing? | 🟢 **genuinely stringent** — deoxycholate **and** SDS, **plus mechanical disruption** |
+| pellet examined? | 🔴 **not stated** |
+| antibody / epitope | 🟢 **`HPA050992`, Sigma — epitope `aa 32–110`, STATED IN THE PAPER.** The only epitope-stated row in the census |
+| result | prior report: *"no Wwox protein was detected"*. **This paper: *"weak expression of a slightly heavier protein (46.2 kDa)"***, at the mass the frameshift predicts (*"theoretically 0.8 kDa larger"*) |
+| can *absent* be told from *insoluble* as run? | 🟡 **partially — the first row where it can.** Stringent extraction plus sonication makes a soft-lysis artefact unlikely; **but no pellet was examined**, so it is not closed |
+
+## Why this row changes the census rather than extending it
+
+1. 🎯 **It is the in-gene demonstration of the census's own thesis.** A published *"no protein"*
+   became *"present, faint, N-terminally intact"* **with the antibody as the only changed
+   variable** — and the antibody that found it is the only one in the census with a stated epitope,
+   `N`-terminal to a `C`-terminal lesion. The census argued that *absent* may mean *not seen*; here
+   it demonstrably did.
+2. 🔴 **It does not rescue the other twelve rows** — it makes them worse. If a faint species was
+   missed once by reagent choice, the eleven rows with `UNSTATED` epitopes cannot exclude the same.
+3. **`RIPA` means two different chemistries in this corpus.** Wang 2011 calls a Tween/Triton buffer
+   with neither DOC nor SDS *"RIPA"*; this paper uses the name correctly. **Classify by recipe,
+   never by name** — the rule of Amendment 1, now with both poles of the example in hand.
+
+⚠️ **Bounds.** Rat, not human; a frameshift, not a missense; and the authors run **no functional
+assay** on the residual species, judging only that *"it is unlikely that this faint expression …
+would have substantial effects"*. **`abundance rescue ≠ functional rescue` applies to a naturally
+occurring residual species exactly as to a rescued one.** Nothing here says the `lde` rat has
+useful WWOX.
+
+`REVIVAL_TRIGGER`: any WWOX abundance measurement made with **two** antibodies flanking the lesion;
+or any pellet examined alongside a stringent lysate.
