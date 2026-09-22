@@ -127,3 +127,57 @@ is a measured one, and it is the reason the guard in §5 was not shipped.
 | **Q230P** | Unchanged — `ENVIRONMENT-SATURATED / REVIVAL-READY`, **no trigger fired**; MD (GROMACS) WT vs Q230P on SASA/RMSF of residues 187–191 remains the named discriminator |
 | **Prose-guard** | A higher-precision signal than same-line prose exists — do **not** re-prototype the scanner without one |
 | `33300063` · `30094525` · `11719429` | A publisher or ILL route is opened by a human |
+
+---
+
+# WAVE 1 — COMPLETE. Three Scientists landed, three claims verified, one refuted.
+
+**HEAD after wave 1:** `8c2bfbb`. Commits `f2b6c38` (S2) · `3aca32d` (S3) · `8c2bfbb` (S1).
+Every landing was **path-scoped through `scripts/legend_commit.sh`** naming one file.
+
+## Verification of each hand-back's load-bearing claim — the step that earned its keep
+
+Each Scientist nominated the single claim most damaging if wrong. **One of the three broke.**
+
+| Scientist | Nominated claim | Verdict |
+|---|---|---|
+| **S2** | The Tochigi 2019 attribution sentence exists, and is absent from this repository | 🟢 **CONFIRMED, both halves** |
+| **S3** | The accession-deletion is a property of the extraction surface, not evidence of no deposit | 🟢 **CONFIRMED verbatim** |
+| **S1** | `PMID 33914858` has never been successfully read by this repository | 🔴 **PARTIALLY REFUTED — sent back and corrected** |
+
+### 🔴 The one that broke, and what it cost to catch
+S1 asserted `PMID 33914858` was never read. Verified: **no receipt has it as `study_id.pmid`** (all 5 matching ledger lines are *other* papers' receipts citing it), no dossier, retrieval `FAILED_HTTP_403_CLOUDFLARE`. **But it was read in full** — `learning/scientist/PILOT_PMID33914858_FULLTEXT_DEEPDIVE_SCIC_v1.md`, 810 lines, **30 verbatim locators**, actor `lettore-c` — and is un-receipted by **principled abstention**, its § 15 stating that issuing one *"would decide that question by doing it."*
+
+🎯 **The corrected claim is stronger than the original.** The defect is **reachability, not absence**: the pilot's own § 1 records that *"every text surface for this paper is gitignored and local to one machine. CI sees none of them. **A reader on a fresh clone has nothing.**"*
+
+**S1 then found a second error of its own that this Orchestrator had missed**, and withdrew it: it had written that the `non-cell-autonomous` arrow *"loses its warrant."* It does not. `L02`/`L18` test **necessity**, `L16` tests **sufficiency**. Revised to **trigger `DATO`, route `IPOTESI`, negative arm conditional** — which matches the pilot's own typing of `P3` as `INDIRECT_UNKNOWN_INTERMEDIATES` (*"no mediator identified"*) and `P8` as a negative with *"Supp. Fig. 8 unseen; Cre validation unseen"*. Correcting it made S1's Part B refutation **stronger**, moving the OPC→oligodendrocyte row from supporting the rival to confounded, 4 of 7 → **3 of 7**.
+
+## What wave 1 actually established
+
+1. 🎯 **Differential vulnerability does NOT track baseline `Wwox` expression.** Refuted on a *measurement*: the highest-expressing isocortical cell type is normal in number, thickness and lamination while the oligodendrocyte lineage fails. `P7` **SUPPORTED** on its qualitative half; **no numeric subfield value exists** anywhere and the file leads with that.
+2. `H3` **splits** rather than dying — fails on CA1, **survives on the amygdala** (Allen ISH names `BLAa`/`BLAp` among only two top regions, and the amygdala vacuolates). **Neither half had been noticed.**
+3. 🔴 **`CLAIM 039`'s "the ataxia has no structural explanation" is incomplete as a statement about the literature.** The source paper's authors attribute it to hypomyelination **one sentence after** a sentence the repository did quote and used only as a timing landmark. Verified: the attribution appears in **zero** repository files.
+4. 🔴 **`NOT_SECTIONED` has been read as `NORMAL`.** No `lde/lde` study has sectioned cerebellum, brainstem, cord, nerve or muscle — while the same paper's western blot puts `Wwox` protein in all of them.
+5. **The reanalysis continuation class is nearly empty**, and the arrival/expression/function question has **no** reanalysis route — both gene-therapy papers deposited nothing. `A-f4` is promoted from *a* blocker to *the only* route for that question class.
+6. 🎯 **A cerebellar RNA-seq in a named WWOX allele appears to exist and to have gone unreported** (`PMID 36828035` Methods §4.14 collects it, Results §2.8 reports forebrain only). **Frozen, `HUMAN_REQUIRED`, deliberately not ranked.**
+
+## 🔴 CONSEQUENCE THE OPERATOR MUST SEE — `BATCH_COMMIT` is blocked
+
+`unread_premises: 5/0` ⇒ LINT `BLOCK_BATCH_COMMIT`. **The publication gate is unaffected — `PASS`, `BLOCKS: 0`.** The five:
+
+`PMID 18676360` · `19918364` · `41776383` (S2) · `36247526` (S1) · `40235507` (S3)
+
+🔴 **The citations were NOT deleted to clear the gate.** The signal is **true** — tonight's reasoning does lean on five papers nobody opened — and suppressing it would be gaming the gate the repository built to catch exactly this. The correct fix is to open them, and Scientist 5 is doing so. What cannot be read becomes a queue entry, which is an operator act.
+
+## WAVE 2 — dispatched, running
+
+| # | Node | Why |
+|---|---|---|
+| **S4** | **Cerebellar measurement census** — was the cerebellum ever *collected*, *sectioned*, *assayed*, *reported*? | 🎯 **Three Scientists converged on this gap from three unrelated directions** and none could see it alone. If the cerebellum was never sampled, `A-f4` custody is the **second** problem, not the first |
+| **S5** | **Acquisition wave** — the five unread premises, `PMID 18676360` first | An `lde/lde` primary from the founding laboratory in **zero** repository files. Instructed to establish read-state **before** fetching, because that trap already cost this session one act |
+| **S6** | **Metabolic node, re-posed** | Reopened **only** because S1 killed the expression rival. Bounded by `L02`/`L18`: glial deletion does nothing, so **no metabolic story may locate the lesion in glial metabolism**. Explicitly licensed to **close the node** |
+
+## Queue behind wave 2
+1. ⚪ **The surviving amygdala half of `H3`** — the one place expression and lesion coincide; unworked
+2. ⚪ Land and verify wave 2; resolve `unread_premises` where papers prove readable
+3. ⚪ Recursive reread — **one genuine instance already occurred** (S2 re-asked an already-quoted paper a new question and found the dropped attribution); do not manufacture a second
