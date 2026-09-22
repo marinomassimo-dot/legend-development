@@ -7025,3 +7025,50 @@ the cleaner half** of that precedent and is the half that transfers.
 ⚠️ `abstract-depth` ⇒ `PREMISE: UNREAD_PRIMARY`. Not a WWOX paper: every transfer carries its
 system of origin (`CHO-K1`, `P19`, `3T3` — none of them human fibroblasts, which is the system the
 `Q230P` design targets).
+
+---
+
+## FT-156
+**Paper:** PMID 21633011 / PMCID PMC3121827 — Paulais M, Bloch-Faure M, Picard N, Jacques T,
+Ramakrishnan SK, Keck M, Sohet F, Eladari D, Houillier P, Lourdel S, Teulon J, Tucker SJ,
+*Renal phenotype in mice lacking the Kir5.1 (Kcnj16) K+ channel subunit contrasts with that
+observed in SeSAME/EAST syndrome*, *Proc Natl Acad Sci USA* 2011;108(25):10361–6,
+[DOI](https://doi.org/10.1073/pnas.1101400108)
+**Title:** 🔴 A reasoning-layer citation the `LINT` gate caught before it could settle
+**Priority:** **MEDIUM** — abstract-depth is enough for the direction already used; a body read
+would bound the electrolyte comparison, not reverse it
+**Why:** Declared as a **reading debt**, not as a read. `legend_lint.py` raised
+`BLOCK_BATCH_COMMIT: UNREAD_PREMISE` (2 above a baseline of 0) on
+[[new_discovery_node_20260922]], whose `P3` leans on the EAST/SeSAME renal signature to weaken the
+Kir4.1–AQP4 hypothesis for the `lde/lde` hippocampal vacuole node. The gate is right: *a conclusion
+may not start leaning on a paper nobody opened.*
+
+🔴 **Correction to the hand-back that cited it.** The Scientist recorded both comparator primaries
+as *"unfetchable: no OA, no PMCID, one with no DOI at all."* According to PubMed **both carry a
+PMCID and a DOI** — this one is `PMC3121827`. The `get_full_text_article` route returns
+`full_text: ""` for it, so the **body is not served here**; the conclusion (unreachable in this
+deployment) stands, its stated reason does not. That distinction is load-bearing: a deployment with
+publisher or library egress may retrieve it immediately.
+
+🎯 **And the abstract already complicates the use it was put to.** The mouse lacking **Kir5.1** shows
+*"hypokalemic, hyperchloremic metabolic acidosis with hypercalciuria"* — described by the authors as,
+apart from hypokalaemia, **"the opposite of the phenotype seen in SeSAME/EAST syndrome"**, which is
+itself *"salt wasting and hypokalemic alkalosis"*. So the Kir4.1/Kir5.1 axis yields **two opposite
+renal signatures depending on which subunit is lost**, and an argument that reads across from
+"the EAST/SeSAME signature" must say **which** one it means. Source: PubMed abstract, first-hand.
+Species and allele are not pooled: `Kcnj16−/−` mouse ≠ human `KCNJ10` EAST/SeSAME ≠ `lde/lde` rat.
+
+## FT-157
+**Paper:** PMID 27129733 / PMCID PMC5086442 — Palygin O, Pochynyuk O, Staruschenko A,
+*Role and mechanisms of regulation of the basolateral Kir4.1/Kir5.1 K+ channels in the distal
+tubules*, *Acta Physiol (Oxf)* 2016;219(1):260–273,
+[DOI](https://doi.org/10.1111/apha.12703)
+**Title:** The review half of the same uncovered pair
+**Priority:** **LOW** — a review, and the primary above carries the comparison this node needs
+**Why:** The second of the two `UNREAD_PREMISE` citations. Same correction applies: **PMCID
+`PMC5086442` exists**, contradicting the "no PMCID" attribution in the hand-back. According to
+PubMed it states that loss-of-function `KCNJ10` mutations cause *"EAST/SeSAME tubulopathy … with
+salt wasting, hypomagnesaemia, metabolic alkalosis and hypokalaemia"*, while *"mice lacking Kir5.1
+have severe renal phenotype that, apart from hypokalaemia, is the opposite"* — corroborating FT-156
+at abstract depth from an independent record. 🔴 It is a **review**: it is a pointer to primaries,
+never a primary itself, and must not be cited as evidence for a measurement.
