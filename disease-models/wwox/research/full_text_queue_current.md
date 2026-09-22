@@ -5698,6 +5698,66 @@ LLC."* ⇒ **no PMC body; the existing partial read is the surface LEGEND has.**
 was extracted.* Three findings were surfaced from **corpus passages** of this already-read paper
 while working a different node, and none is in LEGEND.
 
+## 🔴 CORRECTION, SAME DAY, APPEND-ONLY — N-33 AND N-35 ARE WITHDRAWN
+
+**The three findings below were attributed to `PMID 36537114` in error, and the targeted re-read
+this entry proposed is what caught it.** The entry is kept verbatim afterwards because that is how
+this ledger works; **read this block first and treat everything after it as superseded.**
+
+`PMID 36537114` states in its **own Discussion**: *"All WWOX variants in these five patients are
+predicted to be null, consistent with the proposed mechanism of WOREE syndrome."* Its Introduction:
+*"In this study, we present five pediatric patients with WOREE syndrome."*
+
+⇒ **Five patients, all null.** No `Q230P` compound heterozygote. No exon-5-deletion genotype. **No
+`GRIA4`.** No fibroblast RNA-seq statement. 🔵 **LEGEND's `PAPER 017` — *"5 pazienti WOREE (tutti
+null/null)"* — was correct the whole time, and the session's "new findings" were an artefact.**
+
+| Finding | Status |
+|---|---|
+| **N-33** (fibroblast expression) | 🔴 **WITHDRAWN** — not in this paper. ✅ The Orchestrator's adjudication against it was already correct on `CLAIM 019`; it is now **doubly** safe, because the sentence has no established provenance at all. **`DL-BIO-003` and `HYP-20260709-08` were never at risk.** |
+| **N-35** (`GRIA4`) | 🔴 **WITHDRAWN** — not in this paper. `GRIA4` still appears nowhere in this repository, and now rests on nothing. |
+| **N-34** (heterozygous `Q230P` brother) | ⚠️ **RE-ATTRIBUTED, source unidentified.** It belongs to a different, nine-patient/six-family cohort that the delegate **could not identify**. Tagged `IPOTESI` at its weakest: the authors themselves say testing for a second allele is underway ⇒ **missed variant, not modifier**, and **not** a discordant pair on a shared genotype. **Wave 4's no-discordant-pair negative is untouched.** |
+| Q230P + 36.3 kb exon-5 deletion genotype | 🔴 **Not in this paper.** Its origin is now an open question. |
+
+🔴 **The cause is an instrument defect worse than `FT-126`, and it is recorded there as a second
+limb:** the surface assembles chunks that **mix unrelated documents under one article's internal
+cross-reference IDs** — the chunk carrying `ajmga63074-*` IDs also carried a **blood-donation
+logistic-regression table**. `FT-126` limb 1 concerns characters inside strings; **this concerns
+whole passages.**
+
+### ✅ What the re-read DID produce, from the paper's own declared cohort
+
+- **D-2** ⭐ *"In contrast, none of our patients showed distinctive facial features"*, against ~60 %
+  elsewhere, with the authors concluding dysmorphism and scoliosis *"may not always be present"*.
+  🔵 **Directly relevant to `FT-117`**: the paper we cannot acquire is the one claiming dysmorphism
+  as a phenotype expansion, and here is a contemporaneous cohort reporting its absence.
+- **D-3** 🔴 The paper reproduces the Johannsen `Q230P` transcript/protein result but renders the
+  residue as **239, not 230**. The delegate **could not determine** whether that is a published typo
+  or an extraction artefact and therefore **did not quote the token** — correctly, per the rule.
+  Either way it creates a **phantom allele**: searching `Gln239Pro` finds a ghost, searching
+  `Gln230Pro` misses this citation.
+- **D-4 / D-5** Pancreatitis qualifiers LEGEND lacked (resolved 18 months after onset; **never
+  treated with sodium valproate**; negative hereditary-pancreatitis panel), and scoliosis
+  under-representation.
+- **Empty extractions reported as results:** this cohort measured **no WWOX protein and no WWOX
+  transcript of its own**. ⚠️ Stated as a **retrieval limitation, not an absence.**
+
+### 🔵 N-44 — the reusable signal, which survives and is the wave's most portable output
+
+This paper's receipt is `legacy_reconstruction` with **every coverage field `unknown_legacy`**,
+`source_fingerprint: null`, `analysis_at: null`, and **no dossier and no manifest**. That is the
+receipt class **most likely to hide unextracted material** — it records that a read happened
+without recording what was covered. **Prioritise any targeted-re-read sweep by that signature.**
+
+⚠️ **And the caveat that strengthens the method rather than weakening it:** a receipt records only
+that a paper was read — **but a finding surfaced while working a *different* node inherits that
+node's attribution risk and must be re-attributed before use.** That is precisely what failed here,
+and what the re-read caught.
+
+---
+
+### The superseded text follows, kept verbatim
+
 ### 🔴 N-33 — ADJUDICATED BY THE ORCHESTRATOR, and it does NOT hold for WWOX
 
 The flag: a passage states RNA sequencing was done in **blood and skin fibroblasts** and that
@@ -5750,10 +5810,116 @@ series. **No acquisition required.**
 2. ⚠️ **`lookup_article_by_citation` transposes its `pmid` and `key` fields.** A session reading the
    response literally would conclude the lookup failed when it succeeded.
 
+3. 🔴 **SECOND LIMB, added the same day and worse than the first: the surface assembles chunks
+   that MIX UNRELATED DOCUMENTS under one article's internal cross-reference IDs.** A chunk carrying
+   `ajmga63074-*` IDs — the cross-reference prefix of `PMID 36537114` — also carried a **blood-donation
+   logistic-regression table** (*"Number of days to donate after prior donation"*,
+   `Importance / Courtesy / Phlebotomist / Discomfort`). **Limb 1 corrupts characters inside a
+   string; this fabricates whole passages with a real article's identity attached.**
+   ⇒ **RULE: no content may be attributed to an article by passage or cross-reference IDs alone.**
+   Attribution requires the **article's own declared cohort or scope**, or a **second independent
+   surface**. This defect produced two findings (`N-33`, `N-35`) that were landed and then withdrawn
+   the same day — see the correction at the head of `FT-125`.
+
 🔵 **And the general lesson, which cost this session three separate errors:** **a missing identifier
 from ONE route is not an absence.** `convert_article_ids` omits DOIs that `get_article_metadata` and
 `get_copyright_status` both return — demonstrated today on `PMID 30853297`
 (**DOI `10.1016/j.ejpn.2019.02.003`, verified by two independent routes**) and on `PMID 36537114`
 (**DOI `10.1002/ajmg.a.63074`**). **The Orchestrator asserted both were absent on the strength of
 the converter alone, and was wrong both times.**
+
+
+---
+
+## FT-127 — The A51 confound resolved as far as it can be, and two provenance defects under the TX-004 axis
+
+**Papers:** NOT_AN_ARTICLE — this entry records an adjudication and two artefact-integrity facts.
+**Opened:** 2026-09-22 · **Actor:** Orchestrator, from Scientist B's confound wave
+**Full context:** [`a51_antiproliferative_confound_20260921.md`](../analysis/a51_antiproliferative_confound_20260921.md)
+
+### 🔴 CORRECTION TO WHAT THIS SESSION LANDED EARLIER
+
+An earlier commit said the schedule finding **"indicts"** A51's experiment. **That was one-sided and
+is corrected here.** The delegate tested the counter-argument instead of asserting past it, and the
+accurate verdict is narrower:
+
+> **The published data support NEITHER reading cleanly. `TX-004` should be lowered on AMBIGUITY,
+> not on refutation** — its only supporting experiment **cannot demonstrate what it is cited for**,
+> and **cannot be said to have shown the opposite either.**
+
+### What is verified across all 30 manifest entries
+
+The A51 arm has **no proliferation index, no cell-death readout, no total cell count.**
+`pH3`/`prolifer` appear **only** at entry 24 — the **genotype** arm, two supplementary pages away.
+`MKI67` appears only at entry 29 as a **cluster-annotation marker**, not an assay. `cell count` only
+at entry 2 — again the genotype arm. **`caspase`, `TUNEL`, `EdU`, `BrdU`, `apopto`, `viability`
+occur nowhere.** Entry 23, the only A51 panel reading, lists **five identity-marker percentages and
+nothing else.**
+
+🔴 **The confound in its exact form, sharper than first stated: every A51 value is a *percentage of
+cells*, and the denominator is never reported.** A percentage cannot separate *more of X* from
+*fewer of everything else*.
+
+### 🔵 The counter-argument, given its full force and then bounded
+
+A pure anti-proliferative agent should not raise a neuronal marker — but percentages are
+**compositional**, so a fraction *can* rise under pure removal. **Arithmetic on prior-session panel
+values, `INFERENZA`, a derivation and not a reading:** if A51 removed only `SOX2⁺` cells (60 → 33 %,
+i.e. 27 points of the total), every surviving fraction inflates by **≈ 1.37×**.
+
+| Marker | KO | predicted × 1.37 | KO + A51 | observed ÷ predicted |
+|---|---|---|---|---|
+| **`NEUN⁺`** | ≈ 6 % | ≈ 8.2 % | **≈ 18 %** | 🔵 **≈ 2.2×** |
+| `SATB2⁺` | ≈ 0.35 % | ≈ 0.48 % | ≈ 0.7 % | ≈ 1.5× |
+| `CTIP2⁺` | ≈ 0.2 % | ≈ 0.27 % | ≈ 0.3 % | ≈ 1.1× |
+
+**`NEUN⁺` exceeds pure redistribution by roughly twofold — progenitor removal alone does not account
+for it. Something real happened to the pan-neuronal compartment.**
+
+⚠️ **And why that still does not resolve it:** the arithmetic assumes total cell number changed
+**only** through the `SOX2⁺` loss — **which is exactly what an anti-proliferative agent violates.**
+Suppress other cycling populations and the inflation factor exceeds 1.37, absorbing more of the
+rise. A `NEUN⁺` **percentage** rise is also compatible with absolute `NEUN⁺` number being flat or
+falling inside a smaller organoid. ⇒ **consistent with a mixed effect; neither reading is
+supported.**
+
+### 🔵 One unreported number would close it, with no new experiment
+
+**Total cells per organoid, A51 vs vehicle.** The paper reports exactly that quantity for the
+*other* comparison — Figure 2D: **WT 5649, WWOX-KO 3020, SCAR12 3422, WOREE 5916** — and gives **no
+A51 equivalent.** If the authors hold it, one number settles this node.
+
+### 🔴 The within-paper asymmetry, which is the finding underneath the finding
+
+The **AAV9** arm gets a DEG volcano, superimposed cell-cycle densities and explicit n's
+(WOREE 2560 / WOREE-wwox 2003) — **and is offered as a safety argument.** The **pharmacological**
+arm gets five percentages with no denominator, no proliferation index and no death readout.
+**The arm that needed the controls least is the one that got them.**
+
+### 🔵 The pattern, stated as observation only — no governance proposal
+
+Across LEGEND's intervention arms the recurring defect is not a missing *assay* but a missing
+**denominator**: A51 fractions without totals; the mouse survival threshold with **no measured
+expression difference behind it**; a migration result on `n = 3` stated once in Methods and never in
+Results; human outcomes under a column headed *"Death / last date of examination"*. **A numerator
+without its denominator.**
+
+### 🔴 Two provenance defects under this axis, both verified by the Orchestrator
+
+1. **The manifest points at a SUPERSEDED receipt.** `deepdive_manifests/PMID42397075.json` declares
+   `receipt: FTR-20260810-42397075-03`, which the ledger records as **`partial_fulltext_read`**.
+   The closing receipt is **`FTR-20260810-42397075-04`, `complete_fulltext_read`** — and it is the
+   one `PAPER 094` and `DL-THER-089` both cite. ⚠️ **Not changed here: a manifest is a receipted
+   artefact and whether it may be edited outside a `BATCH_COMMIT` is not a delegate's call, nor one
+   to make in passing.** Recorded for the batch.
+2. **All 22 artefacts this manifest fingerprints are unreachable**, and `files/fulltext/` does not
+   exist in this checkout. ⚠️ **That much is a KNOWN ENVIRONMENT ABSENCE** — `files/` is gitignored
+   and absent in every fresh clone, and `deepdive_manifest.py` handles it honestly, returning
+   `PASS` while degrading its scope to *"STRUCTURE ONLY: local artifact existence, SHA-256 and exact
+   text locators NOT VERIFIED"* and stating that *"an absent artefact is an evidence-locality fact,
+   not a provenance failure of the reading."*
+   🔴 **What is NOT ordinary here:** `PMID 42397075` has **no PMC deposit**, so unlike papers whose
+   artefacts can be refetched, **these cannot be re-derived by that route at all** — and **waves 1,
+   3, 6 and 8 of this session all rest on this single manifest.** A single point of failure for the
+   `TX-004` axis, recorded as such.
 
