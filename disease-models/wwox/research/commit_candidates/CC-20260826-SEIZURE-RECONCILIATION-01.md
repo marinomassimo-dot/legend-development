@@ -297,3 +297,130 @@ rather than assert it.
 🔴 **Operator authorization.** MAJOR on three counts: a `DATO` claim's headline deleted as false;
 a canonical prohibition inside a `consolidated baseline` claim rewritten; a new claim proposed.
 None is a self-authorized edit.
+
+---
+
+# ✅ PROPAGATED — `BATCH_20260922_SEIZURE`, 2026-09-22, under explicit Operator authorization
+
+**Status: `PROPAGATED`.** Working Model **WM_v4.5 → WM_v5.0 (MAJOR)**. Scope held strictly to the
+seizure/epileptogenesis statements. **No unrelated canonical change was made.**
+
+## Verification performed before propagation, per the authorization's five conditions
+
+**1 · The four first-hand datasets — all four verified.**
+
+| dataset | verified against | result |
+|---|---|---|
+| **Cheng 2020** (PMID 32000863) — spontaneous seizures | local manifest **and** the retrieved body (`PMC6990504`, CC BY) | ✅ *"In our generated [Wwox−/−] mice, spontaneous epileptic seizures were commonly observed after postnatal day 12. Seizures were frequently induced by mild stressors including noise, strobe lights and novel cage during routine handling."* |
+| **Cheng 2020** — provoked susceptibility | retrieved body | ✅ *"Half of the pilocarpine- or PTZ-injected [Wwox−/−] mice evolved into status epilepticus (SE, defined as three or more tonic-clonic seizures during 1-h observation). **SE was not observed in [Wwox+/+] and [Wwox+/−] mice.**"* Pilocarpine 50 mg/kg, PTZ 30 mg/kg, Racine, 60 min ✅ exactly as the candidate states |
+| **Hussain 2023** (PMID 36828035) — `P47T` video-EEG | local manifest | ✅ *"repeated spontaneous generalized convulsive activity (11–22 seizures during 43–53 h monitoring periods)"*, and the manifest records the WT and mutant ranges as non-overlapping |
+| **Obeid 2026** (PMID 42422765) — ECoG/SWD | local manifest | ✅ `****` WT-vs-KO, `****` KO-vs-HD, `ns` WT-vs-HD; `n = 5`/group; panel 7C prints `0.2000`; panel read from a fingerprinted raster, never from text |
+| **Repudi 2021** (PMID 34747138) — firing rate | local manifest | ✅ between-group contrast present, with the declared caveat that the absolute rates are not those of an awake brain |
+
+🔵 **And the candidate's central *lexical* claim was verified in the body, not assumed.** Cheng 2020
+uses *"epileptogenesis"* exactly twice — *"To further investigate the enhanced epileptogenesis in
+[Wwox−/−] mice, **we tested convulsant agent-induced seizure models**"* and *"whether the enhanced
+epileptogenesis … is due to increased GSK3β activation"*. **Both times it labels provoked
+susceptibility.** The collision really is lexical before it is scientific.
+
+**2 · The four axes are preserved, explicitly, in the landed text** — spontaneous · provoked
+susceptibility · susceptibility as a threshold · formal epileptogenesis. `CLAIM 005` now names all
+four and forbids merging them; `CLAIM 040` states that SWD is an absence-type signature and **not**
+a synonym for seizure.
+
+**3 · No absence-of-experiment was converted into evidence of absence.** The `NOT_REPORTED ≠ ABSENT`
+record is the core of the `CLAIM 037` repair, and it enumerates *per paper* that none of the four
+early studies recorded.
+
+**4 · No generalisation across alleles or models.** The landed text names the **NCKU WD1/WD234**
+nulls for the mouse behavioural and provoked data, the **`P47T` knock-in** (explicitly *not* a null)
+for the video-EEG, and the **rat `lde/lde`** for the audiogenic data, and states *"Four phenomena,
+four methods, three genotypes, two species."*
+
+🔴 **5 · One limb of the candidate was DROPPED for want of verification.** Δ2 proposed falsifying
+*"the mice may die before they can seize"* **three** ways, the third being *"a mouse with the same
+3–4 week lifespan (`Syn-Cre`) seizes from P9"*. That rests on **PMID 33914858, which has no PMCID**
+and which the candidate itself flags as adjudicated against an artefact absent from this worktree.
+**It is not asserted.** The two verified falsifiers are sufficient and are the only ones landed:
+spontaneous seizures from **P12** and SWDs at **P14–P21**, both inside a lifespan the primary states
+as *"less than a month"*.
+
+---
+
+## Exact before/after wording
+
+### Δ1 · `CLAIM 037` — Title
+
+**BEFORE**
+> The seizure phenotype of the Wwox literature is a rat `lde/lde` phenotype, electrographically
+> documented, and **it is explicitly absent in Wwox-null mice**
+
+**AFTER**
+> Seizure-related phenotypes in WWOX rodent models are documented in the rat `lde/lde` (audiogenic +
+> EEG), in the **Wwox-null mouse** (behaviourally since 2020, electrographically since 2026) and in
+> the **`Wwox^P47T/P47T` knock-in mouse** (video-EEG, adult); the **audiogenic/kindling** phenotype
+> remains rat-specific
+
+### Δ2 · `CLAIM 037` — Evidence boundary, opening clause
+
+**BEFORE**
+> 🔴 **I topi Wwox-null non hanno epilessia riportata** — affermato tre volte in PMID 19500159 e
+> formalizzato in Table 2, dove la riga `Epilepsy` è compilata solo per `lde/lde`. Gli autori
+> lasciano aperta la spiegazione **(i topi potrebbero morire prima di convulsionare)** e la
+> sopravvivenza la rende testabile: 2–3 settimane nel topo contro **3–12 settimane** nel ratto, con
+> esordio più precoce delle crisi al giorno 16.
+
+**AFTER** — `NOT_REPORTED ≠ ABSENT`, the survey named as a survey, the die-before clause deleted as
+falsified, an explicit refusal to infer EEG normality elsewhere, and the species/allele separation
+stated. **The rat sentence is retained verbatim at the end**, and every rat caveat below it is
+untouched.
+
+### Δ3 · `CLAIM 005` — the prohibition, **retargeted not deleted**
+
+**BEFORE**
+> **No canonical statement may describe a Wwox-null mouse as showing epileptogenesis.** Whether the
+> mouse lacks the phenotype or dies before expressing it is open and testable: the earliest rat
+> seizure onset (day 16) already exceeds the entire lifespan of the mouse null.
+
+**AFTER**
+> **No canonical statement may assert EPILEPTOGENESIS — the *process* of acquiring an enduring
+> predisposition to spontaneous recurrent seizures — in ANY WWOX model, because no study has
+> measured that process:** none has observed the transition longitudinally… ⚠️ The word is
+> **nomenclature borrowed from the field, not a measurement made in it**… 🔵 **Measured seizure and
+> epileptiform phenotypes ARE recordable and are recorded** — see `CLAIM 004`, `011`, `016`, `037`
+> and `040`. **Four axes must not be merged…** 🔵 **PMID 19936220 remains free of any seizure
+> measurement — that is a statement about that paper, not about the animal.**
+
+🔵 **The guard is preserved and is now correctly aimed.** Deleting it, as the superseded candidate
+proposed, would have discarded a guard that is still needed: nobody has measured epileptogenesis in
+any WWOX model, and that remains forbidden to assert.
+
+### Δ4 · `CLAIM 016` — cross-reference plus a floor-not-a-rate caveat. **Nothing else in the claim changed.**
+
+### Δ5 · **New `CLAIM 040`** — with its full evidence boundary, including that panel 7C's `0.2000` is
+**exactly** the two-tailed Mann–Whitney floor at the plotted group sizes and therefore means
+**"not tested"**, that the running text's *"a significant elevation"* over-claims, and that reading
+`0.2000` as *"no effect"* is the same error sign-flipped.
+
+---
+
+## Gates at landing
+
+`legend_lint.py` **PASS** · `growth_anchors.py check` **PASS** (`claims 39 → 40` recorded as
+`BATCH_20260922_SEIZURE`, `GA-20260922T014700Z-batch`; `unread_premises = 0`) ·
+`fulltext_receipts.py verify` **OK, 189 chained, tail anchored** · `public_release_gate.py`
+**PASS, 0 BLOCKS** · `manifest_queue_id_crosscheck.py --prose` **0 unresolved**.
+
+🔵 **Both blocking gates fired first and were obeyed rather than worked around:** LINT refused the
+new claim until it appeared in the Working Model BLOCK 2 mirror (where **row 037 carried the same
+false clause** and was corrected too), and `growth_anchors` refused the claim-count drift until the
+delta was recorded against a batch ID.
+
+## What did NOT change
+
+BLOCCO 1 · any therapeutic recommendation · `CLAIM 011`'s dose-axis flag · the rat `lde/lde` dataset
+and **all** its caveats (95% female-only, 34% is a floor, vacuolisation unmatched, single
+laboratory, `PREMISE: DEFAULT_FROM_TEXTBOOK` on proteasomal turnover) · the status of
+**epileptogenesis as unmeasured in every WWOX model** · and no claim of EEG normality anywhere else.
+
+**Snapshot before edit:** `claim_registry.pre_seizure_recon.md` (scratchpad), for diffing.
