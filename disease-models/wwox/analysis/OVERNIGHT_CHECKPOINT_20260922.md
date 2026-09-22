@@ -181,3 +181,26 @@ S1 asserted `PMID 33914858` was never read. Verified: **no receipt has it as `st
 1. ⚪ **The surviving amygdala half of `H3`** — the one place expression and lesion coincide; unworked
 2. ⚪ Land and verify wave 2; resolve `unread_premises` where papers prove readable
 3. ⚪ Recursive reread — **one genuine instance already occurred** (S2 re-asked an already-quoted paper a new question and found the dropped attribution); do not manufacture a second
+
+---
+
+# 🟢 A SCARE, BOUNDED AND CLOSED — the `learning/` tree is not an iceberg
+
+**The question, and why it had to be asked.** S1's own root-cause for both of its errors was *"I never grepped `learning/`."* If an 810-line full-text read could sit outside the evidence chain once, the obvious worry is that the repository's real evidence base is systematically larger than its tools can see — which would undermine every census, every coverage claim and `unread_premises` itself.
+
+**Measured, by the Orchestrator, this act.** Extracted every `PMID` token from the filename and first 4 KB of all **177** `learning/**/*.md` files and cross-checked each against the receipt ledger keyed on `study_id.pmid`:
+
+| | Count | PMIDs |
+|---|---|---|
+| Distinct PMIDs referenced in `learning/` | **10** | — |
+| 🟢 **With** a receipt whose subject is that PMID | **8** | `15070730` · `22193544` · `26675548` · `29724996` · `30470736` · `32000863` · `42397075` · `42422765` |
+| 🔴 **Without** | **2** | `33914858` · `28123895` |
+
+And **both** of the two resolve benignly:
+
+- **`33914858`** — the known pilot. A real full read, un-receipted by **deliberate principled abstention** pending a gate that does not yet exist. Not an oversight.
+- **`28123895`** — 🟢 **not a read at all.** Every reference is as a *planning target*. The same files state it outright: *"PMID 28123895 has none"* (no deepdive manifest), **0 of 174** files in `files/fulltext/`, and it sits queued as `FT-018 HIGH`. A paper a trial design proposes to read is not a paper that was read.
+
+> 🟢 **VERDICT: the invisibility is exactly ONE paper, and it is principled.** The evidence chain is not systematically leaking, `unread_premises` is not silently wrong, and no census landed tonight needs revisiting on this account. **Direction closed.** Recorded so it is not re-investigated: re-run the cross-check above before reopening it.
+
+🔴 **What this does NOT clear**, stated so the closure is not over-read: it bounds `learning/`, and nothing else. `files/` and `staging/` are **gitignored**, so a fresh clone still has no text surface for `33914858`, and that reachability defect stands exactly as recorded.
