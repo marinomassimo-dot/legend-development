@@ -1,5 +1,94 @@
 # Autonomous session — continuation state
 
+> 🔴 **2026-09-22, FIFTH BLOCK — WRITTEN LAST, READ FIRST.** Supersedes the blocks below where they
+> disagree. **Not a handoff and not a stop.** Two Scientists running as this is written.
+
+## State — head `ebc05d9`, `HEAD == origin/main == origin/<branch>`, tree clean
+
+Gates at every landing: **LINT PASS · growth anchors PASS (measured, never predicted) · receipts
+verify 189 chained, tail anchored · publication gate PASS 0 blocks · prose `FT-` refs unresolved 0**.
+
+### ✅ THE 27-DAY BLOCKER IS CLEARED — operator authorized, verified, PROPAGATED
+
+**`BATCH_20260922_SEIZURE`, WM_v4.5 → WM_v5.0 (MAJOR).** All four first-hand datasets verified
+first; Cheng 2020 against both its manifest **and** its retrieved body. `CLAIM 037`'s *"explicitly
+absent in Wwox-null mice"* **deleted as false**; `CLAIM 005`'s prohibition **retargeted, not
+deleted** — it now bans asserting *epileptogenesis as a process* (unmeasured in every WWOX model)
+instead of banning description of the animal. **New `CLAIM 040`.** Four axes kept separate and
+forbidden to merge. **One limb of the candidate was DROPPED for want of verification** (the `Syn-Cre`
+P9 falsifier rests on a paper with no PMCID). Both blocking gates fired first and were obeyed.
+
+### 🔴 TWO RULES I LANDED MYSELF ARE WRONG — corrected today
+
+1. **`is_open_access: false` is a LICENCE field, not a retrievability verdict.** PMID 36779245 and
+   23583307 both flag `false` and **both were served in full**; two papers with PMCIDs return empty
+   bodies. My *"pre-test 6/6"* was scoring a rule whose failures it had not met, and skipping on it
+   would have cost a wave its two best sources. **ORDER attempts with it; never SKIP.**
+   `FT-128/129/130`'s dispositions are re-labelled **unacquirable by attempt, not by licence** — and
+   Mallaret was then attempted: `PMC3914474` → `full_text: ""`. Right answer, wrong reasoning.
+2. **`P1–P5` is not a window** — it is the set of ages tested, and our own locator file for that
+   paper records the authors calling it *"rather than a definitive boundary for therapeutic
+   responsiveness."* **I relayed that filter to the Operator as "the binding one" without checking
+   our own file.** `D-31`.
+
+### 🎯 The live science, ranked
+
+1. 🟢 **`c.1061 = A`, established deductively** from ClinVar protein-consequence records, twice
+   independently (`p.Gln354Ter` and `p.Gln354=` each force it) plus the local AlphaFold file. **The
+   `AG` the prediction needs exists.** The site is **over-determined without SpliceAI**: intron 8's
+   last ~29 nt contain no `AG`, and the first-AG-downstream rule reaches `c.1061/62` first ⇒ exon
+   starts `c.1063` ⇒ **in-frame `p.Gln353_Gln354del`**. The 8-nt frameshift reading is dead at both
+   required bases. ⚠️ **But the PROTEIN consequence is UNKNOWN and structurally contested** —
+   mid-α-helix, one turn from a buried face, model confidence lowest exactly there. Correct label:
+   **`PREDICTED at transcript level — protein consequence UNKNOWN`.**
+2. 🎯 **The compartment we assumed closed is measurably OPEN.** Sanai 2011 (*Nature*): migrating
+   immature neurons in infant human SVZ/RMS **before 18 months**, prefrontal-targeting stream at
+   4–6 months, ~25-fold DCX⁺ decline over 6 months. WOREE presents at a **median 5 weeks**.
+   🔴 **The intersection is empty on the WWOX side, not the plasticity side** — zero WWOX
+   measurement in postnatal SVZ, any species, any age. **One desk-or-tissue experiment decides
+   filter 2.** Being worked now.
+3. 🔴 **Nobody has ever reported age at molecular diagnosis in a WWOX cohort.** Verified zero with an
+   expanded translation and a positive control. Filter 2 supports only a **one-sided bound**.
+4. 🔴 **The exon-7 hypomorph is dead** (`D-30`: in-frame is about frame, not fold) — and its
+   corollary from today: **the relSASA of a *deleted* residue is a claim about that side chain, not
+   about the fold.** `DL-MECH-037`'s discriminator was calibrated on *substitutions*.
+5. 🔴 **Tau-lowering must not be imported into WWOX-DEE** — Tau is the effector of the benefit.
+6. 🔴 **`PAPER 044`'s "nonsense-mediated decay" is from the abstract**; no WWOX allele of any class
+   has ever been assayed with an NMD inhibitor.
+
+### 🔴 The defect that would have wasted a real experiment
+
+`tx001_experiment_decision_packet_20260921.md` — **the document a lab executes** — said the cryptic
+acceptor gives `+8 nt`. It gives **6 nt SHORTER**. Wrong in **sign and magnitude**: `+8` is a genomic
+offset, not an amplicon size change. **A lab sizing against it would score the assay negative while
+the predicted event was occurring.** Fixed **at the point of error**, with the method constraint
+added (capillary, denaturing, 6-nt sizing standard; not agarose, not native PAGE) and the intron-8
+blind spot given a row. It also asserted an exon 10, twice; WWOX has nine exons.
+
+### Three proven ways a query-count zero is meaningless
+
+(a) punctuation ⇒ raw query echoed **unexpanded** ⇒ 0; (b) a **bare number** ⇒ `NNNN[UID]`, a
+record-ID lookup; (c) `[All Fields]` **does not index Methods**. **Read `query_translation` before
+believing any zero, and always carry a positive control.**
+
+### Recovery facts, measured
+
+`4e5d141` was stale by seven commits, **all `VALID_COMPLETE`**. Receipts: **189 total / 189 chained /
+0 excluded**; the historical `200` is the **sibling branch** `f7595f6`, sharing an identical
+188-record prefix — **ours + 1, theirs + 12**, so the merge is now **two-way**, not a superset.
+Two Scientists were `LOST_AFTER_529` with **no** partial writes; one of those tasks I did myself.
+
+### Immediately next
+
+- **Running:** Scientist J — TX-007 dose challenge and replication search. Scientist K — is WWOX in
+  postnatal human SVZ answerable from public data. **Verify both against primary sources; refill on
+  return.**
+- Standing: `VERIFY → LAND → SAFE_PUSH MAIN → REASSESS → REFILL`. **QUEUE EMPTY ≠ SESSION DONE.**
+- Delegate base rate: **ten waves — three clean, four corrected, one false alarm, two lost to 529s.**
+
+---
+
+
 > 🔴 **2026-09-22, FOURTH BLOCK — WRITTEN LAST, READ FIRST.** Supersedes the blocks below where
 > they disagree. **Not a handoff and not a stop.** One Scientist running as this is written.
 
