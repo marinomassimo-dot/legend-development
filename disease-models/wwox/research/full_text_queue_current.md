@@ -5896,6 +5896,65 @@ The **AAV9** arm gets a DEG volcano, superimposed cell-cycle densities and expli
 arm gets five percentages with no denominator, no proliferation index and no death readout.
 **The arm that needed the controls least is the one that got them.**
 
+### 🔴 CORRECTION, NEXT DAY — THE PATTERN BELOW WAS TESTED AND DOES NOT SURVIVE
+
+**Read this before the paragraph that follows it.** The "missing denominator" frame was put to a
+deliberate counter-test over all seven active strategies, and **it over-fits.** Of seven: **two**
+fit literally (`TX-001`, `TX-004`); **two** only if the word is stretched — to a *limit of
+detection* (`TX-002`) and to a *shared scale* across non-commensurable assays (`TX-003`); **one**
+has a missing group size that is **not its binding defect** (`TX-005`); and **two do not fit at
+all** (`TX-006`, `TX-007`).
+
+**Three attacks, each verified independently by the Orchestrator against LEGEND's own records:**
+
+| Attack | Verified |
+|---|---|
+| 🟢 **`TX-007` reports every denominator and is still not safe to act on.** What it shares with the others is not a missing number but that **the measured quantity does not track the endpoint** — two doses 2.1× apart are indistinguishable on vg and mRNA in **7 of 8** comparisons while producing opposite survival | ✅ |
+| 🔴 **`TX-005`'s binding defect is SPECIFICITY, not `n`.** Lithium's panel carries its bracket **in all three genotypes including wild type** — supplying `n` would not touch it. And the same paper **does** report N elsewhere: *"+/+ (N=20), +/− (N=21) and −/− (N=18)"* | ✅ verified in `PMID32000863.json` |
+| 🔴 **`TX-006` reports its denominator and is weak anyway** — `mechanism_intervention_map.md:757`: *"Limits: N=2, observational, uncontrolled."* It is weak because **N = 2 is small**, and the frame is silent about the one case it fits cleanly | ✅ verified at that line |
+
+**What survives is narrower and duller:** *a load-bearing number that cannot be placed on the
+endpoint's scale* — arising from **three distinct causes**: an **absent denominator**, an
+**untested comparator**, and a **measurement that does not resolve the arms it should separate**.
+🔴 **"Missing denominator" names one cause and was being used to name all three** — the same
+over-generalisation this node was convened to check for, one level up.
+
+⚠️ **The methodological admission, which is the most important line here:** the four instances that
+generated the frame were **selected after the frame was in mind**, and the only two out-of-sample
+cases available are **the two it fails on.**
+
+> ✅ **And the conclusion that follows: NO gate, NO registry, NO mandatory field, NO audit
+> programme — not because they were declined on policy, but because the frame that would have
+> justified one does not hold.** A pattern that dissolves under its own test is a better result
+> than one merely restated.
+
+🔵 **One taxonomy case the Orchestrator's own three-way split lacked**, named rather than forced
+into it: **`TX-007`'s denominators are reported AND survivor-conditioned** (its supplementary marks
+one high-dose and three low-dose animals dead). **A denominator selected on the outcome is not the
+same object as a missing one — it needs a sensitivity analysis, not a number.**
+
+**The proportions, which were the point of asking:**
+
+| Case | Count | Which |
+|---|---|---|
+| **(c) never measured — needs an EXPERIMENT** | **1** | 🔴 **`TX-001`** — the correctly-spliced fraction, for *any* WWOX allele, ± NMD block |
+| **(b) in the source, never extracted** | 3 strategies / 2 sources | `TX-002` + `TX-003` share `PMID 29808465` (`abstract_only`, **no PMCID**) · `TX-004` · `TX-005` (secondary) |
+| **(a) in LEGEND, not carried into the tracker** | 1 | `TX-007` |
+| **not applicable** | 1 | `TX-006` |
+
+⇒ **three re-reads, one propagation fix, and exactly one experiment.** The experiment is `TX-001`'s
+aberrant:normal transcript ratio, which LEGEND already holds as `E-4` / `DL-BIO-003` with a
+traceable route — **it needs priority, not mechanism.**
+
+🔴 **A further extraction defect, same italic-token class as the vector-genome exponents:** quoting
+Repudi 2021's Kaplan–Meier arms in-act returns *"total= 18, spontaneously dead= 6 … (= 6) or the
+non-injected (= 8); < 0.0001"* — **the extractor deleted every `n` and the `p`.** Numerals survive,
+their labels do not. **Stated, not repaired.**
+
+---
+
+### The superseded paragraph follows, kept verbatim
+
 ### 🔵 The pattern, stated as observation only — no governance proposal
 
 Across LEGEND's intervention arms the recurring defect is not a missing *assay* but a missing
@@ -5923,3 +5982,104 @@ without its denominator.**
    3, 6 and 8 of this session all rest on this single manifest.** A single point of failure for the
    `TX-004` axis, recorded as such.
 
+
+---
+
+## FT-128 — 🔴 PMID 24369382: the one link of the CLAIM 005 chain that was never read, and it says the opposite
+
+**Opened:** 2026-09-22 · **Actor:** Orchestrator, verifying Scientist A's Wave 7 before landing it
+**Paper:** PMID 24369382 · DOI 10.1093/brain/awt338 · PMCID PMC3914474
+
+Mallaret M, Synofzik M, Lee J, … **Aldaz CM**, Koenig M — *"The tumour suppressor gene WWOX is
+mutated in autosomal recessive cerebellar ataxia with epilepsy and mental retardation."* *Brain*
+2014;137(Pt 2):411–9. Registered as `PAPER 042`, with a `LIT` record.
+DOI link: [10.1093/brain/awt338](https://doi.org/10.1093/brain/awt338)
+**Current depth:** `FTR-20260726-24369382-01` — `legacy_reconstruction`, `partial_fulltext_read`,
+**every coverage field `unknown_legacy`**. No dossier. No locator manifest. (Which is exactly the
+`C-3` discriminator: a legacy record is one with neither.)
+
+### Why this is now the highest-value unacquired paper in the corpus
+
+According to PubMed, its abstract states, **in the first person**:
+
+> *"Moreover, **we observed** that the short-lived Wwox knock-out mouse display spontaneous and
+> audiogenic seizures, a phenotype previously observed in the spontaneous Wwox mutant rat presenting
+> with ataxia and epilepsy…"*
+
+**Aldaz is a co-author, and the Aldaz laboratory made that mouse.** This is the direct negation of
+PMID 19500159, on which `CLAIM 005` and `CLAIM 037` rest, and from which `CLAIM 005` derives the
+only prohibition in this repository written against *future* canonical text: *"No canonical statement
+may describe a Wwox-null mouse as showing epileptogenesis."*
+
+The repository had already met this sentence once, in the completed read of `PMID 30370248`, and
+**explained it away wrongly** — diagnosing the review as miscitation on the grounds that its
+reference 53 is a human genetics paper. It is; and it reports a mouse observation in its abstract.
+The review's citation was faithful. Append-only correction written into that dossier; full
+verification in [[wave7_verification_mallaret_chain_20260922]] §2.
+
+### 🔴 The acquisition status, measured rather than assumed
+
+`get_copyright_status(["24369382"])` →
+
+```
+checked_sources: ["pubmed", "pmc"]          ← PMC WAS consulted
+license.is_open_access: false
+copyright.statement: "© The Author (2013). Published by Oxford University Press on behalf of
+                      the Guarantors of Brain. All rights reserved."
+pmc_id: "PMC3914474"                        ← a deposit exists, and is not a body
+```
+
+⚠️ **This is a paywall, not a route failure**, and the distinction is load-bearing. This session has
+now drawn it in both directions: `PMID 36779245`'s Table S1 is **open access and unreachable** → a
+route problem, worth more routes. This is **reachable in principle and not licensed** → no route
+will produce it. **A PMCID is not a body** — fifth instance this session, and the first whose cause
+is licensing rather than an empty `full_text:""` stub.
+
+🔵 **Method note, generalisable and cheap:** `get_copyright_status` used as a **one-call pre-test**
+before any acquisition attempt is now **6/6** this session at correctly predicting body
+availability. Here it converted three doomed fetch routes into one measurement. This belongs in the
+acquisition path, not in a hand-back.
+
+**Acquisition is a human action** (institutional access, interlibrary loan, or an author request —
+purchasing is `HUMAN_REQUIRED` and is not proposed here). Per §27 a tool or access boundary is **not**
+a scientific stop: the science that does not require this body proceeds, and the next section is
+that science.
+
+### 🎯 What can be settled WITHOUT acquiring it — dispatched this wave
+
+The contradiction may not be biological at all. Note what `19500159`'s own numbers are: the rat
+figure is **19/20 (95%) on audiogenic stimulation** — a **provocation**, not a passive observation —
+and the rat's earliest seizure onset (**day 16**) nearly exhausts the mouse null's entire lifespan
+(**77% dead by day 17**, none past weaning). *"The mouse has no epilepsy"* and *"nobody provoked,
+EEG'd, or outlived the mouse"* look identical in a Table 2 with an empty `Epilepsy` row.
+
+So the census that settles the shape of the question is: **for every published Wwox rodent model,
+what seizure ascertainment was actually performed** — EEG yes/no, provocation yes/no, passive
+observation and for how long, and whether the observation window outlasts that study's **own**
+reported survival. `not performed` and `not reported` are different cells and must not be collapsed.
+Dispatched to Scientist D → `seizure_ascertainment_census_20260922.md`.
+
+**If nobody has ever audiogenically provoked or EEG'd a Wwox-null mouse, the mouse/rat discordance
+is `PREMISE: NOBODY_LOOKED`, not an observed species difference** — and that is a first-order
+finding obtainable entirely from papers we can read.
+
+### On reading it, if it is ever acquired
+
+1. **Does the body contain the mouse seizure experiment, or is the abstract sentence unsupported?**
+   This is the whole question. `n`, ages, sex, stimulation protocol, EEG or not.
+2. **Which mouse line**, and is it the same null as `19936220`/`19500159`. Do not assume; the Aldaz
+   lab has more than one allele.
+3. Whether **`P47T`'s normal Western blot** (the datum under `DL-MECH-037`) is in the body with `n`
+   and controls, or is a figure claim. `DL-MECH-033` and `DL-MECH-037` both rest on it.
+4. The **`G372R`** family's neurological detail.
+5. ⚠️ `P47` is described in the abstract as *"part of the hydrophobic core that stabilizes the WW
+   fold"*, while LEGEND's own `AF-Q9NZC7-F1` measurement gives **relSASA 0.286 — partially exposed**.
+   Record what the body actually shows; a prose assertion and a solvent-accessibility measurement
+   are not the same claim, and one Wave 7 finding was built on conflating them.
+
+**Do not let an abstract stand in for any of these.** The `LIT-0405` precedent governs: there,
+*"decreased plasma GH"* was refused as a reading, and the body reported it as **not significant**.
+
+**Canonical repair proposed meanwhile:** `CC-20260922-CLAIM005-CHAIN-NAMING-01` (`D-25`) — names the
+third link inside the claim, records the contradiction, adds a `REVIVAL_TRIGGER` on acquisition.
+**The prohibition is not lifted.**
