@@ -6275,3 +6275,51 @@ open and cheap if and only if `NODE 3`'s killer experiment (ERES count + cargo t
 neural cells) ever returns a positive.
 **Next action:** none unless `NODE 3` is promoted above flag status. Do not spend acquisition routes on
 `28097321` before then.
+
+---
+
+## FT-132
+**Papers:** PMID 23583307 / DOI 10.1016/j.pneurobio.2013.04.001 — Semple et al. 2013, *Prog Neurobiol* ·
+PMID 21964341 / DOI 10.1038/nature10487 — Sanai et al. 2011, *Nature* ·
+PMID 23616543 / DOI 10.1523/JNEUROSCI.5746-12.2013 — Workman et al. 2013, *J Neurosci* ·
+PMID 17368774 / DOI 10.1016/j.neuro.2007.01.014 — Clancy et al. 2007, *Neurotoxicology* ·
+PMID 11483296 / DOI 10.1016/s0306-4522(01)00171-3 — Clancy et al. 2001, *Neuroscience* ·
+PMID 17426354 / DOI 10.1385/ni:5:1:79 — Clancy et al. 2007, *Neuroinformatics* ·
+PMID 20824390 / DOI 10.1007/s12021-010-9081-y — Nagarajan et al. 2010, *Neuroinformatics* ·
+PMID 21788513 / DOI 10.1073/pnas.1105108108 — Petanjek et al. 2011, *PNAS* ·
+PMID 9336221 — Huttenlocher & Dabholkar 1997, *J Comp Neurol* (no DOI returned by PubMed)
+**Title:** Declared reading debt opened by the post-diagnosis developmental-window node — the general human
+neurodevelopmental timing set and the rodent-to-human translation method
+**Priority:** MEDIUM for `23616543`; LOW for the rest
+**Why:** Opened by
+[`postdiagnosis_window_evidence_20260922.md`](../analysis/postdiagnosis_window_evidence_20260922.md), which
+needed a **documented human time course** for seven developmental processes and a **published method** for
+translating the mouse `P1–P5` gene-therapy window into human terms. **None of these papers is a WWOX paper**
+and none may ever support a WWOX claim: they supply general neurodevelopmental timing, which that file keeps
+in a column rigidly separate from every WWOX finding.
+- 🟢 **`23583307` and `21964341` were READ IN FULL in that act** and are declared here only because they
+  carry no receipt and no registry record. `23583307` is the rodent-to-human translation source (Dobbing &
+  Sands brain-growth-spurt anchor; Back oligodendrocyte-lineage anchor, rodent pnd 1–3 ≈ human 23–32
+  gestational weeks; the GAD-vs-ChAT spread that is the error bar). `21964341` is the measured human
+  postnatal SVZ/RMS/MMS time course on which that file's §7.2 hinge rests. ⚠️ **`get_copyright_status`
+  reported `is_open_access: false` and `license: All rights reserved` for `23583307` and the body was served
+  anyway** — recorded as `G2-C6` in that file.
+- 🔴 **`23616543` is the one that matters and the one that failed.** It is the current form of the
+  `translating time` model and the only place the method's residual error could be read. `get_full_text_article`
+  on **PMC3928428** returns **`full_text: ""`** — a PMC record with an empty body — and Europe PMC REST is
+  `connect_rejected` by egress policy from this deployment. **The error bar Task 3 asked for was therefore
+  not obtained and was not invented.** Same empty-body result for `17368774` / PMC2077812.
+- `11483296`, `17426354`, `20824390` are the earlier generations of the same model, at abstract/metadata depth,
+  cited only to establish that the method exists and what its declared range is.
+- `21788513` (human dendritic-spine neoteny) is at **abstract-depth**; only its abstract's own sentences are
+  quoted.
+- 🔴 **`9336221` was never opened at all.** Every synaptic-density number attributed to it is quoted **as
+  reported inside `23583307`** and is labelled `secondary` at each use. `get_copyright_status` → `pmc_id: null`,
+  `is_open_access: false`.
+**Current status:** 🔴 **declared debt.** Two read in full, one abstract-depth, four metadata-depth, one never
+opened, one measured-unretrievable. Logged because the reasoning layer now names them and `UNREAD_PREMISE` is a
+ratchet, not a wall — stripping the identifiers would have been the failure the check exists to prevent.
+**Next action:** `23616543` only, and only if a route into that body opens (institutional PDF, or the `ttime`
+R package's own documentation on CRAN, which reproduces the model). Nothing else here needs acquiring unless
+a WWOX result is ever proposed to rest on general developmental timing — which
+`postdiagnosis_window_evidence_20260922.md` §5 forbids by construction.
