@@ -160,9 +160,14 @@ gap but **which of our own reagents would have given us a false negative inside 
   papers nobody opened — including one I opened myself and never declared. All ten are now declared
   at their true depth in **`FT-129`**, and the ratchet is back to **0**. Second machine catch of the
   session, both on my output, both cheap.
-- ⛔ **A receipt is owed on the one paper this candidate rests on, and until it exists this candidate
-  must not propagate.** PMID 30202070's body was read sequentially and completely via
-  `get_full_text_article(["PMC6131187"])`, but **figures and supplementary were stripped by the
+- ✅ **The owed receipt is persisted: `FTR-20260922-30202070-01`** — `contemporaneous_receipt`,
+  `evidence_depth: partial_fulltext_read`, `source_kind: fulltext_remote`, **six verbatim locators**
+  carried in `evidence_basis` including both load-bearing sentences, the six Coriell line identities,
+  and the transfer-scope note limiting the import to reagent sensitivity. Ledger now **189 chained
+  receipts, tail anchored**. **This candidate is no longer blocked.**
+- ⚠️ **Its depth is `partial`, not `complete`, and that is an instrument defect rather than a
+  choice.** PMID 30202070's body was read sequentially and completely via
+  `get_full_text_article(pmc_ids=["PMC6131187"])`, but **figures and supplementary were stripped by the
   route** — every `(Fig.)` and `(Supplementary Fig.)` cross-reference came back with its number
   deleted. The honest depth is therefore **`partial_fulltext_read`**, not `complete_fulltext_read`,
   and no figure-panel claim is made anywhere above. ⚠️ **Both load-bearing quotations point at
