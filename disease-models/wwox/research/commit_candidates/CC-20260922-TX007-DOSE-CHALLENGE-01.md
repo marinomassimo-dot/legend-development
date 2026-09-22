@@ -317,3 +317,108 @@ survival cohort.**
   in either paper — a fact about how the axis's evidence base changed between them.**
 
 **§4a is therefore replaced by §9. The arithmetic stands; the interpretation does not.**
+
+---
+
+## 10 · 🔴 APPEND-ONLY — the 2.1× step is ROBUST, and *"the ambiguity is the size of the effect"* is a CATEGORY ERROR
+
+Scientist O ran the forensic audit the Operator ordered. **Verified by the Orchestrator.**
+
+### 10a · The unit ambiguity is a common-mode multiplier and cancels out of the ratio
+
+LD and HD are stated **in one sentence, one token form, one figure, one experiment**, and the Methods
+deliver **the same 2.0 µL/hemisphere bilaterally to every arm**. Let *u* convert written `vg` to total
+vg (*u* = 2 if per-hemisphere, *u* = 1 if total). **The same *u* applies to both arms:**
+
+```
+HD/LD = (u · 2.63×10¹¹) / (u · 1.23×10¹¹) = 2.63/1.23 = 2.1382      ← u cancels
+```
+
+**Recomputed by the Orchestrator under every permitted reading:**
+
+| reading | LD total | HD total | **HD/LD** |
+|---|---|---|---|
+| per hemisphere | 2.46×10¹¹ | 5.26×10¹¹ | **2.1382** |
+| total per animal | 1.23×10¹¹ | 2.63×10¹¹ | **2.1382** |
+| per injection (≡ per hemisphere) | 2.46×10¹¹ | 5.26×10¹¹ | **2.1382** |
+
+The four-point span `4×10¹⁰ → HD` is **6.575× under both readings**. **Every ratio in the paper is
+invariant. Only the absolute level moves, and by exactly 2×.**
+
+> 🔴 **§4b's *"the unit ambiguity is the size of the effect it is being used to measure"* — which I
+> wrote and also reported to the Operator — is a category error. A common-mode multiplier cannot
+> corrupt the ratio it cancels from.** The defect is real and is confined to the **absolute** axis:
+> LD ∈ [1.23, 2.46]×10¹¹ vg, HD ∈ [2.63, 5.26]×10¹¹ vg. **Withdrawn.**
+
+### 10b · Classification: **`AMBIGUOUS BUT BOUNDED`**
+
+**Not `UNAMBIGUOUS`** — the dose is written as bare `vg` on all three surfaces. **Not `INTERNALLY
+INCONSISTENT`** — that was *tested*, not assumed: one Methods, one protocol, one volume, one token
+form. 🔵 **The paper is consistently silent, not inconsistently specified — which is exactly why the
+ratio is recoverable and the absolute dose is not.** The bound on the ratio is **degenerate**: a
+single value.
+
+### 10c · 🆕 The structural mechanism by which the unit was lost
+
+🔴 **`PMID 42422765` states no dose in its Methods at all.** All seven `vg` tokens sit in
+Results/Discussion; the Methods carry volume, rate, coordinates, needle, titration and four vendors —
+**and no dose.** `hemisphere` occurs twice, both in Methods, **never adjoining a dose**; `GC`,
+`per animal` and `total dose` occur **zero** times. **The dose and its unit live in different
+sections, which is how the qualifier went missing.**
+
+🔴 **And `LD` denotes two different doses about 1,000 characters apart** — *"lower dose (LD)
+containing WPRE"* = 4×10¹⁰ **+WPRE**, versus *"an LD (1.23 × 10 vg)"* = 1.23×10¹¹ **−WPRE**. **3.1×
+apart, opposite WPRE configuration, same two letters.** A reader who carries `LD` across those
+thousand characters is comparing two different experiments.
+
+### 10d · The non-monotonicity SURVIVES — and the unit work sharpens rather than dissolves it
+
+The cheapest escape — a per-figure unit switch — is **positively excluded**, not merely unavailable.
+The paper's own bridge sentence, ⚠️ **already held in this repository** at
+`CC-20260921-TX007-CEILING-AND-DOSE-CONTROL-01.md:90` (the quotation is not new; **the use made of it
+is**):
+
+> *"However, this reduction in expression **necessitates the use of higher vector doses** to achieve
+> comparable therapeutic outcomes."*
+
+**That is a cross-figure magnitude comparison, and it requires one scale.** Under a single
+convention, `LD / 8×10¹⁰ = 1.5375` — **a 1.54× higher dose fails where a lower one rescued.**
+Contradiction intact.
+
+🔴 **But `D-36` and its own logic still forbid inferring biological non-monotonicity.** Three
+cheaper-than-biology explanations remain, and the leading one is new:
+**(b) follow-up-horizon mismatch** — Fig 2 runs ~50 d against Fig 3's 300 d, and untreated KO die at
+~15–20 d, so **at 50 days an LD animal that dies by ~90 d also reads as "rescued."** The served text
+states **no Fig 2 horizon.**
+**(c)** an erroneous sentence; **(e) 🆕** the `8 × 10` exponent is only **🟡 MEDIUM** — **if it is
+8×10¹¹, the tension vanishes entirely.**
+
+### 10e · Corrections to §4b and §9's provenance, and one upgrade
+
+- 🔴 **§4b's *"text-versus-text"* framing is too strong.** The *sentences* are running text, but
+  **both exponents are figure-derived** — the served body reads `10vg` on both sides. So it is
+  text-versus-text on the claims and **figure-versus-figure on the numbers**, and a prior wave rated
+  the `8×10¹⁰` exponent **🔴 LOW** while building on it a conflict it declared figure-independent.
+- 🟢 **Upgrade:** the **2021** dose exponent is **🟢 HIGH, not 🟡** — `PMID34747138_locators.md`
+  carries it from a **local JATS XML** (`surface: body`): *"Approximately 1 μl (2 × 10¹⁰
+  GC/hemisphere)."* **The repository already held the primary rendering a prior wave said it lacked.**
+- 🔴 **Downgrade:** the third LD/HD exponent surface (a web-search snippet) **fails on re-test** —
+  it now returns *"a low dose (LD, 1.23 × 10 vg)"*, exponent deleted. The doses remain 🟢 HIGH on two
+  primary-artefact renderings, **but the margin is one surface, not two.**
+
+### 10f · The cross-paper convergence test — exactly symmetric, and it adjudicates nothing
+
+| | 2021 (fully specified) | 2026 under per-hemi | 2026 under total |
+|---|---|---|---|
+| total/animal | 4.00×10¹⁰ GC | 8.00×10¹⁰ (**2×**) | 4.00×10¹⁰ (🎯 **1×**) |
+| concentration | 2.00×10¹⁰ GC/µL | 2.00×10¹⁰ (🎯 **1×**) | 1.00×10¹⁰ (**0.5×**) |
+
+**Each reading reproduces the 2021 experiment exactly on one derivable quantity and misses by exactly
+2× on the other.** Reported as a **negative result** — it cannot adjudicate, and saying so is the
+finding.
+
+🔵 **And the delegate tested for `INTERNALLY INCONSISTENT`, the most damaging verdict available to
+it, and reported that it does not hold.** That is the standard.
+
+**§4b is therefore replaced by §10. The unit defect is real, bounded at exactly 2×, and confined to
+the absolute axis — the 2.1× step itself is robust.**
