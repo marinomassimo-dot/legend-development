@@ -256,6 +256,321 @@ conclusion the ladder invites, and the invited conclusion is the one I would mos
 
 ## 5 · RESULTS OF THE CONFIRMATORY SEARCH
 
-*(deliberately empty at the moment of writing — see §4)*
+> **Method of scoring.** Every prediction below is scored against searches run **after** §4 was on
+> disk. 🔵 **Source attribution: bibliographic records, query counts and abstracts in this section
+> were retrieved from PubMed.** No prediction was rewritten, none was softened, and the one that
+> failed is marked as failed.
+>
+> ⚠️ **A query census is a statement about what a query returns, not about biology.** This
+> repository has documented **five** ways a query-count zero lies, and the fifth is the dangerous
+> one: *a reagent named only in Methods is invisible to `[All Fields]`* (`AUTONOMOUS_SESSION_STATE.md`,
+> sixth block). 🔴 **That defect is live here and I measured it rather than assuming it away:**
+> `Wwox AND (conditional OR floxed OR Cre) AND (knockout OR deletion)` returns **10** records and
+> **omits every conditional line this node is built on** — `PMID 33914858`, `PMID 30755385`,
+> `PMID 24871327`, `PMID 34747138` are all absent, against a positive control `Wwox[tiab] AND
+> mice[tiab]` → **99**. **Every negative below is therefore an upper bound on what a query can see,
+> not a statement that the experiment does not exist**, and each is given with its positive control.
+
+| # | Score | Evidence |
+|---|---|---|
+| **P1** | 🟡 **SUPPORTED, weakly** | No second matched-panel comparison is findable. The hepatocyte-vs-adipocyte-vs-skeletal-muscle comparison of `PMID 30755385` — one panel, one paper, one figure series — remains the only place in the WWOX literature where a resilient and a vulnerable compartment meet the **same** endpoints. 🔴 **Bounded by the instrument defect above:** the query that should have enumerated the conditional lines could not see four of them, so this negative is weak by construction and is recorded as such |
+| **P2** | 🟡 **SUPPORTED, weakly** | `Wwox AND (EEG OR seizure OR behaviour OR behavior OR cognition) AND (liver OR muscle OR adipose OR hepatocyte)` → **7** records, **none** of which is a non-neural conditional line given a CNS endpoint. **No Alb-Cre, adipocyte-Cre or ACTA1 animal has been EEG'd, behaviourally phenotyped, or had brain histology reported.** Same bound as P1 |
+| **P3** | 🔴 **REFUTED — and it is refuted against me** | `WWOX AND (oxygen consumption OR Seahorse OR respirometry OR extracellular acidification OR oxidative phosphorylation)` → **4** records, and three of them measure or genetically probe exactly what I predicted nobody had. According to PubMed: **PMID 26390919** (Choo, O'Keefe, Richards *et al.* 2015, *Genes Chromosomes Cancer*, [DOI](https://doi.org/10.1002/gcc.22286)) — *"Altered WWOX levels modulate variable cellular outgrowths caused by genetic deficiencies of components of the mitochondrial respiratory complexes"*, *"This modulation requires the enzyme active site of WWOX"*; **PMID 23765596** (Dayan, O'Keefe, Choo, Richards 2013, [DOI](https://doi.org/10.1002/gcc.22078)); **PMID 35984507** (Carvalho *et al.* 2022, [DOI](https://doi.org/10.1007/s00018-022-04508-7)), which reports mitochondrial respiration in differentiated SH-SY5Y and **is read in this repository** (`reading_state.md`, two receipts). 🔴 **My prediction was too strong and I was too confident in a corpus-shaped negative.** See §5.1 — the refutation is also the most valuable result in this file |
+| **P4** | 🟢 **SUPPORTED** | `Wwox AND (soleus OR "extensor digitorum" OR "fiber type" OR "muscle fiber")` → **4** records. One is the source itself (`PMID 30755385`); the other three are **two cattle-carcass GWAS** and **one paediatric mitochondrial NGS-panel report**, in none of which WWOX is more than a positional candidate gene in a list — **none reuses the fibre-type WWOX gradient**. 🔴 **Their identifiers are deliberately withheld here:** they are the negative half of a census, nothing in this file leans on them, and naming an unread paper inside a reasoning file is exactly the debt `legend_lint` counts. Repository half already measured: `soleus`/`soleo`/`EDL`/`slow-twitch` → **zero** hits outside the paper's own dossier. 🎯 **The one within-animal WWOX-abundance-versus-vulnerability gradient in this literature has been read by LEGEND and used by nobody, inside or outside** |
+| **P5** | 🟢 **SUPPORTED** | The hepatocyte's resilience is **conditional, not absolute**. Under a high-fat-diet challenge the `Wwox^hep−/−` line reports **serum ALT ≈2× at 7 months** (`PMID 29724996`, `complete_fulltext_read`, `reading_state.md:97`; recorded at `analysis/peripheral_phenotype_denominator_audit_20260922.md:91` and `:164`). 🔴 **Consequence for the ladder, stated plainly: "L1/L2 tolerate" means "tolerate at baseline, on the endpoints measured".** The ladder is a ladder of *challenged and unchallenged states*, not of cell identities alone |
+| **P6** | 🟢 **SUPPORTED**, with an unpredicted rider | `Wwox[tiab] AND (CreER[tiab] OR "tamoxifen-inducible"[tiab] OR "inducible deletion"[tiab] OR "inducible knockout"[tiab])` → **1** record, and it is **not** a two-age design. 🔴 **A first query was discarded before scoring, not after:** `Wwox AND (tamoxifen OR doxycycline OR inducible …)` returned **199** because `inducible` expanded to `induce/induced/inducing`; a wrong expansion is discarded, not counted. **Rider in §5.2** |
+| **P7** | 🟢 **SUPPORTED — and it weakens `R1`, as I said in advance that it would** | `mechanism_intervention_map.md:308-313`, read directly: *"Human metabolism is normal, and it was checked four times"* — lactate, ammonia, acylcarnitines, a complete metabolic and mitochondrial screen including **muscle biopsy**, and **MRS**, all normal; and the single outlier is cerebral lactate *"extremely low"*, **the opposite of the Warburg prediction**, in a patient carrying a confounding HSPG2 variant (`DL-BIO-008`). 🔴 **This is a brain-compartment measurement and it runs against the metabolic reading**, which is why `FT-049` does not rescue it (§5.3) |
+
+### 5.1 🎯 THE UNPREDICTED FINDING — the refutation of `P3` collapses `R1` and `R2` into one axis
+
+🔴 **I did not predict this. It emerged while scoring `P3` and is recorded as an unpredicted finding,
+not as a scored prediction.**
+
+According to PubMed, **PMID 23765596** ([DOI](https://doi.org/10.1002/gcc.22078)) reports that
+**the cell's metabolic state sets WWOX expression, not only the other way round**:
+
+> *"altering metabolism from glycolysis to oxidative phosphorylation causes stable increase in
+> steady-state levels of transcripts of the WWOX gene … exposure to hypoxic conditions, in which
+> cells rely on glycolysis, causes a downregulation of WWOX mRNA"*
+> — **🔴 abstract depth. Not read. See the reading debt in §5.1.1.**
+
+And **PMID 26390919** ([DOI](https://doi.org/10.1002/gcc.22286)) places WWOX in a genetic
+interaction with respiratory-complex deficiency that **requires its SDR active site**.
+
+**What this does to §2, and it is not what I wanted.** `R1` (oxidative-dependence gating) and `R2`
+(expression-dose gating) were written as **rivals**, and §2.1 recorded that soleus-versus-EDL could
+not separate them. **If metabolic state drives WWOX transcription, they are not rivals — they are
+one axis with an arrow in it:**
+
+> **a compartment's oxidative setpoint sets how much WWOX it expresses; the compartments that
+> express the most are the compartments whose loss is felt.** Soleus > EDL is then not a
+> coincidence between two variables; it is the same variable measured twice.
+
+🎯 **This is the only thing in this file that unifies rows rather than adding one.** It predicts the
+ladder's shape from a single quantity — and it predicts, without being fitted to them, the two rows
+I refused to build on: the **oligodendrocyte**, which is constitutively glycolytic and exports
+lactate, and the **astrocyte**, likewise, should both sit at the resilient end. `L9` says they do.
+🔴 **`L9` is second-hand and I do not count it as confirmation** — but it is the first time anything
+in this repository has offered *any* explanation for the Olig2-Cre and GFAP-Cre negatives, which
+until now were used only as evidence about the neuron.
+
+#### 5.1.1 🔴 THE DEBT THIS FINDING CARRIES, AND THE REDISCOVERY IT PARTLY IS
+
+**Reading debt — declared, and no conclusion rests on it.**
+
+| PMID | LEGEND status, measured | What is permitted |
+|---|---|---|
+| **26390919** | `CORPUS-STUB-125` in `registries/paper_registry_current.md:1917-1925`, status **`not_processed`**; queue entry **`FT-006`** at `research/full_text_queue_current.md:94-101`, priority MED, surface **`absent`**, and at `:2962` **`unrecoverable_by_these_routes`**. **No read receipt. Abstract depth only** | Citable (registry-declared **and** queue-declared). 🔴 **UNDISCHARGED READING DEBT.** No conclusion in this file rests on it |
+| **23765596** | Registry `:5583-5597`, **`screened — corpus placeholder`**, Tier C, `LIT-0374`, *"Role: background corpus only"*, **`Claim links: none`**. **No read receipt, no queue entry.** Also a **Drosophila/HEK293** system | Citable as a registry-declared record. 🔴 **UNDISCHARGED READING DEBT, and the weaker of the two.** No conclusion rests on it |
+
+🔴 **And the honest grading, which costs this file its best line.** The *fact* is **not new to this
+repository**. `analysis/adelaide_node_discriminator_20260921.md:249`, `:288` and `:329` already hold
+*"Galactose / forced OXPHOS raising WWOX transcript in HEK293"* — **second-hand via a review, no
+receipt, transcript-only, protein never reported** — and `next_node_scout_20260921_orchestrator.md:275`
+already records the two questions it owes (*was protein measured; is the raised transcript the
+full-length correctly spliced isoform*).
+
+> **Grade: the ingredient is a `REDISCOVERY`; the use is not.** In every place the repository holds
+> it, the fact is filed as a **candidate therapeutic lever for raising WWOX** — and killed there,
+> because the reference genotype class has nothing functional to upregulate. **Nowhere is it turned
+> around and used as a rule predicting which compartment fails.** That inversion, and its match to
+> the unused `L5` gradient, is this file's contribution. It is a connection, not a discovery, and it
+> is graded as one.
+
+### 5.2 The rider on `P6` — the decisive reagent for `R6` already exists in this field
+
+`PMID 36572673` (Husanie *et al.* 2022) is a **tamoxifen-inducible conditional `Wwox`** mouse study,
+**read in full by LEGEND** (`research/fulltext_dossiers/PMID36572673.md`, `complete_fulltext_read`,
+PMC9792466, [DOI](https://doi.org/10.1038/s41419-022-05519-9)), in **pancreatic acinar** tissue for an
+oncological question. 🔴 **It is not a two-age design and it is not a neural or metabolic phenotype —
+it must not be pooled with any row of §1.** What it establishes is narrower and still useful:
+**an inducible `Wwox` deletion system exists and has been used**, so `R6`'s decisive experiment —
+delete in one compartment at two ages — is a **cross and a cohort**, not a new allele. That moves its
+executability class and nothing else.
+
+🎯 **It also adds a row I did not have.** *Pancreatic acinar tissue, adult inducible deletion*:
+WWOX loss there is reported to **accelerate tumour development in a cancer-driver context**, not to
+produce a spontaneous phenotype on its own — consistent with the ladder's resilient end, and
+consistent with `P5`'s lesson that resilience is **conditional on challenge**. Recorded as an
+observation, not scored.
+
+### 5.3 🔴 Why `FT-049` does NOT rescue node `G1`, although it looks as though it should
+
+**The argument I expected to be able to make, and cannot.** `FT-049` says a phenotype measured in
+blood does not identify the tissue where the lesion sits. Node **`G1`** of
+`wwox_independent_downstream_rescue_20260922.md:103` — HIF1α/PDK1/glycolytic shift — was scored down
+partly on *"human metabolism is normal, and it was checked four times"*. If those four screens are
+**serum** screens, `FT-049` would say they cannot exclude a compartment-restricted lesion, and `G1`
+would be under-scored.
+
+🔴 **It does not work, and `P7` is why.** The four screens are **not all serum**: they include a
+**muscle biopsy** and an **MRS**, and the MRS is a *brain-compartment* measurement that came back in
+the **wrong direction** for the Warburg reading (`mechanism_intervention_map.md:308-313`). A
+compartment-restricted rescue of `G1` needs the compartment to be unmeasured; **the two compartments
+this node most implicates — oxidative muscle and brain — are precisely the two that were measured.**
+
+> **`G1` stays where `wwox_independent_downstream_rescue_20260922.md` put it.** It is not re-scored,
+> not reopened and not re-proposed here. The one thing I add is the **reason**: `G1`'s problem is not
+> that it was measured in the wrong compartment — it is that it was measured in the right one.
 
 ---
+
+## 6 · THE MINIMAL DISCRIMINATING EXPERIMENT
+
+**Live hypotheses after §5:** `R1⊕R2` (merged — the **metabolic-setpoint axis**), `R3`, `R4`, `R5`,
+`R6`.
+
+**Design rule applied:** every component must own a hypothesis **pair** that nothing cheaper
+separates. Components owning no pair are **cut**, and the blind spot each cut creates is stated.
+
+| # | Component | The pair it separates that nothing cheaper separates | Executability |
+|---|---|---|---|
+| **E1** | **The per-Cre-line endpoint matrix.** For every WWOX conditional line in the corpus — Alb-Cre, adipocyte-Cre, ACTA1-rtTA, Synapsin-Cre, Nestin-Cre, Olig2-Cre, GFAP-Cre, BK5-Cre, EIIA-Cre, the inducible pancreatic line — record **which endpoints were run, with what n, what comparator, and at what Cre-onset age**, from the dossiers and deepdive manifests already on disk | 🎯 **`R5` versus everything, and half of `R6`.** Nothing else can establish that there is an explanandum at all. 🔴 **This is a gate, not the product** — it is here because the node is worthless if the ladder is an artefact of unequal panels, and that is the cheapest possible way to find out | 🟢 **EXECUTABLE NOW.** Zero cost, no animal, no reagent, no fetch, no external contact. Material is local |
+| **E2** | 🎯 **Fibre-type-resolved analysis in the existing `Wwox^ΔSKM` line.** In one section set: WWOX immunolocalisation + **oxidative-enzyme histochemistry (SDH/COX)** + myosin-heavy-chain fibre typing + an atrophy/lesion index — across soleus, EDL **and the deep-versus-superficial regions of one gastrocnemius**, where oxidative character varies within a single muscle | 🎯 **`R1` versus `R2` — and nothing else can separate them.** §2.1 recorded that soleus/EDL cannot, because both variables move together there; the deep/superficial gradient is the cheapest place they come apart. 🔴 **And it kills `R5` and `R6` by construction for these rows** — one animal, one driver, one onset, one panel, so unequal endpoints and unequal Cre timing cannot explain a within-section gradient | 🟡 **MINOR ADAPTATION.** Reagents: SDH/COX histochemistry and MyHC typing are routine; the WWOX antibody used in this model is on record. Gated on banked or colony `Wwox^ΔSKM` muscle — 🔴 **a question this file was not permitted to ask** |
+| **E3** | **Cell-type-resolved WWOX protein in the WILD-TYPE brain**, co-stained with an oxidative marker: neuron versus oligodendrocyte versus astrocyte, with a regional axis | 🎯 **`R2` versus `R4`, in the compartment that matters** — `R2` predicts WWOX abundance tracks the oxidative marker and the ladder; `R4` predicts abundance is flat while the **partner** set varies. It is also the **only** component that tests whether the muscle rule transfers to brain at all. 🔴 **No knockout is needed and no disease animal is used — this is wild-type tissue** | 🟡 **MINOR ADAPTATION.** An N-terminal anti-WWOX antibody with a catalogued immunogen and rodent identity is already inventoried in `wwox_antibody_epitope_census_20260922.md`; markers are standard. No new allele, no new colony |
+| **E4** | **Two-age induction in one compartment**, using an inducible `Wwox` conditional system crossed to a single non-pancreatic driver | 🎯 **`R6` versus everything.** The only design in which cell type is held constant and onset varies. §5.2 shows the allele and the induction system exist | 🔴 **NEW PROGRAM.** A new cross, a new cohort and a new phenotyping plan. Listed because `R6` is otherwise unfalsifiable, **not** because it should be run first |
+
+### 6.1 What I cut, and the blind spot each cut creates
+
+| Cut | Why | 🔴 Blind spot created |
+|---|---|---|
+| **`R3`'s regeneration-blockade arm** (block hepatocyte renewal and look for an unmasked phenotype) | Owns only `R3`, and `R3` is already weakened by `L4` — the failing myofibre failed with a **transcriptional/metabolic** signature, not a degenerative one | 🔴 **Cannot exclude** that hepatocyte resilience is renewal-dependent. If `E1` shows the resilient lines were given the same panels as the vulnerable ones — i.e. `R5` falls — this cut becomes the bottleneck and `R3` returns |
+| **Respirometry / OCR:ECAR in donor-derived cells** | 🔴 **It is not mine.** `mechanism_intervention_map.md:513` already names Seahorse on donor-derived fibroblasts/LCL, and on the existing WWOX-KO organoids, as its `DECISIVE_PRECLINICAL_TEST`. I do not re-propose, rename or claim any part of it | Loses the direct flux measurement. `E2` substitutes an **enzyme-histochemical surrogate**, which is anatomical rather than quantitative |
+| **Acquiring `PMID 33914858`, `26390919` or `23765596`** | 🔴 **Out of scope for this act** — no acquisition was attempted and no external contact was made. These are the node's reading debts, declared in §1.1 and §5.1.1, and they are named as debts rather than converted into experiments | The `L8`/`L9` rows and the §5.1 arrow stay second-hand. **The node is built so that it survives without them, and it is sharper with them** |
+| 🔴 **Every pharmacological arm, of every kind** | **Out of scope by construction.** No molecule, class, dose, route or compound screen is named anywhere in this file | None. A mechanistic probe is not supposed to carry one |
+
+### 6.2 Executability verdict
+
+| Check | Answer |
+|---|---|
+| Reagent exists? | 🟢 Yes for E1–E3 — SDH/COX histochemistry, MyHC typing, a catalogued anti-WWOX antibody, standard cell-type markers. 🔴 E4 needs a new cross |
+| Sample exists? | 🟢 E1: local files. 🟡 E2: **the decisive unknown** — banked or colony `Wwox^ΔSKM` muscle; **not asked**. 🟢 E3: wild-type rodent brain. 🔴 E4: does not exist |
+| Technique exists? | 🟢 Yes — none of E1–E3 is beyond routine histology |
+| Readout interpretable? | 🟢 E1, E2, E3. 🟡 E4 only with a littermate-matched, age-matched denominator |
+| Comparator exists? | 🟢 E1–E3 — littermate controls and, for E2, the animal's own contralateral and within-section gradient |
+
+> **CLASS: 🟢 EXECUTABLE NOW (E1) · 🟡 MINOR ADAPTATION (E2, E3) · 🔴 NEW PROGRAM (E4).**
+> **Overall: MINOR ADAPTATION, gated on one tissue question this file was not permitted to ask.**
+> 🎯 **E1 is executable today at zero cost and can kill the whole node. It is the correct first
+> move, and I would rather it killed the node cheaply than that the node survived expensively.**
+
+---
+
+## 7 · VALUE — the three-part test, answered honestly
+
+| Requirement | Status |
+|---|---|
+| **Mechanistic bridge** | 🟡 **PARTIAL, and weaker than it reads.** The metabolic-setpoint arrow (§5.1) is supported by **two abstract-depth, unread, registry-declared records** and by **one unused first-hand datum** (`L5`). The fact itself is already held second-hand in the repository and is graded a **`REDISCOVERY` of the ingredient**. It is `IPOTESI`, not `DATO`, and it is not promoted |
+| **Disease-relevant endpoint** | 🔴 **FAILS TODAY.** The ladder's strongest, first-hand rows are **skeletal muscle and liver**, not brain. The brain limb is `E3` and is untested. And `P7` — which I preregistered **against myself** — confirms that the held human evidence, including a **brain** MRS, runs **against** the metabolic reading |
+| **Discriminating experiment** | 🟢 **PRESENT.** §6 separates five hypotheses with four components, one of which is free and can kill the node |
+
+### 7.1 🔴 THE WWOX-INDEPENDENT RESCUE TEST — run in full, and it FAILS
+
+The brief requires **all four** links or an explicit failure. Run honestly:
+
+| Link | Status |
+|---|---|
+| **WWOX LOSS** | 🟢 Present — eight conditional lines, §1 |
+| **→ plausible downstream mechanism** | 🟡 Present but `IPOTESI` — the metabolic-setpoint axis, §5.1, on two unread records |
+| **→ intervention POINT** | 🔴 **FAILS.** Any intervention on fuel strategy lands on **`G1`/`R-05`/`N-08`**, which this repository has already scored down and **DEPRIORITIZED** (`mechanism_intervention_map.md:774`), and §5.3 shows `FT-049` does **not** rescue them. 🔴 **I name no molecule, no class, no dose and no route, and I do not propose neuroprotection of any kind** |
+| **→ measurable disease-relevant ENDPOINT** | 🔴 **FAILS for the disease.** The measurable endpoints of this node are histological and muscular. A disease-relevant endpoint requires `E3` first |
+
+> # 🔴 VERDICT: NOT YET ACTIONABLE
+> **Two of three value requirements fail, and the four-part rescue test fails at two of four links.**
+> This node is a **mechanistic and predictive probe**, not a therapeutic direction. Nothing in it may
+> be read as one. **Nothing here is medical advice.**
+
+### 7.2 What survives if the reading debts are never discharged
+
+Scored twice, as §1.1 promised — the node **without** `L8` and `L9`, i.e. using only first-hand,
+receipt-backed material:
+
+| Holds without L8/L9 | Because |
+|---|---|
+| The ladder's **first-hand** core — L1, L2, L3, L4, L5, L6, L7, L10 | Every one carries a read receipt or is quoted from a receipted dossier with file and line |
+| **`FT-049` is undeveloped, and the experiment it demands has never been designed** | Measured across the repository, not asserted |
+| **`L5` and `L6` are unused, in this repository and in the literature** | `P4`, plus a zero-hit repository grep |
+| **`P5` — resilience is conditional on challenge, not absolute** | From a paper read in full |
+| **`E1`, `E2`, `E3`** | None of them needs `L8` or `L9` to be interpretable |
+| ❌ **Lost without them** | The oligodendrocyte and astrocyte predictions of §5.1 — which is exactly why they are written as a *match*, never as confirmation |
+
+---
+
+## 8 · WHAT I COULD NOT VERIFY
+
+1. 🔴 **`PMID 33914858` was not fetched and has no read receipt.** Rows `L8`/`L9` are second-hand
+   (§1.1). Nothing rests on them.
+2. 🔴 **`PMID 26390919` and `PMID 23765596` were not fetched.** Abstract depth only, via PubMed.
+   `FT-006` records `26390919` as `unrecoverable_by_these_routes`. Nothing rests on them (§5.1.1).
+3. 🔴 **No primary in §1 was re-fetched in this act.** `L2`–`L6` are 🔴 **SIBLING-ATTESTED** from
+   LEGEND's own receipt-backed dossiers, with repository file and line at every use.
+4. 🔴 **No figure panel was inspected by me.** `L5` is a dossier's pixel-level reading of Fig. S4.
+5. 🔴 **Whether banked `Wwox^ΔSKM` muscle exists.** No external contact was made; the question is
+   unasked, and `E2` is gated on it.
+6. ⚪ **`R4` is untested in every direction.** No partner-availability data was sought in this act.
+7. 🔴 **Whether any of this transfers to a human WWOX-DEE genotype class.** The ladder is built from
+   **mouse conditional alleles**. It is not pooled with the rat `lde/lde`, with human WOREE or with
+   human SCAR12, and no transfer is asserted.
+
+---
+
+## 9 · SOURCE ATTRIBUTION
+
+🔵 Bibliographic records, query counts and abstracts in §5 were retrieved from **PubMed**. Articles
+referenced there: PMID 26390919 ([DOI](https://doi.org/10.1002/gcc.22286)), PMID 23765596
+([DOI](https://doi.org/10.1002/gcc.22078)), PMID 35984507 ([DOI](https://doi.org/10.1007/s00018-022-04508-7)),
+PMID 36572673 ([DOI](https://doi.org/10.1038/s41419-022-05519-9)). The three
+incidental records that form the negative half of the `P4` census are **deliberately not named**:
+nothing leans on them and they were not read.
+
+Repository sources, all quoted with file and line and labelled at every use: `PMID 24871327`
+(receipt `FTR-20260810-24871327-01`), `PMID 30755385` (`complete_fulltext_read`), `PMID 34747138`
+(receipt `FTR-20260810-34747138-01`), `PMID 29724996` (`complete_fulltext_read`), `PMID 34634460`
+(via `CLAIM 021`), `PMID 33914858` (via `PAPER 004` / `CLAIM 003`, **second-hand**).
+
+No new external source was retrieved beyond PubMed metadata, **no external contact was made**, no
+canonical file was modified, no git command was run, no receipt was claimed and no commit candidate
+was opened. No contact detail of any living person is reproduced.
+
+🔴 **Nothing in this file is medical advice, and no molecule, class, dose, route or schedule is
+named anywhere in it.**
+
+---
+
+# ORCHESTRATOR VERIFICATION — 2026-09-22
+
+## V0 · 🔴 A defect in THIS repository's handling of this file, owned before anything else
+
+Commit `51dacbe` captured this file **mid-write at 261 lines** and landed it on `main`. That was
+the Orchestrator's error, not the Scientist's: `git add -A` was used to stage a sibling's commit
+while this actor was still writing. The Scientist noticed independently and said so.
+
+🎯 **It is the fifth member of the session's search-defect family, and the first to write to
+canonical history rather than to produce a wrong number.** The shared question — *what objects were
+eligible to match?* — applies to `git add -A` exactly as it applies to `grep`, `pgrep` and
+`ls | grep`. The staging matcher's eligible set silently included a file the Orchestrator had
+explicitly decided not to commit.
+
+**Not repaired by history rewrite** (RESERVED, §21d; the partial is already published). Repaired
+**forward**: this commit supersedes the truncated version with the complete 496-line file, staged by
+**explicit path**. Standing correction: while any Scientist is running, stage by path, never `-A`.
+
+## V1 · 🟢 Citation hygiene verified — no `UNREAD_PREMISE` exposure
+
+Both new PMIDs are registry-declared (`23765596` 6 files; `26390919` 6 files + 3 queue hits), and
+both are carried as **`UNDISCHARGED READING DEBT` with no conclusion resting on them.** LINT `PASS`,
+growth anchors `PASS`. The gate that blocked this actor's previous node did not fire.
+
+## V2 · 🎯 The self-grading is CORRECT, and it is the best thing in the file
+
+C graded its own headline ingredient a **`REDISCOVERY`** and claimed only the inversion. Verified at
+source — `adelaide_node_discriminator_20260921.md:249` holds:
+
+> *"**Galactose / forced OXPHOS raising WWOX transcript** in HEK293 | `23765596`, second-hand via
+> review — no receipt"*
+
+…and `:288` **kills it**, as a therapeutic lever: *"nothing to upregulate … potentially adverse —
+more transcript from a splice-defective allele."*
+
+🔴 **So the fact was held, and held as a dead end. What is new is the direction of the arrow.** The
+prior file asked *"can we raise WWOX?"* and answered no. This one asks *"does metabolic state set
+WWOX expression, and does that predict which compartments fail?"* — the same datum, inverted from a
+**therapeutic lever** into a **vulnerability rule**.
+
+If it survives, it is the **first explanation this repository has offered for the Olig2-Cre /
+GFAP-Cre negatives**: the resilient end would contain the glycolytic oligodendrocyte and astrocyte.
+🔴 It rests on two **unread** records and stays `IPOTESI`.
+
+## V3 · Two disciplines worth carrying forward
+
+**P3 was REFUTED against its author** — C predicted no respiration had been measured in any WWOX
+system; 3 of 4 hits do exactly that, and the refutation is what produced the node's central idea.
+This is now the second time this session that a **pre-registered prediction failing** was worth more
+than it succeeding.
+
+**The instrument defect was measured, not assumed.** `Wwox AND (conditional OR floxed OR Cre) AND
+(knockout OR deletion)` returns **10 records and omits every conditional line this node is built
+on**, against a positive control of **99**. Therefore **every negative in the file is explicitly an
+upper bound** — the query was characterised before its zeros were trusted, which is the
+search-defect discipline applied prospectively rather than after a failure.
+
+## V4 · The negative that was kept
+
+C expected `FT-049` to show node `G1` under-scored on a blood-compartment negative. It does not: the
+human screens include a **muscle biopsy and an MRS**, and the MRS is a brain measurement in the
+wrong direction. 🔴 **`G1`'s problem is that it was measured in the *right* compartment.** `G1` is
+**not** re-scored, reopened or re-proposed — a refuted expectation recorded without being converted
+into a reason to reopen something.
+
+## V5 · Verdict on the node
+
+**`NOT YET ACTIONABLE`**, and correctly so: the four-part WWOX-independent rescue test was run in
+full and **fails at two of four links** — the disease-relevant endpoint fails because the ladder's
+first-hand rows are muscle and liver while `P7` runs against the brain limb, and the intervention
+point lands on already-deprioritised nodes.
+
+**What is genuinely new and cheap:** `E1`, a per-Cre-line endpoint matrix built from local files
+only — 🟢 **`EXECUTABLE NOW`, zero cost** — which tests `R5` (*"there is no ladder; the negatives are
+endpoint-limited"*) before any of the ladder's biology is believed. **That is the right first move:
+it asks whether the explanandum exists before explaining it** — the same discipline that made "count
+the vacuoles first" the right answer on the previous node.
