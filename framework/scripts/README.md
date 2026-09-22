@@ -104,6 +104,7 @@ Run everything as `python3 <path> --help` first. Paths are repo-relative.
 | which external extractors this deployment actually has | `framework/scripts/tool_preflight.py` |
 | a variant label, superscript or figure legend that the PMC/abstract extraction silently DELETED | re-query the same body through `Scholar_Gateway semanticSearch` — publisher-side text keeps superscripts as `^…^` and retains figure legends (passage retrieval, not a whole-body fetch; no substitute for a read or a receipt) |
 | whether a claimed term census reproduces at a git ref — and which files contaminate the working tree you were about to check it on | `framework/scripts/census_verify.py` |
+| 🔴 to assert that a phrase is **absent** from the repository | run the sweep **unscoped**, or state the file-type scope in the claim. `--include=*.md` is the reflex here because the prose is Markdown — but attestations, manifests, locator sets and receipts live in `.json`/`.jsonl`, which is exactly where a load-bearing sentence gets written **once** and never repeated. A Markdown-only sweep already produced one false "not located" on 2026-09-22 for a rule that was sitting in a `deepdive_manifests/*.json` string field |
 
 ## 5 · Bring literature in
 
