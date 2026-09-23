@@ -325,18 +325,46 @@ experiments. They are three lanes and one calibration on one gel.**
 >   (`q230p_true_frontier` `SOL-4`, falsifier `F1`).
 > - **Floor.** A ≥5-point dilution series of a WWOX standard **on the same membrane**. Report
 >   *"below X ng, N = 3"* — never *"absent"* (`DET-4`).
-> - **Epitope.** Blot in parallel with an antibody whose immunogen lies **N-terminal to residue 230**
->   and one that **spans it**, and **score by band size, not signal alone** (`DET-2`/`DET-3`).
->   🎯 **The reagents are already enumerated in this repository**:
->   `wwox_antibody_epitope_census_20260922.md` rows `A5` (ProteinTech, exons 1–7, **spans 230**) and
->   `A6` (Abcam, exons 1–5, **stops 58 residues before 230**), plus `HPA050992` (aa 32–110), *"printed
->   in a peer-reviewed Methods section."* **Add `sc-20528` to that census as a new row** — the
->   antibody that produced the founding result, catalogue number now known, **epitope still to be
->   looked up.**
+> - **Epitope.** ~~Blot in parallel with an antibody whose immunogen lies N-terminal to residue 230 and
+>   one that spans it.~~
+>
+>   > 🔴 **CORRECTED 2026-09-23, same day, by the executability audit — the sentence above was wrong and
+>   > must not be requoted.** It named census rows `A5` (ProteinTech, exons 1–7) and `A6` (Abcam,
+>   > exons 1–5) as the flanking pair *"already enumerated in this repository"*. **They are not
+>   > reagents.** Both carry *"supplier named, catalogue number NOT given"* — 🔴 **an antibody you
+>   > cannot order is not a reagent**: it cannot be purchased, quoted in a protocol, or reproduced by
+>   > anyone. The error was reading **presence in a census as availability**, which is precisely the
+>   > failure mode the census exists to prevent.
+>   >
+>   > **Measured, not assumed** ([`q230p_spt_executability_and_exon7_20260923.md`](q230p_spt_executability_and_exon7_20260923.md)):
+>   > orderable anti-WWOX primaries **7** · of those, with any epitope statement **2** · with an
+>   > epitope placed relative to residue 230 **1** (`HPA050992`, N-terminal) · wholly C-terminal to
+>   > 230 **0**. 🔴 **A flanking pair is therefore not available at any price today.**
+>
+>   **What replaces it — the smallest configuration that actually exists:** `HPA050992`
+>   (aa 32–110, stated, N-terminal, and the reagent that once converted a published WWOX false
+>   negative) run **beside** `sc-20528` (Johannsen's own instrument, and the census's only
+>   CRISPR-KO-validated human specificity control), **scoring by band size, not signal alone**.
+>   🎯 **And they are host-compatible by luck rather than design:** `HPA050992` is **rabbit**,
+>   `sc-20528` is **goat** ⇒ **one membrane, two infrared channels, no stripping** — a pairing
+>   Suzuki 2009 already published. 🔴 **This is NOT a flanking pair and must never be called one**;
+>   it is one orthogonal epitope, and `H6` epitope-loss stays unexcluded without a fragment-competition
+>   map.
+>
+> - 🔴 **Two protocol corrections the audit found, each of which would have cost the experiment.**
+>   **(i)** `q230p_minimum_discriminator_20260922.md` specifies **95 °C** for the resolubilisation
+>   buffer. **8 M urea must be heated at ≤ 50 °C** — above that it carbamylates lysines, shifting and
+>   smearing the very band the experiment exists to detect. **(ii)** The `WWOX`-null lane cannot be
+>   Johannsen's CRISPR-KO clones: those are **his freezer, not a catalogue**. A siRNA/shRNA knockdown
+>   substitutes, and 🔴 **a knockdown is *reduced*, not null**, so it bounds specificity without
+>   supplying a true zero.
+> - ⚠️ **One commensurability limit, declared.** Johannsen's RIPA **composition is unrecoverable**
+>   (prediction `P2`), so `S` reproduces his fraction **by class, never by identity**. A stated
+>   DOC+SDS recipe is substituted and the substitution is declared rather than hidden.
 >
 > **Why this one and not another.** It is the only design that can **move H5 and H6 simultaneously**,
-> it re-uses the exact cell type and buffer of the original so a negative is directly commensurable,
-> and every reagent is already identified in files this repository holds. 🔴 **It does not touch H2,
+> it re-uses the same cell type and fraction class as the original so a negative is commensurable,
+> and every surviving reagent is orderable. 🔴 **It does not touch H2,
 > H3 or H4** — those need a chase, and `q230p_minimum_discriminator_20260922.md` §4.2 already ruled
 > a chase out as the *second* experiment, on the stated ground that *"you cannot chase a band you
 > cannot see."* **This experiment is the one that decides whether there is a band to chase.**

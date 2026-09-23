@@ -384,9 +384,33 @@ the same membrane.** That is not a flanking pair and must not be described as on
 orthogonal second epitope, and it **converts the untested sensitivity attribution above into a measured
 comparison at zero extra cost.**
 
+🎯 **Host compatibility, by luck rather than design:** `HPA050992` is **rabbit**, `sc-20528` is
+**goat** ⇒ **one membrane, two infrared channels, no stripping**, a pairing Suzuki 2009 already
+published. **Measured availability:** orderable anti-WWOX primaries **7** · with any epitope statement
+**2** · with an epitope placed relative to residue 230 **1** · wholly C-terminal to 230 **0**.
+🔴 **A flanking pair is not available at any price today.** Vendor status was checked first-hand and
+is `UNKNOWN — VENDOR DATASHEET BLOCKED`: `scbt.com`, `ptglab.com`, `sigmaaldrich.com`, `eutils.ncbi`,
+`rest.ensembl`, `ebi` and `ucsc` all returned 403 / connect-rejected. **Not guessed.**
+
+### F.1 · 🔴 Two protocol defects the audit found, each of which would have cost the experiment
+
+| | Defect | Correction |
+|---|---|---|
+| **(i)** | `q230p_minimum_discriminator_20260922.md` specifies **95 °C** for the resolubilisation buffer | 🔴 **8 M urea must be heated at ≤ 50 °C.** Above that it **carbamylates lysines**, shifting and smearing exactly the band the experiment exists to detect. A correct-looking protocol that destroys its own readout |
+| **(ii)** | The `WWOX`-null lane was specified as Johannsen's CRISPR-KO clones | 🔴 Those are **his freezer, not a catalogue.** A siRNA/shRNA knockdown substitutes — and **a knockdown is *reduced*, not null**, so it bounds specificity without supplying a true zero |
+
+⚠️ **And one commensurability limit, declared rather than hidden:** Johannsen's RIPA **composition is
+unrecoverable** (prediction `P2`), so `S` reproduces his fraction **by class, never by identity.**
+
 🔴 **The binding constraint is not a reagent.** It is **`Q230P` fibroblasts**, `HUMAN_REQUIRED`, and it
 was already `HUMAN_REQUIRED` before today. Also `UNKNOWN`: whether a **quantified recombinant human
-WWOX standard** exists for an LOD in ng — without one, the floor is expressed in relative terms only.
+WWOX standard** exists for an LOD in ng — without one, the floor is expressed in **cell-equivalents**,
+not ng.
+
+🔴 **Branch discipline, preregistered before any further search:** six outcome branches, each with an
+explicit *does-NOT-support* column. **None converts to function.** Notably, branch (a) — pellet-positive
+while soluble-negative — **raises rather than lowers the proteostasis safety bar**, and **no branch
+transfers to neurons.**
 
 ## G · `RNA-1b` (exon 7): 🟡 **`MINOR NEW ASSAY`**, and the primers already exist in print
 
@@ -412,6 +436,9 @@ CROSS-PAIR:                  forward ──►  ................................
   gradient PCR settles it); ~800–1000 bp is endpoint RT-PCR, not qPCR — fine, because the readout is
   **size**, not ΔΔCt; and **a size ratio must never be read as an isoform ratio**, since a long amplicon
   under-represents the longer species.
+- 🟢 **One BLAT of `AGGATGCACTGCGTTCGAC` against `NM_016373` closes the exon-8-vs-exon-7 question in
+  sixty seconds** — and `NM_016373` is unreachable from this deployment, so no sequence was
+  reconstructed and no coordinate invented.
 - 🔴 **Why `MINOR NEW ASSAY` and not `EXISTING MATERIAL`:** **no `Q230P` RNA exists anywhere in this
   repository's reach**, and whether Johannsen's 2018 cDNA or fibroblast stock survives is **`UNKNOWN`** —
   the paper states only that *protein* was stored at −80 °C. **One email settles it.**
