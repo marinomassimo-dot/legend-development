@@ -356,12 +356,21 @@ antibody (1:100; **sc-20528**, Santa Cruz Biotechnology)"*.
 | **Epitope** | 🟡 A **negation only**: *"did not contain the region altered by the `lde` mutation"* — excludes ≈ the last 44 residues and **says nothing about residue 230**. Provenance: **a 2009 personal communication from the vendor.** Not a datasheet, not an experiment |
 | **Current catalogue status** | 🔴 **`UNKNOWN — VENDOR DATASHEET BLOCKED`.** Live in 2009, citable in 2018; 2026 listing could not be determined and **was not guessed** |
 
-> ### 🔴 `H6` (detection artefact) is no longer merely "not excluded" — it has a published precedent, with this exact reagent
+> ### 🔴 `H6` (detection artefact) is no longer merely "not excluded" — there is a published precedent, with this exact reagent
 >
 > In the `lde` rat, **`sc-20528` reported both products *"undetectable"***. A later study of the same
 > model, using `HPA050992` (aa 32–110), detected ***"a very weak band of slightly lower mobility."***
-> 🔴 **The antibody that produced `Q230P`'s founding negative is the antibody with an in-print false
-> negative on a WWOX mutant.**
+>
+> 🔴 **STATE IT PRECISELY — this is an `ASSAY-CONDITIONED DETECTION DISCREPANCY`, not a verdict on the
+> antibody.** ⚠️ **Corrected 2026-09-23:** an earlier draft of this block called `sc-20528` *"the
+> antibody with an in-print false negative"*. That phrasing indicts the reagent; the evidence does
+> not support it. What is demonstrated is that **with that particular combination of sample, method
+> and antibody, Wwox was not detected, while a different antibody in a later study detected a faint
+> band.** ⇒ **strong evidence that *"not detected"* is a property of the whole detection
+> architecture**, and **no evidence that `sc-20528` is intrinsically a poor antibody in any other
+> context.** In Johannsen's own hands it is a fully specified instrument — `sc-20528` **1:200**,
+> 20–40 µg, 12 % gel, ECL / `LAS 4000` — with **three CRISPR-KO clones as a true negative**, which
+> remains the best-controlled human specificity in the census.
 >
 > ⚠️ **Bounded honestly.** The later authors attribute the difference to *"greater sensitivity of the new
 > antibody"* — **an author attribution that nobody has tested**, and three variables differ between the
@@ -391,6 +400,22 @@ published. **Measured availability:** orderable anti-WWOX primaries **7** · wit
 🔴 **A flanking pair is not available at any price today.** Vendor status was checked first-hand and
 is `UNKNOWN — VENDOR DATASHEET BLOCKED`: `scbt.com`, `ptglab.com`, `sigmaaldrich.com`, `eutils.ncbi`,
 `rest.ensembl`, `ebi` and `ucsc` all returned 403 / connect-rejected. **Not guessed.**
+
+### F.0 · 🔴 THE NORMALISATION RULE — load by input-equivalents, never by equal total protein per fraction
+
+> **`S`, `P` and `T` must be compared on a common INPUT basis — equal cell-equivalents (or
+> equal-volume aliquots of a common starting lysate) — NOT by loading an equal mass of total protein
+> from each fraction.**
+
+🔴 **Why this is not a detail.** The hypothesis under test (`H5`) is that `Q230P` has **moved** from
+`S` into `P`. The soluble and insoluble fractions have **very different total-protein content**, so
+normalising each lane to the same µg re-scales every fraction to an equal denominator — **and a
+redistribution between fractions is exactly what an equal-denominator comparison cannot see.** It
+would divide out the signal the experiment exists to detect, and could even invert its direction.
+
+🟢 A total-protein stain is still run — **as a transfer/loading-fidelity control**, never as the
+normaliser. **Report signal per cell-equivalent.** Same rule for the LOD: express the floor in
+**cell-equivalents** unless a quantified recombinant standard is sourced (existence `UNKNOWN`).
 
 ### F.1 · 🔴 Two protocol defects the audit found, each of which would have cost the experiment
 
@@ -424,9 +449,30 @@ CROSS-PAIR:                  forward ──►  ................................
                                           spans exon 7 (c.606–B) entirely
 ```
 
-- Cross-amplicon ≈ **750–1005 bp**; exon-7 skipping shortens it by the **full exon-7 length, 149–238 nt**
- — trivially resolved on a 1.5 % gel, and **the identical readout class Weisz-Hubshman used to
-  demonstrate exon-6 skipping** (593 → 504 bp).
+### G.0 · 🎯 EXON-7 GEOMETRY IS EXACT, AND THE REPOSITORY ALREADY HELD IT
+
+⚠️ **Corrected 2026-09-23.** The bracket *"exon 7 = 149–238 nt"* used above and in the working file was
+re-derived from one paper's IGV statement — **while a precise, ClinVar-observed value was already in
+this repository**, in [`CC-20260922-EXON7-NATURAL-EXPERIMENT-01`](../research/commit_candidates/CC-20260922-EXON7-NATURAL-EXPERIMENT-01.md) §2:
+
+> **Exon 7 = `c.606–791`. Length 186 nt. `186 mod 3 = 0` ⇒ IN-FRAME.**
+> Independently corroborated there by codon arithmetic reproducing a **352-aa** product from 414.
+
+🔴 **Same failure mode as `A17`≡`A21` earlier today: the answer was on disk and a weaker bracket was
+re-derived instead.** Twice in one session, so it is a pattern, not an accident — **and both times it
+was caught by an outside reader, not by me.**
+
+**Three consequences, and the third changes the biology of the question:**
+
+| | |
+|---|---|
+| **1 · The shift is exact** | Δexon-7 shortens the cross-amplicon by **exactly 186 bp**, whatever the primers' positions within their exons. **The discriminating quantity is now a number, not a range** |
+| **2 · The absolute size is still bounded, not fixed** | With exon 7 = `c.606–791`, exon 8 = `c.792–1056`, exon 9 from `c.1057`: pair 2's forward must sit at `c.858–1056` to give its stated 200 bp across the junction, and pair 1's amplicon ends somewhere in exon 6 (`c.517–605`) ⇒ **cross-amplicon 729–1015 bp**. 🔴 **One BLAT of the two published primers against `NM_016373.2` collapses this to a single number** — `HUMAN_REQUIRED`, sixty seconds. **The assay is interpretable without it** (the WT lane is the size reference); the exact value is needed only to call a band without a control |
+| **3 · 🎯 An exon-7 skip is IN-FRAME, and it DELETES `Q230` itself** | It fuses `c.605` to `c.792`, removing residues **203–263** — so **no PTC, no NMD substrate, and a stable 352-aa product is expected rather than decay.** 🔴 **This is the opposite of the exon-6 case** (89 nt, frameshifting). It means `H1b` is **not** a "silent RNA loss" hypothesis: if exon 7 were skipped, the Q230P variant residue would be **absent from the protein entirely**, and the Western's `~46 kDa` window would be the wrong place to look |
+
+- Cross-amplicon **729–1015 bp**; exon-7 skipping shortens it by **exactly 186 bp** — trivially
+  resolved on a 1.5 % gel, and **the identical readout class Weisz-Hubshman used to demonstrate
+  exon-6 skipping** (593 → 504 bp).
 - 🟢 **Zero novel oligonucleotide design.** Both sequences are published verbatim.
 - 🟢 **Preferred over Weisz-Hubshman's own pair**, whose reverse primer is provably 3′ of exon 6 but
   whose exact exon is `UNKNOWN` — if it lies *in* exon 7, skipping gives a **dropout**, and a dropout is
@@ -436,8 +482,8 @@ CROSS-PAIR:                  forward ──►  ................................
   gradient PCR settles it); ~800–1000 bp is endpoint RT-PCR, not qPCR — fine, because the readout is
   **size**, not ΔΔCt; and **a size ratio must never be read as an isoform ratio**, since a long amplicon
   under-represents the longer species.
-- 🟢 **One BLAT of `AGGATGCACTGCGTTCGAC` against `NM_016373` closes the exon-8-vs-exon-7 question in
-  sixty seconds** — and `NM_016373` is unreachable from this deployment, so no sequence was
+- 🟢 **One BLAT of `AGGATGCACTGCGTTCGAC` against `NM_016373.2` closes both the exon-8-vs-exon-7
+  question and the exact expected amplicon size, in sixty seconds** — and `NM_016373` is unreachable from this deployment, so no sequence was
   reconstructed and no coordinate invented.
 - 🔴 **Why `MINOR NEW ASSAY` and not `EXISTING MATERIAL`:** **no `Q230P` RNA exists anywhere in this
   repository's reach**, and whether Johannsen's 2018 cDNA or fibroblast stock survives is **`UNKNOWN`** —
@@ -457,3 +503,56 @@ on **exon 1 only** of a ~913 kb locus, so gene-level counts retain reads from ex
 constitutive null is a **different allele on a different background** whose deleted interval this paper
 never states, leaving its 10.1 % **unexplained**. Recorded so that a future reader does not import a
 quantification artefact into allele-severity or hypomorph reasoning.
+
+---
+
+# 🔒 CLOSURE — 2026-09-23. `Q230P` is parked behind two ordered experiments.
+
+> **This is a stopping point, not a pause for breath.** Nothing below reopens science. The frontier
+> is left in a state where the *next* action is an experiment, not another reading.
+
+## The model as it now stands — no theory added, the space of wrong questions reduced
+
+| Layer | State |
+|---|---|
+| **RNA** — abundance, exons 4–6 and 8–9 | 🟢 Substantially normal in the one fibroblast line studied |
+| **RNA** — architecture, exon 7 | 🔴 **UNKNOWN.** Never interrogated by any published assay |
+| **Protein** — RIPA-soluble supernatant | 🟢 **Not detected**, replicated at two harvests |
+| **Protein** — pellet / insoluble | 🔴 **Not interrogated** |
+| **Protein** — total strongly-denatured pool | 🔴 **Not interrogated** |
+| **Protein** — quantitative LOD | 🔴 **Absent** |
+| **Detection architecture** | 🟡 **Now known to warrant caution** — an assay-conditioned discrepancy is documented for this reagent class |
+| **Mechanism** — impaired synthesis · cotranslational disposal · rapid degradation · insoluble sequestration · detection artefact / mixed state | 🔴 **All five open** |
+
+🎯 **What this session added is not a theory. It is the removal of the questions that could not have
+been answered.**
+
+## The two experiments, in order
+
+### `E1` — exon-7 RT-PCR · **run this first**
+**Decides whether we have been assuming the RNA's structure.** Cheapest by a wide margin: two
+already-published primers cross-paired, no new oligonucleotide design, a **186 bp** expected shift,
+Sanger-sequenceable for the junction at nucleotide level.
+🔴 **Its outcome reframes `E2`.** An exon-7 skip is **in-frame and deletes `Q230`**, so a positive
+`E1` would mean the protein question was being asked at the wrong molecular weight — and `E2` would
+need redesigning before it was run, not after.
+
+### `E2` — S/P/T + quantified LOD + orthogonal detection · **run second**
+**Decides whether a recoverable protein population exists to chase at all.** `MINOR ADAPTATION`:
+load by **input-equivalents, never equal total protein per fraction** (§F.0); urea **≤ 50 °C**;
+knockdown, not Johannsen's KO clones, for the null lane; `HPA050992` (rabbit) beside `sc-20528`
+(goat) on one membrane in two IR channels. Binding constraint is **`Q230P` fibroblasts**,
+`HUMAN_REQUIRED`.
+
+## 🔴 The ordering rule, stated so it is not quietly broken
+
+> **Chaperone / proteostasis work does not resume until `E1` and `E2` have reported.**
+
+**Why:** every proteostasis strategy presupposes a molecular entity to rescue. Right now that entity
+is unidentified in **two independent ways at once** — the transcript may not contain the exon that
+carries the variant, and no protein population has been shown to exist anywhere in the cell.
+🔴 **Searching for a drug before knowing what it should rescue is the failure this ordering exists
+to prevent.** `TX-003` and `HYP-20260709-02` stay conditional, and the therapeutic sign remains
+branch-dependent exactly as `q230p_structural_mechanism_20260922.md` §9 states.
+
+🔴 **Nothing here is medical advice.** No dose, route, schedule or clinical framing, for any genotype.

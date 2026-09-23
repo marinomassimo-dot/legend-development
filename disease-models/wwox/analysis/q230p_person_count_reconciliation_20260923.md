@@ -10,7 +10,11 @@
 
 ## 1 · VERDICT
 
-**The defensible figure is 11 people affected with a `c.689A>C` / `p.(Gln230Pro)` allele, across 9 reported families, as of Oliver 2023** — plus **2 further unaffected `Q230P` heterozygous carriers** who are people but are not cases, giving **13 people known to carry the allele**. Two candidate rows remain genuinely unresolved and are named in §5; neither can move the count by more than one.
+> ## `Q230P UNIQUE AFFECTED COUNT: provisional 11; unresolved range 10–13 pending deduplication / post-2023 cases.`
+
+🔴 **That line, not a bare number, is the state of record.** A point estimate printed without its range is exactly how *"8 patients, 6 families"* went stale — and §4 shows that figure was **arithmetically correct for its cutoff**. Reprinting **11** without **10–13** attached would repeat the failure this file exists to diagnose.
+
+**The defensible provisional figure is 11 people affected with a `c.689A>C` / `p.(Gln230Pro)` allele, across 9 reported families, as of Oliver 2023** — plus **2 further unaffected `Q230P` heterozygous carriers** who are people but are not cases, giving **13 people known to carry the allele**. Two candidate rows remain genuinely unresolved and are named in §5; neither can move the count by more than one.
 
 **"8 patients, 6 families" is not wrong. It is a 2021 tally, and it is arithmetically exact for its own cutoff** — see §4, where it is decomposed to the individual. It is **superseded as a current figure**, not corrected.
 
@@ -114,7 +118,7 @@ Nothing below moves the headline by more than one person in either direction.
 
 **So the count is stated as a range with its causes attached, not as a point estimate:**
 
-- **11 affected people / 9 families** — the defensible figure on the named sources, as of Oliver 2023.
+- **11 affected people / 9 families** — **provisional**, on the named sources, as of Oliver 2023. 🔴 **Never quote it without the 10–13 range.**
 - **10** if R2 resolves as a duplicate.
 - **13** if R4 resolves as two new people.
 - **13 people carrying the allele** if the 2 unaffected heterozygous carriers (rows 5–6) are counted as people rather than as cases. 🔴 **State which of the two you mean. Most of the disagreement in this repository's `Q230P` numbers is a people-versus-cases equivocation, not a disagreement about the literature.**
