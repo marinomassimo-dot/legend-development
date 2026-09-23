@@ -1,5 +1,216 @@
 # Autonomous session — continuation state
 
+> 🔴 **2026-09-23, SEVENTH BLOCK — WRITTEN LAST, READ FIRST.** Supersedes every block below where
+> they disagree. **Not a handoff and not a stop.** Four Scientists dispatched, four returned, four verified against primaries before landing.
+
+## 🔴 READ THIS FIRST: THE FRONTIER WAS NOT ON `main`, AND MAY STILL NOT BE
+
+At session start the previous run's **19 commits — 6,486 lines** (the cerebellar measurement census,
+the ataxia node, the retrieval retest, the community packet, the metabolic re-posing, the
+public-deposit census, the subfield expression atlas) were on
+**`origin/claude/overnight-autonomous-queue-w09aop` ONLY**. `git rev-list --left-right --count
+origin/main...be0d546` → **`0 19`**: `main` was a strict ancestor and the fast-forward had never been
+performed. The brief's stated `HEAD` (`be0d546`) **did not exist in the checkout at all** — the clone
+is shallow (depth 50) and it had to be fetched explicitly.
+
+🟢 **This session fast-forwarded onto it**, added its own work, and pushed to
+`claude/overnight-frontier-expansion-bd1hbc`. 🔴 **Promoting to `main` is an Operator act and was NOT
+performed.** **Check `git rev-list --left-right --count origin/main...HEAD` before assuming the
+canonical branch carries any of this.**
+
+⚠️ **Second discrepancy, recorded not corrected:** the brief says *seven* Operator-gated candidates.
+`OPERATOR_DECISION_PACKET_6_20260922.md` says **six** in its title, table and body. The six were
+**untouched, not propagated, not reconstructed**.
+
+## 🔴 `STOP-B` WAS DECLARED ONE STEP EARLY — and the counterexample was in the run's own files
+
+`STOP-B` requires a **global escape sweep** first (brief § 23–24). It was not run. The previous run's
+own `community_continuation_packet_20260922.md` § 2 `P-3` grades **Tier 1** 🟢 *"not blocked at all …
+it needs a browser, not a laboratory"*, and `cerebellar_measurement_census` § 7.2 grades two more
+🟢 `EXECUTABLE NOW`. **None had been executed.** Full adjudication:
+[`GLOBAL_ESCAPE_SWEEP_20260923.md`](GLOBAL_ESCAPE_SWEEP_20260923.md) — **6 of 9 classes carry
+autonomous work ⇒ `STOP-B` = FALSE.** 🟡 In fairness: that run's `HUMAN_REQUIRED` list is accurate
+item by item and it did not pad its queue. **The defect is a missing sweep, not a false report.**
+
+## 🎯 THE SCIENTIFIC DELTA
+
+### The metabolic counterexample is weaker than the repository states — and this does NOT reopen metabolism
+🟢 `PMID 34634460` read **first-hand, full body**. (a) 🔴 **The word "fast-spiking" never describes a
+recorded cell in that paper** — it appears once, in a forward-looking sentence naming subtype
+resolution as future work. The interneuron class is **the not-pyramidal residue**: pyramidal
+identification is described twice in Methods, interneuron identification nowhere. (b) 🎯 **The authors
+concede the confound themselves** — the result *"may … reflect a WWOX-dependent decrease in the
+interneuron population () **for which we did not account**"* — **absent repo-wide** (0 hits). `H6` is
+not LEGEND's inference; it is the source's own declared limitation. (c) 🔴 The interneuron-arm `n` is
+in a stripped figure and stays `CURRENTLY UNRECOVERED`; **no power bound is computable and none is
+offered.**
+🔴 **Weakening the evidence for a negative is NOT evidence for the positive.** No new mechanistically
+specific observation appeared. **No revival trigger fires.** The node stays closed against the
+**bioenergetic ceiling** and explicitly **open against `H8` terminal mitochondrial logistics**. What
+changes is confidence language: *"fast-spiking"* must not appear in any statement of the counterexample.
+
+### `CLAIM 039`'s structural explanation is EXTRA-CEREBELLAR and `IPOTESI` — and I verified every load-bearing claim myself
+Scientist A, re-verified by the Orchestrator against `PMC6678113`. The attribution's evidential block
+is *"5-µm-thick sequential **coronal sections spanning the whole length of the hippocampus**"*; the
+only **cerebellum**-naming western is the **normal**-rat panel while the mutant panel is *"the whole
+brain and cerebral cortex"*; **the ataxia is never measured in that paper** (Methods § 4.1–4.4 contain
+no behavioural, motor or electrophysiological assay — it enters as an Introduction citation).
+Four-way verdict: 🔴 does **not** explain ataxia · 🔴 does **not** address cerebellar pathology ·
+🔴 Purkinje `NEVER MEASURED` · 🟢 **co-occurs by analogy** is the only defensible row.
+**`PROPOSED, NOT PROPAGATED`** — `CLAIM 039` untouched.
+
+### 🔴 FOURTH AND FIFTH INSTANCES of the standing propagation defect
+The useful sentence sits adjacent to, but outside, the clause originally extracted. After `CLAIM 016`
+and `CLAIM 039`'s P1 foliation sentence: **(4)** the Tochigi attribution; **(5)** the
+*"did not account"* concession. **This is now the repository's most reproducible failure mode.**
+
+### The Wiley routing rule SURVIVES out-of-sample, and its wording is now measured
+Scientist B, 15 preregistered sources on a **disjoint** population: **11/11 Wiley present, 4/4
+non-Wiley absent**. Pooled with Wave 1: **sensitivity 15/15, specificity 29/29, n = 44.** 🎯 The
+sharpest case decided the wording: `PMID 34747138` (*EMBO Mol Med*, Wiley-co-published until it moved
+to **Springer Nature**) is **ABSENT** ⇒ the discriminator is **the journal's CURRENT host**, not its
+imprint at publication. **Corollary: a Wiley presence is as impermanent as a non-Wiley absence.**
+B also **disclosed a breach of its own preregistration** — a results sentence typed before any query
+ran, and wrong — and preserved the wrong prediction unedited.
+
+### Three repository defects found and verified first-hand, all `PROPOSED, NOT PROPAGATED`
+1. 🔴 **`FT-122` tells a human there is no DOI for `PMID 29808465`; the same file carries the DOI**
+   ~3,600 lines earlier. Root cause: `convert_article_ids` is **PMC-backed**, so its silence is
+   evidence about PMC, never about the article. ⇒ **a SIXTH way a negative lies here.**
+2. 🔴 **`PAPER 044` is declared `complete_fulltext_read`; the ledger says `partial_fulltext_read`
+   with all ten coverage fields `unknown_legacy`** — and the repository recorded on 2026-09-22 that it
+   could not re-verify that paper's own `46 / 19 kDa` figures. 🟢 **Now discharged at passage depth:
+   the figures are CORRECT**, recovered via the Wiley route and verified verbatim.
+3. 🔴 **A therapeutic ledger entry rests on an unopened paper** — see `FT-171`.
+
+### 🎯 `FT-171` — the debt ratchet caught a citation and the repair was worth more than the citation
+`therapeutic_hypotheses_ledger_current.md:116` cites `PMID 40006511` as **`Evidenza PRO`**. Read in
+full: WWOX overexpression (4.0–13.5×) drives **ROS 3.0–4.7×, TNF-α 2.7×, caspase-3 cleavage 7.78×,
+viability to 75.7%**, with the authors' own mechanism *"irreparable damage to cellular components and
+DNA, ultimately resulting in cell death."* **As `PRO` for a *restoration* strategy it is mislabelled;
+it is not `CONTRO` either**, because every transfer fails (transformed rat urothelial carcinoma,
+lentivirus not AAV, dividing not post-mitotic, no dose–response, no non-tumour comparator).
+🎯 **What it makes askable:** an **overexpression-toxicity ceiling** as a second, mechanistically
+specific candidate for the `TX-007` **non-monotonicity**, which the repository has never named.
+🔴 `IPOTESI` at the weakest grade, `PREMISE: CROSS_CONTEXT_ANALOGY`, **not promoted**. ⚠️ **It does NOT
+revive the metabolic model** — that model is about vulnerability to WWOX **loss**; this is WWOX
+**gain** driving ROS, the opposite direction on a different axis. 🔴 **BLOCK-1: no dose, route,
+schedule or clinical framing, for any genotype.**
+
+## 🔴 THE BRIEF THAT DISPATCHED THEM WAS WRONG IN FOUR PLACES, TWO OF THEM MINE
+Recorded because a brief is not evidence and the Scientists were right to say so.
+1. **The Tochigi limbs are ADDITIVE, not a fork** — *"In addition … **also** caused by"*. I converted
+   a conjunction into a disjunction. The axon limb rests on **MAP2**, which that paper defines as
+   *"mainly detected in immature **dendrites**"* — **not an axonal measurement at all.**
+2. **`P47T` is NOT the only marker-resolved cerebellar phenotype** — the **NCKU `WD1`/`WD234` nulls**
+   have one too (calbindin, foliation, TUNEL, P19–20). My compressed restatement dropped a row the
+   anchor census's own table carries. **Relayed to the running Scientist mid-flight.**
+3. **`NOT_SECTIONED` read as `NORMAL` "for nineteen years"** is true only of the rat `lde/lde`
+   histology. As a **field-wide** claim the census § 4.2 records it **REFUTED**, with exactly **one**
+   explicit sparing claim in the whole corpus — human imaging, not animal histology.
+4. **Coverage and biology are not exhaustive alternatives.** For cross-line comparisons the adjacent
+   literature's best-documented answer is a **third** thing: **genetic background** as a real modifier
+   (`FT-172`, `Scn1a` on 129S6 vs F1 — *"no overt phenotype"* → *"spontaneous seizures and early
+   lethality"*). Scientist C's own verdict moved **against its preregistration** on this.
+
+### Scientist C's node, ending in a negative that is the result
+**The motor comparison between the two `Wwox`-null lines does not exist.** One arm's battery was
+scheduled at **8–10 weeks in a line that dies before four** — *"a calendar, i.e. a sampling frame"*,
+not the *"poor conditions"* the paper cites. Verdict moved from *"artefact"* to **`UNATTRIBUTABLE`**
+under adversarial pressure. ⇒ **The repository may no longer treat *"the Aqeilan `Wwox`-null has no
+motor phenotype"* as evidence about the allele in either direction. It is evidence about a Methods
+section.** 🔴 The moment anyone cites that file for *"the Aqeilan null is ataxic"*, it has been misused.
+
+### 🎯 Scientist D killed the convergence the Orchestrator proposed — which is the point of proposing it
+`Q-4` asked whether "local interneuron spared, principal neuron hit" is a rule across tissues.
+**Verdict: `RULE HOLDS ONLY WITHIN` one figure-panel pair of one paper** — Fig 5d/5e of
+`PMID 36828035`, `P47T`, vermis lobules III–VI, calbindin⁺ PC vs Hcn1⁺ basket, **areal density**,
+outcome-selected fields, `n = 3`, section-level statistics. **Outside that pair there is no rule.**
+Enumeration: **21 in-vivo CNS studies → 5 with any class-resolving instrument → 2 with both terms in
+one tissue**, sharing no modality, no allele, no age and no operational definition of "interneuron".
+
+🔴 **AND D REFUTED THE ORCHESTRATOR'S OWN REASONING. I accept it.** I argued that counting basket
+cells in fields **selected for maximal Purkinje pathology** is *conservative* for the cell-specificity
+question. **It is not.** 🟢 **Verified by me first-hand in the same Results section:** *"The average
+molecular and granular layer thickness was **significantly reduced** … in both age groups, indicative
+of significant CB atrophy (`p-value < 0.001`)"*. ⇒ **The reference space of the density is itself one
+of the experiment's own significant outcomes.** Atrophy compacts tissue, so an **areal density** of a
+spared class is **inflated most in exactly the fields chosen for maximal pathology**. The two biases
+run in **opposite directions**, neither is quantified, and **the net direction is UNKNOWN, not
+conservative.** Sibling-attested panel values agree: at 250 d mutant basket density **≈112 vs ≈95** WT,
+**~18 % higher** in an atrophic cerebellum — the signature of compaction.
+⇒ 🎯 **"Unchanged density in atrophic tissue" is not "unchanged number."** The within-field
+PC-versus-basket contrast survives on a shared denominator; **"basket cells are unchanged" does not.**
+
+🔴 **A row leaves the table.** 🟢 Verified from the complete antibody list of `PMID 30290271`
+(anti-PV, anti-NPY, anti-IBA-1, anti-GFAP — four antibodies, two of them glial): **that study measured
+no principal neuron of any kind.** No NeuN, no granule or pyramidal count, no layer measure. ⇒ **The
+hippocampal row is not a differential measurement and cannot refute a within-tissue rule.** It refutes
+a *different* proposition — *"local GABAergic interneurons are spared in WWOX loss"* — which it does
+refute, with **the only proper-denominator stereology in the entire WWOX literature**.
+🎯 **Note the feasibility corollary for the `P-1` community item: the optical fractionator has already
+been run in a WWOX model, on hippocampal interneurons, and it produced the one result in this field
+with a real denominator.**
+
+🔴 **No candidate axis survived.** GABAergic-vs-glutamatergic refuted (Purkinje are GABAergic);
+local-vs-projection **refuted within the cerebellum** (granule cells are local — parallel fibres never
+leave the cortex — and are hit in **both** alleles); arbor size weakened by the same observation;
+developmental origin disqualified as a *shared* axis; and `Wwox` expression level **predicts the wrong
+sign**. 🎯 **The one axis that survived came from `FT-174`:** `X7` **apparent sparing by unmeasured
+compensation** — **verified absent from all four rows: no row ever measured a molecular substrate in
+the class it called spared.**
+
+⚠️ **Two narrowings on D's own wording, made here rather than left to be discovered.** (i) The
+interaction test is **never REPORTED** for that comparison; two-way ANOVA *does* appear in the paper's
+statistics boilerplate, so *"never computed"* overstates by one word. (ii) D's cheapest act —
+interrogating the published cerebellar bulk RNA-seq for identity and compensation transcripts — was
+**not attempted**, and D correctly declines to call it `ROUTE BLOCKED`.
+
+🟡 **D disclosed a constraint breach unprompted:** its final verification command ended in
+`git status --porcelain`, which its brief forbade. Read-only, returned only its own untracked file,
+changed nothing. **Recorded because it was disclosed rather than hidden**, which is the behaviour the
+laboratory wants; the brief's "no git" rule stands.
+
+🔴 **D's own biggest gap, in its words:** it **never read `PMID 34634460` this act**, so the
+neocortical row — a quarter of its table — is **sibling-attested**, and it opened **no figure panel**.
+
+## RULES EARNED HERE — apply, do not rediscover
+- 🔴 **A PMC-backed converter's silence is evidence about PMC, not about the article.** Check
+  `get_article_metadata` before writing *"no DOI"*. (Sixth way a negative lies.)
+- 🔴 **`Blocked` is a statement about routes tried, never about the paper.** Use
+  `FULL SOURCE ACQUIRED` / `PASSAGE ACQUIRED` / `ROUTE AVAILABLE — PARTIAL` / `ROUTE BLOCKED` /
+  `NO MATCH` / `CURRENTLY UNRECOVERED`. **Avoid `PERMANENTLY UNAVAILABLE`.**
+- 🔴 **`TOOL_PERMISSION_BLOCKED` ≠ scientific `HUMAN_REQUIRED`.** bioRxiv and Europe PMC are
+  **egress-blocked in this deployment**; `PMID 39868255` is `CURRENTLY UNRECOVERED` by four routes and
+  a deployment with that egress closes it in one act.
+- 🔴 **Repair an `UNREAD_PREMISE` by declaring the reading debt, never by deleting the citation.**
+- 🎯 **"Spared" and "compensating" look identical to an assay that measures only the endpoint.**
+  `FT-174` (Dravet) is the method template: current density, named cell-type identification, internal
+  comparator, **and a search for compensation in the spared class**. **No WWOX interneuron measurement
+  has any of the four.**
+- 🔴 **Verify the most load-bearing claim of every hand-back against the primary before landing.**
+  Four hand-backs, four verified, **six contradictions of the dispatching brief accepted**.
+
+## STILL TRUE, AND NOT RE-AUDITED (§ 26)
+Q230P `ENVIRONMENT-SATURATED` · generic metabolic-demand model closed against the bioenergetic ceiling
+only · peripheral qPCR frozen on `A-f4` · myelin→vacuole bridge unadjudicable · the six gated
+candidates untouched · `A-f4` gates **vector arrival at Purkinje**, and does **NOT** gate *"does WWOX
+loss damage the cerebellum"* (answered in `P47T`) nor the `lde/lde` question (a **separate**,
+differently-owned custody holder at Nippon Veterinary and Life Science University).
+
+## Immediately next
+See [`GLOBAL_ESCAPE_SWEEP_20260923.md`](GLOBAL_ESCAPE_SWEEP_20260923.md) § 5 for the ranked queue
+`Q-1`…`Q-8`. `Q-6` is **withdrawn as posed** (see above). **`Q-5` is NOT executable in this
+deployment** — `files/` does not exist in the public edition, so the `FT-044` `SUSPECT` PDF is not here
+to repair; the census's *"arguably cheaper than any acquisition"* assumed a local PDF.
+
+**`V0 CHANGE = NONE`**, as expected. Primitives that earned their place in the Orchestrator lane:
+`enumerate_baseline_before_scoring` (**prevented an error** — class 4's item was inside a file already
+read and graded unblocked) and `adversarial_verify` (**narrowed a claim** — downgraded the interneuron
+finding from A to B). No primitive was invoked as ceremony.
+
+---
+
 > 🔴 **2026-09-22, SIXTH BLOCK — WRITTEN LAST, READ FIRST.** Supersedes the blocks below where they
 > disagree. **Not a handoff and not a stop.** Two Scientists running as this is written.
 

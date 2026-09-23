@@ -7430,3 +7430,93 @@ same slices**, and a **search for compensation** in the spared class. 🔴 **Non
 in the WWOX interneuron arm.** ⚠️ **Nothing about `Scn1a` transfers to `Wwox` as biology**: different
 gene, different protein class, different disease, different mechanism. **The import is a standard of
 evidence, never a result.**
+
+---
+
+## 🔴 CORRECTION 2026-09-23 — `PMID 29808465` is NOT without a DOI, and this file says both things
+
+**Raised by** Scientist B (`route_recovery_wave2_20260923.md` § 4, contradiction 2). **Verified
+first-hand by the Orchestrator by reading both lines of this file.**
+
+| Where | What it says |
+|---|---|
+| `FT-122` § 2, *"the detection floor, and it is confirmed unobtainable"* | *"`convert_article_ids(["29808465"])` returns **the PMID alone — no DOI, no PMCID** (verified 2026-09-21). **`EVIDENCE_BLOCKED`, confirmed; do not retry automated routes.**"* |
+| the surface table ~3,600 lines earlier | `| **29808465** | **null** | `10.1007/s10048-018-0549-5` | idem | 🔴 unrecoverable_by_these_routes |` — **the DOI is right there** |
+
+🔴 **This file contradicts itself, and the contradiction is load-bearing on a `HUMAN_REQUIRED`
+action.** `FT-122` directs a human to obtain this paper. An interlibrary-loan or author request needs
+a DOI. One line of this file says there is none; another supplies it.
+
+🎯 **The root cause, and it generalises.** *"No DOI"* was read off `convert_article_ids`, which is a
+**PMC-backed converter**: when a paper is not in PMC it can return the PMID alone. **That is a
+property of the converter's coverage, not of the paper.** `mcp__PubMed__get_article_metadata` is the
+authority on a DOI and returns `10.1007/s10048-018-0549-5`.
+
+⇒ **A SIXTH way a negative lies in this deployment**, added to the five already recorded:
+*a PMC-backed identifier converter returning nothing is evidence about PMC, never about the article.*
+Check `get_article_metadata` before writing *"no DOI"* anywhere.
+
+**What does NOT change.** 🔴 The paper is still **`CURRENTLY UNRECOVERED`**: no PMCID, and
+*Neurogenetics* is **Springer**, which the measured routing rule predicts — and Wave 2 confirmed — is
+absent from the Scholar Gateway corpus. **The conclusion stands; its stated reason did not, and the
+difference is exactly what a human needs to act.** The question it holds is unchanged and remains
+the highest-value one in this queue: **what is the detection floor of the Western blot behind
+*"protein not detected"*** — the antibody, its epitope range, the loading control and the exposure —
+which `CLAIM 019` and half of `CLAIM 030` rest on.
+
+🔴 **`do not retry automated routes` is retained as advice and demoted as a verdict.** Automated
+routes in *this* deployment are exhausted. A deployment with publisher or library egress is not
+covered by that sentence and should not be discouraged by it.
+
+---
+
+## 🔴 CORRECTION 2026-09-23 — `PAPER 044` is declared `complete_fulltext_read` and its own numbers were unverifiable
+
+**Raised by** Scientist B (contradiction 3). **Verified first-hand by the Orchestrator**, both sides,
+this act.
+
+| Source | What it says about `PMID 30362252` (Davids 2019, *Hum Mutat* 40(1):42–47, [DOI](https://doi.org/10.1002/humu.23675)) |
+|---|---|
+| `paper_registry_current.md`, `PAPER 044` | **`Evidence depth: full text reviewed (coverage_status: complete_fulltext_read`** …`)`, `Status: claim_linked` |
+| `reading_state.py`, derived from the receipt ledger | 🔴 **`partial_fulltext_read`**, and **every one of the ten coverage fields is `unknown_legacy`** — i.e. a legacy reconstruction that witnessed nothing |
+
+🎯 **And the two disagree in the direction that matters, with a dated demonstration.** On 2026-09-22
+this repository recorded, in two files, that it **could not re-verify this paper's own isoform
+figures**: *"I therefore could NOT re-verify the 46 kDa / 19 kDa figures the registry holds"*
+(`splice_allele_rna_evidence_20260922.md:75`; same at `CC-20260922-SPLICE-ARM-01.md:196–198`),
+because the PMC extractor deletes the molecular weights inside parentheses, leaving *"the longer
+isoform (/)"*.
+
+🔴 **A reading that cannot reproduce the numbers it deposited is not `complete`.** The ledger is
+right and the registry line is wrong.
+
+🟢 **AND THE DEBT IS NOW DISCHARGEABLE.** Retrieved via the Wiley route and **verified verbatim by
+the Orchestrator this act** (`REMOTE PASSAGE — ANALYSIS-VALID / CANONICALIZATION PENDING`), Figure 2
+legend:
+
+> *"Western blot analysis shows the lack of expression of the longest transcript at **46kDa** in the
+> proband … The latter shows the increased expression of the short isoform at **19kDa**, whereas
+> **neither was able to detect the 33kDa isoform in patient or control**."*
+
+and, from the body:
+
+> *"The third isoform (NM_001291997.1/NP_001278926.1), which should encode a 33kDa protein, was **not
+> detected by either antibody in the control cells** and is likely not expressed in fibroblasts."*
+
+⇒ 🎯 **The `46 / 19 kDa` figures the registry holds are CORRECT.** The 2026-09-22 verification debt is
+discharged at passage depth.
+
+⚠️ **One narrowing against the hand-back that recovered it.** It framed the 33 kDa clause as *"a
+published, controlled demonstration that `not detected` ≠ `absent`"*. **The authors' own gloss is the
+opposite reading** — *"likely **not expressed** in fibroblasts"*, i.e. genuinely absent from that
+tissue, not hidden below a floor. The defensible statement is narrower and still useful: **the same
+two antibodies, in the same assay, return a negative for a real annotated isoform in a normal
+control** — so a WWOX Western-blot negative is **antibody- and tissue-conditioned**, and cannot be
+read as a statement about the protein as such. 🔴 **It does not measure `CLAIM 030`'s
+`DETECTION_FLOOR`, which remains unmeasured.** It bounds the inference drawn from a negative; it does
+not supply the floor.
+
+🔴 **PROPOSED, NOT PROPAGATED.** `paper_registry_current.md` is canonical and was **not edited**.
+For the Operator: `PAPER 044`'s `Evidence depth` should read `partial_fulltext_read` with the
+coverage fields it actually has, OR a contemporaneous receipt should be written that earns
+`complete`. **Nothing here touches a gated candidate.**
