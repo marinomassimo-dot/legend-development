@@ -468,7 +468,54 @@ was caught by an outside reader, not by me.**
 |---|---|
 | **1 · The shift is exact** | Δexon-7 shortens the cross-amplicon by **exactly 186 bp**, whatever the primers' positions within their exons. **The discriminating quantity is now a number, not a range** |
 | **2 · The absolute size is still bounded, not fixed** | With exon 7 = `c.606–791`, exon 8 = `c.792–1056`, exon 9 from `c.1057`: pair 2's forward must sit at `c.858–1056` to give its stated 200 bp across the junction, and pair 1's amplicon ends somewhere in exon 6 (`c.517–605`) ⇒ **cross-amplicon 729–1015 bp**. 🔴 **One BLAT of the two published primers against `NM_016373.2` collapses this to a single number** — `HUMAN_REQUIRED`, sixty seconds. **The assay is interpretable without it** (the WT lane is the size reference); the exact value is needed only to call a band without a control |
-| **3 · 🎯 An exon-7 skip is IN-FRAME, and it DELETES `Q230` itself** | It fuses `c.605` to `c.792`, removing residues **203–263** — so **no PTC, no NMD substrate, and a stable 352-aa product is expected rather than decay.** 🔴 **This is the opposite of the exon-6 case** (89 nt, frameshifting). It means `H1b` is **not** a "silent RNA loss" hypothesis: if exon 7 were skipped, the Q230P variant residue would be **absent from the protein entirely**, and the Western's `~46 kDa` window would be the wrong place to look |
+| **3 · 🎯 An exon-7 skip is IN-FRAME, and it removes the `Q230`-containing segment** | See §G.0.1 for the bounded statement and §G.0.2 for the junction arithmetic. `H1b` is **not** a "silent RNA loss" hypothesis: if exon 7 were skipped, the variant residue would be **absent from the ORF entirely**, and the Western's `~46 kDa` window would be the wrong place to look |
+
+### G.0.1 · 🔴 "IN-FRAME" DOES NOT MEAN "STABLE" — corrected 2026-09-23
+
+⚠️ An earlier draft of this block wrote *"a stable 352-aa product is expected rather than decay."*
+**That is withdrawn.** In-frame licenses a statement about the **reading frame**, and nothing about
+the **protein**.
+
+> **Bounded formulation, to be used verbatim wherever this is cited:**
+> *Exon-7 skipping would **preserve the reading frame** and **remove the `Q230`-containing segment**,
+> so a **shorter ORF is possible without a canonical frameshift/PTC–NMD mechanism**; **actual protein
+> production and stability remain untested.***
+
+🔴 **Why the withdrawn phrasing was dangerous rather than merely loose.** An internal deletion of
+~62 residues from the **SDR domain** could perfectly well compromise folding, translation,
+stability, solubility or clearance. Predicting *stability* from *frame* would have smuggled a
+protein-level conclusion out of a nucleotide-level fact — and it would have done so **inside the
+very node whose whole finding is that no protein-level measurement exists.** The only correct
+reading: an exon-7 skip removes **one specific NMD mechanism** from the list of explanations. It
+adds no expectation of a surviving product.
+
+### G.0.2 · The junction creates a CHIMERIC codon — arithmetic completed and one gap left open
+
+Neither boundary falls on a codon edge: **`c.606` is the 3rd base of codon 202** and **`c.791` is the
+2nd base of codon 264**. So the skip does not simply excise whole residues.
+
+| | |
+|---|---|
+| Residues **203–263** | 🔴 **deleted outright — 61 aa**, and **`Q230` is inside this block** |
+| Residues **202 and 264** | 🔴 **fuse into ONE chimeric codon** = `c.604` + `c.605` + `c.792` |
+| Net | 61 + 1 = **62 aa lost** · 414 − 62 = **352 aa** ✅ reproduces the figure independently |
+
+⚠️ **Correction to `CC-20260922-EXON7-NATURAL-EXPERIMENT-01` §2**, which says *"creating a hybrid
+codon at position 202 and deleting residues 203–263 outright."* Correct, but **incomplete**: it does
+not state that **residue 264 is also consumed** into that hybrid. The net-62 figure is right; the
+route to it was under-specified.
+
+🔴 **Two things are NOT derivable here and are NOT guessed:**
+
+| Unknown | What settles it |
+|---|---|
+| The **amino-acid identity** of the chimeric residue at position 202 | The nucleotides at `c.604`, `c.605`, `c.792` — i.e. the actual `NM_016373.2` sequence |
+| The **exact theoretical MW** of the Δex7 product | The full translated Δex7 sequence |
+
+**`HUMAN_REQUIRED`, minutes, and it should be done before `E1` is interpreted:** align
+`NM_016373.2` WT against Δex7 and annotate the chain **junction nucleotide → junction codon → exact
+protein sequence → exact theoretical MW**. 🔴 Until then, *"352 aa"* is a **codon count, not a
+characterised product**, and no MW may be quoted for a Δex7 band.
 
 - Cross-amplicon **729–1015 bp**; exon-7 skipping shortens it by **exactly 186 bp** — trivially
   resolved on a 1.5 % gel, and **the identical readout class Weisz-Hubshman used to demonstrate
@@ -506,7 +553,12 @@ quantification artefact into allele-severity or hypomorph reasoning.
 
 ---
 
-# 🔒 CLOSURE — 2026-09-23. `Q230P` is parked behind two ordered experiments.
+# 🔒 CLOSURE — 2026-09-23 · `Q230P`: **`TARGETED EXPERIMENTAL FRONTIER`**
+
+> **Status label of record:**
+> `Q230P: TARGETED EXPERIMENTAL FRONTIER — E1 exon-7 architecture → (if exon 7 included) E2 S/P/T + real LOD + orthogonal detection → only then decide whether a protein population compatible with proteostasis/chaperone rescue exists.`
+
+`Q230P` is parked behind two ordered experiments.
 
 > **This is a stopping point, not a pause for breath.** Nothing below reopens science. The frontier
 > is left in a state where the *next* action is an experiment, not another reading.
@@ -533,9 +585,19 @@ been answered.**
 **Decides whether we have been assuming the RNA's structure.** Cheapest by a wide margin: two
 already-published primers cross-paired, no new oligonucleotide design, a **186 bp** expected shift,
 Sanger-sequenceable for the junction at nucleotide level.
-🔴 **Its outcome reframes `E2`.** An exon-7 skip is **in-frame and deletes `Q230`**, so a positive
-`E1` would mean the protein question was being asked at the wrong molecular weight — and `E2` would
-need redesigning before it was run, not after.
+
+🔴 **`E1` does not merely inform `E2` — each of its four outcomes specifies a DIFFERENT `E2`.** The
+branches are fixed here, before the assay is run, so none can be rationalised afterwards:
+
+| `E1` result | Reading | Consequence for `E2` |
+|---|---|---|
+| **WT size only** | Exon 7 is included; `Q230P` really is present in the transcript | 🟢 **`E2` proceeds as designed.** The proteostasis question is well posed |
+| **Δ186 bp only** | The transcript does **not** contain the `Q230P` codon | 🔴 **`E2` must be REDESIGNED before it is run.** The target is a shorter product of uncharacterised MW (§G.0.2), so the `~46 kDa` window and the antibody choice are both wrong. **Do not run the blot as written** |
+| **WT + Δ186 bp** | Mixed isoforms | 🟡 **Quantify proportion and confirm sequence identity of BOTH bands first**, then `E2`. A ratio from a long amplicon is **not** an isoform ratio (long products under-represent the longer species) |
+| **No product** | 🔴 **Assay failure or RNA quality — NOT a biological result.** Nothing about exon 7 may be concluded | Re-run with an independent amplification control in the same tube. **Never report as a negative** |
+
+⚠️ Note the asymmetry: only the first branch leaves `E2` untouched. **Running `E2` before `E1`
+therefore risks executing the wrong experiment in three cases out of four.**
 
 ### `E2` — S/P/T + quantified LOD + orthogonal detection · **run second**
 **Decides whether a recoverable protein population exists to chase at all.** `MINOR ADAPTATION`:
