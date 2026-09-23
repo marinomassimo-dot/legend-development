@@ -512,10 +512,58 @@ route to it was under-specified.
 | The **amino-acid identity** of the chimeric residue at position 202 | The nucleotides at `c.604`, `c.605`, `c.792` — i.e. the actual `NM_016373.2` sequence |
 | The **exact theoretical MW** of the Δex7 product | The full translated Δex7 sequence |
 
-**`HUMAN_REQUIRED`, minutes, and it should be done before `E1` is interpreted:** align
-`NM_016373.2` WT against Δex7 and annotate the chain **junction nucleotide → junction codon → exact
-protein sequence → exact theoretical MW**. 🔴 Until then, *"352 aa"* is a **codon count, not a
-characterised product**, and no MW may be quoted for a Δex7 band.
+### G.0.3 · 🔴 CLASSIFICATION CORRECTED — this is not `HUMAN_REQUIRED`
+
+⚠️ An earlier draft filed the sequence retrieval as `HUMAN_REQUIRED`. **Wrong class.** A RefSeq
+transcript is **public reference data**, not a human asset, a custody question or a paywalled
+source. Nothing about it needs a person *in principle* — it needs egress.
+
+> **Correct classification:** *hybrid codon identity / theoretical Δex7 MW:*
+> **`AUTONOMOUSLY_ACQUIRABLE`** from historical RefSeq `NM_016373.2`; **`NETWORK_BLOCKED`** if
+> sequence retrieval is unavailable in the current deployment; **not inherently `HUMAN_REQUIRED`.**
+
+**Measured in this deployment, 2026-09-23, not assumed:**
+
+| Route | Result |
+|---|---|
+| `eutils.ncbi.nlm.nih.gov` efetch, `NM_016373.2`, FASTA | 🔴 `curl (56) CONNECT tunnel failed, response 403` |
+| `rest.ensembl.org` sequence | 🔴 `curl (56) CONNECT tunnel failed, response 403` |
+
+⇒ **`NETWORK_BLOCKED` here, `AUTONOMOUSLY_ACQUIRABLE` in any deployment with egress.** 🎯 **The
+distinction is not pedantry: it routes the task to a different queue and a different actor.** Filing
+an egress limit as a human asset is the same error class this repository already recorded for
+`PMID 29808465` — *"an environment limit … should not be recorded as a literature limit."*
+
+### G.0.4 · 🔴 VERSION DISCIPLINE — and the drift is already inside this derivation
+
+**Use `NM_016373.2`, the version Johannsen used. Do NOT silently substitute the current RefSeq.**
+NCBI's current release is **`NM_016373.4`**; `.2` is a historical version of WWOX transcript
+variant 1. Substituting the newer accession would manufacture exactly the coordinate drift this
+section exists to prevent.
+
+🔴 **And this is not a prospective caution — the mixing is already present in what was committed
+today.** Audit of the repository's own surfaces:
+
+| Accession | Occurrences | Where it comes from |
+|---:|---:|---|
+| `NM_016373.4` | **37** | ClinVar HGVS (*"1,327 records, HGVS on `NM_016373.4`"*) |
+| `NM_016373.3` | **14** | e.g. Tabarki 2015's `c.606-1G>A` |
+| `NM_016373.2` | **5** | **Johannsen 2018 — the primers and amplicons `E1` uses** |
+
+> 🎯 **The exon-7 boundary `c.606–791` was read from ClinVar — i.e. on `.4`. Johannsen's primer pair
+> and its 277 bp / 200 bp amplicons are on `.2`. §G.0.2's junction arithmetic therefore mixes two
+> transcript versions.**
+>
+> 🔴 **Whether CDS numbering is identical between `.2` and `.4` is `UNVERIFIED`.** If the versions
+> differ only in UTR length, `c.` coordinates are unchanged and the arithmetic stands untouched. If
+> the CDS changed, the boundary does not transfer. **This deployment cannot check** (§G.0.3), and
+> **no assumption is made in either direction.**
+
+**The one retrieval that closes everything at once**, to be done **before `E1` is interpreted**:
+fetch `NM_016373.2`, confirm its CDS numbering against `.4`, then align WT against Δex7 and annotate
+**junction nucleotide → junction codon → exact protein sequence → exact theoretical MW**.
+🔴 Until then, *"352 aa"* is a **codon count, not a characterised product**; no MW may be quoted for
+a Δex7 band; and the `c.606–791` boundary carries a **cross-version caveat**, not a clean provenance.
 
 - Cross-amplicon **729–1015 bp**; exon-7 skipping shortens it by **exactly 186 bp** — trivially
   resolved on a 1.5 % gel, and **the identical readout class Weisz-Hubshman used to demonstrate
@@ -592,7 +640,7 @@ branches are fixed here, before the assay is run, so none can be rationalised af
 | `E1` result | Reading | Consequence for `E2` |
 |---|---|---|
 | **WT size only** | Exon 7 is included; `Q230P` really is present in the transcript | 🟢 **`E2` proceeds as designed.** The proteostasis question is well posed |
-| **Δ186 bp only** | The transcript does **not** contain the `Q230P` codon | 🔴 **`E2` must be REDESIGNED before it is run.** The target is a shorter product of uncharacterised MW (§G.0.2), so the `~46 kDa` window and the antibody choice are both wrong. **Do not run the blot as written** |
+| **Δ186 bp only** | The transcript does **not** contain the `Q230P` codon. 🔴 Confirm the junction by Sanger against **`NM_016373.2`** (§G.0.4), never against the current RefSeq | 🔴 **`E2` must be REDESIGNED before it is run.** The target is a shorter product of uncharacterised MW (§G.0.2), so the `~46 kDa` window and the antibody choice are both wrong. **Do not run the blot as written** |
 | **WT + Δ186 bp** | Mixed isoforms | 🟡 **Quantify proportion and confirm sequence identity of BOTH bands first**, then `E2`. A ratio from a long amplicon is **not** an isoform ratio (long products under-represent the longer species) |
 | **No product** | 🔴 **Assay failure or RNA quality — NOT a biological result.** Nothing about exon 7 may be concluded | Re-run with an independent amplification control in the same tube. **Never report as a negative** |
 
