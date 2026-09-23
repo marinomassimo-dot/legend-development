@@ -184,3 +184,122 @@ identifier when none is in hand.** Whatever DOI `PAPER 025` currently carries sh
 unverified until someone copies it from the publisher's page.
 The **byline correction** above **was** verified by direct metadata retrieval and is not affected.
 Not medical advice.*
+
+---
+
+# 🎯 ADDENDUM — 2026-09-23, after the primary source was acquired and read
+
+> **The candidate is NOT propagated by this addendum.** Status remains `PROPOSED — NOT PROPAGATED`.
+> What changes is that three of its statements were made at **abstract depth** and can now be made
+> at **full-text depth**, and one of its stated refusals can be lifted.
+
+## A1 · The byline correction is now confirmed by a **third, independent** surface
+
+The candidate rested on PubMed metadata versus LEGEND's own splice-transcript census. Two further
+independent surfaces now agree, and neither is PubMed:
+
+1. 🟢 **The publisher's own figure package**, slide 1, verbatim: *"Novel WWOX deleterious variants
+   cause early infantile epileptic encephalopathy, severe developmental delay and dysmorphism among
+   Yemenite Jews · **M. Weisz-Hubshman**, H. Meirson, … D.M. Behar, **G. Heimer** · European Journal
+   of Paediatric Neurology · Volume 23 Issue 3 Pages 418-426 (May 2019)."*
+   🔴 **`Piard` returns 0 hits across the full body — an *earned* zero** (positive controls `WWOX`
+   49, `splice` 18, `patient` 47).
+2. 🟢 **Oliver 2023's Supplementary Table S1**, which names *"Weisz-Hubshman M et al. Eur J Paed
+   Neurol 2019"* and *"Piard J et al. Genet in Med. 2018"* as **separate rows for separate papers**.
+
+⇒ §1's defect is confirmed at the highest available strength. `D-22`'s detection rule
+(*"when two surfaces name the same identifier, they are two assertions about one fact — compare
+them"*) is **vindicated**: four surfaces now agree and the registry is the only outlier.
+
+## A2 · 🔴 THE DOI REFUSAL IS LIFTED — and the reason it existed was itself the error it warned about
+
+The candidate's closing block states:
+
+> *"🔴 `PMID 30853297` has **NO DOI and NO PMCID** in the PubMed ID-converter record …
+> **No DOI is asserted here.** … Whatever DOI `PAPER 025` currently carries should be treated as
+> **unverified** until someone copies it from the publisher's page."*
+
+**That caution was correct practice and is now discharged.** The DOI is verified **twice**, neither
+time by reconstruction:
+
+| Route | Value |
+|---|---|
+| PubMed `get_article_metadata(["30853297"])`, 2026-09-23 | `doi: 10.1016/j.ejpn.2019.02.003`, `pii: S1090-3798(18)30411-2` |
+| The publisher's own file, supplied by the Operator | `PIIS1090379818304112.pdf` — **the filename IS the PII**, `S1090-3798(18)30411-2`, character-for-character |
+
+🎯 **And the root cause is a rediscovery of a lesson this repository had already learned and then
+re-broke.** `FT-122` records it for `PMID 29808465`: *"a PMC-backed converter's silence is evidence
+about PMC, never about the article."* `convert_article_ids` returned the bare PMID for `30853297`
+and that silence was again read as *"no DOI exists"* — **the identical inference, about a second
+paper, in the same repository, days apart.** The correct statement was always the narrower one:
+*the ID converter returned no DOI*, which is a fact about the converter.
+
+🔴 **Consequence for proposal (a):** the byline and title correction should now land **with** the
+verified DOI, not with a DOI-shaped hole.
+
+## A3 · Proposal (c) — `CORPUS-STUB-059` can now be promoted with **verified** metadata
+
+The candidate asked to promote `PMID 30356099` to a `PAPER` record *"with its authors extracted"*,
+on the ground that *"a read paper with an empty `Authors` field is a name available to be borrowed."*
+Retrieved 2026-09-23:
+
+> **Piard J**, Hawkes L, Milh M, Villard L, … Kini U, Philippe C. *"The phenotypic spectrum of
+> WWOX-related disorders: 20 additional cases of WOREE syndrome and review of the literature."*
+> **Genet Med 2019;21(6):1308–1318** · `doi:10.1038/s41436-018-0339-3` · `PMC6752669` ·
+> online **2018-10-25**.
+
+🔴 **And the online-first/issue-year trap is live for this record specifically.** Oliver's Table S1
+cites it as *"Piard J et al. Genet in Med. **2018**"*; PubMed's citation block says **2019**.
+**One paper.** A `PAPER` record created from Oliver's string alone would duplicate the one created
+from PubMed's. This is exactly the duplicate class the Operator brief §2 names, and it is **not**
+hypothetical here.
+
+## A4 · The read-depth caveat in proposal (a) is now stale
+
+Proposal (a) asks to add *"⚠️ **Read depth: abstract only.**"* to `PAPER 025`'s note.
+🔴 **That line must not land as written.** The paper was read at full-body depth on 2026-09-23 —
+`FTR-20260923-30853297-01`, `partial_fulltext_read`, all nine body pages plus the publisher figure
+package, `figures: read`, `supplementary: not_present`.
+
+**Replacement wording proposed**, and it is *stronger* than the original because the exon-six result
+is no longer quoted from an abstract:
+
+> Carries a **measured** RNA outcome — RT-PCR on **blood**-derived cDNA across exon 6 gives products
+> of **593 bp** (wild type) and **504 bp** (mutant), an **89 bp** difference equal to the length of
+> exon 6, in the homozygote *"only the 504 bp band"*. 🔴 **Band sizing only — no junction sequence
+> is reported anywhere in the Results**, so the abstract's *"Complementary DNA sequencing
+> demonstrated … skipping of exon six"* **over-claims its own Results section**. Also a `Q230P`
+> primary (`c.689A>C`): four carriers, all within one family, **zero homozygotes**. 🔴 **The
+> 1:177 founder carrier rate measured in this paper (2/353 controls) belongs to `c.517-2A>G`
+> alone**; no founder-population denominator of any kind was measured for the missense allele, so
+> the rate must never be attached to it. ⚠️ **No protein work of any kind**
+> (`Western` 0, earned), so `CLAIM 030`'s `PREMISE: DETECTION_FLOOR` is untouched by this source.
+
+## A5 · What is still explicitly REFUSED — unchanged, and one refusal now *strengthened*
+
+§5's four refusals all stand. One is reinforced by the reading rather than relaxed:
+
+- ❌ **Still no promotion of the exon-six skip into a claim.** It is no longer abstract-quoted, but
+  the Results report **sizes, not sequence**, from **one lane, one patient**, with no densitometry,
+  no replicate and no NMD block. 🔴 **The full text made the evidence *more* precisely bounded, not
+  more promotable.**
+- ❌ **Still no claim that the allele is leaky or non-leaky.** The paper shows **no *detected*
+  correct splicing**; it does not exclude it and never claims to. The qPCR amplifies **exons 8–9,
+  downstream of exon 6**, so it counts the skipped transcript too — the residual ~10 % mRNA is
+  **not** evidence of residual correct splicing.
+
+## A6 · Ten source-internal defects are now on record
+
+Logged in [`ft117_weiszhubshman2019_fulltext_read_20260923.md`](../../analysis/ft117_weiszhubshman2019_fulltext_read_20260923.md) §5.
+The two that bear on any future use of this paper's data:
+
+1. 🔴 **The Fig. 4C legend calls `V-2` *"the compound heterozygote father"*, while Fig. 1C prints his
+   genotype as `c.517-2A>G/WT` — a simple carrier.** The only gel is family **3**; there is **no
+   family-2 lane**. So the paper's compound-heterozygote two-band statement is **prose with no shown
+   data**.
+2. 🔴 **The control count is internally inconsistency:** *"A total of 12 controls"* versus *"four
+   different runs (4 different controls to each run)"* = **16**. The `P = 0.0003` is reported
+   against **n = 1 patient**, so it is carried as **descriptive**.
+
+**Growth delta unchanged: `claims +0 · papers +0 · corpus +0`.** `PAPER 025` is corrected, not added;
+`CORPUS-STUB-059` is promoted, not created.

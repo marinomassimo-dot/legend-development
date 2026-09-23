@@ -175,3 +175,84 @@ registry against surfaces (`PMC web`, a staging XML path) that **no longer exist
 edition is an UNVERIFIED claim, not a discharged debt.** It is the mirror image of `PAPER 044`, and it is
 the more dangerous direction — `PAPER 044` over-claims a depth the ledger doubts; these two over-claim a
 depth **nothing at all records**.
+
+---
+
+# § 11 · 🎯 POST-INGESTION UPDATE — appended 2026-09-23, after the Operator source bundle
+
+> **Appended, not rewritten.** §§1–10 above record the state **before** the Operator supplied five
+> primary-source bundles. Nothing above is edited; this section supersedes it where they conflict.
+> **Still READ-ONLY toward the four scientific current files, every registry, every queue and the
+> six Operator-gated candidates.** Nothing promoted. No `BATCH_COMMIT`.
+
+## 11.1 · The five PMIDs — acquisition status moved, and only acquisition status
+
+🔴 **`SOURCE ACQUIRED` ≠ `QUESTION RESOLVED`.** The two columns are kept apart deliberately, because
+collapsing them is exactly how an acquisition queue silently becomes a false record of closure.
+
+| PMID | Acquisition **before** | Acquisition **after** | Receipt earned today | 🔴 **Scientific question — after** |
+|---|---|---|---|---|
+| `36779245` Oliver 2023 | `NEEDS_OPERATOR_PDF` (Table S1) | 🟢 **CLOSED** — Table S1 **+** the unrequested `s001` Supplementary Information | `FTR-20260923-36779245-04` (`supplementary: read`) | 🔴 **NOT resolved, and now known to be UNRESOLVABLE from any published Oliver surface.** Table S1 is a variant/ACMG census with no survival column; `s001`'s only survival object is stratified **by sex**. ⇒ reclassify **`AUTHOR_DATA_REQUEST`**, not an acquisition debt |
+| `29808465` Johannsen 2018 | `NEEDS_OPERATOR_PDF` (full body + Western/antibody/epitope) | 🟢 **CLOSED** | `FTR-20260923-29808465-02` | 🟡 **Partly.** 5/5 preregistered predictions scored; `SOL-1` discharged; `DET-1` attributed; `RNA-2` closed negative. 🔴 **`MOLECULAR FATE UNRESOLVED` stands** — and is now *confirmed correct* rather than merely cautious |
+| `33914858` Repudi 2021 | `NEEDS_OPERATOR_PDF` — 🔴 the **true acquisition debt**, zero receipts, 403 Cloudflare | 🟢 **CLOSED — the debt named in §9 is discharged** | `FTR-20260923-33914858-01` (first receipt ever for this PMID) | 🟡 Text surface adjudicated, reagents extracted, datasets registered. 🔴 **`CLAIM 003` untouched** — a `consolidated baseline` needs `legend-locator-audit` first. Purkinje question **NOT** closed |
+| `30853297` Weisz-Hubshman 2019 | `NEEDS_OPERATOR_PDF` (full body) | 🟢 **CLOSED** | `FTR-20260923-30853297-01` (first receipt ever) | 🟢 **Largely resolved** — exon-6 skipping, tissue, leakiness, qPCR and the `Q230P` compound heterozygotes all measured first-hand. 🔴 Adds **no** protein data, so `CLAIM 030`'s `DETECTION_FLOOR` premise is untouched |
+| `39868255` De La Cruz 2025 | `NETWORK_BLOCKED` / `CURRENTLY UNRECOVERED` | 🟢 **CLOSED** — 🎯 **and §3's insistence that this was *not* a literature dead end is vindicated** | `FTR-20260923-39868255-01` | 🟡 Endpoints verified. 🔴 **`PREPRINT / NOT PEER REVIEWED`** — no tier promotion, no therapeutic node promoted. Becomes a **modifier / stress-sensitivity** lead |
+
+🟢 **`NEEDS_OPERATOR_PDF` drops from 7 items to 3**: `17470496` (SCAR12 imaging), `25411445` (cohort
+overlap) and — newly — nothing else from today's five. 🔴 **`36779245` leaves the pack but does
+**not** become a closed question**; it changes queue.
+
+## 11.2 · A route status that must NOT be overwritten
+
+Per the Operator brief §26, the historical route record is preserved alongside the new primary
+status. These coexist and are **not** contradictory:
+
+- `PRIMARY ACTION = SOURCE ACQUIRED` (2026-09-23, Operator hand-supplied) ✅
+- `AUTOMATED ROUTE = NETWORK / CLOSED-ACCESS BLOCKED` (unchanged, and still true of this deployment) ✅
+
+🔴 **Nothing in the append-only acquisition ledger was rewritten.** The `FAILED_HTTP_403_CLOUDFLARE`
+entry for `33914858` stands as the historical record of what this deployment could reach.
+
+## 11.3 · 🎯 Three NEW blockers created by today's reading
+
+Honest bookkeeping cuts both ways: reading five primaries closed five acquisition debts and opened
+three new, smaller, better-specified ones.
+
+| New item | Class | Why it exists |
+|---|---|---|
+| **Oliver per-patient survival data** | 🔴 `AUTHOR_DATA_REQUEST` | The `CLAIM 033` re-run needs patient-level genotype × outcome, which is published nowhere. Corresponding author request is the only route |
+| **`sc-20528` immunogen / epitope** | 🟡 `VENDOR_DATASHEET` (`EGRESS_BLOCKED`) | `A21` now has a catalogue number, so the epitope is a **one-lookup** question instead of an unanswerable one. Blocks `DET-2`/`DET-3` from being closed by reasoning alone |
+| **`PMID 33914858` Supplementary Fig. 3 legend** | 🔴 `SOURCE_INCOMPLETE` | The legend is **missing from the supplement PDF** (legends run 1, 2, **4**, 5–9). It is the figure carrying the paper's *neocortical-origin* claim, and no `n`, age, depth or genotype for it exists on any surface held |
+
+## 11.4 · A framework finding owed to §5d, offered and not written
+
+🔴 **A browser print-to-PDF of a clean publisher HTML is NOT a rescue of a corrupt publisher PDF.**
+Measured today on `PMID 33914858`: the print surface preserves `<` (14/14) and `=` (7/7) but
+**destroys `≤` in 4/4**, adds **12,025 non-printables (9.9 % of the document)**, and renders 17 of
+19 occurrences of *"significant"* as `signiÞcant`. It manufactures a **new `SUSPECT` derivative**
+with a different and partly worse damage profile. `B1` and `B2` are **one artefact lineage, never
+two independent witnesses.** Registered here; **not** written into `gold_is_in_the_details.md`,
+which is an operator decision.
+
+## 11.5 · 🎯 A second framework finding, caught only because the commit was checked before it was made
+
+An analysis file written this session was named
+`oliver2023_tableS1_and_q230p_**patient**_map_20260923.md`. `.gitignore:28` carries `*patient*` as
+part of the **privacy hard-guard**. The file was therefore **invisible to `git`** — not ignored by
+`git status`'s default listing, not staged, not committable.
+
+🔴 **Every quality gate passed on it, and it would still never have landed.** `legend_lint.py`,
+`fulltext_receipts.py verify`, `growth_anchors.py` and `public_release_gate.py` all read the
+**working tree**. `git` reads the **index**. A file can satisfy every gate in the repository and be
+structurally uncommittable, and **nothing in the gate set says so**, because no gate's job is to ask
+whether what it just approved is a file `git` will accept.
+
+**Detection rule, cheap and general:** before staging, run
+`ls <new files> | while read f; do git check-ignore -q "$f" && echo "IGNORED: $f"; done`.
+Any hit is a file that will be silently dropped from the commit.
+
+🟡 **Not a defect in the hard-guard.** `*patient*` is doing exactly what it was written to do, and
+`.gitignore`'s own comment already anticipates the tension — it notes that *"proband"* is
+deliberately **not** ignored by name because *"semantic case linkage is enforced by the release gate
+instead."* The lesson is about **filenames**, not about the rule: a disease-level analysis file must
+be named at disease level too. Renamed to `…_q230p_cohort_map_20260923.md`; content unchanged.

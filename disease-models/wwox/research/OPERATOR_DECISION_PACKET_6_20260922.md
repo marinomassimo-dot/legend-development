@@ -206,3 +206,101 @@ its absence already produced a documented error in this session — mine.
 
 Gate state at the time of writing: `legend_lint` **PASS**, growth anchors **PASS**
 (`unread_premises = 0`), receipt chain **201, tail-anchored**, publication gate **PASS / 0 blocks**.
+
+---
+
+# 🎯 ADDENDUM — 2026-09-23 · what the Operator's primary-source bundle does to these six
+
+> 🔴 **THE SIX REMAIN GATED. NOTHING BELOW IS PROPAGATED, ACCEPTED OR WITHDRAWN.**
+> Per the Operator brief §30, new evidence that materially bears on a gated packet is recorded
+> **in the packet**, so the Operator decides against the current evidence rather than yesterday's.
+> Five primary sources were read at receipt depth on 2026-09-23
+> (`FTR-20260923-{29808465,30853297,33914858,36779245,39868255}`).
+
+## Summary: **two packets are materially affected. Four are not.**
+
+| # | Packet | Affected? |
+|---|---|---|
+| 1 | `CLAIM011-DOSE-ENDPOINTS` | 🟢 No |
+| 2 | `SDR-HOMODIMER-PREMISE` | 🟢 No |
+| 3 | `VERMIS-HYPOPLASIA-FREQUENCY` | 🟡 **Weakly** — see A3 |
+| 4 | `CLAIM025-SIGN-INVARIANCE` | 🟢 No |
+| 5 | `NMD-PREMISE-WITHDRAWAL` | 🎯 **YES — its premise is now tested at full-text depth and SURVIVES** |
+| 6 | `TX001-CEILING-REASSESSMENT` | 🎯 **YES — a new, independent methodological precedent** |
+
+---
+
+## A5 · `CC-20260922-NMD-PREMISE-WITHDRAWAL-01` — the withdrawal's factual basis is **confirmed, not weakened**
+
+The packet's `🔴 NARROWING I ATTACH` says the withdrawal must land with *"open ≠ favourable"*
+because the sign of a non-allele-specific boost is branch-dependent, *"actively dangerous under a
+toxic gain-of-function branch that nobody can exclude **because nobody has ever looked in the
+pellet**."*
+
+🎯 **That clause has now been verified at source, and it was previously an inference from an
+abstract.** Johannsen 2018 read in full (`FTR-20260923-29808465-02`) confirms preregistered
+prediction `P1` verbatim: *"Upon 10 min centrifugation with 13.000 rpm at 4 °C, **the supernatant
+containing cellular proteins was collected**"* — **no pellet resuspension, no denaturing
+re-solubilisation, no pellet lane.** 🔴 **Nobody looked in the pellet, and now that is a read
+Methods section rather than a suspicion.** The narrowing is **stronger** than when it was written.
+
+🟢 **And the NMD half of the premise survives a direct test.** Weisz-Hubshman 2019 read in full
+(`FTR-20260923-30853297-01`) is the repository's only measured WWOX splice transcript. It uses
+**no NMD inhibitor** — `cycloheximide` 0, `puromycin` 0, both **earned** zeros. ⇒ LEGEND's standing
+statement *"no WWOX splice allele has ever been assayed with an NMD inhibitor"* **SURVIVES at
+full-text depth**, where it previously rested on abstracts.
+
+🔴 **One correction the Operator should have before deciding.** That paper measures **~10 % residual
+WWOX mRNA** in the homozygote (patient `1.08 ± 0.2` vs 12 controls `10.7 ± 1.8`, `P = 0.0003`,
+exons 8–9 assay). It is tempting to read that residue as evidence that NMD is not absolute — and the
+packet's direction of travel would be helped by it. **It does not licence that.** The qPCR amplifies
+**exons 8–9, downstream of exon 6**, so it detects the **skipped** transcript as well as any normal
+one. 🔴 **The ~10 % is not attributable to correctly spliced message by this assay.** The conclusion
+*"NMD is not absolute for this allele"* survives; the **route** to it must not run through that
+number.
+
+> **Recommendation unchanged: 🟡 `ACCEPT WITH NARROWING`.** Nothing found today argues against the
+> withdrawal, and the attached bound is better evidenced than it was.
+
+## A6 · `CC-20260922-TX001-CEILING-REASSESSMENT-01` — a second, independent workflow precedent
+
+The packet's unconditional half (exon 9 is terminal ⇒ exon skipping is structurally impossible at
+`c.1057-2A>G`) is **untouched** by today's reading; nothing acquired bears on exon architecture.
+
+🎯 **What is new is methodological, and it strengthens the design rather than the claim.** Two
+independent published precedents for the exact allele-characterisation chain — *blood RNA → cDNA →
+junction-spanning amplification → band sizing → Sanger → quantitative RNA* — were read first-hand
+today:
+
+1. **Weisz-Hubshman 2019**: *"Total RNA was isolated from **blood** using Trisol"*; RT-PCR across
+   exon 6; 593/504 bp sizing; qPCR exons 8–9 against 12 controls.
+2. **Oliver 2023 Supplementary Information** (the unrequested `s001`): RT-PCR + Sanger on
+   **leukocyte**-derived RNA resolving a 489 bp normal band plus a skipped-exon band.
+
+🔴 **And the second carries a warning the design must absorb, in the authors' own words:** *"The
+alternate splicing event **could not be resolved in fibroblast-derived RNA** of patient 6."* Same
+laboratory, same gene, same assay — **resolvable in leukocyte RNA, not resolvable in fibroblast
+RNA.** This is published, WWOX-specific evidence on **tissue choice**, and it favours blood.
+
+🔴 **Bounds, stated so they travel with the precedent:** neither paper characterised
+`c.1057-2A>G`; neither performed splice correction; and **no WWOX splice allele behaves as a rule**
+— `c.517-2A>G` skips exon 6, which says nothing about a terminal-exon acceptor. **Do not imply any
+programme has already run this analysis on another allele.**
+
+> **Recommendation unchanged: 🟠 `DEFER`,** and for the same reason — the dependency on #5, not
+> doubt. The new precedents raise confidence in the **feasibility** of the experiment `TX-001`
+> needs, not in `TX-001`'s expected value.
+
+## A3 · `CC-20260922-VERMIS-HYPOPLASIA-FREQUENCY-01` — weakly touched, and flagged only for completeness
+
+Oliver's `s001` carries two cerebellar observations at supplementary depth: Supp. Fig. 2B, patient 10
+at 14 months, *"abnormal increased signal in **dentate nuclei** and dorsal medulla"*; and Supp.
+Fig. 3, patient 7 at 19 days, *"Normal ventricles, brainstem, **cerebellum**, basal ganglia and
+occipital cortex."* 🔴 **Two patients at two time points is not a time course, neither observation
+is vermis hypoplasia, and no frequency denominator is changed.** Recorded so the Operator is not
+later surprised that cerebellar supplementary material existed and was seen. **No change proposed.**
+
+---
+
+🔴 **Nothing in this addendum is medical advice. No canonical file was modified. The six remain
+`PROPOSED, NOT PROPAGATED`, and no recommendation in §2 above has been altered.**
