@@ -249,25 +249,55 @@ should **not** inherit the ER attribution at any strength.
 
 Assessed strictly against what this source can and cannot see. **No winner is forced.**
 
+> 🔴 **AMENDED 2026-09-23 — `H1` is split, because one label was doing two jobs.** The original row read
+> *"H1 reduced RNA — REFUTED within the measured window"*. That is too coarse: it bundles a question about
+> **abundance** (answered) with a question about **architecture** (never asked). A reader carrying the
+> single label forward would take "RNA is fine" from a measurement that never looked at the exon the
+> variant is in. The two are now separate hypotheses with separate statuses.
+
 | | Hypothesis | Status after the full text | Why |
 |---|---|---|---|
-| **H1** | Reduced RNA | 🟢 **REFUTED — within the measured window** | Transcript at *"almost identical"* level vs three lines, on **two** amplicons, with clean `−RT`. 🔴 **Window limit: exons 4–6 and 8–9 only. Exon 7 unmeasured** (§3) |
+| **H1a** | **Reduced abundance of the ASSAYED WWOX transcript regions** (exons 4–6, exons 8–9) | 🟢 **REFUTED in patient-2 fibroblasts under this assay** | Both regions *"expressed to a similar extent"* and at *"almost identical transcript level"* vs three reference lines, normalised to `HPRT1`+`UBC`, with clean `−RT`. 🔴 Scope: **one cell type, one donor, duplicate wells, no statistical test reported** |
+| **H1b** ⭐ | **Abnormal transcript architecture involving EXON 7** | 🔴 **UNTESTED** | `c.689A>C` is in exon 7. The core amplicon ends at exon 6 (`c.605`); the 3′ amplicon begins at exon 8. **Neither interrogates exon 7**, and an exon-7 event would leave both gel bands at expected size. 🔴 **This does NOT license inferring exon-7 skipping — and equally does NOT license inferring a normal exon-7 junction. Both are unknown.** A newly *sharpened* experimental gap, not a new suspicion |
 | **H2** | Impaired translation / nascent production | 🔴 **UNTESTED** | Author-offered; `P4` confirms zero synthesis measurement |
 | **H3** | Cotranslational / immediate post-translational disposal | 🔴 **UNTESTED** | No chase, no inhibitor, no nascent label |
 | **H4** | Rapid degradation after synthesis | 🔴 **UNTESTED — and author-*preferred*, which is not evidence** | No `MG132`, no `CHX`, no bafilomycin, no `t½` |
 | **H5** | Insoluble sequestration | 🔴 **NOT EXCLUDED — and structurally un-interrogable from this source** | `P1`: the pellet was discarded. 🎯 **This is the only hypothesis the method could not have seen even in principle** |
 | **H6** | Detection artefact / mixed state | 🔴 **NOT EXCLUDED** | `P3`: no floor, so *"not detected"* has no magnitude. `P5`: unknown epitope, so a fold-dependent epitope loss in the SDR domain — where residue 230 sits — is unexcluded |
 
-**Net movement: one hypothesis out of six retired, and only within a stated window.** Before today,
-H1–H6 were six live branches resting on an abstract. After today, H1 is refuted for exons 4–6 / 8–9,
-H5 and H6 are shown to be *specifically enabled by two named method gaps*, and the remaining
-uncertainty is **much narrower but not closed**. 🔴 **`MOLECULAR FATE UNRESOLVED` stands.**
+**Net movement, restated after the split: the branch count did not fall — it was re-partitioned.**
+Before today, `H1`–`H6` were six live branches resting on an abstract. After today there are **seven**
+(`H1a`, `H1b`, `H2`–`H6`), of which exactly **one — `H1a` — is retired**, and its retirement is scoped to
+one assay, one cell type and one donor. `H5` and `H6` are shown to be *specifically enabled by two named
+method gaps*; `H1b` is newly *visible* rather than newly *open* — it was always open and was previously
+hidden inside a label that implied it had been answered.
+
+🔴 **`MOLECULAR FATE UNRESOLVED` stands**, and the honest summary is narrower than "one of six refuted":
+**the only thing measured about this allele's RNA is the abundance of two regions that exclude the exon
+carrying the variant.**
+
+### 5.0 · The reconstructed post-Johannsen fate model, one line per layer
+
+| Layer | Status after the full text |
+|---|---|
+| **RNA abundance** (assayed regions) | 🟢 **Narrowed substantially** — comparable to three control lines on both amplicons |
+| **RNA architecture** (exon 7) | 🔴 **Unresolved — and never interrogated** |
+| **Protein production / translation rate** | 🔴 **Unresolved** — not measured, offered by the authors as an alternative they did not test |
+| **Soluble protein** | 🟢 **Measured: undetectable under Johannsen's RIPA-supernatant conditions**, replicated at two harvests |
+| **Insoluble protein** | 🔴 **Not examined** — the pellet was discarded. The one branch the method could not see even in principle |
+| **Post-synthetic turnover** | 🔴 **Not measured** — no chase, no inhibitor, no `t½` |
+| **Cotranslational loss** | 🔴 **Not measured** |
+| **Detection artefact** | 🔴 **Not excluded** — no quantified floor, unknown epitope |
+| **Function** | 🔴 **Not measurable until a protein population can be established.** A function assay with no detectable substrate measures the assay |
+
+🔴 **No winner is chosen, and none is available.**
 
 ### 5.1 · Row-level deltas owed to `q230p_true_frontier_20260922.md`
 
 | Row | Was | Becomes | Driver |
 |---|---|---|---|
-| `RNA-1` | `SOURCE-DEPTH LIMITED` (amplicon position unstated) | 🟢 **RESOLVED, with a declared scope limit** — positions known; **exon 7 uncovered** | §3 |
+| `RNA-1` | `SOURCE-DEPTH LIMITED` (amplicon position unstated) | 🟢 **RESOLVED for `H1a`, with a declared scope limit** — positions known; **exon 7 uncovered** | §3 |
+| `RNA-1b` 🆕 | *(did not exist — was hidden inside `RNA-1`)* | 🔴 **OPEN: exon-7 architecture, `UNTESTED`** — see `H1b` | §3, §5 |
 | `RNA-2` | `SOURCE-DEPTH LIMITED` (MeSH suggests a decay chase) | 🟢 **RESOLVED — negative. No stability experiment exists** | §2 |
 | `RNA-4` | `EXPERIMENT PROPOSED BUT UNRUN` | 🔴 **UNCHANGED, and now shown un-addressable by the existing data** | §3 |
 | `SOL-1` | `HUMAN_REQUIRED` — eleven targets `METHODS_INVISIBLE` | 🟢 **DISCHARGED** — buffer, spin, pellet handling, antibody, load, detection all now quoted | §1.1, §4.1 |

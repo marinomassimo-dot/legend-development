@@ -266,3 +266,167 @@ until `SOL-3` says whether that branch is the lesion.
 8. 🔴 **Nothing in this file is medical advice.**
 
 **END OF FILE — `q230p_true_frontier_20260922.md`.**
+
+---
+
+# 🎯 AMENDMENT — 2026-09-23, after `PMID 29808465` was read at full-body depth
+
+> **Appended, not rewritten.** Every row above records the state when the load-bearing primary was
+> `ABSTRACT_ONLY`. The Operator supplied the Johannsen 2018 PDF on 2026-09-23; it was read to receipt
+> depth (`FTR-20260923-29808465-02`) and the five predictions preregistered on 2026-09-22 were scored
+> **5/5 `SUPPORTED`**. This section supersedes the rows it names. Working file:
+> [`johannsen2018_fulltext_q230p_revival_20260923.md`](johannsen2018_fulltext_q230p_revival_20260923.md).
+> 🔴 **Nothing canonical is propagated by this amendment.** `CLAIM 019` and `CLAIM 030` are untouched.
+
+## A · Rows whose status changes
+
+| Row | Was | Now | Driver |
+|---|---|---|---|
+| `SOL-1` | 🔴 `HUMAN_REQUIRED` — eleven extraction targets `METHODS_INVISIBLE` | 🟢 **DISCHARGED.** Buffer, spin, pellet handling, antibody, load and detection are all now quoted verbatim | The Methods were read |
+| `SOL-2` | 🔴 `SOURCE-DEPTH LIMITED` | 🟢 **RESOLVED.** *"Not detected"* means **not detected in the RIPA-soluble supernatant**, explicitly and only | *"the supernatant containing cellular proteins was collected"* |
+| `RNA-1` | 🔴 `SOURCE-DEPTH LIMITED` — *"qPCR amplicon position `UNSTATED`"* | 🟢 **RESOLVED — positions stated.** Core = **exons 4–6** (277 bp), 3′ = **exons 8–9** (200 bp), both primer pairs printed | Methods, *"Quantification of WWOX transcription"* |
+| `RNA-2` | 🔴 `SOURCE-DEPTH LIMITED` — MeSH `RNA Stability` suggested a decay chase | 🟢 **RESOLVED — NEGATIVE. No stability experiment exists.** `stabilit*` = 0 across the body, an earned zero | The MeSH term was indexer-assigned and is not backed by an experiment |
+| `DET-1` ⭐ | 🔴 `NOT ATTRIBUTABLE` — *"no vendor, no catalogue, no clone, no host, no immunogen"* | 🟡 **`ATTRIBUTED, EPITOPE UNKNOWN`** — Santa Cruz **`sc-20528`**, goat, 1:200. Census row **`A21`** | Methods, *"Assessment of WWOX protein"* |
+
+## B · Rows CONFIRMED at source — previously inferred, now measured
+
+`SOL-3` (pellet never examined, for any WWOX allele) · `DET-4` (no detection floor anywhere) ·
+`PROD-1` (no synthesis-rate measurement) — all three were **predictions**; all three are now **read
+Methods**. 🔴 **Their status does not improve. It hardens.** The uncertainty they describe is no longer
+provisional on an unread source.
+
+## C · 🆕 A row that did not exist, because it was hidden inside `RNA-1`
+
+| Row | Question | Status |
+|---|---|---|
+| **`RNA-1b`** ⭐ | **Is exon 7 present in the mature `Q230P` transcript?** | 🔴 **`TRUE EXPERIMENTAL GAP` — never interrogated by any published assay** |
+
+`c.689A>C` sits in **exon 7** (`c.606`–`B`, `754 ≤ B ≤ 843`). Johannsen's core amplicon ends at the end
+of exon 6 (`c.605`); the 3′ amplicon begins at the start of exon 8 (`≥ c.755`). **The two amplicons
+bracket the exon carrying the variant and cover none of it, for every admissible `B`.** An exon-7 event
+would therefore leave **both** gel bands at their expected size, so the paper's *"normal … length"*
+control is blind to it by construction.
+
+🔴 **This licenses nothing in either direction.** It is not evidence that exon 7 is skipped, and it is not
+evidence that the exon-7 junction is normal. It converts an *assumed-answered* question into an
+*openly unanswered* one, which is the only honest move available.
+
+**Consequence for `RNA-4`** (exon-7 `ESE` disruption): unchanged at `EXPERIMENT PROPOSED BUT UNRUN`, but
+now with the added finding that **the single published RNA experiment on this allele could not have
+detected the outcome `RNA-4` asks about.**
+
+## D · Two inferences this repository made, now REFUTED by the source
+
+Both came from indexer-assigned MeSH terms in `PREREG_johannsen2018_methods_20260922.md` §5.3:
+
+- **`HEK293 Cells`** was read as implying *"a heterologous expression arm … a second, independent
+  measurement of `Q230P` protein in a non-patient context."* 🔴 **REFUTED.** Fig. 3c legend: *"Model cell
+  lines for pancreatic (PaTu-8988t) and colon (SW620) cancer **as well as HEK293 were employed as
+  positive controls for WWOX protein expression**."* There is **no transfection and no `Q230P` expressed
+  in any heterologous cell.** `SOL-1`'s extraction target *"whether the MeSH-indexed HEK293 arm exists"*
+  is answered: **it does not.**
+- **`RNA Stability`** was read as implying transcript stability *"was assessed as such"*. 🔴 **REFUTED**
+  (see `RNA-2`).
+
+🎯 **The transferable lesson, and it is sharper than the caveat that failed to prevent it.** §5.3 correctly
+bounded MeSH as *"indexer-assigned … a pointer, not a datum"* — and then reasoned from the pointer for two
+paragraphs anyway. **A caveat attached to an inference does not weaken the inference; only refusing to draw
+it does.** Both MeSH-derived leads were wrong in the same direction: each invented an **experiment** out of
+an **index term**.
+
+---
+
+# 🎯 AMENDMENT 2 — 2026-09-23, executability audit and the exon-7 assay
+
+> Working files:
+> [`q230p_spt_executability_and_exon7_20260923.md`](q230p_spt_executability_and_exon7_20260923.md) ·
+> [`repudi2021_file013_wwox_by_genotype_20260923.md`](repudi2021_file013_wwox_by_genotype_20260923.md) ·
+> [`q230p_person_count_reconciliation_20260923.md`](q230p_person_count_reconciliation_20260923.md).
+> 🔴 **Nothing canonical propagated.** No claim touched, no gated candidate touched.
+
+## E · `DET-1` moves again — the reagent has a name, a host, and a documented false negative
+
+`sc-20528` (Johannsen's antibody, census `A21`) **is the same catalogue item** as the unnamed *lde*-rat
+antibody the census carried as `A17`. Verbatim, Suzuki 2009 Methods: *"goat anti-Wwox polyclonal
+antibody (1:100; **sc-20528**, Santa Cruz Biotechnology)"*.
+
+| | |
+|---|---|
+| **Host** | 🟢 `goat`, polyclonal — now **`DATO`**, previously entailed from a secondary |
+| **Epitope** | 🟡 A **negation only**: *"did not contain the region altered by the `lde` mutation"* — excludes ≈ the last 44 residues and **says nothing about residue 230**. Provenance: **a 2009 personal communication from the vendor.** Not a datasheet, not an experiment |
+| **Current catalogue status** | 🔴 **`UNKNOWN — VENDOR DATASHEET BLOCKED`.** Live in 2009, citable in 2018; 2026 listing could not be determined and **was not guessed** |
+
+> ### 🔴 `H6` (detection artefact) is no longer merely "not excluded" — it has a published precedent, with this exact reagent
+>
+> In the `lde` rat, **`sc-20528` reported both products *"undetectable"***. A later study of the same
+> model, using `HPA050992` (aa 32–110), detected ***"a very weak band of slightly lower mobility."***
+> 🔴 **The antibody that produced `Q230P`'s founding negative is the antibody with an in-print false
+> negative on a WWOX mutant.**
+>
+> ⚠️ **Bounded honestly.** The later authors attribute the difference to *"greater sensitivity of the new
+> antibody"* — **an author attribution that nobody has tested**, and three variables differ between the
+> two runs (antibody, sonication, ECL vs infrared detection). Both lysis buffers are *real* RIPA with a
+> stated recipe, so lysis class is **not** the difference. `IPOTESI`, not `DATO` — **and the experiment
+> in §F tests it for free by running both antibodies on one membrane.**
+
+## F · The S/P/T experiment: 🟡 **`MINOR ADAPTATION`** — not `EXECUTABLE NOW`, and not `NEW REAGENT`
+
+**Nothing has to be invented.** What fails is the *two-flanking-antibody* design, and the reason is
+precise: of the reagents with an **orderable catalogue number** (`ab238144`, `ab189410`, `ABN413`,
+`4045S`, `ab216660`), **every single epitope is `UNSTATED`, and every datasheet route returns 403**.
+Of the reagents with a **stated epitope**, `A5`/`A6` carry **no catalogue number at all** — *an antibody
+you cannot order is not a reagent* — and `A1`/`HPA050992` is attested in a 2019 Methods section with
+its 2026 listing `UNKNOWN`.
+
+🎯 **So the design drops to the smallest configuration that actually exists: ONE antibody with a stated
+N-terminal epitope (`HPA050992`, aa 32–110, ending 120 residues before Q230) run beside `sc-20528` on
+the same membrane.** That is not a flanking pair and must not be described as one — but it is an
+orthogonal second epitope, and it **converts the untested sensitivity attribution above into a measured
+comparison at zero extra cost.**
+
+🔴 **The binding constraint is not a reagent.** It is **`Q230P` fibroblasts**, `HUMAN_REQUIRED`, and it
+was already `HUMAN_REQUIRED` before today. Also `UNKNOWN`: whether a **quantified recombinant human
+WWOX standard** exists for an LOD in ng — without one, the floor is expressed in relative terms only.
+
+## G · `RNA-1b` (exon 7): 🟡 **`MINOR NEW ASSAY`**, and the primers already exist in print
+
+🎯 **Neither of Johannsen's two published primer pairs can see exon 7 — but the FORWARD of pair 1
+cross-paired with the REVERSE of pair 2 spans it entirely.**
+
+```
+pair 1 (exons 4–6, 277 bp)   forward ──►                    reverse ◄──
+pair 2 (exons 8–9, 200 bp)                     forward ──►             reverse ◄──
+CROSS-PAIR:                  forward ──►  ................................. reverse ◄──
+                                          spans exon 7 (c.606–B) entirely
+```
+
+- Cross-amplicon ≈ **750–1005 bp**; exon-7 skipping shortens it by the **full exon-7 length, 149–238 nt**
+ — trivially resolved on a 1.5 % gel, and **the identical readout class Weisz-Hubshman used to
+  demonstrate exon-6 skipping** (593 → 504 bp).
+- 🟢 **Zero novel oligonucleotide design.** Both sequences are published verbatim.
+- 🟢 **Preferred over Weisz-Hubshman's own pair**, whose reverse primer is provably 3′ of exon 6 but
+  whose exact exon is `UNKNOWN` — if it lies *in* exon 7, skipping gives a **dropout**, and a dropout is
+  indistinguishable from PCR failure. The cross-pair's reverse is in exon 9 by construction, so the
+  readout is always a **shift**, never an absence.
+- 🔴 **Declared:** different PrimerBank pairs, annealing temperatures never reported together (one
+  gradient PCR settles it); ~800–1000 bp is endpoint RT-PCR, not qPCR — fine, because the readout is
+  **size**, not ΔΔCt; and **a size ratio must never be read as an isoform ratio**, since a long amplicon
+  under-represents the longer species.
+- 🔴 **Why `MINOR NEW ASSAY` and not `EXISTING MATERIAL`:** **no `Q230P` RNA exists anywhere in this
+  repository's reach**, and whether Johannsen's 2018 cDNA or fibroblast stock survives is **`UNKNOWN`** —
+  the paper states only that *protein* was stored at −80 °C. **One email settles it.**
+
+🔵 **A structural note, not a complaint.** Weisz-Hubshman's qPCR reverse primer and Johannsen's exon 8–9
+reverse primer are **the same site, offset by one nucleotide**. Two independent laboratories converged
+on the same 3′ anchor. **The exon-7 blind spot is therefore structural to the field's default assay, not
+an oversight by one group.**
+
+## H · An outside datum that bears on `SOL-6`, from `PMID 33914858` File013
+
+Per-genotype disaggregation of the pooled `Wwox log2FC −3.14` gives residual transcript of
+**6.8 % / 10.1 % / 18.7 %** (Nestin-Cre KO / constitutive null / Synapsin-Cre KO), i.e. **no genotype
+reaches zero**. 🔴 **This must NOT be read as residual WWOX function.** The conditional allele is floxed
+on **exon 1 only** of a ~913 kb locus, so gene-level counts retain reads from exons 2–9; the
+constitutive null is a **different allele on a different background** whose deleted interval this paper
+never states, leaving its 10.1 % **unexplained**. Recorded so that a future reader does not import a
+quantification artefact into allele-severity or hypomorph reasoning.

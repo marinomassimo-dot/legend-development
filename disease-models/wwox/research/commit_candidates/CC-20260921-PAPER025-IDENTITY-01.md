@@ -266,9 +266,10 @@ is no longer quoted from an abstract:
 
 > Carries a **measured** RNA outcome — RT-PCR on **blood**-derived cDNA across exon 6 gives products
 > of **593 bp** (wild type) and **504 bp** (mutant), an **89 bp** difference equal to the length of
-> exon 6, in the homozygote *"only the 504 bp band"*. 🔴 **Band sizing only — no junction sequence
-> is reported anywhere in the Results**, so the abstract's *"Complementary DNA sequencing
-> demonstrated … skipping of exon six"* **over-claims its own Results section**. Also a `Q230P`
+> exon 6, in the homozygote *"only the 504 bp band"*. 🟡 **Sequencing is stated in the abstract
+> AND in Methods §2.4** (*"gel electrophoresis and sequencing by ABI Prism 3100 Genetic Analyzer"*),
+> while the **Results as presented** document the consequence through the 593/504 bp products and the
+> stated 89 bp exon-six deletion, without displaying a junction chromatogram. Also a `Q230P`
 > primary (`c.689A>C`): four carriers, all within one family, **zero homozygotes**. 🔴 **The
 > 1:177 founder carrier rate measured in this paper (2/353 controls) belongs to `c.517-2A>G`
 > alone**; no founder-population denominator of any kind was measured for the missense allele, so
@@ -280,9 +281,11 @@ is no longer quoted from an abstract:
 §5's four refusals all stand. One is reinforced by the reading rather than relaxed:
 
 - ❌ **Still no promotion of the exon-six skip into a claim.** It is no longer abstract-quoted, but
-  the Results report **sizes, not sequence**, from **one lane, one patient**, with no densitometry,
-  no replicate and no NMD block. 🔴 **The full text made the evidence *more* precisely bounded, not
-  more promotable.**
+  the Results **display** sizes rather than a junction read, from **one lane, one individual**, with no
+  densitometry, no replicate and no NMD block. 🔴 **The full text made the evidence *more* precisely
+  bounded, not more promotable.** ⚠️ **Corrected 2026-09-23:** an earlier draft of this addendum said the
+  abstract *"over-claims its own Results"*. It does not — Methods state the sequencing. The phrasing is
+  withdrawn and must not be propagated.
 - ❌ **Still no claim that the allele is leaky or non-leaky.** The paper shows **no *detected*
   correct splicing**; it does not exclude it and never claims to. The qPCR amplifies **exons 8–9,
   downstream of exon 6**, so it counts the skipped transcript too — the residual ~10 % mRNA is

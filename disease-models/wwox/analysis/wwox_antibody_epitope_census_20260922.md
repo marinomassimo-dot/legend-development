@@ -132,6 +132,31 @@ Methods section — carried as the weakest class and load-bearing for nothing.
 | **A14** | rabbit polyclonal anti-WWOX (the TX-007 / AAV-series primary) | 🔴 **NO catalogue number, NO supplier, NO clone** — 🎯 **and the authors themselves now print the absence:** the Supplementary Table 3 of `PMID 33914858` gives `Rabbit anti-WWOX \| 1:5000 \| Catolog No **N.A** \| Source *(cell left empty)*`, in a table whose `Catolog No` column is populated for **nine** other primaries | rabbit | polyclonal | 🔴 **UNSTATED** | 🔴 **UNSTATED** | 🟢 Implicit: gives no signal in `Wwox`-null brain — but that is an observation, not a declared validation | **WB** (1:10,000) · **IHC / IF** on mouse brain (**1:5,000**) — 🟢 the 1:5,000 IF dilution is now attested **three times, in three papers, by one laboratory** | `repo-held`: `cerebellum_layer_localisation_20260922.md` §3.4–3.5, `purkinje_existing_material_experiment_20260922.md` §2.3 · 🎯 **+ `full-text`, added 2026-09-23:** `PMID 33914858` (Repudi 2021, *Brain*) Supplementary Table 3, read first-hand from `files/fulltext/PMID33914858_Repudi2021_suppl_File014_reagents.xlsx` → [`repudi2021_complete_bundle_ingestion_20260923.md`](repudi2021_complete_bundle_ingestion_20260923.md) §D.1 |
 | **A15** | in-house rabbit polyclonal anti-WWOX / WOX1, Chang (NCKU) lineage | 🔴 **no catalogue, no lot** | rabbit | polyclonal | 🔴 **UNSTATED** | 🔴 **UNSTATED** | 🔴 **None reported — and the paper had a `Y33R` mutant in hand and never blotted it** | WB · IF / FRET series | `repo-held`: `c1q_wwox_mechanism_audit_20260921.md:108` |
 | **A16** | *"polyclonal rabbit-anti-human-WWOX antibody **developed in the laboratory**"* (Adelaide) | 🔴 **no catalogue** | rabbit | polyclonal | 🔴 **UNSTATED** | 🔴 **UNSTATED** | none stated | **WB** | FRA16D / metabolic-reprogramming study 2013 — 🔴 first author not captured by the retrieval, cited by DOI only, [DOI](https://doi.org/10.1002/gcc.22078) — `full-text` |
+> ### 🎯 `A17` ≡ `A21` — ONE antibody, established 2026-09-23
+>
+> The *lde*-rat antibody this census carried as **"unnamed"** is **Santa Cruz `sc-20528`**, i.e. the same
+> catalogue item as `A21`. Verbatim, Suzuki 2009 *Genes Brain Behav* 8(7):650–660 Methods:
+> *"the membranes were incubated with **goat anti-Wwox polyclonal antibody (1:100; sc-20528, Santa Cruz
+> Biotechnology**…), followed by … **Alexa Fluor 680-conjugated rabbit anti-goat** IgG."* Catalogue number,
+> vendor, host and secondary all match `A21`.
+>
+> **Three consequences, kept separate:**
+> 1. 🟢 **`sc-20528` is goat polyclonal — now `DATO`**, not entailed from a secondary.
+> 2. 🟡 **It DOES have an epitope statement — a negation, and a weak-provenance one.** *"The Wwox epitope
+>    bound by the anti-Wwox antibody used in this study **did not contain the region altered by the `lde`
+>    mutation** (personal communication from Santa Cruz Biotechnology)."* 🔴 **That excludes only roughly
+>    the last ~44 residues and says NOTHING about residue 230.** It remains unusable for a flanking design.
+> 3. 🔴 **The reagent behind `Q230P`'s founding negative is the reagent with a documented in-print false
+>    negative.** §4.1 rows 2→3: with this antibody, in the `lde` rat, *"both products were **undetectable**"*;
+>    a later study of the same model using `HPA050992` (aa 32–110) detected *"a **very weak band** of
+>    slightly lower mobility."* 🔴 **The authors attribute that to sensitivity; nobody has tested it.**
+>    `IPOTESI`, not `DATO` — and §3 of
+>    [`q230p_spt_executability_and_exon7_20260923.md`](q230p_spt_executability_and_exon7_20260923.md)
+>    tests it for free by running both antibodies on one membrane.
+>
+> **The two rows are retained below rather than deleted**, so the provenance of each statement stays
+> visible; they are **one reagent** and must be counted once.
+
 | **A17** | anti-Wwox, *lde*-rat 2009 | 🔴 **unnamed** | UNSTATED | UNSTATED | 🟡 **STATED QUALITATIVELY, NOT BY RESIDUE:** *"Because the antibody used for Western blot analysis **does not recognize the C-terminal amino acid sequence** of Wwox protein…"* · and, in the sibling body already in this repository, *"The Wwox epitope bound by the anti-Wwox antibody used in this study **did not contain the region altered by the `lde` mutation**"* | 🟡 **NOT C-TERMINAL** — the only *negative* epitope statement in the literature, and it is unusable for a flanking design because it gives no boundary | 🟢 The epitope-vs-lesion argument is itself the validation, and it is the best epistemic practice in this census | **WB** | Suzuki 2009, PMID 19500159, [DOI](https://doi.org/10.1111/j.1601-183X.2009.00502.x) — `full-text` + `repo-held` dossier |
 | **A18** | anti-FLAG **M2** | 🟢 **`F1804` · Sigma-Aldrich** | mouse | monoclonal (clone M2) | 🟢 Epitope = the **FLAG tag**, not WWOX | 🔴 **UNRESOLVABLE:** vector is *"pCMV-3Tag (#240195, Agilent)"*; the 3Tag family has **both N- and C-terminal members and the paper does not say which** ⇒ the tag's side of 230 is `UNSTATED` | n/a | **WB** · **IP** · **IF** | `repo-held`: abundance census §2.3, PMID 41124647 |
 | **A19** | anti-myc (myc-WWOX) | UNSTATED | UNSTATED | UNSTATED | Epitope = the **myc tag** | 🔴 construct terminus UNSTATED in the preprint | n/a | **IF** — adopted *because* commercial anti-WWOX failed (§3, **B1**) | `repo-held`: `batch_queue.md:459`, preprint `42523332` |
@@ -151,16 +176,16 @@ Methods section — carried as the weakest class and load-bearing for nothing.
 
 | | |
 |---|---|
-| Distinct **anti-WWOX primary** reagents censused (A1–A17 **+ A21**, excluding tags A18–A19 and the fly A20) | **18** 🎯 *(+1 on 2026-09-23: `A21`, Santa Cruz `sc-20528`)* |
+| Distinct **anti-WWOX primary** reagents censused (A1–A17 + A21, excluding tags A18–A19 and the fly A20) | **17** 🎯 *(2026-09-23, second pass: `A21` was added (+1), then `A17 ≡ A21` was established (−1). **Net 17**, and the two rows are ONE reagent — see the merge note above `A17`.)* |
 | With an **epitope stated by residue range** | **3** — A1 (32–110), A2 (≈12/16–93/94), A3 (1–414, full-length) |
 | With an **epitope stated by exon range** | **2** — A5 (exons 1–7), A6 (exons 1–5) |
 | With an **epitope anchored to a modification site only** | **2** — A11, A12 (`pY33`) |
-| With an **epitope stated only as a negation** | **1** — A17 (*"does not recognize the C-terminal"*) |
-| 🔴 With **no epitope information of any kind** | **10 / 18 = 56 %** 🎯 *(`A21` added; the fraction moved the wrong way)* |
+| With an **epitope stated only as a negation** | **1** — **`A17 ≡ A21` = `sc-20528`** (*"does not recognize the C-terminal…"* / *"did not contain the region altered by the `lde` mutation"*). 🔴 **This class now contains the antibody that produced `Q230P`'s founding negative.** Its provenance is a **2009 vendor personal communication**, not a datasheet and not an experiment |
+| 🔴 With **no epitope information of any kind** | **9 / 17 = 53 %** 🎯 *(`A21` no longer counts here: as `A17` it carries a negation-class statement)* |
 | 🟢 Whose epitope is **wholly N-terminal to 230** | **3** — A1, A2, A6 (+ A11/A12, phospho-restricted) |
-| 🔴 Whose epitope is **wholly C-terminal to 230** | 🔴 **0 / 18. None. Not one.** 🎯 *(denominator updated; the zero is unchanged and `A21` did not disturb it)* |
+| 🔴 Whose epitope is **wholly C-terminal to 230** | 🔴 **0 / 17. None. Not one.** 🎯 *(denominator corrected twice in one day; **the zero has never moved**)* |
 | Whose epitope **spans 230** | **2** — A3, A5 |
-| With **no catalogue number at all** | **7** — A2, A3, A4, A14, A15, A16, A17 |
+| With **no catalogue number at all** | **6** — A2, A3, A4, A14, A15, A16. 🎯 *(`A17` leaves this class: it is `sc-20528`, printed in Suzuki 2009's Methods)* |
 | **Knockout-validated** in the strict sense (signal absent in a genetic null of the epitope region) | **1** — A2 (hypomorph + KO tissue, same laboratory) |
 | **Peptide/protein-blocked** (competition control published) | **2** — A2, A3 |
 | With published **intracellular-flow-cytometry** validation | 🔴 **0** (carried forward from `wwox_activity_sensor_census_20260921.md`) |
@@ -304,7 +329,7 @@ order they were written, with no retrofitting.
 | # | Prediction | Result | Grade |
 |---|---|---|---|
 | **P1** | Exactly one epitope-stated anti-WWOX antibody in the repository, N-terminal | **Repository: exactly one — `HPA050992`, aa 32–110, N-terminal. Correct.** Literature: **five more** (A2, A3, A5, A6, + the pY33 pair) | 🟡 **SPLIT** — the repository clause 🟢 exact; the implied universality 🔴 wrong by 5 |
-| **P2** | **6–12** distinct anti-WWOX primaries identifiable | **17** | 🔴 **REFUTED**, and instructively: I counted in catalogue numbers, and **7 of 17 have none**. The field runs on in-house antisera, which is exactly why the epitope question is hard and exactly why I under-counted |
+| **P2** | **6–12** distinct anti-WWOX primaries identifiable | **17** | 🔴 **REFUTED**, and instructively: I counted in catalogue numbers, and **7 of 17 have none**. ⚠️ *(Scored 2026-09-22 and left unrewritten. The counts table now reads **6** without a catalogue number, because `A17` acquired one on 2026-09-23 when it was identified as `sc-20528`. The denominator coinciding at 17 is arithmetic accident, not agreement — see the merge note.)* The field runs on in-house antisera, which is exactly why the epitope question is hard and exactly why I under-counted |
 | **P3** | **≥ 60 %** with no stated epitope anywhere reachable | **9 / 17 = 53 %** — plus 2 more (A11, A12) that state only a modification site and 1 (A17) that states only a negation | 🟡 **NARROWLY REFUTED on the strict count, SUPPORTED on the operative one.** If *"usable for a flanking design"* is the test, the figure is **14 / 17 = 82 %** |
 | **P4** | A further HPA/PrEST anti-WWOX exists, N-terminal or spanning, **not** strictly C-terminal | No second HPA anti-WWOX appeared in any Methods section read here, and the HPA portal is `EGRESS_BLOCKED` | 🔴 **COULD NOT ESTABLISH.** Untested, not confirmed. **The PrEST-avoids-the-Rossmann-fold reasoning in H1 is therefore unsupported and must not be carried forward** |
 | **P5** | **< 40 %** of *"absent protein"* results attributable to a named antibody | **7 / 10 = 70 %** | 🔴 **REFUTED, and badly.** I predicted a field that does not name its reagents; it names them more often than not. **What it does not do is state their epitopes** — a distinction my prediction collapsed |

@@ -52,7 +52,7 @@ But the read changes the *evidential grade* of the splice claim in three ways th
 
 | # | What changes | Direction |
 |---|---|---|
-| **H-1** 🔴 | **The exon-6 skip is demonstrated by PRODUCT SIZE, not by a reported junction sequence.** §3.4 reports two band sizes and says the result "is consistent with the prediction". The abstract's *"Complementary DNA sequencing demonstrated … skipping of exon six"* is **stronger than the Results text it summarises.** | **NARROWS** `CLAIM 018` |
+| **H-1** 🟡 | **The exon-6 skip is documented in the Results primarily by PRODUCT SIZE; no junction chromatogram is displayed and no junction sequence is narrated.** §3.4 reports the two band sizes and the stated 89 bp exon-six deletion. 🔴 **Sequencing is NOT absent from the paper:** Methods §2.4 states the cDNA product went through *"gel electrophoresis and sequencing by ABI Prism 3100 Genetic Analyzer (PerkinElmer)"*, and the abstract reports the sequencing result. **So there is no abstract-versus-Methods contradiction** — what is missing is the *display* of the junction read, not the claim that it was done. `c.517-2A>G → exon-6 skipping` stands as supported by the paper **as a whole**. | **NARROWS what is SHOWN**, not `CLAIM 018` itself |
 | **H-2** 🔴 | **The two-band result asserted in §3.4 for the family-2 compound heterozygotes is shown in NO figure.** The only cDNA gel (Fig. 4C) is family 3 and contains no family-2 lane. | **NARROWS** |
 | **H-3** ⭐ | **The RNA is from BLOOD, and it worked** — RT-PCR gave clean bands and qPCR gave a control mean of 10.7 relative units. This is a direct, first-hand answer to the `S-1` worry carried in the 2026-09-21 file (§6, `N-33`) that WWOX RNA cannot be assessed in blood or fibroblasts. | **CONTRADICTS** `S-1` as a blanket statement |
 
@@ -262,7 +262,22 @@ that the source does not corroborate it.
 sequenced, does **not** report an exon-5→exon-7 junction read, and does **not** exclude an alternative 89-nt
 loss (e.g. use of a cryptic acceptor 89 nt into exon 6, which would give the identical size). The **abstract**
 asserts *"Complementary DNA sequencing demonstrated that the WWOX c.517-2A>G splice-site variant causes
-skipping of exon six"* — that is a **stronger claim than its own Results section supports**.
+skipping of exon six"*.
+
+🔴 **CORRECTED 2026-09-23 — the earlier phrasing here, "a stronger claim than its own Results section
+supports", is withdrawn.** It manufactured a contradiction that the paper does not contain. Methods §2.4
+states sequencing explicitly, verbatim: *"cDNA amplification was carried out with Redload Taq Master\*5
+(LAEOVA), followed by **gel electrophoresis and sequencing by ABI Prism 3100 Genetic Analyzer
+(PerkinElmer)**."* **Sequencing is stated in the abstract AND in Methods.** The bounded, accurate statement
+is: *the Results section as presented documents the splice consequence primarily through the 593/504 bp
+products and the stated 89 bp exon-six deletion, without displaying a junction chromatogram or narrating its
+sequence.*
+
+🟡 **What genuinely survives, and it is narrower:** because the junction read is not shown, an alternative
+89-nt loss (a cryptic acceptor 89 nt into exon 6, giving an identical size shift) is **not excluded by the
+displayed evidence** — although the sequencing the Methods describe would have been capable of excluding it.
+That is a limit on what a reader can verify, **not** an error by the authors and **not** a discrepancy
+between their sections.
 
 > 🔵 **INFERENZA (mine, and it is the charitable reading):** given the Methods names Sanger, the authors most
 > likely did sequence the band. But **charity is not a locator.** What is *published* is a size shift of 89 bp
@@ -639,7 +654,7 @@ change what may be cited and from where.
 | **D-6** ⚠️ | Cross-reference errors: §3.2.1 cites `(Fig. 3A)` for a Sanger panel that is `Fig. 4A`; §3.2.2 cites `(Fig. 2B)` for a panel that is `Fig. 4B` | §3.2.1, §3.2.2 |
 | **D-7** ⚠️ | The binomial-exact 95 % CI lower bound **0.0016** is not reproducible for 2/353 (Clopper–Pearson gives **0.00069**); the upper bound 0.0204 is correct | §3.3 |
 | **D-8** ⚠️ | Abstract says *"facial dysmorphism"*; the features listed include brachydactyly, tapering fingers, short stature and pectus carinatum, which are not facial | Abstract vs Discussion |
-| **D-9** 🔴 | **Abstract over-claims relative to Results**: *"Complementary DNA sequencing demonstrated … skipping of exon six"* against a Results section that reports band sizes and says *"consistent with the prediction"* | Abstract vs §3.4 |
+| **D-9** 🟢 ~~🔴~~ | 🔴 **WITHDRAWN 2026-09-23 — this was not a source defect and is struck from the list.** It read *"abstract over-claims relative to Results"*. Methods §2.4 states *"gel electrophoresis and sequencing by ABI Prism 3100 Genetic Analyzer"*, so the abstract is reporting a method the paper declares. What remains is a **presentation** observation with no defect attached: the Results display the 593/504 bp products and the 89 bp deletion rather than a junction chromatogram. **The defect count for this paper is therefore NINE, not ten.** | Abstract, Methods §2.4, Results §3.4 |
 | **D-10** ⚠️ | Reagent naming is inconsistent between the two RNA methods: **"Trisol"** in §2.4, **"Trizol"** in §2.5 | §2.4, §2.5 |
 
 ---

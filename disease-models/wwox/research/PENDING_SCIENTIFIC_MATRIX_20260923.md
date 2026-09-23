@@ -256,3 +256,31 @@ Any hit is a file that will be silently dropped from the commit.
 deliberately **not** ignored by name because *"semantic case linkage is enforced by the release gate
 instead."* The lesson is about **filenames**, not about the rule: a disease-level analysis file must
 be named at disease level too. Renamed to `…_q230p_cohort_map_20260923.md`; content unchanged.
+
+## 11.6 · Two metadata corrections, applied forward — 2026-09-23 (second pass)
+
+Neither reopens any scientific analysis, and neither changes a coverage map, an evidence depth or a
+conclusion. Both are recorded through the existing `receipt_correction` mechanism
+(`FTR-20260923-30853297-02`), which by protocol **preserves** `source_locator`, so the incorrect
+strings stay visible in the hash chain and the correction is the record.
+
+| # | Defect | Correction | Verified how |
+|---|---|---|---|
+| **1** | `FTR-20260923-30853297-01` `source_locator` says *"publisher PDF, **27 pp**"* | **9 pages** | 9 bare `/Type/Page` objects, **0** `/ObjStm` compressed object streams ⇒ page objects exhaustive; and journal pagination **418–426 = 9** as an independent second witness |
+| **2** | The same receipt asserted the abstract *"over-claims its own Results section"* on cDNA sequencing | **Withdrawn.** Methods §2.4 states sequencing explicitly — *"gel electrophoresis and sequencing by ABI Prism 3100 Genetic Analyzer (PerkinElmer)"* | Read first-hand from the artefact before adopting the correction |
+
+**Also checked, and clean:** Johannsen `PMID 29808465` is **6 pages** against pagination **151–156** — its
+receipt records no page count, so **nothing there needed correcting**; the De La Cruz preprint is **24**,
+where `file(1)` was right.
+
+🎯 **Method note, because the trap will recur.** `file(1)`'s PDF page count was **wrong on two of three
+artefacts in this bundle and right on the third**, so it is not systematically biased and cannot be
+repaired by a constant offset. Count `/Type/Page` objects and confirm `/ObjStm` is absent before quoting a
+page count; where journal pagination exists it is a free, independent second witness.
+
+🔴 **The second correction matters more than the first**, and not because of the page count. *"The abstract
+over-claims its own Results"* is an **accusation against the authors**. It was made from the Results
+section alone, without checking the Methods — and the Methods say the sequencing was done. The failure was
+not reading too little of the paper; it was **drawing a comparative conclusion from one section about
+another**. A defect count is now nine, not ten, in
+[`ft117_weiszhubshman2019_fulltext_read_20260923.md`](../analysis/ft117_weiszhubshman2019_fulltext_read_20260923.md).
