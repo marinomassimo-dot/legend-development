@@ -850,7 +850,35 @@ touched** — no authorisation was given for it.
    receipt **`FTR-20260921-27869163-01`**, `evidence_depth: partial_fulltext_read`. The line above
    survived the read because **nothing updates this checkpoint when a receipt is appended**.
 
-## Permanently evidence-blocked — do not retry automated routes
+## ~~Permanently evidence-blocked — do not retry automated routes~~
+
+> 🔴 **HEADING FALSIFIED 2026-09-22, AND THE TABLE BELOW CARRIES A DANGEROUS INSTRUCTION. READ THIS
+> BEFORE THE TABLE.** `retrieval_capability_retest_20260922.md` retested all 29 assembled blocked
+> papers through `mcp__Scholar_Gateway__semanticSearch`: **4 recoverable, 25 not in corpus**, and the
+> split is **perfectly predicted by journal host** — Wiley-hosted 4/4, everything else 0/25.
+>
+> 🔴 **Two of the four recovered are in the table below, under a bolded *"do not re-test"*:**
+> **`18371080`** (*Eur J Neurosci*, Wiley) → **9 of 17 chunks**, including complete Materials &
+> Methods and Discussion, answering acquisition packet `A6` in full; and **`26345274`**
+> (*Am J Med Genet A*, Wiley) → **6 of 6 chunks**, a complete narrative, answering packet `A8`.
+> **Both were HIGH-priority and both sat unreachable behind this instruction.**
+>
+> ⇒ **The correct heading is `CURRENTLY UNRECOVERED BY THE ROUTES TRIED`, not `permanently blocked`.**
+> **Blocked is a statement about routes tried, never about the paper.** Before treating any row below
+> as closed, apply the ladder at `retrieval_capability_retest_20260922.md` § 7 — and note its own
+> correction: **the discriminator is whether the journal is currently served from
+> `onlinelibrary.wiley.com`, NOT the DOI prefix.** `10.2164`, `10.1155`, `10.1684` and several
+> `10.1016` titles are Wiley-hosted; `10.1016/j.ibneur` is not.
+>
+> 🟡 **The list is nonetheless 25/29 = 86 % correct.** It is not substantially wrong — it is wrong in
+> one predictable place, and that place is now named. The other 25 rows stand, and the saving is that
+> no future session need spend an acquisition act on a non-Wiley blocked paper.
+>
+> 🔴 **Still `CURRENTLY UNRECOVERED` after the retest, by every automated route in this deployment:**
+> `17803050` (AALAS, no DOI, no PMCID; **0 across two independent paper-specific queries** — this is
+> the one genuinely exhausted high-value source), `33914858` (OUP), `24369382` (OUP),
+> `15126504`, `27569545`, `15026124`, and the rest of the 25.
+
 `15126504` (`FT-024`, no PMCID) · `27569545` (`FT-105`, **licence wall**, verified) · `15026124`
 (no PMC) · `33914858` (no PMCID) · `24369382` (empty PMC body) · `17803050` (no DOI/PMCID).
 Packaged for a human in `acquisition_packet_20260920.md`.

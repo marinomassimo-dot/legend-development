@@ -7272,3 +7272,161 @@ not a measurement in brain, and certainly not in a WWOX-DEE genotype class.
 lesion. 🔴 **There is none.** Different species, different tissue, different disease, different
 evidence class — an algorithmic driver-gene call in adult human blood versus a histological vacuole in
 a rat forebrain. **Never pooled, and never cited as support for the amygdala node.**
+
+---
+
+## FT-171
+**Paper:** PMID 40006511 / PMCID PMC11858974 — Liu C-W, Chen P-H, Lin K-J, Cheng Y-T, Chang L-C,
+*Novel Hydrogel-Mediated Lentiviral Gene Delivery via Intravesical Administration for Bladder Cancer
+Treatment*, *Pharmaceutics* 2025;17(2):143, [DOI](https://doi.org/10.3390/pharmaceutics17020143)
+**Title:** The `UNREAD_PREMISE` the debt ratchet caught — and it was already load-bearing in a therapeutic ledger entry
+**Priority:** **MEDIA** — closed by this entry; no further acquisition needed
+**Surface:** 🟢 **BODY READ IN FULL this act** via `get_full_text_article(["PMC11858974"])`, MDPI, open access.
+Introduction, Materials and Methods § 2.1–2.9, Results § 3.1–3.6, Discussion, Conclusions. According to PubMed.
+
+**How it emerged.** `legend_lint` raised `BLOCK_BATCH_COMMIT · UNREAD_PREMISE` and `growth_anchors`
+raised `RATCHET_VIOLATION: 1 new unread premises (40006511)` when Scientist A's
+`claim039_structural_explanation_reconstruction_20260923.md` was staged. **The gate was right.**
+A's own use of the PMID is innocuous — § 11 lists it as `FP1`, an inspected-and-**rejected** false
+positive of a nerve-conduction/electron-microscopy query — but the detector cannot distinguish
+*"I looked at this and it is irrelevant"* from *"I am leaning on this"*, and it should not have to.
+
+🔴 **Repaired by declaring the reading debt, not by deleting the citation** — the standing rule from
+`f51bdcc` and `7bcb30c`. Authority: `LEGEND_CORE` § 21d. A queue entry is not publication, history
+rewrite, irreversible deletion, guarantee change, spend or data exposure. Reversible by deleting FT-171.
+
+### 🎯 And the debt was already older and larger than Scientist A's citation
+
+`therapeutic_hypotheses_ledger_current.md:116`, entry **`HYP-20260705-06`** (*WWOX gene-delivery
+non-CNS come prova di principio*), cites this paper as its **`Evidenza PRO`** — *"PMID 40006511 /
+PMCID PMC11858974; coerente con AAV WWOX già in TX-005"* — and **nobody had read it**. A therapeutic
+ledger entry has been resting on an unopened paper. 🟢 **That entry's own discipline is otherwise
+sound**: it is `parked`, scored **3/15**, tagged *"completamente non-CNS, oncologia, lentiviral/hydrogel
+intravescicale non trasferibile a cervello"*, and explicitly **not** a clinical proposal. **Its
+CONTRO column is correct. Its PRO label is not.**
+
+### What the body actually reports — first-hand, and it points the other way
+
+Rat bladder carcinoma line **AY-27**; **lentivirus**, not AAV; gelatin hydrogel; intravesical
+instillation; F344 rat orthotopic model.
+
+| Measured | Value |
+|---|---|
+| WWOX overexpression achieved | **4.0×** (LV-WWOX) and **5.1×** (H-LV-WWOX) in vitro; **8.6×** and **13.5×** in urothelium in vivo |
+| Cell viability after transduction | **80.3%** (LV-WWOX), **75.7%** (H-LV-WWOX) vs vector-only 90.5% and hydrogel-only 106.8% |
+| Caspase-3 **cleavage** | **7.78×** higher in H-LV-WWOX than LV-WWOX (`p < 0.001`) |
+| ROS (DHE) | **3.01×** (LV-WWOX) and **4.68×** (H-LV-WWOX) over sham |
+| TNF-α | **2.67×** and **2.74×** over control |
+
+Discussion, verbatim: *"the increase in ROS levels following WWOX overexpression leads to cellular
+oxidative stress, which promotes apoptosis by causing **irreparable damage to cellular components and
+DNA**, ultimately resulting in cell death."*
+
+⇒ 🔴 **The paper's entire therapeutic logic is that raising WWOX above baseline KILLS THE CELL.** In a
+tumour that is the intended effect and the paper is a success. **As `Evidenza PRO` for a WWOX
+*restoration* strategy it is mislabelled**: the only thing it establishes about WWOX overexpression
+per se is a **ROS → caspase-3 → DNA-damage → apoptosis programme**.
+
+🔴 **And it is not `Evidenza CONTRO` either.** Every transfer fails, and the list is longer than the
+finding:
+- **Transformed rat urothelial carcinoma cells**, WWOX-deficient at baseline because it is a tumour
+  suppressor lost in bladder cancer — not neurons, not brain, not a `Wwox`-null CNS.
+- **Lentivirus + hydrogel, intravesical.** Different vector, kinetics, tropism and route from AAV9 ICV.
+- **Dividing cells.** A DNA-damage→apoptosis programme is a categorically different endpoint in a
+  cycling cell than in a post-mitotic neuron.
+- **No dose–response for WWOX level versus toxicity, and no non-tumour comparator cell type.** 4–13.5×
+  over a suppressed baseline is not "restoring a null to wild type".
+- Systemic safety was explicitly **fine** — organs normal, body weight preserved, haematology in range.
+  The cytotoxicity is local and cell-intrinsic to transduced tumour.
+
+**Permitted statement, and the only one:** *In a WWOX-deficient rat bladder carcinoma line, lentiviral
+WWOX overexpression of 4–13.5× drove ROS, TNF-α and caspase-3 cleavage and reduced viability. Nothing
+in this paper measures WWOX overexpression in a neuron, at any level, by any vector.*
+
+### 🎯 Why it is nonetheless worth the read — one open question it makes askable
+
+`tx007_saturation_hypothesis_20260922.md` and the dose files record that the AAV-WWOX rescue
+dose-response in the `Wwox`-null mouse is **non-monotonic**, with **follow-up-horizon mismatch** as the
+leading alternative explanation and the repository explicitly refusing to read the non-monotonicity as
+biology. 🔴 **An overexpression-toxicity ceiling is a second, mechanistically specific candidate that
+the repository has not named**, and this paper is the only record in the corpus that measures what
+supraphysiological WWOX does to a cell.
+
+🔴 **It is a QUESTION, not a finding, and it is `IPOTESI` at the weakest grade.** It does **not**
+explain the non-monotonicity; it does not transfer across cell class, vector or species; and it must
+not be promoted. `PREMISE: CROSS_CONTEXT_ANALOGY`. **The measurement that would make it askable at all
+is a WWOX dose–viability curve in a post-mitotic neuronal preparation, which does not exist in this
+corpus.** 🔴 **BLOCK-1: nothing here is medical advice, and no dose, route, schedule or clinical
+framing is proposed for any genotype.**
+
+⚠️ **This does NOT revive the generic metabolic-demand model.** That model concerns whether
+**bioenergetic demand predicts vulnerability to WWOX LOSS**; it is closed against the bioenergetic
+ceiling and open only against terminal mitochondrial logistics. This is **WWOX GAIN driving ROS** — the
+opposite direction on a different axis. **No revival trigger fires.**
+
+**`REVIVAL_TRIGGER` for this entry:** any measurement of WWOX overexpression toxicity in a
+**post-mitotic neuronal** preparation, or any AAV-WWOX study reporting a viability or ROS endpoint
+against vector dose.
+
+---
+
+## FT-172
+**Paper:** PMID 24152123 / PMCID PMC3930200 — Miller AR, Hawkins NA, McCollom CE, Kearney JA,
+*Mapping genetic modifiers of survival in a mouse model of Dravet syndrome*,
+*Genes Brain Behav* 2013;13(2):163–172, [DOI](https://doi.org/10.1111/gbb.12099)
+**Title:** The adjacent-literature anchor for "same allele, two backgrounds, opposite phenotype"
+**Priority:** **MEDIA** · **Surface:** ⚪ **ABSTRACT, first-hand this act** (According to PubMed). PMCID exists; body not fetched.
+**Why:** `UNREAD_PREMISE` raised by the debt ratchet against
+`sampling_frame_vs_biology_node_20260923.md` (Scientist C), which imports it via `connect_domains`.
+🟢 **Its load-bearing quotation is verified verbatim in the abstract by the Orchestrator:**
+*"Phenotype severity in `Scn1a^(+/−)` mice is strongly dependent on strain background. On the
+129S6/SvEvTac strain `Scn1a^(+/−)` mice exhibit **no overt phenotype**, whereas on the (C57BL/6J ×
+129S6/SvEvTac)F1 strain `Scn1a^(+/−)` mice exhibit **spontaneous seizures and early lethality**."*
+🎯 **Why it matters here, and it cuts against a framing this session used:** it establishes that
+*coverage* and *biology* are **not exhaustive alternatives** for a cross-line comparison. A third
+explanation — genetic background as a real biological modifier — is well documented, and the field's
+response was to **map modifier loci** (chromosomes 5, 7, 8, 11), not to dissolve the difference.
+🔴 **Never pooled:** `Scn1a^(+/−)` mouse ≠ human Dravet ≠ any `Wwox` allele. Imported as **method and
+precedent only**, never as WWOX evidence.
+
+## FT-173
+**Paper:** PMID 10356397 — Crabbe JC, Wahlsten D, Dudek BC,
+*Genetics of mouse behavior: interactions with laboratory environment*, *Science* 1999;284(5420):1670–1672,
+[DOI](https://doi.org/10.1126/science.284.5420.1670)
+**Title:** The ceiling on what any harmonized behavioural comparison can deliver
+**Priority:** **BASSA** — a methodological classic, cited for its bound, not for a measurement
+**Surface:** ⚪ **ABSTRACT, first-hand this act** (According to PubMed). No PMCID.
+**Why:** second `UNREAD_PREMISE` from the same file. 🟢 **Verified verbatim:** *"Apparatus, test
+protocols, and many environmental variables were rigorously equated. … despite standardization, there
+were **systematic differences in behavior across labs**. … experiments characterizing mutants may yield
+results that are **idiosyncratic to a particular laboratory**."* ⇒ It sets the honest ceiling on the
+node's proposed resolving act: harmonizing a motor battery across two laboratories converts an
+**uninterpretable absence** into an **interpretable difference**, and no further.
+
+## FT-174
+**Paper:** PMID 16921370 — Yu FH, Mantegazza M, Westenbroek RE, … Scheuer T, Catterall WA,
+*Reduced sodium current in GABAergic interneurons in a mouse model of severe myoclonic epilepsy in infancy*,
+*Nat Neurosci* 2006;9(9):1142–1149, [DOI](https://doi.org/10.1038/nn1754)
+**Title:** Cited for background-dependence of survival — and it carries the MIRROR IMAGE of an open WWOX question
+**Priority:** **MEDIA-ALTA**, raised above the citing file's own use — see below
+**Surface:** ⚪ **ABSTRACT, first-hand this act** (According to PubMed). No PMCID in the record.
+**Why:** third `UNREAD_PREMISE` from the same file, which cites it **only** for
+*"Heterozygous `Scn1a^(+/−)` mice had spontaneous seizures and sporadic deaths beginning after P21,
+with a **notable dependence on genetic background**"* — 🟢 verified verbatim — and which
+**explicitly excluded its interneuron content** as out of node. 🟢 **That exclusion was correct
+discipline and is recorded as such.**
+
+🎯 **But the Orchestrator records what the exclusion left on the table, because a later node needs it.**
+This paper is the canonical demonstration of a **cell-type-selective electrophysiological deficit**:
+*"The sodium current density was … substantially reduced in **inhibitory interneurons** of `Scn1a^(+/−)`
+and `Scn1a^(−/−)` mice **but not in their excitatory pyramidal neurons**"*, plus *"a specific
+upregulation of `Na(V)1.3` channels in a subset of hippocampal interneurons"*.
+
+🔴 **The sign is OPPOSITE to the WWOX `S-KO` picture** (`PMID 34634460`: pyramidal intrinsic properties
+altered, interneuron arm `ns`). 🎯 **Its value is therefore as a METHOD TEMPLATE, not as biology:** it
+shows what a *properly instrumented* cell-type-selective claim contains — a **current-density**
+measurement rather than a spike count, a named **cell-type identification**, a **stated comparator in the
+same slices**, and a **search for compensation** in the spared class. 🔴 **None of those four is present
+in the WWOX interneuron arm.** ⚠️ **Nothing about `Scn1a` transfers to `Wwox` as biology**: different
+gene, different protein class, different disease, different mechanism. **The import is a standard of
+evidence, never a result.**

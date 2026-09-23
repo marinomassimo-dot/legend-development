@@ -157,7 +157,7 @@ Ranked on `INFORMATION GAIN × SCIENTIFIC IMPORTANCE × EXECUTABILITY × COMMUNI
 | `Q-3` | Sampling frame versus biology: which allele differences dissolve under coverage harmonisation | 2, 4 | 🔵 **RUNNING — Scientist C** |
 | `Q-4` | 🎯 **Cross-region cell-class convergence.** In neocortex (`Syn-Cre` `S-KO`, `PMID 34634460`) the interneuron arm is `ns`; in cerebellum (`P47T`, `PMID 36828035`) **Hcn1⁺ basket cells are `ns` at both ages while calbindin⁺ Purkinje cells fall**. Two tissues, two alleles, two laboratories, same shape: **local interneuron relatively spared, principal/projection neuron hit.** 🔴 Adversarial note recorded in advance: **Purkinje cells are themselves GABAergic**, so the axis is *not* GABAergic-versus-glutamatergic, and both arms are region-selected or unsubtyped. Both halves are separately held in the repository (`CC-20260826-CLAIM006-HARDENING-01:46`, `metabolic_differential_vulnerability_reposed:209`); **the convergence is not** | 4 | ⚪ **READY — refill a slot with it** |
 | `Q-5` | Resolve the `SUSPECT` local PDF for `FT-044` / `PMID 33914858`. Census § 7.1 item 2 closes **4 `NOT STATED` cells** and is *"arguably cheaper than any acquisition"*. 🟢 A harness task, not a science task | 8, 9 | ⚪ **READY, EXECUTABLE NOW** |
-| `Q-6` | The `H1a`/`H1b` fork the `lde` authors supply: myelin-primary versus axon-primary. Separated by **g-ratio plus axon-calibre distribution on the same EM grids** and, per the source file, by nothing cheaper | 1 | ⚪ **READY** (partly inside Scientist A's brief; refill only with what A does not close) |
+| `Q-6` | ~~The `H1a`/`H1b` **fork**~~ 🔴 **CORRECTED 2026-09-23, against me.** Scientist A verified first-hand, and I re-verified against `PMC6678113`, that the two limbs are **ADDITIVE in the authors' own words**, not alternatives: *"may result, at least in part, from the retarded growth of axons …"* followed immediately by *"**In addition**, the reduced number of APC-positive oligodendrocytes … indicates that the marked reduction in myelination is **also** caused by …"*. **My brief converted a conjunction into a disjunction.** The axon limb also rests on **MAP2**, which the same paper defines as *"neurite marker MAP2 mainly detected in immature **dendrites**"* — so it is not an axonal measurement at all. `Q-6` is **withdrawn as posed**; what survives is a weaker item: the myelin attribution has **no axonal measurement of any kind** behind it | 1 | 🔴 **WITHDRAWN AS POSED — closed by Scientist A** |
 | `Q-7` | Open `Supplementary gene data` for `PMID 36828035` and decide whether `P-2` should exist at all | 7, 9 | 🟡 **BLOCKED in this deployment** — supplementary payloads are not on the PMC surface. Not `HUMAN_REQUIRED`: a deployment with publisher egress closes it |
 | `Q-8` | Audit every repository statement that inherits `PMID 34634460` § 3.3's *"a ubiquitous S-KO model"* — a null-versus-conditional pooling committed **in the source** | 2 | ⚪ **READY, cheap** |
 
@@ -166,6 +166,26 @@ generic metabolic demand (revives **only** on a new mechanistically specific obs
 § 4.1, which is an evidence-strength change); peripheral qPCR (frozen on `A-f4`); the myelin→vacuole
 bridge (adjudicated unadjudicable); the six Operator-gated candidates (**untouched, not propagated,
 not reconstructed**).
+
+---
+
+## § 5b · VERIFICATION OF SCIENTIST A'S HAND-BACK — §21, done before landing
+
+🟢 **I re-read `PMC6678113` (Tochigi 2019, *Int J Mol Sci* 20:3596, [DOI](https://doi.org/10.3390/ijms20143596), CC BY) first-hand, full body, and checked every load-bearing claim in the hand-back myself.** According to PubMed.
+
+| Scientist A's claim | My check |
+|---|---|
+| The attribution's evidential block is **extra-cerebellar** — Methods § 4.3: *"5-µm-thick sequential **coronal sections spanning the whole length of the hippocampus**"* | 🟢 **CONFIRMED verbatim** |
+| The **mutant** western names *"the whole brain and cerebral cortex"*, while the only **cerebellum**-naming blot is the **normal**-rat panel | 🟢 **CONFIRMED verbatim.** § 2.1 lists *"olfactory bulb, cerebral cortex, hippocampus, diencephalon, **cerebellum**, brain stem, and spinal cord"* for PND-21 **normal** males; the mutant sentence is *"no protein band … detected in the **whole brain and cerebral cortex** of [lde/lde] rats"*. 🎯 **This is the sharpest form of the finding and it is correct** |
+| The attribution is `IPOTESI`, not `DATO` | 🟢 **CONFIRMED.** *"Such neurological defects **have been reported in** several mutant animals showing hypomyelination […]. **Therefore, part of** the phenotype … **is associated with** hypomyelination"* — associative verb, partitive quantifier, analogy as the only bridge |
+| The ataxia is **never measured** in that paper | 🟢 **CONFIRMED.** Methods § 4.1–4.4 are animals, reagents, immunohistochemistry and western blot. **No behavioural, motor or electrophysiological assay exists.** The gait enters only as an Introduction citation |
+| The limbs are **additive**, not a fork — my brief was wrong | 🟢 **CONFIRMED, against me.** See `Q-6` above |
+| `MAP2` is **dendritic** by the paper's own definition | 🟢 **CONFIRMED verbatim** |
+| Males only; *"at least three affected and three normal males"*; no blinding statement | 🟢 **CONFIRMED** |
+
+⇒ **Scientist A's hand-back verifies on every point I could check, including all six of its stated contradictions of my own brief.** Landed.
+
+🎯 **One thing the same Discussion carries that the hand-back did not report, checked and found NOT new:** the authors name a **direction reversal on glia** against `PMID 30290271` — *"These results are **apparently in contrast** to our present data …"* — mouse hippocampal `CLAIM 005` reports IBA1/GFAP area fraction **UP**, the rat cortex reports GFAP⁺ and Iba1⁺ **DOWN**. 🔴 **Already held** as `CONTRADICTION_TO_RESOLVE` at `CC-20260825-ADVERSARIAL-FALSIFICATION-01.md` § 3, which also records that *"the reversed glial sign is nowhere in the canonical layer"*. **Not claimed as new.** 🟡 What IS absent repo-wide (0 hits) is the authors' own next sentence naming the resolving experiment: *"To reveal this discrepancy, more detail analyses in various brain region including the hippocampus and cerebral cortex needs to be done in **both rodent models**."* 🔴 And the standing item deserves surfacing on its own: a `CONTRADICTION_TO_RESOLVE` opened **2026-08-25** against a `consolidated baseline` claim is still open, still absent from the canonical layer, and the meta network still asserts one direction as settled.
 
 ---
 
