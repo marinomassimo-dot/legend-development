@@ -407,6 +407,11 @@ SAFE_DEFAULTS (seeded from 2026-09-02/03):
     class-3 stop, and a completed report reads exactly like a completed queue. Running out
     of context is the one honest reason to stop, and it is stated in one line as that
     reason — never dressed as a summing-up
+  - every high-value item you can see is HUMAN_REQUIRED → before declaring a whole-session
+    stop, sweep the other domains once: the queue you are looking at is one domain, not the
+    machine. Stop the low-value thread, not the whole machine. Declared 2026-09-23 after a
+    run reported TOP FIVE NEED HUMANS as ALL USEFUL SCIENCE NEEDS HUMANS, with the
+    counterexample in its own files (`GLOBAL_ESCAPE_SWEEP_20260923.md` §2)
 
 ---
 
