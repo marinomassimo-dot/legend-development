@@ -197,3 +197,69 @@ to *"in `state_history.md` § 4"*. Two subsection headings appear in both files 
 | F2 | 18,671 | 62,076 | 80,747 |
 
 Hot −75.9 % against the start; preserved bytes +4.4 % (navigation and provenance only).
+
+---
+
+# G0 — the working model: census, and why G1 does not run
+
+`disease-models/wwox/registries/working_model_current.md`, 53,902 B at `e9db3ee`.
+
+| Section | Bytes | Role | Readers |
+|---|---:|---|---|
+| title, version, date, public-edition note | 1,106 | current identity, contract | bootstraps, forge (*"current WM version"*) |
+| three stacked `**Last update:**` lines | 6,934 | change notes — **and** live qualifications (`CLAIM 037` clause deleted as false, `CLAIM 005` retargeted) | every whole reader |
+| Disease identity · genotype rules · worked examples A/B | 2,291 | current method | comparison routes |
+| Mechanistic architecture (7 subsections) | 6,615 | current mechanistic model | comparison routes |
+| BLOCK 1 one-pager | 5,873 | current data/inference split, safety, red flags | comparison routes |
+| BLOCK 2 claim mirror | 10,450 | current claims | `legend_lint` (mirror ⊇ registry), `pathograph` (mirror titles) |
+| BLOCK 3 · monitoring endpoints · gene-therapy context | 3,549 | current | comparison routes |
+| `## Changelog` | 15,743 | version history | `test_canonical_structure` (pins it here), `pathograph` (excludes its rows by `HISTORY_ROW`) |
+| `BATCH_20260714_001` repair | 1,312 | history **and** live qualification (`CLAIM 019` cause unresolved; stabilizer `conditional`) | comparison routes |
+
+History-shaped subset: **23,989 B (44 %)** — larger than the inherited ~17 KB estimate, because
+the `Last update` lines were not counted. **C1–C4 compliance holds:** `paper_packet.py` lists the
+working model in `FORBIDDEN_SOURCES`; `legend`, `legend-discovery` (2b) and `legend-deepdive`
+(stage 4) admit it only after the first pass; `legend-hypothesis-forge` loads it at start because
+it is `SYNTHESIS` by definition.
+
+**G1 decision: NOT IMPLEMENTED.** The F pattern is proven for the state manifest, and it does not
+transfer, for reasons of law and of science, not of size:
+
+1. The working model is one of the **four scientific current files, which change only through
+   `BATCH_COMMIT`** (`CLAUDE.md` § 0). Moving its changelog is a canonical write; the state
+   manifest is the one file with the carve-out that made F1/F2 legal.
+2. The file declares itself *"canonical, complete … the full version changelog"*, and
+   `test_canonical_structure.py` pins `## Changelog` with `BATCH_20260710_A`,
+   `BATCH_20260714_001`, `WM_v2.1`, `WM_v3.0` inside it. Satisfying the test by rewriting it
+   would change the contract, not follow it.
+3. G0 condition 5 fails as the file stands: the `Last update` lines and the 2026-07-14 repair
+   carry live qualifications. Moving them would hide qualifications; splitting sentences would
+   be a scientific edit.
+
+The route, if the operator wants it: a commit candidate proposing the split, propagated by
+`BATCH_COMMIT` with the `test_canonical_structure` contract amended in the same batch.
+
+# Adoption observation (one read-only sample)
+
+C1–C4 and D0–D6 landed on 2026-09-24 between 21:14 and 21:47 UTC. The newest receipt in the
+ledger is dated 2026-09-23, and no analysis, dossier or receipt has been written since. **There
+is nothing yet to observe**: whether first contact is source-first, or whether a session falls
+back to whole-registry reads, cannot be read from artifacts that do not exist. No telemetry added.
+
+# Integrated context proxy (static bytes, not tokens)
+
+| Route | Before F/G | After F/G | Δ | % |
+|---|---:|---:|---:|---:|
+| `legend-start` (first read) | 150,211 | 91,731 | −58,480 | −38.9 |
+| `legend` autopilot (first read) | 171,018 | 112,538 | −58,480 | −34.2 |
+| scientist bootstrap (first read) | 261,437 | 202,957 | −58,480 | −22.4 |
+| discovery, first pass | 186,489 | 128,009 | −58,480 | −31.4 |
+| deep-dive, first pass | 161,972 | 103,492 | −58,480 | −36.1 |
+| harness (`plan`) | 174,318 | 115,838 | −58,480 | −33.5 |
+| forge (`SYNTHESIS`, start) | 1,045,668 | 987,188 | −58,480 | −5.6 |
+| legend comparison (added) | 181,764 | 181,764 | 0 | 0 |
+| discovery comparison (added) | 195,221 | 195,221 | 0 | 0 |
+| deep-dive synthesis, stage 4 (added) | 284,562 | 225,881 | −58,681 | −20.6 |
+
+Each first-read row falls by 58,681 B of manifest and rises by the 201 B added to
+`LEGEND_CORE.md` § 8. Whole-history surfaces required at ordinary startup: **1 → 0**.
