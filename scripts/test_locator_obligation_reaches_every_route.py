@@ -48,6 +48,10 @@ EXEMPT = {
     ".claude/skills/legend-hypothesis-forge/SKILL.md":
         "consumes an existing receipt and its dossier; it queries the ledger first and "
         "produces no reading of its own",
+    "framework/instruction/LEGEND_SCIENTIFIC_DISCOVERY_METHOD_V0_PROPOSAL.md":
+        "evidence record, declared read-only and not normative in its own status line; the "
+        "operative instruction for a re-read is the legend-discovery-method skill, which "
+        "carries the obligation",
     ".claude/skills/legend-paperqa/SKILL.md":
         "RAG over the corpus; its own text states a query does not emit a complete receipt "
         "and does not remove a paper from reading debt",

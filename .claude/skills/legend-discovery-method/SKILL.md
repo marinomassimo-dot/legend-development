@@ -302,7 +302,10 @@ memoryless.** It reuses rather than replaces: locate the **`prior_receipt`** for
 and emit a new `FULLTEXT_READ_RECEIPT` carrying a `reread_reason` and a reference to that
 `prior_receipt`. A re-read that appends no receipt is indistinguishable from no re-read at the next
 session, and a re-read that omits its `prior_receipt` reports itself as a first read — which is how
-a re-read's rediscoveries get scored as discoveries.
+a re-read's rediscoveries get scored as discoveries. The re-read carries `verbatim_locators` for
+whatever it carries out, exactly as a first read does
+([`fulltext_read_receipt.md`](../../../framework/protocols/fulltext_read_receipt.md)); this is the
+existing obligation, not a new one.
 
 **Persist it.** An emitted receipt is not a durable one:
 
