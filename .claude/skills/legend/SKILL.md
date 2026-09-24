@@ -123,10 +123,10 @@ Routing read trigger: as soon as a phase produces a lead (`target`, pathway, mol
 - Run [`framework/protocols/session_self_evaluation.md`](../../../framework/protocols/session_self_evaluation.md): executable Part 1 first, then write the evidence-backed Part 2 diagnosis.
 - Validate every completed PMID with `deepdive_manifest.py`; check source parity, research-group fit, field density, hidden findings, DATO/INFERENZA separation, ledger/wiki landing, skill decisions, process errors/retries, concurrency and residual reading debt.
 - A Part 1 failure is `BLOCK_BATCH_COMMIT` and forbids a green closing statement. A weak Part 2 answer must produce a proportional micro-upgrade or an explicit owned debt before proceeding.
-- Never draft the takeaways first: the diagnosis determines what capability must grow.
+- Never draft the takeaways first: the diagnosis determines whether any capability should change.
 
-### Phase 8 — GROWTH (learn/evolve, every run)
-- `legend-capability-scout` → **at least one micro-upgrade mandatory**, proportional to the session (an audited import, a new mini-procedure, a resource monitor, or an improvement to an existing skill) + a record in the capability scout log. Zero growth is not admissible.
+### Phase 8 — GROWTH (learn/evolve, when the run exposed something)
+- `legend-capability-scout` → at close, record a reusable capability gap if the run exposed one (new or repeated, with evidence) in the capability scout log, or state `CHANGE = NONE` — a valid outcome. A fix (an audited import, a new mini-procedure, a resource monitor, an improvement to an existing skill) is proportional and opportunity-driven, and is its own harness task unless this run's objective already includes it.
 - Apply the Discovery Power Principle: if a batch reveals a process limit, turn it into a stable procedure, skill, script, rubric, ledger or routing. The repo must grow in knowledge **and** in discovery capability.
 - When useful, update the state manifest + the activity log, respecting the gates.
 

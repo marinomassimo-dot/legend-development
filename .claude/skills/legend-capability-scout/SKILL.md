@@ -1,6 +1,6 @@
 ---
 name: legend-capability-scout
-description: LEGEND evolutionary radar to search, after each session or when the operator asks, for new skills, plugins, repos, databases and tools that surgically, cumulatively and continuously increase the analysis, inference, drug-repurposing and targeted therapeutic-initiative capabilities of the disease model. Every session must produce at least one capability micro-upgrade (an import, an audit, a monitor, a mini-procedure or an improvement to an existing skill), proportional to what was learned. It starts from WWOX, phenotype, alleles, Q230P, c.1057-2A>G, safety, biomarkers or missing workflows; identifies capability gaps; searches external resources; proposes growth without modifying canonical current files. Use it when the operator says "look for new skills/repos/plugins", "let's grow the capabilities", "what do we lack to reason better", "after this session scout new resources", or for an end-of-session retrospective.
+description: LEGEND evolutionary radar to search — when a named capability gap triggers it, on the weekly harness-scout schedule, or when the operator asks — for new skills, plugins, repos, databases and tools that surgically, cumulatively and continuously increase the analysis, inference, drug-repurposing and targeted therapeutic-initiative capabilities of the disease model. At every session close it records a reusable capability gap if one emerged, with evidence; CHANGE = NONE is a valid outcome, and a fix (an import, an audit, a monitor, a mini-procedure or an improvement to an existing skill) is proportional and opportunity-driven, never a quota. It starts from WWOX, phenotype, alleles, Q230P, c.1057-2A>G, safety, biomarkers or missing workflows; identifies capability gaps; searches external resources; proposes growth without modifying canonical current files. Use it when the operator says "look for new skills/repos/plugins", "let's grow the capabilities", "what do we lack to reason better", "after this session scout new resources", or for an end-of-session retrospective.
 ---
 
 # legend-capability-scout — Surgical capability radar
@@ -13,16 +13,19 @@ Grow LEGEND in a **targeted, cumulative, continuous and potentially infinite** w
 
 Underlying principle: the difference between an average researcher and a good one is the ability to **grow together with the project**. If only the repo grows but competence, tools, procedures, inferential skill and the agent's operational capabilities do not, the system becomes too large to govern well. This skill exists to keep the two growths aligned: **knowledge grows, capabilities grow too**.
 
-## Mandatory automatic use
+## When it runs
 
-This skill must not depend on the operator's reminder.
+This skill must not depend on the operator's reminder — and it must not invent work either.
+Continuous improvement is opportunity-driven, not quota-driven.
 
-Every LEGEND session must:
+Every LEGEND session:
 1. **Bootstrap:** read this `SKILL.md` after `framework/state/state_manifest_current.md`, `CLAUDE.md` and `AGENTS.md`.
-2. **During work:** keep note of the capability gaps that emerge.
-3. **Closing:** apply at least one micro-scout proportional to the session and record the micro-upgrade in the capability scout log.
+2. **During work:** keep note of the capability gaps that emerge — with the evidence, not an impression.
+3. **Closing:** did the session expose a *reusable* capability gap, or a high-value reusable opportunity?
+   - **No →** `CHANGE = NONE`. That is a valid, successful outcome; say so in one line. A run of NONE is evidence that the method is adequate.
+   - **Yes →** record the gap with its evidence in the capability scout log. Search the log first: a gap already recorded is marked **repeated** (no counter is kept). If it is worth fixing, it becomes an improvement candidate for the weekly harness scout or the next harness task; implementing it is a separate task unless the current task is already about it.
 
-If the session is very short or purely administrative, the micro-upgrade can be minimal: auditing a note, an exclusion criterion, monitoring a resource, or a motivated confirmation that nothing is imported but a procedure is improved. Zero growth is not admissible.
+**External ecosystem scouting** — the search procedure below — runs when a named gap triggers it, on the weekly [`legend-harness-scout`](../legend-harness-scout/SKILL.md) schedule, or when the operator asks. It does not run after every scientific session.
 
 This skill produces no scientific claims. It produces a **map of missing capabilities** and controlled proposals of:
 - Codex/Claude skills
@@ -142,11 +145,11 @@ Safety rule:
 ### 5. Output
 
 In chat:
-- 1-5 recommended new capabilities
+- 0-5 recommended new capabilities (when a scout ran)
 - what they solve for the case/LEGEND
 - cost/privacy
 - proposed action
-- **the session's mandatory micro-upgrade**: what grew today, even if minimal
+- **the session's capability outcome**: the gap recorded (new or repeated), the change made, or `CHANGE = NONE` — each with its reason
 
 In the log, if requested or if the session is an end-of-cycle one:
 - append a dated section to the capability scout log
@@ -156,7 +159,8 @@ In the log, if requested or if the session is an end-of-cycle one:
 
 - Do not rewrite existing workflows if a small bridge suffices.
 - Do not download huge repos without a clear reason.
-- Do not use "surgical" as an excuse for immobility: every session must leave at least one capability slightly better.
+- Do not use "surgical" as an excuse for ignoring a gap the session actually hit: record it. A repeated gap with no candidate stays visible in the log.
+- Do not invent a change to have something to report: `CHANGE = NONE` is a result.
 - Do not confuse growth with accumulation: a better procedure can be worth more than 20 imported repos.
 - Do not install or run external code out of mere curiosity.
 - Do not treat popularity/GitHub stars as scientific evidence.
@@ -167,7 +171,7 @@ In the log, if requested or if the session is an end-of-cycle one:
 
 Always close with:
 - what was added/proposed
-- the minimal micro-upgrade obtained in the session
+- the capability outcome: gap recorded (new/repeated), change made, or `CHANGE = NONE`
 - what remains to audit
 - whether there is a cost/API/privacy risk
 - the next surgical micro-step

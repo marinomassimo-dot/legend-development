@@ -161,8 +161,9 @@ answering yes to all of them.
     "carried forward" in a summary nobody re-reads.*
 
 **Capability**
-16. Which capability grew, and is the growth **disease-agnostic**? — *Bad: a fix that only
-    helps this gene.*
+16. Did this session expose a reusable capability gap — name it with its evidence, or answer
+    `NONE`? If a fix was made, is it **disease-agnostic**? — *Bad: a fix that only helps this
+    gene; bad too: a change invented to have something to report.*
 17. Did anything break during the run, and did I fix it, register it, or merely narrate it?
     — *Bad: a defect described in the takeaways and left in the code.*
 18. If a check caught me, did I **strengthen the check** or just satisfy it? — *Bad:

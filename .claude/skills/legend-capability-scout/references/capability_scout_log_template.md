@@ -21,10 +21,11 @@
 |---|---|---|---:|---:|---:|---:|---:|---|
 | <repo/skill/db> | repo/skill/plugin/db | <gap> | _/3 | _/3 | _/3 | _/3 | _/3 | IMPORT/AUDIT/MONITOR/SKIP |
 
-### Mandatory Micro-Upgrade
-- **Type:** IMPORT/AUDIT/MONITOR/MINI-PROCEDURE/CONNECTION/EXCLUSION-CRITERION
-- **What improved today:** <one concrete sentence>
-- **Why it is proportionate:** <why it is not overkill>
+### Capability outcome (`CHANGE = NONE` is valid)
+- **Outcome:** NONE / GAP-NEW / GAP-REPEATED / CHANGE-MADE
+- **Evidence:** <what in this session exposed the gap — or why nothing did>
+- **If a change was made — type:** IMPORT/AUDIT/MONITOR/MINI-PROCEDURE/CONNECTION/EXCLUSION-CRITERION
+- **If a change was made — what improved and why it is proportionate:** <one sentence each>
 
 ### Import/Audit Notes
 - <if imported: path in `_external_repos/medical_ai/`>

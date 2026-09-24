@@ -22,7 +22,7 @@ files, with gates between the stages. Five families:
 | **Analyze** | Read a full text section by section with a coverage map, tag every assertion epistemically, sweep a whole batch for signals that keyword filtering would drop, run cited RAG over the local corpus | `legend-deepdive` · `legend-discovery` · `legend-batch-inferential-sweep` (BUNDLED) · `legend-paperqa` (EXTERNAL) |
 | **Generate** | Forge scored therapeutic hypotheses through a generate → critique → rank → evolve loop, triage splice-correcting antisense rationale, rank papers by concrete mechanistic utility | `legend-hypothesis-forge` (IMPLEMENTED) · `legend-aso-designer` · `legend-proband-priority-matrix` (BUNDLED) |
 | **Safeguard** | In-silico ADMET / blood–brain-barrier druggability triage, structural integrity LINT, all-or-nothing batch commits with snapshot and restore | `legend-safety-triage` (EXTERNAL) · `legend-commit` (BUNDLED) · `legend-lint-repair-plan` |
-| **Grow** | End every session with at least one capability micro-upgrade, and validate any procedural change against a baseline before adopting it | `legend-capability-scout` · `legend-research-loop` · `legend-session-takeaways` |
+| **Grow** | End every session by recording any real capability gap (`CHANGE = NONE` is valid), and validate any procedural change against a baseline before adopting it | `legend-capability-scout` · `legend-research-loop` · `legend-session-takeaways` |
 
 The full catalogue, each row with its maturity status, its inputs and its
 outputs, is in [SKILLS.md](SKILLS.md). The census of the underlying patterns is
@@ -57,10 +57,11 @@ See [Quick start after cloning](README.md#quick-start-after-cloning).
 **In growth**, the part that is a pattern and not a slogan. Three concrete
 mechanisms, each with a file behind it:
 
-1. **Every session leaves a capability micro-upgrade.** Not "the system learns"
-   — an actual named artifact: a new gate, a new regression fixture, a fixed
-   heuristic, an imported tool. `legend-capability-scout` runs at the end of
-   every session and its output is proportional to what was learned.
+1. **Every capability gap a session hits is recorded, and fixed when it is worth
+   it.** Not "the system learns" — an actual named artifact: a new gate, a new
+   regression fixture, a fixed heuristic, an imported tool. `legend-capability-scout`
+   runs at the end of every session; when nothing was exposed, `CHANGE = NONE` is
+   the honest result, and no change is invented to have one.
 2. **Every real error becomes a named guardrail.** The library in
    [`learned_gates_registry.md`](framework/eval/learned_gates_registry.md) —
    `DEGRADATION_DIRECTION_GATE`, `MECHANISM_DIRECTNESS_GATE`,

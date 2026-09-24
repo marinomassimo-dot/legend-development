@@ -2,7 +2,7 @@
 
 > **LEGEND is not a bibliography.** It is an attempt to develop **evolutionary, self-improving patterns with an automatic compounding effect** — a new way to grow *knowledge and capability together, in lockstep*.
 >
-> Every batch does not merely add data — it **increases the system's power to discover**. Every session leaves at least one **micro-upgrade of capability**. Every real error becomes a **reusable gate** that prevents its whole class. The machine that manages the knowledge grows *with* the knowledge — through surgical, targeted improvements, never rewrites.
+> Every batch does not merely add data — it **increases the system's power to discover**. Every capability gap a session actually hits is **recorded, and fixed when worth it** — no session invents a change to have one. Every real error becomes a **reusable gate** that prevents its whole class. The machine that manages the knowledge grows *with* the knowledge — through surgical, targeted improvements, never rewrites.
 
 This document is a census of the distinctive patterns that make that claim concrete. It exists so that a reader can see, explicitly, that the value here is **method and self-improving capability**, not a literature dump.
 
@@ -23,7 +23,7 @@ read a full text line-by-line  →  extract mechanism + tag epistemics
  an error is made  →  it becomes a named GATE that prevents its class forever
         │                                      │
         ▼                                      ▼
- end of session  →  capability-scout leaves ≥1 proportional capability micro-upgrade
+ end of session  →  capability-scout records a real gap (or CHANGE = NONE)
         │
         ▼
  next batch starts MORE capable than the last  ── compounding ──┐
@@ -65,7 +65,7 @@ Each gate turns a one-time mistake into a permanent immunity. (This library is t
 15. **Auto-research** — the discovery skill autonomously generates and pursues the next searches a lead implies.
 
 ### F — Self-improvement / evolutionary capability
-16. `capability-scout` — every session must leave at least one proportional **capability** micro-upgrade (a gate, a procedure, a tool, an import), not only knowledge.
+16. `capability-scout` — every session records the **capability** gap it actually hit (a missing gate, procedure, tool or import), or `CHANGE = NONE`; the fix is proportional and opportunity-driven, not a quota.
 17. The **knowledge↑ ⇒ capability↑ lockstep** principle.
 18. `research-loop` — controlled micro-experiments (baseline → one variable → `KEEP` / `DISCARD` / `INCONCLUSIVE` / `CRASH`): procedures are *validated*, not adopted on plausibility.
 
