@@ -35,6 +35,45 @@ analysing the paper.
 
 This gate saves tokens without turning an old shallow pass into a permanent false negative.
 
+## Before reading: context policy
+
+`reread_reason` answers *why is this source being opened again*. `context_policy` answers a
+different question: *what does the reader already hold of LEGEND's prior knowledge while it
+reads*. It is reading methodology, not evidence provenance, so it is **not a receipt field** and
+the receipt schema does not carry it. It is declared once, as `context_policy: <value>` at the
+top of the dossier or reading notes and, where a Task Contract dispatches the reading, in that
+contract's `SCOPE`.
+
+| `context_policy` | Used for | Before the source is opened | LEGEND's prior knowledge |
+|---|---|---|---|
+| `SOURCE_FIRST` | first contact with a source | its identity and acquisition state (`paper_packet.py packet`, `fulltext_receipts.py status`), the declared question or lens, the integrity facts needed to read it correctly (a retraction, a `SUSPECT` surface), the task instructions | none about the paper or its mechanism — no claim, dossier, ledger lead, working-model conclusion or credibility verdict; admitted after the first pass, for comparison |
+| `QUESTION_DRIVEN` | a deliberate reread, or a concrete question asked of a known source | the declared question, the prior records and hypotheses it names, the prior receipt | what the question names; anything further by targeted retrieval |
+| `SYNTHESIS` | a task that integrates existing knowledge | prior records are its intended inputs, by record where `registry_records.py` reaches them | all of it is input; a source reopened to settle a fact is a `QUESTION_DRIVEN` interaction, with the question stated as narrowly as locating the fact requires |
+| `EXPLICIT_OPERATOR_REQUEST` | the operator asks for another mode | what the operator admits, named | what the operator admits, named |
+
+Undeclared, the policy follows the receipt: `first_read` and `inadequate_prior_coverage` (a resume
+from the uncovered sections) are `SOURCE_FIRST`; `explicit_operator_request` is
+`EXPLICIT_OPERATOR_REQUEST`; every other `reread_reason` is `QUESTION_DRIVEN`.
+
+- **The reader may know what question is being asked. It is not told what LEGEND already thinks
+  the answer is.**
+- **The transition is written, not implied.** When the first-pass observations and their
+  `verbatim_locators` are captured, the reading notes say `FIRST-PASS OBSERVATIONS COMPLETE →
+  PRIOR KNOWLEDGE ADMITTED FOR COMPARISON` and name what was admitted. Comparison then uses
+  targeted retrieval — `registry_records.py get --pmid <PMID> --hops 1`, widened deliberately —
+  and loads the working model and claim registry whole where the comparison needs the global
+  state, since a claim the paper contradicts need not link to it.
+- 🔴 **`SOURCE_FIRST` is a property of the reading context, not of intent.** A context that
+  already holds LEGEND's conclusions on the paper or its mechanism — a session profile that
+  preloaded the working model and claim registry, a main session that has just compared the
+  previous paper of a batch — cannot declare it. It either runs the first pass in a fresh
+  context (the `fulltext-dossier` agent, or a scientist actor under
+  [`scientist_standing_brief.md`](scientist_standing_brief.md) M0 → M2 → M4b, which already
+  follows this order), or declares `QUESTION_DRIVEN` and names what it held.
+- Knowledge is postponed, never withheld: storage stays complete and every record stays
+  retrievable. Coverage, locators, the receipt and every rule of this protocol bind under every
+  policy.
+
 ## Evidence-depth states
 
 | State | Meaning | Counts as full text analysed? |
