@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import argparse
 import fnmatch
+import functools
 import hashlib
 import json
 import os
@@ -605,6 +606,20 @@ def scan_privacy_and_secrets(root: Path, findings: list[Finding]) -> None:
         r"(?im)^\s*(?:source_scope|provenance)\s*:\s*(?:PRIVATE|MIXED)\b"
     )
 
+    # The digest membership test runs FIRST and is cached per distinct word. Both tests below
+    # only ever skip a word, so their order cannot change a finding — but the digest-interior
+    # test is a scan over every hex span in the file, and running it for each of ~4M words
+    # before asking whether the word is sensitive at all cost ~45 s of a ~70 s gate
+    # (measured 2026-09-24). Almost no word is sensitive, so the span scan now runs only for
+    # the rare word that would otherwise become a finding.
+    @functools.lru_cache(maxsize=None)
+    def is_sensitive(word: str) -> bool:
+        return (
+            hashlib.sha256(word.encode()).hexdigest() in private_identifier_digests
+            or hashlib.sha256(word.casefold().encode()).hexdigest()
+            in casefold_identifier_digests
+        )
+
     for path in iter_text_files(root):
         text = read_text(path)
         rel = str(path.relative_to(root))
@@ -613,17 +628,10 @@ def scan_privacy_and_secrets(root: Path, findings: list[Finding]) -> None:
         digest_spans = [m.span() for m in hex_run.finditer(text)]
         digest_spans += [m.span() for m in hex_fragment.finditer(text)]
         for match in identifier_token.finditer(text):
+            if not is_sensitive(match.group(0)):
+                continue
             if any(start <= match.start() and match.end() <= end
                    for start, end in digest_spans):
-                continue
-            exact_digest = hashlib.sha256(match.group(0).encode()).hexdigest()
-            folded_digest = hashlib.sha256(
-                match.group(0).casefold().encode()
-            ).hexdigest()
-            if (
-                exact_digest not in private_identifier_digests
-                and folded_digest not in casefold_identifier_digests
-            ):
                 continue
             if (
                 corpus_seed.search(rel)
