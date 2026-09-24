@@ -57,6 +57,10 @@ WHAT IT GUARANTEES, AND WHAT IT REFUSES TO GUARANTEE
   is reported as `UNRESOLVED` rather than silently dropped.
 - 🔴 **An empty result is never a scientific statement.** `no record matched` exits non-zero and
   says in words that it is not evidence the laboratory does not know this paper.
+- 🔴 **No match and a broken tool are different exits.** `0` records returned · `1` no record
+  matched · `2` invalid invocation or TOOL ERROR (a file the command could not read, a crash).
+  Until 2026-09-24 an uncaught exception also exited `1`, so an unreadable registry read as
+  "nothing matched".
 - 🔴 **No silent truncation.** `--limit` prints the residue and names it; the default is no
   limit at all.
 - 🔴 **A field filter reports its denominator and the values it actually matched.** `--field`
@@ -969,3 +973,7 @@ if __name__ == "__main__":
             sys.stdout.close()
         finally:
             sys.exit(0)
+    except Exception as error:   # noqa: BLE001 — a failure must never read as `no record matched`
+        print(f"TOOL ERROR — {type(error).__name__}: {error}. This is not an empty result; "
+              f"nothing was searched to completion.", file=sys.stderr)
+        sys.exit(2)

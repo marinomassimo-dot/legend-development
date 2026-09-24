@@ -1057,5 +1057,44 @@ class LedgerFieldsOnTheRealCorpus(unittest.TestCase):
         self.assertEqual(expected, found.field_report[0]["records_declaring_the_field"])
 
 
+class NoMatchIsNotAToolError(unittest.TestCase):
+    """D3. The exit status is how a caller tells an honest empty answer from a broken tool."""
+
+    SCRIPT = HERE / "registry_records.py"
+
+    def run_cli(self, root: Path, *args: str) -> subprocess.CompletedProcess:
+        return subprocess.run([sys.executable, str(self.SCRIPT), "get", "--root", str(root), *args],
+                              capture_output=True, text=True)
+
+    def test_an_unreadable_registry_is_a_tool_error_not_a_no_match(self) -> None:
+        import tempfile
+        with tempfile.TemporaryDirectory() as tmp:
+            registries = Path(tmp) / "disease-models/wwox/registries"
+            registries.mkdir(parents=True)
+            (registries / "claim_registry_current.md").write_bytes(b"## CLAIM 001\n\xff\xfe\n")
+            broken = self.run_cli(Path(tmp), "--id", "CLAIM 001")
+            self.assertEqual(2, broken.returncode, broken.stderr)
+            self.assertIn("TOOL ERROR", broken.stderr)
+            (registries / "claim_registry_current.md").write_text("## CLAIM 001\nok\n",
+                                                                  encoding="utf-8")
+            self.assertEqual(0, self.run_cli(Path(tmp), "--id", "CLAIM 001").returncode)
+            empty = self.run_cli(Path(tmp), "--id", "CLAIM 999")
+            self.assertEqual(1, empty.returncode)
+            self.assertIn("NO RECORD MATCHED", empty.stdout)
+
+    def test_a_newly_addressable_ledger_record_carries_its_provenance(self) -> None:
+        answer = json.loads(subprocess.run(
+            [sys.executable, str(self.SCRIPT), "get", "--id", "DL-MECH-029", "--hops", "0",
+             "--json"], capture_output=True, text=True, check=True).stdout)
+        record = answer["records"][0]
+        self.assertEqual("DL-MECH-029", record["identity_id"])
+        self.assertEqual("disease-models/wwox/research/discovery_ledger_current.md", record["path"])
+        self.assertTrue(record["heading_path"])
+        self.assertEqual(64, len(record["record_digest"]))
+        self.assertIn(answer["repository"]["verdict"], (derived_inputs.BOUND, derived_inputs.DIRTY))
+        self.assertTrue(answer["repository"]["commit"])
+        self.assertIn("discovery_ledger_current", answer["source_digests"])
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
