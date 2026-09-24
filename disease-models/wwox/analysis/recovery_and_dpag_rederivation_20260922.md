@@ -30,8 +30,9 @@ gate; receipts where touched) and pushed before the next began. **Nothing is `PA
 ### 1a · One stray artefact, classified and left alone
 
 `git worktree list` reports a second worktree at `/tmp/tmpryqdf5r_/tree`, detached at `5f7aa57`
-(**an ancestor of `HEAD`**), carrying one modification: two lines appended to `README.md` reading
-`framework/scripts/definitely_absent_qqq.py`.
+(**an ancestor of `HEAD`**), carrying one modification: two lines appended to `README.md` naming
+a deliberately absent script under `framework/scripts/` (the literal path is not reproduced here:
+this file is scanned by `test_documented_commands.py`, and quoting the fixture made that guard red).
 
 **Classification: `DERIVED_ONLY` — test scratch.** It is the deliberately-absent filename used to
 mutation-test `test_tool_routing.py`. Zero scientific content. **Not committed, not deleted** —
