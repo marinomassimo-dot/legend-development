@@ -85,6 +85,9 @@ def worktrees(root: Path) -> List[Dict[str, object]]:
             current["branch"] = None
         elif key == "locked":
             current["locked"] = value or True
+        elif key == "prunable":
+            # git's own verdict that only stale metadata remains; reported, never acted on.
+            current["prunable"] = value or True
     if current:
         out.append(current)
     for entry in out:
@@ -173,6 +176,17 @@ def landing_recipe(root: Path) -> str:
     ])
 
 
+def worktree_state(tree: Dict[str, object]) -> str:
+    """One word per worktree. PRUNABLE is git's own verdict: the checkout is gone and only
+    its metadata remains, which `git worktree prune` removes. Nothing here deletes anything."""
+    if tree.get("prunable"):
+        reason = tree["prunable"]
+        return "PRUNABLE" + (f" ({reason})" if isinstance(reason, str) else "")
+    if tree.get("missing"):
+        return "MISSING"
+    return "dirty" if tree.get("dirty") else "clean"
+
+
 def render_markdown(root: Path, rows: List[Dict[str, object]],
                     trees: List[Dict[str, object]], max_age_days: int) -> str:
     lines = [f"# Branch hygiene — {root}", "",
@@ -187,9 +201,14 @@ def render_markdown(root: Path, rows: List[Dict[str, object]],
     lines += ["", f"**{totals_line(rows)}**", "", "## Worktrees", "",
               "| path | branch | dirty files | state |", "|---|---|---|---|"]
     for t in trees:
-        state = "MISSING" if t.get("missing") else ("dirty" if t.get("dirty") else "clean")
+        state = worktree_state(t)
         dirty = "?" if t.get("dirty") is None else str(t.get("dirty"))
         lines.append(f"| {t['path']} | `{t.get('branch') or '(detached)'}` | {dirty} | {state} |")
+    stale = [t for t in trees if t.get("prunable")]
+    if stale:
+        lines += ["", f"{len(stale)} worktree entr{'y is' if len(stale) == 1 else 'ies are'} "
+                  "stale metadata only (git reports them prunable). Nothing was removed; "
+                  "`git worktree prune` clears exactly these."]
     lines += ["", "## Landing recipe", "", landing_recipe(root), ""]
     return "\n".join(lines)
 

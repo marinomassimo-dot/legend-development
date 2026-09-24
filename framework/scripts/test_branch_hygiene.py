@@ -13,6 +13,7 @@ from __future__ import annotations
 import datetime as dt
 import json
 import os
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -176,6 +177,25 @@ class TheHealthyCaseIsQuiet(unittest.TestCase):
             self.assertEqual(0, result.returncode, result.stderr)
             self.assertIn("1 branches · 0 ahead-of-main commits total · 0 LAND_OVERDUE · "
                           "0 DELETE_READY", result.stdout)
+
+    def test_stale_worktree_metadata_is_reported_prunable_and_left_in_place(self) -> None:
+        """A worktree whose directory is gone is git's `prunable`: named, never removed."""
+        fx = Fixture()
+        self.addCleanup(fx.close)
+        gone = Path(fx.tmp.name) / "gone"
+        run(["worktree", "add", "-q", "--detach", str(gone)], fx.repo)
+        shutil.rmtree(gone)
+        report = bh.build_report(fx.repo, "main", 1, None, None)
+        stale = [t for t in report["worktrees"] if Path(str(t["path"])).name == "gone"]
+        self.assertEqual(1, len(stale))
+        self.assertTrue(stale[0].get("prunable"))
+        self.assertTrue(bh.worktree_state(stale[0]).startswith("PRUNABLE"))
+        live = [t for t in report["worktrees"] if Path(str(t["path"])).name != "gone"]
+        self.assertFalse(any(t.get("prunable") for t in live), "a live worktree was called stale")
+        markdown = bh.render_markdown(fx.repo, report["branches"], report["worktrees"], 1)
+        self.assertIn("`git worktree prune` clears exactly these", markdown)
+        self.assertIn(str(gone), run(["worktree", "list"], fx.repo),
+                      "the report must not prune anything itself")
 
     def test_outside_a_repository_is_an_error_not_a_crash(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
