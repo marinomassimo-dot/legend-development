@@ -15,7 +15,15 @@ the two in time -- not to the same commit. This tool makes both couplings struct
      it moved, so the SHA gated is the SHA pushed;
   4. the refspec is checked for force in any spelling;
   5. after the push, `git ls-remote` must return exactly the pushed SHA -- read from the
-     remote, never from the local tracking ref, which a failed push leaves stale.
+     remote, never from the local tracking ref, which a failed push leaves stale;
+  6. the push SOURCE is the gated SHA itself (`<sha>:refs/heads/<branch>`), never the local
+     `<branch>` ref: until 2026-09-24 the tool gated HEAD and pushed `<branch>:<branch>`, so
+     a local branch that did not point at HEAD was published ungated and caught only by the
+     after-the-fact check in (5).
+
+`-h`/`--help` prints this text and does nothing else. Any other option-shaped remote or branch
+is refused before the gate or git runs: `safe_push.py --help` used to take `--help` as the
+remote name and walk the whole push workflow (2026-09-24; nothing was published).
 
 Usage: safe_push.py <remote> [<branch>]      (default branch: main)
 """
@@ -40,6 +48,9 @@ def fail(msg: str) -> int:
 
 
 def main(argv: list[str]) -> int:
+    if any(arg in ("-h", "--help") for arg in argv[1:]):
+        print(__doc__)
+        return 0
     if not 2 <= len(argv) <= 3:
         return fail("usage: safe_push.py <remote> [<branch>]")
     remote, branch = argv[1], (argv[2] if len(argv) == 3 else "main")
@@ -47,6 +58,9 @@ def main(argv: list[str]) -> int:
     for bad in ("+", "--force", "-f", "--force-with-lease"):
         if bad in remote or bad in branch:
             return fail(f"force spelling {bad!r} in the refspec; this tool pushes fast-forward only")
+    for name, value in (("remote", remote), ("branch", branch)):
+        if value.startswith("-"):
+            return fail(f"{name} {value!r} is option-shaped; usage: safe_push.py <remote> [<branch>]")
 
     dirty = run("git", "status", "--porcelain").stdout.strip()
     if dirty:
@@ -67,7 +81,7 @@ def main(argv: list[str]) -> int:
         return fail(f"HEAD moved during the gate ({before} -> {after}); the gated commit is not "
                     "the commit that would be pushed")
 
-    push = run("git", "push", remote, f"{branch}:{branch}")
+    push = run("git", "push", remote, f"{before}:refs/heads/{branch}")
     sys.stderr.write(push.stderr)
     if push.returncode != 0:
         return fail(f"git push exited {push.returncode}")

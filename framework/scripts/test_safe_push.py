@@ -68,6 +68,79 @@ class SafePushRefusals(unittest.TestCase):
             self.assertEqual(r.returncode, 1)
             self.assertIn("usage", r.stderr)
 
+    def test_help_prints_and_does_nothing_else(self) -> None:
+        """`--help` was once taken as the remote name and walked the whole push workflow."""
+        with TemporaryDirectory() as td:
+            marker = Path(td) / "gate-ran"
+            root = self._repo(td, f"open({str(marker)!r}, 'w').close()\n" + GATE_PASS)
+            for args in (("--help",), ("-h",), ("origin", "--help")):
+                with self.subTest(args=args):
+                    r = self._run(root, *args)
+                    self.assertEqual(r.returncode, 0, r.stderr)
+                    self.assertIn("Usage: safe_push.py", r.stdout)
+                    self.assertNotIn("HEAD before gate", r.stdout)
+                    self.assertFalse(marker.exists(), "the gate ran for a help request")
+
+    def test_option_shaped_arguments_are_refused_before_any_git_activity(self) -> None:
+        with TemporaryDirectory() as td:
+            marker = Path(td) / "gate-ran"
+            root = self._repo(td, f"open({str(marker)!r}, 'w').close()\n" + GATE_PASS)
+            for args in (("-x",), ("--verbose", "main"), ("origin", "-q")):
+                with self.subTest(args=args):
+                    r = self._run(root, *args)
+                    self.assertEqual(r.returncode, 1)
+                    self.assertIn("option-shaped", r.stderr)
+                    self.assertFalse(marker.exists())
+
+    def _with_bare_remote(self, td: str) -> tuple[Path, Path]:
+        root = self._repo(td, GATE_PASS)
+        subprocess.run(["git", "-C", str(root), "branch", "-M", "main"], check=True)
+        bare = Path(td) / "remote.git"
+        subprocess.run(["git", "init", "-q", "--bare", str(bare)], check=True)
+        subprocess.run(["git", "-C", str(root), "remote", "add", "origin", str(bare)], check=True)
+        subprocess.run(["git", "-C", str(root), "push", "-q", "origin", "HEAD:refs/heads/main"],
+                       check=True)
+        return root, bare
+
+    def _commit(self, root: Path, name: str) -> str:
+        (root / name).write_text(name + "\n", encoding="utf-8")
+        subprocess.run(["git", "-C", str(root), "add", name], check=True)
+        subprocess.run(["git", "-C", str(root), "commit", "-qm", name], check=True)
+        return subprocess.run(["git", "-C", str(root), "rev-parse", "HEAD"], check=True,
+                              capture_output=True, text=True).stdout.strip()
+
+    def _remote_main(self, bare: Path) -> str:
+        return subprocess.run(["git", "-C", str(bare), "rev-parse", "refs/heads/main"],
+                              check=True, capture_output=True, text=True).stdout.strip()
+
+    def test_the_commit_pushed_is_the_commit_gated_not_the_local_branch(self) -> None:
+        """HEAD ahead of a stale local `main`: the gated HEAD is what the remote receives."""
+        with TemporaryDirectory() as td:
+            root, bare = self._with_bare_remote(td)
+            subprocess.run(["git", "-C", str(root), "checkout", "-q", "--detach"], check=True)
+            gated = self._commit(root, "b.txt")
+            stale_local_main = subprocess.run(["git", "-C", str(root), "rev-parse", "main"],
+                                              check=True, capture_output=True, text=True).stdout.strip()
+            self.assertNotEqual(gated, stale_local_main)
+            r = self._run(root, "origin", "main")
+            self.assertEqual(r.returncode, 0, r.stderr)
+            self.assertEqual(self._remote_main(bare), gated)
+
+    def test_a_non_fast_forward_is_refused_and_the_remote_is_unchanged(self) -> None:
+        with TemporaryDirectory() as td:
+            root, bare = self._with_bare_remote(td)
+            self._commit(root, "b.txt")
+            subprocess.run(["git", "-C", str(root), "push", "-q", "origin", "HEAD:refs/heads/main"],
+                           check=True)
+            published = self._remote_main(bare)
+            subprocess.run(["git", "-C", str(root), "checkout", "-q", "--detach", "HEAD~1"],
+                           check=True)
+            self._commit(root, "c.txt")   # diverges from the published tip
+            r = self._run(root, "origin", "main")
+            self.assertEqual(r.returncode, 1)
+            self.assertIn("git push exited", r.stderr)
+            self.assertEqual(self._remote_main(bare), published)
+
     def test_a_passing_gate_reaches_the_push_step(self) -> None:
         """Control: the PASS path is not refused early — it fails at the absent remote instead."""
         with TemporaryDirectory() as td:
