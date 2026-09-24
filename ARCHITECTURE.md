@@ -74,6 +74,7 @@ The operational capability set, genericized:
 | `legend-session-self-eval` | Post-batch self-diagnosis: executable gate, then the written judgement, then the micro-upgrade |
 | `legend-locator-audit` | Blind adversarial audit of a reading's quotes before it may touch a baseline claim |
 | `legend-research-loop` | Controlled micro-experiments (baseline → one variable → KEEP/DISCARD) |
+| `legend-discovery-method` | Optional reasoning primitives for questions that need more than a lookup (gates nothing) |
 | `legend-capability-scout` | Post-session capability-growth radar |
 | `legend-harness-scout` | Weekly harness radar (GitHub, Hugging Face, Nature portfolio) for the Junior Harness Engineer; candidates implemented at T0 by Harness Engineering |
 | `legend-session-takeaways` | Compact end-of-session synthesis |

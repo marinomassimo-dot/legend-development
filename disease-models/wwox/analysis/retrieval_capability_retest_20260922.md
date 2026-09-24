@@ -205,8 +205,8 @@ Discussion (13, 15), Table 1, Table 2, Fig. 1 legend.
 paper's own data** — not Suzuki 2007's. **Results, verbatim:**
 
 > "Histological examination detected many extracellular vacuoles in the hippocampi of all affected
-> (*n* = 9) ([Fig. 1b,d](#f1)) and the amygdala of six affected backcross progeny, but not in any of
-> the normal rats (*n* = 10) ([Fig. 1a,c](#f1))."
+> (*n* = 9) (Fig. 1b,d) and the amygdala of six affected backcross progeny, but not in any of
+> the normal rats (*n* = 10) (Fig. 1a,c)."
 
 **Figure 1 legend, verbatim:**
 
@@ -228,7 +228,7 @@ histology statement from any `lde/lde` primary. The only cerebellar sentence in 
 
 > "The Wwox protein has been reported to be widely expressed in the murine developing nervous system
 > including cerebral cortex, corpus striatum, limbic system, hypothalamus, cerebral peduncles and
-> cerebellum ([Chen *et al.*2004](#b9))."
+> cerebellum (Chen *et al.*2004)."
 
 The sibling sentence the dispatch quoted — *"we did not detect any marked pathologic changes in the
 cerebella"* — **was not located in any retrievable source.** It stays `HUMAN_REQUIRED` (§5).
@@ -238,8 +238,8 @@ Wiley-hosted sibling `PMID 18676360` (Takenaka 2008, *J Androl*, `10.2164/jandro
 which is in the corpus:
 
 > "In a previous histological study, we found many extracellular vacuoles in the CA1 region of the
-> hippocampus and the amygdaloid body of the *lde*/*lde* brain at 28 days of age. … ([Suzuki et al,
-> 2007](#b23))."
+> hippocampus and the amygdaloid body of the *lde*/*lde* brain at 28 days of age. … (Suzuki et al,
+> 2007)."
 
 ⇒ The CA1/amygdaloid-body localisation of the Suzuki 2007 data remains 🔴 **SIBLING-ATTESTED**. What
 changes is that a **second, independent sibling now attests it**, and `19500159`'s own backcross
@@ -257,7 +257,7 @@ The `A6` checklist, answered item by item from the body rather than the abstract
 verbatim:**
 
 > "We have made short synthetic peptides of WOX1, without (WWpep) or with Tyr33 phosphorylation
-> (pYWWpep; amino acid # 2838) at the first WW domain ([Chang *etal*., 2003a](#b15)). To investigate
+> (pYWWpep; amino acid # 2838) at the first WW domain (Chang *etal*., 2003a). To investigate
 > the effect of these synthetic WOX1 peptides on neuronal survival and death, rats were injected with
 > these peptides in the presence or absence of MPP^+^ as follows: (i) MPP^+^ iodide (50mm);
 > (ii) WWpep or pYWWpep (2mm); (iii) WWpep (or pYWWpep) and MPP^+^ or (iv) sterile saline.
@@ -272,7 +272,7 @@ paper cannot speak to a WWOX-deficient brain.
 **(4) The non-phospho control.** Present and negative — Results, verbatim:
 
 > "Importantly, pYWWpep alone did not effectively cause cell death, but significantly blocked
-> MPP^+^induced neuronal apoptosis ([Fig.9A](#f9)). WWpep could not inhibit the effect of MPP^+^
+> MPP^+^induced neuronal apoptosis (Fig.9A). WWpep could not inhibit the effect of MPP^+^
 > (data not shown)."
 
 ⚠️ **"data not shown" is doing load-bearing work for the control arm.** The peptide's specificity
