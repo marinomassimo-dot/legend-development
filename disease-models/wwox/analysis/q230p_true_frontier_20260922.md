@@ -489,7 +489,16 @@ very node whose whole finding is that no protein-level measurement exists.** The
 reading: an exon-7 skip removes **one specific NMD mechanism** from the list of explanations. It
 adds no expectation of a surviving product.
 
-### G.0.2 · The junction creates a CHIMERIC codon — arithmetic completed and one gap left open
+### G.0.2 · The junction creates a CHIMERIC codon — 🔴 **CONDITIONAL DERIVATION, not a settled fact**
+
+> 🔴 **STATUS OF EVERYTHING IN THIS SUBSECTION: `CONDITIONAL DERIVATION`.**
+> **186 nt · 352 codons · the chimeric codon · residues 203–263 · the 62-aa net loss** are all
+> **conditional on `NM_016373.2` and `NM_016373.4` sharing identical CDS numbering**, which is
+> **`UNVERIFIED`** (§G.0.4: the boundary came from ClinVar on `.4`, the primers are Johannsen's on
+> `.2`). ⚠️ **Do not quote any of these figures as established.** They are internally consistent and
+> arithmetically reproducible — and they rest on one unchecked premise. If the CDS numbering differs,
+> **every number here moves together**, because they all derive from the same two boundary
+> coordinates.
 
 Neither boundary falls on a codon edge: **`c.606` is the 3rd base of codon 202** and **`c.791` is the
 2nd base of codon 264**. So the skip does not simply excise whole residues.
@@ -604,7 +613,18 @@ quantification artefact into allele-severity or hypomorph reasoning.
 # 🔒 CLOSURE — 2026-09-23 · `Q230P`: **`TARGETED EXPERIMENTAL FRONTIER`**
 
 > **Status label of record:**
-> `Q230P: TARGETED EXPERIMENTAL FRONTIER — E1 exon-7 architecture → (if exon 7 included) E2 S/P/T + real LOD + orthogonal detection → only then decide whether a protein population compatible with proteostasis/chaperone rescue exists.`
+> ```
+> Q230P: TARGETED EXPERIMENTAL FRONTIER
+>   prerequisite (technical): retrieve/verify NM_016373.2 and its CDS compatibility with .4
+>     -> E1  exon-7 architecture
+>     -> if interpretable, E2  protein fate (S/P/T + input-equivalents + real LOD + orthogonal detection)
+>     -> only then  proteostasis / chaperone rescue
+> ```
+>
+> 🔴 **The prerequisite is a step, not a footnote.** It is `AUTONOMOUSLY_ACQUIRABLE` (§G.0.3), it
+> costs minutes wherever egress exists, and until it is done the entire Δex7 arithmetic is a
+> **conditional derivation** (§G.0.2). It does **not** block *running* `E1` — it blocks
+> *interpreting* a Δ186 junction.
 
 `Q230P` is parked behind two ordered experiments.
 
