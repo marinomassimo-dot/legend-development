@@ -36,6 +36,7 @@ REGISTRIES = ROOT / "disease-models/wwox/registries"
 PAPERS = REGISTRIES / "paper_registry_current.md"
 CLAIMS = REGISTRIES / "claim_registry_current.md"
 LITLOG = REGISTRIES / "literature_tracking_log_current.md"
+LEDGER = ROOT / "disease-models/wwox/research/discovery_ledger_current.md"
 
 AMBIGUOUS_PMID = "33914858"     # Repudi 2021, held behind Cloudflare, CLAIM 003's primary
 CAVEAT_CLAIM = "CLAIM 030"
@@ -284,6 +285,28 @@ class ProvenanceAndDrift(unittest.TestCase):
             self.assertIn("CLAIM 001", {record.record_id for record, _ in found.hits})
 
 
+def ledger_leads_by_scan() -> dict[str, str]:
+    """Each `DL-*` lead of the discovery ledger and its body, by a plain line scan: a lead
+    starts at a `###`/`####` heading whose text, past any emoji, begins `DL-`, and runs to the
+    next heading at its own level or above. Fenced lines are not headings."""
+    leads: dict[str, list[str]] = {}
+    open_lead, open_level, fenced = "", 0, False
+    for line in LEDGER.read_text(encoding="utf-8").splitlines():
+        if line.lstrip().startswith("```"):
+            fenced = not fenced
+        match = None if fenced else re.match(r"^(#{1,6})\s+(.*?)\s*$", line)
+        if match:
+            level, title = len(match.group(1)), match.group(2)
+            if open_lead and level <= open_level:
+                open_lead = ""
+            if level in (3, 4) and re.match(r"^[^0-9A-Za-z]*DL-[A-Z]+-\d+", title):
+                open_lead, open_level = title, level
+                leads[title] = []
+        if open_lead:
+            leads[open_lead].append(line)
+    return {head: "\n".join(body) for head, body in leads.items()}
+
+
 class ARecordIsNotAProseSection(unittest.TestCase):
     """Measured, not assumed: the first cut pulled a 470,808-character `## Change-log` block
     into a reading because it mentioned a PMID once, and the selective path came out LARGER
@@ -303,11 +326,17 @@ class ARecordIsNotAProseSection(unittest.TestCase):
         carried = {(r.source, r.record_id) for r, _ in found.hits}
         self.assertFalse([pair for pair in carried if pair[0] == "discovery_ledger_current"
                           and not rr.is_record_id(pair[1])], carried)
-        big = [n for n in found.notes if "discovery_ledger_current" in n]
-        self.assertTrue(big, found.notes)
-        self.assertTrue(any(int(n.split("prose section, ")[1].split(" chars")[0].replace(",", ""))
-                            > 100_000 for n in big), big)
-        self.assertIn("--id", " ".join(found.notes))
+        named = [n for n in found.notes if "discovery_ledger_current" in n]
+        self.assertTrue(named, found.notes)
+        self.assertIn("--id", " ".join(named))
+        # D0 (2026-09-24): the ledger's leads are `###` records, so a mention inside one is a
+        # RECORD hit carried whole — it used to be buried in a 100 KB+ `##` block and only
+        # named. The expected set is a line scan, not the selector.
+        expected = {head for head, body in ledger_leads_by_scan().items()
+                    if "29724996" in re.findall(r"\b\d{7,8}\b", body)}
+        got = {r.record_id for r, _ in found.hits if r.source == "discovery_ledger_current"}
+        self.assertTrue(expected, "the fixture needs a ledger lead citing the PMID")
+        self.assertEqual(expected, got)
 
     def test_a_section_is_still_reachable_when_it_is_asked_for_by_name(self) -> None:
         found = rr.select(ROOT, "wwox", record_id="Change-log", hops=0)
@@ -808,6 +837,136 @@ class TheSurfacePreambleTravelsWithTheAnswer(unittest.TestCase):
                           sources=["claim_registry_current"])
         self.assertEqual([], found.hits)
         self.assertIn("Not medical advice", rr.render(found, query="test"))
+
+
+class WholeRecordsAtTheirMeasuredLevels(unittest.TestCase):
+    """D1, on fixtures shaped like the seven surfaces as D0 measured them
+    (governance/design_records/d0_registry_record_shapes_20260924.md). Each test fails on the
+    `##`-only splitter it replaces; none adds a shape the census did not find."""
+
+    FILES = {
+        "registries/working_model_current.md":
+            "# Working Model Current\n\nintro\n\n## Disease identity\nprose\n\n"
+            "# BLOCK 1 — one-pager\n## 0) DATA vs INFERENCE\n### DATA\nd1\n## 1) ACTIVE\na1\n"
+            "# BLOCK 2 — mirror\nm2\n",
+        "research/dismissal_ledger_current.md":
+            "# Dismissal Ledger\n\n## Why it exists\nw\n### The asymmetry\nx\n\n"
+            "## Active rejections\n\n### DIS-001 — «first» → REOPENED\n- **Verdict:** v1\n\n"
+            "### DIS-002 — «second» → FALSE\n- **Verdict:** v2\n\n## Closing\nc\n",
+        "research/discovery_ledger_current.md":
+            "# Discovery Ledger\n\n## MECH — indizi\n\n"
+            "### DL-MECH-001 — plain lead\n- **Status**: open · **Tag**: IPOTESI\nPMID 12345678\n\n"
+            "### 🔴 DL-MECH-029 — decorated lead\n- **Status**: maturing\n"
+            "#### 🔴 AGGIUNTA 2026-08-10 — appended to 029\nkept with its record\n"
+            "#### DL-MECH-029b — a lead nested in 029\nnested body\n\n"
+            "### DL-MECH-030 — the next lead\nbody 30\n\n"
+            "## Run 2026-07-09\nrun prose PMID 12345678\n\n"
+            "### Update DL-MECH-001 — later news\nupdate body\n\n"
+            "### Change-log\nfirst\n\n## Change-log\nsecond\n",
+        "research/full_text_queue_current.md":
+            "# FULL TEXT QUEUE\n\n## FT-157\n**Paper:** PMID 22222222\n### La domanda, risposta\n"
+            "appended\n\n# FT-158 … FT-169 — twelve debts\ngroup intro\n\n## FT-158\n**Paper:** x\n",
+        "registries/literature_tracking_log_current.md":
+            "# Literature Tracking Log\n\n## Record template\n```\n## LIT-[NNN]\n"
+            "**Identifier:** PMID [n]\n```\n\n## LIT-0001\n**Identifier:** PMID 33333333\n",
+    }
+
+    def setUp(self) -> None:
+        import tempfile
+        self.tmp = tempfile.TemporaryDirectory()
+        self.root = Path(self.tmp.name)
+        for rel, text in self.FILES.items():
+            path = self.root / "disease-models/wwox" / rel
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(text, encoding="utf-8")
+
+    def tearDown(self) -> None:
+        self.tmp.cleanup()
+
+    def get(self, record_id: str, **kw):
+        return rr.select(self.root, "wwox", record_id=record_id, hops=0, **kw)
+
+    def only(self, record_id: str) -> rr.Record:
+        hits = [r for r, _ in self.get(record_id).hits]
+        self.assertEqual(1, len(hits), [h.record_id for h in hits])
+        return hits[0]
+
+    def test_an_h1_block_is_a_record_holding_its_subsections(self) -> None:
+        block = self.only("BLOCK 1")
+        self.assertEqual(1, block.level)
+        self.assertIn("### DATA\nd1\n## 1) ACTIVE\na1\n", block.text)
+        self.assertNotIn("BLOCK 2", block.text, "a record ends at the next heading of its level")
+
+    def test_a_record_ends_at_a_higher_heading_and_never_swallows_it(self) -> None:
+        """`FT-157` used to carry `# FT-158 … FT-169` and its introduction."""
+        ft157 = self.only("FT-157")
+        self.assertIn("### La domanda, risposta\nappended", ft157.text, "nested blocks stay in")
+        self.assertNotIn("twelve debts", ft157.text)
+        self.assertNotIn("group intro", ft157.text)
+        mech = self.only("Disease identity")
+        self.assertNotIn("BLOCK 1", mech.text)
+
+    def test_an_h3_ledger_record_is_addressable_between_its_neighbours(self) -> None:
+        first = self.only("DIS-001")
+        self.assertEqual(("Dismissal Ledger", "Active rejections"), first.heading_path)
+        self.assertNotIn("DIS-002", first.text)
+        second = self.only("DIS-002")
+        self.assertNotIn("## Closing", second.text, "a higher heading ends the record")
+
+    def test_decoration_is_not_identity_but_a_leading_word_is(self) -> None:
+        decorated = self.only("DL-MECH-029")
+        self.assertTrue(decorated.record_id.startswith("🔴 DL-MECH-029"))
+        self.assertIn("appended to 029", decorated.text)
+        definition = self.only("DL-MECH-001")
+        self.assertTrue(definition.record_id.startswith("DL-MECH-001"),
+                        "the update heading after it is not its identity")
+        self.assertNotIn("later news", definition.text)
+
+    def test_a_nested_record_is_addressable_and_named_by_its_parent(self) -> None:
+        nested = self.only("DL-MECH-029b")
+        self.assertEqual(4, nested.level)
+        parent = self.only("DL-MECH-029")
+        self.assertIn("nested body", parent.text, "the parent stays whole")
+        self.assertEqual(("DL-MECH-029b",), parent.contains)
+
+    def test_adjacent_records_do_not_bleed(self) -> None:
+        self.assertNotIn("DL-MECH-030", self.only("DL-MECH-029").text)
+        self.assertEqual("### DL-MECH-030 — the next lead\nbody 30\n\n", self.only("DL-MECH-030").text)
+
+    def test_a_range_heading_is_not_the_first_occurrence_identity(self) -> None:
+        record = self.only("FT-158")
+        self.assertEqual(2, record.level)
+        self.assertEqual("FT-158", record.record_id)
+        self.assertEqual(("FT-158 … FT-169 — twelve debts",), record.heading_path)
+
+    def test_a_heading_inside_a_fence_is_not_a_record(self) -> None:
+        records = rr.parse_records(self.root, "wwox", "literature_tracking_log_current")
+        self.assertEqual(["LIT-0001"], [r.record_id for r in records if r.kind == "record"])
+
+    def test_a_bare_id_and_the_full_heading_reach_the_same_record(self) -> None:
+        by_id, by_heading = self.only("DL-MECH-029"), self.only("🔴 DL-MECH-029 — decorated lead")
+        self.assertEqual(by_id.line, by_heading.line)
+
+    def test_a_mention_in_a_record_is_carried_and_one_in_a_section_is_named(self) -> None:
+        found = rr.select(self.root, "wwox", pmid="12345678", hops=0)
+        self.assertEqual(["DL-MECH-001 — plain lead"], [r.record_id for r, _ in found.hits])
+        self.assertTrue(any("Run 2026-07-09" in note for note in found.notes), found.notes)
+
+    def test_two_blocks_with_one_name_are_both_returned(self) -> None:
+        """Keyed on the heading text, the second `Change-log` was silently dropped."""
+        hits = [r for r, _ in self.get("Change-log").hits]
+        self.assertEqual([3, 2], [r.level for r in hits])
+
+    def test_two_definitions_of_one_id_are_both_returned_and_named(self) -> None:
+        path = self.root / "disease-models/wwox/research/dismissal_ledger_current.md"
+        path.write_text(path.read_text(encoding="utf-8") + "\n### DIS-001 — again\nx\n",
+                        encoding="utf-8")
+        found = self.get("DIS-001")
+        self.assertEqual(2, len(found.hits))
+        self.assertTrue(any("DEFINED as DIS-001" in item for item in found.ambiguous), found.ambiguous)
+
+    def test_no_match_is_still_empty(self) -> None:
+        self.assertEqual([], self.get("DL-MECH-999").hits)
 
 
 if __name__ == "__main__":

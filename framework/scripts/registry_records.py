@@ -29,7 +29,9 @@ whole, and name what the selection could not reach.**
 
 WHAT IT GUARANTEES, AND WHAT IT REFUSES TO GUARANTEE
 ----------------------------------------------------
-- A record is returned **entire**, from its `##` heading to the next one. No field is dropped,
+- A record is returned **entire**, from its identity heading to the next heading of the same
+  or a higher level — at the level each surface defines records (`IDENTITY_LEVELS`, measured
+  in D0), with its nested blocks and its enclosing heading path. No field is dropped,
   summarised or re-ordered, so a caveat, a negative or a qualification cannot be lost in
   transit. `--json` carries the same bytes as the rendered form.
 - **Identity is not mention.** A record whose `Identifier` field names the PMID is an `identity`
@@ -131,7 +133,7 @@ RECORD_HEAD = re.compile(r"^##[ \t]+(?P<id>\S.*?)[ \t]*$", re.M)
 # 1,067 KB four-file preload. Naming what is addressable fixes it at the root instead of
 # capping the output, which would have been silent truncation with a nicer name.
 RECORD_ID = re.compile(
-    r"^(?:PAPER\s+\d+|LIT-\d+|LIT-EX-\d+|CLAIM\s+\d+|FT-\d+|D-\d+|DL-[A-Z]+-\d+|"
+    r"^(?:PAPER\s+\d+|LIT-\d+|LIT-EX-\d+|CLAIM\s+\d+|FT-\d+|D-\d+|DL-[A-Z]+-\d+[a-z]?|"
     r"CORPUS-STUB-\d+|CORPUS\s+PMID\s+\d+|CORPUS\s+P\d+|BLOCK\s+\d+|TX-\d+|DIS-\d+)"
     # A record may carry a descriptive title after its id — `## FT-047 — un difetto della coda`.
     # Anchoring at the end classified those as prose the moment em-dash headings became
@@ -140,11 +142,46 @@ RECORD_ID = re.compile(
 
 
 IDENTIFIER_LINE = re.compile(r"^\*\*Identifier(?: value)?:\*\*", re.M)
+# The id alone, for `--id DL-MECH-029` against `### 🔴 DL-MECH-029 — Q230P: …`.
+ID_TOKEN = re.compile(
+    r"^(PAPER\s+\d+|LIT-EX-\d+|LIT-\d+|CLAIM\s+\d+|FT-\d+|D-\d+|DL-[A-Z]+-\d+[a-z]?|"
+    r"CORPUS-STUB-\d+|CORPUS\s+PMID\s+\d+|CORPUS\s+P\d+|BLOCK\s+\d+|TX-\d+|DIS-\d+)(?=$|[\s—–:-])",
+    re.I)
+# Leading emoji and markers are decoration: `### 🎯 DL-MECH-034 — …` defines DL-MECH-034. A leading
+# WORD is not: `### Update DL-MOL-006 — …` and `### STATUS UPDATE — DL-MECH-017` are updates.
+DECORATION = re.compile(r"^[^0-9A-Za-z]+")
+HEADING = re.compile(r"^(?P<hashes>#{1,6})[ \t]+(?P<text>\S.*?)[ \t]*$")
+FENCE = re.compile(r"^[ \t]{0,3}(?:```|~~~)")
+# 🔴 WHERE A RECORD IS DEFINED IS A PROPERTY OF THE SURFACE, AND IT WAS MEASURED, NOT ASSUMED
+# (governance/design_records/d0_registry_record_shapes_20260924.md). Splitting on `##` alone left
+# 168 records unaddressable — 153 `DL-*` at `###`/`####`, 12 `DIS-*` at `###`, 3 `BLOCK n` at `#`
+# — and let a `##` record swallow the `#` heading after it. The level is surface-aware because
+# the shape alone is not enough: `# FT-158 … FT-169` is a range heading that PRECEDES the real
+# `## FT-158`, which is also why "first occurrence is identity" is not a rule here.
+IDENTITY_LEVELS = {
+    "paper_registry_current": (2,),
+    "literature_tracking_log_current": (2,),
+    "claim_registry_current": (2,),
+    "working_model_current": (1,),
+    "dismissal_ledger_current": (3,),
+    "discovery_ledger_current": (3, 4),
+    "full_text_queue_current": (2,),
+}
 
 
 def is_record_id(value: str) -> bool:
     """Does this id have a known addressable shape? Half of the test; see `is_record`."""
-    return bool(RECORD_ID.match(value.strip()))
+    return bool(RECORD_ID.match(DECORATION.sub("", value.strip())))
+
+
+def identity_token(value: str) -> str:
+    """`🔴 DL-MECH-029 — Q230P: …` -> `DL-MECH-029`; a heading that is not an id -> ``."""
+    match = ID_TOKEN.match(DECORATION.sub("", value.strip()))
+    return " ".join(match.group(1).split()) if match else ""
+
+
+def same_id(left: str, right: str) -> bool:
+    return bool(left) and " ".join(left.split()).lower() == " ".join(right.split()).lower()
 
 
 def is_record(record_id: str, text: str) -> bool:
@@ -176,6 +213,22 @@ class Record:
     text: str
     line: int
     kind: str = "record"
+    level: int = 2
+    end_line: int = 0
+    heading_path: tuple[str, ...] = ()
+    own_text: str = ""       # heading to the first nested heading: what a SECTION is matched on
+    contains: tuple[str, ...] = ()
+
+    @property
+    def identity_id(self) -> str:
+        return identity_token(self.record_id) if self.kind == "record" else ""
+
+    @property
+    def match_text(self) -> str:
+        """A record matches on all of itself. A section matches only on its own prose: a
+        `## Run …` section holding forty ledger records is not a mention of each of their PMIDs,
+        and the records answer for themselves."""
+        return self.text if self.kind == "record" else self.own_text
 
     @property
     def digest(self) -> str:
@@ -198,7 +251,7 @@ class Record:
     def identity_values(self) -> str:
         """Only the fields that state what the record is about — not its prose."""
         out = []
-        for raw in self.text.splitlines():
+        for raw in self.match_text.splitlines():
             match = re.match(r"\*\*([^*]+):\*\*\s*(.*)$", raw.strip())
             if match and match.group(1).strip().lower() in IDENTITY_FIELDS:
                 out.append(match.group(2))
@@ -206,8 +259,10 @@ class Record:
 
     def as_dict(self, why: str) -> dict[str, Any]:
         return {"source": self.source, "path": self.path, "record_id": self.record_id,
-                "kind": self.kind, "line": self.line, "match": why,
-                "record_digest": self.digest, "text": self.text}
+                "identity_id": self.identity_id, "kind": self.kind, "line": self.line,
+                "end_line": self.end_line, "heading_level": self.level,
+                "heading_path": list(self.heading_path), "contains_records": list(self.contains),
+                "match": why, "record_digest": self.digest, "text": self.text}
 
 
 @dataclass
@@ -223,8 +278,10 @@ class Selection:
     field_report: list[dict[str, Any]] = field(default_factory=list)
 
     def add(self, record: Record, why: str) -> None:
-        key = (record.source, record.record_id)
-        if any((r.source, r.record_id) == key for r, _ in self.hits):
+        # Keyed on the POSITION, not the heading text: two `### Change-log` blocks are two
+        # blocks, and a key on the text returned the first and silently dropped the second.
+        key = (record.source, record.line)
+        if any((r.source, r.line) == key for r, _ in self.hits):
             return
         self.hits.append((record, why))
 
@@ -377,21 +434,74 @@ def field_census(root: Path, disease: str, stems: Iterable[str]) -> dict[str, An
     return census
 
 
+def heading_lines(text: str) -> list[tuple[int, int, int, str]]:
+    """Every Markdown heading as (char offset, line, level, text) — fences excluded.
+
+    🔴 A LINE INSIDE A FENCED BLOCK IS NOT A HEADING. The literature log's own record template,
+    `## LIT-[NNN]` inside a code fence, was returned as a record.
+    """
+    out, fenced, offset = [], False, 0
+    for number, line in enumerate(text.splitlines(keepends=True), 1):
+        if FENCE.match(line):
+            fenced = not fenced
+        elif not fenced:
+            match = HEADING.match(line.rstrip("\r\n"))
+            if match:
+                out.append((offset, number, len(match.group("hashes")), match.group("text")))
+        offset += len(line)
+    return out
+
+
+def unfenced(text: str) -> str:
+    lines, fenced = [], False
+    for line in text.splitlines(keepends=True):
+        if FENCE.match(line):
+            fenced = not fenced
+        elif not fenced:
+            lines.append(line)
+    return "".join(lines)
+
+
 def parse_records(root: Path, disease: str, stem: str) -> list[Record]:
+    """Records and the sections between them, cut by heading semantics measured in D0.
+
+    A block runs from its heading to the next heading of the SAME OR A HIGHER level, so nested
+    `###`/`####` blocks — the dated additions and corrections appended to a record — travel with
+    it. A record is a heading at this surface's identity level (`IDENTITY_LEVELS`) that begins
+    with a known id or carries an `Identifier` field. A heading nested inside a record is part
+    of that record, not a block of its own — unless it is itself a record (`DL-MECH-069b` inside
+    `DL-MECH-069`), in which case it is addressable AND still inside its parent, and the parent
+    names it in `contains`.
+    """
     rel = f"disease-models/{disease}/{SOURCES[stem]}"
     path = root / rel
     if not path.is_file():
         return []
     text = path.read_text(encoding="utf-8")
-    heads = list(RECORD_HEAD.finditer(text))
-    records = []
-    for index, head in enumerate(heads):
-        end = heads[index + 1].start() if index + 1 < len(heads) else len(text)
-        body = text[head.start():end]        # the exact bytes; normalising them is not returning them
-        record_id = head.group("id").strip()
-        records.append(Record(source=stem, path=rel, record_id=record_id, text=body,
-                              line=text.count("\n", 0, head.start()) + 1,
-                              kind="record" if is_record(record_id, body) else "section"))
+    heads = heading_lines(text)
+    levels = IDENTITY_LEVELS.get(stem, (2,))
+    spans = []
+    for index, (offset, line, level, title) in enumerate(heads):
+        end = next((h[0] for h in heads[index + 1:] if h[2] <= level), len(text))
+        own_end = heads[index + 1][0] if index + 1 < len(heads) else len(text)
+        own = text[offset:own_end]
+        identity = level in levels and (is_record_id(title) or bool(
+            IDENTIFIER_LINE.search(unfenced(own))))
+        spans.append((offset, end, line, level, title.strip(), own, identity))
+    records, path_stack = [], []
+    for offset, end, line, level, title, own, identity in spans:
+        path_stack = [item for item in path_stack if item[0] < level]
+        inside = [s for s in spans if s[6] and s[0] < offset < s[1]]
+        if identity or not inside:
+            body = text[offset:end]      # the exact bytes; normalising them is not returning them
+            nested = tuple(identity_token(s[4]) or s[4] for s in spans
+                           if s[6] and offset < s[0] < end)
+            records.append(Record(
+                source=stem, path=rel, record_id=title, text=body, line=line,
+                kind="record" if identity else "section", level=level,
+                end_line=text.count("\n", 0, end), heading_path=tuple(p[1] for p in path_stack),
+                own_text=own, contains=nested if identity else ()))
+        path_stack.append((level, title))
     return records
 
 
@@ -414,15 +524,16 @@ def select(root: Path, disease: str, *, pmid: str = "", doi: str = "", record_id
     for stem, records in corpus.items():
         for record in records:
             why = ""
-            if needle_id and record.record_id.lower() == needle_id:
+            if needle_id and (record.record_id.lower() == needle_id
+                              or same_id(record.identity_id, needle_id)):
                 why = "record id"
             elif pmid and pmid in record.identity_values():
                 why = "identity"
             elif doi and doi.lower() in record.identity_values().lower():
                 why = "identity (doi)"
-            elif pmid and PMID_RE.search(record.text) and pmid in PMID_RE.findall(record.text):
+            elif pmid and pmid in PMID_RE.findall(record.match_text):
                 why = "mention"
-            elif theme and theme.lower() in record.text.lower():
+            elif theme and theme.lower() in record.match_text.lower():
                 why = "theme"
             elif constraints and not any((needle_id, pmid, doi, theme)):
                 # With no other selector, the constraints ARE the selection. The candidate is
@@ -503,6 +614,15 @@ def select(root: Path, disease: str, *, pmid: str = "", doi: str = "", record_id
             key = identity_key(record.identity_values())
             if key:
                 identities.setdefault((record.source, key), []).append(record.record_id)
+    defined: dict[tuple[str, str], list[int]] = {}
+    for record, _why in found.hits:
+        if record.kind == "record" and record.identity_id:
+            defined.setdefault((record.source, record.identity_id.upper()), []).append(record.line)
+    for (stem, value), lines in sorted(defined.items()):
+        if len(lines) > 1:
+            found.ambiguous.append(
+                f"{stem}: {len(lines)} records are DEFINED as {value} (lines "
+                f"{', '.join(map(str, lines))}) — none was chosen; a reader decides")
     for (stem, value), ids in sorted(identities.items()):
         if len(ids) > 1:
             found.ambiguous.append(
@@ -527,7 +647,8 @@ def select(root: Path, disease: str, *, pmid: str = "", doi: str = "", record_id
                         found, root / f"disease-models/{disease}/{SOURCES[stem]}", stem)
                 target = anchor.strip()
                 matches = [item for item in corpus[stem]
-                           if item.record_id.lower() == target.lower()]
+                           if item.record_id.lower() == target.lower()
+                           or same_id(item.identity_id, target)]
                 if not matches:
                     found.unresolved.append(
                         f"{record.source}#{record.record_id} -> [[{stem}#{target}]] "
@@ -629,8 +750,10 @@ def render(found: Selection, *, query: str, full: bool = True) -> str:
         by_kind[why.split(" (")[0]] = by_kind.get(why.split(" (")[0], 0) + 1
     lines.append("  hits: " + " · ".join(f"{value} {key}" for key, value in sorted(by_kind.items())))
     for record, why in found.hits:
-        lines.append(f"\n----- {record.path}:{record.line}  [{why}]  "
-                     f"record_digest={record.digest[:12]}")
+        lines.append(f"\n----- {record.path}:{record.line}-{record.end_line}  [{why}]  "
+                     f"record_digest={record.digest[:12]}  h{record.level}"
+                     + (f"  in: {' > '.join(record.heading_path)}" if record.heading_path else "")
+                     + (f"  contains: {', '.join(record.contains)}" if record.contains else ""))
         lines.append(record.text.rstrip() if full else record.text.splitlines()[0])
     if found.notes:
         lines.append("\n  MATCHED BUT NOT RETURNED (prose sections — named so the selection is "
