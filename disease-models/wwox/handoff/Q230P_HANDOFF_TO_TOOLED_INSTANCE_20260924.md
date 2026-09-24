@@ -5,8 +5,8 @@
 **Date:** 2026-09-24
 
 > 🔴 **Not medical advice.** This concerns a disease-level WWOX-DEE genotype class, not any individual.
-> 🔴 **Public edition.** Do not introduce parent-of-origin, pedigree coordinates, or re-identifying
-> variant+person combinations into anything you write back.
+> 🔴 **Public edition.** Excluded from this edition: parent-of-origin information, pedigree
+> coordinates, and re-identifying variant+person combinations. Write none of them back.
 
 ---
 
