@@ -1,6 +1,6 @@
 ---
 name: legend-hypothesis-forge
-description: 'LEGEND therapeutic-hypothesis generator (the THERAPEUTIC_HYPOTHESIS_GENERATOR of the external-repos README). From the disease genotype of interest + working model + therapeutic portfolio + verified full texts, it forges 10–30 candidate therapeutic hypotheses (splice correction/ASO, CRISPRa, small-molecule pathway rescue, drug repurposing, window protection) and runs them through a co-scientist loop generate→critique→rank→evolve, with a BLOCK-1 safety gate and mandatory epistemic tagging. Use it when the operator says "generate therapeutic hypotheses", "what could we try", "squeeze the model for candidates/levers", "run the co-scientist", or when they want to turn accumulated knowledge into a fan of actionable moves instead of filing yet another paper. Distinct from legend-discovery (mines papers for needle-leads) and legend-deepdive (produces canonical claims): this starts from the already-accumulated model and produces a scored, non-canonical hypothesis portfolio that feeds the therapeutic tracker.'
+description: 'LEGEND therapeutic-hypothesis generator (the THERAPEUTIC_HYPOTHESIS_GENERATOR of the external-repos README). From the disease genotype of interest + working model + therapeutic portfolio + verified full texts, it forges as many mechanistically distinct candidate therapeutic hypotheses as the live explanatory space holds, searching every lever (splice correction/ASO, CRISPRa, small-molecule pathway rescue, drug repurposing, window protection) and runs them through a co-scientist loop generate→critique→rank→evolve, with a BLOCK-1 safety gate and mandatory epistemic tagging. Use it when the operator says "generate therapeutic hypotheses", "what could we try", "squeeze the model for candidates/levers", "run the co-scientist", or when they want to turn accumulated knowledge into a fan of actionable moves instead of filing yet another paper. Distinct from legend-discovery (mines papers for needle-leads) and legend-deepdive (produces canonical claims): this starts from the already-accumulated model and produces a scored, non-canonical hypothesis portfolio that feeds the therapeutic tracker.'
 ---
 
 # legend-hypothesis-forge — Therapeutic-hypothesis forge
@@ -39,7 +39,7 @@ Every assertion classified: **DATO** (directly supported by a peer-reviewed sour
 In this forge, IPOTESI and ESPANSIONE are the daily bread — **it is their place** — provided they are labelled honestly and **never passed off as data**. Every generated hypothesis is born tagged `IPOTESI` or `ESPANSIONE` until validated: that is the rule.
 
 ## The levers (axes to generate along)
-Generate across all levers, not only the obvious one. Full map in `disease-models/wwox/mission.md`; minimal axes:
+Search every lever, not only the obvious one — the levers are a checklist of where to look, not slots to fill: a lever with nothing mechanistically distinct gets one line saying so. Full map in `disease-models/wwox/mission.md`; minimal axes:
 1. **Defect correction** — splice-switching ASO / targeted exon-skipping for a splice variant of interest; readthrough; upregulation of the residual allele.
 2. **Upstream/downstream compensation** — CRISPRa / transcriptional activation of WWOX; rescue of dysregulated pathways (metabolism, myelin/glia, GABA, GSK3β, prenatal structure — see the active meta-analyses).
 3. **Repurposing** — existing drugs touching a node of the WWOX-dependent network (triangulatable with TxGNN/DRKG/RTX/PrimeKG as a *signal*, never as proof).
@@ -60,7 +60,7 @@ Every hypothesis is generated *against the real case*, not in the abstract: geno
 - the therapeutic hypothesis ledger — if it does not exist, create it from `references/hypothesis_ledger_template.md`; if it exists, **compound**: link and do not repeat.
 - optional KG/repurposing signals provided by the operator (TxGNN/DRKG/RTX/PrimeKG output) → treated as `ESPANSIONE`/`IPOTESI`, never as DATO.
 
-**1. GENERATION.** Produce **10–30 candidate hypotheses**, spread across the 5 levers. Each in falsifiable form: "If [mechanism], then [measurable effect on the case/model], because [rationale anchored to the WM]". Breadth before depth: include contrarian and second-order ones. Do not filter yet.
+**1. GENERATION.** Produce **as many mechanistically distinct hypotheses as the live explanatory space contains** — breadth is mandatory when the space is broad, and returning one is correct when only one survives honest enumeration. Paraphrases and dose or formulation variants of one mechanism count once. Each in falsifiable form: "If [mechanism], then [measurable effect on the case/model], because [rationale anchored to the WM]", and each names the observation or test that would discriminate it from its rivals. Breadth before depth: include contrarian and second-order ones. Do not filter yet. The count is reported, never targeted.
 
 **2. REFLECTION / CRITIQUE.** Sift every hypothesis, making explicit:
 - **Mechanism** — biological plausibility given the WM; which node it touches.
@@ -82,7 +82,7 @@ Every hypothesis is generated *against the real case*, not in the abstract: geno
 - Session change-log at the bottom of the file.
 
 ## Closing (mandatory in chat)
-1. Summary: how many hypotheses generated, top 3–5 with lever and tag.
+1. Summary: how many mechanistically distinct hypotheses survived and why, which levers were searched and found empty, and the top ones (up to 5) with lever and tag.
 2. Any `proposed-to-portfolio` and what is missing to promote them.
 3. Any safety signals (BLOCK-1) that emerged.
 4. Disclaimer: **"Not medical advice: it is support for discussion with a treating team. Hypotheses are IPOTESI/ESPANSIONE until validated by the LEGEND pipeline."**
