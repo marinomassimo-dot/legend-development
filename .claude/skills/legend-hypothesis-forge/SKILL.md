@@ -14,7 +14,7 @@ LEGEND's goal is not to understand WWOX: it is to **reduce WWOX-dependent harm a
 
 **Receipt reuse gate.** “Verified full text” means a matching persisted
 `FULLTEXT_READ_RECEIPT` already exists. Query the ledger first and reuse the dossier and
-coverage it names. This skill does not silently reread source articles. If a new question
+coverage it names. This skill does not silently reread source articles. Reopening a source to verify a locator or a fact is `QUESTION_DRIVEN`: state the question as narrowly as locating the fact requires, not the hypothesis it would support. If a new question
 requires material outside the earlier coverage, hand the study back to a full-text route;
 the new event must link `prior_receipt` and declare an allowed `reread_reason`.
 
@@ -51,9 +51,9 @@ Every hypothesis is generated *against the real case*, not in the abstract: geno
 
 ## Procedure — the co-scientist loop (4 phases + output)
 
-**0. Load the context.** Before generating, read:
+**0. Load the context.** This skill is `SYNTHESIS` (`framework/protocols/fulltext_read_receipt.md`, *Before reading: context policy*): prior knowledge is its intended input. Before generating, read:
 - the state manifest (READY state, current WM version).
-- the working model, claim registry, paper registry (what we really know, and how strongly).
+- the working model and claim registry whole (what we really know, and how strongly); the paper registry by record — `python3 framework/scripts/registry_records.py get --pmid <PMID> --hops 1` or `--id "PAPER nnn"` for the papers a hypothesis stands on, never the 449 KB file whole.
 - the discovery ledger (needles already collected — the main starting point) and the research lines.
 - the therapeutic strategy portfolio (to **avoid duplicating** already-portfolioed strategies and to know what is already scored).
 - the biomarker candidates (known biomarker-levers).

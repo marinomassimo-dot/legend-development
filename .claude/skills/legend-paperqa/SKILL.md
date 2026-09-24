@@ -44,7 +44,7 @@ See `references/paperqa_setup.md` for the index/query commands and the local mod
 
 **3. Query.** Ask the question about the *mechanism/pathway/variant* (not the patient). PaperQA2 returns an answer + citations. For comparisons, use the **contradiction detection** mode across papers.
 
-PaperQA retrieval is `queried_not_full_read`: it does not emit a complete
+A question asked of known sources is `context_policy: QUESTION_DRIVEN` (`framework/protocols/fulltext_read_receipt.md`, *Before reading: context policy*): the question is the input, and is not stripped to simulate a blind read. PaperQA retrieval is `queried_not_full_read`: it does not emit a complete
 `FULLTEXT_READ_RECEIPT` and does not remove a paper from reading debt. If the task expands
 into a true section-by-section complete analysis, route it through the full-text protocol and
 emit/persist the receipt there.

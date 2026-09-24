@@ -19,6 +19,8 @@ Starts ONLY from the papers the operator provides. From there it expands.
 3. `fulltext-dossier` (subagent) → neutral extraction into `staging/`.
 4. `legend-deepdive` (subagent) → COMMIT CANDIDATE + inbox proposal (read-only toward the current files).
 
+Context per stage (`context_policy`, defined in `framework/protocols/fulltext_read_receipt.md`): stage 3 is the first pass and is `SOURCE_FIRST` — the group verdict of stage 1 decides priority and depth, and is not handed to the reader; stage 4 is `SYNTHESIS`, where the dossier meets the group verdict and LEGEND's records. The caller runs `python3 framework/scripts/registry_records.py get --pmid <PMID> --hops 1` for stage 4, which has no shell. A reread for a named question is `QUESTION_DRIVEN`, and names the question.
+
 ## Full-text rule: the details of every study
 The gold is in the details of every full text, not only in papers already labelled important.
 - `grep`/keyword search is forbidden as a *method of study analysis*. It may be used only to find files, dedup, or do technical audit after reading; never to decide what a paper says.
@@ -32,9 +34,9 @@ The gold is in the details of every full text, not only in papers already labell
 - For WWOX-direct, `CANONICAL_CANDIDATE`, `P0_FAST_TRACK`/`P1_HIGH`, safety-relevant, therapy/GT/ASO-relevant, model-shifting papers, or ones the operator explicitly calls important, the full reading must be completed before the final analysis.
 - Before reading, check prior receipts by PMID/DOI. Every completed or partial analysis returns a `FULLTEXT_READ_RECEIPT` conforming to `framework/protocols/fulltext_read_receipt.md`; the caller must persist it. A second complete read is forbidden without `reread_reason`.
 
-## Canonical files to pass/read
+## Canonical files to pass/read (stage 4 — after the first pass)
 - State: `framework/state/state_manifest_current.md`
-- The 4 canonical scientific current files (working model, claim registry, paper registry, literature tracking log).
+- The 4 canonical scientific current files: working model and claim registry whole; paper registry and literature tracking log by record (`registry_records.py`, above).
 - Operational: the inbox and the commit-candidate queue.
 - Protocols: `framework/protocols/ingest_protocol.md`, `framework/protocols/wikilink_schema.md`
 - The research-group knowledge base.

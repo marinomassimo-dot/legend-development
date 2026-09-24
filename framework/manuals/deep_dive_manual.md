@@ -264,11 +264,11 @@ La prima cosa da guardare in uno studio sono gli **autori e il gruppo**, non sol
 4. Aggiorna `researchers.md` (tagga `[verified]`/`[to-verify]`, change log) e fai **self-lint** sui nomi.
 5. Emetti **ALERT** se il gruppo è ad alta credibilità/rilevanza.
 
-Delegabile al subagent `research-group-analyst`. La credibilità del gruppo NON decide la verità del claim (quella è la deep dive), ma alza/abbassa priorità e profondità d'analisi.
+Delegabile al subagent `research-group-analyst`. La credibilità del gruppo NON decide la verità del claim (quella è la deep dive), ma alza/abbassa priorità e profondità d'analisi. Per questo il verdetto non entra nel primo passaggio sulla fonte (`context_policy: SOURCE_FIRST`, [`fulltext_read_receipt.md`](../protocols/fulltext_read_receipt.md#before-reading-context-policy)): decide quanto a fondo leggere, e si confronta con la lettura dopo.
 
 ### 6.1 Full-state context scan (MANDATORY)
 
-Prima di analizzare qualsiasi paper, devi sempre eseguire un controllo contestuale completo.
+Prima di concludere su qualsiasi paper, devi sempre eseguire un controllo contestuale completo. Per una prima lettura (`context_policy: SOURCE_FIRST`) il controllo è il confronto di §7.7 e viene **dopo** il primo passaggio sulla fonte, non prima; i due registri grandi si leggono per record ([operator manual §1](operator_manual.md#1-modalità-di-sessione)). Cambia il momento, non il contenuto.
 
 ## Regola generale
 Devi usare **il massimo contesto disponibile coerente con il tipo di sessione**, ma senza violare la gerarchia del sistema.
