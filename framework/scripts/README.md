@@ -137,6 +137,7 @@ Run everything as `python3 <path> --help` first. Paths are repo-relative.
 | land a committed, verified task, detach its worktree, delete its branch | `framework/scripts/task_close.py` |
 | what is not on `main` and how old it is — the weekly §21e sweep | `framework/scripts/branch_hygiene.py` |
 | push a ref only when the gate PASSes on the EXACT commit being pushed | `framework/scripts/safe_push.py` |
+| wait for a job to finish — by PID, `PID:START`, pid file or completion file, **never by name**, and always with a `--timeout` | `framework/scripts/process_wait.py` |
 | refuse to derive a surface whose inputs are uncommitted, or state why it is safe | `framework/scripts/derived_inputs.py` |
 | when the shared checkout moved, and when it deliberately did not | `framework/scripts/sync_epochs.py` |
 | classify, hand off, resume or sync a laboratory across hosts | `framework/scripts/legend_handoff.py` |

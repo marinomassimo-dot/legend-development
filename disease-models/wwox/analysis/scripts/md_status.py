@@ -5,97 +5,22 @@ from __future__ import annotations
 
 import argparse
 import json
-import os
 import platform
 import subprocess
+import sys
 import time
 from pathlib import Path
 
 
 DEFAULT_ROOT = Path("md-output/helix-screen")
 
-
-def _parent_of(pid: int) -> int | None:
-    """Parent PID via /proc, falling back to ps. None when unknowable."""
-    try:
-        with open(f"/proc/{pid}/status", encoding="utf-8") as handle:
-            for line in handle:
-                if line.startswith("PPid:"):
-                    return int(line.split()[1])
-    except (OSError, ValueError):
-        pass
-    try:
-        completed = subprocess.run(
-            ["ps", "-o", "ppid=", "-p", str(pid)],
-            check=False,
-            capture_output=True,
-            text=True,
-        )
-    except (FileNotFoundError, OSError):
-        return None
-    text = completed.stdout.strip()
-    return int(text) if text.isdigit() else None
+sys.path.insert(0, str(Path(__file__).resolve().parents[4] / "framework" / "scripts"))
 
 
-def _self_and_ancestors() -> set[int]:
-    """PIDs that must never be counted as the target.
-
-    A monitor invoked from a shell whose command line names the target — a `watch`,
-    an `until` loop, a wrapper script — appears in `pgrep -f` output as a match for
-    the very pattern it is asking about. Excluding this process and its ancestors is
-    what stops the query from answering itself.
-    """
-    pids: set[int] = set()
-    pid: int | None = os.getpid()
-    while pid and pid > 0 and pid not in pids:
-        pids.add(pid)
-        pid = _parent_of(pid)
-    return pids
-
-
-def pid_alive(pid: int) -> bool:
-    """Liveness of one specific process, by identity rather than by name."""
-    try:
-        os.kill(pid, 0)
-    except ProcessLookupError:
-        return False
-    except PermissionError:
-        return True
-    except OSError:
-        return False
-    return True
-
-
-def process_running(pattern: str, pid_file: Path | str | None = None) -> bool | None:
-    """Return worker state, preferring process identity over textual matching.
-
-    `pid_file` is authoritative when present: a PID recorded by whoever launched the
-    worker identifies that instance and cannot be confused with anything else.
-
-    The `pgrep` fallback exists for runs started outside this tool, and it excludes
-    this process and its ancestors. Without that exclusion a pattern can match the
-    asker, and the answer to "is the target alive?" becomes "yes, I am" — a false
-    positive that survives until someone checks `ps` by hand.
-    """
-    if pid_file is not None:
-        try:
-            recorded = Path(pid_file).read_text(encoding="utf-8").strip()
-        except OSError:
-            recorded = ""
-        if recorded.isdigit():
-            return pid_alive(int(recorded))
-
-    try:
-        completed = subprocess.run(
-            ["pgrep", "-f", pattern],
-            check=False,
-            capture_output=True,
-            text=True,
-        )
-    except FileNotFoundError:
-        return None
-    matched = {int(token) for token in completed.stdout.split() if token.isdigit()}
-    return bool(matched - _self_and_ancestors())
+# Process identity lives in ONE place, framework/scripts/process_wait.py, which grew out of the
+# fix first made here (a watcher whose own command line named its target matched itself).
+# The names stay importable from this module: callers and tests patch them here.
+from process_wait import pid_alive, process_running  # noqa: E402,F401
 
 
 def mac_power_state() -> dict[str, object]:
