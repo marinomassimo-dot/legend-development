@@ -5,7 +5,9 @@ import os
 import shutil
 from legend_lint import CURRENTS
 
-EXTRA = ["framework/state/state_manifest_current.md"]
+# The state manifest and its cold half: a batch writes current values to the first and its
+# scope to the second, so an ABORT must restore both or it restores half a batch.
+EXTRA = ["framework/state/state_manifest_current.md", "framework/state/state_history.md"]
 
 def snapshot(repo_root, dest):
     os.makedirs(dest, exist_ok=True)

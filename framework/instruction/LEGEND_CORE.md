@@ -146,7 +146,7 @@ Verify presence of the canonical current files (state manifest + working model +
 
 ## 8. STATE MANIFEST
 
-Single source of truth on system state. Read at the start of every session; updated on every operational event (lint, ingest, commit candidate, batch commit, branch). Contains: framework version, working_model_version, current-files list, last batch commit, last lint, current operational state, active branches, urgent pending. If unreadable → `BLOCK_SYSTEM` → mandatory recovery.
+Single source of truth on system state. Read at the start of every session; updated on every operational event (lint, ingest, commit candidate, batch commit, branch). Contains: framework version, working_model_version, current-files list, last batch commit, last lint, current operational state, active branches, urgent pending. If unreadable → `BLOCK_SYSTEM` → mandatory recovery. Its history — earlier batch scopes, lifted-gate narratives, dated notes — is its cold half, `framework/state/state_history.md`: read on demand, never at startup, never a source of a current value.
 
 ---
 

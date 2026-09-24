@@ -416,6 +416,15 @@ class CandidateBacklogIsDerivedNotDeclared(unittest.TestCase):
         self._candidate("commit_candidate_20260806_19936220.md")
         self.assertEqual([], ga.measure_candidate_backlog(self.root, "wwox"))
 
+    def test_a_candidate_named_only_in_the_state_history_is_consumed(self) -> None:
+        """Earlier batch scopes live in the manifest's cold half; the backlog must read it."""
+        self._manifest("PROPAGATED 0.")
+        (self.root / ga.HISTORY_REL).write_text(
+            'batch_20260806_001_scope: "PROPAGATED 1: CC-20260806-19936220 landed."\n',
+            encoding="utf-8")
+        self._candidate("commit_candidate_20260806_19936220.md")
+        self.assertEqual([], ga.measure_candidate_backlog(self.root, "wwox"))
+
     def test_a_candidate_named_nowhere_is_pending(self) -> None:
         self._manifest("PROPAGATED 0.")
         self._candidate("commit_candidate_20260806_19936220.md")

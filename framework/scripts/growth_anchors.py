@@ -57,6 +57,8 @@ HERE = Path(__file__).resolve().parent
 REPO_ROOT = HERE.parent.parent
 LEDGER_REL = "framework/state/growth_anchors.jsonl"
 MANIFEST_REL = "framework/state/state_manifest_current.md"
+# The manifest's cold half: earlier batch scopes live here, and the backlog reads both.
+HISTORY_REL = "framework/state/state_history.md"
 
 CHAIN_FIELD = "anchor_prev_hash"
 
@@ -294,8 +296,8 @@ def scale_triggers(live: dict[str, Any], state: dict[str, Any]) -> list[str]:
 # someone must remember to flip, and flipping it costs less than propagating — so on the day
 # the queue is inconvenient, the field moves instead of the work. Updating a constraint must
 # cost at least as much as complying with it. The signal already exists, written for another
-# purpose: every `batch_*_scope` in the state manifest names the candidates that batch
-# propagated. Consumed = named in a scope. Pending = on disk and named nowhere. The only way
+# purpose: every `batch_*_scope` in the state manifest or its history names the candidates
+# that batch propagated. Consumed = named in a scope. Pending = on disk and named nowhere. The only way
 # to lower the number is to actually propagate, because the scope is what records it.
 CANDIDATE_STEM = re.compile(r"^commit[_-]candidate[_-](.+)$", re.I)
 CANDIDATE_ID_LINE = re.compile(r"(?m)^\*\*Candidate ID:\*\*\s*(\S+)")
@@ -346,9 +348,13 @@ def measure_candidate_backlog(root: Path, disease: str) -> list[str]:
     contributes nothing here and is not an error: a backlog that cannot be seen from this
     checkout is not a backlog of zero, and the caller is told which directories were readable.
     """
-    manifest_path = root / MANIFEST_REL
-    scope_text = manifest_path.read_text(encoding="utf-8") if manifest_path.is_file() else ""
-    consumed_blob = candidate_key(scope_text)
+    # Batch scopes are history: they live in the manifest's cold half, and a reader of the hot
+    # half alone would report every propagated candidate as pending. Each file is folded on
+    # its own, so no identifier is assembled across the boundary between them.
+    consumed_blobs = [
+        candidate_key(path.read_text(encoding="utf-8"))
+        for path in (root / MANIFEST_REL, root / HISTORY_REL) if path.is_file()
+    ]
 
     pending: list[str] = []
     for directory in candidate_directories(root, disease):
@@ -358,7 +364,7 @@ def measure_candidate_backlog(root: Path, disease: str) -> list[str]:
             if not CANDIDATE_STEM.match(path.stem):
                 continue
             identity = candidate_identity(path)
-            if candidate_key(identity) not in consumed_blob:
+            if not any(candidate_key(identity) in blob for blob in consumed_blobs):
                 pending.append(identity)
     return sorted(set(pending))
 

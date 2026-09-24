@@ -126,3 +126,35 @@ All six F0 conditions hold: the current fields separate cleanly; every current r
 by the hot file unchanged; history stays one deterministic path away; there is still exactly one
 file with current values; the only writer to adapt is a hand procedure plus one snapshot list;
 the one hidden history consumer is known and adaptable. **F1 may proceed.**
+
+---
+
+# F1 — the first split
+
+**Moved verbatim** from the manifest to `framework/state/state_history.md`, under the headings
+they had: § 4's 30 chronicle lines (every scope before `BATCH_20260921_002`, the keys beside
+them, the `BATCH_20260806_002` notes); § 5's `notes`; § 6's two gate subsections (closed
+2026-08-09, reopened 2026-08-10); § 7's three dated harness notes. **Kept hot:** everything a
+reader or writer in the census consumes, plus the last batch's scope (an F2 question).
+
+**Losslessness** (script over `git show 17834c5:` against both new files): 393 non-blank
+original lines; 392 found verbatim in exactly one file, or in both only as Markdown punctuation
+(`---`, `>`, fences). One removed as **STALE_REFERENCE_FIXED** — § 0's *"active parallel
+branches (if any)"*, whose field § 6 records as removed on 2026-09-20 (surviving authority: that
+§ 6 note, and git). New lines: navigation pointers and the history file's provenance header;
+no new value.
+
+**Adaptations:** `growth_anchors.measure_candidate_backlog` folds both files separately (test:
+a candidate named only in the history is consumed); `batch_commit.py` snapshots and restores
+the history file (test: an ABORT restores it); Phase 6 (`prompt_batch_commit.md`,
+`legend-commit`) says where the outgoing scope goes; `LEGEND_CORE.md` § 8 names the cold half.
+§ 6.5's *"every `batch_*_scope` above"* now says where the scopes are.
+
+| | Before | After F1 |
+|---|---:|---:|
+| manifest (hot) | 77,352 | 24,048 |
+| history (cold) | 0 | 55,846 |
+| total preserved | 77,352 | 79,894 |
+
+Focused checks green: LINT `PASS`, `fulltext_receipts verify`, `growth_anchors check`,
+`sync_epochs verify`, and 17 suites naming the manifest, its tools or its routes.

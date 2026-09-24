@@ -36,6 +36,19 @@ class SnapshotTests(unittest.TestCase):
                 "current_state: READY\n",
             )
 
+    def test_the_state_history_is_restored_with_the_manifest(self) -> None:
+        """A batch writes its scope to the cold half; an ABORT must not keep that half."""
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            history = root / "framework/state/state_history.md"
+            history.parent.mkdir(parents=True)
+            history.write_text("batch_1_scope: before\n", encoding="utf-8")
+            snapshot_dir = root / "backup" / "snapshot"
+            snapshot(str(root), str(snapshot_dir))
+            history.write_text("batch_2_scope: half a batch\n", encoding="utf-8")
+            restore(str(snapshot_dir), str(root))
+            self.assertEqual(history.read_text(encoding="utf-8"), "batch_1_scope: before\n")
+
     def test_restore_cli_requires_explicit_confirmation(self) -> None:
         with contextlib.redirect_stderr(io.StringIO()):
             with self.assertRaises(SystemExit) as context:

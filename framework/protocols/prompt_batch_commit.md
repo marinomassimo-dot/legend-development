@@ -268,6 +268,11 @@ current_state: READY  # restore from IN_BATCH_COMMIT
 
 Also update the 3.x sections of the manifest with the timestamps of the modified files.
 
+The batch's `batch_<ID>_scope` — the list of candidates it propagated, which the backlog count
+reads — sits beside `last_batch_commit_id` in the manifest. When the next batch replaces it,
+the outgoing scope moves verbatim to the top of `framework/state/state_history.md` § 4: the
+manifest keeps current values, the history keeps every past scope, and no value lives in both.
+
 If an URGENT_COMMIT was authorized: remove the entry from `pending_urgent_requests` and mark it `AUTHORIZED_AND_EXECUTED`.
 
 ---
