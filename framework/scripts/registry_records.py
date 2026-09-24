@@ -314,6 +314,7 @@ class Selection:
     repository: dict[str, Any] = field(default_factory=dict)
     field_report: list[dict[str, Any]] = field(default_factory=list)
     term_report: list[dict[str, Any]] = field(default_factory=list)
+    navigation: list[dict[str, Any]] = field(default_factory=list)
 
     def add(self, record: Record, why: str) -> None:
         # Keyed on the POSITION, not the heading text: two `### Change-log` blocks are two
@@ -538,7 +539,7 @@ def parse_records(root: Path, disease: str, stem: str) -> list[Record]:
                 source=stem, path=rel, record_id=title, text=body, line=line,
                 kind="record" if identity else "section", level=level,
                 end_line=text.count("\n", 0, end), heading_path=tuple(p[1] for p in path_stack),
-                own_text=own, contains=nested if identity else ()))
+                own_text=own, contains=nested))
         path_stack.append((level, title))
     return records
 
@@ -556,7 +557,7 @@ def terms_hit(text: str, terms: list[str], mode: str) -> bool:
 
 def select(root: Path, disease: str, *, pmid: str = "", doi: str = "", record_id: str = "",
            theme: str | Iterable[str] = "", match: str = "all", hops: int = 1,
-           sources: Iterable[str] | None = None,
+           sources: Iterable[str] | None = None, open_sections: bool = False,
            limit: int = 0, constraints: list[tuple[str, str]] | None = None) -> Selection:
     constraints = list(constraints or [])
     terms = [theme] if isinstance(theme, str) else list(theme)
@@ -604,7 +605,18 @@ def select(root: Path, disease: str, *, pmid: str = "", doi: str = "", record_id
                 found.notes.append(
                     f"not returned (prose section, {len(record.text):,} chars): "
                     f"{record.source}#{record.record_id} matched by {why} — "
-                    f"fetch it deliberately with --id '{record.record_id}' if you need it")
+                    f"open it deliberately with --id '{record.record_id}' --open-section")
+                why = ""
+            if why and record.kind == "section" and not open_sections:
+                # 🔴 NAMING A SECTION IS NAVIGATION, NOT A REQUEST TO LOAD IT. A section's text
+                # is everything under its heading — for the ledger's title that is the whole
+                # 598 KB file. By default the answer says where the section is, how big it is
+                # and which records it holds; `--open-section` loads it, and says so.
+                found.navigation.append({
+                    "source": record.source, "path": record.path, "heading": record.record_id,
+                    "line": record.line, "end_line": record.end_line, "level": record.level,
+                    "heading_path": list(record.heading_path), "chars": len(record.text),
+                    "contains_records": list(record.contains)})
                 why = ""
             if why:
                 found.add(record, why)
@@ -807,7 +819,7 @@ def preamble_lines(preambles: dict[str, str]) -> list[str]:
 def render(found: Selection, *, query: str, full: bool = True) -> str:
     lines = [f"REGISTRY RECORDS — {query}"]
     lines.extend(preamble_lines(found.preambles))
-    if not found.hits:
+    if not found.hits and not found.navigation:
         lines.append("  NO RECORD MATCHED.")
         lines.append("  🔴 This is not evidence that the laboratory does not know this paper: it "
                      "is a statement about this query over these files. Widen the query, or say "
@@ -827,6 +839,16 @@ def render(found: Selection, *, query: str, full: bool = True) -> str:
                      + (f"  in: {' > '.join(record.heading_path)}" if record.heading_path else "")
                      + (f"  contains: {', '.join(record.contains)}" if record.contains else ""))
         lines.append(record.text.rstrip() if full else record.text.splitlines()[0])
+    if found.navigation:
+        lines.append("\n  SECTIONS NAMED BY THE QUERY (navigation — not loaded; add --open-section "
+                     "to load one whole):")
+        for item in found.navigation:
+            held = item["contains_records"]
+            lines.append(f"    {item['path']}:{item['line']}-{item['end_line']}  h{item['level']}  "
+                         f"{item['heading'][:80]}  ({item['chars']:,} chars; "
+                         f"{len(held)} record(s)"
+                         + (f": {', '.join(held[:12])}" + (" …" if len(held) > 12 else "")
+                            if held else "") + ")")
     if found.notes:
         lines.append("\n  MATCHED BUT NOT RETURNED (prose sections — named so the selection is "
                      "visible, fetch deliberately with --id):")
@@ -852,6 +874,48 @@ def render(found: Selection, *, query: str, full: bool = True) -> str:
     return "\n".join(lines)
 
 
+def catalog(root: Path, disease: str, stems: Iterable[str],
+            columns: Iterable[str] = ()) -> dict[str, Any]:
+    """One row per record, projected from the current files at call time — never stored.
+
+    A column is a DECLARED field (`fields` lists them); its denominator travels with it, and a
+    column no catalogued surface declares is a named refusal, the rule `--field` already keeps.
+    """
+    columns = list(columns)
+    out: dict[str, Any] = {"record_kind": "derived_catalog", "disease": disease, "rows": [],
+                           "columns": {}, "file_digests": {}}
+    records = []
+    for stem in stems:
+        path = root / f"disease-models/{disease}/{SOURCES[stem]}"
+        if path.is_file():
+            out["file_digests"][stem] = file_digest(path)
+        records.extend(item for item in parse_records(root, disease, stem) if item.kind == "record")
+    for name in columns:
+        declaring = sum(1 for item in records
+                        if any(n.lower() == name.lower() for n, _v in item.fields()))
+        entry: dict[str, Any] = {"records_declaring_the_field": declaring,
+                                 "records_catalogued": len(records)}
+        if not declaring:
+            names = {n for item in records for n, _v in item.fields()}
+            entry["no_surface_declares_this_field"] = True
+            entry["similar_field_names"] = sorted(set(difflib.get_close_matches(
+                name, sorted(names), n=5, cutoff=0.6)))
+        out["columns"][name] = entry
+    for item in records:
+        identity = item.identity_id or item.record_id
+        title = DECORATION.sub("", item.record_id)[len(identity):].strip(" \t—–:-") \
+            if item.identity_id else ""
+        row: dict[str, Any] = {"source": item.source, "id": identity, "title": title,
+                               "line": item.line, "level": item.level}
+        declared = item.fields()
+        for name in columns:
+            row[name] = [v for n, v in declared if n.lower() == name.lower()]
+        out["rows"].append(row)
+    out["repository"] = repository_state(
+        root, [root / f"disease-models/{disease}/{SOURCES[stem]}" for stem in out["file_digests"]])
+    return out
+
+
 def build_index(root: Path, disease: str) -> dict[str, Any]:
     """A DERIVED index: identity -> record id, re-derivable and never authoritative."""
     index: dict[str, Any] = {"record_kind": "derived_registry_index", "disease": disease,
@@ -873,7 +937,11 @@ def build_index(root: Path, disease: str) -> dict[str, Any]:
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument("action", choices=("get", "index", "fields"))
+    parser.add_argument("action", choices=("get", "index", "fields", "catalog"))
+    parser.add_argument("--column", action="append", default=[], metavar="FIELD",
+                        help="catalog: add a DECLARED field as a column; repeatable")
+    parser.add_argument("--open-section", action="store_true",
+                        help="load a section named by --id whole; by default it is navigation")
     parser.add_argument("--pmid", default="")
     parser.add_argument("--doi", default="")
     parser.add_argument("--id", dest="record_id", default="")
@@ -916,6 +984,34 @@ def main(argv: list[str] | None = None) -> int:
               "values the answer reports back.")
         return 0
 
+    if args.action == "catalog":
+        for bad in args.source:
+            if bad not in SOURCES:
+                parser.error(f"unknown --source {bad}; known: {', '.join(SOURCES)}")
+        table = catalog(root, args.disease, args.source or SOURCES, args.column)
+        if args.json:
+            print(json.dumps(table, indent=1, ensure_ascii=False))
+        else:
+            for name, entry in table["columns"].items():
+                if entry.get("no_surface_declares_this_field"):
+                    print(f"🔴 no catalogued surface declares {name!r}; similar: "
+                          f"{', '.join(entry['similar_field_names']) or '(none)'}")
+                else:
+                    print(f"column {name}: declared by {entry['records_declaring_the_field']} of "
+                          f"{entry['records_catalogued']} record(s)")
+            for row in table["rows"]:
+                cells = [f"{row['source'][:14]:<14}", f"{row['id']:<16}", f"L{row['line']:<6}"]
+                for name in args.column:
+                    values = row[name]
+                    cells.append(f"{name}={(values[0][:40] if values else '—')}"
+                                 + (f" (+{len(values) - 1})" if len(values) > 1 else ""))
+                cells.append(row["title"][:70])
+                print("  ".join(cells))
+            print(f"\n{len(table['rows'])} record(s), projected from the current files at call "
+                  f"time; nothing was stored.")
+            print(repository_line(table["repository"]))
+        return 0 if table["rows"] else 1
+
     if args.action == "index":
         index = build_index(root, args.disease)
         print(json.dumps(index, indent=1) if args.json else
@@ -936,7 +1032,7 @@ def main(argv: list[str] | None = None) -> int:
 
     found = select(root, args.disease, pmid=args.pmid, doi=args.doi, record_id=args.record_id,
                    theme=args.theme, match=args.match, hops=args.hops,
-                   sources=args.source or None,
+                   sources=args.source or None, open_sections=args.open_section,
                    limit=args.limit, constraints=constraints)
     query = " ".join(filter(None, [f"pmid={args.pmid}" if args.pmid else "",
                                    f"doi={args.doi}" if args.doi else "",
@@ -952,17 +1048,18 @@ def main(argv: list[str] | None = None) -> int:
             "ambiguous": found.ambiguous,
             "unresolved_links": sorted(set(found.unresolved)),
             "matched_but_not_returned": found.notes,
+            "sections_named_not_loaded": found.navigation,
             "residue_not_returned": found.residue,
             "source_digests": found.file_digests,
             "surface_preambles": found.preambles,
             "field_filters": found.field_report,
             "term_report": found.term_report,
             "repository": found.repository,
-            "empty_result_is_not_a_scientific_statement": not found.hits,
+            "empty_result_is_not_a_scientific_statement": not found.hits and not found.navigation,
         }, indent=1, ensure_ascii=False))
     else:
         print(render(found, query=query, full=not args.headings_only))
-    return 1 if not found.hits else 0
+    return 1 if not found.hits and not found.navigation else 0
 
 
 if __name__ == "__main__":

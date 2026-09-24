@@ -339,7 +339,7 @@ class ARecordIsNotAProseSection(unittest.TestCase):
         self.assertEqual(expected, got)
 
     def test_a_section_is_still_reachable_when_it_is_asked_for_by_name(self) -> None:
-        found = rr.select(ROOT, "wwox", record_id="Change-log", hops=0)
+        found = rr.select(ROOT, "wwox", record_id="Change-log", hops=0, open_sections=True)
         self.assertTrue([r for r, _ in found.hits if r.record_id == "Change-log"])
 
     def test_hops_never_expand_through_a_section(self) -> None:
@@ -903,7 +903,7 @@ class WholeRecordsAtTheirMeasuredLevels(unittest.TestCase):
         self.assertIn("### La domanda, risposta\nappended", ft157.text, "nested blocks stay in")
         self.assertNotIn("twelve debts", ft157.text)
         self.assertNotIn("group intro", ft157.text)
-        mech = self.only("Disease identity")
+        [mech] = [r for r, _ in self.get("Disease identity", open_sections=True).hits]
         self.assertNotIn("BLOCK 1", mech.text)
 
     def test_an_h3_ledger_record_is_addressable_between_its_neighbours(self) -> None:
@@ -954,7 +954,7 @@ class WholeRecordsAtTheirMeasuredLevels(unittest.TestCase):
 
     def test_two_blocks_with_one_name_are_both_returned(self) -> None:
         """Keyed on the heading text, the second `Change-log` was silently dropped."""
-        hits = [r for r, _ in self.get("Change-log").hits]
+        hits = [r for r, _ in self.get("Change-log", open_sections=True).hits]
         self.assertEqual([3, 2], [r.level for r in hits])
 
     def test_two_definitions_of_one_id_are_both_returned_and_named(self) -> None:
@@ -1094,6 +1094,80 @@ class NoMatchIsNotAToolError(unittest.TestCase):
         self.assertIn(answer["repository"]["verdict"], (derived_inputs.BOUND, derived_inputs.DIRTY))
         self.assertTrue(answer["repository"]["commit"])
         self.assertIn("discovery_ledger_current", answer["source_digests"])
+
+
+class CatalogAndNavigation(unittest.TestCase):
+    """D4. A catalog projected at call time and never stored; a named section answered with
+    where it is and what it holds, loaded only when asked."""
+
+    SCRIPT = HERE / "registry_records.py"
+
+    def setUp(self) -> None:
+        import tempfile
+        self.tmp = tempfile.TemporaryDirectory()
+        self.root = Path(self.tmp.name)
+        ledger = self.root / "disease-models/wwox/research/discovery_ledger_current.md"
+        ledger.parent.mkdir(parents=True)
+        ledger.write_text(
+            "# Ledger title\n\n## Run 2026-07-09 — a run\nrun prose\n\n"
+            "### DL-MECH-001 — first\n- **Status**: open · **Tag**: IPOTESI\n\n"
+            "### 🔴 DL-MECH-002 — second\n- **Tag**: DATO\n", encoding="utf-8")
+
+    def tearDown(self) -> None:
+        self.tmp.cleanup()
+
+    def test_naming_a_section_answers_with_navigation_not_its_text(self) -> None:
+        found = rr.select(self.root, "wwox", record_id="Run 2026-07-09 — a run", hops=0)
+        self.assertEqual([], found.hits)
+        [nav] = found.navigation
+        self.assertEqual(["DL-MECH-001", "DL-MECH-002"], nav["contains_records"])
+        self.assertEqual(2, nav["level"])
+        self.assertNotIn("run prose", json.dumps(nav))
+
+    def test_a_section_opens_whole_only_when_asked(self) -> None:
+        found = rr.select(self.root, "wwox", record_id="Run 2026-07-09 — a run", hops=0,
+                          open_sections=True)
+        [record] = [r for r, _ in found.hits]
+        self.assertIn("run prose", record.text)
+        self.assertIn("DL-MECH-002", record.text)
+
+    def test_the_title_section_is_not_a_back_door_to_the_whole_file(self) -> None:
+        found = rr.select(self.root, "wwox", record_id="Ledger title", hops=0)
+        self.assertEqual([], found.hits)
+        self.assertEqual(1, len(found.navigation))
+
+    def test_navigation_alone_is_an_answer_not_an_empty_result(self) -> None:
+        run = subprocess.run([sys.executable, str(self.SCRIPT), "get", "--root", str(self.root),
+                              "--id", "Ledger title"], capture_output=True, text=True)
+        self.assertEqual(0, run.returncode, run.stdout + run.stderr)
+        self.assertIn("SECTIONS NAMED BY THE QUERY", run.stdout)
+        self.assertNotIn("NO RECORD MATCHED", run.stdout)
+
+    def test_the_catalog_projects_records_and_declared_columns(self) -> None:
+        table = rr.catalog(self.root, "wwox", ["discovery_ledger_current"], ["Status", "Tag"])
+        self.assertEqual([("DL-MECH-001", "first", ["open"], ["IPOTESI"]),
+                          ("DL-MECH-002", "second", [], ["DATO"])],
+                         [(r["id"], r["title"], r["Status"], r["Tag"]) for r in table["rows"]])
+        self.assertEqual(1, table["columns"]["Status"]["records_declaring_the_field"])
+        self.assertEqual(2, table["columns"]["Status"]["records_catalogued"])
+
+    def test_an_undeclared_column_is_a_named_refusal(self) -> None:
+        table = rr.catalog(self.root, "wwox", ["discovery_ledger_current"], ["Stato"])
+        self.assertTrue(table["columns"]["Stato"]["no_surface_declares_this_field"])
+        self.assertIn("Status", table["columns"]["Stato"]["similar_field_names"])
+
+    def test_the_catalog_writes_nothing(self) -> None:
+        before = sorted(p.relative_to(self.root) for p in self.root.rglob("*"))
+        subprocess.run([sys.executable, str(self.SCRIPT), "catalog", "--root", str(self.root),
+                        "--column", "Status"], capture_output=True, text=True, check=True)
+        self.assertEqual(before, sorted(p.relative_to(self.root) for p in self.root.rglob("*")))
+
+    def test_the_real_dismissal_catalog_agrees_with_a_heading_scan(self) -> None:
+        text = (ROOT / "disease-models/wwox/research/dismissal_ledger_current.md").read_text(
+            encoding="utf-8")
+        expected = re.findall(r"^### (DIS-\d+)", text, re.M)
+        table = rr.catalog(ROOT, "wwox", ["dismissal_ledger_current"])
+        self.assertEqual(expected, [row["id"] for row in table["rows"]])
 
 
 if __name__ == "__main__":

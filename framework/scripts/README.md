@@ -46,6 +46,7 @@ Run everything as `python3 <path> --help` first. Paths are repo-relative.
 | a cross-paper query over what the deep-dive manifests already evidence (derived, never written to disk) | `framework/scripts/build_evidence_index.py` |
 | **which fields each registry declares, and what values they take** — derived from the files, because no vocabulary is declared anywhere | `framework/scripts/registry_records.py fields` |
 | records whose **declared field** carries a value — composable with `--theme`, `--pmid`, `--id` | `framework/scripts/registry_records.py get --field "Status=consolidated baseline" --theme myelin` |
+| **one row per record** of a surface — id, title, line, and any declared fields as columns with their denominators — projected at call time and never stored | `framework/scripts/registry_records.py catalog --source discovery_ledger_current --column Status` |
 
 > 🔴 **A field value in this corpus is free prose, and the filter says so.** `--field` matches a
 > declared field as a case-insensitive substring, so `Type=INFERENZA` returns 14 of the 39 records
