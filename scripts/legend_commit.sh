@@ -34,7 +34,11 @@ for p in "$@"; do
     exit 4
   fi
 done
-LOCK="${LEGEND_COMMIT_LOCK:-$ROOT/.git/legend_commit.lock}"
+# The lock lives in the COMMON git directory, so every worktree of this repository contends for
+# one lock. `$ROOT/.git` is a directory only in the main checkout; in a linked worktree it is a
+# gitfile, and the old `$ROOT/.git/legend_commit.lock` path could not even be opened there.
+COMMON="$(git rev-parse --path-format=absolute --git-common-dir)"
+LOCK="${LEGEND_COMMIT_LOCK:-$COMMON/legend_commit.lock}"
 
 exec 9>"$LOCK"
 flock -w 900 9 || { echo "could not take the commit lock within 900s" >&2; exit 3; }

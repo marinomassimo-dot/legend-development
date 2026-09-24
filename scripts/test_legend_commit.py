@@ -127,6 +127,43 @@ class LegendCommitWrapper(unittest.TestCase):
         subjects = git(self.repo, "log", "--format=%s", "-2").splitlines()
         self.assertEqual({"concurrent a", "concurrent b"}, set(subjects))
 
+    def _linked_worktree(self, name: str) -> Path:
+        path = Path(self._tmp.name) / name
+        git(self.repo, "worktree", "add", "-q", "-b", f"{name}-branch", str(path))
+        return path
+
+    def test_a_linked_worktree_can_commit(self) -> None:
+        """In a linked worktree `.git` is a gitfile; the lock must not be put under it."""
+        tree = self._linked_worktree("wt1")
+        self.assertTrue((tree / ".git").is_file())
+        (tree / "w.txt").write_text("w\n", encoding="utf-8")
+        result = subprocess.run(["bash", str(WRAPPER), "from a worktree", "w.txt"],
+                                cwd=tree, capture_output=True, text=True)
+        self.assertEqual(0, result.returncode, result.stderr)
+        self.assertEqual("from a worktree", git(tree, "log", "-1", "--format=%s"))
+
+    def test_every_worktree_contends_for_the_one_common_lock(self) -> None:
+        """Serialisation holds across worktrees only if they share one lock file."""
+        import fcntl
+        import time
+        common = Path(git(self.repo, "rev-parse", "--path-format=absolute", "--git-common-dir"))
+        trees = [self.repo, self._linked_worktree("wt1"), self._linked_worktree("wt2")]
+        with open(common / "legend_commit.lock", "w") as held:
+            fcntl.flock(held, fcntl.LOCK_EX)
+            procs = []
+            for index, tree in enumerate(trees):
+                (tree / f"f{index}.txt").write_text("x\n", encoding="utf-8")
+                procs.append(subprocess.Popen(
+                    ["bash", str(WRAPPER), f"blocked {index}", f"f{index}.txt"], cwd=tree,
+                    stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True))
+            time.sleep(1.5)
+            self.assertEqual([None, None, None], [p.poll() for p in procs],
+                             "a wrapper committed while another held the common lock")
+            fcntl.flock(held, fcntl.LOCK_UN)
+        for proc in procs:
+            out, err = proc.communicate(timeout=120)
+            self.assertEqual(0, proc.returncode, err or out)
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
