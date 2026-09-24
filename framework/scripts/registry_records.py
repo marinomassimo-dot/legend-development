@@ -613,6 +613,7 @@ def select(root: Path, disease: str, *, pmid: str = "", doi: str = "", record_id
                 # 598 KB file. By default the answer says where the section is, how big it is
                 # and which records it holds; `--open-section` loads it, and says so.
                 found.navigation.append({
+                    "relation": "section named by --id",
                     "source": record.source, "path": record.path, "heading": record.record_id,
                     "line": record.line, "end_line": record.end_line, "level": record.level,
                     "heading_path": list(record.heading_path), "chars": len(record.text),
@@ -620,6 +621,24 @@ def select(root: Path, disease: str, *, pmid: str = "", doi: str = "", record_id
                 why = ""
             if why:
                 found.add(record, why)
+
+    # 🔴 A DEFINITION IS RETURNED; THE LATER HEADINGS THAT NAME IT ARE LISTED, NOT MERGED. D0
+    # found `### Update DL-MOL-006`, `### STATUS UPDATE — DL-MECH-017`, `## CORREZIONE
+    # APPEND-ONLY FT-062 …`: each updates a record and none is its identity. Returning them as
+    # the record would be first-occurrence identity again; dropping them would hide the update.
+    token = identity_token(record_id) if needle_id else ""
+    if token:
+        names_it = re.compile(r"(?<![\w-])" + re.escape(token) + r"(?![\w-])", re.I)
+        for stem, records in searched.items():
+            for record in records:
+                if same_id(record.identity_id, token) or not names_it.search(record.record_id):
+                    continue
+                found.navigation.append({
+                    "relation": f"heading names {token}; not its definition",
+                    "source": record.source, "path": record.path, "heading": record.record_id,
+                    "line": record.line, "end_line": record.end_line, "level": record.level,
+                    "heading_path": list(record.heading_path), "chars": len(record.text),
+                    "contains_records": list(record.contains)})
 
     # 🔴 THE DENOMINATOR IS OVER THE SEARCHED SURFACES, so it is computed HERE — before the
     # hop loop, which widens `corpus` with whatever a link reaches. A denominator that grew
@@ -724,9 +743,11 @@ def select(root: Path, disease: str, *, pmid: str = "", doi: str = "", record_id
                            if item.record_id.lower() == target.lower()
                            or same_id(item.identity_id, target)]
                 if not matches:
+                    why_not = ("an Obsidian block reference, not a heading — this command "
+                               "resolves headings only" if target.startswith("^") else
+                               "the target record does not exist in the current file")
                     found.unresolved.append(
-                        f"{record.source}#{record.record_id} -> [[{stem}#{target}]] "
-                        f"(the target record does not exist in the current file)")
+                        f"{record.source}#{record.record_id} -> [[{stem}#{target}]] ({why_not})")
                     continue
                 for item in matches:
                     if item.kind == "section":
@@ -840,11 +861,12 @@ def render(found: Selection, *, query: str, full: bool = True) -> str:
                      + (f"  contains: {', '.join(record.contains)}" if record.contains else ""))
         lines.append(record.text.rstrip() if full else record.text.splitlines()[0])
     if found.navigation:
-        lines.append("\n  SECTIONS NAMED BY THE QUERY (navigation — not loaded; add --open-section "
-                     "to load one whole):")
+        lines.append("\n  HEADINGS NAMED BY THE QUERY (navigation — not loaded; --id <heading> "
+                     "--open-section loads a section whole):")
         for item in found.navigation:
             held = item["contains_records"]
-            lines.append(f"    {item['path']}:{item['line']}-{item['end_line']}  h{item['level']}  "
+            lines.append(f"    [{item['relation']}]  "
+                         f"{item['path']}:{item['line']}-{item['end_line']}  h{item['level']}  "
                          f"{item['heading'][:80]}  ({item['chars']:,} chars; "
                          f"{len(held)} record(s)"
                          + (f": {', '.join(held[:12])}" + (" …" if len(held) > 12 else "")

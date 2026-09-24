@@ -1140,7 +1140,7 @@ class CatalogAndNavigation(unittest.TestCase):
         run = subprocess.run([sys.executable, str(self.SCRIPT), "get", "--root", str(self.root),
                               "--id", "Ledger title"], capture_output=True, text=True)
         self.assertEqual(0, run.returncode, run.stdout + run.stderr)
-        self.assertIn("SECTIONS NAMED BY THE QUERY", run.stdout)
+        self.assertIn("HEADINGS NAMED BY THE QUERY", run.stdout)
         self.assertNotIn("NO RECORD MATCHED", run.stdout)
 
     def test_the_catalog_projects_records_and_declared_columns(self) -> None:
@@ -1168,6 +1168,55 @@ class CatalogAndNavigation(unittest.TestCase):
         expected = re.findall(r"^### (DIS-\d+)", text, re.M)
         table = rr.catalog(ROOT, "wwox", ["dismissal_ledger_current"])
         self.assertEqual(expected, [row["id"] for row in table["rows"]])
+
+
+class LedgerIdentityUpdatesAndHops(unittest.TestCase):
+    """D6. A ledger id returns its definition; the later headings that name it stay findable
+    beside it; hops follow declared wikilinks, to a caller's depth, without looping."""
+
+    def setUp(self) -> None:
+        import tempfile
+        self.tmp = tempfile.TemporaryDirectory()
+        self.root = Path(self.tmp.name)
+        ledger = self.root / "disease-models/wwox/research/discovery_ledger_current.md"
+        ledger.parent.mkdir(parents=True)
+        ledger.write_text(
+            "# L\n\n## MECH\n\n"
+            "### DL-MECH-001 — a\nsee [[discovery_ledger_current#DL-MECH-002 — b]]\n\n"
+            "### DL-MECH-002 — b\nsee [[discovery_ledger_current#DL-MECH-001 — a]] and "
+            "[[discovery_ledger_current#DL-MECH-003 — c]] and [[discovery_ledger_current#^fm-1]]\n\n"
+            "### DL-MECH-003 — c\nend of chain\n\n"
+            "## Run 2026-07-26\n\n### STATUS UPDATE — DL-MECH-001 — later\nnews\n\n"
+            "### DL-MECH-0010 — a different id\nx\n", encoding="utf-8")
+
+    def tearDown(self) -> None:
+        self.tmp.cleanup()
+
+    def test_the_definition_is_returned_and_the_update_heading_listed_beside_it(self) -> None:
+        found = rr.select(self.root, "wwox", record_id="DL-MECH-001", hops=0)
+        self.assertEqual(["DL-MECH-001"], [r.identity_id for r, _ in found.hits])
+        related = [n["heading"] for n in found.navigation]
+        self.assertEqual(["STATUS UPDATE — DL-MECH-001 — later"], related)
+        self.assertNotIn("news", found.hits[0][0].text)
+
+    def test_hops_are_caller_controlled_and_cycle_safe(self) -> None:
+        one = rr.select(self.root, "wwox", record_id="DL-MECH-001", hops=1)
+        self.assertEqual(["DL-MECH-001", "DL-MECH-002"], [r.identity_id for r, _ in one.hits])
+        many = rr.select(self.root, "wwox", record_id="DL-MECH-001", hops=50)
+        self.assertEqual(["DL-MECH-001", "DL-MECH-002", "DL-MECH-003"],
+                         [r.identity_id for r, _ in many.hits])
+        self.assertEqual("linked from DL-MECH-002 — b (hop 2)", many.hits[2][1])
+
+    def test_a_block_reference_is_named_for_what_it_is(self) -> None:
+        found = rr.select(self.root, "wwox", record_id="DL-MECH-002", hops=1)
+        self.assertTrue(any("block reference" in item for item in found.unresolved), found.unresolved)
+
+    def test_the_real_ledger_update_is_listed_beside_its_definition(self) -> None:
+        found = rr.select(ROOT, "wwox", record_id="DL-MECH-017", hops=0)
+        [definition] = [r for r, _ in found.hits]
+        self.assertTrue(definition.record_id.startswith("DL-MECH-017"))
+        self.assertTrue(any(n["heading"].startswith("STATUS UPDATE — DL-MECH-017")
+                            for n in found.navigation), found.navigation)
 
 
 if __name__ == "__main__":
