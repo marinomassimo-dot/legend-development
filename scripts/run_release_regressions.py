@@ -230,6 +230,21 @@ def format_success_verdict(target_count: int,
     return lines
 
 
+def format_timing_summary(durations: list[tuple[str, float]], top: int = 5) -> list[str]:
+    """The slowest suites of this run, slowest first, plus the battery's summed suite time.
+
+    Measurement only: nothing here reaches the verdict or the exit code. Until 2026-09-24 the
+    runner knew each suite's start and finish (the guard uses them) and printed neither, so the
+    first question about a slow battery — which suite — needed a hand-built timing loop.
+    """
+    if not durations:
+        return []
+    ranked = sorted(durations, key=lambda item: item[1], reverse=True)[:top]
+    total = sum(seconds for _, seconds in durations)
+    return ([f"SUITE TIME: {total:.1f}s over {len(durations)} suite(s); slowest {len(ranked)}:"]
+            + [f"  {seconds:7.1f}s  {relative}" for relative, seconds in ranked])
+
+
 
 # Trees a regression suite may READ and must never WRITE. On 2026-09-10, during an
 # unattended run, 54 tracked dossiers under disease-models/ were overwritten with the seven
@@ -327,6 +342,7 @@ def main() -> int:
     failures = []
     skips: list[tuple[str, str]] = []
     writers: list[tuple[str, list[str]]] = []
+    durations: list[tuple[str, float]] = []
     baseline = tracked_state(GUARDED_TREES)
     for relative in selected:
         print(f"RUN {relative}", flush=True)
@@ -336,7 +352,9 @@ def main() -> int:
             stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
         finished = time.time()
         sys.stdout.write(result.stdout)
-        sys.stdout.flush()
+        durations.append((relative, finished - started))
+        print(f"TIME {relative}: {finished - started:.1f}s (exit {result.returncode})",
+              flush=True)
         after = tracked_state(GUARDED_TREES)
         if after != baseline:
             changed = sorted(set(after.items()) ^ set(baseline.items()))
@@ -352,6 +370,9 @@ def main() -> int:
         if result.returncode:
             failures.append((relative, result.returncode))
 
+    for line in format_timing_summary(durations):
+        print(line)
+    sys.stdout.flush()
     if failures or writers:
         print("REGRESSION VERDICT: FAIL", file=sys.stderr)
         for relative, paths in writers:

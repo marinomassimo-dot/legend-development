@@ -97,6 +97,18 @@ class VerdictFormattingTests(unittest.TestCase):
                          "REGRESSION VERDICT: PASS WITH SKIPS (40 targets, 1 skipped)")
         self.assertIn("Git object database absent", lines[1])
 
+    def test_timing_summary_ranks_the_slowest_and_sums_the_battery(self) -> None:
+        lines = runner.format_timing_summary(
+            [("a.py", 1.0), ("b.py", 30.0), ("c.py", 2.5)], top=2)
+        self.assertEqual(lines[0], "SUITE TIME: 33.5s over 3 suite(s); slowest 2:")
+        self.assertEqual([line.split()[-1] for line in lines[1:]], ["b.py", "c.py"])
+        self.assertEqual(runner.format_timing_summary([]), [])
+
+    def test_timing_lines_cannot_be_read_as_failures(self) -> None:
+        """`integration_matrix.failing_suites` reads `- <suite>: exit N` lines as failures."""
+        lines = runner.format_timing_summary([("x.py", 1.0)])
+        self.assertFalse([line for line in lines if line.startswith("- ")])
+
     def test_unittest_skip_reason_is_parsed(self) -> None:
         output = (
             "test_anchor (...) ... skipped 'Git object database absent; verification unavailable'\n"
