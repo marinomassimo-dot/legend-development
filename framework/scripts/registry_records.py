@@ -169,6 +169,40 @@ IDENTITY_LEVELS = {
 }
 
 
+# Three declaration shapes, all measured in D0: `**Name:** value` (registries, queue),
+# `- **Name:** value` (dismissal ledger), and `- **Name**: value · **Name**: value` (discovery
+# ledger — the colon outside the bold, several fields on one line). Before D2 only the first
+# was read, so the two ledgers' Status, Tag, Verdict and Outcome were invisible to `--field`.
+# 🔴 The bulleted shapes are read ONLY where D0 found them to be the declaration: elsewhere a
+# bold lead-in on a bullet is prose, and reading it as a field moved the queue's `Status` and
+# `Priority` counts and added 47 "fields" to three surfaces that declare none of them.
+BULLETED_FIELDS = ("dismissal_ledger_current", "discovery_ledger_current")
+FIELD_PLAIN = re.compile(r"^\*\*(?P<name>[^*]+):\*\*\s*(?P<rest>.*)$")
+FIELD_START = re.compile(r"^(?:[-*][ \t]+)?\*\*(?P<name>[^*]+?)(?::\*\*|\*\*:)[ \t]*(?P<rest>.*)$")
+FIELD_NEXT = re.compile(r"[ \t]+·[ \t]+(?=\*\*[^*]+?(?::\*\*|\*\*:))")
+
+
+def declared_fields(line: str, *, bulleted: bool = False) -> list[tuple[str, str]]:
+    """The `(name, value)` pairs one line declares, verbatim; prose declares none.
+
+    A ` · ` splits the line only where a bold field name follows it, so a value that itself
+    contains a middle dot stays whole."""
+    if not bulleted:
+        plain = FIELD_PLAIN.match(line.strip())
+        return [(plain.group("name").strip(), plain.group("rest").strip())] if plain else []
+    match = FIELD_START.match(line.strip())
+    if not match:
+        return []
+    out: list[tuple[str, str]] = []
+    first, *others = FIELD_NEXT.split(match.group("rest"))
+    out.append((match.group("name").strip(), first.strip()))
+    for segment in others:
+        inner = FIELD_START.match(segment)
+        if inner:
+            out.append((inner.group("name").strip(), inner.group("rest").strip()))
+    return out
+
+
 def is_record_id(value: str) -> bool:
     """Does this id have a known addressable shape? Half of the test; see `is_record`."""
     return bool(RECORD_ID.match(DECORATION.sub("", value.strip())))
@@ -242,10 +276,9 @@ class Record:
         carries a wikilink or an em dash is still that field's value.
         """
         out = []
+        bulleted = self.source in BULLETED_FIELDS
         for raw in self.text.splitlines():
-            match = re.match(r"\*\*([^*]+):\*\*\s*(.*)$", raw.strip())
-            if match:
-                out.append((match.group(1).strip(), match.group(2).strip()))
+            out.extend(declared_fields(raw, bulleted=bulleted))
         return out
 
     def identity_values(self) -> str:
@@ -276,6 +309,7 @@ class Selection:
     preambles: dict[str, str] = field(default_factory=dict)
     repository: dict[str, Any] = field(default_factory=dict)
     field_report: list[dict[str, Any]] = field(default_factory=list)
+    term_report: list[dict[str, Any]] = field(default_factory=list)
 
     def add(self, record: Record, why: str) -> None:
         # Keyed on the POSITION, not the heading text: two `### Change-log` blocks are two
@@ -509,10 +543,22 @@ def load_all(root: Path, disease: str, stems: Iterable[str]) -> dict[str, list[R
     return {stem: parse_records(root, disease, stem) for stem in stems}
 
 
+def terms_hit(text: str, terms: list[str], mode: str) -> bool:
+    """Literal, case-insensitive, and nothing else: no stemming, no synonyms, no ranking."""
+    lowered = text.lower()
+    found = [term.lower() in lowered for term in terms]
+    return any(found) if mode == "any" else all(found)
+
+
 def select(root: Path, disease: str, *, pmid: str = "", doi: str = "", record_id: str = "",
-           theme: str = "", hops: int = 1, sources: Iterable[str] | None = None,
+           theme: str | Iterable[str] = "", match: str = "all", hops: int = 1,
+           sources: Iterable[str] | None = None,
            limit: int = 0, constraints: list[tuple[str, str]] | None = None) -> Selection:
     constraints = list(constraints or [])
+    terms = [theme] if isinstance(theme, str) else list(theme)
+    terms = [term for term in terms if term.strip()]
+    if match not in ("any", "all"):
+        raise ValueError(f"match must be 'any' or 'all', got {match!r}")
     stems = list(sources or SOURCES)
     corpus = load_all(root, disease, stems)
     found = Selection()
@@ -533,9 +579,9 @@ def select(root: Path, disease: str, *, pmid: str = "", doi: str = "", record_id
                 why = "identity (doi)"
             elif pmid and pmid in PMID_RE.findall(record.match_text):
                 why = "mention"
-            elif theme and theme.lower() in record.match_text.lower():
+            elif terms and terms_hit(record.match_text, terms, match):
                 why = "theme"
-            elif constraints and not any((needle_id, pmid, doi, theme)):
+            elif constraints and not any((needle_id, pmid, doi, terms)):
                 # With no other selector, the constraints ARE the selection. The candidate is
                 # named here and the filter below decides it, for this branch exactly as for
                 # every other — evaluating `matches_constraints` in both places was one call per
@@ -603,6 +649,18 @@ def select(root: Path, disease: str, *, pmid: str = "", doi: str = "", record_id
             entry["no_surface_declares_this_field"] = True
             entry["similar_field_names"] = near
         found.field_report.append(entry)
+
+    # 🔴 EACH TERM'S OWN COUNT TRAVELS WITH THE ANSWER, over the same searched records. An empty
+    # `all` of two terms reads the same whether one term is absent from the corpus or both are
+    # common and never meet — and those are different findings.
+    for term in terms:
+        found.term_report.append({
+            "term": term, "match": match,
+            "records_containing": sum(1 for records in searched.values() for record in records
+                                      if record.kind == "record"
+                                      and term.lower() in record.text.lower()),
+            "records_searched": sum(1 for records in searched.values() for record in records
+                                    if record.kind == "record")})
 
     # 🔴 Two records claiming the same identity is an ambiguity to SHOW, not to resolve here.
     # 🔴 KEYED ON THE IDENTIFIERS, NOT ON THE STRING. The first cut compared whole identity lines,
@@ -704,6 +762,15 @@ def field_report_lines(report: list[dict[str, Any]]) -> list[str]:
     return lines
 
 
+def term_report_lines(report: list[dict[str, Any]]) -> list[str]:
+    if not report:
+        return []
+    mode = report[0]["match"]
+    return [f"\n  TERMS ({mode}, literal, case-insensitive): " + " · ".join(
+        f"{entry['term']!r} in {entry['records_containing']} of {entry['records_searched']} record(s)"
+        for entry in report)]
+
+
 def repository_line(block: dict[str, Any]) -> str:
     """One line, and it says DIRTY out loud when it is."""
     if not block:
@@ -742,6 +809,7 @@ def render(found: Selection, *, query: str, full: bool = True) -> str:
                      "is a statement about this query over these files. Widen the query, or say "
                      "in the reading that no record was found and what was searched.")
         lines.append(f"  searched: {', '.join(sorted(found.file_digests))}")
+        lines.extend(term_report_lines(found.term_report))
         lines.extend(field_report_lines(found.field_report))
         lines.append(repository_line(found.repository))
         return "\n".join(lines)
@@ -759,6 +827,7 @@ def render(found: Selection, *, query: str, full: bool = True) -> str:
         lines.append("\n  MATCHED BUT NOT RETURNED (prose sections — named so the selection is "
                      "visible, fetch deliberately with --id):")
         lines.extend(f"    {item}" for item in found.notes)
+    lines.extend(term_report_lines(found.term_report))
     lines.extend(field_report_lines(found.field_report))
     if found.ambiguous:
         lines.append("\n  AMBIGUOUS:")
@@ -804,7 +873,10 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--pmid", default="")
     parser.add_argument("--doi", default="")
     parser.add_argument("--id", dest="record_id", default="")
-    parser.add_argument("--theme", default="")
+    parser.add_argument("--theme", action="append", default=[],
+                        help="literal, case-insensitive term; repeatable (see --match)")
+    parser.add_argument("--match", choices=("all", "any"), default="all",
+                        help="with several --theme terms: every term (all) or at least one (any)")
     parser.add_argument("--field", action="append", default=[], metavar="NAME=VALUE",
                         help="keep only records whose DECLARED field NAME contains VALUE "
                              "(case-insensitive substring); repeatable, and all must hold. "
@@ -859,12 +931,14 @@ def main(argv: list[str] | None = None) -> int:
             parser.error(f"unknown --source {bad}; known: {', '.join(SOURCES)}")
 
     found = select(root, args.disease, pmid=args.pmid, doi=args.doi, record_id=args.record_id,
-                   theme=args.theme, hops=args.hops, sources=args.source or None,
+                   theme=args.theme, match=args.match, hops=args.hops,
+                   sources=args.source or None,
                    limit=args.limit, constraints=constraints)
     query = " ".join(filter(None, [f"pmid={args.pmid}" if args.pmid else "",
                                    f"doi={args.doi}" if args.doi else "",
                                    f"id={args.record_id}" if args.record_id else "",
-                                   f"theme={args.theme}" if args.theme else "",
+                                   (f"theme={'+'.join(args.theme)} ({args.match})"
+                                    if args.theme else ""),
                                    " ".join(f"field:{item}" for item in args.field),
                                    f"hops={args.hops}"]))
     if args.json:
@@ -878,6 +952,7 @@ def main(argv: list[str] | None = None) -> int:
             "source_digests": found.file_digests,
             "surface_preambles": found.preambles,
             "field_filters": found.field_report,
+            "term_report": found.term_report,
             "repository": found.repository,
             "empty_result_is_not_a_scientific_statement": not found.hits,
         }, indent=1, ensure_ascii=False))

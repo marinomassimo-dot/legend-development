@@ -969,5 +969,93 @@ class WholeRecordsAtTheirMeasuredLevels(unittest.TestCase):
         self.assertEqual([], self.get("DL-MECH-999").hits)
 
 
+class ThinDeterministicQueries(unittest.TestCase):
+    """D2. Literal terms with an explicit `any`/`all`, and fields read in the declaration shapes
+    D0 measured — bulleted only on the two ledgers that declare fields that way."""
+
+    FILES = {
+        "research/discovery_ledger_current.md":
+            "# L\n\n## MECH\n\n"
+            "### DL-MECH-001 — a\n- **Status**: maturing · **Tag**: DATO · **Fonte**: x · y\nGSK3 tau\n\n"
+            "### DL-MECH-002 — b\n- **Status**: open · **Tag**: IPOTESI\nGSK3 only\n\n"
+            "### DL-MECH-003 — c\n- **Status**: parked\ntau only\n",
+        "research/dismissal_ledger_current.md":
+            "# D\n\n## Active rejections\n\n### DIS-001 — r\n- **Verdict:** holds\n",
+        "registries/claim_registry_current.md":
+            "# C\n\n## CLAIM 001\n**Status:** in observation\n- **Status:** a bullet in prose\n",
+    }
+
+    def setUp(self) -> None:
+        import tempfile
+        self.tmp = tempfile.TemporaryDirectory()
+        self.root = Path(self.tmp.name)
+        for rel, text in self.FILES.items():
+            path = self.root / "disease-models/wwox" / rel
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(text, encoding="utf-8")
+
+    def tearDown(self) -> None:
+        self.tmp.cleanup()
+
+    def ids(self, found) -> list[str]:
+        return [r.identity_id for r, _ in found.hits]
+
+    def test_all_needs_every_term_and_any_needs_one(self) -> None:
+        both = rr.select(self.root, "wwox", theme=["gsk3", "TAU"], match="all", hops=0)
+        either = rr.select(self.root, "wwox", theme=["gsk3", "TAU"], match="any", hops=0)
+        self.assertEqual(["DL-MECH-001"], self.ids(both))
+        self.assertEqual(["DL-MECH-001", "DL-MECH-002", "DL-MECH-003"], self.ids(either))
+
+    def test_each_term_reports_its_own_count(self) -> None:
+        found = rr.select(self.root, "wwox", theme=["gsk3", "absent-term"], hops=0)
+        self.assertEqual([], found.hits)
+        counts = {e["term"]: e["records_containing"] for e in found.term_report}
+        self.assertEqual({"gsk3": 2, "absent-term": 0}, counts)
+
+    def test_the_order_is_the_files_order_every_time(self) -> None:
+        runs = [self.ids(rr.select(self.root, "wwox", theme=["o"], match="any", hops=0))
+                for _ in range(3)]
+        self.assertEqual(runs[0], runs[1])
+        self.assertEqual(runs[0], runs[2])
+
+    def test_a_term_is_literal(self) -> None:
+        self.assertEqual([], rr.select(self.root, "wwox", theme="GSK-3", hops=0).hits)
+
+    def test_an_unknown_match_mode_is_refused(self) -> None:
+        with self.assertRaises(ValueError):
+            rr.select(self.root, "wwox", theme="x", match="some", hops=0)
+
+    def test_ledger_fields_are_read_in_their_bulleted_shapes(self) -> None:
+        found = rr.select(self.root, "wwox", constraints=[("Status", "maturing")], hops=0,
+                          sources=["discovery_ledger_current"])
+        self.assertEqual(["DL-MECH-001"], self.ids(found))
+        report = found.field_report[0]
+        self.assertEqual((3, 1), (report["records_declaring_the_field"], report["records_matching"]))
+        dis = rr.select(self.root, "wwox", constraints=[("Verdict", "holds")], hops=0,
+                        sources=["dismissal_ledger_current"])
+        self.assertEqual(["DIS-001"], self.ids(dis))
+
+    def test_several_fields_on_one_line_split_only_before_a_field_name(self) -> None:
+        record = [r for r in rr.parse_records(self.root, "wwox", "discovery_ledger_current")
+                  if r.identity_id == "DL-MECH-001"][0]
+        self.assertEqual([("Status", "maturing"), ("Tag", "DATO"), ("Fonte", "x · y")],
+                         record.fields())
+
+    def test_a_bulleted_bold_lead_in_is_prose_on_other_surfaces(self) -> None:
+        record = rr.parse_records(self.root, "wwox", "claim_registry_current")[-1]
+        self.assertEqual([("Status", "in observation")], record.fields())
+
+
+class LedgerFieldsOnTheRealCorpus(unittest.TestCase):
+    def test_the_ledger_status_denominator_agrees_with_a_line_scan(self) -> None:
+        expected = sum(1 for body in ledger_leads_by_scan().values()
+                       if re.search(r"^\s*(?:[-*]\s+)?\*\*Status(?::\*\*|\*\*:)"
+                                    r"|\s·\s\*\*Status(?::\*\*|\*\*:)", body, re.M))
+        found = rr.select(ROOT, "wwox", constraints=[("Status", "")], hops=0,
+                          sources=["discovery_ledger_current"])
+        self.assertGreater(expected, 100)
+        self.assertEqual(expected, found.field_report[0]["records_declaring_the_field"])
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
