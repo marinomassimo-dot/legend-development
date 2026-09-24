@@ -34,7 +34,7 @@ Default: **a bounded autonomous full run**, not single manual skills.
 ## The phases (auto-sequenced)
 
 ### Phase 0 — BOOTSTRAP & GATE
-- `legend-start` → selects the scientific session profile and loads its context + structural LINT.
+- `legend-start` → selects the scientific session profile and loads its context + structural LINT. For a run that reads new sources, the profile's scientific surfaces wait for the comparison step of Phase 3.
   - `BLOCK_SYSTEM` → recovery, **STOP**.
   - `BLOCK_BATCH_COMMIT` → read-only analysis continues; only Phase 6 is blocked.
 - Growth bootstrap: load `legend-capability-scout` and keep a notepad of the **capability gaps** that emerge during the run (needed in Phase 7).
@@ -78,6 +78,13 @@ python3 .claude/skills/legend-study-intake-triage/scripts/retraction_check.py --
 
 ### Phase 3 — ANALYZE (double lens, per paper)
 Before opening the paper, apply the duplicate-work gate in `framework/protocols/fulltext_read_receipt.md`: resolve PMID/DOI and reuse an adequate prior complete analysis. A repeated complete read needs an explicit `reread_reason`.
+
+🧭 **Source first, then LEGEND.** A first contact is `context_policy: SOURCE_FIRST` (defined once, in the same protocol's *Before reading: context policy*):
+1. **Before the source:** `python3 framework/scripts/paper_packet.py packet --pmid <PMID>` (identity, artefacts, prior coverage, acquisition history — and no prior conclusion), the lens of the skill that will read it, and the integrity facts from Phase 1. Not the claim registry, the working model, the paper's registry records, a dossier, a ledger lead or the group-credibility verdict.
+2. **The first pass:** the reading and its `verbatim_locators`, through the lens of `legend-deepdive` or `legend-discovery` — their methods live there, not here.
+3. **Then the comparison:** write `FIRST-PASS OBSERVATIONS COMPLETE → PRIOR KNOWLEDGE ADMITTED FOR COMPARISON`, retrieve the paper's records with `python3 framework/scripts/registry_records.py get --pmid <PMID> --hops 1` (widen deliberately), and load the working model and claim registry whole where the comparison needs the global state.
+
+In a batch the main session cannot unsee the previous paper's comparison: run each first pass in a fresh context (the `fulltext-dossier` agent), or declare `QUESTION_DRIVEN` and name what the session already held. A reread for a named question is `QUESTION_DRIVEN` by design, and starts from that question.
 📖 **The gold is in the details of EVERY study.** Classification decides reading order, not a paper's intrinsic value. `grep`/keyword search is forbidden as a *method of study analysis*: it may serve only to find files, dedup, or do technical audit after reading, never to decide what a paper says. If a full text is available, it must always be interrogated in detail: Methods, Results, figures/tables, limits, materials/supplementary when present. PDF extraction only makes the text readable and citable; it does not license selective reading. Minimum output per full text: a section-by-section coverage map, checked details, unread/unavailable details, and a status (`partial_fulltext_read`, `complete_fulltext_read`, or `FULL TEXT LARGE — COMPLETE READING IN PROGRESS`). `Evidence depth: full text reviewed` is admissible only with `coverage_status: complete_fulltext_read`. If the study is `P0_FAST_TRACK`, `P1_HIGH`, `CANONICAL_CANDIDATE`, WWOX-direct, model-shifting, safety-relevant, therapy/GT/ASO-relevant, or the operator calls it important, the full reading must be completed before the final analysis.
 
 💎 **Every study is gold — an inviolable rule.** Every paper (even on animals, the elderly, cancer, or non-WWOX) condenses years of research. **If you have the full text, you analyze it anyway**, at minimum **Methods + Conclusions** (+ key results), looking for: a reusable assay/reagent/model, a mechanism/pathway, a biomarker, a repurposing rationale, a safety signal, a failure mode, or a new research line. **The reading is mandatory; a positive result is not.** The explicit outcome, and what makes a null earned rather than lazy, are defined once in [`legend-discovery`](../legend-discovery/SKILL.md).

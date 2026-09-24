@@ -24,6 +24,10 @@ Paths are relative to the repo root.
    [operator manual §1](../../../framework/manuals/operator_manual.md#1-modalità-di-sessione):
    `HARNESS`, `MINIMAL`, `STANDARD` or `FULL`. Loads that profile's context; role alone does
    not choose a profile. If the task changes, applies the new profile before the new work.
+   When the work is a first reading of a source (`context_policy: SOURCE_FIRST`,
+   [`fulltext_read_receipt.md`](../../../framework/protocols/fulltext_read_receipt.md#before-reading-context-policy)),
+   the profile's scientific surfaces are loaded at the comparison step, after the first pass —
+   not here. Bootstrap stays state, rules and LINT.
    🔴 **No profile below `FULL` loads `paper_registry_current.md` or
    `literature_tracking_log_current.md` whole** (402 KB + 480 KB on 2026-09-11, growing at every
    commit). Their relevant records come back entire, with provenance, from

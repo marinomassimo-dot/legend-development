@@ -72,6 +72,12 @@ scientifico pertinente e caricarne il contesto. Le letture full-text, i receipt,
   con percorso, identificativo e digest, risolve i collegamenti dichiarati, nomina ambiguità,
   link irrisolti e ciò che ha escluso, e **non dichiara mai completezza scientifica quando non
   trova nulla**. Un risultato vuoto esce con codice diverso da zero e lo dice a parole.
+- **Quando si caricano.** Se il compito è la prima lettura di una fonte (`context_policy:
+  SOURCE_FIRST`, [`fulltext_read_receipt.md`](../protocols/fulltext_read_receipt.md#before-reading-context-policy)),
+  i file sopra non entrano nel contesto all'avvio: prima della fonte bastano
+  `paper_packet.py packet --pmid <PMID>`, la domanda o la lente dichiarata e i fatti di integrità;
+  i file sopra si caricano **dopo** il primo passaggio, al confronto. Nulla si perde: cambia il
+  momento, non il contenuto.
 
 **Non fare**
 - no meta
@@ -93,6 +99,7 @@ scientifico pertinente e caricarne il contesto. Le letture full-text, i receipt,
   confronto apre una domanda nuova, ed è un ampliamento esplicito, non un preload
 - meta_index
 - meta rilevanti (solo quelle coinvolte)
+- tutto quanto sopra, per una prima lettura, **dopo** il primo passaggio sulla fonte, come in § 1.1
 
 **Fare**
 - aggiornare claim
