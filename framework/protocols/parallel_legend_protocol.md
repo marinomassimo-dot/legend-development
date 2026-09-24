@@ -45,6 +45,13 @@ Conflicts between branches:
 - Branch commit candidates never overwrite each other
 - Branch logs remain after the merge as an audit trail
 
+### 1.5 Waiting on another job
+- Use the runtime's own completion notification when it has one.
+- Otherwise wait by identity — exact PID, `PID:START`, pid file or completion file — with a
+  bounded timeout, via [`process_wait.py`](../scripts/process_wait.py).
+- A process name, including a `pgrep -f` pattern, is not an identity: it can match the waiter
+  itself. The reasons and the incidents live in that tool's docstring, not here.
+
 ---
 
 ## 2. WHEN TO USE PARALLEL BRANCHES
