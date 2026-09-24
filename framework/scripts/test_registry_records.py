@@ -1219,5 +1219,71 @@ class LedgerIdentityUpdatesAndHops(unittest.TestCase):
                             for n in found.navigation), found.navigation)
 
 
+class RetrievalAcceptanceBench(unittest.TestCase):
+    """Representative real records on all seven surfaces, including every edge D0 found: the
+    expected record is cut by an independent line scanner, never by the selector, and the
+    selector must return exactly it — same line, same id, same bytes, one record. On the tool
+    before D1 this bench scored 11 of 25; every miss was a retrieval-rule defect."""
+
+    CASES = (
+        ("registries/paper_registry_current.md", "PAPER 044", 2),
+        ("registries/paper_registry_current.md", "CORPUS P206", 2),
+        ("registries/paper_registry_current.md", "CORPUS-STUB-073", 2),
+        ("registries/literature_tracking_log_current.md", "LIT-0405", 2),
+        ("registries/literature_tracking_log_current.md", "LIT-EX-001", 2),
+        ("registries/claim_registry_current.md", "CLAIM 030", 2),
+        ("registries/working_model_current.md", "BLOCK 1", 1),
+        ("registries/working_model_current.md", "BLOCK 3", 1),
+        ("research/dismissal_ledger_current.md", "DIS-001", 3),
+        ("research/dismissal_ledger_current.md", "DIS-012", 3),
+        ("research/discovery_ledger_current.md", "DL-BIO-001", 3),
+        ("research/discovery_ledger_current.md", "DL-MECH-029", 3),
+        ("research/discovery_ledger_current.md", "DL-MECH-017", 3),
+        ("research/discovery_ledger_current.md", "DL-MECH-069", 3),
+        ("research/discovery_ledger_current.md", "DL-MECH-069b", 4),
+        ("research/discovery_ledger_current.md", "DL-METH-107", 4),
+        ("research/full_text_queue_current.md", "FT-022", 2),
+        ("research/full_text_queue_current.md", "FT-062", 2),
+        ("research/full_text_queue_current.md", "FT-069", 2),
+        ("research/full_text_queue_current.md", "FT-157", 2),
+        ("research/full_text_queue_current.md", "FT-158", 2),
+    )
+
+    @staticmethod
+    def scan(path: Path, record_id: str, level: int) -> tuple[int | None, str]:
+        lines = path.read_text(encoding="utf-8").splitlines(keepends=True)
+        fenced, start, out = False, None, []
+        for index, line in enumerate(lines):
+            if re.match(r"^[ \t]{0,3}(```|~~~)", line):
+                fenced = not fenced
+            match = None if fenced else re.match(r"^(#{1,6})[ \t]+(\S.*?)[ \t]*$",
+                                                  line.rstrip("\r\n"))
+            if start is None and match and len(match.group(1)) == level:
+                title = re.sub(r"^[^0-9A-Za-z]+", "", match.group(2))
+                if re.match(re.escape(record_id) + r"($|[\s—–:\-])", title, re.I):
+                    start = index
+                    out.append(line)
+                    continue
+            if start is not None:
+                if match and len(match.group(1)) <= level:
+                    break
+                out.append(line)
+        return (start + 1 if start is not None else None), "".join(out)
+
+    def test_every_representative_record_comes_back_exactly(self) -> None:
+        for rel, record_id, level in self.CASES:
+            with self.subTest(record_id=record_id):
+                path = ROOT / "disease-models/wwox" / rel
+                line, text = self.scan(path, record_id, level)
+                self.assertIsNotNone(line, "bad fixture: the scanner found no such record")
+                found = rr.select(ROOT, "wwox", record_id=record_id, hops=0)
+                records = [r for r, _ in found.hits]
+                self.assertEqual(1, len(records), [r.record_id for r in records])
+                self.assertEqual((line, record_id.lower(), level),
+                                 (records[0].line, records[0].identity_id.lower(), records[0].level))
+                self.assertEqual(text, records[0].text)
+                self.assertEqual(f"disease-models/wwox/{rel}", records[0].path)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
