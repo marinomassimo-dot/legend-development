@@ -108,13 +108,12 @@ Commit candidates must declare their intended `target_wm_version`.
 last_batch_commit_id: BATCH_20260921_002
 last_batch_commit_date: 2026-09-21
 last_batch_commit_type: MINOR
-batch_20260921_002_scope: "A9 CLOSED BY READING, NOT BY A BETTER ROUTE. PMID 35984507 (Carvalho 2022, Cell Mol Life Sci 79(9):487) was the session's most-requested acquisition and its PMC record is a zero-length stub; the operator supplied the publisher PDF AND the supplementary, and both were read. CORPUS-STUB-070 / LIT-0093 promoted to PAPER 097, T3, MODERATE (declassed from a triage HIGH set on the title), GENERATING NO CLAIM and moving no working model - the model organism is wild-type WWOX in hyperglycaemia and the reference genotype's problem is too little functional WWOX. THE READING NARROWS ONE SENTENCE THAT WAS ALREADY IN THE REPOSITORY: the peptide-intervention audit's 2026-09-20 addendum said an independent lab confirms that INHIBITING WWOX is protective in neurons; what the paper supports is that ZFRA1-31 IS PROTECTIVE AND LOWERS pY33-WWOX. Three text negatives carry that, all zero in article AND supplementary: no genetic WWOX arm (siRNA/shRNA/knockdown/knockout/CRISPR/transfect/lentivir), no inactive-peptide control (scrambled, S8G; the only specificity statement is 'data not shown'), and NO TOTAL-WWOX MEASUREMENT although WWOX Merck Millipore ABN413 is listed in the methods beside the phospho antibody and the blots are normalised to beta-actin - so the paper's central number, the ~64% (late-intervention arm, paired with ~16% viability), cannot separate 'Zfra inhibited WWOX' from 'Zfra consumed WWOX'. THE THERAPEUTIC CONCLUSION IS UNCHANGED AND FIRMER because both readings point the same way where functional WWOX is scarce: category objection, not dosing. D-15 recorded: the only genetic WWOX result inside the paper is a citation to its ref [18], the MPP+ dominant-negative already held as PMID 18371080, and is not a second observation. D-14 untouched: figures captions_only in both receipts, no panel inspected, every negative is a TEXT negative. INSTRUMENT: this deployment has no PDF toolchain, so framework/scripts/pdf_text_extract.py was written for this read and ships with 20 tests; it REFUSES to print a query count until named positive controls come back non-zero. That gate earned itself immediately - a first tolerant matcher returned S8G=1 from a byte run inside an embedded font program, which would have entered the reading as evidence that the inactive control peptide existed; non-text runs are now an unbridgeable barrier, and a Word language-tag artefact that would have made every phrase-level negative in the supplementary false is stripped. Receipts FTR-20260921-35984507-01 and -02; output A9_fulltext_read_20260921.md. LINT PASS."
-batch_20260921_002_candidates: 1
 ```
 
-Every earlier batch — each `batch_*_scope` back to `BATCH_20260810_001`, the keys written beside
-them and the notes on `BATCH_20260806_002` — is in [`state_history.md`](state_history.md) § 4.
-Nothing there is a current value; the three `last_batch_*` fields above are.
+Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
+with the keys written beside each and the notes on `BATCH_20260806_002` — is in
+[`state_history.md`](state_history.md) § 4. Nothing there is a current value; the three
+`last_batch_*` fields above are.
 
 ---
 
@@ -247,16 +246,14 @@ from the grandfathered list.
 
 ### Unread-premise ratchet
 
+The incident that motivated it is in [`state_history.md`](state_history.md) § 6.2.
+
 A separate and harsher debt, measured on 2026-07-26 by `session_self_eval.py`. The *reasoning*
 layer — metas, therapeutic strategies, the analysis files — cites papers as **support for
 conclusions**. The first measurement found seventeen of eighteen PMIDs with **no
 complete-read receipt, no registry full-text declaration and no full-text-queue entry**. The
 ratchet has since fallen as papers were read or their debt was made explicit; the current
 baseline below must equal the live count, never preserve historical padding.
-
-This is the failure mode that let PMID 22193544 be load-bearing in five files while unread,
-with every existing check passing. It is invisible by construction, because leaning on a paper
-writes nothing anywhere. So it is measured instead of assumed.
 
 ```yaml
 unread_premise_baseline: 0
@@ -272,14 +269,8 @@ rather than punitive — **declared reading debt is legitimate work in progress;
 
 ### 6.4 — `panel_text_relation`: manifests that do not say whether anyone looked at the panel
 
-A locator's `surface` records which surface a quote came **from**. It cannot record whether the
-*other* surface was ever opened, and that is a different fact with its own failure mode. On
-**2026-08-04** a figure panel reversed a conclusion the running text did not contain; on
-**2026-08-06** an unmarked asterisk was the difference between *«not significant»* and *«not
-tested»*; on **2026-08-10** Figure 3B turned a *«dose-dependent»* continuum into a threshold,
-and a second panel showed that the comparison a rescue claim rested on had never been drawn.
-In every case the text was **accurate and incomplete** — the one thing a text-only pipeline
-cannot see.
+The incidents behind the field and behind `panel_qualifies_text` are in
+[`state_history.md`](state_history.md) § 6.4; the rules that bind stay here.
 
 So each schema-v2 locator declares `panel_text_relation`: `text_only` · `panel_only` ·
 `text_confirmed_by_panel` · `text_contradicted_by_panel` · `panel_qualifies_text` ·
@@ -287,23 +278,6 @@ So each schema-v2 locator declares `panel_text_relation`: `text_only` · `panel_
 `contradicts: "entries[N]"` and `qualifies: "entries[N]"`, and that pointer is a `BLOCK` when
 missing — an unpointed assertion about another locator is prose in a JSON field that no reader
 can trace and no command can check.
-
-🔴 **`panel_qualifies_text` was added on 2026-08-10, on six independent instances across five
-papers found by three actors who had not spoken.** The panel bears on the sentence and
-*neither agrees nor disagrees with it*: on `PMID 36779245` the text says one versus two
-missense variants make no difference while Figure 4A orders null/missense **above**
-missense/missense with overlapping bands; on `PMID 32000863` the caption says lithium
-suppressed seizures in `Wwox−/−` mice — **which is true** — and the panel shows the same
-suppression in `+/+` and `+/−`; on `PMID 38182577` two pairs were **downgraded from
-contradiction** after checking that the panel is not the one the sentence cites.
-
-Every admitted value was **false** on those entries: `text_only` denies a panel that exists,
-`panel_only` denies a text relation that exists, `text_confirmed_by_panel` is false,
-`text_contradicted_by_panel` is the word that had been removed *after being verified wrong*,
-and `unknown_legacy` is false for a reading made today. **When no admitted value is true, the
-defect is the enum, not the choice** — forcing one would write a known falsehood into
-canonical state, and that outlasts any ordering of contracts. *«Incomplete is not false»* is
-the shortest statement of the relation.
 
 The needle field is `qualifies_needle`, not the bare `needle` the value was first emitted
 with. That is the **smaller** vocabulary, not the larger: `contradicts`/`contradicts_needle`
@@ -325,22 +299,18 @@ applied to the one place it had been left uncovered.
 
 ### 6.5 — the commit-candidate backlog: read, and not promoted
 
+The measurements that shaped the backlog count are in
+[`state_history.md`](state_history.md) § 6.5; the rules that bind stay here.
+
 §6.3 measures what the reasoning layer leans on **without having read it**. Nothing measured
 the mirror: a reading finished and never propagated. Leaning on a paper writes nothing
 anywhere — and neither does stopping one step short of the registry.
 
-Measured 2026-08-10, and the defect sat one level earlier than *"nobody counts them"*.
-`staging/` held **12** `commit_candidate_*.md` of which most were long propagated, and only
-5 carried a `Status:` line at all — in every case a claim's or a paper's status copied into the
-body, never the candidate's own lifecycle. **The population a counter would count had no
-state**, so a *"≥ 5 candidates"* trigger reading that directory would have fired permanently
-and meant nothing.
-
 The state is therefore **derived, never declared**. A `candidate_status:` field would be a
 value someone must remember to flip, and flipping costs less than propagating — so on the day
 the queue is inconvenient the field moves instead of the work. The signal already existed,
-written for another purpose: **every `batch_*_scope` — here and in `state_history.md` § 4 — names
-the candidates that batch propagated.** Consumed = named in a scope; pending = on disk and named nowhere. The only way
+written for another purpose: **every `batch_*_scope` in `state_history.md` § 4 names the
+candidates that batch propagated.** Consumed = named in a scope; pending = on disk and named nowhere. The only way
 to lower the number is to propagate, because the scope is what records it.
 
 **A trigger, deliberately not a ratchet.** A ratchet would make accumulating candidates an
@@ -348,12 +318,6 @@ offence, and it is not one — between batches the backlog is *supposed* to grow
 system reads faster than it propagates. What must not happen is that it grows silently, so
 above the trigger the next `BATCH_COMMIT` either propagates or records why not. Same contract
 as `SCALE_TRIGGER`: nothing is wrong, something is due.
-
-Its first run found a record no machine could read: `BATCH_20260726_001` had written
-`CC-20260726-001/002/003`, a compressed range that names one candidate to a matcher and three
-to a person, so 002 and 003 read as pending forever. **The manifest note was expanded rather
-than the matcher loosened** — a matcher that guessed at ranges would eventually guess wrong in
-the quiet direction, reporting as done work that nobody did.
 
 ```yaml
 panel_relation_legacy_baseline: 13

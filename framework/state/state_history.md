@@ -24,6 +24,8 @@ the repeated `prev_batch_commit_id` and the `target_wm_version` / `last_wm_updat
 `BATCH_20260909_001` — and none of them is a current value.
 
 ```yaml
+batch_20260921_002_scope: "A9 CLOSED BY READING, NOT BY A BETTER ROUTE. PMID 35984507 (Carvalho 2022, Cell Mol Life Sci 79(9):487) was the session's most-requested acquisition and its PMC record is a zero-length stub; the operator supplied the publisher PDF AND the supplementary, and both were read. CORPUS-STUB-070 / LIT-0093 promoted to PAPER 097, T3, MODERATE (declassed from a triage HIGH set on the title), GENERATING NO CLAIM and moving no working model - the model organism is wild-type WWOX in hyperglycaemia and the reference genotype's problem is too little functional WWOX. THE READING NARROWS ONE SENTENCE THAT WAS ALREADY IN THE REPOSITORY: the peptide-intervention audit's 2026-09-20 addendum said an independent lab confirms that INHIBITING WWOX is protective in neurons; what the paper supports is that ZFRA1-31 IS PROTECTIVE AND LOWERS pY33-WWOX. Three text negatives carry that, all zero in article AND supplementary: no genetic WWOX arm (siRNA/shRNA/knockdown/knockout/CRISPR/transfect/lentivir), no inactive-peptide control (scrambled, S8G; the only specificity statement is 'data not shown'), and NO TOTAL-WWOX MEASUREMENT although WWOX Merck Millipore ABN413 is listed in the methods beside the phospho antibody and the blots are normalised to beta-actin - so the paper's central number, the ~64% (late-intervention arm, paired with ~16% viability), cannot separate 'Zfra inhibited WWOX' from 'Zfra consumed WWOX'. THE THERAPEUTIC CONCLUSION IS UNCHANGED AND FIRMER because both readings point the same way where functional WWOX is scarce: category objection, not dosing. D-15 recorded: the only genetic WWOX result inside the paper is a citation to its ref [18], the MPP+ dominant-negative already held as PMID 18371080, and is not a second observation. D-14 untouched: figures captions_only in both receipts, no panel inspected, every negative is a TEXT negative. INSTRUMENT: this deployment has no PDF toolchain, so framework/scripts/pdf_text_extract.py was written for this read and ships with 20 tests; it REFUSES to print a query count until named positive controls come back non-zero. That gate earned itself immediately - a first tolerant matcher returned S8G=1 from a byte run inside an embedded font program, which would have entered the reading as evidence that the inactive control peptide existed; non-text runs are now an unbridgeable barrier, and a Word language-tag artefact that would have made every phrase-level negative in the supplementary false is stripped. Receipts FTR-20260921-35984507-01 and -02; output A9_fulltext_read_20260921.md. LINT PASS."
+batch_20260921_002_candidates: 1
 prev_batch_commit_id_before_20260921_002: BATCH_20260921_001
 batch_20260921_001_scope: "Four operator-approved candidates propagated with narrowings; no claim reversed, no status changed. CLAIM 032 title/summary/dose-corollary bounded to the endpoint class actually measured, with PREMISE: NOBODY_LOOKED on cognition, EEG and network excitability - the evidence state is 'insufficient for a general conclusion of no phenotype', and it still does not demonstrate disease in carriers. CLAIM 030 'proteina assente' -> 'proteina non rilevata al Western blot', PREMISE: DETECTION_FLOOR, aligned to CLAIM 019 (consolidated baseline). CLAIM 039 cerebellar limb narrowed: neither evidence stream establishes nor excludes a cerebellar contribution; stays a rat-model claim; no human imaging imported. CORPUS-STUB-150 promoted to PAPER 096 (PMID 34140629), T3/LOW, generating no claim. BLOCK 2 mirror rows 032 and 039 moved with their claims. D-17 DEFERRED by the operator and excluded from this batch."
 batch_20260921_001_candidates: 4
@@ -131,6 +133,64 @@ road 2 — the surface rebuilt from the rendering, declared as a new artifact wi
 extraction method. `FT-041` carries it.
 
 ---
+
+---
+
+---
+
+## 6.2–6.5 Incidents and measurements behind the manifest's ratchets
+
+Paragraphs moved verbatim on 2026-09-24 (F2) from the manifest subsections named below, in their
+original order. The rules they explain stayed in the manifest; these are how the rules came to be.
+
+### 6.2 Unread-premise ratchet
+
+This is the failure mode that let PMID 22193544 be load-bearing in five files while unread,
+with every existing check passing. It is invisible by construction, because leaning on a paper
+writes nothing anywhere. So it is measured instead of assumed.
+
+### 6.4 — `panel_text_relation`: manifests that do not say whether anyone looked at the panel
+
+A locator's `surface` records which surface a quote came **from**. It cannot record whether the
+*other* surface was ever opened, and that is a different fact with its own failure mode. On
+**2026-08-04** a figure panel reversed a conclusion the running text did not contain; on
+**2026-08-06** an unmarked asterisk was the difference between *«not significant»* and *«not
+tested»*; on **2026-08-10** Figure 3B turned a *«dose-dependent»* continuum into a threshold,
+and a second panel showed that the comparison a rescue claim rested on had never been drawn.
+In every case the text was **accurate and incomplete** — the one thing a text-only pipeline
+cannot see.
+
+🔴 **`panel_qualifies_text` was added on 2026-08-10, on six independent instances across five
+papers found by three actors who had not spoken.** The panel bears on the sentence and
+*neither agrees nor disagrees with it*: on `PMID 36779245` the text says one versus two
+missense variants make no difference while Figure 4A orders null/missense **above**
+missense/missense with overlapping bands; on `PMID 32000863` the caption says lithium
+suppressed seizures in `Wwox−/−` mice — **which is true** — and the panel shows the same
+suppression in `+/+` and `+/−`; on `PMID 38182577` two pairs were **downgraded from
+contradiction** after checking that the panel is not the one the sentence cites.
+
+Every admitted value was **false** on those entries: `text_only` denies a panel that exists,
+`panel_only` denies a text relation that exists, `text_confirmed_by_panel` is false,
+`text_contradicted_by_panel` is the word that had been removed *after being verified wrong*,
+and `unknown_legacy` is false for a reading made today. **When no admitted value is true, the
+defect is the enum, not the choice** — forcing one would write a known falsehood into
+canonical state, and that outlasts any ordering of contracts. *«Incomplete is not false»* is
+the shortest statement of the relation.
+
+### 6.5 — the commit-candidate backlog: read, and not promoted
+
+Measured 2026-08-10, and the defect sat one level earlier than *"nobody counts them"*.
+`staging/` held **12** `commit_candidate_*.md` of which most were long propagated, and only
+5 carried a `Status:` line at all — in every case a claim's or a paper's status copied into the
+body, never the candidate's own lifecycle. **The population a counter would count had no
+state**, so a *"≥ 5 candidates"* trigger reading that directory would have fired permanently
+and meant nothing.
+
+Its first run found a record no machine could read: `BATCH_20260726_001` had written
+`CC-20260726-001/002/003`, a compressed range that names one candidate to a matcher and three
+to a person, so 002 and 003 read as pending forever. **The manifest note was expanded rather
+than the matcher loosened** — a matcher that guessed at ranges would eventually guess wrong in
+the quiet direction, reporting as done work that nobody did.
 
 ---
 

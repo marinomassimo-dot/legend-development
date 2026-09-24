@@ -19,7 +19,7 @@ Paths are relative to the repo root. Authoritative procedure: `framework/protoco
 3. Backup: snapshot the workspace (`backup/snap_<timestamp>`) via `framework/scripts/batch_commit.py`.
 4. Lossless propagation into the 4 current files (full rewrite, unchanged sections copied verbatim).
 5. Post-lint: re-run `legend_lint.py .` → if `BLOCK_*` (exit ≠ 0), `restore` from the snapshot and ABORT.
-6. Update `framework/state/state_manifest_current.md` (WM version, last batch id); the outgoing batch's scope moves verbatim to the top of `framework/state/state_history.md` § 4.
+6. Update `framework/state/state_manifest_current.md` (WM version, last batch id); the batch's `batch_<ID>_scope` goes at the top of `framework/state/state_history.md` § 4.
 7. Cleanup + mark the candidates as committed (append-only).
 8. Append to the activity log.
 

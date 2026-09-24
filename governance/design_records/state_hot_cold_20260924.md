@@ -158,3 +158,42 @@ the history file (test: an ABORT restores it); Phase 6 (`prompt_batch_commit.md`
 
 Focused checks green: LINT `PASS`, `fulltext_receipts verify`, `growth_anchors check`,
 `sync_epochs verify`, and 17 suites naming the manifest, its tools or its routes.
+
+---
+
+# F2 — the second cut: story out, rules in
+
+Re-running the F0 census on F1's hot file found no reader of any remaining prose: executables
+read the YAML fields, bootstraps read § 1–§ 6's values. So the question for each paragraph was
+not *"is it read?"* but *"does it state a rule that binds now, or how a rule came to be?"* —
+because the manifest is also where several of those rules are written down, and moving law
+into a file declared to be history would demote it.
+
+**Moved verbatim** to the history file:
+
+| From | What | Why it is safe |
+|---|---|---|
+| § 4 | `batch_20260921_002_scope` + `_candidates` (2,628 B) | an event's narrative; the current fields (`last_batch_*`) stay; the backlog reader already reads the history |
+| § 6.2 unread-premise | *"This is the failure mode that let PMID 22193544…"* | motivation; the ratchet's definition and its three clearing routes stay |
+| § 6.4 | the 2026-08-04/06/10 incidents; why `panel_qualifies_text` was added; *"every admitted value was false"* | enforced by `deepdive_manifest.validate`; the enum, the pointer `BLOCK`, the needle rule stay |
+| § 6.5 | the 2026-08-10 staging measurement; the `CC-20260726-001/002/003` first run | the derived-not-declared rule, the trigger-not-ratchet rule and the panel ratchet's rules stay |
+
+**Kept deliberately:** *"Why the ID list and not just the count"* ends with the only hot sentence
+saying the panel-ratchet fields are tool-written — a live rule, so the paragraph stays whole
+rather than being split. § 3's file tables are derivable from the filesystem, but they are the
+contents list `LEGEND_CORE.md` § 8 promises and cost 2.5 KB; derivation would not be safer.
+
+**Writer contract after F2:** a batch writes its scope at the top of history § 4 and only its
+current values in the manifest (`prompt_batch_commit.md` Phase 6, `legend-commit` step 6).
+
+**Losslessness** (same script, against `17834c5`): 393 original non-blank lines; missing only
+the F1 stale bullet and the two lines of § 6.5's sentence whose location (*"above"*) was corrected
+to *"in `state_history.md` § 4"*. Two subsection headings appear in both files as navigation.
+
+| Stage | Hot | Cold | Total preserved |
+|---|---:|---:|---:|
+| before | 77,352 | 0 | 77,352 |
+| F1 | 24,048 | 55,846 | 79,894 |
+| F2 | 18,671 | 62,076 | 80,747 |
+
+Hot −75.9 % against the start; preserved bytes +4.4 % (navigation and provenance only).
