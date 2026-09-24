@@ -412,9 +412,17 @@ def match_row(
     line_years = years(source_text)
     line_author = first_author(line)
     best: tuple[float, dict[str, str] | None] = (0.0, None)
+    # ratio() <= quick_ratio() <= real_quick_ratio(), over the same denominator, so a record
+    # whose cheap upper bound cannot beat the current best is skipped without the full ratio.
+    # The comparison stays strict, so the chosen record — ties included — is unchanged; only
+    # the ~4M `find_longest_match` calls behind a batch-queue build are avoided.
+    matcher = difflib.SequenceMatcher(None, normalized, "")
     for record in records:
         if record["norm_title"]:
-            ratio = difflib.SequenceMatcher(None, normalized, record["norm_title"]).ratio()
+            matcher.set_seq2(record["norm_title"])
+            if matcher.real_quick_ratio() <= best[0] or matcher.quick_ratio() <= best[0]:
+                continue
+            ratio = matcher.ratio()
             if ratio > best[0]:
                 best = ratio, record
     ratio, record = best
