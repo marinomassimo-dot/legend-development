@@ -111,7 +111,7 @@ If the session is purely technical/administrative, use the short version:
 Every LEGEND session final response must include at least:
 - what was done;
 - what was learned;
-- 1-3 useful leads for the disease model or the strategy;
+- 0-3 useful leads for the disease model or the strategy — if none emerged, say so;
 - the self-diagnosis verdict and any declared gap;
 - micro-upgrade/capability gained, if any;
 - recommended next step.
