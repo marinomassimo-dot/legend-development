@@ -26,7 +26,7 @@ current state, in recovery group G4 (a separate session).
 | Group | Content |
 |---|---|
 | G1 | harness tooling, commit `4be7217` (§4 lists what was left out) |
-| G2 | 75 task records under `ledger/tasks/<actor>/` (`task_id_collision`: all 77 VPS task IDs free on `main`) and this note |
+| G2 | this note and [`inventory.tsv`](inventory.tsv). The 75 task records first recovered under `ledger/tasks/<actor>/` (all 77 VPS task IDs were free on `main`) were withdrawn: they cite commits such as `started_at_head` values that exist only in the backup, so on a clone of GitHub they can never resolve (`test_task_record_commit_hashes`). They are listed in the inventory like every other historical record |
 | G3 → G4 | moved to G4 at the operator's decision, to land as one coherent step: the 29 full-text dossiers, the 28 new deep-dive manifests and the updated `PMID36828035` manifest, the page adjudication, the 29 read receipts (via `fulltext_receipts.py rechain`, never by hand), the validator rule below, and the full-text queue entries (`FT-…`) those artefacts cite |
 
 The historical records (reports, session evaluations, Mirror consultations, phase packets,
@@ -36,8 +36,8 @@ and link-target suites check every Markdown file. They stay in the backup, one `
 
 ## 1 · Identifiers that mean something else here
 
-The VPS and `main` assigned the same identifiers independently. **In every file of the backup, and
-in the 75 task records recovered under `ledger/tasks/`, these identifiers carry their VPS meaning.** They
+The VPS and `main` assigned the same identifiers independently. **In every file of the backup,
+these identifiers carry their VPS meaning.** They
 are not the `main` records with the same number.
 
 | Identifier in these files | Meaning on the VPS | On `main` the same identifier is |
@@ -130,7 +130,7 @@ rewrites and `skill_description_census.py`; the VPS `scientist_standing_brief.md
 [`inventory.tsv`](inventory.tsv), next to this note, lists every path the VPS commits touched
 whose blob in `06ee25a` is not the blob in this repository after G2 — absent on `main`, or
 present with other content (for a harness file recovered in part, the backup holds the whole VPS
-version). 383 rows, one per file, tab-separated: `group`, `original_path`, `blob_in_06ee25a`,
+version). 458 rows, one per file, tab-separated: `group`, `original_path`, `blob_in_06ee25a`,
 `state_now`, `recover_with`. It is a TSV and not a table here because most of those paths do not
 exist on `main`, and the repository's documentation suites rightly refuse a Markdown file that
 names a missing script.
@@ -155,5 +155,6 @@ Each row's `recover_with` is the exact command, `git show 06ee25a:<original_path
 | Registries and receipt ledger (G4: redo via BATCH_COMMIT / rechain) | 8 |
 | S2 second reading | 7 |
 | Session evaluations | 18 |
+| Task records (recovered in G2, withdrawn: they cite commits that exist only in the backup) | 75 |
 | Task records not recovered (mandate-continuity package) | 2 |
 | Verifications | 22 |
