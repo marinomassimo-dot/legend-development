@@ -1,0 +1,115 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT (operator-directed) + A.1b",
+ "TASK_ID": "WAVE-M4B-20260912",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "operator",
+ "ACTOR_ID": "orchestrator",
+ "CURRENT_STATE": "COMPLETE",
+ "OBJECTIVE": "Run the M4b wave defined in the baseline and the roadmap: three cases (caveat, contradiction, dependency past hop 0), the real path, behaviour measured, independent verification, verdict.",
+ "assigned_on": "2026-09-12",
+ "closed_on": "2026-09-12",
+ "started_at_head": "2c9b0501f72392fe231afb2ec60bd2f65a814829",
+ "record": "disease-models/wwox/research/2026-09-12_m4b_wave.md",
+ "cases": {
+  "caveat": "PLANNED 29808465 IMPEDED (abstract_only, no full text, closed by open routes) -> substitute 26499798; NOT counted as verified",
+  "contradiction": "21731849 (CLAIM 036, the review's untested disposal of two negatives)",
+  "dependency_past_hop_0": "18460020 -> 16223882 (expression of concern on the reagent source)"
+ },
+ "readers": {
+  "note": "ACTOR_ID in each brief is a LABEL written by the orchestrator; no registration, no task contract existed at dispatch (this file closes that gap). Effective identity: general-purpose subagent instances.",
+  "case1": {
+   "label": "scientist-a / SREF-20260912-A1",
+   "instance": "a09bbabffc0615ef8",
+   "model": "claude-fable-5-1"
+  },
+  "case2": {
+   "label": "scientist-b / SREF-20260912-B1",
+   "instance": "aa0438c11cf5b532d",
+   "model": "claude-fable-5-1"
+  },
+  "case3": {
+   "label": "scientist-a / SREF-20260912-A2",
+   "instance": "addd10efceab03644",
+   "model": "claude-fable-5-1, final turn claude-opus-5"
+  },
+  "case1_rerun": {
+   "label": "scientist-a / SREF-20260912-A1R",
+   "instance": "a09e36fdbd02d90c8"
+  },
+  "why_no_scientist_c": "roles/scientist.md line 8: scientist-c is PROPOSED, confirmed only at its own registration, which has not occurred"
+ },
+ "behaviour": {
+  "grep_on_the_two_large_registries": "0 in 3 of 3 sessions (baseline: 24 ad-hoc calls over four transcripts, 2026-09-11 record)",
+  "registry_records_hop1_chars": {
+   "26499798": 58048,
+   "21731849": 35805,
+   "18460020": 8809
+  },
+  "wall_clock": {
+   "26499798": "9m33",
+   "21731849": "7m51",
+   "18460020": "8m28"
+  },
+  "tool_calls": {
+   "26499798": 55,
+   "21731849": 20,
+   "18460020": 24
+  },
+  "birth_context_tokens": 37443,
+  "peak_context_tokens": {
+   "26499798": 210815,
+   "21731849": 151897,
+   "18460020": 147885
+  },
+  "instructions_declined_per_session_chars": 68064,
+  "telemetry_limit": "character totals do not account for the whole token growth; thinking blocks are not persisted and per-turn overheads are invisible in a transcript"
+ },
+ "independent_verification": {
+  "delegates": 1,
+  "brief": "self-sufficient; forbidden to run either selector; expectations written to disk before any note was opened; no producer narrative or verdict",
+  "preserved": "153/178",
+  "distorted": 0,
+  "missing": 25,
+  "unsupported_conclusions": 0,
+  "factual_errors": 0,
+  "citations_exact": "43/43",
+  "silent_resolutions": 4,
+  "per_case": {
+   "26499798": "51/59",
+   "21731849": "50/57",
+   "18460020": "52/62"
+  }
+ },
+ "defects_and_repairs": {
+  "D1": "addressable ### entries under a prose container were unreachable (12 dismissal, 124 discovery) -> descent, one-way, records never entered",
+  "D2": "id match compared whole headings -> keyed on the identifier, wikilink targets canonicalised the same way",
+  "D3": "leading decoration hid the id (### 🔴 DL-THER-095) -> stripped",
+  "D4": "three classes of element carried by no comparison -> scientist_standing_brief M4b now binds four",
+  "cost_of_the_repair": "18460020 hop1 8,809 -> 20,654 chars; the other two unchanged; nothing capped",
+  "tests": "test_registry_records.py 46 cases; 3 tests rewritten because their fixture premise (a six-figure prose block exists) was removed by the repair, not by a lapse; 6 mutations each red",
+  "repeated_case": "case 1 only; 4 ledger fallbacks -> 0; 55 -> 37 calls; 210,815 -> 162,541 peak tokens, NOT attributable to the repair alone because the brief also changed"
+ },
+ "VERDICT": "ADOPTABLE WITH EXPLICIT LIMITS in the three verified cases; three cases are a pilot, no general equivalence, no percentage saving claimed",
+ "DEFAULTS_TAKEN": [
+  "ACTOR_ID labels assigned by the orchestrator; no registration performed",
+  "substitute for the impeded caveat case, motivated and not counted as verified",
+  "only the affected case repeated"
+ ],
+ "STOP_LOG": [],
+ "publication_check": {
+  "origin_main": "83ec6be",
+  "development_main": "83ec6be",
+  "local_main_ahead": 2,
+  "remotes_same_url": true,
+  "conclusion": "a push to development IS a push to origin, which §21d reserves to the operator. Not pushed. The earlier '81 ahead' was a stale tracking ref."
+ },
+ "two_known_reds": "unchanged and not weakened: test_batch_queue, test_surface_census",
+ "battery_and_publication": {
+  "battery": "107 suites executed; two pre-existing failures unchanged; no new regression",
+  "lint": "PASS",
+  "growth_anchors": "PASS",
+  "receipts": "OK 156 chained",
+  "gate": "PASS, 0 blocks"
+ }
+}

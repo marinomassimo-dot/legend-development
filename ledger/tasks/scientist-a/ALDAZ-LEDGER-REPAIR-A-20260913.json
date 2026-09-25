@@ -1,0 +1,127 @@
+{
+ "_schema": "LEGEND governance v3.3.1 · Annex A.1 TASK_ASSIGNMENT + A.1b · A.2 TASK_ACK · A.3 TASK_CLAIM",
+ "TASK_ID": "ALDAZ-LEDGER-REPAIR-A-20260913",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "MANDATE": "ALDAZ-EXEC-20260913",
+ "ACTOR_ID": "scientist-a",
+ "PRIORITY": "HIGH",
+ "assigned_on": "2026-09-13",
+ "INTERACTION_MODE": "AUTONOMOUS_COMPLETE",
+ "OBJECTIVE": "Close the withdrawn P47T wording where it survives in NON-CANONICAL, scientist-writable surfaces, after BATCH_20260913_004 repaired both canonical registries. Two phrases are withdrawn by evidence: 'proteina a livelli normali / normal protein' as an assertion about P47T abundance, and 'binding PPxY abolito / abolished PPxY binding' on the absolute AND on the motif class. The contract names thirteen sites; the repair is to make each host sentence TRUE, never to wrap the false clause in a further layer of quotation, and never to dismantle the retraction or failure mode that hosts it.",
+
+ "TASK_ACK": {
+  "actor_id": "scientist-a",
+  "acked_on": "2026-09-13",
+  "directive_version_acked": 1,
+  "generation_acked": 1,
+  "read_before_first_act": [
+   "framework/state/state_manifest_current.md — current_state: READY confirmed (line 150)",
+   "framework/instruction/LEGEND_CORE.md §21c STOP POLICY, §21d DECISION AUTHORITY, §21e AGILE OPERATING MODE — by name",
+   "roles/scientist.md — role contract, amended 2026-09-05 by DEC-20260905-AGILE-HARNESS-MODE",
+   "framework/protocols/scientist_standing_brief.md v2",
+   "framework/protocols/scientist_operating_practice_v1.md § Phase 11 — the table that declares therapeutic_hypotheses_ledger_current.md 'non-canonical, scored, BLOCK-1 gated'",
+   "disease-models/wwox/registries/claim_registry_current.md CLAIM 007 (l.137 Title, l.144 Summary) and CLAIM 030 (l.559 Summary) — the repaired canonical wording my replacements must agree with",
+   "disease-models/wwox/registries/paper_registry_current.md PAPER 042 (l.6233 clinical relevance, l.6236 Note) — the attesting record: abundance in ONE individual, Patient II-3 Family 1, three passages of one culture against four controls, by declared 'visual inspection', no densitometry, no statistic; PPPY the only peptide assayed",
+   "disease-models/wwox/registries/working_model_current.md l.157 (CLAIM 007 mirror) and l.35"
+  ],
+  "objective_as_i_understand_it": "The substance is settled and attested at six canonical sites; my job is wording in non-canonical surfaces, not science. Protein is PRESENT and abundance is NOT QUANTIFIED — in mouse an unquantified n=2 input lane where the mutant bands are measurably weaker, in human ONE individual by declared visual inspection. Binding is SEVERELY IMPAIRED / NEAR-ABOLISHED to the PPPY peptide(s) actually assayed, with faint residual remaining; 'the PPxY motif family' is the original authors' caption wording, not the data. P47T PATIENTS are SCAR12-mild; the P47T MOUSE is severe, and the two must not be conflated.",
+  "the_trap_i_am_acking_explicitly": "I will NOT repair by quotation or by attribution. Several sites carry the false clause as the REASON GIVEN INSIDE A RETRACTION or a registered failure mode, where adding another 'withdrawn' marker would look exactly like a repair and be none. Each site is repaired by making the reason itself true, so no false statement is carried in any voice — asserted, quoted, or retracted.",
+  "the_second_trap_i_am_acking": "A previous sweep reported 'zero surviving occurrences' while eight stood in one ledger, because it was scoped to 'files I own' and dropped the rest silently. My sweep is scoped to ALL of disease-models/wwox/ and every hit is dispositioned in the record, including the ones I decide not to touch.",
+  "out_of_scope_acked": [
+   "the four scientific current files (working_model_current.md, claim_registry_current.md, paper_registry_current.md, literature_tracking_log_current.md) — already repaired by BATCH_20260913_004; they move only through BATCH_COMMIT, which is the orchestrator's act. A defect there is REPORTED, never edited",
+   "every locator `proposition` and `snippet` in deepdive_manifests/*.json — tracked revisions carrying the contradiction procedure and their own R4 audit. PMID42128308.json verbatim_locators.entries[19] is already recorded as a known defect routed to that procedure; I leave it alone and create no undeclared revision",
+   "research/verifications/ — mirror's surface",
+   "any new reading, any corpus expansion, any new tooling, any push to any remote"
+  ]
+ },
+
+ "TASK_CLAIM": {
+  "actor_id": "scientist-a",
+  "claimed_on": "2026-09-13",
+  "task_id": "ALDAZ-LEDGER-REPAIR-A-20260913",
+  "interaction_mode": "AUTONOMOUS_COMPLETE",
+  "branch": "main",
+  "no_task_branch": "Per the contract and §21e, root and main are writable; no task branch is created.",
+  "checkout": "shared root checkout — I commit only my own paths, by file, through scripts/legend_commit.sh",
+  "paths_i_will_write": [
+   "ledger/tasks/scientist-a/ALDAZ-LEDGER-REPAIR-A-20260913.json",
+   "disease-models/wwox/research/discovery_ledger_current.md",
+   "disease-models/wwox/research/therapeutic_hypotheses_ledger_current.md",
+   "disease-models/wwox/research/fulltext_dossiers/PMID42128308_partial_locators.md",
+   "disease-models/wwox/research/full_text_queue_current.md",
+   "disease-models/wwox/research/fulltext_dossiers/PMID25331887.md",
+   "disease-models/wwox/research/2026-09-13_aldaz_ledger_repair_dispositions.md"
+  ],
+  "durable": "This claim is committed to main ALONE, before any edit, so it survives session loss and a later actor can see the task was held rather than abandoned.",
+  "baseline_recorded_at_claim": {
+   "current_state": "READY",
+   "legend_lint": "VERDICT: PASS (one pre-existing [INFO] MISSING_WIKILINK on CLAIM 010)",
+   "public_release_gate": "VERDICT: PASS, BLOCKS: 0 (13 pre-existing [REVIEW] rows, none naming a file this task touches)",
+   "locator_contradiction_audit --working-tree --fail-on-undeclared": "manifests=94 revision_pairs=94 entry_field_changes=0; undeclared 0; exit 0",
+   "growth_anchors check": "VERDICT: PASS — claims=39 papers=83 corpus=356 literature=397, registry_only=10, unread_premises=2, CANDIDATE_BACKLOG 35 (pre-existing)",
+   "sha256_before": {
+    "discovery_ledger_current.md": "20951d1ec2c62f4e719355a7153a67593b8955a1523670939034f9d69b1bea1f",
+    "therapeutic_hypotheses_ledger_current.md": "11c95ff53ae15089fa1fa6476c0512a758cb67718e7cfc8475f711c6fcefab84",
+    "PMID42128308_partial_locators.md": "d1876f51a62fa9f246088c5f1a50b16b544550db6d67a9d877553cbf25c4034a"
+   },
+   "block1_structural_baseline_therapeutic_ledger": {
+    "HYP_entries": 16,
+    "Sicurezza_BLOCCO_1_lines": 17,
+    "Ranking_lines": 14,
+    "Status_lines": 15,
+    "note": "No executable BLOCK-1 validator exists anywhere in the repository — verified by grep over framework/scripts/, scripts/ and governance/scripts/ for 'BLOCCO'/'Sicurezza' (no match) and over legend_lint.py (no match). The repository's own check for this file is therefore STRUCTURAL: every hypothesis carries a 'Sicurezza (BLOCCO 1)' verdict, and the gate holds if no verdict, ranking or status is altered and no hypothesis is promoted or strengthened. These four counts are the pre-edit baseline and must be identical post-edit."
+   }
+  }
+ },
+
+ "SITES": {
+  "contracted": 13,
+  "found_by_my_own_sweep_beyond_the_contract": 6,
+  "total_to_repair": 19,
+  "note": "The contract said finding a fourteenth site is a real outcome. I found six, in three spelling classes the contracted sweep list could not reach: a bare table CELL reading '**normale**' with no phrase around it (discovery_ledger 754); the spelling 'pari al wild type' (discovery_ledger 2299, full_text_queue 1069); and the mouse/patient phenotype conflation as a free-standing error (full_text_queue 1069, alongside site 149's). Two of the six are in files the contract does not name at all — full_text_queue_current.md and fulltext_dossiers/PMID25331887.md."
+ },
+
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "My sweep found six live assertion sites beyond the thirteen the contract lists, two of them in files the contract does not name (research/full_text_queue_current.md and research/fulltext_dossiers/PMID25331887.md). No governance rule assigns either file to a specific actor.",
+   "default_taken": "Repaired all six as part of this task and recorded each explicitly as beyond the named thirteen, rather than leaving them for a further follow-up. Ownership resolved under §21d: neither file is among the four scientific current files, so both are editable outside BATCH_COMMIT; the wording is CLAIM 007's and I own its repair history.",
+   "why_it_is_safe": "Both are non-canonical, scientist-writable surfaces; the edits are small, reversible, and squarely inside the acceptance criteria that the withdrawn wording must not survive as a live assertion. Leaving a site alive because the contract listed thirteen would reproduce exactly the failure this task exists to correct — a repair sound as scoped whose exhaustiveness claim is false.",
+   "what_would_have_been_different": "A further repair task would have been needed for six clauses, and the withdrawn wording would have stayed live in the reasoning layer meanwhile."
+  },
+  {
+   "condition": "The BLOCK-1 gate is named as binding on therapeutic_hypotheses_ledger_current.md, but no executable BLOCK-1 check exists in the repository.",
+   "default_taken": "Ran the repository's own structural check instead of inventing a new one: counted HYP entries, 'Sicurezza (BLOCCO 1)' verdicts, Ranking and Status lines before and after, and verified byte-level that no safety verdict, score, ranking or status changed and that no hypothesis was promoted or strengthened.",
+   "why_it_is_safe": "It measures the property the gate protects without adding tooling, which this contract forbids. The result is recorded either way.",
+   "what_would_have_been_different": "Writing a new validator would have been new tooling and out of scope; asserting 'BLOCK-1 PASS' with nothing run would have been an unearned gate reading."
+  }
+ ],
+
+ "STOP_LOG": [],
+
+ "CURRENT_STATE": "COMPLETE 2026-09-13 by scientist-a. Nineteen sites repaired — the thirteen contracted plus six found by my own sweep, two of them in files the contract does not name. Every hit the sweep returned is dispositioned in the record, touched or not. Disposition record: disease-models/wwox/research/2026-09-13_aldaz_ledger_repair_dispositions.md. No scientific current file touched; no locator proposition or snippet touched; no receipt rewritten; no derived surface regenerated; no new tooling; no task branch; no push.",
+
+ "TASK_RESULT": {
+  "sites_repaired": 19,
+  "contracted": 13,
+  "beyond_contract": 6,
+  "fourteenth_site_surfaced": "YES — and five more after it. discovery_ledger_current.md 754 (a bare table CELL reading '**normale**', reachable by no contracted phrase), 892 (the conclusion three lines below contracted site 889), 1115 (the withdrawn absolute AND motif class, load-bearing for a target de-prioritisation), 2299 (the spelling 'pari al wild type', which proved the contracted sweep list insufficient); full_text_queue_current.md 1069 and fulltext_dossiers/PMID25331887.md 72 — both in files the contract does not name at all.",
+  "three_spelling_classes_the_contracted_list_could_not_reach": [
+   "a bare table cell with no phrase around it ('| **normale** |')",
+   "the spelling 'pari al wild type' — no contracted term contains 'wild'",
+   "the mouse/patient phenotype conflation as a free-standing error, independent of any abundance word"
+  ],
+  "what_was_preserved_at_the_four_named_sites": {
+   "351": "The retraction, the comparator-only disposition and the P47T-vs-Q230P non-equivalence all stand, now resting on the DOMAIN argument (WW1 lesion vs buried SDR missense) rather than on the withdrawn clause. Not repaired by quotation: the false clause is gone, not wrapped or attributed. The non-equivalence no longer depends on the abundance question at all.",
+   "670": "DL-MECH-033's allelic table STRUCTURE untouched and verified after the edit — same six rows (P47T, G372R, Q230P, p.Arg54*, Wwox^gt/gt, Wwox-KO), same order, same five columns, same severity ordering, five non-P47T rows byte-identical. Only the P47T row's two cells changed. This is the table CLAIM 030 rests on.",
+   "782": "FM-016 keeps its finding — that the in-house ΔΔG 'rescuable window' heuristic does not discriminate. It now survives on 'proteina presente' plus the phenotype contrast, exactly as contracted, and the contrast was strengthened by naming the P47T/P47R pair explicitly. The ^fm-016 anchor is preserved so every wikilink still resolves.",
+   "149": "BOTH halves fixed: the abundance claim narrowed to presence-not-quantified, AND the mouse/patient conflation named and separated (P47T mouse severe, P47T patients SCAR12-mild). The neighbouring QUOTATION of the review at line 136 is byte-unchanged. The bracket's true conclusion — abundance predicts neither presence nor absence of the phenotype — is kept and still closes from both sides."
+  },
+  "block1_result": "PASS, structurally. No executable BLOCK-1 validator exists in the repository (verified by grep over framework/scripts/, scripts/, governance/scripts/ and legend_lint.py). The repository's own check for this file is the per-entry safety verdict, so: HYP entries 16 to 16, 'Sicurezza (BLOCCO 1)' verdicts 17 to 17, Ranking lines 14 to 14, Status lines 15 to 15, and the diff filtered for Sicurezza/Ranking/Status/azionabilità shows NONE changed. No hypothesis promoted or strengthened, no score altered, no status moved — wording narrowed only.",
+  "locator_audit_result": "manifests=94 revision_pairs=94 entry_field_changes=0; declared 0, undeclared 0, same-day 0; exit 0 — before and after. deepdive_manifests/PMID42128308.json verbatim_locators.entries[19] deliberately left alone as the known defect routed to the contradiction procedure, and its derived pathograph export left alone because regenerating a derived surface is not a repair.",
+  "gates": "legend_lint PASS and public_release_gate PASS with 0 BLOCKS, read BEFORE each commit. growth_anchors PASS with every counter unchanged (unread_premises=2, registry_only=10), which also confirms the full_text_queue edit touched no reading-debt row or ratchet.",
+  "rule_5_applied": "No true statement was deleted to satisfy this task. At DL-BIO-085 (site 17) the entry's joint inference is TRUE and was kept, but it rested partly on a quantified equality that does not exist; the false part was narrowed and a 🔴 note records in place that the contrast is now presence-vs-minimal rather than equal-to-wild-type-vs-minimal.",
+  "how_the_quotation_trap_was_avoided": "Three sites carried the withdrawn wording as the REASON RECITED INSIDE A RETRACTION or a registered failure mode — 351, 782 and the newly found 19 (PMID25331887.md). None was repaired by adding a further layer of 'withdrawn' marking, which would have looked like a repair and been none. Each retraction's reason was made TRUE, stating the positive attested facts (presence, which domain carries the lesion, PPPY-only assay, faint residual) instead of negating an absent one. No site reproduces the withdrawn wording in any voice — asserted, quoted or marked-as-withdrawn. Verified by re-running the multi-spelling sweep, widened with the new spellings, after the edits."
+ }
+}

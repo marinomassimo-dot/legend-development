@@ -1,0 +1,173 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT + A.1b",
+  "_note": "Repair task arising from the independent verification of ALDAZ-FT-A-001. The verifier is mirror (ALDAZ-VERIFY-W1-20260913), which produced none of the work it judged and fixed its verdicts before opening any producer file. Its verdict on both papers is REFINED: the readings are sound and the corrections are circumscribed. Report: disease-models/wwox/research/verifications/2026-09-13_aldaz_w1_verification.md, commits 9366c08 (verdicts) and 1104c68 (second pass).",
+  "TASK_ID": "ALDAZ-REPAIR-A-20260913",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "OWNER": "orchestrator",
+  "ACTOR_ID": "scientist-a",
+  "PRIORITY": "HIGH",
+  "OBJECTIVE": "Adjudicate each verifier finding against the source, then repair what the source shows needs repairing in the wave-1 artefacts — manifests, dossiers and the two commit candidates — and carry the two material omissions wherever the affected conclusions are stated. A repair that is not re-examined stays unverified, so every repair is declared in a form a second pass can check.",
+  "assigned_on": "2026-09-13",
+  "THE_RULE_THAT_GOVERNS_THIS_TASK": "🔴 A verifier finding can itself be wrong. Adjudicate each one AGAINST THE SOURCE before applying it, and never delete a true statement to satisfy a check. Where you and the artefact disagree, the artefact decides; where the artefact is genuinely ambiguous, record DISAGREEMENT_UNRESOLVED with both readings rather than silently conceding. A finding you reject is a legitimate outcome, provided you say which surface you re-opened and what it shows.",
+  "FINDINGS_TO_ADJUDICATE": {
+    "36828035_entry_0": {
+      "verdict": "UNSUPPORTED",
+      "what_the_verifier_says": "The clause 'the WT range and the mutant range do not overlap' is false against the printed ranges: WT 0-68 per hour, mutant 0-3098 per hour. Quote otherwise exact on all three surfaces (XML, Europe PMC XML, PDF text layer), Results 2.3.",
+      "orchestrator_pre_adjudication": "This one is arithmetic on the paper's own printed ranges and does not need a re-render to settle: 0-68 and 0-3098 share their lower bound, so they overlap. The verifier is right. What remains yours is the WORDING of the repair: the non-overlap claim fails, while the separation of the DISTRIBUTIONS may still be describable — say precisely what the printed numbers support, which is that no wild-type animal exceeded 68 while mutants reached 3098, not that the ranges are disjoint.",
+      "propagation": "The verifier reports this defect propagated nowhere: the dossier states the two ranges plainly. Confirm that yourself before concluding the repair is manifest-local."
+    },
+    "36828035_entries_5_and_17": {
+      "verdict": "NARROWER_THAN_CLAIMED",
+      "what_the_verifier_says": "'Similar levels' / 'comparable bands in BOTH genotypes' overstates the panel. The source says 'similar levels' from a 10% input lane, n=2, unquantified; at 3x magnification the two mutant input bands are visibly thinner and lighter than the two WT bands. The BINDING half of entry 17 is fully attested — Dvl2 and Wbp1 pulldowns near-absent in P47T, Hsp90 and both biotin inputs even, two lanes per genotype.",
+      "what_to_do": "Re-open F1 panel a at native 1801x1412 and at the crop the verifier used before drafting. If the bands are indeed weaker in the mutant, the repair is to state what an unquantified n=2 input lane can support and no more. The binding half is NOT in question and must not be weakened along with the abundance half."
+    },
+    "39868255_entry_34": {
+      "verdict": "UNSUPPORTED as to the enumerated pairings; the conclusion survives",
+      "what_the_verifier_says": "Six p-values (three interchanged pairs) are assigned to the wrong comparisons across Supplemental Figure 1 panels S1A, S1B and S1E. With the correct mapping every LPS-vs-LPS value is still non-significant, so the headline 'not one peripheral cytokine differs between genotypes' remains TRUE — but the numbers offered as its evidence are partly the wrong ones.",
+      "propagation": "The verifier reports this mis-mapping reached the DOSSIER at its section 4 'What it does NOT support', and nowhere else; the joint synthesis and both candidates state the conclusion in prose. Confirm, then repair the manifest entry and that dossier sentence.",
+      "what_to_do": "Re-open Supplemental Figure 1 at the crops needed to read each panel's own p-value placement, correct the mapping, and keep the conclusion that the correct mapping supports."
+    },
+    "claim_007_wording_in_the_candidate": {
+      "verdict": "the one material claim the verification narrows",
+      "what_the_verifier_says": "CC-20260913-36828035-01's proposed CLAIM 007 Summary says 'normal transcript and normal protein'. The transcript half is solid in four brain regions; 'normal protein' rests on the unquantified two-animal input lane. Suggested wording: 'normal transcript, and protein not detectably reduced on an unquantified n=2 input lane'.",
+      "what_to_do": "Adjudicate against the panel, then amend the candidate's proposed Summary. 🔴 This is a proposed edit to a consolidated-baseline claim, so the R4 trigger applies to the amended wording as it did to the original: if your amendment changes what the claim asserts, the blind locator audit covers the triples the amendment rests on."
+    }
+  },
+  "OMISSIONS_TO_CARRY": {
+    "rule": "An omission is repaired by carrying it where the affected conclusion is stated — dossier, M4b note, candidate — not by a footnote somewhere else. The verifier reports that neither of these is carried by any withheld file, so neither is a duplicate.",
+    "36828035_pseudoreplication_HIGH": "The glial and cerebellar statistics are pseudoreplicated: report § 4.1. This bears on every conclusion that rests on those panels' significance brackets, which includes the narrowing of CLAIM 006 you proposed. Carry it, and say what it does and does not do to that narrowing — a pseudoreplicated bracket is weak evidence for a difference, not evidence against one.",
+    "39868255_mortality_MODERATE_HIGH": "A mortality model with no mortality reported: report § 4.6. Carry it wherever the sepsis severity result is stated.",
+    "the_moderate_and_low_items": "Report § 4.2 (monitoring window stated three ways), § 4.3 (terminal, partly censored blood panel), § 4.4 (Supplementary Table 4 percentages fit n=18 not n=19), § 4.5 and § 4.9 (figure-citation and legend slips), § 4.7 (outlier-removal scope and panel counts), § 4.8 (4 h in Methods, 6 h in Results), § 4.10 (no power justification, no sex-disaggregated analysis). Triage these yourself: carry the ones that condition a conclusion you drew, and for the rest record in one line why they do not bear on any conclusion. A longer repair is not a truer one."
+  },
+  "WHAT_IS_NOT_IN_QUESTION": [
+    "All four declared contradictions of previously persisted locators are confirmed as REPAIRS, not defects.",
+    "The joint synthesis's data-independence verdict checks out on every axis the verifier tested.",
+    "Retiring 'three models' as a strength argument for DL-MECH-012 is, in the verifier's words, the best item in either candidate. It stands.",
+    "Coverage as declared is assessed and stands; both papers are REFINED, which is a verdict about sound work, not a euphemism."
+  ],
+  "PROCEDURE_THAT_BINDS_THE_MANIFEST_EDITS": "Entries 0, 5, 17 of PMID36828035.json and entry 34 of PMID39868255.json are PERSISTED locators. Editing them is the act that has its own order: re-inspect the surface at original resolution BEFORE drafting, declare contradicts_locator as the OBJECT the validator requires (manifest, entry or receipt, what_changed, audit with auditors and verdicts), run the blind locator audit on the contradicted triples, and run `python3 framework/scripts/locator_contradiction_audit.py --working-tree --fail-on-undeclared` before committing any manifest edit. An undeclared in-place rewrite is the one shape no file-level gate sees.",
+  "ACCEPTANCE_CRITERIA": [
+    "Each finding above has an explicit disposition: APPLIED (with the repair), REJECTED (with the surface re-opened and what it shows), or DISAGREEMENT_UNRESOLVED (with both readings).",
+    "deepdive_manifest.py --pmid <PMID> --verify-artifacts --require-current-schema exits PASS with 0 gaps on both papers after the edits.",
+    "locator_contradiction_audit.py --working-tree --fail-on-undeclared exits 0 before the manifest commits.",
+    "fulltext_receipts.py verify OK. 🔴 Do NOT rewrite a persisted receipt: a receipt is history. If a repair changes what a reading covered or concluded, that is a new event appended through the writer, never an edit to an existing line.",
+    "The two commit candidates reflect the adjudicated wording, and the R4 position on the amended CLAIM 007 wording is stated.",
+    "The two material omissions are carried where the affected conclusions are stated.",
+    "legend_lint.py . stays PASS after every commit."
+  ],
+  "DELIVERABLES": [
+    "amended disease-models/wwox/research/deepdive_manifests/PMID36828035.json and PMID39868255.json, with declared contradictions",
+    "amended disease-models/wwox/research/fulltext_dossiers/PMID36828035.md and PMID39868255.md",
+    "amended disease-models/wwox/research/commit_candidates/CC-20260913-36828035-01.md and CC-20260913-39868255-01.md",
+    "a short repair record under disease-models/wwox/research/ naming each finding and its disposition, so a second pass can check the repair without reconstructing it",
+    "REPAIR_RESULT in this file, with DEFAULTS_TAKEN and STOP_LOG, required even when empty"
+  ],
+  "RE_EXAMINATION": "This repair will be re-examined by an independent pass when a slot frees. Write the repair record so that pass can be run against it: name the surface you re-opened for each finding, the crop or resolution, and the sentence before and after.",
+  "COMMITTING": {
+    "how": "bash scripts/legend_commit.sh \"<message>\" <path> [<path> ...] — never git commit directly; two peers are working in this checkout.",
+    "write_only_your_own_paths": "your task JSONs, your own manifests, dossiers, candidates and repair record, and the receipt ledger through its writer if a new event is warranted. 🔴 Do not touch disease-models/wwox/research/verifications/ — that is mirror's surface and its report is the evidence your repair is judged against.",
+    "never": "No push. Do NOT regenerate shared derived surfaces. A red caused by a peer's file is reported, not fixed."
+  },
+  "INTERACTION_MODE": "AUTONOMOUS_COMPLETE",
+  "STOP_POLICY_REMINDER": "§21c governs. Reserved and never yours: any push, history rewrite, deletion of unique material, external spend of any kind, modification of the four current files or disease_model.md, BATCH_COMMIT. Everything else has a safe default: take it, record it in DEFAULTS_TAKEN, continue.",
+  "THEN_CONTINUE": "When this repair is committed, proceed to ALDAZ-FT-A-002 (PMID 15064722, then PMID 24369382) under its own record, which is already drafted and dispatch-ready. Its instruction not to edit wave-1 artefacts was written while the verification was in flight; that verification is now complete, so this repair task supersedes that restriction for exactly the files named here.",
+  "CURRENT_STATE": "REPAIR_COMPLETE 2026-09-13 - four findings adjudicated against the source, one verifier WORDING rejected on blind-audit evidence while its finding was upheld, one omission applied with its scope narrowed and one panel pair left DISAGREEMENT_UNRESOLVED, both omissions carried where the affected conclusions are stated, manifests at STRICT PASS with declared contradictions, no receipt rewritten.",
+  "DEFAULTS_TAKEN": [
+    {
+      "condition": "The dispatch's deliverables named manifests, dossiers and the two candidates, but the same overstatement stood flatly in my own M4b note and the joint synthesis.",
+      "default": "Extended the repair to those two files with minimal, marked edits.",
+      "why_safe": "They are my own paths; an omission is repaired by carrying it where the affected conclusion is stated, and leaving the defect alive in prose would have made the repair partial.",
+      "what_would_differ": "A reader of the M4b note would still have read 'the 10% input lane is comparable' and 'normal protein'."
+    },
+    {
+      "condition": "The pre-repair propositions also sit in research/phase_packets/VERIFY-PMID36828035-20260913.json and its 39868255 twin - a propagation site the verification did not name and I found by grep.",
+      "default": "Recorded them in the repair record; did NOT edit them.",
+      "why_safe": "They are the frozen packets the verifier was handed. Editing them would falsify what was verified.",
+      "what_would_differ": "Hand-editing would have made the verification unreproducible against its own input."
+    },
+    {
+      "condition": "session_evaluations/2026-09-13_scientist-a_aldaz_wave1.md line 85 states 'a partial-LoF allele with normal protein' inside a retrospective scorecard.",
+      "default": "Left as history, with the reason written in the repair record.",
+      "why_safe": "A diagnosis records what a session believed; the correction belongs in the manifests, dossiers and candidates that assert the claim.",
+      "what_would_differ": "Amending it would rewrite the record this repair exists to correct."
+    },
+    {
+      "condition": "R4 requires a blind audit; no second independent auditor was available in-session.",
+      "default": "Ran one blind auditor with no session history, triples-only, and declared auditors=1 in each audit object.",
+      "why_safe": "The skill's active ingredient is blindness, not head-count, and the count is declared rather than implied.",
+      "what_would_differ": "A second auditor might have split on the binding adverb; one auditor already reversed two of my drafts."
+    },
+    {
+      "condition": "Resolving band intensity and bracket endpoints needed magnified crops.",
+      "default": "Wrote crops to the session scratchpad, never into files/.",
+      "why_safe": "A crop adds no information and alters no fingerprinted artefact; the rule requires resolving at resolution before drafting.",
+      "what_would_differ": "Without them entries 5/17 would have been conceded on report rather than on evidence, and entry 34 would have been DISAGREEMENT_UNRESOLVED."
+    },
+    {
+      "condition": "CLAIM 007's Title overshoots on the same evidence as its Summary.",
+      "default": "Flagged it to the batch with a recommended wording; did not draft the change.",
+      "why_safe": "Amending a claim Title exceeds a Summary repair's scope and belongs to BATCH_COMMIT.",
+      "what_would_differ": "Silently rewriting a Title would be an unrequested canonical edit."
+    },
+    {
+      "condition": "Task 2's two papers are pdf_only-class with no structured surface by the tested routes, and acquisition is the highest-latency step of the dispatch.",
+      "default": "Ran Task 2 ACQUISITION in parallel with the repair's audit wait, while beginning no reading until the repair was committed.",
+      "why_safe": "Retrieval carries no interpretation and cannot touch the blind-pass firewall; the dispatch's ordering governs the readings.",
+      "what_would_differ": "Serial acquisition would have spent the same wall-clock twice."
+    },
+    {
+      "condition": "The shared receipt ledger grew from 159 to 160 chained receipts mid-session - a peer appended.",
+      "default": "Proceeded and noted it; re-ran verify rather than assuming.",
+      "why_safe": "Chain and state-manifest tail anchor both verify; a concurrent writer on a shared checkout is an idle-peer condition with a stated safe default.",
+      "what_would_differ": "Nothing; had the chain broken, the answer is re-read and re-append, never an edit."
+    },
+    {
+      "condition": "The dispatch's acquisition hint predicted a 197-byte publisher refusal stub from NCBI efetch for 15064722.",
+      "default": "Recorded what the route actually returned today - HTTP 200 with body-less front-matter JATS, 8049 B and 14502 B - and treated the substance (no structured surface) as unchanged.",
+      "why_safe": "The artefact decides over the hint; both payloads were fingerprinted and structurally screened rather than described.",
+      "what_would_differ": "Trusting the hint's shape would have left a real 8 KB artefact unexamined."
+    }
+  ],
+  "STOP_LOG": [],
+  "started_at_head": "1104c68cefdb80f27a3872219815a041058b4635",
+  "TASK_ACK": {
+    "TASK_ID": "ALDAZ-REPAIR-A-20260913",
+    "DIRECTIVE_VERSION": 1,
+    "GENERATION": 1,
+    "ACTOR_ID": "scientist-a",
+    "DECISION": "ACCEPTED",
+    "acked_at": "2026-09-13T16:05:00Z",
+    "note": "Accepted as dispatched. The governing rule is accepted as written: each verifier finding is adjudicated against the source before it is applied, REJECTED and DISAGREEMENT_UNRESOLVED are available dispositions, and no true statement is deleted to satisfy a check. I am the producer of the work being repaired, which is a disclosed bias in exactly one direction - toward conceding a finding to look cooperative, and toward defending CLAIM 007's protein half because I corroborated it. Both are recorded here so the re-examination pass can test for them. The orchestrator's pre-adjudication of 36828035 entry 0 is accepted as arithmetic on printed numbers; I still re-derived it from the artefact rather than from the dispatch. No CHALLENGE raised."
+  },
+  "TASK_CLAIM": {
+    "TASK_ID": "ALDAZ-REPAIR-A-20260913",
+    "GENERATION": 1,
+    "ACTOR_ID": "scientist-a",
+    "claimed_at": "2026-09-13T16:05:00Z",
+    "durable_pointer": "ledger/tasks/scientist-a/ALDAZ-REPAIR-A-20260913.json",
+    "output_root": "disease-models/wwox/research/",
+    "started_at_head": "1104c68cefdb80f27a3872219815a041058b4635",
+    "pre_claim_check": "Annex A.3 and scientist_reading_modes.md 2.2 rule 3 performed before any repair act. fulltext_receipts.py status: 36828035 carries FTR-20260913-36828035-03 (complete), 39868255 carries FTR-20260913-39868255-01 (complete) - both mine, both the subject of this repair. ledger/tasks/*/ grepped for both PMIDs: the other records naming them are the orchestrator's intake/exec records, mirror's closed verification contract, and scientist-b's and scientist-c's own lots on different PMIDs. No second OPEN contract claims these two papers, so no PARALLEL_READ_GROUP is required.",
+    "order_of_work": "Read the verification report in full, then per finding: re-open the named surface at original resolution BEFORE drafting, adjudicate, then edit. Manifest edits last, behind locator_contradiction_audit.py --working-tree --fail-on-undeclared. Receipts are NOT rewritten; a new event is appended only if the repair changes what a reading covered or concluded.",
+    "peers_in_checkout": "Two peers reading concurrently; uncommitted PMID16941225 paths and a full_text_queue_current.md modification are theirs. I commit only my own paths and will not regenerate shared derived surfaces."
+  },
+  "REPAIR_RESULT": {
+    "repair_record": "disease-models/wwox/research/2026-09-13_aldaz_w1_repair.md",
+    "dispositions": {
+      "36828035_entry_0": "APPLIED - ranges do overlap (shared lower bound 0). Re-derived from the fingerprinted XML, Results 2.3, not from the dispatch. The first replacement draft was itself refused by the blind audit for claiming the genotypes are separated by 'the group means' when the BODY TEXT prints no mean spike rate and no test; final wording names Suppl. Fig. S3b (entries[34]) as the surface carrying the means and adds the categorical separation. Propagation confirmed by my own grep: manifest-local, plus the frozen verification phase packet.",
+      "36828035_entries_5_and_17": "APPLIED as to direction; the verifier's PROPOSED WORDING REJECTED. F1 panel a re-opened at native 1801x1412 and at 5x on the input row BEFORE drafting. Bands present in all four lanes, mutant thinner and lighter, Hsp90 even to slightly stronger in mutant lanes. The blind audit's per-lane densitometry (input 1050/1082 vs 1468/1556; Hsp90 2620/2716 vs 2447/2510) shows the mutant bands ARE detectably reduced, so 'protein not detectably reduced' asserts a negative the panel contradicts. Final wording claims neither direction. The BINDING half was preserved in substance and its certainty adverb corrected: my own replacement draft said 'abolished, unambiguous' and the audit refused it - faint residual recovery at 3-13% of wild type, so the ORIGINAL persisted word 'near-absent' was accurate and is restored.",
+      "39868255_entry_34": "APPLIED - six values in three interchanged pairs re-mapped. Suppl. Fig. 1 re-opened on the 300 dpi page-24 render at 1.6-2.5x; the bracket layout differs from Figs 3-9 and is pinned independently by the printed PDF legend for S1C and S1D. Between-genotype values are 0.2778 / 0.2557 / 0.3940 / 0.9279 / 0.7772 / ns, every one non-significant, so the conclusion stands. Propagation confirmed by my own grep: manifest + dossier section 4 only, both repaired.",
+      "claim_007_wording": "APPLIED, and NARROWER than both the original and the verifier's suggestion. R4 crossed and performed: 7 triples to a blind auditor with no session history, triples-only. Outcome 3 SUPPORTED (pixel-verified) / 4 OVERSHOOT / 0 UNDERSHOOT / 0 NOT_IN_SOURCE. Every overshoot was in my own replacement drafts or in the wording proposed to me. CLAIM 007's TITLE also overshoots ('abolishes', 'WW-domain partners' from two oligopeptides) and is FLAGGED to the batch, not drafted, because amending a Title exceeds this task's scope.",
+      "36828035_pseudoreplication_HIGH": "APPLIED with scope narrowed. Captions establish it for Figs 3, 4b-c, 4e and 5g-h ('a single subfield of n = 3 mice/group'; 'a single independent region'; 'Twenty four measurements, with 12 measurements each'). For Fig. 5d-e, Methods 4.13 states sections were AVERAGED per animal - close to the verifier's own WHAT_WOULD_CHANGE_MY_MIND - and the panels are box plots with no individual points, so neither surface decides it: DISAGREEMENT_UNRESOLVED with a revival trigger. Carried into dossier section 3 items 4/5/6, a dedicated section 5 block, section 7, CC section 2 and the joint synthesis, with the asymmetry stated: a pseudoreplicated bracket is weak evidence FOR a difference, not evidence against one, so the CLAIM 006 narrowing keeps its direction while its astrogliosis leg is weakened and the microglial-abundance arm gains nothing.",
+      "39868255_mortality_MODERATE_HIGH": "APPLIED. Carried wherever the sepsis severity result is stated: dossier section 3 item 1 and a new explicit negative in section 4, CC section 1 Note and section 3, M4b note section B, joint synthesis section 3. Methods declare a 'risk for mortality' regression; no death, survival curve or humane endpoint is reported and every animal is euthanised at a fixed 12 h, so MSS is a correlate and not the outcome."
+    },
+    "triage_of_the_moderate_and_low_items": "Carried: 4.2 (window stated three ways - it is the denominator of entry 0's own ranges), 4.3 (terminal moribund sampling, potassium and creatinine off-scale in all three genotypes), 4.4 (percentages fit n=18: computed 33.3/22.2/27.8/72.2 against 31.6/21.1/26.3/68.4), 4.7 (panel counts do not reconcile with one global exclusion; items 4-5 rest on p=0.0490 and p=0.0226), 4.8 (4 h Methods vs 6 h Results, previously absorbed into a range), 4.10 (no power rationale, no sex-disaggregated analysis). Not carried, with the reason: 4.5 (no conclusion of mine rests on the Fig. 7 caption arrows or the 8a/8b citation; entries[40]'s region attribution came from the panel's own title). Partly carried: 4.9 - the hygiene half bears on nothing of mine, while the JATS-legend unreliability half IS carried into entries[34]'s anchor because it is why the PDF legend is the surface pinning the re-mapping.",
+    "receipts": "NO persisted receipt rewritten and NO new event appended. Coverage maps, evidence depth, source locators, source fingerprints and named outputs of FTR-20260913-36828035-03 and FTR-20260913-39868255-01 are unchanged by this repair; only proposition wording and prose in files those receipts already name changed. fulltext_receipts.py verify OK after the edits.",
+    "gates": "locator_contradiction_audit.py --working-tree --fail-on-undeclared: 6 declared revisions, 0 undeclared, exit 0. deepdive_manifest.py strict: PASS 0 gaps on both PMIDs. legend_lint.py: PASS. One self-inflicted BLOCK was caught by the validator and fixed before commit - my repaired entry-34 snippet had quoted the figure legend with an internal ellipsis, which is a stitched quote.",
+    "not_touched": "disease-models/wwox/research/verifications/ - the verifier's surface and the evidence this repair is judged against."
+  },
+  "_metadata_corrections": [
+    "started_at_head was written as the 7-character abbreviation '1104c68' and is expanded here to its full 40-character object name. Verified before writing: `git rev-parse --disambiguate=1104c68` returns exactly one object, 1104c68cefdb80f27a3872219815a041058b4635, the mirror second pass of ALDAZ-VERIFY-W1-20260913 of 2026-09-13. Metadata only: no scientific judgement of this task is reopened, no finding is revisited, and the commit it names is unchanged. Applied by plan on 2026-09-17 on operator instruction; the defect was routed by BATCH_20260914_008 and is what test_task_record_commit_hashes has been red on since. BOTH occurrences were expanded: the top-level field and the one inside TASK_CLAIM. The guard reads only top-level HASH_FIELDS, so it saw one and would have stayed green with the other left abbreviated; a record carrying the same field expanded in one place and abbreviated in another is worse than either, and the value is the same object."
+  ]
+}

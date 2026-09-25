@@ -1,0 +1,129 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT (operator-directed) + A.1b",
+ "TASK_ID": "PHASE-HANDOFF-20260912",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "operator",
+ "ACTOR_ID": "orchestrator",
+ "CURRENT_STATE": "COMPLETE",
+ "OBJECTIVE": "Research continues through persistent artefacts while agent contexts are renewed at the boundaries of finished phases; less dragged context, repeated technical history and cost, with evidence, caveats, contradictions, coverage and scientific independence preserved.",
+ "assigned_on": "2026-09-12",
+ "closed_on": "2026-09-12",
+ "started_at_head": "30e63ec16af5ff004e744737d9415b5962d020d2",
+ "record": "disease-models/wwox/research/2026-09-12_phase_handoff.md",
+ "lossless_means": "sources whole, addressable, reopenable, and provably the same bytes. NOT an absence of scientific omissions, and no packet may be read as such.",
+ "runtime_boundary": {
+  "fresh_instance_without_conversation_inheritance": "YES — 37,443 tokens of birth context, identical across dispatches",
+  "self_sufficient_assignment": "YES",
+  "artefact_access": "YES",
+  "result_return": "YES",
+  "autonomous_replacement_of_the_coordinator": "NO — a scheduled job fires into this same session and inherits its context; a remote trigger is an outward-facing cloud session",
+  "label_vs_identity": "the ACTOR_ID in a brief is a LABEL written by the orchestrator; the instance is the subagent id; the task is this file. No registration was performed."
+ },
+ "implemented": {
+  "new": "framework/scripts/phase_handoff.py (prepare, check) — derived from manifest, receipt ledger, dossier, retrieval ledger, registries",
+  "no_new": [
+   "no new database",
+   "no second scientific registry",
+   "no permanent memory agent"
+  ],
+  "canonical_home": "framework/protocols/cross_session_transport.md 8b, bound to the six-term handoff of 8; standing brief M4b points at it",
+  "phase_firewalls": "blind reading refused the packet (takes paper_packet); verification excludes the producer's dossier, commit candidate, verdict and group_assessment",
+  "two_step_memory": "discovery = identifiers, why, kind, digest, links; opening = whole records. An index is never evidence."
+ },
+ "pilot": {
+  "design": "same three cases, same model, same reading policy; one variable — packet vs self-discovery",
+  "confounds_declared": [
+   "the caveat case's fair baseline used the amended brief while the other two used the original",
+   "the coordinator edited the standing brief and the transport protocol at 09:34:24 WHILE the three condition-B sessions were reading them; two readers detected and reported it unprompted"
+  ],
+  "peak_context": {
+   "26499798": {
+    "A": 162541,
+    "B": 174333
+   },
+   "21731849": {
+    "A": 151897,
+    "B": 125792
+   },
+   "18460020": {
+    "A": 147885,
+    "B": 128534
+   }
+  },
+  "total_peak": {
+   "A": 462323,
+   "B": 428659,
+   "delta_pct": -7.3
+  },
+  "calls": {
+   "A": 81,
+   "B": 75
+  },
+  "repair_run_same_case": {
+   "A": {
+    "peak": 151897,
+    "calls": 20
+   },
+   "B_v1": {
+    "peak": 125792,
+    "calls": 23
+   },
+   "B_v2": {
+    "peak": 118141,
+    "calls": 18,
+    "opened_manifest": false,
+    "opened_paper_packet": false
+   }
+  }
+ },
+ "independent_scoring": {
+  "delegate": "one, forbidden to run any selector, scoring against the expectation set the wave's verifier built from sources before these notes existed",
+  "A": {
+   "preserved": "153/178 = 86.0%",
+   "distorted": 0,
+   "missing": 25,
+   "citations": "43/43"
+  },
+  "B": {
+   "preserved": "161/181 = 89.0%",
+   "distorted": 2,
+   "missing": 18,
+   "citations": "53/53"
+  },
+  "denominator_note": "the two assessors split a few compound rows differently over the same file; rates comparable, raw counts not",
+  "the_finding": "condition A had ZERO distortions and condition B had two, both the same failure — a comparison resolving what its sources leave open. Curation is not free."
+ },
+ "defects_found_and_repaired": {
+  "packet_named_the_manifest_where_the_phase_needed_content": "group_assessment, retraction_check, multihop now travel verbatim; group_assessment withheld from verification",
+  "propositions_truncated_at_300_chars_and_no_snippet": "carried whole, with quotes and the adjudication fields",
+  "artefact_list_rendered_three_times": "one enumeration; the rest are counts and a command",
+  "hop_1_misses_the_paper's_own_references": "gene-direct references named as identifiers to look up",
+  "hop_1_misses_claims_the_reading_names": "seeded into discovery",
+  "self_corrections_exist_only_as_prose": "NOT repairable by copying — the packet names the gap; a structured field is a schema proposal, not made here",
+  "drift_check_called_every_absent_artefact_MISSING": "drift is a change of state, reported in both directions",
+  "unresolved_link_message_conflated_two_facts": "a reader proposed repairing a 'dangling' link whose target exists outside the seven files; the message now separates out-of-scope-and-exists from exists-nowhere"
+ },
+ "tests": "test_phase_handoff.py 22 cases incl. the five adversarial ones (missing reference, changed source, dropped open question, blind-read contamination, resumption redoing finished work); 8 mutations each red. registry_records 48, paper_packet 63.",
+ "VERDICT": "EXPERIMENTAL WITH EXPLICIT LIMITS — adoptable for the M4b boundary in the verified cases, not beyond them",
+ "next": "the dominant cost is the fixed birth context plus the instruction set (55,850-66,376 chars per session, of which each reader declined 68,064 on its own judgement); making that judgement a rule is the next lever, orthogonal to retrieval",
+ "not_automated": {
+  "what": "replacing the coordinating session",
+  "operator_action": "start a new session and give it one line: read the record and this task file, then run phase_handoff.py check --packet <packet>"
+ },
+ "DEFAULTS_TAKEN": [
+  "ACTOR_ID labels assigned by the orchestrator, no registration",
+  "one repair re-run rather than three, on the case with the richest documented defects",
+  "the wave's expectation set reused so the two conditions are scored on identical criteria"
+ ],
+ "STOP_LOG": [],
+ "two_known_reds": "unchanged and not weakened: test_batch_queue, test_surface_census",
+ "battery_and_publication": {
+  "battery": "108 suites executed (the new test_phase_handoff enrolled); two pre-existing failures unchanged; no new regression",
+  "lint": "PASS",
+  "growth_anchors": "PASS",
+  "receipts": "OK 156 chained",
+  "gate": "PASS, 0 blocks",
+  "publication": "not pushed; origin and development resolve to the same URL, so a development push is an origin push, which 21d reserves to the operator"
+ }
+}

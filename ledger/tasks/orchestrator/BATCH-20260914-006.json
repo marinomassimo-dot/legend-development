@@ -1,0 +1,74 @@
+{
+  "_schema": "legend.task.v1",
+  "TASK_ID": "BATCH-20260914-006",
+  "OWNER": "orchestrator",
+  "ACTOR_ID": "orchestrator",
+  "PARENT_MANDATE": "ALDAZ-EXEC-20260913",
+  "assigned_on": "2026-09-14",
+  "PRIORITY": "the residual batch of AUTHORISED_QUEUE_20260914 OBJ_1, unblocked by the 21d consultation returning",
+  "OBJECTIVE": "Propagate the two reading candidates of 2026-09-14 into canon after the mandatory 21d consultation, and land the DL-MECH-012 / DL-REPO-002 clause repair in the same act.",
+  "CURRENT_STATE": "PROPAGATED AND VERIFIED. WM_v4.9 to WM_v4.10. current_state restored to READY, batch_commit_gate OPEN.",
+  "PRE_FLIGHT": {
+    "current_state": "READY before, IN_BATCH_COMMIT during the window, READY after",
+    "lint": "PASS", "publication_gate": "PASS, BLOCKS 0, exit 0",
+    "receipts": "OK, 173 chained, tail anchored", "locator_audit": "0 undeclared",
+    "growth_anchors": "PASS before; BLOCK on papers 83->85 until declared, then PASS",
+    "worktree": "quiet; the ONLY dirty path under research/ was discovery_ledger_current.md, this batch's own clause repair",
+    "snapshot": "backup/snap_20260914_aldaz_batch006, verified IDENTICAL on all five canonical files BEFORE propagation"
+  },
+  "MIRROR_CONSULTATION_OUTCOME_21d": {
+    "record": "disease-models/wwox/research/verifications/2026-09-14_aldaz_reads_consultation.md",
+    "commit": "0dbf2c2",
+    "verdicts": "A CORRECT_WITH_QUALIFICATION, B CORRECT_WITH_QUALIFICATION, C INCORRECT, D CORRECT_WITH_QUALIFICATION, E CORRECT",
+    "classification": "MINOR; nothing operator-reserved; R4 not required as proposed, with two named trigger conditions",
+    "findings_against_the_batch_both_adopted": [
+      "A-1: 'abolishes' for VOPP1 Y165A is the panel's strength, not the authors' - their words are 'strongly affected' and required for a 'robust' interaction, with 'abolished' reserved for Y33R. The landed sentence attributes the blank lane to the panel and keeps the hedge.",
+      "A-2: the third mutant Y157A had been dropped from the canon sentence although the same candidate's own limits section recorded it. The landed sentence names all three PPxY motifs and calls the result GRADED, because the two-mutant version invites a clean one-of-three reading the panel does not show. The reviewer re-rendered Figure 1 at 430 dpi rather than trust the producer's attestation.",
+      "C: the compartment-split formulation was INCORRECT and did not land as drafted - see below.",
+      "D-1 and D-2: two landing requirements the candidate had missed - the MINOR target_wm_version it declared as 'no bump', and the Source/Wikilinks extension - both applied."
+    ]
+  },
+  "THE_PRINCIPAL_FINDING_AND_MY_OWN_VERIFICATION_OF_IT": "Delta C was INCORRECT: the candidate called PMID 33058734 'the negative'. Its own legends report 'EC-specific WWOX KO mice exhibit greater vascular leak' under LPS (Fig 3) and MRSA (Fig 5), and 'ECs isolated from EC WWOX KO mice produce more cytokines' under MRSA (Fig 8, asterisked), against the in vivo BALF cytokine nulls (Figs 4 and 6). It is a SPLIT result whose leak leg CONFIRMS the endothelial-barrier inference PMID 28283473's own Discussion drew. And 'chronic' is not a property of that model: tamoxifen x5 days, challenge 7 days later, 18 h to harvest - the same acute window - while the 3-month exposure is a SEPARATE wild-type arm with no WWOX allele manipulated. So TWO variables differ, not three. I VERIFIED ALL OF IT MYSELF against that paper's own manifest before adopting it: entries[26], [28] and [31] are positive and asterisked, entries[15], [18], [27], [29] are the nulls, and entry[19] carries the authors' own 'inflammation-independent mechanisms ... may lead to increased vascular leak'. A different actor's 600 dpi reading, on different days, agrees. My own FT-100 text had inherited the same 'they don't find it' framing.",
+  "PROPAGATION": {
+    "order": "Phase 1 order honoured: papers (4.1) then claims (4.2) then working model LAST (4.6), then 4.7 regeneration",
+    "paper_094": "PMID 28283473 promoted from CORPUS-STUB-091; placeholder preserved append-only",
+    "paper_095": "PMID 30285739 promoted from CORPUS-STUB-165; placeholder preserved append-only, with a note recording WHY the promotion was owed",
+    "lit_completions": "LIT-0114 and LIT-0181, on the repository's own 'processed - complete_fulltext_read' convention learned from LIT-0149 rather than invented; LIT-0114 clinical relevance re-assigned from the April LOW to INDIRECT-LOW with BOTH halves of the reason written in",
+    "claim_026": "Summary gains one sentence and retracts nothing; the Hussain-scoped clause kept VERBATIM so the earlier 21d constraint is honoured; Source AND Wikilinks extended to PAPER 095; the claim-mirror row's SOURCE CELL moved with them at working_model line 177",
+    "mirror_row_check": "Title, Type and Transferability were checked and are genuinely unchanged by this delta, so only the source cell moved. Stated rather than skipped: a mirror naming one source where the registry names two is the BATCH_20260810_005 defect.",
+    "clause_repair_same_act": "DL-MECH-012 opening (over-scoped AND under-scoped by one conjunction), its gliosis TISSUE (cerebellum -> hippocampal DG/CA1/CA3, verified in the paper's own words after my first search returned zero on its own faulty pattern), its characterisation of PMID 33058734, and DL-REPO-002's Statement causale, Belief and CROSS-REFERENCE - which described DL-MECH-012's retired wording and was therefore itself a defect."
+  },
+  "PHASE_4_7": {
+    "regenerated": ["coverage_report.md", "batch_queue.md", "analysis/pathograph_inventory.md", "analysis/data/pathograph_export.jsonl", "research/surface_census.md", "registries/reading_state.md"],
+    "return_codes": "all 0",
+    "protocol_gap_recorded": "The Phase 4.7 list in prompt_batch_commit.md names FOUR surfaces and does NOT name registries/reading_state.md, though it is a committed derived surface with its own generator and a regression asserting it matches the receipt ledger. Today's three receipts made it drift, so test_reading_state was failing BECAUSE OF THIS SESSION. Regenerated; its 12 tests now pass. Recorded as a gap in the protocol rather than silently patched.",
+    "inputs_dirty_because": "Named the batch's own edits and stated that the only dirty path under research/ was discovery_ledger_current.md, verified by enumeration rather than assumed."
+  },
+  "RELEASE_REGRESSION_SUITE": "VERDICT FAIL, and reported as such rather than as a clean bill. The runner exited 0, which is exactly why the summary was read instead of the code trusted. Classified: test_surface_census fails on a gitignored files/fulltext artefact absent from this checkout, and test_structured_data_integrity on ragged TSVs and empty figure files under files/supplements and files/figures - both ENVIRONMENTAL; test_task_record_commit_hashes names a PEER's record (ledger/tasks/scientist-a/ALDAZ-REPAIR-A-*); test_reading_state was MINE and is now fixed. Two suites were additionally flagged for writing tracked files under a guarded tree; porcelain confirms nothing of theirs remained.",
+  "DECISIONS_TAKEN": [
+    {"decision": "Promote only 2 of the 16 unlinked-support stubs", "why": "Only those two were reviewed by the 21d consultation; promoting fourteen canonical records unreviewed would be the bulk expansion the consultation requirement exists to prevent", "reversible": "the fourteen are named debt"},
+    {"decision": "Use WM_v4.10 for the MINOR bump", "why": "No two-digit minor precedent exists (4.3 through 4.9 are sequential), but 4.10 is the correct MINOR increment and sorts correctly under version ordering; the alternative would have been a MAJOR bump the batch does not warrant", "reversible": "yes"},
+    {"decision": "Adopt Mirror's replacement wordings verbatim for delta A and delta C", "why": "Both were verified against the sources first - the rule is to check a verifier's finding rather than obey it, and both survived that check", "reversible": "text"},
+    {"decision": "Leave the PMID33058734 locator discrepancy unfixed", "why": "snippet and proposition are REVISION_FIELDS; an undeclared revision would break a manifest the audit reports clean, and a declared contradiction needs its blind audit. Direction is unaffected either way", "reversible": "open, named"}
+  ],
+  "DEFAULTS_TAKEN": [
+    {"condition": "The Phase 4.7 list does not name reading_state.md, but its regression asserts it matches the ledger and today's receipts made it drift", "default": "Regenerated it inside the batch window with the other derived surfaces, and recorded the omission as a protocol gap", "why_safe": "It is a committed generated file whose drift the suite would otherwise report after the fact - exactly the failure Phase 4.7 exists to prevent", "what_would_have_differed": "A green batch leaving a stale committed surface and a red suite for the next actor"},
+    {"condition": "growth_anchors BLOCKED on an undeclared papers delta mid-batch", "default": "Ran record --batch BATCH_20260914_006 --papers +2, which is the declared-growth mechanism, rather than editing a baseline by hand", "why_safe": "The tool writes the anchor event; a hand-edited baseline would be an undeclared ratchet change", "what_would_have_differed": "A blocked battery at Phase 5 with no record of what grew"}
+  ],
+  "STOP_LOG": [{"class": "none", "detail": "No reserved act arose. MINOR confirmed by the mandatory consultation; no push, no history rewrite, no deletion of unique material - the two placeholders are preserved append-only.", "waited": 0}],
+  "CORRECTIONS_AGAINST_MY_OWN_WORK_IN_THIS_BATCH": [
+    "FT-100's 'whole-body antecedent' framing was mine and wrong; corrected at source, and the consultation confirmed it independently ('knockout' occurs zero times).",
+    "DL-MECH-012 attributed gliosis to the cerebellum; the source measures it in hippocampal DG, CA1 and CA3. My FIRST source search for this returned zero and I suspected the source before my pattern for one step - the pattern was wrong, and the tag-stripped search found the sentences immediately.",
+    "My Phase 4.6 read-back of the mirror row returned empty and I nearly reported the edit as failed: the row had moved from line 176 to 177 because I had inserted a change-log line above it. The edit was fine; my probe's line number was stale.",
+    "Twice I verified a repair by grepping for a retired string and read a QUOTATION of it as a live assertion. The criterion is 'no longer ASSERTED', never 'string absent'.",
+    "My first classification of the release-suite failures used 'tr | grep -c' and returned '2' for every suite - a meaningless number from my own pattern, not a failure count."
+  ],
+  "OUTCOME": "SUCCESS. WM_v4.9 to WM_v4.10, two PAPER records created and two placeholders preserved, two LIT records completed, CLAIM 026 extended with its Source, Wikilinks and mirror row, the clause repair landed in one act across two ledger entries, six derived surfaces regenerated, growth declared, all gates PASS before and after, no claim reversed, no status moved, no reserved act, no push.",
+  "NEXT_ACTIONS_ORDERED": [
+    "The entries[27]/[29] locator amendment via the contradiction procedure with a blind audit",
+    "The fourteen remaining unlinked-support stubs, scoped with their own consultation",
+    "The UNLINKED_SUPPORT cross-check Mirror specified (claim-cited PMIDs against Claim links) - harness work at T0",
+    "FT-105 (PMID 17178850), the highest-priority unread premise under the lung axis",
+    "entries[19] of PMID42128308 remains blocked on operator-supplied full text"
+  ]
+}

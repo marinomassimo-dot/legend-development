@@ -1,0 +1,53 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT (operator-directed) + A.1b",
+  "TASK_ID": "ORCH-BATCH-PREP-20260913",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "OWNER": "operator",
+  "ACTOR_ID": "orchestrator",
+  "CURRENT_STATE": "COMPLETE — the next ordinary BATCH_COMMIT is prepared and NOT run. Perimeter 43 (42 queued + 1 candidate written here). Ready: CC-20260912-29724996-02 and CC-20260913-29724996-03. No canonical file edited; paper_registry_current.md still carries the wrong arm word until a batch runs.",
+  "OBJECTIVE": "Prepare the ordinary BATCH_COMMIT that propagates the verified corrections of the PMID 29724996 case into canonical records, without reopening the accepted M4b note: reconcile state, read the protocol, derive the queue perimeter, map verified corrections to candidates, write the missing permitted artefacts, and deliver a concrete batch proposal. Preparation only.",
+  "assigned_on": "2026-09-13",
+  "closed_on": "2026-09-13",
+  "predecessors": [
+    "ORCH-M4B-V3-20260913",
+    "ORCH-S2-CLOSE-20260913",
+    "ORCH-CONSOLIDATION-20260913"
+  ],
+  "started_at_head": "a69034badd64685a020c967c84a956beb17525db",
+  "branch": "task/ORCH-BATCH-PREP-20260913",
+  "identity_note": "ACTOR_ID orchestrator is a stated assumption continuing the M4b task chain; the runtime assigns none (AGENTS.md § 4).",
+  "artefacts": [
+    "disease-models/wwox/research/commit_candidates/CC-20260913-29724996-03.md",
+    "disease-models/wwox/research/2026-09-13_next_batch_commit_proposal.md"
+  ],
+  "perimeter": {
+    "criterion": "disposed = real '## BATCH DISPOSITION' heading or header Status naming a batch as committed/integrated/propagated; a DEFERRED disposition returns the candidate to the queue",
+    "cc_files_before": 77,
+    "proposal_files": 2,
+    "effectively_disposed": 35,
+    "mention_only": 1,
+    "queued": 42,
+    "added": 1,
+    "next_batch": 43,
+    "historical_not_reused": [
+      33,
+      34,
+      41
+    ]
+  },
+  "model_disclosure": "The operator asked for Opus 5. The session began on claude-fable-5-1 for the reconciliation and protocol reading, and ran on claude-opus-5 from the perimeter derivation onwards, including every artefact written. Declared, not silent.",
+  "delegations_allowed": 0,
+  "delegations_consumed": 0,
+  "DECISIONS_TAKEN": [
+    "LIT-0096 candidate limited to the ten fields the version-4 verification reproduced; Short title and discovery fields left out · alternative: widen to every placeholder · consulted: none · reversible: yes, a later candidate can add them",
+    "CLAIM 025 identifier and the two unrecorded negatives given no candidate · alternative: draft registry prose · rejected because one is an unverified identity and the other needs new scientific text and a verifier outside this mandate · reversible: yes",
+    "growth_anchors blindness to CC-* names recorded, not repaired · alternative: fix the regex · rejected: the mandate forbids new tools and harness change is outside it · reversible: n/a"
+  ],
+  "DEFAULTS_TAKEN": [
+    "historical counts 33/34/41 -> re-derived under a printed criterion, never reused",
+    "root checkout is reserved for branch switches -> task worktree provisioned instead"
+  ],
+  "STOP_LOG": [],
+  "remote": "nothing pushed"
+}

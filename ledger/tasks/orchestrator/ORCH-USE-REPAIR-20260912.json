@@ -1,0 +1,51 @@
+{
+ "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT (operator-directed) + A.1b",
+ "TASK_ID": "ORCH-USE-REPAIR-20260912",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "operator",
+ "ACTOR_ID": "orchestrator",
+ "CURRENT_STATE": "COMPLETE",
+ "OBJECTIVE": "Close the repair of the comparison note judged not scientifically acceptable in the use trial: repair the conclusions rather than the score, resolve the read-state conflict against the authoritative view, repair the two known deterministic check defects, obtain one independent verification, and measure the cost to acceptance. No level 4. No other optimisation.",
+ "assigned_on": "2026-09-12",
+ "closed_on": "2026-09-12",
+ "predecessor": "ORCH-USE-TRIAL-20260912",
+ "started_at_head": "17fbd1e29c6df77933fb4d641a2056e961241af2",
+ "note_on_this_field": "written full-length on purpose: a 7-character abbreviated hash containing a three-letter run trips the release gate's identifier rule, which exempts only hex runs of 32 or more. That is how commit 6596298 left a BLOCK behind while asserting the gate passed.",
+ "record": "disease-models/wwox/research/2026-09-12_use_repair.md",
+ "artefacts": {
+  "repaired_note": "disease-models/wwox/research/comparison_notes/2026-09-12_PMID29724996_comparison_REPAIRED.md",
+  "original_note_preserved": "disease-models/wwox/research/comparison_notes/2026-09-12_PMID29724996_comparison_ORIGINAL.md",
+  "criteria_preserved": "disease-models/wwox/research/comparison_notes/2026-09-12_use_trial_criteria.md",
+  "first_verification_preserved": "disease-models/wwox/research/comparison_notes/2026-09-12_verification_ORIGINAL.md",
+  "verifier_expectations_preserved": "disease-models/wwox/research/comparison_notes/2026-09-12_verifier_expectations_ORIGINAL.md",
+  "check_output_round2": "disease-models/wwox/research/comparison_notes/2026-09-12_PMID29724996_check_round2.txt"
+ },
+ "VERDICT": "THE NOTE IS NOT CERTIFIED ACCEPTABLE. Round 1 applied all eight repairs; an independent verification of round 1 returned NOT ACCEPTABLE with six material defects, THREE OF THEM INTRODUCED BY ROUND 1 (a false count that contradicted two neighbouring sections, a third wrong denominator in the sentence about a wrong denominator, and a mis-citation inherited unchecked from the original). Round 2 repairs all six and is UNVERIFIED: one delegated verification was allowed and is spent.",
+ "propagation": "None from the note: never committed, no current file changed since 2026-09-10. Four live repository defects named and left to the ordinary route: stale multihop.queued for 23254685 and 25012504; the 'spontaneous' arm word in paper_registry_current.md:6969 and in entries[34]'s own proposition; the CTGF 3-month fold (~7.5x against '~24x' in the locator proposition, the dossier and discovery_ledger_current.md); and a release-gate BLOCK that commit 6596298 introduced while asserting the gate passed.",
+ "check_fixes": "comparison_check.py: a comma between digits is no longer always a decimal point (fixture is the exact sentence that produced 438.434, taken from check1.txt:80 - a test built on the three-integer registry form passes against the unrepaired code, which is how the first version of this fix was caught untested); and naming a record in order to decline it no longer promotes it to argued-from, REFUSED whenever the note states a measurement the declined record carries. Suite 29 -> 39 tests; three mutations each red; both fixes demonstrated on the historical artefact.",
+ "model_read_back_per_turn": "coordinator: 6 turns claude-fable-5-1 then claude-opus-5 for the remainder, model change at 2026-09-12T21:07:42Z, declared as a limit; the one delegation: claude-opus-5 on all 34 turns.",
+ "battery": "FAIL - two inherited reds preserved and named (test_batch_queue ratchet; test_surface_census gitignored evidence) plus one concurrency artefact: the determinism guard flagged a tracked file written by a CONCURRENT orchestrator session inside the suite's window; standalone the suite passes 25 tests, exit 0.",
+ "DEFAULTS_TAKEN": [
+  "The originals were copied into the repository unchanged, with digests, so the comparison is reconstructable without the previous session's scratchpad.",
+  "The second round of repairs was applied rather than left undone, and marked unverified, rather than spending a second delegation the mandate did not allow.",
+  "Inline counts of the check's own output were replaced by a pointer to the committed output, after two of them went stale mid-edit."
+ ],
+ "STOP_LOG": [],
+ "remote": "nothing pushed.",
+ "FOUR_STATEMENTS_NOT_TO_BE_MERGED": {
+  "1_deterministic_checks": "REPAIRED AND VERIFIED \u2014 comma-list-as-decimal and decline-promotes-to-argued-from; 39 tests, 3 mutations each red, each defect reproduced minimally as a fixture, both demonstrated on the historical artefact.",
+  "2_the_note": "SCIENTIFICALLY NOT ACCEPTABLE \u2014 last independent verdict, from a blind verification with a pre-registered hashed expectation set.",
+  "3_second_repair": "APPLIED AND NOT VERIFIED \u2014 repairs the six defects that verification named; no independent reader examined it; one delegation was allowed and is spent.",
+  "4_repository_defects": "OPEN \u2014 stale multihop.queued; the 'spontaneous' arm word in paper_registry_current.md:6969 and in entries[34]'s proposition; the CTGF 3-month fold wrong in a canonical ledger record; the release gate blocking on 7-character commit hashes.",
+  "do_not_merge": "Statement 1 concerns two lines of code, not the science. Statement 3 is not statement 2 resolved. Neither the note nor the second repair is an approved result."
+ },
+ "battery_as_executed": "Battery: **FAIL** over 111 suites \u2014 framework/scripts/test_batch_queue.py: exit 1; framework/scripts/test_surface_census.py: exit 1.",
+ "handoff": "disease-models/wwox/research/2026-09-12_use_repair_handoff.md",
+ "minimal_reproductions_preserved": {
+  "comma_list": "framework/scripts/test_comparison_check.py :: ACommaBetweenDigitsIsNotAlwaysADecimalPoint \u2014 fixture is the exact sentence that produced 438.434, from the trial's check1.txt:80",
+  "declination": "framework/scripts/test_comparison_check.py :: NamingARecordOnlyToDeclineItIsNotArguingFromIt \u2014 honoured, not-honoured, other-record, and the evasion case",
+  "check_output": "disease-models/wwox/research/comparison_notes/2026-09-12_PMID29724996_check_round2.txt"
+ },
+ "gate_as_executed": "`public_release_gate.py` returned **PASS** with **0** block(s)."
+}

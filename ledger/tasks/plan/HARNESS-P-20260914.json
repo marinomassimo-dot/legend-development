@@ -1,0 +1,293 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.2 TASK_ACK + A.3 TASK_CLAIM",
+  "_note": "Harness Engineering work under LEGEND_CORE §21e (T0, no gate, no Mirror precondition). Dispatched by orchestrator under mandate HARNESS-EXEC-20260914. Every point: defect proved by a failing test or a measurement BEFORE the fix, expectations fixed in advance. DEFAULTS_TAKEN and STOP_LOG are recorded here.",
+  "TASK_ID": "HARNESS-P-20260914",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "OWNER": "plan",
+  "ACTOR_ID": "plan",
+  "MANDATE": "HARNESS-EXEC-20260914",
+  "started_at_head": "772ee77ea74e53d7119e50d1f8e69e0945b4ff59",
+  "TASK_ACK": {
+    "state": "COMPLETE",
+    "accepted_on": "2026-09-14",
+    "objective": "P1 UNLINKED_SUPPORT cross-check; P5 locator-propagation obligation (harness half); P6 artefact availability surfaced, never gated; P8 commit-subject convention enforced where it can be; P10 panel_qualifies_text enum gap with a migration proof over every manifest; P9a LIT Status vocabulary validator and migration script, not run against the canonical log.",
+    "specification": "orchestrator dispatch of 2026-09-14 (HARNESS-EXEC-20260914), with the orchestrator's factual correction of the same day (P1 count 14 not 16; P9a 28 distinct values not 12)",
+    "interaction_mode": "AUTONOMOUS_COMPLETE",
+    "review_requirement": "none — harness is T0 under §21e; Mirror reviews ex post and on request"
+  },
+  "TASK_CLAIM": {
+    "claimed_by": "plan",
+    "claimed_on": "2026-09-14",
+    "durable_pointer": "framework/scripts/support_linkage.py, locator_propagation.py, evidence_presence.py, commit_subject.py, deepdive_manifest.py, lit_status.py",
+    "uniqueness": "no competing claim exists for this TASK_ID + GENERATION"
+  },
+  "WRITE_PERIMETER": {
+    "permitted_here": [
+      "framework/scripts/support_linkage.py",
+      "framework/scripts/test_support_linkage.py",
+      "framework/scripts/legend_lint.py",
+      "framework/scripts/deepdive_manifest.py",
+      "framework/scripts/test_deepdive_manifest.py",
+      "framework/scripts/locator_audit.py",
+      "framework/scripts/test_locator_audit.py",
+      "framework/scripts/evidence_presence.py",
+      "framework/scripts/test_evidence_presence.py",
+      "framework/scripts/session_self_eval.py",
+      "framework/scripts/test_session_self_eval.py",
+      "framework/scripts/commit_subject.py",
+      "framework/scripts/test_commit_subject.py",
+      "scripts/legend_commit.sh",
+      "scripts/test_legend_commit.py",
+      "deployment/git_commit_msg_subject_hook.sh",
+      "framework/scripts/locator_propagation.py",
+      "framework/scripts/test_locator_propagation.py",
+      "framework/scripts/lit_status.py",
+      "framework/scripts/test_lit_status.py",
+      "framework/scripts/lit_status_legacy.json",
+      "framework/protocols/scientist_reading_modes.md",
+      "framework/protocols/scientist_standing_brief.md",
+      "framework/protocols/legend_operating_convention_v1.md",
+      "ledger/tasks/plan/HARNESS-P-20260914.json"
+    ],
+    "deliberately_not_touched": {
+      "scripts/run_release_regressions.py, LiveCorpus test separation, framework/protocols/prompt_batch_commit.md, TASK_ID allocation check": "junior-harness, this mandate",
+      "disease-models/wwox/registries/*, framework/state/state_manifest_current.md, framework/state/growth_anchors.jsonl, deepdive_manifests/*.json, ledger/* except this record": "canonical or another actor's",
+      "literature_tracking_log_current.md": "the P9a migration was run only on a scratch copy; applying it is a BATCH_COMMIT act",
+      "framework/scripts/trace_claim_foundation.py, framework/scripts/generate_semantic_graph.py": "their Claim-links parsers disagree with a none-aware reading on 6 live records; recorded as a finding, not changed (outside the six points)",
+      "framework/protocols/controlled_benchmark_ab.md, framework/eval/benchmarks/BENCH-AB-001/instructions/OUTPUT_SCHEMA.md": "frozen benchmark inputs still list five surfaces; rewriting a closed benchmark's instructions would change its inputs",
+      ".git/hooks": "the commit-msg hook is shipped under deployment/ with an install command; installing it changes every actor on this shared checkout at once"
+    }
+  },
+  "BASELINE_BEFORE_CHANGE": {
+    "head": "772ee77ea74e53d7119e50d1f8e69e0945b4ff59",
+    "legend_lint": "VERDICT: PASS (exit 0); one INFO MISSING_WIKILINK on CLAIM 010",
+    "public_release_gate": "VERDICT: PASS (exit 0), REVIEW lines only",
+    "release_battery": "REGRESSION VERDICT: FAIL, battery exit 1, under flock .git/legend_battery.lock, at 772ee77 plus peers' in-flight files. Exit 1: test_generated_surfaces_are_regenerated, test_structured_data_integrity, test_batch_queue, test_pathograph, test_surface_census, test_task_record_commit_hashes, test_locator_audit. TRACKED_FILES_WRITTEN_BY_SUITE: test_repository_surface_determinism, test_batch_queue, test_session_self_eval, test_comparison_check. test_locator_audit is CONTAMINATION BY ME: my new P10 test was added to that file while the battery ran and before the fix; it was green at 772ee77 without it and is green after the fix. The dispatch's 'nine entries while exiting 0' did not reproduce as stated on this run (exit 1, 7 exit-1 suites + 4 tracked-file writes); junior-harness owns that runner (P2).",
+    "p1_stub_count": "14 CORPUS-STUB records read Status: not_processed while their PMID holds a complete_fulltext_read receipt (re-derived; the dispatch's 16 was pre-BATCH_20260914_006)",
+    "p9a_distinct_values": "28 distinct Status values in use plus the empty template line (re-derived; the dispatch's 12 was a truncated uniq list, corrected by the orchestrator)"
+  },
+  "COMMITS": [
+    {
+      "landed_at": "c9aea24f92e868cba19a939cc032c90e4c31aeac",
+      "point": "P10",
+      "what": "rendered_text locator surface; POINTER_TARGET_SURFACES; PIXEL_ATTESTED_SURFACES; locator_audit; reading-modes pointer"
+    },
+    {
+      "landed_at": "76e04eb92e634659fb52442fba5069edd2c06733",
+      "point": "P1",
+      "what": "support_linkage.py UNLINKED_SUPPORT cross-check; LINT WARN/INFO mapping"
+    },
+    {
+      "landed_at": "2967f3ee6920bcb385cf1f45f4d5428d68b1d9f2",
+      "point": "P6",
+      "what": "evidence_presence.availability(); session_self_eval [AVAILABILITY]; LINT INFO EVIDENCE_AVAILABILITY"
+    },
+    {
+      "landed_at": "705405a9667c63469fd5bb70b6f837c99fde15bc",
+      "point": "P1 follow-up",
+      "what": "executable mode on support_linkage.py and its test (a red I introduced in test_release_surface)"
+    },
+    {
+      "landed_at": "3c88352acb79d464639c9864e2302267c819b948",
+      "point": "P8",
+      "what": "commit_subject.py; legend_commit.sh enforcement with explicit override trailer; deployment commit-msg hook (not installed); convention S.6.7"
+    },
+    {
+      "landed_at": "8c738f8f749931c8a37d3b8c6475a5c10f5bacc7",
+      "point": "P5 + P9a",
+      "what": "locator_propagation.py and LINT; lit_status.py validator, migration, grandfather snapshot and LINT; standing-brief pointer. One commit because both touch legend_lint.py and the wrapper stages whole paths"
+    }
+  ],
+  "MEASUREMENTS": {
+    "P1_unlinked_support": {
+      "defect_proof_before_fix": "test_lint_reports_unlinked_support_and_does_not_block FAILED: 'LINT emitted no UNLINKED_SUPPORT finding' on a fixture where a claim rests on a not_processed CORPUS-STUB; no script compared a claim's cited PMIDs with the owning record's Claim links",
+      "live_before_fix_prototype": "3 pairs, 0 unchecked: CLAIM 003 / PMID 34747138 -> PAPER 005 (Claim links '004'); CLAIM 007 / PMID 15064722 -> CORPUS-STUB-143 (not_processed, none); CLAIM 036 / PMID 30290271 -> PAPER 006 (Claim links '005')",
+      "live_after": "identical 3 pairs through LINT; verdict PASS -> WARN (legend-start reads WARN as READY)",
+      "historical_check": "on registries at 636df75^ (before BATCH_20260914_006) the check gives the same 3 pairs and does NOT flag CLAIM 026 / PMID 30285739, because CLAIM 026 did not yet name that PMID in any field (predicted in advance and confirmed). The 30285739 defect lived in three working documents, not in the claim registry, so a registry cross-check could not have caught that instance; it catches the class once a claim field names the PMID",
+      "parser_divergence_finding": "trace_claim_foundation.py (\\b\\d{3}\\b) and generate_semantic_graph.py (\\b\\d{1,3}\\b, exact 'none') both read 'none — deliberately none. CLAIM 002 and CLAIM 004 must NOT be linked' (PAPER 082) as links to 002 and 004; they disagree with a none-aware reading on 6 live records (CORPUS P261, P268, P207, PAPER 082, 083, 094). support_linkage.declared_claim_links is none-aware and strips annotations; the two consumers were not changed",
+      "reuse": "parse_entries, FIELD and PMID imported from coverage_report and asserted by identity in the suite"
+    },
+    "P5_locator_propagation": {
+      "defect_proof_before_fix": "at 4c1a5dd PMID33058734.json entries[27] and entries[29] propositions carried 'six bars', contradicts_locator absent; the W4 correction was on 2026-09-13_m4b note, 2026-09-14_aldaz_dossier_fix_c_dispositions.md and the BATCH_20260914_006 report (line 93, a table cell); locator_contradiction_audit modes (screen, --history, --working-tree) report declared or undeclared REVISIONS, not a pending one; the new suite failed ModuleNotFoundError and LINT had no _check_locator_propagation",
+      "historical_replay": "scratch export, obligation lines appended to a copy of the 4c1a5dd batch report: manifest at 4c1a5dd -> OPEN 2; manifest at 24c5384 -> DISCHARGED 2",
+      "live": "obligations: 0 (no actor has written a declaration yet)",
+      "prose_heuristic_rejected": "PMID+entries[N]+retirement wording: 4 candidate lines at HEAD and 4 at 4c1a5dd; the batch report line still says 'Still carry' after the fix and 2 of 4 lines are unrelated, so it cannot tell open from closed. Not built",
+      "tests": "11 cases: historical two-OPEN state, declared discharge, silent rewrite reported as UNDECLARED_DISCHARGE, case/whitespace folding, waiver with reason, unresolvable targets, malformed with file:line, revision-field restriction by identity with locator_contradiction_audit.REVISION_FIELDS, cross-file dedupe, never writes a manifest, LINT WARN mapping"
+    },
+    "P6_availability": {
+      "defect_proof_before_fix": "85 complete-read PMIDs: 36 all present, 1 partial, 48 none present or none declared, 0 mismatch; session_self_eval printed 0 lines mentioning presence/availability/absent; ArtefactAvailabilityIsItsOwnState failed '[AVAILABILITY] not found' for absent, present and mismatched bytes alike",
+      "live_after": "LINT INFO and self-eval: 85 standing complete reads | 36 all present | 1 partial (PMID 22634283) | 45 none present | 0 mismatch | 0 no manifest | 3 no artefacts declared",
+      "never_gates": "tests pin equal return codes with and without bytes, mismatch reported apart from absence, and absent bytes never turn a receipt into an unread premise; cost measured 0.7 s for the whole corpus"
+    },
+    "P8_commit_subject": {
+      "defect_proof_before_fix": "two new wrapper tests failed on the unchanged legend_commit.sh: the ALDAZ-FT-A-003 subject ('… the positive lung leg is real, and the model is not whole-body') was accepted, exit 0, and committed; no override trailer existed. Checker expectations (8 leaky, 12 clean, all quoted from history) written before commit_subject.py",
+      "history_scan": "231 of the last 400 subjects flagged; 0 of the 14 since the convention was adopted (9bfbc58~1..HEAD at the time) — no false positive on compliant subjects",
+      "hook_smoke": "throwaway repository with deployment/git_commit_msg_subject_hook.sh installed: leaky exit 1, clean exit 0, override exit 0 with Subject-Check-Override trailer",
+      "limits": "lexical screen; a conclusion phrased as an act passes; bare git commit unchecked where the hook is not installed; stated in S.6.7 and the module docstring"
+    },
+    "P10_rendered_text": {
+      "defect_proof_before_fix": "three PanelTextRelationBites tests failed: 'surface: must be one of [abstract, body, figure, supplement, table]' and 'entries[0] is not a text surface'; the locator_audit test failed missing=[0] (rendered quote matched against the refused layer)",
+      "migration_proof": "snapshot before the edit (deepdive_manifest.py sha256 a793899103f96e81c7012696586fb5f5998085c1ee83b5896a426373f0807ae6) and after: 96 manifests, 2070 locators; load_and_validate in three modes (structure / current schema / strict with artefact verification) with errors, incomplete, warnings and ratchets; per-locator surface, admitted, text_verifiable, pointer_target and audit_image. Result: 0 manifest bytes changed, 0 validator outputs changed, 0 per-locator semantics changed, 0 locators use the new value",
+      "design": "rendered_text admitted and a legal coupled-relation target; kept out of TEXT_SURFACES so it is never matched against a text layer (deepdive_manifest verification, recapture_snippets, locator_audit). No existing locator relabelled"
+    },
+    "P9a_lit_status": {
+      "defect_proof_before_fix": "LINT validated CLAIM and PAPER statuses and no LIT status; the new suite failed ModuleNotFoundError and legend_lint had no _check_lit_statuses (the LINT test puts `analyzed` on a new record and expects a block)",
+      "canonical_home": "the log's own '## Status vocabulary' table (10 values) already existed; lit_status.py parses it and a test forbids a quoted copy of its values in the module. legend_lint.VALID_PAPER_STATES restates the same ten words for the paper registry — noted, not changed",
+      "live_classification": "397 records: 350 VALID, 35 LEGACY_FORM (17 processed — complete_fulltext_read, 1 processed — partial_fulltext_read, 17 completed — [[PAPER n]]), 11 LEGACY_FIELD (Current status, incl. 2 filtered_in — …), 1 NOT_IN_VOCABULARY (LIT-0401 archived)",
+      "grandfather_snapshot": "lit_status_legacy.json: 47 records by identity and exact value; LINT WARN LIT_STATUS_LEGACY on those, BLOCK INVALID_LIT_STATUS on anything else outside the table; live verdict unchanged (WARN)",
+      "migration_on_scratch_copy_only": "canonical log sha256 prefix 08dbe597db799f8b before and after; copy: changed 46, unmapped 1 (LIT-0401 archived), 46 state lines removed, 83 Status/Status note lines added, 398 LIT headings unchanged; post-migration validate 396 VALID + 1 NOT_IN_VOCABULARY; second run changed 0",
+      "population_reconciliation_for_the_orchestrator": "All figures describe one population and all are correct; they count different things. Lines starting '## LIT-': 398, of which one is the record template '## LIT-[NNN]' inside a code block. LIT records by growth_anchors.HEADINGS['literature'] (template excluded): 397 — this is validate()'s population. Of the 397: 386 carry **Status:**, 11 carry only **Current status:**. Distinct **Status:** values on those 386 records: 28 (the orchestrator's 28 is right; the raw file shows 29 only because the empty template line counts as one). 17 of the 28 are the 'completed — [[PAPER n]] (…)' form differing only by PAPER number. snapshot counts neither 397 nor 28: it counts the records that are NOT VALID against the log's table, 47 = 35 LEGACY_FORM + 11 LEGACY_FIELD + 1 NOT_IN_VOCABULARY, with 350 VALID making up the 397. The canonical migration's scope is those 47 records: 46 are rewritten, 1 (LIT-0401) is left unmapped",
+      "vocabulary_gap_for_the_orchestrator": "LIT-0401 is a retracted primary kept for dedup ('never use as evidence'); no table value is true of it (background_only means context). Adding a value is a change to the table, i.e. a BATCH_COMMIT decision"
+    }
+  },
+  "HANDOFF_TO_ORCHESTRATOR": {
+    "P9a_canonical_half": "python3 framework/scripts/lit_status.py migrate --log disease-models/wwox/registries/literature_tracking_log_current.md   # dry run, prints the diff; add --write inside a BATCH_COMMIT. Then decide LIT-0401's value (extend the table or map it), and regenerate the snapshot: python3 framework/scripts/lit_status.py snapshot --write-json framework/scripts/lit_status_legacy.json",
+    "P1_repairs": "3 UNLINKED_SUPPORT pairs in LINT are registry edits (Claim links or a stub promotion) through BATCH_COMMIT, or a reading that concludes the link should not exist",
+    "P5_usage": "science actors write LOCATOR_PROPAGATION_OBLIGATION lines where a correction is recorded (grammar in scientist_standing_brief.md and locator_propagation.py)",
+    "P8_owner_install": "install -m 0755 deployment/git_commit_msg_subject_hook.sh \"$(git rev-parse --git-common-dir)/hooks/commit-msg\"   # operator/owner act; legend_commit.sh already enforces for every wrapper commit",
+    "for_junior_harness": "none required: no change was needed in run_release_regressions.py, the LiveCorpus separation, prompt_batch_commit.md or the TASK_ID check"
+  },
+  "DEFAULTS_TAKEN": [
+    {
+      "condition": "dispatch figures P1=16 and P9a=12 values did not re-derive",
+      "default": "measured from the tree (14; 28), used those, and the orchestrator confirmed the correction mid-task",
+      "why_safe": "numbers derived, not carried",
+      "different_if_not": "a test or commit body quoting a stale figure"
+    },
+    {
+      "condition": "baseline battery contaminated for test_locator_audit by my own test edit mid-run",
+      "default": "recorded as contamination, not as a baseline red; re-ran the suite after the fix (green)",
+      "why_safe": "the attribution was tested, not assumed",
+      "different_if_not": "a false 'inherited red'"
+    },
+    {
+      "condition": "one full battery per commit would be contaminated by the next point's edits on the shared checkout",
+      "default": "targeted suites plus both gates re-read before every commit; one full battery under lock after the last commit with no edits during the run",
+      "why_safe": "§21e precondition is checked at landing state; a red found at the end is repaired as a follow-up commit",
+      "different_if_not": "six contaminated battery runs"
+    },
+    {
+      "condition": "P5 and P9a both add a function to legend_lint.py and the wrapper is path-scoped",
+      "default": "one commit for both, proofs separated in the body",
+      "why_safe": "hunk staging would bypass the wrapper that exists to stop cross-actor sweeps",
+      "different_if_not": "two commits, the first with a red suite in its tree"
+    },
+    {
+      "condition": "a subject-check violation with no escape would block a legitimate commit quoting history",
+      "default": "LEGEND_SUBJECT_OVERRIDE=<reason>, written into the message as a trailer",
+      "why_safe": "the exception is visible in the log it would otherwise hide in",
+      "different_if_not": "people route around the wrapper"
+    },
+    {
+      "condition": "P10 enum value name",
+      "default": "rendered_text",
+      "why_safe": "names what was quoted (the authors' text) and how (a rendered page); additive, 0 live uses",
+      "different_if_not": "a rename is one constant before any manifest uses it"
+    },
+    {
+      "condition": "P9a mapping for completed — [[PAPER n]]",
+      "default": "the promoted PAPER record's own Status when it is a table value (all 17 live targets read processed), original kept verbatim as the note",
+      "why_safe": "grounded in the registry, lossless, reviewed as a dry-run diff by the actor who applies it",
+      "different_if_not": "17 more unmapped records for the orchestrator"
+    }
+  ],
+  "STOP_LOG": [
+    {
+      "class": "none",
+      "note": "no class-1 or class-2 stop. Boundaries respected without stopping: the P9a migration was not applied to the canonical log; the git hook was not installed; no manifest, registry, state file or other actor's ledger record was written"
+    }
+  ],
+  "DECISIONS_TAKEN": [
+    {
+      "what": "UNLINKED_SUPPORT in LINT as WARN_BUT_PROCEED, UNCHECKED as INFO, no ratchet",
+      "alternatives_rejected": "BLOCK (a cross-check must not gate); count ratchet (baseline = today's set)",
+      "consulted": "dispatch",
+      "reversibility": "one severity string",
+      "revert": "drop _check_unlinked_support from lint()"
+    },
+    {
+      "what": "a new none-aware Claim-links reader instead of reusing either existing one",
+      "alternatives_rejected": "trace_claim_foundation's or generate_semantic_graph's parser (both invert PAPER 082's refusal)",
+      "consulted": "measurement over live records",
+      "reversibility": "one function",
+      "revert": "n/a; unifying the two older consumers is a separate task"
+    },
+    {
+      "what": "P6 surfaced in session_self_eval and LINT at INFO; not in coverage_report.md or reading_state.md",
+      "alternatives_rejected": "the committed views: per-disk data would make their drift tests fail on every other host",
+      "consulted": "none",
+      "reversibility": "full",
+      "revert": "remove the two print blocks"
+    },
+    {
+      "what": "P8 enforced in legend_commit.sh; the git hook shipped, not installed",
+      "alternatives_rejected": "installing into the shared .git/hooks (changes every actor mid-mandate)",
+      "consulted": "dispatch note on .claude writes",
+      "reversibility": "full",
+      "revert": "delete the CHECKER block"
+    },
+    {
+      "what": "P5 as an explicit declaration line plus a detector; no prose inference",
+      "alternatives_rejected": "a heuristic over research prose (measured: cannot separate open from closed)",
+      "consulted": "measurement",
+      "reversibility": "full",
+      "revert": "remove _check_locator_propagation"
+    },
+    {
+      "what": "P9a grandfathering by record identity and exact value in a harness JSON, not a count in the state manifest",
+      "alternatives_rejected": "a count ratchet in framework/state (forbidden file, and a count can be exchanged one-for-one); WARN-only (new sprawl continues)",
+      "consulted": "registry_only ratchet precedent",
+      "reversibility": "full",
+      "revert": "remove _check_lit_statuses and the JSON"
+    },
+    {
+      "what": "task_id_collision.py (junior-harness) is NOT wired in this mandate; verdict ADOPT at the next Monday triage, with the integration point named",
+      "why": "The checker is sound and tested, but it has no dispatcher in the repository to call it: dispatch happens in the Orchestrator's session and in .claude/skills and agents, which the auto-mode classifier refuses to let this actor write. Wiring it into mandate_continuity.py's AUTHORISED_QUEUE reconciliation (refuse a queued step whose TASK_ID already names a finished record) is the one harness-side point, and it needs a design choice between a queue-schema check and a deployment/ PreToolUse snippet, neither measured. Adding either during this session would also have edited the tree while the locked battery ran.",
+      "alternatives_rejected": "wire it now into mandate_continuity (unmeasured design, mid-battery tree edit); a prose instruction in cross_session_transport §11 (a checker nobody is forced to call is the same half-fix)",
+      "consulted": "orchestrator message 2026-09-14",
+      "reversibility": "n/a — no change made",
+      "revert": "n/a"
+    },
+    {
+      "what": "P10 additive enum value, no relabelling of existing figure locators that are page-text crops",
+      "alternatives_rejected": "relabelling (another actor's reading; forbidden files)",
+      "consulted": "the module's own principle",
+      "reversibility": "full while 0 manifests use it",
+      "revert": "drop the value from the three sets"
+    }
+  ],
+  "INCIDENTS": [
+    {
+      "id": "HARNESS-P-I1",
+      "severity": "low",
+      "caught_by": "self (targeted run of scripts/test_release_surface.py before the P6/P8 commits)",
+      "what": "support_linkage.py and test_support_linkage.py landed at 76e04eb without executable mode; test_shebang_python_entrypoints_are_executable went red (green in baseline)",
+      "fix": "705405a",
+      "why_missed": "the P1 pre-commit suite list did not include the repository surface suites"
+    },
+    {
+      "id": "HARNESS-P-I2",
+      "severity": "low",
+      "caught_by": "self (baseline battery output)",
+      "what": "my P10 test edit to test_locator_audit.py landed while the baseline battery was running, so the baseline shows that suite red",
+      "fix": "recorded as contamination; the suite is green after the fix",
+      "why_missed": "tests were written while the background battery held the lock"
+    }
+  ],
+  "BATTERY_AFTER": {
+    "run": "flock .git/legend_battery.lock python3 scripts/run_release_regressions.py at 8c738f8f749931c8a37d3b8c6475a5c10f5bacc7, finished 15:56Z, tree clean of my edits during the run",
+    "verdict": "REGRESSION VERDICT: FAIL, battery exit 1",
+    "exit_1": [
+      "framework/scripts/test_batch_queue.py",
+      "framework/scripts/test_pathograph.py",
+      "framework/scripts/test_task_record_commit_hashes.py"
+    ],
+    "tracked_writes": [
+      "disease-models/wwox/analysis/scripts/test_structural_analysis.py -> ledger/tasks/orchestrator/HARNESS-EXEC-20260914.json at 15:56:04"
+    ],
+    "attribution": "All three exit-1 suites were red in the baseline. test_task_record_commit_hashes is red on ledger/tasks/scientist-a/ALDAZ-REPAIR-A-20260913.json (7-character started_at_head), not on this record. The tracked write is a concurrent edit by the orchestrator to its own record inside that suite's 15 s window: the suite imports nothing under ledger/, and git status shows the file as the orchestrator's in-flight change. Tested, not assumed.",
+    "compared_with_baseline": "nothing green before is red after. Baseline reds no longer red: test_generated_surfaces_are_regenerated, test_structured_data_integrity, test_surface_census, test_locator_audit (the last was my own mid-run contamination, see HARNESS-P-I2). Baseline tracked writes by test_repository_surface_determinism, test_batch_queue, test_session_self_eval and test_comparison_check did not recur. I do not claim authorship of those clearances: junior-harness landed f61447a and 7d61cb6 during this mandate",
+    "record_written_at_head": "f0f3534fe89f (the orchestrator's commit; this record lands on top of it)"
+  }
+}

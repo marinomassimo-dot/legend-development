@@ -1,0 +1,173 @@
+{
+ "_schema": "LEGEND governance v3.3.1 · Annex A.1 TASK_ASSIGNMENT + A.1b · Annex C.2 re-examination",
+ "TASK_ID": "ALDAZ-REEXAM-C-20260913",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "scientist-c",
+ "MANDATE": "ALDAZ-EXEC-20260913",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Independent re-examination, as a verifier who did not perform the repair, of scientist-a's five-site withdrawal of the P47T wordings 'normal protein levels' and 'abolished PPxY binding' under task ALDAZ-RESIDUAL-A2-20260913 (commits 28d8557, 94065ee). Judge truth against sources, preservation of each retraction's point, repair-by-quotation, deletion of true statements, the seven rejections, the R4-refused wordings, and whether a sixth site survives in an unsearched spelling.",
+ "assigned_on": "2026-09-13",
+ "ROLE": "INDEPENDENT_RE_EXAMINER — producer != verifier. I PROPOSE; I do not REPAIR.",
+ "SCOPE": {
+  "repair_under_review": "ALDAZ-RESIDUAL-A2-20260913, five sites",
+  "sites": [
+   "disease-models/wwox/analysis/proteostasis_rationale.md (two sites: the withdrawn Step 4 retraction, and the withdrawal table)",
+   "disease-models/wwox/analysis/mechanism_intervention_map.md (the fenced CLAIM 030 allelic-series diagram)",
+   "disease-models/wwox/therapeutics/therapeutic_strategies_current.md (TX-003 Correction line)",
+   "disease-models/wwox/analysis/comparison_notes/2026-09-13_M4B_PMID24369382.md (the fifth site, named by no contract)"
+  ],
+  "excluded": "The four scientific current files and state_manifest_current.md are NOT touched: they move only through BATCH_COMMIT, which is in preparation by the orchestrator right now. No file of the producer is edited, reverted or fixed. No push to any remote. No new tooling, no corpus expansion, no new readings.",
+  "order_of_work": "MANDATORY and not reorderable: Stage 1 expectations from the SOURCES alone, written before the producer's account is opened; Stage 2 the five repaired sites as they now stand; Stage 3 only then the producer's dispositions record."
+ },
+ "SOURCES_STAGE_1": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID36828035.md",
+  "disease-models/wwox/research/deepdive_manifests/PMID36828035.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID24369382.md",
+  "disease-models/wwox/research/deepdive_manifests/PMID24369382.json",
+  "disease-models/wwox/registries/claim_registry_current.md (CLAIM 007, CLAIM 030, read-only)",
+  "disease-models/wwox/research/commit_candidates/CC-20260913-24369382-02.md (the R4 that refused 'retains', 'residual recovery', 'PPxY')"
+ ],
+ "DELIVERABLES": [
+  "disease-models/wwox/research/verifications/2026-09-13_aldaz_a2_reexamination.md",
+  "this task record, carrying TASK_ACK, TASK_CLAIM, DEFAULTS_TAKEN, STOP_LOG and API_SAFEGUARD_EVENTS even when empty"
+ ],
+ "VERDICT_VOCABULARY": "Per site: CORRECT | CORRECT_WITH_QUALIFICATION | INCORRECT | UNVERIFIABLE_HERE, each with the verification actually performed, objections, and WHAT_WOULD_CHANGE_MY_MIND. Overall: Annex C.2 CONFIRMED | REFINED, where CONFIRMED means 'no defect found given the available evidence', never 'true'.",
+ "GOVERNING_RULE": "If a defect is found, check the finding against the SOURCE before reporting it. Do not call for the deletion of a true statement in order to obey a verification error.",
+ "COMMITTING": {
+  "how": "bash scripts/legend_commit.sh \"<msg>\" <paths> — never git commit directly.",
+  "gates": "python3 scripts/public_release_gate.py AND python3 framework/scripts/legend_lint.py . READ BEFORE each commit, never after.",
+  "commit_subjects": "Conclusions stay OUT of commit subject lines: subjects leak into other actors' session bootstraps and have already partially defeated a blinding firewall in this batch.",
+  "no_branch": "Root and main are writable (LEGEND_CORE 21e); no task branch is created."
+ },
+ "INTERACTION_MODE": "AUTONOMOUS_COMPLETE",
+ "STOP_POLICY_REMINDER": "LEGEND_CORE 21c governs. Stop only for a reserved act with no sanctioned alternative, or a condition with no safe default; otherwise take the safe default, record it in DEFAULTS_TAKEN, and continue.",
+ "CURRENT_STATE": "COMPLETE — three stages run in the mandated order, five sites judged, seven rejections judged each on its own evidence, an independent multi-spelling sweep run over all of disease-models/wwox/. Verdict REFINED. Deliverable written; no file of the producer edited, no scientific current file touched, no persisted locator amended, no derived surface regenerated, no batch run, no push.",
+ "VERDICT": {
+  "annex_c2": "REFINED",
+  "meaning": "CONFIRMED would mean 'no defect found given the available evidence'; two defects were found on the available evidence and each was checked against the source artefact before being written down.",
+  "per_site": {
+   "site_1_proteostasis_rationale_step4_retraction": "CORRECT_WITH_QUALIFICATION — true against CLAIM 007 clause by clause; retraction and comparator-only disposition intact; non-equivalence now rests on the WW1-versus-SDR domain argument; no repair-by-quotation. Qualification: 'the only measurement is the unquantified 10% input lane' is exact for the mouse and invisible to the human fibroblast measurement — a narrowing by omission, defensible in context, proposed not applied.",
+   "site_2_proteostasis_rationale_withdrawal_table": "CORRECT — 'abundance is undetermined' is the table-scale compression of CLAIM 007's wording; 'Withdrawn' and 'Comparator only' untouched.",
+   "site_3_mechanism_intervention_map_claim030_fence": "CORRECT_WITH_QUALIFICATION — structural integrity verified MECHANICALLY from the diff: same limbs, same order, same arrows, same MILD/MILD/SEVERE, same conclusion, other two limbs byte-identical. PPPY and 'severely impaired' are the R4's own words. Qualification: the fence is attributed to CLAIM 030 while no longer matching CLAIM 030's canonical Summary; the divergence is declared eleven lines below rather than inside the fence.",
+   "site_4_therapeutic_strategies_TX003_correction": "CORRECT — the site where repair-by-quotation was most tempting and was specifically avoided: the parenthetical names the CLASS of the defect without reproducing the phrase.",
+   "site_5_M4B_PMID24369382_section_B_row": "CORRECT — the most precise of the five; carries n = 1 explicitly. Tested specifically for deletion of a true statement: none — the authors' hedged conclusion survives elsewhere in the same file, and the row now carries more information than before."
+  },
+  "rejections": "Five of seven HOLD (verified each on its own evidence, not accepted on description). R6 (CLAIM 030 Summary) HOLDS but is UNDER-DECLARED: paper_registry_current.md:188 and :6236 carry the same withdrawn wordings in a second canonical file and no rejection names them. R4 DOES NOT HOLD for M4B_PMID24369382 line 116.",
+  "sixth_site": "YES — twelve surviving sites, none dispositioned: discovery_ledger_current.md lines 351, 670, 678, 760, 762, 766, 782, 889; therapeutic_hypotheses_ledger_current.md lines 309, 316, 327, 328; plus PMID42128308_partial_locators.md:149 with its persisted locator and derived export; plus the two undeclared canonical rows."
+ },
+ "FINDINGS": [
+  {
+   "id": "FINDING_1",
+   "severity": "the sharpest of the re-examination",
+   "where": "disease-models/wwox/analysis/comparison_notes/2026-09-13_M4B_PMID24369382.md section C, 44 lines below repaired Site 5, in the same file",
+   "what": "The bullet asserts that abolition is 'an overstatement for the WW1-only construct' whose 'honest reading is strong reduction with residual binding' — three things the blind R4 in CC-20260913-24369382-02 refused: 'residual binding' is among the three refused words; 'at the wild-type band's height' is contradicted by measurement (centroid ~14 px BELOW lane 1's, no band edges, no lane registration); and a per-construct result claim IN EITHER DIRECTION is the reader's addition because the paper draws no per-construct claim to overstate.",
+   "not_a_defect": "The MEASUREMENT survives and I do not propose deleting it: the WWOX1-mutant lane is not blank, and it is visibly above the emptiness of the WWOX1-2-mutant lane. The R4 confirms both. The defect is the inference layered on the measurement.",
+   "why_the_rejection_failed": "The note was HONEST when written — it says in its own words that R4 had not run for it and that any repair must run R4 first. The R4 then ran and refused it. The producer, editing this very file, read the R4, classified line 116 as 'already true', and leaned on the refused sentence as the stated justification for repairing Site 5. The R4's result propagated upward into the section B row and not backward into the section C bullet the section B repair cites as its authority.",
+   "proposed_not_applied": "Keep the measurement; replace the inference with the R4's own boundary wording, which exists and was drafted for exactly this purpose."
+  },
+  {
+   "id": "FINDING_2",
+   "severity": "a coverage claim that overstates its own scope",
+   "what": "The dispositions assert 'zero surviving occurrences in any file I own' after re-running the multi-spelling sweep. Twelve occurrences stand today under disease-models/wwox/ in spellings the producer's own recorded sweep pattern covers ('livelli normali', 'normal protein', 'abolito'), in two non-canonical scientist-writable ledgers and one dossier, dispositioned NEITHER as repaired NOR as rejected. discovery_ledger_current.md:351 is the withdrawn clause as THE REASON GIVEN INSIDE A RETRACTION — character-for-character the construction repaired at Sites 1, 2 and 4.",
+   "the_point": "This is stronger than 'a spelling nobody searched for': the spelling WAS searched and the hits were not reported. The scoping phrase 'in any file I own' is technically load-bearing and materially misleading in a record whose purpose is to close a residual.",
+   "proposed_not_applied": "Not that scientist-a should have repaired them — ownership is a real question and DL-MECH-033 is the table CLAIM 030 rests on. That each site be DISPOSITIONED: listed, with an owner, and either repaired at T0 by its owner or declared as a residual the way the two canonical rows were."
+  },
+  {
+   "id": "FINDING_3_NEAR_MISS",
+   "severity": "recorded as a near-miss, NOT reported as a defect",
+   "what": "PMID42128308_partial_locators.md:149 reads 'Normal protein with a severe phenotype'. My first reading scored 'severe phenotype' as a second independent error, since every local record assigns P47T the MILD phenotype. Checked against the context before reporting: the sentence brackets a MOUSE result against a human organoid result, and the P47T MOUSE does carry a severe phenotype — chronic generalised convulsive epilepsy, ~4-fold Purkinje loss, survival 393 +/- 32 d against 542 +/- 8. Defensible; withdrawn as a finding.",
+   "why_recorded": "Had I reported it I would have called for the deletion of a true statement in order to obey my own verification error — the failure this task was warned about twice, in both directions. Only the 'normal protein' half stands, and it is listed under FINDING_2."
+  }
+ ],
+ "UNVERIFIABLE_HERE": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt is absent from this checkout (files/ is gitignored by design, the repository's intended layering and not a fault), so what the Aqeilan 2026 review actually says about P47T protein levels could not be verified and no finding of mine rests on it. The verbatim QUOTATION at line 136 is therefore UNVERIFIABLE_HERE and is not charged as a repair-by-quotation defect; the un-attributed restatement at line 149, in the reader's own voice, is a defect independent of what the review says. entries[19] is a persisted locator whose amendment is a tracked contradiction-procedure act, and pathograph_export.jsonl is a derived surface regenerated by the orchestrator — the route is proposed, not the edit.",
+ "DISAGREEMENT_UNRESOLVED": {
+  "what": "M4B_PMID24369382 section C's measurement survives the R4 while every inference from it is refused, including that the WW1-only construct differs from the tandem one in RESULT. That leaves a measured two-lane asymmetry nobody may interpret in either direction. The R4 itself declares this UNRESOLVED, having run a control against its own conclusion: lane 3's unsaturated doublet bleeds only ~40-60 px while lane 1's feature reaches ~200 px, but lane 1 is clipped to black and horizontally elongated, the classic source of halation — so the control neither establishes bleed nor establishes a band.",
+  "what_would_resolve_it": "Source data or an unsaturated re-exposure of Mallaret Figure 3; or a per-construct pull-down repeated with non-saturating exposure and lane registration. Absent either, the honest terminal state is the R4's, and no record should resolve it in either direction."
+ },
+ "TASK_ACK": {
+  "TASK_ID": "ALDAZ-REEXAM-C-20260913",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "ACTOR_ID": "scientist-c",
+  "DECISION": "ACCEPTED",
+  "acked_at": "2026-09-13T21:05:00Z",
+  "understood": [
+   "I am the independent re-examiner of a repair I did not perform; an automatic green check is not scientific acceptability.",
+   "The order of work is the whole control: expectations from the sources FIRST, the producer's reasoning LAST.",
+   "An under-claim is a defect exactly as an over-claim is; a silent narrowing is the compounding loss.",
+   "Repair-by-quotation — leaving a false clause in place inside quotation marks or an attribution — is the specific bad fix I must test for at every site.",
+   "state_manifest_current.md reads IN_BATCH_COMMIT deliberately; that is not a fault and I do not run or edit a batch."
+  ],
+  "no_recursive_delegation": true
+ },
+ "TASK_CLAIM": {
+  "claimed_by": "scientist-c",
+  "claimed_at": "2026-09-13T21:05:00Z",
+  "durable": true,
+  "started_at_head": "9deaa42",
+  "single_owner": "This task has exactly one owner. No other open contract re-examines ALDAZ-RESIDUAL-A2-20260913."
+ },
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "The source artefact behind FINDING_2's third site is absent from this checkout (files/ is gitignored by design).",
+   "default_taken": "Reported that site as UNVERIFIABLE_HERE as to what the review says, and confined the charged defect to the un-attributed restatement in the reader's own voice.",
+   "why_safe": "Claims nothing about a surface I did not open; the restatement defect is independent of the review's content.",
+   "what_would_have_been_different": "With the artefact I could have said whether the quotation at line 136 is faithful, and whether the review itself carries the withdrawn wording."
+  },
+  {
+   "condition": "Two non-canonical ledgers carry the withdrawn wording and ownership of them is unclear.",
+   "default_taken": "Reported them as undispositioned sites needing an owner; did NOT propose that the producer should have repaired them, and edited nothing.",
+   "why_safe": "I PROPOSE; I do not REPAIR. Naming a site costs nothing; leaving it unnamed is the compounding loss epistemic_discipline exists to prevent.",
+   "what_would_have_been_different": "If ownership were assigned I would have named the owner and the T0 obligation."
+  },
+  {
+   "condition": "FINDING_1 sits in a file whose measurement must be KEPT while its inference must go.",
+   "default_taken": "Proposed the R4's own boundary wording as the replacement, and stated explicitly which sentence must NOT be deleted.",
+   "why_safe": "Protects a true statement from being deleted in order to obey a verification result — the rule this task was given twice.",
+   "what_would_have_been_different": "A blanket deletion proposal would have destroyed a measurement the R4 confirms."
+  },
+  {
+   "condition": "state_manifest_current.md reads IN_BATCH_COMMIT.",
+   "default_taken": "Proceeded; did not edit it and did not run a batch.",
+   "why_safe": "Deliberate and declared in the dispatch; a BATCH_COMMIT is the orchestrator's act and reserved.",
+   "what_would_have_been_different": "Nothing."
+  },
+  {
+   "condition": "paper_registry_current.md carries two further canonical sites with the withdrawn wording, named by no rejection.",
+   "default_taken": "Recorded them under R6 as an under-declaration; left them untouched.",
+   "why_safe": "Canonical files move only through BATCH_COMMIT, and the next batch is in preparation and can act on a complete list.",
+   "what_would_have_been_different": "Without recording them, a batch acting on the declaration as written would repair CLAIM 030 and CLAIM 007 and leave PAPER 042 — the record the allelic series is built from — asserting the withdrawn wording."
+  },
+  {
+   "condition": "Line numbers supplied by the contract are belief, not evidence.",
+   "default_taken": "Located every site by its text and reported the text found, not the line asserted.",
+   "why_safe": "The dispatch said so explicitly, and one site had already been missed in this batch by searching for an imagined phrase.",
+   "what_would_have_been_different": "Nothing; the line numbers happened to be accurate."
+  }
+ ],
+ "STOP_LOG": [],
+ "STOP_LOG_NOTE": "Empty. No reserved act was required and no condition lacked a safe default. Every judgement rests on an artefact in this checkout or on a declared UNVERIFIABLE_HERE. No class-1, class-2 or class-3 stop occurred.",
+ "API_SAFEGUARD_EVENTS": [],
+ "API_SAFEGUARD_NOTE": "None. No API safeguard error, refusal or retry occurred at any point. No external call was made: no corpus expansion, no new reading of any paper, no paid or API-keyed retrieval, no new tooling, and no request was reissued. Every surface consulted was local to this checkout. Stated explicitly because an API error is not a verification performed and must not vanish from the coverage record — and neither must its absence be assumed.",
+ "HARD_CONSTRAINTS_OBSERVED": {
+  "no_repair": "No file of the producer was edited, reverted or fixed. Only the deliverable and this task record were written.",
+  "four_current_files_untouched": "working_model_current.md, claim_registry_current.md, paper_registry_current.md and literature_tracking_log_current.md were READ ONLY. Defects found in claim_registry_current.md and paper_registry_current.md are reported and routed to the orchestrator's batch, never edited.",
+  "state_manifest_untouched": true,
+  "no_batch_commit": true,
+  "no_push": "No push to any remote, ever.",
+  "no_task_branch": "Root and main are writable (LEGEND_CORE 21e); no branch created.",
+  "no_recursive_delegation": true,
+  "no_new_tooling_or_readings": "No new tooling, no benchmarking project, no corpus expansion, no new readings of papers. No locator audit run by me: every pixel measurement quoted is the R4 auditor's, attributed as such.",
+  "no_persisted_locator_amended": "PMID42128308.json entries[19] is named as needing the tracked contradiction procedure; it was not amended.",
+  "no_derived_surface_regenerated": "pathograph_export.jsonl is a derived surface; the route is proposed, not the edit.",
+  "commit_subjects": "Conclusions kept OUT of commit subject lines — subjects leak into other actors' session bootstraps and have already partially defeated a blinding firewall in this batch."
+ },
+ "GATES_READ_BEFORE_EACH_COMMIT": {
+  "public_release_gate": "VERDICT: PASS, BLOCKS: 0. Its [REVIEW] rows are the pre-existing corpus condition and none names a file this task writes.",
+  "legend_lint": "VERDICT: PASS. Its single [INFO] MISSING_WIKILINK on CLAIM 010 is pre-existing, informational and not a block.",
+  "discipline": "Both read BEFORE each commit, never after: a gate read after a commit is not a gate."
+ },
+ "DELIVERABLE_WRITTEN": "disease-models/wwox/research/verifications/2026-09-13_aldaz_a2_reexamination.md"
+}

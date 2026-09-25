@@ -1,0 +1,197 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT + A.1b",
+ "_note": "Repair task arising from the independent verification of ALDAZ-FT-B-001 (PMID 16941225). Verifier: mirror, under ALDAZ-VERIFY-W2-20260913; report disease-models/wwox/research/verifications/2026-09-13_aldaz_w2_verification.md, committed at 106dcd1 by the orchestrator on behalf of a rate-limited actor, content unmodified. Verdict: REFINED — 44 propositions, 36 SUPPORTED, 8 NARROWER_THAN_CLAIMED, 0 UNSUPPORTED, and all three of the reading's own declared locator corrections confirmed as repairs.",
+ "TASK_ID": "ALDAZ-REPAIR-B-20260913",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "scientist-b",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Adjudicate each narrowing against the source, then repair the wording the source shows needs repairing in the PMID 16941225 artefacts, and file the AUTHOR_RESPONSE the review protocol owes. The verification states that none of these changes a direction of effect and none touches the two findings that make the lot valuable; the repair must preserve both while removing the overreach.",
+ "assigned_on": "2026-09-13",
+ "WHY_IT_IS_ON_THE_CRITICAL_PATH": "The verification names these as owed BEFORE any BATCH_COMMIT that leans on this paper, and a BATCH_COMMIT for mature ORDINARY changes is one of this batch's closure items. So this is not tidying: it gates integration.",
+ "THE_RULE_THAT_GOVERNS_THIS_TASK": "🔴 A verifier finding can itself be wrong. Adjudicate each against the source before applying it, and never delete a true statement to satisfy a check. REJECTED — with the surface re-opened and what it shows — is a legitimate disposition, and so is DISAGREEMENT_UNRESOLVED with both readings stated. A repair that over-corrects is also a defect.",
+ "WHAT_THE_VERIFICATION_CONFIRMS_AND_YOU_MUST_NOT_WEAKEN": [
+  "The CNS clause is SUPPORTED and is the substantive finding of the lot: every CNS cell-type statement in that paper rests on text or table only.",
+  "The limbic-cortex contradiction is CONFIRMED on both surfaces and was represented faithfully — the reading did not choose a side, and it should not start now.",
+  "All three of your declared locator corrections are repairs. The Fig. 3B pancreas correction is called the most valuable of the three; the Fig. 1 blot correction is an UNDERSHOOT repair that adds what the first version missed."
+ ],
+ "FINDINGS_TO_ADJUDICATE": {
+  "entries_14_and_43_scope_the_absolutes_to_IHC": "Both carry an absolute that the artefact contradicts as written. Fig. 1 lane 5 is a whole-brain lysate — a neural compartment shown in a panel — so 'the ONLY neural compartment in the paper that has a panel' is false unless scoped to immunohistochemistry. And 'NOT ONE panel shows a negative tissue' is contradicted by the paper's own panel-cited negatives: mucinous acini (Fig. 3G, which the text calls 'clearly negative'), the glomerular tuft (Fig. 2F) and Schwann cells with nerve processes (Fig. 3C) — the last two attested by your own entries 34 and 15. Scope both to IHC; the surrounding claims ('no negative-control section', 'every organ-level negative is text/table-only') stand.",
+  "entry_2_absence_of_evidence": "The source writes that there is 'no evidence that any other … are able to generate stable viable protein products'; the proposition renders it 'are said to lack stable protein', which converts absence of evidence into asserted absence. Also noted in the other direction: 'not a result of this paper' undersells Fig. 1, which is this paper's own single-band evidence.",
+  "entry_6_scope_to_the_TMA_organs": "The duplicate-core sentence is quoted exactly, but the paper also analysed WHOLE SECTIONS of breast, ovary, testis, prostate (Methods) and skin (Results). 'The paper's organ-level calls rest on a duplicate' does not hold for those five.",
+  "entry_13_the_undefined_symbol": "The printed facts are right — text 'negative', table '+/−'. But '+/−' is not a bin of the paper's own four-level scale, and the same text-negative/table-'+/−' pairing occurs for pituitary chromophobic cells. Reading '+/−' as 'borderline, not clean absence' is one available interpretation, not what the source defines. Re-state as the printed facts plus both readings.",
+  "entry_27_drop_inverts": "Text and table do disagree about the islet (intense vs ++), but the text grades acini 'strong' and islets 'intense' — both at the top, not ranked — so 'the ranking inverts between them' overstates: only the table ranks acini above islets.",
+  "entry_42_the_stomach_clause_and_the_disjunction": "The author hypothesis is quoted exactly and correctly typed IPOTESI, and the SDR assignment is indeed by motif. The counter-clause overshoots twice: stomach is graded moderate (++), not 'strongly positive'; and 'not steroid targets in any sense the paper argues' ignores the paper's own disjunction — 'either steroid targets OR related with steroids production/metabolism' — which covers liver, while the distal nephron segments it calls strongest are classical aldosterone targets. The counter rests on an untagged textbook premise; either tag it or drop it.",
+  "the_resolution_anchors": "Seven 'native pixels' anchors declare a resolution that was not the one used. Re-word them to the resolution actually used. 🔴 The verifier states its own WHAT_WOULD_CHANGE_MY_MIND for this item: if the nine crops turn out to be sub-regions of panels rather than whole panels, 'native pixels' would be true of them. Check which is the case before conceding or rejecting.",
+  "section_6_and_7_items": "The verification also names a resolution-declaration defect in its §7 and two citation gaps in its §6. Read those sections and dispose of each."
+ },
+ "AUTHOR_RESPONSE": "🔴 Owed by you, and silence is not acceptance (Annex C, peer review). File it as part of the repair record: per finding, ACCEPTED / REJECTED / DISAGREEMENT_UNRESOLVED, with the surface and resolution you re-opened.",
+ "PROCEDURE_THAT_BINDS_THE_MANIFEST_EDITS": "These entries are PERSISTED locators. Editing one is its own act: re-inspect the surface at original resolution BEFORE drafting, declare contradicts_locator as the object the validator requires with its audit object, run the blind locator audit on the contradicted triples, and run `python3 framework/scripts/locator_contradiction_audit.py --working-tree --fail-on-undeclared` before committing any manifest edit. 🔴 Never rewrite a persisted receipt — a receipt is history; if a repair changes what the reading covered or concluded, that is a NEW appended event.",
+ "ACCEPTANCE_CRITERIA": [
+  "Each finding above has an explicit disposition with the surface re-opened named.",
+  "deepdive_manifest.py --pmid 16941225 --verify-artifacts --require-current-schema exits PASS with 0 gaps after the edits.",
+  "locator_contradiction_audit.py --working-tree --fail-on-undeclared exits 0 before the manifest commits.",
+  "fulltext_receipts.py verify OK, with no persisted receipt rewritten.",
+  "The dossier, the M4b note and CC-20260913-16941225-01 carry the adjudicated wording wherever they repeat a repaired proposition.",
+  "The two findings the verification calls the lot's value are intact: the CNS-evidence-level finding and the faithful representation of the limbic contradiction.",
+  "legend_lint.py . stays PASS after every commit."
+ ],
+ "DELIVERABLES": [
+  "amended disease-models/wwox/research/deepdive_manifests/PMID16941225.json with declared contradictions",
+  "amended disease-models/wwox/research/fulltext_dossiers/PMID16941225.md, the M4b note and CC-20260913-16941225-01 where they repeat a repaired proposition",
+  "a repair record plus AUTHOR_RESPONSE under disease-models/wwox/research/, written so an independent pass can check it without reconstructing it",
+  "REPAIR_RESULT in this file, with DEFAULTS_TAKEN and STOP_LOG, required even when empty"
+ ],
+ "COMMITTING": {
+  "how": "bash scripts/legend_commit.sh \"<message>\" <path> [<path> ...] — never git commit directly; two peers are working in this checkout.",
+  "write_only_your_own_paths": "this task JSON, your own manifest, dossier, M4b note, candidate and repair record. 🔴 Do NOT touch disease-models/wwox/research/verifications/ — that is mirror's surface and its report is the evidence your repair is judged against.",
+  "never": "No push. Do NOT regenerate shared derived surfaces. A red caused by a peer's file is reported, not fixed."
+ },
+ "QUOTA_DISCIPLINE": "🔴 Two children were killed today by an API session limit, one with its deliverable uncommitted. Commit each repaired artefact as soon as it is coherent rather than holding everything to the end. If you hit a rate limit, do not retry in a loop: stop, leave the state durable, and say so in one line.",
+ "INTERACTION_MODE": "AUTONOMOUS_COMPLETE",
+ "STOP_POLICY_REMINDER": "§21c governs. Reserved and never yours: any push, history rewrite, deletion of unique material, external spend of any kind, modification of the four current files or disease_model.md, BATCH_COMMIT. Everything else has a safe default: take it, record it in DEFAULTS_TAKEN, continue.",
+ "CURRENT_STATE": "REPAIR_COMPLETE 2026-09-13 - 8 narrowings ACCEPTED, 3 proposed wordings REJECTED on evidence, 15 locators re-worded with no snippet changed, no receipt rewritten, both load-bearing findings intact.",
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "Entry 39 is a narrowing in the report but absent from the contract's list",
+   "default": "Adjudicated and repaired it",
+   "why_safe": "A narrowing kept only in a table lapses",
+   "what_would_differ": "Table 2 still called the whole negative record"
+  },
+  {
+   "condition": "'native pixels' also sat in 11 sites beyond the 7 anchors",
+   "default": "Repaired every site",
+   "why_safe": "All my own paths; a partial fix is not a fix",
+   "what_would_differ": "Recipes would still claim unresampled pixels"
+  },
+  {
+   "condition": "Six intensity judgements rested on the disputed 75% renders",
+   "default": "Re-reached each myself at 2x native before re-wording",
+   "why_safe": "The verifier's re-read was not mine",
+   "what_would_differ": "Anchors fixed while readings rested on mirror's inspection"
+  },
+  {
+   "condition": "Uncited Northern claim bears on entry 19 (SUPPORTED)",
+   "default": "Recorded in dossier; entry 19 not edited",
+   "why_safe": "Editing a supported locator is over-correction",
+   "what_would_differ": "No record the contested claim is unattributed"
+  },
+  {
+   "condition": "R4 blind audit; one auditor per round available",
+   "default": "One blind auditor per round, two rounds, auditors=1 declared",
+   "why_safe": "Blindness is the active ingredient; count declared",
+   "what_would_differ": "8 of 14 drafts would have landed unchallenged"
+  },
+  {
+   "condition": "Frozen VERIFY phase packet repeats pre-repair propositions",
+   "default": "Left unedited, recorded",
+   "why_safe": "It is the verifier's frozen input",
+   "what_would_differ": "Verification unreproducible"
+  },
+  {
+   "condition": "lint BLOCK_BATCH_COMMIT from a peer's untracked file",
+   "default": "Reported, not fixed",
+   "why_safe": "Standing rule; not my path",
+   "what_would_differ": "Would write into a peer's file"
+  }
+ ],
+ "STOP_LOG": [],
+ "TASK_ACK": {
+  "TASK_ID": "ALDAZ-REPAIR-B-20260913",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "ACTOR_ID": "scientist-b",
+  "DECISION": "ACCEPTED",
+  "acked_at": "2026-09-13",
+  "note": "Accepted as dispatched. Read before this act: state_manifest_current.md (current_state READY), roles/scientist.md, LEGEND_CORE.md 21c/21d/21e by name, fulltext_read_receipt.md, epistemic_discipline.md, scientist_reading_modes.md 3.2-3.3, scientist_standing_brief.md, and the verification report in full. Governing rule accepted: each finding is adjudicated against the source before it is applied; REJECTED and DISAGREEMENT_UNRESOLVED are available; no true statement is deleted to satisfy a check. Disclosed producer bias in two directions: toward defending my own wording, and toward conceding everything to look cooperative. Discrepancy recorded at ACK: the report's section 2 and 3.6 list entry 39 (Table 2 'is the whole of the paper's organ-level negative list') as one of the eight NARROWER_THAN_CLAIMED, but neither this contract's FINDINGS_TO_ADJUDICATE nor the report's section 8 owed-list names it. I adjudicate entry 39 too (see DEFAULTS_TAKEN). No CHALLENGE raised."
+ },
+ "TASK_CLAIM": {
+  "TASK_ID": "ALDAZ-REPAIR-B-20260913",
+  "GENERATION": 1,
+  "ACTOR_ID": "scientist-b",
+  "claimed_at": "2026-09-13",
+  "durable_pointer": "ledger/tasks/scientist-b/ALDAZ-REPAIR-B-20260913.json",
+  "output_root": "disease-models/wwox/research/",
+  "started_at_head": "cf441d7",
+  "pre_claim_check": "ledger/tasks/*/ searched for 16941225: other contracts naming it are the orchestrator's intake/exec records, mirror's verification contract, my completed ALDAZ-FT-B-001, scientist-a's and scientist-c's completed lots, and two DRAFTED-NOT-DISPATCHED follow-ups (ALDAZ-FT-B-003, ALDAZ-FT-C-003). No second OPEN reading contract on this paper; no PARALLEL_READ_GROUP required.",
+  "order_of_work": "Per finding: re-open the named surface at original resolution before drafting, adjudicate, then edit. Manifest edits declare contradicts_locator with an audit object; the contradicted triples go to one blind auditor with no session history; locator_contradiction_audit.py --working-tree --fail-on-undeclared runs before the manifest commits. No receipt is rewritten. Each artefact is committed as soon as it is coherent.",
+  "peers_in_checkout": "Two peers working concurrently; I commit only my own named paths and regenerate no shared derived surface."
+ },
+ "REPAIR_RESULT": {
+  "repair_record": "disease-models/wwox/research/2026-09-13_aldaz_repair_b.md",
+  "dispositions": {
+   "entry_2": "ACCEPTED - absence of evidence restored; verifier's '2003 review' wording REJECTED (source never characterises the reference)",
+   "entry_6": "ACCEPTED - scoped to the 30 TMA organs in the paper's phrase 'duplicate representation'; whole-section organs incl. skin named",
+   "entry_13": "ACCEPTED - printed facts plus three readings of the undefined '+/-'; DISAGREEMENT_UNRESOLVED",
+   "entry_14": "ACCEPTED - scoped to IHC; Fig. 1 lane 5 named as a brain lysate lane",
+   "entry_27": "ACCEPTED - 'inverts' dropped; only Table 1 ranks acini above islets",
+   "entry_39": "ACCEPTED (not in the contract's list; adjudicated anyway) - Table 2 is the summary list; Table 1's 23 negative rows and esophagus added",
+   "entry_42": "ACCEPTED - stomach not strongly positive; disjunction honoured; hedge quoted at full strength; verifier's residue naming liver REJECTED in part",
+   "entry_43": "ACCEPTED - no panel devoted to or cited for a Table 2 negative; verifier's flat 'no panel shows any organ-level negative' REJECTED (connective tissue visible uncited in 2A, 2F, 3A, 3C); CNS clause untouched",
+   "resolution_anchors": "ACCEPTED - whole panels at 75% (307/409.3=0.750, 381/507.3=0.751); verifier's WHAT_WOULD_CHANGE_MY_MIND answered NO; 7 anchors + 11 further sites repaired",
+   "section_6_watanabe": "ACCEPTED - NOT_JUDGEABLE; exposed my own unsupported 'nuclear WWOX' gloss, repaired",
+   "section_6_northern": "ACCEPTED - recorded in dossier citation defects; entry 19 (SUPPORTED) deliberately not edited"
+  },
+  "gates": {
+   "manifest_strict": "PASS 0 gaps: before edits, after ffb9de0, after 700a751",
+   "contradiction_audit": "exit 0: 9 declared/0 undeclared, then 6 declared/0 undeclared",
+   "receipts_verify": "OK, chain intact; no receipt written or rewritten",
+   "lint": "PASS through 700a751; later BLOCK_BATCH_COMMIT caused by a peer file (see LINT_RED_REPORTED)"
+  },
+  "commits": [
+   "f95b1bb ACK+CLAIM",
+   "ffb9de0 manifest settled edits + dossier",
+   "700a751 manifest round-2 edits",
+   "79a264a dossier, M4b, CC, repair record"
+  ],
+  "AUTHOR_RESPONSE": "Filed in 2026-09-13_aldaz_repair_b.md section 7. Verdict REFINED accepted; all 8 findings ACCEPTED; 3 proposed wordings REJECTED: '2003 review', flat 'no panel shows any organ-level negative', liver residue.",
+  "load_bearing_findings": "CNS evidence-level finding intact (entries 14, 43); limbic contradiction unresolved (entries 12, 13).",
+  "LINT_RED_REPORTED": "PMID 17470496 via peer's untracked analysis/comparison_notes/2026-09-13_M4B_PMID24369382.md",
+  "DEFAULTS_TAKEN": [
+   {
+    "condition": "Entry 39 is a narrowing in the report but absent from the contract's list",
+    "default": "Adjudicated and repaired it",
+    "why_safe": "A narrowing kept only in a table lapses",
+    "what_would_differ": "Table 2 still called the whole negative record"
+   },
+   {
+    "condition": "'native pixels' also sat in 11 sites beyond the 7 anchors",
+    "default": "Repaired every site",
+    "why_safe": "All my own paths; a partial fix is not a fix",
+    "what_would_differ": "Recipes would still claim unresampled pixels"
+   },
+   {
+    "condition": "Six intensity judgements rested on the disputed 75% renders",
+    "default": "Re-reached each myself at 2x native before re-wording",
+    "why_safe": "The verifier's re-read was not mine",
+    "what_would_differ": "Anchors fixed while readings rested on mirror's inspection"
+   },
+   {
+    "condition": "Uncited Northern claim bears on entry 19 (SUPPORTED)",
+    "default": "Recorded in dossier; entry 19 not edited",
+    "why_safe": "Editing a supported locator is over-correction",
+    "what_would_differ": "No record the contested claim is unattributed"
+   },
+   {
+    "condition": "R4 blind audit; one auditor per round available",
+    "default": "One blind auditor per round, two rounds, auditors=1 declared",
+    "why_safe": "Blindness is the active ingredient; count declared",
+    "what_would_differ": "8 of 14 drafts would have landed unchallenged"
+   },
+   {
+    "condition": "Frozen VERIFY phase packet repeats pre-repair propositions",
+    "default": "Left unedited, recorded",
+    "why_safe": "It is the verifier's frozen input",
+    "what_would_differ": "Verification unreproducible"
+   },
+   {
+    "condition": "lint BLOCK_BATCH_COMMIT from a peer's untracked file",
+    "default": "Reported, not fixed",
+    "why_safe": "Standing rule; not my path",
+    "what_would_differ": "Would write into a peer's file"
+   }
+  ],
+  "STOP_LOG": []
+ }
+}

@@ -1,0 +1,127 @@
+{
+ "_schema": "LEGEND governance v3.3.1 · Annex A.1 TASK_ASSIGNMENT + A.1b",
+ "TASK_ID": "ALDAZ-DOSSIER-FIX-C-20260914",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "scientist-c",
+ "MANDATE": "ALDAZ-EXEC-20260913",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Repair, on my own two surfaces only, the retired bar count 'six bars' per figure for PMID 33058734 Figures 4 and 6. The measured count established by ALDAZ-VERIFY-W4 §§2.1-2.2 and §9.2 is four bars per panel (flox and KO at PBS, flox and KO at challenge) across three panels = TWELVE per figure, TWENTY-FOUR across the pair, with no asterisk on any. The direction of the error must survive the repair: the negative is BROADER than claimed, not narrower, and the sentence 'The absence is the finding' stays true.",
+ "assigned_on": "2026-09-14",
+ "ROLE": "PRODUCER of the repair on surfaces I own. I own the dossier (header: Reader scientist-c, task ALDAZ-FT-C-003) and the M4b note; ownership is why this is not the dispatcher's edit.",
+ "SCOPE": {
+  "editable_surfaces": [
+   "disease-models/wwox/research/fulltext_dossiers/PMID33058734.md",
+   "disease-models/wwox/research/2026-09-13_m4b_ALDAZ-FT-C-003_lung_endothelial_pair.md"
+  ],
+  "excluded": "The four scientific current files, state_manifest_current.md, discovery_ledger_current.md, every verifications/ file, every other actor's dossier, and every persisted locator proposition or snippet in deepdive_manifests/*.json (tracked revisions carrying their own R4 — a wrong count inside one is REPORTED, not edited). No BATCH_COMMIT. No push. No new tooling, no corpus expansion, no re-reading of the paper. No task branch (LEGEND_CORE 21e: root and main are writable).",
+  "method": "Every site located by its TEXT, not by the line numbers in the dispatch, which are treated as belief. Multi-spelling sweep over both surfaces ('six bars', 'sei barre', 'six of', bar/barre/asterisk/asterisco/per figure/per figura/ciascuna/panel/pannello, numerals and spelled numbers), then a NEIGHBOUR check on every edit, because the repeated failure in this batch has been repairing a field and leaving the adjacent sentence asserting the retired number."
+ },
+ "SOURCES": [
+  "disease-models/wwox/research/verifications/2026-09-13_aldaz_w4_verification.md §§2.1, 2.2, 9.2 — the measurement and its arithmetic",
+  "disease-models/wwox/research/discovery_ledger_current.md DL-MECH-012 Tag (read-only) — already carries DODICI barre per figura, VENTIQUATTRO sulle due figure",
+  "disease-models/wwox/research/verifications/2026-09-14_aldaz_15064722_and_clause_repairs.md — the verification that found the residue"
+ ],
+ "TASK_ACK": {
+  "TASK_ID": "ALDAZ-DOSSIER-FIX-C-20260914",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "ACTOR_ID": "scientist-c",
+  "DECISION": "ACCEPTED",
+  "acked_at": "2026-09-14T00:00:00Z",
+  "understood": [
+   "The defect is a COUNT and the correction STRENGTHENS my own finding: no asterisk on twenty-four bars is a broader absence than no asterisk on twelve.",
+   "The dispatch's three line numbers are belief; I sweep my own surfaces and a fourth site is a real outcome.",
+   "I may edit only my dossier and my M4b note. A wrong count inside a persisted locator is reported, never edited.",
+   "A field-level repair needs a neighbour check, not only a sweep.",
+   "locator_contradiction_audit.py --working-tree --fail-on-undeclared must report 0 undeclared at the end, and be recorded.",
+   "Gates are READ BEFORE each commit, never after; a gate read after a commit is not a gate."
+  ],
+  "no_recursive_delegation": true
+ },
+ "TASK_CLAIM": {
+  "claimed_by": "scientist-c",
+  "claimed_at": "2026-09-14T00:00:00Z",
+  "durable": true,
+  "started_at_head": "f3eb7d5",
+  "single_owner": "This task has exactly one owner. No other open contract repairs the bar count on these two surfaces.",
+  "committed_alone": "This record is committed ALONE, before any edit to any surface."
+ },
+ "PRE_FLIGHT": {
+  "state_manifest": "current_state: READY (state_manifest_current.md:150)",
+  "governing_sections_read": "LEGEND_CORE §21c STOP POLICY, §21d DECISION AUTHORITY, §21e AGILE OPERATING MODE",
+  "public_release_gate": "VERDICT: PASS, BLOCKS: 0 — read before this commit. Its [REVIEW] rows are the pre-existing corpus condition; none names a file this task writes.",
+  "legend_lint": "VERDICT: PASS — read before this commit. Single [INFO] MISSING_WIKILINK on CLAIM 010, pre-existing and not a block."
+ },
+ "CURRENT_STATE": "COMPLETE — five sites found and dispositioned on the two surfaces I own (the dispatch named three; the sweep found five, two of them in the M4b note and one of those in Italian). Four rewritten to twelve per figure / twenty-four across the pair with W4's arithmetic carried and each correction dated with this task id; the fifth left byte-identical because it is a verbatim blockquote of my own FT-100 queue entry, with a dated correction added immediately beneath it. Neighbour check run on all five. No persisted locator amended, no excluded file touched, no batch, no push.",
+ "SITES": {
+  "site_1_dossier_section3_item9": "FIXED — two instances in one sentence ('the six bars of Figure 4 or any of the six bars of Figure 6'). 'The absence is the finding' preserved verbatim.",
+  "site_2_dossier_section5_row_4AC": "FIXED — 'no asterisk on any of six bars' to twelve, with the four-per-panel breakdown (flox and KO at PBS, flox and KO at LPS).",
+  "site_3_dossier_section5_row_6AC": "FIXED — same, MRSA, twenty-four with Figure 4; the axes-versus-legend defect (§6.2) preserved untouched, since W4 §2.2 confirms it and only the count was wrong.",
+  "site_4_m4b_sectionD_bullet": "FIXED — a site the dispatch did not name. 'neither figure carries an asterisk on any of its six bars' to twelve, twenty-four across the pair.",
+  "site_5_m4b_sectionN_FT100_blockquote": "ANNOTATED, NOT REWRITTEN — Italian 'nessun asterisco su sei barre ciascuna', inside a verbatim quotation of my own FT-100 entry in full_text_queue_current.md. Rewriting words inside a quotation would make the note misreport the surface it quotes, so the quote stands and a dated correction sits beneath it giving DODICI per figura / VENTIQUATTRO sulle due figure."
+ },
+ "REPORTED_NOT_TOUCHED": [
+  "deepdive_manifests/PMID33058734.json entries[27] and entries[29] propositions still read 'the six bars' — persisted locators, tracked revisions with their own R4; the dispatch directs REPORT, not edit. These are the two entries W4 §§2.1-2.2 judged NARROWER_THAN_CLAIMED / UNDERSHOOT.",
+  "phase_packets/VERIFY-PMID33058734-20260913.json — the same two propositions as the frozen input to a completed verification.",
+  "full_text_queue_current.md FT-100 (~line 4581) 'nessun asterisco su sei barre ciascuna' — my authorship, not a surface this dispatch permits; it is the source of the site-5 quotation.",
+  "session_evaluations/2026-09-13_ALDAZ-FT-C-003_scientist-c.md (twice) 'no asterisk on any of twelve bars across Figures 4 and 6' — the SAME retired arithmetic (six per figure) in a different spelling, the form W4 §9.2 named; my authorship, outside the permitted surfaces.",
+  "commit_candidates/CC-20260913-ALDAZ-C003-01.md — checked and NOT a residue: it already carries twelve/twenty-four."
+ ],
+ "NEIGHBOUR_CHECK": {
+  "run_on": "all five sites, plus every other row of the dossier §5 figure table and the whole of M4b §D and §N",
+  "clean": "No neighbour restates a bar total. Rows 3A/3B/3D and 8A-C speak of single bars without a total; row 1E says 'no asterisk anywhere on the panel', which carries no count.",
+  "flagged_not_edited_1": "dossier §2 Statistics 'three cytokines per figure across four figures' and §7 'No multiplicity correction across 12 cytokine comparisons' — mutually consistent (3x4=12) and NOT the bar arithmetic, but the dossier's own §5 table lists three cytokine figures (4, 6, 8), which would give nine. Settling it needs a re-read of the paper, which this dispatch forbids. Reported as an open arithmetic question; nothing invented, no conclusion of mine rests on it.",
+  "flagged_not_edited_2": "dossier §2 n-row verbatim legend quotation 'Six WWOX flox (control) and six WWOX KO mice ... (n = 3 per group)' counts ANIMALS, not bars. Untouched and must stay untouched: altering a source quotation is forbidden in any circumstance."
+ },
+ "LOCATOR_AUDIT": {
+  "command": "python3 framework/scripts/locator_contradiction_audit.py --working-tree --fail-on-undeclared",
+  "before_any_edit_at_f3eb7d5": "manifests=94 revision_pairs=94 entry_field_changes=0 · declared revisions 0 · undeclared crossing a commit date 0 · undeclared same-day 0 · 'no undeclared locator revision in the working tree' · exit 0",
+  "after_all_dispositions": "identical — manifests=94 revision_pairs=94 entry_field_changes=0 · UNDECLARED 0 · exit 0. Required and expected: this task amended no persisted locator, so entries[27] and entries[29] stand exactly as R4 left them."
+ },
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "The dispatch named three sites; my own sweep found five.",
+   "default_taken": "Repaired all five and reported the two extra as a named outcome, rather than deferring them to a new task.",
+   "why_safe": "A retired count on a surface I own is T0 work under §21e, and the dispatch stated that finding a fourth site is a real outcome.",
+   "what_would_have_been_different": "Two sites would have survived, one of them in Italian, which a sweep keyed to the English phrasing would never reach."
+  },
+  {
+   "condition": "The fifth site sits inside a verbatim blockquote of another surface's text (my FT-100 queue entry).",
+   "default_taken": "Left the quotation byte-identical; added a dated correction immediately beneath it; reported the quoted surface as out of scope here.",
+   "why_safe": "Preserves quotation fidelity while making the retired number unreachable without meeting the corrected one.",
+   "what_would_have_been_different": "Rewriting inside the quote would have produced a quotation faithful to no surface."
+  },
+  {
+   "condition": "The retired arithmetic also survives in my own session evaluation, spelled 'twelve bars across Figures 4 and 6'.",
+   "default_taken": "Reported it; did not edit, being outside the two permitted surfaces.",
+   "why_safe": "Stays inside the declared edit perimeter; naming a site costs nothing, leaving it unnamed is the compounding loss.",
+   "what_would_have_been_different": "With that surface in scope I would have repaired it in the same pass."
+  },
+  {
+   "condition": "Two persisted locator propositions carry 'six bars'.",
+   "default_taken": "Reported, not edited, as the dispatch directs.",
+   "why_safe": "They are tracked revisions with their own R4; an undeclared amendment would be the first undeclared locator revision in the tree and would fail the audit this task must show at 0.",
+   "what_would_have_been_different": "Editing them would have traded a text defect for a governance defect."
+  },
+  {
+   "condition": "A neighbour count ('four figures' / '12 cytokine comparisons') may be an overcount, but settling it requires a re-read of the paper, which is forbidden here.",
+   "default_taken": "Flagged it with the reason it cannot be settled in this checkout; changed nothing and invented no number.",
+   "why_safe": "Claims nothing about a surface I did not re-open; it is not the bar count and no conclusion rests on it.",
+   "what_would_have_been_different": "With a re-read mandate I could have said whether the cytokine figures are three or four."
+  },
+  {
+   "condition": "At session start the working tree carried another actor's modified task file and two untracked verifications.",
+   "default_taken": "Proceeded; committed only my own paths, named explicitly.",
+   "why_safe": "Peer-actor git-status noise is a declared safe default (§21c), and path-scoped commits cannot capture another actor's work.",
+   "what_would_have_been_different": "Nothing."
+  }
+ ],
+ "STOP_LOG": [],
+ "STOP_LOG_NOTE": "Empty. No class-1 stop: no reserved act was required — no BATCH_COMMIT, no push, no history rewrite, no deletion of unique material, no external spend, no private-data exposure. No class-2 stop: every condition had a safe default, all recorded in DEFAULTS_TAKEN. No class-3 stop: the turn did not close on a question that had a default.",
+ "API_SAFEGUARD_EVENTS": [],
+ "API_SAFEGUARD_NOTE": "None. No external call of any kind: no corpus expansion, no re-reading of the paper, no API-keyed or paid retrieval, no new tooling, no reissued request. Every surface consulted was local to this checkout. Recorded explicitly because an API error is not work performed, and its absence must not be assumed either.",
+ "DELIVERABLE_WRITTEN": "disease-models/wwox/research/2026-09-14_aldaz_dossier_fix_c_dispositions.md",
+ "DIRECTION_PRESERVED": "The negative is BROADER than first claimed, not narrower: no asterisk over twenty-four bars is a stronger absence than over twelve. 'The absence is the finding' was true before and survives verbatim in the dossier. Nothing about the null was weakened, withdrawn or hedged."
+}

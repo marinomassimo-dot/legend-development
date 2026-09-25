@@ -1,0 +1,94 @@
+{
+  "_schema": "legend.task.v1",
+  "TASK_ID": "BATCH-20260915-009",
+  "OWNER": "operator",
+  "ACTOR_ID": "plan",
+  "_actor_note": "The propagation (phase 4) was written by the orchestrator session on 2026-09-15. That session stopped without closing the batch. Phases 4.7 to 8, every verification below, and this record are plan's, executed on 2026-09-17 under an explicit operator instruction to reconcile the open batch. The record lives with the other BATCH-*.json so the series stays discoverable; SCIENCE-EXEC-20260914 step E1 is NOT marked closed here, because that mandate and that judgement remain the orchestrator's.",
+  "PARENT_MANDATE": "SCIENCE-EXEC-20260914, step OBJ_5_debts[0] E1 (coverage debt), partial: the six-record population only",
+  "assigned_on": "2026-09-17",
+  "CURRENT_STATE": "COMPLETED AND VERIFIED. WM_v4.11 unchanged by decision; current_state restored from IN_BATCH_COMMIT to READY on measured completion, not to enable anything downstream.",
+  "OBJECTIVE": "Reconcile and close BATCH_20260915_009, left open mid-propagation for two and a half days: establish whether an actor was still propagating, what belonged to the batch, what was already done, and then either complete it with verification or restore it from its snapshot.",
+  "WHY_IT_MATTERS": "A manifest stuck at IN_BATCH_COMMIT blocks every later batch and makes the whole laboratory's canonical state unreadable: a successor cannot tell a half-applied propagation from a finished one. Six PAPER records held a complete read receipt while their own text understated or omitted it, and three instruments read that field.",
+  "RECONCILIATION": {
+    "is_anyone_still_propagating": "NO. Two long-lived sessions exist; one is plan's own. The other last wrote to the repository on 2026-09-15 at 01:23 UTC and its transcript has not changed since, 67 hours. No file in the tree was written after 01:21 except plan's own task records. No lock, no in-flight marker. Per cross_session_transport section 12 a stale heartbeat means UNKNOWN activity, so nothing was duplicated: every act below was taken only after measuring that the work was not already done.",
+    "what_belonged_to_the_batch": "Exactly two tracked changes: six Evidence depth lines in paper_registry_current.md, and current_state flipped to IN_BATCH_COMMIT in the manifest. Nothing else.",
+    "what_did_not_belong": "Three untracked artefacts for PMID 15870886 (dossier, schema-v2 manifest, commit candidate), written 2026-09-14 between 20:14 and 20:27, five hours BEFORE the batch window opened. They are scientist-a's, from SCI-FT-A-002 step R4, whose own record reads 'COMPLETE as readings, NOT persisted'. Committed separately as orphans at 4076491, unchanged and un-adopted, because phase 4.7 requires `git status --porcelain disease-models/wwox/research/` to be empty before a derived surface may be regenerated with --inputs-dirty-because, and otherwise that stated reason would have been false. Their receipt stays unpersisted and step R4b stays BLOCKED on its named impediment.",
+    "snapshot": "backup/snap_20260915_science_batch009 holds all five canonical files and is BYTE-IDENTICAL to HEAD for every one of them, so it was taken before any edit and was a clean restore point throughout. Restore was therefore available and was not needed.",
+    "completion_over_restore": "Chosen because the propagation was verifiable as correct and complete, not because completing is easier. Restoring would have destroyed six true lines resting on receipts that exist, and would have left step E1 exactly where it was."
+  },
+  "PHASES": {
+    "1_to_3_inventory_conflicts_snapshot": "DONE by the orchestrator before the interruption; evidenced by the snapshot's existence and its byte-identity with HEAD.",
+    "4_propagation": "DONE by the orchestrator at 2026-09-15 01:12 UTC, and verified line by line by plan rather than trusted: each of the six records carries `complete_fulltext_read` and the exact receipt id the candidate's own table names.",
+    "4_7_regeneration": "DONE by plan 2026-09-17, all five generators, with the documented --inputs-dirty-because reason and the precondition met first. coverage_report, batch_queue, pathograph_export, reading_state and surface_census written; reading_state came back byte-identical, the others changed.",
+    "5_post_propagation_lint": "WARN, one line: LIT_STATUS_LEGACY 1 (LIT-0401). Phase 5 classes this WARN_BUT_PROCEED and the protocol requires the warning be recorded, which it is here and in the manifest's LAST LINT note.",
+    "6_manifest": "DONE: id, date, counts, scope, trigger, LAST LINT block, and current_state READY.",
+    "7_candidate_cleanup": "session_commit_log.md does not exist in this edition (the manifest's own section 3.4 lists it as not shipped), so the disposition is recorded here and in the manifest scope: CC-20260914-EVIDENCE-DEPTH-01 PROPAGATED by BATCH_20260915_009. The candidate file stays on disk; the queue is append-only and nothing was deleted. 7.1 does not apply: this batch propagated no reading and no receipt names a private root.",
+    "8_activity_log": "legend_activity_log.md does not exist in this edition either; this record is the batch's durable report, as BATCH-20260914-008.json was for its own."
+  },
+  "SCIENTIFIC_DELTA": "ZERO in the disease model, measured rather than asserted: no claim, pathway, relevance, role, transferability or working-model text changed, and no Status value moved. NOT zero in provenance: SCI-CONSULT-20260914-C answered question 3 with an explicit No, because the depth field is read by coverage_report.classify_depth, batch_queue.registry_index, the test_batch_queue guard, session_self_eval's unread-premise path and growth_anchors.measure_registry_only. It is a provenance change with machine consequences, safe only because the receipts are real, which is why every one was verified before this batch was closed.",
+  "DECISION_NO_WM_BUMP": {
+    "decided": "working_model_version, target_wm_version and last_wm_batch_commit_id stay at WM_v4.11 / BATCH_20260914_007.",
+    "basis": "state_manifest section 2: 'every BATCH_COMMIT that modifies the disease model must bump working_model_version'. This batch does not modify it. Same reading and same precedent as BATCH_20260914_008.",
+    "known_conflict": "prompt_batch_commit.md 4.6 reads as unconditional. BATCH_20260914_008 routed that conflict to plan and it is still open; this batch follows section 2 and does not settle it, because settling it is a harness change with its own task and not something to decide inside a batch that needs the answer."
+  },
+  "VERIFICATIONS": {
+    "receipts_for_the_six": "6 of 6 present in disease-models/wwox/registries/fulltext_read_receipts.jsonl by event_id, each evidence_depth complete_fulltext_read, each study_id.pmid matching its record, none carrying a not_read section.",
+    "consultation_qualification_a": "APPLIED and verified directly on the diff: PAPER 018's previous line 'abstract + frammenti Scholar Gateway' was REMOVED and replaced by the line naming FTR-20260804-36779245-02 and the non-superseding later partial re-read. The consultation's own repairs had landed at 9e937d7, 01:09 UTC, two minutes BEFORE the propagation, so the propagated text is the repaired text and not the draft.",
+    "batch_queue": "The instrument the candidate predicted. Registry side 63 to 69. Against a control worktree at HEAD the six rows are the only difference, and each moves its provenance from 'receipt FTR-...' to its PAPER record. The guard stays red at 105 > 69 by design; this candidate never claimed to close it.",
+    "coverage_report": "BYTE-IDENTICAL with and without this batch, proven by regenerating it in a control worktree detached at HEAD and diffing. The six records already held complete receipts and were already counted in the full-text bucket, so the depth line adds no row there. The committed file's move from 89 to 99 is therefore pre-existing drift from receipts landed on 2026-09-14, NOT this batch's effect, and the scope line says so.",
+    "consultation_prediction_not_reproducible_as_stated": "SCI-CONSULT-20260914-C predicted coverage_report full_text 66 to 72 as 'the single number that tests whether qualification (a) was applied'. That test could not be run as written: the report's full-text bucket is insensitive to the depth line, and its scale today is 99, not 66. The qualification was verified directly on the registry diff instead, which is stronger. Recorded as a finding against the prediction, not against the work: a falsifiable number is only as good as the instrument it names.",
+    "locator_contradiction_audit": "--working-tree --fail-on-undeclared: exit 0. 109 manifests, 109 revision pairs, 0 entry field changes, 0 undeclared revisions. The mode is stated with the figure, because this tool prints three different counts and only this one gates a batch.",
+    "receipt_ledger": "OK, 185 chained receipts, tail anchored in the manifest.",
+    "growth_anchors": "PASS. claims 39, papers 86, corpus 356, literature 397, registry_only 10, unread_premises 2. The ratchet does not move, exactly as the consultation predicted, because the receipts exist.",
+    "session_self_eval": "PASS: every complete read has landed and every declared output resolves."
+  },
+  "CORRECTIONS_AGAINST_MY_OWN_WORK": [
+    "I first read the coverage_report move from 89 to 99 as this batch's effect and had to measure it before saying so. It is not: a control worktree at HEAD produces the identical file. Had I reported the +10 as the batch's, I would have credited it with ten records it did not touch.",
+    "My first locator-audit invocation named the wrong script and exited 2 on an argument error. An exit code from a tool that never ran is not a verdict; re-run against locator_contradiction_audit.py, which is the one that carries --working-tree.",
+    "I LANDED BEFORE THE BATTERY, AND THE BATTERY FOUND A REGRESSION I HAD CAUSED. test_comparison_check.py was GREEN at 4076491, the commit immediately before this batch, and RED after it. Cause: the suite anchors a caveat to paper_registry_current.md:6281, and this batch's five insertions moved that sentence to :6286 — verified by reading the line in both commits, not inferred from the error. The batch's content is unaffected; the assertion's expected value was stale. The finding against me is the ORDER: I ran the release battery after committing the batch and after landing the harness branch, so the section 21e item 2 condition — no suite green before a change may be red after it — was checked late instead of before. Repaired in the same session and stated here rather than left for the next reader."
+  ],
+  "ROUTED_NOT_FIXED": [
+    "SCIENCE-EXEC-20260914 step E1 covers three populations and this batch closed one. I1 (5 completed reads with no record) and I3 (20 placeholders read in place) stay open and stay the orchestrator's.",
+    "The test_batch_queue guard stays red at 105 > 69 until I1 and I3 are dispositioned. That is the candidate's own statement and not a regression.",
+    "LIT-0401, the one grandfathered Status value, stays: it is step E3's to decide.",
+    "prompt_batch_commit.md 4.6 versus state_manifest section 2 on when the working model is bumped: still routed to plan, still open. SUPERSEDED 2026-09-17: it was already implemented, in Codex's uncommitted harness follow-ups, and is reconciled and landed by task/plan-codex-followups-20260917. Phase 4.6 now defers to section 2 and Phase 6 preserves the WM fields for a structural-only batch, which is what this batch did.",
+    "framework/scripts/test_comparison_check.py anchors two caveats to hard-coded line numbers (:6281, now :6286, and :562). A line number in a registry that grows goes stale on every insertion above it, which makes the suite red for a reason unrelated to what it guards. The robust form computes the expected line from the file at test time. Not done here: redesigning another actor's assertion inside a reconciliation task is scope creep, and it needs its own task with its own verification. Routed to plan."
+  ],
+  "STOP_LOG": [],
+  "DEFAULTS_TAKEN": [
+    {
+      "condition": "A live session process existed for the actor that opened the batch, but had written nothing for 67 hours.",
+      "default_taken": "Treated the propagation as suspended, not active: verified from disk what was already done and completed only the phases that were not, rather than waiting for a session that may never resume or re-propagating what was already correct.",
+      "why_safe": "Every act was preceded by a measurement of the current state, so nothing was duplicated; the snapshot stayed available throughout.",
+      "what_would_have_differed": "Either an indefinite wait with the whole laboratory's batch gate shut, or a second propagation on top of a correct one."
+    },
+    {
+      "condition": "Three untracked artefacts of a third actor blocked the phase 4.7 precondition.",
+      "default_taken": "Committed them unchanged as orphans, in their own commit, without persisting the receipt or adopting the work.",
+      "why_safe": "The artefacts already existed on disk and their author's session is gone; the commit preserves them verbatim and changes no canonical surface.",
+      "what_would_have_differed": "Either a false --inputs-dirty-because reason, or three days of a scientist's work left where a clean checkout would not carry it."
+    }
+  ],
+  "OUTCOME": "SUCCESS. Six records now say what their receipts already proved, the batch is closed with its verifications, and the manifest is READY because the batch is finished, not because anything downstream wanted it to be.",
+  "NEXT_ACTIONS_ORDERED": [
+    "DONE 2026-09-17: publication gate PASS with 0 blocks, and the release battery run twice, the second time on the repaired tree. See RELEASE_BATTERY.",
+    "The orchestrator: SCIENCE-EXEC-20260914 step E1 populations I1 and I3, which this batch deliberately did not touch",
+    "plan: land task/plan-mandate-continuity-4, whose blocker was precisely this open batch"
+  ],
+  "RELEASE_BATTERY": {
+    "run": "2026-09-17 on the landed and repaired tree at dac4e73, clean, with no write to the repository while it ran.",
+    "result": "119 suites, 3 red, and the three were named in advance of the measurement.",
+    "red_and_why": [
+      "scripts/test_link_targets.py — pre-existing: test_wikilink_fragments_match_exact_headings fails identically on a control worktree detached at unchanged main, without this batch's code.",
+      "framework/scripts/test_batch_queue.py — RED BY DESIGN: test_coverage_is_not_overstated_against_the_registry, 105 read against 69 records claiming full text. CC-20260914-EVIDENCE-DEPTH-01 and SCI-CONSULT-20260914-C both stated in advance that this guard stays red until populations I1 and I3 are dispositioned. Its other failure, test_committed_queue_is_current, WAS red before and is now green: phase 4.7 regenerated the drifted surface.",
+      "framework/scripts/test_task_record_commit_hashes.py — pre-existing: scientist-a's seven-character started_at_head in ALDAZ-REPAIR-A-20260913.json, already routed by BATCH_20260914_008."
+    ],
+    "regression_found_and_repaired": "framework/scripts/test_comparison_check.py went red on this batch and is green in this run, standalone and inside the battery. See CORRECTIONS_AGAINST_MY_OWN_WORK.",
+    "green_that_were_red_before": [
+      "coverage_report",
+      "pathograph",
+      "paper_packet",
+      "batch_queue drift test"
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+ "_schema": "LEGEND governance v3.3.1 · Annex A.1 TASK_ASSIGNMENT + A.1b · Annex C.2 mandatory consultation",
+ "_note": "Section 21d mandatory Mirror consultation on a proposed, unlanded BATCH_COMMIT. Mirror proposes; it edits no producer file and none of the scientific current files.",
+ "TASK_ID": "ALDAZ-CONSULT-B005-20260914",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "MANDATE": "ALDAZ-EXEC-20260913",
+ "ACTOR_ID": "mirror",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Judge deltas E1-E4 of proposed BATCH_20260914_005 against the primary sources and answer Q1-Q5 of the consultation packet, in order.",
+ "assigned_on": "2026-09-14",
+ "OBJECT": {
+  "packet": "disease-models/wwox/research/mirror_consultations/2026-09-14_BATCH_20260914_005_consultation_packet.md",
+  "batch": "BATCH_20260914_005 (proposed, not landed)"
+ },
+ "CURRENT_STATE": "COMPLETE 2026-09-14 — consultation record written by mirror. E1 CORRECT_WITH_QUALIFICATION, E2 CORRECT_WITH_QUALIFICATION, E3 CORRECT_WITH_QUALIFICATION, E4 CORRECT. MINOR holds; nothing operator-reserved. Two MUST items attached to landing (see deliverable section 6).",
+ "TASK_ACK": {
+  "actor_id": "mirror",
+  "acked_on": "2026-09-14",
+  "directive_version_acked": 1,
+  "generation_acked": 1,
+  "contract_read_in_full": true,
+  "read_before_first_act": [
+   "framework/state/state_manifest_current.md — current_state: READY confirmed",
+   "framework/instruction/LEGEND_CORE.md §21c STOP POLICY, §21d DECISION AUTHORITY, §21e AGILE OPERATING MODE — by name",
+   "disease-models/wwox/research/mirror_consultations/2026-09-14_BATCH_20260914_005_consultation_packet.md"
+  ],
+  "understood": [
+   "I propose; I do not repair. No producer file, no persisted locator proposition/snippet, none of the four scientific current files, not disease_model.md and not state_manifest_current.md is edited by me.",
+   "No BATCH_COMMIT, no push, no new tooling, no corpus expansion, no new readings, no task branch, no recursive delegation.",
+   "The fulltext_dossiers tree is being written by another actor; I read it and do not touch it.",
+   "An EMPTY check is first suspected as a defect of my own pattern; a true statement is never proposed for deletion to satisfy a verification.",
+   "Conclusions stay out of commit subjects."
+  ]
+ },
+ "TASK_CLAIM": {
+  "actor_id": "mirror",
+  "task_id": "ALDAZ-CONSULT-B005-20260914",
+  "claimed_at": "2026-09-14",
+  "interaction_mode": "AUTONOMOUS_COMPLETE",
+  "state": "COMPLETE",
+  "durable": true,
+  "deliverables_owed": [
+   "disease-models/wwox/research/mirror_consultations/2026-09-14_BATCH_20260914_005_mirror.md"
+  ]
+ }
+}

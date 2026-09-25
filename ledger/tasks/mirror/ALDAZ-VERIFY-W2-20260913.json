@@ -1,0 +1,219 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT + A.1b · Annex C independent verification",
+ "_note": "Second independent verification pass of the Aldaz batch. Two distinct objects in one task because both are judged the same way and by an actor that produced neither: (1) scientist-b's reading of PMID 16941225, and (2) the re-examination of scientist-a's repair of wave 1. Drafted in advance so dispatch is immediate when a slot frees; NOT active until the orchestrator dispatches it. Predecessor pass: ALDAZ-VERIFY-W1-20260913, whose verdict was REFINED on both wave-1 papers.",
+ "TASK_ID": "ALDAZ-VERIFY-W2-20260913",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "mirror",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Verify, from the sources and before any producer conclusion, scientist-b's reading of PMID 16941225; and re-examine scientist-a's repair of the wave-1 findings, because a repair that is not re-examined stays unverified. Produce a verdict per proposition for the reading, and a per-finding judgement of the repair. Change nothing either producer wrote.",
+ "assigned_on": "2026-09-13",
+ "PART_1_THE_READING": {
+  "object": "PMID 16941225 (Nunez, Ludes-Meyers, Aldaz; J Mol Histol 2006), read by scientist-b to complete_fulltext_read. Receipt FTR-20260913-16941225-01. 44 locators — 29 body, 10 figure, 5 table. 20 of 20 panels declared inspected.",
+  "producer_separation": "scientist-b produced it; you produced none of it. Build your expectations from the sources FIRST.",
+  "input_packet": "disease-models/wwox/research/phase_packets/VERIFY-PMID16941225-20260913.json — derived by phase_handoff.py prepare --phase verification, which carries the persisted propositions with surface, anchor, artefact and digest, the technical state, the multihop and retraction_check blocks verbatim, the open questions and the reference digests, and EXCLUDES the dossier and the commit candidate by construction. Re-check it with `phase_handoff.py check --packet <path>` before relying on it.",
+  "withheld_until_your_verdicts_are_committed": [
+   "disease-models/wwox/research/fulltext_dossiers/PMID16941225.md",
+   "disease-models/wwox/research/commit_candidates/CC-20260913-16941225-01.md",
+   "the producer's M4b comparison note under research/comparison_notes/",
+   "the producer's FT-079 queue update and its session diagnosis"
+  ],
+  "what_to_judge": "The same six axes as the first pass: each proposition against its source at the declared digest; material omissions; comparisons presented as one comparison; citations checked for CONTEXT and not mere existence; coverage honesty; and any declared locator contradiction. This reading declares corrections on three of its own committed locators after its own blind audit — judge whether each correction is itself supported, and remember that a correction repointing a locator to the RIGHT place is a repair, not a defect.",
+  "two_things_this_reading_asserts_that_are_worth_your_attention_as_questions_not_as_conclusions": [
+   "It reports that NO panel in the paper shows brain tissue, so that every CNS cell-type statement rests on text or table only. If true, that is the substantive finding of the lot and it constrains how the corpus may use this paper. Check it against the figures themselves.",
+   "It reports an internal contradiction in the paper: the text calls limbic cortex negative while Table 1 grades it +++. Verify from both surfaces, and judge whether the reading represented the contradiction faithfully rather than choosing a side."
+  ]
+ },
+ "PART_2_THE_REPAIR_RE_EXAMINATION": {
+  "object": "scientist-a's repair under ledger/tasks/scientist-a/ALDAZ-REPAIR-A-20260913.json, arising from YOUR first pass. Its repair record is named in that file's REPAIR_RESULT and sits under disease-models/wwox/research/.",
+  "why_this_is_not_self_review": "You wrote the findings; you did not write the repair. Re-examining whether a repair actually repairs what you found is the check that keeps a repair from being a gesture. But the same rule cuts both ways: if the producer REJECTED one of your findings and its rejection is right, say so plainly — your first pass being wrong on a point is a legitimate outcome and recording it is the whole value of this step.",
+  "what_to_judge_per_finding": [
+   "Was the finding adjudicated against the source, or applied by obedience? The repair record is required to name the surface and resolution re-opened and the sentence before and after — check that against the artefacts.",
+   "Does the repaired wording state what the source supports, without overshooting into a weaker claim than the source warrants? A repair that over-corrects is also a defect: entry 17's BINDING half was fully attested and must not have been weakened along with its abundance half.",
+   "Did the mis-mapped p-values of 39868255 entry 34 get the correct mapping, and does the conclusion the corrected mapping supports still stand?",
+   "Is the amended CLAIM 007 wording in CC-20260913-36828035-01 supported by the panel it rests on, and was the R4 position on the amendment stated?",
+   "Are the two material omissions — pseudoreplication of the glial and cerebellar statistics, and a mortality model with no mortality — carried WHERE the affected conclusions are stated, rather than parked in a footnote elsewhere?",
+   "Were the manifest edits declared as contradictions with their audit objects, and does locator_contradiction_audit.py --working-tree --fail-on-undeclared exit 0?",
+   "🔴 Was any persisted receipt rewritten? A receipt is history. If the repair changed what a reading covered or concluded, it must be a NEW appended event, never an edit to an existing line."
+  ]
+ },
+ "THE_RULE_THAT_PROTECTS_THE_TRUTH": "🔴 A verifier finding can itself be wrong — including one of yours from the first pass. Before recording a proposition as unsupported, or a repair as insufficient, re-open the named surface at the resolution the anchor gives and satisfy yourself that the source, not your expectation, is what you are reading. Never ask for a true statement to be deleted because a check disagrees with it. Where the artefact is genuinely ambiguous, the honest output is DISAGREEMENT_UNRESOLVED with both readings stated.",
+ "DELIVERABLES": [
+  "disease-models/wwox/research/verifications/2026-09-13_aldaz_w2_verification.md — part 1: a verdict per proposition for PMID 16941225 (SUPPORTED / NARROWER_THAN_CLAIMED / UNSUPPORTED / NOT_JUDGEABLE, each naming the artefact and anchor), the material omissions, the comparison and citation findings, the coverage assessment, and a verdict per Annex C.2 language; part 2: a per-finding judgement of the repair, and an explicit statement of whether any first-pass finding of yours is withdrawn",
+  "WAVE_2_RESULT in this task JSON, with DEFAULTS_TAKEN and STOP_LOG, required even when empty"
+ ],
+ "ACCEPTANCE_CRITERIA": [
+  "Every proposition in the packet has a verdict or is listed as not judged with the reason.",
+  "Expectations for part 1 were formed before the producer's withheld files were opened, and the report says so.",
+  "Every finding of the first pass has a disposition in part 2: repaired, insufficiently repaired, over-corrected, or withdrawn by you.",
+  "No file either producer wrote is modified. You propose; the orchestrator and the producers act.",
+  "legend_lint.py . stays PASS after every commit."
+ ],
+ "COMMITTING": {
+  "how": "bash scripts/legend_commit.sh \"<message>\" <path> [<path> ...] — never git commit directly; peers are working in this checkout.",
+  "write_only_your_own_paths": "this task JSON and your files under disease-models/wwox/research/verifications/.",
+  "never": "No push. No modification of another actor's artefacts, no edit to the four scientific current files or disease_model.md, and no regeneration of shared derived surfaces."
+ },
+ "INTERACTION_MODE": "AUTONOMOUS_COMPLETE",
+ "STOP_POLICY_REMINDER": "§21c governs. Stop only for an act reserved to the operator with no sanctioned alternative, or a condition with no safe default; otherwise take the safe default, record it in DEFAULTS_TAKEN, continue. Running out of context is the one honest reason to stop, said in one line as that reason. If the margin allows only one of the two parts, do PART 1 first and leave part 2 durably unstarted with that said plainly.",
+ "CURRENT_STATE": "DRAFTED, NOT DISPATCHED — awaiting a free slot. Part 2 additionally awaits scientist-a's repair landing.",
+ "DEFAULTS_TAKEN": [],
+ "STOP_LOG": [],
+ "TASK_ACK": {
+  "state": "ACCEPTED",
+  "accepted_on": "2026-09-13",
+  "actor": "mirror",
+  "objective": "Verify, from the sources and before any producer conclusion, scientist-b's reading of PMID 16941225; and re-examine scientist-a's repair of the wave-1 findings.",
+  "read_before_first_act": [
+   "framework/state/state_manifest_current.md (current_state: READY)",
+   "roles/mirror.md",
+   "LEGEND_CORE.md §21c, §21d, §21e (by name)",
+   "framework/protocols/fulltext_read_receipt.md (invariant, coverage, append-only, captions_only, text-layer-is-not-its-page)",
+   "framework/instruction/epistemic_discipline.md",
+   "framework/protocols/scientist_reading_modes.md §3.2-3.3",
+   ".claude/skills/legend-locator-audit/SKILL.md",
+   "governance/annex_c_review_protocol.md §C.1 (and C.2 format, C.3 discipline)"
+  ],
+  "packet_checks_at_ack": {
+   "VERIFY-PMID16941225-20260913.json": "USABLE (exit 0)"
+  },
+  "evidence_presence_at_ack": {
+   "16941225": "17/17 present and digest-matching"
+  },
+  "firewall_acknowledged": "the dossier PMID16941225.md, CC-20260913-16941225-01.md, the producer's M4b note, its FT-079 queue update and its session diagnosis are not opened until the per-proposition verdicts are written AND committed; if opened afterwards the report says so explicitly",
+  "part_2_precondition_at_ack": "REPAIR_RESULT key is present in ledger/tasks/scientist-a/ALDAZ-REPAIR-A-20260913.json; part 2 is startable and will be judged after part 1 verdicts are fixed",
+  "interaction_mode": "AUTONOMOUS_COMPLETE"
+ },
+ "TASK_CLAIM": {
+  "claimed_by": "mirror",
+  "claimed_on": "2026-09-13",
+  "durable_pointer": "disease-models/wwox/research/verifications/2026-09-13_aldaz_w2_verification.md"
+ },
+ "WAVE_2_RESULT": {
+  "state": "COMPLETE",
+  "completed_on": "2026-09-13",
+  "actor": "mirror",
+  "session": "replacement session; the predecessor under this ACTOR_ID was killed by an API session limit at about 16:03 UTC",
+  "objects_reached": {
+   "part_1_the_reading": "DURABLE BEFORE THIS SESSION, NOT REDONE. Sections 1-8 of the wave-2 report carry the complete per-proposition verdict on scientist-b's reading of PMID 16941225: 44 propositions, 36 SUPPORTED, 8 NARROWER_THAN_CLAIMED, 0 UNSUPPORTED, 0 NOT_JUDGEABLE, verdict REFINED, both flagged assertions tested. Committed unmodified by the orchestrator at 106dcd1 on behalf of the killed session. Re-judging propositions that already carry verdicts would have added nothing.",
+   "part_2_the_repair_re_examination": "REACHED AND COMPLETE, appended at 9c025ae without altering Part 1.",
+   "object_b_the_synthesis": "REACHED AND COMPLETE, written at ddc5996."
+  },
+  "part_2_verdict": "CONFIRMED with one open finding (Annex C.2 sense: no defect found given the available evidence bundle, never 'true'). The repair adjudicated against the source rather than obeying the report, and the proof is that it moved AGAINST the verifier twice and against its own drafts four times.",
+  "part_2_per_finding": {
+   "36828035_entry_0": "ADJUDICATED, REPAIR SOUND. Withdrawal correct; the cross-reference to entries[34] is honest and entry 34 does carry the S3b means; the body text prints no mean spike rate and no test, verified mechanically over the whole article text (spikes/hour 0 occurrences, mean spike 0, /hour 2).",
+   "36828035_entries_5_and_17_abundance": "ADJUDICATED. 🔴 THE PRODUCER'S REJECTION OF MY PREDECESSOR'S PROPOSED WORDING IS RIGHT AND THE FIRST PASS WAS WRONG. Measured independently at native 1801x1412: Anti-Wwox 10% input integrates to 74201/55533 in the mutant lanes against 106881/98189 in wild type (ratio 0.633; half-depth 8/8 rows against 11/10), while Anti-Hsp90 integrates to 155525/163069 against 129868/136883 (ratio 1.194), so loading is even to mutant-favouring and the mutant input bands ARE detectably reduced. 'Protein not detectably reduced' asserts a negative the cited panel contradicts. The landed 'neither direction' wording is the only sentence the panel permits.",
+   "36828035_entry_17_binding_half": "NOT WEAKENED, REPAIR SOUND. Only the certainty adverb moved, and it moved because the producer's own draft over-claimed; the original persisted word 'near-absent' was accurate and is restored. One over-precision recorded: the residual band '3-13% of wild-type integrated density' is not independently reproducible - my own per-lane measurement gives roughly 7-30% - so DISAGREEMENT_UNRESOLVED ON THE NUMBER ONLY, both readings agreeing the residual is faint and non-zero and neither able to convert film gray into a percentage of protein.",
+   "39868255_entry_34": "ADJUDICATED, REPAIR SOUND, MAPPING INDEPENDENTLY RE-VERIFIED. I re-read all six panels on the 300 dpi page-24 render and the printed legend before comparing with the repaired text. Between-genotype values as printed: 0.2778 / 0.2557 / 0.3940 / 0.9279 / 0.7772 / ns, every one non-significant. The legend pins the bracket mapping independently of my reading of bracket endpoints. The conclusion stands and the dossier sentence was repaired to the same values.",
+   "claim_007_wording": "SUPPORTED BY THE PANEL, R4 POSITION STATED. Every clause carried by a surface re-opened here or verified in Part 1. The candidate states R4 as REQUIRED AND PERFORMED on the amended wording, 7 triples, 3 SUPPORTED / 4 OVERSHOOT / 0 UNDERSHOOT / 0 NOT_IN_SOURCE, one auditor declared as one rather than implied. The Title is correctly flagged and not drafted.",
+   "36828035_pseudoreplication": "🔴 THE NARROWING IS CORRECT AND MY PREDECESSOR'S PASS OVER-SCOPED. Verified verbatim in the XML: Figs 3, 4b-c and 4e declare per-point sub-field or per-region units and 5g-h declares 24 measurements, but Fig 5d-e declares NO per-point unit at all, and Methods 4.13 says 'The quantitation of different sections from animals with same genotype and age were averaged'. I re-opened f0005: d and e are box-and-whisker plots with no individual points, so the drawing cannot decide it either. The first pass's 'every quantitative glial and cerebellar panel' was over-scoped; the carve-out and DISAGREEMENT_UNRESOLVED with a revival trigger are right. The asymmetry is also carried correctly - a pseudoreplicated bracket is weak evidence FOR a difference, not evidence against one.",
+   "39868255_mortality": "CARRIED WHERE THE CONCLUSIONS ARE STATED. Dossier section 3 item 1 inside the MSS result itself and section 4 as an explicit negative, CC section 1 Note and section 3, M4b note, joint note. The candidate's refusal to let DL-MECH-012 be cited for a mortality effect is the strongest placement of the two.",
+   "receipts": "🔴 NO PERSISTED RECEIPT REWRITTEN - confirmed by command, not by the record's word. The repair commit touches no receipt surface; the ledger is 161 lines immediately before and 161 immediately after; fulltext_receipts.py verify OK. The protocol reasoning is also correct: coverage and depth did not change, so no new event was owed. The three sites left as history - the two frozen verification phase packets and the session-evaluation line - are all correctly left alone.",
+   "declared_contradictions": "CONFIRMED, with a caveat about the gate. The four repaired locators carry contradicts_locator as objects with manifest, entry, what_changed and an audit block (36828035 carries 8 such objects, 39868255 carries 1), read directly from the committed manifests. CAVEAT: locator_contradiction_audit.py --working-tree --fail-on-undeclared exits 0 VACUOUSLY post-commit, because --working-tree compares HEAD against uncommitted manifests and the tree is clean (entry_field_changes=0). The check that bears on this repair is --history: 88 manifests, 134 revision pairs, 14 declared revisions, and NEITHER wave-1 manifest appears anywhere in its undeclared listing.",
+   "residual_wording": "🔴 INSUFFICIENTLY_REPAIRED, the one open finding. The withdrawn wording survives in six sentences across four of the producer's own files - the files the repair itself edited. Two are outright contradictions: the 36828035 dossier's transfer verdict still reads 'intact protein abundance' and the M4b note still reads 'normal protein with abolished binding' (both withdrawn phrases in one sentence). The other five use 'intact protein' in the defensible sense of full-length protein being produced, and the fix is to say that rather than to delete a true statement. Proposed, not repaired."
+  },
+  "first_pass_findings_withdrawn_by_me": [
+   "The proposed CLAIM 007 phrase 'protein not detectably reduced on an unquantified n=2 input lane' is WITHDRAWN. It asserts a negative the cited panel contradicts, as my own densitometry confirms. The producer upheld the finding and refused the sentence, and that was the correct act.",
+   "The scope of section 4.1, 'every quantitative glial and cerebellar panel is pseudoreplicated', is WITHDRAWN as to Fig 5d-e. That panel pair declares no per-point unit and its Methods sentence says sections were averaged per animal, so DISAGREEMENT_UNRESOLVED is the honest state, not pseudoreplication established."
+  ],
+  "object_b_verdict": "REFINED. Sound and the best-separated document in the batch, with four fidelity divergences, one instance that does not instantiate its own stated shape, and three material UNDER-claims.",
+  "object_b_by_axis": {
+   "fidelity": "D1 🔴 FALSE ABOUT THE ARTEFACT: the synthesis says 'coupling node' and 'convergence' are words that appear nowhere in the 30619736 article; my term count over the fingerprinted Europe PMC XML gives coupling 0, node 0 and converge 6, including the authors' own 'All pathways converge to Acetyl-CoA generation'. The dossier had been precise and the synthesis collapsed two distinct claims into one. D2 the unscoped 'only neural compartment with a panel', which Part 1 narrowed to immunohistochemistry and which the synthesis contradicts two sentences later - NOT a defect of care, since the synthesis landed 15:59 and Part 1 landed 16:42. D3 the 3-13% densitometry filed under 'Observed' though the paper contains no densitometry anywhere. D4 a minor attribution overstatement in section 2 row 2. Everything else numeric is exact, including survival figures re-derived verbatim from the XML.",
+   "separations": "KEPT, and built into the headings rather than asserted. One breach, D3: a laboratory measurement reading as the paper's observation.",
+   "independence_map": "SOUND ON ALL FOUR ROWS. The repair pair's 'partially dependent' does rest on the 2022 paper's own Methods sentence, with ref 7 verified from the artefact's own ext-link PMID; the P47T pair is independent data on a shared donated line with no shared endpoint and is not an external replication. The DL-MECH-012 consequence - direction survives, count does not - is the most valuable item in the section and I could not break it.",
+   "overreach_and_its_opposite": "The recurring shape does NOT overstate; it is stated as a reporting pattern with each instance attested. But one of its five instances (30619736) is annotation-as-measurement and does not instantiate the stated shape, and it carries D1. The honest finding runs the OTHER way - three material under-claims: U1, 27869163 is absent from the list while holding the purest instance of the synthesis's own thesis (Brca1 foci at 1 h with non-overlapping error bars and no significance mark, on the load-bearing negative of the whole model), so the shape recurs in six of eight and not five; U2, the repair axis's only human data is omitted entirely - a REMBRANDT re-analysis whose grouping is not reproducible from its own deposit; U3, 16941225's systematic one-directional table-over-panel grading inflation across twelve tissues, of which only the limbic contradiction is carried."
+  },
+  "gates_after_every_commit": "legend_lint.py . VERDICT: PASS. fulltext_receipts.py verify OK, 164 chained, tail anchored. locator_contradiction_audit.py --history exit 0 with neither wave-1 manifest among the undeclared. No file any producer wrote was modified; the only surfaces this actor wrote are this task JSON and research/verifications/.",
+  "commits": [
+   "cf441d7 - TASK_ACK for the continuation, written and committed before any judgement",
+   "9c025ae - Part 2, appended without altering Part 1",
+   "ddc5996 - Object B, the synthesis verification",
+   "this record - WAVE_2_RESULT"
+  ],
+  "DEFAULTS_TAKEN": [
+   {
+    "condition": "Part 1's section 0 item 5 promises a section 9 declaring what a later pass over the withheld producer files changed, and no section 9 exists. Whether the killed session ever opened those files is not determinable from the artefacts.",
+    "default": "Recorded the gap explicitly in Part 2 section P2.0, neither asserting nor denying that the files were opened, and did not open them for Part 1 purposes.",
+    "why_safe": "The firewall protects Part 1's verdicts, which are already durable and are not re-judged; inventing either answer would falsify the record of what was verified blind.",
+    "what_would_differ": "Claiming the second pass happened would have manufactured provenance; claiming it did not would have accused a session whose transcript is gone."
+   },
+   {
+    "condition": "The synthesis arrived in the same batch of reads as six of the eight dossiers, so my expectations for those six were not formed in ignorance of it.",
+    "default": "Declared the limit in Object B section 0 and went to the fingerprinted PRIMARY artefacts for the load-bearing checks (the 30619736 term counts, the 36828035 survival and strain figures) rather than to any dossier or to the synthesis.",
+    "why_safe": "A declared partial blindness is worth more than a claimed full one, and the two findings that carry weight rest on primary sources.",
+    "what_would_differ": "Nothing in D1, which is a mechanical term count; the omission analysis (U1-U3) is a materiality judgement and another reviewer could draw the line elsewhere, which the report says."
+   },
+   {
+    "condition": "locator_contradiction_audit.py --working-tree --fail-on-undeclared exits 0, but post-commit the working tree is clean, so it screens 88 manifests and reports entry_field_changes=0.",
+    "default": "Reported the exit 0 as VACUOUS and used --history instead as the check that actually bears on the repair.",
+    "why_safe": "Reporting a vacuous gate as proof is the failure this role exists to catch; --history compares committed revision pairs, which is the right surface.",
+    "what_would_differ": "Accepting the working-tree run would have certified the declarations without ever examining them."
+   },
+   {
+    "condition": "PIL is absent on this host, and the producer's rejection rests on a densitometry I had to reproduce myself.",
+    "default": "Converted the native JPEG to grayscale with ImageMagick and measured with numpy, writing every derived crop to the session scratchpad and never into files/.",
+    "why_safe": "A crop or a grayscale conversion adds no information and alters no fingerprinted artefact; the rule that protects the truth requires resolving at resolution before recording a finding.",
+    "what_would_differ": "Without the measurement I would have been adjudicating a report against a report, and the producer's rejection would have been accepted or refused on authority rather than on evidence."
+   },
+   {
+    "condition": "My absolute integrated densities differ from the blind auditor's, because background convention and box geometry differ.",
+    "default": "Relied only on DIRECTION and RANK ORDER, which agree on all four rows, and said so.",
+    "why_safe": "Gray value on a JPEG scan of film is not linear in protein - the producer states this caveat with its numbers rather than after them, which is correct - so a fold-change is not available to either of us.",
+    "what_would_differ": "Treating the absolute values as comparable would have manufactured a disagreement where there is none on the only quantity the surface supports."
+   },
+   {
+    "condition": "The deliverable could be an append to the existing wave-2 report or a companion file.",
+    "default": "Appended, because that file's own header already advertises Part 2 and a companion would orphan the promise. Part 1 was not altered by a single byte; the append was made with a shell append rather than an edit.",
+    "why_safe": "The dispatch permits either, and appending keeps one document whose header is true.",
+    "what_would_differ": "A companion file would have left the committed header promising a Part 2 that lived elsewhere."
+   },
+   {
+    "condition": "--history reports 57 undeclared locator revisions crossing a commit date and 188 same-day, all in OTHER manifests from 2026-08-07 onward and mostly typographic re-serialisations.",
+    "default": "Reported it as a pre-existing corpus condition outside this task's perimeter and outside this repair's responsibility; fixed nothing.",
+    "why_safe": "They are other actors' files and other tasks' history; this actor proposes and does not repair, and a red caused by a peer's file is reported rather than fixed.",
+    "what_would_differ": "Nothing in either verdict; it is recorded because it is visible from this seat and nobody currently holds it as a task."
+   },
+   {
+    "condition": "An untracked manifest, deepdive_manifests/PMID24369382.json, sits in the shared checkout - a peer's in-flight work.",
+    "default": "Committed only my own named paths and left it untouched.",
+    "why_safe": "One Scientist is reading in this checkout; committing a peer's uncommitted file would land work its author has not finished declaring.",
+    "what_would_differ": "Nothing here; it is named so the next actor is not surprised by it."
+   },
+   {
+    "condition": "A session limit had already destroyed one uncommitted deliverable under this ACTOR_ID.",
+    "default": "Committed the TASK_ACK before judging anything, then Object A the moment it was written, then Object B, rather than holding both to the end.",
+    "why_safe": "Each object is independently useful and Object A gates integration; a third loss would have cost the whole re-examination.",
+    "what_would_differ": "Holding both to the end would have risked losing Part 2 exactly as Part 1 was nearly lost."
+   }
+  ],
+  "STOP_LOG": [],
+  "stop_log_note": "EMPTY. No act reserved to the operator was required and no condition lacked a safe default. Both objects were reached, so no quota stop was needed and none is claimed."
+ },
+ "TASK_ACK_CONTINUATION": {
+  "state": "ACCEPTED",
+  "actor": "mirror",
+  "accepted_on": "2026-09-13",
+  "why_a_continuation": "The prior session under this ACTOR_ID was killed by an API session limit at about 16:03 UTC with its deliverable written but uncommitted. The orchestrator committed that file unmodified at 106dcd1 as integrator and left this record untouched, because only this actor can say what was judged. This session inherits no context and established the durable state from the files alone.",
+  "what_I_verified_as_already_durable": {
+   "part_1": "COMPLETE and committed at 106dcd1. Sections 1-8 of 2026-09-13_aldaz_w2_verification.md carry the per-proposition verification of scientist-b's reading of PMID 16941225: 44 propositions, 36 SUPPORTED, 8 NARROWER_THAN_CLAIMED, 0 UNSUPPORTED, 0 NOT_JUDGEABLE, verdict REFINED; the eight narrowings stated with the source (section 3); both flagged assertions tested (section 4) - 'no panel shows brain tissue' CONFIRMED for immunohistochemistry with the boundary that Fig. 1 lane 5 is a whole-brain lysate, and the limbic-cortex contradiction CONFIRMED on both surfaces and judged faithfully represented; the three declared locator corrections judged all three repairs (section 5); comparisons and citations (section 6); coverage assessment including the 'native pixels' record-honesty defect (section 7). NOT REDONE by this session: re-judging propositions that already carry verdicts would waste the margin and add nothing.",
+   "part_2": "ABSENT. Nothing of the re-examination of scientist-a's repair exists in the deliverable. This session writes it.",
+   "one_gap_in_part_1_I_can_see_but_cannot_close": "Section 0 item 5 promises a section 9 declaring what a later pass over the withheld producer files changed in sections 1-8. No section 9 was written. Whether the predecessor ever opened those withheld files is not determinable from the artefacts, so this session neither asserts nor denies it; it does not open them for part 1 purposes and records the gap rather than papering over it.",
+   "object_b": "The cross-corpus synthesis verification (2026-09-13_aldaz_synthesis.md, committed 225d753, written by the orchestrator) is a NEW object added by this continuation's dispatch. It did not exist in the original contract and is not started in any durable file."
+  },
+  "read_before_first_act_this_session": [
+   "disease-models/wwox/research/verifications/2026-09-13_aldaz_w2_verification.md (the predecessor's own output)",
+   "this task JSON",
+   "roles/mirror.md",
+   "framework/instruction/LEGEND_CORE.md 21c, 21d, 21e (by name)",
+   "framework/protocols/fulltext_read_receipt.md (append-only enforcement, receipt_invalidation as a new linked event)",
+   "framework/instruction/epistemic_discipline.md",
+   "governance/annex_c_review_protocol.md C.1 (R4 floor on a contradicted persisted locator), C.2 format, C.3 discipline",
+   "disease-models/wwox/research/verifications/2026-09-13_aldaz_w1_verification.md (this actor's first pass - the findings part 2 judges)",
+   "disease-models/wwox/research/2026-09-13_aldaz_w1_repair.md and ledger/tasks/scientist-a/ALDAZ-REPAIR-A-20260913.json"
+  ],
+  "order_this_session_will_follow": "Object A first, committed as soon as written, because it gates integration and because a session limit has already cost one uncommitted deliverable. Object B second, as its own file, committed on its own. Sources before the synthesis for Object B.",
+  "quota_discipline": "Commit each object the moment it is written rather than holding both to the end. On a rate limit: stop, leave the state durable, no retry loop.",
+  "interaction_mode": "AUTONOMOUS_COMPLETE"
+ }
+}

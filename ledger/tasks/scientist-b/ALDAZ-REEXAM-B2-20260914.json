@@ -1,0 +1,60 @@
+{
+  "_schema": "LEGEND governance v3.3.1 · Annex A.1 TASK_ASSIGNMENT + A.1b · re-examination (Annex C.2)",
+  "_note": "Verification of TWO objects that have never been the object of a dedicated verification. OBJECT A = scientist-a's reading of PMID 15064722 (receipt FTR-20260913-15064722-01, 24 locators, 9 artefacts, 9/9 evidentiary panels declared inspected), the antecedent from which CLAIM 007's mechanism descends; a coverage audit on 2026-09-14 found it was never independently verified and the closing report's contrary assertion has been corrected (811df68, f897ccd). OBJECT B = the orchestrator's two clause repairs at commit 8bb9407 in disease-models/wwox/research/discovery_ledger_current.md, which apply wordings supplied by a prior verifier (verifications/2026-09-13_aldaz_batch004_reexamination.md 4.1-4.2). This actor produced neither object, which is why it is the one judging them.",
+  "TASK_ID": "ALDAZ-REEXAM-B2-20260914",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "OWNER": "orchestrator",
+  "ACTOR_ID": "scientist-b",
+  "MANDATE": "ALDAZ-EXEC-20260913",
+  "PRIORITY": "HIGH",
+  "assigned_on": "2026-09-14",
+  "TASK_ACK": {
+    "acknowledged_on": "2026-09-14",
+    "by": "scientist-b",
+    "i_produced_neither_object": true,
+    "contamination_disclosed": "Before forming any judgement I read, as the contract's order of work requires, sections 4.1-4.2 of verifications/2026-09-13_aldaz_batch004_reexamination.md - the PRIOR VERIFIER's diagnosis and its two proposed wordings. This is unavoidable here and is not the ordinary Stage-1 contamination: OBJECT B *is* the application of those wordings, so the proposals are the object, not a peer's framing of it. The consequence I must hold against myself is the opposite of deference to a peer - it is the temptation to ratify a wording because a verifier supplied it. The contract states the rule I am applying instead: a repair that applies a verifier's own wording is still an unverified repair, and the wording is judged against the PRIMARY SOURCES, not against the proposal.",
+    "declared_bias": "Toward finding a defect, because a verification that confirms everything reads as though it did no work - the exact pressure that manufactures a false positive against a true sentence. And, specific to OBJECT B, toward ratifying the applied clauses because a verifier authored them and the dispatcher applied them."
+  },
+  "OBJECTIVE": "Judge both objects against the SOURCES. OBJECT A: per-locator verdicts over all 24 verbatim locators (17 body / 7 figure), and an assessment of the coverage map behind the 9/9 evidentiary-panel declaration. OBJECT B: clause-by-clause judgement of the two applied repairs - are the wordings TRUE against the sources, do they UNDER-claim, and was anything true deleted; specifically whether the two-variable bound (stimulus AND compartment) is what the two papers support or an over-read, whether 'nei tessuti e sotto gli stimoli qui elencati' under-claims what the cerebellar and sepsis legs do show, and whether DL-REPO-002's therapeutic direction is still correctly IPOTESI with its drug unidentified.",
+  "WHY_IT_IS_ON_THE_CRITICAL_PATH": "OBJECT A is the antecedent from which CLAIM 007's mechanism descends, so an error in it propagates into a consolidated-baseline claim; it carried 24 locators into the canonical state without ever having been the object of a dedicated verification. OBJECT B changed the two sentences that a reader consults for the direction of the whole neuroinflammation axis, and it changed them to text no one has checked against the primary. The mandate cannot close while either stands unverified.",
+  "THE_RULE_THAT_GOVERNS_THIS_TASK": "🔴 Every finding is checked against the source before it is reported. A true statement is NEVER called for deletion in order to obey a verification result - in this batch an earlier pass nearly deleted a true, audit-authored sentence by compression and was stopped. Overshoot is the common failure; UNDERSHOOT is the rarer and more dangerous one, and a silent narrowing is a defect exactly as an over-claim is. If a check returns EMPTY, the pattern is suspected before the text is concluded absent.",
+  "ORDER_OF_WORK": [
+    "1 · state_manifest_current.md current_state READY; then LEGEND_CORE 21c/21d/21e and framework/protocols/fulltext_read_receipt.md.",
+    "2 · evidence_presence.py --pmid 15064722 FIRST, because files/ is gitignored; declare what could not be reached BEFORE judging anything, and treat unreachable figure/panel claims as UNVERIFIABLE_SURFACE rather than judging them from prose.",
+    "3 · deepdive_manifest.py --pmid 15064722 --verify-artifacts --require-current-schema.",
+    "4 · OBJECT A first, then OBJECT B. For B, the governing sources are deepdive_manifests/PMID33058734.json + fulltext_dossiers/PMID33058734.md (the fourth, peer-reviewed NULL leg) and fulltext_dossiers/PMID38563965.md (the mechanical-stimulus positive)."
+  ],
+  "PREFLIGHT_MEASURED_BEFORE_THIS_CLAIM_WAS_COMMITTED": {
+    "state_manifest_current_state": "READY (state_manifest_current.md:150)",
+    "evidence_presence_pmid_15064722": "COMPLETE - 1 manifest, 9 artifacts, 9 present, 0 absent, 0 digest_mismatch, 0 no_digest. Every declared artefact is present and matches its digest, so NO figure or panel claim of OBJECT A needs UNVERIFIABLE_SURFACE on grounds of absence. This was measured FIRST, before any judgement, exactly because files/ is gitignored and a branch transports a manifest but not the evidence bytes.",
+    "deepdive_manifest_strict": "PASS - manifest complete, 0 gaps; current schema required; local artifact existence, SHA-256 and exact text locators verified. So snippet-presence in the declared surface is machine-established; what remains for a human verifier is whether each snippet SUPPORTS its proposition and whether the source says MORE or LESS.",
+    "locator_contradiction_audit_baseline": "clean, exit 0 - 94 manifests, 94 revision pairs, 0 entry-field changes, 0 undeclared.",
+    "public_release_gate": "PASS, BLOCKS: 0 (13 REVIEW lines, none blocking)",
+    "legend_lint": "PASS"
+  },
+  "HARD_CONSTRAINTS_ACCEPTED": [
+    "I PROPOSE; I do not REPAIR.",
+    "No file of either producer is edited. No scientific current file. No state_manifest_current.md. No persisted locator proposition or snippet - including the ones I judge defective, and including the superseded bar count, because amending a persisted proposition would create the first undeclared revision on manifests the audit currently reports clean.",
+    "locator_contradiction_audit.py --working-tree --fail-on-undeclared must still report 0 undeclared at the end; run it and record it.",
+    "No BATCH_COMMIT. No push, ever. No new tooling, no corpus expansion, no new readings. No task branch.",
+    "Only two paths are committed: this task JSON (alone, before any judgement) and the verification record.",
+    "Commits via scripts/legend_commit.sh only, never git commit; public_release_gate.py AND legend_lint.py read BEFORE each commit, not after. Conclusions stay out of commit subjects.",
+    "21c: safe defaults taken and recorded in DEFAULTS_TAKEN; stop only for a reserved act with no sanctioned alternative. Any API safeguard error recorded with time, Request ID, operation and outcome - an API error is not a verification performed.",
+    "Sources, citations and scientific terms are never altered to get past a filter."
+  ],
+  "DELIVERABLES": [
+    "ledger/tasks/scientist-b/ALDAZ-REEXAM-B2-20260914.json - this file, committed ALONE before any judgement.",
+    "disease-models/wwox/research/verifications/2026-09-14_aldaz_15064722_and_clause_repairs.md - Annex C.2: per-object verdicts, tallies, coverage-map assessment for OBJECT A, clause-by-clause judgement for OBJECT B, what could not be reached, DEFAULTS_TAKEN, STOP_LOG, overall verdict per object."
+  ],
+  "VERDICT_VOCABULARY": [
+    "SUPPORTED",
+    "NARROWER_THAN_CLAIMED",
+    "UNSUPPORTED",
+    "NOT_JUDGEABLE",
+    "UNVERIFIABLE_SURFACE"
+  ],
+  "STATUS": "CLAIMED",
+  "no_recursive_delegation": true,
+  "public_edition_note": "Disease-level, de-identified. Nothing in this task or its record is medical advice."
+}

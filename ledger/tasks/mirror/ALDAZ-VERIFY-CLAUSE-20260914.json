@@ -1,0 +1,261 @@
+{
+ "_schema": "LEGEND governance v3.3.1 · Annex A.1 TASK_ASSIGNMENT + A.1b · Annex C.2 independent re-examination",
+ "_note": "Independent re-examination of two clause repairs landed by the orchestrator at f3eb7d5 and recorded in the parent mandate as UNVERIFIED. Mirror proposes; it edits no producer file, no persisted locator, and none of the four scientific current files.",
+ "TASK_ID": "ALDAZ-VERIFY-CLAUSE-20260914",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "MANDATE": "ALDAZ-EXEC-20260913",
+ "ACTOR_ID": "mirror",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Settle whether the two clause repairs at f3eb7d5 are correct, judged against the primary sources and not against their own internal consistency: DL-MECH-012 L'indizio opening (line 208) and DL-REPO-002 Statement causale / Belief (line 122).",
+ "assigned_on": "2026-09-14",
+ "OBJECT": {
+  "commit_under_review": "f3eb7d5",
+  "surface": "disease-models/wwox/research/discovery_ledger_current.md",
+  "clauses": [
+   "DL-MECH-012 · L'indizio opening · line 208",
+   "DL-REPO-002 · Statement causale + Belief · line 122"
+  ],
+  "ledger_unchanged_since_commit": "git log f3eb7d5..HEAD -- discovery_ledger_current.md is empty; the landed text is current",
+  "sources_read_as_primary": [
+   "PMID 33058734 · files/fulltext/PMID33058734_Zeng2021.pdf + files/figure_renders/PMID33058734/fig4_full.png, fig6_full.png, fig8_full.png",
+   "PMID 38563965 · files/fulltext/PMID38563965_Zeng2024_PMC.html",
+   "PMID 36828035 · files/fulltext/PMID36828035_Hussain2023.pdf",
+   "PMID 39868255 · files/fulltext/PMID39868255_DeLaCruz2025_biorxiv.pdf (unreviewed preprint; used only for stimulus class and compartment)"
+  ],
+  "context_read_not_treated_as_evidence": [
+   "disease-models/wwox/research/verifications/2026-09-13_aldaz_w4_verification.md",
+   "disease-models/wwox/research/verifications/2026-09-14_aldaz_15064722_and_clause_repairs.md",
+   "disease-models/wwox/research/2026-09-14_aldaz_dossier_fix_c_dispositions.md"
+  ]
+ },
+ "CURRENT_STATE": "COMPLETE 2026-09-14 — re-examination record written by mirror. Repair 1 (DL-MECH-012 L'indizio) REFINED; repair 2 (DL-REPO-002 line 122) CONFIRMED with an inherited residue. One clause must change, with replacement wording supplied. Four adjacent findings reported, not repaired; one of them (F3) is load-bearing on repair 1. Nothing operator-reserved.",
+ "TASK_ACK": {
+  "actor_id": "mirror",
+  "acked_on": "2026-09-14",
+  "directive_version_acked": 1,
+  "generation_acked": 1,
+  "contract_read_in_full": true,
+  "read_before_first_act": [
+   "CLAUDE.md",
+   "framework/state/state_manifest_current.md — current_state: READY confirmed at line 151",
+   "framework/instruction/LEGEND_CORE.md §21c STOP POLICY, §21d DECISION AUTHORITY, §21e AGILE OPERATING MODE — by name",
+   "git show f3eb7d5"
+  ],
+  "understood": [
+   "I propose; I do not repair. I write only under disease-models/wwox/research/verifications/ and my own task record under ledger/tasks/mirror/.",
+   "No edit to any of the four scientific current files, to disease_model.md, to state_manifest_current.md, or to any producer dossier, manifest or phase packet.",
+   "No BATCH_COMMIT. No push to any remote, ever. No recursive delegation. No new tooling. No corpus expansion.",
+   "A true statement is never proposed for deletion to satisfy a verification error; a finding against a clause must quote the source text that makes it wrong.",
+   "A manufactured finding is worse than none.",
+   "A commit subject names the surface touched, never the conclusion reached; conclusions go in the body."
+  ]
+ },
+ "TASK_CLAIM": {
+  "actor_id": "mirror",
+  "task_id": "ALDAZ-VERIFY-CLAUSE-20260914",
+  "claimed_at": "2026-09-14",
+  "interaction_mode": "AUTONOMOUS_COMPLETE",
+  "state": "COMPLETE",
+  "durable": true,
+  "preflight": {
+   "state_manifest_current_state": "READY",
+   "evidence_presence_33058734": "COMPLETE 46/46",
+   "evidence_presence_38563965": "COMPLETE 15/15",
+   "evidence_presence_36828035": "COMPLETE 31/31",
+   "evidence_presence_39868255": "COMPLETE 17/17",
+   "legend_lint_at_start": "PASS (one pre-existing INFO MISSING_WIKILINK on CLAIM 010)",
+   "public_release_gate_at_start": "PASS, BLOCKS: 0"
+  },
+  "deliverables_owed": [
+   "disease-models/wwox/research/verifications/2026-09-14_aldaz_clause_repairs_reexamination.md",
+   "ledger/tasks/mirror/ALDAZ-VERIFY-CLAUSE-20260914.json"
+  ]
+ },
+ "RESULT": {
+  "deliverable": "disease-models/wwox/research/verifications/2026-09-14_aldaz_clause_repairs_reexamination.md",
+  "review_level": "independent re-examination against the primary sources",
+  "verdict_repair_1_DL_MECH_012": "REFINED",
+  "verdict_repair_2_DL_REPO_002": "CONFIRMED",
+  "repair_1": {
+   "before": "in tutti i tessuti esaminati sotto stimolo meccanico o in sistema cell-autonomo la perdita di WWOX aumenta l'infiammazione",
+   "after_landed": "nei tessuti e sotto gli stimoli qui elencati la perdita di WWOX aumenta l'infiammazione",
+   "recorded_hazard_resolved": true,
+   "why_resolved": "The filter admitted only mechanical stimulus or cell-autonomous system and thereby excluded two of the three legs the same sentence enumerates: the cerebellar/hippocampal leg has no imposed stimulus of any class (PMID 36828035: spontaneous seizures, unchallenged cohort, LPS named only as future work) and the sepsis leg is ip LPS in a whole animal (PMID 39868255). The landed enumeration excludes neither.",
+   "withdrawal_honoured": true,
+   "why_withdrawal_honoured": "The filter wording was itself a patched survival of the retired 'not the tissue but the STIMULUS' rule — it kept a stimulus class as the discriminator with a compartment escape hatch. The landed enumeration asserts no discriminator at all, which is what a withdrawal requires, and the sources force it because the ex-vivo positive is under an INFECTIOUS stimulus (PMID 33058734 Fig. 8, asterisked on all three analytes).",
+   "residue_a": "The conjunction 'nei tessuti E sotto gli stimoli qui elencati' ranges over two enumerated sets. The tissues include lung; the stimuli include an infectious one (the sepsis leg's ip LPS). The cross-product therefore includes lung x infectious — the single measured null (Fig. 4 title: 'EC-specific WWOX KO mice do not exhibit greater BAL cytokines during LPS-induced ARDS'; Fig. 6 title the same for MRSA). The filter under-declared; the enumeration over-declares in a different cell. Mitigated, and this is why the verdict is REFINED and not INCORRECT: the exception is named in the same line immediately after, so the cross-product reading is unreachable without meeting the null.",
+   "residue_b": "'sotto gli stimoli qui elencati' presupposes every leg has a listed stimulus. The cerebellar/hippocampal leg has none, so the second conjunct is unsatisfiable for the axis's largest and only peer-reviewed CNS positive — the same undershoot class as the filter, at reduced magnitude.",
+   "clause_that_must_change": "in ogni tessuto qui elencato la perdita di WWOX aumenta l'infiammazione — cervelletto e ippocampo senza stimolo imposto, corteccia sotto stimolo infettivo, polmone sotto stimolo meccanico — con UNA eccezione misurata: il polmone intero sotto stimolo infettivo, dove lo stesso knockout da un nullo (PMID 33058734, Figg. 4 e 6)",
+   "note_on_the_choice": "A third formulation that excludes nothing and over-claims nothing was already written down in the prior verification record. The orchestrator closed the larger undershoot by taking the weaker of the two wordings it held."
+  },
+  "repair_2": {
+   "clauses_judged_right": [
+    "retiring 'DATO ... multi-tessuto' — the legs are tissues of one laboratory's axis, one an unreviewed preprint; multi-tissue convergence does not survive as a strength argument, while the observation itself is untouched",
+    "retiring 'direzione solida' — the direction is contradicted in one measured cell",
+    "'direzione coerente dove misurata e vincolata a stimolo e compartimento' — true as written, because the em-dash exception follows in the same parenthesis",
+    "'la quarta gamba peer-reviewed PMID 33058734 e un nullo in polmone intero sotto stimolo infettivo' — both figure titles state it in the paper's own voice"
+   ],
+   "omission_judged_acceptable": "Not restating the ex-vivo positive here makes the caveat more conservative, and the full 2x2 sits in DL-MECH-012, which this line names.",
+   "inherited_residue": "The line imports repair 1's wording verbatim by reference ('nei tessuti e sotto gli stimoli elencati in DL-MECH-012'), so residues (a) and (b) propagate. The two lines must be repaired in one act; repairing line 208 alone leaves line 122 pointing at a phrasing that no longer exists.",
+   "neighbourhood_defect_closed": "Line 122 had been re-asserting DATO multi-tessuto and 'direzione solida' two lines above the repair that retired both by name. That is now gone."
+  },
+  "two_by_two_re_derived_from_primaries": {
+   "mechanical_whole_animal": "POSITIVE — BAL IL-6/KC/IL-1beta/MCP-1, n = 10 separate mice per group (PMID 38563965 Fig. 5)",
+   "mechanical_isolated_cells": "POSITIVE — four analytes, n = 5 separate cultures (PMID 38563965 Fig. 6)",
+   "infectious_whole_lung": "NULL twice — TNFalpha/IL-6/KC under LPS and MRSA, n = 3, 24 unmarked bars (PMID 33058734 Figs. 4, 6)",
+   "infectious_isolated_cells": "POSITIVE — IL-6/KC/MCP-1 all three significant, n = 3 (PMID 33058734 Fig. 8)",
+   "null_is_the_single_exceptional_cell": true
+  },
+  "independent_re_derivations": [
+   "Bar geometry counted by me from fig4_full.png and fig6_full.png, because a commit subject in my initial context had already stated this conclusion: 4 bars per panel (flox and KO at PBS, flox and KO at challenge) x 3 panels = 12 per figure, 24 across the pair, no asterisk anywhere. The broader negative is confirmed on my own reading.",
+   "Every cell of the 2x2 re-derived from figure legends and Results text rather than taken from the dispatch's pre-digested table.",
+   "PMID 36828035 swept for challenge/LPS/stimulation/injection terms to test the 'no imposed stimulus' premise; the only LPS mention is in the Discussion as proposed future work.",
+   "PMID 36828035 compartment checked panel by panel: gliosis is quantified in hippocampal subfields (CA1, CA3, DG), never in cerebellum."
+  ],
+  "adjacent_findings_reported_not_repaired": [
+   {
+    "id": "F1",
+    "finding": "Power cannot explain the null inside PMID 33058734. The Tag's hedge 'il nullo e anche la meno potente (n=3 per braccio contro n=10)' is true across papers, but the ex-vivo POSITIVE in the same paper is at the same n = 3 and is significant on all three analytes (Fig. 8 legend). Within that paper, power does not separate the null from the positive — only compartment does.",
+    "direction": "runs against the entry's current hedge and toward the entry's own conclusion",
+    "disposition": "scope the 'power is not separable from stimulus' clause to the cross-paper comparison"
+   },
+   {
+    "id": "F2",
+    "finding": "The authors read their own null as substantive: 'suggests that an inflammation-independent EC-specific mechanism underlies these phenomena.' The entry types the null only as a failure to reject and nowhere records that the source draws a positive inference from it.",
+    "direction": "gap in the entry, relevant to DL-REPO-002's therapeutic direction",
+    "disposition": "record the source's own inference alongside the failure-to-reject typing"
+   },
+   {
+    "id": "F3",
+    "finding": "Compartment mislabel INSIDE the repaired sentence's own leg list, and load-bearing on repair 1. The leg reads 'cervelletto: astrogliosi progressiva; progressione microgliale morfologica'. Per PMID 36828035 the gliosis is hippocampal ('Iba1 in hippocampi subfields', 'hippocampal DG, CA1, and CA3'); the cerebellum carries 'cerebellar hypoplasia and PC degeneration'. No cerebellar gliosis quantification exists in the paper. Since the repaired clause conditions the claim on 'the tissues listed here', a wrong tissue label is a wrong scope.",
+    "direction": "wrong compartment attribution",
+    "disposition": "relabel as 'cervelletto (perdita di Purkinje, ipoplasia, assottigliamento ML/GL) e ippocampo (astro/microgliosi progressiva)', in the same act as the clause replacement"
+   },
+   {
+    "id": "F4",
+    "finding": "Line 208's qualifier says PMID 33058734 'non trova differenze', dropping 'significative'. The source reports a non-significant trend toward increase, not an absence of difference. The entry's Tag states it correctly; this line does not. DL-REPO-002's flat 'e un nullo' carries the same slight hardening.",
+    "direction": "one word, pre-existing, not introduced by f3eb7d5",
+    "disposition": "restore 'significative'"
+   },
+   {
+    "id": "F5",
+    "finding": "The commit message declines the heading repairs on the basis that 'DL-MECH-012 ha 7 anchor e DL-REPO-002 una'. I count 8 occurrences of the full DL-MECH-012 heading string across .md/.json outside .claude/, in a single heading variant.",
+    "direction": "stated count off by one",
+    "disposition": "NOT a finding against the repair — the decision it justifies is defensible at either count, and the heading debt (retired 'multi-tessuto' and 'direzione RISOLTA') remains open and visible"
+   }
+  ],
+  "what_must_be_repaired": "One clause, in one act covering both lines: replace DL-MECH-012 L'indizio's opening with the per-leg formulation naming the one measured exception (see repair_1.clause_that_must_change), re-point DL-REPO-002 line 122's reference to it, and apply F3's tissue relabel in the same edit because the repaired clause conditions on the tissue labels being right. F1, F2 and F4 are proposed and not required by these two defects.",
+  "manufactured_finding_check": "Every finding is tied to a quoted source line. Residue (a) is flagged in the record as resting on a judgement about Italian prose rather than on a source, with the condition under which it evaporates stated explicitly."
+ },
+ "WHAT_WOULD_CHANGE_MY_MIND": {
+  "repair_1": [
+   "If the leg list is reliably read as ORDERED PAIRS — each stimulus bound to its own tissue — the cross-product reading is unavailable, residue (a) evaporates, and the verdict becomes CONFIRMED with only residue (b) outstanding. No source settles this; it is a judgement about the prose.",
+   "Residue (b) fails if PMID 36828035 imposed any challenge in the cohort where gliosis was quantified. A supplementary methods file describing one would overturn it.",
+   "If the whole-lung null were shown to be an artefact (multiplicity-corrected reanalysis, or a higher-n replication turning it positive), the 'one measured exception' clause would itself need re-typing."
+  ],
+  "repair_2": [
+   "If 'coerente dove misurata' is read as claiming coherence in EVERY measured cell it is false and the verdict drops to REFINED; the em-dash exception in the same parenthesis is the whole of what keeps it true.",
+   "If the whole-lung null were overturned, the cited fact would need re-typing.",
+   "If any governance rule required a Belief field to be self-contained rather than to inherit scope by reference, the inherited residue would become an original defect of this line."
+  ]
+ },
+ "DECLARED_BLINDING_EXPOSURE": {
+  "nature": "Defect of the runtime, recorded against the harness and the dispatching practice, not against the actor. The harness injected a git-status block into initial context before the actor could act.",
+  "verbatim_commit_subjects_shown": [
+   "3a2f89a ledger: record step 9 disposition, the bootstrap probe result, and a subject convention",
+   "e4218e0 Riconciliazione dei 32 PMID: 19 letti su 32, e tre reperti che nessuno aveva nominato",
+   "0e829a1 FT-100: il conteggio delle barre era sbagliato alla fonte, e il negativo e piu ampio",
+   "56174f1 BATCH_20260914_005: CLAIM 026 era un overshoot vivo in canonico, e il mirror si muove con la claim",
+   "a651e30 Merge branch 'refs/heads/task/plan-mandate-continuity'"
+  ],
+  "also_shown": "branch main, status (clean), Git user legend-desktop, and the auto-memory digest including 'Synthesis, not retrieval' and 'Contest a verifier with the source'.",
+  "expectations_formed": [
+   "0e829a1 states a conclusion this task was dispatched to verify — bar count wrong at source, negative BROADER. No blindness is claimed on the direction of the bar-count question. Mitigation performed: the geometry was re-derived from the figure renders and is reported as the actor's own measurement.",
+   "56174f1 pre-disclosed that a batch landed today correcting an OVERSHOOT live in canon, priming overshoot as the batch's failure mode and risking under-weighting UNDERSHOOT — the rarer and more dangerous direction, and exactly the direction of the hazard under review. One residue of each direction was found and reported.",
+   "e4218e0 primed an expectation that unnamed findings are available to be found, a mild pressure toward producing one. Every finding is tied to a quoted source line.",
+   "None of the five subjects is f3eb7d5's, so the specific wording choice under review was NOT pre-disclosed. The verdicts were formed after git show f3eb7d5 and the primaries.",
+   "The auto-memory digest primed method, not conclusions."
+  ],
+  "residual_not_claimed_away": "The W4 record and the fix-C dispositions, both named by the dispatch as context, also state the 12/24 arithmetic. The §1.1 count is independent in execution but not in expectation, and the record says so rather than claim a clean re-derivation."
+ },
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "The dispatch supplied the 2x2 pre-digested, with cells, n's and analyte counts.",
+   "default_taken": "Re-derived every cell from the primary figure legends and Results text before using it.",
+   "why_it_is_safe": "A table taken from a brief is not a measurement; the contract requires judging against the sources.",
+   "what_would_have_been_different": "'n=3 vs n=10' would have been inherited as the explanation of the null and F1 would have been missed entirely — the positive cell's n = 3 is visible only in the legend."
+  },
+  {
+   "condition": "A commit subject in initial context already stated the bar-count conclusion.",
+   "default_taken": "Re-read the figure renders and reported an own count.",
+   "why_it_is_safe": "Two image reads; an independent re-derivation of a told conclusion costs almost nothing.",
+   "what_would_have_been_different": "A conclusion known only from a commit subject would have been reported as verified."
+  },
+  {
+   "condition": "fig8_full.png is cropped at the top for panel C, so individual asterisks are not all legible.",
+   "default_taken": "Rested Fig. 8's positivity on the legend's own title and its '*P < 0.05, compared with MRSA-treated control', not on counting asterisks in the render.",
+   "why_it_is_safe": "The legend asserts the significance in the paper's own voice; the render adds nothing the legend does not state.",
+   "what_would_have_been_different": "With an uncropped render the asterisk count per panel could have been stated, as was done for Figs. 4 and 6."
+  },
+  {
+   "condition": "The sepsis leg is an unreviewed preprint.",
+   "default_taken": "Used it only for stimulus class and compartment — facts of design, not of result.",
+   "why_it_is_safe": "Peer-review status is not load-bearing for 'the injection was ip LPS in a whole animal'; no preprint result is promoted.",
+   "what_would_have_been_different": "Nothing. The residue-(a) argument needs only that an infectious stimulus appears in the enumerated set."
+  },
+  {
+   "condition": "F1-F4 lie outside the two repairs under review; F3 is load-bearing on repair 1.",
+   "default_taken": "Reported each with its source quotation and repaired none; flagged F3 so it lands in the same act as the clause replacement.",
+   "why_it_is_safe": "Stays inside the declared write perimeter (verifications/ and the own task record). I propose; I do not repair.",
+   "what_would_have_been_different": "With a repair mandate F3 and F4 would each be a one-clause edit at T0."
+  },
+  {
+   "condition": "The commit message's anchor count (7) disagrees with the measured count (8).",
+   "default_taken": "Reported the discrepancy; did not treat it as a finding against the repair.",
+   "why_it_is_safe": "The decision it justifies — headings are separate atomic work — is defensible at either count, and no conclusion rests on it.",
+   "what_would_have_been_different": "Nothing substantive."
+  },
+  {
+   "condition": "A registry-style 'full text reviewed' phrasing in a record is counted as a reading by coverage_report, the self-eval ratchet and triage, and the unread-premise baseline has zero headroom.",
+   "default_taken": "Wrote the record under research/verifications/ and avoided attestation-shaped phrasing; it reports re-examination of clauses and declares no new reading.",
+   "why_it_is_safe": "Leaves the unread-premise baseline untouched.",
+   "what_would_have_been_different": "A record phrased as an attestation would have silently moved a coverage counter."
+  },
+  {
+   "condition": "LINT went PASS -> BLOCK_BATCH_COMMIT -> PASS during the task, because a peer's repair to session_self_eval.py was in flight uncommitted and then landed as ae51f55.",
+   "default_taken": "Kept working through the excursion rather than waiting on it, after proving the block was not attributable to this task by holding the tree fixed and varying only the checker source. Reported it; repaired nothing. It had resolved by the pre-commit read, so LINT is left PASS.",
+   "why_it_is_safe": "Section 21c's declared safe default for a shared checkout is 'proceed, note them', and the release gate that governs publication was PASS with 0 blocks throughout. Clearing the ratchet needed state_manifest_current.md, which this contract forbids, and it belonged to the actor mid-edit.",
+   "what_would_have_been_different": "Stopping would have been a class-2 stop with a declared default, and would have abandoned a completed re-examination over a peer's ten-minute tooling window."
+  },
+  {
+   "condition": "An early LINT run reported 6 unread premises, and 5 with this task's two files moved aside, suggesting this record contributed +1.",
+   "default_taken": "Withdrew the inference and recorded that it was wrong, after two back-to-back runs returned 5 stably and PREMISE_GLOBS proved both paths out of scope.",
+   "why_it_is_safe": "A wrong finding against one's own work, left standing, is inherited as a real defect; withdrawing it costs one test and keeps the record true.",
+   "what_would_have_been_different": "Correctly-backed PMID citations would have been reworded or deleted to chase a number that was never this task's — the precise failure this task's own binding rule forbids."
+  }
+ ],
+ "STOP_LOG": [],
+ "STOP_LOG_NOTE": "Empty. No class-1 stop: no reserved act was required — no BATCH_COMMIT, no push to any remote, no history rewrite, no deletion of unique material, no external spend, no private-data exposure. No class-2 stop: every condition had a safe default, recorded in DEFAULTS_TAKEN. No class-3 stop: the turn does not close on a question that had a default.",
+ "API_SAFEGUARD_EVENTS": "None. No external call of any kind — no corpus expansion, no new reading, no API-keyed or paid retrieval, no new tooling. Every artefact read was local to this checkout.",
+ "GATES": {
+  "public_release_gate_before_commit": "PASS, BLOCKS: 0 — at task start and again immediately before the commit. [REVIEW] rows are the pre-existing corpus condition (PARENT_OF_ORIGIN_ATTRIBUTED, one PUBLIC_BIBLIOGRAPHIC_AUTHOR); none names a file this task writes",
+  "legend_lint_at_start": "PASS",
+  "legend_lint_mid_session": "BLOCK_BATCH_COMMIT for roughly ten minutes — UNREAD_PREMISE: 5 reasoning-layer citations above the baseline of 2, while a peer's checker repair was in flight uncommitted.",
+  "legend_lint_before_commit": "PASS — unread_premises = 2 = unread_premise_baseline; one pre-existing [INFO] MISSING_WIKILINK on CLAIM 010, informational, not a block. LINT IS LEFT PASS.",
+  "how_the_transient_block_resolved": "The peer landed the checker repair as ae51f55 ('self_eval: share the declaration definition and match a record by its own Identifier') at 13:51:39. Its commit body independently states the same measurement taken here blind to it: 'Old logic vs new on the same tree: OLD 2, NEW 5, surfaced 3 (19465938, 22574198, 25538133), hidden by the fix NONE', and 'all three are genuine debt the bug was hiding'. It declines to pad the ratchet and prescribes declaring the three in the full-text queue instead; that then happened, so all three now clear as DECLARED DEBT via full_text_queue_current.md, the baseline stays 2, unread returns to 2, and LINT is PASS. The debt was made visible and then declared, not hidden again.",
+  "corroboration_of_the_withdrawn_inference": "The same commit body records the mirror image of my own false +1: 'A live run said six, not five: a child appended a receipt between my two measurements, clearing another PMID and re-anchoring the ledger tail. Recorded, because attributing that to this change would have been wrong.' Two actors measuring the same ratchet minutes apart each saw a phantom delta from a third actor's concurrent write, and each had to withdraw an attribution. On a shared checkout with live peers, a difference between two sequential gate runs is not evidence of authorship.",
+  "why_lint_could_not_be_left_pass": "A peer is editing the checker itself, uncommitted, mid-session: framework/scripts/session_self_eval.py and its test file are modified with mtime 13:45:40, between the start-of-session PASS and the post-write BLOCK. Holding the tree fixed and varying ONLY the checker source: HEAD (committed) checker gives unread = 2 = baseline (PASS); the working-copy checker gives unread = 5 (BLOCK). Same tree, same receipts, same registries, same content. The delta is entirely the uncommitted checker edit, which is itself a repair — its docstring records that the old logic tested 'full text reviewed' against blocks[0] of a split on '## PAPER ' and thereby 'credited one paper's reading to another'. The block therefore exposes three TRUE pre-existing unread premises (19465938, 22574198, 25538133) that a defective clearance had been hiding. This is the check working, not failing.",
+  "not_attributable_to_this_task": "PREMISE_GLOBS is analysis/**/*.md, therapeutics/*.md, meta/*.md under disease-models/wwox/. Both paths this task writes (research/verifications/, ledger/tasks/mirror/) lie outside it; the intersection of this task's files with the 79 files in premise scope is EMPTY, tested rather than assumed. The five cited PMIDs are in 2026-09-13_M4B_PMID15064722.md, 2026-09-13_M4B_PMID24932569.md, 2026-09-13_M4B_PMID27869163.md and meta_metabolism_current.md — all tracked and unmodified by this task.",
+  "withdrawn_inference_of_my_own": "An early run reported 6, and moving my two files aside gave 5, from which I concluded my record contributed +1. That was a FALSE inference from two non-simultaneous runs against a tree a peer was writing into (2026-09-14_M4B_PMID30285739.md at 13:45:16; the checker at 13:45:40). Two back-to-back runs now return 5 stably with my files in place. On a shared checkout with live peers, sequential gate runs are not comparable and a delta between them is not evidence of authorship. Recorded because it was wrong for a full round and would otherwise have driven me to reword correctly-backed citations.",
+  "why_not_repaired": "Clearing it requires either backing those three citations or ratcheting unread_premise_baseline in framework/state/state_manifest_current.md — a file this contract forbids me to touch, on a ratchet that is deliberately not mine. It also belongs to the actor whose checker repair surfaced it and who is mid-edit. Reported, not touched.",
+  "run_order": "Gates read before each commit, never after, and also at task start before any write."
+ },
+ "HARD_CONSTRAINTS_OBSERVED": [
+  "Wrote only disease-models/wwox/research/verifications/2026-09-14_aldaz_clause_repairs_reexamination.md and this task record.",
+  "Untouched: all four scientific current files, discovery_ledger_current.md, disease_model.md, state_manifest_current.md, every producer dossier, manifest and phase packet, every persisted locator proposition/snippet, every other actor's ledger record.",
+  "No BATCH_COMMIT. No push to any remote, ever. No recursive delegation. No new tooling. No corpus expansion.",
+  "Commits made only through scripts/legend_commit.sh, file-scoped, with the conclusion kept out of the subject and placed in the body."
+ ]
+}

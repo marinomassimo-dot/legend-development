@@ -1,0 +1,29 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT (operator-directed) + A.1b",
+  "TASK_ID": "ORCH-GROWTH-ANCHORS-CC-DISCOVERY-20260913",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "OWNER": "operator",
+  "ACTOR_ID": "orchestrator",
+  "CURRENT_STATE": "COMPLETE — CC-* discovery and disposition-aware backlog landed at merge e84918607b33c011a0454ba08935a70cc2ccf1e8; returned set equals an independent oracle of 27; battery FAIL on two inherited suites only.",
+  "assigned_on": "2026-09-13",
+  "queued_behind": "ORCH-D8-DISMECH-RESEAL-20260913",
+  "OBJECTIVE": "Correct commit-candidate discovery in framework/scripts/growth_anchors.py, if examination of its contract confirms it must include CC-* files; avoid false 'no candidates' while keeping discovery, classification and disposition state distinct. No scientific change, no BATCH_COMMIT.",
+  "operator_mandate_verbatim": "INCARICO IN CODA — non interrompe né sostituisce D8.\n\nRegistra questo incarico nella coda persistente prevista dal repository.\nAvvialo soltanto dopo aver concluso D8 e salvato il relativo rapporto.\nSe D8 resta bloccato o incompleto, conserva questo incarico in coda\nsenza avviarlo automaticamente.\n\nOBIETTIVO\n\nCorreggere il discovery dei commit candidate in growth_anchors.py,\nse l’esame del suo contratto conferma che deve includere i file CC-*.\n\nIl risultato deve evitare falsi “nessun candidato”, mantenendo\ndistinti discovery, classificazione e stato di disposizione.\nNessuna modifica scientifica e nessuna esecuzione di BATCH_COMMIT.\n\n1. ACCERTA IL DIFETTO\n\nLeggi il codice, i test pertinenti, la documentazione e i chiamanti.\nDetermina esattamente cosa rappresenta il conteggio restituito.\n\nRiproduci il comportamento sui nomi effettivamente presenti:\ncommit_candidate_* e CC-*.\n\nVerifica se l’omissione deriva da un filtro di nome obsoleto oppure\nse il comando ha un perimetro intenzionalmente diverso da quello\nattribuitogli nel rapporto del batch.\n\nSe il comando non è destinato a inventariare quella coda, correggi\nl’uso o l’indicazione errata nella superficie responsabile.\nNon estenderne arbitrariamente il significato.\n\n2. FISSA LE ATTESE PRIMA DELLA MODIFICA\n\nCostruisci fixture piccole, autosufficienti e versionate, senza\ndipendere dal corpus scientifico gitignored.\n\nCopri almeno:\n- un candidato col nome storico;\n- un candidato CC-*;\n- un file estraneo che non deve essere incluso;\n- assenza di duplicazione quando più regole riconoscono lo stesso file.\n\nSe il comando determina anche lo stato pendente/chiuso, copri inoltre:\n- una vera intestazione BATCH DISPOSITION;\n- la stessa espressione citata soltanto nella prosa;\n- uno Status riconosciuto dal protocollo;\n- un candidato rinviato o applicato parzialmente.\n\nDeriva gli esiti dal contratto vigente. Non assumere che qualsiasi\ndisposizione chiuda definitivamente il candidato.\n\nDimostra che almeno il test del difetto fallisce sul codice precedente.\nNon calcolare la risposta attesa con lo stesso parser sotto test.\n\n3. RIPARAZIONE MINIMA\n\nModifica il punto responsabile e gli eventuali chiamanti necessari.\nRiusa una logica canonica esistente, se disponibile, evitando un\nsecondo parser concorrente.\n\nNon introdurre nuovi registri, indici persistenti, servizi o dipendenze.\nNon rinominare in massa i candidati e non modificarne le disposizioni.\nNon ampliare il task a una revisione generale di growth_anchors.py.\n\nSe una superficie prescrittiva descrive il comportamento precedente,\naggiornala nello stesso intervento.\n\n4. VERIFICA SUL REPOSITORY REALE\n\nConfronta gli identificatori restituiti con un inventario indipendente\ndel filesystem e spiega ogni esclusione pertinente.\n\nNon fissare “43” come risposta attesa: dopo il batch e D8 lo stato\npotrebbe essere cambiato. Confronta gli insiemi di file, non soltanto\nil totale.\n\nEsegui i test pertinenti e i controlli richiesti dal repository.\nNon eseguire altri batch per dimostrare il funzionamento.\n\n5. MODELLO, COSTO E CHIUSURA\n\nUsa Opus 5; verifica il modello effettivo dove il runtime lo consente.\nPer questo intervento deterministico lavora senza subagenti, salvo\nun requisito esplicito del protocollo, che dovrai indicare.\n\nSe la sessione non ha margine per implementazione, verifica e chiusura,\nlascia un checkpoint autosufficiente per una sessione nuova.\n\nIntegra secondo il protocollo, senza push.\n\nNel rapporto finale indica:\n- contratto effettivo del comando;\n- causa del difetto e modifica;\n- prova che il test falliva prima e passa dopo;\n- confronto degli identificatori sul repository reale;\n- verifiche e SHA finale.\n\nTermina qui. Nessun altro incarico è autorizzato implicitamente.",
+  "STOP_LOG": [],
+  "remote": "nothing pushed",
+  "started_at_head": "d1d40198c89e3b8ef0471ce321818402a3bebf49",
+  "branch": "task/ORCH-GROWTH-ANCHORS-CC-DISCOVERY-20260913",
+  "closed_on": "2026-09-13",
+  "commits": {
+    "repair": "27a886a607e7a3257d2d4c03f924d9c6715d8f1a",
+    "merge": "e84918607b33c011a0454ba08935a70cc2ccf1e8"
+  },
+  "report": "disease-models/wwox/research/2026-09-13_growth_anchors_cc_discovery_report.md",
+  "model": "claude-opus-5 (session transcript); no subagent",
+  "delegations_consumed": 0,
+  "DECISIONS_TAKEN": [
+    "disposition read from the candidate's own last BATCH DISPOSITION heading, then header Status, then batch scope · alternative: widen discovery only, rejected because 22 deferred candidates named in scopes would read as consumed · reversible: yes",
+    "scope mention restricted to batch_*_scope values as the contract states · measured: identical membership today (40 named anywhere, 40 in scopes)"
+  ]
+}

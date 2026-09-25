@@ -1,0 +1,59 @@
+{
+  "_schema": "LEGEND governance v3.3.1 · Annex A.1 TASK_ASSIGNMENT + A.1b · declared locator revision after blind R4 audit (Annex C.1)",
+  "_note": "Two of scientist-b's own persisted verbatim locators (manifests written under ALDAZ-FT-B-002) were put through a blind R4 locator audit (triples only, no dossier, no manifest, no reader identity, separate agent with no session history, 2026-09-14). The audit returned UNDERSHOOT on PMID30619736 entries[33] and OVERSHOOT on PMID24932569 entries[21]. This task applies the amendments as DECLARED REVISIONS carrying contradicts_locator, after the owner re-derives each number and re-reads each sentence against the source; an amendment the owner's own check contradicts is not applied.",
+  "TASK_ID": "ALDAZ-LOCATOR-REV-B-20260914",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "OWNER": "orchestrator",
+  "ACTOR_ID": "scientist-b",
+  "MANDATE": "ALDAZ-EXEC-20260913",
+  "PRIORITY": "HIGH",
+  "assigned_on": "2026-09-14",
+  "TASK_ACK": {
+    "acknowledged_on": "2026-09-14",
+    "by": "scientist-b",
+    "i_produced_both_objects": true,
+    "contamination_disclosed": "The dispatch carried the blind auditor's measurements and proposed wordings. I read them before re-deriving. Pre-claim reading was limited to what the order of work requires to shape a valid claim and baseline: state manifest, LEGEND_CORE 21c-21e, the contradiction validator and audit header, the template entry PMID16941225 entries[2], the two target entries, evidence_presence and the pre-edit audit baseline.",
+    "declared_bias": "Two opposite pulls. As the author of both locators, toward defending my original wording. As the recipient of an auditor's verdict, toward applying the proposed wording without checking it. The rule I apply is the source: each count is re-derived from the .tsv sheets and each sentence re-read in the XML before any amendment is written, and an amendment my check contradicts is refused."
+  },
+  "OBJECTIVE": "Apply the two audit amendments as declared revisions (contradicts_locator with manifest, entry, what_changed and a structured audit block), only where the owner's own re-derivation agrees, so that locator_contradiction_audit.py --working-tree --fail-on-undeclared reports them DECLARED with 0 undeclared, and deepdive_manifest.py --verify-artifacts --require-current-schema still passes for both PMIDs.",
+  "PREFLIGHT_MEASURED_BEFORE_THIS_CLAIM_WAS_COMMITTED": {
+    "state_manifest_current_state": "READY (state_manifest_current.md:150)",
+    "evidence_presence_pmid_30619736": "COMPLETE - 15/15 artifacts present and matching",
+    "evidence_presence_pmid_24932569": "COMPLETE - 17/17 artifacts present and matching",
+    "locator_contradiction_audit_working_tree_before": "exit 0 - manifests=94, revision_pairs=94, entry_field_changes=0, declared 0, undeclared 0"
+  },
+  "HARD_CONSTRAINTS_ACCEPTED": [
+    "Edit only disease-models/wwox/research/deepdive_manifests/PMID30619736.json, disease-models/wwox/research/deepdive_manifests/PMID24932569.json, this task record and the research record named in DELIVERABLES.",
+    "No scientific current file, no state_manifest_current.md, no discovery_ledger_current.md, no verifications/ file, no other actor's manifest or dossier.",
+    "No BATCH_COMMIT. No push. No new tooling, no corpus expansion, no re-reading beyond the two checks. No task branch.",
+    "Commits via scripts/legend_commit.sh only; public_release_gate.py and legend_lint.py read BEFORE each commit.",
+    "An API safeguard refusal is recorded (time, Request ID, operation) and the same request is not retried.",
+    "21c: safe defaults taken and recorded in DEFAULTS_TAKEN."
+  ],
+  "DELIVERABLES": [
+    "ledger/tasks/scientist-b/ALDAZ-LOCATOR-REV-B-20260914.json - this file, committed alone before any edit.",
+    "disease-models/wwox/research/deepdive_manifests/PMID30619736.json entries[33] - declared revision.",
+    "disease-models/wwox/research/deepdive_manifests/PMID24932569.json entries[21] - declared revision.",
+    "disease-models/wwox/research/2026-09-14_aldaz_locator_revisions_b.md - per-entry old/new proposition, contradicts_locator, re-derivation, refusals."
+  ],
+  "CLAIM_COMMIT": "7b4721a",
+  "RESULTS": {
+    "PMID30619736_entries_33": "APPLIED as declared revision (UNDERSHOOT, CORRECTED). Owner re-derivation agreed with the auditor: File 2 rows 2-217 = 216 prey; File 4 four metabolic pathways = 18 distinct members, 18/18 in the 216 (PKM2 = PKM, Entrez 5315); PDK3 and ALDH18A1 in the 216, absent from File 4 -> 20; Figure 5B 17 red names, 16 in the 216 (DBT not), HK2 and PFKL not drawn. Headline kept: 22 not recoverable.",
+    "PMID24932569_entries_21": "APPLIED as declared revision (OVERSHOOT, CORRECTED). Owner re-read agreed with the auditor: R51 = PMID 19936220; exactly three heterozygote-and-tumour sentences (Introduction x2, Discussion x1), all attributed to ref 20; own surveillance = nine 18-day-old KO necropsies, no neoplasia; own heterozygote data non-neoplastic. Prior true clause on KO necropsies kept; found_or_sought corrected in the same declaration.",
+    "refused": "nothing",
+    "locator_contradiction_audit_after": "exit 0 - 94 manifests, 3 field changes, 3 declared, 0 undeclared; mine = PMID24932569 entries[21], PMID30619736 entries[33]; third = PMID35409089 entries[58], a peer's uncommitted declared revision, not touched",
+    "deepdive_manifest_strict_after": "PMID30619736 PASS 0 gaps; PMID24932569 PASS 0 gaps (pre-existing WARN on entries[28]/[21] system join, unchanged)",
+    "record": "disease-models/wwox/research/2026-09-14_aldaz_locator_revisions_b.md"
+  },
+  "SAFEGUARD_EVENTS": [],
+  "DEFAULTS_TAKEN": [
+    "Figure 5B HK2/PFKL omission not derivable from .tsv -> viewed the manifest-declared Figure 5 artefact at native resolution before writing the clause; read-only, no new reading; otherwise the clause would rest on the auditor alone.",
+    "entries[21].found_or_sought repeated the refuted absence -> corrected inside the same declared revision; same entry, same declaration.",
+    "Peer uncommitted files in the shared checkout (PMID35409089.json, mirror task and consultation) -> path-scoped commit of own files only; peer work untouched."
+  ],
+  "STOP_LOG": [],
+  "STATUS": "DONE",
+  "no_recursive_delegation": true,
+  "public_edition_note": "Disease-level, de-identified. Nothing in this task or its record is medical advice."
+}

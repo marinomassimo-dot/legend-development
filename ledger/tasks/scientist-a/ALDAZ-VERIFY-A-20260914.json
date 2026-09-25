@@ -1,0 +1,90 @@
+{
+ "_schema": "LEGEND governance v3.3.1 · Annex A.1 TASK_ASSIGNMENT + A.1b",
+ "_note": "Task file created by the assigned actor from the dispatch text of orchestrator (mandate ALDAZ-EXEC-20260913); no orchestrator-authored JSON for this TASK_ID existed in ledger/tasks at claim time. The dispatch is transcribed here in summary, not paraphrased into a different scope.",
+ "TASK_ID": "ALDAZ-VERIFY-A-20260914",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "MANDATE": "ALDAZ-EXEC-20260913",
+ "ACTOR_ID": "scientist-a",
+ "assigned_on": "2026-09-14",
+ "OBJECTIVE": "Independent verification of two readings by scientist-b (lot ALDAZ-FT-B-002) that no dedicated verification ever covered: PMID 30619736 (receipt FTR-20260913-30619736-01, sole primary of CLAIM 026) and PMID 24932569 (receipt FTR-20260913-24932569-02, a review read as a claim census; first_read naming legacy reconstruction FTR-20260726-24932569-01; supplementary declared unavailable). Per-proposition verdicts, coverage-map honesty, CLAIM 026 judgement, supplementary-unavailable judgement, first-contact check.",
+ "INDEPENDENCE": "scientist-a produced neither reading; its own lots were 36828035/39868255 and 15064722/24369382.",
+ "INTERACTION_MODE": "AUTONOMOUS_COMPLETE",
+ "CURRENT_STATE": "COMPLETE 2026-09-14 by scientist-a. Both readings verified against the sources; 101 propositions judged; verdict CONFIRMED-with-one-finding per paper; CLAIM 026 judged DEFECTIVE in the overshoot direction and REPORTED, not edited. Record: disease-models/wwox/research/verifications/2026-09-14_aldaz_30619736_24932569_verification.md. Gates read BEFORE each commit and recorded in that record section 14. No canonical file touched, no persisted locator edited, no BATCH_COMMIT, no push, no new tooling, no new reading.",
+ "TASK_RESULT": {
+  "tallies": {
+   "PMID_30619736": "45 propositions: SUPPORTED 44, NARROWER_THAN_CLAIMED 1, UNSUPPORTED 0, NOT_JUDGEABLE 0, UNVERIFIABLE_SURFACE 0, DISAGREEMENT_UNRESOLVED 0",
+   "PMID_24932569": "56 propositions: SUPPORTED 55, NARROWER_THAN_CLAIMED 1, UNSUPPORTED 0, NOT_JUDGEABLE 0, UNVERIFIABLE_SURFACE 0, DISAGREEMENT_UNRESOLVED 0"
+  },
+  "verdicts": {
+   "FTR-20260913-30619736-01": "CONFIRMED with one finding (A-1): entries[33] caps the recoverable enzyme count at 18 where the source supports 20; its conclusion that the paper's 'at least 22' is not reproducible survives. Figure 5B additionally omits HK2 and PFKL, unrecorded.",
+   "FTR-20260913-24932569-02": "CONFIRMED with one finding (B-1): entries[21]'s absolute 'contains no sentence naming both heterozygotes and tumours' is false of ref 51, which restates ref 50's spontaneous heterozygote lung carcinoma in its Introduction. The substantive finding (ref 51 has no heterozygote tumour data of its own) stands and is strengthened. The true sentence must NOT be deleted.",
+   "coverage_maps": "both HONEST; figures 5/5 and 11/11 inspected by the verifier at the declared native geometry, every measured dimension matching",
+   "supplementary_unavailable": "REAL absence, independently reproduced against the Europe PMC API (isOpenAccess N, hasSuppl Y, 'not open access one'); the on-disk NIHMS618643-supplement-01.xls is the refused reCAPTCHA page, not a supplement, and is correctly undeclared. Cascade is PMC-complete but not exhaustive: the publisher mmc route and an author request are untried.",
+   "legacy_first_contact": "CORRECT: FTR-20260913-24932569-02 is first_read AND names FTR-20260726-24932569-01 in prior_receipt, which is exactly the protocol's rule for first contact after a legacy_reconstruction.",
+   "review_as_experimental_fact": "NOT FOUND across all 56 propositions; every statement typed SYNTHESIS, RESTATEMENT or unpublished assertion.",
+   "CLAIM_026": "DEFECTIVE in the OVERSHOOT direction and live in canon: 'coupling node' (zero occurrences in the source), Type DATO+INFERENZA on an annotation-only metabolic half, and above all Impact 'major refinement of P5 metabolism branch' on prey ranked 41/89/114/203 of 216 with no File-4 metabolic member above IS 0.2153. Plus an omission: the largest enriched pathway of the same analysis is 'Protein processing in endoplasmic reticulum' (15 prey, corrected p 6.9e-6), which the claim does not carry. REPORTED, NOT EDITED — canonical file, BATCH_COMMIT only."
+  },
+  "repairs_owed_before_the_mandate_closes": [
+   "CLAIM 026 Title/Type/Impact narrowing plus the omitted non-metabolic half of the enrichment — orchestrator, via BATCH_COMMIT",
+   "entries[33] of FTR-20260913-30619736-01: 18 -> 20, and record Figure 5B's omission of HK2 and PFKL — tracked revision with its own R4",
+   "entries[21] of FTR-20260913-24932569-02: narrow the absolute to 'no heterozygote tumour data of its own' — tracked revision with its own R4; do NOT delete the sentence",
+   "one publisher-route supplement request for PMID 24932569, to close N8 and U2",
+   "out of scope but load-bearing for both readings: PMID 30285739 (Bonin 2018) has no receipt"
+  ],
+  "unreachable": [
+   "Supplementary Table 1 of PMID 24932569 — its one dependent proposition judged on availability only, never on content",
+   "the literal string '31%' in ref 50 (outside the 300 dpi crop, on a damaged text layer)",
+   "a full page-render sweep of the PMID 24932569 PDF — the 'no legend on either surface' claim is confirmed for the XML captions and the 11 rasters only"
+  ],
+  "verification_commands_run": [
+   "evidence_presence.py --pmid 30619736 -> COMPLETE 15/15; --pmid 24932569 -> COMPLETE 17/17",
+   "deepdive_manifest.py --verify-artifacts --require-current-schema -> PASS 0 gaps for both; 1 WARN on 24932569 entries[28], judged satisfied because the cross-system bridge is declared inside the proposition",
+   "locator_contradiction_audit.py --working-tree --fail-on-undeclared -> 0 undeclared, before and after; no locator edited by this task",
+   "independent recomputation from the .xlsx containers (not the SUSPECT text rendering): tiering 14/18/32, min IS 0.029485, PDC ranks 41/89/114/203, motif stats Student t 3.356 / Welch 2.645 / MWU z 2.261, File-4 metabolic union 18 all present in the 216",
+   "independent recount of the review's Table 1: 44 rows, 36 missense, High 6 + Medium 13 = 19 (not 18), 8 truncating + 19 = 27/44 = 61% (not 26/44 = 59%)",
+   "16 figure surfaces opened and inspected as images, including the ref 50 Table 1 page adjudication at 300 dpi"
+  ],
+  "stop_log": "No stop taken and none avoided. Class 1 = 0, Class 2 = 0, Class 3 = 0. No API safeguard error: two read-only Europe PMC requests, both HTTP 200, none refused, none retried, no step left blocked or skipped.",
+  "defaults_taken_count": 6
+ },
+ "TASK_ACK": {
+  "actor_id": "scientist-a",
+  "acked_on": "2026-09-14",
+  "directive_version_acked": 1,
+  "generation_acked": 1,
+  "read_before_first_act": [
+   "framework/state/state_manifest_current.md — current_state: READY confirmed",
+   "framework/instruction/LEGEND_CORE.md §21c STOP POLICY, §21d DECISION AUTHORITY, §21e AGILE OPERATING MODE (by name)",
+   "framework/protocols/fulltext_read_receipt.md",
+   "framework/master/gold_is_in_the_details.md",
+   "framework/instruction/epistemic_discipline.md"
+  ],
+  "pre_judgement_reachability": {
+   "evidence_presence_30619736": "COMPLETE — 15/15 declared artefacts present, digests match",
+   "evidence_presence_24932569": "COMPLETE — 17/17 declared artefacts present, digests match",
+   "deepdive_manifest_30619736": "PASS strict current schema, 0 gaps, exact text locators verified",
+   "deepdive_manifest_24932569": "PASS strict current schema, 0 gaps, exact text locators verified; one WARN on entries[28] text_contradicted_by_panel joining two declared systems"
+  },
+  "objective_as_i_understand_it": "Judge each (proposition, snippet, anchor) triple against the source surface itself, not against the producer's prose; treat undershoot as the more dangerous failure; do not propose deletion of a true statement; report unresolved as DISAGREEMENT_UNRESOLVED with what would resolve it.",
+  "out_of_scope_acked": [
+   "any file of the producer (dossiers, manifests, comparison notes, candidates, receipts)",
+   "the four scientific current files and state_manifest_current.md — a CLAIM 026 defect is reported, not edited",
+   "persisted locator proposition/snippet text",
+   "BATCH_COMMIT, push, new tooling, corpus expansion, new readings of other papers"
+  ]
+ },
+ "TASK_CLAIM": {
+  "actor_id": "scientist-a",
+  "claimed_on": "2026-09-14",
+  "task_id": "ALDAZ-VERIFY-A-20260914",
+  "branch": "main",
+  "checkout": "shared root; other verifiers active in parallel; I commit only my own paths",
+  "paths_i_will_write": [
+   "ledger/tasks/scientist-a/ALDAZ-VERIFY-A-20260914.json",
+   "disease-models/wwox/research/verifications/2026-09-14_aldaz_30619736_24932569_verification.md"
+  ],
+  "durable": "Committed alone before any judgement."
+ }
+}

@@ -1,0 +1,105 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT (operator-directed) + A.1b",
+ "TASK_ID": "SURFACE-TRIAGE-20260912",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "operator",
+ "ACTOR_ID": "orchestrator",
+ "CURRENT_STATE": "COMPLETE",
+ "OBJECTIVE": "Reduce the cost of repeated technical attempts on images, figures, panels, tables and supplements while preserving the scientific reading and the attention to detail. Not by lowering resolution and not by skipping images.",
+ "assigned_on": "2026-09-12",
+ "closed_on": "2026-09-12",
+ "started_at_head": "e3e567f330d655630f2fe83882d20725198bfe4c",
+ "record": "disease-models/wwox/research/2026-09-12_surface_triage.md",
+ "baseline": {
+  "acquisition": "retrieval_manifest.jsonl 653 events over 78 papers; 619 back-fill declarations; 34 replays (26 RECOVERED, 2 EXTRACTOR_DRIFT, 2 FAILED_404, 1 DIGEST_DIFFERS, 1 CLOUDFLARE); max 22 events on one paper",
+  "extraction_rendering": "175 raster figures, median width 974 px, 46 <=700 px, 61 >1500 px; 34 page-adjudication crops on disk; 13 of 71 manifests carry figure_extractions",
+  "interpretation": "14 of 52 sweep incidents are visual or tabular (due-diligence record section 5)",
+  "verification": "2 blind locator audits in the sweep; 1 blind legibility assessment today over 11 surfaces",
+  "attempts_that_changed_a_conclusion": [
+   "400 dpi re-render overturned a false correction of a correct locator (B1)",
+   "measuring refuted two suspected contradictions (C21)",
+   "the real figure identified against a Separation layer (B15)"
+  ],
+  "repetition_without_progress": [
+   "19-tier cascade on 33914858, exhausted, still absent",
+   "reCAPTCHA on 20146584 - repeated later on CDN routes and that repetition did pay"
+  ],
+  "limit": "tokens and per-image cost unavailable; the 2026-09-09 Scientist transcripts are not on this host, so attempts per figure cannot be counted; no percentage saving claimed",
+  "measurement_errors_made_and_discarded": "file(1) reports JPEG density and a PyMuPDF page rectangle reports points; each produced a plausible wrong table before a header parse plus Pixmap, which agree on all 175 files"
+ },
+ "policy": {
+  "home": "framework/protocols/scientist_standing_brief.md M2, single canonical home",
+  "classes": [
+   "DETERMINANTE",
+   "QUALIFICANTE",
+   "ILLUSTRATIVA/RIDONDANTE",
+   "NON CLASSIFICABILE"
+  ],
+  "threshold": "700 px width, provisional and corpus-specific, a prompt to check for a better surface and never a class",
+  "rules": [
+   "initial inspection of every available surface before any classification",
+   "native surface first; a layer is not a figure",
+   "each further tranche needs a new route, method or information; being DETERMINANTE is not itself a reason to continue",
+   "exhausting a tranche is not having read the surface; record the limit, keep coverage honest, narrow the dependent conclusions",
+   "never change a receipt, locator or depth to make a check green"
+  ]
+ },
+ "implemented": {
+  "command": "paper_packet.py surfaces --pmid <PMID>",
+  "no_new": [
+   "no permanent image agent",
+   "no new database",
+   "no second registry"
+  ],
+  "reuses": [
+   "manifest source_artifacts",
+   "retrieval_manifest.jsonl",
+   "research/page_adjudications/"
+  ],
+  "corpus": "81 papers, 587 declared surfaces, 333 absent on this host, 48 thin rasters of which 40 have a PDF already on disk to render from",
+  "cost": "0.01-0.55 s per paper, 434-1199 chars of output"
+ },
+ "pilot": {
+  "kind": "REPLAY over five historical readings, declared; no blind first read simulated",
+  "cases": {
+   "29724996": "3 of 13 flagged incl. Fig 6 at 667x385, the near-error's own asset",
+   "16223882": "6 thin rasters, 13 existing crops reported for reuse, 5 misdeclared crops",
+   "26499798": "2 of 7 flagged",
+   "20146584": "2 flagged, both FAILED_HTTP_404",
+   "25411445": "no surface at all, reported as not acquired and relevance unknown"
+  },
+  "conclusions_changed": 0,
+  "budget_expanded": 0,
+  "work_interrupted": 0,
+  "why_zero": "the intervention is an inventory; no acquisition or rendering was attempted"
+ },
+ "independent_verification": {
+  "delegates": 1,
+  "sample": "11 surfaces, 7 unflagged and 4 flagged, given as a flat list with no tool output and no producer verdict",
+  "confirmed": "the 667 px figure is partly legible (scale bars, y-axis units, ticks unreadable); the 653x227 composite loses its lane numerals",
+  "found_what_the_size_signal_cannot_see": [
+   "a 1251x1938 unflagged surface that is a PARTIAL figure: Control and Ad-GFP, no Ad-WWOX arm, no scale bar, no legend",
+   "three surfaces declared figure that carry body text and no figure - REPAIRED mechanically, the path is deterministic",
+   "a crop truncating mid-clause the sentence it exists to carry - not mechanically detectable, recorded"
+  ],
+  "consequence": "the inventory now states its own blind spot in every run"
+ },
+ "tests": "test_paper_packet.py 63 cases; 9 mutations each red (thin never flagged, header returns density, absent dropped, empty reads as all-fine, failed routes hidden, crops not reported, tool classifies, crop flag removed, blind spot unstated)",
+ "VERDICT": "ADOPT the inventory; TRIAL the policy. The four classes and the tranche budgets have not been tested by a reading and nothing mechanical requires them.",
+ "next": "the first wave that reads figures under this policy, reporting technical operations and repetitions, surfaces initially undervalued, and work stopped without resolution",
+ "DEFAULTS_TAKEN": [
+  "pilot run as a replay, declared as such",
+  "700 px threshold set from the corpus distribution and the measured incident, marked provisional"
+ ],
+ "STOP_LOG": [],
+ "two_known_reds": "unchanged and not weakened: test_batch_queue, test_surface_census",
+ "battery_and_publication": {
+  "battery": "107 suites executed; two pre-existing failures unchanged; no new regression",
+  "lint": "PASS",
+  "growth_anchors": "PASS",
+  "receipts": "OK 156 chained",
+  "gate": "PASS, 0 blocks",
+  "publication": "not pushed; origin and development resolve to the same URL, so a development push is an origin push, which §21d reserves to the operator"
+ }
+}

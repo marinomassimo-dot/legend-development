@@ -1,0 +1,57 @@
+{
+  "_schema": "LEGEND governance v3.3.1 · Annex A.1 TASK_ASSIGNMENT + Annex C.2 AUTHOR_RESPONSE",
+  "_note": "Two findings of SCI-CONSULT-20260914-C (mirror, 2026-09-14) that the reviewer assigned to the AUTHOR of the four identity candidates rather than to the dispatcher: C19 (the Aldaz M identity reason) and C18 (LIT-0079 is a stub, so 'complete it' is a larger act than it sounded). The orchestrator applied the findings that were its own in 9e937d7 and answered for them in d58f49a; C17 it applied across all four of my candidates because the defect - a receipt clause reading 'scratchpad, NOT appended' after it had appended them - was its to fix. What remains mine is C19, C18, and the AUTHOR_RESPONSE that Annex C.2 owes from me and that silence does not substitute for.",
+  "TASK_ID": "SCI-FIX-B-20260915",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "OWNER": "orchestrator",
+  "ACTOR_ID": "scientist-b",
+  "MANDATE": "SCIENCE-EXEC-20260914",
+  "PRIORITY": "HIGH",
+  "assigned_on": "2026-09-15",
+  "TASK_ACK": {
+    "acknowledged_on": "2026-09-15",
+    "by": "scientist-b",
+    "i_am_the_author_of_the_objects": true,
+    "declared_bias": "Toward accepting every finding, because the reviewer was right about the substance of C19 and an author who concedes everything looks scrupulous while doing no measuring. The correction is the one this consultation itself modelled twice: each finding is re-measured at the artefact before it is accepted, and a figure supplied by a reviewer is not evidence because a reviewer supplied it. The opposite bias is also declared: toward defending my own 'not resolvable from this artefact' sentence, which I wrote and which is wrong.",
+    "contamination_disclosed": "I read the reviewer's C19 disposition, including the Note wording it supplies, and the orchestrator's author response, before opening the artefacts. The brief instructed me not to take its word for the identity and to verify at the artefacts myself, which is what I did: the contrib-group blocks and the affiliation blocks of both artefacts were read before the finding was accepted."
+  },
+  "OBJECTIVE": "Apply C19 and C18 to my own four candidates, and write the AUTHOR_RESPONSE that Annex C.2 owes from me for all findings of SCI-CONSULT-20260914-C that bear on the four identity records (C17, C18, C19 and the two minors).",
+  "PREFLIGHT_MEASURED_BEFORE_ANY_EDIT": {
+    "state_manifest_current_state": "IN_BATCH_COMMIT (state_manifest_current.md:154) - NOT READY. A canonical BATCH_COMMIT is open in this window, which is why every canonical surface is out of scope for this task and every act here is a proposal inside a candidate.",
+    "legend_lint": "WARN - 2 INFO, LIT_STATUS_LEGACY (1 grandfathered record, LIT-0401 'archived'), INFO EVIDENCE_AVAILABILITY. Identical to the consultation's own bracketing runs.",
+    "public_release_gate": "PASS · BLOCKS: 0",
+    "fulltext_receipts_verify": "OK - 185 chained, tail anchored",
+    "growth_anchors": "PASS - claims 39 · papers 86 · corpus 356 · literature 397 · registry_only 10 · unread_premises 2 · CANDIDATE_BACKLOG 56",
+    "lit_status_validate": "not_in_vocabulary: 1 (LIT-0401 'archived') | valid: 396"
+  },
+  "WHAT_I_MEASURED_AT_THE_ARTEFACTS": {
+    "C19_25024751_contrib_group": "files/fulltext/PMID25024751_Stewart2014.xml, sixth author: <surname>Aldaz</surname><given-names initials=\"M\">Marcelo</given-names>, xref aff I4. Affiliation I4 reads 'UT MD Anderson Cancer Center, 1808 Park Road 1C, Smithville, TX 78957, USA'. The five co-author affiliations are elsewhere (Ottawa; MD Anderson Houston, 1515 Holcombe; Fels/Temple; UCSD), so the Smithville address is this author's alone in this artefact.",
+    "C19_24330518_contrib_group": "files/fulltext/PMID24330518_Ferguson2013.xml, seventh and corresponding author: <surname>Aldaz</surname><given-names initials=\"CM\">C Marcelo</given-names>, xref aff I1 = 'Department of Molecular Carcinogenesis, Science Park, The University of Texas M.D. Anderson Cancer Center, Smithville, TX 78957, USA'.",
+    "C19_the_datum_the_brief_did_not_name": "Both artefacts print the same author e-mail local part at the same institution. That is a third independent tie between the two bylines, stronger than the address and stronger than the given name, and neither the consultation nor the brief used it. It is recorded here and NOT in the candidate, because a contact address is personal data and the candidate is the public surface.",
+    "C19_verdict": "The identity IS resolvable from the artefact. My sentence 'is not resolvable from this artefact' is wrong and is withdrawn. What was right, and stands, is recording the byline as printed.",
+    "C18_LIT_0079": "Stub confirmed at literature_tracking_log_current.md:2545 - Short title 'corpus paper 55', Authors 'not yet extracted', Year 'unknown', Source type 'not yet screened', Journal/source 'not yet extracted', Status 'discovered'. Completing it means writing eight identity fields, not moving one status value.",
+    "C18_status_value": "'processed' - 'Fully read, tagged, extracted' - taken from the log's OWN '## Status vocabulary' table at line 22, not from a neighbour. Measured against the validator: lit_status.py classifies the log 396 valid / 1 not_in_vocabulary, and 48 records already carry '**Status:** processed'. A qualifier belongs in '**Status note:**', which is the form the validator's own migration produces and the form LIT-0114 and LIT-0162 carry.",
+    "C18_LIT_0244_and_0378_the_finding_the_consultation_did_not_make": "Both carry TWO state fields: '**Status:** screened' AND '**Current status:** screened — C'. 179 of the log's records carry both. lit_status.STATE_LINE matches either, and the record parser prefers '**Status:**' when both are present, so moving only '**Status:**' to 'processed' leaves '**Current status:** screened — C' standing and unvalidated - a second, stale state field that no instrument will flag and a human reader will believe. Both fields must move in the same act, or the completion writes a contradiction into canon.",
+    "one_reviewer_figure_i_did_not_accept": "Section 6's predicted effect states 'literature stays 397 (completions, not new rows)'. Measured with growth_anchors' own HEADINGS['literature'] regex: 397 records, 397 unique, max numeric id LIT-0416, LIT-0417 free. Three of my four candidates complete an existing record (LIT-0079, LIT-0244, LIT-0378) but the fourth, CC-20260914-18452537-01, proposes a NEW LIT record: PMID 18452537 has NO record in the log, by PMID, by DOI, by PMCID and by title. So if all four land, literature goes 397 -> 398 and the anchor must be recorded accordingly. My own first count of 398 was wrong and is recorded too: my regex matched the '## LIT-[NNN]' template line inside the record-template code fence, which the script's own pattern excludes."
+  },
+  "HARD_CONSTRAINTS_ACCEPTED": [
+    "I edit ONLY my own four candidates: CC-20260914-15266310-01, -18452537-01, -24330518-01, -25024751-01. I propose; I do not propagate.",
+    "A canonical BATCH_COMMIT is OPEN. No *_current.md, no registry, no queue, no framework/state/, no receipt ledger is touched. Anything I believe must change there is written in a candidate and routed.",
+    "The two author-response records and the consultation record are other actors' files and are not edited.",
+    "One commit per path group, subject checked with commit_subject.py check BEFORE scripts/legend_commit.sh. Never git commit. Never push. No agent spawned.",
+    "No persisted locator, manifest, dossier or receipt is altered - including the Ramos '140 mg / ml' string, which is quoted as printed and stays.",
+    "21c: safe defaults taken and recorded in DEFAULTS_TAKEN; no reserved act is required by this task."
+  ],
+  "DELIVERABLES": [
+    "ledger/tasks/scientist-b/SCI-FIX-B-20260915.json - this file, committed ALONE before any edit.",
+    "CC-20260914-25024751-01.md - C19 applied: the unresolvability sentence withdrawn, the identity recorded as a Note in the consultation's form; LIT-0378's two state fields specified.",
+    "CC-20260914-24330518-01.md - C18 applied: LIT-0079's identity fields specified one by one, with Status 'processed' from the log's own table.",
+    "CC-20260914-15266310-01.md - C18 in miniature: LIT-0244's two state fields and identity completions specified.",
+    "CC-20260914-18452537-01.md - the new-row finding: LIT-0417 named as the next free id and the literature anchor stated as 397 -> 398.",
+    "disease-models/wwox/research/verifications/2026-09-15_author_response_sci_consult_C_scientist_b.md - Annex C.2, finding by finding."
+  ],
+  "STATUS": "CLAIMED",
+  "no_recursive_delegation": true,
+  "public_edition_note": "Disease-level, de-identified. Nothing in this task or its record is medical advice."
+}

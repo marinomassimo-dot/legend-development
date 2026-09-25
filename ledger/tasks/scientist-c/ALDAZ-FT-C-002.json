@@ -1,0 +1,107 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT + A.1b",
+ "_note": "Aldaz batch, wave 2, third lot. Drafted in advance so dispatch is immediate when this actor's current lot (ALDAZ-FT-C-001) closes; NOT active until the orchestrator dispatches it. Execution record: ledger/tasks/orchestrator/ALDAZ-EXEC-20260913.json.",
+ "TASK_ID": "ALDAZ-FT-C-002",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "scientist-c",
+ "PRIORITY": "MEDIUM",
+ "OBJECTIVE": "Read for the first time the two primaries of the B-cell Wwox-deletion line — PMID 31275852, then PMID 41090157 — each to a durable verifiable depth with verbatim locators captured while the document is open, a schema-v2 manifest at strict PASS, a dossier and a receipt through the validated writer, and, only after both receipts exist, a short joint reading.",
+ "assigned_on": "2026-09-13",
+ "WHY_THIS_ACTOR": "The lot sits inside the contract this actor already works under — genomic instability, tumour suppression, mutational signatures — and it is not assigned to fill a slot: both papers are catalogued placeholders never read, both have a verified structured surface, and the later one reports DNA-damage-response mutational signatures and Aid/Apobec hypermutation, which is this actor's own methodological ground after its complete reading of PMID 41562193.",
+ "SCOPE": {
+  "assigned_pmids": ["31275852", "41090157"],
+  "reading_order": "31275852 first (2019), then 41090157 (2025). Each blind pass is separate.",
+  "theme": "Wwox loss in the B-cell lineage: genomic instability, neoplastic transformation, monoclonal gammopathy, and progression in a myeloma model",
+  "reading_mode": "PRIMARY_EVIDENCE_READ",
+  "parallel_read_group": null,
+  "single_owner": "Both PMIDs have exactly one owner, this actor. Neither appears in another open contract.",
+  "excluded": "The four scientific current files and disease_model.md are NOT touched: they move only through BATCH_COMMIT, which the orchestrator runs. Produce commit candidates instead. D4, the DisMech anchor fragility and any infrastructural or tooling project are outside this task."
+ },
+ "SCIENTIFIC_QUESTIONS": {
+  "31275852": "What does B-cell-specific Wwox deletion actually establish — which Cre driver, which age, which endpoints, which comparator — and what does it NOT establish? In particular: is genomic instability measured directly, or inferred from a transformation phenotype; and is any effect attributable to Wwox loss in B cells as opposed to a systemic or Cre-driver effect?",
+  "41090157": "What does the combined deletion-plus-activation model add, and what does it NOT establish? Specifically: is the 'proinflammatory signature' a measured cytokine or cellular state, or a transcriptome enrichment; and are the mutational-signature and hypermutation findings supported by the sequencing depth and sample numbers the paper reports?",
+  "joint_after_both": "Does the later paper reuse the earlier paper's animals, colonies, samples or datasets, or is it independent material from the same line? Answer from the artefacts, after both receipts exist."
+ },
+ "INTERNAL_EDGES": {
+  "known": "Same laboratory lineage (McBride/Hussain with Aldaz last on both). A shared line is expected; a shared EXPERIMENT is the question.",
+  "what_you_must_verify_rather_than_assume": "🔴 Same laboratory and same mouse line do NOT by themselves make the two papers dependent evidence. Establish from the artefacts whether the second reuses the first's animals, samples, sequencing or datasets; distinguish independence OF THE DATA from replication PERFORMED BY AN EXTERNAL GROUP; and do not report the pair as mutual confirmation unless the artefacts support it."
+ },
+ "BLIND_PASS_FIREWALL": {
+  "rule": "scientist_reading_modes.md § 3.1 and § 3.3. Each blind first pass receives the sources, the method and paper_packet.py packet --pmid <PMID> — technical state only, no claim, dossier, candidate or prior locator by design.",
+  "explicitly_withheld": [
+   "this laboratory's prior conclusions about either paper and about any inflammation axis, including the DL-MECH-012 discovery-ledger entry and its convergence argument",
+   "your own earlier conclusions about mutational signatures from PMID 41562193 — that reading is complete and reusable, and is NOT re-read; its conclusions are an M4b input, not a blind-pass input",
+   "the conclusions of the OTHER paper in this lot",
+   "the readings other actors are producing in this batch",
+   "any repurposing hypothesis. 🔴 The operator reported a possible Aldaz-Nappi repurposing abstract; it was searched and recorded as NOT IDENTIFIED. It is not a premise, not a hypothesis under test, and not an expected result."
+  ],
+  "do_not_open_during_a_blind_pass": [
+   "disease-models/wwox/research/2026-09-13_aldaz_intake.md",
+   "disease-models/wwox/research/discovery_ledger_current.md",
+   "disease-models/wwox/registries/claim_registry_current.md",
+   "disease-models/wwox/research/commit_candidates/",
+   "any dossier of any paper, your own included"
+  ]
+ },
+ "ACQUISITION_HINTS_VERIFIED_2026_09_13": {
+  "31275852": {
+   "pmcid": "PMC6593956",
+   "doi": "10.3389/fonc.2019.00517",
+   "identity": "McBride KM, ... Aldaz CM — 9 authors, Aldaz last. Wwox Deletion in Mouse B Cells Leads to Genomic Instability, Neoplastic Transformation, and Monoclonal Gammopathies. Front Oncol 2019.",
+   "structured_surface": "Europe PMC fullTextXML returns a real article, verified by content today: 140,024 bytes, 30 sections, <body> present, PMID matching inside the document. Licence cc by, hasSuppl=Y.",
+   "registry_state": "CORPUS-STUB-088, status not_processed. No receipt, no manifest, no dossier: first_read."
+  },
+  "41090157": {
+   "pmcid": "PMC12517091",
+   "doi": "10.1016/j.bneo.2025.100153",
+   "identity": "Hussain T, ... Aldaz CM — 6 authors, Aldaz last. B-cell-specific Wwox deletion promotes plasmablastic tumor development and proinflammatory signatures in myeloma model. Blood Neoplasia 2025.",
+   "structured_surface": "Europe PMC fullTextXML returns a real article, verified by content today: 150,418 bytes, 27 sections, <body> present, PMID matching inside the document. Licence cc by-nc-nd, hasSuppl=Y.",
+   "editorial_state": "🔴 Europe PMC carries a 'Preprint in' link for this record. Treat it as the published journal version, which it is, and check once — not indefinitely — whether the preprint differs in any way that bears on a conclusion; if you do not check, say so.",
+   "registry_state": "CORPUS-STUB-178, status not_processed. No receipt, no manifest, no dossier: first_read."
+  },
+  "general": "Structured surface first. Both declare supplements: reach and fingerprint them, or declare the debt with the cascade run and each literal response. Sequencing and signature analyses usually live in supplementary tables — they are evidence, not decoration. Routes measured in this corpus: Europe PMC fullTextXML works for both; the PMC blob CDN reached through the article page's own src attributes serves figures where the direct /bin/ route 404s; framework/scripts/pmc_pow_fetch.py handles the proof-of-work route. An extracted native figure stream can be a single raster layer with labels as vector text above it."
+ },
+ "MILESTONE_PLAN": [
+  "M0 duplicate-work gate — paper_packet.py packet and procedures per PMID before opening anything",
+  "M1 acquisition — structured surface first, artefacts into the gitignored files/ with SHA-256 and the route recorded",
+  "M2 reading — section by section, surface inventory before the figures, every available figure, table and supplement at native resolution, locators captured while the document is open",
+  "M3 manifest — schema v2, strict validator PASS with zero gaps, plus paper_packet.py check",
+  "M4 receipt — through fulltext_receipts.py record, then verify",
+  "M4b comparison — a SEPARATE phase after each receipt lands, against whole records from registry_records.py get --pmid <PMID> --hops 1, with comparison_check.py facts and check run before the note is written and its coverage block read before its verdict",
+  "M5 dossier, commit candidate where a registry record or claim is touched, discovery-ledger append where a lead emerges",
+  "M6 joint reading answering the data-independence question with evidence"
+ ],
+ "ACCEPTANCE_CRITERIA": [
+  "Per PMID: deepdive_manifest.py --pmid <PMID> --verify-artifacts --require-current-schema exits PASS with 0 gaps against the shared root checkout.",
+  "Per PMID: fulltext_receipts.py record succeeded and verify OK afterwards; coverage honest.",
+  "Per PMID: a dossier stating what the reading establishes, what it does NOT support, the figure and table audit, the design limits, and the transfer verdict toward the reference genotype — which for a B-cell oncology model may legitimately be weak or absent; saying so precisely is the deliverable.",
+  "The abstract is never the evidentiary surface for any locator.",
+  "legend_lint.py . stays PASS after every commit."
+ ],
+ "DELIVERABLES": [
+  "disease-models/wwox/research/deepdive_manifests/PMID31275852.json and PMID41090157.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID31275852.md and PMID41090157.md",
+  "disease-models/wwox/registries/fulltext_read_receipts.jsonl (append, through the writer)",
+  "M4b notes, commit candidates where warranted",
+  "a diagnosis under disease-models/wwox/research/session_evaluations/",
+  "WAVE_2_RESULT in this file, with DEFAULTS_TAKEN and STOP_LOG, required even when empty (Annex A.1b)"
+ ],
+ "COMMITTING": {
+  "how": "bash scripts/legend_commit.sh \"<message>\" <path> [<path> ...] — never git commit directly; peers share this checkout.",
+  "write_only_your_own_paths": "your task JSON, your two new manifests, your two new dossiers, the receipt ledger through its writer, your M4b notes, your commit candidates, your session_evaluations diagnosis. Do not edit your ALDAZ-FT-C-001 artefacts under this task.",
+  "never": "No push. No write into another actor's files; a red caused by a peer's file is reported, not fixed. Do NOT regenerate shared derived surfaces — the orchestrator does that at wave close."
+ },
+ "INTERACTION_MODE": "AUTONOMOUS_COMPLETE",
+ "REVIEW_REQUIREMENT": "Ladder floor R2. R4 / legend-locator-audit is REQUIRED before any reading is allowed to narrow, reverse, corroborate or remove a consolidated baseline claim, or to justify a MAJOR working-model bump, and on any contradicted persisted locator.",
+ "RETRY_POLICY": {
+  "max_attempts": 3,
+  "retryable": ["network or retrieval failure", "validator rejection", "transient publisher block"],
+  "on_exhaust": "PARK that surface with the written cascade and each literal response, and continue with the rest of the paper and the other PMID. An inaccessible source is an explicit limit on corpus completeness, never a reason to stop the lot and never a reason to simulate a reading."
+ },
+ "STOP_POLICY_REMINDER": "§21c governs. Reserved and never yours: any push, history rewrite, deletion of unique material, external spend of any kind, modification of the four current files or disease_model.md, BATCH_COMMIT. Everything else has a safe default: take it, record it in DEFAULTS_TAKEN, continue. Closing your turn with a paper of your lot unworked is itself a class-3 stop; running out of context is the one honest reason to stop, said in one line as that reason.",
+ "CURRENT_STATE": "DRAFTED, NOT DISPATCHED — awaiting the orchestrator's dispatch when this actor's current lot closes.",
+ "DEFAULTS_TAKEN": [],
+ "STOP_LOG": []
+}

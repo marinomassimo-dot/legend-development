@@ -1,0 +1,223 @@
+{
+ "_schema": "LEGEND governance v3.3.1 · Annex A.1 TASK_ASSIGNMENT + A.1b · Annex C review · LEGEND_CORE §21d mandatory Mirror consultation",
+ "_note": "Mandatory §21d consultation on the two reading candidates of 2026-09-14 (PMID 30285739, PMID 28283473). Nothing from either had touched canon at the time of this review. What was asked is correctness against the sources, not confirmation.",
+ "TASK_ID": "ALDAZ-CONSULT-READS-20260914",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "MANDATE": "ALDAZ-EXEC-20260913",
+ "ACTOR_ID": "mirror",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Judge five declared deltas (A-E) of CC-20260914-30285739-01 and CC-20260914-28283473-01 against the primary sources: the CLAIM 026 addition, the model-scope narrowing, the compartment-split formulation, the two registry promotions, and the proposed defect class. Per-delta verdict with the evidence that produced it, plus what must accompany landing.",
+ "assigned_on": "2026-09-14",
+ "OBJECT": {
+  "candidates": [
+   {"id": "CC-20260914-30285739-01", "producer": "scientist-b", "task": "ALDAZ-FT-B-003", "pmid": "30285739", "receipt": "FTR-20260914-30285739-01", "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30285739.json", "locators": 41, "artifacts": 23},
+   {"id": "CC-20260914-28283473-01", "producer": "scientist-a", "task": "ALDAZ-FT-A-003", "pmid": "28283473", "receipt": "FTR-20260914-28283473-01", "manifest": "disease-models/wwox/research/deepdive_manifests/PMID28283473.json", "locators": 32, "artifacts": 7}
+  ],
+  "third_source_read_for_delta_C": {"pmid": "33058734", "role": "the endothelial sequel, cited by both candidates as 'the negative'"}
+ },
+ "CURRENT_STATE": "COMPLETE 2026-09-14 — consultation record written and committed. Verdicts: A CORRECT_WITH_QUALIFICATION, B CORRECT_WITH_QUALIFICATION, C INCORRECT, D CORRECT_WITH_QUALIFICATION, E CORRECT. No MAJOR, nothing operator-reserved, R4 not required as proposed (two named conditions would trigger it). Five wording repairs are owed before landing; none is a reason to hold the batch.",
+ "TASK_ACK": {
+  "actor_id": "mirror",
+  "acked_on": "2026-09-14",
+  "directive_version_acked": 1,
+  "generation_acked": 1,
+  "contract_read_in_full": true,
+  "read_before_first_act": [
+   "CLAUDE.md (router)",
+   "framework/state/state_manifest_current.md — current_state: READY confirmed; §2 working-model bump rule read verbatim, which produced finding D-1",
+   "framework/instruction/LEGEND_CORE.md §21c STOP POLICY, §21d DECISION AUTHORITY, §21e AGILE OPERATING MODE — by name, in full",
+   "disease-models/wwox/registries/claim_registry_current.md CLAIM 026 in full",
+   "the prior §21d consultation whose constraint binds delta A (mirror_consultations/2026-09-14_BATCH_20260914_005_mirror.md:107-108)"
+  ],
+  "understood": [
+   "I propose; I do not repair. No scientific current file, no disease_model.md, no state manifest, no producer dossier/manifest/receipt/persisted locator, no queue file and no discovery-ledger entry is edited by me.",
+   "No BATCH_COMMIT. No push to any remote, ever. No recursive delegation. Commit only my own two paths, via scripts/legend_commit.sh, never bare git commit.",
+   "A finding against a delta is the useful outcome; where a delta is right, say so briefly.",
+   "Check my own finding against the source before reporting it. A true statement must not be deleted to obey a verification error.",
+   "Conclusions stay out of commit subjects; the subject names the surface touched."
+  ]
+ },
+ "TASK_CLAIM": {
+  "actor_id": "mirror",
+  "task_id": "ALDAZ-CONSULT-READS-20260914",
+  "claimed_at": "2026-09-14",
+  "interaction_mode": "AUTONOMOUS_COMPLETE",
+  "state": "COMPLETE",
+  "durable": true,
+  "preflight": {
+   "state_manifest_current_state": "READY",
+   "fulltext_receipts_verify": "OK — 173 chained receipts, tail anchored in state_manifest_current.md",
+   "growth_anchors_check": "PASS — claims=39, papers=83, corpus=356, literature=397, registry_only=10, unread_premises=2; CANDIDATE_BACKLOG 37 at or past trigger 5 (a decision due to the orchestrator, not a defect in either delta)",
+   "legend_lint_at_start": "PASS (one INFO MISSING_WIKILINK on CLAIM 010, background only)",
+   "public_release_gate_at_start": "PASS, BLOCKS: 0 (13 standing REVIEW lines, all pre-existing)"
+  },
+  "deliverables_owed": [
+   "disease-models/wwox/research/verifications/2026-09-14_aldaz_reads_consultation.md",
+   "CONSULTATION_RESULT in this task JSON with DEFAULTS_TAKEN and STOP_LOG"
+  ]
+ },
+ "CONSULTATION_RESULT": {
+  "deliverable": "disease-models/wwox/research/verifications/2026-09-14_aldaz_reads_consultation.md",
+  "review_level": "R2 §21d consultation. R4 NOT triggered as proposed: CLAIM 026 is 'in observation' and not a consolidated baseline, no persisted locator existed for either PMID before these readings, and locator_contradiction_audit reports 0 undeclared revisions.",
+  "verdicts": {
+   "A_claim026_addition": "CORRECT_WITH_QUALIFICATION",
+   "B_model_scope_narrowing": "CORRECT_WITH_QUALIFICATION",
+   "C_compartment_split_formulation": "INCORRECT",
+   "D_registry_promotions": "CORRECT_WITH_QUALIFICATION",
+   "E_defect_class": "CORRECT"
+  },
+  "findings": [
+   {
+    "id": "A-1",
+    "severity": "wording — overshoot",
+    "claim_reviewed": "the proposed addition says VOPP1 Y165A 'abolishes' the co-IP",
+    "finding": "'Abolished' is the authors' word for WWOX Y33R, not for VOPP1 Y165A. Their text for Y165 is hedged: 'WWOX-VOPP1 interaction was strongly affected by the mutation of tyrosine 165', concluding the motif 'was required to sustain a robust interaction'. The panel does show lane 8 blank, so 'abolishes' is defensible as a pixel reading, but the candidate's own manifest entry 10 flags the hedge and the canon-facing sentence then drops the flag.",
+    "direction": "OVERSHOOT — canon would carry a strength the source's prose declines to assert, in the very claim BATCH_20260914_005 repaired for overshooting."
+   },
+   {
+    "id": "A-2",
+    "severity": "wording — material omission",
+    "claim_reviewed": "'of VOPP1's three PPxY motifs only Y165A abolishes it while Y119A retains binding'",
+    "finding": "The sentence names two of three mutants. Y157A is omitted from the canon text while the same candidate's §4 records it: 'Y157A partially impairs binding (Figure 1e lane 7, reduced but present doublet)'. I re-rendered Figure 1 myself at 430 dpi rather than take the producer's attestation: IP:Myc/IB:Flag shows lane 3 strong, lane 5 (Y33R) essentially blank, lane 6 (Y119A) strong, lane 7 (Y157A) a clearly reduced but plainly present doublet, lane 8 (Y165A) blank; the WCL/IB:Flag row carries Flag signal in lanes 2,3,5,6,7,8, so lane 7 is not an expression artefact.",
+    "direction": "UNDERSHOOT of the paper's content toward tidiness — a reader infers a clean one-of-three result where the panel shows a graded result across three motifs."
+   },
+   {
+    "id": "B-1",
+    "severity": "count stated as exhaustive and found short",
+    "claim_reviewed": "\"'global' is modified by 'lung' in both places the authors use it\"",
+    "finding": "Three places, not two, and the omitted one is a Results section heading: (1) Introduction 'global lung silencing of WWOX'; (2) heading 'Global loss of murine lung WWOX expression causes neutrophilic alveolitis'; (3) Discussion 'acute, global knockdown of lung WWOX expression'. All three are lung-scoped.",
+    "direction": "The conclusion is CORRECT and BROADER than claimed. Recorded because an exhaustive count found short is how a true finding later gets contested, and the omitted instance is the string a skimming reader hits first."
+   },
+   {
+    "id": "B-2",
+    "severity": "false absence assertion, immaterial conclusion",
+    "claim_reviewed": "'the string brain does not occur'",
+    "finding": "It occurs twice, both inside the journal title 'Brain Res' in reference 36. There is genuinely no brain, neuron, seizure or developmental endpoint in the paper, so the no-transfer conclusion stands, but a string-absence assertion must be tested before it is written and this one fails its own test.",
+    "direction": "No effect on the delta; a discipline finding."
+   },
+   {
+    "id": "C-1",
+    "severity": "PRINCIPAL FINDING — the source is mischaracterised",
+    "claim_reviewed": "PMID 33058734 as 'the negative', and 'no experiment in either paper measures the other's compartment'",
+    "finding": "PMID 33058734 is a SPLIT result, not a negative. Its own legends: Figure 3 'EC-specific WWOX KO mice exhibit greater vascular leak during LPS-induced ARDS'; Figure 5 the same for MRSA; Figure 8 'ECs isolated from EC WWOX KO mice produce more cytokines during MRSA exposure' with *P<0.05; against Figure 4 and Figure 6 'do not exhibit greater BAL cytokines'. Its abstract: 'EC WWOX KO mice exhibited significantly greater levels of vascular leak and histologic lung injury.' Its Introduction built the EC model FROM Singla's disproportion: '...out of proportion to increases in inflammation (20). This raised the question of whether an inflammation-independent mechanism of endothelial barrier vulnerability was a part of the WWOX-deficient phenotype.' So the sequel CONFIRMS the endothelial-barrier inference PMID 28283473's Discussion drew, and fails to reproduce only its inflammatory leg in that compartment. The '24 bars' count is true of Figures 4 and 6 only.",
+    "direction": "The candidate's conclusion (the two do not impeach each other's INFLAMMATORY phenotype) survives; the framing inverts the relationship on the leak axis. The dispatch's own framing — 'the endothelium the sequel found null' — is wrong the same way."
+   },
+   {
+    "id": "C-2",
+    "severity": "factual error in the confound list",
+    "claim_reviewed": "'chronic, endothelium-restricted' and 'perturbation type, compartment and duration differ simultaneously'",
+    "finding": "Duration does not differ. The EC KO arm is tamoxifen 75 mg/kg for 5 consecutive days, then 'Seven days later' the stimulus, then 18 hours to harvest — the same acute 18 h window as Singla's. 'Chronic' in PMID 33058734 belongs to a separate WILD-TYPE e-cigarette arm ('1 hour a day, 5 days a week, and for 3 months') in which no WWOX allele is manipulated.",
+    "direction": "Two variables differ (perturbation type, compartment), not three. A confound list with a spurious member is weaker than an accurate shorter one, because the spurious member is the one a reader tries to vary first."
+   },
+   {
+    "id": "C-3",
+    "severity": "regression of a correction already paid for",
+    "claim_reviewed": "the §4 formulation as a whole",
+    "finding": "CC-20260913-ALDAZ-C003-01 §146 already WITHDREW the clean single-variable framing of this pair, citing Figure 8 by name: 'that ex-vivo positive is under an infectious stimulus, so stimulus alone cannot separate positive from null. The bound is now stimulus AND compartment.' Candidate 2 §4 re-introduces a positive-leg-versus-negative-leg reading the day after.",
+    "direction": "Landing as drafted would regress a correction this laboratory already made."
+   },
+   {
+    "id": "D-1",
+    "severity": "declaration inconsistent with its own proposal",
+    "claim_reviewed": "candidate 1's header 'Target WM version: no bump proposed'",
+    "finding": "state_manifest_current.md §2: 'every BATCH_COMMIT that modifies the disease model must bump working_model_version ... MINOR bump: claim addition/modification ... Commit candidates must declare their intended target_wm_version.' A CLAIM 026 Summary addition plus two PAPER records is a claim modification, so a MINOR bump must be declared.",
+    "direction": "Procedural; blocks nothing if declared before propagation."
+   },
+   {
+    "id": "D-2",
+    "severity": "traceability — must move with the Summary",
+    "claim_reviewed": "delta A leaves CLAIM 026's Source and Wikilinks untouched",
+    "finding": "CLAIM 026 reads 'Source: Hussain et al. 2018 ... PMID 30619736' and 'Wikilinks: [[paper_registry_current#PAPER 032]]'. Putting a second paper's measurements into the Summary without extending both fields leaves canon carrying a claim whose Summary leans on a paper its own Source field does not name — the defect BATCH_20260913_003 repaired on PAPER 007.",
+    "direction": "Must land in the same batch as the Summary."
+   }
+  ],
+  "what_verified_exactly_as_proposed": [
+   "A: the Y33R leg — 'The Y33R mutation in WWOX abolished the WWOX-VOPP1 interaction', confirmed in my own render (lane 5 blank, WCL positive).",
+   "A: the endogenous co-IP with a normal-rabbit-IgG control in MDA-MB-468, neither partner over-expressed — the one datum Hussain lacks. My render of panel 1d shows the IgG lane clean against a clear WWOX band.",
+   "A: the directness negative, re-tested limb by limb — recombinant 0, GST 0, purified 1 (CGH array DNA, not protein), biophysical/surface plasmon/Seahorse 0 each, the 8 'ITC' hits all the ligase ITCH, and all 4 'direct' hits non-binding uses. The paper never claims direct binding.",
+   "A: the IPOTESI typing genuinely untouched — all 8 'metabol' hits are framing or reference titles; acetyl/glycoly/lactate/flux/oxygen consumption/enzymatic activity 0 each. No metabolic readout exists in Bonin 2018.",
+   "A: no contradiction with the retained Hussain clause — both are scoped, and they concern different assays (GST pull-down vs co-IP with point mutants). The prior §21d constraint 'do not let WW1-dependence be written for all three prey' is honoured.",
+   "B: not a knockout and not whole-body — 'knockout' occurs 0 times; the only perturbation is airway-instilled siRNA in wild-type C57BL/6.",
+   "B: epithelium-weighted BY IMPORT — 'it is known through studies using GFP-targeting siRNA in GFP-overexpressing mice that the predominant cell type affected by intratracheal siRNA delivery is the alveolar epithelial cell ( 52 )', inside the limitations paragraph. The most consequential correction in either candidate.",
+   "B: n = 3 per group under a caption claiming 'n = 3 independent experiments'; Methods 54 h against caption 72 h, both printed, neither marked as a correction.",
+   "B: 'widespread' occurs 0 times in PMID 28283473 and is the sequel's own wording, cited there to ref 20.",
+   "B: FT-100's 'l'antecedente a corpo intero' is an error and the narrowing is owed — found rather than spared, as the dispatch asked.",
+   "D: both papers' identity re-derived from their own front matter; MINOR is the right classification; nothing on the §21d RESERVED list, the stubs' own Note expressly sanctioning upgrade so no 'irreversible deletion of unique material' arises.",
+   "E: CORPUS-STUB-165 'Status: not_processed' / 'Claim links: none' verified verbatim; the three working documents calling it the only independent support verified and named individually."
+  ],
+  "ratchet_proposed_for_delta_E": {
+   "why_no_current_check_sees_it": "session_self_eval.unread_premises() clears a citation on any of three grounds — a receipt, a registry full-text declaration, or a full-text-queue entry — and fires only on UNREAD premises. PMID 30285739 was cleared throughout, because a CORPUS-STUB is a paper_registry record. Being recorded and being LINKED to the claim one supports are different properties and only the first is measured; nothing compares 'papers a live claim leans on' against 'papers whose record carries a Claim links entry for that claim'.",
+   "shape": "For every CLAIM, extract PMIDs named in Summary, Source and Evidence boundary; resolve each in paper_registry by Identifier; flag any whose record is a CORPUS-STUB or whose Claim links does not name that claim. Report as UNLINKED_SUPPORT, one line per pair.",
+   "properties_to_keep": "A cross-check, not a counter — reports UNCHECKED rather than blocking when an identifier will not resolve, and keys on the Claim links field rather than on prose. A count-based ratchet would baseline whatever today's unlinked set happens to be.",
+   "owner": "Harness Engineering at T0. Not implemented by me: framework/ is not a surface this dispatch gives me."
+  },
+  "what_must_accompany_landing": [
+   "Delta A: adopt the replacement wording, or at minimum attribute 'abolishes' to the panel, keep the authors' 'strongly affected'/'robust' hedge, and name Y157A.",
+   "Delta A: declare target_wm_version as a MINOR bump (D-1).",
+   "Delta A: extend CLAIM 026's Source and Wikilinks to the new PMID 30285739 PAPER record in the same batch (D-2).",
+   "Delta B: correct 'both places' to all three, naming the Results heading; correct the 'brain' string-absence claim.",
+   "Delta C: DO NOT land §4 as drafted — adopt the replacement wording, which keeps the correct conclusion while recording PMID 33058734 as a split result whose leak leg confirms PMID 28283473's own endothelial inference, and drops 'duration' from the confound list.",
+   "R4 / legend-locator-audit: not required as proposed. Two conditions would trigger it — the delta-A clause if the hedge is not restored, and any promotion of delta C into a CLAIM (which candidate 2 itself flags)."
+  ],
+  "major": "none — nothing reverses a baseline claim and BLOCK-1 is not engaged by either candidate",
+  "operator_reserved": "none, on the §21d RESERVED list as written",
+  "gate_verdicts_immediately_before_commit": {
+   "legend_lint": "PASS",
+   "public_release_gate": "PASS, BLOCKS: 0",
+   "note": "Both also run at task start with identical verdicts, so the pair brackets the work. Per the dispatch's warning, no delta between sequential gate runs was attributed to my own authorship without testing; there was no delta to attribute."
+  }
+ },
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "No phase packet defines a firewall for this task, and the object of a §21d consultation is the proposed canon text itself.",
+   "default_taken": "Read both commit candidates, both manifests, and the dossier/M4b excerpts needed to test two scoping claims. Unlike a blind locator audit, the producer's conclusions ARE the object here.",
+   "why_it_is_safe": "A consultation that cannot see the proposed wording cannot judge it; the independence that matters is independence of the SOURCES, which I re-read myself.",
+   "what_would_have_been_different": "Nothing judgeable would have remained."
+  },
+  {
+   "condition": "PIL absent, and the one pixel fact finding A-2 rests on was available only as the producer's own attestation of the producer's own reading.",
+   "default_taken": "Re-rendered Bonin Figure 1 myself from the digest-verified publisher PDF with PyMuPDF at 430 dpi and extracted the embedded raster (xref 82, 1420x1916), in the scratchpad only.",
+   "why_it_is_safe": "Same declared artefact through a different decoder; nothing written into the repository, no tooling installed — and A-2 now rests on my own eyes.",
+   "what_would_have_been_different": "A-2 would have rested on the producer's word about the producer's own panel, which is exactly what a consultation may not do."
+  },
+  {
+   "condition": "PMID 33058734's figures were not re-rendered at dpi in this pass.",
+   "default_taken": "Read its legends, Results text and *P<0.05 keys from the pdftotext -layout text layer; declared the asterisk PRESENCE in Figures 3/5/8 as legend- and text-grounded rather than pixel-measured, and cited the 24-bar no-asterisk count as W4's measured value.",
+   "why_it_is_safe": "The legends state the direction in their own titles ('exhibit greater' / 'do not exhibit greater'), a stronger surface than a bar I might mis-crop; and the direction, not the glyph, is what delta C turns on.",
+   "what_would_have_been_different": "If legends and panels disagreed, C-1 would need re-grounding — recorded as WHAT_WOULD_CHANGE_MY_MIND."
+  },
+  {
+   "condition": "The harness injected a git-status block with two conclusion-stating commit subjects into my context before my first act.",
+   "default_taken": "Declared the exposure verbatim and stated the expectation it formed, rather than claiming a blindness I did not have.",
+   "why_it_is_safe": "Reporting exposure fully is what the convention asks; the exposed subjects assert each phenomenon, not the formulation the findings concern.",
+   "what_would_have_been_different": "Claiming blindness would have been false, and the reader could not discount my agreements with the candidates."
+  },
+  {
+   "condition": "My own first searches returned 0 for '10 mg/kg', '(52)' and '16:109' on sources that do contain those facts.",
+   "default_taken": "Suspected my own pattern before the source in each case and re-searched: the dose is spelled 'Ten milligrams per kilograms', the citation is spaced '( 52 )' in the stripped HTML, and volume/article number live as separate JATS fields.",
+   "why_it_is_safe": "It is the rule that protects the truth, applied to my own instruments.",
+   "what_would_have_been_different": "Three fabricated findings against the candidates, each refuted by the source on the next pass."
+  },
+  {
+   "condition": "growth_anchors.py check reports a 37-candidate backlog at or past its trigger of 5.",
+   "default_taken": "Noted it and proceeded.",
+   "why_it_is_safe": "A standing queue state and a decision due to the orchestrator, not a defect in either delta; Phase 7 deferral does not force consuming the whole queue.",
+   "what_would_have_been_different": "Nothing in these verdicts."
+  }
+ ],
+ "STOP_LOG": [],
+ "SURFACES_WRITTEN": [
+  "disease-models/wwox/research/verifications/2026-09-14_aldaz_reads_consultation.md",
+  "ledger/tasks/mirror/ALDAZ-CONSULT-READS-20260914.json"
+ ],
+ "SURFACES_DELIBERATELY_NOT_TOUCHED": [
+  "the four scientific current files, disease_model.md, state_manifest_current.md",
+  "both producers' dossiers, manifests, receipts, M4b notes and persisted locators",
+  "full_text_queue_current.md (FT-100's 'a corpo intero' heading is an error, reported and not edited)",
+  "DL-MECH-012, surface_census.md, ledger/tasks/scientist-b/ALDAZ-FT-B-003.json",
+  "framework/ (the delta-E ratchet is proposed, not implemented)",
+  "any remote — no push, ever"
+ ]
+}

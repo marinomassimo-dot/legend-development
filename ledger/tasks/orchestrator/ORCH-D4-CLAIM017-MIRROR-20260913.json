@@ -1,0 +1,39 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT (operator-directed) + A.1b",
+  "TASK_ID": "ORCH-D4-CLAIM017-MIRROR-20260913",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "OWNER": "operator",
+  "ACTOR_ID": "orchestrator",
+  "CURRENT_STATE": "NOT STARTED — awaiting the operator's decision. Recorded at session close; no file changed for it.",
+  "OBJECTIVE": "Decision D4 of the BATCH_20260913_001 report, from CC-20260826-CROSS-CLAIM-CENSUS-03 section 2.B.",
+  "recorded_on": "2026-09-13",
+  "questions": {
+    "1_mirror_row": {
+      "what": "working_model_current.md claim-mirror row 017 states a ketogenic-diet proposition at consolidated baseline; claim_registry_current.md CLAIM 017 is the WOREE/SCAR12 spectrum claim",
+      "repair": "replace the row with the registry claim's fields; mechanical",
+      "source_of_truth": "claim_registry_current.md, not the mirror"
+    },
+    "2_ketogenic_datum": {
+      "where_now": "working_model_current.md prose (about line 88) and disease_model.md: 3/5 WOREE patients, Chong 2023",
+      "options": {
+        "a": "new claim with full evidence boundary (n=5, uncontrolled, genotype relevance, medical-advice disclaimer); recommended by the candidate",
+        "b": "prose only, without consolidated-baseline strength"
+      },
+      "not_done": "no new claim created"
+    }
+  },
+  "class_declared_by_candidate": "MAJOR",
+  "needed_before_integration": [
+    "operator choice between a and b",
+    "Mirror consultation",
+    "source checks on Chong 2023: 3/5 figure, patient genotypes, existing registry citations (CLAIM 001, CLAIM 009)"
+  ],
+  "excluded": [
+    "DIS-011 (candidate section 2.A)",
+    "any other part of CC-20260826-CROSS-CLAIM-CENSUS-03"
+  ],
+  "handoff": "disease-models/wwox/research/2026-09-13_session_close_handoff.md",
+  "STOP_LOG": [],
+  "remote": "nothing pushed"
+}

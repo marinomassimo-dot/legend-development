@@ -1,0 +1,141 @@
+{
+  "_schema": "legend.task.v1 · LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+  "TASK_ID": "SCI-FT-B-002",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "OWNER": "orchestrator",
+  "ACTOR_ID": "scientist-b",
+  "MANDATE": "SCIENCE-EXEC-20260914",
+  "MANDATE_STEP": "OBJ_1_readings[2] R3",
+  "assigned_on": "2026-09-14",
+  "SCOPE": {
+    "assigned_pmids": ["15266310", "22574198", "24330518", "25024751"],
+    "reading_mode": "PRIMARY_EVIDENCE_READ",
+    "parallel_read_group": "scientist-a holds PMIDs 31275852 and 41090157 in flight; those files were never opened or written by this actor",
+    "single_owner_check": "Measured before claim: fulltext_receipts.py status returned no events for all four PMIDs; the only task records naming any of them are orchestrator mandate/intake records (SCIENCE-EXEC-20260914, ALDAZ-EXEC-20260913, ALDAZ-INTAKE-20260913) plus, for 22574198 only, ledger/tasks/mirror/ALDAZ-VERIFY-CLAUSE-20260914.json, which is a closed verification record and not an open reading contract. No duplicated assignment.",
+    "surface": "Europe PMC fullTextXML as the evidentiary text surface for all four (HTTP 200, first route, every paper). Figures from the highest-resolution surface measured per paper: PLoS original TIFFs (22574198), native PMC PDF rasters via pmc_pow_fetch.py (24330518), nature.com PDF rasters plus 110/300/400-dpi page renders (15266310), and the publisher PDF's vector drawing commands (25024751, whose Figure 1 contains no raster at all)."
+  },
+  "TASK_ACK": {
+    "acknowledged_on": "2026-09-14",
+    "by": "scientist-b",
+    "contract_read_before_work": [
+      "framework/protocols/scientist_reading_modes.md (sections 3 and 4, in full)",
+      "framework/protocols/fulltext_read_receipt.md (in full)",
+      "framework/master/gold_is_in_the_details.md (rules 1-8 and 5b-5e, in full)",
+      "framework/instruction/epistemic_discipline.md (section 1, in full)",
+      "roles/scientist.md (in full)",
+      "PMID18452537 dossier, manifest and CC-20260914-18452537-01 for form only",
+      "framework/state/state_manifest_current.md — current_state READY confirmed"
+    ],
+    "blind_first_pass": "HONOURED. No registry, claim registry, working model, full-text queue, prior dossier or prior candidate naming any of the four PMIDs was opened until all four dossiers were written and frozen to disease-models/wwox/research/fulltext_dossiers/. Contamination disclosed: (1) the dispatch itself labelled the lot an 'oncology expression series', which is wrong for 22574198 and was corrected by the reading; (2) the form example CC-20260914-18452537-01, read for form, lists 15266310 among its unresolved gene-direct references; (3) both prior candidates in this mandate are my own, so I knew 15266310 was outstanding debt before reading it. Nothing about any paper's findings was known in advance.",
+    "declared_bias": "Toward finding something WWOX-DEE-relevant in four adult-cancer papers, because a reading that moves nothing feels like a wasted task. The rule applied instead: report what each paper measures, in which system, at the level at which it is there — and say 'nothing this model uses' where that is the answer. Two of the four move nothing, and both candidates say so in their first section."
+  },
+  "FORBIDDEN_ACCEPTED": [
+    "No fulltext_receipts.py record. HONOURED: the ledger still verifies at 177 chained receipts, tail anchored, unchanged by this session. All four receipts are validated scratchpad JSON, including validate_ledger_sequence(177 + 4) in memory, and are left for the orchestrator to append.",
+    "No edit to any *_current.md, registry, queue, framework/state/ or the receipt ledger. HONOURED: git status shows only my own new files plus a pre-existing modification to full_text_queue_current.md that I did not make and did not touch.",
+    "No file owned by another actor, including scientist-a's in-flight files for PMIDs 31275852 and 41090157. HONOURED: never opened, never written.",
+    "No git commit, push or branch operation. HONOURED: nothing committed, nothing pushed, no branch created.",
+    "No scripts/run_release_regressions.py. HONOURED: never invoked.",
+    "No agents spawned. HONOURED.",
+    "No coverage compressed for time or tokens. HONOURED: every section of all four papers read in order; all 20 figures and both supplement image sets inspected as pixels at the highest-resolution surface measured per paper; all four tables of 25024751 and Table 1 of 15266310 read cell by cell; all 913 rows of Table S1 and all three sheets of two .xls supplements parsed; 187 references enumerated across the four papers."
+  ],
+  "MILESTONE_PLAN": [
+    "M1 acquisition — DONE, 56 artefacts",
+    "M2 reading — DONE, four papers complete",
+    "M3 manifest — DONE, all four strict PASS, 0 gaps",
+    "M4 receipt — DONE as validated scratchpad JSON, deliberately unappended",
+    "M5 dossiers, freeze, post-freeze canon comparison, four commit candidates — DONE",
+    "M6 session evaluation — DONE"
+  ],
+  "WAVE_1_RESULT": {
+    "papers": ["15266310", "22574198", "24330518", "25024751"],
+    "verdicts": {
+      "15266310": "complete_fulltext_read. Manifest strict PASS, 0 gaps, 39 locators, 19 artefacts. Receipt FTR-20260914-15266310-01 validated, not appended. Dossier + CC-20260914-15266310-01 written. Moves NO claim; proposes promotion of CORPUS P244 / LIT-0244, a pathway-field correction, and three data offered as context.",
+      "22574198": "complete_fulltext_read. Manifest strict PASS, 0 gaps, 39 locators, 21 artefacts. Receipt FTR-20260914-22574198-01 validated, not appended. Dossier + CC-20260914-22574198-01 written. THE LOAD-BEARING READING: supplies the missing primary receipt behind CLAIM 032's mammary leg and behind the evidence boundary BATCH_20260914_005 wrote on PAPER 053. Conclusion unchanged; the boundary is confirmed and narrowed.",
+      "24330518": "complete_fulltext_read. Manifest strict PASS, 0 gaps, 32 locators, 13 artefacts. Receipt FTR-20260914-24330518-01 validated, not appended. Dossier + CC-20260914-24330518-01 written. Moves NO claim; one WW1-dependent partner (SMAD3, PPGY motif) recorded in the paper record only, with CLAIM 024/026/027 relations stated as context and explicitly not amended.",
+      "25024751": "complete_fulltext_read. Manifest strict PASS, 0 gaps, 22 locators, 3 artefacts. Receipt FTR-20260914-25024751-01 validated, not appended. Dossier + CC-20260914-25024751-01 written. Moves NO claim, and canon has no claim it could move: no claim in claim_registry_current.md mentions decitabine, 5-aza or any demethylating agent. Lands as ESPANSIONE, with no therapeutic inference drawn."
+    },
+    "executable_gate": "All four manifests strict PASS, 0 gaps. session_self_eval.py PASS (11 DECLARED GAP lines, all other actors' PMIDs, none of mine). fulltext_receipts.py verify OK at 177 chained and tail-anchored, unchanged by design. legend_lint.py WARN on pre-existing items only (one grandfathered LIT status, two INFO wikilink lines, one disk-availability INFO), none from this task's paths. public_release_gate.py PASS, BLOCKS 0, and 0 REVIEW lines name any file I wrote (measured by grep). dependency_integrity.py: 15266310 CLEAN 28/38, 22574198 one flagged 42/48, 24330518 CLEAN 44/50, 25024751 CLEAN 48/51.",
+    "central_finding": "CLAIM 032 — 'WWOX haploinsufficiency is not deleterious', clinical relevance VERY HIGH, in observation — sources its mammary leg to PAPER 053, the Aldaz 2014 review, whose sentence 'loss of a single Wwox allele did not have any observable phenotypic effect in the mammary gland' IS PMID 22574198, the review's ref 55. full_text_queue_current.md FT-103 had already stated at priority ALTA that the boundary BATCH_20260914_005 wrote on that sentence rests on a section-21d consultation and no receipt in this repository. It now has one, read blind. The boundary is CONFIRMED: the branching morphometry compares Cre-negative WT, Cre-positive WT and KO only, with no heterozygote group. Two things are added. First, the review's other quoted sentence, 'the lifespan of the Wwox heterozygotes was indistinguishable from WT mice', is NOT attributable to ref 55: its heterozygotes are BK5-Cre-driven and tissue-restricted, not germline, and the survival curve is plotted only to about day 118, so no lifespan measurement for them exists in the paper. Second, Cre expression alone accounts for about 45 percent of the branching loss (Cre-negative WT 5.45, Cre-positive WT 4.05, KO 2.35 branches per mm), and the MMTV controls pool Cre-positive with Cre-negative animals — so any use of the branching phenotype in either direction must carry that. Separately, the same paper carries an open lead nobody has followed: all 22 BK5-Cre Wwox fl/fl mice die between day 68 and day 117 with the cause undetermined, in a paper that examines no nervous-system tissue at all (brain, neur, seizure, CNS, behav: zero hits).",
+    "arithmetic_reproduced": [
+      "Ferguson 2012's stated mean lifespan of 115 days for BK5 knockouts is arithmetically impossible: with one death at day 68 and none after day 117, the maximum possible mean for n = 22 is 114.8, and the curve's median is about 100.",
+      "Ferguson 2012 Table S1 exceeds its own declared cutoff: the Stat3 probe carries p = 0.0102, and 19 of 913 probes have p > 0.01.",
+      "Ferguson 2013: SMAD3 ranks 7th in the authors' own ChEA supplement (E2F4, SOX2 human, MYC mouse 71.85, E2F1 human, SOX2 mouse, E2F1 mouse, then SMAD3 54.78, tied with SMAD2 from the same ChIP-X study). Figure 2C shows the top four HUMAN entries, an undeclared filter.",
+      "Ferguson 2013: the supplement's own mean fold changes are FST 5.19, PTHLH 3.66, ANGPTL4 3.55, SERPINE1 2.54, against qPCR folds of about 4.5 for ANGPTL4 and about 11 for PTHLH.",
+      "Park 2004: Figure 4 displays 17 lanes, not 18, with Chang absent; the sentence '72% (13 out of 18) lower than 90% that of normal' counts the 13 bars below 0.10, so it means MORE than 90 percent lower, on a denominator of 17. 13/17 = 76.5%, against the 72% and 75% printed in two places.",
+      "Park 2004: the insert is called 96 bp, but coordinates 5281331-5281425 span 95 nucleotides inclusive.",
+      "Stewart 2014: counting the vector drawing commands of Figure 1's WWOX panel gives 17 markers per series (pre: 0 x6, 10, 30, 30, 50, 80, 100 x5, 130, median 30; post: 0 x5, 30, 40, 80, 100 x5, 130, 200, 200, 220, median 100), which reconciles the stated medians of 30 and 100 and the '3 of 6' conversions that 16 markers cannot.",
+      "Stewart 2014: Table 2 prints the WWOX P as 0.05 where the text and figure give 0.0547."
+    ],
+    "DEFAULTS_TAKEN": [
+      "Named the artefacts PMID<pmid>_<Surname><Year>.<ext> with no hyphen, matching the repository's existing PMID15064722_LudesMeyers2004.* convention. Safe: a filename convention, recorded, and every path is declared in its manifest.",
+      "Declared coverage limitations: not_present for all four papers rather than read, because none has a Limitations section; the authors' caveats live in the Discussion and are read and carried there. Safe and conservative: it claims less than 'read'.",
+      "Declared supplementary: not_present for 15266310 and 25024751 (Europe PMC hasSuppl=N, neither article names a supplement) and read for 22574198 and 24330518. Safe: both facts are measured, not assumed.",
+      "Declared the .xls supplements as supplement_binary alongside a derived, deterministic tab-joined .txt as supplement_text, because .xls is not verifiable text. The suspect-surface screen returned CLEAN on both derivatives.",
+      "Fetched the PMC PDFs and the supplements through PMC's own proof-of-work interstitial using the repository's pmc_pow_fetch.py, after plain GETs returned the challenge page. Safe: the repository's sanctioned route, no credentials, no user-agent spoofing. Verified that the PMC-route supplements for 22574198 are byte-identical to the PLoS route.",
+      "Converted the S1 TIFF with PyMuPDF after ImageMagick aborted on it, and declared the extractor, version and call in that artefact's acquisition_recipe rather than presenting the result as if the first tool had produced it.",
+      "Declared the lower-resolution PMC CDN blobs as artefacts with an explicit note that they are NOT the inspected surface, rather than deleting them or passing them off as the evidence.",
+      "Recorded the nature.com PDF's UNTRUSTWORTHY font screen (an unmapped MathPackTen subset) in the dossier even though it blocks nothing, because no locator quotes that text layer and no derived .txt is declared for that manifest. Stated both halves rather than the convenient one.",
+      "Recorded the 25024751 byline as printed, 'Aldaz M', and flagged the initial ambiguity for the research-group path rather than silently normalising it to 'Aldaz CM'.",
+      "Did not run legend-locator-audit: the threshold was checked mechanically and not met — no claim is moved by any of the four readings, and no persisted locator is contradicted. The R4 question on CLAIM 032's fields is referred to the orchestrator in CC-20260914-22574198-01 rather than decided in my own favour.",
+      "Declined legend-deepdive with a reason recorded in the manifests: the decisive findings of this task are pixel, vector-geometry and arithmetic findings that a dossier-only subagent cannot see."
+    ],
+    "STOP_LOG": [
+      "No stop taken and none owed. No URGENT category-1 safety finding, no MAJOR baseline reversal, no paid service, no operator-reserved act. The one instruction-level boundary reached was the receipt ledger: the contract forbids `record`, so all four receipts were validated through the writer's own functions (validate_receipt, validate_new_receipt, require_work_manifest strict, and validate_ledger_sequence over ledger + the four new events in memory) and left unappended. No validator refused to pass for want of the append, so the dispatch's stop condition never fired.",
+      "One finding was checked for stop-worthiness and judged not to be: CLAIM 032 carries clinical relevance VERY HIGH, and a reading that touches it could in principle be a MAJOR baseline reversal. It is not — the claim's conclusion is unchanged and supported, its Status is in observation rather than a consolidated baseline, and what the reading supplies is the attestation its mammary leg lacked. Recorded here because the judgement was made deliberately, not by omission."
+    ],
+    "self_caught_defect": "Two, both invisible to every check in this repository. FIRST: my visual count of Figure 1's WWOX panel in Stewart 2014 gave 16 markers, which cannot reconcile the paper's stated pre-treatment median of 30 with its six zero scores and its '3 of 6' conversions. Page 4 of that PDF holds 175 drawing objects and no image — the chart is vector art, and the PMC CDN blob is a lossy rendering of it, not the source. Counting the drawing commands gives 17 per series, with two markers coincident; 17 reconciles the medians, the zeros and the fraction. No resolution of a raster recovers two markers at the same coordinate. SECOND: the four receipts were first stamped 19:58Z while the actual time was 19:53; they were restamped to the real 19:54:00Z and re-validated. No validator compares a receipt's timestamp to the clock, so a fabricated attestation time would have entered the record unchallenged. Both are in the session evaluation's ATTRIBUTION_CENSUS as the two severity-high incidents, both self-caught."
+  },
+  "DELIVERABLES_WRITTEN": [
+    "disease-models/wwox/research/deepdive_manifests/PMID15266310.json",
+    "disease-models/wwox/research/deepdive_manifests/PMID22574198.json",
+    "disease-models/wwox/research/deepdive_manifests/PMID24330518.json",
+    "disease-models/wwox/research/deepdive_manifests/PMID25024751.json",
+    "disease-models/wwox/research/fulltext_dossiers/PMID15266310.md",
+    "disease-models/wwox/research/fulltext_dossiers/PMID22574198.md",
+    "disease-models/wwox/research/fulltext_dossiers/PMID24330518.md",
+    "disease-models/wwox/research/fulltext_dossiers/PMID25024751.md",
+    "disease-models/wwox/research/commit_candidates/CC-20260914-15266310-01.md",
+    "disease-models/wwox/research/commit_candidates/CC-20260914-22574198-01.md",
+    "disease-models/wwox/research/commit_candidates/CC-20260914-24330518-01.md",
+    "disease-models/wwox/research/commit_candidates/CC-20260914-25024751-01.md",
+    "disease-models/wwox/research/session_evaluations/2026-09-14_scientist-b_SCI-FT-B-002.md",
+    "ledger/tasks/scientist-b/SCI-FT-B-002.json",
+    "files/fulltext/PMID15266310_Park2004.{xml,pdf} + _assets/ (9 native figure rasters, 3 lossless crops, 1 point-level crop, 4 page renders at 110-400 dpi)",
+    "files/fulltext/PMID22574198_Ferguson2012.{xml,pdf} + _assets/ (6 PLoS original TIFFs + PNG conversions, 2 docx supplements with extracted images, 1 xls supplement + derived .txt)",
+    "files/fulltext/PMID24330518_Ferguson2013.{xml,pdf} + _assets/ (6 native PMC PDF figure rasters, 1 docx supplement with extracted image, 1 xls supplement + derived .txt)",
+    "files/fulltext/PMID25024751_Stewart2014.{xml,pdf} + _assets/ (1 page render at 300 dpi; Figure 1 is vector and has no raster surface)",
+    "/tmp/claude-1000/-home-desktop-legend-development/c94caa1d-ef13-4702-8869-d31eac8d8df4/scratchpad/receipts/SCI-FT-B-002_15266310.json",
+    "/tmp/claude-1000/-home-desktop-legend-development/c94caa1d-ef13-4702-8869-d31eac8d8df4/scratchpad/receipts/SCI-FT-B-002_22574198.json",
+    "/tmp/claude-1000/-home-desktop-legend-development/c94caa1d-ef13-4702-8869-d31eac8d8df4/scratchpad/receipts/SCI-FT-B-002_24330518.json",
+    "/tmp/claude-1000/-home-desktop-legend-development/c94caa1d-ef13-4702-8869-d31eac8d8df4/scratchpad/receipts/SCI-FT-B-002_25024751.json"
+  ],
+  "ROUTED_TO_ORCHESTRATOR": [
+    "APPEND THE FOUR RECEIPTS. FTR-20260914-{15266310,22574198,24330518,25024751}-01 are validated scratchpad JSON and were deliberately not appended, per the contract. validate_ledger_sequence(177 + 4) passed in memory; the ledger is unchanged at 177.",
+    "CLAIM 032 — THREE CANDIDATES NOW TOUCH IT IN THREE DIFFERENT FIELDS, and they should land in one batch under one section-21d consultation: CC-20260914-17823927-01 (mine) on the Summary's hypomorph leg plus Source/Wikilinks; CC-20260914-CLAIM032-LIMIT-01 (orchestrator) on Clinical meaning; CC-20260914-22574198-01 (mine) on Source/Wikilinks plus the PAPER 053 Note, i.e. the mammary leg's attestation. No field collides. The claim's conclusion is unchanged in all three.",
+    "FT-103 IS DISCHARGED and its closure is the orchestrator's: the queue entry's entire stated purpose was that a canonical boundary rested on no receipt in this repository. It now rests on FTR-20260914-22574198-01.",
+    "FOUR PLACEHOLDER PROMOTIONS PROPOSED, IDs verified by header rather than inferred from position: CORPUS P244 / LIT-0244 (15266310), CORPUS-STUB-168 / LIT-0184 (22574198), CORPUS-STUB-055 / LIT-0079 (24330518), CORPUS P378 / LIT-0378 (25024751). Each placeholder to be preserved append-only. Use the tracking log's own Status vocabulary: BATCH_20260914_007 established that a status outside its table returns INVALID_LIT_STATUS.",
+    "TWO PATHWAY FIELDS ARE WRONG IN CANON, both assigned in FASE 1 triage without a reading: CORPUS P244 and CORPUS P378 both carry 'P6 — DDR / genome stability', and neither paper contains a DDR or genome-stability endpoint. A wrong pathway field silently mis-routes future sweeps.",
+    "THE 140 MICROGRAM ITEM TOUCHES ANOTHER PAPER'S PERSISTED RECORD. fulltext_dossiers/PMID18452537.md records '140 mg / ml' as an antibody concentration whose unit cannot be resolved; PMID 15266310 prints the same laboratory's anti-WWOX at '140 microgram/ml' on a clean JATS surface of a version of record. Typed INFERENZA, cross-reading, not DATO. The persisted quote must NOT be altered — it is correct as printed — but an interpretive note may be added by an actor who owns that record.",
+    "AN OPEN RESEARCH LEAD, not a claim: all 22 BK5-Cre Wwox fl/fl mice die at 68-117 days with the cause undetermined, in a paper that examines no nervous-system tissue. The IPOTESI that BK5-Cre recombines outside the targeted epithelium carries PREMISE DEFAULT_FROM_TEXTBOOK and is explicitly not proposed as a claim. Candidate research entry for an actor who owns that file.",
+    "READING DEBT: 45 unresolved gene-direct PMIDs across the four papers, itemised with per-PMID reasons in the four candidates. The two most load-bearing are 21499303 (Abdeen 2011 — the heterozygote result 22574198 explicitly disputes) and 14695174 (Watanabe 2003 — the named opposing view on WWOX as a tumour suppressor, cited by 15266310). Also 24137423 (5-Aza-dC and WWOX in an ovarian line), unmatched in batch_queue.md, which together with 25024751 would be the two candidate legs of any future reactivation claim — and neither is sufficient.",
+    "AN AUTHOR-IDENTITY AMBIGUITY: the 25024751 byline prints 'Aldaz M', not 'Aldaz CM'. Recorded as printed and flagged rather than normalised. Author disambiguation belongs to the research-group path.",
+    "ONE FLAGGED DEPENDENCY, no consequence: 10.1073/pnas.0505485102 (Fabbri 2005, PMID 16223882) carries an Expression of Concern (2017, PMID 28373548) and is cited by 22574198 as citation only, Introduction background, one of four references for suppressed tumorigenicity after WWOX overexpression. No mouse, reagent, analysis or conclusion in that paper depends on it. Same reference, same disposition, as in CC-20260914-18452537-01."
+  ],
+  "NOT_DONE": [
+    "No receipt appended; fulltext_receipts.py record never invoked.",
+    "No *_current.md, registry, queue, framework/state/ or ledger file edited.",
+    "No git commit, push or branch.",
+    "No scripts/run_release_regressions.py.",
+    "No agents spawned; no work delegated.",
+    "No blind locator audit requested: threshold checked mechanically and not met.",
+    "No claim created, amended or reversed by this actor; no working-model version bump proposed.",
+    "No queue entry written or closed, including FT-103.",
+    "No edit to another paper's persisted record, including the PMID 18452537 antibody quote.",
+    "No therapeutic inference drawn from the decitabine reading."
+  ],
+  "STATUS": "COMPLETE",
+  "CURRENT_STATE": "READY",
+  "no_recursive_delegation": "HONOURED. No agent was spawned and no part of this reading was delegated. A background agent for SCI-FT-A-002 was already running when this task resumed; it belongs to another contract, was not started by this actor, and was neither messaged nor read.",
+  "public_edition_note": "Public edition. No individual-level record anywhere in this task's outputs; the four papers contain adult cancer cohorts and mice, and the 25024751 cohort is reported only at disease level with no individual linkage. Nothing in these outputs is medical advice."
+}

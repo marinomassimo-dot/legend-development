@@ -1,0 +1,476 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT (operator-directed) + A.1b",
+  "_note": "Execution phase of the Aldaz batch. The operator extended the intake mandate on 2026-09-13 to autonomous execution through batch closure, then twice raised concurrency: first to two simultaneous subagents, then to three, Opus 5 only, no recursive delegation. Predecessor: ALDAZ-INTAKE-20260913 (commit 1ff3c007d4ca5409c2ae9f26637230f5c7d5c114), which is closed and is NOT reopened.",
+  "TASK_ID": "ALDAZ-EXEC-20260913",
+  "DIRECTIVE_VERSION": 3,
+  "GENERATION": 1,
+  "OWNER": "operator",
+  "ACTOR_ID": "orchestrator",
+  "PRIORITY": "HIGH",
+  "CURRENT_STATE": "IN PROGRESS — wave 1 closed by scientist-a (2 PMIDs at complete_fulltext_read); scientist-b reading 16941225; scientist-c reading 27869163 then 35409089; mirror verifying wave 1 independently. Three of three slots occupied. No BATCH_COMMIT run yet, no push.",
+  "OBJECTIVE": "Analyse the corpus of the 32 supplied PMIDs — reusing valid readings, completing the necessary and accessible ones — then produce a verified cross-corpus synthesis and a diagnosis of how the laboratory performed, as for the Aqeilan batch. A scientific batch is not a BATCH_COMMIT: an inaccessible source must not stop work on the others, but it remains an explicit limit on corpus completeness.",
+  "assigned_on": "2026-09-13",
+  "started_at_head": "1ff3c007d4ca5409c2ae9f26637230f5c7d5c114",
+  "identity_note": "ACTOR_ID orchestrator is a stated assumption; the runtime assigns none and AGENTS.md § 4 forbids inferring it from the directory.",
+  "boundary": {
+    "in_scope": "Assignment and launch of readings, resumptions, comparisons, independent verifications and repairs; candidate production; one ordinary BATCH_COMMIT for mature changes inside available authority; regeneration of dependent surfaces with their generators.",
+    "out_of_scope": [
+      "D4 / CLAIM 017 mirror row — excluded by the operator, twice",
+      "the DisMech positional-anchor fragility — excluded",
+      "any new tooling or benchmarking project. The DECLARED_NOT_ATTESTED proposal from the intake stays registered for later and is NOT built now; its DISTINCTION is applied in analysis and reuse instead",
+      "the Aldaz-Nappi search, closed for this mandate absent new identifiers from the operator",
+      "the clarithromycin work: authorial proximity does not make it pertinent to a WWOX batch",
+      "any push to any remote"
+    ],
+    "reserved_and_therefore_prepared_not_applied": "MAJOR changes and anything the protocol reserves to the operator. They are prepared concretely, deferred with a reason, and do not stop the rest of the corpus."
+  },
+  "concurrency_model": {
+    "authorised": "Up to THREE simultaneous subagents besides the orchestrator, Opus 5 only, no recursive delegation. Independent verifications count inside those three slots.",
+    "model_discipline": "Every child dispatched with model=opus explicitly. No switch to Fable without new explicit operator authorisation.",
+    "single_integrator": "The orchestrator is the ONLY writer of canonical registries and of shared derived surfaces. Every child is told not to regenerate batch_queue.md, coverage_report.md, reading_state.md or the pathograph, because regeneration is refused while any input is uncommitted and peers are mid-flight.",
+    "distinct_write_paths": "Each contract names the paths its actor may write: its own task JSON, its own manifests, dossiers, M4b notes, candidates and session_evaluations, plus the receipt ledger through its validated writer. A red caused by a peer's file is reported, not fixed.",
+    "fresh_sessions": "Each child is a fresh session with a self-sufficient brief; no child receives the conversation history. The verification phase crosses the boundary only through a packet derived from artefacts (phase_handoff.py), never through a transcript.",
+    "serialisation_actually_required": "Only one: the independent verification of wave 1 had to occupy the third slot before scientist-a could be given a wave-2 lot, because verification of what is already produced gates integration, and because a producer may not verify itself. No other task was serialised while a slot was free."
+  },
+  "consumption_declared": {
+    "measurable_here": "This session's own context against the runtime's declared budget, and wall-clock between commands.",
+    "not_measurable_here": "Global account quota, monetary cost, and children's token consumption — a child's usage is reported by the runtime per child and is not aggregated into the parent. quota_state.py read returned STALE at start (reading 281 minutes old, limit 30), so it is not a measurement of now and is not used as one.",
+    "observed_per_child_so_far": "scientist-a wave 1: 686,636 subagent tokens, 206 tool uses, 3,578 s wall-clock, as reported by the runtime for that child. Children still in flight are not reported until they close.",
+    "no_invented_figures": "No token estimate, saving percentage or cost figure is asserted anywhere in this batch that the runtime does not report."
+  },
+  "artefact_placement_verification": {
+    "asked_by_operator": "Verify ONCE whether research/ is the correct location for the intake inventory by contract and content, and do not justify a move merely because another directory triggers a gate.",
+    "verified": "CORRECT as placed. legend_operating_convention_v1.md § B.1.2 governs GOVERNANCE object classes — DEC, CAND, REVIEW, APPROVAL, PROPOSAL, HANDOFF, WORKING RECORD — and none of them is a disease-model scientific record; the convention therefore does not assign this file at all. The de facto home for dated scientific session records is disease-models/wwox/research/, where the M4b wave record, the batch reports and the session-close handoff already sit, while analysis/orchestration_reviews/ holds orchestration dispatches and reviews. The intake record is both an inventory and a wave proposal, and research/ is where its neighbours live.",
+    "gate_perimeter_declared_not_used_as_justification": "Separately and openly: session_self_eval.PREMISE_GLOBS covers analysis/**, therapeutics/* and meta/*, and the unread-premise baseline is saturated at 2. That is a real perimeter question and it is declared as one. It is NOT the reason for the placement, and no scientific premise is hidden by a file path: the inventory does not LEAN on the unread papers, it classifies them as unread, which is the opposite act. If the batch later needs a record under analysis/ that cites unread identifiers, the honest move is to raise the baseline deliberately or to fix the check's perimeter — not to relocate the file."
+  },
+  "wave_1": {
+    "dispatched": "9dd93bd41e5f6de8bd95ed9678619aeb788d6e0b",
+    "lots": {
+      "scientist-a ALDAZ-FT-A-001": "36828035 (resumption) + 39868255 (first read) — CLOSED, both complete_fulltext_read",
+      "scientist-b ALDAZ-FT-B-001": "16941225 (first read) — IN FLIGHT",
+      "scientist-c ALDAZ-FT-C-001": "27869163 then 35409089 (first reads) — IN FLIGHT, dispatched from a later wave because independent of the work in flight"
+    },
+    "independent_verification": "mirror ALDAZ-VERIFY-W1-20260913 — IN FLIGHT. Inputs are two phase_handoff verification packets (56 and 36 propositions) that exclude the producer's dossiers and candidates by construction; both checked USABLE, evidence 31/31 and 17/17 present and digest-matching at the verifier's ACK.",
+    "candidates_produced_both_ORDINARY": [
+      "CC-20260913-36828035-01 — PAPER 007 identity normalisation; CLAIM 006 narrowed within its own strength (progressive astrogliosis yes, progressive microglial abundance no); CLAIM 007 corroborated with its caveat kept. R4 performed before the candidate.",
+      "CC-20260913-39868255-01 — a PAPER record for the preprint with its editorial status inside the record; NO claim proposed, deliberately; and the load-bearing edit of the wave: DL-MECH-012 keeps its direction and retires the count as a strength argument."
+    ],
+    "integration_status": "NOT integrated. Nothing canonical moves before the independent verification returns; the candidates are ORDINARY, so integration is inside available authority once verified."
+  },
+  "wave_2_plan": {
+    "principle": "Necessity for the batch's questions, real dependencies, and evidence the corpus does not already hold — not date, not author seniority, not proximity to a therapy.",
+    "queued_lots": [
+      "scientist-b ALDAZ-FT-B-002: 30619736 (sole primary source of CLAIM 026, registry declares full text verificato and the ledger attests NOTHING — no receipt at all, absent even from reading_state.md) + 24932569 (BBA review, legacy reconstruction only, nine unknown_legacy keys, carries the haploinsufficiency argument)",
+      "scientist-a ALDAZ-FT-A-002: 15064722 (the PPxY-ligand primary that CLAIM 007's mechanism descends from — named by scientist-a's own candidate as load-bearing and unread in this repository) + 24369382 (PAPER 042, claim_linked, legacy reconstruction only; the human SCAR12 cohort)",
+      "scientist-c ALDAZ-FT-C-002: 31275852 + 41090157 (B-cell Wwox deletion to gammopathies, then to the plasmablastic myeloma model — the actor's own theme, and a pair whose data-dependence must be established rather than assumed)",
+      "one lot, actor to be chosen for independence: 38563965 + 33058734 (the lung/endothelial legs of DL-MECH-012). Deliberately NOT scientist-a: scientist-a authored the proposal to retire that entry's convergence count, and the third leg should be read by someone with no stake in that proposal."
+    ],
+    "explicitly_deferred_with_reason_not_simulated": "The Tier-C oncology expression series — 18061530, 18047428, 16152610, 15870886, 15692750, 15266310, 15982416, 18452537, 25024751, 16187332, 14526170, 24330518, 22574198, 17823927 — is dispositioned per paper in the batch record rather than read inside this mandate's margin. Each gets a documented disposition and, where relevant, a revival trigger. Unread is written as unread: no abstract-level summary is passed off as a reading, and the limit on corpus completeness is stated."
+  },
+  "wave_3_queue_arising_from_the_readings_not_from_the_intake": {
+    "principle": "A paper enters this queue because a completed reading showed something rests on it, never to fill a slot.",
+    "15692750_and_15982416": "Both are in the batch of 32 and both were Tier-C placeholders the intake had dispositioned as low priority. The completed reading of PMID 16941225 changes that: the antibody whose specificity the whole tissue-distribution map depends on is NOT validated in that paper, which hands its validation to these two 2005 papers, neither of them read in this repository. So the corpus's tissue-expression argument rests on an unvalidated reagent whose validation sits in two unread papers. That is a necessity discovered by reading, and it is exactly the kind of item the intake's own priority order could not have seen.",
+    "38563965_and_33058734": "Still queued, still reserved for an actor with no stake in the DL-MECH-012 proposal. The reading of 16941225 adds a reason: it finds no WWOX in human endothelium, while DL-MECH-012's lung-endothelial leg rests on 38563965, which nobody has read. The reading recorded that as a TENSION and not a refutation, which is the correct disposition and also the reason the leg now needs reading rather than arguing.",
+    "27773744": "The other half of FT-085. Not assigned; if scientist-c's lot shows a conclusion cannot be judged without it, it becomes a queued debt under that paper's own queue ID rather than an unplanned reading."
+  },
+  "lot_outcomes_so_far": {
+    "scientist-a ALDAZ-FT-A-001": "CLOSED. 36828035 and 39868255 both complete_fulltext_read; two ORDINARY candidates; verified independently as REFINED on both papers; repair in flight under ALDAZ-REPAIR-A-20260913.",
+    "scientist-b ALDAZ-FT-B-001": "CLOSED. 16941225 complete_fulltext_read, 44 locators, 20 of 20 panels inspected, receipt FTR-20260913-16941225-01, candidate CC-20260913-16941225-01, FT-079 closed as a reading with what stays open named. Substantive result: the paper supports a compartment map for EPITHELIA and does not support one for the BRAIN — no CNS panel exists in it, every CNS cell-type statement is text or table only, and the antibody is not validated in the paper. It also contradicts itself on limbic cortex, text against Table 1. Its blind audit caught a real error of the reader's own, on the islet-versus-acini ranking, and three committed locators now carry declared corrections.",
+    "scientist-b ALDAZ-FT-B-002": "IN FLIGHT — 30619736 then 24932569.",
+    "scientist-c ALDAZ-FT-C-001": "IN FLIGHT — 27869163 then 35409089.",
+    "mirror ALDAZ-VERIFY-W1-20260913": "CLOSED. Both papers REFINED; 53 of 56 and 35 of 36 propositions supported; all four declared locator contradictions confirmed as repairs; the data-independence verdict upheld on every axis; the retirement of DL-MECH-012's three-model convergence count called the best item in either candidate."
+  },
+  "corrections_against_the_orchestrator_itself": [
+    {
+      "what": "My dispatch to scientist-b recorded NCBI efetch db=pmc as returning a 197-byte publisher-refusal stub for its paper.",
+      "measured_by_the_actor": "7,406 bytes of front matter plus the refusal notice.",
+      "disposition": "The actor's measurement stands and mine was wrong for that paper; the 197-byte figure was measured on three other PMCIDs and generalised, which is the error. Recorded here rather than quietly dropped, and the next dispatch tells the actor to measure rather than trust either number.",
+      "why_it_matters": "An acquisition hint that carries a wrong measured value teaches a reader to distrust the hints or, worse, to trust them."
+    }
+  ],
+  "open_scientific_decision_against_my_own_propagation": {
+    "what": "BATCH_20260913_003 propagated a correction to DL-MECH-012 that KEPT the entry's direction and retired only the count as a strength argument. scientist-c's reading of the lung leg (ALDAZ-FT-C-003, commits 066b476, 2e71f1a, cb5d369) shows the direction itself now needs qualifying.",
+    "the_finding": "DL-MECH-012 names three legs — 36828035, 39868255, 38563965 — and PMID 33058734 is NOT among them. That unlisted fourth leg is peer-reviewed, same laboratory, same endothelial knockout, same tissue, and it carries the NULL: it measures lung inflammation twice and does not find it (no significance mark on twelve bars across two figures, verified at 600 dpi; both legend titles state the negative; the authors conclude an inflammation-INDEPENDENT mechanism; the one pathway interrogated was inhibited and did not rescue). So the entry's 'direzione univoca' is univocal partly because the negative leg is unlisted.",
+    "what_the_read_leg_actually_adds": "Not a third independent confirmation. A STIMULUS BOUNDARY — mechanical yes, infectious no — plus a selective intervention (dual silencing cuts IL-8 by 35% and leaves IL-6 ns), a named upstream node, and a MAPK direction correction (ERK and JNK up, p38 DOWN). Power and stimulus change together across the pair and cannot be separated by it.",
+    "the_revival_trigger_i_wrote_is_answered": "The compartment-boundary paragraph I propagated set a REVIVAL_TRIGGER: read 38563965 and record its system, species and whether basal endothelial WWOX is detectable. Answer: cultured human pulmonary artery endothelial cells plus FACS-sorted mouse lung endothelium plus whole-animal VILI; human and mouse; and basal endothelial WWOX IS detectable by two independent methods. So the PREMISE: DEFAULT_FROM_TEXTBOOK dissolves, and the atlas finding and the knockdown phenotype are COMPATIBLE, NOT RECONCILED — capillary in fixed tissue versus artery in culture. Whether human capillary endothelium in situ expresses WWOX is left open.",
+    "status": "OPEN — not propagated, not closed here, and deliberately not rewritten as a new synthesis. It rests on a reading that has NOT yet been independently verified; the packets for that verification are prepared and USABLE, and the pass is dispatched when a verifier frees. Only then may a second BATCH_COMMIT touch this entry.",
+    "artefact_pointers": [
+      "disease-models/wwox/research/commit_candidates/CC-20260913-ALDAZ-C003-01.md",
+      "disease-models/wwox/research/2026-09-13_m4b_ALDAZ-FT-C-003_lung_endothelial_pair.md",
+      "disease-models/wwox/research/phase_packets/VERIFY-PMID33058734-20260913.json",
+      "disease-models/wwox/research/phase_packets/VERIFY-PMID38563965-20260913.json"
+    ],
+    "why_this_is_recorded_against_myself_and_not_filed_quietly": "I propagated the edit; an actor I chose precisely because it had no stake in that edit found what the edit still overstated. That is the control working, and it is worth more in the record than a clean-looking batch."
+  },
+  "impediments_open_at_this_point": [
+    {
+      "what": "The publication gate BLOCKS: PARENT_OF_ORIGIN_PAIRING at disease-models/wwox/research/deepdive_manifests/PMID24369382.json:306 — 'Maternal and paternal disease-model sides are paired in one record, with no published study to attribute them to.' VERDICT BLOCK_PUBLICATION, BLOCKS 1.",
+      "whose": "scientist-a's file, and that actor is alive and mid-lot. A red caused by a peer's file is REPORTED, not repaired: the orchestrator sent it the block, the line, and a starting read, explicitly labelled as not a verdict.",
+      "orchestrator_read_offered_to_the_actor": "The locator carries the segregation proposition naming 'mother I-2 in Family 1 and father I-1 in Family 2'. Those parental sides belong to a PUBLISHED consanguineous pedigree in Brain 2014, which is the attribution the rule asks for, so this looks like the gate firing on a bibliographic citation rather than on an unattributed individual-level pairing. The actor decides against the source and the rule; it was told explicitly not to weaken a true proposition to turn a gate green, and that a declared finding against the check is a legitimate outcome.",
+      "consequence_for_this_batch": "It gates the ordinary BATCH_COMMIT. No batch runs while the publication gate is red, and none runs while children are writing either.",
+      "state": "RESOLVED 2026-09-14, verified and not assumed. The publication gate now returns VERDICT PASS with BLOCKS 0 and zero [BLOCK] lines, and the manifest locator that had caused the red is now emitted only under the gate's ATTRIBUTED code at REVIEW severity, i.e. explicitly not blocked. The orchestrator's offered reading was the correct one: the check was firing on a bibliographic citation of a published pedigree, and the rule now attributes-and-reviews such a citation instead of blocking it. CONSEQUENCE: BATCH_20260914_005 did NOT run against a red gate. The original BLOCK text in the 'what' field above is preserved as written rather than rewritten.",
+      "correction_against_myself_2026_09_14": "While recording this resolution I first pasted the gate's own message text into this record, together with the phrase naming the persistent genotype of this edition. That combination is exactly what the gate's test suite forbids: a published-study citation normally downgrades a paired-parental-sides finding to REVIEW, but naming that genotype inside the same window cancels the downgrade. My paste therefore turned a clean gate into BLOCKS 2 and flipped a neighbouring pre-existing line from ATTRIBUTED to blocking, with the pre-existing text unchanged. Rewritten above without quoting the trigger wording. The lesson is narrow and real: quoting a privacy check's message verbatim into a tracked record can reproduce the very pattern the check exists to catch."
+    }
+  ],
+  "corrections_against_the_orchestrator_itself_4": [
+    {
+      "number": 6,
+      "what": "I recorded, in this file and in the checkpoint, that scientist-c's lung leg showed DL-MECH-012's DIRECTION needed qualifying because the unlisted fourth leg 'measures lung inflammation twice and does not find it'.",
+      "why_it_was_too_strong": "The W4 verification confirmed the claim in all seven checkable components — 33058734 is genuinely absent from the entry's leg list, both legend titles state the negative verbatim, the inflammation-independent conclusion is verbatim, JNK was inhibited without rescue, no significance mark on any bar — and then qualified it where I had not: the sentence is true of the two BAL measurements and NOT of the paper. That paper measures inflammatory output a THIRD time, in endothelial cells sorted from the same animals, and FINDS IT SIGNIFICANT on all three analytes. The producer recorded this in its own locators and dossier; my brief and my record omitted it.",
+      "the_correct_framing": "The qualification is COMPARTMENT- AND STIMULUS-BOUNDED, not a reversal of direction: BAL-level inflammation is not found under infectious challenge, while endothelial-compartment inflammation in the same animals is. And a non-significant n=3 comparison with overlapping error bars is NOT a demonstrated null — which is the same discipline this batch applied to the microglial-abundance arm of CLAIM 006 and which I failed to apply to my own summary.",
+      "consequence": "The second BATCH_COMMIT must propagate the BOUNDED qualification, not mine. The verification also found the three narrowings in that lot were all UNDERSTATEMENTS — 24 unmarked bars across the pair rather than the twelve stated — so the producer under-claimed and I over-generalised in opposite directions on the same figures."
+    },
+    {
+      "number": 7,
+      "what": "STRUCTURAL, and a verifier found it about my practice rather than about a document: my commit subjects carry conclusions, and `git log` subjects stated the W4 objects' conclusions before that verifier opened its packet, so its blinding was partial.",
+      "why_it_matters": "The verification packet exists to let a pass form expectations from sources before meeting a producer's verdict. A commit subject that names the verdict defeats that firewall from outside the packet, and no packet check can see it. The actor declared the exposure itself rather than letting it pass silently, which is the only reason it is known.",
+      "what_i_did_about_it_and_what_i_could_not": "I could not retroactively remove it: the subjects are in history. For the W5 dispatch I told the actor the exposure exists, that it is mine and not its own, and to declare explicitly which expectations were formed before and after reading them. What I have NOT done is change the practice, because a commit message that hides what a commit contains is worse than one that spoils a firewall — the honest fix is a packet whose firewall does not depend on my prose, and that is a harness change outside this mandate. Recorded as a real limitation of this batch's blinding, not as a solved problem."
+    }
+  ],
+  "corrections_against_the_orchestrator_itself_3": [
+    {
+      "what": "My ALDAZ-VERIFY-W3 brief instructed the verifier to check that each of the two 2005 papers delegates the antibody's characterisation to 'its ref 12', and that ref 12 is PMID 14526170.",
+      "why_it_was_wrong": "True of the breast paper; FALSE of the ovarian one, whose ref 12 is PMID 15692750 while 14526170 is its ref 2. I generalised one paper's reference numbering onto the other, which is the same error class as the 197-byte efetch figure I gave scientist-b earlier: a measured particular restated as a general.",
+      "how_it_was_caught": "The verifier judged the source rather than my instruction, found the numbering itself, completed the chain check on the real references, and reported the dispatch's imprecision instead of silently working around it.",
+      "consequence": "None to the finding — the delegation chain claim survives, because what matters is that both papers defer and where they defer to, not the ordinal. The consequence is to my briefs: a factual pointer I write is my belief, not evidence, and the W4 brief now says so explicitly and tells the actor to treat every pointer in it that way.",
+      "count": "This is the fourth correction against the orchestrator recorded in this batch: the efetch byte figure, the commit-before-gate sequencing, the false 'convergence appears nowhere' clause in the synthesis, and this."
+    }
+  ],
+  "corrections_against_the_orchestrator_itself_2": [
+    {
+      "what": "The commit of the synthesis repairs (bd6a517) was run in a command chain that printed the gate verdict but did not gate on it, so the commit landed before the BLOCK was read.",
+      "consequence": "The commit itself is clean — it touched one file, the synthesis document, and did not capture the blocking manifest, which is a peer's and was already committed by its author. But a gate read after a commit is not a gate, and a session that reports 'gate PASS' from a chain like that would be asserting something it had not checked.",
+      "disposition": "Recorded here rather than quietly fixed. The rule for the rest of this batch: the publication gate is read BEFORE the commit it is supposed to authorise, and no BATCH_COMMIT is run on a red gate."
+    }
+  ],
+  "api_events_register": {
+    "why_this_block_exists": "The operator reported observing API safeguard errors carrying Details: [bio] and asked that each event be recorded with agent/task, time, Request ID, the operation involved and its subsequent outcome — and that an API error never be allowed to pass as a reading or a verification that happened, nor to disappear from the coverage account.",
+    "what_i_can_and_cannot_see": "🔴 SUPERSEDED 2026-09-14, and the distinction inside it matters so it is corrected rather than struck. WHAT WAS TRUE: no safeguard event appears in this ORCHESTRATOR session's own transcript — the 67 events are in the CHILDREN's transcripts, so the scope clause was accurate. WHAT WAS FALSE: the justification that followed, namely that those JSONL files are ones 'this session is instructed not to read'. They are readable by targeted grep and per-line JSON parsing, which is exactly how I verified every child's effective model all day. So the events were reachable throughout and I did not reach for them. WHAT WAS RIGHT AND I KEEP: refusing to manufacture entries for events I could not see. The failure was not fabrication, it was incuriosity about a surface I had already proved I could query. ORIGINAL TEXT: 🔴 NO safeguard event with Details: [bio] appears anywhere in this orchestrator session's own transcript. What I observed and can document are TWO rate-limit refusals, which are a different class and are recorded as such below. The operator's observations may come from the children's own transcripts, which are JSONL files this session is instructed not to read. I am therefore NOT asserting that no such event occurred — only that none is visible to me, and I will not manufacture entries for events I cannot see.",
+    "observed_events": [
+      {
+        "class": "RATE LIMIT — not a safeguard refusal",
+        "agent_task": "mirror · ALDAZ-VERIFY-W2-20260913",
+        "time_utc": "approximately 16:03, reported at notification",
+        "request_id": "req_011Cf1iodb6VTeFoZSNJbZp1",
+        "http": "429, error type rate_limit, 'You've hit your session limit, resets 4:30pm (UTC)'",
+        "model_sent_to_api_as_reported_by_the_runtime": "claude-opus-5",
+        "operation_involved": "Part 1 of the second verification pass — the 44-proposition verdict on PMID 16941225 — plus the gathering of Part 2 evidence.",
+        "subsequent_outcome": "COMPLETED, in two steps and with one real loss recovered. The deliverable was WRITTEN but NOT committed when the session died; the orchestrator committed the file unmodified at 106dcd1 on the dead actor's behalf so the work was not lost, and left its task record untouched because only that actor could say what it judged. A replacement session then confirmed Part 1 as already durable, did not redo it, and completed Part 2 plus the synthesis verification (9c025ae, ddc5996, 7b116eb). One residue is recorded and not papered over: the report's own section 0 promises a section 9 that was never written, and whether the withheld files had been opened is NOT determinable from the artefacts."
+      },
+      {
+        "class": "RATE LIMIT — not a safeguard refusal",
+        "agent_task": "scientist-a · ALDAZ-FT-A-002 continuation 2, reading PMID 24369382",
+        "time_utc": "approximately 16:00, reported at notification",
+        "request_id": "req_011Cf1iZLSq3pBzoGqZLCaCB",
+        "http": "429, error type rate_limit, 'You've hit your session limit, resets 4:30pm (UTC)'",
+        "model_sent_to_api_as_reported_by_the_runtime": "claude-opus-5",
+        "operation_involved": "The reading of PMID 24369382 — the article and all four figures were open, no manifest and no receipt written yet.",
+        "subsequent_outcome": "COMPLETED by a replacement session under the same ACTOR_ID, which began at M2 because the acquisition was already fingerprinted on disk. Receipt FTR-20260913-24369382-01 (complete_fulltext_read, first_read naming the legacy reconstruction), manifest STRICT PASS 0 gaps, 35 locators, dossier, M4b note, candidate, FT-099."
+      }
+    ],
+    "coverage_consequence_stated_explicitly": "Neither refusal was allowed to count as a reading or a verification. In both cases the step was re-executed or completed by a replacement with a self-sufficient brief, and the receipt ledger shows only what was actually read: 166 chained events, 9 distinct PMIDs at complete_fulltext_read in this batch. An API error is not a reading, and no coverage figure in this batch rests on one.",
+    "model_pin_verification": "Every child was dispatched with the model parameter set explicitly to opus. The runtime's own error payloads independently confirm 'model sent to the API: claude-opus-5' for both refusals above, which is the verifiable evidence available here. No automatic model change is visible in anything this session can inspect, and no change to Fable was requested or made.",
+    "conduct_rules_followed": [
+      "No request was retried indefinitely: each refusal ended its session, and a replacement was dispatched once, with a checkpoint brief, rather than the same call being repeated.",
+      "No source, citation or scientific term was altered to get past any filter. The batch's wording changes were all driven by verification findings against sources, and each is traceable to the audit or verification that forced it.",
+      "No new tool and no infrastructural project was started in response to these events."
+    ],
+    "distinction_for_the_final_report": "🔴 These two events are QUOTA refusals (HTTP 429, session limit, reset 16:30 UTC). They must not be reported as safeguard refusals, and any safeguard event with Details: [bio] that the operator observed is NOT among them and is NOT visible in this session — that gap is itself part of the account.",
+    "CORRECTION_20260914_the_premise_of_this_block_was_wrong": "🔴 This block said no safeguard event with Details: [bio] appears anywhere, and justified that by saying the children's transcripts are JSONL files this session is instructed not to read. BOTH HALVES WERE WRONG. The transcripts are readable — reading them WHOLE would overflow context, but targeted greps and per-line JSON parsing are exactly what I have used all day for model verification. And the events are there: 67 deduplicated safeguard refusals across 12 of 65 child transcripts. I did not find them by looking for them; I found them because an anomaly in my own model-verification counting did not add up. For the whole mandate I counted the 'model' field and refusals never matched my pattern — the same failure class recorded four times already: a sweep measures what it was built to look for.",
+    "safeguard_events_bio_measured_20260914": {
+      "total_deduplicated": 67,
+      "children_affected": "12 of 65",
+      "how_counted": "Each event appears TWICE in a transcript: once as an assistant turn with model claude-opus-5 and stop_reason 'refusal', and once as a twin entry with model '<synthetic>' at the same millisecond. Raw line counts (134) would double it. Deduplicated per msg_id.",
+      "refusal_text_verbatim": "API Error: Opus 5 (1M context)'s safeguards flagged this message (https://www.anthropic.com/legal/aup). Our intentionally broad safeguards allow us to deliver more capabilities faster, but can sometimes flag legitimate coding, cybersecurity, and biology tasks. Claude Code can't respond to this message with Opus 5 (1M context). ... Details: `[bio]` ... Request ID: req_011Cf1c82xU4av9RizHsdjRx",
+      "per_agent": [
+        {
+          "agent": "a28cadd89c857fd76",
+          "task": "ALDAZ-FT-A-001",
+          "events": 3,
+          "window_utc": "2026-09-13T13:28:22 → 13:28:42"
+        },
+        {
+          "agent": "a16fdf01759abd165",
+          "task": "ALDAZ-FT-B-001",
+          "events": 7,
+          "window_utc": "2026-09-13T14:32:02 → 15:01:06"
+        },
+        {
+          "agent": "a10896fb31374bca6",
+          "task": "ALDAZ-VERIFY-W1-20260913",
+          "events": 6,
+          "window_utc": "2026-09-13T14:36:22 → 14:56:34"
+        },
+        {
+          "agent": "aef8d0e4ff65d7d56",
+          "task": "ALDAZ-FT-B-001 / ALDAZ-FT-B-002",
+          "events": 7,
+          "window_utc": "2026-09-13T15:20:34 → 15:45:26"
+        },
+        {
+          "agent": "a3e9bf6f010e6c1d8",
+          "task": "ALDAZ-REPAIR-B-20260913",
+          "events": 15,
+          "window_utc": "2026-09-13T16:47:20 → 17:17:56"
+        },
+        {
+          "agent": "a8ab72aad17ebf79b",
+          "task": "ALDAZ-RESIDUAL-A-20260913",
+          "events": 1,
+          "window_utc": "2026-09-13T18:02:18 → 18:03:30"
+        },
+        {
+          "agent": "a1c8dc1019ea646bf",
+          "task": "ALDAZ-FT-B-003",
+          "events": 6,
+          "window_utc": "2026-09-13T18:11:24 → 18:40:44"
+        },
+        {
+          "agent": "a2b0281c2be00b72d",
+          "task": "ALDAZ-REEXAM-B-20260913",
+          "events": 1,
+          "window_utc": "2026-09-13T22:56:22"
+        },
+        {
+          "agent": "a8a31b9e0a44a6fe5",
+          "task": "ALDAZ-VERIFY-A-20260914",
+          "events": 1,
+          "window_utc": "2026-09-14T06:00:30"
+        },
+        {
+          "agent": "a1a10e5cecdc46638",
+          "task": "ALDAZ-VERIFY-W6-20260914",
+          "events": 2,
+          "window_utc": "2026-09-14T06:02:35 → 06:02:57"
+        },
+        {
+          "agent": "af0dcb759c7ff23a3",
+          "task": "ALDAZ-DOSSIER-FIX-C-20260914",
+          "events": 3,
+          "window_utc": "2026-09-14T06:20:16 → 06:28:47"
+        },
+        {
+          "agent": "a38b8b0b8f4a422ad",
+          "task": "blind R4 locator audit (no ALDAZ task id by design — blinding)",
+          "events": 15,
+          "window_utc": "2026-09-14T06:26:20 → 06:28:46"
+        }
+      ],
+      "what_the_refusals_actually_hit": "🔴 NOT the biological content. In the blind-audit transcript, where I traced every event to the tool call immediately preceding it, the refusals fall on Bash reading XML files ALREADY LOCAL, on Write and Edit into the session scratchpad, and on one truncated command 'cd /home/desktop/legend-'. So the trigger is the shape of the request, not the subject matter. No actor was instructed to alter a source, a citation or a scientific term to evade a filter, and none reported doing so.",
+      "outcome_per_the_operator_question": "COMPLETED AFTER RETRY — not blocked, not skipped. Every affected child delivered its deliverable and committed it: the blind audit produced all three verdicts with its own pixel and gene-list measurements despite 15 refusals in 146 seconds. So no reading and no verification is missing on account of a safeguard event. THAT IS THE LIMIT OF WHAT I CAN ASSERT: I verified delivery and commit, not that no intermediate measurement was silently abandoned mid-refusal.",
+      "the_violation_that_did_occur": "🔴 The children RETRIED. In the blind audit the same refusal recurs at 06:26:20, 06:26:32, 06:26:50, 06:27:01, 06:27:09 — a retry cadence of roughly 10-20 seconds. The mandate forbids reiterating the same request indefinitely, and none of my briefs told the actors what to do on a safeguard refusal. That omission is mine: I briefed them to RECORD such events and never told them not to retry into one.",
+      "distinguished_from_quota": "These are safeguard refusals with Details: [bio] and a req_ id, arriving as stop_reason 'refusal'. They are a DIFFERENT CLASS from the two HTTP 429 rate-limit refusals recorded above, which killed two children outright. Safeguard: retried and completed. Quota: terminated the actor."
+    },
+    "2026_09_14_session": "2026-09-14 SESSION, MEASURED AND NOT ASSUMED: ZERO API safeguard events across all four children dispatched today (the two authorised readings ALDAZ-FT-A-003 and ALDAZ-FT-B-003/-B-005, the isolated-session bootstrap probe, and the running ALDAZ-CONSULT-READS-20260914). METHOD, stated so it can be re-run or disputed: a COUNT-ONLY grep over each child task output file for the two signatures this register established on 2026-09-13 - '\"stop_reason\":\"refusal\"' and '\"model\":\"<synthetic>\"' - with no content read, because reading those transcripts in full would overflow the coordinator context. RESULT: refusal_lines 0 and synthetic_twins 0 in all four files (2.08 MB, 7.90 MB, 0.18 MB and 2.13 MB respectively). The 2026-09-13 caveat still applies to any future non-zero count: raw line counts DOUBLE the true event number, because each refusal carries a synthetic twin at the same millisecond. ONE HONEST LIMIT: the consultation was still writing when the scan ran, so its count is \"zero so far\" rather than final, and no child report mentioned a refusal. This closes an observation I had explicitly flagged as unverified rather than leaving it as silence - but it is a measurement of THESE four transcripts, not a general claim about the runtime."
+  },
+  "DECISIONS_TAKEN": [
+    {
+      "what": "scientist-c was dispatched on 27869163 + 35409089, anticipated from a later wave.",
+      "alternatives_rejected": "Leaving C idle; or re-reading 41562193 to occupy it.",
+      "why": "The operator asked for C to be used where its contract is pertinent and not merely to fill a slot. 27869163 is reference 19 of 41562193, which C read in full on 2026-09-09, and is the open queue debt FT-085 — its own reading's unread antecedent. 41562193 is NOT re-read: its reading is complete and reusable.",
+      "reversibility": "Full; nothing canonical is touched by a reading.",
+      "how_to_revert": "Close the lot as abandoned in the contract; the receipts and manifests remain valid work."
+    },
+    {
+      "what": "The independent verification of wave 1 took the third slot ahead of a wave-2 lot for scientist-a.",
+      "alternatives_rejected": "Three readers in parallel with verification deferred to the end.",
+      "why": "Verification gates integration, a producer may not verify itself, and deferring it would have piled unverified readings against the end of the mandate.",
+      "reversibility": "n/a",
+      "how_to_revert": "n/a"
+    },
+    {
+      "what": "Verification packets are persisted under disease-models/wwox/research/phase_packets/ and committed.",
+      "alternatives_rejected": "Passing the packet content inline to the verifier, or leaving it unpersisted.",
+      "why": "A packet a run was measured against is that run's evidence — the tool itself refuses to overwrite one — and on 2026-09-12 three pilot packets were regenerated in place and could afterwards be reconstructed only from accidents.",
+      "reversibility": "Full",
+      "how_to_revert": "Delete the packet files; the command regenerates them from artefacts."
+    }
+  ],
+  "DEFAULTS_TAKEN": [
+    {
+      "condition": "quota_state.py read returned STALE (281 minutes old against a 30-minute limit).",
+      "default_taken": "Declared what is and is not measurable and proceeded without a quota measurement; no waiting loop and no retry cycle.",
+      "why_safe": "The mandate forbids presuming a global quota reading or recognising a reset from a stale cache, and the work does not depend on the figure.",
+      "what_would_have_differed": "A poll loop burning the margin it was meant to protect."
+    },
+    {
+      "condition": "scientist-a closed its lot before the concurrency limit was raised, so its slot was free while its work was unverified.",
+      "default_taken": "Filled the freed slot with the independent verification rather than a new reading for the same actor.",
+      "why_safe": "It keeps producer and verifier distinct and puts the gating work first.",
+      "what_would_have_differed": "More readings produced, none of them verified, with the verification queue pushed into the final hour."
+    },
+    {
+      "condition": "The candidate backlog stands at 29 on disk, 27 of them inherited from earlier batches.",
+      "default_taken": "Recorded the perimeter now; the ordinary BATCH_COMMIT of this batch will state which candidates it propagates and which it defers with reasons, without being forced to consume the whole inherited queue.",
+      "why_safe": "Phase-7 deferral means all-or-nothing never forces consuming the queue, and the inherited items belong to decisions outside this mandate.",
+      "what_would_have_differed": "Either an unbounded batch or a false claim that the backlog was cleared."
+    }
+  ],
+  "STOP_LOG": [],
+  "remote": "No push.",
+  "AUTHORISED_QUEUE_20260914": {
+    "_note": "Operator-authorised ordered queue, 2026-09-14. Persisted in the EXISTING task ledger; no second registry created. A completed propagation, wave or objective does NOT close the queue.",
+    "OBJ_1_scientific_completion": {
+      "order": 1,
+      "steps": [
+        {
+          "step": "propagate BATCH_20260914_005 (prepared, NOT applied)",
+          "status": "DONE",
+          "evidence": "BATCH_20260914_005 propagated, 15 field-level edits across 9 files, committed 56174f1"
+        },
+        {
+          "step": "Phase 4.7 regeneration",
+          "status": "DONE",
+          "evidence": "coverage_report, batch_queue, pathograph inventory + export, surface_census regenerated, all rc=0"
+        },
+        {
+          "step": "Phase 5 LINT",
+          "status": "DONE",
+          "evidence": "LINT PASS post-propagation (and again after the report and task record were written)"
+        },
+        {
+          "step": "Phase 6 manifest to WM_v4.9",
+          "status": "DONE",
+          "evidence": "manifest at WM_v4.9, last_batch_commit_id BATCH_20260914_005, current_state restored to READY"
+        },
+        {
+          "step": "Phase 7 dispositions",
+          "status": "DONE",
+          "evidence": "append-only BATCH DISPOSITION appended to CC-20260913-ALDAZ-B002-01; Phase 7.1 established as NOT owed, with the reason"
+        },
+        {
+          "step": "Phase 8 report",
+          "status": "DONE",
+          "evidence": "2026-09-14_BATCH_20260914_005_report.md written; legend_activity_log.md does not exist in this deployment and was not fabricated"
+        },
+        {
+          "step": "reconcile ALL 32 original PMIDs against current receipts AND verifications",
+          "status": "DONE",
+          "evidence": "Roster taken from the intake record ALDAZ-INTAKE-20260913, whose SCOPE and classification fields independently carry the same 32 ids. Result: 19 of 32 carry complete_fulltext_read receipts, 0 partial, 13 no receipt at all; 15 of 32 are named in a record under research/verifications/. Written up in disease-models/wwox/research/2026-09-14_aldaz_32pmid_reconciliation.md, including two findings the table produced: PMID 33058734 is read completely and has NO PAPER record, and PMIDs 17823927 and 18452537 are absent from paper_registry entirely."
+        },
+        {
+          "step": "read PMID 28283473 (FT-100 antecedent) — NEWLY AUTHORISED",
+          "status": "DONE",
+          "evidence": "PMID 28283473 read to complete_fulltext_read by scientist-a, receipt FTR-20260914-28283473-01, committed 5e7af09. VERIFIED BY ME INDEPENDENTLY: deepdive_manifest --verify-artifacts --require-current-schema returns strict PASS with 0 gaps; evidence_presence 7/7 present and digest-matching; the manifest carries 32 locators (23 body, 9 figure); the receipt coverage map reads abstract/introduction/methods/results/figures/discussion/limitations/references all \"read\" with tables and supplementary \"not_present\" and NO \"not_read\"; chain OK at 173 with the tail anchored. Retrieval note recorded by the actor: no structured XML exists for this article (the publisher refuses it in an efetch comment), so the surface is the PMC reader HTML, won after 13 failed routes by sending no User-Agent, and no PDF text layer backs any locator.",
+          "answer_to_the_question_that_made_it_necessary": "THE POSITIVE LUNG LEG IS REAL AND STRONGER THAN THE CORPUS RECORDED: WWOX knockdown ALONE, with no stimulus, is asterisked on ALL EIGHT quantitative panels of Figure 1 - BALF leukocytes, neutrophils, protein, FITC-dextran, IL-6, IL-1beta, KC and MIP-2 - so counts AND cytokines AND histology. BUT THE MODEL IS NOT WHAT THE CORPUS CALLED IT: not whole-body and not a knockout, but a single intratracheal 10 mg/kg siRNA into WILD-TYPE mice, n = 3 per group, while the caption calls it \"n = 3 independent experiments\" - a replication structure the design does not contain. The affected compartment is epithelium-weighted BY CITATION and not measured, and no endothelial cell is measured anywhere. \"Global\" is modified by \"lung\" in both places the authors use it. CONSEQUENCE FOR THE CORPUS QUESTION: the two papers DO NOT CONTRADICT - positive for acute/airway/epithelial, negative for chronic/endothelial - and perturbation, compartment and duration differ SIMULTANEOUSLY, so which of the three explains the split stays open. Also recorded: JNK inhibition works in vivo here where it failed in the endothelium, but it ATTENUATES WITHOUT NORMALISING, visible only in the panel.",
+          "defect_this_creates_in_my_own_work": "FT-100 is my surface and my wording, and it frames this paper as \"l'antecedente A CORPO INTERO\" - the whole-body antecedent - in its heading and again in its body. If \"global\" is modified by \"lung\" in the source, that scope is one I imported in translation, and it would be FT-100 THIRD correction after the bar count. To be verified against the manifest locators before editing: a child report is not a source, and producer is not verifier applies to its findings exactly as it applies to mine.",
+          "not_integrated_pending_21d": "CC-20260914-28283473-01 is PROPOSED, not applied. Any registry consequence is a non-zero scientific delta and requires the mandatory 21d Mirror consultation first.",
+          "exposure_declared": "NOT blind and not described as blind: it launched after commits whose subjects state conclusions, including one naming FT-100 own conclusion - the sharpest case of the leak the isolated-session probe proved the same day. Recorded against my dispatching practice, not against the actor.",
+          "residual_that_touches_an_existing_record": "The dependency screen flagged an Expression of Concern (PMID 28373548) on reference 22 = PMID 16223882, a paper ALREADY READ here with its own receipt. Citing relation here is citation-only background and nothing in this reading rests on it, but it bears on THAT record. Named as a residual for a batch; not acted on outside the canonical path."
+        },
+        {
+          "step": "read PMID 30285739 (VOPP1 antecedent, Bonin 2018) — NEWLY AUTHORISED",
+          "status": "DONE",
+          "evidence": "PMID 30285739 read to complete_fulltext_read by scientist-b, receipt FTR-20260914-30285739-01, committed 248105c. VERIFIED BY ME INDEPENDENTLY, not taken from the child report: deepdive_manifest --verify-artifacts --require-current-schema returns strict PASS with 0 gaps; evidence_presence returns 23/23 artefacts present and digest-matching; the manifest itself carries 41 locator entries (25 body, 16 figure; 19 text_confirmed_by_panel, 16 text_only, 6 panel_only); fulltext_receipts verify returns OK with 173 chained and the tail anchored. SUBSTANTIVE RESULT, AND IT RUNS OPPOSITE TO THE EXPECTED DIRECTION: the corpus credit for this paper is CORRECT AND UNDERSTATED. It demonstrates WWOX-VOPP1 by three routes - Y2H, reciprocal co-IP of over-expressed proteins, AND an ENDOGENOUS co-IP from MDA-MB-468 with an IgG control, neither partner over-expressed, which is the one datum Hussain 2018 lacks. WW1/PPPY dependence IS mutation-tested on both sides: WWOX Y33R abolishes the co-IP, and of VOPP1 three PPxY motifs only Y165A abolishes it while Y119A retains binding, with a whole-cell-lysate row proving the mutants are expressed. DIRECTNESS IS STILL NOT ESTABLISHED by either paper: zero occurrences of recombinant/GST/purified, no biophysical measurement, and the paper never itself claims direct binding. No neural material, no WWOX variant, T3.",
+          "what_it_does_not_change": "CLAIM 026 Summary sentence landed this morning - WW1-dependence shown for SEC23IP and SCAMP3 only, VOPP1 has no pull-down HERE - remains TRUE, because it is scoped to Hussain 2018. The child kept it verbatim and proposes only an ADDITION. Nothing is retracted and the metabolic half is untouched.",
+          "not_integrated_pending_21d": "CC-20260914-30285739-01 proposes adding one sentence to CLAIM 026 trafficking half. That is a NON-ZERO SCIENTIFIC DELTA, so under 21d it requires the mandatory Mirror consultation before it reaches canon. It is NOT integrated, and a child candidate is never folded into the registry on the producer word - producer is not verifier. Queued for consultation as soon as mirror is free; mirror is presently mid-assignment on the f3eb7d5 clause re-examination.",
+          "exposure_declared": "This reading is NOT blind and is not described as blind. It launched after commits whose subject lines state conclusions, and the isolated-session probe proved the harness injects the recent-commit block before any action. Its own report states the risk here ran OPPOSITE to the usual one: reading to confirm the Hussain-shaped expectation would have UNDER-reported mutation-tested WW1/PPPY dependence and the endogenous co-IP.",
+          "registry_mirror_defect_found_and_named": "PMID 30285739 sits in canon as CORPUS-STUB-165, Status not_processed, Registry role corpus placeholder only, Claim links NONE, while three working documents of this batch call it THE ONLY INDEPENDENT SUPPORT for a live claim. That is the exact mirror image of the declaration-is-not-attestation ratchet: real support with NO registry record, which no current check can see - the ratchet only looks for declarations lacking receipts, never for receipts and reliance lacking a record. Promotion of CORPUS-STUB-165 and completion of LIT-0181 belong to a BATCH_COMMIT and are named here as a residual, not done outside the canonical path.",
+          "orchestrator_error_recorded": "I dispatched this lot under TASK_ID ALDAZ-FT-B-003, which was ALREADY SPENT and COMPLETE for a different lot (the 15982416/15692750 antibody-validation pair). I invented the identifier without reading the actor own ledger. The actor refused to overwrite the completed record - correctly, since deleting the only description of that lot is irreversible destruction of unique material and reserved under 21d - and reported the collision instead. Re-pointed to a free identifier, ALDAZ-FT-B-005; ALDAZ-FT-B-003.json is left byte-identical, and the artefacts keep the dispatched label with the new record as the reconciling pointer."
+        },
+        {
+          "step": "recover artefacts needed to verify/correct entries[19] of PMID42128308 and the other named locators",
+          "status": "BLOCKED",
+          "evidence": "SPLIT, because the step bundles two different situations and only one is blocked. (1) THE OTHER NAMED LOCATORS ARE NOT BLOCKED: evidence_presence --pmid 24369382 returns COMPLETE, 16/16 artefacts present and digest-matching, so entries[13] (the PPPY peptide pull-down, the only functional assay in that paper) and entries[30] (the 600 dpi figure attestation qualifying the paper own absolute negative, panel_text_relation panel_qualifies_text on entries[14]) need NO recovery at all - their artefacts are on disk now. That half of this step is discharged. (2) PMID42128308 entries[19] REMAINS BLOCKED, and the local route is now exhausted by measurement rather than by assumption: evidence_presence returns 0/6 present, and a filesystem sweep for *42128308* across the repository, all nine detached worktrees and the scratchpad found THIRTY paths - every one of them either the manifest or the partial-locators dossier, and NOT ONE of the six artefact bytes (PMID42128308_Aqeilan2026.pdf, its _fitz.txt text layer, and four 300 ppi figure rasters). files/figures/ does not even exist in this checkout. So the mandate ordered route - accessible paths and worktrees FIRST - returns a genuine negative. NEXT: the permitted acquisition route, attempted once and its cascade recorded whatever the outcome. No audit will be written on an absent surface: entries[19] asserts a dissociation between protein level and organoid phenotype, and a blind audit over artefacts nobody has could only certify nothing. || CASCADE COMPLETED 2026-09-14: (a) evidence_presence --pmid 42128308 = 0/6 present; (b) filesystem sweep for *42128308* across the repository, all nine detached worktrees and the scratchpad = 30 paths, every one the manifest or the partial-locators dossier, NOT ONE of the six artefact bytes, and files/figures/ does not exist in this checkout; (c) PubMed metadata = the record EXISTS (Obeid, Wang, Abudiab, Akkawi, Aqeilan 2026, Neurobiology of Disease 225:107446, DOI 10.1016/j.nbd.2026.107446, a REVIEW); (d) copyright/PMC status = Elsevier, \"All rights reserved\", is_open_access false, pmc_id null, found_in_pmc 0 - so get_full_text_article has no PMC id to fetch and there is no permitted automated route left. WHAT WOULD OVERCOME IT: the operator supplying the PDF through institutional access, which is exactly how PMID 19500159 and PMID 17803050 were obtained after their own automated cascades refused. WHAT CONTINUES MEANWHILE: everything else; this block is local to one locator of one manifest. NO AUDIT WILL BE FABRICATED: entries[19] asserts a dissociation between protein level and organoid phenotype, and a blind audit over artefacts nobody holds could only certify nothing. ONE REAL ALTERNATIVE, PROPOSED AND NOT SILENTLY TAKEN: entries[19] restates Steinberg et al. 2021 organoid findings inside a review, and that PRIMARY (PMID 34831305) IS read in this repository with receipts. The proposition could therefore be checked against the primary instead of the absent review - but that changes WHAT THE LOCATOR ATTESTS, from \"the review says X\" to \"the primary shows X\", so it is a re-anchoring to be proposed under the contradiction procedure, never a substitution made quietly to turn a block green.",
+          "blocker": "PMID 42128308 full text is not obtainable by any route available to this actor. Named, measured, and not assumed.",
+          "note_2026_09_14": ""
+        },
+        {
+          "step": "triage the eight downstream CLAIM 026 surfaces: updatable vs genuinely blocked, each with dependency and reason",
+          "status": "DONE",
+          "evidence": "Discharged BY BATCH_20260914_005 rather than deferred, which is what the operator asked for: the triage distinguished updatable from genuinely blocked, and ALL EIGHT downstream surfaces proved updatable and were updated in the same act - working_model:63, working_model:176 (the claim-mirror row, all three changed cells), disease_model:29, paper_registry PAPER 032 Role, meta_metabolism:4 and :148, meta_index:174, research_lines RL-MET-002 and RL-ARCH-001 (including withdrawal of \"Current evidence is strong enough\"), research_candidates RC-007. GENUINELY NOT UPDATABLE, with dependency and reason: three append-only audit rows pointing at the retired CORPUS P182 placeholder (paper_registry:2429, :6140, literature_tracking_log:5719) - rewriting an append-only audit trail to match today wording would be worse than the mismatch, so they stay as historical pointers; and analysis/pathograph_inventory.md, which is REGENERATED by Phase 4.7 and must never be hand-edited - it was regenerated. Two heading renames (RL-ARCH-001, RC-007) were checked for inbound wikilinks BEFORE renaming: every reference is by bare ID, so nothing broke, and LINT PASSed after."
+        },
+        {
+          "step": "mint queue entries for the reading debt the two 2026-09-14 readings produced",
+          "status": "DONE",
+          "evidence": "MINTED SEVEN entries, not eight: FT-105, FT-106 and FT-108 through FT-112, appended (never inserted) to the append-only queue. FT-105 = PMID 17178850 at ALTA, the c-Jun sequestration origin that every mechanistic sentence of PMID 28283473 imports and for which this repository held no identity record and no receipt; FT-106 = PMID 16438931 (ezrin-WWOX, WW1 plus PPPPPPVY with Y477 essential by mutagenesis); FT-108 to FT-112 = the five VOPP1 antecedents (25398664, 19525979, 20571887 at ALTA, 21519330, 15735698). THE EIGHTH PAPER WAS NOT MINTED AND MUST NOT BE: PMID 10861292 (Ried 2000, FRA16D sequence and the FOR gene) WAS ALREADY IN THE QUEUE as FT-080, and the duplicate-entry guard skipped it before the append. The ordinal 107 is left UNASSIGNED rather than recycled, so the gap in the numbering stays readable as the mark of a duplicate avoided. CORRECTION AGAINST MYSELF, recorded because it was committed before it was caught: the first version of this evidence field and of the queue closing note both said \"FT-105 to FT-112\" and \"all eight papers\", and this field specifically claimed \"FT-107 = 10861292\". Both were written BEFORE the guard ran and were false the moment it did. The guard is the part that worked; my prose had already contradicted it. Corrected at source in the queue note and here, rather than explained away. All seven identities resolved via PubMed on 2026-09-14 - no title and no identifier from memory, the failure mode that once put an invented title on a PAPER record. ONE FINDING WORTH MORE THAN THE MINTING: three of the five VOPP1 antecedents propose MUTUALLY COMPETING mechanisms - lysosomes (FT-110), oxidative injury (FT-111), NF-kB via IkBalpha (FT-112) - and FT-110, the paper from which this corpus imports VOPP1 lysosomal identity, reports only PARTIAL co-localisation with perinuclear lysosomes and says its own findings \"throw into doubt the hypothesis that VOPP1 interacts directly with cytoplasmic mediators of the NF kappa B pathway\". So these five may not be cited as a convergent line, and the imported lysosomal identity is weaker than the way the corpus cites it. Written into the entries themselves."
+        },
+        {
+          "step": "apply the DL-MECH-012 and DL-REPO-002 clause repair in ONE act, integrating the REFINED verdict with the new lung leg",
+          "status": "DONE",
+          "evidence": "LANDED IN ONE ACT in BATCH_20260914_006, across both entries, after ALDAZ-CONSULT-READS-20260914 returned and after I verified its findings at source. DL-MECH-012: the opening conjunction replaced by an enumeration that excludes nothing (hippocampus with no imposed stimulus, cortex under infectious stimulus, lung airway-delivered with NO stimulus, lung under mechanical stimulus); the GLIOSIS TISSUE corrected from cerebellum to hippocampal DG/CA1/CA3, quoting the paper; and PMID 33058734 re-characterised from \"misura le citochine due volte e non trova differenze\" to the SPLIT result it is. DL-REPO-002: Statement causale, Belief AND its cross-reference, which still described DL-MECH-012 retired wording and was therefore itself a defect - a third piece of the act that neither verdict had named."
+        },
+        {
+          "step": "BATCH_COMMIT the residuals the two readings created (two stub promotions, two LIT completions, the EoC note, the census row)",
+          "status": "DONE",
+          "evidence": "LANDED as BATCH_20260914_006, WM_v4.9 to WM_v4.10. PAPER 094 and PAPER 095 promoted from CORPUS-STUB-091 and -165 with both placeholders preserved append-only; LIT-0114 and LIT-0181 completed; CLAIM 026 Summary, Source, Wikilinks and its claim-mirror source cell moved together. THE EoC RESIDUAL WAS DROPPED BEFORE PROPAGATING, not done: PAPER 082 has carried the integrity hold since BATCH_20260806_002, so writing it again would have been a duplicate record. Report: 2026-09-14_BATCH_20260914_006_report.md. Record: ledger/tasks/orchestrator/BATCH-20260914-006.json. All gates PASS before and after; papers 83 to 85 declared through growth_anchors record."
+        }
+      ],
+      "explicit_authorisations": "The two antecedents are NAMED additions to the corpus, NOT licence to expand recursively. For missing files: search accessible paths and worktrees FIRST, then permitted acquisition routes. NEVER fabricate an audit on an absent surface. If recovery stays impossible, keep the local block and continue on independent work.",
+      "completion": "every one of the 32 PMIDs reconciled against receipt AND verification state; every executable reading/resumption/verification done or blocked with a named impediment"
+    },
+    "OBJ_2_targeted_maintenance": {
+      "order": 2,
+      "A_BLOCK_1": "Establish the REAL contract. If it needs a missing deterministic check, implement it with independent expectations and proof of the defect. If it needs human judgement, make that path explicit. Do NOT invent a software validator and do NOT invent a PASS.",
+      "B_unattested_read_declarations": "Repair the identified consumers so they distinguish legacy declaration / valid receipt / current artefact availability. An absent receipt is NOT proof nobody read it.",
+      "C_recent_commits_bootstrap_leak": "Verify the defect on an ISOLATED session and apply the minimal available fix. Do NOT call a session blind once exposed. 🔴 IF THIS CONDITIONS OBJ_1's NEXT READINGS, DO THIS REPAIR FIRST.",
+      "exclusion": "No general infrastructure review.",
+      "steps": [
+        {
+          "step": "A_BLOCK_1: Establish the REAL contract. If it needs a missing deterministic check, implement it with independent expectations and proof of the defect. If it needs human judgement, make that p",
+          "status": "DONE",
+          "source_key": "A_BLOCK_1",
+          "evidence": "Contract written to disease-models/wwox/research/2026-09-14_block1_real_contract.md, committed 7730c9c. Four referencing sites, NONE a definition (LEGEND_CORE.md:326 and :573, scientist_operating_practice_v1.md:436, unattended_delegation_readiness.md:34); the definition is in the gated file itself. TWO HALVES OF DIFFERENT KINDS: structural (a verdict on every entry; nothing at proposed-to-L9 while flagged) is checkable; substantive (paediatric CNS risk) is clinical judgement and the human path is written out, including that a BLOCK-1 POLICY change is 21d-RESERVED to the operator. MEASURED: 16 real entries, ZERO without a verdict, 17 verdicts, ZERO at proposed-to-L9 so the promotion invariant has an empty population. NO VALIDATOR WRITTEN and the measurement is why: zero violations makes it new tooling for a non-defect, and worse a false reassurance - presence is checkable, presence is not safety. No PASS asserted beyond what was measured, with its date. TWO FALSE POSITIVES OF MY OWN recorded in the document: a grep for ^## HYP returned 0 (headings use three hashes), and splitting on every ### produced 24 pseudo-entries and six phantom missing verdicts that are sub-sections - reporting them would have been an invented defect, the mirror image of an invented PASS."
+        },
+        {
+          "step": "B_unattested_read_declarations: Repair the identified consumers so they distinguish legacy declaration / valid receipt / current artefact availability. An absent receipt is NOT proof nobody read it.",
+          "status": "DONE",
+          "source_key": "B_unattested_read_declarations",
+          "evidence": "DEFECT PROVEN FIRST, THEN FIXED, with expectations fixed in advance. Three new tests in framework/scripts/test_session_self_eval.py (class RegistryDeclarationClearsACitation) were written and RUN RED before any change, each failing for its predicted reason: (1) a declaration spelled \"full text verificato\" did not clear a citation (0 != 1, the paper reported as an unread premise though declared read) - and that spelling is LIVE at paper_registry:687; (2) the STRONGEST form, \"complete_fulltext_read - receipt FTR-...\", was invisible to the check - and BATCH_20260914_005 rewrote PAPER 032 and PAPER 053 into exactly that form hours earlier, so my own batch walked into it; (3) a declaration on ANOTHER record cleared a citation belonging to a record that declared nothing (1 != 0, VERDICT PASS where it should block) - one paper reading credited to another, because the code took blocks[0] of a split on \"## PAPER \", the first record CONTAINING the PMID anywhere including as a cross-reference. FIX: session_self_eval now reuses the SHARED definition - coverage_report.parse_entries plus classify_depth, matching the PMID against each record own Identifier field - instead of being the second implementation of \"what counts as a declaration\" that growth_anchors.measure_registry_only docstring warns will drift invisibly. All three tests now pass; test_coverage_report 11/11 OK; growth_anchors fixture suite PASS. THE THIRD STATE IS NAMED AND DELIBERATELY NOT GATED: current artefact availability is measured by evidence_presence.py and nothing here fails on it, because a fresh clone legitimately holds manifests without artefacts - gating would report a defect where there is only an unfetched file. A new [DECLARATION ONLY] line now prints which premise citations were cleared by a declaration with NO attesting receipt, so the weaker ground stops being invisible.",
+          "consequence_measured_not_assumed": "The fix RAISED the live unread-premise count and turned LINT from PASS to BLOCK_BATCH_COMMIT. Isolating old logic against new on the same tree: OLD 2, NEW 5, SURFACED 3 (PMID 19465938, 22574198, 25538133), HIDDEN BY THE FIX: NONE - so the fix is not over-strict, which was my own worry and is now disproven. Each surfaced PMID own registry presence is a CORPUS/CORPUS-STUB placeholder at depth \"catalogued\", i.e. identity-only and explicitly not a declaration, so all three are genuine debt the blocks[0] bug was hiding. 35328751 (PAPER 023, abstract depth) and 36271927 (no record at all) were already counted before. A live run reported SIX rather than five: the difference is not my logic but the state moving under the measurement - a child appended its receipt between my two runs, which cleared 30285739 and re-anchored the ledger tail in the manifest. Recorded because attributing that to my change would have been wrong.",
+          "pending_and_deliberately_not_done_yet": "The unread_premise_baseline stays at 2 for now and is NOT raised. Two suite tests (test_live_repository_passes, test_live_baseline_is_not_padded) fail on that one pending decision. Reasons for waiting: (a) three children are still landing receipts, so the true count is still moving - setting a baseline mid-flight would immediately be wrong in one direction or the other; (b) the rise is a MEASUREMENT CORRECTION, not new scientific debt, and the record must say so when the number changes; (c) the honest resolution for the three surfaced PMIDs is to DECLARE the debt in the full-text queue with each provenance - the protocol own words are that declared reading debt is legitimate work in progress and silence is not - which lowers the count for the right reason rather than by padding a ratchet upward. No BATCH_COMMIT is pending, so the LINT block costs nothing while this waits."
+        },
+        {
+          "step": "C_recent_commits_bootstrap_leak: Verify the defect on an ISOLATED session and apply the minimal available fix. Do NOT call a session blind once exposed. 🔴 IF THIS CONDITIONS OBJ_1's NEXT READINGS, DO THIS REPAIR F",
+          "status": "DONE",
+          "source_key": "C_recent_commits_bootstrap_leak",
+          "evidence": "VERIFIED ON AN ISOLATED SESSION 2026-09-14. A read-only probe agent, given no context on this mandate and told to run no command and read no file, reported that a git block arrives INSIDE A SYSTEM-REMINDER with the user message, introduced by \"This is the git status at the start of the conversation\", BEFORE any opportunity to act, and quoted it verbatim including branch, git user, modified files and the five most recent commit SUBJECTS. It ran no tool. So the leak mirror W5 declared is a RUNTIME INJECTION into every fresh session, reaching subagents as it reached mirror, and no actor can decline it. The three subjects it quoted back are MINE from today and each states a CONCLUSION. CONSEQUENCE DECLARED: the two readings dispatched today launched after those commits and received them, so they are NOT blind and are not described as blind anywhere; the sharpest case is the FT-100 antecedent reading, shown a subject stating FT-100 own conclusion. Their instructions were NOT changed mid-assignment. MINIMAL AVAILABLE FIX APPLIED: no repo-side code prints that block, so there is nothing here to patch and no validator to invent; the fix I control is COMMIT-SUBJECT HYGIENE - a subject names the SURFACE TOUCHED, never the CONCLUSION REACHED - adopted from commit 3a2f89a onward. History is reserved, so earlier subjects are not rewritten for a cosmetic gain. The harness-side fix is runtime work outside this repository: recorded, not attempted."
+        }
+      ],
+      "_steps_note": "The steps list mirrors the operator prose keys A/B/C so the continuity tool can count them; the prose keys above are the authority and are untouched. The 'exclusion' key is deliberately NOT a step: it is a boundary ('do not open a general infrastructure review'), and converting a boundary into a TODO would make this mandate report outstanding work that does not exist. Recorded because I did convert it by mistake and removed it in the same session."
+    },
+    "OBJ_3_continuity_and_correct_closure": {
+      "order": 3,
+      "what": "Consolidate the EXISTING checkpoint/resume procedure: mandate+authorisations persisted; task/agent/result reconciliation; no duplicate on uncertain activity; unverified repairs kept unverified; resume after compaction; automatic advance to the next authorised objective; recalls deleted ONLY when the whole queue closes.",
+      "where": "Into the appropriate CANONICAL surface, with SHORT cross-references in the contracts. Do not duplicate long instructions. No external watchdog.",
+      "test": "Small cases with expectations fixed in advance. Do NOT change the instructions of a child mid-task: apply to subsequent launches.",
+      "steps": [
+        {
+          "step": "what: Consolidate the EXISTING checkpoint/resume procedure: mandate+authorisations persisted; task/agent/result reconciliation; no duplicate on uncertain activity; unverified repairs kep",
+          "status": "DONE",
+          "source_key": "what",
+          "evidence": "CONSOLIDATION VERIFIED ELEMENT BY ELEMENT AGAINST THE EXISTING SURFACE, and NOT duplicated. The operator named seven things the procedure must persist; all seven are already present in cross_session_transport.md section 12 (renumbered from the colliding 11 earlier today), so the correct outcome was to MAP them, not to restate them: (1) mandate and authorisations persisted -> \"Persist the objective, acceptance criteria, authorised queue, dependencies and material operator amendments in the existing task contract (Annex A). Do not create another registry.\"; (2) reconciliation of tasks, agents and results -> \"After compaction or recall, reload the mandate and reconcile actual task/agent/file state, then execute.\"; (3) no duplicate when activity is uncertain -> \"A stale heartbeat means UNKNOWN activity, not a dead actor. Recover a saved result before relaunching. Recheck ownership before any replacement.\"; (4) unverified repairs stay unverified -> \"A required repair remains unverified until the required review of that version occurs.\"; (5) resume after compaction -> the whole \"Context is a continuity boundary, not a completed task\" subsection, including that compaction is automatic and not an interruption and that an advance context warning is never a reason to end the turn; (6) automatic advance to the next authorised objective -> the decision table row \"A goal is complete but the authorised queue is not | Start the next eligible goal without another approval\"; (7) recall deletion only at whole-queue closure -> \"Retain relevant recalls while the overall mandate is incomplete, unless revoked, expired or explicitly replaced\" plus \"Complete the mandate and cancel only its own remaining recalls\". CROSS-REFERENCES are already short and in the right places: CLAUDE.md, roles/orchestrator.md, framework/instruction/LEGEND_CORE.md and the legend-start skill each link to the section rather than restating it, and scripts/test_stop_policy.py asserts every one of those routes resolves. Writing an eighth copy would have been the duplication the mandate forbids; the queue itself lives in this task record as the AUTHORISED_QUEUE block, so no second register was created either."
+        },
+        {
+          "step": "where: Into the appropriate CANONICAL surface, with SHORT cross-references in the contracts. Do not duplicate long instructions. No external watchdog.",
+          "status": "DONE",
+          "source_key": "where",
+          "evidence": "THE SUBSTANCE ALREADY EXISTED and is NOT duplicated: another actor landed it in commits 77fdeb5 / df7d434 / 3c1cf55 - cross_session_transport.md now carries the full autonomous-mandate-continuity procedure, with short cross-references from CLAUDE.md, roles/orchestrator.md, framework/instruction/LEGEND_CORE.md and the legend-start skill, plus framework/scripts/mandate_continuity.py (status/stop-hook/normalise) and a bounded Stop hook. Its behaviour is covered by tests that are green now: test_mandate_continuity 41 passed (1 skipped), test_stop_policy 9 passed. Writing a second copy of that rule would have been exactly the duplication the operator forbade, so nothing was rewritten.",
+          "defect_i_found_and_fixed_2026_09_14": "The consolidation had landed the continuity procedure as a SECOND section numbered \"## 11\": the file already had \"## 11 - What this protocol does not do\" (with its own 11.1) at line 504, and the appended \"## 11 - Autonomous mandate continuity\" at line 554. The markdown anchor still resolved by slug, so every link worked and every test passed - the new route test asserts only that the continuity HEADING STRING occurs once, which is true of a collision. But CLAUDE.md, roles/orchestrator.md and LEGEND_CORE.md all cite the rule as \"section 11\" by NUMBER, which was ambiguous in a canonical protocol. FIXED minimally and in the direction that keeps section order monotonic: the appended section is now \"## 12\", and all four inbound anchors plus the test literal were updated in the same act - CLAUDE.md, roles/orchestrator.md, LEGEND_CORE.md, .claude/skills/legend-start/SKILL.md and scripts/test_stop_policy.py. Read-back: zero stale \"#11--autonomous-mandate-continuity\" anchors remain anywhere in the tree; headings now read 11 then 12. Both suites still green, LINT PASS, gate PASS/0. NOTE AGAINST MY OWN EXPECTATION: I expected the .claude/ write to be refused by the auto-mode classifier and it was not, so the skill route was fixed in place rather than handed over as a command.",
+          "still_owed": "A guard so the collision cannot recur: the existing route test counts the heading string, which a duplicate NUMBER passes. A unique-section-number assertion over that protocol is the small case with the expectation fixed in advance, and it is the one piece of OBJ_3 left."
+        },
+        {
+          "step": "test: Small cases with expectations fixed in advance. Do NOT change the instructions of a child mid-task: apply to subsequent launches.",
+          "status": "DONE",
+          "source_key": "test",
+          "evidence": "Small case with the expectation fixed in advance, added to scripts/test_stop_policy.py as test_no_two_sections_share_a_number_in_the_continuity_protocol. It asserts that no two top-level sections of cross_session_transport.md share a number, which is precisely what the pre-existing route test could NOT see: that test counts the continuity HEADING STRING, and a duplicate NUMBER satisfies a string count. PROVEN TO CATCH THE DEFECT, not merely to pass: holding the real file fixed and substituting the collision back in synthetically gives duplicates=[11] and the guard fails, while the current file gives duplicates=none and it passes. Full stop-policy suite 10/10 OK; test_mandate_continuity 41 OK (1 skipped)."
+        }
+      ]
+    },
+    "COMMON": "Opus 5, verified where the runtime allows. Max THREE children incl. Mirror. No recursive delegation. ONE integrator of canonical surfaces. NO push. Operator-reserved decisions stay reserved: prepare concretely, continue on independent parts. MAJOR scientific changes are NOT pre-approved.",
+    "ARREST": "Stop only for: whole-queue completion; concrete impediments on ALL residual work; real quota/budget/runtime limit; operator instruction. On any stop with residual work: save checkpoint, keep mandate INCOMPLETE, do not delete still-pertinent recalls, do not invent activity or repeat checks to look busy.",
+    "MANDATE_STATE": "OPEN",
+    "_open_items_after_this_session": {
+      "DL-MECH-012_and_DL-REPO-002_clause_repair": "Mirror returned REFINED on my two clause repairs at f3eb7d5 (record 2026-09-14_aldaz_clause_repairs_reexamination.md, commit b71f99e): DL-MECH-012 L'indizio opening is OVER-SCOPED (the conjunction \"nei tessuti E sotto gli stimoli qui elencati\" ranges over a cross-product that includes lung x infectious, the one MEASURED NULL) and UNDER-SCOPED (the SCAR12 leg has no imposed stimulus at all), and carries a WRONG-TISSUE error (F3): the gliosis it attributes to the cerebellar leg is measured in HIPPOCAMPUS in PMID 36828035, never in cerebellum, which carries Purkinje loss and molecular-layer thinning. DL-REPO-002 is CONFIRMED but inherits repair 1 wording by reference, so both lines must move in ONE act. I VERIFIED ALL THREE FINDINGS AT SOURCE from that paper own manifest before accepting them: the glial scores are located in HPC (entries 30-31, Fig 3b Iba1+ and Fig 4b Gfap+), the cerebellum entries are Purkinje number and layer thickness (Fig 5d, 5g) with basket cells spared, and entry 2 reads \"repeated SPONTANEOUS generalized convulsive activity (11-22 seizures during 43-53 h monitoring periods)\" - no imposed stimulus. So the findings stand and the repair is mine to make. DELIBERATELY NOT APPLIED YET, with a reason: Mirror proposed replacement wording that says \"polmone sotto stimolo MECCANICO\", written while scientist-a reading of PMID 28283473 was still in flight. That reading shows the lung leg is ALSO positive with NO stimulus at all - WWOX silencing alone asterisked on all eight quantitative panels of Figure 1, acute and epithelium-weighted - so the proposed wording is true as far as it goes but now UNDER-DESCRIBES the evidence. ALDAZ-CONSULT-READS-20260914 is judging exactly that compartment-split formulation. Editing the same sentence twice on a verdict I already know to be superseded would be worse than waiting one consultation.",
+      "residuals_named_for_a_batch": "From the two readings, all requiring BATCH_COMMIT and none applied outside it: promote CORPUS-STUB-091 to a PAPER record for PMID 28283473 and re-assign LIT-0114 clinical relevance (assigned LOW at corpus alignment before anyone read it); promote CORPUS-STUB-165 to a PAPER record for PMID 30285739 and complete LIT-0181; carry the Expression of Concern (PMID 28373548) onto the record of PMID 16223882, which is already read here with its own receipt; and update surface_census row for 28283473 from \"absent\" to the fingerprinted PMC reader HTML. READING DEBT TO MINT AS QUEUE ENTRIES: PMID 17178850 (Gaudio 2006, c-Jun sequestration) at HIGH priority - it is the origin of every mechanistic sentence of 28283473 and this repository holds no identity record and no receipt for it; PMID 16438931 and PMID 10861292 also lack identity records; and five VOPP1 antecedents named by the other candidate (25398664, 19525979, 20571887, 21519330, 15735698), of which 20571887 is the most load-bearing because VOPP1 lysosomal identity is imported from it.",
+      "locator_discrepancy_found_2026_09_14_while_verifying_the_consultation": "CLOSED 2026-09-14. Found while verifying Mirror delta-C finding at source: entries[27] and entries[29] of deepdive_manifests/PMID33058734.json asserted \"NO asterisk on any of the SIX bars\" for Figures 4 and 6, the arithmetic W4 had retired. That correction had reached DL-MECH-012, the dossier dispositions and FT-100 and had NEVER reached the persisted locators. RESOLVED BY THE PROCEDURE, not by an integrator overwrite: a blind R4 (ALDAZ-R4-33058734-20260914) was dispatched FIRST, triples-only with no expected answer, and nothing was drafted until it returned - so the count it existed to establish was not pre-committed by me. It returned SUPPORTED on both propositions with both counts inaccurate, reporting four bars per panel and twelve per figure by vector-rectangle extraction confirmed at 900 dpi, independently reproducing W4 measurement by a different method. AMENDMENT APPLIED as a DECLARED revision on both entries: contradicts_locator with manifest, entry, what_changed and a nested audit block (auditors 1, verdicts [\"SUPPORTED\",\"CORRECTED\"], method naming the blind R4, its date, its dispatching mandate, the per-entry verdict and my own owner-side re-derivation). VERIFIED AFTER WRITING: locator_contradiction_audit --working-tree --fail-on-undeclared reports entry_field_changes=2 with DECLARED revisions 2 and UNDECLARED 0, exit 0; the manifest remains strict-PASS with 0 gaps and 46/46 artefacts digest-matching; entries[29] bears_on pointer to entries[18] and its legend-mismatch finding are untouched. A CORRECTION AGAINST MY OWN ACCOUNT: two turns before writing this I said the six-bar count lived in the SNIPPET field. It did not - in these entries the proposition carries the pixel attestation and the snippet carries the verbatim caption title. The audit found the snippets ACCURATE and the propositions wrong, the reverse of my framing. I caught it by reading both entries in full before editing, which is the only reason the amendment touched the right field; had I trusted my own summary I would have rewritten two accurate verbatim captions and left the false counts standing.",
+      "eoc_residual_was_ALREADY_DISCHARGED_dropped_from_the_batch": "DROPPED, not done, and the check is why. I had listed \"carry the Expression of Concern (PMID 28373548) onto the record of PMID 16223882\" as a residual owed by the batch. It is already there: PAPER 082 carries \"Integrity status: PUBLICATION_INTEGRITY_HOLD - expression of concern, PMID 28373548, PNAS 2017;114(16):E3365, DOI 10.1073/pnas.1704296114, signed by Inder M. Verma\", added in BATCH_20260806_002, alongside \"Claim links: none - DELIBERATELY none\" recorded as a decision rather than an omission; CORPUS-STUB-119 carries the same hold append-only; and PAPER 053 Note received ref 69 expression-of-concern this morning in BATCH_20260914_005. Writing it again would have been the duplicate-record defect this session has been guarding against. Removed from the batch scope BEFORE propagating rather than discovered afterwards.",
+      "unlinked_support_defect_MEASURED_at_16_instances_not_2": "Mirror delta E characterised a defect class: real support with no registry linkage, the mirror image of declaration-without-attestation, which no current check looks for. I MEASURED IT ACROSS THE WHOLE REGISTRY rather than accept the two instances the candidates happened to name. Result: SIXTEEN CORPUS stubs still read Status not_processed while their PMID holds a complete_fulltext_read receipt - CORPUS-STUB-004 (33255508), -022 (31075076), -027 (38182577), -046 (27869163), -053 (36828035), -074 (35409089), -091 (28283473), -107 (16941225), -110 (39868255), -113 (38499540), -120 (38563965), -123 (27308504), -143 (15064722), -148 (15982416), -165 (30285739), -175 (39416860). Several are load-bearing: 36828035 is the SCAR12 primary, 15064722 the PPxY mechanism primary, 16941225 the tissue-distribution reading, 38563965 the VILI lung leg. WHAT THIS BATCH MAY DO ABOUT IT: exactly TWO promotions, 091 and 165, because those are the only two the 21d consultation reviewed. The other FOURTEEN are named debt, not silently carried and not promoted on my own authority - an unreviewed promotion of fourteen canonical records would be precisely the kind of bulk canonical expansion the consultation requirement exists to prevent. The cross-check Mirror specified (compare PMIDs named in a claim Summary/Source against the paper_registry Claim links field, report UNLINKED_SUPPORT) is harness work at T0 and is not mine to implement here.",
+      "phase_4_7_list_is_missing_a_derived_surface": "FOUND while running this batch. prompt_batch_commit.md Phase 4.7 names FOUR generators and does NOT name registries/reading_state.md - yet that file is a committed derived surface with its own generator (framework/scripts/reading_state.py) and a regression (test_reading_state) asserting it matches the receipt ledger. Today three receipts landed, so it drifted and that suite was failing BECAUSE OF THIS SESSION. I regenerated it inside the batch window with the others and its 12 tests now pass. The protocol text itself still omits it, which means the next batch will reproduce the drift. Recorded as a gap rather than patched silently: editing a canonical protocol file to add a generator line is a small change, but it belongs in a scoped act with its own review, not as an unremarked side effect of a scientific batch.",
+      "release_regression_suite_is_FAIL_and_classified": "The runner exits 0 while its own summary says VERDICT FAIL - which is why the summary was read rather than the exit code trusted. Nine entries, classified rather than dismissed as pre-existing: test_surface_census fails asserting a gitignored files/fulltext artefact (PMID17803050_Suzuki2007.html) absent from this checkout, and test_structured_data_integrity on ragged TSVs and empty figure files under files/supplements and files/figures - both ENVIRONMENTAL, the declared class this repository has carried for weeks; test_task_record_commit_hashes names a PEER record under ledger/tasks/scientist-a/; test_coverage_report, test_batch_queue and test_pathograph are the guarded-tree writers whose outputs porcelain shows left nothing behind; and test_reading_state was MINE, caused by this session receipts, and is fixed. NOT a clean bill, and not claimed as one.",
+      "the_six_other_whole_body_sites_DO_NOT_EXIST_as_defects": "CORRECTED, AND THE FIRST VERSION OF THIS ENTRY WAS FALSE. I wrote here that \"there is nothing to repair there\" after finding ZERO occurrences in five named files. That was an over-generalisation, and the evidence against it was ALREADY ON SCREEN in the same command output: lines 4612 and 4614 of the full-text queue - the TAIL of my own FT-100, below the correction block I had written at its head - still asserted \"il modello a corpo intero\", one of them explicitly equating it with the intratracheal siRNA model, on the now-false premise \"finche non e letto\". So the entry corrected itself at the top and re-asserted the error at the bottom. REPAIRED: both lines now state that the paper IS read (receipt FTR-20260914-28283473-01) and that the two models do not measure the same phenomenon and neither impeaches the other, because TWO variables vary together; the model is named as acute, airway-delivered and epithelium-weighted by imported citation. A dated second-pass note records the sequence, including that I recorded an exculpation before checking my own surface. WHAT REMAINS TRUE FROM THE FIRST VERSION: the five other named files do carry zero occurrences (CC-20260913-ALDAZ-C003-01, the BATCH_20260913_004 report, BATCH-20260913-004.json, the final report, the checkpoint), so the candidate section-7 list was partly a grep artefact; and the peer M4b note line is accurate AS A QUOTATION of what FT-100 then said, reported to its owner and not edited by me. VERIFICATION AFTER THE REPAIR, against an expectation fixed in advance: five occurrences remain, four of them correction text and one inside the new dated note quoting the retired wording - ZERO live assertions. This is the third time today that \"string present\" was confused with \"claim asserted\", and the first where the error favoured my own work, which is the reason it is written here in full rather than quietly amended.",
+      "blind_R4_dispatched_for_the_locator_amendment": "ALDAZ-R4-33058734-20260914 dispatched 2026-09-14: a blind locator audit over the TWO triples of PMID33058734 entries[27] and entries[29], triples-only - proposition, attested snippet, anchor - plus the source PDF, with no dossier, no reader identity, no candidate, no claim record and NO EXPECTED ANSWER. It is asked to count the bars itself at high dpi and to report its own number whatever it is, and explicitly told not to reconcile toward the triple. WHY NOTHING IS PREPARED YET: writing a contradicts_locator block before that audit returns would pre-commit the very count the audit exists to establish independently, and the amendment is exactly the kind that needs a blind adjudication rather than an integrator assertion. The manifest is a peer surface; I hold the declared-revision procedure, not the verdict.",
+      "blind_R4_returned_and_the_count_is_INDEPENDENTLY_twelve": "ALDAZ-R4-33058734-20260914 RETURNED. Given triples only, the source PDF, and NO expected answer, the auditor: (1) returned SUPPORTED on BOTH propositions; (2) found BOTH snippets INACCURATE ON THEIR COUNT, reporting FOUR bars per panel and TWELVE per figure against the six the snippets assert - reached by extracting filled vector rectangles, excluding the six legend swatches per figure by size and y-position, individuating bars by fill colour (flox blue, KO red) and x-position, and confirming at 900 dpi. That reproduces W4 twelve-per-figure arithmetic from a DIFFERENT METHOD by an actor that was never told it. (3) Confirmed no asterisk or significance bracket is drawn on any bar in either figure, and a vector-text scan returns zero asterisk glyphs. THREE FINDINGS BEYOND THE TRIPLES, one of which strengthens the negative: Figures 4 and 6 print NO \"*P < 0.05\" key at all while Figures 3 and 5 do, so the absence of marks sits in figures that define no significance marker; both caption titles and the Results text state the negative IN WORDS, so it is asserted and not merely inferred from missing asterisks; and the non-significance rests on n = 3, which neither proposition qualifies. Also: \"not one reached significance\" is true of the GENOTYPE contrast, not of the stimulus effect, which is large in every panel; and several PBS bars are degenerate or undrawn, so the VISIBLE count is 9-10 against a nominal 12. CONSEQUENCE, NOW DISCHARGED: the declared revision of entries[27] and entries[29] was applied with its audit block and verified as DECLARED (2 declared, 0 undeclared, exit 0). It was deliberately NOT prepared before this verdict, so that the count the audit existed to establish was not pre-committed by the integrator."
+    }
+  }
+}

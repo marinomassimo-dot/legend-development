@@ -1,0 +1,147 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.2 TASK_ACK + A.3 TASK_CLAIM · §21d mandatory consultation on a non-zero scientific delta + ex-post review under LEGEND_CORE §21e",
+ "TASK_ID": "SCI-CONSULT-20260914",
+ "OWNER": "mirror",
+ "ACTOR_ID": "mirror",
+ "PARENT_MANDATE": "SCIENCE-EXEC-20260914 (orchestrator)",
+ "TASK_ACK": {
+  "state": "CLOSED",
+  "accepted_on": "2026-09-14",
+  "objective": "Mandatory §21d consultation on four commit candidates at a67559f (CLAIM 032 limit, CLAIM 026 clinical meaning + the C3 VOPP1 verdict, the literature-log Status vocabulary, four placeholder annotations), plus ex-post review of two landed non-canonical acts (d037bb6, bad9139) including the contested R4 anchor finding.",
+  "specification": "dispatch SCI-CONSULT-20260914; Annex C.2 single format; roles/mirror.md; LEGEND_CORE §21d; epistemic_discipline §1",
+  "interaction_mode": "AUTONOMOUS_COMPLETE",
+  "review_requirement": "none — Mirror does not review itself; AUTHOR_RESPONSE owed by the orchestrator (Annex C.2)"
+ },
+ "TASK_CLAIM": {
+  "claimed_by": "mirror",
+  "claimed_on": "2026-09-14",
+  "durable_pointer": "disease-models/wwox/research/verifications/2026-09-14_science_consultation.md"
+ },
+ "OBJECT": {
+  "candidates_at": "a67559f17616963519e1970babe3c4a4489ba20f",
+  "candidates": [
+   "CC-20260914-CLAIM032-LIMIT-01",
+   "CC-20260914-CLAIM026-CLINICAL-01",
+   "CC-20260914-LIT-VOCAB-01",
+   "CC-20260914-PLACEHOLDER-IDENTITY-01"
+  ],
+  "landed_acts_reviewed": ["d037bb6", "bad9139"],
+  "head_at_review": "a67559f17616963519e1970babe3c4a4489ba20f"
+ },
+ "WRITE_PERIMETER": {
+  "permitted_here": [
+   "ledger/tasks/mirror/SCI-CONSULT-20260914.json",
+   "disease-models/wwox/research/verifications/2026-09-14_science_consultation.md"
+  ],
+  "refused_by_contract": [
+   "every registry and *_current.md",
+   "deepdive manifests, dossiers, receipts, persisted locators",
+   "BATCH_COMMIT",
+   "any push",
+   "spawning agents"
+  ],
+  "experiments": "scratchpad only: a copy of literature_tracking_log_current.md carrying the simulated vocabulary row, used to predict lit_status output. The real tree was never written."
+ },
+ "NUMBERS_REPRODUCED": {
+  "legend_lint": "WARN — 2 INFO (MISSING_WIKILINK CLAIM 010, CITED_AS_CONTRAST CLAIM 036), 1 WARN_BUT_PROCEED (LIT_STATUS_LEGACY, NOT_IN_VOCABULARY 1), 1 INFO EVIDENCE_AVAILABILITY",
+  "public_release_gate": "VERDICT PASS · BLOCKS 0",
+  "fulltext_receipts_verify": "OK — 173 chained receipts, tail anchored",
+  "growth_anchors": "claims 39 · papers 86 · corpus 356 · literature 397 · registry_only 10 · unread_premises 2 · CANDIDATE_BACKLOG 40",
+  "support_linkage": "unlinked_support 0 | cited_as_contrast 1 | unclassified 0 | unchecked 0",
+  "lit_status_validate_baseline": "not_in_vocabulary 1 (LIT-0401 'archived') | valid 396",
+  "lit_status_validate_simulated": "valid 397 | not_in_vocabulary 0; migrate unmapped 0",
+  "locator_propagation": "obligations 0 | open 0 | undeclared_discharge 0",
+  "locator_contradiction_audit": "manifests 98 · locator_entries 2170 · declared audited 31/31 · undeclared candidates 17",
+  "contradicts_locator_count": "31 at bad9139^, 33 at HEAD — two added by bad9139",
+  "png_measured": "SuppFig1_p4-4.png 4000x2250 px (all four supplement renders identical)",
+  "supplement_page_rects": "pages 1-3 = 612x792 pt; pages 4-7 = 960x540 pt (PyMuPDF)",
+  "dpi_derived": "4000 / 960 * 72 = 300 dpi exactly; aspect 4000/2250 = 960/540 = 1.7778",
+  "vopp1_mentions": "claim_registry 7 (candidate's figure, reproduced) · working_model 4 (reproduced) · paper_registry 16 (NOT measured by the candidate)",
+  "placeholder_join_mine": "population 45 · silent in the whole record 5 · Status-field silent but stated elsewhere 2",
+  "placeholder_join_candidate": "population 37 · marked 33 · unmarked 4 — not reproduced by my method",
+  "evidence_presence_17360458": "0/5 artefacts present in this checkout (all ABSENT, 0 digest mismatch)"
+ },
+ "FINDINGS_RANKED": [
+  {
+   "id": "F1",
+   "severity": "high",
+   "item": "CC-20260914-CLAIM032-LIMIT-01",
+   "what": "The repair is confined to Clinical meaning while CLAIM 032's Summary still carries, as a load-bearing verbatim quote, Aldaz's 'appears not to be deleterious OR CARCINOGENIC in the longer-lived heterozygous mice'. The new limit contradicts the carcinogenicity half of that quote. A claim whose Summary quotes what its own limit denies is the defect class BATCH_20260914_005 closed elsewhere."
+  },
+  {
+   "id": "F2",
+   "severity": "high",
+   "item": "CC-20260914-CLAIM032-LIMIT-01",
+   "what": "The BATCH_20260815_001 qualification does not merely need extending: it attributes to PAPER 078 (PMID 17360458) the framing 'unremarkable in unchallenged assays', and PAPER 078's own Table 1 is the source of the untreated spontaneous excess. The unchallenged-normality observation belongs to PAPER 077 (PMID 17575124, NMBA). Canon's own ledger already separates them at DL-MECH-101 and DL-MECH-102; the claim conflates them."
+  },
+  {
+   "id": "F3",
+   "severity": "high",
+   "item": "CC-20260914-CLAIM026-CLINICAL-01 §3 (C3)",
+   "what": "The §3 assertion that the three competing VOPP1 mechanisms 'live only in the abstracts of FT-108 to FT-112, closed access and unread' is false. paper_registry_current.md:7034 (PAPER 095's Note, canonical) names them and states that the corpus IMPORTS VOPP1's lysosomal identity from FT-110. The 400-character window never measured paper_registry, which carries 16 of the VOPP1 mentions."
+  },
+  {
+   "id": "F4",
+   "severity": "high",
+   "item": "CC-20260914-PLACEHOLDER-IDENTITY-01",
+   "what": "CORPUS P363 and CORPUS P295 DO say the promotion happened, in a '**Resolved (BATCH_20260806_002):**' field naming PAPER 058 / PAPER 057 and their receipts. The candidate's measurement read the Status field only, so two of its four subjects are mis-described, and its 37/33/4 census is not reproducible: an Identifier-keyed join gives population 45, five records silent in the whole record, including CORPUS P182 (PMID 30619736 to PAPER 032) which is outside the candidate's perimeter."
+  },
+  {
+   "id": "F5",
+   "severity": "medium",
+   "item": "CC-20260914-LIT-VOCAB-01",
+   "what": "The proposed meaning is too wide by one measurable case: 'or under an expression of concern that invalidates its use' immediately captures PMID 16223882 (Editorial Expression of Concern PMC5402418, PAPER 082 under PUBLICATION_INTEGRITY_HOLD), which the candidate does not move. Also, the exclusion of `filtered_out` is argued against a supplied gloss ('at screening'); the table's own text is 'Excluded — reason logged'."
+  },
+  {
+   "id": "F6",
+   "severity": "medium",
+   "item": "d037bb6 (ex-post)",
+   "what": "One sub-item of the specification's DL-MECH-018 row was not applied: 'Metabolismo Acetyl-CoA come hub sperimentale is annotation, not measurement'. The heading still reads 'hub sperimentale' and the enrichment clause carries no annotation marker. Same shape at DL-MECH-036, where the instruction that the Q230P corollary must carry the unpublished-observation premise is recorded beside the finding but not executed at the corollary bullet."
+  },
+  {
+   "id": "F7",
+   "severity": "medium",
+   "item": "bad9139 (ex-post)",
+   "what": "entries[37]'s declaration uses the same `audit` / `auditors` vocabulary as entries[34], but its two 'auditors' are geometry re-readings of S2B, not a blind triple audit; it declares three revisions against two verdicts, and the third revision moved `artifact`/`anchor` off the PNG onto the PDF, which no reading audited. Separately, the commit message's 'locator working-tree: 1 declared' understates the act: contradicts_locator went 31 to 33."
+  },
+  {
+   "id": "F8",
+   "severity": "low",
+   "item": "CC-20260914-CLAIM032-LIMIT-01",
+   "what": "Provenance asymmetry: the landed DL-MECH-046 text carries 'Table 1, aggiudicata sulla pagina resa a 300 dpi', the proposed canonical claim text does not, and all five fingerprinted artefacts of PMID 17360458 are ABSENT from this checkout. Canon is harder to correct than a ledger. Also: the candidate sources a primary datum to PAPER 053's Note (canon as its own evidence) while manifest entries[2] carries the source's verbatim '5-fold higher (P = 0.03)'."
+  }
+ ],
+ "VERDICTS": {
+  "CC-20260914-CLAIM032-LIMIT-01": "CORRECT_WITH_QUALIFICATION",
+  "CC-20260914-CLAIM026-CLINICAL-01 (wording half)": "CORRECT_WITH_QUALIFICATION",
+  "CC-20260914-CLAIM026-CLINICAL-01 §3 (C3 verdict)": "INCORRECT as written; the no-claim-repair conclusion survives on other grounds",
+  "CC-20260914-LIT-VOCAB-01": "CORRECT_WITH_QUALIFICATION",
+  "CC-20260914-PLACEHOLDER-IDENTITY-01": "INCORRECT on the P363/P295 description; INSUFFICIENT_EVIDENCE on the 37/33/4 census",
+  "d037bb6 ex-post": "CORRECT_WITH_QUALIFICATION",
+  "bad9139 ex-post — the contested anchor": "CONFIRMED (the contestation is right; 300 dpi measured at the artefact)",
+  "bad9139 ex-post — honesty of the retroactive declaration": "CONFIRMED for entries[34]; CORRECT_WITH_QUALIFICATION for entries[37]"
+ },
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "The four artefacts of PMID 17360458 that its manifest fingerprints are absent from this checkout",
+   "default": "Judged the two figures against the manifest locators and the two concordant record-level readings, and said so explicitly rather than asserting source verification",
+   "why_safe": "Stating the provenance ceiling is what the consultation is for; claiming a source check I could not perform would be the defect I am looking for"
+  },
+  {
+   "condition": "The candidate's placeholder census uses a 'shared parser' whose exclusion rules it does not publish",
+   "default": "Re-ran my own Identifier-keyed join, published the method, and returned INSUFFICIENT_EVIDENCE on the reported numbers instead of asserting mine are the right ones",
+   "why_safe": "Two measurements that disagree with undisclosed methods is not a finding against either number; it is a finding against the reporting"
+  },
+  {
+   "condition": "The vocabulary delta could not be measured without writing the canonical log",
+   "default": "Simulated it on a scratchpad copy and ran lit_status validate/migrate against that copy",
+   "why_safe": "Read-only toward the repository; the prediction is now measured rather than plausible"
+  }
+ ],
+ "STOP_LOG": "Empty. No reserved act was required. Class 1 = 0, class 2 = 0, class 3 = 0.",
+ "BLINDING_EXPOSURE": "A git-status block was injected into my initial context before I could act, naming eight untracked paths and five recent commit subjects including all three acts under review. Disclosed verbatim in §0 of the consultation record, before any judgement, as the contract requires.",
+ "GATES_AT_CLOSE": {
+  "legend_lint": "WARN (unchanged from task start)",
+  "public_release_gate": "PASS · BLOCKS 0 (unchanged from task start)"
+ }
+}

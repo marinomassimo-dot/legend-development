@@ -1,0 +1,41 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT (operator-directed) + A.1b",
+ "TASK_ID": "ORCH-CONSOLIDATION-20260913",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "operator",
+ "ACTOR_ID": "orchestrator",
+ "CURRENT_STATE": "COMPLETE — mandate closed; laboratory NOT clean: the canonical registry still carries the wrong arm word, and the 1-month CTGF ratio stays unresolved on a reason an independent verification contradicted",
+ "OBJECTIVE": "Consolidate the two night tasks (ORCH-USE-REPAIR-20260912, ORCH-M4B-COST-20260912B) into one reliable state: what is correct, scientifically verified, unverified, still in the registers, and which tests fail on which commit. No new M4b case, no optimisation, no second repair campaign, no push.",
+ "assigned_on": "2026-09-13",
+ "closed_on": "2026-09-13",
+ "predecessors": ["ORCH-USE-REPAIR-20260912", "ORCH-M4B-COST-20260912B"],
+ "started_at_head": "133b6c37a003a88b0c4cbac2323831398a05351e",
+ "branch": "task/ORCH-CONSOLIDATION-20260913",
+ "record": "disease-models/wwox/research/2026-09-13_night_consolidation.md",
+ "model": {
+  "coordinator": "Opus 5 (claude-opus-5[1m])",
+  "verifier": "claude-opus-5 on 81 of 81 real assistant records, plus 4 <synthetic> harness records, read back from the subagent transcript"
+ },
+ "delegations_allowed": 1,
+ "delegations_consumed": 1,
+ "budget": {
+  "numeric_budget_configured": false,
+  "limits_applied": "one reconciliation, one independent verification, no second repair campaign, relevant technical checks, checkpoint and close"
+ },
+ "verification_artefacts": {
+  "expectations": "disease-models/wwox/research/consolidation_verification_20260913/expectations_sealed_before_opening_any_surface.md",
+  "expectations_sha256": "984e900f18b925309d1131592f748ae48adf5a26fcb65633ecfe8e0651a520a9",
+  "report": "disease-models/wwox/research/consolidation_verification_20260913/verification_report_extracted_from_transcript.md",
+  "report_note": "the harness refused a report file from the subagent; the report is its final message, extracted byte for byte from the transcript"
+ },
+ "BATCH_COMMIT": "NOT RUN. CC-20260912-29724996-02 is scientifically supported (A2.1-A2.6) but not complete for a batch: it defers its FILES TO UPDATE block to the batch and declares no target_wm_version; an ordinary BATCH_COMMIT propagates the queued candidates, and the only subset path in prompt_batch_commit.md is URGENT.",
+ "DEFAULTS_TAKEN": [
+  "idle peer sessions (six processes, no transcript write after 23:03 UTC) -> proceeded in an isolated worktree and noted them",
+  "the 1-month CTGF fold the verifier measured is NOT written into any surface -> the mandate forbids a new plausible substitution after a single reading; recorded as a finding with its closure route",
+  "the CONTRADICTED reason in entries[37].unresolved_1_month_ratio is NOT rewritten -> no second repair campaign; recorded with the exact statement and the next action",
+  "the battery was run with the gitignored files/ linked read-only into the worktree -> a pre-landing measurement with the evidence present, without moving or deleting any evidence"
+ ],
+ "STOP_LOG": [],
+ "remote": "nothing pushed"
+}

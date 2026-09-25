@@ -1,0 +1,199 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT + A.1b · Annex C independent verification",
+ "_note": "Fifth and last independent verification of the Aldaz batch: scientist-b's reading of PMID 14526170, the terminus of the antibody-delegation chain. Producer is scientist-b; this actor produced none of it. After this pass, every reading of the batch carries an independent verification and the batch's verification debt is closed. Predecessors W1-W4, all REFINED or CONFIRMED on every object judged.",
+ "TASK_ID": "ALDAZ-VERIFY-W5-20260913",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "mirror",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Verify, from the sources and before any producer conclusion, the reading of PMID 14526170 — and judge with particular care the three claims that make it the batch's closing finding: that the antibody's characterisation is here and the chain stops; that the epitope/deletion geometry weakens the genetic null the two 2005 papers rely on; and that the specificity panel carries no molecular-weight ladder.",
+ "assigned_on": "2026-09-13",
+ "OBJECT": {
+  "paper": "PMID 14526170 — Ludes-Meyers JH, Bednarek AK, Popescu NC, Bedford M, Aldaz CM, Cytogenet Genome Res 2003;100(1-4):101-10, PMCID PMC4150470. Read to complete_fulltext_read, first_read, prior null.",
+  "receipt": "FTR-20260913-14526170-01",
+  "manifest": "schema v2, strict PASS 0 gaps, 23 locators (15 body, 8 figure), panel_text_relation on every entry: 4 panel_only, 6 text_confirmed_by_panel, 1 text_contradicted_by_panel, 12 text_only",
+  "packet": "disease-models/wwox/research/phase_packets/VERIFY-PMID14526170-20260913.json — checked USABLE at dispatch",
+  "surface_note": "The producer records that the surface is the NIHMS author manuscript (pmc-prop-is-real-version=no), so every anchor is a manuscript page rather than a published page. It also records that text_surface_intrusion_check REFUSED its first extraction at 88 furniture-in-sentence spans and that re-extracting by the checker's own named remedy brought it to 4, with no locator quoting across any span. Judge whether the anchors carry their propositions on that surface.",
+  "withheld_until_your_verdicts_are_written_and_committed": [
+   "disease-models/wwox/research/fulltext_dossiers/PMID14526170.md",
+   "disease-models/wwox/research/commit_candidates/CC-20260913-ALDAZ-B004-01.md",
+   "disease-models/wwox/research/comparison_notes/2026-09-13_ALDAZ-FT-B-004_comparison.md",
+   "the producer's FT-101 disposition and its session diagnosis"
+  ]
+ },
+ "THE_THREE_CLAIMS_TO_JUDGE": {
+  "1_the_chain_stops_here_and_at_what_grade": "The producer reports the immunogen stated once and unambiguously as a GST fusion to WWOX residues 12-94 containing both WW domains, and concludes this DISSOLVES the two-description discrepancy in PMID 15982416 rather than adjudicating it — insert and fusion partner, both true of one construct — so an earlier IPOTESI becomes DATO. It further reports, by count over the full text, zero immunohistochemistry, zero pre-immune, isotype, peptide-block, pre-absorption, no-primary, second-antibody and knockdown controls, with the word 'antibody' appearing once in the article. Verify the immunogen sentence verbatim, and verify the absences as absences — an absence claim is the easiest thing to get wrong in either direction.",
+  "2_the_epitope_deletion_geometry": "🔴 This is the claim with the longest reach, because it bears on how much the two 2005 papers' genetic null is worth. The producer reports: the epitope sits in exons 1-3 (N-terminal, confirmed against this paper's own figure at 4200x3703, WW1 from L17 and WW2 to about P86); PEO1's recorded lesion deletes exons 4-8, DOWNSTREAM of the epitope; the paper's wording is the careful 'does not produce full-length WWOX'; and the null lane is NOT blank, carrying a faint higher-molecular-weight band. It records the consequence as IPOTESI with a REVIVAL_TRIGGER and deliberately NOT as DATO, because the band is unidentified and non-specific background is an adequate competing explanation. Judge each component, and judge whether IPOTESI is the right strength — over-reading this would weaken a control that may be sound, and under-reading it would leave a reagent argument resting on a control the geometry undercuts.",
+  "3_the_missing_ladder": "The producer reports that the specificity panel itself carries no molecular-weight marks at all, that the paper's only two marks sit on a different blot bracketing the band 45.5 kd apart, and that the '~46 kDa' attribution is therefore unverifiable on the panel asserting it. Verify at the resolution the anchor names.",
+  "4_the_genre_finding": "It reports three assertions carried in the abstract or captions WITHOUT the 'manuscript in preparation', 'unpublished observation' and 'data not shown' qualifiers the body gives them, plus a 'necessary and sufficient' conclusion where only necessity is shown and a caption cross-referencing a figure that does not exist. The same genre failure mode was found in PMID 24932569 earlier in this batch, so judge whether it is genuinely present here or whether pattern-matching supplied it."
+ },
+ "ALSO_TO_JUDGE": "Each proposition against its source at the declared digest; material omissions; comparisons; citation CONTEXT rather than existence; coverage honesty — including the producer's declaration that supplementaryFiles returned 'not open access one' in agreement with hasSuppl=N, so there is no supplement to declare, and its declaration that 36 of about 56 references are UNSCREENED with Crossref exposing 20.",
+ "THE_RULE_THAT_PROTECTS_THE_TRUTH": "🔴 A verifier finding can itself be wrong, including your own earlier passes'. You have withdrawn six of your own findings across this batch — four in W4 alone — and each withdrawal was worth more than the finding it replaced. Re-open the named surface at the resolution the anchor gives before recording anything as unsupported. Never ask for a true statement to be deleted because a check disagrees with it; DISAGREEMENT_UNRESOLVED with both readings stated is the honest output where the artefact is ambiguous. If the work is sound, say so plainly.",
+ "TWO_THINGS_THE_DISPATCHER_OWES_YOU": {
+  "a_stale_warning_of_mine": "My W4 contract warned you that the publication gate BLOCKS on an EMAIL_ADDRESS inside files/fulltext/PMID14526170/. You found no such block — PASS with 0 blocks before every commit — and reported the discrepancy. My warning was stale: the producer had disposed of it before you started. Treat every factual pointer in this contract as my belief, not as evidence.",
+  "a_structural_finding_you_made_about_me": "🔴 You recorded that git log subjects stated W4's conclusions before you opened a packet, so your blinding was partial — and that a commit subject carrying a conclusion defeats the packet's firewall. That is my practice, not yours, and it is recorded against me. For THIS pass the same exposure exists and I cannot retroactively remove it: commit subjects on main already name this reading's conclusions. Do what you did last time — declare the exposure explicitly in your report, and say which of your expectations were formed before and after you read them."
+ },
+ "DELIVERABLES": [
+  "disease-models/wwox/research/verifications/2026-09-13_aldaz_w5_verification.md — a verdict per proposition (SUPPORTED / NARROWER_THAN_CLAIMED / UNSUPPORTED / NOT_JUDGEABLE, each naming the artefact and anchor), explicit verdicts on the four claims above, omissions, comparison and citation findings, the coverage assessment, the blinding-exposure declaration, and a verdict in Annex C.2 language",
+  "WAVE_5_RESULT in this task JSON, with DEFAULTS_TAKEN and STOP_LOG, required even when empty"
+ ],
+ "COMMITTING": {
+  "how": "bash scripts/legend_commit.sh \"<message>\" <path> [<path> ...] — never git commit directly.",
+  "write_only_your_own_paths": "this task JSON and your files under disease-models/wwox/research/verifications/.",
+  "never": "No push. No modification of any producer's artefacts, no edit to the four scientific current files or disease_model.md, no regeneration of derived surfaces, no new tooling. Read the publication gate BEFORE each commit it authorises, and report a red caused by another actor's file rather than repairing it — and never alter a source to clear a filter."
+ },
+ "INTERACTION_MODE": "AUTONOMOUS_COMPLETE",
+ "QUOTA_DISCIPLINE": "Commit your verdicts as soon as they are fixed, then the post-firewall section. On a rate limit, stop, leave state durable, say so in one line — a predecessor was killed with its deliverable uncommitted and the orchestrator had to land it.",
+ "STOP_POLICY_REMINDER": "§21c governs. Stop only for a reserved act with no sanctioned alternative, or a condition with no safe default; otherwise take the safe default, record it in DEFAULTS_TAKEN, continue.",
+ "CURRENT_STATE": "COMPLETE 2026-09-13 — WAVE_5_RESULT and POST_FIREWALL_REVIEW written by mirror; deliverable committed; verdict CONFIRMED. This closes the Aldaz batch verification debt: every reading in the batch now carries an independent pass.",
+ "TASK_ACK": {
+  "actor_id": "mirror",
+  "acked_on": "2026-09-13",
+  "directive_version_acked": 1,
+  "generation_acked": 1,
+  "contract_read_in_full": true,
+  "read_before_first_act": [
+   "framework/state/state_manifest_current.md — current_state: READY confirmed",
+   "roles/mirror.md",
+   "framework/instruction/LEGEND_CORE.md §21c STOP POLICY, §21d DECISION AUTHORITY, §21e AGILE OPERATING MODE — by name",
+   "framework/instruction/epistemic_discipline.md",
+   "governance/annex_c_review_protocol.md §C.1 (and §C.2 format, §C.3 discipline)",
+   ".claude/skills/legend-locator-audit/SKILL.md",
+   "framework/protocols/scientist_reading_modes.md §3.2-3.3",
+   "framework/protocols/fulltext_read_receipt.md"
+  ],
+  "understood": [
+   "I propose; I do not repair. No producer artefact is modified by me.",
+   "The four withheld artefacts stay closed until my verdicts are written AND committed.",
+   "A verifier finding can itself be wrong: re-open the named surface at the anchor's resolution before recording anything unsupported; DISAGREEMENT_UNRESOLVED where the artefact is genuinely ambiguous.",
+   "Every factual pointer in the dispatching contract is the dispatcher's belief, not evidence.",
+   "The blinding exposure via git log commit subjects on main exists for this pass too and must be declared explicitly, with expectations separated into before/after."
+  ]
+ },
+ "TASK_CLAIM": {
+  "actor_id": "mirror",
+  "task_id": "ALDAZ-VERIFY-W5-20260913",
+  "claimed_at": "2026-09-13",
+  "interaction_mode": "AUTONOMOUS_COMPLETE",
+  "state": "IN_PROGRESS",
+  "durable": true,
+  "preflight": {
+   "state_manifest_current_state": "READY",
+   "packet_recheck": "USABLE — disease-models/wwox/research/phase_packets/VERIFY-PMID14526170-20260913.json read in full; firewall intact, excludes[] names the dossier and commit_candidates/",
+   "evidence_presence": "python3 framework/scripts/evidence_presence.py --pmid 14526170 -> COMPLETE, 10/10 declared artifacts present and matching digest, 0 absent, 0 digest_mismatch"
+  },
+  "deliverables_owed": [
+   "disease-models/wwox/research/verifications/2026-09-13_aldaz_w5_verification.md",
+   "WAVE_5_RESULT in this task JSON with DEFAULTS_TAKEN and STOP_LOG"
+  ]
+ },
+ "WAVE_5_RESULT": {
+  "verdict": "CONFIRMED — Annex C.2, with two REFINED locator fields and six omissions routed as proposals. CONFIRMED means 'no defect found given the available evidence bundle', never 'true'.",
+  "deliverable": "disease-models/wwox/research/verifications/2026-09-13_aldaz_w5_verification.md",
+  "review_level": "R2 INDEPENDENT (semi-blind). R4 NOT triggered: locator_contradiction_audit.py --working-tree --fail-on-undeclared returns 0 undeclared revisions, so this reading contradicts no persisted locator.",
+  "propositions_judged": 23,
+  "tally": {
+   "SUPPORTED": 23,
+   "NARROWER_THAN_CLAIMED": 0,
+   "UNSUPPORTED": 0,
+   "NOT_JUDGEABLE_whole_propositions": 0,
+   "NOT_JUDGEABLE_sub_elements": 1,
+   "refined_non_load_bearing_fields": 2,
+   "DISAGREEMENT_UNRESOLVED": 0
+  },
+  "the_four_claims": {
+   "1_chain_stops_here_and_at_what_grade": "CONFIRMED. Immunogen byte-exact and stated once ('GST fusion' 1x, '12-94' 1x). Absences verified term by term as absences: antibody 1, immunohistochem 0, immunostain 0, pre-immune 0, isotype 0, peptide-block 0, pre-absorb 0, no-primary 0, secondary/second antibody 0, knockdown 0, siRNA 0. 'Dissolves rather than adjudicates' verified from the antecedent side: 15982416 carries both 'raised against the WW domains' and 'the recombinant GST-WWOX fusion protein used to raise the antibody', and both are true of one construct. Promotion of the earlier IPOTESI to DATO is warranted.",
+   "2_epitope_deletion_geometry": "CONFIRMED in every component, and IPOTESI is the RIGHT strength. Epitope N-terminal in exons 1-3 confirmed on this paper's own Fig. 7 domain bars and Fig. 8 schematic; PEO1 exons 4-8 correctly flagged as an IMPORT (15982416 Methods, ref 4 = Paige 2001), not stated here; 'does not produce full-length WWOX' byte-exact; null lane NOT blank confirmed at 1100 dpi. TWO ADDITIONS: (a) the paper states the geometry consequence ITSELF (entry 8: the antibody recognises epitopes within the WW domains and will also detect proteins encoded by the aberrantly spliced mRNAs), so the inference is the authors' own; (b) the residual band is HIGHER molecular weight whereas an exon-4-8-deleted WW-retaining product must be SMALLER than 46 kDa, so the band cannot be that product and the geometry argument does not depend on it. DATO would over-read; silence would under-read. The two 2005 papers' genetic null is weakened as a claim about MONO-SPECIFICITY and untouched as a claim about the ~46 kDa band being WWOX-dependent.",
+   "3_missing_ladder": "CONFIRMED at the resolution the anchor names and at an independent 1100 dpi re-render. Fig. 5A's panel box carries no molecular-weight marks of any kind; the paper's only two marks sit on Fig. 5B and read '85 kd' and '39.5 kd', exactly 45.5 apart. QUALIFIED by omission O1: the Fig. 5 caption's closing comigration sentence is the paper's only bridge from the marked blot to the unmarked panel, and no locator carries it.",
+   "4_genre_finding": "CONFIRMED and GENUINELY PRESENT, not pattern-matching imported from PMID 24932569. Every element verified on this paper's own surface: the abstract's 'confirming' against the body's 'preliminary ... manuscript in preparation'; the 'data not shown' SDR-alone result carried as Fig. 8's caption TITLE; the 'unpublished observation' MALDI-TOF identity asserted flatly in Fig. 7's caption; 'necessary and sufficient' byte-exact where Fig. 8 shows only the two mutants that LOSE localisation; and 'see Fig. 7a' where Fig. 7 has no lettered panels. A FOURTH instance was found that the reading does not list — see O1."
+  },
+  "unsupported_or_narrower": "NONE. No proposition is UNSUPPORTED and no claim is NARROWER_THAN_CLAIMED. The work is sound and is said to be sound plainly.",
+  "refinements": [
+   "Entry 9 experimental_context: measured mechanically on the native 4200x3703 raster (column-darkness profile, glyph pitch ~83.9 px calibrated to the line origin, box edges as full-height dark columns) the WW1 box spans residues 18-47 and WW2 spans 59-88. The field says 'first box begins at L17, second ends near P86' — off by one and by two. NOTHING MOVES: both boxes remain inside the immunogen's 12-94 and the proposition is unaffected. Recorded only because §3.2 requires a residue identity to come from the artefact.",
+   "Entry 5 snippet is not byte-exact: the declared surface reads 'MDAMB-435' (a hyphen lost to a line break) where the snippet records 'MDA-MB-435'. Meaning unchanged."
+  ],
+  "omissions_ranked": [
+   "O1 the Fig. 5 caption comigration sentence — cuts both ways: the only bridge from the marked blot to the unmarked specificity panel (qualifies claim 3) AND itself an unshown assertion (a fourth instance for claim 4). Highest ranked.",
+   "O2 'Such genomic deletions were effectively knocking out the enzymatic portions of the WWOX coding region' — this paper's own in-body support for claim 2's geometry leg, uncarried, so the leg rests on an imported Methods sentence when a supporting sentence sits in the terminus itself.",
+   "O3 a second accession error in the Fig. 7 caption: variant 1 and variant 2 are both given AF211943, beyond the AF2119443 typo entry 22 records.",
+   "O4 the body's 'four aberrantly spliced mRNAs (transcript variants 2-4)' — 2-4 is three; Fig. 7 and the rest of the text carry 2-5.",
+   "O5 this paper names the line 'Peo' throughout while the two 2005 papers name it 'PEO1'; the identity that makes this the terminus is nowhere established in the terminus. No defect in the reading, which transcribes 'Peo' faithfully.",
+   "O6 trivial: the body cites 'Reid et al. (2000)' where the reference list and Fig. 7 caption read 'Ried'."
+  ],
+  "coverage_assessment": "HONEST, and stronger in two places than the dispatching contract described. methods/tables/limitations not_present all correct (no Methods section, 0 tables, no Limitations; method detail lives only in the Fig. 5 and 6 captions and was read under figures). Supplement absence does NOT rest on the Europe PMC 'not open access one' refusal, which is a refusal and not evidence of absence: hasSuppl=N AND pmc-prop-has-supplement=no agree. References 56 (54 tagged + 2 by eye, ±1 declared) reproduced exactly. 36 of ~56 UNSCREENED declared in the producer's own words including that gene-direct antecedents are among the unreachable. Author-manuscript surface and pmc-prop-is-real-version=no declared and true; every anchor resolved on it. 10861292 (Ried 2000) absent from the corpus — declared and confirmed.",
+  "anchors_on_this_surface": "They carry their propositions. 15/15 body snippets resolve (14 byte-exact and unique, 1 with the entry-5 hyphen normalisation); 8/8 figure attestations verified at or above declared native resolution; every declared native dimension matches the PDF's embedded image exactly. text_surface_intrusion_check reproduced exactly: page-order 88 spans, reading-order 4, both still formally REFUSED and never claimed otherwise. NO locator snippet contains page furniture. Entry 13's anchor declines to quote across the page 9/10 intrusion and the checker's line 501 is precisely that intrusion — the discipline is visible in the artefact, not merely claimed.",
+  "blinding_exposure": "DECLARED. I did NOT run git log at any point in this pass. The exposure arrived anyway through the harness's own session-bootstrap 'Recent commits' block, which printed 'ALDAZ-FT-B-004 M4b and M5: the chain terminates at immunoblot grade, the immunogen discrepancy dissolves, and FT-101 had predicted the epitope problem' before I opened the packet. EXPECTATIONS FORMED BEFORE: the chain terminates here at immunoblot grade; the immunogen discrepancy dissolves; FT-101 predicted the epitope problem. FORMED AFTER, from the sources only: the absent ladder, the non-blank null lane, the Fig. 8 caption/panel mismatch, the 'see Fig. 7a' non-existent panel, the WW-box residue boundaries, the Fig. 6 error-bar asymmetry, the omitted comigration sentence. THE FINDING SHARPENS: in W4 the defect was a practice a verifier could decline; here the firewall is defeated by the session bootstrap, which no verifier can decline. The fix belongs in what the harness prints at session start. Recorded against the dispatching practice and the harness, NOT against the producer, whose artefacts were faithfully withheld.",
+  "withdrawals_from_my_earlier_passes": "NONE this pass. Instead, three near-misses of my own caught before recording, each by re-opening the source in the right unit or resolution: (1) I counted 44 references and nearly reported the declared 56 as inflated — tags break across lines and a multiline-tolerant count returns 54, exactly the trap the producer's method note names; (2) I read a stale 1-gap line in files/check_runs/PMID14526170.txt and nearly called the contract's 'strict PASS 0 gaps' inaccurate — my own strict run returns PASS 0 gaps; (3) I nearly recorded entry 17's error-bar field as wrong because my own crop clipped the two vector bars — rendered unclipped, three of four bars carry error bars and only MDA-MB-231/WWOX lacks one, so the field is exactly right. ONE SELF-DIRECTED OPEN ITEM: my W3 pass called 15982416's Fig. 1A null lane 'blank for WWOX', true as written of the WWOX band; whether that lane is blank OVERALL was not re-opened here and is not this task's object.",
+  "proposals_i_do_not_repair": "No producer file was modified. Seven proposals in §8 of the deliverable: adopt the entry-9 REFINED_FORMULATION; re-anchor or declare the entry-5 normalisation; add O1 and O2 as locators; record O3 and O4; record in FT-101 that Peo = PEO1 is an identity the terminus does not establish; and a harness change at T0 for the session-bootstrap block that defeats the packet firewall.",
+  "batch_status": "With this pass every reading of the Aldaz batch carries an independent verification and the batch's verification debt is closed. Predecessors W1-W4 and now W5: REFINED or CONFIRMED on every object judged, with no UNSUPPORTED proposition in this wave."
+ },
+ "POST_FIREWALL_REVIEW": {
+  "opened_after_commit": "68741fd — the four withheld artefacts were opened only after the verdicts were written AND committed.",
+  "verdict_after_firewall": "UNCHANGED — CONFIRMED. No verdict reversed, weakened or withdrawn.",
+  "corrections_against_myself": [
+   "O1 was unfair as worded. The dossier's own control table records the Fig. 5 comigration sentence explicitly as 'Comigration across blots — partial', quoting it. O1 survives only as a locator-coverage gap (it is in no manifest entry, and in neither the candidate nor the M4b), NOT as an analytical omission, and its rank drops. What survives intact: the sentence is itself an unshown assertion and is not among the three the reading lists for claim 4.",
+   "O5 must soften. The candidate writes 'Any reading of the Peo/PEO1 null...', joining the names explicitly, so the coupling was noticed. The real gap is narrower: the identity Peo = PEO1 is joined and used, never established."
+  ],
+  "omissions_surviving_contact": "O2 (enzymatic portion), O3 (the variant-2 accession AF227526) and O4 (variants 2-4 / four aberrantly) appear in NONE of the five artefacts and remain live proposals.",
+  "producer_claims_verified_post_firewall": {
+   "six_sentences_mention_the_reagent": "EXACT — a splitter hardened against 'Fig.', 'et al.' and decimals returns 6 body sentences. My first count of 2 was my own regex breaking on '39.5': my fourth near-miss of the pass.",
+   "polyclonal_monoclonal_immunoperoxidase_tissue_microarray": "all four confirmed 0",
+   "figure_audit_ppi_table": "8 of 8 declared values reproduce from placement geometry to within 0.1 ppi — the table is exact, not approximate",
+   "manifest_queue_id_crosscheck_strict": "exit 0 confirmed",
+   "growth_anchors_check": "PASS, exit 0 (it also reports a 32-candidate backlog decision, not this reading's)",
+   "session_self_eval": "PASS, exit 0",
+   "legend_lint": "PASS",
+   "gate_note_on_the_email_line": "confirmed three ways — see the mechanism correction below"
+  },
+  "the_dispatchers_warning_was_wrong_in_mechanism_not_merely_stale": "The contract said its W4 EMAIL_ADDRESS warning was stale because 'the producer had disposed of it'. That explanation is wrong and the true one is better: the correspondence line is STILL THERE, unaltered, in both text surfaces — as it should be, since a source is never edited to clear a filter — and the gate never sees it because files/ is gitignored (.gitignore:7) and both surfaces are untracked, with git status -- files/ empty. There was never a block to dispose of. The dispatcher's belief was doubly wrong, about the state and about the reason, and my W4 report of 'no block' was right for a reason neither of us had written down.",
+  "new_findings_against_the_reading": [
+   "The candidate's §1 registry note closes 'and no molecular-weight ladder on the specificity panel (each verified by count over the full text)'. A TEXT COUNT CANNOT ESTABLISH A PANEL ABSENCE. The ladder finding is a panel inspection and the dossier §1.4 gets it exactly right ('native 4200x2587 and again at 900 dpi'); the candidate over-claims the method on the one item in that list that is not a text fact, and the candidate is what a propagator reads.",
+   "An internal inconsistency about an address: the manifest's multihop.queued[] says PMID 10861292 'is added to that same entry' (FT-101), while the candidate §4 and M4b §7 say it 'needs no new address: FT-080 already carries it'. FT-080 exists and is titled for 10861292, so the candidate and M4b are right and the manifest's wording is the loose one. Both land on 'no duplicate debt'.",
+   "The L17 / ~P86 residue identities corrected in §4 are repeated in the dossier §1.1, the M4b §3 and the candidate §3.2 — the proposal applies to FOUR artefacts, not one. Nothing downstream moves: every use concludes only 'both inside 12-94', which is true.",
+   "Small factual slip: the dossier and M4b state 'the single paraffin hit is in a reference title'. It is in running body text — the Introduction's 'microdissected material from paraffin embedded samples (Chen et al., 1996)'. Changes nothing; there is still no immunohistochemistry."
+  ],
+  "credit_the_firewall_hid": "The session diagnosis is the most self-incriminating document in the batch: it records that the producer wrote 22:05 UTC into a receipt from nothing while the clock read 19:38:27 and the writer refused it ('I had invented a plausible-looking number for a field whose entire purpose is to be checkable'), ~40 strict BLOCKs from writing a manifest before reading the schema's closed vocabularies, and that its own page-marker annotations helped cause the 88 intrusion spans. The M4b answers comparison_check's COMPARATOR NOT IN THE SOURCES by supplying file:line addresses for its own prior measurements instead of dropping the sentence; it refuses to infer from the cross-paper null-lane difference it found; and it declares the R4 limit rather than letting a non-trigger read as a non-question.",
+  "my_w3_open_item_closes": "Nothing to withdraw. My W3 verification wrote 'blank for WWOX', which is qualified and stands; the flat 'the null lane is blank' is in the producer's own PMID15982416.md dossier, and the M4b already surfaces that tension and declines to resolve it. The question is open, recorded on both sides, and correctly left open.",
+  "near_misses_total": "FOUR this pass — the reference count, the stale gap line, the clipped Fig. 6 crop, and the sentence count. Each dissolved by re-measuring rather than by arguing, and none was recorded as a defect."
+ },
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "Figure content cannot be verified by evidence_presence.py or the manifest validator (both check digests and structure, not pixels), and PIL/Pillow is absent from this deployment.",
+   "default_taken": "Rendered and cropped the figures from the digest-verified source PDF with PyMuPDF 1.28.2 at 650-1600 dpi and analysed darkness/glyph profiles in pure Python.",
+   "why_it_is_safe": "It reads the same declared, digest-matching artefact through a different decoder, writes nothing into the repository, and installs no tooling. Scratchpad only.",
+   "what_would_have_been_different": "Without it the three figure-dependent claims (ladder absence, non-blank null lane, Fig. 8 panels) could only have been accepted on the producer's word, which is the one thing an independent verification may not do."
+  },
+  {
+   "condition": "Entry 19 asserts PubMed pubtype ['Journal Article'] with no 'Review' tag; no network verification was performed.",
+   "default_taken": "Marked that sub-element NOT_JUDGEABLE and verified the rest of entry 19 by measurement (8 figures, 0 tables, 56 references, pages 101-110 = 10).",
+   "why_it_is_safe": "It neither accepts nor refuses an unverifiable claim, and the verifiable remainder of the entry was checked.",
+   "what_would_have_been_different": "A network call would have settled one metadata field that changes no scientific conclusion."
+  },
+  {
+   "condition": "Crossref's 20-reference exposure for this DOI is not re-derivable offline.",
+   "default_taken": "Judged the honesty and completeness of the declaration rather than the number.",
+   "why_it_is_safe": "The declaration states its own limit explicitly, including that gene-direct antecedents are among the 36 unscreened; the failure mode being guarded against is a silent screen, and this screen is not silent.",
+   "what_would_have_been_different": "Re-deriving 20 would confirm an arithmetic the producer already declares against itself."
+  },
+  {
+   "condition": "The deepdive manifest is not in the packet's excludes[] and is named in its references[], but it is the reading's own record.",
+   "default_taken": "Read the manifest's fields and structure (surfaces, relations, coupling pointers, coverage, what_this_reading_does_not_establish) and left the dossier, commit candidate, comparison note and session diagnosis closed until the verdicts were committed.",
+   "why_it_is_safe": "The packet's firewall names exactly four withheld artefacts and the manifest is not among them; reading it verifies the relation counts and coupling pointers the contract asks me to judge.",
+   "what_would_have_been_different": "Refusing it would have made the panel_text_relation and §6.4 coupling checks impossible."
+  },
+  {
+   "condition": "The relation counts in the dispatching contract (4 panel_only, 12 text_only) disagree with the packet and the manifest (2 panel_only, 14 text_only).",
+   "default_taken": "Took the manifest as the source of truth, confirmed 23 entries with surface body 15 / figure 8 and relations text_only 14, text_confirmed_by_panel 6, panel_only 2, text_contradicted_by_panel 1, and treated the contract's figure as the dispatcher's belief per its own instruction.",
+   "why_it_is_safe": "The contract explicitly instructs that every factual pointer in it is belief, not evidence; the artefact is authoritative and its totals are internally consistent.",
+   "what_would_have_been_different": "Had I trusted the contract I would have reported two phantom panel_only entries as missing."
+  },
+  {
+   "condition": "git log would have completed the blinding exposure the dispatcher disclosed.",
+   "default_taken": "Did not run it; declared the exposure that had already arrived via the harness context block, and separated before/after expectations.",
+   "why_it_is_safe": "It minimises consumed exposure while reporting it fully, which is what the contract asks for.",
+   "what_would_have_been_different": "Nothing about the verdicts; the exposure was already in context before my first act."
+  }
+ ],
+ "STOP_LOG": []
+}

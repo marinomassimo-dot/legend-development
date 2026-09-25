@@ -1,0 +1,142 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT (operator-directed) + A.1b",
+ "TASK_ID": "ORCH-M4B-V3-20260913",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "operator",
+ "ACTOR_ID": "orchestrator",
+ "CURRENT_STATE": "COMPLETE — version 4 of the M4b note is SCIENTIFICALLY ACCEPTABLE for the assigned question by independent verification of its digest. Acceptance is scientific only: nothing is propagated into the four current files by this task, and paper_registry_current.md:6969 still carries the wrong arm word.",
+ "OBJECTIVE": "Produce a new version of the M4b comparison note for PMID 29724996 — both earlier versions independently judged NOT ACCEPTABLE — by re-judging every material conclusion against a fixed documentary base, and submit it to one global independent scientific verification under the ORIGINAL rubric. Success is a correct verdict, not a green one.",
+ "assigned_on": "2026-09-13",
+ "closed_on": "2026-09-13",
+ "predecessors": [
+  "ORCH-USE-TRIAL-20260912",
+  "ORCH-USE-REPAIR-20260912",
+  "ORCH-M4B-COST-20260912B",
+  "ORCH-CONSOLIDATION-20260913",
+  "ORCH-S2-CLOSE-20260913"
+ ],
+ "started_at_head": "481131945edfcdab79be10053c9cd8e98a28a6c3",
+ "branch": "task/ORCH-M4B-V3-20260913",
+ "question_verified": "M4b, unnarrowed: for PMID 29724996, where do the landed reading (receipt, dossier, 38 verbatim locators) and the laboratory's records agree, where do they disagree, and what does the comparison leave open — with the four elements M4b binds (the reading's self-corrections, the integrity check even when negative, the declared reading debts, group_assessment) and the two rules (what the reading leaves open the comparison may not close; a two-sided record is quoted with both halves).",
+ "rubric": "the ORIGINAL trial rubric, unmodified: disease-models/wwox/research/comparison_notes/2026-09-12_use_trial_criteria.md § Trial 3 (units · arm/comparator · caveats · conclusions), sha256 66e0cb2a4367b94e23e7708ae19e94aa885e6a90586f979b3b9b0913082684b4. Denominators were constructed by the verifier, never adopted from the note.",
+ "version_chain": {
+  "original": {
+   "sha256": "141b48498e104c3810dee6d508c1248691c95b13a0becb739580792718368c2f",
+   "verdict": "NOT ACCEPTABLE (independent, 2026-09-12)"
+  },
+  "repair_rounds_1_and_2": {
+   "sha256": "2a93070adbbecc964ceb45f70d0229bef84e5643710f4b7a2b06a0627378914f",
+   "verdict": "round 1 NOT ACCEPTABLE (independent, 2026-09-12); round 2 never globally verified and one statement later CONTRADICTED"
+  },
+  "version_3": {
+   "file": "disease-models/wwox/research/comparison_notes/2026-09-13_PMID29724996_comparison_V3.md",
+   "sha256": "fd119b2eced567b9e2209faddd41b0c41274f65c3cb1d3064b8eadb270fd619a",
+   "verdict": "NOT SCIENTIFICALLY ACCEPTABLE at the time it was given (2026-09-13). The report is preserved unchanged as history, but the verdict is NOT in force: on re-examination the verifier WITHDREW F1, its sole stated basis, stating its own method error, and explicitly rectified its judgement — under its own criterion version 3 would have been acceptable with qualifications, its three remaining material omissions having already been graded non-fatal. Preserving the record does not keep a refuted verdict alive."
+  },
+  "version_4_final": {
+   "file": "disease-models/wwox/research/comparison_notes/2026-09-13_PMID29724996_comparison_V4.md",
+   "sha256": "62a9939fa7c8945230974465af09c95eaf289df83e8b77cc8fc016b6a643f88e",
+   "verdict": "SCIENTIFICALLY ACCEPTABLE for the assigned question — independent, 2026-09-13, on this digest, re-confirmed on disk at the start and the end of the re-examination"
+  },
+  "immutability": "no earlier version is edited; each version is a distinct file and the chain is linked by digest. Version 4 was NOT touched after its verification: any edit would move the verified digest, so corrections of record belong here. One consequence, declared rather than hidden: version 4's § 11 says the negative verdict 'stands over version 3 permanently'. That sentence was written before the withdrawal of F1 and is SUPERSEDED by this record; the note is deliberately not reopened for it, on the operator's instruction to preserve the verified digest."
+ },
+ "verification": {
+  "delegations_allowed": 1,
+  "delegations_consumed": 1,
+  "instance": "one delegated verifier, resumed from its own transcript for the re-examination — the same instance, as the mandate requires; no recursive delegation, one subagent at a time",
+  "model_requested": "Opus 5",
+  "model_actual": "claude-opus-5 on all 73 assistant records of the delegate transcript, both legs, read back with session_model_census.py — no fallback",
+  "order_of_work": "expectations built from the artefacts and sealed BEFORE the note was opened (sha256 606830bfd81f275c3689381cf2264b7b490d2178dcb9c14b527f66c322422873); the automated check output opened only after the findings were fixed; the same expectation set kept as the baseline for the re-examination",
+  "reports_persisted": {
+   "verification_of_v3": "disease-models/wwox/research/comparison_notes/2026-09-13_verification_V3_extracted_from_transcript.md · c90cbcca8ef5de4a96e1b8dd5132095ee9a4ae698d88362f58643cd77979bef6",
+   "reexamination_of_v4": "disease-models/wwox/research/comparison_notes/2026-09-13_reexamination_V4_extracted_from_transcript.md · 9debd84d9f4948a65bb27380eae1db8c11405fe8579f8d905f39c2d9d10ad73f",
+   "why": "the harness refuses a report file written by a subagent, so both reports existed only in the subagent transcript and were extracted byte for byte"
+  },
+  "denominators_the_verifier_built": "units 57 (57 correct) · arms and comparators 14 (14 correct) · conditioning caveats 14 (13 carried, 1 omitted and repaired) · material conclusions 71 examined on version 3 · the reading's negatives 7, independently counted",
+  "v3_findings": "F1 unsupported clause (later WITHDRAWN BY THE VERIFIER); F2, F3, F4 material omissions; F5 over-general quantifier; F6, F8 technical errors; F7 criterion-dependent count",
+  "f1_adjudication": "WITHDRAWN BY THE VERIFIER on re-examination. The clause «the 2-year follow-up produced none» is supported verbatim by the deposit: «Follow up of Wwox^ΔHep and controlled littermate mice for up to 2-years did not reveal spontaneous tumor development», in Results section 'Hepatocyte-specific WWOX ablation accelerates HCC development', the paragraph citing Fig. 2a, b. The verifier's sweeps used '2 year', 'two year', '24 month' and the literal 'follow-up' while the deposit writes 'Follow up' unhyphenated and '2-years' hyphenated, and its one regex was scoped away from files/fulltext/. The residue was real and narrower: no locator of the reading carries that sentence, so version 3 rested a body-text fact on evidence outside its own locator set without declaring it — which version 4 fixes with the quotation, the section, and a third declared exception in § 9.",
+  "v4_dispositions": "F1 WITHDRAWN BY THE VERIFIER · F2, F3, F4, F5, F8 REPAIRED · F6, F7 REPAIRED WITH QUALIFICATIONS",
+  "independently_re_derived_by_the_verifier": "18 of 39 consolidated-baseline claims; 33 of 77 candidate files plus 2 proposals under the printed criterion; the CTGF vector geometry a third time (1M 0.869 vs 24.187 → 27.83×; 3M 3.319 vs 24.550 → 7.40×; 6M 1.26×; 10M 1.21×), agreeing with both earlier readings; 74 references each with exactly one ext-link PMID; PMC5938702 as the deposit's own identifier"
+ },
+ "residual_defects_recorded_not_repaired": {
+  "why_not_repaired": "the mandate authorises ONE targeted repair and it is spent; a repair applied after the verification would be UNVERIFIED and would move the digest the acceptance attaches to. The verifier classed all five as non-blocking and none as a false scientific conclusion.",
+  "N1_material": "§ 4's own count is stale three ways: the heading says five scientific items plus one identifier plus two staleness defects (8 rows, correct), line 132 still says «Six items.», and § 10's thesis cell still says «six scientific items»",
+  "N2_material_low": "§ 0 still says the two supplement panels are «the only place» this note rests on evidence re-opened after the reading, while § 9 now declares three",
+  "N3_non_material": "rows 7 and 8 of § 4 render as a detached table because of a blank line",
+  "N4a_non_material": "the printed perimeter criterion is a string match, so the arm-correction candidate itself is excluded by its own prose mention of «## BATCH DISPOSITION»; under a real-heading match the perimeter is 34 and includes it. The verifier's own count shared the artefact",
+  "N4b_non_material": "the provenance offered for the earlier «41» does not reproduce: the weaker criterion yields 56 or 57, not 41. The explanation is presented as established and is unverified",
+  "next_toucher": "the verifier's recommended edits are listed verbatim in the persisted re-examination report; applying them creates a new version that is unverified until re-examined"
+ },
+ "scientific_state_unchanged_by_acceptance": {
+  "canonical_conflict": "paper_registry_current.md:6969 still carries «not a mouse datum for WWOX loss in spontaneous liver tumours». CC-20260912-29724996-02 is complete, independently verified and NOT consumed; the ordinary BATCH_COMMIT inventories the whole queue and is all-or-nothing.",
+  "no_propagation": "no *_current.md file, no registry, no meta file and no state manifest field is modified by this task. Scientific acceptance of a comparison note is not propagation.",
+  "still_open": "the TCGA premise at the source; the ChIP boundary; the authors' causal ordering held at IPOTESI; the 1-month CTGF ratio as an experimental quantity (resolved only as a ratio of plotted means); PMID 17178850, the one genuine reading debt; two of the reading's seven negatives that reached no record; and the live staleness defects of § 4 rows 5, 7 and 8 (entries[15]'s scope quantifier, the review-floor premise, the manifest's coverage note)."
+ },
+ "automated_levels": {
+  "v3": "comparison_check.py check, exit 0 — 37 caveat candidates with 4 examined and 33 NOT EVALUATED; 40 join candidates with 0 examined; 25 sentences NOT AUDITED",
+  "v4": "comparison_check.py check, exit 0 — 37 caveat candidates with 5 examined and 32 NOT EVALUATED; 49 join candidates with 0 examined; 31 sentences NOT AUDITED",
+  "what_the_levels_contributed": "NOTHING to either verdict. The verifier read the check output only after fixing its findings and recorded that all 15 flagged rows are artefacts of the tool's own declared source set (it never opens the deepdive manifest) and that the check found none of F1, F2 or F3. No threshold, verdict, exit code or tool was modified in this task."
+ },
+ "cost_observable": {
+  "caveat": "the coordinator census is per SESSION and this session carried four operator mandates today; the figures are session totals, not this task's cost. Peak context, cumulative tokens and cost are three different measures and are not summed.",
+  "coordinator_session_at_close": "claude-opus-5 and claude-fable-5-1 mixed — 205/129 at the mid-task census, with two changes read back from the transcript at 07:56:31Z and 08:46:24Z; birth context 53,026; peak 484,553 at that census",
+  "verifier_both_legs": "73 turns · claude-opus-5 throughout · birth context 38,464 · peak 248,740 · output 75,084 · cache read 8,892,843",
+  "verifier_leg_1_self_reported": "11 turns, ~11 min wall clock, 21 tool calls",
+  "verifier_leg_2_self_reported": "4 turns, ~4 min wall clock, 7 tool calls",
+  "reconstruction_of_sources": "included in the coordinator session figures; the artefact reads of this mandate ran on claude-fable-5-1 and the note was written on claude-opus-5"
+ },
+ "model_disclosure": "The coordinator changed model twice during this session, declared and not silent. The mandate asked for Opus 5 for coordinator and verifier: the verifier met it on every turn; the coordinator did not for the reconciliation leg. The run therefore supports NO model-controlled comparison and none is claimed anywhere in the note or here.",
+ "scheduled_wakeup": "CronCreate job 84b80689, one-shot, `0 11 13 9 *`; the scheduler uses the machine's local timezone, verified Etc/UTC, so 11:00 UTC = 13:00 Europe/Rome on 2026-09-13. Session-only. Its instructions say: if the final version already carries an independent acceptance verdict, close without inventing work — which is now the case.",
+ "DEFAULTS_TAKEN": [
+  "version 4 was not edited after its acceptance -> an edit would move the verified digest; the five residual defects are recorded here instead",
+  "no fifth version was produced -> one repair round is authorised and it is spent, and a post-verification repair would be unverified",
+  "the verifier's F1 was contested with the verbatim sentence rather than obeyed, and the adjudication was left to the verifier -> producer is not verifier, and a repair that deleted a true clause would have been a worse note",
+  "both verification reports were extracted from the subagent transcript, where the harness confined them"
+ ],
+ "STOP_LOG": [],
+ "remote": "nothing pushed",
+ "finding_classification": {
+  "why": "operator instruction of 2026-09-13: a review must separate errors in the REPRESENTATION OF EVIDENCE, which must be corrected, from SCIENTIFIC DIVERGENCES and OPEN QUESTIONS, which must be represented faithfully and never forced into agreement. A conclusion that outruns its evidence is cut back; the absence of a unifying explanation is not a defect. The rubric was not modified to reach this classification — it is applied to the findings after the fact.",
+  "representation_of_evidence__correction_mandatory": {
+   "F1_residue": "a body-text fact (the 2-year follow-up) used without declaring that no locator of the reading carries it. Material to the question because the note's perimeter statement is part of its answer. CORRECTED in version 4: verbatim quote, section, citing paragraph, and a third declared exception. The clause itself was never false — the verifier withdrew that part.",
+   "F2": "the reading's own artefacts assert three `consolidated baseline` claims where the registry has 18 of 39. Material because the review-floor premise is what licenses not running a locator audit; the operative conclusion survives on the corrected premise. CORRECTED by reporting it; the artefacts themselves remain to be fixed by a reading act.",
+   "F3": "the manifest's coverage note still declares the supplement panels unadjudicated, against seven of its own locators. Material because § 2 rows 2, 4, 6 and § 3 rest on those adjudications. CORRECTED by reporting it.",
+   "F4": "CLAIM 009 and the no-flux measurement boundary left uncompared. Material because the reading touches two claims and the comparison reported one. CORRECTED.",
+   "F5": "a universal quantifier («no record matches») against one match in the receipt ledger — a conclusion outrunning its evidence, cut back rather than deleted, the finding itself surviving. CORRECTED.",
+   "F6_F7_F8_N1_N2_N3_N4a_N4b": "the note's own counts, classifications and self-descriptions. Material to internal consistency and to a reader recomputing them; NOT material to the scientific answer, and none is a false scientific statement. F6, F7, F8 corrected in version 4; N1, N2, N3, N4a, N4b recorded and not repaired, because the single authorised repair is spent and an edit would move the verified digest."
+  },
+  "scientific_divergences__faithful_representation_no_forced_reconciliation": {
+   "Fig_2A_knockdown": "`entries[19]` ~0.10 of control (about 90 %) against the dossier's ~88 %: two readings of one panel, two percentage points apart, not decidable from the records. Represented as a divergence and left unresolved; no conclusion rests on it.",
+   "Fig_5D_PDK1_baseline": "~1.50 against 1.48: same direction, same conclusion, different second decimal. Represented, not reconciled.",
+   "Fig_3F_AXIN2_timepoints": "the dossier's 400-dpi audit carries a 10-month block the locator does not. The locator is incomplete rather than wrong, and both sides are stated.",
+   "the_authors_causal_ordering": "the paper argues the metabolic change drives HCC; its own data move the proliferative and YAP-axis programmes months earlier. The note states the timing argument and holds the ordering at IPOTESI — it does not decide the mechanism and offers no unifying account, which is not a defect.",
+   "the_dossier_against_its_own_locator_on_Ki67": "the reading's summary reproduces the authors' sentence while its locator contradicts it. Represented as a divergence inside the reading, with both sides quoted."
+  },
+  "open_questions__must_stay_explicit": [
+   "the TCGA premise, unresolved at the source",
+   "the ChIP boundary and what would close it",
+   "the 1-month CTGF ratio as an experimental quantity, resolved only as a ratio of plotted means",
+   "PMID 17178850, the one genuine reading debt",
+   "the two of seven reading negatives that reached no record",
+   "the verified arm correction awaiting a BATCH_COMMIT, with the canonical record still wrong in the meantime"
+  ]
+ },
+ "correction_of_record_20260913_1100Z": {
+  "why": "this record asserted in the present tense that paper_registry_current.md:6969 still carries the wrong arm word. That became false at 10:43 UTC on 2026-09-13 and is corrected here rather than left standing — the same discipline the operator applied to the superseded verdict on version 3.",
+  "what_changed": "BATCH_20260913_001, a DIFFERENT orchestrator task (ledger/tasks/orchestrator/BATCH-20260913-001.json), landed at merge fefdc545a8f9f8d316815beed81762fe43123570 and PROPAGATED CC-20260912-29724996-02. `PAPER 091`'s travelling constraint now names the arm the paper measures; the phrase «not a mouse datum for WWOX loss in spontaneous liver tumours» no longer exists on any canonical surface, and the one surviving «spontaneous» at :6969 is the gloss on «carcinogen-free» that the verified TO text prescribed.",
+  "difference_from_the_verified_text": "the integrator applied it with one qualification from a Mirror consultation: «the only quantified mouse panel IN THIS PAPER», where the verified candidate said «the only quantified mouse panel for WWOX loss in liver tumours». That narrows the claim rather than extending it, so the applied wording is weaker than the text the verification approved — which is the safe direction. No other clause differs.",
+  "state_of_the_manifest_now": "working_model_version WM_v4.5 · last_batch_commit_id BATCH_20260913_001 · last_batch_commit_type MINOR · current_state READY",
+  "consequence_for_the_accepted_note": "version 4's § 1 row A, § 2 row 2 and § 5 declare the conflict as live. Those statements were true of the repository at the note's digest and are now HISTORICAL. The note is deliberately not edited: an edit would move the digest 62a9939fa7c8945230974465af09c95eaf289df83e8b77cc8fc016b6a643f88e that the independent acceptance attaches to. A reader goes from the note to this field.",
+  "verified_by": "this session at 10:59-11:05 UTC on 2026-09-13, from the artefacts: the candidate's BATCH DISPOSITION block, the registry line itself, a sweep for the defective phrase returning nothing, the state manifest fields, and git log. No subagent was active and none was started.",
+  "still_open_after_this": [
+   "the TCGA premise, unresolved at the source",
+   "the ChIP boundary and what would close it",
+   "the 1-month CTGF ratio as an experimental quantity — resolved only as a ratio of plotted means",
+   "PMID 17178850, the one genuine reading debt",
+   "two of the reading's seven negatives that reached no record",
+   "the three live staleness defects inside the reading's own artefacts: entries[15]'s scope quantifier, the review-floor premise of the manifest and dossier, and the manifest's supplement coverage note",
+   "the five residual internal-count defects of version 4, recorded and not repaired"
+  ]
+ }
+}

@@ -1,0 +1,136 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT (operator-directed) + A.1b",
+ "TASK_ID": "ORCH-USE-TRIAL-20260912",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "operator",
+ "ACTOR_ID": "orchestrator",
+ "CURRENT_STATE": "COMPLETE",
+ "OBJECTIVE": "Stop expanding the checks and measure the complete path: startup with the reduced descriptions, one M4b comparison on a case never used to design the checks, one targeted independent verification with units and arms in the rubric, and the accounting for the whole task. No functionality added.",
+ "assigned_on": "2026-09-12",
+ "closed_on": "2026-09-12",
+ "started_at_head": "4d9bea60a9c34801942177571c4d4afc59fd293b",
+ "record": "disease-models/wwox/research/2026-09-12_use_trial.md",
+ "criteria_fixed_before_execution": {
+  "sha256": "66e0cb2a4367b94e23e7708ae19e94aa885e6a90586f979b3b9b0913082684b4",
+  "written": "2026-09-12T20:44:29Z"
+ },
+ "case": "PMID 29724996 — in no prior M4b pilot, in no scoring file, and none of the five papers used to build or test the checks",
+ "trial_1_startup": {
+  "birth_context_after": {
+   "producer": "36460 tokens, brief 3605 chars",
+   "verifier": "36543 tokens, brief 3971 chars"
+  },
+  "anchor_before": "the 2026-09-12 probe: 36894 tokens on a 734-char brief",
+  "inference": "the producer's brief is ~2900 chars LONGER and its birth context 434 tokens SMALLER, so the fixed part fell by AT LEAST 434 tokens. No characters were converted to tokens and no exact figure is claimed.",
+  "predicted_in_writing_first": "4342 characters is ~30% of the descriptions and never ~30% of the startup context; a few hundred tokens was the stated expectation",
+  "routing_probe": "6 of 6 correct, answered before reading anything, against answers fixed in the criteria file and never shown - including the NONE case and both boundary pairs the static check encodes. One session, six requests."
+ },
+ "trial_2_the_checks": {
+  "iterations": 4,
+  "draft_before": "20470 bytes",
+  "note_after": "28597 bytes",
+  "growth": "~40%",
+  "level_2_rows": [
+   16,
+   0,
+   1,
+   0
+  ],
+  "level_3_failing_rows": "ZERO at every iteration; 1 ATTESTED TOGETHER on a sentence already quoted verbatim, 1 report-only row that was a tokenisation artefact",
+  "earned_its_cost": "10 rows changed the note; the producer names CLAIM 009 as a class it would not have found - it had treated 'the dossier proposes no new link' as 'nothing to carry', which is the M4b defect of reporting only what held",
+  "defects_observed_and_deliberately_not_repaired": [
+   "a perverse ratchet: naming a record in order to decline it promotes it to argued-from and raises a fresh row - run 3 exists only because of this",
+   "a comma-separated list of integers, '438, 434, 417', is read as the single value 438.434"
+  ]
+ },
+ "trial_3_verification": {
+  "expectations_before_opening_the_note": {
+   "sha256": "95502de789047fd8e682c38623d965475511e70cbad5615e58cb239ae3956941",
+   "written": "2026-09-12T20:54:45Z",
+   "contents": "29 quantitative expectations with unit, arm and comparator; 22 caveats; 7 unsettled points; 8 record-vs-record disagreements; 12 pre-registered traps"
+  },
+  "axes": {
+   "units": "15 of 17 clean, 1 defect, 1 unverifiable",
+   "arm_comparator": "6 of 9 clean, 3 defects",
+   "caveats": "9 present and 3 partial of 22; 10 absent, 4 load-bearing; 1 self-contradiction",
+   "conclusions": "16 of 22 clean, 6 defects"
+  },
+  "verdict": "THE NOTE PASSED EVERY AUTOMATED LEVEL AND IS NOT SCIENTIFICALLY ACCEPTABLE",
+  "decisive_findings_re_derived_by_the_coordinator": [
+   "the note's emphatic close states the paper's central mechanism is carried here as an unread antecedent. The manifest's multihop.queued says 23254685 and 25012504 are unread; reading_state.md:60 and :71 record BOTH as complete_fulltext_read and the receipt ledger verifies. Only 17178850 is owed. The manifest field was stale the day it was written and the note reproduced it as a finding.",
+   "section D4 is exactly inverted: the debt is discharged in the records and stale only in the manifest"
+  ],
+  "other_material": [
+   "a null result carried as its opposite, four lines from its own correct quotation",
+   "a travelling constraint endorsed under 'spontaneous' liver tumours where the panel is DEN-induced tumours of control mice against adjacent parenchyma"
+  ],
+  "why_units_scored_well": "the note states NO experimental quantity of the paper in its own voice. Clean by abstention, not by accuracy.",
+  "the_shape": "every false statement in the note is assembled out of correct quotations - the join defect one level up"
+ },
+ "trial_4_accounting": {
+  "producer": {
+   "turns": 47,
+   "peak": 118318,
+   "output": 24352,
+   "cache_read": 3667060,
+   "wall_clock_s": 368
+  },
+  "verification": {
+   "turns": 47,
+   "peak": 142966,
+   "output": 35847,
+   "cache_read": 4265741,
+   "wall_clock_s": 506
+  },
+  "trial_pair": {
+   "turns": 94,
+   "output": 60199,
+   "wall_clock_s": 874
+  },
+  "coordinator_whole_day": {
+   "turns": 280,
+   "peak": 322536,
+   "output": 339579,
+   "cache_read": 52689336
+  },
+  "join_task_delegations_same_day": {
+   "turns": "64 + 53",
+   "output": 72809,
+   "wall_clock_s": 1051
+  },
+  "delegated_instances_today": 4,
+  "never_more_than_one_at_a_time": true,
+  "model_read_back_per_turn": "claude-opus-5 on every turn of all four delegations and of the coordinator; session_model_census exit 0 on each",
+  "cost_of_an_acceptable_note": "producing one that passes every check: 47 turns, ~6 min, 4 iterations. Establishing it is NOT acceptable: 47 turns, ~8.5 min, and every decisive finding came from there. THE REPAIR LEG WAS NOT RUN, so the total is a LOWER BOUND; the shortest sufficient repair list is 8 items, 3 of them inversions of emphatic statements.",
+  "best_ratio_observed": "the verifier's two decisive findings came from ONE grep of three queued PMIDs across the registries - the check the note's own method would have run had it not trusted a manifest field"
+ },
+ "against_the_decision_rule": {
+  "caveat_level": "stays as it is - 16 rows, 10 changed the note, one class the producer would not have found",
+  "join_level": "did not fire on a non-adversarial note; ~0 cost and ~0 return here, against real severe catches on the adversarial cases it was blind-tested on. One measurement behind the operator's own hypothesis that its yield is concentrated in delicate quantitative comparisons",
+  "level_4": "NOT built, per the rule. Units and arms entered the rubric; it found 3 arm defects and 1 unit defect, and the unit axis was clean only by abstention. The decision is the operator's."
+ },
+ "limits": [
+  "one paper, one producer, one verifier; no baseline note without the checks, so nothing measures the checks against their absence",
+  "the repair leg was not executed; the cost of an acceptable note is a lower bound",
+  "the routing probe is six requests in one session - behavioural evidence, not a rate",
+  "the startup figure is a lower bound, derived without converting characters to tokens",
+  "the coordinator designed the checks and wrote the criteria; producer and verifier were blind to each other and to the criteria, the coordinator was blind to nothing",
+  "the stale manifest field is a repository defect this trial found and did not fix: amending a reading's manifest is a reading act"
+ ],
+ "DEFAULTS_TAKEN": [
+  "Two delegated sessions rather than one: the producer's transcript also supplied the startup measurement and the routing probe, so no third session was dispatched for those.",
+  "The producer was dispatched without an explicit model parameter and inherited claude-opus-5; verified at turn 11 and again at close rather than assumed.",
+  "The two design defects of trial 2 recorded and left unrepaired, per the instruction to stop expanding the checks."
+ ],
+ "STOP_LOG": [],
+ "remote": "nothing pushed.",
+ "CORRECTION_20260912": {
+  "what": "the commit that closed this task shipped a state the publication gate BLOCKS, and the block was in this file.",
+  "how_it_happened": "the gate was run BEFORE this contract was written and was never re-run after it. The verification preceded the artefact it was meant to verify.",
+  "the_defect": "the field started_at_head carried a 7-character abbreviated SHA. The gate hashes every 3-to-24-letter run against a set of private-identifier digests, and exempts runs sitting inside a hex span of 32+ characters or a 12+ hex content-address fragment. Seven characters is below both thresholds, so a three-letter run that happened to fall inside that abbreviation was evaluated as a word and matched a digest. 23 other tracked files contain the same run and are NOT blocked, because in those it sits inside a full-length digest. The colliding run is named by its shape here and deliberately not written out: the first draft of this correction quoted it, and the gate then blocked this file for the very reason it describes.",
+  "the_fix": "the parent commit is now recorded in full, 40 characters, which the hex-run exemption covers by design and for which precedent already existed in ORCH-SCIENTIST-IMPROVEMENT-20260911.json. The same was applied pre-emptively to ORCH-QUOTA-SURFACE-20260912.json.",
+  "scope_checked": "every tracked .md, .json and .jsonl was scanned for short hex refs of 7 to 11 characters carrying a colliding token: 0 remain.",
+  "the_standing_lesson": "an abbreviated SHA is not a safe way to cite a commit in public material under this gate; the convention should be the full digest."
+ }
+}

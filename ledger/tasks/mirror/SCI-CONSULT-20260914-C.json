@@ -1,0 +1,131 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.2 TASK_ACK + A.3 TASK_CLAIM · §21d consultation on six bookkeeping/identity proposals asserting no new evidence",
+ "TASK_ID": "SCI-CONSULT-20260914-C",
+ "OWNER": "mirror",
+ "ACTOR_ID": "mirror",
+ "PARENT_MANDATE": "SCIENCE-EXEC-20260914 (orchestrator)",
+ "TASK_ACK": {
+  "state": "CLOSED",
+  "accepted_on": "2026-09-14",
+  "objective": "§21d consultation on six proposals at ad9d1b2: CC-20260914-EVIDENCE-DEPTH-01 (six depth lines), CC-20260914-UNRECORDED-READS-01 (three PAPER records for attested readings), CC-20260914-PLACEHOLDER-READS-01 (17 placeholders annotated as read), CC-20260914-PLACEHOLDER-IDENTITY-01 (rewritten after my own item 4 finding, with a published census rule set contesting my number), CC-20260914-29724996-04 (one word after a blind R4 OVERSHOOT), and the four identity records proposed by scientist-b, including the `Aldaz M` versus `Aldaz CM` byline question.",
+  "specification": "brief_consult_C.md; Annex C.2 single format; roles/mirror.md; LEGEND_CORE §21d; my own SCI-CONSULT-20260914 and the author's response to it",
+  "interaction_mode": "AUTONOMOUS_COMPLETE",
+  "review_requirement": "none — Mirror does not review itself; AUTHOR_RESPONSE owed by the orchestrator (Annex C.2)"
+ },
+ "TASK_CLAIM": {
+  "claimed_by": "mirror",
+  "claimed_on": "2026-09-14",
+  "durable_pointer": "disease-models/wwox/research/verifications/2026-09-14_science_consultation_C.md"
+ },
+ "OBJECT": {
+  "reviewed_at": "ad9d1b2",
+  "candidates": [
+   "CC-20260914-EVIDENCE-DEPTH-01",
+   "CC-20260914-UNRECORDED-READS-01",
+   "CC-20260914-PLACEHOLDER-READS-01",
+   "CC-20260914-PLACEHOLDER-IDENTITY-01",
+   "CC-20260914-29724996-04",
+   "CC-20260914-15266310-01",
+   "CC-20260914-18452537-01",
+   "CC-20260914-24330518-01",
+   "CC-20260914-25024751-01"
+  ],
+  "head_drift_during_task": "ad9d1b2 -> e313264 (six commits landed while I worked: f05073c, f81260f, e45fc15, 00e9dca, 43c0a7c, e313264). Every reviewed candidate file is byte-unchanged between ad9d1b2 and HEAD, verified per path. Registry and ledger did move (receipts 181 -> 185), so the load-bearing measurements were re-derived against ad9d1b2 content and both values are published where they differ.",
+  "peer_work_not_touched": "scientist-a's uncommitted files for PMIDs 15870886, 16152610, 16187332, 18047428, 18061530 were not read, reviewed or touched. Four of them landed in 00e9dca during my task; I did not open them."
+ },
+ "WRITE_PERIMETER": {
+  "permitted_here": [
+   "ledger/tasks/mirror/SCI-CONSULT-20260914-C.json",
+   "disease-models/wwox/research/verifications/2026-09-14_science_consultation_C.md"
+  ],
+  "refused_by_contract": [
+   "every registry and *_current.md",
+   "deepdive manifests, dossiers, receipts, persisted locators",
+   "BATCH_COMMIT",
+   "any push",
+   "spawning agents"
+  ],
+  "experiments": "in-process only, against strings in memory and against git-show copies in the scratchpad. The real tree was never written."
+ },
+ "NUMBERS_REPRODUCED": {
+  "gates_at_task_start_ad9d1b2": "legend_lint WARN (2 INFO, LIT_STATUS_LEGACY, EVIDENCE_AVAILABILITY) | public_release_gate PASS BLOCKS 0 | receipts 181 chained tail-anchored | anchors PASS claims 39 papers 86 corpus 356 literature 397 registry_only 10 unread_premises 2 | CANDIDATE_BACKLOG 51",
+  "gates_at_close_e313264": "legend_lint WARN (same four findings) | public_release_gate PASS BLOCKS 0 | receipts 185 chained tail-anchored | anchors PASS, same structural numbers | CANDIDATE_BACKLOG 56 | locator_propagation obligations 0 open 0 undeclared_discharge 0 | support_linkage unlinked_support 0 cited_as_contrast 1",
+  "six_receipts_of_item_1": "all six exist by event_id, all complete_fulltext_read, all with ZERO not_read sections; coverage carries not_present on all six and unavailable on FTR-20260804-36779245-02 and FTR-20260810-32581702-01",
+  "paper_018_later_receipt": "FTR-20260810-36779245-03 is partial_fulltext_read with six not_read sections (abstract, figures, introduction, limitations, references, supplementary)",
+  "guard_registry_side": "63 at ad9d1b2 and at HEAD; 69 after item 1 simulated; 63 after item 3 simulated (CORPUS records are outside the guard's PAPER-scoped count)",
+  "coverage_classify": "full_text 66 -> 71 after item 1 (NOT 72: PAPER 018 stays abstract because the stale Evidence depth line wins the field parse); unchanged after item 3",
+  "guard_read_side": "report['counts']['full text'] = 105, composed of 62 rows owned by a PAPER record, 40 receipt-only rows and 3 CORPUS rows. The candidate and the E1 step both state 93.",
+  "registry_only_ratchet": "10 before and after item 1 and item 2 simulations; the ten ids are exactly the state manifest's grandfathered list",
+  "declared_depth_vs_ledger": "11 PAPER records declare weaker than the ledger (007, 018, 019, 020, 021, 022, 024, 027, 030, 039, 085) and 10 declare stronger (012, 014, 016, 028, 043, 044, 045, 046, 049, 050 — identical to the ratchet list). PAPER 015, 029 and 031 declare a legacy full-text marker naming no receipt over a complete receipt: accurate in rank, unattributed in provenance.",
+  "census_item_4": "under the candidate's published rules: 37 pairs / 35 stating / 2 silent (CORPUS-STUB-053, CORPUS P305) — reproduced EXACTLY at ad9d1b2 and at HEAD. My earlier 45/40/5 is not reproducible under any of four variants.",
+  "complete_read_population": "85 unique PMIDs at a67559f, 93 at ad9d1b2, 110 unique PMIDs at any depth. The candidate states 87; my earlier record stated 94. Neither reproduces.",
+  "item_3_rows": "all 17 verified: receipt id exists, matches its PMID, is complete_fulltext_read, no not_read section; every placeholder record exists; claim mentions zero on all 17; no PAPER record owns any of the 17 PMIDs",
+  "item_2_identity": "21212533 Biol Pharm Bull 34(1):146-9, DOI 10.1248/bpb.34.146, no PMC, 5 authors — confirmed; 33058734 Am J Respir Cell Mol Biol 64(1):89-99, PMC7780991, 13 authors, Aldaz CM — confirmed in the PDF's own citation line and externally; 42082822 DOI 10.1007/s43032-026-02112-9, PMC13230315, title and 6 authors confirmed, and the citation is 33(5):1020-1025 where the candidate writes '2026;33' with no issue or pages",
+  "evidence_presence_item_2": "21212533 0/12 artefacts present; 42082822 0/2 present; 33058734 46/46 present and digest-matching",
+  "item_2_simulated": "the three records as specified classify abstract, abstract and filtered (42082822 under filtered_out); guard registry side unchanged at 63; only receipt-backed effective_depth keeps the readings visible",
+  "gate_parent_of_origin": "the rule requires BOTH parental sides named in one block. The proposed 42082822 Role names one side only, so it fires nothing; naming the second side in the same block produces a REVIEW line, never a BLOCK (verified by running the gate's own detectors over the proposed text). This record and this file are worded to name one side only, so neither adds a REVIEW line",
+  "item_5": "PAPER 091 carries 'adjacent' once; manifest entries[34] corrected and declared with the audit; dossier carries no occurrence; 18 files in disease-models carry the string, of which §4 names four",
+  "item_6_identity": "15266310 Br J Cancer 91(4):753-9 PMC2364795, 6 authors; 18452537 Histopathology 52(7):831-9 PMC4151645 NIHMS222064, 8 authors, absent from all four current files (0 occurrences); 24330518 BMC Cancer 13:593 PMC3871008, 7 authors, externally tagged Meta-Analysis; 25024751 Clin Epigenetics 6(1):13 PMC4094901, 9 authors — all confirmed",
+  "aldaz_byline": "the 25024751 artefact's own contrib block prints surname Aldaz, given-names 'Marcelo', initials M, affiliation 'UT MD Anderson Cancer Center, 1808 Park Road 1C, Smithville, TX'; the 24330518 artefact and record print 'Aldaz C Marcelo' at the same Smithville address. As-printed is right; 'not resolvable from this artefact' is not.",
+  "item_6_receipts": "all four scientist-b receipts ARE in the ledger (complete, chain verified), though all four candidates still say 'scratchpad, NOT appended'"
+ },
+ "FINDINGS_RANKED": [
+  {"id": "C1", "severity": "high", "item": "CC-20260914-EVIDENCE-DEPTH-01",
+   "what": "PAPER 018 already carries `Evidence depth: abstract + frammenti Scholar Gateway`. Inserting a second depth line under Status leaves the false field standing and, because coverage_report and batch_queue parse `**Evidence depth:**` into a dict where the LAST occurrence wins, the stale line wins: the guard's registry side rises 63 -> 69 (it scans the whole record block) while coverage_report's full_text count rises only 66 -> 71 and PAPER 018 stays `abstract`. The act must REPLACE, not add. ATTRIBUTION: the author found the same defect independently and landed it in f81260f during my task; the two-instrument split and both measured numbers are mine."},
+  {"id": "C2", "severity": "medium", "item": "CC-20260914-EVIDENCE-DEPTH-01",
+   "what": "The guard's read side is not 93. Measured: report['counts']['full text'] = 105 (62 PAPER-owned, 40 receipt-only, 3 CORPUS), and the guard compares that to the registry claim count. The prediction '93 > 69' should read '105 > 69'. The conclusion that the test stays red is right; the arithmetic supporting it is not, and 'the 30-row gap' is a 42-row gap on the instrument's own numbers."},
+  {"id": "C3", "severity": "medium", "item": "CC-20260914-EVIDENCE-DEPTH-01 (the class the author routed to plan)",
+   "what": "The routed class 'four PAPER records declare a depth weaker than the ledger's best receipt: 015, 018, 029, 031' is wrong in membership and in direction. Measured: 11 records declare weaker and 10 declare STRONGER, the ten being exactly the grandfathered ratchet list; 015, 029 and 031 declare a legacy full-text marker naming no receipt over a complete receipt, which is a third class (accurate rank, absent provenance). Only PAPER 018 of the four is an understatement."},
+  {"id": "C5", "severity": "high", "item": "CC-20260914-UNRECORDED-READS-01 §2.2",
+   "what": "The proposed Role for PMID 33058734 re-imports the framing canon withdrew the same day. DL-MECH-012 states in canon that this paper is a SPLIT result and not 'the negative': leak and histologic injury are significantly greater under LPS and MRSA, and isolated endothelial cells secrete more IL-6, KC and MCP-1 under MRSA (manifest entries[31], all three asterisked). Calling it 'the peer-reviewed null on the inflammatory-cytokine endpoints' is true only of the BALF in-vivo leg (entries[14], [16]); the paper's third cytokine measurement is positive."},
+  {"id": "C6", "severity": "high", "item": "CC-20260914-UNRECORDED-READS-01 §2.2",
+   "what": "The Role's causal clause is false: the 'multi-tissue convergence' argument was NOT withdrawn because of this paper. It was retired in BATCH_20260913_003 on a different ground — the legs are one laboratory's tissues and the sepsis leg is an unreviewed preprint — before this paper's split result was read. A record must not claim credit for a withdrawal it did not cause."},
+  {"id": "C8", "severity": "medium", "item": "CC-20260914-UNRECORDED-READS-01",
+   "what": "None of the three records as specified carries an `Evidence depth` field. Simulated: they classify abstract, abstract and filtered, the guard's registry side stays 63, and 42082822's complete reading becomes invisible to classify_depth under `filtered_out`. Item 2 would reopen exactly the gap item 1 closes unless the depth line lands in the same act."},
+  {"id": "C10", "severity": "high", "item": "CC-20260914-PLACEHOLDER-READS-01",
+   "what": "The proposed change writes the marker into a field no instrument reads. classify_depth looks for markers in `Evidence depth` and reads Status only for filtered states, so a Status-only rewrite leaves all 17 at `catalogued`, the guard unchanged at 63 and every coverage count byte-identical. The three records it cites as its form (CORPUS P268, P261, P308) each carry a separate `**Evidence depth:**` line and classify full_text. The act as written does not close the understatement it names."},
+  {"id": "C11", "severity": "medium", "item": "CC-20260914-PLACEHOLDER-READS-01",
+   "what": "The proposed Status names the receipt but not the authorising act. Measured: 3 of 3 existing members of this class name the candidate that annotated them, so the 17 would be the only members of their class that do not. (In the depth-field class the norm is the opposite — 2 of 72 name an act — so this requirement belongs to item 3, not to item 1.)"},
+  {"id": "C13", "severity": "high", "item": "CC-20260914-PLACEHOLDER-IDENTITY-01 — against my own earlier record",
+   "what": "The candidate's 37/35/2 reproduces EXACTLY at ad9d1b2 and at HEAD under its published rules. My earlier 45/40/5 reproduces under none of four variants (anchored and unanchored identifier regex, whole-body PMIDs, and with or without the PAPER-twin requirement give 37/35/2, 37/35/2, 57-63/38/19-25 and 96/49/47). The author's 'the difference is the rule set, not the records' is too generous to me: under my own published method his number is the answer and mine was wrong. My 'population 94' is likewise unreproducible (85 at a67559f, 93 at ad9d1b2). The candidate's own '87' reproduces at neither HEAD — the same defect in miniature."},
+  {"id": "C14", "severity": "medium", "item": "CC-20260914-PLACEHOLDER-IDENTITY-01 class B — the rule question answered",
+   "what": "'normalized to [[paper_registry_current#PAPER n]]' in the Identifier field DOES name the live record, and in CORPUS P182 and P210 the Note additionally names the authorising act ('Normalized in BATCH_20260705_001 ... placeholder retained as audit trail'). Two fields name the live record and one names the act, so these records are not silent: rule 4 is right and my F4b was wrong on both. What survives is narrower — their Status alone says only 'deep-dived — registry placeholder (lint restored)', so a Status-only query misses them, which is a defect of the query, not of the record."},
+  {"id": "C17", "severity": "low", "item": "the four scientist-b candidates",
+   "what": "All four state that their receipt is 'scratchpad, NOT appended'. Measured: all four are in the ledger, complete and chain-verified, appended by the orchestrator in d3a266d / ac6ab4d. A sentence that was true when written is now false in a record that will be read as current."},
+  {"id": "C19", "severity": "medium", "item": "CC-20260914-25024751-01 §5 — the Aldaz question",
+   "what": "Recording the byline `Aldaz M` as printed is RIGHT, and the reason given for it is wrong. The artefact's own contrib block prints given-names 'Marcelo' with initials M at 'UT MD Anderson Cancer Center, 1808 Park Road 1C, Smithville, TX', and the sibling artefact for PMID 24330518 prints 'Aldaz C Marcelo' at the same address. The identity IS resolvable from the artefact; what the artefact does not license is normalising the printed string. The candidate conflates what to print with who it is."}
+ ],
+ "VERDICTS": {
+  "CC-20260914-EVIDENCE-DEPTH-01": "CORRECT_WITH_QUALIFICATION — replace PAPER 018's stale depth line instead of adding beside it (C1); correct the read-side number (C2); the routed class is mis-stated (C3)",
+  "CC-20260914-UNRECORDED-READS-01": "CORRECT_WITH_QUALIFICATION for 21212533 and 42082822; INCORRECT for the 33058734 Role as written (C5, C6); add the Evidence depth field to all three (C8)",
+  "CC-20260914-PLACEHOLDER-READS-01": "CORRECT_WITH_QUALIFICATION — the annotation asserts nothing beyond the receipt (CONFIRMED) and achieves nothing mechanically without a depth line (C10) and without naming its act (C11)",
+  "CC-20260914-PLACEHOLDER-IDENTITY-01": "CONFIRMED on the census, which I reproduced exactly; the rule disagreement resolves AGAINST me (C13, C14); CORRECT_WITH_QUALIFICATION on the wording, which already names its act",
+  "CC-20260914-29724996-04": "CORRECT — the word is unsupported, the audit's ten other assertions stand, and the candidate does not smuggle the stronger limit it discloses",
+  "CC-20260914-15266310-01 / -18452537-01 / -24330518-01 / -25024751-01": "CORRECT_WITH_QUALIFICATION — every identity field verified against the artefacts and externally; `Aldaz M` as printed is right for the wrong reason (C19); the receipt sentence is stale (C17)"
+ },
+ "DEFAULTS_TAKEN": [
+  {"condition": "HEAD moved from ad9d1b2 to e313264 while I worked, and the registry and ledger moved with it",
+   "default": "Reviewed the candidates at ad9d1b2 as briefed, verified each reviewed file byte-unchanged to HEAD, and re-derived every load-bearing measurement against ad9d1b2 content, publishing both values where they differ",
+   "why_safe": "The brief fixes the object at ad9d1b2; a verdict measured on a tree that moved under it would be unfalsifiable"},
+  {"condition": "All 12 fingerprinted artefacts of PMID 21212533 and both of PMID 42082822 are absent from this checkout",
+   "default": "Verified those identity blocks against the manifests and an external bibliographic lookup, and said so rather than implying a byte-level check",
+   "why_safe": "Stating the provenance ceiling is the consultation's job; claiming a source check I could not perform is the defect class I hunt"},
+  {"condition": "My own earlier census number was contested with a published rule set",
+   "default": "Re-ran four variants at both HEADs, found my number unreproducible under all of them, and recorded the finding against myself rather than splitting the difference",
+   "why_safe": "A reviewer who will not publish a refutation of his own arithmetic is not a reviewer"},
+  {"condition": "I was about to assert that the 42082822 Role would add a release-gate REVIEW line",
+   "default": "Ran the gate's own detectors over the proposed text first; the rule needs both parental sides in one block and the Role names only the father, so it fires nothing",
+   "why_safe": "Asserting an unmeasured gate consequence is the same error, in the other direction, as the ones I am reporting"},
+  {"condition": "growth_anchors reports a backlog of 56 at a trigger of 5",
+   "default": "Named it and proceeded",
+   "why_safe": "A standing queue state and a decision due to the orchestrator, not a defect in this delta"}
+ ],
+ "STOP_LOG": "Empty. No reserved act was required and no condition lacked a safe default. Class 1 = 0, class 2 = 0, class 3 = 0.",
+ "BLINDING_EXPOSURE": "The runtime injected a git-status block naming ten untracked paths of a peer reading in flight and five recent commit subjects, one of which ('close FT-103 against its complete receipt') states a conclusion. Disclosed verbatim in §0 of the consultation record before any judgement. During the task six further commits landed, two of whose subjects state conclusions about objects of this review ('record the E1 depth defect and withdraw one of my own alarms', 'record four PAPER records with a declared depth below their receipts'); I read those records only after reaching my own PAPER 018 finding, and the attribution is stated in C1.",
+ "GATES_AT_CLOSE": {
+  "legend_lint": "WARN — identical four findings to task start",
+  "public_release_gate": "PASS · BLOCKS 0",
+  "fulltext_receipts_verify": "OK — 185 chained, tail anchored",
+  "growth_anchors": "PASS — structural numbers unchanged; CANDIDATE_BACKLOG 56"
+ }
+}

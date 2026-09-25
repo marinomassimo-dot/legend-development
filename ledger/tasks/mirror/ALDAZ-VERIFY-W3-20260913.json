@@ -1,0 +1,179 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT + A.1b · Annex C independent verification",
+ "_note": "Third independent verification pass of the Aldaz batch: scientist-b's lot ALDAZ-FT-B-003 (PMID 15982416 and PMID 15692750), the antibody-validation pair. Producer is scientist-b; this actor produced none of it. Predecessor passes: ALDAZ-VERIFY-W1-20260913 and ALDAZ-VERIFY-W2-20260913, both of which returned REFINED on every object they judged.",
+ "TASK_ID": "ALDAZ-VERIFY-W3-20260913",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "mirror",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Verify, from the sources and before any producer conclusion, scientist-b's two readings of the papers to which the corpus's tissue-distribution work delegates its antibody validation. Judge the propositions, the material omissions, the comparisons and the citations — and judge with particular care the two claims on which this lot's value rests: the measured validation standard, and the finding that the two series are one validation pipeline rather than two.",
+ "assigned_on": "2026-09-13",
+ "PRODUCER_SEPARATION": {
+  "rule": "Producer is not verifier. scientist-b produced both readings; you produced neither. Build your expectations from the sources FIRST.",
+  "order_that_is_the_whole_control": "Open each source artefact at its declared digest, form your own expected answer to each proposition, and only then compare. A verification that reads the producer's conclusion first is a review of a narrative.",
+  "withheld_until_your_verdicts_are_written_and_committed": [
+   "disease-models/wwox/research/fulltext_dossiers/PMID15982416.md and PMID15692750.md",
+   "disease-models/wwox/research/commit_candidates/CC-20260913-ALDAZ-B003-01.md",
+   "the producer's M4b note (research/comparison_notes/2026-09-13_ALDAZ-FT-B-003_comparison.md)",
+   "the producer's FT-079 and FT-101 queue updates and its session diagnosis"
+  ],
+  "when_you_may_open_them": "Only after your own per-proposition verdicts are written and committed. Then say whether a material claim of theirs is unsupported by what you verified, and say in the report that the second pass happened after your verdicts were fixed."
+ },
+ "INPUTS": {
+  "packets": [
+   "disease-models/wwox/research/phase_packets/VERIFY-PMID15982416-20260913.json",
+   "disease-models/wwox/research/phase_packets/VERIFY-PMID15692750-20260913.json"
+  ],
+  "both_checked_USABLE_at_dispatch": true,
+  "what_a_packet_carries": "Derived by phase_handoff.py prepare --phase verification: the persisted propositions with surface, anchor, artefact and digest, the technical state, the multihop and retraction_check blocks verbatim, the open questions, and the reference digests. It EXCLUDES the dossier and the commit candidate by construction. Re-check each with `phase_handoff.py check --packet <path>` before relying on it.",
+  "receipts": "FTR-20260913-15982416-01 and FTR-20260913-15692750-01, both complete_fulltext_read, first_read. Manifests: 24 and 23 locator entries, strict PASS 0 gaps at the producer's last run.",
+  "evidence": "files/ in this shared checkout, gitignored. evidence_presence.py --pmid <PMID> reports presence and digest match."
+ },
+ "WHAT_TO_JUDGE": {
+  "1_propositions": "Each locator triple against its source at the declared digest: does the quote support the proposition, and does the source say MORE or LESS than claimed. A figure-surface locator is an attestation, not a quote; judge whether the panel shows what it says, at the resolution the anchor names. 🔴 The producer records that five of its locators are eye-judgements on panels and that it obtained NO blind audit — it names this as residual risk. Those five are the first place to look.",
+  "2_the_validation_standard": "The producer's headline is that the reagent reaches 'immunoblot-grade validation on epithelial lysates against a cell-line genetic null' and NOT immunohistochemistry-grade. Verify the positive half — the PEO1 null lanes, the add-back, whether actin runs in the same lane, whether a molecular-weight ladder exists in each paper — and the negative half: is there truly no no-primary, pre-immune, isotype, peptide-block, second-antibody or blot-to-IHC correspondence control in either paper? An absence claim is the hardest kind to verify and the easiest to get wrong in either direction.",
+  "3_one_pipeline_or_two": "The producer concludes the two series are NOT two independent validations of the reagent — shared antibody concentration, shared cited null, shared ACIS platform and floor, shared immunostaining protocol by cross-citation, shared laboratory, 7 of 9 authors — while the DATA are largely independent (different tissue, cases, TMAs, blots). Judge both halves. Do not let the shared-pipeline finding bleed into a claim of shared data, and do not let independent data be reported as independent validation.",
+  "4_material_omissions": "What do the sources carry that a reading at this declared depth should have carried, where its absence would change, narrow or qualify a conclusion.",
+  "5_comparisons_and_citations": "Any value-and-comparator presented as one comparison needs a single source sentence attesting them together. And check cited CONTEXT, not citation existence — this lot's central finding is itself a citation-chain claim, so the chain's own links are in scope: does each paper actually delegate to its ref 12, and is that ref 12 PMID 14526170?",
+  "6_coverage_honesty": "Do declared coverage values match what the artefacts show was opened? The producer declares supplementary as absent on the ground that the JATS declares zero supplementary material; judge that. A value honestly declared unavailable is correct behaviour, not a defect.",
+  "7_the_declared_corrections": "This lot withdraws one of the producer's own earlier premises — `PREMISE: INFERENZA — the delegated control is adequate` in the PMID16941225 dossier — and names rather than edits it. Judge whether the withdrawal is justified and whether naming-not-editing was right."
+ },
+ "THE_RULE_THAT_PROTECTS_THE_TRUTH": "🔴 A verifier finding can itself be wrong. Before recording a proposition as unsupported, re-open the named surface at the resolution the anchor gives and satisfy yourself that the source — not your expectation — is what you are reading. Never ask for a true statement to be deleted because a check disagrees with it. Where the artefact is genuinely ambiguous, the honest output is DISAGREEMENT_UNRESOLVED with both readings stated. Twice in this batch a blind audit refused the side that requested it — once the verifier's proposed wording, once the producer's own draft — and both refusals were the right outcome.",
+ "DELIVERABLES": [
+  "disease-models/wwox/research/verifications/2026-09-13_aldaz_w3_verification.md — a verdict per proposition (SUPPORTED / NARROWER_THAN_CLAIMED / UNSUPPORTED / NOT_JUDGEABLE, each naming the artefact and anchor), then the validation-standard assessment, the one-pipeline assessment, material omissions, comparison and citation findings, the coverage assessment, and a verdict per paper in Annex C.2 language",
+  "WAVE_3_RESULT in this task JSON, with DEFAULTS_TAKEN and STOP_LOG, required even when empty"
+ ],
+ "ACCEPTANCE_CRITERIA": [
+  "Every proposition in both packets has a verdict or is listed as not judged with the reason.",
+  "The validation-standard claim and the one-pipeline claim each carry an explicit verdict with the evidence you checked.",
+  "Expectations were formed before the producer's withheld files were opened, and the report says so.",
+  "No file the producer wrote is modified. You propose; the orchestrator and the producer act.",
+  "legend_lint.py . stays PASS, and the publication gate is read BEFORE each commit it authorises."
+ ],
+ "COMMITTING": {
+  "how": "bash scripts/legend_commit.sh \"<message>\" <path> [<path> ...] — never git commit directly; two Scientists are working in this checkout.",
+  "write_only_your_own_paths": "this task JSON and your files under disease-models/wwox/research/verifications/.",
+  "never": "No push. No modification of another actor's artefacts, no edit to the four scientific current files or disease_model.md, no regeneration of shared derived surfaces, no new tooling."
+ },
+ "INTERACTION_MODE": "AUTONOMOUS_COMPLETE",
+ "QUOTA_DISCIPLINE": "🔴 A predecessor of yours was killed by an API session limit with its deliverable written but uncommitted, and the orchestrator had to land it on its behalf. Commit each paper's verdicts as soon as they are fixed rather than holding both to the end. If you hit a rate limit, do not retry in a loop: stop, leave state durable, say so in one line. If the margin allows only one paper, do PMID 15982416 first — it carries the ovarian series, the null-control figure and the 'data not shown' IHC control claim.",
+ "STOP_POLICY_REMINDER": "§21c governs. Stop only for a reserved act with no sanctioned alternative, or a condition with no safe default; otherwise take the safe default, record it in DEFAULTS_TAKEN, continue.",
+ "CURRENT_STATE": "CLAIMED 2026-09-13 — TASK_ACK and TASK_CLAIM written and committed before any judgement of the object.",
+ "TASK_ACK": {
+  "state": "ACCEPTED",
+  "accepted_on": "2026-09-13",
+  "actor": "mirror",
+  "task_id": "ALDAZ-VERIFY-W3-20260913",
+  "directive_version": 1,
+  "generation": 1,
+  "objective": "Verify, from the sources and before any producer conclusion, scientist-b's lot ALDAZ-FT-B-003 — PMID 15982416 (ovarian series) and PMID 15692750 (breast series), the two papers to which the corpus's tissue-distribution atlas delegates its anti-WWOX antibody validation. Judge each proposition against its source, the material omissions, the comparisons, the citation CONTEXT, the coverage honesty and the declared withdrawal; and judge with particular care the two claims carrying the lot's weight — the measured validation standard, and the one-pipeline-not-two finding. Change nothing the producer wrote.",
+  "read_before_first_act": [
+   "framework/state/state_manifest_current.md (current_state: READY confirmed)",
+   "roles/mirror.md",
+   "framework/instruction/LEGEND_CORE.md §21c, §21d, §21e (by name)",
+   "framework/protocols/fulltext_read_receipt.md",
+   "framework/instruction/epistemic_discipline.md",
+   "framework/protocols/scientist_reading_modes.md §3.2-3.3",
+   ".claude/skills/legend-locator-audit/SKILL.md",
+   "governance/annex_c_review_protocol.md §C.1 (with C.2 format and C.3 discipline)"
+  ],
+  "packet_checks_at_ack": {
+   "VERIFY-PMID15982416-20260913.json": "USABLE (phase_handoff.py check, exit 0)",
+   "VERIFY-PMID15692750-20260913.json": "USABLE (phase_handoff.py check, exit 0)"
+  },
+  "evidence_presence_at_ack": {
+   "15982416": "COMPLETE — 7/7 declared artefacts present and digest-matching",
+   "15692750": "COMPLETE — 6/6 declared artefacts present and digest-matching"
+  },
+  "firewall_acknowledged": "The two dossiers PMID15982416.md and PMID15692750.md, CC-20260913-ALDAZ-B003-01.md, the producer's M4b comparison note, its FT-079 and FT-101 queue updates and its session diagnosis are NOT opened until this actor's per-proposition verdicts are written AND committed. If they are opened afterwards, the report says so explicitly and states that the verdicts were already fixed.",
+  "priority_order_under_quota": "PMID 15982416 first — it carries the ovarian series, the PEO1 null-control figure and the 'data not shown' pre-absorption claim. Each paper's verdicts are committed as soon as they are fixed rather than held to the end.",
+  "interaction_mode": "AUTONOMOUS_COMPLETE"
+ },
+ "TASK_CLAIM": {
+  "claimed_by": "mirror",
+  "claimed_on": "2026-09-13",
+  "task_id": "ALDAZ-VERIFY-W3-20260913",
+  "generation": 1,
+  "durable_pointer": "disease-models/wwox/research/verifications/2026-09-13_aldaz_w3_verification.md"
+ },
+ "WAVE_3_RESULT": {
+  "state": "VERDICTS_FIXED_AND_COMMITTED",
+  "completed_on": "2026-09-13",
+  "actor": "mirror",
+  "deliverable": "disease-models/wwox/research/verifications/2026-09-13_aldaz_w3_verification.md",
+  "order_kept": "TASK_ACK and TASK_CLAIM committed alone at 2a7e626 before the object was touched. Every per-proposition verdict was formed from the fingerprinted sources at their declared digests and committed BEFORE the producer's dossiers, CC-20260913-ALDAZ-B003-01, the M4b note, the FT-079/FT-101 queue updates and the session diagnosis were opened. Section 10 of the report is reserved for the second pass and says so.",
+  "counts": {
+   "PMID15982416": {"total": 24, "SUPPORTED": 23, "NARROWER_THAN_CLAIMED": 1, "UNSUPPORTED": 0, "NOT_JUDGEABLE": 0},
+   "PMID15692750": {"total": 23, "SUPPORTED": 22, "NARROWER_THAN_CLAIMED": 1, "UNSUPPORTED": 0, "NOT_JUDGEABLE": 0},
+   "lot": {"total": 47, "SUPPORTED": 45, "NARROWER_THAN_CLAIMED": 2, "UNSUPPORTED": 0, "NOT_JUDGEABLE": 0}
+  },
+  "paper_verdicts": {"PMID15982416": "REFINED", "PMID15692750": "REFINED"},
+  "narrowings": [
+   "15982416 entries[20]: 'fields with no brown signal at all (F, H, I, K, L)' is exact for F, H and I; K carries sparse brown flecks and L a trace outside the epithelium. True of the tumour epithelium, not of the whole field. Changes nothing downstream; ranked last.",
+   "15692750 entries[17]: the qualifying sub-clause 'a faint second immunoreactive species in T98, and fainter still under T82' is NOT confirmable at the surface ceiling. The 1442x443 raster is the image embedded in the PDF, so it is the best obtainable surface and not a sampling choice; what is visible is sub-band density indistinguishable from halo or streaking. DISAGREEMENT_UNRESOLVED on that clause with both readings recorded. Everything structural in the entry - 39/31 kD axis, band above 39 kD, per-gel NEG. lane blank for WWOX while carrying actin, composite declared in caption, no 46 kD mark - is confirmed in full, and the qualification it serves survives on the ovarian Fig 1B where discrete second species ARE unambiguous in five lanes."
+  ],
+  "unsupported": "NONE. No proposition in either reading is unsupported by its source. The lot owes additions, not corrections.",
+  "validation_standard_verdict": "CONFIRMED, with one refinement. Positive half verified: PEO1 null lane blank for WWOX in both papers; actin present in the same lane as the blank in both (stronger in the ovarian null lane, so it is demonstrably loaded); WWOX add-back present in 15982416 only; molecular-weight ladder present in 15692750 only (39 kD and 31 kD, band above 39 kD) and ABSENT from the whole of 15982416 Figure 1, with no 46 kD mark anywhere in the lot. REFINEMENT: neither paper carries both halves of the argument - the genetic add-back and the MW axis are in different papers - so the phrase is true of the pair and of neither paper singly. Negative half verified as an absence: no no-primary, pre-immune, isotype, peptide-block, second-antibody-only or normal-rabbit-IgG control in either paper, and no blot-to-IHC correspondence control, which is structural because both blot series are specimen sets separate from their TMA cases. The 'data not shown' pre-absorption exists in 15982416 as text only and NO panel anywhere carries it - checked across 4 figures/17 panels, all 5 deposited ESM objects (which are exactly Figure 1A alone plus Figures 1-4), the springer_figs set, and 0 JATS supplementary-material elements with no Additional file listing in the BMC HTML. Sharper form the lot supports: 15692750, the paper the ovarian series cites for the antibody AND the immunostaining protocol AND the ACIS scoring, contains no IHC specificity control of any kind and the word 'specificity' does not occur in it.",
+  "one_pipeline_verdict": "CONFIRMED on both halves, and the shared half is BROADER than claimed. All six of the producer's shared items verified. Three further shared items found by whitespace-normalised comparison of the two fingerprinted surfaces: (1) the immunoblot Methods are effectively verbatim identical, RIPA recipe character-for-character, same supplier, 50 ug protein, 12.5% SDS-PAGE, PVDF/Millipore, Protein Detector/KPL, anti-rabbit HRP 1:2000, anti-actin ICN 1:1000, anti-mouse HRP 1:5000, same Kodak Image Station 440CF - the only difference across all of it is the glyph ug versus the micro sign; (2) the ACIS scoring paragraph is shared verbatim including the TMA-core sentence, the brown-intensity sentence, the 63-of-255 floor and the SPSS version string; (3) the same grant funds both (NIH-NCI RO1 CA102444), the ovarian author-contribution statement says a shared author prepared the antibody, and its acknowledgements thank a person who is an author of the breast paper. Author overlap re-counted from the two lists: breast 9, ovarian 11, intersection 7 - '7 of 9' is exact. DATA half independent and correctly kept apart: different tissue, different case sets (444 vs 234; 38 vs 23 blot samples), different microarrays from different institutions, different blots with different normal comparators. NO BLEED FOUND IN EITHER DIRECTION: the producer does not let shared pipeline imply shared data, nor independent data imply independent validation.",
+  "eye_judgement_locators": "Residual risk DISCHARGED. The producer named five panel eye-judgements (15982416 entries 16, 17, 19, 20, 21) and no blind audit. All five independently re-inspected from the same artefacts at equal or higher magnification (native, 3x, 4x, 7x): four confirmed in full, one narrowed on a non-load-bearing absolute. Entry 17 is the best finding in the lot - both blot seams are exactly where the producer puts them, located by background-density steps and a break in the actin strip itself. ONE CORRECTION TO THE RISK STATEMENT: the count of five covers the ovarian paper only; the breast reading adds four more panel attestations (entries 17-20), so the lot contains NINE, not five. All nine were checked; the second narrowing sits among the four uncounted ones.",
+  "material_omissions_ranked": [
+   "1. The ovarian ABSTRACT claims two significant histotypes ('Mucinous (70%) and Clear Cell (42%)') while Table 1's only statistic is the mucinous footnote (chi2=8.67; p=0.0131), the Discussion downgrades clear cell to 'Borderline significance', and NO p value for clear cell exists anywhere in the paper. The abstract is the surface that gets cited.",
+   "2. The ovarian blot's '38 tumors' are 38 LANES over at most 37 distinct tumours: Figure 1B labels both T123-1 and T123-2, read at 4x and 7x and unambiguous, while every proportion (10/38, 13/38, 15/38) uses 38. Whether they are one tumour twice or two lesions is stated nowhere and T123 is never mentioned in the text.",
+   "3. The ovarian paper's PUBLISHED text prints '=' where '<=' is meant, in the sentences defining its whole staining dichotomy ('cores with values = 63', 'Values between 63 and = 65'). NOT an extraction defect: the rendered page shows the printed glyph, and the JATS, BMC HTML and publisher PDF text layer all agree, while the companion breast paper prints the correct <= twice. Unrecorded in manifest and receipt; a future locator anchored there would quote a defective published string while passing every check, the suspicion-by-absence screen included. Related and smaller: '85% (70/82) ... 15% (12/83)' cannot both hold, since 70+12=82 and Table 2 confirms 70 and 12.",
+   "4. The ovarian Results report tests the Methods never declare: '-b = -0.135; p trend = 0.007' (a coefficient plus a trend test, almost certainly the Kendall's tau-b the companion paper DOES declare) and a survival p = 0.03 with no test named. Two of three headline associations rest on undeclared methods.",
+   "5. The ovarian paper carries two non-identical immunogen descriptions - 'raised against the WW domains [2]' against 'the recombinant GST-WWOX fusion protein used to raise the antibody'. Recorded in the producer's multihop block but not in a proposition, and the immunogen is the premise of entry 0's isoform-detection expectation.",
+   "6. The breast series is 234 cases in Methods (16+203+15) and '235 samples' in Results; the case-level nuclear-staining negative is stated over a total the paper contradicts by one.",
+   "7. The breast paper's four aggressiveness nulls (lymph node, metastasis, staging, nuclear grade) carry no displayed statistic anywhere - Table 2 has no rows for them.",
+   "immaterial: ovarian Table 2 prints relapse p = 0.09 where the Results text gives p = 0.094."
+  ],
+  "comparisons_and_citations": "No value-and-comparator pair is presented as one comparison without a single attesting sentence. Citation CONTEXT traced from the artefacts, not existence: 15982416 ref 12 = 15692750 (three separate delegations - antibody, immunostaining protocol, ACIS scoring); 15692750 ref 12 = 14526170, read off the deposit's own [PubMed: 14526170] marker; the PEO1 null imported by BOTH from the same source (ovarian ref 4, breast ref 8 = 11572989); the compartment disagreement is 14695174 in both (ovarian ref 27, breast ref 16), answered two different ways. Chain: 15982416 -> 15692750 -> 14526170, terminus unread in this corpus. CORRECTION AGAINST MY OWN DISPATCH, not the producer: the task contract instructs that 'each paper delegates to its own ref 12 and ref 12 is PMID 14526170'. That holds for 15692750 ONLY; for 15982416 ref 12 is 15692750 and the 14526170 citation is its ref 2, the immunogen sentence. The producer's packet states the chain correctly and precisely; the compression is in the dispatch, and a later reader working from the contract alone would look for the wrong reference number and conclude the chain was broken.",
+  "coverage_assessment": "Both receipts honest; no section declared read has an absent surface and no coverage value overstates what was opened. supplementary not_present is correct for both, and for 15982416 correct for a better reason than stated - the MOESM objects are not supplementary data but the article's own Figures 1-4 as BMC deposits them, already covered under figures: read, so declaring them present would have been the error. limitations not_present correct for both. references read correct and honestly bounded in both (38 refs re-counted, 12 declared enumerated-not-resolved; 21 refs with identifiers read off the deposit rather than searched). figures read earned: 17/17 and 12/12 panels exist and were inspected, and I re-opened all of them. Surface choice right and verifiable: the ovarian figures were judged on the deposited ESM rasters in preference to the 1525-px PDF extracts and 1200-px springer_figs, i.e. the best available in every case; for the breast paper efetch refused, the refusal is named in the artefact tree, and the PDF text layer screens clean (carries <=, minus, micro, degree, chi). Both dependency screens declare the unscreenable fraction rather than hiding it. CREDIT: the ovarian manifest records declared_before_reading: false against itself, and the breast manifest frames its own true as a correction of the first.",
+  "declared_correction_verdict": "WITHDRAWAL JUSTIFIED, AND NAMING-NOT-EDITING WAS RIGHT. 'PREMISE: INFERENZA - the delegated control is adequate' stands at line 103 of the PMID16941225 dossier, resting on then-unread 15692750 and 15982416, with line 293 recording both as load-bearing. That premise carries its own REVIVAL_TRIGGER: 'a complete read of those two papers showing an IHC-level control, or any pre-absorption/no-primary panel'. The trigger is NOT met - there is no IHC-level control in either paper and no pre-absorption or no-primary panel in any surface of either - so the withdrawal is justified on the earlier reading's own declared terms, which is the strongest form available because the condition was written before the answer was known. Naming was right substantively (the premise was honestly recorded and correctly tagged INFERENZA; it did not become false, it became answered, and 'nothing dies in silence' applies to premises as much as to rejections) and procedurally (editing another actor's persisted dossier is outside a reading's perimeter exactly as it is outside mine).",
+  "evidence_needed_next": "A complete read of PMID 14526170 - the terminus of the specificity chain and, on this pass's evidence, the highest-value unread paper the lot identifies. Then 11572989 for the PEO1-null premise both papers import, and 15073846 (Guler 2004) for whether the only named external corroboration used an independent antibody, which is exactly what the independence question needs and what neither paper says.",
+  "second_pass_state": "RUN AND COMPLETE, after the verdicts were committed at 37c6dc8. Section 10 of the report carries it and states the order explicitly.",
+  "second_pass_result": {
+   "headline": "NO material claim of the producer's is unsupported by what I verified. The strongest wordings in all five withheld artefacts - the candidate's title and its section 4 findings, both dossiers' validation-standard statements, the M4b independence verdict, and the diagnosis's coverage and panel counts - are each carried by the sources as I read them independently.",
+   "verdicts_changed": "NONE. Counts, paper verdicts, the validation-standard verdict and the one-pipeline verdict are all unchanged by the second pass.",
+   "my_own_finding_withdrawn": "Omission 5 (the two non-identical immunogen descriptions) is WITHDRAWN IN FULL against myself. I wrote that the producer recorded the tension only in its multihop block and not in a proposition. That materially undersold the reading: the ovarian dossier devotes an entire subsection, 2.4, to exactly this point - quoting both sentences, tagging as IPOTESI that they name one construct, adding a PREMISE: DEFAULT_FROM_TEXTBOOK warning that a GST fusion may carry any part of the protein, and naming 14526170 as the only way to settle it - and the same point is then the diagnosis's stated residual risk and the first thing FT-101 tells the next reader to look for. Withdrawn by naming rather than deletion, so the correction stays visible.",
+   "my_own_narrowing_softened": "The breast entries[17] narrowing stands against the manifest proposition's flat wording only. The dossier's epistemic register section 9 already reads 'INFERENZA - that the faint T98 species is WWOX-related rather than background (stated as a qualification, not an identification)'. The reading had already declined to identify it. What remains is a small mismatch inside the producer's own artefacts, and the repair is to lift that INFERENZA tag into the proposition.",
+   "omissions_after_contact": "Four stand (1 Abstract's two significant histotypes; 2 the T123-1/T123-2 denominator; 3 the published '=' for '<='; 6 the 234-versus-235 breast total; 7 the undisplayed nulls). One withdrawn (5). One partly pre-empted (4), where the producer's own multiplicity objection - no correction across the ~8 comparisons of Table 2 - is a better point than mine and one I missed. Omission 3 is SHARPENED by the second pass: the breast dossier records a sentinel screen finding 'two <= in the cutoffs', so the producer checked for that very glyph on paper 2 and confirmed it present, while its absence on paper 1 went unremarked.",
+   "new_finding_only_the_second_pass_could_produce": "An abandoned queue address survives in a committed dossier. The debt landed as ONE entry, FT-101, with all four identifiers, and no FT-102 exists in the queue - but the breast dossier's appendix 11.1 still proposes '## FT-102' as its ready-to-lift entry text. Its own prose in sections 10 and 11 says FT-101 correctly; only the appendix code block carries the never-minted id. This is precisely incident #5 of the producer's own attribution census and precisely the corollary its own new PEER_MINTED_IDENTIFIER_RACE_GATE names - sweep your own artefacts for the abandoned address. The sweep reached the manifests and missed a dossier appendix. Ranked LOW: the queue is correct and complete and nothing downstream resolves against FT-102. Reported, not repaired.",
+   "audit_the_producer_declined": "The diagnosis's blind_auditor: 0 line names five panel eye-judgements and no blind audit, and calls it 'the strongest argument in this diagnosis for a review I did not obtain'. My section 9 correction is fair as stated: the five are the ovarian paper's, and the lot carries nine across both papers; I checked all nine. The producer's reason for declining was CORRECT on the protocol as written - I verified the trigger analysis independently and no R4 trigger fires - and it named the uncovered exposure anyway, in writing, when it could have stayed silent. The previous lot's audit corrected one and softened one; this pass corrected none and softened one, which on the producer's own yardstick is the better outcome.",
+   "credit_where_the_withheld_files_improve_on_my_pass": "The multiplicity objection is theirs and stronger than mine. The field-density measurements (WWOX AND antibody specificity returns 1 record in twenty-one years; WWOX AND sex steroid returns 11) frame the lot in a way nothing in my pass supplies. The group_assessment split - competent observations from the gene's own laboratory, self-referential reagent interpretation, genuinely third-party pathology contributions - is a distinction I did not draw. And the M4b note's section G-bis reports its own caveat check as 'clean by ABSTENTION', stating that the run establishes nothing about half the note: a negative result reported against the author's own interest, and the most creditable paragraph in the withheld set."
+  }
+ },
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "The task contract's compressed citation instruction ('each paper delegates to its own ref 12 and ref 12 is PMID 14526170') is false for PMID 15982416, whose ref 12 is 15692750.",
+   "default_taken": "Judged the sources rather than the dispatch; verified both links from the artefacts and reported the dispatch's imprecision in the deliverable and here.",
+   "why_safe": "The contract directs me to check cited CONTEXT from the source. A dispatch is not evidence, and correcting it costs nothing while leaving it unremarked would mislead the next reader into thinking the chain was broken.",
+   "what_would_have_been_different": "Stopping to ask would have idled the task over a wording error I could settle from the reference list in one command."
+  },
+  {
+   "condition": "PIL/Pillow is not installed, so panel crops and zooms could not be produced by the obvious route.",
+   "default_taken": "Used PyMuPDF 1.28.2, already pinned in requirements-analysis.txt and already used by the producer for this very lot, writing every crop to the session scratchpad only.",
+   "why_safe": "No new tooling was written, no dependency added, no shared derived surface regenerated, and nothing was written under files/. The crops are inspection aids, not evidence, and the evidence remains the fingerprinted artefacts.",
+   "what_would_have_been_different": "Without zooms the five (in fact nine) panel eye-judgements could only have been accepted or doubted, not verified - which is the whole object of this pass."
+  },
+  {
+   "condition": "The breast Figure 4 sub-band claim is genuinely ambiguous at the embedded raster's ceiling of 1442x443.",
+   "default_taken": "Recorded NARROWER_THAN_CLAIMED with DISAGREEMENT_UNRESOLVED on that clause and BOTH readings stated, rather than UNSUPPORTED.",
+   "why_safe": "The contract's rule that protects the truth requires exactly this where the artefact cannot settle the question. I measured the ceiling before calling it unresolvable: the raster is the image embedded in the PDF, so a page render only upsamples the same bytes.",
+   "what_would_have_been_different": "Calling it UNSUPPORTED would have asked for the deletion of a possibly true statement on the strength of a resolution limit."
+  },
+  {
+   "condition": "Two of my own fragment comparisons reported the ovarian and breast Methods as DIFFERING on the RIPA recipe and on 280 ng/ml.",
+   "default_taken": "Suspected my own test before the source, re-ran the comparison whitespace-normalised, and found both fragments present in both papers - the difference was a line break in the breast text layer, an artefact of my matching.",
+   "why_safe": "Recorded here because it is a near-miss of this role's failure mode: had I reported it, I would have manufactured a difference that strengthens nothing and would have weakened a correct shared-pipeline finding.",
+   "what_would_have_been_different": "I would have published two false differences in the section whose purpose is to establish that the pipelines are shared."
+  },
+  {
+   "condition": "Judging contract item 7 required the PMID16941225 dossier, which is not on the withheld list but is another actor's artefact.",
+   "default_taken": "Opened it read-only to locate and judge the named premise and its revival trigger; modified nothing.",
+   "why_safe": "The firewall names the B003 dossiers, the commit candidate, the M4b note, the queue updates and the session diagnosis. The 16941225 dossier is a prior wave's artefact and is the object of the withdrawal I was asked to judge; it could not be judged without reading it.",
+   "what_would_have_been_different": "Item 7 would have been returned NOT_JUDGEABLE for no good reason."
+  }
+ ],
+ "STOP_LOG": []
+}

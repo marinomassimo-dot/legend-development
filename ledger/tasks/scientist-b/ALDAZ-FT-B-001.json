@@ -1,0 +1,137 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT + A.1b",
+ "_note": "Wave 1 of the Aldaz batch, second lot. Dispatched by the orchestrator under the operator's extension of 2026-09-13. Intake that produced this lot: disease-models/wwox/research/2026-09-13_aldaz_intake.md, commit 1ff3c007d4ca5409c2ae9f26637230f5c7d5c114.",
+ "TASK_ID": "ALDAZ-FT-B-001",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "scientist-b",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Take PMID 16941225 from acquisition to a durable verifiable first reading: complete_fulltext_read where the available surfaces permit it, honestly partial where they do not, with verbatim locators captured while the document is open, a schema-v2 manifest passing the strict validator, a dossier, and a receipt appended through the validated writer.",
+ "assigned_on": "2026-09-13",
+ "started_at_head": "1ff3c007d4ca5409c2ae9f26637230f5c7d5c114",
+ "SCOPE": {
+  "assigned_pmids": [
+   "16941225"
+  ],
+  "theme": "Baseline tissue and cell-type distribution of WWOX protein in normal human tissue",
+  "reading_mode": "PRIMARY_EVIDENCE_READ",
+  "parallel_read_group": null,
+  "single_owner": "This PMID has exactly one owner, this actor. It appears in no other open contract.",
+  "excluded": "The four scientific current files and disease_model.md are NOT touched. D4, the DisMech anchor fragility and any infrastructural work are outside this task."
+ },
+ "SCIENTIFIC_QUESTION": "In which tissues and in which cell types is WWOX protein actually detected in normal human tissue, by what method, with what controls, and what does the study explicitly NOT establish? The question the corpus needs answered is the compartment one: which cell types carry the protein and which do not, at what level of evidence, and how the antibody and the scoring were validated.",
+ "WHY_THIS_PAPER": "It is a named reading debt of priority ALTA in the full-text queue as FT-079, opened by this actor's own multi-hop of PMID 18674750 on 2026-09-09: that paper's Figure S3 showed a WWOX product in all nine human tissues including brain while its running text named only four, and this 2006 study is the protein-level counterpart of that endpoint RT-PCR gel. The debt and its provenance stay with the actor that can say what that gel did and did not show.",
+ "BLIND_PASS_FIREWALL": {
+  "rule": "scientist_reading_modes.md § 3.1 and § 3.3. The blind first pass receives the sources, the method and the technical packet — nothing else about the paper.",
+  "explicitly_withheld": [
+   "this laboratory's prior conclusions and the claims that would be affected",
+   "the DL-MECH-012 discovery-ledger tag and any convergence or inflammation-axis argument",
+   "any repurposing hypothesis. 🔴 The operator reported a possible Aldaz-Nappi repurposing abstract; it was searched and recorded as NOT IDENTIFIED, it is NOT a premise, and must not appear as an expected conclusion",
+   "the readings of the other wave-1 papers, which belong to another actor's lot"
+  ],
+  "note_on_your_own_prior_work": "You may use the technical fact that FT-079 exists and what surface it names. You may NOT carry the interpretation your earlier reading placed on that gel into this paper's blind pass; this paper is read on its own evidence, and the comparison with the earlier reading happens in M4b."
+ },
+ "ACQUISITION_HINTS_VERIFIED_2026_09_13": {
+  "16941225": {
+   "pmcid": "PMC4144810",
+   "doi": "10.1007/s10735-006-9046-5",
+   "identity": "J Mol Histol 2006;37(3-4):115-25, Nunez MI, Ludes-Meyers J, Aldaz CM — three authors, Aldaz last.",
+   "structured_surface": "None by the routes tested today: Europe PMC fullTextXML returns 404, and NCBI efetch db=pmc returns a 197-byte stub carrying the publisher's refusal to allow XML download. It is the pdf_only class the queue already recorded in FT-057.",
+   "what_that_does_and_does_not_mean": "🔴 It does NOT mean the paper is unavailable. A PMCID exists, which is what PubMed's free-full-text flag reflects, and the PMC web surface is the route that worked for other papers of exactly this class — PMID 30290271 and PMID 24871327 both reached complete_fulltext_read from it. Use the relevant alternatives and verify the identity and content of whatever you retrieve.",
+   "supplement": "None declared in the metadata. Confirm from the article's own supplementary listing at acquisition rather than from that absence.",
+   "measured_gotchas": "PMC serves a reCAPTCHA to a browser-like User-Agent and nothing to no User-Agent on some routes. If the only surface is a PDF whose text layer screens as SUSPECT, do not hand-correct it: anchor the affected locators to the rendered page via page_adjudications, or declare the debt.",
+   "figures": "An immunohistochemistry study over tissue microarrays: the figures ARE the evidence. Inspect every available panel as an image at native resolution — a caption is not a panel, and captions_only downgrades the receipt. Note that the native surface may be a vector figure inside the publisher PDF rather than a PMC raster; check before rendering, and measure before calling a value unresolvable."
+  }
+ },
+ "MILESTONE_PLAN": [
+  "M0 duplicate-work gate — paper_packet.py packet and procedures, before opening anything. The packet reports no manifest and no receipt: this is a first_read",
+  "M1 acquisition — structured surface first where one exists; record the absence of one when it does not, with the cascade actually run, into the shared checkout's gitignored files/ with SHA-256 per artefact and the route recorded",
+  "M2 reading — section by section, surface inventory before the figures, every available panel at native resolution, locators captured while the document is open",
+  "M3 manifest — schema v2, strict validator PASS with zero gaps, plus paper_packet.py check",
+  "M4 receipt — through fulltext_receipts.py record, then verify",
+  "M4b comparison — a SEPARATE phase after the receipt lands, against whole records from registry_records.py, with comparison_check.py facts and check run before the note is written",
+  "M5 dossier, commit candidate where a registry record or claim is touched, discovery-ledger append where a lead emerges, and the FT-079 queue entry updated to say what was and was not closed"
+ ],
+ "ACCEPTANCE_CRITERIA": [
+  "deepdive_manifest.py --pmid 16941225 --verify-artifacts --require-current-schema exits PASS with 0 gaps against the shared root checkout.",
+  "fulltext_receipts.py record succeeded and verify is OK afterwards; coverage values honest, with captions_only or unavailable used where true.",
+  "A dossier stating what the reading establishes, what it does NOT support, the figure audit table, the method limits — antibody specificity, scoring, absence of quantification where that is the case — and the transfer verdict toward the reference genotype.",
+  "The abstract is never the evidentiary surface for any locator.",
+  "An M4b note with the three-level comparison check run, and its coverage block read before its verdict.",
+  "legend_lint.py . stays PASS after every commit."
+ ],
+ "DELIVERABLES": [
+  "disease-models/wwox/research/deepdive_manifests/PMID16941225.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID16941225.md",
+  "disease-models/wwox/registries/fulltext_read_receipts.jsonl (append, through the writer)",
+  "an M4b comparison note, and a commit candidate where warranted",
+  "WAVE_1_RESULT in this file, carrying DEFAULTS_TAKEN and STOP_LOG even when empty (Annex A.1b)"
+ ],
+ "COMMITTING": {
+  "how": "bash scripts/legend_commit.sh \"<message>\" <path> [<path> ...] — never git commit directly.",
+  "never": "No push. No write into another actor's files. A red caused by a peer's file is reported, not fixed.",
+  "derived_surfaces": "Do NOT regenerate shared derived surfaces; the orchestrator does that at wave close."
+ },
+ "INTERACTION_MODE": "AUTONOMOUS_COMPLETE",
+ "REVIEW_REQUIREMENT": "Ladder floor R2. R4 / legend-locator-audit is REQUIRED before any reading is allowed to narrow, reverse, corroborate or remove a consolidated baseline claim, or to justify a MAJOR working-model bump, and on any contradicted persisted locator.",
+ "RETRY_POLICY": {
+  "max_attempts": 3,
+  "retryable": [
+   "network or retrieval failure",
+   "validator rejection",
+   "transient publisher block"
+  ],
+  "on_exhaust": "PARK that surface with the written cascade and each literal response, and continue with what remains readable. An inaccessible surface is an explicit limit on completeness, never a reason to simulate a reading."
+ },
+ "STOP_POLICY_REMINDER": "§21c governs. Reserved and never yours: any push, history rewrite, deletion of unique material, external spend of any kind, modification of the four current files or disease_model.md, BATCH_COMMIT. Everything else has a safe default: take it, record it in DEFAULTS_TAKEN, continue. Running out of context is the one honest reason to stop, said in one line as that reason.",
+ "CURRENT_STATE": "WAVE_1_COMPLETE 2026-09-13 — PMID 16941225 at complete_fulltext_read. Manifest STRICT PASS 0 gaps (44 locators, 17 artefacts), receipt FTR-20260913-16941225-01 recorded and chain verified, dossier written, M4b comparison written, commit candidate CC-20260913-16941225-01 raised, FT-079 closed as a reading with its residue named, blind locator audit run on the seven highest-risk triples and its two corrections applied. Nothing of the lot is unworked.",
+ "WAVE_1_RESULT": {
+  "pmid": "16941225",
+  "depth_reached": "complete_fulltext_read",
+  "receipt": "FTR-20260913-16941225-01",
+  "manifest": "STRICT PASS, 0 gaps, 44 locators (29 body, 10 figure, 5 table), 17 fingerprinted artefacts",
+  "panels": "20 of 20 declared inspected as images at native resolution (Fig 1: 2; Fig 2: 9; Fig 3: 9); 7 re-inspected as native-pixel crops; Tables 1-2 checked against 300 dpi page renders",
+  "outputs": ["disease-models/wwox/research/deepdive_manifests/PMID16941225.json", "disease-models/wwox/research/fulltext_dossiers/PMID16941225.md", "disease-models/wwox/research/comparison_notes/2026-09-13_PMID16941225_comparison.md", "disease-models/wwox/research/commit_candidates/CC-20260913-16941225-01.md", "disease-models/wwox/registries/fulltext_read_receipts.jsonl", "disease-models/wwox/research/retrieval_manifest.jsonl", "disease-models/wwox/research/full_text_queue_current.md (FT-079)", "disease-models/wwox/research/session_evaluations/2026-09-13_scientist-b_aldaz_wave1.md"],
+  "acquisition": "pdf_only confirmed. Nine routes refused, each literal response in retrieval_manifest.jsonl; pmc_pow_fetch.py on the PMC /pdf/ route won (NIHMS222059, 18 pp, sha256 47dbdb0b...). Supplement not_present on three concordant grounds, with the one unreached surface named (PMC HTML deposit listing, reCAPTCHA).",
+  "scientific_result": "An IHC atlas whose compartment answer is strong for epithelium and weak exactly where this disease model needs it: none of the 18 IHC panels shows CNS, so every CNS cell-type call is text/table-only on two cores per region with no co-marker; antibody specificity is delegated to two unread papers; nothing is quantified; Table 1 contradicts the Results on limbic cortex; skeletal muscle is inconclusive rather than negative; and Fig 1 carries a brain band the text never mentions.",
+  "R4": "Blind locator audit RUN on 7 triples though not required by this candidate's edits: keep 5, soften 2, withdraw 0. Three persisted locators revised by their own author with declared contradicts_locator objects and the audit attached; locator_contradiction_audit.py --working-tree --fail-on-undeclared exits 0.",
+  "checks": "legend_lint PASS; fulltext_receipts verify OK (159 events, tail anchored); session_self_eval PASS; growth_anchors PASS; paper_packet check 3 of 4 exit 0 with flag drift INSUFFICIENT_DATA, reported as not a pass; comparison_check check examined 0 of 11 caveats and 0 of 26 joins, reported as clean by abstention and not as a verdict.",
+  "DEFAULTS_TAKEN": [
+   {"condition": "Dispatch recorded efetch db=pmc as a 197-byte stub; it returned 7,406 bytes of front matter plus the publisher's no-XML comment.", "default": "Recorded the measurement, kept the dispatch's conclusion (no structured surface) which was correct.", "why_safe": "The refusal is real either way; only the size was wrong, and the artefact is fingerprinted.", "what_would_differ": "Nothing scientific. Had I trusted the number over the response I would have carried a false measurement."},
+   {"condition": "PMC web article HTML and every /bin/ raster name form are behind reCAPTCHA, and pmc_pow_fetch.py refuses non-binary responses, so the deposit's own figure/supplement listing was unreachable.", "default": "Used the PDF's native embedded JPEGs as the figure surface (pdfimages confirms one image object per figure page and PyMuPDF finds no vector figure art) and declared the unreached listing explicitly.", "why_safe": "The embedded JPEG IS the native raster here; nothing crisper exists. The one surface that could falsify supplement=not_present is named in the receipt and the dossier.", "what_would_differ": "If that listing ever shows a supplement, the coverage value is wrong and the read becomes partial. Recorded so a later session can check it."},
+   {"condition": "Supplement status: metadata declared none; Europe PMC hasSuppl N; efetch front matter zero supplementary-material; manuscript read end to end contains no supplementary section or reference; PMC HTML listing unreachable.", "default": "Coverage supplementary=not_present on those three concordant grounds, with the gap named.", "why_safe": "Three independent surfaces agree and the exception is declared rather than hidden.", "what_would_differ": "unavailable would have claimed a surface exists that I could not open; not_read would have refused the complete receipt on a supplement that appears not to exist."},
+   {"condition": "Both IHC captions print 'All images 400 tm', which matches the printable-substitution defect class this repository has been bitten by.", "default": "Rendered the caption line at 600 dpi and verified the page prints '400 tm'; left the text layer untouched and recorded it as the authors' typesetting error.", "why_safe": "The drawn glyph is the author's. Hand-correcting would have produced a surface no author wrote.", "what_would_differ": "A 'repair' would have manufactured a false surface and a false finding about extraction."},
+   {"condition": "No CNS panel exists, so the paper's most model-relevant claims have no image behind them.", "default": "Kept figures=read (every declared panel WAS inspected) and carried the absence as a panel-inventory locator plus an explicit evidence-class downgrade on every CNS statement.", "why_safe": "captions_only would have been false — the panels were inspected; the honest limit is that the panels do not cover the CNS, which is a content finding, not a coverage value.", "what_would_differ": "Recording captions_only would have downgraded the receipt for a reason that is not true."},
+   {"condition": "The blind locator audit softened one proposition and corrected another in a manifest already committed.", "default": "Re-inspected the surfaces at native resolution BEFORE drafting, then revised the three entries with declared contradicts_locator objects carrying the audit, and re-ran the undeclared-revision guard.", "why_safe": "The order is the control, and the guard exits 0 over the result; the wrong version stays visible in git history.", "what_would_differ": "An in-place rewrite with no declaration is the one shape no file-level gate sees."},
+   {"condition": "My own dossier carried locator pointers typed from memory, off by one from entry 21 onward, already committed.", "default": "Re-derived the index map from the manifest, corrected the pointers, and added a dated correction note naming the wrong version's commit.", "why_safe": "Append-style disclosure; no proposition, quote or verdict changed.", "what_would_differ": "A silent fix would have hidden a defect class this repository tracks deliberately."},
+   {"condition": "paper_packet check reports flag drift INSUFFICIENT_DATA because a first read has no prior manifest revision to diff.", "default": "Reported it as 'established nothing, not a pass' everywhere it is quoted, and did not work around it.", "why_safe": "It is an honest nothing-to-screen, not a failure; misreporting it either way would be the defect.", "what_would_differ": "Calling it green would have claimed a screen that never ran."},
+   {"condition": "A pointer-checking guard over dossier prose would have caught my off-by-one mechanically, but the dispatch forbids starting tooling projects.", "default": "Did not build it. Recorded the practice change (derive the index map from the artefact before writing any pointer prose) and named the tool as a proposal for Harness Engineering in the diagnosis.", "why_safe": "No harness change lands from a reading session; the defect is recorded where a harness owner will find it.", "what_would_differ": "Building it would have spent the reading's budget on infrastructure the dispatch reserved."},
+   {"condition": "The FT-079 queue entry, which the dispatch permitted for technical facts, also carries an interpretive expectation about hormonal tissues.", "default": "Disclosed it at ACK, treated it as a hypothesis to be tested against the panels, and required every ranking statement to rest on this paper's own surfaces.", "why_safe": "The exposure is on the record before the reading, and the test is reported in the dossier and the M4b note.", "what_would_differ": "Undisclosed, it would have read as an independent confirmation of another paper's Discussion."},
+   {"condition": "R4/locator audit was not required by this candidate's edits.", "default": "Ran it anyway on the seven highest-risk triples, blind.", "why_safe": "Extra verification by a different context; producer is not verifier.", "what_would_differ": "Two wrong or overstated panel propositions would have stayed in a committed manifest."},
+   {"condition": "The commit candidate touches DL-MECH-012, which a peer's candidate from the same wave already proposes to edit.", "default": "Wrote mine to compose with the peer's edit, named it explicitly, and stated which is the more load-bearing if only one lands.", "why_safe": "Different sentences of the same record; no peer file was edited.", "what_would_differ": "Re-proposing the peer's change would have produced two candidates racing on one record."},
+   {"condition": "Shared derived surfaces (batch_queue, coverage_report, reading_state, pathograph) are stale with respect to this reading.", "default": "Did not regenerate them; the orchestrator does that at wave close.", "why_safe": "Regeneration is refused while peers' inputs are uncommitted and would bake in another actor's in-flight state.", "what_would_differ": "Nothing; the ledger and manifest are the authority and the views are reconstructable."}
+  ],
+  "STOP_LOG": []
+ },
+ "TASK_ACK": {
+  "TASK_ID": "ALDAZ-FT-B-001",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "ACTOR_ID": "scientist-b",
+  "DECISION": "ACCEPTED",
+  "acked_at": "2026-09-13T14:31:45Z",
+  "note": "Accepted as dispatched: PRIMARY_EVIDENCE_READ, single owner, blind-pass firewall, R2 floor with R4 on the named triggers. No CHALLENGE raised. One firewall exposure disclosed at ACK rather than found later: reading the FT-079 queue entry (permitted by the dispatch for its technical facts) also exposed one interpretive line it carries - that PMID 18674750's Discussion cites this paper for WWOX being highest in hormonally regulated tissues (testis, ovary, prostate). That is a prior expectation about this paper's result. It is treated as a hypothesis to be tested against the panels, not as a premise, and every tissue-ranking statement in this reading must rest on a figure/table locator of this paper. Nothing from the intake, the discovery ledger, the claim registry, any commit candidate or the other lot was opened."
+ },
+ "TASK_CLAIM": {
+  "TASK_ID": "ALDAZ-FT-B-001",
+  "GENERATION": 1,
+  "ACTOR_ID": "scientist-b",
+  "claimed_at": "2026-09-13T14:31:45Z",
+  "durable_pointer": "ledger/tasks/scientist-b/ALDAZ-FT-B-001.json",
+  "output_root": "disease-models/wwox/research/",
+  "started_at_head": "fd9fb00",
+  "pre_claim_check": "Annex A.3 and scientist_reading_modes.md 2.2 rule 3, before any reading: fulltext_receipts.py status --pmid 16941225 returned [] (zero events); paper_packet.py packet reports no manifest, no artefact, no acquisition route. ledger/tasks/*/ grepped for 16941225: named in the orchestrator's intake contract, in this contract, and in scientist-a's ALDAZ-FT-A-001 only inside INTERNAL_EDGES prose (assigned_pmids there are 36828035 and 39868255; state WAVE_1_COMPLETE). No second open contract on the source, so no PARALLEL_READ_GROUP is required.",
+  "order_of_work": "M0 done -> M1 acquisition cascade -> M2 reading with every panel as image -> M3 manifest strict PASS -> M4 receipt -> M4b comparison (records opened only here) -> M5 dossier, candidate if warranted, FT-079 update, diagnosis."
+ }
+}

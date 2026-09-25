@@ -1,0 +1,178 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT (operator-directed) + A.1b",
+ "TASK_ID": "ORCH-HANDOFF-CONSOLIDATION-20260912",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "operator",
+ "ACTOR_ID": "orchestrator",
+ "CURRENT_STATE": "COMPLETE",
+ "OBJECTIVE": "Correct the distortions observed in the phase-handoff pilot and classify the M4b wave's omissions before extending adoption or reducing context further.",
+ "assigned_on": "2026-09-12",
+ "closed_on": "2026-09-12",
+ "started_at_head": "a06dcaecc724f50d412dc6b1cece597b24abbd21",
+ "record": "disease-models/wwox/research/2026-09-12_handoff_consolidation.md",
+ "evidence_persisted": [
+  "disease-models/wwox/research/session_evaluations/2026-09-12_m4b_pilot_scoring.md — the pilot's per-element verdicts and briefs, recovered from subagent transcripts",
+  "disease-models/wwox/research/session_evaluations/2026-09-12_consolidation_scoring.md — the three blind scoring reports of this task"
+ ],
+ "resumption_gaps": [
+  "per-element verdicts of both pilot assessors existed only in subagent transcripts outside the repository; /tmp/claude-1000/score-b/ is empty",
+  "reader notes and logs of the pilot only in the previous session's /tmp scratchpad",
+  "packet v1 as read by the condition-B readers overwritten at 09:44",
+  "model per session not recorded and the record's 'same model' false: condition A case1/case2 on claude-fable-5-1; every condition-B session, case1r, both assessors and 31/50 turns of case3 on claude-opus-5",
+  "'37,443 identical to the byte across seven dispatches' imprecise: 37,443 / 37,499-37,502 / 36,816-38,221",
+  "test_registry_records.py did not parse at a06dcae (IndentationError line 272); the previous battery log already showed it red and the record declared two reds, not three"
+ ],
+ "distortions": {
+  "1": {
+   "note": "b1 (26499798) D.1",
+   "cause_mechanism": "D — dossier line 121 and manifest entry 3 both in context before writing; the note asserted the identity the dossier refuses",
+   "cause_attribution_to_condition": "F — model changed with condition",
+   "scientific_consequence": "status of the D.1 disagreement closed (open identity question asserted); independence, direction, genotype, transferability unchanged; CLAIM 030 status unchanged"
+  },
+  "2": {
+   "note": "b2 (21731849) D.3",
+   "cause_mechanism": "D — LIT-0261 whole in context (batch note at line 61 of the record output); five header fields quoted, the correcting note dropped, inference built on the dropped half; one quote misattributed to CORPUS P261",
+   "cause_attribution_to_condition": "F",
+   "scientific_consequence": "none on any conclusion; a false inference about the batch and a repair proposal that survives anyway"
+  }
+ },
+ "omissions_25": {
+  "denominator_kept": 178,
+  "rubric_notes_not_applied": "two facts double-counted (2.B2.e/2.B4.f; 3.B1.m/3.B2.q) — de-duplicated denominator would be 176/23, not applied",
+  "reached_reader_context": "25/25 (transcript string checks); group_assessment via the dossier, manifest block skipped by budget",
+  "omitted_at_synthesis": "25/25",
+  "material": 10,
+  "process_nonmaterial": 10,
+  "uncertain": 5
+ },
+ "repairs": {
+  "scientist_standing_brief.md M4b": "what the reading leaves open the comparison may not close; a record with a correction note against its own field is quoted with both halves; a pilot on context policy pins the model and reads it from the transcript",
+  "phase_handoff.py": "open_questions kind 'left open by the reading' — dossier line + marker phrase, never prose; not in verification packets, which no longer name the dossier; receipt ids stripped before the PMID scan (a date was offered as a PMID); absent contradicts_locator carried as 'undeclared', not false",
+  "registry_records.py": "TWO-SIDED RECORD notice at the foot of a record whose own text says a field was corrected from the value it still carries; corpus-wide reach today: LIT-0261 only",
+  "paper_packet.py": "binary_supplement procedure closes on an indexed hasSuppl=N instead of reopening a settled question",
+  "cross_session_transport.md 8b": "left-open list; model pin; birth-context figure corrected",
+  "test_registry_records.py": "parses again; one assertion aligned with the message it tests"
+ },
+ "tests": "test_phase_handoff 28, test_registry_records 53, test_paper_packet 64 — all green; eight mutations red (left-open list removed, leaked into verification, copied as prose; receipt-date guard removed; notice never emitted; substring match; notice edits the text; plus the negative fixture that made M6 red)",
+ "retest": {
+  "producers": {
+   "26499798 packet v3": {
+    "model_from_transcript": "claude-fable-5-1 (69/69 turns)",
+    "peak": 254121,
+    "wall": "10m46",
+    "cache_create": 1178792,
+    "cache_read": 8205583,
+    "output": 46461
+   },
+   "21731849 packet v3": {
+    "model_from_transcript": "claude-fable-5-1 6 turns, claude-opus-5 21 turns — the pin was not honoured",
+    "peak": 108313,
+    "wall": "4m50",
+    "cache_create": 370653,
+    "cache_read": 1756314,
+    "output": 21270
+   },
+   "19500159 packet v3": {
+    "model_from_transcript": "claude-fable-5-1 (49/49)",
+    "peak": 203006,
+    "wall": "10m56",
+    "cache_create": 600126,
+    "cache_read": 5144357,
+    "output": 46223
+   },
+   "19500159 self-discovery": {
+    "model_from_transcript": "claude-fable-5-1 (47/47)",
+    "peak": 184493,
+    "wall": "8m15",
+    "cache_create": 432025,
+    "cache_read": 4391382,
+    "output": 35509
+   }
+  },
+  "scorers": {
+   "26499798": {
+    "peak": 194447,
+    "wall": "8m56"
+   },
+   "21731849": {
+    "peak": 159787,
+    "wall": "9m06"
+   },
+   "19500159": {
+    "peak": 175001,
+    "wall": "10m01",
+    "expectations_written_before_notes": true
+   }
+  },
+  "blinding": "preambles replaced by a neutral header; bodies unaltered; baselines name paper_packet in 3-4 places",
+  "scores": {
+   "26499798 /60": {
+    "packet v3": "57/1/2",
+    "case1r (opus, amended)": "59/1/0",
+    "case1 (fable, original)": "48/4/8",
+    "note": "the one DISTORTED is one-sided B2.l, shared by all three"
+   },
+   "21731849 /58": {
+    "packet v3": "52/0/6",
+    "case2 (fable, original)": "47/1/10"
+   },
+   "19500159 /66 + 11 left-open": {
+    "packet v3": "63/0/3",
+    "self-discovery": "54/0/12",
+    "left-open points": "all LEFT OPEN in both notes"
+   }
+  },
+  "known_distortions_in_retest": {
+   "identity": "LEFT OPEN",
+   "LIT-0261": "BOTH halves"
+  },
+  "residual": [
+   "hop-1 caveats CLAIM 030 Fig 3B and PAPER 040 denominator still missing on the caveat case (both baselines miss them too)",
+   "technical factual errors in 3/4 new notes: receipt class hedged; contradicts_locator false (packet-induced, repaired); misattributed companion-paper sentence; FT-041 'now closed' in the self-discovery note"
+  ],
+  "context": "no peak saving: packet 565,440 vs self-discovery 498,931 summed over the papers where both exist; two of three packet runs rose"
+ },
+ "acceptance": {
+  "known_distortions_absent": true,
+  "necessary_caveats_preserved": "partly — two hop-1 caveats still dropped",
+  "no_new_material_distortions": true,
+  "absent_sources_explicit_limit": true,
+  "tests_fail_without_protection": true,
+  "independent_new_case": true
+ },
+ "VERDICT": "distortions repaired and pinned; the phase-handoff path stays EXPERIMENTAL and is NOT promoted — no context saving shown, two material hop-1 caveats still dropped, one packet-induced error found and repaired post hoc, model pin not honoured by the runtime. Self-discovery from the amended brief remains the default for M4b",
+ "birth_context": {
+  "observable": "probe 734 chars → 36,894 first-turn cache write; brief 4,286 → 37,441; 4,456 → 37,499; the probe sees 8 tool schemas, 46 deferred names, 37 skill descriptions, CLAUDE.md, the memory index, no agent list",
+  "repo_controlled_chars": {
+   "CLAUDE.md": 8719,
+   "project_skill_descriptions": 14460,
+   "reader_brief": "4286-4900",
+   "MEMORY.md": 418
+  },
+  "avoidable_candidates": [
+   "skill descriptions loaded into every subagent",
+   "brief restating the standing brief",
+   "CLAUDE.md sections 3-4"
+  ],
+  "reduction_executed": "none, as mandated"
+ },
+ "DEFAULTS_TAKEN": [
+  "ACTOR_ID labels, no registration",
+  "pilot baselines reused for the two distortion cases; both conditions run on the new case",
+  "one scorer per paper",
+  "pilot notes not persisted; scoring evidence persisted",
+  "the two suites this task turned red were repaired before landing"
+ ],
+ "STOP_LOG": [],
+ "battery_and_publication": {
+  "lint": "PASS",
+  "receipts": "OK 156 chained",
+  "growth_anchors": "PASS",
+  "gate": "PASS, 0 blocks",
+  "battery": "108 suites executed three times. Run 1 (before the last repairs): the two declared reds plus two new reds caused by this task's own edits (a closed-world assertion in a new test; two scripts not executable), both repaired. Run 2: the two declared reds plus two suites flagged for writing under a guarded tree — a concurrency artefact of this session editing tracked files during the run; both PASS in isolation with no stray file. Run 3, no concurrent writes: the two declared reds plus test_link_targets, red on a bare wikilink fragment quoted verbatim inside the persisted verifier report; fragment completed to the full heading, suite green. No pre-existing failure weakened; test_registry_records runs again (53).",
+  "two_known_reds": "test_batch_queue, test_surface_census — unchanged, not weakened",
+  "publication": "not pushed; origin and development share one URL; origin is the operator's (§21d)",
+  "branch_and_sha": "branch main, base a06dcae (5 ahead of origin/main = development/main = 83ec6be, both remotes one URL); this task's commit is the one that carries this file — its SHA is in git log and in the session's final message; no push"
+ }
+}
