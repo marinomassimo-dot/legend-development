@@ -1054,6 +1054,36 @@ class PanelTextRelationBites(unittest.TestCase):
         errors, _ = gate.validate(manifest, require_current_schema=True)
         self.assertTrue(any("is not a text surface" in item for item in errors), errors)
 
+    def test_a_panel_may_bear_on_text_read_from_a_rendered_page(self) -> None:
+        """🔴 HARNESS-P-20260914 P10. When a PDF text layer is refused and no structured
+        surface exists, every text proposition is anchored to a page crop. Before this value
+        existed such a locator could only be declared `figure` — a falsehood about what was
+        quoted — and then no panel could point at it, because the validator correctly refuses
+        a panel-to-panel relation. The honest value is `rendered_text`, and it must be a legal
+        target for a coupled relation."""
+        manifest = self._qualifying_pair()
+        manifest["verbatim_locators"]["entries"][0]["surface"] = "rendered_text"
+        errors, _ = gate.validate(manifest, require_current_schema=True)
+        self.assertEqual([item for item in errors if "surface" in item or "qualif" in item],
+                         [], errors)
+
+    def test_a_panel_may_contradict_text_read_from_a_rendered_page(self) -> None:
+        manifest = self._two_entries()
+        manifest["verbatim_locators"]["entries"][0]["surface"] = "rendered_text"
+        errors, _ = gate.validate(manifest, require_current_schema=True)
+        self.assertEqual([item for item in errors if "surface" in item or "contradicts" in item],
+                         [], errors)
+
+    def test_rendered_text_is_text_for_pointers_but_never_matched_against_a_text_layer(self) -> None:
+        """The two properties must stay apart: a rendered page was read as pixels precisely
+        because its text layer was refused, so matching the quote against that layer would
+        re-admit the surface the reading rejected."""
+        self.assertIn("rendered_text", gate.LOCATOR_SURFACES)
+        self.assertIn("rendered_text", gate.POINTER_TARGET_SURFACES)
+        self.assertNotIn("rendered_text", gate.TEXT_SURFACES)
+        self.assertNotIn("figure", gate.POINTER_TARGET_SURFACES)
+        self.assertEqual(gate.TEXT_SURFACES | {"rendered_text"}, gate.POINTER_TARGET_SURFACES)
+
     def test_a_locator_cannot_qualify_itself(self) -> None:
         manifest = self._qualifying_pair(qualifies="entries[1]")
         errors, _ = gate.validate(manifest, require_current_schema=True)

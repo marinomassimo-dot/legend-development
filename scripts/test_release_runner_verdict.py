@@ -117,6 +117,65 @@ class VerdictFormattingTests(unittest.TestCase):
                          ["Git object database absent; verification unavailable"])
 
 
+class ExitCodeMatchesTheVerdict(unittest.TestCase):
+    """🔴 The exit code is the verdict an automation reads; it must agree with the printed one.
+
+    On 2026-09-14 the runner was reported as printing `REGRESSION VERDICT: FAIL` and exiting 0.
+    Measured without a pipe it exits 1: the report had read `$?` after `| tail`, which is
+    tail's status. The runner was right; nothing pinned that it stays right. These cases run
+    the real runner as a subprocess, in a scratch tree with no git, over synthetic suites, and
+    read its own exit status. A declared skip must keep exiting 0: an environmental skip that
+    turned red would train readers to ignore red.
+    """
+
+    def run_runner(self, suites: dict[str, str]) -> subprocess.CompletedProcess:
+        with tempfile.TemporaryDirectory(prefix="legend-runner-exit-") as temporary:
+            root = Path(temporary)
+            (root / "scripts").mkdir()
+            shutil.copy2(RUNNER_PATH, root / "scripts" / RUNNER_PATH.name)
+            for name, body in suites.items():
+                (root / name).write_text(body, encoding="utf-8")
+            return subprocess.run(
+                [sys.executable, "scripts/run_release_regressions.py",
+                 *[arg for name in suites for arg in ("--only", name)]],
+                cwd=root, capture_output=True, text=True)
+
+    def test_a_failing_suite_exits_non_zero_and_says_fail(self) -> None:
+        done = self.run_runner({"test_fails.py": "raise SystemExit(1)\n",
+                                "test_passes.py": "pass\n"})
+        self.assertNotEqual(0, done.returncode, done.stdout + done.stderr)
+        self.assertIn("REGRESSION VERDICT: FAIL", done.stderr)
+        self.assertIn("test_fails.py: exit 1", done.stderr)
+
+    def test_a_passing_battery_exits_zero_and_says_pass(self) -> None:
+        done = self.run_runner({"test_passes.py": "pass\n"})
+        self.assertEqual(0, done.returncode, done.stdout + done.stderr)
+        self.assertIn("REGRESSION VERDICT: PASS (1 targets)", done.stdout)
+
+    def test_a_declared_skip_exits_zero_and_is_named(self) -> None:
+        skipping = ("import unittest\n"
+                    "class T(unittest.TestCase):\n"
+                    "    @unittest.skip('local corpus absent')\n"
+                    "    def test_x(self):\n"
+                    "        pass\n"
+                    "unittest.main(verbosity=2)\n")
+        done = self.run_runner({"test_skips.py": skipping})
+        self.assertEqual(0, done.returncode, done.stdout + done.stderr)
+        self.assertIn("REGRESSION VERDICT: PASS WITH SKIPS", done.stdout)
+        self.assertIn("local corpus absent", done.stdout)
+
+    def test_a_failure_beside_a_skip_still_exits_non_zero(self) -> None:
+        skipping = ("import unittest\n"
+                    "class T(unittest.TestCase):\n"
+                    "    @unittest.skip('local corpus absent')\n"
+                    "    def test_x(self):\n"
+                    "        pass\n"
+                    "unittest.main(verbosity=2)\n")
+        done = self.run_runner({"test_skips.py": skipping,
+                                "test_fails.py": "raise SystemExit(1)\n"})
+        self.assertNotEqual(0, done.returncode, done.stdout + done.stderr)
+
+
 class ArchiveVerdictIntegrationTests(unittest.TestCase):
     def test_archive_runner_qualifies_git_anchor_skip(self) -> None:
         with tempfile.TemporaryDirectory(prefix="legend-runner-archive-") as temporary:

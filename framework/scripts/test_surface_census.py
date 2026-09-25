@@ -378,7 +378,17 @@ class LiveCorpus(unittest.TestCase):
         """`CLAUDE.md` rule 5d says PMID 17803050 has no structured deposit — no DOI, no
         PMCID — and had to be adjudicated against the printed page. A local `.html` exists
         anyway, and it is that page's text layer in markup. The census must agree with the
-        rule, not with the filename."""
+        rule, not with the filename.
+
+        🔴 The class-level skip asks whether the corpus DIRECTORY exists; this test needs one
+        FILE in it. On 2026-09-14 the laboratory checkout held the directory but not the
+        file, the census correctly reported PMID 17803050 `absent` with no text dumps, and the
+        test failed on `'PMID17803050_Suzuki2007.html' not found in []` — an assertion about a
+        file nobody has, reported as a code defect. It now skips, naming the file, exactly when
+        the artefact it pins is absent; wherever the file exists both assertions run as before."""
+        dump = LIVE_CORPUS / "PMID17803050_Suzuki2007.html"
+        if not dump.is_file():
+            self.skipTest(f"pinned artefact absent from the local corpus: {dump.name}")
         self.assertIn("PMID17803050_Suzuki2007.html", self.result.text_dumps)
         self.assertEqual("pdf_only", self.paper("17803050").surface)
 

@@ -5,6 +5,8 @@ from __future__ import annotations
 
 import csv
 import json
+import os
+import subprocess
 import unittest
 from pathlib import Path
 
@@ -24,13 +26,38 @@ UTF8_SUFFIXES = {
 }
 
 
-def public_files():
-    return sorted(
-        path
-        for path in ROOT.rglob("*")
-        if path.is_file()
-        and not any(part in IGNORED_PARTS for part in path.relative_to(ROOT).parts)
-    )
+def public_files(root: Path = ROOT):
+    """The public data of THIS checkout: what git would ship, never what merely sits on disk.
+
+    🔴 Until 2026-09-14 this was `ROOT.rglob("*")`. On a working laboratory checkout that walked
+    13,960 files, of which 12,512 are gitignored — 11,529 inside nested worktrees under
+    `.claude/worktrees/`, 909 in the local corpus `files/`, plus `backup/`, `staging/` and
+    ignored page crops. So the suite was permanently red here on ragged third-party supplement
+    TSVs and empty downloaded figures in `files/`, and green in every fresh clone: its verdict
+    described one machine's local corpus, not the published data its own docstring names.
+
+    Same repair `test_release_surface.py` made for the same failure: ask git. Tracked files plus
+    untracked-but-not-ignored ones, so a new data file is checked before it is committed.
+    Measured at the change: every one of the 1,448 files in that set was already walked
+    (dropped non-ignored paths: 0, added: 0), so no publishable file lost coverage.
+    A source archive has no `.git`: walk it, pruning nested checkouts.
+    """
+    if (root / ".git").exists():
+        listing = subprocess.run(
+            ["git", "ls-files", "-z", "--cached", "--others", "--exclude-standard"],
+            cwd=root, capture_output=True, text=True, check=True).stdout
+        return sorted(root / rel for rel in listing.split("\0")
+                      if rel and (root / rel).is_file()
+                      and not any(part in IGNORED_PARTS for part in Path(rel).parts))
+    found = []
+    for directory, children, files in os.walk(root):
+        here = Path(directory)
+        children[:] = [child for child in children
+                       if child not in IGNORED_PARTS
+                       and not (here / child / ".git").exists()
+                       and not (here / child).is_symlink()]
+        found.extend(here / name for name in files)
+    return sorted(found)
 
 
 class StructuredDataIntegrityTests(unittest.TestCase):

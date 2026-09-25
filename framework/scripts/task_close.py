@@ -76,7 +76,7 @@ def close_task(start: Path, remove_worktree: bool = False,
                                for t in trees):
         raise GitError("the task worktree is locked; keeping its branch and checkout")
 
-    commands = [["git", "-C", str(destination), "merge", "--no-ff", "--no-edit",
+    commands = [["git", "-C", str(destination), "merge", "--no-ff", "-m", "repository: integrate task",
                  "--no-overwrite-ignore", f"refs/heads/{branch}"],
                 ["git", "-C", str(source), "switch", "--detach", "HEAD"],
                 ["git", "-C", str(destination), "branch", "-d", "--", branch]]

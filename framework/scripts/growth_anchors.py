@@ -299,7 +299,18 @@ def scale_triggers(live: dict[str, Any], state: dict[str, Any]) -> list[str]:
 # purpose: every `batch_*_scope` in the state manifest or its history names the candidates
 # that batch propagated. Consumed = named in a scope. Pending = on disk and named nowhere. The only way
 # to lower the number is to actually propagate, because the scope is what records it.
-CANDIDATE_STEM = re.compile(r"^commit[_-]candidate[_-](.+)$", re.I)
+# 🔴 Revised 2026-09-13 (`ORCH-GROWTH-ANCHORS-CC-DISCOVERY-20260913`). The queue directory below
+# holds `CC-*.md` files and nothing else under the historical stem, so this filter measured a
+# live queue of 27 pending candidates as an empty backlog. Both stems are candidates; anything
+# else in the directory (`PROPOSAL-*`, notes) is not.
+CANDIDATE_STEM = re.compile(r"^(?:commit[_-]candidate[_-]|CC-)(.+)$", re.I)
+# A disposition is the integrator's append-only `## BATCH DISPOSITION` block in the candidate
+# itself (prompt_batch_commit.md Phase 7), read at its LAST heading, because later batches
+# append and never rewrite. A mention of the words in prose is not a heading.
+DISPOSITION_HEADING = re.compile(r"(?m)^#{1,6}\s*BATCH DISPOSITION\b")
+DISPOSITION_STATUS = re.compile(r"\*\*Status:\*\*[^A-Za-z]*([A-Z][A-Z ]*[A-Z])")
+DISPOSITION_CLOSING = ("PROPAGATED", "INTEGRATED", "SUPERSEDED", "CLOSED", "NOT INTEGRATED")
+HEADER_STATUS = re.compile(r"(?m)^\*\*Status:?\*\*:?\s*(.+)$")
 CANDIDATE_ID_LINE = re.compile(r"(?m)^\*\*Candidate ID:\*\*\s*(\S+)")
 CANDIDATE_BACKLOG_TRIGGER = 5
 
@@ -333,6 +344,26 @@ def candidate_identity(path: Path) -> str:
     return "CC-" + (stem.group(1) if stem else path.stem).replace("_", "-").upper()
 
 
+def candidate_disposition(text: str) -> str | None:
+    """`closed`, `pending`, or None when the candidate carries no lifecycle record of its own.
+
+    The protocol keeps a DEFERRED candidate in the queue, and a candidate applied IN PART still
+    owes its remaining sections, so neither closes it. A pre-2026-09-09 candidate records its
+    lifecycle only in its header `Status`, naming the batch that committed it.
+    """
+    headings = [match.start() for match in DISPOSITION_HEADING.finditer(text)]
+    if headings:
+        status = DISPOSITION_STATUS.search(text, headings[-1])
+        label = status.group(1).strip() if status else ""
+        closing = label.startswith(DISPOSITION_CLOSING) and "IN PART" not in label
+        return "closed" if closing else "pending"
+    header = HEADER_STATUS.search(text)
+    if header and re.search(r"committed|INTEGRATED|already propagated", header.group(1), re.I) \
+            and re.search(r"BATCH_\d", header.group(1)):
+        return "closed"
+    return None
+
+
 def candidate_directories(root: Path, disease: str) -> list[Path]:
     return [
         root / "staging",
@@ -341,7 +372,11 @@ def candidate_directories(root: Path, disease: str) -> list[Path]:
 
 
 def measure_candidate_backlog(root: Path, disease: str) -> list[str]:
-    """Candidate files present on disk that no batch scope claims to have propagated.
+    """Candidate files present on disk that no disposition record or batch scope closes.
+
+    Discovery, classification and disposition are three steps: a file is a candidate by its
+    stem, its identity comes from its declared ID or its name, and its state comes from its own
+    last `## BATCH DISPOSITION` heading or header `Status` before any scope mention.
 
     `staging/` is gitignored, so it exists in one checkout and not in the worktrees — the same
     condition the surface census handles by skipping rather than failing. An absent directory
@@ -356,17 +391,29 @@ def measure_candidate_backlog(root: Path, disease: str) -> list[str]:
         for path in (root / MANIFEST_REL, root / HISTORY_REL) if path.is_file()
     ]
 
-    pending: list[str] = []
+    pending: dict[str, str] = {}
+    closed: set[str] = set()
     for directory in candidate_directories(root, disease):
         if not directory.is_dir():
             continue
         for path in sorted(directory.glob("*.md")):
-            if not CANDIDATE_STEM.match(path.stem):
+            if not CANDIDATE_STEM.match(path.stem):          # discovery
                 continue
-            identity = candidate_identity(path)
-            if not any(candidate_key(identity) in blob for blob in consumed_blobs):
-                pending.append(identity)
-    return sorted(set(pending))
+            identity = candidate_identity(path)              # classification
+            key = candidate_key(identity)
+            try:
+                text = path.read_text(encoding="utf-8")
+            except OSError:
+                text = ""
+            state = candidate_disposition(text)              # disposition, own record first
+            if state is None:
+                state = "closed" if any(key in blob for blob in consumed_blobs) else "pending"
+            if state == "closed":
+                closed.add(key)
+                pending.pop(key, None)
+            elif key not in closed:
+                pending.setdefault(key, identity)
+    return sorted(pending.values())
 
 
 def candidate_backlog_trigger(live: dict[str, Any]) -> list[str]:
@@ -382,8 +429,9 @@ def candidate_backlog_trigger(live: dict[str, Any]) -> list[str]:
     if len(pending) < CANDIDATE_BACKLOG_TRIGGER:
         return []
     return [
-        f"CANDIDATE_BACKLOG: {len(pending)} commit candidate(s) on disk that no batch scope "
-        f"claims to have propagated, at or past the trigger of {CANDIDATE_BACKLOG_TRIGGER}: "
+        f"CANDIDATE_BACKLOG: {len(pending)} commit candidate(s) on disk that neither their own "
+        f"disposition record nor a batch scope closes, at or past the trigger of "
+        f"{CANDIDATE_BACKLOG_TRIGGER}: "
         f"{', '.join(pending)}. The next BATCH_COMMIT propagates them or records why not."
     ]
 

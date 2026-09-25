@@ -123,6 +123,71 @@ def audit_manifest(path: Path, root: Path) -> dict:
     }
 
 
+# --------------------------------------------------------------------- per-study availability
+#
+# 🔴 HARNESS-P-20260914 P6. Consumers need ONE per-study state, not the per-artefact rows above,
+# and they need it from one definition. Measured before this existed (2026-09-14): of 85
+# complete-read PMIDs, 36 had every fingerprinted artefact on disk, 1 had some, 48 had none —
+# and `session_self_eval`, LINT and every other consumer except `tool_preflight.py` printed a
+# receipt with its bytes and a receipt without them identically.
+#
+# These states are facts about THIS DISK. None of them is a verdict on a reading, none may gate,
+# and an absent artefact never means nobody read the paper — the receipt ledger answers that.
+ALL_PRESENT = "ALL_PRESENT"
+PARTIAL = "PARTIAL"
+NONE_PRESENT = "NONE_PRESENT"
+NO_MANIFEST = "NO_MANIFEST"
+NO_ARTIFACTS = "NO_ARTIFACTS_DECLARED"
+UNREADABLE = "UNREADABLE_MANIFEST"
+
+
+def availability(root: Path, disease: str, pmids) -> dict[str, dict]:
+    """PMID -> {state, present, absent, mismatch, undeclared, total} for each requested PMID.
+
+    A digest mismatch outranks everything: bytes under a fingerprint changed. A declared
+    artefact with no digest counts as present-but-unverifiable and does not make a study PARTIAL.
+    """
+    by_pmid = {path.stem.replace("PMID", ""): path for path in manifest_paths(root, disease)}
+    out: dict[str, dict] = {}
+    for pmid in sorted({str(p) for p in pmids if p}):
+        path = by_pmid.get(pmid)
+        if path is None:
+            out[pmid] = {"state": NO_MANIFEST, "present": 0, "absent": 0, "mismatch": 0,
+                         "undeclared": 0, "total": 0}
+            continue
+        report = audit_manifest(path, root)
+        counts = {PRESENT: 0, ABSENT: 0, MISMATCH: 0, UNDECLARED: 0}
+        for row in report["artifacts"]:
+            counts[row["state"]] += 1
+        total = sum(counts.values())
+        if report.get("error"):
+            state = UNREADABLE
+        elif counts[MISMATCH]:
+            state = MISMATCH
+        elif total == 0:
+            state = NO_ARTIFACTS
+        elif counts[ABSENT] == 0:
+            state = ALL_PRESENT
+        elif counts[ABSENT] == total:
+            state = NONE_PRESENT
+        else:
+            state = PARTIAL
+        out[pmid] = {"state": state, "present": counts[PRESENT], "absent": counts[ABSENT],
+                     "mismatch": counts[MISMATCH], "undeclared": counts[UNDECLARED],
+                     "total": total}
+    return out
+
+
+def availability_counts(rows: dict[str, dict]) -> dict[str, list[str]]:
+    """State -> sorted PMIDs, every state key present so a consumer can print zeros."""
+    grouped: dict[str, list[str]] = {state: [] for state in
+                                     (ALL_PRESENT, PARTIAL, NONE_PRESENT, MISMATCH, NO_MANIFEST,
+                                      NO_ARTIFACTS, UNREADABLE)}
+    for pmid, row in sorted(rows.items()):
+        grouped[row["state"]].append(pmid)
+    return grouped
+
+
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(
         description=(

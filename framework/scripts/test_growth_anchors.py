@@ -501,6 +501,108 @@ class CandidateBacklogIsDerivedNotDeclared(unittest.TestCase):
         self.assertNotIn("candidate_backlog", dict(ga.RATCHET_KEYS))
 
 
+class CandidateQueueDiscoveryAndDisposition(unittest.TestCase):
+    """The queue directory the backlog names, with the names and records it actually holds.
+
+    Added 2026-09-13 (`ORCH-GROWTH-ANCHORS-CC-DISCOVERY-20260913`). `candidate_directories`
+    has always listed `research/commit_candidates/`, but the discovery filter accepted only
+    the historical `commit_candidate_*` stem, and every file in that directory is `CC-*`: the
+    live queue of 27 pending candidates measured as an empty backlog. And once `CC-*` files
+    are seen, "named in a batch scope" is not the same as "consumed": since BATCH_20260909_001
+    the integrator names DEFERRED candidates in the scope and appends a `## BATCH DISPOSITION`
+    block to the candidate itself, and the protocol keeps a deferred candidate in the queue.
+
+    Every expectation here is a literal written from the protocol, not computed by the parser.
+    Discovery, classification and disposition are asserted separately.
+    """
+
+    def setUp(self) -> None:
+        self.stack = TemporaryDirectory()
+        self.root = Path(self.stack.name)
+        self.addCleanup(self.stack.cleanup)
+        (self.root / "framework/state").mkdir(parents=True)
+        (self.root / "staging").mkdir()
+        self.queue = self.root / "disease-models/wwox/research/commit_candidates"
+        self.queue.mkdir(parents=True)
+        self.scope("PROPAGATED 0.")
+
+    def scope(self, text: str) -> None:
+        (self.root / ga.MANIFEST_REL).write_text(
+            f'batch_20260913_001_scope: "{text}"\n', encoding="utf-8")
+
+    def put(self, directory: Path, name: str, body: str = "# candidate\n") -> None:
+        (directory / name).write_text(body, encoding="utf-8")
+
+    def backlog(self) -> list[str]:
+        return ga.measure_candidate_backlog(self.root, "wwox")
+
+    # -- discovery ---------------------------------------------------------------------
+    def test_a_cc_named_candidate_in_the_queue_directory_is_discovered(self) -> None:
+        """The defect: on the pre-repair code this returns an empty list."""
+        self.put(self.queue, "CC-20260826-CLAIM002-01.md")
+        self.assertEqual(["CC-20260826-CLAIM002-01"], self.backlog())
+
+    def test_the_historical_name_is_still_discovered_in_both_directories(self) -> None:
+        self.put(self.root / "staging", "commit_candidate_20260806_19936220.md")
+        self.put(self.queue, "commit_candidate_20260810_42422765_S8.md")
+        self.assertEqual(["CC-20260806-19936220", "CC-20260810-42422765-S8"], self.backlog())
+
+    def test_a_foreign_file_in_the_queue_directory_is_not_a_candidate(self) -> None:
+        self.put(self.queue, "PROPOSAL-20260826-LOCATOR-TO-CLAIM-PROPAGATION.md")
+        self.put(self.queue, "README.md")
+        self.assertEqual([], self.backlog())
+
+    def test_one_candidate_recognised_by_both_rules_is_listed_once(self) -> None:
+        """Two spellings of one identifier, one per directory and one per naming rule."""
+        self.put(self.root / "staging", "commit_candidate_20260705_001.md")
+        self.put(self.queue, "CC-2026-07-05-001.md")
+        self.assertEqual(1, len(self.backlog()))
+
+    # -- disposition -------------------------------------------------------------------
+    def test_a_real_disposition_heading_that_closes_consumes_the_candidate(self) -> None:
+        self.put(self.queue, "CC-20260825-GRAPH-MATERIALIZATION-01.md",
+                 "# c\n\n## BATCH DISPOSITION — appended by the integrator, append-only\n\n"
+                 "**Status:** **PROPAGATED** — `BATCH_20260913_001`.\n")
+        self.assertEqual([], self.backlog())
+
+    def test_the_same_words_quoted_in_prose_are_not_a_disposition(self) -> None:
+        self.put(self.queue, "CC-20260913-29724996-03.md",
+                 "# c\n\n2. This file — `## BATCH DISPOSITION` appended by the integrator.\n")
+        self.assertEqual(["CC-20260913-29724996-03"], self.backlog())
+
+    def test_a_header_status_naming_a_batch_as_committed_consumes_the_candidate(self) -> None:
+        self.put(self.queue, "CC-20260810-21318118-01.md",
+                 "# c\n**Status:** committed — `BATCH_20260815_001`\n")
+        self.assertEqual([], self.backlog())
+
+    def test_a_deferred_candidate_named_in_a_scope_stays_pending(self) -> None:
+        """Named in a scope is not consumed: the protocol keeps a deferred candidate queued."""
+        self.scope("DEFERRED 1: CC-20260909-25331887-01 stays in the queue.")
+        self.put(self.queue, "CC-20260909-25331887-01.md",
+                 "# c\n\n## BATCH DISPOSITION — appended by the integrator, append-only\n\n"
+                 "**Status:** 🔴 **DEFERRED** — not integrated by `BATCH_20260909_001`.\n")
+        self.assertEqual(["CC-20260909-25331887-01"], self.backlog())
+
+    def test_a_candidate_applied_only_in_part_stays_pending(self) -> None:
+        self.put(self.queue, "CC-20260826-PROVENANCE-01.md",
+                 "# c\n\n## BATCH DISPOSITION — appended by the integrator, append-only\n\n"
+                 "**Status:** **PROPAGATED IN PART** — `BATCH_20260913_001`.\n")
+        self.assertEqual(["CC-20260826-PROVENANCE-01"], self.backlog())
+
+    def test_the_last_disposition_heading_is_the_one_that_counts(self) -> None:
+        self.put(self.queue, "CC-20260825-CLAIM016-DRIFT-01.md",
+                 "# c\n\n## BATCH DISPOSITION — appended by the integrator, append-only\n\n"
+                 "**Status:** **DEFERRED** — `BATCH_20260913_001`.\n\n"
+                 "## BATCH DISPOSITION — `BATCH_20260913_002`, append-only\n\n"
+                 "**Status:** **PROPAGATED** under operator decision D8.\n")
+        self.assertEqual([], self.backlog())
+
+    def test_a_candidate_with_no_record_and_no_scope_mention_is_pending(self) -> None:
+        self.put(self.queue, "CC-20260826-MTOR-DIRECTION-01.md",
+                 "# c\n**Status:** proposed — not integrated, not committed\n")
+        self.assertEqual(["CC-20260826-MTOR-DIRECTION-01"], self.backlog())
+
+
 class TheRealCheckoutIsMeasured(unittest.TestCase):
     """The two read-only commands over this checkout's registries and growth ledger.
 

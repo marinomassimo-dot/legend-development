@@ -78,8 +78,35 @@ CORPUS_ARTEFACT = firewall.CORPUS_ARTEFACT
 # ever checked: an agent could read the abstract, write a plausible dossier, declare the XML,
 # and pass. `body`/`table`/`supplement` are text and are machine-checkable against the
 # artefact; `figure` is pixels and can only be attested; `abstract` is honest but weak.
-LOCATOR_SURFACES = {"body", "figure", "table", "supplement", "abstract"}
+LOCATOR_SURFACES = {"body", "figure", "table", "supplement", "abstract", "rendered_text"}
 TEXT_SURFACES = {"body", "table", "supplement"}
+# 🔴 `rendered_text` — added 2026-09-14 (`HARNESS-P-20260914` P10) on a manifest's own note.
+# When a paper's PDF text layer is refused (rule 5d) and no structured surface exists, every
+# text proposition is quoted from a RENDERED PAGE crop (rule 5e). Until this value existed the
+# only admitted label for such a locator was `figure`, which says the quote came from a panel —
+# false — and it made the manifest's coupled relations impossible: a panel that qualifies or
+# contradicts what the authors wrote must point at a text-surface locator, and there was none
+# to point at. `PMID16061658.json` records the relation it could not write in prose for exactly
+# this reason. **When no admitted value is true, the defect is the enum** (see
+# PANEL_TEXT_RELATIONS below).
+#
+# The value carries two properties that must never be merged, which is why it is NOT added to
+# `TEXT_SURFACES`:
+#   - it IS the authors' running text, so it is a legal target for a coupled relation
+#     (`POINTER_TARGET_SURFACES`);
+#   - it was read as pixels BECAUSE the text layer was refused, so it is never matched against
+#     an extracted text layer (`TEXT_SURFACES` drives that verification, and `recapture_snippets`
+#     and `locator_audit` key on it too). Matching it would re-admit the surface the reading
+#     rejected and report faithful quotes as missing.
+#
+# Migration: additive. No existing locator is relabelled — 0 of 2,070 live locators carried the
+# value when it was introduced, and all 96 manifests validate identically before and after
+# (measured by snapshot; see the task record). A `figure` locator that is really a page-text
+# crop stays `figure` until its owner re-declares it; the harness does not re-label evidence.
+RENDERED_TEXT_SURFACE = "rendered_text"
+POINTER_TARGET_SURFACES = TEXT_SURFACES | {RENDERED_TEXT_SURFACE}
+# Surfaces that are attested by looking rather than matched as a string.
+PIXEL_ATTESTED_SURFACES = {"figure", RENDERED_TEXT_SURFACE}
 # 🔴 How the running text and the printed panel stand to each other, per locator.
 #
 # `surface` above records which surface a quote came FROM. It cannot record what this field
@@ -2117,7 +2144,7 @@ def validate(
                             errors.append(
                                 f"verbatim_locators.entries[{position}].{pointer_field}: no "
                                 f"entries[{target}] in this manifest")
-                        elif entries[target].get("surface") not in TEXT_SURFACES:
+                        elif entries[target].get("surface") not in POINTER_TARGET_SURFACES:
                             errors.append(
                                 f"verbatim_locators.entries[{position}].{pointer_field}: "
                                 f"entries[{target}] is not a text surface. What a panel "
@@ -2338,7 +2365,7 @@ def validate(
         if schema_version < 2 and entries and all(s is None for s in declared):
             incomplete.append(
                 "verbatim_locators: no entry declares a `surface` (body/figure/table/"
-                "supplement/abstract) — provenance is named but the surface used is not")
+                "supplement/abstract/rendered_text) — provenance is named but the surface used is not")
         elif entries and declared and all(s == "abstract" for s in declared if s):
             errors.append(
                 "verbatim_locators: every locator is anchored to the abstract. Whatever "

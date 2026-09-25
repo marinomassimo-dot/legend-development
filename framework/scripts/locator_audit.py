@@ -174,8 +174,9 @@ def audit_one(path: Path, corpus: Path) -> dict:
         snippet = str(entry.get("snippet", ""))
         surface = entry.get("surface")
         # A figure locator is an attestation about pixels; matching it as text would be
-        # asking the wrong question and answering it wrongly.
-        if surface == "figure" or snippet.strip().startswith("["):
+        # asking the wrong question and answering it wrongly. `rendered_text` is the same
+        # act on a page of running text whose text layer was refused (P10, 2026-09-14).
+        if surface in dm.PIXEL_ATTESTED_SURFACES or snippet.strip().startswith("["):
             result["image"].append(index)
             continue
         found, _mode = dm._quote_matches(snippet, body)

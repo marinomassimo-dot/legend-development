@@ -89,6 +89,7 @@ Run everything as `python3 <path> --help` first. Paths are repo-relative.
 | does a candidate, ledger or analysis file cite an `FT-` entry that was never written | `framework/scripts/manifest_queue_id_crosscheck.py --prose` |
 | does the registry's declared locator count still match the manifest it names | `framework/scripts/locator_count_crosscheck.py` |
 | every number in an orchestration record sitting beside what produced it | `framework/scripts/record_number_provenance.py` |
+| a correction that has not yet reached the locator it retires | `framework/scripts/locator_propagation.py` |
 
 ## 4 · Is this surface trustworthy
 
@@ -128,6 +129,7 @@ Run everything as `python3 <path> --help` first. Paths are repo-relative.
 | registry cardinality and both debt ratchets | `framework/scripts/growth_anchors.py check` |
 | how this repository's caught errors were caught | `framework/scripts/attribution_census.py` |
 | phenotypic-similarity neighbours of a disease from public HPO annotations — **reading order, not mechanistic transfer** | `scripts/phenotypic_neighbors.py` |
+| registry citation/link discrepancies — a paper cited by a claim whose `Claim links` omit it — reported, never adjudicated | `framework/scripts/support_linkage.py` |
 
 ## 7 · Close a session, commit, land
 
@@ -143,6 +145,9 @@ Run everything as `python3 <path> --help` first. Paths are repo-relative.
 | when the shared checkout moved, and when it deliberately did not | `framework/scripts/sync_epochs.py` |
 | classify, hand off, resume or sync a laboratory across hosts | `framework/scripts/legend_handoff.py` |
 | what harness work is due at session start | `framework/scripts/harness_session_start.py` |
+| the packet that lets a phase start in a new context, derived from artefacts and verified | `framework/scripts/phase_handoff.py` |
+| task display fields derived from every structured queue — never a runtime release decision | `framework/scripts/task_summary.py` |
+| a commit subject that names the surface touched, never the conclusion reached (convention S.6.7) | `framework/scripts/commit_subject.py` |
 
 ## 8 · Before publishing
 
@@ -176,6 +181,8 @@ Run everything as `python3 <path> --help` first. Paths are repo-relative.
 | the benchmark input surface — built, proven, frozen | `framework/scripts/benchmark_input_surface.py` |
 | **Benchmark I** — whether targeted claim retrieval reaches the claim a paper changed (I1, deterministic, over the repository's own history) | `framework/scripts/claim_retrieval_bench.py i1` |
 | **Benchmark I · I2** — whether a model finds the affected claim as reliably in the retrieved records as in the whole registry (repeated `claude -p` runs, blind deterministic grading) | `framework/scripts/claim_attention_bench.py grade` |
+| what model actually ran, per turn, and what the run cost — read from a transcript | `framework/scripts/session_model_census.py` |
+| what the runtime actually says about quota, with a timestamp — and when it says nothing | `framework/scripts/quota_state.py` |
 
 ## 11 · Disease-model analysis (public, WWOX)
 
@@ -188,7 +195,7 @@ Run everything as `python3 <path> --help` first. Paths are repo-relative.
 
 ## 12 · Libraries, not commands
 
-These three are imported by other tools and have no `__main__`. They are listed so the routing is
+These four are imported by other tools and have no `__main__`. They are listed so the routing is
 **complete** rather than tidy — a reader who finds one and cannot run it should learn why here,
 not by running it.
 
@@ -197,3 +204,4 @@ not by running it.
 | `framework/scripts/repo_root.py` | where the repository authority root is — one answer or a refusal, never a guess |
 | `framework/scripts/screen_verdict.py` | the verdict contract every screen in `framework/scripts/` returns |
 | `framework/scripts/corpus_firewall.py` | what a bibliographic corpus is, and how every guard recognises one |
+| `framework/scripts/claim_links.py` | the declared `Claim links` of a record, never identifiers inside a refusal or an annotation |

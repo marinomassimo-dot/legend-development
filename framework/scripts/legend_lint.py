@@ -604,6 +604,121 @@ def _check_fulltext_declaration_ratchet(findings, repo_root, manifest_text, engi
         ))
 
 
+def _check_unlinked_support(findings, claims_text, papers_text):
+    """Advisory citation/link discrepancies. No output orders a scientific edge.
+
+    Missing edges and possible contrast clues require review; unresolved identifiers
+    remain explicit coverage limits. support_linkage owns the classification logic.
+    """
+    here = os.path.dirname(os.path.abspath(__file__))
+    if here not in sys.path:
+        sys.path.insert(0, here)
+    try:
+        import support_linkage  # noqa: PLC0415 - shares coverage_report's parser
+        results = support_linkage.check(claims_text, papers_text)
+    except Exception as error:                           # noqa: BLE001 — reported, not raised
+        findings.append(Finding(
+            "INFO", "UNLINKED_SUPPORT_UNCHECKABLE",
+            f"the claim-support cross-check could not run: {type(error).__name__}: {error}"))
+        return
+    for result in results:
+        if result.kind == support_linkage.UNLINKED:
+            findings.append(Finding(
+                "WARN_BUT_PROCEED", "UNLINKED_SUPPORT",
+                f"{result.claim} names PMID {result.pmid} in {result.field}; "
+                f"{result.record}: {result.reason}"))
+        elif result.kind == support_linkage.CONTRAST:
+            findings.append(Finding(
+                "WARN_BUT_PROCEED", "POSSIBLE_CONTRAST",
+                f"{result.claim} names PMID {result.pmid} in {result.field}; "
+                f"{result.record}: review relation — {result.reason}"))
+        elif result.kind == support_linkage.UNCLASSIFIED:
+            findings.append(Finding(
+                "WARN_BUT_PROCEED", "UNLINKED_SUPPORT_UNCLASSIFIED",
+                f"{result.claim} names PMID {result.pmid} in {result.field}; "
+                f"{result.record}: read the sentence before linking — {result.reason} | "
+                f"«{support_linkage.excerpt(result.sentence, result.pmid)}»"))
+        else:
+            findings.append(Finding(
+                "INFO", "UNLINKED_SUPPORT_UNCHECKED",
+                f"{result.claim} names PMID {result.pmid} in {result.field}; {result.reason}"))
+
+
+def _check_evidence_availability(findings, repo_root):
+    """Whether the bytes standing complete reads fingerprinted are on this disk. INFO only.
+
+    HARNESS-P-20260914 P6: a legacy declaration, a valid receipt and current artefact
+    availability are three facts. The first two were visible; the third was measured by
+    `evidence_presence.py` and printed by nothing a session reads at start. It is surfaced
+    here and never gated: absence is the normal state of a fresh clone.
+    """
+    here = os.path.dirname(os.path.abspath(__file__))
+    if here not in sys.path:
+        sys.path.insert(0, here)
+    try:
+        import evidence_presence  # noqa: PLC0415
+        import fulltext_receipts  # noqa: PLC0415
+        from pathlib import Path  # noqa: PLC0415
+        ledger = Path(repo_root) / RECEIPT_LEDGER
+        if not ledger.is_file():
+            return
+        events = [json.loads(line) for line in ledger.read_text(encoding="utf-8").splitlines()
+                  if line.strip()]
+        pmids = {(event.get("study_id") or {}).get("pmid")
+                 for event in fulltext_receipts.active_receipts(events)
+                 if event.get("evidence_depth") == "complete_fulltext_read"} - {None}
+        if not pmids:
+            return
+        grouped = evidence_presence.availability_counts(
+            evidence_presence.availability(Path(repo_root), "wwox", pmids))
+    except Exception as error:                           # noqa: BLE001 — reported, not raised
+        findings.append(Finding(
+            "INFO", "EVIDENCE_AVAILABILITY_UNCHECKED",
+            f"artefact availability could not be measured: {type(error).__name__}: {error}"))
+        return
+    findings.append(Finding(
+        "INFO", "EVIDENCE_AVAILABILITY",
+        f"standing complete reads: {len(pmids)} | bytes all present: "
+        f"{len(grouped[evidence_presence.ALL_PRESENT])} | partial: "
+        f"{len(grouped[evidence_presence.PARTIAL])} | none present: "
+        f"{len(grouped[evidence_presence.NONE_PRESENT])} | digest mismatch: "
+        f"{len(grouped[evidence_presence.MISMATCH])} | no manifest: "
+        f"{len(grouped[evidence_presence.NO_MANIFEST])} | no artefacts declared: "
+        f"{len(grouped[evidence_presence.NO_ARTIFACTS])} — a fact about this disk, not a verdict "
+        "on any reading (per PMID: session_self_eval.py or evidence_presence.py)"))
+
+
+def _check_locator_propagation(findings, repo_root):
+    """Corrections that have not reached the persisted locator they retire (P5, 2026-09-14).
+
+    Never blocks: an OPEN obligation is work owed by a science actor through the contradiction
+    procedure, and a cross-check that cannot run has found nothing. The logic lives in
+    `locator_propagation.py`; this maps its states onto LINT severities.
+    """
+    here = os.path.dirname(os.path.abspath(__file__))
+    if here not in sys.path:
+        sys.path.insert(0, here)
+    try:
+        import locator_propagation as lp  # noqa: PLC0415
+        from pathlib import Path  # noqa: PLC0415
+        result = lp.scan(Path(repo_root), "wwox")
+    except Exception as error:                           # noqa: BLE001 — reported, not raised
+        findings.append(Finding(
+            "INFO", "LOCATOR_PROPAGATION_UNCHECKED",
+            f"the locator-propagation scan could not run: {type(error).__name__}: {error}"))
+        return
+    codes = {lp.OPEN: "LOCATOR_PROPAGATION_OPEN",
+             lp.UNDECLARED_DISCHARGE: "LOCATOR_PROPAGATION_UNDECLARED",
+             lp.UNRESOLVABLE: "LOCATOR_PROPAGATION_UNRESOLVABLE"}
+    for item in result.obligations:
+        if item.state in codes:
+            findings.append(Finding("WARN_BUT_PROCEED", codes[item.state], item.line()))
+    for where in result.malformed:
+        findings.append(Finding("WARN_BUT_PROCEED", "LOCATOR_PROPAGATION_MALFORMED", where))
+    if result.obligations or result.malformed:
+        findings.append(Finding("INFO", "LOCATOR_PROPAGATION", result.summary()))
+
+
 def claim_paper_findings(claims_text, paper_ids, corpus_ids=None):
     corpus_ids = corpus_ids or set()
     findings = []
@@ -729,6 +844,7 @@ def lint(repo_root):
         paper_ids = set(parse_ids(papers, "PAPER"))
         corpus_ids = set(parse_corpus_ids(papers))
         findings.extend(claim_paper_findings(claims, paper_ids, corpus_ids))
+        _check_unlinked_support(findings, claims, papers)
         # 🔴 This check reaches outside the LINT: it imports `batch_queue`, which pulls the
         # intake skill from `.claude/skills/`, and reads every corpus seed. Any of that can
         # fail for reasons that have nothing to do with the canonical state — a missing skill
@@ -764,6 +880,8 @@ def lint(repo_root):
             _check_queue_ids(findings, queue_text)
             _check_queue_identifiers(findings, queue_text)
         _check_fulltext_receipts(findings, repo_root)
+        _check_evidence_availability(findings, repo_root)
+        _check_locator_propagation(findings, repo_root)
         _check_sync_epochs(findings, repo_root)
         if not any(item.severity == "BLOCK_SYSTEM" for item in findings):
             _check_session_self_evaluation(findings, repo_root)

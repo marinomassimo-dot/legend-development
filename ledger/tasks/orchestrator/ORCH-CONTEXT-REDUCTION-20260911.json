@@ -9,7 +9,7 @@
  "CURRENT_STATE": "COMPLETE",
  "assigned_on": "2026-09-11",
  "closed_on": "2026-09-11",
- "started_at_head": "e791b33",
+ "started_at_head": "e791b3353409b5489e3261a898312baf18a236ef",
  "record": "disease-models/wwox/research/2026-09-11_registry_context_reduction.md",
  "what_changed": {
   "new": [
@@ -95,7 +95,7 @@
  },
  "two_known_reds": "unchanged and not weakened: test_batch_queue 80 vs 59 (operator's BATCH_COMMIT), test_surface_census (gitignored evidence). Re-run and quoted verbatim in the session record.",
  "battery_and_publication": {
-  "battery": "107 suites, FAIL on exactly the two inherited reds",
+  "battery": "107 suites executed; two pre-existing failures unchanged (test_batch_queue, test_surface_census); no new regression. Not to be summarised as green.",
   "lint": "PASS",
   "growth_anchors": "PASS",
   "receipts": "OK 156 chained",

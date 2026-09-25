@@ -37,6 +37,7 @@ The gold is in the details of every full text, not only in papers already labell
 ## Canonical files to pass/read (stage 4 — after the first pass)
 - State: `framework/state/state_manifest_current.md`
 - The 4 canonical scientific current files: working model and claim registry whole; paper registry and literature tracking log by record (`registry_records.py`, above).
+- Per paper, before opening it: `python3 framework/scripts/paper_packet.py packet --pmid <PMID>` (technical state) and `… procedures --pmid <PMID>` — the specialist procedures it opens are read; the ones it marks not needed or to ascertain are not, until a check result or an `--observed` declaration opens them. The trigger table is `PROCEDURES` in `framework/scripts/paper_packet.py`.
 - Operational: the inbox and the commit-candidate queue.
 - Protocols: `framework/protocols/ingest_protocol.md`, `framework/protocols/wikilink_schema.md`
 - The research-group knowledge base.

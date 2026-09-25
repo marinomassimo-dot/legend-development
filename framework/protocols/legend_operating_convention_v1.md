@@ -362,6 +362,23 @@ commit are one act", which would have forbidden a `WORK_COMMIT` that S.6.1 decla
 and that GATE 2 does not reach. Silence named: no frozen rule sequences redaction against
 `WORK_COMMIT`.*
 
+**S.6.7 — A commit subject names the SURFACE touched, never the CONCLUSION reached. The conclusion
+goes in the body.** *(HARNESS-P-20260914 P8, 2026-09-14.)*
+
+> **Measured.** The runtime injects a git-status block **including recent commit subjects** into
+> every fresh session's context before the actor can act (verified on an isolated probe session).
+> A blind verifier therefore read, before opening its source, subjects such as *"PMID 28283473
+> read in full — the positive lung leg is real"*. No repository file prints that block, so the
+> runtime cannot be patched from here; the body is not printed, so that is where findings go.
+
+The rule's one definition is `framework/scripts/commit_subject.py` (surface first; no verdict word
+or state-asserting copula). `scripts/legend_commit.sh` enforces it before staging and exits 5;
+`LEGEND_SUBJECT_OVERRIDE=<reason>` commits anyway and writes the reason into the message as a
+`Subject-Check-Override:` trailer. A bare `git commit` is checked only where the checkout owner has
+installed `deployment/git_commit_msg_subject_hook.sh` (install command in its header) — no actor
+installs a hook into the shared `.git/hooks`. It is a lexical screen: a conclusion phrased as an
+act passes it, and the author still owes the discipline.
+
 ## S.7 · Measurement
 
 **S.7.1 — 🔴 Mandate the COMMAND, never the integer.**

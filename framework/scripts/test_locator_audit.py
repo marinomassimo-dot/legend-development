@@ -79,6 +79,16 @@ class TheAuditFindsWhatItShould(unittest.TestCase):
         self.assertEqual([0], result["image"])
         self.assertEqual([], result["missing"])
 
+    def test_text_read_from_a_rendered_page_is_not_matched_against_the_text_layer(self) -> None:
+        """HARNESS-P-20260914 P10: `rendered_text` is running text read as pixels because the
+        text layer was refused. Matching it against that layer would report a faithful quote
+        as missing, and re-admit the surface the reading rejected."""
+        path = self.workspace.manifest(
+            [entry("a sentence the text layer mangles beyond recognition", "rendered_text")])
+        result = self.audit(path)
+        self.assertEqual([0], result["image"], result)
+        self.assertEqual([], result["missing"])
+
     def test_an_unreadable_corpus_reports_that_it_could_not_look(self) -> None:
         """🔴 Not finding anything and not being able to look are different statements.
 

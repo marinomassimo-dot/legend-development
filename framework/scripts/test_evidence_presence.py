@@ -111,6 +111,59 @@ class EvidencePresenceTest(unittest.TestCase):
         self.assertIn("UNREADABLE", r.stdout)
 
 
+class AvailabilityIsAStateConsumersCanRead(unittest.TestCase):
+    """HARNESS-P-20260914 P6: one function every consumer imports, so the per-PMID state is
+    computed once and a second definition cannot drift. Before the fix only `tool_preflight.py`
+    imported this module outside its own suite."""
+
+    def setUp(self) -> None:
+        self._tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self._tmp.cleanup)
+        self.root = Path(self._tmp.name)
+        self.man = self.root / "disease-models/wwox/research/deepdive_manifests"
+        self.man.mkdir(parents=True)
+        (self.root / "files/fulltext").mkdir(parents=True)
+
+    def manifest(self, pmid: str, artefacts: list[tuple[str, bytes | None, str | None]]) -> None:
+        rows = []
+        for name, body, declared in artefacts:
+            rel = f"files/fulltext/{name}"
+            if body is not None:
+                (self.root / rel).write_bytes(body)
+            digest = declared or hashlib.sha256(body or b"never written").hexdigest()
+            rows.append({"path": rel, "sha256": digest, "kind": "article_text"})
+        (self.man / f"PMID{pmid}.json").write_text(
+            json.dumps({"pmid": pmid, "source_artifacts": rows}), encoding="utf-8")
+
+    def test_the_five_states_stay_apart(self) -> None:
+        sys.path.insert(0, str(HERE))
+        import evidence_presence as ep  # noqa: PLC0415
+        self.manifest("1", [("a.xml", b"a", None)])
+        self.manifest("2", [("b.xml", b"b", None), ("c.xml", None, None)])
+        self.manifest("3", [("d.xml", None, None)])
+        self.manifest("4", [("e.xml", b"e", "0" * 64), ("f.xml", None, None)])
+        states = {pmid: row["state"] for pmid, row in
+                  ep.availability(self.root, "wwox", ["1", "2", "3", "4", "5"]).items()}
+        self.assertEqual({"1": ep.ALL_PRESENT, "2": ep.PARTIAL, "3": ep.NONE_PRESENT,
+                          "4": ep.MISMATCH, "5": ep.NO_MANIFEST}, states)
+
+    def test_lint_surfaces_availability_at_info_and_never_blocks(self) -> None:
+        sys.path.insert(0, str(HERE))
+        import legend_lint  # noqa: PLC0415
+        self.manifest("3", [("d.xml", None, None)])
+        ledger = self.root / "disease-models/wwox/registries/fulltext_read_receipts.jsonl"
+        ledger.parent.mkdir(parents=True)
+        ledger.write_text(json.dumps({
+            "event_id": "FTR-X-3", "study_id": {"pmid": "3"},
+            "evidence_depth": "complete_fulltext_read"}) + "\n", encoding="utf-8")
+        findings: list = []
+        legend_lint._check_evidence_availability(findings, str(self.root))
+        codes = [(f.severity, f.code) for f in findings]
+        self.assertEqual([("INFO", "EVIDENCE_AVAILABILITY")], codes)
+        self.assertIn("none present: 1", findings[0].message)
+        self.assertIn("not a verdict", findings[0].message)
+
+
 class TheRealManifestsAreAudited(unittest.TestCase):
     """One real manifest through ``main`` over this checkout — read, reported, unchanged.
 

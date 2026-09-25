@@ -263,10 +263,12 @@ one (`roles/scientist.md`, *Working discipline*). Named so a reviewer can point 
   analysis. Full text over abstract wherever full text exists. Figures inspected at original
   resolution; a caption is not a panel.
 - **Verbatim locators captured while the document is open** — proposition · snippet ·
-  surface (`body | figure | table | supplement | abstract`) · artifact · anchor ·
-  `panel_text_relation`, exactly the entry the manifest validator accepts
-  (`framework/scripts/deepdive_manifest.py`, `verbatim_locators.entries[]`). A `figure` surface
-  is an attestation, not a quote, and says so.
+  surface (`LOCATOR_SURFACES` in the validator — `body | figure | table | supplement | abstract |
+  rendered_text`) · artifact · anchor · `panel_text_relation`, exactly the entry the manifest
+  validator accepts (`framework/scripts/deepdive_manifest.py`, `verbatim_locators.entries[]`). A
+  `figure` surface is an attestation, not a quote, and says so. `rendered_text` is the authors'
+  running text quoted from a rendered page because the text layer was refused (rule 5d/5e): a
+  panel may point at it, and it is never matched against the refused layer.
 - **The receipt contract** — coverage map over Abstract · Introduction · Methods · Results ·
   Figures · Tables · Discussion · Limitations · Supplementary, each `read | captions_only |
   not_present | unavailable | not_read`; a complete read carries no `not_read`
