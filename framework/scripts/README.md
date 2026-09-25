@@ -174,6 +174,7 @@ Run everything as `python3 <path> --help` first. Paths are repo-relative.
 |---|---|
 | whether each tool's own suite ever drives the tool | `framework/scripts/self_test_coverage.py` |
 | the benchmark input surface — built, proven, frozen | `framework/scripts/benchmark_input_surface.py` |
+| **Benchmark I** — whether targeted claim retrieval reaches the claim a paper changed (I1, deterministic, over the repository's own history) | `framework/scripts/claim_retrieval_bench.py i1` |
 
 ## 11 · Disease-model analysis (public, WWOX)
 
