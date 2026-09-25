@@ -256,7 +256,8 @@ def run_current(root: Path, pmid: str) -> dict[str, Any]:
             "claim_bytes": sum(b for _c, b, _w in claims),
             "all_records_returned": len(found.hits),
             "all_bytes_returned": sum(len(r.text.encode("utf-8")) for r, _w in found.hits),
-            "binding": found.repository.get("state"), "commit_read": found.repository.get("commit"),
+            "binding": found.repository.get("verdict"),
+            "commit_read": found.repository.get("commit"),
             "runtime_s": round(elapsed, 3)}
 
 
@@ -286,7 +287,32 @@ def run_terms(root: Path, text: str, cap_fraction: float, n_claims: int) -> dict
             "terms_absent": sum(1 for t in terms if df.get(t, 0) == 0),
             "terms_over_cap": sum(1 for t in terms if df.get(t, 0) > cap),
             "candidates": [c for c, _b, _w in claims], "matched_terms": reason,
-            "runtime_s": round(elapsed, 3)}
+            "runtime_s": round(elapsed, 3), "_df": df}
+
+
+def diagnose(root: Path, fixture: dict[str, Any], target: str, df: dict[str, int],
+             cap: int) -> dict[str, Any]:
+    """Why a target missed, stage by stage — computed, so the classification has evidence.
+
+    1. Was the target addressable at `C^`? (`select(record_id=…)`)
+    2. Did any record that identifies or mentions the paper at `C^` link to it? (the PMID route)
+    3. Which seed terms does the target contain, and what did the DF cap do to each?
+    """
+    by_id = registry_records.select(root, "wwox", record_id=target, sources=[CLAIM_STEM], hops=0)
+    addressable = any(r.kind == "record" for r, _w in by_id.hits)
+    paper = registry_records.select(root, "wwox", pmid=fixture["pmid"], hops=0)
+    link = re.compile(r"\[\[claim_registry_current#" + re.escape(target) + r"(?:\||\])", re.I)
+    paper_records = [{"record": f"{r.source}#{r.record_id}"[:90], "match": w,
+                      "links_target": bool(link.search(r.text))} for r, w in paper.hits]
+    text = next((r.text.lower() for r, _w in by_id.hits if r.kind == "record"), "")
+    shared = {t: df.get(t, 0) for t in df if t in text}
+    return {"target": target, "addressable_at_parent": addressable,
+            "paper_records_at_parent": paper_records,
+            "pmid_route_reaches_target": any(p["links_target"] for p in paper_records),
+            "seed_terms_in_target": len(shared),
+            "seed_terms_in_target_over_cap": sorted(t for t, n in shared.items() if n > cap),
+            "seed_terms_in_target_within_cap": sorted(t for t, n in shared.items() if n <= cap),
+            "df_cap": cap}
 
 
 def registry_size(root: Path) -> tuple[int, int]:
@@ -313,7 +339,8 @@ def evaluate(fixture: dict[str, Any], root: Path, cap_fraction: float,
                                       "term route: " + ", ".join(terms["matched_terms"].get(c, []))
                                       for c in union},
                    "claim_bytes": sum(record_bytes.get(c, 0) for c in union),
-                   "term_route": {k: v for k, v in terms.items() if k != "matched_terms"},
+                   "term_route": {k: v for k, v in terms.items()
+                                  if k not in ("matched_terms", "_df")},
                    "runtime_s": round(current["runtime_s"] + terms["runtime_s"], 3)}
     out: dict[str, Any] = {"fixture_id": fixture["fixture_id"], "pmid": fixture["pmid"],
                            "class": fixture["class"], "targets": targets,
@@ -328,6 +355,9 @@ def evaluate(fixture: dict[str, Any], root: Path, cap_fraction: float,
             "all_targets_retrieved": bool(targets) and len(hit) == len(targets),
             "candidate_count": len(result["candidates"]),
             "registry_fraction": round(result["claim_bytes"] / registry_bytes, 4)}
+    out["miss_diagnosis"] = [diagnose(root, fixture, target, terms["_df"], terms["df_cap"])
+                             for target in targets
+                             if target not in out["strategies"]["PROGRESSIVE"]["candidates"]]
     out["strategies"]["FULL"] = {"candidate_count": n_claims, "claim_bytes": sum(
         record_bytes.values()), "registry_bytes": registry_bytes, "registry_fraction": 1.0,
         "note": "not a retrieval: every claim by definition"}

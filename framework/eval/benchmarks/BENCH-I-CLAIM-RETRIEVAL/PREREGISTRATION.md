@@ -47,7 +47,7 @@ by `python3 framework/scripts/claim_retrieval_bench.py build`.
   override (I15), with its evidence in the spec.
 - **Seed — the first pass, before comparison.** The `verbatim_locators.entries[*].snippet` of
   `deepdive_manifests/PMID<P>.json` **at `C^`**, i.e. the reading as it stood before the claim
-  change landed; `CLAIM nnn` tokens and `[[wikilinks]]` scrubbed and counted (0 in every snippet
+  change landed; `CLAIM nnn` tokens and double-bracket wikilinks scrubbed and counted (0 in every snippet
   seed; the proposition seeds of I17, I18, I21, I23 carried 4, 3, 6 and 1 — which is why
   propositions are **secondary** only).
 - **Classes.** 21 STRONG · 4 USABLE_WITH_LIMITATION (I08 review with a secondary role; I15
