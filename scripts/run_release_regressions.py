@@ -103,6 +103,7 @@ PRIORITY_TESTS = (
     # an empty result that must not read as "the laboratory does not know this paper".
     "framework/scripts/test_registry_records.py",
     "framework/scripts/test_claim_retrieval_bench.py",
+    "framework/scripts/test_claim_attention_bench.py",
     # Three suites that passed standalone and were in no battery (2026-09-11 self-evaluation,
     # question 19): the OA-index dissent screen, the manifest flag-drift screen, the self-test
     # coverage meta-test.
