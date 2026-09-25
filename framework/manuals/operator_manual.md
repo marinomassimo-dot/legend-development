@@ -59,7 +59,10 @@ scientifico pertinente e caricarne il contesto. Le letture full-text, i receipt,
 **Caricare**
 - `working_model_current.md` e `claim_registry_current.md` per intero (46 KB + 112 KB): sono lo
   stato globale del modello, e una claim che il paper contraddice può non essere collegata al
-  paper — un recupero selettivo non può garantirlo
+  paper — un recupero selettivo non può garantirlo. **Misurato, non solo affermato** (Benchmark I,
+  2026-09-25, [`I3_DECISION.md`](../eval/benchmarks/BENCH-I-CLAIM-RETRIEVAL/I3_DECISION.md)): su
+  22 eventi storici `get --pmid --hops 1` raggiunge 13 delle 29 claim toccate; il recupero
+  letterale che le raggiunge quasi tutte restituisce l'83 % del registro
 - `paper_registry_current.md` e `literature_tracking_log_current.md` **per record, non per
   intero**: 402 KB + 480 KB il 2026-09-11, che crescono a ogni commit. I record pertinenti si
   ottengono interi con

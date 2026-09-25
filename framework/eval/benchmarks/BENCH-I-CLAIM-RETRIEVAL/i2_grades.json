@@ -1,0 +1,4549 @@
+{
+ "_schema": "LEGEND Benchmark I · I2 grades v1",
+ "grader": "deterministic exact CLAIM_ID match, blind to arm (arm joined after scoring)",
+ "jobs_expected": 132,
+ "jobs_recorded": 132,
+ "jobs_missing": [],
+ "unparseable_or_failed": 7,
+ "pooled_targets_identified": {
+  "A": 68,
+  "C": 73
+ },
+ "pooled_denominator": 84,
+ "fixtures_favouring_A": [],
+ "fixtures_favouring_C": [],
+ "error_taxonomy": {
+  "A": {
+   "RELATIONSHIP_WRONG": 48,
+   "EXTRA_UNSUPPORTED_CLAIMS": 57,
+   "OTHER": 6,
+   "WRONG_NEARBY_CLAIM": 9
+  },
+  "C": {
+   "EXTRA_UNSUPPORTED_CLAIMS": 61,
+   "RELATIONSHIP_WRONG": 48,
+   "WRONG_NEARBY_CLAIM": 10,
+   "OTHER": 1
+  }
+ },
+ "rows": [
+  {
+   "fixture_id": "I00",
+   "class": "NO_CHANGE_CONTROL",
+   "targets": [],
+   "relationship": "no affected existing claim",
+   "pmid_route_hit_all": null,
+   "A": {
+    "outcomes": [
+     "correct",
+     "correct",
+     "correct"
+    ],
+    "score": 1.0,
+    "targets_identified": 0,
+    "of": null,
+    "relationship_matches": 0,
+    "extras_per_run": [
+     0,
+     0,
+     0
+    ],
+    "extras": [],
+    "claim_records": 39,
+    "claim_context_bytes": 97830,
+    "input_tokens_total": [
+     43598,
+     43596,
+     43600
+    ]
+   },
+   "C": {
+    "outcomes": [
+     "correct",
+     "correct",
+     "correct"
+    ],
+    "score": 1.0,
+    "targets_identified": 0,
+    "of": null,
+    "relationship_matches": 0,
+    "extras_per_run": [
+     0,
+     0,
+     0
+    ],
+    "extras": [],
+    "claim_records": 7,
+    "claim_context_bytes": 19807,
+    "input_tokens_total": [
+     10140,
+     10136,
+     10138
+    ]
+   }
+  },
+  {
+   "fixture_id": "I01",
+   "class": "STRONG",
+   "targets": [
+    "CLAIM 005"
+   ],
+   "relationship": "narrows / qualifies",
+   "pmid_route_hit_all": false,
+   "A": {
+    "outcomes": [
+     "correct",
+     "correct",
+     "correct"
+    ],
+    "score": 1.0,
+    "targets_identified": 3,
+    "of": 3,
+    "relationship_matches": 0,
+    "extras_per_run": [
+     8,
+     5,
+     7
+    ],
+    "extras": [
+     "CLAIM 002",
+     "CLAIM 003",
+     "CLAIM 004",
+     "CLAIM 006",
+     "CLAIM 011",
+     "CLAIM 013",
+     "CLAIM 016",
+     "CLAIM 021",
+     "CLAIM 028"
+    ],
+    "claim_records": 35,
+    "claim_context_bytes": 70978,
+    "input_tokens_total": [
+     32748,
+     32748,
+     32748
+    ]
+   },
+   "C": {
+    "outcomes": [
+     "correct",
+     "correct",
+     "correct"
+    ],
+    "score": 1.0,
+    "targets_identified": 3,
+    "of": 3,
+    "relationship_matches": 2,
+    "extras_per_run": [
+     3,
+     5,
+     6
+    ],
+    "extras": [
+     "CLAIM 002",
+     "CLAIM 003",
+     "CLAIM 004",
+     "CLAIM 006",
+     "CLAIM 011",
+     "CLAIM 021",
+     "CLAIM 028"
+    ],
+    "claim_records": 28,
+    "claim_context_bytes": 57509,
+    "input_tokens_total": [
+     26959,
+     26963,
+     26957
+    ]
+   }
+  },
+  {
+   "fixture_id": "I02",
+   "class": "STRONG",
+   "targets": [
+    "CLAIM 005"
+   ],
+   "relationship": "contradicts / weakens",
+   "pmid_route_hit_all": false,
+   "A": {
+    "outcomes": [
+     "correct",
+     "correct",
+     "correct"
+    ],
+    "score": 1.0,
+    "targets_identified": 3,
+    "of": 3,
+    "relationship_matches": 0,
+    "extras_per_run": [
+     6,
+     7,
+     5
+    ],
+    "extras": [
+     "CLAIM 004",
+     "CLAIM 008",
+     "CLAIM 009",
+     "CLAIM 014",
+     "CLAIM 021",
+     "CLAIM 030",
+     "CLAIM 032",
+     "CLAIM 033"
+    ],
+    "claim_records": 35,
+    "claim_context_bytes": 72086,
+    "input_tokens_total": [
+     33383,
+     33385,
+     33381
+    ]
+   },
+   "C": {
+    "outcomes": [
+     "correct",
+     "correct",
+     "correct"
+    ],
+    "score": 1.0,
+    "targets_identified": 3,
+    "of": 3,
+    "relationship_matches": 0,
+    "extras_per_run": [
+     4,
+     4,
+     4
+    ],
+    "extras": [
+     "CLAIM 004",
+     "CLAIM 011",
+     "CLAIM 014",
+     "CLAIM 021",
+     "CLAIM 032"
+    ],
+    "claim_records": 31,
+    "claim_context_bytes": 64340,
+    "input_tokens_total": [
+     30077,
+     60229,
+     30079
+    ]
+   }
+  },
+  {
+   "fixture_id": "I04",
+   "class": "STRONG",
+   "targets": [
+    "CLAIM 004"
+   ],
+   "relationship": "requires review",
+   "pmid_route_hit_all": true,
+   "A": {
+    "outcomes": [
+     "correct",
+     "correct",
+     "correct"
+    ],
+    "score": 1.0,
+    "targets_identified": 3,
+    "of": 3,
+    "relationship_matches": 0,
+    "extras_per_run": [
+     2,
+     4,
+     5
+    ],
+    "extras": [
+     "CLAIM 003",
+     "CLAIM 009",
+     "CLAIM 011",
+     "CLAIM 028",
+     "CLAIM 032"
+    ],
+    "claim_records": 39,
+    "claim_context_bytes": 86686,
+    "input_tokens_total": [
+     39499,
+     39501,
+     39495
+    ]
+   },
+   "C": {
+    "outcomes": [
+     "correct",
+     "correct",
+     "correct"
+    ],
+    "score": 1.0,
+    "targets_identified": 3,
+    "of": 3,
+    "relationship_matches": 0,
+    "extras_per_run": [
+     6,
+     5,
+     5
+    ],
+    "extras": [
+     "CLAIM 002",
+     "CLAIM 005",
+     "CLAIM 006",
+     "CLAIM 009",
+     "CLAIM 011",
+     "CLAIM 032",
+     "CLAIM 036"
+    ],
+    "claim_records": 27,
+    "claim_context_bytes": 58032,
+    "input_tokens_total": [
+     26960,
+     26964,
+     26962
+    ]
+   }
+  },
+  {
+   "fixture_id": "I05",
+   "class": "STRONG",
+   "targets": [
+    "CLAIM 009"
+   ],
+   "relationship": "supports / strengthens",
+   "pmid_route_hit_all": false,
+   "A": {
+    "outcomes": [
+     "correct",
+     "correct",
+     "OTHER"
+    ],
+    "score": 0.667,
+    "targets_identified": 2,
+    "of": 3,
+    "relationship_matches": 0,
+    "extras_per_run": [
+     5,
+     7,
+     0
+    ],
+    "extras": [
+     "CLAIM 004",
+     "CLAIM 011",
+     "CLAIM 025",
+     "CLAIM 026",
+     "CLAIM 028",
+     "CLAIM 036",
+     "CLAIM 038"
+    ],
+    "claim_records": 39,
+    "claim_context_bytes": 89077,
+    "input_tokens_total": [
+     40186,
+     40184,
+     40188
+    ]
+   },
+   "C": {
+    "outcomes": [
+     "correct",
+     "correct",
+     "correct"
+    ],
+    "score": 1.0,
+    "targets_identified": 3,
+    "of": 3,
+    "relationship_matches": 1,
+    "extras_per_run": [
+     4,
+     4,
+     4
+    ],
+    "extras": [
+     "CLAIM 025",
+     "CLAIM 026",
+     "CLAIM 028",
+     "CLAIM 036",
+     "CLAIM 038"
+    ],
+    "claim_records": 25,
+    "claim_context_bytes": 60420,
+    "input_tokens_total": [
+     27863,
+     27861,
+     27863
+    ]
+   }
+  },
+  {
+   "fixture_id": "I07",
+   "class": "STRONG",
+   "targets": [
+    "CLAIM 016"
+   ],
+   "relationship": "narrows / qualifies",
+   "pmid_route_hit_all": false,
+   "A": {
+    "outcomes": [
+     "correct",
+     "correct",
+     "correct"
+    ],
+    "score": 1.0,
+    "targets_identified": 3,
+    "of": 3,
+    "relationship_matches": 0,
+    "extras_per_run": [
+     11,
+     10,
+     11
+    ],
+    "extras": [
+     "CLAIM 002",
+     "CLAIM 003",
+     "CLAIM 005",
+     "CLAIM 009",
+     "CLAIM 014",
+     "CLAIM 015",
+     "CLAIM 019",
+     "CLAIM 021",
+     "CLAIM 022",
+     "CLAIM 030",
+     "CLAIM 032",
+     "CLAIM 035",
+     "CLAIM 037",
+     "CLAIM 039"
+    ],
+    "claim_records": 39,
+    "claim_context_bytes": 89917,
+    "input_tokens_total": [
+     41779,
+     41779,
+     41783
+    ]
+   },
+   "C": {
+    "outcomes": [
+     "correct",
+     "correct",
+     "correct"
+    ],
+    "score": 1.0,
+    "targets_identified": 3,
+    "of": 3,
+    "relationship_matches": 0,
+    "extras_per_run": [
+     10,
+     9,
+     11
+    ],
+    "extras": [
+     "CLAIM 001",
+     "CLAIM 003",
+     "CLAIM 005",
+     "CLAIM 014",
+     "CLAIM 015",
+     "CLAIM 019",
+     "CLAIM 021",
+     "CLAIM 029",
+     "CLAIM 032",
+     "CLAIM 035",
+     "CLAIM 037",
+     "CLAIM 039"
+    ],
+    "claim_records": 38,
+    "claim_context_bytes": 87525,
+    "input_tokens_total": [
+     40795,
+     40795,
+     40795
+    ]
+   }
+  },
+  {
+   "fixture_id": "I08",
+   "class": "USABLE_WITH_LIMITATION",
+   "targets": [
+    "CLAIM 003",
+    "CLAIM 004",
+    "CLAIM 016"
+   ],
+   "relationship": "narrows / qualifies",
+   "pmid_route_hit_all": false,
+   "A": {
+    "outcomes": [
+     "partial",
+     "partial",
+     "partial"
+    ],
+    "score": 0.667,
+    "targets_identified": 6,
+    "of": 9,
+    "relationship_matches": 2,
+    "extras_per_run": [
+     8,
+     7,
+     9
+    ],
+    "extras": [
+     "CLAIM 002",
+     "CLAIM 005",
+     "CLAIM 009",
+     "CLAIM 011",
+     "CLAIM 014",
+     "CLAIM 015",
+     "CLAIM 028",
+     "CLAIM 036",
+     "CLAIM 037",
+     "CLAIM 039"
+    ],
+    "claim_records": 39,
+    "claim_context_bytes": 89917,
+    "input_tokens_total": [
+     41022,
+     41020,
+     41022
+    ]
+   },
+   "C": {
+    "outcomes": [
+     "partial",
+     "partial",
+     "partial"
+    ],
+    "score": 0.667,
+    "targets_identified": 6,
+    "of": 9,
+    "relationship_matches": 1,
+    "extras_per_run": [
+     8,
+     8,
+     7
+    ],
+    "extras": [
+     "CLAIM 002",
+     "CLAIM 005",
+     "CLAIM 009",
+     "CLAIM 011",
+     "CLAIM 014",
+     "CLAIM 028",
+     "CLAIM 036",
+     "CLAIM 037",
+     "CLAIM 039"
+    ],
+    "claim_records": 31,
+    "claim_context_bytes": 72058,
+    "input_tokens_total": [
+     33416,
+     33418,
+     33418
+    ]
+   }
+  },
+  {
+   "fixture_id": "I10",
+   "class": "STRONG",
+   "targets": [
+    "CLAIM 032"
+   ],
+   "relationship": "narrows / qualifies",
+   "pmid_route_hit_all": true,
+   "A": {
+    "outcomes": [
+     "correct",
+     "OTHER",
+     "correct"
+    ],
+    "score": 0.667,
+    "targets_identified": 2,
+    "of": 3,
+    "relationship_matches": 2,
+    "extras_per_run": [
+     1,
+     0,
+     2
+    ],
+    "extras": [
+     "CLAIM 004",
+     "CLAIM 029"
+    ],
+    "claim_records": 39,
+    "claim_context_bytes": 95877,
+    "input_tokens_total": [
+     43053,
+     43053,
+     43055
+    ]
+   },
+   "C": {
+    "outcomes": [
+     "correct",
+     "correct",
+     "correct"
+    ],
+    "score": 1.0,
+    "targets_identified": 3,
+    "of": 3,
+    "relationship_matches": 3,
+    "extras_per_run": [
+     3,
+     0,
+     1
+    ],
+    "extras": [
+     "CLAIM 004",
+     "CLAIM 019",
+     "CLAIM 030"
+    ],
+    "claim_records": 14,
+    "claim_context_bytes": 38865,
+    "input_tokens_total": [
+     18637,
+     18635,
+     18637
+    ]
+   }
+  },
+  {
+   "fixture_id": "I11",
+   "class": "STRONG",
+   "targets": [
+    "CLAIM 032",
+    "CLAIM 036"
+   ],
+   "relationship": "narrows / qualifies",
+   "pmid_route_hit_all": true,
+   "A": {
+    "outcomes": [
+     "OTHER",
+     "correct",
+     "correct"
+    ],
+    "score": 0.667,
+    "targets_identified": 4,
+    "of": 6,
+    "relationship_matches": 2,
+    "extras_per_run": [
+     0,
+     2,
+     2
+    ],
+    "extras": [
+     "CLAIM 004",
+     "CLAIM 005",
+     "CLAIM 037"
+    ],
+    "claim_records": 39,
+    "claim_context_bytes": 95877,
+    "input_tokens_total": [
+     43079,
+     43079,
+     43081
+    ]
+   },
+   "C": {
+    "outcomes": [
+     "correct",
+     "correct",
+     "partial"
+    ],
+    "score": 0.833,
+    "targets_identified": 5,
+    "of": 6,
+    "relationship_matches": 0,
+    "extras_per_run": [
+     2,
+     2,
+     2
+    ],
+    "extras": [
+     "CLAIM 004",
+     "CLAIM 005",
+     "CLAIM 029"
+    ],
+    "claim_records": 19,
+    "claim_context_bytes": 48708,
+    "input_tokens_total": [
+     22807,
+     22801,
+     22805
+    ]
+   }
+  },
+  {
+   "fixture_id": "I12",
+   "class": "STRONG",
+   "targets": [
+    "CLAIM 036"
+   ],
+   "relationship": "narrows / qualifies",
+   "pmid_route_hit_all": true,
+   "A": {
+    "outcomes": [
+     "correct",
+     "OTHER",
+     "correct"
+    ],
+    "score": 0.667,
+    "targets_identified": 2,
+    "of": 3,
+    "relationship_matches": 0,
+    "extras_per_run": [
+     2,
+     0,
+     3
+    ],
+    "extras": [
+     "CLAIM 004",
+     "CLAIM 005",
+     "CLAIM 032"
+    ],
+    "claim_records": 39,
+    "claim_context_bytes": 95877,
+    "input_tokens_total": [
+     43032,
+     43030,
+     43034
+    ]
+   },
+   "C": {
+    "outcomes": [
+     "correct",
+     "correct",
+     "correct"
+    ],
+    "score": 1.0,
+    "targets_identified": 3,
+    "of": 3,
+    "relationship_matches": 0,
+    "extras_per_run": [
+     4,
+     2,
+     2
+    ],
+    "extras": [
+     "CLAIM 004",
+     "CLAIM 005",
+     "CLAIM 011",
+     "CLAIM 029",
+     "CLAIM 032"
+    ],
+    "claim_records": 24,
+    "claim_context_bytes": 62675,
+    "input_tokens_total": [
+     28587,
+     28587,
+     28585
+    ]
+   }
+  },
+  {
+   "fixture_id": "I13",
+   "class": "STRONG",
+   "targets": [
+    "CLAIM 036"
+   ],
+   "relationship": "narrows / qualifies",
+   "pmid_route_hit_all": true,
+   "A": {
+    "outcomes": [
+     "correct",
+     "correct",
+     "OTHER"
+    ],
+    "score": 0.667,
+    "targets_identified": 2,
+    "of": 3,
+    "relationship_matches": 0,
+    "extras_per_run": [
+     4,
+     1,
+     0
+    ],
+    "extras": [
+     "CLAIM 005",
+     "CLAIM 026",
+     "CLAIM 028",
+     "CLAIM 037"
+    ],
+    "claim_records": 39,
+    "claim_context_bytes": 95877,
+    "input_tokens_total": [
+     43115,
+     43119,
+     43119
+    ]
+   },
+   "C": {
+    "outcomes": [
+     "correct",
+     "correct",
+     "correct"
+    ],
+    "score": 1.0,
+    "targets_identified": 3,
+    "of": 3,
+    "relationship_matches": 0,
+    "extras_per_run": [
+     2,
+     1,
+     3
+    ],
+    "extras": [
+     "CLAIM 005",
+     "CLAIM 028",
+     "CLAIM 037"
+    ],
+    "claim_records": 23,
+    "claim_context_bytes": 57882,
+    "input_tokens_total": [
+     26758,
+     26760,
+     26760
+    ]
+   }
+  },
+  {
+   "fixture_id": "I14",
+   "class": "STRONG",
+   "targets": [
+    "CLAIM 011"
+   ],
+   "relationship": "narrows / qualifies",
+   "pmid_route_hit_all": true,
+   "A": {
+    "outcomes": [
+     "correct",
+     "correct",
+     "correct"
+    ],
+    "score": 1.0,
+    "targets_identified": 3,
+    "of": 3,
+    "relationship_matches": 0,
+    "extras_per_run": [
+     5,
+     6,
+     3
+    ],
+    "extras": [
+     "CLAIM 002",
+     "CLAIM 003",
+     "CLAIM 004",
+     "CLAIM 006",
+     "CLAIM 021",
+     "CLAIM 028",
+     "CLAIM 032"
+    ],
+    "claim_records": 39,
+    "claim_context_bytes": 95877,
+    "input_tokens_total": [
+     45210,
+     45212,
+     45214
+    ]
+   },
+   "C": {
+    "outcomes": [
+     "correct",
+     "correct",
+     "correct"
+    ],
+    "score": 1.0,
+    "targets_identified": 3,
+    "of": 3,
+    "relationship_matches": 0,
+    "extras_per_run": [
+     3,
+     3,
+     4
+    ],
+    "extras": [
+     "CLAIM 002",
+     "CLAIM 004",
+     "CLAIM 005",
+     "CLAIM 032",
+     "CLAIM 037"
+    ],
+    "claim_records": 33,
+    "claim_context_bytes": 83704,
+    "input_tokens_total": [
+     39972,
+     39972,
+     39968
+    ]
+   }
+  },
+  {
+   "fixture_id": "I15",
+   "class": "USABLE_WITH_LIMITATION",
+   "targets": [
+    "CLAIM 002"
+   ],
+   "relationship": "narrows / qualifies",
+   "pmid_route_hit_all": true,
+   "A": {
+    "outcomes": [
+     "correct",
+     "correct",
+     "correct"
+    ],
+    "score": 1.0,
+    "targets_identified": 3,
+    "of": 3,
+    "relationship_matches": 3,
+    "extras_per_run": [
+     7,
+     8,
+     6
+    ],
+    "extras": [
+     "CLAIM 001",
+     "CLAIM 004",
+     "CLAIM 009",
+     "CLAIM 011",
+     "CLAIM 014",
+     "CLAIM 015",
+     "CLAIM 021",
+     "CLAIM 025",
+     "CLAIM 028",
+     "CLAIM 030"
+    ],
+    "claim_records": 39,
+    "claim_context_bytes": 97830,
+    "input_tokens_total": [
+     44559,
+     44557,
+     44557
+    ]
+   },
+   "C": {
+    "outcomes": [
+     "correct",
+     "correct",
+     "correct"
+    ],
+    "score": 1.0,
+    "targets_identified": 3,
+    "of": 3,
+    "relationship_matches": 3,
+    "extras_per_run": [
+     5,
+     9,
+     5
+    ],
+    "extras": [
+     "CLAIM 001",
+     "CLAIM 004",
+     "CLAIM 009",
+     "CLAIM 011",
+     "CLAIM 014",
+     "CLAIM 015",
+     "CLAIM 021",
+     "CLAIM 028",
+     "CLAIM 030",
+     "CLAIM 032"
+    ],
+    "claim_records": 35,
+    "claim_context_bytes": 89573,
+    "input_tokens_total": [
+     41196,
+     41198,
+     41196
+    ]
+   }
+  },
+  {
+   "fixture_id": "I16",
+   "class": "STRONG",
+   "targets": [
+    "CLAIM 017",
+    "CLAIM 019",
+    "CLAIM 030",
+    "CLAIM 033"
+   ],
+   "relationship": "narrows / qualifies",
+   "pmid_route_hit_all": false,
+   "A": {
+    "outcomes": [
+     "correct",
+     "correct",
+     "correct"
+    ],
+    "score": 1.0,
+    "targets_identified": 12,
+    "of": 12,
+    "relationship_matches": 1,
+    "extras_per_run": [
+     2,
+     3,
+     3
+    ],
+    "extras": [
+     "CLAIM 001",
+     "CLAIM 008",
+     "CLAIM 032"
+    ],
+    "claim_records": 39,
+    "claim_context_bytes": 97830,
+    "input_tokens_total": [
+     45242,
+     45238,
+     45238
+    ]
+   },
+   "C": {
+    "outcomes": [
+     "correct",
+     "correct",
+     "correct"
+    ],
+    "score": 1.0,
+    "targets_identified": 12,
+    "of": 12,
+    "relationship_matches": 3,
+    "extras_per_run": [
+     5,
+     8,
+     3
+    ],
+    "extras": [
+     "CLAIM 001",
+     "CLAIM 003",
+     "CLAIM 005",
+     "CLAIM 008",
+     "CLAIM 012",
+     "CLAIM 013",
+     "CLAIM 018",
+     "CLAIM 031",
+     "CLAIM 032"
+    ],
+    "claim_records": 36,
+    "claim_context_bytes": 90817,
+    "input_tokens_total": [
+     84481,
+     42207,
+     84481
+    ]
+   }
+  },
+  {
+   "fixture_id": "I17",
+   "class": "STRONG",
+   "targets": [
+    "CLAIM 023"
+   ],
+   "relationship": "narrows / qualifies",
+   "pmid_route_hit_all": false,
+   "A": {
+    "outcomes": [
+     "correct",
+     "correct",
+     "correct"
+    ],
+    "score": 1.0,
+    "targets_identified": 3,
+    "of": 3,
+    "relationship_matches": 0,
+    "extras_per_run": [
+     2,
+     2,
+     1
+    ],
+    "extras": [
+     "CLAIM 024",
+     "CLAIM 028"
+    ],
+    "claim_records": 39,
+    "claim_context_bytes": 97830,
+    "input_tokens_total": [
+     45097,
+     45097,
+     45099
+    ]
+   },
+   "C": {
+    "outcomes": [
+     "correct",
+     "correct",
+     "correct"
+    ],
+    "score": 1.0,
+    "targets_identified": 3,
+    "of": 3,
+    "relationship_matches": 0,
+    "extras_per_run": [
+     4,
+     2,
+     2
+    ],
+    "extras": [
+     "CLAIM 002",
+     "CLAIM 024",
+     "CLAIM 028",
+     "CLAIM 029"
+    ],
+    "claim_records": 35,
+    "claim_context_bytes": 88271,
+    "input_tokens_total": [
+     40918,
+     40918,
+     40916
+    ]
+   }
+  },
+  {
+   "fixture_id": "I18",
+   "class": "STRONG",
+   "targets": [
+    "CLAIM 023"
+   ],
+   "relationship": "supports / strengthens",
+   "pmid_route_hit_all": true,
+   "A": {
+    "outcomes": [
+     "correct",
+     "OTHER",
+     "correct"
+    ],
+    "score": 0.667,
+    "targets_identified": 2,
+    "of": 3,
+    "relationship_matches": 2,
+    "extras_per_run": [
+     5,
+     0,
+     4
+    ],
+    "extras": [
+     "CLAIM 019",
+     "CLAIM 024",
+     "CLAIM 028",
+     "CLAIM 029",
+     "CLAIM 030"
+    ],
+    "claim_records": 39,
+    "claim_context_bytes": 97830,
+    "input_tokens_total": [
+     47992,
+     47990,
+     47990
+    ]
+   },
+   "C": {
+    "outcomes": [
+     "correct",
+     "correct",
+     "correct"
+    ],
+    "score": 1.0,
+    "targets_identified": 3,
+    "of": 3,
+    "relationship_matches": 3,
+    "extras_per_run": [
+     4,
+     4,
+     4
+    ],
+    "extras": [
+     "CLAIM 019",
+     "CLAIM 024",
+     "CLAIM 028",
+     "CLAIM 030",
+     "CLAIM 037"
+    ],
+    "claim_records": 35,
+    "claim_context_bytes": 89023,
+    "input_tokens_total": [
+     44136,
+     44132,
+     44134
+    ]
+   }
+  },
+  {
+   "fixture_id": "I19",
+   "class": "STRONG",
+   "targets": [
+    "CLAIM 025"
+   ],
+   "relationship": "narrows / qualifies",
+   "pmid_route_hit_all": true,
+   "A": {
+    "outcomes": [
+     "correct",
+     "correct",
+     "correct"
+    ],
+    "score": 1.0,
+    "targets_identified": 3,
+    "of": 3,
+    "relationship_matches": 3,
+    "extras_per_run": [
+     6,
+     5,
+     5
+    ],
+    "extras": [
+     "CLAIM 003",
+     "CLAIM 009",
+     "CLAIM 016",
+     "CLAIM 026",
+     "CLAIM 028",
+     "CLAIM 029",
+     "CLAIM 032",
+     "CLAIM 036"
+    ],
+    "claim_records": 39,
+    "claim_context_bytes": 97830,
+    "input_tokens_total": [
+     47409,
+     47403,
+     47407
+    ]
+   },
+   "C": {
+    "outcomes": [
+     "correct",
+     "correct",
+     "correct"
+    ],
+    "score": 1.0,
+    "targets_identified": 3,
+    "of": 3,
+    "relationship_matches": 3,
+    "extras_per_run": [
+     4,
+     4,
+     4
+    ],
+    "extras": [
+     "CLAIM 009",
+     "CLAIM 026",
+     "CLAIM 028",
+     "CLAIM 032"
+    ],
+    "claim_records": 30,
+    "claim_context_bytes": 81291,
+    "input_tokens_total": [
+     40430,
+     40428,
+     40428
+    ]
+   }
+  },
+  {
+   "fixture_id": "I20",
+   "class": "STRONG",
+   "targets": [
+    "CLAIM 029"
+   ],
+   "relationship": "narrows / qualifies",
+   "pmid_route_hit_all": true,
+   "A": {
+    "outcomes": [
+     "correct",
+     "correct",
+     "correct"
+    ],
+    "score": 1.0,
+    "targets_identified": 3,
+    "of": 3,
+    "relationship_matches": 2,
+    "extras_per_run": [
+     1,
+     3,
+     2
+    ],
+    "extras": [
+     "CLAIM 006",
+     "CLAIM 030",
+     "CLAIM 036"
+    ],
+    "claim_records": 39,
+    "claim_context_bytes": 97830,
+    "input_tokens_total": [
+     46241,
+     46243,
+     46241
+    ]
+   },
+   "C": {
+    "outcomes": [
+     "correct",
+     "correct",
+     "correct"
+    ],
+    "score": 1.0,
+    "targets_identified": 3,
+    "of": 3,
+    "relationship_matches": 3,
+    "extras_per_run": [
+     1,
+     1,
+     1
+    ],
+    "extras": [
+     "CLAIM 036"
+    ],
+    "claim_records": 35,
+    "claim_context_bytes": 89095,
+    "input_tokens_total": [
+     42526,
+     42528,
+     42528
+    ]
+   }
+  },
+  {
+   "fixture_id": "I21",
+   "class": "STRONG",
+   "targets": [
+    "CLAIM 030"
+   ],
+   "relationship": "supports / strengthens",
+   "pmid_route_hit_all": false,
+   "A": {
+    "outcomes": [
+     "correct",
+     "correct",
+     "correct"
+    ],
+    "score": 1.0,
+    "targets_identified": 3,
+    "of": 3,
+    "relationship_matches": 3,
+    "extras_per_run": [
+     10,
+     11,
+     11
+    ],
+    "extras": [
+     "CLAIM 007",
+     "CLAIM 008",
+     "CLAIM 016",
+     "CLAIM 017",
+     "CLAIM 019",
+     "CLAIM 023",
+     "CLAIM 024",
+     "CLAIM 029",
+     "CLAIM 032",
+     "CLAIM 033",
+     "CLAIM 035",
+     "CLAIM 037"
+    ],
+    "claim_records": 39,
+    "claim_context_bytes": 97830,
+    "input_tokens_total": [
+     44906,
+     44910,
+     44906
+    ]
+   },
+   "C": {
+    "outcomes": [
+     "correct",
+     "correct",
+     "correct"
+    ],
+    "score": 1.0,
+    "targets_identified": 3,
+    "of": 3,
+    "relationship_matches": 3,
+    "extras_per_run": [
+     9,
+     11,
+     10
+    ],
+    "extras": [
+     "CLAIM 002",
+     "CLAIM 008",
+     "CLAIM 016",
+     "CLAIM 017",
+     "CLAIM 019",
+     "CLAIM 023",
+     "CLAIM 024",
+     "CLAIM 028",
+     "CLAIM 029",
+     "CLAIM 032",
+     "CLAIM 033",
+     "CLAIM 035"
+    ],
+    "claim_records": 37,
+    "claim_context_bytes": 92747,
+    "input_tokens_total": [
+     42716,
+     42710,
+     42712
+    ]
+   }
+  },
+  {
+   "fixture_id": "I22",
+   "class": "STRONG",
+   "targets": [
+    "CLAIM 036"
+   ],
+   "relationship": "narrows / qualifies",
+   "pmid_route_hit_all": false,
+   "A": {
+    "outcomes": [
+     "correct",
+     "correct",
+     "correct"
+    ],
+    "score": 1.0,
+    "targets_identified": 3,
+    "of": 3,
+    "relationship_matches": 0,
+    "extras_per_run": [
+     3,
+     5,
+     3
+    ],
+    "extras": [
+     "CLAIM 004",
+     "CLAIM 028",
+     "CLAIM 029",
+     "CLAIM 030",
+     "CLAIM 032"
+    ],
+    "claim_records": 39,
+    "claim_context_bytes": 97830,
+    "input_tokens_total": [
+     46795,
+     46795,
+     46797
+    ]
+   },
+   "C": {
+    "outcomes": [
+     "correct",
+     "OTHER",
+     "correct"
+    ],
+    "score": 0.667,
+    "targets_identified": 2,
+    "of": 3,
+    "relationship_matches": 0,
+    "extras_per_run": [
+     3,
+     0,
+     1
+    ],
+    "extras": [
+     "CLAIM 004",
+     "CLAIM 028",
+     "CLAIM 032"
+    ],
+    "claim_records": 37,
+    "claim_context_bytes": 93560,
+    "input_tokens_total": [
+     44987,
+     44989,
+     44989
+    ]
+   }
+  },
+  {
+   "fixture_id": "I23",
+   "class": "STRONG",
+   "targets": [
+    "CLAIM 036"
+   ],
+   "relationship": "narrows / qualifies",
+   "pmid_route_hit_all": false,
+   "A": {
+    "outcomes": [
+     "correct",
+     "correct",
+     "correct"
+    ],
+    "score": 1.0,
+    "targets_identified": 3,
+    "of": 3,
+    "relationship_matches": 0,
+    "extras_per_run": [
+     2,
+     2,
+     2
+    ],
+    "extras": [
+     "CLAIM 028",
+     "CLAIM 032"
+    ],
+    "claim_records": 39,
+    "claim_context_bytes": 97830,
+    "input_tokens_total": [
+     44675,
+     44675,
+     44677
+    ]
+   },
+   "C": {
+    "outcomes": [
+     "correct",
+     "correct",
+     "correct"
+    ],
+    "score": 1.0,
+    "targets_identified": 3,
+    "of": 3,
+    "relationship_matches": 0,
+    "extras_per_run": [
+     2,
+     2,
+     1
+    ],
+    "extras": [
+     "CLAIM 028",
+     "CLAIM 030",
+     "CLAIM 032"
+    ],
+    "claim_records": 34,
+    "claim_context_bytes": 88269,
+    "input_tokens_total": [
+     40619,
+     40621,
+     40621
+    ]
+   }
+  },
+  {
+   "fixture_id": "I25",
+   "class": "USABLE_WITH_LIMITATION",
+   "targets": [
+    "CLAIM 005",
+    "CLAIM 037"
+   ],
+   "relationship": "contradicts / weakens",
+   "pmid_route_hit_all": false,
+   "A": {
+    "outcomes": [
+     "incorrect",
+     "incorrect",
+     "incorrect"
+    ],
+    "score": 0.0,
+    "targets_identified": 0,
+    "of": 6,
+    "relationship_matches": 0,
+    "extras_per_run": [
+     5,
+     6,
+     7
+    ],
+    "extras": [
+     "CLAIM 002",
+     "CLAIM 003",
+     "CLAIM 004",
+     "CLAIM 006",
+     "CLAIM 011",
+     "CLAIM 028",
+     "CLAIM 032"
+    ],
+    "claim_records": 39,
+    "claim_context_bytes": 119152,
+    "input_tokens_total": [
+     54342,
+     54346,
+     54344
+    ]
+   },
+   "C": {
+    "outcomes": [
+     "incorrect",
+     "incorrect",
+     "incorrect"
+    ],
+    "score": 0.0,
+    "targets_identified": 0,
+    "of": 6,
+    "relationship_matches": 0,
+    "extras_per_run": [
+     3,
+     5,
+     4
+    ],
+    "extras": [
+     "CLAIM 002",
+     "CLAIM 004",
+     "CLAIM 011",
+     "CLAIM 032",
+     "CLAIM 036"
+    ],
+    "claim_records": 30,
+    "claim_context_bytes": 100627,
+    "input_tokens_total": [
+     46448,
+     46446,
+     46444
+    ]
+   }
+  }
+ ],
+ "blind_scores": {
+  "J0120c00545": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 002",
+    "CLAIM 003",
+    "CLAIM 004",
+    "CLAIM 006",
+    "CLAIM 032"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 002",
+    "CLAIM 003",
+    "CLAIM 004",
+    "CLAIM 006",
+    "CLAIM 011",
+    "CLAIM 032"
+   ]
+  },
+  "J0370f19c75": {
+   "outcome": "partial",
+   "targets_identified": 2,
+   "targets": 3,
+   "extras": [
+    "CLAIM 002",
+    "CLAIM 005",
+    "CLAIM 009",
+    "CLAIM 011",
+    "CLAIM 028",
+    "CLAIM 036",
+    "CLAIM 037",
+    "CLAIM 039"
+   ],
+   "relationship_matches": 1,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "WRONG_NEARBY_CLAIM",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 002",
+    "CLAIM 003",
+    "CLAIM 004",
+    "CLAIM 005",
+    "CLAIM 009",
+    "CLAIM 011",
+    "CLAIM 028",
+    "CLAIM 036",
+    "CLAIM 037",
+    "CLAIM 039"
+   ]
+  },
+  "J05f440ca4d": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 002",
+    "CLAIM 004",
+    "CLAIM 006",
+    "CLAIM 011",
+    "CLAIM 013",
+    "CLAIM 021",
+    "CLAIM 028"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 002",
+    "CLAIM 004",
+    "CLAIM 005",
+    "CLAIM 006",
+    "CLAIM 011",
+    "CLAIM 013",
+    "CLAIM 021",
+    "CLAIM 028"
+   ]
+  },
+  "J0614b4023d": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 030"
+   ],
+   "relationship_matches": 1,
+   "errors": [
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 030",
+    "CLAIM 032"
+   ]
+  },
+  "J07f368279f": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 004",
+    "CLAIM 025",
+    "CLAIM 026",
+    "CLAIM 028",
+    "CLAIM 036"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 004",
+    "CLAIM 009",
+    "CLAIM 025",
+    "CLAIM 026",
+    "CLAIM 028",
+    "CLAIM 036"
+   ]
+  },
+  "J0963dea5e8": {
+   "outcome": "incorrect",
+   "targets_identified": 0,
+   "targets": 2,
+   "extras": [
+    "CLAIM 002",
+    "CLAIM 004",
+    "CLAIM 011",
+    "CLAIM 032",
+    "CLAIM 036"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "WRONG_NEARBY_CLAIM",
+    "WRONG_NEARBY_CLAIM",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 002",
+    "CLAIM 004",
+    "CLAIM 011",
+    "CLAIM 032",
+    "CLAIM 036"
+   ]
+  },
+  "J1099aae224": {
+   "outcome": "correct",
+   "targets_identified": 0,
+   "targets": 0,
+   "extras": [],
+   "relationship_matches": 0,
+   "errors": [],
+   "named": []
+  },
+  "J11b767dcf3": {
+   "outcome": "correct",
+   "targets_identified": 4,
+   "targets": 4,
+   "extras": [
+    "CLAIM 001",
+    "CLAIM 008",
+    "CLAIM 032"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "RELATIONSHIP_WRONG",
+    "RELATIONSHIP_WRONG",
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 001",
+    "CLAIM 008",
+    "CLAIM 017",
+    "CLAIM 019",
+    "CLAIM 030",
+    "CLAIM 032",
+    "CLAIM 033"
+   ]
+  },
+  "J11c2497e03": {
+   "outcome": "correct",
+   "targets_identified": 2,
+   "targets": 2,
+   "extras": [
+    "CLAIM 005",
+    "CLAIM 029"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 005",
+    "CLAIM 029",
+    "CLAIM 032",
+    "CLAIM 036"
+   ]
+  },
+  "J147ad737e6": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 036"
+   ],
+   "relationship_matches": 1,
+   "errors": [
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 029",
+    "CLAIM 036"
+   ]
+  },
+  "J14e9b4be59": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 001",
+    "CLAIM 003",
+    "CLAIM 005",
+    "CLAIM 014",
+    "CLAIM 015",
+    "CLAIM 021",
+    "CLAIM 029",
+    "CLAIM 032",
+    "CLAIM 035",
+    "CLAIM 037"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 001",
+    "CLAIM 003",
+    "CLAIM 005",
+    "CLAIM 014",
+    "CLAIM 015",
+    "CLAIM 016",
+    "CLAIM 021",
+    "CLAIM 029",
+    "CLAIM 032",
+    "CLAIM 035",
+    "CLAIM 037"
+   ]
+  },
+  "J17d8585b7c": {
+   "outcome": "correct",
+   "targets_identified": 2,
+   "targets": 2,
+   "extras": [
+    "CLAIM 004",
+    "CLAIM 005"
+   ],
+   "relationship_matches": 1,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 004",
+    "CLAIM 005",
+    "CLAIM 032",
+    "CLAIM 036"
+   ]
+  },
+  "J18ece51451": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 002",
+    "CLAIM 003",
+    "CLAIM 004",
+    "CLAIM 006",
+    "CLAIM 021"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 002",
+    "CLAIM 003",
+    "CLAIM 004",
+    "CLAIM 005",
+    "CLAIM 006",
+    "CLAIM 021"
+   ]
+  },
+  "J19827165aa": {
+   "outcome": "OTHER",
+   "problem": "empty answer"
+  },
+  "J1a6d4e2d2c": {
+   "outcome": "OTHER",
+   "problem": "empty answer"
+  },
+  "J1b6eb887f6": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 004",
+    "CLAIM 005",
+    "CLAIM 011",
+    "CLAIM 032"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 004",
+    "CLAIM 005",
+    "CLAIM 011",
+    "CLAIM 032",
+    "CLAIM 036"
+   ]
+  },
+  "J1e7b146527": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 005",
+    "CLAIM 028",
+    "CLAIM 037"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 005",
+    "CLAIM 028",
+    "CLAIM 036",
+    "CLAIM 037"
+   ]
+  },
+  "J23627ead39": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 003",
+    "CLAIM 009",
+    "CLAIM 016",
+    "CLAIM 026",
+    "CLAIM 028"
+   ],
+   "relationship_matches": 1,
+   "errors": [
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 003",
+    "CLAIM 009",
+    "CLAIM 016",
+    "CLAIM 025",
+    "CLAIM 026",
+    "CLAIM 028"
+   ]
+  },
+  "J23c181457d": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 028"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 028",
+    "CLAIM 036"
+   ]
+  },
+  "J241276d2de": {
+   "outcome": "partial",
+   "targets_identified": 2,
+   "targets": 3,
+   "extras": [
+    "CLAIM 002",
+    "CLAIM 005",
+    "CLAIM 009",
+    "CLAIM 011",
+    "CLAIM 036",
+    "CLAIM 037",
+    "CLAIM 039"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "RELATIONSHIP_WRONG",
+    "WRONG_NEARBY_CLAIM",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 002",
+    "CLAIM 003",
+    "CLAIM 004",
+    "CLAIM 005",
+    "CLAIM 009",
+    "CLAIM 011",
+    "CLAIM 036",
+    "CLAIM 037",
+    "CLAIM 039"
+   ]
+  },
+  "J25dcc7d387": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 025",
+    "CLAIM 026",
+    "CLAIM 028",
+    "CLAIM 036"
+   ],
+   "relationship_matches": 1,
+   "errors": [
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 009",
+    "CLAIM 025",
+    "CLAIM 026",
+    "CLAIM 028",
+    "CLAIM 036"
+   ]
+  },
+  "J25e5dc7641": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 008",
+    "CLAIM 009",
+    "CLAIM 014",
+    "CLAIM 021",
+    "CLAIM 030",
+    "CLAIM 032",
+    "CLAIM 033"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 005",
+    "CLAIM 008",
+    "CLAIM 009",
+    "CLAIM 014",
+    "CLAIM 021",
+    "CLAIM 030",
+    "CLAIM 032",
+    "CLAIM 033"
+   ]
+  },
+  "J29e9f35fc3": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 028",
+    "CLAIM 032"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 028",
+    "CLAIM 032",
+    "CLAIM 036"
+   ]
+  },
+  "J2b4398138a": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 019",
+    "CLAIM 024",
+    "CLAIM 028",
+    "CLAIM 030"
+   ],
+   "relationship_matches": 1,
+   "errors": [
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 019",
+    "CLAIM 023",
+    "CLAIM 024",
+    "CLAIM 028",
+    "CLAIM 030"
+   ]
+  },
+  "J2c55a72ac5": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 007",
+    "CLAIM 008",
+    "CLAIM 016",
+    "CLAIM 017",
+    "CLAIM 019",
+    "CLAIM 024",
+    "CLAIM 029",
+    "CLAIM 032",
+    "CLAIM 033",
+    "CLAIM 035"
+   ],
+   "relationship_matches": 1,
+   "errors": [
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 007",
+    "CLAIM 008",
+    "CLAIM 016",
+    "CLAIM 017",
+    "CLAIM 019",
+    "CLAIM 024",
+    "CLAIM 029",
+    "CLAIM 030",
+    "CLAIM 032",
+    "CLAIM 033",
+    "CLAIM 035"
+   ]
+  },
+  "J2c6a2cbf02": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 002",
+    "CLAIM 003",
+    "CLAIM 005",
+    "CLAIM 014",
+    "CLAIM 015",
+    "CLAIM 021",
+    "CLAIM 032",
+    "CLAIM 035",
+    "CLAIM 037",
+    "CLAIM 039"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 002",
+    "CLAIM 003",
+    "CLAIM 005",
+    "CLAIM 014",
+    "CLAIM 015",
+    "CLAIM 016",
+    "CLAIM 021",
+    "CLAIM 032",
+    "CLAIM 035",
+    "CLAIM 037",
+    "CLAIM 039"
+   ]
+  },
+  "J2f98b5275b": {
+   "outcome": "incorrect",
+   "targets_identified": 0,
+   "targets": 2,
+   "extras": [
+    "CLAIM 004",
+    "CLAIM 011",
+    "CLAIM 032"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "WRONG_NEARBY_CLAIM",
+    "WRONG_NEARBY_CLAIM",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 004",
+    "CLAIM 011",
+    "CLAIM 032"
+   ]
+  },
+  "J30185323e0": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 004",
+    "CLAIM 029"
+   ],
+   "relationship_matches": 1,
+   "errors": [
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 004",
+    "CLAIM 029",
+    "CLAIM 032"
+   ]
+  },
+  "J304b6a0fc6": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 009",
+    "CLAIM 014",
+    "CLAIM 021",
+    "CLAIM 030",
+    "CLAIM 032"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 005",
+    "CLAIM 009",
+    "CLAIM 014",
+    "CLAIM 021",
+    "CLAIM 030",
+    "CLAIM 032"
+   ]
+  },
+  "J3128e46d14": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 029"
+   ],
+   "relationship_matches": 1,
+   "errors": [
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 029",
+    "CLAIM 032"
+   ]
+  },
+  "J31bcd3c913": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 009",
+    "CLAIM 026",
+    "CLAIM 028",
+    "CLAIM 032",
+    "CLAIM 036"
+   ],
+   "relationship_matches": 1,
+   "errors": [
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 009",
+    "CLAIM 025",
+    "CLAIM 026",
+    "CLAIM 028",
+    "CLAIM 032",
+    "CLAIM 036"
+   ]
+  },
+  "J31c2972bae": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 028",
+    "CLAIM 030",
+    "CLAIM 032"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 028",
+    "CLAIM 030",
+    "CLAIM 032",
+    "CLAIM 036"
+   ]
+  },
+  "J31ee961cce": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 029",
+    "CLAIM 032"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 029",
+    "CLAIM 032",
+    "CLAIM 036"
+   ]
+  },
+  "J33e088b59b": {
+   "outcome": "OTHER",
+   "problem": "unparseable: Expecting ',' delimiter: line 1 column 1606 (char 1605)"
+  },
+  "J34027919c5": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 009",
+    "CLAIM 026",
+    "CLAIM 028",
+    "CLAIM 032"
+   ],
+   "relationship_matches": 1,
+   "errors": [
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 009",
+    "CLAIM 025",
+    "CLAIM 026",
+    "CLAIM 028",
+    "CLAIM 032"
+   ]
+  },
+  "J3759fa4ffb": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 005"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 005",
+    "CLAIM 036"
+   ]
+  },
+  "J389ceafe96": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 004",
+    "CLAIM 019",
+    "CLAIM 030"
+   ],
+   "relationship_matches": 1,
+   "errors": [
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 004",
+    "CLAIM 019",
+    "CLAIM 030",
+    "CLAIM 032"
+   ]
+  },
+  "J3bb5777594": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 008",
+    "CLAIM 016",
+    "CLAIM 017",
+    "CLAIM 019",
+    "CLAIM 024",
+    "CLAIM 029",
+    "CLAIM 032",
+    "CLAIM 033",
+    "CLAIM 035"
+   ],
+   "relationship_matches": 1,
+   "errors": [
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 008",
+    "CLAIM 016",
+    "CLAIM 017",
+    "CLAIM 019",
+    "CLAIM 024",
+    "CLAIM 029",
+    "CLAIM 030",
+    "CLAIM 032",
+    "CLAIM 033",
+    "CLAIM 035"
+   ]
+  },
+  "J3e66aff79a": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 002",
+    "CLAIM 003",
+    "CLAIM 004",
+    "CLAIM 011",
+    "CLAIM 021"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 002",
+    "CLAIM 003",
+    "CLAIM 004",
+    "CLAIM 005",
+    "CLAIM 011",
+    "CLAIM 021"
+   ]
+  },
+  "J3ecc3f2dd0": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 028",
+    "CLAIM 030"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 028",
+    "CLAIM 030",
+    "CLAIM 036"
+   ]
+  },
+  "J3f9bd8c269": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 002",
+    "CLAIM 004",
+    "CLAIM 006",
+    "CLAIM 011",
+    "CLAIM 021",
+    "CLAIM 028"
+   ],
+   "relationship_matches": 1,
+   "errors": [
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 002",
+    "CLAIM 004",
+    "CLAIM 005",
+    "CLAIM 006",
+    "CLAIM 011",
+    "CLAIM 021",
+    "CLAIM 028"
+   ]
+  },
+  "J41f66f3e64": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 002",
+    "CLAIM 005",
+    "CLAIM 009",
+    "CLAIM 011",
+    "CLAIM 032",
+    "CLAIM 036"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 002",
+    "CLAIM 004",
+    "CLAIM 005",
+    "CLAIM 009",
+    "CLAIM 011",
+    "CLAIM 032",
+    "CLAIM 036"
+   ]
+  },
+  "J434025b043": {
+   "outcome": "correct",
+   "targets_identified": 2,
+   "targets": 2,
+   "extras": [
+    "CLAIM 004",
+    "CLAIM 037"
+   ],
+   "relationship_matches": 1,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 004",
+    "CLAIM 032",
+    "CLAIM 036",
+    "CLAIM 037"
+   ]
+  },
+  "J468b918b59": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 019",
+    "CLAIM 024",
+    "CLAIM 028",
+    "CLAIM 030"
+   ],
+   "relationship_matches": 1,
+   "errors": [
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 019",
+    "CLAIM 023",
+    "CLAIM 024",
+    "CLAIM 028",
+    "CLAIM 030"
+   ]
+  },
+  "J46a18657fd": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 028",
+    "CLAIM 029",
+    "CLAIM 032"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 028",
+    "CLAIM 029",
+    "CLAIM 032",
+    "CLAIM 036"
+   ]
+  },
+  "J48b20264bf": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 001",
+    "CLAIM 009",
+    "CLAIM 011",
+    "CLAIM 014",
+    "CLAIM 015",
+    "CLAIM 021",
+    "CLAIM 028",
+    "CLAIM 030"
+   ],
+   "relationship_matches": 1,
+   "errors": [
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 001",
+    "CLAIM 002",
+    "CLAIM 009",
+    "CLAIM 011",
+    "CLAIM 014",
+    "CLAIM 015",
+    "CLAIM 021",
+    "CLAIM 028",
+    "CLAIM 030"
+   ]
+  },
+  "J49b3f16602": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 019",
+    "CLAIM 024",
+    "CLAIM 028",
+    "CLAIM 029",
+    "CLAIM 030"
+   ],
+   "relationship_matches": 1,
+   "errors": [
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 019",
+    "CLAIM 023",
+    "CLAIM 024",
+    "CLAIM 028",
+    "CLAIM 029",
+    "CLAIM 030"
+   ]
+  },
+  "J49e5f69d7d": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 005",
+    "CLAIM 028"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 005",
+    "CLAIM 028",
+    "CLAIM 036"
+   ]
+  },
+  "J4ad1c9ddad": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 028"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 023",
+    "CLAIM 028"
+   ]
+  },
+  "J5142a9b998": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 004",
+    "CLAIM 005",
+    "CLAIM 032",
+    "CLAIM 037"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 004",
+    "CLAIM 005",
+    "CLAIM 011",
+    "CLAIM 032",
+    "CLAIM 037"
+   ]
+  },
+  "J5394d4bab8": {
+   "outcome": "correct",
+   "targets_identified": 4,
+   "targets": 4,
+   "extras": [
+    "CLAIM 001",
+    "CLAIM 008",
+    "CLAIM 032"
+   ],
+   "relationship_matches": 1,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "RELATIONSHIP_WRONG",
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 001",
+    "CLAIM 008",
+    "CLAIM 017",
+    "CLAIM 019",
+    "CLAIM 030",
+    "CLAIM 032",
+    "CLAIM 033"
+   ]
+  },
+  "J54e7903fd8": {
+   "outcome": "partial",
+   "targets_identified": 2,
+   "targets": 3,
+   "extras": [
+    "CLAIM 002",
+    "CLAIM 005",
+    "CLAIM 009",
+    "CLAIM 011",
+    "CLAIM 036",
+    "CLAIM 037",
+    "CLAIM 039"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "RELATIONSHIP_WRONG",
+    "WRONG_NEARBY_CLAIM",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 002",
+    "CLAIM 003",
+    "CLAIM 004",
+    "CLAIM 005",
+    "CLAIM 009",
+    "CLAIM 011",
+    "CLAIM 036",
+    "CLAIM 037",
+    "CLAIM 039"
+   ]
+  },
+  "J5656ec11b4": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 004",
+    "CLAIM 032"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 004",
+    "CLAIM 032",
+    "CLAIM 036"
+   ]
+  },
+  "J5860151524": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 003",
+    "CLAIM 009",
+    "CLAIM 011",
+    "CLAIM 028",
+    "CLAIM 032"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 003",
+    "CLAIM 004",
+    "CLAIM 009",
+    "CLAIM 011",
+    "CLAIM 028",
+    "CLAIM 032"
+   ]
+  },
+  "J590645b5b3": {
+   "outcome": "partial",
+   "targets_identified": 1,
+   "targets": 2,
+   "extras": [
+    "CLAIM 004",
+    "CLAIM 005"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "WRONG_NEARBY_CLAIM",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 004",
+    "CLAIM 005",
+    "CLAIM 032"
+   ]
+  },
+  "J5b6be13088": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 004",
+    "CLAIM 028",
+    "CLAIM 029",
+    "CLAIM 030",
+    "CLAIM 032"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 004",
+    "CLAIM 028",
+    "CLAIM 029",
+    "CLAIM 030",
+    "CLAIM 032",
+    "CLAIM 036"
+   ]
+  },
+  "J5d894dd412": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 004",
+    "CLAIM 014",
+    "CLAIM 021",
+    "CLAIM 032"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 004",
+    "CLAIM 005",
+    "CLAIM 014",
+    "CLAIM 021",
+    "CLAIM 032"
+   ]
+  },
+  "J5e828c5dec": {
+   "outcome": "OTHER",
+   "problem": "empty answer"
+  },
+  "J62da37bf4f": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 028",
+    "CLAIM 032"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 028",
+    "CLAIM 032",
+    "CLAIM 036"
+   ]
+  },
+  "J65ab4d4feb": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 026",
+    "CLAIM 028",
+    "CLAIM 036",
+    "CLAIM 038"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 009",
+    "CLAIM 026",
+    "CLAIM 028",
+    "CLAIM 036",
+    "CLAIM 038"
+   ]
+  },
+  "J66765c1e35": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 002",
+    "CLAIM 004",
+    "CLAIM 032"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 002",
+    "CLAIM 004",
+    "CLAIM 011",
+    "CLAIM 032"
+   ]
+  },
+  "J6ae40f5331": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 024",
+    "CLAIM 028"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 023",
+    "CLAIM 024",
+    "CLAIM 028"
+   ]
+  },
+  "J6afaaaa5e2": {
+   "outcome": "incorrect",
+   "targets_identified": 0,
+   "targets": 2,
+   "extras": [
+    "CLAIM 002",
+    "CLAIM 003",
+    "CLAIM 004",
+    "CLAIM 011",
+    "CLAIM 032"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "WRONG_NEARBY_CLAIM",
+    "WRONG_NEARBY_CLAIM",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 002",
+    "CLAIM 003",
+    "CLAIM 004",
+    "CLAIM 011",
+    "CLAIM 032"
+   ]
+  },
+  "J6b0a14b9c0": {
+   "outcome": "partial",
+   "targets_identified": 2,
+   "targets": 3,
+   "extras": [
+    "CLAIM 002",
+    "CLAIM 005",
+    "CLAIM 009",
+    "CLAIM 011",
+    "CLAIM 014",
+    "CLAIM 015",
+    "CLAIM 036",
+    "CLAIM 037",
+    "CLAIM 039"
+   ],
+   "relationship_matches": 1,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "WRONG_NEARBY_CLAIM",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 002",
+    "CLAIM 003",
+    "CLAIM 004",
+    "CLAIM 005",
+    "CLAIM 009",
+    "CLAIM 011",
+    "CLAIM 014",
+    "CLAIM 015",
+    "CLAIM 036",
+    "CLAIM 037",
+    "CLAIM 039"
+   ]
+  },
+  "J6dcd58fb3a": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 009",
+    "CLAIM 026",
+    "CLAIM 028",
+    "CLAIM 032"
+   ],
+   "relationship_matches": 1,
+   "errors": [
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 009",
+    "CLAIM 025",
+    "CLAIM 026",
+    "CLAIM 028",
+    "CLAIM 032"
+   ]
+  },
+  "J7032a55ed7": {
+   "outcome": "OTHER",
+   "problem": "empty answer"
+  },
+  "J71e5b0e2fe": {
+   "outcome": "OTHER",
+   "problem": "empty answer"
+  },
+  "J733919e387": {
+   "outcome": "correct",
+   "targets_identified": 0,
+   "targets": 0,
+   "extras": [],
+   "relationship_matches": 0,
+   "errors": [],
+   "named": []
+  },
+  "J74ee8c5034": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 003",
+    "CLAIM 011"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 003",
+    "CLAIM 004",
+    "CLAIM 011"
+   ]
+  },
+  "J7a4379369f": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 004",
+    "CLAIM 028",
+    "CLAIM 032"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 004",
+    "CLAIM 011",
+    "CLAIM 028",
+    "CLAIM 032"
+   ]
+  },
+  "J7c7333ee0e": {
+   "outcome": "correct",
+   "targets_identified": 4,
+   "targets": 4,
+   "extras": [
+    "CLAIM 008",
+    "CLAIM 032"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "RELATIONSHIP_WRONG",
+    "RELATIONSHIP_WRONG",
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 008",
+    "CLAIM 017",
+    "CLAIM 019",
+    "CLAIM 030",
+    "CLAIM 032",
+    "CLAIM 033"
+   ]
+  },
+  "J7eeb9e0aff": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 006"
+   ],
+   "relationship_matches": 1,
+   "errors": [
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 006",
+    "CLAIM 029"
+   ]
+  },
+  "J85753edda3": {
+   "outcome": "correct",
+   "targets_identified": 0,
+   "targets": 0,
+   "extras": [],
+   "relationship_matches": 0,
+   "errors": [],
+   "named": []
+  },
+  "J86e1fac9c9": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 005",
+    "CLAIM 032"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 005",
+    "CLAIM 032",
+    "CLAIM 036"
+   ]
+  },
+  "J8e5e72ecc7": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 028",
+    "CLAIM 032"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 028",
+    "CLAIM 032",
+    "CLAIM 036"
+   ]
+  },
+  "J95a5114a7b": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 007",
+    "CLAIM 008",
+    "CLAIM 016",
+    "CLAIM 017",
+    "CLAIM 019",
+    "CLAIM 024",
+    "CLAIM 029",
+    "CLAIM 032",
+    "CLAIM 033",
+    "CLAIM 035",
+    "CLAIM 037"
+   ],
+   "relationship_matches": 1,
+   "errors": [
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 007",
+    "CLAIM 008",
+    "CLAIM 016",
+    "CLAIM 017",
+    "CLAIM 019",
+    "CLAIM 024",
+    "CLAIM 029",
+    "CLAIM 030",
+    "CLAIM 032",
+    "CLAIM 033",
+    "CLAIM 035",
+    "CLAIM 037"
+   ]
+  },
+  "J96d4e2ddc6": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 019",
+    "CLAIM 024",
+    "CLAIM 028",
+    "CLAIM 030"
+   ],
+   "relationship_matches": 1,
+   "errors": [
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 019",
+    "CLAIM 023",
+    "CLAIM 024",
+    "CLAIM 028",
+    "CLAIM 030"
+   ]
+  },
+  "J9bab8c4a95": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 032"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 032",
+    "CLAIM 036"
+   ]
+  },
+  "J9c2d3dfa4a": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 001",
+    "CLAIM 011",
+    "CLAIM 015",
+    "CLAIM 028",
+    "CLAIM 032"
+   ],
+   "relationship_matches": 1,
+   "errors": [
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 001",
+    "CLAIM 002",
+    "CLAIM 011",
+    "CLAIM 015",
+    "CLAIM 028",
+    "CLAIM 032"
+   ]
+  },
+  "Ja0ba8c0654": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 002",
+    "CLAIM 008",
+    "CLAIM 016",
+    "CLAIM 017",
+    "CLAIM 019",
+    "CLAIM 023",
+    "CLAIM 024",
+    "CLAIM 028",
+    "CLAIM 029",
+    "CLAIM 033",
+    "CLAIM 035"
+   ],
+   "relationship_matches": 1,
+   "errors": [
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 002",
+    "CLAIM 008",
+    "CLAIM 016",
+    "CLAIM 017",
+    "CLAIM 019",
+    "CLAIM 023",
+    "CLAIM 024",
+    "CLAIM 028",
+    "CLAIM 029",
+    "CLAIM 030",
+    "CLAIM 033",
+    "CLAIM 035"
+   ]
+  },
+  "Ja2b0ef670a": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 004",
+    "CLAIM 011",
+    "CLAIM 021",
+    "CLAIM 032"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 004",
+    "CLAIM 005",
+    "CLAIM 011",
+    "CLAIM 021",
+    "CLAIM 032"
+   ]
+  },
+  "Ja313a94698": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 003",
+    "CLAIM 011",
+    "CLAIM 028",
+    "CLAIM 032"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 003",
+    "CLAIM 004",
+    "CLAIM 011",
+    "CLAIM 028",
+    "CLAIM 032"
+   ]
+  },
+  "Ja87ecd16e6": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 003",
+    "CLAIM 005",
+    "CLAIM 014",
+    "CLAIM 015",
+    "CLAIM 029",
+    "CLAIM 032",
+    "CLAIM 035",
+    "CLAIM 037",
+    "CLAIM 039"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 003",
+    "CLAIM 005",
+    "CLAIM 014",
+    "CLAIM 015",
+    "CLAIM 016",
+    "CLAIM 029",
+    "CLAIM 032",
+    "CLAIM 035",
+    "CLAIM 037",
+    "CLAIM 039"
+   ]
+  },
+  "Ja92ecc8b9a": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 006",
+    "CLAIM 030",
+    "CLAIM 036"
+   ],
+   "relationship_matches": 1,
+   "errors": [
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 006",
+    "CLAIM 029",
+    "CLAIM 030",
+    "CLAIM 036"
+   ]
+  },
+  "Jaa3dc68554": {
+   "outcome": "correct",
+   "targets_identified": 4,
+   "targets": 4,
+   "extras": [
+    "CLAIM 001",
+    "CLAIM 003",
+    "CLAIM 005",
+    "CLAIM 008",
+    "CLAIM 012",
+    "CLAIM 013",
+    "CLAIM 018",
+    "CLAIM 032"
+   ],
+   "relationship_matches": 2,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 001",
+    "CLAIM 003",
+    "CLAIM 005",
+    "CLAIM 008",
+    "CLAIM 012",
+    "CLAIM 013",
+    "CLAIM 017",
+    "CLAIM 018",
+    "CLAIM 019",
+    "CLAIM 030",
+    "CLAIM 032",
+    "CLAIM 033"
+   ]
+  },
+  "Jab9364c373": {
+   "outcome": "partial",
+   "targets_identified": 2,
+   "targets": 3,
+   "extras": [
+    "CLAIM 002",
+    "CLAIM 005",
+    "CLAIM 009",
+    "CLAIM 011",
+    "CLAIM 028",
+    "CLAIM 036",
+    "CLAIM 037",
+    "CLAIM 039"
+   ],
+   "relationship_matches": 1,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "WRONG_NEARBY_CLAIM",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 002",
+    "CLAIM 003",
+    "CLAIM 004",
+    "CLAIM 005",
+    "CLAIM 009",
+    "CLAIM 011",
+    "CLAIM 028",
+    "CLAIM 036",
+    "CLAIM 037",
+    "CLAIM 039"
+   ]
+  },
+  "Jb614cd48e0": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 006",
+    "CLAIM 036"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 006",
+    "CLAIM 029",
+    "CLAIM 036"
+   ]
+  },
+  "Jb6e5f97fa5": {
+   "outcome": "incorrect",
+   "targets_identified": 0,
+   "targets": 2,
+   "extras": [
+    "CLAIM 002",
+    "CLAIM 004",
+    "CLAIM 011",
+    "CLAIM 032"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "WRONG_NEARBY_CLAIM",
+    "WRONG_NEARBY_CLAIM",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 002",
+    "CLAIM 004",
+    "CLAIM 011",
+    "CLAIM 032"
+   ]
+  },
+  "Jb756e2e18f": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 019",
+    "CLAIM 024",
+    "CLAIM 028",
+    "CLAIM 037"
+   ],
+   "relationship_matches": 1,
+   "errors": [
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 019",
+    "CLAIM 023",
+    "CLAIM 024",
+    "CLAIM 028",
+    "CLAIM 037"
+   ]
+  },
+  "Jbc88cc0921": {
+   "outcome": "correct",
+   "targets_identified": 2,
+   "targets": 2,
+   "extras": [
+    "CLAIM 004",
+    "CLAIM 005"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 004",
+    "CLAIM 005",
+    "CLAIM 032",
+    "CLAIM 036"
+   ]
+  },
+  "Jbc9acb5764": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [],
+   "relationship_matches": 1,
+   "errors": [],
+   "named": [
+    "CLAIM 032"
+   ]
+  },
+  "Jbd628b9e6f": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 001",
+    "CLAIM 011",
+    "CLAIM 015",
+    "CLAIM 028",
+    "CLAIM 030"
+   ],
+   "relationship_matches": 1,
+   "errors": [
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 001",
+    "CLAIM 002",
+    "CLAIM 011",
+    "CLAIM 015",
+    "CLAIM 028",
+    "CLAIM 030"
+   ]
+  },
+  "Jbefbcaaf56": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 026",
+    "CLAIM 028",
+    "CLAIM 036",
+    "CLAIM 038"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 009",
+    "CLAIM 026",
+    "CLAIM 028",
+    "CLAIM 036",
+    "CLAIM 038"
+   ]
+  },
+  "Jbf753928ef": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 004",
+    "CLAIM 005",
+    "CLAIM 032"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 004",
+    "CLAIM 005",
+    "CLAIM 032",
+    "CLAIM 036"
+   ]
+  },
+  "Jc068802302": {
+   "outcome": "OTHER",
+   "problem": "empty answer"
+  },
+  "Jc0eaed5082": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 032"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 032",
+    "CLAIM 036"
+   ]
+  },
+  "Jc1d5b2a9cc": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 004",
+    "CLAIM 009",
+    "CLAIM 014",
+    "CLAIM 021",
+    "CLAIM 030",
+    "CLAIM 032"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 004",
+    "CLAIM 005",
+    "CLAIM 009",
+    "CLAIM 014",
+    "CLAIM 021",
+    "CLAIM 030",
+    "CLAIM 032"
+   ]
+  },
+  "Jc257e3f3af": {
+   "outcome": "correct",
+   "targets_identified": 0,
+   "targets": 0,
+   "extras": [],
+   "relationship_matches": 0,
+   "errors": [],
+   "named": []
+  },
+  "Jc619c12ab4": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 001",
+    "CLAIM 011",
+    "CLAIM 014",
+    "CLAIM 021",
+    "CLAIM 025",
+    "CLAIM 030"
+   ],
+   "relationship_matches": 1,
+   "errors": [
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 001",
+    "CLAIM 002",
+    "CLAIM 011",
+    "CLAIM 014",
+    "CLAIM 021",
+    "CLAIM 025",
+    "CLAIM 030"
+   ]
+  },
+  "Jccf8ace583": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 003",
+    "CLAIM 005",
+    "CLAIM 009",
+    "CLAIM 014",
+    "CLAIM 015",
+    "CLAIM 021",
+    "CLAIM 022",
+    "CLAIM 032",
+    "CLAIM 035",
+    "CLAIM 037",
+    "CLAIM 039"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 003",
+    "CLAIM 005",
+    "CLAIM 009",
+    "CLAIM 014",
+    "CLAIM 015",
+    "CLAIM 016",
+    "CLAIM 021",
+    "CLAIM 022",
+    "CLAIM 032",
+    "CLAIM 035",
+    "CLAIM 037",
+    "CLAIM 039"
+   ]
+  },
+  "Jce9102c99e": {
+   "outcome": "correct",
+   "targets_identified": 0,
+   "targets": 0,
+   "extras": [],
+   "relationship_matches": 0,
+   "errors": [],
+   "named": []
+  },
+  "Jcf7df60673": {
+   "outcome": "correct",
+   "targets_identified": 0,
+   "targets": 0,
+   "extras": [],
+   "relationship_matches": 0,
+   "errors": [],
+   "named": []
+  },
+  "Jd1ad625aaa": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 005",
+    "CLAIM 006",
+    "CLAIM 009",
+    "CLAIM 011",
+    "CLAIM 036"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 004",
+    "CLAIM 005",
+    "CLAIM 006",
+    "CLAIM 009",
+    "CLAIM 011",
+    "CLAIM 036"
+   ]
+  },
+  "Jd21da9376c": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 002",
+    "CLAIM 004",
+    "CLAIM 032"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 002",
+    "CLAIM 004",
+    "CLAIM 011",
+    "CLAIM 032"
+   ]
+  },
+  "Jd5ca6f4e75": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 001",
+    "CLAIM 003",
+    "CLAIM 005",
+    "CLAIM 014",
+    "CLAIM 015",
+    "CLAIM 019",
+    "CLAIM 029",
+    "CLAIM 032",
+    "CLAIM 035",
+    "CLAIM 037",
+    "CLAIM 039"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 001",
+    "CLAIM 003",
+    "CLAIM 005",
+    "CLAIM 014",
+    "CLAIM 015",
+    "CLAIM 016",
+    "CLAIM 019",
+    "CLAIM 029",
+    "CLAIM 032",
+    "CLAIM 035",
+    "CLAIM 037",
+    "CLAIM 039"
+   ]
+  },
+  "Jd71898167f": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 001",
+    "CLAIM 004",
+    "CLAIM 009",
+    "CLAIM 011",
+    "CLAIM 014",
+    "CLAIM 015",
+    "CLAIM 021",
+    "CLAIM 028",
+    "CLAIM 030"
+   ],
+   "relationship_matches": 1,
+   "errors": [
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 001",
+    "CLAIM 002",
+    "CLAIM 004",
+    "CLAIM 009",
+    "CLAIM 011",
+    "CLAIM 014",
+    "CLAIM 015",
+    "CLAIM 021",
+    "CLAIM 028",
+    "CLAIM 030"
+   ]
+  },
+  "Jd7b77af3fa": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 036"
+   ],
+   "relationship_matches": 1,
+   "errors": [
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 029",
+    "CLAIM 036"
+   ]
+  },
+  "Jd7d04df3df": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 016",
+    "CLAIM 017",
+    "CLAIM 019",
+    "CLAIM 023",
+    "CLAIM 024",
+    "CLAIM 028",
+    "CLAIM 029",
+    "CLAIM 032",
+    "CLAIM 033",
+    "CLAIM 035"
+   ],
+   "relationship_matches": 1,
+   "errors": [
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 016",
+    "CLAIM 017",
+    "CLAIM 019",
+    "CLAIM 023",
+    "CLAIM 024",
+    "CLAIM 028",
+    "CLAIM 029",
+    "CLAIM 030",
+    "CLAIM 032",
+    "CLAIM 033",
+    "CLAIM 035"
+   ]
+  },
+  "Jd82fc575d3": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 002",
+    "CLAIM 003",
+    "CLAIM 005",
+    "CLAIM 014",
+    "CLAIM 015",
+    "CLAIM 019",
+    "CLAIM 021",
+    "CLAIM 030",
+    "CLAIM 032",
+    "CLAIM 035",
+    "CLAIM 037"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 002",
+    "CLAIM 003",
+    "CLAIM 005",
+    "CLAIM 014",
+    "CLAIM 015",
+    "CLAIM 016",
+    "CLAIM 019",
+    "CLAIM 021",
+    "CLAIM 030",
+    "CLAIM 032",
+    "CLAIM 035",
+    "CLAIM 037"
+   ]
+  },
+  "Jd8766398ba": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 024",
+    "CLAIM 028"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 023",
+    "CLAIM 024",
+    "CLAIM 028"
+   ]
+  },
+  "Jd8c0fde2e2": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 024",
+    "CLAIM 028"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 023",
+    "CLAIM 024",
+    "CLAIM 028"
+   ]
+  },
+  "Jd99e96599f": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 002",
+    "CLAIM 003",
+    "CLAIM 004",
+    "CLAIM 006",
+    "CLAIM 021",
+    "CLAIM 032"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 002",
+    "CLAIM 003",
+    "CLAIM 004",
+    "CLAIM 006",
+    "CLAIM 011",
+    "CLAIM 021",
+    "CLAIM 032"
+   ]
+  },
+  "Jddcd5f5ed4": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 002",
+    "CLAIM 024",
+    "CLAIM 028",
+    "CLAIM 029"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 002",
+    "CLAIM 023",
+    "CLAIM 024",
+    "CLAIM 028",
+    "CLAIM 029"
+   ]
+  },
+  "Jdeb2ad2fa2": {
+   "outcome": "correct",
+   "targets_identified": 4,
+   "targets": 4,
+   "extras": [
+    "CLAIM 001",
+    "CLAIM 008",
+    "CLAIM 032"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "RELATIONSHIP_WRONG",
+    "RELATIONSHIP_WRONG",
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 001",
+    "CLAIM 008",
+    "CLAIM 017",
+    "CLAIM 019",
+    "CLAIM 030",
+    "CLAIM 032",
+    "CLAIM 033"
+   ]
+  },
+  "Je36dd9c649": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 006",
+    "CLAIM 009",
+    "CLAIM 011",
+    "CLAIM 032",
+    "CLAIM 036"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 004",
+    "CLAIM 006",
+    "CLAIM 009",
+    "CLAIM 011",
+    "CLAIM 032",
+    "CLAIM 036"
+   ]
+  },
+  "Je59006dba5": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 004",
+    "CLAIM 011",
+    "CLAIM 025",
+    "CLAIM 026",
+    "CLAIM 028",
+    "CLAIM 036",
+    "CLAIM 038"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 004",
+    "CLAIM 009",
+    "CLAIM 011",
+    "CLAIM 025",
+    "CLAIM 026",
+    "CLAIM 028",
+    "CLAIM 036",
+    "CLAIM 038"
+   ]
+  },
+  "Je90573f194": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 036"
+   ],
+   "relationship_matches": 1,
+   "errors": [
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 029",
+    "CLAIM 036"
+   ]
+  },
+  "Jecb2311fac": {
+   "outcome": "incorrect",
+   "targets_identified": 0,
+   "targets": 2,
+   "extras": [
+    "CLAIM 002",
+    "CLAIM 003",
+    "CLAIM 004",
+    "CLAIM 011",
+    "CLAIM 028",
+    "CLAIM 032"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "WRONG_NEARBY_CLAIM",
+    "WRONG_NEARBY_CLAIM",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 002",
+    "CLAIM 003",
+    "CLAIM 004",
+    "CLAIM 011",
+    "CLAIM 028",
+    "CLAIM 032"
+   ]
+  },
+  "Jee16747124": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 004",
+    "CLAIM 028",
+    "CLAIM 032"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 004",
+    "CLAIM 028",
+    "CLAIM 032",
+    "CLAIM 036"
+   ]
+  },
+  "Jf07e5ff942": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 009",
+    "CLAIM 026",
+    "CLAIM 028",
+    "CLAIM 029",
+    "CLAIM 032",
+    "CLAIM 036"
+   ],
+   "relationship_matches": 1,
+   "errors": [
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 009",
+    "CLAIM 025",
+    "CLAIM 026",
+    "CLAIM 028",
+    "CLAIM 029",
+    "CLAIM 032",
+    "CLAIM 036"
+   ]
+  },
+  "Jf0f6d0cf36": {
+   "outcome": "correct",
+   "targets_identified": 4,
+   "targets": 4,
+   "extras": [
+    "CLAIM 001",
+    "CLAIM 005",
+    "CLAIM 008",
+    "CLAIM 031",
+    "CLAIM 032"
+   ],
+   "relationship_matches": 1,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "RELATIONSHIP_WRONG",
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 001",
+    "CLAIM 005",
+    "CLAIM 008",
+    "CLAIM 017",
+    "CLAIM 019",
+    "CLAIM 030",
+    "CLAIM 031",
+    "CLAIM 032",
+    "CLAIM 033"
+   ]
+  },
+  "Jf2255b201c": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 005",
+    "CLAIM 026",
+    "CLAIM 028",
+    "CLAIM 037"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 005",
+    "CLAIM 026",
+    "CLAIM 028",
+    "CLAIM 036",
+    "CLAIM 037"
+   ]
+  },
+  "Jf23c496421": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 001",
+    "CLAIM 004",
+    "CLAIM 009",
+    "CLAIM 011",
+    "CLAIM 014",
+    "CLAIM 015",
+    "CLAIM 028"
+   ],
+   "relationship_matches": 1,
+   "errors": [
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 001",
+    "CLAIM 002",
+    "CLAIM 004",
+    "CLAIM 009",
+    "CLAIM 011",
+    "CLAIM 014",
+    "CLAIM 015",
+    "CLAIM 028"
+   ]
+  },
+  "Jf2f77afbac": {
+   "outcome": "partial",
+   "targets_identified": 2,
+   "targets": 3,
+   "extras": [
+    "CLAIM 002",
+    "CLAIM 005",
+    "CLAIM 009",
+    "CLAIM 011",
+    "CLAIM 014",
+    "CLAIM 036",
+    "CLAIM 037",
+    "CLAIM 039"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "RELATIONSHIP_WRONG",
+    "WRONG_NEARBY_CLAIM",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 002",
+    "CLAIM 003",
+    "CLAIM 004",
+    "CLAIM 005",
+    "CLAIM 009",
+    "CLAIM 011",
+    "CLAIM 014",
+    "CLAIM 036",
+    "CLAIM 037",
+    "CLAIM 039"
+   ]
+  },
+  "Jf48d23cad0": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 002",
+    "CLAIM 006",
+    "CLAIM 021"
+   ],
+   "relationship_matches": 1,
+   "errors": [
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 002",
+    "CLAIM 005",
+    "CLAIM 006",
+    "CLAIM 021"
+   ]
+  },
+  "Jf52116edae": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 007",
+    "CLAIM 008",
+    "CLAIM 016",
+    "CLAIM 017",
+    "CLAIM 019",
+    "CLAIM 023",
+    "CLAIM 024",
+    "CLAIM 029",
+    "CLAIM 032",
+    "CLAIM 033",
+    "CLAIM 035"
+   ],
+   "relationship_matches": 1,
+   "errors": [
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 007",
+    "CLAIM 008",
+    "CLAIM 016",
+    "CLAIM 017",
+    "CLAIM 019",
+    "CLAIM 023",
+    "CLAIM 024",
+    "CLAIM 029",
+    "CLAIM 030",
+    "CLAIM 032",
+    "CLAIM 033",
+    "CLAIM 035"
+   ]
+  },
+  "Jf72d5adbc3": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 024",
+    "CLAIM 028"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 023",
+    "CLAIM 024",
+    "CLAIM 028"
+   ]
+  },
+  "Jf7d69b4a32": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 009",
+    "CLAIM 026",
+    "CLAIM 028",
+    "CLAIM 032"
+   ],
+   "relationship_matches": 1,
+   "errors": [
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 009",
+    "CLAIM 025",
+    "CLAIM 026",
+    "CLAIM 028",
+    "CLAIM 032"
+   ]
+  },
+  "Jfa73ac6ed5": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 004",
+    "CLAIM 014",
+    "CLAIM 021",
+    "CLAIM 032"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 004",
+    "CLAIM 005",
+    "CLAIM 014",
+    "CLAIM 021",
+    "CLAIM 032"
+   ]
+  },
+  "Jfc74bc4852": {
+   "outcome": "incorrect",
+   "targets_identified": 0,
+   "targets": 2,
+   "extras": [
+    "CLAIM 002",
+    "CLAIM 003",
+    "CLAIM 004",
+    "CLAIM 006",
+    "CLAIM 011",
+    "CLAIM 028",
+    "CLAIM 032"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "WRONG_NEARBY_CLAIM",
+    "WRONG_NEARBY_CLAIM",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 002",
+    "CLAIM 003",
+    "CLAIM 004",
+    "CLAIM 006",
+    "CLAIM 011",
+    "CLAIM 028",
+    "CLAIM 032"
+   ]
+  },
+  "Jfe1f5013c7": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 028",
+    "CLAIM 032"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 028",
+    "CLAIM 032",
+    "CLAIM 036"
+   ]
+  },
+  "Jfe3f34fbcf": {
+   "outcome": "correct",
+   "targets_identified": 1,
+   "targets": 1,
+   "extras": [
+    "CLAIM 002",
+    "CLAIM 003",
+    "CLAIM 004",
+    "CLAIM 006",
+    "CLAIM 011",
+    "CLAIM 016",
+    "CLAIM 021",
+    "CLAIM 028"
+   ],
+   "relationship_matches": 0,
+   "errors": [
+    "RELATIONSHIP_WRONG",
+    "EXTRA_UNSUPPORTED_CLAIMS"
+   ],
+   "named": [
+    "CLAIM 002",
+    "CLAIM 003",
+    "CLAIM 004",
+    "CLAIM 005",
+    "CLAIM 006",
+    "CLAIM 011",
+    "CLAIM 016",
+    "CLAIM 021",
+    "CLAIM 028"
+   ]
+  }
+ }
+}
