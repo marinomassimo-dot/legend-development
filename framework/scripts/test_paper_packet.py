@@ -282,6 +282,31 @@ def _states(pmid: str, signals: set[str] | None = None, observed: set[str] | Non
     return {row["key"]: row for row in pp.procedures(facts, signals, observed)}
 
 
+def _needs_local_corpus(case: unittest.TestCase, *pmids: str) -> None:
+    """Skip, naming the file, when an artefact a manifest declares is not on this disk.
+
+    These expectations were fixed by hand against the laboratory checkout's `files/` corpus and
+    its gitignored page crops. A fresh clone holds neither, so the facts the selector reads are
+    different facts, and failing there would report an absent download as a code defect.
+    """
+    for pmid in pmids:
+        manifest = ROOT / f"disease-models/wwox/research/deepdive_manifests/PMID{pmid}.json"
+        if not manifest.is_file():
+            continue
+        declared = [item.get("path") for item in json.loads(manifest.read_text(encoding="utf-8"))
+                    .get("source_artifacts") or [] if isinstance(item, dict) and item.get("path")]
+        missing = [path for path in declared if not (ROOT / path).is_file()]
+        if missing:
+            more = f" (+{len(missing) - 1} more)" if len(missing) > 1 else ""
+            case.skipTest(f"local corpus artefact absent for PMID {pmid}: {missing[0]}{more}")
+
+
+def _needs_page_crops(case: unittest.TestCase, pmid: str) -> None:
+    folder = ROOT / f"disease-models/wwox/research/page_adjudications/PMID{pmid}"
+    if not any(folder.glob("*.png")) if folder.is_dir() else True:
+        case.skipTest(f"gitignored page-adjudication crops absent: {folder.relative_to(ROOT)}/*.png")
+
+
 class TheProceduresFollowTheFacts(unittest.TestCase):
     """Trigger present, trigger absent with sufficient data, data missing — kept apart."""
 
@@ -292,6 +317,7 @@ class TheProceduresFollowTheFacts(unittest.TestCase):
         self.assertTrue(any("erratum_scope_check.py" in f for f in row["files"]))
 
     def test_a_structured_surface_makes_page_adjudication_not_needed(self) -> None:
+        _needs_local_corpus(self, ERRATUM_PMID)
         self.assertEqual(_states(ERRATUM_PMID)["page_adjudication"]["state"], pp.NOT_NEEDED)
 
     def test_nothing_on_disk_opens_acquisition_and_leaves_the_rest_to_ascertain(self) -> None:
@@ -304,16 +330,19 @@ class TheProceduresFollowTheFacts(unittest.TestCase):
         self.assertEqual(rows["locator_contradiction"]["state"], pp.NOT_NEEDED)
 
     def test_everything_present_makes_acquisition_not_needed(self) -> None:
+        _needs_local_corpus(self, ERRATUM_PMID, PDF_ONLY_PMID, PPTX_PMID)
         for pmid in (ERRATUM_PMID, PDF_ONLY_PMID, PPTX_PMID):
             self.assertEqual(_states(pmid)["acquisition"]["state"], pp.NOT_NEEDED, pmid)
 
     def test_a_pdf_only_surface_is_to_ascertain_until_a_screen_has_run(self) -> None:
         """Unknown is not 'not needed': the packet alone cannot say whether the text layer is sound."""
+        _needs_local_corpus(self, PDF_ONLY_PMID)
         row = _states(PDF_ONLY_PMID)["page_adjudication"]
         self.assertEqual(row["state"], pp.TO_ASCERTAIN)
         self.assertIn("check", row["to_ascertain"])
 
     def test_the_validator_passing_the_pdf_only_surface_settles_it(self) -> None:
+        _needs_local_corpus(self, PDF_ONLY_PMID)
         self.assertEqual(_states(PDF_ONLY_PMID, {"VALIDATOR_OK"})["page_adjudication"]["state"],
                          pp.NOT_NEEDED)
 
@@ -331,12 +360,14 @@ class TheProceduresFollowTheFacts(unittest.TestCase):
 
     def test_undeclared_pptx_in_a_pmid_named_directory_opens_binary_supplement(self) -> None:
         """The three .pptx of 38499540 sit in a directory carrying the PMID, not a file name."""
+        _needs_local_corpus(self, PPTX_PMID)
         row = _states(PPTX_PMID)["binary_supplement"]
         self.assertEqual(row["state"], pp.OPEN)
         self.assertIn("MOESM", row["reason"])
         self.assertIn("undeclared", row["reason"])
 
     def test_declared_binary_containers_do_not_open_the_procedure(self) -> None:
+        _needs_local_corpus(self, DECLARED_BINARY_PMID)
         row = _states(DECLARED_BINARY_PMID)["binary_supplement"]
         self.assertEqual(row["state"], pp.NOT_NEEDED)
         self.assertIn("all declared", row["reason"])
@@ -346,6 +377,7 @@ class TheProceduresFollowTheFacts(unittest.TestCase):
         self.assertEqual(_states(ABSENT_PMID)["integrity_notice"]["state"], pp.TO_ASCERTAIN)
 
     def test_multiple_conditions_open_together(self) -> None:
+        _needs_local_corpus(self, EOC_PMID)
         rows = _states(EOC_PMID)
         opened = {key for key, row in rows.items() if row["state"] == pp.OPEN}
         self.assertEqual(opened, {"page_adjudication", "integrity_notice"})
@@ -473,6 +505,7 @@ class TheChecksRecordSignalsForTheProcedures(unittest.TestCase):
                       pp.check_signals("undeclared locator revision", 1, "entries[3] changed"))
 
     def test_a_check_run_writes_the_signals_beside_the_detail_and_procedures_reads_them(self) -> None:
+        _needs_local_corpus(self, PDF_ONLY_PMID)
         report = pp.run_checks(ROOT, "wwox", PDF_ONLY_PMID, out_dir=self.out)
         self.assertTrue((self.out / f"PMID{PDF_ONLY_PMID}.json").is_file())
         self.assertTrue(all("signals" in row for row in report["results"]))
@@ -572,6 +605,7 @@ def png_or_jpeg_size(path: Path) -> tuple[int, int]:
 
 class TheSurfaceInventory(unittest.TestCase):
     def test_a_raster_is_measured_in_pixels_and_two_instruments_must_agree(self) -> None:
+        _needs_local_corpus(self, THIN_PMID)
         report = pp.surfaces(ROOT, "wwox", THIN_PMID)
         rows = {Path(row["path"]).name: row for row in report["surfaces"]}
         fig6 = rows["41419_2018_510_Fig6_HTML.jpg"]
@@ -581,6 +615,7 @@ class TheSurfaceInventory(unittest.TestCase):
 
     def test_the_incident_asset_is_flagged_with_the_render_route(self) -> None:
         """The 2026-09-09 near-error: a bar count taken from this asset, right at 400 dpi."""
+        _needs_local_corpus(self, THIN_PMID)
         report = pp.surfaces(ROOT, "wwox", THIN_PMID)
         fig6 = next(r for r in report["surfaces"] if r["path"].endswith("Fig6_HTML.jpg"))
         flags = " ".join(fig6["flags"])
@@ -589,12 +624,15 @@ class TheSurfaceInventory(unittest.TestCase):
         self.assertTrue(report["pdf_on_disk"])
 
     def test_a_large_raster_is_not_flagged_for_size(self) -> None:
+        _needs_local_corpus(self, THIN_PMID)
         report = pp.surfaces(ROOT, "wwox", THIN_PMID)
         big = next(r for r in report["surfaces"] if r["path"].endswith("SuppFig1_p4-4.png"))
         self.assertGreater(big["width"], 1500)
         self.assertNotIn("px —", " ".join(big["flags"]))
 
     def test_existing_crops_are_reported_so_they_are_reused_not_regenerated(self) -> None:
+        _needs_local_corpus(self, CROPPED_PMID)
+        _needs_page_crops(self, CROPPED_PMID)
         report = pp.surfaces(ROOT, "wwox", CROPPED_PMID)
         self.assertGreaterEqual(len(report["page_adjudications"]), 10)
         on_disk = sorted(p.name for p in
@@ -603,6 +641,7 @@ class TheSurfaceInventory(unittest.TestCase):
         self.assertEqual(on_disk, report["page_adjudications"])
 
     def test_a_failed_route_is_named_and_a_successful_one_is_not(self) -> None:
+        _needs_local_corpus(self, FAILED_ROUTE_PMID)
         report = pp.surfaces(ROOT, "wwox", FAILED_ROUTE_PMID)
         joined = pp.render_surfaces(report)
         self.assertIn("FAILED_HTTP_404", joined)
@@ -648,6 +687,7 @@ class TheSurfaceInventory(unittest.TestCase):
     def test_a_page_crop_declared_as_a_figure_is_named(self) -> None:
         """Three crops in this corpus are declared `figure` and carry body TEXT, no figure at
         all — found by a blind legibility assessment on 2026-09-12, not by a size rule."""
+        _needs_local_corpus(self, "28373548")
         report = pp.surfaces(ROOT, "wwox", "28373548")
         crops = [r for r in report["surfaces"] if "page_adjudications/" in r["path"]]
         self.assertGreaterEqual(len(crops), 3)
