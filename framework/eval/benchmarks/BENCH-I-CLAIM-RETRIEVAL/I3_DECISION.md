@@ -59,3 +59,62 @@ reduction, for example under half the registry. The post-hoc backlink-as-mention
 (CURRENT 13 → 17 / 29, 3.5 %) shows that link-graph completeness moves recall cheaply, and that
 it is far from sufficient on its own; I06, I09 and I24 need either a richer first pass or
 matching the D-layer deliberately does not do.
+
+## K1 · after "a citation by record link is a citation" (2026-09-26)
+
+K1 made, deliberately, the change this benchmark reverted: a record that wikilinks to an
+identity record of the queried PMID/DOI is a `mention (links to …)` hit
+([design record](../../../../governance/design_records/k1_citation_by_record_link_20260926.md)).
+Re-run of I1 with the frozen fixtures, primary configuration, no sensitivity, written to
+[`i1_results_after_K1.json`](i1_results_after_K1.json); the frozen files above were not touched.
+
+| STRONG (22 fixtures, 29 targets) | CURRENT before | CURRENT after K1 | PROGRESSIVE before | PROGRESSIVE after K1 |
+|---|---:|---:|---:|---:|
+| targets retrieved | 13 / 29 | **17 / 29** | 25 / 29 | **26 / 29** |
+| fixtures fully retrieved | 9 / 22 | 11 / 22 | 18 / 22 | 19 / 22 |
+| median candidates | 1 | 1 | 31 | 31 |
+| median registry fraction | 2.6 % | **3.5 %** | 83.3 % | 83.3 % |
+
+The after-K1 run matches the post-hoc measurement row for row (all 78 fixture × strategy rows
+identical), with a different implementation (`registry_records.py` sha256 `755bc3bd…`
+against the post-hoc `1bbadaa9…`). Gained targets: I03 (both), I07, I16 — as predicted. I06,
+I09 and I24 are still missed at the events' parents.
+
+**The decision stands: TARGETED RETRIEVAL NOT SUPPORTED, preload retained.** The pre-registered
+SUPPORTED rule needs all 29 STRONG targets at a material reduction; K1 gives 17 / 29 on the small
+route and 26 / 29 at 83 % of the registry. K1 alone was never going to meet it, and does not.
+
+**Size guard** — `get --pmid <P> --hops 1` on today's `main` registries, for the 23 PMIDs of the
+fixtures, rendered bytes and records returned, before → after K1. Total: 1,814,650 → 2,080,228 B (1.15×).
+
+| PMID | bytes before | bytes after | ratio | records before → after |
+|---|---:|---:|---:|---:|
+| 21075834 | 18,864 | 38,338 | 2.03× | 5 → 13 |
+| 18974271 | 26,585 | 49,062 | 1.85× | 6 → 13 |
+| 17575124 | 43,572 | 70,402 | 1.62× | 8 → 17 |
+| 31340538 | 109,153 | 144,363 | 1.32× | 26 → 39 |
+| 42422765 | 143,767 | 188,309 | 1.31× | 25 → 36 |
+| 17360458 | 106,126 | 134,221 | 1.26× | 22 → 33 |
+| 32581702 | 60,799 | 72,039 | 1.18× | 11 → 17 |
+| 32000863 | 127,236 | 148,405 | 1.17× | 30 → 38 |
+| 33916893 | 75,139 | 83,580 | 1.11× | 18 → 21 |
+| 34747138 | 100,667 | 110,455 | 1.10× | 21 → 24 |
+| 34268881 | 157,101 | 171,585 | 1.09× | 33 → 39 |
+| 19500159 | 150,985 | 162,920 | 1.08× | 31 → 36 |
+| 15070730 | 64,566 | 69,643 | 1.08× | 11 → 15 |
+| 30755385 | 61,645 | 63,472 | 1.03× | 18 → 18 |
+| 23254685 | 46,349 | 47,233 | 1.02× | 13 → 13 |
+| 34831305 | 69,478 | 70,623 | 1.02× | 17 → 17 |
+| 41562193 | 24,730 | 25,077 | 1.01× | 10 → 10 |
+| 29724996 | 52,007 | 52,717 | 1.01× | 16 → 16 |
+| 26499798 | 64,379 | 65,203 | 1.01× | 14 → 14 |
+| 21115974 | 60,913 | 61,526 | 1.01× | 15 → 15 |
+| 30290271 | 129,456 | 129,922 | 1.00× | 30 → 30 |
+| 20530675 | 79,500 | 79,500 | 1.00× | 21 → 21 |
+| 21731849 | 41,633 | 41,633 | 1.00× | 12 → 12 |
+
+One answer grows by more than 2×: **PMID 21075834, 2.03×** (18,864 → 38,338 B, 5 → 13 records).
+Cause: CLAIM 009 and CLAIM 034 cite it as `[[paper_registry_current#PAPER 071]]`, now hits at hop 0 —
+they are I09's two STRONG targets, reached on today's registries because PAPER 071 now exists
+(at the event's parent the paper was only `CORPUS P358`). The added bytes are their own text plus
+the one outward hop from them (PAPER 054, 002, 023, 017, 061, CLAIM 028, DIS-008). Nothing is capped.

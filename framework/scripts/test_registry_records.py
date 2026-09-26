@@ -170,20 +170,76 @@ class CaseDACaveatSurvivesTheSelection(unittest.TestCase):
 
 
 class CaseEReachableOnlyByExpansion(unittest.TestCase):
-    def test_hop_zero_does_not_reach_the_claim_and_hop_one_does(self) -> None:
+    """🔴 CONTRACT CHANGED DELIBERATELY BY K1 (2026-09-26,
+    `governance/design_records/k1_citation_by_record_link_20260926.md`).
+
+    Until K1 this pinned that NO claim is reached at hop 0 for a PMID whose claims only cite the
+    paper through `[[paper_registry_current#PAPER n]]`. That was the I03 miss of Benchmark I: a
+    claim that cites the paper by its record link was invisible to `get --pmid`. What stays true,
+    and is still pinned here: a claim the paper record links OUT to, and which does not itself
+    cite the paper, is reached only by `--hops`, and the expansion stays explicit.
+    """
+
+    def test_hop_zero_reaches_only_citations_by_link_and_hop_one_adds_outward_links(self) -> None:
         at_zero = rr.select(ROOT, "wwox", pmid=AMBIGUOUS_PMID, hops=0)
         at_one = rr.select(ROOT, "wwox", pmid=AMBIGUOUS_PMID, hops=1)
-        claims_zero = {r.record_id for r, _ in at_zero.hits if r.source == "claim_registry_current"}
-        claims_one = {r.record_id for r, _ in at_one.hits if r.source == "claim_registry_current"}
-        self.assertEqual(set(), claims_zero)
-        self.assertTrue(claims_one, "one hop must reach the claims the paper record links to")
-        self.assertTrue(claims_one - claims_zero)
+        zero = {r.record_id: why for r, why in at_zero.hits if r.source == "claim_registry_current"}
+        one = {r.record_id: why for r, why in at_one.hits if r.source == "claim_registry_current"}
+        self.assertTrue(zero, "the fixture needs a claim that links to the paper's record")
+        for claim, why in zero.items():
+            self.assertTrue(why.startswith("mention (links to paper_registry_current#PAPER"),
+                            (claim, why))
+        outward_only = set(one) - set(zero)
+        self.assertTrue(outward_only, "one hop must still add claims reached only outward")
+        for claim in outward_only:
+            self.assertIn("(hop 1)", one[claim], claim)
 
     def test_expansion_is_explicit_and_the_limit_is_stated(self) -> None:
         found = rr.select(ROOT, "wwox", pmid=AMBIGUOUS_PMID, hops=1)
         rendered = rr.render(found, query="x")
         self.assertIn("limits of this selection", rendered)
         self.assertIn("--hops", rendered)
+
+
+class ACitationByRecordLinkIsACitation(unittest.TestCase):
+    """K1: the alias set is the query's IDENTITY records, and only they turn a link into a hit."""
+
+    def setUp(self) -> None:
+        import tempfile
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.root = Path(self.tmp.name)
+        registries = self.root / "disease-models/wwox/registries"
+        registries.mkdir(parents=True)
+        (registries / "paper_registry_current.md").write_text(
+            "## PAPER 001\n**Identifier:** PMID 11111111 / DOI 10.1/one\n\n"
+            "## PAPER 002\n**Identifier:** PMID 22222222 / DOI 10.1/two\n"
+            "**Note:** discussed beside PMID 33333333 in prose only.\n", encoding="utf-8")
+        (registries / "claim_registry_current.md").write_text(
+            "## CLAIM 001\n**Title:** rests on the first paper\n"
+            "**Sources:** [[paper_registry_current#PAPER 001]]\n\n"
+            "## CLAIM 002\n**Title:** rests on the second paper\n"
+            "**Sources:** [[paper_registry_current#PAPER 002]]\n", encoding="utf-8")
+
+    def claims(self, **query: str) -> dict[str, str]:
+        found = rr.select(self.root, "wwox", hops=0, **query)
+        return {r.record_id: why for r, why in found.hits if r.source == "claim_registry_current"}
+
+    def test_a_link_to_the_papers_identity_record_is_a_mention_that_names_the_link(self) -> None:
+        self.assertEqual({"CLAIM 001": "mention (links to paper_registry_current#PAPER 001)"},
+                         self.claims(pmid="11111111"))
+        self.assertEqual({"CLAIM 001": "mention (links to paper_registry_current#PAPER 001)"},
+                         self.claims(doi="10.1/one"))
+
+    def test_a_link_to_another_paper_is_not_a_hit(self) -> None:
+        self.assertNotIn("CLAIM 002", self.claims(pmid="11111111"))
+
+    def test_without_an_identity_record_no_link_becomes_a_mention(self) -> None:
+        """PMID 33333333 is only MENTIONED in PAPER 002's prose: PAPER 002 is not its identity,
+        so CLAIM 002's link to PAPER 002 must not be read as citing 33333333."""
+        found = rr.select(self.root, "wwox", pmid="33333333", hops=0)
+        self.assertEqual({("PAPER 002", "mention")},
+                         {(r.record_id, why) for r, why in found.hits})
 
 
 class CaseFAnEmptyResultIsNotAScientificStatement(unittest.TestCase):

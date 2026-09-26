@@ -572,6 +572,31 @@ def select(root: Path, disease: str, *, pmid: str = "", doi: str = "", record_id
 
     searched = dict(corpus)     # before `--hops` widens `corpus`; see the field report below
     needle_id = record_id.strip().lower()
+    # 🔴 A RECORD THAT CITES THE PAPER BY ITS RECORD LINK CITES THE PAPER (K1, design record
+    # `governance/design_records/k1_citation_by_record_link_20260926.md`). Benchmark I, I03:
+    # CLAIM 015 carries `[[paper_registry_current#PAPER 021]]`, PAPER 021 is PMID 31340538, and
+    # `get --pmid 31340538` never returned CLAIM 015, because links were followed out of a hit
+    # and never back into one. The alias set is the query's IDENTITY records, derived from the
+    # loaded corpus exactly as the identity branch below derives them — never a mention, never
+    # a hop. A record whose text wikilinks to one of them is a `mention`, and the label names
+    # the link. Identity and the outward `--hops` walk are unchanged.
+    aliases: set[tuple[str, str]] = set()
+    if pmid or doi:
+        for stem, records in corpus.items():
+            for record in records:
+                if record.kind != "record" or not record.identity_id:
+                    continue
+                values = record.identity_values()
+                if (pmid and pmid in values) or (doi and doi.lower() in values.lower()):
+                    aliases.add((stem, " ".join(record.identity_id.split()).lower()))
+
+    def links_to_alias(record: Record) -> str:
+        for stem, anchor in WIKILINK.findall(record.text):
+            target = identity_token(anchor) or anchor.strip()
+            if (stem, " ".join(target.split()).lower()) in aliases:
+                return f"{stem}#{target}"
+        return ""
+
     for stem, records in corpus.items():
         for record in records:
             why = ""
@@ -584,6 +609,8 @@ def select(root: Path, disease: str, *, pmid: str = "", doi: str = "", record_id
                 why = "identity (doi)"
             elif pmid and pmid in PMID_RE.findall(record.match_text):
                 why = "mention"
+            elif aliases and (link := links_to_alias(record)):
+                why = f"mention (links to {link})"
             elif terms and terms_hit(record.match_text, terms, match):
                 why = "theme"
             elif constraints and not any((needle_id, pmid, doi, terms)):
@@ -891,8 +918,9 @@ def render(found: Selection, *, query: str, full: bool = True) -> str:
                  " · ".join(f"{k}={v[:12]}" for k, v in sorted(found.file_digests.items())))
     lines.append(repository_line(found.repository))
     lines.append("  limits of this selection: it reaches records whose identity or prose matches "
-                 "the query, plus one hop per --hops along declared wikilinks. A relevant record "
-                 "that names neither the query nor a returned record is not here.")
+                 "the query, records that wikilink to an identity record of the query, plus one "
+                 "hop per --hops along declared wikilinks. A relevant record that names neither "
+                 "the query nor a returned record is not here.")
     return "\n".join(lines)
 
 
