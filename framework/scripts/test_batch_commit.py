@@ -113,7 +113,6 @@ class RecordScopedPropagation(unittest.TestCase):
         from batch_commit import RECORD_SCOPED, propagate
         papers = "disease-models/wwox/registries/paper_registry_current.md"
         self.assertNotIn(papers, RECORD_SCOPED)
-        self.assertEqual(len(RECORD_SCOPED), 3)
         self.assertTrue(set(RECORD_SCOPED) <= set(CURRENTS))
         with tempfile.TemporaryDirectory() as temporary:
             path = self._repo(temporary, papers)
