@@ -25,6 +25,7 @@ plan_defined_parameters: RETRY_POLICY on_exhaust default (A.1); APPLICABLE_GOVER
 TASK_ID / DIRECTIVE_VERSION (incrementa a ogni modifica, incl. OPERATOR_OVERRIDE con origin: OPERATOR)
 GENERATION (incrementa a ogni riassegnazione) / OWNER (ACTOR_ID) / PRIORITY
 OBJECTIVE / SCOPE / ACCEPTANCE_CRITERIA (verificabili) / DEPENDENCIES
+CONTEXT_POLICY: SOURCE_FIRST | QUESTION_DRIVEN | SYNTHESIS | EXPLICIT_OPERATOR_REQUEST   [2026-09-26]
 REVIEW_REQUIREMENT (floor Ladder, Annex C)
 INTERACTION_MODE: AUTONOMOUS_COMPLETE | QUESTIONS_ALLOWED | SINGLE_TURN        [E6]
 RETRY_POLICY: max_attempts / classi di errore ritentabili /
@@ -52,6 +53,15 @@ depositata non "non cita nulla", e collassare i due stati è la classe di errore
 questo repository abbia misurato. Una edge `SAME_CONTAINER` non è decorazione — l'introduzione di
 un curatore **non cita** il capitolo che introduce, e un rilevatore basato sulle sole citazioni
 riporterebbe 3 edge su 4 sembrando completo.
+
+**`CONTEXT_POLICY`** — obbligatorio quando il task manda un lettore a un full text: dice che cosa
+il lettore tiene della conoscenza pregressa di LEGEND mentre legge. Valori e semantica sono quelli
+di [`fulltext_read_receipt.md` § *Before reading: context policy*](../framework/protocols/fulltext_read_receipt.md#before-reading-context-policy),
+qui solo richiamati. Un contratto che enuncia la risposta corrente di LEGEND è `QUESTION_DRIVEN`,
+mai `SOURCE_FIRST`. Lo slot esiste perché l'audit M1 (2026-09-26,
+[`m1_adoption_audit_20260926.md`](design_records/m1_adoption_audit_20260926.md)) ha trovato la
+dichiarazione in **0/42** sessioni: la regola diceva *"nello `SCOPE` del contratto"*, ma il
+contratto non aveva un posto dove scriverla.
 
 ### A.1b · WAVE_n_RESULT — e le due chiavi che §21c produce **[aggiunto 2026-09-10]**
 

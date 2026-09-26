@@ -125,3 +125,12 @@ lookup. Re-acquisition is owed before either record is cited outside this corpus
 ## BATCH DISPOSITION — appended by the integrator, append-only
 
 **Status:** **RE-QUEUED** — recovered 2026-09-26 from the VPS backup (`06ee25a`). The VPS batch that disposed of this candidate never reached `main`: re-queued for `BATCH_20260926_ALDAZ`. Identifiers written on the VPS are annotated in place as `(VPS numbering)` / `(VPS batch, never on main)`; full-text queue ids were renumbered (see `disease-models/wwox/research/vps_recovery_20260925/README.md`).
+
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260926_ALDAZ_R2` (2026-09-26, ACTOR_ID `scientist-a`), append-only
+
+**Status:** **PROPAGATED** — `BATCH_20260926_ALDAZ_R2`.
+
+§2.1: new **`PAPER 116`** for PMID 21212533 (Saeki 2011), with the `Evidence depth` line §2.4 requires (receipt `FTR-20260726-21212533-01`, complete, verified in the ledger), the proposed `Role`, the Figure 3 boundary and the declared provenance ceiling; `Claim links: none`. No literature-log record exists for this PMID and none is created (the batch's two new LIT ids went to the Batch-2 papers); the record says so. §2.2: `PAPER 100` (PMID 33058734, registered by `BATCH_20260926_ALDAZ_R1`) receives the `Role` in the consultation's wording, renumbered (`PAPER 094` on the VPS → `PAPER 102`) and with its last sentence re-derived: the VPS attributed the `DL-MECH-012` convergence withdrawal to `BATCH_20260913_003` (VPS batch, never on main), and on main that withdrawal has not happened. §2.3 is **superseded**: PMID 42082822 was classified `CORPUS` by the operator on 2026-09-20 and already carries its depth line. The consultation's questions (§4) were answered on the VPS; no status other than `processed` is written for 21212533.
