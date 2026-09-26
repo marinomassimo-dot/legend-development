@@ -127,6 +127,7 @@ Run everything as `python3 <path> --help` first. Paths are repo-relative.
 | the causal graph LEGEND already declares, with every untyped edge named as untyped | `framework/scripts/pathograph.py` |
 | a non-canonical Markdown/Obsidian semantic graph from the public registries | `framework/scripts/generate_semantic_graph.py` |
 | registry cardinality and both debt ratchets | `framework/scripts/growth_anchors.py check` |
+| which LIT records carry a `Status` outside the log's own `## Status vocabulary` table; the conservative migration (dry run — `--write` on the canonical log is a `BATCH_COMMIT` act); the grandfather snapshot LINT reads | `framework/scripts/lit_status.py validate` · `… migrate --log <log>` · `… snapshot --write-json framework/scripts/lit_status_legacy.json` |
 | how this repository's caught errors were caught | `framework/scripts/attribution_census.py` |
 | phenotypic-similarity neighbours of a disease from public HPO annotations — **reading order, not mechanistic transfer** | `scripts/phenotypic_neighbors.py` |
 | registry citation/link discrepancies — a paper cited by a claim whose `Claim links` omit it — reported, never adjudicated | `framework/scripts/support_linkage.py` |

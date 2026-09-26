@@ -719,6 +719,49 @@ def _check_locator_propagation(findings, repo_root):
         findings.append(Finding("INFO", "LOCATOR_PROPAGATION", result.summary()))
 
 
+def _check_lit_statuses(findings, log_text, grandfathered):
+    """LIT `Status` against the log's own `## Status vocabulary` table (P9a, 2026-09-14).
+
+    The vocabulary is read from the table, never restated here. A record outside it that is
+    grandfathered by identity AND exact value (`lit_status_legacy.json`) warns until migrated;
+    anything else outside it blocks BATCH_COMMIT, because a new value is new sprawl.
+    """
+    here = os.path.dirname(os.path.abspath(__file__))
+    if here not in sys.path:
+        sys.path.insert(0, here)
+    import lit_status  # noqa: PLC0415
+    records = lit_status.validate(log_text)
+    if not records:
+        if growth_anchors.HEADINGS["literature"].search(log_text):
+            findings.append(Finding("INFO", "LIT_STATUS_UNCHECKED",
+                                    "the literature log has records but no `## Status vocabulary` table"))
+        return
+    legacy: dict[str, int] = {}
+    for record in records:
+        if record.kind == lit_status.VALID:
+            continue
+        if grandfathered.get(record.record) == record.fingerprint:
+            legacy[record.kind] = legacy.get(record.kind, 0) + 1
+            continue
+        findings.append(Finding(
+            "BLOCK_BATCH_COMMIT", "INVALID_LIT_STATUS",
+            f"{record.record}: `{record.fingerprint}` is {record.kind} against the log's Status "
+            f"vocabulary table and is not grandfathered"))
+    if legacy:
+        findings.append(Finding(
+            "WARN_BUT_PROCEED", "LIT_STATUS_LEGACY",
+            f"{sum(legacy.values())} grandfathered LIT record(s) outside the Status vocabulary ("
+            + ", ".join(f"{k}: {v}" for k, v in sorted(legacy.items()))
+            + "). `lit_status.py migrate --log <log>` prints the conservative migration; "
+              "applying it is a BATCH_COMMIT act"))
+    stale = sorted(set(grandfathered) - {r.record for r in records if r.kind != lit_status.VALID})
+    if stale:
+        findings.append(Finding(
+            "INFO", "LIT_STATUS_SNAPSHOT_STALE",
+            f"{len(stale)} grandfathered record(s) are now valid or gone; regenerate "
+            "lit_status_legacy.json with `lit_status.py snapshot --write-json`"))
+
+
 def claim_paper_findings(claims_text, paper_ids, corpus_ids=None):
     corpus_ids = corpus_ids or set()
     findings = []
@@ -845,6 +888,14 @@ def lint(repo_root):
         corpus_ids = set(parse_corpus_ids(papers))
         findings.extend(claim_paper_findings(claims, paper_ids, corpus_ids))
         _check_unlinked_support(findings, claims, papers)
+        try:
+            import lit_status  # noqa: PLC0415
+            _check_lit_statuses(findings, _read(os.path.join(repo_root, CURRENTS[3])),
+                                grandfathered=lit_status.load_snapshot())
+        except Exception as error:                       # noqa: BLE001 — reported, not raised
+            findings.append(Finding(
+                "INFO", "LIT_STATUS_UNCHECKED",
+                f"the LIT status check could not run: {type(error).__name__}: {error}"))
         # 🔴 This check reaches outside the LINT: it imports `batch_queue`, which pulls the
         # intake skill from `.claude/skills/`, and reads every corpus seed. Any of that can
         # fail for reasons that have nothing to do with the canonical state — a missing skill
