@@ -170,13 +170,15 @@ A paper integrated is not necessarily a paper that changes BLOCCO 1.
 
 ## PAPER 007
 **Short title:** Hussain 2023 P47T
-**Full title:** P47T model shows progressive neuroinflammation and altered PPxY binding
-**Authors:** Hussain et al.
+**Full title:** WWOX P47T partial loss-of-function mutation induces epilepsy, progressive neuroinflammation, and cerebellar degeneration in mice phenocopying human SCAR12
+**Authors:** Hussain T, Sanchez K, Crayton J, Saha D, Jeter C, Lu Y, Abba M, Seo R, Noebels JL, Fonken L, Aldaz CM
 **Year:** 2023
 **Source type:** variant-specific mechanistic study
-**Journal/source:** pending normalization
-**Identifier:** pending normalization
+**Journal/source:** *Progress in Neurobiology* 223:102425 (NIH author manuscript NIHMS1957654)
+**Identifier:** PMID 36828035 / PMCID PMC10835625 / DOI 10.1016/j.pneurobio.2023.102425
 **Status:** integrated
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260913-36828035-03`; manifest `deepdive_manifests/PMID36828035.json`, dossier `fulltext_dossiers/PMID36828035.md`. Earlier partial receipts `FTR-20260826-36828035-01` / `-02` stand in the ledger.
+**Identity record (BATCH_20260926_ALDAZ, 2026-09-26):** until this batch the record carried an invented `Full title` (a restatement of `CLAIM 006` + `CLAIM 007`, not the title of any article) and no identifier, so an identity query for PMID 36828035 could not reach it. Normalised from the article XML. The same paper is also `PAPER 112` (registered by `BATCH_20260926_ALDAZ_R1`) and `CORPUS-STUB-053` → `PAPER 112`; both are kept append-only and point here. Transferability and clinical relevance are unchanged by this normalisation: the proposal to raise clinical relevance to MODERATE (CC-20260826-PROVENANCE-PAPER007-01 §3.B) is not adopted: the field rates relevance to the reference genotype, both claims this record carries hold P47T ≠ Q230P and stay T3, and the paper's value as the corpus's electro-behavioural seizure dataset for a long-lived WWOX mouse is carried by `CLAIM 037`, not by this field.
 **Primary pathway:** P6 — neuroinflammation
 **Secondary pathway:** P3 — interaction logic
 **Model/species:** mouse / functional variant study
@@ -185,7 +187,7 @@ A paper integrated is not necessarily a paper that changes BLOCCO 1.
 **clinical relevance:** LOW
 **Claim links:** 006, 007
 **Role:** genotype caution anchor
-**Note:** key for "P47T ≠ Q230P". In-silico read-across (IPOTESI, `INBOX-006` — quarantine record, private overlay, CC-2026-07-04-004): pur essendo clinicamente distinto da Q230P ("P47T ≠ Q230P" resta valido sul piano fenotipico), P47T appartiene alla **stessa classe di stabilità** — variante destabilizzante (ΔΔG in-silico +2.8), lontana dal sito attivo (~48 Å), LoF parziale, topo che sopravvive >1 anno. ⚠️ **Lettura poi RITIRATA (repair 2026-07-14):** P47T **non** è equivalente sul piano meccanicistico — ha **proteina normale** e un difetto di binding **WW1/PPxY**, cioè un'altra lesione in un altro dominio. Resta un **comparator model**, **non** un banco read-across: nessuna prova su un missenso SDR sepolto può passare di lì. Vedi `MECHANISM_TRANSFER_FIREWALL`.
+**Note:** key for "P47T ≠ Q230P". In-silico read-across (IPOTESI, `INBOX-006` — quarantine record, private overlay, CC-2026-07-04-004): pur essendo clinicamente distinto da Q230P ("P47T ≠ Q230P" resta valido sul piano fenotipico), P47T appartiene alla **stessa classe di stabilità** — variante destabilizzante (ΔΔG in-silico +2.8), lontana dal sito attivo (~48 Å), LoF parziale, topo che sopravvive >1 anno. ⚠️ **Lettura poi RITIRATA (repair 2026-07-14):** P47T **non** è equivalente sul piano meccanicistico — ha **proteina normale** e un difetto di binding **WW1/PPxY**, cioè un'altra lesione in un altro dominio. Resta un **comparator model**, **non** un banco read-across: nessuna prova su un missenso SDR sepolto può passare di lì. Vedi `MECHANISM_TRANSFER_FIREWALL`. ⚠️ **`BATCH_20260926_ALDAZ`:** *proteina normale* è la lettura di Mallaret 2014 ([[paper_registry_current#PAPER 042]], fibroblasti umani, per ispezione visiva), non di questo paper — qui l'abbondanza di proteina non è quantificata ([[claim_registry_current#CLAIM 007]]); il *binding WW1/PPxY* è misurato solo come recupero da due oligopeptidi PPPY.
 
 ---
 
@@ -7506,12 +7508,15 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Year:** 2023
 **Journal/source:** *Progress in Neurobiology* 223:102425
 **Identifier:** PMID 36828035 / DOI 10.1016/j.pneurobio.2023.102425
-**Status:** processed
+**Status:** superseded
+**Superseded by:** [[paper_registry_current#PAPER 007]] — same paper (`BATCH_20260926_ALDAZ`, 2026-09-26); this record is kept append-only as audit history and never deleted
 **Record provenance:** placeholder `CORPUS-STUB-053` promoted by `BATCH_20260926_ALDAZ_R1` (2026-09-26) to register a full-text reading recovered from the VPS backup; bibliographic fields from the reading's dossier header
-**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260913-36828035-03` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID36828035.json`, dossier `fulltext_dossiers/PMID36828035.md`.
+**Evidence depth:** carried by `PAPER 007`, the canonical record of this paper. `BATCH_20260926_ALDAZ_R1` registered the reading on this record (receipt `FTR-20260913-36828035-03`, manifest `deepdive_manifests/PMID36828035.json`, dossier `fulltext_dossiers/PMID36828035.md`); `BATCH_20260926_ALDAZ` moved the declaration to `PAPER 007`, so one receipt backs one record.
 **Transferability:** not assessed in this registration — held with the reading's candidate
 **clinical relevance:** not assessed in this registration — held with the reading's candidate
-**Claim links:** none — held for the operator's decision on the reading's candidate
+**Claim links:** none — see `PAPER 007`
+**Next action:** none — superseded by PAPER 007
+**Duplicate record (BATCH_20260926_ALDAZ, 2026-09-26):** **same paper as [[paper_registry_current#PAPER 007]]**, which carries `CLAIM 006` and `CLAIM 007` and now holds this record's identity and evidence depth. Kept append-only, never deleted: its receipt and its registration by `BATCH_20260926_ALDAZ_R1` stay resolvable. Cite `PAPER 007`, not this record.
 **Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it (`CC-20260913-36828035-01`) are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
 
 ---

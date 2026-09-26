@@ -95,6 +95,7 @@ Register of active research lines that emerged from LEGEND after the bootstrap o
 **Clinical relevance:** MODERATE
 **Reason active:** a real axis but probably downstream/amplifier rather than a universal driver
 **Next action:** decide whether to promote it to a standalone meta
+**Note (BATCH_20260926_ALDAZ, 2026-09-26):** the "progression" leg of this line rests on `CLAIM 006`, now narrowed: astrogliosis progresses; microglial progression is shown for morphology only and abundance progression is untested; two time points and pseudoreplicated statistics (n = 3 mice) give a direction, not a rate.
 
 ---
 

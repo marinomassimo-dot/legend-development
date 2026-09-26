@@ -165,3 +165,12 @@ anticipates. **Do not suspend `CLAIM 006`/`CLAIM 007` for §3.A.** `CLAIM 006` n
   on the Fig 3b/3c/4b/4c entries before the `CLAIM 006` summary is rewritten. The finding rests
   entirely on the presence and absence of within-genotype significance brackets, which is exactly
   the kind of read a second pair of eyes should confirm.
+
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260926_ALDAZ` (2026-09-26, ACTOR_ID `plan`), append-only
+
+**Status:** **PROPAGATED** — `BATCH_20260926_ALDAZ`.
+
+§3.A `IDENTITY_REPAIR`: `PAPER 007` carries the verbatim title, journal, PMID/PMCID/DOI and the author list checked against the article XML. The stub it names was already promoted to `PAPER 112` by `BATCH_20260926_ALDAZ_R1`; `PAPER 112` is now `superseded` by `PAPER 007`, kept append-only. §3.B `READ_STATUS_REPAIR`: the depth is stated on the record, now `complete_fulltext_read` on `FTR-20260913-36828035-03`, which supersedes the partial receipts this candidate named. The `clinical relevance` MODERATE proposal is **declined** and the reason is written on `PAPER 007`. §3.C: `CLAIM 006` and `CLAIM 007` are narrowed, with the text that entered canon is the one a blind locator audit passed in three rounds (`research/locator_audits/2026-09-26_PMID36828035_CLAIM006_007_blind_audit.md`), not this candidate's drafted wording. `CLAIM 007`'s title no longer says "abolishes PPxY binding to WW-domain partners".

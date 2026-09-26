@@ -25,7 +25,7 @@ Analysis of the role of the GABAergic system in the WWOX loss-of-function contex
 ### Supporting
 - Steinberg 2024 organoids (LIT-001 / PAPER 001) — in WWOX-KO organoids: increased GABAergic markers; current hypotheses of immature depolarizing GABA
 - Hussain 2019 (LIT-006 / PAPER 006) — reduced GABAergic interneurons and glial activation (same corpus paper 85)
-- Hussain 2023 P47T (LIT-007 / PAPER 007) — progressive neuroinflammation (same corpus paper 53)
+- Hussain 2023 P47T (LIT-007 / PAPER 007) — progressive neuroinflammation (same corpus paper 53). *`BATCH_20260926_ALDAZ`: in the paper's own figures the progression is hippocampal astrogliosis plus microglial morphology; progression of microglial abundance is untested — see [[claim_registry_current#CLAIM 006]].*
 
 ### Deep-dive 181–220 (Commit 181–220)
 - Paper 210 → CLAIM 021: reduced spontaneous inhibition in layer 2/3 pyramidal neurons (electrophysiological evidence of a functional inhibitory deficit at the network level)

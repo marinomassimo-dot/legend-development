@@ -138,3 +138,12 @@ times and never labelled as a preprint `[manifest PMID42128308 entry 24]`. Statu
 Item **A** requires operator authorization: suspending two `consolidated baseline` claims is a
 status change on baselines. Items **B**, **C**, **D** and **E** are review-only — they correct
 metadata and declarations against artifacts already on disk, and demote no experimental datum.
+
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260926_ALDAZ` (2026-09-26, ACTOR_ID `plan`), append-only
+
+**Status:** **PROPAGATED IN PART** — `BATCH_20260926_ALDAZ`.
+
+Item **A** (`PAPER 007`) only: propagated except A(5) — the note on both claims that the published title names **epilepsy** and **cerebellar degeneration** — which stays owed with `CC-20260913-36828035-01` §4 (the cerebellar claim); it was already superseded in place by `CC-20260826-PROVENANCE-PAPER007-01`, which `BATCH_20260926_ALDAZ` propagated. Items **B** (`PAPER 027`/`PAPER 030`), **C** (`PAPER 001` → PMID 42397075), **D** (`PAPER 039` depth) and **E** (two meta corrections) are untouched and stay queued.

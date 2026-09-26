@@ -19,7 +19,7 @@
 ## B — Mechanistically-grounded repurposing (months; needs validation)
 
 - **B1. GSK3β / JNK / MEK-ERK (Tau) axis.** WWOX loss activates GSK3β, JNK and ERK → Tau hyperphosphorylation/aggregation; inhibitors (SP600125 anti-JNK, PD-98059 anti-MEK) block it in vitro (PMID **22193544**, **15126504**).
-- **B2. Neuroinflammation control.** Partial-LoF WWOX models show progressive astro-microgliosis worsening with age (PMID **36828035**, P47T). Relevant to hypomorphic alleles. No WWOX-specific drug identified yet.
+- **B2. Neuroinflammation control.** In the partial-LoF P47T mouse (PMID **36828035**) hippocampal astrogliosis rises with age and microglial morphology degrades further with age; whether microglial abundance progresses was not tested, and the statistics use subfields or single cells from n = 3 mice (`CLAIM 006`, narrowed by `BATCH_20260926_ALDAZ`). Relevant to hypomorphic alleles. No WWOX-specific drug identified yet.
 - **B3. Wnt/β-catenin.** WWOX blocks Dishevelled nuclear translocation; its loss de-represses Wnt/β-catenin (PMID **19465938**). Downstream lever, hypothesis to verify.
 - **B4. Zfra peptide (partner stabilization).** 31-aa peptide; reduced neuroinflammation and restored memory in Alzheimer mice (PMID **35883580**, **34359949**, **30158849**). *Theoretically* could stabilize residual function of a hypomorphic missense — but evidence is Alzheimer/cancer, none in epilepsy/WOREE. Experimental, indirect.
 
