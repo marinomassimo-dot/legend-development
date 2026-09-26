@@ -8,6 +8,7 @@ from pathlib import Path
 import subprocess
 import tempfile
 import unittest
+from unittest.mock import patch
 
 import daily_push_check as check
 
@@ -70,6 +71,36 @@ class DailyPushCheckTests(unittest.TestCase):
             (root / "file").write_text("base\naddition\n")
             git(root, "commit", "-q", "-am", "same patch, new ID")
             self.assertEqual([], check.local_branches(root, git(root, "rev-parse", "main")))
+
+    def test_detached_scratch_is_visible_without_a_false_unpublished_alert(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory) / "repo"
+            root.mkdir()
+            git(root, "init", "-q", "-b", "main")
+            git(root, "config", "user.name", "Test")
+            git(root, "config", "user.email", "example@example.com")
+            (root / "file").write_text("base\n")
+            git(root, "add", "file")
+            git(root, "commit", "-q", "-m", "base")
+            sha = git(root, "rev-parse", "HEAD")
+            named = Path(directory) / "named"
+            scratch = Path(directory) / "scratch"
+            git(root, "worktree", "add", "-q", "-b", "task/demo", str(named), "main")
+            git(root, "worktree", "add", "-q", "--detach", str(scratch), "main")
+            (named / "local-note").write_text("in progress\n")
+            (scratch / "fixture").write_text("temporary\n")
+            now = dt.datetime(2026, 9, 26, tzinfo=dt.timezone.utc)
+            with (patch.object(check, "development_remote", return_value="development"),
+                  patch.object(check, "remote_main", return_value=sha)):
+                result = check.report(root, now)
+                self.assertEqual("UNPUBLISHED", result["status"])
+                self.assertEqual([str(named)], result["dirty_worktrees"])
+                self.assertEqual([str(scratch)], result["detached_dirty_worktrees"])
+                (named / "local-note").unlink()
+                result = check.report(root, now)
+                self.assertEqual("CURRENT", result["status"])
+                self.assertEqual([], result["dirty_worktrees"])
+                self.assertEqual([str(scratch)], result["detached_dirty_worktrees"])
 
 
 if __name__ == "__main__":

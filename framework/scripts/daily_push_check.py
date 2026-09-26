@@ -90,14 +90,23 @@ def local_branches(root: Path, baseline: str) -> list[dict[str, object]]:
     return rows
 
 
-def dirty_worktrees(root: Path) -> list[str]:
-    paths = []
-    for line in git(root, "worktree", "list", "--porcelain").splitlines():
-        if line.startswith("worktree "):
-            path = Path(line[9:])
-            if path.exists() and git(path, "status", "--porcelain", "--untracked-files=all"):
-                paths.append(str(path))
-    return paths
+def dirty_worktrees(root: Path) -> tuple[list[str], list[str]]:
+    """Separate owned branch work from detached scratch worktrees.
+
+    Detached worktrees remain visible for inspection, but a test fixture left dirty
+    under /tmp is not evidence that an actor has unpublished task work.
+    """
+    active, detached = [], []
+    for block in git(root, "worktree", "list", "--porcelain").split("\n\n"):
+        lines = block.splitlines()
+        location = next((line[9:] for line in lines if line.startswith("worktree ")), None)
+        if location is None:
+            continue
+        path = Path(location)
+        if path.exists() and git(path, "status", "--porcelain", "--untracked-files=all"):
+            (active if any(line.startswith("branch ") for line in lines) else detached).append(
+                str(path))
+    return active, detached
 
 
 def report(root: Path, now: dt.datetime) -> dict[str, object]:
@@ -106,7 +115,7 @@ def report(root: Path, now: dt.datetime) -> dict[str, object]:
         "checked_at": now.astimezone(dt.timezone.utc).isoformat(),
         "actor_to_notify": "orchestrator", "destination": DESTINATION,
         "repository": str(root), "status": "UNKNOWN", "unpublished": [],
-        "dirty_worktrees": [],
+        "dirty_worktrees": [], "detached_dirty_worktrees": [],
     }
     try:
         remote = development_remote(root)
@@ -114,7 +123,7 @@ def report(root: Path, now: dt.datetime) -> dict[str, object]:
         result["remote"] = remote
         result["remote_main_sha"] = sha
         result["unpublished"] = local_branches(root, sha)
-        result["dirty_worktrees"] = dirty_worktrees(root)
+        result["dirty_worktrees"], result["detached_dirty_worktrees"] = dirty_worktrees(root)
         result["status"] = "UNPUBLISHED" if result["unpublished"] or result["dirty_worktrees"] else "CURRENT"
     except CheckError as exc:
         result["error"] = str(exc)

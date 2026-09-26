@@ -69,8 +69,9 @@ another actor's scientific work.
   request, and a finding is a new task;
 - defer a decided change to a later session, week, phase or version. "Declared debt" is not
   a resting state for an implementable change (§21e "T0");
-- perform any act on §21d's RESERVED list: no push, no history rewrite, no deletion of
-  unique material, no spend, no private-data exposure.
+- perform any act on §21d's RESERVED list: no history rewrite, no deletion of unique
+  material, no unapproved spend, no private-data exposure. A development-repository push
+  meeting §21d's rule is an agent act; publication outside that exception stays reserved.
 
 ## Weekly cadence
 
