@@ -9,6 +9,8 @@
 # a message containing spaces, passed alongside a `--` pathspec — not an adjacent one.
 #
 #   usage: scripts/legend_commit.sh "<commit message>" <path> [<path> ...]
+#   exit:  0 committed / nothing to commit · 2 usage · 3 lock timeout · 4 directory pathspec
+#          5 generated surfaces stale or unverifiable on the candidate commit (see below)
 #
 # Concurrent actors share one checkout, so every commit takes an exclusive lock:
 # `git commit` races on .git/index.lock. The commit is path-scoped, so an actor can
@@ -44,6 +46,35 @@ exec 9>"$LOCK"
 flock -w 900 9 || { echo "could not take the commit lock within 900s" >&2; exit 3; }
 
 cd "$ROOT"
+
+# Generated-surface freshness on the EXACT commit this call makes: HEAD + the named files'
+# working-tree content (candidate_tree_freshness.py --paths) — not the shared workspace, which
+# holds peers' edits. H0 (2026-09-24): three direct commits of inputs (a receipt, a direct
+# propagation, a queue edit) left four generated surfaces stale, and nothing on this path
+# looked. Name the regenerated surface alongside its input, or state why not:
+#   LEGEND_STALE_SURFACES_BECAUSE="<reason>" scripts/legend_commit.sh "<msg>" <paths>
+# The reason is printed and recorded as a trailer of the commit message.
+FRESHNESS="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)/framework/scripts/candidate_tree_freshness.py"
+if [ -f "$FRESHNESS" ]; then
+  set +e
+  REPORT="$(python3 "$FRESHNESS" --repo "$ROOT" --paths "$@" 2>&1)"
+  CODE=$?
+  set -e
+  if [ "$CODE" -ne 0 ]; then
+    printf '%s\n' "$REPORT" >&2
+    if [ -n "${LEGEND_STALE_SURFACES_BECAUSE:-}" ]; then
+      echo "committing although generated surfaces are not fresh, because: $LEGEND_STALE_SURFACES_BECAUSE" >&2
+      MSG="$MSG
+
+Stale-surfaces-because: $LEGEND_STALE_SURFACES_BECAUSE"
+    else
+      echo "refused: this commit would leave generated surfaces stale or unverifiable (exit $CODE)." >&2
+      echo "Regenerate and name the surface too, or set LEGEND_STALE_SURFACES_BECAUSE=\"<reason>\"." >&2
+      exit 5
+    fi
+  fi
+fi
+
 git add -- "$@"
 if git diff --cached --quiet -- "$@"; then
   echo "NOTHING_TO_COMMIT"

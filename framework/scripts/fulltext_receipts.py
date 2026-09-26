@@ -1599,6 +1599,22 @@ def main() -> int:
                 artifact_root=(Path(args.artifact_workspace) if args.artifact_workspace else None),
             )
             print(f"RECORDED: {persisted['event_id']}")
+            # H0 (2026-09-24): a receipt landed alone left reading_state.md and
+            # coverage_report.md stale until the next batch commit. The ledger is their input;
+            # land them in the same commit. legend_commit.sh and task_close.py refuse a
+            # candidate that leaves them stale (candidate_tree_freshness.py).
+            registries = ledger.parent
+            reason = "the dirty ledger is this receipt, committed with the surface"
+            print("FOLLOW-UP: this append stales the surfaces derived from the ledger; "
+                  "regenerate and commit them with it (the reason below is true only while "
+                  f"`git status --porcelain {registries}` lists nothing but the ledger):\n"
+                  f"  python3 framework/scripts/reading_state.py --disease {args.disease} "
+                  f"--out {registries / 'reading_state.md'} --inputs-dirty-because \"{reason}\"\n"
+                  f"  python3 framework/scripts/coverage_report.py --disease {args.disease} "
+                  f"--out {registries / 'coverage_report.md'} --inputs-dirty-because \"{reason}\"\n"
+                  f"  python3 framework/scripts/candidate_tree_freshness.py --paths {ledger} "
+                  f"{manifest} {registries / 'reading_state.md'} "
+                  f"{registries / 'coverage_report.md'}   # what else the commit stales")
             return 0
         if args.command == "rechain":
             base_path = Path(args.onto)
