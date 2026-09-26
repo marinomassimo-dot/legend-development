@@ -112,3 +112,12 @@ population of records that the protocol does not require to be equal. Routed to 
 ## BATCH DISPOSITION — appended by the integrator, append-only
 
 **Status:** **RE-QUEUED** — recovered 2026-09-26 from the VPS backup (`06ee25a`). The VPS batch that disposed of this candidate never reached `main`: re-queued for `BATCH_20260926_ALDAZ`. Identifiers written on the VPS are annotated in place as `(VPS numbering)` / `(VPS batch, never on main)`; full-text queue ids were renumbered (see `disease-models/wwox/research/vps_recovery_20260925/README.md`).
+
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260926_ALDAZ_R2` (2026-09-26, ACTOR_ID `scientist-a`), append-only
+
+**Status:** **PROPAGATED** — `BATCH_20260926_ALDAZ_R2`.
+
+Of the 17 placeholders, 13 were already dispositioned on main: six promoted by `BATCH_20260926_ALDAZ_R1` (`CORPUS-STUB-148/107/046/074/120/110` → `PAPER 105/106/109/111/113/114`) and six resolved by `CC-20260920-EIGHT-RECORD-CLASSIFICATION-01` (`BATCH_20260920_002`: `CORPUS-STUB-123/022/027/113/175/004`); `CORPUS P324` is completed in this batch under `CC-20260913-ALDAZ-B003-01`. The residue — the `Status` wording on `CORPUS P222`, `P346`, `P272`, `P397`, which already carried their `Evidence depth` lines — is written here in the candidate's §3 form, minus its clause *"no claim cites it"*, which is no longer true of `P222` (`CLAIM 037` names PMID 18487609 in its evidence boundary). Nothing of this candidate remains owed.
