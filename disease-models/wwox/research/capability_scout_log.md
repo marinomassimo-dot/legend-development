@@ -766,3 +766,19 @@ by hand.**
 **Next surgical micro-step:** wire nothing. Read `PMID 30853297` to receipt depth — it carries a
 **measured** exon-6 skip, is a `Q230P` primary, and sits under a `consolidated baseline` claim at
 abstract depth. The capability this run most lacks is not a script; it is a receipt.
+
+## 2026-09-26 · Harness Engineering · publication monitor
+
+**Reusable gap and evidence.** The daily development-push check treated dirty detached test
+worktrees as unpublished actor work. `git worktree list --porcelain` already exposes whether a
+worktree has a branch; the check had discarded that distinction. The role contract also
+still said `no push`, despite §21d's development-repository exception.
+
+**Change made.** Separate dirty branch worktrees from dirty detached worktrees in the
+report, retain both paths, and keep both under `UNPUBLISHED` because detached changes
+may be unique.
+Correct the stale role pointer. A real-Git regression test covers the classification.
+This changes operational monitoring only; no scientific inference or current file changes.
+
+**Cost / API / privacy risk:** none; local Git and standard-library code only.
+**Next micro-step:** observe the next scheduled report for its branch and detached lists.

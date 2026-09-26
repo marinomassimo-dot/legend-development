@@ -160,7 +160,10 @@ The daily check is installed on the UTC host as an hourly cron probe at minute 4
 Only the probe at **19:45 Europe/Rome** writes
 `~/.local/state/legend/daily_push_check.json`; the other hours exit immediately.
 The Orchestrator reads that report at session start. It reports local-only commits and dirty
-worktrees (excluding preserved `backup/*` refs); it does not push, fetch, alter refs or observe clones on other hosts. A missing or
+branch worktrees (excluding preserved `backup/*` refs). Dirty detached worktrees are listed
+separately for inspection and also set `UNPUBLISHED`, since detachment alone does not prove
+their contents are disposable. The check does not push, fetch, alter
+refs or observe clones on other hosts. A missing or
 `UNKNOWN` report requires a direct check, not an assumption that everything was published.
 
 ## 8 · Before publishing
