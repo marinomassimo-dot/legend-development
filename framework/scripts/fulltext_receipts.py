@@ -663,6 +663,33 @@ def identity_correction_errors(
     return errors
 
 
+def _analysis_instant(receipt: dict[str, Any]) -> datetime | None:
+    value = receipt.get("analysis_at")
+    if not isinstance(value, str) or not value.strip():
+        return None
+    try:
+        moment = datetime.fromisoformat(value.strip().replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    return moment if moment.tzinfo is not None else None
+
+
+def strictly_earliest_reading(receipt: dict[str, Any], others: list[dict[str, Any]]) -> bool:
+    """True only when `receipt` was analysed strictly before every other receipt of its study.
+
+    A missing, unparsable or timezone-less `analysis_at` on either side is not evidence of
+    order, so it answers False: the admission is for a provable earlier reading, never a guess.
+    """
+    mine = _analysis_instant(receipt)
+    if mine is None or not others:
+        return False
+    for other in others:
+        theirs = _analysis_instant(other)
+        if theirs is None or not mine < theirs:
+            return False
+    return True
+
+
 def validate_ledger_sequence(receipts: list[dict[str, Any]]) -> list[str]:
     errors: list[str] = []
     seen: list[dict[str, Any]] = []
@@ -760,7 +787,19 @@ def validate_ledger_sequence(receipts: list[dict[str, Any]]) -> list[str]:
         # this defect. The reported defect is the legacy case and only that. The wider rule
         # is a separate decision with its own evidence, and is recorded rather than smuggled
         # in behind a bug fix.
-        if prior_for_study and prior_id is None and not (
+        # 🔴 AN EARLIER INDEPENDENT READING HAS NO PARENT TO NAME (G4.2, 2026-09-26). Two
+        # readings made on diverged histories meet here in file order, not in time order: the VPS
+        # read PMIDs 27869163 and 39868255 in full on 2026-09-13, `main` read them in part on
+        # 2026-09-21 and 2026-09-23, and a rechain puts the earlier reading AFTER the later one.
+        # Its only candidate parent is a reading that did not exist when it was made, so naming
+        # it would be the falsehood this validator already refuses above. A null parent is
+        # therefore admitted ONLY when the event's analysis_at is STRICTLY earlier than the
+        # analysis_at of every other receipt of the same study in the whole ledger; equal,
+        # later, missing or unparsable stays refused. The event itself is never altered.
+        earlier_independent = prior_id is None and strictly_earliest_reading(
+            receipt, [item for item in receipts
+                      if item is not receipt and same_study(item, pmid, doi)])
+        if prior_for_study and prior_id is None and not earlier_independent and not (
             receipt["reread_reason"] == "first_read" and priors_are_all_legacy
         ):
             errors.append(

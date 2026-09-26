@@ -993,6 +993,44 @@ class RechainMovesAnEventWithoutChangingIt(unittest.TestCase):
                           manifest.read_text(encoding="utf-8"))
 
 
+class AnEarlierIndependentReadingNamesNoParent(unittest.TestCase):
+    """G4.2 (2026-09-26): a root reading appended after a later reading of the same study.
+
+    The rechain of the VPS receipts places a complete reading made on 2026-09-13 after `main`'s
+    partial reading of 2026-09-21. The later reading cannot be its parent, so the only true
+    `prior_receipt` is null — admitted only when analysis_at is STRICTLY earlier than every
+    other receipt of the study.
+    """
+
+    def ledger(self, earlier_at: str) -> list[dict]:
+        later = example("FTR-20260921-42193054-01", "partial_fulltext_read")
+        later["analysis_at"], later["event_at"] = "2026-09-21T06:33:00Z", "2026-09-21T06:43:54Z"
+        independent = example("FTR-20260913-42193054-01")
+        independent["analysis_at"], independent["event_at"] = earlier_at, "2026-09-21T07:00:00Z"
+        return [later, independent]
+
+    def sequence_errors(self, earlier_at: str) -> list[str]:
+        return [error for error in receipts.validate_ledger_sequence(self.ledger(earlier_at))
+                if "prior_receipt is null" in error]
+
+    def test_a_strictly_earlier_root_reading_is_admitted(self) -> None:
+        self.assertEqual([], self.sequence_errors("2026-09-13T15:10:14Z"))
+
+    def test_a_later_root_reading_is_still_refused(self) -> None:
+        self.assertTrue(self.sequence_errors("2026-09-22T09:00:00Z"))
+
+    def test_an_equal_time_root_reading_is_still_refused(self) -> None:
+        self.assertTrue(self.sequence_errors("2026-09-21T06:33:00Z"))
+        self.assertTrue(self.sequence_errors("2026-09-21T08:33:00+02:00"),
+                        "the same instant written in another offset is not earlier")
+
+    def test_a_missing_time_on_the_other_side_is_not_evidence_of_order(self) -> None:
+        events = self.ledger("2026-09-13T15:10:14Z")
+        events[0]["analysis_at"] = None
+        self.assertTrue(any("prior_receipt is null" in error
+                            for error in receipts.validate_ledger_sequence(events)))
+
+
 class ARenameIsTheOneDeclaredExceptionAndItIsNarrow(unittest.TestCase):
     """🔴 Two branches minted `FTR-20260810-42422765-02` on different work.
 
