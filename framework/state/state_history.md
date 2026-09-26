@@ -24,6 +24,9 @@ the repeated `prev_batch_commit_id` and the `target_wm_version` / `last_wm_updat
 `BATCH_20260909_001` — and none of them is a current value.
 
 ```yaml
+batch_20260926_aldaz_r6_scope: "MINOR, WM_v5.4 -> WM_v5.5, MANUAL trigger. CLAIM 032 reconciled with the already-receipted primary records: PAPER 078 untreated spontaneous tumour excess, PAPER 098 homozygous hypomorph survival cost and tissue-specific detection, PAPER 107 restricted conditional mammary controls. Review PAPER 053 wording bounded; PAPER 098/107 claim links added. Working-model mirror and narrative, discovery-ledger append-only corrections, candidate dispositions aligned. Earlier candidate claiming PMID 17823927 was unread is superseded by its recovered complete receipt. No numerical CNS therapeutic threshold or mosaic efficiency is inferred. No BLOCCO 1 change. Mirror ex-post review due under section 21e."
+batch_20260926_aldaz_r6_candidates: 5
+prev_batch_commit_id_before_20260926_aldaz_r6: BATCH_20260926_ALDAZ_R5
 batch_20260926_aldaz_r5_scope: "MINOR, WM_v5.3 -> WM_v5.4, MANUAL trigger. CLAIM 029 gains two separately bounded murine B-cell observations from PAPER 110 and 115, with no ATM, CNS or clinical promotion. PAPER 027 authors corrected to Abu-Odeh et al. and two partial receipts named; PAPER 030 retained as an explicit duplicate, not independent evidence. The SI-only candidate for PMID 25331887 remains deferred because seven figure locators fail strict regeneration; no claim-strength upgrade. Working-model prose and mirror, narrative disease model, meta index and three candidate dispositions aligned. No BLOCCO 1 or therapeutic change. Mirror ex-post review due under section 21e."
 batch_20260926_aldaz_r5_candidates: 3
 prev_batch_commit_id_before_20260926_aldaz_r5: BATCH_20260926_ALDAZ_R4
