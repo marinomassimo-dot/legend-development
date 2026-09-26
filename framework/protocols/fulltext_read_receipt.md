@@ -42,7 +42,10 @@ different question: *what does the reader already hold of LEGEND's prior knowled
 reads*. It is reading methodology, not evidence provenance, so it is **not a receipt field** and
 the receipt schema does not carry it. It is declared once, as `context_policy: <value>` at the
 top of the dossier or reading notes and, where a Task Contract dispatches the reading, in that
-contract's `SCOPE`.
+contract's `SCOPE`. An ad-hoc subagent prompt that sends a reader to a full text is a dispatch
+too: its first line names the policy, and a prompt that states LEGEND's current answer is
+`QUESTION_DRIVEN`, never `SOURCE_FIRST`. A prompt that sends any reader to LEGEND's records
+names `registry_records.py` as the route, because a delegate that is not told greps.
 
 | `context_policy` | Used for | Before the source is opened | LEGEND's prior knowledge |
 |---|---|---|---|

@@ -110,7 +110,12 @@ to **no** User-Agent; five OA indexes unanimously called a paper closed and all 
 (`oa_status_dissent.py`). A supplement you cannot lawfully retrieve is a declared debt with the
 cascade you actually ran, never a silent omission.
 
-**M2 · the reading.** Section by section, the whole article, and every figure **as an image at
+**M2 · the reading.** Before the first line, the reading notes and the dossier header declare
+`context_policy:` — `SOURCE_FIRST` for a `first_read` or a resume, and a context that already
+holds LEGEND's conclusion on the paper or its mechanism cannot declare it: it declares
+`QUESTION_DRIVEN` and names what it held
+([`fulltext_read_receipt.md`](fulltext_read_receipt.md#before-reading-context-policy)). Then:
+section by section, the whole article, and every figure **as an image at
 native resolution** — a caption read is `captions_only`, and that downgrades the receipt. Capture
 every locator **while the document is open**, into the manifest's `verbatim_locators` entries:
 proposition, the sentence quoted verbatim, `surface`, the fingerprinted `artifact`, the `anchor`.
@@ -201,7 +206,10 @@ between your read and your write is re-read and re-appended — **never** edited
 **M4b · the comparison, and it is a SEPARATE phase from the reading.** The blind first pass has
 the sources, the method and the technical packet, and no prior LEGEND conclusion about the paper
 (`scientist_reading_modes.md` § 3.1, § 3.3). Once the reading has landed — receipt written — the
-comparison opens, and there the laboratory's records are exactly what you need:
+comparison opens: write `FIRST-PASS OBSERVATIONS COMPLETE → PRIOR KNOWLEDGE ADMITTED FOR
+COMPARISON` in the reading notes and name what you admit
+([`fulltext_read_receipt.md`](fulltext_read_receipt.md#before-reading-context-policy)). There the
+laboratory's records are exactly what you need:
 
 ```bash
 python3 framework/scripts/registry_records.py get --pmid <PMID> --hops 1
