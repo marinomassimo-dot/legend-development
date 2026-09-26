@@ -105,7 +105,7 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20260926_LITVOCAB
+last_batch_commit_id: BATCH_20260926_ALDAZ_R2
 last_batch_commit_date: 2026-09-26
 last_batch_commit_type: MANUAL
 ```
@@ -121,7 +121,7 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20260926_20260926_LITVOCAB
+last_lint_id: LINT_20260926_BATCH_ALDAZ_R2
 last_lint_date: 2026-09-26
 last_lint_result: WARN
 ```
@@ -208,8 +208,8 @@ to make a suite green — the only way to move it is to have made the change you
 
 ```yaml
 growth_anchor_ledger: framework/state/growth_anchors.jsonl
-growth_anchor_events: 29
-growth_anchor_head: 4f73044a98d7b991b21574104f668032a76c9c202400d8c272ab7177c730554f
+growth_anchor_events: 30
+growth_anchor_head: 927ad9c746e5ad3ee60e6843cfe94979d0500b76463fdda8bdade3d9b2132a95
 ```
 
 ```bash

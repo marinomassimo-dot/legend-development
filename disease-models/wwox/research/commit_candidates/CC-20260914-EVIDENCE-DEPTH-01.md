@@ -75,3 +75,12 @@ transferability, relevance or claim link is written.
 ## BATCH DISPOSITION — appended by the integrator, append-only
 
 **Status:** **RE-QUEUED** — recovered 2026-09-26 from the VPS backup (`06ee25a`). The VPS batch that disposed of this candidate never reached `main`: re-queued for `BATCH_20260926_ALDAZ`. Identifiers written on the VPS are annotated in place as `(VPS numbering)` / `(VPS batch, never on main)`; full-text queue ids were renumbered (see `disease-models/wwox/research/vps_recovery_20260925/README.md`).
+
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260926_ALDAZ_R2` (2026-09-26, ACTOR_ID `scientist-a`), append-only
+
+**Status:** **SUPERSEDED** — `BATCH_20260926_ALDAZ_R2`.
+
+0 edits. All six records already carry the `Evidence depth` line this candidate proposed, written on main after the VPS split: `PAPER 018`, `019`, `020`, `021` and `024` by `CC-20260920-REGISTRY-LEDGER-DEPTH-01` (`BATCH_20260920_001`), and `PAPER 007` by `BATCH_20260926_ALDAZ` (receipt `FTR-20260913-36828035-03`). Verified record by record against main's text; each line names the same complete receipt this candidate's table lists. The VPS propagation (`BATCH_20260915_009`, VPS batch, never on main) is not reapplied.

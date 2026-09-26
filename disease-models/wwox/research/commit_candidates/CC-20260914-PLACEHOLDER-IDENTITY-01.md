@@ -81,3 +81,12 @@ change after this lands means something outside these records moved.
 ## BATCH DISPOSITION — appended by the integrator, append-only
 
 **Status:** **RE-QUEUED** — recovered 2026-09-26 from the VPS backup (`06ee25a`). The VPS batch that disposed of this candidate never reached `main`: re-queued for `BATCH_20260926_ALDAZ`. Identifiers written on the VPS are annotated in place as `(VPS numbering)` / `(VPS batch, never on main)`; full-text queue ids were renumbered (see `disease-models/wwox/research/vps_recovery_20260925/README.md`).
+
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260926_ALDAZ_R2` (2026-09-26, ACTOR_ID `scientist-a`), append-only
+
+**Status:** **PROPAGATED** — `BATCH_20260926_ALDAZ_R2`.
+
+Class A: `CORPUS P305` now says it is promoted to `PAPER 086` (same PMID, the record that carries the reading) and its `Next action` is neutralised; `CORPUS-STUB-053`, which `BATCH_20260926_ALDAZ_R1` had pointed at `PAPER 112`, now also names `PAPER 007`, the live record `BATCH_20260926_ALDAZ` made `PAPER 112` a duplicate of — the §3 collision is resolved by that batch having decided `PAPER 007`. `Claim links` untouched on both. Class B (`CORPUS P182`, `P210`) was routed as its own item by the candidate, not proposed, and is not touched.

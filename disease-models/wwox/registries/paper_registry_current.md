@@ -1242,7 +1242,7 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Corpus paper no:** 53
 **Full title:** WWOX P47T partial loss-of-function mutation induces epilepsy, progressive neuroinflammation, and cerebellar degeneration in mice
 **Identifier:** PMID 36828035 / DOI 10.1016/j.pneurobio.2023.102425
-**Status:** promoted — see [[paper_registry_current#PAPER 112]] (`BATCH_20260926_ALDAZ_R1`)
+**Status:** promoted — see [[paper_registry_current#PAPER 112]] (`BATCH_20260926_ALDAZ_R1`), itself superseded by [[paper_registry_current#PAPER 007]] (`BATCH_20260926_ALDAZ`) — **cite `PAPER 007`**, the live record (pointer added by `BATCH_20260926_ALDAZ_R2`, `CC-20260914-PLACEHOLDER-IDENTITY-01`)
 **Registry role:** corpus placeholder only — kept append-only as audit history, never deleted
 **Claim links:** none
 **Next action:** none — resolved by promotion
@@ -2560,7 +2560,7 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Journal/source:** J Biol Chem
 **Identifier:** PMID 18487609 / PMC2490770 / DOI 10.1074/jbc.M800855200
 **Tier (FASE 1):** B
-**Status:** screened — corpus placeholder
+**Status:** read — corpus placeholder, not promoted (`CC-20260914-PLACEHOLDER-READS-01`, `BATCH_20260926_ALDAZ_R2`); see `Evidence depth`
 **Evidence depth:** complete_fulltext_read — `FTR-20260811-18487609-01`; manifest `deepdive_manifests/PMID18487609.json` (5 locators, schema v2, strict PASS, 0 gaps); declaration reconciled from the ledger by `CC-20260920-REGISTRY-LEDGER-DEPTH-01` (BATCH_20260920_001) — the reading is the receipt's, not this batch's
 **LIT link:** LIT-0222
 **Primary pathway:** P5 — metabolism / mitochondria / redox
@@ -2993,26 +2993,27 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration.
 
 ## CORPUS P244
-**Short title:** Frequent downregulation and loss of WWOX gene expression in human hepatocellu...
+**Short title:** Park 2004 — WWOX in 18 linee di HCC: mRNA e proteina ridotti, due trascritti aberranti, quattro varianti codificanti
 **Full title:** Frequent downregulation and loss of WWOX gene expression in human hepatocellular carcinoma
-**Authors:** Park et al.
+**Authors:** Park SW, Ludes-Meyers J, Zimonjic DB, Durkin ME, Popescu NC, Aldaz CM (6 authors, artefact `contrib-group`, confirmed by esummary)
 **Year:** 2004
-**Source type:** Article
-**Journal/source:** Br J Cancer
+**Source type:** primary research — descriptive expression survey in established human cell lines + tissue IHC
+**Journal/source:** *Br J Cancer* 2004;91(4):753-759
 **Identifier:** PMID 15266310 / PMC2364795 / DOI 10.1038/sj.bjc.6602023
 **Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260914-15266310-01` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID15266310.json`, dossier `fulltext_dossiers/PMID15266310.md`.
 **Tier (FASE 1):** C
-**Status:** screened — corpus placeholder
+**Status:** read — corpus record completed in place by `BATCH_20260926_ALDAZ_R2` (`CC-20260914-15266310-01`), **not promoted to a PAPER record**; see `Evidence depth`
 **LIT link:** LIT-0244
-**Primary pathway:** P6 — DDR / genome stability
-**Model/species:** cell line
-**Genotype/model:** unassigned in triage
-**Transferability:** unassigned in triage
-**clinical relevance:** LOW
-**Claim links:** none — triage only
-**Role:** background corpus only
+**Primary pathway:** oncology / tumor suppressor biology — 🔴 **corrected from `P6 — DDR / genome stability`**, assigned in FASE 1 triage without a reading: the paper contains no DDR assay and no genome-stability endpoint
+**Model/species:** linee cellulari umane di HCC (18), fegato adulto umano normale, 5 sezioni di HCC. **Nessun animale, nessun allele germinale, nessun materiale neurale**
+**Genotype/model:** WWOX wild-type e somatico; nessun allele WWOX-DEE
+**Transferability:** **T3**
+**clinical relevance:** **LOW** (unchanged)
+**Claim links:** none — the reading proposes none
+**Role:** background corpus, **letto**: la fonte della serie HCC del gruppo Aldaz. Il suo valore per questo repository non è oncologico ma **di sequenza e di reagente**: due linee HCC portano giunzioni in frame esone 5→9 (Δ6–8), una con un **inserto di 96 bp** derivato dall'introne 8, confermate per sequenziamento (DATO in due linee tumorali; ogni trasferimento ad alleli di splicing WWOX-DEE è `ESPANSIONE`; il prodotto previsto di ~30 kDa è INFERENZA degli autori, **mai mostrato**); quattro varianti codificanti (P252A, D183N, A179T, R314H) chiamate *"very likely"* polimorfismi **senza saggio funzionale, frequenza di popolazione, DNA normale appaiato né mappa di dominio** (PREMISE `DEFAULT_FROM_TEXTBOOK`); e l'antisiero del gruppo stampato come **`140 μg/ml`** su una superficie JATS della versione di record
 **Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration. *(2026-09-26: no longer true for reading depth — this paper has since been read in full; see `Evidence depth`. Triage status unchanged.)*
 **Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it (`CC-20260914-15266310-01`) are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
+**Reading note (BATCH_20260926_ALDAZ_R2, 2026-09-26):** Nessun test statistico compare nel lavoro; la densitometria dei Western è l'unica quantificazione. Difetti misurati in questa lettura, non dichiarati dagli autori: la Figura 2 **contraddice il testo su due corsie** (SNU423 ha una banda Northern forte; SNU475 non ne ha alcuna); la Figura 4 mostra **17 linee, non 18** (Chang assente), e la frase *"72% (13 out of 18)"* conta le 13 barre **sotto 0.10**, cioè *"oltre il 90% in meno"*, su un denominatore di 17; **nessuna corsia di riferimento Peo/WWOX è mostrata** e il blot di destra non ha corsia di fegato normale, quindi sei valori di Fig. 4B sono standardizzati attraverso una corsia che nessuno può vedere; banda citogenetica **16q24** nei Results contro **16q23** in legenda e abstract; l'inserto è dato a **96 bp** ma le coordinate 5281331–5281425 ne coprono **95**; *"Five cell lines"* seguito da sei nomi; percentuali 60/61 (mRNA) e 72/75 (proteina) contro 13/17 = 76.5%. Tre negativi poggiano su dati **non mostrati** (Southern; 5-aza-dC + TSA; IHC definita *preliminary*). Dependency screen `SCREENED_CLEAN` (28 of 38). Kept as a CORPUS record: the candidate proposed promotion; this batch completes the record in place. *(The triage `Note` and the R1 `Registration note` above are superseded for every field this batch writes; their text is kept as history.)*
 
 ## CORPUS P245
 **Short title:** WWOX, a novel WW domain-containing protein mapping to human chromosome 16q23....
@@ -3317,24 +3318,25 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 ## CORPUS P260
 **Short title:** Molecular alterations in the tumor suppressor gene WWOX in oral leukoplakias
 **Full title:** Molecular alterations in the tumor suppressor gene WWOX in oral leukoplakias
-**Authors:** Pimenta et al.
+**Authors:** Pimenta FJ, Cordeiro GT, Pimenta LG, Viana MB, Lopes J, Gomez MV, Aldaz CM, De Marco L, Gomez RS (9 authors, esummary). 🔴 **Two authors share the surname `Pimenta`** (`Pimenta FJ`, first; `Pimenta LG`, third): an `et al.` key cannot distinguish them
 **Year:** 2008
 **Source type:** Article
 **Journal/source:** Oral Oncol
 **Identifier:** PMID 18061530 / PMC4143237 / DOI 10.1016/j.oraloncology.2007.08.019
 **Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260914-18061530-01` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID18061530.json`, dossier `fulltext_dossiers/PMID18061530.md`.
 **Tier (FASE 1):** C
-**Status:** screened — corpus placeholder
+**Status:** read — corpus record completed in place by `BATCH_20260926_ALDAZ_R2` (`CC-20260914-18061530-01`), **not promoted to a PAPER record**; see `Evidence depth`
 **LIT link:** LIT-0260
-**Primary pathway:** P6 — DDR / genome stability
-**Model/species:** not assessed in triage
-**Genotype/model:** unassigned in triage
-**Transferability:** unassigned in triage
-**clinical relevance:** LOW
-**Claim links:** none — triage only
-**Role:** background corpus only
+**Primary pathway:** oncology / tumor suppressor biology — lesione premaligna, trascritti aberranti ed espressione proteica. 🔴 **Corrected from `P6 — DDR / genome stability`**: no DNA-damage, repair or genome-stability assay exists in this paper
+**Model/species:** tessuto umano adulto: **23 leucoplachie orali consecutive** (una clinica, mar 2005 - giu 2006; 14 M / 9 F, 29-67 anni, 19 fumatori) + mucosa normale da volontari appaiati **in numero non dichiarato**. Nessuna linea cellulare, nessun animale, nessun allele germinale, nessuna analisi di DNA genomico, **nessun materiale neurale**
+**Genotype/model:** WWOX somatico; nessun allele WWOX-DEE
+**Transferability:** **T3**
+**clinical relevance:** **LOW** — unchanged
+**Claim links:** none — the reading proposes none
+**Role:** Serie trasversale: trascritti WWOX alterati o assenti in **6/23** lesioni, proteina ridotta all'IHC in **6/23**, alterazione combinata in **8/23 (35%)**; alterazioni in 5/11 displasie moderate-severe, 3/8 lievi, **0/4 senza displasia** — gradiente **non significativo** ricalcolato (p=0.26; p=0.40), e il paper non riporta alcun test. Un prodotto Δ6-8 pulito coesiste con un secondo trascritto aberrante in una lesione benigna (#OL23)
 **Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration. *(2026-09-26: no longer true for reading depth — this paper has since been read in full; see `Evidence depth`. Triage status unchanged.)*
 **Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it (`CC-20260914-18061530-01`) are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
+**Reading note (BATCH_20260926_ALDAZ_R2, 2026-09-26):** Manoscritto d'autore (Europe PMC `fullTextXML` 404; efetch rifiuta l'XML; ptpmcrender 403; **la pagina PMC ha servito un interstiziale reCAPTCHA sotto HTTP 200 per tre richieste** e l'articolo solo dopo 75 s di attesa). **Limiti misurati in questa lettura:** 🔴 **la scala IHC è cambiata rispetto al paper OSCC del 2006 dello stesso gruppo con lo stesso antisiero e protocollo** (`CORPUS P367`: qui +1 0-50%, +2 51-75%, +3 >76%; nel 2006 +1 0-10%, +2 11-50%, +3 >50%), per cui un "+2" nei due lavori non è la stessa grandezza — e la Discussione confronta il 35% di qui con il 50% di allora; la scala lascia indefinito 75-76%; **il numero dei controlli non compare da nessuna parte**; #OL16 è contato come alterato senza sequenza; **quattro dei cinque prodotti sequenziati uniscono interni di esone** (giunzioni non canoniche) dopo **due round nidificati da 35 cicli** su materiale microdissezionato, e nessun artefatto di template-switching è escluso — una giunzione a metà esone amplificata così non è di per sé evidenza di un trascritto in vivo (INFERENZA del lettore); IHC e RT-PCR eseguite **su aree diverse** della lesione; la legenda di Fig. 2a dice *"(strong)"* dove i pixel mostrano marcatura bruna tenue; la frase di sintesi scrive *"expression"* dove intende *"alteration"*. Il Δ6-8 in una lesione benigna è un segnale di fondo, **non** un delta a `CLAIM 018` o `CLAIM 033`. Specificità dell'antisiero delegata al rif. 30 = PMID 14526170 (`PAPER 101`). *(The triage `Note` and the R1 `Registration note` above are superseded for every field this batch writes; their text is kept as history.)*
 
 ## CORPUS P261
 **Short title:** Role of the WWOX tumor suppressor gene in bone homeostasis and the pathogenes...
@@ -3547,7 +3549,7 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Journal/source:** J Biol Chem
 **Identifier:** PMID 24550385 / PMC3979411 / DOI 10.1074/jbc.M113.506790
 **Tier (FASE 1):** C
-**Status:** screened — corpus placeholder
+**Status:** read — corpus placeholder, not promoted (`CC-20260914-PLACEHOLDER-READS-01`, `BATCH_20260926_ALDAZ_R2`); see `Evidence depth`
 **Evidence depth:** complete_fulltext_read — `FTR-20260810-24550385-02`; manifest `deepdive_manifests/PMID24550385.json` (7 locators, schema v2, strict PASS, 0 gaps); declaration reconciled from the ledger by `CC-20260920-REGISTRY-LEDGER-DEPTH-01` (BATCH_20260920_001) — the reading is the receipt's, not this batch's
 **LIT link:** LIT-0272
 **Primary pathway:** P5 — metabolism / mitochondria / redox
@@ -3820,26 +3822,27 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration.
 
 ## CORPUS P286
-**Short title:** Association between decreased WWOX protein expression and thyroid cancer deve...
+**Short title:** Dias 2007 — IHC di WWOX in 53 lesioni tiroidee: marcatura assente o debole nel carcinoma papillare, conservata nei follicolari
 **Full title:** Association between decreased WWOX protein expression and thyroid cancer development
-**Authors:** Dias et al.
+**Authors:** Dias EP, Pimenta FJ, Sarquis MS, Dias Filho MA, Aldaz CM, Fujii JB, Gomez RS, De Marco L (8 authors, esummary). The page prints `Flavio J Pimenta` without the accent and `C M Aldaz`
 **Year:** 2007
 **Source type:** Article
 **Journal/source:** Thyroid
 **Identifier:** PMID 18047428 / PMC4150466 / DOI 10.1089/thy.2007.0232
 **Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260914-18047428-01` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID18047428.json`, dossier `fulltext_dossiers/PMID18047428.md`.
 **Tier (FASE 1):** C
-**Status:** screened — corpus placeholder
+**Status:** read — corpus record completed in place by `BATCH_20260926_ALDAZ_R2` (`CC-20260914-18047428-01`), **not promoted to a PAPER record**; see `Evidence depth`
 **LIT link:** LIT-0286
-**Primary pathway:** P6 — DDR / genome stability
-**Model/species:** human
-**Genotype/model:** unassigned in triage
-**Transferability:** unassigned in triage
-**clinical relevance:** LOW
-**Claim links:** none — triage only
-**Role:** background corpus only
+**Primary pathway:** oncology / tumor suppressor biology — espressione proteica tissutale (IHC). 🔴 **Corrected from `P6 — DDR / genome stability`**: no DNA-damage, repair or genome-stability measurement exists in this paper, and no RNA or DNA assay of any kind
+**Model/species:** tessuto tiroideo umano adulto: **53 lesioni da 46 pazienti** eutiroidei sottoposti a tiroidectomia totale (22 PTC, 11 FTC, 20 FA; 7 pazienti con due lesioni). Nessuna linea cellulare, nessun animale, nessun allele germinale, **nessun materiale neurale proprio**
+**Genotype/model:** WWOX somatico; nessun allele WWOX-DEE
+**Transferability:** **T3**
+**clinical relevance:** **LOW** — unchanged
+**Claim links:** none — the reading proposes none
+**Role:** Osservazione IHC in oncologia adulta: marcatura WWOX presente in 11/11 FTC, 19/20 FA e **8/22 PTC** (conteggi ricostruiti dalle percentuali); intensità 3+ in 82% FTC, 20% FA, **0% PTC**; assenza in 64% PTC. La direzione regge in ogni taglio della tabella (ricalcolato p≈4.5×10⁻⁸) e nelle 7 coppie intra-paziente. L'epitelio follicolare normale marca, sempre citoplasmatico. **Parità delle fonti** e nient'altro
 **Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration. *(2026-09-26: no longer true for reading depth — this paper has since been read in full; see `Evidence depth`. Triage status unchanged.)*
 **Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it (`CC-20260914-18047428-01`) are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
+**Reading note (BATCH_20260926_ALDAZ_R2, 2026-09-26):** Manoscritto d'autore (Europe PMC `fullTextXML` 404; efetch rifiuta l'XML; ptpmcrender 403; **la pagina PMC ha servito un interstiziale reCAPTCHA sotto HTTP 200 per tre richieste** e l'articolo solo dopo 75 s di attesa). 🔴 **La Figura 1 è in scala di grigi su entrambe le vie disponibili** (raster PDF e blob CDN PMC, misurato): in un'immunoistochimica DAB/ematossilina il cromogeno non è separabile dal controcolorante, quindi **nessun grado di intensità del paper è verificabile sulla sua stessa figura**. **Difetti interni misurati:** i Risultati danno *"no expression in seven out of seven microcarcinomas"* mentre la Discussione descrive un **microcarcinoma di 0.6 cm con espressione moderata** *"in association with an FTC"*, co-occorrenza che i Metodi non prevedono (solo FA+PTC); l'abstract dice *"no expression in PTCs"* per le coppie, il corpo 5/7 assente e 2 deboli; il pannello 1J è *"weak"* nei Risultati e *"the same expression as normal thyroid"* in legenda; l'**estensione** della marcatura è stata registrata e mai riportata; unico p-value `= 0.000` senza tabella; 53 lesioni da 46 pazienti trattate come indipendenti; un solo patologo; controllo negativo per sola omissione del primario; **antisiero senza fonte né referenza** — non può servire come fonte di validazione anticorpale per nulla. **L'unica frase neurale è una citazione** (rif. 12 = PMID 16941225, `PAPER 106`): questo lavoro non va citato come seconda fonte per l'espressione neurale di WWOX, che conterebbe due volte una sola osservazione. Dependency screen: `UNSCREENABLE_NO_REFERENCE_LIST` — nessun riferimento vagliato. *(The triage `Note` and the R1 `Registration note` above are superseded for every field this batch writes; their text is kept as history.)*
 
 ## CORPUS P287
 **Short title:** The JNK inhibitor SP600129 enhances apoptosis of HCC cells induced by the tum...
@@ -4211,7 +4214,7 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Journal/source:** Blood
 **Identifier:** PMID 21115974 / PMC3318777 / DOI 10.1182/blood-2010-08-303073
 **Tier (FASE 1):** C
-**Status:** screened — corpus placeholder
+**Status:** promoted — see [[paper_registry_current#PAPER 086]], the record that carries this paper's reading (pointer written by `BATCH_20260926_ALDAZ_R2`, `CC-20260914-PLACEHOLDER-IDENTITY-01`); placeholder kept as audit trail, do not duplicate
 **LIT link:** LIT-0305
 **Primary pathway:** oncology / tumor suppressor biology
 **Model/species:** not assessed in triage
@@ -4219,6 +4222,7 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Transferability:** unassigned in triage
 **clinical relevance:** LOW
 **Claim links:** none — triage only
+**Next action:** none — promotion completed; see the PAPER record
 **Role:** background corpus only
 **Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration.
 
@@ -4588,22 +4592,23 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Full title:** Frequent loss of WWOX expression in breast cancer: correlation with estrogen receptor status
 **Authors:** Nunez et al.
 **Year:** 2005
-**Source type:** Comparative Study
+**Source type:** primary immunohistochemistry series on pooled breast tissue microarrays (16 normal, 15 DCIS, 203 invasive ductal carcinoma) with an independent 23-tumour immunoblot set
 **Journal/source:** Breast Cancer Res Treat
 **Identifier:** PMID 15692750 / PMC4145848 / DOI 10.1007/s10549-004-1474-x
 **Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260913-15692750-01` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID15692750.json`, dossier `fulltext_dossiers/PMID15692750.md`.
 **Tier (FASE 1):** C
-**Status:** screened — corpus placeholder
+**Status:** read — corpus record completed in place by `BATCH_20260926_ALDAZ_R2` (`CC-20260913-ALDAZ-B003-01`), **not promoted to a PAPER record**; see `Evidence depth`
 **LIT link:** LIT-0324
-**Primary pathway:** P5 — metabolism / mitochondria / redox
-**Model/species:** not assessed in triage
-**Genotype/model:** unassigned in triage
-**Transferability:** unassigned in triage
-**clinical relevance:** LOW
-**Claim links:** none — triage only
-**Role:** background corpus only
+**Primary pathway:** baseline expression / tumour-tissue protein loss — 🔴 **corrected from `P5 — metabolism / mitochondria / redox`**, which reproduced the laboratory's SDR/sex-steroid framing as though it were the paper's measurement; the paper measures no steroid, receptor function or enzyme activity, and its own words are that the SDR domain *"is **predicted** to be involved in sex-steroid metabolism"*
+**Model/species:** human adult breast tissue
+**Genotype/model:** none — somatic tumour tissue, no WWOX allele
+**Transferability:** **T3**, `ESPANSIONE`
+**clinical relevance:** LOW — unchanged
+**Claim links:** none — the reading proposes none
+**Role:** the anti-WWOX reagent's **method** paper of record — the paper `PAPER 105` cites for its immunostaining protocol and scoring — and it contains **no immunohistochemical specificity control of any kind**
 **Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration. *(2026-09-26: no longer true for reading depth — this paper has since been read in full; see `Evidence depth`. Triage status unchanged.)*
 **Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
+**Reading note (BATCH_20260926_ALDAZ_R2, 2026-09-26):** Read in full (`FTR-20260913-15692750-01`, 12 of 12 panels inspected as images). **Over-inference risk, evaluated** where the triage said *"not evaluated"*: **HIGH on the SDR/sex-steroid framing, LOW on the staining observation.** The inferential step is from *"WWOX immunostaining correlates with ER status"* to *"further strengthen the hypothesis that WWOX plays a role in sex-steroid metabolism"*, with nothing hormonal measured; the staining observation itself (34% completely negative, 60% reduced-or-lost, ER− worse than ER+) is a competent series, and the ER association is a measured contingency-table correlation over all 203 invasive cases, **unadjusted**. Its immunoblot is the better of the reagent pair: molecular-weight marks at 39 kD and 31 kD, a `NEG.` PEO1 lane on each of two gels blank for WWOX while carrying actin in that same lane, and a two-gel composite declared in its own caption. It delegates the antibody's characterisation onward to `PMID 14526170` (`PAPER 101`). Kept as a CORPUS record, as `CORPUS P261` and `P268` are: the candidate proposed promotion; this batch completes the record in place and creates no new PAPER number for it. *(The triage `Note` and the R1 `Registration note` above are superseded for every field this batch writes; their text is kept as history.)*
 
 ## CORPUS P325
 **Short title:** Primary WWOX phosphorylation and JNK activation during etoposide induces cyto...
@@ -4846,9 +4851,9 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration.
 
 ## CORPUS P337
-**Short title:** WWOX mRNA expression profile in epithelial ovarian cancer supports the role o...
+**Short title:** Gourley 2005 — mRNA di WWOX variante 1 e variante 4 in 71 tumori ovarici e 13 ovaie controlaterali
 **Full title:** WWOX mRNA expression profile in epithelial ovarian cancer supports the role of WWOX variant 1 as a tumour suppressor, although the role of variant 4 remains unclear
-**Authors:** # et al.
+**Authors:** Gourley C, Paige AJW, Taylor KJ, Scott D, Francis NJ, Rush R, Aldaz CM, Smyth JF, Gabra H (9 authors, esummary; the artefact's meta tags print the fifth as `N-J FRANCIS`) — corrected from the literal placeholder `# et al.`
 **Year:** 2005
 **Source type:** Article
 **Journal/source:** Int J Oncol
@@ -4864,6 +4869,7 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Claim links:** none — triage only
 **Role:** background corpus only
 **Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration.
+**Identity note (BATCH_20260926_ALDAZ_R2, 2026-09-26):** identity fields only, from `CC-20260914-15870886-01` §2. A reading of this paper exists (manifest `deepdive_manifests/PMID15870886.json`, dossier `fulltext_dossiers/PMID15870886.md`) but **no receipt was ever persisted** — the manifest carries one declared multihop gap and the strict receipt writer refuses declared gaps — so this record declares **no reading depth**, keeps its triage status and assessment fields, and carries none of the reading's findings. They wait for a persisted receipt (the load-bearing antecedent to read first is PMID 11572989).
 
 ## CORPUS P338
 **Short title:** Aberrant expression of WWOX protein in epithelial ovarian cancer: a clinicopa...
@@ -5034,7 +5040,7 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Journal/source:** J Mol Biol
 **Identifier:** PMID 22634283 / PMC3412936 / DOI 10.1016/j.jmb.2012.05.015
 **Tier (FASE 1):** C
-**Status:** screened — corpus placeholder
+**Status:** read — corpus placeholder, not promoted (`CC-20260914-PLACEHOLDER-READS-01`, `BATCH_20260926_ALDAZ_R2`); see `Evidence depth`
 **Evidence depth:** complete_fulltext_read — `FTR-20260811-22634283-02`; manifest `deepdive_manifests/PMID22634283.json` (5 locators, schema v2, strict PASS, 0 gaps); declaration reconciled from the ledger by `CC-20260920-REGISTRY-LEDGER-DEPTH-01` (BATCH_20260920_001) — the reading is the receipt's, not this batch's
 **LIT link:** LIT-0346
 **Primary pathway:** oncology / tumor suppressor biology
@@ -5450,24 +5456,25 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 ## CORPUS P367
 **Short title:** Characterization of the tumor suppressor gene WWOX in primary human oral squa...
 **Full title:** Characterization of the tumor suppressor gene WWOX in primary human oral squamous cell carcinomas
-**Authors:** Pimenta et al.
+**Authors:** Pimenta FJ, Gomes DA, Perdigão PF, Barbosa AA, Romano-Silva MA, Gomez MV, Aldaz CM, De Marco L, Gomez RS (9 authors, esummary). 🔴 Two later papers of this group spell the third author `Perdigao` and the fifth `Romano-Silva MV`; esummary and this article give **`Perdigão PF`** and **`Romano-Silva MA`**
 **Year:** 2006
 **Source type:** Article
 **Journal/source:** Int J Cancer
 **Identifier:** PMID 16152610 / PMC4145845 / DOI 10.1002/ijc.21446
 **Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260914-16152610-01` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID16152610.json`, dossier `fulltext_dossiers/PMID16152610.md`.
 **Tier (FASE 1):** C
-**Status:** screened — corpus placeholder
+**Status:** read — corpus record completed in place by `BATCH_20260926_ALDAZ_R2` (`CC-20260914-16152610-01`), **not promoted to a PAPER record**; see `Evidence depth`
 **LIT link:** LIT-0367
-**Primary pathway:** P6 — DDR / genome stability
-**Model/species:** not assessed in triage
-**Genotype/model:** unassigned in triage
-**Transferability:** unassigned in triage
-**clinical relevance:** LOW
-**Claim links:** none — triage only
-**Role:** background corpus only
+**Primary pathway:** oncology / tumor suppressor biology — espressione e trascritti aberranti. 🔴 **Corrected from `P6 — DDR / genome stability`**: this paper performs no DNA-damage assay of any kind (no irradiation, adduct, repair, checkpoint or γH2AX); it is RT-PCR, sequencing, western and IHC on 20 tumours
+**Model/species:** tessuto umano adulto: **20 carcinomi orali a cellule squamose consecutivi in fumatori** (un ospedale, ago 2003 - giu 2004) + mucosa orale normale da volontari appaiati (numero assente dal corpo del testo; l'abstract dice 10). Nessuna linea cellulare, nessun animale, nessun allele germinale, **nessun materiale neurale**
+**Genotype/model:** WWOX somatico, inclusa una missense somatica S329F; nessun allele WWOX-DEE
+**Transferability:** **T3**
+**clinical relevance:** **LOW** — unchanged
+**Claim links:** none — nessuna claim poggia su questo lavoro e questa lettura non ne crea una
+**Role:** Serie descrittiva: trascritti WWOX aberranti o assenti in **7/20** tumori (perdita esoni 6-8 in #CA2, #CA5, #CA21, #CA24; perdita esone 7 in #CA2; perdita parziale esoni 8-9 in #CA12), proteina ridotta all'IHC in **8/20**, e **una nuova mutazione somatica missense S329F** (esone 8, dominio SDR, wild type nel sangue, assente in 30 DNA germinali). Nessun esperimento funzionale — S329F non va promossa in alcuna interpretazione di varianti germinali (`CLAIM 030`/`CLAIM 033`). **Fonte del pattern di marcatura (citoplasmatico) dell'antisiero Aldaz in un terzo epitelio**
 **Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration. *(2026-09-26: no longer true for reading depth — this paper has since been read in full; see `Evidence depth`. Triage status unchanged.)*
 **Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it (`CC-20260914-16152610-01`) are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
+**Reading note (BATCH_20260926_ALDAZ_R2, 2026-09-26):** Manoscritto d'autore, non versione di record (Europe PMC `fullTextXML` 404; efetch rifiuta l'XML; pagina PMC 200 senza User-Agent; PDF dietro proof-of-work). **Difetti interni misurati in questa lettura, da riverificare sulla versione di record:** la legenda della Fig. 1a assegna **#CA12 alla classe Z** (delezione esoni 6-8) mentre i Risultati gli assegnano una perdita parziale 8-9 — **i pixel nativi danno ragione ai Risultati**, perché la corsia #CA12 non ha banda al livello Z; il conteggio degli esoni persi nell'abstract non coincide con i Risultati (tre tumori Δ6-8 contro quattro); il western mostra **10 dei 20** tumori senza che la legenda dica "rappresentativo", e vi si vede una **banda debole a 46 kDa in #CA3**, tumore in cui la RT-PCR non trova alcun trascritto; la soglia +3 è `>50%` nei Metodi e `>51%` nella nota di Tabella II; `C329T` confonde numerazione di codone e nucleotide. **Nessun test statistico compare nel paper.** Specificità dell'antisiero **importata** dal rif. 21 (PMID 14526170, `PAPER 101`); la pre-adsorbimento con proteina GST è riferita senza dire se eseguita qui o nel rif. 21. 🔴 **Un negativo che non si può leggere come lo leggono gli autori:** la Discussione afferma *"evidence that the aberrant transcripts are not translated into protein"*, ma l'epitopo dell'antisiero (residui 12-94) è **conservato** da un prodotto Δ6-8, la striscia porta un solo marcatore a 46 kDa e **nessuna scala di peso molecolare**, e metà della coorte non è mostrata — un western che non mostra un prodotto troncato non è evidenza di non-traduzione se finestra di taglia ed epitopo non sono stabiliti (INFERENZA del lettore, cautela di metodo riusabile). *(The triage `Note` and the R1 `Registration note` above are superseded for every field this batch writes; their text is kept as history.)*
 
 ## CORPUS P368
 **Short title:** Aberrant gene promoter methylation of p16, FHIT, CRBP1, WWOX, and DLC-1 in Ep...
@@ -5670,26 +5677,27 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration.
 
 ## CORPUS P378
-**Short title:** Impact of decitabine on immunohistochemistry expression of the putative tumor...
+**Short title:** Stewart 2014 — decitabina e IHC di FHIT/WWOX/FUS1/PTEN in biopsie appaiate: WWOX sale come **trend non significativo** (P = 0.0547)
 **Full title:** Impact of decitabine on immunohistochemistry expression of the putative tumor suppressor genes FHIT, WWOX, FUS1 and PTEN in clinical tumor samples
-**Authors:** Stewart et al.
+**Authors:** Stewart DJ, Nunez MI, Jelinek J, Hong D, Gupta S, **Aldaz M**, Issa JP, Kurzrock R, Wistuba II (9 authors, artefact `contrib-group`, **initials as printed**). The sixth byline is preserved as printed; its identity is not in doubt — the `contrib-group` gives given name *Marcelo* with affiliation *UT MD Anderson Cancer Center, Smithville, TX*, the campus where the same artefact family prints *"Aldaz C Marcelo"* (`Aldaz CM`)
 **Year:** 2014
-**Source type:** Article
-**Journal/source:** Clin Epigenetics
+**Source type:** primary research — analisi correlativa IHC su biopsie appaiate dentro uno studio di fase I
+**Journal/source:** *Clin Epigenetics* 2014;6(1):13
 **Identifier:** PMID 25024751 / PMC4094901 / DOI 10.1186/1868-7083-6-13
 **Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260914-25024751-01` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID25024751.json`, dossier `fulltext_dossiers/PMID25024751.md`.
 **Tier (FASE 1):** C
-**Status:** screened — corpus placeholder
+**Status:** read — corpus record completed in place by `BATCH_20260926_ALDAZ_R2` (`CC-20260914-25024751-01`), **not promoted to a PAPER record**; see `Evidence depth`
 **LIT link:** LIT-0378
-**Primary pathway:** P6 — DDR / genome stability
-**Model/species:** human
-**Genotype/model:** unassigned in triage
-**Transferability:** unassigned in triage
-**clinical relevance:** LOW
-**Claim links:** none — triage only
-**Role:** background corpus only
+**Primary pathway:** epigenetica / riespressione farmacologica — 🔴 **corrected from `P6 — DDR / genome stability`**: no DDR or genome-stability endpoint exists in the paper
+**Model/species:** **umano** — tumori solidi e linfomi refrattari, tessuto bioptico appaiato (pre-trattamento e giorno 12 del ciclo 1). Nessun animale, nessuna linea cellulare, **nessun materiale neurale, nessun bambino**
+**Genotype/model:** WWOX wild-type somatico; **nessun allele germinale, nessun allele WWOX-DEE**
+**Transferability:** **T3**
+**clinical relevance:** **LOW** (unchanged) — e **nessuna implicazione terapeutica** per il genotipo di riferimento: un de-repressore trascrizionale può contare solo dove un allele funzionale è presente ma sotto-espresso, e questo lavoro misura tessuto tumorale somatico adulto con WWOX wild-type
+**Claim links:** none — the reading proposes none
+**Role:** background corpus, **letto**: l'unica misura umana *in vivo* appaiata di proteina WWOX sotto un inibitore farmacologico delle DNA-metiltransferasi che questa lettura abbia trovato (`WWOX AND decitabine` = **6** record in PubMed, 2026-09-14)
 **Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration. *(2026-09-26: no longer true for reading depth — this paper has since been read in full; see `Evidence depth`. Triage status unchanged.)*
 **Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it (`CC-20260914-25024751-01`) are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
+**Reading note (BATCH_20260926_ALDAZ_R2, 2026-09-26):** ⚠️ Il risultato WWOX è un **trend non significativo**: mediana 30 → 100 con **P = 0.0547** su 17 pazienti a punteggio basale ≤ 150 (7 aumenti, 8 invariati, 2 diminuzioni). La **Tabella 2 stampa `0.05`** dove testo e figura danno 0.0547 — un arrotondamento che si legge come significatività; la Figura 1 lo chiama *"strong trend"* (la Figura 1 è grafica vettoriale: i marcatori sono stati contati dai comandi di disegno del PDF, 17 e 17). Il **meccanismo dichiarato non è misurato**: gli autori stessi affermano che la metilazione promotore-specifica non è stata saggiata, e il surrogato globale LINE-1 **non correla** né col punteggio (n = 44, r = 0.09, P = 0.57) né con la sua variazione (n = 19, r = −0.04, P = 0.87). Il **P = 0.0002 aggregato** su FHIT+WWOX+FUS1 mescola osservazioni **non indipendenti** da al più 25 pazienti ed è trascinato da FHIT (8/8, P = 0.014). Dosi e schedule **accorpate** in ogni analisi; **un solo** patologo, nessuna cecità dichiarata; nessun braccio di controllo; anticorpo WWOX **Abcam commerciale 1:100 senza catalogo né clone** — non il policlonale del gruppo Aldaz usato negli altri lavori di questo lotto. Nessuna associazione fra aumento di espressione e risposta tumorale (P = 0.25). Kept as a CORPUS record: the candidate proposed promotion; this batch completes the record in place. *(The triage `Note` and the R1 `Registration note` above are superseded for every field this batch writes; their text is kept as history.)*
 
 ## CORPUS P379
 **Short title:** MicroRNA-153 promotes Wnt/β-catenin activation in hepatocellular carcinoma th...
@@ -5814,24 +5822,25 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 ## CORPUS P385
 **Short title:** Expression of common chromosomal fragile site genes, WWOX/FRA16D and FHIT/FRA...
 **Full title:** Expression of common chromosomal fragile site genes, WWOX/FRA16D and FHIT/FRA3B is downregulated by exposure to environmental carcinogens, UV, and BPDE but not by IR
-**Authors:** Thavathiru et al.
+**Authors:** Thavathiru E, Ludes-Meyers JH, MacLeod MC, Aldaz CM (4 authors, esummary)
 **Year:** 2005
 **Source type:** Article
 **Journal/source:** Mol Carcinog
 **Identifier:** PMID 16187332 / PMC4166602 / DOI 10.1002/mc.20122
 **Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260914-16187332-01` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID16187332.json`, dossier `fulltext_dossiers/PMID16187332.md`.
 **Tier (FASE 1):** C
-**Status:** screened — corpus placeholder
+**Status:** read — corpus record completed in place by `BATCH_20260926_ALDAZ_R2` (`CC-20260914-16187332-01`), **not promoted to a PAPER record**; see `Evidence depth`
 **LIT link:** LIT-0385
-**Primary pathway:** P6 — DDR / genome stability
-**Model/species:** not assessed in triage
-**Genotype/model:** unassigned in triage
-**Transferability:** unassigned in triage
-**clinical relevance:** LOW
-**Claim links:** none — triage only
-**Role:** background corpus only
+**Primary pathway:** P6 — DDR / genome stability — **unchanged and correct**, the only record of this Tier-C lot for which it is. Precisazione: il paper misura **l'espressione di WWOX dopo danno al DNA**, non il ruolo di WWOX nella risposta al danno
+**Model/species:** **due sole linee trasformate**: MCF-7 (p53 wild type) e Saos-2 (p53-null). Nessuna cellula primaria, nessun tessuto, nessun animale, nessun allele WWOX, **nessun materiale neurale**
+**Genotype/model:** WWOX wild-type; nessun allele WWOX-DEE
+**Transferability:** **T3**
+**clinical relevance:** **LOW** — unchanged; il valore è metodologico e di riconciliazione, non clinico
+**Claim links:** none — 🔴 and deliberately so: this reading does **not** touch `CLAIM 029`, which concerns WWOX's contribution to DNA-damage-response competence; this paper measures the converse direction (WWOX expression after damage) and no ATM, γH2AX, relocalisation or repair endpoint
+**Role:** **Fonte primaria di uno dei due lati del conflitto direzionale UV registrato in `fulltext_dossiers/PMID20146584.md` § 3.2.** In MCF-7, UV-C 254 nm (10 J/m²) e BPDE (0.5 µM) riducono l'mRNA di WWOX e FHIT a 24 h mentre IR 10 Gy **non lo riduce**, con p21 indotto da tutti e tre; l'effetto persiste in Saos-2 p53-null; la **proteina** WWOX cala solo dopo irradiazioni ripetute (48 h 2×, 72 h 3×). Caffeina abolisce il ritardo in fase S e recupera parte del segnale. 🔴 **Il conflitto non è aggiudicato in nessuna direzione:** i due lati non stanno sullo stesso asse — qui mRNA a 24 h (e la caduta è **transitoria**: trascritti ricomparsi a 48 h, *data not shown*), là un'induzione *"immediately"* su dati non pubblicati; nessun punto temporale immediato è misurato qui. L'altra metà della coppia rif. [69]/[70], PMID 15798093, resta non letta. La persistenza della proteina oltre la perdita del trascritto non è un'emivita e non va citata accanto all'endpoint Q230P di `CLAIM 019`
 **Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration. *(2026-09-26: no longer true for reading depth — this paper has since been read in full; see `Evidence depth`. Triage status unchanged.)*
 **Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it (`CC-20260914-16187332-01`) are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
+**Reading note (BATCH_20260926_ALDAZ_R2, 2026-09-26):** Manoscritto d'autore (Europe PMC `fullTextXML` 404; efetch rifiuta l'XML; **la pagina PMC ha restituito HTTP 200 con un interstiziale reCAPTCHA di 21315 B** e l'articolo solo al secondo tentativo; PDF via proof-of-work). **Limiti misurati nei pixel nativi, che vincolano la portata del risultato:** il GAPDH è **visibilmente più debole nella corsia 15 J/m²** e più chiaro in quella BPDE, quindi solo il risultato a **10 J/m²** e il confronto con IR sono netti dal punto di vista del carico; nella corsia BPDE la banda WWOX è **ridotta ma chiaramente presente**, non abolita, mentre il testo dice *"dramatic decrease"*; il testo cita **1B e 1C invertiti** rispetto agli assi dei pannelli e alla legenda; **non esiste alcun braccio con caffeina senza UV**, né in citofluorimetria né al Northern, e la caffeina porta la frazione S **sotto** il controllo non irradiato mentre il G1 sale sopra; la corsia caffeina 10 mM ha GAPDH più carico; **nulla nel paper è quantificato** (nessuna densitometria, nessun test statistico, nessun blot replicato); sei risultati sono *"data not shown"*. La Discussione propone ATR-vs-ATM e poi **argomenta contro il proprio ramo ATR-Chk1** sul risultato della caffeina. *(The triage `Note` and the R1 `Registration note` above are superseded for every field this batch writes; their text is kept as history.)*
 
 ## CORPUS P386
 **Short title:** Cigarette smoking extract causes hypermethylation and inactivation of WWOX ge...
@@ -6062,7 +6071,7 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Journal/source:** Front Oncol
 **Identifier:** PMID 31428585 / PMC6688159 / DOI 10.3389/fonc.2019.00719
 **Tier (FASE 1):** C
-**Status:** screened — corpus placeholder
+**Status:** read — corpus placeholder, not promoted (`CC-20260914-PLACEHOLDER-READS-01`, `BATCH_20260926_ALDAZ_R2`); see `Evidence depth`
 **Evidence depth:** complete_fulltext_read — `FTR-20260909-31428585-02`; manifest `deepdive_manifests/PMID31428585.json` (7 locators, schema v2, strict PASS, 0 gaps); declaration reconciled from the ledger by `CC-20260920-REGISTRY-LEDGER-DEPTH-01` (BATCH_20260920_001) — the reading is the receipt's, not this batch's
 **LIT link:** LIT-0397
 **Primary pathway:** P5 — metabolism / mitochondria / redox
@@ -7126,7 +7135,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **clinical relevance:** INDIRECT
 **Claim links:** → [[claim_registry_current#CLAIM 025]] as **qualifying** evidence. No new claim created.
 **Publication integrity:** ordinary Author Correction attached — **PMID 30470736**, image duplication in the Fig 3A/3D H&E panels. Annotated, **no** `PUBLICATION_INTEGRITY_HOLD`. The erratum is not an annotation taken on trust: it was **read as its own assigned source in the same wave** (`FTR-20260909-30470736-01`, `complete_fulltext_read`, manifest `PMID30470736.json` PASS 0 gaps), and its declared scope was checked directly against this paper's 38 locators — **none of which sits on Fig 3A or 3D** (the only Figure 3 locator, `entries[7]`, reads panel F). **Any future locator on Figure 3A or 3D must be drawn from the corrected version and say so.** The read surface behind all 38 locators is verifiably post-correction: the 2026-09-09 deposit carries «This article has been corrected.» and a dated *Change history 11/23/2018* entry, both anchored as locators in the erratum's manifest. 🔴 The clean result is a fact about which panels this corpus happened to use, **not a safeguard**.
-**Note:** Promoted from `CORPUS-STUB-073`, placeholder preserved append-only; `LIT-0096` completed. Constraints that travel with the record: **no neural transfer** (transfer verdict `ESPANSIONE`); **no therapeutic promotion of digoxin**; this is **not** a mouse datum for WWOX loss in *spontaneous* liver tumours; and **the human premise carries three cohort sizes** — 438, 434, 417 — so any record citing the TCGA analysis must name which number it used.
+**Note:** Promoted from `CORPUS-STUB-073`, placeholder preserved append-only; `LIT-0096` completed. Constraints that travel with the record: **no neural transfer** (transfer verdict `ESPANSIONE`); **no therapeutic promotion of digoxin**; the only **quantified** mouse panel in this paper for WWOX loss in liver tumours is `Supplement Fig S1A`: **DEN-induced** tumours of control mice against parenchyma of the same mice, ~1.02 vs ~0.49 on a fold-change axis, n=3 vs n=3 and **no significance mark** — a direction with no declared statistic, not an established mouse datum. `Supplement Fig S1B` shows the same comparison by IHC in one representative animal and **quantifies nothing**. And there is **no measurement of any kind in carcinogen-free (spontaneous) liver tumours** (arm corrected and *adjacent* dropped in `BATCH_20260926_ALDAZ_R2`, `CC-20260912-29724996-02` + `CC-20260914-29724996-04`; the word is audited in `deepdive_manifests/PMID29724996.json` `entries[34]`); and **the human premise carries three cohort sizes** — 438, 434, 417 — so any record citing the TCGA analysis must name which number it used.
 
 ## PAPER 092
 **Short title:** Published erratum to PMID 38182577 (WWOX/Myc osteosarcoma)
@@ -7274,10 +7283,18 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Status:** processed
 **Record provenance:** created by `BATCH_20260926_ALDAZ_R1` (2026-09-26): a full-text reading recovered from the VPS backup had no registry record at all; bibliographic fields from the reading's dossier header
 **Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260914-17823927-01` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID17823927.json`, dossier `fulltext_dossiers/PMID17823927.md`.
-**Transferability:** not assessed in this registration — held with the reading's candidate
-**clinical relevance:** not assessed in this registration — held with the reading's candidate
-**Claim links:** none — held for the operator's decision on the reading's candidate
+**Source type:** primary research — mouse genetics, long-term ageing/tumorigenesis cohort, histopathology; NIH author manuscript NIHMS222061
+**Primary pathway:** P7 — gene therapy readiness / dose-threshold logic
+**Model/species:** topo, un'unica linea gene-trap `Wwox^gt/gt` (ES XG218, 129/Ola); embrioni 10.5 dpc e adulti; **nessun tessuto neurale, nessun allele umano**
+**Genotype/model:** gene-trap nell'introne 4: allele previsto produrre una proteina di fusione Wwox–β-geo che conserva i due domini WW e perde il dominio SDR — **previsione dalla mappa di dominio, non misura**; nessun allele WWOX-DEE
+**Transferability:** **T3**
+**clinical relevance:** **INDIRECT-LOW**
+**Claim links:** none — held for the claim batch
+**Role:** La fonte primaria del **braccio ipomorfo** su cui poggia la frase finale del `Summary` di `CLAIM 032`, che oggi non la cita: dimostra che una riduzione globale massiccia di Wwox è compatibile con la sopravvivenza in adulto, **con sopravvivenza cumulativa significativamente ridotta** (P = 0.0188, Breslow). Non misura funzione, non misura cervello. **Il confronto con il `Summary` di `CLAIM 032`:** la proteina è **non rilevabile** in rene, timo, milza, fegato ed embrioni e **rilevabile solo nel testicolo** (mRNA ridotto dell'85–98%), non "bassa ma rilevabile"; **nessuna funzione è misurata**; e "vitale" va letto con il costo di sopravvivenza (23% dei `gt/gt` morti entro 18 mesi contro 0% dei WT, senza causa identificabile all'autopsia). La correzione del `Summary` è tenuta per il batch di `CLAIM 032`, da decidere insieme a `CC-20260921-CLAIM032-HYPOMORPH-PREMISE-01` (stessa frase).
+**LIT link:** [[literature_tracking_log_current#LIT-0418]]
+**Note:** Manoscritto d'autore, non versione di record (efetch nega l'XML, Europe PMC `fullTextXML` 404, PDF dietro proof-of-work). **Le due tabelle supplementari (rapporti mendeliani; fertilità) sono irrecuperabili — ogni rotta Wiley 403** — quindi i due risultati che vi poggiano sono riportati come dichiarazioni degli autori con i conteggi non visti. Difetti interni misurati in questa lettura: il footnote maschile di Table 1 stampa `P = 0.23`, che è **la statistica χ² (0.231), non il suo P (0.63)**; la legenda di Fig. 2G dichiara `P < 0.005` per il gruppo vecchio, non raggiungibile da un rank-sum a n = 4 vs 4 (minimo bilaterale esatto 0.029); i denominatori tumorali (14, 14, 18) sono minori delle coorti di sopravvivenza (20, 19, 20) senza spiegazione; il fondo genetico F2 non è mai nominato; anti-CD3 è usato e nessun risultato CD3 è riportato; la legenda di Fig. 1 stampa `hm 5 Wwoxgt/gt` per `hm =` (difetto di conversione, non corretto). **Ciò che la lettura aggiunge:** nei pixel di Fig. 3 **nessuna curva scende sotto il 50% entro 104 settimane**, quindi nessuna mediana di sopravvivenza è raggiunta e l'osservazione si ferma a 2 anni — esiste una *sopravvivenza cumulativa ridotta*, non una *lifespan* misurata; il fenotipo tumorale è **solo femminile** (9/14 vs 3/15, χ² 5.85, P = 0.015 non corretto; maschi 5/14 vs 5/18); l'atrofia testicolare nei maschi anziani poggia su due animali su quattro; `Wwox` è fortemente espresso nelle cellule di Leydig WT. **Il cervello non è mai stato saggiato** in questo modello: l'assenza è di valutazione, non evidenza di un SNC normale.
 **Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it (`CC-20260914-17823927-01`) are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
+**Assessment note (BATCH_20260926_ALDAZ_R2, 2026-09-26):** the assessment half of this registration is now written — the fields from `Source type` to `Note` — from `CC-20260914-17823927-01` §2 and §4, re-derived on main's current text. The claim link the reading proposes (`CLAIM 032`) is **held for the claim batch**, together with every claim-text change; `Claim links` stays `none` until then. The registration note above is superseded for these fields only; no claim, working-model block or ledger entry is changed by this record.
 
 ---
 
@@ -7291,10 +7308,18 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Status:** processed
 **Record provenance:** created by `BATCH_20260926_ALDAZ_R1` (2026-09-26): a full-text reading recovered from the VPS backup had no registry record at all; bibliographic fields from the reading's dossier header
 **Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260914-18452537-01` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID18452537.json`, dossier `fulltext_dossiers/PMID18452537.md`.
-**Transferability:** not assessed in this registration — held with the reading's candidate
-**clinical relevance:** not assessed in this registration — held with the reading's candidate
-**Claim links:** none — held for the operator's decision on the reading's candidate
+**Source type:** primary research — serie clinica retrospettiva monocentrica con immunoistochimica; NIH author manuscript NIHMS222064
+**Primary pathway:** oncologia adulta / biomarcatore tissutale, fuori dagli assi del modello
+**Model/species:** tessuto umano adulto: 101 tumori vescicali primari **non consecutivi** (81 TUR, 20 cistectomie) + 10 uroteli normali e 5 metaplasie squamose da non oncologici; **nessuna linea cellulare, nessun animale, nessun genotipo germinale, nessun materiale neurale**
+**Genotype/model:** WWOX somatico; nessun allele WWOX-DEE
+**Transferability:** **T3** — nulla verso il genotipo di riferimento
+**clinical relevance:** **LOW**
+**Claim links:** none — e l'assenza è il dato: nessuna claim poggia su questo lavoro e questa lettura non ne crea una
+**Role:** Osservazione di associazione in oncologia adulta: la perdita di WWOX all'IHC accompagna grado (τ −0.319), stadio, dimensione e progressione in vescica, **bivariata, non aggiustata, di entità debole-moderata**; recidiva nulla e sopravvivenza globale non significativa (P = 0.053); i tre strati non sono un gradiente (il gruppo *moderato* ha le curve migliori). Utile come **parità delle fonti** e come conferma indipendente del pattern di marcatura (granulare citoplasmatico, mai nucleare) dell'anticorpo policlonale di questo gruppo. Nessun meccanismo.
+**LIT link:** [[literature_tracking_log_current#LIT-0419]]
+**Note:** Manoscritto d'autore, non versione di record (Europe PMC `fullTextXML` 404; PDF dietro proof-of-work). **Difetti interni misurati in questa lettura, che potrebbero essere stati corretti in bozza e vanno riverificati sulla versione di record prima di citarli fuori da qui:** la riga `Total` di Table 2 (18/33/50, 45.5%) contraddice il testo e le somme della sua stessa tabella (26/25/50; 50/101 = 49.5%); la legenda di Fig. 5 chiama il pannello C *tumour size* mentre il pannello mostra **Progression No/Yes, P = 0.029**; Fig. 5B etichetta lo stadio I/II/III e stampa `P = 0.004` dove il testo dà 0.003; l'età va 42-91 nel testo e 38-91 in Table 1; il punteggio combinato (intensità 0-3 × estensione 0-4) può valere solo 0,1,2,3,4,6,8,9,12, quindi la classe «moderato 5-7» contiene **il solo valore 6**; un errore di citazione attribuisce al rif. 11 (prostata) un risultato ovarico del rif. 10. **Le dimensioni d'effetto stanno solo in Fig. 4B**: τ-b di Kendall al massimo −0,319 (grado), −0,191 (progressione), −0,021 (recidiva). Nessun modello di Cox, nessuna correzione per molteplicità, nessuna statistica di concordanza fra osservatori, nessuna dichiarazione di cecità; 55% dei cistectomizzati è WWOX-basso (P = 0,024) e le curve di sopravvivenza non sono aggiustate per trattamento o stadio. Dipendenza segnalata: rif. 20 (PMID 16223882) porta un **Expression of Concern** — **citazione di sfondo, nessun reagente, metodo o dato riusato**. **Nota interpretativa sull'unità dell'anticorpo (`CC-20260914-15266310-01` §3a, INFERENZA, non DATO):** questo manoscritto stampa una concentrazione `140 mg / ml` la cui unità non è risolvibile qui; lo stesso laboratorio, per il suo antisiero anti-WWOX, stampa **`140 μg/ml`** su una superficie JATS pulita della versione di record di PMID 15266310 (`CORPUS P244`), il che sostiene la lettura della stringa di qui come **micro perso** nella conversione del manoscritto, per quello che plausibilmente è lo stesso stock. Non prova che i due reagenti siano lo stesso lotto (quattro anni di distanza). **La stringa citata nel manifest e nel dossier di questa lettura resta com'è stampata** e non va alterata.
 **Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it (`CC-20260914-18452537-01`) are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
+**Assessment note (BATCH_20260926_ALDAZ_R2, 2026-09-26):** the assessment half of this registration is now written — the fields from `Source type` to `Note` — from `CC-20260914-18452537-01` §2–§4, re-derived on main's current text. The reading proposes no claim link, and none is written. The registration note above is superseded for these fields only; no claim, working-model block or ledger entry is changed by this record.
 
 ---
 
@@ -7311,7 +7336,9 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Transferability:** not assessed in this registration — held with the reading's candidate
 **clinical relevance:** not assessed in this registration — held with the reading's candidate
 **Claim links:** none — held for the operator's decision on the reading's candidate
+**Role:** the peer-reviewed leg that **splits**: vascular leak and histologic injury are significantly greater under both LPS and MRSA, and endothelial cells isolated from the same animals secrete more IL-6, KC and MCP-1 under MRSA; what does **not** reproduce is the cytokine leg **in BALF, in vivo**, measured twice (LPS and MRSA) with no significant difference on twelve bars per figure. The model is an endothelial conditional deletion with about 85% residual knockdown, which is **not** the intratracheal siRNA model of `PAPER 102` (PMID 28283473). 🔴 The "multi-tissue convergence" wording of `DL-MECH-012` is **not** withdrawn by this reading, and must not be recorded as if it were; its re-derivation belongs to the discovery-ledger batch.
 **Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it (`CC-20260913-ALDAZ-C003-01`) are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
+**Assessment note (BATCH_20260926_ALDAZ_R2, 2026-09-26):** the `Role` field is written from `CC-20260914-UNRECORDED-READS-01` §2.2, in the wording its VPS consultation (`SCI-CONSULT-20260914-C`, findings C5–C7; record kept in the backup) substituted, renumbered (`PAPER 094` on the VPS is `PAPER 102` here) and with its last sentence re-derived: the VPS attributed the convergence withdrawal to a VPS batch that never reached main. `Transferability`, `clinical relevance` and the rest of the assessment stay with `CC-20260913-ALDAZ-C003-01`, queued for the discovery-ledger batch; `Claim links` stays `none`, as the candidate proposes.
 
 ---
 
@@ -7325,10 +7352,18 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Status:** processed
 **Record provenance:** placeholder `CORPUS-STUB-130` promoted by `BATCH_20260926_ALDAZ_R1` (2026-09-26) to register a full-text reading recovered from the VPS backup; bibliographic fields from the reading's dossier header
 **Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260913-14526170-01` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID14526170.json`, dossier `fulltext_dossiers/PMID14526170.md`.
-**Transferability:** not assessed in this registration — held with the reading's candidate
-**clinical relevance:** not assessed in this registration — held with the reading's candidate
-**Claim links:** none — held for the operator's decision on the reading's candidate
+**Source type:** **review-shaped article carrying its own primary data** — 8 figures, 0 tables, ~56 references, 10 published pages. 🔴 Neither available label fits: PubMed declares `['Journal Article']` with no Review tag, while the abstract says *"we will review"* **and** *"present evidence"*.
+**Primary pathway:** **none** — methodological / reagent provenance. It measures no pathway.
+**Model/species:** human cancer cell lines and mouse xenograft
+**Genotype/model:** none — no WWOX allele of interest. WWOX-DEE did not exist as a described entity in 2003.
+**Transferability:** **T-none** toward the reference genotype, and deliberately not more.
+**clinical relevance:** LOW — unchanged, and correctly LOW at triage. Its value is entirely methodological and entirely upstream.
+**Claim links:** none — the reading proposes none, deliberately: the paper licenses no claim in a WWOX-DEE disease model. What the corpus needs from it is a reagent **boundary**, and a boundary belongs in the records that lean on the reagent.
+**Role:** **the terminus of this corpus's anti-WWOX antibody specificity citation chain** — `16941225 → {15982416, 15692750} → 14526170`, all three now read with receipts (`PAPER 106`, `PAPER 105`, `CORPUS P324`, this record).
+**LIT link:** [[literature_tracking_log_current#LIT-0149]]
+**Note:** The immunogen is stated **once**: *"a GST fusion to WWOX amino acid residues 12–94 containing both of the WW domains"*, which **reconciles** the two differing immunogen descriptions in `15982416` rather than adjudicating between them — insert and fusion partner, both true of one construct. Sole specificity control: Fig. 5A, `Peo/Vector` versus `Peo/WWOX` — a genetic null against a reconstituted positive, on one epithelial lysate. **No immunohistochemistry of any kind exists anywhere in the chain**, so the IHC-level control the tissue atlas (`PAPER 106`) presupposed does not exist at any point. 🔴 **Fig. 5A carries no molecular-weight marks of any kind** — a **panel attestation** (native resolution, re-rendered at 1100 dpi in the VPS verification `ALDAZ-VERIFY-W5`, record kept in the backup `06ee25a`), not a count over the body text; the paper's only two marks sit on Fig. 5B and read *"85 kd"* and *"39.5 kd"*. The *"~46 kDa"* attribution is therefore unverifiable on the panel that asserts it. 🔴 **The null lane is not blank**, and the residual band sits at **higher** molecular weight — whereas an exon-4–8-deleted WW-retaining product must be **smaller** than 46 kDa, so that band cannot be that product. The authors state the reagent *"will also detect proteins encoded by the aberrantly spliced mRNAs"* because its epitopes lie in the retained WW domains, so that epitope/deletion geometry is **the authors' own statement**, not an inference of ours; any reading of the Peo/PEO1 null as "expresses no WWOX protein" narrows to the authors' *"does not produce **full-length** WWOX"*. Three unpublished assertions (`unpublished observation`, `manuscript in preparation`, `data not shown`) are carried in the abstract or in figure captions **without** the qualifier the body gives them, and one caption cross-references *"Fig. 7a"*, a panel that does not exist.
 **Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it (`CC-20260913-ALDAZ-B004-01`) are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
+**Assessment note (BATCH_20260926_ALDAZ_R2, 2026-09-26):** the assessment half of this registration is now written — the fields from `Source type` to `Note` — from `CC-20260913-ALDAZ-B004-01` §1–§2, re-derived on main's current text, renumbered from the VPS record `PAPER 093` (VPS numbering). The reading proposes no claim link, and none is written. The registration note above is superseded for these fields only; no claim, working-model block or ledger entry is changed by this record. The candidate's §3 (`DL-MECH-012` reagent parenthetical, which supersedes `CC-20260913-ALDAZ-B003-01` §3.1) and the `PMID16941225.md` §4.1 premise completion are **not** in this batch: they belong to the discovery-ledger batch. The candidate's own "verified by count" clause for the missing ladder is not carried (a text count cannot establish a panel absence).
 
 ---
 
@@ -7342,10 +7377,18 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Status:** processed
 **Record provenance:** placeholder `CORPUS-STUB-091` promoted by `BATCH_20260926_ALDAZ_R1` (2026-09-26) to register a full-text reading recovered from the VPS backup; bibliographic fields from the reading's dossier header
 **Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260914-28283473-01` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID28283473.json`, dossier `fulltext_dossiers/PMID28283473.md`.
-**Transferability:** not assessed in this registration — held with the reading's candidate
-**clinical relevance:** not assessed in this registration — held with the reading's candidate
-**Claim links:** none — held for the operator's decision on the reading's candidate
+**Source type:** primary experimental (murine airway siRNA + A549 mechanism arm)
+**Primary pathway:** inflammatory signalling / lung
+**Model/species:** 🔴 **acute intratracheal anti-WWOX siRNA, 10 mg/kg, one duplex with its sequence printed, in WILD-TYPE male C57BL/6 mice** — **not** a knockout and **not** whole-body. Mechanism arm in A549 cells only.
+**Genotype/model:** no WWOX disease variant; no neural material of any kind
+**Transferability:** T3 — compartment-bound; nothing reaches the reference genotype
+**clinical relevance:** INDIRECT-LOW — research only
+**Claim links:** none — the reading proposes no claim link
+**Role:** the antecedent of the WWOX–lung axis and the corpus's only source for a positive pulmonary inflammatory phenotype (the positive leg `DL-MECH-012` refers to); the paper `PAPER 100` (PMID 33058734) defines itself against by difference
+**LIT link:** [[literature_tracking_log_current#LIT-0114]]
+**Note:** **The phenomenon is real and broader than the corpus recorded:** WWOX knockdown **alone, with no stimulus**, carries the asterisk on **all eight** quantitative panels of Figure 1 — BALF leukocytes, neutrophils, total protein, FITC-dextran flux, IL-6, IL-1β, KC and MIP-2. 🔴 **But the scope the corpus attached to it was wrong:** the authors write *"acute, global knockdown of **lung** WWOX expression"*, and "global" is modified by "lung" in **all three** places they use it — the Introduction (*"global lung silencing"*), the Results **section heading** (*"Global loss of murine lung WWOX expression causes neutrophilic alveolitis"*) and the Discussion. Global **within the organ**, never whole-body; `knockout` occurs **zero** times. **Compartment is epithelium-weighted by an IMPORTED CITATION and not measured here:** *"the predominant cell type affected by intratracheal siRNA delivery is the alveolar epithelial cell (52)"*, inside the limitations paragraph. **No endothelial cell is measured anywhere.** **Limits carried into the record:** twelve mice per in vivo experiment split 6/6 then 3/3, so **n = 3 per group**, under a caption calling it *"n = 3 independent experiments"* — a replication structure the design does not contain; Methods say 54 h between siRNA and LPS while the Figure 1 caption says 72 h, neither marked as a correction; **one unreplicated siRNA, with off-target effects explicitly not excluded by the authors themselves**; no multiplicity correction across eight BALF endpoints; no declared blinding of the manual differential. **Mechanism:** c-Jun/AP-1 de-repression with IL-8-dependent neutrophil chemotaxis, established **in A549 cells only** and abolished by dual c-Jun silencing; bridged in vivo by a systemic JNK inhibitor that 🔴 **attenuates without normalising** (Fig. 5A ≈60→≈47 against control arms at ≈5–8), visible only in the panel. The compound is named three ways in one article (`SP100625`/`SP500125`/`SP600125`); the drawn axis glyph reads `SP600125`. *"Widespread pulmonary neutrophilic inflammation"* is **not** this paper's wording — `widespread` occurs zero times here; it is the sequel's phrase. This paper says *"neutrophilic alveolitis"* and *"neutrophil influx"*. Its mechanistic origin, `PMID 17178850`, is unread in this repository and queued at HIGH priority as `FT-183`.
 **Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it (`CC-20260914-28283473-01`) are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
+**Assessment note (BATCH_20260926_ALDAZ_R2, 2026-09-26):** the assessment half of this registration is now written — the fields from `Source type` to `Note` — from `CC-20260914-28283473-01` P1–P2, re-derived on main's current text, renumbered from the VPS record `PAPER 094` (VPS numbering). The reading proposes no claim link, and none is written. The registration note above is superseded for these fields only; no claim, working-model block or ledger entry is changed by this record. The P2 scope wording ("all three" uses of *global*, not two) is the correction the VPS §21d consultation (`ALDAZ-CONSULT-READS-20260914`, delta B; record kept in the backup) applied. Not in this batch: P3 (the compartment-split formulation for `DL-MECH-012`, which the same consultation found must be re-derived because `PMID 33058734` is a split result, not "the negative") and the six non-canonical "whole-body" sites the candidate's §7 lists.
 
 ---
 
@@ -7359,10 +7402,18 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Status:** processed
 **Record provenance:** placeholder `CORPUS-STUB-165` promoted by `BATCH_20260926_ALDAZ_R1` (2026-09-26) to register a full-text reading recovered from the VPS backup; bibliographic fields from the reading's dossier header
 **Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260914-30285739-01` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID30285739.json`, dossier `fulltext_dossiers/PMID30285739.md`.
-**Transferability:** not assessed in this registration — held with the reading's candidate
-**clinical relevance:** not assessed in this registration — held with the reading's candidate
-**Claim links:** none — held for the operator's decision on the reading's candidate
+**Source type:** primary experimental (interaction biochemistry + cell biology + retrospective clinical series)
+**Primary pathway:** P5 — trafficking / endomembrane
+**Model/species:** HEK-293T, MDA-MB-468, HeLa, NIH3T3, A549; SCID mice n=10/group; 448 retrospective human breast tumours
+**Genotype/model:** 🔴 **no neural material and no WWOX disease variant** — WWOX-DEE appears once, as a Background citation
+**Transferability:** T3
+**clinical relevance:** INDIRECT-LOW — a breast-oncology axis measured in non-neural systems
+**Claim links:** none — held for the claim batch
+**Role:** the **independent** WW1/PPPY measurement for VOPP1 that `PAPER 032` does not contain
+**LIT link:** [[literature_tracking_log_current#LIT-0181]]
+**Note:** 🔴 Three working documents called this paper *the only independent support* for VOPP1–WWOX via WW1/PPPY while it sat in the registry as an unscreened stub — real support with **no** registry record, the mirror image of a declaration without attestation. **What it measures:** WWOX–VOPP1 by three routes — yeast two-hybrid (ten clones, VOPP1 C-terminus), reciprocal co-IP of over-expressed proteins, **and an endogenous co-IP from MDA-MB-468 with an IgG control, neither partner over-expressed**, which is the one datum `PAPER 032` lacks. **Mutagenesis on both sides, and graded:** WWOX **Y33R** *"abolished"* the interaction (the authors' word), while of VOPP1's three PPxY motifs (PPYY¹¹⁹, PPAY¹⁵⁷, PPPY¹⁶⁵) **Y165A** leaves no detectable band, **Y157A** a reduced but present doublet, and **Y119A** retains binding, with a whole-cell-lysate row confirming every mutant is expressed. 🔴 The authors' own text puts the Y165 result as *"strongly affected"* and the motif as required for a *"robust"* interaction — *"abolished"* is their word for Y33R, **not** for Y165A. **DIRECTNESS IS NOT ESTABLISHED:** `recombinant` 0, `GST` 0, `purified` only of DNA, no biophysical measurement, and the paper never itself claims direct binding — so a bridging protein is excluded by nothing. **Asserted but not measured:** *"sequestration"* (static co-localisation only — no flux, transport or retention assay); VOPP1's transmembrane and signal-peptide motifs (predicted by TMHMM2.0/SignalIP); and *"only Y165 matters"*, which its own Figure 1e lane 7 contradicts. **Limits:** no blot declares a replicate count anywhere; Figure 4d's quantification has no error bars and no n; Figure 4e is in NIH3T3, printed in the panel and named nowhere in text or caption; the whole-cohort survival result is **not** significant (`P=0.09` over all 448), significance being confined to luminal and luminal B subsets; two different WWOX cut-offs are used in one paper (Table S1 dichotomises at `<1`/`>1`, 302/146; Figure 7a and the statistics section use `0.6`, 193/255), unreconciled; Table S3 is more precise than the text (p = 0.016, CI 1.26–9.24); in A549, VOPP1 drives death below the empty-vector baseline (~7.4% vs ~18.6%); the anti-VOPP1 antibody is raised in-house with no dedicated validation panel. **Dependency:** reference PMID 16223882 carries an Expression of Concern (PMID 28373548) — citation only, Background framing, no reagent, method or dataset reused. Its five VOPP1 antecedents are unread here and queued as `FT-185`–`FT-189`; 🔴 three of them propose **mutually competing** mechanisms, and `FT-187`, from which this corpus imports VOPP1's lysosomal identity, reports only **partial** co-localisation and casts doubt on the direct NF-κB route.
 **Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it (`CC-20260914-30285739-01`) are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
+**Assessment note (BATCH_20260926_ALDAZ_R2, 2026-09-26):** the assessment half of this registration is now written — the fields from `Source type` to `Note` — from `CC-20260914-30285739-01` §2 and §4, re-derived on main's current text, renumbered from the VPS record `PAPER 095` (VPS numbering). The claim link the reading proposes (`CLAIM 026`) is **held for the claim batch**, together with every claim-text change; `Claim links` stays `none` until then. The registration note above is superseded for these fields only; no claim, working-model block or ledger entry is changed by this record. The Y165A/Y157A grading is the correction the VPS §21d consultation (`ALDAZ-CONSULT-READS-20260914`, delta A; record kept in the backup) applied to the candidate's "only Y165A abolishes". The candidate's §3 sentence for `CLAIM 026` is held with the link.
 
 ---
 
@@ -7376,10 +7427,18 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Status:** processed
 **Record provenance:** placeholder `CORPUS-STUB-143` promoted by `BATCH_20260926_ALDAZ_R1` (2026-09-26) to register a full-text reading recovered from the VPS backup; title, authors and pages from the article metadata of the reading's artefact `files/fulltext/PMID15064722_LudesMeyers2004_efetch.xml` (the dossier header gives only `Ludes-Meyers et al. 2004`)
 **Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260913-15064722-01` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID15064722.json`, dossier `fulltext_dossiers/PMID15064722.md`.
-**Transferability:** not assessed in this registration — held with the reading's candidate
-**clinical relevance:** not assessed in this registration — held with the reading's candidate
-**Claim links:** none — held for the operator's decision on the reading's candidate
+**Source type:** primary experimental (WW-domain interaction biochemistry) — NIH author manuscript NIHMS222052
+**Primary pathway:** P3 — interaction logic / WW-domain scaffold
+**Model/species:** *in vitro* throughout — bacterially expressed GST–WW-domain fusions, synthetic biotinylated peptides, His-tagged candidates in *E. coli* — plus **one** mammalian line, **MCF-7** human breast cancer (the GST pull-down of endogenous SIMPLE, and the immunofluorescence). 🔴 **The paper's own *"in vivo"* means *in MCF-7 cells*: there is no animal and no in vivo binding experiment.**
+**Genotype/model:** no WWOX disease variant. 🔴 **No neural cell, tissue or system** — and the one neural element must not be recorded as nothing: the screen substrate is a **human brain cDNA library of 27 648 clones**, expressed as **bacterial** fusion proteins.
+**Transferability:** T3 — domain logic only; nothing here reaches the reference genotype
+**clinical relevance:** LOW — 2004 cancer-cell-line and peptide biochemistry with no neural, animal or clinical measurement. Its value to this corpus is **provenance and mechanism, not clinical directness**, and provenance weight is deliberately not written into this field.
+**Claim links:** none — held for the claim batch
+**Role:** the reading's proposed **mechanism primary** for `CLAIM 007`, and scoped: primary for the **PPxY / Group-I ligand-class logic and the WW1 requirement**, established by far-Western against four ligands and eight WW domains plus mutagenesis on one endogenous partner. 🔴 **It is NOT a source for a Dvl2 limb — DVL2 is not among this paper's candidates** (WBP-1, SIMPLE/PIG7, NF-κB AP, COTE1, and one clone never identified); the two-oligopeptide result is `PAPER 007`'s.
+**LIT link:** [[literature_tracking_log_current#LIT-0162]]
+**Note:** **What the paper establishes:** WW1 is a Group I WW domain binding PPxY-type ligands; WW1 is **required and sufficient** for endogenous SIMPLE, by mutagenesis on both sides. **Four boundaries the record keeps rather than loses:** (1) *"specific"* is relative to **four** tested ligands, and PPxY is a motif **family** resting on **two** tested members — PPPY as a peptide, PPSY in SIMPLE; (2) 🔴 the paper's own absolute negative *"GST–WWOX-2 did not interact with any of the ligands tested"* is **stronger than its own Figure 1b**, where two faint bands sit at the WWOX-1 and WWOX-2 positions of the CDC25 (PLT\*P) row — verified against the native raster; (3) **not five validated partners** — four far-Western confirmed, one never identified, the confirmation panel carrying four lanes, and the array showing at least two prominent **uncircled** spots with no stated selection criterion, so "five" is a selection and not the panel's content; (4) **nothing is quantified** — zero p-values, *"significant"* twice, no densitometry, no affinity, no stoichiometry. **Navigational defect in the reading, not in any quote:** the receipt's `source_locator`/`source_fingerprint` name the author-manuscript **PDF**, while all 17 text locators resolve against the HTML-derived reader text; both surfaces are declared with matching digests, and the evidentiary text surface is the HTML-derived one. **Open producer debt, declared and not repaired here:** two precision defects in persisted locators (entry 19's spot direction — below and to the **right**, not the left; entry 4's "nine-residue" describing the PPPY core rather than the 14-mer it quotes) and the `denominator_basis` stating "the four figures the article prints" where the 9/9 panel count is reached by sub-panels. Its highest-value unread antecedent is **PMID 7644498** (Chen & Sudol 1995), which defined the Group I WW domain and supplied Figure 1b's PPPY peptide.
 **Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it (`CC-20260913-15064722-01`) are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
+**Assessment note (BATCH_20260926_ALDAZ_R2, 2026-09-26):** the assessment half of this registration is now written — the fields from `Source type` to `Note` — from `CC-20260913-15064722-01` §1 and §3, re-derived on main's current text, renumbered from the VPS record `PAPER 096` (VPS numbering). The claim link the reading proposes (`CLAIM 007`, as its mechanism primary) is **held for the claim batch**, together with every claim-text change; `Claim links` stays `none` until then. The registration note above is superseded for these fields only; no claim, working-model block or ledger entry is changed by this record. Held with the link: the candidate's §2 (a `Source` addition and three boundaries in `CLAIM 007`'s `Genotype/model relevance`, which touch a consolidated-baseline claim and owe a blind locator audit first), its §4 dismissal negatives and its §5 reading debt.
 
 ---
 
@@ -7393,10 +7452,18 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Status:** processed
 **Record provenance:** placeholder `CORPUS-STUB-148` promoted by `BATCH_20260926_ALDAZ_R1` (2026-09-26) to register a full-text reading recovered from the VPS backup; bibliographic fields from the reading's dossier header
 **Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260913-15982416-01` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID15982416.json`, dossier `fulltext_dossiers/PMID15982416.md`.
-**Transferability:** not assessed in this registration — held with the reading's candidate
-**clinical relevance:** not assessed in this registration — held with the reading's candidate
-**Claim links:** none — held for the operator's decision on the reading's candidate
+**Source type:** primary descriptive immunohistochemistry + immunoblot series on pooled tissue microarrays (444 invasive epithelial ovarian carcinomas, two institutions; 38 tumours and 5 normal ovaries by immunoblot). **Not an experiment:** no intervention, no genotype, univariate statistics only.
+**Primary pathway:** baseline expression / tumour-tissue protein loss — **and explicitly not P5**: the paper measures no steroid, no receptor function and no enzyme activity
+**Model/species:** human adult ovarian tumour and normal ovarian tissue
+**Genotype/model:** none — human somatic tumour tissue, no WWOX allele
+**Transferability:** **T3**, `ESPANSIONE` toward the reference genotype, and deliberately not more
+**clinical relevance:** LOW — unchanged, and correctly LOW at triage
+**Claim links:** none — the reading proposes no claim link
+**Role:** the reagent paper of record for this corpus's **immunoblot-grade** anti-WWOX antibody validation (one of the two papers the tissue atlas `PAPER 106` delegates specificity to; it delegates onward to `PAPER 101`)
+**LIT link:** [[literature_tracking_log_current#LIT-0166]]
+**Note:** Evidence surface: **17 of 17 panels inspected as images** at native resolution off the publisher's ESM originals. Contains the paper's own unresolved question — whether the WWOX–PR association is a consequence of histotype composition — **left open by the authors and left open by this reading**. Text/table discrepancy recorded, not an integrity hold: Table 2's PR cell prints `p = 0.00` where Results and Abstract both give `p = 0.008`. Survival association is **univariate and unadjusted** (`p = 0.03`), with the authors themselves offering stage and histotype composition as alternative explanations. Immunohistochemistry carries a pre-absorption control asserted as *"data not shown"*; the reagent's own characterisation is delegated to `PMID 14526170` (`PAPER 101`, now read: immunoblot grade, no IHC control anywhere in the chain). The "internal tension" over its two immunogen descriptions is **dissolved, not adjudicated**, by `PAPER 101`: both are true of one construct, epitope N-terminal.
 **Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
+**Assessment note (BATCH_20260926_ALDAZ_R2, 2026-09-26):** the assessment half of this registration is now written — the fields from `Source type` to `Note` — from `CC-20260913-ALDAZ-B003-01` §1.1, re-derived on main's current text. The reading proposes no claim link, and none is written. The registration note above is superseded for these fields only; no claim, working-model block or ledger entry is changed by this record. The candidate's §3.1 (`DL-MECH-012` parenthetical) is superseded by `CC-20260913-ALDAZ-B004-01` §3.1, which stays queued for the discovery-ledger batch.
 
 ---
 
@@ -7409,10 +7476,18 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Status:** processed
 **Record provenance:** placeholder `CORPUS-STUB-107` promoted by `BATCH_20260926_ALDAZ_R1` (2026-09-26) to register a full-text reading recovered from the VPS backup; bibliographic fields from the reading's dossier header
 **Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260913-16941225-01` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID16941225.json`, dossier `fulltext_dossiers/PMID16941225.md`.
-**Transferability:** not assessed in this registration — held with the reading's candidate
-**clinical relevance:** not assessed in this registration — held with the reading's candidate
-**Claim links:** none — held for the operator's decision on the reading's candidate
+**Source type:** primary descriptive immunohistochemistry atlas (tissue microarrays + whole sections, >30 organs; one five-lane immunoblot). **Not an experiment**: no intervention, no genotype, no statistics.
+**Primary pathway:** baseline expression / tissue and cell-type distribution
+**Model/species:** normal adult human tissue
+**Genotype/model:** none — no WWOX allele
+**Transferability:** **T2–T3**, baseline only
+**clinical relevance:** LOW (background)
+**Claim links:** none — the reading proposes none, deliberately: a map of where a protein sits in adult human tissue under one antibody carries no allele, dosage, development or disease
+**Role:** the baseline tissue and cell-type expression map the corpus's tissue arguments were resting on while it was unread (`FT-057`, 2026-08-10) — now read, and narrower than that use implied
+**LIT link:** [[literature_tracking_log_current#LIT-0127]]
+**Note:** **Every CNS cell-type call in it is text- and table-only** (18 IHC panels, not one of them CNS), on **two cores per brain region**, with **no negative control anywhere**; antibody specificity is delegated to two papers (`PAPER 105`, `CORPUS P324`), both now read, which delegate onward to `PAPER 101` — the chain terminates at immunoblot grade with **no immunohistochemical control anywhere in it and no neural validation**. Its own Table 1 contradicts its Results on limbic cortex. Skeletal muscle is *"inconclusive"*, not negative. Fig 1 carries a **brain** band the running text never mentions. *"Capillaries were consistently negative in all the organs analyzed"*; the word *microglia* does not occur in the paper in any form — **its silence is not a negative**; astrocytes are reported WWOX-positive (text and table only, two cores, no co-marker — a baseline observation, not an activation marker). **What must NOT be done with this reading:** (1) do not close `CLAIM 003`'s open oligodendrocyte question — *"Oligodendrocytes showed no WWOX immunoreactivity"* is adult human, two cores, no panel, no marker, no negative control; (2) do not carry "skeletal muscle negative"; (3) do not quote the Discussion's hormonal-tissue hierarchy as measured — it is a qualitative ranking of categorical grades on duplicate cores; (4) do not treat `DL-MECH-010`'s AAV-transgene negatives in mouse as the same fact as this paper's endogenous human negatives (hepatocytes here are strongly positive). A blind locator audit of the seven highest-risk triples ran on the VPS (keep 5, soften 2, withdraw 0); the three manifest entries it revised (`entries[24]`, `[28]`, `[36]`) carry their declared `contradicts_locator` and the audit object in `deepdive_manifests/PMID16941225.json`, and none bears on the points above.
 **Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it (`CC-20260913-16941225-01`) are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
+**Assessment note (BATCH_20260926_ALDAZ_R2, 2026-09-26):** the assessment half of this registration is now written — the fields from `Source type` to `Note` — from `CC-20260913-16941225-01` §1, §2 and §4, re-derived on main's current text. The reading proposes no claim link, and none is written. The registration note above is superseded for these fields only; no claim, working-model block or ledger entry is changed by this record. Not in this batch: the candidate's §3 compartment-boundary paragraph on `DL-MECH-012` (discovery-ledger batch).
 
 ---
 
@@ -7426,10 +7501,18 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Status:** processed
 **Record provenance:** placeholder `CORPUS-STUB-168` promoted by `BATCH_20260926_ALDAZ_R1` (2026-09-26) to register a full-text reading recovered from the VPS backup; bibliographic fields from the reading's dossier header
 **Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260914-22574198-01` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID22574198.json`, dossier `fulltext_dossiers/PMID22574198.md`.
-**Transferability:** not assessed in this registration — held with the reading's candidate
-**clinical relevance:** not assessed in this registration — held with the reading's candidate
-**Claim links:** none — held for the operator's decision on the reading's candidate
+**Source type:** primary research — genetica murina condizionale (sopravvivenza, morfometria, trascrittoma)
+**Primary pathway:** P7 — gene therapy readiness / dose-threshold logic (the mammary leg of `CLAIM 032`'s threshold); secondary: oncology / tumor suppressor biology
+**Model/species:** topo, allele `Wwox flox/flox` con **esone 1** floxato; driver **BK5-Cre** (K5, attivo da E13.5) e **MMTV-Cre linea D**; fondo misto 129SV/C57Bl/6; organoidi mammari; trapianto in SCID. **Nessun tessuto nervoso esaminato in alcun topo**
+**Genotype/model:** delezione somatica tessuto-ristretta, omozigote ed eterozigote; **nessun allele WWOX-DEE, nessuna eterozigosi germinale**
+**Transferability:** **T3** per il contenuto mammario e oncologico; **T2 indiretta** per il solo confine di dose
+**clinical relevance:** **MODERATE** — è il primario dietro un leg di un claim `VERY HIGH`, non una fonte clinica in proprio
+**Claim links:** none — held for the claim batch
+**Role:** **fonte primaria** (rif. 55) della frase della review Aldaz 2014 (`PAPER 053`) che `CLAIM 032` cita per il leg mammario — *"loss of a single Wwox allele… did not have any observable phenotypic effect in the mammary gland"*. Vale per **sopravvivenza, tumori e istologia premaligna** degli eterozigoti; **non** per il branching, che non ha alcun gruppo eterozigote. 🔴 Il *"lifespan of the Wwox heterozygotes was indistinguishable from WT mice"* della review **non è attribuibile a questo lavoro**: gli eterozigoti qui sono **`BK5-Cre; Wwox +/fl`**, somatici e tessuto-ristretti, con sopravvivenza tracciata solo fino a ~giorno 118 (n = 41, 100%). ⚠️ **~45% della perdita di branching è attribuibile al solo Cre** (Cre(−) WT ≈ 5.45, Cre(+) WT ≈ 4.05, KO ≈ 2.35 rami/mm), e i controlli MMTV accorpano Cre(+) e Cre(−). **Lead aperto, non promosso:** tutti i 22 `BK5-Cre; Wwox fl/fl` muoiono fra il giorno 68 e il 117, causa non determinata (DATO); una ricombinazione di BK5-Cre fuori dall'epitelio bersaglio è un'IPOTESI del lettore con premessa `DEFAULT_FROM_TEXTBOOK`, **assenza di valutazione, non evidenza di un fenotipo neurale**. `REVIVAL_TRIGGER`: istologia cerebrale, EEG o osservazione di crisi in `BK5-Cre; Wwox fl/fl`, o una mappa di ricombinazione della linea BK5-Cre.
+**LIT link:** [[literature_tracking_log_current#LIT-0184]]
+**Note:** Difetti misurati in questa lettura: la **media di 115 giorni dichiarata per i KO BK5 è aritmeticamente impossibile** — con una morte al giorno 68 e nessuna dopo il 117, il massimo possibile per n = 22 è 114.8, e la mediana della curva è ~100; i box plot qPCR danno p < 0.001 su 3 topi per gruppo, il che suggerisce che i triplicati tecnici siano stati contati come osservazioni (INFERENZA); **Table S1 eccede il proprio cutoff** (sonda Stat3 p = 0.0102; 19 sonde su 913 con p > 0.01); cicli PCR 24/26/28/32 in legenda contro 24/28/32 nei Methods; follow-up del trapianto 9 mesi nei Results e 10 nei Methods; il Western pStat3 dichiarato *"significant increase"* è **senza densitometria e senza statistica**, con Stat3 totale più alto in un KO. La delezione dell'esone 1 lascia **~13–15% di segnale mRNA residuo** negli organoidi e una sonda 3′ dell'array solo 2–3× ridotta, origine non determinata. Il follow-up degli eterozigoti MMTV *"beyond one year"* è dichiarato **senza numeri e senza patologia mostrata**. Dipendenza segnalata: PMID 16223882 (Expression of Concern) — citazione di sola introduzione, nessun topo, reagente o analisi ne dipende. Debito di lettura portante: **PMID 21499303** (Abdeen 2011), il risultato sugli eterozigoti che questo lavoro contesta esplicitamente, senza ricevuta.
 **Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it (`CC-20260914-22574198-01`) are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
+**Assessment note (BATCH_20260926_ALDAZ_R2, 2026-09-26):** the assessment half of this registration is now written — the fields from `Source type` to `Note` — from `CC-20260914-22574198-01` §3 and §4, re-derived on main's current text. The claim link the reading proposes (`CLAIM 032`) is **held for the claim batch**, together with every claim-text change; `Claim links` stays `none` until then. The registration note above is superseded for these fields only; no claim, working-model block or ledger entry is changed by this record. Held with the link: the `PAPER 053` `Note` append (ref-55 boundary now attested — that `Note` on main does not yet carry the boundary the candidate appends to), the `CLAIM 032` `Source`/`Wikilinks` and optional limit, and the `FT-181` closure.
 
 ---
 
@@ -7443,10 +7526,18 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Status:** processed
 **Record provenance:** placeholder `CORPUS-STUB-055` promoted by `BATCH_20260926_ALDAZ_R1` (2026-09-26) to register a full-text reading recovered from the VPS backup; bibliographic fields from the reading's dossier header
 **Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260914-24330518-01` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID24330518.json`, dossier `fulltext_dossiers/PMID24330518.md`.
-**Transferability:** not assessed in this registration — held with the reading's candidate
-**clinical relevance:** not assessed in this registration — held with the reading's candidate
-**Claim links:** none — held for the operator's decision on the reading's candidate
+**Source type:** primary research — biologia cellulare + trascrittoma + co-IP/pull-down, **con una coda di meta-analisi** su 819 tumori mammari pubblici (da cui il tag `Meta-Analysis` di PubMed: la meta-analisi è una sezione, non il disegno)
+**Primary pathway:** architettura di dominio / interpretazione delle varianti; secondaria: TGF-β/SMAD signalling
+**Model/species:** linee epiteliali mammarie umane MCF10 e 184B5, linea tumorale MCF7; dataset di espressione tumorale pubblici. **Nessun animale, nessun genotipo germinale, nessun materiale neurale**
+**Genotype/model:** WWOX wild-type più il mutante di dominio **`W44F/P47A`** (WW1) come reagente; **nessun allele WWOX-DEE**
+**Transferability:** **T3** per il contenuto oncologico mammario; **T2 indiretta** per il solo dato di dominio
+**clinical relevance:** **INDIRECT-LOW**
+**Claim links:** none — the reading proposes none: a new claim would need a second, independent source in a system other than one breast epithelial line at overexpression
+**Role:** fonte primaria di un **partner WW1-dipendente** (SMAD3, motivo PPGY): co-IP **endogena** in MCF10 e pull-down GST-WW1+2 di Flag-SMAD3. ⚠️ **Il mutante WW1 `W44F/P47A` non abolisce il legame**: lascia una banda residua debole ma visibile, e il carico dell'esca non è mostrato — il testo dice *lost*, il pannello dice *ridotto*. **Contesto, non emendamento:** coerente con `CLAIM 024` e niente di più (costrutto WW1+2 in tandem, mutato solo WW1: non separa i due domini e non dice nulla sulla cooperatività); adiacente e non sovrapposto a `CLAIM 026`; SMAD3 ≠ SMAD4 di `CLAIM 027`. Il sequestro citoplasmatico come meccanismo è IPOTESI degli autori (nessun frazionamento, nessun saggio di import, una sola cellula mostrata). Per il resto contesto oncologico.
+**LIT link:** [[literature_tracking_log_current#LIT-0079]]
+**Note:** ⚠️ Difetti misurati in questa lettura, non dichiarati dagli autori: **SMAD3 è al rango 7**, non fra i primi quattro, nel foglio ChEA degli autori stessi (E2F4, SOX2 umano, MYC murino 71.85, E2F1 umano, SOX2 murino, E2F1 murino, poi SMAD3 54.78) — la Figura 2C mostra i primi quattro **umani**, un filtro non dichiarato; **PTHLH in MCF7 scende di ~20 volte** mentre la legenda lo chiama l'unica eccezione all'aumento, cioè direzione opposta e non un nullo; nella ChIP il **controllo IgG supera il segnale SMAD3** nella condizione WWOX + TGF-β al promotore ANGPTL4 (~1.1 contro ~0.45); il reporter è detto *"significant"* **senza alcun test**; **nessuna barra SEM visibile** sulla barra shWWOX benché la legenda dichiari tre esperimenti ± SEM; unità incoerenti (TGF-β1 *"20 ng/μL"* per il confocale contro 10 ng/mL altrove; tampone co-IP *"50 nM Tris–HCl"*); *"induction of WWOX"* nei Results descrive una **trasfezione transiente** nei Methods; il knockdown *"80–90%"* non è quantificato; la correlazione WWOX–ANGPTL4 nei dati pubblici è detta significativa **senza coefficiente né P**, e i cluster sono costruiti su quei due geni stessi.
 **Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it (`CC-20260914-24330518-01`) are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
+**Assessment note (BATCH_20260926_ALDAZ_R2, 2026-09-26):** the assessment half of this registration is now written — the fields from `Source type` to `Note` — from `CC-20260914-24330518-01` §2–§4, re-derived on main's current text. The reading proposes no claim link, and none is written. The registration note above is superseded for these fields only; no claim, working-model block or ledger entry is changed by this record.
 
 ---
 
@@ -7460,10 +7551,18 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Status:** processed
 **Record provenance:** placeholder `CORPUS-STUB-046` promoted by `BATCH_20260926_ALDAZ_R1` (2026-09-26) to register a full-text reading recovered from the VPS backup; bibliographic fields from the reading's dossier header
 **Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260913-27869163-01` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID27869163.json`, dossier `fulltext_dossiers/PMID27869163.md`.
-**Transferability:** not assessed in this registration — held with the reading's candidate
-**clinical relevance:** not assessed in this registration — held with the reading's candidate
-**Claim links:** none — held for the operator's decision on the reading's candidate
+**Source type:** primary research, experimental (cell biology + xenograft + public-database re-analysis)
+**Primary pathway:** P6 — DDR / genome stability: DSB repair-pathway choice (HR/SSA vs NHEJ), WWOX–BRCA1 axis
+**Model/species:** whole-body `Wwox−/−` mouse MEFs; human cancer and immortalised lines
+**Genotype/model:** no WWOX-DEE allele
+**Transferability:** **T3** — oncology cell biology, no neural or developmental system
+**clinical relevance:** LOW — unchanged, and the reason is now on the record
+**Claim links:** none — the reading proposes no claim link
+**Role:** the primary behind the WWOX–BRCA1 repair-pathway-choice reading the discovery ledger carries (`DL-MECH-024`, `DL-METH-094`), which the corpus had held only through a review's one-sentence summary
+**LIT link:** [[literature_tracking_log_current#LIT-0070]]
+**Note:** **The end-resection step is a correlate, not a measurement, in this source:** there is no resection assay of any kind (no ssDNA quantification, no SMART, no resection tracts); the phrase rests on RPA32/Rad51 foci counts plus the authors' own *"we hypothesize"*, and **Figure 7c prints a `?` beside the Wwox→MRN arrow**. The direct measurement exists in `PAPER 111` (SMART, mouse). The foci correlate is narrower in time than it reads: RPA32 inverts at 3 h, Rad51 already differs at 0 h **before irradiation**. The `981PPLF984` localisation **fails on the paper's own mutants** (residue 981 lies only in ΔM2; ΔM1 also loses binding and is unexplained; the IgG control lane is positive for Wwox in ΔC). NHEJ and Alt-NHEJ are enhanced and HDR and SSA impaired across four integrated reporters in four host lines, each with its own baseline — **no experiment has two pathways compete for the same break**, so "dominance" is not what was measured. Supplementary Figure 5 (the reciprocal co-IP) could not be adjudicated lane by lane, so the text's *"confirmed in the opposite direction"* is unverified here. The MEF establishment protocol is in ref 35 (PMID 24244712), not in this paper; `KO4` appears nowhere in it; PMID 27773744 is not cited by it.
 **Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it (`CC-20260913-27869163-01`) are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
+**Assessment note (BATCH_20260926_ALDAZ_R2, 2026-09-26):** the assessment half of this registration is now written — the fields from `Source type` to `Note` — from `CC-20260913-27869163-01` §1 and §4, re-derived on main's current text. The reading proposes no claim link, and none is written. The registration note above is superseded for these fields only; no claim, working-model block or ledger entry is changed by this record. Not in this batch: the candidate's §2 (`DL-MECH-024`) and §3 (`DL-METH-094`) appends, which belong to the discovery-ledger batch.
 
 ---
 
@@ -7477,10 +7576,18 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Status:** processed
 **Record provenance:** placeholder `CORPUS-STUB-088` promoted by `BATCH_20260926_ALDAZ_R1` (2026-09-26) to register a full-text reading recovered from the VPS backup; bibliographic fields from the reading's dossier header
 **Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260914-31275852-01` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID31275852.json`, dossier `fulltext_dossiers/PMID31275852.md`.
-**Transferability:** not assessed in this registration — held with the reading's candidate
-**clinical relevance:** not assessed in this registration — held with the reading's candidate
-**Claim links:** none — held for the operator's decision on the reading's candidate
+**Source type:** conditional-knockout mouse cohort + primary-B-cell repair assays
+**Primary pathway:** P6 — DDR / genome stability: DNA-repair **pathway choice** at class-switch junctions
+**Model/species:** mouse — 🔴 **the model switches between the paper's halves, and is named per experiment:** tumour, survival and incidence data come from the **`Cd19`-conditional** B-cell knockout; the class-switch, junction and translocation experiments use naïve splenic B cells from **whole-body `Wwox`-null** juveniles aged 16–17 days (primary, non-transformed cells from an engineered line). Deletion is protein-verified and tissue-restricted in the conditional model, with cerebellum, lung and kidney Wwox-replete
+**Genotype/model:** no WWOX disease allele; no neural material
+**Transferability:** `T3`
+**clinical relevance:** `INDIRECT-LOW`
+**Claim links:** none — held for the claim batch
+**Role:** the corpus's only measurement of WWOX loss on **class-switch recombination** and junction structure — a repair **pathway-choice** endpoint beside the burden endpoints the corpus already holds; unique in PubMed at reading time and **unreplicated**, which is the most important thing about its strength. Blunt joins fall from 26/77 to 5/61 and long-microhomology junctions rise from 1/77 to 8/61, while junction-adjacent mutation frequency is unchanged (5.2 vs 5.0 × 10⁻³/bp) and AID protein is not elevated; switching is only mildly reduced (~75% of wild type). The mechanism is explicitly unknown in the source. This paper measures no ATM, γH2AX, 53BP1 or relocalisation.
+**LIT link:** [[literature_tracking_log_current#LIT-0111]]
+**Note:** **Limits that exist only in the pixels, the table or the supplement:** the stated translocation fold change is not the panel's — text and PDF print "2.5-fold", Figure 6C reads ≈ 0.22 vs ≈ 1.45 per 10⁶ cells (≈ 6.5-fold), unresolved and recorded as an ambiguity; Figure 5's caption miscounts its own denominator ("76 WT" against 77 elsewhere); Methods say three independent experiments where Figures 5A and 6C say n = 4; Figure 4D carries an undeclared AID⁻/⁻ arm (~0.3%); Figure 5A prints p = 0.15 for insertions > 1 nt, reported in text only as "not significantly different"; survival denominators are irreconcilable (17/44, 34/14, 27/9, no attrition stated). **Recomputed:** tumour incidence 16/34 vs 2/14 → Fisher exact **p = 0.0493** (components not significant alone: lymphoma p = 0.70, plasmacytoma p = 0.085); SPEP 10/27 vs 1/9 → **p = 0.22**, no test stated in the paper. Heterozygotes were collected and never reported. Dependency screen `SCREENED_CLEAN` (59 of 61 screened).
 **Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it (`CC-20260914-31275852-01`) are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
+**Assessment note (BATCH_20260926_ALDAZ_R2, 2026-09-26):** the assessment half of this registration is now written — the fields from `Source type` to `Note` — from `CC-20260914-31275852-01` §2, §4 and the §9 correction, re-derived on main's current text. The claim link the reading proposes (`CLAIM 029`) is **held for the claim batch**, together with every claim-text change; `Claim links` stays `none` until then. The registration note above is superseded for these fields only; no claim, working-model block or ledger entry is changed by this record. The candidate's §9 correction is honoured in `Model/species`: the repair experiments are named as the whole-body null line and "non-engineered" is not written. Held with the link: the §3 sentence for `CLAIM 029` and its working-model mirror.
 
 ---
 
@@ -7494,10 +7601,18 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Status:** processed
 **Record provenance:** placeholder `CORPUS-STUB-074` promoted by `BATCH_20260926_ALDAZ_R1` (2026-09-26) to register a full-text reading recovered from the VPS backup; bibliographic fields from the reading's dossier header
 **Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260913-35409089-01` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID35409089.json`, dossier `fulltext_dossiers/PMID35409089.md`.
-**Transferability:** not assessed in this registration — held with the reading's candidate
-**clinical relevance:** not assessed in this registration — held with the reading's candidate
-**Claim links:** none — held for the operator's decision on the reading's candidate
+**Source type:** primary research, experimental (mouse cell biology)
+**Primary pathway:** P6 — DDR / genome stability: DSB end-resection timing; BRCA1-BRCT A/B/C complex formation; WWOX–BRCA1 axis
+**Model/species:** mouse MEFs (`Wwox−/−`, siWwox) and mouse tumour lines
+**Genotype/model:** no WWOX-DEE allele
+**Transferability:** **T3** — and this paper makes mouse→human transfer of the WWOX–BRCA1 repair mechanism *weaker*, not stronger (see Note)
+**clinical relevance:** LOW
+**Claim links:** none — the reading proposes no claim link
+**Role:** the direct, in-mouse measurement of early end resection under Wwox loss (SMART ssDNA tracts), which `PAPER 109` infers only from foci; and the source of the species boundary on the WWOX–BRCA1 interaction
+**LIT link:** [[literature_tracking_log_current#LIT-0097]]
+**Note:** **Species boundary:** the human WWOX–BRCA1 interaction is mapped to WW1 binding BRCA1 near `981PPLF984` in the exon-11 region; this paper shows that motif is *«conserved in primates but not in rodent species»*, that exon 11 is dispensable in mouse, and maps the mouse interaction to the **BRCT** domain — **the two species use different binding surfaces for the same partner**, so any inference from a mouse repair phenotype toward a human WWOX-DEE genotype must cross a demonstrated species difference in the interaction itself. Resection tracts by SMART are longer in KO than WT at 1 h (5–10 µm against 1–2 µm), with elevated pRPA foci and chromatin loading. **Left open by the paper and by this reading:** whether recruitment timing or protein abundance drives the phenotype — both measured, neither tested against the other. One `text_contradicted_by_panel` relation is internal to this paper (Figure 4F against its own Results sentence). The Chk2-inhibition synthetic-lethality content is an oncology lever (killing WWOX-deficient cells) and is not carried toward the reference genotype. **Citation identity, measured:** ref 17 of `PMID 38499540` ("Park et al.") is **PMID 34998176** (*DNA Repair* 2022;110:103264), still unread and queued as `FT-176`; this paper is that article's ref 39.
 **Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it (`CC-20260913-35409089-01`) are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
+**Assessment note (BATCH_20260926_ALDAZ_R2, 2026-09-26):** the assessment half of this registration is now written — the fields from `Source type` to `Note` — from `CC-20260913-35409089-01` §1, §3 and §4, re-derived on main's current text. The reading proposes no claim link, and none is written. The registration note above is superseded for these fields only; no claim, working-model block or ledger entry is changed by this record. Not in this batch: the candidate's §2 (`DL-METH-084`) and §3 (`DL-MECH-024`) appends (discovery-ledger batch); the `PMID38499540.json` `multihop.queued[0]` pmid is another reading's manifest and stays its owner's.
 
 ---
 
@@ -7548,10 +7663,18 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Status:** processed
 **Record provenance:** placeholder `CORPUS-STUB-110` promoted by `BATCH_20260926_ALDAZ_R1` (2026-09-26) to register a full-text reading recovered from the VPS backup; bibliographic fields from the reading's dossier header
 **Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260913-39868255-01` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID39868255.json`, dossier `fulltext_dossiers/PMID39868255.md`.
-**Transferability:** not assessed in this registration — held with the reading's candidate
-**clinical relevance:** not assessed in this registration — held with the reading's candidate
-**Claim links:** none — held for the operator's decision on the reading's candidate
+**Source type:** 🔴 **PREPRINT (bioRxiv v1, NOT peer reviewed), licence cc_no, no published version** — primary experimental, mouse
+**Primary pathway:** P9 — immune / glia / inflammation (neuroinflammation); secondary: extrinsic inflammatory challenge
+**Model/species:** mouse
+**Genotype/model:** `Wwox WT/P47T` **heterozygote** + LPS 10 mg/kg — not a WWOX-DEE allele of the reference genotype's class
+**Transferability:** T3 — preprint, heterozygote, WW1 missense with intact protein, single 12 h endpoint
+**clinical relevance:** MEDIUM as a *hypothesis generator* about challenge sensitisation; LOW as evidence
+**Claim links:** none — the reading proposes none, deliberately: the proposition that one impaired allele may be silent until an inflammatory challenge arrives is `IPOTESI`, and a claim now would consolidate a preprint's framing ahead of its evidence
+**Role:** the extrinsic-challenge leg of the inflammation axis; **not** an independent replication of `PAPER 007`
+**LIT link:** [[literature_tracking_log_current#LIT-0130]]
+**Note:** In five of six quantitative brain and plasma endpoints a significant between-genotype difference under LPS coexists with **no significant LPS response in either genotype**; cortical astrocytes (p=0.0005 between, p=0.0040 within) are the exception. 🔴 **The paper models mortality and measures none:** Methods declare *"The risk for mortality was measured using a simple linear regression model"*, while no death, survival curve or humane endpoint is reported and every animal is euthanised at a fixed 12 h — what is modelled is the MSS clinical score, a correlate of mortality in the cited ref 19, so no statement about WWOX and sepsis *mortality* is supported. No peripheral cytokine differs between genotypes and the significant plasma IL-6/TNF-α responses are **wild type's**. **No WWOX protein or transcript is measured anywhere in the paper.** Seven of 36 animals removed by ROUT, three of them from the wild-type LPS arm. Two citation defects in its use of `PAPER 007` are recorded in the joint synthesis of the reading. **REVIVAL_TRIGGER** for any claim: a peer-reviewed version, or any second group entering the WWOX × sepsis intersection.
 **Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it (`CC-20260913-39868255-01`) are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
+**Assessment note (BATCH_20260926_ALDAZ_R2, 2026-09-26):** the assessment half of this registration is now written — the fields from `Source type` to `Note` — from `CC-20260913-39868255-01` §1 and §2, re-derived on main's current text. The reading proposes no claim link, and none is written. The registration note above is superseded for these fields only; no claim, working-model block or ledger entry is changed by this record. Departure recorded: the candidate labels the pathway `P6 — neuroinflammation`; in this registry `P6` names DDR / genome stability, so the record files it under the registry's `P9 — immune / glia / inflammation`. Not in this batch: the candidate's §3 (`DL-MECH-012` tag and legs, `DL-REPO-002` wording), which belongs to the discovery-ledger batch.
 
 ---
 
@@ -7565,9 +7688,40 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Status:** processed
 **Record provenance:** placeholder `CORPUS-STUB-178` promoted by `BATCH_20260926_ALDAZ_R1` (2026-09-26) to register a full-text reading recovered from the VPS backup; bibliographic fields from the reading's dossier header
 **Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260914-41090157-01` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID41090157.json`, dossier `fulltext_dossiers/PMID41090157.md`.
-**Transferability:** not assessed in this registration — held with the reading's candidate
-**clinical relevance:** not assessed in this registration — held with the reading's candidate
-**Claim links:** none — held for the operator's decision on the reading's candidate
+**Source type:** cross-model mouse cohort + RNA-seq/WES genomics + public-dataset re-analysis
+**Primary pathway:** P6 — DDR / genome stability (secondary: inflammation)
+**Model/species:** mouse — the `Cd19`-conditional *Wwox* knockout of `PAPER 110` crossed into Vk∗MYC myeloma mice; murine B/plasma-cell lineage on a *MYC*-driven background
+**Genotype/model:** no WWOX disease allele; no neural material
+**Transferability:** `T3`
+**clinical relevance:** `INDIRECT-LOW`
+**Claim links:** none — held for the claim batch
+**Role:** the direct sequel to `PAPER 110` (same laboratory, same conditional allele): B-cell *Wwox* deletion on a *MYC* background with a genomic-instability phenotype **confined to the tumours, not the marrow** — and two qualifications that must travel with any use of it: the mismatch-repair signature SBS26 is present in a **wild-type** marrow sample too, and SBS85 appears in **none** of the four tumours whose hypermutation the paper attributes to AID/APOBEC, while the *Aicda*/*Apobec2* overexpression offered as that mechanism fails its own test (P = .2646 / .2680). Declared conflict: one author receives royalties from licensing Vk∗MYC mice.
+**LIT link:** [[literature_tracking_log_current#LIT-0194]]
+**Note:** **"Knockout" is a ~3–5-fold reduction, not an ablation** (Supplementary Figure S1b: KO ≈ 0.3 vs WT ≈ 1.5; *Wwox* transcript down only 1.61 log₂ in sorted CD138⁺ cells). The incidence result is marginal and test-dependent (χ² P = .036 as printed; Fisher exact two-tailed p = 0.052 on the same 17/27 vs 4/14 table). Monoclonal gammopathy is genotype-independent (24/24 KO, 14/14 WT). Wild-type Vk∗MYC mice get the same tumour kinds and **none of those four WT tumours was sequenced**, so every "tumour vs marrow" contrast is within-knockout. The inflammation signature rests on 87 genes of which 31 are immunoglobulin V genes — a clonality pattern; no cytokine or NF-κB protein was measured. Figure 7B's caption overstates its own table; the chr11 interval carrying *Rel*, *Xpo1*, *Bcl11a* is a gain in two tumours and a loss in a third. 🔴 **The paper contradicts itself about which tumour is which histology** (Figure 6A/6B against Figure 6C's caption), and the *Aicda*/*Apobec2* claim is attached to those two points; nothing in the artefact adjudicates. The only human evidence is a median-split re-analysis of four public microarray series. The heterozygous arm — the one dose-sensitivity handle — is never analysed for survival or incidence. Dependency screen `SCREENED_CLEAN` (70 of 74 screened).
 **Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it (`CC-20260914-41090157-01`) are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
+**Assessment note (BATCH_20260926_ALDAZ_R2, 2026-09-26):** the assessment half of this registration is now written — the fields from `Source type` to `Note` — from `CC-20260914-41090157-01` §2 and §4, re-derived on main's current text. The claim link the reading proposes (`CLAIM 029`) is **held for the claim batch**, together with every claim-text change; `Claim links` stays `none` until then. The registration note above is superseded for these fields only; no claim, working-model block or ledger entry is changed by this record. Held with the link: the §3 sentence for `CLAIM 029`. Nothing is routed toward `CLAIM 006` or `CLAIM 025`, as the candidate's §7 requires.
+
+---
+
+## PAPER 116
+**Short title:** Saeki 2011 — GSK-3β2 phosphorylates tau less than GSK-3β1: tau is a disfavoured substrate for β2, not β2 a weak kinase
+**Full title:** Glycogen synthase kinase-3β2 has lower phosphorylation activity to tau than glycogen synthase kinase-3β1
+**Authors:** Saeki K, Machida M, Kinoshita Y, Takasawa R, Tanuma S
+**Year:** 2011
+**Journal/source:** *Biol Pharm Bull* 2011;34(1):146–149
+**Identifier:** PMID 21212533 / DOI 10.1248/bpb.34.146 (no PMCID)
+**Status:** processed
+**Record provenance:** created by `BATCH_20260926_ALDAZ_R2` (2026-09-26) from `CC-20260914-UNRECORDED-READS-01` §2.1: a complete reading persisted on 2026-07-26 had no registry record at all. Identity fields from Europe PMC as the candidate recorded them (queried 2026-09-14).
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260726-21212533-01`; manifest `deepdive_manifests/PMID21212533.json`, 14 locators
+**Source type:** primary experimental — HEK293T co-expression and in vitro kinase assays with recombinant enzymes; a four-page Note (no Limitations section, no supplementary material)
+**Primary pathway:** GSK-3β isoform biochemistry — tau substrate discrimination between the β1 and β2 splice isoforms
+**Model/species:** human HEK293T cells (co-expression with tau) and recombinant enzymes in vitro; no animal, no neural tissue
+**Genotype/model:** no WWOX allele and no WWOX measurement — the paper bears on the GSK-3β node of the discovery ledger, not on WWOX directly
+**Transferability:** T3 (HEK293T co-expression and in vitro)
+**clinical relevance:** LOW
+**Claim links:** none — no claim cites it
+**Role:** isoform-discrimination anchor for the GSK-3β node — the source of "tau is a disfavoured substrate for β2", **not** "β2 is a weak kinase": on the synthetic peptide pGS-2 the two isoforms are equally active (234.5 ± 7.8 for β1 against 246.5 ± 2.4 nmol/min/mg for β2), and both phosphorylate APP at Thr668 to a similar level.
+**LIT link:** none — this PMID has no literature-log record, and this batch does not create one
+**Note:** 🔴 **Boundary that travels with the record:** the Figure 3 titration series are **not matched** between isoforms (β1 runs 0-0.1-0.3-1-3, β2 runs 0-0.3-1-3-10, no shared top concentration), so **no fold figure may be taken from Figure 3**. The C-terminal deletion is asymmetric: the same 40-residue tail is indispensable to one isoform and dispensable to the other; the higher-order-structure explanation is the authors' hypothesis, and no GSK-3β2 structure exists to settle it. **Canonical use today:** the discovery ledger (`DL-MECH-066`, `DL-MECH-067`, `DL-MECH-068`, `DL-BIO-013`) and the full-text queue (`FT-026`, with its two resolved references queued as `FT-027` and `FT-028`), per the manifest's landing. **Provenance ceiling, declared:** none of the reading's artefacts is present on this disk, so this identity block rests on the manifest and an external bibliographic lookup; re-acquisition is owed before the record is cited outside this corpus.
 
 ---

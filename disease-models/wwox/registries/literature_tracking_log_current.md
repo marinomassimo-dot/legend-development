@@ -2298,29 +2298,32 @@ Serves to:
 ---
 
 ## LIT-0070
-**Short title:** corpus paper 46
-**Authors:** not yet extracted
-**Year:** unknown
-**Source type:** not yet screened
-**Journal/source:** not yet extracted
+**Short title:** Schrock 2017 — Wwox–Brca1 interaction and DNA-repair pathway choice
+**Authors:** Schrock MS, Batar B, Lee J, Druck T, Ferguson B, Cho JH, Akakpo K, Hagrass H, Heerema NA, Xia F, Parvin JD, Aldaz CM, Huebner K
+**Year:** 2017
+**Source type:** primary research, experimental (cell biology + xenograft + public-database re-analysis)
+**Journal/source:** *Oncogene* 36(16):2215-2227
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 27869163 / DOI 10.1038/onc.2016.389
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-09-26 (`BATCH_20260926_ALDAZ_R2`)
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 46
-**Status:** discovered
-**Primary pathway:** unassigned
-**Genotype/model tag:** unassigned
-**Transferability:** unassigned
-**clinical relevance:** LOW
-**Claim links:** none
-**Working Model impact:** none yet
-**Report mentions:** corpus alignment
-**Next action:** screening and tier assignment
-**Flags:** corpus placeholder / not yet screened
+**Status:** processed
+**Status note:** complete_fulltext_read — `FTR-20260913-27869163-01` (read on the VPS laboratory checkout, recovered by `fulltext_receipts.py rechain`); fields completed by `BATCH_20260926_ALDAZ_R2` from `CC-20260913-27869163-01`
+**Primary pathway:** P6 — DDR / genome stability: DSB repair-pathway choice (HR/SSA vs NHEJ), WWOX–BRCA1 axis
+**Genotype/model tag:** whole-body `Wwox−/−` mouse MEFs; human cancer/immortalised lines; no WWOX-DEE allele
+**Transferability:** T3 — oncology cell biology, no neural or developmental system
+**clinical relevance:** LOW — unchanged
+**Claim links:** none — the reading proposes none
+**Working Model impact:** none — no working-model block is redefined by this record
+**Report mentions:** corpus alignment · `CC-20260913-27869163-01` · `BATCH_20260926_ALDAZ_R2`
+**Next action:** none — read and registered
+**Flags:** read — receipt `FTR-20260913-27869163-01`
 **Note:** Title: Wwox-Brca1 interaction: role in DNA repair pathway choice
+**Evidence depth:** complete_fulltext_read — receipt `FTR-20260913-27869163-01`; manifest `deepdive_manifests/PMID27869163.json`
+**Registry record:** [[paper_registry_current#PAPER 109]]
 
 ---
 
@@ -2544,29 +2547,32 @@ Serves to:
 ---
 
 ## LIT-0079
-**Short title:** corpus paper 55
-**Authors:** not yet extracted
-**Year:** unknown
-**Source type:** not yet screened
-**Journal/source:** not yet extracted
+**Short title:** Ferguson 2013 — WWOX inibisce l'attività trascrizionale di SMAD3; legame via WW1
+**Authors:** Ferguson BW, Gao X, Zelazowski MJ, Lee J, Jeter CR, Abba MC, Aldaz CM
+**Year:** 2013
+**Source type:** primary experimental — biologia cellulare, trascrittoma e co-IP/pull-down, con una coda di meta-analisi su dati pubblici
+**Journal/source:** *BMC Cancer* 13:593
 **Identifier type:** PMID / DOI
-**Identifier value:** PMID 24330518 / DOI 10.1186/1471-2407-13-593
+**Identifier value:** PMID 24330518 / DOI 10.1186/1471-2407-13-593 / PMCID PMC3871008
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-09-26 (`BATCH_20260926_ALDAZ_R2`)
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 55
-**Status:** discovered
-**Primary pathway:** unassigned
-**Genotype/model tag:** unassigned
-**Transferability:** unassigned
-**clinical relevance:** LOW
-**Claim links:** none
-**Working Model impact:** none yet
-**Report mentions:** corpus alignment
-**Next action:** screening and tier assignment
-**Flags:** corpus placeholder / not yet screened
+**Status:** processed
+**Status note:** complete_fulltext_read — `FTR-20260914-24330518-01` (read on the VPS laboratory checkout, recovered by `fulltext_receipts.py rechain`); fields completed by `BATCH_20260926_ALDAZ_R2` from `CC-20260914-24330518-01`
+**Primary pathway:** architettura di dominio / interpretazione delle varianti; secondaria: TGF-β/SMAD signalling
+**Genotype/model tag:** linee mammarie umane, mutante di dominio WW1, nessun materiale neurale, nessun allele WWOX-DEE
+**Transferability:** T3
+**clinical relevance:** INDIRECT-LOW
+**Claim links:** none — unchanged; the reading proposes none
+**Working Model impact:** none — no working-model block is redefined by this record
+**Report mentions:** corpus alignment · `CC-20260914-24330518-01` · `BATCH_20260926_ALDAZ_R2`
+**Next action:** none — read and registered
+**Flags:** read — receipt `FTR-20260914-24330518-01`
 **Note:** Title: The cancer gene WWOX behaves as an inhibitor of SMAD3 transcriptional activity via direct binding
+**Evidence depth:** complete_fulltext_read — receipt `FTR-20260914-24330518-01`; manifest `deepdive_manifests/PMID24330518.json`
+**Registry record:** [[paper_registry_current#PAPER 108]]
 
 ---
 
@@ -3005,10 +3011,10 @@ Serves to:
 
 ## LIT-0096
 **Short title:** corpus paper 73
-**Authors:** not yet extracted
-**Year:** unknown
-**Source type:** not yet screened
-**Journal/source:** not yet extracted
+**Authors:** Abu-Remaileh M, Khalaileh A, Pikarsky E, Aqeilan RI
+**Year:** 2018
+**Source type:** primary experimental (mouse conditional knockout, in vivo)
+**Journal/source:** Cell Death & Disease 9:511
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 29724996 / DOI 10.1038/s41419-018-0510-4
 **Date discovered:** 2026-04-12
@@ -3018,12 +3024,12 @@ Serves to:
 **Discovery query:** corpus paper 73
 **Status:** processed
 **Status note:** complete_fulltext_read
-**Primary pathway:** unassigned
-**Genotype/model tag:** unassigned
-**Transferability:** unassigned
-**clinical relevance:** MED
-**Claim links:** none
-**Working Model impact:** none yet
+**Primary pathway:** P5 — metabolism / HIF1α–glycolysis
+**Genotype/model tag:** `Wwox^ΔHep` (Alb-Cre × Wwox^fl/fl), DEN-induced HCC, ± high-fat diet — not a WWOX-DEE allele
+**Transferability:** T3
+**clinical relevance:** INDIRECT
+**Claim links:** none — held for the claim batch (`CC-20260913-29724996-03` proposes `CLAIM 025`, qualifying evidence, the link `PAPER 091` already carries)
+**Working Model impact:** none — no working-model block is redefined by this record
 **Report mentions:** corpus alignment
 **Next action:** none — read and integrated
 **Flags:** read BATCH_20260909_001 — receipt `FTR-20260909-29724996-01`
@@ -3032,32 +3038,35 @@ Serves to:
 ---
 **Evidence depth:** complete_fulltext_read — `FTR-20260909-29724996-01` (BATCH_20260909_001)
 **Registry record:** [[paper_registry_current#PAPER 091]]
-**Batch note:** primary experimental; Author Correction PMID 30470736 read as its own source
+**Batch note:** primary experimental; Author Correction PMID 30470736 read as its own source. Descriptive fields completed in `BATCH_20260926_ALDAZ_R2` (`CC-20260913-29724996-03`) from `PAPER 091` and the deposit front matter; `clinical relevance` MED → INDIRECT so the log agrees with the identity record
 
 ## LIT-0097
-**Short title:** corpus paper 74
-**Authors:** not yet extracted
-**Year:** unknown
-**Source type:** not yet screened
-**Journal/source:** not yet extracted
+**Short title:** Park 2022 — Wwox binding to the murine Brca1-BRCT domain and repair pathway choice
+**Authors:** Park D, Gharghabi M, Reczek CR, Plow R, Yungvirt C, Aldaz CM, Huebner K
+**Year:** 2022
+**Source type:** primary research, experimental (mouse cell biology)
+**Journal/source:** *Int J Mol Sci* 23(7):3729
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 35409089 / DOI 10.3390/ijms23073729
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-09-26 (`BATCH_20260926_ALDAZ_R2`)
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 74
-**Status:** discovered
-**Primary pathway:** unassigned
-**Genotype/model tag:** unassigned
-**Transferability:** unassigned
+**Status:** processed
+**Status note:** complete_fulltext_read — `FTR-20260913-35409089-01` (read on the VPS laboratory checkout, recovered by `fulltext_receipts.py rechain`); fields completed by `BATCH_20260926_ALDAZ_R2` from `CC-20260913-35409089-01`
+**Primary pathway:** P6 — DDR / genome stability: DSB end-resection timing; BRCA1-BRCT complex formation
+**Genotype/model tag:** mouse MEFs (`Wwox−/−`, siWwox) and mouse tumour lines; no WWOX-DEE allele
+**Transferability:** T3 — and it makes mouse→human transfer of this mechanism weaker (different binding surface in mouse)
 **clinical relevance:** LOW
-**Claim links:** none
-**Working Model impact:** none yet
-**Report mentions:** corpus alignment
-**Next action:** screening and tier assignment
-**Flags:** corpus placeholder / not yet screened
+**Claim links:** none — the reading proposes none
+**Working Model impact:** none — no working-model block is redefined by this record
+**Report mentions:** corpus alignment · `CC-20260913-35409089-01` · `BATCH_20260926_ALDAZ_R2`
+**Next action:** none — read and registered
+**Flags:** read — receipt `FTR-20260913-35409089-01`
 **Note:** Title: Wwox Binding to the Murine Brca1-BRCT Domain Regulates Timing of Brip1 and CtIP Phospho-Protein Interactions
+**Evidence depth:** complete_fulltext_read — receipt `FTR-20260913-35409089-01`; manifest `deepdive_manifests/PMID35409089.json`
+**Registry record:** [[paper_registry_current#PAPER 111]]
 
 ---
 
@@ -3416,29 +3425,32 @@ Serves to:
 ---
 
 ## LIT-0111
-**Short title:** corpus paper 88
-**Authors:** not yet extracted
-**Year:** unknown
-**Source type:** not yet screened
-**Journal/source:** not yet extracted
+**Short title:** McBride 2019 — Wwox deletion in mouse B cells: genomic instability and repair pathway choice
+**Authors:** McBride KM, Kil H, Mu Y, Plummer JB, Lee J, Zelazowski MJ, Sebastian M, Abba MC, Aldaz CM
+**Year:** 2019
+**Source type:** primary research — conditional-knockout mouse cohort + primary-B-cell repair assays
+**Journal/source:** *Front Oncol* 9:517
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 31275852 / DOI 10.3389/fonc.2019.00517
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-09-26 (`BATCH_20260926_ALDAZ_R2`)
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 88
-**Status:** discovered
-**Primary pathway:** unassigned
-**Genotype/model tag:** unassigned
-**Transferability:** unassigned
-**clinical relevance:** LOW
-**Claim links:** none
-**Working Model impact:** none yet
-**Report mentions:** corpus alignment
-**Next action:** screening and tier assignment
-**Flags:** corpus placeholder / not yet screened
+**Status:** processed
+**Status note:** complete_fulltext_read — `FTR-20260914-31275852-01` (read on the VPS laboratory checkout, recovered by `fulltext_receipts.py rechain`); fields completed by `BATCH_20260926_ALDAZ_R2` from `CC-20260914-31275852-01`
+**Primary pathway:** genome stability / DNA damage response (repair pathway choice)
+**Genotype/model tag:** murine B-lineage (Cd19-conditional cohort; whole-body null for the repair experiments); no WWOX disease allele; no neural material
+**Transferability:** T3
+**clinical relevance:** LOW — unchanged
+**Claim links:** none — held for the claim batch
+**Working Model impact:** none in this batch — the `CLAIM 029` sentence is held for the claim batch
+**Report mentions:** corpus alignment · `CC-20260914-31275852-01` · `BATCH_20260926_ALDAZ_R2`
+**Next action:** none — read and registered
+**Flags:** read — receipt `FTR-20260914-31275852-01`
 **Note:** Title: Wwox Deletion in Mouse B Cells Leads to Genomic Instability, Neoplastic Transformation, and Monoclonal Gammopathies
+**Evidence depth:** complete_fulltext_read — receipt `FTR-20260914-31275852-01`; manifest `deepdive_manifests/PMID31275852.json`
+**Registry record:** [[paper_registry_current#PAPER 110]]
 
 ---
 
@@ -3497,29 +3509,32 @@ Serves to:
 ---
 
 ## LIT-0114
-**Short title:** corpus paper 91
-**Authors:** not yet extracted
-**Year:** unknown
-**Source type:** not yet screened
-**Journal/source:** not yet extracted
+**Short title:** Singla 2017 — lung WWOX knockdown causes neutrophilic alveolitis
+**Authors:** Singla S, Chen J, Sethuraman S, Sysol JR, Gampa A, Zhao S, Machado RF
+**Year:** 2017
+**Source type:** primary experimental — murine airway siRNA knockdown plus an A549 mechanism arm
+**Journal/source:** *Am J Physiol Lung Cell Mol Physiol* 312(6):L903-L911
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 28283473 / DOI 10.1152/ajplung.00034.2017
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-09-26 (`BATCH_20260926_ALDAZ_R2`)
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 91
-**Status:** discovered
-**Primary pathway:** unassigned
-**Genotype/model tag:** unassigned
-**Transferability:** unassigned
-**clinical relevance:** LOW
-**Claim links:** none
-**Working Model impact:** none yet
-**Report mentions:** corpus alignment
-**Next action:** screening and tier assignment
-**Flags:** corpus placeholder / not yet screened
+**Status:** processed
+**Status note:** complete_fulltext_read — `FTR-20260914-28283473-01` (read on the VPS laboratory checkout, recovered by `fulltext_receipts.py rechain`); fields completed by `BATCH_20260926_ALDAZ_R2` from `CC-20260914-28283473-01`
+**Primary pathway:** inflammatory signalling / lung — the corpus's only source for a positive pulmonary inflammatory phenotype
+**Genotype/model tag:** wild-type C57BL/6 with acute intratracheal siRNA; no WWOX variant, no knockout, no neural material
+**Transferability:** T3 — compartment-bound
+**clinical relevance:** INDIRECT-LOW — 🔴 re-assigned from `LOW`, which was set at corpus alignment before the paper was opened: it is the hinge of the lung axis, so not peripheral; and one unreplicated siRNA at n = 3 per group in a non-neural compartment, so not clinically actionable
+**Claim links:** none — the reading proposes none
+**Working Model impact:** none directly — it corrects the **scope** the corpus attributed to this model (airway-delivered lung knockdown, not whole-body), not the model's content
+**Report mentions:** corpus alignment · `CC-20260914-28283473-01` · `BATCH_20260926_ALDAZ_R2`
+**Next action:** none — read and registered
+**Flags:** read — receipt `FTR-20260914-28283473-01`
 **Note:** Title: Loss of lung WWOX expression causes neutrophilic inflammation
+**Evidence depth:** complete_fulltext_read — receipt `FTR-20260914-28283473-01`; manifest `deepdive_manifests/PMID28283473.json`
+**Registry record:** [[paper_registry_current#PAPER 102]]
 
 ---
 
@@ -3857,29 +3872,32 @@ Serves to:
 ---
 
 ## LIT-0127
-**Short title:** corpus paper 107
-**Authors:** not yet extracted
-**Year:** unknown
-**Source type:** not yet screened
-**Journal/source:** not yet extracted
+**Short title:** Nunez 2006 — WWOX protein in normal human tissues (baseline expression atlas)
+**Authors:** Nunez MI, Ludes-Meyers J, Aldaz CM
+**Year:** 2006
+**Source type:** primary descriptive immunohistochemistry atlas (>30 organs; one five-lane immunoblot); not an experiment
+**Journal/source:** *J Mol Histol* 37(3-4):115-125
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 16941225 / DOI 10.1007/s10735-006-9046-5
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-09-26 (`BATCH_20260926_ALDAZ_R2`)
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 107
-**Status:** discovered
-**Primary pathway:** unassigned
-**Genotype/model tag:** unassigned
-**Transferability:** unassigned
-**clinical relevance:** LOW
-**Claim links:** none
-**Working Model impact:** none yet
-**Report mentions:** corpus alignment
-**Next action:** screening and tier assignment
-**Flags:** corpus placeholder / not yet screened
+**Status:** processed
+**Status note:** complete_fulltext_read — `FTR-20260913-16941225-01` (read on the VPS laboratory checkout, recovered by `fulltext_receipts.py rechain`); fields completed by `BATCH_20260926_ALDAZ_R2` from `CC-20260913-16941225-01`
+**Primary pathway:** baseline expression / tissue and cell-type distribution
+**Genotype/model tag:** none — normal adult human tissue, no WWOX allele
+**Transferability:** T2–T3, baseline only
+**clinical relevance:** LOW (background)
+**Claim links:** none — the reading proposes none
+**Working Model impact:** none — no working-model block is redefined by this record
+**Report mentions:** corpus alignment · `CC-20260913-16941225-01` · `BATCH_20260926_ALDAZ_R2`
+**Next action:** none — read and registered
+**Flags:** read — receipt `FTR-20260913-16941225-01`
 **Note:** Title: WWOX protein expression in normal human tissues
+**Evidence depth:** complete_fulltext_read — receipt `FTR-20260913-16941225-01`; manifest `deepdive_manifests/PMID16941225.json`
+**Registry record:** [[paper_registry_current#PAPER 106]]
 
 ---
 
@@ -3940,29 +3958,32 @@ Serves to:
 ---
 
 ## LIT-0130
-**Short title:** corpus paper 110
-**Authors:** not yet extracted
-**Year:** unknown
-**Source type:** not yet screened
-**Journal/source:** not yet extracted
+**Short title:** De La Cruz 2025 — Wwox P47T heterozygote sepsis and neuroinflammation (preprint)
+**Authors:** De La Cruz P, Gomes M, Lockett A, Fisher A, Cook T, Smith P, Lloyd C, Twigg HL, Oblak A, Aldaz CM, Machado RF
+**Year:** 2025
+**Source type:** PREPRINT (bioRxiv v1, not peer reviewed) — primary experimental, mouse
+**Journal/source:** bioRxiv, posted 2025-01-18
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 39868255 / DOI 10.1101/2025.01.17.633677
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-09-26 (`BATCH_20260926_ALDAZ_R2`)
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 110
-**Status:** discovered
-**Primary pathway:** unassigned
-**Genotype/model tag:** unassigned
-**Transferability:** unassigned
-**clinical relevance:** HIGH
-**Claim links:** none
-**Working Model impact:** none yet
-**Report mentions:** corpus alignment
-**Next action:** screening and tier assignment
-**Flags:** corpus placeholder / not yet screened
+**Status:** processed
+**Status note:** complete_fulltext_read — `FTR-20260913-39868255-01` (read on the VPS laboratory checkout, recovered by `fulltext_receipts.py rechain`); fields completed by `BATCH_20260926_ALDAZ_R2` from `CC-20260913-39868255-01`
+**Primary pathway:** P9 — immune / glia / inflammation (neuroinflammation); secondary: extrinsic inflammatory challenge
+**Genotype/model tag:** mouse `Wwox WT/P47T` heterozygote + LPS; no WWOX-DEE allele of the reference class
+**Transferability:** T3 — preprint, heterozygote, single 12 h endpoint
+**clinical relevance:** MEDIUM as a hypothesis generator; LOW as evidence
+**Claim links:** none — the reading proposes none
+**Working Model impact:** none — no working-model block is redefined by this record
+**Report mentions:** corpus alignment · `CC-20260913-39868255-01` · `BATCH_20260926_ALDAZ_R2`
+**Next action:** none — read and registered
+**Flags:** read — receipt `FTR-20260913-39868255-01`
 **Note:** Title: Partial Wwox Loss of Function Increases Severity of Murine Sepsis and Neuroinflammation [PREPRINT bioRxiv]
+**Evidence depth:** complete_fulltext_read — receipt `FTR-20260913-39868255-01`; manifest `deepdive_manifests/PMID39868255.json`
+**Registry record:** [[paper_registry_current#PAPER 114]]
 
 ---
 
@@ -4457,29 +4478,32 @@ Serves to:
 ---
 
 ## LIT-0149
-**Short title:** corpus paper 130
-**Authors:** not yet extracted
-**Year:** unknown
-**Source type:** not yet screened
-**Journal/source:** not yet extracted
+**Short title:** Ludes-Meyers 2003 — WWOX/FRA16D cancer gene (antibody-chain terminus)
+**Authors:** Ludes-Meyers JH, Bednarek AK, Popescu NC, Bedford M, Aldaz CM
+**Year:** 2003
+**Source type:** review-shaped article carrying its own primary data — 8 figures, 0 tables, ~56 references; PubMed declares `['Journal Article']` with no Review tag
+**Journal/source:** *Cytogenet Genome Res* 100(1-4):101-110
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 14526170 / DOI 10.1159/000072844
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-09-26 (`BATCH_20260926_ALDAZ_R2`)
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 130
-**Status:** discovered
-**Primary pathway:** unassigned
-**Genotype/model tag:** unassigned
-**Transferability:** unassigned
-**clinical relevance:** LOW
-**Claim links:** none
-**Working Model impact:** none yet
-**Report mentions:** corpus alignment
-**Next action:** screening and tier assignment
-**Flags:** corpus placeholder / not yet screened
+**Status:** processed
+**Status note:** complete_fulltext_read — `FTR-20260913-14526170-01` (read on the VPS laboratory checkout, recovered by `fulltext_receipts.py rechain`); fields completed by `BATCH_20260926_ALDAZ_R2` from `CC-20260913-ALDAZ-B004-01`
+**Primary pathway:** none — methodological / reagent provenance; it measures no pathway
+**Genotype/model tag:** none — human cancer cell lines and mouse xenograft; no WWOX allele of interest
+**Transferability:** **T-none** toward the reference genotype, and deliberately not more
+**clinical relevance:** LOW — unchanged; its value is entirely methodological and upstream
+**Claim links:** none — the reading proposes none
+**Working Model impact:** none — no working-model block is redefined by this record
+**Report mentions:** corpus alignment · `CC-20260913-ALDAZ-B004-01` · `BATCH_20260926_ALDAZ_R2`
+**Next action:** none — read and registered
+**Flags:** read — receipt `FTR-20260913-14526170-01`
 **Note:** Title: WWOX, the common chromosomal fragile site, FRA16D, cancer gene
+**Evidence depth:** complete_fulltext_read — receipt `FTR-20260913-14526170-01`; manifest `deepdive_manifests/PMID14526170.json`
+**Registry record:** [[paper_registry_current#PAPER 101]]
 
 ---
 
@@ -4808,29 +4832,32 @@ Serves to:
 ---
 
 ## LIT-0162
-**Short title:** corpus paper 143
-**Authors:** not yet extracted
-**Year:** unknown
-**Source type:** not yet screened
-**Journal/source:** not yet extracted
+**Short title:** Ludes-Meyers 2004 — WWOX WW1 binds the PPxY ligand; five array candidates
+**Authors:** Ludes-Meyers JH, Kil H, Bednarek AK, Drake J, Bedford MT, Aldaz CM
+**Year:** 2004
+**Source type:** primary experimental — WW-domain interaction biochemistry (NIH author manuscript NIHMS222052)
+**Journal/source:** *Oncogene* 23(29):5049-5055
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 15064722 / DOI 10.1038/sj.onc.1207680
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-09-26 (`BATCH_20260926_ALDAZ_R2`)
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 143
-**Status:** discovered
-**Primary pathway:** unassigned
-**Genotype/model tag:** unassigned
-**Transferability:** unassigned
+**Status:** processed
+**Status note:** complete_fulltext_read — `FTR-20260913-15064722-01` (read on the VPS laboratory checkout, recovered by `fulltext_receipts.py rechain`); fields completed by `BATCH_20260926_ALDAZ_R2` from `CC-20260913-15064722-01`
+**Primary pathway:** P3 — interaction logic / WW-domain scaffold
+**Genotype/model tag:** in vitro + MCF-7; no WWOX disease variant, no neural cell, tissue or system
+**Transferability:** T3 — domain logic only
 **clinical relevance:** LOW
-**Claim links:** none
-**Working Model impact:** none yet
-**Report mentions:** corpus alignment
-**Next action:** screening and tier assignment
-**Flags:** corpus placeholder / not yet screened
+**Claim links:** none — held for the claim batch
+**Working Model impact:** none — the candidate's provenance addition to `CLAIM 007` is held for the claim batch
+**Report mentions:** corpus alignment · `CC-20260913-15064722-01` · `BATCH_20260926_ALDAZ_R2`
+**Next action:** none — read and registered
+**Flags:** read — receipt `FTR-20260913-15064722-01`
 **Note:** Title: WWOX binds the specific proline-rich ligand PPXY: identification of candidate interacting proteins
+**Evidence depth:** complete_fulltext_read — receipt `FTR-20260913-15064722-01`; manifest `deepdive_manifests/PMID15064722.json`
+**Registry record:** [[paper_registry_current#PAPER 104]]
 
 ---
 
@@ -4916,29 +4943,32 @@ Serves to:
 ---
 
 ## LIT-0166
-**Short title:** corpus paper 148
-**Authors:** not yet extracted
-**Year:** unknown
-**Source type:** not yet screened
-**Journal/source:** not yet extracted
+**Short title:** Nunez 2005 — WWOX protein across ovarian carcinoma histotypes (reagent paper of record)
+**Authors:** Nunez MI, Rosen DG, Ludes-Meyers JH, Abba MC, Kil H, Page R, Klein-Szanto AJP, Godwin AK, Liu J, Mills GB, Aldaz CM
+**Year:** 2005
+**Source type:** primary descriptive IHC + immunoblot series on pooled tissue microarrays (444 invasive epithelial ovarian carcinomas); not an experiment
+**Journal/source:** *BMC Cancer* 5:64
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 15982416 / DOI 10.1186/1471-2407-5-64
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-09-26 (`BATCH_20260926_ALDAZ_R2`)
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 148
-**Status:** discovered
-**Primary pathway:** unassigned
-**Genotype/model tag:** unassigned
-**Transferability:** unassigned
-**clinical relevance:** LOW
-**Claim links:** none
-**Working Model impact:** none yet
-**Report mentions:** corpus alignment
-**Next action:** screening and tier assignment
-**Flags:** corpus placeholder / not yet screened
-**Note:** Title: WWOX protein expression varies among ovarian carcinoma histotypes and correlates with less favorable prognosis
+**Status:** processed
+**Status note:** complete_fulltext_read — `FTR-20260913-15982416-01` (read on the VPS laboratory checkout, recovered by `fulltext_receipts.py rechain`); fields completed by `BATCH_20260926_ALDAZ_R2` from `CC-20260913-ALDAZ-B003-01`
+**Primary pathway:** baseline expression / tumour-tissue protein loss — explicitly not P5
+**Genotype/model tag:** none — human somatic tumour tissue, no WWOX allele
+**Transferability:** T3, `ESPANSIONE`
+**clinical relevance:** LOW — unchanged
+**Claim links:** none — the reading proposes none
+**Working Model impact:** none — no working-model block is redefined by this record
+**Report mentions:** corpus alignment · `CC-20260913-ALDAZ-B003-01` · `BATCH_20260926_ALDAZ_R2`
+**Next action:** none — read and registered
+**Flags:** read — receipt `FTR-20260913-15982416-01`
+**Note:** Title: WWOX protein expression varies among ovarian carcinoma histotypes and correlates with less favorable outcome (corrected from *"…less favorable prognosis"*, which is not the article's title; `CC-20260913-ALDAZ-B003-01` §1.1)
+**Evidence depth:** complete_fulltext_read — receipt `FTR-20260913-15982416-01`; manifest `deepdive_manifests/PMID15982416.json`
+**Registry record:** [[paper_registry_current#PAPER 105]]
 
 ---
 
@@ -5323,29 +5353,32 @@ Serves to:
 ---
 
 ## LIT-0181
-**Short title:** corpus paper 165
-**Authors:** not yet extracted
-**Year:** unknown
-**Source type:** not yet screened
-**Journal/source:** not yet extracted
+**Short title:** Bonin 2018 — VOPP1–WWOX via WW1 and PPPY¹⁶⁵
+**Authors:** Bonin F, Taouis K, Azorin P, Petitalot A, Tariq Z, Nola S, Bouteille N, Tury S, Vacher S, Bièche I, Ait Rais K, Pierron G, Fuhrmann L, Vincent-Salomon A, Formstecher E, Camonis J, Lidereau R, Lallemand F, Driouch K (as in `PAPER 103`)
+**Year:** 2018
+**Source type:** primary experimental — interaction biochemistry, cell biology, and a retrospective series of 448 human tumours
+**Journal/source:** *BMC Biol* 16:109
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 30285739 / DOI 10.1186/s12915-018-0576-6
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-09-26 (`BATCH_20260926_ALDAZ_R2`)
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 165
-**Status:** discovered
-**Primary pathway:** unassigned
-**Genotype/model tag:** unassigned
-**Transferability:** unassigned
-**clinical relevance:** LOW
-**Claim links:** none
-**Working Model impact:** none yet
-**Report mentions:** corpus alignment
-**Next action:** screening and tier assignment
-**Flags:** corpus placeholder / not yet screened
+**Status:** processed
+**Status note:** complete_fulltext_read — `FTR-20260914-30285739-01` (read on the VPS laboratory checkout, recovered by `fulltext_receipts.py rechain`); fields completed by `BATCH_20260926_ALDAZ_R2` from `CC-20260914-30285739-01`
+**Primary pathway:** P5 — trafficking / endomembrane
+**Genotype/model tag:** cell lines, SCID xenograft and human tumour series; no neural material and no WWOX disease variant
+**Transferability:** T3
+**clinical relevance:** LOW — unchanged: a breast-oncology axis in non-neural systems; its value to this corpus is mechanistic, not clinical
+**Claim links:** none — held for the claim batch
+**Working Model impact:** none in this batch — the candidate's `CLAIM 026` sentence is held for the claim batch
+**Report mentions:** corpus alignment · `CC-20260914-30285739-01` · `BATCH_20260926_ALDAZ_R2`
+**Next action:** none — read and registered
+**Flags:** read — receipt `FTR-20260914-30285739-01`
 **Note:** Title: VOPP1 promotes breast tumorigenesis by interacting with the tumor suppressor WWOX
+**Evidence depth:** complete_fulltext_read — receipt `FTR-20260914-30285739-01`; manifest `deepdive_manifests/PMID30285739.json`
+**Registry record:** [[paper_registry_current#PAPER 103]]
 
 ---
 
@@ -5404,29 +5437,32 @@ Serves to:
 ---
 
 ## LIT-0184
-**Short title:** corpus paper 168
-**Authors:** not yet extracted
-**Year:** unknown
-**Source type:** not yet screened
-**Journal/source:** not yet extracted
+**Short title:** Ferguson 2012 — conditional Wwox deletion in mouse mammary gland (BK5-Cre, MMTV-Cre)
+**Authors:** Ferguson BW, Gao X, Kil H, Lee J, Benavides F, Abba MC, Aldaz CM
+**Year:** 2012
+**Source type:** primary research — genetica murina condizionale (sopravvivenza, morfometria, trascrittoma)
+**Journal/source:** *PLoS ONE* 7(5):e36618
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 22574198 / DOI 10.1371/journal.pone.0036618
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-09-26 (`BATCH_20260926_ALDAZ_R2`)
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 168
-**Status:** discovered
-**Primary pathway:** unassigned
-**Genotype/model tag:** unassigned
-**Transferability:** unassigned
-**clinical relevance:** LOW
-**Claim links:** none
-**Working Model impact:** none yet
-**Report mentions:** corpus alignment
-**Next action:** screening and tier assignment
-**Flags:** corpus placeholder / not yet screened
+**Status:** processed
+**Status note:** complete_fulltext_read — `FTR-20260914-22574198-01` (read on the VPS laboratory checkout, recovered by `fulltext_receipts.py rechain`); fields completed by `BATCH_20260926_ALDAZ_R2` from `CC-20260914-22574198-01`
+**Primary pathway:** P7 — gene therapy readiness / dose-threshold logic (mammary leg of `CLAIM 032`); secondary: oncology
+**Genotype/model tag:** delezione condizionale murina tessuto-ristretta; nessun materiale neurale; nessun allele WWOX umano
+**Transferability:** T3 (T2 indiretta per il solo confine di dose)
+**clinical relevance:** MODERATE
+**Claim links:** none — held for the claim batch
+**Working Model impact:** none in this batch — the `CLAIM 032` source addition is held for the claim batch
+**Report mentions:** corpus alignment · `CC-20260914-22574198-01` · `BATCH_20260926_ALDAZ_R2`
+**Next action:** none — read and registered
+**Flags:** read — receipt `FTR-20260914-22574198-01`
 **Note:** Title: Conditional Wwox deletion in mouse mammary gland by means of two Cre recombinase approaches
+**Evidence depth:** complete_fulltext_read — receipt `FTR-20260914-22574198-01`; manifest `deepdive_manifests/PMID22574198.json`
+**Registry record:** [[paper_registry_current#PAPER 107]]
 
 ---
 
@@ -5674,29 +5710,32 @@ Serves to:
 ---
 
 ## LIT-0194
-**Short title:** corpus paper 178
-**Authors:** not yet extracted
-**Year:** unknown
-**Source type:** not yet screened
-**Journal/source:** not yet extracted
+**Short title:** Hussain 2025 — B-cell Wwox deletion in the Vk∗MYC myeloma model
+**Authors:** Hussain T, Bramble MD, Liu B, Abba MC, Chesi M, Aldaz CM
+**Year:** 2025
+**Source type:** primary research — cross-model mouse cohort + RNA-seq/WES genomics + public-dataset re-analysis
+**Journal/source:** *Blood Neoplasia* 2(4):100153
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 41090157 / DOI 10.1016/j.bneo.2025.100153
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-09-26 (`BATCH_20260926_ALDAZ_R2`)
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 178
-**Status:** discovered
-**Primary pathway:** unassigned
-**Genotype/model tag:** unassigned
-**Transferability:** unassigned
-**clinical relevance:** LOW
-**Claim links:** none
-**Working Model impact:** none yet
-**Report mentions:** corpus alignment
-**Next action:** screening and tier assignment
-**Flags:** corpus placeholder / not yet screened
+**Status:** processed
+**Status note:** complete_fulltext_read — `FTR-20260914-41090157-01` (read on the VPS laboratory checkout, recovered by `fulltext_receipts.py rechain`); fields completed by `BATCH_20260926_ALDAZ_R2` from `CC-20260914-41090157-01`
+**Primary pathway:** genome stability / DNA damage response (secondary: inflammation)
+**Genotype/model tag:** murine B/plasma-cell lineage on a MYC-driven background; no WWOX disease allele; no neural material
+**Transferability:** T3
+**clinical relevance:** LOW — unchanged
+**Claim links:** none — held for the claim batch
+**Working Model impact:** none in this batch — the `CLAIM 029` sentence is held for the claim batch
+**Report mentions:** corpus alignment · `CC-20260914-41090157-01` · `BATCH_20260926_ALDAZ_R2`
+**Next action:** none — read and registered
+**Flags:** read — receipt `FTR-20260914-41090157-01`
 **Note:** Title: B-cell-specific Wwox deletion promotes plasmablastic tumor development and proinflammatory signature
+**Evidence depth:** complete_fulltext_read — receipt `FTR-20260914-41090157-01`; manifest `deepdive_manifests/PMID41090157.json`
+**Registry record:** [[paper_registry_current#PAPER 115]]
 
 ---
 
@@ -6587,16 +6626,16 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Note:** Title: Gene expression of WWOX, FHIT and p73 in acute lymphoblastic leukemia
 
 ## LIT-0244
-**Short title:** Frequent downregulation and loss of WWOX gene expression in human hepatocellu...
-**Authors:** Park et al.
+**Short title:** Park 2004 — WWOX in 18 HCC lines: mRNA and protein reduced, two aberrant transcripts, four coding variants
+**Authors:** Park SW, Ludes-Meyers J, Zimonjic DB, Durkin ME, Popescu NC, Aldaz CM
 **Year:** 2004
 **Source type:** Article
 **Journal/source:** Br J Cancer
 **Identifier:** PMID 15266310 / PMC2364795 / DOI 10.1038/sj.bjc.6602023
 **Date discovered:** 2026-04-18
 **Date screened:** 2026-04-18
-**Date processed:** triage only
-**Date last touched:** 2026-04-18
+**Date processed:** 2026-09-26 (`BATCH_20260926_ALDAZ_R2`)
+**Date last touched:** 2026-09-26
 **Discovery window:** FASE 1 triage 221–400
 **Discovery source:** 400_paper.txt batch corpus
 **Discovery query:** corpus paper 244
@@ -6604,21 +6643,24 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Quality status:** peer-reviewed (PubMed listing)
 **Filter decision:** background only
 **Tier:** C
-**Status:** screened
-**Primary pathway:** P6 — DDR / genome stability
-**Genotype/model tag:** unassigned in triage
+**Status:** processed
+**Status note:** complete_fulltext_read — `FTR-20260914-15266310-01` (read on the VPS laboratory checkout, recovered by `fulltext_receipts.py rechain`); fields completed by `BATCH_20260926_ALDAZ_R2` from `CC-20260914-15266310-01`
+**Primary pathway:** oncology / tumor suppressor biology — corrected from `P6 — DDR / genome stability` (no DDR assay in the paper)
+**Genotype/model tag:** linee di HCC umane, nessun materiale neurale, nessun allele WWOX umano germinale
 **Species:** cell line
-**Transferability:** unassigned in triage
-**Directness to the reference genotype:** unassigned in triage
+**Transferability:** T3
+**Directness to the reference genotype:** none — adult somatic liver-cancer cell lines
 **Over-inference risk:** standard triage — not evaluated
-**clinical relevance:** LOW
-**Claim links:** none — triage only
-**Working Model impact:** none yet
-**Report mentions:** FASE 1 triage 221–400
-**Current status:** screened — C
-**Next action:** background-only; escalate only on convergence signal
-**Flags:** FASE 1 batch entry / no deep-dive yet
+**clinical relevance:** LOW (unchanged)
+**Claim links:** none — the reading proposes none
+**Working Model impact:** none — no working-model block is redefined by this record
+**Report mentions:** FASE 1 triage 221–400 · `CC-20260914-15266310-01` · `BATCH_20260926_ALDAZ_R2`
+**Current status:** processed — C
+**Next action:** none — read and registered
+**Flags:** read — receipt `FTR-20260914-15266310-01`
 **Note:** Title: Frequent downregulation and loss of WWOX gene expression in human hepatocellular carcinoma
+**Evidence depth:** complete_fulltext_read — receipt `FTR-20260914-15266310-01`; manifest `deepdive_manifests/PMID15266310.json`
+**Registry record:** [[paper_registry_current#CORPUS P244]]
 
 ## LIT-0245
 **Short title:** WWOX, a novel WW domain-containing protein mapping to human chromosome 16q23....
@@ -7132,15 +7174,15 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 
 ## LIT-0260
 **Short title:** Molecular alterations in the tumor suppressor gene WWOX in oral leukoplakias
-**Authors:** Pimenta et al.
+**Authors:** Pimenta FJ, Cordeiro GT, Pimenta LG, Viana MB, Lopes J, Gomez MV, Aldaz CM, De Marco L, Gomez RS
 **Year:** 2008
 **Source type:** Article
 **Journal/source:** Oral Oncol
 **Identifier:** PMID 18061530 / PMC4143237 / DOI 10.1016/j.oraloncology.2007.08.019
 **Date discovered:** 2026-04-18
 **Date screened:** 2026-04-18
-**Date processed:** triage only
-**Date last touched:** 2026-04-18
+**Date processed:** 2026-09-26 (`BATCH_20260926_ALDAZ_R2`)
+**Date last touched:** 2026-09-26
 **Discovery window:** FASE 1 triage 221–400
 **Discovery source:** 400_paper.txt batch corpus
 **Discovery query:** corpus paper 260
@@ -7148,21 +7190,24 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Quality status:** peer-reviewed (PubMed listing)
 **Filter decision:** background only
 **Tier:** C
-**Status:** screened
-**Primary pathway:** P6 — DDR / genome stability
-**Genotype/model tag:** unassigned in triage
+**Status:** processed
+**Status note:** complete_fulltext_read — `FTR-20260914-18061530-01` (read on the VPS laboratory checkout, recovered by `fulltext_receipts.py rechain`); fields completed by `BATCH_20260926_ALDAZ_R2` from `CC-20260914-18061530-01`
+**Primary pathway:** oncology / tumor suppressor biology — premalignant lesion; corrected from `P6 — DDR / genome stability`
+**Genotype/model tag:** 23 oral leukoplakias, adult human tissue; no WWOX germline allele, no neural material
 **Species:** not assessed in triage
-**Transferability:** unassigned in triage
-**Directness to the reference genotype:** unassigned in triage
+**Transferability:** T3
+**Directness to the reference genotype:** none — adult oral premalignant lesions
 **Over-inference risk:** standard triage — not evaluated
-**clinical relevance:** LOW
-**Claim links:** none — triage only
-**Working Model impact:** none yet
-**Report mentions:** FASE 1 triage 221–400
-**Current status:** screened — C
-**Next action:** background-only; escalate only on convergence signal
-**Flags:** FASE 1 batch entry / no deep-dive yet
+**clinical relevance:** LOW (unchanged)
+**Claim links:** none — the reading proposes none
+**Working Model impact:** none — no working-model block is redefined by this record
+**Report mentions:** FASE 1 triage 221–400 · `CC-20260914-18061530-01` · `BATCH_20260926_ALDAZ_R2`
+**Current status:** processed — C
+**Next action:** none — read and registered
+**Flags:** read — receipt `FTR-20260914-18061530-01`
 **Note:** Title: Molecular alterations in the tumor suppressor gene WWOX in oral leukoplakias
+**Evidence depth:** complete_fulltext_read — receipt `FTR-20260914-18061530-01`; manifest `deepdive_manifests/PMID18061530.json`
+**Registry record:** [[paper_registry_current#CORPUS P260]]
 
 ## LIT-0261
 **Short title:** Role of the WWOX tumor suppressor gene in bone homeostasis and the pathogenes...
@@ -7989,16 +8034,16 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Note:** Title: Association between CpG island methylation of the WWOX gene and its expression in breast cancers
 
 ## LIT-0286
-**Short title:** Association between decreased WWOX protein expression and thyroid cancer deve...
-**Authors:** Dias et al.
+**Short title:** Dias 2007 — WWOX IHC in 53 thyroid lesions: absent or weak in papillary carcinoma, kept in follicular lesions
+**Authors:** Dias EP, Pimenta FJ, Sarquis MS, Dias Filho MA, Aldaz CM, Fujii JB, Gomez RS, De Marco L
 **Year:** 2007
 **Source type:** Article
 **Journal/source:** Thyroid
 **Identifier:** PMID 18047428 / PMC4150466 / DOI 10.1089/thy.2007.0232
 **Date discovered:** 2026-04-18
 **Date screened:** 2026-04-18
-**Date processed:** triage only
-**Date last touched:** 2026-04-18
+**Date processed:** 2026-09-26 (`BATCH_20260926_ALDAZ_R2`)
+**Date last touched:** 2026-09-26
 **Discovery window:** FASE 1 triage 221–400
 **Discovery source:** 400_paper.txt batch corpus
 **Discovery query:** corpus paper 286
@@ -8006,21 +8051,24 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Quality status:** peer-reviewed (PubMed listing)
 **Filter decision:** background only
 **Tier:** C
-**Status:** screened
-**Primary pathway:** P6 — DDR / genome stability
-**Genotype/model tag:** unassigned in triage
+**Status:** processed
+**Status note:** complete_fulltext_read — `FTR-20260914-18047428-01` (read on the VPS laboratory checkout, recovered by `fulltext_receipts.py rechain`); fields completed by `BATCH_20260926_ALDAZ_R2` from `CC-20260914-18047428-01`
+**Primary pathway:** oncology / tumor suppressor biology — tissue protein expression (IHC); corrected from `P6 — DDR / genome stability`
+**Genotype/model tag:** 53 thyroid lesions from 46 adults; no WWOX germline allele, no neural material
 **Species:** human
-**Transferability:** unassigned in triage
-**Directness to the reference genotype:** unassigned in triage
+**Transferability:** T3
+**Directness to the reference genotype:** none — adult thyroid tissue
 **Over-inference risk:** standard triage — not evaluated
-**clinical relevance:** LOW
-**Claim links:** none — triage only
-**Working Model impact:** none yet
-**Report mentions:** FASE 1 triage 221–400
-**Current status:** screened — C
-**Next action:** background-only; escalate only on convergence signal
-**Flags:** FASE 1 batch entry / no deep-dive yet
+**clinical relevance:** LOW (unchanged)
+**Claim links:** none — the reading proposes none
+**Working Model impact:** none — no working-model block is redefined by this record
+**Report mentions:** FASE 1 triage 221–400 · `CC-20260914-18047428-01` · `BATCH_20260926_ALDAZ_R2`
+**Current status:** processed — C
+**Next action:** none — read and registered
+**Flags:** read — receipt `FTR-20260914-18047428-01`
 **Note:** Title: Association between decreased WWOX protein expression and thyroid cancer development
+**Evidence depth:** complete_fulltext_read — receipt `FTR-20260914-18047428-01`; manifest `deepdive_manifests/PMID18047428.json`
+**Registry record:** [[paper_registry_current#CORPUS P286]]
 
 ## LIT-0287
 **Short title:** The JNK inhibitor SP600129 enhances apoptosis of HCC cells induced by the tum...
@@ -9293,8 +9341,8 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Identifier:** PMID 15692750 / PMC4145848 / DOI 10.1007/s10549-004-1474-x
 **Date discovered:** 2026-04-18
 **Date screened:** 2026-04-18
-**Date processed:** triage only
-**Date last touched:** 2026-04-18
+**Date processed:** 2026-09-26 (`BATCH_20260926_ALDAZ_R2`)
+**Date last touched:** 2026-09-26
 **Discovery window:** FASE 1 triage 221–400
 **Discovery source:** 400_paper.txt batch corpus
 **Discovery query:** corpus paper 324
@@ -9302,21 +9350,24 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Quality status:** peer-reviewed (PubMed listing)
 **Filter decision:** background only
 **Tier:** C
-**Status:** screened
-**Primary pathway:** P5 — metabolism / mitochondria / redox
-**Genotype/model tag:** unassigned in triage
+**Status:** processed
+**Status note:** complete_fulltext_read — `FTR-20260913-15692750-01` (read on the VPS laboratory checkout, recovered by `fulltext_receipts.py rechain`); fields completed by `BATCH_20260926_ALDAZ_R2` from `CC-20260913-ALDAZ-B003-01`
+**Primary pathway:** baseline expression / tumour-tissue protein loss — corrected from `P5 — metabolism / mitochondria / redox` (nothing hormonal is measured)
+**Genotype/model tag:** human adult breast tissue, somatic; no WWOX allele
 **Species:** not assessed in triage
-**Transferability:** unassigned in triage
+**Transferability:** T3, `ESPANSIONE`
 **Directness to the reference genotype:** unassigned in triage
-**Over-inference risk:** standard triage — not evaluated
-**clinical relevance:** LOW
-**Claim links:** none — triage only
-**Working Model impact:** none yet
-**Report mentions:** FASE 1 triage 221–400
-**Current status:** screened — C
-**Next action:** background-only; escalate only on convergence signal
-**Flags:** FASE 1 batch entry / no deep-dive yet
+**Over-inference risk:** evaluated — HIGH on the SDR/sex-steroid framing, LOW on the staining observation
+**clinical relevance:** LOW — unchanged
+**Claim links:** none — the reading proposes none
+**Working Model impact:** none — no working-model block is redefined by this record
+**Report mentions:** FASE 1 triage 221–400 · `CC-20260913-ALDAZ-B003-01` · `BATCH_20260926_ALDAZ_R2`
+**Current status:** processed — C
+**Next action:** none — read and registered
+**Flags:** read — receipt `FTR-20260913-15692750-01`
 **Note:** Title: Frequent loss of WWOX expression in breast cancer: correlation with estrogen receptor status
+**Evidence depth:** complete_fulltext_read — receipt `FTR-20260913-15692750-01`; manifest `deepdive_manifests/PMID15692750.json`
+**Registry record:** [[paper_registry_current#CORPUS P324]]
 
 ## LIT-0325
 **Short title:** Primary WWOX phosphorylation and JNK activation during etoposide induces cyto...
@@ -9728,8 +9779,8 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Note:** Title: WWOX induces apoptosis and inhibits proliferation of human hepatoma cell line SMMC-7721
 
 ## LIT-0337
-**Short title:** WWOX mRNA expression profile in epithelial ovarian cancer supports the role o...
-**Authors:** # et al.
+**Short title:** Gourley 2005 — WWOX variant 1 and variant 4 mRNA in 71 ovarian tumours and 13 contralateral ovaries
+**Authors:** Gourley C, Paige AJW, Taylor KJ, Scott D, Francis NJ, Rush R, Aldaz CM, Smyth JF, Gabra H — corrected from the literal placeholder `# et al.`
 **Year:** 2005
 **Source type:** Article
 **Journal/source:** Int J Oncol
@@ -9737,7 +9788,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Date discovered:** 2026-04-18
 **Date screened:** 2026-04-18
 **Date processed:** triage only
-**Date last touched:** 2026-04-18
+**Date last touched:** 2026-09-26
 **Discovery window:** FASE 1 triage 221–400
 **Discovery source:** 400_paper.txt batch corpus
 **Discovery query:** corpus paper 337
@@ -9746,6 +9797,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Filter decision:** background only
 **Tier:** C
 **Status:** screened
+**Status note:** identity completed by `BATCH_20260926_ALDAZ_R2` (`CC-20260914-15870886-01`); a reading exists with one declared multihop gap and **no persisted receipt**, so no reading depth is declared and the triage status stands
 **Primary pathway:** oncology / tumor suppressor biology
 **Genotype/model tag:** unassigned in triage
 **Species:** human
@@ -10751,15 +10803,15 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 
 ## LIT-0367
 **Short title:** Characterization of the tumor suppressor gene WWOX in primary human oral squa...
-**Authors:** Pimenta et al.
+**Authors:** Pimenta FJ, Gomes DA, Perdigão PF, Barbosa AA, Romano-Silva MA, Gomez MV, Aldaz CM, De Marco L, Gomez RS
 **Year:** 2006
 **Source type:** Article
 **Journal/source:** Int J Cancer
 **Identifier:** PMID 16152610 / PMC4145845 / DOI 10.1002/ijc.21446
 **Date discovered:** 2026-04-18
 **Date screened:** 2026-04-18
-**Date processed:** triage only
-**Date last touched:** 2026-04-18
+**Date processed:** 2026-09-26 (`BATCH_20260926_ALDAZ_R2`)
+**Date last touched:** 2026-09-26
 **Discovery window:** FASE 1 triage 221–400
 **Discovery source:** 400_paper.txt batch corpus
 **Discovery query:** corpus paper 367
@@ -10767,21 +10819,24 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Quality status:** peer-reviewed (PubMed listing)
 **Filter decision:** background only
 **Tier:** C
-**Status:** screened
-**Primary pathway:** P6 — DDR / genome stability
-**Genotype/model tag:** unassigned in triage
+**Status:** processed
+**Status note:** complete_fulltext_read — `FTR-20260914-16152610-01` (read on the VPS laboratory checkout, recovered by `fulltext_receipts.py rechain`); fields completed by `BATCH_20260926_ALDAZ_R2` from `CC-20260914-16152610-01`
+**Primary pathway:** oncology / tumor suppressor biology — expression and aberrant transcripts; corrected from `P6 — DDR / genome stability`
+**Genotype/model tag:** 20 adult OSCC; somatic S329F; no WWOX germline allele, no neural material
 **Species:** not assessed in triage
-**Transferability:** unassigned in triage
-**Directness to the reference genotype:** unassigned in triage
+**Transferability:** T3
+**Directness to the reference genotype:** none — adult oral squamous cell carcinomas
 **Over-inference risk:** standard triage — not evaluated
-**clinical relevance:** LOW
-**Claim links:** none — triage only
-**Working Model impact:** none yet
-**Report mentions:** FASE 1 triage 221–400
-**Current status:** screened — C
-**Next action:** background-only; escalate only on convergence signal
-**Flags:** FASE 1 batch entry / no deep-dive yet
+**clinical relevance:** LOW (unchanged)
+**Claim links:** none — the reading proposes none
+**Working Model impact:** none — no working-model block is redefined by this record
+**Report mentions:** FASE 1 triage 221–400 · `CC-20260914-16152610-01` · `BATCH_20260926_ALDAZ_R2`
+**Current status:** processed — C
+**Next action:** none — read and registered
+**Flags:** read — receipt `FTR-20260914-16152610-01`
 **Note:** Title: Characterization of the tumor suppressor gene WWOX in primary human oral squamous cell carcinomas
+**Evidence depth:** complete_fulltext_read — receipt `FTR-20260914-16152610-01`; manifest `deepdive_manifests/PMID16152610.json`
+**Registry record:** [[paper_registry_current#CORPUS P367]]
 
 ## LIT-0368
 **Short title:** Aberrant gene promoter methylation of p16, FHIT, CRBP1, WWOX, and DLC-1 in Ep...
@@ -11124,16 +11179,16 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Note:** Title: Large common fragile site genes and cancer
 
 ## LIT-0378
-**Short title:** Impact of decitabine on immunohistochemistry expression of the putative tumor...
-**Authors:** Stewart et al.
+**Short title:** Stewart 2014 — decitabine and FHIT/WWOX/FUS1/PTEN IHC in paired biopsies: WWOX rises as a non-significant trend (P = 0.0547)
+**Authors:** Stewart DJ, Nunez MI, Jelinek J, Hong D, Gupta S, Aldaz M, Issa JP, Kurzrock R, Wistuba II (`Aldaz M` as printed)
 **Year:** 2014
 **Source type:** Article
 **Journal/source:** Clin Epigenetics
 **Identifier:** PMID 25024751 / PMC4094901 / DOI 10.1186/1868-7083-6-13
 **Date discovered:** 2026-04-18
 **Date screened:** 2026-04-18
-**Date processed:** triage only
-**Date last touched:** 2026-04-18
+**Date processed:** 2026-09-26 (`BATCH_20260926_ALDAZ_R2`)
+**Date last touched:** 2026-09-26
 **Discovery window:** FASE 1 triage 221–400
 **Discovery source:** 400_paper.txt batch corpus
 **Discovery query:** corpus paper 378
@@ -11141,21 +11196,24 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Quality status:** peer-reviewed (PubMed listing)
 **Filter decision:** background only
 **Tier:** C
-**Status:** screened
-**Primary pathway:** P6 — DDR / genome stability
-**Genotype/model tag:** unassigned in triage
+**Status:** processed
+**Status note:** complete_fulltext_read — `FTR-20260914-25024751-01` (read on the VPS laboratory checkout, recovered by `fulltext_receipts.py rechain`); fields completed by `BATCH_20260926_ALDAZ_R2` from `CC-20260914-25024751-01`
+**Primary pathway:** epigenetics / pharmacological re-expression — corrected from `P6 — DDR / genome stability`
+**Genotype/model tag:** tumori umani refrattari adulti, tessuto bioptico, nessun materiale neurale, nessun allele WWOX germinale
 **Species:** human
-**Transferability:** unassigned in triage
-**Directness to the reference genotype:** unassigned in triage
+**Transferability:** T3
+**Directness to the reference genotype:** none — adult refractory tumours, no child, no neural material
 **Over-inference risk:** standard triage — not evaluated
-**clinical relevance:** LOW
-**Claim links:** none — triage only
-**Working Model impact:** none yet
-**Report mentions:** FASE 1 triage 221–400
-**Current status:** screened — C
-**Next action:** background-only; escalate only on convergence signal
-**Flags:** FASE 1 batch entry / no deep-dive yet
+**clinical relevance:** LOW (unchanged)
+**Claim links:** none — the reading proposes none
+**Working Model impact:** none — no working-model block is redefined by this record
+**Report mentions:** FASE 1 triage 221–400 · `CC-20260914-25024751-01` · `BATCH_20260926_ALDAZ_R2`
+**Current status:** processed — C
+**Next action:** none — read and registered
+**Flags:** read — receipt `FTR-20260914-25024751-01`
 **Note:** Title: Impact of decitabine on immunohistochemistry expression of the putative tumor suppressor genes FHIT, WWOX, FUS1 and PTEN in clinical tumor samples
+**Evidence depth:** complete_fulltext_read — receipt `FTR-20260914-25024751-01`; manifest `deepdive_manifests/PMID25024751.json`
+**Registry record:** [[paper_registry_current#CORPUS P378]]
 
 ## LIT-0379
 **Short title:** MicroRNA-153 promotes Wnt/β-catenin activation in hepatocellular carcinoma th...
@@ -11363,15 +11421,15 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 
 ## LIT-0385
 **Short title:** Expression of common chromosomal fragile site genes, WWOX/FRA16D and FHIT/FRA...
-**Authors:** Thavathiru et al.
+**Authors:** Thavathiru E, Ludes-Meyers JH, MacLeod MC, Aldaz CM
 **Year:** 2005
 **Source type:** Article
 **Journal/source:** Mol Carcinog
 **Identifier:** PMID 16187332 / PMC4166602 / DOI 10.1002/mc.20122
 **Date discovered:** 2026-04-18
 **Date screened:** 2026-04-18
-**Date processed:** triage only
-**Date last touched:** 2026-04-18
+**Date processed:** 2026-09-26 (`BATCH_20260926_ALDAZ_R2`)
+**Date last touched:** 2026-09-26
 **Discovery window:** FASE 1 triage 221–400
 **Discovery source:** 400_paper.txt batch corpus
 **Discovery query:** corpus paper 385
@@ -11379,21 +11437,24 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Quality status:** peer-reviewed (PubMed listing)
 **Filter decision:** background only
 **Tier:** C
-**Status:** screened
-**Primary pathway:** P6 — DDR / genome stability
-**Genotype/model tag:** unassigned in triage
+**Status:** processed
+**Status note:** complete_fulltext_read — `FTR-20260914-16187332-01` (read on the VPS laboratory checkout, recovered by `fulltext_receipts.py rechain`); fields completed by `BATCH_20260926_ALDAZ_R2` from `CC-20260914-16187332-01`
+**Primary pathway:** P6 — DDR / genome stability (kept): it measures WWOX expression after DNA damage, not WWOX's role in the damage response
+**Genotype/model tag:** MCF-7 and Saos-2 only; no WWOX allele, no neural material
 **Species:** not assessed in triage
-**Transferability:** unassigned in triage
-**Directness to the reference genotype:** unassigned in triage
+**Transferability:** T3
+**Directness to the reference genotype:** none — two transformed adult lines
 **Over-inference risk:** standard triage — not evaluated
-**clinical relevance:** LOW
-**Claim links:** none — triage only
-**Working Model impact:** none yet
-**Report mentions:** FASE 1 triage 221–400
-**Current status:** screened — C
-**Next action:** background-only; escalate only on convergence signal
-**Flags:** FASE 1 batch entry / no deep-dive yet
+**clinical relevance:** LOW (unchanged)
+**Claim links:** none — deliberately; the reading refuses a `CLAIM 029` edit (converse direction)
+**Working Model impact:** none — no working-model block is redefined by this record
+**Report mentions:** FASE 1 triage 221–400 · `CC-20260914-16187332-01` · `BATCH_20260926_ALDAZ_R2`
+**Current status:** processed — C
+**Next action:** none — read and registered
+**Flags:** read — receipt `FTR-20260914-16187332-01`
 **Note:** Title: Expression of common chromosomal fragile site genes, WWOX/FRA16D and FHIT/FRA3B is downregulated by exposure to environmental carcinogens, UV, and BPDE but not by IR
+**Evidence depth:** complete_fulltext_read — receipt `FTR-20260914-16187332-01`; manifest `deepdive_manifests/PMID16187332.json`
+**Registry record:** [[paper_registry_current#CORPUS P385]]
 
 ## LIT-0386
 **Short title:** Cigarette smoking extract causes hypermethylation and inactivation of WWOX ge...
@@ -12350,3 +12411,62 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 
 ---
 
+## LIT-0418
+**Short title:** Ludes-Meyers 2007 — Wwox hypomorphic gene-trap mice: viable, reduced survival, B-cell lymphomas in females, testicular atrophy
+**Authors:** Ludes-Meyers JH, Kil H, Nuñez MI, Conti CJ, Parker-Thornburg J, Bedford MT, Aldaz CM
+**Year:** 2007
+**Source type:** primary research — mouse genetics, long-term ageing/tumorigenesis cohort, histopathology (NIH author manuscript NIHMS222061)
+**Journal/source:** *Genes Chromosomes Cancer* 46(12):1129-1136
+**Identifier type:** PMID / DOI / PMCID
+**Identifier value:** PMID 17823927 / DOI 10.1002/gcc.20497 / PMC4143238
+**Date discovered:** 2026-09-14 (`SCIENCE-EXEC-20260914`, VPS laboratory checkout)
+**Date processed:** 2026-09-26 (`BATCH_20260926_ALDAZ_R2`)
+**Discovery window:** Aldaz series reconciliation, 2026-09-14
+**Discovery source:** `CC-20260914-17823927-01`; the paper was restated in `CLAIM 032` with no registry record
+**Discovery query:** hypomorph leg of `CLAIM 032`
+**Status:** processed
+**Status note:** complete_fulltext_read — `FTR-20260914-17823927-01`; record created by `BATCH_20260926_ALDAZ_R2`
+**Primary pathway:** P7 — gene therapy readiness / dose-threshold logic
+**Genotype/model tag:** topo ipomorfo gene-trap, nessun materiale neurale, nessun allele WWOX umano
+**Transferability:** T3
+**clinical relevance:** INDIRECT-LOW
+**Claim links:** none — held for the claim batch
+**Working Model impact:** none in this batch — the `CLAIM 032` Summary correction is held for the claim batch
+**Report mentions:** `CC-20260914-17823927-01` · `BATCH_20260926_ALDAZ_R2`
+**Next action:** none — read and registered
+**Flags:** read — receipt `FTR-20260914-17823927-01`
+**Evidence depth:** complete_fulltext_read — receipt `FTR-20260914-17823927-01`; manifest `deepdive_manifests/PMID17823927.json`
+**Registry record:** [[paper_registry_current#PAPER 098]]
+**Note:** Title: Wwox hypomorphic mice display a higher incidence of B-cell lymphomas and develop testicular atrophy
+
+---
+
+## LIT-0419
+**Short title:** Ramos 2008 — WWOX IHC in 101 bladder tumours: loss correlates with grade, stage and progression
+**Authors:** Ramos D, Abba M, López-Guerrero JA, Rubio J, Solsona E, Almenar S, Llombart-Bosch A, Aldaz CM
+**Year:** 2008
+**Source type:** primary research — serie clinica retrospettiva monocentrica con immunoistochimica (NIH author manuscript NIHMS222064)
+**Journal/source:** *Histopathology* 52(7):831-839
+**Identifier type:** PMID / DOI / PMCID
+**Identifier value:** PMID 18452537 / DOI 10.1111/j.1365-2559.2008.03033.x / PMC4151645
+**Date discovered:** 2026-09-14 (`SCIENCE-EXEC-20260914`, VPS laboratory checkout)
+**Date processed:** 2026-09-26 (`BATCH_20260926_ALDAZ_R2`)
+**Discovery window:** Aldaz series reconciliation, 2026-09-14
+**Discovery source:** `CC-20260914-18452537-01`; the PMID had no record in the log (checked by PMID, DOI, PMCID and title)
+**Discovery query:** unread and unregistered Aldaz series paper
+**Status:** processed
+**Status note:** complete_fulltext_read — `FTR-20260914-18452537-01`; record created by `BATCH_20260926_ALDAZ_R2`
+**Primary pathway:** oncologia adulta / biomarcatore tissutale, fuori dagli assi del modello
+**Genotype/model tag:** tessuto vescicale umano adulto, nessun allele WWOX, nessun materiale neurale
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** none
+**Working Model impact:** none — no working-model block is redefined by this record
+**Report mentions:** `CC-20260914-18452537-01` · `BATCH_20260926_ALDAZ_R2`
+**Next action:** none — read and registered
+**Flags:** read — receipt `FTR-20260914-18452537-01`
+**Evidence depth:** complete_fulltext_read — receipt `FTR-20260914-18452537-01`; manifest `deepdive_manifests/PMID18452537.json`
+**Registry record:** [[paper_registry_current#PAPER 099]]
+**Note:** Title: Low levels of WWOX protein immunoexpression correlate with tumour grade and a less favourable outcome in patients with urinary bladder tumours
+
+---
