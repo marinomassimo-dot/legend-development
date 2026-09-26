@@ -300,6 +300,10 @@ class ALegacyTriageCodeIsNotTheCanonicalPathway(unittest.TestCase):
     def test_a_legacy_label_does_not_hide_a_canonical_code_beside_it(self):
         self.assertEqual(graph.pathway_matches("P6 — DDR / genome stability; P5 — metabolism"), ["P5"])
 
+    def test_a_pathway_code_range_is_not_two_pathways(self):
+        record = "**Primary pathway:** P6 — neuroinflammation\n**Note:** canonical P1–P7 legend"
+        self.assertEqual(graph.pathway_matches(record), ["P6"])
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
