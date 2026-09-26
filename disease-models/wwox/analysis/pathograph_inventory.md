@@ -82,7 +82,7 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 | CLAIM 030 | In WWOX the severity tracks residual protein FUNCTION, not protein abundance | in observation | DATO (serie allelica su cellule di pazie | genotype / protein function / proteostas | NOT_ANNOTATED | 9 | 6 |
 | CLAIM 031 | WWOX-DEE is a developmental AND epileptic encephalopathy: seizure control does not rescue develo | in observation | DATO (osservazione clinica) + INFERENZA  | clinical course / therapeutic strategy | NOT_ANNOTATED | 4 | 2 |
 | CLAIM 032 | WWOX haploinsufficiency is not deleterious **on the endpoints that have been measured** (neoplas | in observation | DATO (topo, ratto, e ogni famiglia umana | P7 — gene therapy readiness / dose-thres | NOT_ANNOTATED | 6 | 12 |
-| CLAIM 033 | Biallelic null WWOX carries higher mortality than genotypes with at least one missense — but the | in observation | DATO (statistica di coorte) + IPOTESI (l | genotype-phenotype / prognosis | NOT_ANNOTATED | 3 | 1 |
+| CLAIM 033 | Biallelic null WWOX carries higher mortality than genotypes with at least one missense — but the | in observation | DATO (statistica di coorte) + IPOTESI (l | genotype-phenotype / prognosis | NOT_ANNOTATED | 3 | 2 |
 | CLAIM 034 | In a post-mitotic excitable neuron under metabolic stress, WWOX up-regulation is pro-oxidant — r | in observation | DATO (sistema fotorecettoriale) + ESPANS | P5 — metabolism / redox · secondario P1  | NOT_ANNOTATED | 6 | 2 |
 | CLAIM 035 | WWOX is a direct, residue-mapped inhibitor of GSK3β through an Axin-like docking motif in the SD | in observation | DATO (biochimica, cinque saggi ortogonal | P1 neurosviluppo / GSK3β–Tau–microtubuli | NOT_ANNOTATED | 6 | 1 |
 | CLAIM 036 | A systemic constitutive Wwox-null mouse at P18 is metabolically decompensated, so any brain phen | in observation | DATO (le misure) + INFERENZA (la portata | P5 — metabolismo / rene; confondente tra | NOT_ANNOTATED | 5 | 4 |
@@ -115,11 +115,11 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 | CLAIM 017 <-> CLAIM 020 | **one-way** | Clinical meaning | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
 | CLAIM 019 <-> CLAIM 030 | yes | Source, Summary | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 041, PAPER 042 |
 | CLAIM 019 <-> CLAIM 032 | yes | Source, Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 041 |
-| CLAIM 019 <-> CLAIM 033 | **one-way** | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 040 |
+| CLAIM 019 <-> CLAIM 033 | **one-way** | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 040, PAPER 042 |
 | CLAIM 028 <-> CLAIM 034 | **one-way** | Clinical meaning | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 054 |
 | CLAIM 028 <-> CLAIM 035 | **one-way** | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 056 |
 | CLAIM 030 <-> CLAIM 032 | **one-way** | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 039, PAPER 041, PAPER 043 |
-| CLAIM 030 <-> CLAIM 033 | **one-way** | Clinical meaning | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
+| CLAIM 030 <-> CLAIM 033 | **one-way** | Clinical meaning | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 042 |
 | CLAIM 030 <-> CLAIM 035 | **one-way** | Clinical meaning | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 056 |
 | CLAIM 031 <-> CLAIM 032 | **one-way** | Clinical meaning | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 049 |
 | CLAIM 036 <-> CLAIM 038 | yes | Summary, Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 057 |
@@ -234,6 +234,7 @@ wikilink, so the relation is asserted in text and invisible to the graph.
 |---|---|---|
 | CLAIM 006 | CLAIM 007 | Genotype/model relevance |
 | CLAIM 025 | CLAIM 009 | Clinical meaning |
+| CLAIM 030 | CLAIM 033 | Wording record (BATCH_20260926_MALLARET, 2026-09-26) |
 
 **Working-model co-mentions.** Two claims named in one sentence of the
 working model with no edge between them in the registry.
@@ -286,10 +287,10 @@ place to look, not a set of missing edges.
 | CLAIM 007 ↔ CLAIM 008 | PAPER 042 |
 | CLAIM 007 ↔ CLAIM 019 | PAPER 042 |
 | CLAIM 007 ↔ CLAIM 030 | PAPER 042 |
+| CLAIM 007 ↔ CLAIM 033 | PAPER 042 |
 | CLAIM 008 ↔ CLAIM 019 | PAPER 040, PAPER 042 |
-| CLAIM 008 ↔ CLAIM 030 | PAPER 042 |
 
-Showing 12 of 23. The complete list is in the export.
+Showing 12 of 24. The complete list is in the export.
 
 ## 5 · Candidate edges — propositions already written, awaiting review
 
@@ -348,6 +349,6 @@ carried no connective from the lexicon.
 ## Provenance
 
 Derived from 112 input files; digest
-`9ad4f9265d45153c`. Sources: the claim, paper and
+`ef884c155cec1a05`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 
