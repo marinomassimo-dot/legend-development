@@ -31,7 +31,7 @@ The public edition is organized into three layers. The layering is itself the pr
 | `disease_model.md` | Disease-level mechanistic synthesis + genotype-interpretation rules + decision framework. |
 | `mission.md` | The mission / north-star and epistemic reset (disease-level). |
 | `meta/` | Structured syntheses per biological axis (network/myelin/glia, metabolism, prenatal structure, human spectrum, GABA paradox), from public literature. |
-| `research/` | Future-work research lines and candidates, full-text queue, the **dismissal ledger** (negatives are claims), the **discovery ledger** and the **therapeutic-hypotheses ledger** — the two compounding-memory files. |
+| `research/` | Future-work research lines and candidates, full-text queue, the **dismissal ledger** (negatives are claims), the **discovery ledger** and the **therapeutic-hypotheses ledger** — the two compounding-memory files — plus the **experiment ledger** (designed experiments, their pre-registered branches and their results) and the **record repair queue** (defects found in the record, each with its fix and the verification that closes it). |
 | `biomarker_endpoint/` | Tier 1/2 gene-linked biomarker candidates vs Tier 3 distal clinical endpoints — kept strictly separate. |
 | `therapeutics/` | Scored portfolio of candidate therapeutic strategies (read-only toward the model; promotion via pipeline). |
 | `analysis/` | The in-silico variant-triage pipeline + data + the adversarial red-team of a worked variant example + the **proteostasis rationale** behind the chaperone lever (published with its later repair). Also the **DisMech export pipeline** — claims to Monarch-compatible disorder-mechanism entries, built to refuse rather than to produce plausible YAML; dry run only, nothing submitted ([status](disease-models/wwox/analysis/README.md#the-dismech-export-pipeline)). |
@@ -40,6 +40,22 @@ The public edition is organized into three layers. The layering is itself the pr
 > **Registries — de-identified.** The registries carry public-literature bibliographic state with all individual-linking data removed: the persistent-individual relevance axis is neutralized (to "clinical relevance" and "directness to the reference genotype"), family-relationship data is decoupled, cell-line ownership is removed, and no dates or record identifiers remain. Specific variants appear only as decoupled disease-model worked examples. Some entries remain in their original language pending translation.
 
 > **Compounding memory — the two ledgers.** `research/discovery_ledger_current.md` (the cumulative discovery capital: leads toward biomarkers, molecules and repurposing, never deleted, only re-statused) and `research/therapeutic_hypotheses_ledger_current.md` (the scored hypothesis portfolio from the co-scientist loop) are what make LEGEND a compounding engine rather than a bibliography. Both are de-identified to disease level: they reason about **the reference genotype** — a WWOX-DEE genotype class — not about a person, and links to private operational logs are rendered as plain text rather than broken links.
+
+> **A ledger accumulates, a queue drains — and that is why there are two new files, not one.**
+> `research/experiment_ledger_current.md` holds **designed experiments**: one record each, carrying the
+> decision it settles, its material class (`NONE` / `IN_VITRO` / `CELL_LINE` / `EXISTING_ANIMAL` /
+> `HUMAN_REQUIRED`), its branches pre-registered *before* the run and not edited after it, and its
+> result once reported. Records are never deleted, only `SUPERSEDED` or `ABANDONED` with a reason.
+> It exists because experiments were previously specified inside analysis files and handoff
+> briefings, where the next session does not find them, re-derives them, and lets their branch tables
+> decay into a single expected outcome.
+> `research/record_repair_queue_current.md` holds **defects in the record** — contradictions between
+> files, artefacts declared read but absent, over-claims, owed read receipts, stale harness
+> assumptions — each with the edit that fixes it and the check that closes it. A row leaves only into
+> `CLOSED` with its verification named or `WONT_FIX` with its reason; nothing is deleted, because a
+> defect removed silently returns wearing different words. Both files are research-layer and
+> non-canonical: a result reaches the canonical model only through a `COMMIT CANDIDATE` under
+> `BATCH_COMMIT`, and a repair touching one of the four canonical current files goes the same way.
 
 ### Root — the bootstrap
 
