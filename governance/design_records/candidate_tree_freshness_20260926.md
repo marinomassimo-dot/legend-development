@@ -74,7 +74,7 @@ legitimately pays it.
 
 ## The leaked worktrees
 
-`/tmp/tmpwea7wqn_/tree` (2026-09-14, planted `[[a-target-that-does-not-exist-xyz]]` in
+`/tmp/tmpwea7wqn_/tree` (2026-09-14, a planted broken wikilink appended to
 `governance/ANNEX_INDEX.md`) and `/tmp/tmp37jhblwn/tree` (2026-09-26, planted
 `vendored_untracked/.git`) were disposable checkouts of `scripts/test_repository_surface_determinism.py`,
 identified by their planted edits. Their cleanup was correct but ran only via `addCleanup`: a
