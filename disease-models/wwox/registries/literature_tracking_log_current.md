@@ -2499,13 +2499,13 @@ Serves to:
 **Primary pathway:** P6 — neuroinflammation / glia
 **Genotype/model tag:** P47T knock-in (WW1)
 **Transferability:** T3 with genotype caution
-**clinical relevance:** LOW (as `PAPER 007`; the corpus-alignment triage value HIGH is superseded)
+**clinical relevance:** LOW
 **Claim links:** 006, 007
 **Working Model impact:** `BATCH_20260926_ALDAZ` (WM_v5.1): CLAIM 006 and CLAIM 007 narrowed
 **Report mentions:** corpus alignment
 **Next action:** none for CLAIM 006/007; remaining sections of the reading's candidate are queued (Purkinje/basket-cell claim, dismissals, reading debt)
 **Flags:** registry records PAPER 007 (canonical) and PAPER 112 (duplicate, append-only)
-**Note:** Title: WWOX P47T partial loss-of-function mutation induces epilepsy, progressive neuroinflammation, and cerebellar degeneration in mice
+**Note:** clinical relevance set to LOW as on `PAPER 007` by `BATCH_20260926_ALDAZ`; the corpus-alignment triage value HIGH is superseded. Title: WWOX P47T partial loss-of-function mutation induces epilepsy, progressive neuroinflammation, and cerebellar degeneration in mice
 
 ---
 

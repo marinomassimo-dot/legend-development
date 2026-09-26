@@ -146,4 +146,4 @@ metadata and declarations against artifacts already on disk, and demote no exper
 
 **Status:** **PROPAGATED IN PART** — `BATCH_20260926_ALDAZ`.
 
-Item **A** (`PAPER 007`) only: it was already superseded in place by `CC-20260826-PROVENANCE-PAPER007-01`, which `BATCH_20260926_ALDAZ` propagated. Items **B** (`PAPER 027`/`PAPER 030`), **C** (`PAPER 001` → PMID 42397075), **D** (`PAPER 039` depth) and **E** (two meta corrections) are untouched and stay queued.
+Item **A** (`PAPER 007`) only: propagated except A(5) — the note on both claims that the published title names **epilepsy** and **cerebellar degeneration** — which stays owed with `CC-20260913-36828035-01` §4 (the cerebellar claim); it was already superseded in place by `CC-20260826-PROVENANCE-PAPER007-01`, which `BATCH_20260926_ALDAZ` propagated. Items **B** (`PAPER 027`/`PAPER 030`), **C** (`PAPER 001` → PMID 42397075), **D** (`PAPER 039` depth) and **E** (two meta corrections) are untouched and stay queued.

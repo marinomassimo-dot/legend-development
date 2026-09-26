@@ -39,11 +39,11 @@ a corrigendum says the record was repaired, a retraction says it should not have
 | [23446842](https://pubmed.ncbi.nlm.nih.gov/23446842/) | retracted | tracking log | `disease-models/wwox/registries/literature_tracking_log_current.md`<br>`disease-models/wwox/registries/paper_registry_current.md` | may not support or promote any claim; audit every claim already resting on it; readable for audit only |
 | [16223882](https://pubmed.ncbi.nlm.nih.gov/16223882/) | concern | PAPER 082 | `disease-models/wwox/registries/literature_tracking_log_current.md`<br>`disease-models/wwox/registries/paper_registry_current.md`<br>`disease-models/wwox/research/discovery_ledger_current.md`<br>`disease-models/wwox/research/full_text_queue_current.md` | no canonical promotion until the concern is resolved; readable for audit |
 | [12719539](https://pubmed.ncbi.nlm.nih.gov/12719539/) | concern | — | — | no canonical promotion until the concern is resolved; readable for audit |
-| [25447306](https://pubmed.ncbi.nlm.nih.gov/25447306/) | retracted | — | — | may not support or promote any claim; audit every claim already resting on it; readable for audit only |
+| [25447306](https://pubmed.ncbi.nlm.nih.gov/25447306/) | retracted | — | `disease-models/wwox/research/record_repair_queue_current.md` | may not support or promote any claim; audit every claim already resting on it; readable for audit only |
 | [28151481](https://pubmed.ncbi.nlm.nih.gov/28151481/) | retracted | tracking log | `disease-models/wwox/registries/literature_tracking_log_current.md`<br>`disease-models/wwox/registries/paper_registry_current.md`<br>`disease-models/wwox/registries/working_model_current.md`<br>`disease-models/wwox/research/discovery_ledger_current.md` | may not support or promote any claim; audit every claim already resting on it; readable for audit only |
 
 
-> ⚠️ No held record is canonically integrated as a PAPER, but 5 held PMID(s)
+> ⚠️ No held record is canonically integrated as a PAPER, but 6 held PMID(s)
 > appear on current scientific surfaces. An appearance is not automatically a
 > supporting claim, but absence of a registry record cannot prove absence of
 > exposure. Audit the files named in the table before the next `BATCH_COMMIT`.

@@ -131,7 +131,7 @@ Canonical audit trail of numbered claims relevant to the Working Model.
 **Source:** Hussain et al., 2023
 **Wikilinks:** [[paper_registry_current#PAPER 007]]
 **Impact on Working Model:** surveillance only, genotype caution mandatory; the microglial-abundance arm is an untested comparison, not a demonstrated null
-**Narrowing record (BATCH_20260926_ALDAZ, 2026-09-26):** `consolidated baseline` kept. The text above replaces the pre-reading wording and is the one that passed a blind locator audit (R4) in three rounds over the complete reading `FTR-20260913-36828035-03`; no proposition left in it is OVERSHOOT, UNDERSHOOT or NOT_IN_SOURCE. Previous wording — Title: *P47T model shows progressive neuroinflammation*; Summary: *P47T murine model shows progressive microgliosis and astrogliosis.* The microglial-abundance arm is recorded as an untested comparison, not as a demonstrated null: the backlog candidates that proposed it as "not progressive" read a missing bracket as a tested absence.
+**Narrowing record (BATCH_20260926_ALDAZ, 2026-09-26):** `consolidated baseline` kept. The text above replaces the pre-reading wording and is the one that passed a blind locator audit (R4) in three rounds on the rewritten text (rounds 1–3 of the four-round record), over the complete reading `FTR-20260913-36828035-03`; no proposition left in it is OVERSHOOT, UNDERSHOOT or NOT_IN_SOURCE. Previous wording — Title: *P47T model shows progressive neuroinflammation*; Summary: *P47T murine model shows progressive microgliosis and astrogliosis.* The microglial-abundance arm is recorded as an untested comparison, not as a demonstrated null: the backlog candidates that proposed it as "not progressive" read a missing bracket as a tested absence.
 
 ---
 
@@ -149,7 +149,7 @@ Canonical audit trail of numbered claims relevant to the Working Model.
 **Source:** Hussain et al., 2023
 **Wikilinks:** [[paper_registry_current#PAPER 007]]
 **Impact on Working Model:** genotype caution logic
-**Narrowing record (BATCH_20260926_ALDAZ, 2026-09-26):** `consolidated baseline` kept. The text above replaces the pre-reading wording and is the one that passed a blind locator audit (R4) in three rounds over the complete reading `FTR-20260913-36828035-03`; no proposition left in it is OVERSHOOT, UNDERSHOOT or NOT_IN_SOURCE. Previous wording — Title: *P47T abolishes PPxY binding to WW-domain partners*; Summary: *P47T alters WWOX WW-domain binding behavior.* "Abolishes" and "WW-domain partners" generalised beyond two PPPY oligopeptides in one tissue at n = 2.
+**Narrowing record (BATCH_20260926_ALDAZ, 2026-09-26):** `consolidated baseline` kept. The text above replaces the pre-reading wording and is the one that passed a blind locator audit (R4) in three rounds on the rewritten text (rounds 1–3 of the four-round record), over the complete reading `FTR-20260913-36828035-03`; no proposition left in it is OVERSHOOT, UNDERSHOOT or NOT_IN_SOURCE. Previous wording — Title: *P47T abolishes PPxY binding to WW-domain partners*; Summary: *P47T alters WWOX WW-domain binding behavior.* "Abolishes" and "WW-domain partners" generalised beyond two PPPY oligopeptides in one tissue at n = 2.
 
 ---
 
