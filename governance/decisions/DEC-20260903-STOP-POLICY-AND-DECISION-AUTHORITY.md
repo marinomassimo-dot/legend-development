@@ -67,6 +67,7 @@ added word or dropped line.
 | STOP POLICY — §21c body as amended by `4341ef9`, re-derived 2026-09-08 by the recipe below | 34 | `ec93fa768d853dfc7537cdc4810d7e223257b3b834cc53c9b090485c7e9e06f7` |
 | DECISION AUTHORITY — §21d body, 2026-09-03 text | 62 | `114885d8cbc7aca0fc22a62e221aa64e32406acd6e71c45fc5564ac20ceffdd8` — history: on 2026-09-08 no serialisation of the then-current body reproduced this value, so it never anchored the text the suite asserted |
 | DECISION AUTHORITY — §21d body, push rule re-ratified 2026-09-08 (operator mandate, residual closure: `development` push including `main` under mandate; `origin` reserved to the operator; review ex post per §21e; no mechanical enforcement claimed — the runtime guard was retired on 2026-09-07) | 57 | `310cb3781ce62b409066decdeaee8f78c8023e38d266d0103a3a09c70b8d4750` — by the recipe below, i.e. over the constant `scripts/test_stop_policy.py` asserts verbatim, no trailing newline |
+| DECISION AUTHORITY — §21d body, 2026-09-26 daily development push decision | 63 | `f028d1baf5f5c3898498bcb3e50191ad09af4ce48ac126ba56656e8c35d45335` — current body and test constant; decision and changed publication boundary: `DEC-20260926-DAILY-DEVELOPMENT-PUSH` |
 
 **The SAFE_DEFAULTS list is deliberately outside the hash.** §21c authorises agents to
 append a hindsight default. With the list inside the hashed block, one permitted append

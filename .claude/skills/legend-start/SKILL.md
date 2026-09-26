@@ -11,6 +11,10 @@ Paths are relative to the repo root.
 1. Reads `framework/state/state_manifest_current.md` and confirms `current_state: READY`.
 2. Reads `.claude/skills/legend-capability-scout/SKILL.md` (capability-gap notes during work; at close a gap is recorded or `CHANGE = NONE` is stated).
 3. Reads `.claude/skills/legend-session-takeaways/SKILL.md` for the final closing.
+   For `orchestrator`, read `~/.local/state/legend/daily_push_check.json` and run
+   `python3 framework/scripts/daily_push_check.py` for a fresh local observation.
+   Report `UNPUBLISHED`, `UNKNOWN`, or a missing daily report explicitly; the scheduled
+   check cannot observe another host's clone.
    For an assigned `plan` or `junior-harness` actor, also run
    `python3 framework/scripts/harness_session_start.py --actor <ACTOR_ID>`.
    This reports the current ISO week's scout status and, for Plan, branch hygiene.

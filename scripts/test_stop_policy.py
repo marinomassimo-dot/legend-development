@@ -99,7 +99,7 @@ SAFE_DEFAULTS_SEED = (
 )
 
 # The companion rule: same surface, same DEC; push rule re-ratified 2026-09-08. sha256
-# 310cb3781ce62b409066decdeaee8f78c8023e38d266d0103a3a09c70b8d4750 over the 57 lines below,
+# f028d1baf5f5c3898498bcb3e50191ad09af4ce48ac126ba56656e8c35d45335 over the 63 lines below,
 # no trailing newline, by the DEC's own recipe (the 2026-09-03 value, 114885d8…, is kept in
 # the DEC as history). It
 # names itself a fundamental guarantee, so drift in it is reserved to the operator by its own
@@ -120,8 +120,8 @@ whose Authority cell is `—`, such as `Lifecycle learning: epistemico Mirror, d
 Plan`. A rule that forbids is not inherited; an empty cell is not collected.
 
 RESERVED to the operator (exceptions, by nature not by habit):
-  - publication to origin, or to any public surface other than a `development` push
-    meeting every condition of the push rule below
+  - publication to the public release repository, or to any public surface other than a
+    development-repository push meeting every condition of the push rule below
   - history rewrite
   - irreversible deletion of unique material
   - a change to a fundamental guarantee — including this list, all of §21d, and the STOP
@@ -140,16 +140,22 @@ Operator decisions already taken (2026-09-03), retiring class-2 stops:
   - branch switch inside a single-owner worktree: agents. Root: reserved.
   - worktree provisioning: agents.
   - birth of bound sessions: BOOTSTRAP automates it; not an operator act per dispatch.
-  - push: agents, to the `development` remote only, named explicitly, and only when ALL
-    of these hold — the push is fast-forward, with no force in any spelling and no `+`
-    refspec; it names exactly one ref; `public_release_gate` has been run against the
-    exact SHA pushed and is PASS with zero blocks; and the session report records branch,
-    SHA, gate result and actor. `main` is included: a fast-forward of `development/main`
-    is the agents' to make when the change alters no guarantee, or when the operator has
-    mandated it in session (2026-09-07 consolidation; 2026-09-08 residual closure). A
-    merge that changes a guarantee, and its push, stay the operator's. `origin` — the
-    public release repository — is never pushed by an agent: it is the operator's alone
-    and outside every agent mandate unless the operator names it.
+  - push: agents, without asking the operator, to the development repository
+    `github.com/marinomassimo-dot/legend-development` — identified by its URL, whatever a
+    clone names the remote (a fresh clone names it `origin`) — at least once a day and at the
+    end of every task, when ALL of these hold: the push is fast-forward, with no force in any
+    spelling and no `+` refspec; it names exactly one ref; `public_release_gate` has been run
+    against the exact SHA pushed and is PASS with zero blocks; LINT has no BLOCK and
+    `fulltext_receipts.py verify` is OK; the release battery run on a fresh clone of the
+    pushed ref turns no green suite red; no backup branch, snapshot, gitignored file or
+    private material is pushed; and the session report records branch, SHA, gate result and
+    actor. `main` is included: agents fast-forward and push it under these conditions
+    (operator decision 2026-09-26, `DEC-20260926-DAILY-DEVELOPMENT-PUSH`). No work stays
+    only on a local checkout for more than a day: work that cannot meet these conditions
+    stays on its task branch and the blocker is reported, never silently held. A change to
+    a fundamental guarantee still needs the operator's approval of its CONTENT; once
+    approved, its push is the agents'. The public release repository is never pushed by an
+    agent: it is the operator's alone unless the operator names it.
     What enforces this, stated so nobody over-reads it: nothing mechanical. The runtime
     guard and its hooks were retired on 2026-09-07; no hook, PR gate or authorisation
     ledger stands between an agent and `git push`. The controls are the ones the pushing
