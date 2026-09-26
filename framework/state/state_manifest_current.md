@@ -105,9 +105,9 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20260922_SEIZURE
-last_batch_commit_date: 2026-09-22
-last_batch_commit_type: MAJOR
+last_batch_commit_id: BATCH_20260926_ALDAZ_R1
+last_batch_commit_date: 2026-09-26
+last_batch_commit_type: REGISTRY_ONLY
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -208,8 +208,8 @@ to make a suite green — the only way to move it is to have made the change you
 
 ```yaml
 growth_anchor_ledger: framework/state/growth_anchors.jsonl
-growth_anchor_events: 28
-growth_anchor_head: 997880712c4c5279d13f7ac974284acf2a1d24ff5fe5fd0f78409a1c12cfbc2e
+growth_anchor_events: 29
+growth_anchor_head: 4f73044a98d7b991b21574104f668032a76c9c202400d8c272ab7177c730554f
 ```
 
 ```bash
@@ -236,8 +236,8 @@ must be backed by a persisted `complete_fulltext_read` receipt, or `LINT_AUTOMAT
 `BLOCK_BATCH_COMMIT`.
 
 ```yaml
-registry_only_fulltext_declarations_baseline: 13
-registry_only_fulltext_declaration_ids: ["PAPER 012", "PAPER 014", "PAPER 016", "PAPER 028", "PAPER 032", "PAPER 042", "PAPER 043", "PAPER 044", "PAPER 045", "PAPER 046", "PAPER 049", "PAPER 050", "PAPER 053"]
+registry_only_fulltext_declarations_baseline: 10
+registry_only_fulltext_declaration_ids: ["PAPER 012", "PAPER 014", "PAPER 016", "PAPER 028", "PAPER 043", "PAPER 044", "PAPER 045", "PAPER 046", "PAPER 049", "PAPER 050"]
 ```
 
 Lowering the baseline is the intended direction of travel: back-fill a record with real
@@ -257,7 +257,7 @@ baseline below must equal the live count, never preserve historical padding.
 
 ```yaml
 unread_premise_baseline: 0
-unread_premise_measured_on: 2026-09-22
+unread_premise_measured_on: 2026-09-26
 ```
 
 **It is a ratchet, not a wall.** Blocking on the whole legacy backlog would only teach sessions

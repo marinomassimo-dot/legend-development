@@ -284,3 +284,19 @@ section alone, without checking the Methods — and the Methods say the sequenci
 not reading too little of the paper; it was **drawing a comparative conclusion from one section about
 another**. A defect count is now nine, not ten, in
 [`ft117_weiszhubshman2019_fulltext_read_20260923.md`](../analysis/ft117_weiszhubshman2019_fulltext_read_20260923.md).
+
+---
+
+## § R · 2026-09-26 — complete readings recovered from the VPS backup (appended; the rows above are unchanged)
+
+Complete full-text readings made on the VPS laboratory checkout on 2026-09-13/14 never reached `main` until today. Their receipts were rechained into the ledger (`fulltext_receipts.py rechain`, 207 → 236 events), their manifests and dossiers recovered, and the papers registered as read in full by `BATCH_20260926_ALDAZ_R1`. **Registered, not propagated:** what each reading found is held, with the recovered candidates, for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`).
+
+| PMID | Complete reading (VPS receipt) | Registry record |
+|---|---|---|
+| `24369382` | `FTR-20260913-24369382-01` (2026-09-13), `FTR-20260913-24369382-02` (2026-09-13) | `PAPER 042` |
+| `30619736` | `FTR-20260913-30619736-01` (2026-09-13) | `PAPER 032` |
+| `36828035` | `FTR-20260913-36828035-03` (2026-09-13) | `PAPER 112` |
+| `39868255` | `FTR-20260913-39868255-01` (2026-09-13) | `PAPER 114` |
+| `24932569` | `FTR-20260913-24932569-02` (2026-09-13) | `PAPER 053` |
+
+Effect on this matrix, as facts and not as re-classification: the `24369382`, `30619736` and `36828035` debts of reading depth named in § 4 / § 5 / § 10 are closed at depth by the receipts above; `39868255` (§ 3 `NETWORK_BLOCKED`, later closed by `FTR-20260923-39868255-01`) also has an earlier complete read; `24932569` has a complete VPS read beside its `partial` ledger entry. Whether any conclusion in this matrix changes is exactly what is held for the operator.

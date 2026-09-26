@@ -173,3 +173,18 @@ and the **unread founding primary of a `consolidated baseline` claim**.
   first-hand, and it may already be the matrix `P-2` proposes asking a laboratory to deposit — but it sits
   behind the same supplementary-surface block as item 1 and is a **second-order** ask. Raise it only if
   item 1's route proves easy for the Operator.
+
+---
+
+## § R · 2026-09-26 — complete readings recovered from the VPS backup (appended; the rows above are unchanged)
+
+Complete full-text readings made on the VPS laboratory checkout on 2026-09-13/14 never reached `main` until today. Their receipts were rechained into the ledger (`fulltext_receipts.py rechain`, 207 → 236 events), their manifests and dossiers recovered, and the papers registered as read in full by `BATCH_20260926_ALDAZ_R1`. **Registered, not propagated:** what each reading found is held, with the recovered candidates, for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`).
+
+| PMID | Complete reading (VPS receipt) | Registry record |
+|---|---|---|
+| `39868255` | `FTR-20260913-39868255-01` (2026-09-13) | `PAPER 114` |
+| `24369382` | `FTR-20260913-24369382-01` (2026-09-13), `FTR-20260913-24369382-02` (2026-09-13) | `PAPER 042` |
+| `30619736` | `FTR-20260913-30619736-01` (2026-09-13) | `PAPER 032` |
+| `36828035` | `FTR-20260913-36828035-03` (2026-09-13) | `PAPER 112` |
+
+**Item 6 (`PMID 39868255`) needs no upload any more:** the VPS read the full preprint on 2026-09-13, ten days before this pack called the body unreachable from this deployment. The later `FTR-20260923-39868255-01` (partial) and the VPS reading are two independent roots of the same study, admitted by the validator's strictly-earlier rule (G4.2). The other three PMIDs above were not upload items; they are listed because this pack names them.

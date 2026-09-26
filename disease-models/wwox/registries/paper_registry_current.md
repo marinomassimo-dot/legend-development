@@ -1170,10 +1170,10 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Corpus paper no:** 46
 **Full title:** Wwox-Brca1 interaction: role in DNA repair pathway choice
 **Identifier:** PMID 27869163 / DOI 10.1038/onc.2016.389
-**Status:** not_processed
-**Registry role:** corpus placeholder only
+**Status:** promoted — see [[paper_registry_current#PAPER 109]] (`BATCH_20260926_ALDAZ_R1`)
+**Registry role:** corpus placeholder only — kept append-only as audit history, never deleted
 **Claim links:** none
-**Next action:** screening / triage required
+**Next action:** none — resolved by promotion
 **Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record.
 
 ## CORPUS-STUB-047
@@ -1240,10 +1240,10 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Corpus paper no:** 53
 **Full title:** WWOX P47T partial loss-of-function mutation induces epilepsy, progressive neuroinflammation, and cerebellar degeneration in mice
 **Identifier:** PMID 36828035 / DOI 10.1016/j.pneurobio.2023.102425
-**Status:** not_processed
-**Registry role:** corpus placeholder only
+**Status:** promoted — see [[paper_registry_current#PAPER 112]] (`BATCH_20260926_ALDAZ_R1`)
+**Registry role:** corpus placeholder only — kept append-only as audit history, never deleted
 **Claim links:** none
-**Next action:** screening / triage required
+**Next action:** none — resolved by promotion
 **Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record.
 
 ## CORPUS-STUB-054
@@ -1260,10 +1260,10 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Corpus paper no:** 55
 **Full title:** The cancer gene WWOX behaves as an inhibitor of SMAD3 transcriptional activity via direct binding
 **Identifier:** PMID 24330518 / DOI 10.1186/1471-2407-13-593
-**Status:** not_processed
-**Registry role:** corpus placeholder only
+**Status:** promoted — see [[paper_registry_current#PAPER 108]] (`BATCH_20260926_ALDAZ_R1`)
+**Registry role:** corpus placeholder only — kept append-only as audit history, never deleted
 **Claim links:** none
-**Next action:** screening / triage required
+**Next action:** none — resolved by promotion
 **Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record.
 
 ## CORPUS-STUB-056
@@ -1441,10 +1441,10 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Corpus paper no:** 74
 **Full title:** Wwox Binding to the Murine Brca1-BRCT Domain Regulates Timing of Brip1 and CtIP Phospho-Protein Interactions
 **Identifier:** PMID 35409089 / DOI 10.3390/ijms23073729
-**Status:** not_processed
-**Registry role:** corpus placeholder only
+**Status:** promoted — see [[paper_registry_current#PAPER 111]] (`BATCH_20260926_ALDAZ_R1`)
+**Registry role:** corpus placeholder only — kept append-only as audit history, never deleted
 **Claim links:** none
-**Next action:** screening / triage required
+**Next action:** none — resolved by promotion
 **Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record.
 
 ## CORPUS-STUB-075
@@ -1581,10 +1581,10 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Corpus paper no:** 88
 **Full title:** Wwox Deletion in Mouse B Cells Leads to Genomic Instability, Neoplastic Transformation, and Monoclonal Gammopathies
 **Identifier:** PMID 31275852 / DOI 10.3389/fonc.2019.00517
-**Status:** not_processed
-**Registry role:** corpus placeholder only
+**Status:** promoted — see [[paper_registry_current#PAPER 110]] (`BATCH_20260926_ALDAZ_R1`)
+**Registry role:** corpus placeholder only — kept append-only as audit history, never deleted
 **Claim links:** none
-**Next action:** screening / triage required
+**Next action:** none — resolved by promotion
 **Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record.
 
 ## CORPUS-STUB-089
@@ -1611,10 +1611,10 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Corpus paper no:** 91
 **Full title:** Loss of lung WWOX expression causes neutrophilic inflammation
 **Identifier:** PMID 28283473 / DOI 10.1152/ajplung.00034.2017
-**Status:** not_processed
-**Registry role:** corpus placeholder only
+**Status:** promoted — see [[paper_registry_current#PAPER 102]] (`BATCH_20260926_ALDAZ_R1`)
+**Registry role:** corpus placeholder only — kept append-only as audit history, never deleted
 **Claim links:** none
-**Next action:** screening / triage required
+**Next action:** none — resolved by promotion
 **Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record.
 
 ## CORPUS-STUB-092
@@ -1741,10 +1741,10 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Corpus paper no:** 107
 **Full title:** WWOX protein expression in normal human tissues
 **Identifier:** PMID 16941225 / DOI 10.1007/s10735-006-9046-5
-**Status:** not_processed
-**Registry role:** corpus placeholder only
+**Status:** promoted — see [[paper_registry_current#PAPER 106]] (`BATCH_20260926_ALDAZ_R1`)
+**Registry role:** corpus placeholder only — kept append-only as audit history, never deleted
 **Claim links:** none
-**Next action:** screening / triage required
+**Next action:** none — resolved by promotion
 **Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record.
 
 ## CORPUS-STUB-108
@@ -1771,10 +1771,10 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Corpus paper no:** 110
 **Full title:** Partial Wwox Loss of Function Increases Severity of Murine Sepsis and Neuroinflammation [PREPRINT bioRxiv]
 **Identifier:** PMID 39868255 / DOI 10.1101/2025.01.17.633677
-**Status:** not_processed
-**Registry role:** corpus placeholder only
+**Status:** promoted — see [[paper_registry_current#PAPER 114]] (`BATCH_20260926_ALDAZ_R1`)
+**Registry role:** corpus placeholder only — kept append-only as audit history, never deleted
 **Claim links:** none
-**Next action:** screening / triage required
+**Next action:** none — resolved by promotion
 **Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record.
 
 ## CORPUS-STUB-111
@@ -1865,10 +1865,10 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Corpus paper no:** 120
 **Full title:** Endothelial knockdown of WWOX increases inflammation in ventilator-induced lung injury
 **Identifier:** PMID 38563965 / DOI 10.1152/ajplung.00277.2023
-**Status:** not_processed
-**Registry role:** corpus placeholder only
+**Status:** promoted — see [[paper_registry_current#PAPER 113]] (`BATCH_20260926_ALDAZ_R1`)
+**Registry role:** corpus placeholder only — kept append-only as audit history, never deleted
 **Claim links:** none
-**Next action:** screening / triage required
+**Next action:** none — resolved by promotion
 **Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record.
 
 ## CORPUS-STUB-121
@@ -1968,10 +1968,10 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Corpus paper no:** 130
 **Full title:** WWOX, the common chromosomal fragile site, FRA16D, cancer gene
 **Identifier:** PMID 14526170 / DOI 10.1159/000072844
-**Status:** not_processed
-**Registry role:** corpus placeholder only
+**Status:** promoted — see [[paper_registry_current#PAPER 101]] (`BATCH_20260926_ALDAZ_R1`)
+**Registry role:** corpus placeholder only — kept append-only as audit history, never deleted
 **Claim links:** none
-**Next action:** screening / triage required
+**Next action:** none — resolved by promotion
 **Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record.
 
 ## CORPUS-STUB-131
@@ -2098,10 +2098,10 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Corpus paper no:** 143
 **Full title:** WWOX binds the specific proline-rich ligand PPXY: identification of candidate interacting proteins
 **Identifier:** PMID 15064722 / DOI 10.1038/sj.onc.1207680
-**Status:** not_processed
-**Registry role:** corpus placeholder only
+**Status:** promoted — see [[paper_registry_current#PAPER 104]] (`BATCH_20260926_ALDAZ_R1`)
+**Registry role:** corpus placeholder only — kept append-only as audit history, never deleted
 **Claim links:** none
-**Next action:** screening / triage required
+**Next action:** none — resolved by promotion
 **Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record.
 
 ## CORPUS-STUB-145
@@ -2138,10 +2138,10 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Corpus paper no:** 148
 **Full title:** WWOX protein expression varies among ovarian carcinoma histotypes and correlates with less favorable prognosis
 **Identifier:** PMID 15982416 / DOI 10.1186/1471-2407-5-64
-**Status:** not_processed
-**Registry role:** corpus placeholder only
+**Status:** promoted — see [[paper_registry_current#PAPER 105]] (`BATCH_20260926_ALDAZ_R1`)
+**Registry role:** corpus placeholder only — kept append-only as audit history, never deleted
 **Claim links:** none
-**Next action:** screening / triage required
+**Next action:** none — resolved by promotion
 **Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record.
 
 ## CORPUS-STUB-149
@@ -2288,10 +2288,10 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Corpus paper no:** 165
 **Full title:** VOPP1 promotes breast tumorigenesis by interacting with the tumor suppressor WWOX
 **Identifier:** PMID 30285739 / DOI 10.1186/s12915-018-0576-6
-**Status:** not_processed
-**Registry role:** corpus placeholder only
+**Status:** promoted — see [[paper_registry_current#PAPER 103]] (`BATCH_20260926_ALDAZ_R1`)
+**Registry role:** corpus placeholder only — kept append-only as audit history, never deleted
 **Claim links:** none
-**Next action:** screening / triage required
+**Next action:** none — resolved by promotion
 **Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record.
 
 ## CORPUS-STUB-166
@@ -2318,10 +2318,10 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Corpus paper no:** 168
 **Full title:** Conditional Wwox deletion in mouse mammary gland by means of two Cre recombinase approaches
 **Identifier:** PMID 22574198 / DOI 10.1371/journal.pone.0036618
-**Status:** not_processed
-**Registry role:** corpus placeholder only
+**Status:** promoted — see [[paper_registry_current#PAPER 107]] (`BATCH_20260926_ALDAZ_R1`)
+**Registry role:** corpus placeholder only — kept append-only as audit history, never deleted
 **Claim links:** none
-**Next action:** screening / triage required
+**Next action:** none — resolved by promotion
 **Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record.
 
 ## CORPUS-STUB-169
@@ -2421,10 +2421,10 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Corpus paper no:** 178
 **Full title:** B-cell-specific Wwox deletion promotes plasmablastic tumor development and proinflammatory signature
 **Identifier:** PMID 41090157 / DOI 10.1016/j.bneo.2025.100153
-**Status:** not_processed
-**Registry role:** corpus placeholder only
+**Status:** promoted — see [[paper_registry_current#PAPER 115]] (`BATCH_20260926_ALDAZ_R1`)
+**Registry role:** corpus placeholder only — kept append-only as audit history, never deleted
 **Claim links:** none
-**Next action:** screening / triage required
+**Next action:** none — resolved by promotion
 **Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record.
 
 
@@ -2998,6 +2998,7 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Source type:** Article
 **Journal/source:** Br J Cancer
 **Identifier:** PMID 15266310 / PMC2364795 / DOI 10.1038/sj.bjc.6602023
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260914-15266310-01` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID15266310.json`, dossier `fulltext_dossiers/PMID15266310.md`.
 **Tier (FASE 1):** C
 **Status:** screened — corpus placeholder
 **LIT link:** LIT-0244
@@ -3008,7 +3009,8 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **clinical relevance:** LOW
 **Claim links:** none — triage only
 **Role:** background corpus only
-**Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration.
+**Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration. *(2026-09-26: no longer true for reading depth — this paper has since been read in full; see `Evidence depth`. Triage status unchanged.)*
+**Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it (`CC-20260914-15266310-01`) are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
 
 ## CORPUS P245
 **Short title:** WWOX, a novel WW domain-containing protein mapping to human chromosome 16q23....
@@ -3318,6 +3320,7 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Source type:** Article
 **Journal/source:** Oral Oncol
 **Identifier:** PMID 18061530 / PMC4143237 / DOI 10.1016/j.oraloncology.2007.08.019
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260914-18061530-01` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID18061530.json`, dossier `fulltext_dossiers/PMID18061530.md`.
 **Tier (FASE 1):** C
 **Status:** screened — corpus placeholder
 **LIT link:** LIT-0260
@@ -3328,7 +3331,8 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **clinical relevance:** LOW
 **Claim links:** none — triage only
 **Role:** background corpus only
-**Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration.
+**Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration. *(2026-09-26: no longer true for reading depth — this paper has since been read in full; see `Evidence depth`. Triage status unchanged.)*
+**Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it (`CC-20260914-18061530-01`) are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
 
 ## CORPUS P261
 **Short title:** Role of the WWOX tumor suppressor gene in bone homeostasis and the pathogenes...
@@ -3821,6 +3825,7 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Source type:** Article
 **Journal/source:** Thyroid
 **Identifier:** PMID 18047428 / PMC4150466 / DOI 10.1089/thy.2007.0232
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260914-18047428-01` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID18047428.json`, dossier `fulltext_dossiers/PMID18047428.md`.
 **Tier (FASE 1):** C
 **Status:** screened — corpus placeholder
 **LIT link:** LIT-0286
@@ -3831,7 +3836,8 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **clinical relevance:** LOW
 **Claim links:** none — triage only
 **Role:** background corpus only
-**Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration.
+**Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration. *(2026-09-26: no longer true for reading depth — this paper has since been read in full; see `Evidence depth`. Triage status unchanged.)*
+**Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it (`CC-20260914-18047428-01`) are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
 
 ## CORPUS P287
 **Short title:** The JNK inhibitor SP600129 enhances apoptosis of HCC cells induced by the tum...
@@ -4583,6 +4589,7 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Source type:** Comparative Study
 **Journal/source:** Breast Cancer Res Treat
 **Identifier:** PMID 15692750 / PMC4145848 / DOI 10.1007/s10549-004-1474-x
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260913-15692750-01` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID15692750.json`, dossier `fulltext_dossiers/PMID15692750.md`.
 **Tier (FASE 1):** C
 **Status:** screened — corpus placeholder
 **LIT link:** LIT-0324
@@ -4593,7 +4600,8 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **clinical relevance:** LOW
 **Claim links:** none — triage only
 **Role:** background corpus only
-**Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration.
+**Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration. *(2026-09-26: no longer true for reading depth — this paper has since been read in full; see `Evidence depth`. Triage status unchanged.)*
+**Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
 
 ## CORPUS P325
 **Short title:** Primary WWOX phosphorylation and JNK activation during etoposide induces cyto...
@@ -5445,6 +5453,7 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Source type:** Article
 **Journal/source:** Int J Cancer
 **Identifier:** PMID 16152610 / PMC4145845 / DOI 10.1002/ijc.21446
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260914-16152610-01` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID16152610.json`, dossier `fulltext_dossiers/PMID16152610.md`.
 **Tier (FASE 1):** C
 **Status:** screened — corpus placeholder
 **LIT link:** LIT-0367
@@ -5455,7 +5464,8 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **clinical relevance:** LOW
 **Claim links:** none — triage only
 **Role:** background corpus only
-**Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration.
+**Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration. *(2026-09-26: no longer true for reading depth — this paper has since been read in full; see `Evidence depth`. Triage status unchanged.)*
+**Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it (`CC-20260914-16152610-01`) are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
 
 ## CORPUS P368
 **Short title:** Aberrant gene promoter methylation of p16, FHIT, CRBP1, WWOX, and DLC-1 in Ep...
@@ -5665,6 +5675,7 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Source type:** Article
 **Journal/source:** Clin Epigenetics
 **Identifier:** PMID 25024751 / PMC4094901 / DOI 10.1186/1868-7083-6-13
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260914-25024751-01` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID25024751.json`, dossier `fulltext_dossiers/PMID25024751.md`.
 **Tier (FASE 1):** C
 **Status:** screened — corpus placeholder
 **LIT link:** LIT-0378
@@ -5675,7 +5686,8 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **clinical relevance:** LOW
 **Claim links:** none — triage only
 **Role:** background corpus only
-**Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration.
+**Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration. *(2026-09-26: no longer true for reading depth — this paper has since been read in full; see `Evidence depth`. Triage status unchanged.)*
+**Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it (`CC-20260914-25024751-01`) are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
 
 ## CORPUS P379
 **Short title:** MicroRNA-153 promotes Wnt/β-catenin activation in hepatocellular carcinoma th...
@@ -5805,6 +5817,7 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Source type:** Article
 **Journal/source:** Mol Carcinog
 **Identifier:** PMID 16187332 / PMC4166602 / DOI 10.1002/mc.20122
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260914-16187332-01` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID16187332.json`, dossier `fulltext_dossiers/PMID16187332.md`.
 **Tier (FASE 1):** C
 **Status:** screened — corpus placeholder
 **LIT link:** LIT-0385
@@ -5815,7 +5828,8 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **clinical relevance:** LOW
 **Claim links:** none — triage only
 **Role:** background corpus only
-**Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration.
+**Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration. *(2026-09-26: no longer true for reading depth — this paper has since been read in full; see `Evidence depth`. Triage status unchanged.)*
+**Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it (`CC-20260914-16187332-01`) are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
 
 ## CORPUS P386
 **Short title:** Cigarette smoking extract causes hypermethylation and inactivation of WWOX ge...
@@ -7245,5 +7259,310 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Formulazione canonica, da usare ovunque questo paper venga citato:** *«Evidenza neuronale indipendente che Zfra1-31 è protettivo riducendo il segnale pY33-WWOX; l'attribuzione causale della protezione all'**inibizione** di WWOX resta irrisolta — nessuna perturbazione genetica ortogonale, nessun controllo con peptide inattivo, WWOX totale mai misurata.»*
 **Effetto sul modello:** **nessuna claim.** Restringe una frase di [`peptide_intervention_audit_20260920.md`](../analysis/peptide_intervention_audit_20260920.md) e la voce `HYP-20260705-05`. **La conclusione terapeutica per il genotipo di riferimento non cambia e anzi si rafforza:** inibizione e consumo puntano nella stessa direzione dove il problema è *troppa poca* WWOX funzionale — resta **obiezione di categoria, non di dose**.
 **Note:** `A9` è **chiuso**; nessuna ulteriore acquisizione serve. **REVIVAL_TRIGGER:** una pubblicazione che riporti **WWOX totale** accanto a pTyr33-WWOX sotto Zfra1-31, o un braccio genetico su WWOX accanto al peptide in modello neuronale — quella singola misura decide fra le due letture.
+
+---
+
+## PAPER 098
+**Short title:** Ludes-Meyers 2007 — Wwox hypomorphic mice display a higher incidence of B-cell lymphomas and develop testicular atrophy
+**Full title:** Wwox hypomorphic mice display a higher incidence of B-cell lymphomas and develop testicular atrophy
+**Authors:** Ludes-Meyers JH, Kil H, Nuñez MI, Conti CJ, Parker-Thornburg J, Bedford MT, Aldaz CM
+**Year:** 2007
+**Journal/source:** *Genes Chromosomes Cancer* 2007;46(12):1129-1136
+**Identifier:** PMID 17823927 / PMCID PMC4143238 / DOI 10.1002/gcc.20497
+**Status:** processed
+**Record provenance:** created by `BATCH_20260926_ALDAZ_R1` (2026-09-26): a full-text reading recovered from the VPS backup had no registry record at all; bibliographic fields from the reading's dossier header
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260914-17823927-01` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID17823927.json`, dossier `fulltext_dossiers/PMID17823927.md`.
+**Transferability:** not assessed in this registration — held with the reading's candidate
+**clinical relevance:** not assessed in this registration — held with the reading's candidate
+**Claim links:** none — held for the operator's decision on the reading's candidate
+**Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it (`CC-20260914-17823927-01`) are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
+
+---
+
+## PAPER 099
+**Short title:** Ramos 2008 — Low levels of WWOX protein immunoexpression correlate with tumour grade and a less favourable outcome in patients with urinary bladder tumours
+**Full title:** Low levels of WWOX protein immunoexpression correlate with tumour grade and a less favourable outcome in patients with urinary bladder tumours
+**Authors:** Ramos D, Abba M, López-Guerrero JA, Rubio J, Solsona E, Almenar S, Llombart-Bosch A, Aldaz CM
+**Year:** 2008
+**Journal/source:** *Histopathology* 2008;52(7):831-839
+**Identifier:** PMID 18452537 / PMCID PMC4151645 / DOI 10.1111/j.1365-2559.2008.03033.x
+**Status:** processed
+**Record provenance:** created by `BATCH_20260926_ALDAZ_R1` (2026-09-26): a full-text reading recovered from the VPS backup had no registry record at all; bibliographic fields from the reading's dossier header
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260914-18452537-01` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID18452537.json`, dossier `fulltext_dossiers/PMID18452537.md`.
+**Transferability:** not assessed in this registration — held with the reading's candidate
+**clinical relevance:** not assessed in this registration — held with the reading's candidate
+**Claim links:** none — held for the operator's decision on the reading's candidate
+**Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it (`CC-20260914-18452537-01`) are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
+
+---
+
+## PAPER 100
+**Short title:** Zeng 2021 — Cigarette Smoke and Nicotine-Containing Electronic-Cigarette Vapor Downregulate Lung WWOX Expression, Which Is Associated with Increased Severity of Murine Acute Respiratory Distress Syndrome
+**Full title:** Cigarette Smoke and Nicotine-Containing Electronic-Cigarette Vapor Downregulate Lung WWOX Expression, Which Is Associated with Increased Severity of Murine Acute Respiratory Distress Syndrome
+**Authors:** Zeng Z, Chen W, Moshensky A, Shakir Z, Khan R, Crotty Alexander LE, Ware LB, Aldaz CM, Jacobson JR, Dudek SM, Natarajan V, Machado RF, Singla S
+**Year:** 2021
+**Journal/source:** *Am J Respir Cell Mol Biol* 2021;64(1):89–99
+**Identifier:** PMID 33058734 / PMCID PMC7780991 / DOI 10.1165/rcmb.2020-0145OC
+**Status:** processed
+**Record provenance:** created by `BATCH_20260926_ALDAZ_R1` (2026-09-26): a full-text reading recovered from the VPS backup had no registry record at all; bibliographic fields from the reading's dossier header
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260913-33058734-01` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID33058734.json`, dossier `fulltext_dossiers/PMID33058734.md`.
+**Transferability:** not assessed in this registration — held with the reading's candidate
+**clinical relevance:** not assessed in this registration — held with the reading's candidate
+**Claim links:** none — held for the operator's decision on the reading's candidate
+**Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it (`CC-20260913-ALDAZ-C003-01`) are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
+
+---
+
+## PAPER 101
+**Short title:** Ludes-Meyers 2003 — WWOX, the common chromosomal fragile site, FRA16D, cancer gene
+**Full title:** WWOX, the common chromosomal fragile site, FRA16D, cancer gene
+**Authors:** Ludes-Meyers, Bednarek, Popescu, Bedford, Aldaz (surnames as the dossier gives them)
+**Year:** 2003
+**Journal/source:** *Cytogenet Genome Res* 100(1-4):101-110
+**Identifier:** PMID 14526170 / DOI 10.1159/000072844
+**Status:** processed
+**Record provenance:** placeholder `CORPUS-STUB-130` promoted by `BATCH_20260926_ALDAZ_R1` (2026-09-26) to register a full-text reading recovered from the VPS backup; bibliographic fields from the reading's dossier header
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260913-14526170-01` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID14526170.json`, dossier `fulltext_dossiers/PMID14526170.md`.
+**Transferability:** not assessed in this registration — held with the reading's candidate
+**clinical relevance:** not assessed in this registration — held with the reading's candidate
+**Claim links:** none — held for the operator's decision on the reading's candidate
+**Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it (`CC-20260913-ALDAZ-B004-01`) are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
+
+---
+
+## PAPER 102
+**Short title:** Singla 2017 — Loss of lung WWOX expression causes neutrophilic inflammation
+**Full title:** Loss of lung WWOX expression causes neutrophilic inflammation
+**Authors:** Singla S, Chen J, Sethuraman S, Sysol JR, Gampa A, Zhao S, Machado RF
+**Year:** 2017
+**Journal/source:** *Am J Physiol Lung Cell Mol Physiol* 2017;312(6):L903–L911
+**Identifier:** PMID 28283473 / DOI 10.1152/ajplung.00034.2017
+**Status:** processed
+**Record provenance:** placeholder `CORPUS-STUB-091` promoted by `BATCH_20260926_ALDAZ_R1` (2026-09-26) to register a full-text reading recovered from the VPS backup; bibliographic fields from the reading's dossier header
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260914-28283473-01` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID28283473.json`, dossier `fulltext_dossiers/PMID28283473.md`.
+**Transferability:** not assessed in this registration — held with the reading's candidate
+**clinical relevance:** not assessed in this registration — held with the reading's candidate
+**Claim links:** none — held for the operator's decision on the reading's candidate
+**Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it (`CC-20260914-28283473-01`) are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
+
+---
+
+## PAPER 103
+**Short title:** Bonin 2018 — VOPP1 promotes breast tumorigenesis by interacting with the tumor suppressor WWOX
+**Full title:** VOPP1 promotes breast tumorigenesis by interacting with the tumor suppressor WWOX
+**Authors:** Bonin F, Taouis K, Azorin P, Petitalot A, Tariq Z, Nola S, Bouteille N, Tury S, Vacher S, Bièche I, Ait Rais K, Pierron G, Fuhrmann L, Vincent-Salomon A, Formstecher E, Camonis J, Lidereau R, Lallemand F, Driouch K
+**Year:** 2018
+**Journal/source:** *BMC Biol* 2018;16(1):109
+**Identifier:** PMID 30285739 / DOI 10.1186/s12915-018-0576-6
+**Status:** processed
+**Record provenance:** placeholder `CORPUS-STUB-165` promoted by `BATCH_20260926_ALDAZ_R1` (2026-09-26) to register a full-text reading recovered from the VPS backup; bibliographic fields from the reading's dossier header
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260914-30285739-01` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID30285739.json`, dossier `fulltext_dossiers/PMID30285739.md`.
+**Transferability:** not assessed in this registration — held with the reading's candidate
+**clinical relevance:** not assessed in this registration — held with the reading's candidate
+**Claim links:** none — held for the operator's decision on the reading's candidate
+**Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it (`CC-20260914-30285739-01`) are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
+
+---
+
+## PAPER 104
+**Short title:** Ludes-Meyers 2004 — WWOX binds the specific proline-rich ligand PPXY: identification of candidate interacting proteins
+**Full title:** WWOX binds the specific proline-rich ligand PPXY: identification of candidate interacting proteins
+**Authors:** Ludes-Meyers JH, Kil H, Bednarek AK, Drake J, Bedford MT, Aldaz CM
+**Year:** 2004
+**Journal/source:** *Oncogene* 2004;23(29):5049–5055
+**Identifier:** PMID 15064722 / DOI 10.1038/sj.onc.1207680
+**Status:** processed
+**Record provenance:** placeholder `CORPUS-STUB-143` promoted by `BATCH_20260926_ALDAZ_R1` (2026-09-26) to register a full-text reading recovered from the VPS backup; title, authors and pages from the article metadata of the reading's artefact `files/fulltext/PMID15064722_LudesMeyers2004_efetch.xml` (the dossier header gives only `Ludes-Meyers et al. 2004`)
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260913-15064722-01` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID15064722.json`, dossier `fulltext_dossiers/PMID15064722.md`.
+**Transferability:** not assessed in this registration — held with the reading's candidate
+**clinical relevance:** not assessed in this registration — held with the reading's candidate
+**Claim links:** none — held for the operator's decision on the reading's candidate
+**Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it (`CC-20260913-15064722-01`) are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
+
+---
+
+## PAPER 105
+**Short title:** Nunez 2005 — WWOX protein expression varies among ovarian carcinoma histotypes and correlates with less favorable outcome
+**Full title:** WWOX protein expression varies among ovarian carcinoma histotypes and correlates with less favorable outcome
+**Authors:** Nunez, Rosen, Ludes-Meyers, … Aldaz (as the dossier gives them)
+**Year:** 2005
+**Journal/source:** *BMC Cancer* 5:64
+**Identifier:** PMID 15982416 / DOI 10.1186/1471-2407-5-64
+**Status:** processed
+**Record provenance:** placeholder `CORPUS-STUB-148` promoted by `BATCH_20260926_ALDAZ_R1` (2026-09-26) to register a full-text reading recovered from the VPS backup; bibliographic fields from the reading's dossier header
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260913-15982416-01` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID15982416.json`, dossier `fulltext_dossiers/PMID15982416.md`.
+**Transferability:** not assessed in this registration — held with the reading's candidate
+**clinical relevance:** not assessed in this registration — held with the reading's candidate
+**Claim links:** none — held for the operator's decision on the reading's candidate
+**Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
+
+---
+
+## PAPER 106
+**Short title:** Nunez 2006 — WWOX protein expression in normal human tissues
+**Full title:** WWOX protein expression in normal human tissues
+**Authors:** Nunez, Ludes-Meyers, Aldaz (as the dossier gives them)
+**Year:** 2006
+**Identifier:** PMID 16941225 / DOI 10.1007/s10735-006-9046-5
+**Status:** processed
+**Record provenance:** placeholder `CORPUS-STUB-107` promoted by `BATCH_20260926_ALDAZ_R1` (2026-09-26) to register a full-text reading recovered from the VPS backup; bibliographic fields from the reading's dossier header
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260913-16941225-01` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID16941225.json`, dossier `fulltext_dossiers/PMID16941225.md`.
+**Transferability:** not assessed in this registration — held with the reading's candidate
+**clinical relevance:** not assessed in this registration — held with the reading's candidate
+**Claim links:** none — held for the operator's decision on the reading's candidate
+**Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it (`CC-20260913-16941225-01`) are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
+
+---
+
+## PAPER 107
+**Short title:** Ferguson 2012 — Conditional Wwox deletion in mouse mammary gland by means of two Cre recombinase approaches
+**Full title:** Conditional Wwox deletion in mouse mammary gland by means of two Cre recombinase approaches
+**Authors:** Ferguson BW, Gao X, Kil H, Lee J, Benavides F, Abba MC, Aldaz CM
+**Year:** 2012
+**Journal/source:** *PLoS ONE* 2012;7(5):e36618
+**Identifier:** PMID 22574198 / DOI 10.1371/journal.pone.0036618
+**Status:** processed
+**Record provenance:** placeholder `CORPUS-STUB-168` promoted by `BATCH_20260926_ALDAZ_R1` (2026-09-26) to register a full-text reading recovered from the VPS backup; bibliographic fields from the reading's dossier header
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260914-22574198-01` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID22574198.json`, dossier `fulltext_dossiers/PMID22574198.md`.
+**Transferability:** not assessed in this registration — held with the reading's candidate
+**clinical relevance:** not assessed in this registration — held with the reading's candidate
+**Claim links:** none — held for the operator's decision on the reading's candidate
+**Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it (`CC-20260914-22574198-01`) are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
+
+---
+
+## PAPER 108
+**Short title:** Ferguson 2013 — The cancer gene WWOX behaves as an inhibitor of SMAD3 transcriptional activity via direct binding
+**Full title:** The cancer gene WWOX behaves as an inhibitor of SMAD3 transcriptional activity via direct binding
+**Authors:** Ferguson BW, Gao X, Zelazowski MJ, Lee J, Jeter CR, Abba MC, Aldaz CM
+**Year:** 2013
+**Journal/source:** *BMC Cancer* 2013;13:593
+**Identifier:** PMID 24330518 / DOI 10.1186/1471-2407-13-593
+**Status:** processed
+**Record provenance:** placeholder `CORPUS-STUB-055` promoted by `BATCH_20260926_ALDAZ_R1` (2026-09-26) to register a full-text reading recovered from the VPS backup; bibliographic fields from the reading's dossier header
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260914-24330518-01` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID24330518.json`, dossier `fulltext_dossiers/PMID24330518.md`.
+**Transferability:** not assessed in this registration — held with the reading's candidate
+**clinical relevance:** not assessed in this registration — held with the reading's candidate
+**Claim links:** none — held for the operator's decision on the reading's candidate
+**Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it (`CC-20260914-24330518-01`) are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
+
+---
+
+## PAPER 109
+**Short title:** Schrock 2017 — Wwox–Brca1 interaction: role in DNA repair pathway choice
+**Full title:** Wwox–Brca1 interaction: role in DNA repair pathway choice
+**Authors:** Schrock et al. (13 authors per the dossier)
+**Year:** 2017
+**Journal/source:** *Oncogene* 2017;36(16):2215–2227
+**Identifier:** PMID 27869163 / DOI 10.1038/onc.2016.389
+**Status:** processed
+**Record provenance:** placeholder `CORPUS-STUB-046` promoted by `BATCH_20260926_ALDAZ_R1` (2026-09-26) to register a full-text reading recovered from the VPS backup; bibliographic fields from the reading's dossier header
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260913-27869163-01` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID27869163.json`, dossier `fulltext_dossiers/PMID27869163.md`.
+**Transferability:** not assessed in this registration — held with the reading's candidate
+**clinical relevance:** not assessed in this registration — held with the reading's candidate
+**Claim links:** none — held for the operator's decision on the reading's candidate
+**Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it (`CC-20260913-27869163-01`) are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
+
+---
+
+## PAPER 110
+**Short title:** McBride 2019 — Wwox Deletion in Mouse B Cells Leads to Genomic Instability, Neoplastic Transformation, and Monoclonal Gammopathies
+**Full title:** Wwox Deletion in Mouse B Cells Leads to Genomic Instability, Neoplastic Transformation, and Monoclonal Gammopathies
+**Authors:** McBride KM, Kil H, Mu Y, Plummer JB, Lee J, Zelazowski MJ, Sebastian M, Abba MC, Aldaz CM
+**Year:** 2019
+**Journal/source:** *Front Oncol* 2019;9:517
+**Identifier:** PMID 31275852 / DOI 10.3389/fonc.2019.00517
+**Status:** processed
+**Record provenance:** placeholder `CORPUS-STUB-088` promoted by `BATCH_20260926_ALDAZ_R1` (2026-09-26) to register a full-text reading recovered from the VPS backup; bibliographic fields from the reading's dossier header
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260914-31275852-01` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID31275852.json`, dossier `fulltext_dossiers/PMID31275852.md`.
+**Transferability:** not assessed in this registration — held with the reading's candidate
+**clinical relevance:** not assessed in this registration — held with the reading's candidate
+**Claim links:** none — held for the operator's decision on the reading's candidate
+**Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it (`CC-20260914-31275852-01`) are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
+
+---
+
+## PAPER 111
+**Short title:** Park 2022 — Wwox Binding to the Murine Brca1-BRCT Domain Regulates Timing of Brip1 and CtIP Phospho-Protein Interactions with This Domain at DNA Double-Strand Breaks, and Repair Pathway Choice
+**Full title:** Wwox Binding to the Murine Brca1-BRCT Domain Regulates Timing of Brip1 and CtIP Phospho-Protein Interactions with This Domain at DNA Double-Strand Breaks, and Repair Pathway Choice
+**Authors:** Park et al. (7 authors per the dossier)
+**Year:** 2022
+**Journal/source:** *Int J Mol Sci* 2022;23(7):3729
+**Identifier:** PMID 35409089 / DOI 10.3390/ijms23073729
+**Status:** processed
+**Record provenance:** placeholder `CORPUS-STUB-074` promoted by `BATCH_20260926_ALDAZ_R1` (2026-09-26) to register a full-text reading recovered from the VPS backup; bibliographic fields from the reading's dossier header
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260913-35409089-01` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID35409089.json`, dossier `fulltext_dossiers/PMID35409089.md`.
+**Transferability:** not assessed in this registration — held with the reading's candidate
+**clinical relevance:** not assessed in this registration — held with the reading's candidate
+**Claim links:** none — held for the operator's decision on the reading's candidate
+**Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it (`CC-20260913-35409089-01`) are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
+
+---
+
+## PAPER 112
+**Short title:** Hussain 2023 — WWOX P47T partial loss-of-function mutation induces epilepsy, progressive neuroinflammation, and cerebellar degeneration in mice phenocopying human SCAR12
+**Full title:** WWOX P47T partial loss-of-function mutation induces epilepsy, progressive neuroinflammation, and cerebellar degeneration in mice phenocopying human SCAR12
+**Authors:** Hussain et al.
+**Year:** 2023
+**Journal/source:** *Progress in Neurobiology* 223:102425
+**Identifier:** PMID 36828035 / DOI 10.1016/j.pneurobio.2023.102425
+**Status:** processed
+**Record provenance:** placeholder `CORPUS-STUB-053` promoted by `BATCH_20260926_ALDAZ_R1` (2026-09-26) to register a full-text reading recovered from the VPS backup; bibliographic fields from the reading's dossier header
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260913-36828035-03` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID36828035.json`, dossier `fulltext_dossiers/PMID36828035.md`.
+**Transferability:** not assessed in this registration — held with the reading's candidate
+**clinical relevance:** not assessed in this registration — held with the reading's candidate
+**Claim links:** none — held for the operator's decision on the reading's candidate
+**Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it (`CC-20260913-36828035-01`) are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
+
+---
+
+## PAPER 113
+**Short title:** Zeng 2024 — Endothelial knockdown of the tumor suppressor, WWOX, increases inflammation in ventilator-induced lung injury
+**Full title:** Endothelial knockdown of the tumor suppressor, WWOX, increases inflammation in ventilator-induced lung injury
+**Authors:** Zeng Z, Abdelwahid E, Chen W, Ascoli C, Pham T, Jacobson JR, Dudek SM, Natarajan V, Aldaz CM, Machado RF, Singla S
+**Year:** 2024
+**Journal/source:** *Am J Physiol Lung Cell Mol Physiol* 2024;326(6):L689–L698
+**Identifier:** PMID 38563965 / DOI 10.1152/ajplung.00277.2023
+**Status:** processed
+**Record provenance:** placeholder `CORPUS-STUB-120` promoted by `BATCH_20260926_ALDAZ_R1` (2026-09-26) to register a full-text reading recovered from the VPS backup; bibliographic fields from the reading's dossier header
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260913-38563965-01` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID38563965.json`, dossier `fulltext_dossiers/PMID38563965.md`.
+**Transferability:** not assessed in this registration — held with the reading's candidate
+**clinical relevance:** not assessed in this registration — held with the reading's candidate
+**Claim links:** none — held for the operator's decision on the reading's candidate
+**Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
+
+---
+
+## PAPER 114
+**Short title:** De La Cruz 2025 — Partial Wwox Loss of Function Increases Severity of Murine Sepsis and Neuroinflammation
+**Full title:** Partial Wwox Loss of Function Increases Severity of Murine Sepsis and Neuroinflammation
+**Authors:** De La Cruz et al.
+**Year:** 2025
+**Journal/source:** bioRxiv preprint, not peer reviewed (v1 posted 2025-01-18)
+**Identifier:** PMID 39868255 / DOI 10.1101/2025.01.17.633677
+**Status:** processed
+**Record provenance:** placeholder `CORPUS-STUB-110` promoted by `BATCH_20260926_ALDAZ_R1` (2026-09-26) to register a full-text reading recovered from the VPS backup; bibliographic fields from the reading's dossier header
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260913-39868255-01` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID39868255.json`, dossier `fulltext_dossiers/PMID39868255.md`.
+**Transferability:** not assessed in this registration — held with the reading's candidate
+**clinical relevance:** not assessed in this registration — held with the reading's candidate
+**Claim links:** none — held for the operator's decision on the reading's candidate
+**Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it (`CC-20260913-39868255-01`) are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
+
+---
+
+## PAPER 115
+**Short title:** Hussain 2025 — B-cell–specific Wwox deletion promotes plasmablastic tumor development and proinflammatory signatures in myeloma model
+**Full title:** B-cell–specific Wwox deletion promotes plasmablastic tumor development and proinflammatory signatures in myeloma model
+**Authors:** Hussain T, Bramble MD, Liu B, Abba MC, Chesi M, Aldaz CM
+**Year:** 2025
+**Journal/source:** *Blood Neoplasia* 2025;2(4):100153
+**Identifier:** PMID 41090157 / DOI 10.1016/j.bneo.2025.100153
+**Status:** processed
+**Record provenance:** placeholder `CORPUS-STUB-178` promoted by `BATCH_20260926_ALDAZ_R1` (2026-09-26) to register a full-text reading recovered from the VPS backup; bibliographic fields from the reading's dossier header
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260914-41090157-01` (read on the VPS laboratory checkout; recovered into this ledger by `fulltext_receipts.py rechain`, 2026-09-26); work manifest `deepdive_manifests/PMID41090157.json`, dossier `fulltext_dossiers/PMID41090157.md`.
+**Transferability:** not assessed in this registration — held with the reading's candidate
+**clinical relevance:** not assessed in this registration — held with the reading's candidate
+**Claim links:** none — held for the operator's decision on the reading's candidate
+**Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it (`CC-20260914-41090157-01`) are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
 
 ---

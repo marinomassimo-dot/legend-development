@@ -24,6 +24,9 @@ the repeated `prev_batch_commit_id` and the `target_wm_version` / `last_wm_updat
 `BATCH_20260909_001` — and none of them is a current value.
 
 ```yaml
+batch_20260926_aldaz_r1_scope: "REGISTRY_ONLY, working model unchanged (WM_v5.0): no claim, block, ledger or working-model text touched. Registers as READ IN FULL the 25 studies whose complete readings were recovered from the VPS backup (receipts rechained in G4.3): evidence-depth declarations on 7 CORPUS P records; 15 CORPUS-STUB placeholders promoted to PAPER 101-115 (the four the VPS had promoted as PAPER 093-096 now PAPER 101-104); 3 PMIDs with no record at all registered as PAPER 098-100. Every new record carries Claim links: none and a registration note that the findings are not propagated. The science the VPS batches propagated (BATCH_20260913_001-004, 20260914_005-008, 20260915_009) is HELD for the operator: it narrows consolidated-baseline CLAIM 006 and CLAIM 007 and overlaps open backlog candidates on the same claims. No candidate consumed: the 37 recovered candidates stay RE-QUEUED."
+batch_20260926_aldaz_r1_candidates: 0
+prev_batch_commit_id_before_20260926_aldaz_r1: BATCH_20260922_SEIZURE
 batch_20260922_seizure_scope: "MAJOR, operator-authorized, scope strictly the seizure/epileptogenesis statements (WM_v4.5 -> WM_v5.0). Propagated CC-20260826-SEIZURE-RECONCILIATION-01: CLAIM 037 headline clause deleted as false and replaced by the rat / null-mouse / P47T separation with NOT_REPORTED != ABSENT per paper; CLAIM 005 prohibition retargeted, not deleted; new CLAIM 040. One limb (the PMID 33914858 falsifier) dropped for want of verification. Commit 3bd71c8. RECORDED 2026-09-26: the batch updated working_model_current.md and the growth anchors but not this chronicle or the manifest's working_model_version / last_batch_* fields; aligned by a state-control update, not a new batch."
 batch_20260922_seizure_candidates: 1
 prev_batch_commit_id_before_20260922_seizure: BATCH_20260921_002
