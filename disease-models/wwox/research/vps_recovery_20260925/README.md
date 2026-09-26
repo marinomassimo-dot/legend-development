@@ -1,7 +1,9 @@
 # VPS recovery — 2026-09-25
 
 > 🔴 **DO NOT DELETE `backup/vps-main-2026-09-25` OR `~/legend-vps-backup-2026-09-25.bundle`
-> UNTIL RECOVERY GROUP G4 IS CLOSED.** Today they are the only copy of every file listed in §5.
+> UNTIL THE HELD SCIENCE BATCH (§7) IS DECIDED AND CLOSED.** Today they are the only copy of every
+> file listed in §5 as `DISPOSITIONED` — above all the VPS batch reports and the claim, ledger and
+> working-model text §7 would re-derive.
 > Neither is published, and neither may be: both are local to the VPS.
 
 **What this note is.** An index of work done on the VPS checkout between 2026-09-12 and
@@ -23,16 +25,16 @@ current state, in recovery group G4 (a separate session).
 
 ## 0 · What has landed
 
-| Group | Content |
-|---|---|
-| G1 | harness tooling, commit `4be7217` (§4 lists what was left out) |
-| G2 | this note and [`inventory.tsv`](inventory.tsv). The 75 task records first recovered under `ledger/tasks/<actor>/` (all 77 VPS task IDs were free on `main`) were withdrawn: they cite commits such as `started_at_head` values that exist only in the backup, so on a clone of GitHub they can never resolve (`test_task_record_commit_hashes`). They are listed in the inventory like every other historical record |
-| G3 → G4 | moved to G4 at the operator's decision, to land as one coherent step: the 29 full-text dossiers, the 28 new deep-dive manifests and the updated `PMID36828035` manifest, the page adjudication, the 29 read receipts (via `fulltext_receipts.py rechain`, never by hand), the validator rule below, and the full-text queue entries (`FT-…`) those artefacts cite |
-
-The historical records (reports, session evaluations, Mirror consultations, phase packets,
-verifications, comparison notes) are **not** kept in the repository: they cite tools, files and
-queue entries that do not exist on `main`, and the repository's own reader-journey, documented-command
-and link-target suites check every Markdown file. They stay in the backup, one `git show` away (§5).
+| Group | Content | Commit |
+|---|---|---|
+| G1 | harness tooling (§4 lists what was left out) | `4be7217` |
+| G2 | this note and [`inventory.tsv`](inventory.tsv); the 75 VPS task records were withdrawn again (they cite commits that exist only in the backup) | `d44c3e5`, `d626cde` |
+| G4.1 | the manifest aligned with `WM_v5.0` / `BATCH_20260922_SEIZURE` (a state-control update, no batch) | `7b8b8d4` |
+| G4.2 | receipt validator: a null parent admitted for a strictly earlier independent reading | `2690265` |
+| G4.3 | the readings as one step: dossiers, manifests, queue entries (renumbered, §6), 29 receipts by rechain (207 → 236), the 37 VPS candidates re-queued, and the seven notes the receipts declare as outputs | `af09f7a`, `55803b5` |
+| G4.4 part 1 | `BATCH_20260926_ALDAZ_R1`: the 25 readings registered in the paper registry, nothing propagated (PAPER 098–115) | `a364dab` |
+| G4.4 science | **HELD for the operator** — §7 | — |
+| G4.5–G4.6 | inventory accounting (every row RECOVERED or DISPOSITIONED); the retrieval manifest's +85-line append | this note's commit |
 
 ## 1 · Identifiers that mean something else here
 
@@ -56,6 +58,12 @@ known drift to be healed through `BATCH_COMMIT`), so the recovery batch will not
 The next free `PAPER` number must be re-derived from `paper_registry_current.md` at that time.
 
 ## 2 · Instructions carried to G4
+
+**Status 2026-09-26: carried out.** The validator rule landed in G4.2 (`2690265`, three tests plus a
+missing-time case) and all 29 receipts were rechained in G4.3 (`af09f7a`); `fulltext_receipts.py
+status` shows the complete VPS reading for 27869163 and 39868255 beside `main`'s later partial ones.
+The three verification records below were not recovered (decision A1), so their links stay as they
+are in the backup; the instruction applies if they are ever brought in.
 
 **Receipts.** 27 of the 29 VPS receipts rechain cleanly onto `main`'s ledger (dry run: 207 → 234
 events, none of them citing the two below). Two cannot be recorded truthfully with today's
@@ -131,33 +139,36 @@ rewrites and `skill_description_census.py`; the VPS `scientist_standing_brief.md
 whose blob in `06ee25a` is not the blob in this repository after G2 — absent on `main`, or
 present with other content (for a harness file recovered in part, the backup holds the whole VPS
 version). 458 rows, one per file, tab-separated: `group`, `original_path`, `blob_in_06ee25a`,
-`state_now`, `recover_with`. It is a TSV and not a table here because most of those paths do not
+`state_now`, `recover_with`, `disposition`, `detail`. It is a TSV and not a table here because most of those paths do not
 exist on `main`, and the repository's documentation suites rightly refuse a Markdown file that
 names a missing script.
 
 Each row's `recover_with` is the exact command, `git show 06ee25a:<original_path>`;
 `git cat-file -p <blob_in_06ee25a>` returns the same bytes. Counts per group:
 
-| Group | Files |
-|---|---|
-| Commit candidates (G4) | 80 |
-| Comparison notes (analysis) | 11 |
-| Comparison notes (research) | 16 |
-| Consolidation verifications | 4 |
-| Deep-dive manifests (G4) | 30 |
-| Full-text dossiers (G4) | 32 |
-| Harness files not recovered or recovered in part (see §4) | 67 |
-| Learning records not recovered (mandate-continuity package) | 2 |
-| Mirror consultations | 9 |
-| Other disease-model files (reports, current surfaces, analysis) | 66 |
-| Page adjudications (G4) | 1 |
-| Phase packets | 8 |
-| Registries and receipt ledger (G4: redo via BATCH_COMMIT / rechain) | 8 |
-| S2 second reading | 7 |
-| Session evaluations | 18 |
-| Task records (recovered in G2, withdrawn: they cite commits that exist only in the backup) | 75 |
-| Task records not recovered (mandate-continuity package) | 2 |
-| Verifications | 22 |
+| Group | RECOVERED | DISPOSITIONED |
+|---|---:|---:|
+| Commit candidates (G4) | 37 | 43 |
+| Comparison notes (analysis) | 2 | 9 |
+| Comparison notes (research) | 1 | 15 |
+| Consolidation verifications | 0 | 4 |
+| Deep-dive manifests (G4) | 30 | 0 |
+| Full-text dossiers (G4) | 32 | 0 |
+| Harness files not recovered or recovered in part (see §4) | 11 | 56 |
+| Learning records not recovered (mandate-continuity package) | 0 | 2 |
+| Mirror consultations | 0 | 9 |
+| Other disease-model files (reports, current surfaces, analysis) | 3 | 63 |
+| Page adjudications (G4) | 1 | 0 |
+| Phase packets | 0 | 8 |
+| Registries and receipt ledger (G4: redo via BATCH_COMMIT / rechain) | 1 | 7 |
+| S2 second reading | 0 | 7 |
+| Session evaluations | 3 | 15 |
+| Task records (recovered in G2, withdrawn: they cite commits that exist only in the backup) | 0 | 75 |
+| Task records not recovered (mandate-continuity package) | 0 | 2 |
+| Verifications | 0 | 22 |
+| **Total (458)** | **121** | **337** |
+
+No row is unaccounted. The `disposition` and `detail` columns of the TSV give, per file, the landing commit or the one-line reason.
 
 ## 6 · G4.3 — full-text queue renumbering (VPS → `main`)
 
@@ -184,3 +195,78 @@ All 17 queue entries the VPS created collide with different entries on `main` (w
 | `FT-114` | `FT-191` |
 
 Also applied in G4.3: the VPS updates to six existing entries `main` never changed (`FT-010`, `FT-038`, `FT-045`, `FT-057`, `FT-079`, `FT-085`); `FT-096` was left as it is, both sides having added the same separator. In the recovered live files, `PAPER 093`–`096`, VPS `WM_v4.x` and VPS batch ids are annotated in place `(VPS numbering, PMID …)` / `(VPS batch, never on main)`, and inline paths or links to records kept in the backup became `git show 06ee25a:<path>` commands.
+
+## 7 · HELD for the operator — the science the VPS batches propagated
+
+`BATCH_20260926_ALDAZ` (the re-derivation of `BATCH_20260913_001`–`004`, `BATCH_20260914_005`–`008` and `BATCH_20260915_009` on the current state) was **not run**. Two STOP rules of the recovery mandate fire, each on its own:
+
+1. **Conflict with consolidated-baseline claims.** The VPS readings *narrow* two claims that are `consolidated baseline` on `main`, and `main` has not changed either since the split:
+   - `CLAIM 006` — "progressive microgliosis and astrogliosis" becomes astrogliosis demonstrated as a *direction, not a rate* (pseudoreplicated statistics, n = 3 mice), microglial progression demonstrated for **morphology only**, microglial abundance unchanged between ages;
+   - `CLAIM 007` — "P47T abolishes PPxY binding" becomes *near-abolishes* WWOX recovery by two PPPY oligopeptides *in vitro* (faint residual, n = 2/group; protein present in both genotypes).
+   The same readings reach `CLAIM 030`, `CLAIM 033`, `PAPER 007`, `PAPER 042` ("the abundance/severity dissociation is NOT demonstrated") and `DL-MECH-033`. A locator audit is due before any of this touches a baseline claim.
+2. **Overlap with the pre-existing backlog.** Every claim the VPS batches touched has open candidates on `main` (70 pre-existing, excluding the 37 recovered):
+
+| Claim | Open backlog candidates on the same claim |
+|---|---|
+| `CLAIM 004` | 5: `CC-20260826-AAV9-ENDPOINT-SPLIT-01`, `CC-20260826-DOSE-ADJUDICATION-01`, `CC-20260826-DOSE-DECISION-TABLE-01`, `CC-20260826-DOSE-TRANSFERABLE-QUANTITY-01`, `CC-20260826-FIVECLAIM-PACKAGE-01` |
+| `CLAIM 005` | 7: `CC-20260826-EGABA-CLOSURE-01`, `CC-20260826-EGABA-EXPERIMENT-01`, `CC-20260826-FIVECLAIM-PACKAGE-01`, `CC-20260826-INDEX-PRIORITY`, `CC-20260826-PMID36828035-01`, `CC-20260826-UPSTREAM-CITATION-FAILURE-01`, `CC-20260922-CLAIM005-CHAIN-NAMING-01` |
+| `CLAIM 006` | 4: `CC-20260826-CLAIM006-01`, `CC-20260826-CLAIM006-HARDENING-01`, `CC-20260826-PROVENANCE-01`, `CC-20260826-PROVENANCE-PAPER007-01` |
+| `CLAIM 007` | 2: `CC-20260826-PROVENANCE-01`, `CC-20260826-PROVENANCE-PAPER007-01` |
+| `CLAIM 011` | 12: `CC-20260825-ADVERSARIAL-FALSIFICATION-01`, `CC-20260826-AAV9-ENDPOINT-SPLIT-01`, `CC-20260826-CLAIM032-01`, `CC-20260826-CLAIM037-01`, `CC-20260826-CROSS-CLAIM-CENSUS-02`, `CC-20260826-DOSE-ADJUDICATION-01`, `CC-20260826-DOSE-DECISION-TABLE-01`, `CC-20260826-DOSE-TRANSFERABLE-QUANTITY-01`, `CC-20260826-FIVECLAIM-PACKAGE-01`, `CC-20260826-INDEX-PRIORITY`, `CC-20260921-TX007-CEILING-AND-DOSE-CONTROL-01`, `CC-20260922-CLAIM011-DOSE-ENDPOINTS-01` |
+| `CLAIM 016` | 6: `CC-20260825-32000863-POINTER-01`, `CC-20260825-CLAIM016-DRIFT-01`, `CC-20260826-FIVECLAIM-PACKAGE-01`, `CC-20260826-GSK3B-S9-AXIS-01`, `CC-20260826-LITHIUM-BOUNDARY-01`, `CC-20260826-PMID36828035-01` |
+| `CLAIM 025` | 2: `CC-20260825-GRAPH-MATERIALIZATION-01`, `CC-20260922-CLAIM025-SIGN-INVARIANCE-01` |
+| `CLAIM 030` | 2: `CC-20260909-25331887-01`, `CC-20260920-DETECTION-FLOOR-01` |
+| `CLAIM 032` | 5: `CC-20260826-CLAIM032-01`, `CC-20260826-INDEX-PRIORITY`, `CC-20260920-CLAIM032-ENDPOINT-QUALIFIER-01`, `CC-20260921-CLAIM032-HYPOMORPH-PREMISE-01`, `CC-20260922-GTGT-CNS-QUALIFICATION-01` |
+| `CLAIM 033` | 1: `CC-20260921-CLAIM033-REPLICATION-01` |
+| `CLAIM 037` | 8: `CC-20260825-ADVERSARIAL-FALSIFICATION-01`, `CC-20260826-CLAIM037-01`, `CC-20260826-CROSS-CLAIM-CENSUS-02`, `CC-20260826-CROSS-CLAIM-CENSUS-03`, `CC-20260826-FIVECLAIM-PACKAGE-01`, `CC-20260826-INDEX-PRIORITY`, `CC-20260826-UPSTREAM-CITATION-FAILURE-01`, `CC-20260922-CLAIM005-CHAIN-NAMING-01` |
+
+**What the held batch would touch** (record-level three-way comparison, divergence point / VPS / `main`):
+
+| Surface | Records the VPS changed |
+|---|---|
+| claim registry | 11 |
+| paper registry | 21 |
+| literature log | 48 |
+| working model | 4 |
+| discovery ledger | 14 |
+| therapeutic hypotheses ledger | 2 |
+| therapeutic strategies | 1 |
+| research candidates | 1 |
+| research lines | 3 |
+| meta index | 1 |
+| meta metabolism | 2 |
+| disease_model.md | 1 |
+
+Of the claim records, `CLAIM 005`, `011`, `016`, `030` and `037` were also changed on `main` after the split (`CLAIM 032` and `CLAIM 005` by `BATCH_20260921_001` / `BATCH_20260922_SEIZURE`): the VPS text must never be reapplied over them.
+
+**Decisions this needs, per claim:** whether the narrowing of `CLAIM 006` / `007` enters canon (with the locator audit); for each overlapping claim, whether the recovered candidate or the backlog candidate goes first, or both in one batch. Also left with this batch: the LIT-status lint check (exception list calibrated on the VPS log; not activated), the 51 older candidates whose VPS disposition names a VPS batch, and the next working-model version (after `WM_v5.0`, MINOR or MAJOR by manifest § 2 — MAJOR if a baseline claim is narrowed).
+
+## 8 · G4.0 collision map (VPS identifier → `main`)
+
+| VPS | `main` | How |
+|---|---|---|
+| `FT-097` | `FT-175` | queue entry, §6 |
+| `FT-098` | `FT-176` | queue entry, §6 |
+| `FT-099` | `FT-177` | queue entry, §6 |
+| `FT-100` | `FT-178` | queue entry, §6 |
+| `FT-101` | `FT-179` | queue entry, §6 |
+| `FT-102` | `FT-180` | queue entry, §6 |
+| `FT-103` | `FT-181` | queue entry, §6 |
+| `FT-104` | `FT-182` | queue entry, §6 |
+| `FT-105` | `FT-183` | queue entry, §6 |
+| `FT-106` | `FT-184` | queue entry, §6 |
+| `FT-108` | `FT-185` | queue entry, §6 |
+| `FT-109` | `FT-186` | queue entry, §6 |
+| `FT-110` | `FT-187` | queue entry, §6 |
+| `FT-111` | `FT-188` | queue entry, §6 |
+| `FT-112` | `FT-189` | queue entry, §6 |
+| `FT-113` | `FT-190` | queue entry, §6 |
+| `FT-114` | `FT-191` | queue entry, §6 |
+| `PAPER 093` (VPS) | `PAPER 101` | PMID 14526170, registered by `BATCH_20260926_ALDAZ_R1` |
+| `PAPER 094` (VPS) | `PAPER 102` | PMID 28283473, registered by `BATCH_20260926_ALDAZ_R1` |
+| `PAPER 095` (VPS) | `PAPER 103` | PMID 30285739, registered by `BATCH_20260926_ALDAZ_R1` |
+| `PAPER 096` (VPS) | `PAPER 104` | PMID 15064722, registered by `BATCH_20260926_ALDAZ_R1` |
+| `WM_v4.5`–`WM_v4.11` (VPS) | none | never on `main`; `main` is at `WM_v5.0` |
+| VPS batch ids `BATCH_20260913_001`…`BATCH_20260915_009` | none | never on `main`; annotated in place in recovered files |
+
+Other identifier families checked (LIT, CLAIM, CORPUS, DL, DIS, TX, HYP): the VPS created none, so nothing collides. New registry records took the next free numbers on `main` (PAPER 098–115; `main` stopped at PAPER 097).
