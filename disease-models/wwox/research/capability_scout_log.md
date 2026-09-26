@@ -775,7 +775,8 @@ worktree has a branch; the check had discarded that distinction. The role contra
 still said `no push`, despite §21d's development-repository exception.
 
 **Change made.** Separate dirty branch worktrees from dirty detached worktrees in the
-report, retain both paths, and let only the branch-backed set trigger `UNPUBLISHED`.
+report, retain both paths, and keep both under `UNPUBLISHED` because detached changes
+may be unique.
 Correct the stale role pointer. A real-Git regression test covers the classification.
 This changes operational monitoring only; no scientific inference or current file changes.
 

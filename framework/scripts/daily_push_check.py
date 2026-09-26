@@ -91,11 +91,7 @@ def local_branches(root: Path, baseline: str) -> list[dict[str, object]]:
 
 
 def dirty_worktrees(root: Path) -> tuple[list[str], list[str]]:
-    """Separate owned branch work from detached scratch worktrees.
-
-    Detached worktrees remain visible for inspection, but a test fixture left dirty
-    under /tmp is not evidence that an actor has unpublished task work.
-    """
+    """Separate branch-backed and detached work without losing either alert."""
     active, detached = [], []
     for block in git(root, "worktree", "list", "--porcelain").split("\n\n"):
         lines = block.splitlines()
@@ -124,7 +120,10 @@ def report(root: Path, now: dt.datetime) -> dict[str, object]:
         result["remote_main_sha"] = sha
         result["unpublished"] = local_branches(root, sha)
         result["dirty_worktrees"], result["detached_dirty_worktrees"] = dirty_worktrees(root)
-        result["status"] = "UNPUBLISHED" if result["unpublished"] or result["dirty_worktrees"] else "CURRENT"
+        result["status"] = "UNPUBLISHED" if (
+            result["unpublished"] or result["dirty_worktrees"]
+            or result["detached_dirty_worktrees"]
+        ) else "CURRENT"
     except CheckError as exc:
         result["error"] = str(exc)
     return result

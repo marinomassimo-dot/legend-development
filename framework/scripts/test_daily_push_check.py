@@ -72,7 +72,7 @@ class DailyPushCheckTests(unittest.TestCase):
             git(root, "commit", "-q", "-am", "same patch, new ID")
             self.assertEqual([], check.local_branches(root, git(root, "rev-parse", "main")))
 
-    def test_detached_scratch_is_visible_without_a_false_unpublished_alert(self) -> None:
+    def test_detached_dirt_is_visible_and_keeps_the_alert(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory) / "repo"
             root.mkdir()
@@ -98,7 +98,7 @@ class DailyPushCheckTests(unittest.TestCase):
                 self.assertEqual([str(scratch)], result["detached_dirty_worktrees"])
                 (named / "local-note").unlink()
                 result = check.report(root, now)
-                self.assertEqual("CURRENT", result["status"])
+                self.assertEqual("UNPUBLISHED", result["status"])
                 self.assertEqual([], result["dirty_worktrees"])
                 self.assertEqual([str(scratch)], result["detached_dirty_worktrees"])
 

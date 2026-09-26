@@ -14,10 +14,10 @@ status: LOCAL
 
 ## Work completed, problem, solution
 
-The daily publication check marked every dirty worktree `UNPUBLISHED`, including detached
-test worktrees with local fixtures. It now reports dirty branch worktrees as actionable
-and lists dirty detached worktrees in a separate field for inspection. A real-Git test
-proves both cases and the status change after branch work is cleaned.
+The daily publication check marked every dirty worktree `UNPUBLISHED` without showing
+whether it was a task branch or detached. It now lists the two groups separately for
+inspection; both retain the alert because detached work may be unique. A real-Git test
+proves both cases after branch work is cleaned.
 
 The Harness Engineering contract still listed every push as operator-reserved. Its
 wording now points to §21d's development-repository push exception; the canonical rule
@@ -26,9 +26,9 @@ remains in `LEGEND_CORE.md`.
 ## Learning and impact
 
 Git's `worktree list --porcelain` carries branch attachment explicitly. A publication
-monitor should use that information before converting dirt into a task alert, while
-retaining detached dirt as observable state. The change reduces a false daily alert
-without hiding a detached checkout.
+monitor should report that information so an actor can identify a detached test fixture
+quickly. Branch attachment alone cannot prove that detached changes are disposable,
+so the overall alert remains conservative.
 
 `LEARNING_INDEX` was checked before filing and is still absent (`ANNEX_INDEX.md` marks it
 pending). This record has no `LEARNING_ID`, confirmation class or promotion claim; it is
@@ -45,9 +45,9 @@ one local observation and implemented micro-upgrade.
 
 ## Decisions taken
 
-- Keep detached dirt visible but outside `UNPUBLISHED`; the alternative of ignoring it
-  entirely would hide possible unique material. Revert the script, test and README hunk
-  if this classification proves wrong.
+- Keep detached dirt visible and within `UNPUBLISHED`; the first implementation removed
+  the alert based on detachment alone, which could hide unique material. Revert the script,
+  test and README hunk if separate reporting proves unhelpful.
 - Correct only the stale role pointer; the alternative of copying the push procedure
   into the role would create a second rule home. Revert the role hunk if §21d changes.
 - No other actor was consulted; §21e makes this an ordinary T0 Harness change.

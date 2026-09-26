@@ -161,7 +161,8 @@ Only the probe at **19:45 Europe/Rome** writes
 `~/.local/state/legend/daily_push_check.json`; the other hours exit immediately.
 The Orchestrator reads that report at session start. It reports local-only commits and dirty
 branch worktrees (excluding preserved `backup/*` refs). Dirty detached worktrees are listed
-separately for inspection and do not set `UNPUBLISHED`. The check does not push, fetch, alter
+separately for inspection and also set `UNPUBLISHED`, since detachment alone does not prove
+their contents are disposable. The check does not push, fetch, alter
 refs or observe clones on other hosts. A missing or
 `UNKNOWN` report requires a direct check, not an assumption that everything was published.
 
