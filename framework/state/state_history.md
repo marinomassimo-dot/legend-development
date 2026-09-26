@@ -24,6 +24,9 @@ the repeated `prev_batch_commit_id` and the `target_wm_version` / `last_wm_updat
 `BATCH_20260909_001` — and none of them is a current value.
 
 ```yaml
+batch_20260926_aldaz_r5_scope: "MINOR, WM_v5.3 -> WM_v5.4, MANUAL trigger. CLAIM 029 gains two separately bounded murine B-cell observations from PAPER 110 and 115, with no ATM, CNS or clinical promotion. PAPER 027 authors corrected to Abu-Odeh et al. and two partial receipts named; PAPER 030 retained as an explicit duplicate, not independent evidence. The SI-only candidate for PMID 25331887 remains deferred because seven figure locators fail strict regeneration; no claim-strength upgrade. Working-model prose and mirror, narrative disease model, meta index and three candidate dispositions aligned. No BLOCCO 1 or therapeutic change. Mirror ex-post review due under section 21e."
+batch_20260926_aldaz_r5_candidates: 3
+prev_batch_commit_id_before_20260926_aldaz_r5: BATCH_20260926_ALDAZ_R4
 batch_20260926_aldaz_r4_scope: "MINOR, WM_v5.2 -> WM_v5.3, MANUAL trigger. CLAIM 026 narrowed from a measured trafficking-metabolism coupling node to co-association and pathway annotation in one HEK293T interactome; functional coupling stays IPOTESI. PAPER 032 full-read receipt and limits, PAPER 053 review-conduit receipt and primary-source boundaries, PAPER 103/LIT-0181 VOPP1 interaction link added. Working-model prose and mirror, narrative disease model, metabolism meta/index, research lines and RC-007 aligned. Three candidate dispositions appended (B002 partial; 30285739 and CLAIM026-CLINICAL propagated). No BLOCCO 1 or therapeutic recommendation changed. Mirror ex-post review due under section 21e; any finding becomes a follow-up task."
 batch_20260926_aldaz_r4_candidates: 3
 prev_batch_commit_id_before_20260926_aldaz_r4: BATCH_20260926_ALDAZ_R3

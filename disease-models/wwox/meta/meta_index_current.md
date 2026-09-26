@@ -174,7 +174,7 @@ LEGEND must read it at the start of every STANDARD or FULL session.
 - CLAIM 026 (`PAPER 032`; VOPP1 limb `PAPER 103`) — co-association plus pathway annotation, functional trafficking–metabolism coupling untested → **meta 2 (metabolism)** — ✅ propagated as hypothesis
 - CLAIM 027 (paper 214) — HYAL-2/SMAD4 ECM signaling → research-facing (meta 6 candidate)
 - CLAIM 028 — context-dependence principle → cross-cutting — traceability pointer resolved 213→207 by `BATCH_20260725_001`
-- CLAIM 029 (paper 138) — ATM/DDR competence → research-candidate (RC-012)
+- CLAIM 029 (PAPER 027, Abu-Odeh 2014; PAPER 110/115 add murine B-cell context) — ATM/DDR competence remains in observation → research-candidate (RC-012); no CNS transfer from the B-cell studies
 
 ## Metas updated by commit 181–220
 - ✅ meta_metabolism_current.md → v1.1

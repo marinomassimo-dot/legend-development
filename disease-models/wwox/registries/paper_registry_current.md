@@ -606,12 +606,13 @@ The canonical P1–P7 codes follow the WWOX working model and claim registry. **
 ## PAPER 027
 **Short title:** PNAS 2014 ATM/DDR
 **Full title:** WWOX, the common fragile site FRA16D gene product, regulates ATM activation and the DNA damage response
-**Authors:** Schrock et al.
+**Authors:** Abu-Odeh M, Salah Z, Herbel C, Hofmann TG, Aqeilan RI
 **Year:** 2014
 **Source type:** primary mechanistic DDR study
 **Journal/source:** *Proceedings of the National Academy of Sciences USA*
 **Identifier:** PMID 25331887 / DOI 10.1073/pnas.1409252111
 **Status:** integrated
+**Evidence depth:** `partial_fulltext_read` — receipts `FTR-20260810-25331887-01` (body) and `FTR-20260909-25331887-02` (supplement); no single complete receipt or resolved study-level rollup. The seven figure PNG locators in `deepdive_manifests/PMID25331887.json` still fail strict regeneration, so the SI-only narrowing candidate is deferred.
 **Primary pathway:** genome stability / ATM / DNA damage response
 **Secondary pathway:** developmental vulnerability (candidate)
 **Model/species:** cellular DDR systems / cancer-linked mechanistic context
@@ -621,6 +622,7 @@ The canonical P1–P7 codes follow the WWOX working model and claim registry. **
 **Claim links:** 029
 **Role:** new structural-axis paper
 **Note:** Shows that WWOX deficiency reduces ATM activation, compromises γ-H2AX response and impairs DNA repair; introduces a plausible genome-/replicative-stress vulnerability branch relevant to proliferative developmental compartments, but not yet promotable to core clinical logic.
+**Identity correction (BATCH_20260926_ALDAZ_R5):** PMID 25331887 is Abu-Odeh et al., not Schrock et al. `PAPER 030` is a duplicate record retained for historical links; this is the canonical identity. No claim-strength promotion follows from correcting metadata or from aggregating two partial receipts.
 
 
 ## PAPER 028
@@ -672,8 +674,8 @@ The canonical P1–P7 codes follow the WWOX working model and claim registry. **
 **Source type:** mechanistic primary (cell/mouse) — oncology/DDR context
 **Journal/source:** *Proc Natl Acad Sci U S A* 2014;111(44):E4716-25
 **Identifier:** PMID 25331887 · PMCID PMC4226089 · DOI 10.1073/pnas.1409252111
-**Status:** claim_linked
-**Evidence depth:** abstract reviewed (PubMed metadata; full text not yet extracted)
+**Status:** superseded
+**Evidence depth:** superseded metadata; see `PAPER 027` for the two partial full-text receipts and unresolved figure-locator debt
 **Primary pathway:** genome stability / ATM / DNA damage response
 **Model/species:** HEK293, HeLa, mouse — non-CNS, oncology/DDR
 **Genotype/model:** Wwox deficiency (cell lines + mouse); not pediatric CNS
@@ -683,6 +685,7 @@ The canonical P1–P7 codes follow the WWOX working model and claim registry. **
 **Role:** primary mechanistic source for the WWOX→ATM/DDR axis (CLAIM 029)
 **Note:** Promosso 2026-06-28 (BATCH_20260628_002) da corpus-paper 138 a PAPER record completo per ancorare CLAIM 029. Metadati verificati via PubMed (According to PubMed). Tesi: Wwox-deficiency riduce attivazione ATM, compromette induzione/mantenimento γ-H2AX, impairs DNA repair; danno → ITCH-mediata K63-ubiquitinazione di WWOX su Lys274 → accumulo nucleare → interazione con ATM. Contesto tumorale/genome-instability, NON CNS pediatrico → CLAIM 029 resta `in observation`. Full text non ancora estratto (solo abstract).
 **Wikilinks:** [[claim_registry_current#CLAIM 029]]
+**Identity correction (BATCH_20260926_ALDAZ_R5):** this is the same PMID as `PAPER 027`, not independent support. Its original abstract-only note records the state at promotion in June 2026 and is superseded by the receipts and limits now attached to `PAPER 027`.
 
 
 ## PAPER 031
@@ -7586,12 +7589,14 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Genotype/model:** no WWOX disease allele; no neural material
 **Transferability:** `T3`
 **clinical relevance:** LOW
-**Claim links:** none — held for the claim batch
+**Claim links:** 029 — bounded murine observation added by `BATCH_20260926_ALDAZ_R5`
 **Role:** the corpus's only measurement of WWOX loss on **class-switch recombination** and junction structure — a repair **pathway-choice** endpoint beside the burden endpoints the corpus already holds; unique in PubMed at reading time and **unreplicated**, which is the most important thing about its strength. Blunt joins fall from 26/77 to 5/61 and long-microhomology junctions rise from 1/77 to 8/61, while junction-adjacent mutation frequency is unchanged (5.2 vs 5.0 × 10⁻³/bp) and AID protein is not elevated; switching is only mildly reduced (~75% of wild type). The mechanism is explicitly unknown in the source. This paper measures no ATM, γH2AX, 53BP1 or relocalisation.
 **LIT link:** [[literature_tracking_log_current#LIT-0111]]
 **Note:** **Limits that exist only in the pixels, the table or the supplement:** the stated translocation fold change is not the panel's — text and PDF print "2.5-fold", Figure 6C reads ≈ 0.22 vs ≈ 1.45 per 10⁶ cells (≈ 6.5-fold), unresolved and recorded as an ambiguity; Figure 5's caption miscounts its own denominator ("76 WT" against 77 elsewhere); Methods say three independent experiments where Figures 5A and 6C say n = 4; Figure 4D carries an undeclared AID⁻/⁻ arm (~0.3%); Figure 5A prints p = 0.15 for insertions > 1 nt, reported in text only as "not significantly different"; survival denominators are irreconcilable (17/44, 34/14, 27/9, no attrition stated). **Recomputed:** tumour incidence 16/34 vs 2/14 → Fisher exact **p = 0.0493** (components not significant alone: lymphoma p = 0.70, plasmacytoma p = 0.085); SPEP 10/27 vs 1/9 → **p = 0.22**, no test stated in the paper. Heterozygotes were collected and never reported. Dependency screen `SCREENED_CLEAN` (59 of 61 screened).
 **Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it (`CC-20260914-31275852-01`) are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
 **Assessment note (BATCH_20260926_ALDAZ_R2, 2026-09-26):** the assessment half of this registration is now written — the fields from `Source type` to `Note` — from `CC-20260914-31275852-01` §2, §4 and the §9 correction, re-derived on main's current text. The claim link the reading proposes (`CLAIM 029`) is **held for the claim batch**, together with every claim-text change; `Claim links` stays `none` until then. The registration note above is superseded for these fields only; no claim, working-model block or ledger entry is changed by this record. The candidate's §9 correction is honoured in `Model/species`: the repair experiments are named as the whole-body null line and "non-engineered" is not written. Held with the link: the §3 sentence for `CLAIM 029` and its working-model mirror.
+
+**Claim-link resolution (BATCH_20260926_ALDAZ_R5):** the earlier assessment note correctly described the held state at R2; the bounded observation now appears in [[claim_registry_current#CLAIM 029]], with `Status: in observation` and no CNS transfer.
 
 ---
 
@@ -7698,12 +7703,14 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Genotype/model:** no WWOX disease allele; no neural material
 **Transferability:** `T3`
 **clinical relevance:** LOW
-**Claim links:** none — held for the claim batch
+**Claim links:** 029 — bounded murine observation added by `BATCH_20260926_ALDAZ_R5`
 **Role:** the direct sequel to `PAPER 110` (same laboratory, same conditional allele): B-cell *Wwox* deletion on a *MYC* background with a genomic-instability phenotype **confined to the tumours, not the marrow** — and two qualifications that must travel with any use of it: the mismatch-repair signature SBS26 is present in a **wild-type** marrow sample too, and SBS85 appears in **none** of the four tumours whose hypermutation the paper attributes to AID/APOBEC, while the *Aicda*/*Apobec2* overexpression offered as that mechanism fails its own test (P = .2646 / .2680). Declared conflict: one author receives royalties from licensing Vk∗MYC mice.
 **LIT link:** [[literature_tracking_log_current#LIT-0194]]
 **Note:** **"Knockout" is a ~3–5-fold reduction, not an ablation** (Supplementary Figure S1b: KO ≈ 0.3 vs WT ≈ 1.5; *Wwox* transcript down only 1.61 log₂ in sorted CD138⁺ cells). The incidence result is marginal and test-dependent (χ² P = .036 as printed; Fisher exact two-tailed p = 0.052 on the same 17/27 vs 4/14 table). Monoclonal gammopathy is genotype-independent (24/24 KO, 14/14 WT). Wild-type Vk∗MYC mice get the same tumour kinds and **none of those four WT tumours was sequenced**, so every "tumour vs marrow" contrast is within-knockout. The inflammation signature rests on 87 genes of which 31 are immunoglobulin V genes — a clonality pattern; no cytokine or NF-κB protein was measured. Figure 7B's caption overstates its own table; the chr11 interval carrying *Rel*, *Xpo1*, *Bcl11a* is a gain in two tumours and a loss in a third. 🔴 **The paper contradicts itself about which tumour is which histology** (Figure 6A/6B against Figure 6C's caption), and the *Aicda*/*Apobec2* claim is attached to those two points; nothing in the artefact adjudicates. The only human evidence is a median-split re-analysis of four public microarray series. The heterozygous arm — the one dose-sensitivity handle — is never analysed for survival or incidence. Dependency screen `SCREENED_CLEAN` (70 of 74 screened).
 **Registration note (BATCH_20260926_ALDAZ_R1, 2026-09-26):** registered as READ IN FULL, and nothing more. What the reading found is **not propagated** into any claim, working-model block, ledger or assessment field: the recovered VPS candidates that carry it (`CC-20260914-41090157-01`) are re-queued and held for the operator's decision (`disease-models/wwox/research/vps_recovery_20260925/README.md`). A reader must not infer from this record that the reading confirmed or changed anything in canon.
 **Assessment note (BATCH_20260926_ALDAZ_R2, 2026-09-26):** the assessment half of this registration is now written — the fields from `Source type` to `Note` — from `CC-20260914-41090157-01` §2 and §4, re-derived on main's current text. The claim link the reading proposes (`CLAIM 029`) is **held for the claim batch**, together with every claim-text change; `Claim links` stays `none` until then. The registration note above is superseded for these fields only; no claim, working-model block or ledger entry is changed by this record. Held with the link: the §3 sentence for `CLAIM 029`. Nothing is routed toward `CLAIM 006` or `CLAIM 025`, as the candidate's §7 requires.
+
+**Claim-link resolution (BATCH_20260926_ALDAZ_R5):** the earlier assessment note correctly described the held state at R2; the bounded observation now appears in [[claim_registry_current#CLAIM 029]], with `Status: in observation` and no CNS transfer.
 
 ---
 

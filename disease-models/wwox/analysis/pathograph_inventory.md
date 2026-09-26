@@ -33,11 +33,11 @@ annotations is reported below whatever it happens to be.
 | Edges carrying a declared relation type | 0 |
 | Nodes carrying a biological scale | 0 |
 | Deep-dive manifests read | 109 |
-| …of which bound to at least one claim | 42 |
+| …of which bound to at least one claim | 44 |
 | Propositions scanned | 2635 |
-| …carrying a relational connective | 621 |
+| …carrying a relational connective | 620 |
 | …locator-backed candidates | 584 |
-| …locator-backed and bound to a claim | 231 |
+| …locator-backed and bound to a claim | 247 |
 
 The scanned population is three declared surfaces and no others: every claim
 `Title`, every row of the working model's BLOCK 2 mirror, and every
@@ -78,7 +78,7 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 | CLAIM 026 | WWOX co-associates with trafficking proteins; its co-purifying partners show metabolic pathway a | in observation | DATO (co-association and pathway annotat | P5 — trafficking / endomembrane systems  | NOT_ANNOTATED | 0 | 2 |
 | CLAIM 027 | WWOX may act as an ECM/membrane-to-nucleus signaling node through HYAL-2/SMAD4 complexes, with c | in observation | INFERENZA | ECM / membrane signaling / injury respon | NOT_ANNOTATED | 0 | 0 |
 | CLAIM 028 | WWOX biological output is strongly partner- and context-dependent; expression level alone is ins | flagged for review | INFERENZA — principio interpretativo tra | cross-pathway interpretive principle | NOT_ANNOTATED | 4 | 5 |
-| CLAIM 029 | WWOX contributes directly to DNA-damage-response competence and genome-stability maintenance, at | in observation | DATO + INFERENZA prudente | genome stability / ATM / DNA damage resp | NOT_ANNOTATED | 0 | 2 |
+| CLAIM 029 | WWOX contributes directly to DNA-damage-response competence and genome-stability maintenance, at | in observation | DATO + INFERENZA prudente | genome stability / ATM / DNA damage resp | NOT_ANNOTATED | 0 | 4 |
 | CLAIM 030 | In WWOX the severity tracks residual protein FUNCTION, not protein abundance | in observation | DATO (serie allelica su cellule di pazie | genotype / protein function / proteostas | NOT_ANNOTATED | 9 | 6 |
 | CLAIM 031 | WWOX-DEE is a developmental AND epileptic encephalopathy: seizure control does not rescue develo | in observation | DATO (osservazione clinica) + INFERENZA  | clinical course / therapeutic strategy | NOT_ANNOTATED | 4 | 2 |
 | CLAIM 032 | WWOX haploinsufficiency is not deleterious **on the endpoints that have been measured** (neoplas | in observation | DATO (topo, ratto, e ogni famiglia umana | P7 — gene therapy readiness / dose-thres | NOT_ANNOTATED | 6 | 12 |
@@ -194,7 +194,6 @@ is matched as one string, so an adverb inserted into it — *"contributes
 | Node | Relational in | Connective | That wording | The other wording |
 |---|---|---|---|---|
 | CLAIM 018 | registry title only | `causes` | The exon 6 splice-site variant c.517-2A>G is pathogenic and causes exo | Exon-6 splice disruption is a confirmed pathogenic mechanism in human  |
-| CLAIM 029 | mirror row only | `contributes to` | WWOX contributes to ATM-linked DDR competence and genome-stability mai | WWOX contributes directly to DNA-damage-response competence and genome |
 | CLAIM 035 | registry title only | `requires` | WWOX is a direct, residue-mapped inhibitor of GSK3β through an Axin-li | WWOX is a direct, residue-mapped inhibitor of GSK3β via an Axin-like S |
 
 ## 4 · What is absent, separated by *kind* of absence
@@ -302,13 +301,13 @@ each side is a reading, and every record carries `endpoints_resolved: false`.
 |---|---|
 | claim_title | 19 |
 | locator_proposition | 584 |
-| working_model_mirror_title | 18 |
+| working_model_mirror_title | 17 |
 
 | Connective class (lexical) | Candidates |
 |---|---|
 | ARROW | 16 |
 | ASSOCIATIVE | 27 |
-| CAUSAL | 527 |
+| CAUSAL | 526 |
 | DEPENDENCY | 51 |
 
 A connective class is a property of the word, not a verdict about the
@@ -331,7 +330,7 @@ relationship. An `ASSOCIATIVE` connective does not make an edge `ASSOCIATED`.
 | CLAIM 016 | claim_title | `contribute to` | GSK3β hyperactivation may contribute to seizure susceptibility in WWOX deficiency |
 | CLAIM 018 | claim_title | `causes` | The exon 6 splice-site variant c.517-2A>G is pathogenic and causes exon 6 skipping in humans |
 
-Showing 12 of 268 bound candidates; the
+Showing 12 of 283 bound candidates; the
 complete set, with evidence and provenance, is in the export. The worklist
 in cost order — what needs an annotation, what needs a type, what needs a
 decomposition, what needs a reading — is printed by:
@@ -348,6 +347,6 @@ carried no connective from the lexicon.
 ## Provenance
 
 Derived from 112 input files; digest
-`bd8dfcc82bf97ecc`. Sources: the claim, paper and
+`e03c5bcce6545bbf`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 

@@ -2,7 +2,7 @@
 
 > **Public, de-identified disease-level model.** Derived from the LEGEND working model with the individual clinical record removed (clinical presentation, treatment regimen, and case-specific surveillance are not included). What remains is the disease-level mechanistic synthesis, the genotype-interpretation rules, the literature-anchored data, and the decision-logic framework — all from public literature. **Not medical advice.** Specific variants appear only as decoupled public worked examples — a destabilizing SDR missense on one side, a canonical splice-acceptor variant on the other — never assembled into one person's genotype.
 
-**Current working model:** WM_v5.3 (`BATCH_20260926_ALDAZ_R4`).
+**Current working model:** WM_v5.4 (`BATCH_20260926_ALDAZ_R5`).
 
 **Model version lineage:** v3.0 (2026-07-14) — a MAJOR baseline reversal (see the repair changelog at the end) illustrating the epistemic discipline in action.
 
@@ -34,7 +34,7 @@
 
 **Research-facing (not yet core).** HYAL-2 / HA / SMAD4 / WWOX — a high-value ECM/membrane-to-nucleus and injury-response branch, retained but not promoted. *(CLAIM 027 / paper 214.)*
 
-**Cross-pathway interpretive principle.** WWOX output is strongly partner- and context-dependent. Expression level alone is insufficient to infer uniform functional benefit — **"more WWOX = better" is not a safe default** across contexts. *(CLAIM 028 / papers 213, 218, 206, 214.)* WWOX may also contribute to ATM-linked DNA-damage-response competence and genome-stability maintenance — a plausible structural-vulnerability branch. *(CLAIM 029 / Abu-Odeh 2014.)*
+**Cross-pathway interpretive principle.** WWOX output is strongly partner- and context-dependent. Expression level alone is insufficient to infer uniform functional benefit — **"more WWOX = better" is not a safe default** across contexts. *(CLAIM 028 / papers 213, 218, 206, 214.)* WWOX may also contribute to ATM-linked DNA-damage-response competence and genome-stability maintenance — a plausible structural-vulnerability branch. *(CLAIM 029 / Abu-Odeh 2014, PAPER 027; murine B-cell repair and tumour observations in PAPER 110/115 remain context-limited and do not transfer to CNS.)*
 
 ---
 
