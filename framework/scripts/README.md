@@ -139,6 +139,7 @@ Run everything as `python3 <path> --help` first. Paths are repo-relative.
 | the mechanical backup/restore phases of `BATCH_COMMIT` | `framework/scripts/batch_commit.py` |
 | land a committed, verified task, detach its worktree, delete its branch | `framework/scripts/task_close.py` |
 | what is not on `main` and how old it is — the weekly §21e sweep | `framework/scripts/branch_hygiene.py` |
+| local commits or dirty worktrees absent from development `main` — daily, read-only report | `framework/scripts/daily_push_check.py` |
 | push a ref only when the gate PASSes on the EXACT commit being pushed | `framework/scripts/safe_push.py` |
 | wait for a job to finish — by PID, `PID:START`, pid file or completion file, **never by name**, and always with a `--timeout` | `framework/scripts/process_wait.py` |
 | refuse to derive a surface whose inputs are uncommitted, or state why it is safe | `framework/scripts/derived_inputs.py` |
@@ -148,6 +149,18 @@ Run everything as `python3 <path> --help` first. Paths are repo-relative.
 | the packet that lets a phase start in a new context, derived from artefacts and verified | `framework/scripts/phase_handoff.py` |
 | task display fields derived from every structured queue — never a runtime release decision | `framework/scripts/task_summary.py` |
 | a commit subject that names the surface touched, never the conclusion reached (convention S.6.7) | `framework/scripts/commit_subject.py` |
+
+The daily check is installed on the UTC host as an hourly cron probe at minute 45:
+
+```cron
+45 * * * * /usr/bin/python3 /home/desktop/legend-development/framework/scripts/daily_push_check.py --scheduled >> /home/desktop/.local/state/legend/daily_push_check.log 2>&1
+```
+
+Only the probe at **19:45 Europe/Rome** writes
+`~/.local/state/legend/daily_push_check.json`; the other hours exit immediately.
+The Orchestrator reads that report at session start. It reports local-only commits and dirty
+worktrees (excluding preserved `backup/*` refs); it does not push, fetch, alter refs or observe clones on other hosts. A missing or
+`UNKNOWN` report requires a direct check, not an assumption that everything was published.
 
 ## 8 · Before publishing
 
