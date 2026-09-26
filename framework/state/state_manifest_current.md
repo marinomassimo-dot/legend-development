@@ -105,7 +105,7 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20260926_MALLARET
+last_batch_commit_id: BATCH_20260926_LITVOCAB
 last_batch_commit_date: 2026-09-26
 last_batch_commit_type: MANUAL
 ```
@@ -121,7 +121,7 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20260926_BATCH_MALLARET
+last_lint_id: LINT_20260926_20260926_LITVOCAB
 last_lint_date: 2026-09-26
 last_lint_result: WARN
 ```
