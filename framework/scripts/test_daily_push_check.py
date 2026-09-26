@@ -51,7 +51,25 @@ class DailyPushCheckTests(unittest.TestCase):
             self.assertEqual(1, len(rows))
             self.assertEqual("main", rows[0]["branch"])
             self.assertEqual(1, rows[0]["commits_absent_from_remote_main"])
+            self.assertEqual(1, rows[0]["novel_patches"])
             self.assertEqual([], check.local_branches(root, git(root, "rev-parse", "HEAD")))
+
+    def test_cherry_picked_content_is_not_reported_again(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            git(root, "init", "-q", "-b", "main")
+            git(root, "config", "user.name", "Test")
+            git(root, "config", "user.email", "example@example.com")
+            (root / "file").write_text("base\n")
+            git(root, "add", "file")
+            git(root, "commit", "-q", "-m", "base")
+            base = git(root, "rev-parse", "HEAD")
+            (root / "file").write_text("base\naddition\n")
+            git(root, "commit", "-q", "-am", "original")
+            git(root, "switch", "-q", "-c", "duplicate", base)
+            (root / "file").write_text("base\naddition\n")
+            git(root, "commit", "-q", "-am", "same patch, new ID")
+            self.assertEqual([], check.local_branches(root, git(root, "rev-parse", "main")))
 
 
 if __name__ == "__main__":

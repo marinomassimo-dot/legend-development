@@ -78,8 +78,15 @@ def local_branches(root: Path, baseline: str) -> list[dict[str, object]]:
         if name.startswith("backup/"):
             continue
         count = int(git(root, "rev-list", "--count", f"{baseline}..{sha}"))
-        if count:
-            rows.append({"branch": name, "sha": sha, "commits_absent_from_remote_main": count})
+        if not count:
+            continue
+        # A cherry-picked patch can have a new commit ID while its content is already
+        # on main. Counting IDs alone would warn forever about the old task branch.
+        novel = sum(line.startswith("+") for line in git(root, "cherry", baseline, sha).splitlines())
+        if novel:
+            rows.append({"branch": name, "sha": sha,
+                         "commits_absent_from_remote_main": count,
+                         "novel_patches": novel})
     return rows
 
 
