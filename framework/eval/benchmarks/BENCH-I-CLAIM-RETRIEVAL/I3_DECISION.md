@@ -77,7 +77,12 @@ Re-run of I1 with the frozen fixtures, primary configuration, no sensitivity, wr
 
 The after-K1 run matches the post-hoc measurement row for row (all 78 fixture × strategy rows
 identical), with a different implementation (`registry_records.py` sha256 `755bc3bd…`
-against the post-hoc `1bbadaa9…`). Gained targets: I03 (both), I07, I16 — as predicted. I06,
+against the post-hoc `1bbadaa9…`). *Correction, 2026-09-26 (independent VPS verification):*
+`755bc3bd…` is the hash of an uncommitted intermediate edit — neither K1's committed
+`registry_records.py` (`a2e23927…`, `4c1d250`) nor its parent (`0bfe49f7…`) hashes to it.
+Re-running I1 under the committed tool on `e1173ca` reproduces `i1_results_after_K1.json`
+field for field except `runtime_s`, so the table above stands; the frozen JSON keeps the
+hash it was written with. Gained targets: I03 (both), I07, I16 — as predicted. I06,
 I09 and I24 are still missed at the events' parents.
 
 **The decision stands: TARGETED RETRIEVAL NOT SUPPORTED, preload retained.** The pre-registered
