@@ -43,7 +43,7 @@ edition: public
 ## 2. DISEASE-MODEL (WORKING-MODEL) VERSION
 
 ```yaml
-working_model_version: WM_v4.5
+working_model_version: WM_v5.0
 working_model_file: disease-models/wwox/registries/working_model_current.md
 narrative_view: disease-models/wwox/disease_model.md
 notes: "Canonical disease-level working model derived from public literature; disease_model.md is its narrative reader-facing view. The private individual-level record is not part of this edition."
@@ -105,9 +105,9 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20260921_002
-last_batch_commit_date: 2026-09-21
-last_batch_commit_type: MINOR
+last_batch_commit_id: BATCH_20260922_SEIZURE
+last_batch_commit_date: 2026-09-22
+last_batch_commit_type: MAJOR
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
