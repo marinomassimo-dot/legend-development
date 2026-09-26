@@ -2483,28 +2483,28 @@ Serves to:
 ---
 
 ## LIT-0077
-**Short title:** corpus paper 53
-**Authors:** not yet extracted
-**Year:** unknown
-**Source type:** not yet screened
-**Journal/source:** not yet extracted
+**Short title:** Hussain 2023 P47T
+**Authors:** Hussain T, Sanchez K, Crayton J, Saha D, Jeter C, Lu Y, Abba M, Seo R, Noebels JL, Fonken L, Aldaz CM
+**Year:** 2023
+**Source type:** variant-specific mechanistic study (mouse knock-in)
+**Journal/source:** *Progress in Neurobiology* 223:102425
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 36828035 / DOI 10.1016/j.pneurobio.2023.102425
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-09-26
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 53
-**Status:** discovered
-**Primary pathway:** unassigned
-**Genotype/model tag:** unassigned
-**Transferability:** unassigned
-**clinical relevance:** HIGH
-**Claim links:** none
-**Working Model impact:** none yet
+**Status:** integrated
+**Primary pathway:** P6 — neuroinflammation / glia
+**Genotype/model tag:** P47T knock-in (WW1)
+**Transferability:** T3 with genotype caution
+**clinical relevance:** LOW (as `PAPER 007`; the corpus-alignment triage value HIGH is superseded)
+**Claim links:** 006, 007
+**Working Model impact:** `BATCH_20260926_ALDAZ` (WM_v5.1): CLAIM 006 and CLAIM 007 narrowed
 **Report mentions:** corpus alignment
-**Next action:** screening and tier assignment
-**Flags:** corpus placeholder / not yet screened
+**Next action:** none for CLAIM 006/007; remaining sections of the reading's candidate are queued (Purkinje/basket-cell claim, dismissals, reading debt)
+**Flags:** registry records PAPER 007 (canonical) and PAPER 112 (duplicate, append-only)
 **Note:** Title: WWOX P47T partial loss-of-function mutation induces epilepsy, progressive neuroinflammation, and cerebellar degeneration in mice
 
 ---

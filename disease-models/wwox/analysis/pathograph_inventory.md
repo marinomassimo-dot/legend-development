@@ -33,11 +33,11 @@ annotations is reported below whatever it happens to be.
 | Edges carrying a declared relation type | 0 |
 | Nodes carrying a biological scale | 0 |
 | Deep-dive manifests read | 109 |
-| …of which bound to at least one claim | 40 |
+| …of which bound to at least one claim | 41 |
 | Propositions scanned | 2635 |
-| …carrying a relational connective | 623 |
+| …carrying a relational connective | 622 |
 | …locator-backed candidates | 584 |
-| …locator-backed and bound to a claim | 208 |
+| …locator-backed and bound to a claim | 221 |
 
 The scanned population is three declared surfaces and no others: every claim
 `Title`, every row of the working model's BLOCK 2 mirror, and every
@@ -55,8 +55,8 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 | CLAIM 003 | Neuronal WWOX deletion induces non-cell-autonomous hypomyelination | consolidated baseline | DATO | P4 — myelination / white matter | NOT_ANNOTATED | 2 | 1 |
 | CLAIM 004 | AAV9-WWOX neuron-targeted rescue shows multi-domain in vivo improvement | consolidated baseline | DATO | P7 — gene therapy readiness | NOT_ANNOTATED | 4 | 3 |
 | CLAIM 005 | Reduced GABAergic interneurons and glial activation in WWOX-KO | consolidated baseline | DATO | P2 — GABAergic vulnerability; P6 — neuro | NOT_ANNOTATED | 10 | 3 |
-| CLAIM 006 | P47T model shows progressive neuroinflammation | consolidated baseline | DATO + INFERENZA prudente | P6 — neuroinflammation / glia | NOT_ANNOTATED | 0 | 1 |
-| CLAIM 007 | P47T abolishes PPxY binding to WW-domain partners | consolidated baseline | DATO | P3 — MYC/Wnt / interaction logic | NOT_ANNOTATED | 0 | 2 |
+| CLAIM 006 | P47T model shows progressive hippocampal astrogliosis; microglial progression shown for morpholo | consolidated baseline | DATO + INFERENZA prudente | P6 — neuroinflammation / glia | NOT_ANNOTATED | 0 | 1 |
+| CLAIM 007 | P47T abolishes or near-abolishes WWOX recovery by two PPPY peptides in vitro | consolidated baseline | DATO | P3 — MYC/Wnt / interaction logic | NOT_ANNOTATED | 0 | 3 |
 | CLAIM 008 | WOREE and SCAR12 form a genotype-phenotype spectrum | consolidated baseline | DATO | Clinical spectrum / genotype-phenotype | NOT_ANNOTATED | 0 | 3 |
 | CLAIM 009 | WWOX deficiency plausibly alters mitochondrial quality control, redox and energy efficiency | in observation | INFERENZA | P5 — metabolism / mitochondria / redox / | NOT_ANNOTATED | 5 | 9 |
 | CLAIM 010 | Mitophagy may be more relevant than senolytics for WWOX-related mitochondrial dysfunction | background only | IPOTESI | P5 — metabolism / mitochondria / mitopha | NOT_ANNOTATED | 0 | 0 |
@@ -164,7 +164,7 @@ assembler lists the titles and stops there.
 | CLAIM 003 | `induces` | CAUSAL | finite or multiword | Neuronal WWOX deletion induces non-cell-autonomous hypomyelination |
 | CLAIM 004 | `rescue` | CAUSAL | ambiguous bare form | AAV9-WWOX neuron-targeted rescue shows multi-domain in vivo improvement |
 | CLAIM 005 | `reduced` | CAUSAL | ambiguous bare form | Reduced GABAergic interneurons and glial activation in WWOX-KO |
-| CLAIM 007 | `abolishes` | CAUSAL | finite or multiword | P47T abolishes PPxY binding to WW-domain partners |
+| CLAIM 007 | `abolishes` | CAUSAL | finite or multiword | P47T abolishes or near-abolishes WWOX recovery by two PPPY peptides in vitro |
 | CLAIM 009 | `control` | CAUSAL | ambiguous bare form | WWOX deficiency plausibly alters mitochondrial quality control, redox and energy efficienc |
 | CLAIM 011 | `rescue` | CAUSAL | ambiguous bare form | AAV9-hSynI-hWWOX: dose-dependent durable rescue in Wwox-null murine model su domini multip |
 | CLAIM 013 | `associati a` | ASSOCIATIVE | finite or multiword | In WWOX-DEE, genotipi biallelici null/null associati a maggiore rischio di crisi, ipertoni |
@@ -193,7 +193,6 @@ is matched as one string, so an adverb inserted into it — *"contributes
 
 | Node | Relational in | Connective | That wording | The other wording |
 |---|---|---|---|---|
-| CLAIM 006 | mirror row only | `→` | P47T model → progressive neuroinflammation | P47T model shows progressive neuroinflammation |
 | CLAIM 018 | registry title only | `causes` | The exon 6 splice-site variant c.517-2A>G is pathogenic and causes exo | Exon-6 splice disruption is a confirmed pathogenic mechanism in human  |
 | CLAIM 026 | mirror row only | `→` | WWOX as a trafficking–metabolism coupling node (endomembrane → Acetyl- | WWOX may function as a trafficking–metabolism coupling node linking en |
 | CLAIM 029 | mirror row only | `contributes to` | WWOX contributes to ATM-linked DDR competence and genome-stability mai | WWOX contributes directly to DNA-damage-response competence and genome |
@@ -233,6 +232,7 @@ wikilink, so the relation is asserted in text and invisible to the graph.
 
 | Claim | Names | In field |
 |---|---|---|
+| CLAIM 006 | CLAIM 007 | Genotype/model relevance |
 | CLAIM 025 | CLAIM 009 | Clinical meaning |
 
 **Working-model co-mentions.** Two claims named in one sentence of the
@@ -246,8 +246,8 @@ working model with no edge between them in the registry.
 
 | Node | Verdict | Material found in the repository |
 |---|---|---|
-| CLAIM 006 | REVIEW_MATERIAL_PRESENT | SHARED_EVIDENTIAL_PAPER |
-| CLAIM 007 | REVIEW_MATERIAL_PRESENT | LOCATOR_PROPOSITION_BOUND, SELF_RELATIONAL_TITLE, SHARED_EVIDENTIAL_PAPER |
+| CLAIM 006 | ANNOTATION_GAP_CONFIRMED | LOCATOR_PROPOSITION_BOUND, SHARED_EVIDENTIAL_PAPER, UNLINKED_PROSE_MENTION |
+| CLAIM 007 | ANNOTATION_GAP_CONFIRMED | LOCATOR_PROPOSITION_BOUND, SELF_RELATIONAL_TITLE, SHARED_EVIDENTIAL_PAPER, UNLINKED_PROSE_MENTION |
 | CLAIM 008 | REVIEW_MATERIAL_PRESENT | LOCATOR_PROPOSITION_BOUND, SHARED_EVIDENTIAL_PAPER |
 | CLAIM 010 | NO_RELATION_MATERIAL_IN_REPOSITORY | — |
 | CLAIM 012 | NO_RELATION_MATERIAL_IN_REPOSITORY | — |
@@ -302,11 +302,11 @@ each side is a reading, and every record carries `endpoints_resolved: false`.
 |---|---|
 | claim_title | 19 |
 | locator_proposition | 584 |
-| working_model_mirror_title | 20 |
+| working_model_mirror_title | 19 |
 
 | Connective class (lexical) | Candidates |
 |---|---|
-| ARROW | 18 |
+| ARROW | 17 |
 | ASSOCIATIVE | 27 |
 | CAUSAL | 527 |
 | DEPENDENCY | 51 |
@@ -323,7 +323,7 @@ relationship. An `ASSOCIATIVE` connective does not make an edge `ASSOCIATED`.
 | CLAIM 003 | claim_title | `induces` | Neuronal WWOX deletion induces non-cell-autonomous hypomyelination |
 | CLAIM 004 | claim_title | `rescue` | AAV9-WWOX neuron-targeted rescue shows multi-domain in vivo improvement |
 | CLAIM 005 | claim_title | `reduced` | Reduced GABAergic interneurons and glial activation in WWOX-KO |
-| CLAIM 007 | claim_title | `abolishes` | P47T abolishes PPxY binding to WW-domain partners |
+| CLAIM 007 | claim_title | `abolishes` | P47T abolishes or near-abolishes WWOX recovery by two PPPY peptides in vitro |
 | CLAIM 009 | claim_title | `control` | WWOX deficiency plausibly alters mitochondrial quality control, redox and energy efficiency |
 | CLAIM 011 | claim_title | `rescue` | AAV9-hSynI-hWWOX: dose-dependent durable rescue in Wwox-null murine model su domini multipli inclusi ECoG/SWD, mielinizz |
 | CLAIM 013 | claim_title | `associati a` | In WWOX-DEE, genotipi biallelici null/null associati a maggiore rischio di crisi, ipertonia e complicanze respiratorie r |
@@ -331,7 +331,7 @@ relationship. An `ASSOCIATIVE` connective does not make an edge `ASSOCIATED`.
 | CLAIM 016 | claim_title | `contribute to` | GSK3β hyperactivation may contribute to seizure susceptibility in WWOX deficiency |
 | CLAIM 018 | claim_title | `causes` | The exon 6 splice-site variant c.517-2A>G is pathogenic and causes exon 6 skipping in humans |
 
-Showing 12 of 247 bound candidates; the
+Showing 12 of 259 bound candidates; the
 complete set, with evidence and provenance, is in the export. The worklist
 in cost order — what needs an annotation, what needs a type, what needs a
 decomposition, what needs a reading — is printed by:
@@ -348,6 +348,6 @@ carried no connective from the lexicon.
 ## Provenance
 
 Derived from 112 input files; digest
-`075b93be427226cc`. Sources: the claim, paper and
+`113ed1a97be9782a`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 

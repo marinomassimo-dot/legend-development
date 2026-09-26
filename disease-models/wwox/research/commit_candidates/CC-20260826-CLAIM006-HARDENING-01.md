@@ -277,3 +277,12 @@ done
 🔴 **Locator audit REQUIRED.** The finding rests on the presence and absence of within-genotype
 brackets in ten panels. It has now been read twice, independently, with agreement — that is
 corroboration, not verification: **both reads used the same rasters and the same reader class.**
+
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260926_ALDAZ` (2026-09-26, ACTOR_ID `plan`), append-only
+
+**Status:** **PROPAGATED IN PART** — `BATCH_20260926_ALDAZ`.
+
+Propagated, with the audited wording in place of the drafted one: `CLAIM 006` title, summary and the method boundaries of §2 (pseudoreplication at n = 3 mice, two time points, no multiplicity correction, no declared blinding); the working-model mirror; Δ-B (`therapy_levers.md` §B2); Δ-A and Δ-C as **append-only notes** on `DL-MECH-012`, `DL-BIO-085` and its downstream `DL-REPO-002` (the ledger is append-only, so the entries are annotated, not rewritten); `RL-NEUROINF-001`. **Still owed:** the corpus-callosum Olig2⁺ and cerebellar Purkinje/basket-cell content its proposed summary adds. It was not in the audited text, and it belongs with the new cerebellar claim `CC-20260913-36828035-01` §4 asks for, not inside a hippocampal glia claim. The candidate stays queued for that.

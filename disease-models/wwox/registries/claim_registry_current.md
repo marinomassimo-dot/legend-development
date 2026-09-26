@@ -118,34 +118,38 @@ Canonical audit trail of numbered claims relevant to the Working Model.
 ---
 
 ## CLAIM 006
-**Title:** P47T model shows progressive neuroinflammation
+**Title:** P47T model shows progressive hippocampal astrogliosis; microglial progression shown for morphology only
 **Status:** consolidated baseline
 **Type:** DATO + INFERENZA prudente
 **Pathway:** P6 — neuroinflammation / glia
-**Genotype/model relevance:** murino / variante P47T specifica; genotipo caution OBBLIGATORIA: P47T ≠ Q230P — non trasferire automaticamente al genotipo di riferimento; P47T abolisce binding PPxY in WW1, meccanismo diverso da Q230P/SDR
+**Genotype/model relevance:** murino / variante P47T specifica; genotipo caution OBBLIGATORIA: P47T ≠ Q230P — non trasferire automaticamente al genotipo di riferimento. Il residuo P47 si trova nel primo dominio WW (Hussain 2023 §2.1, che rimanda a Mallaret 2014 per la perdita di binding PPxY); nel pull-down in vitro di questa fonte il recupero di WWOX da due peptidi PPPY è riportato come assente dagli autori e quasi assente alla lettura della figura (vedi `CLAIM 007`). Il confronto con Q230P/SDR è del modello LEGEND, esterno a questa fonte.
 **Transferability:** T3 with genotype caution
 **clinical relevance:** LOW
-**Summary:** P47T murine model shows progressive microgliosis and astrogliosis.
+**Summary:** In the hippocampus of Wwox^P47T/P47T mice (subfields CA1, CA3 and DG, at 80 and 250 days), Gfap⁺ astrocyte number and area fraction are higher than in wild type and rise further with age, and the 80-versus-250-day comparison within the mutant is reported as significant (Fig. 4b–c; Results 2.5). Microglial morphology — branches, junctions and total branch length — declines further with age, with a significant within-mutant 80-versus-250-day comparison in each measure (Fig. 3e–g). Iba1⁺ microglial number and area fraction carry a wild-type-versus-mutant comparison at each age, but no 80-versus-250-day comparison is drawn or reported for them (Fig. 3b–c): progression of microglial abundance is untested, not shown to be absent. The paper titles Figure 3 "progressive microgliosis".
 **Clinical meaning:** Supports glia as possible modifier, but cannot be directly transferred to Q230P.
+**Evidence boundary:** Per the Figure 3b–c and Figure 4b–c captions, each data point is the quantitation of a single hippocampal subfield from n = 3 mice per group; in Figure 3e–g each point is one microglial cell from the same three mice. Comparisons are by unpaired Student's t-test (Fig. 3: *p < 0.005; Fig. 4: *p < 0.01); Methods 4.13 states that all three subfields were analysed per mouse with n = 3 mice per group. Subfields or cells, not animals, are the unit of the test, so the brackets are pseudoreplicated. With only two time points (80 and 250 days) the data license a direction and not a rate (inference, not stated in the paper). Methods 4.16 sets significance at p < 0.05 (two-tailed t-tests, Mann-Whitney, one- or two-way ANOVA with Tukey post-hoc); no correction for multiple comparisons and no power analysis is declared for these endpoints (the only false-discovery-rate thresholds declared are for the RNA-seq differential expression), and no blinding or randomisation is declared for the imaging and quantification.
 **Source:** Hussain et al., 2023
 **Wikilinks:** [[paper_registry_current#PAPER 007]]
-**Impact on Working Model:** surveillance only, genotype caution mandatory
+**Impact on Working Model:** surveillance only, genotype caution mandatory; the microglial-abundance arm is an untested comparison, not a demonstrated null
+**Narrowing record (BATCH_20260926_ALDAZ, 2026-09-26):** `consolidated baseline` kept. The text above replaces the pre-reading wording and is the one that passed a blind locator audit (R4) in three rounds over the complete reading `FTR-20260913-36828035-03`; no proposition left in it is OVERSHOOT, UNDERSHOOT or NOT_IN_SOURCE. Previous wording — Title: *P47T model shows progressive neuroinflammation*; Summary: *P47T murine model shows progressive microgliosis and astrogliosis.* The microglial-abundance arm is recorded as an untested comparison, not as a demonstrated null: the backlog candidates that proposed it as "not progressive" read a missing bracket as a tested absence.
 
 ---
 
 ## CLAIM 007
-**Title:** P47T abolishes PPxY binding to WW-domain partners
+**Title:** P47T abolishes or near-abolishes WWOX recovery by two PPPY peptides in vitro
 **Status:** consolidated baseline
 **Type:** DATO
 **Pathway:** P3 — MYC/Wnt / interaction logic
 **Genotype/model relevance:** studio funzionale su variante P47T specifica (WW1 domain); genotipo caution OBBLIGATORIA: Q230P è nel dominio SDR, non WW1 — meccanismo di interazione diverso; questo claim serve principalmente come àncora della regola P47T ≠ Q230P
 **Transferability:** T3 with genotype caution
 **clinical relevance:** LOW
-**Summary:** P47T alters WWOX WW-domain binding behavior.
+**Summary:** In an in vitro pull-down from cerebellar lysates (n = 2 per genotype), biotinylated PPPY peptides from Dvl2 (HPYSPQPPPYHELSSY) and Wbp1 (SGSGGTPPPPYTVG) recover WWOX strongly from wild-type lysate; the authors report that mutant Wwox "failed to interact" with both peptides (Results 2.1). On inspection of Fig. 1a one faint but lane-discrete band remains at the Wwox position in the first mutant Dvl2 lane; the second mutant Dvl2 lane is at background, and the two mutant Wbp1 lanes lie within a faint haze at the same migration position that is equally dark in the space between the lanes, so it cannot be attributed to the lanes (attested figure reading, not quantified by the authors). Wwox transcript shows no significant difference between genotypes: in cerebellum by qRT-PCR (n = 6 per group; Results 2.1, Supplementary Fig. S2a) and by RNA-seq FPKM in cerebellum, cortex, prefrontal cortex and hippocampus (n = 5 per group; Results 2.8 and 2.9, Supplementary Fig. S9). For protein, the authors report "similar levels" of Wwox from the 10% input lane of the same pull-down (Results 2.1); on inspection of that panel a Wwox band is present in all four lanes (attested figure reading); the lane is n = 2 per genotype and is not quantified anywhere in the paper, so protein abundance is neither shown unchanged nor shown reduced.
 **Clinical meaning:** Reinforces rule that Q230P and P47T are not interchangeable.
+**Evidence boundary:** The Figure 1 legend is titled "p.Pro47Thr mutation is sufficient to abrogate Wwox affinity for PPxY motifs"; that title states more than the panel measures. What was measured is recovery of WWOX by two PPPY peptides from one tissue at n = 2, which is neither the PPxY motif class nor binding to full-length partners. Whether the loss is complete (the authors' text) or near-complete (the attested reading of one residual lane-discrete band) rests on an unquantified figure and is not resolved here. The binding assay is in cerebellum only; the transcript data cover four regions, the binding data one.
 **Source:** Hussain et al., 2023
 **Wikilinks:** [[paper_registry_current#PAPER 007]]
 **Impact on Working Model:** genotype caution logic
+**Narrowing record (BATCH_20260926_ALDAZ, 2026-09-26):** `consolidated baseline` kept. The text above replaces the pre-reading wording and is the one that passed a blind locator audit (R4) in three rounds over the complete reading `FTR-20260913-36828035-03`; no proposition left in it is OVERSHOOT, UNDERSHOOT or NOT_IN_SOURCE. Previous wording — Title: *P47T abolishes PPxY binding to WW-domain partners*; Summary: *P47T alters WWOX WW-domain binding behavior.* "Abolishes" and "WW-domain partners" generalised beyond two PPPY oligopeptides in one tissue at n = 2.
 
 ---
 
