@@ -145,6 +145,8 @@ Run everything as `python3 <path> --help` first. Paths are repo-relative.
 | push a ref only when the gate PASSes on the EXACT commit being pushed | `framework/scripts/safe_push.py` |
 | wait for a job to finish — by PID, `PID:START`, pid file or completion file, **never by name**, and always with a `--timeout` | `framework/scripts/process_wait.py` |
 | refuse to derive a surface whose inputs are uncommitted, or state why it is safe | `framework/scripts/derived_inputs.py` |
+| are the committed generated surfaces fresh on the EXACT tree about to land — a merge result, HEAD + index, or HEAD + named files — running only the checks whose inputs it changes (`task_close.py` and `legend_commit.sh` call it) | `framework/scripts/candidate_tree_freshness.py` |
+| a temporary directory stamped with its owner's `PID:START`, and the reaping of a dead owner's box and of the worktrees registered inside it | `framework/scripts/owned_scratch.py` |
 | when the shared checkout moved, and when it deliberately did not | `framework/scripts/sync_epochs.py` |
 | classify, hand off, resume or sync a laboratory across hosts | `framework/scripts/legend_handoff.py` |
 | what harness work is due at session start | `framework/scripts/harness_session_start.py` |

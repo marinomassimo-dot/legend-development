@@ -265,6 +265,15 @@ directory BATCH_COMMIT never modifies, so a stale one misleads nobody who reads 
 listing digest — while aborting a propagation because a gitignored directory is absent would
 be a gate over something the batch did not touch and cannot fix.
 
+**Outside a batch commit, the landing path checks what this phase regenerates.** Direct
+landings — a receipt recording, an operator-authorized propagation, an analysis commit
+touching the full-text queue — change these surfaces' inputs without passing through this
+phase, and that is how four of them went stale together (H0, 2026-09-24). `task_close.py` and
+`scripts/legend_commit.sh` therefore run `framework/scripts/candidate_tree_freshness.py` on
+the exact tree they are about to land and refuse a STALE surface, naming the command above
+that regenerates it. A new generated surface needs a declaration there too (its inputs and its
+check); until it has one, every landing reports it as CHECK_ERROR.
+
 **Derived surfaces that are computed on demand need nothing here.** `trace_claim_foundation`
 and `build_evidence_index` write no file and are rebuilt from the registries on every call,
 which is why they were designed that way: a derived artifact that is never stored cannot go

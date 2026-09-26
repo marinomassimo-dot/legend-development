@@ -390,7 +390,14 @@ Nothing was lost, and that is luck rather than design. The binding rules:
    the same commit and safely deletes the branch. `--remove-worktree` also removes the
    clean worktree when its chat is closed. A failed merge preserves the task branch.
    There is no integrating session and no monopoly on merging; nothing stays unmerged at
-   rest. Rule and recipe: [`LEGEND_CORE.md` §21e](../instruction/LEGEND_CORE.md#21e-agile-operating-mode)
+   rest. Before touching `main`, `task_close.py` verifies the committed generated surfaces on
+   the **exact merge result** (`framework/scripts/candidate_tree_freshness.py`, only the checks
+   whose inputs the landing changes) and refuses a STALE one with its regeneration command;
+   `scripts/legend_commit.sh` does the same on HEAD + the files it names. The override is a
+   stated reason (`--stale-surfaces-because` / `LEGEND_STALE_SURFACES_BECAUSE`), which is
+   printed and, for a commit, recorded in its message. Why: H0, 2026-09-24
+   ([design record](../../governance/design_records/h0_generated_surface_drift_20260924.md)).
+   Rule and recipe: [`LEGEND_CORE.md` §21e](../instruction/LEGEND_CORE.md#21e-agile-operating-mode)
    (operator decision 2026-09-05, `DEC-20260905-AGILE-HARNESS-MODE`), which replaced the
    earlier "only the integrating session merges to `main`".
 3. **Never commit, revert or stage a file another actor is holding** unless that actor has

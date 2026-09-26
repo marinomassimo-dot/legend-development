@@ -44,6 +44,16 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 import public_release_gate as GATE  # noqa: E402
 from public_release_gate import tracked_documents, walk_publishable  # noqa: E402
+sys.path.insert(0, str(ROOT / "framework" / "scripts"))
+import owned_scratch  # noqa: E402
+
+# The disposable checkouts below are REAL registered worktrees of this repository. Until
+# 2026-09-26 they lived in anonymous `mkdtemp()` boxes: a run killed mid-test (a shell timeout
+# around the battery) skipped `addCleanup`, and two of them — each holding a test's planted
+# edit — stayed registered under /tmp for up to twelve days with nothing saying whose they
+# were. The box now carries its owner's PID:START, and every run first reaps the boxes whose
+# owner is gone (owned_scratch.py).
+BOX_PREFIX = "legend-surface-determinism-"
 
 GUARD = ROOT / "scripts/test_documented_commands.py"
 
@@ -71,18 +81,19 @@ def run_guard(cwd: Path) -> int:
 class TheCheckoutUnderTest(unittest.TestCase):
     """A disposable checkout of the current tree, so the real one is never mutated."""
 
+    @classmethod
+    def setUpClass(cls):
+        owned_scratch.reap(BOX_PREFIX, ROOT)
+
     def setUp(self):
-        self.box = Path(tempfile.mkdtemp())
+        self.box = owned_scratch.make(BOX_PREFIX)
         self.addCleanup(self._cleanup)
         self.tree = self.box / "tree"
         subprocess.run(["git", "-C", str(ROOT), "worktree", "add", "-q", "--detach",
                         str(self.tree), "HEAD"], check=True, capture_output=True)
 
     def _cleanup(self):
-        subprocess.run(["git", "-C", str(ROOT), "worktree", "remove", "--force", str(self.tree)],
-                       capture_output=True)
-        subprocess.run(["git", "-C", str(ROOT), "worktree", "prune"], capture_output=True)
-        shutil.rmtree(self.box, ignore_errors=True)
+        owned_scratch.release(self.box, ROOT)
 
 
 class ThePopulationIgnoresIncidentalLocalState(TheCheckoutUnderTest):

@@ -62,10 +62,15 @@ def markdown_files(root: Path = ROOT) -> list[Path]:
     return sorted(found)
 
 
-def generated_surfaces() -> dict[Path, set[str]]:
-    """Committed Markdown that declares itself generated, mapped to its generator scripts."""
+def generated_surfaces(root: Path = ROOT) -> dict[Path, set[str]]:
+    """Committed Markdown that declares itself generated, mapped to its generator scripts.
+
+    ``root`` is the tree to discover in. `candidate_tree_freshness.py` passes the materialized
+    candidate tree, so the landing check and this suite share ONE discovery: a surface this
+    suite would demand in Phase 4.7 is a surface the landing check verifies.
+    """
     found: dict[Path, set[str]] = {}
-    for path in markdown_files():
+    for path in markdown_files(root):
         head = "\n".join(path.read_text(encoding="utf-8", errors="replace").splitlines()[:15])
         if not MARKER.search(head):
             continue

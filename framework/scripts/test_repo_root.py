@@ -209,18 +209,15 @@ class TheProbeSeesDivergenceAndAgreement(unittest.TestCase):
         machine. A detached worktree of HEAD plus one appended lease block is the same
         divergence, reproducible on any clone.
         """
-        box = Path(tempfile.mkdtemp())
+        # An owned box (owned_scratch.py): a run killed before addCleanup leaves a worktree
+        # registered on this repository, and the next run reaps it once its owner is gone.
+        import owned_scratch
+        owned_scratch.reap("legend-repo-root-peer-", ROOT)
+        box = owned_scratch.make("legend-repo-root-peer-")
         peer = box / "peer"
+        self.addCleanup(owned_scratch.release, box, ROOT)
         subprocess.run(["git", "-C", str(ROOT), "worktree", "add", "-q", "--detach",
                         str(peer), "HEAD"], check=True, capture_output=True)
-
-        def cleanup():
-            subprocess.run(["git", "-C", str(ROOT), "worktree", "remove", "--force", str(peer)],
-                           capture_output=True)
-            subprocess.run(["git", "-C", str(ROOT), "worktree", "prune"], capture_output=True)
-            shutil.rmtree(box, ignore_errors=True)
-
-        self.addCleanup(cleanup)
         lease = peer / LEASE
         if not lease.is_file():
             self.skipTest(f"{LEASE} is not tracked at HEAD, so no lease lineage can diverge")

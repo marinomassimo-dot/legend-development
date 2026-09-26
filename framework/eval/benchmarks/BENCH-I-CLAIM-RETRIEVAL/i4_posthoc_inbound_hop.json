@@ -1,0 +1,351 @@
+{
+ "_schema": "LEGEND Benchmark I \u00b7 I4 post-hoc inbound hop v1",
+ "fixtures_sha256": "34636381b06c6325bfb5c0e14ea3dd3acfe654502bb55aff50e4ae6c883a9b4f",
+ "tool_sha256": {
+  "registry_records.py": "a2e23927e37957ff0d4ec732526ad391d820b9a843ea1a01649d681cce6b235a",
+  "claim_retrieval_bench.py": "aad921f7422aad296f862e67053c2011c3c90dde30f2e816f30acb4748189f6c"
+ },
+ "strong_targets": 29,
+ "current_retrieved": 17,
+ "inbound1_retrieved": 18,
+ "fixtures_full_current": 11,
+ "fixtures_full_inbound1": 12,
+ "median_frac_current": 0.0358,
+ "median_frac_inbound1": 0.0811,
+ "max_frac_inbound1": 0.4516,
+ "median_candidates_inbound1": 3.0,
+ "rows": [
+  {
+   "fixture": "I01",
+   "targets": [
+    "CLAIM 005"
+   ],
+   "current_hit": [],
+   "inbound1_hit": [],
+   "current_n": 0,
+   "inbound1_n": 0,
+   "current_frac": 0.0,
+   "inbound1_frac": 0.0
+  },
+  {
+   "fixture": "I02",
+   "targets": [
+    "CLAIM 005"
+   ],
+   "current_hit": [],
+   "inbound1_hit": [],
+   "current_n": 0,
+   "inbound1_n": 0,
+   "current_frac": 0.0,
+   "inbound1_frac": 0.0
+  },
+  {
+   "fixture": "I03",
+   "targets": [
+    "CLAIM 014",
+    "CLAIM 015"
+   ],
+   "current_hit": [
+    "CLAIM 014",
+    "CLAIM 015"
+   ],
+   "inbound1_hit": [
+    "CLAIM 014",
+    "CLAIM 015"
+   ],
+   "current_n": 5,
+   "inbound1_n": 10,
+   "current_frac": 0.1991,
+   "inbound1_frac": 0.4064
+  },
+  {
+   "fixture": "I04",
+   "targets": [
+    "CLAIM 004"
+   ],
+   "current_hit": [
+    "CLAIM 004"
+   ],
+   "inbound1_hit": [
+    "CLAIM 004"
+   ],
+   "current_n": 2,
+   "inbound1_n": 3,
+   "current_frac": 0.0443,
+   "inbound1_frac": 0.0739
+  },
+  {
+   "fixture": "I05",
+   "targets": [
+    "CLAIM 009"
+   ],
+   "current_hit": [],
+   "inbound1_hit": [],
+   "current_n": 0,
+   "inbound1_n": 0,
+   "current_frac": 0.0,
+   "inbound1_frac": 0.0
+  },
+  {
+   "fixture": "I06",
+   "targets": [
+    "CLAIM 003",
+    "CLAIM 004"
+   ],
+   "current_hit": [
+    "CLAIM 004"
+   ],
+   "inbound1_hit": [
+    "CLAIM 004"
+   ],
+   "current_n": 2,
+   "inbound1_n": 3,
+   "current_frac": 0.0698,
+   "inbound1_frac": 0.0983
+  },
+  {
+   "fixture": "I07",
+   "targets": [
+    "CLAIM 016"
+   ],
+   "current_hit": [
+    "CLAIM 016"
+   ],
+   "inbound1_hit": [
+    "CLAIM 016"
+   ],
+   "current_n": 5,
+   "inbound1_n": 14,
+   "current_frac": 0.1427,
+   "inbound1_frac": 0.4516
+  },
+  {
+   "fixture": "I09",
+   "targets": [
+    "CLAIM 009",
+    "CLAIM 034"
+   ],
+   "current_hit": [],
+   "inbound1_hit": [],
+   "current_n": 0,
+   "inbound1_n": 0,
+   "current_frac": 0.0,
+   "inbound1_frac": 0.0
+  },
+  {
+   "fixture": "I10",
+   "targets": [
+    "CLAIM 032"
+   ],
+   "current_hit": [
+    "CLAIM 032"
+   ],
+   "inbound1_hit": [
+    "CLAIM 032"
+   ],
+   "current_n": 1,
+   "inbound1_n": 3,
+   "current_frac": 0.0381,
+   "inbound1_frac": 0.1241
+  },
+  {
+   "fixture": "I11",
+   "targets": [
+    "CLAIM 032",
+    "CLAIM 036"
+   ],
+   "current_hit": [
+    "CLAIM 032",
+    "CLAIM 036"
+   ],
+   "inbound1_hit": [
+    "CLAIM 032",
+    "CLAIM 036"
+   ],
+   "current_n": 4,
+   "inbound1_n": 10,
+   "current_frac": 0.1396,
+   "inbound1_frac": 0.3587
+  },
+  {
+   "fixture": "I12",
+   "targets": [
+    "CLAIM 036"
+   ],
+   "current_hit": [
+    "CLAIM 036"
+   ],
+   "inbound1_hit": [
+    "CLAIM 036"
+   ],
+   "current_n": 1,
+   "inbound1_n": 2,
+   "current_frac": 0.0333,
+   "inbound1_frac": 0.0692
+  },
+  {
+   "fixture": "I13",
+   "targets": [
+    "CLAIM 036"
+   ],
+   "current_hit": [
+    "CLAIM 036"
+   ],
+   "inbound1_hit": [
+    "CLAIM 036"
+   ],
+   "current_n": 1,
+   "inbound1_n": 2,
+   "current_frac": 0.0333,
+   "inbound1_frac": 0.0692
+  },
+  {
+   "fixture": "I14",
+   "targets": [
+    "CLAIM 011"
+   ],
+   "current_hit": [
+    "CLAIM 011"
+   ],
+   "inbound1_hit": [
+    "CLAIM 011"
+   ],
+   "current_n": 3,
+   "inbound1_n": 7,
+   "current_frac": 0.0982,
+   "inbound1_frac": 0.254
+  },
+  {
+   "fixture": "I16",
+   "targets": [
+    "CLAIM 017",
+    "CLAIM 019",
+    "CLAIM 030",
+    "CLAIM 033"
+   ],
+   "current_hit": [
+    "CLAIM 019",
+    "CLAIM 030",
+    "CLAIM 033"
+   ],
+   "inbound1_hit": [
+    "CLAIM 017",
+    "CLAIM 019",
+    "CLAIM 030",
+    "CLAIM 033"
+   ],
+   "current_n": 5,
+   "inbound1_n": 9,
+   "current_frac": 0.1738,
+   "inbound1_frac": 0.2844
+  },
+  {
+   "fixture": "I17",
+   "targets": [
+    "CLAIM 023"
+   ],
+   "current_hit": [],
+   "inbound1_hit": [],
+   "current_n": 0,
+   "inbound1_n": 0,
+   "current_frac": 0.0,
+   "inbound1_frac": 0.0
+  },
+  {
+   "fixture": "I18",
+   "targets": [
+    "CLAIM 023"
+   ],
+   "current_hit": [
+    "CLAIM 023"
+   ],
+   "inbound1_hit": [
+    "CLAIM 023"
+   ],
+   "current_n": 2,
+   "inbound1_n": 5,
+   "current_frac": 0.0683,
+   "inbound1_frac": 0.19
+  },
+  {
+   "fixture": "I19",
+   "targets": [
+    "CLAIM 025"
+   ],
+   "current_hit": [
+    "CLAIM 025"
+   ],
+   "inbound1_hit": [
+    "CLAIM 025"
+   ],
+   "current_n": 2,
+   "inbound1_n": 3,
+   "current_frac": 0.0597,
+   "inbound1_frac": 0.0883
+  },
+  {
+   "fixture": "I20",
+   "targets": [
+    "CLAIM 029"
+   ],
+   "current_hit": [
+    "CLAIM 029"
+   ],
+   "inbound1_hit": [
+    "CLAIM 029"
+   ],
+   "current_n": 1,
+   "inbound1_n": 1,
+   "current_frac": 0.0202,
+   "inbound1_frac": 0.0202
+  },
+  {
+   "fixture": "I21",
+   "targets": [
+    "CLAIM 030"
+   ],
+   "current_hit": [],
+   "inbound1_hit": [],
+   "current_n": 0,
+   "inbound1_n": 1,
+   "current_frac": 0.0,
+   "inbound1_frac": 0.0178
+  },
+  {
+   "fixture": "I22",
+   "targets": [
+    "CLAIM 036"
+   ],
+   "current_hit": [],
+   "inbound1_hit": [],
+   "current_n": 1,
+   "inbound1_n": 4,
+   "current_frac": 0.0533,
+   "inbound1_frac": 0.175
+  },
+  {
+   "fixture": "I23",
+   "targets": [
+    "CLAIM 036"
+   ],
+   "current_hit": [],
+   "inbound1_hit": [],
+   "current_n": 0,
+   "inbound1_n": 0,
+   "current_frac": 0.0,
+   "inbound1_frac": 0.0
+  },
+  {
+   "fixture": "I24",
+   "targets": [
+    "CLAIM 039"
+   ],
+   "current_hit": [],
+   "inbound1_hit": [],
+   "current_n": 2,
+   "inbound1_n": 5,
+   "current_frac": 0.0334,
+   "inbound1_frac": 0.132
+  }
+ ]
+}
