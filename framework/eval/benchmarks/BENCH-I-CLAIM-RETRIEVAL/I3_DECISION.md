@@ -123,3 +123,13 @@ Cause: CLAIM 009 and CLAIM 034 cite it as `[[paper_registry_current#PAPER 071]]`
 they are I09's two STRONG targets, reached on today's registries because PAPER 071 now exists
 (at the event's parent the paper was only `CORPUS P358`). The added bytes are their own text plus
 the one outward hop from them (PAPER 054, 002, 023, 017, 061, CLAIM 028, DIS-008). Nothing is capped.
+
+## I4 · one inbound hop beyond K1 (2026-09-26) — closed, NOT PURSUED
+
+Post-hoc, frozen fixtures, registries at each event's parent: CURRENT plus every claim that
+wikilinks to **any** record CURRENT returned
+([`i4_posthoc_inbound_hop.py`](i4_posthoc_inbound_hop.py) → [`i4_posthoc_inbound_hop.json`](i4_posthoc_inbound_hop.json)).
+STRONG: **18 / 29** (CURRENT after K1: 17 / 29), 12 / 22 fixtures fully retrieved, median
+claim-byte fraction 3.6 % → **8.1 %**. Seven fixtures return no claim by any link route: the
+claim did not yet cite the paper, which is what the event added. The decision above stands;
+[design record](../../../../governance/design_records/g1_i4_residual_decisions_20260926.md) § B.
