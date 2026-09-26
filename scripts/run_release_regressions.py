@@ -61,6 +61,10 @@ PRIORITY_TESTS = (
     "scripts/test_legend_commit.py",
     "launch/test_legend_launch.py",
     "framework/scripts/test_legend_lint.py",
+    # The LIT Status validator LINT calls: vocabulary parsed from the log's own table, the
+    # grandfather snapshot by identity AND exact value, and a migration that writes nothing
+    # without --write. Enrolled in the commit that activates the check on main.
+    "framework/scripts/test_lit_status.py",
     "framework/scripts/test_batch_commit.py",
     "framework/scripts/test_generate_semantic_graph.py",
     "framework/scripts/test_coverage_report.py",
