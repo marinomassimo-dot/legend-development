@@ -113,10 +113,12 @@ def claim_links_from_paper(block: str) -> list[str]:
 LEGACY_TRIAGE_CODE = re.compile(
     r"\bP6\s*[—-]\s*DDR\b|\bP8\s*[—-]\s*bone\b|\bP9\s*[—-]\s*immune\b", re.I
 )
+PATHWAY_CODE_RANGE = re.compile(r"\bP[1-7]\s*[–—-]\s*P[1-7]\b")
 
 
 def pathway_matches(text: str) -> list[str]:
-    return sorted(set(re.findall(r"\bP[1-7]\b", LEGACY_TRIAGE_CODE.sub("", text))))
+    labels = LEGACY_TRIAGE_CODE.sub("", text)
+    return sorted(set(re.findall(r"\bP[1-7]\b", PATHWAY_CODE_RANGE.sub("", labels))))
 
 
 def concept_matches(text: str) -> list[str]:
