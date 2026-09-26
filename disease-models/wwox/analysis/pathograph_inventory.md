@@ -32,12 +32,12 @@ annotations is reported below whatever it happens to be.
 | …undirected edges they collapse into | 31 |
 | Edges carrying a declared relation type | 0 |
 | Nodes carrying a biological scale | 0 |
-| Deep-dive manifests read | 81 |
-| …of which bound to at least one claim | 37 |
-| Propositions scanned | 1538 |
-| …carrying a relational connective | 426 |
-| …locator-backed candidates | 387 |
-| …locator-backed and bound to a claim | 189 |
+| Deep-dive manifests read | 109 |
+| …of which bound to at least one claim | 40 |
+| Propositions scanned | 2635 |
+| …carrying a relational connective | 623 |
+| …locator-backed candidates | 584 |
+| …locator-backed and bound to a claim | 208 |
 
 The scanned population is three declared surfaces and no others: every claim
 `Title`, every row of the working model's BLOCK 2 mirror, and every
@@ -247,7 +247,7 @@ working model with no edge between them in the registry.
 | Node | Verdict | Material found in the repository |
 |---|---|---|
 | CLAIM 006 | REVIEW_MATERIAL_PRESENT | SHARED_EVIDENTIAL_PAPER |
-| CLAIM 007 | REVIEW_MATERIAL_PRESENT | SELF_RELATIONAL_TITLE, SHARED_EVIDENTIAL_PAPER |
+| CLAIM 007 | REVIEW_MATERIAL_PRESENT | LOCATOR_PROPOSITION_BOUND, SELF_RELATIONAL_TITLE, SHARED_EVIDENTIAL_PAPER |
 | CLAIM 008 | REVIEW_MATERIAL_PRESENT | LOCATOR_PROPOSITION_BOUND, SHARED_EVIDENTIAL_PAPER |
 | CLAIM 010 | NO_RELATION_MATERIAL_IN_REPOSITORY | — |
 | CLAIM 012 | NO_RELATION_MATERIAL_IN_REPOSITORY | — |
@@ -260,7 +260,7 @@ working model with no edge between them in the registry.
 | CLAIM 023 | REVIEW_MATERIAL_PRESENT | LOCATOR_PROPOSITION_BOUND, SELF_RELATIONAL_TITLE |
 | CLAIM 024 | REVIEW_MATERIAL_PRESENT | LOCATOR_PROPOSITION_BOUND, SELF_RELATIONAL_TITLE, SHARED_EVIDENTIAL_PAPER |
 | CLAIM 025 | ANNOTATION_GAP_CONFIRMED | LOCATOR_PROPOSITION_BOUND, UNLINKED_PROSE_MENTION, WORKING_MODEL_COMENTION |
-| CLAIM 026 | ANNOTATION_GAP_CONFIRMED | WORKING_MODEL_COMENTION |
+| CLAIM 026 | ANNOTATION_GAP_CONFIRMED | LOCATOR_PROPOSITION_BOUND, WORKING_MODEL_COMENTION |
 | CLAIM 027 | NO_RELATION_MATERIAL_IN_REPOSITORY | — |
 | CLAIM 029 | REVIEW_MATERIAL_PRESENT | LOCATOR_PROPOSITION_BOUND |
 
@@ -301,15 +301,15 @@ each side is a reading, and every record carries `endpoints_resolved: false`.
 | Source | Candidates |
 |---|---|
 | claim_title | 19 |
-| locator_proposition | 387 |
+| locator_proposition | 584 |
 | working_model_mirror_title | 20 |
 
 | Connective class (lexical) | Candidates |
 |---|---|
-| ARROW | 17 |
-| ASSOCIATIVE | 17 |
-| CAUSAL | 350 |
-| DEPENDENCY | 42 |
+| ARROW | 18 |
+| ASSOCIATIVE | 27 |
+| CAUSAL | 527 |
+| DEPENDENCY | 51 |
 
 A connective class is a property of the word, not a verdict about the
 relationship. An `ASSOCIATIVE` connective does not make an edge `ASSOCIATED`.
@@ -331,7 +331,7 @@ relationship. An `ASSOCIATIVE` connective does not make an edge `ASSOCIATED`.
 | CLAIM 016 | claim_title | `contribute to` | GSK3β hyperactivation may contribute to seizure susceptibility in WWOX deficiency |
 | CLAIM 018 | claim_title | `causes` | The exon 6 splice-site variant c.517-2A>G is pathogenic and causes exon 6 skipping in humans |
 
-Showing 12 of 228 bound candidates; the
+Showing 12 of 247 bound candidates; the
 complete set, with evidence and provenance, is in the export. The worklist
 in cost order — what needs an annotation, what needs a type, what needs a
 decomposition, what needs a reading — is printed by:
@@ -347,7 +347,7 @@ carried no connective from the lexicon.
 
 ## Provenance
 
-Derived from 84 input files; digest
-`b8c6ce91bd66818b`. Sources: the claim, paper and
+Derived from 112 input files; digest
+`214dd34fedce0d7d`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 
