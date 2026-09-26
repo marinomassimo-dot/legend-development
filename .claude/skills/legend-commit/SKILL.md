@@ -17,7 +17,7 @@ Paths are relative to the repo root. Authoritative procedure: `framework/protoco
 1. Inventory the commit candidates from the commit-candidate queue.
 2. Conflict detection (duplicate or conflicting claims/papers).
 3. Backup: snapshot the workspace (`backup/snap_<timestamp>`) via `framework/scripts/batch_commit.py`.
-4. Lossless propagation into the 4 current files (full rewrite, unchanged sections copied verbatim).
+4. Lossless propagation into the 4 current files, as `prompt_batch_commit.md` § 4.0 splits it: **record-scoped** for `working_model_current`, `claim_registry_current` and `literature_tracking_log_current` — one atomic operation list per file through `framework/scripts/batch_commit.py propagate --file <file> --ops <ops.json>` (dry run, then `--apply`; a refusal writes nothing) — and **full rewrite, unchanged sections copied verbatim** for `paper_registry_current` (Benchmark J, `J3_DECISION.md`: PARTIALLY_SUPPORTED).
 5. Post-lint: re-run `legend_lint.py .` → if `BLOCK_*` (exit ≠ 0), `restore` from the snapshot and ABORT.
 6. Update `framework/state/state_manifest_current.md` (WM version, last batch id); the batch's `batch_<ID>_scope` goes at the top of `framework/state/state_history.md` § 4.
 7. Cleanup + mark the candidates as committed (append-only).

@@ -64,6 +64,66 @@ class SnapshotTests(unittest.TestCase):
         self.assertEqual(2, context.exception.code)
 
 
+class RecordScopedPropagation(unittest.TestCase):
+    """``propagate`` — Phase 4 for the files Benchmark J supported, refused for the others."""
+
+    CLAIMS = "disease-models/wwox/registries/claim_registry_current.md"
+    TEXT = ("# Claim Registry Current\n\n## CLAIM 001\n**Status:** in observation\n\n---\n\n"
+            "## CLAIM 002\n**Status:** in observation\n")
+
+    def _repo(self, temporary: str, rel: str) -> Path:
+        path = Path(temporary) / rel
+        path.parent.mkdir(parents=True)
+        path.write_bytes(self.TEXT.encode())
+        return path
+
+    def _ops(self, temporary: str, ops: list) -> str:
+        import json
+        path = Path(temporary) / "ops.json"
+        path.write_text(json.dumps(ops), encoding="utf-8")
+        return str(path)
+
+    def test_supported_file_dry_run_then_apply(self) -> None:
+        from batch_commit import propagate
+        with tempfile.TemporaryDirectory() as temporary:
+            path = self._repo(temporary, self.CLAIMS)
+            ops = self._ops(temporary, [{"op": "replace-within", "id": "CLAIM 002",
+                                         "old": "in observation", "new": "consolidated baseline"}])
+            code, message = propagate(temporary, self.CLAIMS, ops)
+            self.assertEqual((code, path.read_bytes()), (0, self.TEXT.encode()), message)
+            code, message = propagate(temporary, self.CLAIMS, ops, apply=True)
+            self.assertEqual(code, 0, message)
+            expected = self.TEXT[::-1].replace("in observation"[::-1],
+                                               "consolidated baseline"[::-1], 1)[::-1]
+            self.assertEqual(path.read_bytes(), expected.encode())
+
+    def test_refusal_writes_nothing(self) -> None:
+        from batch_commit import propagate
+        with tempfile.TemporaryDirectory() as temporary:
+            path = self._repo(temporary, self.CLAIMS)
+            ops = self._ops(temporary, [{"op": "replace-within", "id": "CLAIM 001",
+                                         "old": "in observation", "new": "x"},
+                                        {"op": "delete", "id": "CLAIM 404"}])
+            code, message = propagate(temporary, self.CLAIMS, ops, apply=True)
+            self.assertEqual(code, 3)
+            self.assertIn("ANCHOR_MISSING", message)
+            self.assertEqual(path.read_bytes(), self.TEXT.encode())
+
+    def test_paper_registry_keeps_the_full_rewrite(self) -> None:
+        from batch_commit import RECORD_SCOPED, propagate
+        papers = "disease-models/wwox/registries/paper_registry_current.md"
+        self.assertNotIn(papers, RECORD_SCOPED)
+        self.assertEqual(len(RECORD_SCOPED), 3)
+        self.assertTrue(set(RECORD_SCOPED) <= set(CURRENTS))
+        with tempfile.TemporaryDirectory() as temporary:
+            path = self._repo(temporary, papers)
+            ops = self._ops(temporary, [{"op": "delete", "id": "CLAIM 001"}])
+            code, message = propagate(temporary, papers, ops, apply=True)
+            self.assertEqual(code, 4)
+            self.assertIn("full rewrite", message)
+            self.assertEqual(path.read_bytes(), self.TEXT.encode())
+
+
 class TheRealCurrentFilesAreSnapshotted(unittest.TestCase):
     """``snapshot`` through ``main`` over this checkout: the four current files and the state
     manifest are copied OUT to a temp dir, byte-identical, and the originals are untouched.
