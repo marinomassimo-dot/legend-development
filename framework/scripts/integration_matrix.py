@@ -61,6 +61,9 @@ import tempfile
 from dataclasses import dataclass, field, asdict
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import owned_scratch  # noqa: E402
+
 
 CONFLICT_START = re.compile(r"^<{7}")
 CONFLICT_MID = re.compile(r"^={7}$")
@@ -248,7 +251,10 @@ class Step:
 def simulate(repo: Path, base: str, candidates: list[str],
              declares: dict[str, list[str]], hashes: dict[str, str],
              keep: Path | None) -> tuple[list[Step], dict]:
-    box = Path(tempfile.mkdtemp(prefix="legend-integration-"))
+    # An owned box: a run killed inside the try below never reaches its finally, and the
+    # composed worktree would stay registered; the next run reaps it (owned_scratch.py).
+    owned_scratch.reap("legend-integration-", repo)
+    box = owned_scratch.make("legend-integration-")
     tree = keep if keep is not None else box / "tree"
     branch = "integration-matrix-simulation"
     git(repo, "worktree", "prune", check=False)
@@ -315,7 +321,7 @@ def simulate(repo: Path, base: str, candidates: list[str],
             git(repo, "worktree", "remove", "--force", str(tree), check=False)
             git(repo, "branch", "-D", branch, check=False)
             git(repo, "worktree", "prune", check=False)
-            shutil.rmtree(box, ignore_errors=True)
+        owned_scratch.release(box)
 
     identity_preserved = all(step.tip_before == step.tip_after for step in steps)
     summary = {

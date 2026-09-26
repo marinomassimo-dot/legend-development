@@ -71,6 +71,7 @@ ROOT = HERE.parents[1]
 if str(HERE) not in sys.path:
     sys.path.insert(0, str(HERE))
 import registry_records  # noqa: E402
+import owned_scratch  # noqa: E402
 
 BENCH = ROOT / "framework/eval/benchmarks/BENCH-I-CLAIM-RETRIEVAL"
 SPEC = BENCH / "fixture_spec.json"
@@ -220,14 +221,17 @@ def build(spec_path: Path = SPEC, out_path: Path = FIXTURES) -> int:
 @contextlib.contextmanager
 def tree_at(rev: str) -> Iterator[Path]:
     """A detached worktree at `rev`, removed on exit — so every answer is BOUND to that commit."""
-    base = Path(tempfile.mkdtemp(prefix="bench-i-"))
+    # An owned box (owned_scratch.py): a run killed before `finally` leaves the worktree
+    # registered, and the next run reaps it once its owner is gone.
+    owned_scratch.reap("bench-i-", ROOT)
+    base = owned_scratch.make("bench-i-")
     path = base / rev[:12]
     git("worktree", "add", "--detach", "--quiet", str(path), rev)
     try:
         yield path
     finally:
         git("worktree", "remove", "--force", str(path))
-        base.rmdir()
+        owned_scratch.release(base, ROOT)
 
 
 def terms_of(text: str) -> list[str]:

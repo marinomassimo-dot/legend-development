@@ -397,6 +397,12 @@ the authoritative sink
 ledger fails closed. Appends take an exclusive filesystem lock, revalidate the complete
 history, append one event, flush and `fsync` before reporting success.
 
+A receipt is the input of two committed generated surfaces, `reading_state.md` and
+`coverage_report.md`. `record` prints the commands that regenerate them; commit them **with**
+the ledger and the re-anchored state manifest. `scripts/legend_commit.sh` and `task_close.py`
+refuse a landing that carries the receipt without them (`candidate_tree_freshness.py`) — the
+H0 finding of 2026-09-24 was a receipt landed alone that left both stale for days.
+
 ## Append-only is enforced, not asserted
 
 Calling a file append-only does nothing. Three mechanisms make the word true, each covering

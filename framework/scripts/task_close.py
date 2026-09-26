@@ -7,6 +7,12 @@ and is refused while the worktree holds untracked OR ignored files, or is locked
 No staging, force, stash, reset, push or conflict resolution is performed. A merge that
 conflicts is aborted so the checkout holding main stays exactly as it was; the task branch
 and worktree are kept, and the repair is made on the task side before retrying.
+
+Before landing, the committed generated surfaces are verified against the EXACT merge result
+(`candidate_tree_freshness.py`): only the checks whose inputs the landing changes run, and a
+STALE surface refuses the landing with its regeneration commands — H0 (2026-09-24) found four
+surfaces stale because direct landings changed their inputs and nothing on that path looked.
+The only override is a stated reason, `--stale-surfaces-because "<why>"`, which is printed.
 """
 from __future__ import annotations
 
@@ -17,6 +23,7 @@ import sys
 from pathlib import Path
 
 from branch_hygiene import GitError, git, repo_root, worktrees
+import candidate_tree_freshness as freshness
 
 
 def clean(path: Path, include_ignored: bool = False) -> None:
@@ -50,8 +57,39 @@ def protect_ignored(destination: Path, tip: str) -> None:
                 raise GitError(f"landing would overlap ignored material on main: {local}")
 
 
+def check_freshness(source: Path, tip: str, main_sha: str,
+                    stale_because: str | None) -> None:
+    """Refuse a landing whose merge result leaves a generated surface stale, unless told why.
+
+    A conflicted candidate is not judged here: the merge itself refuses it, naming the path.
+    """
+    try:
+        report = freshness.evaluate(source, mode="merge", tip=tip, base=main_sha)
+    except freshness.CandidateError as exc:
+        if "conflicts" in str(exc):
+            return
+        report_text, code = f"candidate_tree_freshness: {exc}", 2
+    else:
+        report_text, code = freshness.render(report), report.exit_code
+    if code == 0:
+        checked = sum(r.status == freshness.FRESH for r in report.results)
+        verdict = (f"FRESH on the merge result ({checked} checked" if checked
+                   else "not affected by this landing (none checked")
+        print(f"task_close: generated surfaces {verdict}, {report.seconds:.1f}s)",
+              file=sys.stderr)
+        return
+    if stale_because and stale_because.strip():
+        print(f"task_close: landing although the merge result is not fresh, because: "
+              f"{stale_because.strip()}\n{report_text}", file=sys.stderr)
+        return
+    raise GitError("the merge result leaves generated surfaces stale or unverifiable; nothing "
+                   "was landed. Regenerate on the task branch, commit, retry — or state why "
+                   f"it is safe with --stale-surfaces-because \"<reason>\".\n{report_text}")
+
+
 def close_task(start: Path, remove_worktree: bool = False,
-               dry_run: bool = False, resume_branch: str | None = None) -> list[list[str]]:
+               dry_run: bool = False, resume_branch: str | None = None,
+               stale_because: str | None = None) -> list[list[str]]:
     source = repo_root(start).resolve()
     trees = worktrees(source)
     mains = [Path(str(t["path"])).resolve() for t in trees if t["branch"] == "main"]
@@ -85,6 +123,8 @@ def close_task(start: Path, remove_worktree: bool = False,
     clean(source, remove_worktree)
     clean(destination)
     protect_ignored(destination, tip)
+    checked_main = git(["rev-parse", "HEAD"], destination).strip()
+    check_freshness(source, tip, checked_main, stale_because)
     if dry_run:
         return commands
 
@@ -108,6 +148,11 @@ def close_task(start: Path, remove_worktree: bool = False,
         if git(["branch", "--show-current"], source).strip() != current:
             raise GitError("task checkout changed branch; retry after inspection")
         protect_ignored(destination, tip)
+        current_main = git(["rev-parse", "HEAD"], destination).strip()
+        if current_main != checked_main:
+            # main moved while the surfaces were checked: the merge result is a different
+            # tree, so it is checked again — under the lock, where task_close cannot race it.
+            check_freshness(source, tip, current_main, stale_because)
         try:
             git(commands[0][3:], destination)
         except GitError as exc:
@@ -146,9 +191,14 @@ def main(argv: list[str] | None = None) -> int:
                              "holds untracked or ignored files, or is locked")
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--branch", help="resume after detachment, only when HEAD is this branch's tip")
+    parser.add_argument("--stale-surfaces-because", dest="stale_because", default=None,
+                        metavar="REASON",
+                        help="land even though the merge result leaves a generated surface "
+                             "stale or unverifiable, for this stated reason (printed)")
     args = parser.parse_args(argv)
     try:
-        commands = close_task(Path.cwd(), args.remove_worktree, args.dry_run, args.branch)
+        commands = close_task(Path.cwd(), args.remove_worktree, args.dry_run, args.branch,
+                              args.stale_because)
     except (GitError, OSError) as exc:
         print(f"task_close: {exc}", file=sys.stderr)
         return 2
