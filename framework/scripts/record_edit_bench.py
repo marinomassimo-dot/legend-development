@@ -38,6 +38,7 @@ import re
 import subprocess
 import sys
 from collections import Counter
+from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
@@ -319,8 +320,15 @@ def unit_targeted(block: registry_records.Block, text: str, ctx: dict[str, Any])
 
 def label_file(repo: Path, ctx: dict[str, Any], path: str, spec: dict[str, Any]
                ) -> dict[str, Any]:
+    before, after = show(repo, ctx["parent"], path), show(repo, ctx["sha"], path)
+    return label_texts(before, after, path, ctx)
+
+
+def label_texts(before: str | None, after: str | None, path: str, ctx: dict[str, Any]
+                ) -> dict[str, Any]:
+    """The J0 labelling of one (parent, child) pair of texts — git-free, so J2's instrument
+    control can run it on a child with a planted mutation."""
     sha = ctx["sha"]
-    before, after = show(repo, ctx["parent"], path), show(repo, sha, path)
     event: dict[str, Any] = {"commit": sha[:12], "file": path, "units_parent": 0,
                              "units_child": 0, "hunks": [], "unit_events": []}
     if before is None or after is None:
@@ -556,6 +564,353 @@ def summarise(commits: list[dict[str, Any]]) -> dict[str, Any]:
             "unit_events": dict(units)}
 
 
+# ---------------------------------------------------------------- j2
+
+EDIT = ("INTENDED", "LEGITIMATE_COLLATERAL")
+
+
+@dataclass
+class UnitDiff:
+    key: str                  # the child's key (the parent's, for a deleted unit)
+    old: str | None           # parent key, or None for an added unit
+    kind: str
+    heading: str
+    parent_text: str | None
+    child_text: str | None
+    groups: list[list[tuple[str, int, int, int, int, str]]]   # opcode groups, hunk id per op
+
+
+def unit_diffs(before: str, after: str, path: str, commit12: str
+               ) -> tuple[list[UnitDiff], list[str], list[str]]:
+    """The J0 unit matching again (same partition, same keys, same rename rule, same hunk ids),
+    with the line opcodes kept so the replay can rebuild units hunk by hunk."""
+    levels = stem_levels(path)
+    pu, cu = unit_map(before, levels), unit_map(after, levels)
+    pby, cby = {u.key: u for u in pu}, {u.key: u for u in cu}
+    ptext = {k: before[u.start:u.end] for k, u in pby.items()}
+    ctext = {k: after[u.start:u.end] for k, u in cby.items()}
+    removed = [k for k in pby if k not in cby]
+    added = [k for k in cby if k not in pby]
+    renames = pair_renames(removed, added, ptext, ctext)
+    for old, new in renames:
+        removed.remove(old)
+        added.remove(new)
+    back = {new: old for old, new in renames}
+    out: list[UnitDiff] = []
+    for key in [u.key for u in cu]:
+        old = key if key in pby else back.get(key)
+        block = cby[key]
+        if old is None:
+            lines = ctext[key].splitlines()
+            hid = digest(commit12, path, key, [], lines)
+            out.append(UnitDiff(key, None, block.kind, block.heading, None, ctext[key],
+                                [[("insert", 0, 0, 0, len(lines), hid)]]))
+            continue
+        a, b = ptext[old], ctext[key]
+        a_lines, b_lines = a.splitlines(), b.splitlines()
+        groups: list[list[tuple[str, int, int, int, int, str]]] = []
+        last_end = None
+        for tag, i1, i2, j1, j2 in difflib.SequenceMatcher(None, a_lines, b_lines,
+                                                           autojunk=False).get_opcodes():
+            if tag == "equal":
+                last_end = None
+                continue
+            hid = digest(commit12, path, key, a_lines[i1:i2], b_lines[j1:j2])
+            if last_end is not None and groups:
+                groups[-1].append((tag, i1, i2, j1, j2, hid))
+            else:
+                groups.append([(tag, i1, i2, j1, j2, hid)])
+            last_end = i2
+        out.append(UnitDiff(key, old, pby[old].kind, pby[old].heading, a, b, groups))
+    for key in removed:
+        lines = ptext[key].splitlines()
+        hid = digest(commit12, path, key, lines, [])
+        out.append(UnitDiff(key, key, pby[key].kind, pby[key].heading, ptext[key], None,
+                            [[("delete", 0, len(lines), 0, 0, hid)]]))
+    return out, [u.key for u in pu], [u.key for u in cu]
+
+
+def rebuild(unit: UnitDiff, keep: set[str]) -> str:
+    """The parent unit with only the hunks whose id is in `keep` applied — byte-exact, since the
+    opcodes index `splitlines(keepends=True)` exactly as they index `splitlines()`."""
+    assert unit.parent_text is not None and unit.child_text is not None
+    a = unit.parent_text.splitlines(keepends=True)
+    b = unit.child_text.splitlines(keepends=True)
+    ops = [op for group in unit.groups for op in group]
+    out, cursor = [], 0
+    for tag, i1, i2, j1, j2, hid in ops:
+        out.extend(a[cursor:i1])
+        out.extend(b[j1:j2] if hid in keep else a[i1:i2])
+        cursor = i2
+    out.extend(a[cursor:])
+    return "".join(out)
+
+
+def anchor_for(key: str, kind: str, heading: str) -> dict[str, Any]:
+    if kind == "preamble":
+        return {"preamble": True}
+    if kind == "record":
+        return {"id": key}
+    return {"heading": heading}
+
+
+def expected_and_ops(units: list[UnitDiff], parent_keys: list[str], labels: dict[str, str],
+                     mode: str) -> tuple[list[tuple[str, str]], list[dict[str, Any]]]:
+    """X (as an ordered list of (key, text)) and the record-scoped operations derived from E."""
+    edit = {hid for hid, label in labels.items() if label in EDIT}
+    by_old = {u.old: u for u in units if u.old is not None}
+    x: list[tuple[str, str]] = []
+    ops: list[dict[str, Any]] = []
+    # parent order first: modified / kept / E-deleted
+    for pkey in parent_keys:
+        unit = by_old.get(pkey)
+        if unit is None:
+            continue
+        if unit.child_text is None:                        # deleted in the child
+            hid = unit.groups[0][0][5]
+            if hid in edit:
+                ops.append({"op": "delete", **anchor_for(pkey, unit.kind, unit.heading),
+                            "_hunks": [hid]})
+            else:
+                x.append((pkey, unit.parent_text or ""))
+            continue
+        text = rebuild(unit, edit)
+        x.append((unit.key, text))
+        hids = [op[5] for group in unit.groups for op in group if op[5] in edit]
+        if not hids and unit.key == unit.old:
+            continue
+        anchor = anchor_for(pkey, unit.kind, unit.heading)
+        rename = {"rename_to": unit.key} if unit.key != unit.old else {}
+        if mode == "record" or rename:
+            ops.append({"op": "replace", **anchor, "text": text, **rename, "_hunks": hids})
+        else:
+            ops.extend(range_ops(unit, edit, anchor))
+    # E-added units, in child order, each after its nearest preceding unit in X
+    child_order = [u.key for u in units if u.child_text is not None]
+    placed = {k for k, _ in x}
+    for unit in units:
+        if unit.old is not None or unit.child_text is None:
+            continue
+        hid = unit.groups[0][0][5]
+        if hid not in edit:
+            continue
+        index = child_order.index(unit.key)
+        before = next((k for k in reversed(child_order[:index]) if k in placed), None)
+        after = next((k for k in child_order[index + 1:] if k in placed), None)
+        kinds = {u.key: (u.kind, u.heading) for u in units}
+        if before is not None:
+            pos = next(i for i, (k, _) in enumerate(x) if k == before) + 1
+            ops.append({"op": "insert-after", **anchor_for(before, *kinds[before]),
+                        "text": unit.child_text, "_hunks": [hid]})
+        elif after is not None:
+            pos = next(i for i, (k, _) in enumerate(x) if k == after)
+            ops.append({"op": "insert-before", **anchor_for(after, *kinds[after]),
+                        "text": unit.child_text, "_hunks": [hid]})
+        else:
+            pos = len(x)
+            ops.append({"op": "append", "text": unit.child_text, "_hunks": [hid]})
+        x.insert(pos, (unit.key, unit.child_text or ""))
+        placed.add(unit.key)
+    return x, ops
+
+
+def range_ops(unit: UnitDiff, edit: set[str], anchor: dict[str, Any]) -> list[dict[str, Any]]:
+    """One `replace-within` per opcode group holding an E hunk, bottom-up so an earlier group's
+    context is still the parent's bytes when it is applied. `old` starts as the group's own
+    parent lines (or the line before a pure insertion) and grows by one equal line of context at
+    a time, inside the equal run around the group, until it is unique in the unit."""
+    a = (unit.parent_text or "").splitlines(keepends=True)
+    b = (unit.child_text or "").splitlines(keepends=True)
+    all_ops = [op for group in unit.groups for op in group]
+    out = []
+    for gi in range(len(unit.groups) - 1, -1, -1):
+        group = unit.groups[gi]
+        hids = [op[5] for op in group if op[5] in edit]
+        if not hids:
+            continue
+        i1, i2 = group[0][1], group[-1][2]
+        new_mid = "".join("".join(b[j1:j2]) if hid in edit else "".join(a[k1:k2])
+                          for _t, k1, k2, j1, j2, hid in group)
+        lo_limit = max([op[2] for op in all_ops if op[2] <= i1 and op not in group] + [1])
+        hi_limit = min([op[1] for op in all_ops if op[1] >= i2 and op not in group] + [len(a)])
+        lo, hi = i1, i2
+        if lo == hi and lo > lo_limit:          # a pure insertion needs one line to hold on to
+            lo -= 1
+        elif lo == hi:
+            hi = min(hi + 1, hi_limit)
+        text = "".join(a)
+        while text.count("".join(a[lo:hi])) != 1 and (lo > lo_limit or hi < hi_limit):
+            if lo > lo_limit:
+                lo -= 1
+            if hi < hi_limit and text.count("".join(a[lo:hi])) != 1:
+                hi += 1
+        old = "".join(a[lo:hi])
+        new = "".join(a[lo:i1]) + new_mid + "".join(a[i2:hi])
+        out.append({"op": "replace-within", **anchor, "old": old, "new": new, "_hunks": hids})
+    return out
+
+
+def diagnose(code: str, op: dict[str, Any]) -> str:
+    table = {"ANCHOR_AMBIGUOUS": "ANCHOR_AMBIGUOUS", "ANCHOR_MISSING": "ANCHOR_MISSING",
+             "FENCED_ANCHOR": "FENCED_ANCHOR", "NESTED_RECORD": "NESTED_RECORD",
+             "RESEGMENTATION": "RESEGMENTATION", "POSTCONDITION": "IMPLEMENTATION_DEFECT"}
+    if code in table:
+        return table[code]
+    if "heading" in op or op.get("preamble"):
+        return "PREAMBLE_OR_SECTION"
+    return "OTHER"
+
+
+def replay_event(before: str, after: str, path: str, commit12: str, labels: dict[str, str],
+                 mode: str) -> dict[str, Any]:
+    import record_scoped_edit as rse
+    levels = stem_levels(path)
+    units, parent_keys, _child_keys = unit_diffs(before, after, path, commit12)
+    x_units, ops = expected_and_ops(units, parent_keys, labels, mode)
+    expected = "".join(text for _k, text in x_units)
+    current, refused, applied = before, [], 0
+    for op in ops:
+        clean = {k: v for k, v in op.items() if not k.startswith("_")}
+        try:
+            current, _info = rse.apply_one(current, rse.Op.from_dict(clean), levels)
+            applied += 1
+        except rse.Refusal as refusal:
+            refused.append({"op": op["op"], "anchor": {k: clean[k] for k in ("id", "heading",
+                                                                                "preamble")
+                                                         if k in clean},
+                            "code": refusal.code, "diagnosis": diagnose(refusal.code, op),
+                            "message": str(refusal)[:300], "hunks": op["_hunks"]})
+    refused_hunks = {h for r in refused for h in r["hunks"]}
+    r_units = {b.key: current[b.start:b.end] for b in registry_records.partition(current, levels)}
+    x_map = dict(x_units)
+    counts: Counter[str] = Counter()
+    lost, silent = [], []
+    for unit in units:
+        for group in unit.groups:
+            for op in group:
+                hid = op[5]
+                label = labels.get(hid, "UNLABELLED")
+                target = x_map.get(unit.key)
+                got = r_units.get(unit.key)
+                same = (got == target) if target is not None else (got is None)
+                if label in EDIT:
+                    counts[f"{label}:total"] += 1
+                    if same and hid not in refused_hunks:
+                        counts[f"{label}:reproduced"] += 1
+                    else:
+                        why = next((r["diagnosis"] for r in refused if hid in r["hunks"]),
+                                   "OTHER")
+                        lost.append({"hunk": hid, "unit": unit.key, "label": label,
+                                     "diagnosis": why})
+                        if hid not in refused_hunks:
+                            silent.append({"hunk": hid, "unit": unit.key,
+                                           "why": "accepted but the unit differs from X"})
+                else:
+                    counts[f"{label}:total"] += 1
+                    child_unit = unit.child_text
+                    if same and got != child_unit:
+                        counts[f"{label}:prevented"] += 1
+    outside_ok = all(r_units.get(k) == t for k, t in x_units
+                     if not any(r["anchor"].get("id") == k or r["anchor"].get("heading") == k
+                                for r in refused))
+    if not refused and current != expected:
+        silent.append({"hunk": "", "unit": "", "why": "no refusal, yet the file differs from X"})
+    return {"mode": mode, "ops": len(ops), "applied": applied, "refused": refused,
+            "counts": dict(counts), "lost": lost, "silent_corruption": silent,
+            "r_equals_x": current == expected, "r_equals_child": current == after,
+            "outside_units_equal_x": outside_ok,
+            "bytes_file": len(before.encode()),
+            "bytes_rewritten": sum(len(op.get("text", op.get("old", "")).encode())
+                                   for op in ops if op["op"] != "delete")}
+
+
+def plant(before: str, after: str, path: str, ctx: dict[str, Any], event: dict[str, Any]
+          ) -> dict[str, Any] | None:
+    """Instrument control: delete the last non-blank line of the first unit of the child that
+    is neither targeted nor changed, and ask whether J0's cascade still sees it and the replay
+    still refuses to carry it."""
+    levels = stem_levels(path)
+    pby = {u.key: before[u.start:u.end] for u in unit_map(before, levels)}
+    for block in unit_map(after, levels):
+        text = after[block.start:block.end]
+        if pby.get(block.key) != text or unit_targeted(block, text, ctx):
+            continue
+        lines = text.splitlines(keepends=True)
+        idx = max((i for i, line in enumerate(lines) if line.strip() and i > 0), default=None)
+        if idx is None:
+            continue
+        mutated_unit = "".join(lines[:idx] + lines[idx + 1:])
+        mutated = after[:block.start] + mutated_unit + after[block.end:]
+        labelled = label_texts(before, mutated, path, ctx)
+        resolve_commit([labelled], {})
+        planted = [h for h in labelled["hunks"] if h["unit"] == block.key]
+        label = planted[0]["label"] if planted else "NOT_SEEN"
+        return {"unit": block.key, "label": label,
+                "rule": planted[0]["rule"] if planted else ""}
+    return None
+
+
+def j2(repo: Path, corpus: dict[str, Any], control: bool = True) -> dict[str, Any]:
+    events_out = []
+    families: dict[str, dict[str, Any]] = {}
+    controls = []
+    files = corpus["files"]
+    for commit in corpus["commits"]:
+        sha = git(repo, "rev-parse", commit["commit"]).strip()
+        parent = git(repo, "rev-parse", commit["parent"]).strip()
+        ctx = None
+        for event in commit["files"]:
+            if event.get("file_event"):
+                continue
+            path = event["file"]
+            before, after = show(repo, parent, path), show(repo, sha, path)
+            labels = {h["id"]: h["label"] for h in event["hunks"]}
+            row = {"commit": commit["commit"], "duplicate_of": commit["duplicate_of"],
+                   "file": path, "hunks": len(event["hunks"])}
+            for mode in ("record", "range"):
+                row[mode] = replay_event(before, after, path, commit["commit"], labels, mode)
+            if control and not commit["duplicate_of"]:
+                if ctx is None:
+                    brought = "" if commit["kind"] == "commit" else next(
+                        p for p in git(repo, "log", "-1", "--format=%P", sha).split()
+                        if not p.startswith(commit["parent"]))
+                    ctx = commit_context(repo, sha, files, parent, brought)
+                result = plant(before, after, path, ctx, event)
+                if result:
+                    result.update(commit=commit["commit"], file=path)
+                    controls.append(result)
+            events_out.append(row)
+            if not commit["duplicate_of"]:
+                fam = families.setdefault(Path(path).name, {
+                    "events": 0, "record": Counter(), "range": Counter(),
+                    "lost_record": [], "lost_range": [], "silent": 0, "refused_record": Counter(),
+                    "refused_range": Counter(), "r_equals_x": 0, "r_equals_child": 0,
+                    "bytes_file": 0, "bytes_rewritten_record": 0, "bytes_rewritten_range": 0})
+                fam["events"] += 1
+                for mode in ("record", "range"):
+                    fam[mode].update(row[mode]["counts"])
+                    fam[f"lost_{mode}"].extend(row[mode]["lost"])
+                    fam[f"refused_{mode}"].update(r["code"] for r in row[mode]["refused"])
+                    fam["silent"] += len(row[mode]["silent_corruption"])
+                fam["r_equals_x"] += row["record"]["r_equals_x"]
+                fam["r_equals_child"] += row["record"]["r_equals_child"]
+                fam["bytes_file"] += row["record"]["bytes_file"]
+                fam["bytes_rewritten_record"] += row["record"]["bytes_rewritten"]
+                fam["bytes_rewritten_range"] += row["range"]["bytes_rewritten"]
+    for fam in families.values():
+        for key in ("record", "range", "refused_record", "refused_range"):
+            fam[key] = dict(fam[key])
+    detected = sum(1 for c in controls if c["label"] != "INTENDED")
+    strict = sum(1 for c in controls if c["label"] not in EDIT)
+    return {"corpus_rev": corpus["rev"], "families": families,
+            "control": {"planted": len(controls), "detected_non_intended": detected,
+                        "detected_non_edit": strict,
+                        "labels": dict(Counter(c["label"] for c in controls)),
+                        "rules": dict(Counter(c["rule"] for c in controls)),
+                        "cases": controls},
+            "events": events_out}
+
+
 def dump(doc: dict[str, Any], path: Path) -> None:
     """One hunk per line: reviewable in a diff, and the file stays proportional to the corpus."""
     lines = ["{"]
@@ -591,11 +946,36 @@ def main(argv: list[str] | None = None) -> int:
     p0.add_argument("--repo", type=Path, default=ROOT)
     p0.add_argument("--rev", default="HEAD")
     p0.add_argument("--out", type=Path, default=CORPUS)
+    p2 = sub.add_parser("j2", help="replay the corpus with record_scoped_edit.py")
+    p2.add_argument("--repo", type=Path, default=ROOT)
+    p2.add_argument("--corpus", type=Path, default=CORPUS)
+    p2.add_argument("--out", type=Path, default=J2_RESULTS)
+    p2.add_argument("--no-control", action="store_true")
     args = parser.parse_args(argv)
     if args.command == "j0":
         doc = j0(args.repo, args.rev)
         dump(doc, args.out)
         print(json.dumps(doc["summary"], indent=1))
+        return 0
+    if args.command == "j2":
+        corpus = json.loads(args.corpus.read_text(encoding="utf-8"))
+        doc = j2(args.repo, corpus, control=not args.no_control)
+        lines = ["{"]
+        for key in ("corpus_rev", "families", "control"):
+            lines.append(f"  {json.dumps(key)}: {json.dumps(doc[key], ensure_ascii=False)},")
+        lines.append('  "events": [')
+        lines.extend("    " + json.dumps(e, ensure_ascii=False)
+                     + ("," if i < len(doc["events"]) - 1 else "")
+                     for i, e in enumerate(doc["events"]))
+        lines.append("  ]\n}")
+        args.out.write_text("\n".join(lines) + "\n", encoding="utf-8")
+        for name, fam in doc["families"].items():
+            print(name, fam["events"], "record", fam["record"], "lost", len(fam["lost_record"]),
+                  "range lost", len(fam["lost_range"]), "silent", fam["silent"],
+                  "R=X", fam["r_equals_x"], "R=child", fam["r_equals_child"])
+        control = doc["control"]
+        print("control", control["planted"], control["detected_non_intended"],
+              control["detected_non_edit"], control["labels"])
         return 0
     return 2
 
