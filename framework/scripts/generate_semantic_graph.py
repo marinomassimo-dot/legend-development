@@ -105,8 +105,18 @@ def claim_links_from_paper(block: str) -> list[str]:
     )
 
 
+# The FASE-1 corpus triage used its own codes, and three of them collide with the working
+# model's P1-P7: its "P6 — DDR / genome stability" is not the canonical P6 (neuroinflammation
+# and glia), and its P8/P9 have no canonical meaning. Those records keep their labels (the label,
+# not the code, is authoritative for them), so a legacy code is removed before matching rather
+# than read as the canonical pathway it happens to share a number with.
+LEGACY_TRIAGE_CODE = re.compile(
+    r"\bP6\s*[—-]\s*DDR\b|\bP8\s*[—-]\s*bone\b|\bP9\s*[—-]\s*immune\b", re.I
+)
+
+
 def pathway_matches(text: str) -> list[str]:
-    return sorted(set(re.findall(r"\bP[1-7]\b", text)))
+    return sorted(set(re.findall(r"\bP[1-7]\b", LEGACY_TRIAGE_CODE.sub("", text))))
 
 
 def concept_matches(text: str) -> list[str]:

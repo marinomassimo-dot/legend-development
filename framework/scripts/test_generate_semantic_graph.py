@@ -285,5 +285,21 @@ class TheDocumentedCommandRunsOnTheRealRegistries(unittest.TestCase):
             self.assertEqual([], leaked, "a canonical filename leaked into the vault")
 
 
+class ALegacyTriageCodeIsNotTheCanonicalPathway(unittest.TestCase):
+    """FASE-1 triage wrote "P6 — DDR / genome stability"; canonical P6 is neuroinflammation."""
+
+    def test_a_ddr_record_is_not_filed_under_neuroinflammation(self):
+        self.assertEqual(graph.pathway_matches("**Primary pathway:** P6 — DDR / genome stability"), [])
+
+    def test_legacy_bone_and_immune_codes_carry_no_pathway(self):
+        self.assertEqual(graph.pathway_matches("P8 — bone / RUNX2 axis · P9 — immune / glia / inflammation"), [])
+
+    def test_the_canonical_p6_is_still_read(self):
+        self.assertEqual(graph.pathway_matches("**Pathway:** P6 — neuroinflammation / glia"), ["P6"])
+
+    def test_a_legacy_label_does_not_hide_a_canonical_code_beside_it(self):
+        self.assertEqual(graph.pathway_matches("P6 — DDR / genome stability; P5 — metabolism"), ["P5"])
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
