@@ -33,6 +33,7 @@ Serves to:
 | `flagged_for_review` | Triggered a review flag, not yet resolved |
 | `background_only` | Archived as context, no operative function |
 | `superseded` | Replaced by a stronger or more recent paper |
+| `excluded_integrity` | **Retracted**; kept only as an audit trail of what was excluded and why; may not support any claim, premise or context. An expression of concern does **not** move a record here: it is carried by `PUBLICATION_INTEGRITY_HOLD` on the record itself |
 
 ---
 
@@ -386,7 +387,7 @@ Serves to:
 **Final decision label:** P7 design-principle paper
 **Claim links:** 011
 **Working Model impact:** BLOCCO 2 integrated; gene therapy context updated; gliosi come downstream di disfunzione neuronale (P6 ridimensionato)
-**Current status:** integrated
+**Status:** integrated
 **Next action:** none — chiuso
 **Flags:** preprint flag
 
@@ -423,7 +424,7 @@ Serves to:
 **Final decision label:** phenotype refinement
 **Claim links:** 012
 **Working Model impact:** BLOCCO 2 integrated; EEG priority note added; MRI precoce normale non esclude rete severa
-**Current status:** integrated
+**Status:** integrated
 **Next action:** none — chiuso
 **Flags:** none (2026-06-28: identifier preprint normalizzato a published peer-reviewed; flag preprint rimosso)
 
@@ -460,7 +461,7 @@ Serves to:
 **Final decision label:** supportive context
 **Claim links:** none
 **Working Model impact:** no update required
-**Current status:** processed
+**Status:** processed
 **Next action:** no further action
 **Flags:** low-yield flag
 
@@ -503,7 +504,7 @@ Serves to:
 **Working Model impact:** BLOCCO 2 in observation (CLAIM 013); genotype class N/M aggiunta a Identity section; surveillance respiratoria e oftalmica rafforzate; gene therapy rationale rafforzato (partial restoration sufficiente)
 **Evidence depth:** full text reviewed (PDF fornito dall'operatore)
 **Full text status:** found
-**Current status:** integrated
+**Status:** integrated
 **Next action:** nessuno — CLAIM 013 in attesa validazione dell'operatore
 **Flags:** high value human / review trigger (CLAIM 013 pending)
 **Note:** 50 individui, 45 famiglie. Solo 3 associazioni FDR-significative: ipertonia (p=0.003), crisi (p=0.016), respiratorio (p=0.020) in N/N vs N/M e M/M. Q230P in 2 individui. Case ID 11 (N/M: null+Q230P) unico deceduto — causa sconosciuta. the reference genotype verosimilmente N/M.
@@ -543,7 +544,7 @@ Serves to:
 **Working Model impact:** BLOCCO 2 — supporto contestuale; nessun update BLOCCO 1
 **Evidence depth:** full text reviewed (PMC open access)
 **Full text status:** found — PMC11537890
-**Current status:** integrated
+**Status:** integrated
 **Next action:** none
 **Flags:** none
 **Note:** Primo adulto documentato con WWOX-DEE (40 anni). Sopravvivenza possibile ma con progressione: epilessia → regressione motoria adolescenza → complicanze respiratorie severe. Genotipo omozigote missense N-terminal, diverso dal genotipo di riferimento.
@@ -582,7 +583,7 @@ Serves to:
 **Working Model impact:** CLAIM 001 → conflicting evidence; posizione clinica generale su vigabatrin invariata
 **Evidence depth:** full text reviewed (PMC open access)
 **Full text status:** found — PMC11298992
-**Current status:** integrated
+**Status:** integrated
 **Next action:** none
 **Flags:** safety / conflicting evidence
 **Note:** VGB 200 mg/kg/die in 1 caso null/null → riduzione crisi; no MRI controllo VABAM; non invalida Choi 2026. Genotipo null/null ≠ the reference genotype (compound het missense + splice). Follow-up a 13 mesi.
@@ -622,7 +623,7 @@ Serves to:
 **Working Model impact:** BLOCCO 2 — rafforza razionale KD; aggiunge meccanismo Q230P (instabilità proteica post-traduzionale); piccolo supporto P5 (lattato); valutazione visiva indicata (4/5 con deficit visivo)
 **Evidence depth:** partial full text (Scholar Gateway, 47 chunk)
 **Full text status:** not open access — partial recovery via Scholar Gateway
-**Current status:** integrated
+**Status:** integrated
 **Next action:** none — se full text disponibile in futuro, upgrade completo
 **Flags:** non open access
 **Note:** KD associata a miglioramento crisi in 3/5 (P1, P2, P4). Raccomandazione: KD should be considered con cautela. Q230P/SDR: trascritto normale, proteina assente/instabile → compatibile con funzione residua parziale. Lattato lievemente elevato P4. Pancreatite ricorrente e sordità neurosensoriale come feature espansive. 2/5 deceduti a 2 anni.
@@ -662,7 +663,8 @@ Serves to:
 **Working Model impact:** pending — potenzialmente alto (sopravvivenza, missense vs non-missense)
 **Evidence depth:** abstract + Scholar Gateway frammenti
 **Full text status:** found — PMC10952634 (open access)
-**Current status:** filtered_in — queued per full text
+**Status:** filtered_in
+**Status note:** queued per full text
 **Next action:** full text retrieval PMC10952634 — PRIMA PRIORITÀ PROSSIMA SESSIONE
 **Flags:** high value human / review trigger / high priority
 **Note:** Key finding (da abstract): presenza ≥1 missense aumenta sopravvivenza 5 anni da <50% a >75% (p=0.0085). Tipi crisi: focali 85%, spasmi 77%, toniche 69%. EEG: slow background, multifocal discharges frontali/temporo-occipitali. MRI: frontotemporal atrophy, hippocampal atrophy, thin corpus callosum. Sindromi: EIDEE 8/13, IESS 2, EIMFS 2. Distonia 11/13. Mortalità 35% — respiratorio causa principale.
@@ -701,7 +703,7 @@ Serves to:
 **Working Model impact:** BLOCCO 2 — supporto secondario a CLAIM 009
 **Evidence depth:** abstract-only
 **Full text status:** found — PMC disponibile; lettura non prioritaria
-**Current status:** background_only
+**Status:** background_only
 **Next action:** none
 **Flags:** background only
 **Note:** Stessi autori di Baryła 2022. WWOX sequestra HIF1A nel citoplasma; perdita di WWOX → HIF1A libero → shift glicolitico. Rafforza concettualmente il razionale per KD.
@@ -740,7 +742,8 @@ Serves to:
 **Working Model impact:** nessuno immediato
 **Evidence depth:** abstract-only
 **Full text status:** found — PMC12610808
-**Current status:** filtered_in — queued per lettura media priorità
+**Status:** filtered_in
+**Status note:** queued per lettura media priorità
 **Next action:** full text reading — media priorità (dopo Oliver 2023)
 **Flags:** none
 **Note:** Pathway WWOX in cancro: HIF1A, PI3K/AKT, NF-κB, JAK-STAT, Hippo/YAP. Utile per framework indiretto P3/P5/P6.
@@ -969,7 +972,7 @@ Serves to:
 **Working Model impact:** none
 **Evidence depth:** full text reviewed (PMC open access)
 **Full text status:** found — PMC11487720
-**Current status:** processed
+**Status:** processed
 **Next action:** none
 **Flags:** low-yield flag / context-specific paradigm / high over-inference risk
 **Note:** Useful for WWOX-dependent nuclear relocalization of TRAF2 and context-sensitive partner-switching logic, but too idiosyncratic (UV/cold-shock/BCD paradigm) to justify new claim or working-model propagation.
@@ -1428,7 +1431,8 @@ Serves to:
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 11
-**Status:** completed — [[paper_registry_current#PAPER 067]] (`BATCH_20260815_001`)
+**Status:** processed
+**Status note:** completed — [[paper_registry_current#PAPER 067]] (`BATCH_20260815_001`)
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -1914,7 +1918,8 @@ Serves to:
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 29
-**Status:** processed — partial_fulltext_read
+**Status:** processed
+**Status note:** partial_fulltext_read
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -2247,7 +2252,8 @@ Serves to:
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 44
-**Status:** processed — complete_fulltext_read
+**Status:** processed
+**Status note:** complete_fulltext_read
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -2414,7 +2420,8 @@ Serves to:
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 50
-**Status:** completed — [[paper_registry_current#PAPER 068]] (`BATCH_20260815_001`)
+**Status:** processed
+**Status note:** completed — [[paper_registry_current#PAPER 068]] (`BATCH_20260815_001`)
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -2927,7 +2934,8 @@ Serves to:
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 70
-**Status:** processed — promosso a [[paper_registry_current#PAPER 097]] (`BATCH_20260921_002`)
+**Status:** processed
+**Status note:** promosso a [[paper_registry_current#PAPER 097]] (`BATCH_20260921_002`)
 **Primary pathway:** P5 — metabolismo / mitocondri / redox
 **Genotype/model tag:** WWOX wild-type; SH-SY5Y differenziate + ratti Goto-Kakizaki; nessun allele WWOX-DEE
 **Transferability:** T3
@@ -3008,7 +3016,8 @@ Serves to:
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 73
-**Status:** processed — complete_fulltext_read
+**Status:** processed
+**Status note:** complete_fulltext_read
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -3092,7 +3101,8 @@ Serves to:
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 76
-**Status:** completed — [[paper_registry_current#PAPER 069]] (`BATCH_20260815_001`)
+**Status:** processed
+**Status note:** completed — [[paper_registry_current#PAPER 069]] (`BATCH_20260815_001`)
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -3146,7 +3156,8 @@ Serves to:
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 78
-**Status:** completed — [[paper_registry_current#PAPER 072]] (`BATCH_20260815_001`)
+**Status:** processed
+**Status note:** completed — [[paper_registry_current#PAPER 072]] (`BATCH_20260815_001`)
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -3227,7 +3238,8 @@ Serves to:
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 81
-**Status:** completed — [[paper_registry_current#PAPER 080]] (`BATCH_20260815_001`)
+**Status:** processed
+**Status note:** completed — [[paper_registry_current#PAPER 080]] (`BATCH_20260815_001`)
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -3744,7 +3756,8 @@ Serves to:
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 102
-**Status:** completed — [[paper_registry_current#PAPER 065]] (`BATCH_20260815_001`)
+**Status:** processed
+**Status note:** completed — [[paper_registry_current#PAPER 065]] (`BATCH_20260815_001`)
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -3798,7 +3811,8 @@ Serves to:
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 104
-**Status:** processed — complete_fulltext_read
+**Status:** processed
+**Status note:** complete_fulltext_read
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -4154,7 +4168,8 @@ Serves to:
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 119
-**Status:** processed — complete_fulltext_read
+**Status:** processed
+**Status note:** complete_fulltext_read
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -4994,7 +5009,8 @@ Serves to:
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 152
-**Status:** completed — [[paper_registry_current#PAPER 074]] (`BATCH_20260815_001`)
+**Status:** processed
+**Status note:** completed — [[paper_registry_current#PAPER 074]] (`BATCH_20260815_001`)
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -5291,7 +5307,8 @@ Serves to:
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 164
-**Status:** completed — [[paper_registry_current#PAPER 066]] (`BATCH_20260815_001`)
+**Status:** processed
+**Status note:** completed — [[paper_registry_current#PAPER 066]] (`BATCH_20260815_001`)
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -6518,7 +6535,8 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Quality status:** peer-reviewed (PubMed listing)
 **Filter decision:** in — standard
 **Tier:** B
-**Status:** completed — [[paper_registry_current#PAPER 075]] (`BATCH_20260815_001`)
+**Status:** processed
+**Status note:** completed — [[paper_registry_current#PAPER 075]] (`BATCH_20260815_001`)
 **Primary pathway:** P5 — metabolism / mitochondria / redox
 **Genotype/model tag:** unassigned in triage
 **Species:** mouse
@@ -7164,7 +7182,8 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Quality status:** peer-reviewed (PubMed listing)
 **Filter decision:** background only
 **Tier:** C
-**Status:** processed — complete_fulltext_read
+**Status:** processed
+**Status note:** complete_fulltext_read
 **Primary pathway:** P5 — metabolism / mitochondria / redox
 **Genotype/model tag:** unassigned in triage
 **Species:** human
@@ -7370,7 +7389,8 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Quality status:** peer-reviewed (PubMed listing)
 **Filter decision:** background only
 **Tier:** C
-**Status:** processed — complete_fulltext_read
+**Status:** processed
+**Status note:** complete_fulltext_read
 **Primary pathway:** clinical spectrum / WWOX-DEE
 **Genotype/model tag:** unassigned in triage
 **Species:** human
@@ -7848,7 +7868,8 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Quality status:** peer-reviewed (PubMed listing)
 **Filter decision:** background only
 **Tier:** C
-**Status:** completed — [[paper_registry_current#PAPER 077]] (`BATCH_20260815_001`)
+**Status:** processed
+**Status note:** completed — [[paper_registry_current#PAPER 077]] (`BATCH_20260815_001`)
 **Primary pathway:** P6 — DDR / genome stability
 **Genotype/model tag:** unassigned in triage
 **Species:** mouse
@@ -7916,7 +7937,8 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Quality status:** peer-reviewed (PubMed listing)
 **Filter decision:** background only
 **Tier:** C
-**Status:** completed — [[paper_registry_current#PAPER 079]] (`BATCH_20260815_001`)
+**Status:** processed
+**Status note:** completed — [[paper_registry_current#PAPER 079]] (`BATCH_20260815_001`)
 **Primary pathway:** oncology / tumor suppressor biology
 **Genotype/model tag:** unassigned in triage
 **Species:** not assessed in triage
@@ -8733,7 +8755,8 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Quality status:** peer-reviewed (PubMed listing)
 **Filter decision:** background only
 **Tier:** C
-**Status:** processed — complete_fulltext_read
+**Status:** processed
+**Status note:** complete_fulltext_read
 **Primary pathway:** P6 — DDR / genome stability
 **Genotype/model tag:** unassigned in triage
 **Species:** human
@@ -9585,7 +9608,8 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Quality status:** peer-reviewed (PubMed listing)
 **Filter decision:** in — standard
 **Tier:** B
-**Status:** completed — [[paper_registry_current#PAPER 073]] (`BATCH_20260815_001`)
+**Status:** processed
+**Status note:** completed — [[paper_registry_current#PAPER 073]] (`BATCH_20260815_001`)
 **Primary pathway:** P5 — metabolism / mitochondria / redox
 **Genotype/model tag:** unassigned in triage
 **Species:** mouse
@@ -10435,7 +10459,8 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Quality status:** peer-reviewed (PubMed listing)
 **Filter decision:** background only
 **Tier:** C
-**Status:** completed — [[paper_registry_current#PAPER 071]] (`BATCH_20260815_001`)
+**Status:** processed
+**Status note:** completed — [[paper_registry_current#PAPER 071]] (`BATCH_20260815_001`)
 **Primary pathway:** P5 — metabolism / mitochondria / redox
 **Genotype/model tag:** unassigned in triage
 **Species:** Drosophila
@@ -11895,7 +11920,8 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Discovery window:** batch-50 2016–2018
 **Discovery source:** PubMed retraction gate + full dependency audit
 **Discovery query:** PMID 28151481 / author-line retraction audit
-**Status:** archived
+**Status:** excluded_integrity
+**Status note:** retracted 2022 (retraction DOI 10.1038/s41419-022-04992-6); formerly `archived`, a value outside the vocabulary (`BATCH_20260926_LITVOCAB`)
 **Primary pathway:** publication integrity / HGF-Met / bone metastasis
 **Genotype/model tag:** oncology; not a WWOX-DEE model
 **Transferability:** none
@@ -12071,7 +12097,8 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Short title:** Drusco 2011 fragile-site mouse-model review
 **Identifier:** PMID 21318118 / PMCID PMC3035048 / DOI 10.1155/2011/984505
 **Date processed:** 2026-08-10
-**Status:** completed — [[paper_registry_current#PAPER 064]] (`BATCH_20260815_001`)
+**Status:** processed
+**Status note:** completed — [[paper_registry_current#PAPER 064]] (`BATCH_20260815_001`)
 **Evidence depth:** complete_fulltext_read — `FTR-20260810-21318118-01`
 **Claim links:** none
 
@@ -12079,7 +12106,8 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Short title:** Bidany-Mizrahi 2026 WWOX/p53 cutaneous SCC
 **Identifier:** PMID 41984841 / PMCID PMC13099603 / DOI 10.1073/pnas.2534844123
 **Date processed:** 2026-08-10
-**Status:** completed — [[paper_registry_current#PAPER 070]] (`BATCH_20260815_001`)
+**Status:** processed
+**Status note:** completed — [[paper_registry_current#PAPER 070]] (`BATCH_20260815_001`)
 **Evidence depth:** complete_fulltext_read — `FTR-20260810-41984841-01`
 **Claim links:** CLAIM 032
 
@@ -12087,7 +12115,8 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Short title:** Aqeilan 2009 impaired steroidogenesis
 **Identifier:** PMID 18974271 / PMCID PMC2654736 / DOI 10.1210/en.2008-1087
 **Date processed:** 2026-08-11
-**Status:** completed — [[paper_registry_current#PAPER 076]] (`BATCH_20260815_001`)
+**Status:** processed
+**Status note:** completed — [[paper_registry_current#PAPER 076]] (`BATCH_20260815_001`)
 **Evidence depth:** complete_fulltext_read — `FTR-20260811-18974271-01`
 **Claim links:** CLAIM 036
 
@@ -12095,7 +12124,8 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Short title:** Aqeilan 2007 targeted Wwox deletion
 **Identifier:** PMID 17360458 / PMCID PMC1820689 / DOI 10.1073/pnas.0609783104
 **Date processed:** 2026-08-11
-**Status:** completed — [[paper_registry_current#PAPER 078]] (`BATCH_20260815_001`)
+**Status:** processed
+**Status note:** completed — [[paper_registry_current#PAPER 078]] (`BATCH_20260815_001`)
 **Evidence depth:** complete_fulltext_read with declared SI gap — `FTR-20260811-17360458-01`
 **Claim links:** CLAIM 032 · CLAIM 036
 
@@ -12112,7 +12142,8 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Discovery window:** Aqeilan 54-PMID sweep
 **Discovery source:** orchestration dispatch 2026-09-08 / task contracts AQEILAN-FT-A/B/C-001
 **Discovery query:** Aqeilan RI free full text
-**Status:** processed — complete_fulltext_read
+**Status:** processed
+**Status note:** complete_fulltext_read
 **Evidence depth:** complete_fulltext_read — `FTR-20260909-15070730-02` (BATCH_20260909_001)
 **Registry record:** [[paper_registry_current#PAPER 081]]
 **Primary pathway:** signaling organization / routing / scaffold logic
@@ -12141,7 +12172,8 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Discovery window:** Aqeilan 54-PMID sweep
 **Discovery source:** orchestration dispatch 2026-09-08 / task contracts AQEILAN-FT-A/B/C-001
 **Discovery query:** Aqeilan RI free full text
-**Status:** processed — complete_fulltext_read
+**Status:** processed
+**Status note:** complete_fulltext_read
 **Evidence depth:** complete_fulltext_read — `FTR-20260909-18460020-01` (BATCH_20260909_001)
 **Registry record:** [[paper_registry_current#PAPER 083]]
 **Primary pathway:** oncology / TGF-beta / SMAD4
@@ -12170,7 +12202,8 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Discovery window:** Aqeilan 54-PMID sweep
 **Discovery source:** orchestration dispatch 2026-09-08 / task contracts AQEILAN-FT-A/B/C-001
 **Discovery query:** Aqeilan RI free full text
-**Status:** processed — complete_fulltext_read
+**Status:** processed
+**Status note:** complete_fulltext_read
 **Evidence depth:** complete_fulltext_read — `FTR-20260909-18674750-01` (BATCH_20260909_001)
 **Registry record:** [[paper_registry_current#PAPER 084]]
 **Primary pathway:** P5 — metabolism / lipids
@@ -12199,7 +12232,8 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Discovery window:** Aqeilan 54-PMID sweep
 **Discovery source:** orchestration dispatch 2026-09-08 / task contracts AQEILAN-FT-A/B/C-001
 **Discovery query:** Aqeilan RI free full text
-**Status:** processed — complete_fulltext_read
+**Status:** processed
+**Status note:** complete_fulltext_read
 **Evidence depth:** complete_fulltext_read — `FTR-20260909-21115974-01` (BATCH_20260909_001)
 **Registry record:** [[paper_registry_current#PAPER 086]]
 **Primary pathway:** viral oncology / NF-kB
@@ -12228,7 +12262,8 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Discovery window:** Aqeilan 54-PMID sweep
 **Discovery source:** orchestration dispatch 2026-09-08 / task contracts AQEILAN-FT-A/B/C-001
 **Discovery query:** Aqeilan RI free full text
-**Status:** processed — complete_fulltext_read
+**Status:** processed
+**Status note:** complete_fulltext_read
 **Evidence depth:** complete_fulltext_read — `FTR-20260909-25238781-01` (BATCH_20260909_001)
 **Registry record:** [[paper_registry_current#PAPER 087]]
 **Primary pathway:** fragile-site taxonomy
@@ -12257,7 +12292,8 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Discovery window:** Aqeilan 54-PMID sweep
 **Discovery source:** orchestration dispatch 2026-09-08 / task contracts AQEILAN-FT-A/B/C-001
 **Discovery query:** Aqeilan RI free full text
-**Status:** processed — complete_fulltext_read
+**Status:** processed
+**Status note:** complete_fulltext_read
 **Evidence depth:** complete_fulltext_read — `FTR-20260909-27551470-01` (BATCH_20260909_001)
 **Registry record:** [[paper_registry_current#PAPER 090]]
 **Primary pathway:** fragile-site / WWOX passive-vs-active
@@ -12286,7 +12322,8 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Discovery window:** Aqeilan 54-PMID sweep
 **Discovery source:** orchestration dispatch 2026-09-08 / task contracts AQEILAN-FT-A/B/C-001
 **Discovery query:** Aqeilan RI free full text
-**Status:** processed — complete_fulltext_read
+**Status:** processed
+**Status note:** complete_fulltext_read
 **Evidence depth:** complete_fulltext_read — `FTR-20260909-38355659-01` (BATCH_20260909_001)
 **Registry record:** [[paper_registry_current#PAPER 092]]
 **Primary pathway:** oncology / osteosarcoma
@@ -12306,7 +12343,8 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Identifier value:** PMID 42397075 / DOI 10.1093/brain/awag239
 **Short title:** Steinberg 2026 — disrupted WWOX-MYC interplay impairs neurogenesis in human brain organoids
 **Journal/source:** *Brain* 2026
-**Status:** complete — read in full, `FTR-20260810-42397075-04`; registry record [[paper_registry_current#PAPER 094]]
+**Status:** processed
+**Status note:** complete — read in full, `FTR-20260810-42397075-04`; registry record [[paper_registry_current#PAPER 094]] (status set to the registry record's value by `BATCH_20260926_LITVOCAB`)
 **Discovery window:** post-harvest; this PMID had no literature entry before BATCH_20260920_002
 **Flags:** created by `CC-20260920-EIGHT-RECORD-CLASSIFICATION-01` to give an existing complete reading the entry its PAPER record links to
 
