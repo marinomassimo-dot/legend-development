@@ -1,0 +1,646 @@
+{
+ "schema_version": 2,
+ "pmid": "18061530",
+ "doi": "10.1016/j.oraloncology.2007.08.019",
+ "receipt": "FTR-20260914-18061530-01",
+ "landing": [
+  "FTR-20260914-18061530-01",
+  "fulltext_dossiers/PMID18061530.md",
+  "CC-20260914-18061530-01"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Run inline and measured: PMC article HTML behind a reCAPTCHA interstitial under HTTP 200 for three requests and served on a 75 s back-off; Europe PMC fullTextXML 404; efetch shell refusing XML; ptpmcrender 403; manuscript PDF via pmc_pow_fetch.py."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline: the Figure 2 staining-strength finding exists only in pixels."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered inside the reading: first contact, no persisted locator for this PMID. Threshold re-checked after canon comparison."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Declined inside a blind primary read."
+  },
+  {
+   "skill": "legend-paperqa",
+   "used": false,
+   "reason": "Declined: external API key and traffic not authorised, and a RAG answer is not a reading."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 622,
+  "publications_on_gene": 6,
+  "counts_measured": "PubMed esearch 2026-09-14: corresponding author 'Gomez RS[au]' 622, with WWOX 6, with 'oral leukoplakia' 18; first author 'Pimenta FJ[au]' 21, with WWOX 4; 'De Marco L[au] AND WWOX' 5; 'Aldaz CM[au] AND WWOX' 38. Author-name counts are not disambiguated.",
+  "research_type": "mixed",
+  "output_kind": "primary_research",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Mixed: an oral pathology group with native competence in leukoplakia grading (weighed as competent histological observation) running the same nested RT-PCR and IHC protocol as its 2006 OSCC paper, with the Aldaz laboratory's antiserum. The 'early event' and 'contributes to carcinogenesis' conclusions are hypotheses from a cross-sectional n=23 series without follow-up. No disease expertise for WWOX-DEE."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "WWOX",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 708
+   },
+   {
+    "query": "WWOX AND leukoplakia",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 2
+   },
+   {
+    "query": "WWOX AND oral",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 19
+   }
+  ],
+  "note": "Field sizes, not reading coverage. WWOX AND leukoplakia is 2 records."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 43,
+  "enumeration_method": "Enumerated from the fingerprinted PMC HTML reference list: 43 entries, 41 with a PubMed link (refs 1 and 33 have none). Gene-direct by script on reference text: 14.",
+  "gene_direct_count": 14,
+  "gene_direct_refs_in_source": [
+   "16187332",
+   "10786676",
+   "11719429",
+   "16242840",
+   "16115915",
+   "16152610",
+   "11956080",
+   "14526170",
+   "16288044",
+   "16225988",
+   "15674328",
+   "15131042",
+   "15266310",
+   "15073846"
+  ],
+  "resolved": [
+   "14526170"
+  ],
+  "queued": [
+   {
+    "pmid": "16187332",
+    "queue": "not queued by this actor: routed to the orchestrator in CC-20260914-18061530-01, because this contract does not own the queue file",
+    "reason": "Thavathiru 2005, cited as a WWOX/FRA16D reference; read in this same task, receipt not yet appended."
+   },
+   {
+    "pmid": "10786676",
+    "queue": "not queued by this actor: routed to the orchestrator in CC-20260914-18061530-01, because this contract does not own the queue file",
+    "reason": "Gene-direct reference with no complete receipt in this corpus (fulltext_receipts.py status exit 1, 2026-09-14)."
+   },
+   {
+    "pmid": "11719429",
+    "queue": "not queued by this actor: routed to the orchestrator in CC-20260914-18061530-01, because this contract does not own the queue file",
+    "reason": "Gene-direct reference with no complete receipt in this corpus (fulltext_receipts.py status exit 1, 2026-09-14)."
+   },
+   {
+    "pmid": "16242840",
+    "queue": "not queued by this actor: routed to the orchestrator in CC-20260914-18061530-01, because this contract does not own the queue file",
+    "reason": "Gene-direct reference with no complete receipt in this corpus (fulltext_receipts.py status exit 1, 2026-09-14)."
+   },
+   {
+    "pmid": "16115915",
+    "queue": "not queued by this actor: routed to the orchestrator in CC-20260914-18061530-01, because this contract does not own the queue file",
+    "reason": "Lai 2005, WOX1 down-regulation by UVB in cutaneous SCC, cited for carcinogen-driven fragile-site loss."
+   },
+   {
+    "pmid": "16152610",
+    "queue": "not queued by this actor: routed to the orchestrator in CC-20260914-18061530-01, because this contract does not own the queue file",
+    "reason": "Pimenta 2006, the same group's OSCC paper whose methods and antiserum this one repeats; read in this same task, receipt not yet appended."
+   },
+   {
+    "pmid": "11956080",
+    "queue": "not queued by this actor: routed to the orchestrator in CC-20260914-18061530-01, because this contract does not own the queue file",
+    "reason": "Kuroki 2002, source of the nested primers."
+   },
+   {
+    "pmid": "16288044",
+    "queue": "not queued by this actor: routed to the orchestrator in CC-20260914-18061530-01, because this contract does not own the queue file",
+    "reason": "Gene-direct reference with no complete receipt in this corpus (fulltext_receipts.py status exit 1, 2026-09-14)."
+   },
+   {
+    "pmid": "16225988",
+    "queue": "not queued by this actor: routed to the orchestrator in CC-20260914-18061530-01, because this contract does not own the queue file",
+    "reason": "Gene-direct reference with no complete receipt in this corpus (fulltext_receipts.py status exit 1, 2026-09-14)."
+   },
+   {
+    "pmid": "15674328",
+    "queue": "not queued by this actor: routed to the orchestrator in CC-20260914-18061530-01, because this contract does not own the queue file",
+    "reason": "Gene-direct reference with no complete receipt in this corpus (fulltext_receipts.py status exit 1, 2026-09-14)."
+   },
+   {
+    "pmid": "15131042",
+    "queue": "not queued by this actor: routed to the orchestrator in CC-20260914-18061530-01, because this contract does not own the queue file",
+    "reason": "Gene-direct reference with no complete receipt in this corpus (fulltext_receipts.py status exit 1, 2026-09-14)."
+   },
+   {
+    "pmid": "15266310",
+    "queue": "not queued by this actor: routed to the orchestrator in CC-20260914-18061530-01, because this contract does not own the queue file",
+    "reason": "Gene-direct reference with no complete receipt in this corpus (fulltext_receipts.py status exit 1, 2026-09-14)."
+   },
+   {
+    "pmid": "15073846",
+    "queue": "not queued by this actor: routed to the orchestrator in CC-20260914-18061530-01, because this contract does not own the queue file",
+    "reason": "Gene-direct reference with no complete receipt in this corpus (fulltext_receipts.py status exit 1, 2026-09-14)."
+   }
+  ],
+  "resolved_depth_declaration": "RESOLVED MEANS A PERSISTED complete_fulltext_read RECEIPT (fulltext_receipts.py status --pmid, 2026-09-14) and nothing more. 1 of 14 gene-direct references resolves: 14526170 (Ludes-Meyers 2003, ref 30), the antiserum source. Two gene-direct references, 16152610 and 16187332, were read to completion in THIS task, but their receipts are not appended yet, so by the stated rule they are not counted as resolved."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Technical only: fulltext_receipts.py status --pmid for 18061530 before reading (exit 1, no events) and for each of the 41 reference PMIDs. No claim, registry, dossier or candidate content opened before the dossier froze.",
+  "hits": 1,
+  "finding": "1 of 41 referenced PMIDs carries a complete receipt (14526170)."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-09-14",
+  "route": "NCBI esummary db=pubmed retmode=json for 18061530, 2026-09-14T19:44Z",
+  "result": "pubtype Journal Article; Research Support, Non-U.S. Gov't. commentscorrections absent.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 43,
+   "references_screened": 33,
+   "references_with_doi": 33,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 4,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 10
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID18061530_Pimenta2008.html",
+   "kind": "article_text",
+   "note": "PMC article page of PMC4143237 (NIH author manuscript NIHMS222063). The request at 2026-09-14T19:45Z and two retries at 19:46Z (no User-Agent, and an identified agent) returned HTTP 200 carrying a ~21.3 kB Google reCAPTCHA interstitial, not the article; a retry after a 75 s back-off at 19:48Z with no User-Agent returned the 176223 B article, which is this file. citation_pmid 18061530 and citation_doi 10.1016/j.oraloncology.2007.08.019 from its own meta tags. Evidentiary text surface. AUTHOR MANUSCRIPT, not the Elsevier version of record. Europe PMC fullTextXML 404; efetch db=pmc an 8705 B no-download shell; Europe PMC ptpmcrender PDF HTTP 403.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4143237/",
+    "http_method": "GET",
+    "tier": "pmc_article_html",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "60f05896dc7e78e728231e7f954330bb9c4f6aadf7a6b8ee3ebef122ac62e384"
+  },
+  {
+   "path": "files/fulltext/PMID18061530_Pimenta2008.pdf",
+   "kind": "article_binary",
+   "note": "NIH author-manuscript PDF nihms-222063.pdf, 11 pages, via pmc_pow_fetch.py. Figure source only; no locator uses its text layer.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4143237/pdf/nihms-222063.pdf",
+    "http_method": "GET",
+    "tier": "pmc_pow_fetch",
+    "user_agent_policy": "identified",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "4d4d54fabe8dcbdf4294d32f44990199bb2f6ed5527641242cedcae4f4028a89"
+  },
+  {
+   "path": "files/fulltext/PMID18061530_Pimenta2008_assets/pdf_p9_x38.jpeg",
+   "kind": "figure",
+   "note": "Figure 1, native embedded grayscale JPEG 2405x2596, PDF p.9; inspected as four native tiles.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID18061530_Pimenta2008.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref) over Page.get_images(full=True); bytes written unmodified",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "99dbb2e2323ed031af89ad98fa9d45ceda8f70d876d107ad1d60c9da704f6f22"
+  },
+  {
+   "path": "files/fulltext/PMID18061530_Pimenta2008_assets/pdf_p10_x43.jpeg",
+   "kind": "figure",
+   "note": "Figure 2, native embedded JPEG 1608x389 RGB, PDF p.10; inspected whole at native scale.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID18061530_Pimenta2008.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref) over Page.get_images(full=True); bytes written unmodified",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "c47ce9956f8ae4b186fb5350d854cc22fcbd1291b33bdaf52bfcd8d84c1ba146"
+  },
+  {
+   "path": "files/fulltext/PMID18061530_Pimenta2008_assets/tile_p9_r0c0.png",
+   "kind": "figure",
+   "note": "Native tile r0c0 of Figure 1, geometry 1203x1298+0+0.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID18061530_Pimenta2008_assets/pdf_p9_x38.jpeg",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 1203x1298+0+0 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "d03f60c1a7b7330e210794b411efb6489d1eb37014343815ddf30e94535e779d"
+  },
+  {
+   "path": "files/fulltext/PMID18061530_Pimenta2008_assets/tile_p9_r0c1.png",
+   "kind": "figure",
+   "note": "Native tile r0c1 of Figure 1, geometry 1203x1298+1202+0.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID18061530_Pimenta2008_assets/pdf_p9_x38.jpeg",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 1203x1298+1202+0 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "677d86bc64867d1342f84cc28ecc6cf132f013e5a57382194663af7a1a495d0d"
+  },
+  {
+   "path": "files/fulltext/PMID18061530_Pimenta2008_assets/tile_p9_r1c0.png",
+   "kind": "figure",
+   "note": "Native tile r1c0 of Figure 1, geometry 1203x1298+0+1298.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID18061530_Pimenta2008_assets/pdf_p9_x38.jpeg",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 1203x1298+0+1298 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "fa362ea6adb2eb043f6210d2831e62a33f2382f7043b724f2cee7e81e6fae6cb"
+  },
+  {
+   "path": "files/fulltext/PMID18061530_Pimenta2008_assets/tile_p9_r1c1.png",
+   "kind": "figure",
+   "note": "Native tile r1c1 of Figure 1, geometry 1203x1298+1202+1298.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID18061530_Pimenta2008_assets/pdf_p9_x38.jpeg",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 1203x1298+1202+1298 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "9bd90c20af80a858751c4f5f21ad2207f402a224fc149ddeb5b6901ecdbe78a2"
+  },
+  {
+   "path": "files/fulltext/PMID18061530_Pimenta2008_assets/blob_nihms-222063-f0001.jpg",
+   "kind": "figure",
+   "note": "PMC CDN figure blob, 601x649. Acquired and fingerprinted; NOT the inspected surface (the PDF raster is larger).",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/4d44/4143237/23f8dbe5e507/nihms-222063-f0001.jpg",
+    "http_method": "GET",
+    "tier": "pmc_cdn_blob",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "3c34ae24b93f0730fd29b5082906f384f0d09379401627f0462d361d5a8d15fe"
+  },
+  {
+   "path": "files/fulltext/PMID18061530_Pimenta2008_assets/blob_nihms-222063-f0002.jpg",
+   "kind": "figure",
+   "note": "PMC CDN figure blob, 800x193. Acquired and fingerprinted; NOT the inspected surface (the PDF raster is larger).",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/4d44/4143237/6af214a4acfb/nihms-222063-f0002.jpg",
+    "http_method": "GET",
+    "tier": "pmc_cdn_blob",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "42d61bcef08b95f712a7559b6a42b4354c6a69d0c066ea34d75783b5a890789c"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST search EXT_ID:18061530 AND SRC:MED resultType=core, 2026-09-14: inEPMC=Y, inPMC=Y, isOpenAccess=N, nihAuthMan=Y, fullTextIdList PMC4143237; fullTextXML 404.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence.",
+  "entries": [
+   {
+    "proposition": "COHORT: 23 consecutive patients with oral leukoplakia, 14 M / 9 F, 29-67 y, 19 smokers. DATO.",
+    "snippet": "Fresh tissue samples were consecutively obtained from 23 patients (14 males and nine females; age ranged from 29 to 67 years, mean 47 years;",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18061530_Pimenta2008.html",
+    "anchor": "Materials and methods > Human tissue, sentence 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human tissue, oral leukoplakia (23 lesions) and normal oral mucosa",
+     "genotype": "somatic; no germline WWOX analysis"
+    }
+   },
+   {
+    "proposition": "CONTROLS: normal mucosa from volunteers; their NUMBER IS NOT STATED anywhere in the paper. DATO.",
+    "snippet": "Normal oral mucosa was obtained from volunteers without leukoplakia during non-neoplastic or preprosthetic surgical procedures (control samples).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18061530_Pimenta2008.html",
+    "anchor": "Materials and methods > Human tissue, sentence 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "RNA FROM MICRODISSECTED LESIONS. DATO.",
+    "snippet": "treated with DNAse (Invitrogen Life Technologies, Carlsbad, CA), after microdissection.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18061530_Pimenta2008.html",
+    "anchor": "Materials and methods > Reverse transcription-PCR analysis, sentence 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "NESTED RT-PCR as in ref 28 (two rounds of 35 cycles each, second round seeded with 1 ul of the first). DATO. As in the 2006 OSCC paper, 70 cycles on small microdissected inputs makes artefactual junction products possible, and none is excluded (INFERENZA, reader).",
+    "snippet": "The first and second amplifications were performed with nested primers as previously described.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18061530_Pimenta2008.html",
+    "anchor": "Materials and methods > Reverse transcription-PCR analysis",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "TWO PRODUCTS SEQUENCED PER CASE. DATO.",
+    "snippet": "To each case, two different amplified products were sequenced.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18061530_Pimenta2008.html",
+    "anchor": "Materials and methods > Reverse transcription-PCR analysis, last sentence",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "ANTISERUM as in ref 30 (Ludes-Meyers 2003), 140 ug/ml at 1:100. DATO.",
+    "snippet": "Primary polyclonal rabbit antiWwox antiserum (140 μg/ml) was used at a 1:100 dilution",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18061530_Pimenta2008.html",
+    "anchor": "Materials and methods > WWOX immunohistochemistry",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "IHC SCORE BY EXTENT: +1 0-50%, +2 51-75%, +3 >76%; +3 = normal. DATO. THE SAME GROUP, SAME ANTISERUM AND SAME PROTOCOL used +1 0-10%, +2 11-50%, +3 >50% for OSCC in 2006, so a '+2' here and a '+2' there are different quantities; and the scale leaves 75-76% undefined.",
+    "snippet": "Two experienced independent pathologists examined multiple fields and scored tissue sections for extent of staining, regardless of staining intensity (+1, 0–50% positive cells; +2, 51–75% positive cells; +3, greater than 76% positive cells).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18061530_Pimenta2008.html",
+    "anchor": "Materials and methods > WWOX immunohistochemistry",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "TABLE 1 FOOTNOTE repeats the thresholds. DATO.",
+    "snippet": "+1, 0–50% positive cells; +2, 51–75% positive cells; +3, >76% positive cells.",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID18061530_Pimenta2008.html",
+    "anchor": "Table 1 footnote b",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "TRANSCRIPT ALTERATION: 6/23 (26%). DATO.",
+    "snippet": "six of 23 cases (26%) showed altered or absent expression of WWOX gene transcription.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18061530_Pimenta2008.html",
+    "anchor": "Results > Aberrant WWOX gene transcripts, sentence 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human tissue, oral leukoplakia (23 lesions) and normal oral mucosa",
+     "genotype": "somatic; no germline WWOX analysis"
+    }
+   },
+   {
+    "proposition": "OL2 PRODUCT: partial exon 2, exons 3-6 lost, partial exon 7. DATO. The junction joins two exon interiors, not exon boundaries, so it is not a canonical splice product; genomic DNA was not analysed in this paper (INFERENZA, reader).",
+    "snippet": "Sequence analyses of the RT-PCR products showed partial loss of exon 2, total loss of exons 3–6 and partial loss of exon 7 (#OL2) (Fig. 1b)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18061530_Pimenta2008.html",
+    "anchor": "Results > Aberrant WWOX gene transcripts, sentence 4",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human tissue, oral leukoplakia (23 lesions) and normal oral mucosa",
+     "genotype": "somatic; no germline WWOX analysis"
+    }
+   },
+   {
+    "proposition": "OL23: two aberrant products, one internal partial-exon deletion (partial exon 1 to partial exon 8) and one clean exon 6-8 skip (Delta6-8). DATO.",
+    "snippet": "Interestingly, two transcript variants were present in lesion #OL23, one with partial loss of exon 1, total loss of exons 2–7 and partial loss of 8 in one (Fig. 1e) and the other with loss of exons 6–8 (Fig. 1f).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18061530_Pimenta2008.html",
+    "anchor": "Results > Aberrant WWOX gene transcripts",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human tissue, oral leukoplakia (23 lesions) and normal oral mucosa",
+     "genotype": "somatic; no germline WWOX analysis"
+    }
+   },
+   {
+    "proposition": "OL16: abnormal band not identified (insufficient material). DATO; this case is counted as 'altered' without a sequence.",
+    "snippet": "In case #OL16 we detected a band of abnormal size and we sequenced the exons 1–6 and part of exon 7 but the aberrant transcript was not possible detected because of minute sample amount.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18061530_Pimenta2008.html",
+    "anchor": "Results > Aberrant WWOX gene transcripts",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "FIGURE 1, NATIVE TILES (raster 2405x2596). Gel lanes N, OL2, OL14, OL18, OL16, OL22, OL23: every lesion lane except OL22 carries the ~1200 bp normal band; extra bands in OL2, OL14, OL18 and OL16 (one each) and OL23 (two); OL22 blank with GAPDH present. Schematics b-f: OL2 1-2*-7*-8-9; OL14 1*-7*-8-9; OL18 1-2*-8*-9; OL23(<) 1*-8*-9; OL23(>) 1-2-3-4-5-9. Consistent with the Results text.",
+    "snippet": "Visual attestation of Figure 1: lanes N OL2 OL14 OL18 OL16 OL22 OL23 with normal band in all but OL22; one extra band in OL2 OL14 OL18 OL16 and two in OL23; schematics as listed.",
+    "surface": "figure",
+    "artifact": [
+     "files/fulltext/PMID18061530_Pimenta2008_assets/tile_p9_r0c0.png",
+     "files/fulltext/PMID18061530_Pimenta2008_assets/tile_p9_r0c1.png",
+     "files/fulltext/PMID18061530_Pimenta2008_assets/tile_p9_r1c0.png",
+     "files/fulltext/PMID18061530_Pimenta2008_assets/tile_p9_r1c1.png"
+    ],
+    "anchor": "Figure 1 (PDF p.9), native tiles",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human tissue, oral leukoplakia (23 lesions) and normal oral mucosa",
+     "genotype": "somatic; no germline WWOX analysis"
+    }
+   },
+   {
+    "proposition": "IHC REDUCED in 6/23 (26%): five +2, one +1. DATO.",
+    "snippet": "Of the 23 OLs, six lesions (26%) showed a reduced expression to Wwox.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18061530_Pimenta2008.html",
+    "anchor": "Results > Expression of Wwox protein, sentence 4",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human tissue, oral leukoplakia (23 lesions) and normal oral mucosa",
+     "genotype": "somatic; no germline WWOX analysis"
+    }
+   },
+   {
+    "proposition": "CAPTION 2A: normal mucosa with '(strong)' cytoplasmic staining. DATO as printed.",
+    "snippet": "(a) Normal oral mucosa showing (strong) cytoplasmic staining in all layers of the epithelium (score +3).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18061530_Pimenta2008.html",
+    "anchor": "Figure 2 legend, panel a",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "FIGURE 2, NATIVE PIXELS (1608x389, three panels). a normal mucosa: diffuse PALE brown cytoplasmic staining - moderate at most, not strong; b #OL10: similar pale-brown; c #OL2: epithelium unstained with a few brown elongated cells between keratinocytes. Scoring is by extent so intensity does not enter the score, but the caption's '(strong)' is not what the panel shows.",
+    "snippet": "Visual attestation of Figure 2: panel a pale brown diffuse cytoplasmic epithelial staining; panel b similar; panel c unstained epithelium with scattered brown elongated cells.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID18061530_Pimenta2008_assets/pdf_p10_x43.jpeg",
+    "anchor": "Figure 2 (PDF p.10), native raster 1608x389",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "qualifies_needle": "(strong) cytoplasmic staining",
+    "experimental_context": {
+     "system": "human tissue, oral leukoplakia (23 lesions) and normal oral mucosa",
+     "genotype": "somatic; no germline WWOX analysis"
+    },
+    "qualifies": "entries[14]"
+   },
+   {
+    "proposition": "COMBINED: 35% of lesions altered; 4/6 transcript-altered lesions have reduced protein, called 'significant' without a test. DATO for the counts.",
+    "snippet": "the results obtained by RT-PCR and immunohistochemistry showed that 35% of the lesions presented mRNA and/or protein alteration and the majority of lesions (4/6) with altered transcripts had a significant reduction in the expression of Wwox protein (Table 1).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18061530_Pimenta2008.html",
+    "anchor": "Results > Expression of Wwox protein, last sentence",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human tissue, oral leukoplakia (23 lesions) and normal oral mucosa",
+     "genotype": "somatic; no germline WWOX analysis"
+    }
+   },
+   {
+    "proposition": "DYSPLASIA: altered in 5/11 moderate-severe, 3/8 mild, 0/4 no dysplasia. DATO; counts reproduce exactly from Table 1. No test is reported; recomputed two-sided Fisher any-dysplasia vs none p=0.26, moderate-severe vs mild-or-none p=0.40. The 'none of the four without dysplasia' rests on n=4.",
+    "snippet": "While five out of the 11 samples with moderate or severe dysplasia showed WWOX alteration, three out of eight lesions with mild dysplasia and none of the four cases without dysplasia presented this alteration.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18061530_Pimenta2008.html",
+    "anchor": "Results > Correlation between the presence of dysplasia and WWOX alteration",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human tissue, oral leukoplakia (23 lesions) and normal oral mucosa",
+     "genotype": "somatic; no germline WWOX analysis"
+    }
+   },
+   {
+    "proposition": "OL22: no transcript, IHC 3 (normal), severe dysplasia. DATO.",
+    "snippet": "#OL21 N – 3 1 #OL22 A – 3 4 #OL23 N and aberrant",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID18061530_Pimenta2008.html",
+    "anchor": "Table 1, rows #OL21-#OL23 (the #OL22 row is the evidence)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "OL18: aberrant product, IHC 3 (normal), moderate dysplasia. DATO.",
+    "snippet": "#OL18 N and aberrant Exons 2d – 8d deletion 3 3",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID18061530_Pimenta2008.html",
+    "anchor": "Table 1, row #OL18",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "DISCORDANCE acknowledged: OL22 normal protein with no transcript. DATO.",
+    "snippet": "One them (#OL22) showed normal protein expression but no transcript was detected by RTPCR.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18061530_Pimenta2008.html",
+    "anchor": "Discussion, paragraph 4",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "AUTHORS' LIMIT: non-epithelial contamination possible despite microdissection. DATO as their limitation.",
+    "snippet": "In addition, despite we have performed microdissection, the possibility of contamination with non-epithelial cells should not be discarded.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18061530_Pimenta2008.html",
+    "anchor": "Discussion, paragraph 4",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "8/23 (35%) altered at mRNA and/or protein. DATO.",
+    "snippet": "In this study, we demonstrated an altered WWOX mRNA and/or protein expression in eight of 23 samples (35%) of OL.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18061530_Pimenta2008.html",
+    "anchor": "Discussion, paragraph 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human tissue, oral leukoplakia (23 lesions) and normal oral mucosa",
+     "genotype": "somatic; no germline WWOX analysis"
+    }
+   },
+   {
+    "proposition": "SPLICING-ERROR RATIONALE: 'very long transcripts such as WWOX' (ref 30). The WWOX GENE spans a very long genomic region; its mature coding transcript is not long (the paper itself amplifies a 1284 bp product). A conflation of gene length with transcript length, in the authors' text.",
+    "snippet": "Furthermore, the splicing abnormalities would more often affect genes that have very long transcripts such as WWOX.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18061530_Pimenta2008.html",
+    "anchor": "Discussion, paragraph 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "THE HEADLINE SENTENCE says 'with WWOX mRNA and/or protein expression' where 'alteration' is meant; the same wording is in the abstract. DATO as printed.",
+    "snippet": "all lesions with WWOX mRNA and/or protein expression showed histological evidence of dysplasia and none of the cases without dysplasia presented this alteration.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18061530_Pimenta2008.html",
+    "anchor": "Discussion, paragraph 5",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "'EARLY GENETIC ALTERATION ... could contribute to oral carcinogenesis': cross-sectional, no follow-up to malignant transformation, no genomic DNA analysis. IPOTESI stated as a result.",
+    "snippet": "These results show that the WWOX gene alteration is an early genetic alteration that could contribute to oral carcinogenesis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18061530_Pimenta2008.html",
+    "anchor": "Discussion, last paragraph",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   }
+  ]
+ }
+}

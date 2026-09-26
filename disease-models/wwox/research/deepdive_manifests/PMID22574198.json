@@ -1,0 +1,951 @@
+{
+ "schema_version": 2,
+ "pmid": "22574198",
+ "doi": "10.1371/journal.pone.0036618",
+ "receipt": "FTR-20260914-22574198-01",
+ "landing": [
+  "FTR-20260914-22574198-01",
+  "fulltext_dossiers/PMID22574198.md",
+  "CC-20260914-22574198-01"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Run inline, tiers measured 2026-09-14: Europe PMC fullTextXML 200 (text); PMC /pdf/ and /bin/ behind the proof-of-work page, recovered with pmc_pow_fetch.py; journals.plos.org original TIFFs 200 (largest figures, chosen) and supplementary files 200 (byte-identical to PMC); PMC CDN blobs 200 (430-603 px wide, not used)."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline: the survival-curve arithmetic, the Cre-toxicity share of the branching defect and the unquantified Western are pixel findings; spawning agents is forbidden by this contract."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not run inside the reading: first contact, no persisted locator for this PMID. Whether the candidate touches a consolidated baseline claim is decided after the blind pass, in CC-20260914-22574198-01."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Declined as a separate pass: the model-relevant leads (unexplained BK5-Cre lethality, heterozygote survival, pStat3/Wnt5a) are carried as typed locators and routed in the candidate."
+  },
+  {
+   "skill": "legend-paperqa",
+   "used": false,
+   "reason": "Declined: needs an external API key and traffic not authorised for this task, and a RAG answer is not a reading."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 138,
+  "publications_on_gene": 38,
+  "counts_measured": "PubMed esearch 2026-09-14. Senior/corresponding author 'Aldaz CM[au]' 138, 'Aldaz CM[au] AND WWOX' 38. First author 'Ferguson BW[au]' 8, on WWOX 3.",
+  "research_type": "experimental_lab",
+  "output_kind": "primary_research",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": true,
+  "weighting": "A founding WWOX laboratory working in its native competence (mouse mammary carcinogenesis, the floxed allele it generated). Observations (survival, whole-mount morphometry, IHC, arrays) are weighed above the interpretations (WWOX not a classical tumour suppressor; Stat3 as the Wnt5a route). Several supporting results are 'data not shown', and statistics rest on 3-5 animals per group. The group does not work on WWOX-related neurological disease and did not examine the nervous system."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "WWOX",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 708
+   },
+   {
+    "query": "Wwox AND conditional AND (knockout OR deletion)",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 8
+   },
+   {
+    "query": "Wwox AND (Cre OR floxed)",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 8
+   },
+   {
+    "query": "WWOX AND mammary AND (mouse OR mice)",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 34
+   }
+  ],
+  "note": "Conditional Wwox deletion is a near-empty intersection (8 records by either query), which makes the unexplained BK5-Cre lethality a scarce datum. Field sizes, not reading coverage."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 48,
+  "enumeration_method": "48 <ref> elements in the fingerprinted Europe PMC XML (mixed-citation text, no pub-id). Gene-direct = the reference text names WWOX, Wwox or FRA16D (script): 26. PMIDs resolved 2026-09-14 by PubMed esearch on the printed DOI [aid] (22 refs) or, where no DOI is printed, on the exact title [ti] (4 refs); each returned exactly one PMID.",
+  "gene_direct_count": 26,
+  "gene_direct_refs_in_source": [
+   "10786676",
+   "10861292",
+   "11013073",
+   "17458891",
+   "17163164",
+   "11979549",
+   "14526170",
+   "15064722",
+   "16438931",
+   "15070730",
+   "16061658",
+   "15548692",
+   "11719429",
+   "16223882",
+   "16818616",
+   "19458077",
+   "17360458",
+   "19936220",
+   "15692750",
+   "19130459",
+   "17909041",
+   "20530675",
+   "21499303",
+   "17575124",
+   "19465938",
+   "19609013"
+  ],
+  "resolved": [
+   "14526170",
+   "15064722",
+   "15070730",
+   "16223882",
+   "17360458",
+   "19936220",
+   "15692750",
+   "20530675",
+   "17575124"
+  ],
+  "queued": [],
+  "resolved_depth_declaration": "RESOLVED MEANS A PERSISTED complete_fulltext_read RECEIPT, measured with fulltext_receipts.py status --pmid on 2026-09-14. 9 of 26 resolve, including the floxed-allele paper (19936220) and both prior null-mouse papers (17360458 Aqeilan 2007; the EIIA-Cre data are ref 19). The IHC antibody ref 14 (11719429) and the Abdeen 2011 heterozygote paper (21499303) the Discussion disputes are NOT read. 17 unresolved references are debt routed in CC-20260914-22574198-01; this contract does not own the queue."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Technical only: fulltext_receipts.py status --pmid for 22574198 before reading (exit 1, no events) and for the 26 gene-direct reference PMIDs. No registry, claim, dossier or candidate content opened before the dossier froze.",
+  "hits": 9,
+  "finding": "9 of 26 gene-direct references carry a complete receipt. The paper itself had no receipt of any depth."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-09-14",
+  "route": "NCBI esummary db=pubmed retmode=json for 22574198",
+  "result": "pubtype Journal Article; Research Support, N.I.H., Extramural. commentscorrections absent: no linked erratum, expression of concern or retraction.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [
+    {
+     "citing_relation": "citation only, Introduction background - NOT a reagent, method or dataset. Ref 15 (Fabbri 2005) is one of four references [14]-[17] cited for suppressed in vivo tumorigenicity after ectopic WWOX overexpression. No mouse, reagent, assay or statistic in this paper depends on it; the IHC antibody is ref 14.",
+     "doi": "10.1073/pnas.0505485102",
+     "nature": "Expression of concern",
+     "reason_verbatim": "Concerns/Issues about Data;Duplication of/in Image;Error in Image;Investigation by Company/Institution;Original Data and/or Images not Provided and/or not Available;",
+     "retraction_date": "4/3/2017 0:00",
+     "retraction_pmid": "28373548",
+     "verdict": "FLAGGED_EXPRESSION_OF_CONCERN"
+    }
+   ],
+   "noted": [],
+   "paper_verdict": "FLAGGED_EXPRESSION_OF_CONCERN",
+   "reference_source": "cache",
+   "references_declared": 48,
+   "references_screened": 42,
+   "references_with_doi": 42,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 4,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 6
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID22574198_Ferguson2012.xml",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML of PMC3344920, HTTP 200, 118751 B. article-id pmid 22574198, doi 10.1371/journal.pone.0036618, title and seven contrib surnames (Ferguson, Gao, Kil, Lee, Benavides, Abba, Aldaz) read from the artefact; NCBI esummary agrees (PLoS One 2012;7(5):e36618). Evidentiary text surface for body locators.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3344920/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_fulltextxml",
+    "user_agent_policy": "identified",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "ce0dd1d4efd9bdebe1690967d5562362e641fe1596fb1c1f593255e79c0f6786"
+  },
+  {
+   "path": "files/fulltext/PMID22574198_Ferguson2012.pdf",
+   "kind": "article_binary",
+   "note": "PMC PDF via pmc_pow_fetch.py, 10 pages; byte-identical (same SHA-256) to the journals.plos.org printable PDF. Not the inspected figure surface: its rasters (664x794 to 1259x870) are smaller than the PLoS original TIFFs. Font screen UNDECIDED.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3344920/pdf/pone.0036618.pdf",
+    "http_method": "GET",
+    "tier": "pmc_pow_fetch",
+    "user_agent_policy": "identified",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "57275a500de42d54712ce94e2e81a8f8cc6cb3f68846847969177a05c47de197"
+  },
+  {
+   "path": "files/fulltext/PMID22574198_Ferguson2012_assets/g001.tif",
+   "kind": "figure",
+   "note": "PLoS original TIFF of Figure 1, the largest served (size=original). Source of the inspected PNG.",
+   "acquisition_recipe": {
+    "resolved_url": "https://journals.plos.org/plosone/article/figure/image?size=original&id=10.1371/journal.pone.0036618.g001",
+    "http_method": "GET",
+    "tier": "publisher_original_figure",
+    "user_agent_policy": "identified",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "cdf54cb430ce0874266a5efb6e555f055c47c74594a0545b8e99901cb842f7c7"
+  },
+  {
+   "path": "files/fulltext/PMID22574198_Ferguson2012_assets/g001.png",
+   "kind": "figure",
+   "note": "Figure 1, lossless PNG of the original TIFF, 1068x1278, inspected at native scale.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID22574198_Ferguson2012_assets/g001.tif",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src.tif> <out.png> (lossless, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "69d2a23fb229e76f5e32d041ed2d13c94b2f9a80df01e7a6664bc247b62a5b28"
+  },
+  {
+   "path": "files/fulltext/PMID22574198_Ferguson2012_assets/g002.tif",
+   "kind": "figure",
+   "note": "PLoS original TIFF of Figure 2, the largest served (size=original). Source of the inspected PNG.",
+   "acquisition_recipe": {
+    "resolved_url": "https://journals.plos.org/plosone/article/figure/image?size=original&id=10.1371/journal.pone.0036618.g002",
+    "http_method": "GET",
+    "tier": "publisher_original_figure",
+    "user_agent_policy": "identified",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "331066472db12284cbf2e13afa73c405da42ca05c914cacfe2c5dde44a9f1568"
+  },
+  {
+   "path": "files/fulltext/PMID22574198_Ferguson2012_assets/g002.png",
+   "kind": "figure",
+   "note": "Figure 2, lossless PNG of the original TIFF, 996x794, inspected at native scale.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID22574198_Ferguson2012_assets/g002.tif",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src.tif> <out.png> (lossless, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "178582934510853b16f536184f9b880468a5d3de96de0285e74bc673135c15ef"
+  },
+  {
+   "path": "files/fulltext/PMID22574198_Ferguson2012_assets/g003.tif",
+   "kind": "figure",
+   "note": "PLoS original TIFF of Figure 3, the largest served (size=original). Source of the inspected PNG.",
+   "acquisition_recipe": {
+    "resolved_url": "https://journals.plos.org/plosone/article/figure/image?size=original&id=10.1371/journal.pone.0036618.g003",
+    "http_method": "GET",
+    "tier": "publisher_original_figure",
+    "user_agent_policy": "identified",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "e8415fa7832d2281b4fa7262b1ce359981a52b9ddad8deb81b95f357feb2a47a"
+  },
+  {
+   "path": "files/fulltext/PMID22574198_Ferguson2012_assets/g003.png",
+   "kind": "figure",
+   "note": "Figure 3, lossless PNG of the original TIFF, 1345x1051, inspected at native scale.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID22574198_Ferguson2012_assets/g003.tif",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src.tif> <out.png> (lossless, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "8f43c8d44a90b17608398976319acd91866fe9f98e4ded0c0e8034b019fbc902"
+  },
+  {
+   "path": "files/fulltext/PMID22574198_Ferguson2012_assets/g004.tif",
+   "kind": "figure",
+   "note": "PLoS original TIFF of Figure 4, the largest served (size=original). Source of the inspected PNG.",
+   "acquisition_recipe": {
+    "resolved_url": "https://journals.plos.org/plosone/article/figure/image?size=original&id=10.1371/journal.pone.0036618.g004",
+    "http_method": "GET",
+    "tier": "publisher_original_figure",
+    "user_agent_policy": "identified",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "e2fdc2a5dfc2e06da80b40f321e107769ecbccefb6f4a42bfdd3d9cb3dad932e"
+  },
+  {
+   "path": "files/fulltext/PMID22574198_Ferguson2012_assets/g004.png",
+   "kind": "figure",
+   "note": "Figure 4, lossless PNG of the original TIFF, 2127x1470, inspected at native scale.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID22574198_Ferguson2012_assets/g004.tif",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src.tif> <out.png> (lossless, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "384cdc446c6121b807968a9ba54f3f7915236f6381790fe16ad802a927c05c45"
+  },
+  {
+   "path": "files/fulltext/PMID22574198_Ferguson2012_assets/g005.tif",
+   "kind": "figure",
+   "note": "PLoS original TIFF of Figure 5, the largest served (size=original). Source of the inspected PNG.",
+   "acquisition_recipe": {
+    "resolved_url": "https://journals.plos.org/plosone/article/figure/image?size=original&id=10.1371/journal.pone.0036618.g005",
+    "http_method": "GET",
+    "tier": "publisher_original_figure",
+    "user_agent_policy": "identified",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "3045e2309f35d217802e9428278e2845abd71a94156a81c9285675f4046bbfd0"
+  },
+  {
+   "path": "files/fulltext/PMID22574198_Ferguson2012_assets/g005.png",
+   "kind": "figure",
+   "note": "Figure 5, lossless PNG of the original TIFF, 1469x601, inspected at native scale.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID22574198_Ferguson2012_assets/g005.tif",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src.tif> <out.png> (lossless, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "b897dc273d720e3eba684888bce07cb6e9266084477bd4e51bb08043c22e80e9"
+  },
+  {
+   "path": "files/fulltext/PMID22574198_Ferguson2012_assets/g006.tif",
+   "kind": "figure",
+   "note": "PLoS original TIFF of Figure 6, the largest served (size=original). Source of the inspected PNG.",
+   "acquisition_recipe": {
+    "resolved_url": "https://journals.plos.org/plosone/article/figure/image?size=original&id=10.1371/journal.pone.0036618.g006",
+    "http_method": "GET",
+    "tier": "publisher_original_figure",
+    "user_agent_policy": "identified",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "7c77c86d2252b221969132b90a94dc5fc93dc07a74babbe830b7b5675b354ecc"
+  },
+  {
+   "path": "files/fulltext/PMID22574198_Ferguson2012_assets/g006.png",
+   "kind": "figure",
+   "note": "Figure 6, lossless PNG of the original TIFF, 1346x991, inspected at native scale.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID22574198_Ferguson2012_assets/g006.tif",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src.tif> <out.png> (lossless, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "9d6f77c8fc4dad0a49b5cdfba23d5e390b0f85681ac92a2bdf85c62612bdbf97"
+  },
+  {
+   "path": "files/fulltext/PMID22574198_Ferguson2012_assets/s001.docx",
+   "kind": "supplement_text",
+   "note": "Figure S1 container. PMC bin via pmc_pow_fetch.py; byte-identical to the PLoS supplementary route.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/3344920/bin/pone.0036618.s001.docx",
+    "http_method": "GET",
+    "tier": "pmc_pow_fetch",
+    "user_agent_policy": "identified",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "741e1d1ace1b8e3a488e6acbed02514877629494dbfb6285cfd6e35163128380"
+  },
+  {
+   "path": "files/fulltext/PMID22574198_Ferguson2012_assets/s002.docx",
+   "kind": "supplement_text",
+   "note": "Figure S2 container. PMC bin via pmc_pow_fetch.py; byte-identical to the PLoS route.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/3344920/bin/pone.0036618.s002.docx",
+    "http_method": "GET",
+    "tier": "pmc_pow_fetch",
+    "user_agent_policy": "identified",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "e46090b18181b574f258def380d247bd6b8d06dcb5d5d21f6ddbd5f078550d6d"
+  },
+  {
+   "path": "files/fulltext/PMID22574198_Ferguson2012_assets/s003.xls",
+   "kind": "supplement_binary",
+   "note": "Table S1, BIFF .xls, one sheet '0.01_& FC>2', 914 rows (913 probes + header) x 20 columns. PMC bin via pmc_pow_fetch.py; byte-identical to the PLoS route. Not a verifiable text surface itself; its deterministic text derivative is declared below. No locator names this file.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/3344920/bin/pone.0036618.s003.xls",
+    "http_method": "GET",
+    "tier": "pmc_pow_fetch",
+    "user_agent_policy": "identified",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "fba6ac547787f66ffa65f93cbe885d3545d04fc4551ee099528ad3378966b89c"
+  },
+  {
+   "path": "files/fulltext/PMID22574198_Ferguson2012_assets/s003_xls.txt",
+   "kind": "supplement_text",
+   "note": "Deterministic text derivative of Table S1: '## sheet: <name>' then each row with str() cell values joined by TAB. Suspect-surface screen CLEAN 2026-09-14.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID22574198_Ferguson2012_assets/s003.xls",
+    "extractor": {
+     "name": "xlrd",
+     "version": "2.0.2",
+     "call": "open_workbook; per sheet, row_values(r) -> str(cell)",
+     "join": "TAB"
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "304bb3070ed04a44e427e2ecbef04bb383529300098c103b48dafcd9ec7395c4"
+  },
+  {
+   "path": "files/fulltext/PMID22574198_Ferguson2012_assets/s001_image1.png",
+   "kind": "figure",
+   "note": "Figure S1 image extracted unmodified from s001.docx (word/media/image1.png), 1850x880, inspected at native scale.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID22574198_Ferguson2012_assets/s001.docx",
+    "extractor": {
+     "name": "python-zipfile",
+     "version": "stdlib",
+     "call": "ZipFile.read('word/media/image1.png'), bytes unmodified",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "de8c06a05631c681feacc8100ebbb2b38122d84142eecdaf0b28720f49d7cb1e"
+  },
+  {
+   "path": "files/fulltext/PMID22574198_Ferguson2012_assets/s002_image1.tiff",
+   "kind": "figure",
+   "note": "Figure S2 image extracted unmodified from s002.docx (word/media/image1.tiff).",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID22574198_Ferguson2012_assets/s002.docx",
+    "extractor": {
+     "name": "python-zipfile",
+     "version": "stdlib",
+     "call": "ZipFile.read('word/media/image1.tiff'), bytes unmodified",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "7ae3513cf2d544218827a9c45b0d4108f59a5ed5c6d637888eef21c93c1990cb"
+  },
+  {
+   "path": "files/fulltext/PMID22574198_Ferguson2012_assets/s002_image1.png",
+   "kind": "figure",
+   "note": "Figure S2 lossless PNG, 1050x840, inspected at native scale.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID22574198_Ferguson2012_assets/s002_image1.tiff",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src.tiff> <out.png>",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "9d0c1eb2c0f215623d430ef35ad71cd9d927262d3abc1134a636ac8b11e29ba6"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST search EXT_ID:22574198 AND SRC:MED resultType=core, 2026-09-14: inEPMC=Y, inPMC=Y, isOpenAccess=Y, license cc by, fullTextIdList PMC3344920, hasSuppl=Y.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; the abstract's haploinsufficiency and Stat3 statements are carried by body, figure and supplement locators.",
+  "entries": [
+   {
+    "proposition": "ALLELE: exon 1 of Wwox is floxed (this group's allele, ref 19). DATO. Downstream exons stay in the genome after deletion.",
+    "snippet": "mice harboring a conditional Wwox allele in which exon 1 was flanked by loxP sites",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22574198_Ferguson2012.xml",
+    "anchor": "Introduction, paragraph 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "PRIOR, CITED NOT NEW: the group's EIIA-Cre full knockout had metabolic defects, growth retardation and death by 3 weeks. DATO about ref 19; background only.",
+    "snippet": "we generated full Wwox KO mice and observed that these mice displayed severe metabolic defects, growth retardation and all mice died by 3 weeks of age",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22574198_Ferguson2012.xml",
+    "anchor": "Introduction, paragraph 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "DRIVER: BK5 promoter active in utero from E13.5 in epithelial precursors (cited ref 24). DATO about the citation. Where else BK5-Cre recombines was not mapped here: no reporter, no tissue survey of deletion (searched Methods and Results).",
+    "snippet": "The BK5 promoter is activated in utero (E13.5) in epithelial precursor cells [24].",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22574198_Ferguson2012.xml",
+    "anchor": "Results > Assessment of two conditional KO models, paragraph 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, BK5-Cre Wwox conditional knockout (mixed 129SV/C57Bl/6)"
+    }
+   },
+   {
+    "proposition": "BK5-Cre Wwox KO LETHALITY: first death day 68, none alive after day 117, n = 22. DATO.",
+    "snippet": "The youngest animal died at 68 days of age and no BK5 KO mouse survived longer that 117 days of age (0% survival, n = 22).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22574198_Ferguson2012.xml",
+    "anchor": "Results > Long-term follow up BK5-Cre model, paragraph 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, BK5-Cre Wwox conditional knockout (mixed 129SV/C57Bl/6)"
+    }
+   },
+   {
+    "proposition": "CAUSE OF DEATH UNKNOWN, AND WHAT WAS NOT EXAMINED. Histopathology, haematology and blood chemistry found no cause. DATO. No brain histology, neurological examination, EEG, seizure observation or behaviour is described anywhere in the paper (searched brain, neur, seizure, CNS, behav: zero hits). This is absence of assessment, not evidence of absence.",
+    "snippet": "We performed comprehensive histopathological, hematological and blood chemistry analyses on these BK5-Cre Wwox KO mice before dead and could not determine a reason for the relatively sudden deaths.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22574198_Ferguson2012.xml",
+    "anchor": "Results > Long-term follow up BK5-Cre model, paragraph 1, last sentence",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, BK5-Cre Wwox conditional knockout (mixed 129SV/C57Bl/6)"
+    }
+   },
+   {
+    "proposition": "HETEROZYGOTES: BK5-Cre(+); Wwox+/flox survive 100%, n = 41. DATO for the plotted window (Figure S1 runs to about 118 days).",
+    "snippet": "loss of one Wwox allele in the BK5-Cre(+); Wwox+/flox heterozygous mice had no effect on survival (100% survival, n = 41, Figure S1)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22574198_Ferguson2012.xml",
+    "anchor": "Results > Long-term follow up BK5-Cre model, paragraph 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, BK5-Cre Wwox conditional knockout (mixed 129SV/C57Bl/6)"
+    }
+   },
+   {
+    "proposition": "TEXT: BK5 KO mean lifespan 115 days. DATO as printed.",
+    "snippet": "We observed no tumor formation in any of the BK5 KO mammary glands during their relatively short lifespan (mean = 115 days).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22574198_Ferguson2012.xml",
+    "anchor": "Results > Long-term follow up BK5-Cre model, paragraph 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, BK5-Cre Wwox conditional knockout (mixed 129SV/C57Bl/6)"
+    }
+   },
+   {
+    "proposition": "FIGURE S1, NATIVE PIXELS - THE MEAN CANNOT BE 115 DAYS. The red KO curve steps down from about 68 to about 117 days and crosses 50% near day 100. Arithmetic: with one death at 68 and none after 117, the largest possible mean for n = 22 is (68 + 21 x 117)/22 = 114.8, reachable only if the other 21 all died on day 117, which the staircase excludes; the median is about 100. Also on the panel: Cre(-) controls n = 13, a number the text never gives; all curves stop at about 118 days, so the plotted 100% heterozygote survival covers the KO window only, not the 'over a year' tumour follow-up.",
+    "snippet": "Visual attestation of Figure S1: red BK5-Cre(+) Wwox flox/flox curve n=22 descending from about 68 to about 117 days and crossing 50% near 100 days; blue Cre(-) flox/flox n=13 and green Cre(+) +/flox n=41 flat at 100% to about 118 days.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID22574198_Ferguson2012_assets/s001_image1.png",
+    "anchor": "Figure S1 (s001.docx image1.png, 1850x880)",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, BK5-Cre Wwox conditional knockout (mixed 129SV/C57Bl/6)"
+    },
+    "contradicts": "entries[6]",
+    "contradicts_needle": "mean = 115 days"
+   },
+   {
+    "proposition": "FIGURE S1 LEGEND, supplement surface. DATO.",
+    "snippet": "Kaplan-Meier survival curve of mice with BK5-Cre mediated Wwox ablation",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID22574198_Ferguson2012_assets/s001.docx",
+    "anchor": "Figure S1 legend (s001.docx)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, BK5-Cre Wwox conditional knockout (mixed 129SV/C57Bl/6)"
+    }
+   },
+   {
+    "proposition": "HETEROZYGOTE TUMOUR FOLLOW-UP beyond a year: no tumours. DATO as stated; no numbers, curve or pathology table for that cohort (searched).",
+    "snippet": "none of the BK5-Cre(+); Wwox+/flox heterozygous mice develop tumors even after over a year of follow up",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22574198_Ferguson2012.xml",
+    "anchor": "Results > Long-term follow up BK5-Cre model, paragraph 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, BK5-Cre Wwox conditional knockout (mixed 129SV/C57Bl/6)"
+    }
+   },
+   {
+    "proposition": "BK5 KO FERTILITY AND LACTATION: survived weaning, fertile, females lactated. DATO as stated; no litter data.",
+    "snippet": "males and females survived weaning, were fertile and females were able to lactate",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22574198_Ferguson2012.xml",
+    "anchor": "Results > Long-term follow up BK5-Cre model, paragraph 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, BK5-Cre Wwox conditional knockout (mixed 129SV/C57Bl/6)"
+    }
+   },
+   {
+    "proposition": "MMTV-Cre: 60 KO and 23 WT followed to 1.4 years, no survival difference. DATO as stated; the survival data are not shown and no test is named.",
+    "snippet": "for up to 1.4 years and observed no statistical difference in survival between the two groups",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22574198_Ferguson2012.xml",
+    "anchor": "Results > Long-term follow up MMTV-Cre model, paragraph 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, MMTV-Cre line D Wwox conditional knockout (mixed 129SV/C57Bl/6)"
+    }
+   },
+   {
+    "proposition": "SCOPE OF 'NO TUMOUR IN ANY TISSUE UP TO 1.4 YEARS'. DATO as wording. INFERENZA on scope: BK5 KO mice lived at most 117 days, so 1.4 years covers only the MMTV model, and no systematic multi-organ necropsy of MMTV mice is described (the salivary gland is named).",
+    "snippet": "we found no evidence of tumor formation in the mammary gland or any other tissue by either of the two conditional KO approaches utilized",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22574198_Ferguson2012.xml",
+    "anchor": "Discussion, paragraph 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, BK5-Cre and MMTV-Cre Wwox conditional knockouts"
+    }
+   },
+   {
+    "proposition": "AUTHOR CONCLUSION: Wwox loss is not sufficient for tumour formation. DATO as wording; the authors' INFERENZA, bounded by two tissue-restricted models, a mixed background and their own caveat below.",
+    "snippet": "Our studies clearly indicate that loss of Wwox expression is not sufficient for tumor formation.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22574198_Ferguson2012.xml",
+    "anchor": "Discussion, paragraph 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, BK5-Cre and MMTV-Cre Wwox conditional knockouts"
+    }
+   },
+   {
+    "proposition": "AUTHORS DISPUTE PRIOR HAPLOINSUFFICIENCY-TUMORIGENESIS REPORTS (refs 18, 29-31). DATO as wording. The disagreement is mammary, tumour-directed and on a mixed background; the authors themselves concede the C3H-background result cannot be ruled out.",
+    "snippet": "our findings are in clear disagreement with previous speculation suggesting that Wwox haploinsufficiency is tumorigenic",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22574198_Ferguson2012.xml",
+    "anchor": "Discussion, paragraph 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, BK5-Cre and MMTV-Cre Wwox conditional knockouts"
+    }
+   },
+   {
+    "proposition": "AUTHORS' OWN LIMITATION: mixed 129SV/C57Bl/6 background may mask phenotypes. DATO.",
+    "snippet": "There is also a possibility that genetic background may play a role in masking some mammary phenotypic effects of Wwox ablation since our studies were performed in a mixed 129SV/C57Bl/6 genetic background.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22574198_Ferguson2012.xml",
+    "anchor": "Discussion, paragraph 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "DELETION EFFICIENCY TEXT: Wwox largely absent from BK5 KO mammary epithelium. DATO as stated.",
+    "snippet": "this expression was largely absent in BK5 KO mice (Figures 1 A and B)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22574198_Ferguson2012.xml",
+    "anchor": "Results > Assessment of two conditional KO models, paragraph 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, BK5-Cre Wwox conditional knockout (mixed 129SV/C57Bl/6)"
+    }
+   },
+   {
+    "proposition": "FIGURE 1, NATIVE PIXELS. A, C, E (WT) strong brown cytoplasmic epithelial staining; B and F (KO) epithelium unstained with blue nuclei; D (P18.5 BK5 KO) faint residual brown in some alveolar structures. Agrees with 'largely absent'. Antibody: rabbit anti-Wwox of ref 14 at 1:50.",
+    "snippet": "Visual attestation of Figure 1: WT panels A C E strong brown cytoplasmic staining of ducts and alveoli; KO panels B and F unstained epithelium; KO panel D faint residual brown in some alveoli.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID22574198_Ferguson2012_assets/g001.png",
+    "anchor": "Figure 1 A-F (original TIFF as PNG, 1068x1278)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, BK5-Cre Wwox conditional knockout (mixed 129SV/C57Bl/6)"
+    }
+   },
+   {
+    "proposition": "qPCR DESIGN: 3 WT and 3 KO mice per group, each run in technical triplicate. DATO.",
+    "snippet": "Samples from each mouse were run individually in triplicate to assess Wwox expression.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22574198_Ferguson2012.xml",
+    "anchor": "Figure 2 legend",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, BK5-Cre Wwox KO mammary epithelial organoids"
+    }
+   },
+   {
+    "proposition": "FIGURE 2, NATIVE PIXELS. Box plots (median, box, whiskers) with p<0.001 in each panel on 3 mice per group; a box-and-whisker display and p<0.001 from 3 vs 3 animals suggest the technical triplicates were pooled as observations (INFERENZA; the test is not named). KO medians are about 13-15% of WT (A about 0.0003 vs 0.002; B about 0.00017 vs 0.0012), i.e. residual Wwox signal in KO organoids, whose source (unrecombined epithelium, stroma) is not addressed.",
+    "snippet": "Visual attestation of Figure 2: box plots of Wwox expression 2^-dCt, A 8-week WT median about 0.002 and KO about 0.0003, B P18.5 WT median about 0.0012 and KO about 0.00017, each panel labelled p<0.001.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID22574198_Ferguson2012_assets/g002.png",
+    "anchor": "Figure 2 A-B (996x794)",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, BK5-Cre Wwox KO mammary epithelial organoids"
+    },
+    "qualifies": "entries[18]",
+    "qualifies_needle": "run individually in triplicate"
+   },
+   {
+    "proposition": "CRE TOXICITY ADMITTED: Cre-expressing control glands already show impaired branching. DATO.",
+    "snippet": "We observed some impairment in branching morphogenesis in the control glands expressing Cre recombinase when compared with the Cre negative counterparts.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22574198_Ferguson2012.xml",
+    "anchor": "Results > Aberrant mammary branching, paragraph 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, BK5-Cre Wwox conditional knockout (mixed 129SV/C57Bl/6)"
+    }
+   },
+   {
+    "proposition": "FIGURE 3D-E, NATIVE PIXELS - HOW MUCH OF THE DEFECT IS CRE. D: Cre(-) WT about 5.45, Cre(+) WT about 4.05, Wwox KO about 2.35 branches/mm, SD bars, n = 4/4/5. Cre alone removes about 1.4 of the total 3.1 (about 45%); the Wwox-attributable part is KO vs Cre(+) WT (p = 0.018, per legend). E (MMTV, 24 weeks): WT about 6.8 vs KO about 3.8, matching the text; there the Cre(+) Wwox+/+ controls are pooled with Cre(-), so Cre toxicity cannot be separated in that model. A-C whole mounts are single representative fields, C an 'extreme case'.",
+    "snippet": "Visual attestation of Figure 3D-E: D bars Cre(-) WT about 5.45, Cre(+) WT about 4.05, Wwox KO about 2.35 branches per mm; E Wwox WT about 6.8 and Wwox KO about 3.8 branches per mm.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID22574198_Ferguson2012_assets/g003.png",
+    "anchor": "Figure 3 A-E (1345x1051)",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, BK5-Cre Wwox conditional knockout (mixed 129SV/C57Bl/6)"
+    },
+    "qualifies": "entries[20]",
+    "qualifies_needle": "control glands expressing Cre recombinase"
+   },
+   {
+    "proposition": "ARRAY COUNTS: 913 probes, 777 up and 136 down in BK5 KO epithelium (n = 3 vs 3; array WT are Cre-negative). DATO.",
+    "snippet": "Among the 913 probes, 777 were up-modulated and 136 were down-modulated in the mammary gland epithelium derived from the Wwox KO mice model",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22574198_Ferguson2012.xml",
+    "anchor": "Results > Global gene expression changes",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, BK5-Cre Wwox KO mammary epithelial organoids"
+    }
+   },
+   {
+    "proposition": "TABLE S1, PARSED: 913 probe rows (matches 913). Wwox itself appears as two probes, fold change -3.23 (p 2.2e-06) and -2.05 (p 0.0012) - a 2-3-fold array reduction against about 85% by qPCR; a 3' probe can still detect transcript from an exon-1-deleted locus (IPOTESI, not tested). DATO for the values, computed.",
+    "snippet": "-1.68989196209462 -3.22632542068942 2.19965208082737e-06 -13.1509599874233 NM_019573 Mm.440420 Wwox WW domain-containing oxidoreductase",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID22574198_Ferguson2012_assets/s003_xls.txt",
+    "anchor": "Table S1 row 1416334_at (s003.xls, derived text)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, BK5-Cre Wwox KO mammary epithelial organoids"
+    }
+   },
+   {
+    "proposition": "TEXT: Stat3 up 2.4-fold at p = 0.01, with IL6st and Jak1. DATO as printed.",
+    "snippet": "Jak1 was upregulated 3.04 fold (p = 0.003) and Stat3 was upregulated 2.4 fold (p = 0.01)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22574198_Ferguson2012.xml",
+    "anchor": "Results > Validation of gene expression changes, paragraph 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, BK5-Cre Wwox KO mammary epithelial organoids"
+    }
+   },
+   {
+    "proposition": "TABLE S1, PARSED - THE LIST EXCEEDS ITS OWN CUTOFF. The Stat3 probe has p = 0.0102, above the stated p<0.01; 19 of 913 listed probes have p > 0.01 (largest 0.0110). Minor: values up to 0.011 were presumably admitted by rounding. DATO computed from the supplement.",
+    "snippet": "1.27991945934463 2.42825420400431 0.0102290992864512 3.42388112473066 AI325183 Mm.249934 Stat3 signal transducer and activator of transcription 3",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID22574198_Ferguson2012_assets/s003_xls.txt",
+    "anchor": "Table S1 row for Stat3 (s003.xls, derived text)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, BK5-Cre Wwox KO mammary epithelial organoids"
+    }
+   },
+   {
+    "proposition": "TEXT: P18.5 Wnt5a low in 2 of 3 WT, increased in all KO. DATO as printed; semi-quantitative RT-PCR, no densitometry.",
+    "snippet": "found that 2 out of 3 WT mammary glands displayed low levels of Wnt5a expression while all Wwox-KO mammary glands tested exhibited increased levels of Wnt5a mRNA",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22574198_Ferguson2012.xml",
+    "anchor": "Results > Validation of gene expression changes, paragraph 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, BK5-Cre Wwox KO mammary epithelial organoids"
+    }
+   },
+   {
+    "proposition": "FIGURE 5, NATIVE PIXELS. 8-week: WT1 strong, WT2 moderate, WT3 faint; KO1-3 strong. P18.5: WT4 faint, WT5 absent, WT6 faint-moderate; KO4-6 faint-moderate, about as strong as WT6 - the P18.5 increase is modest and rests on WT4-5. Wwox lanes confirm loss (faint residue in KO). Only the 24-cycle gel is shown. Array animals are labelled KO5-7 (Figure 4A) while these are KO1-6, so whether validation used independent animals is not stated.",
+    "snippet": "Visual attestation of Figure 5: Wnt5a row WT1 strong, WT2 moderate, WT3 faint, WT4 faint, WT5 absent, WT6 faint-moderate, KO1-KO3 strong, KO4-KO6 faint-moderate; Wwox row bands in WT only; Gapdh even.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID22574198_Ferguson2012_assets/g005.png",
+    "anchor": "Figure 5 (1469x601)",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, BK5-Cre Wwox KO mammary epithelial organoids"
+    },
+    "qualifies": "entries[26]",
+    "qualifies_needle": "2 out of 3 WT mammary glands"
+   },
+   {
+    "proposition": "CYCLE NUMBERS DIFFER: the legend says 24, 26, 28 and 32 cycles; Methods say 24, 28 and 32. DATO, both printed.",
+    "snippet": "Each PCR reaction was performed at 24, 26, 28 and 32 cycles to ensure that reaction was in linear range.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22574198_Ferguson2012.xml",
+    "anchor": "Figure 5 legend",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "TEXT: significant pStat3 increase by Western (P18.5 organoids). DATO as printed.",
+    "snippet": "we indeed found a significant increase in phospho-Stat3 expression in the KO samples (Figure 6D)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22574198_Ferguson2012.xml",
+    "anchor": "Results > Validation of gene expression changes, paragraph 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, BK5-Cre Wwox KO mammary epithelial organoids"
+    }
+   },
+   {
+    "proposition": "FIGURE 6, NATIVE PIXELS. C (IHC): about 33% pStat3-positive cells in WT vs about 65% in KO, n = 3 each. D (Western): pStat3 doublet visibly stronger in KO4-6, but no densitometry and no statistic exist for this blot, so 'significant' has no displayed basis; total Stat3 is also higher in KO4, and pStat3 is not normalised to Stat3; Wwox is faint but visible in KO lanes.",
+    "snippet": "Visual attestation of Figure 6: C bars WT about 33 and KO about 65 percent pStat3-positive cells; D pStat3 doublet stronger in KO4 KO5 KO6 than WT4 WT5 WT6, Stat3 strongest in KO4, faint Wwox in KO lanes, even actin.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID22574198_Ferguson2012_assets/g006.png",
+    "anchor": "Figure 6 A-D (1346x991)",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, BK5-Cre Wwox KO mammary epithelial organoids"
+    },
+    "qualifies": "entries[29]",
+    "qualifies_needle": "significant increase in phospho-Stat3 expression"
+   },
+   {
+    "proposition": "NEGATIVE, DATA NOT SHOWN: beta-catenin cytoplasmic/membranous only, no WT-KO difference; no canonical Wnt targets up; no proliferation change. DATO as stated.",
+    "snippet": "We found that all protein was localized to cytoplasm and cell membrane, no nuclear localization was noted and no differences were observed between BK5 WT and KO mammary samples",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22574198_Ferguson2012.xml",
+    "anchor": "Results > Validation of gene expression changes, paragraph 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, BK5-Cre Wwox conditional knockout (mixed 129SV/C57Bl/6)"
+    }
+   },
+   {
+    "proposition": "TRANSPLANT FOLLOW-UP: 9 additional months in Results. DATO.",
+    "snippet": "We followed the SCID recipient mice for 9 additional months and did not observe tumor formation in any of the recipient mice.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22574198_Ferguson2012.xml",
+    "anchor": "Results > Long-term follow up BK5-Cre model, paragraph 5",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "TRANSPLANT FOLLOW-UP: 10 months in Methods (and recipients 4 weeks old vs '4-5 week' in Results). DATO, both printed.",
+    "snippet": "Recipient mice were monitored for 10 months and transplanted MFPs were dissected.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22574198_Ferguson2012.xml",
+    "anchor": "Materials and Methods > Mammary gland transplantation",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "REAGENTS: Western anti-Wwox is cited to ref 7 at 1:2000, while the IHC anti-Wwox is cited to ref 14 at 1:50. DATO; whether these are one antibody is not stated.",
+    "snippet": "Primary antibodies used were: rabbit anti-Wwox (1∶2000) [7]",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22574198_Ferguson2012.xml",
+    "anchor": "Materials and Methods > Western blot analysis",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "DATA DEPOSIT: array data in GEO GSE36665. DATO.",
+    "snippet": "Raw datasets have been submitted to NCBI GEO database with accession number: GSE36665.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22574198_Ferguson2012.xml",
+    "anchor": "Materials and Methods > Microarray data processing",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "FIGURE S2 LEGEND, supplement surface: K5 limited to the basal layer. DATO as legend.",
+    "snippet": "K5 staining is limited to the basal layer of every epithelial structure as in normal wild type mammary gland",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID22574198_Ferguson2012_assets/s002.docx",
+    "anchor": "Figure S2 legend (s002.docx)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, BK5-Cre Wwox conditional knockout (mixed 129SV/C57Bl/6)"
+    }
+   },
+   {
+    "proposition": "FIGURE S2, NATIVE PIXELS. Three ducts with a continuous brown K5-positive outer (basal/myoepithelial) cell layer and unstained luminal cells; agrees with the legend. One field, one KO gland, no WT comparison panel.",
+    "snippet": "Visual attestation of Figure S2: three small ducts in fat, each ringed by a continuous brown K5-positive outer cell layer around unstained luminal cells with blue nuclei.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID22574198_Ferguson2012_assets/s002_image1.png",
+    "anchor": "Figure S2 (s002.docx image, 1050x840)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, BK5-Cre Wwox conditional knockout (mixed 129SV/C57Bl/6)"
+    }
+   },
+   {
+    "proposition": "DEPENDENCY RELATION: ref 15 (Expression of Concern) is one of four references cited for suppressed in vivo tumorigenicity after WWOX overexpression. DATO; citation only.",
+    "snippet": "The putative role of WWOX as a tumor suppressor has been suggested by various studies observing suppressed in vivo tumorigenicity of human cancer cells when WWOX was ectopically overexpressed",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID22574198_Ferguson2012.xml",
+    "anchor": "Introduction, paragraph 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   }
+  ]
+ }
+}

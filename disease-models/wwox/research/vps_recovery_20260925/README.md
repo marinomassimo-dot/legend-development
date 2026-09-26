@@ -158,3 +158,29 @@ Each row's `recover_with` is the exact command, `git show 06ee25a:<original_path
 | Task records (recovered in G2, withdrawn: they cite commits that exist only in the backup) | 75 |
 | Task records not recovered (mandate-continuity package) | 2 |
 | Verifications | 22 |
+
+## 6 · G4.3 — full-text queue renumbering (VPS → `main`)
+
+All 17 queue entries the VPS created collide with different entries on `main` (which runs to `FT-174`), and none shares its subject paper with a `main` entry, so each became a new entry, in order. Every reference to them in the recovered dossiers, manifests, commit candidates and queue entries was rewritten; each new entry says in its own text which VPS number it was.
+
+| VPS entry | `main` entry |
+|---|---|
+| `FT-097` | `FT-175` |
+| `FT-098` | `FT-176` |
+| `FT-099` | `FT-177` |
+| `FT-100` | `FT-178` |
+| `FT-101` | `FT-179` |
+| `FT-102` | `FT-180` |
+| `FT-103` | `FT-181` |
+| `FT-104` | `FT-182` |
+| `FT-105` | `FT-183` |
+| `FT-106` | `FT-184` |
+| `FT-108` | `FT-185` |
+| `FT-109` | `FT-186` |
+| `FT-110` | `FT-187` |
+| `FT-111` | `FT-188` |
+| `FT-112` | `FT-189` |
+| `FT-113` | `FT-190` |
+| `FT-114` | `FT-191` |
+
+Also applied in G4.3: the VPS updates to six existing entries `main` never changed (`FT-010`, `FT-038`, `FT-045`, `FT-057`, `FT-079`, `FT-085`); `FT-096` was left as it is, both sides having added the same separator. In the recovered live files, `PAPER 093`–`096`, VPS `WM_v4.x` and VPS batch ids are annotated in place `(VPS numbering, PMID …)` / `(VPS batch, never on main)`, and inline paths or links to records kept in the backup became `git show 06ee25a:<path>` commands.

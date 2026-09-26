@@ -1,0 +1,437 @@
+{
+ "schema_version": 2,
+ "pmid": "25024751",
+ "doi": "10.1186/1868-7083-6-13",
+ "receipt": "FTR-20260914-25024751-01",
+ "landing": [
+  "FTR-20260914-25024751-01",
+  "fulltext_dossiers/PMID25024751.md",
+  "CC-20260914-25024751-01"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Run inline, tiers measured 2026-09-14: Europe PMC fullTextXML 200 (text and tables); PMC /pdf/ behind the proof-of-work page, recovered with pmc_pow_fetch.py (vector figure, no raster); publisher PDF 200 (same vector figure, chosen); PMC CDN blob 600x435 JPEG (not used). The article names no supplementary material (Europe PMC hasSuppl=N)."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline: the per-patient WWOX values were recovered by counting vector markers in the PDF, which a dossier-only subagent cannot do; spawning agents is forbidden by this contract."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not run inside the reading: first contact, no persisted locator for this PMID. Whether the candidate touches a consolidated baseline claim is decided after the blind pass, in CC-20260914-25024751-01."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Declined as a separate pass: a demethylating drug raising tumour WWOX IHC in a phase I trial is recorded as a typed locator; transferring it to a germline loss-of-function disease is an ESPANSIONE the candidate names and does not pursue."
+  },
+  {
+   "skill": "legend-paperqa",
+   "used": false,
+   "reason": "Declined: needs an external API key and traffic not authorised for this task, and a RAG answer is not a reading."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 668,
+  "publications_on_gene": 1,
+  "counts_measured": "PubMed esearch 2026-09-14. Last author 'Wistuba II[au]' 668, 'Wistuba II[au] AND WWOX' 1 (the counts declared above). First author 'Stewart DJ[au]' is ambiguous; 'Stewart DJ[au] AND Issa JP[au]' 5. WWOX contributor 'Aldaz CM[au]' 138, on WWOX 38 (his contribution is stated as 'contributed to WWOX studies'; the WWOX antibody used is a commercial Abcam reagent).",
+  "research_type": "descriptive_clinical",
+  "output_kind": "primary_research",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "A clinical-trials and thoracic-pathology group (MD Anderson) running a correlative IHC study inside a phase I trial; native competence in trial conduct and tissue scoring, not in WWOX biology. Observations (paired IHC scores, counts) are weighed as descriptive; the interpretation that decitabine restores tumour suppressor expression through demethylation is not tested (no gene-specific methylation measured), so it weighs well below the scores. No neurological work."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "WWOX",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 708
+   },
+   {
+    "query": "WWOX AND decitabine",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 6
+   },
+   {
+    "query": "WWOX AND (5-aza OR azacytidine OR decitabine OR demethylat*)",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 18
+   }
+  ],
+  "note": "WWOX with decitabine is a near-empty intersection (6), and this is the only paired human in-vivo tumour measurement among them that this reading has seen. Field sizes, not reading coverage."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 51,
+  "enumeration_method": "51 <ref> elements in the fingerprinted Europe PMC XML, all 51 carrying a pub-id pmid in the artefact. Gene-direct = article-title names WWOX or FRA16D (script, full title): 11.",
+  "gene_direct_count": 11,
+  "gene_direct_refs_in_source": [
+   "17200365",
+   "15692750",
+   "23525648",
+   "23765596",
+   "17458891",
+   "16941225",
+   "15982416",
+   "22248280",
+   "22213016",
+   "22842668",
+   "20480411"
+  ],
+  "resolved": [
+   "15692750",
+   "16941225",
+   "15982416"
+  ],
+  "queued": [],
+  "resolved_depth_declaration": "RESOLVED MEANS A PERSISTED complete_fulltext_read RECEIPT, measured with fulltext_receipts.py status --pmid on 2026-09-14. 3 of 11 resolve (the Aldaz normal-tissue, breast and ovarian IHC papers). The references carrying the methylation premise (22213016, 22842668, 20480411) and the decitabine-restoration premise (17200365) are NOT read. The 8 unresolved are debt routed in CC-20260914-25024751-01; this contract does not own the queue."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Technical only: fulltext_receipts.py status --pmid for 25024751 before reading (exit 1, no events) and for the 11 gene-direct reference PMIDs. No registry, claim, dossier or candidate content opened before the dossier froze.",
+  "hits": 3,
+  "finding": "3 of 11 gene-direct references carry a complete receipt. The paper itself had no receipt of any depth."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-09-14",
+  "route": "NCBI esummary db=pubmed retmode=json for 25024751",
+  "result": "pubtype Journal Article. commentscorrections absent: no linked erratum, expression of concern or retraction.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 51,
+   "references_screened": 48,
+   "references_with_doi": 48,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 4,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID25024751_Stewart2014.xml",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML of PMC4094901, HTTP 200, 106181 B. article-id pmid 25024751, doi 10.1186/1868-7083-6-13, title and nine contrib surnames (Stewart, Nunez, Jelinek, Hong, Gupta, Aldaz, Issa, Kurzrock, Wistuba) read from the artefact; NCBI esummary agrees (Clin Epigenetics 2014;6(1):13). Evidentiary text surface for body and table locators (all four tables are XML tables).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4094901/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_fulltextxml",
+    "user_agent_policy": "identified",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "c5ef82fca9f01b2ea5f9644ae5f85431471f135182820ce61b26be44e3ed1666"
+  },
+  {
+   "path": "files/fulltext/PMID25024751_Stewart2014.pdf",
+   "kind": "article_binary",
+   "note": "Publisher PDF (Clinical Epigenetics / Springer), 7 pages. Figure 1 is VECTOR (no raster on page 4; 175 drawing objects), so the PMC CDN blob (600x435 JPEG) is a lossy rendering and the PDF is the reference surface. Markers were counted from the vector drawing commands: 17 red circles and 17 blue squares in the WWOX panel, y converted with the axis tick label positions. Font screen UNDECIDED.",
+   "acquisition_recipe": {
+    "resolved_url": "https://clinicalepigeneticsjournal.biomedcentral.com/counter/pdf/10.1186/1868-7083-6-13.pdf",
+    "http_method": "GET",
+    "tier": "publisher_pdf",
+    "user_agent_policy": "identified",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "889fc8c61dc42f5ed77450cf36def7048257ce5ad472875bbd572a8ae096644a"
+  },
+  {
+   "path": "files/fulltext/PMID25024751_Stewart2014_assets/page4_300dpi.png",
+   "kind": "figure",
+   "note": "PDF page 4 rendered at 300 dpi (2481x3308): Table 2 and Figure 1 (four dot plots), inspected whole.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID25024751_Stewart2014.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "doc[3].get_pixmap(dpi=300).save(<out>)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "d71f9b1f0f7f6fe836026c996e6be9d44a3fbd858cbee1868aca3ab97bc4cb85"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST search EXT_ID:25024751 AND SRC:MED resultType=core, 2026-09-14: inEPMC=Y, inPMC=Y, isOpenAccess=Y, license cc by, fullTextIdList PMC4094901, hasSuppl=N.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; the abstract's 3 of 6, 7 of 17 and P = 0.0547 are carried by body, table and figure locators.",
+  "entries": [
+   {
+    "proposition": "COHORT: 25 of 31 phase I patients had tissue for at least one IHC assessment of at least one gene. DATO. Per-gene n therefore varies and the WWOX analysis rests on a subset (n = 17 with pre-score <=150).",
+    "snippet": "Twenty-five of 31 patients who were initially entered on our decitabine phase I clinical trial [8] had sufficient tissue to permit at least one IHC assessment",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25024751_Stewart2014.xml",
+    "anchor": "Results > Patient characteristics",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human refractory solid tumours and lymphomas, paired biopsies in a decitabine phase I trial"
+    }
+   },
+   {
+    "proposition": "HETEROGENEITY: eleven tumour types across 25 patients (counts sum to 25, computed); median five prior regimens. DATO. No per-type WWOX analysis.",
+    "snippet": "Tumor types included cancers of the breast (four patients), kidney (three), head and neck (three, including one adenocystic carcinoma)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25024751_Stewart2014.xml",
+    "anchor": "Results > Patient characteristics",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human refractory solid tumours and lymphomas, paired biopsies in a decitabine phase I trial"
+    }
+   },
+   {
+    "proposition": "DOSING: five dose levels on two schedules, pooled in every analysis. DATO. No dose-response for IHC is reported.",
+    "snippet": "Decitabine doses of 2.5, 5, or 10 mg/m2/day on days 1 to 5 and 8 to 12 each 4-week cycle or 15 or 20 mg/m2/day on days 1 to 5 each cycle were administered over 1 hour",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25024751_Stewart2014.xml",
+    "anchor": "Methods, paragraph 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human refractory solid tumours and lymphomas, paired biopsies in a decitabine phase I trial"
+    }
+   },
+   {
+    "proposition": "TIMING: second biopsy on day 12 of cycle 1. DATO. Whether the same lesion was re-biopsied is not stated (searched), so pre/post differences include sampling variation.",
+    "snippet": "Tumor biopsies were performed pre-decitabine and on day 12, cycle 1 [8].",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25024751_Stewart2014.xml",
+    "anchor": "Methods, paragraph 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human refractory solid tumours and lymphomas, paired biopsies in a decitabine phase I trial"
+    }
+   },
+   {
+    "proposition": "REAGENT: WWOX IHC used a commercial Abcam antibody at 1:100, not the Aldaz polyclonal; no catalogue number or clone is given. DATO from Table 4 caption; the WWOX row reads Abcam, Cambridge, MA, USA, 1:100.",
+    "snippet": "Antibodies used for immunohistochemistry",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID25024751_Stewart2014.xml",
+    "anchor": "Table 4 caption",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "SCORING: one pathologist (MIN), intensity 0-3 x percent, 0-300. DATO. No second scorer, no agreement statistic, no statement of blinding to pre/post status (searched blind, kappa, observer: zero hits).",
+    "snippet": "Participating pathologist MIN scored staining intensity as 0 to 3+ and generated IHC scores of 0 to 300 by multiplying the percent of tumor cells staining by the staining intensity.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25024751_Stewart2014.xml",
+    "anchor": "Methods, paragraph 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "WWOX RESULT: a 'trend' to higher post-decitabine WWOX in low-expressing tumours, P = 0.0547 - not significant at 0.05. DATO.",
+    "snippet": "with a trend to higher expression post-decitabine for WWOX (P = 0.0547) and FUS1 (P = 0.0726)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25024751_Stewart2014.xml",
+    "anchor": "Results > Decitabine effect on IHC scores, sentence 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human refractory solid tumours and lymphomas, paired biopsies in a decitabine phase I trial"
+    }
+   },
+   {
+    "proposition": "TABLE 2 TITLE: medians and counts of increase / no change / decrease for pre-score <=150. DATO. The WWOX row reads n 17, median 30 pre and 100 post, P 0.05, 7 increased, 8 unchanged, 2 decreased. The table rounds 0.0547 to 0.05, which reads as significant; the text and figure give 0.0547.",
+    "snippet": "Median tumor suppressor gene encoded protein scores post- versus pre-decitabine for patients with pre-decitabine scores",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID25024751_Stewart2014.xml",
+    "anchor": "Table 2 caption and WWOX row",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human refractory solid tumours and lymphomas, paired biopsies in a decitabine phase I trial"
+    }
+   },
+   {
+    "proposition": "FIGURE 1 LEGEND: WWOX medians 100 vs 30, P = 0.0547 by Wilcoxon signed rank, called a 'strong trend'. DATO as legend.",
+    "snippet": "with a strong trend towards an increase in WWOX (post- versus pre-decitabine median scores 100 versus 30, P = 0.0547)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25024751_Stewart2014.xml",
+    "anchor": "Figure 1 legend",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human refractory solid tumours and lymphomas, paired biopsies in a decitabine phase I trial"
+    }
+   },
+   {
+    "proposition": "FIGURE 1 WWOX PANEL, VECTOR MARKERS COUNTED - THE NUMBERS RECONCILE. 17 red circles (pre): 0 x6, 10, 30, 30, 50, 80, 100 x5, 130; median = 30. 17 blue squares (post): 0 x5, 30, 40, 80, 100 x5, 130, 200, 200, 220; median = 100. Six zeros pre matches '3 of 6' converting; five zeros post = 3 non-converters + 2 decreases, matching Table 2 (2 decreased). The pairing of points is not drawn, so which patients changed cannot be read. A 17 vs 17 marker count was needed because overlapping markers made a visual count give 16. PREMISE: DATO from the PDF drawing commands (y from tick-label positions, marker-centre offset about +2 units).",
+    "snippet": "Visual attestation of Figure 1 WWOX panel: seventeen pre markers at 0 six times, 10, 30 twice, 50, 80, 100 five times, 130; seventeen post markers at 0 five times, 30, 40, 80, 100 five times, 130, 200 twice, 220; median lines at 30 and 100.",
+    "surface": "figure",
+    "artifact": [
+     "files/fulltext/PMID25024751_Stewart2014_assets/page4_300dpi.png",
+     "files/fulltext/PMID25024751_Stewart2014.pdf"
+    ],
+    "anchor": "Figure 1, WWOX panel (PDF p.4, vector; 300-dpi render)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human refractory solid tumours and lymphomas, paired biopsies in a decitabine phase I trial"
+    }
+   },
+   {
+    "proposition": "CONVERSION: negative-to-positive WWOX staining in 3 of 6 initially negative tumours. DATO. No control arm, so conversion cannot be separated from biopsy sampling.",
+    "snippet": "there was conversion to positive staining post-decitabine for FHIT in 1 of 1 patients, for WWOX in 3 of 6 patients",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25024751_Stewart2014.xml",
+    "anchor": "Results > Decitabine effect on IHC scores, paragraph 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human refractory solid tumours and lymphomas, paired biopsies in a decitabine phase I trial"
+    }
+   },
+   {
+    "proposition": "POOLED ANALYSIS: FHIT, WWOX and FUS1 together, medians 60 vs 100, P = 0.0002. DATO. The 37 observations come from overlapping patients (at most 25), so they are not independent and the Wilcoxon P overstates the evidence (INFERENZA); the pooled result is driven by FHIT (8 of 8 increased).",
+    "snippet": "If FHIT, WWOX and FUS1 were considered together then, for cases with initial scores ≤150, the median scores pre- and post-decitabine were 60 and 100, respectively (P = 0.0002).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25024751_Stewart2014.xml",
+    "anchor": "Results > Decitabine effect on IHC scores, last sentence",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human refractory solid tumours and lymphomas, paired biopsies in a decitabine phase I trial"
+    }
+   },
+   {
+    "proposition": "NULL: WWOX score does not correlate with LINE-1 methylation (Table 1: n 44, Spearman r 0.09, P 0.57). DATO from the table as read.",
+    "snippet": "Correlation of tumor suppressor gene encoded proteins with LINE-1 methylation",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID25024751_Stewart2014.xml",
+    "anchor": "Table 1 caption and WWOX row",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human refractory solid tumours and lymphomas, paired biopsies in a decitabine phase I trial"
+    }
+   },
+   {
+    "proposition": "NULL: WWOX score change does not track LINE-1 methylation change (Table 3: n 19, Spearman r -0.04, P 0.87). DATO from the table as read. LINE-1 is a global surrogate, not the WWOX promoter.",
+    "snippet": "Change in tumor suppressor gene encoded protein score versus percentage change in LINE-1 methylation with decitabine",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID25024751_Stewart2014.xml",
+    "anchor": "Table 3 caption and WWOX row",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human refractory solid tumours and lymphomas, paired biopsies in a decitabine phase I trial"
+    }
+   },
+   {
+    "proposition": "NULL, DATA NOT SHOWN: WWOX score not associated with time since last therapy. DATO as stated.",
+    "snippet": "while there was no association of FHIT and WWOX scores with time from last treatment",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25024751_Stewart2014.xml",
+    "anchor": "Results > IHC scores versus time from last therapy",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human refractory solid tumours and lymphomas, paired biopsies in a decitabine phase I trial"
+    }
+   },
+   {
+    "proposition": "AUTHORS' LIMITATION: gene-specific promoter methylation was NOT measured - the mechanism is assumed, and deletion or mutation may explain low expression. DATO.",
+    "snippet": "although we did not have sufficient residual tissue to permit us to assess this in our study",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25024751_Stewart2014.xml",
+    "anchor": "Discussion, paragraph 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human refractory solid tumours and lymphomas, paired biopsies in a decitabine phase I trial"
+    }
+   },
+   {
+    "proposition": "AUTHORS' LIMITATION: whether IHC increases track reduced gene methylation was not assessable. DATO.",
+    "snippet": "We also did not have sufficient tissue available to assess whether increase in tumor suppressor gene protein expression with decitabine was associated with reduction in tumor suppressor gene DNA methylation.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25024751_Stewart2014.xml",
+    "anchor": "Discussion, paragraph 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human refractory solid tumours and lymphomas, paired biopsies in a decitabine phase I trial"
+    }
+   },
+   {
+    "proposition": "AUTHORS' LIMITATION: low patient numbers limited power; non-parametric tests; no multiplicity correction mentioned (searched). DATO.",
+    "snippet": "While low patient numbers limited statistical power, GraphPad Prism 5.0 (GraphPad Software, San Diego, CA) was used to assess non-parametric two-tailed statistics",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25024751_Stewart2014.xml",
+    "anchor": "Methods, last paragraph",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "TUMOUR RESPONSE: 5 of 15 evaluable with any shrinkage (0.2% to 33.4%). DATO. Three of the five shrinkages are under 5%, below any response criterion.",
+    "snippet": "Of these, 10 patients had immediate tumor growth, while five patients had a reduction in tumor diameter of 0.2%, 2%, 4.7%, 22.1% and 33.4%, respectively.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25024751_Stewart2014.xml",
+    "anchor": "Results > IHC score changes and tumor regression",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human refractory solid tumours and lymphomas, paired biopsies in a decitabine phase I trial"
+    }
+   },
+   {
+    "proposition": "NULL: simultaneous increase in three genes vs regression, P = 0.25. DATO.",
+    "snippet": "who had an increase in expression of three tumor suppressor genes (P = 0.25 by Fisher’s exact test)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25024751_Stewart2014.xml",
+    "anchor": "Results > IHC score changes and tumor regression",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human refractory solid tumours and lymphomas, paired biopsies in a decitabine phase I trial"
+    }
+   },
+   {
+    "proposition": "CITED PREMISE (NOT TESTED HERE): WWOX downregulation by promoter methylation in several cancers, and decitabine may restore WWOX (refs 3, 4, 25-27). DATO about the citations.",
+    "snippet": "WWOX downregulation has been noted to occur via promoter methylation in various malignancies [25-27], and decitabine may restore WWOX expression [3,4].",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25024751_Stewart2014.xml",
+    "anchor": "Background, paragraph 5",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "ROLES: all IHC by one pathologist; the Aldaz contribution is to 'WWOX studies'. DATO.",
+    "snippet": "MIN performed all immunohistochemistry on tumor samples.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25024751_Stewart2014.xml",
+    "anchor": "Authors' contributions",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   }
+  ]
+ }
+}

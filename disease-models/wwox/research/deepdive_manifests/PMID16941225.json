@@ -1,0 +1,1202 @@
+{
+ "schema_version": 2,
+ "pmid": "16941225",
+ "doi": "10.1007/s10735-006-9046-5",
+ "receipt": "FTR-20260913-16941225-01",
+ "landing": [
+  "FTR-20260913-16941225-01",
+  "full_text_queue_current.md#FT-079",
+  "PMID16941225.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline. The reading turns on inspecting eighteen photomicrographs and one blot against the sentences that cite them; a read-only subagent working from a dossier cannot look at the pixels, and the blind-pass firewall forbids handing it the laboratory's records."
+  },
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Its tiers were run inline with literal responses recorded in retrieval_manifest.jsonl; the proof-of-work route (pmc_pow_fetch.py) won after nine refusals."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Declined at M3 because no R4 trigger fires in the blind pass: no persisted locator exists for this paper to contradict, and no baseline claim has been opened. Re-evaluated at M4b, where the comparison may narrow a claim and would then trigger it."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "A descriptive distribution atlas from 2006 opens no molecule, biomarker or repurposing lever; its product is a compartment map with its limits, which the dossier carries. Declining it keeps a distribution result from being dressed as a lead."
+  },
+  {
+   "skill": "legend-paperqa",
+   "used": false,
+   "reason": "Reserved: it requires an API key and external spend, which this task may not incur (§21d)."
+  },
+  {
+   "skill": "legend-session-self-eval",
+   "used": true,
+   "reason": "Run at the close of the task, after the receipt and M4b, as the standing brief orders."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 138,
+  "publications_on_gene": 38,
+  "counts_measured": "PubMed esearch 2026-09-13: 'Aldaz CM[au]' 138; 'Aldaz CM[au] AND WWOX' 38; 'Nunez MI[au] AND WWOX' 5; 'Ludes-Meyers J[au] AND WWOX' 9.",
+  "research_type": "mixed",
+  "output_kind": "primary_research",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": true,
+  "weighting": "Two halves, weighed apart. The group is the laboratory that cloned WWOX (Bednarek 2000a, cited as their own), made the antibody and dominates the early WWOX protein literature — primary for the GENE, and a cancer laboratory, not a group for the neurodevelopmental disease. That authority helps the observation half only partly: this paper is a descriptive histology atlas, not an experiment, and the specificity of the reagent that every call rests on is imported from the group's own earlier papers rather than shown here. The interpretive half — sex-steroid metabolism as the organising principle — is the group's long-standing hypothesis about their own gene, argued from motif and from the tissue list, and it is weighed as the authors' IPOTESI. A stake in the gene's steroid role predicts exactly the error to watch for: organs are grouped by hormonal status in the Discussion while the Discussion's own unweighted 'highest levels' list includes liver, kidney, stomach, salivary gland and neural cells - and of those, stomach is graded only moderate (++) in Results and Table 1, so the list is not a grading. Corrected 2026-09-13 under ALDAZ-REPAIR-B-20260913: the earlier wording called that list the paper's 'strongly positive' list."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "WWOX",
+    "route": "PubMed esearch 2026-09-13",
+    "count": 708
+   },
+   {
+    "query": "WWOX AND immunohistochemistry",
+    "route": "PubMed esearch 2026-09-13",
+    "count": 80
+   },
+   {
+    "query": "WWOX AND (normal tissue OR normal tissues)",
+    "route": "PubMed esearch 2026-09-13",
+    "count": 145
+   },
+   {
+    "query": "WWOX AND tissue microarray",
+    "route": "PubMed esearch 2026-09-13",
+    "count": 28
+   },
+   {
+    "query": "WWOX AND astrocytes",
+    "route": "PubMed esearch 2026-09-13",
+    "count": 5
+   },
+   {
+    "query": "WWOX AND ependymal",
+    "route": "PubMed esearch 2026-09-13",
+    "count": 2
+   },
+   {
+    "query": "WWOX AND oligodendrocyte*",
+    "route": "PubMed esearch 2026-09-13",
+    "count": 4
+   },
+   {
+    "query": "WWOX AND Purkinje",
+    "route": "PubMed esearch 2026-09-13",
+    "count": 2
+   },
+   {
+    "query": "WWOX AND Leydig",
+    "route": "PubMed esearch 2026-09-13",
+    "count": 3
+   }
+  ],
+  "note": "The CNS cell-type intersections are single-digit. That is what makes this paper's CNS calls — two cores per region, no panel, no co-marker — disproportionately load-bearing for anyone who cites WWOX protein in human astrocytes, ependyma or Purkinje cells. A near-empty intersection is a signal to read the primary, not to trust the citation."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 25,
+  "enumeration_method": "Enumerated from the fingerprinted text layer, not sampled: 25 reference entries, 24 carrying a [PubMed: n] tag written by NIHMS inside the artefact, 1 untagged (Watanabe 2003, Cancer Res 63:8629-33). Identifiers taken from the artefact's own tags. Two citation defects found while enumerating: 'Bretscher et al. 2002' is cited in Results and absent from the list; 'Bednarek et al. 2000b' is cited while the list holds 'Bednarek ... 2001b' (Cancer Res 61:8068).",
+  "gene_direct_count": 20,
+  "gene_direct_refs_in_source": [
+   "16061658",
+   "10786676",
+   "11719429",
+   "15870886",
+   "15674328",
+   "16225988",
+   "14638866",
+   "16438931",
+   "11013073",
+   "11956080",
+   "14526170",
+   "15064722",
+   "15692750",
+   "15982416",
+   "16242840",
+   "10749141",
+   "11572989",
+   "15266310",
+   "16152610",
+   "16360296"
+  ],
+  "resolved": [
+   "16061658",
+   "10786676",
+   "15870886",
+   "15674328",
+   "16225988",
+   "14638866",
+   "11956080",
+   "14526170",
+   "15064722",
+   "15692750",
+   "15982416",
+   "16242840",
+   "11572989",
+   "15266310",
+   "16152610",
+   "16360296"
+  ],
+  "resolved_depth_declaration": "RESOLVED MEANS IDENTITY, NOT READING. These 16 identifiers are present in the paper registry and literature tracking log of this corpus (dedupe by identifier, 2026-09-13); only 16061658 also has a receipt. Two of them are LOAD-BEARING FOR THIS READING and have no complete read: 15692750 and 15982416, the Nunez 2005a/b papers to which this article delegates its antibody specificity. They are queued as a hop below even though their identity resolves, because resolution of identity is not verification of the control.",
+  "queued": [
+   {
+    "pmid": "15692750",
+    "queue": "FT-079",
+    "reason": "Antibody specificity is delegated here (Peo1 negative control). Without reading it, every cell-type call in this paper rests on an unverified reagent."
+   },
+   {
+    "pmid": "15982416",
+    "queue": "FT-079",
+    "reason": "Second paper to which specificity and the ACIS scoring procedure are delegated ('as previously reported')."
+   },
+   {
+    "pmid": "11719429",
+    "queue": "FT-079",
+    "reason": "Bednarek 2001 — cited as 2000b in the text; present in the full-text queue under another entry, not in the registry. Carried for the citation-label defect."
+   },
+   {
+    "pmid": "16438931",
+    "queue": "FT-079",
+    "reason": "Jin 2006, ezrin-WWOX apical co-localisation in gastric parietal cells — the one protein-localisation claim the Results borrows from outside; not in corpus."
+   },
+   {
+    "pmid": "11013073",
+    "queue": "FT-079",
+    "reason": "Krummel 2000, FRA16D characterisation; gene-direct, not in corpus. Low priority."
+   },
+   {
+    "pmid": "10749141",
+    "queue": "FT-079",
+    "reason": "Paige 2000, FRA16D physical map; gene-direct, not in corpus. Low priority."
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Technical only, under the blind-pass firewall: how many deep-dive manifests and complete reads exist, which manifests mention immunohistochemistry or tissue microarrays, and what depth the citing paper 18674750 holds. No claim, dossier or locator content was opened.",
+  "hits": 14,
+  "finding": "82 manifests; 71 PMIDs at complete_fulltext_read; 14 manifests mention immunohistochemistry and exactly 1 (PMID41984841) mentions tissue microarrays. PMID 18674750 — the paper whose reference 46 opened FT-079 — holds FTR-20260909-18674750-01 at complete_fulltext_read. The comparison with any of these is M4b's, not this manifest's."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-09-13",
+  "route": "NCBI efetch db=pubmed retmode=xml for 16941225, and esummary",
+  "result": "No retraction, no expression of concern, no erratum: zero CommentsCorrections elements, PublicationStatus ppublish, publication types Journal Article and NIH extramural support only.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 25,
+   "references_screened": 18,
+   "references_with_doi": 18,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 3,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 7
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID16941225_Nunez2006.pdf",
+   "kind": "article_binary",
+   "note": "NIHMS author manuscript NIHMS222059 of J Mol Histol 2006;37(3-4):115-25, 18 pages, Antenna House PDF Output Library 2.6.0, created 2014-08-27. Identity verified on the artefact: title, three authors (Nunez, Ludes-Meyers, Aldaz), DOI 10.1007/s10735-006-9046-5 printed on page 1.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4144810/pdf/",
+    "http_method": "GET",
+    "tier": "pmc_pow_fetch",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-09-13",
+    "derived": false
+   },
+   "sha256": "47dbdb0b88f65291ab897d36645eca00a2070fab765c25e2e5abb1618fe26cac"
+  },
+  {
+   "path": "files/fulltext/PMID16941225_Nunez2006.txt",
+   "kind": "article_text",
+   "note": "Deterministic text layer of the PDF. deepdive_manifest.suspect_surface CLEAN on 40774 B (no C0 control, no printable substitution, comparators present); --font-screen UNDECIDED. The one visible oddity, '400 tm' in both IHC captions, was checked on the page at 600 dpi and is PRINTED that way: a manuscript typesetting error, not an extraction fault.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID16941225_Nunez2006.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_text() default mode",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "06857285c45ca820626806554b5608a7b40edf0ad5354db3a1efcf1a364fbf58"
+  },
+  {
+   "path": "files/figures/PMID16941225/emb-012-001.jpg",
+   "kind": "figure",
+   "note": "Fig. 1 immunoblot, native embedded JPEG 674x614 @150 ppi (page 12). No vector figure art exists; the PMC /bin/ rasters were refused by reCAPTCHA.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID16941225_Nunez2006.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdfimages -j -p",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "ec31a8f3d9f5213aec0051a232ed616f67ec7ef78d1865e68514795b7e762222"
+  },
+  {
+   "path": "files/figures/PMID16941225/emb-013-002.jpg",
+   "kind": "figure",
+   "note": "Fig. 2 IHC composite, nine panels A-I, native embedded JPEG 1228x985 @300 ppi (page 13).",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID16941225_Nunez2006.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdfimages -j -p",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "cdc2a493077cca861596904c357c06d432484bf686e0f22ef08cbd10d6ecb9d2"
+  },
+  {
+   "path": "files/figures/PMID16941225/emb-014-003.jpg",
+   "kind": "figure",
+   "note": "Fig. 3 IHC composite, nine panels A-I, native embedded JPEG 1522x1225 @300 ppi (page 14).",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID16941225_Nunez2006.pdf",
+    "extractor": {
+     "name": "pdfimages (poppler)",
+     "version": "24.02.0",
+     "call": "pdfimages -j -p",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "148b0b801e1b8b90db8e1a75bbe4b54b19bba2a0350b06c578d66e0defae83cd"
+  },
+  {
+   "path": "files/figures/PMID16941225/fig1_bands_3x.png",
+   "kind": "figure",
+   "note": "Fig. 1 WWOX band strip, rendered at 216 dpi (3x) for band inspection; an enlargement for viewing, not a new measurement.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID16941225/emb-012-001.jpg",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "get_pixmap(clip=Rect(0, 0.35H, W, 0.72H), dpi=216)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "f3efdf880f5c27974cf91d22621d4dec0ac5c7a283624b4eb50b71d07e711e77"
+  },
+  {
+   "path": "files/figures/PMID16941225/fig2C_native.png",
+   "kind": "figure",
+   "note": "single WHOLE panel (label and scale bar included) cropped from emb-013-002.jpg and rendered at 75% of that JPEG's native pixel grid (307x247 of a 409x328 panel) - the 'native pixels' this note claimed before 2026-09-13 was false; corrected under ALDAZ-REPAIR-B-20260913",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID16941225/emb-013-002.jpg",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.open(<jpeg>)[0].get_pixmap(clip=<one third of width x one third of height, row/column of the panel>, dpi=72) - PyMuPDF opens this JPEG at 96 ppi, so dpi=72 RESAMPLES to 75% of the native pixel grid; the earlier 'native pixels, no resampling' claim was false (corrected 2026-09-13, ALDAZ-REPAIR-B-20260913)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "6934163387c03f85e4abe677aa6a59b5dfd222b822753db594d6bba0aaa4e346"
+  },
+  {
+   "path": "files/figures/PMID16941225/fig2D_native.png",
+   "kind": "figure",
+   "note": "single WHOLE panel (label and scale bar included) cropped from emb-013-002.jpg and rendered at 75% of that JPEG's native pixel grid (307x247 of a 409x328 panel) - the 'native pixels' this note claimed before 2026-09-13 was false; corrected under ALDAZ-REPAIR-B-20260913",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID16941225/emb-013-002.jpg",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.open(<jpeg>)[0].get_pixmap(clip=<one third of width x one third of height, row/column of the panel>, dpi=72) - PyMuPDF opens this JPEG at 96 ppi, so dpi=72 RESAMPLES to 75% of the native pixel grid; the earlier 'native pixels, no resampling' claim was false (corrected 2026-09-13, ALDAZ-REPAIR-B-20260913)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "6ea6d39697ed9eb21e3ece64487843b31a9f6a3ed4d6a5b1e4f38fdd52dfbf62"
+  },
+  {
+   "path": "files/figures/PMID16941225/fig2F_native.png",
+   "kind": "figure",
+   "note": "single WHOLE panel (label and scale bar included) cropped from emb-013-002.jpg and rendered at 75% of that JPEG's native pixel grid (307x247 of a 409x328 panel) - the 'native pixels' this note claimed before 2026-09-13 was false; corrected under ALDAZ-REPAIR-B-20260913",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID16941225/emb-013-002.jpg",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.open(<jpeg>)[0].get_pixmap(clip=<one third of width x one third of height, row/column of the panel>, dpi=72) - PyMuPDF opens this JPEG at 96 ppi, so dpi=72 RESAMPLES to 75% of the native pixel grid; the earlier 'native pixels, no resampling' claim was false (corrected 2026-09-13, ALDAZ-REPAIR-B-20260913)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "dfde2b7b8f76edb0b8ec65badb31a087a7b384502334eeee3d04464b8d9b4473"
+  },
+  {
+   "path": "files/figures/PMID16941225/fig3A_native.png",
+   "kind": "figure",
+   "note": "single WHOLE panel (label and scale bar included) cropped from emb-014-003.jpg and rendered at 75% of that JPEG's native pixel grid (381x307 of a 507x408 panel) - the 'native pixels' this note claimed before 2026-09-13 was false; corrected under ALDAZ-REPAIR-B-20260913",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID16941225/emb-014-003.jpg",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.open(<jpeg>)[0].get_pixmap(clip=<one third of width x one third of height, row/column of the panel>, dpi=72) - PyMuPDF opens this JPEG at 96 ppi, so dpi=72 RESAMPLES to 75% of the native pixel grid; the earlier 'native pixels, no resampling' claim was false (corrected 2026-09-13, ALDAZ-REPAIR-B-20260913)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "5089ea020d359a81795d2cb880ccd4e3435a4da8be2c2e9c81f10b5b66dd90c9"
+  },
+  {
+   "path": "files/figures/PMID16941225/fig3B_native.png",
+   "kind": "figure",
+   "note": "single WHOLE panel (label and scale bar included) cropped from emb-014-003.jpg and rendered at 75% of that JPEG's native pixel grid (381x307 of a 507x408 panel) - the 'native pixels' this note claimed before 2026-09-13 was false; corrected under ALDAZ-REPAIR-B-20260913",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID16941225/emb-014-003.jpg",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.open(<jpeg>)[0].get_pixmap(clip=<one third of width x one third of height, row/column of the panel>, dpi=72) - PyMuPDF opens this JPEG at 96 ppi, so dpi=72 RESAMPLES to 75% of the native pixel grid; the earlier 'native pixels, no resampling' claim was false (corrected 2026-09-13, ALDAZ-REPAIR-B-20260913)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "0493930bb113432a3a936d0bddc83c186f9eaeca52ecb26e3640e847bec8808f"
+  },
+  {
+   "path": "files/figures/PMID16941225/fig3E_native.png",
+   "kind": "figure",
+   "note": "single WHOLE panel (label and scale bar included) cropped from emb-014-003.jpg and rendered at 75% of that JPEG's native pixel grid (381x307 of a 507x408 panel) - the 'native pixels' this note claimed before 2026-09-13 was false; corrected under ALDAZ-REPAIR-B-20260913",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID16941225/emb-014-003.jpg",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.open(<jpeg>)[0].get_pixmap(clip=<one third of width x one third of height, row/column of the panel>, dpi=72) - PyMuPDF opens this JPEG at 96 ppi, so dpi=72 RESAMPLES to 75% of the native pixel grid; the earlier 'native pixels, no resampling' claim was false (corrected 2026-09-13, ALDAZ-REPAIR-B-20260913)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "ab17b6c2f98b3ad67dba83c96366ca381e41ab7fcd45cd0ba5e568688265c8e7"
+  },
+  {
+   "path": "files/figures/PMID16941225/fig3I_native.png",
+   "kind": "figure",
+   "note": "single WHOLE panel (label and scale bar included) cropped from emb-014-003.jpg and rendered at 75% of that JPEG's native pixel grid (381x307 of a 507x408 panel) - the 'native pixels' this note claimed before 2026-09-13 was false; corrected under ALDAZ-REPAIR-B-20260913",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID16941225/emb-014-003.jpg",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.open(<jpeg>)[0].get_pixmap(clip=<one third of width x one third of height, row/column of the panel>, dpi=72) - PyMuPDF opens this JPEG at 96 ppi, so dpi=72 RESAMPLES to 75% of the native pixel grid; the earlier 'native pixels, no resampling' claim was false (corrected 2026-09-13, ALDAZ-REPAIR-B-20260913)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "67b1d5c3ae006d0e8dbdfbe64ccf1f7978a2c8df70cd5585e55fc3be8ca06292"
+  },
+  {
+   "path": "files/figures/PMID16941225/page15_300dpi-15.png",
+   "kind": "figure",
+   "note": "rendered page 15 (Tables 1-2) at 300 dpi, inspected to confirm every intensity symbol of the text layer against the printed page",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID16941225_Nunez2006.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -f 15 -l 15 -r 300 -png",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "7cdd227887264849fed92eb734efd33fe920dcc570b1dec01a5a1861265ff26d"
+  },
+  {
+   "path": "files/figures/PMID16941225/page16_300dpi-16.png",
+   "kind": "figure",
+   "note": "rendered page 16 (Tables 1-2) at 300 dpi, inspected to confirm every intensity symbol of the text layer against the printed page",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID16941225_Nunez2006.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -f 16 -l 16 -r 300 -png",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "a1f83ad20f35a5a93d3467300654879b469a128e87cd4e6406301b83866ed256"
+  },
+  {
+   "path": "files/figures/PMID16941225/page17_300dpi-17.png",
+   "kind": "figure",
+   "note": "rendered page 17 (Tables 1-2) at 300 dpi, inspected to confirm every intensity symbol of the text layer against the printed page",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID16941225_Nunez2006.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -f 17 -l 17 -r 300 -png",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "ba1e5fa63bf550cd3f95306bca69f7687c8d616e461aa42abe1436e1611807de"
+  },
+  {
+   "path": "files/figures/PMID16941225/page18_300dpi-18.png",
+   "kind": "figure",
+   "note": "rendered page 18 (Tables 1-2) at 300 dpi, inspected to confirm every intensity symbol of the text layer against the printed page",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID16941225_Nunez2006.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -f 18 -l 18 -r 300 -png",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "d9ca81b01dfe8f0cec3e1287e2b691923d2c3c6634d1770abe2bec0b392f130d"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": false,
+  "source_fulltext_indexed_evidence": "No structured surface exists by any route tested on 2026-09-13: Europe PMC fullTextXML 404; efetch db=pmc returns front matter only with the publisher's no-XML comment; the PMC HTML and /bin/ rasters are behind reCAPTCHA. The surface is the NIHMS author-manuscript PDF (fingerprinted as article_binary) with a PyMuPDF text layer screened CLEAN, against which every body and table quote verifies; figure locators are bound to the native embedded JPEGs and to whole-panel crops rendered at 75% of those JPEGs' pixel grids, with every load-bearing panel re-inspected at 2x native resolution on 2026-09-13.",
+  "abstract_anchoring_waived": "No locator uses the abstract. The abstract's summary sentences — secretory epithelia, neural cells, no expression in adipose, connective, lymphoid, myelin and vessels — each have a Results or Table counterpart, and those are what is quoted; the abstract also omits both the skeletal-muscle 'inconclusive' and the limbic-cortex contradiction.",
+  "entries": [
+   {
+    "proposition": "METHOD: the antibody is a polyclonal raised against the WW-domain region — so it cannot distinguish a WW-domain-bearing product from full-length WWOX on its own, and specificity has to come from somewhere else.",
+    "snippet": "The antibody was raised against a GST fusion protein harboring the WW domains of the WWOX protein.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16941225_Nunez2006.txt",
+    "anchor": "Material and methods, 'Anti-WWOX antibody', sentence 1 (p. 2)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought — the compartment question stands or falls on antibody validation"
+   },
+   {
+    "proposition": "NEGATIVE FOR THE CORPUS, AND THE LOAD-BEARING ONE: antibody specificity is NOT established in this paper. It is imported from the authors' two 2005 papers, whose control was a WWOX-negative cell-line extract (Peo1). No IHC specificity control — no-primary, preimmune serum, peptide block, or WWOX-null tissue — is described or shown anywhere in this article. PREMISE: INFERENZA resting on unread primaries 15692750 and 15982416 (queued under FT-079).",
+    "snippet": "We have previously reported on the specificity of the WWOX antibody used for the current study (Nunez et al. 2005a, b), this paper demonstrated specificity by using Peo1 extracts as negative control.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16941225_Nunez2006.txt",
+    "anchor": "Material and methods, 'Anti-WWOX antibody', sentence 2 (p. 2)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought"
+   },
+   {
+    "proposition": "Isoform statement is an assertion with a citation: the authors report that only the 46 kDa product is detected as expressed and that they have NO EVIDENCE that other putative alternatively spliced WWOX forms generate stable viable protein products, citing Ludes-Meyers et al. 2003a (Cytogenet Genome Res 100:101-110; the paper does not characterise that reference, and calling it a review is this reader's classification, not the source's word). This is an absence of evidence as the authors state it, not a demonstration that other forms lack stable protein. Two limits on what this paper adds to it: the Methods sentence never cites Fig. 1, and the blot carries only two markers (48 and 29 kDa), which cannot resolve closely spaced products. What the blot does and does not show is entry 36's attestation, not this entry's.",
+    "snippet": "Only full length WWOX (i.e. the 46 kDa product) is detected as expressed",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16941225_Nunez2006.txt",
+    "anchor": "Material and methods, 'Anti-WWOX antibody', sentence 3 (pp. 2-3)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID16941225.json",
+     "entry": 2,
+     "what_changed": "Author's 'no evidence that' had become 'said to lack'; restored as absence of evidence, Fig. 1 limits stated.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT",
+       "CORRECTED"
+      ],
+      "method": "legend-locator-audit, blind round 1: triples plus source artefacts only, no dossier, no manifest, no reader identity, no verification report; general-purpose subagent with no session history, 2026-09-13, ALDAZ-REPAIR-B-20260913. Nine triples: 3 SUPPORTED, 4 OVERSHOOT, 1 UNDERSHOOT, 0 NOT_IN_SOURCE; the resolution question answered by independent measurement (307/409.3 = 0.750, 381/507.3 = 0.751, whole panels with letter and scale bar). Blind round 2 on the revision: OVERSHOOT on the Fig. 1 band description, removed; that attestation is entry 36's. Two rounds spent; residual objections adjudicated by the author against the source."
+     }
+    }
+   },
+   {
+    "proposition": "SCORING: a four-level manual scale plus an automated ACIS score 'as previously reported'. No per-organ or per-core values, no n of cores scored per cell type, no inter-observer agreement, no statistics, no statement of how manual and automated grades were reconciled. Nothing is quantified at the level of a cell type.",
+    "snippet": "We also performed a manual evaluation defining levels of staining as negative (absence), mild, moderate and strong.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16941225_Nunez2006.txt",
+    "anchor": "Material and methods, 'Immunohistochemistry' (p. 3)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought"
+   },
+   {
+    "proposition": "The only control named for the IHC is a POSITIVE tissue control (ovarian surface epithelium). No negative control is named.",
+    "snippet": "The ovarian surface epithelium (OSE) was used as positive control.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16941225_Nunez2006.txt",
+    "anchor": "Material and methods, 'Immunohistochemistry', last sentence (p. 3)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought — the absence of a named negative control is the finding"
+   },
+   {
+    "proposition": "Donor provenance is a single sentence: no number of donors, age, sex, cause of death, post-mortem or surgical origin, or fixation interval is given for any tissue.",
+    "snippet": "Normal adult human tissues were obtained from commercial sources.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16941225_Nunez2006.txt",
+    "anchor": "Material and methods, 'Tissue microarrays and whole tissue sections', sentence 1 (p. 3)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought"
+   },
+   {
+    "proposition": "SAMPLING DEPTH, in the paper's own terms: combining two serial sections of each TMA gave DUPLICATE REPRESENTATION of 30 organs. The paper gives no number of cores per organ and the TMAs come from three vendors, so what stands behind an organ-level call for those 30 organs is a duplicate representation, not a series - and two serial sections may be the same core cut twice. Breast, ovary, testis and prostate (Methods) and skin (Results) were ADDITIONALLY evaluated on whole tissue sections, with no number of sections stated; ovary and testis were read on TMA cores AS WELL AS whole sections, so the whole-section route supplements the TMA sampling rather than replacing it. The CNS is sampled separately and is entry 7's locator, not this one's.",
+    "snippet": "by combining two serial sections of each TMA, we obtained duplicate representation of 30 organs",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16941225_Nunez2006.txt",
+    "anchor": "Material and methods, 'Tissue microarrays and whole tissue sections' (p. 3)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID16941225.json",
+     "entry": 6,
+     "what_changed": "Scoped the duplicate to the 30 TMA organs in the paper's own words; whole-section organs named as supplementing it.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT",
+       "CORRECTED"
+      ],
+      "method": "legend-locator-audit, blind round 1: triples plus source artefacts only, no dossier, no manifest, no reader identity, no verification report; general-purpose subagent with no session history, 2026-09-13, ALDAZ-REPAIR-B-20260913. Nine triples: 3 SUPPORTED, 4 OVERSHOOT, 1 UNDERSHOOT, 0 NOT_IN_SOURCE; the resolution question answered by independent measurement (307/409.3 = 0.750, 381/507.3 = 0.751, whole panels with letter and scale bar). Blind round 2 on the revision: OVERSHOOT on 'duplicate cores' and the CNS clause, both removed. Two rounds spent; residual objections adjudicated by the author against the source."
+     }
+    }
+   },
+   {
+    "proposition": "CNS SAMPLING: every brain region is two cores on one commercial Neuro TMA. Every regional brain call in this paper — including the regional negatives — rests on two cores.",
+    "snippet": "This specific TMA carried two cores representing each of frontal, occipital, parietal, limbic and temporal cortex, nucleus caudate, pons, nuclei olivaris of medulla, substantia nigra and cerebellum.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16941225_Nunez2006.txt",
+    "anchor": "Material and methods, 'Tissue microarrays and whole tissue sections' (p. 3)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought"
+   },
+   {
+    "proposition": "CNS POSITIVES (text only; no CNS panel exists): pyramidal neurons and astrocytes in frontal cortex, astrocytes and neurons in occipital cortex, neurons of caudate, pons and inferior olive. Cell identity is by morphology on DAB-only staining — no neuronal or astrocytic co-marker was used.",
+    "snippet": "The brain was preferentially positive in pyramidal neurons and astrocytes from the frontal cortex, in astrocytes and neurons of the occipital cortex and in neurons of the nucleus caudatus, pons and nuclei olivaris of medulla.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16941225_Nunez2006.txt",
+    "anchor": "Results, 'WWOX expression in the nervous system', Brain (p. 6)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "CNS NEGATIVES as written in Results: parietal, limbic and temporal cortex and substantia nigra negative; oligodendrocytes negative. Contradicted by the paper's own Table 1 on limbic cortex (entry 12) and softened to +/- for the rest (entry 13).",
+    "snippet": "Interestingly, the parietal, limbic and temporal cortexes as well as the substantia nigra were negative for anti-WWOX staining. Oligodendrocytes showed no WWOX immunoreactivity.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16941225_Nunez2006.txt",
+    "anchor": "Results, 'WWOX expression in the nervous system', Brain (p. 6)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "Ependymal cells moderately positive; subependymal glia mild; small neurons strong. Text only.",
+    "snippet": "The ependymal cells from a lateral cerebral ventricle were moderately positive for staining in their scant cytoplasm.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16941225_Nunez2006.txt",
+    "anchor": "Results, 'WWOX expression in the nervous system', Brain (p. 6)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "Cerebellum: granule-layer small neurons and molecular layer strong, Purkinje cells MODERATE as written in Results. Table 1 grades the Purkinje layer +++/++ and the molecular layer ++, so the two surfaces rank the layers differently. Text only; no cerebellar panel.",
+    "snippet": "The folia of cerebellum showed strong positive staining in, small neurons in internal granular cell layer and the molecular layer, while bulbous Purkinje cells stained moderately.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16941225_Nunez2006.txt",
+    "anchor": "Results, 'Cerebellum' (p. 6)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "INTERNAL CONTRADICTION, UNRESOLVED BY THE PAPER: Table 1 places LIMBIC cortex in the +++ row for neuronal soma and dendrites, while Results (entry 9) calls limbic cortex negative. The two-core sampling (entry 7) makes neither reading checkable, and no panel exists. Verified on the rendered page 16.",
+    "snippet": "Frontal, occipital, limbic cortex and nucleus caudate: Soma and dendrites of large neurons",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID16941225_Nunez2006.txt",
+    "anchor": "Table 1, Cerebrum, row 1, intensity +++ (p. 16; rendered page16_300dpi-16.png)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found — by setting the table against the Results sentence"
+   },
+   {
+    "proposition": "Table 1 grades parietal cortex, temporal cortex and substantia nigra '+/−', where Results calls them 'negative'. PRINTED FACTS: the Table 1 footnote (p. 17) and Methods define four levels only - negative, mild, moderate, strong - and '+/−' is not one of them; the same text-negative/table-'+/−' pairing occurs for pituitary chromophobic cells (p. 15). THREE READINGS, all available and none defined by the paper: (a) '+/−' marks a borderline call rather than a clean absence; (b) '+/−' is how these authors write the negative they state in prose; (c) '+/−' is a slash RANGE from mild to negative, which is how Table 1 uses its other undefined slash notations ('+++/++', '++/+'). DISAGREEMENT_UNRESOLVED. Note that limbic cortex is NOT in this row: the text calls it negative while Table 1 places it at '+++' (entry 12), a conflict in kind rather than in degree.",
+    "snippet": "Parietal cortex, temporal cortex and substantia nigra",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID16941225_Nunez2006.txt",
+    "anchor": "Table 1, Cerebrum, last row, intensity +/− (p. 16)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID16941225.json",
+     "entry": 13,
+     "what_changed": "Re-stated as printed facts plus three readings of the undefined '+/-'; no longer asserts 'not clean absences'.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT",
+       "CORRECTED"
+      ],
+      "method": "legend-locator-audit, blind round 1: triples plus source artefacts only, no dossier, no manifest, no reader identity, no verification report; general-purpose subagent with no session history, 2026-09-13, ALDAZ-REPAIR-B-20260913. Nine triples: 3 SUPPORTED, 4 OVERSHOOT, 1 UNDERSHOOT, 0 NOT_IN_SOURCE; the resolution question answered by independent measurement (307/409.3 = 0.750, 381/507.3 = 0.751, whole panels with letter and scale bar). Blind round 2 on the revision: SUPPORTED. Two rounds spent; residual objections adjudicated by the author against the source."
+     }
+    }
+   },
+   {
+    "proposition": "Peripheral nervous system: neurons of autonomic ganglia strongly positive; nerve processes and Schwann cells negative. This is the only neural compartment in the paper with an IMMUNOHISTOCHEMISTRY panel (Fig. 3C). Whole brain appears once as a Western-blot lysate lane (Fig. 1, lane 5), which is a panel of protein, not of histology.",
+    "snippet": "The neurons at autonomic ganglia showed strong positive diffuse cytoplasmic anti-WWOX staining while, in sharp contrast, the aligned nerve processes and Schwann cells were negative",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16941225_Nunez2006.txt",
+    "anchor": "Results, 'Autonomic ganglia' (p. 6)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID16941225.json",
+     "entry": 14,
+     "what_changed": "Scoped the absolute to immunohistochemistry: Fig. 1 lane 5 is a whole-brain lysate, a neural compartment shown in a panel, so 'the ONLY neural compartment that has a panel' was false as written.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT",
+       "CORRECTED"
+      ],
+      "method": "legend-locator-audit, blind round 1: triples plus source artefacts only, no dossier, no manifest, no reader identity, no verification report; general-purpose subagent with no session history, 2026-09-13, ALDAZ-REPAIR-B-20260913. Nine triples: 3 SUPPORTED, 4 OVERSHOOT, 1 UNDERSHOOT, 0 NOT_IN_SOURCE; the resolution question answered by independent measurement (307/409.3 = 0.750, 381/507.3 = 0.751, whole panels with letter and scale bar). Replacement judged SUPPORTED by the blind auditor (triple 1)."
+     }
+    }
+   },
+   {
+    "proposition": "Fig. 3C, inspected at native resolution: four ganglion-cell somata with dense granular brown cytoplasm and unstained nuclei; the surrounding spindle-shaped nuclei of the nerve bundle and connective tissue carry no brown signal. The panel confirms the neuron-positive / Schwann-negative contrast of the text for this one field.",
+    "snippet": "Visual attestation of Fig. 3C (autonomic ganglia): granular brown cytoplasm in ganglion-cell bodies; spindle nuclei of the surrounding nerve bundle unstained.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID16941225/emb-014-003.jpg",
+    "anchor": "Fig. 3, panel C (p. 14), native 1522x1225 JPEG",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "sought"
+   },
+   {
+    "proposition": "Global negatives in Results: capillaries negative in every organ analysed — the vascular compartment carries no detectable protein by this antibody.",
+    "snippet": "Capillaries were consistently negative in all the organs analyzed.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16941225_Nunez2006.txt",
+    "anchor": "Results, 'Miscellaneous tissues negative for WWOX staining' (p. 7)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "Myelinated structures and Schwann cells negative; no connective-tissue signal anywhere; adipose negative. None of these negatives is shown in a panel except the Schwann-cell field of Fig. 3C.",
+    "snippet": "The Schwann cells and myelinized structures were negative for WWOX staining",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16941225_Nunez2006.txt",
+    "anchor": "Results, 'Miscellaneous tissues negative for WWOX staining' (p. 7)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "SKELETAL MUSCLE IS NOT ESTABLISHED EITHER WAY: the authors call their few samples inconclusive. Muscle is absent from both tables. A reader must not carry 'muscle negative' or 'muscle positive' out of this paper.",
+    "snippet": "Observations on the few skeletal muscle samples examined were inconclusive.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16941225_Nunez2006.txt",
+    "anchor": "Results, 'Miscellaneous tissues negative for WWOX staining', penultimate sentence (p. 7)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought — the negative that is easiest to mis-carry"
+   },
+   {
+    "proposition": "Lymphoid negativity by IHC is stated AGAINST prior Northern evidence of high WWOX RNA in peripheral lymphocytes, and is not reconciled: the authors report it 'in our hands' and test no explanation (epitope, fixation, RNA-protein discordance).",
+    "snippet": "Despite of the fact that it has been reported high WWOX expression by Northern blot in peripheral lymphocytes, only scattered patches of plasmocytes in inflammatory infiltrates have shown positive staining by IHC in our hands.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16941225_Nunez2006.txt",
+    "anchor": "Results, 'Miscellaneous tissues negative for WWOX staining' (p. 7)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "Subcellular: cytoplasmic signal only, never nuclear, in every sample. This is a statement about what this antibody detected in FFPE tissue, not a demonstration that the protein is never nuclear.",
+    "snippet": "We did not detect any instance of WWOX nuclear staining",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16941225_Nunez2006.txt",
+    "anchor": "Discussion, paragraph 1 (p. 7)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "Text claim cited to Fig. 2D: STRONG cytoplasmic staining in the basal layer of the epididymis.",
+    "snippet": "the epydidimus displayed a strong cytoplasmic staining in cells from the basal layer (Fig. 2D)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16941225_Nunez2006.txt",
+    "anchor": "Results, 'Testes and excretory duct system' (p. 5)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "adult human epididymis, FFPE, anti-WWOX DAB immunohistochemistry",
+     "endpoint": "basal-layer staining intensity"
+    }
+   },
+   {
+    "proposition": "PANEL QUALIFIES TEXT. Fig. 2D, inspected on a 75% whole-panel render and re-inspected at 2x native: the epididymal epithelium shows a faint tan cytoplasmic tint, a slightly darker thin basal line, and no field of dense brown comparable to Fig. 2A, 2E or 2G on the same composite. By inspection the cited panel displays mild-to-moderate, not strong, basal staining. No au value is given for the panel, so this is an inspection-level reading, not a re-score; Table 1 also grades the row +++.",
+    "snippet": "Visual attestation of Fig. 2D (epididymis): faint tan epithelial cytoplasm with a thin, slightly darker basal line; no dense brown signal.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID16941225/fig2D_native.png",
+    "anchor": "Fig. 2, panel D (p. 13); whole-panel crop of emb-013-002.jpg rendered at 75% of the embedded JPEG's pixel grid (307x247 of a 409x328 panel, label and scale bar included) - NOT native pixels; the panel was re-inspected by the author at 2x native (819x657) on 2026-09-13 before this anchor was re-worded, and the attestation was re-reached unchanged",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[21]",
+    "qualifies_needle": "epydidimus displayed a strong cytoplasmic",
+    "experimental_context": {
+     "system": "adult human epididymis, FFPE, anti-WWOX DAB immunohistochemistry",
+     "endpoint": "basal-layer staining intensity"
+    },
+    "found_or_sought": "sought",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID16941225.json",
+     "entry": 22,
+     "what_changed": "Resolution declaration corrected: the anchor and proposition said 'native pixels' for a crop that is a whole panel rendered at 75% of the embedded JPEG's pixel grid. Re-inspected at 2x native before re-wording; the attestation itself is unchanged.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT",
+       "CORRECTED"
+      ],
+      "method": "legend-locator-audit, blind round 1: triples plus source artefacts only, no dossier, no manifest, no reader identity, no verification report; general-purpose subagent with no session history, 2026-09-13, ALDAZ-REPAIR-B-20260913. Nine triples: 3 SUPPORTED, 4 OVERSHOOT, 1 UNDERSHOOT, 0 NOT_IN_SOURCE; the resolution question answered by independent measurement (307/409.3 = 0.750, 381/507.3 = 0.751, whole panels with letter and scale bar). The audit was asked the resolution question directly and reproduced the arithmetic independently: each crop is a WHOLE panel downsampled to 75% linear (about 56% of the native pixel count), so 'at native pixels' is FALSE of it. The verifier's own WHAT_WOULD_CHANGE_MY_MIND - that the crops might be sub-regions of panels - is answered NO: every crop carries the panel letter and the 50um scale bar."
+     }
+    }
+   },
+   {
+    "proposition": "Text claim for the seminiferous epithelium: moderate-to-strong staining of spermatogonia at the basal compartment, decreasing with maturation; Sertoli cells moderate; Leydig cells very strong (Fig. 2C).",
+    "snippet": "going from moderate-strong staining in spermatogonia at the basal compartment to mild staining of mature forms at the adluminal compartment",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16941225_Nunez2006.txt",
+    "anchor": "Results, 'Testes and excretory duct system' (pp. 4-5)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "adult human testis, FFPE, anti-WWOX DAB immunohistochemistry",
+     "endpoint": "cell-type staining intensity"
+    }
+   },
+   {
+    "proposition": "PANEL QUALIFIES TEXT. Fig. 2C, on a 75% whole-panel render, re-inspected at 2x native: the interstitial Leydig-cell cluster is STRONG BUT UNEVEN — many cells dark granular brown, others moderate — which supports the Leydig sentence, the one sentence the paper actually cites Fig. 2C for. The seminiferous tubules in the same field are unstained (pale cytoplasm, a single isolated brown dot). The paper does NOT cite Fig. 2C for spermatogonia, so this is an observation that the only testis panel does not display the 'moderate-strong' spermatogonial staining the text reports (pooled across TMA cores and whole sections; Table 1 grades spermatogonia and Sertoli cells ++/+), not a failed citation. One field cannot refute it.",
+    "snippet": "Visual attestation of Fig. 2C (testis): strong but uneven brown Leydig-cell cluster; adjacent seminiferous tubules essentially unstained.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID16941225/fig2C_native.png",
+    "anchor": "Fig. 2, panel C (p. 13); whole-panel crop of emb-013-002.jpg rendered at 75% of the embedded JPEG's pixel grid (307x247 of a 409x328 panel, label and scale bar included) - NOT native pixels; the panel was re-inspected by the author at 2x native (819x657) on 2026-09-13 before this anchor was re-worded, and the attestation was re-reached unchanged",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[23]",
+    "qualifies_needle": "moderate-strong staining in spermatogonia",
+    "experimental_context": {
+     "system": "adult human testis, FFPE, anti-WWOX DAB immunohistochemistry",
+     "endpoint": "cell-type staining intensity"
+    },
+    "found_or_sought": "sought",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID16941225.json",
+     "entry": 24,
+     "what_changed": "Resolution declaration corrected: the anchor and proposition said 'native pixels' for a crop that is a whole panel rendered at 75% of the embedded JPEG's pixel grid. Re-inspected at 2x native before re-wording; the attestation itself is unchanged.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT",
+       "CORRECTED"
+      ],
+      "method": "legend-locator-audit, blind round 1: triples plus source artefacts only, no dossier, no manifest, no reader identity, no verification report; general-purpose subagent with no session history, 2026-09-13, ALDAZ-REPAIR-B-20260913. Nine triples: 3 SUPPORTED, 4 OVERSHOOT, 1 UNDERSHOOT, 0 NOT_IN_SOURCE; the resolution question answered by independent measurement (307/409.3 = 0.750, 381/507.3 = 0.751, whole panels with letter and scale bar). The audit was asked the resolution question directly and reproduced the arithmetic independently: each crop is a WHOLE panel downsampled to 75% linear (about 56% of the native pixel count), so 'at native pixels' is FALSE of it. The verifier's own WHAT_WOULD_CHANGE_MY_MIND - that the crops might be sub-regions of panels - is answered NO: every crop carries the panel letter and the 50um scale bar."
+     },
+     "prior_declaration": {
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID16941225.json",
+      "entry": 24,
+      "what_changed": "Softened the Leydig reading from a strongly-brown framing that stood in for the text's 'very strong' to 'strong but uneven', and reframed the relation: the text cites Fig. 2C only for Leydig cells, so the unstained tubules are a panel observation rather than a failed citation. Re-inspected at native pixels before revising.",
+      "audit": {
+       "auditors": 1,
+       "verdicts": [
+        "OVERSHOOT"
+       ],
+       "method": "legend-locator-audit, blind: triples plus source artefacts only, no dossier, no manifest, no reader identity; general-purpose subagent, 2026-09-13; tally 7 triples, keep 5, soften 2, withdraw 0"
+      }
+     }
+    }
+   },
+   {
+    "proposition": "Text claim cited to Fig. 3A: parathyroid chief cells mostly STRONG.",
+    "snippet": "showed mostly strong positive staining among Chief cells arranged as cords, sheets",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16941225_Nunez2006.txt",
+    "anchor": "Results, 'Thyroid and parathyroid glands' (p. 6)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "adult human parathyroid, TMA core, anti-WWOX DAB immunohistochemistry",
+     "endpoint": "chief-cell staining intensity"
+    }
+   },
+   {
+    "proposition": "PANEL QUALIFIES TEXT. Fig. 3A, on a 75% whole-panel render, re-inspected at 2x native: a sheet of vacuolated chief cells with a fine, light-to-moderate brown cytoplasmic rim around clear vacuoles; no dense brown cytoplasm. By inspection mild-to-moderate, not 'mostly strong'.",
+    "snippet": "Visual attestation of Fig. 3A (parathyroid): light-to-moderate granular brown rims around clear cytoplasmic vacuoles in a chief-cell sheet.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID16941225/fig3A_native.png",
+    "anchor": "Fig. 3, panel A (p. 14); whole-panel crop of emb-014-003.jpg rendered at 75% of the embedded JPEG's pixel grid (381x307 of a 507x408 panel, label and scale bar included) - NOT native pixels; the panel was re-inspected by the author at 2x native (1015x817) on 2026-09-13 before this anchor was re-worded, and the attestation was re-reached unchanged",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[25]",
+    "qualifies_needle": "mostly strong positive staining among Chief",
+    "experimental_context": {
+     "system": "adult human parathyroid, TMA core, anti-WWOX DAB immunohistochemistry",
+     "endpoint": "chief-cell staining intensity"
+    },
+    "found_or_sought": "sought",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID16941225.json",
+     "entry": 26,
+     "what_changed": "Resolution declaration corrected: the anchor and proposition said 'native pixels' for a crop that is a whole panel rendered at 75% of the embedded JPEG's pixel grid. Re-inspected at 2x native before re-wording; the attestation itself is unchanged.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT",
+       "CORRECTED"
+      ],
+      "method": "legend-locator-audit, blind round 1: triples plus source artefacts only, no dossier, no manifest, no reader identity, no verification report; general-purpose subagent with no session history, 2026-09-13, ALDAZ-REPAIR-B-20260913. Nine triples: 3 SUPPORTED, 4 OVERSHOOT, 1 UNDERSHOOT, 0 NOT_IN_SOURCE; the resolution question answered by independent measurement (307/409.3 = 0.750, 381/507.3 = 0.751, whole panels with letter and scale bar). The audit was asked the resolution question directly and reproduced the arithmetic independently: each crop is a WHOLE panel downsampled to 75% linear (about 56% of the native pixel count), so 'at native pixels' is FALSE of it. The verifier's own WHAT_WOULD_CHANGE_MY_MIND - that the crops might be sub-regions of panels - is answered NO: every crop carries the panel letter and the 50um scale bar."
+     }
+    }
+   },
+   {
+    "proposition": "Text claim cited to Fig. 3B: HOMOGENEOUS INTENSE islet staining in all Langerhans cell types; strong acinar staining. Table 1 grades Langerhans nests ++ and acini +++. So the two surfaces disagree about the islet, and the TABLE ranks acini above islets while the TEXT grades both at the top of its vocabulary ('intense' islets, 'strong' acini) without ranking them against each other.",
+    "snippet": "The endocrine pancreas showed homogeneous intense staining in all cell types of Langerhans nests",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16941225_Nunez2006.txt",
+    "anchor": "Results, 'Endocrine and exocrine pancreas' (p. 6); Table 1 pancreas rows read on the renders - 'Epithelial cells in acini +++' (p. 15) and 'Langerhans nests ++' (p. 16)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "adult human pancreas, TMA core, anti-WWOX DAB immunohistochemistry",
+     "endpoint": "islet versus acinar staining intensity"
+    },
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID16941225.json",
+     "entry": 27,
+     "what_changed": "Dropped 'the ranking inverts between them': the text grades islets 'intense' and acini 'strong', both at the top and not ranked; only Table 1 ranks acini above islets.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT",
+       "CORRECTED"
+      ],
+      "method": "legend-locator-audit, blind round 1: triples plus source artefacts only, no dossier, no manifest, no reader identity, no verification report; general-purpose subagent with no session history, 2026-09-13, ALDAZ-REPAIR-B-20260913. Nine triples: 3 SUPPORTED, 4 OVERSHOOT, 1 UNDERSHOOT, 0 NOT_IN_SOURCE; the resolution question answered by independent measurement (307/409.3 = 0.750, 381/507.3 = 0.751, whole panels with letter and scale bar). Replacement judged SUPPORTED by the blind auditor (triple 6)."
+     }
+    }
+   },
+   {
+    "proposition": "PANEL QUALIFIES TEXT — AND INVERTS THE RANKING. Fig. 3B, a 75% whole-panel render and a 2x view, re-inspected at 2x native: the islet shows moderate-to-strong granular brown that is UNEVEN (darker cells at the rim, a paler vacuolated area inside), so 'homogeneous intense' is not what the panel shows. The surrounding acini carry a lighter, mild-to-moderate granular tan, visibly WEAKER than the islet; the intercalated duct at left has a thin moderate rim. The panel therefore ranks ISLET ABOVE ACINI, which contradicts both the text's 'strong' acini in the same paragraph and Table 1 (acini +++, Langerhans nests ++). No cell-type marker distinguishes alpha, beta or delta cells, so 'all cell types' is not attestable from DAB alone.",
+    "snippet": "Visual attestation of Fig. 3B (pancreas): uneven moderate-to-strong granular brown in an islet; lighter mild-to-moderate tan in the surrounding acini; thin moderate rim on an intercalated duct.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID16941225/fig3B_native.png",
+    "anchor": "Fig. 3, panel B (p. 14); whole-panel crop of emb-014-003.jpg rendered at 75% of the embedded JPEG's pixel grid (381x307 of a 507x408 panel, label and scale bar included) - NOT native pixels; the panel was re-inspected by the author at 2x native (1015x817) on 2026-09-13 before this anchor was re-worded, and the attestation was re-reached unchanged",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[27]",
+    "qualifies_needle": "homogeneous intense staining in all cell types",
+    "experimental_context": {
+     "system": "adult human pancreas, TMA core, anti-WWOX DAB immunohistochemistry",
+     "endpoint": "islet versus acinar staining intensity"
+    },
+    "found_or_sought": "sought",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID16941225.json",
+     "entry": 28,
+     "what_changed": "Resolution declaration corrected: the anchor and proposition said 'native pixels' for a crop that is a whole panel rendered at 75% of the embedded JPEG's pixel grid. Re-inspected at 2x native before re-wording; the attestation itself is unchanged.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT",
+       "CORRECTED"
+      ],
+      "method": "legend-locator-audit, blind round 1: triples plus source artefacts only, no dossier, no manifest, no reader identity, no verification report; general-purpose subagent with no session history, 2026-09-13, ALDAZ-REPAIR-B-20260913. Nine triples: 3 SUPPORTED, 4 OVERSHOOT, 1 UNDERSHOOT, 0 NOT_IN_SOURCE; the resolution question answered by independent measurement (307/409.3 = 0.750, 381/507.3 = 0.751, whole panels with letter and scale bar). The audit was asked the resolution question directly and reproduced the arithmetic independently: each crop is a WHOLE panel downsampled to 75% linear (about 56% of the native pixel count), so 'at native pixels' is FALSE of it. The verifier's own WHAT_WOULD_CHANGE_MY_MIND - that the crops might be sub-regions of panels - is answered NO: every crop carries the panel letter and the 50um scale bar."
+     },
+     "prior_declaration": {
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID16941225.json",
+      "entry": 28,
+      "what_changed": "Withdrew 'islet approximately equal to acinus at similar moderate intensity'. Re-inspection at native pixels and at 2x shows the islet visibly stronger than the acini, so the panel inverts the ranking of both the text and Table 1; that inversion is now the proposition.",
+      "audit": {
+       "auditors": 1,
+       "verdicts": [
+        "OVERSHOOT",
+        "CORRECTED"
+       ],
+       "method": "legend-locator-audit, blind: triples plus source artefacts only, no dossier, no manifest, no reader identity; general-purpose subagent, 2026-09-13; tally 7 triples, keep 5, soften 2, withdraw 0"
+      }
+     }
+    }
+   },
+   {
+    "proposition": "Text claim cited to Fig. 3E: enterocytes on DUODENAL VILLI moderately positive.",
+    "snippet": "Enterocytes on villi of duodenum were moderately positive (Fig. 3E).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16941225_Nunez2006.txt",
+    "anchor": "Results, 'Small intestine and colon' (p. 7)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "adult human small intestine, TMA core, anti-WWOX DAB immunohistochemistry",
+     "endpoint": "epithelial cell-type staining"
+    }
+   },
+   {
+    "proposition": "PANEL QUALIFIES TEXT — ON WHAT IT SHOWS, NOT ON INTENSITY. Fig. 3E, on a 75% whole-panel render, re-inspected at 2x native: round gland profiles cut in cross-section with central lumina — crypt-like, not villi — whose epithelium is light-to-moderate; clusters of dark supranuclear granules in some cells (Paneth-type) and isolated darkly granular single cells; goblet vacuoles unstained. The panel illustrates crypt cell types rather than the villus enterocytes the sentence cites it for. INFERENZA on the profile identity (morphology only, no orientation marker).",
+    "snippet": "Visual attestation of Fig. 3E (small intestine): cross-sectioned crypt-like glands; dark supranuclear granules in scattered cells; isolated dark single cells; unstained goblet vacuoles.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID16941225/fig3E_native.png",
+    "anchor": "Fig. 3, panel E (p. 14); whole-panel crop of emb-014-003.jpg rendered at 75% of the embedded JPEG's pixel grid (381x307 of a 507x408 panel, label and scale bar included) - NOT native pixels; the panel was re-inspected by the author at 2x native (1015x817) on 2026-09-13 before this anchor was re-worded, and the attestation was re-reached unchanged",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[29]",
+    "qualifies_needle": "Enterocytes on villi of duodenum",
+    "experimental_context": {
+     "system": "adult human small intestine, TMA core, anti-WWOX DAB immunohistochemistry",
+     "endpoint": "epithelial cell-type staining"
+    },
+    "found_or_sought": "sought",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID16941225.json",
+     "entry": 30,
+     "what_changed": "Resolution declaration corrected: the anchor and proposition said 'native pixels' for a crop that is a whole panel rendered at 75% of the embedded JPEG's pixel grid. Re-inspected at 2x native before re-wording; the attestation itself is unchanged.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT",
+       "CORRECTED"
+      ],
+      "method": "legend-locator-audit, blind round 1: triples plus source artefacts only, no dossier, no manifest, no reader identity, no verification report; general-purpose subagent with no session history, 2026-09-13, ALDAZ-REPAIR-B-20260913. Nine triples: 3 SUPPORTED, 4 OVERSHOOT, 1 UNDERSHOOT, 0 NOT_IN_SOURCE; the resolution question answered by independent measurement (307/409.3 = 0.750, 381/507.3 = 0.751, whole panels with letter and scale bar). The audit was asked the resolution question directly and reproduced the arithmetic independently: each crop is a WHOLE panel downsampled to 75% linear (about 56% of the native pixel count), so 'at native pixels' is FALSE of it. The verifier's own WHAT_WOULD_CHANGE_MY_MIND - that the crops might be sub-regions of panels - is answered NO: every crop carries the panel letter and the 50um scale bar."
+     }
+    }
+   },
+   {
+    "proposition": "Results names goblet cells as the ONLY negative cell type of small-intestinal mucosa.",
+    "snippet": "The cytoplasm of Goblet cells was vacant for WWOX immunostaining and was the only WWOX negative cell type in small intestine mucosa.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16941225_Nunez2006.txt",
+    "anchor": "Results, 'Small intestine and colon' (p. 7)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "Table 1 grades JEJUNUM AND ILEUM ENTEROCYTES negative — a second negative epithelial cell type that the Results sentence (entry 30) excludes, and a regional restriction (duodenum-only enterocyte signal) the running text never states. Verified on rendered page 16.",
+    "snippet": "Duodenum enterocytes ++ Jejunum and ileum enterocytes",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID16941225_Nunez2006.txt",
+    "anchor": "Table 1, Small bowel, rows 1-2: duodenum enterocytes ++, jejunum and ileum enterocytes − (p. 16; rendered page16_300dpi-16.png)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "Kidney glomerulus: Bowman's capsule and mesangium near-undetectable, glomerular endothelium completely negative (Fig. 2F); distal convoluted tubules and collecting ducts strong.",
+    "snippet": "the endothelium from glomerular vascular tuft was completely negative (Fig. 2F)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16941225_Nunez2006.txt",
+    "anchor": "Results, 'Kidney' (p. 5)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "Fig. 2F, on a 75% whole-panel render, re-inspected at 2x native: the glomerular tuft carries no brown signal while adjacent tubules are strongly and granularly brown; some tubules at right are paler and granular. The panel confirms the negative glomerulus and the tubule-positive contrast. The SEGMENT identity (distal versus proximal, collecting duct) is not labelled and not attestable from this panel.",
+    "snippet": "Visual attestation of Fig. 2F (kidney): unstained glomerular tuft; strongly brown adjacent tubules; paler granular tubules at right.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID16941225/fig2F_native.png",
+    "anchor": "Fig. 2, panel F (p. 13); whole-panel crop of emb-013-002.jpg rendered at 75% of the embedded JPEG's pixel grid (307x247 of a 409x328 panel, label and scale bar included) - NOT native pixels; the panel was re-inspected by the author at 2x native (819x657) on 2026-09-13 before this anchor was re-worded, and the attestation was re-reached unchanged",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "sought",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID16941225.json",
+     "entry": 34,
+     "what_changed": "Resolution declaration corrected: the anchor and proposition said 'native pixels' for a crop that is a whole panel rendered at 75% of the embedded JPEG's pixel grid. Re-inspected at 2x native before re-wording; the attestation itself is unchanged.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT",
+       "CORRECTED"
+      ],
+      "method": "legend-locator-audit, blind round 1: triples plus source artefacts only, no dossier, no manifest, no reader identity, no verification report; general-purpose subagent with no session history, 2026-09-13, ALDAZ-REPAIR-B-20260913. Nine triples: 3 SUPPORTED, 4 OVERSHOOT, 1 UNDERSHOOT, 0 NOT_IN_SOURCE; the resolution question answered by independent measurement (307/409.3 = 0.750, 381/507.3 = 0.751, whole panels with letter and scale bar). The audit was asked the resolution question directly and reproduced the arithmetic independently: each crop is a WHOLE panel downsampled to 75% linear (about 56% of the native pixel count), so 'at native pixels' is FALSE of it. The verifier's own WHAT_WOULD_CHANGE_MY_MIND - that the crops might be sub-regions of panels - is answered NO: every crop carries the panel letter and the 50um scale bar."
+     }
+    }
+   },
+   {
+    "proposition": "The running text cites Fig. 1 only for kidney (lane 2) and, elsewhere, liver (lane 1).",
+    "snippet": "Protein detection in kidney by Western blot showed strong signal (Fig. 1, lane 2).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16941225_Nunez2006.txt",
+    "anchor": "Results, 'Kidney', last sentence (p. 5)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human tissue lysates (commercial INSTA-Blot membrane), anti-WWOX immunoblot",
+     "endpoint": "WWOX band at ~46 kDa"
+    }
+   },
+   {
+    "proposition": "PANEL QUALIFIES TEXT — the panel says MORE than the text. Fig. 1, five lanes labelled Liver, Kidney, Small Intestine, Heart, Brain: one band just below the 48 kDa marker in EVERY lane — strong in liver and kidney, clearly present at moderate intensity in BRAIN, faint in heart and small intestine; a faint diffuse smear above the band in all lanes. Brain, heart and the very faint small-intestine lane are never mentioned in the running text, which cites Fig. 1 only for liver (lane 1) and kidney (lane 2); the word 'heart' occurs nowhere in the text layer. Loading is NOT equal: the heart actin band is visibly heavier than the others, so the faint heart WWOX band is fainter still per unit loading. Only two markers (48, 29 kDa); no densitometry; no negative-control lane on this membrane. Protein-level detection in whole human brain lysate is therefore a DATO of this figure at single-blot, unquantified strength.",
+    "snippet": "Visual attestation of Fig. 1: a single ~46 kDa WWOX band in all five lanes (liver, kidney, small intestine, heart, brain); brain moderate; heart and small intestine faint; heart actin band heavier than the rest.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID16941225/fig1_bands_3x.png",
+    "anchor": "Fig. 1 (p. 12); band strip of emb-012-001.jpg rendered at 3x, lane labels read on the native JPEG",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[35]",
+    "qualifies_needle": "Western blot showed strong signal (Fig. 1, lane 2)",
+    "experimental_context": {
+     "system": "human tissue lysates (commercial INSTA-Blot membrane), anti-WWOX immunoblot",
+     "endpoint": "WWOX band at ~46 kDa"
+    },
+    "found_or_sought": "sought — the lane labels were read before the text was consulted about them",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID16941225.json",
+     "entry": 36,
+     "what_changed": "Added that the very faint small-intestine lane is also never mentioned in the running text, and that 'heart' occurs nowhere in the text layer — both found by the audit's search for absence, which this reading had only half performed.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "UNDERSHOOT"
+      ],
+      "method": "legend-locator-audit, blind: triples plus source artefacts only, no dossier, no manifest, no reader identity; general-purpose subagent, 2026-09-13; tally 7 triples, keep 5, soften 2, withdraw 0"
+     }
+    }
+   },
+   {
+    "proposition": "Distal lung: type I and II pneumocytes negative; Table 2 lists alveolar lining epithelium and interalveolar septum negative. Bronchial epithelium positive (Fig. 3I).",
+    "snippet": "No WWOX protein expression was detected on type I and II pneumocytes on distal lung parenchyma.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16941225_Nunez2006.txt",
+    "anchor": "Results, 'WWOX expression in the respiratory system' (p. 7)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "Fig. 3I, on a 75% whole-panel render, re-inspected at 2x native: in the bronchial epithelium the brown signal is punctate and perinuclear/supranuclear in a SUBSET of cells; most columnar cells between them are unstained. Consistent with the text's 'mucus secreting cells showing sharp perinuclear staining', and it shows the signal is cell-subset-restricted rather than a strongly positive epithelium overall.",
+    "snippet": "Visual attestation of Fig. 3I (bronchus): punctate perinuclear brown signal in a subset of epithelial cells; intervening columnar cells unstained.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID16941225/fig3I_native.png",
+    "anchor": "Fig. 3, panel I (p. 14); whole-panel crop of emb-014-003.jpg rendered at 75% of the embedded JPEG's pixel grid (381x307 of a 507x408 panel, label and scale bar included) - NOT native pixels; the panel was re-inspected by the author at 2x native (1015x817) on 2026-09-13 before this anchor was re-worded, and the attestation was re-reached unchanged",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "sought",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID16941225.json",
+     "entry": 38,
+     "what_changed": "Resolution declaration corrected: the anchor and proposition said 'native pixels' for a crop that is a whole panel rendered at 75% of the embedded JPEG's pixel grid. Re-inspected at 2x native before re-wording; the attestation itself is unchanged.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT",
+       "CORRECTED"
+      ],
+      "method": "legend-locator-audit, blind round 1: triples plus source artefacts only, no dossier, no manifest, no reader identity, no verification report; general-purpose subagent with no session history, 2026-09-13, ALDAZ-REPAIR-B-20260913. Nine triples: 3 SUPPORTED, 4 OVERSHOOT, 1 UNDERSHOOT, 0 NOT_IN_SOURCE; the resolution question answered by independent measurement (307/409.3 = 0.750, 381/507.3 = 0.751, whole panels with letter and scale bar). The audit was asked the resolution question directly and reproduced the arithmetic independently: each crop is a WHOLE panel downsampled to 75% linear (about 56% of the native pixel count), so 'at native pixels' is FALSE of it. The verifier's own WHAT_WOULD_CHANGE_MY_MIND - that the crops might be sub-regions of panels - is answered NO: every crop carries the panel letter and the 50um scale bar."
+     }
+    }
+   },
+   {
+    "proposition": "Table 2 is the paper's SUMMARY list of organ-level negatives: thymus, lymph node, spleen, lung alveolar epithelium and septum, aorta, adipose and connective tissue. No panel is dedicated to or cited for any of them. It is NOT the whole of the paper's negative record: Table 1 additionally prints some twenty negative cell-type rows (23 '−' rows counted on the renders), and Esophagus has every tabulated compartment negative (squamous epithelium −, submucosal glands −) while being ABSENT FROM TABLE 2 - esophagus does appear in the Results text, which notes a few very mildly stained ducts. The paper's own sentence that Table 2 shows negative cell types 'from all studied organs' is therefore false as printed: goblet cells, Schwann cells and the kidney negatives appear only in Table 1.",
+    "snippet": "Summary of organs negatives for WWOX protein expression",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID16941225_Nunez2006.txt",
+    "anchor": "Table 2, title (p. 18; rendered page18_300dpi-18.png)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID16941225.json",
+     "entry": 39,
+     "what_changed": "Table 2 re-scoped as the summary list; Table 1's 23 negative rows and the esophagus case added; paper's sentence flagged false.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT",
+       "CORRECTED"
+      ],
+      "method": "legend-locator-audit, blind round 1: triples plus source artefacts only, no dossier, no manifest, no reader identity, no verification report; general-purpose subagent with no session history, 2026-09-13, ALDAZ-REPAIR-B-20260913. Nine triples: 3 SUPPORTED, 4 OVERSHOOT, 1 UNDERSHOOT, 0 NOT_IN_SOURCE; the resolution question answered by independent measurement (307/409.3 = 0.750, 381/507.3 = 0.751, whole panels with letter and scale bar). Blind round 2 on the revision: SUPPORTED. Two rounds spent; residual objections adjudicated by the author against the source."
+     }
+    }
+   },
+   {
+    "proposition": "SCALE DEFECT: the four bins as printed leave values unassigned — 59, the interval 59-60, 68-69, 79-80 and exactly 80 fall in no category. Read off the rendered page (p. 17), not only the text layer. A minor defect, and a sign the scale was not applied as a computed rule.",
+    "snippet": "negative (−) = < 59, mild (+) = 60–68, moderate (++) = 69–79, strong (+++) = > 80",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID16941225_Nunez2006.txt",
+    "anchor": "Table 1, footnote (p. 17; rendered page17_300dpi-17.png)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "AUTHOR INTERPRETATION of the organ ranking (Discussion). A qualitative ranking from categorical grades on duplicate cores; no statistic stands behind 'highest'. Brain and cerebellum enter it only as 'specific ... cells'.",
+    "snippet": "The organs that expressed the highest levels of WWOX protein were: fallopian tubes, ovaries, mammary epithelium, endometrium, prostate glands, testes and genital ducts, liver, stomach, salivary glands, adrenal gland, thyroid, parathyroid, adenohypofisis, distal nephron segments, prostatic urethra, autonomic ganglia, and specific cerebellum and brain cells.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16941225_Nunez2006.txt",
+    "anchor": "Discussion, paragraph 1 (p. 7)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "AUTHOR IPOTESI, not tested here, and quoted at the authors' own strength: they write that the cell-type specificity 'appear[s] to be directly link[ed], at least in part, to the fact that WWOX is an enzyme highly likely to be involved in sex steroid metabolism'. No enzymatic, steroid or receptor measurement exists in the paper; the SDR assignment is by sequence motif (Introduction). The following sentence is a DISJUNCTION - organs 'either steroid targets or related with steroids production/metabolism' - and liver can satisfy its second limb, so a flat counter that the positive organs are not steroid targets in any sense would misread it. What the paper does not do is measure any enzymatic or steroid endpoint, and salivary gland and neural cells are placed by neither limb by any argument it makes. Internal tension in the same argument: the Discussion lists stomach and thyroid among the highest expressers, yet stomach is graded moderate in both Results and Table 1 (++), and thyroid is 'strong' in Results but only ++ in Table 1. PREMISE: DEFAULT_FROM_TEXTBOOK on which organs count as steroid targets or steroid-metabolising.",
+    "snippet": "Thus, the organs consistently strongly positive, are either steroid targets or related with steroids production/metabolism.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16941225_Nunez2006.txt",
+    "anchor": "Discussion, paragraph 2 (p. 8)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID16941225.json",
+     "entry": 42,
+     "what_changed": "Stomach no longer called strongly positive; the paper's disjunction honoured; the hedge quoted at full strength.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT",
+       "CORRECTED"
+      ],
+      "method": "legend-locator-audit, blind round 1: triples plus source artefacts only, no dossier, no manifest, no reader identity, no verification report; general-purpose subagent with no session history, 2026-09-13, ALDAZ-REPAIR-B-20260913. Nine triples: 3 SUPPORTED, 4 OVERSHOOT, 1 UNDERSHOOT, 0 NOT_IN_SOURCE; the resolution question answered by independent measurement (307/409.3 = 0.750, 381/507.3 = 0.751, whole panels with letter and scale bar). Blind round 2 on the revision: UNDERSHOOT on the hedge, fixed by quoting 'directly' and 'highly likely'. Two rounds spent; residual objections adjudicated by the author against the source."
+     }
+    }
+   },
+   {
+    "proposition": "PANEL INVENTORY NEGATIVE: across Fig. 2 (A-I) and Fig. 3 (A-I), all 18 IHC panels inspected, NOT ONE shows central nervous system tissue, and NO negative-control section (no-primary, preimmune, peptide-blocked or WWOX-deficient) is shown anywhere - nor is there a negative-control lane on Fig. 1. No panel is DEVOTED TO OR CITED FOR any organ-level negative of Table 2; connective tissue, itself a Table 2 negative, is incidentally visible and unstained in the background of several panels (2A, 2F, 3A, 3C) and is never cited for it, as this reading's entry 17 records. CELL-TYPE negatives ARE cited to panels in the text: mucinous acini (Fig. 3G); in one sentence cited to Fig. 2F, the glomerular tuft endothelium 'completely negative' with Bowman's capsule parietal layer and mesangial cells 'almost undetectable' (all three − in Table 1); and Schwann cells with myelinized structures (Fig. 3C). Every CNS cell-type call and every organ-level negative in this paper is text/table-only.",
+    "snippet": "Visual attestation of Figs. 2 and 3: eighteen IHC panels of fallopian tube, endometrium, testis, epididymis, prostate, kidney, adrenal, pituitary, thyroid, parathyroid, pancreas, autonomic ganglion, stomach, small intestine, liver, salivary gland, hair follicle/sebaceous gland and bronchus; no CNS field, no negative-control field.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID16941225/emb-014-003.jpg",
+    "anchor": "Figs. 2 and 3 (pp. 13-14), native JPEGs, all panels",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "sought — the inventory was taken to ask what the compartment answer can rest on",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID16941225.json",
+     "entry": 43,
+     "what_changed": "'Not one shows a negative tissue' scoped: no panel cited for a Table 2 negative; panel-cited cell-type negatives listed in full.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT",
+       "CORRECTED"
+      ],
+      "method": "legend-locator-audit, blind round 1: triples plus source artefacts only, no dossier, no manifest, no reader identity, no verification report; general-purpose subagent with no session history, 2026-09-13, ALDAZ-REPAIR-B-20260913. Nine triples: 3 SUPPORTED, 4 OVERSHOOT, 1 UNDERSHOOT, 0 NOT_IN_SOURCE; the resolution question answered by independent measurement (307/409.3 = 0.750, 381/507.3 = 0.751, whole panels with letter and scale bar). Blind round 2 on the revision: UNDERSHOOT on the count, fixed; 'stroma' corrected to connective tissue. Two rounds spent; residual objections adjudicated by the author against the source."
+     }
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,930 @@
+{
+ "schema_version": 2,
+ "pmid": "15870886",
+ "doi": "10.3892/ijo.26.6.1681",
+ "receipt": "FTR-20260914-15870886-01",
+ "landing": [
+  "FTR-20260914-15870886-01",
+  "fulltext_dossiers/PMID15870886.md",
+  "CC-20260914-15870886-01"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Run inline and measured 2026-09-14T19:45Z: Europe PMC fullTextXML 404; efetch db=pmc XML shell refusing download; PMC article HTML 200 with no User-Agent (text surface); PMC /pdf/ behind proof-of-work, recovered with pmc_pow_fetch.py (figure source)."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline: two findings of this reading exist only in pixels (the Figure 2 lower bound and the Figure 1C leverage point), which a read-only subagent working from a dossier cannot inspect."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered inside the reading: first contact with the text, no persisted locator for this PMID to contradict. Whether any candidate touches a consolidated claim was decidable only after the blind pass froze; recorded in the commit candidate."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Declined inside a blind primary read: the one transferable datum (a Delta6-8 WWOX transcript in normal ovary) is carried as a locator and a candidate observation, not mined into discovery capital before canon comparison."
+  },
+  {
+   "skill": "legend-paperqa",
+   "used": false,
+   "reason": "Declined: requires an external API key and traffic not authorised for this task, and a RAG answer is not a reading."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 210,
+  "publications_on_gene": 3,
+  "counts_measured": "PubMed esearch 2026-09-14T19:52-19:59Z: corresponding author 'Gourley C[au]' 210, 'Gourley C[au] AND WWOX' 3; senior 'Gabra H[au]' 180, 'Gabra H[au] AND WWOX' 7; co-author 'Aldaz CM[au]' 138, 'Aldaz CM[au] AND WWOX' 38.",
+  "research_type": "mixed",
+  "output_kind": "primary_research",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Mixed: an Edinburgh gynaecological-oncology translational group (tissue banking, qRT-PCR, survival statistics - native competence, weighed as competent observation) with a WWOX mapping history of its own (Paige 2000/2001) and the Aldaz laboratory as a single co-author for the gene. The transfectant immunoblot is a small cell-line experiment inside a clinical paper and is weighed as such. Nothing in the group's design concerns neural tissue or WWOX-DEE; its interpretations (dominant negative, early event) are its hypotheses."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "WWOX",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 708
+   },
+   {
+    "query": "WWOX AND ovarian",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 49
+   },
+   {
+    "query": "WWOX AND alternative splicing",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 9
+   },
+   {
+    "query": "WWOX AND (splice OR splicing OR variant 4 OR Delta6-8)",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 56
+   }
+  ],
+  "note": "Counts are field sizes, not reading coverage. 'WWOX AND alternative splicing' is 9 records, so primary data on the physiological prevalence of an exon 6-8 skipped WWOX transcript are scarce."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 28,
+  "enumeration_method": "Enumerated from the fingerprinted PMC HTML reference list: 28 <li> entries, all 28 with a PubMed link. Gene-direct = reference text naming WWOX/Wwox/WOX1/FRA16D/FOR gene/16q23, matched by script on the full reference text: 12.",
+  "gene_direct_count": 12,
+  "gene_direct_refs_in_source": [
+   "10910080",
+   "10451696",
+   "10786676",
+   "10749141",
+   "10749140",
+   "11719429",
+   "11572989",
+   "11956080",
+   "10861292",
+   "11896615",
+   "14638866",
+   "14695174"
+  ],
+  "resolved": [],
+  "queued": [
+   {
+    "pmid": "10910080",
+    "queue": "not queued by this actor: routed to the orchestrator in CC-20260914-15870886-01, because this contract does not own the queue file",
+    "reason": "Gene-direct reference with no complete receipt in this corpus (fulltext_receipts.py status exit 1, 2026-09-14)."
+   },
+   {
+    "pmid": "10451696",
+    "queue": "not queued by this actor: routed to the orchestrator in CC-20260914-15870886-01, because this contract does not own the queue file",
+    "reason": "Gene-direct reference with no complete receipt in this corpus (fulltext_receipts.py status exit 1, 2026-09-14)."
+   },
+   {
+    "pmid": "10786676",
+    "queue": "not queued by this actor: routed to the orchestrator in CC-20260914-15870886-01, because this contract does not own the queue file",
+    "reason": "Gene-direct reference with no complete receipt in this corpus (fulltext_receipts.py status exit 1, 2026-09-14)."
+   },
+   {
+    "pmid": "10749141",
+    "queue": "not queued by this actor: routed to the orchestrator in CC-20260914-15870886-01, because this contract does not own the queue file",
+    "reason": "Gene-direct reference with no complete receipt in this corpus (fulltext_receipts.py status exit 1, 2026-09-14)."
+   },
+   {
+    "pmid": "10749140",
+    "queue": "not queued by this actor: routed to the orchestrator in CC-20260914-15870886-01, because this contract does not own the queue file",
+    "reason": "Gene-direct reference with no complete receipt in this corpus (fulltext_receipts.py status exit 1, 2026-09-14)."
+   },
+   {
+    "pmid": "11719429",
+    "queue": "not queued by this actor: routed to the orchestrator in CC-20260914-15870886-01, because this contract does not own the queue file",
+    "reason": "Bednarek 2001, source of the in vivo tumour-suppression claim cited in Introduction and Discussion."
+   },
+   {
+    "pmid": "11572989",
+    "queue": "not queued by this actor: routed to the orchestrator in CC-20260914-15870886-01, because this contract does not own the queue file",
+    "reason": "Paige 2001 PNAS, the same group's first report of Delta6-8 as the predominant ovarian aberrant transcript; the variant-4 premise of this paper rests on it."
+   },
+   {
+    "pmid": "11956080",
+    "queue": "not queued by this actor: routed to the orchestrator in CC-20260914-15870886-01, because this contract does not own the queue file",
+    "reason": "Gene-direct reference with no complete receipt in this corpus (fulltext_receipts.py status exit 1, 2026-09-14)."
+   },
+   {
+    "pmid": "10861292",
+    "queue": "not queued by this actor: routed to the orchestrator in CC-20260914-15870886-01, because this contract does not own the queue file",
+    "reason": "Gene-direct reference with no complete receipt in this corpus (fulltext_receipts.py status exit 1, 2026-09-14)."
+   },
+   {
+    "pmid": "11896615",
+    "queue": "not queued by this actor: routed to the orchestrator in CC-20260914-15870886-01, because this contract does not own the queue file",
+    "reason": "Driouch 2002, alternative WWOX transcripts in breast tumours and normal tissue; the frequency comparison of the Discussion."
+   },
+   {
+    "pmid": "14638866",
+    "queue": "not queued by this actor: routed to the orchestrator in CC-20260914-15870886-01, because this contract does not own the queue file",
+    "reason": "Ishii 2003, short-form WWOX protein in haematopoietic malignancy, contrasted in the Introduction."
+   },
+   {
+    "pmid": "14695174",
+    "queue": "not queued by this actor: routed to the orchestrator in CC-20260914-15870886-01, because this contract does not own the queue file",
+    "reason": "Watanabe 2003, the proteasome-blockade short-isoform result the Discussion argues with."
+   }
+  ],
+  "resolved_depth_declaration": "RESOLVED MEANS A PERSISTED complete_fulltext_read RECEIPT, measured with fulltext_receipts.py status --pmid on 2026-09-14, and nothing more. 0 of 12 gene-direct references resolve, and 0 of all 28 references. The load-bearing antecedent is 11572989 (Paige 2001), the source of the premise that Delta6-8 is the predominant ovarian aberrant transcript; it has no receipt. This gap is DECLARED, not waived: it is why this manifest reports one declared gap."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Technical only: fulltext_receipts.py status --pmid for 15870886 before reading (exit 1, no events) and for each of the 28 reference PMIDs. No claim, registry, dossier or candidate content was opened before the dossier froze.",
+  "hits": 0,
+  "finding": "No reference of this paper, and not the paper itself, carries a complete receipt in the corpus."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-09-14",
+  "route": "NCBI esummary db=pubmed retmode=json for 15870886, 2026-09-14T19:44Z",
+  "result": "pubtype Journal Article; Research Support, Non-U.S. Gov't. commentscorrections absent: no linked erratum, expression of concern or retraction.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "UNSCREENABLE_NO_REFERENCE_LIST",
+   "reference_source": "network",
+   "references_declared": 0,
+   "references_screened": 0,
+   "references_with_doi": 0,
+   "schema": "retraction_check.dependencies/1",
+   "screened": false,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 4,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID15870886_Gourley2005.html",
+   "kind": "article_text",
+   "note": "PMC article page of PMC4166600 (NIH author manuscript NIHMS222055), HTTP 200 with no User-Agent on the first request, 182484 B, 2026-09-14T19:45Z. citation_pmid 15870886 and citation_doi 10.3892/ijo.26.6.1681 read from its own meta tags. Evidentiary text surface for every body and table locator, verified through the validator's HTML surface parser with the abstract separated. AUTHOR MANUSCRIPT, not the Spandidos version of record. Routes measured the same minute: Europe PMC fullTextXML HTTP 404 (0 B); NCBI efetch db=pmc HTTP 200 with an 8767 B shell whose comment says the publisher does not allow downloading of the full text in XML form. Known conversion defects carried and NOT corrected: 'A6-' for Delta6-8 in the footnote, 'PEOlhygl.6' for PEO1hyg1.6, 'see' for 'sec' in Table II.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4166600/",
+    "http_method": "GET",
+    "tier": "pmc_article_html",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "8043d3874db48d4f928618f6e0ed20db61099618a729b8f35da96fd9e6a41dbf"
+  },
+  {
+   "path": "files/fulltext/PMID15870886_Gourley2005.pdf",
+   "kind": "article_binary",
+   "note": "NIH author-manuscript PDF nihms-222055.pdf, 18 pages, fetched through PMC's proof-of-work interstitial with framework/scripts/pmc_pow_fetch.py (difficulty 4, first status 200 challenge, retry 200 application/pdf). Declared ONLY as the source of the native figure rasters; no locator uses its text layer.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4166600/pdf/nihms-222055.pdf",
+    "http_method": "GET",
+    "tier": "pmc_pow_fetch",
+    "user_agent_policy": "identified",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "b6a824be3b88c54f194e365041ae70cadb9117e6a73e5fc0b5d7afcfc290533e"
+  },
+  {
+   "path": "files/fulltext/PMID15870886_Gourley2005_assets/pdf_p12_x47.jpeg",
+   "kind": "figure",
+   "note": "Figure 1, native embedded JPEG 1192x687 RGB, PDF p.12. Inspected whole at native scale.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID15870886_Gourley2005.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref) over Page.get_images(full=True); bytes written unmodified",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "ac5ec256e44bcf25193b23c8fd719d399cf77a04710fe81f67a1773a5a2c1683"
+  },
+  {
+   "path": "files/fulltext/PMID15870886_Gourley2005_assets/pdf_p13_x52.jpeg",
+   "kind": "figure",
+   "note": "Figure 2, native embedded JPEG 1000x653 RGB, PDF p.13. Inspected whole at native scale.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID15870886_Gourley2005.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref) over Page.get_images(full=True); bytes written unmodified",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "a394fdefbc62e04a024a2809e784fb00d6c840da30438a67c2e0aa866f2cb1d8"
+  },
+  {
+   "path": "files/fulltext/PMID15870886_Gourley2005_assets/pdf_p14_x57.jpeg",
+   "kind": "figure",
+   "note": "Figure 3, native embedded JPEG 1008x2432 grayscale, PDF p.14. Too tall for one native view, so inspected as three native crops.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID15870886_Gourley2005.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref) over Page.get_images(full=True); bytes written unmodified",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "f0cb53e66e9fbffea2abc04260b5665cea7fb690f37b8e057a41ac5dde7ca0f5"
+  },
+  {
+   "path": "files/fulltext/PMID15870886_Gourley2005_assets/crop_fig3A.png",
+   "kind": "figure",
+   "note": "Native crop of Figure 3A, x0-1008 y0-811.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID15870886_Gourley2005_assets/pdf_p14_x57.jpeg",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 1008x811+0+0 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "4c196a5d08b9bfc2e67f2dd6a702bacf007de07eb48a33fc778df698a78f6814"
+  },
+  {
+   "path": "files/fulltext/PMID15870886_Gourley2005_assets/crop_fig3B.png",
+   "kind": "figure",
+   "note": "Native crop of Figure 3B, x0-1008 y811-1622.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID15870886_Gourley2005_assets/pdf_p14_x57.jpeg",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 1008x811+0+811 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "c82b98e9c6eab9f9a11f4bdd49e7637cc6100c32ee85786f2b23a4c1c398b2a4"
+  },
+  {
+   "path": "files/fulltext/PMID15870886_Gourley2005_assets/crop_fig3C.png",
+   "kind": "figure",
+   "note": "Native crop of Figure 3C, x0-1008 y1622-2432.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID15870886_Gourley2005_assets/pdf_p14_x57.jpeg",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 1008x810+0+1622 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "ad50d801989dfa74b284bc0fa2088f31d458338891c2f0eaa498c4688c8dc542"
+  },
+  {
+   "path": "files/fulltext/PMID15870886_Gourley2005_assets/view_fig2_low_2x.png",
+   "kind": "figure",
+   "note": "Figure 2 left half (bins 0-30) magnified 2x by pixel replication, to confirm the absence of normal-tissue bars below 10. A viewing aid over native pixels; the native raster is the evidence.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID15870886_Gourley2005_assets/pdf_p13_x52.jpeg",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 500x653+0+0 +repage -scale 200% <out>.png (pixel-replication magnification of native pixels for viewing; adds no information)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "4f1c444b8d54e7e3fbc86688336e9e1d21002fcf6bbe203e2fc7a8f542d86e2f"
+  },
+  {
+   "path": "files/fulltext/PMID15870886_Gourley2005_assets/blob_nihms-222055-f0001.jpg",
+   "kind": "figure",
+   "note": "PMC CDN figure blob linked from the article page, 600x344. Acquired and fingerprinted; NOT the inspected surface, because the PDF raster of the same figure is larger.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/d615/4166600/f6411d31548f/nihms-222055-f0001.jpg",
+    "http_method": "GET",
+    "tier": "pmc_cdn_blob",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "fa4514aa4274df2c373c75fa2e258fa36c8531f4fd00de7d70044aaf7ce0019e"
+  },
+  {
+   "path": "files/fulltext/PMID15870886_Gourley2005_assets/blob_nihms-222055-f0002.jpg",
+   "kind": "figure",
+   "note": "PMC CDN figure blob linked from the article page, 600x392. Acquired and fingerprinted; NOT the inspected surface, because the PDF raster of the same figure is larger.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/d615/4166600/8ef56672fc44/nihms-222055-f0002.jpg",
+    "http_method": "GET",
+    "tier": "pmc_cdn_blob",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "2cc0fed7c77697862894be58427b7a89b885ddefe2c5c7a6fb9254fff3f558f0"
+  },
+  {
+   "path": "files/fulltext/PMID15870886_Gourley2005_assets/blob_nihms-222055-f0003.jpg",
+   "kind": "figure",
+   "note": "PMC CDN figure blob linked from the article page, 400x965. Acquired and fingerprinted; NOT the inspected surface, because the PDF raster of the same figure is larger.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/d615/4166600/f120a5f2d280/nihms-222055-f0003.jpg",
+    "http_method": "GET",
+    "tier": "pmc_cdn_blob",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "d3fcd2054b5e7401bd03eef47e82cb48ab8dd11aea52130722f846e487333119"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST search EXT_ID:15870886 AND SRC:MED resultType=core, 2026-09-14: inEPMC=Y, inPMC=Y, isOpenAccess=N, nihAuthMan=Y, fullTextIdList PMC4166600, while fullTextXML for that PMCID returns 404.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence. The abstract's 'significantly worse survival' is represented by the body sentence r_048 and the Figure 3C panel; its omission of the multivariate null is carried by r_multi.",
+  "entries": [
+   {
+    "proposition": "COHORT: 83 consecutive tumour samples drawn from a tissue bank. DATO.",
+    "snippet": "Eighty-three consecutive tumour samples were taken from this bank for analysis.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15870886_Gourley2005.html",
+    "anchor": "Materials and methods > Preparing RNA from human tissues, sentence 4",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human tissue, epithelial ovarian tumours and contralateral normal ovaries",
+     "endpoint": "WWOX variant 1 / variant 4 mRNA by RT-PCR"
+    }
+   },
+   {
+    "proposition": "COHORT AFTER EXCLUSION: 12 excluded (histology 3, not primary surgery 4, RNA 2, concurrent malignancy 2, no clinical data 1), leaving 71. DATO.",
+    "snippet": "Tumour characteristics of the remaining 71 tumours are described in Table I.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15870886_Gourley2005.html",
+    "anchor": "Materials and methods > Preparing RNA from human tissues, sentence 6",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human tissue, epithelial ovarian tumours and contralateral normal ovaries",
+     "endpoint": "WWOX variant 1 / variant 4 mRNA by RT-PCR"
+    }
+   },
+   {
+    "proposition": "TABLE I: grade 1/2/3/unknown = 3/16/49/3; stage I/II/III/IV/unknown = 11/6/41/10/3 (each column sums to 71). The cohort is dominated by grade 3 (49/71) and stage III-IV (51/71). DATO.",
+    "snippet": "Grade 1 3 2 16 3 49 Unknown 3 Stage I 11 II 6 III 41 IV 10 Unknown 3",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID15870886_Gourley2005.html",
+    "anchor": "Table I, grade and stage rows",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human tissue, epithelial ovarian tumours and contralateral normal ovaries",
+     "endpoint": "WWOX variant 1 / variant 4 mRNA by RT-PCR"
+    }
+   },
+   {
+    "proposition": "NORMAL COMPARATOR: 13 non-malignant samples. DATO.",
+    "snippet": "Thirteen non-malignant tissue samples were taken from our tissue bank for analysis.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15870886_Gourley2005.html",
+    "anchor": "Materials and methods > Preparing RNA from human tissues, after Table I",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human tissue, epithelial ovarian tumours and contralateral normal ovaries",
+     "endpoint": "WWOX variant 1 / variant 4 mRNA by RT-PCR"
+    }
+   },
+   {
+    "proposition": "NORMAL COMPARATOR IS NOT HEALTHY-DONOR OVARY: it is the apparently normal contralateral ovary of women operated for suspected malignancy with benign histology. DATO.",
+    "snippet": "On each occasion, the apparently normal contralateral ovary was used for our analysis.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15870886_Gourley2005.html",
+    "anchor": "Materials and methods > Preparing RNA from human tissues",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "ANTIBODY: rabbit polyclonal against a GST fusion of the WWOX WW domains. The paper names no source or reference for it and shows no specificity test of its own beyond the transfectant blot. DATO.",
+    "snippet": "Blots were incubated with primary anti-WWOX (a polyclonal antibody, raised in rabbit using as antigen a fusion protein of GST bound to the WW-domains of WWOX)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15870886_Gourley2005.html",
+    "anchor": "Materials and methods > Western blot analysis",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "MISPRIMING CONTROL: variant-1-overexpressing PEO1 cells, stated to express no endogenous variant 1 or 4. DATO.",
+    "snippet": "This control was derived by transfecting a variant 1-over-expressing plasmid into PEOl cells, which express no endogenous variant 1 or variant 4.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15870886_Gourley2005.html",
+    "anchor": "Materials and methods > Quantitative real-time RT-PCR",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "in vitro cell line",
+     "cell_line": "PEO1hyg1.6 (WWOX exons 4-8 homozygously deleted) and variant-1 sense transfectants"
+    }
+   },
+   {
+    "proposition": "STATISTICS: Fisher's exact, Mann-Whitney, linear regression; univariate then forward-stepwise Cox. No multiplicity correction is described. DATO.",
+    "snippet": "Analyses for clinicopathological associations were conducted using Fisher's exact test, Mann-Whitney test and linear regression.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15870886_Gourley2005.html",
+    "anchor": "Materials and methods > Statistical analysis",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "MODEL CELL LINE: PEO1hyg1.6 is homozygously deleted for WWOX exons 4-8 and expresses no full-length WWOX. DATO as the authors' statement; the deletion itself is not shown in this paper.",
+    "snippet": "PEOlhygl.6 cells are homozygously deleted for exons 4-8 of the WWOX gene, and thus express no full-length WWOX.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15870886_Gourley2005.html",
+    "anchor": "Results > Low level WWOX expression is detectable, sentence 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "in vitro cell line",
+     "cell_line": "PEO1hyg1.6 (WWOX exons 4-8 homozygously deleted) and variant-1 sense transfectants"
+    }
+   },
+   {
+    "proposition": "IMMUNOBLOT SENSITIVITY: WWOX protein detected in 4 of 6 variant-1 transfectants; the 2 undetected were the lowest mRNA expressers. DATO. The authors' conclusion that immunoblotting is less sensitive than qRT-PCR is an INFERENZA from 6 clones of one line.",
+    "snippet": "Western blot analysis detected a single band corresponding to isoform 1 expression in 4 out of the 6 sense transfectants (Fig. 1B)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15870886_Gourley2005.html",
+    "anchor": "Results > Low level WWOX expression is detectable, sentence 5",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "in vitro cell line",
+     "cell_line": "PEO1hyg1.6 (WWOX exons 4-8 homozygously deleted) and variant-1 sense transfectants"
+    }
+   },
+   {
+    "proposition": "AUTHORS' INFERENCE on sensitivity. INFERENZA (theirs).",
+    "snippet": "This suggests that the sensitivity of the WWOX immunoblotting is less than the real-time RT-PCR.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15870886_Gourley2005.html",
+    "anchor": "Results > Low level WWOX expression is detectable, sentence 7",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "CAPTION CLAIM: strong linear mRNA-protein correlation across the transfectants. DATO as a statement.",
+    "snippet": "A strong linear correlation between variant 1 mRNA and protein levels (R=0.9953) is shown.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15870886_Gourley2005.html",
+    "anchor": "Figure 1 legend, panel C",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "FIGURE 1, NATIVE PIXELS (1192x687). A: H7 ~100, H10 ~23, H6/H8/H9 ~2-4, H12 ~1, parent 0 (relative units). B: WWOX band strong in H7 and H10, faint in H6, barely visible in H8, absent in H9, H12 and parent; GAPDH faint in the parent lane and heavier in H10/H9/H8, so loading is uneven. C: printed 'R2 = 0.9953'; five points lie within x<2, y<25 and one point sits at ~(7, ~100), so the fit is carried by the single H7 clone - a leverage point, not a demonstrated linear relation across the range. The caption's 'R=0.9953' is printed as R-squared on the panel and the text gives R2=0.995.",
+    "snippet": "Visual attestation of Figure 1: panel A bars H7 ~100 and H10 ~23 with others near zero; panel B WWOX bands strong H7 and H10, faint H6, trace H8, none H9 H12 parent, GAPDH uneven; panel C label R2 = 0.9953 with one point near x=7 and the rest clustered near the origin.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID15870886_Gourley2005_assets/pdf_p12_x47.jpeg",
+    "anchor": "Figure 1 (PDF p.12), native raster 1192x687",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "qualifies_needle": "strong linear correlation",
+    "experimental_context": {
+     "system": "in vitro cell line",
+     "cell_line": "PEO1hyg1.6 (WWOX exons 4-8 homozygously deleted) and variant-1 sense transfectants"
+    },
+    "qualifies": "entries[11]"
+   },
+   {
+    "proposition": "FULL-LENGTH ABSENCE: exon 8-9 product in all normals and 69/71 tumours. DATO.",
+    "snippet": "revealed a product for all of the normal ovarian samples and 69 out of 71 tumour samples.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15870886_Gourley2005.html",
+    "anchor": "Results > Full-length WWOX variant 1 is absent in two ovarian tumours, sentence 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human tissue, epithelial ovarian tumours and contralateral normal ovaries",
+     "endpoint": "WWOX variant 1 / variant 4 mRNA by RT-PCR"
+    }
+   },
+   {
+    "proposition": "NO HOMOZYGOUS DELETION in the two null tumours: every exon amplifies from genomic DNA. DATO; exon PCR cannot exclude heterozygous loss, intronic breaks or rearrangement.",
+    "snippet": "Exon-specific PCR from genomic DNA revealed that all the exons were present in both cases, ruling out the possibility of homozygous deletion.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15870886_Gourley2005.html",
+    "anchor": "Results > Full-length WWOX variant 1 is absent in two ovarian tumours, last sentence",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human tissue, epithelial ovarian tumours and contralateral normal ovaries",
+     "endpoint": "WWOX variant 1 / variant 4 mRNA by RT-PCR"
+    }
+   },
+   {
+    "proposition": "RANGES AS PRINTED: normals 9.3-61.6 (median 22.9) 'in the 69 normal ovarian tissues'; tumours 0-58.7 (median 9.57). DATO as printed. There are 13 normals (m_13), so '69' is an error in the text; see the Figure 2 locator for the lower bound.",
+    "snippet": "varied From 9.3 to 61.6 (median 22.9) in the 69 normal ovarian tissues and from 0 to 58.7 (median 9.57) in the ovarian tumours.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15870886_Gourley2005.html",
+    "anchor": "Results > Full-length WWOX variant 1 expression is reduced, sentence 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human tissue, epithelial ovarian tumours and contralateral normal ovaries",
+     "endpoint": "WWOX variant 1 / variant 4 mRNA by RT-PCR"
+    }
+   },
+   {
+    "proposition": "PRIMARY RESULT: median variant-1 mRNA lower in tumours than normals, Mann-Whitney p<0.0001. DATO (71 tumours vs 13 contralateral ovaries, beta-actin normalised).",
+    "snippet": "the median WWOX variant 1 expression was highly significantly reduced in the ovarian tumours compared to the normal tissues (p<0.0001;",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15870886_Gourley2005.html",
+    "anchor": "Results > Full-length WWOX variant 1 expression is reduced, sentence 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human tissue, epithelial ovarian tumours and contralateral normal ovaries",
+     "endpoint": "WWOX variant 1 / variant 4 mRNA by RT-PCR"
+    }
+   },
+   {
+    "proposition": "FIGURE 2, NATIVE PIXELS (1000x653, and a 2x pixel-replicated view of the 0-30 bins). Normal-tissue bars are multiples of ~7.7% (1/13): 10-15 7.7, 15-20 23.1, 20-25 23.1, 25-30 7.7, 30-35 7.7, 35-40 7.7, 45-50 15.4, 60-65 7.7 - thirteen samples, confirming n=13 and not 69. THERE IS NO NORMAL BAR IN THE 0-5 OR 5-10 BIN, so the lowest normal lies at >=10, which contradicts the text's lower bound of 9.3. Tumour bars are multiples of ~1.4% (1/71), e.g. 0-5 18.3% = 13/71, so the histogram includes the two variant-1-null tumours.",
+    "snippet": "Visual attestation of Figure 2: white normal-tissue bars at 10-15 (7.7%), 15-20 (23%), 20-25 (23%), 25-30, 30-35, 35-40 (7.7% each), 45-50 (15.4%), 60-65 (7.7%); no white bar at 0-5 or 5-10; dark tumour bar 0-5 at ~18%.",
+    "surface": "figure",
+    "artifact": [
+     "files/fulltext/PMID15870886_Gourley2005_assets/pdf_p13_x52.jpeg",
+     "files/fulltext/PMID15870886_Gourley2005_assets/view_fig2_low_2x.png"
+    ],
+    "anchor": "Figure 2 (PDF p.13), native raster 1000x653; 0-30 bins also viewed at 2x pixel replication",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "found_or_sought": "found",
+    "contradicts_needle": "in the 69 normal ovarian tissues",
+    "experimental_context": {
+     "system": "human tissue, epithelial ovarian tumours and contralateral normal ovaries",
+     "endpoint": "WWOX variant 1 / variant 4 mRNA by RT-PCR"
+    },
+    "contradicts": "entries[15]"
+   },
+   {
+    "proposition": "NO CLINICAL ASSOCIATION of variant-1 level; authors call the reduction 'may be an early event'. DATO for the null (no statistics shown); 'early event' is IPOTESI - no pre-invasive lesion was measured.",
+    "snippet": "The level of WWOX variant 1 expression was not associated with any particular clinicopathological factor, but was decreased across all the tumour subtypes, suggesting that reduced WWOX variant 1 expression may be an early event in ovarian tumourigenesis.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15870886_Gourley2005.html",
+    "anchor": "Results > Full-length WWOX variant 1 expression is reduced, sentence 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human tissue, epithelial ovarian tumours and contralateral normal ovaries",
+     "endpoint": "WWOX variant 1 / variant 4 mRNA by RT-PCR"
+    }
+   },
+   {
+    "proposition": "SURVIVAL NULL for variant 1 split at 10. DATO.",
+    "snippet": "There was no significant difference in survival between high (actin-corrected level >10) and low (actin-corrected level <10) WWOX variant 1 expressers (Fig. 3A).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15870886_Gourley2005.html",
+    "anchor": "Results > Full-length WWOX variant 1 expression is reduced, sentence 4",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human tissue, epithelial ovarian tumours and contralateral normal ovaries",
+     "endpoint": "WWOX variant 1 / variant 4 mRNA by RT-PCR"
+    }
+   },
+   {
+    "proposition": "FIGURE 3A, NATIVE CROP. Printed p=0.792, a value the text never gives. The curves cross several times; the <10 group plateaus at ~0.37 and the >10 group ends ~0.24 after a late step at ~1450 days. The test is not named, numbers at risk are not shown, and group sizes are not given.",
+    "snippet": "Visual attestation of Figure 3A: p=0.792 printed; solid (>10) and dotted (<10) Kaplan-Meier curves cross, dotted plateau ~0.37, solid final ~0.24 after a step near 1450 days; no numbers at risk.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID15870886_Gourley2005_assets/crop_fig3A.png",
+    "anchor": "Figure 3A (PDF p.14), native crop x0-1008 y0-811 of the 1008x2432 raster",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "qualifies_needle": "no significant difference in survival",
+    "experimental_context": {
+     "system": "human tissue, epithelial ovarian tumours and contralateral normal ovaries",
+     "endpoint": "WWOX variant 1 / variant 4 mRNA by RT-PCR"
+    },
+    "qualifies": "entries[19]"
+   },
+   {
+    "proposition": "VARIANT 4 (Delta6-8) PREVALENCE: detected in 45/71 tumours (63%) at 32-39 cycles. DATO. NB the section's opening sentence speaks of 69 tumours; 45/69 would be 65%.",
+    "snippet": "Expression of WWOX variant 4 was detected in 45 out of 71 (63%) ovarian tumour samples and was generally very low, amplifying after 32-39 cycles of PCR when using 1 μl of first strand cDNA per reaction.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15870886_Gourley2005.html",
+    "anchor": "Results > WWOX variant 4 expression in ovarian tumours, paragraph 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human tissue, epithelial ovarian tumours and contralateral normal ovaries",
+     "endpoint": "WWOX variant 1 / variant 4 mRNA by RT-PCR"
+    }
+   },
+   {
+    "proposition": "DENOMINATOR AS STATED at the head of the same section: 69 tumours. DATO; conflicts with r_45's /71.",
+    "snippet": "To determine the expression of WWOX variant 4 in the 69 ovarian tumours, we performed non-quantitative RT-PCR",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15870886_Gourley2005.html",
+    "anchor": "Results > WWOX variant 4 expression in ovarian tumours, sentence 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "VARIANT 4 IS NOT QUANTIFIABLE: below the standard curve. DATO; so every variant-4 analysis is presence/absence of a late-cycle product.",
+    "snippet": "The level of variant 4 expression in the tumours is lower than the standard curve generated for this RT-PCR, making quantitation of variant 4 levels unreliable.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15870886_Gourley2005.html",
+    "anchor": "Results > WWOX variant 4 expression in ovarian tumours, paragraph 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "COMPETITIVE PCR: 321 bp Delta6-8 product in >50% of tumours. DATO.",
+    "snippet": "The 321 bp variant 4 product lacking the exons 6-8 sequence was present in >50% of the tumour samples.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15870886_Gourley2005.html",
+    "anchor": "Results > WWOX variant 4 expression in ovarian tumours, sentence 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human tissue, epithelial ovarian tumours and contralateral normal ovaries",
+     "endpoint": "WWOX variant 1 / variant 4 mRNA by RT-PCR"
+    }
+   },
+   {
+    "proposition": "OTHER PRODUCTS: two intermediate-size products in 12/71 tumours (17%). DATO for the bands.",
+    "snippet": "In addition, two other PCR products, with sizes intermediate between the variant 1 and variant 4 products, were identified in a total of 12 out of 71 tumours (17%).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15870886_Gourley2005.html",
+    "anchor": "Results > WWOX variant 4 expression in ovarian tumours, sentence 4",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "IDENTITY OF THOSE PRODUCTS IS ASSUMED from size, not sequenced (Delta7-8 ~410 bp, Delta7 ~675 bp). INFERENZA (theirs).",
+    "snippet": "Based on size criteria, these were assumed to be transcripts with deletions of exons 7 and 8 (~410 bp) and of exon 7 alone (~675 bp).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15870886_Gourley2005.html",
+    "anchor": "Results > WWOX variant 4 expression in ovarian tumours, sentence 5",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "VARIANT 4 WITH HIGH GRADE: Fisher p=0.006. DATO; recomputed here from Table IIIA as two-sided Fisher p=0.0065.",
+    "snippet": "There was a significant association between the presence of the variant 4 transcript and high grade ovarian cancer (p=0.006;",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15870886_Gourley2005.html",
+    "anchor": "Results > WWOX variant 4 expression in ovarian tumours, paragraph 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human tissue, epithelial ovarian tumours and contralateral normal ovaries",
+     "endpoint": "WWOX variant 1 / variant 4 mRNA by RT-PCR"
+    }
+   },
+   {
+    "proposition": "TABLE IIIA (grade, n=66): no-v4 11 grade 1/2 + 12 grade 3 = 23; v4 6 + 37 = 43. DATO.",
+    "snippet": "No WWOX variant 4 expression 11 12 23 WWOX variant 4 expression 6 37 43 Total 17 49 66",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID15870886_Gourley2005.html",
+    "anchor": "Table III A",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human tissue, epithelial ovarian tumours and contralateral normal ovaries",
+     "endpoint": "WWOX variant 1 / variant 4 mRNA by RT-PCR"
+    }
+   },
+   {
+    "proposition": "TABLE IIIB (stage, n=66): no-v4 10 stage I/II + 14 III/IV = 24; v4 5 + 37 = 42. DATO. Recomputed two-sided Fisher p=0.0125 against the text's 0.012. Both tables total 66 yet their expresser counts differ (43 vs 42): they are not the same 66 patients, and a reader cannot reconstruct the 45 expressers of r_45 from either. The single footnote 'P=0.006' is printed under both tables.",
+    "snippet": "No WWOX variant 4 expression 10 14 24 WWOX variant 4 expression 5 37 42 Total 15 51 66",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID15870886_Gourley2005.html",
+    "anchor": "Table III B",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human tissue, epithelial ovarian tumours and contralateral normal ovaries",
+     "endpoint": "WWOX variant 1 / variant 4 mRNA by RT-PCR"
+    }
+   },
+   {
+    "proposition": "VARIANT 4 AND SURVIVAL, ALL PATIENTS: p=0.057, not significant. DATO.",
+    "snippet": "There was a trend towards worse survival in those patients whose tumours expressed WWOX variant 4 but this did not reach significance (p=0.057;",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15870886_Gourley2005.html",
+    "anchor": "Results > WWOX variant 4 expression in ovarian tumours, paragraph 4",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human tissue, epithelial ovarian tumours and contralateral normal ovaries",
+     "endpoint": "WWOX variant 1 / variant 4 mRNA by RT-PCR"
+    }
+   },
+   {
+    "proposition": "VARIANT 4 AND SURVIVAL IN THE HIGH-VARIANT-1 SUBGROUP: p=0.048. DATO; a post-hoc subgroup at the threshold, with the complementary low-variant-1 subgroup null and data not shown (r_lowdns).",
+    "snippet": "those that co-expressed variant 4 had significantly worse survival compared with those that did not (p=0.048;",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15870886_Gourley2005.html",
+    "anchor": "Results > WWOX variant 4 expression in ovarian tumours, paragraph 4",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human tissue, epithelial ovarian tumours and contralateral normal ovaries",
+     "endpoint": "WWOX variant 1 / variant 4 mRNA by RT-PCR"
+    }
+   },
+   {
+    "proposition": "FIGURE 3B-C, NATIVE CROPS. B p=0.057. C (33 patients per caption) p=0.048: the expresser curve falls to 0.0 at ~1450 days on its last event; non-expressers plateau at ~0.47 after ~1200 days. Few steps in either arm; group sizes within the 33, test and numbers at risk are not shown.",
+    "snippet": "Visual attestation of Figure 3B and 3C: B p=0.057, expressers dotted below non-expressers; C p=0.048, dotted expresser curve drops to 0 near 1450 days, solid non-expresser curve plateaus near 0.47; no numbers at risk.",
+    "surface": "figure",
+    "artifact": [
+     "files/fulltext/PMID15870886_Gourley2005_assets/crop_fig3B.png",
+     "files/fulltext/PMID15870886_Gourley2005_assets/crop_fig3C.png"
+    ],
+    "anchor": "Figure 3B (native crop y811-1622) and 3C (native crop y1622-2432) of the PDF p.14 raster",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "qualifies_needle": "significantly worse survival",
+    "experimental_context": {
+     "system": "human tissue, epithelial ovarian tumours and contralateral normal ovaries",
+     "endpoint": "WWOX variant 1 / variant 4 mRNA by RT-PCR"
+    },
+    "qualifies": "entries[31]"
+   },
+   {
+    "proposition": "COMPLEMENTARY SUBGROUP NULL, DATA NOT SHOWN. DATO as a statement.",
+    "snippet": "In contrast, expression of variant 4 did not significantly alter the survival in patients expressing low levels of variant 1 (data not shown).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15870886_Gourley2005.html",
+    "anchor": "Results > WWOX variant 4 expression in ovarian tumours, paragraph 4",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "NOT INDEPENDENT PROGNOSTICALLY: variant 4 drops out of the multivariate model. DATO; this is the paper's own strongest limit on its survival finding, and the abstract does not carry it.",
+    "snippet": "Analysis of variant 4 in a multivariate model demonstrated that expression of this variant was not an independent prognostic variable.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15870886_Gourley2005.html",
+    "anchor": "Results > WWOX variant 4 expression in ovarian tumours, last sentence",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human tissue, epithelial ovarian tumours and contralateral normal ovaries",
+     "endpoint": "WWOX variant 1 / variant 4 mRNA by RT-PCR"
+    }
+   },
+   {
+    "proposition": "VARIANT 4 IN NORMAL OVARY: 9/13 (69%), a frequency similar to tumours. DATO. The Delta6-8 transcript is therefore not tumour-specific in this tissue.",
+    "snippet": "WWOX variant 4 expression was surprisingly detected in 9 out of 13 (69%) normal ovarian tissue samples, a frequency similar to that detected in the tumours.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15870886_Gourley2005.html",
+    "anchor": "Results > WWOX variant 4 is expressed in normal ovary tissue, sentence 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human tissue, epithelial ovarian tumours and contralateral normal ovaries",
+     "endpoint": "WWOX variant 1 / variant 4 mRNA by RT-PCR"
+    }
+   },
+   {
+    "proposition": "VARIANT 4 LEVELS: normals 0-0.33, tumours 0-3.65 relative units, both declared unreliable. DATO.",
+    "snippet": "The relative WWOX variant 4 expression (WWOX/β-ACTIN) was low and appeared similar in the normal ovarian tissues (from 0 to 0.33) and in the ovarian tumours (from 0 to 3.65), although quantitation of such low expression is unreliable.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15870886_Gourley2005.html",
+    "anchor": "Results > WWOX variant 4 is expressed in normal ovary tissue, sentence 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human tissue, epithelial ovarian tumours and contralateral normal ovaries",
+     "endpoint": "WWOX variant 1 / variant 4 mRNA by RT-PCR"
+    }
+   },
+   {
+    "proposition": "DISCUSSION DENOMINATORS: 60/69 below the normal median and 34/69 below the lowest normal. DATO as printed; here the denominator is 69, the Results used 71 for the same tumours.",
+    "snippet": "Tumours in our study showed 87% (60/69) variant 1 expression levels lower than the median expression level of the normal ovaries, and 49% (34/69) of the tumours exhibited less variant 1 expression than the lowest expressing normal ovary sample.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15870886_Gourley2005.html",
+    "anchor": "Discussion, paragraph 4",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human tissue, epithelial ovarian tumours and contralateral normal ovaries",
+     "endpoint": "WWOX variant 1 / variant 4 mRNA by RT-PCR"
+    }
+   },
+   {
+    "proposition": "METHOD COMPARISON: competitive PCR gave 50% v4-positive tumours. DATO.",
+    "snippet": "we also detected a high frequency of variant 4 expression in ovarian tumours (50%) using a competitive, non-quantitative PCR similar to that used in the earlier studies.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15870886_Gourley2005.html",
+    "anchor": "Discussion, paragraph 5",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "FOUR AUTHOR HYPOTHESES for the variant-4 association (FRA16D disruption marker, splicing-fidelity marker, gain of function, dominant negative). IPOTESI, none tested.",
+    "snippet": "It could represent: i) a surrogate marker of cancer-associated disruption at FRA16D, ii) a surrogate marker of cancer-associated disruption of splicing fidelity, iii) an oncogenic, gain of function WWOX isoform, or iv) a dominant negative WWOX iso-form.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15870886_Gourley2005.html",
+    "anchor": "Discussion, paragraph 6",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "CITED, NOT MEASURED: isoform 4 nuclear, isoform 1 cytoplasmic with TNF-alpha translocation (refs 14, 15). No localisation experiment in this paper.",
+    "snippet": "While WWOX isoform 4 is located in the nucleus, WWOX isoform 1 is located normally in the cytoplasm, but translocates to the nucleus following TNF-α treatment (14,15).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15870886_Gourley2005.html",
+    "anchor": "Discussion, paragraph 6",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "CITED: short-form proteins detected only under proteasome blockade (Watanabe 2003, ref 22). Not tested here.",
+    "snippet": "Watanabe et al (22) could only detect alternate transcript expression if the proteasome was blocked.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15870886_Gourley2005.html",
+    "anchor": "Introduction, paragraph 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "AUTHORS AGAINST THEIR OWN DOMINANT-NEGATIVE MODEL, on the normal-ovary result. INFERENZA (theirs).",
+    "snippet": "This perhaps argues against a dominant negative hypothesis, and suggests that the variant may be an infrequently produced splice form, even in normal cells.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15870886_Gourley2005.html",
+    "anchor": "Discussion, paragraph 7",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "AUTHORS' LIMIT: variant-4 role speculative until translation is shown. DATO as the authors' own limitation; no protein for variant 4 was sought in tissue.",
+    "snippet": "The role of WWOX variant 4 is clearly speculative at this time and progress is reliant on the demonstration that it is actually translated.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15870886_Gourley2005.html",
+    "anchor": "Discussion, paragraph 7",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "SUMMARY UPGRADES 'may be' to 'is': 'a frequent and early event'. IPOTESI stated as conclusion - no early lesion, stage-1 subgroup analysis or precursor tissue is shown.",
+    "snippet": "suggesting that reduced WWOX variant 1 expression is a frequent and early event in ovarian tumourigenesis.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15870886_Gourley2005.html",
+    "anchor": "Discussion, summary paragraph",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "SURFACE DEFECT: the nomenclature footnote prints 'A6-' where Delta6-8 is meant (author-manuscript conversion). Quoted as printed, not corrected. Variant 1 = NM_016373, variant 4 = NM_130788.",
+    "snippet": "Genbank nomenclature refers to the WWOX full length transcript (Genbank NM_016373) as variant 1 and to the A6- transcript (Genbank NM_130788) as variant 4.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15870886_Gourley2005.html",
+    "anchor": "Footnotes > Abbreviations",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   }
+  ]
+ }
+}

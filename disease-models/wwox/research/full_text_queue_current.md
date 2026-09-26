@@ -150,7 +150,7 @@ through an authorised `BATCH_COMMIT`.
 **Priority:** MED
 **Why:** mechanistic depth (MYC↔WWOX, progenitor dynamics) for CLAIM 002 / human spectrum
 **Come è stato risolto:** `PAPER 001` dichiara `Identifier: preprint` e nessun PMID; il ponte al pubblicato è nel tracking log, `CC-2026-07-05-008 — upgrade di PAPER 001 (Aqeilan/Davila, *Brain* awag239)`. **L'identità c'era, in un altro file, in una riga di changelog.**
-**Current status:** 🟡 **letto parzialmente il 2026-08-09** — receipt `FTR-20260809-42397075-01` e `-02`, entrambi `partial_fulltext_read`. La voce diceva *«cited; full mechanistic detail not extracted»*: vero prima del 9 agosto, non aggiornato dopo. Debito residuo reale, ma minore di quanto la voce dichiarasse.
+**Current status:** ✅ **CHIUSA — letta integralmente il 2026-08-10**, receipt `FTR-20260810-42397075-04`, `complete_fulltext_read`, preceduta da `-01`, `-02` e `-03` `partial_fulltext_read`. 🔴 La voce ha dichiarato *«letto parzialmente il 2026-08-09»* per **35 giorni** dopo che la lettura completa era a terra: stessa forma di `FT-038` e di `FT-029`, corretta il 2026-09-14 sotto `SCIENCE-EXEC-20260914`. Artefatti: 22 su 22 **assenti** in questo checkout, quindi una rilettura qui non è possibile senza ri-acquisirli. La voce diceva *«cited; full mechanistic detail not extracted»*: vero prima del 9 agosto, non aggiornato dopo. Debito residuo reale, ma minore di quanto la voce dichiarasse.
 **Next action:** chiudere il parziale → `complete_fulltext_read`. Superficie: PDF, `clean` al sentinella ma pur sempre PDF — cercare prima XML/HTML PMC.
 
 ---
@@ -763,7 +763,7 @@ adulta. Va letto come `DISCOVERY_ONLY`, non come candidato canonico.
 ## FT-038
 **Paper:** PMID 30619736 — Hussain et al. 2018, *Front Oncol* 8:591
 **Title:** Delineating WWOX protein interactome by tandem affinity purification-mass spectrometry: identification of top interactors and key metabolic pathways involved
-**Surface:** PMID 30619736 · `absent`
+**Surface:** PMID 30619736 · letto integralmente il 2026-09-13
 **Priority:** **ALTA**
 **Why:** è la **sorgente dell'arco WWOX·UPF1** su cui poggia [[discovery_ledger_current#DL-MECH-069 — 🔑 L'efficienza dell'NMD potrebbe essere **WWOX-dipendente**, e questo tocca sia l'allele di sito accettore sia l'esperimento disegnato per caratterizzarlo|DL-MECH-069]]:
 l'interazione WW1 ↔ ¹⁰⁰⁵PPGY¹⁰⁰⁸ di UPF1, cioè il ponte fra WWOX e il macchinario NMD che
@@ -774,7 +774,7 @@ visibile. Da leggere prima che `DL-MECH-069` possa salire di stato — servono l
 dell'interazione, i controlli di specificità, e se UPF1 compaia con altri componenti del
 complesso EJC/NMD.
 **Come è emerso:** durante la lettura di PMID 37519886, che importa l'arco senza misurarlo.
-**Current status:** ⬜ recuperato? no — non letto.
+**Current status:** ✅ **CHIUSA — letta integralmente il 2026-09-13**, receipt `FTR-20260913-30619736-01`, `complete_fulltext_read`, nessuna sezione `not_read`. Le tre domande che la tenevano aperta hanno risposta: specificità (score 0,243, CRAPome 0,08, rango 23 di 216), ingaggio di WW1 (**non misurato** — solo hit di pattern), stechiometria (**nessuna**), altri componenti EJC/NMD (**nessuno**). `DL-MECH-069` corretto di conseguenza il 2026-09-14.
 
 ---
 
@@ -1122,8 +1122,9 @@ documento e costa zero: la didascalia dichiara il generatore** — FigureLabs (F
   **sei volte la dose**, §11 nomina l'alta dose come la principale preoccupazione regolatoria
   pediatrica.
 - 🔴 **L'abbondanza di proteina WWOX non è una lettura della funzione di WWOX**, dimostrato dai
-  due lati: P47T ha proteina pari al wild type e fenotipo grave; gli organoidi SCAR12 hanno
-  proteina minima e fenotipo quasi normale.
+  due lati: il **topo** knock-in P47T ha proteina **presente ma non quantificata** e fenotipo
+  severo — i **pazienti** P47T sono invece SCAR12 **lievi**, e i due non vanno confusi; gli
+  organoidi SCAR12 hanno proteina minima e fenotipo quasi normale.
 - 🔴 **Il framework genotipo-fenotipo a tre classi è pubblicato e falsificato nella stessa
   sezione** — e il controesempio decisivo è un **missenso omozigote (p.Ser304Tyr) che uccide
   nella prima infanzia**. «Missenso ⇒ funzione residua ⇒ più lieve» è la premessa sotto buona
@@ -2358,8 +2359,8 @@ al piano di lettura.
 | **25411445** | Mignot 2015 — *WWOX-related encephalopathies: delineation of the phenotypical spectrum* | il lavoro che **ha definito lo spettro**. Citato come fonte delle varianti nonsenso/frameshift severe |
 | **29808465** | Johannsen 2018 — *A novel missense variant in the SDR domain leads to complete loss of WWOX protein* | 🔴 **CHIUSO COME NON RECUPERABILE PER QUESTE ROTTE — vedi sotto.** Regge **47 citazioni in 7 file canonici** |
 | 30158849 | Liu 2018 — *WWOX phosphorylation, signaling, and role in neurodegeneration* | asse neurodegenerazione, *Front Neurosci* |
-| 17823927 | Ludes-Meyers 2007 — topi ipomorfi per WWOX | modello ipomorfo, non nullo — la classe che manca al confronto |
-| 16941225 | Nunez 2006 — *WWOX protein expression in normal human tissues* | la mappa di espressione basale su cui poggiano gli argomenti tissutali |
+| 17823927 | Ludes-Meyers 2007 — topi ipomorfi per WWOX | modello ipomorfo, non nullo — la classe che manca al confronto  ✅ **letto integralmente il 2026-09-14**, `FTR-20260914-17823927-01` (annotato 2026-09-14) |
+| 16941225 | Nunez 2006 — *WWOX protein expression in normal human tissues* | la mappa di espressione basale su cui poggiano gli argomenti tissutali  ✅ **letto integralmente il 2026-09-13**, `FTR-20260913-16941225-01` (annotato 2026-09-14) |
 | 25403906 | Ben-Salem 2015 — delezione di un intero esone | fenotipo antenatale |
 | 25416187 | Tabarki 2015a — *The fragile site WWOX gene and the developing brain* | |
 | 17163164 | Ramos & Aldaz 2006 — WWOX come gene di sito fragile nel cancro | parità delle fonti: oncologia |
@@ -4105,7 +4106,89 @@ tessuti a regolazione ormonale (testicolo, ovaio, prostata). Leggerla permettere
 dire qualcosa sulla distribuzione tissutale di WWOX **a due livelli** invece di appoggiarsi a una
 RT-PCR endpoint del 2008 su gel di agarosio, che è evidenza debole di abbondanza relativa.
 **Priorità:** ALTA fra i quattro nuovi hop.
-**Current status:** ⬜ aperto.
+**Current status:** ✅ **CHIUSO come lettura il 2026-09-13** da `scientist-b` (task `ALDAZ-FT-B-001`) —
+`FTR-20260913-16941225-01`, `complete_fulltext_read`, manifest `PMID16941225.json` STRICT PASS 0 gap,
+44 locator, 20 pannelli su 20 ispezionati come immagini a risoluzione nativa, dossier
+`fulltext_dossiers/PMID16941225.md`, confronto M4b
+`comparison_notes/2026-09-13_PMID16941225_comparison.md`, candidato `CC-20260913-16941225-01`.
+Superficie: nessuna struttura disponibile (Europe PMC `fullTextXML` 404; `efetch db=pmc` restituisce
+solo il front matter con il rifiuto dell'editore; PMC HTML e `/bin/` dietro reCAPTCHA). Vinta la rotta
+`pmc_pow_fetch.py` sul PDF manoscritto d'autore NIHMS222059.
+
+**CHE COSA CHIUDE.** Esiste la controparte proteica del gel `Figure S3` di `18674750`: un immunoblot a
+cinque tessuti (fegato, rene, intestino tenue, cuore, **cervello**) e una mappa IHC di oltre 30 organi
+con Tabella 1 (positivi, per tipo cellulare) e Tabella 2 (negativi). **Il cervello porta la proteina**
+a livello di lisato — banda ~46 kDa moderata — e come nel 2008 **il testo non nomina la corsia
+cervello**, citando la Fig. 1 solo per rene e fegato. Il corpus può ora parlare di distribuzione di
+WWOX su due livelli.
+
+🔴 **CHE COSA NON CHIUDE, e va detto perché la voce era ALTA proprio per questo.**
+- **La specificità dell'anticorpo non è stabilita qui:** è delegata a `PMID 15692750` e `PMID 15982416`
+  (controllo negativo su estratti Peo1), **nessuno dei due letto**. Nessun controllo negativo IHC — né
+  no-primary, né siero preimmune, né blocco peptidico, né tessuto WWOX-null — è descritto o mostrato.
+  **Ogni** chiamata per tipo cellulare di questo lavoro poggia su quel reagente.
+- **Nessun pannello del sistema nervoso centrale esiste.** I 18 riquadri IHC non contengono un solo
+  campo di SNC, e nessun controllo negativo. Neuroni, astrociti, cellule ependimali, strati
+  cerebellari e la negatività degli oligodendrociti sono **solo testo e tabella**, su **due carote per
+  regione** della Neuro-TMA, senza co-marcatore: identificazione per sola morfologia.
+- **Contraddizione interna irrisolta:** il testo dichiara negativa la corteccia **limbica**, la
+  Tabella 1 la mette nella riga `+++` dei neuroni; parietale, temporale e substantia nigra passano da
+  «negative» nel testo a `+/−` in tabella.
+- **Muscolo scheletrico: «inconclusive»** per dichiarazione degli autori, assente da entrambe le
+  tabelle. Non è un negativo e non può essere trasportato come tale.
+- **Discordanza RNA/proteina non risolta:** l'adipe è la corsia più forte del gel del 2008 ed è
+  IHC-**negativo** qui in ogni sede; gli autori incontrano la stessa forma sui linfociti (alto per
+  Northern, negativo per IHC «in our hands») e non la riconciliano.
+- **Nessuna quantificazione:** i valori ACIS non sono riportati, i gradi sono categoriali e la scala
+  stampata lascia 59, 68-69, 79-80 e 80 esatto non assegnati.
+- **Niente sviluppo, età, sesso o provenienza del donatore:** tessuto adulto commerciale, una riga di
+  metodo.
+
+**HOP APERTI DA QUESTA LETTURA, tutti su questa voce** (dedotti dai tag `[PubMed: n]` dell'artefatto,
+25 referenze enumerate, 20 WWOX-dirette): `15692750` e `15982416` **portanti** (specificità e
+scoring); `16438931` (Jin 2006, co-localizzazione apicale ezrina-WWOX, l'unica affermazione di
+localizzazione presa da fuori); `11719429` (Bednarek 2001, citato in testo come «2000b» — difetto di
+etichetta); `11013073` e `10749141` (FRA16D, priorità bassa). Difetti di citazione registrati:
+«Bretscher et al. 2002» è citato e **assente** dalla lista dei riferimenti.
+
+**Next action:** ~~leggere `15692750` e `15982416`~~ — **FATTO il 2026-09-13** (`scientist-b`, task
+`ALDAZ-FT-B-003`): `FTR-20260913-15982416-01` e `FTR-20260913-15692750-01`, entrambi
+`complete_fulltext_read`, manifest STRICT PASS 0 gap, dossier e confronto M4b
+`comparison_notes/2026-09-13_ALDAZ-FT-B-003_comparison.md`. La qualifica che questa riga chiedeva
+**resta dovuta e ora è precisa** — vedi la disposizione qui sotto.
+
+### 🔴 DISPOSIZIONE DEL RESIDUO ANTICORPO — 2026-09-13, `ALDAZ-FT-B-003`
+
+**PARZIALMENTE CHIUSO.** La domanda *«i due paper del 2005 contengono il controllo di specificità che
+questa delega presuppone?»* ha ora una risposta, ed è **no**.
+
+- **`PMID 15982416` (ovaio):** controllo negativo **genetico** sull'immunoblot — linea PEO1 con
+  delezione omozigote degli esoni 4–8, più la stessa linea transfettata come positivo (Figura 1A,
+  ispezionata: corsia null vuota, banda singola nel transfettante, actina in entrambe). Lato IHC:
+  *«immunoreactivity was abolished by pre-absortion to the recombinant GST-WWOX fusion protein used to
+  raise the antibody **(data not shown)**»* — **asserzione senza pannello**, in nessuno dei cinque
+  file-figura depositati. **Nessun ladder di peso molecolare in tutta la Figura 1** (verificato a 8×).
+- **`PMID 15692750` (mammella):** immunoblot migliore — corsia `NEG.` (PEO1) su **ciascuno** dei due
+  gel, vuota per WWOX **e con actina presente nella stessa corsia** (6×), marcatori a **39 kD e 31 kD**,
+  composito **dichiarato** in didascalia. Lato IHC: **nessun controllo di specificità di alcun tipo**;
+  l'unico controllo nominato serve a cronometrare il DAB. **Ed è questo il paper che `15982416` cita per
+  il metodo di immunostaining**: seguire la citazione non trova il controllo, trova l'assenza.
+- 🔴 **La catena non termina qui.** Entrambi delegano la caratterizzazione dell'anticorpo al **proprio
+  rif. 12 = `PMID 14526170`** (Ludes-Meyers 2003, *Cytogenet Genome Res*), **senza ricevuta in questo
+  ledger**. `16941225 → {15982416, 15692750} → 14526170`.
+
+**Standard raggiunto:** validazione **da immunoblot** su lisati epiteliali contro un null di linea
+cellulare. **Non raggiunge l'immunoistochimica** in nessuno dei due, **non raggiunge il tessuto
+nervoso** in nessuno dei due, e **non stabilisce l'identità a 46 kDa** nel paper dell'ovaio (nessun
+ladder) mentre in quello della mammella la banda corre sopra i 39 kD senza che 46 sia marcato.
+
+**Conseguenza per questa voce:** ogni chiamata per tipo cellulare dell'atlante `16941225` — e ogni
+negativo d'organo — **va qualificata** come poggiante su un reagente la cui validazione è di grado
+immunoblot su epitelio, non immunoistochimica e non neurale. `QUALIFICATA, non refutata`: la premessa
+`INFERENZA — il controllo delegato è adeguato` del dossier `PMID16941225.md` §4.1 è **ritirata** e
+sostituita da `PREMISE: DATO` con quel confine.
+
+**Residuo che resta aperto, ed è nuovo:** `PMID 14526170`, capolinea della catena — vedi `FT-179`.
 
 ---
 
@@ -4197,7 +4280,30 @@ assenti dal ledger.**
 `41562193`: è lì che si stabilisce la storia di coltura e passaggio delle linee, l'unica variabile
 che potrebbe spiegare perché una linea **wild-type** porti il carico mutazionale più alto del
 dataset. Il secondo è l'anello Wwox–Brca1, che `PMID 38499540` (già letto) tocca dall'altro lato.
-**Priorità:** media. **Current status:** ⬜ aperto.
+**Priorità:** media. **Current status:** 🟡 **PARZIALMENTE CHIUSA — 2026-09-13.**
+
+**Chiuso:** `PMID 27869163` letto integralmente il 2026-09-13 da `scientist-c`
+(`FTR-20260913-27869163-01`, `complete_fulltext_read`; manifest `PMID27869163.json`, 58 locator,
+`MANIFEST STRICT PASS` 0 gap; dossier `fulltext_dossiers/PMID27869163.md`). L'anello Wwox–Brca1 è ora
+letto da questo lato: la scelta di pathway è **misurata** in quattro reporter integrati con bracci di
+rescue, ma il passo dell'end-resection è **inferito da un correlato** (conteggi di foci) e la figura
+del modello stampa un punto di domanda accanto alla freccia Wwox→MRN. Nessun saggio di resezione
+esiste nel paper.
+
+**NON chiuso, e resta il cuore della voce:** `PMID 27773744` non è letto (fuori dal lotto
+`ALDAZ-FT-C-001`).
+
+🔴 **Due correzioni alla voce stessa, dagli artefatti:**
+1. **La storia di coltura e passaggio delle linee MEF non è in `27869163`.** Il paper dichiara le
+   linee (`«designated MEF WT4, WT7, KO3 and KO5 cell lines»`, embrioni di 13 giorni, fondo misto
+   B6 × 129SvJ) ma rinvia il protocollo di stabilimento al proprio rif. 35 (`PMID 24244712`, Miuma
+   2013), non a `27773744`. I passaggi dichiarati sono **discordi fra esperimenti**: cariotipo a
+   **p18**, sopravvivenza «early-passage», ciclo cellulare **~p10**, blot p21/p53/p16 **p10–12**.
+   Chi cerca la variabile di coltura deve leggere `27773744` **e** `24244712`.
+2. **`KO4` non compare in `27869163`.** Il paper nomina solo KO3, KO5, WT4, WT7. L'insieme
+   `KO3/KO4/KO5/WT4/WT7` viene da `41562193`, non da questo paper.
+
+**Next action:** leggere `PMID 27773744`; e `PMID 24244712` per il protocollo di stabilimento.
 
 ---
 
@@ -7430,6 +7536,656 @@ same slices**, and a **search for compensation** in the spared class. 🔴 **Non
 in the WWOX interneuron arm.** ⚠️ **Nothing about `Scn1a` transfers to `Wwox` as biology**: different
 gene, different protein class, different disease, different mechanism. **The import is a standard of
 evidence, never a result.**
+
+---
+
+## FT-175 — `PMID 39868255` (De La Cruz / Machado 2025, **preprint**) · gli otto riferimenti gene-direct che questa lettura lascia aperti
+
+> Recovered 2026-09-26 from the VPS backup (`06ee25a`), where this entry was `FT-097`; renumbered because `FT-097` names a different entry on `main`. Every reference to it in the recovered readings was rewritten to `FT-175`.
+
+
+**Paper:** PMID 39868255 / DOI 10.1101/2025.01.17.633677 — De La Cruz P, Gomes M, Lockett A, *et al.*,
+*Partial Wwox Loss of Function Increases Severity of Murine Sepsis and Neuroinflammation*, bioRxiv
+v1, 2025-01-18. Letto integralmente il 2026-09-13 (`FTR-20260913-39868255-01`,
+`complete_fulltext_read`): **questa voce non è un debito sul paper, è il debito che il paper genera.**
+
+**Perché esiste.** Il manifest di questa lettura enumera 21 riferimenti, di cui 12 gene-direct, e ne
+risolve 4 contro questo ledger. Gli altri **8 non hanno receipt** e prima di oggi non esisteva
+alcuna voce di coda che nominasse questo preprint: `grep` su FT-001..FT-096 non trova né il PMID né
+il DOI. Registrarli qui è ciò che impedisce al debito di vivere solo in prosa — e la regola di
+`manifest_queue_id_crosscheck` è che un manifest non punti alla voce di un altro paper.
+
+**Gli otto, per DOI come li dà l'artefatto** (il JATS di bioRxiv porta DOI, non PMID, e nessun
+identificatore è stato convertito a memoria):
+`10.1073/pnas.1409252111` (rif. 7, WWOX–ATM/DNA damage) ·
+`10.1074/jbc.R115.676346` (rif. 9, funzioni pleiotropiche WWOX) ·
+`10.3389/fped.2022.847549` (rif. 11, approccio fenotipico WOREE) ·
+`10.1016/j.neurobiolaging.2021.10.011` (rif. 12, varianti WWOX/MAF ed endofenotipi di demenza) ·
+`10.1016/j.bbcan.2014.06.001` (rif. 13, review Aldaz 2014 — 🔴 **è la referenza a cui il preprint
+attribuisce erroneamente la GSEA del topo P47T**, che sta invece nel rif. 17) ·
+`10.1007/s00109-022-02265-5` (rif. 14, WWOX e regolazione metabolica) ·
+`10.1007/s00018-023-04950-1` (rif. 15, senescence escape / instabilità genomica) ·
+`10.1074/jbc.M505590200` (rif. 21, WOX1 essenziale per la morte cellulare TNF-/p53-mediata — 🔴 è
+l'**unico** appoggio meccanicistico che il preprint cita per la propria ipotesi TNF-α/NF-κB).
+
+**Priorità:** MEDIA, con due eccezioni ALTE. Il rif. 21 è l'anello meccanicistico su cui poggia
+l'intera discussione del preprint e nessuno in questo repository l'ha letto; il rif. 13 va letto
+perché è il bersaglio di un errore di attribuzione ora documentato, e serve sapere che cosa dica
+davvero. **Current status:** ⬜ aperto.
+
+---
+
+## FT-176 — `PMID 35409089` (Park 2022) · gli otto riferimenti gene-direct aperti, e il paper di mezzo del programma
+
+> Recovered 2026-09-26 from the VPS backup (`06ee25a`), where this entry was `FT-098`; renumbered because `FT-098` names a different entry on `main`. Every reference to it in the recovered readings was rewritten to `FT-176`.
+
+
+**Paper:** PMID 35409089 / DOI 10.3390/ijms23073729 — Park D, Gharghabi M, Reczek CR, Plow R,
+Yungvirt C, Aldaz CM, Huebner K, *Wwox Binding to the Murine Brca1-BRCT Domain Regulates Timing of
+Brip1 and CtIP Phospho-Protein Interactions with This Domain at DNA Double-Strand Breaks, and Repair
+Pathway Choice*, *Int J Mol Sci* 2022;23(7):3729. Letto integralmente il 2026-09-13
+(`FTR-20260913-35409089-01`, `complete_fulltext_read`). **Questa voce non è un debito sul paper: è il
+debito che il paper genera.**
+
+**Perché esiste.** Il manifest enumera 52 riferimenti, 10 gene-direct, e ne risolve **2** contro
+questo ledger — e uno dei due è `PMID 27869163`, letto lo stesso giorno. Nessuna voce nominava questo
+paper prima di oggi. La regola di `manifest_queue_id_crosscheck` vieta a un manifest di puntare alla
+voce di un altro paper: `FT-085` è la voce di `27869163`, ed è la ragione per cui questo
+identificatore è coniato.
+
+**Gli otto, per PMID come li dà l'artefatto** (`ext-link/@xlink:href` del JATS; nessun identificatore
+preso da una ricerca):
+`PMID 34998176` (rif. 10 — 🔴 il più importante, vedi sotto) · `PMID 25595186` (rif. 1) ·
+`PMID 10786676` (rif. 2, già in coda da `FT-085`) · `PMID 18452537` (rif. 3) ·
+`PMID 16360296` (rif. 4) · `PMID 20074932` (rif. 5) · `PMID 30350478` (rif. 6, la fonte della
+sopravvivenza dei pazienti ovaio/polmone ripetuta in Discussione) · `PMID 30619736` (rif. 41,
+l'interattoma usato per affermare che **nessun** motivo canonico di legame Wwox esiste nel BRCT).
+
+🔴 **`PMID 34998176` — Park D, Gharghabi M, Schrock MS, Plow R, Druck T, Yungvirt C, Aldaz CM,
+Huebner K, *Interaction of Wwox with Brca1 and associated complex proteins prevents premature
+resection at double-strand breaks and aberrant homologous recombination*, *DNA Repair (Amst.)*
+**2022 Feb;110:103264**, epub 2021-12-26, DOI `10.1016/j.dnarep.2021.103264` (identità da ESummary
+2026-09-13; la prima stesura di questa voce scriveva «*DNA Repair* 2021», che è la data di epub, non
+la citazione) — è
+il paper di mezzo di un programma di tre, e questo repository non l'ha mai aperto.** È citato in
+`35409089` **sia** per il risultato di end-resection nelle cellule umane **sia** per la letalità
+sintetica da inibizione di Chk2 che la Figura 5 riproduce nel topo. Qualunque giudizio
+sull'indipendenza fra il braccio umano (2017) e quello murino (2022) deve passare da lì: il corpus
+tiene il primo e il terzo anello e non il secondo. **Priorità: ALTA.**
+
+**Provenienza dei materiali, anch'essa non letta.** Ogni linea MEF mutante su cui poggia la
+conclusione centrale (`Brca1Δex11`, `M1717R`, `S1598F`, `FHWT`, `Brip1FHWT`, triplo mutante ABC,
+`Bard1−/−`, reporter `PimDRGFP`, KPC-2) viene dal laboratorio di Thomas Ludwig e traccia ai rif. 33,
+34, 39, 40, 46, 51, 52 — `PMID 23712259`, tesi Columbia `10.7916/D82J68Z9`, `PMID 10198641`,
+`PMID 22034435`, `PMID 19088202`, `PMID 32732220`, `PMID 31877165` — **nessuno con receipt qui**. Il
+rif. 33 (Reczek 2013) è il più alto degli altri: è la fonte del contro-risultato che il paper stesso
+cita, che l'ablazione dell'interazione Brca1–CtIP **non** altera i foci di pRPA.
+
+**Priorità:** MEDIA, con `34998176` ALTA. **Current status:** ⬜ aperto.
+
+---
+
+## FT-177 — `PMID 17470496` (Gribaa 2007) · l'antecedente clinico di `PAPER 042`, su cui poggia tutto ciò che questo repository dice del fenotipo SCAR12
+
+> Recovered 2026-09-26 from the VPS backup (`06ee25a`), where this entry was `FT-099`; renumbered because `FT-099` names a different entry on `main`. Every reference to it in the recovered readings was rewritten to `FT-177`.
+
+
+**Paper:** PMID 17470496 / DOI 10.1093/brain/awm078 — Gribaa M, Salih M, Anheim M,
+Lagier-Tourenne C, H'mida D, Drouot N, et al., *A new form of childhood onset, autosomal recessive
+spinocerebellar ataxia and epilepsy is localized at 16q21-q23*, *Brain* 2007;130(Pt 7):1921-8.
+Identificatore risolto il 2026-09-13 per DOI via NCBI esearch sull'artefatto stesso
+(`10.1093/brain/awm078[doi]` → `17470496`); nessun identificatore preso da memoria.
+
+**Perché esiste, e perché la voce è aperta da una lettura e non da un triage.** Nasce dalla lettura
+integrale di `PMID 24369382` (Mallaret 2014, [[paper_registry_current#PAPER 042]]) del 2026-09-13,
+receipt `FTR-20260913-24369382-01`. Mallaret riporta **la genetica** di quella coorte e **non**
+ridescrive il fenotipo: l'unica frase che lo riassume rimanda esplicitamente a questo paper
+(*"We reported a new form of childhood onset autosomal recessive cerebellar ataxia with generalized
+tonic-clonic epilepsy and mental retardation in a large consanguineous family from Saudi Arabia with
+four affected children"*, Introduzione). MRI con iperintensità della sostanza bianca posteriore,
+vacuolizzazione del sistema sarco-tubulare alla biopsia muscolare, età d'esordio e decorso dei
+quattro pazienti sauditi stanno **qui**, non in Mallaret.
+
+🔴 **Il reperto che apre la voce.** Ogni affermazione di questo repository su *che cosa sia* il
+fenotipo SCAR12 discende oggi da un paper che nessuno qui ha mai aperto — a profondità zero, senza
+receipt, senza record di registro, e fino a questa voce senza debito dichiarato. Il `LINT` lo ha
+misurato nel modo più diretto possibile: citando questo PMID nella nota M4b di `24369382` — un file
+del livello di ragionamento — il contatore `UNREAD_PREMISE` è salito da 2 a 3 e ha portato
+`BLOCK_BATCH_COMMIT`. **La citazione è corretta e resta**; quello che mancava era la dichiarazione
+del debito, ed è questa voce. Il debito è mio, non di un peer: l'ho introdotto io oggi.
+
+**Priority:** **ALTA** — è l'antecedente di una coorte che il modello usa per il limite mite dello
+spettro, e la sua assenza rende non verificabile il lato clinico di `CLAIM 008` e della serie
+allelica di `CLAIM 030`.
+
+**Why:** (a) fenotipo primario dei quattro pazienti `p.Pro47Thr` omozigoti, comparatore naturale
+del limite severo WOREE; (b) il mapping 16q21-q23 e i marcatori D16S3091/D16S3050, cioè la ragione
+per cui WWOX era nell'intervallo; (c) MRI e biopsia muscolare, due endpoint che nessuna fonte letta
+in questo corpus riporta per questa coorte.
+
+**Current status:** **NON LETTO, NON ACQUISITO.** Nessuna rotta tentata in questa sessione: il
+contratto `ALDAZ-FT-A-002` ha per scopo esattamente un paper e l'acquisizione di un secondo non è
+mia da avviare qui. *Brain* 2007 è pre-2008, quindi non c'è alcuna garanzia di deposito PMC
+open-access: la prima mossa è un preflight di superficie, non un download.
+
+**Next action:** preflight strutturale (Europe PMC `fullTextXML`, `efetch db=pmc`, PMC reader) e
+registrazione dell'esito **in entrambi i casi**, prima di aprire qualunque PDF. Poi lettura
+integrale con ricevuta, perché è un premise-paper e non un riferimento di contesto.
+
+---
+
+## FT-178 — `PMID 28283473` (Singla 2017) · l'antecedente **acuto e per via aerea** dell'asse WWOX-polmone, citato come riferimento 20 da `PMID 33058734` — **LETTO il 2026-09-14** (receipt `FTR-20260914-28283473-01`)
+
+> Recovered 2026-09-26 from the VPS backup (`06ee25a`), where this entry was `FT-100`; renumbered because `FT-100` names a different entry on `main`. Every reference to it in the recovered readings was rewritten to `FT-178`.
+
+
+🔴 **Correzione 2026-09-14 all'intestazione di questa voce, ed è un errore mio.** Questa voce si
+apriva dicendo *«l'antecedente **a corpo intero**»*. Il paper, letto integralmente, **non** è un
+modello a corpo intero e **non** è un knockout: è **una singola instillazione intratracheale di
+siRNA anti-WWOX a 10 mg/kg in topi wild-type** C57BL/6, n = 3 per gruppo. Verificato da me sui
+locator del manifest e non sulla parola di chi ha letto: *«Six- to eight-week-old male C57BL/6 mice
+were anesthetized… Ten milligrams per kilograms of scrambled control vs. WWOX-silencing RNA were
+instilled»*; *«the predominant cell type affected by intratracheal siRNA delivery is the alveolar
+epithelial cell (52)»* — dunque compartimento **pesato sull'epitelio per citazione importata, non
+misurato**; e gli autori chiamano il proprio modello *«acute, **global knockdown of lung** WWOX
+expression»*, dove **«global» è modificato da «lung»**: globale *dentro il polmone*, non nel corpo.
+Il corpus aveva reso «global» come «a corpo intero»: la scala del fenomeno resta, il perimetro no.
+Nessun endotelio è misurato in questo paper.
+
+**Paper:** PMID 28283473 — Singla S, Chen J, Sethuraman S, Sysol JR, Gampa A, Zhao S, et al.,
+*Loss of lung WWOX expression causes neutrophilic inflammation*, *Am J Physiol Lung Cell Mol Physiol*
+2017;312:L903-L911. Identificatore risolto il 2026-09-13 per titolo via NCBI esearch
+(`Loss of lung WWOX expression causes neutrophilic inflammation[title]` -> `28283473`, 1 hit);
+nessun identificatore preso da memoria.
+
+**Perché esiste, e perché la voce è aperta da una lettura e non da un triage.** Nasce dalla lettura
+integrale di **PMID 33058734** (Zeng 2021, *Am J Respir Cell Mol Biol* 64(1):89-99) del 2026-09-13,
+receipt `FTR-20260913-33058734-01`. Quel paper è il seguito endoteliale di questo, lo cita come
+riferimento 20 in cinque punti distinti, e **ogni volta che lo cita lo cita per contrasto**:
+l'Introduzione gli attribuisce l'osservazione che la siRNA anti-WWOX intratracheale produce
+*«widespread pulmonary neutrophilic inflammation»*; i Risultati dichiarano che, a differenza di
+quanto riportato in quel modello — che il sequel chiama *«prior global knockdown»* e che questa
+voce rendeva erroneamente «a corpo intero» (vedi la correzione in testa: è knockdown acuto di
+polmone per via aerea) — **non** ci sono differenze significative fra topi EC WWOX KO non trattati e
+controlli; e la Discussione apre dicendo che la perdita di WWOX polmonare
+ha effetti *«difficult to detect in prior global knockdown experiments that were associated with
+massive lung neutrophil influx»*.
+
+🔴 **Il reperto che apre la voce.** Il verso *«la perdita di WWOX de-reprime la segnalazione
+infiammatoria nel polmone»* non è misurato in 33058734: là i due esperimenti in vivo lo misurano e
+**non lo trovano** (Figura 4 e Figura 6, nessun asterisco su **dodici barre per figura,
+VENTIQUATTRO sulle due figure** — quattro per pannello, flox e KO a PBS e flox e KO allo stimolo,
+per tre pannelli — e il testo lo dice tre volte). *[Correzione 2026-09-14, fuori batch: questa voce
+diceva «nessun asterisco su **sei barre** ciascuna». W4 ha riaperto le due figure a 600 dpi e il
+conteggio era errato: sono dodici per figura. Il negativo è dunque **PIÙ AMPIO** di quanto la voce
+dichiarava, non più stretto, e il verso non misurato resta non misurato. Questa voce è la fonte
+della citazione annotata come «sito 5» nelle disposizioni del dossier `ALDAZ-FT-C-003`, che fu
+annotata e non riscritta proprio perché citava questa riga: ora la riga è corretta alla fonte.]* L'unica fonte di questo corpus per la gamba infiammatoria polmonare è **questo** paper,
+che nessuno qui ha mai aperto: profondità zero, nessun receipt, nessun record `PAPER`. Nel registro
+esiste solo come `CORPUS-STUB-091` (identity-only, `paper_registry_current.md:1596`), e il tema
+*«neutrophilic inflammation»* interrogato su tutti i registri restituisce esattamente quello stub e
+`LIT-0114`. Il debito è mio: l'ho introdotto io oggi citando questo PMID in un file del livello di
+ragionamento.
+
+**Priority:** **ALTA** — è la sola gamba polmonare *infiammatoria* dell'asse, ed è l'unico
+antecedente rispetto al quale 33058734 si definisce per differenza. **Ora è letto** (receipt
+`FTR-20260914-28283473-01`), e il corpus può dire come i due modelli si rapportano: **non misurano lo
+stesso fenomeno e nessuno dei due impeachment l'altro**, perché variano *due* variabili insieme —
+tipo di perturbazione e compartimento — e nessun esperimento tiene ferma l'una variando l'altra.
+
+*[Correzione 2026-09-14, secondo passaggio su questa voce: le due righe che seguivano dicevano «il
+modello **a corpo intero**» e «finché non è letto», cioè riasserivano in coda l'errore che la
+correzione in testa a questa voce ritira, e su una premessa ormai falsa. Le ho trovate **dopo** aver
+scritto nel registro del mandato che non restava nulla da riparare: avevo generalizzato da cinque
+conteggi a zero in altri file mentre l'evidenza contraria era già a schermo. È la terza volta oggi
+che «stringa presente» viene confusa con «affermazione sostenuta», e la prima in cui l'errore
+favoriva il mio stesso lavoro.]*
+
+**Why:** (a) il modello **acuto per via aerea, pesato sull'epitelio per citazione importata** (siRNA
+intratracheale in topi wild-type) contro quello endotelio-specifico
+(Cdh5-CreERT2), cioè il confronto che 33058734 disegna e non esegue; (b) la segnalazione
+JNK-dipendente in cellule epiteliali alveolari, che 33058734 testa nell'endotelio con SP600125 e
+trova **non** salvifica; (c) se l'infiammazione neutrofila sia stata misurata come conta, come
+citochina o come istologia, perché 33058734 misura citochine BALF e non trova nulla.
+
+**Current status:** **NON LETTO, NON ACQUISITO.** Nessuna rotta tentata in questa sessione: il
+contratto `ALDAZ-FT-C-003` ha per scopo due paper nominati e l'acquisizione di un terzo non è mia da
+avviare qui. Il journal è *AJP Lung*, la stessa testata del secondo paper del mio lotto, per cui il
+preflight di superficie va fatto e non assunto.
+
+**Next action:** preflight strutturale (Europe PMC `fullTextXML`, `efetch db=pmc`, PMC `/pdf/` via
+`pmc_pow_fetch.py`) e registrazione dell'esito **in entrambi i casi**, prima di aprire qualunque PDF.
+Poi lettura integrale con ricevuta, perché è un premise-paper dell'asse e non un riferimento di
+contesto. Due ulteriori riferimenti gene-diretti di 33058734 risolti oggi non trovano **alcun**
+record in questo repository — `PMID 29384700` (Crotty Alexander 2018, vapore e-cig cronico) e
+`PMID 25517572` (Yang 2015, CNV-67048 di WWOX e BPCO) — e sono segnalati qui senza aprire una voce
+propria, perché non sono premesse di alcuna conclusione che io tragga.
+
+---
+
+## FT-179
+
+> Recovered 2026-09-26 from the VPS backup (`06ee25a`), where this entry was `FT-101`; renumbered because `FT-101` names a different entry on `main`. Every reference to it in the recovered readings was rewritten to `FT-179`.
+
+**Papers:** PMID 14526170 · PMID 11572989 · PMID 14695174 · PMID 15073846
+**Title:** Il capolinea della catena di specificità anti-WWOX, la premessa PEO1-null importata, il disaccordo di compartimento e l'unica corroborazione esterna nominata nella coppia Aldaz 2005
+**Priority:** **ALTA** — alzata da MEDIA nel momento in cui la catena è stata tracciata: non è un elenco di antecedenti, è il punto in cui la specificità del reagente di questo corpus smette di essere verificabile.
+
+**Origine.** Debito di lettura prodotto dalle due letture integrali del 2026-09-13 di `PMID 15982416`
+(`FTR-20260913-15982416-01`) e `PMID 15692750` (`FTR-20260913-15692750-01`), `scientist-b`, task
+`ALDAZ-FT-B-003`. Nessuno dei quattro ha una ricevuta: verificato uno per uno con
+`fulltext_receipts.py status` il 2026-09-13, quattro risposte vuote.
+
+- **`PMID 14526170`** — Ludes-Meyers JH, Bednarek AK, Popescu NC, Bedford M, Aldaz CM. *WWOX, the
+  common chromosomal fragile site, FRA16D, cancer gene.* *Cytogenet Genome Res* 2003;100:101–110.
+  🔴 **Il capolinea.** `16941225` delega la specificità a `15982416` e `15692750`; **entrambi**
+  delegano la caratterizzazione dell'anticorpo al proprio rif. 12, che è questo paper. Finché non è
+  letto, **quale epitopo il reagente riconosca non è stabilito da nessuna parte in questo corpus** — e
+  `15982416` descrive l'immunogeno due volte e in modo diverso («the WW domains» nei Risultati,
+  «recombinant GST-WWOX fusion protein» tre paragrafi dopo). Identificatore risolto per titolo via
+  NCBI esearch (1 hit) e confermato dal marcatore `[PubMed: 14526170]` stampato nel deposito di
+  `15692750`; nessun identificatore preso da memoria.
+- **`PMID 11572989`** — Paige AJ et al., *PNAS* 2001;98:11417–22. La fonte del fatto che PEO1 sia un
+  vero null per WWOX (delezione omozigote). **È l'unico controllo negativo di entrambi gli immunoblot**:
+  se il null conservasse un prodotto N-terminale, il controllo varrebbe meno di quanto i due paper gli
+  attribuiscano — e l'anticorpo è cresciuto contro la regione WW, cioè l'N-terminale. **Premessa
+  importata per citazione**, identica nei due paper e citata alla stessa fonte.
+- **`PMID 14695174`** — Watanabe A et al., *Cancer Res* 2003;63:8629–33, *An opposing view on WWOX
+  protein function as a tumor suppressor*. Il disaccordo pubblicato sulla localizzazione subcellulare
+  (staining nucleare). I due paper del 2005 gli rispondono **in due modi diversi** — l'ovaio
+  *«Possibly this discrepancy is due to the use of different antibodies»*, la mammella attaccando la
+  numerosità e l'unica microfotografia dell'altro studio — e **nessuno dei due adjudica**.
+- **`PMID 15073846`** — Guler G et al., *Cancer* 2004;100:1605–14. L'**unico gruppo esterno** nominato
+  in tutta la coppia come autore di osservazioni simili (97 carcinomi mammari). `15692750` lo cita
+  senza dire **quale anticorpo** abbia usato: è l'unico candidato a una validazione **indipendente** del
+  reagente, e oggi è non verificato. Serve per distinguere *indipendenza dei dati* da *replicazione da
+  parte di un gruppo esterno*, distinzione che questo lotto ha dovuto lasciare aperta.
+
+**Surface:** non accertata per nessuno dei quattro; nessun tentativo di acquisizione nel retrieval
+manifest al 2026-09-13.
+**Current status:** 🟡 **APERTA — debito dichiarato, non pagato.** Enumerate 38 referenze in
+`15982416` (16 WWOX-dirette) e 21 in `15692750` (11 WWOX-dirette, con i PMID stampati nel deposito).
+Oltre a questi quattro, **18 referenze WWOX-dirette sono enumerate e deliberatamente non accodate**
+(letteratura WWOX-in-altri-tumori e mappatura FRA16D 2000–2004, nessuna delle quali tocca il reagente
+o il genotipo di riferimento). Una è **già letta**: `15064722`, `FTR-20260913-15064722-01`.
+**Next action:** leggere **`14526170`** per primo, cercandovi quattro cose e nominandole in ordine:
+l'immunogeno effettivo; qualunque controllo preimmune, di blocco o di pre-assorbimento **mostrato**;
+un secondo anticorpo; e se esista una qualunque validazione **immunoistochimica**. Poi `15073846` per
+l'anticorpo che ha usato. `11572989` e `14695174` seguono.
+
+### 🔴 DISPOSIZIONE — 2026-09-13, `ALDAZ-FT-B-004` · il capolinea è stato letto
+
+**`PMID 14526170` DISCHARGED.** Ricevuta `FTR-20260913-14526170-01`, `complete_fulltext_read`,
+`first_read`; manifest schema v2 STRICT PASS, 0 gap, 23 locator, 10 artefatti con impronta; 8 pannelli
+su 8 ispezionati a risoluzione nativa. Dossier `fulltext_dossiers/PMID14526170.md`, M4b
+`comparison_notes/2026-09-13_ALDAZ-FT-B-004_comparison.md`.
+
+**La catena termina, e termina a grado immunoblot.** Le quattro cose che questa voce chiedeva di
+cercare *e di nominare in ordine*, nell'ordine richiesto:
+
+1. **L'immunogeno effettivo** — *«The antiserum was raised using a GST fusion to WWOX amino acid
+   residues 12–94 containing both of the WW domains.»* (pagina di manoscritto 6, detto **una volta**).
+   🔴 Questo **riconcilia** invece di adjudicare: «the WW domains» e «recombinant GST-WWOX fusion
+   protein» in `15982416` sono **due descrizioni vere di un solo costrutto** — l'inserto e il partner
+   di fusione. L'`IPOTESI` registrata in `fulltext_dossiers/PMID15982416.md` è promossa a `DATO`.
+   Verificato contro la Fig. 3 dello stesso paper a 4200×3703: box WW1 da L17, box WW2 fino a ~P86,
+   entrambi dentro 12–94. **L'epitopo è N-terminale, negli esoni 1–3.**
+2. **Qualunque controllo preimmune, di blocco o di pre-assorbimento MOSTRATO** — **nessuno, e nemmeno
+   asserito.** Conteggi sull'intera superficie di testo: `pre-immune` 0, `pre-absor` 0, `isotype` 0,
+   `peptide block` 0, `no primary` 0. Il pre-assorbimento «data not shown» che `15982416` asserisce
+   **non ha alcun corrispettivo al capolinea**: il capolinea non fa quell'affermazione.
+3. **Un secondo anticorpo** — **nessuno.** `polyclonal` 0, `monoclonal` 0; la parola `antibody` compare
+   **una volta** in tutto l'articolo, `antiserum` cinque volte, sei frasi in totale.
+4. **Una qualunque validazione immunoistochimica** — **nessuna, e non è possibile**: in questo paper
+   non c'è immunoistochimica. `immunohistochem` 0, `immunostain` 0, `immunoperoxidase` 0,
+   `tissue microarray` 0. Il controllo di livello IHC che l'atlante presupponeva **non esiste in nessun
+   punto della catena**.
+
+**Ciò che la caratterizzazione È:** un solo immunoblot, Fig. 5A, due corsie — `Peo/Vector` contro
+`Peo/WWOX`, null genetico contro la stessa linea ritrasfettata, su un lisato epiteliale. 50 µg, 10 %
+SDS-PAGE, PVDF, antisiero 1:1000, ECLplus. È la classe di controllo più forte disponibile per un
+reagente, ed è tutto ciò che c'è.
+
+🔴 **Due limiti che i pannelli danno e il testo no.** (a) **Fig. 5A non porta alcun ladder di peso
+molecolare** — le marche `— 85 kd` e `— 39.5 kd` stanno sulla Fig. 5B, un altro blot: l'attribuzione
+«~46 kDa» non è verificabile sul pannello che la asserisce. (b) **La corsia null non è vuota**: a 900
+dpi una banda debole a peso più alto è presente in **entrambe** le corsie della 5A, null compresa, e
+in tutte e quattro quelle della 5B. Il null dimostra che la banda a ~46 kDa è **WWOX-dipendente**;
+non dimostra che l'antisiero leghi **solo** WWOX.
+
+🔴 **Ciò che questa voce aveva previsto, ed è la conseguenza più importante.** Questa voce scriveva, su
+`11572989`: *«se il null conservasse un prodotto N-terminale, il controllo varrebbe meno … e
+l'anticorpo è cresciuto contro la regione WW, cioè l'N-terminale.»* Tre fatti convergono ora su quel
+rischio, e due sono nuovi: l'epitopo è a **12–94 = esoni 1–3**, mentre la lesione di PEO1 registrata in
+questo corpus è una **delezione omozigote degli esoni 4–8** (a monte della delezione); la formulazione
+del capolinea è la più cauta *«does not produce **full-length** WWOX»*, non «non produce WWOX»; e la
+corsia null non è vuota. **`IPOTESI`, non `DATO`** — la banda debole è **non identificata** e il fondo
+non specifico è una spiegazione concorrente adeguata, che è esattamente perché il ladder mancante
+conta. **`REVIVAL_TRIGGER`:** l'estensione esonica della lesione PEO1 letta da `11572989` stesso, più
+qualunque evidenza di trascritto o prodotto N-terminale residuo in quella linea.
+
+**Dichiarato dagli autori, e va portato da chiunque usi il reagente:** *«since the anti-WWOX antibody
+recognizes epitopes within the WW domains it will also detect proteins encoded by the aberrantly
+spliced mRNAs if expressed»* — il reagente **non distingue** WWOX intero dalle isoforme con delezione
+dell'SDR, per costruzione.
+
+**Stato della voce:** 🟡 **APERTA — 1 di 4 identificatori pagato.** Restano `15073846` (l'unico gruppo
+esterno nominato, anticorpo non dichiarato: la domanda di indipendenza), `11572989` (il cui valore
+questa lettura **alza**, non abbassa) e `14695174`. **Priorità: resta ALTA**, ora sulla forza di
+`11572989` da solo.
+**`PMID 10861292`** è riemerso come antecedente WWOX-diretto assente da ogni file di registro, ed è
+registrato qui perché **non serve un nuovo indirizzo: lo porta già `FT-080`.**
+
+
+---
+
+## FT-180 — `PMID 19465938` (Bouteille 2009) · l'antecedente indipendente su WWOX che sequestra Dvl nel citoplasma, premessa di un M4b e mai aperto qui
+
+> Recovered 2026-09-26 from the VPS backup (`06ee25a`), where this entry was `FT-102`; renumbered because `FT-102` names a different entry on `main`. Every reference to it in the recovered readings was rewritten to `FT-180`.
+
+
+**Paper:** PMID 19465938 — Bouteille N, Driouch K, El Hage P, Sin S, Formstecher E, Camonis J,
+Lidereau R, Lallemand F, *Inhibition of the Wnt/beta-catenin pathway by the WWOX tumor suppressor
+protein*, *Oncogene* 2009;28(28):2569-80, DOI 10.1038/onc.2009.120. Metadati risolti il 2026-09-14
+via PubMed sull'identificatore già citato nel nostro M4b; nessun dato preso da memoria.
+
+**Perché esiste, e perché la voce nasce da una misura e non da un triage.** È emerso il 2026-09-14
+dalla **riparazione del consumer** `session_self_eval` (commit `ae51f55`): il controllo delle
+premesse non lette scagionava questo PMID perché la sua stringa compariva nel corpo di un altro
+record che dichiara full text, mentre la sua **unica** presenza di registro propria è
+`CORPUS P248`, identity-only, profondità `catalogued`. Corretto il consumer, il debito è diventato
+visibile. È citato come premessa in `2026-09-13_M4B_PMID15064722.md`.
+
+🔴 **Perché è portante e non bibliografia.** Il primario di `CLAIM 026` (PMID 30619736) mette
+**DVL2 al primo posto** dei 216 prey, con interaction score 1.07 contro il massimo 0.2153 dei membri
+metabolici, e il tier high-confidence a 14 membri comprende DVL1 e DVL2. Questo paper è l'antecedente
+**indipendente** che afferma la relazione funzionale a valle: che WWOX inibisce la via
+Wnt/beta-catenina e che sequestra **Dvl-2 nel compartimento citoplasmatico**, incluso il mutante
+Dvl-2NESm a localizzazione nucleare. Finché non è letto, il corpus non sa con quali metodi quella
+relazione sia stabilita — l'abstract dichiara two-hybrid e co-immunoprecipitazione, dunque
+co-associazione su proteine sovraespresse, la stessa classe di evidenza che questo batch ha appena
+distinto dal legame diretto in `CLAIM 026`.
+
+**Priority:** **ALTA** — è l'unico antecedente indipendente del leg DVL della claim, e la sua classe
+di evidenza va accertata alla fonte e non dedotta dall'abstract.
+
+---
+
+## FT-181 — `PMID 22574198` (Ferguson 2012) · il **ref 55** della review, su cui poggia un confine di `CLAIM 032` che nessuna ricevuta di questo repository attesta
+
+> Recovered 2026-09-26 from the VPS backup (`06ee25a`), where this entry was `FT-103`; renumbered because `FT-103` names a different entry on `main`. Every reference to it in the recovered readings was rewritten to `FT-181`.
+
+
+**Paper:** PMID 22574198 — Ferguson BW, Gao X, Kil H, Lee J, Benavides F, Abba MC, Aldaz CM,
+*Conditional Wwox deletion in mouse mammary gland by means of two Cre recombinase approaches*,
+*PLoS One* 2012;7(5):e36618, PMC3344920, DOI 10.1371/journal.pone.0036618. Metadati risolti il
+2026-09-14 via PubMed.
+
+**Perché esiste.** Stessa origine di FT-180: il debito era nascosto dal bug `blocks[0]` e la sua
+unica presenza propria è `CORPUS-STUB-168`, `catalogued`. È citato come premessa in
+`2026-09-13_M4B_PMID24932569.md`.
+
+🔴 **Il punto che rende la lettura necessaria.** `BATCH_20260914_005` (VPS batch, never on `main`; re-derived by `BATCH_20260926_ALDAZ`) ha scritto in canonico, sul
+record `PAPER 053`, che il *"did not have any observable phenotypic effect"* di **ref 55** copre
+sopravvivenza, tumori e istologia premaligna **ma non il branching, che in ref 55 non ha alcun
+gruppo eterozigote**. Quel confine è oggi in canonico e poggia sulla lettura della fonte fatta in
+consultazione §21d — **non su una ricevuta di questo repository**. L'abstract, letto ora, dice in
+proprio *"In none of the models did loss of a single Wwox allele (i.e. haploinsufficiency) have any
+observable phenotypic effect in mammary gland"*, che è esattamente l'assoluto di cui il confine
+delimita la portata. Un confine canonico la cui fonte nessuno qui ha aperto integralmente è un
+debito, non un risultato.
+
+**Priority:** **ALTA** — sostiene un'affermazione già propagata in canonico.
+
+**Current status:** ✅ **CHIUSA — letta integralmente il 2026-09-14**, receipt `FTR-20260914-22574198-01`, da `scientist-b` (`SCI-FT-B-002`). Il confine scritto da `BATCH_20260914_005` (VPS batch, never on `main`; re-derived by `BATCH_20260926_ALDAZ`) è **confermato alla fonte**: il branching confronta Cre(−) WT, Cre(+) WT e KO, **nessun gruppo eterozigote** (manifest `entries[20]`, `[21]`). La lettura aggiunge due limiti: gli eterozigoti sono `BK5-Cre(+); Wwox+/flox`, ricombinazione tissutale e non germinale, con sopravvivenza al 100% solo fino a circa il giorno 118 (`entries[5]`); e la sola Cre spiega circa il 45% della perdita di branching. Instradati al batch che tocca `CLAIM 032`, non propagati qui.
+
+---
+
+## FT-182 — `PMID 25538133` (Schrock & Huebner 2014) · review citata come premessa, con la cornice "passenger vs driver" che il corpus usa senza averla letta
+
+> Recovered 2026-09-26 from the VPS backup (`06ee25a`), where this entry was `FT-104`; renumbered because `FT-104` names a different entry on `main`. Every reference to it in the recovered readings was rewritten to `FT-182`.
+
+
+**Paper:** PMID 25538133 — Schrock MS, Huebner K, *WWOX: a fragile tumor suppressor*,
+*Exp Biol Med (Maywood)* 2014;240(3):296-304, PMC4471953, DOI 10.1177/1535370214561590.
+**Review.** Metadati risolti il 2026-09-14 via PubMed.
+
+**Perché esiste.** Stessa origine di FT-180 e FT-181; unica presenza propria `CORPUS-STUB-008`,
+`catalogued`. Citato come premessa in `2026-09-13_M4B_PMID27869163.md`.
+
+**Cosa porta, e perché va trattato come conduit.** È una **review**, dunque per la disciplina di
+questo repository non è corroborazione indipendente dei primari che enumera. Porta due cose che il
+corpus usa: la cornice per cui le delezioni di `WWOX` nei tumori potrebbero essere **eventi
+passeggeri** dovuti alla fragilità di FRA16D e non driver selezionati, e l'affermazione che i topi
+`Wwox+/-` mostrano un'incidenza aumentata di tumori spontanei e indotti — la stessa famiglia di dati
+che `BATCH_20260914_005` (VPS batch, never on `main`; re-derived by `BATCH_20260926_ALDAZ`) ha appena scritto su `PAPER 053` citando ref 50. Letta, dirà quali primari
+regge e quali soltanto ripete.
+
+**Priority:** MEDIA — è un conduit, non un primario; ma la cornice passenger/driver è già in uso.
+
+---
+
+*[Voci FT-180, FT-181, FT-182 aperte il 2026-09-14 dall'orchestrator. Origine comune: la riparazione
+del consumer delle dichiarazioni di lettura (`ae51f55`) ha reso visibili tre premesse che il difetto
+`blocks[0]` scagionava attribuendo a un record la dichiarazione di un altro. **Dichiarare il debito
+non è leggerlo:** queste tre voci lo rendono debito dichiarato invece di debito nascosto, che è
+esattamente la distinzione che il controllo esiste per tenere — e nessuna delle tre è letta.]*
+
+## FT-183 — `PMID 17178850` (Gaudio 2006) · **la premessa più portante non letta dell'asse polmonare**: l'origine del sequestro di c-Jun che `PMID 28283473` importa in ogni frase meccanicistica
+
+> Recovered 2026-09-26 from the VPS backup (`06ee25a`), where this entry was `FT-105`; renumbered because `FT-105` names a different entry on `main`. Every reference to it in the recovered readings was rewritten to `FT-183`.
+
+
+**Paper:** PMID 17178850 — Gaudio E, Palamarchuk A, Palumbo T, Trapasso F, Pekarsky Y, Croce CM,
+Aqeilan RI, *Physical association with WWOX suppresses c-Jun transcriptional activity*,
+*Cancer Res* 2006;66(24):11585-9, DOI 10.1158/0008-5472.CAN-06-3376. Metadati risolti il 2026-09-14
+via PubMed; nessun dato preso da memoria.
+
+**Perché esiste.** Aperta dalla lettura integrale di `PMID 28283473` del 2026-09-14 (receipt
+`FTR-20260914-28283473-01`), che la nomina come **riferimento 26**. Il meccanismo di quel paper —
+de-repressione di c-Jun/AP-1 con chemotassi neutrofila IL-8-dipendente — **è interamente importato
+da qui**: la sua Figura 2 si propone di riprodurlo e il rescue con inibitore JNK ne dipende. In
+questo repository non esiste **né record di identità né receipt**: è, con distacco, la premessa non
+letta più portante sotto l'asse polmonare.
+
+**Cosa dichiara l'abstract, e perché va verificato alla fonte.** Che WWOX si associa **via il primo
+dominio WW** al motivo prolina-ricco di c-Jun; che la fosforilazione di c-Jun indotta da MEKK1
+**aumenta** l'interazione; che i complessi WWOX–c-Jun stanno **nel citoplasma**; e che una mutazione
+puntiforme nel primo WW **azzera** l'effetto sulla transattivazione di AP-1. Se confermato alla
+fonte, è un secondo asse WW1-dipendente accanto a quello di `CLAIM 026`, e la sua classe di evidenza
+(co-espressione? reporter? endogeno?) decide quanto il leg infiammatorio possa portare.
+
+**Priority:** **ALTA** — la più alta di questo lotto.
+
+---
+
+## FT-184 — `PMID 16438931` (Jin 2006) · ezrin–WWOX via WW1 e un motivo poliprolina-tirosina, senza record di identità
+
+> Recovered 2026-09-26 from the VPS backup (`06ee25a`), where this entry was `FT-106`; renumbered because `FT-106` names a different entry on `main`. Every reference to it in the recovered readings was rewritten to `FT-184`.
+
+
+**Paper:** PMID 16438931 — Jin C, Ge L, Ding X, Chen Y, Zhu H, Ward T, Wu F, Cao X, Wang Q, Yao X,
+*PKA-mediated protein phosphorylation regulates ezrin-WWOX interaction*,
+*Biochem Biophys Res Commun* 2006;341(3):784-91, DOI 10.1016/j.bbrc.2006.01.023. Metadati via
+PubMed, 2026-09-14.
+
+**Perché esiste.** Nominata come **riferimento 34** dalla lettura di `PMID 28283473`; nessun record
+di identità in questo repository. L'abstract dichiara legame **diretto** di ezrin al **primo dominio
+WW** di WWOX tramite la sequenza C-terminale `470PPPPPPVY477`, con **Y477 essenziale** per
+mutagenesi, e che la fosforilazione PKA di Ser66 di ezrin è necessaria e sufficiente alla
+**localizzazione apicale** di WWOX.
+
+**Perché è pertinente e non bibliografia.** È un terzo partner con dipendenza **WW1 + PPxY**
+misurata per mutazione, accanto a SEC23IP/SCAMP3 (Hussain) e VOPP1 (Bonin). Se il legame è davvero
+diretto — qui l'abstract usa la parola, e questo corpus ha imparato a non accettarla senza metodo —
+sarebbe l'unico dei tre a poter portare la direttezza. Da accertare alla fonte.
+
+**Priority:** MEDIA-ALTA.
+
+---
+
+## FT-185 — `PMID 25398664` · antecedente VOPP1 nominato dalla lettura di `PMID 30285739`, senza record in alcun registro
+
+> Recovered 2026-09-26 from the VPS backup (`06ee25a`), where this entry was `FT-108`; renumbered because `FT-108` names a different entry on `main`. Every reference to it in the recovered readings was rewritten to `FT-185`.
+
+
+**Paper:** PMID 25398664 — Gao C, Pang M, Zhou Z, Long S, Dong D, Yang J, Cao M, Zhang C, Han S, Li L, *Epidermal growth factor receptor-coamplified and overexpressed protein (VOPP1) is a putative oncogene in gastric cancer*, *Clin Exp Med* 2014;15(4):469-75, DOI 10.1007/s10238-014-0320-7. Metadati via PubMed, 2026-09-14.
+
+**Perché esiste.** Aperta dalla lettura integrale di `PMID 30285739` (receipt
+`FTR-20260914-30285739-01`, 2026-09-14), che la nomina fra i cinque antecedenti VOPP1 **assenti da
+ogni registro, tracking log e queue** di questo repository. Porta **la premessa "la sovraespressione di VOPP1 è oncogenica"**, con localizzazione in **lisosomi perinucleari** dichiarata per GFP-tagging.
+
+**Priority:** MEDIA.
+
+---
+
+## FT-186 — `PMID 19525979` · antecedente VOPP1 nominato dalla lettura di `PMID 30285739`, senza record in alcun registro
+
+> Recovered 2026-09-26 from the VPS backup (`06ee25a`), where this entry was `FT-109`; renumbered because `FT-109` names a different entry on `main`. Every reference to it in the recovered readings was rewritten to `FT-186`.
+
+
+**Paper:** PMID 19525979 — Baras A, Yu Y, Filtz M, Kim B, Moskaluk CA, *Combined genomic and gene expression microarray profiling identifies ECOP as an upregulated gene in squamous cell carcinomas independent of DNA amplification*, *Oncogene* 2009;28(32):2919-24, DOI 10.1038/onc.2009.150. Metadati via PubMed, 2026-09-14.
+
+**Perché esiste.** Aperta dalla lettura integrale di `PMID 30285739` (receipt
+`FTR-20260914-30285739-01`, 2026-09-14), che la nomina fra i cinque antecedenti VOPP1 **assenti da
+ogni registro, tracking log e queue** di questo repository. Porta la sovraespressione di ECOP/VOPP1 nel 90% dei carcinomi squamosi **indipendentemente dall amplificazione**, e il silenziamento che aumenta la morte cellulare.
+
+**Priority:** MEDIA.
+
+---
+
+## FT-187 — `PMID 20571887` · antecedente VOPP1 nominato dalla lettura di `PMID 30285739`, senza record in alcun registro
+
+> Recovered 2026-09-26 from the VPS backup (`06ee25a`), where this entry was `FT-110`; renumbered because `FT-110` names a different entry on `main`. Every reference to it in the recovered readings was rewritten to `FT-187`.
+
+
+**Paper:** PMID 20571887 — Baras A, Moskaluk CA, *Intracellular localization of GASP/ECOP/VOPP1*, *J Mol Histol* 2010;41(2-3):153-64, DOI 10.1007/s10735-010-9272-8. Metadati via PubMed, 2026-09-14.
+
+**Perché esiste.** Aperta dalla lettura integrale di `PMID 30285739` (receipt
+`FTR-20260914-30285739-01`, 2026-09-14), che la nomina fra i cinque antecedenti VOPP1 **assenti da
+ogni registro, tracking log e queue** di questo repository. Porta 🔴 **la più portante delle cinque**: da qui il corpus importa l identità **lisosomiale** di VOPP1. E l abstract dice meno di come la citiamo: co-localizzazione **PARZIALE** con lisosomi perinucleari, nessuna con mitocondri o perossisomi, proteina **non secreta** e sintetizzata nel RE — e conclude che questi dati **mettono in dubbio** l ipotesi che VOPP1 interagisca direttamente con mediatori citoplasmatici di NF-kB.
+
+**Priority:** **ALTA**.
+
+---
+
+## FT-188 — `PMID 21519330` · antecedente VOPP1 nominato dalla lettura di `PMID 30285739`, senza record in alcun registro
+
+> Recovered 2026-09-26 from the VPS backup (`06ee25a`), where this entry was `FT-111`; renumbered because `FT-111` names a different entry on `main`. Every reference to it in the recovered readings was rewritten to `FT-188`.
+
+
+**Paper:** PMID 21519330 — Baras AS, Solomon A, Davidson R, Moskaluk CA, *Loss of VOPP1 overexpression in squamous carcinoma cells induces apoptosis through oxidative cellular injury*, *Lab Invest* 2011;91(8):1170-80, DOI 10.1038/labinvest.2011.70. Metadati via PubMed, 2026-09-14.
+
+**Perché esiste.** Aperta dalla lettura integrale di `PMID 30285739` (receipt
+`FTR-20260914-30285739-01`, 2026-09-14), che la nomina fra i cinque antecedenti VOPP1 **assenti da
+ogni registro, tracking log e queue** di questo repository. Porta un meccanismo **CONCORRENTE**: la perdita di VOPP1 uccide per **danno ossidativo** e via apoptotica intrinseca, e i reporter NF-kB **non si muovono** nelle linee squamose.
+
+**Priority:** MEDIA.
+
+---
+
+## FT-189 — `PMID 15735698` · antecedente VOPP1 nominato dalla lettura di `PMID 30285739`, senza record in alcun registro
+
+> Recovered 2026-09-26 from the VPS backup (`06ee25a`), where this entry was `FT-112`; renumbered because `FT-112` names a different entry on `main`. Every reference to it in the recovered readings was rewritten to `FT-189`.
+
+
+**Paper:** PMID 15735698 — Park S, James CD, *ECop (EGFR-coamplified and overexpressed protein), a novel protein, regulates NF-kappaB transcriptional activity and associated apoptotic response in an IkappaBalpha-dependent manner*, *Oncogene* 2005;24(15):2495-502, DOI 10.1038/sj.onc.1208496. Metadati via PubMed, 2026-09-14.
+
+**Perché esiste.** Aperta dalla lettura integrale di `PMID 30285739` (receipt
+`FTR-20260914-30285739-01`, 2026-09-14), che la nomina fra i cinque antecedenti VOPP1 **assenti da
+ogni registro, tracking log e queue** di questo repository. Porta il **terzo** meccanismo concorrente: ECOP/VOPP1 regola NF-kB per degradazione di IkBalpha.
+
+**Priority:** MEDIA.
+
+---
+*[Voci **FT-183, FT-184 e FT-185…FT-189 — sette voci** — aperte il 2026-09-14 dall'orchestrator, e il
+debito è **nato da due letture completate**, non da un triage: `PMID 28283473` (`ALDAZ-FT-A-003`) e
+`PMID 30285739` (`ALDAZ-FT-B-003`/`-B-005`). Entrambi gli attori lettori hanno **deliberatamente
+rifiutato di coniare identificatori** in questo file append-only condiviso, che non è la loro
+superficie: la corsa fra pari su un file condiviso è già costata un incidente a questo laboratorio il
+2026-09-13. Hanno portato il testo nei propri commit candidate e lasciato a me l'indirizzo. Identità
+di tutti e sette i paper risolte via PubMed il 2026-09-14, nessun titolo e nessun identificatore da
+memoria.
+🔴 **Correzione immediata, e riguarda questa stessa nota.** Gli otto paper nominati dalle due letture
+erano otto, le voci sono **sette**, e **`FT-107` non esiste**: `PMID 10861292` (Ried 2000, sequenza
+di FRA16D e gene FOR) **era già in coda come [[#FT-080 — `PMID 10861292` (Ried 2000) · le tre
+delezioni omozigoti dentro l'introne 8|FT-080]]**, e la guardia anti-duplicato l'ha saltato prima
+dell'append. La prima stesura di questa nota diceva «FT-183…FT-189» e «tutti e otto i paper» perché
+l'avevo scritta **prima** che la guardia girasse: è la guardia che ha funzionato, e la prosa che
+l'aveva già contraddetta. Il numero d'ordine 107 resta **non assegnato** invece di essere riciclato,
+così la lacuna nella numerazione resta leggibile come il segno di un duplicato evitato.
+🔴 **Tre di questi cinque antecedenti VOPP1 propongono meccanismi FRA LORO CONCORRENTI** — lisosomi
+(`FT-187`), danno ossidativo (`FT-188`), NF-κB via IκBα (`FT-189`) — e `FT-187`, da cui il corpus
+importa l'identità lisosomiale, **mette esplicitamente in dubbio** la via NF-κB diretta. Il corpus
+non può citarli come una linea convergente. **Dichiarare il debito non è leggerlo:** nessuna delle
+**sette** voci è letta.]*
+
+## FT-190 — `PMID 9626493` (Voss 1998) · la premessa non letta dietro la parola «ipomorfo»
+
+> Recovered 2026-09-26 from the VPS backup (`06ee25a`), where this entry was `FT-113`; renumbered because `FT-113` names a different entry on `main`. Every reference to it in the recovered readings was rewritten to `FT-190`.
+
+
+**Paper:** PMID 9626493 — Voss AK, Thomas T, Gruss P, *Efficiency assessment of the gene trap approach*,
+*Dev Dyn* 1998;212(2):171-180, DOI `10.1002/(SICI)1097-0177(199806)212:2<171::AID-AJA3>3.0.CO;2-E`.
+Metadati risolti il 2026-09-14 via Europe PMC (`EXT_ID:9626493 AND SRC:MED`, `resultType=core`);
+nessun dato preso da memoria.
+
+**Perché esiste.** Instradata da `scientist-b` alla chiusura di `SCI-FT-B-001` (lettura integrale di
+`PMID 17823927`, receipt `FTR-20260914-17823927-01`): è la fonte del metodo gene-trap su cui poggia
+la parola **«ipomorfo»** applicata alla linea XG218, e quindi il braccio ipomorfo di
+[[claim_registry_current#CLAIM 032]]. Nessuna scansione per gene la troverebbe: il titolo non nomina
+WWOX.
+
+**Superficie, misurata il 2026-09-14 e non assunta.** Unpaywall: `is_oa: true`, `oa_status: bronze`,
+PDF diretto dell'editore su Wiley. **Da questo host quella rotta risponde `HTTP 403`** con una pagina
+HTML di 5 976 byte, non il PDF; nessun PMCID esiste. Quindi: open access nel diritto, non raggiungibile
+di fatto da qui.
+
+**Priority:** MEDIA — è una fonte di metodo, non di fenotipo: non muove `CLAIM 032`, ne qualifica una
+parola.
+
+**Next action:** richiedere il PDF all'operatore insieme agli altri bloccati, oppure riprovare la rotta
+Wiley da un percorso diverso. Unread è scritto come unread: nessun riassunto dell'abstract è passato
+per lettura.
+
+---
+
+## FT-191 — tre riferimenti gene-diretti di `PMID 15870886` assenti da ogni superficie
+
+> Recovered 2026-09-26 from the VPS backup (`06ee25a`), where this entry was `FT-114`; renumbered because `FT-114` names a different entry on `main`. Every reference to it in the recovered readings was rewritten to `FT-191`.
+
+
+**Papers:** PMID 10910080 · PMID 10451696 · PMID 10749140 — i tre riferimenti gene-diretti che, fra i
+dodici enumerati dal manifest di `PMID 15870886`, non hanno **né** record d'identità **né** voce di coda
+**né** record `LIT`. Metadati risolti il 2026-09-14 via Europe PMC (`EXT_ID:<pmid> AND SRC:MED`,
+`resultType=core`), non dalla memoria.
+
+| PMID | Anno | Sede | Primo autore | Titolo |
+|---|---|---|---|---|
+| 10910080 | 2000 | *Cancer Res* | Paris PL et al. | Identification and fine mapping of a region showing a high frequency of allelic imbalance on chromosome 16q23.2 that corresponds to a prostate cancer susceptibility locus. |
+| 10451696 | 1999 | *Genes Chromosomes Cancer* | Li C et al. | Distinct deleted regions on chromosome segment 16q23-24 associated with metastases in prostate cancer. |
+| 10749140 | 2000 | *Cancer Res* | Mangelsdorf M et al. | Chromosomal fragile site FRA16D and DNA instability in cancer. |
+
+**Perché esiste.** La lettura integrale di `PMID 15870886` (`SCI-FT-A-002`, `scientist-a`) ha enumerato
+28 riferimenti, 12 gene-diretti, **0 risolti contro questo ledger**. Sette dei dodici sono già coperti
+da `FT-032`, `FT-176` e `FT-179`, e cinque hanno già un placeholder con record `LIT`: quelle voci **non
+vanno duplicate**. Restano questi tre, mai nominati da nessuna superficie del repository.
+
+🔴 **Conseguenza sulla ricevuta di `15870886`.** `require_work_manifest` in modalità stretta rifiuta la
+profondità `complete_fulltext_read` con *«declared gap: multihop: references queued but not resolved»*.
+Lo stato onesto di quel paper è quindi `ANALYSIS_DONE_RECEIPT_NOT_PERSISTED`, e questa voce **non lo
+sblocca**: registra il debito, non lo risolve.
+
+**Superficie, misurata il 2026-09-14 e non assunta.** Otto dei dodici riferimenti non hanno un DOI
+registrato in Europe PMC; due risultano `closed`; uno (`11572989`) è `green` con il solo manoscritto
+sottomesso. L'unico con una rotta diretta era `10861292` (Ried 2000, bronze, PDF OUP): provata da questo
+host, **`HTTP 403`**. Elsevier, Wiley e OUP rifiutano tutte e tre. Nessuno di questi tre PMID è
+raggiungibile da qui.
+
+**Priority:** MEDIA — sono la letteratura fondativa del locus (allelic imbalance 16q23, delezioni
+16q23-24, instabilità di FRA16D), non fonti di fenotipo WWOX-DEE.
+
+**Next action:** richiederli all'operatore insieme agli altri bloccati. Unread è scritto come unread.
 
 ---
 

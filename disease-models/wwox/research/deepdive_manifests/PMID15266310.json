@@ -1,0 +1,932 @@
+{
+ "schema_version": 2,
+ "pmid": "15266310",
+ "doi": "10.1038/sj.bjc.6602023",
+ "receipt": "FTR-20260914-15266310-01",
+ "landing": [
+  "FTR-20260914-15266310-01",
+  "fulltext_dossiers/PMID15266310.md",
+  "CC-20260914-15266310-01"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Run inline, tiers measured 2026-09-14: Europe PMC fullTextXML 200 (text surface); PMC article HTML 200; PMC /pdf/ served the proof-of-work page, recovered with pmc_pow_fetch.py (7 pages, smaller rasters); nature.com PDF 200 (larger rasters, chosen as figure source); PMC CDN figure blobs 200 (not the inspected surface)."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline: the lane-level contradictions in Figures 2 and 4 need pixels and the PDF's vector labels, which a dossier-only subagent cannot see; spawning agents is also forbidden by this contract."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not run inside the reading: first contact, no persisted locator for this PMID to contradict. Whether any candidate touches a consolidated baseline claim is decided after the blind pass, in CC-20260914-15266310-01."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Declined as a separate pass: an adult HCC cell-line expression survey; the one variant-level datum (P252A observed in SNU387) is carried as a locator and routed in the candidate rather than mined further."
+  },
+  {
+   "skill": "legend-paperqa",
+   "used": false,
+   "reason": "Declined: needs an external API key and traffic not authorised for this task, and a RAG answer is not a reading."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 138,
+  "publications_on_gene": 38,
+  "counts_measured": "PubMed esearch 2026-09-14. Senior author 'Aldaz CM[au]' 138, 'Aldaz CM[au] AND WWOX' 38 (declared above). Corresponding author 'Popescu NC[au]' 226, 'Popescu NC[au] AND WWOX' 2. First author 'Park SW[au] AND WWOX' 1 (bare name ambiguous; no total claimed).",
+  "research_type": "experimental_lab",
+  "output_kind": "primary_research",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": true,
+  "weighting": "Two laboratories. The NCI (Popescu) half supplies the HCC lines, CGH, Northern, RT-PCR and SSCP - its native competence in fragile-site cytogenetics; the Aldaz half supplies the antibody and the Peo/WWOX reference, whose validation is imported. Observations (bands, sequences) weigh above the interpretations (tumour-suppressor role, polymorphism verdict, carcinogen-exposure model), several of which rest on data 'not shown'. Neither group works on WWOX-related neurological disease."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "WWOX",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 708
+   },
+   {
+    "query": "WWOX AND hepatocellular",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 33
+   }
+  ],
+  "note": "WWOX in HCC is a small literature (33). Field sizes, not reading coverage."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 38,
+  "enumeration_method": "38 <ref> elements in the fingerprinted Europe PMC XML, none carrying a pub-id. Gene-direct = the reference text names WWOX, FRA16D or 'WW domain containing oxidoreductase' (script, full reference text): 11. PMIDs resolved by PubMed esearch on the exact title [ti] 2026-09-14; ref 16 returned two hits and was resolved to 11956080 by esummary first author Kuroki T and year 2002, matching the artefact.",
+  "gene_direct_count": 11,
+  "gene_direct_refs_in_source": [
+   "15070730",
+   "11719429",
+   "10786676",
+   "11896615",
+   "14638866",
+   "11956080",
+   "14526170",
+   "11572989",
+   "14603443",
+   "14695174",
+   "12591741"
+  ],
+  "resolved": [
+   "15070730",
+   "14526170"
+  ],
+  "queued": [],
+  "resolved_depth_declaration": "RESOLVED MEANS A PERSISTED complete_fulltext_read RECEIPT, measured with fulltext_receipts.py status --pmid on 2026-09-14. 2 of 11 resolve: Aqeilan 2004 (15070730) and Ludes-Meyers 2003 (14526170) - the latter is the paper this antibody's validation is imported from. The other 9 are reading debt routed in CC-20260914-15266310-01; this contract does not own the queue file."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Technical only: fulltext_receipts.py status --pmid for 15266310 before reading (exit 1, no events) and for the 11 gene-direct reference PMIDs. No registry, claim, dossier or candidate content opened before the dossier froze.",
+  "hits": 2,
+  "finding": "2 of 11 gene-direct references carry a complete receipt, including the antibody-validation source. The paper itself had no receipt of any depth."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-09-14",
+  "route": "NCBI esummary db=pubmed retmode=json for 15266310",
+  "result": "pubtype Journal Article; Research Support, U.S. Gov't, P.H.S. commentscorrections absent: no linked erratum, expression of concern or retraction.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 38,
+   "references_screened": 28,
+   "references_with_doi": 28,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 4,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 10
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID15266310_Park2004.xml",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML of PMC2364795, HTTP 200, 76821 B, application/xml. article-id pmid 15266310, doi 10.1038/sj.bjc.6602023, title and six contrib surnames (Park, Ludes-Meyers, Zimonjic, Durkin, Popescu, Aldaz) read from the artefact; NCBI esummary agrees (Br J Cancer 2004;91(4):753-9). The evidentiary text surface for every body and table locator. No supplementary-material element; Europe PMC core hasSuppl=N.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2364795/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_fulltextxml",
+    "user_agent_policy": "identified",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "e69e3d194a838ac34131da163fde6497d8625b596fd737eb5da8f55a89f7edb7"
+  },
+  {
+   "path": "files/fulltext/PMID15266310_Park2004.pdf",
+   "kind": "article_binary",
+   "note": "Publisher PDF from nature.com (7 pages, 2001945 B). Declared ONLY as the source of the figure rasters and the rendered pages that carry the lane labels (labels are vector text, rasters are unlabelled pieces). Each figure piece is larger than the corresponding region of the PMC PDF (measured: e.g. Figure 5 726x1778 vs 495x1212). Font screen UNTRUSTWORTHY (unmapped MathPackTen symbol subset, zero sentinels): no locator uses its text layer and no derived .txt is declared. PMC CDN blobs (740x669 ... 664x1619) and the PMC PDF via pmc_pow_fetch.py were also fetched and are not the inspected surface.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.nature.com/articles/6602023.pdf",
+    "http_method": "GET",
+    "tier": "publisher_pdf",
+    "user_agent_policy": "identified",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "19755545dacdc46762419c69a8f06c12da15c4b637fcd208c224cea78a130ba8"
+  },
+  {
+   "path": "files/fulltext/PMID15266310_Park2004_assets/nat_p03_x13.jpeg",
+   "kind": "figure",
+   "note": "Figure 1 (CGH profiles A HLE, B HepG2), native raster 679x613; inspected at native scale.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID15266310_Park2004.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref) over Page.get_images(full=True); bytes written unmodified",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "a65607e3356b56af50708b99e763b8998f6709f3e2907d20ec2bc60c66340952"
+  },
+  {
+   "path": "files/fulltext/PMID15266310_Park2004_assets/nat_p03_x14.jpeg",
+   "kind": "figure",
+   "note": "Figure 2 left blot (WWOX and beta-actin rows), native raster 397x138; inspected at native scale.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID15266310_Park2004.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref) over Page.get_images(full=True); bytes written unmodified",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "b0cad1d0412488ce448e14d8be69f1e20436802b18bd63568586bbcf9a6efbf1"
+  },
+  {
+   "path": "files/fulltext/PMID15266310_Park2004_assets/nat_p03_x15.jpeg",
+   "kind": "figure",
+   "note": "Figure 2 right blot, native raster 410x138; inspected at native scale.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID15266310_Park2004.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref) over Page.get_images(full=True); bytes written unmodified",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "f87ff526bc3cf996f0a96b10c7f4a4ded546c6556975b10c30b2b48ba5cf3288"
+  },
+  {
+   "path": "files/fulltext/PMID15266310_Park2004_assets/nat_p04_x23.jpeg",
+   "kind": "figure",
+   "note": "Figure 3A RT-PCR gel (WWOX and beta-actin), native raster 791x174; inspected at native scale.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID15266310_Park2004.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref) over Page.get_images(full=True); bytes written unmodified",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "d4bccf7a76cb088576e2e2c5d05120756dc494d99ce1e95fb8ed0516dbabe0a7"
+  },
+  {
+   "path": "files/fulltext/PMID15266310_Park2004_assets/nat_p04_x24.jpeg",
+   "kind": "figure",
+   "note": "Figure 3B chromatogram of the exon 5 / exon 9 junction, native raster 280x199; inspected at native scale.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID15266310_Park2004.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref) over Page.get_images(full=True); bytes written unmodified",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "de4f7253b72d1df6b467ada2549c189ba005f86c62da8d0396298c0f85049aa5"
+  },
+  {
+   "path": "files/fulltext/PMID15266310_Park2004_assets/nat_p04_x25.jpeg",
+   "kind": "figure",
+   "note": "Figure 3C sequence of the novel splice variant, native raster 446x263; inspected at native scale.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID15266310_Park2004.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref) over Page.get_images(full=True); bytes written unmodified",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "a624cd5aa91719b0f9340fbe8dfc88c9d062e12bd679fd4457331b5998115e5f"
+  },
+  {
+   "path": "files/fulltext/PMID15266310_Park2004_assets/nat_p04_x26.jpeg",
+   "kind": "figure",
+   "note": "Figure 4A Western blots, native raster 635x142; inspected at native scale.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID15266310_Park2004.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref) over Page.get_images(full=True); bytes written unmodified",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "a843196ca7c9a7239643e276cee36de0b72b2b97c6c493f0cf55cfd8476c5893"
+  },
+  {
+   "path": "files/fulltext/PMID15266310_Park2004_assets/nat_p04_x27.jpeg",
+   "kind": "figure",
+   "note": "Figure 4B densitometry bar chart (axes are vector text on the page), native raster 568x345; inspected at native scale.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID15266310_Park2004.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref) over Page.get_images(full=True); bytes written unmodified",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "599cdb4548d703314fe82a7b0533aa2a1173d66d4ff070637a6c9dff6b91d0c6"
+  },
+  {
+   "path": "files/fulltext/PMID15266310_Park2004_assets/nat_p05_x31.jpeg",
+   "kind": "figure",
+   "note": "Figure 5 IHC panels A-C, native raster 726x1778; inspected at native scale.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID15266310_Park2004.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref) over Page.get_images(full=True); bytes written unmodified",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "98e7120cba76a35e99da9268bceeb8a84a83498677c88e06a281b845744ebd0b"
+  },
+  {
+   "path": "files/fulltext/PMID15266310_Park2004_assets/crop_fig5_top.png",
+   "kind": "figure",
+   "note": "Native crop of Figure 5, panel A.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID15266310_Park2004_assets/nat_p05_x31.jpeg",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 726x600+0+0 +repage <out>.png (lossless, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "f0cf635962802dce50ca6894becd170bc503375cdb4bf75f2cdd67857ba92e8d"
+  },
+  {
+   "path": "files/fulltext/PMID15266310_Park2004_assets/crop_fig5_mid.png",
+   "kind": "figure",
+   "note": "Native crop of Figure 5, panel B.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID15266310_Park2004_assets/nat_p05_x31.jpeg",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 726x600+0+590 +repage <out>.png (lossless, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "05a8d55ca0bcfe132ee8f0a8a29a6f72e2ba2f0e7917b01451bce0f58407e42b"
+  },
+  {
+   "path": "files/fulltext/PMID15266310_Park2004_assets/crop_fig5_bot.png",
+   "kind": "figure",
+   "note": "Native crop of Figure 5, panel C.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID15266310_Park2004_assets/nat_p05_x31.jpeg",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 726x600+0+1178 +repage <out>.png (lossless, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "37a2f4589002950b0cb6026bb3c244d04d796686c4aa9d5423e5f85554a5c10a"
+  },
+  {
+   "path": "files/fulltext/PMID15266310_Park2004_assets/fig2_right_4x_point.png",
+   "kind": "figure",
+   "note": "Figure 2 right blot enlarged 4x by pixel replication (no interpolation), to separate faint lanes; carries no information beyond the native raster.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID15266310_Park2004_assets/nat_p03_x15.jpeg",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -filter point -resize 400% <out>.png",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "28b99bf10e33d0b504522b150a91003296952adbee8f748c29678131e0527f6c"
+  },
+  {
+   "path": "files/fulltext/PMID15266310_Park2004_assets/page3_110dpi.png",
+   "kind": "figure",
+   "note": "PDF page 3 (article p.755) rendered whole, Figures 1 and 2 with their vector labels.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID15266310_Park2004.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "doc[2].get_pixmap(dpi=110).save(<out>)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "44de840fbad64ec3b26c95474ea093d4e59381be2e36e63e84a5a74979a1e48b"
+  },
+  {
+   "path": "files/fulltext/PMID15266310_Park2004_assets/page4_110dpi.png",
+   "kind": "figure",
+   "note": "PDF page 4 (article p.756) rendered whole, Figures 3 and 4 with labels.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID15266310_Park2004.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "doc[3].get_pixmap(dpi=110).save(<out>)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "0b9b65ddc33d98df5d29c69849cefd44839b0551803ce85afee052070638a101"
+  },
+  {
+   "path": "files/fulltext/PMID15266310_Park2004_assets/page3_fig2_400dpi.png",
+   "kind": "figure",
+   "note": "Figure 2 with its lane labels, page 3 clip rendered at 400 dpi; used to confirm the label-to-lane mapping computed from the PDF word coordinates.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID15266310_Park2004.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "doc[2].get_pixmap(dpi=400, clip=Rect(150,580,440,720)).save(<out>)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "f3476933062678b58f9fa0e64f61d3b4a4dba725028b4162bc27295961d962fa"
+  },
+  {
+   "path": "files/fulltext/PMID15266310_Park2004_assets/page4_fig4_300dpi.png",
+   "kind": "figure",
+   "note": "Figure 4A-B with lane and axis labels, page 4 clip rendered at 300 dpi.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID15266310_Park2004.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "doc[3].get_pixmap(dpi=300, clip=Rect(60,320,300,670)).save(<out>)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "9b4780d36ef9600d1406c320af8f411a988e5179d23042a56d1b110501ff9448"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST search EXT_ID:15266310 AND SRC:MED resultType=core, 2026-09-14: inEPMC=Y, inPMC=Y, isOpenAccess=Y, license cc by, fullTextIdList PMC2364795, hasSuppl=N.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence. The abstract's 16q23 and 60% are compared in propositions only; every quote is from the body, legends or table.",
+  "entries": [
+   {
+    "proposition": "SYSTEM: the study material is 18 established human HCC cell lines characterised in the authors' earlier papers, plus normal liver. DATO. No matched normal DNA for any line is described (searched Methods), so germline and somatic changes cannot be separated in this paper.",
+    "snippet": "The HCC cell lines used in this study have been previously characterised for their cytogenetic constitution and viral profile",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15266310_Park2004.xml",
+    "anchor": "Materials and methods > HCC cell lines, sentence 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human hepatocellular carcinoma cell lines (18) and normal human liver"
+    }
+   },
+   {
+    "proposition": "COUNT DEFECT: the sentence says 'Five cell lines' and names six (SK-Hep-1, 7703, HepG2, Huh-7, HLF, HLE). DATO as printed; computed count. The Discussion speaks of 'five of six HBV-negative' lines, which fits six.",
+    "snippet": "Five cell lines, SK-Hep-1, 7703, HepG2, Huh-7, HLF and HLE are negative for HBV.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15266310_Park2004.xml",
+    "anchor": "Materials and methods > HCC cell lines, sentence 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "REAGENT: the IHC primary is the group's rabbit polyclonal anti-WWOX at 140 micrograms per ml, 1:50. DATO. The unit is printed as a micro sign in this structured surface.",
+    "snippet": "Primary polyclonal rabbit WWOX antibody (140 μg ml−1) was used at a 1 : 50 dilution overnight at 4°C.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15266310_Park2004.xml",
+    "anchor": "Materials and methods > WWOX immunohistochemistry",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "REAGENT IDENTITY: affinity-purified polyclonal raised against WWOX residues 12-94, spanning both WW domains. DATO. The epitope excludes the SDR domain, so this antibody cannot distinguish full-length WWOX from an N-terminal fragment retaining residues 12-94 (INFERENZA from the stated epitope).",
+    "snippet": "We detected WWOX using affinity purified polyclonal antibody raised against WWOX amino-acid residues 12–94, containing both of the WW domains.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15266310_Park2004.xml",
+    "anchor": "Results > Expression of WWOX protein, sentence 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "IMPORTED VALIDATION: specificity is supported by citation to Ludes-Meyers 2003 (breast lines), not shown here - no knockdown, peptide block or null control in this paper. DATO about the citation.",
+    "snippet": "This antibody has been used to detect WWOX protein expression in several breast cancer cell lines, demonstrating that altered WWOX gene expression correlated with altered WWOX protein levels (Ludes-Meyers et al, 2003).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15266310_Park2004.xml",
+    "anchor": "Results > Expression of WWOX protein, sentence 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "METHOD AS DESCRIBED: every Western gel carried a Peo/WWOX overexpression reference lane for standardisation. DATO as stated.",
+    "snippet": "Each gel had a lane containing a protein lysate from a cell line stably transfected with a WWOX expression vector (Peo/WWOX) as a reference for standardisation of independent experiments",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15266310_Park2004.xml",
+    "anchor": "Materials and methods > Western blot analyses",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "CGH TEXT: loss confined to 16q24 in five lines. DATO as printed.",
+    "snippet": "in the PLC/PRF/5, SK-Hep-1, HLF, HLE, and SNU387 cell lines, loss of DNA copy-number was confined to a single band, 16q24, corresponding to the location of the WWOX gene.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15266310_Park2004.xml",
+    "anchor": "Results > CGH profile of chromosome 16, sentence 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "CGH LEGEND: the same HLE loss is called 16q23 in the Figure 1 legend (and 16q23 in the abstract). DATO. Text and legend name different bands.",
+    "snippet": "HLE cells exhibit loss of DNA copy-number at region 16q23 (red)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15266310_Park2004.xml",
+    "anchor": "Figure 1 legend",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "FIGURE 1, NATIVE PIXELS. A (HLE): a red loss bar beside the distal end of the 16q ideogram. B (HepG2): two green gain bars on 16q AND a small red bar at the terminal end of 16p, i.e. an apparent 16p loss that neither text nor legend mentions. The ideogram does not resolve q23 from q24, so the band discrepancy cannot be adjudicated from the panel. One representative profile per line; the other four lines said to share the loss are not shown.",
+    "snippet": "Visual attestation of Figure 1: A HLE red bar at the distal 16q end; B HepG2 two green bars on 16q and a short red bar at the 16p terminus; ideogram bands not individually labelled.",
+    "surface": "figure",
+    "artifact": [
+     "files/fulltext/PMID15266310_Park2004_assets/nat_p03_x13.jpeg",
+     "files/fulltext/PMID15266310_Park2004_assets/page3_110dpi.png"
+    ],
+    "anchor": "Figure 1 A-B (PDF p.3), native raster 679x613",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human hepatocellular carcinoma cell lines (18) and normal human liver"
+    },
+    "qualifies": "entries[6]",
+    "qualifies_needle": "confined to a single band, 16q24"
+   },
+   {
+    "proposition": "NORTHERN TEXT: four lines undetectable; Huh6, Chang, Hep3B, Focus, SNU423, SNU475 and SNU387 'significantly underexpressed'. DATO as printed. No densitometry for the Northern is reported anywhere.",
+    "snippet": "In SK-Hep-1, 7703, HLF and HLE cells, WWOX mRNA was undetectable and in Huh6, Chang, Hep3B, Focus, SNU423 SNU475, and SNU387 cells, WWOX was significantly underexpressed.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15266310_Park2004.xml",
+    "anchor": "Results > Transcriptional expression, sentence 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human hepatocellular carcinoma cell lines (18) and normal human liver"
+    }
+   },
+   {
+    "proposition": "NORTHERN TEXT: HepG2 the only line with an elevated transcript. DATO as printed.",
+    "snippet": "Only one cell line, HepG2, showed an elevated level of the WWOX transcript (Figure 2).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15266310_Park2004.xml",
+    "anchor": "Results > Transcriptional expression, sentence 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human hepatocellular carcinoma cell lines (18) and normal human liver"
+    }
+   },
+   {
+    "proposition": "FIGURE 2 RIGHT BLOT, NATIVE PIXELS - TWO LANES DO NOT MATCH THE TEXT. Lane labels were mapped to raster columns from the PDF word coordinates and confirmed on the 400-dpi render. SNU423 carries a strong 2.2-kb WWOX band (mean darkness 147 on 0-255 in the band row, against 156 for the Normal lane of the same blot) - not 'significantly underexpressed'. SNU475 shows no visible band (18, the same as HLE at 15 and HLF at 8, both called undetectable) - it belongs with the undetectable group, not the underexpressed one. SNU387 is faint (33), consistent with the text. CAVEATS: strong bands are saturated, so darkness is a ceiling not a quantity; the Normal lane's beta-actin is much weaker (56) than every cell-line lane (130-212), so per-actin the normal liver signal is higher than the raw band suggests. INFERENZA from pixels and a crude column measurement, not the authors' quantification.",
+    "snippet": "Visual attestation of Figure 2 right blot: lanes HLF blank, PLC/PRF/5 strong, HLE blank, SNU398 strong, SNU449 strong, SNU475 blank, SNU387 faint, SNU423 strong, SNU182 strong, Normal strong with a weak beta-actin band.",
+    "surface": "figure",
+    "artifact": [
+     "files/fulltext/PMID15266310_Park2004_assets/nat_p03_x15.jpeg",
+     "files/fulltext/PMID15266310_Park2004_assets/page3_fig2_400dpi.png",
+     "files/fulltext/PMID15266310_Park2004_assets/fig2_right_4x_point.png"
+    ],
+    "anchor": "Figure 2, right blot (PDF p.3), native raster 410x138 plus 400-dpi label render",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human hepatocellular carcinoma cell lines (18) and normal human liver"
+    },
+    "contradicts": "entries[9]",
+    "contradicts_needle": "SNU423 SNU475, and SNU387"
+   },
+   {
+    "proposition": "FIGURE 2 LEFT BLOT, NATIVE PIXELS. HepG2, Hep40, Huh7 and Normal all give saturated bands (darkness 107, 118, 135, 159; actin 122, 133, 147, 131); HepG2 is not visibly above Hep40, Huh7 or normal liver. The 'elevated' claim is not demonstrable from this exposure and no quantification is given. Chang, Huh6, Hep3B and Focus are faint; SK-hep-1 and 7703 blank, as stated. INFERENZA from pixels.",
+    "snippet": "Visual attestation of Figure 2 left blot: Huh7 strong, Huh6 faint, Chang faint, SK-hep-1 blank, 7703 blank, Hep3B faint, HepG2 strong, Hep40 strong, Focus faint, Normal strong.",
+    "surface": "figure",
+    "artifact": [
+     "files/fulltext/PMID15266310_Park2004_assets/nat_p03_x14.jpeg",
+     "files/fulltext/PMID15266310_Park2004_assets/page3_fig2_400dpi.png"
+    ],
+    "anchor": "Figure 2, left blot (PDF p.3), native raster 397x138",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human hepatocellular carcinoma cell lines (18) and normal human liver"
+    },
+    "qualifies": "entries[10]",
+    "qualifies_needle": "showed an elevated level of the WWOX transcript"
+   },
+   {
+    "proposition": "RT-PCR: full-length 1490-bp product in 15 lines and normal liver. DATO.",
+    "snippet": "the expected product of 1490-bp, spanning exons 1–9 of the WWOX gene, was observed in 15 cell lines and in normal liver tissue.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15266310_Park2004.xml",
+    "anchor": "Results > Transcriptional expression, sentence 4",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human hepatocellular carcinoma cell lines (18) and normal human liver"
+    }
+   },
+   {
+    "proposition": "FIGURE 3A, NATIVE PIXELS. 19 labelled lanes (18 lines + Normal). No 1490-bp band in 7703, HLF and HLE; 7703 shows two smaller bands (arrows A and B); PLC/PRF/5 shows the full band plus two very faint smaller bands. 18 - 3 = 15 lines with the product, which agrees with the text. SK-hep-1, undetectable on the Northern, still gives a weak RT-PCR product.",
+    "snippet": "Visual attestation of Figure 3A: 1490-bp band absent in 7703, HLF and HLE, present in the other fifteen lines and in Normal; two lower bands with arrowheads in 7703 and fainter ones in PLC/PRF/5.",
+    "surface": "figure",
+    "artifact": [
+     "files/fulltext/PMID15266310_Park2004_assets/nat_p04_x23.jpeg",
+     "files/fulltext/PMID15266310_Park2004_assets/page4_110dpi.png"
+    ],
+    "anchor": "Figure 3A (PDF p.4), native raster 791x174",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human hepatocellular carcinoma cell lines (18) and normal human liver"
+    }
+   },
+   {
+    "proposition": "NOVEL VARIANT: a transcript lacking exons 6-8 and carrying a 96-bp insert between exons 5 and 9. DATO (sequenced from 7703 and PLC/PRF/5).",
+    "snippet": "The larger PCR product lacked exons 6–8 but also contained a 96-bp sequence inserted between exons 5 and 9, identifying a new WWOX transcript variant (Figure 3C).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15266310_Park2004.xml",
+    "anchor": "Results > Transcriptional expression, sentence 6",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human hepatocellular carcinoma cell lines (18) and normal human liver"
+    }
+   },
+   {
+    "proposition": "ARITHMETIC DEFECT: the insert is placed at nts 5281331-5281425 of chromosome 16 (build 34), which is 95 nucleotides inclusive, not 96. DATO as printed; computed. Which figure is wrong cannot be decided without the build-34 sequence (not consulted).",
+    "snippet": "The insert sequence is encoded by nts. 5281331–5281425 (NCBI MapViewer build 34 version 2) of chromosome 16 located within WWOX intron 8.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15266310_Park2004.xml",
+    "anchor": "Results > Transcriptional expression, sentence 7",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "AUTHOR INFERENZA, NOT A MEASUREMENT: the variant 'can potentially encode' an ~30 kDa protein. No protein product is shown (the Western antibody would detect an N-terminal fragment, but no ~30 kDa band is reported or discussed).",
+    "snippet": "There are no translational termination codons in the inserted sequence, and since the WWOX translational reading frame is maintained, the transcript can potentially encode an approximately 30 kDa protein.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15266310_Park2004.xml",
+    "anchor": "Results > Transcriptional expression, sentence 8",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "FIGURE 3B-C, NATIVE PIXELS. B: chromatogram reading AATGG|CAACA across an arrow labelled Exon 5 | Exon 9. C: nucleotide sequence with an underlined insert and a translated stretch N T V P V G H W I R / G R E K E E R T R H K L E G I / H L Q C C S E = 32 residues (counted), matching the legend's '32 amino-acid sequence'.",
+    "snippet": "Visual attestation of Figure 3B-C: chromatogram junction AATGG CAACA labelled Exon 5 and Exon 9; underlined insert with 32 translated residues NTVPVGHWIR GREKEERTRHKLEGI HLQCCSE.",
+    "surface": "figure",
+    "artifact": [
+     "files/fulltext/PMID15266310_Park2004_assets/nat_p04_x24.jpeg",
+     "files/fulltext/PMID15266310_Park2004_assets/nat_p04_x25.jpeg"
+    ],
+    "anchor": "Figure 3B-C (PDF p.4), native rasters 280x199 and 446x263",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human hepatocellular carcinoma cell lines (18) and normal human liver"
+    }
+   },
+   {
+    "proposition": "WESTERN TEXT: every HCC line has more than 50% reduction versus normal liver after actin normalisation. DATO as printed.",
+    "snippet": "All of the HCCs had >50% reduction of WWOX levels compared to normal liver when normalised to actin (Figure 4B).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15266310_Park2004.xml",
+    "anchor": "Results > Expression of WWOX protein, sentence 5",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human hepatocellular carcinoma cell lines (18) and normal human liver"
+    }
+   },
+   {
+    "proposition": "WESTERN TEXT: '72% (13 out of 18) had WWOX expression levels lower than 90% that of normal liver'. DATO as printed. Read literally it contradicts the previous sentence (all are below 50%).",
+    "snippet": "The majority of cell lines, 72% (13 out of 18), had WWOX expression levels lower than 90% that of normal liver.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15266310_Park2004.xml",
+    "anchor": "Results > Expression of WWOX protein, sentence 6",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human hepatocellular carcinoma cell lines (18) and normal human liver"
+    }
+   },
+   {
+    "proposition": "FIGURE 4, NATIVE PIXELS - 17 LINES, NOT 18, AND WHAT '13' COUNTS. Figure 4A has 19 lanes: Normal 1, Normal 2 and 17 HCC lines; Chang is absent from both blots and from the 17 bars of Figure 4B. All 17 bars lie below 0.50 (HepG2 highest, about 0.46), confirming the >50% sentence. Exactly 13 bars lie below 0.10 (Hep40, SK-Hep-1, Focus, Huh-6, HLF, HLE, Huh-7, Hep3B, 7703, SNU182 about 0.095, SNU387, SNU423, SNU475), so the sentence means 'more than 90% lower than normal', and its denominator should be 17 (13/17 = 76%), not 18. The Discussion's '75%' fits 13/17, not 13/18. INFERENZA from pixel counts.",
+    "snippet": "Visual attestation of Figure 4: blots labelled Normal 1, Normal 2, Hep40, SK-Hep-1, PLC/PRF/5, Focus, HepG2, Huh-6, HLF, HLE, SNU398, SNU449, Huh7 and Hep3B, 7703, SNU182, SNU387, SNU423, SNU475; seventeen bars, all below 0.50, thirteen below 0.10.",
+    "surface": "figure",
+    "artifact": [
+     "files/fulltext/PMID15266310_Park2004_assets/nat_p04_x26.jpeg",
+     "files/fulltext/PMID15266310_Park2004_assets/nat_p04_x27.jpeg",
+     "files/fulltext/PMID15266310_Park2004_assets/page4_fig4_300dpi.png"
+    ],
+    "anchor": "Figure 4A-B (PDF p.4), native rasters 635x142 and 568x345 plus 300-dpi label render",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human hepatocellular carcinoma cell lines (18) and normal human liver"
+    },
+    "qualifies": "entries[20]",
+    "qualifies_needle": "72% (13 out of 18)"
+   },
+   {
+    "proposition": "FIGURE 4A, NATIVE PIXELS - NO REFERENCE LANE SHOWN. Neither blot carries a lane labelled Peo/WWOX, and the right blot (Hep3B, 7703, SNU182, SNU387, SNU423, SNU475) has no normal-liver lane, so its six values in Figure 4B are normalised to a normal sample on a different gel through a reference lane that is not displayed. INFERENZA about the displayed crop; the lane may exist outside it.",
+    "snippet": "Visual attestation of Figure 4A: left blot begins with Normal 1 and Normal 2; right blot has six HCC lanes and no normal or reference lane; no lane labelled as the transfected standard in either blot.",
+    "surface": "figure",
+    "artifact": [
+     "files/fulltext/PMID15266310_Park2004_assets/nat_p04_x26.jpeg",
+     "files/fulltext/PMID15266310_Park2004_assets/page4_fig4_300dpi.png"
+    ],
+    "anchor": "Figure 4A (PDF p.4), lane labels",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human hepatocellular carcinoma cell lines (18) and normal human liver"
+    },
+    "qualifies": "entries[5]",
+    "qualifies_needle": "Peo/WWOX"
+   },
+   {
+    "proposition": "mRNA-PROTEIN TEXT: concordance except Hep40 and Hep3B. DATO as printed.",
+    "snippet": "with the exception of Hep40 and Hep3B, WWOX mRNA levels correlated with WWOX protein levels",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15266310_Park2004.xml",
+    "anchor": "Results > Expression of WWOX protein, sentence 5",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human hepatocellular carcinoma cell lines (18) and normal human liver"
+    }
+   },
+   {
+    "proposition": "FIGURES 2 AND 4 SET SIDE BY SIDE - MORE DISCORDANCE THAN TWO LINES. Lines with strong Northern bands but protein at or below 0.10 of normal: Huh7 (Northern strong; bar about 0.065), SNU423 (strong; about 0.065), SNU182 (strong; about 0.095); Hep40 (strong; about 0.03) is the named exception. So at least three further lines are discordant on the displayed panels. INFERENZA: the Northern is saturated and unnormalised, which could hide mRNA differences; the direction (mRNA present, protein low) is also what the authors' own 'post-transcriptional regulation' remark would predict.",
+    "snippet": "Visual attestation across Figures 2 and 4: Huh7, SNU423 and SNU182 give strong 2.2-kb Northern bands and Figure 4B bars below 0.10 of normal liver.",
+    "surface": "figure",
+    "artifact": [
+     "files/fulltext/PMID15266310_Park2004_assets/nat_p03_x14.jpeg",
+     "files/fulltext/PMID15266310_Park2004_assets/nat_p03_x15.jpeg",
+     "files/fulltext/PMID15266310_Park2004_assets/nat_p04_x27.jpeg",
+     "files/fulltext/PMID15266310_Park2004_assets/page4_fig4_300dpi.png"
+    ],
+    "anchor": "Figures 2 and 4B compared (PDF p.3-4)",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human hepatocellular carcinoma cell lines (18) and normal human liver"
+    },
+    "qualifies": "entries[23]",
+    "qualifies_needle": "exception of Hep40 and Hep3B"
+   },
+   {
+    "proposition": "IHC RESULTS: of 5 primary HCC, 2 very weak or moderate and 1 negative. DATO. The remaining 2 of 5 are not described anywhere (searched Results and Discussion). Five normal livers stained strongly. Tissue IHC is 5 + 5 cases, described by the Discussion itself as 'preliminary'.",
+    "snippet": "Of five primary HCC cases analysed by immunohistochemistry, two of the HCC samples stained very weakly or moderately for WWOX while one sample was negative for WWOX staining as shown in Figure 5B and C, respectively.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15266310_Park2004.xml",
+    "anchor": "Results > Expression of WWOX protein, paragraph 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human normal liver and primary HCC tissue sections, IHC"
+    }
+   },
+   {
+    "proposition": "FIGURE 5 LEGEND: strong cytoplasmic staining of hepatocytes, stroma negative. DATO as legend.",
+    "snippet": "Note the strong WWOX cytoplasmic staining of hepatocytes contrasting with the negative staining of the stromal components (lower left corner).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15266310_Park2004.xml",
+    "anchor": "Figure 5 legend",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human normal liver and primary HCC tissue sections, IHC"
+    }
+   },
+   {
+    "proposition": "FIGURE 5, NATIVE CROPS. A normal liver: granular brown cytoplasmic signal in hepatocyte plates, nuclei blue and unstained, stroma at lower left unstained - agrees with the legend. B HCC: sparse faint granular cytoplasmic signal. C HCC: essentially no brown signal. Staining in normal hepatocytes is granular and moderate rather than intense at this scale. One field each; no internal positive control visible in B or C.",
+    "snippet": "Visual attestation of Figure 5: A granular cytoplasmic brown stain in hepatocytes with unstained nuclei and unstained stroma lower left; B faint sparse granular stain; C no visible brown stain.",
+    "surface": "figure",
+    "artifact": [
+     "files/fulltext/PMID15266310_Park2004_assets/crop_fig5_top.png",
+     "files/fulltext/PMID15266310_Park2004_assets/crop_fig5_mid.png",
+     "files/fulltext/PMID15266310_Park2004_assets/crop_fig5_bot.png"
+    ],
+    "anchor": "Figure 5 A-C (PDF p.5), native crops of the 726x1778 raster",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human normal liver and primary HCC tissue sections, IHC"
+    }
+   },
+   {
+    "proposition": "VARIANT: SNU387 carries c.754C>G, p.P252A (CCT>GCT). DATO as reported from SSCP + sequencing of a cell line. Germline versus somatic origin is not determinable here (no matched normal).",
+    "snippet": "The third variation was detected in SNU387, a C to G transversion at nucleotide 754 that replaced proline with alanine in amino acid 252 (CCT to GCT).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15266310_Park2004.xml",
+    "anchor": "Results > WWOX gene sequence variants, sentence 4",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human HCC cell line",
+     "cell_line": "SNU387"
+    }
+   },
+   {
+    "proposition": "VARIANT: 7703 and Focus carry c.547G>A, p.D183N. DATO as reported.",
+    "snippet": "The first variation involved a G to A transition at nucleotide 547 that results in an aspartic acid to asparagine substitution at amino acid 183 (GAC to AAC) in 7703 and Focus cell lines.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15266310_Park2004.xml",
+    "anchor": "Results > WWOX gene sequence variants, sentence 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human hepatocellular carcinoma cell lines (18) and normal human liver"
+    }
+   },
+   {
+    "proposition": "VARIANT: PLC/PRF/5 carries c.941G>A, p.R314H. DATO as reported.",
+    "snippet": "The fourth variation was observed in PLC/PRF/5 at nucleotide 941 and consisted of a G to A transition that caused a change from arginine to histidine at amino acid 314 (CGC to CAC).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15266310_Park2004.xml",
+    "anchor": "Results > WWOX gene sequence variants, sentence 5",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human hepatocellular carcinoma cell lines (18) and normal human liver"
+    }
+   },
+   {
+    "proposition": "AUTHOR INFERENZA, UNTESTED: the four variants spare critical residues and are 'very likely' polymorphisms. No functional assay, no population frequency, no matched normal and no domain boundaries are given in the paper. The claim that P252 and R314 are outside critical SDR residues rests on nothing shown. PREMISE: DEFAULT_FROM_TEXTBOOK (the authors' unstated domain map).",
+    "snippet": "None of these changes affect critical residues of the WW domains or the SDR domain making it unlikely that they alter WWOX protein function and very likely they represent common polymorphisms rather than somatic mutations.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15266310_Park2004.xml",
+    "anchor": "Results > WWOX gene sequence variants, last sentence",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "TABLE 1: WWOX and FHIT status for only 10 of the 18 lines (title). DATO. Four WWOX-negative lines (HLE, HLF, 7703, SK-Hep-1), three of them FHIT-negative.",
+    "snippet": "Expression of WWOX and FHIT gene in 10 HCC cell lines",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID15266310_Park2004.xml",
+    "anchor": "Table 1 title",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human hepatocellular carcinoma cell lines (18) and normal human liver"
+    }
+   },
+   {
+    "proposition": "CO-LOSS: three WWOX-negative lines also lack FHIT. DATO; n = 3 of 4 WWOX-negative, no test.",
+    "snippet": "three of the HCC cell lines that did not express WWOX (SK-Hep-1, 7703, and HLF) also lacked expression of FHIT",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15266310_Park2004.xml",
+    "anchor": "Results > Concurrent WWOX and FHIT aberrant expression",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human hepatocellular carcinoma cell lines (18) and normal human liver"
+    }
+   },
+   {
+    "proposition": "DISCUSSION PERCENTAGES: 61% mRNA, 75% protein. DATO as printed. Computed: 11/18 = 61.1% (fits); 13/18 = 72.2% (the Results figure) and 13/17 = 76.5%; 75% matches neither exactly. The abstract says 60% for mRNA.",
+    "snippet": "The data presented here provide evidence for downregulation or absence of WWOX mRNA expression in 61% of the HCC cell lines and a low or undetectable level of WWOX protein in 75% of them.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15266310_Park2004.xml",
+    "anchor": "Discussion, paragraph 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human hepatocellular carcinoma cell lines (18) and normal human liver"
+    }
+   },
+   {
+    "proposition": "NEGATIVE, DATA NOT SHOWN: no homozygous WWOX deletion by Southern blot. DATO as stated; the Southern data are not displayed.",
+    "snippet": "Homozygous deletions of WWOX were not detected by Southern blot hybridisation and nearly all the cell lines examined have at least one intact chromosome 16q (not shown).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15266310_Park2004.xml",
+    "anchor": "Discussion, paragraph 4",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human hepatocellular carcinoma cell lines (18) and normal human liver"
+    }
+   },
+   {
+    "proposition": "NEGATIVE, DATA NOT SHOWN: 5-aza-2'-deoxycytidine plus trichostatin A did not raise WWOX mRNA in 'several' low-expressing HCC lines. DATO as stated; which lines, doses, durations and controls are not given. The authors' inference that promoter hypermethylation 'might not be common' is INFERENZA on unshown data.",
+    "snippet": "the combined treatment did not increase the level of WWOX mRNA expression (not shown), suggesting that hypermethylation of the WWOX gene promoter might not be common in HCC",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15266310_Park2004.xml",
+    "anchor": "Discussion, paragraph 4",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human HCC cell lines",
+     "treatment": "5-aza-2'-deoxycytidine plus trichostatin A"
+    }
+   },
+   {
+    "proposition": "AUTHOR IPOTESI: hemizygous WWOX loss could act through haploinsufficiency in cancer. Untested here.",
+    "snippet": "Hemizygous loss could also be of relevance since it could lead to haploinsufficiency, and this abnormality by itself could be of relevance in cancer development.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15266310_Park2004.xml",
+    "anchor": "Discussion, paragraph 4",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "CONTRADICTORY PRIOR, NAMED: Watanabe 2003 found WWOX expressed in HLE and HLF, which this paper finds negative for RNA and protein. DATO about the disagreement; the cause (antibody, clone drift, method) is not examined.",
+    "snippet": "who concluded that WWOX was expressed in 47 out of 48 cancer cell lines analysed, including the HCC cell lines HLE and HLF, which clearly do not express WWOX RNA and protein by our analysis.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15266310_Park2004.xml",
+    "anchor": "Discussion, paragraph 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human hepatocellular carcinoma cell lines (18) and normal human liver"
+    }
+   }
+  ]
+ }
+}

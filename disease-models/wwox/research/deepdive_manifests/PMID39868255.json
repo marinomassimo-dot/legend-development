@@ -1,0 +1,970 @@
+{
+  "schema_version": 2,
+  "pmid": "39868255",
+  "doi": "10.1101/2025.01.17.633677",
+  "receipt": "FTR-20260913-39868255-01",
+  "landing": [
+    "FTR-20260913-39868255-01",
+    "fulltext_dossiers/PMID39868255.md",
+    "LIT-0096-adjacent: no registry record of its own identity yet"
+  ],
+  "coverage_status": "complete_fulltext_read",
+  "editorial_state": {
+    "kind": "preprint",
+    "server": "bioRxiv",
+    "version": "v1",
+    "posted": "2025-01-18",
+    "licence": "cc_no",
+    "peer_reviewed": false,
+    "published_version_check": "ONE check, as the contract allows: the bioRxiv API record returns \"published\":\"NA\" and the Europe PMC core record for PPR968110 returns isOpenAccess=N, inEPMC=N, inPMC=N, hasPDF=N with a fullTextUrlList naming only the DOI. The PubMed record (retrieved live 2026-09-13) carries article types 'Journal Article; Preprint' and names no published version. No further search was made.",
+    "pmc_record": "PMC11761808 exists and carries ABSTRACT ONLY. Its own words, quoted from the page retrieved with no User-Agent: 'The license terms selected by the author(s) for this preprint version do not permit archiving in PMC. The full text is available from the preprint server.' So PMC is not a full-text route for this paper by licence, not by failure.",
+    "consequence": "Every finding from this paper carries preprint status explicitly. It has not been peer reviewed, and the typographical state of the text - 'Wwow', 'II-6', 'W1IWT', 'demonstete', 'statstically' - is consistent with a manuscript that has not been copy-edited."
+  },
+  "skills_considered": [
+    {
+      "skill": "find-fulltext",
+      "used": false,
+      "reason": "The packet's acquisition procedure was OPEN and the two routes named in the contract were the ones that worked, after a Cloudflare rate limit that no tier skill can negotiate away. Invoking the cascade would have added attempts against the same host that was already refusing on 429."
+    },
+    {
+      "skill": "legend-deepdive",
+      "used": false,
+      "reason": "Run inline as a first read under scientist_standing_brief M0-M5, with the joint synthesis handled as a separate phase after both receipts landed."
+    },
+    {
+      "skill": "legend-locator-audit",
+      "used": false,
+      "reason": "Not triggered for THIS paper: it touches no consolidated baseline claim, and its coupled entries are qualifications of the paper's own sentences rather than contradictions of a persisted locator. The audit was run, and mattered, on the other paper of this lot where the trigger did fire."
+    },
+    {
+      "skill": "legend-discovery",
+      "used": false,
+      "reason": "Declined this wave. The lead this paper carries is already tagged DL-MECH-012 in the discovery ledger; what it needed was a reading that establishes whether the tag's convergence argument survives, which is the joint synthesis, not a new discovery pass."
+    }
+  ],
+  "group_assessment": {
+    "group": "Machado laboratory, Division of Pulmonary, Critical Care, Sleep and Occupational Medicine, Indiana University, with the Behavioral Phenotyping Core at IU School of Medicine; C. Marcelo Aldaz is a co-author and the source of the mouse line.",
+    "total_publications": 169,
+    "publications_on_gene": 4,
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": false,
+    "primary_for_the_gene": "NO, and measured: PubMed 2026-09-13, `Machado RF[Author]` returns 169 records and `Machado RF[Author] AND WWOX` returns 4 - this preprint, 38563965, 33058734 and 28283473, all of them lung or endothelium. This is a sepsis and pulmonary-vascular laboratory that has used WWOX four times, not a WWOX laboratory.",
+    "weighting": "Observation weighted HIGH for what this laboratory actually does - LPS sepsis modelling, murine severity scoring, brain immunohistochemistry - and this is its own instrument set, not a borrowed one. Interpretation weighted LOW wherever the paper speaks about WWOX biology or about the P47T model's baseline: three specific failures show the cost of the inexperience, and all three concern the cited source rather than the new data - the GSEA comparator is misstated as heterozygous littermates when the source sequenced only WT/WT versus homozygotes, the GSEA is attributed in the Discussion to a 2014 review rather than to the 2023 mouse paper, and the baseline-equivalence premise is inherited from a paper whose own panels qualify it. This is the predicted shape for an adjacent laboratory reading someone else's model: the sepsis measurements are theirs and are sound to the extent their statistics allow, the WWOX framing around them is second-hand.",
+    "measured_on": "2026-09-13"
+  },
+  "field_density": {
+    "measured_on": "2026-09-13",
+    "source": "PubMed MCP connector",
+    "queries": [
+      {
+        "query": "WWOX",
+        "count": 708,
+        "date": "2026-09-13"
+      },
+      {
+        "query": "WWOX AND sepsis",
+        "count": 1,
+        "date": "2026-09-13"
+      },
+      {
+        "query": "WWOX AND (neuroinflammation OR microgliosis OR astrogliosis OR gliosis)",
+        "count": 6,
+        "date": "2026-09-13"
+      },
+      {
+        "query": "Machado RF[Author]",
+        "count": 169,
+        "date": "2026-09-13"
+      },
+      {
+        "query": "Machado RF[Author] AND WWOX",
+        "count": 4,
+        "date": "2026-09-13"
+      }
+    ],
+    "reading": "`WWOX AND sepsis` returns exactly ONE record in all of PubMed, and it is this preprint. The intersection of this gene with this syndrome is a literature of one, unreviewed. That is the single most important context for how much weight any of its findings can carry: there is nothing to replicate it against, and no independent group has entered the intersection."
+  },
+  "multihop": {
+    "references_enumerated": 21,
+    "enumeration_note": "21 <ref> elements enumerated from the fingerprinted JATS artefact. They carry DOIs, not PMIDs, so the gene-direct set below is listed by DOI exactly as the artefact gives it - no identifier is converted from recall.",
+    "gene_direct_refs_in_source": [
+      "10.1073/pnas.1409252111",
+      "10.1152/ajplung.00034.2017",
+      "10.1074/jbc.R115.676346",
+      "10.3390/cells10040824",
+      "10.3389/fped.2022.847549",
+      "10.1016/j.neurobiolaging.2021.10.011",
+      "10.1016/j.bbcan.2014.06.001",
+      "10.1007/s00109-022-02265-5",
+      "10.1007/s00018-023-04950-1",
+      "10.1152/ajplung.00277.2023",
+      "10.1016/j.pneurobio.2023.102425",
+      "10.1074/jbc.M505590200"
+    ],
+    "resolved": [
+      "10.1016/j.pneurobio.2023.102425 — ref 17, PMID 36828035, read to complete_fulltext_read by this same actor earlier today (FTR-20260913-36828035-03); the DOI is verified inside both artefacts",
+      "10.3390/cells10040824 — ref 10, carried in this ledger with a complete read (the Banne 2021 WWOX neurological-disorders overview)",
+      "10.1152/ajplung.00277.2023 — ref 16, the VILI endothelial paper already named in this repository's discovery ledger as the third leg of DL-MECH-012",
+      "10.1152/ajplung.00034.2017 — ref 8, the lung-WWOX neutrophilic-inflammation paper already carried as a gene-direct debt of the other paper in this lot"
+    ],
+    "queued": [
+      {
+        "queue": "FT-175",
+        "dois": [
+          "10.1073/pnas.1409252111",
+          "10.1074/jbc.R115.676346",
+          "10.3389/fped.2022.847549",
+          "10.1016/j.neurobiolaging.2021.10.011",
+          "10.1016/j.bbcan.2014.06.001",
+          "10.1007/s00109-022-02265-5",
+          "10.1007/s00018-023-04950-1",
+          "10.1074/jbc.M505590200"
+        ],
+        "reason": "The eight gene-direct references of this preprint that carry no receipt in this ledger. FT-175 was CREATED by this reading (the queue held FT-001..FT-096 and named neither this PMID nor its DOI anywhere), so the manifest now points at this paper's own entry rather than at a foreign identifier. Two are high priority and the entry says why: ref 21 (10.1074/jbc.M505590200) is the ONLY mechanistic support the preprint cites for its TNF-alpha/NF-kappaB hypothesis and nobody here has read it, and ref 13 (10.1016/j.bbcan.2014.06.001) is the review to which this preprint misattributes the P47T GSEA."
+      }
+    ],
+    "queued_note": "FT-175 now exists and is this paper's own queue entry; the debt is in the queue, not only in prose.",
+    "measured_on": "2026-09-13"
+  },
+  "corpus_crossquery": {
+    "run_on": "2026-09-13",
+    "query": "registry_records.py get --pmid 39868255, plus grep -ci over the four scientific current files for 39868255, sepsis, LPS, and the terms of this paper's endpoints",
+    "hits": 2,
+    "counts": {
+      "39868255": {
+        "claim": 0,
+        "paper": 1,
+        "working_model": 0,
+        "literature_log": 1
+      },
+      "sepsis": {
+        "claim": 0,
+        "paper": 1,
+        "working_model": 0,
+        "literature_log": 1
+      },
+      "LPS": {
+        "claim": 0,
+        "paper": 0,
+        "working_model": 0,
+        "literature_log": 0
+      }
+    },
+    "findings": [
+      "This paper has NO claim-registry presence and no working-model presence at all; it is named once in the paper registry and once in the literature log, and once - substantively - in the discovery ledger as one of the three legs of DL-MECH-012.",
+      "`LPS` returns ZERO lines across all four current files, so the entire extrinsic-challenge axis is absent from the canonical vocabulary of this model even though DL-MECH-012 already leans on this paper for it.",
+      "🔴 The discovery ledger tags DL-MECH-012 as `DATO (convergente su >=3 modelli)` citing this preprint as one of the three. That tag is what the joint synthesis has to test, and it is tested there rather than here."
+    ]
+  },
+  "retraction_check": {
+    "result": "No retraction, correction, expression of concern or erratum. Checked on 2026-09-13 by two routes: the live PubMed record through the MCP connector, whose article types are 'Journal Article; Preprint' with no comments-corrections element, and the bioRxiv API record for the DOI, which reports a single version v1 of 2025-01-18 and \"published\":\"NA\". 🔴 A preprint is a class where the relevant question is not only retraction but SILENT REVISION: v1 is the only version, so what was read is what exists, and a v2 appearing later would make this reading a reading of v1 and nothing more.",
+    "checked_on": "2026-09-13",
+    "routes": [
+      "PubMed via MCP connector",
+      "bioRxiv API details endpoint"
+    ],
+    "dependencies": {
+      "screened": true,
+      "paper_verdict": "SCREENED_CLEAN",
+      "flagged": [],
+      "noted": [],
+      "references_declared": 21,
+      "references_screened": 21,
+      "references_with_doi": 21,
+      "unscreenable": {},
+      "reference_source": "network",
+      "snapshot": {
+        "date": "2026-09-10",
+        "days_since_fetch": 3,
+        "rows": 72476,
+        "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+      },
+      "schema": "retraction_check.dependencies/1",
+      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+      "citing_relation": "No dependency is flagged, so no citing_relation is owed for any of them. Stated rather than left blank: all 21 declared references carry a DOI and all 21 were screened against the live source, with zero unscreenable — a completeness this paper's short, DOI-complete reference list makes possible and which the other paper of this lot could not reach (4 of its 60 had no DOI)."
+    },
+    "corrected_items": [],
+    "erratum_scope": "NO erratum, correction or expression of concern exists for this paper, so the corrected-panel scope is declared EMPTY rather than left undeclared. The vocabulary in the result field above is the record of the check that was run, not the record of a notice found. For a bioRxiv preprint the live risk is silent revision rather than erratum: v1 is the only version and this reading is a reading of v1."
+  },
+  "reading_budget": {
+    "panels_present": "9 main figures plus 1 supplemental figure, 30 lettered panels in total; 0 tables",
+    "panels_inspected": "10 of 10 figures inspected as composited page renders at 300 dpi",
+    "denominator_basis": "figure-level, counted from the JATS <fig> elements (10, including figs1) and confirmed against the PDF's pages 15-24, one figure per page",
+    "denominator_status": "known",
+    "the_layer_trap": "🔴 MEASURED, NOT ANTICIPATED: extracting the embedded image stream of each figure page yields a single layer, and 8 of the 10 come out wholly or partly BLACK - Fig 1, Fig 7 and Suppl Fig 1 entirely, Fig 2 showing only its red regression line - because every axis label, group label and printed p-value is vector text drawn over the raster. A reader who took `extract_image` output as the figure would have inspected black rectangles and reported the captions. The composited render is the figure; the extracted streams were discarded rather than declared.",
+    "route_cost": "The bioRxiv web raster route refused 7 of 10 figures with HTTP 429 (Cloudflare 'error code: 1015') across roughly 40 minutes of backoff, rescuing F1, F3 and F9 only. The PDF, one request, carried all ten. Recorded because the cheap route looked like the only route for most of this reading."
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID39868255_DeLaCruz2025_biorxiv.source.xml",
+      "kind": "article_text",
+      "sha256": "9b00506b8ab450451ecdb1079c32b47d0bfef410b61aeb5cee043409ece3eb47",
+      "note": "bioRxiv JATS source XML, the structured surface. Identity verified by CONTENT, not filename: the document's own pub-id carries 10.1101/2025.01.17.633677 and its article-title matches. 21 refs, 10 figs, ZERO table-wrap, ZERO supplementary-material elements.",
+      "acquisition_recipe": {
+        "http_method": "GET",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-09-13",
+        "derived": false,
+        "resolved_url": "https://www.biorxiv.org/content/biorxiv/early/2025/01/18/2025.01.17.633677.source.xml",
+        "tier": "biorxiv_jats_source_xml",
+        "result_sha256": "9b00506b8ab450451ecdb1079c32b47d0bfef410b61aeb5cee043409ece3eb47",
+        "note": "Refused with Cloudflare 'error code: 1015' (HTTP 429) on every attempt for roughly 25 minutes under BOTH user-agent policies, then served. The 1015 is a rate limit, not a licence signal."
+      }
+    },
+    {
+      "path": "files/fulltext/PMID39868255_DeLaCruz2025_biorxiv_full.html",
+      "kind": "article_text",
+      "sha256": "574380aa3d802c4e765a3df4bc6296c6b02f4a2f643c941f1bc4e02fa4a1271e",
+      "note": "bioRxiv full-text HTML, a second structured surface acquired the same minute. Carries the figure URLs the raster route uses.",
+      "acquisition_recipe": {
+        "http_method": "GET",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-09-13",
+        "derived": false,
+        "resolved_url": "https://www.biorxiv.org/content/10.1101/2025.01.17.633677v1.full",
+        "tier": "biorxiv_full_html",
+        "result_sha256": "574380aa3d802c4e765a3df4bc6296c6b02f4a2f643c941f1bc4e02fa4a1271e"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID39868255_DeLaCruz2025_biorxiv.pdf",
+      "kind": "article_binary",
+      "sha256": "1f8ff123c3a156cddb65be8cdc6aa29c7a16d509114f59e588439208ea251b01",
+      "note": "bioRxiv PDF, 24 pages, pages 15-24 carrying one figure each. THE FIGURE SURFACE OF RECORD for this reading: no text locator is anchored to it, but every figure locator is a render of one of its pages.",
+      "acquisition_recipe": {
+        "http_method": "GET",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-09-13",
+        "derived": false,
+        "resolved_url": "https://www.biorxiv.org/content/10.1101/2025.01.17.633677v1.full.pdf",
+        "tier": "biorxiv_pdf",
+        "result_sha256": "1f8ff123c3a156cddb65be8cdc6aa29c7a16d509114f59e588439208ea251b01"
+      }
+    },
+    {
+      "path": "files/figures/PMID39868255/pdf_pages/page15_300dpi.png",
+      "kind": "figure",
+      "sha256": "0a3e309758c3edf8218b2b6eee4bb394a6e933297ad9a37b5a8211706382a9e4",
+      "note": "Figure 1, composited page render at 300 dpi. 🔴 THE COMPOSITE IS THE FIGURE: extracting the embedded image stream from this page yields ONE LAYER - 8 of the 10 came out wholly or partly BLACK, Fig 1 and Fig 7 and Suppl Fig 1 entirely so - because the axes, group labels and printed p-values are vector text drawn ON TOP of the raster. The extracted streams were discarded rather than declared.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID39868255_DeLaCruz2025_biorxiv.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "doc[14].get_pixmap(dpi=300)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "0a3e309758c3edf8218b2b6eee4bb394a6e933297ad9a37b5a8211706382a9e4"
+      }
+    },
+    {
+      "path": "files/figures/PMID39868255/pdf_pages/page16_300dpi.png",
+      "kind": "figure",
+      "sha256": "1c8a9556e2e8f9d809cb872a61827b4556cda6adafbc8efff194aa16f6b276e1",
+      "note": "Figure 2, composited page render at 300 dpi. 🔴 THE COMPOSITE IS THE FIGURE: extracting the embedded image stream from this page yields ONE LAYER - 8 of the 10 came out wholly or partly BLACK, Fig 1 and Fig 7 and Suppl Fig 1 entirely so - because the axes, group labels and printed p-values are vector text drawn ON TOP of the raster. The extracted streams were discarded rather than declared.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID39868255_DeLaCruz2025_biorxiv.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "doc[15].get_pixmap(dpi=300)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "1c8a9556e2e8f9d809cb872a61827b4556cda6adafbc8efff194aa16f6b276e1"
+      }
+    },
+    {
+      "path": "files/figures/PMID39868255/pdf_pages/page17_300dpi.png",
+      "kind": "figure",
+      "sha256": "f57a39e3e7a67a3038528c8eb2b81479de8697b810d7376a0110c6146f77d0fa",
+      "note": "Figure 3, composited page render at 300 dpi. 🔴 THE COMPOSITE IS THE FIGURE: extracting the embedded image stream from this page yields ONE LAYER - 8 of the 10 came out wholly or partly BLACK, Fig 1 and Fig 7 and Suppl Fig 1 entirely so - because the axes, group labels and printed p-values are vector text drawn ON TOP of the raster. The extracted streams were discarded rather than declared.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID39868255_DeLaCruz2025_biorxiv.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "doc[16].get_pixmap(dpi=300)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "f57a39e3e7a67a3038528c8eb2b81479de8697b810d7376a0110c6146f77d0fa"
+      }
+    },
+    {
+      "path": "files/figures/PMID39868255/pdf_pages/page18_300dpi.png",
+      "kind": "figure",
+      "sha256": "830fe5316f719a3c69c2d7703a5cae489d4fddb17ee66ab1ee8e17b6eb5dab13",
+      "note": "Figure 4, composited page render at 300 dpi. 🔴 THE COMPOSITE IS THE FIGURE: extracting the embedded image stream from this page yields ONE LAYER - 8 of the 10 came out wholly or partly BLACK, Fig 1 and Fig 7 and Suppl Fig 1 entirely so - because the axes, group labels and printed p-values are vector text drawn ON TOP of the raster. The extracted streams were discarded rather than declared.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID39868255_DeLaCruz2025_biorxiv.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "doc[17].get_pixmap(dpi=300)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "830fe5316f719a3c69c2d7703a5cae489d4fddb17ee66ab1ee8e17b6eb5dab13"
+      }
+    },
+    {
+      "path": "files/figures/PMID39868255/pdf_pages/page19_300dpi.png",
+      "kind": "figure",
+      "sha256": "7300d053e756c2997fa32172cf395dd4fcef0d3fe782ccfd2c026dff09d4c5c9",
+      "note": "Figure 5, composited page render at 300 dpi. 🔴 THE COMPOSITE IS THE FIGURE: extracting the embedded image stream from this page yields ONE LAYER - 8 of the 10 came out wholly or partly BLACK, Fig 1 and Fig 7 and Suppl Fig 1 entirely so - because the axes, group labels and printed p-values are vector text drawn ON TOP of the raster. The extracted streams were discarded rather than declared.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID39868255_DeLaCruz2025_biorxiv.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "doc[18].get_pixmap(dpi=300)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "7300d053e756c2997fa32172cf395dd4fcef0d3fe782ccfd2c026dff09d4c5c9"
+      }
+    },
+    {
+      "path": "files/figures/PMID39868255/pdf_pages/page20_300dpi.png",
+      "kind": "figure",
+      "sha256": "8ed7ee967764e8d8c103420824a70de6a0e4528a4fe60680edf6bb83497b382a",
+      "note": "Figure 6, composited page render at 300 dpi. 🔴 THE COMPOSITE IS THE FIGURE: extracting the embedded image stream from this page yields ONE LAYER - 8 of the 10 came out wholly or partly BLACK, Fig 1 and Fig 7 and Suppl Fig 1 entirely so - because the axes, group labels and printed p-values are vector text drawn ON TOP of the raster. The extracted streams were discarded rather than declared.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID39868255_DeLaCruz2025_biorxiv.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "doc[19].get_pixmap(dpi=300)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "8ed7ee967764e8d8c103420824a70de6a0e4528a4fe60680edf6bb83497b382a"
+      }
+    },
+    {
+      "path": "files/figures/PMID39868255/pdf_pages/page21_300dpi.png",
+      "kind": "figure",
+      "sha256": "cecb7595531e341356b1a4149afb5de2b9e2108e9822db18d7e08a3548243013",
+      "note": "Figure 7, composited page render at 300 dpi. 🔴 THE COMPOSITE IS THE FIGURE: extracting the embedded image stream from this page yields ONE LAYER - 8 of the 10 came out wholly or partly BLACK, Fig 1 and Fig 7 and Suppl Fig 1 entirely so - because the axes, group labels and printed p-values are vector text drawn ON TOP of the raster. The extracted streams were discarded rather than declared.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID39868255_DeLaCruz2025_biorxiv.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "doc[20].get_pixmap(dpi=300)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "cecb7595531e341356b1a4149afb5de2b9e2108e9822db18d7e08a3548243013"
+      }
+    },
+    {
+      "path": "files/figures/PMID39868255/pdf_pages/page22_300dpi.png",
+      "kind": "figure",
+      "sha256": "807767f3c0207312a7e5871f22e20c145b4f63b5455e6366e5d44f696b4f6581",
+      "note": "Figure 8, composited page render at 300 dpi. 🔴 THE COMPOSITE IS THE FIGURE: extracting the embedded image stream from this page yields ONE LAYER - 8 of the 10 came out wholly or partly BLACK, Fig 1 and Fig 7 and Suppl Fig 1 entirely so - because the axes, group labels and printed p-values are vector text drawn ON TOP of the raster. The extracted streams were discarded rather than declared.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID39868255_DeLaCruz2025_biorxiv.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "doc[21].get_pixmap(dpi=300)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "807767f3c0207312a7e5871f22e20c145b4f63b5455e6366e5d44f696b4f6581"
+      }
+    },
+    {
+      "path": "files/figures/PMID39868255/pdf_pages/page23_300dpi.png",
+      "kind": "figure",
+      "sha256": "7ee1d6c4846b92f86329cc08a121adc1c0b4ec810642e6cf3174607da0a53b2f",
+      "note": "Figure 9, composited page render at 300 dpi. 🔴 THE COMPOSITE IS THE FIGURE: extracting the embedded image stream from this page yields ONE LAYER - 8 of the 10 came out wholly or partly BLACK, Fig 1 and Fig 7 and Suppl Fig 1 entirely so - because the axes, group labels and printed p-values are vector text drawn ON TOP of the raster. The extracted streams were discarded rather than declared.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID39868255_DeLaCruz2025_biorxiv.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "doc[22].get_pixmap(dpi=300)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "7ee1d6c4846b92f86329cc08a121adc1c0b4ec810642e6cf3174607da0a53b2f"
+      }
+    },
+    {
+      "path": "files/figures/PMID39868255/pdf_pages/page24_300dpi.png",
+      "kind": "figure",
+      "sha256": "e69b799e3eca7055cec09d693b3f7741f83f2a522c16a156ae16f5f1bd16c839",
+      "note": "Supplemental Figure 1, composited page render at 300 dpi. 🔴 THE COMPOSITE IS THE FIGURE: extracting the embedded image stream from this page yields ONE LAYER - 8 of the 10 came out wholly or partly BLACK, Fig 1 and Fig 7 and Suppl Fig 1 entirely so - because the axes, group labels and printed p-values are vector text drawn ON TOP of the raster. The extracted streams were discarded rather than declared.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID39868255_DeLaCruz2025_biorxiv.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "doc[23].get_pixmap(dpi=300)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "e69b799e3eca7055cec09d693b3f7741f83f2a522c16a156ae16f5f1bd16c839"
+      }
+    },
+    {
+      "path": "files/figures/PMID39868255/F1.large.jpg",
+      "kind": "figure",
+      "sha256": "d61200f60883aced0230bb7b9546bee3c02d4f94050938bbb2e7c124f339d970",
+      "note": "Figure 1 from the bioRxiv web raster route, an INDEPENDENT acquisition of the same panel. Kept as corroboration that the PDF render and the published raster agree; the web route refused 7 of 10 figures with HTTP 429 across 40 minutes, which is why the PDF is the surface of record.",
+      "acquisition_recipe": {
+        "http_method": "GET",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-09-13",
+        "derived": false,
+        "resolved_url": "https://www.biorxiv.org/content/biorxiv/early/2025/01/18/2025.01.17.633677/F1.large.jpg",
+        "tier": "biorxiv_figure_raster",
+        "result_sha256": "d61200f60883aced0230bb7b9546bee3c02d4f94050938bbb2e7c124f339d970"
+      }
+    },
+    {
+      "path": "files/figures/PMID39868255/F3.large.jpg",
+      "kind": "figure",
+      "sha256": "1ff235b8f897f093e77db4f1acbaf90ffa31a6aa9aad723d9f1024a94285b311",
+      "note": "Figure 3 from the bioRxiv web raster route, an INDEPENDENT acquisition of the same panel. Kept as corroboration that the PDF render and the published raster agree; the web route refused 7 of 10 figures with HTTP 429 across 40 minutes, which is why the PDF is the surface of record.",
+      "acquisition_recipe": {
+        "http_method": "GET",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-09-13",
+        "derived": false,
+        "resolved_url": "https://www.biorxiv.org/content/biorxiv/early/2025/01/18/2025.01.17.633677/F3.large.jpg",
+        "tier": "biorxiv_figure_raster",
+        "result_sha256": "1ff235b8f897f093e77db4f1acbaf90ffa31a6aa9aad723d9f1024a94285b311"
+      }
+    },
+    {
+      "path": "files/figures/PMID39868255/F9.large.jpg",
+      "kind": "figure",
+      "sha256": "369a9df14f26182e6e9072d57c50b92a22021b8f273f5bb3145ebb450172629a",
+      "note": "Figure 9 from the bioRxiv web raster route, an INDEPENDENT acquisition of the same panel. Kept as corroboration that the PDF render and the published raster agree; the web route refused 7 of 10 figures with HTTP 429 across 40 minutes, which is why the PDF is the surface of record.",
+      "acquisition_recipe": {
+        "http_method": "GET",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-09-13",
+        "derived": false,
+        "resolved_url": "https://www.biorxiv.org/content/biorxiv/early/2025/01/18/2025.01.17.633677/F9.large.jpg",
+        "tier": "biorxiv_figure_raster",
+        "result_sha256": "369a9df14f26182e6e9072d57c50b92a22021b8f273f5bb3145ebb450172629a"
+      }
+    },
+    {
+      "path": "files/figures/PMID39868255/F3_panelB_zoom4x.png",
+      "kind": "figure",
+      "sha256": "ec14d0f102c995f25465efe81a6e6ac7c96d1b2a8f19f22fe1700685306e0f7f",
+      "note": "4x magnified crop of Figure 3 panel B from the web raster, made to resolve which pairs its four printed p-values bracket before anything was written about that panel. It is a magnification of a raster and adds no information beyond it; the PDF render at 300 dpi is what settled the question.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/figures/PMID39868255/F3.large.jpg",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(matrix=Matrix(4,4), clip=Rect(0.45w,0.60h,0.95w,1.0h))",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "ec14d0f102c995f25465efe81a6e6ac7c96d1b2a8f19f22fe1700685306e0f7f"
+      }
+    }
+  ],
+  "verbatim_locators": {
+    "entries": [
+      {
+        "proposition": "THE ANIMALS ARE NOT THIS LABORATORY'S OWN LINE: the P47T mouse was made elsewhere and given to them. This is the single most important fact for the independence question, and it is stated in the Methods.",
+        "snippet": "generously donated by CMarcelo Aldaz",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39868255_DeLaCruz2025_biorxiv.source.xml",
+        "anchor": "Methods, 'Animal Model of Sepsis and Behavioral Testing'",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found",
+        "abstract_anchoring_note": "The abstract states this design in two sentences and carries none of these specifics: it names neither the donating laboratory nor the approving institution nor the genotyping assay, and it gives no n, no exclusion count, no test choice and no statement about blinding. These propositions are about HOW the study was done, which is precisely what an abstract compresses away; the Methods surface is the only place they exist."
+      },
+      {
+        "proposition": "The same genotyping assay as the originating paper is used, which ties the two studies to one allele and one detection method.",
+        "snippet": "Mice were bred and genotyped using custom Kompetitive Allele Specific PCR genotyping assay",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39868255_DeLaCruz2025_biorxiv.source.xml",
+        "anchor": "Methods, same paragraph",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found",
+        "abstract_anchoring_note": "The abstract states this design in two sentences and carries none of these specifics: it names neither the donating laboratory nor the approving institution nor the genotyping assay, and it gives no n, no exclusion count, no test choice and no statement about blinding. These propositions are about HOW the study was done, which is precisely what an abstract compresses away; the Methods surface is the only place they exist."
+      },
+      {
+        "proposition": "THE EXPERIMENTS ARE A DIFFERENT INSTITUTION'S: approval is Indiana University's, not MD Anderson's, so these are different animals bred and challenged in a different facility.",
+        "snippet": "All experiments were approved by the Institutional Animal Care and Use Committee at Indiana University",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39868255_DeLaCruz2025_biorxiv.source.xml",
+        "anchor": "Methods, first sentence",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found",
+        "abstract_anchoring_note": "The abstract states this design in two sentences and carries none of these specifics: it names neither the donating laboratory nor the approving institution nor the genotyping assay, and it gives no n, no exclusion count, no test choice and no statement about blinding. These propositions are about HOW the study was done, which is precisely what an abstract compresses away; the Methods surface is the only place they exist."
+      },
+      {
+        "proposition": "THE GENOTYPE ARM IS THE HETEROZYGOTE, AND ONLY THE HETEROZYGOTE: no homozygote is studied anywhere in this paper, which is the arm the originating paper's phenotype lives in.",
+        "snippet": "we hypothesized that heterozygous Wwox WT/P47T mice will display an increase in sepsis severity, neuroinflammation, and sickness behavior compared to Wwox WT/WT littermates",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39868255_DeLaCruz2025_biorxiv.source.xml",
+        "anchor": "Introduction, final sentence",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found",
+        "abstract_anchoring_note": "The abstract states this design in two sentences and carries none of these specifics: it names neither the donating laboratory nor the approving institution nor the genotyping assay, and it gives no n, no exclusion count, no test choice and no statement about blinding. These propositions are about HOW the study was done, which is precisely what an abstract compresses away; the Methods surface is the only place they exist."
+      },
+      {
+        "proposition": "THE PAPER'S BASELINE PREMISE IS INHERITED FROM THE ORIGINATING PAPER, NOT MEASURED HERE: that the heterozygote is indistinguishable from wild type at baseline is asserted with a citation, and this study runs no unchallenged baseline characterisation of its own beyond the PBS arms.",
+        "snippet": "The heterozygous Wwox WT/P47T mice did not differ significantly from the Wwox WT/WT littermates",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39868255_DeLaCruz2025_biorxiv.source.xml",
+        "anchor": "Introduction, citing ref 17",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found",
+        "abstract_anchoring_note": "The abstract contains no citation of any kind, makes no reference to the originating paper, and does not mention the transcriptomic result whose comparator and reference number are the content of this proposition. A citation defect cannot by construction be anchored in an abstract that cites nothing."
+      },
+      {
+        "proposition": "🔴 THE COMPARATOR OF THE CITED TRANSCRIPTOMIC RESULT IS MISSTATED: this sentence says the GSEA compared homozygotes with HETEROZYGOUS littermates. In the cited paper the RNA-seq compared Wwox WT/WT with Wwox P47T/P47T at n=5 per group in four regions; no heterozygote was ever sequenced. The comparator named here does not exist in the source.",
+        "snippet": "in the WwoxP47T/P47T mice compared to the Wwox WT/P47T littermates",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39868255_DeLaCruz2025_biorxiv.source.xml",
+        "anchor": "Introduction, GSEA sentence, citing ref 17",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found",
+        "abstract_anchoring_note": "The abstract contains no citation of any kind, makes no reference to the originating paper, and does not mention the transcriptomic result whose comparator and reference number are the content of this proposition. A citation defect cannot by construction be anchored in an abstract that cites nothing."
+      },
+      {
+        "proposition": "🔴 AND IN THE DISCUSSION THE SAME RESULT IS ATTRIBUTED TO THE WRONG REFERENCE: the GSEA of P47T/P47T brain is cited to ref 13, which the paper's own reference list gives as Aldaz, Ferguson and Abba, 'WWOX at the crossroads of cancer, metabolic syndrome related traits and CNS pathologies', BBA 2014 - a REVIEW published nine years before the P47T mouse existed. The GSEA is in ref 17.",
+        "snippet": "GSEA of Wwox P47T/P47T brain samples indicated an increase in TNF-",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39868255_DeLaCruz2025_biorxiv.source.xml",
+        "anchor": "Discussion, second paragraph, citing ref 13",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found",
+        "abstract_anchoring_note": "The abstract contains no citation of any kind, makes no reference to the originating paper, and does not mention the transcriptomic result whose comparator and reference number are the content of this proposition. A citation defect cannot by construction be anchored in an abstract that cites nothing."
+      },
+      {
+        "proposition": "THE AUTHORS THEMSELVES RAISE THE POSSIBILITY THEIR BASELINE PREMISE IS WRONG, and it is the sentence a critical reader should hold onto: baseline inflammation in the heterozygote is named as a possibility that future designs must accommodate.",
+        "snippet": "Given the possibility of baseline inflammation observed in the Wwox WT/P47T mice",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39868255_DeLaCruz2025_biorxiv.source.xml",
+        "anchor": "Discussion, first paragraph, final sentence",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found",
+        "abstract_anchoring_note": "The abstract contains no citation of any kind, makes no reference to the originating paper, and does not mention the transcriptomic result whose comparator and reference number are the content of this proposition. A citation defect cannot by construction be anchored in an abstract that cites nothing."
+      },
+      {
+        "proposition": "THE DESIGN, IN ONE SENTENCE: nine mice per group by sex, randomised to LPS or PBS, a single 12-hour endpoint.",
+        "snippet": "Mice at a mean age of 2.6 months (n=6 male and n=3 female per group) were randomly assigned",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39868255_DeLaCruz2025_biorxiv.source.xml",
+        "anchor": "Methods, 'Animal Model of Sepsis and Behavioral Testing'",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found",
+        "abstract_anchoring_note": "The abstract states this design in two sentences and carries none of these specifics: it names neither the donating laboratory nor the approving institution nor the genotyping assay, and it gives no n, no exclusion count, no test choice and no statement about blinding. These propositions are about HOW the study was done, which is precisely what an abstract compresses away; the Methods surface is the only place they exist."
+      },
+      {
+        "proposition": "🔴 SEVEN OF THIRTY-SIX ANIMALS WERE REMOVED AS OUTLIERS, AND THE REMOVALS ARE NOT SYMMETRIC: two LPS heterozygotes, one PBS heterozygote, THREE LPS wild types and one PBS wild type. Three of nine removed from the wild-type LPS arm is the comparator against which every between-genotype claim in this paper is made.",
+        "snippet": "Outliers were identified using ROUT method. This resulted in removal of two LPS",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39868255_DeLaCruz2025_biorxiv.source.xml",
+        "anchor": "Methods, 'Statistical Analysis'",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found",
+        "abstract_anchoring_note": "The abstract states this design in two sentences and carries none of these specifics: it names neither the donating laboratory nor the approving institution nor the genotyping assay, and it gives no n, no exclusion count, no test choice and no statement about blinding. These propositions are about HOW the study was done, which is precisely what an abstract compresses away; the Methods surface is the only place they exist."
+      },
+      {
+        "proposition": "The between-genotype tests are unpaired t-tests while the reported panels are one-way ANOVAs over four groups, and the two statements sit in the same short paragraph without being reconciled.",
+        "snippet": "Data was analyzed using unpaired sample t-test to compare",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39868255_DeLaCruz2025_biorxiv.source.xml",
+        "anchor": "Methods, 'Statistical Analysis'",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found",
+        "abstract_anchoring_note": "The abstract states this design in two sentences and carries none of these specifics: it names neither the donating laboratory nor the approving institution nor the genotyping assay, and it gives no n, no exclusion count, no test choice and no statement about blinding. These propositions are about HOW the study was done, which is precisely what an abstract compresses away; the Methods surface is the only place they exist."
+      },
+      {
+        "proposition": "MORTALITY RISK IS MODELLED BY SIMPLE LINEAR REGRESSION on a repeated-measures severity score - each animal scored every two hours - with no mixed model, no random effect for animal and no correction for the repeated sampling.",
+        "snippet": "The risk for mortality was measured using a simple linear regression model",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39868255_DeLaCruz2025_biorxiv.source.xml",
+        "anchor": "Methods, 'Statistical Analysis'",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found",
+        "abstract_anchoring_note": "The abstract states this design in two sentences and carries none of these specifics: it names neither the donating laboratory nor the approving institution nor the genotyping assay, and it gives no n, no exclusion count, no test choice and no statement about blinding. These propositions are about HOW the study was done, which is precisely what an abstract compresses away; the Methods surface is the only place they exist."
+      },
+      {
+        "proposition": "NO BLINDING IS DECLARED ANYWHERE in this paper - not for the sepsis severity scoring, which is an observer-scored clinical scale, and not for the immunohistochemistry quantification.",
+        "snippet": "This scoring system includes measurements of fur quality, activity, respiration status, and mucus membranes",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39868255_DeLaCruz2025_biorxiv.source.xml",
+        "anchor": "Methods, MSS description; searched the whole document for any blinding statement and found none",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought",
+        "abstract_anchoring_note": "The abstract states this design in two sentences and carries none of these specifics: it names neither the donating laboratory nor the approving institution nor the genotyping assay, and it gives no n, no exclusion count, no test choice and no statement about blinding. These propositions are about HOW the study was done, which is precisely what an abstract compresses away; the Methods surface is the only place they exist."
+      },
+      {
+        "proposition": "THE SICKNESS-BEHAVIOUR RESULT AS THE BODY STATES IT is a within-genotype LPS response present in the heterozygote and absent in wild type - not a between-genotype difference.",
+        "snippet": "The Wwox WT/P47T mice demonstrate an LPS response with a reduced time in center post-injection",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39868255_DeLaCruz2025_biorxiv.source.xml",
+        "anchor": "Results 1, citing Fig. 1B",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found",
+        "abstract_snippet": "an increase in sickness behavior",
+        "abstract_snippet_note": "Companion metadata only, never the evidentiary quote: the abstract asserts this outcome without any statistic, and the panel locators coupled to this entry are what qualify it."
+      },
+      {
+        "proposition": "THE SEPSIS-SEVERITY RESULT, which IS a between-genotype comparison and is the paper's strongest between-group claim.",
+        "snippet": "demonstrated a rapid onset of severe sepsis compared to Wwox WT/WT LPS mice",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39868255_DeLaCruz2025_biorxiv.source.xml",
+        "anchor": "Results 1, citing Fig. 2",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found",
+        "abstract_anchoring_note": "The abstract compresses this result into a single clause with no p-value, no comparator arm and no brain region, so it cannot support a proposition whose entire content is which contrast was made and what it returned."
+      },
+      {
+        "proposition": "CORTICAL MICROGLIA: the paper's central neuroinflammation claim, a between-genotype difference under LPS.",
+        "snippet": "exhibited significantly more microglia compared to Wwox WT/WT LPS mice",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39868255_DeLaCruz2025_biorxiv.source.xml",
+        "anchor": "Results 2, citing Fig. 3A-3B",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found",
+        "abstract_snippet": "gliosis",
+        "abstract_snippet_note": "Companion metadata only, never the evidentiary quote: the abstract asserts this outcome without any statistic, and the panel locators coupled to this entry are what qualify it."
+      },
+      {
+        "proposition": "The hippocampal microglial result is reported as a repetition of the cortical one.",
+        "snippet": "This finding was also observed in the hippocampus",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39868255_DeLaCruz2025_biorxiv.source.xml",
+        "anchor": "Results 2, citing Fig. 4A-4B",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found",
+        "abstract_anchoring_note": "The abstract compresses this result into a single clause with no p-value, no comparator arm and no brain region, so it cannot support a proposition whose entire content is which contrast was made and what it returned."
+      },
+      {
+        "proposition": "A NEGATIVE THE AUTHORS STATE PLAINLY: hippocampal astrocytes do not differ between groups. The astroglial effect is cortex-only.",
+        "snippet": "There was no difference in astrocyte density in the hippocampus between groups",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39868255_DeLaCruz2025_biorxiv.source.xml",
+        "anchor": "Results 2, citing Fig. 6A-6B",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found",
+        "abstract_anchoring_note": "The abstract carries no negative result whatsoever - not the hippocampal astrocyte null, not the neuronal-fraction null, not the inverted peripheral cytokine pattern, not the authors' own limitations. A negative that is absent from the abstract cannot be anchored there, and that absence is itself why this waiver is needed."
+      },
+      {
+        "proposition": "THE APOPTOSIS RESULT IS REGIONAL AND NON-NEURONAL: a hippocampal CC3 area difference between the LPS groups.",
+        "snippet": "there was an increase in area of CC3+ immunostaining in the Wwox WT/P47T LPS group",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39868255_DeLaCruz2025_biorxiv.source.xml",
+        "anchor": "Results 3, citing Fig. 9A-C",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found",
+        "abstract_anchoring_note": "The abstract compresses this result into a single clause with no p-value, no comparator arm and no brain region, so it cannot support a proposition whose entire content is which contrast was made and what it returned."
+      },
+      {
+        "proposition": "AND THE AUTHORS NAME THE LIMIT OF THEIR OWN APOPTOSIS FINDING: whatever is dying is not neurons, and the cell type is undetermined.",
+        "snippet": "This suggests a regional difference in susceptibility to LPS between genotypes that is not affecting neurons",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39868255_DeLaCruz2025_biorxiv.source.xml",
+        "anchor": "Results 3, final sentence",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found",
+        "abstract_anchoring_note": "The abstract carries no negative result whatsoever - not the hippocampal astrocyte null, not the neuronal-fraction null, not the inverted peripheral cytokine pattern, not the authors' own limitations. A negative that is absent from the abstract cannot be anchored there, and that absence is itself why this waiver is needed."
+      },
+      {
+        "proposition": "🔴 THE PERIPHERY RUNS THE OTHER WAY, AND THE PAPER SAYS SO: the significant plasma IL-6 and TNF-alpha responses to LPS are the WILD TYPE's, and the heterozygote shows none. A 'more inflamed' heterozygote is therefore not a systemic phenotype.",
+        "snippet": "Plasma IL-6 levels were significantly elevated in Wwox WT/WT LPS mice compared to PBS control",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39868255_DeLaCruz2025_biorxiv.source.xml",
+        "anchor": "Results 4, citing Supplemental Fig. 1",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found",
+        "abstract_anchoring_note": "The abstract carries no negative result whatsoever - not the hippocampal astrocyte null, not the neuronal-fraction null, not the inverted peripheral cytokine pattern, not the authors' own limitations. A negative that is absent from the abstract cannot be anchored there, and that absence is itself why this waiver is needed."
+      },
+      {
+        "proposition": "THE CONCLUSION AS WRITTEN, which is the sentence the figures have to carry.",
+        "snippet": "In this study we identify that a partial loss of Wwox expression increases disease severity and neuroinflammation in experimental sepsis with an increase in sickness behavior, pro-inflammatory cortical cytokines, gliosis, and apoptosis",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39868255_DeLaCruz2025_biorxiv.source.xml",
+        "anchor": "Conclusion, first sentence",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found",
+        "abstract_snippet": "Partial loss of Wwox function increases risk for severe sepsis and neuroinflammation",
+        "abstract_snippet_note": "Companion metadata only, never the evidentiary quote: the abstract asserts this outcome without any statistic, and the panel locators coupled to this entry are what qualify it."
+      },
+      {
+        "proposition": "THE AUTHORS' OWN LIMITATIONS, stated and worth carrying: no time course, so the kinetics of the cytokine response are unresolved.",
+        "snippet": "There are several limitations to this study including lack of time course",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39868255_DeLaCruz2025_biorxiv.source.xml",
+        "anchor": "Discussion, final paragraph",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found",
+        "abstract_anchoring_note": "The abstract carries no negative result whatsoever - not the hippocampal astrocyte null, not the neuronal-fraction null, not the inverted peripheral cytokine pattern, not the authors' own limitations. A negative that is absent from the abstract cannot be anchored there, and that absence is itself why this waiver is needed."
+      },
+      {
+        "proposition": "AND THE MECHANISM THEY PROPOSE IS EXPLICITLY NOT TESTED HERE: barrier permeability, the route they invoke to link peripheral LPS to brain inflammation, was not measured.",
+        "snippet": "The role of blood brain barrier dysfunction was not examined",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39868255_DeLaCruz2025_biorxiv.source.xml",
+        "anchor": "Discussion, final paragraph",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found",
+        "abstract_anchoring_note": "The abstract carries no negative result whatsoever - not the hippocampal astrocyte null, not the neuronal-fraction null, not the inverted peripheral cytokine pattern, not the authors' own limitations. A negative that is absent from the abstract cannot be anchored there, and that absence is itself why this waiver is needed."
+      },
+      {
+        "proposition": "THE INFERENCE THE PAPER DRAWS FROM ITS OWN DATA, marked as the authors' and not as an observation: one allele is enough, in the right setting.",
+        "snippet": "the Wwox WT/P47T mice demonstrate a more severe phenotype, suggesting that loss on one Wwox allele is sufficient",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39868255_DeLaCruz2025_biorxiv.source.xml",
+        "anchor": "Discussion, third paragraph",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found",
+        "abstract_anchoring_note": "This proposition is the authors' own inference or stated limitation, drawn in the Discussion. The abstract asserts the conclusion without the hedge, so anchoring here would attach the claim to a sentence that omits exactly the qualification this locator exists to record."
+      },
+      {
+        "proposition": "🔴 NEITHER OPEN-FIELD MEASURE DIFFERS BETWEEN THE TWO LPS GROUPS: Fig. 1 prints p=0.9970 for distance and p=0.2207 for time in centre across the WT/WT-LPS versus WT/P47T-LPS comparison. The genotype signal is that the LPS-versus-PBS contrast reaches significance in the heterozygote (p=0.0312) and not in wild type (p=0.9352) - a difference in significance, which is not a significant difference. The Conclusion's 'increase in sickness behavior' is not carried by either panel.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1A 'Post-Pre OFT Distance (cm)', four groups: printed 0.5629 (WT/WT PBS vs WT/P47T PBS), 0.9970 (WT/WT LPS vs WT/P47T LPS), <0.0001 (WT/WT PBS vs WT/WT LPS) and <0.0001 (WT/P47T PBS vs WT/P47T LPS). Fig 1B 'Post-Pre Time in Center (s)': printed 0.9879 (PBS vs PBS), 0.2207 (LPS vs LPS), 0.9352 (WT/WT PBS vs WT/WT LPS) and 0.0312 (WT/P47T PBS vs WT/P47T LPS). Six to eight individual points per group, SEM bars.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID39868255/pdf_pages/page15_300dpi.png",
+        "anchor": "Figure 1, panels A and B, page 15 render at 300 dpi",
+        "panel_text_relation": "panel_qualifies_text",
+        "found_or_sought": "found",
+        "qualifies": "entries[21]",
+        "qualifies_needle": "increase in sickness behavior",
+        "experimental_context": {
+          "system": "mouse",
+          "genotype": "Wwox WT/P47T vs Wwox WT/WT",
+          "treatment": "LPS 10 mg/kg i.p. vs PBS",
+          "timepoint": "12 h post-injection",
+          "comparator": "WT/WT LPS",
+          "endpoint": "open field distance and time in centre"
+        },
+        "abstract_anchoring_note": "A printed p-value, the pair of bars a bracket spans, a fitted slope and a single-layer extraction artefact are pixel facts about a panel. The abstract contains no numbers at all beyond the 10 mg/kg dose and the 12-hour endpoint, so no sentence in it can attest what a panel prints."
+      },
+      {
+        "proposition": "THE SEVERITY-SCORE RESULT IS REAL AND IS A SLOPE COMPARISON: fitted lines of 0.6161 per hour for the heterozygote against 0.4262 for wild type, difference p=0.001617. What the panel also shows is that this is a regression on a repeated-measures clinical score with no individual animal points plotted and no random effect for animal.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2: Murine Sepsis Severity Score against Hours 0-12, two fitted solid lines with dashed error bands and printed equations Y = 0.6161*X - 0.5563 (red, WT/P47T LPS) and Y = 0.4262*X - 0.2361 (black, WT/WT LPS), with p=0.001617 printed at upper right. No raw data points are shown.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID39868255/pdf_pages/page16_300dpi.png",
+        "anchor": "Figure 2, page 16 render at 300 dpi",
+        "panel_text_relation": "panel_only",
+        "found_or_sought": "found",
+        "experimental_context": {
+          "system": "mouse",
+          "genotype": "Wwox WT/P47T vs Wwox WT/WT",
+          "treatment": "LPS 10 mg/kg i.p. vs PBS",
+          "timepoint": "12 h post-injection",
+          "comparator": "WT/WT LPS",
+          "endpoint": "murine sepsis severity score over 12 h"
+        },
+        "abstract_anchoring_note": "A printed p-value, the pair of bars a bracket spans, a fitted slope and a single-layer extraction artefact are pixel facts about a panel. The abstract contains no numbers at all beyond the 10 mg/kg dose and the 12-hour endpoint, so no sentence in it can attest what a panel prints."
+      },
+      {
+        "proposition": "🔴 THE CORTICAL MICROGLIA CLAIM IS CARRIED BETWEEN GENOTYPES AND NOT ACROSS TREATMENT: Fig. 3B prints 0.0282 for WT/WT-LPS versus WT/P47T-LPS, which is what the text says - and it also prints 0.6329 for wild type's own LPS response and 0.1206 for the heterozygote's, neither significant, with the PBS genotype contrast at 0.1165. So a significant genotype difference under LPS sits on top of no demonstrated LPS induction in either arm, and the Discussion's 'more severe neuroinflammation IN RESPONSE TO LPS' is stronger than the panel.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3B 'Microglia (#cells/um2)', four groups WT/WT PBS, WT/P47T PBS, WT/WT LPS, WT/P47T LPS. Printed values: 0.1165 spanning the two PBS bars, 0.0282 spanning the two LPS bars, 0.6329 spanning WT/WT PBS to WT/WT LPS, and 0.1206 spanning WT/P47T PBS to WT/P47T LPS. Means approximately 0.0001, 0.00016, 0.00014 and 0.00022 respectively, six to seven points per group.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID39868255/pdf_pages/page17_300dpi.png",
+        "anchor": "Figure 3, panel B, page 17 render at 300 dpi",
+        "panel_text_relation": "panel_qualifies_text",
+        "found_or_sought": "found",
+        "qualifies": "entries[15]",
+        "qualifies_needle": "exhibited significantly more microglia compared to Wwox WT/WT LPS mice",
+        "experimental_context": {
+          "system": "mouse",
+          "genotype": "Wwox WT/P47T vs Wwox WT/WT",
+          "treatment": "LPS 10 mg/kg i.p. vs PBS",
+          "timepoint": "12 h post-injection",
+          "comparator": "WT/WT LPS",
+          "endpoint": "Iba1+ microglial density, frontal cortex"
+        },
+        "abstract_anchoring_note": "A printed p-value, the pair of bars a bracket spans, a fitted slope and a single-layer extraction artefact are pixel facts about a panel. The abstract contains no numbers at all beyond the 10 mg/kg dose and the 12-hour endpoint, so no sentence in it can attest what a panel prints."
+      },
+      {
+        "proposition": "THE HIPPOCAMPAL MICROGLIAL RESULT HAS THE SAME SHAPE AND SITS AT THE THRESHOLD: Fig. 4B prints 0.0490 between the LPS groups - and 0.9914 for wild type's LPS response, 0.4061 for the heterozygote's, 0.8190 at baseline. A p of 0.0490 on four groups with no multiplicity correction is the weakest form the paper's central claim takes, and 'this finding was also observed' does not convey that.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 4B 'Microglia (#cells/um2)', hippocampus. Printed: 0.8190 (PBS vs PBS), 0.0490 (LPS vs LPS), 0.9914 (WT/WT PBS vs WT/WT LPS), 0.4061 (WT/P47T PBS vs WT/P47T LPS). Five to seven points per group; the second group is axis-labelled 'P47T/PBS' rather than 'WT/P47T PBS'.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID39868255/pdf_pages/page18_300dpi.png",
+        "anchor": "Figure 4, panel B, page 18 render at 300 dpi",
+        "panel_text_relation": "panel_qualifies_text",
+        "found_or_sought": "found",
+        "qualifies": "entries[16]",
+        "qualifies_needle": "This finding was also observed in the hippocampus",
+        "experimental_context": {
+          "system": "mouse",
+          "genotype": "Wwox WT/P47T vs Wwox WT/WT",
+          "treatment": "LPS 10 mg/kg i.p. vs PBS",
+          "timepoint": "12 h post-injection",
+          "comparator": "WT/WT LPS",
+          "endpoint": "Iba1+ microglial density, hippocampus"
+        },
+        "abstract_anchoring_note": "A printed p-value, the pair of bars a bracket spans, a fitted slope and a single-layer extraction artefact are pixel facts about a panel. The abstract contains no numbers at all beyond the 10 mg/kg dose and the 12-hour endpoint, so no sentence in it can attest what a panel prints."
+      },
+      {
+        "proposition": "THE CORTICAL ASTROCYTE RESULT IS THE PAPER'S STRONGEST AND IS INTERNALLY COMPLETE: Fig. 5B prints 0.0005 between the LPS groups AND 0.0040 for the heterozygote's own LPS response, with wild type flat (0.9786) and no baseline difference (0.9147). This is the one endpoint where a genotype difference under challenge is accompanied by a demonstrated response to the challenge.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 5B 'Astrocyte (cells/um2)', cortex. Printed: 0.9147 (PBS vs PBS), 0.0005 (LPS vs LPS), 0.9786 (WT/WT PBS vs WT/WT LPS), 0.0040 (WT/P47T PBS vs WT/P47T LPS). WT/P47T LPS mean approximately 0.00008 against approximately 0.000025-0.00003 in the other three groups, six to seven points per group.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID39868255/pdf_pages/page19_300dpi.png",
+        "anchor": "Figure 5, panel B, page 19 render at 300 dpi",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found",
+        "experimental_context": {
+          "system": "mouse",
+          "genotype": "Wwox WT/P47T vs Wwox WT/WT",
+          "treatment": "LPS 10 mg/kg i.p. vs PBS",
+          "timepoint": "12 h post-injection",
+          "comparator": "WT/WT LPS",
+          "endpoint": "GFAP+ astrocyte density, cortex"
+        },
+        "abstract_anchoring_note": "A printed p-value, the pair of bars a bracket spans, a fitted slope and a single-layer extraction artefact are pixel facts about a panel. The abstract contains no numbers at all beyond the 10 mg/kg dose and the 12-hour endpoint, so no sentence in it can attest what a panel prints."
+      },
+      {
+        "proposition": "THE HIPPOCAMPAL ASTROCYTE NEGATIVE IS CARRIED, AND IT IS A FOUR-WAY NULL: every bracket in Fig. 6B is printed as 'ns' - both PBS groups, both LPS groups, and each genotype's own LPS response. The regional dissociation the paper draws is therefore real on this endpoint.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 6B 'Astrocyte (cells/um2)', hippocampus: four brackets, all labelled ns. Group means all approximately 0.00014-0.00022 with five to six points each.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID39868255/pdf_pages/page20_300dpi.png",
+        "anchor": "Figure 6, panel B, page 20 render at 300 dpi",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found",
+        "experimental_context": {
+          "system": "mouse",
+          "genotype": "Wwox WT/P47T vs Wwox WT/WT",
+          "treatment": "LPS 10 mg/kg i.p. vs PBS",
+          "timepoint": "12 h post-injection",
+          "comparator": "WT/WT LPS",
+          "endpoint": "GFAP+ astrocyte density, hippocampus"
+        },
+        "abstract_anchoring_note": "A printed p-value, the pair of bars a bracket spans, a fitted slope and a single-layer extraction artefact are pixel facts about a panel. The abstract contains no numbers at all beyond the 10 mg/kg dose and the 12-hour endpoint, so no sentence in it can attest what a panel prints."
+      },
+      {
+        "proposition": "🔴 ONLY ONE OF THE THREE CORTICAL CYTOKINES DIFFERS BETWEEN THE LPS GROUPS: Fig. 7 prints IL-1beta LPS-versus-LPS at 0.0837 and IL-6 at 0.5967, both non-significant, with TNF-alpha at 0.0016. The Conclusion's plural 'pro-inflammatory cortical cytokines' rests on TNF-alpha alone; for IL-1beta and IL-6 the heterozygote's advantage is a within-genotype LPS response (<0.0001 and 0.0303) against a wild type that does or does not respond (0.0495 and 0.3204).",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 7A 'Relative mRNA IL-1B': printed 0.0495 (WT/WT PBS vs WT/WT LPS), <0.0001 (WT/P47T PBS vs WT/P47T LPS), 0.0837 (LPS vs LPS). Fig 7B 'Relative mRNA IL-6': 0.3204, 0.0303, 0.5967 in the same arrangement. Fig 7C 'Relative mRNA TNF-a': 0.4659, <0.0001, 0.0016. Six to seven points per group; note the axis maxima differ (30, 100, 200).",
+        "surface": "figure",
+        "artifact": "files/figures/PMID39868255/pdf_pages/page21_300dpi.png",
+        "anchor": "Figure 7, panels A-C, page 21 render at 300 dpi",
+        "panel_text_relation": "panel_qualifies_text",
+        "found_or_sought": "found",
+        "qualifies": "entries[21]",
+        "qualifies_needle": "pro-inflammatory cortical cytokines",
+        "experimental_context": {
+          "system": "mouse",
+          "genotype": "Wwox WT/P47T vs Wwox WT/WT",
+          "treatment": "LPS 10 mg/kg i.p. vs PBS",
+          "timepoint": "12 h post-injection",
+          "comparator": "WT/WT LPS",
+          "endpoint": "cortical IL-1b, IL-6 and TNF-a mRNA"
+        },
+        "abstract_anchoring_note": "A printed p-value, the pair of bars a bracket spans, a fitted slope and a single-layer extraction artefact are pixel facts about a panel. The abstract contains no numbers at all beyond the 10 mg/kg dose and the 12-hour endpoint, so no sentence in it can attest what a panel prints."
+      },
+      {
+        "proposition": "THE CORTICAL APOPTOSIS NEGATIVE IS COMPLETE: every bracket in Fig. 8B and 8C is 'ns', for CC3 area and for the percentage of neurons carrying CC3. The apoptosis story is hippocampus-only.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 8B 'Area CC3/Area ROI' and 8C '%Neurons with CC3', cortex: all brackets labelled ns in both panels, six to seven points per group.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID39868255/pdf_pages/page22_300dpi.png",
+        "anchor": "Figure 8, panels B and C, page 22 render at 300 dpi",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found",
+        "experimental_context": {
+          "system": "mouse",
+          "genotype": "Wwox WT/P47T vs Wwox WT/WT",
+          "treatment": "LPS 10 mg/kg i.p. vs PBS",
+          "timepoint": "12 h post-injection",
+          "comparator": "WT/WT LPS",
+          "endpoint": "cleaved caspase 3, cortex"
+        },
+        "abstract_anchoring_note": "A printed p-value, the pair of bars a bracket spans, a fitted slope and a single-layer extraction artefact are pixel facts about a panel. The abstract contains no numbers at all beyond the 10 mg/kg dose and the 12-hour endpoint, so no sentence in it can attest what a panel prints."
+      },
+      {
+        "proposition": "THE HIPPOCAMPAL APOPTOSIS DIFFERENCE HAS THE SAME UNSUPPORTED-BY-TREATMENT SHAPE: Fig. 9B prints 0.0226 between the LPS groups while wild type's own LPS response is 0.9442 and the heterozygote's is 0.8595, with baseline at 0.2235. And Fig. 9C, the neuronal fraction, is entirely 'ns' - so the authors' own statement that neurons are not affected is carried by the panel.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 9B 'Area CC3/Area ROI', hippocampus: printed 0.2235 (PBS vs PBS), 0.0226 (LPS vs LPS), 0.9442 (WT/WT PBS vs WT/WT LPS), 0.8595 (WT/P47T PBS vs WT/P47T LPS); four to six points per group. Fig 9C '%Neurons with CC3': all brackets ns.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID39868255/pdf_pages/page23_300dpi.png",
+        "anchor": "Figure 9, panels B and C, page 23 render at 300 dpi",
+        "panel_text_relation": "panel_qualifies_text",
+        "found_or_sought": "found",
+        "qualifies": "entries[18]",
+        "qualifies_needle": "there was an increase in area of CC3+ immunostaining in the Wwox WT/P47T LPS group",
+        "experimental_context": {
+          "system": "mouse",
+          "genotype": "Wwox WT/P47T vs Wwox WT/WT",
+          "treatment": "LPS 10 mg/kg i.p. vs PBS",
+          "timepoint": "12 h post-injection",
+          "comparator": "WT/WT LPS",
+          "endpoint": "cleaved caspase 3, hippocampus"
+        },
+        "abstract_anchoring_note": "A printed p-value, the pair of bars a bracket spans, a fitted slope and a single-layer extraction artefact are pixel facts about a panel. The abstract contains no numbers at all beyond the 10 mg/kg dose and the 12-hour endpoint, so no sentence in it can attest what a panel prints."
+      },
+      {
+        "proposition": "THE PLASMA PANEL INVERTS THE BRAIN STORY, AND NOT ONE OF THE SIX CYTOKINES MEASURED DIFFERS BETWEEN GENOTYPES: under the bracket layout this figure actually uses, the between-genotype (LPS vs LPS) values are 0.2778 (IL-6), 0.2557 (TNF-alpha), 0.3940 (MCP-1), 0.9279 (IFN-gamma), 0.7772 (IL-12p70) and ns (IL-10) - every one non-significant. The SIGNIFICANT plasma LPS responses for IL-6 (0.0168) and TNF-alpha (0.0025) are WILD TYPE's, while the heterozygote's own responses for those two cytokines are non-significant (0.5314 and 0.1469); the heterozygote's own significant responses are MCP-1 (0.0027) and IFN-gamma (0.0430). A systemically MORE inflamed heterozygote is not what this figure shows - if anything the heterozygote mounts the weaker measured cytokinaemia while scoring as more severely septic. 🔴 THE BRACKET LAYOUT DIFFERS FROM FIGURES 3-9 and that is the trap: here the lower-left bracket is each genotype's own wild-type LPS response, the TOP bracket is the heterozygote's own response, and the right bracket is the between-genotype comparison. The mapping is pinned independently of bracket geometry by the printed PDF legend for S1C and S1D.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Suppl Fig 1, six panels S1A-S1F, each with four x-axis groups in the order WT/WT PBS, WT/P47T PBS, WT/WT LPS, WT/P47T LPS. Bracket layout: lower-left bracket spans group 1 to group 3 (WT/WT PBS vs LPS); top bracket spans group 2 to group 4 (WT/P47T PBS vs LPS); right bracket spans group 3 to group 4 (LPS vs LPS). Printed values - S1A Plasma IL-6: 0.0168, 0.5314, 0.2778. S1B TNF-a: 0.0025, 0.1469, 0.2557. S1C MCP-1: <0.0001, 0.0027, 0.3940. S1D IFN-g: 0.1843, 0.0430, 0.9279. S1E IL-12p70: 0.4659, 0.8591, 0.7772. S1F IL-10: three brackets all ns. The printed legend on the same page attributes the plasma MCP-1 increase to BOTH genotypes - p=<0.0001 for Wwox WT/WT and p=0.0027 for Wwox WT/P47T - with no between-group difference in S1C, which is only consistent with the layout described above; and for S1D it states, in one contiguous sentence: 'Wwox WT/P47T demonstrated an increase in plasma IFN-g in response to LPS (p=0.0430) while there was no significant LPS effect in the Wwox WT/WT groups'. Together these pin the bracket mapping without relying on bracket endpoints.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID39868255/pdf_pages/page24_300dpi.png",
+        "anchor": "Supplemental Figure 1, page 24 render at 300 dpi, panels read at 1.6-2.5x. The bracket-to-comparison mapping is taken from the printed legend for S1C and S1D and cross-checked on bracket endpoints, NOT from the layout of Figures 3-9, which differs. Note that the JATS legend for this figure is unreliable - it labels the MCP-1 panel as IFN-gamma and misattributes the S1D genotypes (entries[35]) - so the PDF legend is the surface used here.",
+        "panel_text_relation": "panel_qualifies_text",
+        "found_or_sought": "found",
+        "qualifies": "entries[20]",
+        "qualifies_needle": "Plasma IL-6 levels were significantly elevated in Wwox WT/WT LPS mice compared to PBS control",
+        "experimental_context": {
+          "system": "mouse",
+          "genotype": "Wwox WT/P47T vs Wwox WT/WT",
+          "treatment": "LPS 10 mg/kg i.p. vs PBS",
+          "timepoint": "12 h post-injection",
+          "comparator": "WT/WT LPS",
+          "endpoint": "plasma cytokines by cytometric bead assay"
+        },
+        "abstract_anchoring_note": "A printed p-value, the pair of bars a bracket spans, a fitted slope and a single-layer extraction artefact are pixel facts about a panel. The abstract contains no numbers at all beyond the 10 mg/kg dose and the 12-hour endpoint, so no sentence in it can attest what a panel prints.",
+        "contradicts_locator": {
+          "manifest": "disease-models/wwox/research/deepdive_manifests/PMID39868255.json",
+          "entry": 34,
+          "what_changed": "Six printed p-values in three interchanged pairs were assigned to the wrong comparisons across S1A, S1B and S1E. Supplemental Figure 1 uses a DIFFERENT bracket layout from Figures 3-9: the lower-left bracket spans groups 1->3 (wild type's own LPS response), the TOP bracket spans groups 2->4 (the heterozygote's own response) and the right bracket spans 3->4 (between genotypes under LPS), whereas in Figs 3-9 the two lowest brackets are the adjacent pairs. Under the correct layout the between-genotype values are 0.2778, 0.2557, 0.3940, 0.9279, 0.7772 and ns, and the values previously offered as between-genotype (0.5314, 0.1469, 0.8591) are the heterozygote's own LPS responses. THE CONCLUSION IS UNCHANGED and was independently re-verified: every between-genotype comparison is non-significant, and the significant plasma IL-6 and TNF-alpha responses are wild type's. What was wrong is the evidence offered for it, in a proposition whose whole point is which genotype a number belongs to.",
+          "audit": {
+            "auditors": 1,
+            "verdicts": [
+              "blind locator audit, 2026-09-13, task ALDAZ-REPAIR-A-20260913: a separate agent with no session history received only (proposition, quote, anchor) triples plus the artefacts. It verified all six panels, all 18 bracket values and the group order from the pixels, confirmed the bracket-to-comparison mapping is exactly what the panels draw, and confirmed the layout genuinely differs from the main figures. Verdict SUPPORTED / EQUIVALENT on the repaired entry."
+            ]
+          }
+        }
+      },
+      {
+        "proposition": "A SURFACE DISCREPANCY WORTH RECORDING BECAUSE IT DECIDES WHICH GENOTYPE A RESULT BELONGS TO: for plasma IFN-gamma the PDF legend reads 'Wwox WT/P47T demonstrate an increase ... (p=0.0430) while there was no significant LPS effect in the Wwox WT/WT groups', which matches panel S1D. The bioRxiv JATS legend for the same figure says the increase is Wwox WT/WT's AND that there was no effect in Wwox WT/WT - internally contradictory, and wrong against the panel. The XML is the lower-fidelity surface for these legends.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Panel S1D prints 0.0430 on the bracket spanning WT/P47T PBS to WT/P47T LPS and 0.1843 on the wild-type PBS-to-LPS bracket, so the significant IFN-gamma response is the heterozygote's, as the PDF legend states.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID39868255/pdf_pages/page24_300dpi.png",
+        "anchor": "Supplemental Figure 1 panel S1D and its two legends",
+        "panel_text_relation": "panel_only",
+        "found_or_sought": "found",
+        "experimental_context": {
+          "system": "mouse",
+          "genotype": "Wwox WT/P47T vs Wwox WT/WT",
+          "treatment": "LPS 10 mg/kg i.p. vs PBS",
+          "timepoint": "12 h post-injection",
+          "comparator": "WT/WT LPS",
+          "endpoint": "plasma IFN-gamma"
+        },
+        "abstract_anchoring_note": "A printed p-value, the pair of bars a bracket spans, a fitted slope and a single-layer extraction artefact are pixel facts about a panel. The abstract contains no numbers at all beyond the 10 mg/kg dose and the 12-hour endpoint, so no sentence in it can attest what a panel prints."
+      }
+    ],
+    "source_fulltext_indexed": false,
+    "source_fulltext_indexed_evidence": "Europe PMC core query DOI:\"10.1101/2025.01.17.633677\" on 2026-09-13 returned id PPR968110, source PPR, with inEPMC=N, inPMC=N, isOpenAccess=N, hasPDF=N, hasSuppl=N and a fullTextUrlList naming ONLY https://doi.org/10.1101/2025.01.17.633677. Europe PMC REST PPR968110/fullTextXML returned HTTP 404 and PPR968110/supplementaryFiles returned HTTP 404. NCBI efetch db=pmc for PMC11761808 returned a 197-byte publisher refusal stub, and the PMC article page (HTTP 200, 93,523 bytes, no User-Agent) carries the abstract only and states: 'The license terms selected by the author(s) for this preprint version do not permit archiving in PMC. The full text is available from the preprint server.' CONSEQUENCE: the quotes in this manifest are verifiable ONLY against the fingerprinted bioRxiv artefacts declared here (source XML 9b00506b…, full HTML 574380aa…, PDF 1f8ff123…) and against no index. The licence, not a retrieval failure, is what keeps the full text out of PMC.",
+    "source_fulltext_indexed_note": "🔴 THE QUOTES IN THIS MANIFEST ARE NOT EXTERNALLY VERIFIABLE THROUGH ANY INDEX. They are verifiable only against the fingerprinted bioRxiv artefacts declared here (source XML sha 9b00506b…, full HTML sha 574380aa…, PDF sha 1f8ff123…). PMC holds the abstract alone and says in its own words that the licence forbids archiving the full text. Anyone re-verifying this reading must re-acquire from bioRxiv and will meet the same Cloudflare 429 that cost this reading 40 minutes, or use the recorded digests.",
+    "abstract_anchoring_waived": "WAIVED FOR 33 OF 36 ENTRIES, BY CLASS, AND THE THREE THE ABSTRACT CAN CARRY INSTEAD CARRY A VERIFIED `abstract_snippet` (entries 13, 15, 21). This source is not full-text indexed, so an external checker sees only its abstract - a 1,128-character summary containing NO numbers beyond the 10 mg/kg LPS dose and the 12-hour endpoint, no p-value, no n, no citation and no negative result. The waived entries fall into five classes and each entry states its own argument in `abstract_anchoring_note`: (1) DESIGN AND PROVENANCE - who donated the line, whose IACUC approved it, which genotyping assay, n per group, the seven ROUT exclusions and their asymmetry, the test choice, and the absence of any blinding statement: the abstract names none of these, because compressing them away is what an abstract does; (2) CITATION DEFECTS - the misstated GSEA comparator and its misattribution to a 2014 review: the abstract cites nothing at all, so a citation defect cannot be anchored in it; (3) SPECIFIC RESULT CONTRASTS - which arms were compared and what the comparison returned, where the abstract offers one unquantified clause; (4) NEGATIVES - the hippocampal astrocyte null, the neuronal-fraction null, the inverted peripheral cytokine pattern and the authors' own limitations, none of which appear in the abstract, their absence being exactly why the waiver is required; (5) FIGURE ATTESTATIONS - printed p-values, the pairs a bracket spans, fitted slopes, and the single-layer extraction artefact: these are pixel facts, and no abstract sentence can attest what a panel prints. Anchoring any of them to the abstract would attach a precise proposition to a sentence that omits precisely the qualification the locator exists to record."
+  }
+}

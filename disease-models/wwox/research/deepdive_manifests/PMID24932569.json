@@ -1,0 +1,1113 @@
+{
+ "schema_version": 2,
+ "pmid": "24932569",
+ "doi": "10.1016/j.bbcan.2014.06.001",
+ "receipt": "FTR-20260913-24932569-02",
+ "landing": [
+  "FTR-20260913-24932569-02",
+  "fulltext_dossiers/PMID24932569.md",
+  "CC-20260913-ALDAZ-B002-01"
+ ],
+ "skills_considered": [
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline. A review is read as a census of claims and their sources, which means opening the cited primaries; a read-only subagent working from a dossier cannot do that, and the blind-pass firewall forbids handing it the laboratory's records."
+  },
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Its cascade was run inline with every literal response recorded in retrieval_manifest.jsonl: Europe PMC fullTextXML 404, ?pdf=render 302 HTML, supplementaryFiles \"not open access one\", efetch db=pmc 200 with a full body (the route that won), PMC /pdf/ via proof-of-work for the PDF, and four refused routes to the supplement."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Weighed and declined here, recorded rather than skipped: no persisted locator for this paper exists to contradict, and the ref 50 page adjudication contradicts a sentence of the REVIEW, not a locator in this repository. Whether R4 is owed on the claim this reading touches is decided in M4b, after the receipt."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The review yields no new measured lead of its own; its leads are its primaries, which are already corpus papers. Mining a secondary source for discovery capital is how a restatement becomes a datum."
+  },
+  {
+   "skill": "legend-paperqa",
+   "used": false,
+   "reason": "Needs an API key and external traffic, which is external spend reserved to the operator by this contract."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever matures from a review whose own conclusion is that the mechanism remains to be defined."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 138,
+  "publications_on_gene": 38,
+  "counts_measured": "PubMed esearch 2026-09-13: 'Aldaz CM[au]' 138; 'Aldaz CM[au] AND WWOX' 38; 'Abba MC[au]' 111; 'Abba MC[au] AND WWOX' 10; 'Ferguson BW[au] AND WWOX' 3; 'Aldaz CM[au] AND review[pt]' 14.",
+  "research_type": "experimental_lab",
+  "output_kind": "review_with_original_secondary_analyses",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": true,
+  "weighting": "The three authors are the laboratory that cloned WWOX, so for the GENE this is a primary group writing its own field's review — and that cuts both ways here. Weigh HIGH: the restatements of primary chemistry and of the mouse models are by people who generated much of it, and the review preserves its own hedges (G372R \"less clear\", mitochondrial localisation conflict unresolved, mechanism undefined). Weigh DOWN: the review adjudicates a dispute in which it is a party. Its haploinsufficiency conclusion rests on its own two conditional models (refs 51, 55, both by these authors) while the contrary spontaneous-tumour data come from a competing laboratory (ref 50, Aqeilan/Croce), and that is exactly the datum the review does not carry. For the DISEASE (WWOX-related encephalopathy) this is not a primary group: the human genetics is restated from refs 101-102, the CNS section is four paragraphs long, and no experiment in the paper is neural."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "WWOX",
+    "route": "PubMed esearch 2026-09-13",
+    "count": 708
+   },
+   {
+    "query": "WWOX AND (heterozygous OR heterozygote OR haploinsufficient OR haploinsufficiency)",
+    "route": "PubMed esearch 2026-09-13",
+    "count": 31
+   },
+   {
+    "query": "Wwox AND mice AND (heterozygous OR +/-)",
+    "route": "PubMed esearch 2026-09-13",
+    "count": 7
+   },
+   {
+    "query": "WWOX AND (\"metabolic syndrome\" OR HDL OR dyslipidemia)",
+    "route": "PubMed esearch 2026-09-13",
+    "count": 16
+   },
+   {
+    "query": "WWOX AND (epilepsy OR ataxia OR encephalopathy)",
+    "route": "PubMed esearch 2026-09-13",
+    "count": 125
+   },
+   {
+    "query": "WWOX AND (TCGA OR \"copy number\")",
+    "route": "PubMed esearch 2026-09-13",
+    "count": 53
+   },
+   {
+    "query": "WWOX AND review[pt] AND 2010:2014[dp]",
+    "route": "PubMed esearch 2026-09-13",
+    "count": 24
+   }
+  ],
+  "note": "The mouse-heterozygote intersection is SEVEN papers in the whole literature. That is the measurement that matters for this reading: the haploinsufficiency question is decided by a handful of studies, two of them by this review's own authors and one by the laboratory whose contrary result the review omits. A near-empty intersection is a signal, not an absence — and in an intersection of seven, one selective citation sets the field's default."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 110,
+  "gene_direct_count": 48,
+  "enumeration_method": "Enumerated from the fingerprinted efetch XML ref-list, not sampled: 110 <ref> elements, 110 carrying a pmid pub-id (identifiers taken from the artefact). Gene-direct = title names WWOX/Wwox/WOX1/FRA16D/Fra8E1/Ide: 48.",
+  "gene_direct_refs_in_source": [
+   "10786676",
+   "10861292",
+   "11979549",
+   "16941225",
+   "15073846",
+   "15692750",
+   "15982416",
+   "15131042",
+   "15266310",
+   "17289881",
+   "18047428",
+   "11572989",
+   "18452537",
+   "11719429",
+   "11896615",
+   "15674328",
+   "16288044",
+   "24550385",
+   "23824713",
+   "22869583",
+   "17609426",
+   "17823927",
+   "17360458",
+   "19936220",
+   "17575124",
+   "21499303",
+   "22574198",
+   "24871327",
+   "14526170",
+   "16219768",
+   "15064722",
+   "15548692",
+   "24308844",
+   "20146584",
+   "15070730",
+   "23370280",
+   "19465938",
+   "16223882",
+   "16818616",
+   "17200365",
+   "19458077",
+   "21892104",
+   "24330518",
+   "20942981",
+   "22479346",
+   "24369382",
+   "24456803",
+   "19500159"
+  ],
+  "resolved": [
+   "10786676",
+   "10861292",
+   "16941225",
+   "15073846",
+   "15692750",
+   "15982416",
+   "15131042",
+   "15266310",
+   "17289881",
+   "18047428",
+   "11572989",
+   "18452537",
+   "11719429",
+   "11896615",
+   "15674328",
+   "16288044",
+   "24550385",
+   "23824713",
+   "22869583",
+   "17609426",
+   "17823927",
+   "17360458",
+   "19936220",
+   "17575124",
+   "21499303",
+   "22574198",
+   "24871327",
+   "14526170",
+   "15064722",
+   "15548692",
+   "24308844",
+   "20146584",
+   "15070730",
+   "23370280",
+   "19465938",
+   "16223882",
+   "16818616",
+   "17200365",
+   "19458077",
+   "21892104",
+   "24330518",
+   "20942981",
+   "22479346",
+   "24369382",
+   "24456803",
+   "19500159"
+  ],
+  "resolved_depth_declaration": "RESOLVED MEANS IDENTITY, NOT READING. 46 of 48 gene-direct identifiers are present in the paper registry or the full-text queue, checked by PMID string presence on 2026-09-13 with no record content opened. THREE were opened as targeted multihop checks for this reading, each declared as an artefact and each read only for the statements named in the locators: 19936220 (ref 51) and 22574198 (ref 55), the two primaries behind the haploinsufficiency sentences, and 17360458 (ref 50), whose Table 1 was adjudicated on the rendered page. None of the three is claimed as a complete read and none receives a receipt here. STILL UNREAD AND LOAD-BEARING for statements this review carries: 17823927 (ref 49, the hypomorph lifespan p=0.02, restated here unverified), 24369382 (ref 101, the human P47T/G372R families and the PPxY-binding loss), 24456803 (ref 102, R54*), 19500159 (ref 103, the Ide rat), 24330518 (ref 81, the SMAD3 mechanism). 🔴 A citation-level integrity finding for the queue: ref 69 (16223882) carries an EXPRESSION OF CONCERN, linked as a related-article inside this paper's own reference list.",
+  "queued": []
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Technical only, under the blind-pass firewall: counts of manifests and complete reads, and how many manifests contain the strings haploinsuff/heterozyg and 24932569. Counts only — no manifest, dossier, claim or candidate content was opened.",
+  "hits": 11,
+  "finding": "86 manifests; 75 PMIDs at complete_fulltext_read; 35 manifests contain haploinsuff or heterozyg; 11 manifests name 24932569 as a citation. So this review is cited inside eleven other readings while carrying no attesting receipt of its own — which is the condition this lot exists to end. What those eleven say is M4b's question, not this manifest's."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-09-13",
+  "route": "NCBI esummary db=pubmed for 24932569 (twice), plus a scan of the efetch JATS for related-article elements",
+  "result": "No notice on THIS paper: no commentscorrections field returned, and the article carries no related-article of type correction, retraction or expression-of-concern about itself. 🔴 One notice INSIDE its reference list: ref 69 (Fabbri 2005, PMID 16223882) carries <related-article related-article-type=\"expression-of-concern\" xlink:href=\"PMC5402418\">. The review cites ref 69 for WWOX-induced apoptosis in lung cancer lines — a claim the review itself disputes two sentences later, so it does not lean on the flagged paper. Recorded as a dependency finding, not as a finding against this paper.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [
+    {
+     "citing_relation": "citation only — ref 69 is cited once, among refs 69-71, for the claim that WWOX over-expression induces apoptosis in lung cancer lines; the review disputes that claim in the next sentences (entries[48]) and attributes it to adenoviral delivery stress. No statement this reading carries rests on ref 69.",
+     "doi": "10.1073/pnas.0505485102",
+     "nature": "Expression of concern",
+     "reason_verbatim": "Concerns/Issues about Data;Duplication of/in Image;Error in Image;Investigation by Company/Institution;Original Data and/or Images not Provided and/or not Available;",
+     "retraction_date": "4/3/2017 0:00",
+     "retraction_pmid": "28373548",
+     "verdict": "FLAGGED_EXPRESSION_OF_CONCERN"
+    }
+   ],
+   "noted": [],
+   "paper_verdict": "FLAGGED_EXPRESSION_OF_CONCERN",
+   "reference_source": "network",
+   "references_declared": 110,
+   "references_screened": 106,
+   "references_with_doi": 106,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 3,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 4
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID24932569_Aldaz2014_efetch.xml",
+   "kind": "article_text",
+   "note": "NCBI efetch db=pmc JATS XML of PMC4151823 (NIHMS618643 author manuscript), 195021 B. 🔴 MEASURED CORRECTION to the dispatch: this route was recorded as a 197 B stub and then as 7406 B of front matter plus a publisher refusal; today it returns a complete <body> with 16 titled sections, 11 <fig>, 2 <table-wrap>, 110 <ref>, 1 <supplementary-material>. Identity verified inside: pmid 24932569, pmcid PMC4151823, doi 10.1016/j.bbcan.2014.06.001. The paper is therefore NOT pdf_only. Evidentiary text surface for every body and table locator.",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4151823",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "367070da57a6877399d65aca7eb2598bd7db9b338f90e19f46d7810b3f91824f"
+  },
+  {
+   "path": "files/fulltext/PMID24932569_Aldaz2014.pdf",
+   "kind": "article_binary",
+   "note": "NIHMS author-manuscript PDF, 35 pages, via the PMC cloud-viewer proof-of-work route. Source of the figure rasters. Its text layer is not used by any locator (font_encoding_verdict UNDECIDED, 4 of 7 fonts with a ToUnicode CMap).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4151823/pdf/",
+    "http_method": "GET",
+    "tier": "pmc_pow_fetch",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "c597403f3f9889fbee4c141f9e253bde3ae066b88da7bba0d8d00a2d9e49ab74"
+  },
+  {
+   "path": "files/figures/PMID24932569/pdf_p21_x87.jpeg",
+   "kind": "figure",
+   "note": "Figure 1, native embedded JPEG 1428x254 (PDF page 21). 🔴 NO LEGEND EXISTS ON EITHER SURFACE: the XML <fig> caption is empty for all eleven figures and the PDF page carries only the label \"Figure 1.\" plus running headers. Each figure was therefore read against the sentences that cite it.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID24932569_Aldaz2014.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "613d1d770fae747306449553bbe8176103cc7aeaded589c3518b04fabdf8cf2c"
+  },
+  {
+   "path": "files/figures/PMID24932569/pdf_p22_x93.jpeg",
+   "kind": "figure",
+   "note": "Figure 2, native embedded JPEG 1428x1019 (PDF page 22). 🔴 NO LEGEND EXISTS ON EITHER SURFACE: the XML <fig> caption is empty for all eleven figures and the PDF page carries only the label \"Figure 2.\" plus running headers. Each figure was therefore read against the sentences that cite it.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID24932569_Aldaz2014.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "f1b7900e336a306900373bf93d5c7b6d03270de3dbce975ff540224b9bb6e743"
+  },
+  {
+   "path": "files/figures/PMID24932569/pdf_p23_x98.jpeg",
+   "kind": "figure",
+   "note": "Figure 3, native embedded JPEG 1524x1224 (PDF page 23). 🔴 NO LEGEND EXISTS ON EITHER SURFACE: the XML <fig> caption is empty for all eleven figures and the PDF page carries only the label \"Figure 3.\" plus running headers. Each figure was therefore read against the sentences that cite it.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID24932569_Aldaz2014.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "4c93ee0ab63caff29d11b33b1df329d5f7e5a179fed5ede15a7c3a820b4909a6"
+  },
+  {
+   "path": "files/figures/PMID24932569/pdf_p24_x103.jpeg",
+   "kind": "figure",
+   "note": "Figure 4, native embedded JPEG 1248x574 (PDF page 24). 🔴 NO LEGEND EXISTS ON EITHER SURFACE: the XML <fig> caption is empty for all eleven figures and the PDF page carries only the label \"Figure 4.\" plus running headers. Each figure was therefore read against the sentences that cite it.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID24932569_Aldaz2014.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "a16bc2e35369051b9e9df2afe3ac1f14121d15b3ce4aaf826c74c5d9a4653ba3"
+  },
+  {
+   "path": "files/figures/PMID24932569/pdf_p25_x108.jpeg",
+   "kind": "figure",
+   "note": "Figure 5, native embedded JPEG 1524x1254 (PDF page 25). 🔴 NO LEGEND EXISTS ON EITHER SURFACE: the XML <fig> caption is empty for all eleven figures and the PDF page carries only the label \"Figure 5.\" plus running headers. Each figure was therefore read against the sentences that cite it.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID24932569_Aldaz2014.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "d5f5507620e3dd7b9543e713a778f1dc2f95f387478f2dcc03dda2c8defed9a3"
+  },
+  {
+   "path": "files/figures/PMID24932569/pdf_p26_x113.jpeg",
+   "kind": "figure",
+   "note": "Figure 6, native embedded JPEG 1228x1009 (PDF page 26). 🔴 NO LEGEND EXISTS ON EITHER SURFACE: the XML <fig> caption is empty for all eleven figures and the PDF page carries only the label \"Figure 6.\" plus running headers. Each figure was therefore read against the sentences that cite it.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID24932569_Aldaz2014.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "9dd5be393c7b9e498abee9418d9eb2c4ddd05f12bc3376210e960d66dd843640"
+  },
+  {
+   "path": "files/figures/PMID24932569/pdf_p27_x118.jpeg",
+   "kind": "figure",
+   "note": "Figure 7, native embedded JPEG 1910x367 (PDF page 27). 🔴 NO LEGEND EXISTS ON EITHER SURFACE: the XML <fig> caption is empty for all eleven figures and the PDF page carries only the label \"Figure 7.\" plus running headers. Each figure was therefore read against the sentences that cite it.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID24932569_Aldaz2014.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "93675d6f970b6e5f8fb1ded4678e2016d0f26549d28444ec4ad86207464fbd13"
+  },
+  {
+   "path": "files/figures/PMID24932569/pdf_p28_x123.jpeg",
+   "kind": "figure",
+   "note": "Figure 8, native embedded JPEG 1428x777 (PDF page 28). 🔴 NO LEGEND EXISTS ON EITHER SURFACE: the XML <fig> caption is empty for all eleven figures and the PDF page carries only the label \"Figure 8.\" plus running headers. Each figure was therefore read against the sentences that cite it.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID24932569_Aldaz2014.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "ac00e81ac0299f969cdba1222c573249e9fc24a298fb26f992312ced239717db"
+  },
+  {
+   "path": "files/figures/PMID24932569/pdf_p29_x128.jpeg",
+   "kind": "figure",
+   "note": "Figure 9, native embedded JPEG 1242x995 (PDF page 29). 🔴 NO LEGEND EXISTS ON EITHER SURFACE: the XML <fig> caption is empty for all eleven figures and the PDF page carries only the label \"Figure 9.\" plus running headers. Each figure was therefore read against the sentences that cite it.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID24932569_Aldaz2014.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "c0ffbb99360e0a65e15c2393188db070eaaf038840d1d80d1f89aa45e97a55b9"
+  },
+  {
+   "path": "files/figures/PMID24932569/pdf_p30_x133.jpeg",
+   "kind": "figure",
+   "note": "Figure 10, native embedded JPEG 1204x1061 (PDF page 30). 🔴 NO LEGEND EXISTS ON EITHER SURFACE: the XML <fig> caption is empty for all eleven figures and the PDF page carries only the label \"Figure 10.\" plus running headers. Each figure was therefore read against the sentences that cite it.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID24932569_Aldaz2014.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "ebd8089ec74b5071199930b4a99679e8a2833b8f1713cb956b1c9ecf4b581d90"
+  },
+  {
+   "path": "files/figures/PMID24932569/pdf_p31_x138.jpeg",
+   "kind": "figure",
+   "note": "Figure 11, native embedded JPEG 1266x784 (PDF page 31). 🔴 NO LEGEND EXISTS ON EITHER SURFACE: the XML <fig> caption is empty for all eleven figures and the PDF page carries only the label \"Figure 11.\" plus running headers. Each figure was therefore read against the sentences that cite it.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID24932569_Aldaz2014.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "9eb4b4d1839f5f8a6d4572e68866a2453a36679dd0c10d843a59cdfd7dede03a"
+  },
+  {
+   "path": "files/fulltext/multihop/PMID19936220_LudesMeyers2009_EuropePMC.xml",
+   "kind": "article_text",
+   "note": "CITED PRIMARY, ref 51 (Ludes-Meyers 2009, PMID 19936220, PLoS ONE, EIIA-Cre conditional Wwox KO). Acquired to test the review's haploinsufficiency sentence against its source. Targeted multihop check of specified statements, NOT a complete reading of this paper and no receipt is claimed for it.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2777388/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_fulltextxml",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "2b18cb9711e4d3b8582fd20d2f059748a284e1514a35438315039b8acaa3591c"
+  },
+  {
+   "path": "files/fulltext/multihop/PMID22574198_Ferguson2012_EuropePMC.xml",
+   "kind": "article_text",
+   "note": "CITED PRIMARY, ref 55 (Ferguson 2012, PMID 22574198, PLoS ONE, BK5-Cre / MMTV-Cre conditional Wwox deletion). Same status: targeted multihop check, not a complete reading.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3344920/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_fulltextxml",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "ce0dd1d4efd9bdebe1690967d5562362e641fe1596fb1c1f593255e79c0f6786"
+  },
+  {
+   "path": "files/fulltext/multihop/PMID17360458_Aqeilan2007.pdf",
+   "kind": "article_binary",
+   "note": "CITED PRIMARY, ref 50 (Aqeilan 2007, PMID 17360458, PNAS, conventional Wwox KO). Europe PMC fullTextXML 404 and efetch db=pmc returned no <body>, so only the PDF exists. 🔴 Its text layer carries 158 C0 control characters and has LOST the genotype superscripts (Wwox+/- reads as \"Wwox/\"), so no locator quotes it: the load-bearing table is adjudicated on the rendered page instead.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1820689/pdf/",
+    "http_method": "GET",
+    "tier": "pmc_pow_fetch",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "6c786381d178782ec45bfa69b1b86bc4e2d9e465ac4a922614831c6431c85025"
+  },
+  {
+   "path": "files/figures/multihop/PMID17360458_p4_table1_crop300.png",
+   "kind": "figure",
+   "note": "Page adjudication of ref 50 Table 1: PDF page 4 rendered at 300 dpi, clip Rect(40,60,580,330), 2251x1125 px. The drawn glyphs carry the genotype symbols the text layer lost, so the heterozygous-versus-wild-type columns can be read.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/multihop/PMID17360458_Aqeilan2007.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Page.get_pixmap(dpi=300, clip=Rect(40,60,580,330))",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "4319e2c93c4cb007ed3ab6902c6e281af911c740fc9e09f6c2b4232b2c5df8eb"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": false,
+  "source_fulltext_indexed_evidence": "A structured JATS surface exists (efetch db=pmc) and is the evidentiary text surface for the review; the two cited primaries are quoted from their own Europe PMC JATS; ref 50 is adjudicated on a rendered page because its only surface is a PDF whose text layer lost the genotype symbols.",
+  "abstract_anchoring_waived": "No locator uses the abstract of this paper or of any primary. The review's abstract sentence on germline mutations and CNS pathology is carried only through its section 9.2 counterparts.",
+  "entries": [
+   {
+    "proposition": "GENRE · the paper describes itself as a review. PubMed pubtype carries \"Review\"; the JATS article-type is \"research-article\" and the paper does contain original secondary analyses (sections 4, 5, 8.2). So it is a review that also publishes new database-derived data, and every statement carried out of it must be tagged for which of the two it is.",
+    "snippet": "In this review we revisited the status of WWOX in cancer and described its emerging role in other important human pathologies.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24932569_Aldaz2014_efetch.xml",
+    "anchor": "Concluding Remarks, sentence 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "SYNTHESIS · OWN NEW ANALYSIS (not a restatement): the copy-number figures come from the authors' own GISTIC/cBioPortal query of TCGA at a stated freeze. This is new data published inside a review, and it is the authors' own work, not a report of someone else's result.",
+    "snippet": "Thus we identified the tumor types most commonly affected by heterozygous and homozygous WWOX deletions (Freeze February 2014).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24932569_Aldaz2014_efetch.xml",
+    "anchor": "Section 4, sentence 4",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "SYNTHESIS · the headline copy-number numbers. DATO for the database query as run; no per-tumour-type n is printed in text or figure, and the analysis is a database re-query rather than an experiment.",
+    "snippet": "As can be observed in Figure 3, ovarian serous cystoadenocarcinoma is the tumor type most commonly affected by genomic losses affecting WWOX with 78% of cases showing heterozygous loss and 6% homozygous losses (34)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24932569_Aldaz2014_efetch.xml",
+    "anchor": "Section 4, sentence 6",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "FIGURE 3, inspected at native resolution (1524x1224): stacked bars, heterozygous (blue) plus homozygous (red) deletion, six tumour types. Ovarian about 78 + 6, breast about 52 + 1.5, gastric about 33 + 7, prostate about 29 + 6, uterine about 20 + 2, colorectal about 9 + 5. The panel matches the text. No n per tumour type and no confidence interval appears anywhere on it.",
+    "snippet": "Visual attestation of Figure 3: title \"WWOX COPY NUMBER LOSSES - TCGA DATASETS (GISTIC)\", y-axis PERCENT OF CASES 0-90, legend Hom. Deletion / Het. Deletion, six tumour-type bars.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID24932569/pdf_p23_x98.jpeg",
+    "anchor": "Figure 3 (PDF p. 23), native embedded JPEG 1524x1224",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "FIGURE 4, inspected at native resolution (1248x574): WWOX mRNA z-score by GISTIC class, breast n=463 and ovarian n=316, with bracketed p-values. Breast Hetloss versus Diploid p<0.001; ovarian Hetloss versus Diploid p<0.001. The test is not named in the figure or the text. One ovarian bracket is printed \"p<0.936\" and another \"p<0.706\" — a \"<\" where an equals sign is meant, so those two brackets are typographically wrong on the panel.",
+    "snippet": "Visual attestation of Figure 4: two box-plot panels, x-axis Homodel / Hetloss / Diploid / Gain / Amp, breast n=463 with p=0.019 and p<0.001 brackets, ovarian n=316 with p<0.001, p<0.936, p<0.706 brackets.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID24932569/pdf_p24_x103.jpeg",
+    "anchor": "Figure 4 (PDF p. 24), native embedded JPEG 1248x574",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "SYNTHESIS · OWN SURVIVAL ANALYSIS via the Kaplan-Meier Plotter resource on public datasets. DATO for the analysis as run. Its dichotomy is a quantile split whose threshold is not stated, two probe sets are used, and four breast subgroups plus one ovarian analysis are reported with no multiplicity correction mentioned.",
+    "snippet": "Kaplan–Meier analysis revealed that low expression of WWOX was associated with shorter relapse-free survival in breast cancer patients (n=3259) (Figure 5) and shorter progression-free survival in ovarian cancer patients as well (n=1156)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24932569_Aldaz2014_efetch.xml",
+    "anchor": "Section 4, last paragraph",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "public ovarian cancer expression datasets",
+     "endpoint": "progression-free survival"
+    }
+   },
+   {
+    "proposition": "🔴 OVERSTATED BY ONE WORD, and the panel is what shows it: the text says the association holds in ALL breast cancer intrinsic subtypes. Figure 5 carries three subtype panels — Luminal A, Luminal B and Basal-like — and no HER2-enriched or normal-like panel. \"All intrinsic subtypes\" is broader than the figure it cites.",
+    "snippet": "Interestingly, we identified a significant association between low expression of WWOX and short time relapse-free survival in all breast cancer intrinsic subtypes, but more pronounced in luminal B and basal-like subtypes (Figure 5).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24932569_Aldaz2014_efetch.xml",
+    "anchor": "Section 4, last paragraph, last sentence",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought — every panel of Figure 5 was counted against the word \"all\"",
+    "experimental_context": {
+     "system": "public breast cancer expression datasets",
+     "endpoint": "relapse-free survival",
+     "comparator": "low versus high WWOX expression"
+    }
+   },
+   {
+    "proposition": "FIGURE 5, inspected at native resolution (1524x1254): four Kaplan-Meier panels — All samples n=3259 HR 0.67 (0.59-0.76) logrank P 4.6e-10; Luminal A n=1562 HR 0.72 (0.6-0.87) P 0.00067; Luminal B n=938 HR 0.64 (0.51-0.79) P 3.8e-05; Basal-like n=562 HR 0.57 (0.43-0.74) P 3.5e-05. Three subtypes only, as above.",
+    "snippet": "Visual attestation of Figure 5: four relapse-free survival panels, low (black) versus high (red) WWOX expression, HR and logrank P printed in each panel, subtype and n labelled bottom right.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID24932569/pdf_p25_x108.jpeg",
+    "anchor": "Figure 5 (PDF p. 25), native embedded JPEG 1524x1254",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "public breast cancer expression datasets",
+     "endpoint": "relapse-free survival",
+     "comparator": "low versus high WWOX expression"
+    },
+    "qualifies": "entries[6]",
+    "qualifies_needle": "in all breast cancer intrinsic subtypes"
+   },
+   {
+    "proposition": "FIGURE 6, inspected at native resolution (1228x1009): ovarian progression-free survival, n=1156, HR 0.68 (0.58-0.79), logrank P 7.8e-07. The two curves converge and cross after about 80 months, so the separation is early rather than sustained — a qualification the text does not carry.",
+    "snippet": "Visual attestation of Figure 6: single progression-free survival panel, low versus high expression, HR = 0.68 (0.58 - 0.79), logrank P = 7.8e-07, n=1156, curves meeting beyond about 80 months.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID24932569/pdf_p26_x113.jpeg",
+    "anchor": "Figure 6 (PDF p. 26), native embedded JPEG 1228x1009",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "public ovarian cancer expression datasets",
+     "endpoint": "progression-free survival"
+    },
+    "qualifies": "entries[5]",
+    "qualifies_needle": "shorter progression-free survival in ovarian cancer patients"
+   },
+   {
+    "proposition": "SYNTHESIS · OWN MUTATION CENSUS from cBioPortal. The type counts are reproducible from Table 1: 44 rows, 36 missense, 5 nonsense, 2 frameshift insertions, 1 frameshift deletion (recounted from the XML table).",
+    "snippet": "Nevertheless a total of 44 novel WWOX somatic mutations have been identified to date in various tumor types, 5 of these resulted in nonsense mutations (3 in head and neck cancers and 2 in lung cancers), 2 frameshift insertions, 1 frameshift deletion and 36 missense mutations, each specific mutation is depicted in Figure 7 and described in Table 1.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24932569_Aldaz2014_efetch.xml",
+    "anchor": "Section 5, paragraph 2, sentence 1",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "🔴 ARITHMETIC THAT DOES NOT REPRODUCE: the text says 18 of 36 missense mutations (50%) are predicted to affect function as high or medium impact. Recounting Table 1 from the XML gives Mutation Assessor High 6 + Medium 13 = 19 missense, not 18 (also Low 9, Neutral 8). The discrepancy is one call.",
+    "snippet": "The detected nonsense and frameshift mutations all have obvious severe impact in protein functionality and of the 36 missense mutations 18 (50%) are predicted to affect protein function based on the mutation assessor algorithm (40), noted in bold as high and medium functional impact in Table 1.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24932569_Aldaz2014_efetch.xml",
+    "anchor": "Section 5, paragraph 3, sentence 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought — every Mutation Assessor cell of Table 1 was recounted"
+   },
+   {
+    "proposition": "🔴 AND THE SUMMARY FIGURE INHERITS IT: 59% (26 of 44) follows from 18 + 8 truncating. The recount gives 8 truncating + 19 high/medium missense = 27 of 44 (61%). The conclusion drawn from it — that these are unlikely to be background mutations — is an INFERENZA from an algorithm's predictions, not a functional measurement, and no functional assay appears anywhere in the paper.",
+    "snippet": "In summary, of all somatic mutations detected so far affecting WWOX in human tumors 59% (26 of 44) are very likely to affect protein function, suggesting that is unlikely these mutations represent simple background mutational events.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24932569_Aldaz2014_efetch.xml",
+    "anchor": "Section 5, paragraph 3, last sentence",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought"
+   },
+   {
+    "proposition": "TABLE 1 (44 rows, read in the XML and recounted): per-case WWOX somatic mutations with Mutation Assessor calls. It is a compilation of public database entries, not experimental data, and the review calls them \"novel\" in the sense of newly compiled.",
+    "snippet": "TCGA-AA-3972 Colorectal (TCGA) (37) R254C Missense High",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID24932569_Aldaz2014_efetch.xml",
+    "anchor": "Table 1, colorectal row TCGA-AA-3972 (R254C, Mutation Assessor High)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "SYNTHESIS · OWN CO-EXPRESSION ANALYSIS, and the premise is declared by the authors themselves: guilt by association. The enrichments are properties of co-expressed gene sets in breast datasets, not of WWOX protein function.",
+    "snippet": "which states that gene co-expression might indicate shared regulatory mechanisms and roles in related biological processes (74, 75)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24932569_Aldaz2014_efetch.xml",
+    "anchor": "Section 8.2, paragraph 2, sentence 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "SYNTHESIS · the enriched biofunctions include coenzyme A metabolic process alongside mammary morphogenesis and branching. This is the one place where the review's OWN new analysis touches CoA metabolism, and it is a co-expression annotation in breast datasets — not a measurement in any WWOX-perturbed system.",
+    "snippet": "Among the top enriched biofunctions, we found regulation of mammary gland morphogenesis and branching, coenzyme A metabolic process and regulation of cysteine-type endopeptidase activity among other metabolic processes.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24932569_Aldaz2014_efetch.xml",
+    "anchor": "Section 8.2, paragraph 2",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "FIGURE 8, inspected at native resolution (1428x777): A, two heat-map blocks of the top 100 positively and negatively correlated probes; B, a ClueGO pie of enriched biofunctions including \"Coenzyme A metabolic process\", \"Valine, leucine & isoleucine degradation\", \"Propanoate metabolism\", \"Senescence & autophagy\", \"WNT signaling pathway & pluripotency\"; C, a network with an \"acetyl-CoA metabolic process\" node. No axis scale or statistic is printed on the pie, and the panel is an annotation summary, not a measurement.",
+    "snippet": "Visual attestation of Figure 8: A heat maps of top 100 positively / negatively correlated probes; B ClueGO pie of enriched biofunctions naming Coenzyme A metabolic process and Valine, leucine & isoleucine degradation; C network graph with an acetyl-CoA metabolic process node.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID24932569/pdf_p28_x123.jpeg",
+    "anchor": "Figure 8 (PDF p. 28), native embedded JPEG 1428x777",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "RESTATEMENT of the authors' own earlier primary (ref 11 = PMID 16941225, which this corpus has read). Ubiquitous expression by IHC is attributed to that paper, not established here.",
+    "snippet": "We observed that WWOX protein is ubiquitously expressed in human tissues by means of immunohistochemistry (IHC) studies (11).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24932569_Aldaz2014_efetch.xml",
+    "anchor": "Section 3, sentence 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "SYNTHESIS · OWN REANALYSIS of a public RNA-seq dataset, used to corroborate the earlier IHC. The dataset is the Illumina Body Map (E-MTAB-513). 🔴 PREMISE: DEFAULT_FROM_TEXTBOOK — that a body-map dataset provides one sample per tissue and therefore no replication or variance is background knowledge I did not verify from a source here; it is flagged rather than relied on. What the surfaces do show is that no n, no error bar and no statistic appears in the figure or the text.",
+    "snippet": "RNASeq analyses from multiple human tissues are quite in agreement with the previous IHC studies and thyroid, brain, testis, ovary and prostate demonstrated to be the tissues with highest expression levels in that order (Figure 2) as per the EMBL-EBI Expression Atlas",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24932569_Aldaz2014_efetch.xml",
+    "anchor": "Section 3, sentence 2",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "FIGURE 2, inspected at native resolution (1428x1019): bar chart of RNA-seq FPKM by tissue — thyroid about 43, brain about 22, testis about 19, ovary about 12, prostate about 10, then lung, breast, leukocyte, adrenal, adipose, liver, kidney, colon, lymph node, skeletal muscle, heart. The rank order matches the text exactly. There are no error bars and no n on the panel, so the ranking carries no measure of variability. Brain is second highest, which is the one datum of this figure that bears on a CNS disease model.",
+    "snippet": "Visual attestation of Figure 2: title \"WWOX Expression in Normal Human Tissues\", y-axis RNASeq FPKM Counts 0-50, sixteen single bars, thyroid highest then brain then testis, no error bars.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID24932569/pdf_p22_x93.jpeg",
+    "anchor": "Figure 2 (PDF p. 22), native embedded JPEG 1428x1019",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "RESTATEMENT of ref 49 (hypomorph, PMID 17823927): shorter lifespan with p=0.02. NOT verified against that primary in this reading — ref 49 was not acquired, and the statement is carried as a restatement whose source this reading did not open.",
+    "snippet": "mice were viable but had a significantly shorter lifespan than their wild type (WT) counterparts (p=0.02)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24932569_Aldaz2014_efetch.xml",
+    "anchor": "Section 7.1, paragraph 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought — ref 49 not acquired; declared as unverified restatement"
+   },
+   {
+    "proposition": "RESTATEMENT of refs 50 and 51, VERIFIED against ref 51: heterozygotes carry about half the wild-type protein. Ref 51 says the protein \"was reduced by approximately one-half in heterozygotes\"; ref 50 says \"50% or less\", but that phrase sits in a text layer this reading screens as damaged, so only the ref 51 half is attested here.",
+    "snippet": "Both full knockout models displayed complete ablation of Wwox protein in all tissues examined with heterozygotes expressing ~50% of WT levels.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24932569_Aldaz2014_efetch.xml",
+    "anchor": "Section 7.1, paragraph 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "THE HAPLOINSUFFICIENCY SENTENCE, attributed to ref 51 (PMID 19936220, Ludes-Meyers 2009, PLoS ONE 4(11):e7775). Two halves with different fates. \"Not deleterious\" is supported by ref 51 for the traits it measured (postnatal growth and survival, blood and bone parameters). \"Or carcinogenic in the longer-lived heterozygous mice\" is not supported by ref 51's own data: ref 51 reports no tumour surveillance of its own on heterozygous mice (its necropsies were nine 18-day-old KO mice, with no neoplasia observed); its only sentences naming both heterozygotes and tumours are Introduction/Discussion restatements of ref 20, one of which reports spontaneous lung papillary carcinoma in adult Wwox+/- mice.",
+    "snippet": "indicating that loss of one Wwox allele (i.e. haploinsufficiency) appears not to be deleterious or carcinogenic in the longer-lived heterozygous mice (51)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24932569_Aldaz2014_efetch.xml",
+    "anchor": "Section 7.1, last paragraph",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought - ref 51 (files/fulltext/multihop/PMID19936220_LudesMeyers2009_EuropePMC.xml) searched for sentences naming both heterozygotes and tumours: three found (two in the Introduction, one in the Discussion), all attributed to ref 20; its own neoplasia assessment is of knockouts only",
+    "experimental_context": {
+     "system": "conventional and conditional Wwox knockout mouse lines",
+     "genotype": "Wwox heterozygote versus wild type",
+     "endpoint": "deleterious phenotype and tumour incidence"
+    },
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID24932569.json",
+     "entry": 21,
+     "what_changed": "The stated ground 'ref 51 contains no sentence naming both heterozygotes and tumours' was false; it has three, all restating ref 20, so the absence is now of own-data surveillance, not of such sentences.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT",
+       "CORRECTED"
+      ],
+      "method": "legend-locator-audit, blind R4: (proposition, snippet, anchor) triples plus source artefacts only; no dossier, no manifest, no reader identity; separate agent with no session history, 2026-09-14, dispatched under ALDAZ-EXEC-20260913. Per-triple verdict on this entry: OVERSHOOT - conclusion right, stated reason over-claimed an absence a search of ref 51 refutes. Owner re-read before applying, 2026-09-14, ALDAZ-LOCATOR-REV-B-20260914: Aldaz 2014 R51 = PMID 19936220; ref 51 XML sentence search found exactly three heterozygote-and-tumour sentences - Introduction 'However, development of spontaneous lung papillary carcinoma was observed in adult Wwox +/- mice.' (inside a run opened by 'Aqeilan et al. [20] reported' and followed by 'Aqelian et al [20] also reported'), Introduction 'Aqelian et al [20] also reported that Wwox +/- mice treated with chemical carcinogens...', Discussion '...required chemical carcinogen treatment of Wwox +/- mice [20]'; own tumour surveillance = 'A total of nine 18d old Wwox KO mice were subjected to complete necropsies' and Abstract 'No evidence of spontaneous neoplasia was observed in Wwox KO mice'; own heterozygote statements non-neoplastic ('heterozygous mice did not show any abnormalities in postnatal growth and survival as well as blood or bone parameters'). Owner's check agreed with the auditor; amendment applied, keeping the prior true clause on the nine KO necropsies."
+     }
+    }
+   },
+   {
+    "proposition": "PRIMARY ref 51, the sentence the review rests on: heterozygotes were normal for postnatal growth, survival, blood and bone. Note what the list does NOT include: tumours. The primary's own conclusion is about sufficiency of one allele for \"full function\" in those measured traits.",
+    "snippet": "Notably, heterozygous mice did not show any abnormalities in postnatal growth and survival as well as blood or bone parameters highlighting that only one Wwox allele is sufficient for full function.",
+    "surface": "body",
+    "artifact": "files/fulltext/multihop/PMID19936220_LudesMeyers2009_EuropePMC.xml",
+    "anchor": "ref 51 (PMID 19936220), Discussion",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "EIIA-Cre conditional Wwox mouse",
+     "genotype": "Wwox +/flox heterozygote versus wild type",
+     "timepoint": "postnatal, up to weaning"
+    }
+   },
+   {
+    "proposition": "PRIMARY ref 51 · WHERE ITS NEOPLASIA ASSESSMENT ACTUALLY SITS: nine 18-day-old KNOCKOUT mice, by necropsy, X-ray and histopathology. No heterozygote tumour cohort and no long-term follow-up exists in the paper, so the review's \"not carcinogenic in the longer-lived heterozygous mice\" has no basis in this source.",
+    "snippet": "A total of nine 18d old Wwox KO mice were subjected to complete necropsies, X ray analyses and multiple organ histopathology.",
+    "surface": "body",
+    "artifact": "files/fulltext/multihop/PMID19936220_LudesMeyers2009_EuropePMC.xml",
+    "anchor": "ref 51 (PMID 19936220), Results",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "EIIA-Cre conditional Wwox mouse",
+     "genotype": "Wwox KO",
+     "timepoint": "18 days"
+    }
+   },
+   {
+    "proposition": "PRIMARY ref 51 · THE n BEHIND \"no abnormalities\": wild-type and heterozygous animals were POOLED, five animals in total, for the comparison against three knockouts. A pooled group of five is the evidential base for the review's \"not deleterious\", and the review does not carry that.",
+    "snippet": "We did not observe differences between wild-type and heterozygous mice, therefore, we compared KO data (n = 3) with WT and HET data combined (WT+HET, n = 5).",
+    "surface": "body",
+    "artifact": "files/fulltext/multihop/PMID19936220_LudesMeyers2009_EuropePMC.xml",
+    "anchor": "ref 51 (PMID 19936220), Results, bone analyses",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought — the n behind the heterozygote normality claim"
+   },
+   {
+    "proposition": "THE SECOND HAPLOINSUFFICIENCY SENTENCE, attributed to ref 55, and broader than its source. Ref 55 tested heterozygotes for survival (n=41), spontaneous tumours over more than a year, and premalignant histology. It did NOT quantify mammary branching in heterozygotes: the branching morphometry groups are Cre-negative wild type (n=4), Cre-positive wild type (n=4) and knockout (n=5). \"Any observable phenotypic effect\" therefore overstates what was observed.",
+    "snippet": "Consistent with the findings in the EIIA-Cre model, we found that loss of a single Wwox allele (i.e. haploinsufficiency) did not have any observable phenotypic effect in the mammary gland (55).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24932569_Aldaz2014_efetch.xml",
+    "anchor": "Section 7.2, paragraph 3, last sentence",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought — every branching-quantification sentence of ref 55 was checked for a heterozygote group; none includes one"
+   },
+   {
+    "proposition": "PRIMARY ref 55, the tumour half, which IS supported: heterozygotes tumour-free beyond a year in the mammary gland.",
+    "snippet": "Furthermore, our findings are in clear disagreement with previous speculation suggesting that Wwox haploinsufficiency is tumorigenic",
+    "surface": "body",
+    "artifact": "files/fulltext/multihop/PMID22574198_Ferguson2012_EuropePMC.xml",
+    "anchor": "ref 55 (PMID 22574198), Discussion",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "BK5-Cre / MMTV-Cre conditional Wwox mouse",
+     "genotype": "Wwox +/flox heterozygote",
+     "endpoint": "spontaneous tumours and premalignant histology"
+    }
+   },
+   {
+    "proposition": "🔴 THE OMISSION THAT DECIDES THE ARGUMENT. Ref 50 — which the review cites in the same section — reports a SPONTANEOUS tumour excess in heterozygotes at 9-18 months. The review carries ref 50's heterozygote tumour data only for CARCINOGEN-treated and susceptible-background conditions, and states the opposite conclusion for the untreated animal via refs 51 and 55.",
+    "snippet": "Increase tumorigenicity was reported when Wwox heterozygous mice are exposed to chemical carcinogens (50, 53) or when backcrossed into a C3H mammary tumor susceptible genetic background (54).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24932569_Aldaz2014_efetch.xml",
+    "anchor": "Section 7.1, last paragraph, last sentence",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought — ref 50 was opened to see what it reports for untreated heterozygotes"
+   },
+   {
+    "proposition": "PAGE ADJUDICATION of ref 50 Table 1, read from the drawn glyphs at 300 dpi because the text layer lost the genotype symbols. Spontaneous tumours, Wwox heterozygous versus wild type, mice 9-18 months: total tumours 19 versus 4 (p=0.04); tumour incidence 10/58 (17.2%) versus 2/60 (3.3%), p=0.03; tumours per mouse 0.33 versus 0.067, p=0.003; lung cancer incidence 9/58 (15.5%) versus 2/60 (3.3%), p=0.028. ENU-induced, separately: 37/46 (80%) versus 20/42 (48%), p=0.002. So the primary reports heterozygote tumour excess BOTH spontaneously and after ENU, and the review reports only the second. The contradiction is with the review's sentence at entries[21]; the review's only heterozygote-tumour sentence, entries[27], cites ref 50 for the carcinogen-treated arm alone. SYSTEMS, stated because the validator is right to ask: the bridge crosses two mouse systems on purpose. The review's sentence at entries[21] generalises from CONDITIONAL lines (EIIA-Cre, ref 51; BK5-Cre, ref 55) to heterozygous mice as such, and this table is from the CONVENTIONAL line (ref 50) that the same review cites. The contradiction is therefore between a review generalisation and one of the primaries it cites, not between two identical experiments — and different lines, backgrounds and ages (9-18 months here, postnatal to weaning in ref 51) are a legitimate explanation that the review never offers because it never reports the discordant datum.",
+    "snippet": "Visual attestation of ref 50 Table 1 at 300 dpi: column headers \"Heterozygous\" and \"Wild type\"; Spontaneous tumors block — Number 58 / 60, Total tumors 19 / 4 (0.04), Tumors incidence 10/58 (17.2%) / 2/60 (3.3%) (0.03), Tumor/mouse 19/58 (0.33) / 4/60 (0.067) (0.003), Lung cancer incidence 9/58 (15.5%) / 2/60 (3.3%) (0.028); footnote \"118 B6129F1-F4 mice (9-18 months of matched age)\".",
+    "surface": "figure",
+    "artifact": "files/figures/multihop/PMID17360458_p4_table1_crop300.png",
+    "anchor": "ref 50 (PMID 17360458), Table 1, PDF page 4, 300 dpi crop",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "found_or_sought": "sought — the untreated-heterozygote tumour data the review does not carry",
+    "experimental_context": {
+     "system": "conventional Wwox knockout mouse line",
+     "genotype": "Wwox +/- heterozygote versus +/+",
+     "timepoint": "9-18 months",
+     "endpoint": "spontaneous tumour incidence"
+    },
+    "contradicts": "entries[21]",
+    "contradicts_needle": "not to be deleterious or carcinogenic in the longer-lived"
+   },
+   {
+    "proposition": "RESTATEMENT of ref 50's osteosarcoma finding, with the review's own minimising frame (\"only 4 pups out of 13\"). Ref 50's figure matches the count and the primary itself calls it 31% of knockouts and concludes WWOX is a bona fide tumour suppressor. The review reports the same number and draws a weaker conclusion from it — a legitimate difference of interpretation, provided it is not read as the primary's own view.",
+    "snippet": "Aqeilan et al reported spontaneous formation of focal lesions along the diaphysis of Wwox KO mouse limbs that appeared neoplastic and were reported as suggestive of either periosteal or chondroid osteosarcoma (50), but this was observed in only 4 pups out of 13 analyzed.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24932569_Aldaz2014_efetch.xml",
+    "anchor": "Section 7.1, last paragraph",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "TABLE 2 (9 rows, read in the XML): the review's own synthesis table of rodent models. Two things it carries that the running text does not: the EIIA-Cre row lists epileptic seizures and ataxia among the knockout phenotypes, and the last row — Osx-Cre bone-specific deletion — is sourced to \"Aldaz Lab, unpublished\", an assertion with no verifiable source inside a table of restatements.",
+    "snippet": "Lesions compatible with periosteal osteosarcomas in 4 of 13 KO mice",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID24932569_Aldaz2014_efetch.xml",
+    "anchor": "Table 2, Wwox -/- mouse row, Tumors column",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "RESTATEMENT of GWAS primaries (refs 90-92) for the HDL association. This is the review's metabolic-syndrome foundation and it is human genetic association, not mechanism.",
+    "snippet": "Genome wide association studies (GWAS) from various laboratories led to the identification of a region-wide significant association between low levels of high-density lipoprotein cholesterol (HDL-C) and the WWOX gene in dyslipidemic families and low HDL-C cases and controls, as well as in population-based cross sectional and prospective cohorts.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24932569_Aldaz2014_efetch.xml",
+    "anchor": "Section 9.1, sentence 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "RESTATEMENT of ref 58 (Iatan 2014, PMID 24871327), a study the authors co-wrote: liver-specific Wwox conditional knockout mice showed altered lipid metabolic pathways and raised plasma triglycerides in FEMALE mice. The sex restriction is in the source sentence and is the kind of qualifier that gets dropped downstream.",
+    "snippet": "Furthermore in the same study by gene expression profiling we determined that liver specific Wwox conditional KO mice displayed significantly altered lipid metabolic pathways and increased plasma triglyceride levels in female mice, suggesting a significant role for WWOX in modulating HDL and lipid metabolism (58).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24932569_Aldaz2014_efetch.xml",
+    "anchor": "Section 9.1, paragraph 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "Alb-Cre conditional Wwox knockout mouse",
+     "genotype": "liver-specific Wwox KO",
+     "endpoint": "hepatic lipid gene expression and plasma triglycerides"
+    }
+   },
+   {
+    "proposition": "SYNTHESIS · OWN DATABASE QUERY (PheGenI) producing the \"emerging theme\" of metabolic-syndrome traits. 🔴 Its evidence is Supplementary Table 1, which is UNAVAILABLE by every route tried today, so this claim cannot be checked at all: the list of traits in the sentence is the only surface that exists for it.",
+    "snippet": "it is possible to observe an emerging theme of metabolic syndrome related traits significantly associated with SNPs mapping to the WWOX locus including: body mass index, body weight, C-reactive protein levels, insulin levels, cardiovascular disease, cholesterol, blood pressure and various traits asocciated with cardiovascular parameters among others",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24932569_Aldaz2014_efetch.xml",
+    "anchor": "Section 9.1, last paragraph",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought — Supplementary Table 1 requested by four routes, all refused"
+   },
+   {
+    "proposition": "RESTATEMENT of ref 101 (Mallaret 2014, PMID 24369382), co-written by these authors: WWOX homozygously mutated in four affected children of one consanguineous family, by exome sequencing. This is the human-genetic foundation of the CNS section.",
+    "snippet": "Very recently by exome sequencing it was determined that WWOX is homozygously mutated in all four children affected by the described phenotype (101).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24932569_Aldaz2014_efetch.xml",
+    "anchor": "Section 9.2, sentence 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "RESTATEMENT of the functional half of ref 101: P47T abolishes PPxY binding. This is the one mechanistic statement about a human WWOX mutation in the whole review, and it is attributed to that primary, not established here.",
+    "snippet": "We demonstrated in the same report that this mutation renders WWOX unable of binding PPxY target motifs in interacting partner proteins (101).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24932569_Aldaz2014_efetch.xml",
+    "anchor": "Section 9.2, sentence 4",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "RESTATEMENT of ref 101 for the second family, WITH the authors' own hedge preserved: G372R sits in the oxidoreductase domain and its functional consequences are \"less clear\". A reader carrying this statement must carry the hedge.",
+    "snippet": "In this case the mutation affects a glycine found at the C-terminus in the oxidoreductase domain of WWOX and its functional consequences are less clear (101).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24932569_Aldaz2014_efetch.xml",
+    "anchor": "Section 9.2, sentence 7",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "RESTATEMENT of ref 102 (Abdel-Salam 2014, PMID 24456803): R54* nonsense, described as a virtual human full knockout, in a more severe phenotype with microcephaly, retinopathy and death at 16 months.",
+    "snippet": "In this case the homozygous WWOX germline alteration is a nonsense mutation at arginine 54 (pArg54*) leading to a virtual WWOX human full knockout case (102).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24932569_Aldaz2014_efetch.xml",
+    "anchor": "Section 9.2, sentence 9",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "FIGURE 10, inspected at native resolution (1204x1061): three pedigrees mapped onto the domain diagram — p.Pro47Thr (family 1, four affected homozygotes, WT/M parents), p.Gly372Arg (family 2, two affected), p.Arg54* (family 3, one affected homozygote plus a deceased sibling shown hatched). The panel shows the genotype-phenotype segregation the text asserts, for a total of seven affected individuals across three families.",
+    "snippet": "Visual attestation of Figure 10: three consanguineous pedigrees with M/M affected individuals filled black, WT/M carriers, mapped by green diamonds onto the WW-WW-SDR domain bar (19-49, 60-90, 124-407).",
+    "surface": "figure",
+    "artifact": "files/figures/PMID24932569/pdf_p30_x133.jpeg",
+    "anchor": "Figure 10 (PDF p. 30), native embedded JPEG 1204x1061",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "RESTATEMENT of ref 103 (Suzuki 2009, PMID 19500159), the Ide rat: a 13 bp deletion in exon 9 producing a frameshift of the last 44 codons. Relevant because it is the only rodent model in the review whose lesion is a late-exon frameshift rather than a whole-gene ablation.",
+    "snippet": "these authors concluded that the Ide mutation is a 13 bp deletion in exon 9 of Wwox leading to a frameshift of the last 44 codons of Wwox and replacement with a novel open reading frame of 54 codons.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24932569_Aldaz2014_efetch.xml",
+    "anchor": "Section 9.2, paragraph 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "🔴 FIGURE 11 CANNOT SHOW WHAT IT IS CITED FOR. The text cites Fig. 11 for Wwox KO mice developing spontaneous and audiogenic seizures. Inspected at native resolution (1266x784), the panel is two photographs of a small pale rodent on a cage floor — a still image of an animal, with no EEG, no seizure score, no behavioural quantification and no comparison group. With no legend on either surface, nothing in the figure attests a seizure.",
+    "snippet": "Visual attestation of Figure 11: two colour photographs of a single pale rodent lying on cage bedding, one lateral and one ventro-lateral view; no trace, scale, label, genotype marking or comparator panel.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID24932569/pdf_p31_x138.jpeg",
+    "anchor": "Figure 11 (PDF p. 31), native embedded JPEG 1266x784",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "sought — an EEG, seizure score or quantified behavioural readout was looked for in the panel and is absent",
+    "qualifies": "entries[41]",
+    "qualifies_needle": "develop spontaneous and audiogenic epileptic seizures",
+    "experimental_context": {
+     "system": "Wwox knockout mouse",
+     "genotype": "unlabelled on panel",
+     "endpoint": "photograph only"
+    }
+   },
+   {
+    "proposition": "The seizure claim itself, restated from ref 101 and citing Figure 11. The claim may well be true in the primary; what this reading establishes is that the FIGURE does not carry it.",
+    "snippet": "In the above described report of Mallaret et al. (101) we also demonstrated that Wwox full KO mice display an extremely similar phenotype to that observed in humans and rats, since Wwox KO mice in their short life-span of 3–4 weeks develop spontaneous and audiogenic epileptic seizures as well (Fig. 11).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24932569_Aldaz2014_efetch.xml",
+    "anchor": "Section 9.2, last paragraph",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "Wwox knockout mouse",
+     "genotype": "Wwox KO",
+     "endpoint": "seizures"
+    }
+   },
+   {
+    "proposition": "RESTATEMENT of the authors' own primary (ref 23): WWOX is predominantly perinuclear, overlapping the Golgi. This is the localisation premise on which any trafficking reading of WWOX rests.",
+    "snippet": "We determined that the WWOX protein resides predominantly in the perinuclear region overlapping with the Golgi region (23).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24932569_Aldaz2014_efetch.xml",
+    "anchor": "Section 8.1, paragraph 2, sentence 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "🔴 A DECLARED INTER-LABORATORY CONFLICT, carried honestly by the review and unresolved: another group reports WWOX in mitochondria and nucleus; these authors cannot detect it there. Anyone building a compartment-based mechanism on WWOX inherits this conflict.",
+    "snippet": "So far we were unable to detect WWOX protein in the nuclear compartment or in mitochondria (23, 59) the reasons for this discrepancy remain unclear.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24932569_Aldaz2014_efetch.xml",
+    "anchor": "Section 8.1, paragraph 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "🔴 UNPUBLISHED ASSERTION, neither synthesis nor restatement: the catalytic residues are claimed to be required for perinuclear localisation, sourced to \"Aldaz laboratory unpublished observations\". It is unverifiable by construction and must never be carried as a restatement of a primary.",
+    "snippet": "Remarkably, we observed that the amino acids predicted to be required for WWOX enzymatic activity were also necessary for perinuclear localization (Aldaz laboratory unpublished observations).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24932569_Aldaz2014_efetch.xml",
+    "anchor": "Section 8.1, paragraph 2, last sentence",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "🔴 SECOND UNPUBLISHED ASSERTION, and this one is load-bearing for the model in Figure 9: a direct WWOX-SMAD7 interaction is asserted from \"yet unreported studies\".",
+    "snippet": "In yet unreported studies we indeed observed a direct interaction between WWOX and SMAD7.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24932569_Aldaz2014_efetch.xml",
+    "anchor": "Section 8.3, paragraph 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "FIGURE 9, inspected at native resolution (1242x995): a hand-drawn pathway model of WWOX sequestering SMAD3, SMAD7 and RUNX2, with NEDD4L-mediated degradation. It is a hypothesis diagram — the text introduces it with \"We hypothesize\" — and it includes the unpublished WWOX-SMAD7 arc. No data panel accompanies it.",
+    "snippet": "Visual attestation of Figure 9: schematic with TGF-beta receptor, phospho-SMAD3, SMAD3/SMAD4/RUNX2 promoter complex, WWOX-SMAD3, WWOX-SMAD7 and WWOX-RUNX2 pairs, NEDD4L and a Degradation box; no measured data on the panel.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID24932569/pdf_p29_x128.jpeg",
+    "anchor": "Figure 9 (PDF p. 29), native embedded JPEG 1242x995",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "RESTATEMENT of the authors' own primary (ref 81, Ferguson 2013, PMID 24330518): WWOX inhibits SMAD3 by cytoplasmic sequestration via a WW1-dependent interaction with the SMAD3 PPGY motif. Mechanistically this is the same WW1-PPxY chemistry the interactome literature uses.",
+    "snippet": "We ultimately showed that WWOX acts as an inhibitor of SMAD3 transcriptional activity by sequestering it in the cytoplasm upon TGFβ stimulation and inhibiting its occupation of target gene promoters.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24932569_Aldaz2014_efetch.xml",
+    "anchor": "Section 8.3, paragraph 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "🔴 A NEGATIVE THE REVIEW CARRIES, and it disagrees with papers it cites: these authors never observed WWOX-induced apoptosis, and they attribute the published pro-apoptotic effect to adenoviral delivery stress. The papers cited for the positive claim include ref 69 (PMID 16223882), which carries an EXPRESSION OF CONCERN linked in this article's own reference list.",
+    "snippet": "On the other hand we and others, never observed or reported apoptosis induction in cancer lines from breast, liver, lung or ovarian origin either transiently or stably transfected for WWOX expression (23, 72, 73).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24932569_Aldaz2014_efetch.xml",
+    "anchor": "Section 8.2, paragraph 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "🔴 HIGHLY RELEVANT TO ANY SPLICE-ALLELE REASONING, and hedged by the authors themselves: the common alternatively spliced WWOX forms, including the GenBank isoforms 2 and 3, have not been shown to encode viable protein, \"to the best of our knowledge\" and on the basis of Western blot non-detection. A negative by absence of detection, not by measurement.",
+    "snippet": "However, these alternatively spliced forms and others including those reported in GeneBank as isoforms 2 (NM_130791.2) and 3 (NM_130844.2) so far have not been demonstrated to encode viable protein, since they are not detected by Western blot to the best of our knowledge.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24932569_Aldaz2014_efetch.xml",
+    "anchor": "Section 3, paragraph 4",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The enzymatic premise, unchanged since the gene was cloned and stated twice in this review: the SDR substrate is unknown. Any metabolic mechanism attributed to WWOX enzymatic activity rests on an unidentified substrate.",
+    "snippet": "The SDR is an enzymatic domain that is predicted to carry out NADP(H)-dependent dehydrogenase reactions with yet to be identified substrates.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24932569_Aldaz2014_efetch.xml",
+    "anchor": "Section 8.1, paragraph 1, last sentence",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "RESTATEMENT of refs 62-63 for the WW1 binding rule (PPxY, Group I). The review is a faithful conduit here, and this is the chemistry that licenses reading PPxY-motif interactors as candidate WW1 partners.",
+    "snippet": "We and others demonstrated that WWOX WW1 is a Group I WW domain that specifically binds peptides containing the consensus PPxY motif (62, 63).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24932569_Aldaz2014_efetch.xml",
+    "anchor": "Section 8.1, paragraph 4",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "FIGURE 1, inspected at native resolution (1428x254): the domain bar — WW1 19-49 with W22 and W44, WW2 60-90 with W63 and Y85, SDR 124-407, with the 130TGANSGIG137 and 293YNRSK297 catalytic motifs and S281 marked. It carries the Y85 substitution that makes WW2 non-canonical, which the text states.",
+    "snippet": "Visual attestation of Figure 1: single domain bar, labels W22, W44, W63, Y85, 130TGANSGIG137, S281, 293YNRSK297, boundaries 19, 49, 60, 90, 124, 407.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID24932569/pdf_p21_x87.jpeg",
+    "anchor": "Figure 1 (PDF p. 21), native embedded JPEG 1428x254",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "FIGURE 7, inspected at native resolution (1910x367): lollipop plot of the 44 somatic mutations along the domain bar. Almost every marker falls in the SDR domain; only three sit in or before the WW region (R25*, G49V, R54*, the last two in red). The clustering is not tested for significance anywhere in the paper, and the panel carries no statistic.",
+    "snippet": "Visual attestation of Figure 7: lollipop mutation plot over the WW-WW-SDR bar, dense markers across the SDR and three markers at the N-terminus (R25*, G49V, R54*), nonsense mutations in red.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID24932569/pdf_p27_x118.jpeg",
+    "anchor": "Figure 7 (PDF p. 27), native embedded JPEG 1910x367",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "THE REVIEW'S OWN CLOSING LIMIT on the CNS question, which is the ceiling for anything this paper licenses about a WWOX encephalopathy: the mechanism is undefined.",
+    "snippet": "The mechanisms on how loss of WWOX function causes such severe neurological syndromes remain to be defined.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24932569_Aldaz2014_efetch.xml",
+    "anchor": "Concluding Remarks, last sentence",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "AND ITS CLOSING LIMIT on the enzymology, stated as an open question rather than a finding.",
+    "snippet": "although numerous interacting protein partners have been identified we understand very little on the enzymatic role of WWOX, the true substrate/s of this oxidoreductase remain to be identified",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24932569_Aldaz2014_efetch.xml",
+    "anchor": "Concluding Remarks, paragraph 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   }
+  ]
+ }
+}

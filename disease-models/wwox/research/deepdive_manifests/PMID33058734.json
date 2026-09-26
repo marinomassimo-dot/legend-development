@@ -1,0 +1,1503 @@
+{
+  "schema_version": 2,
+  "pmid": "33058734",
+  "doi": "10.1165/rcmb.2020-0145OC",
+  "pmcid": "PMC7780991",
+  "receipt": "FTR-20260913-33058734-01",
+  "landing": [
+    "FT-178"
+  ],
+  "skills_considered": [
+    {
+      "skill": "legend-deepdive",
+      "used": true,
+      "reason": "The reading pipeline itself: M0 packet, acquisition, section-by-section read, manifest, receipt."
+    },
+    {
+      "skill": "find-fulltext",
+      "used": false,
+      "reason": "Not opened in full: the packet's acquisition procedure was OPEN but the first proof-of-work route won the complete article on the first attempt and a second independent route corroborated it byte-identically, so the tiered cascade had nothing left to resolve."
+    },
+    {
+      "skill": "legend-locator-audit",
+      "used": false,
+      "reason": "None of its four triggers fired: this reading contradicts no persisted locator (no prior manifest exists for this PMID) and it narrows, reverses, corroborates or removes no consolidated baseline claim - the dossier proposes, and any claim-level movement is routed with an R4 precondition rather than taken here."
+    },
+    {
+      "skill": "legend-discovery",
+      "used": false,
+      "reason": "The transferable leads are already captured as locators and as queue entry FT-178; a discovery pass would restate them without adding a lead this manifest does not carry."
+    },
+    {
+      "skill": "legend-hypothesis-forge",
+      "used": false,
+      "reason": "This paper matures no therapeutic lever toward the reference genotype: the tissue is lung, the endpoint is vascular leak, and its one positive inflammatory result is ex vivo in isolated cells."
+    },
+    {
+      "skill": "legend-safety-triage",
+      "used": false,
+      "reason": "No candidate molecule and no SMILES anywhere in this reading; SP600125 appears only as a research-tool JNK inhibitor that failed to rescue."
+    },
+    {
+      "skill": "legend-paperqa",
+      "used": false,
+      "reason": "Refused on principle for this task: it needs an API key and external traffic, and external spend of any kind is a reserved act under LEGEND_CORE 21d that is never mine."
+    }
+  ],
+  "group_assessment": {
+    "total_publications": 19,
+    "publications_on_gene": 4,
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": false,
+    "weighting": "Two different groups sit on this paper and they must be weighted differently. The SENIOR group is Singla's pulmonary/critical-care laboratory at Illinois: 19 publications under 'Singla Sunit'[Full Author Name] and 4 of them on WWOX (measured 2026-09-13) - primary for ARDS and lung endothelial barrier biology, a recent entrant on this gene. The bare 'Singla S'[au] count is 794 and is NOT one person; it is not used. Aldaz, 8th of 13, is primary for the GENE - 66 publications under 'Aldaz C Marcelo'[Full Author Name], 28 on WWOX - and his contribution here is stated in the Methods as a REAGENT, the WWOXflox/flox mouse of reference 24, not as data or analysis (Author Contributions place him under conception/design and manuscript preparation, not data acquisition). NEITHER group is primary for the disease this repository models: nobody on this paper works on WWOX-related neurodevelopmental disease and the word brain does not occur in the article. The consequence cuts in the paper's favour on exactly the part that matters most here: the central result is a NEGATIVE about inflammation produced by the laboratory whose own prior paper (reference 20) reported the positive, so the observation is made against the group's own prior interest and is strengthened by that, while the interpretation - an 'inflammation-independent' mechanism - is the group's hypothesis and is weighted as a hypothesis and not as a result."
+  },
+  "field_density": {
+    "measured_on": "2026-09-13",
+    "method": "NCBI esearch db=pubmed, counts read from esearchresult.count, one query per line, run in this session",
+    "queries": [
+      {
+        "query": "WWOX[all]",
+        "count": 708
+      },
+      {
+        "query": "WWOX[all] AND (\"lung injury\"[all] OR \"acute respiratory distress\"[all] OR ARDS[all])",
+        "count": 6
+      },
+      {
+        "query": "WWOX[all] AND endotheli*[all]",
+        "count": 14
+      },
+      {
+        "query": "WWOX[all] AND (inflammation[all] OR \"NF-kappaB\"[all])",
+        "count": 37
+      },
+      {
+        "query": "WWOX[all] AND (cigarette[all] OR smoke[all] OR smoking[all])",
+        "count": 12
+      },
+      {
+        "query": "WWOX[all] AND zyxin[all]",
+        "count": 1
+      },
+      {
+        "query": "WWOX[all] AND (ventilator[all] OR \"ventilator-induced\"[all] OR VILI[all])",
+        "count": 1
+      },
+      {
+        "query": "WWOX[all] AND (\"e-cigarette\"[all] OR \"electronic cigarette\"[all] OR vaping[all])",
+        "count": 2
+      },
+      {
+        "query": "WWOX[all] AND (permeability[all] OR \"barrier function\"[all])",
+        "count": 3
+      },
+      {
+        "query": "WWOX[all] AND (LPS[all] OR lipopolysaccharide[all] OR sepsis[all])",
+        "count": 4
+      },
+      {
+        "query": "WWOX[all] AND (brain[all] OR neurodevelopmental[all] OR epilepsy[all])",
+        "count": 136
+      },
+      {
+        "query": "zyxin[all] AND (\"lung injury\"[all] OR ARDS[all])",
+        "count": 1
+      }
+    ],
+    "reading": "The intersection this paper occupies is nearly empty and the contrast is the point: 6 records for WWOX and lung injury/ARDS and 14 for WWOX and endothelium, against 136 for WWOX and brain/neurodevelopment/epilepsy, out of 708 WWOX records. In a rare disease a near-empty intersection is a signal and not an absence - but it also means this leg of the axis rests on a handful of papers from one laboratory, and the 2 records for WWOX and e-cigarettes are this paper and its own preprint."
+  },
+  "multihop": {
+    "references_enumerated": 66,
+    "enumeration_method": "Counted off the printed pages 98-99 and independently machine-counted from the text layer: 66 numbered entries, range 1-66, no gaps.",
+    "gene_direct_refs_in_source": [
+      {
+        "ref": 18,
+        "pmid": "16187332",
+        "citation": "Thavathiru E, Ludes-Meyers JH, MacLeod MC, Aldaz CM. Mol Carcinog 2005;44:174-182",
+        "registry": "CORPUS P385 (identity only)"
+      },
+      {
+        "ref": 19,
+        "pmid": "22248280",
+        "citation": "Yang W, et al. Neoplasma 2012;59:216-223",
+        "registry": "CORPUS P386 (identity only)"
+      },
+      {
+        "ref": 20,
+        "pmid": "28283473",
+        "citation": "Singla S, et al. Loss of lung WWOX expression causes neutrophilic inflammation. Am J Physiol Lung Cell Mol Physiol 2017;312:L903-L911",
+        "registry": "CORPUS-STUB-091 (identity only, no receipt) - QUEUED as FT-178"
+      },
+      {
+        "ref": 24,
+        "pmid": "19936220",
+        "citation": "Ludes-Meyers JH, ... Aldaz CM. PLoS One 2009;4:e7775 - the floxed allele this paper's mice carry",
+        "registry": "PAPER 057, complete_fulltext_read receipt FTR-20260806-19936220-01 - already read here"
+      },
+      {
+        "ref": 25,
+        "pmid": "29384700",
+        "citation": "Crotty Alexander LE, et al. Am J Physiol Regul Integr Comp Physiol 2018;314:R834-R847 - the e-cigarette exposure model used here",
+        "registry": "NO RECORD MATCHED in any registry (all seven surfaces searched 2026-09-13)"
+      },
+      {
+        "ref": 39,
+        "pmid": "19708029",
+        "citation": "Del Mare S, Salah Z, Aqeilan RI. J Cell Biochem 2009;108:737-745",
+        "registry": "CORPUS-STUB-017 (identity only)"
+      },
+      {
+        "ref": 40,
+        "pmid": "24932569",
+        "citation": "Aldaz CM, Ferguson BW, Abba MC. Biochim Biophys Acta 2014;1846:188-200",
+        "registry": "CORPUS-STUB-020 (identity only); linked from PAPER 053, DL-MECH-033, DL-MECH-046"
+      },
+      {
+        "ref": 65,
+        "pmid": "26902998",
+        "citation": "Xie C, et al. Sci Rep 2016;6:21716 - WWOX polymorphisms and COPD",
+        "registry": "CORPUS P315 (identity only)"
+      },
+      {
+        "ref": 66,
+        "pmid": "25517572",
+        "citation": "Yang L, et al. COPD 2015;12:494-501 - WWOX CNV-67048 and COPD",
+        "registry": "NO RECORD MATCHED in any registry (all seven surfaces searched 2026-09-13)"
+      }
+    ],
+    "resolved": [
+      {
+        "ref": 18,
+        "pmid": "16187332",
+        "citation": "Thavathiru E, Ludes-Meyers JH, MacLeod MC, Aldaz CM. Mol Carcinog 2005;44:174-182",
+        "registry": "CORPUS P385 (identity only)"
+      },
+      {
+        "ref": 19,
+        "pmid": "22248280",
+        "citation": "Yang W, et al. Neoplasma 2012;59:216-223",
+        "registry": "CORPUS P386 (identity only)"
+      },
+      {
+        "ref": 20,
+        "pmid": "28283473",
+        "citation": "Singla S, et al. Loss of lung WWOX expression causes neutrophilic inflammation. Am J Physiol Lung Cell Mol Physiol 2017;312:L903-L911",
+        "registry": "CORPUS-STUB-091 (identity only, no receipt) - QUEUED as FT-178"
+      },
+      {
+        "ref": 24,
+        "pmid": "19936220",
+        "citation": "Ludes-Meyers JH, ... Aldaz CM. PLoS One 2009;4:e7775 - the floxed allele this paper's mice carry",
+        "registry": "PAPER 057, complete_fulltext_read receipt FTR-20260806-19936220-01 - already read here"
+      },
+      {
+        "ref": 25,
+        "pmid": "29384700",
+        "citation": "Crotty Alexander LE, et al. Am J Physiol Regul Integr Comp Physiol 2018;314:R834-R847 - the e-cigarette exposure model used here",
+        "registry": "NO RECORD MATCHED in any registry (all seven surfaces searched 2026-09-13)"
+      },
+      {
+        "ref": 39,
+        "pmid": "19708029",
+        "citation": "Del Mare S, Salah Z, Aqeilan RI. J Cell Biochem 2009;108:737-745",
+        "registry": "CORPUS-STUB-017 (identity only)"
+      },
+      {
+        "ref": 40,
+        "pmid": "24932569",
+        "citation": "Aldaz CM, Ferguson BW, Abba MC. Biochim Biophys Acta 2014;1846:188-200",
+        "registry": "CORPUS-STUB-020 (identity only); linked from PAPER 053, DL-MECH-033, DL-MECH-046"
+      },
+      {
+        "ref": 65,
+        "pmid": "26902998",
+        "citation": "Xie C, et al. Sci Rep 2016;6:21716 - WWOX polymorphisms and COPD",
+        "registry": "CORPUS P315 (identity only)"
+      },
+      {
+        "ref": 66,
+        "pmid": "25517572",
+        "citation": "Yang L, et al. COPD 2015;12:494-501 - WWOX CNV-67048 and COPD",
+        "registry": "NO RECORD MATCHED in any registry (all seven surfaces searched 2026-09-13)"
+      }
+    ],
+    "queued": [
+      {
+        "queue": "FT-178",
+        "pmid": "28283473",
+        "why": "Reference 20 is this paper's own antecedent and the only source in this corpus for a POSITIVE inflammatory phenotype from lung WWOX loss. This paper cites it five times and every time by contrast. It is CORPUS-STUB-091, identity only, never opened. Reading it is the precondition for saying whether the whole-lung and endothelial models measure the same phenomenon."
+      }
+    ],
+    "not_queued_and_why": "Two gene-direct references resolve to no record on any registry surface - PMID 29384700 (the e-cigarette exposure model this paper uses) and PMID 25517572 (WWOX CNV and COPD). They are named in FT-178's body rather than given entries of their own because no conclusion I draw rests on either; they are corpus gaps, not premises. Of the remaining six, five are identity-only CORPUS records and one, PMID 19936220 (reference 24, the floxed allele), is already read here with receipt FTR-20260806-19936220-01."
+  },
+  "corpus_crossquery": {
+    "hits": 10,
+    "query": "registry_records.py get --theme 'neutrophilic inflammation' --headings-only (2 hits: CORPUS-STUB-091 and LIT-0114) and --theme 'lung injury' --headings-only (10 records: CORPUS-STUB-043, CORPUS-STUB-066, CORPUS-STUB-120, LIT-0067, LIT-0089, LIT-0139 plus 3 reached one hop from FT-074). Asked of the existing corpus: does this repository already hold a lung or endothelial WWOX reading this paper would meet, confirm or contradict. Headings only, deliberately - at M3 this is a dedup and counting query, and reading the records' conclusions belongs to M4b.",
+    "finding": "Every lung-side record reached is a CORPUS stub or a literature-tracking entry - no PAPER record and no receipt. This reading is therefore the FIRST full-text reading of the lung leg of the WWOX inflammation axis in this repository, and the antecedent it argues against is itself unread."
+  },
+  "retraction_check": {
+    "result": "NO retraction, erratum or expression of concern on this PMID, and the two notice routes DISAGREED about what notices exist, so both are recorded. Europe PMC resultType=core commentCorrectionList (2026-09-13) returns exactly two items: 'Comment in' -> PMID 33105088 (an editorial in the same issue, Am J Respir Cell Mol Biol 2021;64(1):10-11, doi 10.1165/rcmb.2020-0444ED) and 'Preprint in' -> PPR187117 (bioRxiv 10.1101/2020.07.13.200832). NCBI ESummary for the same PMID returns an EMPTY commentscorrections field in JSON and no CommentsCorrections block at all in XML, so an ESummary-only check would have reported no notices whatever. A 'Comment in' is a comment and not a correction, and the editorial is not part of this lot. erratum_scope_check.py, re-run once this manifest existed, reports all erratum mentions negated, 1 manifest examined, CLEAN 1 - and its own verdict line says it judges nothing. The article prints no retraction or correction notice on any of its 11 pages.",
+    "routes": [
+      "europepmc resultType=core commentCorrectionList",
+      "ncbi esummary db=pubmed retmode=json",
+      "ncbi esummary db=pubmed retmode=xml",
+      "erratum_scope_check.py --pmid 33058734",
+      "visual inspection of all 11 rendered pages"
+    ],
+    "checked_on": "2026-09-13",
+    "dependencies": {
+      "schema": "retraction_check.dependencies/1",
+      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+      "screened": true,
+      "paper_verdict": "SCREENED_CLEAN",
+      "reference_source": "network",
+      "references_declared": 66,
+      "references_screened": 61,
+      "references_with_doi": 61,
+      "unscreenable": {
+        "UNSCREENABLE_NO_DOI": 5
+      },
+      "flagged": [],
+      "noted": [],
+      "snapshot": {
+        "date": "2026-09-10",
+        "days_since_fetch": 3,
+        "rows": 72476,
+        "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+      },
+      "citing_relation": "No dependency was flagged, so there is no citing_relation to state. 61 of 66 references carried a DOI and were screened against the 2026-09-10 integrity snapshot with zero hits; the 5 UNSCREENABLE_NO_DOI are older pre-DOI citations and their integrity status is unknown rather than clean."
+    },
+    "corrected_items": [],
+    "corrected_items_why": "EMPTY BY FACT, NOT UNDECLARED. There is no erratum, correction, corrigendum or expression of concern on this article, so the set of corrected panels is empty and no locator in this manifest can stand on one. The words 'erratum' and 'correction' appear in this block only inside the statement that none exists and in the names of the tools that were run. Recorded because erratum_scope_check.py selects deliberately widely on those words and then, finding no structured scope, returns SCOPE_UNDECLARED = INSUFFICIENT_DATA rather than assuming clean - which is the correct refusal. I first hypothesised that the OPEN state was a token artefact of the tool's own verdict sentence; the --json run refuted that (status SCOPE_UNDECLARED, CLEAN 0, INSUFFICIENT_DATA 1), so the hypothesis is withdrawn here rather than left standing, and the scope is declared instead of argued about."
+  },
+  "preprint_comparison": {
+    "checked": true,
+    "checked_once": true,
+    "preprint": "PPR187117 / bioRxiv 10.1101/2020.07.13.200832, first published 2020-07-13",
+    "finding": "Checked once, as the contract requires. The two headline quantities are IDENTICAL between preprint abstract and published paper: 47% decrease in WWOX mRNA in current versus former/never smokers, and an average 57% decrease after nicotine-containing e-cigarette vapour. The author list differs by one - Shakir Z appears in the published paper and not in the preprint record - and the title expands 'ARDS' to 'Acute Respiratory Distress Syndrome'. LIMIT DECLARED: this is an abstract-level and metadata-level comparison of the preprint RECORD, not a line-by-line comparison of the preprint full text, which was not retrieved. No difference bearing on any conclusion I draw was found, and I cannot exclude one in sections I did not compare."
+  },
+  "verbatim_locators": {
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC inEPMC=Y, inPMC=Y and fullTextIdList=[PMC7780991], measured 2026-09-13 on both resultType=core and resultType=idlist. So the article IS full-text indexed and these quotes are externally locatable by a third party through the PMC reader. THE QUALIFICATION THAT MATTERS: isOpenAccess=N and the Europe PMC fullTextXML endpoint returns HTTP 404 with 0 bytes, while NCBI efetch db=pmc returns front matter plus an explicit publisher refusal of the full text in XML form. Indexed is therefore NOT the same as machine-retrievable here: an external verifier can read the sentences on the PMC page or in the PDF but cannot fetch a structured surface to match them against, which is exactly why every text locator in this manifest is adjudicated on a page crop.",
+    "entries": [
+      {
+        "proposition": "Human arm, transcript only: lung WWOX mRNA is 47% lower in current smokers than in former/never-smokers, by RT-PCR with GAPDH normalisation. A cross-sectional association in donor lungs, not an intervention.",
+        "snippet": "As shown in Figure 1A, lung WWOX expression was 47% lower in current versus former or never-smokers (P < 0.05).",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID33058734/p04_human_47pct.png",
+        "anchor": "Page 4 rendered at 400 dpi. The PDF text layer is REFUSED (suspicion by absence: zero < > <= >= +/- x - in 59,006 chars) and no structured surface exists, so the DRAWN GLYPH adjudicates (rules 5d/5e); the crop regenerates byte-identically from the fingerprinted PDF by the recipe in disease-models/wwox/research/page_adjudications/PMID33058734/adjudications.json.",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "abstract_anchoring_waived": "The declared surface is a page crop or a figure render, not a text artefact with an extractable abstract, so no abstract_snippet can be matched against it; the abstract of this article is also not an evidentiary surface for any proposition carried out of this reading."
+      },
+      {
+        "proposition": "Mouse e-cigarette arm, transcript only: 3 months of nicotine-containing e-cigarette vapour lowered lung WWOX mRNA by an average 57% versus vehicle. Nicotine-containing vapour only.",
+        "snippet": "Lungs from mice exposed to nicotine-containing e-cigarette vapor exhibited an average 57% decrease in WWOX expression compared with controls (P < 0.05) (Figure 1B).",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID33058734/p04_ecig_57pct.png",
+        "anchor": "Page 4 rendered at 400 dpi. The PDF text layer is REFUSED (suspicion by absence: zero < > <= >= +/- x - in 59,006 chars) and no structured surface exists, so the DRAWN GLYPH adjudicates (rules 5d/5e); the crop regenerates byte-identically from the fingerprinted PDF by the recipe in disease-models/wwox/research/page_adjudications/PMID33058734/adjudications.json.",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "abstract_anchoring_waived": "The declared surface is a page crop or a figure render, not a text artefact with an extractable abstract, so no abstract_snippet can be matched against it; the abstract of this article is also not an evidentiary surface for any proposition carried out of this reading."
+      },
+      {
+        "proposition": "The human material is declined-for-transplant donor lung from a prior trial cohort, analysed as nonhuman-subjects research. Smoking status comes from the donor medical record, so exposure is recorded history and not measured.",
+        "snippet": "Lung tissue specimens were procured from organ donors whose lungs were declined for transplantation as part of the Beta-agonist for Oxygenation in Lung Donors study (33).",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID33058734/p04_donor_lungs.png",
+        "anchor": "Page 4 rendered at 400 dpi. The PDF text layer is REFUSED (suspicion by absence: zero < > <= >= +/- x - in 59,006 chars) and no structured surface exists, so the DRAWN GLYPH adjudicates (rules 5d/5e); the crop regenerates byte-identically from the fingerprinted PDF by the recipe in disease-models/wwox/research/page_adjudications/PMID33058734/adjudications.json.",
+        "panel_text_relation": "text_only",
+        "abstract_anchoring_waived": "The declared surface is a page crop or a figure render, not a text artefact with an extractable abstract, so no abstract_snippet can be matched against it; the abstract of this article is also not an evidentiary surface for any proposition carried out of this reading."
+      },
+      {
+        "proposition": "The whole paper's inference rests on Student's t test or ANOVA at a single threshold, with no correction for multiplicity stated anywhere, despite three cytokines being tested per figure across four figures.",
+        "snippet": "Either a Student's t test or an ANOVA were performed where applicable on all data using GraphPad Prism software. *P < 0.05.",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID33058734/p04_stats.png",
+        "anchor": "Page 4 rendered at 400 dpi. The PDF text layer is REFUSED (suspicion by absence: zero < > <= >= +/- x - in 59,006 chars) and no structured surface exists, so the DRAWN GLYPH adjudicates (rules 5d/5e); the crop regenerates byte-identically from the fingerprinted PDF by the recipe in disease-models/wwox/research/page_adjudications/PMID33058734/adjudications.json.",
+        "panel_text_relation": "text_only",
+        "abstract_anchoring_waived": "The declared surface is a page crop or a figure render, not a text artefact with an extractable abstract, so no abstract_snippet can be matched against it; the abstract of this article is also not an evidentiary surface for any proposition carried out of this reading."
+      },
+      {
+        "proposition": "METHODS specify the transwell assay with 70 kD FITC-dextran read at 2 hours. Both figure legends reporting that same assay disagree - see entries[5] and entries[6] - so one assay is specified three different ways in one paper.",
+        "snippet": "Ten micrograms per milliliter of FITC-labeled dextran (70 kD) was added to the media over the cells along with vehicle, heat-killed MRSA (2 x 10(8) cfu/ml), or LPS (1 microg/ml). After 2 hours, 100 microl of media was extracted from below the transwell insert",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID33058734/p04_methods_70kD.png",
+        "anchor": "Page 4 rendered at 400 dpi. The PDF text layer is REFUSED (suspicion by absence: zero < > <= >= +/- x - in 59,006 chars) and no structured surface exists, so the DRAWN GLYPH adjudicates (rules 5d/5e); the crop regenerates byte-identically from the fingerprinted PDF by the recipe in disease-models/wwox/research/page_adjudications/PMID33058734/adjudications.json.",
+        "panel_text_relation": "text_only",
+        "abstract_anchoring_waived": "The declared surface is a page crop or a figure render, not a text artefact with an extractable abstract, so no abstract_snippet can be matched against it; the abstract of this article is also not an evidentiary surface for any proposition carried out of this reading."
+      },
+      {
+        "proposition": "Figure 1F's legend specifies 3 kD dextran read at 1 hour for the LPS transwell - a different tracer size and a different timepoint from the Methods' 70 kD at 2 hours (entries[4]).",
+        "snippet": "10 microg/ml FITC-labeled dextran (3 kD) was added over the cells along with LPS. After 1 hour, media from below the transwell was analyzed by fluorometry for the presence of FITC.",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID33058734/p05_leg1F_3kD.png",
+        "anchor": "Page 5 rendered at 400 dpi. The PDF text layer is REFUSED (suspicion by absence: zero < > <= >= +/- x - in 59,006 chars) and no structured surface exists, so the DRAWN GLYPH adjudicates (rules 5d/5e); the crop regenerates byte-identically from the fingerprinted PDF by the recipe in disease-models/wwox/research/page_adjudications/PMID33058734/adjudications.json.",
+        "panel_text_relation": "text_only",
+        "abstract_anchoring_waived": "The declared surface is a page crop or a figure render, not a text artefact with an extractable abstract, so no abstract_snippet can be matched against it; the abstract of this article is also not an evidentiary surface for any proposition carried out of this reading."
+      },
+      {
+        "proposition": "Figure 7B's legend specifies 3 kD dextran read at 3 hours for the MRSA transwell - agreeing with Figure 1F on tracer size but on a third timepoint, and disagreeing with the Methods on both.",
+        "snippet": "Then, 10 microg/ml FITC-labeled dextran (3 kD) was added over the cells along with MRSA. After 3 hours, media from below the transwell was analyzed by fluorometry for the presence of FITC.",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID33058734/p09_leg7B_3kD.png",
+        "anchor": "Page 9 rendered at 400 dpi. The PDF text layer is REFUSED (suspicion by absence: zero < > <= >= +/- x - in 59,006 chars) and no structured surface exists, so the DRAWN GLYPH adjudicates (rules 5d/5e); the crop regenerates byte-identically from the fingerprinted PDF by the recipe in disease-models/wwox/research/page_adjudications/PMID33058734/adjudications.json.",
+        "panel_text_relation": "text_only",
+        "abstract_anchoring_waived": "The declared surface is a page crop or a figure render, not a text artefact with an extractable abstract, so no abstract_snippet can be matched against it; the abstract of this article is also not an evidentiary surface for any proposition carried out of this reading."
+      },
+      {
+        "proposition": "The running text attributes the WWOX-silenced TER result to Figure 1C. Figure 1C is a Western blot of human smoker lung; the ECIS/TER experiment is panel E. The scientific result stands - the pointer is wrong by two panels. See entries[22].",
+        "snippet": "As shown in Figure 1C, treatment of WWOX-silenced hLMVECs with LPS resulted in larger decreases in TER compared with wild-type cells.",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID33058734/p04_ter_fig1C.png",
+        "anchor": "Page 4 rendered at 400 dpi. The PDF text layer is REFUSED (suspicion by absence: zero < > <= >= +/- x - in 59,006 chars) and no structured surface exists, so the DRAWN GLYPH adjudicates (rules 5d/5e); the crop regenerates byte-identically from the fingerprinted PDF by the recipe in disease-models/wwox/research/page_adjudications/PMID33058734/adjudications.json.",
+        "panel_text_relation": "text_only",
+        "abstract_anchoring_waived": "The declared surface is a page crop or a figure render, not a text artefact with an extractable abstract, so no abstract_snippet can be matched against it; the abstract of this article is also not an evidentiary surface for any proposition carried out of this reading.",
+        "experimental_context": {
+          "system": "in vitro primary human cell culture",
+          "cell_line": "hLMVEC (human lung microvascular endothelial cells, Lonza)",
+          "genotype": "WWOX-targeting siRNA vs scrambled control siRNA",
+          "treatment": "LPS",
+          "endpoint": "transendothelial electrical resistance (TER) by ECIS",
+          "comparator": "control siRNA"
+        }
+      },
+      {
+        "proposition": "JNK inhibition with SP600125 did NOT rescue barrier function in WWOX-silenced endothelial cells - a negative the authors use to argue the mechanism is not the JNK-dependent proinflammatory pathway their own earlier whole-lung paper reported. The pointer again names Figure 1C where the data are in panel E.",
+        "snippet": "JNK inhibition before LPS resulted in no significant rescue of barrier function toward that of wild-type cells (Figure 1C).",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID33058734/p04_jnk_fig1C.png",
+        "anchor": "Page 4 rendered at 400 dpi. The PDF text layer is REFUSED (suspicion by absence: zero < > <= >= +/- x - in 59,006 chars) and no structured surface exists, so the DRAWN GLYPH adjudicates (rules 5d/5e); the crop regenerates byte-identically from the fingerprinted PDF by the recipe in disease-models/wwox/research/page_adjudications/PMID33058734/adjudications.json.",
+        "panel_text_relation": "text_only",
+        "abstract_anchoring_waived": "The declared surface is a page crop or a figure render, not a text artefact with an extractable abstract, so no abstract_snippet can be matched against it; the abstract of this article is also not an evidentiary surface for any proposition carried out of this reading."
+      },
+      {
+        "proposition": "The transwell flux result is attributed to Figure 1D, which is a Western blot of e-cigarette-exposed mouse lung; the flux bar chart is panel F. See entries[24].",
+        "snippet": "Knockdown of WWOX expression resulted in increased LPS-induced transmonolayer flux of FITC-dextran relative to wild-type monolayers (Figure 1D).",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID33058734/p05_flux_fig1D.png",
+        "anchor": "Page 5 rendered at 400 dpi. The PDF text layer is REFUSED (suspicion by absence: zero < > <= >= +/- x - in 59,006 chars) and no structured surface exists, so the DRAWN GLYPH adjudicates (rules 5d/5e); the crop regenerates byte-identically from the fingerprinted PDF by the recipe in disease-models/wwox/research/page_adjudications/PMID33058734/adjudications.json.",
+        "panel_text_relation": "text_only",
+        "abstract_anchoring_waived": "The declared surface is a page crop or a figure render, not a text artefact with an extractable abstract, so no abstract_snippet can be matched against it; the abstract of this article is also not an evidentiary surface for any proposition carried out of this reading.",
+        "experimental_context": {
+          "system": "in vitro primary human cell culture",
+          "cell_line": "hLMVEC",
+          "genotype": "WWOX-targeting siRNA vs scrambled control",
+          "treatment": "LPS",
+          "endpoint": "transmonolayer FITC-dextran flux",
+          "comparator": "wild-type/control siRNA monolayers"
+        }
+      },
+      {
+        "proposition": "Aldaz's contribution to this paper is a REAGENT, not data: the WWOXflox/flox mouse. He is 8th of 13 authors and the floxed allele he generated (reference 24) is the material both in vivo arms depend on. This is what makes the lot 'Aldaz' without making the experiments his laboratory's.",
+        "snippet": "C57BL/6-WWOXflox/flox mice were donated generously by Dr. C. Marcelo Aldaz, M.D./Ph.D., of MD Anderson Cancer Center at the University of Texas.",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID33058734/p03_aldaz_donated.png",
+        "anchor": "Page 3 rendered at 400 dpi. The PDF text layer is REFUSED (suspicion by absence: zero < > <= >= +/- x - in 59,006 chars) and no structured surface exists, so the DRAWN GLYPH adjudicates (rules 5d/5e); the crop regenerates byte-identically from the fingerprinted PDF by the recipe in disease-models/wwox/research/page_adjudications/PMID33058734/adjudications.json.",
+        "panel_text_relation": "text_only",
+        "abstract_anchoring_waived": "The declared surface is a page crop or a figure render, not a text artefact with an extractable abstract, so no abstract_snippet can be matched against it; the abstract of this article is also not an evidentiary surface for any proposition carried out of this reading."
+      },
+      {
+        "proposition": "The paper itself declares its preprint antecedent, so preprint and published version are linked by the article and not inferred by me.",
+        "snippet": "Some of the results of these studies have been previously reported in the form of a preprint (https://doi.org/10.1101/2020.07.13.200832).",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID33058734/p02_preprint.png",
+        "anchor": "Page 2 rendered at 400 dpi. The PDF text layer is REFUSED (suspicion by absence: zero < > <= >= +/- x - in 59,006 chars) and no structured surface exists, so the DRAWN GLYPH adjudicates (rules 5d/5e); the crop regenerates byte-identically from the fingerprinted PDF by the recipe in disease-models/wwox/research/page_adjudications/PMID33058734/adjudications.json.",
+        "panel_text_relation": "text_only",
+        "abstract_anchoring_waived": "The declared surface is a page crop or a figure render, not a text artefact with an extractable abstract, so no abstract_snippet can be matched against it; the abstract of this article is also not an evidentiary surface for any proposition carried out of this reading."
+      },
+      {
+        "proposition": "A real Cre-only control was run - Cdh5-CreERT2 versus WWOXflox/flox - to exclude an effect of endothelial cre itself on permeability, with no significant difference found. A genuine methodological strength, reported in one sentence.",
+        "snippet": "Initially, C57BL/6-Cdh5-CreERT2 mice were compared with C57BL/6-WWOXflox/flox mice to determine whether endothelial expression of cre had any influence on endothelial cell permeability (35). No significant differences were noted",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID33058734/p06_cre_control.png",
+        "anchor": "Page 6 rendered at 400 dpi. The PDF text layer is REFUSED (suspicion by absence: zero < > <= >= +/- x - in 59,006 chars) and no structured surface exists, so the DRAWN GLYPH adjudicates (rules 5d/5e); the crop regenerates byte-identically from the fingerprinted PDF by the recipe in disease-models/wwox/research/page_adjudications/PMID33058734/adjudications.json.",
+        "panel_text_relation": "text_only",
+        "abstract_anchoring_waived": "The declared surface is a page crop or a figure render, not a text artefact with an extractable abstract, so no abstract_snippet can be matched against it; the abstract of this article is also not an evidentiary surface for any proposition carried out of this reading."
+      },
+      {
+        "proposition": "UNCHALLENGED endothelial WWOX KO mice are indistinguishable from controls: the phenotype requires a second hit, LPS or MRSA. The sentence also explicitly separates this model from the whole-lung knockdown model of reference 20.",
+        "snippet": "Unlike the previously reported observations in whole-lung WWOX knockdown mice (20), there were no significant differences between untreated EC WWOX KO mice and controls.",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID33058734/p06_untreated_nodiff.png",
+        "anchor": "Page 6 rendered at 400 dpi. The PDF text layer is REFUSED (suspicion by absence: zero < > <= >= +/- x - in 59,006 chars) and no structured surface exists, so the DRAWN GLYPH adjudicates (rules 5d/5e); the crop regenerates byte-identically from the fingerprinted PDF by the recipe in disease-models/wwox/research/page_adjudications/PMID33058734/adjudications.json.",
+        "panel_text_relation": "text_only",
+        "abstract_anchoring_waived": "The declared surface is a page crop or a figure render, not a text artefact with an extractable abstract, so no abstract_snippet can be matched against it; the abstract of this article is also not an evidentiary surface for any proposition carried out of this reading."
+      },
+      {
+        "proposition": "THE CENTRAL NEGATIVE, LPS ARM. Inflammatory cytokines in BALF trended up in EC WWOX KO mice and not one reached significance. The paper measures the inflammatory output of endothelial WWOX loss in vivo and does not find it.",
+        "snippet": "Interestingly, although there was a trend toward increased concentrations of inflammatory cytokines in the BALF of EC WWOX KO mice treated with LPS compared with WWOX flox mice, none were statistically significant (Figure 4).",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID33058734/p06_lps_notsig.png",
+        "anchor": "Page 6 rendered at 400 dpi. The PDF text layer is REFUSED (suspicion by absence: zero < > <= >= +/- x - in 59,006 chars) and no structured surface exists, so the DRAWN GLYPH adjudicates (rules 5d/5e); the crop regenerates byte-identically from the fingerprinted PDF by the recipe in disease-models/wwox/research/page_adjudications/PMID33058734/adjudications.json.",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "abstract_anchoring_waived": "The declared surface is a page crop or a figure render, not a text artefact with an extractable abstract, so no abstract_snippet can be matched against it; the abstract of this article is also not an evidentiary surface for any proposition carried out of this reading."
+      },
+      {
+        "proposition": "Figure 4's own legend states the negative in its title and repeats it in its body: the comparison was drawn and it failed.",
+        "snippet": "EC-specific WWOX KO mice do not exhibit greater BAL cytokines during LPS-induced ARDS. (A-C) Bar graphs depict BAL TNFalpha (A), IL-6 (B), and KC (C) concentrations. None of the increases in LPS-treated WWOX KO animals were statistically significantly different than those of LPS-treated controls.",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID33058734/p07_fig4_legend.png",
+        "anchor": "Page 7 rendered at 400 dpi. The PDF text layer is REFUSED (suspicion by absence: zero < > <= >= +/- x - in 59,006 chars) and no structured surface exists, so the DRAWN GLYPH adjudicates (rules 5d/5e); the crop regenerates byte-identically from the fingerprinted PDF by the recipe in disease-models/wwox/research/page_adjudications/PMID33058734/adjudications.json.",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "abstract_anchoring_waived": "The declared surface is a page crop or a figure render, not a text artefact with an extractable abstract, so no abstract_snippet can be matched against it; the abstract of this article is also not an evidentiary surface for any proposition carried out of this reading."
+      },
+      {
+        "proposition": "THE CENTRAL NEGATIVE, MRSA ARM, INDEPENDENTLY OF LPS. The same three cytokines trended up and again none reached significance, in a second and different injury model.",
+        "snippet": "Interestingly, once again, although there was a trend toward increased proinflammatory cytokine (TNFalpha, IL-6, KC) secretion in BALF from MRSA-treated EC WWOX KO animals versus WWOX flox counterparts, these differences were not statistically significant (Figure 6).",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID33058734/p07_mrsa_notsig.png",
+        "anchor": "Page 7 rendered at 400 dpi. The PDF text layer is REFUSED (suspicion by absence: zero < > <= >= +/- x - in 59,006 chars) and no structured surface exists, so the DRAWN GLYPH adjudicates (rules 5d/5e); the crop regenerates byte-identically from the fingerprinted PDF by the recipe in disease-models/wwox/research/page_adjudications/PMID33058734/adjudications.json.",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "abstract_anchoring_waived": "The declared surface is a page crop or a figure render, not a text artefact with an extractable abstract, so no abstract_snippet can be matched against it; the abstract of this article is also not an evidentiary surface for any proposition carried out of this reading."
+      },
+      {
+        "proposition": "The human exposure variable is unquantified: no intensity, no duration. The 47% transcript difference attaches to a binary current-versus-former/never label and supports no dose-response of any kind.",
+        "snippet": "Unfortunately, there are no additional data regarding the intensity or duration of current/prior smoking habits.",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID33058734/p07_smoking_nodata.png",
+        "anchor": "Page 7 rendered at 400 dpi. The PDF text layer is REFUSED (suspicion by absence: zero < > <= >= +/- x - in 59,006 chars) and no structured surface exists, so the DRAWN GLYPH adjudicates (rules 5d/5e); the crop regenerates byte-identically from the fingerprinted PDF by the recipe in disease-models/wwox/research/page_adjudications/PMID33058734/adjudications.json.",
+        "panel_text_relation": "text_only",
+        "abstract_anchoring_waived": "The declared surface is a page crop or a figure render, not a text artefact with an extractable abstract, so no abstract_snippet can be matched against it; the abstract of this article is also not an evidentiary surface for any proposition carried out of this reading."
+      },
+      {
+        "proposition": "Figure 6's legend title says MRSA-induced ARDS while its body describes LPS-treated animals and LPS-treated controls - the comparator the legend names is not the comparator the panel plots, whose axes read PBS and MRSA. See entries[29].",
+        "snippet": "EC-specific WWOX KO mice do not exhibit greater BAL cytokines during MRSA-induced ARDS. (A-C) Bar graphs depict BAL TNFalpha (A), IL-6 (B), and KC (C) concentrations. None of the increases in LPS-treated WWOX KO animals were statistically significantly different than those of LPS-treated controls.",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID33058734/p08_fig6_legend.png",
+        "anchor": "Page 8 rendered at 400 dpi. The PDF text layer is REFUSED (suspicion by absence: zero < > <= >= +/- x - in 59,006 chars) and no structured surface exists, so the DRAWN GLYPH adjudicates (rules 5d/5e); the crop regenerates byte-identically from the fingerprinted PDF by the recipe in disease-models/wwox/research/page_adjudications/PMID33058734/adjudications.json.",
+        "panel_text_relation": "text_only",
+        "abstract_anchoring_waived": "The declared surface is a page crop or a figure render, not a text artefact with an extractable abstract, so no abstract_snippet can be matched against it; the abstract of this article is also not an evidentiary surface for any proposition carried out of this reading.",
+        "experimental_context": {
+          "system": "mouse in vivo",
+          "genotype": "Cdh5-CreERT2/WWOXflox/flox (EC WWOX KO) vs WWOXflox/flox",
+          "treatment": "intratracheal heat-killed USA 300 MRSA 1 x 10(8) cfu, or PBS",
+          "timepoint": "18 hours",
+          "endpoint": "BAL TNFalpha, IL-6, KC by ELISA",
+          "comparator": "MRSA-treated WWOX flox"
+        }
+      },
+      {
+        "proposition": "The authors' own reading of their negative: the mechanism they propose is inflammation-INDEPENDENT. This paper argues against an inflammatory mechanism in this tissue, not for one.",
+        "snippet": "This observation suggests that additional inflammation-independent mechanisms exist by which EC WWOX deficiency may lead to increased vascular leak.",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID33058734/p08_inflam_indep.png",
+        "anchor": "Page 8 rendered at 400 dpi. The PDF text layer is REFUSED (suspicion by absence: zero < > <= >= +/- x - in 59,006 chars) and no structured surface exists, so the DRAWN GLYPH adjudicates (rules 5d/5e); the crop regenerates byte-identically from the fingerprinted PDF by the recipe in disease-models/wwox/research/page_adjudications/PMID33058734/adjudications.json.",
+        "panel_text_relation": "text_only",
+        "abstract_anchoring_waived": "The declared surface is a page crop or a figure render, not a text artefact with an extractable abstract, so no abstract_snippet can be matched against it; the abstract of this article is also not an evidentiary surface for any proposition carried out of this reading."
+      },
+      {
+        "proposition": "Group size for the MRSA arm: twelve animals total, three per arm across four arms, with 'n = 3 independent experiments' stated in the same legend - so whether n=3 counts mice or experiments is ambiguous in the paper's own words.",
+        "snippet": "Six WWOX flox (control) and six WWOX KO mice were treated with intratracheal instillation of either PBS or 1 x 10(8) cfu of USA 300 MRSA (n = 3 per group).",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID33058734/p08_fig5_legend.png",
+        "anchor": "Page 8 rendered at 400 dpi. The PDF text layer is REFUSED (suspicion by absence: zero < > <= >= +/- x - in 59,006 chars) and no structured surface exists, so the DRAWN GLYPH adjudicates (rules 5d/5e); the crop regenerates byte-identically from the fingerprinted PDF by the recipe in disease-models/wwox/research/page_adjudications/PMID33058734/adjudications.json.",
+        "panel_text_relation": "text_only",
+        "abstract_anchoring_waived": "The declared surface is a page crop or a figure render, not a text artefact with an extractable abstract, so no abstract_snippet can be matched against it; the abstract of this article is also not an evidentiary surface for any proposition carried out of this reading."
+      },
+      {
+        "proposition": "The paper declares it does not investigate how cigarette smoke lowers WWOX. The exposure-to-downregulation step is asserted as an association throughout and its mechanism is explicitly left untouched.",
+        "snippet": "The current study also does not pursue the mechanisms of CS-induced WWOX downregulation.",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID33058734/p08_no_mechanism.png",
+        "anchor": "Page 8 rendered at 400 dpi. The PDF text layer is REFUSED (suspicion by absence: zero < > <= >= +/- x - in 59,006 chars) and no structured surface exists, so the DRAWN GLYPH adjudicates (rules 5d/5e); the crop regenerates byte-identically from the fingerprinted PDF by the recipe in disease-models/wwox/research/page_adjudications/PMID33058734/adjudications.json.",
+        "panel_text_relation": "text_only",
+        "abstract_anchoring_waived": "The declared surface is a page crop or a figure render, not a text artefact with an extractable abstract, so no abstract_snippet can be matched against it; the abstract of this article is also not an evidentiary surface for any proposition carried out of this reading."
+      },
+      {
+        "proposition": "Figure 1's panels C and D are the two Western blots (Nonsmokers/Smokers; Vehicle/E-cig Vapor) and the legend describes them correctly. The running text nevertheless cites 'Figure 1C' for the ECIS/TER experiment (entries[7]) and 'Figure 1D' for the transwell flux (entries[9]). The panel lettering QUALIFIES those two text pointers without touching their scientific claims, which panels E and F do support.",
+        "snippet": "(C and D) Representative blots are shown.",
+        "surface": "figure",
+        "artifact": "files/figure_renders/PMID33058734/fig1_panels_CD.png",
+        "anchor": "fig1_panels_CD.png: 600 dpi render of the printed figure region, inspected as an image at native resolution.",
+        "panel_text_relation": "panel_only",
+        "abstract_anchoring_waived": "The declared surface is a page crop or a figure render, not a text artefact with an extractable abstract, so no abstract_snippet can be matched against it; the abstract of this article is also not an evidentiary surface for any proposition carried out of this reading.",
+        "note": "THE COUPLED RELATION THIS ENTRY NEEDS CANNOT BE DECLARED ON THIS PAPER, AND THE REASON IS STRUCTURAL, NOT A CHOICE. panel_qualifies_text must point at a TEXT-surface locator. This article's PDF text layer is refused (suspicion by absence) and no structured surface exists, so EVERY text proposition in this manifest is anchored to a page crop and carries surface 'figure' by necessity. There is therefore no text-surface locator in this manifest for any panel to point at, and the validator correctly refuses the pointer. The relation is real and is stated in this entry's proposition, which names the entry it bears on; what is missing is the machine-checkable pointer, and forcing a different enum value would write a falsehood. Registered as a schema gap of the same class the module's own comment records - 'when no admitted value is true, the defect is the enum' - and reported in the dossier and the session diagnosis rather than smoothed over.",
+        "bears_on": [
+          "entries[7]",
+          "entries[9]"
+        ],
+        "experimental_context": {
+          "system": "human lung tissue and mouse lung tissue (immunoblot)",
+          "treatment": "cigarette smoking history (human); nicotine e-cigarette vapour (mouse)",
+          "endpoint": "WWOX:actin protein by Western blot",
+          "comparator": "nonsmokers; vehicle"
+        }
+      },
+      {
+        "proposition": "Panel E is the ECIS trace and carries the silencing inset the text calls 'inset, Figure 1C'. Read as an image: WWOX siRNA and JNKi+WWOX si both fall below control siRNA and the two WWOX-silenced traces are superimposed on each other, which is the visual form of the JNK non-rescue. Error bars overlap across much of the 6-hour course and NO asterisk appears anywhere on this panel, so the TER difference is shown without a significance mark.",
+        "snippet": "(E) Pulmonary endothelial cells (ECs) were transfected with either a WWOX-targeted or control scrambled siRNA (Dharmacon). A Western blot for WWOX confirms silencing.",
+        "surface": "figure",
+        "artifact": "files/figure_renders/PMID33058734/fig1_panel_E_ecis.png",
+        "anchor": "fig1_panel_E_ecis.png: 600 dpi render of the printed figure region, inspected as an image at native resolution.",
+        "panel_text_relation": "panel_only",
+        "abstract_anchoring_waived": "The declared surface is a page crop or a figure render, not a text artefact with an extractable abstract, so no abstract_snippet can be matched against it; the abstract of this article is also not an evidentiary surface for any proposition carried out of this reading."
+      },
+      {
+        "proposition": "Panel F is the FITC-dextran passage bar chart with a single asterisk over WWOX siRNA - the panel the running text cites as 'Figure 1D' (entries[9]). The effect is real and significant; the citation is off by two panels.",
+        "snippet": "(F) In separate experiments, ECs were grown in a monolayer on transwell inserts containing 3-micron pores.",
+        "surface": "figure",
+        "artifact": "files/figure_renders/PMID33058734/fig1_panel_F_flux.png",
+        "anchor": "fig1_panel_F_flux.png: 600 dpi render of the printed figure region, inspected as an image at native resolution.",
+        "panel_text_relation": "panel_only",
+        "abstract_anchoring_waived": "The declared surface is a page crop or a figure render, not a text artefact with an extractable abstract, so no abstract_snippet can be matched against it; the abstract of this article is also not an evidentiary surface for any proposition carried out of this reading.",
+        "note": "THE COUPLED RELATION THIS ENTRY NEEDS CANNOT BE DECLARED ON THIS PAPER, AND THE REASON IS STRUCTURAL, NOT A CHOICE. panel_qualifies_text must point at a TEXT-surface locator. This article's PDF text layer is refused (suspicion by absence) and no structured surface exists, so EVERY text proposition in this manifest is anchored to a page crop and carries surface 'figure' by necessity. There is therefore no text-surface locator in this manifest for any panel to point at, and the validator correctly refuses the pointer. The relation is real and is stated in this entry's proposition, which names the entry it bears on; what is missing is the machine-checkable pointer, and forcing a different enum value would write a falsehood. Registered as a schema gap of the same class the module's own comment records - 'when no admitted value is true, the defect is the enum' - and reported in the dossier and the session diagnosis rather than smoothed over.",
+        "bears_on": [
+          "entries[9]"
+        ],
+        "experimental_context": {
+          "system": "in vitro primary human cell culture",
+          "cell_line": "hLMVEC",
+          "genotype": "WWOX siRNA vs control siRNA",
+          "treatment": "LPS",
+          "endpoint": "transmonolayer FITC-dextran passage",
+          "comparator": "control siRNA"
+        }
+      },
+      {
+        "proposition": "Knockdown efficiency in sorted lung endothelial cells, read off the panel: WWOX mRNA falls to roughly 0.15 of flox control with an asterisk - about an 85% reduction. It is a knockdown, not a null, and the residual fraction is visible in the panel.",
+        "snippet": "These were grown in culture and analyzed for WWOX expression by RT-PCR (C) and Western blotting (D).",
+        "surface": "figure",
+        "artifact": "files/figure_renders/PMID33058734/fig2_panel_C_knockdown.png",
+        "anchor": "fig2_panel_C_knockdown.png: 600 dpi render of the printed figure region, inspected as an image at native resolution.",
+        "panel_text_relation": "panel_only",
+        "abstract_anchoring_waived": "The declared surface is a page crop or a figure render, not a text artefact with an extractable abstract, so no abstract_snippet can be matched against it; the abstract of this article is also not an evidentiary surface for any proposition carried out of this reading."
+      },
+      {
+        "proposition": "LPS arm read as images: asterisks on the WWOX KO bar in panels A (BAL leukocytes), B (BAL protein) and D (BAL:serum FITC-dextran). In the PBS condition of panel B the KO bar sits slightly BELOW flox, so there is no baseline leak difference in the unchallenged animal - consistent with the text's own statement that untreated KO and control do not differ.",
+        "snippet": "EC-specific WWOX KO mice exhibit greater vascular leak during LPS-induced ARDS.",
+        "surface": "figure",
+        "artifact": "files/figure_renders/PMID33058734/fig3_full.png",
+        "anchor": "fig3_full.png: 600 dpi render of the printed figure region, inspected as an image at native resolution.",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "abstract_anchoring_waived": "The declared surface is a page crop or a figure render, not a text artefact with an extractable abstract, so no abstract_snippet can be matched against it; the abstract of this article is also not an evidentiary surface for any proposition carried out of this reading."
+      },
+      {
+        "proposition": "Read as an image at 600 dpi and re-adjudicated by blind audit at 900 dpi: there is NO asterisk and no significance bracket on ANY bar of panels A, B and C - **twelve bars in this figure**, four per panel (flox and KO at PBS, flox and KO at LPS) across three panels, and TWENTY-FOUR across this figure and Figure 6 together. The absence is the finding, and it is the visual confirmation of the text's 'none were statistically significant' - not a case of significance left unmarked. TWO THINGS STRENGTHEN IT beyond the missing marks: this figure's caption prints NO '*P < 0.05' key at all, unlike Figures 3 and 5, so the absence sits in a figure that defines no significance marker; and the caption title and the Results state the negative in words, so it is asserted and not merely inferred. TWO THINGS QUALIFY IT: the non-significance rests on n = 3 independent experiments, means +/- SD; and it is true of the GENOTYPE contrast only - the LPS-versus-PBS induction is large in every panel. Several PBS bars are degenerate or undrawn in the vector content, so the VISIBLE count is fewer than the nominal twelve.",
+        "snippet": "EC-specific WWOX KO mice do not exhibit greater BAL cytokines during LPS-induced ARDS.",
+        "surface": "figure",
+        "artifact": "files/figure_renders/PMID33058734/fig4_full.png",
+        "anchor": "fig4_full.png: 600 dpi render of the printed figure region, inspected as an image at native resolution.",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "abstract_anchoring_waived": "The declared surface is a page crop or a figure render, not a text artefact with an extractable abstract, so no abstract_snippet can be matched against it; the abstract of this article is also not an evidentiary surface for any proposition carried out of this reading.",
+        "contradicts_locator": {
+          "manifest": "disease-models/wwox/research/deepdive_manifests/PMID33058734.json",
+          "entry": 27,
+          "what_changed": "The bar count was UNDERSTATED at six by counting only the treated-condition bars and ignoring every PBS bar. Each panel carries four bars (flox and KO at PBS, flox and KO at LPS), so the figure carries twelve and the Figure 4 / Figure 6 pair carries twenty-four. Direction unaffected - no asterisk anywhere - so the locator understated the BREADTH of a negative it did not misstate. Added in the same amendment: this caption prints no significance key at all, the negative is stated in words, it rests on n = 3, and it holds for the genotype contrast and not the stimulus effect.",
+          "audit": {
+            "auditors": 1,
+            "verdicts": [
+              "SUPPORTED",
+              "CORRECTED"
+            ],
+            "method": "legend-locator-audit, blind R4: (proposition, snippet, anchor) triples plus source artefacts only; no dossier, no manifest, no reader identity, no candidate, no claim record and NO expected answer; separate agent with no session history, 2026-09-14, task ALDAZ-R4-33058734-20260914, dispatched under ALDAZ-EXEC-20260913. Per-triple verdict on this entry: SUPPORTED on the proposition as a claim - the negative is real - with the embedded BAR COUNT found inaccurate. The auditor counted the bars itself and reported FOUR per panel and TWELVE per figure against the six asserted, reached by extracting filled vector rectangles from the PDF, excluding the six legend swatches per figure by size (5.67 pt squares) and y-position, individuating bars by fill colour (flox 0.30,0.51,0.74; KO 0.76,0.31,0.31) and x-position, then confirming against 900 dpi per-panel renders; a vector-text scan of both figure regions returned ZERO asterisk glyphs. It was explicitly instructed to report its own number whatever it was and not to reconcile toward the triple. Owner check before applying, 2026-09-14: the twelve-per-figure arithmetic independently reproduces what verification wave W4 measured at 600 dpi on a different day by a different method (four bars per panel = flox and KO at PBS and at stimulus, three panels), and that correction had already reached DL-MECH-012, the dossier dispositions and FT-178 while never reaching this manifest. Direction unaffected in every reading: no asterisk anywhere, so the locator UNDERSTATED the breadth of a negative it did not misstate. Amendment applied as a declared revision; the snippet, which is the verbatim caption title, was found accurate and is untouched."
+          }
+        }
+      },
+      {
+        "proposition": "MRSA arm: asterisks on the WWOX KO bar in panel A (BAL leukocytes) and panel B (BAL protein). In PBS the KO bar again sits at or below flox in panel B.",
+        "snippet": "EC-specific WWOX KO mice exhibit greater vascular leak during methicillin-resistant Staphylococcus aureus (MRSA)-induced ARDS.",
+        "surface": "figure",
+        "artifact": "files/figure_renders/PMID33058734/fig5_full.png",
+        "anchor": "fig5_full.png: 600 dpi render of the printed figure region, inspected as an image at native resolution.",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "abstract_anchoring_waived": "The declared surface is a page crop or a figure render, not a text artefact with an extractable abstract, so no abstract_snippet can be matched against it; the abstract of this article is also not an evidentiary surface for any proposition carried out of this reading."
+      },
+      {
+        "proposition": "Read as an image and re-adjudicated by blind audit at 900 dpi: NO asterisk and no significance bracket on ANY bar - **twelve bars in this figure**, four per panel (flox and KO at PBS, flox and KO at MRSA) across three panels - and the x-axes read PBS and MRSA, while this figure's own legend describes LPS-treated animals and LPS-treated controls (entries[18]). The panel QUALIFIES its own legend: the negative result is real for the MRSA experiment, and the comparator the legend names belongs to Figure 4. As in Figure 4, the caption prints NO '*P < 0.05' key at all, the negative is stated in words in the caption title and the Results, it rests on n = 3, and it is true of the GENOTYPE contrast and not of the stimulus effect. Panel B's PBS pair is absent or zero-height in the vector content itself, which is geometry rather than a resolution limit.",
+        "snippet": "EC-specific WWOX KO mice do not exhibit greater BAL cytokines during MRSA-induced ARDS.",
+        "surface": "figure",
+        "artifact": "files/figure_renders/PMID33058734/fig6_full.png",
+        "anchor": "fig6_full.png: 600 dpi render of the printed figure region, inspected as an image at native resolution.",
+        "panel_text_relation": "panel_only",
+        "abstract_anchoring_waived": "The declared surface is a page crop or a figure render, not a text artefact with an extractable abstract, so no abstract_snippet can be matched against it; the abstract of this article is also not an evidentiary surface for any proposition carried out of this reading.",
+        "note": "THE COUPLED RELATION THIS ENTRY NEEDS CANNOT BE DECLARED ON THIS PAPER, AND THE REASON IS STRUCTURAL, NOT A CHOICE. panel_qualifies_text must point at a TEXT-surface locator. This article's PDF text layer is refused (suspicion by absence) and no structured surface exists, so EVERY text proposition in this manifest is anchored to a page crop and carries surface 'figure' by necessity. There is therefore no text-surface locator in this manifest for any panel to point at, and the validator correctly refuses the pointer. The relation is real and is stated in this entry's proposition, which names the entry it bears on; what is missing is the machine-checkable pointer, and forcing a different enum value would write a falsehood. Registered as a schema gap of the same class the module's own comment records - 'when no admitted value is true, the defect is the enum' - and reported in the dossier and the session diagnosis rather than smoothed over.",
+        "bears_on": [
+          "entries[18]"
+        ],
+        "experimental_context": {
+          "system": "mouse in vivo",
+          "genotype": "EC WWOX KO vs WWOX flox",
+          "treatment": "intratracheal heat-killed MRSA, or PBS",
+          "timepoint": "18 hours",
+          "endpoint": "BAL TNFalpha, IL-6, KC",
+          "comparator": "MRSA-treated WWOX flox as plotted, not LPS-treated controls as written in the legend"
+        },
+        "contradicts_locator": {
+          "manifest": "disease-models/wwox/research/deepdive_manifests/PMID33058734.json",
+          "entry": 29,
+          "what_changed": "Same understatement as entries[27] and the same correction: six bars to twelve, four per panel (flox and KO at PBS, flox and KO at MRSA), twenty-four across the pair. The legend-mismatch finding and the bears_on pointer to entries[18] are unchanged. Added: no significance key in the caption, the negative stated in words, n = 3, genotype contrast only, and panel B's PBS pair absent or zero-height in the vector content.",
+          "audit": {
+            "auditors": 1,
+            "verdicts": [
+              "SUPPORTED",
+              "CORRECTED"
+            ],
+            "method": "legend-locator-audit, blind R4: (proposition, snippet, anchor) triples plus source artefacts only; no dossier, no manifest, no reader identity, no candidate, no claim record and NO expected answer; separate agent with no session history, 2026-09-14, task ALDAZ-R4-33058734-20260914, dispatched under ALDAZ-EXEC-20260913. Per-triple verdict on this entry: SUPPORTED on the proposition as a claim - the negative is real - with the embedded BAR COUNT found inaccurate. The auditor counted the bars itself and reported FOUR per panel and TWELVE per figure against the six asserted, reached by extracting filled vector rectangles from the PDF, excluding the six legend swatches per figure by size (5.67 pt squares) and y-position, individuating bars by fill colour (flox 0.30,0.51,0.74; KO 0.76,0.31,0.31) and x-position, then confirming against 900 dpi per-panel renders; a vector-text scan of both figure regions returned ZERO asterisk glyphs. It was explicitly instructed to report its own number whatever it was and not to reconcile toward the triple. Owner check before applying, 2026-09-14: the twelve-per-figure arithmetic independently reproduces what verification wave W4 measured at 600 dpi on a different day by a different method (four bars per panel = flox and KO at PBS and at stimulus, three panels), and that correction had already reached DL-MECH-012, the dossier dispositions and FT-178 while never reaching this manifest. Direction unaffected in every reading: no asterisk anywhere, so the locator UNDERSTATED the breadth of a negative it did not misstate. Amendment applied as a declared revision; the snippet, which is the verbatim caption title, was found accurate and is untouched."
+          }
+        }
+      },
+      {
+        "proposition": "Read as an image: the WWOX KO/PBS trace falls substantially below the WWOX flox/PBS trace, which recovers toward 0.95 by 10 hours while KO/PBS declines to about 0.71. Isolated KO endothelial cells therefore lose resistance relative to control cells WITH NO PATHOGEN at all - a baseline, cell-autonomous barrier difference in culture that the unchallenged in vivo comparison did not show.",
+        "snippet": "(A) The scatter plot depicts changes in TER over the course of 10 hours following introduction of MRSA to the cell culture media.",
+        "surface": "figure",
+        "artifact": "files/figure_renders/PMID33058734/fig7_full.png",
+        "anchor": "fig7_full.png: 600 dpi render of the printed figure region, inspected as an image at native resolution.",
+        "panel_text_relation": "panel_only",
+        "abstract_anchoring_waived": "The declared surface is a page crop or a figure render, not a text artefact with an extractable abstract, so no abstract_snippet can be matched against it; the abstract of this article is also not an evidentiary surface for any proposition carried out of this reading."
+      },
+      {
+        "proposition": "Read as an image: asterisks on the MRSA WWOX KO bar in all three panels - IL-6, KC and MCP-1 - in CULTURE SUPERNATANTS of isolated endothelial cells. This is the one place in the paper where WWOX loss significantly raises inflammatory output, and it is ex vivo in isolated cells rather than in the lung. In panel C the PBS KO bar sits BELOW the PBS flox bar.",
+        "snippet": "ECs isolated from EC WWOX KO mice produce more cytokines during MRSA exposure.",
+        "surface": "figure",
+        "artifact": "files/figure_renders/PMID33058734/fig8_full.png",
+        "anchor": "fig8_full.png: 600 dpi render of the printed figure region, inspected as an image at native resolution.",
+        "panel_text_relation": "panel_only",
+        "abstract_anchoring_waived": "The declared surface is a page crop or a figure render, not a text artefact with an extractable abstract, so no abstract_snippet can be matched against it; the abstract of this article is also not an evidentiary surface for any proposition carried out of this reading."
+      }
+    ],
+    "figure_coverage": {
+      "figures_present": 8,
+      "figures_inspected": 8,
+      "panel_blocks_inspected": "all panels of all 8 figures: 1A-1F, 2A-2D, 3A-3D, 4A-4C, 5A-5C, 6A-6C, 7A-7B, 8A-8C",
+      "basis": "300 dpi renders of all 11 pages plus 600 dpi renders of every figure region, produced this session with declared recipes. No native figure stream was extracted as evidence: pdfimages -list shows the figure pages carry 1-8 rasters each at 200 ppi ALONGSIDE 68-154 vector drawing objects per page, so axes, labels, asterisks and legends are vector text above raster panels, and a raster extraction would have dropped exactly the marks this reading turns on."
+    }
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID33058734_Zeng2021.pdf",
+      "sha256": "d77a7dd2fb94895892acf73995ef5bc3a7078a8eb374283c6396d0492bcff6a5",
+      "kind": "article_binary",
+      "note": "THE ONLY SURFACE THAT EXISTS, AND ITS TEXT LAYER IS REFUSED BY SUSPICION-BY-ABSENCE. PMC deposit PMC7780991, 11 pages. Won twice byte-identically: pmc_pow_fetch.py against PMC /pdf/ at proof-of-work difficulty 4 (nonce 203359), and Europe PMC ?pdf=render. No structured surface: Europe PMC fullTextXML 404 with 0 bytes; efetch db=pmc HTTP 200 with 11,643 bytes of front matter only (<body> absent, 0 <sec>, 0 <fig>) carrying the publisher's explicit XML refusal; PMC article HTML under no User-Agent is a 21,312-byte reCAPTCHA. The derived text layer is NOT declared here and backs NO locator.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7780991/pdf/",
+        "http_method": "GET",
+        "tier": "pmc_pow_fetch_proof_of_work",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-09-13",
+        "derived": false,
+        "result_sha256": "d77a7dd2fb94895892acf73995ef5bc3a7078a8eb374283c6396d0492bcff6a5"
+      }
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID33058734/p04_human_47pct.png",
+      "sha256": "6412d42c9f2e5df2bfbcc553316af1e7e8bdc8589ceac07e8d6618b7b39e7e5f",
+      "kind": "figure",
+      "note": "400 dpi page-adjudication crop, page 4; recipe in disease-models/wwox/research/page_adjudications/PMID33058734/adjudications.json",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID33058734_Zeng2021.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(clip=..., dpi=...)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "6412d42c9f2e5df2bfbcc553316af1e7e8bdc8589ceac07e8d6618b7b39e7e5f"
+      }
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID33058734/p04_ecig_57pct.png",
+      "sha256": "15b5d91a90262ccb1d95d0b76e503abe4e016ba23c1e4a8b52de82ad87d2708a",
+      "kind": "figure",
+      "note": "400 dpi page-adjudication crop, page 4; recipe in disease-models/wwox/research/page_adjudications/PMID33058734/adjudications.json",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID33058734_Zeng2021.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(clip=..., dpi=...)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "15b5d91a90262ccb1d95d0b76e503abe4e016ba23c1e4a8b52de82ad87d2708a"
+      }
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID33058734/p04_donor_lungs.png",
+      "sha256": "eea90931b597f89f35cc0c637c9d8f309fe1ce608a75eb5394d94e402ae8f966",
+      "kind": "figure",
+      "note": "400 dpi page-adjudication crop, page 4; recipe in disease-models/wwox/research/page_adjudications/PMID33058734/adjudications.json",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID33058734_Zeng2021.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(clip=..., dpi=...)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "eea90931b597f89f35cc0c637c9d8f309fe1ce608a75eb5394d94e402ae8f966"
+      }
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID33058734/p04_stats.png",
+      "sha256": "3dab701fecc595a0f341a091fcfa5f15505655a938baa3c93c6a4ff7db4ce70f",
+      "kind": "figure",
+      "note": "400 dpi page-adjudication crop, page 4; recipe in disease-models/wwox/research/page_adjudications/PMID33058734/adjudications.json",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID33058734_Zeng2021.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(clip=..., dpi=...)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "3dab701fecc595a0f341a091fcfa5f15505655a938baa3c93c6a4ff7db4ce70f"
+      }
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID33058734/p04_methods_70kD.png",
+      "sha256": "63b5c5fbdeafd71157d89236eb32efdc689511f7ded8d8996bb96f770ccece13",
+      "kind": "figure",
+      "note": "400 dpi page-adjudication crop, page 4; recipe in disease-models/wwox/research/page_adjudications/PMID33058734/adjudications.json",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID33058734_Zeng2021.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(clip=..., dpi=...)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "63b5c5fbdeafd71157d89236eb32efdc689511f7ded8d8996bb96f770ccece13"
+      }
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID33058734/p05_leg1F_3kD.png",
+      "sha256": "1c7420e7dc9a759286fcd932b62ac16e01bb70f275f123919a4ae34fcb51aa2d",
+      "kind": "figure",
+      "note": "400 dpi page-adjudication crop, page 5; recipe in disease-models/wwox/research/page_adjudications/PMID33058734/adjudications.json",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID33058734_Zeng2021.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(clip=..., dpi=...)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "1c7420e7dc9a759286fcd932b62ac16e01bb70f275f123919a4ae34fcb51aa2d"
+      }
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID33058734/p09_leg7B_3kD.png",
+      "sha256": "77f80dbac9cb926da425105ed70c5eae2347a8567f5e11175f94122952c53c80",
+      "kind": "figure",
+      "note": "400 dpi page-adjudication crop, page 9; recipe in disease-models/wwox/research/page_adjudications/PMID33058734/adjudications.json",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID33058734_Zeng2021.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(clip=..., dpi=...)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "77f80dbac9cb926da425105ed70c5eae2347a8567f5e11175f94122952c53c80"
+      }
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID33058734/p04_ter_fig1C.png",
+      "sha256": "8e17e012081333a2b29c125d3cf01a4afe36acefe2aecb9bf3daed225410d876",
+      "kind": "figure",
+      "note": "400 dpi page-adjudication crop, page 4; recipe in disease-models/wwox/research/page_adjudications/PMID33058734/adjudications.json",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID33058734_Zeng2021.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(clip=..., dpi=...)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "8e17e012081333a2b29c125d3cf01a4afe36acefe2aecb9bf3daed225410d876"
+      }
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID33058734/p04_jnk_fig1C.png",
+      "sha256": "46b08f2e5a69dba41914755040972ba398744211e6ff9293c86b3a33580b2270",
+      "kind": "figure",
+      "note": "400 dpi page-adjudication crop, page 4; recipe in disease-models/wwox/research/page_adjudications/PMID33058734/adjudications.json",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID33058734_Zeng2021.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(clip=..., dpi=...)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "46b08f2e5a69dba41914755040972ba398744211e6ff9293c86b3a33580b2270"
+      }
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID33058734/p05_flux_fig1D.png",
+      "sha256": "634cbdb608a2b20f83018515e8f96130d5538111b417452e661e7fc1238e11b3",
+      "kind": "figure",
+      "note": "400 dpi page-adjudication crop, page 5; recipe in disease-models/wwox/research/page_adjudications/PMID33058734/adjudications.json",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID33058734_Zeng2021.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(clip=..., dpi=...)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "634cbdb608a2b20f83018515e8f96130d5538111b417452e661e7fc1238e11b3"
+      }
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID33058734/p03_aldaz_donated.png",
+      "sha256": "8f0489877b84a90e61dc792d9c6ea73b4c5d2ea47d9057d11c1ec90a6d05156d",
+      "kind": "figure",
+      "note": "400 dpi page-adjudication crop, page 3; recipe in disease-models/wwox/research/page_adjudications/PMID33058734/adjudications.json",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID33058734_Zeng2021.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(clip=..., dpi=...)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "8f0489877b84a90e61dc792d9c6ea73b4c5d2ea47d9057d11c1ec90a6d05156d"
+      }
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID33058734/p02_preprint.png",
+      "sha256": "e7bb7151c22fd6feb94b71189b540aa3a0518506d92cc2baecd6b448a2e6310d",
+      "kind": "figure",
+      "note": "400 dpi page-adjudication crop, page 2; recipe in disease-models/wwox/research/page_adjudications/PMID33058734/adjudications.json",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID33058734_Zeng2021.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(clip=..., dpi=...)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "e7bb7151c22fd6feb94b71189b540aa3a0518506d92cc2baecd6b448a2e6310d"
+      }
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID33058734/p06_cre_control.png",
+      "sha256": "e18ad3efd047115f65da891f4f8d2d8ead3d18b09b046a8199b009ae12465338",
+      "kind": "figure",
+      "note": "400 dpi page-adjudication crop, page 6; recipe in disease-models/wwox/research/page_adjudications/PMID33058734/adjudications.json",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID33058734_Zeng2021.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(clip=..., dpi=...)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "e18ad3efd047115f65da891f4f8d2d8ead3d18b09b046a8199b009ae12465338"
+      }
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID33058734/p06_untreated_nodiff.png",
+      "sha256": "bb422fa815e7ab241280f7addfce02d647ee3937bb002741a82ba2f7b7009bfe",
+      "kind": "figure",
+      "note": "400 dpi page-adjudication crop, page 6; recipe in disease-models/wwox/research/page_adjudications/PMID33058734/adjudications.json",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID33058734_Zeng2021.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(clip=..., dpi=...)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "bb422fa815e7ab241280f7addfce02d647ee3937bb002741a82ba2f7b7009bfe"
+      }
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID33058734/p06_lps_notsig.png",
+      "sha256": "8db6f7c9decbd88e4e444dcc7675b9feebbeb9d2686283dd1cd0c83437d48d9c",
+      "kind": "figure",
+      "note": "400 dpi page-adjudication crop, page 6; recipe in disease-models/wwox/research/page_adjudications/PMID33058734/adjudications.json",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID33058734_Zeng2021.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(clip=..., dpi=...)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "8db6f7c9decbd88e4e444dcc7675b9feebbeb9d2686283dd1cd0c83437d48d9c"
+      }
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID33058734/p07_fig4_legend.png",
+      "sha256": "3c406f6debc81ed170282316112b246a17f55af08b88822eb9d4ade78cba5fff",
+      "kind": "figure",
+      "note": "400 dpi page-adjudication crop, page 7; recipe in disease-models/wwox/research/page_adjudications/PMID33058734/adjudications.json",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID33058734_Zeng2021.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(clip=..., dpi=...)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "3c406f6debc81ed170282316112b246a17f55af08b88822eb9d4ade78cba5fff"
+      }
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID33058734/p07_mrsa_notsig.png",
+      "sha256": "99856f719947fb82619dfdbd96a22de0c2853c940a7e3eb4c7c8548e89fc30dc",
+      "kind": "figure",
+      "note": "400 dpi page-adjudication crop, page 7; recipe in disease-models/wwox/research/page_adjudications/PMID33058734/adjudications.json",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID33058734_Zeng2021.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(clip=..., dpi=...)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "99856f719947fb82619dfdbd96a22de0c2853c940a7e3eb4c7c8548e89fc30dc"
+      }
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID33058734/p07_smoking_nodata.png",
+      "sha256": "14af33fe552f5fd69b77a5b0a9c3b0b62ac42de1b655cefdce487e86e0242103",
+      "kind": "figure",
+      "note": "400 dpi page-adjudication crop, page 7; recipe in disease-models/wwox/research/page_adjudications/PMID33058734/adjudications.json",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID33058734_Zeng2021.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(clip=..., dpi=...)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "14af33fe552f5fd69b77a5b0a9c3b0b62ac42de1b655cefdce487e86e0242103"
+      }
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID33058734/p08_fig6_legend.png",
+      "sha256": "f16f1d5a375cc4174d5859c626dbe2cb3dd19307541eab12ff2b600a16182f13",
+      "kind": "figure",
+      "note": "400 dpi page-adjudication crop, page 8; recipe in disease-models/wwox/research/page_adjudications/PMID33058734/adjudications.json",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID33058734_Zeng2021.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(clip=..., dpi=...)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "f16f1d5a375cc4174d5859c626dbe2cb3dd19307541eab12ff2b600a16182f13"
+      }
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID33058734/p08_inflam_indep.png",
+      "sha256": "97719ccfd2a1987a553f02c1fa3f0d9aca8eee3e37d593988a6b2e585d2fef55",
+      "kind": "figure",
+      "note": "400 dpi page-adjudication crop, page 8; recipe in disease-models/wwox/research/page_adjudications/PMID33058734/adjudications.json",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID33058734_Zeng2021.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(clip=..., dpi=...)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "97719ccfd2a1987a553f02c1fa3f0d9aca8eee3e37d593988a6b2e585d2fef55"
+      }
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID33058734/p08_fig5_legend.png",
+      "sha256": "9cff3a69a4fb022537d7ae1d446f9ee47ee8848a827dfe45bf0061df74dda6b7",
+      "kind": "figure",
+      "note": "400 dpi page-adjudication crop, page 8; recipe in disease-models/wwox/research/page_adjudications/PMID33058734/adjudications.json",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID33058734_Zeng2021.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(clip=..., dpi=...)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "9cff3a69a4fb022537d7ae1d446f9ee47ee8848a827dfe45bf0061df74dda6b7"
+      }
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID33058734/p08_no_mechanism.png",
+      "sha256": "ba600fe9d92dc840da52d193aa754fdb2b5cab95578826c9c41aa500b7ec6dd4",
+      "kind": "figure",
+      "note": "400 dpi page-adjudication crop, page 8; recipe in disease-models/wwox/research/page_adjudications/PMID33058734/adjudications.json",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID33058734_Zeng2021.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(clip=..., dpi=...)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "ba600fe9d92dc840da52d193aa754fdb2b5cab95578826c9c41aa500b7ec6dd4"
+      }
+    },
+    {
+      "path": "files/figure_renders/PMID33058734/fig1_full.png",
+      "sha256": "158e481169ef125b76b9d65dca144abff7bff18353c7e1011896811b8270ef45",
+      "kind": "figure",
+      "note": "600 dpi figure-region render, inspected as an image",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID33058734_Zeng2021.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(clip=..., dpi=...)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "158e481169ef125b76b9d65dca144abff7bff18353c7e1011896811b8270ef45"
+      }
+    },
+    {
+      "path": "files/figure_renders/PMID33058734/fig1_panel_E_ecis.png",
+      "sha256": "2423820bc4e4474a6955df747d18ac7e8a0457b700e2c9e9c333f711572c7d37",
+      "kind": "figure",
+      "note": "600 dpi figure-region render, inspected as an image",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID33058734_Zeng2021.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(clip=..., dpi=...)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "2423820bc4e4474a6955df747d18ac7e8a0457b700e2c9e9c333f711572c7d37"
+      }
+    },
+    {
+      "path": "files/figure_renders/PMID33058734/fig1_panel_F_flux.png",
+      "sha256": "68ae9b54e55be0c8d5eda2fc964681bdf126291e7a9dc00acc85c0d0d3ae9c38",
+      "kind": "figure",
+      "note": "600 dpi figure-region render, inspected as an image",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID33058734_Zeng2021.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(clip=..., dpi=...)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "68ae9b54e55be0c8d5eda2fc964681bdf126291e7a9dc00acc85c0d0d3ae9c38"
+      }
+    },
+    {
+      "path": "files/figure_renders/PMID33058734/fig1_panels_CD.png",
+      "sha256": "b3495b9ff602f0d704abd3068db64f060ba8b29dac36f73d880370f769f903e2",
+      "kind": "figure",
+      "note": "600 dpi figure-region render, inspected as an image",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID33058734_Zeng2021.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(clip=..., dpi=...)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "b3495b9ff602f0d704abd3068db64f060ba8b29dac36f73d880370f769f903e2"
+      }
+    },
+    {
+      "path": "files/figure_renders/PMID33058734/fig2_full.png",
+      "sha256": "7ba05bd56cd7824e4059c438b690b32c15f40f41d09eae2c65fbeafbedf2a213",
+      "kind": "figure",
+      "note": "600 dpi figure-region render, inspected as an image",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID33058734_Zeng2021.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(clip=..., dpi=...)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "7ba05bd56cd7824e4059c438b690b32c15f40f41d09eae2c65fbeafbedf2a213"
+      }
+    },
+    {
+      "path": "files/figure_renders/PMID33058734/fig2_panel_C_knockdown.png",
+      "sha256": "2951c5ecce81a60827a0518d114b4c07ec75551eb784c5938ddb2f14fc412ecb",
+      "kind": "figure",
+      "note": "600 dpi figure-region render, inspected as an image",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID33058734_Zeng2021.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(clip=..., dpi=...)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "2951c5ecce81a60827a0518d114b4c07ec75551eb784c5938ddb2f14fc412ecb"
+      }
+    },
+    {
+      "path": "files/figure_renders/PMID33058734/fig3_full.png",
+      "sha256": "b5da46c9602d729b8560e774f40e0b831f2b162c46f053cc0c41e40f5813c65b",
+      "kind": "figure",
+      "note": "600 dpi figure-region render, inspected as an image",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID33058734_Zeng2021.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(clip=..., dpi=...)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "b5da46c9602d729b8560e774f40e0b831f2b162c46f053cc0c41e40f5813c65b"
+      }
+    },
+    {
+      "path": "files/figure_renders/PMID33058734/fig4_full.png",
+      "sha256": "5be0b7aa685f9380ecceddeb9988b41988e052638a40e81af51d8e38829fdb8d",
+      "kind": "figure",
+      "note": "600 dpi figure-region render, inspected as an image",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID33058734_Zeng2021.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(clip=..., dpi=...)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "5be0b7aa685f9380ecceddeb9988b41988e052638a40e81af51d8e38829fdb8d"
+      }
+    },
+    {
+      "path": "files/figure_renders/PMID33058734/fig5_full.png",
+      "sha256": "3903a0afc68b539e9f4ed2cf745792a20c842d2049672e5afc42d4524861bbd3",
+      "kind": "figure",
+      "note": "600 dpi figure-region render, inspected as an image",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID33058734_Zeng2021.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(clip=..., dpi=...)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "3903a0afc68b539e9f4ed2cf745792a20c842d2049672e5afc42d4524861bbd3"
+      }
+    },
+    {
+      "path": "files/figure_renders/PMID33058734/fig6_full.png",
+      "sha256": "ddfeb529426a25d5be34995800ccd77065520d5d970cf5bbb4c36fd298218fd6",
+      "kind": "figure",
+      "note": "600 dpi figure-region render, inspected as an image",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID33058734_Zeng2021.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(clip=..., dpi=...)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "ddfeb529426a25d5be34995800ccd77065520d5d970cf5bbb4c36fd298218fd6"
+      }
+    },
+    {
+      "path": "files/figure_renders/PMID33058734/fig7_full.png",
+      "sha256": "b1b186655d00edd85cd983518f1852b26c0e80c170333d1a510ee20cfbfaa7e2",
+      "kind": "figure",
+      "note": "600 dpi figure-region render, inspected as an image",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID33058734_Zeng2021.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(clip=..., dpi=...)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "b1b186655d00edd85cd983518f1852b26c0e80c170333d1a510ee20cfbfaa7e2"
+      }
+    },
+    {
+      "path": "files/figure_renders/PMID33058734/fig8_full.png",
+      "sha256": "d66b6c154d41876eb5ca452cba40c851609b90997084a2812aead22a11465736",
+      "kind": "figure",
+      "note": "600 dpi figure-region render, inspected as an image",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID33058734_Zeng2021.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(clip=..., dpi=...)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "d66b6c154d41876eb5ca452cba40c851609b90997084a2812aead22a11465736"
+      }
+    },
+    {
+      "path": "files/page_renders/PMID33058734/p-01.png",
+      "sha256": "7719bc801f563ef66647ffb9b9f183ca9d62d1679ddfb462c058d77b333a7bf3",
+      "kind": "figure",
+      "note": "300 dpi whole-page render; the surface the article was read on section by section",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID33058734_Zeng2021.pdf",
+        "extractor": {
+          "name": "pdftoppm (poppler)",
+          "version": "24.02.0",
+          "call": "pdftoppm -r 300 -png",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "7719bc801f563ef66647ffb9b9f183ca9d62d1679ddfb462c058d77b333a7bf3"
+      }
+    },
+    {
+      "path": "files/page_renders/PMID33058734/p-02.png",
+      "sha256": "8039855dce01c7ab92f557700894a8e0d808ac9f86211a01597abdb8b292c611",
+      "kind": "figure",
+      "note": "300 dpi whole-page render; the surface the article was read on section by section",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID33058734_Zeng2021.pdf",
+        "extractor": {
+          "name": "pdftoppm (poppler)",
+          "version": "24.02.0",
+          "call": "pdftoppm -r 300 -png",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "8039855dce01c7ab92f557700894a8e0d808ac9f86211a01597abdb8b292c611"
+      }
+    },
+    {
+      "path": "files/page_renders/PMID33058734/p-03.png",
+      "sha256": "a8c1ded0f43bd9bceb7a4beabfbde0041005edce1f14886d4e0a14e52a898b0d",
+      "kind": "figure",
+      "note": "300 dpi whole-page render; the surface the article was read on section by section",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID33058734_Zeng2021.pdf",
+        "extractor": {
+          "name": "pdftoppm (poppler)",
+          "version": "24.02.0",
+          "call": "pdftoppm -r 300 -png",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "a8c1ded0f43bd9bceb7a4beabfbde0041005edce1f14886d4e0a14e52a898b0d"
+      }
+    },
+    {
+      "path": "files/page_renders/PMID33058734/p-04.png",
+      "sha256": "80e0e5576337459b78bbacfd7fa1ef3d10fcd5e868031cf0541337378354ab64",
+      "kind": "figure",
+      "note": "300 dpi whole-page render; the surface the article was read on section by section",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID33058734_Zeng2021.pdf",
+        "extractor": {
+          "name": "pdftoppm (poppler)",
+          "version": "24.02.0",
+          "call": "pdftoppm -r 300 -png",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "80e0e5576337459b78bbacfd7fa1ef3d10fcd5e868031cf0541337378354ab64"
+      }
+    },
+    {
+      "path": "files/page_renders/PMID33058734/p-05.png",
+      "sha256": "54b3a7da3baf3f2e57dee6839b9cb9d23055bee377492704258da66c7d30d4b6",
+      "kind": "figure",
+      "note": "300 dpi whole-page render; the surface the article was read on section by section",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID33058734_Zeng2021.pdf",
+        "extractor": {
+          "name": "pdftoppm (poppler)",
+          "version": "24.02.0",
+          "call": "pdftoppm -r 300 -png",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "54b3a7da3baf3f2e57dee6839b9cb9d23055bee377492704258da66c7d30d4b6"
+      }
+    },
+    {
+      "path": "files/page_renders/PMID33058734/p-06.png",
+      "sha256": "9957d88de32e6913a8f4ca9a76c2607be24c10909aeb62d6a7a1479f03d7c8fe",
+      "kind": "figure",
+      "note": "300 dpi whole-page render; the surface the article was read on section by section",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID33058734_Zeng2021.pdf",
+        "extractor": {
+          "name": "pdftoppm (poppler)",
+          "version": "24.02.0",
+          "call": "pdftoppm -r 300 -png",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "9957d88de32e6913a8f4ca9a76c2607be24c10909aeb62d6a7a1479f03d7c8fe"
+      }
+    },
+    {
+      "path": "files/page_renders/PMID33058734/p-07.png",
+      "sha256": "1881e7631f6d3542d769d9b7c3e59766571c34508ad4958e847877c3477543b1",
+      "kind": "figure",
+      "note": "300 dpi whole-page render; the surface the article was read on section by section",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID33058734_Zeng2021.pdf",
+        "extractor": {
+          "name": "pdftoppm (poppler)",
+          "version": "24.02.0",
+          "call": "pdftoppm -r 300 -png",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "1881e7631f6d3542d769d9b7c3e59766571c34508ad4958e847877c3477543b1"
+      }
+    },
+    {
+      "path": "files/page_renders/PMID33058734/p-08.png",
+      "sha256": "31f6dda2df9b6a8ee9417d0de524473977bcb660bae62d1e8baf10e86ea2dc49",
+      "kind": "figure",
+      "note": "300 dpi whole-page render; the surface the article was read on section by section",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID33058734_Zeng2021.pdf",
+        "extractor": {
+          "name": "pdftoppm (poppler)",
+          "version": "24.02.0",
+          "call": "pdftoppm -r 300 -png",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "31f6dda2df9b6a8ee9417d0de524473977bcb660bae62d1e8baf10e86ea2dc49"
+      }
+    },
+    {
+      "path": "files/page_renders/PMID33058734/p-09.png",
+      "sha256": "a2b4b955f7b5935207fdee5a808834eb0cd2886ad708793d3601c47cd5e2edd3",
+      "kind": "figure",
+      "note": "300 dpi whole-page render; the surface the article was read on section by section",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID33058734_Zeng2021.pdf",
+        "extractor": {
+          "name": "pdftoppm (poppler)",
+          "version": "24.02.0",
+          "call": "pdftoppm -r 300 -png",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "a2b4b955f7b5935207fdee5a808834eb0cd2886ad708793d3601c47cd5e2edd3"
+      }
+    },
+    {
+      "path": "files/page_renders/PMID33058734/p-10.png",
+      "sha256": "b9003d46e3010ac4ce8b6bbcddeb235a22b8d3f8d043b6920bae7309e96db322",
+      "kind": "figure",
+      "note": "300 dpi whole-page render; the surface the article was read on section by section",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID33058734_Zeng2021.pdf",
+        "extractor": {
+          "name": "pdftoppm (poppler)",
+          "version": "24.02.0",
+          "call": "pdftoppm -r 300 -png",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "b9003d46e3010ac4ce8b6bbcddeb235a22b8d3f8d043b6920bae7309e96db322"
+      }
+    },
+    {
+      "path": "files/page_renders/PMID33058734/p-11.png",
+      "sha256": "70e8d10cfac086c681a22e1c0bc0db594dc16d03ab565499f0e9abf2cff4efd4",
+      "kind": "figure",
+      "note": "300 dpi whole-page render; the surface the article was read on section by section",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID33058734_Zeng2021.pdf",
+        "extractor": {
+          "name": "pdftoppm (poppler)",
+          "version": "24.02.0",
+          "call": "pdftoppm -r 300 -png",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "70e8d10cfac086c681a22e1c0bc0db594dc16d03ab565499f0e9abf2cff4efd4"
+      }
+    }
+  ],
+  "supplement_ascertained": {
+    "exists": false,
+    "conclusion": "NO supplementary material exists for this article - ascertained, not assumed.",
+    "evidence": [
+      "Europe PMC resultType=core for EXT_ID:33058734 reports hasSuppl=N (measured 2026-09-13).",
+      "The article's own text carries exactly ONE occurrence of the string 'supplement' across all 11 pages, and it is 'endothelial growth media containing supplemental growth factors' in the Cell Culture methods - not a data supplement.",
+      "No 'Data Supplement', 'ONLINE SUPPLEMENT', 'E1' or supplementary-figure reference appears anywhere in the text; the article's only online pointer is 'Author disclosures are available with the text of this article at www.atsjournals.org', which is a disclosure form and not data.",
+      "All 11 rendered pages were inspected as images; no supplementary listing is printed on any of them.",
+      "Every figure the paper cites is printed in the article body: the text's highest figure reference is Figure 8 and all 8 figures are present, so no figure is deferred to a supplement."
+    ],
+    "why_declared": "framework/scripts/paper_packet.py reports the binary_supplement procedure as '??' (unknown), and unknown is explicitly not 'not needed'. This field moves it to ascertained-absent on data, so a later reader does not have to re-open the question or guess from hasSuppl alone."
+  }
+}

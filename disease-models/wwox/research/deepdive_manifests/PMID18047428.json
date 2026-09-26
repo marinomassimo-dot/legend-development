@@ -1,0 +1,767 @@
+{
+ "schema_version": 2,
+ "pmid": "18047428",
+ "doi": "10.1089/thy.2007.0232",
+ "receipt": "FTR-20260914-18047428-01",
+ "landing": [
+  "FTR-20260914-18047428-01",
+  "fulltext_dossiers/PMID18047428.md",
+  "CC-20260914-18047428-01"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Run inline and measured: PMC article HTML behind a reCAPTCHA interstitial under HTTP 200 for three requests and served on a 75 s back-off; Europe PMC fullTextXML 404; efetch shell refusing XML; ptpmcrender 403; manuscript PDF via pmc_pow_fetch.py."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline: the grayscale-figure fidelity limit and the Figure 2 value check need the pixels."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered inside the reading: first contact, no persisted locator for this PMID. Threshold re-checked after canon comparison."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Declined inside a blind primary read."
+  },
+  {
+   "skill": "legend-paperqa",
+   "used": false,
+   "reason": "Declined: external API key and traffic not authorised, and a RAG answer is not a reading."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 83,
+  "publications_on_gene": 1,
+  "counts_measured": "PubMed esearch 2026-09-14: first and reprint author 'Dias EP[au]' 83, with WWOX 1; senior 'De Marco L[au]' 533, with WWOX 5; 'Gomez RS[au] AND WWOX' 6; 'Aldaz CM[au] AND WWOX' 38. Author-name counts are not disambiguated.",
+  "research_type": "descriptive_clinical",
+  "output_kind": "primary_research",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Descriptive clinical: an endocrinology and pathology group in Belo Horizonte with the Aldaz laboratory credited for the grant; one pathologist scored a surgical IHC series. The histopathological classification is native competence and weighs as observation; the IHC grades are single-reader, unblinded-as-stated semi-quantitative calls whose figure cannot be adjudicated. The lineage and proliferation interpretations are hypotheses. No disease expertise for WWOX-DEE."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "WWOX",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 708
+   },
+   {
+    "query": "WWOX AND thyroid",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 6
+   },
+   {
+    "query": "WWOX AND papillary thyroid",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 2
+   },
+   {
+    "query": "WWOX AND immunohistochemistry",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 80
+   }
+  ],
+  "note": "Field sizes, not reading coverage."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 19,
+  "enumeration_method": "Enumerated from the fingerprinted PMC HTML reference list: 19 entries, 18 with a PubMed link (ref 15, a textbook chapter, has none). Gene-direct by script on reference text: 11.",
+  "gene_direct_count": 11,
+  "gene_direct_refs_in_source": [
+   "10786676",
+   "11979549",
+   "10861292",
+   "15982416",
+   "17360458",
+   "15073846",
+   "15692750",
+   "16360296",
+   "16941225",
+   "16152610",
+   "16419058"
+  ],
+  "resolved": [
+   "15982416",
+   "17360458",
+   "15692750",
+   "16941225"
+  ],
+  "queued": [
+   {
+    "pmid": "10786676",
+    "queue": "not queued by this actor: routed to the orchestrator in CC-20260914-18047428-01, because this contract does not own the queue file",
+    "reason": "Gene-direct reference with no complete receipt in this corpus (fulltext_receipts.py status exit 1, 2026-09-14)."
+   },
+   {
+    "pmid": "11979549",
+    "queue": "not queued by this actor: routed to the orchestrator in CC-20260914-18047428-01, because this contract does not own the queue file",
+    "reason": "Gene-direct reference with no complete receipt in this corpus (fulltext_receipts.py status exit 1, 2026-09-14)."
+   },
+   {
+    "pmid": "10861292",
+    "queue": "not queued by this actor: routed to the orchestrator in CC-20260914-18047428-01, because this contract does not own the queue file",
+    "reason": "Gene-direct reference with no complete receipt in this corpus (fulltext_receipts.py status exit 1, 2026-09-14)."
+   },
+   {
+    "pmid": "15073846",
+    "queue": "not queued by this actor: routed to the orchestrator in CC-20260914-18047428-01, because this contract does not own the queue file",
+    "reason": "Gene-direct reference with no complete receipt in this corpus (fulltext_receipts.py status exit 1, 2026-09-14)."
+   },
+   {
+    "pmid": "16360296",
+    "queue": "not queued by this actor: routed to the orchestrator in CC-20260914-18047428-01, because this contract does not own the queue file",
+    "reason": "Gene-direct reference with no complete receipt in this corpus (fulltext_receipts.py status exit 1, 2026-09-14)."
+   },
+   {
+    "pmid": "16152610",
+    "queue": "not queued by this actor: routed to the orchestrator in CC-20260914-18047428-01, because this contract does not own the queue file",
+    "reason": "Pimenta 2006, this group's OSCC paper and the stated rationale for studying thyroid; read in this same task, receipt not yet appended."
+   },
+   {
+    "pmid": "16419058",
+    "queue": "not queued by this actor: routed to the orchestrator in CC-20260914-18047428-01, because this contract does not own the queue file",
+    "reason": "Sbrana 2006, FRA3B/FRA16D expression in lymphocytes of thyroid-cancer patients, the only thyroid-specific antecedent."
+   }
+  ],
+  "resolved_depth_declaration": "RESOLVED MEANS A PERSISTED complete_fulltext_read RECEIPT (fulltext_receipts.py status --pmid, 2026-09-14) and nothing more; no registry or dossier content opened. 4 of 11 gene-direct references resolve: 15982416, 17360458, 15692750, 16941225 - including the normal-tissue expression paper (16941225) that the Introduction's neural-expression sentence cites. The group's own OSCC paper (16152610) was read to completion in this task but has no appended receipt yet, so it is not counted."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Technical only: fulltext_receipts.py status --pmid for 18047428 before reading (exit 1, no events) and for each of the 18 reference PMIDs. No claim, registry, dossier or candidate content opened before the dossier froze.",
+  "hits": 4,
+  "finding": "4 of 18 referenced PMIDs carry a complete receipt, all gene-direct."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-09-14",
+  "route": "NCBI esummary db=pubmed retmode=json for 18047428, 2026-09-14T19:44Z",
+  "result": "pubtype Journal Article; Research Support, N.I.H., Extramural; Research Support, Non-U.S. Gov't. commentscorrections absent.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "UNSCREENABLE_NO_REFERENCE_LIST",
+   "reference_source": "network",
+   "references_declared": 0,
+   "references_screened": 0,
+   "references_with_doi": 0,
+   "schema": "retraction_check.dependencies/1",
+   "screened": false,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 4,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID18047428_Dias2007.html",
+   "kind": "article_text",
+   "note": "PMC article page of PMC4150466 (NIH author manuscript NIHMS222062). The request at 2026-09-14T19:45Z and two retries at 19:46Z (no User-Agent, and an identified agent) returned HTTP 200 carrying a ~21.3 kB Google reCAPTCHA interstitial, not the article; a retry after a 75 s back-off at 19:48Z with no User-Agent returned the 137835 B article, which is this file. citation_pmid 18047428 and citation_doi 10.1089/thy.2007.0232 from its own meta tags. Evidentiary text surface. AUTHOR MANUSCRIPT, not the Mary Ann Liebert version of record. Europe PMC fullTextXML 404; efetch db=pmc an 8805 B no-download shell; Europe PMC ptpmcrender PDF HTTP 403.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4150466/",
+    "http_method": "GET",
+    "tier": "pmc_article_html",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "329d6c13a7d2de7119895c7ae1b8977bcf5b40d5021e4e3fc6105211b37427e9"
+  },
+  {
+   "path": "files/fulltext/PMID18047428_Dias2007.pdf",
+   "kind": "article_binary",
+   "note": "NIH author-manuscript PDF nihms222062.pdf, 9 pages, via pmc_pow_fetch.py. Figure source only; no locator uses its text layer.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4150466/pdf/nihms222062.pdf",
+    "http_method": "GET",
+    "tier": "pmc_pow_fetch",
+    "user_agent_policy": "identified",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "b746c20cf51b43379eb55a7fd0dc8a5273afdc3a0d545b119d02ac21cd21e00e"
+  },
+  {
+   "path": "files/fulltext/PMID18047428_Dias2007_assets/pdf_p8_x36.jpeg",
+   "kind": "figure",
+   "note": "Figure 1, native embedded GRAYSCALE JPEG 4200x1443, PDF p.8; inspected as three native tiles. The PMC CDN blob of the same figure is also grayscale (measured), so the colour loss belongs to the deposited manuscript figure, not to one route.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID18047428_Dias2007.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref) over Page.get_images(full=True); bytes written unmodified",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "f7d8a7b7e79dfc7cb05bec873ddd61ededc02b79205dc87b1de35d2933e8683d"
+  },
+  {
+   "path": "files/fulltext/PMID18047428_Dias2007_assets/pdf_p9_x42.png",
+   "kind": "figure",
+   "note": "Figure 2, native embedded PNG 4200x1981 (sRGB, black-and-white bar chart), PDF p.9; inspected as six native tiles.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID18047428_Dias2007.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref) over Page.get_images(full=True); bytes written unmodified",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "2203bbea5d7647d38cef88f9d9828dc42d54dfb6bb60aa680502368ea3bcd0d6"
+  },
+  {
+   "path": "files/fulltext/PMID18047428_Dias2007_assets/tile_p8_r0c0.png",
+   "kind": "figure",
+   "note": "Native tile r0c0 of Figure 1, geometry 1400x1443+0+0.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID18047428_Dias2007_assets/pdf_p8_x36.jpeg",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 1400x1443+0+0 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "9c25d3418e099339e3e44a86564f5bfda7fad9e3e0abeb31d56f23213938dd86"
+  },
+  {
+   "path": "files/fulltext/PMID18047428_Dias2007_assets/tile_p8_r0c1.png",
+   "kind": "figure",
+   "note": "Native tile r0c1 of Figure 1, geometry 1400x1443+1400+0.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID18047428_Dias2007_assets/pdf_p8_x36.jpeg",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 1400x1443+1400+0 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "c80ea700a1072fff45d3202876f3fb8aeac41c3cb754c85f143c151e70c6763b"
+  },
+  {
+   "path": "files/fulltext/PMID18047428_Dias2007_assets/tile_p8_r0c2.png",
+   "kind": "figure",
+   "note": "Native tile r0c2 of Figure 1, geometry 1400x1443+2800+0.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID18047428_Dias2007_assets/pdf_p8_x36.jpeg",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 1400x1443+2800+0 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "4a4ce5c3b1b142c0b08c78a0604f5fa03c1fa4d0e7e9e8a1caaa4d8cf7cd2f4f"
+  },
+  {
+   "path": "files/fulltext/PMID18047428_Dias2007_assets/tile_p9_r0c0.png",
+   "kind": "figure",
+   "note": "Native tile r0c0 of Figure 2, geometry 1400x991+0+0.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID18047428_Dias2007_assets/pdf_p9_x42.png",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 1400x991+0+0 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "248bfd5f8639b02a73f5be71975df33f1062e1a87bbe30752e4f2e8525b6b839"
+  },
+  {
+   "path": "files/fulltext/PMID18047428_Dias2007_assets/tile_p9_r0c1.png",
+   "kind": "figure",
+   "note": "Native tile r0c1 of Figure 2, geometry 1400x991+1400+0.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID18047428_Dias2007_assets/pdf_p9_x42.png",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 1400x991+1400+0 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "67774c417fc51cd89c80245ca6de57d2f6577175a1d1970ecdbf7905e40498c2"
+  },
+  {
+   "path": "files/fulltext/PMID18047428_Dias2007_assets/tile_p9_r0c2.png",
+   "kind": "figure",
+   "note": "Native tile r0c2 of Figure 2, geometry 1400x991+2800+0.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID18047428_Dias2007_assets/pdf_p9_x42.png",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 1400x991+2800+0 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "6f81d7c358a17229d8e4f67a47b68d8019f8be9c185b01f16b64f831c9a5757c"
+  },
+  {
+   "path": "files/fulltext/PMID18047428_Dias2007_assets/tile_p9_r1c0.png",
+   "kind": "figure",
+   "note": "Native tile r1c0 of Figure 2, geometry 1400x991+0+990.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID18047428_Dias2007_assets/pdf_p9_x42.png",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 1400x991+0+990 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "1f0ba7fecabe5d4c23b54a3796f32cb57ac9c8dbe98621ac9a549c6b8ed3b157"
+  },
+  {
+   "path": "files/fulltext/PMID18047428_Dias2007_assets/tile_p9_r1c1.png",
+   "kind": "figure",
+   "note": "Native tile r1c1 of Figure 2, geometry 1400x991+1400+990.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID18047428_Dias2007_assets/pdf_p9_x42.png",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 1400x991+1400+990 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "ceb33b3ee0ba09e77e416719be284e5f1533a7602b62c2cf9c3dd2258284f824"
+  },
+  {
+   "path": "files/fulltext/PMID18047428_Dias2007_assets/tile_p9_r1c2.png",
+   "kind": "figure",
+   "note": "Native tile r1c2 of Figure 2, geometry 1400x991+2800+990.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID18047428_Dias2007_assets/pdf_p9_x42.png",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 1400x991+2800+990 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "e0f42f27cddf1a0a3b33b7ba6c756a255ee23988aad72fe9ddbe967fa65fa208"
+  },
+  {
+   "path": "files/fulltext/PMID18047428_Dias2007_assets/blob_nihms222062f1.jpg",
+   "kind": "figure",
+   "note": "PMC CDN figure blob, 1050x361, grayscale. Acquired and fingerprinted; NOT the inspected surface (the PDF raster is 4x larger).",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/a28a/4150466/8fedae1e6e18/nihms222062f1.jpg",
+    "http_method": "GET",
+    "tier": "pmc_cdn_blob",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "68c0e75c513f9d36af96d6aee04ef6e040163f4e159854f65865f19f1b538d03"
+  },
+  {
+   "path": "files/fulltext/PMID18047428_Dias2007_assets/blob_nihms222062f2.jpg",
+   "kind": "figure",
+   "note": "PMC CDN figure blob, 1050x495, grayscale. Acquired and fingerprinted; NOT the inspected surface (the PDF raster is 4x larger).",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/a28a/4150466/6938af1084c5/nihms222062f2.jpg",
+    "http_method": "GET",
+    "tier": "pmc_cdn_blob",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "8d134d1aa7cf7a4f5279c9b5db0be320ffd899a7a82b9b60d06156815f7f0698"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST search EXT_ID:18047428 AND SRC:MED resultType=core, 2026-09-14: inEPMC=Y, inPMC=Y, isOpenAccess=N, nihAuthMan=Y, fullTextIdList PMC4150466; fullTextXML 404.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence. One abstract_snippet companion (r_pairs) records the abstract's 'no expression in PTCs' against the body's 5/7.",
+  "entries": [
+   {
+    "proposition": "COHORT: 46 patients, total thyroidectomy after FNA diagnosis. DATO. Consecutiveness and period are not stated.",
+    "snippet": "We studied tumor samples of 46 patients who underwent total thyroidectomy after the diagnosis of PTC or follicular tumor, by fine needle aspiration biopsies, guided by ultrasound.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18047428_Dias2007.html",
+    "anchor": "Materials and Methods > Samples, sentence 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human tissue, thyroid follicular adenoma, follicular and papillary carcinoma"
+    }
+   },
+   {
+    "proposition": "ALL EUTHYROID. DATO.",
+    "snippet": "All these patients had normal thyroid function tests (thyroid-stimulating hormone and free thyroxine).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18047428_Dias2007.html",
+    "anchor": "Materials and Methods > Samples, sentence 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "CONCOMITANT LESIONS: 2 FA specimens with PTC microcarcinoma, 5 PTC specimens with FA - FA+PTC pairs only. DATO.",
+    "snippet": "In addition, two FA specimens showed concomitant PTC (microcarcinomas) and five PTC specimens also harbored FA.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18047428_Dias2007.html",
+    "anchor": "Materials and Methods > Samples, sentence 5",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human tissue, thyroid follicular adenoma, follicular and papillary carcinoma"
+    }
+   },
+   {
+    "proposition": "UNIT OF ANALYSIS: 53 tumours from 46 patients (22 PTC, 11 FTC, 20 FA). DATO. Seven patients contribute two lesions, so the 53 are not independent; the Fisher test treats them as if they were.",
+    "snippet": "Taken together, we analyzed 53 tumors, taken out of 46 patients, with the final diagnosis of 22 PTCs, 11 FTCs, and 20 FAs.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18047428_Dias2007.html",
+    "anchor": "Materials and Methods > Samples, sentence 6",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human tissue, thyroid follicular adenoma, follicular and papillary carcinoma"
+    }
+   },
+   {
+    "proposition": "ANTISERUM: rabbit polyclonal, 140 ug/mL at 1:100; no source, catalogue or reference is given in the Methods. DATO.",
+    "snippet": "Primary polyclonal rabbit anti-WWOX antiserum (140 μg/mL) was used at a 1:100 dilution",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18047428_Dias2007.html",
+    "anchor": "Materials and Methods > WWOX immunohistochemistry",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "SPECIFICITY CONTROL: primary-omission only; no peptide block, no WWOX-null tissue. DATO.",
+    "snippet": "The negative control was done in all batches of slides, omitting the primary antibody (WWOX), to exclude nonspecific staining.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18047428_Dias2007.html",
+    "anchor": "Materials and Methods > WWOX immunohistochemistry",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "SCORING BY ONE PATHOLOGIST; blinding to diagnosis not stated. DATO.",
+    "snippet": "Only one pathologist examined multiple fields of the lesions and the normal thyroid, and considered positive the cytoplasmic staining in the cells.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18047428_Dias2007.html",
+    "anchor": "Materials and Methods > WWOX immunohistochemistry",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "TWO SCORES COLLECTED, ONE REPORTED: extent and intensity were scored; only intensity appears in the Results and Figure 2. DATO; the extent data are nowhere in the paper.",
+    "snippet": "Tissue sections were scored for extent of staining (percentage of cells staining) and staining intensity (0, absence; 1+, weakly positive; 2+, moderately positive; 3+, strongly positive).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18047428_Dias2007.html",
+    "anchor": "Materials and Methods > WWOX immunohistochemistry",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "STATISTICS: Fisher's exact test only. DATO.",
+    "snippet": "Fisher’s Exact Test was used for statistical analyses.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18047428_Dias2007.html",
+    "anchor": "Materials and Methods > WWOX immunohistochemistry, last sentence",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "NORMAL THYROID: always WWOX positive, strong cytoplasmic in cuboidal follicular cells. DATO as stated.",
+    "snippet": "Normal thyroid tissue always expressed WWOX, showing strong positive cytoplasmic staining for WWOX in the cuboidal follicular cells.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18047428_Dias2007.html",
+    "anchor": "Results, sentence 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human tissue, thyroid follicular adenoma, follicular and papillary carcinoma"
+    }
+   },
+   {
+    "proposition": "RESULTS CALL THE COLLOID-GOITER PANEL (1J) 'weak'. DATO as printed.",
+    "snippet": "Weak staining was observed in thyroid samples representative of inactive glandular activity that displayed mostly flat follicular cells as shown by colloid goiter also found in our samples (Fig. 1J).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18047428_Dias2007.html",
+    "anchor": "Results, sentence 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "THE LEGEND CALLS THE SAME PANEL 'the same expression as normal thyroid'. DATO as printed; it conflicts with r_weakJ unless 'normal' there means flat inactive follicles.",
+    "snippet": "(D, J) colloid nodule showing the same expression as normal thyroid (10× and 20×, respectively);",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18047428_Dias2007.html",
+    "anchor": "Figure 1 legend, panels D and J",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "FIGURE 1, NATIVE TILES (raster 4200x1443). THE AUTHOR-MANUSCRIPT RASTER IS GRAYSCALE: DAB brown and hematoxylin blue are not separable, so no intensity score in the paper can be adjudicated from these pixels. What is visible: G (PTC, 'no expression') pale cytoplasm; H upper PTC pale, lower normal follicles also pale; I (FA) and K (FTC) moderate grey cytoplasm; J flat follicular cells with scant cytoplasm; L (invasive FTC, 'intense') tumour nests pale-to-moderate grey. Neither the 1J weak/normal conflict nor any of the 0-3+ grades can be checked here.",
+    "snippet": "Visual attestation of Figure 1: twelve grayscale panels A-F H and E and G-L immunostain; chromogen not distinguishable from counterstain; G and upper H pale; I and K moderately grey cytoplasm; L nests pale to moderate.",
+    "surface": "figure",
+    "artifact": [
+     "files/fulltext/PMID18047428_Dias2007_assets/tile_p8_r0c0.png",
+     "files/fulltext/PMID18047428_Dias2007_assets/tile_p8_r0c1.png",
+     "files/fulltext/PMID18047428_Dias2007_assets/tile_p8_r0c2.png"
+    ],
+    "anchor": "Figure 1 (PDF p.8), native tiles of the 4200x1443 grayscale raster",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "qualifies_needle": "the same expression as normal thyroid",
+    "experimental_context": {
+     "system": "human tissue, thyroid follicular adenoma, follicular and papillary carcinoma"
+    },
+    "qualifies": "entries[11]"
+   },
+   {
+    "proposition": "ANY STAINING: FTC 100%, FA 95%, PTC 36%. DATO. Reconstructed counts: FTC 11/11, FA 19/20, PTC 8/22.",
+    "snippet": "In thyroid tumors, immunostaining for WWOX was observed in 100% of FTCs, 95% of FAs, and 36% of PTCs.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18047428_Dias2007.html",
+    "anchor": "Results, paragraph 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human tissue, thyroid follicular adenoma, follicular and papillary carcinoma"
+    }
+   },
+   {
+    "proposition": "3+: FTC 82%, FA 20%, PTC 0%. DATO (9/11, 4/20, 0/22).",
+    "snippet": "the maximum intensity (3+) was demonstrated in 82% of FTCs and 20% of FAs and in none of PTCs.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18047428_Dias2007.html",
+    "anchor": "Results, paragraph 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human tissue, thyroid follicular adenoma, follicular and papillary carcinoma"
+    }
+   },
+   {
+    "proposition": "2+: FTC 9%, FA 55%, PTC 9%. DATO (1/11, 11/20, 2/22).",
+    "snippet": "Moderate intensity (2+) was seen in 9% of FTCs, 55% of FAs, and 9% of PTCs.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18047428_Dias2007.html",
+    "anchor": "Results, paragraph 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human tissue, thyroid follicular adenoma, follicular and papillary carcinoma"
+    }
+   },
+   {
+    "proposition": "NO STAINING: FTC 0%, FA 5%, PTC 64%. DATO (0/11, 1/20, 14/22).",
+    "snippet": "Absence of expression was detected in none of FTCs, 5% of FAs, and 64% of PTCs.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18047428_Dias2007.html",
+    "anchor": "Results, after Figure 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human tissue, thyroid follicular adenoma, follicular and papillary carcinoma"
+    }
+   },
+   {
+    "proposition": "THE ONLY P-VALUE: 'Fisher Exact Test = 0.000', PTC vs FTC+FA, with no contingency table stated. DATO as printed. Recomputed here from the reconstructed counts: PTC 0/1+ 20 vs 2/3+ 2, against FTC+FA 5 vs 26, two-sided p=4.5e-8; absent vs any 14/8 vs 1/30, p=1.6e-6. The direction is robust to the choice of table; the non-independence of 7 paired lesions is not addressed.",
+    "snippet": "Fisher Exact Test = 0.000 (comparing papillary thyroid carcinomas [PTCs] with follicular thyroid carcinomas [FTCs] and follicular adenomas [FAs]).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18047428_Dias2007.html",
+    "anchor": "Figure 2 legend",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human tissue, thyroid follicular adenoma, follicular and papillary carcinoma"
+    }
+   },
+   {
+    "proposition": "FIGURE 2, NATIVE TILES (4200x1981). Printed bar labels (none/weak/moderate/intense, %): FA 5/20/55/20; PTC 64/27/9/0; FTC 0/9/9/82. They agree with the text and with counts 1/4/11/4 of 20, 14/6/2/0 of 22 and 0/1/1/9 of 11. No n is printed on the figure.",
+    "snippet": "Visual attestation of Figure 2: bar labels FA 5 20 55 20; PTC 64 27 9 0; FTC 0 9 9 82; legend No expression, Weak, Moderate, Intense.",
+    "surface": "figure",
+    "artifact": [
+     "files/fulltext/PMID18047428_Dias2007_assets/tile_p9_r0c0.png",
+     "files/fulltext/PMID18047428_Dias2007_assets/tile_p9_r0c1.png",
+     "files/fulltext/PMID18047428_Dias2007_assets/tile_p9_r0c2.png",
+     "files/fulltext/PMID18047428_Dias2007_assets/tile_p9_r1c0.png",
+     "files/fulltext/PMID18047428_Dias2007_assets/tile_p9_r1c1.png",
+     "files/fulltext/PMID18047428_Dias2007_assets/tile_p9_r1c2.png"
+    ],
+    "anchor": "Figure 2 (PDF p.9), native tiles",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human tissue, thyroid follicular adenoma, follicular and papillary carcinoma"
+    }
+   },
+   {
+    "proposition": "FOLLICULAR-VARIANT PTC: 6/22, one with moderate staining. DATO.",
+    "snippet": "Among the PTCs, 6 out of 22 were classified as follicular variants of PTC and one of them had WWOX moderate expression.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18047428_Dias2007.html",
+    "anchor": "Results, paragraph 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "MICROCARCINOMAS: 7/7 no expression; larger PTC 80% none or weak. DATO as printed.",
+    "snippet": "we noted no expression in seven out of seven (100%) microcarcinomas (≤1 cm) and no or weak expression (+) in 80% of the other tumors (greater than 1 cm).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18047428_Dias2007.html",
+    "anchor": "Results, paragraph 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human tissue, thyroid follicular adenoma, follicular and papillary carcinoma"
+    }
+   },
+   {
+    "proposition": "INTERNAL CONTRADICTION: the Discussion names a 0.6 cm microcarcinoma with MODERATE staining, against 'no expression in seven out of seven microcarcinomas' (r_micro), and says it was 'in association with an FTC', whereas the Methods list only FA+PTC co-occurrence (m_concom). DATO for both texts; which is right is not decidable from the paper.",
+    "snippet": "the other, a 0.6 cm microcarcinoma, was found in association with an FTC.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18047428_Dias2007.html",
+    "anchor": "Discussion, paragraph 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "INVASIVE FTC: 3/11, all intense. DATO.",
+    "snippet": "3 out of 11 (27%) tumors were frankly invasive and all of them showed intense expression as shown in Figure 1L.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18047428_Dias2007.html",
+    "anchor": "Results, paragraph 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "PAIRED LESIONS (n=7): PTC none in 5/7, weak in 2; FA moderate in 5/7, strong in 2. DATO. The abstract says 'no expression in PTCs' for this comparison, dropping the two weak cases.",
+    "snippet": "the same immunostaining pattern was observed as PTCs presented no (5/7) or weak intensity, while all FAs showed moderate (5/7) or strong intensity.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18047428_Dias2007.html",
+    "anchor": "Results, last paragraph",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "abstract_snippet": "we detected the same result (i.e., no expression in PTCs)",
+    "experimental_context": {
+     "system": "human tissue, thyroid follicular adenoma, follicular and papillary carcinoma"
+    }
+   },
+   {
+    "proposition": "91% OF PTC none or weak (20/22). DATO.",
+    "snippet": "we demonstrated that 91% of PTC areas displayed extremely reduced or even absent expression of WWOX, an important proapoptotic protein.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18047428_Dias2007.html",
+    "anchor": "Discussion, paragraph 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human tissue, thyroid follicular adenoma, follicular and papillary carcinoma"
+    }
+   },
+   {
+    "proposition": "UNSHOWN SUBGROUPS: independence from multicentricity and lymph-node metastasis is asserted, but neither variable is reported anywhere in the paper. DATO for the assertion; the data are absent.",
+    "snippet": "This was true irrespective of the size of the tumors (microcarcinomas or tumors bigger than 1cm) and the presence of multi-centricity or lymphonodal metastasis.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18047428_Dias2007.html",
+    "anchor": "Discussion, paragraph 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "LOCALISATION: exclusively cytoplasmic in all normal and tumour tissue. DATO as the authors' observation; not checkable on the grayscale figure.",
+    "snippet": "It is worth noting that in all instances, normal and tumor, WWOX staining was exclusively cytoplasmic as previously shown in breast and ovarian tumors (7).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18047428_Dias2007.html",
+    "anchor": "Discussion, paragraph 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "LINEAGE INTERPRETATION: different molecular pathways for follicular vs papillary. INFERENZA (theirs) from an IHC association.",
+    "snippet": "These findings suggest a different molecular pathway between the two most common thyroid cancer types, the follicular and papillary lineages.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18047428_Dias2007.html",
+    "anchor": "Discussion, paragraph 4",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "PROLIFERATION MODEL. IPOTESI; proliferation was not measured.",
+    "snippet": "We suggest that WWOX underexpression in PTC arouses increased proliferation, which then leads to further genomic instability",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18047428_Dias2007.html",
+    "anchor": "Discussion, paragraph 5",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "RATIONALE FOR THE STUDY: embryological origin of thyroid from pharyngeal-floor epithelium plus the group's OSCC finding. IPOTESI/ESPANSIONE of the authors.",
+    "snippet": "Given that the thyroid originates from the epithelium of the pharyngeal floor and that WWOX is involved in OSCC induction, we here hypothesize that underexpression of WWOX, a proapoptotic protein, could contribute to malignant transformation in thyroid tumorigenesis.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18047428_Dias2007.html",
+    "anchor": "Introduction, last paragraph",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "CITED, NOT MEASURED: WWOX protein in neurons, ependymal cells and astrocytes (Nunez 2006, ref 12). The only neural statement in the paper; background.",
+    "snippet": "Interestingly, significant WWOX protein expression was demonstrated in various cell types of neural origin, including neurons, ependymal cells, and astrocytes;",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18047428_Dias2007.html",
+    "anchor": "Introduction, paragraph 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "CITED, NOT MEASURED: heterozygous Wwox loss raises tumour incidence (Aqeilan 2007, ref 8).",
+    "snippet": "whereas loss of one allele significantly increases the incidence of spontaneous and chemically induced tumors, suggesting that haploinsufficiency of WWOX itself is cancer predisposing (8).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18047428_Dias2007.html",
+    "anchor": "Introduction, paragraph 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   }
+  ]
+ }
+}

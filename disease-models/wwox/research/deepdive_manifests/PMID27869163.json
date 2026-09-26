@@ -1,0 +1,1684 @@
+{
+ "schema_version": 2,
+ "pmid": "27869163",
+ "doi": "10.1038/onc.2016.389",
+ "receipt": "FTR-20260913-27869163-01",
+ "landing": [
+  "Schrock MS, Batar B, Lee J, Druck T, Ferguson B, Cho JH, Akakpo K, Hagrass H, Heerema NA, Xia F, Parvin JD, Aldaz CM, Huebner K. Wwox-Brca1 interaction: role in DNA repair pathway choice. Oncogene 2017;36(16):2215-2227. PMC5398941. NIH author manuscript NIHMS816405, licence cc by-nc-nd.",
+  "Identity verified inside the fingerprinted artefact, not from the dispatch: article-id pmid 27869163, doi 10.1038/onc.2016.389, pmcid PMC5398941, and ESummary (eutils, 2026-09-13) returning Oncogene 36(16):2215-2227 with 13 authors, Aldaz 12th and Huebner last.",
+  "first_read: the receipt ledger held zero events for this PMID and paper_packet reported no manifest, no artefact and no acquisition route before this reading."
+ ],
+ "skills_considered": [
+  {
+   "skill": "legend-deepdive",
+   "used": true,
+   "reason": "the reading itself: section-by-section primary evidence read, PRIMARY_EVIDENCE_READ mode per the task contract."
+  },
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "the packet's acquisition procedure was OPEN only because nothing was on disk; the Europe PMC fullTextXML route returned a complete article on the first attempt, so no cascade was needed. The two PMC routes that failed are recorded in source_artifacts notes rather than escalated."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "no persisted locator is contradicted by this reading (no prior manifest exists for this PMID), and no consolidated baseline claim is narrowed, reversed or removed here. R4 is therefore not triggered; the commit candidate this reading produces declares MINOR. If a later integrator moves a baseline claim on this reading, R4 becomes mandatory at that point."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "deferred to M4b/M5 by sequence, not declined: a discovery pass over the repair-pathway axis would have required the discovery ledger, which the blind-pass firewall closes until the receipt exists."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "this paper matures no therapeutic lever for the reference genotype. Its one therapeutic proposition is an oncology one (HDR inhibitors plus radiation in WWOX-deficient tumours) and it is the authors' own; forging hypotheses from it toward a neurodevelopmental genotype would be exactly the context collapse the transfer verdict refuses."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "no molecule with a structure is proposed; cisplatin and bleomycin appear as DSB-inducing tools, not as candidates."
+  },
+  {
+   "skill": "legend-paperqa",
+   "used": false,
+   "reason": "external spend is reserved to the operator and this reading needed no RAG: the structured surface was complete and local."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 408,
+  "publications_on_gene": 32,
+  "counts_measured": "eutils esearch, rettype=count, 2026-09-13: Huebner K[au] 408 total and 32 with WWOX; Aldaz CM[au] 138 total and 38 with WWOX; Parvin JD[au] AND WWOX = 1; Schrock MS[au] AND WWOX = 6. Author-name queries are not disambiguated by ORCID and will include homonyms; the counts are used as order-of-magnitude evidence about investment in the gene, not as a bibliography.",
+  "research_type": "mixed",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": true,
+  "weighting": "Observation and interpretation are weighted differently here and in opposite directions from the naive reading. The group is primary for the GENE in oncology, so its WWOX reagents, knockout MEF lines and antibody are first-hand and its Wwox blots are the strongest evidence in the paper. It is NOT primary for the DISEASE: WWOX AND (epilepsy OR encephalopathy OR DEE) returns 119 records in the field while Huebner K[au] and Aldaz CM[au] return 7 and 8 against those terms, none of which this reading establishes to be WWOX-DEE papers. The DSB-repair methodology is likewise NOT theirs: the DR-GFP, HW1, EJ2 and SA26 reporter systems and the Brca1 deletion mutants come from Parvin and colleagues (refs 21, 22, 26, 28, 29, 36, 37), and Parvin has exactly one WWOX paper in PubMed, this one. So the repair measurements carry borrowed-but-expert methodology, while the interpretation of what WWOX is doing is the WWOX group's, and the human-survival interpretation rests on a database neither group generated. Nothing in this paper is evidence about a neurodevelopmental phenotype.",
+  "note": "Primary for the gene is not primary for the disease, and here the split runs through the middle of the paper: the WWOX side is first-hand, the BRCA1/repair side is methodologically borrowed, and the human side is a public-database re-analysis. research_type is 'mixed' from the closed vocabulary and the choice is deliberate: inferred from the Methods, this paper produces first-hand experimental cell biology (clonogenic survival, four integrated repair reporters, GST pulldown and co-IP, immunofluorescent foci, flow cytometry, karyotype, array CGH, a subcutaneous xenograft) AND a re-analysis of a public clinical database (REMBRANDT via the Georgetown GDOC Kaplan-Meier application) that the group did not generate. 'experimental_lab' alone would describe the mouse and cell work and silently promote the human arm to the same evidential class.",
+  "research_type_basis": "experimental lab. The evidence this group can produce first-hand is cell-biological: clonogenic survival, integrated reporter assays for the four DSB repair pathways, co-immunoprecipitation and GST pulldown, immunofluorescent foci, flow cytometry, karyotype and array CGH, and a subcutaneous xenograft. The human arm is not theirs and is not experimental: it is a re-analysis of the public REMBRANDT brain-cancer database through a third-party Kaplan-Meier application."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "WWOX",
+    "route": "eutils esearch rettype=count 2026-09-13",
+    "count": 708
+   },
+   {
+    "query": "WWOX AND BRCA1",
+    "route": "eutils esearch rettype=count 2026-09-13",
+    "count": 14
+   },
+   {
+    "query": "WWOX AND \"DNA repair\"",
+    "route": "eutils esearch rettype=count 2026-09-13",
+    "count": 25
+   },
+   {
+    "query": "WWOX AND \"double strand break\"",
+    "route": "eutils esearch rettype=count 2026-09-13",
+    "count": 5
+   },
+   {
+    "query": "WWOX AND \"pathway choice\"",
+    "route": "eutils esearch rettype=count 2026-09-13",
+    "count": 3
+   },
+   {
+    "query": "WWOX AND \"homologous recombination\"",
+    "route": "eutils esearch rettype=count 2026-09-13",
+    "count": 8
+   },
+   {
+    "query": "WWOX AND \"end resection\"",
+    "route": "eutils esearch rettype=count 2026-09-13",
+    "count": 3
+   },
+   {
+    "query": "WWOX AND (radiation OR radioresistance)",
+    "route": "eutils esearch rettype=count 2026-09-13",
+    "count": 42
+   },
+   {
+    "query": "BRCA1 AND \"pathway choice\"",
+    "route": "eutils esearch rettype=count 2026-09-13",
+    "count": 88
+   },
+   {
+    "query": "WWOX AND (epilepsy OR encephalopathy OR DEE)",
+    "route": "eutils esearch rettype=count 2026-09-13",
+    "count": 119
+   },
+   {
+    "query": "WWOX AND BRCA1 AND (epilepsy OR encephalopathy)",
+    "route": "eutils esearch rettype=count 2026-09-13",
+    "count": 1
+   }
+  ],
+  "note": "The intersection this paper occupies is nearly empty and that is a signal, not an absence: 3 records for WWOX AND \"pathway choice\" and 3 for WWOX AND \"end resection\", against 88 for BRCA1 AND \"pathway choice\" and 708 for WWOX overall. Two consequences. First, almost everything the corpus can ever know about WWOX and repair-pathway choice comes from a handful of papers, of which this is one and its 2022 follow-up another, so independence between them is a load-bearing question rather than a formality. Second, the axis is essentially unconnected to the disease literature: 1 record for WWOX AND BRCA1 AND (epilepsy OR encephalopathy)."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 41,
+  "enumeration_method": "Every <ref> element of the fingerprinted XML was enumerated and its identifiers read from the ext-link/@xlink:href attributes of the artefact itself. 40 of 41 references carry a PMID in the deposit; ref 19 (Scarpace et al., Data from REMBRANDT, a TCIA data citation) carries none. 16 references are gene-direct, identified by WWOX/Wwox occurring in the citation string.",
+  "identifier_provenance": "FROM THE ARTEFACT. Recorded because this reading nearly failed it: a first attempt read <pub-id> element text, found it empty, and resolved eleven references by title search instead. Spot-checking showed the search results were wrong - the Exp Biol Med 2015 review 'WWOX: a fragile tumor suppressor' resolved to an unrelated 2026-era record and Aqeilan's targeted-deletion paper to a 2024 one - because retmax=1 returns the top relevance hit, which can be a newer or citing paper. The bogus identifier is deliberately NOT reproduced as an 8-digit literal here: a PMID-shaped string in the reasoning layer is itself read as a citation by legend_lint's UNREAD_PREMISE check, so quoting a wrong PMID as an example creates the very unread premise the example warns about. It was a 2026-era record; the correct identifier for that 2015 review is PMID 25538133, taken from the artefact's own ext-link markup. All search-derived identifiers were discarded and every PMID below is the xlink:href value in the open document. This is the incident scientist_reading_modes.md 3.2 already records, reproduced and caught before it reached a locator.",
+  "gene_direct_refs_in_source": [
+   {
+    "ref": 1,
+    "pmid": "24932569"
+   },
+   {
+    "ref": 2,
+    "pmid": "10786676"
+   },
+   {
+    "ref": 3,
+    "pmid": "17360458"
+   },
+   {
+    "ref": 4,
+    "pmid": "21499303"
+   },
+   {
+    "ref": 5,
+    "pmid": "16061658"
+   },
+   {
+    "ref": 6,
+    "pmid": "17200365"
+   },
+   {
+    "ref": 10,
+    "pmid": "20146584"
+   },
+   {
+    "ref": 12,
+    "pmid": "26390919"
+   },
+   {
+    "ref": 13,
+    "pmid": "15070730"
+   },
+   {
+    "ref": 14,
+    "pmid": "15548692"
+   },
+   {
+    "ref": 15,
+    "pmid": "24330518"
+   },
+   {
+    "ref": 16,
+    "pmid": "25331887"
+   },
+   {
+    "ref": 17,
+    "pmid": "19936220"
+   },
+   {
+    "ref": 31,
+    "pmid": "15064722"
+   },
+   {
+    "ref": 34,
+    "pmid": "25538133"
+   },
+   {
+    "ref": 38,
+    "pmid": "15073846"
+   }
+  ],
+  "resolved": [
+   {
+    "pmid": "24932569",
+    "state": "already in corpus, partial_fulltext_read receipt"
+   },
+   {
+    "pmid": "17360458",
+    "state": "already in corpus, complete_fulltext_read receipt"
+   },
+   {
+    "pmid": "16061658",
+    "state": "already in corpus, partial_fulltext_read receipt"
+   },
+   {
+    "pmid": "20146584",
+    "state": "already in corpus, partial_fulltext_read receipt"
+   },
+   {
+    "pmid": "15070730",
+    "state": "already in corpus, complete_fulltext_read receipt"
+   },
+   {
+    "pmid": "25331887",
+    "state": "already in corpus, partial_fulltext_read receipt; ref 16 is the Wwox-ATM paper this paper explicitly contrasts itself with"
+   },
+   {
+    "pmid": "19936220",
+    "state": "already in corpus, complete_fulltext_read receipt; ref 17 is the source of the conditional Wwox allele the KO3/KO5/WT4/WT7 MEFs derive from"
+   }
+  ],
+  "queued": [
+   {
+    "pmid": "10786676",
+    "queue": "FT-085",
+    "why": "ref 2, Bednarek 2000, the original WWOX cloning paper; no receipt and no manifest in this corpus."
+   },
+   {
+    "pmid": "21499303",
+    "queue": "FT-085",
+    "why": "ref 4, Abdeen 2011, Wwox haploinsufficiency and mammary tumorigenesis; cited for the tumour-suppressor premise."
+   },
+   {
+    "pmid": "17200365",
+    "queue": "FT-085",
+    "why": "ref 6, Iliopoulos 2007, Wwox restoration inhibits breast cancer growth; cited for the re-expression premise."
+   },
+   {
+    "pmid": "26390919",
+    "queue": "FT-085",
+    "why": "ref 12, Choo 2015, WWOX and mitochondrial respiratory complex; the SDR-domain function premise."
+   },
+   {
+    "pmid": "15548692",
+    "queue": "FT-085",
+    "why": "ref 14, Aqeilan 2004, Wwox-Ap2gamma physical and functional interaction."
+   },
+   {
+    "pmid": "24330518",
+    "queue": "FT-085",
+    "why": "ref 15, Ferguson 2013, WWOX inhibits SMAD3; one of the interactor premises in the Introduction."
+   },
+   {
+    "pmid": "15064722",
+    "queue": "FT-085",
+    "why": "ref 31, Ludes-Meyers 2004, WWOX binds PPXY ligands. LOAD-BEARING and unread: it is the source of the W44F/P47A WW1 mutation used in Figure 5a and in the 231/WW1 mut line of Figure 5f, so the claim that WW1 is the Brca1-binding surface rests on a mutation whose characterisation this corpus has never checked."
+   },
+   {
+    "pmid": "25538133",
+    "queue": "FT-085",
+    "why": "ref 34, Schrock & Huebner 2015 review, WWOX: a fragile tumor suppressor."
+   },
+   {
+    "pmid": "15073846",
+    "queue": "FT-085",
+    "why": "ref 38, Guler 2004, FHIT and WWOX coordinately inactivated in breast carcinoma; also the source of the Wwox antibody used throughout (Supplementary Table 1 credits 'Guler et al, 2004')."
+   }
+  ],
+  "dedup_performed": "Each of the 16 gene-direct PMIDs was checked against the receipt ledger (159 events, 99 distinct PMIDs) and against the deepdive_manifests directory. 7 already carry receipts and are not re-queued; 9 have neither receipt nor manifest and are queued under FT-085, this paper's own queue entry.",
+  "owed": [
+   "PMID 27773744 (Schrock 2016), the other half of FT-085, is NOT cited by this paper: the string 27773744 occurs zero times in the fingerprinted XML and no reference matches it. It was not read here, per the task contract, and its absence from this reference list is itself a finding: the 2017 paper does not rest on it.",
+   "The nine queued gene-direct references above, of which PMID 15064722 is the one a conclusion of this paper actually depends on."
+  ],
+  "reason": "Multi-hop is enumerated and deduped, not read: the contract assigns two primaries and forbids expanding into a third paper."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Technical cross-query only, and deliberately so: which PMIDs this corpus has already read at what depth, asked of the receipt ledger (disease-models/wwox/registries/fulltext_read_receipts.jsonl), plus presence in deepdive_manifests/. Run over the 16 gene-direct references of this paper and over the three PMIDs of the FT-085 debt.",
+  "hits": 7,
+  "finding": "7 of 16 gene-direct references already carry receipts (3 complete, 4 partial). None of 27869163, 35409089 or 27773744 had any receipt event before this reading, so the WWOX-BRCA1 axis entered this corpus entirely through secondary and citing material. No local abstract census exists on this host (files/corpus is absent), so no census query was run and none is claimed. The claim registry, the discovery ledger, the intake note and every commit candidate were NOT opened: the blind-pass firewall of the task contract closes them until M4b, which is a separate phase after this receipt lands. The scientific comparison against the laboratory's own records is therefore owed and is not attempted in this slot."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-09-13",
+  "route": "eutils esummary db=pubmed for 27869163 (and, in the same call, 35409089): field commentscorrections and recordstatus read directly.",
+  "result": "NO NOTICE. commentscorrections is null and recordstatus is 'PubMed - indexed for MEDLINE'. pubtype is Journal Article + Research Support, N.I.H., Extramural + Research Support, Non-U.S. Gov't, with no Retracted Publication, Erratum, Expression of Concern or Corrected and Republished type. Recorded explicitly as a negative result with its route and date, because the absence of an integrity notice is only informative if the check is quoted.",
+  "hold": false,
+  "dependencies": {
+   "schema": "retraction_check.dependencies/1",
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "screened": true,
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 41,
+   "references_screened": 37,
+   "references_with_doi": 37,
+   "flagged": [],
+   "noted": [],
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 4
+   },
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 3,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "citing_relation": "No reference of this paper is flagged in the Retraction Watch snapshot: 37 of 41 screened clean and the 4 unscreenable lack a DOI in the deposit (ref 19 carries no identifier at all, being a TCIA data citation for REMBRANDT). The screen is therefore clean but not complete, and the reading records which dependencies are load-bearing rather than treating a clean screen as sufficient: ref 31 (PMID 15064722, Ludes-Meyers 2004) supplies the W44F/P47A WW1 mutation on which the domain attribution in Figures 5a and 5f rests and is UNREAD in this corpus; ref 17 (PMID 19936220) supplies the conditional Wwox allele behind the KO3/KO5/WT4/WT7 MEFs and is read to complete_fulltext_read; ref 38 (PMID 15073846) supplies the Wwox antibody used throughout and is unread; and refs 21, 22, 26, 28, 29, 36 and 37 supply every repair reporter and Brca1 deletion construct, i.e. the methodological core, from the Parvin group."
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID27869163_Schrock2017.xml",
+   "sha256": "77f915dad0032dbb3c1eb03307edf6440af72b0cc1e071ebcb4683ef69a54b62",
+   "kind": "article_text",
+   "note": "Europe PMC JATS full text, 125547 bytes. Contains article-id pmid 27869163 and doi 10.1038/onc.2016.389. Body surface 55690 chars, abstract 2133 chars, separated by the validator's own extractor; accepted by the suspect-surface screen (no C0 controls, no printable substitutions). 29 sections, 7 figures, 1 table, 41 references, 3 supplementary-material declarations. Byte count differs from the 124993 the dispatch measured; content identity verified instead of size.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5398941/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-09-13",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/fulltext/PMID27869163_epmc2.pdf",
+   "sha256": "502ce4d1c7d843589c340d96d7b0e5b9074569a2eb02ef279ba585da01dc85ca",
+   "kind": "article_binary",
+   "note": "Publisher-typeset PDF, 13 pages, 4111248 bytes, obtained from Europe PMC after two PMC routes failed. Declared as article_binary beside the structured surface; no text locator is anchored to it. It carries the seven figures as embedded rasters at 2612x3963 to 4103x4280 px, which is the native surface used for every figure locator here.",
+   "acquisition_recipe": {
+    "resolved_url": "https://europepmc.org/articles/PMC5398941?pdf=render",
+    "http_method": "GET",
+    "tier": "europepmc_pdf_render",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-09-13",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/fulltext/PMID27869163_suppl.zip",
+   "sha256": "3248c340c229dfa6847bfe95985e1f007bfddc99dfdb50017efa6ade7631a2ac",
+   "kind": "supplement_binary",
+   "note": "Europe PMC supplementaryFiles container, 37057853 bytes, 17 members: the three declared supplement files plus the seven article figures in both .jpg (600 dpi density) and .gif form. No text locator is anchored to the container itself.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5398941/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "europepmc_supplementaryfiles",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-09-13",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID27869163/onc2016389x1.ppt",
+   "sha256": "79c9e3d05919558d18841504db41cdcf2f7b2b67a153fe9106bfeab859d9e793",
+   "kind": "supplement_binary",
+   "note": "The declared 'Supplementary Figures' file, a legacy OLE PowerPoint (not .pptx), 37050880 bytes, 8 slides. It carries Supplementary Figures 1-6 AND Supplementary Table 1, and its Pictures stream holds 43 image blips. _artifact_text cannot verify a .ppt, so no locator quotes this file directly; its text is quoted through the derived .txt below and its images through the extracted PNG/JPEG blips.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID27869163_suppl.zip",
+    "extractor": {
+     "name": "python zipfile",
+     "version": "3.12",
+     "call": "ZipFile.read('onc2016389x1.ppt')",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   }
+  },
+  {
+   "path": "files/figures/PMID27869163/onc2016389x2.xls",
+   "sha256": "86ed584abd5b949a46909a6c0f2c2948cf0dc3a718bb5e55636cb4453c688b5b",
+   "kind": "supplement_binary",
+   "note": "Deposited in PMC under the label 'Supplementary Table 1'. By content and by the paper's own numbering it is Supplementary Table 2: a REMBRANDT export of 541 patient rows x 37 columns.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID27869163_suppl.zip",
+    "extractor": {
+     "name": "python zipfile",
+     "version": "3.12",
+     "call": "ZipFile.read('onc2016389x2.xls')",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   }
+  },
+  {
+   "path": "files/figures/PMID27869163/onc2016389x3.xls",
+   "sha256": "db0bed5c60eae0dca438de8e976a9a50cc9dadef905dc16f03da9e6dd2b62b95",
+   "kind": "supplement_binary",
+   "note": "Deposited in PMC under the label 'Supplementary Table 2'. By content and by the paper's own numbering it is Supplementary Table 3: the radiation-treated subset, 157 patient rows x 31 columns.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID27869163_suppl.zip",
+    "extractor": {
+     "name": "python zipfile",
+     "version": "3.12",
+     "call": "ZipFile.read('onc2016389x3.xls')",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   }
+  },
+  {
+   "path": "files/supplement/PMID27869163_suppl_slide_text.txt",
+   "sha256": "c328e28923c6c9713f7f49385bfb77f7ce9ea45b5801120805d62f14477174fb",
+   "kind": "supplement_text",
+   "note": "Deterministic text layer of the legacy .ppt: every TextCharsAtom (0x0FA0, UTF-16LE) and TextBytesAtom (0x0FA8, latin-1) of the 'PowerPoint Document' OLE stream, in stream order, newline-joined. 6996 bytes. This is the surface every supplementary-legend quote in this manifest is verified against, because the .ppt suffix itself is unverifiable.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID27869163/onc2016389x1.ppt",
+    "extractor": {
+     "name": "olefile + OfficeArt record walk (this reading)",
+     "version": "olefile 0.47",
+     "call": "OleFileIO.openstream('PowerPoint Document'); walk 8-byte records; decode 0x0FA0 utf-16-le and 0x0FA8 latin-1",
+     "join": "\\n"
+    },
+    "acquired_on": "2026-09-13"
+   }
+  },
+  {
+   "path": "files/supplement/PMID27869163_suppl_table2_rembrandt_all.txt",
+   "sha256": "dacaf756ef249dfe191f4b4d7989f032d4b794bee30b5d20559fa94c36cb67dc",
+   "kind": "supplement_text",
+   "note": "Tab-separated dump of onc2016389x2.xls, 542 lines (header + 541 patient rows).",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID27869163/onc2016389x2.xls",
+    "extractor": {
+     "name": "xlrd",
+     "version": "2.0.2",
+     "call": "sheet_by_index(0); str(cell.value) per cell",
+     "join": "\\t per row, \\n per line"
+    },
+    "acquired_on": "2026-09-13"
+   }
+  },
+  {
+   "path": "files/supplement/PMID27869163_suppl_table3_rembrandt_radiation.txt",
+   "sha256": "0298422d822f16763a141719b4aa59a8726c588bd5bb4f2604ee89791a5df306",
+   "kind": "supplement_text",
+   "note": "Tab-separated dump of onc2016389x3.xls, 158 lines (header + 157 patient rows).",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID27869163/onc2016389x3.xls",
+    "extractor": {
+     "name": "xlrd",
+     "version": "2.0.2",
+     "call": "sheet_by_index(0); str(cell.value) per cell",
+     "join": "\\t per row, \\n per line"
+    },
+    "acquired_on": "2026-09-13"
+   }
+  },
+  {
+   "path": "files/figures/PMID27869163/PDFp4_xref76.png",
+   "sha256": "926e68bbba6ce72347d6445616f4b10267a6307fb8afc7b4f322043fa5941085",
+   "kind": "figure",
+   "note": "Figure 1, native embedded raster 4024x2335 px. Assigned to Figure 1 by aspect ratio against the deposited figure file onc2016389f1.jpg (732x425; 1.722 vs 1.723), not by page order.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID27869163_epmc2.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Pixmap(doc, xref=76).save()",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   }
+  },
+  {
+   "path": "files/figures/PMID27869163/PDFp5_xref89.png",
+   "sha256": "1f45c76d643f11bef103a258888b116d53f1e6571c4066633f14d45ae548c437",
+   "kind": "figure",
+   "note": "Figure 2, 3937x3175 px (ratio 1.240 against onc2016389f2.jpg 787x635 = 1.239).",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID27869163_epmc2.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Pixmap(doc, xref=89).save()",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   }
+  },
+  {
+   "path": "files/figures/PMID27869163/PDFp6_xref93.png",
+   "sha256": "69a685e2f1d85867e5b134741a2aa729eb93db2f53d549849eb8fbaa51f988ff",
+   "kind": "figure",
+   "note": "Figure 3, 4103x4280 px (ratio 0.9586 against onc2016389f3.jpg 746x778 = 0.9588).",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID27869163_epmc2.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Pixmap(doc, xref=93).save()",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   }
+  },
+  {
+   "path": "files/figures/PMID27869163/PDFp7_xref100.png",
+   "sha256": "10980703f89f654d70bf21bcbfd21d4c875d1847c899e687776b48dae4d6769b",
+   "kind": "figure",
+   "note": "Figure 4, 4050x4153 px (ratio 0.9752 against onc2016389f4.jpg 736x754 = 0.9761).",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID27869163_epmc2.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Pixmap(doc, xref=100).save()",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   }
+  },
+  {
+   "path": "files/figures/PMID27869163/PDFp8_xref105.png",
+   "sha256": "91b77b2882ba6770f879a8e0a60f3cd9791aae2f056344a21e003c68070f5861",
+   "kind": "figure",
+   "note": "Figure 5, 2705x5211 px (ratio 0.519 against onc2016389f5.jpg 773x1489 = 0.519).",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID27869163_epmc2.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Pixmap(doc, xref=105).save()",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   }
+  },
+  {
+   "path": "files/figures/PMID27869163/PDFp10_xref124.png",
+   "sha256": "d669af0ad0a39432f7b52e517c18f972c1989c00b78475c8ac6eca730a7a4f6c",
+   "kind": "figure",
+   "note": "Figure 6, 4102x4942 px (ratio 0.830 against onc2016389f6.jpg 746x899 = 0.830).",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID27869163_epmc2.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Pixmap(doc, xref=124).save()",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   }
+  },
+  {
+   "path": "files/figures/PMID27869163/PDFp11_xref131.png",
+   "sha256": "32468df97ea7dafec7f9d0cb9ca86f6ea796c91cf645a8fbcb13c9b5bc9c4528",
+   "kind": "figure",
+   "note": "Figure 7, 2612x3963 px (ratio 0.659 against onc2016389f7.jpg 746x1133 = 0.658).",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID27869163_epmc2.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Pixmap(doc, xref=131).save()",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   }
+  },
+  {
+   "path": "files/figures/PMID27869163/crop_F1a_highdose.png",
+   "sha256": "d05caee20136adf6e415a8c0aaa83fc20168a2b6b63b8a7ccd687e1a26efed23",
+   "kind": "figure",
+   "note": "Figure 1a, the 2.2-10.2 Gy region at 3x, 1993x2890 px. Cut to adjudicate where the four MEF lines sit at the highest doses.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID27869163/PDFp4_xref76.png",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(clip=Rect(0.14,0.0,0.36,0.55 of page), matrix=Matrix(3,3))",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   }
+  },
+  {
+   "path": "files/figures/PMID27869163/crop_F1c_full.png",
+   "sha256": "9b8dff2795b6474789e11ffeb988fa2df451fb9527db6d2872d2bcf6574996a9",
+   "kind": "figure",
+   "note": "Figure 1c at 3x, 3350x2890 px.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID27869163/PDFp4_xref76.png",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(clip=Rect(0.63,0.0,1.0,0.55 of page), matrix=Matrix(3,3))",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   }
+  },
+  {
+   "path": "files/figures/PMID27869163/crop_F1e_f.png",
+   "sha256": "e3d9bfd72f5c9d6fc4e468cdb7565807b7d5f868f718c09dc3c1af97426fe61c",
+   "kind": "figure",
+   "note": "Figures 1e and 1f at 3x, 6338x2628 px.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID27869163/PDFp4_xref76.png",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(clip=Rect(0.30,0.50,1.0,1.0 of page), matrix=Matrix(3,3))",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   }
+  },
+  {
+   "path": "files/figures/PMID27869163/crop_F3h_i.png",
+   "sha256": "6513ab5760ce4aa5c1068cb473946b7f81f5cce2c937fedb80924e291d800e02",
+   "kind": "figure",
+   "note": "Figures 3h and 3i at 3x, 7386x1734 px. Cut to adjudicate the dose range over which each cisplatin series carries data.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID27869163/PDFp6_xref93.png",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(clip=Rect(0.0,0.82,0.80,1.0 of page), matrix=Matrix(3,3))",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   }
+  },
+  {
+   "path": "files/figures/PMID27869163/crop_F3c_NHEJ.png",
+   "sha256": "3ae82437a5ab9f6f89dd85950e6851cae45a5adc77666ffc9f2ab101000e601c",
+   "kind": "figure",
+   "note": "Figure 3c at 3x, 1940x3852 px.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID27869163/PDFp6_xref93.png",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(clip=Rect(0.42,0.0,0.63,0.40 of page), matrix=Matrix(3,3))",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   }
+  },
+  {
+   "path": "files/figures/PMID27869163/crop_F5e_coIP.png",
+   "sha256": "617ce574eec578b92b84f5e670982b32368d32a8c4e3fa55e358c9888c7b3b99",
+   "kind": "figure",
+   "note": "Figure 5e at 3x, 6087x2580 px: the lysate, HA coIP and IgG coIP panels across the five Brca1 deletion mutants.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID27869163/PDFp8_xref105.png",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(clip=Rect(0.0,0.58,1.0,0.80 of page), matrix=Matrix(3,3))",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   }
+  },
+  {
+   "path": "files/figures/PMID27869163/crop_F6_graphs_Brca1_Rpa32_Rad51.png",
+   "sha256": "a3e175c227d91ba65e9776feabfbbfb46b7694ebd940e6fe2f76b8478d066dd3",
+   "kind": "figure",
+   "note": "Figure 6, the Brca1, RPA32 and Rad51 quantification graphs at 3x, 2770x5561 px.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID27869163/PDFp10_xref124.png",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(clip=Rect(0.70,0.50,1.0,1.0 of page), matrix=Matrix(3,3))",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   }
+  },
+  {
+   "path": "files/figures/PMID27869163/crop_F6_graphs_top.png",
+   "sha256": "34deb6ca3b17d9a12cfd27a4c5ec2b950a4f874d89dbc2e41e12b035d2e5952c",
+   "kind": "figure",
+   "note": "Figure 6, the gammaH2AX, RIF1 and 53BP1 quantification graphs at 3x, 2770x5783 px.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID27869163/PDFp10_xref124.png",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(clip=Rect(0.70,0.0,1.0,0.52 of page), matrix=Matrix(3,3))",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   }
+  },
+  {
+   "path": "files/figures/PMID27869163/suppl_figs/fig_01.png",
+   "sha256": "f405111ee86bfad3cdf21c2426976be1a5058d9096cfe957cdc2c84f06b2325f",
+   "kind": "figure",
+   "note": "Supplementary Figure 1, one of the two karyograms, 640x512 px as deposited. Slide 3 carries exactly two images and the labels 'Wwox ko MEF KO3' and 'Wwox ko MEF KO5'; which karyogram belongs to which line cannot be settled from the artefact, so neither is named here.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID27869163/onc2016389x1.ppt",
+    "extractor": {
+     "name": "olefile + OfficeArt blip walk (this reading)",
+     "version": "olefile 0.47",
+     "call": "Pictures stream; record type 0xF01E; strip UID+tag header",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   }
+  },
+  {
+   "path": "files/figures/PMID27869163/suppl_figs/fig_02.png",
+   "sha256": "ddada2ef9e7972e1b736828f854c9a0e309378419ef90cb46866078f4870db35",
+   "kind": "figure",
+   "note": "Supplementary Figure 1, the second karyogram, 640x512 px; carries two marker chromosomes annotated 'M 7' and 'M 3' below the panel.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID27869163/onc2016389x1.ppt",
+    "extractor": {
+     "name": "olefile + OfficeArt blip walk (this reading)",
+     "version": "olefile 0.47",
+     "call": "Pictures stream; record type 0xF01E; strip UID+tag header",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   }
+  },
+  {
+   "path": "files/figures/PMID27869163/suppl_figs/fig_03.png",
+   "sha256": "10d5658a69b1f9cf656ae77d3adcd875248ebe87e3b5b6a6c0f6c377eb20155c",
+   "kind": "figure",
+   "note": "Supplementary Figure 2c, comet tail moment in MEFs, wt vs ko, 245x334 px.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID27869163/onc2016389x1.ppt",
+    "extractor": {
+     "name": "olefile + OfficeArt blip walk (this reading)",
+     "version": "olefile 0.47",
+     "call": "Pictures stream; record type 0xF01E; strip UID+tag header",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   }
+  },
+  {
+   "path": "files/figures/PMID27869163/suppl_figs/fig_04.png",
+   "sha256": "589527f596b5eae97af0c30bdf9d4e7da993fa6b0f407c5a412548d072a5eeb4",
+   "kind": "figure",
+   "note": "Supplementary Figure 2b, comet tail moment in MCF10A, siCtrl vs siWwox, 303x332 px.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID27869163/onc2016389x1.ppt",
+    "extractor": {
+     "name": "olefile + OfficeArt blip walk (this reading)",
+     "version": "olefile 0.47",
+     "call": "Pictures stream; record type 0xF01E; strip UID+tag header",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   }
+  },
+  {
+   "path": "files/figures/PMID27869163/suppl_figs/fig_05.png",
+   "sha256": "4c7bc5177da846bc9b475c8fc1cd8b0cdc3a08f69bafbd635d42901658eebbd2",
+   "kind": "figure",
+   "note": "Supplementary Figure 2a, percentage of gammaH2AX-positive MCF10A cells, siCtrl vs siWwox, 330x337 px.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID27869163/onc2016389x1.ppt",
+    "extractor": {
+     "name": "olefile + OfficeArt blip walk (this reading)",
+     "version": "olefile 0.47",
+     "call": "Pictures stream; record type 0xF01E; strip UID+tag header",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   }
+  },
+  {
+   "path": "files/figures/PMID27869163/suppl_figs/fig_40.jpg",
+   "sha256": "3e00a148d3b5a00a514f09d91fffd7ecf8fc8dfe44ffa993a1ecce9e75b7b433",
+   "kind": "figure",
+   "note": "Supplementary Figure 6b, the Wwox immunoblot as a raw annotated film scan, 1138x807 px; handwritten lane set Scr / 13A / WT -D,D96 / WW1 -D,D96 / Y293F -D,D96.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID27869163/onc2016389x1.ppt",
+    "extractor": {
+     "name": "olefile + OfficeArt blip walk (this reading)",
+     "version": "olefile 0.47",
+     "call": "Pictures stream; record type 0xF01D; strip UID+tag header",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   }
+  },
+  {
+   "path": "files/figures/PMID27869163/suppl_figs/fig_41.jpg",
+   "sha256": "82a42129a8e94b3986387a72a6edb49e8ddd3a38929ea3e8e300558c3aa74e7e",
+   "kind": "figure",
+   "note": "Supplementary Figure 6b, the actin loading control for the same film, 1138x807 px.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID27869163/onc2016389x1.ppt",
+    "extractor": {
+     "name": "olefile + OfficeArt blip walk (this reading)",
+     "version": "olefile 0.47",
+     "call": "Pictures stream; record type 0xF01D; strip UID+tag header",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   }
+  },
+  {
+   "path": "files/figures/PMID27869163/suppl_figs/montage_S4.png",
+   "sha256": "c5704d7393916b980daabaded6b95d5490dbe37f6a01facb0e15dd591ce423a5",
+   "kind": "figure",
+   "note": "Inspection montage of the ten remaining Supplementary Figure 4 blips (fig_17-20, 25, 26, 30-33) at 2x, 4160x4200 px, each tile labelled with its blip name. Built so that every deposited supplementary image was inspected rather than sampled.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID27869163/onc2016389x1.ppt",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "new_page; insert_image per blip; get_pixmap(matrix=Matrix(2,2))",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   }
+  },
+  {
+   "path": "files/figures/PMID27869163/suppl_figs/montage_S3.png",
+   "sha256": "2c18195560b0d3ddf101c4aae44eabaab9a9e5123d88213e46c0dabc98c2fc56",
+   "kind": "figure",
+   "note": "Inspection montage of the eleven Supplementary Figure 3 blips (fig_06-16) at 2x, 4160x4200 px.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID27869163/onc2016389x1.ppt",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "new_page; insert_image per blip; get_pixmap(matrix=Matrix(2,2))",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "The JATS body and abstract surfaces were built with the validator's own _xml_surfaces extractor and every text snippet below was matched against the non-abstract body in strict mode before being written into this manifest. 55 candidate snippets were tested in one pass; all matched. The abstract was separated and is NOT used as an evidentiary surface anywhere.",
+  "entries": [
+   {
+    "proposition": "Wwox-knockout MEFs survive ionising radiation better than wild-type MEFs, quantified as 10-fold at doses of 7.7 Gy and above.",
+    "snippet": "with knockout lines KO3 and KO5 surviving 10-fold better than wild-type cell lines WT4 and WT7",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27869163_Schrock2017.xml",
+    "anchor": "Results, 'Wwox-deficient cells exhibit increased survival of ionizing radiation-induced DSBs', first paragraph, citing Figure 1a",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "primary culture",
+     "cell_line": "MEF WT4/WT7/KO3/KO5",
+     "genotype": "Wwox+/+ and Wwox-/-",
+     "treatment": "ionising radiation 0-10.2 Gy",
+     "endpoint": "clonogenic survival"
+    }
+   },
+   {
+    "proposition": "In the isogenic MDA-MB-231 pair, induced Wwox expression reduced survival at a single dose, 5.1 Gy, which the authors state is the highest dose at which the Wwox-expressing cells formed colonies at all.",
+    "snippet": "induced Wwox expression led to reduced survival at 5.1 Gy (Figure 1c; P<0.05), the highest dose at which 231/Wwox-pos cells formed colonies",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27869163_Schrock2017.xml",
+    "anchor": "Results, 'Wwox-deficient cells exhibit increased survival of ionizing radiation-induced DSBs', citing Figure 1c",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "in vitro cell line",
+     "cell_line": "MDA MB-231 (231/Wwox)",
+     "genotype": "doxycycline-inducible Wwox",
+     "treatment": "IR 0-10.2 Gy, doxycycline 24 h",
+     "endpoint": "clonogenic survival"
+    }
+   },
+   {
+    "proposition": "Re-expressing Wwox in two knockout-derived clones decreased survival, which the authors state holds at 7.7 Gy and above in both clones.",
+    "snippet": "both clones exhibited significantly decreased survival (P<0.05) at 7.7 Gy and above (Figures 1e and f)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27869163_Schrock2017.xml",
+    "anchor": "Results, same section, citing Figures 1e and 1f",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "primary culture",
+     "cell_line": "KO3A and KO5F clones",
+     "genotype": "Wwox-/- with doxycycline-inducible Wwox",
+     "treatment": "IR 0-10.2 Gy",
+     "endpoint": "clonogenic survival"
+    }
+   },
+   {
+    "proposition": "Silencing Wwox decreased classical NHEJ by 50% in the integrated HW1 reporter, which is the paper's only NHEJ measurement.",
+    "snippet": "In 293/HW1 cells, silencing Wwox significantly decreased NHEJ by 50% (P<0.05) (Figure 3c)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27869163_Schrock2017.xml",
+    "anchor": "Results, 'Wwox expression regulates DSB repair pathway choice', second paragraph, citing Figure 3c",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "in vitro cell line",
+     "cell_line": "293/HW1",
+     "genotype": "siWwox vs siCtrl",
+     "endpoint": "C-NHEJ reporter"
+    }
+   },
+   {
+    "proposition": "The Methods place the NHEJ experiment in HEK293 cells carrying the HW1 substrate.",
+    "snippet": "The NHEJ experiment was performed in Wwox-sufficient HEK293 cells with stably integrated NHEJ substrate, HW1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27869163_Schrock2017.xml",
+    "anchor": "Materials and methods, 'DSB repair assays'",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The Figure 3 legend places the same NHEJ measurement in H1299 cells, not HEK293/293-HW1: the paper names two different host cell lines for its only NHEJ experiment and never reconciles them.",
+    "snippet": "Bar graph indicating relative mRNA as a measure of C-NHEJ in H1299 cells carrying pHW1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27869163_Schrock2017.xml",
+    "anchor": "Figure 3 legend, panel (c)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The paper's central positive claim: Wwox expression raises NHEJ and Alt-NHEJ and lowers HDR and SSA, i.e. it alters usage of all four DSB repair pathways.",
+    "snippet": "Wwox expression enhances NHEJ and Alt-NHEJ, but impairs HDR and SSA",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27869163_Schrock2017.xml",
+    "anchor": "Results, 'Wwox expression regulates DSB repair pathway choice', closing sentence, citing Figure 3f",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "Rad51 depletion removed the survival advantage of Wwox-knockout MEFs, which is the paper's causal link from enhanced HDR to radioresistance.",
+    "snippet": "HDR inhibition significantly decreased survival after radiation (P<0.001) only for Wwox-knockout MEFs",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27869163_Schrock2017.xml",
+    "anchor": "Results, 'Enhanced HDR in Wwox-deficient cells results in resistance to radiation and cisplatin', citing Figure 3g",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "primary culture",
+     "cell_line": "MEF WT4/WT7/KO3/KO5",
+     "treatment": "siRad51 vs siCtrl, IR 0-10.2 Gy",
+     "endpoint": "clonogenic survival"
+    }
+   },
+   {
+    "proposition": "Knockout MEFs are reported as more cisplatin-resistant than WT4 at 25 microM and at higher concentrations.",
+    "snippet": "Similarly, knockout MEFs survive cisplatin at 25 μm (P<0.001) and higher concentrations vs WT4 MEF (Figure 3i)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27869163_Schrock2017.xml",
+    "anchor": "Results, same section, citing Figure 3i",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "primary culture",
+     "cell_line": "MEF WT4/KO3/KO5",
+     "treatment": "cisplatin 0-50 microM, 2 h",
+     "endpoint": "clonogenic survival",
+     "comparator": "WT4"
+    }
+   },
+   {
+    "proposition": "The reason Brca1 was chosen as the candidate interactor: a PPxL Wwox-binding motif at Brca1 amino acid 981, and Brca1's role in initiating end resection.",
+    "snippet": "it contains a PPxL Wwox-binding motif at amino acid 981 and promotes HDR over NHEJ repair by initiating DSB end resection",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27869163_Schrock2017.xml",
+    "anchor": "Results, 'Brca1 and Wwox proteins form a complex', first paragraph",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "Co-immunoprecipitation result mapping the interaction: Wwox was recovered with Brca1 deletions of N, M3 and C but not with M1 or M2.",
+    "snippet": "The HA antibody precipitated Wwox in lysates harboring Brca1 deletions at the N, M3 and C regions (lanes 6, 9 and 10; Figure 5e) but not in lysates expressing Brca1 with the M1- and M2-deleted regions (lanes 7 and 8; Figure 5e)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27869163_Schrock2017.xml",
+    "anchor": "Results, 'Brca1 and Wwox proteins form a complex', third paragraph, citing Figure 5e",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "in vitro cell line",
+     "cell_line": "MDA MB-231",
+     "genotype": "HA-Brca1 deletion mutants + myc-Wwox",
+     "endpoint": "anti-HA co-immunoprecipitation"
+    }
+   },
+   {
+    "proposition": "The authors' localisation of the interaction to the 981PPLF984 motif, argued from the loss of binding in mutants lacking residues 305-1292.",
+    "snippet": "Wwox may interact with Brca1 near the 981PPLF984 motif as Brca1 mutants lacking amino acids 305",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27869163_Schrock2017.xml",
+    "anchor": "Discussion, first paragraph",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The mechanistic model is offered as a proposal: Wwox competes with Rad50 for Brca1 and thereby impairs end resection.",
+    "snippet": "We offer a model (Figure 7c) that proposes Wwox competes with Rad50 for binding to Brca1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27869163_Schrock2017.xml",
+    "anchor": "Discussion, first paragraph, citing Figure 7c",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The load-bearing negative of the foci experiment: no significant difference in RIF1, 53BP1 or Brca1 foci at any timepoint, from which the authors conclude Wwox does not block Brca1 recruitment.",
+    "snippet": "There were no significant differences in foci of RIF1, 53BP1 or Brca1 proteins at 0, 1, 3 and 6 h after IR",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27869163_Schrock2017.xml",
+    "anchor": "Results, 'Loss of Wwox expression leads to significant increases in radiation-induced nuclear Rpa32 and Rad51 foci', second paragraph, citing Figure 6",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "in vitro cell line",
+     "cell_line": "MDA MB-231 (231/Wwox)",
+     "treatment": "10 Gy IR, doxycycline 24 h",
+     "timepoint": "0, 1, 3, 6 h",
+     "endpoint": "immunofluorescent foci per nucleus"
+    }
+   },
+   {
+    "proposition": "The positive foci result: Rpa32 and Rad51 foci are higher in Wwox-negative cells at 1 h after irradiation.",
+    "snippet": "Rpa32 and Rad51 showed significantly increased foci in 231/Wwox-neg cells compared with 231/Wwox-pos cells 1 h after IR",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27869163_Schrock2017.xml",
+    "anchor": "Results, same paragraph, citing Figure 6",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "in vitro cell line",
+     "cell_line": "MDA MB-231 (231/Wwox)",
+     "treatment": "10 Gy IR",
+     "timepoint": "1 h",
+     "endpoint": "Rpa32 and Rad51 foci per nucleus"
+    }
+   },
+   {
+    "proposition": "The step from foci counts to the end-resection mechanism is explicitly a hypothesis, not a measurement: no resection assay is performed anywhere in the paper.",
+    "snippet": "we hypothesize that Wwox interaction with Brca1 suppresses DSB end resection in Wwox-sufficient cells",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27869163_Schrock2017.xml",
+    "anchor": "Results, closing sentence of the foci section",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The karyotype claim: both knockout MEF lines carry two structural abnormalities absent from the wild-type line, del(7)(A1B4) and del(4)(C4).",
+    "snippet": "Both knockout MEFs exhibited two structural abnormalities not present in the wild-type cell line: del(7)(A1B4) and del(4)(C4)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27869163_Schrock2017.xml",
+    "anchor": "Results, 'Wwox-knockout MEFs exhibit chromosomal alterations and shared CNVs', first paragraph, citing Supplementary Figure 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "Wwox loss does not increase spontaneous, uninduced DNA damage: a negative result the paper's own framing depends on, since it makes the repair phenotype induction-specific.",
+    "snippet": "did not reveal differences in untreated Wwox-deficient and -expressing cells (Supplementary Figure 2)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27869163_Schrock2017.xml",
+    "anchor": "Results, 'Wwox-knockout MEFs exhibit chromosomal alterations and shared CNVs', second paragraph",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The untreated comparison is stated to include immunofluorescence for two DSB markers, 53BP1 and gammaH2AX.",
+    "snippet": "immunofluorescence assays for DSB markers, 53BP1 and",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27869163_Schrock2017.xml",
+    "anchor": "Results, same sentence, listing the assays behind the untreated negative",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "Provenance of the MEF material that is the pivot of this group's mouse work: four lines from 13-day embryos of a mixed B6 x 129SvJ background.",
+    "snippet": "designated MEF WT4, WT7, KO3 and KO5 cell lines",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27869163_Schrock2017.xml",
+    "anchor": "Materials and methods, 'Cell lines'",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The CNV comparison used two independent knockout mouse models and matched wild-type littermates: KO5/WT4 from one model and Wwox5/Wwox3 from another.",
+    "snippet": "cell line pairs, KO5/WT4 from Wwox-knockout",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27869163_Schrock2017.xml",
+    "anchor": "Results, 'Wwox-knockout MEFs exhibit chromosomal alterations and shared CNVs', second paragraph",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The CNV overlap between the two independent knockout models is three deletions.",
+    "snippet": "Three distinct deletions were shared by the two knockout MEF lines at chromosome locations 1 H6, 4 B3 and 8 C2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27869163_Schrock2017.xml",
+    "anchor": "Results, same paragraph, citing Tables 1a and 1b",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "One of the three shared deletions is at 1 H6 and removes Ints7, recorded in Table 1 with its log2 value and size.",
+    "snippet": "1 H6 Loss −1.222192 10 163 Ints7",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID27869163_Schrock2017.xml",
+    "anchor": "Table 1a, row '1 H6'",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The Wwox-Brca1 interaction is reported as constitutive rather than damage-induced, explicitly contrasted with the Wwox-ATM interaction of ref 16.",
+    "snippet": "the interaction of Wwox with Brca1 appears not to be dependent on DNA damage",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27869163_Schrock2017.xml",
+    "anchor": "Discussion, first paragraph",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "Internal cross-reference error: the Methods point to Figure 6d for the Brca1 deletion-mutant schematic, which is Figure 5d.",
+    "snippet": "correspond to deletions within the Brca1 protein as illustrated in Figure 6d",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27869163_Schrock2017.xml",
+    "anchor": "Materials and methods, 'Chemicals and plasmids'",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The Methods define the two REMBRANDT patient groups and name the supplementary tables and figure panels that carry them.",
+    "snippet": "group 1, detailed in Supplementary Table 2 and depicted in Figure 2c",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27869163_Schrock2017.xml",
+    "anchor": "Materials and methods, 'Human brain cancer analysis (REMBRANDT)'",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The radiation-treated group is a subset of group 1 and is carried by Supplementary Table 3 and Figure 2d.",
+    "snippet": "group 2, detailed in Supplementary Table 3 and depicted in Figure 2d",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27869163_Schrock2017.xml",
+    "anchor": "Materials and methods, same paragraph",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The human negative: Wwox expression did not predict overall survival in the unselected brain-cancer cohort. The Results cite Figure 3c for it, while the panel is Figure 2c.",
+    "snippet": "did not predict overall survival in a large cohort of brain cancer patients (Figure 3c)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27869163_Schrock2017.xml",
+    "anchor": "Results, 'Wwox expression inhibits growth of irradiated cancer cells in vivo', second paragraph",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The human positive: in radiation-treated cancers, reduced Wwox correlated with shorter overall survival. The Results cite Figure 3d for it, while the panel is Figure 2d.",
+    "snippet": "reduced Wwox expression correlated significantly with decreased overall survival vs Wwox normal cancers (Figure 3d)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27869163_Schrock2017.xml",
+    "anchor": "Results, same sentence",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The xenograft as described in the Methods: ten mice in total, two unirradiated controls and four per experimental group.",
+    "snippet": "Positive control mice (n=2) received unirradiated cells, whereas experimental mice (n=4 for each group) received cells exposed to 5 Gy",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27869163_Schrock2017.xml",
+    "anchor": "Materials and methods, 'Ethics statement and xenograft'",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The stated total of the xenograft experiment is ten animals.",
+    "snippet": "A total of 10 athymic nude female mice (JAX stock no. 007850) were injected at 8 weeks of age",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27869163_Schrock2017.xml",
+    "anchor": "Materials and methods, same paragraph",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The Results report tumour formation in 8 mice per irradiated group, which cannot be reconciled with the Methods' n=4 per group and 10 animals in total.",
+    "snippet": "7/8 mice injected with 231/Wwox-neg cells formed tumors, whereas 6/8 mice injected with 231/Wwox-pos cells formed tumors",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27869163_Schrock2017.xml",
+    "anchor": "Results, 'Wwox expression inhibits growth of irradiated cancer cells in vivo', first paragraph",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The in vivo effect size: mean tumour latency 17 days for Wwox-negative versus 28 days for Wwox-positive irradiated cells.",
+    "snippet": "those injected with 231/Wwox-neg cells had significantly shorter tumor latencies (mean 17 days) vs mice receiving 231/Wwox-pos cells (mean 28 days)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27869163_Schrock2017.xml",
+    "anchor": "Results, same paragraph, citing Figure 2b",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The authors disclose that the antibody used to detect the Brca1 deletion mutants is directed at residues 400-1100 and therefore detects the two mutants that scored negative more weakly.",
+    "snippet": "resulting in weaker detection of",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27869163_Schrock2017.xml",
+    "anchor": "Figure 5 legend, panel (e)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The foci quantification rests on three independent experiments with error bars showing standard error, not standard deviation, and no per-nucleus denominator is stated.",
+    "snippet": "error bars depict standard error",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27869163_Schrock2017.xml",
+    "anchor": "Figure 6 legend",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The mechanistic model is labelled putative in its own legend.",
+    "snippet": "A model of putative role of Wwox in DSB repair pathway choice",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27869163_Schrock2017.xml",
+    "anchor": "Figure 7 legend, panel (c)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The survival curves show 1 s.d. and the legend states that lower error bars are abbreviated because of the log scale.",
+    "snippet": "Error bars denote 1 s.d.; lower standard error bars are abbreviated due to log scale",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27869163_Schrock2017.xml",
+    "anchor": "Figure 1 legend",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The repair-reporter and survival panels were tested with a two-tailed Student's t-test over three independent experiments; no correction for multiplicity is stated anywhere in the paper.",
+    "snippet": "Data from three independent experiments were subjected to two-tailed Student's t-test",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27869163_Schrock2017.xml",
+    "anchor": "Figure 3 legend, panels (a-e) and (g-i)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The MEF cell-cycle and checkpoint comparison was made at approximately passage 10 and did reveal differences between wild-type and knockout cells; the authors report those differences as uncorrelated with the IR response, citing Supplementary Figure 4.",
+    "snippet": "neither of which activities showed correlation with the responses of the cells to IR (Supplementary Figure 4)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27869163_Schrock2017.xml",
+    "anchor": "Results, 'Cell cycle phase distribution in IR-treated Wwox-pos and -neg cells', citing Figures 4c, 4d and Supplementary Figure 4",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "primary culture",
+     "cell_line": "MEF WT4/WT7/KO3/KO5",
+     "treatment": "10 Gy IR for cycle; 6 Gy IR for checkpoint blots",
+     "endpoint": "cell cycle distribution and checkpoint protein expression"
+    }
+   },
+   {
+    "proposition": "The alternative explanation the authors rule out: that differing cell-cycle kinetics, rather than repair-pathway usage, account for the differing IR responses.",
+    "snippet": "did not account for the differences in responses to IR exposure",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27869163_Schrock2017.xml",
+    "anchor": "Results, closing sentence of the cell-cycle section",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The karyotype was performed at passage 18 and the supplementary legend gives the chromosome 7 deletion as del(7)(A1B5), one band different from the del(7)(A1B4) stated twice in the main text.",
+    "snippet": "Karyotype analysis of Wwox ko MEFs p18. Both ko cell lines had acquired del(7)(A1B5) and del(4)(C4) in all metaphases examined (circles)",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID27869163_suppl_slide_text.txt",
+    "anchor": "Supplementary Figure 1 legend (slide 3 of the Supplementary Figures file)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The supplementary figure carrying the untreated-damage negative states that conclusion in its own title.",
+    "snippet": "Mouse Wwox knockout cells do not exhibit more spontaneous endogenous DSBs",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID27869163_suppl_slide_text.txt",
+    "anchor": "Supplementary Figure 2 legend, title sentence",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The two wild-type MEF lines and the two knockout MEF lines were pooled for the comet analysis, so the negative result is reported over averaged genotypes rather than per line.",
+    "snippet": "MEF wt cell lines (WT4 and WT7) and ko cell lines (KO3 and KO5) were averaged together for analysis",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID27869163_suppl_slide_text.txt",
+    "anchor": "Supplementary Figure 2 legend, methods sentence",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The p21, p53 and p16 immunoblots of the MEF panel were made at passage 10-12, a different passage from the karyotype at p18.",
+    "snippet": "Immunoblots of p21, p53 and p16 expression in MEFs at passage 10-12",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID27869163_suppl_slide_text.txt",
+    "anchor": "Supplementary Figure 4 legend, panel (c)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The checkpoint immunoblots behind the excluded alternative explanation were made after 6 Gy, while the cell-cycle distributions and every foci endpoint are at 10 Gy.",
+    "snippet": "Expression of checkpoint proteins in wt and Wwox ko MEFs following no treatment and after",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID27869163_suppl_slide_text.txt",
+    "anchor": "Supplementary Figure 4 legend, panel (b)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "Supplementary Table 1 is the antisera table and lives inside the Supplementary Figures .ppt, not in either deposited spreadsheet.",
+    "snippet": "Supplementary Table 1. Antisera used for Immunofluorescence and Western Blotting",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID27869163_suppl_slide_text.txt",
+    "anchor": "Supplementary Figures file, slide 2 title",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The paper's own numbering calls the radiation-treated REMBRANDT export Supplementary Table 3, whereas PMC deposits that file under the label 'Supplementary Table 2': the deposit labels are shifted by one relative to the article.",
+    "snippet": "Supplementary Table 3. (included as excel spreadsheet) Clinical details for patient data set created from Rembrandt containing all brain cancer patients with expression data and treated with radiation",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID27869163_suppl_slide_text.txt",
+    "anchor": "Supplementary Figures file, slide 2, supplementary-table notes",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The Supplementary Figure 6b legend points at 'Figure 5e and 5f' for the WW1- and SDR-mutant cell lines, whose survival panels are Figures 5f and 5g.",
+    "snippet": "Wwox expression detected by Western blot in cell lines used in Figure 5e and 5f",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID27869163_suppl_slide_text.txt",
+    "anchor": "Supplementary Figure 6 legend, panel (b)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "An unresolved editorial query about which checkpoint proteins the panel shows was published inside the supplementary file.",
+    "snippet": "Do you mean pChk2 and pchk1? *",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID27869163_suppl_slide_text.txt",
+    "anchor": "Supplementary Figures file, comment text on the checkpoint slides",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The radiation-treated REMBRANDT export records radiation under prior therapy and includes brachytherapy and radiosurgery, so 'treated with radiation' pools heterogeneous modalities.",
+    "snippet": "PRIOR_THERAPY_SURGERY_TUMOR_HISTOLOGY",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID27869163_suppl_table3_rembrandt_radiation.txt",
+    "anchor": "Supplementary Table 3 (deposited as onc2016389x3.xls), header row",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "Figure 1a read at native resolution qualifies the 10-fold statement: the separation is neither uniform across doses nor across the two wild-type lines. At 7.7 Gy WT4 (blue) sits about 6-fold below KO3/KO5, but at 10.2 Gy the WT4 point lies on the knockout cluster at roughly 0.6% survival while only WT7 (green) has collapsed to about 0.0035%. At the highest dose one of the two wild-type lines is indistinguishable from both knockouts.",
+    "snippet": "Figure 1a, native embedded raster 4024x2335 px and the 3x crop of its 2.2-10.2 Gy region: four series, WT4 blue, WT7 green, KO3 orange, KO5 red, on a log survival axis; at 10.2 Gy the blue marker is superimposed on the orange/red cluster while the green marker is roughly two decades lower.",
+    "surface": "figure",
+    "artifact": [
+     "files/figures/PMID27869163/PDFp4_xref76.png",
+     "files/figures/PMID27869163/crop_F1a_highdose.png"
+    ],
+    "anchor": "Figure 1a, the 7.7 and 10.2 Gy points",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[0]",
+    "qualifies_needle": "10-fold better than wild-type cell lines WT4 and WT7",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "primary culture",
+     "cell_line": "MEF WT4/WT7/KO3/KO5",
+     "genotype": "Wwox+/+ and Wwox-/-",
+     "treatment": "IR 10.2 Gy",
+     "endpoint": "clonogenic survival"
+    }
+   },
+   {
+    "proposition": "Figure 1c qualifies the 231/Wwox survival claim by showing how narrow it is: the doxycycline-induced series terminates at 5.1 Gy, so the whole effect rests on one dose, and that point's error bar spans roughly 0.001 to 0.12% survival, more than two decades, against a Wwox-negative value of about 0.5%.",
+    "snippet": "Figure 1c, 3x crop: two series on a log axis from 0 to 10.2 Gy; the Dox+ (blue) line stops after the 5.1 Gy point, whose lower error bar reaches the axis floor, while the Dox- (red) line continues through 7.7 and 10.2 Gy.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID27869163/crop_F1c_full.png",
+    "anchor": "Figure 1c, the 5.1 Gy point and the termination of the Dox+ series",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[1]",
+    "qualifies_needle": "the highest dose at which 231/Wwox-pos cells formed colonies",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "in vitro cell line",
+     "cell_line": "MDA MB-231 (231/Wwox)",
+     "treatment": "IR 5.1 Gy",
+     "endpoint": "clonogenic survival"
+    }
+   },
+   {
+    "proposition": "Figures 1e and 1f qualify 'at 7.7 Gy and above': in 1e the two curves are superimposed through 5.1 Gy and separate at 7.7 and 10.2 Gy, but in 1f the Dox+ series carries no 10.2 Gy point at all, so 'and above' cannot be evaluated at the top dose in the second clone. The two panels also use different y-axis floors (0.01 in 1e, 0.001 in 1f).",
+    "snippet": "Figures 1e and 1f, 3x crop: in the KO3A panel both series run to 10.2 Gy and diverge from 7.7 Gy; in the KO5F panel the last Dox+ marker is at 7.7 Gy with an error bar to the axis floor and only the Dox- series reaches 10.2 Gy.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID27869163/crop_F1e_f.png",
+    "anchor": "Figures 1e and 1f, the 7.7 and 10.2 Gy points",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[2]",
+    "qualifies_needle": "at 7.7 Gy and above (Figures 1e and f)",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "primary culture",
+     "cell_line": "KO3A and KO5F clones",
+     "treatment": "IR 7.7 and 10.2 Gy",
+     "endpoint": "clonogenic survival"
+    }
+   },
+   {
+    "proposition": "Figure 3c qualifies the only NHEJ measurement in the paper on two counts visible in the panel: the siCtrl reference bar sits at exactly 1.0 with no error bar because the assay is normalised to it, so the P<0.05 compares a value with variance against a constant; and the Wwox immunoblot beneath the panel is the weakest in the figure, a faint smear rather than a resolved band, so the knockdown that the result depends on is poorly evidenced here.",
+    "snippet": "Figure 3c, 3x crop: a two-bar chart, siCtrl at 1.0 with no error bar and siWwox at about 0.375 with an upper error bar to roughly 0.52, above a Wwox blot in which the siCtrl lane shows a faint irregular smear and the vinculin loading control is clean.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID27869163/crop_F3c_NHEJ.png",
+    "anchor": "Figure 3c, the bar chart and its embedded immunoblot",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[3]",
+    "qualifies_needle": "silencing Wwox significantly decreased NHEJ by 50%",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "in vitro cell line",
+     "cell_line": "293/HW1 per the Methods, H1299 per the Figure 3 legend",
+     "endpoint": "C-NHEJ reporter"
+    }
+   },
+   {
+    "proposition": "Figure 3i qualifies the cisplatin claim: the WT4 series carries no data point above 25 microM, while KO3 and KO5 continue to 35 and 50 microM. The comparison 'and higher concentrations vs WT4 MEF' is therefore not drawn in the panel, because above 25 microM there is no wild-type comparator.",
+    "snippet": "Figure 3i, 3x crop: on a log survival axis against cisplatin 0-50 microM, the blue WT4 line ends at the 25 microM point while the orange KO3 and red KO5 lines continue through 35 and 50 microM.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID27869163/crop_F3h_i.png",
+    "anchor": "Figure 3i, the 35 and 50 microM positions",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[8]",
+    "qualifies_needle": "and higher concentrations vs WT4 MEF",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "primary culture",
+     "cell_line": "MEF WT4/KO3/KO5",
+     "treatment": "cisplatin 35-50 microM",
+     "comparator": "WT4, absent above 25 microM",
+     "endpoint": "clonogenic survival"
+    }
+   },
+   {
+    "proposition": "Figure 5e qualifies the interaction map on its own control lane: in the IgG co-immunoprecipitation panel the Wwox row is blank for N, M1, M2 and M3 but carries a clear band in the C lane. One of the three mutants scored as retaining Wwox binding is therefore the one whose negative control is positive, and the text never mentions it. The Brca1 rows of the HA co-IP are also saturated and smeared across M2, M3 and C, so equal bait recovery cannot be read off the panel.",
+    "snippet": "Figure 5e, 3x crop: three panels labelled lysate, HA coIP and IgG coIP over lanes N, M1, M2, M3, C; in the IgG coIP the Wwox row shows a single distinct band in the C lane and nothing in the other four.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID27869163/crop_F5e_coIP.png",
+    "anchor": "Figure 5e, IgG coIP panel, Wwox row, lane C",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[10]",
+    "qualifies_needle": "at the N, M3 and C regions (lanes 6, 9 and 10; Figure 5e)",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "in vitro cell line",
+     "cell_line": "MDA MB-231",
+     "genotype": "HA-Brca1 deletion mutants + myc-Wwox",
+     "endpoint": "IgG control co-immunoprecipitation"
+    }
+   },
+   {
+    "proposition": "Figure 6 qualifies the Brca1-recruitment negative. At 1 h the Brca1 foci means are about 2.67 with Wwox and about 4.27 without, and their standard-error bars do not overlap; the pair carries no significance mark while gammaH2AX, Rpa32 and Rad51 pairs in the same figure do. Whether this pair was tested and found non-significant, or reported as such without a mark, cannot be read off the panel, and the sentence it supports is the load-bearing negative of the model.",
+    "snippet": "Figure 6, 3x crop of the Brca1 quantification: eight bars at 0, 1, 3 and 6 h, Dox+ grey and Dox- black; at 1 h the grey bar reaches about 2.67 with an error bar to roughly 3.05 and the black bar about 4.27 with an error bar from roughly 4.10, and no bracket or P value is drawn over the pair.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID27869163/crop_F6_graphs_Brca1_Rpa32_Rad51.png",
+    "anchor": "Figure 6, Brca1 foci graph, the 1 h pair",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[13]",
+    "qualifies_needle": "no significant differences in foci of RIF1, 53BP1 or Brca1 proteins",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "in vitro cell line",
+     "cell_line": "MDA MB-231 (231/Wwox)",
+     "treatment": "10 Gy IR",
+     "timepoint": "1 h",
+     "endpoint": "Brca1 foci per nucleus"
+    }
+   },
+   {
+    "proposition": "Figure 6 qualifies the Rpa32 result in time: the difference exists at 1 h (about 1.35 with Wwox against about 3.53 without) and inverts at 3 h, where the Wwox-expressing cells show the higher mean (about 3.68 against about 2.73) with wide, overlapping error bars and no mark, before both fall by 6 h. The enhanced-resection reading is a one-timepoint observation, not a sustained difference.",
+    "snippet": "Figure 6, 3x crop of the RPA32 quantification: the 1 h pair carries a P< 0.05 bracket with the black bar at about 3.53, and at 3 h the grey bar rises to about 3.68 while the black bar falls to about 2.73, with error bars spanning roughly 2.75-4.65 and 1.6-4.25 and no bracket.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID27869163/crop_F6_graphs_Brca1_Rpa32_Rad51.png",
+    "anchor": "Figure 6, RPA32 foci graph, the 1 h and 3 h pairs",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[14]",
+    "qualifies_needle": "increased foci in 231/Wwox-neg cells compared with 231/Wwox-pos cells 1 h after IR",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "in vitro cell line",
+     "cell_line": "MDA MB-231 (231/Wwox)",
+     "treatment": "10 Gy IR",
+     "timepoint": "1 h and 3 h",
+     "endpoint": "RPA32 foci per nucleus"
+    }
+   },
+   {
+    "proposition": "Figure 6 qualifies the end-resection hypothesis through the Rad51 baseline: at 0 h, before irradiation, the Wwox-negative cells already carry about 7.35 Rad51 foci per nucleus against about 4.07 in the Wwox-positive cells, unmarked; at 3 h the order inverts; and the Rad51 graph stops at 3 h while the other five proteins are followed to 6 h. A pre-existing difference at time zero is not attributable to irradiation-induced resection.",
+    "snippet": "Figure 6, 3x crop of the Rad51 quantification: six bars at 0, 1 and 3 h only; at 0 h the grey bar is about 4.07 and the black about 7.35 with no bracket, the 1 h pair carries P< 0.05, and at 3 h the grey bar is about 12.6 against about 10.4 black.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID27869163/crop_F6_graphs_Brca1_Rpa32_Rad51.png",
+    "anchor": "Figure 6, Rad51 foci graph, the 0 h pair and the absent 6 h timepoint",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[15]",
+    "qualifies_needle": "Wwox interaction with Brca1 suppresses DSB end resection in Wwox-sufficient cells",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "in vitro cell line",
+     "cell_line": "MDA MB-231 (231/Wwox)",
+     "treatment": "10 Gy IR",
+     "timepoint": "0 h, before irradiation",
+     "endpoint": "Rad51 foci per nucleus"
+    }
+   },
+   {
+    "proposition": "Figure 7c qualifies the competition model in the authors' own drawing: the arrow by which Wwox blocks the Brca1-Rad50/MRN interaction is drawn with a question mark beside it. The step the model turns on is marked as unverified on the figure itself, and no Rad50 competition experiment appears anywhere in the paper.",
+    "snippet": "Figure 7c: Wwox is drawn beneath Brca1/CtIP with a blunt-ended inhibitory line toward the M-R-N complex, and a '?' is printed immediately beside that line; the caption beneath reads that impaired resection hampers HDR and promotes NHEJ in Wwox-sufficient cells.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID27869163/PDFp11_xref131.png",
+    "anchor": "Figure 7c, the Wwox-to-MRN inhibitory arrow",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[12]",
+    "qualifies_needle": "Wwox competes with Rad50 for binding to Brca1",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "in silico",
+     "cell_line": "schematic model, no system",
+     "endpoint": "proposed mechanism"
+    }
+   },
+   {
+    "proposition": "Supplementary Figure 2 qualifies the untreated negative. In panel b the mean comet tail moment is higher, not equal, on Wwox silencing (about 21.8 against about 13.6 in siCtrl, a 60% increase) with wide overlapping error bars and no significance mark; only the MEF panel c shows genuinely superimposed means (about 6.35 ko against 6.25 wt). The negative rests on non-significance with high variance in a pooled analysis, not on demonstrated equivalence.",
+    "snippet": "Supplementary Figure 2 panels a, b and c as deposited: gammaH2AX percent positive cells siCtrl about 12.8 against siWwox about 14.9; tail moment siCtrl about 13.6 with an error bar to about 20.5 against siWwox about 21.8 with an error bar to about 35.5; tail moment wt about 6.25 against ko about 6.35. No panel carries a significance mark.",
+    "surface": "figure",
+    "artifact": [
+     "files/figures/PMID27869163/suppl_figs/fig_05.png",
+     "files/figures/PMID27869163/suppl_figs/fig_04.png",
+     "files/figures/PMID27869163/suppl_figs/fig_03.png"
+    ],
+    "anchor": "Supplementary Figure 2, panels a, b and c",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[17]",
+    "qualifies_needle": "did not reveal differences in untreated Wwox-deficient and -expressing cells",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "in vitro cell line and primary culture",
+     "cell_line": "MCF10A (panels a, b) and MEF WT4+WT7 vs KO3+KO5 pooled (panel c)",
+     "treatment": "untreated",
+     "endpoint": "gammaH2AX-positive cells and comet tail moment"
+    }
+   },
+   {
+    "proposition": "Supplementary Figure 1 qualifies the karyotype claim by what it does not contain: the figure holds two knockout karyograms and no wild-type karyogram, so the comparator for 'not present in the wild-type cell line' is not shown. No circles are drawn on either deposited image, although the legend says the deletions are marked by circles, and at the deposited 640x512 px the shortened chromosome 7 and 4 homologues are visible but a band-level assignment such as A1B4 against A1B5 is not verifiable.",
+    "snippet": "Supplementary Figure 1: two G-banded karyograms, each near-tetraploid with four copies of most autosomes, laid out on a template carrying empty labels 20, 21 and 22 for a 19-autosome species; one carries two marker chromosomes annotated 'M 7' and 'M 3'. Chromosome 7 and chromosome 4 each show shortened homologues. No circle annotation is present on either image.",
+    "surface": "figure",
+    "artifact": [
+     "files/figures/PMID27869163/suppl_figs/fig_01.png",
+     "files/figures/PMID27869163/suppl_figs/fig_02.png"
+    ],
+    "anchor": "Supplementary Figure 1, both karyograms",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[16]",
+    "qualifies_needle": "two structural abnormalities not present in the wild-type cell line",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "primary culture",
+     "cell_line": "Wwox ko MEF KO3 and KO5 at p18",
+     "genotype": "Wwox-/-",
+     "endpoint": "G-banded karyotype"
+    }
+   },
+   {
+    "proposition": "Supplementary Figure 4 qualifies the exclusion of the cell-cycle alternative: the checkpoint evidence behind it is a set of raw single-film immunoblots with no densitometry anywhere, scored in Figure 4 as absent/medium/high shading. A qualitative visual grading of one film per protein, taken after 6 Gy, is what stands behind a claimed absence of correlation with responses measured at 10 Gy and at 7.7-10.2 Gy.",
+    "snippet": "Supplementary Figure 4 component blips as deposited: annotated film scans with handwritten lane sets WT4 WT7 KO3 KO5 at 0, 2 h, 4 h and 6 h after 6 Gy IR, antibody notes (Rb alpha pATR 1:1000, goat alpha ATR sc-1887, pChk1, ATM, Gapdh, vinculin, p53, p16) and dates; no densitometric quantification accompanies any of them.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID27869163/suppl_figs/montage_S4.png",
+    "anchor": "Supplementary Figure 4, panels b and c, component films",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[38]",
+    "qualifies_needle": "neither of which activities showed correlation with the responses of the cells to IR",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "primary culture",
+     "cell_line": "MEF WT4/WT7/KO3/KO5",
+     "treatment": "6 Gy IR",
+     "endpoint": "checkpoint protein immunoblot, ungraded"
+    }
+   },
+   {
+    "proposition": "Supplementary Figure 6b confirms that doxycycline induces Wwox in all three inducible 231 lines, including the WW1 and Y293F mutants, so the Figure 5f and 5g survival comparisons rest on demonstrated expression. The induction lanes are annotated '-D' and 'D96' while every functional experiment specifies 24 h of doxycycline; what 'D96' denotes is not resolvable from the artefact.",
+    "snippet": "Supplementary Figure 6b as deposited: a Wwox immunoblot with handwritten lanes Scr, 13A, WT -D, WT D96, WW1 -D, WW1 D96, Y293F -D, Y293F D96, showing a strong band in each D96 lane and a faint band in each -D lane, over an evenly loaded actin control.",
+    "surface": "figure",
+    "artifact": [
+     "files/figures/PMID27869163/suppl_figs/fig_40.jpg",
+     "files/figures/PMID27869163/suppl_figs/fig_41.jpg"
+    ],
+    "anchor": "Supplementary Figure 6b, Wwox and actin films",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "in vitro cell line",
+     "cell_line": "231/Wwox, 231/WW1 mut, 231/SDR mut (Y293F), MCF10A Scr and shWWOXA",
+     "treatment": "doxycycline induction",
+     "endpoint": "Wwox immunoblot"
+    }
+   },
+   {
+    "proposition": "The reporter measurements themselves, read off Figure 3: HDR rises from about 20% GFP-positive under siCtrl to about 50% under siWwox in U87 and returns to about 19.7% on rescue; the HeLa arm moves from about 2.8% to about 2.0% on Wwox expression; Alt-NHEJ falls from about 12.1% to about 5.0% with only partial rescue to about 9.6%; SSA falls from about 3.1% to about 0.88%. The rescue arms are what make these Wwox-specific rather than off-target, and the Alt-NHEJ rescue is incomplete.",
+    "snippet": "Figure 3 panels a, b, d, e: bar charts of % cells GFP positive with brackets P< 0.01 twice in panel a, P< 0.05 in panel b, P< 0.0001 and P< 0.001 in panel d and P< 0.0001 in panel e, each above a Wwox immunoblot with a vinculin loading control.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID27869163/PDFp6_xref93.png",
+    "anchor": "Figure 3, panels a, b, d and e",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "in vitro cell line",
+     "cell_line": "U87 DR-GFP, HeLa DR-GFP, H1299 EJ2, HeLa Sa26",
+     "endpoint": "integrated GFP repair reporters"
+    }
+   },
+   {
+    "proposition": "Figure 2b read at native resolution: the unirradiated control groups are plotted (medians about 10 and 13 days) with no test drawn between them, and the single P<0.05 bracket spans the two irradiated groups. With two control animals per group per the Methods, the statement that control latencies were 'not different' is an unmarked comparison, not a tested one.",
+    "snippet": "Figure 2b: four box plots labelled IR 0 Gy and 5 Gy under Dox- and Dox+, with a single P < 0.05 bracket drawn between the two 5 Gy boxes and no bracket between the 0 Gy boxes; the 5 Gy Dox+ box spans roughly 17 to 45 days against roughly 10 to 28 days for 5 Gy Dox-.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID27869163/PDFp5_xref89.png",
+    "anchor": "Figure 2b, the 0 Gy and 5 Gy box plots",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse",
+     "cell_line": "231/Wwox xenograft in athymic nude mice",
+     "treatment": "5 Gy IR before injection",
+     "endpoint": "tumour latency in days"
+    }
+   },
+   {
+    "proposition": "Figure 4a and 4c read at native resolution: in the isogenic 231 pair the cycle distributions are nearly identical with and without Wwox, which supports the authors' exclusion; but in the MEFs the four lines differ substantially from each other and not only by genotype, with WT4 about 90% G1 against WT7 about 80%, KO3 carrying about 10% sub-G1 and KO5 sitting at about 48% G1 with a much larger S and G2/M fraction. The MEF panel therefore shows line-to-line heterogeneity rather than a clean genotype contrast, which is the same heterogeneity Supplementary Figure 2 pools away.",
+    "snippet": "Figure 4c: four stacked-column series labelled WT4, WT7, KO3 and KO5 at 0, 1, 3 and 6 h after 10 Gy, with sub-G1, G1, S, G2/M and >G2 fractions, beneath qualitative chk2 and chk1 shading rows graded absent to high.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID27869163/PDFp7_xref100.png",
+    "anchor": "Figure 4a and 4c",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "primary culture and in vitro cell line",
+     "cell_line": "MEF WT4/WT7/KO3/KO5 and MDA MB-231 (231/Wwox)",
+     "treatment": "10 Gy IR",
+     "endpoint": "cell cycle phase distribution"
+    }
+   }
+  ]
+ }
+}

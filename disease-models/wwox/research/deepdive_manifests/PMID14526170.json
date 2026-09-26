@@ -1,0 +1,755 @@
+{
+  "schema_version": 2,
+  "pmid": "14526170",
+  "doi": "10.1159/000072844",
+  "receipt": "FTR-20260913-14526170-01",
+  "task": "ALDAZ-FT-B-004",
+  "actor": "scientist-b",
+  "read_on": "2026-09-13",
+  "identity": {
+    "title": "WWOX, the common chromosomal fragile site, FRA16D, cancer gene",
+    "authors": "Ludes-Meyers JH, Bednarek AK, Popescu NC, Bedford M, Aldaz CM",
+    "journal": "Cytogenetic and genome research (Cytogenet Genome Res)",
+    "year": 2003,
+    "volume_issue_pages": "100(1-4):101-110",
+    "pmcid": "PMC4150470",
+    "surface_identity_caveat": "The surface read is the NIHMS author manuscript NIHMS222051, NOT the published Karger version. PMC's own custom-meta declares pmc-prop-is-real-version=no. Every page number in this manifest is a MANUSCRIPT page (1-24), never a journal page (101-110), and the anchors are spelled that way deliberately."
+  },
+  "landing": [
+    "CORPUS-STUB-130",
+    "LIT-0149"
+  ],
+  "skills_considered": [
+    {
+      "skill": "legend-deepdive",
+      "used": true,
+      "reason": "The lot is a first full-text reading to a durable depth; this is its pipeline."
+    },
+    {
+      "skill": "legend-locator-audit",
+      "used": false,
+      "reason": "R4 is required where a reading narrows, reverses, corroborates or removes a consolidated baseline claim, or justifies a MAJOR bump. This reading qualifies what a reagent licenses and reverses no claim, so ladder floor R2 governs; the commit candidate names the entries whose later use would trigger R4."
+    },
+    {
+      "skill": "legend-discovery",
+      "used": false,
+      "reason": "No biomarker, repurposing or corrective-molecule lead exists in a 2003 cancer-genetics review whose only therapeutic content is xenograft growth inhibition in two breast cancer lines."
+    },
+    {
+      "skill": "legend-study-intake-triage",
+      "used": false,
+      "reason": "No study list arrived. The single PMID was dispatched already identified as CORPUS-STUB-130 / LIT-0149."
+    },
+    {
+      "skill": "legend-session-self-eval",
+      "used": true,
+      "reason": "Mandatory after a completed full-text read and before takeaways; the diagnosis is a declared deliverable of this lot."
+    }
+  ],
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID14526170/PMID14526170_PMC4150470.pdf",
+      "sha256": "763705013a5efddb424f016aaa461d26bc97aba8bc274758e4e457c468aaf2a5",
+      "kind": "article_binary",
+      "acquisition_recipe": {
+        "derived": false,
+        "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4150470/pdf/",
+        "http_method": "GET",
+        "tier": "pmc_proof_of_work_pdf (framework/scripts/pmc_pow_fetch.py)",
+        "user_agent_policy": "identified",
+        "acquired_on": "2026-09-13",
+        "result_sha256": "763705013a5efddb424f016aaa461d26bc97aba8bc274758e4e457c468aaf2a5",
+        "notes": "first_status 200, pow_used true, difficulty 4, nonce 53359, solution_hash 000096874702fd9d2ce6242541bcc800c3783a79f61abda0672de8416e67e577, retry_status 200, content_type 'application/pdf; charset=utf-8'. The agent string is LEGEND-research/1.0 (rare-disease literature model; single-document retrieval) — identified, deliberately neither browser_like nor absent, since PMC served a reCAPTCHA to browser-like agents and nothing to none. 3,133,985 bytes, 24 pages."
+      }
+    },
+    {
+      "path": "files/fulltext/PMID14526170/PMID14526170_article_text_readingorder.txt",
+      "sha256": "79ed29aca87cce3495bf9f15ef11dfa843430786655cc92f533c8933f78d0bf4",
+      "kind": "article_text",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID14526170/PMID14526170_PMC4150470.pdf",
+        "extractor": {
+          "name": "pdftotext (poppler-utils)",
+          "version": "24.02.0 (Debian/Ubuntu package 24.02.0-1ubuntu9.9)",
+          "call": "pdftotext -nopgbrk PMID14526170_PMC4150470.pdf PMID14526170_article_text_readingorder.txt"
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "79ed29aca87cce3495bf9f15ef11dfa843430786655cc92f533c8933f78d0bf4",
+        "notes": "🔴 This is the SECOND extraction and it exists because the first was refused. A PyMuPDF page-order extraction (63,444 bytes, sha256 92eb9e4ebf6fdac6e271f8d6451cc2de82cba5069eca0af631e3e81bd85b48df) screened REFUSED under text_surface_intrusion_check with 88 PAGE_FURNITURE_IN_SENTENCE spans. The checker's own remedy names this exact tool and flags — reading order, no -layout — and it reduced the intrusions to 4. The surface was NOT hand-corrected. Both text extractions contain the manuscript page 1 correspondence line and therefore trip the publication gate's EMAIL_ADDRESS check; both are under files/, excluded by .gitignore line 7, untracked, and enter no commit. The text stands as the publisher printed it."
+      }
+    },
+    {
+      "path": "files/fulltext/PMID14526170/pdf_images/p16_x59.jpeg",
+      "sha256": "9bcc7fd0beb797db7e9a74c76a032c555c66b4ec0ba3400f5700e5b953aefb63",
+      "kind": "figure",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID14526170/PMID14526170_PMC4150470.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2 (MuPDF 1.28.2, Python 3.12.3)",
+          "call": "doc.extract_image(xref=59) on page 16, written as the stored JPEG without recompression"
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "9bcc7fd0beb797db7e9a74c76a032c555c66b4ec0ba3400f5700e5b953aefb63",
+        "notes": "Figure 1, 4200x2169. figure_ppi_preflight measures page 16 at 600.0 effective ppi, so this embedded raster IS the native surface; no JATS deposit and no publisher ESM exist for this article."
+      }
+    },
+    {
+      "path": "files/fulltext/PMID14526170/pdf_images/p17_x65.png",
+      "sha256": "d297e5aa6be5187b84eed901aab1cf6cff8a87815236343dc08b583ed0826a1e",
+      "kind": "figure",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID14526170/PMID14526170_PMC4150470.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2 (MuPDF 1.28.2, Python 3.12.3)",
+          "call": "doc.extract_image(xref=65) on page 17, written as the stored PNG without recompression"
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "d297e5aa6be5187b84eed901aab1cf6cff8a87815236343dc08b583ed0826a1e",
+        "notes": "Figure 2, 4200x1853, page measured at 600.0 effective ppi."
+      }
+    },
+    {
+      "path": "files/fulltext/PMID14526170/pdf_images/p18_x70.png",
+      "sha256": "d7903049b9d4de9d18a6dcf484f685fffe5b9912faac6963d788959c6f2e017d",
+      "kind": "figure",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID14526170/PMID14526170_PMC4150470.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2 (MuPDF 1.28.2, Python 3.12.3)",
+          "call": "doc.extract_image(xref=70) on page 18, written as the stored PNG without recompression"
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "d7903049b9d4de9d18a6dcf484f685fffe5b9912faac6963d788959c6f2e017d",
+        "notes": "Figure 3, 4200x3703, page measured at 600.2 effective ppi."
+      }
+    },
+    {
+      "path": "files/fulltext/PMID14526170/pdf_images/p19_x76.jpeg",
+      "sha256": "b1dd148f6cae91f990e88a2a5fe2548826174f79b1a00977f4767d983f1d9af9",
+      "kind": "figure",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID14526170/PMID14526170_PMC4150470.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2 (MuPDF 1.28.2, Python 3.12.3)",
+          "call": "doc.extract_image(xref=76) on page 19, written as the stored JPEG without recompression"
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "b1dd148f6cae91f990e88a2a5fe2548826174f79b1a00977f4767d983f1d9af9",
+        "notes": "Figure 4, 2096x905. This page measures 299.4 effective ppi — the lower of the two resolution classes in this PDF, and it is stated rather than smoothed over."
+      }
+    },
+    {
+      "path": "files/fulltext/PMID14526170/pdf_images/p20_x82.jpeg",
+      "sha256": "578f9a1069ea4162c22f96f4b7d5bc72b7b3b6e9773629ada4d632bed9972ebb",
+      "kind": "figure",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID14526170/PMID14526170_PMC4150470.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2 (MuPDF 1.28.2, Python 3.12.3)",
+          "call": "doc.extract_image(xref=82) on page 20, written as the stored JPEG without recompression"
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "578f9a1069ea4162c22f96f4b7d5bc72b7b3b6e9773629ada4d632bed9972ebb",
+        "notes": "🔴 Figure 5, 4200x2587 — THE load-bearing panel of this reading, the only antibody-specificity evidence in the paper. Page measured at 600.2 effective ppi. Additionally re-rendered from the PDF at 900 dpi over two clip rectangles for legibility of the lane labels and molecular-weight marks; the clips add magnification, not information, since 600 ppi is the raster ceiling."
+      }
+    },
+    {
+      "path": "files/fulltext/PMID14526170/pdf_images/p21_x87.jpeg",
+      "sha256": "b8a9a3c95796b2d991fbabbb04761791d0917916b4a4e8d67b27507bffeadf66",
+      "kind": "figure",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID14526170/PMID14526170_PMC4150470.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2 (MuPDF 1.28.2, Python 3.12.3)",
+          "call": "doc.extract_image(xref=87) on page 21, written as the stored JPEG without recompression"
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "b8a9a3c95796b2d991fbabbb04761791d0917916b4a4e8d67b27507bffeadf66",
+        "notes": "Figure 6, 3135x4200, page measured at 600.6 effective ppi."
+      }
+    },
+    {
+      "path": "files/fulltext/PMID14526170/pdf_images/p23_x95.png",
+      "sha256": "d185bb10c41303ead655ac004a2a19ab29e8875e6baaaef4ae9eb879df24c0c0",
+      "kind": "figure",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID14526170/PMID14526170_PMC4150470.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2 (MuPDF 1.28.2, Python 3.12.3)",
+          "call": "doc.extract_image(xref=95) on page 23, written as the stored PNG without recompression"
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "d185bb10c41303ead655ac004a2a19ab29e8875e6baaaef4ae9eb879df24c0c0",
+        "notes": "Figure 7, 4200x1382, page measured at 600.9 effective ppi."
+      }
+    },
+    {
+      "path": "files/fulltext/PMID14526170/pdf_images/p24_x100.jpeg",
+      "sha256": "818bbe4ad73e2cd609310761717dd3def3b5d36e063fc9a89c9999e593f9a6b0",
+      "kind": "figure",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID14526170/PMID14526170_PMC4150470.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2 (MuPDF 1.28.2, Python 3.12.3)",
+          "call": "doc.extract_image(xref=100) on page 24, written as the stored JPEG without recompression"
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "818bbe4ad73e2cd609310761717dd3def3b5d36e063fc9a89c9999e593f9a6b0",
+        "notes": "Figure 8, 2096x1569, page measured at 299.5 effective ppi — the lower class again, stated rather than smoothed over. A ninth embedded raster exists on page 1 (p01_x8, 200x200) and is NOT declared here because it is the NIH Public Access logo: page furniture, not a panel. So the paper carries 8 figures, not 9 images."
+      }
+    }
+  ],
+  "reading_budget": {
+    "declared_before_reading": true,
+    "planned": "Surface inventory and a vector-versus-raster check before any figure; all 24 manuscript pages of body, references and captions; every embedded panel at native resolution; the antibody-characterisation question answered from the body prose and the panels, never from the abstract.",
+    "actual": "24 of 24 pages read. 8 of 8 panels inspected at native resolution; Fig. 5 additionally re-rendered at 900 dpi over two clips. Reference list enumerated mechanically. Order kept: paper_packet surfaces, the ToUnicode font screen and the get_drawings vector check all preceded figure inspection.",
+    "deviation": "No order deviation. One measurement correction inside the budget, recorded rather than hidden: the first reference-list parser over-split multi-line entries (76) and bled Fig. 1's caption into the list, which also mis-flagged Yunis & Soreng 1984 as gene-direct. The PubMed-tag count is the anchor instead, and the residual uncertainty is stated in `multihop`."
+  },
+  "group_assessment": {
+    "total_publications": 138,
+    "publications_on_gene": 38,
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": false,
+    "weighting": "Measured 2026-09-13 by PubMed esearch: 'Aldaz CM[Author]' = 138, 'Aldaz CM[Author] AND WWOX' = 38, 'Ludes-Meyers JH[Author]' = 13. This is the laboratory that cloned WWOX and it is the primary group FOR THE GENE — the reagent, the physical map and the tumour-suppressor phenotype all originate here. It is NOT primary for the disease: nothing here concerns a neurodevelopmental phenotype and WWOX-DEE did not exist as a described entity in 2003. The reweighting is therefore asymmetric and that asymmetry is the point. OBSERVATION weighs high: on what immunogen its own antiserum was raised, this group is the most authoritative source that can exist, because it made the reagent. INTERPRETATION weighs low and is in places self-interested: the same paper asserts the sex-steroid function it had itself hypothesised, draws a 'necessary and sufficient' conclusion whose sufficiency leg is 'data not shown', and states in its abstract as established a PPXY result its own body calls preliminary and in preparation.",
+    "external_provenance": {
+      "command": "eutils esearch db=pubmed for the three author queries above",
+      "date": "2026-09-13"
+    }
+  },
+  "field_density": {
+    "queries": [
+      {
+        "query": "WWOX AND FRA16D",
+        "count": 119,
+        "external_provenance": {
+          "command": "eutils esearch db=pubmed",
+          "date": "2026-09-13"
+        }
+      },
+      {
+        "query": "WWOX AND short chain dehydrogenase",
+        "count": 412,
+        "external_provenance": {
+          "command": "eutils esearch db=pubmed",
+          "date": "2026-09-13"
+        }
+      },
+      {
+        "query": "WWOX AND sex steroid metabolism",
+        "count": 10,
+        "external_provenance": {
+          "command": "eutils esearch db=pubmed",
+          "date": "2026-09-13"
+        }
+      },
+      {
+        "query": "WWOX AND Golgi",
+        "count": 8,
+        "external_provenance": {
+          "command": "eutils esearch db=pubmed",
+          "date": "2026-09-13"
+        }
+      },
+      {
+        "query": "WWOX AND antibody AND specificity",
+        "count": 8,
+        "external_provenance": {
+          "command": "eutils esearch db=pubmed",
+          "date": "2026-09-13"
+        }
+      },
+      {
+        "query": "WWOX AND antiserum",
+        "count": 1,
+        "external_provenance": {
+          "command": "eutils esearch db=pubmed",
+          "date": "2026-09-13"
+        }
+      },
+      {
+        "query": "WWOX AND immunohistochemistry AND validation",
+        "count": 2,
+        "external_provenance": {
+          "command": "eutils esearch db=pubmed",
+          "date": "2026-09-13"
+        }
+      }
+    ],
+    "reading": "The two queries that matter to this lot return 1 and 2. The reagent on which a large part of the WWOX protein literature rests has essentially no independent characterisation literature, and the IHC-validation question this lot was dispatched to settle is not one the field has answered elsewhere either."
+  },
+  "multihop": {
+    "references_enumerated": 56,
+    "enumeration_method": "From the reading-order text surface: 54 entries carry an explicit '[PubMed: nnnnnnn]' tag and 2 further entries carry none and were confirmed by eye — Charpentier & Aldaz 2002 (book chapter, Molecular Basis of Human Cancer) and Lakhani et al. 1995 (J clin Pathol: Mol Pathol M74-M78). A line-based parser returned 76 by over-splitting multi-line entries and by bleeding Fig. 1's caption into the list; the PubMed-tag count is the anchor. Residual uncertainty +/-1, stated rather than hidden. Crossref, by contrast, returns only 20 references for this DOI, which is why the dependency screen below covers 20 and not 56.",
+    "gene_direct_refs_in_source": [
+      "10786676",
+      "11719429",
+      "10861292",
+      "10749140",
+      "10749141",
+      "11572989",
+      "11013073",
+      "11979549",
+      "11058590",
+      "11896615",
+      "11956080"
+    ],
+    "resolved": [
+      {
+        "pmid": "11572989",
+        "how": "Resolved WITHIN this reading as a dependency of the reagent argument, not merely cited: it is the sole source of the WWOX-null status of the Peo line, which is the only specificity control the antiserum has. Recorded as locator entry 2, which states that the null genotype is imported by citation and by personal gift and is not demonstrated in this paper."
+      },
+      {
+        "pmid": "10786676",
+        "how": "The laboratory's own cloning primary (Bednarek 2000), already in the corpus; restated throughout this paper and carried as restatement rather than as evidence — see locator entry 21."
+      },
+      {
+        "pmid": "11719429",
+        "how": "The laboratory's own tumour-suppressor primary (Bednarek 2001), already in the corpus; it is the source of the Golgi-localisation comparator and of the xenograft experiment this paper re-presents in Figs. 6 and 8, and locator entries 10 to 12 and 17 record that the comparator lives there and not here."
+      }
+    ],
+    "queued": [
+      {
+        "queue": "FT-179",
+        "why": "FT-179 was minted for this very paper as the terminus of the antibody-specificity citation chain and is updated by this reading. The one NEW antecedent this reading surfaces, PMID 10861292 (Ried et al. 2000), is added to that same entry rather than given a second address, so one debt keeps one address."
+      }
+    ],
+    "disposition": "Eleven gene-direct references, stable across both parses. Three are resolved above. The remaining eight are restated once each and are not load-bearing for the terminus question. No gene-direct reference is left both unfollowed and undeclared. 🔴 The measured gap worth naming: 10861292 (Ried 2000, Hum molec Genet), the group that independently cloned this same gene and named it FOR, appears in ZERO registry files in this checkout — the corpus holds the Aldaz-side cloning lineage and not the competing simultaneous one."
+  },
+  "corpus_crossquery": {
+    "query": "Which antecedents of this paper's own antibody-and-cloning citation chain already exist under disease-models/wwox/registries/ — grep for PMIDs 16941225, 15982416, 15692750, 18674750, 11572989, 11719429, 10786676, 10861292",
+    "hits": 7,
+    "result": "7 of 8 are present in at least four registry files each. The single absence is 10861292 (Ried et al. 2000), present in 0 registry files.",
+    "external_provenance": {
+      "command": "grep -rl <pmid> disease-models/wwox/registries/",
+      "date": "2026-09-13"
+    }
+  },
+  "retraction_check": {
+    "result": "CLEAN for this article. PubMed ESummary for PMID 14526170 on 2026-09-13 returns commentscorrections = null: no erratum, correction, expression of concern, retraction or republication is recorded. Identity cross-checked in the same response — volume 100, issue 1-4, pages 101-10, 5 authors, mid NIHMS222051, pmc PMC4150470, doi 10.1159/000072844, pii 72844.",
+    "checked_on": "2026-09-13",
+    "method": "eutils ESummary db=pubmed, CommentsCorrections field",
+    "dependencies": {
+      "schema": "retraction_check.dependencies/1",
+      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+      "paper_verdict": "SCREENED_CLEAN",
+      "screened": true,
+      "reference_source": "network",
+      "references_declared": 20,
+      "references_screened": 20,
+      "references_with_doi": 20,
+      "flagged": [],
+      "noted": [],
+      "unscreenable": {},
+      "snapshot": {
+        "date": "2026-09-10",
+        "days_since_fetch": 3,
+        "rows": 72476,
+        "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+      },
+      "citing_relation": "No dependency is flagged, so no citing_relation is owed. The honest limit of this screen, stated rather than implied: Crossref exposes 20 references for this DOI while the printed reference list holds ~56, so 36 of the paper's own citations were not reachable by DOI and are therefore UNSCREENED rather than clean. Among the unreachable are gene-direct antecedents that matter to this reading."
+    }
+  },
+  "verbatim_locators": {
+    "source_fulltext_indexed_evidence": "Europe PMC search EXT_ID:14526170 resultType=core on 2026-09-13 returned 1 hit, 8,226 bytes: inEPMC=Y, inPMC=Y, pmcid PMC4150470, fullTextIdList=[PMC4150470], isOpenAccess=N, hasSuppl=N, citedByCount=66. The article IS full-text indexed in Europe PMC, so an external validator can reach its text, even though every machine-readable route refuses: fullTextXML 404 and efetch returns front matter only under the publisher's own no-XML notice. Indexed for discovery, closed for retrieval.",
+    "source_fulltext_indexed": true,
+    "entries": [
+      {
+        "proposition": "The immunogen for the anti-WWOX antiserum is stated once and unambiguously: a GST fusion to WWOX residues 12-94 spanning both WW domains. This single sentence reconciles rather than adjudicates the two different immunogen descriptions given by the later papers that cite this one for characterisation, because a GST-WWOX fusion protein and 'the WW domains' are two true descriptions of one immunogen.",
+        "snippet": "The antiserum was raised using a GST fusion to WWOX amino acid residues 12–94 containing both of the WW domains.",
+        "anchor": "manuscript page 6, section 'WWOX, a potential tumor suppressor gene?'",
+        "surface": "body",
+        "artifact": [
+          "files/fulltext/PMID14526170/PMID14526170_article_text_readingorder.txt"
+        ],
+        "panel_text_relation": "text_only",
+        "experimental_context": {
+          "system": "recombinant GST fusion protein raised as an immunogen",
+          "genotype": "WWOX residues 12-94, both WW domains, no SDR sequence",
+          "endpoint": "generation of a WWOX-specific antiserum"
+        }
+      },
+      {
+        "proposition": "The antiserum's specificity rests on a single immunoblot comparison between a cell line carrying a homozygous WWOX deletion and the same line reconstituted with WWOX — a genetic-null design, the strongest control class available for a reagent, and it is the only specificity control in the paper.",
+        "snippet": "Specific immunodetection of the WWOX protein was demonstrated by Western blotting of total cellular extracts from the ovarian cancer cell lines, Peo/vector and Peo/WWOX.",
+        "anchor": "manuscript page 6, two sentences after the immunogen statement",
+        "surface": "body",
+        "artifact": [
+          "files/fulltext/PMID14526170/PMID14526170_article_text_readingorder.txt"
+        ],
+        "panel_text_relation": "text_confirmed_by_panel",
+        "experimental_context": {
+          "system": "in vitro ovarian carcinoma cell line, whole-cell lysate immunoblot",
+          "cell_line": "Peo (Peo/vector and Peo/WWOX)",
+          "genotype": "homozygous WWOX deletion, versus the same line stably transfected with a WWOX expression vector",
+          "comparator": "Peo/vector",
+          "endpoint": "anti-WWOX immunoblot band"
+        }
+      },
+      {
+        "proposition": "The null cell line's WWOX status is not established by this paper: it is imported by citation and by personal gift, so the whole specificity argument stands on an external primary.",
+        "snippet": "The ovarian cancer cell line, Peo, has a homozygous deletion of the WWOX gene and does not produce full-length WWOX",
+        "anchor": "manuscript page 6; the sentence continues with the provenance in parentheses",
+        "surface": "body",
+        "artifact": [
+          "files/fulltext/PMID14526170/PMID14526170_article_text_readingorder.txt"
+        ],
+        "panel_text_relation": "text_only",
+        "experimental_context": {
+          "system": "in vitro ovarian carcinoma cell line, genotype asserted by citation",
+          "cell_line": "Peo",
+          "genotype": "homozygous WWOX deletion, cited to Paige et al. 2001 (PMID 11572989) and obtained as a gift",
+          "endpoint": "none measured in this paper — no genotyping, PCR or parental blot is shown here"
+        }
+      },
+      {
+        "proposition": "The paper asserts a ~46 kDa identity for the band its specificity panel shows.",
+        "snippet": "A protein of ~46 kDa, the predicted size of WWOX, was clearly evident in the extracts from Peo/WWOX positive control cell extracts that was absent in the Peo/vector negative control cell extracts.",
+        "anchor": "manuscript page 6, closing sentence of the antiserum paragraph",
+        "surface": "body",
+        "artifact": [
+          "files/fulltext/PMID14526170/PMID14526170_article_text_readingorder.txt"
+        ],
+        "panel_text_relation": "text_only",
+        "experimental_context": {
+          "system": "in vitro ovarian carcinoma cell line, whole-cell lysate immunoblot",
+          "cell_line": "Peo (Peo/vector and Peo/WWOX)",
+          "genotype": "homozygous WWOX deletion versus WWOX-transfected",
+          "comparator": "Peo/vector",
+          "endpoint": "asserted apparent molecular weight of the detected band"
+        }
+      },
+      {
+        "proposition": "🔴 Figure 5A, the panel that carries the entire specificity claim, contains no molecular-weight ladder of any kind, so the ~46 kDa attribution is not verifiable on the panel that asserts it. The absence/presence contrast in that panel is real and clearly visible; the SIZE claim has no size reference.",
+        "snippet": "(A) Western blot analysis was used to determine the specificity of the WWOX antiserum.",
+        "anchor": "Fig. 5A panel, manuscript page 20, native 4200x2587 raster, inspected at native resolution and re-rendered at 900 dpi",
+        "surface": "figure",
+        "artifact": [
+          "files/fulltext/PMID14526170/pdf_images/p20_x82.jpeg"
+        ],
+        "panel_text_relation": "panel_only",
+        "experimental_context": {
+          "system": "in vitro ovarian carcinoma cell line, whole-cell lysate immunoblot",
+          "cell_line": "Peo (Peo/vector and Peo/WWOX)",
+          "genotype": "homozygous WWOX deletion versus WWOX-transfected",
+          "comparator": "Peo/vector, lane 1",
+          "endpoint": "presence or absence of molecular-weight marks on the specificity panel"
+        }
+      },
+      {
+        "proposition": "The only molecular-weight marks in the whole paper are two, and they sit on Figure 5B — a different blot from the specificity panel — bracketing the band 45.5 kd apart, a constraint consistent with 46 kDa but unable to distinguish it from neighbouring sizes.",
+        "snippet": "MCF7 and T47D were observed to have very prominent band at ~46 kDa while MDA-MB-231 and MDA-MB-435 had a barely visible to undetectable band.",
+        "anchor": "Fig. 5 caption, panel B clause, manuscript page 20; judged against the Fig. 5B panel",
+        "surface": "figure",
+        "artifact": [
+          "files/fulltext/PMID14526170/pdf_images/p20_x82.jpeg"
+        ],
+        "panel_text_relation": "text_confirmed_by_panel",
+        "experimental_context": {
+          "system": "in vitro breast cancer cell lines, whole-cell lysate immunoblot",
+          "cell_line": "MDA-MB-435, MDA-MB-231, T47D, MCF7 in panel lane order 1 to 4",
+          "comparator": "the four lines against each other; no null line on this panel",
+          "endpoint": "anti-WWOX band intensity against printed marks reading '— 85 kd' and '— 39.5 kd'"
+        }
+      },
+      {
+        "proposition": "🔴 The antiserum is not mono-specific on an immunoblot: a faint higher-molecular-weight band is present in the WWOX-null lane of Fig. 5A and across every lane of Fig. 5B, including the two lines the caption calls undetectable. What the null lane demonstrates is that the ~46 kDa band is WWOX-dependent; it does not demonstrate that the antiserum binds only WWOX.",
+        "snippet": "Clearly, an ~46 kDa protein was detected in Peo/WWOX cell extracts that is undetectable in Peo/vector, having homozygous WWOX deletion, cell extracts.",
+        "anchor": "Fig. 5 caption, panel A clause, manuscript page 20; residual band read off the Fig. 5A and 5B panels at 900 dpi",
+        "surface": "figure",
+        "artifact": [
+          "files/fulltext/PMID14526170/pdf_images/p20_x82.jpeg"
+        ],
+        "panel_text_relation": "panel_only",
+        "experimental_context": {
+          "system": "in vitro cell line whole-cell lysate immunoblots, both panels of Figure 5",
+          "cell_line": "Peo/vector and Peo/WWOX; MDA-MB-435, MDA-MB-231, T47D, MCF7",
+          "genotype": "homozygous WWOX deletion in the Peo/vector lane",
+          "comparator": "Peo/vector lane 1, which is not blank",
+          "endpoint": "all bands produced by the antiserum, not only the band of interest"
+        }
+      },
+      {
+        "proposition": "At the date of this paper the tissue work that later work leans on had not been done: measuring WWOX protein in normal tissues is stated as work in progress, not as a result.",
+        "snippet": "We are currently using this antiserum to measure WWOX protein levels in cancer cell lines and in normal tissues.",
+        "anchor": "manuscript page 6, immediately after the Fig. 5A description",
+        "surface": "body",
+        "artifact": [
+          "files/fulltext/PMID14526170/PMID14526170_article_text_readingorder.txt"
+        ],
+        "panel_text_relation": "text_only",
+        "experimental_context": {
+          "system": "prospective statement of intent; no tissue experiment appears anywhere in this article",
+          "endpoint": "none — the sentence is present tense and forward-looking"
+        }
+      },
+      {
+        "proposition": "The paper states the antiserum's epitope location and draws the consequence itself: because the epitopes lie in the retained WW domains, the reagent cannot distinguish full-length WWOX from the SDR-deleted isoforms. Any band it produces is an aggregate of full-length and isoform signal unless size resolves them.",
+        "snippet": "since the anti-WWOX antibody recognizes epitopes within the WW domains it will also detect proteins encoded by the aberrantly spliced mRNAs if expressed",
+        "anchor": "manuscript page 9, first paragraph",
+        "surface": "body",
+        "artifact": [
+          "files/fulltext/PMID14526170/PMID14526170_article_text_readingorder.txt"
+        ],
+        "panel_text_relation": "text_only",
+        "experimental_context": {
+          "system": "the authors' own statement about their reagent's epitope coverage",
+          "genotype": "full-length WWOX versus aberrant transcript variants 3, 4 and 5, which delete SDR-encoding exons and retain the WW domains",
+          "endpoint": "what the antiserum is expected to detect"
+        }
+      },
+      {
+        "proposition": "Figure 3 confirms that residues 12-94 do span both WW domains, so the immunogen description is internally consistent with the paper's own sequence map.",
+        "snippet": "WW domains are boxed and conserved tryptophans and prolines shown in bold. Note that in the second WW domain one tryptophan is replaced by a tyrosine (conservative change).",
+        "anchor": "Fig. 3 caption, manuscript page 18; judged against the Fig. 3 panel, native 4200x3703",
+        "surface": "figure",
+        "artifact": [
+          "files/fulltext/PMID14526170/pdf_images/p18_x70.png"
+        ],
+        "panel_text_relation": "text_confirmed_by_panel",
+        "experimental_context": {
+          "system": "in silico sequence annotation of the 414-residue WWOX protein",
+          "genotype": "wild-type WWOX with the L291P esophageal-tumour substitution shown beneath the wild-type line",
+          "endpoint": "domain boundaries — first box begins at L17, second ends near P86, both inside residues 12-94"
+        }
+      },
+      {
+        "proposition": "The paper's central subcellular-localisation conclusion asserts both necessity and sufficiency in one sentence, while conceding in the same breath that the residues are not defined.",
+        "snippet": "Although these studies do not precisely define the amino acid residues required for WWOX subcellular localization we conclude that the SDR domain is necessary and sufficient for Golgi localization.",
+        "anchor": "manuscript page 11, section 'The WWOX SDR is required for localization to the Golgi'",
+        "surface": "body",
+        "artifact": [
+          "files/fulltext/PMID14526170/PMID14526170_article_text_readingorder.txt"
+        ],
+        "panel_text_relation": "text_only",
+        "experimental_context": {
+          "system": "transient transfection of GFP fusions into an immortal mammary epithelial line, confocal microscopy",
+          "cell_line": "MCF10F",
+          "genotype": "GFP-WWOX deletion mutants delta5-7 and delta8",
+          "comparator": "full-length GFP-WWOX, whose Golgi localisation is cited to Bednarek et al. 2001 and is not shown in this paper",
+          "endpoint": "subcellular distribution of green fluorescence"
+        }
+      },
+      {
+        "proposition": "🔴 Figure 8's own caption title asserts sufficiency that its panels cannot show: the figure contains only the two deletion mutants that LOSE localisation, with no catalytic-domain-alone panel and no full-length comparator, so it supports necessity and not sufficiency.",
+        "snippet": "The WWOX catalytic domain is sufficient for Golgi localization.",
+        "anchor": "Fig. 8 caption title, manuscript page 24; judged against the Fig. 8 panel, native 2096x1569",
+        "surface": "figure",
+        "artifact": [
+          "files/fulltext/PMID14526170/pdf_images/p24_x100.jpeg"
+        ],
+        "panel_text_relation": "text_contradicted_by_panel",
+        "contradicts": "entries[10]",
+        "contradicts_needle": "the SDR domain is necessary and sufficient for Golgi localization",
+        "experimental_context": {
+          "system": "transient transfection of GFP fusions into an immortal mammary epithelial line, confocal microscopy",
+          "cell_line": "MCF10F",
+          "genotype": "GFP-WWOX delta5-7 and delta8 only",
+          "comparator": "absent from the figure — no full-length WWOX panel, no Golgi co-marker, no scale bar",
+          "endpoint": "subcellular distribution of green fluorescence, diffuse cytoplasmic and nuclear in both mutants"
+        }
+      },
+      {
+        "proposition": "The sufficiency claim is explicitly unpublished, attributed to a single author, and unshown — and the readout it describes is a morphological resemblance rather than a co-localisation.",
+        "snippet": "Surprisingly this mutant was observed to have perinuclear fluorescence similar to full length WWOX (J.H. Ludes-Meyers, data not shown)",
+        "anchor": "manuscript page 11, the sentence immediately preceding the 'necessary and sufficient' conclusion",
+        "surface": "body",
+        "artifact": [
+          "files/fulltext/PMID14526170/PMID14526170_article_text_readingorder.txt"
+        ],
+        "panel_text_relation": "text_only",
+        "experimental_context": {
+          "system": "transient transfection of a GFP fusion, confocal microscopy, no data shown",
+          "cell_line": "MCF10F",
+          "genotype": "GFP fusion to the SDR domain alone, WW domains deleted",
+          "comparator": "full-length WWOX, by visual resemblance only",
+          "endpoint": "perinuclear fluorescence, with no Golgi co-marker"
+        }
+      },
+      {
+        "proposition": "🔴 The abstract presents the PPXY ligand result as accomplished while the body of the same paper calls it preliminary and attributes it to a manuscript in preparation, and a following sentence then upgrades it to 'confirm' — the review genre's known failure mode, reproduced in this paper.",
+        "snippet": "These studies confirm that the WWOX WW domains have specific ligand binding activity and studies are ongoing to identify in vivo protein partners involved in WWOX tumor growth inhibition.",
+        "anchor": "manuscript page 10, opening paragraph. The preceding sentence carrying the 'manuscript in preparation' attribution breaks across the page 9/10 running-header intrusion and is deliberately NOT quoted across it.",
+        "surface": "body",
+        "artifact": [
+          "files/fulltext/PMID14526170/PMID14526170_article_text_readingorder.txt"
+        ],
+        "panel_text_relation": "text_only",
+        "experimental_context": {
+          "system": "in vitro WW-domain ligand binding, described but not shown",
+          "genotype": "the first WWOX WW domain against a PPXY ligand",
+          "endpoint": "domain-ligand binding, attributed to Ludes-Meyers et al., manuscript in preparation"
+        }
+      },
+      {
+        "proposition": "A second unpublished assertion identifies the full-length transcript's protein product by mass spectrometry, with no data and no citation — and it is the only evidence offered anywhere that the antiserum's target is the transcript-variant-1 product rather than another isoform.",
+        "snippet": "We have positively identified transcript variant 1 as the mRNA encoding full length WWOX protein in MCF-7 breast cancer cells by virtue of the difference in the carboxy terminal amino acid sequence using MALDI-TOF mass spectroscopy peptide sequencing of immunoprecipitated WWOX protein",
+        "anchor": "manuscript page 9; attributed '(Ludes-Meyers et al, unpublished observation)', the single occurrence of 'unpublished' in the article",
+        "surface": "body",
+        "artifact": [
+          "files/fulltext/PMID14526170/PMID14526170_article_text_readingorder.txt"
+        ],
+        "panel_text_relation": "text_only",
+        "experimental_context": {
+          "system": "MALDI-TOF peptide sequencing of immunoprecipitated protein, in vitro",
+          "cell_line": "MCF-7",
+          "endpoint": "identity of the protein product, with no spectra, coverage or peptide list shown"
+        }
+      },
+      {
+        "proposition": "The sex-steroid function is a hypothesis derived from tissue distribution and sequence homology, explicitly labelled as postulated, and it is not tested anywhere in this paper: no substrate, product, enzymatic assay or steroid measurement appears.",
+        "snippet": "Based on the high expression of WWOX in hormonally regulated tissues (human testis, prostate and ovary) and its amino acid sequence homology to specific oxidoreductases, we postulated that WWOX may be an enzyme involved in sex-steroid metabolism",
+        "anchor": "manuscript page 10, section on SDR homology",
+        "surface": "body",
+        "artifact": [
+          "files/fulltext/PMID14526170/PMID14526170_article_text_readingorder.txt"
+        ],
+        "panel_text_relation": "text_only",
+        "experimental_context": {
+          "system": "in silico homology and clustering argument (Kallberg et al. 2002), plus prior expression data",
+          "endpoint": "none measured — the support offered is the company the protein keeps in an SDR cluster, and the paper says so in as many words"
+        }
+      },
+      {
+        "proposition": "The Golgi localisation carried forward from earlier work is a GFP-fusion overexpression result with a single organelle co-marker, and the paper concedes an unexplained conflict with another group's mitochondrial-targeting result rather than adjudicating it.",
+        "snippet": "In previous studies we observed colocalization of GFP-WWOX with a Golgi specific marker (Golgi 58 K protein) but did not observe colocalization of GFP-WWOX with a mitochondria-specific dye (MitoTracker Red CMXRos). It is not clear why there is a discrepancy between these two observations.",
+        "anchor": "manuscript page 11, before the deletion-mutant description",
+        "surface": "body",
+        "artifact": [
+          "files/fulltext/PMID14526170/PMID14526170_article_text_readingorder.txt"
+        ],
+        "panel_text_relation": "text_only",
+        "experimental_context": {
+          "system": "transient GFP-fusion overexpression, confocal microscopy; endogenous protein never visualised",
+          "genotype": "GFP-WWOX full length",
+          "comparator": "Golgi 58K marker and MitoTracker Red CMXRos; conflicting claim is Chang et al. 2001 (PMID 11058590), a 65-residue mitochondrial targeting signal at Wwox 209-273",
+          "endpoint": "organelle co-localisation"
+        }
+      },
+      {
+        "proposition": "The tumour-suppression result — the paper's strongest claim for itself — is a xenograft volume comparison reported with no statistical test, no sample size and no p-value.",
+        "snippet": "Average tumor volumes were; MDA MB 231/vector, 302 ± 71 mm3; MDA MB 231/WWOX, 103 ± 11mm3; MDA MB 435/vector, 664 ± 239 mm3; MDA MB 435/WWOX, 81 ± 48 mm3.",
+        "anchor": "Fig. 6 caption, manuscript page 22; judged against the Fig. 6 panel, native 3135x4200",
+        "surface": "figure",
+        "artifact": [
+          "files/fulltext/PMID14526170/pdf_images/p21_x87.jpeg"
+        ],
+        "panel_text_relation": "text_confirmed_by_panel",
+        "experimental_context": {
+          "system": "mouse xenograft, thoracic mammary fat pad, BALB/c athymic",
+          "cell_line": "MDA-MB-231 and MDA-MB-435, retrovirally transduced pools selected for G418 resistance",
+          "treatment": "1x10^6 cells, WWOX-expressing retrovirus versus empty vector",
+          "timepoint": "35 days",
+          "comparator": "empty-vector arm, pinned at 100 in the plotted panel",
+          "endpoint": "tumour volume, mean +/- SEM, with no n per arm, no test and no p-value; the MDA-MB-231/WWOX bar carries no visible error bar while the other three do"
+        }
+      },
+      {
+        "proposition": "The ER association is, at this date, an observation across four cell lines with no statistics, and the paper itself names the primary-tumour test as future work.",
+        "snippet": "We are currently measuring WWOX protein levels in a panel of primary breast tumors to determine whether WWOX expression correlates with prognostic factors such as ER status.",
+        "anchor": "manuscript page 7, after the four-line comparison",
+        "surface": "body",
+        "artifact": [
+          "files/fulltext/PMID14526170/PMID14526170_article_text_readingorder.txt"
+        ],
+        "panel_text_relation": "text_only",
+        "experimental_context": {
+          "system": "in vitro breast cancer cell lines",
+          "cell_line": "MCF7 and T47D (ER-positive, high WWOX) versus MDA-MB-231 and MDA-MB-435 (ER-negative, low WWOX)",
+          "comparator": "four lines against each other, n=4, no statistics",
+          "endpoint": "WWOX protein level versus ER status"
+        }
+      },
+      {
+        "proposition": "The paper declares its own genre explicitly as a review that also presents evidence — the hybrid that makes both available metadata labels wrong, in opposite directions.",
+        "snippet": "In this article we will review the cloning and identification of WWOX as the target of FRA16D. In addition, we will discuss the possible biochemical functions of WWOX and present evidence that ectopic WWOX expression inhibits tumor growth.",
+        "anchor": "manuscript page 1, closing sentences of the abstract — recorded as a GENRE DECLARATION and not as an evidentiary locator; every evidentiary anchor in this manifest is in body or figure",
+        "surface": "body",
+        "artifact": [
+          "files/fulltext/PMID14526170/PMID14526170_article_text_readingorder.txt"
+        ],
+        "panel_text_relation": "text_only",
+        "experimental_context": {
+          "system": "genre self-description, measured against the deposit: 8 figures, 0 tables, ~56 references, 10 published pages, an abstract, and its own previously unpublished data in Figs. 5A and 8",
+          "comparator": "PubMed declares pubtype ['Journal Article'] with no 'Review' tag; genre_discriminator returned INSUFFICIENT_DATA because it screened the pmc_html surface where page span and reference count are unmeasurable, so the counts above were measured by hand from the PDF",
+          "endpoint": "declared versus measured genre"
+        }
+      },
+      {
+        "proposition": "The paper closes by announcing the reagent as a resource for determining clinical relevance at the genomic and transcriptional levels — an announcement of availability, not a validation, and explicitly not a claim about protein in tissue.",
+        "snippet": "In addition, WWOX specific reagents are now available to determine the clinical relevance of WWOX abnormalities at the genomic and transcription levels.",
+        "anchor": "manuscript page 12, final sentence of Conclusions before the reference list",
+        "surface": "body",
+        "artifact": [
+          "files/fulltext/PMID14526170/PMID14526170_article_text_readingorder.txt"
+        ],
+        "panel_text_relation": "text_only",
+        "experimental_context": {
+          "system": "concluding statement of reagent availability",
+          "endpoint": "claimed scope of use — 'genomic and transcription levels', not protein-in-tissue; read together with the page 6 statement that normal-tissue measurement is still in progress"
+        }
+      },
+      {
+        "proposition": "Figures 1, 2 and 4 are cytogenetic and mapping panels restating the laboratory's own earlier primaries and carry no protein or antibody evidence whatever.",
+        "snippet": "Dark gray blocks indicate that a single allele was observed at the corresponding locus (i.e. hemi or homozygosity), light gray blocks indicate heterozygosity is preserved. Blank blocks were not determined.",
+        "anchor": "Fig. 1 caption, manuscript page 16; judged against the Fig. 1 panel, native 4200x2169, with Figs. 2 and 4 inspected on the same basis",
+        "surface": "figure",
+        "artifact": [
+          "files/fulltext/PMID14526170/pdf_images/p16_x59.jpeg",
+          "files/fulltext/PMID14526170/pdf_images/p17_x65.png",
+          "files/fulltext/PMID14526170/pdf_images/p19_x76.jpeg"
+        ],
+        "panel_text_relation": "text_confirmed_by_panel",
+        "experimental_context": {
+          "system": "microsatellite allelotyping of cell lines; BAC/YAC physical mapping; aphidicolin-induced metaphase FISH",
+          "cell_line": "23 breast cancer lines in the Fig. 1 grid, including the SUM series",
+          "comparator": "per-locus heterozygosity scores printed at right; 16q21 and 16q24.2-qtel marked separately from FRA16D/WWOX at D16s3142-D16s504",
+          "endpoint": "allelic loss, marker order and chromosomal localisation — all restating Bednarek 2000 and Chen 1996"
+        }
+      },
+      {
+        "proposition": "Figure 7's transcript map is a schematic compiled from two primaries, with the normal-versus-tumour restriction asserted in its key rather than measured in the figure, and it carries an evident accession typo.",
+        "snippet": "Aberrantly spliced transcripts, transcript variants 2–5, are shown below the full length WWOX transcript, and have been observed only in cancer cell lines and cancer tissues.",
+        "anchor": "Fig. 7 caption, manuscript page 23; judged against the Fig. 7 panel, native 4200x1382",
+        "surface": "figure",
+        "artifact": [
+          "files/fulltext/PMID14526170/pdf_images/p23_x95.png"
+        ],
+        "panel_text_relation": "text_confirmed_by_panel",
+        "experimental_context": {
+          "system": "schematic compilation, no gel and no RT-PCR trace in the figure",
+          "genotype": "full-length transcript variant 1 plus aberrant variants 2 to 5, with alternative exons 6', 9' and 10",
+          "comparator": "a 'Cell Type' column reading N/T for variant 1 and T only for variants 2 to 5; variants 1, 3, 4 credited to Bednarek 2001 and variants 2, 5 to Ried 2000",
+          "endpoint": "transcript structure; the caption lists AF2119443 for variant 5 against AF211943 for variant 1, an evident typo"
+        }
+      }
+    ]
+  },
+  "what_this_reading_does_not_establish": [
+    "It does not establish any immunohistochemical validity for the anti-WWOX antiserum. The article contains no immunohistochemistry, no immunostaining, no tissue section and no fixation of any kind: 'immunohistochem' occurs 0 times, 'immunostain' 0, 'isotype' 0, 'pre-immune' 0, 'pre-absor' 0.",
+    "It does not establish that the antiserum is mono-specific: a residual higher-molecular-weight band is visible in the WWOX-null lane and in every lane of both blots, and no control in the paper characterises it.",
+    "It does not establish the ~46 kDa identity on the panel that asserts it, because Fig. 5A carries no molecular-weight ladder; 'ladder' and 'molecular weight marker' occur 0 times.",
+    "It does not establish that the reagent distinguishes full-length WWOX from SDR-deleted isoforms — the paper states the opposite, by design.",
+    "It does not establish a sex-steroid enzymatic function: nothing hormonal or enzymatic is measured.",
+    "It does not establish that the SDR domain is sufficient for Golgi localisation: that leg is 'data not shown'.",
+    "It does not establish the PPXY ligand result, which the body calls preliminary and in preparation while the abstract states it as fact.",
+    "It does not quantify the xenograft effect: no n, no test, no p-value.",
+    "It establishes nothing about a neurodevelopmental phenotype, about CNS tissue, or about the reference genotype. This is a 2003 cancer-genetics review and WWOX-DEE lies entirely outside it."
+  ]
+}

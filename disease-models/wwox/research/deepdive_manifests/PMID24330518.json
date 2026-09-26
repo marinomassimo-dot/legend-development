@@ -1,0 +1,764 @@
+{
+ "schema_version": 2,
+ "pmid": "24330518",
+ "doi": "10.1186/1471-2407-13-593",
+ "receipt": "FTR-20260914-24330518-01",
+ "landing": [
+  "FTR-20260914-24330518-01",
+  "fulltext_dossiers/PMID24330518.md",
+  "CC-20260914-24330518-01"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Run inline, tiers measured 2026-09-14: Europe PMC fullTextXML 200 (text); PMC /pdf/ and /bin/ behind the proof-of-work page, recovered with pmc_pow_fetch.py (largest figure rasters, chosen); BMC publisher PDF 200 (smaller rasters); PMC CDN blobs 600 px (not used)."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline: the ChIP IgG background, the residual GST-mut1 band and the PTHLH direction in MCF7 are pixel findings; spawning agents is forbidden by this contract."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not run inside the reading: first contact, no persisted locator for this PMID. Whether the candidate touches a consolidated baseline claim is decided after the blind pass, in CC-20260914-24330518-01."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Declined as a separate pass: the WWOX-SMAD3 interaction is carried as typed locators with its strength stated; any TGF-beta lead for the disease model is an ESPANSIONE the candidate names rather than mines."
+  },
+  {
+   "skill": "legend-paperqa",
+   "used": false,
+   "reason": "Declined: needs an external API key and traffic not authorised for this task, and a RAG answer is not a reading."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 138,
+  "publications_on_gene": 38,
+  "counts_measured": "PubMed esearch 2026-09-14. Senior/corresponding author 'Aldaz CM[au]' 138, 'Aldaz CM[au] AND WWOX' 38. First author 'Ferguson BW[au]' 8, on WWOX 3.",
+  "research_type": "mixed",
+  "output_kind": "primary_research",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": true,
+  "weighting": "Two halves. Wet-lab (knockdown, reporter, ChIP, co-IP, GST pull-down, confocal) in a founding WWOX laboratory, weighed as observation where quantified and as illustration where a single blot or cell is shown. Computational half (arrays, ChEA, a two-gene meta-analysis of public breast datasets) by the group's bioinformatician, weighed as hypothesis-generating. The mechanism sentence (cytoplasmic sequestration) is the authors' interpretation and weighs below the binding data. No neurological work."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "WWOX",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 708
+   },
+   {
+    "query": "WWOX AND SMAD3",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 8
+   }
+  ],
+  "note": "WWOX-SMAD3 is a small intersection (8 records). Field sizes, not reading coverage. NCBI esummary tags this paper 'Meta-Analysis' for its public-dataset analysis."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 50,
+  "enumeration_method": "50 <ref> elements in the fingerprinted Europe PMC XML; 45 carry a pub-id pmid in the artefact. Gene-direct = article-title names WWOX, Wwox or FRA16D (script, full title): 18, all with artefact PMIDs.",
+  "gene_direct_count": 18,
+  "gene_direct_refs_in_source": [
+   "10786676",
+   "10861292",
+   "17163164",
+   "17458891",
+   "11572989",
+   "15692750",
+   "15073846",
+   "11719429",
+   "16818616",
+   "18460020",
+   "17360458",
+   "19936220",
+   "22574198",
+   "15064722",
+   "18487609",
+   "17909041",
+   "19130459",
+   "20146584"
+  ],
+  "resolved": [
+   "15692750",
+   "18460020",
+   "17360458",
+   "19936220",
+   "15064722",
+   "18487609"
+  ],
+  "queued": [],
+  "resolved_depth_declaration": "RESOLVED MEANS A PERSISTED complete_fulltext_read RECEIPT, measured with fulltext_receipts.py status --pmid on 2026-09-14. 6 of 18 resolve, including the PPXY-binding paper (15064722) and the RUNX2-binding paper (18487609) this work leans on for its WW1 and RUNX2 premises. Ref 15 (22574198) is read in this same task, receipt not yet appended. The rest are debt routed in CC-20260914-24330518-01; this contract does not own the queue."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Technical only: fulltext_receipts.py status --pmid for 24330518 before reading (exit 1, no events) and for the 18 gene-direct reference PMIDs. No registry, claim, dossier or candidate content opened before the dossier froze.",
+  "hits": 6,
+  "finding": "6 of 18 gene-direct references carry a complete receipt. The paper itself had no receipt of any depth."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-09-14",
+  "route": "NCBI esummary db=pubmed retmode=json for 24330518",
+  "result": "pubtype Journal Article; Meta-Analysis; Research Support, N.I.H., Extramural. commentscorrections absent: no linked erratum, expression of concern or retraction.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 50,
+   "references_screened": 44,
+   "references_with_doi": 44,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 4,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 6
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID24330518_Ferguson2013.xml",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML of PMC3871008, HTTP 200, 106871 B. article-id pmid 24330518, doi 10.1186/1471-2407-13-593, title and seven contrib surnames (Ferguson, Gao, Zelazowski, Lee, Jeter, Abba, Aldaz) read from the artefact; NCBI esummary agrees (BMC Cancer 2013;13:593). Evidentiary text surface.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3871008/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_fulltextxml",
+    "user_agent_policy": "identified",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "31d86a281ec4edd3d0ea786ca3fc4fe75750cd63fff74f272e52ce82caf5d394"
+  },
+  {
+   "path": "files/fulltext/PMID24330518_Ferguson2013.pdf",
+   "kind": "article_binary",
+   "note": "PMC PDF via pmc_pow_fetch.py, 11 pages (file reports 13 in its header; PyMuPDF opens 11). Declared only as the figure-raster source: its rasters (e.g. Figure 3 1949x1069) are 1.36x the BMC publisher PDF's (1429x784) and 3.2x the PMC CDN blobs (600 px wide). Font screen UNDECIDED.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3871008/pdf/1471-2407-13-593.pdf",
+    "http_method": "GET",
+    "tier": "pmc_pow_fetch",
+    "user_agent_policy": "identified",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "f40ac2f3f57e14ac4a1edc69017697c83305db23fc75ddf383e55c5eaca7d10b"
+  },
+  {
+   "path": "files/fulltext/PMID24330518_Ferguson2013_assets/pmc_p05_x51.png",
+   "kind": "figure",
+   "note": "Figure 1, 1420x889, native raster, inspected at native scale.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID24330518_Ferguson2013.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref) over Page.get_images(full=True); bytes written unmodified",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "f27741d42594052c9fc2f19b757aa2be693746d81006b7f2fbc6d5f88ee2a1a4"
+  },
+  {
+   "path": "files/fulltext/PMID24330518_Ferguson2013_assets/pmc_p05_x52.png",
+   "kind": "figure",
+   "note": "Figure 2, 1420x899, native raster, inspected at native scale.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID24330518_Ferguson2013.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref) over Page.get_images(full=True); bytes written unmodified",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "69430ad8b934a83683fdda4f6de56481fc4e6032cbf571f7e6352ccde2d5294c"
+  },
+  {
+   "path": "files/fulltext/PMID24330518_Ferguson2013_assets/pmc_p06_x60.png",
+   "kind": "figure",
+   "note": "Figure 3, 1949x1069, native raster, inspected at native scale.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID24330518_Ferguson2013.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref) over Page.get_images(full=True); bytes written unmodified",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "21c1ddb69b55a1b8024bf89a0cf1a9b8d6ce09034cc3a3f93ba904d39a7e839c"
+  },
+  {
+   "path": "files/fulltext/PMID24330518_Ferguson2013_assets/pmc_p07_x71.png",
+   "kind": "figure",
+   "note": "Figure 4, 896x2381, native raster, inspected at native scale.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID24330518_Ferguson2013.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref) over Page.get_images(full=True); bytes written unmodified",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "ca3e5092883f35890d1eed0f097b744827e873b8545328f3c63300a0a8e2ff3b"
+  },
+  {
+   "path": "files/fulltext/PMID24330518_Ferguson2013_assets/pmc_p08_x87.png",
+   "kind": "figure",
+   "note": "Figure 5, 1183x908, native raster, inspected at native scale.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID24330518_Ferguson2013.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref) over Page.get_images(full=True); bytes written unmodified",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "df333e108b803137d67d0dabf37f24c6b166b761285361f0f4a6b4df9b8d5ecb"
+  },
+  {
+   "path": "files/fulltext/PMID24330518_Ferguson2013_assets/pmc_p09_x99.jpeg",
+   "kind": "figure",
+   "note": "Figure 6, 1949x1110, native raster, inspected at native scale.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID24330518_Ferguson2013.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref) over Page.get_images(full=True); bytes written unmodified",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "619f09045b0c89e216887b89a2259913c46e6d410acd75ab851c5218f60c2bb2"
+  },
+  {
+   "path": "files/fulltext/PMID24330518_Ferguson2013_assets/S1.docx",
+   "kind": "supplement_text",
+   "note": "Additional file 1 (attachment assays). PMC bin via pmc_pow_fetch.py.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/3871008/bin/1471-2407-13-593-S1.docx",
+    "http_method": "GET",
+    "tier": "pmc_pow_fetch",
+    "user_agent_policy": "identified",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "df302dd81d55e285500fa1f0f3710db8a527055cf8d9d84b4ba9d8b0131e6962"
+  },
+  {
+   "path": "files/fulltext/PMID24330518_Ferguson2013_assets/S1_image1.tif",
+   "kind": "figure",
+   "note": "Additional file 1 image extracted unmodified from S1.docx (word/media/image1.tif).",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID24330518_Ferguson2013_assets/S1.docx",
+    "extractor": {
+     "name": "python-zipfile",
+     "version": "stdlib",
+     "call": "ZipFile.read('word/media/image1.tif'), bytes unmodified",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "1bf8c12a59a3be15dd4320ca24a2ca073337d60ac7e9cc9c930ddecf7b6cf26d"
+  },
+  {
+   "path": "files/fulltext/PMID24330518_Ferguson2013_assets/S1_image1.png",
+   "kind": "figure",
+   "note": "Additional file 1 image as PNG, 2178x741, inspected at native scale (ImageMagick convert aborted on this TIFF; PyMuPDF used).",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID24330518_Ferguson2013_assets/S1_image1.tif",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Pixmap(<tif>).save(<png>)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "559441ca03f40b65fa8e73eb34194e97f3760ee34ad62210b7973e3c6db81f56"
+  },
+  {
+   "path": "files/fulltext/PMID24330518_Ferguson2013_assets/S2.xls",
+   "kind": "supplement_binary",
+   "note": "Additional file 2, BIFF .xls, three sheets: UPs 329 rows, DOWN 345 rows (header included), ChIP Enrichment Analysis 240 rows. PMC bin via pmc_pow_fetch.py. No locator names this file.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/3871008/bin/1471-2407-13-593-S2.xls",
+    "http_method": "GET",
+    "tier": "pmc_pow_fetch",
+    "user_agent_policy": "identified",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "8d2d3807f7673032a8e0de1c65ba988b3957d8997575884d04c7d4c3c3b3b946"
+  },
+  {
+   "path": "files/fulltext/PMID24330518_Ferguson2013_assets/S2_xls.txt",
+   "kind": "supplement_text",
+   "note": "Deterministic text derivative of Additional file 2: '## sheet: <name>' then each row with str() cell values joined by TAB. Suspect-surface screen CLEAN 2026-09-14.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID24330518_Ferguson2013_assets/S2.xls",
+    "extractor": {
+     "name": "xlrd",
+     "version": "2.0.2",
+     "call": "open_workbook; per sheet, row_values(r) -> str(cell)",
+     "join": "TAB"
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "e1e50e52b751ba10aaa3d5d26a5bfde6d8708de0c2cdaef8c9b044cdd0be9032"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST search EXT_ID:24330518 AND SRC:MED resultType=core, 2026-09-14: inEPMC=Y, inPMC=Y, isOpenAccess=Y, license cc by, fullTextIdList PMC3871008, hasSuppl=Y.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; the abstract's 'physically interacts', 'dramatically decreases' and 'significant inverse correlation' are carried by body and figure locators.",
+  "entries": [
+   {
+    "proposition": "SYSTEM: all lines from ATCC and DNA-fingerprinted; main model MCF10 (called normal, immortalised). DATO.",
+    "snippet": "All cell lines were obtained from the American Type Culture Collection (ATCC, Manassas, VA, USA) and validated by DNA fingerprinting.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24330518_Ferguson2013.xml",
+    "anchor": "Methods > Cell culture and reagents",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human breast epithelial cell line",
+     "cell_line": "MCF10"
+    }
+   },
+   {
+    "proposition": "KNOCKDOWN TEXT: 80-90% reduction of WWOX protein in all three stable lines. DATO as printed.",
+    "snippet": "All three stably WWOX-silenced cell lines showed a decrease of 80-90% WWOX protein expression levels (Figure 1A).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24330518_Ferguson2013.xml",
+    "anchor": "Results > WWOX silencing affects clonal growth, paragraph 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human breast epithelial cell line",
+     "cell_line": "MCF10"
+    }
+   },
+   {
+    "proposition": "FIGURE 1A, NATIVE PIXELS. No residual WWOX band is visible in shWWOX, shWWOX-A or shWWOX-B at this exposure, and no quantification is shown, so '80-90%' has no displayed basis (it may understate the knockdown). Actin even.",
+    "snippet": "Visual attestation of Figure 1A: WWOX band present only in the Scr lane; shWWOX, shWWOX-A and shWWOX-B lanes blank; ACTIN even across four lanes.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID24330518_Ferguson2013_assets/pmc_p05_x51.png",
+    "anchor": "Figure 1A (PDF p.5, 1420x889)",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human breast epithelial cell line",
+     "cell_line": "MCF10"
+    },
+    "qualifies": "entries[1]",
+    "qualifies_needle": "decrease of 80-90% WWOX protein"
+   },
+   {
+    "proposition": "FIGURE 1 LEGEND: clonal-growth bars are the mean of three independent experiments +/- SEM. DATO as legend.",
+    "snippet": "Bar graph represents the average of three independent experiments +/- SEM.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24330518_Ferguson2013.xml",
+    "anchor": "Figure 1 legend",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human breast epithelial cell line",
+     "cell_line": "MCF10"
+    }
+   },
+   {
+    "proposition": "FIGURE 1B-C, NATIVE PIXELS. B: average colony area Scr about 120 vs shWWOX about 283; the shWWOX bar has no visible SEM bar (implausible for three independent experiments unless near-identical), only the pooled shWWOX line is plotted (not A or B separately), and colony number is not shown although the text says it did not differ. C: wound closure about 17 vs 47.5, SEM shown. No test is named for B or C.",
+    "snippet": "Visual attestation of Figure 1B-C: B average colony area Scr about 120 with small error bar and shWWOX about 283 with no visible error bar; C delta area fraction Scr about 17 and shWWOX about 47.5 with error bars.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID24330518_Ferguson2013_assets/pmc_p05_x51.png",
+    "anchor": "Figure 1B-C (PDF p.5, 1420x889)",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human breast epithelial cell line",
+     "cell_line": "MCF10"
+    },
+    "qualifies": "entries[3]",
+    "qualifies_needle": "average of three independent experiments"
+   },
+   {
+    "proposition": "PROLIFERATION IS INFERRED FROM COLONY SIZE: no difference in colony number, larger colonies, 'proliferate more rapidly'. DATO as wording; 'more rapidly' is an INFERENZA from colony area, not a growth-curve measurement.",
+    "snippet": "We did not detect differences in clonogenicity (i.e. number of colonies) but found that MCF10 WWOX-silenced cells proliferate more rapidly forming larger colonies",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24330518_Ferguson2013.xml",
+    "anchor": "Results > WWOX silencing affects clonal growth, paragraph 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human breast epithelial cell line",
+     "cell_line": "MCF10"
+    }
+   },
+   {
+    "proposition": "ATTACHMENT TEXT: decreased attachment to laminin, collagen IV and fibronectin (Additional file 1). DATO as printed.",
+    "snippet": "WWOX-silenced cells also displayed decreased attachment to extracellular matrix components such as laminin, collagen IV and fibronectin (Additional file 1)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24330518_Ferguson2013.xml",
+    "anchor": "Results > WWOX silencing affects clonal growth, paragraph 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human breast epithelial cell line",
+     "cell_line": "MCF10"
+    }
+   },
+   {
+    "proposition": "ADDITIONAL FILE 1, NATIVE PIXELS. Three time courses (0-120 min, x axis spaced categorically although intervals are 15 then 30 min), y axis labelled '% attachment' but scaled 0-1.25 as a fraction. Dashed shWWOX below solid Scr at most time points, gap largest on collagen IV (about 1.0 vs 0.81 at 120 min); on laminin the curves converge (1.0 vs 0.87 with overlapping bars). Legend: two independent experiments in quadruplicate, SEM; no statistical test anywhere.",
+    "snippet": "Visual attestation of Additional file 1: panels A laminin, B collagen IV, C fibronectin; solid Scr above dashed shWWOX, largest gap in B, overlapping error bars at 120 minutes in A; y axis 0 to 1.25.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID24330518_Ferguson2013_assets/S1_image1.png",
+    "anchor": "Additional file 1 (S1.docx image, 2178x741)",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human breast epithelial cell line",
+     "cell_line": "MCF10"
+    },
+    "qualifies": "entries[6]",
+    "qualifies_needle": "decreased attachment to extracellular matrix"
+   },
+   {
+    "proposition": "ADDITIONAL FILE 1 LEGEND, supplement surface: two experiments in quadruplicate, SEM. DATO.",
+    "snippet": "data points represent the average of two independent experiments done in quadruplicate",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID24330518_Ferguson2013_assets/S1.docx",
+    "anchor": "Additional file 1 legend (S1.docx)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human breast epithelial cell line",
+     "cell_line": "MCF10"
+    }
+   },
+   {
+    "proposition": "ARRAY OVERLAP TEXT: 328 commonly up and 344 commonly down (q < 0.05). DATO as printed.",
+    "snippet": "identified 328 commonly up-modulated and 344 commonly down-modulated genes (q value < 0.05) in the two WWOX stably silenced cell lines (Figure 2A)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24330518_Ferguson2013.xml",
+    "anchor": "Results > Gene expression changes, paragraph 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human breast epithelial cell line",
+     "cell_line": "MCF10"
+    }
+   },
+   {
+    "proposition": "ADDITIONAL FILE 2, PARSED: the UP sheet holds 328 rows and the DOWN sheet 344, matching 328 and 344 and the Venn intersections. Mean of the sh-A and sh-B fold changes for the four named SMAD3 targets: FST 5.19, PTHLH 3.66, ANGPTL4 3.55, SERPINE1 2.54 (text: FST 5.2, PTHLH 3.6, ANGPTL4 3.5, SERPINE1 2.5). DATO computed from the supplement.",
+    "snippet": "## sheet: shWWOX-A & shWWOX-B q<0.05 UPs",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID24330518_Ferguson2013_assets/S2_xls.txt",
+    "anchor": "Additional file 2, sheet names (derived text)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human breast epithelial cell line",
+     "cell_line": "MCF10"
+    }
+   },
+   {
+    "proposition": "FIGURE 2C LEGEND: the bars are the four transcription factors with the highest combined scores. DATO as legend.",
+    "snippet": "Bars represent the four transcription factors with the highest combined scores calculated by the Enrichr resource",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24330518_Ferguson2013.xml",
+    "anchor": "Figure 2 legend",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human breast epithelial cell line",
+     "cell_line": "MCF10"
+    }
+   },
+   {
+    "proposition": "ADDITIONAL FILE 2, ChEA SHEET PARSED - SMAD3 IS NOT IN THE TOP FOUR. Ranked by combined score the sheet gives E2F4 (human), SOX2 (human), MYC (mouse) 71.85, E2F1 (human), SOX2 (mouse), E2F1 (mouse), then SMAD3-18955504 (human) at rank 7 (54.78), tied with SMAD2 from the same ChIP study. Figure 2C shows E2F4, SOX2, E2F1 and SMAD3 - the top four HUMAN entries, a filter the legend does not declare. DATO computed.",
+    "snippet": "SMAD3-18955504 (human) 84/1936 5.834374145889629E-18 1.0726272468212472E-16",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID24330518_Ferguson2013_assets/S2_xls.txt",
+    "anchor": "Additional file 2, sheet 'ChIP Enrichment Analysis', SMAD3-18955504 row (derived text)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human breast epithelial cell line",
+     "cell_line": "MCF10"
+    }
+   },
+   {
+    "proposition": "FIGURE 2, NATIVE PIXELS. A: up 203 | 328 | 221, down 152 | 344 | 234, overlap p<0.0001, matching the text. C: E2F4 combined score about 227 (p=2.16e-38), SOX2 about 141 (p=2.10e-40), E2F1 about 57 (p=1.77e-16), SMAD3 about 55 (p=5.83e-18); SMAD3 is the lowest of the four shown. B: IPA biofunctions, cell cycle/organisation/DNA replication about 17 (-log p).",
+    "snippet": "Visual attestation of Figure 2: Venn diagrams 203 328 221 and 152 344 234; ChEA bars E2F4 p=2.16e-38, SOX2 p=2.10e-40, E2F1 p=1.77e-16, SMAD3 p=5.83e-18 in decreasing combined score.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID24330518_Ferguson2013_assets/pmc_p05_x52.png",
+    "anchor": "Figure 2 A-C (PDF p.5, 1420x899)",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human breast epithelial cell line",
+     "cell_line": "MCF10"
+    },
+    "qualifies": "entries[11]",
+    "qualifies_needle": "four transcription factors with the highest combined scores"
+   },
+   {
+    "proposition": "TEXT/LEGEND: significant upregulation of all targets in all silenced lines except PTHLH in MCF7. DATO as printed.",
+    "snippet": "Significant upregulation was seen for all target genes in all WWOX-silenced samples with the exception of PTHLH expression in MCF7 cells.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24330518_Ferguson2013.xml",
+    "anchor": "Figure 3 legend",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human breast cell lines",
+     "cell_line": "MCF10, 184B5, MCF7"
+    }
+   },
+   {
+    "proposition": "FIGURE 3, NATIVE PIXELS - PTHLH IN MCF7 GOES THE OTHER WAY. C: PTHLH relative expression about 0.05 in shWWOX-B MCF7 against 1.0 in Scr, a roughly 20-fold DECREASE, not a failure to increase. B (184B5): ANGPTL4 only about 1.55. A (MCF10 qPCR): ANGPTL4 about 4.5, FST about 7.8, PTHLH about 11, SERPINE1 about 4.0, all larger than the array folds. D: ANGPTL4 about 14.5 vs 42.5 ng/mL; E: FST about 0.5 vs 73 ng/mL. F: dox re-expression lowers the four transcripts to about 0.63, 0.40, 0.41, 0.35. Each 184B5 and MCF7 result is one shRNA (shWWOX-B).",
+    "snippet": "Visual attestation of Figure 3: C MCF7 PTHLH white bar about 0.05 against black 1.0; B 184B5 ANGPTL4 about 1.55; A MCF10 ANGPTL4 4.5 FST 7.8 PTHLH 11 SERPINE1 4.0; F black bars 0.63 0.40 0.41 0.35.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID24330518_Ferguson2013_assets/pmc_p06_x60.png",
+    "anchor": "Figure 3 A-F (PDF p.6, 1949x1069)",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human breast cell lines",
+     "cell_line": "MCF10, 184B5, MCF7"
+    },
+    "qualifies": "entries[14]",
+    "qualifies_needle": "exception of PTHLH expression in MCF7"
+   },
+   {
+    "proposition": "REPORTER TEXT: WWOX 'significantly quenched' TGF-beta-dependent luciferase. DATO as printed.",
+    "snippet": "we found that dox-inducible expression of WWOX protein in MCF10 cells significantly quenched TGFβ-dependent luciferase expression (Figure 4A)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24330518_Ferguson2013.xml",
+    "anchor": "Results > WWOX inhibits TGF-beta induced transcriptional activation, paragraph 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human breast epithelial cell line",
+     "cell_line": "MCF10"
+    }
+   },
+   {
+    "proposition": "FIGURE 4A, NATIVE PIXELS. Relative luciferase about 34 (no TGF, no WWOX), 91.5 (TGF), 26 (WWOX), 37.5 (TGF + WWOX). WWOX also lowers the basal signal; no statistical test is shown or named for this panel ('Experiment done in triplicate'); the dox-alone control for a doxycycline effect is not shown.",
+    "snippet": "Visual attestation of Figure 4A: relative luciferase bars about 34, 91.5, 26 and 37.5 for TGFb1 minus/plus and WWOX minus/plus combinations; no significance marks.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID24330518_Ferguson2013_assets/pmc_p07_x71.png",
+    "anchor": "Figure 4A (PDF p.7, 896x2381)",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human breast epithelial cell line",
+     "cell_line": "MCF10"
+    },
+    "qualifies": "entries[16]",
+    "qualifies_needle": "significantly quenched"
+   },
+   {
+    "proposition": "ChIP TEXT: WWOX lowers SMAD3 promoter occupancy both at rest and after TGF-beta. DATO as printed.",
+    "snippet": "WWOX protein expression affects SMAD3 protein availability for binding effector promoter elements both in the idle state and upon TGFβ1 stimulation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24330518_Ferguson2013.xml",
+    "anchor": "Results > WWOX inhibits TGF-beta induced transcriptional activation, paragraph 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human breast epithelial cell line",
+     "cell_line": "MCF10"
+    }
+   },
+   {
+    "proposition": "FIGURE 4B-C, NATIVE PIXELS. ANGPTL4 promoter: SMAD3 %input about 2.4 (basal) and 14 (TGF) without WWOX, about 0.45 in both WWOX conditions - while the IgG control in the TGF + WWOX condition reads about 1.1, ABOVE the SMAD3 signal with WWOX. SERPINE1: SMAD3 about 1.8 and 10.6 without WWOX, about 0.75 with WWOX; IgG about 0. So with WWOX the ANGPTL4 SMAD3 signal is at or below background. Error bars are SD with n not stated; the TGF-only SMAD3 bars show no visible error.",
+    "snippet": "Visual attestation of Figure 4B-C: pANGPTL4 SMAD3 bars about 2.4, 0.45, 14 and 0.45 with IgG white bar about 1.1 in the WWOX plus TGFb1 condition; pSERPINE1 SMAD3 bars about 1.8, 0.75, 10.6 and 0.75 with IgG near zero.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID24330518_Ferguson2013_assets/pmc_p07_x71.png",
+    "anchor": "Figure 4B-C (PDF p.7, 896x2381)",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human breast epithelial cell line",
+     "cell_line": "MCF10"
+    },
+    "qualifies": "entries[18]",
+    "qualifies_needle": "both in the idle state"
+   },
+   {
+    "proposition": "PREMISE CITED: WW1 is a class I WW domain binding PPXY independently of phosphorylation (refs 25, 30). DATO about the citations.",
+    "snippet": "The first WW domain of WWOX is a Class I WW domain known to bind to PPXY motifs on target proteins in a phosphorylation-independent manner",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24330518_Ferguson2013.xml",
+    "anchor": "Results > WWOX interacts with SMAD3 via WW domain 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "PULL-DOWN TEXT: SMAD3 binding is lost with WW1 mutated (W44F/P47A). DATO as printed.",
+    "snippet": "readily binds to the wild type WW domains of WWOX but the interaction is lost when the first WW domain is mutated (W44F/P47A)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24330518_Ferguson2013.xml",
+    "anchor": "Results > WWOX interacts with SMAD3 via WW domain 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human breast epithelial cell line",
+     "cell_line": "MCF10"
+    }
+   },
+   {
+    "proposition": "FIGURE 5A-B, NATIVE PIXELS. B: SMAD3 band strong with GST-WT, absent with GST, and a WEAK BUT VISIBLE band with GST-mut1 - binding reduced, not abolished. No Coomassie or Ponceau of the GST proteins is shown, so equal bait loading is not demonstrated; SMAD3 is transfected Flag-SMAD3 (overexpressed). A: endogenous co-IP, WWOX IP brings down SMAD3 and SMAD3 IP brings down WWOX; a faint SMAD3 signal is present in the IgG lane. One blot each, no replicate count.",
+    "snippet": "Visual attestation of Figure 5A-B: B IB SMAD3 bands in input, GST-WT strong, GST-mut1 weak, GST none; A IB SMAD3 bands in SMAD3, WWOX, RUNX2 IP lanes and input with a faint band in IgG; IB WWOX bands in SMAD3, WWOX, RUNX2 IP lanes and input.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID24330518_Ferguson2013_assets/pmc_p08_x87.png",
+    "anchor": "Figure 5A-B (PDF p.8, 1183x908)",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human breast epithelial cell line",
+     "cell_line": "MCF10"
+    },
+    "qualifies": "entries[21]",
+    "qualifies_needle": "interaction is lost when the first WW domain"
+   },
+   {
+    "proposition": "CONFOCAL TEXT: WWOX induction redistributes SMAD3 from nucleus to cytoplasm. DATO as printed. The Methods and legend describe TRANSIENT pcDNA-Myc-WWOX transfection, not dox induction.",
+    "snippet": "induction of WWOX expression led to a cellular redistribution of SMAD3 protein levels shifting from the nuclear to the cytoplasmic compartment",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24330518_Ferguson2013.xml",
+    "anchor": "Results > WWOX expression induces intracellular SMAD3 redistribution",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human breast epithelial cell line",
+     "cell_line": "MCF10"
+    }
+   },
+   {
+    "proposition": "FIGURE 5C, NATIVE PIXELS. One field: a single Myc-WWOX-positive cell whose SMAD3 signal is weak and diffuse with no bright nucleus, beside untransfected cells with bright nuclear SMAD3. No cell counts, no quantification of nuclear/cytoplasmic ratio, no statement of how many cells or experiments. Illustrative, n = 1 cell on the page.",
+    "snippet": "Visual attestation of Figure 5C: SMAD3 green bright in several untransfected nuclei; the single red Myc-WWOX cell shows weak diffuse green without a bright nucleus; merge with DAPI; scale bars 20 um.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID24330518_Ferguson2013_assets/pmc_p08_x87.png",
+    "anchor": "Figure 5C (PDF p.8, 1183x908)",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human breast epithelial cell line",
+     "cell_line": "MCF10"
+    },
+    "qualifies": "entries[23]",
+    "qualifies_needle": "shifting from the nuclear to the cytoplasmic"
+   },
+   {
+    "proposition": "UNIT AMBIGUITY: confocal TGF-beta1 at '20 ng/μL', three orders of magnitude above the 10 ng/mL used for reporter and ChIP. DATO as printed; whether ng/mL was meant is unresolved.",
+    "snippet": "treated with 20 ng/μL TGFβ1 for 1 hour",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24330518_Ferguson2013.xml",
+    "anchor": "Methods > Confocal microscopy",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "UNIT AMBIGUITY: co-IP lysis buffer '50 nM Tris-HCl'. DATO as printed; mM is presumably meant, unresolved.",
+    "snippet": "cells were lysed with a buffer containing 50 nM Tris–HCl pH 7.4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24330518_Ferguson2013.xml",
+    "anchor": "Methods > Co-immunoprecipitation",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "AUTHOR IPOTESI: WWOX inhibits TGF-beta signalling by binding SMAD3 and modulating its nuclear translocation. Proposed, not shown: no nuclear/cytoplasmic fractionation, no import assay.",
+    "snippet": "we propose that via the same mechanism WWOX acts as an inhibitor of TGFβ signaling by binding to SMAD3 and modulating nuclear translocation of this transcription factor",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24330518_Ferguson2013.xml",
+    "anchor": "Discussion, paragraph 5",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "META-ANALYSIS TEXT: a statistically significant negative WWOX-ANGPTL4 correlation in 819 tumours. DATO as wording.",
+    "snippet": "representative of a statistically significant negative correlation between WWOX and ANGPTL4 expression (Figure 6)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24330518_Ferguson2013.xml",
+    "anchor": "Results > WWOX and ANGPTL4 are inversely correlated",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "public breast carcinoma expression datasets (GSE26639, GSE21653, GSE20685)"
+    }
+   },
+   {
+    "proposition": "FIGURE 6, NATIVE PIXELS. Three heatmaps, each split into Cluster 1 (WWOX high/ANGPTL4 low) and Cluster 2 (the reverse) with TNBC or basal-like tick marks denser in Cluster 2. No correlation coefficient or P for the WWOX-ANGPTL4 correlation appears in the figure, legend or Methods (searched: the only statistic is subtype enrichment 'p < 0.05'). The clustering uses these two genes only, so two anti-correlated clusters partly restate the input. INFERENZA.",
+    "snippet": "Visual attestation of Figure 6: GSE26639 n=226, GSE21653 n=266, GSE20685 n=327; each split into Cluster 1 WWOX red ANGPTL4 green and Cluster 2 WWOX green ANGPTL4 red; TNBC or basal-like ticks denser in Cluster 2; no correlation value shown.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID24330518_Ferguson2013_assets/pmc_p09_x99.jpeg",
+    "anchor": "Figure 6 (PDF p.9, 1949x1110)",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "public breast carcinoma expression datasets (GSE26639, GSE21653, GSE20685)"
+    },
+    "qualifies": "entries[28]",
+    "qualifies_needle": "statistically significant negative correlation"
+   },
+   {
+    "proposition": "DATA DEPOSIT: arrays in GEO GSE47371. DATO.",
+    "snippet": "Raw datasets have been submitted to NCBI GEO database with accession number GSE47371.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24330518_Ferguson2013.xml",
+    "anchor": "Methods > Microarray data processing",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "RUNX2 PREMISE: WWOX binding RUNX2 is cited to ref 32 and illustrated by the RUNX2 IP of Figure 5A. DATO.",
+    "snippet": "it has been previously demonstrated that WWOX also binds to RUNX2 (Figure 5A) and modulates its transcriptional activity",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24330518_Ferguson2013.xml",
+    "anchor": "Discussion, paragraph 5",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   }
+  ]
+ }
+}

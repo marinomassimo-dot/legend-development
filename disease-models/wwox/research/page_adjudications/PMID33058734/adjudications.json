@@ -1,0 +1,417 @@
+{
+ "schema_version": 2,
+ "pmid": "33058734",
+ "citation": "Zeng Z, Chen W, Moshensky A, Shakir Z, Khan R, Crotty Alexander LE, Ware LB, Aldaz CM, Jacobson JR, Dudek SM, Natarajan V, Machado RF, Singla S. Cigarette Smoke and Nicotine-Containing Electronic-Cigarette Vapor Downregulate Lung WWOX Expression, Which Is Associated with Increased Severity of Murine Acute Respiratory Distress Syndrome. Am J Respir Cell Mol Biol 2021;64(1):89-99. DOI 10.1165/rcmb.2020-0145OC",
+ "rights": {
+  "notice": "Copyright (c) 2021 by the American Thoracic Society, as printed on page 89 of the article",
+  "open_licence": null,
+  "pmc_deposit": true,
+  "redistribution": "NOT_REDISTRIBUTED",
+  "why": "Europe PMC reports isOpenAccess=N and licence null (measured 2026-09-13); the PMC deposit PMC7780991 is free to read, which is access and not a redistribution right. These crops reproduce printed sentences, so the images are gitignored and are not published with this repository. This file is the recipe that regenerates them byte-identically from a copy of the PDF the reader already holds - publish the derivation, not the derived."
+ },
+ "source_pdf": {
+  "path": "files/fulltext/PMID33058734_Zeng2021.pdf",
+  "sha256": "d77a7dd2fb94895892acf73995ef5bc3a7078a8eb374283c6396d0492bcff6a5"
+ },
+ "manifest": "disease-models/wwox/research/deepdive_manifests/PMID33058734.json",
+ "why_this_article_is_adjudicated": "THE TEXT LAYER OF THIS PDF CANNOT SPELL AN OPERATOR, AND NO STRUCTURED SURFACE EXISTS. Measured 2026-09-13 over 59,006 extracted characters: ZERO C0 control characters - so a C0-only screen would have passed it - and ZERO occurrences of < > <= >= +/- x - in a paper whose Statistical Analysis section prints '*P < 0.05', whose Methods print '1 x 10^8 cfu' and '3-um pores', and which reports 'P < 0.05' for every significant result. That is suspicion BY ABSENCE, the second limb of the screen. deepdive_manifest.py --font-screen independently returns UNTRUSTWORTHY: the running text is mapped but the symbol subset GADPCP+AdvMathPi5 declares no ToUnicode CMap, and that subset is where the operators and Greek live. No structured surface exists anywhere the cascade reached: Europe PMC fullTextXML returns HTTP 404 with 0 bytes; NCBI efetch db=pmc returns HTTP 200 and 11,643 bytes of front matter carrying the explicit comment 'The publisher of this article does not allow downloading of the full text in XML form', with <body> absent, 0 <sec> and 0 <fig>; the PMC article HTML under no User-Agent returns a 21,312-byte reCAPTCHA interstitial. The PDF was won twice independently and byte-identically (pmc_pow_fetch.py at proof-of-work difficulty 4, and Europe PMC ?pdf=render, which returned 200 here rather than the 500 measured elsewhere in this batch). The extracted text is NOT declared as an article_text artifact and NO locator is verified against it; it was moved out of files/fulltext so nothing can mistake it for a declared surface. Every text proposition is anchored instead to a 400 dpi page crop, because the drawn glyph is the author's (rules 5d/5e).",
+ "needles": "Each artifact names the locator it adjudicates and the needle that must fall inside the crop. The crop is built over the whole sentence so the drawn glyphs can be read in context; the NEEDLE is a single-line fragment of that sentence chosen because search_for returns exactly one span for it on that page. Every needle here was uniqueness-tested at build time; three candidates were rejected and replaced for returning 0 or 2 spans.",
+ "artifacts": [
+  {
+   "file": "p04_human_47pct.png",
+   "page": 4,
+   "crop": [
+    151.82,
+    398.03,
+    433.18,
+    459.49
+   ],
+   "dpi": 400,
+   "sha256": "6412d42c9f2e5df2bfbcc553316af1e7e8bdc8589ceac07e8d6618b7b39e7e5f",
+   "adjudicates": [
+    {
+     "locator": "entries[0]",
+     "needle": "lung WWOX expression was 47% lower in"
+    }
+   ]
+  },
+  {
+   "file": "p04_ecig_57pct.png",
+   "page": 4,
+   "crop": [
+    151.82,
+    630.24,
+    411.35,
+    691.71
+   ],
+   "dpi": 400,
+   "sha256": "15b5d91a90262ccb1d95d0b76e503abe4e016ba23c1e4a8b52de82ad87d2708a",
+   "adjudicates": [
+    {
+     "locator": "entries[1]",
+     "needle": "exhibited an average 57% decrease in"
+    }
+   ]
+  },
+  {
+   "file": "p04_donor_lungs.png",
+   "page": 4,
+   "crop": [
+    151.82,
+    71.31,
+    428.44,
+    132.77
+   ],
+   "dpi": 400,
+   "sha256": "eea90931b597f89f35cc0c637c9d8f309fe1ce608a75eb5394d94e402ae8f966",
+   "adjudicates": [
+    {
+     "locator": "entries[2]",
+     "needle": "procured from organ donors whose lungs"
+    }
+   ]
+  },
+  {
+   "file": "p04_stats.png",
+   "page": 4,
+   "crop": [
+    151.82,
+    224.77,
+    431.17,
+    286.24
+   ],
+   "dpi": 400,
+   "sha256": "3dab701fecc595a0f341a091fcfa5f15505655a938baa3c93c6a4ff7db4ce70f",
+   "adjudicates": [
+    {
+     "locator": "entries[3]",
+     "needle": "test or an ANOVA were performed where"
+    }
+   ]
+  },
+  {
+   "file": "p04_methods_70kD.png",
+   "page": 4,
+   "crop": [
+    0.0,
+    345.3,
+    245.7,
+    406.77
+   ],
+   "dpi": 400,
+   "sha256": "63b5c5fbdeafd71157d89236eb32efdc689511f7ded8d8996bb96f770ccece13",
+   "adjudicates": [
+    {
+     "locator": "entries[4]",
+     "needle": "FITC-labeled dextran (70 kD) was added"
+    }
+   ]
+  },
+  {
+   "file": "p05_leg1F_3kD.png",
+   "page": 5,
+   "crop": [
+    53.51,
+    521.75,
+    356.98,
+    581.72
+   ],
+   "dpi": 400,
+   "sha256": "1c7420e7dc9a759286fcd932b62ac16e01bb70f275f123919a4ae34fcb51aa2d",
+   "adjudicates": [
+    {
+     "locator": "entries[5]",
+     "needle": "dextran (3 kD) was added over the cells along with LPS"
+    }
+   ]
+  },
+  {
+   "file": "p09_leg7B_3kD.png",
+   "page": 9,
+   "crop": [
+    225.69,
+    303.54,
+    537.07,
+    363.51
+   ],
+   "dpi": 400,
+   "sha256": "77f80dbac9cb926da425105ed70c5eae2347a8567f5e11175f94122952c53c80",
+   "adjudicates": [
+    {
+     "locator": "entries[6]",
+     "needle": "dextran (3 kD) was added over the cells along with MRSA"
+    }
+   ]
+  },
+  {
+   "file": "p04_ter_fig1C.png",
+   "page": 4,
+   "crop": [
+    396.05,
+    487.77,
+    584.96,
+    549.24
+   ],
+   "dpi": 400,
+   "sha256": "8e17e012081333a2b29c125d3cf01a4afe36acefe2aecb9bf3daed225410d876",
+   "adjudicates": [
+    {
+     "locator": "entries[7]",
+     "needle": "As shown in Figure 1C,"
+    }
+   ]
+  },
+  {
+   "file": "p04_jnk_fig1C.png",
+   "page": 4,
+   "crop": [
+    329.15,
+    663.13,
+    508.81,
+    724.59
+   ],
+   "dpi": 400,
+   "sha256": "46b08f2e5a69dba41914755040972ba398744211e6ff9293c86b3a33580b2270",
+   "adjudicates": [
+    {
+     "locator": "entries[8]",
+     "needle": "cells (Figure 1C)"
+    }
+   ]
+  },
+  {
+   "file": "p05_flux_fig1D.png",
+   "page": 5,
+   "crop": [
+    199.08,
+    602.46,
+    403.53,
+    663.92
+   ],
+   "dpi": 400,
+   "sha256": "634cbdb608a2b20f83018515e8f96130d5538111b417452e661e7fc1238e11b3",
+   "adjudicates": [
+    {
+     "locator": "entries[9]",
+     "needle": "monolayers (Figure 1D)"
+    }
+   ]
+  },
+  {
+   "file": "p03_aldaz_donated.png",
+   "page": 3,
+   "crop": [
+    32.65,
+    301.48,
+    221.34,
+    362.94
+   ],
+   "dpi": 400,
+   "sha256": "8f0489877b84a90e61dc792d9c6ea73b4c5d2ea47d9057d11c1ec90a6d05156d",
+   "adjudicates": [
+    {
+     "locator": "entries[10]",
+     "needle": "mice were donated"
+    }
+   ]
+  },
+  {
+   "file": "p02_preprint.png",
+   "page": 2,
+   "crop": [
+    151.82,
+    520.65,
+    431.06,
+    582.12
+   ],
+   "dpi": 400,
+   "sha256": "e7bb7151c22fd6feb94b71189b540aa3a0518506d92cc2baecd6b448a2e6310d",
+   "adjudicates": [
+    {
+     "locator": "entries[11]",
+     "needle": "have been previously reported in the form"
+    }
+   ]
+  },
+  {
+   "file": "p06_cre_control.png",
+   "page": 6,
+   "crop": [
+    0.0,
+    575.42,
+    234.35,
+    636.88
+   ],
+   "dpi": 400,
+   "sha256": "e18ad3efd047115f65da891f4f8d2d8ead3d18b09b046a8199b009ae12465338",
+   "adjudicates": [
+    {
+     "locator": "entries[12]",
+     "needle": "whether endothelial expression of cre"
+    }
+   ]
+  },
+  {
+   "file": "p06_untreated_nodiff.png",
+   "page": 6,
+   "crop": [
+    151.82,
+    465.49,
+    428.72,
+    526.96
+   ],
+   "dpi": 400,
+   "sha256": "bb422fa815e7ab241280f7addfce02d647ee3937bb002741a82ba2f7b7009bfe",
+   "adjudicates": [
+    {
+     "locator": "entries[13]",
+     "needle": "previously reported observations in whole-"
+    }
+   ]
+  },
+  {
+   "file": "p06_lps_notsig.png",
+   "page": 6,
+   "crop": [
+    256.81,
+    608.19,
+    410.07,
+    669.66
+   ],
+   "dpi": 400,
+   "sha256": "8db6f7c9decbd88e4e444dcc7675b9feebbeb9d2686283dd1cd0c83437d48d9c",
+   "adjudicates": [
+    {
+     "locator": "entries[14]",
+     "needle": "(Figure 4)"
+    }
+   ]
+  },
+  {
+   "file": "p07_fig4_legend.png",
+   "page": 7,
+   "crop": [
+    71.2,
+    665.3,
+    385.58,
+    725.27
+   ],
+   "dpi": 400,
+   "sha256": "3c406f6debc81ed170282316112b246a17f55af08b88822eb9d4ade78cba5fff",
+   "adjudicates": [
+    {
+     "locator": "entries[15]",
+     "needle": "None of the increases in LPS-treated WWOX KO animals"
+    }
+   ]
+  },
+  {
+   "file": "p07_mrsa_notsig.png",
+   "page": 7,
+   "crop": [
+    0.0,
+    521.51,
+    128.71,
+    582.97
+   ],
+   "dpi": 400,
+   "sha256": "99856f719947fb82619dfdbd96a22de0c2853c940a7e3eb4c7c8548e89fc30dc",
+   "adjudicates": [
+    {
+     "locator": "entries[16]",
+     "needle": "(Figure 6)"
+    }
+   ]
+  },
+  {
+   "file": "p07_smoking_nodata.png",
+   "page": 7,
+   "crop": [
+    329.16,
+    510.17,
+    584.96,
+    571.64
+   ],
+   "dpi": 400,
+   "sha256": "14af33fe552f5fd69b77a5b0a9c3b0b62ac42de1b655cefdce487e86e0242103",
+   "adjudicates": [
+    {
+     "locator": "entries[17]",
+     "needle": "additional data regarding the intensity"
+    }
+   ]
+  },
+  {
+   "file": "p08_fig6_legend.png",
+   "page": 8,
+   "crop": [
+    82.37,
+    675.28,
+    392.21,
+    735.25
+   ],
+   "dpi": 400,
+   "sha256": "f16f1d5a375cc4174d5859c626dbe2cb3dd19307541eab12ff2b600a16182f13",
+   "adjudicates": [
+    {
+     "locator": "entries[18]",
+     "needle": "None of the increases in LPS-treated WWOX KO animals"
+    }
+   ]
+  },
+  {
+   "file": "p08_inflam_indep.png",
+   "page": 8,
+   "crop": [
+    329.16,
+    104.2,
+    584.96,
+    165.66
+   ],
+   "dpi": 400,
+   "sha256": "97719ccfd2a1987a553f02c1fa3f0d9aca8eee3e37d593988a6b2e585d2fef55",
+   "adjudicates": [
+    {
+     "locator": "entries[19]",
+     "needle": "independent mechanisms exist by which"
+    }
+   ]
+  },
+  {
+   "file": "p08_fig5_legend.png",
+   "page": 8,
+   "crop": [
+    203.86,
+    276.66,
+    406.72,
+    336.81
+   ],
+   "dpi": 400,
+   "sha256": "9cff3a69a4fb022537d7ae1d446f9ee47ee8848a827dfe45bf0061df74dda6b7",
+   "adjudicates": [
+    {
+     "locator": "entries[20]",
+     "needle": "cfu of USA 300 MRSA (n"
+    }
+   ]
+  },
+  {
+   "file": "p08_no_mechanism.png",
+   "page": 8,
+   "crop": [
+    63.83,
+    454.61,
+    255.83,
+    516.07
+   ],
+   "dpi": 400,
+   "sha256": "ba600fe9d92dc840da52d193aa754fdb2b5cab95578826c9c41aa500b7ec6dd4",
+   "adjudicates": [
+    {
+     "locator": "entries[21]",
+     "needle": "does not pursue the"
+    }
+   ]
+  }
+ ]
+}

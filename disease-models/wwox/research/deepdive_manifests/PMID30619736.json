@@ -1,0 +1,965 @@
+{
+ "schema_version": 2,
+ "pmid": "30619736",
+ "doi": "10.3389/fonc.2018.00591",
+ "receipt": "FTR-20260913-30619736-01",
+ "landing": [
+  "FTR-20260913-30619736-01",
+  "fulltext_dossiers/PMID30619736.md",
+  "CC-20260913-ALDAZ-B002-01"
+ ],
+ "skills_considered": [
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline. The reading turns on the supplementary spreadsheets and the figure pixels, which a read-only subagent working from a dossier cannot inspect, and the blind-pass firewall forbids handing it the laboratory's records."
+  },
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Tier 0 run inline: Europe PMC fullTextXML, efetch db=pmc, supplementaryFiles, publisher PDF, ?pdf=render; the /bin/ figure route failed (301 stub) and is recorded in retrieval_manifest.jsonl."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Decided in M4b, not here: R4 is required only if this reading narrows a consolidated baseline claim or contradicts a persisted locator. No persisted locator for this paper exists; the status of the claim that cites it is opened only after the receipt."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The paper yields no new measured lead; its candidate leads (trafficking prey, PDC prey) are exactly what this reading grades down to co-association and annotation. Mining them as discovery capital before M4b would re-inflate them."
+  },
+  {
+   "skill": "legend-paperqa",
+   "used": false,
+   "reason": "Requires an API key and external traffic, which is external spend reserved to the operator under the contract."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever matures from an interactome with no functional readout; forging hypotheses here would build on the enrichment this reading declines to treat as measurement."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 138,
+  "publications_on_gene": 38,
+  "counts_measured": "PubMed esearch 2026-09-13: 'Aldaz CM[au]' 138; 'Aldaz CM[au] AND WWOX' 38; 'Hussain T[au] AND WWOX' 6; 'Abba MC[au] AND WWOX' 10; 'Chen J[au] AND WWOX AND Aldaz CM[au]' 1.",
+  "research_type": "experimental_lab",
+  "output_kind": "primary_research",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": true,
+  "weighting": "Two halves weighed apart. The corresponding laboratory cloned WWOX and is primary for the GENE, so the biochemistry of WW1/PPXY binding (co-IP, GST WW1 mutants) comes from native expertise and weighs as a strong observation. The proteomics was run on an established TAP-MS platform of a collaborating radiation-oncology laboratory (Chen J, one shared WWOX paper) and scored with that platform's MUSE model — an adjacent method, so the scoring and filtering are imported rather than designed for this bait. The pathway interpretation is the WWOX group's own and carries the investment of a laboratory that has argued a metabolic role for WWOX in prior work (refs 5, 10): that is a reason to weigh the INTERPRETATION of the enrichment below its observation. Neither group is primary for WWOX-related epileptic encephalopathy; nothing here is in neural cells."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "WWOX",
+    "route": "PubMed esearch 2026-09-13",
+    "count": 708
+   },
+   {
+    "query": "WWOX AND (interactome OR proteomic OR proteomics OR \"mass spectrometry\")",
+    "route": "PubMed esearch 2026-09-13",
+    "count": 23
+   },
+   {
+    "query": "WWOX AND (\"acetyl-CoA\" OR \"pyruvate dehydrogenase\")",
+    "route": "PubMed esearch 2026-09-13",
+    "count": 1
+   },
+   {
+    "query": "WWOX AND (SEC23IP OR SCAMP3 OR VOPP1)",
+    "route": "PubMed esearch 2026-09-13",
+    "count": 2
+   },
+   {
+    "query": "WWOX AND (trafficking OR endosome OR lysosome OR Golgi)",
+    "route": "PubMed esearch 2026-09-13",
+    "count": 25
+   },
+   {
+    "query": "WWOX AND (glycolysis OR \"fatty acid\" OR metabolism)",
+    "route": "PubMed esearch 2026-09-13",
+    "count": 418
+   }
+  ],
+  "note": "The acetyl-CoA / PDH intersection is a single paper and the trafficking-prey intersection two: a near-empty field in which one annotation-level paper can become the whole literature of a claim. The broad metabolism query (418) is inflated by generic \"metabolism\" hits and says nothing about measured coupling."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 58,
+  "enumeration_method": "Enumerated from the fingerprinted Europe PMC XML ref-list, not sampled: 58 <ref> elements, every one carrying a pmid pub-id (identifiers taken from the artefact). Gene-direct = title names WWOX/Wwox/WOX1/FRA16D: 31.",
+  "gene_direct_count": 31,
+  "gene_direct_refs_in_source": [
+   "10786676",
+   "10861292",
+   "11719429",
+   "11572989",
+   "24932569",
+   "27869163",
+   "25595186",
+   "24369382",
+   "24871327",
+   "16941225",
+   "15070730",
+   "15548692",
+   "16061658",
+   "18487609",
+   "19465938",
+   "24330518",
+   "25678599",
+   "19458077",
+   "25892250",
+   "25012504",
+   "26390919",
+   "25331887",
+   "15064722",
+   "24308844",
+   "24550385",
+   "14526170",
+   "22634283",
+   "30285739",
+   "19936220",
+   "27308416",
+   "21075834"
+  ],
+  "resolved": [
+   "10786676",
+   "10861292",
+   "11719429",
+   "11572989",
+   "24932569",
+   "27869163",
+   "25595186",
+   "24369382",
+   "24871327",
+   "16941225",
+   "15070730",
+   "15548692",
+   "16061658",
+   "18487609",
+   "19465938",
+   "24330518",
+   "25678599",
+   "19458077",
+   "25892250",
+   "25012504",
+   "26390919",
+   "25331887",
+   "15064722",
+   "24308844",
+   "24550385",
+   "14526170",
+   "22634283",
+   "30285739",
+   "19936220",
+   "27308416",
+   "21075834"
+  ],
+  "resolved_depth_declaration": "RESOLVED MEANS IDENTITY, NOT READING. 29 of 31 identifiers are present in the paper registry and 2 (10861292, 11719429) only in the full-text queue, checked by PMID string presence on 2026-09-13 with no record content opened. 16 carry a read receipt. Two are LOAD-BEARING FOR THIS READING and have no receipt: 30285739 (Bonin 2018, the only independent support for VOPP1-WW1/PPPY) and 15064722 (Ludes-Meyers 2004, the WW1-PPXY specificity this paper builds its motif analysis on). They are not queued here because this contract does not own the queue file; they are named in the commit candidate for the orchestrator to queue. The MUSE (27432908) and CRAPome (23921808) method papers are not gene-direct and are the next hop for anyone contesting the filters.",
+  "queued": []
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Technical only, under the blind-pass firewall: count of deep-dive manifests and complete reads; which manifests contain the strings TAP-MS, interactome, VOPP1, SEC23IP, SCAMP3, pyruvate dehydrogenase, CRAPome. No claim, dossier or locator content opened.",
+  "hits": 8,
+  "finding": "84 manifests; 73 PMIDs at complete_fulltext_read. TAP-MS: 1 manifest (PMID37519886); interactome: 7 (PMID20146584, 31428585, 32300104, 42128308, 33255508, 35716775, 37519886); pyruvate dehydrogenase: 1 (PMID25012504); VOPP1, SEC23IP, SCAMP3, CRAPome: 0. No existing reading has touched the three trafficking prey. The comparison with any of these is M4b's."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-09-13",
+  "route": "NCBI esummary db=pubmed retmode=json for 30619736",
+  "result": "pubtype Journal Article; no commentscorrections field returned, i.e. no linked erratum, expression of concern or retraction. The Europe PMC XML carries no related-article of type correction.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 58,
+   "references_screened": 56,
+   "references_with_doi": 56,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 3,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID30619736_Hussain2018_EuropePMC.xml",
+   "kind": "article_text",
+   "note": "Europe PMC JATS XML of PMC6300487, 143354 B; article-id pmid 30619736 / doi 10.3389/fonc.2018.00591 verified inside the document; <body> with 17 titled sections, 5 figures, 2 tables, 4 supplementary-material elements, 58 references. The evidentiary text surface for every body and table locator.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6300487/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_fulltextxml",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "caa1d23bc6f229d457d1001c3f0e6e5fa4016a7ca15ffdacc13a3c7bc1648036"
+  },
+  {
+   "path": "files/fulltext/PMID30619736_Hussain2018_frontiers.pdf",
+   "kind": "article_binary",
+   "note": "Publisher PDF, 14 pages, byte-identical to the Europe PMC ?pdf=render copy. Declared as the source of the native figure rasters; no locator uses its text layer (font_encoding_verdict UNDECIDED).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.frontiersin.org/articles/10.3389/fonc.2018.00591/pdf",
+    "http_method": "GET",
+    "tier": "publisher_pdf",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "c9287a8ee350ea1fc7e11c82cf09a6a35ce9434d6204517f6e9100396ac0de91"
+  },
+  {
+   "path": "files/supplements/PMID30619736/supplementaryFiles.zip",
+   "kind": "supplement_binary",
+   "note": "Europe PMC supplementaryFiles archive, 737662 B: Data_Sheet_1-4.xlsx (md5 equal to the XML suppdata-md5 values) and the five figure JPGs.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6300487/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "europepmc_supplementaryfiles",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "7827904de488ae19c08b48ed504a23e825b1c2e8e2b3c7e24485fe5d0f30033d"
+  },
+  {
+   "path": "files/figures/PMID30619736/pdf_p04_x166.jpeg",
+   "kind": "figure",
+   "note": "Figure 1, native embedded JPEG 945x1324 extracted from the publisher PDF — larger than the PMC raster in the archive; inspected as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID30619736_Hussain2018_frontiers.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "df4d679901cb5b15be4c37a740b0339cd968557d799b01c6a21ad832b3295ab1"
+  },
+  {
+   "path": "files/figures/PMID30619736/pdf_p07_x216.jpeg",
+   "kind": "figure",
+   "note": "Figure 2, native embedded JPEG 980x1687 extracted from the publisher PDF — larger than the PMC raster in the archive; inspected as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID30619736_Hussain2018_frontiers.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "814d46c8463f5df556938df763d847f5ddc8bee6f2e7283426c1519a6b054b2f"
+  },
+  {
+   "path": "files/figures/PMID30619736/pdf_p07_x219.jpeg",
+   "kind": "figure",
+   "note": "Figure 3, native embedded JPEG 945x1200 extracted from the publisher PDF — larger than the PMC raster in the archive; inspected as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID30619736_Hussain2018_frontiers.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "83b3c16d8094213f202fbd8d80e4b739dfd03985d2a32f4b2439dd5329dfef23"
+  },
+  {
+   "path": "files/figures/PMID30619736/pdf_p08_x235.jpeg",
+   "kind": "figure",
+   "note": "Figure 4, native embedded JPEG 1535x1595 extracted from the publisher PDF — larger than the PMC raster in the archive; inspected as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID30619736_Hussain2018_frontiers.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "e732dd9381a09401c6c478ba73e72f08d42e8693c0c0bca1828e57be805eb394"
+  },
+  {
+   "path": "files/figures/PMID30619736/pdf_p10_x286.jpeg",
+   "kind": "figure",
+   "note": "Figure 5, native embedded JPEG 1802x2356 extracted from the publisher PDF — larger than the PMC raster in the archive; inspected as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID30619736_Hussain2018_frontiers.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "163d725e676861bed50d60a52fbd0076aa34aaf08aea84655774ce43cfa66de0"
+  },
+  {
+   "path": "files/supplements/PMID30619736/unz/Data_Sheet_1.xlsx",
+   "kind": "supplement_binary",
+   "note": "Supplementary File 1 (peptide/protein lists, sheets Replicate-1 795 rows, Replicate-2 594 rows).",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID30619736/supplementaryFiles.zip",
+    "extractor": {
+     "name": "python zipfile",
+     "version": "3.12.3",
+     "call": "ZipFile.read(member)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "f1ece9f8486bbe33e6a53566be3734a7b7e036db29b4b604f58ffe6e1861ae75"
+  },
+  {
+   "path": "files/supplements/PMID30619736/unz/Data_Sheet_2.xlsx",
+   "kind": "supplement_binary",
+   "note": "Supplementary File 2 (216 prey + bait: spectral counts per replicate, MUSE interaction score, prey score, CRAPome frequency, motif counts). Its derived text rendering is REFUSED as SUSPECT by the validator's screen (a tab-separated spectral-count triplet read as a × substitution) and is therefore not declared; the container is declared and every quantitative statement drawn from it is a reproducible computation named in the dossier, not a quote.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID30619736/supplementaryFiles.zip",
+    "extractor": {
+     "name": "python zipfile",
+     "version": "3.12.3",
+     "call": "ZipFile.read(member)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "138c92551c862198b9ecf99c11f80bf930ad1d8bb26c19ffa2f3898d9fda1361"
+  },
+  {
+   "path": "files/supplements/PMID30619736/unz/Data_Sheet_3.xlsx",
+   "kind": "supplement_binary",
+   "note": "Supplementary File 3 (PROSITE hits: PPX(Y/F) 56 sites in 39 sequences; LPX(Y/F) 49 sites in 40 sequences).",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID30619736/supplementaryFiles.zip",
+    "extractor": {
+     "name": "python zipfile",
+     "version": "3.12.3",
+     "call": "ZipFile.read(member)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "71c53e8ae3d3a59921707da4d00629c713d5f70835a586c20d511979536acb7b"
+  },
+  {
+   "path": "files/supplements/PMID30619736/unz/Data_Sheet_4.xlsx",
+   "kind": "supplement_binary",
+   "note": "Supplementary File 4 (8 enriched pathways from InnateDB with raw and corrected p-values and member lists).",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID30619736/supplementaryFiles.zip",
+    "extractor": {
+     "name": "python zipfile",
+     "version": "3.12.3",
+     "call": "ZipFile.read(member)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "8f99b9f6dbabcc0e57532b207e312c7f36aea442f3e0e2d07e291ad3ae5cc427"
+  },
+  {
+   "path": "files/supplements/PMID30619736/Data_Sheet_1.txt",
+   "kind": "supplement_text",
+   "note": "Deterministic cell-text rendering of Data_Sheet_1.xlsx: sharedStrings resolved, one line per row, cells tab-joined, sheets headed \"### SHEET\". Passes the validator's surface screen.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID30619736/unz/Data_Sheet_1.xlsx",
+    "extractor": {
+     "name": "stdlib xlsx2tsv (zipfile + ElementTree)",
+     "version": "scientist-b 2026-09-13",
+     "call": "xlsx2tsv.py <xlsx> <out>",
+     "join": "\t"
+    },
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "05663b89faa61d965384db18a7c6f6fe25a7b96a32015d26f96b60557c23c768"
+  },
+  {
+   "path": "files/supplements/PMID30619736/Data_Sheet_3.txt",
+   "kind": "supplement_text",
+   "note": "Deterministic cell-text rendering of Data_Sheet_3.xlsx: sharedStrings resolved, one line per row, cells tab-joined, sheets headed \"### SHEET\". Passes the validator's surface screen.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID30619736/unz/Data_Sheet_3.xlsx",
+    "extractor": {
+     "name": "stdlib xlsx2tsv (zipfile + ElementTree)",
+     "version": "scientist-b 2026-09-13",
+     "call": "xlsx2tsv.py <xlsx> <out>",
+     "join": "\t"
+    },
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "db5e7212f2f91116a30fd2003f7603553f135d38b30277511f862b004d0ff0a8"
+  },
+  {
+   "path": "files/supplements/PMID30619736/Data_Sheet_4.txt",
+   "kind": "supplement_text",
+   "note": "Deterministic cell-text rendering of Data_Sheet_4.xlsx: sharedStrings resolved, one line per row, cells tab-joined, sheets headed \"### SHEET\". Passes the validator's surface screen.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID30619736/unz/Data_Sheet_4.xlsx",
+    "extractor": {
+     "name": "stdlib xlsx2tsv (zipfile + ElementTree)",
+     "version": "scientist-b 2026-09-13",
+     "call": "xlsx2tsv.py <xlsx> <out>",
+     "join": "\t"
+    },
+    "acquired_on": "2026-09-13"
+   },
+   "sha256": "940fda1e1f94b2d9d095bc3bf2c40b52dfcefb4a82a31ac4e9a72cdeb0bcdb2c"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": false,
+  "source_fulltext_indexed_evidence": "A structured JATS surface exists (Europe PMC fullTextXML) and is the evidentiary text surface; supplement locators use deterministic renderings of the deposited xlsx; figure locators are visual attestations of the native PDF rasters.",
+  "abstract_anchoring_waived": "No locator uses the abstract. The abstract's strongest sentence (\"WWOX likely plays relevant roles in glycolysis, fatty acid degradation … Acetyl-CoA generation\") is carried only through its Discussion counterpart, entries[34], where it is typed as author inference.",
+  "entries": [
+   {
+    "proposition": "METHOD · SYSTEM: the whole interactome comes from one transformed human cell line, HEK293T, stably expressing a C-terminally SFB-tagged full-length WWOX. No neural cell, primary cell, tissue or endogenous-WWOX pull-down is used anywhere in the paper. DATO.",
+    "snippet": "HEK293T cells stably expressing SBP-S-FLAG (SFB) triple-tagged WWOX were generated as described previously (38).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30619736_Hussain2018_EuropePMC.xml",
+    "anchor": "Materials and Methods › Vector Construct, Cell Culture, Transfection and Clone Selection for TAP-MS, sentence 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "HEK293T cells",
+     "cell_line": "HEK293T"
+    }
+   },
+   {
+    "proposition": "METHOD · EXPRESSION LEVEL: the claim that the chosen clones express tagged WWOX at a level similar to endogenous WWOX is asserted and not shown — no clone immunoblot appears in any figure (Figure 1 is a schematic) or supplement. The \"physiological conditions\" framing rests on this unshown comparison. DATO (absence of the panel).",
+    "snippet": "Twelve cell clones were isolated and examined for expression levels of tagged WWOX by immunoblotting and selected those with similar expression level as the endogenous WWOX protein to proceed with the TAP steps.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30619736_Hussain2018_EuropePMC.xml",
+    "anchor": "Results › TAP-MS Based Proteomic Profiling of WWOX Interactome, sentence 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought — a clone blot was looked for in Figures 1-5 and Supplementary Files 1-4 and is not present",
+    "experimental_context": {
+     "system": "HEK293T cells",
+     "cell_line": "HEK293T"
+    }
+   },
+   {
+    "proposition": "METHOD · SPECIFICITY: non-specific binders are removed computationally (MUSE scoring, then the external CRAPome contaminant repository). No in-experiment negative-control purification (empty SFB vector or unrelated tagged bait in the same cells) is described in Methods, Results or the supplements. DATO (for what is described); the absence is a searched negative.",
+    "snippet": "To evaluate potential protein-protein interactions, assign probabilistic scores to individual interactions and eliminate non-specific interactions, the Minkowski distance-based unified probabilistic scoring environment (MUSE) statistical model was applied.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30619736_Hussain2018_EuropePMC.xml",
+    "anchor": "Materials and Methods › Tandem Affinity Purification … MS Analysis, paragraph 2, sentence 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought — control TAP searched in Methods, Results, Figure 1 and Supplementary Files 1-2; none found",
+    "experimental_context": {
+     "system": "HEK293T cells",
+     "cell_line": "HEK293T"
+    }
+   },
+   {
+    "proposition": "METHOD · FILTER 1: 383 proteins present in both replicates were cut to 253 by CRAPome frequency < 0.2 — an external frequency across other laboratories' affinity purifications, not a control run in this experiment.",
+    "snippet": "From the identified 383 proteins, we narrowed down the list to 253 proteins with a CRAPome frequency < 0.2.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30619736_Hussain2018_EuropePMC.xml",
+    "anchor": "Results › TAP-MS Based Proteomic Profiling, paragraph 2, sentence 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "HEK293T cells",
+     "cell_line": "HEK293T"
+    }
+   },
+   {
+    "proposition": "METHOD · FILTER 2 UNSTATED: the step from 253 to the final 216 \"shortlisted based on the MUSE algorithm generated interaction scores\" names no threshold. In Supplementary File 2 the lowest retained interaction score is 0.029 (recomputed from the xlsx container); the cutoff that excluded 37 proteins cannot be recovered from the paper. DATO (what is stated) + the unstated threshold as a declared limit.",
+    "snippet": "The data was further shortlisted based on the MUSE algorithm generated interaction scores (40) thus generating a final list of 216 WWOX prey proteins provided in Supplementary File 2.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30619736_Hussain2018_EuropePMC.xml",
+    "anchor": "Results › TAP-MS Based Proteomic Profiling, paragraph 2, sentence 4",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought — threshold searched in Methods, Results, Figure 1 legend and Supplementary File 2 header; none stated",
+    "experimental_context": {
+     "system": "HEK293T cells",
+     "cell_line": "HEK293T"
+    }
+   },
+   {
+    "proposition": "DESIGN · REPLICATION: n = 2 purifications. Replicate yield differs (795 vs 594 proteins) and only 383 are shared; every downstream list is the intersection of two runs.",
+    "snippet": "We identified a total of 7,589 peptides from two replicates, corresponding to a total of 795 proteins in replicate-1 and 594 proteins in replicate-2 (Supplementary File 1).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30619736_Hussain2018_EuropePMC.xml",
+    "anchor": "Results › TAP-MS Based Proteomic Profiling, paragraph 1, sentence 4",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "HEK293T cells",
+     "cell_line": "HEK293T"
+    }
+   },
+   {
+    "proposition": "FIGURE 1, inspected at native resolution (945x1324): a workflow schematic, not data. Its \"Data Analysis\" box prints \"1389 interacting proteins\" — the SUM of 795 + 594 — while its own Venn (412 | 383 | 211) gives 1,006 unique proteins as the text states; the box counts a protein found in both replicates twice. A labelling inconsistency, not a data error; it touches no downstream list.",
+    "snippet": "Visual attestation of Figure 1: data-analysis box reads \"1389 interacting proteins\"; Venn beneath reads Replicate 1 795, Replicate 2 594, segments 412 / 383 / 211; arrow to CRAPome and \"High confidence 216 proteins\".",
+    "surface": "figure",
+    "artifact": "files/figures/PMID30619736/pdf_p04_x166.jpeg",
+    "anchor": "Figure 1 (PDF p. 4), native embedded JPEG 945x1324",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "RESULT · TOP TIER: 14 prey with MUSE interaction score > 0.3 (a further 18 between 0.2 and 0.3). Confirmed against Supplementary File 2 by recount: 14 and 32. DATO.",
+    "snippet": "As per analysis with the MUSE algorithm (40), we identified 14 proteins with TAP-MS interaction scores (IS) > 0.3.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30619736_Hussain2018_EuropePMC.xml",
+    "anchor": "Results › High Confidence WWOX Protein Interactors, sentence 1",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "HEK293T cells",
+     "cell_line": "HEK293T"
+    }
+   },
+   {
+    "proposition": "AUTHOR INTERPRETATION, not observation: \"direct physical binding partner\" is inferred from a probabilistic co-purification score. A TAP-MS score measures co-purification from lysate; it cannot distinguish direct binding from membership of a complex. INFERENZA (of the authors).",
+    "snippet": "These targets have a very high likelihood of being direct WWOX physical binding partners (Table 1 and Figure 2).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30619736_Hussain2018_EuropePMC.xml",
+    "anchor": "Results › High Confidence WWOX Protein Interactors, sentence 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "HEK293T cells",
+     "cell_line": "HEK293T"
+    }
+   },
+   {
+    "proposition": "FIGURE 2, inspected at native resolution (980x1687): 32 bars (14 green > 0.3, 18 blue 0.2-0.3). Of every enzyme painted red in Figure 5B, exactly ONE appears among these 32 — BCKDHA, a blue bar near 0.21 with CRAPome frequency visibly raised. No PDH subunit, DLD, DLAT, HADHA/HADHB, ALDH, ACSL, ACADSB, MCCC2, HSD17B10 or PKM bar. The trafficking prey SEC23IP, VOPP1 and SCAMP3 are green bars. So the metabolic enzymes of the pathway story sit OUTSIDE the tier the authors themselves call high-confidence.",
+    "snippet": "Visual attestation of Figure 2: 32 bars DVL2 to TARS; green through DAZAP1; SEC23IP (1), VOPP1 (3), SCAMP3 (2) green; BCKDHA the only Figure 5B enzyme present, blue, about 0.21.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID30619736/pdf_p07_x216.jpeg",
+    "anchor": "Figure 2 (PDF p. 7), native embedded JPEG 980x1687",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "sought — each Figure 5B red enzyme looked for among the 32 bars",
+    "experimental_context": {
+     "system": "HEK293T cells",
+     "cell_line": "HEK293T"
+    }
+   },
+   {
+    "proposition": "TABLE 1 (32 rows, read in the XML): the table of highest-confidence prey carries SEC23IP 0.56, VOPP1 0.51 and SCAMP3 0.31 each with a PPXY site, and among metabolic enzymes only BCKDHA 0.21 (no motif), GFPT1 0.24, ASNS 0.21 and FDFT1 0.20 — none a pyruvate-dehydrogenase, fatty-acid-oxidation or aldehyde-dehydrogenase enzyme.",
+    "snippet": "Candidate WWOX interacting proteins with highest confidence interaction scores.",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID30619736_Hussain2018_EuropePMC.xml",
+    "anchor": "Table 1, caption (rows read in the table body)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "HEK293T cells",
+     "cell_line": "HEK293T"
+    }
+   },
+   {
+    "proposition": "METHOD · CO-IP: both partners are OVER-EXPRESSED by transient co-transfection (Myc-DDK-prey + GFP-WWOX) in HEK293T; no endogenous-protein co-IP is performed for any prey.",
+    "snippet": "For co-immunoprecipitation, HEK293T cells were co-transfected with either 1 μg of Myc-DDK-VOPP1, Myc-DDK-SCAMP3, or Myc-DDK-SEC23IP along with 1 μg of GFP-WWOX plasmid.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30619736_Hussain2018_EuropePMC.xml",
+    "anchor": "Materials and Methods › Co-immunoprecipitation, sentence 4",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "HEK293T cells, transient co-transfection",
+     "cell_line": "HEK293T",
+     "treatment": "Myc-DDK-prey + GFP-WWOX overexpression"
+    }
+   },
+   {
+    "proposition": "METHOD · CO-IP CONTROL: IgG is the only negative control. No single-transfection (Myc-prey alone, GFP alone) or unrelated-Myc-protein control is described, so GFP-tag or bead stickiness is not excluded beyond IgG.",
+    "snippet": "Corresponding IgG (MilliporeSigma, Burlington, MA, United States) was used as a negative control.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30619736_Hussain2018_EuropePMC.xml",
+    "anchor": "Materials and Methods › Co-immunoprecipitation, sentence 8",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought — GFP-only / prey-only lanes searched in Methods and Figure 3A; none",
+    "experimental_context": {
+     "system": "HEK293T cells, transient co-transfection",
+     "cell_line": "HEK293T"
+    }
+   },
+   {
+    "proposition": "RESULT (text): reciprocal co-IP of WWOX with SEC23IP, SCAMP3 and VOPP1 — the three trafficking/endolysosomal prey are the only TAP-MS hits validated by a second method in this paper. DATO for co-association of the over-expressed proteins; \"strong physical interaction\" is the authors' wording.",
+    "snippet": "Indeed, co-IP of WWOX with SEC23IP, SCAMP3, and VOPP1 proteins demonstrated a strong physical interaction between WWOX and each of these proteins.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30619736_Hussain2018_EuropePMC.xml",
+    "anchor": "Results › WWOX Physical Interaction With Members of Protein Complexes…, paragraph 1, sentence 6",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "HEK293T cells, transient co-transfection",
+     "cell_line": "HEK293T"
+    }
+   },
+   {
+    "proposition": "FIGURE 3A, inspected at native resolution (945x1200): six strips (anti-Myc left, anti-WWOX right) × lanes Input / IgG / Myc / GFP-WWOX; every IgG lane is blank and every Myc and GFP-WWOX IP lane carries a band, the VOPP1 anti-WWOX strip weakest. The panel agrees with the text. What it cannot show: no molecular-weight marker is printed in 3A, and the anti-WWOX antibody would detect endogenous WWOX as well as GFP-WWOX, so which WWOX species co-precipitates is not readable from the image; there is no single-transfection lane.",
+    "snippet": "Visual attestation of Figure 3A: IgG lanes blank in all six strips; bands in Myc and GFP-WWOX IP lanes for Myc-SEC23IP, Myc-SCAMP3, Myc-VOPP1 (anti-Myc) and in the matching anti-WWOX strips; no kDa ladder in panel A.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID30619736/pdf_p07_x219.jpeg",
+    "anchor": "Figure 3, panel A (PDF p. 7), native embedded JPEG 945x1200",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "HEK293T cells, transient co-transfection",
+     "cell_line": "HEK293T"
+    }
+   },
+   {
+    "proposition": "METHOD · GST PULL-DOWN: bacterially expressed GST-WW constructs are incubated with WHOLE-CELL LYSATE of HEK293T cells transfected with Myc-prey. This tests WW1 dependence of capture from a lysate; it does not test direct binding between purified proteins, because a bridging protein in the lysate is not excluded.",
+    "snippet": "GST pull-down assays were performed by addition of 10 μg of purified GST-fusion protein and 20 μl of Glutathione Sepharose 4B (50% slurry) to 600 μg of total cell lysate from HEK293T cells.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30619736_Hussain2018_EuropePMC.xml",
+    "anchor": "Materials and Methods › GST Pull-Down Assay, sentence 6",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "GST fusion proteins from E. coli + HEK293T whole-cell lysate",
+     "cell_line": "HEK293T"
+    }
+   },
+   {
+    "proposition": "RESULT · WW1 DEPENDENCE (SEC23IP and SCAMP3 only): capture is lost with WW1 W44F/P47A and retained with the WW2 mutant. VOPP1 is not tested by pull-down in this paper; its WW1/PPPY dependence is cited from Bonin et al. DATO.",
+    "snippet": "Thus, the interaction with SEC23IP and SCAMP3 is lost when key functional residues of the WW1 domain are mutated, while the mutation in the WW2 domain (GST-Mut-WW2) does not affect the overall binding (Figure 3B).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30619736_Hussain2018_EuropePMC.xml",
+    "anchor": "Results › WWOX Physical Interaction…, paragraph 2, sentence 3",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "GST fusion proteins from E. coli + HEK293T whole-cell lysate",
+     "cell_line": "HEK293T"
+    }
+   },
+   {
+    "proposition": "OVERCLAIM: \"demonstrate … direct interacting partners\" — neither the co-IP (over-expressed proteins, lysate) nor the pull-down (lysate) establishes directness. What is demonstrated is WW1-dependent co-association. The paper's own word \"direct\" should not be carried as a LEGEND observation.",
+    "snippet": "In summary, these results demonstrate that SEC23IP and SCAMP3 are indeed novel direct interacting partners of WWOX via WW1 domain.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30619736_Hussain2018_EuropePMC.xml",
+    "anchor": "Results › WWOX Physical Interaction…, paragraph 2, sentence 4",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "GST fusion proteins from E. coli + HEK293T whole-cell lysate",
+     "cell_line": "HEK293T"
+    }
+   },
+   {
+    "proposition": "FIGURE 3B, inspected at native resolution: anti-Myc bands for SEC23IP and SCAMP3 in GST-WW1-2, GST-Mut-WW2, GST-WW1 and GST-WWOX lanes; blank in GST, GST-Mut-WW1 and GST-WW2 lanes; Coomassie shows each fusion loaded (GST ~25 kDa, WW constructs ~30-33 kDa, GST-WWOX ~70 kDa with lower species). The panel confirms the text's WW1-dependence; it carries no VOPP1 row.",
+    "snippet": "Visual attestation of Figure 3B: Myc-SEC23IP and Myc-SCAMP3 bands present with GST-WW1-2, GST-Mut-WW2, GST-WW1, GST-WWOX; absent with GST, GST-Mut-WW1, GST-WW2; Coomassie loading gel beneath; no VOPP1 row.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID30619736/pdf_p07_x219.jpeg",
+    "anchor": "Figure 3, panel B (PDF p. 7), native embedded JPEG 945x1200",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "GST fusion proteins from E. coli + HEK293T whole-cell lysate",
+     "cell_line": "HEK293T"
+    }
+   },
+   {
+    "proposition": "EXTERNAL CORROBORATION CITED, not measured here: VOPP1–WWOX via WW1 and the 162PPPY165 motif rests on Bonin et al. 2018 (ref 46, PMID 30285739), which this corpus holds in the registry without a read receipt.",
+    "snippet": "Very recently, Bonin et al. (46) have also identified VOPP1 as a WWOX interactor in human cells by means of yeast-two hybrids and demonstrated that the WW1 region is the interacting domain mostly with the 162PPPY165 motif of VOPP1.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30619736_Hussain2018_EuropePMC.xml",
+    "anchor": "Results › WWOX Physical Interaction…, paragraph 1, last sentence",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "RESULT · MOTIF vs SCORE: prey with a PPX(Y/F)/LPX(Y/F) motif have a higher mean MUSE score (0.1875 vs 0.1287). Recomputed from Supplementary File 2 (67 vs 149 prey): means reproduce exactly; Student t = 3.36 (df 214) reproduces p ≈ 0.001; but Welch t = 2.64 and a Mann-Whitney z = 2.26 give p of roughly 0.009 and 0.02 — the difference survives, the reported strength depends on assuming equal variances in a visibly skewed distribution. DATO (reported) + reader recomputation.",
+    "snippet": "Proteins with-motifs displayed a significantly higher interaction score (mean interaction score = 0.1875, p < 0.001) as compared to proteins with no-motifs (mean interaction score = 0.1287, Figure 4C), thus suggesting as expected a higher affinity for direct physical WWOX binding.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30619736_Hussain2018_EuropePMC.xml",
+    "anchor": "Results › WWOX WW1 Binding Motifs in TAP-MS Dataset, paragraph 2, last sentence",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "HEK293T cells",
+     "cell_line": "HEK293T"
+    }
+   },
+   {
+    "proposition": "METHOD · STATISTICS: the only hypothesis test performed by the authors is a two-tailed unpaired Student t-test on interaction scores; pathway statistics are imported from InnateDB. No test concerns metabolism as a measured quantity.",
+    "snippet": "The comparison of interaction scores between WWOX binding proteins with- and without-motif was done using statistical software GraphPad PRISM 7 and the Student's two-tailed unpaired t-test was used for comparisons.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30619736_Hussain2018_EuropePMC.xml",
+    "anchor": "Materials and Methods › Statistical Methods, sentence 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "FIGURE 4C, inspected at native resolution (1535x1595): box-and-whisker of interaction score, No-motif vs With-motif, \"**\". Both distributions are strongly right-skewed (boxes compressed near 0.1-0.2, whiskers to ~0.65 and ~1.07). The legend speaks of comparing MEDIANS while the test named is a t-test on MEANS — a mismatch between caption and statistic.",
+    "snippet": "Visual attestation of Figure 4C: two box plots near 0.1-0.2, upper whiskers about 0.65 (No-motif) and 1.07 (With-motif), double asterisk above; y-axis Interaction Score 0-1.2.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID30619736/pdf_p08_x235.jpeg",
+    "anchor": "Figure 4, panel C (PDF p. 8), native embedded JPEG 1535x1595",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "HEK293T cells",
+     "cell_line": "HEK293T"
+    }
+   },
+   {
+    "proposition": "CAPTION vs STATISTIC: the legend calls panel C a comparison of median scores; the test reported is a t-test of means.",
+    "snippet": "(C) Box and whisker plot showing the comparison of median interaction scores between proteins with- and without-motifs.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30619736_Hussain2018_EuropePMC.xml",
+    "anchor": "Figure 4 legend, panel C, sentence 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "RESULT · NON-REPLICATION ACROSS METHODS: only 16 prey overlap with the GST-WW1 pull-down MS dataset of Abu-Odeh et al. (218 prey). The two WWOX interactomes largely disagree; the authors attribute it to method. DATO.",
+    "snippet": "Surprisingly, we identified only 16 common interactors (Table 2 and Figure 4D) comparing both studies.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30619736_Hussain2018_EuropePMC.xml",
+    "anchor": "Results › WWOX WW1 Binding Motifs…, paragraph 3, sentence 3",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "TABLE 2: the 16 overlapping prey. Among them the metabolic enzymes HSD17B10 (0.13) and HADHA (0.06) — both with low scores here; no PDH subunit, DLD or ALDH is shared with the independent dataset.",
+    "snippet": "Common WWOX interactors identified in TAP-MS (this study) and Abu-Odeh et al. (34) datasets.",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID30619736_Hussain2018_EuropePMC.xml",
+    "anchor": "Table 2, caption (rows read in the table body)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "METHOD · ENRICHMENT: pathway p-values come from InnateDB. The paper states no background set (whole genome vs HEK293T-expressed or AP-MS-detectable proteome), no correction method in the text, and no control for the known over-representation of abundant mitochondrial/metabolic enzymes in affinity purifications. Supplementary File 4 lists a \"corrected\" p-value without naming the correction. Declared limit.",
+    "snippet": "Statistical values of the enriched pathways were obtained through analysis with InnateDB.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30619736_Hussain2018_EuropePMC.xml",
+    "anchor": "Materials and Methods › Statistical Methods, sentence 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought — background set and correction searched in Methods, Results, Figure 5 legend and Supplementary File 4; not stated"
+   },
+   {
+    "proposition": "SUPPLEMENTARY FILE 4 · the enrichment is NOT metabolic-only: of eight listed pathways four are non-metabolic, and the one with the MOST members is \"Protein processing in endoplasmic reticulum\" (15 prey, corrected p 6.9e-6) — alongside \"degradation of DVL\" (proteasome subunits), \"tRNA Aminoacylation\" and \"ER-Phagosome pathway\". Selecting the four metabolic ones as the pathway story is the authors' choice.",
+    "snippet": "Protein processing in endoplasmic reticulum",
+    "surface": "supplement",
+    "artifact": "files/supplements/PMID30619736/Data_Sheet_4.txt",
+    "anchor": "Supplementary File 4, Sheet1, row 3",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "SUPPLEMENTARY FILE 4 · the four metabolic enrichments are not independent: ALDH1B1, ALDH3A2 and ALDH7A1 are members of all four; DLD of three; HADHA/HADHB/ACADSB of two. Three aldehyde dehydrogenases and one E3 subunit carry most of the overlap. This row is the Valine/Leucine/Isoleucine member list, which does NOT contain DBT.",
+    "snippet": "ACADSB; ALDH1B1; ALDH3A2; ALDH7A1; BCKDHA; DLD; HADHA; HADHB; HSD17B10; MCCC2;",
+    "surface": "supplement",
+    "artifact": "files/supplements/PMID30619736/Data_Sheet_4.txt",
+    "anchor": "Supplementary File 4, Sheet1, row 2 (Valine, leucine and isoleucine degradation), Protein Symbol column",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "SUPPLEMENTARY FILE 4 · glycolysis/gluconeogenesis members: again the three ALDHs plus DLD, and the PDH E1/E2 subunits — overlapping the pyruvate-metabolism row almost entirely.",
+    "snippet": "ALDH1B1; ALDH3A2; ALDH7A1; DLAT; DLD; HK2; PDHA1; PDHB; PFKL; PKM2;",
+    "surface": "supplement",
+    "artifact": "files/supplements/PMID30619736/Data_Sheet_4.txt",
+    "anchor": "Supplementary File 4, Sheet1, row 3 (Glycolysis / Gluconeogenesis), Protein Symbol column",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "RESULT · CONVERGENCE ON ACETYL-CoA IS A MAP READING, not a measurement: the statement that the enriched pathways \"converge primarily in Acetyl-CoA generation\" is a property of the KEGG pathway diagrams the prey were mapped onto. Any enrichment of BCAA, glycolytic, pyruvate and β-oxidation enzymes converges on acetyl-CoA by textbook topology. AUTHOR INTERPRETATION of annotation.",
+    "snippet": "Interestingly, all these highly significant pathways that derive from proteins, carbohydrates, and lipids breakdown converge primarily in Acetyl-CoA generation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30619736_Hussain2018_EuropePMC.xml",
+    "anchor": "Results › Metabolic Pathways Associated With WWOX Protein Interactome, sentence 2",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "FIGURE 5, inspected at native resolution (1802x2356): panel A is a bar chart of -log10 p for the eight pathways (bar heights match the CORRECTED p-values of Supplementary File 4, e.g. Val/Leu/Ile about 6.3); panel B is a hand-drawn KEGG-derived schematic with prey names filled red. There is NO measurement panel anywhere in Figure 5 — no metabolite, flux, respiration, enzyme activity or acetyl-CoA level. 17 distinct names are red; one of them, DBT, is not among the 216 prey (and not in File 4's member list), while PKM is drawn for File 4's \"PKM2\". The red set shows 16 of the 216, not the \"at least 22\" the text states.",
+    "snippet": "Visual attestation of Figure 5: A, eight grey bars of -log10(p-value) with red dotted cutoff; B, pathway schematic ending in Acetyl-CoA and TCA cycle, red-filled BCKDHA, DLD, DBT, ACADSB, HADHA, HSD17B10, HADHB, MCCC2, ALDH1B1, ALDH3A2, ALDH7A1, PKM, PDHA1, PDHB, DLAT, ACSL1, ACSL3.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID30619736/pdf_p10_x286.jpeg",
+    "anchor": "Figure 5, panels A and B (PDF p. 10), native embedded JPEG 1802x2356",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "sought — each red name checked against Supplementary Files 2 and 4; a measurement panel sought and absent"
+   },
+   {
+    "proposition": "SUPPLEMENTARY FILE 1 · DBT (painted red in Figure 5B) was detected in replicate 2 with 64 spectra — but it is absent from the 216-prey list of File 2, so it was removed by the CRAPome/MUSE filters. Figure 5B therefore highlights a protein the authors' own pipeline discarded.",
+    "snippet": "ODB2_HUMAN\tDBT\t26\t64\t3.1446000000000001\t202000",
+    "surface": "supplement",
+    "artifact": "files/supplements/PMID30619736/Data_Sheet_1.txt",
+    "anchor": "Supplementary File 1, sheet Replicate-2, row 6",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "COUNT NOT REPRODUCIBLE: \"at least 22 of the 216\" enzymes. Supplementary File 4's four metabolic pathways (the four this sentence names) enumerate 18 distinct members, all 18 in the 216 (File 4's PKM2 is the 216's PKM, Entrez 5315); PDK3 and ALDH18A1, named only in the Discussion, raise the recoverable total to 20. Figure 5B shows 17 red names, 16 of them in the 216 (DBT is not), and omits the enriched members HK2 and PFKL because glycolysis is drawn as a box. The 22 is not recoverable from the figure, File 4 or the Discussion's additions.",
+    "snippet": "notably at least 22 of the 216 high confidence proteins (Supplementary File 2), play key enzymatic roles in the identified pathways, mostly as members of larger enzymatic complexes (marked in red in Figure 5B)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30619736_Hussain2018_EuropePMC.xml",
+    "anchor": "Results › Metabolic Pathways Associated With WWOX Protein Interactome, sentence 2 (second clause)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought - recounted against Figure 5B (17 red names at native 1802x2356) and Supplementary Files 2 (rows 2-217 = the 216 prey) and 4 (four metabolic pathways, 18 distinct members)",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30619736.json",
+     "entry": 33,
+     "what_changed": "The recoverable ceiling was understated at 18 by counting Figure 5B only; File 4's 18 metabolic members plus PDK3 and ALDH18A1 give 20, so the gap to 22 is 2, not 4.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "UNDERSHOOT",
+       "CORRECTED"
+      ],
+      "method": "legend-locator-audit, blind R4: (proposition, snippet, anchor) triples plus source artefacts only; no dossier, no manifest, no reader identity; separate agent with no session history, 2026-09-14, dispatched under ALDAZ-EXEC-20260913. Per-triple verdict on this entry: UNDERSHOOT - the headline (22 not recoverable) survives, the ceiling clause understated File 4. Owner re-derivation before applying, 2026-09-14, ALDAZ-LOCATOR-REV-B-20260914: Data_Sheet_2.tsv rows 1-217 = bait + 216 prey then blank rows; Data_Sheet_4.tsv Val/Leu/Ile degradation, Glycolysis/Gluconeogenesis, Pyruvate metabolism and Fatty acid degradation give 18 distinct members, 17 by symbol in the 216 plus PKM2 = PKM (Entrez 5315); PDK3 and ALDH18A1 in the 216 and absent from File 4; DBT absent from the 216 (File 1 replicate sheets only); Figure 5B at native resolution: 17 distinct red names, HK2 and PFKL not drawn. Owner's check agreed with the auditor on every figure; amendment applied."
+     }
+    }
+   },
+   {
+    "proposition": "DISCUSSION · PDC PRESENCE, with the scores the text omits: PDHA1, PDHB, DLAT and DLD are among the 216 — at interaction scores of 0.14, 0.19, 0.04 and 0.11 (Supplementary File 2, recomputed), i.e. ranks 89, 41, 203 and 114 of 216, none in Table 1. Presence in the prey list is DATO; their standing as WWOX interactors is low-confidence by the paper's own tiering.",
+    "snippet": "It is particularly intriguing that practically all members of the Pyruvate Dehydrogenase Complex (PDC), in charge of the enzymatic steps that catalyze the conversion of pyruvate (generated from glycolysis) into acetyl-CoA, can be found among the 216 proteins (Supplementary File 2)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30619736_Hussain2018_EuropePMC.xml",
+    "anchor": "Discussion, paragraph 8, sentence 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "HEK293T cells",
+     "cell_line": "HEK293T"
+    }
+   },
+   {
+    "proposition": "AUTHOR INFERENCE from enrichment: WWOX \"likely participates\" in glycolysis and fatty acid degradation. The step from \"prey enriched in pathway annotations\" to \"WWOX participates in the pathway\" is not measured in this paper. INFERENZA (authors).",
+    "snippet": "Thus, suggesting that WWOX likely participates in glycolysis, fatty acid degradation and other pathways that converge primarily in Acetyl-CoA generation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30619736_Hussain2018_EuropePMC.xml",
+    "anchor": "Discussion, paragraph 7, sentence 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "AUTHORS' OWN CLOSING STRENGTH: the conclusion is phrased as \"a significant lead\" on partners with which WWOX \"might interact\" — weaker than the Results headings. This is the ceiling the source itself sets.",
+    "snippet": "In summary, our results provide a significant lead on subsets of protein partners and enzymatic complexes with which WWOX might interact with in order to carry out its metabolic functions and other significant biological roles.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30619736_Hussain2018_EuropePMC.xml",
+    "anchor": "Discussion, last paragraph",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "TRAFFICKING ROLE is a CANDIDACY, not a finding: from three validated co-associations plus an earlier SIMPLE interaction the authors conclude WWOX is \"a prime candidate\" for a role in ERES-to-Golgi and late-endosome-to-lysosome trafficking. No trafficking assay (cargo transport, ERES assembly, endosome morphology, lysosomal delivery) is performed. INFERENZA (authors).",
+    "snippet": "This in conjunction with the aforementioned observations involving SEC23IP, SCAMP3, and VOPP1 suggest that indeed WWOX is a prime candidate to play a relevant role in the homeostasis and regulation of perinuclear protein complexes related to protein trafficking between ERES to Golgi and from late endosomes to lysosomes.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30619736_Hussain2018_EuropePMC.xml",
+    "anchor": "Discussion, paragraph 5",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought — any functional trafficking readout searched in Results and Figures 1-5; none"
+   },
+   {
+    "proposition": "SPECULATION labelled as such by the authors: WWOX–SEC23IP modulating COPII binding. IPOTESI (authors).",
+    "snippet": "Thus, it is possible to speculate that the WWOX-SEC23IP interaction might modulate binding of SEC23IP to the COPII complex and play an important role in ERES assembly or cargo transport.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30619736_Hussain2018_EuropePMC.xml",
+    "anchor": "Discussion, paragraph 2, last sentence",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "METABOLIC PHENOTYPE IS IMPORTED: the only metabolic measurements in the paper's argument are other laboratories' (Wwox KO MEFs: glucose uptake, glycolysis, respiration — refs 22, 56), cited in the Discussion. This paper measures no metabolic quantity.",
+    "snippet": "Abu-Remaileh and Aqeilan reported that Wwox KO mouse embryo fibroblasts displayed increase glucose uptake, enhanced glycolysis and reduced mitochondrial respiration",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30619736_Hussain2018_EuropePMC.xml",
+    "anchor": "Discussion, paragraph 10, sentence 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought — metabolite, respiration, flux or activity assay searched in Methods, Results, Figures, Supplementary Files; none"
+   },
+   {
+    "proposition": "NO COUPLING MECHANISM, stated by the authors themselves for the one metabolic mechanism they discuss.",
+    "snippet": "However, the exact mechanisms on how WWOX could affect HIF1α activity and in turn modulate cellular respiration are not clear.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30619736_Hussain2018_EuropePMC.xml",
+    "anchor": "Discussion, paragraph 10, sentence 4",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "FRAMING PREMISE: WWOX's own enzymatic substrate is unknown; the paper does not test the SDR activity or connect it to any prey.",
+    "snippet": "It is important to stress that WWOX is also an enzyme predicted to carry out NAD(H) or NADP(H)-dependent dehydrogenase reactions with yet to be identified substrate/s",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30619736_Hussain2018_EuropePMC.xml",
+    "anchor": "Introduction, paragraph 4",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "MOTIF-LESS TOP PREY: 15 of the 32 top prey carry no WW-binding motif, which the authors read as binding elsewhere OR membership of larger complexes — i.e. the dataset itself cannot separate direct from indirect.",
+    "snippet": "On the other hand, among the list of top interactors with IS > 0.2, 15 of 32 proteins do not display canonical WW domain binding motifs suggesting that physical interactions may occur via other WWOX protein regions or some of these prey proteins could be members of larger protein complexes.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30619736_Hussain2018_EuropePMC.xml",
+    "anchor": "Results › High Confidence WWOX Protein Interactors, last sentence",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "HEK293T cells",
+     "cell_line": "HEK293T"
+    }
+   },
+   {
+    "proposition": "\"PHYSIOLOGICAL CONDITIONS\" is the authors' framing of stable over-expression of a tagged construct in HEK293T; it licenses reading the whole prey list \"in toto\" as a portrait. The framing is not an experimental control. AUTHOR INTERPRETATION.",
+    "snippet": "We believe that since TAP-MS was performed under in-cellulo physiological conditions, much relevant information can be gained from analyzing the data in toto as a portrait for identifying protein networks, pathways and cellular compartments in which WWOX likely plays a functional role.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30619736_Hussain2018_EuropePMC.xml",
+    "anchor": "Discussion, paragraph 7, sentence 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "HEK293T cells",
+     "cell_line": "HEK293T"
+    }
+   },
+   {
+    "proposition": "SUPPLEMENTARY FILE 3 · motif census reproduces the text: 56 PPX(Y/F) sites in 39 sequences (and 49 LPX(Y/F) sites in 40 sequences on the second sheet). These are sequence-pattern hits (PROSITE), not binding measurements.",
+    "snippet": "Found: 56\tHits in 39 sequences\tStart\tEnd\tSeq",
+    "surface": "supplement",
+    "artifact": "files/supplements/PMID30619736/Data_Sheet_3.txt",
+    "anchor": "Supplementary File 3, sheet PPX(Y-F), header row",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found"
+   }
+  ]
+ }
+}

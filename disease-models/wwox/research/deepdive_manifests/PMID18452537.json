@@ -1,0 +1,881 @@
+{
+ "schema_version": 2,
+ "pmid": "18452537",
+ "doi": "10.1111/j.1365-2559.2008.03033.x",
+ "receipt": "FTR-20260914-18452537-01",
+ "landing": [
+  "FTR-20260914-18452537-01",
+  "fulltext_dossiers/PMID18452537.md",
+  "CC-20260914-18452537-01"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Run inline, tiers measured 2026-09-14: Europe PMC fullTextXML 404; PMC article HTML 200 with no user agent (text surface, with both tables as HTML); PMC /pdf/ path served the proof-of-work page and pmc_pow_fetch.py recovered the author-manuscript PDF (figure source); Wiley supplementary route 403, and the article text names no supplement."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline: the reading's caption contradiction (Figure 5C), stage-label discrepancy (Figure 5B), effect sizes (Figure 4B) and non-monotone survival strata (Figure 6) are pixel findings a dossier-only subagent cannot see."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not run inside the reading: no persisted locator for PMID 18452537 existed (first contact), so no contradiction trigger. Whether the candidate touches a consolidated baseline claim was decidable only after the blind first pass froze; the result is in CC-20260914-18452537-01."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Declined: a single-centre retrospective bladder-cancer IHC association in adults, no mechanism and no neural material; nothing here is a biomarker or repurposing lead for the reference genotype without transfer the paper cannot support."
+  },
+  {
+   "skill": "legend-paperqa",
+   "used": false,
+   "reason": "Declined: needs an external API key and traffic not authorised for this task, and a RAG answer is not a reading."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 138,
+  "publications_on_gene": 38,
+  "counts_measured": "PubMed esearch 2026-09-14. Senior author 'Aldaz CM[au]' 138, on WWOX 38 (the counts declared above). First/corresponding author 'Ramos D[au] AND WWOX' 2 (the bare name is ambiguous, so no total is claimed for it). 'Llombart-Bosch A[au]' 380, on WWOX 1. 'Lopez-Guerrero JA[au]' 280.",
+  "research_type": "mixed",
+  "output_kind": "primary_research",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": true,
+  "weighting": "Two halves. The clinical-pathology half (Valencia pathology and urology, FIVO) supplies the cohort, grading and scoring: descriptive_clinical, and competent at histological grading, weighed as observation. The WWOX half (Aldaz laboratory, a founding WWOX group) supplies the antibody, whose validation is imported from that group's earlier papers rather than shown here. Neither group works on WWOX-related neurological disease. The prognostic conclusions are the authors' interpretation of bivariate associations and are weighed below the observations."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "WWOX",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 708
+   },
+   {
+    "query": "WWOX AND bladder",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 18
+   },
+   {
+    "query": "WWOX AND urothelial",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 6
+   },
+   {
+    "query": "WWOX AND immunohistochemistry AND prognosis",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 32
+   }
+  ],
+  "note": "Bladder is a small WWOX literature (18, of which 6 say urothelial); prognostic IHC for WWOX is a crowded genre across tumour types (32). Field sizes, not reading coverage."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 25,
+  "enumeration_method": "Enumerated from the fingerprinted PMC HTML ref-list: 25 <li> entries, 24 with a PubMed link (ref 19 is the 2004 WHO classification book). Gene-direct = the title names WWOX/FRA16D, matched on full title text by script: 16.",
+  "gene_direct_count": 16,
+  "gene_direct_refs_in_source": [
+   "15674328",
+   "10786676",
+   "14526170",
+   "11719429",
+   "15692750",
+   "15982416",
+   "16818616",
+   "15131042",
+   "11956080",
+   "15073125",
+   "11572989",
+   "15266310",
+   "16152610",
+   "16223882",
+   "15064722",
+   "16360296"
+  ],
+  "resolved": [
+   "14526170",
+   "15692750",
+   "15982416",
+   "16223882",
+   "15064722"
+  ],
+  "queued": [],
+  "resolved_depth_declaration": "RESOLVED MEANS A PERSISTED complete_fulltext_read RECEIPT, measured with fulltext_receipts.py status --pmid on 2026-09-14; no registry or dossier content was opened. 5 of 16 resolve. The antibody's validation, which this paper imports rather than shows, is attributed to refs 7, 9 and 10 (14526170, 15692750, 15982416) - all three carry complete receipts. Ref 20 (16223882) is the Expression-of-Concern dependency, also read in this corpus. The 11 unresolved gene-direct references are reading debt routed to the orchestrator in the commit candidate; nothing is queued because this contract does not own the queue file."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Technical only: fulltext_receipts.py status --pmid for each of the 24 reference PMIDs, and for 18452537 itself before reading (exit 1, no events). No claim, registry, dossier or candidate content opened before the dossier froze.",
+  "hits": 5,
+  "finding": "5 of 24 PMID-bearing references carry a complete receipt, all gene-direct, including all three the antibody validation is attributed to. The paper itself had no receipt of any depth."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-09-14",
+  "route": "NCBI esummary db=pubmed retmode=json for 18452537",
+  "result": "pubtype Journal Article; Research Support, Non-U.S. Gov't. commentscorrections null: no linked erratum, expression of concern or retraction.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [
+    {
+     "citing_relation": "citation only, Introduction and Discussion background - NOT a reagent, method or dataset. Ref 20 (Fabbri 2005, PNAS) is cited for WWOX restoration inhibiting lung cancer cell growth ('by Fabbri et al. in lung cancer cell lines.11,20') and inside a bracket list of non-hormonal tumour types. Nothing in this paper's IHC, scoring, cohort or statistics depends on it; the antibody's validation is attributed to refs 7, 9 and 10, not 20. The Expression of Concern weakens one background sentence and touches no measurement carried forward.",
+     "doi": "10.1073/pnas.0505485102",
+     "nature": "Expression of concern",
+     "reason_verbatim": "Concerns/Issues about Data;Duplication of/in Image;Error in Image;Investigation by Company/Institution;Original Data and/or Images not Provided and/or not Available;",
+     "retraction_date": "4/3/2017 0:00",
+     "retraction_pmid": "28373548",
+     "verdict": "FLAGGED_EXPRESSION_OF_CONCERN"
+    }
+   ],
+   "noted": [],
+   "paper_verdict": "FLAGGED_EXPRESSION_OF_CONCERN",
+   "reference_source": "network",
+   "references_declared": 25,
+   "references_screened": 21,
+   "references_with_doi": 21,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 4,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 4
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID18452537_Ramos2008.html",
+   "kind": "article_text",
+   "note": "PMC article page of PMC4151645 (NIH author manuscript NIHMS222064), HTTP 200 with no user agent, 168120 B. citation_pmid 18452537 and citation_doi 10.1111/j.1365-2559.2008.03033.x read from the page's own meta tags. The evidentiary text surface for every body and table locator (both tables are HTML tables here), verified through the validator's own HTML surface parser with the abstract separated. AUTHOR MANUSCRIPT, not the Histopathology version of record. Conversion traces carried and NOT corrected: 'N orMstatus', and '140 mg / ml' for an antibody concentration whose unit cannot be adjudicated without the version of record (identical in the manuscript PDF). Europe PMC fullTextXML returned 404 (2026-09-14).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4151645/",
+    "http_method": "GET",
+    "tier": "pmc_article_html",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "f459960b5eab624b1a5667517d21646829a85af798784336cda0f0595bf1c9a2"
+  },
+  {
+   "path": "files/fulltext/PMID18452537_Ramos2008.pdf",
+   "kind": "article_binary",
+   "note": "NIH author-manuscript PDF nihms222064.pdf, 17 pages, fetched through PMC's proof-of-work interstitial with framework/scripts/pmc_pow_fetch.py (a plain GET returned the challenge HTML). Declared ONLY as the source of the native figure rasters, about 1.2x to 2.1x the linear size of the PMC CDN blobs. No locator uses its text layer; font screen 1 UNDECIDED, 0 untrustworthy, 0 suspect.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4151645/pdf/nihms222064.pdf",
+    "http_method": "GET",
+    "tier": "pmc_pow_fetch",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "eda6318fef3aae89f3b9e849cb03e93703dbfa5c3067825174a8c20f901abf4d"
+  },
+  {
+   "path": "files/fulltext/PMID18452537_Ramos2008_assets/fig1_pdf_p09_x38.jpeg",
+   "kind": "figure",
+   "note": "Figure 1, native embedded raster 1526x606, PDF p.9 (caption on the same page checked), inspected whole at native scale.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID18452537_Ramos2008.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref) over Page.get_images(full=True); bytes written unmodified",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "cd01cea5ac05d2f149977314d50ecc15399f0194a79e5ceb8d5df19c0b0bc01a"
+  },
+  {
+   "path": "files/fulltext/PMID18452537_Ramos2008_assets/fig2_pdf_p10_x44.jpeg",
+   "kind": "figure",
+   "note": "Figure 2, native embedded raster 1552x1233, PDF p.10 (caption on the same page checked), inspected whole at native scale.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID18452537_Ramos2008.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref) over Page.get_images(full=True); bytes written unmodified",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "37ef0dc9c92e31297ed22b946babca45a1fd47ddc7c0155415d44127f0157c16"
+  },
+  {
+   "path": "files/fulltext/PMID18452537_Ramos2008_assets/fig3_pdf_p11_x49.jpeg",
+   "kind": "figure",
+   "note": "Figure 3, native embedded raster 956x1435, PDF p.11 (caption on the same page checked), inspected whole at native scale.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID18452537_Ramos2008.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref) over Page.get_images(full=True); bytes written unmodified",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "fb3a02d7a10028e969503f20bb17d36c6cd289a3bb8afb3f1b80442bd80b72dd"
+  },
+  {
+   "path": "files/fulltext/PMID18452537_Ramos2008_assets/fig4_pdf_p12_x54.jpeg",
+   "kind": "figure",
+   "note": "Figure 4, native embedded raster 1669x1822, PDF p.12 (caption on the same page checked), inspected whole at native scale.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID18452537_Ramos2008.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref) over Page.get_images(full=True); bytes written unmodified",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "635c8d9a82852b25ee9f2b125183a0b72769fa9b80d0f16088a0b725ba2c2d44"
+  },
+  {
+   "path": "files/fulltext/PMID18452537_Ramos2008_assets/fig5_pdf_p13_x59.jpeg",
+   "kind": "figure",
+   "note": "Figure 5, native embedded raster 464x1266, PDF p.13 (caption on the same page checked), inspected whole at native scale.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID18452537_Ramos2008.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref) over Page.get_images(full=True); bytes written unmodified",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "9ce458f6a783624ebd4593d2eb34026faf144144f4e7a40de065d4255d6d3b93"
+  },
+  {
+   "path": "files/fulltext/PMID18452537_Ramos2008_assets/fig6_pdf_p14_x64.jpeg",
+   "kind": "figure",
+   "note": "Figure 6, native embedded raster 896x2080, PDF p.14 (caption on the same page checked), inspected whole at native scale and as two native crops.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID18452537_Ramos2008.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref) over Page.get_images(full=True); bytes written unmodified",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "b35f4f08a1768e0cc4530d1e1da7b2c74e80af4af0ffb5d7d71da00ac98d99a9"
+  },
+  {
+   "path": "files/fulltext/PMID18452537_Ramos2008_assets/crop_fig6_top.png",
+   "kind": "figure",
+   "note": "Native crop of Figure 6, x 0-896 y 0-1100: panel A and the upper half of panel B.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID18452537_Ramos2008_assets/fig6_pdf_p14_x64.jpeg",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 896x1100+0+0 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "56b0f217768ccf29538aedeecbcf48ffcbf9042301023242cea8eccec63bd97a"
+  },
+  {
+   "path": "files/fulltext/PMID18452537_Ramos2008_assets/crop_fig6_bottom.png",
+   "kind": "figure",
+   "note": "Native crop of Figure 6, x 0-896 y 980-2080: lower panel B and panel C with the legend.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID18452537_Ramos2008_assets/fig6_pdf_p14_x64.jpeg",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 896x1100+0+980 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "29ba0ca52f6cc46c326db5317e9b7d2790388614bf63152b0947bfca0b6f5e98"
+  },
+  {
+   "path": "files/fulltext/PMID18452537_Ramos2008_assets/fig1_blob.jpg",
+   "kind": "figure",
+   "note": "Figure 1 as served by the PMC CDN blob linked from the article page, 763x303. Acquired and fingerprinted; NOT the inspected surface, because the PDF raster of the same figure is larger.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/13ce/4151645/421d8b98840a/nihms222064f1.jpg",
+    "http_method": "GET",
+    "tier": "pmc_cdn_blob",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "1401f2ec5d89c0d19c54a7d3f59f9542f6309f8d60e03361532681ab579cd0ee"
+  },
+  {
+   "path": "files/fulltext/PMID18452537_Ramos2008_assets/fig2_blob.jpg",
+   "kind": "figure",
+   "note": "Figure 2 as served by the PMC CDN blob linked from the article page, 776x617. Acquired and fingerprinted; NOT the inspected surface, because the PDF raster of the same figure is larger.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/13ce/4151645/b958f7cf442f/nihms222064f2.jpg",
+    "http_method": "GET",
+    "tier": "pmc_cdn_blob",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "c2a36a94ba8f593ce66e6725ea8367f724b66ca6fad6c1dd354f2f81d3bd4e8d"
+  },
+  {
+   "path": "files/fulltext/PMID18452537_Ramos2008_assets/fig3_blob.jpg",
+   "kind": "figure",
+   "note": "Figure 3 as served by the PMC CDN blob linked from the article page, 478x718. Acquired and fingerprinted; NOT the inspected surface, because the PDF raster of the same figure is larger.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/13ce/4151645/f5a68df7c2bb/nihms222064f3.jpg",
+    "http_method": "GET",
+    "tier": "pmc_cdn_blob",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "ce2d71a274effea571547a9a2af53ad3eda052bf5b8baa6df639246b612457d5"
+  },
+  {
+   "path": "files/fulltext/PMID18452537_Ramos2008_assets/fig4_blob.jpg",
+   "kind": "figure",
+   "note": "Figure 4 as served by the PMC CDN blob linked from the article page, 800x873. Acquired and fingerprinted; NOT the inspected surface, because the PDF raster of the same figure is larger.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/13ce/4151645/81819226f44e/nihms222064f4.jpg",
+    "http_method": "GET",
+    "tier": "pmc_cdn_blob",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "2e2824de2dfec9154728652d3e07e38762929e1c08d5f1f084d688da963a6109"
+  },
+  {
+   "path": "files/fulltext/PMID18452537_Ramos2008_assets/fig5_blob.jpg",
+   "kind": "figure",
+   "note": "Figure 5 as served by the PMC CDN blob linked from the article page, 400x1076. Acquired and fingerprinted; NOT the inspected surface, because the PDF raster of the same figure is larger.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/13ce/4151645/9e1e1481fce6/nihms222064f5.jpg",
+    "http_method": "GET",
+    "tier": "pmc_cdn_blob",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "014c7e8849f1627d2afc3b04eabe695fd0ece4aa229ede9a01f8160b974249c9"
+  },
+  {
+   "path": "files/fulltext/PMID18452537_Ramos2008_assets/fig6_blob.jpg",
+   "kind": "figure",
+   "note": "Figure 6 as served by the PMC CDN blob linked from the article page, 448x1040. Acquired and fingerprinted; NOT the inspected surface, because the PDF raster of the same figure is larger.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/13ce/4151645/879d1d8cc98e/nihms222064f6.jpg",
+    "http_method": "GET",
+    "tier": "pmc_cdn_blob",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "f6de59bb973c55be5bcfa11bc76434ce8bfe15827962b7a6f09a700bd2396358"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST search EXT_ID:18452537 AND SRC:MED, resultType=core, 2026-09-14: inEPMC=Y, inPMC=Y, fullTextIdList PMC4151645, isOpenAccess=N, nihAuthMan=Y. Indexed as an NIH author manuscript although Europe PMC's fullTextXML endpoint returns 404 for it.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence. The abstract's 'strongly correlates' and its PFS P = 0.042 are carried by body locators (Discussion sentence) and by the Figure 4B and Figure 6A panel locators, where the effect sizes and the P = 0.0421 are read from the pixels.",
+  "entries": [
+   {
+    "proposition": "COHORT: 101 patients, NONCONSECUTIVE primary bladder tumours, 81 TUR and 20 cystectomy specimens. DATO. How the 101 were selected from a non-consecutive series is not stated (searched Methods), so selection bias cannot be assessed.",
+    "snippet": "The study group encompassed 101 patients with nonconsecutive primary bladder tumours [81 transurethral resection (TUR) and 20 radical cystectomy specimens].",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18452537_Ramos2008.html",
+    "anchor": "Materials and methods > Clinicopathological data, sentence 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human primary bladder tumour tissue, retrospective single-series IHC",
+     "endpoint": "WWOX IHC combined score"
+    }
+   },
+   {
+    "proposition": "GRADING/STAGING by two independent uropathologists with consensus. DATO.",
+    "snippet": "Subsequently, assessment of grade and stage was carried out by two independent uropathologists and consensus was reached in cases of discrepancy.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18452537_Ramos2008.html",
+    "anchor": "Materials and methods > Clinicopathological data, paragraph 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "CONTROLS: normal urothelium and squamous metaplasia from non-cancer patients. DATO.",
+    "snippet": "Likewise, normal bladder urothelium and squamous metaplasia were obtained from a control group of non-cancer patients.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18452537_Ramos2008.html",
+    "anchor": "Materials and methods > Clinicopathological data, paragraph 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "REAGENT AMBIGUITY: primary antibody given as '140 mg / ml' at 1:400. DATO as printed; the unit is implausible for a polyclonal stock and may be a conversion of a micro sign, but the version of record is not available here, so it is recorded as unresolved, not corrected.",
+    "snippet": "Primary polyclonal antibody was a rabbit anti-WWOX (140 mg / ml) with an optimal dilution of 1:400.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18452537_Ramos2008.html",
+    "anchor": "Materials and methods > Immunohistochemistry, sentence 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "IMPORTED VALIDATION: antibody specificity is asserted by citation (refs 7, 9, 10), not shown in this paper - no blocking peptide, knockdown tissue or western in this work. DATO about the citation; the specificity itself is a premise here.",
+    "snippet": "Specificity and sensitivity of the WWOX antibody employed and raised against the WW domains of this protein have been previously demonstrated in various publications.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18452537_Ramos2008.html",
+    "anchor": "Materials and methods > Immunohistochemistry, sentence 5",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "SCORING: subjective, two uropathologists, combined score. DATO. No inter-observer agreement statistic and no statement of blinding to outcome appear anywhere (searched kappa, interobserver, blind: zero hits).",
+    "snippet": "The immunoreaction was subjectively evaluated by two experienced uropathologists by using a combined score system.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18452537_Ramos2008.html",
+    "anchor": "Materials and methods > Immunohistochemistry, sentence 6",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "NEGATIVE CONTROL: primary antibody omission only. DATO.",
+    "snippet": "Lack of primary antibody was used as the negative control of the reaction.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18452537_Ramos2008.html",
+    "anchor": "Materials and methods > Immunohistochemistry, paragraph 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "SCORE: intensity (0-3) multiplied by percentage category (0-4), range 0-12. DATO.",
+    "snippet": "a combined score was obtained by multiplying the intensity of the reaction and the percentage of stained tumour cells, which resulted in a final value ranging between 0 and 12 arbitrary units",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18452537_Ramos2008.html",
+    "anchor": "Materials and methods > Immunohistochemistry, paragraph 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "CATEGORIES: 0-4 low, 5-7 moderate, >7 high. DATO. COMPUTED: the products of 0-3 by 0-4 can only be 0,1,2,3,4,6,8,9,12, so 'moderate 5-7' contains the single value 6 and 'high' is 8, 9 or 12. The three categories are therefore unequal and 'moderate' is one score value.",
+    "snippet": "To simplify these data, scores ranging from 0 to 4 were considered a low level of WWOX protein expression, between 5 and 7 was considered moderate, and >7 was considered high.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18452537_Ramos2008.html",
+    "anchor": "Materials and methods > Immunohistochemistry, paragraph 2, last sentence",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "STATISTICS NAMED 'MULTIVARIATE' ARE PCA: the multivariate analysis is a principal component analysis for visualisation, not a multivariable regression. DATO. No Cox model or any adjusted analysis exists in the paper (searched Cox: zero hits).",
+    "snippet": "Multivariate analysis was performed by principal component analysis in order to simplify the dataset into a lower dimension analysis in three axes.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18452537_Ramos2008.html",
+    "anchor": "Materials and methods > Statistics, sentence 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "THE P-VALUES OF THE ASSOCIATIONS are Kendall tau-b correlation tests between pairs of coded variables. DATO. They are bivariate and unadjusted; no multiplicity correction is mentioned.",
+    "snippet": "Variables were codified and then compared by means of Kendall’s τ-b correlation coefficient.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18452537_Ramos2008.html",
+    "anchor": "Materials and methods > Statistics, sentence 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "SCORE DISTRIBUTION IN THE TEXT: low 26 (25.7%), moderate 25 (24.8%), high 50 (49.5%). DATO. These match the column sums of the grade rows of Table 2 (26, 25, 50), computed.",
+    "snippet": "low level (26 cases, 25.7%), moderate (25 cases, 24.8%) and high (50 cases, 49.5%)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18452537_Ramos2008.html",
+    "anchor": "Results, paragraph 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "INTERNAL CONTRADICTION IN TABLE 2: the Total row prints 18 (17.8%) low, 33 (32.7%) moderate, 50 (45.5%) high. It disagrees with the text (26/25/50) and with the sums of every block of its own table (grade rows sum to 26/25/50; 50/101 is 49.5%, not 45.5%). DATO for both printings; the Total row is the one out of line with the table's own data.",
+    "snippet": "Total 18 (17.8%) 33 (32.7%) 50 (45.5%) 101 (100%)",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID18452537_Ramos2008.html",
+    "anchor": "Table 2, last row",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "AGE IN TEXT: mean 68.1, range 42-91; male 85.1%. DATO.",
+    "snippet": "The mean patient age was 68.1 years (range 42–91 years); 86 were male (85.1%) and 15 female (14.9%)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18452537_Ramos2008.html",
+    "anchor": "Results, sentence 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "AGE IN TABLE 1: range 38-91, and male 85.2% - a second minor text/table discrepancy (age floor 42 vs 38). DATO for both.",
+    "snippet": "Mean patient age 68.1 years (range 38–91)",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID18452537_Ramos2008.html",
+    "anchor": "Table 1, row 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "TOTAL ABSENCE of WWOX staining in 4 cases (4%), all urothelial carcinomas with extensive squamous metaplasia. DATO.",
+    "snippet": "In addition, a total absence of WWOX protein expression could be observed in four cases (4%), all of which were urothelial carcinomas with extensive squamous metaplasia",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18452537_Ramos2008.html",
+    "anchor": "Results, paragraph 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human primary bladder tumour tissue, retrospective single-series IHC",
+     "endpoint": "WWOX IHC combined score"
+    }
+   },
+   {
+    "proposition": "FIG 3 LEGEND: squamous-metaplasia carcinomas displayed complete absence of WWOX. DATO as the legend.",
+    "snippet": "Urothelial carcinomas with extensive squamous metaplasia displayed a complete absence of WWOX protein expression.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18452537_Ramos2008.html",
+    "anchor": "Figure 3 legend",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "FIGURE 3, NATIVE PIXELS. A: H&E of a squamous carcinoma area. B: WWOX IHC high power, tumour cells essentially unstained - agrees with the legend - but a small group of cells at the upper-right margin carries a light brown cytoplasmic tint, whose identity (tumour or not) cannot be determined from the panel. 'Complete absence' holds for the field's tumour cells as far as can be judged; one field, one case, no internal positive control visible.",
+    "snippet": "Visual attestation of Figure 3: A haematoxylin and eosin squamous tumour field; B WWOX immunostain with blue nuclei and unstained cytoplasm across the field except a small brown-tinted cell group at the upper right edge.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID18452537_Ramos2008_assets/fig3_pdf_p11_x49.jpeg",
+    "anchor": "Figure 3 (PDF p.11), native raster 956x1435",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "qualifies_needle": "displayed a complete absence of WWOX protein expression",
+    "experimental_context": {
+     "system": "human primary bladder tumour tissue, retrospective single-series IHC",
+     "endpoint": "WWOX IHC combined score"
+    },
+    "qualifies": "entries[16]"
+   },
+   {
+    "proposition": "UNTESTED PAIRWISE CLAIM: pTa 28/47 (59.6%) high vs pT1 11/23 (47.8%), called 'significantly lower (P = 0.002)'. DATO as printed. The 0.002 is the printed P of the Stage row of Table 2 (the three-level stage association), not a pTa-versus-pT1 test; no pairwise test is described.",
+    "snippet": "higher levels of WWOX protein immunoreactivity were observed in 28 out of 47 (59.6%) non-invasive neoplasms (pTa tumours) when compared with 11 out of 23 (47.8%) pT1 carcinomas in which the level of WWOX reactivity was significantly lower (P = 0.002).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18452537_Ramos2008.html",
+    "anchor": "Results, paragraph 2, last sentence",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "OUTCOME EVENTS over mean 42.2 months: 33 recurrences, 25 progressions, 19 disease deaths. DATO.",
+    "snippet": "during this period 33 patients (32.7%) presented recurrent disease, 25 (24.8%) showed tumour progression in grade and / or stage and 19 (18.8%) died of their disease.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18452537_Ramos2008.html",
+    "anchor": "Results, paragraph 3, sentence 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "ASSOCIATIONS REPORTED: WWOX inversely correlated with grade (P = 0.001), stage (0.002), size (0.040) and progression (0.028). DATO for the P-values; the effect sizes are only in Figure 4B.",
+    "snippet": "in the case of WWOX protein expression an inverse correlation with histological grade (P = 0.001), tumour stage (P = 0.002), tumour size (P = 0.040) and tumour progression (P = 0.028) could be observed",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18452537_Ramos2008.html",
+    "anchor": "Results, paragraph 3, sentence 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human primary bladder tumour tissue, retrospective single-series IHC",
+     "endpoint": "WWOX IHC combined score"
+    }
+   },
+   {
+    "proposition": "AUTHORS' STRENGTH WORD: 'strongly associated' with grade. DATO as their wording.",
+    "snippet": "Importantly, loss of WWOX protein expression was strongly associated in our series with tumour grade.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18452537_Ramos2008.html",
+    "anchor": "Discussion, paragraph 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "FIGURE 4B, NATIVE PIXELS - THE EFFECT SIZES THE TEXT OMITS. Kendall tau-b of WWOX with: grade -0.319, stage -0.277, size (T) -0.175, N+ -0.150, M+ -0.031, multiplicity -0.123, progression -0.191, recurrence -0.021; P-values above the diagonal match the text. The largest correlation is about -0.32, a weak-to-moderate association in a bivariate unadjusted test, and progression is -0.19. 'Strongly associated' describes the P-value, not the size. Figure 4A is a three-factor loading plot with WWOX loading alone on negative factor 2. Label typo 'Kendal's'.",
+    "snippet": "Visual attestation of Figure 4B: correlation matrix, lower triangle Kendall tau-b, WWOX column -0.319 Grade, -0.277 Stage, -0.175 T, -0.150 N+, -0.031 M+, -0.123 Multiplicity, -0.191 Progression, -0.021 Recurrence; upper triangle P-values.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID18452537_Ramos2008_assets/fig4_pdf_p12_x54.jpeg",
+    "anchor": "Figure 4A-B (PDF p.12), native raster 1669x1822",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "qualifies_needle": "strongly associated in our series with tumour grade",
+    "experimental_context": {
+     "system": "human primary bladder tumour tissue, retrospective single-series IHC",
+     "endpoint": "WWOX IHC combined score"
+    },
+    "qualifies": "entries[21]"
+   },
+   {
+    "proposition": "UNIVARIATE CONTRASTS: PUNLMP vs HGUC P = 0.012; squamous-metaplasia carcinomas vs all pure urothelial P = 0.001. DATO. The squamous group is n = 5 (Table 2).",
+    "snippet": "the level of WWOX protein expression was significantly different between PUNLMP and HGUC (P = 0.012), and especially between UCSC and all the remaining pure urothelial tumours (P = 0.001)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18452537_Ramos2008.html",
+    "anchor": "Results, paragraph 3, sentence 4",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "TEXT: non-invasive vs muscle-invading, P = 0.003 (Figure 5A,B). DATO as printed.",
+    "snippet": "As regards tumour stage, significant differences between non-invasive tumours and muscle-invading carcinomas were also observed (P = 0.003)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18452537_Ramos2008.html",
+    "anchor": "Results, paragraph 3, sentence 5",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "TEXT: lowest vs high WWOX differ in progression, P = 0.029 (Figure 5C). DATO as printed.",
+    "snippet": "significant differences in terms of tumour progression were also observed between those cases showing the lowest levels of WWOX protein expression and those with high levels of WWOX immunoexpression (P = 0.029)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18452537_Ramos2008.html",
+    "anchor": "Results, paragraph 3, sentence 6",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "FIG 5 LEGEND: panels are grade (A), stage (B) and TUMOUR SIZE (C). DATO as the legend.",
+    "snippet": "anova graphs show the statistical correlation of grade (A) stage (B) and tumour size (C) with respect to WWOX expression levels in univariate studies.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18452537_Ramos2008.html",
+    "anchor": "Figure 5 legend",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "FIGURE 5C, NATIVE PIXELS - THE LEGEND IS WRONG. Panel C plots WWOX expression (mean +/- 2SE) for Progression No vs Yes, P = 0.029 - it is the progression comparison the running text cites, not tumour size as the legend says. No tumour-size panel exists in Figure 5.",
+    "snippet": "Visual attestation of Figure 5C: x axis labelled Progression with categories No and Yes, y axis WWOX expression (mean plus or minus 2SE), P = 0.029 printed.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID18452537_Ramos2008_assets/fig5_pdf_p13_x59.jpeg",
+    "anchor": "Figure 5C (PDF p.13), native raster 464x1266",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "found_or_sought": "found",
+    "contradicts_needle": "tumour size (C)",
+    "experimental_context": {
+     "system": "human primary bladder tumour tissue, retrospective single-series IHC",
+     "endpoint": "WWOX IHC combined score",
+     "comparator": "progression no vs yes"
+    },
+    "contradicts": "entries[26]"
+   },
+   {
+    "proposition": "FIGURE 5A-B, NATIVE PIXELS. B is labelled Stage I, II, III (not the pTa/pT1/pT2-4 of the text and tables) and prints P = 0.004, while the text cites P = 0.003 for the stage difference. A (grade, four groups) prints P < 0.0001, a figure given nowhere in the text; its UCSM interval runs below 0 (about -1 to 3.7) on a 0-12 score, i.e. a parametric mean +/- 2SE on n = 5 ordinal values. ANOVA on an ordinal product score is the test used.",
+    "snippet": "Visual attestation of Figure 5A-B: A grade categories PUNLMP, LGPUC, HGUC, UCSM with P < 0.0001 and the UCSM interval extending below zero; B stage categories I, II, III with P = 0.004.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID18452537_Ramos2008_assets/fig5_pdf_p13_x59.jpeg",
+    "anchor": "Figure 5A-B (PDF p.13), native raster 464x1266",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "qualifies_needle": "muscle-invading carcinomas were also observed",
+    "experimental_context": {
+     "system": "human primary bladder tumour tissue, retrospective single-series IHC",
+     "endpoint": "WWOX IHC combined score"
+    },
+    "qualifies": "entries[24]"
+   },
+   {
+    "proposition": "NULLS: no correlation with multiplicity (P = 0.11) or metastatic disease (N 0.067, M 0.379). DATO. The text prints 'N orMstatus'.",
+    "snippet": "In contrast, WWOX protein levels did not correlate with tumour multiplicity (P = 0.11) or metastatic disease",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18452537_Ramos2008.html",
+    "anchor": "Results, paragraph 3, sentence 7",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "COUNTER-DIRECTIONAL CELL: among the 7 M+ patients, 4 (57.1%) are WWOX-high and 0 moderate - the opposite direction to the grade/stage trend, on n = 7, P = 0.379. DATO.",
+    "snippet": "Yes 3 (42.9%) 0 (0%) 4 (57.1%) 7 (100%) 0.379",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID18452537_Ramos2008.html",
+    "anchor": "Table 2, M+ Yes row",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "KM PFS: loss of WWOX associated with shorter progression-free survival (Figure 6A). DATO; the text gives no P here (the abstract gives 0.042).",
+    "snippet": "Kaplan–Meier estimates corroborated a significant correlation between the loss of WWOX protein immunoreactivity and a shorter PFS",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18452537_Ramos2008.html",
+    "anchor": "Results, paragraph 4, sentence 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "NULL: no association with recurrence-free survival (and OS, per this sentence). DATO.",
+    "snippet": "However, no statistical association could be demonstrated regarding recurrence-free survival and OS",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18452537_Ramos2008.html",
+    "anchor": "Results, paragraph 4, sentence 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "OS: borderline, P = 0.053. DATO. Not significant at the paper's own 0.05 threshold.",
+    "snippet": "Moreover, loss of WWOX protein immunoexpression was of borderline significance for the prediction of OS (P = 0.053)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18452537_Ramos2008.html",
+    "anchor": "Results, paragraph 4, sentence 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "AUTHORS' CONCLUSION: 'progressive loss' predicts progressive disease. DATO as wording; INFERENZA of the authors.",
+    "snippet": "Furthermore, progressive loss of WWOX protein expression appears to be useful in predicting progressive disease in urothelial bladder carcinoma.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18452537_Ramos2008.html",
+    "anchor": "Discussion, last paragraph",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "FIGURE 6, NATIVE CROPS - THE CURVES ARE NOT A GRADIENT. Three strata (negative/weak red, moderate green, strong blue), log-rank over three groups. A progression: P = 0.0421; red falls to ~0.55, but GREEN (moderate) ends ~0.84, ABOVE BLUE (strong) ~0.77. B recurrence: P = 0.54. C overall survival: P = 0.053; green ~0.84, blue ~0.81, red ~0.53. The contrast is low versus the rest, not a dose-response across levels, so 'progressive loss' is not what the strata show. Y axes are truncated (A and C start at 0.5, B at 0.4), which enlarges the visual separation. Censoring ticks shown; no numbers at risk; no adjusted model.",
+    "snippet": "Visual attestation of Figure 6: three Kaplan-Meier panels, A Progression P = 0.0421 with the red curve lowest and green above blue, B Recurrence P = 0.54, C Overall survival P = 0.053 with green above blue above red; y axes starting at 0.5, 0.4 and 0.5.",
+    "surface": "figure",
+    "artifact": [
+     "files/fulltext/PMID18452537_Ramos2008_assets/crop_fig6_top.png",
+     "files/fulltext/PMID18452537_Ramos2008_assets/crop_fig6_bottom.png"
+    ],
+    "anchor": "Figure 6A-C (PDF p.14), two native crops of the 896x2080 raster",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "qualifies_needle": "progressive loss of WWOX protein expression appears to be useful",
+    "experimental_context": {
+     "system": "human primary bladder tumour tissue, retrospective single-series IHC",
+     "endpoint": "progression-free, recurrence-free, overall survival"
+    },
+    "qualifies": "entries[34]"
+   },
+   {
+    "proposition": "AUTHORS' OWN CAVEAT: WWOX loss may be consequential to other alterations rather than causal. DATO as their limitation - it is the sentence that bounds everything above to association.",
+    "snippet": "The possibility exists, however, that alterations affecting the WWOX gene and protein expression are consequential to other genetic alterations rather than being a primary causative factor in bladder carcinogenesis.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18452537_Ramos2008.html",
+    "anchor": "Discussion, paragraph 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "AUTHORS' LIMITATION: too few squamous-metaplasia carcinomas for robust statistics. DATO.",
+    "snippet": "Unfortunately, the number of urothelial carcinomas with extensive squamous metaplasia was not high enough for a more robust statistical analysis.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18452537_Ramos2008.html",
+    "anchor": "Discussion, paragraph 4",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "LOCALISATION SPECULATION: perinuclear enhancement 'probably' Golgi. IPOTESI of the authors - no Golgi marker or co-staining in the paper.",
+    "snippet": "immunohistochemistry of WWOX protein in our study displayed intense granular cytoplasmic reactivity with a perinuclear enhancement of the reaction probably localized to the Golgi apparatus",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18452537_Ramos2008.html",
+    "anchor": "Discussion, paragraph 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "NORMAL TISSUE: strong diffuse staining in 10 normal urothelia and 5 squamous metaplasias without tumour. DATO.",
+    "snippet": "Strong and diffuse WWOX immunoreactivity was observed in 10 patients with normal bladder urothelium as well as in five with squamous metaplasia, all of them without tumour.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18452537_Ramos2008.html",
+    "anchor": "Results, paragraph 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human non-neoplastic bladder tissue",
+     "endpoint": "WWOX IHC combined score"
+    }
+   },
+   {
+    "proposition": "PATTERN: granular cytoplasmic, no nuclear reactivity, in normal urothelium and metaplasia. DATO.",
+    "snippet": "In both normal urothelium and squamous metaplasia, WWOX immunoexpression consistently showed strong and diffusely granular cytoplasmic immunoreactivity without any nuclear reactivity.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18452537_Ramos2008.html",
+    "anchor": "Materials and methods > Immunohistochemistry, paragraph 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "FIGURES 1-2, NATIVE PIXELS. Fig 1: normal urothelium intensely brown across the full urothelial thickness, stroma weak. Fig 2: A-B low-grade papillary tumour intense granular cytoplasmic staining, nuclei unstained; C-D high-grade invasive carcinoma weak, pale staining. Single representative fields; they illustrate the categories and quantify nothing.",
+    "snippet": "Visual attestation of Figures 1 and 2: normal urothelium strong brown cytoplasmic immunostain; low-grade papillary tumour intense granular cytoplasmic stain in 2A and 2B; high-grade carcinoma weak pale stain in 2C and 2D; nuclei blue.",
+    "surface": "figure",
+    "artifact": [
+     "files/fulltext/PMID18452537_Ramos2008_assets/fig1_pdf_p09_x38.jpeg",
+     "files/fulltext/PMID18452537_Ramos2008_assets/fig2_pdf_p10_x44.jpeg"
+    ],
+    "anchor": "Figures 1 and 2 (PDF p.9-10), native rasters 1526x606 and 1552x1233",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "human primary bladder tumour tissue, retrospective single-series IHC",
+     "endpoint": "WWOX IHC combined score"
+    }
+   },
+   {
+    "proposition": "TREATMENT CONFOUND: 11 of 20 cystectomy patients (55%) are WWOX-low versus 7/39 TUR-alone and 8/42 TUR-plus-adjuvant (P = 0.024). DATO. Treatment differs by WWOX level and the survival analyses are unadjusted, so treatment and stage are not separated from WWOX in Figure 6.",
+    "snippet": "Cystectomy 11 (55%) 3 (15%) 6 (30%) 20 (100%) 0.024",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID18452537_Ramos2008.html",
+    "anchor": "Table 2, Treatment block, Cystectomy row",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "CITATION ERROR: an ovarian-cancer RFS result is attributed to ref 11, which is Qin 2006 on PROSTATE cancer; the ovarian WWOX paper is ref 10. DATO from the reference list.",
+    "snippet": "In ovarian tumours, loss of WWOX protein expression correlated with histological tumour type and tumour stage; and presented, furthermore, a strong statistical correlation with shorter RFS of patients.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18452537_Ramos2008.html",
+    "anchor": "Discussion, paragraph 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "REFERENCE 11 IS A PROSTATE PAPER (the object of the citation error above). DATO; this locator quotes back matter deliberately.",
+    "snippet": "11.Qin HR, Iliopoulos D, Semba S, et al. A role for the WWOX gene in prostate cancer.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18452537_Ramos2008.html",
+    "anchor": "References, item 11",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "DEPENDENCY RELATION: ref 20 (Expression of Concern) is cited as background for WWOX restoration in lung cancer cells. DATO; citation only.",
+    "snippet": "Similar findings have been recently described by Qin et al. in prostate cells and tissues and by Fabbri et al. in lung cancer cell lines.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18452537_Ramos2008.html",
+    "anchor": "Discussion, paragraph 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   }
+  ]
+ }
+}

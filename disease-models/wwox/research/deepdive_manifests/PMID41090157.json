@@ -1,0 +1,891 @@
+{
+  "schema_version": 2,
+  "pmid": "41090157",
+  "doi": "10.1016/j.bneo.2025.100153",
+  "receipt": "FTR-20260914-41090157-01",
+  "landing": [
+    "FTR-20260914-41090157-01",
+    "fulltext_dossiers/PMID41090157.md",
+    "CC-20260914-41090157-01",
+    "session_evaluations/2026-09-14_scientist-a_SCI-FT-A-001.md"
+  ],
+  "skills_considered": [
+    {
+      "skill": "find-fulltext",
+      "used": true,
+      "reason": "Run inline, and the cascade mattered: Europe PMC fullTextXML returned HTTP 503, ncbi efetch db=pmc served the JATS; ars.els-cdn.com returned HTTP 400 on every figure and supplement path, ScienceDirect pdfft HTTP 403, PMC /bin/ a reCAPTCHA interstitial under HTTP 200, europepmc.org/bin HTTP 403. Figures, supplements and the article PDF were recovered from the PMC Open Access S3 bucket and the Europe PMC supplementaryFiles zip. Every route is recorded in the acquisition recipes."
+    },
+    {
+      "skill": "legend-deepdive",
+      "used": false,
+      "reason": "Run inline. The decisive findings are in pixels and in deposited spreadsheets: the Figure 6C caption's PBP/PBL inversion against Figure 6A and 6B, the SBS85 distribution, and the immunoglobulin dominance of the 87-gene list. None is reachable from a dossier."
+    },
+    {
+      "skill": "legend-locator-audit",
+      "used": false,
+      "reason": "Not triggered. CLAIM 029 is 'in observation', not a consolidated baseline, and no persisted locator for PMID 41090157 exists anywhere in the corpus - this PMID appears in zero manifests. The contradictions recorded here are internal to the paper."
+    },
+    {
+      "skill": "legend-discovery",
+      "used": false,
+      "reason": "Declined. The candidate leads - CCL2/TNF inflammatory axis, Aid/Apobec-driven hypermutation, CD138 uropods as an aggressiveness marker - are myeloma-oncology leads in a MYC-driven murine model, and the inflammation half is pathway-inference over a 3-versus-3 comparison. Mining them as discovery capital before the identity records exist would inflate them."
+    },
+    {
+      "skill": "legend-paperqa",
+      "used": false,
+      "reason": "Requires an API key and external traffic, which is external spend reserved to the operator under STOP POLICY class 1. Not requested, not run."
+    },
+    {
+      "skill": "legend-hypothesis-forge",
+      "used": false,
+      "reason": "Declined. Nothing here reaches the reference genotype: no neural material, no WWOX disease allele, and an oncogenic MYC context absent from WWOX-DEE."
+    }
+  ],
+  "group_assessment": {
+    "performed": true,
+    "total_publications": 138,
+    "publications_on_gene": 38,
+    "counts_measured": "PubMed esearch 2026-09-14, corresponding author: 'Aldaz CM[au]' 138, 'Aldaz CM[au] AND WWOX' 38. First author 'Hussain T[au] AND WWOX' 6. Model provider 'Chesi M[au]' 122, of which 'Chesi M[au] AND WWOX' 1 - this paper. 'Abba MC[au] AND WWOX' 10.",
+    "research_type": "experimental_lab",
+    "output_kind": "primary_research",
+    "is_primary_group_for_disease": true,
+    "is_primary_group_for_gene": true,
+    "weighting": "Three capabilities, weighed apart, and the split is the reason to trust different halves differently. The Aldaz laboratory is primary for the gene (38 of 138 papers) AND is one of the few groups that works on WWOX neurological disease - its own refs 32 and 33 are the hippocampal-interneuron and P47T epilepsy papers - so both flags are true, while this output touches neither the disease nor a disease allele. The myeloma model is NOT this laboratory's: Vk*MYC is Chesi's, supplied as a collaboration (122 papers, 1 on WWOX), and she declares royalties from licensing those mice, so the model half carries both genuine expertise and a declared financial interest. The genomics half (RNA-seq, WES, signatures, CNV) is Abba's and Bramble's established method work. Net: the per-sample sequencing observations weigh as competent primary work; the inflammation conclusion weighs as Ingenuity pathway inference with no protein measurement; and the words 'promotes' and 'key driver' weigh as the group's interpretation of a marginal incidence difference."
+  },
+  "field_density": {
+    "wwox_directed": true,
+    "queries": [
+      {"query": "WWOX", "route": "PubMed esearch 2026-09-14", "count": 708},
+      {"query": "WWOX AND (myeloma OR plasmacytoma)", "route": "PubMed esearch 2026-09-14", "count": 15},
+      {"query": "WWOX AND (B cell OR B-cell)", "route": "PubMed esearch 2026-09-14", "count": 14},
+      {"query": "WWOX AND (lymphoma OR leukemia)", "route": "PubMed esearch 2026-09-14", "count": 42},
+      {"query": "WWOX AND inflammation", "route": "PubMed esearch 2026-09-14", "count": 20},
+      {"query": "WWOX AND DNA repair", "route": "PubMed esearch 2026-09-14", "count": 31},
+      {"query": "WWOX AND mouse AND knockout", "route": "PubMed esearch 2026-09-14", "count": 45},
+      {"query": "Vk*MYC", "route": "PubMed esearch 2026-09-14", "count": 63},
+      {"query": "WWOX AND epilepsy", "route": "PubMed esearch 2026-09-14", "count": 67}
+    ],
+    "note": "WWOX x myeloma is 15 papers in all of PubMed and WWOX x B-cell 14, against 708 for WWOX overall, so this is a thin field in which one laboratory holds most of the in-vivo work. The intersection that matters for strength is narrower still: crossing Vk*MYC (63 papers) with WWOX returns this paper alone, so the Wwox-plus-MYC observation has no independent replication."
+  },
+  "multihop": {
+    "performed": true,
+    "references_enumerated": 74,
+    "enumeration_method": "Enumerated from the fingerprinted efetch JATS ref-list, not sampled: 74 <ref> elements, 73 carrying a pmid pub-id and 70 a doi. Gene-direct by title: 22 name WWOX/Wwox/WOX1/FRA16D/the FOR gene.",
+    "gene_direct_count": 22,
+    "gene_direct_refs_in_source": ["10786676", "24932569", "30350478", "17823927", "17360458", "21685375", "17609426", "22869583", "28943951", "31275852", "19936220", "30290271", "36828035", "21115974", "22574198", "28283473", "30154439", "33255508", "33058734", "27869163", "34998176", "38499540"],
+    "resolved": ["10786676", "24932569", "30350478", "17823927", "17360458", "21685375", "17609426", "22869583", "28943951", "31275852", "19936220", "30290271", "36828035", "21115974", "22574198", "28283473", "30154439", "33255508", "33058734", "27869163", "34998176", "38499540"],
+    "queued": [],
+    "resolved_depth_declaration": "RESOLVED MEANS IDENTITY, NOT READING. All 22 gene-direct identifiers are present by PMID string in the paper registry, tracking log, claim registry, batch queue or receipt ledger, checked 2026-09-14 after the dossier was frozen. Reading depth is a different question: 30290271 and 36828035 - the two Aldaz-lab NEURAL papers, and the only references in this paper that touch the disease this corpus exists to serve - carry complete receipts, as do 27869163, 19936220 and 38499540; 30350478 (WWOX as target and contributor to genomic instability) and 17823927 (the hypomorphic-Wwox B-cell-lymphoma antecedent) carry NONE. Reference 26 is PMID 31275852, the companion paper read in this same task, which had no receipt before today. Outside the gene-direct set, four load-bearing premises are unread: 38714690 (the Vk*MYC genomic landscape, source of the chr5-driver and indolent-marrow premises), 18242516 (the original Vk*MYC model), 39160255 (the CoMMpass complete-loss-of-function analysis this paper aligns its CNV findings to) and 11001907 (Borset, syndecan-1 uropods, the entire basis of the aggressiveness reading of Figure 2C). Nothing is queued from this contract because it does not own the queue file; the debt is routed to the orchestrator in CC-20260914-41090157-01."
+  },
+  "corpus_crossquery": {
+    "performed": true,
+    "query": "Technical only, run after the dossier was frozen: how many deep-dive manifests and complete-read receipts exist, whether any manifest already names PMID 41090157, and whether the corpus holds any reading of WWOX in plasma-cell neoplasia, myeloma models or mutational signatures.",
+    "hits": 0,
+    "finding": "98 manifests before this one, 175 receipt events, 104 of them at complete_fulltext_read over 87 distinct PMIDs - counted at event level with fulltext_receipts and session_self_eval, after a first pass using wc -l and grep -c gave 173 and 121 and was discarded as measuring lines and string occurrences rather than events. PMID 41090157 is named in ZERO manifests and has no receipt of any depth - first contact for the corpus, and the paper is six weeks old in epub terms. Subject-wise the corpus is empty here too: 'plasmablast' 0 of 98 manifests, 'myeloma' 0, 'Vk*MYC' 0, 'class switch' 0, 'microhomology' 1, 'NHEJ' 4. Against CLAIM 029, which records WWOX-DDR as ATM activation plus a mutation-burden qualification, this paper adds a signature-level and copy-number-level observation the corpus has never held, and it does so in the same laboratory's B-lineage system as PMID 31275852, read in this same task."
+  },
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-09-14",
+    "route": "NCBI esummary db=pubmed retmode=json for 41090157",
+    "result": "pubtype Journal Article; Blood Neoplasia 2(4):100153, epub 2025 Aug 4, issue November 2025. NO commentscorrections field returned, i.e. no linked erratum, expression of concern or retraction. The efetch JATS carries no related-article element of correction type. The PMC Open Access service metadata record for PMC12517091 independently reports is_retracted false and license_code CC BY-NC-ND.",
+    "hold": false,
+    "dependencies": {
+      "flagged": [],
+      "noted": [],
+      "paper_verdict": "SCREENED_CLEAN",
+      "reference_source": "network",
+      "references_declared": 74,
+      "references_screened": 70,
+      "references_with_doi": 70,
+      "schema": "retraction_check.dependencies/1",
+      "screened": true,
+      "snapshot": {
+        "date": "2026-09-10",
+        "days_since_fetch": 4,
+        "rows": 72476,
+        "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+      },
+      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+      "unscreenable": {"UNSCREENABLE_NO_DOI": 4}
+    }
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID41090157_Hussain2025.xml",
+      "kind": "article_text",
+      "note": "efetch JATS XML of PMC12517091, 138987 B. article-id pmid 41090157 / doi 10.1016/j.bneo.2025.100153 / pii S2950-3280(25)00088-3 verified inside the document. Three <abstract> elements (key points, visual, main), Introduction, 8 Methods subsections, 5 Results sections, Discussion, conflict-of-interest note; 8 <fig>, ZERO <table-wrap>, 3 <supplementary-material>, 74 <ref>. Evidentiary text surface for every body locator. Screened clean: 0 C0 control characters, with plus-minus and x present.",
+      "acquisition_recipe": {
+        "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=12517091",
+        "http_method": "GET",
+        "tier": "ncbi_efetch_pmc_xml",
+        "user_agent_policy": "none",
+        "derived": false,
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "eadedb7b4cba16a0875557045d1f4c926960b060ee2c9dd047638f7bf19e2357"
+    },
+    {
+      "path": "files/fulltext/PMID41090157_Hussain2025.pdf",
+      "kind": "article_binary",
+      "note": "Publisher PDF as deposited in PMC, 20 pages, 6452468 B, obtained from the PMC Open Access S3 bucket after ScienceDirect returned HTTP 403. Declared as the source of the 400 dpi VECTOR renderings of Figure 5 and Figure 6A; no locator uses its text layer.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12517091.1/PMC12517091.1.pdf",
+        "http_method": "GET",
+        "tier": "pmc_oa_s3_bucket",
+        "user_agent_policy": "none",
+        "derived": false,
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "2e6254d1eeb4da57aaa9d0f0b06c8d333ed4b86089ded044dda254e11faa4910"
+    },
+    {
+      "path": "files/fulltext/PMID41090157_Hussain2025_assets/fig_gr1.jpg",
+      "kind": "figure",
+      "note": "Figure 1 as deposited, 652x636: Kaplan-Meier survival, Vk*MYC:Wwox KO (n = 27) versus WT (n = 14), printed Log Rank = 0.002.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12517091/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryfiles_zip",
+        "user_agent_policy": "none",
+        "derived": false,
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "c20be118d30e0c8c9107f58cbba9b5d5668e61515c6df8662c3a22cba9990ab1"
+    },
+    {
+      "path": "files/fulltext/PMID41090157_Hussain2025_assets/fig_gr2.jpg",
+      "kind": "figure",
+      "note": "Figure 2 as deposited, 719x613: (A) the incidence table with Chi-Square P = .036, (B-C) CD138 immunostaining including the uropod-like polarised foci, (D-E) SPEP panels with ages in days.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12517091/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryfiles_zip",
+        "user_agent_policy": "none",
+        "derived": false,
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "1c7a14017be992ccad452cbcdc7c7156b376c32d852a191d1f7c5e44f8a53ee3"
+    },
+    {
+      "path": "files/fulltext/PMID41090157_Hussain2025_assets/fig_gr3.jpg",
+      "kind": "figure",
+      "note": "Figure 3 as deposited, 717x798: (A) heat map of the 87 differentially expressed genes, (B-C) enriched biofunctions and disease processes, (D) IPA upstream regulators with z scores.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12517091/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryfiles_zip",
+        "user_agent_policy": "none",
+        "derived": false,
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "457e077a0695b5a3672a7adae077ba2bb99bd51a84ed754196f03b93df76b593"
+    },
+    {
+      "path": "files/fulltext/PMID41090157_Hussain2025_assets/fig_gr4.jpg",
+      "kind": "figure",
+      "note": "Figure 4 as deposited, 743x857: PBT versus marrow transcriptome - heat map of 2355 genes, biofunctions, and the D-E panels comparing gene counts and significance magnitudes between the two contrasts.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12517091/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryfiles_zip",
+        "user_agent_policy": "none",
+        "derived": false,
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "f7e7e07f1039b95991d45299378ea09d9c35bfa4afeaeb8f14dddbd1232451bd"
+    },
+    {
+      "path": "files/fulltext/PMID41090157_Hussain2025_assets/fig_gr5.jpg",
+      "kind": "figure",
+      "note": "Figure 5 as deposited, 642x1390: the driver-gene oncoplot. Deposited at too low a resolution to map columns to samples reliably, which is why the vector re-render below exists.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12517091/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryfiles_zip",
+        "user_agent_policy": "none",
+        "derived": false,
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "6ae999b9d4f36b8bbe1901f4c02ac865b6c39b7010d1724e9c38ca983b4ee676"
+    },
+    {
+      "path": "files/fulltext/PMID41090157_Hussain2025_assets/fig_gr6.jpg",
+      "kind": "figure",
+      "note": "Figure 6 as deposited, 796x1104: (A) SBS signature heat map, (B) rainfall plots, (C) Aicda and Apobec2 bar charts whose caption assigns the coloured points to samples.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12517091/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryfiles_zip",
+        "user_agent_policy": "none",
+        "derived": false,
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "b0bbffb0462e36b55ca2a7d855e208c45598c76cf339039087d4d885c9f4ea46"
+    },
+    {
+      "path": "files/fulltext/PMID41090157_Hussain2025_assets/fig_gr7.jpg",
+      "kind": "figure",
+      "note": "Figure 7 as deposited, 697x1699: (A) copy-number heat map across all 17 samples, (B) per-sample CNV scatter plots for the four tumours with gene labels.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12517091/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryfiles_zip",
+        "user_agent_policy": "none",
+        "derived": false,
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "20e266584fd966d54a308e47e57385c2b85a3eb56829a33ec26ce2275a361535"
+    },
+    {
+      "path": "files/fulltext/PMID41090157_Hussain2025_assets/fig_ga1.jpg",
+      "kind": "figure",
+      "note": "The visual abstract as deposited, 770x590: the cross schematic, the two arrows 'Genomic Instability' and 'Inflammation', a reproduction of the survival curve, and the stated conclusion.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12517091/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryfiles_zip",
+        "user_agent_policy": "none",
+        "derived": false,
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "f3b84b61ce715dfabf7b0454804109808e192ef4f70e71385b7d5b1d8fa7cf88"
+    },
+    {
+      "path": "files/fulltext/PMID41090157_Hussain2025_assets/fig5_pdfp8_400dpi_top.png",
+      "kind": "figure",
+      "note": "Figure 5's oncoplot re-rendered from the PDF's VECTOR artwork at 400 dpi, 2812x1940, upper half: the group bands (5 WT, 3 HET, 5 KO marrow, then PBP PBP PBP PBL) and rows Pten through H2bc4. This is the surface on which columns were mapped to samples.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID41090157_Hussain2025.pdf",
+        "extractor": {"name": "PyMuPDF", "version": "1.28.2", "call": "page.get_pixmap(dpi=400, clip=Rect) over the union bbox of page 8 vector drawings, upper half", "join": ""},
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "a79dbb5926d9362d46691ec18d03b5806dfebf322b3876bf9fe13f3226076702"
+    },
+    {
+      "path": "files/fulltext/PMID41090157_Hussain2025_assets/fig5_pdfp8_400dpi_bot.png",
+      "kind": "figure",
+      "note": "Figure 5's oncoplot at 400 dpi, 2812x1940, lower half: rows H2bc4 through S1pr1 and the printed caption stating that the first three PBT columns are PBPs and the last is a PBL.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID41090157_Hussain2025.pdf",
+        "extractor": {"name": "PyMuPDF", "version": "1.28.2", "call": "page.get_pixmap(dpi=400, clip=Rect) over the union bbox of page 8 vector drawings, lower half", "join": ""},
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "00680fbee3755cf7d5efe484c9bd25087ee90b410f6dd56eac186898992a5fdb"
+    },
+    {
+      "path": "files/fulltext/PMID41090157_Hussain2025_assets/fig6A_pdfp9_400dpi_heat.png",
+      "kind": "figure",
+      "note": "Figure 6A's signature heat map re-rendered from the PDF's VECTOR artwork at 400 dpi, 2890x1445: ten SBS rows against seventeen named sample columns with the PBT block labelled PBL PBP PBP PBP. The surface on which the SBS26, SBS30 and SBS85 distributions were read.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID41090157_Hussain2025.pdf",
+        "extractor": {"name": "PyMuPDF", "version": "1.28.2", "call": "page.get_pixmap(dpi=400, clip=Rect(40,60,560,320)) on page 9", "join": ""},
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "a99d9c7b22fc349ecfa5c01993cef72570d5949b8b754d88179f6678d09e6f9f"
+    },
+    {
+      "path": "files/fulltext/PMID41090157_Hussain2025_assets/supp_mmc1.pdf",
+      "kind": "supplement_binary",
+      "note": "The supplement as deposited, 15-page PDF, 2908156 B: Table S1 (per-animal histopathology and CD138/CD19 grades for all 21 tumours) and Supplementary Figures S1a through S9c.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12517091/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryfiles_zip",
+        "user_agent_policy": "none",
+        "derived": false,
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "9f455afe1f6ed50651f23804f3bcfdfb8f953e0d39c66b6d783d9396ccceb627"
+    },
+    {
+      "path": "files/fulltext/PMID41090157_Hussain2025_assets/supp_mmc1_p01.png",
+      "kind": "figure",
+      "note": "Supplement page 1 at 150 dpi: Table S1, the per-animal tumour table. All 15 pages were inspected; pages 1, 2, 3, 7, 11 and 15 carry locators.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID41090157_Hussain2025_assets/supp_mmc1.pdf",
+        "extractor": {"name": "PyMuPDF", "version": "1.28.2", "call": "page.get_pixmap(dpi=150) page 1", "join": ""},
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "dbf5ed4c119abaffb2621a177cb99148c7ec1f50114f271e108f931a3ae3689b"
+    },
+    {
+      "path": "files/fulltext/PMID41090157_Hussain2025_assets/supp_mmc1_p02.png",
+      "kind": "figure",
+      "note": "Supplement page 2 at 150 dpi: Figure S1a (the two KM Plotter survival curves with hazard ratios) and Figure S1b (Wwox qRT-PCR in CD19+ B cells).",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID41090157_Hussain2025_assets/supp_mmc1.pdf",
+        "extractor": {"name": "PyMuPDF", "version": "1.28.2", "call": "page.get_pixmap(dpi=150) page 2", "join": ""},
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "d6dcf95128803d1fe4bc9dd67b43d67c4e6c67b8d10134f08bf9efd94e06c064"
+    },
+    {
+      "path": "files/fulltext/PMID41090157_Hussain2025_assets/supp_mmc1_p03.png",
+      "kind": "figure",
+      "note": "Supplement page 3 at 150 dpi: Figure S2, the M-spike onset Kaplan-Meier with log-rank p = 0.7064.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID41090157_Hussain2025_assets/supp_mmc1.pdf",
+        "extractor": {"name": "PyMuPDF", "version": "1.28.2", "call": "page.get_pixmap(dpi=150) page 3", "join": ""},
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "a473fddd81ffceac90eb5c8db408ceb3419c4225ea32939f1f7903741d19c674"
+    },
+    {
+      "path": "files/fulltext/PMID41090157_Hussain2025_assets/supp_mmc1_p04.png",
+      "kind": "figure",
+      "note": "Supplement page 4 at 150 dpi: Figure S3, the Tnf regulator network with per-gene fold changes.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID41090157_Hussain2025_assets/supp_mmc1.pdf",
+        "extractor": {"name": "PyMuPDF", "version": "1.28.2", "call": "page.get_pixmap(dpi=150) page 4", "join": ""},
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "e84b9329d02d530f35007e7d87caba886c9c05add237624ac1eda38845822da8"
+    },
+    {
+      "path": "files/fulltext/PMID41090157_Hussain2025_assets/supp_mmc1_p05.png",
+      "kind": "figure",
+      "note": "Supplement page 5 at 150 dpi: Figure S4, Aicda expression in marrow versus tumours.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID41090157_Hussain2025_assets/supp_mmc1.pdf",
+        "extractor": {"name": "PyMuPDF", "version": "1.28.2", "call": "page.get_pixmap(dpi=150) page 5", "join": ""},
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "5da99f348700946eb31c2d9a69f6c85609a9e9867b6777c801f51b409f62c5cb"
+    },
+    {
+      "path": "files/fulltext/PMID41090157_Hussain2025_assets/supp_mmc1_p06.png",
+      "kind": "figure",
+      "note": "Supplement page 6 at 150 dpi: Figure S5, the Ccl2 regulator network.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID41090157_Hussain2025_assets/supp_mmc1.pdf",
+        "extractor": {"name": "PyMuPDF", "version": "1.28.2", "call": "page.get_pixmap(dpi=150) page 6", "join": ""},
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "e56356c4fcdde90c2425abc7e99e33f92bd363f8ca683df1ef1b0a6e993ed35f"
+    },
+    {
+      "path": "files/fulltext/PMID41090157_Hussain2025_assets/supp_mmc1_p07.png",
+      "kind": "figure",
+      "note": "Supplement page 7 at 150 dpi: Figure S6, violin plots of SBS1, SBS5, SBS26 and SBS30 contributions by group - the panel showing SBS26 present in wild-type marrow and SBS30 confined to tumours.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID41090157_Hussain2025_assets/supp_mmc1.pdf",
+        "extractor": {"name": "PyMuPDF", "version": "1.28.2", "call": "page.get_pixmap(dpi=150) page 7", "join": ""},
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "168c3e30b67f3aa828f515ffdcbaa73461d4e7cf711d53ec9461b029694d6a39"
+    },
+    {
+      "path": "files/fulltext/PMID41090157_Hussain2025_assets/supp_mmc1_p08.png",
+      "kind": "figure",
+      "note": "Supplement page 8 at 150 dpi: Figure S7a, rainfall plots for the five wild-type marrow samples.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID41090157_Hussain2025_assets/supp_mmc1.pdf",
+        "extractor": {"name": "PyMuPDF", "version": "1.28.2", "call": "page.get_pixmap(dpi=150) page 8", "join": ""},
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "ab84d4bbf59c62b27ff5e631046126b1b91db05bf2b95d5d2e54cb501c0d0274"
+    },
+    {
+      "path": "files/fulltext/PMID41090157_Hussain2025_assets/supp_mmc1_p09.png",
+      "kind": "figure",
+      "note": "Supplement page 9 at 150 dpi: Figure S7b-d, rainfall plots for the heterozygous and knockout marrow samples and two tumours.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID41090157_Hussain2025_assets/supp_mmc1.pdf",
+        "extractor": {"name": "PyMuPDF", "version": "1.28.2", "call": "page.get_pixmap(dpi=150) page 9", "join": ""},
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "a3862bb13fd9463170fabafce7a5c7919a8ca09696857ecee7a0187690c082f6"
+    },
+    {
+      "path": "files/fulltext/PMID41090157_Hussain2025_assets/supp_mmc1_p10.png",
+      "kind": "figure",
+      "note": "Supplement page 10 at 150 dpi: the Figure S7 caption.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID41090157_Hussain2025_assets/supp_mmc1.pdf",
+        "extractor": {"name": "PyMuPDF", "version": "1.28.2", "call": "page.get_pixmap(dpi=150) page 10", "join": ""},
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "95268826a7b31d5435b0cca8a2e8d6bbb42dabb61d0fec74acdd752b28eac8bb"
+    },
+    {
+      "path": "files/fulltext/PMID41090157_Hussain2025_assets/supp_mmc1_p11.png",
+      "kind": "figure",
+      "note": "Supplement page 11 at 150 dpi: Figure S8, Apobec1 and Apobec3 expression across all four groups - both flat.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID41090157_Hussain2025_assets/supp_mmc1.pdf",
+        "extractor": {"name": "PyMuPDF", "version": "1.28.2", "call": "page.get_pixmap(dpi=150) page 11", "join": ""},
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "48ffd0d6ddfbf943b17cd7f7726be754966775027e51722e4d6d9caeebae0f5c"
+    },
+    {
+      "path": "files/fulltext/PMID41090157_Hussain2025_assets/supp_mmc1_p12.png",
+      "kind": "figure",
+      "note": "Supplement page 12 at 150 dpi: Figure S9a, per-sample CNV scatter plots for the five wild-type marrow samples.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID41090157_Hussain2025_assets/supp_mmc1.pdf",
+        "extractor": {"name": "PyMuPDF", "version": "1.28.2", "call": "page.get_pixmap(dpi=150) page 12", "join": ""},
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "ee948cb688da345e76e72fd193f4041d33cab20559b6d758fff94a5347722c31"
+    },
+    {
+      "path": "files/fulltext/PMID41090157_Hussain2025_assets/supp_mmc1_p13.png",
+      "kind": "figure",
+      "note": "Supplement page 13 at 150 dpi: Figure S9b, CNV plots for the three heterozygous marrow samples, including the Myc/Maf gain in HET2.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID41090157_Hussain2025_assets/supp_mmc1.pdf",
+        "extractor": {"name": "PyMuPDF", "version": "1.28.2", "call": "page.get_pixmap(dpi=150) page 13", "join": ""},
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "b7649c1b1918663bc2700beef109c97b7ce59a796e1ef749e7d445a61d7216dd"
+    },
+    {
+      "path": "files/fulltext/PMID41090157_Hussain2025_assets/supp_mmc1_p14.png",
+      "kind": "figure",
+      "note": "Supplement page 14 at 150 dpi: Figure S9c, CNV plots for the five knockout marrow samples, including the Braf gain in KO5.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID41090157_Hussain2025_assets/supp_mmc1.pdf",
+        "extractor": {"name": "PyMuPDF", "version": "1.28.2", "call": "page.get_pixmap(dpi=150) page 14", "join": ""},
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "7b53d04310d529457fd8cefa2147106651d903035e76150ba4f60f246f8055c5"
+    },
+    {
+      "path": "files/fulltext/PMID41090157_Hussain2025_assets/supp_mmc1_p15.png",
+      "kind": "figure",
+      "note": "Supplement page 15 at 150 dpi: the Figure S9 caption.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID41090157_Hussain2025_assets/supp_mmc1.pdf",
+        "extractor": {"name": "PyMuPDF", "version": "1.28.2", "call": "page.get_pixmap(dpi=150) page 15", "join": ""},
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "14eb741c8899b2bd7187ae0b4a9e4c023205e7183a4815855d1efd1120de3757"
+    },
+    {
+      "path": "files/fulltext/PMID41090157_Hussain2025_assets/supp_mmc2.xlsx",
+      "kind": "supplement_binary",
+      "note": "Supplemental Table 2 as deposited: 213 copy-number segments across all 17 samples with chromosome, span, log2, copy number, depth, probes, weight and gene lists. Parsed row by row this session; it is the source of the per-sample segment counts (KO1-PBT 17, KO2-PBT 59, KO3-PBT 44, KO4-PBT 7) and of the chr11 direction discrepancy.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12517091/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryfiles_zip",
+        "user_agent_policy": "none",
+        "derived": false,
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "f8107c40e82716ae0e47525181806f8af6229a6ed266559c59e150632170f124"
+    },
+    {
+      "path": "files/fulltext/PMID41090157_Hussain2025_assets/supp_mmc3.xlsx",
+      "kind": "supplement_binary",
+      "note": "Supplemental File 1 as deposited: two sheets of differential expression - 87 rows for knockout versus wild-type marrow and 2355 rows for tumour versus knockout marrow, each with Ensembl id, gene name, log2 fold change and adjusted p. Parsed row by row this session; it is the source of the immunoglobulin-dominance count and of the residual Wwox transcript level.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12517091/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryfiles_zip",
+        "user_agent_policy": "none",
+        "derived": false,
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "0f2f24c81b4acc0ab9377f460714e778b155c7e1ad64532b86455e4b1a0e8c79"
+    }
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": false,
+    "source_fulltext_indexed_evidence": "A structured JATS surface exists (efetch db=pmc) and is the evidentiary text surface for all body locators; Europe PMC's fullTextXML endpoint returned HTTP 503 today and was not used. The article carries no <table-wrap>, so no table locator is possible: Table S1 and Table 2 are supplementary. Figure locators are visual attestations of the deposited JPEGs, and for Figure 5 and Figure 6A of 400 dpi renderings of the PDF's vector artwork, because the deposited files are only 642-796 px wide and the publisher's own high-resolution route refused every request.",
+    "abstract_anchoring_waived": "No locator uses any of the three abstracts and none needs to: every headline proposition is carried by its Results, Methods or figure-caption counterpart in the body. The key-points abstract's strongest words - that Wwox deletion 'leads to aggressive plasmablastic tumors' and 'drives genomic instability' - are anchored instead to the incidence sentences (entries 1, 2), to the per-sample mutation and copy-number results (entries 11, 12, 17, 18, 23) and to the authors' own limitation about structural variants (entry 16).",
+    "entries": [
+      {
+        "proposition": "PRIMARY SURVIVAL RESULT: adding B-cell Wwox deletion to the Vk*MYC myeloma model shortens mean survival from 800 to 660 days, log-rank P = .002, and the authors themselves call the course indolent.",
+        "snippet": "they exhibited a significantly shorter mean survival of 660 days vs 800 days observed in",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41090157_Hussain2025.xml",
+        "anchor": "Results > Wwox ablation in B cells promotes PBT development in Vk*MYC mice, survival paragraph",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found",
+        "experimental_context": {"system": "Vk*MYC:Wwox mouse lifetime cohort", "genotype": "Vk*MYC:Wwox KO (n = 27) versus Vk*MYC:Wwox WT (n = 14)", "endpoint": "overall survival"}
+      },
+      {
+        "proposition": "PRIMARY TUMOUR RESULT: 17 of 27 knockouts developed intra-abdominal plasmablastic tumours or B-cell lymphomas.",
+        "snippet": "developed intra-abdominal tumors with the characteristics of PBTs and BCLs",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41090157_Hussain2025.xml",
+        "anchor": "Results > Wwox ablation in B cells promotes PBT development, incidence paragraph",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found",
+        "experimental_context": {"system": "necropsy cohort", "genotype": "Vk*MYC:Wwox KO", "endpoint": "tumour incidence"}
+      },
+      {
+        "proposition": "THE CONTROL ARM AND THE ONLY TEST STATISTIC for incidence: 4 of 14 wild types, chi-square P = .036. Recomputed here, Fisher's exact two-tailed p = 0.052 on the same table, so the result does not survive an exact test.",
+        "snippet": "where only 28.5% (4/14) displayed intra-abdominal tumors",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41090157_Hussain2025.xml",
+        "anchor": "Results > Wwox ablation in B cells promotes PBT development, incidence paragraph",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found",
+        "experimental_context": {"system": "necropsy cohort", "comparator": "Vk*MYC:Wwox WT (n = 14)", "endpoint": "tumour incidence"}
+      },
+      {
+        "proposition": "TUMOUR CLASSES AND THEIR COUNTS: 9 plasmablastic plasmacytomas, 5 plasmablastic lymphomas, 3 B-cell lymphomas.",
+        "snippet": "these tumors were broadly classified into, PBPs (n = 9), PBLs (n = 5) and BCLs (n = 3)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41090157_Hussain2025.xml",
+        "anchor": "Results > Wwox ablation in B cells promotes PBT development, classification sentence",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "MONOCLONAL GAMMOPATHY IS UNIVERSAL IN THE KNOCKOUT: all 24 followed knockouts developed M-spikes, with intensity rising as they aged.",
+        "snippet": "All 24 Wwox KO mice (100%) showed detectable M-spikes",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41090157_Hussain2025.xml",
+        "anchor": "Results > Wwox ablation in B cells promotes PBT development, SPEP paragraph",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found",
+        "experimental_context": {"system": "longitudinal serum protein electrophoresis", "genotype": "Vk*MYC:Wwox KO", "endpoint": "M-spike"}
+      },
+      {
+        "proposition": "AND IT IS UNIVERSAL IN THE CONTROLS TOO: 14 of 14 wild types, so the gammopathy phenotype is not Wwox-dependent in this model.",
+        "snippet": "with 14 of 14 (100%) showing secreted gamma globulin",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41090157_Hussain2025.xml",
+        "anchor": "Results > SPEP paragraph, control sentence",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "AND ITS TIMING IS UNCHANGED: no difference in the age at which M-spikes appear between genotypes.",
+        "snippet": "there was no difference in the age of M-spikes detection when comparing",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41090157_Hussain2025.xml",
+        "anchor": "Results > SPEP paragraph, closing sentence",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "TRANSCRIPTOME SCALE, marrow comparison: 87 differentially expressed genes at FDR < 0.05 between knockout and wild-type CD138+ plasma cells, n = 3 per group.",
+        "snippet": "identified 87 dysregulated genes (FDR < 0.05)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41090157_Hussain2025.xml",
+        "anchor": "Results > Proinflammatory and tumorigenic transcriptomic signatures in PCs with Wwox deletion",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found",
+        "experimental_context": {"system": "RNA-seq of sorted CD138+ bone-marrow plasma cells", "comparator": "Vk*MYC:Wwox WT marrow, n = 3 per group", "endpoint": "differential expression"}
+      },
+      {
+        "proposition": "WHICH GENES THE AUTHORS NAME as the protumorigenic signal. The deposited workbook shows these are mid-list and modest, and that the list's dominant signal is immunoglobulin - see entries[34].",
+        "snippet": "Various immune regulatory and protumorigenic genes, such as Foxq1, Vegfa, Jun, and Tgfb2, were significantly upregulated in the Wwox KO group",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41090157_Hussain2025.xml",
+        "anchor": "Results > Proinflammatory and tumorigenic transcriptomic signatures, sentence 4",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "THE INFLAMMATION CLAIM'S ACTUAL BASIS is an Ingenuity upstream-regulator inference, with TNF at activation z score 2.47 alongside NF-kB and IL-6. No cytokine or NF-kB protein was measured anywhere in the paper.",
+        "snippet": "was identified as the topmost activated regulator",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41090157_Hussain2025.xml",
+        "anchor": "Results > Proinflammatory and tumorigenic transcriptomic signatures, IPA paragraph",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "sought - a protein-level measurement of TNF, NF-kB, IL-6 or CCL2 was searched in all seven figures, all 15 supplement pages and both workbooks; none exists, and Tnf, Il6, Rel and Nfkb1 are not themselves in either differential-expression list"
+      },
+      {
+        "proposition": "TRANSCRIPTOME SCALE, tumour comparison: 2355 differentially regulated genes between knockout tumours and knockout marrow - a contrast that is within-genotype and therefore cannot separate Wwox loss from being a tumour.",
+        "snippet": "This analysis identified 2355 differentially regulated genes",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41090157_Hussain2025.xml",
+        "anchor": "Results > PBTs displayed highly enriched inflammatory gene expression signatures",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found",
+        "experimental_context": {"system": "RNA-seq", "comparator": "Vk*MYC:Wwox KO tumours (n = 4) versus Vk*MYC:Wwox KO marrow (n = 3)", "endpoint": "differential expression"}
+      },
+      {
+        "proposition": "MUTATION BURDEN, the headline number: the plasmablastic lymphoma carried 21 distinct cancer-driver mutations. Counted independently on the 400 dpi vector render - see entries[27] - and it is exactly 21.",
+        "snippet": "the highest number of mutations was observed in the Wwox KO PBL sample, which harbored 21 distinct cancer driver mutations",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41090157_Hussain2025.xml",
+        "anchor": "Results > Vk*MYC:Wwox KO PBTs display hypermutation profiles, closing sentence",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found",
+        "experimental_context": {"system": "whole-exome sequencing at approximately 200x", "genotype": "Vk*MYC:Wwox KO plasmablastic lymphoma", "endpoint": "nonsynonymous driver SNVs"}
+      },
+      {
+        "proposition": "MOST RECURRENT DRIVER: Pten, in one heterozygous marrow sample and two knockout tumours.",
+        "snippet": "the tumor suppressor Pten emerged as the most frequently mutated gene",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41090157_Hussain2025.xml",
+        "anchor": "Results > Vk*MYC:Wwox KO PBTs display hypermutation profiles, Pten sentence",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "THE MISMATCH-REPAIR SIGNATURE IS NOT KNOCKOUT-SPECIFIC, and the authors say so: SBS26 appears across all marrow groups, including wild type. The panel shows which samples - see entries[32].",
+        "snippet": "was observed in samples from all BM groups including 2 samples from the HET and 1 from the KO groups",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41090157_Hussain2025.xml",
+        "anchor": "Results > Vk*MYC:Wwox KO PBTs display hypermutation profiles, SBS26 sentence",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found",
+        "experimental_context": {"system": "SigProfiler signature assignment over whole-exome nonsynonymous variants", "endpoint": "per-sample signature contribution"}
+      },
+      {
+        "proposition": "THE ONE SIGNATURE CONFINED TO KNOCKOUT TUMOURS: SBS30, defective base excision repair, in 2 of 3 plasmacytomas and nowhere else.",
+        "snippet": "linked to defective base excision repair, was observed only in",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41090157_Hussain2025.xml",
+        "anchor": "Results > Vk*MYC:Wwox KO PBTs display hypermutation profiles, SBS30 sentence",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "THE AID/APOBEC MECHANISM IS PROPOSED AND NOT ESTABLISHED: the Aicda and Apobec2 overexpression that is said to explain hypermutation fails its own test, P = .2646 and P = .2680 by one-way analysis of variance over four tumours.",
+        "snippet": "these differences did not reach statistical significance",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41090157_Hussain2025.xml",
+        "anchor": "Results > Vk*MYC:Wwox KO PBTs display hypermutation profiles, Aid/Apobec paragraph",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found",
+        "experimental_context": {"system": "RNA-seq normalised counts", "comparator": "WT (n = 5), HET (n = 3), KO (n = 5) marrow versus KO tumours (n = 4)", "endpoint": "Aicda and Apobec2 expression"}
+      },
+      {
+        "proposition": "AUTHORS' OWN METHODOLOGICAL LIMIT, in their words: exome sequencing cannot capture the structural variants that are major drivers in this disease.",
+        "snippet": "it must be noted that our study limited to WES analyses is unable to capture structural variants",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41090157_Hussain2025.xml",
+        "anchor": "Results > Vk*MYC:Wwox KO PBTs display hypermutation profiles, marrow paragraph",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "THE MARROW IS GENOMICALLY QUIET IN EVERY GENOTYPE - the observation that keeps the tumour findings from being read as a marrow phenotype.",
+        "snippet": "copy number alterations were relatively low and comparable between all BM sample groups",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41090157_Hussain2025.xml",
+        "anchor": "Results > Extensive chromosomal copy number alterations are characteristic of Vk*MYC:Wwox KO PBTs, opening",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "COPY-NUMBER BURDEN RISES IN THE TUMOURS. The deposited segment table shows how unevenly - see entries[35].",
+        "snippet": "both copy number gains and losses were significantly elevated in",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41090157_Hussain2025.xml",
+        "anchor": "Results > Extensive chromosomal copy number alterations, second sentence",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "THE ONLY HUMAN EVIDENCE IN THE PAPER, and it is a re-analysis: lower WWOX expression associates with worse overall and event-free survival across four public myeloma datasets.",
+        "snippet": "Lower WWOX expression was significantly associated with poorer outcomes",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41090157_Hussain2025.xml",
+        "anchor": "Results > Wwox ablation in B cells promotes PBT development, opening paragraph",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found",
+        "experimental_context": {"system": "KM Plotter re-analysis of GSE4204, GSE9782, GSE24080, GSE57317", "endpoint": "overall and event-free survival in 1416 myeloma patients"}
+      },
+      {
+        "proposition": "HOW THAT HUMAN ANALYSIS WAS CUT: a median split on a single Affymetrix probe, which is a dichotomisation choice and not a measured threshold.",
+        "snippet": "based on the median expression value of the Affymetrix 219077_s_at probe",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41090157_Hussain2025.xml",
+        "anchor": "Results > opening paragraph, stratification sentence",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "THE DNA-REPAIR PREMISE IS IMPORTED, NOT MEASURED HERE: the claim that WWOX loss impairs repair efficiency is attributed to prior work, including this laboratory's own.",
+        "snippet": "we and others have shown that loss of WWOX function significantly impairs DNA repair efficiency",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41090157_Hussain2025.xml",
+        "anchor": "Discussion, paragraph 5",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "THE AGGRESSIVENESS READING OF CD138 UROPODS IS IMPORTED from a 2000 myeloma paper; nothing about migration or adhesion was measured here.",
+        "snippet": "This striking intracellular pattern of CD138 staining has been previously described as resembling",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41090157_Hussain2025.xml",
+        "anchor": "Results > Wwox ablation in B cells promotes PBT development, immunohistochemistry paragraph",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "THE CLEANEST NEGATIVE CONTROL IN THE PAPER: no cancer-driver mutation in any of the five wild-type marrow samples, against 4 of 4 tumours carrying several.",
+        "snippet": "No cancer driver mutations were detected in any of the",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41090157_Hussain2025.xml",
+        "anchor": "Results > Vk*MYC:Wwox KO PBTs display hypermutation profiles, marrow paragraph",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found",
+        "experimental_context": {"system": "whole-exome sequencing", "comparator": "Vk*MYC:Wwox WT marrow, n = 5", "endpoint": "nonsynonymous driver SNVs"}
+      },
+      {
+        "proposition": "WHICH TEST WAS USED FOR INCIDENCE - a chi-square, not an exact test, which is why the marginal P = .036 does not reproduce as a Fisher exact p.",
+        "snippet": "test was performed to compare tumor incidence and Student t test was performed to compare gene expression",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41090157_Hussain2025.xml",
+        "anchor": "Materials and methods > Statistical analysis for mouse survival and tumor incidence",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "FIGURE 2A, PIXELS - the incidence table as printed, which is the whole of the primary genotype comparison: two rows, two counts, one test.",
+        "snippet": "Visual attestation of Figure 2A: a two-row table headed 'Incidence of Plasmablastic plasmacytomas and lymphomas' with rows 'Vk*Myc:Wwox WT (n = 14)' against the value 4 and 'Vk*Myc:Wwox KO (n = 27)' against the value 17, and beneath it the printed text '(Chi-Square P value = .036)'.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID41090157_Hussain2025_assets/fig_gr2.jpg",
+        "anchor": "Figure 2A, deposited JPEG 719x613",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "FIGURE 2C, PIXELS - the uropod observation is real as an image: polarised intracellular CD138 staining in small membrane protrusions, marked by red arrows, alongside enlarged nuclei and abundant mitotic figures. What the image cannot show, and no experiment here tests, is migration or aggressiveness.",
+        "snippet": "Visual attestation of Figure 2C: high-magnification CD138 immunostain of a plasmacytoma in which numerous cells show brown membrane staining concentrated into single polarised foci, indicated by red arrows, against a haematoxylin counterstain, with a 100 micrometre scale bar at lower left.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID41090157_Hussain2025_assets/fig_gr2.jpg",
+        "anchor": "Figure 2C, deposited JPEG 719x613",
+        "panel_text_relation": "panel_only",
+        "found_or_sought": "found",
+        "experimental_context": {"system": "extramedullary plasmablastic plasmacytoma, immunohistochemistry", "endpoint": "CD138 localisation"}
+      },
+      {
+        "proposition": "FIGURE 5, PIXELS AT 400 DPI - THE ONCOPLOT MAPPED COLUMN BY COLUMN, and it confirms the text on every count I could check: no filled cell in any of the five wild-type marrow columns; mutations in exactly two heterozygous marrow columns; exactly one knockout marrow column affected, carrying Kmt2c; and the PBL column filled in exactly 21 rows. Pten sits in one heterozygous column plus one PBP and the PBL; Trp53 and H1f3 each in one PBP and the PBL.",
+        "snippet": "Visual attestation of Figure 5 at 400 dpi: seventeen columns under coloured group bands - five 'Wwox WT', three 'Wwox HET', five 'Wwox KO' under 'BM', then four under 'PBT / Wwox KO' headed PBP, PBP, PBP, PBL - against 48 gene rows from Pten to S1pr1; filled dark-blue cells appear in the second and third HET columns, in the last KO column at the Kmt2c row only, and in all four PBT columns, with the PBL column filled at 21 rows.",
+        "surface": "figure",
+        "artifact": ["files/fulltext/PMID41090157_Hussain2025_assets/fig5_pdfp8_400dpi_top.png", "files/fulltext/PMID41090157_Hussain2025_assets/fig5_pdfp8_400dpi_bot.png", "files/fulltext/PMID41090157_Hussain2025_assets/fig_gr5.jpg"],
+        "anchor": "Figure 5 oncoplot, PDF page 8 vector artwork rendered at 400 dpi in two halves of 2812x1940",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found",
+        "experimental_context": {"system": "whole-exome sequencing of sorted CD138+ marrow and tumour tissue", "endpoint": "nonsynonymous driver SNVs per sample"}
+      },
+      {
+        "proposition": "TABLE S1, PIXELS - THE CONTROLS GET THE SAME TUMOURS. The per-animal table lists 17 knockout tumours and also FOUR wild-type tumours, of which three are plasmablastic plasmacytomas and one a plasmablastic lymphoma. So Wwox deletion changes tumour FREQUENCY, not tumour class, and the four wild-type tumours were never sequenced.",
+        "snippet": "Visual attestation of supplement page 1: table headed 'Table S1 | Histopathology and Cd138 immunostaining status across plasmablastic tumors' with columns Genotype, Mouse ID, Histopathology, Cd138, Cd19; seventeen rows under 'Vk*Myc:Wwox KO' and four rows under 'Vk*Myc:Wwox WT' reading Plasmablastic Lymphoma, Plasmablastic Plasmacytoma, Plasmablastic Plasmacytoma and Plasmablastic Plasmacytoma; four knockout rows carry an asterisk footnoted 'Tumor tissues used for RNA-seq and exome-seq analysis'.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID41090157_Hussain2025_assets/supp_mmc1_p01.png",
+        "anchor": "Supplementary Table S1, supplement page 1 rendered at 150 dpi",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[3]",
+        "qualifies_needle": "PBPs (n = 9), PBLs (n = 5) and BCLs (n = 3)",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "SUPPLEMENTARY FIGURE S1a, PIXELS - the human association with its numbers: overall survival hazard ratio 0.46 across 1416 patients and event-free survival 0.34 across 801, both by median split on one probe.",
+        "snippet": "Visual attestation of supplement page 2, Figure S1a: two Kaplan-Meier plots headed 'WWOX (219077_s_at)', the left with printed 'HR = 0.46 (0.38 - 0.56)', 'logrank P = 2.9x10-15' and 'n=1416', the right with 'HR = 0.34 (0.27 - 0.42)', 'logrank P < 1x10-16' and 'n=801', each with low and high expression strata.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID41090157_Hussain2025_assets/supp_mmc1_p02.png",
+        "anchor": "Supplementary Figure S1a, supplement page 2 rendered at 150 dpi",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "SUPPLEMENTARY FIGURE S1b, PIXELS - 'KNOCKOUT' IS A REDUCTION, NOT AN ABLATION. The qRT-PCR panel shows knockout CD19+ B cells at roughly 0.3 against wild type at roughly 1.5, i.e. about a fivefold reduction with individual points spanning 0.1 to 0.7, p = 0.0016, n = 5 per group.",
+        "snippet": "Visual attestation of supplement page 2, Figure S1b: bar chart 'Wwox expression' with ticks 0.0 to 2.5, a red bar 'Vk*MYC:Wwox WT' with its top near 1.53 and five points between roughly 1.0 and 2.1, a blue bar 'Vk*MYC:Wwox KO' with its top near 0.30 and points between roughly 0.1 and 0.7, SEM whiskers on both and a single asterisk over the pair.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID41090157_Hussain2025_assets/supp_mmc1_p02.png",
+        "anchor": "Supplementary Figure S1b, supplement page 2 rendered at 150 dpi",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[31]",
+        "qualifies_needle": "Wwox deletion in CD19+ B cells purified from BM of Vk",
+        "found_or_sought": "found",
+        "experimental_context": {"system": "qRT-PCR on sorted CD19+ bone-marrow B cells", "comparator": "Vk*MYC:Wwox WT, n = 5 per group", "endpoint": "Wwox transcript level"}
+      },
+      {
+        "proposition": "THE DELETION-CONFIRMATION SENTENCE AS THE TEXT PUTS IT, so the panel's magnitude has something to qualify: deletion 'confirmed by qRT-PCR' with only a p-value quoted and no effect size.",
+        "snippet": "Wwox deletion in CD19+ B cells purified from BM of Vk",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41090157_Hussain2025.xml",
+        "anchor": "Results > Wwox ablation in B cells promotes PBT development, second paragraph",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "FIGURE 6A, PIXELS AT 400 DPI - THE SIGNATURE DISTRIBUTION QUALIFIES THE REPAIR NARRATIVE IN TWO WAYS. First, SBS26 (defective mismatch repair) is present in a WILD-TYPE marrow sample as well as in two heterozygotes and one knockout, so it is not Wwox-specific. Second, and not discussed anywhere in the paper: SBS85, the signature the authors attribute to indirect Aid activity, appears ONLY in WT1-BM and KO4-BM and in NONE of the four tumours - including the hypermutated PBL whose kataegis the paper attributes to Aid/Apobec activity. SBS30 is confined to two PBP columns, as stated.",
+        "snippet": "Visual attestation of Figure 6A at 400 dpi: ten SBS rows (SBS1, SBS5, SBS12, SBS26, SBS30, SBS32, SBS37, SBS40a, SBS85, SBS87) against seventeen named columns from 'Wwox WT1-BM' to 'Wwox KO4-PBT' under group bands 'Wwox WT', 'Wwox HET', 'Wwox KO' and 'PBT / Wwox KO' labelled PBL PBP PBP PBP; the SBS26 row is filled at WT1-BM, HET2-BM, HET3-BM and KO1-BM and empty in all four PBT columns; the SBS30 row is filled only at KO2-PBT and KO3-PBT; the SBS85 row, annotated 'Indirect effects of Aid', is filled only at WT1-BM and KO4-BM.",
+        "surface": "figure",
+        "artifact": ["files/fulltext/PMID41090157_Hussain2025_assets/fig6A_pdfp9_400dpi_heat.png", "files/fulltext/PMID41090157_Hussain2025_assets/fig_gr6.jpg"],
+        "anchor": "Figure 6A, PDF page 9 vector artwork rendered at 400 dpi, 2890x1445",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[13]",
+        "qualifies_needle": "was observed in samples from all BM groups including 2 samples from the HET and 1 from the KO groups",
+        "found_or_sought": "found",
+        "experimental_context": {"system": "SigProfiler signature assignment over whole-exome nonsynonymous variants", "endpoint": "per-sample signature contribution"}
+      },
+      {
+        "proposition": "SUPPLEMENTARY FIGURE S8, PIXELS - the other deaminases are flat: Apobec1 and Apobec3 sit at comparable normalised counts across wild-type, heterozygous and knockout marrow and knockout tumours, which is what leaves Aicda and Apobec2 as the paper's only deaminase signal, and that one failed its test.",
+        "snippet": "Visual attestation of supplement page 11, Figure S8: two log-scale bar charts headed 'Apobec1' and 'Apobec3', each with four bars - Wwox WT-BM, Wwox HET-BM, Wwox KO-BM and Wwox KO-PBT - all sitting between roughly 1000 and 4000 normalised counts with overlapping individual points and SEM whiskers, and no bracket or asterisk anywhere.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID41090157_Hussain2025_assets/supp_mmc1_p11.png",
+        "anchor": "Supplementary Figure S8, supplement page 11 rendered at 150 dpi",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "THE DEPOSITED EXPRESSION WORKBOOK QUALIFIES THE INFLAMMATION SIGNATURE, and this is visible nowhere else. Of the 87 differentially expressed genes, 31 are immunoglobulin V-region genes, and 19 of the 20 largest effects by absolute fold change are immunoglobulin genes running in BOTH directions (Ighv5-9 +10.60, Igkv8-18 +8.64 against Igkv5-45 -7.60, Ighv14-4 -7.42) - the pattern expected from different clonal populations between animals rather than from a regulatory programme. The four genes the text names are modest and mid-list: Foxq1 +1.64 (rank 28), Vegfa +1.54 (30), Jun +1.44 (34), Tgfb2 +1.05 (46). The same sheet also shows Wwox itself down only 1.61 log2, adjusted p 0.021, in the sorted knockout cells.",
+        "snippet": "Visual attestation of Figure 3A together with the deposited workbook sheet 'Sig_KO-BMvsWT-BM': the heat map resolves three wild-type against three knockout columns over 87 rows, and the sheet's 87 data rows carry Gene ID, Gene name, log2FoldChange and padj, headed by Ighv5-9 at 10.603762469999999 and Igkv8-18 at 8.6366355699999993, with Wwox at -1.6126098449999999 and padj 2.1187883000000001E-2.",
+        "surface": "figure",
+        "artifact": ["files/fulltext/PMID41090157_Hussain2025_assets/fig_gr3.jpg", "files/fulltext/PMID41090157_Hussain2025_assets/supp_mmc3.xlsx"],
+        "anchor": "Figure 3A panel plus supplemental File 1, sheet Sig_KO-BMvsWT-BM, all 87 rows",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[8]",
+        "qualifies_needle": "Foxq1, Vegfa, Jun, and Tgfb2",
+        "found_or_sought": "found",
+        "experimental_context": {"system": "RNA-seq of sorted CD138+ marrow plasma cells", "comparator": "Vk*MYC:Wwox KO versus WT, n = 3 per group", "endpoint": "differential expression"}
+      },
+      {
+        "proposition": "THE DEPOSITED SEGMENT TABLE QUALIFIES 'EXTENSIVE' IN TWO WAYS. The four tumours carry 17, 59, 44 and 7 copy-number segments, so Figure 7B's caption phrase 'widespread and pronounced copy number alterations across all samples' does not hold for KO4-PBT, whose own panel is essentially flat. And the chr11 interval containing Rel, Xpo1 and Bcl11a - reported only as an amplicon - is a GAIN in KO1-PBT (copy number 4) and KO4-PBT (3) but a LOSS in KO2-PBT (copy number 1), a direction the text does not mention.",
+        "snippet": "Visual attestation of Figure 7A-B together with the deposited workbook: the per-sample scatter plots show dense red segment markers for KO2-PBT and KO3-PBT against a near-flat trace for KO4-PBT, and the segment sheet carries rows 'Wwox KO1-PBT chr11 6805858 34544622' at copy number 5 columns reading cn 4 with gene list including Rel, Xpo1 and Bcl11a, 'Wwox KO4-PBT chr11 21333624 34544622' at cn 3, and 'Wwox KO2-PBT chr11 21660888 34544622' at cn 1 over the same gene list.",
+        "surface": "figure",
+        "artifact": ["files/fulltext/PMID41090157_Hussain2025_assets/fig_gr7.jpg", "files/fulltext/PMID41090157_Hussain2025_assets/supp_mmc2.xlsx"],
+        "anchor": "Figure 7A-B panels plus supplemental Table 2, all 213 segment rows",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[18]",
+        "qualifies_needle": "both copy number gains and losses were significantly elevated in",
+        "found_or_sought": "found",
+        "experimental_context": {"system": "CNVkit over whole-exome coverage", "endpoint": "copy-number segments per sample"}
+      },
+      {
+        "proposition": "FIGURE 6, PIXELS - THE PAPER CONTRADICTS ITSELF ABOUT WHICH TUMOUR IS WHICH, and the Aicda/Apobec2 claim hangs on the answer. Figure 6A's column headers and Figure 6B's panel titles both label KO1-PBT as the PBL and KO4-PBT as a PBP; Figure 6C's caption states the opposite, calling the green point 'KO1-PBT (PBP)' and the red point 'KO4-PBT (PBL)'. Nothing in the artefact adjudicates, so the sample identity behind the deaminase result is unresolved.",
+        "snippet": "Visual attestation of Figure 6: panel A's column labels read 'Wwox KO1-PBT', 'Wwox KO2-PBT', 'Wwox KO3-PBT', 'Wwox KO4-PBT' under a PBT band whose sub-labels read PBL, PBP, PBP, PBP; panel B's four rainfall plots are titled 'Wwox KO2-BM', 'Wwox KO3-BM', 'Wwox KO1-PBT (PBL)' and 'Wwox KO4-PBT (PBP)'; panel C plots Aicda and Apobec2 with one green and one red point highlighted among the KO-PBT values.",
+        "surface": "figure",
+        "artifact": ["files/fulltext/PMID41090157_Hussain2025_assets/fig6A_pdfp9_400dpi_heat.png", "files/fulltext/PMID41090157_Hussain2025_assets/fig_gr6.jpg"],
+        "anchor": "Figure 6A column headers and Figure 6B panel titles, 400 dpi render and deposited JPEG",
+        "panel_text_relation": "text_contradicted_by_panel",
+        "contradicts": "entries[37]",
+        "contradicts_needle": "KO1-PBT (PBP)",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "THE FIGURE 6C CAPTION AS PRINTED - the text side of the inversion, quoted so the panel has something to contradict.",
+        "snippet": "The green data point indicates Aicda and Apobec2 expression in the Vk∗MYC:Wwox KO1-PBT (PBP)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41090157_Hussain2025.xml",
+        "anchor": "Figure 6 caption, panel C sentence",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found"
+      }
+    ]
+  }
+}

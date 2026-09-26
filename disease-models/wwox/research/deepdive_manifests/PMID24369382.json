@@ -1,0 +1,616 @@
+{
+ "schema_version": 2,
+ "pmid": 24369382,
+ "doi": "10.1093/brain/awt338",
+ "receipt": "FTR-20260913-24369382-01",
+ "landing": [
+  "FTR-20260913-24369382-01",
+  "fulltext_dossiers/PMID24369382.md",
+  "PAPER 042 (paper_registry_current.md, status claim_linked) declares 'Evidence depth: full text reviewed (via PMC web; non-OA all'API)' behind a ledger that carried only a legacy reconstruction with nine unknown_legacy coverage keys — addressed in the commit candidate"
+ ],
+ "coverage_status": "complete_fulltext_read",
+ "editorial_state": "Brain 2014;137(Pt 2):411-419, PMCID PMC3914474, received 2013-04-04, revised 2013-09-13, accepted 2013-10-14, issue date 2014 Feb. No erratum, correction, expression of concern or retraction by any route checked this session.",
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "The packet's acquisition procedure is NOT open: all surfaces were already on disk with agreeing digests when this session started, and the brief says the cascade is opened for a paper whose surfaces are missing, not for one whose surfaces are present. I re-fingerprinted rather than re-fetched."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline as a first read under scientist_standing_brief M0-M5. Invoking it as a subagent would have put the reading behind a summary, and this reading exists precisely because a summary stood in for a reading."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "R4 triggers examined and none fires FOR THIS READING: it contradicts no persisted locator (no manifest for this PMID has ever existed — paper_packet's contradicting-a-locator procedure reports 'no manifest exists: nothing persisted can be contradicted'), it proposes no narrowing or reversal of a consolidated baseline claim, and its commit candidate corrects an Evidence depth FIELD rather than a claim assertion. 🔴 Recorded as a boundary rather than a clearance: the M4b comparison finds that the registry's 'abundance does not predict severity' framing is not what this paper measured. If that framing turns out to be load-bearing for a consolidated claim, the repair of THAT claim is an R4 trigger and belongs to the task that makes it, not to this reading."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Declined for this paper: its leads are a human phenotype and two variants, both already the object of the reading itself, and the one genuinely new lead it opens — the audiogenic-seizure paradigm as a quantifiable endpoint — cannot be squeezed further without the Supplementary Video that is an undischarged debt."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever matures here. The paper measures a binding loss and a phenotype; nothing in it is therapeutically actionable without a step this paper does not take. One phrase was removed from this field for the publication gate; the reason is recorded in the dossier and in the task record, not here, because explaining it in this file reproduced the very co-occurrence the gate objects to. No proposition was weakened and no quotation was altered."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule, no SMILES, no candidate compound anywhere in this paper."
+  }
+ ],
+ "group_assessment": {
+  "group": "A two-centre collaboration, 20 authors: the clinical-genetics half is M Koenig's (IGBMC Strasbourg / Montpellier, corresponding) with Mallaret and Synofzik as joint first authors and the Tübingen group (Schöls, Schüle, Bauer); the experimental half is the Aldaz laboratory at MD Anderson (Lee, Sagum, Bedford, Aldaz 19th), which supplies the GST-WW constructs, the peptide pull-down and the Wwox knock-out mouse. The Saudi and Israeli-Palestinian families come from Salih (Riyadh) and Mahajnah/Sharkia (Hadera/Kfar Qari').",
+  "research_type": "mixed",
+  "research_type_note": "🔴 'mixed' is chosen from the closed vocabulary and it is not a hedge: the Methods contain two different evidence-producing machines under one author list. Exome sequencing, Sanger segregation and a 189-patient screen are descriptive_clinical run by a primary_disease_group; the GST constructs, the peptide pull-down, the homology model and the mouse are experimental_lab run by the gene-primary laboratory. Classifying the whole as either one would misweight half the paper.",
+  "total_publications": 1020,
+  "total_publications_basis": "`Koenig M[Author]` = 1020 on esearch, 2026-09-13 — the corresponding author's surname-initial query, and it is an UPPER BOUND rather than a career count: 'Koenig M' is a common author string and this query does not disambiguate homonyms. Recorded with that caveat because the field demands an integer and an undisambiguated integer presented as a career total is exactly the shape this repository has been bitten by. The disambiguated figure this reading actually leans on is the gene-specific one: `Koenig M[Author] AND WWOX` = 3 against `Aldaz CM[Author] AND WWOX` = 38, with `Aldaz CM[Author]` = 138 and `Koenig M[Author] AND (ataxia OR ataxias)` = 147.",
+  "publications_on_gene": 38,
+  "primary_for_the_gene": "The gene-primary laboratory is a CO-AUTHOR, not the lead: measured by esearch this session, `Aldaz CM[Author] AND WWOX` = 38 records against `Koenig M[Author] AND WWOX` = 3. Aldaz cloned WWOX; the mouse and the pull-down in this paper are his laboratory's instruments.",
+  "is_primary_group_for_disease": true,
+  "primary_for_the_disease": "YES for the phenotype, and this is the separation that matters for weighting. Koenig's group is a primary group for autosomal recessive cerebellar ataxia and had already localized THIS family's disease to 16q21-q23 (Gribaa 2007, resolved this session to PMID 17470496); the WWOX expertise is borrowed from the co-authoring gene laboratory. So the clinical observation is made by people primary for the disease, and the molecular assay by people primary for the gene — an unusually favourable split for the observation half.",
+  "weighting": "🔴 Observation and interpretation weigh differently, and the split runs along the authorship seam. The CLINICAL OBSERVATION (two consanguineous families, six affected individuals, segregation by Sanger, a 189-patient screen that found nothing further) is cohort work by a disease-primary group and is the strongest thing in the paper. The MOLECULAR INTERPRETATION is thinner than the clinical half and its instruments are borrowed: one in vitro peptide pull-down on bacterially expressed fusion proteins, one homology model, and a mouse that is a FULL Wwox knock-out rather than a model of either human variant. Every mechanistic sentence about what the variants do in a patient's brain is therefore an inference across systems, and the paper's own hedges ('presumably', 'most likely', 'suggesting') mark them. The abundance datum — the one the registry leans on — sits on the interpretation side and on a single individual."
+ },
+ "field_density": {
+  "measured_on": "2026-09-13",
+  "source": "NCBI esearch, direct HTTP, no API key and no e-mail in any URL",
+  "queries": [
+   {"query": "WWOX", "count": 708},
+   {"query": "WWOX AND \"WW domain\"", "count": 487},
+   {"query": "WWOX AND (ataxia OR SCAR12)", "count": 34},
+   {"query": "WWOX AND (ataxia OR SCAR12) AND 1900:2014[dp]", "count": 8},
+   {"query": "WWOX AND epilepsy", "count": 67},
+   {"query": "WWOX AND (DEE OR \"developmental and epileptic encephalopathy\")", "count": 16},
+   {"query": "WWOX AND Pro47Thr", "count": 1},
+   {"query": "WWOX AND P47T", "count": 2},
+   {"query": "WWOX AND G372R", "count": 0},
+   {"query": "WWOX AND \"genotype-phenotype\"", "count": 12},
+   {"query": "WWOX AND fibroblast AND \"western blot\"", "count": 1},
+   {"query": "Aldaz CM[Author] AND WWOX", "count": 38},
+   {"query": "Koenig M[Author] AND WWOX", "count": 3}
+  ],
+  "reading": "🔴 Two numbers bound what this paper can be asked to carry. First, `WWOX AND (ataxia OR SCAR12)` = 34 today against 8 up to and including 2014: this paper opened a literature that barely existed, and the genotype-phenotype field it is cited in was built AFTER it. Second, `WWOX AND fibroblast AND \"western blot\"` = 1 — this paper is the entire intersection. The abundance datum the registry rates HIGH has never been replicated by anyone, because no second record exists to replicate it. `WWOX AND G372R` = 0 and `WWOX AND Pro47Thr` = 1 say the same thing at the variant level: these two alleles are, in the indexed literature, this paper and its restatements."
+ },
+ "multihop": {
+  "references_enumerated": 24,
+  "enumeration_note": "24 enumerated from the fingerprinted PMC reader surface (counted by its 24 reference blocks; the PDF text layer was not used for anything). The list carries DOIs but no PMIDs, so every identifier below was RESOLVED THIS SESSION by NCBI esearch on the artefact's own DOI strings, never from recall.",
+  "gene_direct_refs_in_source": [
+   "17470496",
+   "19936220",
+   "19500159",
+   "22071891",
+   "15064722",
+   "18487609",
+   "19465938"
+  ],
+  "mechanism_direct_refs_in_source": [
+   "20410308"
+  ],
+  "resolved": [
+   "15064722 READ IN THIS REPOSITORY this session under this same task (FTR-20260913-15064722-01) — it is the source of this paper's 'Group I WW domain with predilection for PPXY' premise and of its SIMPLE/LITAF sentence",
+   "19936220 present in the corpus as a deepdive manifest (filename-only cross-query) — the flox mouse this paper's knock-out derives from",
+   "17470496 Gribaa 2007, the antecedent that localized THIS family to 16q21-q23; the cohort's clinical baseline lives there and NOT in this paper"
+  ],
+  "unresolved_and_unread": [
+   "19500159",
+   "22071891",
+   "18487609",
+   "19465938",
+   "20410308"
+  ],
+  "queue_id": null,
+  "queue_constraint": "🔴 NO QUEUE ID, and the reason is the same one the dispatch names: full_text_queue_current.md may be peer-held in this shared checkout, the validator refuses a foreign queue id, and committing that file would land a peer's in-flight work under my message. The debt is therefore declared here with session-resolved identifiers, which is strictly more useful than a queue line — whoever holds the queue next can create the entries without re-resolving anything.",
+  "highest_value_debt": "🔴 17470496 (Gribaa 2007) is the highest-value debt this reading creates, and it is a debt about the CLINICAL half. This paper reports the molecular finding and does NOT restate the phenotype in detail: the MRI, the muscle biopsy, the age of onset and the course of the four Saudi patients are in Gribaa 2007, which this repository has never read. Any statement about what the human phenotype IS, as opposed to which variant segregates with it, currently descends from an unread paper. Second: 19500159 (Suzuki 2009, the lde rat) is the only independent species where WWOX protein was measured and found ABSENT, which is the natural comparator for this paper's abundance datum."
+ },
+ "corpus_crossquery": {
+  "run_on": "2026-09-13",
+  "query": "grep -rl (FILENAMES ONLY, no hit opened during the blind pass) for 24369382 across disease-models/, framework/, governance/ and ledger/; plus the same for the two variant spellings",
+  "findings": [
+   "39 tracked files name this PMID, and 16 of them are OTHER papers' deepdive manifests — the paper is cited across the corpus far more often than it is read. Its own manifest did not exist until this file.",
+   "The registry records that name it (paper_registry_current.md PAPER 042, literature_tracking_log_current.md, batch_queue.md, reading_state.md) were all left closed during the blind pass by design and are opened in M4b.",
+   "🔴 A METHOD NOTE, not a finding: the count is of filenames. What those files SAY about this paper is the firewalled part, and it stayed closed until the receipt landed."
+  ],
+  "counts": {
+   "files_naming_the_pmid": 39,
+   "other_papers_manifests_naming_it": 16
+  },
+  "hits": 16,
+  "hits_basis": "integer = the 16 deepdive manifests of OTHER papers that name 24369382 as a citation, counted by filename: PMID24932569, 26256646, 26499798, 30290271, 30356099, 30619736, 31340538, 32581702, 33255508, 33916893, 34634460, 34747138, 34831305, 36828035, 39507621 (15) plus PMID26499798's dossier — recounted as 15 manifests + 1 dossier; the registries, ledgers, intake, synthesis, checkpoint, candidate, task records and session evaluations are excluded as process surfaces rather than corpus records."
+ },
+ "retraction_check": {
+  "result": "No retraction, correction, erratum or expression of concern. Two routes on 2026-09-13: (1) live PubMed ESummary for PMID 24369382 — `commentscorrections` is null and pubtype is 'Journal Article; Research Support, N.I.H., Extramural; Research Support, Non-U.S. Gov't'; articleids confirm PMC3914474 and DOI 10.1093/brain/awt338, which is also the identity check on every artefact here; (2) the fingerprinted PMC reader surface — zero occurrences of retract/correction/erratum/concern/withdraw outside the reference list. 🔴 Stated in full because a negative check that goes unquoted reads exactly like a check nobody ran.",
+  "checked_on": "2026-09-13",
+  "routes": [
+   "PubMed ESummary (live HTTP, no API key, no e-mail in the URL)",
+   "fingerprinted PMC reader HTML"
+  ],
+  "dependencies": {
+   "schema": "retraction_check.dependencies/1",
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "screened": true,
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 24,
+   "references_screened": 22,
+   "references_with_doi": 22,
+   "unscreenable": {"UNSCREENABLE_NO_DOI": 2},
+   "flagged": [],
+   "noted": [],
+   "snapshot": {"date": "2026-09-10", "days_since_fetch": 3, "rows": 72476, "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"},
+   "citing_relation": "ZERO flagged dependencies, so no citing_relation is owed for a flagged item — stated explicitly because an empty field here is indistinguishable from an unrun check. The 2 UNSCREENABLE_NO_DOI entries are the only two reference blocks in the fingerprinted surface that print no `doi:` at all: Bednarek et al. 2000, Cancer Res 60:2140-5 (the paper that identified WWOX) and Suzuki et al. 2007, Comp Med 57:360-9 (the first phenotypic description of the lde rat). Their citing_relation in this paper: Bednarek 2000 is load-bearing for the Discussion's opening description of the gene and its domains, and Suzuki 2007 is load-bearing for the cross-species convergence argument, jointly with Suzuki 2009 (resolved this session to PMID 19500159), which DOES carry a DOI and was screened. Neither is flagged by the snapshot; both are cited for facts this paper does not re-derive."
+  }
+ },
+ "reading_budget": {
+  "panel_coverage": "10 of 10 panel blocks inspected as images at native resolution, across 4 of 4 printed figures: Fig 1A pedigrees, 1B four Sanger traces, 1C two alignment blocks; Fig 2A structural superimposition, 2B WWOX blot and 2B actin blot; Fig 3 input blot, pull-down blot and Ponceau block; Fig 4 sixteen still frames in two panels. denominator_basis = the lettered panels and separately-bordered blots the article prints, counted on the rendered pages of the fingerprinted publisher PDF (the article prints NO tables, so tables is not_present rather than unread).",
+  "classes_declared": {
+   "Fig 2B": "DETERMINANTE — it is the entire abundance evidence of the paper and the panel the registry's severity framing rests on. One further tranche spent: 600 dpi crop, to answer one written question — how many individuals, and by what method.",
+   "Fig 3": "DETERMINANTE — the only functional assay on either variant. One further tranche spent at 600 dpi, to answer whether 'failed to interact' is what the panel shows.",
+   "Fig 1A/1B": "DETERMINANTE for the individual count and the genotypes, which are read off the panel rather than from the running text.",
+   "Fig 1C": "QUALIFICANTE — conservation conditions the pathogenicity argument without measuring anything in a patient.",
+   "Fig 2A": "ILLUSTRATIVA — a homology-model superimposition; it illustrates the hypothesis the pull-down tests and carries no measurement.",
+   "Fig 4": "QUALIFICANTE — photographic documentation of a behavioural phenotype, with no quantification on the panel; the quantities (3/8, 4/4, n=8 wild-type) are in the text, not in the figure."
+  },
+  "tranches": "🔴 RENDER, DO NOT EXTRACT — and it was measured, not assumed. Page 4 carries 96 vector drawings and two rasters in different colour spaces, exactly the shape that returns a Separation layer instead of the figure; every figure surface used here is therefore a 300 dpi page render or a 600 dpi clipped render of the publisher PDF, produced this session with the recipe declared on each artefact, and NO figure stream was extracted. The inherited page-4..7 renders are declared as present and carry an honest no_recipe: their route was never recorded and I did not run it."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID24369382_Mallaret2014_PMCreader.html",
+   "kind": "article_text",
+   "sha256": "a3a15a3be0353058fcb6160d602e03f5605b5148edfbb8de081d9f98e45a1413",
+   "note": "PMC reader HTML, the GENUINE structured body surface of this reading and the one every text locator resolves against DIRECTLY — no intermediate extraction of mine stands between a quote and the deposited article. Identity verified by content this session: 14 occurrences of PMC3914474, 143 of awt338, the full author and affiliation block, Abstract, Introduction, Materials and methods, Results, Discussion, Supplementary Material, Acknowledgements, Funding and a 24-entry reference list; 0 occurrences of 'recaptcha'. 🔴 ACQUIRED BY A PRIOR SESSION UNDER THIS ACTOR_ID WHOSE ROUTE WAS NEVER RECORDED — see the no_recipe block.",
+   "acquisition_recipe": {"no_recipe": "The bytes were fetched by a prior session under this ACTOR_ID on 2026-09-13 and are fingerprinted; the route was recorded nowhere. Measured this session: disease-models/wwox/research/retrieval_manifest.jsonl carries ZERO lines for 24369382 and zero for Mallaret. I did not run the route and will not attest one I did not run. The prior session's own record claims the acquisition 'reached the retrieval manifest'; that claim is FALSE and is reported as a finding against my own ACTOR_ID's prior session."}
+  },
+  {
+   "path": "files/fulltext/PMID24369382_Mallaret2014.pdf",
+   "kind": "article_binary",
+   "sha256": "e92aa7d28917e63a25dbdaf17e46b554cc9b048b588584c816cf059678097991",
+   "note": "Publisher PDF, 9 pages, verified this session by opening it: page 1 carries the Brain masthead and the title, pages 4-7 carry Figures 1-4, pages 8-9 the Discussion end and the reference list. Every figure surface of this reading is a render of THIS binary, and NO text locator rests on it. Its digest matches the value the prior session recorded, which is independent corroboration that the bytes are the ones that session fingerprinted. 🔴 THE TEXT-LAYER EVIDENCE, KEPT HERE BECAUSE THE SURFACE THAT CARRIED IT IS NO LONGER DECLARED: this file's fonts are untrustworthy by measurement — the validator's font screen reports that none of its 9 fonts carries a ToUnicode CMap, so the file records where glyphs sit and never what they mean, and every extractor agrees on the same false declaration. Measured consequences: the prior session's PyMuPDF extraction (files/fulltext/PMID24369382_Mallaret2014.txt, sha256 0866c0d4706c519ae16cbc8e13731c5bec31a8cfac0a33ae931b82809ff595fa, on disk and DELIBERATELY UNDECLARED) carries 6 C0 control characters and disagreed with the independent HTML surface on 17 of 25 sampled sentences, and this session confirmed the class by inspection — that layer prints 'c.1114G4C' where the rendered page prints 'c.1114G>C', i.e. the damage consumes exactly the load-bearing marks. The layer is neither declared, quoted, nor hand-corrected; the bytes stay on disk so the test remains repeatable.",
+   "acquisition_recipe": {"no_recipe": "Same as the reader HTML: fetched by a prior session under this ACTOR_ID, fingerprinted, route recorded nowhere queryable. Not re-acquired and not attested."}
+  },
+  {
+   "path": "files/fulltext/PMID24369382_Mallaret2014_efetch.xml",
+   "kind": "article_text",
+   "sha256": "b401643004cbf83a54d9a3ef29550e92b43b187016d0eb58d990de629836b875",
+   "note": "🔴 NOT A READING SURFACE, and declared so that nobody mistakes it for one. NCBI efetch response, 14502 bytes, measured this session: 0 occurrences of '<body' and 0 of '<sec'. It carries front matter only — title, authors, affiliations, abstract, reference list. A locator resting on this file could only ever be an abstract locator, and no locator here rests on it.",
+   "acquisition_recipe": {"no_recipe": "Fetched by a prior session under this ACTOR_ID; not in the retrieval manifest; route not attested. The file's content establishes what it is, which is all this reading needs from it."}
+  },
+  {
+   "path": "files/supplements/PMID24369382/supp_awt338_brain-2013-00563-File008.doc",
+   "kind": "supplement_binary",
+   "sha256": "6e9160581d56da7ce510cd2e0fe0aa56b6b770d74d2de27d5f8159cf07b485b6",
+   "note": "The deposited .doc supplement, 22528 bytes, an OLE2 Word 97-2003 container whose own metadata (read this session) says: created and last saved 2013-11-07, author 'North', 1 page, 39 words, 226 characters. Its entire content is the LEGEND of Supplementary Video 1 — 'Video 1: Audiogenic tonic-clonic seizures of Wwox knock-out mice' plus one sentence stating that four twenty-day-old knock-out mice were exposed for 10 min to a digital 14 kHz tone and exhibited wild-running phases, tonic contractions and/or tonic-clonic seizures. 🔴 A LEGEND IS NOT ITS VIDEO: this file is fully read, and the video it describes is an undischarged debt. No locator rests on this container — an OLE2 .doc is not an OPC zip, antiword/catdoc are not installed on this host, and a `strings` dump is a reconstruction rather than a verifiable surface, so the content is reported in the dossier and attested nowhere as a quote.",
+   "acquisition_recipe": {"no_recipe": "Retrieved by a prior session, per its record via the PMC proof-of-work route; the route is not in the retrieval manifest and I did not re-run it. Digest matches the value that session recorded."}
+  },
+  {
+   "path": "files/figures/PMID24369382/renders_s3/p4_300dpi.png",
+   "kind": "figure",
+   "sha256": "ce611351deb3d5eaf610331daead9139438297d50a0b3724d18ab64eeca10e3d",
+   "note": "Page 4 of the publisher PDF at 300 dpi, 2553x3296 — the whole of Figure 1 (A pedigrees, B Sanger traces, C cross-species alignment) with its caption. Rendered, not extracted: this page carries 96 vector drawings and two rasters in different colour spaces.",
+   "acquisition_recipe": {"derived": true, "derived_from": "files/fulltext/PMID24369382_Mallaret2014.pdf", "extractor": {"name": "PyMuPDF", "version": "1.28.2", "call": "page.get_pixmap(dpi=300) on page index 3, saved as PNG", "join": ""}, "acquired_on": "2026-09-13", "result_sha256": "ce611351deb3d5eaf610331daead9139438297d50a0b3724d18ab64eeca10e3d"}
+  },
+  {
+   "path": "files/figures/PMID24369382/renders_s3/p5_300dpi.png",
+   "kind": "figure",
+   "sha256": "a19d850ae842e85857fc6bd3ca8c0aaea1901c23daf58bc29bb170eb343e3490",
+   "note": "Page 5 at 300 dpi — Figure 2 (A homology-model superimposition, B the WWOX western blot and its actin loading control) with the caption and its 'Figure 2 Continued' box in the right column.",
+   "acquisition_recipe": {"derived": true, "derived_from": "files/fulltext/PMID24369382_Mallaret2014.pdf", "extractor": {"name": "PyMuPDF", "version": "1.28.2", "call": "page.get_pixmap(dpi=300) on page index 4, saved as PNG", "join": ""}, "acquired_on": "2026-09-13", "result_sha256": "a19d850ae842e85857fc6bd3ca8c0aaea1901c23daf58bc29bb170eb343e3490"}
+  },
+  {
+   "path": "files/figures/PMID24369382/renders_s3/p6_300dpi.png",
+   "kind": "figure",
+   "sha256": "38645acadf2b32c40a9ecee8684b48f79e8251dc452653eec777fc3d819d698d",
+   "note": "Page 6 at 300 dpi — Figure 3 (6% input blot, WBP1 pull-down blot, Ponceau stain of the peptide) with its caption.",
+   "acquisition_recipe": {"derived": true, "derived_from": "files/fulltext/PMID24369382_Mallaret2014.pdf", "extractor": {"name": "PyMuPDF", "version": "1.28.2", "call": "page.get_pixmap(dpi=300) on page index 5, saved as PNG", "join": ""}, "acquired_on": "2026-09-13", "result_sha256": "38645acadf2b32c40a9ecee8684b48f79e8251dc452653eec777fc3d819d698d"}
+  },
+  {
+   "path": "files/figures/PMID24369382/renders_s3/p7_300dpi.png",
+   "kind": "figure",
+   "sha256": "0dc8e8e5392135729957efbf284ffdae3a43bb339ccf0e3e77726b9b44f498d9",
+   "note": "Page 7 at 300 dpi — Figure 4, sixteen still frames of audiogenic seizures in two panels, with its caption.",
+   "acquisition_recipe": {"derived": true, "derived_from": "files/fulltext/PMID24369382_Mallaret2014.pdf", "extractor": {"name": "PyMuPDF", "version": "1.28.2", "call": "page.get_pixmap(dpi=300) on page index 6, saved as PNG", "join": ""}, "acquired_on": "2026-09-13", "result_sha256": "0dc8e8e5392135729957efbf284ffdae3a43bb339ccf0e3e77726b9b44f498d9"}
+  },
+  {
+   "path": "files/figures/PMID24369382/renders_s3/fig1_panel_600dpi.png",
+   "kind": "figure",
+   "sha256": "ff7bb80a4b5bae37fd6714275211fa803222925986b1be0833f571747af31059",
+   "note": "Figure 1's panel region at 600 dpi, 4266x4368, clipped above its caption. The surface on which the pedigree genotype labels (47T/N, 47T/47T, N/N, 372R/N, 372R/372R) and the individual identifiers II.1-II.7 and II.1-II.2 were read.",
+   "acquisition_recipe": {"derived": true, "derived_from": "files/fulltext/PMID24369382_Mallaret2014.pdf", "extractor": {"name": "PyMuPDF", "version": "1.28.2", "call": "page.get_pixmap(dpi=600, clip=Rect(46,55,558,579)) on page index 3, the clip taken from the top of the 'Figure 1' caption block returned by page.get_text('blocks')", "join": ""}, "acquired_on": "2026-09-13", "result_sha256": "ff7bb80a4b5bae37fd6714275211fa803222925986b1be0833f571747af31059"}
+  },
+  {
+   "path": "files/figures/PMID24369382/renders_s3/fig2_panel_600dpi.png",
+   "kind": "figure",
+   "sha256": "a589ff1f2841014353085762a52b6a231c2bac6667f9a9fa6de6ae7b64eada15",
+   "note": "Figure 2's panel region at 600 dpi, 2068x3180 — the structural superimposition and, below it, the western blot with its lane labels (kDa ladder, P10/P13/P14, controls A-D, Mouse cerebellum) and the actin panel. This is the surface the abundance attestations rest on.",
+   "acquisition_recipe": {"derived": true, "derived_from": "files/fulltext/PMID24369382_Mallaret2014.pdf", "extractor": {"name": "PyMuPDF", "version": "1.28.2", "call": "page.get_pixmap(dpi=600, clip=Rect(55,55,303,437)) on page index 4, the clip taken from the top of the 'Figure 2' caption block returned by page.get_text('blocks')", "join": ""}, "acquired_on": "2026-09-13", "result_sha256": "a589ff1f2841014353085762a52b6a231c2bac6667f9a9fa6de6ae7b64eada15"}
+  },
+  {
+   "path": "files/figures/PMID24369382/renders_s3/fig3_panel_600dpi.png",
+   "kind": "figure",
+   "sha256": "e481bf1e1f6931ce451bdc49f60c64bec81173e1269d7959b16328dbf55d2640",
+   "note": "Figure 3's panel region at 600 dpi, 2068x1994 — Input (6%) and Pull-down: WBP1 blots with their four lane labels each, the kDa ladder, and the Ponceau block. This is the surface on which the mutant lanes were read.",
+   "acquisition_recipe": {"derived": true, "derived_from": "files/fulltext/PMID24369382_Mallaret2014.pdf", "extractor": {"name": "PyMuPDF", "version": "1.28.2", "call": "page.get_pixmap(dpi=600, clip=Rect(46,55,294,294)) on page index 5, the clip taken from the top of the 'Figure 3' caption block returned by page.get_text('blocks')", "join": ""}, "acquired_on": "2026-09-13", "result_sha256": "e481bf1e1f6931ce451bdc49f60c64bec81173e1269d7959b16328dbf55d2640"}
+  },
+  {
+   "path": "files/figures/PMID24369382/renders_s3/fig4_panel_600dpi.png",
+   "kind": "figure",
+   "sha256": "4af4d4631c61d236a0d4a66af7a3042e1a9558a989b84e9cd6720fe137a5d079",
+   "note": "Figure 4's panel region at 600 dpi, 4134x4683 — sixteen still frames with their burnt-in timestamps (t 0 to t 42 s in A; t 0 to t 14 s in B).",
+   "acquisition_recipe": {"derived": true, "derived_from": "files/fulltext/PMID24369382_Mallaret2014.pdf", "extractor": {"name": "PyMuPDF", "version": "1.28.2", "call": "page.get_pixmap(dpi=600, clip=Rect(55,55,551,617)) on page index 6, the clip taken from the top of the 'Figure 4' caption block returned by page.get_text('blocks')", "join": ""}, "acquired_on": "2026-09-13", "result_sha256": "4af4d4631c61d236a0d4a66af7a3042e1a9558a989b84e9cd6720fe137a5d079"}
+  },
+  {
+   "path": "files/figures/PMID24369382/pdf_pages/page-4.png",
+   "kind": "figure",
+   "sha256": "51aac73b92f6454863e45912b2808a5db228f028f1df94c916615f9ada2cc0a8",
+   "note": "Inherited 300 dpi render of page 4 from a prior session under this ACTOR_ID. Declared because it is on disk and fingerprinted; no locator rests on it, because its route was never recorded and I re-rendered the same page myself with a stated recipe. Kept rather than deleted: deleting unique material is reserved, and an inherited artefact with an honest no_recipe is more informative than an absent one.",
+   "acquisition_recipe": {"no_recipe": "Derived from the PDF by a prior session at 300 dpi; extractor, call and join were not recorded anywhere, and the retrieval manifest has no line for this PMID. Superseded for this reading by renders_s3/p4_300dpi.png, which carries a replayable recipe."}
+  },
+  {
+   "path": "files/figures/PMID24369382/pdf_pages/page-5.png",
+   "kind": "figure",
+   "sha256": "3dbfa187dc51c9cb312f0c95afdb0d9d8d8e5aad6c080c730e509a41bbdfa335",
+   "note": "Inherited 300 dpi render of page 5. Same status as page-4.png: declared, fingerprinted, unused, no_recipe.",
+   "acquisition_recipe": {"no_recipe": "Route not recorded by the session that produced it; superseded by renders_s3/p5_300dpi.png."}
+  },
+  {
+   "path": "files/figures/PMID24369382/pdf_pages/page-6.png",
+   "kind": "figure",
+   "sha256": "7a1e99e5a68625f4467bade757766dab0e21bd95c97592412f85cb54dfda760b",
+   "note": "Inherited 300 dpi render of page 6. Declared, fingerprinted, unused, no_recipe.",
+   "acquisition_recipe": {"no_recipe": "Route not recorded by the session that produced it; superseded by renders_s3/p6_300dpi.png."}
+  },
+  {
+   "path": "files/figures/PMID24369382/pdf_pages/page-7.png",
+   "kind": "figure",
+   "sha256": "b4ac9c06822556aa095b31e82203db907594cbb81faea22dbc534ede0cfc1c66",
+   "note": "Inherited 300 dpi render of page 7. Declared, fingerprinted, unused, no_recipe. 🔴 The inherited set covers pages 4-7 of a 9-page article and was handed to me as 'four 300-dpi page renders' without that qualification; all nine pages were rendered this session.",
+   "acquisition_recipe": {"no_recipe": "Route not recorded by the session that produced it; superseded by renders_s3/p7_300dpi.png."}
+  }
+ ],
+ "verbatim_locators": {
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Established from the artefacts in hand rather than from a live index call: the fingerprinted PMC reader surface IS the PMC full text of this article and prints 'PMCID: PMC3914474 PMID: 24369382' in its own metadata block (14 occurrences of the PMCID, 143 of the article's awt338 identifier), so the full text is in PMC and externally reachable there, and PubMed ESummary on 2026-09-13 returns pmc/pmcid articleids for PMC3914474. 🔴 The boundary, stated rather than glossed: I did NOT re-run Europe PMC's fullTextXML or fullTextIdList route this session. The prior session's record says fullTextXML returns 404 and isOpenAccess=N with inEPMC=Y; I make no claim resting on a route I did not run, and nothing in this manifest depends on the machine-readable XML being fetchable — every text locator resolves against the local structured HTML surface itself. 🔴 A COUNT I HAD WRONG TWICE AND FIXED BY MEASURING IT, RECORDED RATHER THAN SILENTLY CORRECTED: a first draft of this field claimed 24 of 36 entries carry an abstract_snippet; a second said nine of thirty-six. The measured values, read out of this file by command: 35 entries — 28 body, 7 figure — of which NINE carry an abstract_snippet and all nine resolve against the abstract surface the validator separates. The other 26 (7 figure attestations, 19 body) carry no abstract_snippet, and all 19 body ones carry their own per-entry argument; zero entries lack both. A field-density figure written from expectation is precisely the failure this actor's own standing rule exists for, and it took two attempts to stop doing it in the same session.",
+  "abstract_anchoring_waived": "Belt-and-braces, and it applies to the 26 entries that carry no abstract_snippet: SEVEN of them are figure attestations (pixel facts — lane counts, band presence, the faintness of a residual signal — which no abstract sentence can carry, and anchoring a pixel fact to a prose summary would make a simplification look like corroboration), and the remaining NINETEEN are body sentences the abstract omits entirely or contradicts by compression, each carrying its own per-entry argument; among them: the antibody and dilution, the 6% input and Ponceau control claims, the 189-patient screen, the authors' own limitation about cerebellar attribution, and the absence of tumours in patients and carriers. The abstract of this paper states a positive molecular result and a species-convergence conclusion; it says nothing about how many individuals carried the protein measurement, nothing about the mouse denominators, and nothing about what was not tested.",
+  "entries": [
+   {
+    "proposition": "THE COHORT'S FIRST HALF, AND ITS PROVENANCE IS AN EARLIER PAPER: Family 1 is a large consanguineous Saudi family with four affected children, and this paper's own framing of it is a restatement of Gribaa 2007 (resolved this session to PMID 17470496), where the phenotype and the linkage interval were established.",
+    "snippet": "We reported a new form of childhood onset autosomal recessive cerebellar ataxia with generalized tonic-clonic epilepsy and mental retardation in a large consanguineous family from Saudi Arabia with four affected children",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24369382_Mallaret2014_PMCreader.html",
+    "anchor": "Introduction, final paragraph, first sentence",
+    "panel_text_relation": "text_only",
+    "abstract_snippet": "We previously localized a new form of recessive ataxia with generalized tonic-clonic epilepsy and mental retardation to a 19 Mb interval in 16q21-q23 by homozygosity mapping of a large consanguineous Saudi Arabian family."
+   },
+   {
+    "proposition": "VARIANT 1, AT RESIDUE AND DOMAIN LEVEL, from the paper's own text: p.Pro47Thr sits in the first WW domain and is a hydrophobic-to-polar substitution. This is the variant every downstream statement in this repository about 'the WW1 missense allele' descends from.",
+    "snippet": "The mutation affects the first WW domain (WW1) of WWOX (p.Pro47Thr) and causes a radical change from a hydrophobic amino acid, proline, to a polar one, threonine.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24369382_Mallaret2014_PMCreader.html",
+    "anchor": "Results, 'Mutation analysis of Family 1', second paragraph",
+    "panel_text_relation": "text_only",
+    "abstract_snippet": "We now report the identification by whole exome sequencing of the missense mutation changing proline 47 into threonine in the first WW domain of the WW domain containing oxidoreductase gene,"
+   },
+   {
+    "proposition": "BOTH VARIANTS AT NUCLEOTIDE AND PROTEIN LEVEL, IN ONE ATTESTED SENTENCE, and it is the figure's own caption rather than the running text: c.139C>A / p.Pro47Thr in Family 1 and c.1114G>C / p.Gly372Arg in Family 2. Quoted from the caption deliberately — the running-text sentence carrying the second variant is split across an italic gene name in this surface, and a stitched quote is refused by this repository.",
+    "snippet": "Family trees showing consanguinity and segregation of the disease with mutations c.139C>A, causing the p.Pro47Thr missense change (47T) and c.1114G>C causing the p.Gly372Arg missense change (372R).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24369382_Mallaret2014_PMCreader.html",
+    "anchor": "Figure 1 caption, clause (A)",
+    "panel_text_relation": "text_only",
+    "abstract_snippet": "We also identified another highly conserved homozygous WWOX mutation changing glycine 372 to arginine in a second consanguineous family."
+   },
+   {
+    "proposition": "THE SEGREGATION EVIDENCE IS SANGER ON FOUR TRACES, NOT ON THE WHOLE PEDIGREE: in the PUBLISHED pedigrees of Mallaret et al., Brain 2014;137(Pt 2):411-419 (PMID 24369382 / PMCID PMC3914474 / DOI 10.1093/brain/awt338), Figure 1B sequences one index patient and one carrier parent per family — the two consanguineous families that paper reports, labelled Family 1 and Family 2 by its own authors. The genotypes of the other relatives are pedigree labels, which is a different kind of evidence from a printed trace. 🔴 ATTRIBUTION STATED IN THIS RECORD ON PURPOSE: the relatives named in the quoted caption below are members of that published cohort, identified exactly as the article identifies them, and they are no individual of any private overlay. The citation travels with the assertion rather than sitting in a neighbouring field.",
+    "snippet": "Sanger sequencing of the mutations c.139C>A and c.1114G>C: index patients are homozygous for the substitution and carrier relatives (mother I-2 in Family 1 and father I-1 in Family 2) are heterozygous for the same substitution.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24369382_Mallaret2014_PMCreader.html",
+    "anchor": "Figure 1 caption, clause (B)",
+    "panel_text_relation": "text_only",
+    "abstract_anchoring_waived": "The abstract reports the variants and says nothing about which individuals were sequenced by which method."
+   },
+   {
+    "proposition": "WHAT FAMILY 2 ADDS TO THE PHENOTYPE, AND IT IS AN EXPANSION RATHER THAN A REPLICATION: the same triad plus prominent upper motor neuron involvement, which the authors themselves read as spastic ataxia or complicated hereditary spastic paraplegia.",
+    "snippet": "In addition, prominent upper motor neuron affection with leg spasticity and positive bilateral extensor plantar response was present, thus resembling spastic ataxia or complicated hereditary spastic paraplegia.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24369382_Mallaret2014_PMCreader.html",
+    "anchor": "Results, 'Mutation analysis of Family 2'",
+    "panel_text_relation": "text_only",
+    "abstract_snippet": "The phenotype closely resembled the index family, presenting with generalized tonic-clonic epilepsy, mental retardation and ataxia, but also included prominent upper motor neuron disease."
+   },
+   {
+    "proposition": "THE PAPER'S OWN NEGATIVE, AND IT BOUNDS EVERY PREVALENCE STATEMENT BUILT ON THIS PAPER: a 189-patient, 182-family screen of the WWOX coding exons found no further mutation. The cohort is two families because the screen returned nothing, not because only two were looked for.",
+    "snippet": "in 189 unrelated ataxic patients with no molecular diagnosis (seven patients with childhood onset ataxia associated with epilepsy, 67 patients with onset of ataxia before 3 years, and 135 patients with onset of ataxia before 20 years) revealed no additional mutation.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24369382_Mallaret2014_PMCreader.html",
+    "anchor": "Results, 'Mutation analysis of Family 2', closing sentence",
+    "panel_text_relation": "text_only",
+    "abstract_anchoring_waived": "The abstract does not mention the screen at all. A reader with only the abstract cannot know that the two families are the residue of a 189-patient search, which is the single most important boundary on any prevalence or genotype-phenotype use of this paper."
+   },
+   {
+    "proposition": "THE METHOD BEHIND THE ABUNDANCE DATUM, IN FULL: one polyclonal antibody against the first 19 amino acids of WWOX, at 1:500, on cultured skin fibroblasts. There is no second antibody, no orthogonal method, and no quantification protocol anywhere in the Methods.",
+    "snippet": "Western blot analysis was performed with polyclonal IgG antibodies directed against the first 19 amino acids of WWOX (Santa Cruz biotechnology, dilution 1:500).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24369382_Mallaret2014_PMCreader.html",
+    "anchor": "Materials and methods, 'WW domain three-dimensional modelling and western blot analysis'",
+    "panel_text_relation": "text_only",
+    "abstract_anchoring_waived": "A method sentence; the abstract names no assay, no antibody and no dilution."
+   },
+   {
+    "proposition": "🔴 THE DENOMINATOR OF THE ABUNDANCE EXPERIMENT, AND IT IS ONE INDIVIDUAL: three patient lanes are three PASSAGES of the same fibroblast culture from Patient II-3 of Family 1, against four unrelated control lines. Three lanes are not three patients, and this caption is where that is stated.",
+    "snippet": ": WWOX expression in cultured skin fibroblasts from Patient II-3 of Family 1 at three passages 10, 13 and 14 (P10, P13, P14) and from fibroblasts from four different controls (A to D).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24369382_Mallaret2014_PMCreader.html",
+    "anchor": "Figure 2 caption, clause (B), 'Upper panel'",
+    "panel_text_relation": "text_only",
+    "experimental_context": {"system": "human primary skin fibroblast culture", "cell_line": "Patient II-3 dermal fibroblasts, passages 10/13/14", "genotype": "WWOX p.Pro47Thr homozygous", "comparator": "four unrelated control fibroblast lines A-D", "endpoint": "WWOX protein abundance by immunoblot"},
+    "abstract_anchoring_waived": "The abstract does not mention the western blot, the patient or the controls. This is the sentence a reader needs in order not to mistake three lanes for three individuals, and the abstract cannot supply it."
+   },
+   {
+    "proposition": "🔴 THE METHOD FOR 'SIMILAR AMOUNTS' IS THE AUTHORS' OWN EYES, AND THEY SAY SO. The abundance comparison is declared as visual inspection of a blot. No densitometry, no replicate quantification, no statistic and no error term appears anywhere in the paper for this measurement.",
+    "snippet": "Based on visual inspection, similar amounts of the mutant and wild-type WWOX protein (arrow) are observed.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24369382_Mallaret2014_PMCreader.html",
+    "anchor": "Figure 2 caption, clause (B), 'Upper panel', second sentence",
+    "panel_text_relation": "text_only",
+    "experimental_context": {"system": "human primary skin fibroblast culture", "cell_line": "Patient II-3 dermal fibroblasts, passages 10/13/14", "genotype": "WWOX p.Pro47Thr homozygous", "comparator": "four unrelated control fibroblast lines A-D", "endpoint": "WWOX protein abundance judged by eye"},
+    "abstract_anchoring_waived": "The abstract carries no abundance statement of any kind, so it cannot carry the qualification 'based on visual inspection' either — and that qualification is the whole epistemic weight of the datum."
+   },
+   {
+    "proposition": "THE RESULTS-SECTION FORM OF THE ABUNDANCE OBSERVATION: a similar level of WWOX protein in patient fibroblasts compared to four controls. Note what the comparison is between — one patient's cells and control cells — and what it is NOT between: two patients of different severity, or two genotypes.",
+    "snippet": "western blot analysis from patient fibroblasts showed a similar level of WWOX protein compared to four different controls",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24369382_Mallaret2014_PMCreader.html",
+    "anchor": "Results, 'Interaction studies of the mutant WW domain', final paragraph",
+    "panel_text_relation": "text_only",
+    "abstract_snippet": "We demonstrate that proline 47 is a key amino acid essential for maintaining the WWOX protein fully functional, with its mutation into a threonine resulting in a loss of peptide interaction for the first WW domain."
+   },
+   {
+    "proposition": "THE AUTHORS' OWN INTERPRETATION OF THE ABUNDANCE DATUM, AND ITS SCOPE IS 'GLOBAL PROTEIN LEVELS' — not severity, not genotype-phenotype correlation, and not any comparison between affected individuals. Marked as theirs: the verb is 'suggesting'.",
+    "snippet": ") suggesting that the mutation does not alter global protein levels.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24369382_Mallaret2014_PMCreader.html",
+    "anchor": "Results, 'Interaction studies of the mutant WW domain', final paragraph, immediately after the blot result",
+    "panel_text_relation": "text_only",
+    "abstract_anchoring_waived": "The abstract states the positive interaction result and omits the protein-level inference entirely, so no abstract sentence can carry this proposition or its hedge."
+   },
+   {
+    "proposition": "THE BLOT'S OWN UNRESOLVED SIGNAL, STATED BY THE AUTHORS: a 35 kDa band on every human fibroblast lane whose identity is unknown and which they presume non-specific. An antibody that produces an unexplained band on every patient and control lane is the instrument the abundance judgement was made with.",
+    "snippet": "The nature of the 35 kDa band seen on the human fibroblast lanes is not known and is presumably non-specific cross-reaction since it is not seen in the mouse tissues (tissues other than cerebellum were also tested, not shown).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24369382_Mallaret2014_PMCreader.html",
+    "anchor": "Figure 2 caption, clause (B), 'Upper panel', closing sentence",
+    "panel_text_relation": "text_only",
+    "abstract_anchoring_waived": "A figure-caption qualification about antibody specificity; nothing in the abstract approaches it."
+   },
+   {
+    "proposition": "WHAT THE MOUSE LANE IS FOR, IN THE AUTHORS' WORDS: a position marker for the WWOX band and a demonstration of high cerebellar expression. It is NOT a comparator for the patient lanes — different species, different tissue, and declared for a different purpose.",
+    "snippet": ": cerebellar mouse extracts were analysed in a similar western blot with the same primary antibody, in order to show the position of the WWOX band and high expression of WWOX in this tissue.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24369382_Mallaret2014_PMCreader.html",
+    "anchor": "Figure 2 caption, clause (B), 'Right lane'",
+    "panel_text_relation": "text_only",
+    "experimental_context": {"system": "mouse cerebellar tissue extract", "genotype": "wild-type mouse", "comparator": "none — declared as a band-position marker", "endpoint": "position of the WWOX band and its cerebellar abundance"},
+    "abstract_anchoring_waived": "The abstract does not mention the blot or its mouse lane."
+   },
+   {
+    "proposition": "THE FUNCTIONAL RESULT ON VARIANT 1, AND THE ONLY FUNCTIONAL ASSAY IN THE PAPER: in an in vitro peptide pull-down, wild-type WWOX1 and WWOX1-2 fusion proteins were pulled down by a PPPY peptide and the p.Pro47Thr versions were not. Stated by the authors as an absolute failure to interact.",
+    "snippet": "the wild-type WWOX1 and WWOX1–2 fusion proteins were successfully pulled down whereas the p.Pro47Thr mutant versions failed to interact with the PPPY containing oligopeptide.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24369382_Mallaret2014_PMCreader.html",
+    "anchor": "Results, 'Interaction studies of the mutant WW domain', on Figure 3",
+    "panel_text_relation": "text_only",
+    "experimental_context": {"system": "in vitro peptide pull-down of bacterially expressed GST fusion proteins", "genotype": "GST-WWOX1 and GST-WWOX1-2, wild-type versus p.Pro47Thr", "treatment": "biotinylated WBP1 PPPY oligopeptide on streptavidin agarose", "endpoint": "anti-GST immunoblot signal in the pull-down fraction"},
+    "abstract_snippet": "We demonstrate that proline 47 is a key amino acid essential for maintaining the WWOX protein fully functional, with its mutation into a threonine resulting in a loss of peptide interaction for the first WW domain."
+   },
+   {
+    "proposition": "THE CAPTION'S STRONGER FORM OF THE SAME RESULT, AND WHERE ITS MECHANISM BECOMES A PRESUMPTION: 'sufficient to abrogate the affinity of WWOX for PPXY motif containing interacting partners' generalises from one peptide to a motif family, and the fold explanation is explicitly 'presumably'.",
+    "snippet": ": only the wild-type and not the mutant fusion peptides were efficiently pulled down with the PPPY containing oligopeptide, demonstrating that the change of proline 47 to threonine is sufficient to abrogate the affinity of WWOX for PPXY motif containing interacting partners, presumably by destabilizing the WW1 fold.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24369382_Mallaret2014_PMCreader.html",
+    "anchor": "Figure 3 caption, 'Right'",
+    "panel_text_relation": "text_only",
+    "experimental_context": {"system": "in vitro peptide pull-down of bacterially expressed GST fusion proteins", "genotype": "GST-WWOX1 and GST-WWOX1-2, wild-type versus p.Pro47Thr", "treatment": "biotinylated WBP1 PPPY oligopeptide", "endpoint": "anti-GST immunoblot signal in the pull-down fraction"},
+    "abstract_anchoring_waived": "The abstract's version is 'a loss of peptide interaction for the first WW domain' — narrower and without the fold presumption, so quoting the abstract here would hide exactly the generalisation this entry exists to mark."
+   },
+   {
+    "proposition": "THE PAPER'S OWN INPUT CONTROL AND WHAT IT CLAIMS: a 6% input blot said to demonstrate equal amounts of input material. The claim is about amount, and the panel it rests on is inspected in entries[31].",
+    "snippet": "Western blot of 6% input of GST fusion proteins to demonstrate equal amounts of input material in the pull-down experiments (",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24369382_Mallaret2014_PMCreader.html",
+    "anchor": "Figure 3 caption, 'left'",
+    "panel_text_relation": "text_only",
+    "experimental_context": {"system": "in vitro pull-down input control", "genotype": "GST-WWOX1 and GST-WWOX1-2, wild-type versus p.Pro47Thr", "endpoint": "anti-GST immunoblot of 6% of the input material"},
+    "abstract_anchoring_waived": "A control-panel claim absent from the abstract."
+   },
+   {
+    "proposition": "THE PAPER'S OWN LIGAND-LOADING CONTROL AND WHAT IT CLAIMS: a Ponceau stain said to demonstrate incubation with equal amounts of biotinylated WBP1 peptide across the four lanes. Inspected in entries[32].",
+    "snippet": ": red ponceau stain of the pull-down blot (oligopeptide range), to demonstrate incubation with equal amounts of biotinylated WBP1 peptide.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24369382_Mallaret2014_PMCreader.html",
+    "anchor": "Figure 3 caption, 'Bottom'",
+    "panel_text_relation": "text_only",
+    "experimental_context": {"system": "in vitro pull-down ligand-loading control", "treatment": "biotinylated WBP1 PPPY oligopeptide", "endpoint": "Ponceau S stain of the peptide range of the pull-down blot"},
+    "abstract_anchoring_waived": "A control-panel claim absent from the abstract."
+   },
+   {
+    "proposition": "THE MOUSE PARADIGM, EXACTLY AS RUN: 16-day-old knock-out mice, sustained 11-14 kHz tone, 5-10 minutes. This is the stimulus protocol every audiogenic-seizure statement descending from this paper rests on.",
+    "snippet": "To investigate susceptibility to epilepsy, 16-day-old knock-out mice were exposed to sustained sound (11–14 kHz tone) for 5–10 min.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24369382_Mallaret2014_PMCreader.html",
+    "anchor": "Results, 'Conditional knock-out mouse model'",
+    "panel_text_relation": "text_only",
+    "abstract_anchoring_waived": "The abstract says only that the knock-out mouse displays spontaneous and audiogenic seizures; the age, the frequency band and the exposure duration are in the Results alone."
+   },
+   {
+    "proposition": "🔴 THE MOUSE PENETRANCE AT 16 DAYS IS A MINORITY: three of eight knock-out mice seized on first exposure. 'Wwox knock-out mice display audiogenic seizures' is true of 3/8 at this age, and the fraction is in the text and not in the abstract or the figure.",
+    "snippet": "A few knock-out mice (three of eight) presented with audiogenic tonic-clonic seizures in the first minutes after sound exposure.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24369382_Mallaret2014_PMCreader.html",
+    "anchor": "Results, 'Conditional knock-out mouse model', immediately after the exposure protocol",
+    "panel_text_relation": "text_only",
+    "experimental_context": {"system": "mouse", "genotype": "Wwox full constitutive knock-out, 129SV/C57Bl/6", "treatment": "11-14 kHz tone, 5-10 min, at 16 days", "comparator": "wild-type littermates, n = 8, zero seizures", "endpoint": "audiogenic tonic-clonic seizure, observed"},
+    "abstract_anchoring_waived": "The abstract's 'display spontaneous and audiogenic seizures' carries no denominator. Anchoring a 3-of-8 fraction to a sentence that states the phenotype unqualified would let a simplification corroborate a quantity it does not contain."
+   },
+   {
+    "proposition": "🔴 THE 20-DAY RESULT IS UNIVERSAL IN A COHORT THAT SURVIVORSHIP HAS ALREADY REDUCED TO FOUR: 'all knock-out mice' at 20 days is four animals out of the eight tested at 16 days, in a strain that dies before four weeks. The denominator changes between the two exposures and the paper states both.",
+    "snippet": "At 20 days, the four surviving mice were exposed to a 14 kHz tone.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24369382_Mallaret2014_PMCreader.html",
+    "anchor": "Results, 'Conditional knock-out mouse model', two sentences after the 3-of-8 result",
+    "panel_text_relation": "text_only",
+    "experimental_context": {"system": "mouse", "genotype": "Wwox full constitutive knock-out, 129SV/C57Bl/6", "treatment": "14 kHz tone at 20 days", "comparator": "none reported at this age", "endpoint": "audiogenic seizure in all four surviving animals"},
+    "abstract_anchoring_waived": "The abstract carries no denominators, and this entry exists precisely to record one."
+   },
+   {
+    "proposition": "🔴 THE MOUSE IS A FULL CONSTITUTIVE KNOCK-OUT, DESPITE THE SECTION BEING HEADED 'Conditional knock-out mouse model'. The Cre is active in the oocyte, so the progeny are whole-body nulls. Nothing in this paper models either human missense allele, and the mouse therefore cannot speak to a partial-loss-of-function phenotype.",
+    "snippet": "Cre recombinase in these females is activated in oocytes with Cre protein persisting in the embryo leading to constitutive recombination and producing full knock-out progeny (",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24369382_Mallaret2014_PMCreader.html",
+    "anchor": "Materials and methods, 'Animal experiments', second paragraph",
+    "panel_text_relation": "text_only",
+    "abstract_anchoring_waived": "The abstract says 'the short-lived Wwox knock-out mouse' and never distinguishes conditional from constitutive; the distinction lives in one Methods sentence and it is the one that decides what the mouse can be transferred to."
+   },
+   {
+    "proposition": "THE AUTHORS' OWN LIMITATION ON THE ATAXIA PHENOTYPE, AND IT IS DECISIVE FOR TRANSFER: the mice's early death prevented them from establishing that the balance disturbance is cerebellar at all. The paper's title says cerebellar ataxia; its mouse evidence for cerebellar attribution is explicitly absent.",
+    "snippet": "prevented us from testing whether the balance problems were directly related to cerebellar dysfunction or not.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24369382_Mallaret2014_PMCreader.html",
+    "anchor": "Discussion, second paragraph",
+    "panel_text_relation": "text_only",
+    "abstract_anchoring_waived": "The abstract concludes that homozygous WWOX mutations cause cerebellar ataxia with epilepsy across species. The limitation contradicts that compression, so anchoring it to the abstract would be anchoring a caveat to the sentence it qualifies."
+   },
+   {
+    "proposition": "🔴 THE SENTENCE THAT ACTUALLY CONNECTS PROTEIN PRESENCE TO SEVERITY IN THIS PAPER, AND ITS DIRECTION IS THE OPPOSITE OF A DISSOCIATION: residual protein is invoked TO EXPLAIN why the human disease is milder than the mouse and rat. The authors use abundance as a severity explanation, not as evidence that abundance fails to predict severity. Typed as the authors' inference — the verb is 'presumably' twice.",
+    "snippet": "The milder presentation of the human disease compared with the mouse and rat models is presumably because of a partial loss of function mutation as the mutant p.Pro47Thr WWOX protein is still present, at least in human skin fibroblasts, and the dehydrogenase/reductase domain of the mutant protein is presumably still functional in Family 1 and partially functional in Family 2, unlike the dehydrogenase/reductase domain of the WWOX mouse and rat models.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24369382_Mallaret2014_PMCreader.html",
+    "anchor": "Discussion, second paragraph, after the lde rat comparison",
+    "panel_text_relation": "text_only",
+    "abstract_snippet": "Moreover, we observed that the short-lived"
+   },
+   {
+    "proposition": "THE CROSS-SPECIES ABUNDANCE COMPARATOR, AND IT IS THE ONLY PLACE IN THIS PAPER WHERE PROTEIN IS ABSENT RATHER THAN PRESENT: in the lde rat, mutant WWOX is undetectable by western blot. The rat is the severe end and has no protein; the human is the mild end and has protein — which is the comparison the Discussion builds, and it is a cross-species one.",
+    "snippet": "Mutated WWOX is not detected in western blots of",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24369382_Mallaret2014_PMCreader.html",
+    "anchor": "Discussion, second paragraph, on the Suzuki lde rat (resolved this session to PMID 19500159)",
+    "panel_text_relation": "text_only",
+    "experimental_context": {"system": "rat tissue (lde spontaneous mutant)", "genotype": "homozygous lde, a 13 bp exon-9 deletion", "comparator": "wild-type rat", "endpoint": "WWOX protein detectability by immunoblot"},
+    "abstract_anchoring_waived": "The abstract mentions the rat as a phenotypic precedent only and says nothing about its protein. This snippet is also deliberately cut short: the sentence continues into an italic 'lde' which this surface places on the next line, and a stitched quote is refused."
+   },
+   {
+    "proposition": "A NEGATIVE WITH ITS DENOMINATOR AND ITS AGE RANGE, AND IT BOUNDS THE TUMOUR-SUPPRESSOR TRANSFER: no tumour in any affected individual (17-26 years in Family 1, 5 and 10 in Family 2) nor in the heterozygous carriers, with the authors' own caveat that later risk is not excluded.",
+    "snippet": "Interestingly, neither the patients (current age ranging from 17 to 26 years in Family 1, and 5 and 10 years in Family 2) nor the heterozygous carriers presented with tumour development, but we cannot exclude that the patients may present an increased risk of developing cancer at a later stage.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24369382_Mallaret2014_PMCreader.html",
+    "anchor": "Discussion, final paragraph",
+    "panel_text_relation": "text_only",
+    "abstract_anchoring_waived": "The abstract says nothing about tumours, and this negative is one of the few places the paper reports an outcome across all six affected individuals."
+   },
+   {
+    "proposition": "WHY VARIANT 2 HAS NO FUNCTIONAL EVIDENCE AT ALL, IN THE AUTHORS' WORDS: the domain around glycine 372 could not be reliably modelled. G372R is supported by segregation, conservation and absence from population databases — and by no assay, no model and no protein measurement anywhere in this paper.",
+    "snippet": "Moderate conservation of the amino acid sequence between the human and bacterial homologues prevented reliable modelling of the sequence surrounding glycine 372 of WWOX.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24369382_Mallaret2014_PMCreader.html",
+    "anchor": "Results, 'Mutation analysis of Family 2'",
+    "panel_text_relation": "text_only",
+    "abstract_snippet": "We also identified another highly conserved homozygous WWOX mutation changing glycine 372 to arginine in a second consanguineous family."
+   },
+   {
+    "proposition": "THE WW1 INTERACTOR LIST IN THIS PAPER IS INHERITED FROM A REVIEW, NOT MEASURED HERE. p73, RUNX2, ERBB4, Dvl2 and SIMPLE/LITAF are cited to Aqeilan and Croce's review; the only partner-level experiment this paper cites for the 44-47 region is Ludes-Meyers 2004, which this repository read separately this session.",
+    "snippet": "Numerous interactors of the WW1 domain of WWOX have been identified, including p73, RUNX2, ERBB4, Dvl2, SIMPLE/LITAF among others (",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24369382_Mallaret2014_PMCreader.html",
+    "anchor": "Discussion, third paragraph",
+    "panel_text_relation": "text_only",
+    "abstract_anchoring_waived": "A citation-level statement in the Discussion; the abstract names no interactor."
+   },
+   {
+    "proposition": "THE SPONTANEOUS PHENOTYPE PRECEDES THE PROVOKED ONE, AND IT IS REPORTED WITHOUT A DENOMINATOR: 'a few' spontaneous seizures at about two weeks of age. Quantified nowhere in the paper — no count, no fraction, no duration.",
+    "snippet": "knock-out mice start having a few spontaneous seizures at ∼2 weeks of age.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24369382_Mallaret2014_PMCreader.html",
+    "anchor": "Results, 'Conditional knock-out mouse model', opening paragraph",
+    "panel_text_relation": "text_only",
+    "abstract_snippet": "knock-out mouse display spontaneous and audiogenic seizures, a phenotype previously observed in the spontaneous"
+   },
+   {
+    "proposition": "FIGURE ATTESTATION — THE INDIVIDUAL COUNT, READ OFF THE PEDIGREE AT 600 dpi RATHER THAN FROM THE PROSE: SIX affected individuals carry a homozygous genotype label — Family 1 II.1, II.2, II.3, II.4 all labelled 47T/47T (three filled circles and one filled square), Family 2 II.1 and II.2 labelled 372R/372R (one filled square, one filled circle). Nine relatives carry genotype labels and none is affected: both Family 1 parents 47T/N, unaffected sibs II.5 47T/N, II.6 N/N, II.7 47T/N, and both Family 2 parents 372R/N. Every affected individual in this paper is a homozygote and every heterozygote shown is unaffected.",
+    "snippet": "FIGURE ATTESTATION, not a quotation: inspected files/figures/PMID24369382/renders_s3/fig1_panel_600dpi.png (4266x4368, sha256 ff7bb80a…). Panel A prints two pedigrees; I counted the filled symbols and read each genotype label beneath them. Family 1: II.1 47T/47T filled, II.2 47T/47T filled, II.3 47T/47T filled, II.4 47T/47T filled, II.5 47T/N open, II.6 N/N open, II.7 47T/N open, parents I.1 and I.2 both 47T/N. Family 2: II.1 372R/372R filled, II.2 372R/372R filled, parents I.1 and I.2 both 372R/N. Total affected = 6; total genotyped unaffected = 9.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID24369382/renders_s3/fig1_panel_600dpi.png",
+    "anchor": "Figure 1, panel A, both pedigrees, genotype labels beneath each symbol",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "🔴 FIGURE ATTESTATION THAT QUALIFIES THE ABUNDANCE CLAIM: the panel shows what 'similar amounts' was judged on, and it is one patient's culture at three passages beside four control lines, with the WWOX band faint and of low contrast against a smeared background in all seven human lanes. There is no densitometry trace, no quantification, no error bar and no statistic anywhere on the panel; the actin control below is uniform across lanes. The panel supports 'no difference detectable by eye in this individual's fibroblasts', and cannot support a quantitative statement about protein abundance in any other tissue, individual or genotype.",
+    "snippet": "FIGURE ATTESTATION, not a quotation: inspected files/figures/PMID24369382/renders_s3/fig2_panel_600dpi.png (2068x3180, sha256 a589ff1f…) and the 300 dpi page render. Panel B upper: lanes labelled P10, P13, P14 under a single bracket reading 'Patient', then A, B, C, D under a bracket reading 'Controls', then one lane under 'Mouse cerebellum'; the arrow marks a faint band at the 46 kDa position, of comparable and low intensity across all seven human lanes, with a further band near 36 kDa on every human lane. Panel B lower: one anti-actin band per lane, visually uniform. Nothing on the panel is numeric.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID24369382/renders_s3/fig2_panel_600dpi.png",
+    "anchor": "Figure 2, panel B, upper and lower blots, all eight lanes",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[8]",
+    "qualifies_needle": "Based on visual inspection",
+    "found_or_sought": "found",
+    "experimental_context": {"system": "human primary skin fibroblast culture", "cell_line": "Patient II-3 dermal fibroblasts, passages 10/13/14", "genotype": "WWOX p.Pro47Thr homozygous", "comparator": "four unrelated control fibroblast lines A-D", "endpoint": "WWOX protein abundance by immunoblot, judged by eye"}
+   },
+   {
+    "proposition": "🔴 FIGURE ATTESTATION THAT QUALIFIES THE PAPER'S ABSOLUTE NEGATIVE: in the pull-down panel the WWOX1-mutant lane is NOT blank. At 600 dpi it carries a faint, thin signal at the height of the wild-type WWOX1 band, far weaker than the wild-type lane but visibly above the background of the WWOX1-2-mutant lane, which is genuinely empty. 'Failed to interact' is therefore exact for the tandem construct and an overstatement for the WW1-only construct, where the honest reading is a strong reduction with residual binding. The direction of the result is unaffected; its absoluteness is.",
+    "snippet": "FIGURE ATTESTATION, not a quotation: inspected files/figures/PMID24369382/renders_s3/fig3_panel_600dpi.png (2068x1994, sha256 e481bf1e…). Right blot, 'Pull-down: WBP1', four lanes labelled WWOX1, WWOX1 mutant, WWOX1-2, WWOX1-2 mutant: lane 1 a strong band just below 30 kDa; lane 2 a faint horizontal signal at the same height; lane 3 a strong doublet near 37-34 kDa; lane 4 no signal. Left blot, 'Input (6%)', shows comparable strong bands in all four lanes.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID24369382/renders_s3/fig3_panel_600dpi.png",
+    "anchor": "Figure 3, right-hand 'Pull-down: WBP1' blot, lanes 1-4",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[14]",
+    "qualifies_needle": "only the wild-type and not the mutant fusion peptides were efficiently pulled down",
+    "found_or_sought": "found",
+    "experimental_context": {"system": "in vitro peptide pull-down of bacterially expressed GST fusion proteins", "genotype": "GST-WWOX1 and GST-WWOX1-2, wild-type versus p.Pro47Thr", "treatment": "biotinylated WBP1 PPPY oligopeptide on streptavidin agarose", "endpoint": "anti-GST immunoblot signal in the pull-down fraction"}
+   },
+   {
+    "proposition": "FIGURE ATTESTATION QUALIFYING THE INPUT CONTROL: the 6% input lanes carry comparable amounts of the expected fusion protein, which supports the caption's claim about amount — and the two mutant input lanes are not identical in BAND PATTERN to their wild-type counterparts, the WWOX1-2-mutant lane carrying an additional discrete band below the main doublet and a faint high-molecular-weight signal. Equal amount is shown; identical input species is not, and the caption claims only the former.",
+    "snippet": "FIGURE ATTESTATION, not a quotation: inspected files/figures/PMID24369382/renders_s3/fig3_panel_600dpi.png (sha256 e481bf1e…). Left blot 'Input (6%)': lanes 1 and 2 (WWOX1, WWOX1 mutant) each a strong band just below 30 kDa plus a band near 25 kDa present in all four lanes; lanes 3 and 4 (WWOX1-2, WWOX1-2 mutant) a strong band near 34-37 kDa, with lane 4 additionally showing a discrete band at roughly 29-30 kDa and a faint trace near 50 kDa that lane 3 does not show.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID24369382/renders_s3/fig3_panel_600dpi.png",
+    "anchor": "Figure 3, left-hand 'Input (6%)' blot, lanes 1-4",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[15]",
+    "qualifies_needle": "Western blot of 6% input of GST fusion proteins",
+    "found_or_sought": "found",
+    "experimental_context": {"system": "in vitro pull-down input control", "genotype": "GST-WWOX1 and GST-WWOX1-2, wild-type versus p.Pro47Thr", "endpoint": "anti-GST immunoblot of 6% of the input material"}
+   },
+   {
+    "proposition": "FIGURE ATTESTATION QUALIFYING THE LIGAND-LOADING CONTROL: the Ponceau block shows peptide present in all four lanes, which is what the control is for — and the stain is visibly fainter in lanes 3 and 4 than in lanes 1 and 2. 'Equal amounts' is supported as presence in every lane and is not demonstrated as equality; since lane 4 is the empty mutant lane, the loading control does not fully exclude a lower peptide load there.",
+    "snippet": "FIGURE ATTESTATION, not a quotation: inspected files/figures/PMID24369382/renders_s3/fig3_panel_600dpi.png (sha256 e481bf1e…). Bottom block, boxed and labelled 'Ponceau Stain (WBP1 Peptide)' beside a 15 kDa marker: four pink bands, one per pull-down lane; the two left-hand bands are broader and more intensely stained than the two right-hand ones.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID24369382/renders_s3/fig3_panel_600dpi.png",
+    "anchor": "Figure 3, bottom Ponceau block, four lanes",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[16]",
+    "qualifies_needle": "red ponceau stain of the pull-down blot",
+    "found_or_sought": "found",
+    "experimental_context": {"system": "in vitro pull-down ligand-loading control", "treatment": "biotinylated WBP1 PPPY oligopeptide", "endpoint": "Ponceau S stain of the peptide range"}
+   },
+   {
+    "proposition": "FIGURE ATTESTATION — WHAT THE SEIZURE EVIDENCE IS MADE OF: sixteen photographic still frames with burnt-in timestamps, eight of one animal (t 0 to t 42 s) and eight of two animals together (t 0 to t 14 s). There is no EEG, no electrographic correlate, no scoring scale and no quantification on the panel. The phenotype is documented behaviourally, by photograph and video, and the seizure classification is the observers' reading of posture.",
+    "snippet": "FIGURE ATTESTATION, not a quotation: inspected files/figures/PMID24369382/renders_s3/fig4_panel_600dpi.png (4134x4683, sha256 4af4d463…) and the 300 dpi page render. Panel A: eight frames of a single white mouse on a wooden surface, labelled t 0, t 2 s, t 4 s, t 6 s, t 7 s, t 9 s, t 11 s, t 42 s. Panel B: eight frames showing two mice, labelled t 0, t 2 s, t 4 s, t 6 s, t 8 s, t 10 s, t 12 s, t 14 s. No trace, scale bar, scoring annotation or numeric readout appears anywhere in the figure.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID24369382/renders_s3/fig4_panel_600dpi.png",
+    "anchor": "Figure 4, panels A and B, all sixteen frames",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "FIGURE ATTESTATION — THE CONSERVATION EVIDENCE, AND ITS ASYMMETRY BETWEEN THE TWO VARIANTS: the alignment prints twelve species. At the P47 column every species carries P; at the G372 column the insect rows depart from the mammalian consensus, which is the paper's own stated exception. The conservation argument is therefore strong for P47 and weaker for G372, and that difference is visible on the panel rather than only in the caption.",
+    "snippet": "FIGURE ATTESTATION, not a quotation: inspected files/figures/PMID24369382/renders_s3/fig1_panel_600dpi.png (sha256 ff7bb80a…). Panel C prints two aligned blocks over twelve species rows labelled Hs, Mm, Gg, Xt, Dr, Dm, Ae, Phc, Cg, Hm, Nv, Ta; the left block spans the WW1 domain with an arrow over the mutated proline and a 'T' above it, the right block the C-terminal dehydrogenase/reductase region with an arrow and an 'R'. Bold marks identity to the human sequence, and the right-hand block carries visibly more non-bold residues in the invertebrate rows than the left-hand block does.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID24369382/renders_s3/fig1_panel_600dpi.png",
+    "anchor": "Figure 1, panel C, both alignment blocks, twelve species rows",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found"
+   }
+  ]
+ }
+}

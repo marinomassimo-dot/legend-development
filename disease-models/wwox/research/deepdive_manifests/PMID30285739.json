@@ -1,0 +1,1053 @@
+{
+ "schema_version": 2,
+ "pmid": "30285739",
+ "doi": "10.1186/s12915-018-0576-6",
+ "receipt": "FTR-20260914-30285739-01",
+ "landing": [
+  "FTR-20260914-30285739-01",
+  "fulltext_dossiers/PMID30285739.md",
+  "CC-20260914-30285739-01",
+  "analysis/comparison_notes/2026-09-14_M4B_PMID30285739.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline. The reading turns entirely on figure and supplementary-figure PIXELS - Figure 1e's lane-by-lane mutant series and seven supplementary TIFFs - which a read-only subagent working from a dossier cannot inspect, and which is where three of this reading's findings live."
+  },
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Tier 0 run inline: efetch db=pmc XML succeeded first; the BMC CC BY publisher PDF supplied the native figure rasters; the PMC /bin/ route returned HTML stubs for every supplement and the publisher static-content ESM route recovered all seven. Cascade recorded."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered. R4 blind audit is required only where a reading narrows a consolidated baseline claim or contradicts a persisted locator. CLAIM 026 is 'in observation', not a consolidated baseline, and no persisted locator for PMID 30285739 exists anywhere in this corpus - this is first contact with the text."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Declined at this stage. The paper does carry candidate leads (VOPP1 as a target, the lysosomal compartment, the VOPP1/WWOX ratio as a stratifier), but all are breast-oncology leads in non-neural systems; mining them as discovery capital before the M4b comparison would inflate them past what one retrospective cohort and one cell-line panel support."
+  },
+  {
+   "skill": "legend-paperqa",
+   "used": false,
+   "reason": "Requires an API key and external traffic, which is external spend reserved to the operator under STOP POLICY class 1. Not requested, so not run."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "Declined. A therapeutic hypothesis built on VOPP1 inhibition would be an oncology hypothesis in a WWOX-DEE model with no neural material and no disease variant anywhere in the source; forging from here would transfer a breast-cancer axis into a CNS model on nothing."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 51,
+  "publications_on_gene": 6,
+  "counts_measured": "PubMed esearch 2026-09-14, corresponding author Driouch K: 'Driouch K[au]' 51; 'Driouch K[au] AND WWOX' 6; 'Driouch K[au] AND VOPP1' 1. First author 'Bonin F[au]' 34, of which 1 on WWOX. Co-authors 'Lallemand F[au]' 172 (5 on WWOX), 'Bieche I[au]' 566, 'Lidereau R[au]' 294.",
+  "research_type": "mixed",
+  "output_kind": "primary_research",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Two halves, weighed apart. This is the Pharmacogenomics Unit of Institut Curie - a BREAST-CANCER translational group, primary for neither WWOX nor WWOX-DEE (6 of 51 papers touch WWOX, 1 touches VOPP1). Its native expertise is the clinical-series half: a 448-tumour retrospective cohort with long follow-up, qRT-PCR, IHC, CGH and Cox modelling is exactly what this group does, and that half weighs as competent primary work. The interaction biochemistry (Y2H via the Hybrigenics service, co-IP, mutant mapping) is standard but is NOT this group's speciality, and one load-bearing reagent - the WWOX Y33R mutant and the premise that Y33R inactivates WW1 - is IMPORTED from Aqeilan's laboratory rather than established here. The anti-VOPP1 antibody is raised in-house with no dedicated validation panel. So: cohort half weighs strong, binding half weighs as a competent standard observation whose key premise is borrowed, and the word 'sequester' is the group's interpretation of static images rather than a measurement."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "WWOX",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 708
+   },
+   {
+    "query": "VOPP1",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 41
+   },
+   {
+    "query": "WWOX AND VOPP1",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 2
+   },
+   {
+    "query": "WWOX AND (\"yeast two-hybrid\" OR two-hybrid)",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 9
+   },
+   {
+    "query": "WWOX AND (lysosome OR lysosomal OR endosome)",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 13
+   },
+   {
+    "query": "WWOX AND (PPXY OR PPPY OR \"WW domain\")",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 487
+   },
+   {
+    "query": "WWOX AND breast",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 111
+   },
+   {
+    "query": "WWOX AND p73",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 18
+   }
+  ],
+  "note": "The WWOX-VOPP1 intersection is TWO papers in the whole of PubMed: this one and Hussain 2018 (30619736). That is the entire literature of the VOPP1-WWOX relation, and it is the reason this single paper carries a corpus claim on its own. VOPP1 itself has 41 papers total. The apparent density of 487 for the motif query is an artefact of '\"WW domain\"' matching the whole WW-domain literature and says nothing about PPPY165."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 53,
+  "enumeration_method": "Enumerated from the fingerprinted efetch JATS ref-list, not sampled: 53 <ref> elements, every one carrying a pmid pub-id. Gene-direct by title: 32 name WWOX/Wwox/WOX1/FRA16D/the FOR gene, and a further 5 name VOPP1/ECOP/GASP - both sets are listed because this paper is about two genes and the VOPP1 antecedents are as load-bearing as the WWOX ones.",
+  "gene_direct_count": 37,
+  "gene_direct_refs_in_source": [
+   "25538133",
+   "26499798",
+   "24932569",
+   "24369382",
+   "25681467",
+   "10786676",
+   "11896615",
+   "23824713",
+   "25708809",
+   "11719429",
+   "16223882",
+   "17200365",
+   "16818616",
+   "17360458",
+   "21499303",
+   "17823927",
+   "17575124",
+   "10861292",
+   "15064722",
+   "24550385",
+   "20146584",
+   "19465938",
+   "15070730",
+   "25331887",
+   "25678599",
+   "23381945",
+   "17909041",
+   "20401669",
+   "19918364",
+   "21115974",
+   "21075834",
+   "27834355",
+   "25398664",
+   "19525979",
+   "20571887",
+   "21519330",
+   "15735698"
+  ],
+  "resolved": [
+   "25538133",
+   "26499798",
+   "24932569",
+   "24369382",
+   "25681467",
+   "10786676",
+   "11896615",
+   "23824713",
+   "25708809",
+   "11719429",
+   "16223882",
+   "17200365",
+   "16818616",
+   "17360458",
+   "21499303",
+   "17823927",
+   "17575124",
+   "10861292",
+   "15064722",
+   "24550385",
+   "20146584",
+   "19465938",
+   "15070730",
+   "25331887",
+   "25678599",
+   "23381945",
+   "17909041",
+   "20401669",
+   "19918364",
+   "21115974",
+   "21075834",
+   "27834355"
+  ],
+  "queued": [],
+  "resolved_depth_declaration": "RESOLVED MEANS IDENTITY, NOT READING. 32 of 37 gene-direct identifiers are present by PMID string in the paper registry, tracking log, full-text queue or batch queue, checked on 2026-09-14 with no record content opened; 5 are not present anywhere (25398664, 19525979, 20571887, 21519330, 15735698). 11 of the 37 carry a persisted complete-read receipt. Two antecedents are load-bearing for THIS reading and their status is stated rather than assumed: 15064722 (Ludes-Meyers 2004, the PPXY-ligand specificity this paper's motif reasoning builds on) HAS a manifest and a receipt in this corpus; 15070730 (Aqeilan 2004, the WWOX-p73 association and the SOURCE OF THE Y33R PREMISE on which this paper's WW1 conclusion rests) also has a manifest. The five VOPP1 antecedents (25398664, 19525979, 20571887, 21519330, 15735698) are UNREAD here and are the next hop for anyone contesting VOPP1's pro-survival and localisation background. Nothing is queued from this contract because it does not own the queue file; the unread VOPP1 antecedents are routed to the orchestrator in the commit candidate."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Technical only: how many deep-dive manifests and complete reads exist, and which manifests contain the strings VOPP1, two-hybrid, MDA-MB-468, SEC23IP, Y33R, PPPY, lysosom, p73. No claim, dossier, candidate or prior locator content opened before the reading.",
+  "hits": 1,
+  "finding": "94 manifests; 83 PMIDs at complete_fulltext_read. VOPP1 appears in exactly ONE existing manifest (PMID30619736, the TAP-MS interactome) and SEC23IP likewise in that one. 'two-hybrid' appears in ZERO manifests and MDA-MB-468 in ZERO - so neither the discovery method nor the cell line of this paper's endogenous co-IP has ever been touched by a reading in this corpus. Y33R appears in 6 manifests and PPPY in 5 (including 15064722 and 15070730), so the WW1/PPXY machinery is well covered while the VOPP1 arm of it rests on one manifest. The comparison against that manifest is M4b's work, deliberately deferred until after the receipt."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-09-14",
+  "route": "NCBI esummary db=pubmed retmode=json for 30285739",
+  "result": "pubtype Journal Article; Research Support, Non-U.S. Gov't. NO commentscorrections field returned, i.e. no linked erratum, expression of concern or retraction. The efetch JATS carries no related-article element of correction type.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [
+    {
+     "citing_relation": "citation only, Background framing - NOT a reagent, method or reused dataset. Bonin cites ref 11 (PMID 16223882) twice in the Background, inside bracket groups, for two general claims: that ectopic WWOX over-expression inhibits tumour growth ('[10-13]') and that restoring WWOX in cancer cells induces apoptosis ('[11, 12]'). Nothing in this paper's own design depends on it: the WWOX-dependent apoptosis result here is measured independently in MDA-MB-468 (Fig. 4a-c), A549 (Fig. S2A-B) and HEK-293T (Fig. S2C-D), each with its own controls, and the WWOX construct and the Y33R mutant come from Aqeilan's laboratory (ref 23), not from ref 11. So the Expression of Concern weakens a background sentence and touches no measurement this reading carries forward.",
+     "doi": "10.1073/pnas.0505485102",
+     "nature": "Expression of concern",
+     "reason_verbatim": "Concerns/Issues about Data;Duplication of/in Image;Error in Image;Investigation by Company/Institution;Original Data and/or Images not Provided and/or not Available;",
+     "retraction_date": "4/3/2017 0:00",
+     "retraction_pmid": "28373548",
+     "verdict": "FLAGGED_EXPRESSION_OF_CONCERN"
+    }
+   ],
+   "noted": [],
+   "paper_verdict": "FLAGGED_EXPRESSION_OF_CONCERN",
+   "reference_source": "network",
+   "references_declared": 53,
+   "references_screened": 48,
+   "references_with_doi": 48,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 4,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 5
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID30285739_Bonin2018.xml",
+   "kind": "article_text",
+   "note": "efetch JATS XML of PMC6169085, 135533 B. article-id pmid 30285739 / doi 10.1186/s12915-018-0576-6 verified inside the document; <body> with Background, seven Results sections, Discussion, Conclusions, ten Methods subsections, seven supplementary-material elements, 53 references, seven <fig> and ZERO <table-wrap>. The evidentiary text surface for every body locator. Screened clean: 0 C0 control characters and the statistical marks < > >= +/- x and minus all present, so no SUSPECT verdict and no page adjudication is owed.",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=6169085",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "c7e5f5877cf06a6dafc6380f8430f054d15925af0292b4db46caf8ab4dd929d9"
+  },
+  {
+   "path": "files/fulltext/PMID30285739_Bonin2018.pdf",
+   "kind": "article_binary",
+   "note": "Publisher PDF from BMC Biology (CC BY), 16 pages, 7263479 B. Declared as the source of the native figure rasters ONLY; no locator uses its text layer.",
+   "acquisition_recipe": {
+    "resolved_url": "https://bmcbiol.biomedcentral.com/counter/pdf/10.1186/s12915-018-0576-6.pdf",
+    "http_method": "GET",
+    "tier": "publisher_pdf",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "41ab7d8fe16901f58be072a1d4fc18ce23905358f9f3e9e91420e5830a7e0136"
+  },
+  {
+   "path": "files/figures/PMID30285739/pdf/p03_x82.png",
+   "kind": "figure",
+   "note": "Figure 1, native embedded raster 1420x1916 extracted from the publisher PDF and inspected as an image at that resolution.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID30285739_Bonin2018.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref).save() over Page.get_images(full=True)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "caba4d2f3bc7cf857d7d9734e4441987dde8c5877687487640dc1c3cafc8128d"
+  },
+  {
+   "path": "files/figures/PMID30285739/pdf/p04_x97.jpeg",
+   "kind": "figure",
+   "note": "Figure 2, native embedded raster 1183x1724 extracted from the publisher PDF and inspected as an image at that resolution.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID30285739_Bonin2018.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref).save() over Page.get_images(full=True)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "e08735dd2b8c4cc32bfcae0f86131686afa727db349f182b96b5581465cad172"
+  },
+  {
+   "path": "files/figures/PMID30285739/pdf/p05_x117.jpeg",
+   "kind": "figure",
+   "note": "Figure 3, native embedded raster 1420x1170 extracted from the publisher PDF and inspected as an image at that resolution.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID30285739_Bonin2018.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref).save() over Page.get_images(full=True)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "17a3b128b357f3a9a15de999741dc991ac76aba05d9847294502c0ad53acb614"
+  },
+  {
+   "path": "files/figures/PMID30285739/pdf/p06_x139.jpeg",
+   "kind": "figure",
+   "note": "Figure 4, native embedded raster 1420x1668 extracted from the publisher PDF and inspected as an image at that resolution.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID30285739_Bonin2018.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref).save() over Page.get_images(full=True)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "1b262250d9e8e1fed84f83243acb8ce515903da12cf53650fc468a26f173b9bf"
+  },
+  {
+   "path": "files/figures/PMID30285739/pdf/p08_x197.jpeg",
+   "kind": "figure",
+   "note": "Figure 5, native embedded raster 1420x1810 extracted from the publisher PDF and inspected as an image at that resolution.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID30285739_Bonin2018.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref).save() over Page.get_images(full=True)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "b98850bd6c62871cd85279a585f480f0c614c11a11b8338dbcba300c519f6df4"
+  },
+  {
+   "path": "files/figures/PMID30285739/pdf/p09_x204.jpeg",
+   "kind": "figure",
+   "note": "Figure 6, native embedded raster 1949x2347 extracted from the publisher PDF and inspected as an image at that resolution.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID30285739_Bonin2018.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref).save() over Page.get_images(full=True)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "3a93057892ccc5f59acfedf58ef8d13992422fe4218f0e88e12aa48ba394bd42"
+  },
+  {
+   "path": "files/figures/PMID30285739/pdf/p11_x239.jpeg",
+   "kind": "figure",
+   "note": "Figure 7, native embedded raster 1949x2373 extracted from the publisher PDF and inspected as an image at that resolution.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID30285739_Bonin2018.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref).save() over Page.get_images(full=True)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "2e4b7aa8f23d296c5012cb79b9fd86aeb261436b478a357af72dfd211fb52f14"
+  },
+  {
+   "path": "files/supplements/PMID30285739/MOESM1.tif",
+   "kind": "figure",
+   "note": "Additional file 1 as deposited (TIFF, 1799140 B). Supplementary figures S1-S4 and tables S1-S3 are deposited as IMAGES, not as text or spreadsheets, so they are declared as image artefacts and read as pixels. PMC /bin/ served HTML stubs for all seven; the publisher static-content route served the real files.",
+   "acquisition_recipe": {
+    "resolved_url": "https://static-content.springer.com/esm/art%3A10.1186%2Fs12915-018-0576-6/MediaObjects/12915_2018_576_MOESM1_ESM.tif",
+    "http_method": "GET",
+    "tier": "publisher_static_content_esm",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "199010def33eeae027a1a1d44edf8cc73bf6342566a51bca5aec2d41e3eaf039"
+  },
+  {
+   "path": "files/supplements/PMID30285739/png/MOESM1.png",
+   "kind": "figure",
+   "note": "Additional file 1 rendered to PNG for inspection; this is the surface actually viewed.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID30285739/MOESM1.tif",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(tif).save(png)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "cbe1fe75a7d32533120e3ddb1a363299e3d2bbc5e0d5272c87bc227785448377"
+  },
+  {
+   "path": "files/supplements/PMID30285739/MOESM2.tif",
+   "kind": "figure",
+   "note": "Additional file 2 as deposited (TIFF, 1199520 B). Supplementary figures S1-S4 and tables S1-S3 are deposited as IMAGES, not as text or spreadsheets, so they are declared as image artefacts and read as pixels. PMC /bin/ served HTML stubs for all seven; the publisher static-content route served the real files.",
+   "acquisition_recipe": {
+    "resolved_url": "https://static-content.springer.com/esm/art%3A10.1186%2Fs12915-018-0576-6/MediaObjects/12915_2018_576_MOESM2_ESM.tif",
+    "http_method": "GET",
+    "tier": "publisher_static_content_esm",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "162e5c0328ff9d56aeb2f3a5e3adac75f620c27e59b79a9e27b9d9b7e1e73561"
+  },
+  {
+   "path": "files/supplements/PMID30285739/png/MOESM2.png",
+   "kind": "figure",
+   "note": "Additional file 2 rendered to PNG for inspection; this is the surface actually viewed.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID30285739/MOESM2.tif",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(tif).save(png)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "278885c0fd183d7d4de81516ac3fb087cf9ab83efb2efeaf5c139cb3fa9038b6"
+  },
+  {
+   "path": "files/supplements/PMID30285739/MOESM3.tif",
+   "kind": "figure",
+   "note": "Additional file 3 as deposited (TIFF, 411492 B). Supplementary figures S1-S4 and tables S1-S3 are deposited as IMAGES, not as text or spreadsheets, so they are declared as image artefacts and read as pixels. PMC /bin/ served HTML stubs for all seven; the publisher static-content route served the real files.",
+   "acquisition_recipe": {
+    "resolved_url": "https://static-content.springer.com/esm/art%3A10.1186%2Fs12915-018-0576-6/MediaObjects/12915_2018_576_MOESM3_ESM.tif",
+    "http_method": "GET",
+    "tier": "publisher_static_content_esm",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "1578f7a59e061cb1312e97619087489e183a88bd2ac37af87b77dfd59e965d9c"
+  },
+  {
+   "path": "files/supplements/PMID30285739/png/MOESM3.png",
+   "kind": "figure",
+   "note": "Additional file 3 rendered to PNG for inspection; this is the surface actually viewed.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID30285739/MOESM3.tif",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(tif).save(png)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "3e98bd86696be8cdbe8e3326ecf5427e1137abe6a6b162ea6a8a46543ef8b53a"
+  },
+  {
+   "path": "files/supplements/PMID30285739/MOESM4.tif",
+   "kind": "figure",
+   "note": "Additional file 4 as deposited (TIFF, 646966 B). Supplementary figures S1-S4 and tables S1-S3 are deposited as IMAGES, not as text or spreadsheets, so they are declared as image artefacts and read as pixels. PMC /bin/ served HTML stubs for all seven; the publisher static-content route served the real files.",
+   "acquisition_recipe": {
+    "resolved_url": "https://static-content.springer.com/esm/art%3A10.1186%2Fs12915-018-0576-6/MediaObjects/12915_2018_576_MOESM4_ESM.tif",
+    "http_method": "GET",
+    "tier": "publisher_static_content_esm",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "3c86452038245ad33f8c3b718216db4c4eb0cdf6f791af585affbffbdd59d490"
+  },
+  {
+   "path": "files/supplements/PMID30285739/png/MOESM4.png",
+   "kind": "figure",
+   "note": "Additional file 4 rendered to PNG for inspection; this is the surface actually viewed.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID30285739/MOESM4.tif",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(tif).save(png)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "206ca0f40e8c9a957b8c3e6bb5e48d7f93996871f58291571c6c2f1408cd88ca"
+  },
+  {
+   "path": "files/supplements/PMID30285739/MOESM5.tif",
+   "kind": "figure",
+   "note": "Additional file 5 as deposited (TIFF, 1871054 B). Supplementary figures S1-S4 and tables S1-S3 are deposited as IMAGES, not as text or spreadsheets, so they are declared as image artefacts and read as pixels. PMC /bin/ served HTML stubs for all seven; the publisher static-content route served the real files.",
+   "acquisition_recipe": {
+    "resolved_url": "https://static-content.springer.com/esm/art%3A10.1186%2Fs12915-018-0576-6/MediaObjects/12915_2018_576_MOESM5_ESM.tif",
+    "http_method": "GET",
+    "tier": "publisher_static_content_esm",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "8c06c848fcf4223254a3d03d7e95d5041937f38720b6b3b3584dd3247ca5a214"
+  },
+  {
+   "path": "files/supplements/PMID30285739/png/MOESM5.png",
+   "kind": "figure",
+   "note": "Additional file 5 rendered to PNG for inspection; this is the surface actually viewed.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID30285739/MOESM5.tif",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(tif).save(png)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "a09d66f6fc3e9e0fdd6fca78eb26afa85ed0a522c0878ec08b22fcfdeacb1f56"
+  },
+  {
+   "path": "files/supplements/PMID30285739/MOESM6.tif",
+   "kind": "figure",
+   "note": "Additional file 6 as deposited (TIFF, 352722 B). Supplementary figures S1-S4 and tables S1-S3 are deposited as IMAGES, not as text or spreadsheets, so they are declared as image artefacts and read as pixels. PMC /bin/ served HTML stubs for all seven; the publisher static-content route served the real files.",
+   "acquisition_recipe": {
+    "resolved_url": "https://static-content.springer.com/esm/art%3A10.1186%2Fs12915-018-0576-6/MediaObjects/12915_2018_576_MOESM6_ESM.tif",
+    "http_method": "GET",
+    "tier": "publisher_static_content_esm",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "4c4f3c375999709f56e869edaf9c9b62f5617d9ed0c10b4837d1d494683d2996"
+  },
+  {
+   "path": "files/supplements/PMID30285739/png/MOESM6.png",
+   "kind": "figure",
+   "note": "Additional file 6 rendered to PNG for inspection; this is the surface actually viewed.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID30285739/MOESM6.tif",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(tif).save(png)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "0212f83f16fa7f123b444c3b5039051f4d6be4a1016cf29e83ad439353591629"
+  },
+  {
+   "path": "files/supplements/PMID30285739/MOESM7.tif",
+   "kind": "figure",
+   "note": "Additional file 7 as deposited (TIFF, 112408 B). Supplementary figures S1-S4 and tables S1-S3 are deposited as IMAGES, not as text or spreadsheets, so they are declared as image artefacts and read as pixels. PMC /bin/ served HTML stubs for all seven; the publisher static-content route served the real files.",
+   "acquisition_recipe": {
+    "resolved_url": "https://static-content.springer.com/esm/art%3A10.1186%2Fs12915-018-0576-6/MediaObjects/12915_2018_576_MOESM7_ESM.tif",
+    "http_method": "GET",
+    "tier": "publisher_static_content_esm",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "9aeb1421f3097c3f7af0d1ae4fb38beef058a329c7c6322eb4913c409e703e40"
+  },
+  {
+   "path": "files/supplements/PMID30285739/png/MOESM7.png",
+   "kind": "figure",
+   "note": "Additional file 7 rendered to PNG for inspection; this is the surface actually viewed.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID30285739/MOESM7.tif",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(tif).save(png)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "767efe3f608678429e0f6badec64d651c105876a5a727976955f8e56f247f5b0"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": false,
+  "source_fulltext_indexed_evidence": "A structured JATS surface exists (efetch db=pmc) and is the evidentiary text surface for all body locators. The article carries NO <table-wrap>: its three tables are supplementary TIFF images, so every table datum is a visual attestation on an image surface, not a text quote. Figure locators are visual attestations of native rasters extracted from the CC BY publisher PDF.",
+  "abstract_anchoring_waived": "No locator uses the abstract, and none needs to: every headline proposition is carried by its Results or Methods counterpart in the body. The abstract's two strongest words - that VOPP1 'sequestrates' WWOX and 'impairs' its p73alpha association - are anchored to their body sentences instead, where 'sequester' is typed as the authors' inference from static colocalisation images and the p73alpha effect to its co-IP with the binding-deficient Y165A control.",
+  "entries": [
+   {
+    "proposition": "METHOD/DISCOVERY ROUTE: the interaction is FOUND by yeast two-hybrid, with full-length WWOX and a WW-domain-bearing short isoform as baits, against a human PLACENTA library - not breast and not neural tissue. DATO.",
+    "snippet": "We performed a yeast two-hybrid screen to identify new WWOX-interacting proteins [22, 33]. As a bait, we used the full-length protein (NP_057457) and a shorter isoform (WWOXv2, NP_570607) containing the two WW domains and a truncated SDR domain.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30285739_Bonin2018.xml",
+    "anchor": "Results > VOPP1 interacts with WWOX tumor suppressor, sentences 1-2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "DISCOVERY RESULT: ten independent clones, all encoding the VOPP1 C-TERMINUS - the region that carries the PPxY motifs. The screen itself localises the interaction to that region, independently of any later mutagenesis. DATO.",
+    "snippet": "We screened at saturation a highly complex human placenta library and identified ten clones encoding the C-terminus region of the VOPP1 protein.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30285739_Bonin2018.xml",
+    "anchor": "Results > VOPP1 interacts with WWOX, sentence 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "METHOD/SYSTEM for the first co-IP: both partners are OVER-EXPRESSED from plasmids in HEK-293T. This is co-association of over-expressed tagged proteins, not endogenous complex and not purified protein. DATO.",
+    "snippet": "To validate that the VOPP1-WWOX interaction occurred in mammalian cells, we generated a Flag-tagged VOPP1 expression construct that was co-expressed with a Myc-tagged WWOX plasmid in HEK-293T cells.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30285739_Bonin2018.xml",
+    "anchor": "Results > VOPP1 interacts with WWOX, sentence 4",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "HEK-293T cells, transient over-expression",
+     "cell_line": "HEK-293T"
+    }
+   },
+   {
+    "proposition": "RESULT: reciprocal co-immunoprecipitation in both directions (anti-Myc and anti-Flag) in HEK-293T. Reciprocity strengthens co-association; it does NOT establish direct binding, because neither direction excludes a bridging protein in the lysate. DATO.",
+    "snippet": "Flag-VOPP1 was specifically co-immunoprecipitated with Myc-WWOX by an anti-Myc antibody and reciprocally (Fig. 1a).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30285739_Bonin2018.xml",
+    "anchor": "Results > VOPP1 interacts with WWOX, sentence 5",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "HEK-293T cells, transient over-expression",
+     "cell_line": "HEK-293T"
+    }
+   },
+   {
+    "proposition": "RESULT - THE STRONGEST INTERACTION DATUM IN THE PAPER: ENDOGENOUS WWOX co-precipitates with ENDOGENOUS VOPP1 in a breast cancer line, with normal rabbit IgG as the negative control. No over-expression of either partner. DATO.",
+    "snippet": "We found that WWOX specifically co-precipitated with VOPP1 indicating that endogenous WWOX and VOPP1 were physically associated in breast cancer cells.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30285739_Bonin2018.xml",
+    "anchor": "Results > VOPP1 interacts with WWOX, endogenous complex paragraph",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "MDA-MB-468 breast cancer cells, endogenous proteins",
+     "cell_line": "MDA-MB-468"
+    }
+   },
+   {
+    "proposition": "METHOD detail for the endogenous co-IP: 800 ug of total protein, direct immunoprecipitation with the anti-VOPP1 antibody. 'Direct immunoprecipitation' names the IP FORMAT (no pre-clearing/bridging antibody step); it is NOT a claim of direct protein-protein binding, and must not be read as one.",
+    "snippet": "For endogenous WWOX-VOPP1 complexes, cell extracts containing 800 μg of total proteins were subjected to direct immunoprecipitation with the anti-VOPP1 antibody.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30285739_Bonin2018.xml",
+    "anchor": "Methods > Antibodies, western blotting, and immunoprecipitation, final sentence",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "MDA-MB-468 breast cancer cells, endogenous proteins",
+     "cell_line": "MDA-MB-468"
+    }
+   },
+   {
+    "proposition": "WW1-DEPENDENCE IS MEASURED BY MUTATION, not inferred: the WWOX Y33R point mutant abolishes the interaction. This is the WW1 requirement tested on the WWOX side. DATO.",
+    "snippet": "The Y33R mutation in WWOX abolished the WWOX-VOPP1 interaction (Fig. 1e), which indicated that the WW1 module was indispensable for the WWOX-VOPP1 association.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30285739_Bonin2018.xml",
+    "anchor": "Results > VOPP1 interacts with WWOX, domain-mapping paragraph",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "HEK-293T cells, transient over-expression",
+     "cell_line": "HEK-293T"
+    }
+   },
+   {
+    "proposition": "PROVENANCE OF THE WW1 MUTANT, and its imported premise: Y33R is used BECAUSE a prior paper (ref 23) reported it inactivates WW1. That Y33R disables WW1 is an imported premise, not measured here; the plasmid itself came from R.I. Aqeilan's laboratory.",
+    "snippet": "For that, we generated the WWOXY33R mutant and tested its ability to bind VOPP1, the Y33R mutation inhibiting the binding ability of WW1 [23].",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30285739_Bonin2018.xml",
+    "anchor": "Results > VOPP1 interacts with WWOX, domain-mapping paragraph",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "MOTIF IDENTIFICATION IS BY SEQUENCE INSPECTION: three PPxY motifs (PPYY119, PPAY157, PPPY165) are found by examining the VOPP1 sequence. Identification is in-silico; the REQUIREMENT is what the mutants then test.",
+    "snippet": "Then, by examining the VOPP1 protein sequence, we identified three PPxY motifs in the proline-rich C-terminal region of the protein: PPYY119, PPAY157, and PPPY165.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30285739_Bonin2018.xml",
+    "anchor": "Results > VOPP1 interacts with WWOX, motif paragraph",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "PPPY REQUIREMENT IS TESTED BY MUTATION, not inferred from the motif: all three conserved tyrosines were independently mutated to alanine and each mutant assayed for WWOX binding. DATO.",
+    "snippet": "We generated three VOPP1PPxY mutants in which the conserved tyrosines were replaced by alanine residues and tested their ability to bind WWOX.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30285739_Bonin2018.xml",
+    "anchor": "Results > VOPP1 interacts with WWOX, motif paragraph",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "HEK-293T cells, transient over-expression",
+     "cell_line": "HEK-293T"
+    }
+   },
+   {
+    "proposition": "RESULT: the interaction is 'strongly affected' by the Y165 mutation. Note the authors' own hedge - 'strongly affected', not abolished - and see the Figure 1e panel attestation, which also shows a reduction for Y157A that this sentence does not mention.",
+    "snippet": "The results showed that WWOX-VOPP1 interaction was strongly affected by the mutation of tyrosine 165 (Fig. 1e).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30285739_Bonin2018.xml",
+    "anchor": "Results > VOPP1 interacts with WWOX, motif paragraph",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "HEK-293T cells, transient over-expression",
+     "cell_line": "HEK-293T"
+    }
+   },
+   {
+    "proposition": "AUTHORS' CONCLUSION on the motif, stated as a requirement for a 'robust' interaction via WW1. This is the sentence the corpus credits this paper with, and it is supported by mutagenesis on BOTH sides (WWOX Y33R and VOPP1 Y165A) in the same panel.",
+    "snippet": "These observations indicated that the PPPY165 motif was required to sustain a robust interaction of VOPP1 with the WW1 domain of WWOX.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30285739_Bonin2018.xml",
+    "anchor": "Results > VOPP1 interacts with WWOX, motif paragraph",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "HEK-293T cells, transient over-expression",
+     "cell_line": "HEK-293T"
+    }
+   },
+   {
+    "proposition": "METHOD: the three PPxY mutants are single tyrosine-to-alanine substitutions made by site-directed mutagenesis and every construct was sequence-verified. Relevant because a motif-requirement claim rests on the constructs being what they are said to be.",
+    "snippet": "Site-directed mutagenesis was performed to independently modify the tyrosine residue to alanine in each PPxY motif of the VOPP1 construct according to the manufacturer’s instructions (Stratagene, La Jolla, CA). The tyrosine residue of each PPxY motif was mutated to alanine, generating three mutants: VOPP1Y119A, VOPP1Y157A, and VOPP1Y165A. All constructs were verified by DNA sequencing.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30285739_Bonin2018.xml",
+    "anchor": "Methods > DNA constructs, final sentences",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "METHOD/SYSTEM for localisation: a THIRD cell line (HeLa), transient over-expression, immunofluorescence. The compartment argument is built on over-expression in HeLa, then checked on endogenous protein in MDA-MB-468.",
+    "snippet": "To determine the subcellular localization of the WWOX-VOPP1 complex, we transiently expressed WWOX and VOPP1 either alone or in combination in HeLa cells.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30285739_Bonin2018.xml",
+    "anchor": "Results > VOPP1 sequesters WWOX in the lysosomal vesicles, sentence 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "HeLa cells, transient over-expression",
+     "cell_line": "HeLa"
+    }
+   },
+   {
+    "proposition": "THE MUTANT IS USED AS A FUNCTIONAL CONTROL, which is the paper's most valuable design feature: VOPP1 Y165A - binding-deficient - FAILS to relocate WWOX, so relocation tracks the PPPY165-dependent interaction rather than VOPP1 abundance. DATO.",
+    "snippet": "We then asked whether the relocation of WWOX was related to the VOPP1 binding by co-expressing WWOX with the VOPP1Y165A mutant. In VOPP1Y165A-expressing cells, WWOX largely remained in the Golgi compartment (Fig. 2c and Additional file 1: Figure S1B).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30285739_Bonin2018.xml",
+    "anchor": "Results > VOPP1 sequesters WWOX, final sentences of paragraph 1",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "HeLa cells, transient over-expression",
+     "cell_line": "HeLa"
+    }
+   },
+   {
+    "proposition": "AUTHORS' INTERPRETIVE WORD, typed: 'sequester'. What is measured is steady-state COLOCALISATION by immunofluorescence plus a redistribution after VOPP1 knockdown. No flux, transport-rate, cargo-delivery, degradation or retention assay exists anywhere in the paper. 'Sequestration' is INFERENZA from static images.",
+    "snippet": "Altogether, these results strongly indicated that the WWOX and VOPP1 complex resides in the late endosomes/lysosomes and VOPP1 had the ability to sequester WWOX in this subcellular compartment.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30285739_Bonin2018.xml",
+    "anchor": "Results > VOPP1 sequesters WWOX, closing sentence",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "MECHANISTIC LINK, measured by co-IP with the binding-deficient control: ectopic VOPP1 but NOT VOPP1 Y165A reduces the WWOX-p73alpha association. Ties the PPPY165 interaction to a downstream complex. DATO.",
+    "snippet": "By performing co-immunoprecipitation experiments, we found that ectopic expression of VOPP1, but not VOPP1Y165A, affected the ability of WWOX to associate with p73α (Fig. 4d).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30285739_Bonin2018.xml",
+    "anchor": "Results > VOPP1 inhibits WWOX-dependent apoptosis, mechanism paragraph",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "HEK-293T cells, transient over-expression",
+     "cell_line": "HEK-293T"
+    }
+   },
+   {
+    "proposition": "EPISTASIS - the WWOX-DEPENDENCE of the apoptotic effect is actually tested: VOPP1 knockdown has no effect in WWOX-depleted cells. This is what licenses the phrase 'WWOX-dependent apoptosis' rather than merely 'apoptosis'. DATO.",
+    "snippet": "Remarkably, VOPP1 suppression had no effect in WWOX-depleted cells, which suggested specific regulation of WWOX-mediated apoptosis by VOPP1 protein (Fig. 4c).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30285739_Bonin2018.xml",
+    "anchor": "Results > VOPP1 inhibits WWOX-dependent apoptosis, paragraph 2",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "MDA-MB-468 breast cancer cells, endogenous proteins",
+     "cell_line": "MDA-MB-468"
+    }
+   },
+   {
+    "proposition": "CLINICAL COHORT, n and provenance: 448 retrospectively collected primary breast tumours from one institution, median follow-up 101.7 months. Retrospective single-centre series; association only.",
+    "snippet": "Four hundred forty-eight primary breast tumor samples were retrospectively collected from patients undergoing surgery at the Institut Curie-Hospital Huguenin. The sample series was specifically selected to encompass the various stages of breast cancer progression and the tumors’ molecular subtypes, defined as previously described [36]. The median follow-up of the patients was 101.7 months (range = 4.3–250 months).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30285739_Bonin2018.xml",
+    "anchor": "Methods > Breast tumor samples and expression analyses, sentences 2-3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "REAGENT PROVENANCE - the anti-VOPP1 antibody is RAISED IN-HOUSE against two VOPP1 peptides. No knockdown-correspondence, peptide-block or pre-immune control for THIS antibody is shown; note however that the Figure 4a siRNA blot does show the signal falling on VOPP1 depletion, which is partial de-facto validation.",
+    "snippet": "Anti-VOPP1 polyclonal antibody was produced by inoculating rabbits with two distinct VOPP1 peptides corresponding to amino acids 101-116 (TRQPPNPGPGTQQPGP) and amino acids 137-151 (AFQVPPNSPQGSVAC) (Eurogentec, Seraing, Belgium).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30285739_Bonin2018.xml",
+    "anchor": "Methods > Antibodies, western blotting, and immunoprecipitation, sentence 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought - a dedicated antibody-validation panel (peptide block, pre-immune serum, second independent antibody) was searched in Methods, Figures 1-7 and Additional files 1-7; none is present"
+   },
+   {
+    "proposition": "WHAT VOPP1 IS, and the limit of it: no functional domain is identified; a transmembrane domain and signal peptide are PREDICTED by TMHMM2.0 and SignalIP. Predicted, not measured - no topology, protease-protection or membrane-insertion experiment is done.",
+    "snippet": "Analysis of the protein sequence did not highlight any obvious functional domains, although it did reveal a transmembrane domain and a signal peptide as predicted by TMHMM2.0 and SignalIP programs.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30285739_Bonin2018.xml",
+    "anchor": "Discussion, paragraph 2, sentence 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "THE AUTHORS' OWN DECLARED LIMIT: they cannot exclude that VOPP1 acts through WWOX functions other than apoptosis. Recorded because the paper has no Limitations section and this is the closest thing to one.",
+    "snippet": "Our results suggest that VOPP1 promotes cancer by inhibiting WWOX-dependent apoptosis; however, we cannot exclude the possibility that VOPP1 acts on cancer by impairing other WWOX functions.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30285739_Bonin2018.xml",
+    "anchor": "Discussion, paragraph 6, sentence 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "THE NEURAL/WWOX-DEE CONNECTION EXISTS ONLY AS BACKGROUND FRAMING. WWOX-related recessive neural disease is cited in the Introduction; NO neural cell, neural tissue, brain, neuronal model or WWOX disease variant appears anywhere in the study. Transferability to WWOX-DEE is nil on this source's own material.",
+    "snippet": "Importantly, homozygous mutations of WWOX were recently identified as responsible for an inherited neural disorder characterized by cerebellar ataxia, epilepsy, and mental retardation (OMIM # 616211) [4].",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30285739_Bonin2018.xml",
+    "anchor": "Background, paragraph 1, final sentence",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought - neural/neuronal/brain/cortex/hippocamp/iPSC/organoid and every WWOX missense or truncating disease allele were searched across Methods, all seven Results sections, all figures and all seven Additional files; the only occurrence is this Background citation"
+   },
+   {
+    "proposition": "THE STATISTICAL INTERACTION between VOPP1 and WWOX on outcome is formally tested with an interaction term in a Cox model: HR 3.41, p = 0.02, while each main effect is non-significant. This is the clinical counterpart of the binding claim - and it is an association in a retrospective series, not a mechanism.",
+    "snippet": "Whereas VOPP1 and WWOX had non-significant p values related to the outcome, the hazard ratio associated with the interaction term was estimated to be equal to 3.41 and was statistically significant (p = 0.02) indicating a substantial interaction of both variables in the patient metastasis-free survival (Additional file 7: Table S3).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30285739_Bonin2018.xml",
+    "anchor": "Results > Clinical relevance of the VOPP1-WWOX interaction, paragraph 2",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "IN VIVO n, stated: 10 mice per group, subcutaneous injection of NIH3T3 derivatives into SCID mice, 35 days. Note the model - VOPP1 over-expressed in an immortalised MOUSE fibroblast line in immunodeficient hosts; no WWOX genotype is manipulated in vivo.",
+    "snippet": "e 2.106 3T3-Ctrl and 3T3-VOPP1 cells were subcutaneously injected into the flanks of SCID mice, and tumor growth was measured over time (n = 10 per each group) up to 35 days.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30285739_Bonin2018.xml",
+    "anchor": "Figure 5 caption, panel e",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "FIGURE 1e, PIXELS - THE PANEL SAYS MORE THAN THE TEXT. Eight lanes, IP:Myc / IB:Flag. Lane 3 (WWOX+VOPP1) strong; lane 5 (WWOX Y33R + VOPP1) essentially blank = WW1 requirement; lane 8 (WWOX + Y165A) blank = PPPY165 requirement; lane 6 (Y119A) strong. CRITICALLY, lane 7 (Y157A) shows a CLEARLY REDUCED but PRESENT doublet - so Y157A partially impairs binding, which the running text ('strongly affected by the mutation of tyrosine 165') never states. The WCL IB:Flag row confirms all mutants are expressed, so the lane-8 loss is not an expression artefact. No IgG lane and no quantification in this panel; one blot, replicate count not stated.",
+    "snippet": "Visual attestation of Figure 1e: rows IP:Myc/IB:Myc, IP:Myc/IB:Flag and WCL/IB:Flag over eight numbered lanes; IB:Flag signal strong in lanes 3 and 6, reduced doublet in lane 7, absent in lanes 5 and 8; WCL IB:Flag shows Flag protein present in lanes 2,3,5,6,7,8.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID30285739/pdf/p03_x82.png",
+    "anchor": "Figure 1e (PDF p. 3), native embedded raster 1420x1916",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "HEK-293T cells, transient over-expression",
+     "cell_line": "HEK-293T"
+    }
+   },
+   {
+    "proposition": "FIGURE 1a AND 1d, PIXELS - the two co-IPs differ in their controls, and only one has an IgG arm. 1a's specificity control is the single-transfection lanes (+/- Myc-WWOX, +/- Flag-VOPP1), with NO IgG or empty-vector IP. 1d, the endogenous co-IP, DOES carry a normal-rabbit-IgG lane that is clean against a clear WWOX band in the anti-VOPP1 lane. 1c also shows the VOPP1 immunoblot is a multi-band pattern in MDA-MB-468.",
+    "snippet": "Visual attestation of Figure 1a and 1d: panel a has three lanes with no IgG control; panel d (MDA-MB-468) has two lanes labelled IgG and VOPP1, IB:WWOX showing a band only in the VOPP1 lane, IB:VOPP1 likewise.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID30285739/pdf/p03_x82.png",
+    "anchor": "Figure 1a and 1d (PDF p. 3), native embedded raster 1420x1916",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "MDA-MB-468 breast cancer cells, endogenous proteins",
+     "cell_line": "MDA-MB-468"
+    }
+   },
+   {
+    "proposition": "FIGURE 4d, PIXELS - the quantification is a single-experiment ratio strip with NO error bars and no n. Bars for WWOX-bound p73a/precipitated WWOX read ~1.0 (lane 3, no VOPP1), ~0.55 and ~0.35 (lanes 4-5, increasing VOPP1), and ~0.85 (lane 6, Y165A). The dose-response and the Y165A rescue are visible; their statistical support is absent.",
+    "snippet": "Visual attestation of Figure 4d: bar strip beneath the blots labelled 'WWOX-bound p73a / precipitated WWOX' with dotted guides at 0.5 and 1, six lane positions, no error bars and no significance marks.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID30285739/pdf/p06_x139.jpeg",
+    "anchor": "Figure 4d (PDF p. 6), native embedded raster 1420x1668",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "HEK-293T cells, transient over-expression",
+     "cell_line": "HEK-293T"
+    }
+   },
+   {
+    "proposition": "FIGURE 4e, PIXELS - A SYSTEM VISIBLE ONLY IN THE IMAGE. The panel is headed NIH3T3, but neither the running text nor the Figure 4 caption names the cell line for 4e; a text-only reader would carry the p73a cytoplasmic-sequestration result forward as if it were in the HEK-293T or MDA-MB-468 system of the neighbouring panels. Four rows show HA-p73a nuclear alone, cytoplasmic with WWOX, and the VOPP1 / VOPP1 Y165A conditions.",
+    "snippet": "Visual attestation of Figure 4e: header reads NIH3T3; four rows of three fluorescence panels labelled Anti-WWOX, Anti-VOPP1, Anti-HA across HA-p73a alone, +WWOX, +WWOX/VOPP1 and +WWOX/VOPP1 Y165A.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID30285739/pdf/p06_x139.jpeg",
+    "anchor": "Figure 4e (PDF p. 6), native embedded raster 1420x1668",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "NIH3T3 mouse fibroblasts, transient over-expression",
+     "cell_line": "NIH3T3"
+    }
+   },
+   {
+    "proposition": "FIGURE 2, PIXELS - the colocalisation claim is supported by the images, and the marker set is complete: WWOX alone overlaps GM130 (Golgi); VOPP1 alone overlaps LAMP2 but not GM130 or EEA1; co-expression gives WWOX/VOPP1 yellow puncta away from the GM130 ribbon, whereas VOPP1 Y165A leaves WWOX on the GM130 structure. Single representative cells, with orthogonal views; no colocalisation coefficient and no cell count are given.",
+    "snippet": "Visual attestation of Figure 2a-c: HeLa panels with Anti-WWOX/Anti-GM130 overlap, Anti-VOPP1 against GM130, EEA1 and LAMP2, and paired WWOX/VOPP1 versus WWOX/VOPP1 Y165A merges with orthogonal slices and DAPI.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID30285739/pdf/p04_x97.jpeg",
+    "anchor": "Figure 2 (PDF p. 4), native embedded raster 1183x1724",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "HeLa cells, transient over-expression",
+     "cell_line": "HeLa"
+    }
+   },
+   {
+    "proposition": "FIGURE 3, PIXELS - the endogenous localisation and the knockdown redistribution are both visible: in MDA-MB-468 endogenous WWOX puncta overlap VOPP1 and LAMP2 rather than the GM130 ribbon, and after si-VOPP1 the WWOX signal coincides with GM130 (yellow in merge). Representative single cells; no quantification of the shift, no cell counts, no colocalisation statistic.",
+    "snippet": "Visual attestation of Figure 3a-b: MDA-MB-468 panels WWOX/VOPP1/GM130 and WWOX/VOPP1/LAMP2 with magnified insets, and Si-Ctrl versus Si-VOPP1 panels where WWOX/GM130 merge turns yellow only in Si-VOPP1.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID30285739/pdf/p05_x117.jpeg",
+    "anchor": "Figure 3 (PDF p. 5), native embedded raster 1420x1170",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "MDA-MB-468 breast cancer cells, endogenous proteins",
+     "cell_line": "MDA-MB-468"
+    }
+   },
+   {
+    "proposition": "FIGURE 5, PIXELS - the transformation and tumorigenesis data are as described, with n stated only for two panels. Soft-agar colonies are far more numerous for 3T3-VOPP1 (d, ~222 vs ~65, n = 4, ***), the xenograft curve separates completely from a flat control (e), and Ki67 is higher (h, ~70% vs ~23%). The VOPP1 immunoblot in (a) is a modest increase over a clearly detectable endogenous band, not a null-to-positive comparison.",
+    "snippet": "Visual attestation of Figure 5a-h: VOPP1/GAPDH blot, phase-contrast morphology, soft-agar dishes, colony-number bars with SEM, tumour-volume curves, excised tumour photographs, VOPP1 and KI67 immunohistochemistry and Ki67-positive bars.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID30285739/pdf/p08_x197.jpeg",
+    "anchor": "Figure 5 (PDF p. 8), native embedded raster 1420x1810",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "NIH3T3 stable lines; SCID mouse subcutaneous xenograft",
+     "cell_line": "NIH3T3"
+    }
+   },
+   {
+    "proposition": "FIGURE 6, PIXELS - the headline survival result is NOT significant in the whole cohort, and the panel says so plainly: 6d leftmost curve carries 'Log Rank P=0.09' for all 448 tumours, with significance appearing only in the luminal (P=0.003) and luminal B (P=0.005) subsets. Numbers at risk are printed. 6a shows the tumour-versus-normal shift against only ~10 normal samples. Note also the y-axis typographical error 'realtive'.",
+    "snippet": "Visual attestation of Figure 6a-d: VOPP1 relative mRNA scatter for Normal versus Tumoral and four subtypes with CGH insets, immunohistochemistry images, H-score box plots (P=0.0002) and three Kaplan-Meier panels labelled P=0.09, P=0.003 and P=0.005 with numbers at risk.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID30285739/pdf/p09_x204.jpeg",
+    "anchor": "Figure 6 (PDF p. 9), native embedded raster 1949x2347",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "FIGURE 7, PIXELS - the WWOX-conditional effect is the paper's clinical keystone and the panel supports it: high VOPP1/WWOX ratio separates survival only in WWOX-high tumours (n = 255, log-rank p = 4.10-5) and not in WWOX-low tumours (n = 193, p = 0.7); the multivariate table gives the ratio p < 0.00001, HR 3.19 (1.92-5.29), matching the text's rounded '3.2 (1.9-5.3)'. 7a's proportions (88/12 vs 65/35) match the text exactly.",
+    "snippet": "Visual attestation of Figure 7a-c: stacked bars 88%/12% and 65%/35% with P<0.0000001, two Kaplan-Meier panels for High and Low WWOX tumours, and a multivariate table listing VOPP1/WWOX ratio HR 3.19 (1.92-5.29) alongside lymph node, size, PR and HER2 rows.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID30285739/pdf/p11_x239.jpeg",
+    "anchor": "Figure 7 (PDF p. 11), native embedded raster 1949x2373",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "ADDITIONAL FILE 7 / TABLE S3, PIXELS - the interaction term, with the precision the main text drops. The table reads VOPP1 p 0.07 HR 0.43 (0.17;1.06), WWOX p 0.19 HR 0.79 (0.55;1.13), VOPP1*WWOX p 0.016 HR 3.41 (1.26;9.24). The text rounds p to 0.02 and omits the confidence interval, which is wide (1.26-9.24) and rests on this single retrospective cohort.",
+    "snippet": "Visual attestation of Table S3: three multivariate rows - VOPP1 expression 0.07 / 0.43 / (0.17; 1.06), WWOX expression 0.19 / 0.79 / (0.55; 1.13), VOPP1* WWOX 0.016 / 3.41 / (1.26; 9.24).",
+    "surface": "figure",
+    "artifact": "files/supplements/PMID30285739/png/MOESM7.png",
+    "anchor": "Additional file 7, Table S3 (TIFF rendered to PNG 2127x3072)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "ADDITIONAL FILE 3 / TABLE S1, PIXELS - TWO DIFFERENT WWOX CUT-OFFS ARE USED IN ONE PAPER, and only the supplement reveals it. Table S1 dichotomises WWOX at Low(<1)/High(>1), giving 302 (67.4%) / 146 (32.6%); Figure 7a and the Statistical-analysis section use a threshold of 0.6, giving 193 / 255. VOPP1 is 336/112 at the >=2.5 cut-off, matching the text's 25%. The WWOX-low group therefore means different patients in different figures, and no reconciliation is offered.",
+    "snippet": "Visual attestation of Table S1: header columns WWOX Low (<1) / High (>1) with Total 448, 302 (67.4) / 146 (32.6), and VOPP1 Low (<2.5) / High (>2.5) 336 (75.0) / 112 (25.0), followed by age, grade, node, size, ER, PR, HER2 and subtype strata.",
+    "surface": "figure",
+    "artifact": "files/supplements/PMID30285739/png/MOESM3.png",
+    "anchor": "Additional file 3, Table S1 (TIFF rendered to PNG 2250x3000)",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "ADDITIONAL FILE 6 / TABLE S2, PIXELS - the luminal-B prognostic claim is replicated in an independent cohort, which is a genuine strength: RT-PCR cohort n = 121 gives VOPP1 multivariate p 0.003, HR 2.54 (1.37;4.71); the NKI validation set n = 81 gives p 0.04, HR 2.10 (1.04;4.27). Both intervals are wide and both lower bounds sit close to 1.",
+    "snippet": "Visual attestation of Table S2: 'RT-PCR cohort, n=121' with VOPP1 expression univariate 0.006 HR 2.20 (1.26;3.91) and multivariate 0.003 HR 2.54 (1.37;4.71); 'Validation set (NKI cohort, n=81)' with 0.02 HR 2.11 and multivariate 0.04 HR 2.10 (1.04;4.27).",
+    "surface": "figure",
+    "artifact": "files/supplements/PMID30285739/png/MOESM6.png",
+    "anchor": "Additional file 6, Table S2 (TIFF rendered to PNG 2250x3000)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "ADDITIONAL FILE 2 / FIGURE S2, PIXELS - an effect the text passes over: in A549, VOPP1 does not merely cancel WWOX-induced death, it drives death BELOW the empty-vector baseline (Ctrl ~18.6%, WWOX ~29%, WWOX+VOPP1 ~7.4%, WWOX+VOPP1 Y165A ~31%, the last n.s. versus WWOX). Suppression below baseline suggests VOPP1 has WWOX-independent pro-survival activity in this line, which the running text does not discuss. n = three experiments, mean +/- SEM.",
+    "snippet": "Visual attestation of Figure S2A-B: four A549 Annexin V/DAPI dot plots and a bar chart with Ctrl, WWOX, WWOX+VOPP1 and WWOX+VOPP1 Y165A, marks * and ** and n.s., plus S2C-D cleaved-PARP blots in HEK-293T.",
+    "surface": "figure",
+    "artifact": "files/supplements/PMID30285739/png/MOESM2.png",
+    "anchor": "Additional file 2, Figure S2 (TIFF rendered to PNG 2250x3000)",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "A549 lung adenocarcinoma cells, transient over-expression",
+     "cell_line": "A549"
+    }
+   },
+   {
+    "proposition": "ADDITIONAL FILE 1 / FIGURE S1, PIXELS - the LAMP2/GM130 counter-test behind Figure 2c holds up: with wild-type VOPP1, WWOX and VOPP1 puncta coincide with LAMP2 (S1A); with VOPP1 Y165A, WWOX tracks the GM130 ribbon while VOPP1 Y165A stays punctate (S1B). Single representative cells, no quantification.",
+    "snippet": "Visual attestation of Figure S1A-B: HeLa rows Anti-VOPP1 / Anti-WWOX / Anti-LAMP2 / MERGE, and Anti-VOPP1 / Anti-WWOX / GM130 / MERGE for the VOPP1 Y165A condition.",
+    "surface": "figure",
+    "artifact": "files/supplements/PMID30285739/png/MOESM1.png",
+    "anchor": "Additional file 1, Figure S1 (TIFF rendered to PNG 2250x3000)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "HeLa cells, transient over-expression",
+     "cell_line": "HeLa"
+    }
+   },
+   {
+    "proposition": "ADDITIONAL FILE 4 / FIGURE S3, PIXELS - the external-database confirmation has one dataset shown but not statistically reported: four Oncomine box-plot pairs are displayed (Curtis, Richardson, TCGA, Gluck) while the caption gives p-values for only TCGA, Curtis and Gluck. Richardson (Normal n = 7 versus Cancer n = 47) carries no p-value anywhere, and its normal group is tiny.",
+    "snippet": "Visual attestation of Figure S3A-C: four labelled box-plot pairs Curtis (144/1556), Richardson (7/47), TCGA (61/389) and Gluck (4/154); EMC and NKI subtype scatters; and two CGH profiles of the VOPP1/EGFR region for tumours 68 and 42.",
+    "surface": "figure",
+    "artifact": "files/supplements/PMID30285739/png/MOESM4.png",
+    "anchor": "Additional file 4, Figure S3 (TIFF rendered to PNG 2250x3000)",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "ADDITIONAL FILE 5 / FIGURE S4, PIXELS - the WWOX side of the survival analysis is weaker than the VOPP1 side, and the supplement is where that is visible. S4D: high WWOX associates with better metastasis-free survival at P=0.1 across all 448, reaching only P=0.05 in ER/PR-negative tumours (n = 111) and P=0.1 in ER/PR-positive (n = 337). S4C's VOPP1 replication is P=0.03 (EMC all) and P=0.02 (NKI luminal B) but P=0.12 and P=0.16 in the other two panels.",
+    "snippet": "Visual attestation of Figure S4A-D: H-score scatter by subtype, immunohistochemistry images, four VOPP1 Kaplan-Meier panels labelled P=0.03, P=0.12, P=0.16 and P=0.02, and three WWOX Kaplan-Meier panels labelled P=0.1, P=0.05 and P=0.1.",
+    "surface": "figure",
+    "artifact": "files/supplements/PMID30285739/png/MOESM5.png",
+    "anchor": "Additional file 5, Figure S4 (TIFF rendered to PNG 2250x3000)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found"
+   }
+  ]
+ }
+}

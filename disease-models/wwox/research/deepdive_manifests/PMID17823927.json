@@ -1,0 +1,1004 @@
+{
+ "schema_version": 2,
+ "pmid": "17823927",
+ "doi": "10.1002/gcc.20497",
+ "receipt": "FTR-20260914-17823927-01",
+ "landing": [
+  "FTR-20260914-17823927-01",
+  "fulltext_dossiers/PMID17823927.md",
+  "CC-20260914-17823927-01"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Run inline, tiers measured 2026-09-14: efetch db=pmc returns an XML shell with the publisher's no-download comment; Europe PMC fullTextXML 404; PMC article HTML 200 with no user agent (the text surface); PMC /pdf/ path served the proof-of-work page and pmc_pow_fetch.py recovered the author-manuscript PDF (figure source); Wiley supplementary routes returned 403."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline. Three findings of this reading exist only in pixels (Figure 1D loading, Figure 2G per-animal values, Figure 3 curve geometry) and a read-only subagent working from a dossier cannot inspect them."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not run inside the reading. No persisted locator for PMID 17823927 existed (first contact with the text), so the contradiction trigger does not fire. Whether the candidate narrows a consolidated baseline claim was decidable only after the blind first pass froze; that comparison and its R4 consequence are recorded in CC-20260914-17823927-01 for the orchestrator."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Declined: the paper's leads are tumour-suppressor and testis leads in a whole-body hypomorph with no neural readout; mining them as discovery capital before canon comparison would inflate a phenotype nobody measured in brain."
+  },
+  {
+   "skill": "legend-paperqa",
+   "used": false,
+   "reason": "Declined: needs an external API key and traffic not authorised for this task, and a RAG answer is not a reading."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 138,
+  "publications_on_gene": 38,
+  "counts_measured": "PubMed esearch 2026-09-14, corresponding author: 'Aldaz CM[au]' 138, 'Aldaz CM[au] AND WWOX' 38. First author 'Ludes-Meyers J[au]' 25, of which 9 on WWOX. Co-author 'Bedford MT[au]' 230.",
+  "research_type": "experimental_lab",
+  "output_kind": "primary_research",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": true,
+  "weighting": "The corresponding laboratory is a founding WWOX group (its own reference list includes the 2000 cloning paper, Bednarek ... Aldaz CM) and a mouse-carcinogenesis department, so the construct validation and the histopathology are its native competence and weigh as competent primary observation. Primary for the gene is not primary for the disease: nothing in this group's design looks at brain, seizures or development. Its interpretations - caretaker gene, B-cell survival, p73 in testis, splicing around the trap - are the group's hypotheses and are weighed as such, not as observations."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "WWOX",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 708
+   },
+   {
+    "query": "Wwox AND (hypomorph* OR gene-trap OR \"gene trap\")",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 4
+   },
+   {
+    "query": "WWOX AND (knockout OR null) AND mice AND survival",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 7
+   },
+   {
+    "query": "WWOX AND lymphoma",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 27
+   },
+   {
+    "query": "WWOX AND (testis OR testicular)",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 14
+   }
+  ],
+  "note": "The hypomorph/gene-trap intersection is 4 records in PubMed, so this paper is one of very few sources for a reduced-expression (not null) Wwox mouse. Counts are field sizes, not reading coverage."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 25,
+  "enumeration_method": "Enumerated from the fingerprinted PMC HTML ref-list: 25 <li> entries, every one carrying a PubMed link. Gene-direct = the title names WWOX/Wwox/FRA16D, matched on the full title text by script: 17.",
+  "gene_direct_count": 17,
+  "gene_direct_refs_in_source": [
+   "17360458",
+   "15070730",
+   "11719429",
+   "10786676",
+   "15073846",
+   "15674328",
+   "14638866",
+   "11013073",
+   "11979549",
+   "14526170",
+   "15064722",
+   "15692750",
+   "15982416",
+   "16941225",
+   "11572989",
+   "15266310",
+   "14695174"
+  ],
+  "resolved": [
+   "17360458",
+   "15070730",
+   "14526170",
+   "15064722",
+   "15692750",
+   "15982416",
+   "16941225"
+  ],
+  "queued": [],
+  "resolved_depth_declaration": "RESOLVED MEANS A PERSISTED complete_fulltext_read RECEIPT, measured with fulltext_receipts.py status --pmid on 2026-09-14, and nothing more; no registry or dossier content was opened. 7 of 17 gene-direct references resolve. Two load-bearing antecedents are stated: 17360458 (Aqeilan 2007, the knockout whose 4-week lethality this paper contrasts itself with) HAS a complete receipt; 9626493 (Voss 1998, the gene-trap 'splicing around' premise behind calling the allele a hypomorph) is not gene-direct by title and has NO receipt. The 10 unresolved gene-direct references and Voss 1998 are reading debt routed to the orchestrator in the commit candidate; nothing is queued because this contract does not own the queue file."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Technical only: fulltext_receipts.py status --pmid for each of the 25 reference PMIDs, and for 17823927 itself before reading (exit 1, no events). No claim, registry, dossier or candidate content opened before the dossier froze.",
+  "hits": 7,
+  "finding": "7 of 25 references carry a complete receipt, all gene-direct. The paper itself had no receipt of any depth."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-09-14",
+  "route": "NCBI esummary db=pubmed retmode=json for 17823927",
+  "result": "pubtype Journal Article; Research Support, N.I.H., Extramural. commentscorrections null: no linked erratum, expression of concern or retraction.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 25,
+   "references_screened": 21,
+   "references_with_doi": 21,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 4,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 4
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+   "kind": "article_text",
+   "note": "PMC article page of PMC4143238 (NIH author manuscript NIHMS222061), HTTP 200 with no user agent, 163115 B. citation_pmid 17823927 and citation_doi 10.1002/gcc.20497 read from the page's own meta tags. The evidentiary text surface for every body and table locator, verified through the validator's own HTML surface parser with the abstract separated. It is an AUTHOR MANUSCRIPT, not the Wiley version of record. Known conversion defect carried in this surface and NOT corrected: the Fig. 1 legend prints 'hm 5 Wwoxgt/gt' where '=' is meant (identical in the manuscript PDF). NCBI efetch db=pmc returned an XML shell whose comment says the publisher does not allow downloading of the full text in XML form; Europe PMC fullTextXML returned 404 (both measured 2026-09-14).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4143238/",
+    "http_method": "GET",
+    "tier": "pmc_article_html",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "b14f108f8d62c18dc72640e224f000740e6efdfec73bb74d74a214d9414f5251"
+  },
+  {
+   "path": "files/fulltext/PMID17823927_LudesMeyers2007.pdf",
+   "kind": "article_binary",
+   "note": "NIH author-manuscript PDF nihms-222061.pdf, 15 pages, fetched through PMC's proof-of-work interstitial with framework/scripts/pmc_pow_fetch.py (a plain GET returned the challenge HTML). Declared ONLY as the source of the native figure rasters, which are 2.0x to 4.0x the linear size of the PMC CDN figure blobs. No locator uses its text layer; the font screen returned 1 UNDECIDED, 0 untrustworthy, 0 suspect.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4143238/pdf/nihms-222061.pdf",
+    "http_method": "GET",
+    "tier": "pmc_pow_fetch",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "f2bacf5acd8af2d72e57fe0579126cc0d422a032e1bea6c4a8a3536da310de2d"
+  },
+  {
+   "path": "files/fulltext/PMID17823927_LudesMeyers2007_assets/fig1_pdf_p10_x43.jpeg",
+   "kind": "figure",
+   "note": "Figure 1, native embedded raster 3010x2887 grayscale, PDF p.10 (caption on the same page checked). Too large to display at native scale in one view, so it was inspected whole AND as four native-pixel tiles.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID17823927_LudesMeyers2007.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref) over Page.get_images(full=True); bytes written unmodified",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "fb18f1e3c384b9eb1d7f5c61395be75f49a05881730e1aca3c3c4afc293817db"
+  },
+  {
+   "path": "files/fulltext/PMID17823927_LudesMeyers2007_assets/fig2_pdf_p12_x51.jpeg",
+   "kind": "figure",
+   "note": "Figure 2, native embedded raster 1872x942 RGB, PDF p.12, inspected whole; panel G also as a native crop.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID17823927_LudesMeyers2007.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref) over Page.get_images(full=True); bytes written unmodified",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "fd8ac5ed83b0df45f67d7a49e3c0b274bd5007d851457ef90ac6cb5a508fb304"
+  },
+  {
+   "path": "files/fulltext/PMID17823927_LudesMeyers2007_assets/fig3_pdf_p13_x56.png",
+   "kind": "figure",
+   "note": "Figure 3, native embedded raster 1702x1413 grayscale (Flate), PDF p.13, inspected whole at native scale.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID17823927_LudesMeyers2007.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref) over Page.get_images(full=True); bytes written unmodified",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "4869918ffc5928d014bd982b9c71ee729441b23f35756f9bff894c409310234f"
+  },
+  {
+   "path": "files/fulltext/PMID17823927_LudesMeyers2007_assets/fig4_pdf_p14_x61.jpeg",
+   "kind": "figure",
+   "note": "Figure 4, native embedded raster 1496x1500 RGB, PDF p.14, inspected whole at native scale.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID17823927_LudesMeyers2007.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref) over Page.get_images(full=True); bytes written unmodified",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "ba436937dd39afe20dc58318045226c88b10803fa284916af815de6b268f4168"
+  },
+  {
+   "path": "files/fulltext/PMID17823927_LudesMeyers2007_assets/crop_fig1_tl.png",
+   "kind": "figure",
+   "note": "Native tile of Figure 1, x 0-1560 y 0-1500: panel A and the Southern blot of panel B.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID17823927_LudesMeyers2007_assets/fig1_pdf_p10_x43.jpeg",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 1560x1500+0+0 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "79cce830e85ff94108ac6ddfd8cb4abee7684cf30322a68ae7170d4e59245ce0"
+  },
+  {
+   "path": "files/fulltext/PMID17823927_LudesMeyers2007_assets/crop_fig1_tr.png",
+   "kind": "figure",
+   "note": "Native tile of Figure 1, x 1450-3010 y 0-1500: panel D, both immunoblots.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID17823927_LudesMeyers2007_assets/fig1_pdf_p10_x43.jpeg",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 1560x1500+1450+0 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "3b127f1f73e01a1a27e92ff845bb82318eb2b4cd7143bef6394e94805a5170e5"
+  },
+  {
+   "path": "files/fulltext/PMID17823927_LudesMeyers2007_assets/crop_fig1_bl.png",
+   "kind": "figure",
+   "note": "Native tile of Figure 1, x 0-1560 y 1387-2887: panel B RT-PCR and western, panel C.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID17823927_LudesMeyers2007_assets/fig1_pdf_p10_x43.jpeg",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 1560x1500+0+1387 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "c6c139e687e02028507c6f9f2f8cb71d66a4384c8bb19066d12c4edbd04bffc4"
+  },
+  {
+   "path": "files/fulltext/PMID17823927_LudesMeyers2007_assets/crop_fig1_br.png",
+   "kind": "figure",
+   "note": "Native tile of Figure 1, x 1450-3010 y 1387-2887: panel D lower actin, panel E.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID17823927_LudesMeyers2007_assets/fig1_pdf_p10_x43.jpeg",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 1560x1500+1450+1387 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "aa784fb5642578c11926f111942d06f8348bf71453b9e05baaaa26ea5e9cc9b3"
+  },
+  {
+   "path": "files/fulltext/PMID17823927_LudesMeyers2007_assets/crop_fig2G.png",
+   "kind": "figure",
+   "note": "Native crop of Figure 2 panel G, x 1372-1872 y 0-942: the atrophy dot plot.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID17823927_LudesMeyers2007_assets/fig2_pdf_p12_x51.jpeg",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 500x942+1372+0 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "4eb16a2f56960bbff117ec4384584090db0afeff7546ced5cd0dc7e874a6cd67"
+  },
+  {
+   "path": "files/fulltext/PMID17823927_LudesMeyers2007_assets/fig1_blob.jpg",
+   "kind": "figure",
+   "note": "Figure 1 as served by the PMC CDN blob linked from the article page, 752x721. Acquired and fingerprinted; NOT the inspected surface, because the PDF raster of the same figure is larger.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/2ef7/4143238/afb8717806a1/nihms-222061-f0001.jpg",
+    "http_method": "GET",
+    "tier": "pmc_cdn_blob",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "d18d946539e488cde5a4c3e42212936bcc2ccd88079ed8cebdf848ea9ea99a88"
+  },
+  {
+   "path": "files/fulltext/PMID17823927_LudesMeyers2007_assets/fig2_blob.jpg",
+   "kind": "figure",
+   "note": "Figure 2 as served by the PMC CDN blob linked from the article page, 800x402. Acquired and fingerprinted; NOT the inspected surface, because the PDF raster of the same figure is larger.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/2ef7/4143238/c0d40adb3e20/nihms-222061-f0002.jpg",
+    "http_method": "GET",
+    "tier": "pmc_cdn_blob",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "bc66bb0b4b917e06cc0e93cfccad18fe9858e5156740663ac074f12e82db7299"
+  },
+  {
+   "path": "files/fulltext/PMID17823927_LudesMeyers2007_assets/fig3_blob.jpg",
+   "kind": "figure",
+   "note": "Figure 3 as served by the PMC CDN blob linked from the article page, 600x498. Acquired and fingerprinted; NOT the inspected surface, because the PDF raster of the same figure is larger.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/2ef7/4143238/a0f6782e5c17/nihms-222061-f0003.jpg",
+    "http_method": "GET",
+    "tier": "pmc_cdn_blob",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "51d090c3699677c8c4e18f23ab91588e97da73e6c5a7ec7f8c25c9e6496ac8b1"
+  },
+  {
+   "path": "files/fulltext/PMID17823927_LudesMeyers2007_assets/fig4_blob.jpg",
+   "kind": "figure",
+   "note": "Figure 4 as served by the PMC CDN blob linked from the article page, 749x749. Acquired and fingerprinted; NOT the inspected surface, because the PDF raster of the same figure is larger.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/2ef7/4143238/d0d7041806e0/nihms-222061-f0004.jpg",
+    "http_method": "GET",
+    "tier": "pmc_cdn_blob",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "1b5a30ca7797ca72cb708dd1dfda94adb2ef2878cef8e6b73a6674bcabcb6b54"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST search EXT_ID:17823927 AND SRC:MED, resultType=core, 2026-09-14: inEPMC=Y, inPMC=Y, fullTextIdList PMC4143238, isOpenAccess=N, nihAuthMan=Y. The text is indexed as an NIH author manuscript although Europe PMC's fullTextXML endpoint returns 404 for it.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence. The abstract's load-bearing word 'lifespan' is carried as an abstract_snippet companion on the Figure 3 caption locator, where the body sentence it summarises is quoted and the curve is read as a panel.",
+  "entries": [
+   {
+    "proposition": "MODEL: the allele is a BayGenomics gene-trap ES line (XG218) with the trap in Wwox intron 4 - a gene-trap insertion, not a targeted deletion. DATO.",
+    "snippet": "The ES cell line, XG218, was obtained from BayGenomics",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+    "anchor": "Materials and Methods > Hypomorph Generation, sentence 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, whole animal",
+     "genotype": "Wwox gene-trap XG218 (intron 4) +/+ vs gt/gt"
+    }
+   },
+   {
+    "proposition": "ALLELE PRODUCT: the trapped transcript encodes a Wwox-beta-geo fusion that KEEPS both WW domains and lacks the SDR domain. DATO for the construct; 'ablating enzymatic activity' is asserted from the domain map and never measured - no enzymatic assay, and no blot for the fusion protein, exists in the paper. So the gt allele is not a clean null: a WW-domain-bearing fusion is predicted to be made.",
+    "snippet": "The resultant Wwox-β-geo fusion protein contains both Wwox WW domains but lacks the oxidoreductase domain thus ablating enzymatic activity.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+    "anchor": "Results > Generation of WWOX Gene-Trapped Mutant Mice, sentence 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, whole animal",
+     "genotype": "Wwox gene-trap XG218 (intron 4) +/+ vs gt/gt"
+    }
+   },
+   {
+    "proposition": "EMBRYO mRNA (10.5 dpc F2): heterozygotes ~50%, homozygotes reduced by more than 95% versus wild type (exon 4-5 TaqMan). DATO.",
+    "snippet": "Wwox+/gt embryos had a 50% reduction of Wwox mRNA compared with wild-type while Wwoxgt/gt embryos had a reduction by more than 95%",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+    "anchor": "Results > Generation of WWOX Gene-Trapped Mutant Mice, sentence 6",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, whole animal",
+     "genotype": "Wwox gene-trap XG218 (intron 4) +/+ vs gt/gt",
+     "timepoint": "10.5 dpc embryo",
+     "endpoint": "Wwox exon 4-5 mRNA"
+    }
+   },
+   {
+    "proposition": "n FOR FIG 1C: two embryos per genotype, each assay in triplicate. DATO. Technical triplicates of n=2 embryos carry the SEM shown.",
+    "snippet": "Total RNA from two embryos of each genotype was analyzed using a TaqMan expression assay for Wwox exons 4–5. Each assay was done in triplicate.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+    "anchor": "Figure 1 legend, panel C",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "INTERNAL DISCREPANCY IN REPLICATION: Methods say every real-time assay was run in DUPLICATE on tissue RNA from THREE animals, while the Fig 1C legend says TRIPLICATE on TWO embryos. Both cannot describe the embryo assay. DATO for both texts; which is right is not decidable from the paper.",
+    "snippet": "All assays were done in duplicate with RNA from tissues of three individual animals.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+    "anchor": "Materials and Methods > Analysis of WWOX mRNA, last sentence",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "ADULT PROTEIN: undetectable in most gt/gt tissues examined, low but consistently detectable in testes. DATO. 'Most tissues' = the five tissues blotted (kidney, thymus, spleen, liver, testes) - see the Figure 1D locator.",
+    "snippet": "Wwox protein was undetectable in most tissues of Wwoxgt/gt mice (Fig. 1D); however, low levels of Wwox could consistently be detected in testes.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+    "anchor": "Results > Generation of WWOX Gene-Trapped Mutant Mice, paragraph 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, whole animal",
+     "genotype": "Wwox gene-trap XG218 (intron 4) +/+ vs gt/gt",
+     "timepoint": "adult",
+     "endpoint": "Wwox immunoblot"
+    }
+   },
+   {
+    "proposition": "ADULT mRNA: reduced by 85-98% of wild type depending on tissue. DATO, over the four tissues of Fig 1E only.",
+    "snippet": "Real time PCR showed Wwox mRNA reduced by 85–98% of wild-type depending on the tissue examined",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+    "anchor": "Results > Generation of WWOX Gene-Trapped Mutant Mice, paragraph 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, whole animal",
+     "genotype": "Wwox gene-trap XG218 (intron 4) +/+ vs gt/gt",
+     "timepoint": "adult",
+     "endpoint": "Wwox exon 4-5 mRNA"
+    }
+   },
+   {
+    "proposition": "WHY 'HYPOMORPH': residual full-length transcript is attributed to splicing around the trap, by analogy to other trapped alleles (Voss 1998). INFERENZA of the authors resting on an imported premise; no full-length-transcript assay spanning the trap junction in adult tissue is shown beyond the exon 4-5 TaqMan, which cannot distinguish the source of the signal.",
+    "snippet": "a small fraction of full-length Wwox transcripts can be produced by splicing around the gene-trap as observed with other trapped alleles",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+    "anchor": "Results > Generation of WWOX Gene-Trapped Mutant Mice, paragraph 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "CAPTION CLAIM: equal amounts of total protein were loaded in the Fig 1D blots. DATO as the authors' statement.",
+    "snippet": "Equal amounts of total protein for immunoblot detection of Wwox protein using anti-Wwox antibody were loaded.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+    "anchor": "Figure 1 legend, panel D",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "FIGURE 1D, NATIVE PIXELS. Upper blot, 12 lanes labelled wt hm wt hm across kidney, thymus, spleen: a Wwox band in each of the six wt lanes and none in the six hm lanes. Lower blot: liver wt x2 banded, hm x2 blank; testes wt x2 strong, hm x2 FAINT BUT PRESENT. THE ACTIN ROW OF THE UPPER BLOT IS VERY UNEQUAL: the four kidney lanes are faint and the thymus/spleen lanes heavy, so 'equal amounts loaded' is not what the loading control shows. Within-tissue wt/hm comparison still holds, because wt and hm lanes of the same tissue carry similar actin. TISSUES BLOTTED: kidney, thymus, spleen, liver, testes - NO BRAIN OR ANY NEURAL TISSUE.",
+    "snippet": "Visual attestation of Figure 1D: upper immunoblot 12 lanes wt/hm pairs for kidney, thymus, spleen, Wwox band only in wt lanes, actin faint in kidney lanes and heavy in thymus and spleen lanes; lower immunoblot liver wt banded hm blank, testes wt strong hm faint.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007_assets/crop_fig1_tr.png",
+    "anchor": "Figure 1D (PDF p.10), native tile x 1450-3010 y 0-1500 of the 3010x2887 raster",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "qualifies_needle": "Equal amounts of total protein",
+    "experimental_context": {
+     "system": "mouse, whole animal",
+     "genotype": "Wwox gene-trap XG218 (intron 4) +/+ vs gt/gt",
+     "timepoint": "adult",
+     "endpoint": "Wwox immunoblot"
+    },
+    "qualifies": "entries[8]"
+   },
+   {
+    "proposition": "TEXT CLAIM: embryo protein tracks mRNA across genotypes (Fig 1B). DATO as the authors' statement.",
+    "snippet": "Wwox protein expression was consistent with the observed mRNA expression levels",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+    "anchor": "Results > Generation of WWOX Gene-Trapped Mutant Mice, sentence 7",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "FIGURE 1B, NATIVE PIXELS. Genotype row wt ht wt hm hm ht ht ht (8 embryos; only TWO homozygotes). Southern: gt band alone in hm lanes. RT-PCR: no wild-type Wwox band in hm lanes. Western: no Wwox band in either hm lane - agrees with the text. But the four HETEROZYGOTE lanes are not uniform: lane 2 is very faint, lane 6 close to wild type, lanes 7-8 intermediate - so 'consistent with mRNA' (a 50% heterozygote) holds on average and not lane by lane. No quantification of the blot.",
+    "snippet": "Visual attestation of Figure 1B: lane labels wt ht wt hm hm ht ht ht; western Wwox band strong in lanes 1 and 3, very faint in lane 2, absent in lanes 4 and 5, strong in lane 6, moderate in lanes 7 and 8; actin even.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007_assets/crop_fig1_bl.png",
+    "anchor": "Figure 1B (PDF p.10), native tile x 0-1560 y 1387-2887",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "qualifies_needle": "consistent with the observed mRNA expression levels",
+    "experimental_context": {
+     "system": "mouse, whole animal",
+     "genotype": "Wwox gene-trap XG218 (intron 4) +/+ vs gt/gt",
+     "timepoint": "10.5 dpc embryo",
+     "endpoint": "Southern, RT-PCR, immunoblot"
+    },
+    "qualifies": "entries[10]"
+   },
+   {
+    "proposition": "FIGURE 1E, NATIVE PIXELS. Four tissues only - testis, kidney, liver, spleen. Visual estimates (arbitrary units): testis ~37.5 wt vs ~1.5 gt/gt; kidney ~5 vs ~0.6; liver ~4.5 vs ~0 at this scale; spleen ~14.5 vs ~0.4. Consistent with the text's 85-98% reduction. NO BRAIN.",
+    "snippet": "Visual attestation of Figure 1E: bar chart of Wwox expression for Testis, Kidney, Liver, Spleen, grey Wwox+/+ bars and black Wwoxgt/gt bars, the black bars near zero in every tissue and highest in testis.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007_assets/crop_fig1_br.png",
+    "anchor": "Figure 1E (PDF p.10), native tile x 1450-3010 y 1387-2887",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, whole animal",
+     "genotype": "Wwox gene-trap XG218 (intron 4) +/+ vs gt/gt",
+     "timepoint": "adult",
+     "endpoint": "Wwox mRNA"
+    }
+   },
+   {
+    "proposition": "FIGURE 1C, NATIVE PIXELS. wt 100% with a wide SEM (about 88-115), ht ~52%, hm at baseline. Confirms the >95% embryo reduction; n=2 embryos per genotype per the legend.",
+    "snippet": "Visual attestation of Figure 1C: three bars wt, ht, hm of Wwox expression as percent wildtype, wt at 100 percent with a wide error bar, ht near 50 percent, hm near zero.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007_assets/crop_fig1_bl.png",
+    "anchor": "Figure 1C (PDF p.10), native tile x 0-1560 y 1387-2887",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, whole animal",
+     "genotype": "Wwox gene-trap XG218 (intron 4) +/+ vs gt/gt",
+     "timepoint": "10.5 dpc embryo",
+     "endpoint": "Wwox mRNA"
+    }
+   },
+   {
+    "proposition": "VIABILITY: normal Mendelian ratios at F2 and viability up to 2 years. DATO as stated; the ratio table is Supplementary Table 1, which is UNAVAILABLE (Wiley supplementary routes 403), so the counts and any test were not seen.",
+    "snippet": "we observed normal Mendelian ratios in the F2 generation (Supplementary Table 1) and F2 mice remained viable for up to 2 years of age",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+    "anchor": "Results > Generation of WWOX Gene-Trapped Mutant Mice, sentence 9",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, whole animal",
+     "genotype": "Wwox gene-trap XG218 (intron 4) +/+ vs gt/gt"
+    }
+   },
+   {
+    "proposition": "IMPORTED COMPARATOR: knockout lethality by 4 weeks is cited from Aqeilan 2007, not measured here. DATO about the citation only.",
+    "snippet": "This is in contrast to the recent observation that Wwox knockout mice die by 4 weeks of age",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+    "anchor": "Results > Generation of WWOX Gene-Trapped Mutant Mice, sentence 10",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "SURVIVAL COHORT SIZE BY SEX: 15 wt vs 20 gt/gt females, 20 wt vs 19 gt/gt males, i.e. 35 vs 39. DATO.",
+    "snippet": "The experimental cohorts used for the survival analysis consisted of 15 Wwox+/+ versus 20 Wwoxgt/gt female and 20 Wwox+/+ versus 19 Wwoxgt/gt male mice.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+    "anchor": "Materials and Methods > Long-Term Survival Analysis, sentence 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, whole animal",
+     "genotype": "Wwox gene-trap XG218 (intron 4) +/+ vs gt/gt"
+    }
+   },
+   {
+    "proposition": "END OF OBSERVATION: 104 weeks, then euthanasia and necropsy. DATO. Survival is therefore observed to 2 years and not to natural death.",
+    "snippet": "Mice were allowed to live out their life span or until 104 weeks of age at which time they were euthanized and necropsies were performed.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+    "anchor": "Materials and Methods > Long-Term Survival Analysis, sentence 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "HUMANE ENDPOINT: moribund animals were euthanised. DATO. How these euthanasias entered the survival analysis (as deaths or censored) is NOT stated anywhere - searched Methods, Results, Fig 3 legend.",
+    "snippet": "Mice were also euthanized when moribund or when showing signs of chronic disease.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+    "anchor": "Materials and Methods > Long-Term Survival Analysis, sentence 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "EARLY DEATHS: 23% of gt/gt vs 0% of wt died in the first 18 months. DATO. Computed: 23% of 39 = 9 animals, and the sex split 26.3%/20% equals 5/19 males and 4/20 females, so the percentages are internally consistent.",
+    "snippet": "During the first 18 months of the study, 23% of the Wwoxgt/gt mice had died compared with 0% of WT mice",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+    "anchor": "Results > Wwoxgt/gt Mice Displayed Increased Tumorigenesis, sentence 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, whole animal",
+     "genotype": "Wwox gene-trap XG218 (intron 4) +/+ vs gt/gt",
+     "endpoint": "death before 18 months"
+    }
+   },
+   {
+    "proposition": "KEY NEGATIVE: necropsy of the early deaths found NO definable cause of death. DATO. So the survival deficit is unexplained in this paper: it is not attributed to tumours, to testis, or to any organ, and no brain, seizure or neurological cause was looked for (zero occurrences of brain, neuro-, seizure, epilep-, ataxia, CNS in the text).",
+    "snippet": "Histopathological analysis of mice that died at an early age did not reveal a definable cause of death.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+    "anchor": "Results > Wwoxgt/gt Mice Displayed Increased Tumorigenesis, sentence 5",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, whole animal",
+     "genotype": "Wwox gene-trap XG218 (intron 4) +/+ vs gt/gt"
+    }
+   },
+   {
+    "proposition": "2-YEAR OVERALL SURVIVAL: significantly decreased in gt/gt, P = 0.0188. DATO.",
+    "snippet": "the overall survival of Wwoxgt/gt mice was significantly decreased compared with their WT counterparts (P = 0.0188",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+    "anchor": "Results > Wwoxgt/gt Mice Displayed Increased Tumorigenesis, sentence 6",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, whole animal",
+     "genotype": "Wwox gene-trap XG218 (intron 4) +/+ vs gt/gt",
+     "endpoint": "survival to 104 weeks"
+    }
+   },
+   {
+    "proposition": "FIG 3 LEGEND: 'significantly shorter survival', P = 0.0188 by the Breslow test, sexes pooled (n = 35 vs 39). DATO. The abstract words the same result as 'shorter lifespan' (abstract_snippet).",
+    "snippet": "Wwoxgt/gt mice had a significantly shorter survival (P = 0.0188, Breslow test).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+    "anchor": "Figure 3 legend",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "abstract_snippet": "We observed that the Wwoxgt/gt mice had a significantly shorter lifespan",
+    "experimental_context": {
+     "system": "mouse, whole animal",
+     "genotype": "Wwox gene-trap XG218 (intron 4) +/+ vs gt/gt",
+     "endpoint": "survival to 104 weeks"
+    }
+   },
+   {
+    "proposition": "FIGURE 3, NATIVE PIXELS - WHAT 'SHORTER LIFESPAN' IS. Two Kaplan-Meier curves, sexes pooled. Wild type flat at 100% until ~84 weeks, ending ~74% at ~102 weeks. gt/gt: first step ~15 weeks, ~95% by 20, ~80% by 58, ~75% at 80, ~54% from ~98 weeks to the end. NEITHER CURVE FALLS BELOW 50%, so median survival is not reached in either genotype and no lifespan (median or maximum) is measured: what is shown is lower cumulative survival to 104 weeks. No censoring ticks, no numbers at risk. Estimates are read from the axis grid (about +/- 2 percentage points). INFERENZA on the wording: Breslow weights early events, and early events are exactly where the curves differ.",
+    "snippet": "Visual attestation of Figure 3: Kaplan-Meier plot, cumulative survival percent against age in weeks to about 104; Wwox+/+ at 100 until about 84 weeks then steps to about 74; Wwoxgt/gt steps from about 15 weeks and ends near 54; no censor marks.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007_assets/fig3_pdf_p13_x56.png",
+    "anchor": "Figure 3 (PDF p.13), native raster 1702x1413",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "qualifies_needle": "significantly shorter survival",
+    "experimental_context": {
+     "system": "mouse, whole animal",
+     "genotype": "Wwox gene-trap XG218 (intron 4) +/+ vs gt/gt",
+     "endpoint": "survival to 104 weeks"
+    },
+    "qualifies": "entries[22]"
+   },
+   {
+    "proposition": "SEX: the early-death excess is 'similar' in males and females (26.3% vs 20%). DATO as a descriptive; no sex-stratified survival test or curve is reported.",
+    "snippet": "The decrease in survival was similar for both the male and female cohorts (26.3% vs. 20%, respectively).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+    "anchor": "Results > Wwoxgt/gt Mice Displayed Increased Tumorigenesis, sentence 4",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "FEMALE MALIGNANCY: 9 of 14 gt/gt vs 3 of 15 wt, chi2 = 5.85, P = 0.015. DATO. Reproduced here: uncorrected Pearson chi2 5.855, P 0.0155; with Yates correction 4.17, P 0.041 (expected cell counts below 5, so a continuity-corrected or exact test would be the conventional choice). Denominator 14 is smaller than the 20 gt/gt females in the survival cohort; the difference is not explained.",
+    "snippet": "We observed a significant increase in the incidence of malignant neoplasias in female Wwoxgt/gt mice (9 of 14 mice) when compared with female WT mice (3 of 15 mice",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+    "anchor": "Results > Wwoxgt/gt Mice Displayed Increased Tumorigenesis, sentence 7",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, whole animal",
+     "genotype": "Wwox gene-trap XG218 (intron 4) +/+ vs gt/gt",
+     "endpoint": "malignancy at necropsy, females"
+    }
+   },
+   {
+    "proposition": "TABLE 1 FEMALE TOTALS: 9/14 gt/gt and 3/15 wt (the table prints lower-case l for 1 in '3/l5'). DATO.",
+    "snippet": "Malignancies = 9/14(64.3%) Malignancies = 3/l5(20%)",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+    "anchor": "Table 1, female rows, totals",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "TABLE 1 MALE TOTALS AND FOOTNOTE: 5/14 gt/gt vs 5/18 wt, footnote d 'P = 0.23'. DATO for the printed values. Computed here: the uncorrected chi2 STATISTIC for 5/14 vs 5/18 is 0.231, and its P is 0.63 (Yates 0.92). The printed 'P = 0.23' equals the statistic, not the P-value - INFERENZA that the footnote reports chi2 as P; either way males show no difference. Male denominators 14 and 18 are smaller than the survival cohort's 19 and 20, unexplained.",
+    "snippet": "Malignancies = 5/14(35.7%) Malignancies = 5/l8(27.8%)",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+    "anchor": "Table 1, male rows, totals and footnote d",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "MALES: tumour incidence similar between genotypes. DATO - the tumour phenotype is female-only in this paper.",
+    "snippet": "On the other hand, tumor incidence in male mice was similar between the two genotypes.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+    "anchor": "Results > Wwoxgt/gt Mice Displayed Increased Tumorigenesis, paragraph 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "B-CELL LYMPHOMA: most gt/gt female tumours are CD45R/B220-positive B-cell lymphomas, chi2 = 6.15, P = 0.013. DATO. Computed: chi2 6.152 is reproduced exactly by 8/14 vs 2/15, while Table 1 lists 9 lymphoid lesions in gt/gt females (8 labelled B-cell or MALT plus 1 plasmacytoma) and 'Lymphoma' plus 'Leukemia' in wt females - INFERENZA that the test counted 8 vs 2; which lesions were counted is not stated.",
+    "snippet": "The majority of tumors that developed in Wwoxgt/gt females consisted of B-cell lymphomas, i.e., CD45R/B220 positive lymphomas",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+    "anchor": "Results > Wwoxgt/gt Mice Displayed Increased Tumorigenesis, sentence 8",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, whole animal",
+     "genotype": "Wwox gene-trap XG218 (intron 4) +/+ vs gt/gt",
+     "endpoint": "B-cell lymphoma, females"
+    }
+   },
+   {
+    "proposition": "NEGATIVE BY OMISSION: anti-CD3 was used, but no CD3 (T-cell) result appears in Results, Table 1, Figure 4 or its legend (searched). The B-versus-T lineage call rests on CD45R/B220 positivity shown, without the T-cell stain being reported.",
+    "snippet": "Antibodies used anti-CD3 (Serotec, MCA1477T) and anti-CD45R/B220 (Serotec, MCA1258G).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+    "anchor": "Materials and Methods > Histological Analysis, sentence 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought"
+   },
+   {
+    "proposition": "DESIGN STRENGTH: histology read by two pathologists blind to genotype. DATO.",
+    "snippet": "Histological analyses were performed by two pathologists without prior knowledge of genotypes.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+    "anchor": "Materials and Methods > Histological Analysis, sentence 4",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "TESTIS METHOD: per-testis percentage from image scans, average 227 tubules per testicle. DATO.",
+    "snippet": "Percentages of atrophic seminiferous tubules were determined using testicle image scans (average of 227 tubules/testicle analyzed).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+    "anchor": "Materials and Methods > Histological Analysis, last sentence",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "TESTIS GROUPS IN THE TEXT: 3 months (n = 8 wt, 10 gt/gt) and 15 months (n = 4, 4). DATO.",
+    "snippet": "The percentage of atrophic seminiferous tubules per testis was determined in Wwox+/+ and Wwoxgt/gt mice at ages of 3 months (n = 8 and n = 10, respectively) and 15 months (n = 4 and n = 4, respectively)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+    "anchor": "Results > Testicular Defects in Wwoxgt/gt Male Mice, sentence 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, whole animal",
+     "genotype": "Wwox gene-trap XG218 (intron 4) +/+ vs gt/gt",
+     "endpoint": "percent atrophic tubules"
+    }
+   },
+   {
+    "proposition": "FIG 2G LEGEND: young 3-8 months P < 0.0001, old 15-20 months P < 0.005. DATO.",
+    "snippet": "Wwoxgt/gt males had a significantly higher percentage of degenerate tubules than Wwox+/+ males in young (3–8 months, P < 0.0001) and old (15–20 months, P < 0.005) mice.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+    "anchor": "Figure 2 legend, panel G",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "TEST: Wilcoxon rank-sum. DATO.",
+    "snippet": "Statistical analysis was done using the Wilcoxon rank-sum test.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+    "anchor": "Figure 2 legend, panel G, last sentences",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "FIGURE 2G, NATIVE CROP. Age axis reads '3-8 months' and '15-20 months', not the single ages 3 and 15 months of the running text. Old gt/gt (n=4): dots at ~100, ~73, ~12 and ~3%, mean bar ~46 - two of four animals carry the effect. Young gt/gt (n=10): 0 to ~28%, mean ~7; wild type all near 0. COMPUTED: with n = 4 vs 4 a two-sided Wilcoxon rank-sum cannot give P below 0.029 exactly (0.021 by normal approximation), so the legend's 'P < 0.005' for the old group is not attainable by the stated test at the plotted n - INFERENZA that the P, the test or the n is misreported. The young-group difference is not affected by this arithmetic.",
+    "snippet": "Visual attestation of Figure 2G: dot plot of tubule degeneration percent, groups +/+ and gt/gt at 3-8 months (n=8, n=10) and 15-20 months (n=4, n=4); old gt/gt dots near 100, 73, 12 and 3 with a mean bar near 46.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007_assets/crop_fig2G.png",
+    "anchor": "Figure 2G (PDF p.12), native crop x 1372-1872 of the 1872x942 raster",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "qualifies_needle": "15 months (n = 4 and n = 4",
+    "experimental_context": {
+     "system": "mouse, whole animal",
+     "genotype": "Wwox gene-trap XG218 (intron 4) +/+ vs gt/gt",
+     "endpoint": "percent atrophic tubules"
+    },
+    "qualifies": "entries[33]"
+   },
+   {
+    "proposition": "FERTILITY: gt/gt mating pairs averaged 1.3 litters in 6 weeks versus a typical 3 for wt pairs. DATO as stated; Supplementary Table 2 UNAVAILABLE, so number of pairs, variance and any test were not seen.",
+    "snippet": "Wwoxgt/gt mating pairs had an average of only 1.3 litters (Supplementary Table 2)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+    "anchor": "Results > Testicular Defects in Wwoxgt/gt Male Mice, paragraph 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "FERTILITY BY SEX: gt/gt females x wt males 2.5 litters; wt females x gt/gt males 1 litter - the male is the impaired partner. DATO as stated; same unavailable supplement.",
+    "snippet": "Wwoxgt/gt females had an average of 2.5 litters when paired with WT males but WT females had an average of only 1 litter when paired with Wwoxgt/gt males",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+    "anchor": "Results > Testicular Defects in Wwoxgt/gt Male Mice, paragraph 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "INTERNAL CONTRADICTION: the Discussion calls the hypomorphs 'viable and fertile' two sentences after restating their decreased fertility, and the Results report male-driven reduced litters. DATO for both statements; 'fertile' can only mean 'not sterile'.",
+    "snippet": "We demonstrated that the Wwox hypomorphic mice are viable and fertile despite the dramatically reduced Wwox expression.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+    "anchor": "Discussion, paragraph 1, sentence 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "STRAIN: hypomorph ES cells are 129/Ola, the knockout's 129/Svj; the authors offer strain as one explanation of phenotype differences. DATO for the origins; INFERENZA of the authors for the explanation.",
+    "snippet": "Wwox hypomorphs were generated from 129/Ola ES cells compared with 129/Svj ES cells used by Aqeilan et al.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+    "anchor": "Discussion, paragraph 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "BACKGROUND NOT NAMED: the cohort's genetic background is invoked ('characteristic of their genetic background') but never stated - the chimera cross partner and the F2 background appear nowhere (C57Bl/6 is named only as probe template DNA). Searched Methods, Results, Discussion. A mixed 129 x unknown F2 background is an uncontrolled modifier of both survival and tumour spectrum.",
+    "snippet": "Male mice displayed a higher incidence of lung adenomas compared with females, which is characteristic of their genetic background.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+    "anchor": "Results > Wwoxgt/gt Mice Displayed Increased Tumorigenesis, paragraph 2, last sentence",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought"
+   },
+   {
+    "proposition": "AUTHORS' HYPOTHESIS for survival beyond the knockout: residual functional Wwox from splicing around the trap in tissues critical for survival. IPOTESI - which tissues are critical, and whether brain retains Wwox, were not measured.",
+    "snippet": "This may be due to low levels of functional Wwox protein encoded by full-length Wwox mRNA produced by splicing around the gene-trap in tissues critical for survival.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+    "anchor": "Discussion, paragraph 2, sentence 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "AUTHORS' MODEL: Wwox as a caretaker gene whose absence alters susceptibility rather than initiating tumours. IPOTESI.",
+    "snippet": "These results are consistent with a model in which Wwox acts as a caretaker gene, whose absence does not directly initiate tumorigenesis but rather facilitates or alters susceptibility for tumor development.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+    "anchor": "Discussion, last paragraph",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "AUTHORS' HYPOTHESIS: more B-cell lymphoma through increased B-cell survival. IPOTESI - no B-cell count, apoptosis or proliferation assay exists in the paper.",
+    "snippet": "we hypothesize that the increase in B-cell lymphoma development may be due to the increased survival of B cells resulting in an expansion of the B-cell population over the lifetime of the mouse",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+    "anchor": "Discussion, paragraph 4",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "AUTHORS' HYPOTHESIS: p73 mislocalisation in testis. IPOTESI - no p73 staining in these mice.",
+    "snippet": "It is possible that WWOX is required for the cytoplasmic localization of p73 and that p73 dysregulation plays a role in the observed testicular pheno-type in Wwoxgt/gt mice.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+    "anchor": "Discussion, paragraph 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "TESTIS EXPRESSION IN WILD TYPE: strong in Leydig cells, moderate in tubule layers. DATO from wild-type IHC (Fig 2A).",
+    "snippet": "We determined that Wwox is strongly expressed in Leydig cells and moderately expressed within cell layers of seminiferous tubules",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+    "anchor": "Results > Testicular Defects in Wwoxgt/gt Male Mice, sentence 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "FIGURE 2A-F, NATIVE PIXELS. A is wild-type Wwox IHC only - no gt/gt Wwox IHC is shown, so the antibody's loss of signal in the mutant is never shown in tissue. B-E are single fields (3 and 15 months, wt and gt/gt), F a high-power atrophic tubule; representative images, not the quantification.",
+    "snippet": "Visual attestation of Figure 2A-F: A brown immunostain of wild-type testis with an arrow on an interstitial cluster; B and D wild-type H&E at 3 and 15 months; C and E gt/gt H&E with arrows on atrophic tubules; F high magnification tubule.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007_assets/fig2_pdf_p12_x51.jpeg",
+    "anchor": "Figure 2A-F (PDF p.12), native raster 1872x942",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, whole animal",
+     "genotype": "Wwox gene-trap XG218 (intron 4) +/+ vs gt/gt",
+     "endpoint": "testis histology"
+    }
+   },
+   {
+    "proposition": "DIFFERENCE FROM KNOCKOUT: no bone abnormalities found, versus bone lesions in 4 of 13 knockouts (cited). DATO for this paper's null; how bone was examined is not described.",
+    "snippet": "A subset (4 of 13) of knockout mice developed bone lesions at an early age while we did not find evidence of bone abnormalities.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+    "anchor": "Discussion, paragraph 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "CONCLUSION OF THE CONSTRUCT SECTION: the gt/gt mice are called viable hypomorphs. DATO as the authors' conclusion; the classification rests on residual expression in five blotted and four PCR-assayed tissues, never including brain.",
+    "snippet": "Therefore, we conclude that Wwoxgt/gt mice are viable hypomorphs.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+    "anchor": "Results > Generation of WWOX Gene-Trapped Mutant Mice, end of paragraph 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "OVERREACH IN THE AUTHORS' SUMMARY: 'increases the incidence of tumorigenesis in aging mice' - the significant increase is in females only; males were similar (Table 1 footnote d). DATO for the sentence; the qualification is DATO from r_male_similar.",
+    "snippet": "These results demonstrate that the disruption of Wwox gene expression increases the incidence of tumorigenesis in aging mice.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+    "anchor": "Results > Wwoxgt/gt Mice Displayed Increased Tumorigenesis, last sentence",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "SURFACE DEFECT, RECORDED NOT CORRECTED: the Fig 1 legend reads 'hm 5 Wwoxgt/gt' where the genotype key means 'hm = Wwoxgt/gt'; the author-manuscript PDF text has the same characters. A conversion substitution inside the structured surface itself, harmless here because the key is unambiguous from 'wt =' and 'ht =' beside it.",
+    "snippet": "wt = Wwox+/+; ht = Wwox+/gt, and hm 5 Wwoxgt/gt.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+    "anchor": "Figure 1 legend, panel B",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "PURPOSE OF THE 2-YEAR STUDY: designed to test tumour suppression, i.e. an ageing/tumour cohort, not a neurological or developmental phenotyping. DATO.",
+    "snippet": "To determine whether Wwox functions as a tumor suppressor in this mouse model, we performed a 2-year aging experiment comparing the survival of Wwox+/+ and Wwoxgt/gt mice.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007.html",
+    "anchor": "Results > Wwoxgt/gt Mice Displayed Increased Tumorigenesis, sentence 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "FIGURE 4, NATIVE PIXELS. Nine panels from three individual mice (CD45R/B220 IHC and H&E): lymphoma infiltrating kidney, lung adenocarcinoma, mammary MIN, pancreas, spleen, small intestine. No genotype is printed on any panel and the legend does not state one; no wild-type tumour is shown; illustrative, not quantitative.",
+    "snippet": "Visual attestation of Figure 4: nine panels A to I, brown CD45R/B220 immunostained lymphoid infiltrates in A, D, F, G, H and H&E sections in B, C, E, I; no genotype label on any panel.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID17823927_LudesMeyers2007_assets/fig4_pdf_p14_x61.jpeg",
+    "anchor": "Figure 4 (PDF p.14), native raster 1496x1500",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "mouse, whole animal",
+     "genotype": "Wwox gene-trap XG218 (intron 4) +/+ vs gt/gt",
+     "endpoint": "tumour histopathology"
+    }
+   }
+  ]
+ }
+}

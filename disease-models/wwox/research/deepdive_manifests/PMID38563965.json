@@ -1,0 +1,924 @@
+{
+ "schema_version": 2,
+ "pmid": "38563965",
+ "doi": "10.1152/ajplung.00277.2023",
+ "pmcid": "PMC11380939",
+ "receipt": "FTR-20260913-38563965-01",
+ "landing": [
+  "FT-178"
+ ],
+ "skills_considered": [
+  {
+   "skill": "legend-deepdive",
+   "used": true,
+   "reason": "The reading pipeline itself: M0 packet, acquisition, section-by-section read, manifest, receipt."
+  },
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Its cascade logic was needed in substance: PMC holds NO PDF for this article (pmc_pow_fetch 404, ?pdf=render 404), so the winning route was the PMC reader HTML reached under no User-Agent plus the blob CDN for figures and figshare for the supplement the metadata denied."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No trigger fired: no prior manifest exists for this PMID so no persisted locator is contradicted, and this manifest narrows, reverses, corroborates or removes no consolidated baseline claim - claim movement is proposed in the candidate with an R4 precondition, not taken here."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery-shaped leads here - zyxin as an intervention-supported IL-8 mediator, SOD2 loss, the SMAD3 hypothesis - are already captured as locators and are routed to the M4b note; a separate discovery pass would restate them."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever matures toward the reference genotype from this paper: the tissue is lung, the stimulus is mechanical ventilation, and zyxin is a mechanotransducer with no CNS evidence offered here."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No candidate molecule and no SMILES in this reading; the only agents are siRNAs and tamoxifen used as research tools."
+  },
+  {
+   "skill": "legend-paperqa",
+   "used": false,
+   "reason": "Refused on principle: it needs an API key and external traffic, and external spend of any kind is reserved under LEGEND_CORE 21d and is never mine."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 19,
+  "publications_on_gene": 4,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "The same senior laboratory as the first paper of this lot - Singla, 19 publications under 'Singla Sunit'[Full Author Name] and 4 on WWOX (measured 2026-09-13); the bare 'Singla S'[au] count of 794 is not one person and is not used. Aldaz is again primary for the GENE (66 publications, 28 on WWOX) and again contributes a REAGENT, the floxed mouse, at position 9 of 11. The author list is NOT the same as the first paper's: Abdelwahid, Ascoli and Pham are added, while Ware, Crotty Alexander, Moshensky, Shakir and Khan - the human-cohort and e-cigarette contributors - are gone, which fits a study that dropped the exposure arms. NEITHER group is primary for the disease this repository models. WEIGHTING CONSEQUENCE: this is an experimental laboratory reporting a POSITIVE result that is congruent with its own prior interest, so the interpretation is weighted accordingly - the opposite situation from the first paper, whose central finding was a null against the group's own prior claim. The intervention experiment (dual silencing) and the selectivity of its outcome are what carry the zyxin conclusion, not the group's authority."
+ },
+ "field_density": {
+  "measured_on": "2026-09-13",
+  "method": "NCBI esearch db=pubmed, counts read from esearchresult.count, one query per line, run in this session",
+  "queries": [
+   {
+    "query": "WWOX[all]",
+    "count": 708
+   },
+   {
+    "query": "WWOX[all] AND (ventilator[all] OR \"ventilator-induced\"[all] OR VILI[all])",
+    "count": 1
+   },
+   {
+    "query": "WWOX[all] AND zyxin[all]",
+    "count": 1
+   },
+   {
+    "query": "WWOX[all] AND (\"mechanical stretch\"[all] OR mechanotransduction[all] OR mechanotransducer[all])",
+    "count": 1
+   },
+   {
+    "query": "WWOX[all] AND (MAPK[all] OR ERK[all] OR JNK[all] OR \"p38\"[all])",
+    "count": 31
+   },
+   {
+    "query": "WWOX[all] AND (proteomics[all] OR proteomic[all] OR \"mass spectrometry\"[all])",
+    "count": 18
+   },
+   {
+    "query": "WWOX[all] AND (SOD2[all] OR \"superoxide dismutase\"[all])",
+    "count": 1
+   },
+   {
+    "query": "WWOX[all] AND (\"IL-8\"[all] OR CXCL8[all] OR \"interleukin 8\"[all])",
+    "count": 3
+   },
+   {
+    "query": "WWOX[all] AND SMAD3[all]",
+    "count": 8
+   },
+   {
+    "query": "WWOX[all] AND endotheli*[all]",
+    "count": 14
+   },
+   {
+    "query": "WWOX[all] AND (\"lung injury\"[all] OR \"acute respiratory distress\"[all] OR ARDS[all])",
+    "count": 6
+   },
+   {
+    "query": "zyxin[all] AND (ventilator[all] OR VILI[all] OR stretch[all])",
+    "count": 26
+   },
+   {
+    "query": "zyxin[all] AND (\"lung injury\"[all] OR ARDS[all])",
+    "count": 1
+   },
+   {
+    "query": "WWOX[all] AND (brain[all] OR neurodevelopmental[all] OR epilepsy[all])",
+    "count": 136
+   }
+  ],
+  "reading": "The decisive asymmetry: zyxin has 26 records with ventilation/stretch and only 1 with WWOX - this paper. WWOX and VILI is 1 record, WWOX and mechanotransduction is 1 record, WWOX and SOD2 is 1 record: each of this paper's three mechanistic novelties is a literature of exactly one paper, itself. Against 136 records for WWOX and brain. So the zyxin arm is not a convergent finding in the literature; it is a single-source finding whose PRIOR half (zyxin responds to stretch, 26 records) is well populated and whose WWOX half is this paper alone."
+ },
+ "multihop": {
+  "references_enumerated": 33,
+  "enumeration_method": "Counted from the PMC reader HTML reference anchors: 33 anchors, range 1-33, no gaps. Cross-read against the printed reference list in the same surface.",
+  "gene_direct_refs_in_source": [
+   {
+    "ref": 1,
+    "pmid": "33946771",
+    "citation": "Taouis K, et al. Cells 2021;10:1051 - WWOX molecular functions review",
+    "registry": "to dedup at M4b"
+   },
+   {
+    "ref": 2,
+    "pmid": null,
+    "citation": "Hussain T, Liu B, Shrock MS, Williams T, Aldaz CM. Genes Chromosomes Cancer 2019;58:324-338",
+    "registry": "NOT RESOLVED by title esearch (0 hits); identifier left null rather than guessed"
+   },
+   {
+    "ref": 3,
+    "pmid": "33058734",
+    "citation": "Zeng Z, et al. Am J Respir Cell Mol Biol 2021;64:89-99 - the FIRST paper of this lot",
+    "registry": "read by me today, receipt FTR-20260913-33058734-01; no PAPER record yet"
+   },
+   {
+    "ref": 4,
+    "pmid": "28283473",
+    "citation": "Singla S, et al. Am J Physiol Lung Cell Mol Physiol 2017;312:L903-L911 - the whole-lung antecedent",
+    "registry": "CORPUS-STUB-091, identity only, unread - QUEUED as FT-178"
+   },
+   {
+    "ref": 15,
+    "pmid": "20705921",
+    "citation": "Wojtowicz A, et al. Circ Res 2010;107:898-902 - zyxin mediates stretch-induced gene expression, the premise for zyxin's IL-8 enhancer role",
+    "registry": "to dedup at M4b. CARRIES AN ERRATUM: Circ Res 2010;107(9):e15-6, printed in this paper's own reference list and confirmed via Europe PMC commentCorrectionList"
+   },
+   {
+    "ref": 16,
+    "pmid": "36498839",
+    "citation": "Hsu CY, et al. Cells 2021;10:1781 - WWOX and its binding proteins in neurodegeneration",
+    "registry": "to dedup at M4b; esearch returned 2 hits for this title, so the identifier is the first and is flagged as needing confirmation"
+   },
+   {
+    "ref": 21,
+    "pmid": "19936220",
+    "citation": "Ludes-Meyers JH, ... Aldaz CM. PLoS One 2009;4:e7775 - the floxed allele",
+    "registry": "PAPER 057, complete_fulltext_read receipt FTR-20260806-19936220-01 - already read here"
+   },
+   {
+    "ref": 27,
+    "pmid": "21075834",
+    "citation": "O'Keefe LV, et al. Hum Mol Genet 2011;20:497-509 - Drosophila WWOX, aerobic metabolism and ROS",
+    "registry": "to dedup at M4b"
+   },
+   {
+    "ref": 31,
+    "pmid": null,
+    "citation": "Ferguson BW, Gao X, Zelazowski MJ, Lee J, Jeter CR, Abba MC, Aldaz CM. BMC Cancer 2013;13:593 - WWOX inhibits SMAD3",
+    "registry": "NOT RESOLVED by title esearch (0 hits); identifier left null rather than guessed"
+   },
+   {
+    "ref": 32,
+    "pmid": "22778267",
+    "citation": "Mise N, et al. J Biol Chem 2012;287:31393-31405 - zyxin is a TGF-beta/Smad3 target gene",
+    "registry": "to dedup at M4b"
+   }
+  ],
+  "resolved": [
+   {
+    "ref": 1,
+    "pmid": "33946771",
+    "citation": "Taouis K, et al. Cells 2021;10:1051 - WWOX molecular functions review",
+    "registry": "to dedup at M4b"
+   },
+   {
+    "ref": 3,
+    "pmid": "33058734",
+    "citation": "Zeng Z, et al. Am J Respir Cell Mol Biol 2021;64:89-99 - the FIRST paper of this lot",
+    "registry": "read by me today, receipt FTR-20260913-33058734-01; no PAPER record yet"
+   },
+   {
+    "ref": 4,
+    "pmid": "28283473",
+    "citation": "Singla S, et al. Am J Physiol Lung Cell Mol Physiol 2017;312:L903-L911 - the whole-lung antecedent",
+    "registry": "CORPUS-STUB-091, identity only, unread - QUEUED as FT-178"
+   },
+   {
+    "ref": 15,
+    "pmid": "20705921",
+    "citation": "Wojtowicz A, et al. Circ Res 2010;107:898-902 - zyxin mediates stretch-induced gene expression, the premise for zyxin's IL-8 enhancer role",
+    "registry": "to dedup at M4b. CARRIES AN ERRATUM: Circ Res 2010;107(9):e15-6, printed in this paper's own reference list and confirmed via Europe PMC commentCorrectionList"
+   },
+   {
+    "ref": 16,
+    "pmid": "36498839",
+    "citation": "Hsu CY, et al. Cells 2021;10:1781 - WWOX and its binding proteins in neurodegeneration",
+    "registry": "to dedup at M4b; esearch returned 2 hits for this title, so the identifier is the first and is flagged as needing confirmation"
+   },
+   {
+    "ref": 21,
+    "pmid": "19936220",
+    "citation": "Ludes-Meyers JH, ... Aldaz CM. PLoS One 2009;4:e7775 - the floxed allele",
+    "registry": "PAPER 057, complete_fulltext_read receipt FTR-20260806-19936220-01 - already read here"
+   },
+   {
+    "ref": 27,
+    "pmid": "21075834",
+    "citation": "O'Keefe LV, et al. Hum Mol Genet 2011;20:497-509 - Drosophila WWOX, aerobic metabolism and ROS",
+    "registry": "to dedup at M4b"
+   },
+   {
+    "ref": 32,
+    "pmid": "22778267",
+    "citation": "Mise N, et al. J Biol Chem 2012;287:31393-31405 - zyxin is a TGF-beta/Smad3 target gene",
+    "registry": "to dedup at M4b"
+   }
+  ],
+  "unresolved": [
+   {
+    "ref": 2,
+    "why": "title esearch returned 0 hits; the identifier is left null rather than taken from a guess or a memory, per scientist_reading_modes 3.2"
+   },
+   {
+    "ref": 31,
+    "why": "title esearch returned 0 hits; the identifier is left null rather than taken from a guess or a memory, per scientist_reading_modes 3.2"
+   }
+  ],
+  "queued": [
+   {
+    "queue": "FT-178",
+    "pmid": "28283473",
+    "why": "Reference 4 here and reference 20 of PMID 33058734: the same unread whole-lung antecedent, and the ONLY source in this corpus for a positive inflammatory phenotype from lung WWOX loss. This paper's Introduction attributes neutrophilic inflammation to it. The queue entry was opened by my reading of PMID 33058734 earlier today and it covers this hop too; no second identifier is minted for one debt."
+   }
+  ],
+  "integrity_note_on_a_dependency": "Reference 15, PMID 20705921 (Wojtowicz 2010, Circ Res), CARRIES AN ERRATUM - Circ Res 2010;107(9):e15-6 - printed in this article's own reference list and confirmed independently through Europe PMC commentCorrectionList. That paper is the premise for zyxin's role as a stretch-induced IL-8 enhancer, i.e. the biological reason zyxin was selected from the proteomic screen at all. The erratum's SCOPE is unknown to me: I did not retrieve it, and it is a prompt to read, never a claim about this paper. Recorded as reading debt on a load-bearing dependency."
+ },
+ "corpus_crossquery": {
+  "hits": 3,
+  "query": "registry_records.py get --pmid --headings-only for the three load-bearing identifiers of this reading: 28283473 (CORPUS-STUB-091, identity only, plus one mention), 33058734 (one MENTION only, in FT-178 - it has my receipt from today and still no PAPER record, which is correct because BATCH_COMMIT is the orchestrator's), 19936220 (PAPER 057, already read). Asked of the corpus: does this repository hold any prior reading of the WWOX-zyxin or WWOX-mechanotransduction axis that this paper would meet.",
+  "finding": "Nothing in the corpus touches zyxin or mechanical stretch at all. This reading is the first contact of this repository with the WWOX-zyxin axis, and the only other lung-axis records are an identity-only stub for the unread antecedent and my own receipt from today for the companion paper."
+ },
+ "retraction_check": {
+  "result": "NO retraction, erratum, correction or expression of concern on this PMID, checked on three routes that AGREE this time - unlike the first paper of the lot. Europe PMC resultType=core commentCorrectionList returns exactly one item and it is 'Preprint in' -> PPR685537 (bioRxiv 10.1101/2023.06.29.547087); NCBI ESummary returns an empty commentscorrections field in JSON and no CommentsCorrections block in XML, with none of Retract/Erratum/Expression of Concern present in 3,032 bytes. The article's own text prints no notice. A 'Preprint in' link is a version relation, not a correction. SEPARATELY AND NOT ABOUT THIS PAPER: reference 15 carries an erratum - see multihop.integrity_note_on_a_dependency.",
+  "corrected_items": [],
+  "corrected_items_why": "EMPTY BY FACT. No erratum, correction or expression of concern exists on this article, so the set of corrected panels is empty and no locator can stand on one. The words 'erratum' and 'correction' occur in this block only inside the statement that none exists on THIS paper and in the note about reference 15, which is a different article.",
+  "routes": [
+   "europepmc resultType=core commentCorrectionList",
+   "ncbi esummary db=pubmed retmode=json",
+   "ncbi esummary db=pubmed retmode=xml",
+   "the article's own text in the fingerprinted HTML surface"
+  ],
+  "checked_on": "2026-09-13",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 33,
+   "references_screened": 33,
+   "references_with_doi": 33,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 3,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {},
+   "citing_relation": "No dependency was flagged by the screen, so there is no per-dependency citing_relation to state. RECORDED SEPARATELY AND NOT BY THIS TOOL: reference 15, PMID 20705921 (Wojtowicz 2010, Circ Res), carries an erratum (Circ Res 2010;107(9):e15-6) printed in this article's own reference list and confirmed through Europe PMC commentCorrectionList. Its citing_relation here is LOAD-BEARING PREMISE: it is the sole source for zyxin's function as a stretch-induced IL-8 enhancer, which is the reason zyxin was selected from the proteomic screen. The erratum's scope is unknown to me - I did not retrieve it - so this is a prompt to read and never a claim about either paper. An erratum is not a retraction."
+  }
+ },
+ "preprint_comparison": {
+  "checked": true,
+  "checked_once": true,
+  "preprint": "PPR685537 / bioRxiv 10.1101/2023.06.29.547087, first published 2023-06-30; the published paper's own ACKNOWLEDGMENTS also name it",
+  "finding": "Checked once. The author list is IDENTICAL between preprint and published version (11 authors, same order), unlike the first paper of the lot where one author was added. The preprint abstract carries the same architecture and the same claims: TMT-MS, zyxin upregulation, cyclic stretch 18% 0.5 Hz 4 h, dual silencing of WWOX and zyxin, VILI at 40 mL/kg 65 breath/min 4 h, and the selective result that dual silencing abrogates the IL-8 but not the IL-6 increase. The preprint abstract adds a framing sentence absent from the published abstract - 'Prior work has revealed a barrier protective function of WWOX during infectious models of ARDS' - which is a characterisation of the companion paper, not a new result. LIMIT DECLARED: abstract- and metadata-level comparison of the preprint RECORD only; the preprint full text was not retrieved and I cannot exclude a difference in sections I did not compare."
+ },
+ "supplement_ascertained": {
+  "exists": true,
+  "conclusion": "SUPPLEMENTS EXIST, AND THE METADATA FLAG IS WRONG.",
+  "evidence": [
+   "Europe PMC reports hasSuppl=N for this record (measured 2026-09-13) - and that is false.",
+   "The article's own SUPPLEMENTAL DATA section reads: 'Supplemental Table S1 and Supplemental Fig. S1: https://doi.org/10.6084/m9.figshare.25137089'.",
+   "Europe PMC supplementaryFiles returns 'Article with id PMC11380939 is not open access one' - a licence refusal that says nothing about existence, and would have been easy to misread as absence.",
+   "Both files were retrieved from figshare article 25137089 under CC BY 4.0 and are fingerprinted in source_artifacts.",
+   "Both are load-bearing: Supplemental Fig. S1 is the endothelial-restriction control, and Supplemental Table S1 is the 2,051-protein table behind the zyxin and SOD2 claims."
+  ],
+  "why_declared": "The contract for this task said to confirm the supplement question from the article's own supplementary listing rather than from the hasSuppl flag. Doing so changed the answer: the flag denied a supplement that exists and that carries the paper's own specificity control."
+ },
+ "verbatim_locators": {
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC inEPMC=Y and fullTextIdList=[PMC11380939], measured 2026-09-13 on resultType=core. The quotes in this manifest are therefore externally locatable by a third party in the PMC reader, and unusually for this lot the surface I verified against IS that same public HTML rendering rather than a private derivative. QUALIFICATION: isOpenAccess=N, hasPDF=N, Europe PMC fullTextXML returns HTTP 404 with 0 bytes and efetch db=pmc returns 14,992 bytes of front matter with the publisher's explicit refusal of full text in XML form, so there is no structured XML surface and no PDF at PMC at all - the HTML reader page is the only full-text surface that exists for this article.",
+  "entries": [
+   {
+    "proposition": "The paper's own framing of the whole-lung antecedent: intratracheal Wwox siRNA potentiated NEUTROPHILIC INFLAMMATION in an LPS model. This is reference 4 (PMID 28283473), unread in this corpus, and it is the only source for a positive inflammatory phenotype from lung WWOX loss.",
+    "snippet": "Intratracheal instillation of Wwox -targeting siRNA in mice was observed to result in further potentiation of neutrophilic inflammation in a lipopolysaccharide (LPS)-induced murine model of lung injury",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38563965_Zeng2024_PMC.html",
+    "anchor": "PMC reader HTML body for PMC11380939 (structured surface; operators verified present, zero C0 controls)",
+    "panel_text_relation": "text_only",
+    "abstract_anchoring_waived": "The propositions carried out of this reading are Methods, Results, figure-legend and Discussion statements; the abstract of this article is not an evidentiary surface for any of them and the validator separates it from the body surface by design."
+   },
+   {
+    "proposition": "The paper's own framing of the FIRST paper of my lot (reference 3, PMID 33058734): it cites it for vascular leak and histological injury and NOT for inflammation - which is exactly what that paper found and did not find.",
+    "snippet": "Endothelial cell-specific Wwox knockout (EC- Wwox KO) mice stimulated by intratracheal LPS or methicillin-resistant Staphylococcus aureus (MRSA) exhibited significantly greater levels of vascular leak and histological lung injury",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38563965_Zeng2024_PMC.html",
+    "anchor": "PMC reader HTML body for PMC11380939 (structured surface; operators verified present, zero C0 controls)",
+    "panel_text_relation": "text_only",
+    "abstract_anchoring_waived": "The propositions carried out of this reading are Methods, Results, figure-legend and Discussion statements; the abstract of this article is not an evidentiary surface for any of them and the validator separates it from the body surface by design."
+   },
+   {
+    "proposition": "The paper states the mechanism was unknown at the outset, which is what makes it a mechanism paper rather than a replication.",
+    "snippet": "The mechanistic underpinning for the observed Wwox -deficient lung phenotype is unknown.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38563965_Zeng2024_PMC.html",
+    "anchor": "PMC reader HTML body for PMC11380939 (structured surface; operators verified present, zero C0 controls)",
+    "panel_text_relation": "text_only",
+    "abstract_anchoring_waived": "The propositions carried out of this reading are Methods, Results, figure-legend and Discussion statements; the abstract of this article is not an evidentiary surface for any of them and the validator separates it from the body surface by design."
+   },
+   {
+    "proposition": "Scale and FDR of the proteomic screen: 2,051 proteins at 1% FDR. Verified in Supplemental Table S1, whose last row index is 2051.",
+    "snippet": "Furthermore, 2,051 distinct proteins were identified and quantitated at a 1% false discovery rate.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38563965_Zeng2024_PMC.html",
+    "anchor": "PMC reader HTML body for PMC11380939 (structured surface; operators verified present, zero C0 controls)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "abstract_anchoring_waived": "The propositions carried out of this reading are Methods, Results, figure-legend and Discussion statements; the abstract of this article is not an evidentiary surface for any of them and the validator separates it from the body surface by design."
+   },
+   {
+    "proposition": "Zyxin and SOD2 were selected from the screen BECAUSE they had prior biological connections, not because they were the only significant hits. Stating this precisely matters: the volcano plot shows many points past threshold.",
+    "snippet": "These were the mechanotransducer protein, zyxin, which was upregulated during WWOX knockdown, and the mitochondrial superoxide dismutase, SOD2, which was downregulated.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38563965_Zeng2024_PMC.html",
+    "anchor": "PMC reader HTML body for PMC11380939 (structured surface; operators verified present, zero C0 controls)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "abstract_anchoring_waived": "The propositions carried out of this reading are Methods, Results, figure-legend and Discussion statements; the abstract of this article is not an evidentiary surface for any of them and the validator separates it from the body surface by design."
+   },
+   {
+    "proposition": "THE SHARED MATERIAL, IN THE PAPER'S OWN WORDS: the mouse strain is the one validated in reference 3, i.e. the first paper of my lot. Same strain and same founder reagent; the animals and experiments here are new.",
+    "snippet": "The result is a tamoxifen-inducible, endothelial cell-specific Wwox knockout mouse strain that has been previously validated by our group",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38563965_Zeng2024_PMC.html",
+    "anchor": "PMC reader HTML body for PMC11380939 (structured surface; operators verified present, zero C0 controls)",
+    "panel_text_relation": "text_only",
+    "abstract_anchoring_waived": "The propositions carried out of this reading are Methods, Results, figure-legend and Discussion statements; the abstract of this article is not an evidentiary surface for any of them and the validator separates it from the body surface by design."
+   },
+   {
+    "proposition": "Aldaz's contribution is again a REAGENT, the floxed mouse - identical in kind to his contribution to the first paper of the lot. He is 9th of 11 authors here.",
+    "snippet": "mice were donated generously by Dr. C. Marcelo Aldaz, of MD Anderson Center at the University of Texas",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38563965_Zeng2024_PMC.html",
+    "anchor": "PMC reader HTML body for PMC11380939 (structured surface; operators verified present, zero C0 controls)",
+    "panel_text_relation": "text_only",
+    "abstract_anchoring_waived": "The propositions carried out of this reading are Methods, Results, figure-legend and Discussion statements; the abstract of this article is not an evidentiary surface for any of them and the validator separates it from the body surface by design."
+   },
+   {
+    "proposition": "The endothelial-restriction control exists and the paper says why it ran it: to exclude tamoxifen-induced knockdown in an immune cell via an EC progenitor recombination event. The evidence is Supplemental Fig. S1.",
+    "snippet": "we measured Wwox expression in bronchoalveolar lavage (BAL) immune cells from these mice",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38563965_Zeng2024_PMC.html",
+    "anchor": "PMC reader HTML body for PMC11380939 (structured surface; operators verified present, zero C0 controls)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "abstract_anchoring_waived": "The propositions carried out of this reading are Methods, Results, figure-legend and Discussion statements; the abstract of this article is not an evidentiary surface for any of them and the validator separates it from the body surface by design."
+   },
+   {
+    "proposition": "The injury model is MECHANICAL, not infectious, and this is the single most important difference from the first paper of the lot: high tidal volume ventilation for 4 h, not intratracheal LPS or MRSA at 18 h.",
+    "snippet": "they were subjected to high tidal volume mechanical ventilation (VT = 40 mL/kg, 65 breaths/min, PEEP 15–20, 21% F I O 2 , 25°C) for 4 h to induce VILI",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38563965_Zeng2024_PMC.html",
+    "anchor": "PMC reader HTML body for PMC11380939 (structured surface; operators verified present, zero C0 controls)",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "abstract_anchoring_waived": "The propositions carried out of this reading are Methods, Results, figure-legend and Discussion statements; the abstract of this article is not an evidentiary surface for any of them and the validator separates it from the body surface by design.",
+    "contradicts": "entries[0]",
+    "contradicts_needle": "Intratracheal instillation of Wwox -targeting siRNA"
+   },
+   {
+    "proposition": "The in vitro stimulus is cyclic stretch at 18% elongation, 0.5 Hz, 4 h - the cell-culture analogue of the ventilation model, and again mechanical rather than infectious.",
+    "snippet": "The stretch condition was 18% elongation at a frequency of 30 cycles per minute (0.5 Hz) for 4 h",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38563965_Zeng2024_PMC.html",
+    "anchor": "PMC reader HTML body for PMC11380939 (structured surface; operators verified present, zero C0 controls)",
+    "panel_text_relation": "text_only",
+    "abstract_anchoring_waived": "The propositions carried out of this reading are Methods, Results, figure-legend and Discussion statements; the abstract of this article is not an evidentiary surface for any of them and the validator separates it from the body surface by design."
+   },
+   {
+    "proposition": "THE STATISTICS ARE BETTER THAN THE FIRST PAPER'S: two-way ANOVA with an explicit interaction check followed by Tukey's HSD post hoc, and the reported P values are the post hoc ones. The first paper used a t test or ANOVA with no multiplicity correction stated.",
+    "snippet": "a two-way ANOVA was used to determine which of the two independent variables influenced the outcome as well as whether there was any interaction between the two independent variables",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38563965_Zeng2024_PMC.html",
+    "anchor": "PMC reader HTML body for PMC11380939 (structured surface; operators verified present, zero C0 controls)",
+    "panel_text_relation": "text_only",
+    "abstract_anchoring_waived": "The propositions carried out of this reading are Methods, Results, figure-legend and Discussion statements; the abstract of this article is not an evidentiary surface for any of them and the validator separates it from the body surface by design."
+   },
+   {
+    "proposition": "THE CELL TYPE IS NOT THE SAME AS THE FIRST PAPER'S. Here the human cells are pulmonary ARTERY endothelial cells; the first paper used human lung MICROVASCULAR endothelial cells. Both from Lonza, both 'ECs' in the running text, and they are different cells from different vascular beds.",
+    "snippet": "Human pulmonary artery endothelial cells (ECs) obtained from Lonza were grown in cell culture using endothelial growth media",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38563965_Zeng2024_PMC.html",
+    "anchor": "PMC reader HTML body for PMC11380939 (structured surface; operators verified present, zero C0 controls)",
+    "panel_text_relation": "text_only",
+    "abstract_anchoring_waived": "The propositions carried out of this reading are Methods, Results, figure-legend and Discussion statements; the abstract of this article is not an evidentiary surface for any of them and the validator separates it from the body surface by design."
+   },
+   {
+    "proposition": "The nuclear-translocation endpoint is a BLINDED VISUAL SCORE, not an imaging measurement: merged channels judged by eye for yellow nuclear staining, at least 100 cells per condition. Blinding is a real strength; visual scoring of colocalisation is a real limit.",
+    "snippet": "Images obtained for the four different siRNA conditions were analyzed by a reviewer blinded to the conditions.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38563965_Zeng2024_PMC.html",
+    "anchor": "PMC reader HTML body for PMC11380939 (structured surface; operators verified present, zero C0 controls)",
+    "panel_text_relation": "text_only",
+    "abstract_anchoring_waived": "The propositions carried out of this reading are Methods, Results, figure-legend and Discussion statements; the abstract of this article is not an evidentiary surface for any of them and the validator separates it from the body surface by design."
+   },
+   {
+    "proposition": "The proteomic significance threshold is a Benjamini-Hochberg FDR below 1%, so the screen is multiplicity-corrected - a stronger standard than the paper's own cytokine comparisons.",
+    "snippet": "considered significant upon correction for multiple testing at a Benjamini–Hochberg false discovery rate <1%",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38563965_Zeng2024_PMC.html",
+    "anchor": "PMC reader HTML body for PMC11380939 (structured surface; operators verified present, zero C0 controls)",
+    "panel_text_relation": "text_only",
+    "abstract_anchoring_waived": "The propositions carried out of this reading are Methods, Results, figure-legend and Discussion statements; the abstract of this article is not an evidentiary surface for any of them and the validator separates it from the body surface by design."
+   },
+   {
+    "proposition": "THE CORE IN VITRO POSITIVE, with numbers: WWOX silencing roughly doubles stretch-induced IL-6 and IL-8 in human ECs. Cytokine MEASUREMENT by ELISA, not a signalling inference.",
+    "snippet": "silencing of WWOX significantly increased CS-mediated production of IL-6 (239.5 ± 21.8 vs. 113.77 ± 5.0 pg/mL) and IL-8 (128.42 ± 3.11 vs. 76.10 ± 3.5 pg/mL)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38563965_Zeng2024_PMC.html",
+    "anchor": "PMC reader HTML body for PMC11380939 (structured surface; operators verified present, zero C0 controls)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "abstract_anchoring_waived": "The propositions carried out of this reading are Methods, Results, figure-legend and Discussion statements; the abstract of this article is not an evidentiary surface for any of them and the validator separates it from the body surface by design."
+   },
+   {
+    "proposition": "THE SIGNALLING RESULT IS DIRECTIONALLY SPLIT, and the paper reports the split: ERK and JNK phosphorylation up, p38 DOWN. A uniform 'MAPK activation' reading of this paper would be wrong.",
+    "snippet": "silencing of WWOX significantly decreased basal and CS-mediated p38 MAPK phosphorylation compared with controls",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38563965_Zeng2024_PMC.html",
+    "anchor": "PMC reader HTML body for PMC11380939 (structured surface; operators verified present, zero C0 controls)",
+    "panel_text_relation": "text_only",
+    "abstract_anchoring_waived": "The propositions carried out of this reading are Methods, Results, figure-legend and Discussion statements; the abstract of this article is not an evidentiary surface for any of them and the validator separates it from the body surface by design.",
+    "note": "A pointer I wrote here was self-referential and the validator refused it: 'a locator cannot qualify itself'. The relation I meant is the panel's, not this sentence's, and it is carried on the panel entry that makes the assertion - for the p38 statement that is the Fig. 3 entry, which declares text_contradicted_by_panel against this one. Withdrawn here rather than re-pointed, because an assertion about another locator belongs to the evidence that makes it."
+   },
+   {
+    "proposition": "THE IN VIVO INJURY RESULT, with numbers and n=10: VILI raises BAL protein and cell counts more in EC Wwox KO mice than in controls.",
+    "snippet": "EC Wwox KO mice had significantly increased BAL protein concentration (0.82 ± 0.16 vs. 0.53 ± 0.08 mg/mL, ECWX-KO vs. ECWX-Flox) and cell infiltration",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38563965_Zeng2024_PMC.html",
+    "anchor": "PMC reader HTML body for PMC11380939 (structured surface; operators verified present, zero C0 controls)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "abstract_anchoring_waived": "The propositions carried out of this reading are Methods, Results, figure-legend and Discussion statements; the abstract of this article is not an evidentiary surface for any of them and the validator separates it from the body surface by design."
+   },
+   {
+    "proposition": "🔴 THE SENTENCE THAT ANSWERS MY BRIEF'S INFLAMMATION QUESTION FOR THIS PAPER, AND THE WORD TO NOTICE IS 'correlated': the inflammatory cytokine rise is reported as correlating with the leak, not as causing it or being caused by it.",
+    "snippet": "Increased BAL protein and alveolar cellular infiltration in ECWX-KO versus ECWX-Flox mice after VILI correlated with increased BAL IL-6, KC, IL-1β, and MCP-1 production in WXEC-KO mice groups",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38563965_Zeng2024_PMC.html",
+    "anchor": "PMC reader HTML body for PMC11380939 (structured surface; operators verified present, zero C0 controls)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "abstract_anchoring_waived": "The propositions carried out of this reading are Methods, Results, figure-legend and Discussion statements; the abstract of this article is not an evidentiary surface for any of them and the validator separates it from the body surface by design."
+   },
+   {
+    "proposition": "Isolated KO endothelial cells reproduce the cytokine phenotype ex vivo under stretch, with numbers. Note the control SD is large relative to the mean for IL-6 and IL-1beta.",
+    "snippet": "IL-6 (16.43 ± 11.59 pg/mL vs. 44.17 ± 13.47 pg/mL, P < 0.05)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38563965_Zeng2024_PMC.html",
+    "anchor": "PMC reader HTML body for PMC11380939 (structured surface; operators verified present, zero C0 controls)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "abstract_anchoring_waived": "The propositions carried out of this reading are Methods, Results, figure-legend and Discussion statements; the abstract of this article is not an evidentiary surface for any of them and the validator separates it from the body surface by design."
+   },
+   {
+    "proposition": "🔴 ZYXIN'S ROLE IS DEMONSTRATED BY INTERVENTION, NOT BY CORRELATION - dual silencing, with a quantified effect size of 35%. It is a partial abrogation, not abolition.",
+    "snippet": "Silencing of zyxin during WWOX knockdown resulted in a 35% reduction in CS-induced IL-8 secretion compared with ECs in which WWOX was solely silenced",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38563965_Zeng2024_PMC.html",
+    "anchor": "PMC reader HTML body for PMC11380939 (structured surface; operators verified present, zero C0 controls)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "abstract_anchoring_waived": "The propositions carried out of this reading are Methods, Results, figure-legend and Discussion statements; the abstract of this article is not an evidentiary surface for any of them and the validator separates it from the body surface by design."
+   },
+   {
+    "proposition": "🔴 AND THE INTERVENTION IS SELECTIVE, WHICH IS THE STRONGEST THING IN THE PAPER: the same dual silencing does NOT reduce IL-6. So zyxin is a specific mediator of the IL-8 limb and not a general inflammatory switch.",
+    "snippet": "Interestingly, IL-6 secretion which is increased during WWOX knockdown was not diminished by simultaneous loss of zyxin expression",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38563965_Zeng2024_PMC.html",
+    "anchor": "PMC reader HTML body for PMC11380939 (structured surface; operators verified present, zero C0 controls)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "abstract_anchoring_waived": "The propositions carried out of this reading are Methods, Results, figure-legend and Discussion statements; the abstract of this article is not an evidentiary surface for any of them and the validator separates it from the body surface by design."
+   },
+   {
+    "proposition": "The mechanism connecting WWOX to zyxin is left as two untested alternatives, in the authors' own words.",
+    "snippet": "This implies that WWOX knockdown increases zyxin mRNA levels either by increasing zyxin promoter activity or decreasing zyxin mRNA degradation.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38563965_Zeng2024_PMC.html",
+    "anchor": "PMC reader HTML body for PMC11380939 (structured surface; operators verified present, zero C0 controls)",
+    "panel_text_relation": "text_only",
+    "abstract_anchoring_waived": "The propositions carried out of this reading are Methods, Results, figure-legend and Discussion statements; the abstract of this article is not an evidentiary surface for any of them and the validator separates it from the body surface by design."
+   },
+   {
+    "proposition": "AN AUTHOR-DECLARED LIMIT, recorded because the authors stated it and it bounds the nuclear-translocation claim: no nuclear fractionation and no confocal z-stacking.",
+    "snippet": "the analysis of zyxin nuclear translocation is limited by the absence of nuclear fractionation studies or confocal imaging with z -stacking",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38563965_Zeng2024_PMC.html",
+    "anchor": "PMC reader HTML body for PMC11380939 (structured surface; operators verified present, zero C0 controls)",
+    "panel_text_relation": "text_only",
+    "abstract_anchoring_waived": "The propositions carried out of this reading are Methods, Results, figure-legend and Discussion statements; the abstract of this article is not an evidentiary surface for any of them and the validator separates it from the body surface by design."
+   },
+   {
+    "proposition": "The authors' own epistemic level for the zyxin conclusion is 'strongly suggest', not 'show'. Typed as IPOTESI on their side, and the intervention is what raises it toward INFERENZA.",
+    "snippet": "the data do strongly suggest that zyxin upregulation during WWOX-silencing plays a role in the exaggerated IL-8 response of WWOX-deficient ECs during mechanical stretch and VILI",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38563965_Zeng2024_PMC.html",
+    "anchor": "PMC reader HTML body for PMC11380939 (structured surface; operators verified present, zero C0 controls)",
+    "panel_text_relation": "text_only",
+    "abstract_anchoring_waived": "The propositions carried out of this reading are Methods, Results, figure-legend and Discussion statements; the abstract of this article is not an evidentiary surface for any of them and the validator separates it from the body surface by design."
+   },
+   {
+    "proposition": "The proposed upstream mechanism - WWOX inhibits SMAD3, SMAD3 upregulates zyxin - is assembled from two OTHER papers' findings and is not tested anywhere in this study. PREMISE: INFERENZA on both links.",
+    "snippet": "One possible mechanism underlying this phenomenon is via the previously reported direct inhibitory interaction between SMAD3 and WWOX",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38563965_Zeng2024_PMC.html",
+    "anchor": "PMC reader HTML body for PMC11380939 (structured surface; operators verified present, zero C0 controls)",
+    "panel_text_relation": "text_only",
+    "abstract_anchoring_waived": "The propositions carried out of this reading are Methods, Results, figure-legend and Discussion statements; the abstract of this article is not an evidentiary surface for any of them and the validator separates it from the body surface by design."
+   },
+   {
+    "proposition": "🔴 A METHOD LIMIT THE FIGURE LEGEND ADMITS: the phospho and total kinase lanes come from TWO SEPARATE GELS, so every p/t ratio in Fig. 3B is computed across gels.",
+    "snippet": "The phospho-kinase lanes and the total kinase lanes are derived from two separate gels.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38563965_Zeng2024_PMC.html",
+    "anchor": "PMC reader HTML body for PMC11380939 (structured surface; operators verified present, zero C0 controls)",
+    "panel_text_relation": "text_only",
+    "abstract_anchoring_waived": "The propositions carried out of this reading are Methods, Results, figure-legend and Discussion statements; the abstract of this article is not an evidentiary surface for any of them and the validator separates it from the body surface by design.",
+    "note": "A pointer I wrote here was self-referential and the validator refused it: 'a locator cannot qualify itself'. The relation I meant is the panel's, not this sentence's, and it is carried on the panel entry that makes the assertion - for the p38 statement that is the Fig. 3 entry, which declares text_contradicted_by_panel against this one. Withdrawn here rather than re-pointed, because an assertion about another locator belongs to the evidence that makes it."
+   },
+   {
+    "proposition": "Group size for the in vivo VILI arms: n = 10 separate mice per group - materially better powered than the first paper of the lot, which ran n = 3 per arm.",
+    "snippet": "( n = 10 separate mice per group, means ± SD, */**/**** P < 0.05)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38563965_Zeng2024_PMC.html",
+    "anchor": "PMC reader HTML body for PMC11380939 (structured surface; operators verified present, zero C0 controls)",
+    "panel_text_relation": "text_only",
+    "abstract_anchoring_waived": "The propositions carried out of this reading are Methods, Results, figure-legend and Discussion statements; the abstract of this article is not an evidentiary surface for any of them and the validator separates it from the body surface by design.",
+    "note": "A pointer I wrote here was self-referential and the validator refused it: 'a locator cannot qualify itself'. The relation I meant is the panel's, not this sentence's, and it is carried on the panel entry that makes the assertion - for the p38 statement that is the Fig. 3 entry, which declares text_contradicted_by_panel against this one. Withdrawn here rather than re-pointed, because an assertion about another locator belongs to the evidence that makes it."
+   },
+   {
+    "proposition": "Group size for the isolated-EC stretch arms is n = 5 separate cultures - and the unit is the culture, not the mouse.",
+    "snippet": "( n = 5 separate cultures, means ± SD, * P < 0.05)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38563965_Zeng2024_PMC.html",
+    "anchor": "PMC reader HTML body for PMC11380939 (structured surface; operators verified present, zero C0 controls)",
+    "panel_text_relation": "text_only",
+    "abstract_anchoring_waived": "The propositions carried out of this reading are Methods, Results, figure-legend and Discussion statements; the abstract of this article is not an evidentiary surface for any of them and the validator separates it from the body surface by design."
+   },
+   {
+    "proposition": "Read as an image: A is the WWOX knockdown blot, B the immunostaining, C the volcano plot with SOD2 labelled far left and ZYX far right, D the zyxin blot and E zyxin mRNA as a 6-point dot plot with an asterisk. The volcano's thresholds are drawn as an adjusted-P line and TWO fold-change lines at -0.5 and +0.5, so significance here is a conjunction of P and effect size - which is why SOD1, significant at the same adjusted P but only -0.23, is not among the named hits.",
+    "snippet": "SOD2 ( superoxide dismutase 2 ) and ZYX ( zyxin ) were among the most significant differentially expressed proteins and were labeled for reference.",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID38563965/ajplung.00277.2023_f001.jpg",
+    "anchor": "ajplung.00277.2023_f001.jpg: inspected as an image at native resolution (PMC derivative raster; no better surface exists for this article)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "abstract_anchoring_waived": "The propositions carried out of this reading are Methods, Results, figure-legend and Discussion statements; the abstract of this article is not an evidentiary surface for any of them and the validator separates it from the body surface by design."
+   },
+   {
+    "proposition": "Read as an image: four groups, static and stretched, control and siWWOX, with **** brackets on the stretch comparisons. The STATIC groups carry 3 points each while the stretched groups carry 6, so the n = 6 of the legend does not apply uniformly across the panel.",
+    "snippet": "IL-6 and IL-8 production increased significantly in control ECs subjected to stretch compared with static controls.",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID38563965/ajplung.00277.2023_f002.jpg",
+    "anchor": "ajplung.00277.2023_f002.jpg: inspected as an image at native resolution (PMC derivative raster; no better surface exists for this article)",
+    "panel_text_relation": "panel_qualifies_text",
+    "abstract_anchoring_waived": "The propositions carried out of this reading are Methods, Results, figure-legend and Discussion statements; the abstract of this article is not an evidentiary surface for any of them and the validator separates it from the body surface by design.",
+    "qualifies": "entries[14]",
+    "qualifies_needle": "IL-6 (239.5"
+   },
+   {
+    "proposition": "🔴 Read as an image, and this is the reading's sharpest methodological finding: panel B's densitometry bar graph carries NO error bars and NO significance marks, and shows one bar per condition - a single densitometric value - while the running text calls the same differences 'significantly higher' and 'significantly decreased'. The panel cannot support a significance claim, and the legend adds that the phospho and total lanes come from two separate gels.",
+    "snippet": "the bar graph illustrates a densitometric analysis of the two gels",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID38563965/ajplung.00277.2023_f003.jpg",
+    "anchor": "ajplung.00277.2023_f003.jpg: inspected as an image at native resolution (PMC derivative raster; no better surface exists for this article)",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "abstract_anchoring_waived": "The propositions carried out of this reading are Methods, Results, figure-legend and Discussion statements; the abstract of this article is not an evidentiary surface for any of them and the validator separates it from the body surface by design.",
+    "contradicts": "entries[15]",
+    "contradicts_needle": "silencing of WWOX significantly decreased basal and CS-mediated p38"
+   },
+   {
+    "proposition": "Read as an image: BAL protein and BAL cell counts, with ** and **** brackets. The CONTROL (spontaneously breathing) arms carry 4 points each while the VILI arms carry about 10, so 'n = 10 separate mice per group' describes the ventilated arms and not the controls.",
+    "snippet": "Endothelial-specific Wwox KO mice exhibit greater vascular leak during high tidal volume ventilation.",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID38563965/ajplung.00277.2023_f004.jpg",
+    "anchor": "ajplung.00277.2023_f004.jpg: inspected as an image at native resolution (PMC derivative raster; no better surface exists for this article)",
+    "panel_text_relation": "panel_qualifies_text",
+    "abstract_anchoring_waived": "The propositions carried out of this reading are Methods, Results, figure-legend and Discussion statements; the abstract of this article is not an evidentiary surface for any of them and the validator separates it from the body surface by design.",
+    "qualifies": "entries[26]",
+    "qualifies_needle": "n = 10 separate mice per group"
+   },
+   {
+    "proposition": "Read as an image: all four BAL cytokines - IL-6, KC, IL-1beta and MCP-1 - carry significance brackets on the VILI KO versus VILI flox comparison. MCP-1's spontaneous-breathing comparison is marked ns. THIS IS THE PANEL THAT MAKES THE PAIR INTERESTING: the same laboratory's earlier paper found no significant BAL cytokine difference under LPS or MRSA at n = 3, and here, under mechanical injury at n = 10, all four are significant.",
+    "snippet": "These showed that VILI induced significantly higher IL6, KC, IL-1β, and MCP-1 generation in EC Wwox KO mice",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID38563965/ajplung.00277.2023_f005.jpg",
+    "anchor": "ajplung.00277.2023_f005.jpg: inspected as an image at native resolution (PMC derivative raster; no better surface exists for this article)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "abstract_anchoring_waived": "The propositions carried out of this reading are Methods, Results, figure-legend and Discussion statements; the abstract of this article is not an evidentiary surface for any of them and the validator separates it from the body surface by design."
+   },
+   {
+    "proposition": "Read as an image: isolated KO endothelial cells under stretch produce more of all four cytokines, with the unstimulated comparisons marked ns for IL-6, KC and IL-1beta. So the ex vivo phenotype is stretch-conditional, not constitutive.",
+    "snippet": "ECs from KO mice exhibited significantly higher IL6, KC, IL-1β, and MCP-1 generation following cyclic stretch compared with controls",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID38563965/ajplung.00277.2023_f006.jpg",
+    "anchor": "ajplung.00277.2023_f006.jpg: inspected as an image at native resolution (PMC derivative raster; no better surface exists for this article)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "abstract_anchoring_waived": "The propositions carried out of this reading are Methods, Results, figure-legend and Discussion statements; the abstract of this article is not an evidentiary surface for any of them and the validator separates it from the body surface by design."
+   },
+   {
+    "proposition": "🔴 Read as an image, the intervention and its selectivity are both visible in one figure: in D, IL-8 runs control ~72, WWOX siRNA ~218, WWOX+zyxin siRNA ~135, zyxin siRNA ~48, with asterisks on the rescue step; in E, IL-6 runs ~90, ~180, ~151, ~88 and the WWOX-versus-dual comparison is marked ns, with the overall bracket also ns. The rescue is partial and IL-8-specific, and n = 3 transfections per group.",
+    "snippet": "The greater amount of IL-8 generation exhibited by WWOX-silenced ECs compared with controls following cyclic stretch appears to be abrogated by zyxin knockdown",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID38563965/ajplung.00277.2023_f007.jpg",
+    "anchor": "ajplung.00277.2023_f007.jpg: inspected as an image at native resolution (PMC derivative raster; no better surface exists for this article)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "abstract_anchoring_waived": "The propositions carried out of this reading are Methods, Results, figure-legend and Discussion statements; the abstract of this article is not an evidentiary surface for any of them and the validator separates it from the body surface by design."
+   },
+   {
+    "proposition": "Read as an image: nuclear zyxin rises from about 12% in control to about 35% under WWOX silencing and falls to about 8% under dual silencing and about 1% under zyxin silencing, n = 3. The immunofluorescence panels show the merge, and the endpoint is the blinded visual yellow-nucleus score described in the Methods rather than a fractionation measurement.",
+    "snippet": "The percentages of cells with zyxin nuclear staining in each condition were counted.",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID38563965/ajplung.00277.2023_f008.jpg",
+    "anchor": "ajplung.00277.2023_f008.jpg: inspected as an image at native resolution (PMC derivative raster; no better surface exists for this article)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "abstract_anchoring_waived": "The propositions carried out of this reading are Methods, Results, figure-legend and Discussion statements; the abstract of this article is not an evidentiary surface for any of them and the validator separates it from the body surface by design."
+   },
+   {
+    "proposition": "🔴 THE ENDOTHELIAL-RESTRICTION CONTROL, AND IT DOES ITS JOB - with limits. Read as an image: WWOX and beta-actin blots across four lanes, WWOX flox and EC WWOX KO under spontaneous breathing and under ventilation, and the WWOX band is RETAINED and visually comparable in both EC WWOX KO lanes. That is the intended result: Wwox is not knocked down in BAL immune cells, so the tamoxifen-induced deletion is endothelium-restricted. THE LIMITS: the figure carries no caption text at all beyond 'Figure S1' - no n, no densitometry, no antibody, no statistics - and it is a single blot. It also prints the tidal volume as '40ml/g' where the Methods print 40 mL/kg.",
+    "snippet": "Spontaneous breath            +      -\nVentilation (40ml/g, 4 hrs)",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID38563965_supplement/figS1_p01.png",
+    "anchor": "figS1_p01.png: inspected as an image at native resolution (PMC derivative raster; no better surface exists for this article) — The two condition-row labels of Supplemental Fig. S1 as drawn, read above the lane groups WWOX flox and EC WWOX KO.",
+    "panel_text_relation": "panel_only",
+    "abstract_anchoring_waived": "The propositions carried out of this reading are Methods, Results, figure-legend and Discussion statements; the abstract of this article is not an evidentiary surface for any of them and the validator separates it from the body surface by design."
+   },
+   {
+    "proposition": "Read off the rendered supplemental table page: ZYX carries UniProt Q15942, a BH-adjusted P of 0.0001 and a log2 fold change of +0.55, i.e. about 1.46-fold, from 16.19 to 16.75 normalised intensity. The proteomic effect on zyxin is real, multiplicity-corrected and MODEST, and it only just clears the +/-0.5 fold-change line the volcano plot draws - which matches the ~1.45-fold mRNA increase in Fig. 1E.",
+    "snippet": "2051\nZYX\nQ15942\n0.0001\n4\n0.55\n16.19\n16.75",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID38563965_supplement/tableS1_p42.png",
+    "anchor": "tableS1_p42.png: inspected as an image at native resolution (PMC derivative raster; no better surface exists for this article) — The complete ZYX row of Supplemental Table S1 as drawn: row index, gene symbol, UniProtKB/Swiss-Prot accession, BH-adjusted P, negative log10 of it, log2 fold change, then log2 normalised intensity in controls and in WWOX-silenced human ECs.",
+    "panel_text_relation": "panel_qualifies_text",
+    "abstract_anchoring_waived": "The propositions carried out of this reading are Methods, Results, figure-legend and Discussion statements; the abstract of this article is not an evidentiary surface for any of them and the validator separates it from the body surface by design.",
+    "qualifies": "entries[4]",
+    "qualifies_needle": "zyxin, which was upregulated during WWOX knockdown"
+   },
+   {
+    "proposition": "Read off the rendered supplemental table page: SOD2 carries UniProt P04179, a BH-adjusted P of 0.0001 and a log2 fold change of -0.94 (17.45 to 16.51) - a larger effect than zyxin's. SOD1 sits on the adjacent row at the same adjusted P but -0.23, inside the fold-change threshold, which is why the paper's two named proteins are a selection on prior biology and on effect size rather than the only corrected hits.",
+    "snippet": "1742\nSOD2\nP04179\n0.0001\n4\n‐0.94\n17.45\n16.51",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID38563965_supplement/tableS1_p35.png",
+    "anchor": "tableS1_p35.png: inspected as an image at native resolution (PMC derivative raster; no better surface exists for this article) — The complete SOD2 row of Supplemental Table S1 as drawn, same column order; the minus sign is the hyphen-like U+2010 the PDF actually draws, not an ASCII hyphen.",
+    "panel_text_relation": "panel_qualifies_text",
+    "abstract_anchoring_waived": "The propositions carried out of this reading are Methods, Results, figure-legend and Discussion statements; the abstract of this article is not an evidentiary surface for any of them and the validator separates it from the body surface by design.",
+    "qualifies": "entries[4]",
+    "qualifies_needle": "SOD2, which was downregulated"
+   }
+  ],
+  "figure_coverage": {
+   "figures_present": 8,
+   "figures_inspected": 8,
+   "supplementary_figures_present": 1,
+   "supplementary_figures_inspected": 1,
+   "supplementary_tables_present": 1,
+   "supplementary_tables_inspected": 1,
+   "panel_blocks_inspected": "all panels of all 8 main figures (1A-1E, 2, 3A-3B, 4A-4B, 5, 6, 7A-7E, 8A-8B), plus Supplemental Fig. S1 and the ZYX and SOD2 rows of the 42-page Supplemental Table S1",
+   "basis": "The 8 main figures were taken as PMC blob-CDN assets reached through the article page's own src attributes and inspected as images at their native 770-836 px width. THE CEILING IS DECLARED RATHER THAN DISCOVERED: these are PMC derivative rasters in the size class that produced this repository's 2026-09-09 near-error, and there is NO PDF at PMC for this article to render a crisper surface from - pmc_pow_fetch returned 404 and ?pdf=render returned 404 with 'No PDF file found for pmcid: PMC11380939'. Where a fine judgement depended on the raster - the absence of error bars in Fig. 3B, the point counts in Figs. 2 and 4 - it is reported as read off that raster and nothing finer was available. The supplement, by contrast, is a vector PDF and was rendered at 300 dpi."
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID38563965_Zeng2024_PMC.html",
+   "sha256": "2af4221b2d18a33693627627e785a3faf536c220f6c3a27c5b318549f688c495",
+   "kind": "article_text",
+   "note": "THE STRUCTURED-ISH SURFACE, AND IT PASSES THE SCREEN. PMC reader HTML for PMC11380939, 184,333 bytes, carrying the whole body: INTRODUCTION, MATERIALS AND METHODS with all nine subsections, RESULTS with four named result sections, DISCUSSION and REFERENCES. Screened 2026-09-13: ZERO C0 control characters and the operators are PRESENT - '<' x17, '+/-' x26, 'x' x3, '-' x2, 'beta' x14, 'mu' - with 14 P< / P= hits. It therefore does NOT trip suspicion by absence and needs no page adjudication, unlike PMID 33058734 in the same lot. Obtained under NO User-Agent, which returned 200 here where the same policy returned a reCAPTCHA on the other paper.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11380939/",
+    "http_method": "GET",
+    "tier": "pmc_reader_html",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-09-13",
+    "derived": false,
+    "result_sha256": "2af4221b2d18a33693627627e785a3faf536c220f6c3a27c5b318549f688c495"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID38563965/ajplung.00277.2023_f001.jpg",
+   "sha256": "81cdae1ef12aa18a1d3056694c01c79877f1d87fe51fdda887ed6c01f052d145",
+   "kind": "figure",
+   "note": "PMC blob-CDN figure asset, reached through the article page's own src attributes. THE CEILING IS DECLARED: this is a PMC derivative raster at 770-836 px wide and there is NO PDF at PMC for this article to render a better surface from (pmc_pow_fetch 404, ?pdf=render 404 'No PDF file found'), so this is the only figure surface that exists.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/c31e/11380939/.../ajplung.00277.2023_f001.jpg",
+    "http_method": "GET",
+    "tier": "pmc_blob_cdn_via_article_page_src",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-09-13",
+    "derived": false,
+    "result_sha256": "81cdae1ef12aa18a1d3056694c01c79877f1d87fe51fdda887ed6c01f052d145"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID38563965/ajplung.00277.2023_f002.jpg",
+   "sha256": "7c695e01dc4fa8f9c53fd3e9f4f78d70f44e6393007ede7cfa8258eb5be8c286",
+   "kind": "figure",
+   "note": "PMC blob-CDN figure asset, reached through the article page's own src attributes. THE CEILING IS DECLARED: this is a PMC derivative raster at 770-836 px wide and there is NO PDF at PMC for this article to render a better surface from (pmc_pow_fetch 404, ?pdf=render 404 'No PDF file found'), so this is the only figure surface that exists.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/c31e/11380939/.../ajplung.00277.2023_f002.jpg",
+    "http_method": "GET",
+    "tier": "pmc_blob_cdn_via_article_page_src",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-09-13",
+    "derived": false,
+    "result_sha256": "7c695e01dc4fa8f9c53fd3e9f4f78d70f44e6393007ede7cfa8258eb5be8c286"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID38563965/ajplung.00277.2023_f003.jpg",
+   "sha256": "51fbd90c40c4a8177f630074b183f258855bfa2483c182f19245d9575c6dbd0c",
+   "kind": "figure",
+   "note": "PMC blob-CDN figure asset, reached through the article page's own src attributes. THE CEILING IS DECLARED: this is a PMC derivative raster at 770-836 px wide and there is NO PDF at PMC for this article to render a better surface from (pmc_pow_fetch 404, ?pdf=render 404 'No PDF file found'), so this is the only figure surface that exists.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/c31e/11380939/.../ajplung.00277.2023_f003.jpg",
+    "http_method": "GET",
+    "tier": "pmc_blob_cdn_via_article_page_src",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-09-13",
+    "derived": false,
+    "result_sha256": "51fbd90c40c4a8177f630074b183f258855bfa2483c182f19245d9575c6dbd0c"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID38563965/ajplung.00277.2023_f004.jpg",
+   "sha256": "5c61cc9ad3c293539de60a6b4ec5ab4674fe6e35626c5da171c8e182c6f21bbf",
+   "kind": "figure",
+   "note": "PMC blob-CDN figure asset, reached through the article page's own src attributes. THE CEILING IS DECLARED: this is a PMC derivative raster at 770-836 px wide and there is NO PDF at PMC for this article to render a better surface from (pmc_pow_fetch 404, ?pdf=render 404 'No PDF file found'), so this is the only figure surface that exists.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/c31e/11380939/.../ajplung.00277.2023_f004.jpg",
+    "http_method": "GET",
+    "tier": "pmc_blob_cdn_via_article_page_src",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-09-13",
+    "derived": false,
+    "result_sha256": "5c61cc9ad3c293539de60a6b4ec5ab4674fe6e35626c5da171c8e182c6f21bbf"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID38563965/ajplung.00277.2023_f005.jpg",
+   "sha256": "e4667ae2d541a649c228eff4bcabb122570cae20ecb2fd59e4723c6205ec03b3",
+   "kind": "figure",
+   "note": "PMC blob-CDN figure asset, reached through the article page's own src attributes. THE CEILING IS DECLARED: this is a PMC derivative raster at 770-836 px wide and there is NO PDF at PMC for this article to render a better surface from (pmc_pow_fetch 404, ?pdf=render 404 'No PDF file found'), so this is the only figure surface that exists.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/c31e/11380939/.../ajplung.00277.2023_f005.jpg",
+    "http_method": "GET",
+    "tier": "pmc_blob_cdn_via_article_page_src",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-09-13",
+    "derived": false,
+    "result_sha256": "e4667ae2d541a649c228eff4bcabb122570cae20ecb2fd59e4723c6205ec03b3"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID38563965/ajplung.00277.2023_f006.jpg",
+   "sha256": "1858c92e4f047c02c86329fdacff13f245b226f93b16957ee6bcf9d497fc4552",
+   "kind": "figure",
+   "note": "PMC blob-CDN figure asset, reached through the article page's own src attributes. THE CEILING IS DECLARED: this is a PMC derivative raster at 770-836 px wide and there is NO PDF at PMC for this article to render a better surface from (pmc_pow_fetch 404, ?pdf=render 404 'No PDF file found'), so this is the only figure surface that exists.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/c31e/11380939/.../ajplung.00277.2023_f006.jpg",
+    "http_method": "GET",
+    "tier": "pmc_blob_cdn_via_article_page_src",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-09-13",
+    "derived": false,
+    "result_sha256": "1858c92e4f047c02c86329fdacff13f245b226f93b16957ee6bcf9d497fc4552"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID38563965/ajplung.00277.2023_f007.jpg",
+   "sha256": "e62101f187aefe035ffcfb92404007bbfe7558edb2a623dfdaaee42169794ebb",
+   "kind": "figure",
+   "note": "PMC blob-CDN figure asset, reached through the article page's own src attributes. THE CEILING IS DECLARED: this is a PMC derivative raster at 770-836 px wide and there is NO PDF at PMC for this article to render a better surface from (pmc_pow_fetch 404, ?pdf=render 404 'No PDF file found'), so this is the only figure surface that exists.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/c31e/11380939/.../ajplung.00277.2023_f007.jpg",
+    "http_method": "GET",
+    "tier": "pmc_blob_cdn_via_article_page_src",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-09-13",
+    "derived": false,
+    "result_sha256": "e62101f187aefe035ffcfb92404007bbfe7558edb2a623dfdaaee42169794ebb"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID38563965/ajplung.00277.2023_f008.jpg",
+   "sha256": "00dd4d53f0f3c1a79ebe91ff6d314ca888dd67d49bc1112c3fc7eaec91e136f0",
+   "kind": "figure",
+   "note": "PMC blob-CDN figure asset, reached through the article page's own src attributes. THE CEILING IS DECLARED: this is a PMC derivative raster at 770-836 px wide and there is NO PDF at PMC for this article to render a better surface from (pmc_pow_fetch 404, ?pdf=render 404 'No PDF file found'), so this is the only figure surface that exists.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/c31e/11380939/.../ajplung.00277.2023_f008.jpg",
+    "http_method": "GET",
+    "tier": "pmc_blob_cdn_via_article_page_src",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-09-13",
+    "derived": false,
+    "result_sha256": "00dd4d53f0f3c1a79ebe91ff6d314ca888dd67d49bc1112c3fc7eaec91e136f0"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID38563965/l-00277-2023r01.jpg",
+   "sha256": "d073acf9799492113ea742813454a118a2b9ac3d33f10ed9bac24cbbbaeb2257",
+   "kind": "figure",
+   "note": "PMC blob-CDN figure asset, reached through the article page's own src attributes. THE CEILING IS DECLARED: this is a PMC derivative raster at 770-836 px wide and there is NO PDF at PMC for this article to render a better surface from (pmc_pow_fetch 404, ?pdf=render 404 'No PDF file found'), so this is the only figure surface that exists.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/c31e/11380939/.../l-00277-2023r01.jpg",
+    "http_method": "GET",
+    "tier": "pmc_blob_cdn_via_article_page_src",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-09-13",
+    "derived": false,
+    "result_sha256": "d073acf9799492113ea742813454a118a2b9ac3d33f10ed9bac24cbbbaeb2257"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID38563965_supplement/Zeng Singla VILI WWOX FiguresS1.pdf",
+   "sha256": "4696d01bab8c24847c6a7934faf0035e63b082645798415dba5f7844c23a5fc5",
+   "kind": "supplement_binary",
+   "note": "SUPPLEMENT THAT THE METADATA DENIED. Europe PMC reports hasSuppl=N and supplementaryFiles returns 'Article with id PMC11380939 is not open access one' - but the ARTICLE'S OWN SUPPLEMENTAL DATA section names Supplemental Table S1 and Supplemental Fig. S1 at doi.org/10.6084/m9.figshare.25137089. Retrieved from figshare, CC BY 4.0, article 25137089 'Zeng/Singla Supplemental Figure and Table', published 2024-02-02.",
+   "acquisition_recipe": {
+    "resolved_url": "https://api.figshare.com/v2/articles/25137089",
+    "http_method": "GET",
+    "tier": "figshare_api_v2_download_url",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-09-13",
+    "derived": false,
+    "result_sha256": "4696d01bab8c24847c6a7934faf0035e63b082645798415dba5f7844c23a5fc5"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID38563965_supplement/Supplemental_Table_1.pdf",
+   "sha256": "774aa45d9eff2d7ffe33a30f74bb09b0d8fc9be0b6dec70dc1b94d6a947e525c",
+   "kind": "supplement_binary",
+   "note": "SUPPLEMENT THAT THE METADATA DENIED. Europe PMC reports hasSuppl=N and supplementaryFiles returns 'Article with id PMC11380939 is not open access one' - but the ARTICLE'S OWN SUPPLEMENTAL DATA section names Supplemental Table S1 and Supplemental Fig. S1 at doi.org/10.6084/m9.figshare.25137089. Retrieved from figshare, CC BY 4.0, article 25137089 'Zeng/Singla Supplemental Figure and Table', published 2024-02-02.",
+   "acquisition_recipe": {
+    "resolved_url": "https://api.figshare.com/v2/articles/25137089",
+    "http_method": "GET",
+    "tier": "figshare_api_v2_download_url",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-09-13",
+    "derived": false,
+    "result_sha256": "774aa45d9eff2d7ffe33a30f74bb09b0d8fc9be0b6dec70dc1b94d6a947e525c"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID38563965_supplement/figS1_p01.png",
+   "sha256": "39bd8c6baed06a461e019040803916719bd210a3124819d8ef6243a10773fca5",
+   "kind": "figure",
+   "note": "300 dpi render of a supplement page, inspected as an image",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID38563965_supplement/Zeng Singla VILI WWOX FiguresS1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=300)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13",
+    "result_sha256": "39bd8c6baed06a461e019040803916719bd210a3124819d8ef6243a10773fca5"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID38563965_supplement/tableS1_p42.png",
+   "sha256": "d604bc295c32b408ef05d6cd642a591006bd9140265e0e2371a8a88e9bbef115",
+   "kind": "figure",
+   "note": "300 dpi render of a supplement page, inspected as an image",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID38563965_supplement/Supplemental_Table_1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=300)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13",
+    "result_sha256": "d604bc295c32b408ef05d6cd642a591006bd9140265e0e2371a8a88e9bbef115"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID38563965_supplement/tableS1_p35.png",
+   "sha256": "f1dd0527d0d2b3eaf92a885c3a30208642f642f933d80db82b1f737103415b3e",
+   "kind": "figure",
+   "note": "300 dpi render of a supplement page, inspected as an image",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID38563965_supplement/Supplemental_Table_1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=300)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-13",
+    "result_sha256": "f1dd0527d0d2b3eaf92a885c3a30208642f642f933d80db82b1f737103415b3e"
+   }
+  }
+ ]
+}

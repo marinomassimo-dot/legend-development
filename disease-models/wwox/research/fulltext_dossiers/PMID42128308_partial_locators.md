@@ -146,8 +146,10 @@ demonstrated *in vivo for a disease allele*.
 
 **And the bracket closes from the other side.** SCAR12-derived forebrain organoids resemble
 healthy controls in morphology, layer markers and E/I ratio while displaying *"minimal WWOX
-expression"*. Normal protein with a severe phenotype; near-absent protein with a near-normal
-organoid. **WWOX abundance predicts neither the presence nor the absence of the phenotype.**
+expression"*. Protein present but never quantified, in a **mouse** with a severe phenotype — the
+P47T **patients** are SCAR12-**mild**, and the two must not be run together; near-absent protein
+with a near-normal organoid. **WWOX abundance predicts neither the presence nor the absence of
+the phenotype.**
 
 ### 🔴 The three-class genotype–phenotype framework is published and falsified in the same section
 

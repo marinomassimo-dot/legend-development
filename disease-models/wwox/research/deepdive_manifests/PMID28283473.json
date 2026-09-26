@@ -1,0 +1,742 @@
+{
+ "schema_version": 2,
+ "pmid": "28283473",
+ "doi": "10.1152/ajplung.00034.2017",
+ "pmcid": "PMC5495942",
+ "receipt": "FTR-20260914-28283473-01",
+ "landing": [
+  "FTR-20260914-28283473-01",
+  "CC-20260914-28283473-01"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Invoked as the acquisition cascade after four structured-surface routes had failed; its Tier 0/3 logic named the OpenAlex and PMC reader routes, and the reading surface was won on the PMC reader page with no User-Agent."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline rather than through the skill. The dispatch named ONE paper and the figures had to be opened from the same session that read the text, because four of the findings are caption-versus-panel disagreements that only exist when both surfaces are held open together."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "None of its triggers fired. This commit candidate declares no MAJOR, reverses no consolidated baseline claim and contradicts no persisted locator: it proposes a first PAPER record and a correction to a non-canonical queue entry's framing. The audit is proposed to the orchestrator as a precondition if any of this is ever promoted to a CLAIM."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The transferable leads - basal JNK tone, c-Jun sequestration, IL-8/KC axis - are captured as locators and as the reading debt on PMID 17178850; a discovery pass would restate them without adding a lead this manifest does not already carry."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "This paper matures no therapeutic lever toward the reference genotype: the tissue is lung, the model is acute airway siRNA in wild-type mice, and the only rescue is a research-tool JNK inhibitor at 30 mg/kg subcutaneously."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No candidate molecule and no SMILES in this reading. SP600125 appears only as a research-tool kinase inhibitor, and the paper itself spells its name three different ways."
+  },
+  {
+   "skill": "legend-paperqa",
+   "used": false,
+   "reason": "Refused on principle: it needs an API key and external traffic, and external spend above the declared default is reserved to the operator under LEGEND_CORE 21d."
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The dispatch named one already-triaged paper whose identity, queue entry FT-178 and registry stubs were resolved before this session; re-triaging one known PMID would measure nothing."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 19,
+  "publications_on_gene": 4,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "counts_measured": "PubMed esearch 2026-09-14: 'Singla Sunit'[Full Author Name] 19, and with AND WWOX 4. 'Machado Roberto F'[Full Author Name] 158, with AND WWOX 4. 'Chen Jiwang'[Full Author Name] AND WWOX 1. The bare 'Singla S'[au] form is not one person and is not used.",
+  "weighting": "🔴 AND THE DIFFERENCE FROM PMID 33058734 IS THE POINT: NO WWOX-PRIMARY LABORATORY IS ON THIS PAPER AT ALL. All seven authors are the same Illinois pulmonary/critical-care division. Aldaz - primary for the gene, and a named author on the 2021 endothelial sequel where he contributed the floxed allele - is ABSENT here. So the corpus's only positive lung-inflammatory result comes from a laboratory that is primary for ARDS and lung barrier biology and had published four WWOX papers total, with no gene-primary co-author to weight the WWOX side of it. That cuts in two directions and both are recorded: the ARDS model, the BALF endpoints and the JNK pharmacology are this group's home ground and are weighted as competent; the WWOX molecular claims (c-Jun sequestration, the SDR/WW domain framing) are imported wholesale from reference 26, which this repository has never read and for which it holds no registry record. Nobody on this paper works on WWOX-related neurodevelopmental disease and the word brain does not occur in the article."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "WWOX",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 708
+   },
+   {
+    "query": "WWOX AND neutrophil*",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 2
+   },
+   {
+    "query": "WWOX AND (\"lung injury\" OR ARDS)",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 6
+   },
+   {
+    "query": "WWOX AND endothelium",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 4
+   },
+   {
+    "query": "WWOX AND (brain OR neurodevelopment* OR epilepsy)",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 136
+   }
+  ],
+  "note": "🔴 THE ENTIRE NEUTROPHIL LEG OF THE WWOX LITERATURE IS TWO PAPERS - this one and its own endothelial sequel - against 136 for brain/neurodevelopment/epilepsy out of 708. The corpus has been resting a mechanistic direction on an intersection of two records from one city. In a rare disease a near-empty intersection is a signal rather than an absence, but two is also the number at which a single unreplicated reagent decides the direction."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 73,
+  "enumeration_method": "Counted from the PMC reader deposit two independent ways that agree: 73 numbered entries running 1-73 with no gaps in the rendered REFERENCES section, and 73 list elements carrying a reference id in the HTML. Reference 73 (Zhao et al.) is the LPS model the Results cite as 'described previously'.",
+  "gene_direct_refs_in_source": [
+   {
+    "ref": 7,
+    "pmid": "10786676",
+    "citation": "Bednarek AK, ... Aldaz CM. WWOX, a novel WW domain-containing protein mapping to human chromosome 16q23.3-24.1. Cancer Res 60: 2140-2145, 2000",
+    "registry": "registry identity present; NO receipt - unread"
+   },
+   {
+    "ref": 4,
+    "pmid": "24932569",
+    "citation": "Aldaz CM, Ferguson BW, Abba MC. WWOX at the crossroads of cancer, metabolic syndrome related traits and CNS pathologies. Biochim Biophys Acta 1846: 188-200, 2014",
+    "registry": "READ HERE - complete_fulltext_read receipt exists"
+   },
+   {
+    "ref": 15,
+    "pmid": "27234396",
+    "citation": "Chen SJ, Huang SS, Chang NS. Role of WWOX and NF-kB in lung cancer progression. Transl Respir Med 1: 15, 2013",
+    "registry": "registry identity present; NO receipt - unread"
+   },
+   {
+    "ref": 18,
+    "pmid": "26256646",
+    "citation": "Del Mare S, Aqeilan RI. Tumor suppressor WWOX inhibits osteosarcoma metastasis by modulating RUNX2 function. Sci Rep 5: 12959, 2015",
+    "registry": "READ HERE - complete_fulltext_read receipt exists"
+   },
+   {
+    "ref": 19,
+    "pmid": "19708029",
+    "citation": "Del Mare S, Salah Z, Aqeilan RI. WWOX: its genomics, partners, and functions. J Cell Biochem 108: 737-745, 2009",
+    "registry": "registry identity present; NO receipt - unread"
+   },
+   {
+    "ref": 22,
+    "pmid": "16223882",
+    "citation": "Fabbri M, ... Croce CM. WWOX gene restoration prevents lung cancer growth in vitro and in vivo. Proc Natl Acad Sci USA 102: 15611-15616, 2005",
+    "registry": "READ HERE - complete_fulltext_read receipt exists"
+   },
+   {
+    "ref": 24,
+    "pmid": "21115974",
+    "citation": "Fu J, ... Xiao G. The tumor suppressor gene WWOX links the canonical and noncanonical NF-kB pathways. Blood 117: 1652-1661, 2011",
+    "registry": "READ HERE - complete_fulltext_read receipt exists"
+   },
+   {
+    "ref": 26,
+    "pmid": "17178850",
+    "citation": "Gaudio E, ... Aqeilan RI. Physical association with WWOX suppresses c-Jun transcriptional activity. Cancer Res 66: 11585-11589, 2006",
+    "registry": "🔴 NO REGISTRY IDENTITY RECORD AT ALL (one incidental mention in the queue), NO receipt - and this paper's entire mechanism is imported from it"
+   },
+   {
+    "ref": 28,
+    "pmid": "19458077",
+    "citation": "Gourley C, ... Gabra H. WWOX gene expression abolishes ovarian cancer tumorigenicity in vivo. Cancer Res 69: 4835-4842, 2009",
+    "registry": "registry identity present; NO receipt - unread"
+   },
+   {
+    "ref": 34,
+    "pmid": "16438931",
+    "citation": "Jin C, ... Yao X. PKA-mediated protein phosphorylation regulates ezrin-WWOX interaction. Biochem Biophys Res Commun 341: 784-791, 2006",
+    "registry": "NO registry identity record (one queue mention), NO receipt - unread"
+   },
+   {
+    "ref": 50,
+    "pmid": "15982416",
+    "citation": "Nunez MI, ... Aldaz CM. WWOX protein expression varies among ovarian carcinoma histotypes. BMC Cancer 5: 64, 2005",
+    "registry": "READ HERE - complete_fulltext_read receipt exists"
+   },
+   {
+    "ref": 53,
+    "pmid": "16360296",
+    "citation": "Pluciennik E, ... Bednarek AK. WWOX - the FRA16D cancer gene. Eur J Surg Oncol 32: 153-157, 2006",
+    "registry": "registry identity present; NO receipt - unread"
+   },
+   {
+    "ref": 55,
+    "pmid": "10861292",
+    "citation": "Ried K, ... Richards RI. Common chromosomal fragile site FRA16D sequence. Hum Mol Genet 9: 1651-1663, 2000",
+    "registry": "NO registry identity record (reached via FT-036 and mentions), NO receipt - unread"
+   },
+   {
+    "ref": 63,
+    "pmid": "16187332",
+    "citation": "Thavathiru E, Ludes-Meyers JH, MacLeod MC, Aldaz CM. Expression of common chromosomal fragile site genes WWOX/FRA16D and FHIT/FRA3B is downregulated by environmental carcinogens. Mol Carcinog 44: 174-182, 2005",
+    "registry": "registry identity present; NO receipt - unread"
+   },
+   {
+    "ref": 71,
+    "pmid": "22248280",
+    "citation": "Yang W, ... Sun Z. Cigarette smoking extract causes hypermethylation and inactivation of WWOX gene in T-24 bladder cancer cells. Neoplasma 59: 216-223, 2012",
+    "registry": "registry identity present; NO receipt - unread"
+   }
+  ],
+  "gene_direct_count": 15,
+  "resolved": [
+   {
+    "ref": 7,
+    "pmid": "10786676",
+    "citation": "Bednarek AK, ... Aldaz CM. WWOX, a novel WW domain-containing protein mapping to human chromosome 16q23.3-24.1. Cancer Res 60: 2140-2145, 2000",
+    "registry": "registry identity present; NO receipt - unread"
+   },
+   {
+    "ref": 4,
+    "pmid": "24932569",
+    "citation": "Aldaz CM, Ferguson BW, Abba MC. WWOX at the crossroads of cancer, metabolic syndrome related traits and CNS pathologies. Biochim Biophys Acta 1846: 188-200, 2014",
+    "registry": "READ HERE - complete_fulltext_read receipt exists"
+   },
+   {
+    "ref": 15,
+    "pmid": "27234396",
+    "citation": "Chen SJ, Huang SS, Chang NS. Role of WWOX and NF-kB in lung cancer progression. Transl Respir Med 1: 15, 2013",
+    "registry": "registry identity present; NO receipt - unread"
+   },
+   {
+    "ref": 18,
+    "pmid": "26256646",
+    "citation": "Del Mare S, Aqeilan RI. Tumor suppressor WWOX inhibits osteosarcoma metastasis by modulating RUNX2 function. Sci Rep 5: 12959, 2015",
+    "registry": "READ HERE - complete_fulltext_read receipt exists"
+   },
+   {
+    "ref": 19,
+    "pmid": "19708029",
+    "citation": "Del Mare S, Salah Z, Aqeilan RI. WWOX: its genomics, partners, and functions. J Cell Biochem 108: 737-745, 2009",
+    "registry": "registry identity present; NO receipt - unread"
+   },
+   {
+    "ref": 22,
+    "pmid": "16223882",
+    "citation": "Fabbri M, ... Croce CM. WWOX gene restoration prevents lung cancer growth in vitro and in vivo. Proc Natl Acad Sci USA 102: 15611-15616, 2005",
+    "registry": "READ HERE - complete_fulltext_read receipt exists"
+   },
+   {
+    "ref": 24,
+    "pmid": "21115974",
+    "citation": "Fu J, ... Xiao G. The tumor suppressor gene WWOX links the canonical and noncanonical NF-kB pathways. Blood 117: 1652-1661, 2011",
+    "registry": "READ HERE - complete_fulltext_read receipt exists"
+   },
+   {
+    "ref": 26,
+    "pmid": "17178850",
+    "citation": "Gaudio E, ... Aqeilan RI. Physical association with WWOX suppresses c-Jun transcriptional activity. Cancer Res 66: 11585-11589, 2006",
+    "registry": "🔴 NO REGISTRY IDENTITY RECORD AT ALL (one incidental mention in the queue), NO receipt - and this paper's entire mechanism is imported from it"
+   },
+   {
+    "ref": 28,
+    "pmid": "19458077",
+    "citation": "Gourley C, ... Gabra H. WWOX gene expression abolishes ovarian cancer tumorigenicity in vivo. Cancer Res 69: 4835-4842, 2009",
+    "registry": "registry identity present; NO receipt - unread"
+   },
+   {
+    "ref": 34,
+    "pmid": "16438931",
+    "citation": "Jin C, ... Yao X. PKA-mediated protein phosphorylation regulates ezrin-WWOX interaction. Biochem Biophys Res Commun 341: 784-791, 2006",
+    "registry": "NO registry identity record (one queue mention), NO receipt - unread"
+   },
+   {
+    "ref": 50,
+    "pmid": "15982416",
+    "citation": "Nunez MI, ... Aldaz CM. WWOX protein expression varies among ovarian carcinoma histotypes. BMC Cancer 5: 64, 2005",
+    "registry": "READ HERE - complete_fulltext_read receipt exists"
+   },
+   {
+    "ref": 53,
+    "pmid": "16360296",
+    "citation": "Pluciennik E, ... Bednarek AK. WWOX - the FRA16D cancer gene. Eur J Surg Oncol 32: 153-157, 2006",
+    "registry": "registry identity present; NO receipt - unread"
+   },
+   {
+    "ref": 55,
+    "pmid": "10861292",
+    "citation": "Ried K, ... Richards RI. Common chromosomal fragile site FRA16D sequence. Hum Mol Genet 9: 1651-1663, 2000",
+    "registry": "NO registry identity record (reached via FT-036 and mentions), NO receipt - unread"
+   },
+   {
+    "ref": 63,
+    "pmid": "16187332",
+    "citation": "Thavathiru E, Ludes-Meyers JH, MacLeod MC, Aldaz CM. Expression of common chromosomal fragile site genes WWOX/FRA16D and FHIT/FRA3B is downregulated by environmental carcinogens. Mol Carcinog 44: 174-182, 2005",
+    "registry": "registry identity present; NO receipt - unread"
+   },
+   {
+    "ref": 71,
+    "pmid": "22248280",
+    "citation": "Yang W, ... Sun Z. Cigarette smoking extract causes hypermethylation and inactivation of WWOX gene in T-24 bladder cancer cells. Neoplasma 59: 216-223, 2012",
+    "registry": "registry identity present; NO receipt - unread"
+   }
+  ],
+  "queued": [],
+  "debt_remaining": "🔴 TEN OF THE FIFTEEN GENE-DIRECT REFERENCES ARE UNREAD HERE, AND ONE OF THEM IS THIS PAPER'S WHOLE MECHANISM. Reference 26, PMID 17178850 (Gaudio 2006, 'Physical association with WWOX suppresses c-Jun transcriptional activity') is the source of the c-Jun sequestration model that every mechanistic sentence of this paper imports, that its Figure 2 sets out to reproduce in A549 cells, and that the JNK rescue depends on - and this repository holds NO registry identity record for it and no receipt, only one incidental mention inside a queue entry. Two more have no identity record either: PMID 16438931 (ezrin-WWOX, reference 34) and PMID 10861292 (the FRA16D sequence paper, reference 55). No queue identifier is minted from this manifest: full_text_queue_current.md is not a surface this dispatch permits me to write, and minting into a shared append-only file I do not own is the peer-race this laboratory has already paid for once. The debt is therefore declared here and carried, with its argument, into CC-20260914-28283473-01 for the orchestrator to address; the five already read are named above so the triage does not have to re-derive them."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "registry_records.py get --pmid 28283473 --headings-only, and --theme 'neutrophilic inflammation' and --theme 'lung injury' --headings-only (2026-09-14). Asked of the existing corpus: does this repository already hold anything that reads, confirms or contradicts this paper, before I write a word about it.",
+  "hits": 3,
+  "finding": "Three records and not one of them is a reading: CORPUS-STUB-091 (paper_registry_current.md:1596, identity only), LIT-0114 (literature_tracking_log_current.md:3487, 'not yet screened', clinical relevance LOW) and FT-178, the queue entry that commissioned this read. The 'neutrophilic inflammation' theme returns exactly those three and nothing else, so this reading is the FIRST full-text reading of the positive inflammatory leg of the WWOX-lung axis in this repository, and LIT-0114's 'clinical relevance: LOW' is a pre-screening guess that the reading now contradicts."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-09-14",
+  "result": "NO retraction, erratum or expression of concern, and the two notice routes AGREE for once - which is itself worth recording, because on the sequel paper they disagreed. Europe PMC resultType=core for EXT_ID:28283473 returns commentCorrectionList: null, and NCBI esummary returns commentscorrections: null with attributes ['Has Abstract'] and pubtype ['Journal Article','Research Support, N.I.H., Extramural']. No preprint is recorded on either route. The PMC reader deposit prints no retraction or correction notice. NOTE, stated rather than smoothed over: erratum_scope_check.py --pmid 28283473 returned INSUFFICIENT_DATA and screened nothing, because it reads manifests and no manifest existed when it ran; it is not evidence of cleanliness and is not counted as such.",
+  "routes": [
+   "europepmc search EXT_ID:28283473 resultType=core commentCorrectionList",
+   "ncbi esummary db=pubmed retmode=json commentscorrections",
+   "erratum_scope_check.py --pmid 28283473 (INSUFFICIENT_DATA - screened nothing)",
+   "visual inspection of the PMC reader deposit"
+  ],
+  "hold": false,
+  "dependencies": {
+   "schema": "retraction_check.dependencies/1",
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "screened": true,
+   "reference_source": "network",
+   "references_declared": 73,
+   "references_screened": 72,
+   "references_with_doi": 72,
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   },
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 4,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "paper_verdict": "FLAGGED_EXPRESSION_OF_CONCERN",
+   "noted": [],
+   "flagged": [
+    {
+     "doi": "10.1073/pnas.0505485102",
+     "nature": "Expression of concern",
+     "retraction_pmid": "28373548",
+     "retraction_date": "4/3/2017 0:00",
+     "reason_verbatim": "Concerns/Issues about Data;Duplication of/in Image;Error in Image;Investigation by Company/Institution;Original Data and/or Images not Provided and/or not Available;",
+     "verdict": "FLAGGED_EXPRESSION_OF_CONCERN",
+     "citing_relation": "CITATION ONLY, BACKGROUND, AND NO CONCLUSION OF THIS PAPER OR OF THIS READING RESTS ON IT. This is reference 22 (Fabbri 2005, PNAS), cited once in the Introduction inside the list 'Decreased WWOX expression in several different cancers is associated with increased tumor metastases and worse prognosis (22, 50, 53)'. It supplies no reagent, no method, no cell line and no datum to this article: the mouse model comes from reference 46/73, the floxed-allele-free siRNA is commercial, the c-Jun mechanism is reference 26 and the A549 line is commercial. So the Expression of Concern does not propagate into anything this paper measures or anything this reading carries out. IT IS FLAGGED FORWARD ANYWAY FOR A SEPARATE REASON: PMID 16223882 is read in this repository with its own complete_fulltext_read receipt, so the EoC bears on THAT record rather than on this one, and the orchestrator is the right owner of that question."
+    }
+   ],
+   "reading_note": "The screen was re-run after this manifest existed, because the tool reads manifests and returned INSUFFICIENT_DATA when none did. 72 of 73 references carry a DOI and were screened against a 2026-09-10 snapshot 4 days old; the one unscreenable reference is reference 7 (Bednarek 2000, Cancer Res 60:2140-2145), which prints no DOI in this article's reference list and which I resolved by author/journal/year to PMID 10786676. One flagged dependency, stated above with its relation."
+  }
+ },
+ "preprint_comparison": {
+  "checked": true,
+  "checked_once": true,
+  "preprint": null,
+  "finding": "No preprint exists to compare. Europe PMC commentCorrectionList is null with no 'Preprint in' item, and esummary lists no preprint. This is the opposite of the sequel paper PMID 33058734, which has bioRxiv PPR187117. Nothing is inferred from the absence beyond it."
+ },
+ "supplement_ascertained": {
+  "exists": false,
+  "conclusion": "NO supplementary material and NO tables exist for this article - ascertained on four independent surfaces, not assumed.",
+  "evidence": [
+   "Europe PMC resultType=core for EXT_ID:28283473 reports hasSuppl=N (measured 2026-09-14).",
+   "The Europe PMC supplementaryFiles endpoint for MED/28283473 returns HTTP 404 with 0 bytes.",
+   "The extracted article surface contains ZERO occurrences of the string 'supplement' in any case - not one - and zero occurrences of 'table'. There is no 'Data Supplement', no 'ONLINE SUPPLEMENT' and no E1 pointer.",
+   "The highest figure cited anywhere in the text is Figure 5, and all five figures are present in the body as deposited image assets, so no display item is deferred to a supplement."
+  ],
+  "why_declared": "'Unknown' is not 'not needed'. The sequel paper's reading had to ascertain the same thing and found the same answer by a different route, so recording it on data here means a later reader does not reopen the question or infer it from hasSuppl alone."
+ },
+ "verbatim_locators": {
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC search EXT_ID:28283473 resultType=core on 2026-09-14 returns inEPMC=Y, inPMC=Y and fullTextIdList={fullTextId:[PMC5495942]}, so the article IS full-text indexed and a third party can locate these sentences in the PMC reader. THE QUALIFICATION THAT MATTERS, and it is the same one the sequel hit: isOpenAccess=N and hasPDF=N, Europe PMC fullTextXML returns HTTP 404 with 0 bytes, and efetch db=pmc returns front matter carrying the publisher's explicit refusal of the full text in XML form. Indexed is therefore NOT machine-retrievable-as-XML here; what rescued this reading is that the PMC READER HTML serves the complete body to a request that sends no User-Agent, and that HTML is the fingerprinted surface every text locator below is verified against.",
+  "figure_coverage": {
+   "figures_present": 5,
+   "figures_inspected": 5,
+   "panel_blocks_inspected": "all panels of all five figures: 1A-1J, 2A-2C, 3A-3F, 4A-4F, 5A-5F",
+   "basis": "The publisher's own deposited figure assets, fetched from the PMC CDN and inspected as images at native resolution (639x1203 and 716x206 and 799x392 at 300 dpi; 764x349 and 787x362 at 1200 dpi). No page render and no crop: these are the bytes PMC serves, so nothing depends on a renderer version. Inspecting them was not ceremony - it produced four of this reading's findings, including two caption cytokine mis-orderings and the drug's third spelling, none of which is visible in the text."
+  },
+  "abstract_anchoring_waived": "Not required - the source is full-text indexed, so the abstract-anchoring duty does not arise. Recorded anyway because it would be wrong to imply the abstract could carry these propositions: every finding below is a Methods parameter, an n, a caption-versus-panel disagreement or a limitation sentence, and the abstract of this article contains none of them. Its one relevant sentence, that knockdown 'was observed to cause neutrophil influx', is precisely the unqualified form this reading exists to qualify.",
+  "entries": [
+   {
+    "proposition": "THE IN VIVO MODEL IS ACUTE AIRWAY-DELIVERED siRNA, NOT A GENETIC KNOCKOUT AND NOT WHOLE-BODY. Anaesthesia, tracheal cannulation and intratracheal instillation of 10 mg/kg siRNA in saline into 6-8 week old male C57BL/6 mice. This is the single most consequential fact for FT-178: the corpus has described this paper as a whole-body/global knockdown model, and the delivery is intratracheal into the airway of a wild-type mouse.",
+    "snippet": "Six- to eight-week-old male C57BL/6 mice were anesthetized with isoflurane and underwent tracheal cannulation. Ten milligrams per kilograms of scrambled control vs. WWOX-silencing RNA were instilled into the airway in saline.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28283473/PMID28283473_Singla2017_PMCreader.html",
+    "anchor": "MATERIALS AND METHODS, 'A murine model of LPS induced neutrophilic alveolitis and silencing of lung WWOX expression'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "ONE siRNA SEQUENCE, ONE SCRAMBLED CONTROL, BOTH PRINTED. The reagent is a single duplex; the control is a scrambled sequence, not a non-silencing validated pool, and no second independent WWOX siRNA is used in vivo.",
+    "snippet": "The WWOX siRNA sequence was 5′-CCACAGAUUUACAGAUAUU-3′, and the scrambled control sequence was 5′-AUGUAUUGGCCUGUAUUAG-3′.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28283473/PMID28283473_Singla2017_PMCreader.html",
+    "anchor": "MATERIALS AND METHODS, same subsection, the two printed sequences",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE METHODS STATE 54 HOURS BETWEEN siRNA AND LPS. Recorded as the fixed point for the caption that states a different interval.",
+    "snippet": "The mice were housed in cages as described above for 54 h after which they underwent reanesthetization and tracheal cannulation for instillation of 1 mg/kg LPS vs.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28283473/PMID28283473_Singla2017_PMCreader.html",
+    "anchor": "MATERIALS AND METHODS, murine model subsection",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE FIGURE 1 CAPTION STATES SEVENTY-TWO HOURS FOR THE SAME INTERVAL. Methods say 54 h, the caption says 72 h, for the identical step of the identical experiment. Neither is marked as a correction and the article prints both. A reader cannot reconstruct the protocol timing from this paper.",
+    "snippet": "Seventy-two hours later 3 mice in each group received 40 μl of PBS via intratracheal instillation, and the remaining mice received 1 mg/kg LPS in a 40-μl volume.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28283473/PMID28283473_Singla2017_PMCreader.html",
+    "anchor": "Figure 1 caption",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE WHOLE IN VIVO EXPERIMENT IS TWELVE MICE, SIX PER siRNA ARM. This is the denominator behind the corpus's entire positive inflammatory leg.",
+    "snippet": "Twelve C57Bl/6 mice were treated with intratracheal instillation of either control nontargeting (n = 6) or WWOX-targeting siRNA (n = 6).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28283473/PMID28283473_Singla2017_PMCreader.html",
+    "anchor": "Figure 1 caption, opening sentences",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "AND THE FOUR GROUPS ARE THEREFORE THREE MICE EACH, WHILE THE CAPTION CALLS IT 'n = 3 independent experiments'. Twelve mice split 6/6 and then 3/3 to PBS or LPS gives n = 3 per group within ONE animal experiment; 'independent experiments' asserts replication the design as described does not contain. The statistics are a two-way ANOVA followed by t-tests on all significant comparisons.",
+    "snippet": "Results are shown as means ± SD in n = 3 independent experiments. A two-way ANOVA for PBS vs. LPS and control vs. WWOX siRNA was performed followed by a Student’s t-test for all significant comparisons. *P < 0.05, significantly different from control except for comparisons indicated by brackets.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28283473/PMID28283473_Singla2017_PMCreader.html",
+    "anchor": "Figure 1 caption, closing sentences",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "🔴 THE PROPOSITION FT-178 RESTS ON, MEASURED AND FOUND: WWOX SILENCING ALONE - NO LPS, NO SECOND HIT - CAUSED NEUTROPHIL INFLUX AND VASCULAR LEAK TO A DEGREE SIMILAR TO LPS ITSELF. The authors call it surprising. This is a positive, stimulus-free inflammatory phenotype from lung WWOX loss, and it is the mirror image of its 2021 endothelial sequel's twenty-four unstarred bars.",
+    "snippet": "Surprisingly, WWOX silencing alone caused neutrophil influx (Fig. 1, B–D) and a corresponding vascular leak (Fig. 1, E and F) to a similar degree that LPS did in wild-type mice pretreated with scrambled control siRNA.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28283473/PMID28283473_Singla2017_PMCreader.html",
+    "anchor": "RESULTS, 'Global loss of murine lung WWOX expression causes neutrophilic alveolitis'",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "🔴 THE PANELS CARRY THE ASTERISK ON THE UNSTIMULATED KNOCKDOWN ARM, ON ALL EIGHT QUANTITATIVE PANELS. Inspected at native resolution: in every one of C-J the WWOX-siRNA + PBS group (knockdown, NO LPS) is starred against control. That is the decisive difference from the 2021 endothelial sequel, where the same class of readout carries no asterisk on any of twenty-four bars. Three data points are visible per group, confirming n = 3 animals rather than three experiments.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 1, ten panels. A: WWOX and actin Western blot, four lanes (control siRNA PBS/LPS, WWOX siRNA PBS/LPS). B: haematoxylin-eosin histology, 2x2. C: 'BALF leukocyte count/ml x 10^5' - control+PBS ~3.5 unstarred; control+LPS ~28*; WWOX+PBS ~24*; WWOX+LPS ~30*, with brackets. D: 'BALF neutrophil count/ml x 10^5' - control+PBS ~0.5 unstarred; the other three starred. E: 'BALF total protein ng/ml'. F: 'BALF:Serum FITC-Dextran'. G: 'BALF IL-6 pg/ml'. H: 'BALF IL-1b pg/ml'. I: 'BALF KC pg/ml'. J: 'BALF MIP-2 pg/ml'. In C-J the WWOX-siRNA + PBS point carries an asterisk. Three points per group throughout.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID28283473/figures/zh50051772170001.jpg",
+    "anchor": "Figure 1, PMC figure asset inspected as an image at native resolution (639x1203, 300 dpi)",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "THE CYTOKINE ARM IS MEASURED AS BALF PROTEIN CONCENTRATIONS BY ELISA AND FOUND ELEVATED: KC AND MIP-2, THE MOUSE IL-8 ANALOGUES, PLUS IL-1beta AND IL-6. So FT-178's third question - counts, cytokine, or histology - is answered 'all three'.",
+    "snippet": "the levels of both KC and MIP-2 were significantly elevated in the BALF of WWOX-silenced mice as were those of IL-1β and IL-6.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28283473/PMID28283473_Singla2017_PMCreader.html",
+    "anchor": "RESULTS, first subsection, closing sentences",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "THE FIGURE 1 CAPTION ENUMERATES THE CYTOKINE PANELS IN THE ORDER IL-1, IL-6, KC, MIP-2 FOR G-J. Recorded as the fixed point for the panel reading that follows.",
+    "snippet": "C–J: scatter plots depict BAL leukocyte counts, neutrophil counts, protein concentration, and FITC-dextran flux as a measure of permeability, and IL-1, IL-6, keratinocyte-derived chemokine (KC), and macrophage inhibitory-2 (MIP-2) concentrations, respectively.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28283473/PMID28283473_Singla2017_PMCreader.html",
+    "anchor": "Figure 1 caption, the C-J enumeration",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "🔴 THE PANELS PRINT IL-6 AT G AND IL-1b AT H - THE CAPTION'S ORDER IS REVERSED AGAINST ITS OWN FIGURE. Read off the axis labels at native resolution: G is 'BALF IL-6 pg/ml' and H is 'BALF IL-1b pg/ml', while the caption says the respective order is IL-1, IL-6. A reader citing 'Figure 1G' for IL-1 from the caption would cite the IL-6 panel. The drawn axis is the author's own label and adjudicates.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 1 panel G axis reads 'BALF IL-6 pg/ml'; panel H axis reads 'BALF IL-1b pg/ml'; panel I 'BALF KC pg/ml'; panel J 'BALF MIP-2 pg/ml'.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID28283473/figures/zh50051772170001.jpg",
+    "anchor": "Figure 1, panels G-J, axis labels at native resolution",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "contradicts": "entries[9]",
+    "contradicts_needle": "IL-1, IL-6, keratinocyte-derived chemokine (KC), and macrophage inhibitory-2 (MIP-2) concentrations, respectively"
+   },
+   {
+    "proposition": "THE STATISTICAL APPARATUS, QUOTED IN FULL: t-test or ANOVA 'where applicable', GraphPad Prism, significance at P < 0.05. No multiplicity correction is named anywhere in the paper for the eight BALF endpoints of Figure 1.",
+    "snippet": "Either a Student’s t-test or an ANOVA were performed where applicable on all data using GraphPad Prism software. Significance was set at *P < 0.05.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28283473/PMID28283473_Singla2017_PMCreader.html",
+    "anchor": "MATERIALS AND METHODS, 'Statistical analysis'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE NEUTROPHIL READOUT IS A MANUAL DIFFERENTIAL OVER TEN HIGH-POWER FIELDS, NOT AN AUTOMATED DIFFERENTIAL. The absolute leukocyte concentration is machine-counted and the neutrophil PERCENTAGE is read by eye; the paper does not state that the reader was blinded to group.",
+    "snippet": "A manual differential cell count was performed on 10 high-power fields to determine relative percentages of neutrophils in the leukocyte population.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28283473/PMID28283473_Singla2017_PMCreader.html",
+    "anchor": "MATERIALS AND METHODS, 'BALF collection and analysis'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE DISCUSSION CITES 'Fig. 1, D and F' FOR VASCULAR LEAK. Recorded as the fixed point for the panel reading that follows.",
+    "snippet": "As shown in Fig. 1, D and F, the degree of LPS-induced pulmonary vascular leak observed during WWOX knockdown was significantly greater than that observed in wild-type mice and well out of proportion to the corresponding degree of neutrophilic inflammation seen in these two groups of mice.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28283473/PMID28283473_Singla2017_PMCreader.html",
+    "anchor": "DISCUSSION, the vascular-barrier paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "🔴 PANEL D IS THE NEUTROPHIL COUNT, NOT A LEAK MEASURE - THE DISCUSSION MISCITES ITS OWN FIGURE WHILE MAKING A CLAIM ABOUT LEAK BEING OUT OF PROPORTION TO INFLAMMATION. The leak panels are E (BALF total protein) and F (BALF:Serum FITC-Dextran); the Results section cites 'Fig. 1, E and F' for exactly this quantity. So the paper's own two statements about which panels show leak disagree, and the Discussion's version points at the inflammation panel it is contrasting leak WITH.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 1 panel D axis reads 'BALF neutrophil count/ml x 10^5'; panel E reads 'BALF total protein ng/ml'; panel F reads 'BALF:Serum FITC-Dextran'.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID28283473/figures/zh50051772170001.jpg",
+    "anchor": "Figure 1, panels D, E and F, axis labels at native resolution",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "contradicts": "entries[13]",
+    "contradicts_needle": "Fig. 1, D and F"
+   },
+   {
+    "proposition": "THE AUTHORS' OWN FIRST LIMITATION: ONE siRNA, AND OFF-TARGET EFFECTS EXPLICITLY NOT EXCLUDED FOR THE LUNG NEUTROPHIL INFLUX. The corpus's positive inflammatory leg therefore rests on a single unreplicated reagent by the paper's own admission.",
+    "snippet": "only one WWOX-targeting siRNA was used in the mouse studies, raising the possibility that off-target effects might be responsible for the observed increase in lung neutrophil influx.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28283473/PMID28283473_Singla2017_PMCreader.html",
+    "anchor": "DISCUSSION, 'There are a few minor limitations to this study'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "🔴 THE COMPARTMENT ANSWER FT-178 ASKED FOR, IN THE AUTHORS' OWN WORDS: THE PREDOMINANT CELL TYPE HIT BY INTRATRACHEAL siRNA IS THE ALVEOLAR EPITHELIAL CELL. This model is epithelium-weighted, imported from a GFP-siRNA study (reference 52) rather than measured here. It is therefore NOT the endothelial compartment that the 2021 sequel deletes, and the two papers do not address the same cell type - which is the precise reason the endothelial negative does not contradict this positive.",
+    "snippet": "the predominant cell type affected by intratracheal siRNA delivery is the alveolar epithelial cell (52).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28283473/PMID28283473_Singla2017_PMCreader.html",
+    "anchor": "DISCUSSION, limitations paragraph, the intratracheal-delivery sentence",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "AND THE AUTHORS CALL THEIR OWN MODEL 'ACUTE, GLOBAL KNOCKDOWN OF LUNG WWOX EXPRESSION' AND SAY IT REDUCES CLINICAL TRANSLATION. 'Global' here is global WITHIN THE LUNG - across lung cell types, by airway delivery - and the sentence is a limitation, not a boast. The corpus's phrase 'whole-body/global knockdown' takes the authors' word 'global' and attaches it to an organism-level scope the paper never claims.",
+    "snippet": "The clinical translation of our findings may be reduced by the fact that, in our disease model, we studied acute, global knockdown of lung WWOX expression.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28283473/PMID28283473_Singla2017_PMCreader.html",
+    "anchor": "DISCUSSION, final paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE JNK INHIBITOR IS SPELLED 'SP100625' IN THE REAGENTS LIST. Recorded as one of three spellings of one compound.",
+    "snippet": "FITC-dextran, SP100625, A549 cells, LPS, red blood cell (RBC) lysis buffer, RIPA buffer, and anti-DDK M2 magnetic beads were also from Sigma-Aldrich.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28283473/PMID28283473_Singla2017_PMCreader.html",
+    "anchor": "MATERIALS AND METHODS, 'Reagents'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE FIGURE 5 CAPTION SPELLS THE SAME COMPOUND 'SP500125'. Recorded as the fixed point for the panel reading that follows; the running Results text spells it 'SP600125'.",
+    "snippet": "Three mice in each group were then administered the JNK inhibitor SP500125 (30 mg/kg) or an equivalent volume of DMSO subcutaneously.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28283473/PMID28283473_Singla2017_PMCreader.html",
+    "anchor": "Figure 5 caption",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "🔴 THE FIGURE AXIS PRINTS 'SP600125' - SO ONE COMPOUND IS NAMED THREE WAYS IN ONE PAPER AND THE DRAWN GLYPH SETTLES IT. Reagents say SP100625, the Figure 5 caption says SP500125, the Results text and the figure's own x-axis say SP600125. Only the last is a real JNK inhibitor. This matters beyond pedantry: the 2021 endothelial sequel tested 'SP600125' and found it NOT rescuing in endothelium, so the corpus is comparing two papers' JNK arms across a compound whose identity one of them spells inconsistently.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 5, x-axis category labels of all six panels read 'DMSO' and 'SP600125'. Panel A axis 'BALF neutrophil count/ml x 10^4'; B 'BALF total protein mg/ml'; C 'BALF KC pg/ml'; D 'BALF MIP-2 pg/ml'; E 'BALF IL-6 pg/ml'; F 'BALF IL-1b pg/ml'. Open circles control siRNA, grey WWOX siRNA.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID28283473/figures/zh50051772170005.jpg",
+    "anchor": "Figure 5, x-axis labels at native resolution (787x362, 1200 dpi)",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "contradicts": "entries[19]",
+    "contradicts_needle": "SP500125"
+   },
+   {
+    "proposition": "THE IN VIVO JNK RESCUE, AS THE TEXT STATES IT: NEUTROPHILIC INFLAMMATION FROM WWOX KNOCKDOWN WAS 'SIGNIFICANTLY ATTENUATED' BY JNK INHIBITOR PRETREATMENT ACROSS NEUTROPHIL COUNT, PROTEIN AND CYTOKINES.",
+    "snippet": "the level of neutrophilic inflammation associated with WWOX knockdown was significantly attenuated by pretreatment with the JNK inhibitor as evidenced by BAL neutrophil counts, total protein concentration, and cytokine concentrations (Fig.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28283473/PMID28283473_Singla2017_PMCreader.html",
+    "anchor": "RESULTS, final subsection on SP600125 pretreatment",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "🔴 ATTENUATED IS NOT NORMALISED, AND THE PANEL SHOWS THE RESIDUAL. Figure 5A: WWOX siRNA + DMSO sits ~60 and WWOX siRNA + SP600125 ~47 on the same axis, while BOTH control-siRNA arms sit ~5-8. So JNK inhibition removes a minority of the excess and the knockdown arm remains several-fold above control. The word 'attenuated' is accurate and the magnitude is not in the text.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 5A, 'BALF neutrophil count/ml x 10^4': control siRNA + DMSO ~8; control siRNA + SP600125 ~5; WWOX siRNA + DMSO ~60; WWOX siRNA + SP600125 ~47, bracket with asterisk between the two WWOX arms.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID28283473/figures/zh50051772170005.jpg",
+    "anchor": "Figure 5, panel A, at native resolution",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[21]",
+    "qualifies_needle": "significantly attenuated"
+   },
+   {
+    "proposition": "THE RUNNING TEXT CITES 'Fig. 3, E and F' FOR NEUTROPHIL TRANSMIGRATION. Recorded as the fixed point for the panel reading that follows.",
+    "snippet": "As shown in Fig. 3, E and F, WWOX silencing significantly increased neutrophil transmigration.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28283473/PMID28283473_Singla2017_PMCreader.html",
+    "anchor": "RESULTS, 'WWOX knockdown in A549 cells increases IL-8-dependent neutrophil chemotaxis'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "🔴 FIGURE 3E AND 3F ARE SECRETED IL-6 AND IL-8, NOT TRANSMIGRATION - THE RUNNING TEXT'S PANEL LETTERS FOR FIGURE 3 ARE SHIFTED, AND THE PUBLISHED CAPTION IS THE ONE THAT IS RIGHT. The caption assigns B-C to the chemotaxis image and scatter and D-F to IL-1beta, IL-6 and IL-8, which is exactly what the panels show. The text cites B-D for the cytokines and E-F for the transmigration, so in a single paragraph the same panels are cited two incompatible ways.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 3: A WWOX/actin blot, control vs WWOX RNAi. B cytospin images 2x2 (control / WWOX RNAi, control IgG / anti IL-8). C 'Neutrophils/hpf' with rows 'WWOX +/-' and 'Anti IL-8 +/-': WWOX+ ~28 and ~28; WWOX- anti-IL-8- ~150 starred; WWOX- anti-IL-8+ ~70. D 'Secreted IL-1b pg/ml' ~6 vs ~10*. E 'Secreted IL-6 pg/ml' ~10 vs ~110*. F 'Secreted IL-8 pg/ml' ~3 vs ~12.5*.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID28283473/figures/zh50051772170003.jpg",
+    "anchor": "Figure 3, all panels, at native resolution (799x392, 300 dpi)",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "contradicts": "entries[23]",
+    "contradicts_needle": "Fig. 3, E and F"
+   },
+   {
+    "proposition": "THE TEXT ALSO STATES THE DIRECTION BACKWARDS: 'elevated in control vs. silenced cells'. Recorded as the fixed point for the panel reading that follows.",
+    "snippet": "the levels of IL-8, IL-1, and IL-6 were elevated in control vs. silenced cells (Fig.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28283473/PMID28283473_Singla2017_PMCreader.html",
+    "anchor": "RESULTS, third subsection",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "🔴 THE PANELS SHOW THE CYTOKINES HIGHER IN THE SILENCED CELLS, SO THE SENTENCE'S LITERAL DIRECTION IS INVERTED. Every one of Figure 3D-F puts the WWOX-silenced group above control with an asterisk. The intended meaning is obvious and the sentence as printed says the opposite; recorded because a quote-mining consumer would carry the inversion.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 3 panels D, E and F each plot 'Control' left and 'WWOX-silenced' right, with the WWOX-silenced group higher and asterisked: IL-1b ~6 to ~10, IL-6 ~10 to ~110, IL-8 ~3 to ~12.5.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID28283473/figures/zh50051772170003.jpg",
+    "anchor": "Figure 3, panels D-F, at native resolution",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "contradicts": "entries[25]",
+    "contradicts_needle": "elevated in control vs. silenced cells"
+   },
+   {
+    "proposition": "THE FIGURE 4 CAPTION ENUMERATES C-E AS IL-8, IL-1beta, IL-6. Recorded as the fixed point for the panel reading that follows.",
+    "snippet": "C–E: scatterplots depict measured concentrations of IL-8, IL-1β, and IL-6.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28283473/PMID28283473_Singla2017_PMCreader.html",
+    "anchor": "Figure 4 caption",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "🔴 FIGURE 4's PANELS RUN IL-8, IL-6, IL-1b - THE SAME REVERSED CYTOKINE ORDER AS FIGURE 1's CAPTION, IN A SECOND FIGURE. Two of five captions in this paper mis-order their own cytokine panels in the same direction, which makes this a systematic captioning defect rather than one typo.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 4: A WWOX/c-Jun/actin blots over 'WWOX +/-' and 'c-Jun +/-'. B 'Neutrophils/hpf' ~150 vs ~70*. C 'Secreted IL-8 pg/ml' ~13 vs ~6.5*. D 'Secreted IL-6 pg/ml' ~103 vs ~55*. E 'Secreted IL-1b pg/ml' ~13 vs ~8*. F 'Nuclear NfKB activity', four conditions, bracket with asterisk.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID28283473/figures/zh50051772170004.jpg",
+    "anchor": "Figure 4, panels C-E, axis labels at native resolution (764x349, 1200 dpi)",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "contradicts": "entries[27]",
+    "contradicts_needle": "IL-8, IL-1β, and IL-6"
+   },
+   {
+    "proposition": "THE MECHANISM ARM IS ENTIRELY IN A549 CELLS AND IS READ AS PIXELS HERE: WWOX CO-IMMUNOPRECIPITATES c-Jun AND ITS SILENCING MOVES c-Jun TO THE NUCLEUS. Quantified as percent of cells with strong nuclear staining over ten high-power fields, n = 3. This is the one arm of the paper with a mechanism, and it is a transformed human alveolar epithelial line, not mouse lung.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 2: A three blot rows FLAG-WWOX, c-Jun, GAPDH over lanes 'Mock IP', 'FLAG IP', 'IP sup'; c-Jun present in the FLAG IP lane. B confocal, columns GFP/DAPI/c-Jun/merged, rows control and WWOX-silenced; bar graph '% cells nuclear c-Jun' control ~5, WWOX-silenced ~45 with asterisk and error bars. C c-Jun and actin blots over 'cyt' and 'nuc' for control and WWOX-silenced.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID28283473/figures/zh50051772170002.jpg",
+    "anchor": "Figure 2, all panels, at native resolution (716x206, 300 dpi)",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "THE HYPOTHESIS THE PAPER SET OUT TO TEST WAS ABOUT ARDS PATHOBIOLOGY VIA WWOX BINDING PARTNERS, AND THE INFLAMMATORY PHENOTYPE WAS NOT THE PREDICTION. It is framed as 'global lung silencing' from the outset.",
+    "snippet": "we began the current study by examining the effects of global lung silencing of WWOX in a murine model of LPS-induced ARDS.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28283473/PMID28283473_Singla2017_PMCreader.html",
+    "anchor": "INTRODUCTION, final sentence",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE LEAK/INFLAMMATION DISPROPORTION IS THE PAPER'S OWN UNEXPLORED FINDING, AND IT IS THE ONE THING THAT POINTS AT THE ENDOTHELIUM. Stated as suggesting an influence of WWOX deficiency on endothelial barrier dysfunction during LPS-TLR4 signalling - an inference from disproportion, with no endothelial measurement in this paper.",
+    "snippet": "This suggests an influence of WWOX deficiency on mechanisms of endothelial barrier dysfunction during LPS-TLR4 signaling events.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28283473/PMID28283473_Singla2017_PMCreader.html",
+    "anchor": "DISCUSSION, vascular-barrier paragraph",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID28283473/PMID28283473_Singla2017_PMCreader.html",
+   "sha256": "90f182f36fab168a95feee9d25c9df46b3a674f451cd351327aac2e0bccf0a78",
+   "kind": "article_text",
+   "note": "THE STRUCTURED SURFACE, AND IT WAS WON BY SENDING NO USER-AGENT AT ALL. PMC reader HTML for PMC5495942, 223,853 bytes, carrying MATERIALS AND METHODS with all 11 subsections, RESULTS with 5, DISCUSSION, GRANTS, DISCLOSURES, AUTHOR CONTRIBUTIONS and references 1-73. Rule 5d is satisfied on its own terms rather than routed around: no PDF text layer backs any locator here. Comparator screen on the extracted surface: 7 '<', 2 '>', 4 '+/-', 3 'x', 2 '-', six occurrences of 'P <' - so suspicion-by-absence does not fire.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5495942/",
+    "http_method": "GET",
+    "tier": "pmc_reader_html_no_user_agent",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-09-14",
+    "derived": false,
+    "result_sha256": "90f182f36fab168a95feee9d25c9df46b3a674f451cd351327aac2e0bccf0a78"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID28283473/PMID28283473_Singla2017_efetch_frontmatter.xml",
+   "sha256": "cdd6cb52d2f79b4be8c156179f9bf4d20595d0f0673943d89052f91132a3d3dc",
+   "kind": "article_text",
+   "note": "FRONT MATTER ONLY, DECLARED AS EVIDENCE OF THE PUBLISHER'S REFUSAL AND BACKING NO LOCATOR. efetch db=pmc id=5495942 returns HTTP 200 and 8,433 bytes containing the comment 'The publisher of this article does not allow downloading of the full text in XML form.', zero <sec>, zero <fig>, no <body>, abstract present. It also printed the two PMC PDF filenames that the cascade then found to be interstitials.",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=5495942",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-09-14",
+    "derived": false,
+    "result_sha256": "cdd6cb52d2f79b4be8c156179f9bf4d20595d0f0673943d89052f91132a3d3dc"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID28283473/figures/zh50051772170001.jpg",
+   "sha256": "ea5597cd9817e0d99e1472275bb345c711e6b641fe97ee2b0b1fcc40a9318d35",
+   "kind": "figure",
+   "note": "Figure 1 as deposited by PMC, fetched as the publisher's own image bytes and inspected at native resolution. No render, no crop, no re-encode, so the digest is of exactly what PMC serves.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/2cf7/5495942/",
+    "http_method": "GET",
+    "tier": "pmc_cdn_figure_asset",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-09-14",
+    "derived": false,
+    "result_sha256": "ea5597cd9817e0d99e1472275bb345c711e6b641fe97ee2b0b1fcc40a9318d35"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID28283473/figures/zh50051772170002.jpg",
+   "sha256": "418d0b49228000fcf4c8fe859c17ee54ec23acfaf20fa358c4f1fbb6ae9d8002",
+   "kind": "figure",
+   "note": "Figure 2 as deposited by PMC, fetched as the publisher's own image bytes and inspected at native resolution. No render, no crop, no re-encode, so the digest is of exactly what PMC serves.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/2cf7/5495942/",
+    "http_method": "GET",
+    "tier": "pmc_cdn_figure_asset",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-09-14",
+    "derived": false,
+    "result_sha256": "418d0b49228000fcf4c8fe859c17ee54ec23acfaf20fa358c4f1fbb6ae9d8002"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID28283473/figures/zh50051772170003.jpg",
+   "sha256": "81c710557339d4674c68fdf4e6472167715a10f75ec005c443a8cb064f15efaa",
+   "kind": "figure",
+   "note": "Figure 3 as deposited by PMC, fetched as the publisher's own image bytes and inspected at native resolution. No render, no crop, no re-encode, so the digest is of exactly what PMC serves.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/2cf7/5495942/",
+    "http_method": "GET",
+    "tier": "pmc_cdn_figure_asset",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-09-14",
+    "derived": false,
+    "result_sha256": "81c710557339d4674c68fdf4e6472167715a10f75ec005c443a8cb064f15efaa"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID28283473/figures/zh50051772170004.jpg",
+   "sha256": "6c4f315deebaa964165374ecc7737c4524f02f8b65757746e9e67710b6f3cf1a",
+   "kind": "figure",
+   "note": "Figure 4 as deposited by PMC, fetched as the publisher's own image bytes and inspected at native resolution. No render, no crop, no re-encode, so the digest is of exactly what PMC serves.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/2cf7/5495942/",
+    "http_method": "GET",
+    "tier": "pmc_cdn_figure_asset",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-09-14",
+    "derived": false,
+    "result_sha256": "6c4f315deebaa964165374ecc7737c4524f02f8b65757746e9e67710b6f3cf1a"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID28283473/figures/zh50051772170005.jpg",
+   "sha256": "8c58f4d8413987593fb9cf224816480b80064c81e8df244546c592a6b6d7a34d",
+   "kind": "figure",
+   "note": "Figure 5 as deposited by PMC, fetched as the publisher's own image bytes and inspected at native resolution. No render, no crop, no re-encode, so the digest is of exactly what PMC serves.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/2cf7/5495942/",
+    "http_method": "GET",
+    "tier": "pmc_cdn_figure_asset",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-09-14",
+    "derived": false,
+    "result_sha256": "8c58f4d8413987593fb9cf224816480b80064c81e8df244546c592a6b6d7a34d"
+   }
+  }
+ ]
+}

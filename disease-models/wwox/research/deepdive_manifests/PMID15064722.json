@@ -1,0 +1,630 @@
+{
+  "schema_version": 2,
+  "pmid": 15064722,
+  "doi": "10.1038/sj.onc.1207680",
+  "receipt": "FTR-20260913-15064722-01",
+  "landing": [
+    "FTR-20260913-15064722-01",
+    "fulltext_dossiers/PMID15064722.md",
+    "CORPUS-STUB-143 (paper_registry_current.md, status not_processed) and LIT-0162 (literature_tracking_log_current.md, status discovered, authors/year/source-type all unextracted) - both understate a completed reading and are addressed in the commit candidate"
+  ],
+  "coverage_status": "complete_fulltext_read",
+  "editorial_state": "NIH author manuscript (NIHMSID NIHMS222052) of a 2004 Oncogene article; no erratum, correction or expression of concern by any route checked",
+  "skills_considered": [
+    {
+      "skill": "find-fulltext",
+      "used": false,
+      "reason": "The packet's acquisition procedure was OPEN, and the routes in the contract plus pmc_pow_fetch.py resolved it without the cascade: Europe PMC fullTextXML 404, NCBI efetch returns front matter only, and the PMC PDF route answered a proof-of-work challenge at difficulty 4. Running the tiered cascade would have added attempts against the host already answering."
+    },
+    {
+      "skill": "legend-deepdive",
+      "used": false,
+      "reason": "Run inline as a first read under scientist_standing_brief M0-M5. The skill's sequence is what was followed; invoking it as a subagent would have put the reading behind a summary."
+    },
+    {
+      "skill": "legend-locator-audit",
+      "used": false,
+      "reason": "🔴 DECLINED FOR THIS READING AND THE REASON IS THE HONEST ONE: R4's triggers are a reading that narrows/reverses/corroborates a consolidated baseline claim, a MAJOR candidate, a door-closing rejection, or a contradicted persisted locator. This reading contradicts no persisted locator and proposes no claim change - it CHECKS THE PREMISE of CLAIM 007 and finds it survives. The R4 that WAS owed this session ran on the CLAIM 007 amendment under ALDAZ-REPAIR-A-20260913, on seven triples, and its finding is what narrowed that claim. Running a second audit on the antecedent's own locators would audit propositions no canonical text rests on yet."
+    },
+    {
+      "skill": "legend-discovery",
+      "used": false,
+      "reason": "Considered seriously and declined for THIS paper: its leads (SIMPLE/LITAF, COTE1, NF-kB activating protein) are 2004 cancer-cell-line biochemistry with no measured link to the reference genotype, and the discovery ledger already carries the NF-kB axis from stronger sources. A lead recorded here would be a restatement of a candidate list, not a lead."
+    },
+    {
+      "skill": "legend-hypothesis-forge",
+      "used": false,
+      "reason": "No lever matures here. The paper identifies binding partners in vitro; nothing in it is actionable toward the reference genotype without a step this paper does not take."
+    },
+    {
+      "skill": "legend-safety-triage",
+      "used": false,
+      "reason": "No molecule, no SMILES, no candidate compound anywhere in this reading."
+    }
+  ],
+  "group_assessment": {
+    "group": "Aldaz laboratory, Department of Carcinogenesis, University of Texas MD Anderson Cancer Center, Science Park-Research Division, Smithville TX, with Mark T Bedford (same department) supplying the WW-domain methodology and Andrzej K Bednarek (Medical University of Lodz) as co-author. Six authors, Aldaz last and corresponding.",
+    "research_type": "experimental_lab",
+    "total_publications": 138,
+    "publications_on_gene": 38,
+    "primary_for_the_gene": "YES, and it is the originating laboratory: this group cloned WWOX and named FRA16D (Bednarek 2000, PMID 10786676, resolved this session), and its own references 3 and 4 are its prior WWOX papers. Measured on PubMed 2026-09-13: `Aldaz CM[Author]` 138 records, `Aldaz CM[Author] AND WWOX` 38. At the time of THIS paper the count was 5 (`Aldaz CM[Author] AND WWOX AND 1900:2004[dp]`), so in 2004 this was a young gene programme in the hands of the people who had just cloned it.",
+    "is_primary_group_for_disease": false,
+    "primary_for_the_disease": "NO, and the separation is sharp and measurable. `Aldaz CM[Author] AND (epilepsy OR ataxia OR encephalopathy)` returns 8 records across a 138-paper career, and NONE of them is this one: in 2004 this laboratory's frame is cancer - FRA16D, LOH in breast/ovarian/oesophageal/prostate/hepatocellular tumours, xenograft suppression. The germline neurological phenotype did not exist in the literature yet (WWOX AND epilepsy/encephalopathy = 119 records today, the first of them years later).",
+    "weighting": "🔴 Observation and interpretation weigh differently here and the direction is favourable for the observation. The BIOCHEMISTRY is method-expert work: Bedford is a WW-domain specialist (`Bedford MT[Author] AND \"WW domain\"` = 19 records) and the four-ligand far-Western with eight WW domains and a GST-only lane is the standard assay of that field, run with its own positive controls (FBP11/PPLP, FBP21+FBP30/PPR, PIN1/PLT*P, YAP/PPPY each light up their own ligand). So the ligand-class result is strong observation from people equipped to make it. The INTERPRETATION is framed entirely by cancer biology and by a tumour-suppressor hypothesis, and every functional inference in the Discussion runs toward p53, JNK1, TNFalpha and NF-kB in tumour cells. Nothing in the group's 2004 competence bears on neurons, and the paper makes no neural claim - so the danger is not that this group over-read the nervous system, it is that a LATER reader could carry an in-vitro cancer-cell result into a neurodevelopmental claim. That is a risk about us, not about them."
+  },
+  "field_density": {
+    "measured_on": "2026-09-13",
+    "source": "NCBI esearch, direct HTTP, no API key and no email in the URL",
+    "queries": [
+      {
+        "query": "WWOX",
+        "count": 708
+      },
+      {
+        "query": "WWOX AND \"WW domain\"",
+        "count": 487
+      },
+      {
+        "query": "WWOX AND PPXY",
+        "count": 17
+      },
+      {
+        "query": "WWOX AND SIMPLE",
+        "count": 3
+      },
+      {
+        "query": "WWOX AND LITAF",
+        "count": 1
+      },
+      {
+        "query": "WWOX AND (epilepsy OR encephalopathy)",
+        "count": 119
+      },
+      {
+        "query": "Aldaz CM[Author]",
+        "count": 138
+      },
+      {
+        "query": "Aldaz CM[Author] AND WWOX",
+        "count": 38
+      },
+      {
+        "query": "Aldaz CM[Author] AND WWOX AND 1900:2004[dp]",
+        "count": 5
+      },
+      {
+        "query": "Aldaz CM[Author] AND (epilepsy OR ataxia OR encephalopathy)",
+        "count": 8
+      },
+      {
+        "query": "Bedford MT[Author] AND \"WW domain\"",
+        "count": 19
+      }
+    ],
+    "reading": "🔴 The PPxY intersection is a literature of SEVENTEEN. 487 of 708 WWOX records mention the WW domain, but only 17 name the PPXY ligand and only 3 and 1 name SIMPLE and LITAF - so the motif that the whole WW1-scaffold logic rests on has been examined by name in about 2% of the gene's literature, and this 2004 paper is its primary. That is the context for treating it as load-bearing rather than historical: a near-empty intersection in a rare-disease mechanism is a signal, not an absence."
+  },
+  "multihop": {
+    "references_enumerated": 21,
+    "enumeration_note": "21 entries enumerated from the fingerprinted reader-HTML reference list (the PDF text layer was not used for anything - see the artefact note). The list carries journal/volume/page but no PMIDs, so every identifier below was RESOLVED THIS SESSION by NCBI esearch on the artefact's own journal+volume+page, never from recall.",
+    "gene_direct_refs_in_source": [
+      "10786676",
+      "11719429",
+      "14526170",
+      "11058590",
+      "12514174"
+    ],
+    "mechanism_direct_refs_in_source": [
+      "7644498",
+      "11274176",
+      "11042109",
+      "12761501",
+      "9331372",
+      "9776767",
+      "10744724"
+    ],
+    "resolved": [
+      "10786676 present in paper_registry_current.md and literature_tracking_log_current.md",
+      "14526170 present in both",
+      "12514174 present in paper_registry_current.md only"
+    ],
+    "unresolved_and_unread": [
+      "11719429",
+      "11058590",
+      "7644498",
+      "11274176",
+      "11042109",
+      "12761501",
+      "9331372",
+      "9776767",
+      "10744724"
+    ],
+    "queue_id": null,
+    "queue_constraint": "🔴 NO QUEUE ID IS DECLARED AND THAT IS DELIBERATE. full_text_queue_current.md is MODIFIED AND UNCOMMITTED IN THIS SHARED CHECKOUT BY A PEER (highest committed id FT-176). The standing brief forbids writing into a file whose inputs another actor holds in flight, and the validator refuses a FOREIGN queue id, so minting one or borrowing FT-083 would both be wrong. The debt is therefore declared here with resolved identifiers, which is strictly more useful than a queue line: whoever holds the queue next can create the entry from this list without re-resolving anything.",
+    "highest_value_debt": "7644498 (Chen & Sudol 1995) is the paper that DEFINED the Group I WW domain and supplied the WBP-1 PPPY peptide used as the ligand in Figure 1b. The entire 'PPxY = Group I' framing this repository inherits descends from it, and it has never been read here. 11042109 (Jolliffe 2000) is its mirror on the partner side: SIMPLE's PPSY is a NEDD4 ligand, so the motif WWOX binds is shared with an E3 ubiquitin ligase - a competition this paper names and does not test."
+  },
+  "corpus_crossquery": {
+    "run_on": "2026-09-13",
+    "query": "grep -rl over registries/, deepdive_manifests/ and fulltext_dossiers/ for PPXY, PPxY, PPPY, PPSY, SIMPLE, LITAF, PIG7, WBP-1, WBP1, COTE1, WW1; plus grep -rln for 15064722 across disease-models/wwox/",
+    "findings": [
+      "The corpus carries the MOTIF NAME everywhere and the TESTED LIGANDS nowhere: PPxY appears in 29 files including claim_registry_current.md, paper_registry_current.md and working_model_current.md, while PPSY - the motif actually mutagenised in this paper's only partner-level experiment - appears in ZERO files, and WBP-1 in zero under that spelling.",
+      "15064722 is cited inside FIVE other manifests (18974271, 33255508, 24550385, 31340538, 19936220) and in CC-20260913-36828035-01, the M4b note and the intake - always as a citation, never as a reading. This reading is the first time its content enters the corpus from the source.",
+      "This paper's own registry records are CORPUS-STUB-143 (status not_processed) and LIT-0162 (status discovered, with authors, year and source type all 'not yet extracted'), i.e. the antecedent of a consolidated-baseline claim sat in the registry as an unscreened placeholder."
+    ],
+    "counts": {
+      "PPxY": 29,
+      "PPXY": 19,
+      "PPPY": 7,
+      "PPSY": 0,
+      "SIMPLE": 4,
+      "LITAF": 1,
+      "PIG7": 0,
+      "WBP-1": 0,
+      "WBP1": 12,
+      "COTE1": 7,
+      "WW1": 44
+    },
+    "hits": 6,
+    "hits_basis": "integer = the 6 tracked corpus files that name 15064722 as a citation: deepdive_manifests/PMID18974271.json, PMID33255508.json, PMID24550385.json, PMID31340538.json, PMID19936220.json and commit_candidates/CC-20260913-36828035-01.md. The intake note, M4b note, a phase packet, the retrieval manifest and the corpus seed tables also name it and are excluded as process surfaces rather than corpus records."
+  },
+  "retraction_check": {
+    "result": "No retraction, correction, erratum or expression of concern. Three routes on 2026-09-13: (1) live PubMed ESummary for PMID 15064722 - commentscorrections list EMPTY, pubtype 'Journal Article; Research Support'; (2) the fingerprinted efetch front matter - zero occurrences of retract/correct/erratum/concern/withdraw, article-category 'Article', pub-date 24 June 2004; (3) the fingerprinted PMC reader page - zero occurrences of the same terms. 🔴 Stated because a negative check that goes unquoted reads as a check never run.",
+    "checked_on": "2026-09-13",
+    "routes": [
+      "PubMed ESummary (live HTTP)",
+      "fingerprinted efetch JATS front matter",
+      "fingerprinted PMC reader HTML"
+    ],
+    "dependencies": {
+      "schema": "retraction_check.dependencies/1",
+      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+      "screened": true,
+      "paper_verdict": "SCREENED_CLEAN",
+      "reference_source": "network",
+      "references_declared": 21,
+      "references_screened": 17,
+      "references_with_doi": 17,
+      "unscreenable": {
+        "UNSCREENABLE_NO_DOI": 4
+      },
+      "flagged": [],
+      "noted": [],
+      "snapshot": {
+        "date": "2026-09-10",
+        "days_since_fetch": 3,
+        "rows": 72476,
+        "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+      },
+      "citing_relation": "ZERO flagged dependencies, so no citing_relation is owed for a flagged item - stated explicitly because an empty field here is indistinguishable from an unrun check. The 4 UNSCREENABLE_NO_DOI entries are the pre-DOI-era items of a 2004 reference list: Bednarek 2000 and Bednarek 2001 (Cancer Res, resolved this session to PMIDs 10786676 and 11719429), Chan 1996 (EMBO J) and Kay 2000 (FASEB J), plus the Sambrook & Russell laboratory manual which carries no DOI by nature. Their citing_relation in this paper is: Bednarek 2000/2001 are the authors' OWN prior WWOX papers and are load-bearing for the Introduction's tumour-suppressor framing; Chan 1996 and Kay 2000 are cited only for WW-domain ligand-class taxonomy, which Figure 1b tests directly rather than inherits."
+    }
+  },
+  "reading_budget": {
+    "panel_coverage": "9 of 9 evidentiary panels inspected as images at native resolution (Fig 1a schematic+sequences, Fig 1b Coomassie + four ligand rows, Fig 2a array, Fig 2b far-Western+Western, Fig 3a pulldown+total protein, Fig 3b left and right, Fig 4 nine immunofluorescence panels), denominator_basis = the four figures the article prints, counted on the native embedded rasters of the fingerprinted PDF",
+    "classes_declared": {
+      "Fig 1b": "DETERMINANTE - it is the ligand-specificity experiment and therefore the premise under CLAIM 007; magnified to 2.6x on the two lower rows",
+      "Fig 2a": "DETERMINANTE - the candidate list's provenance and its unstated selection",
+      "Fig 3a/3b": "DETERMINANTE - the only domain-requirement and PPxY-dependence evidence",
+      "Fig 4": "QUALIFICANTE - localisation, which conditions the partner claim without establishing binding",
+      "Fig 1a": "ILLUSTRATIVA for the schematic, DETERMINANTE for the mut1/mut2 residue identities read off the panel"
+    },
+    "tranches": "One further tranche was spent beyond the initial inspection, on Fig 1b, Fig 2a, Fig 3a and Fig 3b, to answer a single written question: does the panel support the word 'specifically' and the sentence 'did not interact with any of the ligands tested'. It does not, fully - see entries 6 and 7."
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID15064722_LudesMeyers2004_PMCreader.html",
+      "kind": "article_text",
+      "sha256": "67ff2731197b702a378b17fa30154481c88884d877b79521e21444062949c3fb",
+      "note": "PMC reader HTML, the GENUINE structured body surface and the one this reading's text locators resolve against. Identity verified by content: the page's own metadata prints PMCID PMC4143251, NIHMSID NIHMS222052, PMID 15064722, DOI 10.1038/sj.onc.1207680 and the article title. 0 occurrences of 'recaptcha'; Abstract, Introduction, Materials and methods, Results, Discussion, Acknowledgements and References all present; 63 <p> elements; 40 figure references.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4143251/",
+        "http_method": "GET",
+        "tier": "pmc_reader_html",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-09-13",
+        "derived": false,
+        "result_sha256": "67ff2731197b702a378b17fa30154481c88884d877b79521e21444062949c3fb",
+        "note": "MEASURED ROUTE NUANCE worth replaying exactly: the same URL fetched WITH curl -L returned a 21239-byte reCAPTCHA challenge page; fetched WITHOUT -L it returned 152935 bytes of real article HTML."
+      }
+    },
+    {
+      "path": "files/fulltext/PMID15064722_LudesMeyers2004_PMCreader.txt",
+      "kind": "article_text",
+      "sha256": "41da16738f99a6baa543e9e73f8a4972097fc4584ffb8bfe6ad0b2adf61e92fe",
+      "note": "Deterministic text extraction of the reader HTML above, 51933 bytes. This is the surface every text snippet in verbatim_locators was matched against.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID15064722_LudesMeyers2004_PMCreader.html",
+        "extractor": {
+          "name": "python-stdlib re+html",
+          "version": "3.12.3",
+          "call": "drop <script>/<style>, replace every tag with a newline, html.unescape, collapse blank runs",
+          "join": "\\n"
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "41da16738f99a6baa543e9e73f8a4972097fc4584ffb8bfe6ad0b2adf61e92fe"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID15064722_LudesMeyers2004.pdf",
+      "kind": "article_binary",
+      "sha256": "cfca9f79f9d93be5367b41978b27be67729d4a7cd7ed58ec94bd40e5f3e36947",
+      "note": "NIH author manuscript PDF, 894412 bytes, PDF 1.4, 15 pages. The figure rasters below are extracted from this binary, and the receipt is bound to it.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4143251/pdf/",
+        "http_method": "GET",
+        "tier": "pmc_pow_fetch",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-09-13",
+        "derived": false,
+        "result_sha256": "cfca9f79f9d93be5367b41978b27be67729d4a7cd7ed58ec94bd40e5f3e36947",
+        "note": "The plain GET returned HTTP 200 with a 21251-byte reCAPTCHA challenge page. pmc_pow_fetch.py solved the declared proof-of-work at difficulty 4 (nonce 66220, solution hash 000011687039c9e7...) and the retry returned content-type application/pdf."
+      }
+    },
+    {
+      "path": "files/fulltext/PMID15064722_LudesMeyers2004.txt",
+      "kind": "article_text",
+      "sha256": "b05d90ac25f4007a667f32980407a2d3088457025bd1e683055d8b5034fd465f",
+      "note": "🔴 DECLARED AND DELIBERATELY UNUSED. PyMuPDF extraction of the PDF text layer, 34796 bytes. A 25-sentence cross-surface test against the independent reader-HTML body found only 8/25 sentences verbatim; the mismatches are LINE-BREAK HYPHENATION AND SPACING, not character substitution ('sex- steroid' for 'sex-steroid', 'biotin- GVSVRGRGAAPPP PPVPRGRGVGP' for a peptide sequence). It is therefore a derivative of convenience that disagrees with the page, it was NOT hand-corrected, and NO LOCATOR IN THIS MANIFEST RESTS ON IT. Kept declared because deleting a surface that was examined and rejected would hide the test. Separately: the absence of < > <= >= +- x - from BOTH surfaces is genuine, not a defect signature - this paper reports no statistics at all, uses 'significant' twice and prints zero p-values.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID15064722_LudesMeyers2004.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_text() default mode",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "b05d90ac25f4007a667f32980407a2d3088457025bd1e683055d8b5034fd465f"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID15064722_LudesMeyers2004_efetch.xml",
+      "kind": "article_text",
+      "sha256": "9af3c9cf3d927423555e17d66c3fd471df51578df09f9f1dbd63e2215232991f",
+      "note": "🔴 FRONT MATTER ONLY - NOT a structured full text, and it corrects the dispatch's hint. The contract predicted a 197-byte publisher refusal stub; the route today returns HTTP 200 with 8049 bytes of real JATS that contains <body>: absent, <sec>: 0, one <p>, and the abstract. Same substance - no structured full-text surface exists by any tested route - different shape. Used ONLY for identity (its article-id doi prints 10.1038/sj.onc.1207680) and as one of the three retraction routes.",
+      "acquisition_recipe": {
+        "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC4143251",
+        "http_method": "GET",
+        "tier": "ncbi_efetch_pmc_xml",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-09-13",
+        "derived": false,
+        "result_sha256": "9af3c9cf3d927423555e17d66c3fd471df51578df09f9f1dbd63e2215232991f"
+      }
+    },
+    {
+      "path": "files/figures/PMID15064722/native/img-001.png",
+      "kind": "figure",
+      "sha256": "e7ac4189c22f9ebb030fb7766da2e41891d1a7b396ac902710a07a315fffa6df",
+      "note": "FIGURE 1 native embedded raster, 1625x2466 grayscale at 600 ppi - panel a (domain schematic + WW-domain sequences with mut1/mut2) and panel b (Coomassie + four proline-rich ligand far-Westerns over nine lanes). Chosen over the 2550x3300 page render because it is the author's own stream at 600 ppi.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID15064722_LudesMeyers2004.pdf",
+        "extractor": {
+          "name": "pdfimages",
+          "version": "poppler",
+          "call": "pdfimages -png -f 1 -l 15",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "e7ac4189c22f9ebb030fb7766da2e41891d1a7b396ac902710a07a315fffa6df"
+      }
+    },
+    {
+      "path": "files/figures/PMID15064722/native/img-002.png",
+      "kind": "figure",
+      "sha256": "c041f5cc8ff283d7a5a458d929341f9839ee49328b1032f090591a8ba5c00e54",
+      "note": "FIGURE 2 native embedded raster, 1601x1207 grayscale at 400 ppi - panel a high-density protein array autoradiograph with five circled duplicate pairs, panel b far-Western (top) and anti-His Western (bottom) over four candidate proteins.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID15064722_LudesMeyers2004.pdf",
+        "extractor": {
+          "name": "pdfimages",
+          "version": "poppler",
+          "call": "pdfimages -png -f 1 -l 15",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "c041f5cc8ff283d7a5a458d929341f9839ee49328b1032f090591a8ba5c00e54"
+      }
+    },
+    {
+      "path": "files/figures/PMID15064722/native/img-003.png",
+      "kind": "figure",
+      "sha256": "21ca1a60bf6a0f5687c8173e907f29c5a8ef7f75c47b63918b055f496a7c0847",
+      "note": "FIGURE 3 native embedded raster, 1501x1968 grayscale at 491 ppi - panel a GST-WWOX1&2 pulldown over eight lanes with its total-protein control, panel b endogenous SIMPLE pulldown (left lanes 1-4, right lanes 5-7).",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID15064722_LudesMeyers2004.pdf",
+        "extractor": {
+          "name": "pdfimages",
+          "version": "poppler",
+          "call": "pdfimages -png -f 1 -l 15",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "21ca1a60bf6a0f5687c8173e907f29c5a8ef7f75c47b63918b055f496a7c0847"
+      }
+    },
+    {
+      "path": "files/figures/PMID15064722/native/img-004.png",
+      "kind": "figure",
+      "sha256": "92cabf1827d5e66a1676f53a4e0487582537f21da7ffc0bf62bf6afe930dbfc0",
+      "note": "FIGURE 4 native embedded raster, 1248x1262 RGB at 300 ppi - nine immunofluorescence panels a-i (WWOX/Golgi-58K, WWOX/MitoTracker, WWOX/SIMPLE, each with its merge).",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID15064722_LudesMeyers2004.pdf",
+        "extractor": {
+          "name": "pdfimages",
+          "version": "poppler",
+          "call": "pdfimages -png -f 1 -l 15",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "92cabf1827d5e66a1676f53a4e0487582537f21da7ffc0bf62bf6afe930dbfc0"
+      }
+    }
+  ],
+  "verbatim_locators": {
+    "entries": [
+      {
+        "proposition": "THE LIGAND RESULT, AND IT IS A DIRECT BINDING EXPERIMENT RATHER THAN AN INFERENCE FROM A SCREEN: the N-terminal WW domain alone, and the tandem construct, bound the PPPY peptide. This is the primary evidence for the PPxY specificity that this repository's WW1-scaffold logic descends from.",
+        "snippet": "GST–WWOX-1 and -2 and GST–WWOX-1 specifically bound the peptide containing the PPPY motif",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID15064722_LudesMeyers2004_PMCreader.txt",
+        "anchor": "Results, 'WWOX contains a group I WW domain', first paragraph, on Figure 1b",
+        "panel_text_relation": "text_only",
+        "abstract_snippet": "we identify the specific proline-rich ligand for WWOX as PPXY and show that the amino-terminal WW domain is responsible for this interaction"
+      },
+      {
+        "proposition": "THE PAPER'S OWN NEGATIVE ABOUT THE SECOND WW DOMAIN, stated absolutely - and its own panel does not carry it absolutely (see the Figure 1b attestation).",
+        "snippet": "Interestingly, GST–WWOX-2 did not interact with any of the ligands tested",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID15064722_LudesMeyers2004_PMCreader.txt",
+        "anchor": "Results, same paragraph, immediately after the PPPY result",
+        "panel_text_relation": "text_only",
+        "abstract_anchoring_waived": "The abstract states the positive PPXY result and says NOTHING about the second WW domain failing to bind any ligand. An absolute negative about WWOX-2 appears only in the Results, so no abstract sentence can carry this proposition."
+      },
+      {
+        "proposition": "THE CLASS ASSIGNMENT IS AN INTERPRETATION OF THE FOUR-LIGAND PANEL, and the paper says so in the same breath: 'these results show' plus a citation to the paper that defined the class.",
+        "snippet": "These results show that the WWOX WW domain binds the ligand containing the PPXY motif, defining it as a class I WW-domain",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID15064722_LudesMeyers2004_PMCreader.txt",
+        "anchor": "Results, same paragraph, closing sentence",
+        "panel_text_relation": "text_only",
+        "abstract_snippet": "These studies demonstrate that WWOX contains a Group I WW domain that binds known cellular proteins containing the specific ligand PPXY"
+      },
+      {
+        "proposition": "THE CONSTRUCT BOUNDARIES, WHICH ARE WHAT MAKE 'WW1' A DEFINED OBJECT: the fusion proteins are residue-delimited, so a missense lesion can be placed inside or outside the domain that binds.",
+        "snippet": "AA 16–53, GST–WWOX-1; AA 53–94, GST–WWOX-2",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID15064722_LudesMeyers2004_PMCreader.txt",
+        "anchor": "Materials and methods, 'Construction, purification and labeling GST-fusion proteins'",
+        "panel_text_relation": "text_only",
+        "abstract_anchoring_waived": "Residue boundaries of the GST constructs (AA 16-53 and AA 53-94) appear only in Materials and methods. The abstract names no residue and no construct, so it cannot anchor a domain-boundary fact."
+      },
+      {
+        "proposition": "THE LIGAND IS A NINE-RESIDUE BIOTINYLATED PEPTIDE, NOT A PROTEIN: the PPxY evidence of Figure 1b is peptide-level, and the peptide is WBP-1's.",
+        "snippet": "WBP-1 (PPPY) biotin-SGSGGTPPPPYTVG",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID15064722_LudesMeyers2004_PMCreader.txt",
+        "anchor": "Materials and methods, peptide list",
+        "panel_text_relation": "text_only",
+        "abstract_anchoring_waived": "The nine-residue biotinylated peptide sequence appears only in the Materials and methods peptide list. The abstract contains no sequence of any kind."
+      },
+      {
+        "proposition": "THE SCREEN'S SCALE AND SUBSTRATE - and the only neural element in the entire paper is that the cDNA library was human brain, expressed in bacteria.",
+        "snippet": "The filters are PVDF membranes that contain 27 648 human brain cDNA clones arrayed and spotted in duplicate",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID15064722_LudesMeyers2004_PMCreader.txt",
+        "anchor": "Results, 'Identification of potential WWOX ligand proteins'",
+        "panel_text_relation": "text_only",
+        "abstract_snippet": "Using the WWOX WW domains as a probe, we screened high-density protein arrays and identified five candidate-binding partners"
+      },
+      {
+        "proposition": "FIVE CANDIDATES CAME OUT OF THE ARRAY, and the paper states no selection criterion for them anywhere.",
+        "snippet": "we identified five bacterial clones that express candidate WWOX-binding proteins",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID15064722_LudesMeyers2004_PMCreader.txt",
+        "anchor": "Results, 'Identification of potential WWOX ligand proteins'",
+        "panel_text_relation": "text_only",
+        "abstract_snippet": "Using the WWOX WW domains as a probe, we screened high-density protein arrays and identified five candidate-binding partners"
+      },
+      {
+        "proposition": "ONE OF THE FIVE WAS NEVER IDENTIFIED AT ALL, which is a limit on the candidate list the downstream literature repeats as 'five partners'.",
+        "snippet": "One clone has not been identified as a cellular encoded protein and contains no recognizable protein structural motifs in current protein databases",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID15064722_LudesMeyers2004_PMCreader.txt",
+        "anchor": "Results, after the candidate enumeration",
+        "panel_text_relation": "text_only",
+        "abstract_anchoring_waived": "That one of the five clones was never identified is stated only in Results. The abstract says 'five candidate-binding partners' without qualification, so quoting it here would import the very overstatement this entry records."
+      },
+      {
+        "proposition": "EVERY CANDIDATE CARRIES THE MOTIF - stated as a property of the sequences, which is consistency with the screen rather than independent confirmation of binding.",
+        "snippet": "All of the protein amino-acid sequences have at least one PPXY WWOX-binding motif",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID15064722_LudesMeyers2004_PMCreader.txt",
+        "anchor": "Results, immediately before Table 1",
+        "panel_text_relation": "text_only",
+        "abstract_anchoring_waived": "The abstract does not state that every candidate carries at least one PPXY motif; that is a Results sentence introducing Table 1."
+      },
+      {
+        "proposition": "THE CANDIDATES CARRY A MOTIF FAMILY, NOT ONE SEQUENCE - PPAY, PPSY and PPPY across the five, with COTE1 carrying the compound run PPPYYPPEY - and only TWO of those were ever tested directly: PPPY as a synthetic peptide (Figure 1b) and PPSY inside SIMPLE (Figure 3a). So 'WWOX binds PPxY' is a family-level statement resting on two tested members.",
+        "snippet": "Identity of WWOX candidate binding partners",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID15064722_LudesMeyers2004_PMCreader.txt",
+        "anchor": "Table 1 caption, quoted verbatim. 🔴 The table's DATA ROWS cannot be quoted from this surface: the extraction isolates every cell on its own line, so any row-spanning quote would be a stitched quote, which this repository blocks. The cell contents are therefore stated in the proposition and are readable in the same table region of the fingerprinted surface: WBP-1 PY1 PPAY / PY2 PPPY (AAD10950); SIMPLE PY1 PPSY / PY2 PPSY (BAB32547); NF-kB AP PY1 PPSY / PY2 PPAY / PY3 PPPY (BAC77360); COTE1 PY1,2,3 PPPYYPPEY / PY4 PPSY (P81408); Unknown PY1 PPAY, no accession.",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found",
+        "abstract_anchoring_waived": "Table 1's contents - the PPAY/PPSY/PPPY family and the accessions - appear nowhere in the abstract, which names only 'PPXY' as a single ligand."
+      },
+      {
+        "proposition": "THE ONLY PARTNER-LEVEL PPxY DEPENDENCE DEMONSTRATED BY MUTAGENESIS, and note the word: 'significantly' in a paper that reports no statistical test anywhere.",
+        "snippet": "Mutation of the first SIMPLE PPSY motif significantly reduced the interaction",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID15064722_LudesMeyers2004_PMCreader.txt",
+        "anchor": "Results, 'WWOX WW domain binding specificity'",
+        "panel_text_relation": "text_only",
+        "abstract_snippet": "a specific PPSY motif in the SIMPLE amino-acid sequence was required to interact with the amino-terminal WW domain of WWOX"
+      },
+      {
+        "proposition": "AND THE DOUBLE MUTANT ABOLISHES IT - the cleanest single result in the paper, with the load control running the wrong way, which strengthens it.",
+        "snippet": "Mutation of both PPSY motifs showed no detectable binding",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID15064722_LudesMeyers2004_PMCreader.txt",
+        "anchor": "Results, 'WWOX WW domain binding specificity'",
+        "panel_text_relation": "text_only",
+        "abstract_snippet": "a specific PPSY motif in the SIMPLE amino-acid sequence was required to interact with the amino-terminal WW domain of WWOX"
+      },
+      {
+        "proposition": "THE ONE EXPERIMENT IN A MAMMALIAN CELL: endogenous SIMPLE pulled from MCF-7 breast cancer extract. This is the paper's whole 'in vivo' claim, and the cell is a breast cancer line.",
+        "snippet": "GST pull-down assays from total cellular extracts from the breast cancer cell line MCF7 demonstrated that the WWOX WW domains bind endogenous SIMPLE",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID15064722_LudesMeyers2004_PMCreader.txt",
+        "anchor": "Results, 'WWOX WW domain binding specificity', endogenous paragraph",
+        "panel_text_relation": "text_only",
+        "abstract_anchoring_waived": "The abstract mentions MCF-7 only for immunofluorescence co-localisation, not for the GST pull-down of endogenous SIMPLE from MCF-7 extract, which is a different experiment in a different figure."
+      },
+      {
+        "proposition": "WW1 IS REQUIRED, NOT MERELY SUFFICIENT - the domain-requirement result that makes a WW1 missense mechanistically interpretable.",
+        "snippet": "mutation of the first WW domain eliminated the interaction, while the mutated second WW domain retained binding activity",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID15064722_LudesMeyers2004_PMCreader.txt",
+        "anchor": "Results, 'WWOX WW domain binding specificity'",
+        "panel_text_relation": "text_only",
+        "abstract_snippet": "a specific PPSY motif in the SIMPLE amino-acid sequence was required to interact with the amino-terminal WW domain of WWOX"
+      },
+      {
+        "proposition": "THE AUTHORS' OWN HEDGE, CARRIED VERBATIM INCLUDING ITS GRAMMATICAL SLIP: both constructs lost signal, which is why WW2 is offered as a stabiliser rather than a non-participant.",
+        "snippet": "The interaction with the individual WW domains and with the mutated WW domains both showed reduced binding to the first WW domain",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID15064722_LudesMeyers2004_PMCreader.txt",
+        "anchor": "Results, 'WWOX WW domain binding specificity', final paragraph",
+        "panel_text_relation": "text_only",
+        "abstract_anchoring_waived": "This is the authors' own hedge about both constructs showing reduced binding, stated only in the Results. The abstract carries no hedge at all."
+      },
+      {
+        "proposition": "A DIRECT CONTRADICTION WITH THE OTHER 2001 LITERATURE, NAMED BY THE AUTHORS THEMSELVES: WWOX's subcellular home was contested at the time, Golgi against mitochondria.",
+        "snippet": "contrary to our published observations, and to the results presented here, it has been reported that endogenous WWOX and GFP–WWOX fusion proteins localize to the mitochondria",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID15064722_LudesMeyers2004_PMCreader.txt",
+        "anchor": "Results, 'WWOX and SIMPLE partially co-localize to the Golgi'",
+        "panel_text_relation": "text_only",
+        "abstract_anchoring_waived": "The contradiction with the mitochondrial-localisation literature is named only in Results and Discussion. The abstract does not mention mitochondria or any conflicting report."
+      },
+      {
+        "proposition": "🔴 THE SENTENCE THAT BOUNDS THE WHOLE PPxY LOGIC, AND IT IS THE AUTHORS': p53 - WWOX's most-cited partner - HAS NO PPXY MOTIF, so the PPxY mechanism cannot be the general account of WWOX interactions even in this paper's own frame.",
+        "snippet": "the p53 proline-rich region does not contain any PPXY motifs",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID15064722_LudesMeyers2004_PMCreader.txt",
+        "anchor": "Discussion, penultimate section, on the absence of p53 and JNK1 from the array hits",
+        "panel_text_relation": "text_only",
+        "abstract_anchoring_waived": "That the p53 proline-rich region contains no PPXY motif appears only in the Discussion. The abstract does not mention p53."
+      },
+      {
+        "proposition": "🔴 THE PANEL SUPPORTS THE PPPY RESULT AND QUALIFIES THE PAPER'S OWN ABSOLUTE NEGATIVE. On the WBP1 (PPPY) row, bands appear in the YAP, WWOX-1 and WWOX-1&2 lanes, with WWOX-2 and GST blank - so WW1 binds PPPY and the tandem does too, cleanly. But on the CDC25 (PLT*P) row, besides the strong PIN1 band, TWO FAINT BANDS are visible in the WWOX-1 and WWOX-2 lanes. The text's 'did not interact with any of the ligands tested' is therefore stronger than the panel: WWOX-2 shows faint phospho-threonine-proline signal. Each control behaves: FBP11 lights PPLP, FBP21 and FBP30 light PPR, PIN1 lights PLT*P, YAP lights PPPY.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1b, nine lanes in order FBP11, FBP21, FBP30, YAP, PIN1, WWOX-1, WWOX-2, WWOX-1&2, GST, over a Coomassie panel and four ligand far-Western panels. Ld10 (PPLP): strong band lane 1 (FBP11), faint lane 3. P3 (PPR): bands lanes 2 and 3 (FBP21, FBP30). CDC25 (PLT*P): strong band lane 5 (PIN1) plus TWO FAINT BANDS at lanes 6 and 7 (WWOX-1, WWOX-2). WBP1 (PPPY): bands at lane 4 (YAP), lane 6 (WWOX-1) and lane 8 (WWOX-1&2); lane 7 (WWOX-2) and lane 9 (GST) blank.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID15064722/native/img-001.png",
+        "anchor": "Figure 1, panel b, native embedded raster 1625x2466 at 600 ppi, inspected at native scale and at 1.8x and 2.6x on the lower two ligand rows",
+        "panel_text_relation": "panel_qualifies_text",
+        "found_or_sought": "found",
+        "qualifies": "entries[1]",
+        "qualifies_needle": "Interestingly, GST–WWOX-2 did not interact with any of the ligands tested",
+        "experimental_context": {
+          "system": "in vitro far-Western on immobilised GST-fusion proteins",
+          "cell_line": "none - bacterially expressed GST fusions probed with synthetic biotinylated peptides",
+          "endpoint": "peptide-ligand binding visualised by streptavidin-HRP and ECL",
+          "comparator": "GST alone and seven other WW domains"
+        },
+        "abstract_anchoring_waived": "A pixel fact about faint bands in two lanes of a far-Western row cannot be carried by any prose sentence, and the abstract asserts the opposite simplification ('the specific proline-rich ligand ... as PPXY')."
+      },
+      {
+        "proposition": "THE INACTIVATING SUBSTITUTIONS, READ OFF THE PANEL RATHER THAN FROM RECALL: mut1 changes two residues of WW1 and mut2 two of WW2, which is what makes the Figure 3b mutant lanes interpretable.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1a: schematic of full-length WWOX showing WWOX-1 and WWOX-2 boxes near the N-terminus and a large SDR box, with the two WW-domain sequences printed beneath. WWOX-1 reads WEERTTKDGWVYYANHTEEKTQWEHP with arrows under the penultimate W and the final P marking mut1 substitutions to F and A. WWOX-2 reads WEQETDENGQVFFVDHINKRTTYLDP with arrows under the Y and the final P marking mut2 substitutions to A and A.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID15064722/native/img-001.png",
+        "anchor": "Figure 1, panel a, native embedded raster 1625x2466 at 600 ppi",
+        "panel_text_relation": "panel_only",
+        "found_or_sought": "found",
+        "abstract_anchoring_waived": "Residue-level substitutions read off a figure panel are pixel facts; the abstract names no residue and no mutant construct."
+      },
+      {
+        "proposition": "🔴 THE ARRAY SHOWS MORE SIGNAL THAN THE PAPER IDENTIFIES. Five duplicate pairs are circled and named, and at least two further prominent dark spots are present and circled by nobody, plus several small dark spots at the top-right corner. Combined with the absence of any stated selection criterion, 'five candidates' is a SELECTION from this autoradiograph, not its content - a limit on completeness that the downstream 'five WWOX partners' phrasing loses.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2a: a partial view of a high-density protein array autoradiograph, regular grid of faint duplicate spots. Five circled duplicate pairs are labelled COTE1 (upper left), WBP-1 (right), SIMPLE/PIG7 (centre), Unknown (left) and NF-KB AP (lower right). At least two further prominent dark spots are visible and NOT circled - one above and left of the WBP-1 circle, one below and left of the SIMPLE/PIG7 circle - together with several small dark spots in the top-right corner.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID15064722/native/img-002.png",
+        "anchor": "Figure 2, panel a, native embedded raster 1601x1207 at 400 ppi, inspected at native scale and at 2x",
+        "panel_text_relation": "panel_only",
+        "found_or_sought": "found",
+        "abstract_anchoring_waived": "Uncircled dark spots on an autoradiograph are a pixel fact about what the panel shows beyond what the text selects. No abstract sentence can attest it, and the abstract states the selected count instead."
+      },
+      {
+        "proposition": "THE CONFIRMATION PANEL CARRIES FOUR CANDIDATES, NOT FIVE: the unidentified clone is absent from it, so the fifth candidate rests on array signal alone and was never re-tested by far-Western. The paper's own sentence agrees - it says 'this set of four'.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2b: two stacked panels over FOUR lanes labelled COTE1, NF-KB AP, WBP-1, SIMPLE/PIG7. Top panel (Farwestern) shows a band in every one of the four lanes; bottom panel (Western, anti-His) shows expression in all four. There is no fifth lane and no lane for the 'Unknown' clone circled in panel a.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID15064722/native/img-002.png",
+        "anchor": "Figure 2, panel b, native embedded raster 1601x1207 at 400 ppi",
+        "panel_text_relation": "panel_only",
+        "found_or_sought": "sought",
+        "experimental_context": {
+          "system": "far-Western on bacterially expressed His-tagged candidate proteins",
+          "cell_line": "E. coli lysate, nickel-agarose purified",
+          "endpoint": "radiolabelled WW-domain probe binding"
+        },
+        "abstract_anchoring_waived": "That the confirmation panel carries four candidates rather than five is a property of the figure's lane count. The abstract states 'five candidate-binding partners' and so cannot anchor this."
+      },
+      {
+        "proposition": "THE PPxY-DEPENDENCE SERIES, LANE BY LANE - AND ONE READOUT WEAKNESS THE TEXT DOES NOT NAME. For SIMPLE the series is clean and in the claimed direction: wild type binds, first-motif mutant is much weaker, second-motif mutant is unaffected, double mutant is absent - and the double mutant's total-protein lane is visibly the HEAVIEST of the eight, so the loss is not a loading artefact. For WBP-1, however, the pulled-down band sits at the SAME height as the asterisked nonspecific GST band that runs across all eight lanes, so 'mutagenesis demonstrated it is the target' rests on intensity at a position the paper itself marks as nonspecific.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3a top panel, GST-WWOX1&2 pulldown, eight lanes: 1 N.C., 2-4 WBP-1 WT/mPY1/mPY2, 5-8 SIMPLE WT/mPY1/mPY2/mPY1&2. A band marked with an asterisk runs across every lane at one height. Lanes 2 and 3 are strongly darkened at that height and lane 4 is faint. A distinct LOWER band appears only in the SIMPLE series: strong in lane 5, clearly fainter in lane 6, strong in lane 7, absent in lane 8. Bottom panel, total protein: lanes 2-4 comparable, lanes 5-7 comparable, lane 8 markedly heavier than every other lane.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID15064722/native/img-003.png",
+        "anchor": "Figure 3, panel a, native embedded raster 1501x1968 at 491 ppi, inspected at native scale and at 2.2x",
+        "panel_text_relation": "panel_only",
+        "found_or_sought": "found",
+        "experimental_context": {
+          "system": "GST pull-down from bacterial lysate",
+          "cell_line": "E. coli BL21 expressing His-tagged WBP-1 or SIMPLE, wild type and PPxY point mutants",
+          "endpoint": "anti-His Western of GST-WWOX1&2 pulldown",
+          "comparator": "parental bacterial strain expressing no His-tagged protein (lane 1)"
+        },
+        "abstract_anchoring_waived": "Lane-by-lane band intensities and the position of the nonspecific asterisked band are pixel facts about a blot; the abstract reports none of the mutagenesis series."
+      },
+      {
+        "proposition": "WW1 IS BOTH SUFFICIENT AND REQUIRED FOR ENDOGENOUS SIMPLE, ON THE PANEL: the tandem construct and WW1 alone both pull SIMPLE down, WW2 alone pulls nothing, the WW1-inactivating mutant loses the band and the WW2-inactivating mutant keeps it. An unexplained upper band is present in all three right-panel lanes including the mutant that lost binding, so the SIMPLE identification within that panel rests on the lower band alone.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3b, anti-SIMPLE Western of GST pulldowns from MCF-7 extract. Left panel lanes 1-4: GST alone blank, WWOX-1&2 a strong band, WWOX-1 a strong band, WWOX-2 blank. Right panel lanes 5-7: WWOX-1&2 shows an upper band plus a strong lower band, mut1 shows the upper band with the lower band absent, mut2 shows the upper band plus a fainter lower band.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID15064722/native/img-003.png",
+        "anchor": "Figure 3, panel b, native embedded raster 1501x1968 at 491 ppi, inspected at native scale and at 2.4x",
+        "panel_text_relation": "panel_only",
+        "found_or_sought": "found",
+        "experimental_context": {
+          "system": "GST pull-down from mammalian whole-cell extract",
+          "cell_line": "MCF-7 human breast cancer",
+          "endpoint": "anti-SIMPLE Western",
+          "genotype": "not applicable - wild-type cell line, engineered GST-fusion baits"
+        },
+        "abstract_anchoring_waived": "The presence or absence of a band in individual mutant lanes is a pixel fact. The abstract summarises the requirement without reference to any lane."
+      },
+      {
+        "proposition": "LOCALISATION IS CONSISTENT WITH THE PARTNERSHIP AND DOES NOT ESTABLISH IT, and the paper's own strongest localisation claim is the NEGATIVE one against mitochondria. Endogenous WWOX overlaps the Golgi 58K marker substantially, shows essentially no overlap with MitoTracker, and overlaps SIMPLE only PARTIALLY, with each protein also occupying areas the other does not.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 4, nine panels in three rows of three, MCF-7 cells with DAPI-blue nuclei in the merges. Row a-c: anti-WWOX green perinuclear, anti-Golgi 58K red in the same perinuclear arc, merge showing yellow overlap. Row d-f: anti-WWOX green perinuclear, MitoTracker red in a distinct broader cytoplasmic pattern, merge showing green and red side by side with little yellow. Row g-i: anti-WWOX green and anti-SIMPLE red, merge showing partial yellow overlap with separate green-only and red-only territories.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID15064722/native/img-004.png",
+        "anchor": "Figure 4, panels a-i, native embedded raster 1248x1262 RGB at 300 ppi",
+        "panel_text_relation": "panel_only",
+        "found_or_sought": "found",
+        "experimental_context": {
+          "system": "immunofluorescence microscopy",
+          "cell_line": "MCF-7 human breast cancer",
+          "endpoint": "co-localisation of endogenous WWOX with Golgi 58K, mitochondria and SIMPLE"
+        },
+        "abstract_snippet": "immunofluorescence staining demonstrated that endogenous WWOX and SIMPLE co-localize to peri-nuclear compartments of MCF-7 human breast cancer cells"
+      }
+    ],
+    "source_fulltext_indexed": false,
+    "source_fulltext_indexed_note": "MEASURED, not assumed. Europe PMC's search record for DOI 10.1038/sj.onc.1207680 returns pmid 15064722, pmcid PMC4143251, inEPMC 'Y', isOpenAccess 'N', hasSuppl 'N' - while its fullTextXML endpoint for PMC4143251 returns HTTP 404 with 0 bytes, and NCBI efetch returns front matter with no <body>. So the article is INDEXED in Europe PMC but its full text is NOT retrievable through the machine routes an external verifier would use: these quotes are externally checkable only by a human opening the PMC reader page or the author-manuscript PDF. Declared false for that reason rather than left unstated.",
+    "source_fulltext_indexed_evidence": "Europe PMC REST search query DOI:\"10.1038/sj.onc.1207680\" run 2026-09-13: one hit, pmid 15064722, pmcid PMC4143251, inEPMC='Y', isOpenAccess='N', hasSuppl='N'. The matching fullTextXML endpoint for PMC4143251 returned HTTP 404 with 0 bytes the same day, and NCBI efetch db=pmc returned 8049 bytes containing no <body> element and zero <sec> elements. INDEXED YES, MACHINE-FETCHABLE FULL TEXT NO - so an external validator keyed on those routes sees only the abstract.",
+    "abstract_anchoring_waived": "🔴 WAIVED FOR 16 OF 24 ENTRIES, WITH THE ARGUMENT PER ENTRY IN EACH ENTRY'S OWN `abstract_anchoring_waived` FIELD. Eight entries DO carry a companion `abstract_snippet`, because the abstract genuinely states the PPXY identification, the N-terminal domain, the five array candidates, SIMPLE's PPSY requirement and the MCF-7 co-localisation. The other sixteen cannot be anchored there for two structural reasons that no rewording fixes. FIRST, SEVEN ARE PIXEL FACTS: faint bands in two lanes of a far-Western row, uncircled dark spots on an autoradiograph, a lane count of four where the text says five, band-by-band intensities against an asterisked nonspecific band, residue substitutions read off a schematic, and the presence or absence of a band in individual mutant lanes. An abstract is prose and cannot attest a panel; this repository's own rule is that a caption is not its figure, and an abstract is further away still. SECOND, NINE ARE METHOD OR QUALIFICATION SENTENCES THAT THE ABSTRACT OMITS OR CONTRADICTS BY SIMPLIFICATION: the GST construct residue boundaries (AA 16-53, AA 53-94), the nine-residue biotinylated peptide sequence, the 27,648-clone array scale, the fact that one of the five clones was never identified, Table 1's PPAY/PPSY/PPPY family, the authors' own hedge that both constructs showed reduced binding, the named conflict with the mitochondrial-localisation literature, and the Discussion's statement that p53's proline-rich region contains no PPXY motif. The abstract says 'the specific proline-rich ligand for WWOX as PPXY' and 'five candidate-binding partners' WITHOUT qualification - so quoting it beside these entries would import the very overstatements they exist to record. Anchoring them to the abstract would be worse than waiving: it would make a simplification look like corroboration."
+  }
+}

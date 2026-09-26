@@ -1,314 +1,1449 @@
 {
- "schema_version": 2,
- "pmid": "36828035",
- "doi": "10.1016/j.pneurobio.2023.102425",
- "receipt": "FTR-20260826-36828035-02",
- "landing": [
-  "FTR-20260826-36828035-01",
-  "FTR-20260826-36828035-02",
-  "PAPER 007",
-  "CC-20260826-PMID36828035-01",
-  "CC-20260826-PMID36828035-02",
-  "CC-20260826-SEIZURE-RECONCILIATION-01"
- ],
- "coverage_status": "partial_fulltext_read",
- "skills_considered": [
-  {
-   "skill": "find-fulltext",
-   "used": false,
-   "reason": "Acquired directly by deterministic NCBI efetch of the PMC XML; no cascade needed."
-  },
-  {
-   "skill": "legend-deepdive",
-   "used": false,
-   "reason": "Run inline. The read was targeted at a named contradiction (CLAIM 037/005 vs 004/011/016), not a general ingest."
-  }
- ],
- "group_assessment": {
-  "waived": "Aldaz lab, MD Anderson — already the source group of PAPER 006 / CLAIM 005 and therefore already characterised in this registry. A fresh assessment needs a live PubMed query and the connector is unauthorized in this session; an estimate in an integer slot is indistinguishable from a measurement."
- },
- "field_density": {
-  "waived": "Requires a live PubMed query; connector unauthorized. Not the gating question: the paper was already CORPUS-STUB-053 and PAPER 007 and was read to discharge a named contradiction."
- },
- "multihop": {
-  "references_enumerated": 0,
-  "gene_direct_refs_in_source": [],
-  "resolved": [],
-  "queued": [],
-  "note": "Reference list NOT enumerated. This read was targeted; three citations were resolved individually for the UPSTREAM_CITATION_FAILURE locator (Mallaret 2014, Aldaz/Ferguson/Abba 2014 BBA, Ludes-Meyers 2009) and nothing else. Recorded as zero rather than left implicit."
- },
- "corpus_crossquery": {
-  "waived": "Not run. PMID 36828035 was already present in the registry twice — as PAPER 007 (with an invented title) and as CORPUS-STUB-053. The duplicate is the finding; see CC-20260826-PMID36828035-01 section 3."
- },
- "retraction_check": {
-  "result": "No retraction, correction or expression of concern in the PMC record. Verified against the local PMC XML article-meta; NOT re-checked against a live PubMed query because the connector is unauthorized in this session."
- },
- "verbatim_locators": {
-  "waived": false,
-  "source_fulltext_indexed": true,
-  "source_fulltext_indexed_evidence": "Structured JATS XML retrieved by NCBI efetch db=pmc id=PMC10835625; SHA-256 recorded below.",
-  "entries": [
-   {
-    "proposition": "Wwox^P47T/P47T mice show frequent interictal cortical spike discharges on video-EEG; the WT range and the mutant range do not overlap.",
-    "snippet": "We detected very frequent interictal cortical spike discharges (0–3098/hour)",
-    "anchor": "Results 2.3, 'WwoxP47T/P47T mice display chronic spontaneous generalized tonic-clonic seizures'",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "Wild-type littermates show low-rate spike activity and NO seizures — the negative control for the mutant seizure counts.",
-    "snippet": "Wildtype mice displayed infrequent spike activity (0–68/hour) but no evidence of seizures",
-    "anchor": "Results 2.3, same paragraph as the mutant spike range",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "Spontaneous convulsive seizures in the mutant are quantified over a defined monitoring window, not merely observed.",
-    "snippet": "repeated spontaneous generalized convulsive activity (11–22 seizures during 43–53 h monitoring periods)",
-    "anchor": "Results 2.3",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "Every mutant animal seized repeatedly within 24 h — penetrance is complete at n=3, though n=3 is n=3.",
-    "snippet": "mutant mice had multiple (>4) seizures during a 24 h recording period",
-    "anchor": "Results 2.3, citing Supplementary Figs. S3a-b (NOT retrieved)",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "ABUNDANCE/FUNCTION DISSOCIATION, transcript arm: P47T does not change Wwox mRNA level.",
-    "snippet": "CB were comparable, with no significant difference in n = 6 mice tested in each group",
-    "anchor": "Results 2.1, citing Supplementary Fig. S2a (NOT retrieved)",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "ABUNDANCE/FUNCTION DISSOCIATION, protein arm: P47T does not change Wwox protein level. Read together with the pull-down locator, this is normal abundance with abolished function.",
-    "snippet": "Western blot analyses also showed similar levels of Wwox protein expression in homozygous mutant and wildtype mice",
-    "anchor": "Results 2.1. NOTE: the cited panel is the 10% input lane of a pull-down blot (Fig. 1a), not a dedicated quantified western",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "The FUNCTION arm of the dissociation: the point mutation abolishes PPxY binding.",
-    "snippet": "p.Pro47Thr mutation is sufficient to abrogate Wwox affinity for PPxY motifs",
-    "anchor": "Fig. 1 legend (title line); pull-down with biotinylated Dvl2 and Wbp1 peptides, n=2/group",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "METHODOLOGICAL SUPERIORITY over the only null ECoG dataset: animals were recovered before recording, whereas PMID 42422765 began acquisition immediately after surgery with no recovery interval.",
-    "snippet": "Mice were allowed to recover for 14 days before recording",
-    "anchor": "Methods 4.4 'Video electroencephalography (EEG)'",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "The montage is bilateral and multi-region, so bilateral synchrony is resolvable — which a single-channel design cannot do.",
-    "snippet": "silver wire electrodes (0.005″ diameter) soldered to a connector were surgically implanted bilaterally into the subdural space over frontal and parietal cortex",
-    "anchor": "Methods 4.4",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "EEG reading was by two observers but blinding is NOT declared — a weaker declaration than PMID 42422765, which declares a blinded reader.",
-    "snippet": "EEGs were reviewed by two trained observers",
-    "anchor": "Methods 4.4, final sentence",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "HETEROZYGOTE IS NAMED IN A POSITIVE FINDING: P47T/WT animals are not phenotype-free, which bounds any transfer to CLAIM 032.",
-    "snippet": "mice displayed signs of cholestasis with enlarged gallbladders, and a few animals had evidence of focal liver degeneration",
-    "anchor": "Results 2.2, citing Supplementary Table 4 (NOT retrieved). The subject of the sentence is 'various WwoxP47T/P47T and WwoxP47T/WT mice'",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "UNVERIFIABLE NEGATIVE: the heterozygote neuroinflammation negative is declared 'data not shown' and may not be cited as evidence of heterozygote normality.",
-    "snippet": "no differences were observed when compared with the wildtype mice (data not shown)",
-    "anchor": "Results 2.5, on Iba1/Gfap immunostaining in WwoxP47T/WT brains",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "Transcriptomic GABA finding is an EXPRESSION PROGRAMME, not a measure of inhibition, and must not be recruited to the E_GABA sign question.",
-    "snippet": "Suppression of GABAergic and glutamatergic synapses in CTX and HPC was also detected in KEGG pathways",
-    "anchor": "Results 2.7, KEGG enrichment, citing Supplementary Figs. S11-12 (NOT retrieved)",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "LONGEVITY, from the BODY not the abstract: the P47T knock-in is the only WWOX genotype in which adult electrophysiology is obtainable. Mean survival 393 days.",
-    "snippet": "showed a mean long-term survival of 393 days",
-    "anchor": "Results 2.2, survival paragraph, with Fig. 1b. The abstract's 'live beyond 1 year of age' is NOT used: it is abstract-only and the validator refused it.",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "LONGEVITY IS SHORTENED, not merely long: 393 days for the homozygote against 495 for the heterozygote and 542 for wild type, log-rank p=0.001. A summary keeping only 'long-lived' drops the comparator.",
-    "snippet": "their life span was shorter compared to 495",
-    "anchor": "Results 2.2, immediately following the 393-day figure",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "CLAIM 032 BOUNDARY: the P47T heterozygote's survival is REDUCED but NOT SIGNIFICANTLY so — a non-significant trend, which is not the same as a demonstrated null, and the paper reports no power for it.",
-    "snippet": "but the difference was not statistically significance",
-    "anchor": "Results 2.2. Full clause: WwoxP47T/WT mice also displayed a reduced overall survival in comparison to the WwoxWT/WT. Grammatical slip is the source's, preserved verbatim",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "UPSTREAM_CITATION_FAILURE instance: the null-mouse seizure assertion is cited to a human study, a review, and a mouse paper that measured no seizures.",
-    "snippet": "Like WOREE children, Wwox-KO mice displayed spontaneous seizures, motor deficits, ultimately reaching almost total immobility, and a short lifespan (~3 weeks)",
-    "anchor": "Discussion. Its three citations resolve to Mallaret 2014 (human patients), Aldaz/Ferguson/Abba 2014 BBA (review), and Ludes-Meyers 2009 PMID 19936220, which per LEGEND complete read contains no seizure measurement",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "ABUNDANCE/FUNCTION DISSOCIATION attested from the image: binding is abolished while protein level is not.",
-    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1a: Anti-Wwox Dvl2 pulldown and Anti-Wwox Wbp1 pulldown show strong bands in WT/WT and near-absent bands in P47T/P47T, while Anti-Wwox 10% input shows comparable bands in BOTH genotypes; Anti-Hsp90 and both Anti-Biotin peptide-bead inputs are comparable. Two lanes per genotype.",
-    "anchor": "Figure 1, panel a, native resolution 1801x1412. The abundance evidence is an input lane of a pull-down blot, not a dedicated quantified western; n=2 per genotype is visible as two lanes.",
-    "surface": "figure",
-    "artifact": "files/fulltext/PMID36828035_Hussain2023_assets/nihms-1957654-f0001.jpg",
-    "panel_text_relation": "panel_only"
-   },
-   {
-    "proposition": "SURVIVAL CURVE CONTRADICTS THE RUNNING TEXT'S MEAN: a quarter of homozygotes are alive at the last plotted day, and wild type is not flat at 1.0.",
-    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1b: x-axis runs to 600 days. WT/WT (n=14) approx 1.0 until ~500d then ~0.90. P47T/WT (n=30) ~0.93 to ~430d, declining to ~0.75 by ~520d. P47T/P47T (n=25) ~0.62 at 350d, ~0.53 at ~470d, ~0.26 still alive at ~580d. Log-rank p=0.001.",
-    "anchor": "Figure 1, panel b. The text's 'mean long-term survival of 393 +/- 32 days' is not reconcilable at face value with a 50% crossing near 470-500d; a mean over decedents only would explain it but is not stated.",
-    "surface": "figure",
-    "artifact": "files/fulltext/PMID36828035_Hussain2023_assets/nihms-1957654-f0001.jpg",
-    "panel_text_relation": "panel_only"
-   },
-   {
-    "proposition": "BILATERAL SYNCHRONY of epileptiform activity is attested from the image, not inferred from the montage description.",
-    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1d: four channels labelled L-f, R-f, L-p, R-p; scale 500 microvolt / 1 s. Trace i (WT/WT) low-amplitude background; trace ii (P47T/P47T) frequent high-amplitude interictal spikes synchronous across all four channels; trace iii a generalized discharge, abrupt spike then fast rhythmic evolving to arrhythmic, across all four.",
-    "anchor": "Figure 1, panel d. This is the property a single-channel epidural montage (PMID 42422765) cannot resolve.",
-    "surface": "figure",
-    "artifact": "files/fulltext/PMID36828035_Hussain2023_assets/nihms-1957654-f0001.jpg",
-    "panel_text_relation": "panel_only"
-   },
-   {
-    "proposition": "MICROGLIOSIS IS NOT PROGRESSIVE IN ABUNDANCE: Iba1+ cell number is identical at 80 and 250 days, and no within-genotype age bracket is drawn.",
-    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3b: WT ~22 vs P47T/P47T ~34 at 80-days (*), and WT ~22 vs P47T/P47T ~34 at 250-days (*). No significance bracket connects the two mutant ages. Fig 3c area fraction: mutant ~21 at 80d and ~20.5 at 250d while WT falls ~14.5 to ~11, so the widening gap is driven by the control.",
-    "anchor": "Figure 3, panels b and c, native resolution 1531x2100. Contrast Fig 3e-g where within-genotype 80-vs-250 brackets ARE drawn.",
-    "surface": "figure",
-    "artifact": "files/fulltext/PMID36828035_Hussain2023_assets/nihms-1957654-f0003.jpg",
-    "panel_text_relation": "panel_only"
-   },
-   {
-    "proposition": "MICROGLIAL MORPHOLOGY IS progressive, and it is the only microglial measure that is.",
-    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3e branches: mutant ~60 at 80d to ~40 at 250d with a significance bracket between the two mutant ages. Fig 3f junctions ~30 to ~20 with bracket. Fig 3g total branch length ~315 to ~220 with bracket.",
-    "anchor": "Figure 3, panels e, f, g.",
-    "surface": "figure",
-    "artifact": "files/fulltext/PMID36828035_Hussain2023_assets/nihms-1957654-f0003.jpg",
-    "panel_text_relation": "panel_only"
-   },
-   {
-    "proposition": "ASTROGLIOSIS IS GENUINELY PROGRESSIVE, in both number and area, with within-genotype significance.",
-    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 4b: Gfap+ number WT ~27 vs mutant ~39 at 80d (*), WT ~27 vs mutant ~56 at 250d (*), plus a significance bracket between the two mutant ages. Fig 4c: area fraction mutant ~24 at 80d to ~40 at 250d, also bracketed.",
-    "anchor": "Figure 4, panels b and c, native resolution 1430x2100.",
-    "surface": "figure",
-    "artifact": "files/fulltext/PMID36828035_Hussain2023_assets/nihms-1957654-f0004.jpg",
-    "panel_text_relation": "panel_only"
-   },
-   {
-    "proposition": "OLIGODENDROCYTE LOSS is established early and does not progress.",
-    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 4e: Olig2+ cells WT ~205 vs mutant ~122 at 80-days (*), WT ~235 vs mutant ~117 at 250-days (*). No within-genotype bracket between mutant ages.",
-    "anchor": "Figure 4, panel e.",
-    "surface": "figure",
-    "artifact": "files/fulltext/PMID36828035_Hussain2023_assets/nihms-1957654-f0004.jpg",
-    "panel_text_relation": "panel_only"
-   },
-   {
-    "proposition": "CEREBELLAR NEURONAL LOSS IS EARLY AND NOT PROGRESSIVE, and it is cell-type selective: basket cells are spared at both ages.",
-    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 5d: Purkinje number WT ~95 vs mutant ~25 at 80-days (*); WT ~100 vs mutant ~42 at 250-days (*) - the mutant value is HIGHER at the later age, and no within-genotype bracket is drawn. Fig 5e: basket cell number is ns at BOTH 80 and 250 days.",
-    "anchor": "Figure 5, panels d and e, native resolution 1542x2100. The apparent Purkinje increase is most likely survivor selection in the 250-day cohort; the panels do not decide between that and recovery.",
-    "surface": "figure",
-    "artifact": "files/fulltext/PMID36828035_Hussain2023_assets/nihms-1957654-f0005.jpg",
-    "panel_text_relation": "panel_only"
-   },
-   {
-    "proposition": "THE WIDENING CEREBELLAR LAYER DIFFERENCE IS PARTLY NORMAL WILD-TYPE GROWTH, not only mutant loss.",
-    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 5g molecular layer thickness: WT ~190 at 80d rising to ~222 at 250d, while mutant is flat ~165 to ~162, both comparisons (*). Fig 5h granular layer: WT ~103 to ~130, mutant ~90 to ~92, both (*).",
-    "anchor": "Figure 5, panels g and h.",
-    "surface": "figure",
-    "artifact": "files/fulltext/PMID36828035_Hussain2023_assets/nihms-1957654-f0005.jpg",
-    "panel_text_relation": "panel_only"
-   }
+  "schema_version": 2,
+  "pmid": "36828035",
+  "doi": "10.1016/j.pneurobio.2023.102425",
+  "receipt": "FTR-20260913-36828035-03",
+  "landing": [
+    "FTR-20260826-36828035-01",
+    "FTR-20260826-36828035-02",
+    "FTR-20260913-36828035-03",
+    "PAPER 007",
+    "CC-20260826-PMID36828035-01",
+    "CC-20260826-PMID36828035-02",
+    "CC-20260826-SEIZURE-RECONCILIATION-01",
+    "FT-083",
+    "fulltext_dossiers/PMID36828035.md"
   ],
-  "note": "Twenty-six locators. Seventeen are anchored to running text or figure LEGENDS; NINE are anchored to figure PIXELS inspected at native resolution (Figures 1, 3, 4, 5) and are marked surface=figure. Figures 2, 6, 7, 8 and 9 were downloaded but NOT inspected and carry no locator. Coverage remains partial_fulltext_read because the four declared supplementary files are SOURCE_ACCESS_BLOCKED: PMC serves them through a JavaScript download interstitial that returns a 1,814-byte HTML page under the requested filename. Four text locators still cite Supplementary Figs S2a / S3a-b and Supplementary Table 4 as the source of a number not seen, and each says so in its anchor. Reading debt: clear the interstitial with a JS-capable client, and inspect Figures 2, 6-9."
- },
- "source_artifacts": [
-  {
-   "path": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
-   "sha256": "004c59b54b5f57e462ccb39643b5f3adb44e7ecaef5eff8d786cb77c3568fd22",
-   "kind": "article_text"
+  "coverage_status": "complete_fulltext_read",
+  "skills_considered": [
+    {
+      "skill": "find-fulltext",
+      "used": false,
+      "reason": "The packet's acquisition procedure was OPEN only because this host held none of the bytes. The routes were already known from the recorded cascade, so the tiered skill would have re-derived what the manifest already names; pmc_pow_fetch.py resolved every surface directly, including the four supplements the recorded cascade had failed on."
+    },
+    {
+      "skill": "legend-deepdive",
+      "used": false,
+      "reason": "Run inline as a resumption under scientist_standing_brief M0-M5; the skill's own pipeline would restart a first read the ledger already holds two partial receipts for."
+    },
+    {
+      "skill": "legend-locator-audit",
+      "used": true,
+      "reason": "REQUIRED and run: this reading bears on CLAIM 006 and CLAIM 007, both consolidated baseline, and it adds two text_contradicted_by_panel entries. Triples audited blind, see the dossier's audit section."
+    },
+    {
+      "skill": "legend-discovery",
+      "used": false,
+      "reason": "Declined for this wave. The paper's discovery value is already tagged in the ledger and the wave's budget went to the four supplement containers the prior receipts could not open - which is where the new findings came from."
+    }
+  ],
+  "group_assessment": {
+    "group": "Aldaz laboratory, Department of Epigenetics and Molecular Carcinogenesis, MD Anderson Cancer Center, with Noebels (Baylor, video-EEG) and Fonken (UT Austin, behaviour) as method collaborators.",
+    "primary_for_the_gene": "YES, measured: PubMed 2026-09-13, `Aldaz CM[Author]` returns 138 records and `Aldaz CM[Author] AND WWOX` returns 38, so roughly 28% of the senior author's indexed output is on this gene, and this group reported the WWOX-PPxY binding biology the paper's own premise rests on.",
+    "primary_for_the_disease": "WEAKER, and the distinction is the point. SCAR12 as a clinical entity was delineated by Gribaa and Mallaret; this group's contribution is the causal molecular mechanism and now the mouse. For the DISEASE the group is a mechanism laboratory, not the clinical describer, so its phenotype OBSERVATIONS carry the weight of an experienced WWOX laboratory while its extrapolation to human SCAR12 severity is an interpretation resting on someone else's clinical series.",
+    "observation_vs_interpretation": "Observation weighted HIGH: the model, the pull-down, the EEG and the histology are this group's own instruments and the EEG arm is Noebels', an epilepsy electrophysiology laboratory. Interpretation weighted LOWER in two specific places found in this reading - the oligodendrocyte claim its own BRETIGEA panel does not support in hippocampus, and the GABAergic attribution its own hippocampal KEGG panel does not carry.",
+    "measured_on": "2026-09-13 via the PubMed MCP connector; counts re-derivable with the two queries quoted above.",
+    "total_publications": 138,
+    "publications_on_gene": 38,
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": false,
+    "weighting": "Observation HIGH, interpretation LOWER, and this reading found the seam in two named places. The group has 38 of 138 indexed papers on WWOX and reported the PPxY-binding biology this model's premise rests on, so its instruments - the knock-in, the pull-down, the histology - and Noebels' video-EEG arm are as experienced as this field offers, and the primary observations are weighted accordingly. It is NOT primary for the DISEASE: SCAR12 was clinically delineated by Gribaa 2007 and Mallaret 2014, so every statement of the form 'this phenocopies human SCAR12 severity' is an interpretation resting on another group's clinical series. Two interpretations in this paper are not carried by its own panels - hippocampal oligodendrocyte reduction (Fig. 6c prints p=0.43) and GABAergic suppression attributed to hippocampus (the HPC KEGG panel has no GABAergic row) - which is the predicted shape for a mechanism laboratory reading its own enrichment output generously, and is why the two weights are not one score."
   },
-  {
-   "path": "files/fulltext/PMID36828035_Hussain2023_assets/nihms-1957654-f0001.jpg",
-   "sha256": "3a8e73046dd28bb4af7d0b4ad0a5f533108bbc32aa76051a94dd21eb38b04c8a",
-   "kind": "figure"
+  "field_density": {
+    "measured_on": "2026-09-13",
+    "source": "PubMed MCP connector, counts as returned",
+    "wwox_total": 708,
+    "wwox_and_neuroinflammation_or_gliosis": 6,
+    "intersection_members_returned": [
+      "42422765",
+      "39868255",
+      "37328865",
+      "36828035",
+      "30290271"
+    ],
+    "reading": "6 of 708. The intersection of this gene with neuroinflammation is six papers, two of which are this lot, and one of which (30290271) is the interneuron/microglia paper already read here. A near-empty intersection in a rare disease is a signal about the field, not about the mechanism: there is no independent literature against which to test this paper's central finding.",
+    "wwox_and_sepsis": 1,
+    "note": "`WWOX AND sepsis` returns exactly one record, PMID 39868255 - the other paper of this lot. That is recorded here as a field measurement, not as a conclusion about either paper.",
+    "queries": [
+      {
+        "query": "WWOX",
+        "count": 708,
+        "date": "2026-09-13",
+        "source": "PubMed MCP connector"
+      },
+      {
+        "query": "WWOX AND (neuroinflammation OR microgliosis OR astrogliosis OR gliosis)",
+        "count": 6,
+        "date": "2026-09-13",
+        "source": "PubMed MCP connector"
+      },
+      {
+        "query": "WWOX AND sepsis",
+        "count": 1,
+        "date": "2026-09-13",
+        "source": "PubMed MCP connector"
+      },
+      {
+        "query": "Aldaz CM[Author]",
+        "count": 138,
+        "date": "2026-09-13",
+        "source": "PubMed MCP connector"
+      },
+      {
+        "query": "Aldaz CM[Author] AND WWOX",
+        "count": 38,
+        "date": "2026-09-13",
+        "source": "PubMed MCP connector"
+      }
+    ]
   },
-  {
-   "path": "files/fulltext/PMID36828035_Hussain2023_assets/nihms-1957654-f0002.jpg",
-   "sha256": "3ef3b7af8a1d9ff8cd5ccc2db36f681ecf00bca1ccab23caf202168cff09d78a",
-   "kind": "figure"
+  "multihop": {
+    "references_enumerated": 61,
+    "enumeration_note": "61 <ref> elements, 61 of which carry a PMID in the JATS markup - enumerated from the fingerprinted artefact, not from the PDF bibliography.",
+    "gene_direct_refs_in_source": [
+      "24456803",
+      "25012504",
+      "33255508",
+      "24932569",
+      "10786676",
+      "30154439",
+      "32000863",
+      "26390919",
+      "23765596",
+      "34852950",
+      "30746283",
+      "22574198",
+      "21115974",
+      "30619736",
+      "30350478",
+      "30290271",
+      "24871327",
+      "30158849",
+      "15064722",
+      "19936220",
+      "24369382",
+      "31275852",
+      "25411445",
+      "30356099",
+      "33914858",
+      "27869163",
+      "30094525",
+      "28283473",
+      "31340538",
+      "33058734"
+    ],
+    "resolved": [
+      "25012504",
+      "33255508",
+      "32000863",
+      "21115974",
+      "30290271",
+      "24871327",
+      "19936220",
+      "31340538",
+      "24456803",
+      "24932569",
+      "30158849",
+      "24369382",
+      "30356099"
+    ],
+    "queued": [
+      {
+        "queue": "FT-083",
+        "pmids": [
+          "10786676",
+          "30154439",
+          "26390919",
+          "23765596",
+          "34852950",
+          "30746283",
+          "22574198",
+          "30619736",
+          "30350478",
+          "15064722",
+          "31275852",
+          "25411445",
+          "33914858",
+          "27869163",
+          "30094525",
+          "28283473",
+          "33058734"
+        ],
+        "reason": "Seventeen gene-direct references of this paper carry no receipt in this ledger. They are queued against this paper's own entry FT-083, which names PMID 36828035. Three are load-bearing for the corpus rather than for this reading and are named so the next wave finds them: 15064722 (the PPxY binding paper this model's entire premise rests on), 33914858 (the neuronal-deletion epilepsy paper, already carried as an independent debt) and 25411445 (the WWOX-encephalopathy phenotypic spectrum)."
+      }
+    ],
+    "measured_on": "2026-09-13"
   },
-  {
-   "path": "files/fulltext/PMID36828035_Hussain2023_assets/nihms-1957654-f0003.jpg",
-   "sha256": "d2bc329fd35845a4c04bb73b7c8204de3229d6ab98f06181eb7dd087a8cd6f67",
-   "kind": "figure"
+  "corpus_crossquery": {
+    "run_on": "2026-09-13",
+    "method": "grep -ci over the four scientific current files for the reading's own terms; counts are of matching LINES, not of records.",
+    "counts": {
+      "36828035": {
+        "claim": 0,
+        "paper": 2,
+        "working_model": 0,
+        "literature_log": 1
+      },
+      "P47T": {
+        "claim": 14,
+        "paper": 11,
+        "working_model": 6,
+        "literature_log": 5
+      },
+      "SCAR12": {
+        "claim": 6,
+        "paper": 11,
+        "working_model": 2,
+        "literature_log": 4
+      },
+      "neuroinflammation": {
+        "claim": 3,
+        "paper": 4,
+        "working_model": 2,
+        "literature_log": 3
+      },
+      "microgliosis": {
+        "claim": 1,
+        "paper": 0,
+        "working_model": 0,
+        "literature_log": 0
+      },
+      "astrogliosis": {
+        "claim": 1,
+        "paper": 0,
+        "working_model": 0,
+        "literature_log": 0
+      },
+      "Purkinje": {
+        "claim": 0,
+        "paper": 0,
+        "working_model": 0,
+        "literature_log": 0
+      }
+    },
+    "findings": [
+      "Two claim-registry wikilinks resolve to PAPER 007, the record behind this paper, and both belong to claims that are consolidated baseline. They are opened in the M4b comparison phase, not here.",
+      "`Purkinje` returns ZERO lines across all four current files, while Purkinje-cell loss with dendritic degeneration is one of this paper's two headline histological results and is attested in Fig. 5 at native resolution. The cerebellar neuronal phenotype is absent from the canonical vocabulary of the model.",
+      "`microgliosis` and `astrogliosis` appear on one claim line each and nowhere in the paper registry or the working model, so the glial arm of this paper is thinly represented canonically relative to the evidence it now carries."
+    ],
+    "query": "grep -ci over the four scientific current files (claim_registry, paper_registry, working_model, literature_tracking_log) for this reading's own terms: 36828035, P47T, SCAR12, neuroinflammation, microgliosis, astrogliosis, Purkinje",
+    "hits": 76,
+    "hits_note": "76 matching LINES summed across the four files and the seven terms; the per-term, per-file breakdown is in `counts`. Two of them are the claim-registry wikilinks to PAPER 007, and `Purkinje` contributes zero."
   },
-  {
-   "path": "files/fulltext/PMID36828035_Hussain2023_assets/nihms-1957654-f0004.jpg",
-   "sha256": "f9787d65761c0819213ac1e94e0b36a42a230c29ea1d6fd6f7eee7868310eaa5",
-   "kind": "figure"
+  "retraction_check": {
+    "result": "No retraction, correction or expression of concern. Checked twice today by two routes: the fingerprinted PMC XML article-meta carries no notice element, and the PubMed record retrieved live through the MCP connector on 2026-09-13 lists article types 'Journal Article; Research Support, Non-U.S. Gov't; Research Support, N.I.H., Extramural' with no comments-corrections entry. The 2026-08-26 manifest could only check the local XML because the connector was unauthorised then; that gap is now closed.",
+    "checked_on": "2026-09-13",
+    "routes": [
+      "local PMC XML article-meta",
+      "PubMed ESummary/EFetch via MCP connector"
+    ],
+    "dependencies": {
+      "screened": true,
+      "paper_verdict": "SCREENED_CLEAN",
+      "flagged": [],
+      "noted": [],
+      "references_declared": 60,
+      "references_screened": 56,
+      "references_with_doi": 56,
+      "unscreenable": {
+        "UNSCREENABLE_NO_DOI": 4
+      },
+      "snapshot": {
+        "date": "2026-09-10",
+        "days_since_fetch": 3,
+        "rows": 72476,
+        "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+      },
+      "reference_source": "cache",
+      "schema": "retraction_check.dependencies/1",
+      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block"
+    },
+    "corrected_items": [],
+    "erratum_scope": "NO erratum, correction or expression of concern exists for this paper - verified on 2026-09-13 by two routes (the fingerprinted PMC XML article-meta, and the live PubMed record). The corrected-panel scope is therefore declared EMPTY rather than left undeclared: erratum_scope_check reports SCOPE_UNDECLARED as loudly as a hit precisely because a question that cannot be answered must not look like a clean answer, and the vocabulary in the result field above is the record of a check performed, not of a notice found."
   },
-  {
-   "path": "files/fulltext/PMID36828035_Hussain2023_assets/nihms-1957654-f0005.jpg",
-   "sha256": "4ade833d8d552aac551f87431e4aaa6c2cc435633826b38c42e09585be770050",
-   "kind": "figure"
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Structured JATS XML retrieved by NCBI efetch db=pmc id=PMC10835625; SHA-256 recorded below.",
+    "entries": [
+      {
+        "proposition": "Wwox^P47T/P47T mice show frequent interictal cortical spike discharges on video-EEG: 0-3098/hour against 0-68/hour in wild type, n=3 per genotype. THE TWO PRINTED RANGES OVERLAP at their lower bound - both start at 0 - so they are not disjoint, and the body text reports neither a mean spike rate nor any statistical test for spike frequency. What the printed numbers support is that no wild-type animal exceeded 68/hour while mutant animals reached 3098/hour; the group means (~30 vs ~2450/hour, n=3, p<0.01) are plotted in Suppl. Fig. S3b and attested at entries[34], not stated in the text; and the categorical separation is seizure occurrence itself (11-22 generalised convulsive seizures in mutants, none in wild type).",
+        "snippet": "We detected very frequent interictal cortical spike discharges (0–3098/hour)",
+        "anchor": "Results 2.3, 'WwoxP47T/P47T mice display chronic spontaneous generalized tonic-clonic seizures'",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
+        "panel_text_relation": "text_only",
+        "contradicts_locator": {
+          "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36828035.json",
+          "entry": 0,
+          "what_changed": "The clause 'the WT range and the mutant range do not overlap' was FALSE against the paper's own printed ranges: 0-68/hour and 0-3098/hour share their lower bound of 0, so the wild-type range lies wholly inside the mutant range. Replaced with what the printed numbers support. The blind audit then returned OVERSHOOT on the first replacement draft, because it claimed the genotypes are separated by 'the group means' while the BODY TEXT prints no mean spike rate and no statistical test for spike frequency; the means are on Suppl. Fig. S3b, attested by entries[34] of this manifest, not in the text. Final wording names the surface that carries each part.",
+          "audit": {
+            "auditors": 1,
+            "verdicts": [
+              "blind locator audit, 2026-09-13, task ALDAZ-REPAIR-A-20260913: a separate agent with no session history received only (proposition, quote, anchor) triples plus the artefacts - no dossier, no candidate, no claim record, no reader identity. It opened the XML and cut a 3x crop of Fig 1a panel a at native 1801x1412, locating the four antibody rows from a y-darkness profile and running per-lane ImageMagick densitometry."
+            ]
+          }
+        }
+      },
+      {
+        "proposition": "Wild-type littermates show low-rate spike activity and NO seizures — the negative control for the mutant seizure counts.",
+        "snippet": "Wildtype mice displayed infrequent spike activity (0–68/hour) but no evidence of seizures",
+        "anchor": "Results 2.3, same paragraph as the mutant spike range",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Spontaneous convulsive seizures in the mutant are quantified over a defined monitoring window, not merely observed.",
+        "snippet": "repeated spontaneous generalized convulsive activity (11–22 seizures during 43–53 h monitoring periods)",
+        "anchor": "Results 2.3",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Every mutant animal seized repeatedly within 24 h — penetrance is complete at n=3, though n=3 is n=3.",
+        "snippet": "mutant mice had multiple (>4) seizures during a 24 h recording period",
+        "anchor": "Results 2.3, citing Supplementary Figs. S3a-b (NOT retrieved)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "ABUNDANCE/FUNCTION DISSOCIATION, transcript arm: P47T does not change Wwox mRNA level.",
+        "snippet": "CB were comparable, with no significant difference in n = 6 mice tested in each group",
+        "anchor": "Results 2.1, citing Supplementary Fig. S2a (NOT retrieved)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "ABUNDANCE ARM, and it supports less than it was first read as supporting: the authors state 'similar levels' of Wwox protein in homozygous mutant and wildtype mice, citing the 10% input lane of a pull-down blot at n=2 per genotype (Methods 4.2, whole cerebellar lysates), with NO densitometry anywhere in the paper. What that lane establishes is that Wwox protein is PRESENT in both genotypes; the authors' characterisation of the levels as 'similar' is not independently established by it, and per-lane inspection of the panel shows the two mutant bands somewhat weaker than the two wild-type bands (entries[17]). Protein abundance is therefore NEITHER shown unchanged NOR shown reduced. The transcript arm, which IS quantified, is at entries[35] and entries[54].",
+        "snippet": "Western blot analyses also showed similar levels of Wwox protein expression in homozygous mutant and wildtype mice",
+        "anchor": "Results 2.1. NOTE: the cited panel is the 10% input lane of a pull-down blot (Fig. 1a), not a dedicated quantified western; n=2 per genotype per Methods 4.2, whole cerebellar lysate, no densitometry reported.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
+        "panel_text_relation": "text_only",
+        "contradicts_locator": {
+          "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36828035.json",
+          "entry": 5,
+          "what_changed": "'P47T does not change Wwox protein level ... normal abundance with abolished function' overstated an unquantified 10% input lane at n=2. The independent verification narrowed it, and the blind audit then narrowed the NARROWING: per-lane densitometry of the cited lane shows the mutant input bands ARE detectably weaker (integrated 1050/1082 vs 1468/1556 for wild type) against an even-to-slightly-stronger Hsp90 control, so 'protein not detectably reduced' - the wording the verification proposed - asserts a negative the panel contradicts. Final wording claims neither direction.",
+          "audit": {
+            "auditors": 1,
+            "verdicts": [
+              "blind locator audit, 2026-09-13, task ALDAZ-REPAIR-A-20260913: a separate agent with no session history received only (proposition, quote, anchor) triples plus the artefacts - no dossier, no candidate, no claim record, no reader identity. It opened the XML and cut a 3x crop of Fig 1a panel a at native 1801x1412, locating the four antibody rows from a y-darkness profile and running per-lane ImageMagick densitometry."
+            ]
+          }
+        }
+      },
+      {
+        "proposition": "The FUNCTION arm of the dissociation: the point mutation abolishes PPxY binding.",
+        "snippet": "p.Pro47Thr mutation is sufficient to abrogate Wwox affinity for PPxY motifs",
+        "anchor": "Fig. 1 legend (title line); pull-down with biotinylated Dvl2 and Wbp1 peptides, n=2/group",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "METHODOLOGICAL SUPERIORITY over the only null ECoG dataset: animals were recovered before recording, whereas PMID 42422765 began acquisition immediately after surgery with no recovery interval.",
+        "snippet": "Mice were allowed to recover for 14 days before recording",
+        "anchor": "Methods 4.4 'Video electroencephalography (EEG)'",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
+        "panel_text_relation": "text_only",
+        "external_provenance": {
+          "source": "framework/scripts/fulltext_receipts.py status --pmid 42422765 and the ledger's own records for that study, read in this repository on 2026-09-13; the identifier is this repository's other ECoG dataset and is NOT quoted from the Hussain artefact.",
+          "date": "2026-09-13"
+        }
+      },
+      {
+        "proposition": "The montage is bilateral and multi-region, so bilateral synchrony is resolvable — which a single-channel design cannot do.",
+        "snippet": "silver wire electrodes (0.005″ diameter) soldered to a connector were surgically implanted bilaterally into the subdural space over frontal and parietal cortex",
+        "anchor": "Methods 4.4",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "EEG reading was by two observers but blinding is NOT declared — a weaker declaration than PMID 42422765, which declares a blinded reader.",
+        "snippet": "EEGs were reviewed by two trained observers",
+        "anchor": "Methods 4.4, final sentence",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
+        "panel_text_relation": "text_only",
+        "external_provenance": {
+          "source": "framework/scripts/fulltext_receipts.py status --pmid 42422765 and the ledger's own records for that study, read in this repository on 2026-09-13; the identifier is this repository's other ECoG dataset and is NOT quoted from the Hussain artefact.",
+          "date": "2026-09-13"
+        }
+      },
+      {
+        "proposition": "HETEROZYGOTE IS NAMED IN A POSITIVE FINDING: P47T/WT animals are not phenotype-free, which bounds any transfer to CLAIM 032.",
+        "snippet": "mice displayed signs of cholestasis with enlarged gallbladders, and a few animals had evidence of focal liver degeneration",
+        "anchor": "Results 2.2, citing Supplementary Table 4 (NOT retrieved). The subject of the sentence is 'various WwoxP47T/P47T and WwoxP47T/WT mice'",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "UNVERIFIABLE NEGATIVE: the heterozygote neuroinflammation negative is declared 'data not shown' and may not be cited as evidence of heterozygote normality.",
+        "snippet": "no differences were observed when compared with the wildtype mice (data not shown)",
+        "anchor": "Results 2.5, on Iba1/Gfap immunostaining in WwoxP47T/WT brains",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Transcriptomic GABA finding is an EXPRESSION PROGRAMME, not a measure of inhibition, and must not be recruited to the E_GABA sign question.",
+        "snippet": "Suppression of GABAergic and glutamatergic synapses in CTX and HPC was also detected in KEGG pathways",
+        "anchor": "Results 2.7, KEGG enrichment, citing Supplementary Figs. S11-12 (NOT retrieved)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "LONGEVITY, from the BODY not the abstract: the P47T knock-in is the only WWOX genotype in which adult electrophysiology is obtainable. Mean survival 393 days.",
+        "snippet": "showed a mean long-term survival of 393 days",
+        "anchor": "Results 2.2, survival paragraph, with Fig. 1b. The abstract's 'live beyond 1 year of age' is NOT used: it is abstract-only and the validator refused it.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "LONGEVITY IS SHORTENED, not merely long: 393 days for the homozygote against 495 for the heterozygote and 542 for wild type, log-rank p=0.001. A summary keeping only 'long-lived' drops the comparator.",
+        "snippet": "their life span was shorter compared to 495",
+        "anchor": "Results 2.2, immediately following the 393-day figure",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "CLAIM 032 BOUNDARY: the P47T heterozygote's survival is REDUCED but NOT SIGNIFICANTLY so — a non-significant trend, which is not the same as a demonstrated null, and the paper reports no power for it.",
+        "snippet": "but the difference was not statistically significance",
+        "anchor": "Results 2.2. Full clause: WwoxP47T/WT mice also displayed a reduced overall survival in comparison to the WwoxWT/WT. Grammatical slip is the source's, preserved verbatim",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "UPSTREAM_CITATION_FAILURE instance: the null-mouse seizure assertion is cited to a human study, a review, and a mouse paper that measured no seizures.",
+        "snippet": "Like WOREE children, Wwox-KO mice displayed spontaneous seizures, motor deficits, ultimately reaching almost total immobility, and a short lifespan (~3 weeks)",
+        "anchor": "Discussion. Its three citations resolve to Mallaret 2014 (human patients), Aldaz/Ferguson/Abba 2014 BBA (review), and Ludes-Meyers 2009 PMID 19936220, which per LEGEND complete read contains no seizure measurement",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "FIG 1a ATTESTS TWO THINGS AT TWO DIFFERENT STRENGTHS. BINDING - near-abolished: Anti-Wwox Dvl2 and Anti-Wwox Wbp1 pulldowns are saturated in both WT/WT lanes and retain only faint residual signal in both P47T/P47T lanes (~3-13% of wild-type integrated density), so the loss of recovery is near-total rather than literally complete. ABUNDANCE - undetermined in direction: the Anti-Wwox 10% input row shows Wwox present in all four lanes with the two P47T/P47T bands thinner and lighter than the two WT/WT bands, against an Anti-Hsp90 loading control that is even to slightly STRONGER in the mutant lanes, so the input deficit is not a loading artefact; at n=2 and with no densitometry in the paper this supports neither comparable abundance nor a quantified reduction.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1a: four antibody rows over four lanes, two lanes per genotype (WT/WT then P47T/P47T). Anti-Wwox Dvl2 pulldown: bands saturated in both WT lanes, faint residual in both P47T lanes. Anti-Wwox Wbp1 pulldown: same pattern. Anti-Wwox 10% input: bands present in all four lanes, the two P47T/P47T bands visibly thinner and lighter than the two WT/WT bands. Anti-Hsp90: even to slightly stronger in the mutant lanes. Both Anti-Biotin peptide-bead inputs even.",
+        "anchor": "Figure 1, panel a, native resolution 1801x1412, inspected at native scale and at 3-5x magnification. The abundance evidence is an input lane of a pull-down blot, not a dedicated quantified western; n=2 per genotype is visible as two lanes. CAVEAT ON THE MEASUREMENT: gray value on a JPEG scan of film is not linear in protein, so the per-lane comparisons above are direction and rank order only, never a fold-change.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_assets/nihms-1957654-f0001.jpg",
+        "panel_text_relation": "panel_only",
+        "contradicts_locator": {
+          "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36828035.json",
+          "entry": 17,
+          "what_changed": "Two clauses failed at once. (i) 'Anti-Wwox 10% input shows comparable bands in BOTH genotypes' overstated the panel: the two mutant input bands are thinner and lighter than the two wild-type bands (integrated 1050/1082 vs 1468/1556; half-depth widths 8-9 px vs 10-12 px), while Anti-Hsp90 integrates to 2620/2716 in the mutant lanes against 2447/2510 in wild type, so loading is even to slightly favouring the mutant and the deficit is not a loading artefact. (ii) The replacement draft's 'BINDING: abolished, unambiguous' was itself refused by the blind audit: the mutant pulldown lanes retain FAINT RESIDUAL signal (dipping to gray 149/179 and ~163 against lane backgrounds of ~185-188, roughly 3-13% of wild-type integrated density), so the loss is near-total and not literally complete. The original persisted snippet's 'near-absent' was the accurate word and is restored. The binding half is NOT weakened in substance - only its certainty adverb is corrected.",
+          "audit": {
+            "auditors": 1,
+            "verdicts": [
+              "blind locator audit, 2026-09-13, task ALDAZ-REPAIR-A-20260913: a separate agent with no session history received only (proposition, quote, anchor) triples plus the artefacts - no dossier, no candidate, no claim record, no reader identity. It opened the XML and cut a 3x crop of Fig 1a panel a at native 1801x1412, locating the four antibody rows from a y-darkness profile and running per-lane ImageMagick densitometry."
+            ]
+          }
+        }
+      },
+      {
+        "proposition": "SURVIVAL CURVE CONTRADICTS THE RUNNING TEXT'S MEAN: a quarter of homozygotes are alive at the last plotted day, and wild type is not flat at 1.0.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1b: x-axis runs to 600 days. WT/WT (n=14) approx 1.0 until ~500d then ~0.90. P47T/WT (n=30) ~0.93 to ~430d, declining to ~0.75 by ~520d. P47T/P47T (n=25) ~0.62 at 350d, ~0.53 at ~470d, ~0.26 still alive at ~580d. Log-rank p=0.001.",
+        "anchor": "Figure 1, panel b. The text's 'mean long-term survival of 393 +/- 32 days' is not reconcilable at face value with a 50% crossing near 470-500d; a mean over decedents only would explain it but is not stated.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_assets/nihms-1957654-f0001.jpg",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "BILATERAL SYNCHRONY of epileptiform activity is attested from the image, not inferred from the montage description.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1d: four channels labelled L-f, R-f, L-p, R-p; scale 500 microvolt / 1 s. Trace i (WT/WT) low-amplitude background; trace ii (P47T/P47T) frequent high-amplitude interictal spikes synchronous across all four channels; trace iii a generalized discharge, abrupt spike then fast rhythmic evolving to arrhythmic, across all four.",
+        "anchor": "Figure 1, panel d. This is the property a single-channel epidural montage (PMID 42422765) cannot resolve.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_assets/nihms-1957654-f0001.jpg",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "MICROGLIAL ABUNDANCE IS NOT SHOWN TO CHANGE WITH AGE, AND NO AGE TEST IS REPORTED FOR IT: Iba1+ cell number in P47T/P47T is similar at 80 and 250 days (approx 34 vs approx 33.5) and NO 80-versus-250 comparison is drawn or reported for Fig. 3b or 3c, unlike 3e-g which carry one. A missing bracket is an untested comparison, not a demonstrated null. The widening area-fraction gap in 3c comes from a WILD-TYPE decline (approx 14.5 to approx 11), not from a mutant rise. The authors nonetheless title Fig. 3 'progressive microgliosis'.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3b: WT ~22 vs P47T/P47T ~34 at 80-days (*), and WT ~22 vs P47T/P47T ~34 at 250-days (*). No significance bracket connects the two mutant ages. Fig 3c area fraction: mutant ~21 at 80d and ~20.5 at 250d while WT falls ~14.5 to ~11, so the widening gap is driven by the control.",
+        "anchor": "Figure 3, panels b and c, native resolution 1531x2100. Contrast Fig 3e-g where within-genotype 80-vs-250 brackets ARE drawn.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_assets/nihms-1957654-f0003.jpg",
+        "panel_text_relation": "panel_only",
+        "contradicts_locator": {
+          "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36828035.json",
+          "entry": 20,
+          "what_changed": "The prior proposition read the absence of an age bracket as 'identical' and 'not progressive', which treats a missing test as a null; narrowed to what is drawn, with the wild-type decline and the figure's own title named.",
+          "audit": {
+            "auditors": 1,
+            "verdicts": [
+              "blind locator audit, 2026-09-13, general-purpose auditor receiving only (proposition, quote, anchor) triples plus the artefacts, no dossier, no claim record, no reader identity; it opened every named image"
+            ]
+          }
+        }
+      },
+      {
+        "proposition": "MICROGLIAL MORPHOLOGY CARRIES THE ONLY WITHIN-MUTANT AGE BRACKET IN FIGURE 3: branches (approx 60 to approx 40), junctions (approx 30 to approx 20) and total branch length (approx 315 to approx 220) each carry a significant 80-versus-250-day bracket in the mutant, while the abundance measures 3b and 3c carry no age comparison at all. Wild type also declines slightly across the same interval, untested. 'The only progressive measure' is therefore a statement about which comparisons Figure 3 DRAWS, not about which quantities do or do not change.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3e branches: mutant ~60 at 80d to ~40 at 250d with a significance bracket between the two mutant ages. Fig 3f junctions ~30 to ~20 with bracket. Fig 3g total branch length ~315 to ~220 with bracket.",
+        "anchor": "Figure 3, panels e, f, g.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_assets/nihms-1957654-f0003.jpg",
+        "panel_text_relation": "panel_only",
+        "contradicts_locator": {
+          "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36828035.json",
+          "entry": 21,
+          "what_changed": "The prior proposition asserted this was the only progressive microglial measure; an absence of tests elsewhere cannot support 'only', so the claim is restated as being about the comparisons the figure draws.",
+          "audit": {
+            "auditors": 1,
+            "verdicts": [
+              "blind locator audit, 2026-09-13, general-purpose auditor receiving only (proposition, quote, anchor) triples plus the artefacts, no dossier, no claim record, no reader identity; it opened every named image"
+            ]
+          }
+        }
+      },
+      {
+        "proposition": "ASTROGLIOSIS IS GENUINELY PROGRESSIVE, in both number and area, with within-genotype significance.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 4b: Gfap+ number WT ~27 vs mutant ~39 at 80d (*), WT ~27 vs mutant ~56 at 250d (*), plus a significance bracket between the two mutant ages. Fig 4c: area fraction mutant ~24 at 80d to ~40 at 250d, also bracketed.",
+        "anchor": "Figure 4, panels b and c, native resolution 1430x2100.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_assets/nihms-1957654-f0004.jpg",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "OLIGODENDROCYTE NUMBER IS REDUCED AT BOTH AGES AND NO WITHIN-GENOTYPE AGE COMPARISON IS DRAWN: Olig2+ counts in corpus callosum are approx 122 (mutant) vs approx 205 (WT) at 80 days and approx 117 vs approx 237 at 250 days, each with an asterisk, and no mutant 80-versus-250 bracket appears. Mutant counts are similar across ages while the gap to WT WIDENS because WT rises - from approx 83 to approx 120 cells, i.e. the mutant falls from approx 60% to approx 49% of wild type. '80 days' is the earliest age sampled, not a demonstrated onset.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 4e: Olig2+ cells WT ~205 vs mutant ~122 at 80-days (*), WT ~235 vs mutant ~117 at 250-days (*). No within-genotype bracket between mutant ages.",
+        "anchor": "Figure 4, panel e.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_assets/nihms-1957654-f0004.jpg",
+        "panel_text_relation": "panel_only",
+        "contradicts_locator": {
+          "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36828035.json",
+          "entry": 23,
+          "what_changed": "The prior proposition said the deficit was established early and does not progress; that inferred a null from a missing bracket and omitted that the relative deficit widens because wild type rises. Narrowed to the drawn comparisons with both numbers.",
+          "audit": {
+            "auditors": 1,
+            "verdicts": [
+              "blind locator audit, 2026-09-13, general-purpose auditor receiving only (proposition, quote, anchor) triples plus the artefacts, no dossier, no claim record, no reader identity; it opened every named image"
+            ]
+          }
+        }
+      },
+      {
+        "proposition": "CEREBELLAR NEURONAL LOSS IS EARLY AND NOT PROGRESSIVE, and it is cell-type selective: basket cells are spared at both ages.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 5d: Purkinje number WT ~95 vs mutant ~25 at 80-days (*); WT ~100 vs mutant ~42 at 250-days (*) - the mutant value is HIGHER at the later age, and no within-genotype bracket is drawn. Fig 5e: basket cell number is ns at BOTH 80 and 250 days.",
+        "anchor": "Figure 5, panels d and e, native resolution 1542x2100. The apparent Purkinje increase is most likely survivor selection in the 250-day cohort; the panels do not decide between that and recovery.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_assets/nihms-1957654-f0005.jpg",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "THE WIDENING CEREBELLAR LAYER DIFFERENCE IS PARTLY NORMAL WILD-TYPE GROWTH, not only mutant loss.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 5g molecular layer thickness: WT ~190 at 80d rising to ~222 at 250d, while mutant is flat ~165 to ~162, both comparisons (*). Fig 5h granular layer: WT ~103 to ~130, mutant ~90 to ~92, both (*).",
+        "anchor": "Figure 5, panels g and h.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_assets/nihms-1957654-f0005.jpg",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "The running text asserts a lower rotarod distance travelled for the homozygote as a consequence of the shorter latency to fall.",
+        "snippet": "also had a lower distance traveled",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
+        "anchor": "Results 2.4, rotarod paragraph, citing Fig. 2e",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "ROTAROD DISTANCE IS NOT SIGNIFICANT AND THE PANEL PRINTS THE VALUE: Fig. 2e right-hand graph labels the WT/WT vs P47T/P47T distance comparison 0.0504, above the paper's own p<0.05 threshold, while the latency comparison beside it carries an asterisk. The text's 'therefore, also had a lower distance traveled' is an inference from latency, not a significant distance result.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2e: two bar graphs, Latency to Fall (s) and Distance Traveled (m), each with T1/T2/T3 per genotype. The latency graph carries an asterisk bracket spanning WT/WT to P47T/P47T; the distance graph carries the printed number 0.0504 over the same span instead of an asterisk.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_assets/nihms-1957654-f0002.jpg",
+        "anchor": "Figure 2, panel e, native resolution 1427x2100",
+        "panel_text_relation": "panel_qualifies_text",
+        "found_or_sought": "found",
+        "qualifies": "entries[26]",
+        "qualifies_needle": "also had a lower distance traveled",
+        "experimental_context": {
+          "system": "mouse",
+          "genotype": "Wwox P47T/P47T vs Wwox WT/WT",
+          "endpoint": "accelerating rotarod distance travelled",
+          "comparator": "WT/WT"
+        }
+      },
+      {
+        "proposition": "The text reports wild type and heterozygote together as both having a sociability preference, with the homozygote lacking it.",
+        "snippet": "the wildtype and heterozygous mice had a clear preference for spending time with another mouse versus an empty cage",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
+        "anchor": "Results 2.4, TCST sociability paragraph, citing Fig. 2d",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "THE PANEL SHOWS A SIGNIFICANT HETEROZYGOTE-VERSUS-WILD-TYPE SOCIABILITY DIFFERENCE THE TEXT DOES NOT REPORT: in Fig. 2d's Sociability graph the P47T/WT bar is HIGHER than WT/WT (approx 72 s vs approx 47 s) with an asterisk bracket between them, and the text never compares het with WT. This is ONE endpoint: no het-versus-WT bracket is drawn on the other Fig. 2 panels (OFT, EPM, JSET). It therefore QUALIFIES, rather than excludes, use of this paper's heterozygote as a comparator.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2d Sociability: three bars, WT/WT approx 47 s, P47T/WT approx 72 s, P47T/P47T approx 8 s, with asterisk brackets on WT/WT vs P47T/WT, WT/WT vs P47T/P47T and P47T/WT vs P47T/P47T. Social novelty graph: N vs F asterisk in WT/WT and in P47T/WT, no difference in P47T/P47T.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_assets/nihms-1957654-f0002.jpg",
+        "anchor": "Figure 2, panel d",
+        "panel_text_relation": "panel_qualifies_text",
+        "found_or_sought": "found",
+        "qualifies": "entries[28]",
+        "qualifies_needle": "clear preference for spending time with another mouse",
+        "experimental_context": {
+          "system": "mouse",
+          "genotype": "Wwox P47T/WT vs Wwox WT/WT",
+          "endpoint": "three-chambered sociability, time investigating",
+          "comparator": "WT/WT"
+        }
+      },
+      {
+        "proposition": "The text attributes reduced BRETIGEA scores for mature oligodendrocytes AND for OPCs to the hippocampus of the homozygote.",
+        "snippet": "It also shows reduced scores for mature oligodendrocytes (OLIGs) and oligodendrocytes progenitor cells (OPCs) in the HPC",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
+        "anchor": "Results 2.6, BRETIGEA paragraph, citing Fig. 6c",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "THE CITED PANEL DOES NOT SUPPORT THE HIPPOCAMPAL OLIGODENDROCYTE HALF OF THAT SENTENCE AT SIGNIFICANCE: Fig. 6c prints p=0.43 over the HPC OLIGs comparison - the largest p-value in the panel - while HPC OPCs is p=0.02; in PFC the pattern inverts (OLIGs p=0.02, OPCs p=0.27). p=0.43 is non-significance, NOT refutation: the homozygote median is visibly lower and the WT group is dispersed, so the DIRECTION agrees with the text. The text says 'reduced', not 'significantly reduced', and attaches 'significantly' only to astrocytes and microglia.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 6c: eight box plots in two rows. HPC row: ASTROCYTES p=0.01, MICROGLIA p=0.03, OLIGs p=0.43, OPCs p=0.02. PFC row: ASTROCYTES p=0.003, MICROGLIA p<0.001, OLIGs P=0.02, OPCs p=0.27. Group colours WT teal, HOM red.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_assets/nihms-1957654-f0006.jpg",
+        "anchor": "Figure 6, panel c, native resolution 1801x1544",
+        "panel_text_relation": "text_contradicted_by_panel",
+        "found_or_sought": "found",
+        "contradicts": "entries[30]",
+        "contradicts_needle": "reduced scores for mature oligodendrocytes (OLIGs)",
+        "experimental_context": {
+          "system": "mouse",
+          "genotype": "Wwox P47T/P47T vs Wwox WT/WT",
+          "endpoint": "BRETIGEA cell-type score, hippocampus",
+          "comparator": "WT/WT"
+        }
+      },
+      {
+        "proposition": "CTX HALF OF THE KEGG SENTENCE IS CARRIED BY ITS PANEL: Supplementary Fig. S11 (CTX) places BOTH 'GABAergic synapse' and 'Glutamatergic synapse' in the SUPPRESSED column, each marked with the legend's red arrow, alongside activated NF-kappa B, TNF and IL-17 signalling in the activated column.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] S11 'CTX KEGG Enriched pathways', two columns activated/suppressed. Suppressed column carries Glutamatergic synapse (p.adjust ~0.005, count ~30) and GABAergic synapse (p.adjust ~0.025, count ~10), both red-arrowed. Activated column carries Cytokine-cytokine receptor interaction, NF-kappa B signaling pathway, IL-17 signaling pathway, TNF signaling pathway, each black-arrowed.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID36828035/supp_pages/S_page13_200dpi.png",
+        "anchor": "Supplementary Figure S11 (CTX KEGG), page 13 of the supplementary figures PDF",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found",
+        "audit_note": "REPOINTED 2026-09-13 after a blind locator audit found the artefact one page off. The page numbers were written from a mistaken mapping; the panels described were the ones actually inspected. The mapping is now taken from the supplementary PDF's own text layer, which prints the figure number on each page, not from counting renders. As first written, entry 33 pointed at the CTX panel, which shows the OPPOSITE of its proposition."
+      },
+      {
+        "proposition": "THE HIPPOCAMPAL GABAERGIC HALF OF THE SENTENCE IS NOT AMONG THE PATHWAYS ITS CITED PANEL PLOTS: Supplementary Fig. S12 (HPC KEGG; legend mislabelled S11) shows Glutamatergic synapse in the suppressed column and NO GABAergic synapse row among the displayed pathways, while S11 (CTX, page 13) shows both. The body sentence is therefore carried for glutamatergic in both regions and for GABAergic in CTX only, as far as the plotted pathways show. Sub-threshold HPC GABAergic enrichment is NOT excluded: a dot plot of displayed pathways is not a full KEGG table, and no full table is deposited. The body sentence can also be read collectively across the two regions, which is one available reading of it.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] S12 'HPC KEGG Enriched pathways': suppressed column plots Sulfur metabolism, Propanoate metabolism, Ascorbate and aldarate metabolism, Fatty acid elongation, Glycine/serine/threonine metabolism, Fc gamma R-mediated phagocytosis, Glutamatergic synapse (red arrow), Long-term potentiation, GnRH secretion, Phosphatidylinositol signalling, Regulation of actin cytoskeleton, Aldosterone-regulated sodium reabsorption, Mineral absorption, Axon guidance, Thyroid hormone synthesis. Activated column includes IL-17 signaling pathway (black arrow), Neuroactive ligand-receptor interaction, Type I diabetes mellitus. No row reading GABAergic synapse appears in either column. The legend printed beneath reads 'Supplementary Figure S11 | KEGG pathway enrichment analysis in HPC' and 'Red arrow indicate suppression Glutamatergic synapses'.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID36828035/supp_pages/S_page14_200dpi.png",
+        "anchor": "Supplementary Figure S12 (HPC KEGG; its own legend is mislabelled S11), page 14 of the supplementary figures PDF",
+        "panel_text_relation": "text_contradicted_by_panel",
+        "found_or_sought": "found",
+        "contradicts": "entries[12]",
+        "contradicts_needle": "GABAergic and glutamatergic synapses in CTX and HPC",
+        "experimental_context": {
+          "system": "mouse",
+          "genotype": "Wwox P47T/P47T vs Wwox WT/WT",
+          "endpoint": "KEGG pathway enrichment, hippocampus",
+          "comparator": "WT/WT"
+        },
+        "audit_note": "REPOINTED 2026-09-13 after a blind locator audit found the artefact one page off. The page numbers were written from a mistaken mapping; the panels described were the ones actually inspected. The mapping is now taken from the supplementary PDF's own text layer, which prints the figure number on each page, not from counting renders. As first written, entry 33 pointed at the CTX panel, which shows the OPPOSITE of its proposition.",
+        "contradicts_locator": {
+          "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36828035.json",
+          "entry": 12,
+          "what_changed": "The panel cited for GABAergic suppression in HPC plots no GABAergic row; the claim is narrowed to CTX as far as the plotted pathways show, and sub-threshold HPC enrichment is explicitly not excluded.",
+          "audit": {
+            "auditors": 1,
+            "verdicts": [
+              "blind locator audit, 2026-09-13, general-purpose auditor receiving only (proposition, quote, anchor) triples plus the artefacts, no dossier, no claim record, no reader identity; it opened every named image"
+            ]
+          }
+        }
+      },
+      {
+        "proposition": "THE SUPPLEMENT CITED FOR THE PER-ANIMAL SEIZURE CLAIM SHOWS GROUP MEANS, NOT PER-ANIMAL COUNTS: Supplementary Fig. S3a/b are two-bar graphs of mean seizure number and mean spikes/hour with SEM, n=3 per genotype. They establish the group difference; they do NOT display the individual animals, so 'all three mutants had more than 4 seizures in 24 h' remains attested by the running text alone and cannot be checked against this panel. The running text's per-animal range (11-22 seizures over 43-53 h) is the only individual-level information available, and S3a gives no time window at all, so the panel does not even share the 24 h unit of the claim it is cited for.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] S3a: Number of seizures, WT/WT bar at 0 with no visible error bar, P47T/P47T approx 17.6 with SEM to approx 21, asterisk bracket. S3b: Spikes/hr, WT/WT approx 30, P47T/P47T approx 2450 with SEM to approx 2950, asterisk bracket. Legend: n=3 per group, *p-value < 0.01, unpaired Student's t-test. No individual data points are plotted in either panel.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID36828035/supp_pages/S_page05_200dpi.png",
+        "anchor": "Supplementary Figure S3, page 5 of the supplementary figures PDF",
+        "panel_text_relation": "panel_qualifies_text",
+        "found_or_sought": "found",
+        "qualifies": "entries[3]",
+        "qualifies_needle": "multiple (>4) seizures",
+        "experimental_context": {
+          "system": "mouse",
+          "genotype": "Wwox P47T/P47T vs Wwox WT/WT",
+          "endpoint": "seizure count and spike rate, video-EEG",
+          "comparator": "WT/WT"
+        }
+      },
+      {
+        "proposition": "THE TRANSCRIPT ARM OF THE ABUNDANCE/FUNCTION DISSOCIATION, NOW SEEN RATHER THAN CITED: Supplementary Fig. S2a plots relative Wwox expression in cerebellum for both genotypes at the same level with 'ns' printed over the bracket, n=6 per group with individual points shown. The locator that cited this panel on 2026-08-26 could not be verified then because the supplement was unavailable; it is now verified at source.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] S2a: two bars, WT/WT approx 1.3 and P47T/P47T approx 1.3, 'ns' over the bracket, six individual points per bar. S2b-f: weight coefficients for kidney, liver, spleen, pancreas, adrenal gland across WT/WT, P47T/WT and P47T/P47T; asterisk brackets appear only on kidney and liver, and only between WT/WT and P47T/P47T - the heterozygote carries no significance mark on any organ.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID36828035/supp_pages/S_page03_200dpi.png",
+        "anchor": "Supplementary Figure S2, page 3 of the supplementary figures PDF",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "A NEGATIVE THE AUTHORS STATE: myelination by Mbp staining is not different between homozygote and wild type, despite the oligodendrocyte deficit.",
+        "snippet": "no significant differences in Mbp staining were detected when comparing",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
+        "anchor": "Results 2.6 (oligodendrocyte section), citing Supplementary Figs. 6a-d",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "THE NEGATIVE IS CARRIED BY ITS PANELS AT BOTH AGES: Supplementary Fig. S6c and S6d plot Mbp+ area fraction for top and middle cortical regions at 80 and 250 days with no significance marks anywhere, n=3 per group. The 250-day top-region bars trend lower in the mutant and are still unmarked, so the negative is a non-significant difference at n=3 rather than a demonstrated equivalence.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] S6c (80-days): top region WT approx 11.5 vs mutant approx 12, middle region WT approx 36.5 vs mutant approx 39, no asterisks. S6d (250-days): top region WT approx 12.5 vs mutant approx 9.5, middle region WT approx 35 vs mutant approx 30, no asterisks. Legend states p-value is not significant, unpaired Student's t-test, n=3 per genotype.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID36828035/supp_pages/S_page08_200dpi.png",
+        "anchor": "Supplementary Figure S6, page 8 of the supplementary figures PDF",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found",
+        "experimental_context": {
+          "system": "mouse",
+          "genotype": "Wwox P47T/P47T vs Wwox WT/WT",
+          "endpoint": "Mbp+ area fraction, parietal cortex",
+          "timepoint": "80 and 250 days"
+        }
+      },
+      {
+        "proposition": "The RNA-seq design is declared as five mice per group for every tissue, cerebellum included.",
+        "snippet": "n = 5 mice/group (2 males and 3 females)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
+        "anchor": "Methods 4.14 'RNA-Seq and data analysis'",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "THE CEREBELLAR TRANSCRIPTOME PANEL SHOWS FEWER ANIMALS THAN THE METHODS DECLARE: Fig. 9a and its legend show n=4 WT and n=3 mutant CB samples against the Methods' n=5 per group, the missing leaves being WT M1 and mutant M7 and F9. The text names no excluded samples, though the Methods do state a RIN>8.0 inclusion criterion that could account for them; whether libraries were built and dropped or samples were never sequenced is not stated. The n behind the 1059 cerebellar DEGs is not given, and the clustered set is the likely basis rather than a stated one. Separately, the Methods' sex split of 2 males and 3 females per group contradicts the WT forebrain sample labels in Fig. 6a, which read 3 males and 2 females.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 9a: dendrogram with seven leaves labelled CB_WT/WT_M3, CB_WT/WT_M2, CB_WT/WT_F4, CB_WT/WT_F5, CB_P47T/P47T_M6, CB_P47T/P47T_F10, CB_P47T/P47T_F8 - four WT and three mutant. The printed legend reads WwoxWT/WT (n = 4) and WwoxP47T/P47T (n = 3) CB samples.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_assets/nihms-1957654-f0009.jpg",
+        "anchor": "Figure 9, panel a",
+        "panel_text_relation": "panel_qualifies_text",
+        "found_or_sought": "found",
+        "qualifies": "entries[38]",
+        "qualifies_needle": "n = 5 mice/group",
+        "experimental_context": {
+          "system": "mouse",
+          "genotype": "Wwox P47T/P47T vs Wwox WT/WT",
+          "endpoint": "cerebellar RNA-seq sample count",
+          "comparator": "WT/WT"
+        }
+      },
+      {
+        "proposition": "A COUNTER-DIRECTIONAL TERM INSIDE THE PAPER'S OWN INHIBITION STORY: in Fig. 7a the hippocampal GO term 'inhibitory postsynaptic potential' sits in the ACTIVATED column, black-arrowed, while the KEGG analysis of the same tissue is read by the text as suppression of inhibitory synapses. Two enrichment analyses of one tissue point in opposite directions on inhibition, and the paper reconciles them nowhere. Neither is a measurement of inhibitory transmission.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 7a 'HPC Gene Ontology terms', activated column: neuropeptide receptor binding, behavioral response to cocaine, inhibitory postsynaptic potential (black arrow), receptor regulator activity, G protein-coupled receptor activity, muscle contraction, behavior. Suppressed column: glial cell differentiation, hippocampus development, pallium development, telencephalon development, cerebral cortex development, forebrain development, postsynaptic density (all red-arrowed).",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_assets/nihms-1957654-f0007.jpg",
+        "anchor": "Figure 7, panel a",
+        "panel_text_relation": "panel_only",
+        "found_or_sought": "found",
+        "experimental_context": {
+          "system": "mouse",
+          "genotype": "Wwox P47T/P47T vs Wwox WT/WT",
+          "endpoint": "GO enrichment, hippocampus"
+        }
+      },
+      {
+        "proposition": "THE INFLAMMATORY AXIS IS REGION-WIDE AND CONSISTENT IN SIGN: Fig. 8a places CREB1, TGFB1, TNF, NFkB, IL1A, IL1B, RELA, IL5 and P38 MAPK as activated upstream regulators with positive Z scores in all three forebrain regions, and Fig. 8b shows TNFA_SIGNALING_VIA_NFKB, IL6_JAK_STAT3_SIGNALING and INFLAMMATORY_RESPONSE positively enriched in PFC, CTX and HPC alike. These are transcriptomic inferences about regulators, not measurements of the cytokines themselves.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 8a: horizontal bars per region (PFC/CTX/HPC) for CREB1 (HPC Z approx 6), TGFB1, TNF, NFkB, IL1A, IL1B, RELA, IL5, ERK1/2, BMP2, AGT, NOTCH1, IL1, IL4, P38 MAPK, JUN, NGF positive; DNMT3B, ZFP36, CBX5 negative. Fig 8b: normalized enrichment scores approx 1.3-2.3 for TNFA_SIGNALING_VIA_NFKB, IL6_JAK_STAT3_SIGNALING, INFLAMMATORY_RESPONSE, HYPOXIA, APOPTOSIS, GLYCOLYSIS in all three regions.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_assets/nihms-1957654-f0008.jpg",
+        "anchor": "Figure 8, panels a and b",
+        "panel_text_relation": "panel_only",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "The only direct cytokine measurement in the paper: IL1beta and TNFalpha transcripts are at least twofold up in mutant cerebellum by qRT-PCR, n=6 per group.",
+        "snippet": "upregulation of mRNA of both cytokines",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
+        "anchor": "Results 2.8, cerebellar qRT-PCR, citing Fig. 9d and 9e",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "THE CYTOKINE RESULT IS CARRIED BY ITS PANELS, AT n=6 AND WITH SPREAD: Fig. 9d and 9e plot relative Il1b and Tnfa expression with individual points, WT/WT against P47T/P47T, each with a single asterisk. The mutant distributions overlap the wild-type range in both panels - one mutant point sits inside the WT cloud in 9d - so this is a significant mean shift in a small sample, not a separation.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 9d: Relative Il1beta expression, WT/WT mean approx 2.0 (six points, approx 1.2-3.0), P47T/P47T mean approx 3.8 (six points, approx 2.3-6.0), asterisk. Fig 9e: Relative Tnfalpha expression, WT/WT mean approx 1.0 (points approx 0.5-1.6), P47T/P47T mean approx 3.3 (points approx 1.3-5.6), asterisk. Error bars SEM.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_assets/nihms-1957654-f0009.jpg",
+        "anchor": "Figure 9, panels d and e",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found",
+        "experimental_context": {
+          "system": "mouse",
+          "genotype": "Wwox P47T/P47T vs Wwox WT/WT",
+          "endpoint": "Il1b and Tnfa mRNA, cerebellum",
+          "comparator": "WT/WT"
+        }
+      },
+      {
+        "proposition": "THE KNOCK-IN IS NOT EMBRYONIC-LETHAL AND THE CROSS IS MENDELIAN: Supplementary Table 1 reports 18 WT, 45 heterozygous and 19 homozygous pups against 20.5/41/20.5 expected. This is the datum behind the body's Mendelian-ratio sentence, and it is the surface a resumed reading owed.",
+        "snippet": "Data represents genotyping result from 82 mice from 12 litters",
+        "surface": "supplement",
+        "artifact": "files/supplement/PMID36828035/NIHMS1957654-supplement-Supplementary_tables.docx",
+        "anchor": "Supplementary Table 1",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "A SYSTEMIC NEGATIVE, NOW VERIFIED RATHER THAN CITED: every haematology parameter in Supplementary Table 3 - white cells, neutrophils, lymphocytes, monocytes, eosinophils, basophils, red cells, haemoglobin, haematocrit, indices and platelets - is marked 'ns' across all three genotypes. With Supplementary Table 2's blood chemistry, also uniformly 'ns', the peripheral blood compartment of this model is unremarkable at the ages sampled.",
+        "snippet": "Supplementary Table 3 : Blood hematology analysis",
+        "surface": "supplement",
+        "artifact": "files/supplement/PMID36828035/NIHMS1957654-supplement-Supplementary_tables.docx",
+        "anchor": "Supplementary Table 3, p-value column",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "THE HETEROZYGOTE IS NOT PHENOTYPE-FREE, AND THE NUMBERS ARE SPECIFIC: Supplementary Table 4 gives the P47T/WT row as 6/19 neoplasia (33%), 4/19 cholestasis (22%), 5/19 focal liver degeneration (28%) and 13/19 nephropathy (72%), against a wild-type row of 2/7 (29%), 0, 0 and 1/7 (14%). Cholestasis and focal liver degeneration are ABSENT in wild type and present in a fifth to a quarter of heterozygotes, and nephropathy is 72% against 14%. No statistical comparison is offered for any of it.",
+        "snippet": "Wwox P47T/WT (n=19) 6 (33%) 4 (22%) 5 (28%) 13 (72%)",
+        "surface": "supplement",
+        "artifact": "files/supplement/PMID36828035/NIHMS1957654-supplement-Supplementary_tables.docx",
+        "anchor": "Supplementary Table 4, heterozygote row",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "AND THE HOMOZYGOTE ROW, WHICH IS WHY THE NEOPLASIA NUMBER MUST NOT BE READ AS PROTECTION: Supplementary Table 4 gives P47T/P47T as 1/21 neoplasia (5%), 9/21 cholestasis (43%), 5/21 focal liver degeneration (24%) and 11/21 nephropathy (52%). The low neoplasia figure sits beside a mean survival of 393 days against 542, which is the competing-risk explanation the authors themselves give.",
+        "snippet": "Wwox P47T/P47T (n=21) 1 (5%) 9 (43%) 5 (24%) 11 (52%)",
+        "surface": "supplement",
+        "artifact": "files/supplement/PMID36828035/NIHMS1957654-supplement-Supplementary_tables.docx",
+        "anchor": "Supplementary Table 4, homozygote row",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "THE STATISTICAL FRAME, AND WHAT IT OMITS: significance is p<0.05 on two-tailed t-tests, Mann-Whitney, or one/two-way ANOVA with Tukey post-hoc. No multiplicity correction across the many endpoints is declared, no power analysis appears anywhere, and no randomisation or blinding is declared for the imaging and quantification work.",
+        "snippet": "differences between the group means were considered statistically significant at p < 0.05",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
+        "anchor": "Methods 4.16 'Statistical analyses'",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "BLINDING IS DECLARED WHERE IT EXISTS, AND THIS BOUNDS THE EARLIER EEG FINDING: the juvenile social exploration and elevated plus maze scoring were done by a genotype-blind investigator. Blinding is therefore declared for parts of the behavioural battery and NOT for the video-EEG reading, which is attributed only to 'two trained observers'.",
+        "snippet": "manually scored by a genotype-blind investigator",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
+        "anchor": "Methods 4.8 'Juvenile social exploration test' and 4.9 'Elevated plus maze'",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "THE GENOTYPE ITSELF IS VERIFIED AT THE SEQUENCE LEVEL: Supplementary Fig. S1c shows Sanger traces for all three genotypes - CCG (Pro) in WT/WT, overlapping C/A and G/C peaks in the heterozygote, ACC (Thr) in the homozygote - and S1b places residue 47 inside the first WW domain of a 405-residue protein whose SDR domain is untouched. The 'partial loss of function' framing is structurally grounded, not asserted.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] S1a: Wwox exon 2 with sgRNA cagtgggaacatccgaaaac and PAM CGG, Mouse GRCm38/mm10 chr8:114,439,652-115,352,712. S1b: 145-nt SSOD, CCG (Pro) > ACC (Thr), c.139C>A, c.141G>C; protein schematic with WW domains at 18-47 and 59-88, SDR domain to residue 405, and a red mark at position 47. S1c: three Sanger traces reading TGGGAACATCCGAAAACCGGCAAG (WT, Pro), the same with overlapping A/C and C/G peaks (het, Thr/Pro), and TGGGAACATACCAAAACCGGCAAG (hom, Thr).",
+        "surface": "figure",
+        "artifact": "files/figures/PMID36828035/supp_pages/S_page01_200dpi.png",
+        "anchor": "Supplementary Figure S1, page 1 of the supplementary figures PDF",
+        "panel_text_relation": "panel_only",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "THE CEREBELLAR LOSS IS CELL-TYPE SELECTIVE, WHICH IS A CONTROL AND NOT A NULL: Purkinje cells fall sharply while basket cells in the same sections are unchanged, so the degeneration is not a global loss of cerebellar neurons or a sectioning artefact.",
+        "snippet": "the number of basket cells in the same regions remained unchanged",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
+        "anchor": "Results 2.7, citing Fig. 5c and 5e",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "A PERIPHERAL FINDING THAT TRAVELS WITH THE BRAIN PHENOTYPE: relative kidney and liver weights are increased in the homozygote, which together with the cholestasis and nephropathy of Supplementary Table 4 makes this model's phenotype not purely neurological.",
+        "snippet": "a slight increase in the kidney and liver weight coefficients was observed",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
+        "anchor": "Results 2.2, citing Supplementary Fig. S2",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "THE DISSOCIATION HOLDS ACROSS EVERY REGION SEQUENCED, NOT ONLY CEREBELLUM: Wwox transcript is comparable between genotypes in prefrontal cortex, parietal cortex and hippocampus in the RNA-seq data, with cerebellum shown in the same supplementary panel.",
+        "snippet": "Wwox gene expression was comparable between wildtype and homozygous samples across all three tissue regions",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
+        "anchor": "Results 2.6, citing Supplementary Fig. S9",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "AND THE PANEL BEHIND IT: Supplementary Fig. S9 plots Wwox FPKM for both genotypes in CB, CTX, PFC and HPC with five points per bar and no significance marks, so normal transcript with abolished binding is established in four brain regions rather than inferred from one.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] S9: eight bars in four labelled pairs. CB WT approx 3.35 vs mutant approx 3.1; CTX approx 2.05 vs 2.0; PFC approx 2.1 vs 1.9; HPC approx 1.55 vs 1.4. Five individual points per bar, SEM error bars, no asterisks. Legend: n=5 per genotype, p-value is not significant, unpaired Student's t-test.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID36828035/supp_pages/S_page11_200dpi.png",
+        "anchor": "Supplementary Figure S9, page 11 of the supplementary figures PDF",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found",
+        "audit_note": "REPOINTED 2026-09-13 after a blind locator audit found the artefact one page off. The page numbers were written from a mistaken mapping; the panels described were the ones actually inspected. The mapping is now taken from the supplementary PDF's own text layer, which prints the figure number on each page, not from counting renders. As first written, entry 33 pointed at the CTX panel, which shows the OPPOSITE of its proposition."
+      },
+      {
+        "proposition": "THE THIRD REGION AGREES ON THE INFLAMMATORY SIGN: Supplementary Fig. S13 (PFC KEGG) carries NF-kappa B signalling, IL-17 signalling and NOD-like receptor signalling in the activated column with Complement and coagulation cascades, and its suppressed column holds Ribosome, Long-term potentiation and Mineral absorption - no synaptic GABAergic term either way.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] S13 'PFC KEGG Enriched pathways': activated column includes Complement and coagulation cascades, Systemic lupus erythematosus, Malaria, Leishmaniasis, NF-kappa B signaling pathway (arrow), Neuroactive ligand-receptor interaction, Osteoclast differentiation, Rheumatoid arthritis, IL-17 signaling pathway (arrow), NOD-like receptor signaling pathway (arrow). Suppressed column: Ribosome, Long-term potentiation, Mineral absorption.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID36828035/supp_pages/S_page15_200dpi.png",
+        "anchor": "Supplementary Figure S13 (PFC KEGG), page 15 of the supplementary figures PDF",
+        "panel_text_relation": "panel_only",
+        "found_or_sought": "found",
+        "audit_note": "REPOINTED 2026-09-13 after a blind locator audit found the artefact one page off. The page numbers were written from a mistaken mapping; the panels described were the ones actually inspected. The mapping is now taken from the supplementary PDF's own text layer, which prints the figure number on each page, not from counting renders. As first written, entry 33 pointed at the CTX panel, which shows the OPPOSITE of its proposition."
+      }
+    ],
+    "note": "Twenty-six locators. Seventeen are anchored to running text or figure LEGENDS; NINE are anchored to figure PIXELS inspected at native resolution (Figures 1, 3, 4, 5) and are marked surface=figure. Figures 2, 6, 7, 8 and 9 were downloaded but NOT inspected and carry no locator. Coverage remains partial_fulltext_read because the four declared supplementary files are SOURCE_ACCESS_BLOCKED: PMC serves them through a JavaScript download interstitial that returns a 1,814-byte HTML page under the requested filename. Four text locators still cite Supplementary Figs S2a / S3a-b and Supplementary Table 4 as the source of a number not seen, and each says so in its anchor. Reading debt: clear the interstitial with a JS-capable client, and inspect Figures 2, 6-9."
   },
-  {
-   "path": "files/fulltext/PMID36828035_Hussain2023_assets/nihms-1957654-f0006.jpg",
-   "sha256": "876f17e154acc9215f82b675194ae71bd4d8aae9d7b74104529769e3ce5005f1",
-   "kind": "figure"
-  },
-  {
-   "path": "files/fulltext/PMID36828035_Hussain2023_assets/nihms-1957654-f0007.jpg",
-   "sha256": "e3e03ebfe0c5a1261d15105d05b05cf9eb5b60e6e5c82840a46bf2958a82a2f2",
-   "kind": "figure"
-  },
-  {
-   "path": "files/fulltext/PMID36828035_Hussain2023_assets/nihms-1957654-f0008.jpg",
-   "sha256": "864bd48b66a595317b86e65fc2d9b0c93ab179702bf125c19dbe9d5648b3b6ca",
-   "kind": "figure"
-  },
-  {
-   "path": "files/fulltext/PMID36828035_Hussain2023_assets/nihms-1957654-f0009.jpg",
-   "sha256": "5c26c5c02ced2f5e0c8b06a1314a00a228e9b3afadaff267d2624ebe7bad9644",
-   "kind": "figure"
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
+      "sha256": "004c59b54b5f57e462ccb39643b5f3adb44e7ecaef5eff8d786cb77c3568fd22",
+      "kind": "article_text",
+      "acquisition_recipe": {
+        "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC10835625&rettype=xml",
+        "http_method": "GET",
+        "tier": "ncbi_efetch_pmc_xml",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-09-13",
+        "derived": false,
+        "result_sha256": "004c59b54b5f57e462ccb39643b5f3adb44e7ecaef5eff8d786cb77c3568fd22",
+        "note": "Re-acquired 2026-09-13 and byte-identical to the digest the 2026-08-26 receipts were bound to. The Europe PMC fullTextXML of the same article is a DIFFERENT serialisation (169,678 bytes, sha bd08f4a2...) and is declared separately rather than substituted at this path."
+      }
+    },
+    {
+      "path": "files/fulltext/PMID36828035_Hussain2023_assets/nihms-1957654-f0001.jpg",
+      "sha256": "3a8e73046dd28bb4af7d0b4ad0a5f533108bbc32aa76051a94dd21eb38b04c8a",
+      "kind": "figure",
+      "acquisition_recipe": {
+        "http_method": "GET",
+        "tier": "pmc_bin_instance_via_pmc_pow_fetch",
+        "user_agent_policy": "identified",
+        "acquired_on": "2026-09-13",
+        "derived": false,
+        "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/10835625/bin/nihms-1957654-f0001.jpg",
+        "result_sha256": "3a8e73046dd28bb4af7d0b4ad0a5f533108bbc32aa76051a94dd21eb38b04c8a",
+        "note": "The article-page /bin/ route answers 200-with-reCAPTCHA to a no-User-Agent request and serves the JPEG to an identified one. All nine figures came back byte-identical to the digests declared on 2026-08-26; five of the nine had never been inspected as images before today."
+      }
+    },
+    {
+      "path": "files/fulltext/PMID36828035_Hussain2023_assets/nihms-1957654-f0002.jpg",
+      "sha256": "3ef3b7af8a1d9ff8cd5ccc2db36f681ecf00bca1ccab23caf202168cff09d78a",
+      "kind": "figure",
+      "acquisition_recipe": {
+        "http_method": "GET",
+        "tier": "pmc_bin_instance_via_pmc_pow_fetch",
+        "user_agent_policy": "identified",
+        "acquired_on": "2026-09-13",
+        "derived": false,
+        "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/10835625/bin/nihms-1957654-f0002.jpg",
+        "result_sha256": "3ef3b7af8a1d9ff8cd5ccc2db36f681ecf00bca1ccab23caf202168cff09d78a",
+        "note": "The article-page /bin/ route answers 200-with-reCAPTCHA to a no-User-Agent request and serves the JPEG to an identified one. All nine figures came back byte-identical to the digests declared on 2026-08-26; five of the nine had never been inspected as images before today."
+      }
+    },
+    {
+      "path": "files/fulltext/PMID36828035_Hussain2023_assets/nihms-1957654-f0003.jpg",
+      "sha256": "d2bc329fd35845a4c04bb73b7c8204de3229d6ab98f06181eb7dd087a8cd6f67",
+      "kind": "figure",
+      "acquisition_recipe": {
+        "http_method": "GET",
+        "tier": "pmc_bin_instance_via_pmc_pow_fetch",
+        "user_agent_policy": "identified",
+        "acquired_on": "2026-09-13",
+        "derived": false,
+        "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/10835625/bin/nihms-1957654-f0003.jpg",
+        "result_sha256": "d2bc329fd35845a4c04bb73b7c8204de3229d6ab98f06181eb7dd087a8cd6f67",
+        "note": "The article-page /bin/ route answers 200-with-reCAPTCHA to a no-User-Agent request and serves the JPEG to an identified one. All nine figures came back byte-identical to the digests declared on 2026-08-26; five of the nine had never been inspected as images before today."
+      }
+    },
+    {
+      "path": "files/fulltext/PMID36828035_Hussain2023_assets/nihms-1957654-f0004.jpg",
+      "sha256": "f9787d65761c0819213ac1e94e0b36a42a230c29ea1d6fd6f7eee7868310eaa5",
+      "kind": "figure",
+      "acquisition_recipe": {
+        "http_method": "GET",
+        "tier": "pmc_bin_instance_via_pmc_pow_fetch",
+        "user_agent_policy": "identified",
+        "acquired_on": "2026-09-13",
+        "derived": false,
+        "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/10835625/bin/nihms-1957654-f0004.jpg",
+        "result_sha256": "f9787d65761c0819213ac1e94e0b36a42a230c29ea1d6fd6f7eee7868310eaa5",
+        "note": "The article-page /bin/ route answers 200-with-reCAPTCHA to a no-User-Agent request and serves the JPEG to an identified one. All nine figures came back byte-identical to the digests declared on 2026-08-26; five of the nine had never been inspected as images before today."
+      }
+    },
+    {
+      "path": "files/fulltext/PMID36828035_Hussain2023_assets/nihms-1957654-f0005.jpg",
+      "sha256": "4ade833d8d552aac551f87431e4aaa6c2cc435633826b38c42e09585be770050",
+      "kind": "figure",
+      "acquisition_recipe": {
+        "http_method": "GET",
+        "tier": "pmc_bin_instance_via_pmc_pow_fetch",
+        "user_agent_policy": "identified",
+        "acquired_on": "2026-09-13",
+        "derived": false,
+        "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/10835625/bin/nihms-1957654-f0005.jpg",
+        "result_sha256": "4ade833d8d552aac551f87431e4aaa6c2cc435633826b38c42e09585be770050",
+        "note": "The article-page /bin/ route answers 200-with-reCAPTCHA to a no-User-Agent request and serves the JPEG to an identified one. All nine figures came back byte-identical to the digests declared on 2026-08-26; five of the nine had never been inspected as images before today."
+      }
+    },
+    {
+      "path": "files/fulltext/PMID36828035_Hussain2023_assets/nihms-1957654-f0006.jpg",
+      "sha256": "876f17e154acc9215f82b675194ae71bd4d8aae9d7b74104529769e3ce5005f1",
+      "kind": "figure",
+      "acquisition_recipe": {
+        "http_method": "GET",
+        "tier": "pmc_bin_instance_via_pmc_pow_fetch",
+        "user_agent_policy": "identified",
+        "acquired_on": "2026-09-13",
+        "derived": false,
+        "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/10835625/bin/nihms-1957654-f0006.jpg",
+        "result_sha256": "876f17e154acc9215f82b675194ae71bd4d8aae9d7b74104529769e3ce5005f1",
+        "note": "The article-page /bin/ route answers 200-with-reCAPTCHA to a no-User-Agent request and serves the JPEG to an identified one. All nine figures came back byte-identical to the digests declared on 2026-08-26; five of the nine had never been inspected as images before today."
+      }
+    },
+    {
+      "path": "files/fulltext/PMID36828035_Hussain2023_assets/nihms-1957654-f0007.jpg",
+      "sha256": "e3e03ebfe0c5a1261d15105d05b05cf9eb5b60e6e5c82840a46bf2958a82a2f2",
+      "kind": "figure",
+      "acquisition_recipe": {
+        "http_method": "GET",
+        "tier": "pmc_bin_instance_via_pmc_pow_fetch",
+        "user_agent_policy": "identified",
+        "acquired_on": "2026-09-13",
+        "derived": false,
+        "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/10835625/bin/nihms-1957654-f0007.jpg",
+        "result_sha256": "e3e03ebfe0c5a1261d15105d05b05cf9eb5b60e6e5c82840a46bf2958a82a2f2",
+        "note": "The article-page /bin/ route answers 200-with-reCAPTCHA to a no-User-Agent request and serves the JPEG to an identified one. All nine figures came back byte-identical to the digests declared on 2026-08-26; five of the nine had never been inspected as images before today."
+      }
+    },
+    {
+      "path": "files/fulltext/PMID36828035_Hussain2023_assets/nihms-1957654-f0008.jpg",
+      "sha256": "864bd48b66a595317b86e65fc2d9b0c93ab179702bf125c19dbe9d5648b3b6ca",
+      "kind": "figure",
+      "acquisition_recipe": {
+        "http_method": "GET",
+        "tier": "pmc_bin_instance_via_pmc_pow_fetch",
+        "user_agent_policy": "identified",
+        "acquired_on": "2026-09-13",
+        "derived": false,
+        "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/10835625/bin/nihms-1957654-f0008.jpg",
+        "result_sha256": "864bd48b66a595317b86e65fc2d9b0c93ab179702bf125c19dbe9d5648b3b6ca",
+        "note": "The article-page /bin/ route answers 200-with-reCAPTCHA to a no-User-Agent request and serves the JPEG to an identified one. All nine figures came back byte-identical to the digests declared on 2026-08-26; five of the nine had never been inspected as images before today."
+      }
+    },
+    {
+      "path": "files/fulltext/PMID36828035_Hussain2023_assets/nihms-1957654-f0009.jpg",
+      "sha256": "5c26c5c02ced2f5e0c8b06a1314a00a228e9b3afadaff267d2624ebe7bad9644",
+      "kind": "figure",
+      "acquisition_recipe": {
+        "http_method": "GET",
+        "tier": "pmc_bin_instance_via_pmc_pow_fetch",
+        "user_agent_policy": "identified",
+        "acquired_on": "2026-09-13",
+        "derived": false,
+        "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/10835625/bin/nihms-1957654-f0009.jpg",
+        "result_sha256": "5c26c5c02ced2f5e0c8b06a1314a00a228e9b3afadaff267d2624ebe7bad9644",
+        "note": "The article-page /bin/ route answers 200-with-reCAPTCHA to a no-User-Agent request and serves the JPEG to an identified one. All nine figures came back byte-identical to the digests declared on 2026-08-26; five of the nine had never been inspected as images before today."
+      }
+    },
+    {
+      "path": "files/fulltext/PMID36828035_Hussain2023_EPMC.xml",
+      "kind": "article_text",
+      "sha256": "bd08f4a28132600f4848a03c467da5a343ef8fcb42a5eb3ad58957c7b331c148",
+      "note": "Europe PMC fullTextXML of PMC10835625, a second structured surface. Used to cross-check the TABLE question: it declares 0 table-wrap elements, exactly as the efetch surface does.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10835625/fullTextXML",
+        "http_method": "GET",
+        "tier": "europepmc_fulltextxml",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-09-13",
+        "derived": false,
+        "result_sha256": "bd08f4a28132600f4848a03c467da5a343ef8fcb42a5eb3ad58957c7b331c148"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID36828035_Hussain2023.pdf",
+      "kind": "article_binary",
+      "sha256": "f51db304ab2938a00aaccb17aff4046dc5540494ccb096262fa59b0ed72d6a8c",
+      "note": "Publisher/NIHMS PDF, 39 pages. Acquired to settle the tables question on a THIRD surface: its text layer contains only 'Supplementary Table 1/2/4' mentions and no main-text table. Text locators are NOT anchored to it; the structured XML remains the text surface.",
+      "acquisition_recipe": {
+        "http_method": "GET",
+        "tier": "pmc_bin_instance_via_pmc_pow_fetch",
+        "user_agent_policy": "identified",
+        "acquired_on": "2026-09-13",
+        "derived": false,
+        "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10835625/pdf/nihms-1957654.pdf",
+        "result_sha256": "f51db304ab2938a00aaccb17aff4046dc5540494ccb096262fa59b0ed72d6a8c"
+      }
+    },
+    {
+      "path": "files/supplement/PMID36828035/NIHMS1957654-supplement-Supplementary_tables.docx",
+      "kind": "supplement_binary",
+      "sha256": "fd5b3926a5cf0c331aa9e5aae8a580c952449728a302b1dc91527a2bb784486a",
+      "note": "Supplementary tables S1-S4 (4 w:tbl elements). THE DECLARED DEBT, PAID: Europe PMC supplementaryFiles 404s and oa.fcgi is dead, but the PMC /bin/ instance route serves it. This is the surface carrying the paper's only tables.",
+      "acquisition_recipe": {
+        "http_method": "GET",
+        "tier": "pmc_bin_instance_via_pmc_pow_fetch",
+        "user_agent_policy": "identified",
+        "acquired_on": "2026-09-13",
+        "derived": false,
+        "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/10835625/bin/NIHMS1957654-supplement-Supplementary_tables.docx",
+        "result_sha256": "fd5b3926a5cf0c331aa9e5aae8a580c952449728a302b1dc91527a2bb784486a",
+        "note": "proof-of-work challenge solved at difficulty 4"
+      }
+    },
+    {
+      "path": "files/supplement/PMID36828035/NIHMS1957654-supplement-Supplementary_figures.pdf",
+      "kind": "supplement_binary",
+      "sha256": "6d48816e9281645409cb8e0ab0e77262f1cdd696368450b9be5788da51d4d021",
+      "note": "Supplementary figures S1-S13, 15 pages. No text locator points at this container; the fifteen deterministic page renders below are the inspected visual surface.",
+      "acquisition_recipe": {
+        "http_method": "GET",
+        "tier": "pmc_bin_instance_via_pmc_pow_fetch",
+        "user_agent_policy": "identified",
+        "acquired_on": "2026-09-13",
+        "derived": false,
+        "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/10835625/bin/NIHMS1957654-supplement-Supplementary_figures.pdf",
+        "result_sha256": "6d48816e9281645409cb8e0ab0e77262f1cdd696368450b9be5788da51d4d021",
+        "note": "proof-of-work challenge solved at difficulty 4"
+      }
+    },
+    {
+      "path": "files/supplement/PMID36828035/NIHMS1957654-supplement-Supplementary_data.xlsx",
+      "kind": "supplement_binary",
+      "sha256": "34486b446a116ae219925c46896a8fb2408b223f934484e6df09fed40567adb3",
+      "note": "Supplementary File 1 - the DEG tables. Four sheets PFC/CTX/HPC/CB with 426/364/1512/1060 data rows, which is the first independent check on the 425/363/1508/1059 DEG counts the body states. No text locator points at it.",
+      "acquisition_recipe": {
+        "http_method": "GET",
+        "tier": "pmc_bin_instance_via_pmc_pow_fetch",
+        "user_agent_policy": "identified",
+        "acquired_on": "2026-09-13",
+        "derived": false,
+        "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/10835625/bin/NIHMS1957654-supplement-Supplementary_data.xlsx",
+        "result_sha256": "34486b446a116ae219925c46896a8fb2408b223f934484e6df09fed40567adb3"
+      }
+    },
+    {
+      "path": "files/supplement/PMID36828035/NIHMS1957654-supplement-Supplementary_gene_data.xlsx",
+      "kind": "supplement_binary",
+      "sha256": "8221d68dd64a5137a51384d8ba45feab9af7c2d8507e362d60a23ca0f4e62462",
+      "note": "Supplementary File 2 - the 208 commonly dysregulated transcripts (209 rows with header, 18 columns). No text locator points at it.",
+      "acquisition_recipe": {
+        "http_method": "GET",
+        "tier": "pmc_bin_instance_via_pmc_pow_fetch",
+        "user_agent_policy": "identified",
+        "acquired_on": "2026-09-13",
+        "derived": false,
+        "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/10835625/bin/NIHMS1957654-supplement-Supplementary_gene_data.xlsx",
+        "result_sha256": "8221d68dd64a5137a51384d8ba45feab9af7c2d8507e362d60a23ca0f4e62462"
+      }
+    },
+    {
+      "path": "files/figures/PMID36828035/supp_pages/S_page01_200dpi.png",
+      "kind": "figure",
+      "sha256": "0245a5b0e16a0c344e32b56e0c991751380635457de13c39bc68b3448cbbd22f",
+      "note": "Deterministic 200-dpi render of page 1 of the supplementary figures PDF, inspected as an image.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/supplement/PMID36828035/NIHMS1957654-supplement-Supplementary_figures.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(dpi=200)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "0245a5b0e16a0c344e32b56e0c991751380635457de13c39bc68b3448cbbd22f"
+      }
+    },
+    {
+      "path": "files/figures/PMID36828035/supp_pages/S_page02_200dpi.png",
+      "kind": "figure",
+      "sha256": "94b2787fa9eb802ae0b6b4c8419b86fbf35cca7e86fcc3f130b19709820b1cab",
+      "note": "Deterministic 200-dpi render of page 2 of the supplementary figures PDF, inspected as an image.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/supplement/PMID36828035/NIHMS1957654-supplement-Supplementary_figures.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(dpi=200)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "94b2787fa9eb802ae0b6b4c8419b86fbf35cca7e86fcc3f130b19709820b1cab"
+      }
+    },
+    {
+      "path": "files/figures/PMID36828035/supp_pages/S_page03_200dpi.png",
+      "kind": "figure",
+      "sha256": "daff52b9762f81a21f9b521d49bfb3a6de80a75420ba3fafc46343f3e23e11ab",
+      "note": "Deterministic 200-dpi render of page 3 of the supplementary figures PDF, inspected as an image.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/supplement/PMID36828035/NIHMS1957654-supplement-Supplementary_figures.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(dpi=200)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "daff52b9762f81a21f9b521d49bfb3a6de80a75420ba3fafc46343f3e23e11ab"
+      }
+    },
+    {
+      "path": "files/figures/PMID36828035/supp_pages/S_page04_200dpi.png",
+      "kind": "figure",
+      "sha256": "9ce7765c5c18bf3835c9bb2388b75bbbef9fc8ae20e6d4d1b12760a4a40084c2",
+      "note": "Deterministic 200-dpi render of page 4 of the supplementary figures PDF, inspected as an image.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/supplement/PMID36828035/NIHMS1957654-supplement-Supplementary_figures.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(dpi=200)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "9ce7765c5c18bf3835c9bb2388b75bbbef9fc8ae20e6d4d1b12760a4a40084c2"
+      }
+    },
+    {
+      "path": "files/figures/PMID36828035/supp_pages/S_page05_200dpi.png",
+      "kind": "figure",
+      "sha256": "b5c78264a1b108ce85f812722fc26b7a613e9230328ccfe244d0fb58d7544657",
+      "note": "Deterministic 200-dpi render of page 5 of the supplementary figures PDF, inspected as an image.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/supplement/PMID36828035/NIHMS1957654-supplement-Supplementary_figures.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(dpi=200)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "b5c78264a1b108ce85f812722fc26b7a613e9230328ccfe244d0fb58d7544657"
+      }
+    },
+    {
+      "path": "files/figures/PMID36828035/supp_pages/S_page06_200dpi.png",
+      "kind": "figure",
+      "sha256": "e30cf0bf8ebab8cedccb80ccd23f1c4709d7bbec09fffc2df504cfc087d0c4bc",
+      "note": "Deterministic 200-dpi render of page 6 of the supplementary figures PDF, inspected as an image.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/supplement/PMID36828035/NIHMS1957654-supplement-Supplementary_figures.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(dpi=200)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "e30cf0bf8ebab8cedccb80ccd23f1c4709d7bbec09fffc2df504cfc087d0c4bc"
+      }
+    },
+    {
+      "path": "files/figures/PMID36828035/supp_pages/S_page07_200dpi.png",
+      "kind": "figure",
+      "sha256": "7d086694e6366d32d1bfbd7c836b5e151460c67ace3113d69616a23cef1f4329",
+      "note": "Deterministic 200-dpi render of page 7 of the supplementary figures PDF, inspected as an image.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/supplement/PMID36828035/NIHMS1957654-supplement-Supplementary_figures.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(dpi=200)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "7d086694e6366d32d1bfbd7c836b5e151460c67ace3113d69616a23cef1f4329"
+      }
+    },
+    {
+      "path": "files/figures/PMID36828035/supp_pages/S_page08_200dpi.png",
+      "kind": "figure",
+      "sha256": "193f0aabcaafc121b1ec93923446c01fa3a5bfbcf70d1de79218a549db1b388b",
+      "note": "Deterministic 200-dpi render of page 8 of the supplementary figures PDF, inspected as an image.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/supplement/PMID36828035/NIHMS1957654-supplement-Supplementary_figures.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(dpi=200)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "193f0aabcaafc121b1ec93923446c01fa3a5bfbcf70d1de79218a549db1b388b"
+      }
+    },
+    {
+      "path": "files/figures/PMID36828035/supp_pages/S_page09_200dpi.png",
+      "kind": "figure",
+      "sha256": "ad30a56adf5a280c21e8cd9a1eed27b0c5a6ea9a3637dda0317b5a9cd65c2303",
+      "note": "Deterministic 200-dpi render of page 9 of the supplementary figures PDF, inspected as an image.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/supplement/PMID36828035/NIHMS1957654-supplement-Supplementary_figures.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(dpi=200)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "ad30a56adf5a280c21e8cd9a1eed27b0c5a6ea9a3637dda0317b5a9cd65c2303"
+      }
+    },
+    {
+      "path": "files/figures/PMID36828035/supp_pages/S_page10_200dpi.png",
+      "kind": "figure",
+      "sha256": "14a7fb4d86da50d71cd6188c968326331a11bf27d38a29776a266c0ff1ff92dc",
+      "note": "Deterministic 200-dpi render of page 10 of the supplementary figures PDF, inspected as an image.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/supplement/PMID36828035/NIHMS1957654-supplement-Supplementary_figures.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(dpi=200)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "14a7fb4d86da50d71cd6188c968326331a11bf27d38a29776a266c0ff1ff92dc"
+      }
+    },
+    {
+      "path": "files/figures/PMID36828035/supp_pages/S_page11_200dpi.png",
+      "kind": "figure",
+      "sha256": "b0f5072d15caec8d2f2feb5deb93c081752cb018d95009788d73a57076cff8d5",
+      "note": "Deterministic 200-dpi render of page 11 of the supplementary figures PDF, inspected as an image.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/supplement/PMID36828035/NIHMS1957654-supplement-Supplementary_figures.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(dpi=200)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "b0f5072d15caec8d2f2feb5deb93c081752cb018d95009788d73a57076cff8d5"
+      }
+    },
+    {
+      "path": "files/figures/PMID36828035/supp_pages/S_page12_200dpi.png",
+      "kind": "figure",
+      "sha256": "a2c93e7ff54dac976c4555ab2097802130aa110353354cc86b33c63f90f7f65b",
+      "note": "Deterministic 200-dpi render of page 12 of the supplementary figures PDF, inspected as an image.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/supplement/PMID36828035/NIHMS1957654-supplement-Supplementary_figures.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(dpi=200)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "a2c93e7ff54dac976c4555ab2097802130aa110353354cc86b33c63f90f7f65b"
+      }
+    },
+    {
+      "path": "files/figures/PMID36828035/supp_pages/S_page13_200dpi.png",
+      "kind": "figure",
+      "sha256": "00cf22860bc742d871c37a3d8ae4758bd732319bc55c5d682535858dd57e91ef",
+      "note": "Deterministic 200-dpi render of page 13 of the supplementary figures PDF, inspected as an image.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/supplement/PMID36828035/NIHMS1957654-supplement-Supplementary_figures.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(dpi=200)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "00cf22860bc742d871c37a3d8ae4758bd732319bc55c5d682535858dd57e91ef"
+      }
+    },
+    {
+      "path": "files/figures/PMID36828035/supp_pages/S_page14_200dpi.png",
+      "kind": "figure",
+      "sha256": "8f7ca5597527faa1c88740f28c1e5f1e37bd09c3c76bf219edda3f09cffb5fa1",
+      "note": "Deterministic 200-dpi render of page 14 of the supplementary figures PDF, inspected as an image.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/supplement/PMID36828035/NIHMS1957654-supplement-Supplementary_figures.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(dpi=200)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "8f7ca5597527faa1c88740f28c1e5f1e37bd09c3c76bf219edda3f09cffb5fa1"
+      }
+    },
+    {
+      "path": "files/figures/PMID36828035/supp_pages/S_page15_200dpi.png",
+      "kind": "figure",
+      "sha256": "5a217af83dcb079d35e35c7589879a78f8019dbe91cf2ee0f760c13e73ec2251",
+      "note": "Deterministic 200-dpi render of page 15 of the supplementary figures PDF, inspected as an image.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/supplement/PMID36828035/NIHMS1957654-supplement-Supplementary_figures.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_pixmap(dpi=200)",
+          "join": ""
+        },
+        "acquired_on": "2026-09-13",
+        "result_sha256": "5a217af83dcb079d35e35c7589879a78f8019dbe91cf2ee0f760c13e73ec2251"
+      }
+    }
+  ],
+  "reading_budget": {
+    "resumption_of": [
+      "FTR-20260826-36828035-01",
+      "FTR-20260826-36828035-02"
+    ],
+    "sections_owed_by_the_prior_receipts": [
+      "references=not_read",
+      "supplementary=unavailable",
+      "tables=not_read"
+    ],
+    "what_closed_them": "references: 61 enumerated from the artefact. supplementary: all four declared containers retrieved through a route the recorded cascade had not tried, and all 13 supplementary figures inspected as 200-dpi renders. tables: settled on THREE surfaces - 0 table-wrap in the efetch XML, 0 in the Europe PMC XML, and no main-text table in the 39-page publisher PDF, whose text layer names only 'Supplementary Table 1/2/4'. The paper HAS tables and all four of them are supplementary; `tables: not_present` is therefore the honest main-text value and the supplement carries them.",
+    "panels_present": "9 main figures (each multi-panel) + 13 supplementary figures over 15 PDF pages + 4 supplementary tables",
+    "panels_inspected": "9 of 9 main figures at native resolution (1179x2100 to 1801x1544); 15 of 15 supplementary pages at 200 dpi; 4 of 4 supplementary tables through the docx text surface",
+    "denominator_basis": "figure-level, counted per artefact from the XML's <fig> elements and the supplement PDF's page count",
+    "denominator_status": "known",
+    "five_figures_never_previously_inspected": [
+      "f0002",
+      "f0006",
+      "f0007",
+      "f0008",
+      "f0009"
+    ],
+    "what_the_new_panels_produced": "Three of the five previously uninspected figures carried findings that change what the paper supports: Fig. 2e's printed 0.0504, Fig. 2d's significant heterozygote-versus-wild-type sociability bracket, and Fig. 6c's p=0.43 on hippocampal OLIGs.",
+    "blind_locator_audit": {
+      "run_on": "2026-09-13",
+      "triples_audited": 10,
+      "auditor": "blind, triples-only, no dossier and no claim record",
+      "outcome": "1 BLOCKING artefact defect (entry 33 pointed one page off, at a panel showing the opposite), 4 locators repointed after mechanical page-to-figure mapping from the PDF text layer, 6 propositions narrowed (3 of them persisted entries, each with a declared contradicts_locator), 3 confirmed as written (entries 22, 27, 34), 0 fabricated.",
+      "severity_high_caught_by_auditor": 1
+    }
   }
- ]
 }

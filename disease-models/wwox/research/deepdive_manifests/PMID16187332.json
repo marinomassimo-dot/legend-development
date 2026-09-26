@@ -1,0 +1,1304 @@
+{
+ "schema_version": 2,
+ "pmid": "16187332",
+ "doi": "10.1002/mc.20122",
+ "receipt": "FTR-20260914-16187332-01",
+ "landing": [
+  "FTR-20260914-16187332-01",
+  "fulltext_dossiers/PMID16187332.md",
+  "CC-20260914-16187332-01"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Run inline and measured: PMC article HTML behind a reCAPTCHA interstitial served under HTTP 200 on the first request, the article on a delayed retry; Europe PMC fullTextXML 404; efetch shell refusing XML; manuscript PDF via pmc_pow_fetch.py."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline: the loading, splicing and missing-control findings exist only in the native blot pixels."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered inside the reading: first contact, no persisted locator for this PMID. Threshold re-checked after canon comparison."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Declined inside a blind primary read."
+  },
+  {
+   "skill": "legend-paperqa",
+   "used": false,
+   "reason": "Declined: external API key and traffic not authorised, and a RAG answer is not a reading."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 138,
+  "publications_on_gene": 38,
+  "counts_measured": "PubMed esearch 2026-09-14: corresponding author 'Aldaz CM[au]' 138, 'Aldaz CM[au] AND WWOX' 38; first author 'Thavathiru E[au]' 17, with WWOX 1; co-author 'MacLeod MC[au]' 88; 'Ludes-Meyers JH[au]' 13.",
+  "research_type": "experimental_lab",
+  "output_kind": "primary_research",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": true,
+  "weighting": "A founding WWOX laboratory with a carcinogenesis department; MacLeod brings native BPDE chemistry. Northern, western and flow cytometry in two cell lines are the group's competence and weigh as competent observation - of single representative experiments. The mechanistic readings (ATR vs ATM, bulky-adduct transcription block, S-phase checkpoint control) are the group's hypotheses, two of which the Discussion sets against each other. Primary for the gene is not primary for the disease: nothing here concerns neural cells or WWOX-DEE."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "WWOX",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 708
+   },
+   {
+    "query": "WWOX AND (UV OR ultraviolet OR benzo*)",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 19
+   },
+   {
+    "query": "WWOX AND (UV OR ultraviolet OR BPDE OR benzo[a]pyrene) AND expression",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 13
+   },
+   {
+    "query": "WWOX AND FHIT AND fragile site AND expression",
+    "route": "PubMed esearch 2026-09-14",
+    "count": 28
+   }
+  ],
+  "note": "Field sizes, not reading coverage."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 65,
+  "enumeration_method": "Enumerated from the fingerprinted PMC HTML reference list: 65 entries, all with a PubMed link. Gene-direct by script on reference text: 10.",
+  "gene_direct_count": 10,
+  "gene_direct_refs_in_source": [
+   "10786676",
+   "11572989",
+   "11956080",
+   "15266310",
+   "14638866",
+   "11719429",
+   "14526170",
+   "15073846",
+   "14603443",
+   "15798093"
+  ],
+  "resolved": [
+   "14526170"
+  ],
+  "queued": [
+   {
+    "pmid": "10786676",
+    "queue": "not queued by this actor: routed to the orchestrator in CC-20260914-16187332-01, because this contract does not own the queue file",
+    "reason": "Gene-direct reference with no complete receipt in this corpus (fulltext_receipts.py status exit 1, 2026-09-14)."
+   },
+   {
+    "pmid": "11572989",
+    "queue": "not queued by this actor: routed to the orchestrator in CC-20260914-16187332-01, because this contract does not own the queue file",
+    "reason": "Gene-direct reference with no complete receipt in this corpus (fulltext_receipts.py status exit 1, 2026-09-14)."
+   },
+   {
+    "pmid": "11956080",
+    "queue": "not queued by this actor: routed to the orchestrator in CC-20260914-16187332-01, because this contract does not own the queue file",
+    "reason": "Gene-direct reference with no complete receipt in this corpus (fulltext_receipts.py status exit 1, 2026-09-14)."
+   },
+   {
+    "pmid": "15266310",
+    "queue": "not queued by this actor: routed to the orchestrator in CC-20260914-16187332-01, because this contract does not own the queue file",
+    "reason": "Gene-direct reference with no complete receipt in this corpus (fulltext_receipts.py status exit 1, 2026-09-14)."
+   },
+   {
+    "pmid": "14638866",
+    "queue": "not queued by this actor: routed to the orchestrator in CC-20260914-16187332-01, because this contract does not own the queue file",
+    "reason": "Gene-direct reference with no complete receipt in this corpus (fulltext_receipts.py status exit 1, 2026-09-14)."
+   },
+   {
+    "pmid": "11719429",
+    "queue": "not queued by this actor: routed to the orchestrator in CC-20260914-16187332-01, because this contract does not own the queue file",
+    "reason": "Gene-direct reference with no complete receipt in this corpus (fulltext_receipts.py status exit 1, 2026-09-14)."
+   },
+   {
+    "pmid": "15073846",
+    "queue": "not queued by this actor: routed to the orchestrator in CC-20260914-16187332-01, because this contract does not own the queue file",
+    "reason": "Gene-direct reference with no complete receipt in this corpus (fulltext_receipts.py status exit 1, 2026-09-14)."
+   },
+   {
+    "pmid": "14603443",
+    "queue": "not queued by this actor: routed to the orchestrator in CC-20260914-16187332-01, because this contract does not own the queue file",
+    "reason": "Palakodeti 2004, late replication of FRA16D, a premise of the fragile-site framing."
+   },
+   {
+    "pmid": "15798093",
+    "queue": "not queued by this actor: routed to the orchestrator in CC-20260914-16187332-01, because this contract does not own the queue file",
+    "reason": "Ishii 2005, the independent UV-WWOX-FHIT result cited as submitted concurrently, with a G1-S attribution that differs from this paper's S-phase one."
+   }
+  ],
+  "resolved_depth_declaration": "RESOLVED MEANS A PERSISTED complete_fulltext_read RECEIPT (fulltext_receipts.py status --pmid, 2026-09-14) and nothing more. 1 of 10 gene-direct references resolves: 14526170 (Ludes-Meyers 2003, ref 23), the source of the in-house antibody. The concurrent independent UV result (Ishii 2005, 15798093) is unresolved."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Technical only: fulltext_receipts.py status --pmid for 16187332 before reading (exit 1, no events) and for each of the 65 reference PMIDs. No claim, registry, dossier or candidate content opened before the dossier froze.",
+  "hits": 1,
+  "finding": "1 of 65 referenced PMIDs carries a complete receipt (14526170)."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-09-14",
+  "route": "NCBI esummary db=pubmed retmode=json for 16187332, 2026-09-14T19:44Z",
+  "result": "pubtype Journal Article; Research Support, N.I.H., Extramural; Research Support, U.S. Gov't, P.H.S. commentscorrections absent.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 65,
+   "references_screened": 52,
+   "references_with_doi": 52,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 4,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 13
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID16187332_Thavathiru2005.html",
+   "kind": "article_text",
+   "note": "PMC article page of PMC4166602 (NIH author manuscript NIHMS222058). FIRST request 2026-09-14T19:45Z returned HTTP 200 carrying a 21315 B Google reCAPTCHA 'Checking your browser' interstitial, not the article; the retry about 20 s later with no User-Agent returned HTTP 200 and the 200918 B article, which is this file (an identified-agent retry returned the same bytes). citation_pmid 16187332 and citation_doi 10.1002/mc.20122 from its own meta tags. Evidentiary text surface. AUTHOR MANUSCRIPT, not the Wiley version of record. Europe PMC fullTextXML 404 and efetch db=pmc a 7396 B no-download shell, same minute.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4166602/",
+    "http_method": "GET",
+    "tier": "pmc_article_html",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "569692707b93b06d8fe99d1e7c3571ea0d8d27ba7997e9e649ab4c0a85dcecc8"
+  },
+  {
+   "path": "files/fulltext/PMID16187332_Thavathiru2005.pdf",
+   "kind": "article_binary",
+   "note": "NIH author-manuscript PDF nihms222058.pdf, 20 pages, via pmc_pow_fetch.py. Declared ONLY as the source of the native figure rasters.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4166602/pdf/nihms222058.pdf",
+    "http_method": "GET",
+    "tier": "pmc_pow_fetch",
+    "user_agent_policy": "identified",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "03b2783330b69570c8248810320af17a8eafb3ee6fbc6b287f148d4c2d5b0846"
+  },
+  {
+   "path": "files/fulltext/PMID16187332_Thavathiru2005_assets/pdf_p13_x49.jpeg",
+   "kind": "figure",
+   "note": "Figure 1, native embedded grayscale JPEG 2357x4200, PDF p.13 (caption on that page checked). Larger than one native view, so inspected as native tiles.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID16187332_Thavathiru2005.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref) over Page.get_images(full=True); bytes written unmodified",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "d24aaad422e12b1f99bf429c96612d75b7b144c6be0119aef87e71f73bbbc8e7"
+  },
+  {
+   "path": "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f1_r0c0.png",
+   "kind": "figure",
+   "note": "Native tile r0c0 of Figure 1, geometry 1179x1400+0+0.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID16187332_Thavathiru2005_assets/pdf_p13_x49.jpeg",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 1179x1400+0+0 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "6cb0b71d326fee51012c66bfbac65a5bd1ab3a79111fb0b8a6a14432bd957813"
+  },
+  {
+   "path": "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f1_r0c1.png",
+   "kind": "figure",
+   "note": "Native tile r0c1 of Figure 1, geometry 1179x1400+1178+0.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID16187332_Thavathiru2005_assets/pdf_p13_x49.jpeg",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 1179x1400+1178+0 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "588bff691dde80cf31d586a7a91b74ca148d8a8df77562789023ba2eef9e307a"
+  },
+  {
+   "path": "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f1_r1c0.png",
+   "kind": "figure",
+   "note": "Native tile r1c0 of Figure 1, geometry 1179x1400+0+1400.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID16187332_Thavathiru2005_assets/pdf_p13_x49.jpeg",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 1179x1400+0+1400 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "03c7532cf451d2618089f7e33518fc4f681363b27d59a3c062fe2ad2e3fafede"
+  },
+  {
+   "path": "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f1_r1c1.png",
+   "kind": "figure",
+   "note": "Native tile r1c1 of Figure 1, geometry 1179x1400+1178+1400.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID16187332_Thavathiru2005_assets/pdf_p13_x49.jpeg",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 1179x1400+1178+1400 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "a1fc1418c4f04dc1dfdbee9243cce523d8dc285715bf3aeab346a97a03d916fa"
+  },
+  {
+   "path": "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f1_r2c0.png",
+   "kind": "figure",
+   "note": "Native tile r2c0 of Figure 1, geometry 1179x1400+0+2800.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID16187332_Thavathiru2005_assets/pdf_p13_x49.jpeg",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 1179x1400+0+2800 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "bc939ed16e2b7c0e3b92b925a80a3f4857c1d24226d56f016cf6b078a6215b05"
+  },
+  {
+   "path": "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f1_r2c1.png",
+   "kind": "figure",
+   "note": "Native tile r2c1 of Figure 1, geometry 1179x1400+1178+2800.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID16187332_Thavathiru2005_assets/pdf_p13_x49.jpeg",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 1179x1400+1178+2800 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "556c27a17377ae6d73cfb934a039377ae08525eae2b38bdefb859c430805ef11"
+  },
+  {
+   "path": "files/fulltext/PMID16187332_Thavathiru2005_assets/pdf_p15_x58.jpeg",
+   "kind": "figure",
+   "note": "Figure 2, native embedded grayscale JPEG 2574x4200, PDF p.15 (caption on that page checked). Larger than one native view, so inspected as native tiles.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID16187332_Thavathiru2005.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref) over Page.get_images(full=True); bytes written unmodified",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "1efb2b078c29cd24b4f1a8c7024afbaba4257fb707368af8f08f37e59eab2f31"
+  },
+  {
+   "path": "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f2_r0c0.png",
+   "kind": "figure",
+   "note": "Native tile r0c0 of Figure 2, geometry 1287x1400+0+0.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID16187332_Thavathiru2005_assets/pdf_p15_x58.jpeg",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 1287x1400+0+0 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "4321638d9ed97af6a87e13134a56bc7bd208e91512c2f3dd150cbf25d8e00dd8"
+  },
+  {
+   "path": "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f2_r0c1.png",
+   "kind": "figure",
+   "note": "Native tile r0c1 of Figure 2, geometry 1287x1400+1287+0.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID16187332_Thavathiru2005_assets/pdf_p15_x58.jpeg",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 1287x1400+1287+0 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "54442671db9a073274fb92ccea133f3f14e82b9070f3f6d367decc966352ffc7"
+  },
+  {
+   "path": "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f2_r1c0.png",
+   "kind": "figure",
+   "note": "Native tile r1c0 of Figure 2, geometry 1287x1400+0+1400.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID16187332_Thavathiru2005_assets/pdf_p15_x58.jpeg",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 1287x1400+0+1400 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "1b3fb075117ab498e99de0ac46a3138c70898b3686b5d0aada9e2bba83e66542"
+  },
+  {
+   "path": "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f2_r1c1.png",
+   "kind": "figure",
+   "note": "Native tile r1c1 of Figure 2, geometry 1287x1400+1287+1400.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID16187332_Thavathiru2005_assets/pdf_p15_x58.jpeg",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 1287x1400+1287+1400 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "8b4ecab1af6a27ad0a01c64a3f59b7db9063c4d67d97c4ba109499b69f22c913"
+  },
+  {
+   "path": "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f2_r2c0.png",
+   "kind": "figure",
+   "note": "Native tile r2c0 of Figure 2, geometry 1287x1400+0+2800.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID16187332_Thavathiru2005_assets/pdf_p15_x58.jpeg",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 1287x1400+0+2800 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "5f1a440be1060cb6a569ed37c285e53661c792bf95b3e59a0d07ce1f5b2b16a8"
+  },
+  {
+   "path": "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f2_r2c1.png",
+   "kind": "figure",
+   "note": "Native tile r2c1 of Figure 2, geometry 1287x1400+1287+2800.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID16187332_Thavathiru2005_assets/pdf_p15_x58.jpeg",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 1287x1400+1287+2800 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "732adf026bf9693a77db8d15aeb6fc886acacdbe20005bcb0bfcdf787fa618f4"
+  },
+  {
+   "path": "files/fulltext/PMID16187332_Thavathiru2005_assets/pdf_p16_x63.jpeg",
+   "kind": "figure",
+   "note": "Figure 3, native embedded grayscale JPEG 4200x1782, PDF p.16 (caption on that page checked). Larger than one native view, so inspected as native tiles.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID16187332_Thavathiru2005.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref) over Page.get_images(full=True); bytes written unmodified",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "64cdce35299e1600979ddcb1d70fc6c1c170f9303ee0c6b9302a4d6d98d766be"
+  },
+  {
+   "path": "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f3_r0c0.png",
+   "kind": "figure",
+   "note": "Native tile r0c0 of Figure 3, geometry 1400x1782+0+0.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID16187332_Thavathiru2005_assets/pdf_p16_x63.jpeg",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 1400x1782+0+0 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "fa9bd980233f329210bc07c1aaf4c09b50815681f652e122735781f9e3aefba8"
+  },
+  {
+   "path": "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f3_r0c1.png",
+   "kind": "figure",
+   "note": "Native tile r0c1 of Figure 3, geometry 1400x1782+1400+0.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID16187332_Thavathiru2005_assets/pdf_p16_x63.jpeg",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 1400x1782+1400+0 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "d149dbd7da1f6d81ded264deb4b5711e7b1f6dffb0b83cac7f3a57580de26ff5"
+  },
+  {
+   "path": "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f3_r0c2.png",
+   "kind": "figure",
+   "note": "Native tile r0c2 of Figure 3, geometry 1400x1782+2800+0.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID16187332_Thavathiru2005_assets/pdf_p16_x63.jpeg",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 1400x1782+2800+0 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "431aaf71be21c32a32d9c0b3ea7726d4bcd7d178f7d65b4a2a6691dba599b08c"
+  },
+  {
+   "path": "files/fulltext/PMID16187332_Thavathiru2005_assets/pdf_p17_x68.jpeg",
+   "kind": "figure",
+   "note": "Figure 4, native embedded grayscale JPEG 1882x4200, PDF p.17 (caption on that page checked). Larger than one native view, so inspected as native tiles.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID16187332_Thavathiru2005.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref) over Page.get_images(full=True); bytes written unmodified",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "9271f88fd5c83738574ea75de473b4ddadf1e30e7bfab6bb791efed2f8442e7f"
+  },
+  {
+   "path": "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f4_r0c0.png",
+   "kind": "figure",
+   "note": "Native tile r0c0 of Figure 4, geometry 1882x1400+0+0.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID16187332_Thavathiru2005_assets/pdf_p17_x68.jpeg",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 1882x1400+0+0 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "7de5fcda44caa4edefbb59d494cb5369b83556ff7945d58125bd95696fbfe25f"
+  },
+  {
+   "path": "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f4_r1c0.png",
+   "kind": "figure",
+   "note": "Native tile r1c0 of Figure 4, geometry 1882x1400+0+1400.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID16187332_Thavathiru2005_assets/pdf_p17_x68.jpeg",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 1882x1400+0+1400 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "706c166ef58e1e9546e8dfb93a2e5ef45dbbaca63a541f5104f54eed141711f7"
+  },
+  {
+   "path": "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f4_r2c0.png",
+   "kind": "figure",
+   "note": "Native tile r2c0 of Figure 4, geometry 1882x1400+0+2800.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID16187332_Thavathiru2005_assets/pdf_p17_x68.jpeg",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 1882x1400+0+2800 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "a81c02ed0a0620d26916be05c372b4fce2f6da83e405107cf09c24d8590d5892"
+  },
+  {
+   "path": "files/fulltext/PMID16187332_Thavathiru2005_assets/pdf_p19_x76.jpeg",
+   "kind": "figure",
+   "note": "Figure 5, native embedded grayscale JPEG 3298x4200, PDF p.19 (caption on that page checked). Larger than one native view, so inspected as native tiles.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID16187332_Thavathiru2005.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Document.extract_image(xref) over Page.get_images(full=True); bytes written unmodified",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "2f212e3b9e272e0ebf3d9b74890690dc9b56664e1be5fa5a6ee618430a5cbbf1"
+  },
+  {
+   "path": "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f5_r0c0.png",
+   "kind": "figure",
+   "note": "Native tile r0c0 of Figure 5, geometry 1649x1400+0+0.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID16187332_Thavathiru2005_assets/pdf_p19_x76.jpeg",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 1649x1400+0+0 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "7e2b51cec7cf43164239e91d86b2faf79c8d43cd51e8bcd6e56ede7b14dfe42a"
+  },
+  {
+   "path": "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f5_r0c1.png",
+   "kind": "figure",
+   "note": "Native tile r0c1 of Figure 5, geometry 1649x1400+1649+0.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID16187332_Thavathiru2005_assets/pdf_p19_x76.jpeg",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 1649x1400+1649+0 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "e593f166bc2b839fab6f274744d2c0da0f0576007aa4d9d0a620ad81b323f964"
+  },
+  {
+   "path": "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f5_r1c0.png",
+   "kind": "figure",
+   "note": "Native tile r1c0 of Figure 5, geometry 1649x1400+0+1400.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID16187332_Thavathiru2005_assets/pdf_p19_x76.jpeg",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 1649x1400+0+1400 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "256ca752e35b7211420e3a3e7f5ac34f93d6debeb38c6cf9bb32f2bb10dd401b"
+  },
+  {
+   "path": "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f5_r1c1.png",
+   "kind": "figure",
+   "note": "Native tile r1c1 of Figure 5, geometry 1649x1400+1649+1400.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID16187332_Thavathiru2005_assets/pdf_p19_x76.jpeg",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 1649x1400+1649+1400 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "78d43954a50b1dd4b74564b545f50c5987910958fa213734103b6fbaf935a711"
+  },
+  {
+   "path": "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f5_r2c0.png",
+   "kind": "figure",
+   "note": "Native tile r2c0 of Figure 5, geometry 1649x1400+0+2800.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID16187332_Thavathiru2005_assets/pdf_p19_x76.jpeg",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 1649x1400+0+2800 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "e3566db46f830fdcbb867a65278edc24a3ddf31c4473faa2b9fad420acfc9bf5"
+  },
+  {
+   "path": "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f5_r2c1.png",
+   "kind": "figure",
+   "note": "Native tile r2c1 of Figure 5, geometry 1649x1400+1649+2800.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID16187332_Thavathiru2005_assets/pdf_p19_x76.jpeg",
+    "extractor": {
+     "name": "ImageMagick",
+     "version": "6.9.12-98 Q16",
+     "call": "convert <src> -crop 1649x1400+1649+2800 +repage <out>.png (lossless PNG of native pixels, no resampling)",
+     "join": ""
+    },
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "88a93b6af195f09a43ef94f1a79c5e2964ffca41cc32d71b4d9bde2a29a59b59"
+  },
+  {
+   "path": "files/fulltext/PMID16187332_Thavathiru2005_assets/blob_nihms222058f1.jpg",
+   "kind": "figure",
+   "note": "PMC CDN figure blob, 589x1050. Acquired and fingerprinted; NOT the inspected surface (the PDF raster is 4x larger).",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/0f37/4166602/10e58ec64e47/nihms222058f1.jpg",
+    "http_method": "GET",
+    "tier": "pmc_cdn_blob",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "c908f142f989137c37d048621542abb32de58f88d281d4575d6ef1a5555206c3"
+  },
+  {
+   "path": "files/fulltext/PMID16187332_Thavathiru2005_assets/blob_nihms222058f2.jpg",
+   "kind": "figure",
+   "note": "PMC CDN figure blob, 644x1050. Acquired and fingerprinted; NOT the inspected surface (the PDF raster is 4x larger).",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/0f37/4166602/49c644426326/nihms222058f2.jpg",
+    "http_method": "GET",
+    "tier": "pmc_cdn_blob",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "6e05c2c16dfe0122003cfe7d66816bd7dff3514e6e96c5c9b2ce9ac4631a6d8c"
+  },
+  {
+   "path": "files/fulltext/PMID16187332_Thavathiru2005_assets/blob_nihms222058f3.jpg",
+   "kind": "figure",
+   "note": "PMC CDN figure blob, 1050x446. Acquired and fingerprinted; NOT the inspected surface (the PDF raster is 4x larger).",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/0f37/4166602/798e1a0a0033/nihms222058f3.jpg",
+    "http_method": "GET",
+    "tier": "pmc_cdn_blob",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "a68845acc2912035818562d556b35a433fdee06990ac1b138821aac15a5d0bf7"
+  },
+  {
+   "path": "files/fulltext/PMID16187332_Thavathiru2005_assets/blob_nihms222058f4.jpg",
+   "kind": "figure",
+   "note": "PMC CDN figure blob, 471x1050. Acquired and fingerprinted; NOT the inspected surface (the PDF raster is 4x larger).",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/0f37/4166602/f5afb0bfbde1/nihms222058f4.jpg",
+    "http_method": "GET",
+    "tier": "pmc_cdn_blob",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "d8949eab0963ab3e276c0244a52d75f7a778917799a8285bebbf0c47f1aa0a20"
+  },
+  {
+   "path": "files/fulltext/PMID16187332_Thavathiru2005_assets/blob_nihms222058f5.jpg",
+   "kind": "figure",
+   "note": "PMC CDN figure blob, 825x1050. Acquired and fingerprinted; NOT the inspected surface (the PDF raster is 4x larger).",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/0f37/4166602/298838dc6bce/nihms222058f5.jpg",
+    "http_method": "GET",
+    "tier": "pmc_cdn_blob",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-09-14"
+   },
+   "sha256": "70dd7104c5ce29821aa7af207cd55072928bafd029f1334fd6c053af8da4955c"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST search EXT_ID:16187332 AND SRC:MED resultType=core, 2026-09-14: inEPMC=Y, inPMC=Y, isOpenAccess=N, nihAuthMan=Y, fullTextIdList PMC4166602; fullTextXML 404.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence.",
+  "entries": [
+   {
+    "proposition": "SYSTEMS: two transformed lines only, MCF-7 and Saos-2. DATO. No primary, non-transformed, neural or in vivo system.",
+    "snippet": "MCF-7 and Saos-2 cells were maintained in complete IMEM",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16187332_Thavathiru2005.html",
+    "anchor": "Materials and Methods > Cell Lines and Treatments, sentence 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "AGENT: UV-C 254 nm, not UV-B or UV-A. DATO.",
+    "snippet": "irradiated with UV-C emitted by five narrow band germicidal lamps emitting predominantly 254 nm.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16187332_Thavathiru2005.html",
+    "anchor": "Materials and Methods > Cell Lines and Treatments, sentence 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "BPDE: 0.5 uM, 30 min pulse in serum-free medium. DATO.",
+    "snippet": "final concentration of BPDE was 0.5 μM.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16187332_Thavathiru2005.html",
+    "anchor": "Materials and Methods > Cell Lines and Treatments",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "CAFFEINE: 1 h pre-treatment at 5 or 10 mM, maintained after UV. DATO.",
+    "snippet": "pretreated for 1 h with complete IMEM containing 5 or 10 mM caffeine",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16187332_Thavathiru2005.html",
+    "anchor": "Materials and Methods > Cell Lines and Treatments",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "in vitro cell line",
+     "cell_line": "MCF-7 (wild-type p53)"
+    }
+   },
+   {
+    "proposition": "THE CAFFEINE CONTROL is sham-treated cells without caffeine. DATO. No arm receives caffeine without UV, so an effect of caffeine alone on WWOX mRNA or on the cycle profile is not measured.",
+    "snippet": "Control cells were sham-treated in complete IMEM without caffeine.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16187332_Thavathiru2005.html",
+    "anchor": "Materials and Methods > Cell Lines and Treatments",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "NORTHERN PROBE: 1200 bp WWOX cDNA covering the whole coding region. DATO; it cannot distinguish full-length from shorter isoforms of similar composition on a Northern without size information, and no size marker is shown.",
+    "snippet": "A 1200 bp BamHI-EcoRI restriction fragment of WWOX cDNA clone, spanning the whole amino acid-coding region, was used as probe.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16187332_Thavathiru2005.html",
+    "anchor": "Materials and Methods > RNA Isolation and Northern Blot Analysis",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "ANTIBODY: in-house affinity-purified rabbit polyclonal (ref 23), 280 ng/mL stock at 1:500. DATO; no specificity control in this paper.",
+    "snippet": "The affinity purified primary rabbit polyclonal antibody used against WWOX (pure concentration at 280 ng/mL) was developed at our laboratory [23]",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16187332_Thavathiru2005.html",
+    "anchor": "Materials and Methods > Western Blot Analysis",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "WHY MCF-7: chosen because WWOX is abundant in it. DATO as the authors' rationale.",
+    "snippet": "MCF-7 breast cancer cells were chosen as a model system for these studies because WWOX is abundantly expressed in this cell line.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16187332_Thavathiru2005.html",
+    "anchor": "Results > UV and BPDE but not IR, sentence 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "in vitro cell line",
+     "cell_line": "MCF-7 (wild-type p53)"
+    }
+   },
+   {
+    "proposition": "UV-C LOWERS WWOX AND FHIT mRNA at 24 h. DATO as stated.",
+    "snippet": "Interestingly, as compared to control, WWOX and FHIT mRNA levels dramatically decreased by 24 h in the UV-irradiated samples (Figure 1A).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16187332_Thavathiru2005.html",
+    "anchor": "Results > UV and BPDE but not IR, sentence 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "in vitro cell line",
+     "cell_line": "MCF-7 (wild-type p53)"
+    }
+   },
+   {
+    "proposition": "FIGURE 1A UV BLOT, NATIVE TILES (raster 2357x4200). Lanes 0, 10, 15 J/m2. WWOX and FHIT: clear band at 0, no discernible band at 10 or 15. p21: weak at 0, strong at 10, very strong at 15. GAPDH: similar at 0 and 10, VISIBLY WEAKER at 15. So the 10 J/m2 loss is not a loading artefact while the 15 J/m2 lane is loading-confounded. Each probe row is a separately framed strip; no quantification, no replicate blot shown.",
+    "snippet": "Visual attestation of Figure 1A UV section: WWOX and FHIT rows band at 0 only; p21 rises with dose; GAPDH band at 15 J/m2 markedly lighter than at 0 and 10.",
+    "surface": "figure",
+    "artifact": [
+     "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f1_r0c0.png",
+     "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f1_r1c0.png"
+    ],
+    "anchor": "Figure 1A (PDF p.13), native tiles x0-1179 y0-2800",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "qualifies_needle": "dramatically decreased",
+    "experimental_context": {
+     "system": "in vitro cell line",
+     "cell_line": "MCF-7 (wild-type p53)"
+    },
+    "qualifies": "entries[8]"
+   },
+   {
+    "proposition": "TEXT CITES PANELS: cell number halves (Figure 1B) with no loss of viability (Figure 1C). DATO as printed.",
+    "snippet": "cell number decreased about twofold at 24 h postirradiation (Figure 1B) without a significant decrease in cell viability (Figure 1C).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16187332_Thavathiru2005.html",
+    "anchor": "Results > UV and BPDE but not IR, sentence 4",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "in vitro cell line",
+     "cell_line": "MCF-7 (wild-type p53)"
+    }
+   },
+   {
+    "proposition": "CAPTION: triplicates, mean +/- SD. DATO; no statistical test is reported for any panel.",
+    "snippet": "Each treatment was performed in triplicate and is represented as the average ±SD.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16187332_Thavathiru2005.html",
+    "anchor": "Figure 1 legend",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "FIGURE 1B-C, NATIVE TILES. The panel axes read B = 'Cell viability (% of untreated)' and C = 'Total Cell Number (% of untreated)', which matches the caption and is the REVERSE of the running text's citation. B: first group ~100/~97/~95%; a later pair falls to ~74% viability; another ~95%. C: cell number ~55% and ~50% in the first group, ~44% and ~55% in the later pairs. No x-axis treatment labels are legible in the manuscript raster, so the ~74% viability bar cannot be assigned to a named treatment.",
+    "snippet": "Visual attestation of Figure 1B and 1C: panel B y-axis label Cell viability (% of untreated); panel C y-axis label Total Cell Number (% of untreated); one dark bar in B near 74; no x-axis treatment labels.",
+    "surface": "figure",
+    "artifact": [
+     "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f1_r1c0.png",
+     "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f1_r1c1.png",
+     "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f1_r2c0.png",
+     "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f1_r2c1.png"
+    ],
+    "anchor": "Figure 1B-C (PDF p.13), native tiles y1400-4200",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "found_or_sought": "found",
+    "contradicts_needle": "cell number decreased about twofold at 24 h postirradiation (Figure 1B)",
+    "experimental_context": {
+     "system": "in vitro cell line",
+     "cell_line": "MCF-7 (wild-type p53)"
+    },
+    "contradicts": "entries[10]"
+   },
+   {
+    "proposition": "IR DOSE CHOSEN AS 'approximately equitoxic', supported by a citation of the Northern (Figure 1A), not by a toxicity panel. DATO for the text.",
+    "snippet": "MCF-7 cells were irradiated with IR at a dose (10 Gy) approximately equitoxic to 10 J/m2 of UV-C radiation (Figure 1A).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16187332_Thavathiru2005.html",
+    "anchor": "Results > UV and BPDE but not IR, paragraph 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "in vitro cell line",
+     "cell_line": "MCF-7 (wild-type p53)"
+    }
+   },
+   {
+    "proposition": "IR 10 Gy DOES NOT LOWER WWOX or FHIT mRNA. DATO (single dose shown).",
+    "snippet": "did not cause a significant reduction of WWOX or FHIT transcripts.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16187332_Thavathiru2005.html",
+    "anchor": "Results > UV and BPDE but not IR, paragraph 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "in vitro cell line",
+     "cell_line": "MCF-7 (wild-type p53)"
+    }
+   },
+   {
+    "proposition": "DOSE RANGE, DATA NOT SHOWN: IR 20-40 Gy ineffective, UV 20-30 J/m2 effective. DATO as a statement only.",
+    "snippet": "Higher doses of IR (20, 30, and 40 Gy) were also ineffective in decreasing WWOX and FHIT mRNA levels, whereas increasing doses of UV (20 and 30 J/m2) caused downregulation of WWOX and FHIT transcripts similar to that obtained with 10 and 15 J/m2 (data not shown).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16187332_Thavathiru2005.html",
+    "anchor": "Results > UV and BPDE but not IR, paragraph 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "BPDE: 'dramatic decrease' of WWOX and FHIT at 24 h. DATO as stated.",
+    "snippet": "also caused a dramatic decrease of WWOX and FHIT transcripts at 24 h post-BPDE treatment (Figure 1A).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16187332_Thavathiru2005.html",
+    "anchor": "Results > UV and BPDE but not IR, paragraph 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "in vitro cell line",
+     "cell_line": "MCF-7 (wild-type p53)"
+    }
+   },
+   {
+    "proposition": "FIGURE 1A BPDE AND IR BLOTS, NATIVE TILES. BPDE 0.5 uM: WWOX band REDUCED BUT CLEARLY PRESENT (not abolished as at UV 10 J/m2); FHIT reduced; p21 strongly up; the GAPDH band of the BPDE lane is lighter than the IR lanes. IR 10 Gy: WWOX unchanged, FHIT slightly stronger, p21 strongly up, GAPDH equal. 'Dramatic' is stronger than the BPDE panel.",
+    "snippet": "Visual attestation of Figure 1A BPDE and IR sections: BPDE 0.5 WWOX band weaker than BPDE 0 but visible; IR 0 and IR 10 WWOX bands equal; FHIT IR 10 slightly darker; p21 up with BPDE and IR.",
+    "surface": "figure",
+    "artifact": [
+     "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f1_r0c0.png",
+     "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f1_r0c1.png",
+     "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f1_r1c1.png"
+    ],
+    "anchor": "Figure 1A (PDF p.13), native tiles x1178-2357 y0-2800 and the BPDE 0 lane edge of x0-1179",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "qualifies_needle": "dramatic decrease",
+    "experimental_context": {
+     "system": "in vitro cell line",
+     "cell_line": "MCF-7 (wild-type p53)"
+    },
+    "qualifies": "entries[16]"
+   },
+   {
+    "proposition": "p53-INDEPENDENCE: UV lowers WWOX and FHIT in p53-null Saos-2. DATO for Saos-2; 'p53-independent' is INFERENZA from one null line of a different tissue, with no p53 knockdown in MCF-7.",
+    "snippet": "UV irradiation downregulated the levels of FHIT and WWOX transcripts in Saos-2 cells, indicating that the repressive effect of UV on the fragile site genes was a p53-independent phenomenon (Figure 2).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16187332_Thavathiru2005.html",
+    "anchor": "Results > Downregulation Is p53-Independent",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "in vitro cell line",
+     "cell_line": "Saos-2 (p53-null)"
+    }
+   },
+   {
+    "proposition": "FIGURE 2, NATIVE TILES (2574x4200). Saos-2 UV 10 J/m2 -/+: WWOX band at - and near background at +; FHIT clear at -, faint at +; p21 up with UV; GAPDH equal. Agrees with the text.",
+    "snippet": "Visual attestation of Figure 2: WWOX strong without UV and near background with UV; FHIT weaker with UV; GAPDH equal in both lanes.",
+    "surface": "figure",
+    "artifact": [
+     "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f2_r0c0.png",
+     "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f2_r0c1.png",
+     "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f2_r1c0.png",
+     "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f2_r1c1.png",
+     "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f2_r2c0.png",
+     "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f2_r2c1.png"
+    ],
+    "anchor": "Figure 2 (PDF p.15), native tiles",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "in vitro cell line",
+     "cell_line": "Saos-2 (p53-null)"
+    }
+   },
+   {
+    "proposition": "PROTEIN LAGS mRNA: no considerable WWOX protein fall at 24 h after one dose. DATO.",
+    "snippet": "the protein expression level did not decrease considerably at 24 h.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16187332_Thavathiru2005.html",
+    "anchor": "Results > Repeated UV Irradiation Reduces the Level of WWOX Protein, sentence 1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "in vitro cell line",
+     "cell_line": "MCF-7 (wild-type p53)"
+    }
+   },
+   {
+    "proposition": "REPEATED UV: WWOX protein falls at 48 h (2x) and 72 h (3x). DATO.",
+    "snippet": "A considerable decrease in the protein expression was observed following multiple UV-C irradiations (24 h apart) at later time points (48 and 72 h), as shown by Western blot analysis (Figure 3).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16187332_Thavathiru2005.html",
+    "anchor": "Results > Repeated UV Irradiation Reduces the Level of WWOX Protein, sentence 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "in vitro cell line",
+     "cell_line": "MCF-7 (wild-type p53)"
+    }
+   },
+   {
+    "proposition": "AUTHORS INFER WWOX PROTEIN IS 'relatively stable'. INFERENZA (theirs): no half-life, cycloheximide chase or degradation assay was performed.",
+    "snippet": "This suggests that the WWOX protein is relatively stable, and repeated genotoxic insults are required to cause a considerable decrease in protein levels.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16187332_Thavathiru2005.html",
+    "anchor": "Results > Repeated UV Irradiation Reduces the Level of WWOX Protein, sentence 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "in vitro cell line",
+     "cell_line": "MCF-7 (wild-type p53)"
+    }
+   },
+   {
+    "proposition": "FIGURE 3, NATIVE TILES (4200x1782). Lanes 0 h (-), 24 h (1x), 48 h (2x), 72 h (3x), 72 h (-). WWOX: strong, strong, reduced, faint, strong. Actin: similar, except the 72 h 3x lane, which is HEAVIER than the others - so the fall at 72 h is not underloading. One blot, no quantification, no untreated 24 h or 48 h lane, no single-dose 48/72 h lane: the design cannot separate cumulative dose from elapsed time since the first dose, and it measures no turnover rate.",
+    "snippet": "Visual attestation of Figure 3: lane labels Hr 0 24 48 72 72 and UV - 1x 2x 3x -; WWOX band strong strong weaker faint strong; actin band broadest in the 72 h 3x lane.",
+    "surface": "figure",
+    "artifact": [
+     "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f3_r0c0.png",
+     "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f3_r0c1.png",
+     "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f3_r0c2.png"
+    ],
+    "anchor": "Figure 3 (PDF p.16), native tiles",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "qualifies_needle": "relatively stable",
+    "experimental_context": {
+     "system": "in vitro cell line",
+     "cell_line": "MCF-7 (wild-type p53)"
+    },
+    "qualifies": "entries[22]"
+   },
+   {
+    "proposition": "FHIT PROTEIN UNCHANGED, data not shown. DATO as a statement.",
+    "snippet": "However, we did not observe any significant reduction in levels of this protein (data not shown).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16187332_Thavathiru2005.html",
+    "anchor": "Results > Repeated UV Irradiation Reduces the Level of WWOX Protein",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "UV RAISES THE S-PHASE FRACTION. DATO.",
+    "snippet": "Flow cytometric analyses of UV-irradiated MCF-7 cells revealed that the fraction of cells in S-phase increased considerably in the total cell population (Figure 4A) indicating that UV-induced an S-phase checkpoint.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16187332_Thavathiru2005.html",
+    "anchor": "Results > S-Phase Checkpoint Mechanisms, sentence 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "in vitro cell line",
+     "cell_line": "MCF-7 (wild-type p53)"
+    }
+   },
+   {
+    "proposition": "IR GIVES G2 ARREST. DATO.",
+    "snippet": "On the other hand, IR-induced a G2 arrest in MCF-7 cells (Figure 4B).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16187332_Thavathiru2005.html",
+    "anchor": "Results > S-Phase Checkpoint Mechanisms, sentence 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "in vitro cell line",
+     "cell_line": "MCF-7 (wild-type p53)"
+    }
+   },
+   {
+    "proposition": "UV REDUCES [3H]-THYMIDINE UPTAKE at 24 h. DATO.",
+    "snippet": "a significant UV-C-induced reduction in the incorporation of [3H]-Thymidine was observed at 24 h posttreatment.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16187332_Thavathiru2005.html",
+    "anchor": "Results > S-Phase Checkpoint Mechanisms, paragraph 2",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "in vitro cell line",
+     "cell_line": "MCF-7 (wild-type p53)"
+    }
+   },
+   {
+    "proposition": "CAFFEINE abrogates the S-phase delay and 'significantly overcame' the UV repression of WWOX and FHIT mRNA. DATO as stated; 'significantly' has no statistic behind it.",
+    "snippet": "treatment of MCF-7 cells with caffeine abrogated the S-phase delay (Figure 4A) and significantly overcame the repression by UV of WWOX and FHIT expression (Figure 5A).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16187332_Thavathiru2005.html",
+    "anchor": "Results > S-Phase Checkpoint Mechanisms, paragraph 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "in vitro cell line",
+     "cell_line": "MCF-7 (wild-type p53)"
+    }
+   },
+   {
+    "proposition": "FIGURE 4, NATIVE TILES (1882x4200). A: UV-/caf- G1 ~47, S ~37, G2/M ~16%; UV+/caf- ~30/~45/~25; UV+/5 mM ~63/~29/~9; UV+/10 mM ~55/~28/~17. Caffeine does more than abrogate the delay: S falls BELOW the unirradiated control and G1 rises ABOVE it, and there is no caffeine-without-UV bar. B: IR- ~49/~34/~19; IR+ ~36/~14/~52 (G2/M). C: CPM ~133,000 vs ~25,000 with UV.",
+    "snippet": "Visual attestation of Figure 4: panel A four groups UV - + + + and caffeine - - 5 10, S bars ~37 ~45 ~29 ~28; panel B IR G2/M bar ~52; panel C CPM ~133000 versus ~25000.",
+    "surface": "figure",
+    "artifact": [
+     "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f4_r0c0.png",
+     "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f4_r1c0.png",
+     "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f4_r2c0.png"
+    ],
+    "anchor": "Figure 4 (PDF p.17), native tiles",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "qualifies_needle": "abrogated the S-phase delay",
+    "experimental_context": {
+     "system": "in vitro cell line",
+     "cell_line": "MCF-7 (wild-type p53)"
+    },
+    "qualifies": "entries[28]"
+   },
+   {
+    "proposition": "FIGURE 5A, NATIVE TILES (3298x4200). Lanes caffeine -/UV -, -/+, 5/+, 10/+. WWOX: strong, faint, moderate, strong. FHIT: clear, faint, faint, moderate. p21 weak without UV, strong in all three UV lanes. GAPDH HEAVIER in the 10 mM lane. There is NO caffeine-only lane. The recovery at 5 mM is partial, the 10 mM recovery is partly a loading difference, and a direct effect of caffeine on WWOX mRNA is not excluded.",
+    "snippet": "Visual attestation of Figure 5A: caffeine - - 5 10 and UV - + + +; WWOX strong faint moderate strong; GAPDH darkest in the 10 mM lane; no lane with caffeine and no UV.",
+    "surface": "figure",
+    "artifact": [
+     "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f5_r0c0.png",
+     "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f5_r0c1.png",
+     "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f5_r1c0.png",
+     "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f5_r1c1.png"
+    ],
+    "anchor": "Figure 5A (PDF p.19), native tiles y0-2800",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "qualifies_needle": "significantly overcame",
+    "experimental_context": {
+     "system": "in vitro cell line",
+     "cell_line": "MCF-7 (wild-type p53)"
+    },
+    "qualifies": "entries[28]"
+   },
+   {
+    "proposition": "WWOX mRNA NOT CELL-CYCLE REGULATED after serum release. DATO as stated.",
+    "snippet": "We observed normal levels of WWOX mRNA after serum starvation (G1 arrest) that remained unchanged as the cells progressed through the S- and G2/M-phases (Figure 5B).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16187332_Thavathiru2005.html",
+    "anchor": "Results > S-Phase Checkpoint Mechanisms, paragraph 4",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found",
+    "experimental_context": {
+     "system": "in vitro cell line",
+     "cell_line": "MCF-7 (wild-type p53)"
+    }
+   },
+   {
+    "proposition": "FIGURE 5B, NATIVE TILES. Serum 0, 4, 8, 12, 24 h: WWOX roughly constant; cyclin E absent at 0 and rising from 8 h; GAPDH lighter at 24 h. The cell-cycle phases are inferred from time and cyclin E; no flow profile of the release is shown.",
+    "snippet": "Visual attestation of Figure 5B: WWOX bands similar at 0 4 8 12 24 h; cyclin E absent at 0 and strong at 12 and 24 h; GAPDH lighter at 24 h.",
+    "surface": "figure",
+    "artifact": [
+     "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f5_r1c0.png",
+     "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f5_r1c1.png",
+     "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f5_r2c0.png",
+     "files/fulltext/PMID16187332_Thavathiru2005_assets/tile_f5_r2c1.png"
+    ],
+    "anchor": "Figure 5B (PDF p.19), native tiles y1400-4200",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "qualifies_needle": "remained unchanged",
+    "experimental_context": {
+     "system": "in vitro cell line",
+     "cell_line": "MCF-7 (wild-type p53)"
+    },
+    "qualifies": "entries[31]"
+   },
+   {
+    "proposition": "FIGURE 4C: triplicates plotted. DATO.",
+    "snippet": "Triplicate values for each treatment were plotted in the graphs.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16187332_Thavathiru2005.html",
+    "anchor": "Figure 4 legend, panel C",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "AUTHOR MODEL 1: differential response via ATR (UV) vs ATM (IR). IPOTESI; neither kinase was measured or inhibited specifically.",
+    "snippet": "Thus, the downregulation of FHIT and WWOX expression by UV and BPDE but not by IR could therefore be a consequence of qualitative differences between the ATR- and ATM-mediated response pathways.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16187332_Thavathiru2005.html",
+    "anchor": "Discussion, paragraph 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "AUTHOR MODEL 1 WITHDRAWN a paragraph later: the caffeine result is taken to argue AGAINST ATR-Chk1, while the same Discussion attributes the S-phase delay caffeine abolishes to a checkpoint (ref 57 calls carcinogen S-arrest Chk1-mediated and caffeine-sensitive). INFERENZA (theirs), internally in tension.",
+    "snippet": "suggests that the ATR-Chk1 signaling pathway is unlikely to be the major mechanism behind the observed repressive phenomenon.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16187332_Thavathiru2005.html",
+    "anchor": "Discussion, paragraph 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "AUTHOR MODEL 2: bulky adducts block transcription of very long genes. IPOTESI; no adduct, polymerase or nascent-RNA measurement.",
+    "snippet": "These bulky adducts represent strong blocks to both transcription and replication, and could directly affect the expression of genes such as FHIT and WWOX, which produce extremely long transcripts.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16187332_Thavathiru2005.html",
+    "anchor": "Discussion, paragraph 4",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "'CLEARLY DEMONSTRATED ... in a coordinated manner': the data are single representative Northerns in two lines; coordination is co-occurrence, not a shared mechanism shown.",
+    "snippet": "In this study, we have clearly demonstrated that the two most commonly altered fragile site genes WWOX/FRA16D and FHIT/FRA3B are downregulated in a coordinated manner by the common environmental carcinogens, UV and BPDE.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16187332_Thavathiru2005.html",
+    "anchor": "Discussion, paragraph 5",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "THE mRNA FALL IS TRANSIENT after one 10 J/m2 dose: visible by 3 h, deepest 18-24 h, transcripts back at 48 h (data not shown). DATO as a statement only.",
+    "snippet": "In time-course experiments, such reduction was noticeable as early as 3 h postirradiation and dramatically reduced by 18 and 24 h, however, at 48 h the WWOX transcripts re-appeared (data not shown).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16187332_Thavathiru2005.html",
+    "anchor": "Discussion, paragraph 5",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "TUMOUR-INITIATION HYPOTHESIS from protracted exposure. IPOTESI.",
+    "snippet": "We hypothesize that such a continuous (transcriptional) silencing of fragile site associated putative tumor suppressor genes such as WWOX and FHIT by protracted exposure to environmental carcinogens may play a significant role in the initiation and development of cancer.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16187332_Thavathiru2005.html",
+    "anchor": "Discussion, paragraph 6",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "CITED CONVERGENT RESULT in vivo: methyleugenol lowers Wwox and Fhit in mouse liver (Iida 2005). Not measured here.",
+    "snippet": "reported that the genotoxic carcinogen methyleugenol induces a marked reduction of Wwox and Fhit expression in mouse liver while the noncarcinogenic congener eugenol has no effect.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16187332_Thavathiru2005.html",
+    "anchor": "Discussion, paragraph 6",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "CITED INDEPENDENT REPLICATION with a different checkpoint attribution (G1-S): Ishii 2005, ref 65.",
+    "snippet": "reported that UV irradiation resulted in the reduction of WWOX and FHIT gene expression and suggested a role for the G1-S checkpoint.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID16187332_Thavathiru2005.html",
+    "anchor": "Discussion, last paragraph",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   }
+  ]
+ }
+}

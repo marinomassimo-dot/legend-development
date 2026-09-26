@@ -1,0 +1,536 @@
+{
+ "schema_version": 2,
+ "pmid": "15982416",
+ "doi": "10.1186/1471-2407-5-64",
+ "receipt": "FTR-20260913-15982416-01",
+ "landing": [
+  "FTR-20260913-15982416-01",
+  "fulltext_dossiers/PMID15982416.md",
+  "full_text_queue_current.md#FT-179"
+ ],
+ "skills_considered": [
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline. The reagent question that defines this lot is answered in the Methods and in one figure panel, and the locators had to be captured from the same open document as the panel inspection; a dossier hand-off would have separated the two."
+  },
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "The packet's acquisition procedure opened only because no artefact was on this host. Europe PMC fullTextXML returned the article on the first call (85,627 bytes measured, cc by), so no cascade was needed and opening the skill in full would have been ceremony."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "None of its four triggers fires here: this reading contradicts no persisted locator (no manifest for this PMID has ever existed), narrows no consolidated baseline claim, and declares no MAJOR working-model bump. The reading QUALIFIES records that lean on the antibody rather than reversing them, and the candidate says so."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Two human tumour series with no mechanism, no intervention and no CNS material yield no biomarker or repurposing lead that the discovery ledger does not already hold; the transfer verdict toward the reference genotype is explicitly weak and is stated as such in the dossier."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule, no SMILES, no candidate compound anywhere in this paper. BLOCK-1 has nothing to screen."
+  }
+ ],
+ "reading_budget": {
+  "declared_before_reading": false,
+  "declared_before_reading_note": "🔴 Honest no, and it is a finding against my own order of operations rather than a technicality. The brief (M2) asks for `paper_packet.py surfaces` BEFORE the figures; I ran `packet` and `procedures`, acquired, then inspected the four figures, and ran `surfaces` afterwards. The inventory then told me two things I had already established by looking (four Europe PMC figure URLs were 16-byte error bodies, not images) and one I had not: that a 292x710 object I had treated as a fifth surface is Figure 1A alone. No conclusion rests on the order, and the budget below is the count after inspection, not a retrofitted prediction.",
+  "figures_present": 4,
+  "panels_present": 17,
+  "panels_inspected": 17,
+  "panel_coverage": "17/17 panels inspected as images",
+  "tables_present": 2,
+  "tables_inspected": 2,
+  "supplementary_elements_present": 0,
+  "denominator_basis": "Panels counted from the JATS captions, which enumerate their own panels, and confirmed against the images: Figure 1 A-B = 2, Figure 2 A-B = 2, Figure 3 A-L = 12, Figure 4 (single Kaplan-Meier plot, no panel letters) = 1. Total 17.",
+  "denominator_status": "known",
+  "surfaces_compared": "Three independent surfaces per figure were measured before choosing: the publisher PDF's embedded rasters (1525x1016, 1525x543, 1525x1626, 737x537), the Springer /full/ renderings (1200x800, 1200x427, 1200x1280, 1080x788), and the publisher's ESM originals (2250x1500, 2100x748, 1875x2000, 1080x788, 292x710). The ESM originals are the native surface for Figures 1-3 and were used for every figure locator; Figure 4's ESM original and Springer rendering are the same 1080x788.",
+  "classification": {
+   "figure_1": "DETERMINANTE — it is the paper's only antibody-validation evidence and the only surface on which the reagent question can be answered at all.",
+   "figure_2": "QUALIFICANTE — normal-ovary staining pattern and compartment; one further tranche (native ESM at 2100x748) and no more.",
+   "figure_3": "QUALIFICANTE — the histotype claim rests on scored TMA cores, not on these twelve illustrative photomicrographs; inspected in full because a negative-control panel, had one existed, would have been here.",
+   "figure_4": "DETERMINANTE for the outcome claim, and it is what shows the survival analysis is univariate: two curves, a p value, no numbers at risk, no hazard ratio, no covariate."
+  }
+ },
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 138,
+  "publications_on_gene": 38,
+  "counts_measured": "PubMed esearch 2026-09-13: 'Aldaz CM[au]' 138, 'Aldaz CM[au] AND WWOX' 38, 'Nunez MI[au] AND WWOX' 5.",
+  "research_type": "experimental_lab",
+  "is_primary_group_for_gene": true,
+  "is_primary_group_for_disease": false,
+  "weighting": "This is the laboratory that cloned WWOX (ref 1, Bednarek 2000, its own first reference), so it is primary for the GENE and its reagent, and by the Methods it is an experimental laboratory that made the antibody it uses. It is not a primary group for the DISEASE this repository models: nothing in this paper is neurological, developmental or CNS, and the disease relevant here is WWOX-DEE. The consequence for weighting is specific rather than general: the observation - WWOX immunoreactivity is lost in a third of ovarian carcinomas, by two methods, on 444 scored cores - carries the weight of a competent series from the gene's own laboratory. The interpretation carries less, and on exactly one axis: the reagent's validation is self-referential, because the antibody, the immunostaining protocol and the scoring pipeline are all cited to one earlier paper of the same laboratory (ref 12), so the group's expertise cannot be read as independent corroboration of its own reagent. The histopathology is a third party's contribution (MD Anderson and Fox Chase pathology, refs 17-19 and the authors' contributions statement), and that part is genuinely external to the WWOX laboratory."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {"query": "WWOX AND ovarian carcinoma", "route": "PubMed esearch 2026-09-13", "count": 40},
+   {"query": "WWOX AND ovarian", "route": "PubMed esearch 2026-09-13", "count": 49},
+   {"query": "WWOX AND immunohistochemistry", "route": "PubMed esearch 2026-09-13", "count": 80},
+   {"query": "WWOX AND antibody specificity", "route": "PubMed esearch 2026-09-13", "count": 1},
+   {"query": "Aldaz CM[au] AND WWOX", "route": "PubMed esearch 2026-09-13", "count": 38}
+  ],
+  "note": "🔴 The density measurement that matters for this lot is the fourth one, and it is a count of ONE for the whole literature on 'WWOX AND antibody specificity'. A near-empty intersection in a rare-disease reagent question is a signal and not an absence: the specificity of the anti-WWOX reagents this corpus depends on has essentially no dedicated literature, which is why it is settled by citation chains through papers like this one. 80 papers pair WWOX with immunohistochemistry; 1 pairs it with antibody specificity."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 38,
+  "enumeration_method": "Counted from the JATS <ref> elements of the fingerprinted Europe PMC XML: 38 elements, 38 numbered entries, no unnumbered notes.",
+  "gene_direct_count": 16,
+  "gene_direct_refs_in_source": [
+   "14526170",
+   "11572989",
+   "14695174",
+   "15692750"
+  ],
+  "gene_direct_note": "16 of the 38 references are WWOX-direct by their titles (refs 1-15 and 27). Four were resolved to PMIDs in this session because they bear on the reagent question or on this reading's own limits; the remaining twelve are enumerated and queued rather than resolved, and that is declared debt, not silence. The four resolved, each by PubMed title search on 2026-09-13 returning exactly one record: ref 2 = 14526170 (Ludes-Meyers 2003, Cytogenet Genome Res - the citation this paper gives for the immunogen, 'raised against the WW domains'); ref 4 = 11572989 (Paige 2001, PNAS - the source of the PEO1 homozygous deletion that makes the negative control a null); ref 27 = 14695174 (Watanabe 2003, Cancer Res - the opposing view, nuclear WWOX staining with a different antibody, which this paper's Discussion attributes to antibody differences); ref 12 = 15692750 (Nunez 2005, Breast Cancer Res Treat - the paper the antibody, the immunostaining protocol and the scoring are all cited to, and the second PMID of this same task).",
+  "resolved": [
+   {
+    "pmid": "15692750",
+    "relation": "ref 12 - the antibody, the immunostaining method and the ACIS scoring are each cited to it; it is the second paper of this task and is read under the same contract",
+    "receipt": "none at enumeration time; checked with fulltext_receipts.py status on 2026-09-13 and the ledger returned no event"
+   }
+  ],
+  "queued": [
+   {
+    "queue": "full_text_queue_current.md#FT-179",
+    "pmids": ["14526170", "11572989", "14695174"],
+    "reason": "Three resolved WWOX-direct antecedents with no receipt anywhere in this ledger, each load-bearing for a different half of the reagent question: 14526170 is the cited immunogen description ('raised against the WW domains [2]', which in this same paper coexists with a second, different immunogen description), 11572989 establishes that the PEO1 negative control is genuinely a WWOX null, and 14695174 is the published disagreement about WWOX subcellular localisation that this paper explains in one sentence by antibody differences. Queued, not resolved: reading them is outside this task's lot. The full entry text, ready to be lifted into the queue verbatim, is in the dossier's appendix - so the debt is durable even though its address is not minted yet.",
+    "debt_class": "unread antecedent of a load-bearing reagent claim"
+   },
+   {
+    "queue": "full_text_queue_current.md#FT-179",
+    "pmids": [],
+    "reason": "Twelve further WWOX-direct references (refs 1, 3, 5-11, 13-15) enumerated but not resolved to identifiers in this session. They are the WWOX-in-other-cancers literature of 2000-2004 and none of them bears on the reagent question or on the reference genotype; resolving sixteen identifiers to queue twelve entries nobody will read next would be the enumeration theatre the protocol warns about. Recorded as enumerated-not-resolved so the debt is visible.",
+    "debt_class": "enumerated, not resolved"
+   }
+  ],
+  "queue_id_deferral": "🔴 RESOLVED LATER IN THE SAME SESSION, and the sequence is recorded rather than smoothed over. My first draft addressed this debt to FT-178. Between my read of the queue (highest id FT-177) and my append, a peer minted FT-178 for PMID 28283473 - 54 lines, unstaged in this shared checkout - and the validator caught the collision exactly as designed: 'FT-178 is a live queue entry about a different paper'. Two routes were unsafe and were refused: committing full_text_queue_current.md with my own entry would have carried the peer's uncommitted hunk under my commit message, which is the authorship incident scripts/legend_commit.sh exists to prevent and which its directory guard cannot see for a shared FILE; and minting an id in the working tree while committing this manifest against it would have persisted a manifest whose queue address exists in no commit, so every later validation would fail on an unresolvable identifier - a worse and quieter defect. So both papers were committed with the debt declared and NO FT id, which the cross-check reports as UNCHECKED - neither passed nor blocked - with the entry text carried verbatim in the dossier appendix. The peer then landed FT-178 at commit 066b476, the file went quiet, and FT-179 was minted as ONE address for all four load-bearing antecedents so no identifier is duplicated across the two manifests. The declaration above now names it."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does this repository already hold a receipt, a manifest, a dossier, a page adjudication or any artefact for 15982416 or PMC1173095 - and has any prior acquisition route for it been recorded?",
+  "hits": 0,
+  "finding": "Zero on every surface asked. `paper_packet.py packet --pmid 15982416` reports manifest none, artefacts 0, prior read depth none, receipts 0, and 'no route recorded - nothing has been tried and logged'. The retrieval manifest holds 720 events and none names 15982416, 15692750, PMC1173095 or PMC4145848. `files/fulltext/` held no directory for either PMID before this session created them. First contact with the text, plain first_read, no prior event of any kind to supersede."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-09-13",
+  "route": "PubMed ESummary for 15982416 (and 15692750 in the same call), reading the CommentsCorrections/references field",
+  "result": "No retraction, no expression of concern, no erratum, no correction notice. The ESummary record carries an empty corrections list and the publication types are Journal Article plus three Research Support types.",
+  "hold": false,
+  "dependencies": {
+   "schema": "retraction_check.dependencies/1",
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "screened": true,
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 38,
+   "references_screened": 28,
+   "references_with_doi": 28,
+   "unscreenable": {"UNSCREENABLE_NO_DOI": 10},
+   "flagged": [],
+   "noted": [],
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 3,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "citing_relation_note": "No flagged dependency, so there is no citing_relation to declare - the one field the tool refuses to fill has nothing to fill it for. What the screen did NOT establish is stated rather than left implied: 10 of the 38 references carry no DOI in the deposit and are therefore unscreenable by this route, and they are the 1983-2001 pathology and staging literature (FIGO staging announcement, the GOG pathology manual, the AFIP fascicle, Ford 1983, Kononen 1998 and their neighbours). A clean verdict over 28 of 38 is what this is, and it is reported as that."
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID15982416/PMID15982416_PMC1173095_europepmc.xml",
+   "sha256": "54f7b15d9aad65bc5810d4de7711652c8491660dab2d81a4b547bf1297c95281",
+   "kind": "article_text",
+   "note": "JATS XML, the structured surface rule 5d prefers. Measured 85,627 bytes on this host - the contract's hint said 85,528, and what I measured is what is recorded. The document's own <article-id> elements carry pmid 15982416, pmcid PMC1173095 and doi 10.1186/1471-2407-5-64, so identity is established from inside the artefact.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC1173095/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-09-13",
+    "derived": false,
+    "result_sha256": "54f7b15d9aad65bc5810d4de7711652c8491660dab2d81a4b547bf1297c95281"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID15982416/bmc_article.pdf",
+   "sha256": "7cbbcf428387613c1882c4f2be9ea457d17d5b96cfc87304f96c6b9d97d9598f",
+   "kind": "article_binary",
+   "note": "Publisher PDF, 10 pages, 4,659,129 bytes. Declared because the figure rasters embedded in it were one of the three surfaces measured before choosing a native one, and because it is the fallback page surface if any quote ever needed page adjudication. No locator points at it: every text locator resolves against the XML.",
+   "acquisition_recipe": {
+    "resolved_url": "https://bmccancer.biomedcentral.com/counter/pdf/10.1186/1471-2407-5-64.pdf",
+    "http_method": "GET",
+    "tier": "publisher_counter_pdf",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-09-13",
+    "derived": false,
+    "note": "Redirects to link.springer.com/content/pdf/10.1186/1471-2407-5-64.pdf with a cookies_not_supported query; the redirect was followed and the body is a real PDF.",
+    "result_sha256": "7cbbcf428387613c1882c4f2be9ea457d17d5b96cfc87304f96c6b9d97d9598f"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID15982416/esm/12885_2005_252_MOESM1_ESM.jpeg",
+   "sha256": "da3877f2007764b4187823e7f94f874d5061ace94c9d1e82fb449489f1ea4392",
+   "kind": "figure",
+   "note": "Figure 1 complete (A and B), publisher ESM original, 2250x1500, 300 dpi. The native surface: the PDF's embedded raster of the same figure is 1525x1016 and the Springer rendering 1200x800. Every Figure 1 locator is attested on this file.",
+   "acquisition_recipe": {
+    "resolved_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1186%2F1471-2407-5-64/MediaObjects/12885_2005_252_MOESM1_ESM.jpeg",
+    "http_method": "GET",
+    "tier": "publisher_esm_original",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-09-13",
+    "derived": false,
+    "result_sha256": "da3877f2007764b4187823e7f94f874d5061ace94c9d1e82fb449489f1ea4392"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID15982416/esm/12885_2005_252_MOESM5_ESM.tiff",
+   "sha256": "1581b9f5600fb437fe7a2bd7dfe0ae22ce8fcc11f8f887ec958ec88d64f4b866",
+   "kind": "figure",
+   "note": "Figure 1A alone, publisher ESM original TIFF, 292x710, LZW, grayscale. Small, and small is the point: it is the whole of the paper's antibody-specificity panel, so its native size is a measurement about how much evidence exists, not a surface defect.",
+   "acquisition_recipe": {
+    "resolved_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1186%2F1471-2407-5-64/MediaObjects/12885_2005_252_MOESM5_ESM.tiff",
+    "http_method": "GET",
+    "tier": "publisher_esm_original",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-09-13",
+    "derived": false,
+    "result_sha256": "1581b9f5600fb437fe7a2bd7dfe0ae22ce8fcc11f8f887ec958ec88d64f4b866"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID15982416/esm/12885_2005_252_MOESM2_ESM.tiff",
+   "sha256": "f09c77924645fd653cf3c340c85a10121793ade31bef877342b3d053e25ecb84",
+   "kind": "figure",
+   "note": "Figure 2 (A and B), publisher ESM original TIFF, 2100x748, LZW RGB, 4,310,520 bytes. Native surface; the PDF raster of the same figure is 1525x543 and the Springer rendering 1200x427.",
+   "acquisition_recipe": {
+    "resolved_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1186%2F1471-2407-5-64/MediaObjects/12885_2005_252_MOESM2_ESM.tiff",
+    "http_method": "GET",
+    "tier": "publisher_esm_original",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-09-13",
+    "derived": false,
+    "result_sha256": "f09c77924645fd653cf3c340c85a10121793ade31bef877342b3d053e25ecb84"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID15982416/esm/12885_2005_252_MOESM3_ESM.jpeg",
+   "sha256": "ac99da262bdfc65f87a30096ff75e622fe9c7999af701a780737421b3d020f08",
+   "kind": "figure",
+   "note": "Figure 3, all twelve panels A-L, publisher ESM original, 1875x2000, 300 dpi. Native surface; the PDF raster is 1525x1626 and the Springer rendering 1200x1280.",
+   "acquisition_recipe": {
+    "resolved_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1186%2F1471-2407-5-64/MediaObjects/12885_2005_252_MOESM3_ESM.jpeg",
+    "http_method": "GET",
+    "tier": "publisher_esm_original",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-09-13",
+    "derived": false,
+    "result_sha256": "ac99da262bdfc65f87a30096ff75e622fe9c7999af701a780737421b3d020f08"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID15982416/esm/12885_2005_252_MOESM4_ESM.tiff",
+   "sha256": "7af51fa9ab0c5e4aa1774b7f38065ec0bb6dd56c68b4cc67a7d634de42ae7515",
+   "kind": "figure",
+   "note": "Figure 4, the Kaplan-Meier plot, publisher ESM original TIFF, 1080x788. Identical dimensions to the Springer rendering, so for this one figure there is no native-surface gain; declared because the survival locator is attested on it.",
+   "acquisition_recipe": {
+    "resolved_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1186%2F1471-2407-5-64/MediaObjects/12885_2005_252_MOESM4_ESM.tiff",
+    "http_method": "GET",
+    "tier": "publisher_esm_original",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-09-13",
+    "derived": false,
+    "result_sha256": "7af51fa9ab0c5e4aa1774b7f38065ec0bb6dd56c68b4cc67a7d634de42ae7515"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC search EXT_ID:15982416 resultType=core on 2026-09-13: inEPMC=Y, inPMC=Y, isOpenAccess=Y, licence 'cc by', pmcid PMC1173095, fullTextIdList=[PMC1173095], hasPDF=Y, hasSuppl=N, citedByCount 70. The quotes below are therefore externally verifiable against the same deposit, and no abstract anchoring is owed.",
+  "surface_note": "Text locators are verified against the JATS XML body surface as the validator extracts it, which renders each <xref> as its bracketed number, so a quote carrying a citation marker - 'raised against the WW domains [2]' - is verbatim including the bracket. hasSuppl=N in Europe PMC while the publisher serves five ESM objects: those objects are the figure SOURCE files (MOESM1 = Figure 1, 2 = Figure 2, 3 = Figure 3, 4 = Figure 4, 5 = Figure 1A alone), not supplementary data, and neither the JATS nor the publisher page declares any additional file. Hence supplementary: not_present in the receipt, and the ESM objects declared above as figure artefacts.",
+  "entries": [
+   {
+    "proposition": "The immunogen is the WW-domain region, and the paper asserts isoform-wide detection as an expectation derived from that immunogen rather than as a result it measured. The immunogen is established by citation to ref 2 and not in this paper.",
+    "snippet": "The anti-WWOX antibody used was raised against the WW domains [2] and should detect all potential WWOX isoforms.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15982416/PMID15982416_PMC1173095_europepmc.xml",
+    "anchor": "Results, 'Western blot analysis', first paragraph",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought - this is the sentence the reagent question of the lot is about",
+    "epistemic_type": "DATO for what the paper claims about its reagent; the isoform-wide detection clause is AUTHOR_INTERPRETATION ('should detect'), not a measurement"
+   },
+   {
+    "proposition": "The immunoblot specificity evidence is a single negative control: a WWOX-non-expressing cell line, with the transfectant as positive control. Nothing else is offered for the immunoblot.",
+    "snippet": "The specificity of this WWOX antibody in the immunoblotting analyses was demonstrated by observing no immunoreactive products in cell extracts from the PEO1 ovarian carcinoma cell line used as negative control (Figure 1A).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15982416/PMID15982416_PMC1173095_europepmc.xml",
+    "anchor": "Results, 'Western blot analysis', first paragraph",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "sought",
+    "epistemic_type": "DATO"
+   },
+   {
+    "proposition": "The negative control is a genetic null rather than an untransfected comparator: PEO1 carries a homozygous deletion of exons 4-8, established elsewhere (ref 4) and not in this paper.",
+    "snippet": "As negative control for WWOX protein expression we used protein extracts from the ovarian cell line PEO1 that does not express WWOX due to a homozygous deletion affecting exons 4–8 of this gene [4]",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15982416/PMID15982416_PMC1173095_europepmc.xml",
+    "anchor": "Methods, 'Western blot analysis'",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought",
+    "epistemic_type": "DATO about the paper's design; the null status of PEO1 is a premise imported by citation. PREMISE: DATO (ref 4, PMID 11572989), unread here and queued as FT-179."
+   },
+   {
+    "proposition": "The immunohistochemistry specificity evidence is a pre-absorption with the immunising fusion protein whose result is not shown, so the IHC control exists as an assertion and not as an inspectable panel.",
+    "snippet": "The specificity of the WWOX antibody for IHC analysis was validated by observing that the immunoreactivity was abolished by pre-absortion to the recombinant GST-WWOX fusion protein used to raise the antibody (data not shown).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15982416/PMID15982416_PMC1173095_europepmc.xml",
+    "anchor": "Results, 'Pattern of WWOX staining in normal ovary', first paragraph",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought - this is the single most load-bearing sentence in the lot, and its evidence is 'data not shown'",
+    "epistemic_type": "DATO that the claim was made; the control itself is unverifiable from this paper. Note the internal tension with entry 0: the immunogen is described as the WW domains in the Results and as a recombinant GST-WWOX fusion protein here."
+   },
+   {
+    "proposition": "The antibody is the laboratory's own, used at a stated concentration, and its provenance is a citation to the breast-cancer paper of the same laboratory.",
+    "snippet": "WWOX protein was detected using affinity-purified anti-WWOX rabbit polyclonal primary antibodies developed in our laboratory (final concentration 280 ng/ml) [12]",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15982416/PMID15982416_PMC1173095_europepmc.xml",
+    "anchor": "Methods, 'Western blot analysis'",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought",
+    "epistemic_type": "DATO"
+   },
+   {
+    "proposition": "The immunostaining protocol is not described here either: it is cited in full to the same earlier paper, which makes ref 12 the method of record as well as the reagent of record.",
+    "snippet": "Anti-WWOX immunostaining was performed as previously reported [12].",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15982416/PMID15982416_PMC1173095_europepmc.xml",
+    "anchor": "Methods, 'Immunostaining method'",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought - the independence question of the lot turns on how much of this paper's method is this paper's",
+    "epistemic_type": "DATO"
+   },
+   {
+    "proposition": "The scoring is an automated intensity measurement whose calibration is also cited to ref 12, and whose positive/negative boundary is a single arbitrary-unit threshold on a 255-point scale.",
+    "snippet": "The cutoff to differentiate positive and negative staining was determined to be a mean intensity of 63 (arbitrary staining intensity units, s.i.u.) over a total of 255 (color saturation scale).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15982416/PMID15982416_PMC1173095_europepmc.xml",
+    "anchor": "Methods, 'Evaluation of immunohistochemical staining'",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought",
+    "epistemic_type": "DATO"
+   },
+   {
+    "proposition": "Normal ovarian surface epithelium scores in the moderate band, which places the reference tissue only five intensity units above the negative/low cutoff the whole dichotomy rests on.",
+    "snippet": "The mean WWOX intensity staining for normal ovarian surface epithelium (OSE) fell in the moderate category (mean value 70 ± 4).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15982416/PMID15982416_PMC1173095_europepmc.xml",
+    "anchor": "Methods, 'Evaluation of immunohistochemical staining'",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found - I was reading for the scoring rule and this sentence is what makes the rule's margin visible",
+    "epistemic_type": "DATO"
+   },
+   {
+    "proposition": "The 444 cases are a pooled series from two institutions with two separately built tissue microarrays, scored in duplicate; the histotype counts are heavily unbalanced.",
+    "snippet": "By pooling the TMA sets from both institutions we were able to successfully analyze in duplicate WWOX protein staining from a total of 444 invasive surface epithelial derived primary ovarian carcinomas that included Serous (n = 375), Endometroid (n = 40), Mucinous (n = 10) and Clear Cell Carcinoma (CCC) (n = 19) histological subtypes.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15982416/PMID15982416_PMC1173095_europepmc.xml",
+    "anchor": "Methods, 'Ovarian tissue microarrays'",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought",
+    "epistemic_type": "DATO"
+   },
+   {
+    "proposition": "Every clinico-pathological association in the paper is univariate: one test, with no multivariable model anywhere.",
+    "snippet": "Univariate analysis of clinical-pathological parameters based on WWOX staining was determined by χ2 test with Yates' correction.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15982416/PMID15982416_PMC1173095_europepmc.xml",
+    "anchor": "Methods, 'Statistical methods'",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought - the contract asks whether the outcome association is adjusted for stage and grade, and this is the sentence that answers it",
+    "epistemic_type": "DATO"
+   },
+   {
+    "proposition": "Loss of WWOX tracks with advancing FIGO stage and not with grade.",
+    "snippet": "We detected a statistically significant trend between the decrease in WWOX expression and more advanced FIGO stages (-b = -0.135; p trend= 0.007, Table 2). No correlation was found between tumor grade (GOG) and WWOX staining (p = 0.707, Table 2).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15982416/PMID15982416_PMC1173095_europepmc.xml",
+    "anchor": "Results, 'WWOX staining analysis according to stage and grade'",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought",
+    "epistemic_type": "DATO"
+   },
+   {
+    "proposition": "The survival association is a two-group comparison with a p value and nothing else, and the authors themselves offer stage and histotype composition as alternative explanations for it.",
+    "snippet": "The association with overall survival could be due to an increased frequency of loss in higher stage tumors that are associated with a poorer outcome or alternatively due, in part, to an increased frequency of clear cell and mucinous tumors which have a lower likehood of responding to therapy [31].",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15982416/PMID15982416_PMC1173095_europepmc.xml",
+    "anchor": "Discussion, fifth paragraph",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought - an author-stated caveat, and the negative is the product",
+    "epistemic_type": "DATO that the authors state it; the confounding itself is INFERENZA and is theirs, not mine"
+   },
+   {
+    "proposition": "Estrogen receptor status shows no association with WWOX in this ovarian series; only progesterone receptor does. The hormonal frame is therefore not reproduced across tissues even within this one laboratory's own work.",
+    "snippet": "In contrast to our previous observations in breast cancer in which we observed a strong correlation between ER and PR with WWOX expression [12], in this ovarian study, only PR was associated with WWOX expression (Table 2).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15982416/PMID15982416_PMC1173095_europepmc.xml",
+    "anchor": "Discussion, fifth paragraph",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought - the contract asks whether the sex-steroid hypothesis is tested or restated",
+    "epistemic_type": "DATO"
+   },
+   {
+    "proposition": "The authors explicitly raise, and do not resolve, that the PR association may be an artefact of histotype composition rather than a WWOX-PR relationship. The paper leaves this open.",
+    "snippet": "These correlations raise the question of whether the observed positive association between PR loss and WWOX loss is a consequence of the predominance of WWOX loss in the two aforementioned histotypes, rather than a direct mechanistic association between WWOX and PR.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15982416/PMID15982416_PMC1173095_europepmc.xml",
+    "anchor": "Discussion, fifth paragraph",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought",
+    "epistemic_type": "DATO that it is unresolved by the paper. It stays unresolved here: a reading may not close what its source leaves open."
+   },
+   {
+    "proposition": "No compartment other than cytoplasm is reported in any tissue of this series, normal or tumour, and the disagreement with a nuclear-staining report is attributed by the authors to the antibodies rather than adjudicated.",
+    "snippet": "Possibly this discrepancy is due to the use of different antibodies.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15982416/PMID15982416_PMC1173095_europepmc.xml",
+    "anchor": "Discussion, third paragraph (on Watanabe 2003, ref 27)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found - I was following the compartment claim and this is the paper conceding that its own compartment result is reagent-dependent",
+    "epistemic_type": "DATO that the authors say it; the attribution itself is AUTHOR_INTERPRETATION and is untested here"
+   },
+   {
+    "proposition": "The compartment result of this series is exclusively cytoplasmic, with an explicit negative for nuclear staining across all histotypes.",
+    "snippet": "The most typical WWOX staining pattern observed for all histotypes was cytoplasmic and diffuse, no tissues demonstrated any nuclear staining.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15982416/PMID15982416_PMC1173095_europepmc.xml",
+    "anchor": "Results, 'WWOX staining in ovarian carcinomas'",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "sought",
+    "epistemic_type": "DATO"
+   },
+   {
+    "proposition": "FIGURE ATTESTATION, Figure 1A at native resolution (292x710 ESM original and the 2250x1500 composite): the entire antibody-specificity panel is two lanes - a single discrete band in the WWOX-transfected PEO1 lane, no band anywhere in the WWOX-null PEO1 lane, with actin present in both. It shows what the text says it shows. It also shows what is NOT there: no molecular-weight ladder or marker lane anywhere in Figure 1, so the panel cannot establish that the band is the 46 kDa full-length species; no pre-immune or isotype lane; no peptide-block lane; no second antibody; no dilution series.",
+    "snippet": "A) Total protein extracts from PEO1 cell lines transfected with an empty vector or a WWOX expressing vector were analyzed by immunobloting with the anti-WWOX antibody. Note: no immunoreactive bands are observed in the vector transfected cell line.",
+    "surface": "figure",
+    "artifact": [
+     "files/fulltext/PMID15982416/esm/12885_2005_252_MOESM5_ESM.tiff",
+     "files/fulltext/PMID15982416/esm/12885_2005_252_MOESM1_ESM.jpeg"
+    ],
+    "anchor": "Figure 1A, inspected as an image at 292x710 native and at 8x supersample from the 2250x1500 composite",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[0]",
+    "qualifies_needle": "should detect all potential WWOX isoforms",
+    "experimental_context": {
+     "system": "human ovarian carcinoma cell line",
+     "cell_line": "PEO1 (WWOX-null, homozygous deletion of exons 4-8) versus PEO1 stably transfected with a WWOX expression vector",
+     "endpoint": "immunoblot immunoreactivity",
+     "comparator": "vector-transfected null line"
+    },
+    "attestation": "Pixels inspected, not a caption read. The quote is the caption; the reading of the panel is the proposition.",
+    "found_or_sought": "sought - the reagent question of the lot is answered on this panel or nowhere",
+    "epistemic_type": "DATO for the loss-of-signal control; the qualification of isoform-wide detection is the panel's, since a claim about isoforms requires a size axis the panel does not carry"
+   },
+   {
+    "proposition": "FIGURE ATTESTATION, Figure 1B at native and 8x: the tumour blot is not one continuous membrane. The WWOX and actin rows step abruptly at two visible vertical boundaries - between T129 and T138, and between T123-2 and T051 - where background density changes discontinuously across both rows, so the row is an assembly of at least three blocks. Neither the caption nor the text says so, while the 'Relative Expression' values printed beneath are compared across those boundaries and normalised to a single positive control. A fainter second immunoreactive species below the main band is visible in T324, T330, T011, T014 and T042, and it is neither labelled, identified nor quantified anywhere in the paper.",
+    "snippet": "B) WWOX protein expression was determined by immunoblotting of total protein extracts from 38 ovarian carcinoma samples. Five normal ovarian tissue extracts are shown on the first five lanes.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID15982416/esm/12885_2005_252_MOESM1_ESM.jpeg",
+    "anchor": "Figure 1B, whole row at 2250x1500 native plus three native-pixel strips and two 8x crops (seam at T123-2/T051, second species at T324/T330)",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[18]",
+    "qualifies_needle": "40% (15/38) of tumors had levels lower than 50% that observed in normal ovary",
+    "experimental_context": {
+     "system": "human ovarian tissue, snap-frozen",
+     "genotype": "not genotyped; tumour versus normal ovary",
+     "endpoint": "immunoblot band intensity normalised to actin and expressed relative to normal ovary",
+     "comparator": "five normal ovarian tissue extracts on the same figure"
+    },
+    "attestation": "Pixels inspected at native resolution and at 8x. The two boundaries and the second species are readings of the image; the caption is quoted only to name the panel.",
+    "found_or_sought": "found - I went to this panel for the isoform claim and the discontinuities are what the native surface showed",
+    "epistemic_type": "INFERENZA that cross-block comparison is affected; DATO that the boundaries and the second species are present in the image"
+   },
+   {
+    "proposition": "The immunoblot quantitation, on which the 37-40% reduced-expression figure rests, is a three-way split of 38 tumours against five normal ovaries.",
+    "snippet": "We concluded that 26% (10/38) of tumors over-expressed WWOX, 34% (13/38) expressed normal WWOX levels and 40% (15/38) of tumors had levels lower than 50% that observed in normal ovary.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15982416/PMID15982416_PMC1173095_europepmc.xml",
+    "anchor": "Results, 'Western blot analysis', second paragraph",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "sought",
+    "epistemic_type": "DATO"
+   },
+   {
+    "proposition": "FIGURE ATTESTATION, Figure 2 (ESM original 2100x748): normal ovary shows brown cytoplasmic signal confined to the surface epithelium and to inclusion-cyst epithelium, with unstained underlying stroma in the same field. There is no negative-control panel in this figure, and no co-marker of any kind: the compartment assignment is by morphology on a haematoxylin counterstain.",
+    "snippet": "A) Representative photomicrograph (20X) of normal ovary displaying positive staining in ovarian surface epithelial cells. B) Photomicrograph (20X) showing strong WWOX inmunostaining localizing to the cytoplasm of inclusion cyst epithelial cells.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID15982416/esm/12885_2005_252_MOESM2_ESM.tiff",
+    "anchor": "Figure 2A-B, inspected as an image at 2100x748 native",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "attestation": "Pixels inspected. Two panels, both photomicrographs; the internal negative is the unstained stroma in the same field, which is a within-field contrast and not a reagent control.",
+    "found_or_sought": "sought",
+    "epistemic_type": "DATO for the staining pattern; the cell-type assignment is morphological"
+   },
+   {
+    "proposition": "FIGURE ATTESTATION, Figure 3 (ESM original 1875x2000): twelve photomicrographs across four histotypes, ranging from strong cytoplasmic and membranous signal (A, D, E) to fields with no brown signal at all (F, H, I, K, L). None of the twelve is a reagent control, and no panel in the paper shows the pre-absorbed section the Results assert abolished immunoreactivity.",
+    "snippet": "A-C. Serous ovarian carcinomas. A, Strong-Moderate. Note heterogeneity in staining intensity pattern in this tumor sample; B, Moderate. Note predominance of apical staining in this papillary serous ovarian carcinoma; C Weak-Negative, WWOX lack of staining observed in approximately 30% of serous carcinoma cases.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID15982416/esm/12885_2005_252_MOESM3_ESM.jpeg",
+    "anchor": "Figure 3A-L, all twelve panels inspected as images at 1875x2000 native",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "attestation": "Pixels inspected, all twelve panels. The negative panels are genuinely blank for brown signal with intact haematoxylin, which is what makes the series internally coherent - and is also the only thing standing in for a reagent negative control in the immunohistochemistry.",
+    "found_or_sought": "sought",
+    "epistemic_type": "DATO"
+   },
+   {
+    "proposition": "FIGURE ATTESTATION, Figure 4 (ESM original 1080x788): the survival evidence is two Kaplan-Meier curves labelled LOW and HIGH with 'p = 0.03' printed in the legend box. There are no numbers at risk, no censoring marks, no confidence bands, no hazard ratio and no covariate - the figure contains nothing that could carry an adjusted estimate, which is the visual counterpart of the Methods' single univariate test.",
+    "snippet": "Kaplan Meier Plot analysis showing the pattern of Overall Survival relative to WWOX protein expression.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID15982416/esm/12885_2005_252_MOESM4_ESM.tiff",
+    "anchor": "Figure 4, inspected as an image at 1080x788 native",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[9]",
+    "qualifies_needle": "Univariate analysis of clinical-pathological parameters based on WWOX staining",
+    "experimental_context": {
+     "system": "human ovarian carcinoma, MD Anderson TMA subset",
+     "endpoint": "overall survival to 120 months",
+     "comparator": "WWOX LOW versus HIGH by the 65 s.i.u. dichotomy"
+    },
+    "attestation": "Pixels inspected. The absence of numbers at risk and of any adjusted estimate is read from the image, not inferred from the caption.",
+    "found_or_sought": "sought",
+    "epistemic_type": "DATO"
+   },
+   {
+    "proposition": "Table 1: the histotype effect rests on ten mucinous and nineteen clear-cell cases against 375 serous, and the single significance statement of the table attaches to the mucinous group - a χ² on ten cases.",
+    "snippet": "Mucinous carcinoma * 7/10 (70%) 3/10 (30%) 10 Total 133/444 (30%) 311/444 (70%) 444 * (χ2 = 8.67; p = 0.0131)",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID15982416/PMID15982416_PMC1173095_europepmc.xml",
+    "anchor": "Table 1, mucinous row through the table total and its footnote",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "sought",
+    "epistemic_type": "DATO",
+    "note": "Quoted as one contiguous span of the table surface, which is how the row, the total and the footnote actually sit in the deposit. The denominator is the finding: n = 10."
+   },
+   {
+    "proposition": "Table 2: estrogen receptor status is flatly null - 25% low WWOX among ER-negative and 25% among ER-positive - while progesterone receptor is the paper's only positive receptor association. The table's own PR cell prints 'p = 0.00' where the Results text and the Abstract both give p = 0.008, so the two surfaces of this one paper disagree on the digits of its single positive receptor result.",
+    "snippet": "ER Negative 22 (25%) 66 (75%) 88 p = 0.984 Positive 59 (25%) 176 (75%) 235 PR Negative 70 (29%) 170 (71%) 240 p = 0.00 Positive 12 (14%) 71 (86%) 83",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID15982416/PMID15982416_PMC1173095_europepmc.xml",
+    "anchor": "Table 2, ER block and PR block, quoted contiguously",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found - reading the table against the text, which is where this class of defect lives",
+    "epistemic_type": "DATO that the two surfaces disagree; p = 0.008 is the value the Results and the Abstract each carry, and it is the one to quote",
+    "note": "🔴 Deliberately NOT declared as a coupled relation. `text_contradicted_by_panel` is an assertion made by a PANEL about the text and belongs on a `figure` surface; this is a table disagreeing with running prose, which is a different finding and needs its own words. It is equally not a `contradicts_locator`: that field contradicts a locator persisted by this repository, and no manifest for this PMID has ever existed, so no prior-locator audit is triggered. The disagreement is carried in the proposition and in the dossier's figure-and-table audit."
+   }
+  ]
+ }
+}

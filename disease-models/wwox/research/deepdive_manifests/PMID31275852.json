@@ -1,0 +1,674 @@
+{
+  "schema_version": 2,
+  "pmid": "31275852",
+  "doi": "10.3389/fonc.2019.00517",
+  "receipt": "FTR-20260914-31275852-01",
+  "landing": [
+    "FTR-20260914-31275852-01",
+    "fulltext_dossiers/PMID31275852.md",
+    "CC-20260914-31275852-01",
+    "session_evaluations/2026-09-14_scientist-a_SCI-FT-A-001.md"
+  ],
+  "skills_considered": [
+    {
+      "skill": "find-fulltext",
+      "used": true,
+      "reason": "Run inline. Europe PMC fullTextXML returned HTTP 503 twice for PMC6593956 despite the dispatch brief measuring 200 earlier today; ncbi efetch db=pmc served the JATS. PMC /bin/ returned an NCBI 404 diagnostic page under every asset name, so figures came from the CC BY publisher PDF's embedded rasters and supplements from the Europe PMC supplementaryFiles zip. Cascade recorded in the acquisition recipes."
+    },
+    {
+      "skill": "legend-deepdive",
+      "used": false,
+      "reason": "Run inline. Three of this reading's findings live in pixels a read-only subagent working from a dossier cannot inspect: Figure 6C's bar heights against the text's fold change, Figure 4D's undeclared AID-/- arm, and Supplementary Figure 2's junction table against its own caption."
+    },
+    {
+      "skill": "legend-locator-audit",
+      "used": false,
+      "reason": "Not triggered, and the trigger was checked rather than assumed. CLAIM 029 is 'in observation', not a consolidated baseline; this reading contradicts no persisted locator because no locator for PMID 31275852 exists anywhere in the corpus - the two manifests naming it (PMID31428585, PMID36828035) carry it as an unread queued identifier. The panel-versus-text contradictions recorded here are internal to this paper."
+    },
+    {
+      "skill": "legend-discovery",
+      "used": false,
+      "reason": "Declined. The leads here (Alt-NHEJ dependence, AID-driven break formation) are B-lineage oncology in murine cells; mining them as discovery capital before the identity records exist would inflate them past one mouse cohort."
+    },
+    {
+      "skill": "legend-paperqa",
+      "used": false,
+      "reason": "Requires an API key and external traffic, which is external spend reserved to the operator under STOP POLICY class 1. Not requested, not run."
+    },
+    {
+      "skill": "legend-hypothesis-forge",
+      "used": false,
+      "reason": "Declined. No therapeutic hypothesis is forgeable from a B-cell tumour-incidence phenotype with no neural material and no WWOX disease allele."
+    }
+  ],
+  "group_assessment": {
+    "performed": true,
+    "total_publications": 138,
+    "publications_on_gene": 38,
+    "counts_measured": "PubMed esearch 2026-09-14: 'Aldaz CM[au]' 138, 'Aldaz CM[au] AND WWOX' 38; first/corresponding author of the B-cell work 'McBride KM[au]' 53, of which 'McBride KM[au] AND WWOX' 1 - this paper. 'Abba MC[au] AND WWOX' 10, 'Kil H[au] AND WWOX' 10.",
+    "research_type": "experimental_lab",
+    "output_kind": "primary_research",
+    "is_primary_group_for_disease": true,
+    "is_primary_group_for_gene": true,
+    "weighting": "Two capabilities, weighed apart. C. M. Aldaz is a founder of the WWOX field (the 2000 cloning paper is reference 1 here) and the same laboratory built the conditional allele (ref 9) and the WWOX-DEE-relevant neural models (PMID 30290271, 36828035), so it is primary for the gene AND publishes on the disease - both are recorded because they are not the same question and this output touches neither. The B-cell immunology half is NOT this laboratory's native expertise: it is McBride's, whose 53 papers include exactly one on WWOX, and the CSR/translocation assays, AID phosphorylation reagents and Myc/Igh Southern assay are all his established methods (refs 37, 40, 41, 43). So the repair-choice half weighs as competent primary work by a method expert, the tumour-incidence half as a long-latency mouse cohort with blinded histopathology, and the words 'direct role' in the Introduction weigh as the group's interpretation rather than a measurement anyone here made."
+  },
+  "field_density": {
+    "wwox_directed": true,
+    "queries": [
+      {"query": "WWOX", "route": "PubMed esearch 2026-09-14", "count": 708},
+      {"query": "WWOX AND (B cell OR B-cell)", "route": "PubMed esearch 2026-09-14", "count": 14},
+      {"query": "WWOX AND (class switch recombination OR CSR)", "route": "PubMed esearch 2026-09-14", "count": 1},
+      {"query": "WWOX AND (non-homologous end joining OR NHEJ)", "route": "PubMed esearch 2026-09-14", "count": 7},
+      {"query": "WWOX AND translocation", "route": "PubMed esearch 2026-09-14", "count": 57},
+      {"query": "WWOX AND DNA repair", "route": "PubMed esearch 2026-09-14", "count": 31},
+      {"query": "WWOX AND (lymphoma OR leukemia)", "route": "PubMed esearch 2026-09-14", "count": 42},
+      {"query": "WWOX AND (myeloma OR plasmacytoma)", "route": "PubMed esearch 2026-09-14", "count": 15},
+      {"query": "WWOX AND epilepsy", "route": "PubMed esearch 2026-09-14", "count": 67}
+    ],
+    "note": "The intersection this paper occupies is ONE paper in all of PubMed: 'WWOX AND (class switch recombination OR CSR)' returns 1, and it is this one. WWOX x NHEJ is 7 and WWOX x B-cell 14. So the CSR/end-joining-choice observation has no independent replication anywhere in the literature, which is the single most important fact about its strength: it is unique, not corroborated."
+  },
+  "multihop": {
+    "performed": true,
+    "references_enumerated": 61,
+    "enumeration_method": "Enumerated from the fingerprinted efetch JATS ref-list, not sampled: 61 <ref> elements, 60 carrying a pmid pub-id and 58 a doi. Gene-direct by title: 16 name WWOX/Wwox/WOX1/FRA16D/the FOR gene.",
+    "gene_direct_count": 16,
+    "gene_direct_refs_in_source": ["10786676", "10861292", "11979549", "11719429", "24932569", "17360458", "19936220", "30082886", "17823927", "21685375", "17609426", "28943951", "24369382", "25331887", "27869163", "30350478"],
+    "resolved": ["10786676", "11979549", "11719429", "24932569", "17360458", "19936220", "30082886", "17823927", "21685375", "17609426", "28943951", "24369382", "25331887", "27869163", "30350478"],
+    "queued": [],
+    "resolved_depth_declaration": "RESOLVED MEANS IDENTITY, NOT READING. 15 of 16 gene-direct identifiers are present by PMID string in the paper registry, tracking log, claim registry, batch queue or receipt ledger, checked 2026-09-14 with no record content opened before the dossier was frozen; ONE is absent from every one of them: 10861292 (Ried 2000, the FRA16D/FOR sequence paper). Reading depth is a different question and is stated per antecedent: 27869163 (Schrock, Wwox-Brca1 repair-pathway choice), 19936220 (the conditional allele) and 24369382 (Mallaret, the human SCAR12 paper cited here for a mouse protocol) DO carry complete receipts; 25331887 (Abu-Odeh, the ATM paper that is CLAIM 029's own primary source), 30350478 (Hussain, WWOX and genomic instability) and 17823927 (Ludes-Meyers, the hypomorphic-Wwox B-cell-lymphoma antecedent this study builds on) carry NONE. The three unread ones are exactly the premises this paper's mechanistic framing rests on. Nothing is queued from this contract because it does not own the queue file; the debt is routed to the orchestrator in CC-20260914-31275852-01."
+  },
+  "corpus_crossquery": {
+    "performed": true,
+    "query": "Technical only, run after the dossier was frozen: how many deep-dive manifests and complete-read receipts exist, whether any manifest already names PMID 31275852, and whether the corpus holds any reading of WWOX in class-switch recombination, microhomology-mediated end joining or plasma-cell neoplasia.",
+    "hits": 2,
+    "finding": "98 manifests before this one, 175 receipt events, 104 of them at complete_fulltext_read over 87 distinct PMIDs, and 0 events of any depth for this PMID - counted at event level with fulltext_receipts and session_self_eval, after a first pass using wc -l and grep -c gave 173 and 121 and was discarded as measuring lines and string occurrences rather than events. PMID 31275852 is named in exactly 2 manifests and in NEITHER as a reading: PMID31428585.json carries it as multihop.queued[3] with the literal annotation 'McBride et al., Wwox B-cell knockout - NO RECEIPT' and as an external resolution in entries[11], and PMID36828035.json lists it among gene_direct_refs_in_source and in a queued pmids list. The corpus therefore already knew this paper was unread and had queued it twice; this is first contact with its text. Subject-wise: 'microhomology' appears in 1 of 98 manifests, 'NHEJ' in 4, 'class switch' in 0, 'plasmablast' in 0 and 'myeloma' in 0 - so the repair-CHOICE endpoint is new to this corpus, which until now recorded WWOX-DDR only as ATM activation and mutation burden (CLAIM 029)."
+  },
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-09-14",
+    "route": "NCBI esummary db=pubmed retmode=json for 31275852",
+    "result": "pubtype Journal Article. NO commentscorrections field returned, i.e. no linked erratum, expression of concern or retraction. The efetch JATS carries no related-article element of correction type. The PMC Open Access service metadata record for PMC6593956 independently reports is_retracted false and license_code CC BY.",
+    "hold": false,
+    "dependencies": {
+      "flagged": [],
+      "noted": [],
+      "paper_verdict": "SCREENED_CLEAN",
+      "reference_source": "network",
+      "references_declared": 61,
+      "references_screened": 59,
+      "references_with_doi": 59,
+      "schema": "retraction_check.dependencies/1",
+      "screened": true,
+      "snapshot": {
+        "date": "2026-09-10",
+        "days_since_fetch": 4,
+        "rows": 72476,
+        "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+      },
+      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+      "unscreenable": {"UNSCREENABLE_NO_DOI": 2}
+    }
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID31275852_McBride2019.xml",
+      "kind": "article_text",
+      "note": "efetch JATS XML of PMC6593956, 135150 B. article-id pmid 31275852 / doi 10.3389/fonc.2019.00517 verified inside the document. Body: Introduction, 8 Methods subsections, 3 Results sections, Discussion, Data Availability, Ethics, Author Contributions; 6 <fig>, ONE <table-wrap> (Table 1), 3 <supplementary-material>, 61 <ref>. Evidentiary text surface for every body and table locator. Screened clean: 0 C0 control characters, with x and minus present.",
+      "acquisition_recipe": {
+        "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=6593956",
+        "http_method": "GET",
+        "tier": "ncbi_efetch_pmc_xml",
+        "user_agent_policy": "none",
+        "derived": false,
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "0e75fd992f64771bd8a53d1a05665ac4bf52e5d81f63b9c35692890635d48fea"
+    },
+    {
+      "path": "files/fulltext/PMID31275852_McBride2019.pdf",
+      "kind": "article_binary",
+      "note": "Frontiers CC BY publisher PDF, 11 pages, 1982519 B. Declared as the source of the native figure rasters ONLY; no locator uses its text layer. Byte-identical to the PMC Open Access S3 copy (PMC6593956.1.pdf), verified by cmp this session, so the two routes are one artefact.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.frontiersin.org/articles/10.3389/fonc.2019.00517/pdf",
+        "http_method": "GET",
+        "tier": "publisher_pdf",
+        "user_agent_policy": "none",
+        "derived": false,
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "de718b1fbaea57bacfab6078ce5d15e911a85036946ed580bbabb8b4727777b5"
+    },
+    {
+      "path": "files/fulltext/PMID31275852_McBride2019_assets/fig1_p03_x145.jpeg",
+      "kind": "figure",
+      "note": "Figure 1, native embedded raster 803x806: Kaplan-Meier survival, Cd19 Wwox WT versus KO, with the printed Log Rank p = 0.007.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID31275852_McBride2019.pdf",
+        "extractor": {"name": "PyMuPDF", "version": "1.28.2", "call": "Document.extract_image(xref) over page.get_images(full=True), page 3 xref 145", "join": ""},
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "5d013bccef9f43f9ede029f7d56dd17143e37b2033bcc97cde2d3f459bd94c6d"
+    },
+    {
+      "path": "files/fulltext/PMID31275852_McBride2019_assets/fig2_p03_x149.jpeg",
+      "kind": "figure",
+      "note": "Figure 2, native raster 2008x1007: six panels of plasmablastic plasmacytoma histology and CD138/B220 immunostaining.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID31275852_McBride2019.pdf",
+        "extractor": {"name": "PyMuPDF", "version": "1.28.2", "call": "Document.extract_image(xref) over page.get_images(full=True), page 3 xref 149", "join": ""},
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "1511fa8890b654ce7d03ea71a7a9252b0c6bbdc264654e27247805e4946d37b2"
+    },
+    {
+      "path": "files/fulltext/PMID31275852_McBride2019_assets/fig3_p05_x188.jpeg",
+      "kind": "figure",
+      "note": "Figure 3, native raster 2008x1045: SPEP gels (4 WT, 16 KO lanes) with red arrows on M-spikes, plus myeloma cast nephropathy H&E and anti-light-chain IHC.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID31275852_McBride2019.pdf",
+        "extractor": {"name": "PyMuPDF", "version": "1.28.2", "call": "Document.extract_image(xref) over page.get_images(full=True), page 5 xref 188", "join": ""},
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "3cde22617cf09456bd381c2ac92767fb61edd33f2ee08ef626d8aa21714bde82"
+    },
+    {
+      "path": "files/fulltext/PMID31275852_McBride2019_assets/fig4_p06_x211.jpeg",
+      "kind": "figure",
+      "note": "Figure 4, native raster 1772x1343: (A) Wwox transcript across 6 B-cell subsets plus CD8 and CD11b, (B) proliferation, (C) CSR flow plots for two experiments, (D) mean CSR to IgG1 with a THIRD bar labelled AID-/-.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID31275852_McBride2019.pdf",
+        "extractor": {"name": "PyMuPDF", "version": "1.28.2", "call": "Document.extract_image(xref) over page.get_images(full=True), page 6 xref 211", "join": ""},
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "8cd8f6c36bb4cd1170b80f0eb41fa07ccc98525540ec6eef4a125a92e1c300f8"
+    },
+    {
+      "path": "files/fulltext/PMID31275852_McBride2019_assets/fig5_p07_x226.jpeg",
+      "kind": "figure",
+      "note": "Figure 5, native raster 980x1044: (A) junction-class bar chart with printed p-values including p = 0.15 over insertions >1 nt, (B) mutation pie charts centred 77 and 61.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID31275852_McBride2019.pdf",
+        "extractor": {"name": "PyMuPDF", "version": "1.28.2", "call": "Document.extract_image(xref) over page.get_images(full=True), page 7 xref 226", "join": ""},
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "454d4fb62d3138c87c5283285f691dc3834613c0550ff3ad56d85363ac4c3c60"
+    },
+    {
+      "path": "files/fulltext/PMID31275852_McBride2019_assets/fig6_p08_x268.jpeg",
+      "kind": "figure",
+      "note": "Figure 6, native raster 3551x1093: (A) Myc/Igh assay schematic, (B) Southern blots with EtBr gels, (C) translocation frequency per 10^6 cells with error bars and p < 0.05.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID31275852_McBride2019.pdf",
+        "extractor": {"name": "PyMuPDF", "version": "1.28.2", "call": "Document.extract_image(xref) over page.get_images(full=True), page 8 xref 268", "join": ""},
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "c26be94016718fe96ad1bbe5fa0347b97515059a347f05d7ba9165fe34a829bd"
+    },
+    {
+      "path": "files/fulltext/PMID31275852_McBride2019_assets/fig6C_crop.png",
+      "kind": "figure",
+      "note": "Figure 6C at native scale, 701x1093, cropped so the two bar heights and the y-axis ticks 0 to 2.0 can be read rather than estimated. This is the surface on which the fold-change discrepancy was measured.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID31275852_McBride2019_assets/fig6_p08_x268.jpeg",
+        "extractor": {"name": "PyMuPDF", "version": "1.28.2", "call": "page.get_pixmap(matrix=Matrix(s,s), clip=Rect(2850,0,3551,1093)) on the image opened as a document, s = native width / page width", "join": ""},
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "df283b35deb68fad00b30877f68c958f8b9c200bf505b01b03d8350891e0d32e"
+    },
+    {
+      "path": "files/fulltext/PMID31275852_McBride2019_assets/fig4D_crop.png",
+      "kind": "figure",
+      "note": "Figure 4D at native scale, 442x743: the three-bar CSR panel including the undeclared AID-/- arm.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID31275852_McBride2019_assets/fig4_p06_x211.jpeg",
+        "extractor": {"name": "PyMuPDF", "version": "1.28.2", "call": "page.get_pixmap(matrix=Matrix(s,s), clip=Rect(1330,600,1772,1343)) on the image opened as a document", "join": ""},
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "4381bfd60d66b3769edc433a2c801e221ffb78b02bfdf35af7560ef746f9e521"
+    },
+    {
+      "path": "files/fulltext/PMID31275852_McBride2019_assets/fig5A_crop.png",
+      "kind": "figure",
+      "note": "Figure 5A at native scale, 980x540: junction classes with the printed p-values p < 0.001 (blunt), p < 0.01 (>= 5 bp) and p = 0.15 (insertions > 1 nt).",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID31275852_McBride2019_assets/fig5_p07_x226.jpeg",
+        "extractor": {"name": "PyMuPDF", "version": "1.28.2", "call": "page.get_pixmap(matrix=Matrix(s,s), clip=Rect(0,0,980,540)) on the image opened as a document", "join": ""},
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "a9cba30cb9bf41d5d6b3b1fae68b9bdb785d7dbdf9ad08135d31f20efa133212"
+    },
+    {
+      "path": "files/fulltext/PMID31275852_McBride2019_assets/suppfig1_Image_1.TIF",
+      "kind": "supplement_binary",
+      "note": "Supplementary Figure 1 as deposited, LZW TIFF 1339x1155: (A) PCR genotyping, (B) Wwox immunoblot across CD19+ B cells, cerebellum, lung and kidney of one KO and one WT mouse, with actin.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6593956/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryfiles_zip",
+        "user_agent_policy": "none",
+        "derived": false,
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "651ab572b26efa94b9fc1f9b3b2ac1ec5582989bf4a5bd61f65dc3c06f83ecf1"
+    },
+    {
+      "path": "files/fulltext/PMID31275852_McBride2019_assets/suppfig1_Image_1.png",
+      "kind": "figure",
+      "note": "The surface actually inspected for Supplementary Figure 1: RGB PNG rendering of the deposited TIFF, 1339x1155.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID31275852_McBride2019_assets/suppfig1_Image_1.TIF",
+        "extractor": {"name": "PyMuPDF", "version": "1.28.2", "call": "Pixmap(path).save(png)", "join": ""},
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "28e6ab69d5cc9a1d1b11d092f93ffb8e43803685a66455351c2de796b6333053"
+    },
+    {
+      "path": "files/fulltext/PMID31275852_McBride2019_assets/suppfig2_Image_2.pdf",
+      "kind": "supplement_binary",
+      "note": "Supplementary Figure 2 as deposited, 3-page PDF: the junction-classification summary table and representative alignments.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6593956/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryfiles_zip",
+        "user_agent_policy": "none",
+        "derived": false,
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "fb32054f6a6b32b48aa2ec8240b2db66e7d07fb7ae94610edf38fa901b97f0fc"
+    },
+    {
+      "path": "files/fulltext/PMID31275852_McBride2019_assets/suppfig2_Image_2_p1.png",
+      "kind": "figure",
+      "note": "Supplementary Figure 2 page 1 at 200 dpi: the junction-classification table whose columns sum to 77 (WT) and 61 (KO).",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID31275852_McBride2019_assets/suppfig2_Image_2.pdf",
+        "extractor": {"name": "PyMuPDF", "version": "1.28.2", "call": "page.get_pixmap(dpi=200) page 1", "join": ""},
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "6e264ac2c460341c13968249420fa3036745e53c719661d72ddf70aa39d1d734"
+    },
+    {
+      "path": "files/fulltext/PMID31275852_McBride2019_assets/suppfig2_Image_2_p2.png",
+      "kind": "figure",
+      "note": "Supplementary Figure 2 page 2 at 200 dpi: the seven KO junctions with 5-8 bp microhomology, aligned.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID31275852_McBride2019_assets/suppfig2_Image_2.pdf",
+        "extractor": {"name": "PyMuPDF", "version": "1.28.2", "call": "page.get_pixmap(dpi=200) page 2", "join": ""},
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "60bb48558ac3051b36e5999badaf7033439b32b1e155483dbda8e129468956b7"
+    },
+    {
+      "path": "files/fulltext/PMID31275852_McBride2019_assets/suppfig2_Image_2_p3.png",
+      "kind": "figure",
+      "note": "Supplementary Figure 2 page 3 at 200 dpi: the single WT junction with >4 bp overlap, headed '1 of 77 junctions'.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID31275852_McBride2019_assets/suppfig2_Image_2.pdf",
+        "extractor": {"name": "PyMuPDF", "version": "1.28.2", "call": "page.get_pixmap(dpi=200) page 3", "join": ""},
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "55943d074257a05a4313b0beb3b03631c945e5a70b7e32fdc6e471fdbc631cb0"
+    },
+    {
+      "path": "files/fulltext/PMID31275852_McBride2019_assets/suppfig3_Image_3.tif",
+      "kind": "supplement_binary",
+      "note": "Supplementary Figure 3 as deposited, CMYK LZW TIFF 1050x1152: anti-AID and anti-tubulin immunoblot over Aicda-KO, Wwox-KO and WT splenocytes, with the AID/tubulin ratio bar chart.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6593956/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryfiles_zip",
+        "user_agent_policy": "none",
+        "derived": false,
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "085a8a5458218b0d13bd54008b13f7b097e58d270337ca1571c0c0050da02b33"
+    },
+    {
+      "path": "files/fulltext/PMID31275852_McBride2019_assets/suppfig3_Image_3.png",
+      "kind": "figure",
+      "note": "The surface actually inspected for Supplementary Figure 3: CMYK-to-RGB PNG rendering, 1050x1152.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID31275852_McBride2019_assets/suppfig3_Image_3.tif",
+        "extractor": {"name": "PyMuPDF", "version": "1.28.2", "call": "Pixmap(csRGB, Pixmap(path)).save(png)", "join": ""},
+        "acquired_on": "2026-09-14"
+      },
+      "sha256": "9a4b7c857ac1ef1ce7020b6203694ea12d292155c51f0e2508a3b7315a2c0288"
+    }
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": false,
+    "source_fulltext_indexed_evidence": "A structured JATS surface exists (efetch db=pmc) and is the evidentiary text surface for all body and table locators; Europe PMC's fullTextXML endpoint returned HTTP 503 twice today and was not used. Figure locators are visual attestations of native rasters embedded in the CC BY publisher PDF, plus three native-scale crops of quantification panels. Supplement locators are visual attestations of the deposited TIFF and PDF files rendered to PNG.",
+    "abstract_anchoring_waived": "No locator uses the abstract and none needs to: every headline proposition is carried by its Results, Methods or figure-caption counterpart in the body. The abstract's two strongest words - that Wwox deficiency caused a 'dramatic shift' of DSB repair and that this work 'defines for the first time' a role for Wwox - are anchored instead to the Results sentences that measure the shift (entries 6, 7, 18) and to the Discussion sentence conceding the mechanism is not clear (entry 11).",
+    "entries": [
+      {
+        "proposition": "PRIMARY SURVIVAL RESULT: B-cell-specific Wwox deletion shortens survival, log-rank p = 0.007.",
+        "snippet": "Cd19 Wwox KO mice had a statistically significant lower survival rate than control",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31275852_McBride2019.xml",
+        "anchor": "Results > Wwox Ablation in Cd19+ B Cells Reduces Survival and Induces Neoplastic Transformation",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found",
+        "experimental_context": {"system": "Cd19-Cre Wwox flox/flox mouse, lifetime cohort", "genotype": "Cd19 Wwox KO versus Cd19Cre/+ Wwox+/+ littermates"}
+      },
+      {
+        "proposition": "EFFECT SIZE of the survival result: 777 versus 922 days mean survival.",
+        "snippet": "displayed a mean survival of 777 vs. 922 days for control mice",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31275852_McBride2019.xml",
+        "anchor": "Results > Wwox Ablation in Cd19+ B Cells Reduces Survival, same paragraph",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "TUMOUR SPECTRUM AND DENOMINATOR in the knockout: 8 of 34 B-cell lymphomas and 8 further plasmacytomas, i.e. 16 of 34 with a B-cell neoplasm.",
+        "snippet": "8 (23.4%) developed (B220+) B cell lymphomas and 8 other mice developed plasmacytomas",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31275852_McBride2019.xml",
+        "anchor": "Results > Wwox Ablation in Cd19+ B Cells Reduces Survival, tumour paragraph",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found",
+        "experimental_context": {"system": "necropsy cohort, 34 Cd19 Wwox KO mice", "endpoint": "B220 / CD138 immunohistochemistry classification"}
+      },
+      {
+        "proposition": "CONTROL ARM AND THE ONLY STATISTICAL STATEMENT for incidence: 2 of 14 WT lymphomas, no plasmacytoma, difference stated as p < 0.05.",
+        "snippet": "only 2 of 14 (14.3%) mice developed B cell lymphomas and none developed plasmacytomas",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31275852_McBride2019.xml",
+        "anchor": "Results > Wwox Ablation in Cd19+ B Cells Reduces Survival, closing sentences",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "MONOCLONAL GAMMOPATHY: M-spikes in 10 of 27 knockouts versus 1 of 9 controls. No test statistic is stated anywhere for this comparison.",
+        "snippet": "In total 10 of 27 (37%) Cd19 Wwox KO mice but only 1 of 9 (11%) tested Cd19 Wwox WT control mice had detectable M-spikes",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31275852_McBride2019.xml",
+        "anchor": "Results > SPEP paragraph",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found",
+        "experimental_context": {"system": "serum protein electrophoresis, triplicate", "endpoint": "immunoglobulin monoclonal band"}
+      },
+      {
+        "proposition": "CSR IS ONLY MILDLY IMPAIRED - the specificity control for the repair-choice claim: IgG1 switching runs at about 75% of wild type.",
+        "snippet": "supported IgG1 CSR at a rate of ~75% of wild-type controls",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31275852_McBride2019.xml",
+        "anchor": "Results > Wwox Is Expressed in B Cells and Functions During Ig Class Switching",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found",
+        "experimental_context": {"system": "primary splenic B cells, LPS + IL-4, 72 h", "genotype": "germline Wwox KO versus WT, 16-17 days old"}
+      },
+      {
+        "proposition": "THE LOAD-BEARING REPAIR DATUM, half one: blunt joins fall from 26 of 77 to 5 of 61 junctions, p < 0.001.",
+        "snippet": "there was a significant decrease in blunt end joins",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31275852_McBride2019.xml",
+        "anchor": "Results > Wwox Deficiency Impairs C-NHEJ and Promotes Alt-NHEJ During Ig Class Switching",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found",
+        "experimental_context": {"system": "Smu-Sgamma1 junctions cloned and sequenced", "endpoint": "microhomology length at the junction"}
+      },
+      {
+        "proposition": "MAGNITUDE of the microhomology shift: mean overlap 1.2 bp in wild type versus 2.6 bp in knockout.",
+        "snippet": "average MH Wwox WT 1.2 bp vs. Wwox KO 2.6 bp",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31275852_McBride2019.xml",
+        "anchor": "Results > Wwox Deficiency Impairs C-NHEJ, same paragraph",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "THE NEGATIVE THAT MAKES THE POSITIVE MEAN SOMETHING: junction-adjacent mutation frequency is unchanged, 5.2 versus 5.0 x 10-3 per bp, p = 0.8. Repair CHOICE changes without more lesions.",
+        "snippet": "revealed no difference between Wwox WT and Wwox KO",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31275852_McBride2019.xml",
+        "anchor": "Results > Wwox Deficiency Impairs C-NHEJ, mutation-frequency sentence",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "TRANSLOCATION CLAIM AS WRITTEN: a significant 2.5-fold increase in spontaneous Myc/Igh translocations. This magnitude is what Figure 6C's bars do not show - see entries[22].",
+        "snippet": "had a significant 2.5-fold increase in spontaneous translocations",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31275852_McBride2019.xml",
+        "anchor": "Results > Increased Translocations in Wwox KO B Cells Undergoing Class Switch Recombination",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found",
+        "experimental_context": {"system": "primary splenic B cells, germline Wwox KO versus WT", "endpoint": "Myc/Igh translocations per 10^6 cells"}
+      },
+      {
+        "proposition": "THE MODEL SWITCH NOBODY STATES: every mechanistic experiment (CSR, junctions, translocations) uses GERMLINE Wwox-knockout juveniles, not the Cd19-restricted model of the tumour half. B-cell intrinsicality is therefore not established by this design.",
+        "snippet": "B cells were purified from spleens of wild-type and Wwox KO 16",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31275852_McBride2019.xml",
+        "anchor": "Materials and Methods > B Cell Culture and Analysis, sentence 2",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found",
+        "experimental_context": {"system": "primary splenic B cells", "genotype": "whole-body Wwox KO (BK5-Cre)", "timepoint": "16-17 days old, before the 3-4 week lethality of the germline null"}
+      },
+      {
+        "proposition": "AUTHORS' OWN MECHANISTIC LIMIT, in their words: how Wwox influences the two end-joining pathways is not known.",
+        "snippet": "The mechanism by which Wwox influences C-NHEJ and Alt-NHEJ during B cell CSR is not clear",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31275852_McBride2019.xml",
+        "anchor": "Discussion, paragraph 4, opening sentence",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "REPLICATION, METHODS VERSION (junctions): three independent experiments. Figure 5A's caption says four - see entries[14].",
+        "snippet": "Sequences were analyzed from three independent experiments for microhomology and mutation",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31275852_McBride2019.xml",
+        "anchor": "Materials and Methods > Class Switch Recombination Junction Analysis",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "REPLICATION, METHODS VERSION (translocations): three independent experiments, Fisher's exact test. Figure 6C's caption says n = 4.",
+        "snippet": "The data shown is the summary of three independent experiments",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31275852_McBride2019.xml",
+        "anchor": "Materials and Methods > B Cell Culture and Analysis, translocation assay",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "THE CAPTION'S OWN DENOMINATOR ERROR: Figure 5's caption says 76 wild-type clones where the Results text, the pie chart and the supplementary table all say 77.",
+        "snippet": "a total of 76 WT and 61 Wwox KO unique clones",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31275852_McBride2019.xml",
+        "anchor": "Figure 5 caption, panel A sentence",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "SURVIVAL COHORT AS THE FIGURE DECLARES IT: 17 control versus 44 knockout mice - denominators that appear nowhere else in the paper and cannot be reconciled with the 34/14 of the incidence analysis or the 27/9 of the SPEP analysis.",
+        "snippet": "Comparative survival in days of a cohort of 17",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31275852_McBride2019.xml",
+        "anchor": "Figure 1 caption, opening sentence",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "TUMOUR-INTRINSIC DELETION, asserted without a shown result: the tumours were Wwox-immunonegative, data not shown.",
+        "snippet": "Tumors were also tested for Wwox immunoreactivity and were negative",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31275852_McBride2019.xml",
+        "anchor": "Results > tumour paragraph, parenthetical",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "BLINDING: histopathology was read by two pathologists without knowledge of genotype - the strongest methodological control in the tumour half.",
+        "snippet": "Histological analyses were performed by two pathologists without prior knowledge of genotypes",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31275852_McBride2019.xml",
+        "anchor": "Materials and Methods > Histology and Immunohistochemistry",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "THE LOAD-BEARING REPAIR DATUM, half two: long microhomologies rise from 1 of 77 to 8 of 61 junctions, p < 0.01.",
+        "snippet": "Long MHs (>5 bp MH) were rare in WT B cells but significantly increased in Wwox KO B cells",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31275852_McBride2019.xml",
+        "anchor": "Results > Wwox Deficiency Impairs C-NHEJ, long-MH sentence",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "THE AID CONFOUND IS EXCLUDED: AID protein is not elevated in Wwox-deficient B cells, so the junction shift is not a consequence of more deaminase.",
+        "snippet": "In Wwox deficient B cells AID levels are not higher than WT",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31275852_McBride2019.xml",
+        "anchor": "Discussion, paragraph 3",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "THE ONE WWOX-NEURAL CITATION IN THE PAPER, AND IT IS CITED FOR A MOUSE PROTOCOL: reference 34 is Mallaret 2014, the human autosomal-recessive cerebellar-ataxia-with-epilepsy paper, cited beside ref 9 as a source of the Wwox floxed and knockout mouse protocol. Whether it carries such a protocol is not verifiable from this artefact.",
+        "snippet": "BK5-CreTG and Cd19Cre mice (32, 33) and the protocol to generate Wwox",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31275852_McBride2019.xml",
+        "anchor": "Materials and Methods > Animals, sentence 2",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "EXPRESSION SURVEY METHOD AND ITS COMPARATORS: Wwox transcript across B-cell subsets was normalised to 18S and compared against splenic CD8+ and CD11b+ populations.",
+        "snippet": "Wwox expression was analyzed by qPCR and compared to that of splenic CD8+ lymphocytes",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31275852_McBride2019.xml",
+        "anchor": "Results > Wwox Is Expressed in B Cells, sentence 3",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "FIGURE 6C, PIXELS - THE PANEL DOES NOT SHOW THE TEXT'S FOLD CHANGE. Two bars on a 0 to 2.0 axis with error bars and a printed p < 0.05: wild type sits at approximately 0.22 and Wwox KO at approximately 1.45 translocations per 10^6 cells, a ratio of roughly 6.5, against the running text's '2.5-fold'. Read on a native-scale crop, not estimated from a downscaled view. The XML and the published PDF both print '2.5-fold', so this is not a one-surface artefact; what the 2.5 refers to is shown nowhere in the paper.",
+        "snippet": "Visual attestation of Figure 6C: y-axis ticks 0, 0.4, 0.8, 1.2, 1.6, 2.0 labelled 'Myc/Igh translocations (per 10^6 cells)'; open bar 'WT' with its top at approximately 0.22 and whiskers spanning roughly -0.1 to 0.45; filled bar 'Wwox KO' with its top at approximately 1.45 and whiskers spanning roughly 1.0 to 1.95; a bracket with an asterisk and the printed text 'p<0.05'.",
+        "surface": "figure",
+        "artifact": ["files/fulltext/PMID31275852_McBride2019_assets/fig6C_crop.png", "files/fulltext/PMID31275852_McBride2019_assets/fig6_p08_x268.jpeg"],
+        "anchor": "Figure 6C (PDF p. 8), native raster 3551x1093, crop 701x1093",
+        "panel_text_relation": "text_contradicted_by_panel",
+        "contradicts": "entries[9]",
+        "contradicts_needle": "2.5-fold",
+        "found_or_sought": "found",
+        "experimental_context": {"system": "primary splenic B cells, germline Wwox KO versus WT", "endpoint": "Myc/Igh translocations per 10^6 cells"}
+      },
+      {
+        "proposition": "FIGURE 4D, PIXELS - A THIRD GENOTYPE THE TEXT NEVER NAMES. The CSR summary panel carries an AID-/- arm at approximately 0.3% beside WT at approximately 20.3% and Wwox KO at approximately 15.6%. Neither the running text nor the caption mentions an AID-knockout arm in this figure; Methods name Aicda-KO splenocytes only for Supplementary Figure 3. The bar is the panel's internal null control and it is undeclared.",
+        "snippet": "Visual attestation of Figure 4D: y-axis '% CSR to IgG1' with ticks 0 to 25; three bars labelled WT (approximately 20.3, with SEM whisker), Wwox KO (approximately 15.6, with SEM whisker) and AID-/- (approximately 0.3, no visible whisker); bracket with asterisk over the first two bars and the printed text 'p<0.001'.",
+        "surface": "figure",
+        "artifact": ["files/fulltext/PMID31275852_McBride2019_assets/fig4D_crop.png", "files/fulltext/PMID31275852_McBride2019_assets/fig4_p06_x211.jpeg"],
+        "anchor": "Figure 4D (PDF p. 6), native raster 1772x1343, crop 442x743",
+        "panel_text_relation": "panel_only",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "FIGURE 5A, PIXELS - THE PANEL CARRIES A P-VALUE THE TEXT WITHHOLDS. Insertions greater than 1 nt are labelled p = 0.15; the running text reports them only as 'not significantly different' with 'a slight increase'. The panel also shows the 1-or-2 bp class identical between genotypes at about 31%.",
+        "snippet": "Visual attestation of Figure 5A: six bar pairs (WT dark, Wwox KO light) over 'NT overlap at junction' (Blunt, 1 or 2, 3 or 4, >= 5 bp) and 'Insertions' (1 nt, >1 nt); printed labels 'p<0.001' with an asterisk over Blunt, 'p<0.01' with an asterisk over >= 5 bp, and 'p=0.15' over >1 nt with no asterisk.",
+        "surface": "figure",
+        "artifact": ["files/fulltext/PMID31275852_McBride2019_assets/fig5A_crop.png", "files/fulltext/PMID31275852_McBride2019_assets/fig5_p07_x226.jpeg"],
+        "anchor": "Figure 5A (PDF p. 7), native raster 980x1044, crop 980x540",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[25]",
+        "qualifies_needle": "The overall frequency of nucleotide insertions at CSR junctions was not significantly different",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "THE INSERTION RESULT AS THE TEXT STATES IT, so the panel's p = 0.15 has something to qualify.",
+        "snippet": "The overall frequency of nucleotide insertions at CSR junctions was not significantly different",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31275852_McBride2019.xml",
+        "anchor": "Results > Wwox Deficiency Impairs C-NHEJ, insertions sentence",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "SUPPLEMENTARY FIGURE 1B, PIXELS - DELETION IS VERIFIED AT PROTEIN LEVEL AND IS TISSUE-RESTRICTED, and the spared tissue is the cerebellum. In the Cd19 Wwox KO mouse the Wwox band is absent from CD19+ B cells while cerebellum, lung and kidney of the same animal carry it; the WT counterpart carries it in all four. Actin loading is even. This is the cleanest control in the paper and it also bounds every neural inference: the CNS here is Wwox-replete by design.",
+        "snippet": "Visual attestation of Supplementary Figure 1B: two four-lane blocks labelled 'Cd19 Cre+; Wwox flox/flox' and 'Cd19 Cre+; Wwox wt/wt', lanes 'Cd19+ B cells, Cerebellum, Lung, Kidney' in each; the anti-Wwox row shows no band in the first lane of the flox/flox block and bands in its cerebellum, lung and kidney lanes and in all four lanes of the wt/wt block; the anti-Actin row shows comparable bands in all eight lanes.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID31275852_McBride2019_assets/suppfig1_Image_1.png",
+        "anchor": "Supplementary Figure 1B, deposited TIFF rendered at 1339x1155",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found",
+        "experimental_context": {"system": "immunoblot of FACS-sorted CD19+ B cells and three solid tissues", "genotype": "Cd19 Wwox KO and Cd19 Wwox WT"}
+      },
+      {
+        "proposition": "SUPPLEMENTARY FIGURE 2, PIXELS - THE DENOMINATOR IS 77, NOT 76. The junction-classification table lists WT 26 blunt, 24 one-or-two, 9 three-or-four, 0 five-or-six, 1 seven-or-eight plus 8 and 9 insertions, printing Total 77; the KO column lists 5, 19, 9, 5, 3 plus 8 and 12, printing Total 61. Both sum exactly as printed, and the page-3 heading reads '1 of 77 junctions'. Figure 5's caption's '76' is the error.",
+        "snippet": "Visual attestation of Supplementary Figure 2 page 1: table headed 'Overlap (bp) | WT | KO' with rows blunt 26/5, one or two 24/19, three or four 9/9, five or six 0/5, seven or eight 1/3, then 'Insertions' 1 nucleotide 8/8 and >1 nucleotide 9/12, and a final row 'Total 77 61'.",
+        "surface": "figure",
+        "artifact": ["files/fulltext/PMID31275852_McBride2019_assets/suppfig2_Image_2_p1.png", "files/fulltext/PMID31275852_McBride2019_assets/suppfig2_Image_2_p3.png"],
+        "anchor": "Supplementary Figure 2, pages 1 and 3, rendered at 200 dpi",
+        "panel_text_relation": "text_contradicted_by_panel",
+        "contradicts": "entries[14]",
+        "contradicts_needle": "76 WT and 61 Wwox KO unique clones",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "SUPPLEMENTARY FIGURE 3, PIXELS - the AID-level null is real and quantified: the AID/tubulin ratio bar chart shows knockout and wild type both at approximately 1.0, and the Aicda-KO lane carries no AID signal, which is what makes the comparison interpretable.",
+        "snippet": "Visual attestation of Supplementary Figure 3: three lanes labelled by Aicda and Wwox genotype (KO/WT, WT/KO, WT/WT); the anti-AID row shows no band in the Aicda-KO lane, a faint band in the Wwox-KO lane and a stronger band in the WT/WT lane; the anti-tubulin row shows bands in all three; the bar chart 'relative AID/tubulin' plots two bars, Wwox KO and WT, both at approximately 1.0 on a 0 to 1.2 axis.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID31275852_McBride2019_assets/suppfig3_Image_3.png",
+        "anchor": "Supplementary Figure 3, deposited TIFF rendered at 1050x1152",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "FIGURE 4A, PIXELS - THE EXPRESSION SURVEY DOES NOT SUPPORT A GERMINAL-CENTRE EMPHASIS. Pro-B is highest at approximately 1.87; germinal-centre (approximately 0.69) and plasma-cell (approximately 0.67) values are the LOWEST of the six B subsets and sit at or below the non-B comparators CD8 (approximately 0.79) and CD11b (approximately 0.65). Error bars are triplicate technical SEM; no mouse-level n is stated.",
+        "snippet": "Visual attestation of Figure 4A: bar chart 'Relative Wwox expression' with ticks 0 to 2.5 over eight categories Pre B, Pro B, FO, GC, PB, PC, CD8, CD11b; bar heights approximately 1.00, 1.87, 1.18, 0.69, 1.39, 0.67, 0.79, 0.65 with small SEM whiskers.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID31275852_McBride2019_assets/fig4_p06_x211.jpeg",
+        "anchor": "Figure 4A (PDF p. 6), native raster 1772x1343",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[21]",
+        "qualifies_needle": "compared to that of splenic CD8+ lymphocytes",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "TABLE 1 IS REAL TEXT, NOT AN IMAGE, and it is the per-animal evidence behind the incidence counts: 18 Cd19 Wwox KO rows (8 lymphomas, 8 plasmacytomas, 2 tumour-free) and 3 WT rows, with the M-spike column carrying 10 positives among the knockouts and 1 among the controls.",
+        "snippet": "Plasmablastic plasmacytoma (in MLN)",
+        "surface": "table",
+        "artifact": "files/fulltext/PMID31275852_McBride2019.xml",
+        "anchor": "Table 1, Histopathology column, mouse IDs 68 / 70 / 261",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "AUTHORS' OWN LIMITATION, in their words - the model needs secondary events, which is also why a single-gene attribution of the tumour phenotype would overstate it.",
+        "snippet": "The limited tumor incidence, long latency and heterogeneity of neoplastic transformation in our mouse model",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31275852_McBride2019.xml",
+        "anchor": "Discussion, paragraph 2, opening sentence",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "HETEROZYGOTES WERE COLLECTED AND NEVER REPORTED: Wwox+/- B cells are named among the isolated genotypes in the Results, and no heterozygous datum appears in any figure, table or supplement.",
+        "snippet": "Naïve (IgM+) B cells were isolated from the spleens of wild-type, Wwox KO and Wwox",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31275852_McBride2019.xml",
+        "anchor": "Results > Wwox Is Expressed in B Cells, CSR paragraph",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought - a Wwox+/- result was searched in all six figures, Table 1, all three supplements and the Results text; the genotype is named once, here, and never reported"
+      }
+    ]
+  }
+}
