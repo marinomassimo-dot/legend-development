@@ -137,7 +137,8 @@ Run everything as `python3 <path> --help` first. Paths are repo-relative.
 | You want | Run |
 |---|---|
 | the post-batch self-evaluation gate | `framework/scripts/session_self_eval.py` |
-| the mechanical backup/restore phases of `BATCH_COMMIT` | `framework/scripts/batch_commit.py` |
+| the mechanical backup/restore phases of `BATCH_COMMIT`, and its Phase 4 record-scoped propagation (`propagate --file … --ops …`, refused for the paper registry) | `framework/scripts/batch_commit.py` |
+| edit **one record or range** of a Markdown registry — every other byte proven unchanged — or be refused (duplicate id, fenced heading, nested record, re-segmentation); dry run by default, atomic batch with `apply --ops` | `framework/scripts/record_scoped_edit.py replace --file … --id "CLAIM 006" --text-file …` |
 | land a committed, verified task, detach its worktree, delete its branch | `framework/scripts/task_close.py` |
 | what is not on `main` and how old it is — the weekly §21e sweep | `framework/scripts/branch_hygiene.py` |
 | local commits or dirty worktrees absent from development `main` — daily, read-only report | `framework/scripts/daily_push_check.py` |
@@ -200,6 +201,7 @@ refs or observe clones on other hosts. A missing or
 | the benchmark input surface — built, proven, frozen | `framework/scripts/benchmark_input_surface.py` |
 | **Benchmark I** — whether targeted claim retrieval reaches the claim a paper changed (I1, deterministic, over the repository's own history) | `framework/scripts/claim_retrieval_bench.py i1` |
 | **Benchmark I · I2** — whether a model finds the affected claim as reliably in the retrieved records as in the whole registry (repeated `claude -p` runs, blind deterministic grading) | `framework/scripts/claim_attention_bench.py grade` |
+| **Benchmark J** — whether a record-scoped editor can replace BATCH_COMMIT's whole-file rewrite without losing a legitimate edit (J0 corpus labelling, J2 replay, over the repository's own history) | `framework/scripts/record_edit_bench.py j0` · `… j2` |
 | what model actually ran, per turn, and what the run cost — read from a transcript | `framework/scripts/session_model_census.py` |
 | what the runtime actually says about quota, with a timestamp — and when it says nothing | `framework/scripts/quota_state.py` |
 

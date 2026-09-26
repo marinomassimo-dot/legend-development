@@ -144,6 +144,25 @@ Record the snapshot path in `legend_activity_log.md`.
 
 For each commit candidate (in the order fixed in Phase 1), apply the changes.
 
+#### 4.0 How a current file is written — record-scoped, or full rewrite
+
+| File | Propagation |
+|---|---|
+| `working_model_current.md` · `claim_registry_current.md` · `literature_tracking_log_current.md` | **record-scoped**: every change of the batch to that file as ONE atomic list of operations — `replace` / `replace-within` a record or range, `insert-after` / `insert-before` / `append` a new record, `delete` — applied with `python3 framework/scripts/batch_commit.py propagate --file <file> --ops <ops.json>` (dry run), then the same with `--apply`. The editor (`record_scoped_edit.py`) proves before writing that every byte outside the addressed records is unchanged, and refuses an ambiguous, fenced or nested anchor or an edit that would re-segment the file. For the working model prefer `replace-within` (a changelog row, a version line, a mirror row): its records are three `#` BLOCKs, and replacing BLOCK 3 whole rewrites most of the file. |
+| `paper_registry_current.md` | **full rewrite**, unchanged sections copied verbatim. `propagate` refuses it by name (exit 4). |
+
+A refusal (exit 3) writes nothing. It is either a mistake in the operation list — fix the list —
+or a new ambiguity in the file; in the second case that file is propagated by full rewrite for
+this batch and the refusal is recorded in the batch report (Phase 8.2).
+
+🔴 **Why the split, and why this file is where it lives.** Benchmark J replayed every historical
+batch edit of these files through the editor
+([`J3_DECISION.md`](../eval/benchmarks/BENCH-J-RECORD-SCOPED-EDIT/J3_DECISION.md), 2026-09-26):
+all 368 legitimate edits of the three record-scoped files reproduced byte for byte with zero
+silent corruption; the paper registry lost one — its two `## Purpose` sections make that heading
+unaddressable — so by the pre-registered rule it keeps the full rewrite until a new anchor and a
+new replay say otherwise.
+
 #### 4.1 Paper additions
 Append to `paper_registry_current.md`. Update `literature_tracking_log_current.md`.
 

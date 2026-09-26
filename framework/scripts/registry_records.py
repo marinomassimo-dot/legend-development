@@ -544,6 +544,60 @@ def parse_records(root: Path, disease: str, stem: str) -> list[Record]:
     return records
 
 
+@dataclass
+class Block:
+    """One contiguous span of a text, as `partition` cuts it: character offsets, not lines.
+
+    `key` is how the span is addressed: the record's identity token (`CLAIM 006`, `BLOCK 3`) for
+    a record, the heading text for a section, `@preamble` for the bytes before the first heading.
+    A section heading that repeats in the file carries ` #n` (its 1-based occurrence) so every
+    key is unique; a repeated RECORD identity keeps its bare key and is reported by `duplicates`.
+    """
+    key: str
+    kind: str            # "preamble" | "record" | "section"
+    level: int           # 0 for the preamble
+    heading: str
+    start: int
+    end: int
+    line: int
+
+
+def partition(text: str, levels: Iterable[int] = (2,)) -> list[Block]:
+    """Cut `text` into contiguous, non-overlapping blocks at the surface's identity level.
+
+    Every unfenced heading whose level is at most `min(levels)` opens a block that runs to the
+    next such heading, so the blocks tile the text exactly (their concatenation IS the text) and
+    a deeper heading always travels with the block above it — the same end rule as
+    `parse_records`, taken at one level. It exists so an EDITOR can address a span by identity
+    (`record_scoped_edit.py`) and a benchmark can diff two versions record by record, with the
+    one heading/fence/identity reading this module already applies (D0), not a second parser.
+    """
+    levels = tuple(levels) or (2,)
+    cut = min(levels)
+    heads = [h for h in heading_lines(text) if h[2] <= cut]
+    blocks: list[Block] = []
+    if not heads or heads[0][0] > 0:
+        end = heads[0][0] if heads else len(text)
+        if end > 0:
+            blocks.append(Block("@preamble", "preamble", 0, "", 0, end, 1))
+    seen: dict[str, int] = {}
+    for index, (offset, line, level, title) in enumerate(heads):
+        end = heads[index + 1][0] if index + 1 < len(heads) else len(text)
+        own = text[offset:end]
+        token = identity_token(title)
+        identity = level in levels and (is_record_id(title) or bool(
+            IDENTIFIER_LINE.search(unfenced(own))))
+        if identity:
+            key = token or title.strip()
+        else:
+            base = title.strip()
+            seen[base] = seen.get(base, 0) + 1
+            key = base if seen[base] == 1 else f"{base} #{seen[base]}"
+        blocks.append(Block(key, "record" if identity else "section", level, title.strip(),
+                            offset, end, line))
+    return blocks
+
+
 def load_all(root: Path, disease: str, stems: Iterable[str]) -> dict[str, list[Record]]:
     return {stem: parse_records(root, disease, stem) for stem in stems}
 
