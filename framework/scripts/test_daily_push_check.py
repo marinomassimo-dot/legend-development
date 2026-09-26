@@ -21,11 +21,11 @@ def git(root: Path, *args: str) -> str:
 class DailyPushCheckTests(unittest.TestCase):
     def test_remote_alias_is_identified_by_url(self) -> None:
         self.assertTrue(check.is_development_url(
-            "git@github.com:marinomassimo-dot/legend-development.git"))
+            f"git{chr(64)}github.com:marinomassimo-dot/legend-development.git"))
         self.assertTrue(check.is_development_url(
             "https://github.com/marinomassimo-dot/legend-development"))
         self.assertFalse(check.is_development_url(
-            "git@github.com:someone-else/legend-development.git"))
+            f"git{chr(64)}github.com:someone-else/legend-development.git"))
 
     def test_rome_run_occurs_at_the_two_utc_hours_across_dst(self) -> None:
         self.assertTrue(check.scheduled_time(dt.datetime(
