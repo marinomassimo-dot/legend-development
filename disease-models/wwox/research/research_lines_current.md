@@ -112,9 +112,9 @@ Register of active research lines that emerged from LEGEND after the bootstrap o
 ## RL-MET-002 — WWOX/HIF1A systems-state metabolism
 **Status:** active / high priority
 **Primary pathway:** P5
-**Evidence base:** paper 191 (WWOX/HIF1A ratio in GDM leukocytes); paper 182 (interactome/trafficking–Acetyl-CoA); CLAIM 025; CLAIM 026; convergenza con RL-003
+**Evidence base:** paper 191 (WWOX/HIF1A ratio in GDM leukocytes); PAPER 032 (interactome and pathway annotation), PAPER 103 (VOPP1 interaction only); CLAIM 025; CLAIM 026; convergenza con RL-003
 **Clinical relevance:** HIGH conceptual / MODERATE operational
-**Reason active:** The WWOX/HIF1A axis should be followed as a state-level marker linking glycolysis, inflammatory tone and possible state-transition biology. In parallel, the trafficking–metabolism interface opens an endomembrane axis not reduced to HIF1A signaling alone.
+**Reason active:** The WWOX/HIF1A axis remains a state-level research marker. Separately, trafficking-protein co-association and metabolic annotation motivate a test of functional coupling; no interface or Acetyl-CoA flux has been measured.
 **Next action:** expand meta_metabolism; look for CNS-specific data; link with RC-007
 
 ---
@@ -129,12 +129,12 @@ Register of active research lines that emerged from LEGEND after the bootstrap o
 
 ---
 
-## RL-ARCH-001 — Trafficking–metabolism coupling
+## RL-ARCH-001 — Test trafficking–metabolism coupling
 **Status:** active exploration / high-priority candidate
 **Primary pathway:** P5 / endomembrane systems
-**Evidence base:** paper 182 (WWOX interactome); CLAIM 026
-**Clinical relevance:** INDIRECT — potentially high for future research
-**Reason active:** Current evidence is strong enough to justify continued focused review. The trafficking–Acetyl-CoA node could explain aspects of neuronal, myelin or synaptic vulnerability not covered by the HIF1A axis.
+**Evidence base:** PAPER 032 (WWOX interactome and pathway annotation); PAPER 103 (independent VOPP1 interaction); CLAIM 026
+**Clinical relevance:** LOW — research hypothesis only
+**Reason active:** A single HEK293T prey list suggests testable trafficking and metabolic leads. Their functional coupling, neuronal transfer and relevance to myelin or synapses remain unmeasured.
 **Next action:** link with RC-007; look for WWOX + organelle data in neurons/glia
 
 ---

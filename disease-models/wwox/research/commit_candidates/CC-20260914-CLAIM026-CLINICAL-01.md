@@ -72,3 +72,11 @@ verbatim. Replacement text, as prescribed:
 ## BATCH DISPOSITION — appended by the integrator, append-only
 
 **Status:** **RE-QUEUED** — recovered 2026-09-26 from the VPS backup (`06ee25a`). The VPS batch that disposed of this candidate never reached `main`: re-queued for `BATCH_20260926_ALDAZ`. Identifiers written on the VPS are annotated in place as `(VPS numbering)` / `(VPS batch, never on main)`; full-text queue ids were renumbered (see `disease-models/wwox/research/vps_recovery_20260925/README.md`).
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260926_ALDAZ_R4` (2026-09-26, ACTOR_ID `orchestrator`), append-only
+
+**Status:** **PROPAGATED** — B4 CLAIM 026 scope.
+
+C1: the clinical-meaning field now labels functional coupling an unmeasured hypothesis and makes no value judgement or clinical inference. C3: the independent VOPP1 interaction is kept distinct from untested downstream mechanisms; no additional claim repair was required.

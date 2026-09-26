@@ -24,6 +24,9 @@ the repeated `prev_batch_commit_id` and the `target_wm_version` / `last_wm_updat
 `BATCH_20260909_001` — and none of them is a current value.
 
 ```yaml
+batch_20260926_aldaz_r4_scope: "MINOR, WM_v5.2 -> WM_v5.3, MANUAL trigger. CLAIM 026 narrowed from a measured trafficking-metabolism coupling node to co-association and pathway annotation in one HEK293T interactome; functional coupling stays IPOTESI. PAPER 032 full-read receipt and limits, PAPER 053 review-conduit receipt and primary-source boundaries, PAPER 103/LIT-0181 VOPP1 interaction link added. Working-model prose and mirror, narrative disease model, metabolism meta/index, research lines and RC-007 aligned. Three candidate dispositions appended (B002 partial; 30285739 and CLAIM026-CLINICAL propagated). No BLOCCO 1 or therapeutic recommendation changed. Mirror ex-post review due under section 21e; any finding becomes a follow-up task."
+batch_20260926_aldaz_r4_candidates: 3
+prev_batch_commit_id_before_20260926_aldaz_r4: BATCH_20260926_ALDAZ_R3
 batch_20260926_aldaz_r3_scope: "DISCOVERY_LEDGER_ONLY, working model unchanged (WM_v5.2), MANUAL trigger. B3 on the current main lineage: append-only corrections to DL-REPO-002, DL-MECH-012, DL-MECH-018, DL-MECH-036, DL-MECH-046, DL-MECH-069. Bounded sepsis/pulmonary stimulus and compartment, paper 106 antibody IHC ceiling, co-association rather than direct binding, unpublished SDR-localisation premise, untreated mouse-tumour datum, UPF1 motif without WW1 measurement. The existing DL-MECH-024, DL-METH-084, DL-METH-094, FT-038 closure, PMID16941225.md section 4.1 and PMID38499540.json queue pointer already match the recovered VPS endpoint, so no duplicate edits. Six candidate dispositions appended, all PARTIAL because B4-B7 claim work remains. No claim, working-model, registry or therapeutic recommendation changed."
 batch_20260926_aldaz_r3_candidates: 6
 prev_batch_commit_id_before_20260926_aldaz_r3: BATCH_20260926_ALDAZ_R2

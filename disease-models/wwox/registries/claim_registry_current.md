@@ -4,7 +4,7 @@
 ## WWOX Claim Registry
 **Version:** v1.6.2  
 **Date baseline:** 2026-03-28  
-**Last update:** 2026-09-22 — `BATCH_20260922_BIBLIO` (**traceability repair, no scientific change**): `CLAIM 011`'s Source line expanded `OMTA` as *Molecular Therapy - Methods & Clinical Development*, which is a **different Cell Press journal** (`omtm`). PMID 42422765 is ***Molecular Therapy Advances*** (`Mol Ther Adv`, DOI code `omta`), 34(3):201791. Corrected here and in [[paper_registry_current#PAPER 011]] and the tracking log. **No claim text, status, epistemic tag, number or boundary changed.** ⚠️ Observed and deliberately NOT repaired here: this Last-update line had not been bumped since 2026-07-25 although `BATCH_20260909_001`, `BATCH_20260921_001` and `BATCH_20260922_SEIZURE` all edited this file — a convention defect, recorded rather than fixed, because repairing it across every registry is out of scope for the node in hand. Prev: 2026-07-25 — `BATCH_20260725_001` (public audit, **traceability repair, no scientific change**): CLAIM 028 source pointer corrected from nonexistent paper 213 to tracked CORPUS P207. No claim text, status or epistemic tag changed. Prev: `BATCH_20260725_LINKS` migrated wikilink fragments and privacy-safe headings without scientific change. Prev: 2026-07-05 — BATCH_20260705_001: CLAIM 004 enriched from Repudi 2021 full text; CLAIM 019 proteostasis-rescue IPOTESI note added; CLAIM 021 and CLAIM 026 source-normalized to PAPER 031/032.
+**Last update:** 2026-09-26 — `BATCH_20260926_ALDAZ_R4` (CLAIM 026 narrowed to measured co-association and pathway annotation; coupling remains an untested hypothesis, WM_v5.3). Prev: 2026-09-22 — `BATCH_20260922_BIBLIO` (**traceability repair, no scientific change**): `CLAIM 011`'s Source line expanded `OMTA` as *Molecular Therapy - Methods & Clinical Development*, which is a **different Cell Press journal** (`omtm`). PMID 42422765 is ***Molecular Therapy Advances*** (`Mol Ther Adv`, DOI code `omta`), 34(3):201791. Corrected here and in [[paper_registry_current#PAPER 011]] and the tracking log. **No claim text, status, epistemic tag, number or boundary changed.** ⚠️ Observed and deliberately NOT repaired here: this Last-update line had not been bumped since 2026-07-25 although `BATCH_20260909_001`, `BATCH_20260921_001` and `BATCH_20260922_SEIZURE` all edited this file — a convention defect, recorded rather than fixed, because repairing it across every registry is out of scope for the node in hand. Prev: 2026-07-25 — `BATCH_20260725_001` (public audit, **traceability repair, no scientific change**): CLAIM 028 source pointer corrected from nonexistent paper 213 to tracked CORPUS P207. No claim text, status or epistemic tag changed. Prev: `BATCH_20260725_LINKS` migrated wikilink fragments and privacy-safe headings without scientific change. Prev: 2026-07-05 — BATCH_20260705_001: CLAIM 004 enriched from Repudi 2021 full text; CLAIM 019 proteostasis-rescue IPOTESI note added; CLAIM 021 and CLAIM 026 source-normalized to PAPER 031/032.
 
 ---
 
@@ -471,19 +471,18 @@ Canonical audit trail of numbered claims relevant to the Working Model.
 ---
 
 ## CLAIM 026
-**Title:** WWOX may function as a trafficking–metabolism coupling node linking endomembrane systems with catabolic pathways converging on Acetyl-CoA
+**Title:** WWOX co-associates with trafficking proteins; its co-purifying partners show metabolic pathway annotation
 **Status:** in observation
-**Type:** DATO + INFERENZA
+**Type:** DATO (co-association and pathway annotation in HEK293T) + IPOTESI (functional trafficking–metabolism coupling)
 **Pathway:** P5 — trafficking / endomembrane systems / metabolism
-**Genotype/model relevance:** dati da interactome + pathway analysis; non modello CNS pediatrico diretto; altamente rilevante come principio architetturale metabolico
-**Transferability:** T2 conceptual — indirect, potentially high for future research
-**clinical relevance:** INDIRECT — potentially high for future research
-**Summary:** High-confidence WWOX interactors include ER/Golgi/endosomal/lysosomal trafficking proteins. Enriched pathways include glycolysis/gluconeogenesis, pyruvate metabolism, fatty acid degradation and branched-chain amino acid degradation, with multiple pathways converging on Acetyl-CoA generation. WWOX metabolic biology may involve compartmental organization and intracellular logistics, not only transcriptional regulation of glycolysis.
-**Clinical meaning:** Non cambia la pratica immediata per il genotipo di riferimento. Apre un asse di ricerca di alto valore: la disfunzione metabolica WWOX-related potrebbe essere in parte una disfunzione logistica endomembranosa, non solo un problema di segnalazione HIF1A.
-**Source:** Hussain et al. 2018, *Front Oncol*; PMID 30619736 / PMCID PMC6300487 / DOI 10.3389/fonc.2018.00591.
-**Wikilinks:** [[paper_registry_current#PAPER 032]]
-**Impact on Working Model:** major refinement of P5 metabolism branch; informs meta_metabolism update; no direct BLOCCO 1 change
-
+**Genotype/model relevance:** HEK293T over-expression interactome and non-neural cell/tumour assays; no WWOX-DEE allele or neural disease model. Coupling is a hypothesis to test.
+**Transferability:** T3 — no measured transfer to the reference disease model
+**clinical relevance:** LOW — research hypothesis, no direct clinical action
+**Summary:** In HEK293T cells, tagged WWOX co-purifies with proteins annotated to trafficking and metabolism (`PAPER 032`, two replicates). Reciprocal co-IP and pull-down from lysate support co-association with SEC23IP and SCAMP3; VOPP1 has co-IP but no pull-down in that source. Direct binding, trafficking function and metabolic quantities were not measured. InnateDB over-representation of the same prey list includes catabolic and non-metabolic pathways; Acetyl-CoA convergence is pathway-map topology, not a measured WWOX flux. The 216 prey passed computational filters without an in-experiment control purification; the metabolic enzymes sit below the source’s top 14 prey. Functional coupling between trafficking and metabolism remains an IPOTESI. Independently, `PAPER 103` (PMID 30285739) measures WWOX–VOPP1 co-IP, including an endogenous co-IP with IgG control and mutant-dependent, graded interaction: WWOX Y33R removes the co-IP band; VOPP1 Y165A leaves no detectable band, Y157A reduces it and Y119A retains it. The authors describe Y165A as strongly affecting binding; neither paper establishes direct binding or a metabolic consequence.
+**Clinical meaning:** Non cambia la pratica. Genera l’ipotesi, ancora non misurata, che funzioni di traffico endomembranoso e metabolismo WWOX possano essere collegate; non esiste un test di accoppiamento, un flusso metabolico misurato o un effetto in modello neurale.
+**Source:** Hussain et al. 2018, *Front Oncol*, PMID 30619736, receipt `FTR-20260913-30619736-01` (prey list and annotation); Bonin et al. 2018, *BMC Biol*, PMID 30285739, receipt `FTR-20260914-30285739-01` (VOPP1 interaction only).
+**Wikilinks:** [[paper_registry_current#PAPER 032]] · [[paper_registry_current#PAPER 103]]
+**Impact on Working Model:** hypothesis-generating for P5; no measured trafficking–metabolism interface and no direct BLOCCO 1 change
 ---
 
 ## CLAIM 027

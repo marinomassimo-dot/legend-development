@@ -2,6 +2,8 @@
 
 > **Public, de-identified disease-level model.** Derived from the LEGEND working model with the individual clinical record removed (clinical presentation, treatment regimen, and case-specific surveillance are not included). What remains is the disease-level mechanistic synthesis, the genotype-interpretation rules, the literature-anchored data, and the decision-logic framework — all from public literature. **Not medical advice.** Specific variants appear only as decoupled public worked examples — a destabilizing SDR missense on one side, a canonical splice-acceptor variant on the other — never assembled into one person's genotype.
 
+**Current working model:** WM_v5.3 (`BATCH_20260926_ALDAZ_R4`).
+
 **Model version lineage:** v3.0 (2026-07-14) — a MAJOR baseline reversal (see the repair changelog at the end) illustrating the epistemic discipline in action.
 
 ---
@@ -26,7 +28,7 @@
 
 **Domain cooperativity.** WW-domain biology depends on WW1–WW2 tandem cooperativity; variant interpretation should consider tandem stability, partner-recognition geometry, and residual interaction architecture — not isolated single-domain logic. *(CLAIM 024 / paper 204.)*
 
-**Metabolic branch.** Beyond a simple HIF1A/Warburg framing, the WWOX/HIF1A axis appears to be a broader state indicator linked to glycolysis, inflammatory tone, Wnt-related signaling, and possibly state-transition biology; interactome data suggest a trafficking–metabolism interface (ER/Golgi/endosomal/lysosomal) with Acetyl-CoA-centered catabolic convergence. *(CLAIM 025 / paper 191; CLAIM 026 / Hussain 2018.)*
+**Metabolic branch.** Beyond a simple HIF1A/Warburg framing, the WWOX/HIF1A axis appears to be a broader state indicator linked to glycolysis, inflammatory tone, Wnt-related signaling, and possibly state-transition biology; one HEK293T interactome co-purifies with trafficking proteins and is annotation-enriched for catabolic pathways. Acetyl-CoA convergence is a pathway-map reading; functional trafficking–metabolism coupling remains untested. An independent non-neural paper supports the VOPP1 interaction limb. *(CLAIM 025 / paper 191; CLAIM 026 / Hussain 2018 and Bonin 2018.)*
 
 > **Integrity exclusion (a worked example of source-integrity discipline):** the HGF/Met–TAZ–WWOX bone-metastasis line does **not** count as independent corroboration — the primary (PMID 28151481) was retracted in 2022 for western-blot control manipulation/reuse, and a review (PMID 28045433) reuses its data/dependencies. The WWOX/HIF1α axis stands only on the independent sources. No baseline claim depended on the invalidated line.
 
