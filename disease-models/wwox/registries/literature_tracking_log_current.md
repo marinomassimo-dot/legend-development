@@ -8259,7 +8259,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Status:** screened
 **Primary pathway:** clinical spectrum / SCAR12
 **Genotype/model tag:** unassigned in triage
-**Species:** rat
+**Species:** human + mouse — nessun esperimento su ratto; il ratto *lde* è solo un comparatore citato (corretto da `BATCH_20260926_MALLARET`; registro [[paper_registry_current#PAPER 042]])
 **Transferability:** unassigned in triage
 **Directness to the reference genotype:** unassigned in triage
 **Over-inference risk:** standard triage — not evaluated
