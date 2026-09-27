@@ -766,6 +766,16 @@ slowing.
 **Revival:** a **powered, significance-tested** pannexin-blocker arm in a WWOX system reporting a **reduction** in burst frequency, at an **earlier** developmental stage than P13–P17.
 *Recorded 2026-09-27 outside a `BATCH_COMMIT` (analysis layer, no canonical target) by `CC-20260826-PANNEXIN-N16-01`; its `CLAIM 021` limb is NOT applied and stays with the two MAJOR-classified pharmacology candidates.*
 
+### N-17 — Tau-lowering, imported from tauopathy into CHAIN C → 🔴 **the arrow points the other way: Tau is the EFFECTOR of the benefit, not the toxin**
+**Failure mode:** *importing a disease's dominant modality because the pathway diagram looks like that disease, without checking which way the arrow points.* CHAIN C reads like a tauopathy — WWOX loss → GSK3β de-repressed → pTau S396/S404 up (`CLAIM 035`, `DL-MECH-019`) — and tauopathy's dominant modality is **tau-lowering**. In the only system where the question was asked, tau-lowering **removes the benefit of both interventions this chain is built on**. Primary, PMID 22193544, verified first-hand in the body on 2026-09-27 (`files/fulltext/PMID22193544_Wang2012_PMC.xml`, sha256 `eb6f568d…`, `deepdive_manifests/PMID22193544.json` entry 6):
+> *"Neither WWOX overexpression nor GSK3β knockdown promoted neurite outgrowth in the Tau knockdown condition, indicating that Tau is the effector of both WWOX and GSK3β."*
+and, in the same experiment: *"the neurite outgrowth stimulated by RA was abolished when Tau was knocked down."*
+⇒ **A tau-lowering agent would remove the effector both of the gene-therapy arm (R-01) and of the downstream kinase arm (R-04 / the Axin-site node).**
+⚠️ **Scope, stated so this is not over-read.** This is a statement about a **direction** in *this* pathway in *this* system (SH-SY5Y, RA-differentiated, RNAi knockdown), and it names **no molecule**. It does **not** say tau-lowering is unsafe in general, it is **not** a clinical statement, and **nothing here is medical advice**. `BLOCCO 1` untouched.
+🔵 **Why it is recorded at all:** the pathway was already on record; **the arrow's direction was not**, and the direction is the part an outside reader importing the obvious modality would get wrong. `D-29`: *when the pathway looks like a known disease, check which way the arrow points before importing that disease's modality.*
+**Revival / reopening:** a WWOX-deficient neuronal system in which reducing total Tau **improves** a developmental readout — which would mean the effector relation measured here does not hold in that system.
+*Recorded 2026-09-27 outside a `BATCH_COMMIT` (analysis layer, no canonical target) by `CC-20260922-TAU-DIRECTION-01` §1. It is a **directional constraint**, not a scored candidate, and it is deliberately **not** added to the §6 prioritization table: no intervention class enters or leaves a class on it.*
+
 ---
 
 ## 6. Prioritization

@@ -622,8 +622,8 @@ proposition, against every assertion in `CLAIM 035`'s Summary.**
 | epistasis: Tau knockdown abolishes it; WWOX + siRNA-GSK3β non-additive | `[6]`, `[7]` | ✅ **exact** |
 | **pSer9 invariant** while output changes | `[5]` — *"phospho-GSK3β S9 and phospho-β-catenin remained normal"* | ⚠️ **true, but from Fig. 1b–c — the RA-differentiation experiment**, not from the Fig. 3 docking experiment the sentence attaches it to |
 | *"un segmento di **20 residui (388–407)** omologo al motivo di docking Axin/FRAT/GSKIP"* | 🔴 **two locators, two intervals** — `[0]`: **388–407** is *required for the interaction* (Fig. 3c); `[1]`: **388–412** is what *contains the conserved FXXXLI/VXRLE motif* (Fig. 2a) | 🔴 **CROSS-FIGURE FUSION.** The arithmetic is right (407−388+1 = 20) and both facts are true; **the homology belongs to the 25-residue interval and the requirement to the 20-residue one**, and the claim gives the homology to the requirement's interval |
-| *"ripristina l'assemblaggio dei **microtubuli** Tau-dipendente"* | 🔴 **none of the nine** | ⚠️ **`NOT_LOCATORED`** — neurite outgrowth is locatored (`[6]`); microtubule assembly is not |
-| *(via `CLAIM 016`)* *"nel sistema di Wang … **l'abbondanza di GSK3β** resta invariata"* | 🔴 **none of the nine** — `[5]` covers **pS9 and phospho-β-catenin only** | 🔴 **`NOT_LOCATORED`.** The statement that the *other* source reports abundance unchanged has **no locator behind it** |
+| *"ripristina l'assemblaggio dei **microtubuli** Tau-dipendente"* | ✅ **`[9]` — added 2026-09-27** *(was: 🔴 none of the nine)* | ✅ **`LOCATORED`, and it arrives with a qualifier the claim does not carry.** *"GSK3β diminished the microtubule assembly, as reflected by decreased turbidity. However, the new equilibrium reached a higher turbidity when treated with WT WWOX and GSK3β than with GSK3β alone. Interestingly, the GSK3β-binding deficient WWOX, WWOX L404A, could not restore the microtubule assembly activity."* (Results, Fig. 5e). 🔴 **The assay is CELL-FREE** — locator `[10]`, Methods: *"Microtubule assembly assays were performed by incubating tubulin (0.2 mg/μl) … in cuvettes at 37 °C in a thermostatic spectrophotometer and measuring the turbidity change at 350 nm over time."* Purified tubulin, a cuvette, a light-scattering readout, **no cell**. The neurite and pTau limbs of `CLAIM 035` are cellular; **the polymer limb is not**, and reading it as cellular is an overclaim |
+| *(via `CLAIM 016`)* *"nel sistema di Wang … **l'abbondanza di GSK3β** resta invariata"* | 🔴 **none of the eleven** — `[5]` covers **pS9 and phospho-β-catenin only** | 🔴 **`NOT_LOCATORED`, and now `NOT_ASSERTED`** — upgraded 2026-09-27 from a locator-set fact to a source fact. The full body of PMID 22193544 was re-read first-hand against the artefact `files/fulltext/PMID22193544_Wang2012_PMC.xml` (sha256 `eb6f568d…`, NCBI efetch db=pmc PMC3354054): its **only** statement of invariance is *"the phosphorylation levels of phospho-GSK3β S9 and phospho-β-catenin remained normal"*, and **total GSK3β abundance is not reported anywhere in the paper — not in Results, not in Methods, not in a legend.** So this is not a gap in our locator set; the claim has **no source**. ⚠️ **A third site carries the same unsourced clause:** [[paper_registry_current#PAPER 056]]'s `Note` — *"con GSK3β totale e fosfo-S9 invariati"* — which no candidate had named before today |
 
 🔴 **Two cross-figure fusions in one claim, and both run in the direction of a tidier mechanism.**
 This is the same failure class the AAV9 dossier named when it retracted two Figure-1 claims —
@@ -639,6 +639,34 @@ for a different reason** (*"it preserves a datum neither cited source asserts"*)
 routes reach the same edit; that is corroboration, not duplication.**
 
 > ### `CLAIM016_035_STATUS: mislocator CONFIRMED (7b → 7d) · 2 propagation sites · elevation and flatness BOTH NOT_TESTED · mutual exclusion UNCHANGED · P14/P20 = NOT_REPORTED by the paper (my framing corrected mid-session) · 9/9 CLAIM 035 locators swept: 4 exact, 1 context-shifted, 2 cross-figure fusions, 2 NOT_LOCATORED · 2 live defects in the corrections table`
+
+🔵 **UPDATE 2026-09-27 (wave-2 package `gsk3b`, ACTOR_ID `scientist`) — append-only; the two table
+rows above carry an inline marker where they changed.** The locator set is now **eleven, not nine**.
+Both `NOT_LOCATORED` rows were worked rather than restated, by re-reading PMID 22193544 first-hand:
+
+- **microtubule assembly — CLOSED.** Two locators added to `deepdive_manifests/PMID22193544.json`
+  (Results/Fig. 5e; Methods). The limb is real **and cell-free**, which is a qualifier
+  `CLAIM 035` does not carry and which is now the routable edit.
+- **abundance — NOT CLOSED, and hardened.** It is not a missing locator, it is a **missing source**:
+  the paper never reports total GSK3β. Three surfaces carry the clause — `CLAIM 016`'s
+  *Meccanismo aggiunto*, `PAPER 056`'s `Note`, and `therapy_levers.md` A2 — and the third is
+  governed by `CC-20260826-GSK3B-S9-AXIS-01` D9.
+- ⚠️ **One claim in `CC-20260922-TAU-DIRECTION-01` §2b did not survive:** the Methods do **not**
+  print `tubulin (0.2 mg/l)`. They print **`tubulin (0.2 mg/μl)`** — the italic `μ` was lost in
+  extraction, the same defect class as the deleted Greek `β` that candidate itself declares. There
+  is **no `REPORTED_UNIT_AMBIGUITY` of the kind claimed**; what remains is a scale oddity
+  (0.2 mg/μl = 200 mg/ml, far above the 2–5 mg/ml a tubulin polymerisation assay usually runs at),
+  recorded exactly as printed, used in no calculation, and **not** comparable to the `digoxin
+  100 mg/kg` entry, which is a transcription of what the page prints. **The register entry must not
+  be opened on the mis-transcribed value.**
+- **Evidence locality, repaired.** Every artefact behind both papers was **absent** from this
+  deployment's `files/` tree. All five were re-acquired free and **every declared digest reproduced
+  byte-for-byte** (Cheng's XML, supplementary PDF and Figs. 2 and 7; Wang's XML, which had never had
+  an artefact declared at all). The recipes are now recorded on each `source_artifacts` entry, and
+  this manifest's earlier note that the figure CDN path was opaque is **superseded**: the
+  `media.springernature.com/full/springer-static/image/art%3A<DOI>/MediaObjects/<fig>.png` path is
+  deterministic from the DOI. Figure 7 was then **re-inspected first-hand**, so the Fig. 7c
+  densitometry and the three-genotype Fig. 7d bracket are re-attested, not carried.
 
 ---
 

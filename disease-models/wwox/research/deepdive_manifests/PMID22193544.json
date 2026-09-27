@@ -168,49 +168,114 @@
       {
         "proposition": "WWOX amino acids 388-407 are required for the interaction with GSK3beta",
         "snippet": "This indicates that WWOX amino acids 388–407 are required for its interaction with GSK3β.",
-        "anchor": "Results, 'The WWOX-GSK3B interaction is mediated by a conserved motif in WWOX', Fig. 3c"
+        "anchor": "Results, 'The WWOX-GSK3B interaction is mediated by a conserved motif in WWOX', Fig. 3c",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID22193544_Wang2012_PMC.xml",
+        "panel_text_relation": "text_only"
       },
       {
         "proposition": "WWOX 388-412 contains the FXXXLI/VXRLE motif conserved in GSKIP, Axin and FRAT",
         "snippet": "WWOX296−320 and WWOX388−412 contain FXXXLI/VXRLE, a highly conserved GSK3β-binding motif within GSKIP115−139, Axin381−405, and FRAT205−229",
-        "anchor": "Results, sequence alignment, Fig. 2a"
+        "anchor": "Results, sequence alignment, Fig. 2a",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID22193544_Wang2012_PMC.xml",
+        "panel_text_relation": "text_only"
       },
       {
         "proposition": "L404 is strictly required for the WWOX-GSK3beta interaction",
         "snippet": "the mutation of L404A, but not L311A, completely abolishes the binding of WWOX to GSK3β",
-        "anchor": "Results, GST pull-down, Fig. 3d"
+        "anchor": "Results, GST pull-down, Fig. 3d",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID22193544_Wang2012_PMC.xml",
+        "panel_text_relation": "text_only"
       },
       {
         "proposition": "WWOX inhibits Tau phosphorylation at S396 and S404 but not at the MKK4 site S422",
         "snippet": "Ectopically expressed WWOX significantly inhibited Tau phosphorylation at S404 and S396 but not S422.",
-        "anchor": "Results, in vitro kinase assay, Fig. 4c"
+        "anchor": "Results, in vitro kinase assay, Fig. 4c",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID22193544_Wang2012_PMC.xml",
+        "panel_text_relation": "text_only"
       },
       {
         "proposition": "The WWOX-GSK3beta interaction is detectable between endogenous proteins in mouse brain",
         "snippet": "immunoprecipitation was performed in mouse brain extracts to verify the physiological interaction between WWOX and GSK3β. Figure 2e shows that both GSK3β and WWOX were precipitated by anti-GSK3β or anti-WWOX antibodies.",
-        "anchor": "Results, 'WWOX interacts and colocalises with GSK3beta in vivo', Fig. 2e"
+        "anchor": "Results, 'WWOX interacts and colocalises with GSK3beta in vivo', Fig. 2e",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID22193544_Wang2012_PMC.xml",
+        "panel_text_relation": "text_only"
       },
       {
         "proposition": "Phospho-GSK3beta-S9 is unchanged while GSK3beta output falls",
         "snippet": "We found that the phosphorylation levels of phospho-GSK3β S9 and phospho-β-catenin remained normal.",
-        "anchor": "Results, RA-induced differentiation, Fig. 1b-c"
+        "anchor": "Results, RA-induced differentiation, Fig. 1b-c",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID22193544_Wang2012_PMC.xml",
+        "panel_text_relation": "text_only"
       },
       {
         "proposition": "Tau knockdown abolishes the WWOX effect, and WWOX with siRNA-GSK3beta is non-additive",
         "snippet": "Neither WWOX overexpression nor GSK3β knockdown promoted neurite outgrowth in the Tau knockdown condition, indicating that Tau is the effector of both WWOX and GSK3β",
-        "anchor": "Results, double-manipulation experiment, Fig. 6a-b"
+        "anchor": "Results, double-manipulation experiment, Fig. 6a-b",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID22193544_Wang2012_PMC.xml",
+        "panel_text_relation": "text_only"
       },
       {
         "proposition": "WWOX, GSK3beta and Tau lie on one linear pathway with Tau as the effector",
         "snippet": "our results connect WWOX, GSK3β and Tau in an exclusive, direct manner and describe a novel mechanism by which WWOX promotes neuronal SH-SY5Y cell differentiation",
-        "anchor": "Discussion"
+        "anchor": "Discussion",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID22193544_Wang2012_PMC.xml",
+        "panel_text_relation": "text_only"
       },
       {
         "proposition": "Reducing WWOX raises GSK3beta output on Tau, consistent with de-repression rather than a level change",
         "snippet": "SH-SY5Y cells in which WWOX expression was reduced by RNAi showed increased pTau S396 levels and notably decreased neurite outgrowth",
-        "anchor": "Results, RA-induced differentiation, Fig. 1d-e"
+        "anchor": "Results, RA-induced differentiation, Fig. 1d-e",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID22193544_Wang2012_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The microtubule-assembly limb of the WWOX/GSK3B/Tau chain IS locatored, and it is cell-free: GSK3B lowers assembly, WT WWOX raises the new equilibrium above GSK3B alone, and the GSK3B-binding-deficient WWOX L404A does not restore it.",
+        "snippet": "GSK3β diminished the microtubule assembly, as reflected by decreased turbidity. However, the new equilibrium reached a higher turbidity when treated with WT WWOX and GSK3β than with GSK3β alone. Interestingly, the GSK3β-binding deficient WWOX, WWOX L404A, could not restore the microtubule assembly activity.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID22193544_Wang2012_PMC.xml",
+        "anchor": "Results, microtubule light-scattering section, Figure 5e — running text; the panel image itself was NOT inspected, so the direction is the authors' stated reading of their own trace and no value is read off the curve",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The microtubule-assembly assay is cell-free — purified tubulin in a cuvette read by turbidity at 350 nm — so the polymer limb of CLAIM 035 is in vitro while its neurite and pTau limbs are cellular. The printed tubulin concentration is 0.2 mg/microlitre, NOT 0.2 mg/litre: the earlier transcription lost the italic mu, the same extraction defect class as the deleted Greek beta.",
+        "snippet": "Microtubule assembly assays were performed by incubating tubulin (0.2 mg/μl) (Cytoskeleton; Denver, CO, USA) in cuvettes at 37 °C in a thermostatic spectrophotometer and measuring the turbidity change at 350 nm over time.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID22193544_Wang2012_PMC.xml",
+        "anchor": "Methods, 'Microtubule assembly assay'",
+        "panel_text_relation": "text_only"
       }
     ],
-    "source": "extracted 2026-08-04 from the artefact whose sha256 matches the receipt fingerprint"
-  }
+    "source": "extracted 2026-08-04 from the artefact whose sha256 matches the receipt fingerprint",
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC serves PMC3354054 as fullTextXML and NCBI efetch db=pmc serves the same article, so every body quote above is externally re-verifiable. Retrieved 2026-09-27.",
+    "surface_declaration_note": "2026-09-27 (ACTOR_ID scientist, wave-2 package gsk3b): the nine pre-existing entries carried no `surface` and no `artifact`. All nine were re-matched character for character against the artifact named below, first-hand, before `surface: body` was written on them; none was taken on trust. Entry indices 0-8 are running text (Results and Discussion), which is why all nine are `body` and `text_only`; no figure panel of this paper has ever been inspected in this corpus.",
+    "addition_note": "2026-09-27: two locators appended (microtubule assembly, Figure 5e running text; Methods cell-free assay conditions). They close the `NOT_LOCATORED` flag on 'ripristina l'assemblaggio dei microtubuli Tau-dipendente' recorded at analysis/therapeutic_routing_and_endpoint_hardening.md and flagged as D12 in CC-20260826-GSK3B-S9-AXIS-01, and they supply the cell-free qualifier CLAIM 035 lacks. No depth change: PMID 22193544 already carries complete_fulltext_read receipts (FTR-20260726-22193544-01..-05); this is a targeted re-read that adds locators.",
+    "artifact_locality_note": "The artifact declared below was ABSENT from this deployment's files/ tree on 2026-09-27 (the manifest was legacy-schema and declared no source_artifacts at all). It was restored from NCBI efetch db=pmc id=PMC3354054 into the root checkout's gitignored corpus at the path below, and its sha256 is recorded here for the first time. A future reader who cannot find the file can regenerate it from that route; the digest is the route's serialization, not Europe PMC's (Europe PMC fullTextXML for the same article is 66a7f38f77e1c49373535d5ec76c6f95b60646ce7561aff6f6c8bbf9a1aa3a04, so the route is part of the recipe)."
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID22193544_Wang2012_PMC.xml",
+      "sha256": "eb6f568d046f8df831d15e7f8795fcb1d6ac713ec6305f7ded3ad2a330388268",
+      "kind": "article_text",
+      "acquisition_recipe": {
+        "derived": false,
+        "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC3354054&rettype=xml",
+        "http_method": "GET",
+        "tier": "ncbi_efetch_pmc_jats",
+        "user_agent_policy": "identified",
+        "acquired_on": "2026-09-27",
+        "result_sha256": "eb6f568d046f8df831d15e7f8795fcb1d6ac713ec6305f7ded3ad2a330388268",
+        "notes": "No artefact had ever been declared for this PMID: the manifest was legacy-schema and its nine locators named no source at all. Acquired 2026-09-27 (ACTOR_ID scientist, wave-2 package gsk3b) and all eleven locators verified against it. The Europe PMC fullTextXML route serves a different serialization of the same article (sha256 66a7f38f77e1c49373535d5ec76c6f95b60646ce7561aff6f6c8bbf9a1aa3a04), so the route is part of the recipe. curl/8.x default User-Agent, sent unchanged; no browser impersonation and no header spoofing"
+      }
+    }
+  ]
 }
