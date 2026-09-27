@@ -24,6 +24,9 @@ the repeated `prev_batch_commit_id` and the `target_wm_version` / `last_wm_updat
 `BATCH_20260909_001` — and none of them is a current value.
 
 ```yaml
+batch_20260926_aldaz_r7_scope: "MINOR, WM_v5.5 -> WM_v5.6, MANUAL trigger. Independent blind locator audits for PMID 15064722, 36828035 and 33058734 corrected overstated manifest propositions and panel attestations. CLAIM 007 received source-scoped WW1/WBP-1/SIMPLE antecedent; new in-observation CLAIM 041 records the P47T Purkinje/basket marker contrast at both sampled ages without a progression or Q230P inference. PAPER 007/104, LIT-0162, working-model mirror and disease narrative aligned. DIS-013–020 record eight paper-scoped negatives with revival triggers. FT-083 closed against its complete receipt; FT-192 records two unread antecedents. Candidate dispositions remain partial for broader reference debt. No BLOCCO 1 or therapeutic change. Mirror ex-post review due under section 21e."
+batch_20260926_aldaz_r7_candidates: 2
+prev_batch_commit_id_before_20260926_aldaz_r7: BATCH_20260926_ALDAZ_R6
 batch_20260926_aldaz_r6_scope: "MINOR, WM_v5.4 -> WM_v5.5, MANUAL trigger. CLAIM 032 reconciled with the already-receipted primary records: PAPER 078 untreated spontaneous tumour excess, PAPER 098 homozygous hypomorph survival cost and tissue-specific detection, PAPER 107 restricted conditional mammary controls. Review PAPER 053 wording bounded; PAPER 098/107 claim links added. Working-model mirror and narrative, discovery-ledger append-only corrections, candidate dispositions aligned. Earlier candidate claiming PMID 17823927 was unread is superseded by its recovered complete receipt. No numerical CNS therapeutic threshold or mosaic efficiency is inferred. No BLOCCO 1 change. Mirror ex-post review due under section 21e."
 batch_20260926_aldaz_r6_candidates: 5
 prev_batch_commit_id_before_20260926_aldaz_r6: BATCH_20260926_ALDAZ_R5

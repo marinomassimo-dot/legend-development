@@ -2,8 +2,9 @@
 
 ## WWOX loss-of-function (WOREE / WWOX-DEE) — disease-level working model
 
-**Version:** WM_v5.5_2026-09-26
+**Version:** WM_v5.6_2026-09-27
 **Date baseline:** 2026-03-28
+**Last update:** 2026-09-27 — `BATCH_20260926_ALDAZ_R7` (**MINOR**): audited WW1/WBP-1/SIMPLE antecedent added to CLAIM 007; CLAIM 041 records the P47T cerebellar cell-marker contrast at two ages without a progression or Q230P inference. No BLOCCO 1 or therapy change. WM_v5.6.
 **Last update:** 2026-09-26 — `BATCH_20260926_ALDAZ_R6` (**MINOR**): CLAIM 032 distinguishes heterozygote endpoints, spontaneous tumour excess, tissue-restricted mammary controls and the homozygous hypomorph. No numerical CNS or therapeutic rescue threshold is established. WM_v5.5.
 **Last update:** 2026-09-26 — `BATCH_20260926_ALDAZ_R5` (**MINOR**): CLAIM 029 gains separate, bounded murine B-cell pathway-choice and MYC-driven tumour-genomics observations. The ATM source identity is repaired as PAPER 027; PAPER 030 is retained as a duplicate. Claim remains in observation; no CNS or therapeutic inference. WM_v5.4.
 **Last update:** 2026-09-26 — `BATCH_20260926_ALDAZ_R4` (**MINOR**): CLAIM 026 narrowed from a measured trafficking–metabolism “coupling node” to two observations on one HEK293T prey list and an untested coupling hypothesis; independent VOPP1 co-IP from PAPER 103 added with directness and transfer limits. WM_v5.3; no BLOCCO 1 or therapeutic change.
@@ -160,7 +161,7 @@ WWOX may also contribute directly to **ATM-linked DNA-damage-response competence
 | 004 | AAV9-WWOX neuron-targeted multi-domain rescue in vivo — ⚠️ **il confronto contro il WT o non è tracciato, o è significativo contro il rescue**; il g-ratio normalizza, gli assoni non mielinizzati no | DATO | P7 | T2 | consolidated baseline | Repudi 2021 *EMBO* (full text 2026-08-10) |
 | 005 | Reduced interneuron **markers** (PV whole-hippocampus + DG/CA1; NPY **DG only**) + regional glial reactivity in **one** systemic Wwox-KO — no medication implication | DATO | P2+P6 | T2 | consolidated baseline | Hussain 2019 (PMID 30290271, full text) |
 | 006 | P47T model shows progressive hippocampal astrogliosis; microglial progression shown for morphology only | DATO+INF | P6 | T3 ⚠️ genotype caution | consolidated baseline | Hussain 2023 |
-| 007 | P47T abolishes or near-abolishes WWOX recovery by two PPPY peptides in vitro | DATO | P3 | T3 ⚠️ genotype caution | consolidated baseline | Hussain 2023 |
+| 007 | P47T abolishes or near-abolishes WWOX recovery by two PPPY peptides in vitro; WW1/WBP-1/SIMPLE biochemistry is an independent non-neural antecedent | DATO | P3 | T3 ⚠️ genotype caution | consolidated baseline | Hussain 2023 (PAPER 007); Ludes-Meyers 2004 (PAPER 104, antecedent only) |
 | 008 | WOREE/SCAR12 form a genotype–phenotype spectrum | DATO | Clinical spectrum | T1 contextual | consolidated baseline | Aldaz 2020 / Banne 2021 |
 | 009 | WWOX deficiency plausibly alters mitochondrial quality control, redox, energy efficiency — ⚠️ counter-directional evidence recorded (CLAIM 034) | INFERENZA | P5 | T2 conceptual | in observation | Baryła 2022 / PAPER 054 (counter-direction) |
 | 010 | Mitophagy more relevant than senolytics for the WWOX mitochondrial problem | IPOTESI | P5 | T4 | background only | Mechanistic synthesis |
@@ -194,6 +195,7 @@ WWOX may also contribute directly to **ATM-linked DNA-damage-response competence
 | 038 | Elevated BUN and creatinine recur across Wwox rodent models with two competing explanations — renal insufficiency or seizure-driven hypercatabolism — neither ever tested | DATO (measures) + IPOTESI (both explanations) | P5 metabolism / kidney | T3 open question | in observation | PAPER 059 (Suzuki 2007) + PAPER 057 (Ludes-Meyers 2009) |
 | 039 | Ataxic gait is the most penetrant phenotype of the rat `lde/lde` model — 95% versus 0%; **endpoint: light-microscopy histology at ~28 d, no quantitative motor test** — 🔴 neither evidence stream establishes nor excludes a cerebellar contribution | DATO | P1 neurodevelopment / motor function | T3 | in observation | PAPER 059 (Suzuki 2007) |
 | 040 | Neuronal restoration of WWOX suppresses spike-wave discharges in the `Wwox`-null mouse to a level statistically indistinguishable from wild type (`****` WT-vs-KO, `****` KO-vs-HD, **`ns` WT-vs-HD**) — 🔴 `n=5`/group, single channel, no post-surgical recovery interval, P14–P21 only; the interictal-spike endpoint of the same figure sits at the Mann–Whitney floor and is **not tested**; SWD is an absence-type signature, not a convulsive seizure | DATO | P1 neurodevelopment / P7 network excitability | T2 | in observation | PAPER 011 (PMID 42422765), Fig. 7E |
+| 041 | P47T mouse: fewer calbindin-positive Purkinje profiles than WT at 80 and 250 days; basket-cell genotype tests nonsignificant at both ages, with no within-mutant progression test | DATO + bounded INFERENZA | P1 cerebellar structure | T3, P47T only | in observation | PAPER 007 (PMID 36828035), Fig. 5d/e |
 
 **Cross-cutting strategic implication.** CLAIM 031 motivates causal intervention; CLAIM 032 makes partial restoration a testable possibility for specified endpoints. The WWOX level, mosaic fraction and timing needed for neurological rescue have not been measured.
 
@@ -242,6 +244,7 @@ WWOX may also contribute directly to **ATM-linked DNA-damage-response competence
 
 | Date | Version | Change | Driver | Confidence |
 |------|---------|--------|--------|-----------|
+| 2026-09-27 | **WM_v5.6** | **`BATCH_20260926_ALDAZ_R7` (MINOR).** CLAIM 007 receives audited WW1/WBP-1/SIMPLE antecedent with tissue/genotype limits; CLAIM 041 records the P47T Purkinje/basket marker contrast at both sampled ages, without a progression claim. | Blind locator audit of PMID 15064722 and 36828035; receipts `FTR-20260913-15064722-01`, `FTR-20260913-36828035-03` | High for source-scoped contrast; low for transfer |
 | 2026-09-26 | **WM_v5.5** | **`BATCH_20260926_ALDAZ_R6` (MINOR).** CLAIM 032 reconciled with PAPER 078 spontaneous tumours, PAPER 098 hypomorph survival/protein compartments and PAPER 107 conditional mammary limits. The dose/mosaicism inference is explicitly unmeasured for CNS rescue. No BLOCCO 1 or therapeutic recommendation. | CC-20260914-CLAIM032-LIMIT-01; CC-20260914-17823927-01; CC-20260914-22574198-01 | Low for CNS transfer |
 | 2026-09-26 | **WM_v5.4** | **`BATCH_20260926_ALDAZ_R5` (MINOR).** CLAIM 029 receives two separate murine B-cell observations, each with model, comparator and mechanism limits; PMID 25331887 duplicate identity repaired. No status, BLOCCO 1 or therapeutic change. | CC-20260914-31275852-01; CC-20260914-41090157-01; CC-20260826-PROVENANCE-01 §B | Low for cross-context transfer |
 | 2026-09-26 | **WM_v5.3** | **`BATCH_20260926_ALDAZ_R4` (MINOR).** CLAIM 026 scoped to co-association plus annotation, coupling kept as untested hypothesis; PAPER 032 and PAPER 103 evidence boundaries linked; narrative and research lines aligned. No clinical or therapeutic promotion. | Receipt-backed candidates `CC-20260913-ALDAZ-B002-01`, `CC-20260914-30285739-01`, `CC-20260914-CLAIM026-CLINICAL-01` | Moderate for measured interaction; low for coupling |

@@ -4844,14 +4844,14 @@ Serves to:
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 143
-**Status:** processed
-**Status note:** complete_fulltext_read — `FTR-20260913-15064722-01` (read on the VPS laboratory checkout, recovered by `fulltext_receipts.py rechain`); fields completed by `BATCH_20260926_ALDAZ_R2` from `CC-20260913-15064722-01`
+**Status:** claim_linked
+**Status note:** complete_fulltext_read — `FTR-20260913-15064722-01` (read on the VPS laboratory checkout, recovered by `fulltext_receipts.py rechain`); fields completed by `BATCH_20260926_ALDAZ_R2` from `CC-20260913-15064722-01`; linked to CLAIM 007 by `BATCH_20260926_ALDAZ_R7`
 **Primary pathway:** P3 — interaction logic / WW-domain scaffold
 **Genotype/model tag:** in vitro + MCF-7; no WWOX disease variant, no neural cell, tissue or system
 **Transferability:** T3 — domain logic only
 **clinical relevance:** LOW
-**Claim links:** none — held for the claim batch
-**Working Model impact:** none — the candidate's provenance addition to `CLAIM 007` is held for the claim batch
+**Claim links:** 007 — mechanistic antecedent only; P47T measurement is in `PAPER 007`
+**Working Model impact:** `BATCH_20260926_ALDAZ_R7` (WM_v5.6): bounded in-vitro provenance added to CLAIM 007, without altering its P47T result
 **Report mentions:** corpus alignment · `CC-20260913-15064722-01` · `BATCH_20260926_ALDAZ_R2`
 **Next action:** none — read and registered
 **Flags:** read — receipt `FTR-20260913-15064722-01`

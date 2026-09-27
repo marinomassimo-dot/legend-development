@@ -213,3 +213,43 @@ Every rejection declares **what would revive it**. If the trigger fires, the rej
 - **Ciò che resta senza spiegazione:** la causa del nanismo `lde` è **ignota**. `WWOX AND "growth hormone"` restituisce **0** record PubMed.
 - **`REVIVAL_TRIGGER`:** (a) un dosaggio GH adeguatamente potenziato; (b) un rescue con GH nel ratto `lde/lde`; (c) misura dell'asse IGF-1.
 - **Gancio di ri-audit:** rigetto di **causa endocrina**. E gancio di metodo: da riesaminare ogni volta che una premessa citata compare come **frase breve e citabile** — è la firma di una citazione presa dall'abstract.
+
+### DIS-013 — «PMID 15064722 misura il binding WWOX–PPxY in tessuto neurale» → ❌ **NON SUPPORTATA DA QUESTA FONTE**
+- **PREMISE: DATO:** i sistemi sono peptidi/proteine in vitro, batteri e MCF-7; la biblioteca di cDNA cerebrale è espressa in batteri. Nessun binding neurale è misurato. `PAPER 104`, manifest PMID15064722, audit cieco B7.
+- **Confine:** non nega che il binding possa avvenire nel cervello.
+- **`REVIVAL_TRIGGER`:** pull-down o proximity assay con campione neurale e comparatori pertinenti.
+
+### DIS-014 — «WWOX WW2 non lega alcun ligando ricco di prolina» → ⏸️ **NEGATIVO NON STABILITO**
+- **PREMISE: DATO:** il testo di PMID 15064722 dice che GST–WWOX-2 non interagisce con i ligandi testati, ma Fig. 1b mostra un debole segnale nella riga CDC25 al livello WW2. Il segnale non è una misura di affinità né prova da solo un'interazione specifica.
+- **Confine:** il rigetto riguarda l'assoluto su ogni ligando, non il risultato principale WW1/WBP-1.
+- **`REVIVAL_TRIGGER`:** misura quantitativa WW2 con controlli di specificità e un insieme dichiarato di ligandi.
+
+### DIS-015 — «Cinque cloni dello screen sono cinque partner WWOX convalidati» → ❌ **NON SUPPORTATA**
+- **PREMISE: DATO:** PMID 15064722 riporta cinque cloni selezionati, quattro lane di conferma far-Western e un quinto clone non identificato al momento della pubblicazione. Fig. 2 definisce la selezione qualitativa per colonie positive duplicate; le macchie non cerchiate non sono ulteriori partner convalidati.
+- **Confine:** quattro conferme nel test non dimostrano quattro interazioni endogene.
+- **`REVIVAL_TRIGGER`:** identificazione e retest del quinto clone, con verifica indipendente della specificità.
+
+### DIS-016 — «Uno screen su una biblioteca esaurisce l'interattoma WW di WWOX» → ❌ **INFERENZA NON LICENZIATA**
+- **PREMISE: DEFAULT_FROM_TEXTBOOK:** l'esaustività di una biblioteca e delle condizioni di screening non è dimostrata da PMID 15064722; il set è condizionato dal saggio.
+- **Confine:** i partner osservati restano candidati nel contesto misurato.
+- **`REVIVAL_TRIGGER`:** schermi indipendenti in altre biblioteche o tessuti, con copertura e sensibilità dichiarate.
+
+### DIS-017 — «L'arricchimento KEGG GABA in PMID 36828035 misura inibizione funzionale» → ❌ **NON MISURATA**
+- **PREMISE: DATO:** la fonte riporta un programma di espressione, senza misura di corrente inibitoria, cloruro o `E_GABA` in quell'analisi (manifest entry 12, audit B7).
+- **Confine:** un cambiamento funzionale resta possibile, non dimostrato da questo endpoint.
+- **`REVIVAL_TRIGGER`:** elettrofisiologia o misura di cloruro/`E_GABA` nello stesso modello e stadio.
+
+### DIS-018 — «L'eterozigote P47T è un comparatore fenotipicamente neutro» → ❌ **GENERALIZZAZIONE RESPINTA**
+- **PREMISE: DATO:** Fig. 2d di PMID 36828035 mostra un confronto significativo eterozigote–WT per sociabilità; il testo confronta i due genotipi anche su JSET. I numeri d'organo della tabella supplementare sono descrittivi e non bastano a stabilire differenze statistiche.
+- **Confine:** non tutti gli endpoint eterozigoti sono anomali.
+- **`REVIVAL_TRIGGER`:** coorte eterozigote potenziata, con statistiche per ciascun endpoint d'interesse.
+
+### DIS-019 — «PMID 36828035 dimostra una riduzione della firma oligodendrocitaria nell'ippocampo» → ❌ **NON DIMOSTRATA**
+- **PREMISE: DATO:** Fig. 6c riporta `p = 0.43` per HPC OLIG, mentre HPC OPC è un endpoint distinto (`p = 0.02`). Il punteggio di deconvoluzione non è una conta cellulare.
+- **Confine:** il risultato non prova equivalenza né assenza di un effetto biologico.
+- **`REVIVAL_TRIGGER`:** misura ippocampale diretta e sufficientemente potenziata degli oligodendrociti.
+
+### DIS-020 — «La gliosi P47T cresce con l'età in ogni sua componente» → ❌ **ASSOLUTO NON SUPPORTATO**
+- **PREMISE: DATO:** PMID 36828035 confronta 80 e 250 giorni per astrogliosi e morfologia microgliale; la progressione dell'abbondanza microgliale non ha un test entro genotipo. La glia non costituisce un solo endpoint (CLAIM 006, audit B7).
+- **Confine:** non inferire un'assenza di progressione dell'abbondanza dal test mancante.
+- **`REVIVAL_TRIGGER`:** confronto longitudinale o a età multiple, con unità animale e conteggi microgliali comparabili.

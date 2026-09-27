@@ -393,12 +393,25 @@
         "panel_text_relation": "text_only"
       },
       {
-        "proposition": "Transcriptomic GABA finding is an EXPRESSION PROGRAMME, not a measure of inhibition, and must not be recruited to the E_GABA sign question.",
+        "proposition": "The running text reports KEGG enrichment of GABAergic and glutamatergic synapse gene sets in cortex and hippocampus. This is an expression-pathway result; the cited analysis does not measure inhibitory function or E_GABA.",
         "snippet": "Suppression of GABAergic and glutamatergic synapses in CTX and HPC was also detected in KEGG pathways",
-        "anchor": "Results 2.7, KEGG enrichment, citing Supplementary Figs. S11-12 (NOT retrieved)",
+        "anchor": "Results 2.7, KEGG expression enrichment; Supplementary Figures S11 and S12 were inspected in the 2026-09-26 blind audit.",
         "surface": "body",
         "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
-        "panel_text_relation": "text_only"
+        "panel_text_relation": "text_only",
+        "contradicts_locator": {
+          "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36828035.json",
+          "entry": 12,
+          "what_changed": "2026-09-26 blind audit found an overshoot or unsupported relation in the prior proposition; narrowed it to the measured source and recorded the verdict in disease-models/wwox/research/locator_audits/2026-09-26_B7_blind_audit.md. Prior wording began: Transcriptomic GABA finding is an EXPRESSION PROGRAMME, not a measure of inhibition, and must not be recruited to the E_",
+          "audit": {
+            "auditors": 1,
+            "verdicts": [
+              "OVERSHOOT",
+              "CORRECTED"
+            ],
+            "method": "Independent no-history mirror agent; triple plus primary source only; verdict table in disease-models/wwox/research/locator_audits/2026-09-26_B7_blind_audit.md"
+          }
+        }
       },
       {
         "proposition": "LONGEVITY, from the BODY not the abstract: the P47T knock-in is the only WWOX genotype in which adult electrophysiology is obtainable. Mean survival 393 days.",
@@ -533,12 +546,25 @@
         }
       },
       {
-        "proposition": "CEREBELLAR NEURONAL LOSS IS EARLY AND NOT PROGRESSIVE, and it is cell-type selective: basket cells are spared at both ages.",
-        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 5d: Purkinje number WT ~95 vs mutant ~25 at 80-days (*); WT ~100 vs mutant ~42 at 250-days (*) - the mutant value is HIGHER at the later age, and no within-genotype bracket is drawn. Fig 5e: basket cell number is ns at BOTH 80 and 250 days.",
-        "anchor": "Figure 5, panels d and e, native resolution 1542x2100. The apparent Purkinje increase is most likely survivor selection in the 250-day cohort; the panels do not decide between that and recovery.",
+        "proposition": "Figure 5d compares calbindin-positive Purkinje counts between genotypes at 80 and 250 days and marks lower mutant counts at each age. Figure 5e marks the Hcn1-positive basket-cell genotype comparisons ns at both ages. No within-mutant age test establishes progression or nonprogression, and ns does not prove equivalence.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig. 5d: calbindin+ Purkinje counts are lower in P47T/P47T than WT/WT at 80 and 250 days, with genotype brackets at each age and no within-genotype age bracket. Fig. 5e: Hcn1+ basket-cell genotype comparisons are labelled ns at both ages.",
+        "anchor": "Figure 5d/e, native raster 1542x2100; genotype comparisons at each age, n=3 pairs. No within-genotype age comparison and no test of equivalence.",
         "surface": "figure",
         "artifact": "files/fulltext/PMID36828035_Hussain2023_assets/nihms-1957654-f0005.jpg",
-        "panel_text_relation": "panel_only"
+        "panel_text_relation": "panel_only",
+        "contradicts_locator": {
+          "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36828035.json",
+          "entry": 24,
+          "what_changed": "2026-09-26 blind audit found an overshoot or unsupported relation in the prior proposition; narrowed it to the measured source and recorded the verdict in disease-models/wwox/research/locator_audits/2026-09-26_B7_blind_audit.md. Prior wording began: CEREBELLAR NEURONAL LOSS IS EARLY AND NOT PROGRESSIVE, and it is cell-type selective: basket cells are spared at both ag",
+          "audit": {
+            "auditors": 1,
+            "verdicts": [
+              "OVERSHOOT",
+              "CORRECTED"
+            ],
+            "method": "Independent no-history mirror agent; triple plus primary source only; verdict table in disease-models/wwox/research/locator_audits/2026-09-26_B7_blind_audit.md"
+          }
+        }
       },
       {
         "proposition": "THE WIDENING CEREBELLAR LAYER DIFFERENCE IS PARTLY NORMAL WILD-TYPE GROWTH, not only mutant loss.",
@@ -584,7 +610,7 @@
         "found_or_sought": "found"
       },
       {
-        "proposition": "THE PANEL SHOWS A SIGNIFICANT HETEROZYGOTE-VERSUS-WILD-TYPE SOCIABILITY DIFFERENCE THE TEXT DOES NOT REPORT: in Fig. 2d's Sociability graph the P47T/WT bar is HIGHER than WT/WT (approx 72 s vs approx 47 s) with an asterisk bracket between them, and the text never compares het with WT. This is ONE endpoint: no het-versus-WT bracket is drawn on the other Fig. 2 panels (OFT, EPM, JSET). It therefore QUALIFIES, rather than excludes, use of this paper's heterozygote as a comparator.",
+        "proposition": "Figure 2d marks a heterozygote-versus-wild-type sociability difference (approximately 72 versus 47 seconds). This panel-specific heterozygote contrast is not described in the sociability prose; the article does compare these genotypes in JSET prose elsewhere. It does not establish a global heterozygote phenotype.",
         "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2d Sociability: three bars, WT/WT approx 47 s, P47T/WT approx 72 s, P47T/P47T approx 8 s, with asterisk brackets on WT/WT vs P47T/WT, WT/WT vs P47T/P47T and P47T/WT vs P47T/P47T. Social novelty graph: N vs F asterisk in WT/WT and in P47T/WT, no difference in P47T/P47T.",
         "surface": "figure",
         "artifact": "files/fulltext/PMID36828035_Hussain2023_assets/nihms-1957654-f0002.jpg",
@@ -598,6 +624,19 @@
           "genotype": "Wwox P47T/WT vs Wwox WT/WT",
           "endpoint": "three-chambered sociability, time investigating",
           "comparator": "WT/WT"
+        },
+        "contradicts_locator": {
+          "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36828035.json",
+          "entry": 29,
+          "what_changed": "2026-09-26 blind audit found an overshoot or unsupported relation in the prior proposition; narrowed it to the measured source and recorded the verdict in disease-models/wwox/research/locator_audits/2026-09-26_B7_blind_audit.md. Prior wording began: THE PANEL SHOWS A SIGNIFICANT HETEROZYGOTE-VERSUS-WILD-TYPE SOCIABILITY DIFFERENCE THE TEXT DOES NOT REPORT: in Fig. 2d'",
+          "audit": {
+            "auditors": 1,
+            "verdicts": [
+              "OVERSHOOT",
+              "CORRECTED"
+            ],
+            "method": "Independent no-history mirror agent; triple plus primary source only; verdict table in disease-models/wwox/research/locator_audits/2026-09-26_B7_blind_audit.md"
+          }
         }
       },
       {
@@ -610,21 +649,34 @@
         "found_or_sought": "found"
       },
       {
-        "proposition": "THE CITED PANEL DOES NOT SUPPORT THE HIPPOCAMPAL OLIGODENDROCYTE HALF OF THAT SENTENCE AT SIGNIFICANCE: Fig. 6c prints p=0.43 over the HPC OLIGs comparison - the largest p-value in the panel - while HPC OPCs is p=0.02; in PFC the pattern inverts (OLIGs p=0.02, OPCs p=0.27). p=0.43 is non-significance, NOT refutation: the homozygote median is visibly lower and the WT group is dispersed, so the DIRECTION agrees with the text. The text says 'reduced', not 'significantly reduced', and attaches 'significantly' only to astrocytes and microglia.",
+        "proposition": "Figure 6c prints HPC OLIG score p=0.43 and HPC OPC p=0.02; the lower OLIG median is descriptive, and non-significance is neither proof of no biological effect nor contradiction of the body's unqualified word reduced. The panel qualifies any statistically significant HPC OLIG claim.",
         "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 6c: eight box plots in two rows. HPC row: ASTROCYTES p=0.01, MICROGLIA p=0.03, OLIGs p=0.43, OPCs p=0.02. PFC row: ASTROCYTES p=0.003, MICROGLIA p<0.001, OLIGs P=0.02, OPCs p=0.27. Group colours WT teal, HOM red.",
         "surface": "figure",
         "artifact": "files/fulltext/PMID36828035_Hussain2023_assets/nihms-1957654-f0006.jpg",
         "anchor": "Figure 6, panel c, native resolution 1801x1544",
-        "panel_text_relation": "text_contradicted_by_panel",
+        "panel_text_relation": "panel_qualifies_text",
         "found_or_sought": "found",
-        "contradicts": "entries[30]",
-        "contradicts_needle": "reduced scores for mature oligodendrocytes (OLIGs)",
         "experimental_context": {
           "system": "mouse",
           "genotype": "Wwox P47T/P47T vs Wwox WT/WT",
           "endpoint": "BRETIGEA cell-type score, hippocampus",
           "comparator": "WT/WT"
-        }
+        },
+        "contradicts_locator": {
+          "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36828035.json",
+          "entry": 31,
+          "what_changed": "2026-09-26 blind audit found an overshoot or unsupported relation in the prior proposition; narrowed it to the measured source and recorded the verdict in disease-models/wwox/research/locator_audits/2026-09-26_B7_blind_audit.md. Prior wording began: THE CITED PANEL DOES NOT SUPPORT THE HIPPOCAMPAL OLIGODENDROCYTE HALF OF THAT SENTENCE AT SIGNIFICANCE: Fig. 6c prints p",
+          "audit": {
+            "auditors": 1,
+            "verdicts": [
+              "OVERSHOOT",
+              "CORRECTED"
+            ],
+            "method": "Independent no-history mirror agent; triple plus primary source only; verdict table in disease-models/wwox/research/locator_audits/2026-09-26_B7_blind_audit.md"
+          }
+        },
+        "qualifies": "entries[30]",
+        "qualifies_needle": "reduced scores for mature oligodendrocytes (OLIGs)"
       },
       {
         "proposition": "CTX HALF OF THE KEGG SENTENCE IS CARRIED BY ITS PANEL: Supplementary Fig. S11 (CTX) places BOTH 'GABAergic synapse' and 'Glutamatergic synapse' in the SUPPRESSED column, each marked with the legend's red arrow, alongside activated NF-kappa B, TNF and IL-17 signalling in the activated column.",
@@ -637,15 +689,13 @@
         "audit_note": "REPOINTED 2026-09-13 after a blind locator audit found the artefact one page off. The page numbers were written from a mistaken mapping; the panels described were the ones actually inspected. The mapping is now taken from the supplementary PDF's own text layer, which prints the figure number on each page, not from counting renders. As first written, entry 33 pointed at the CTX panel, which shows the OPPOSITE of its proposition."
       },
       {
-        "proposition": "THE HIPPOCAMPAL GABAERGIC HALF OF THE SENTENCE IS NOT AMONG THE PATHWAYS ITS CITED PANEL PLOTS: Supplementary Fig. S12 (HPC KEGG; legend mislabelled S11) shows Glutamatergic synapse in the suppressed column and NO GABAergic synapse row among the displayed pathways, while S11 (CTX, page 13) shows both. The body sentence is therefore carried for glutamatergic in both regions and for GABAergic in CTX only, as far as the plotted pathways show. Sub-threshold HPC GABAergic enrichment is NOT excluded: a dot plot of displayed pathways is not a full KEGG table, and no full table is deposited. The body sentence can also be read collectively across the two regions, which is one available reading of it.",
+        "proposition": "Supplementary Figure S12 displays a suppressed hippocampal glutamatergic row but no displayed GABAergic row, while S11 displays both in cortex. The plotted subset does not prove absence of hippocampal GABAergic enrichment or refute a collective across-region body sentence.",
         "snippet": "[figure attestation - pixels cannot be quote-matched] S12 'HPC KEGG Enriched pathways': suppressed column plots Sulfur metabolism, Propanoate metabolism, Ascorbate and aldarate metabolism, Fatty acid elongation, Glycine/serine/threonine metabolism, Fc gamma R-mediated phagocytosis, Glutamatergic synapse (red arrow), Long-term potentiation, GnRH secretion, Phosphatidylinositol signalling, Regulation of actin cytoskeleton, Aldosterone-regulated sodium reabsorption, Mineral absorption, Axon guidance, Thyroid hormone synthesis. Activated column includes IL-17 signaling pathway (black arrow), Neuroactive ligand-receptor interaction, Type I diabetes mellitus. No row reading GABAergic synapse appears in either column. The legend printed beneath reads 'Supplementary Figure S11 | KEGG pathway enrichment analysis in HPC' and 'Red arrow indicate suppression Glutamatergic synapses'.",
         "surface": "figure",
         "artifact": "files/figures/PMID36828035/supp_pages/S_page14_200dpi.png",
         "anchor": "Supplementary Figure S12 (HPC KEGG; its own legend is mislabelled S11), page 14 of the supplementary figures PDF",
-        "panel_text_relation": "text_contradicted_by_panel",
+        "panel_text_relation": "panel_qualifies_text",
         "found_or_sought": "found",
-        "contradicts": "entries[12]",
-        "contradicts_needle": "GABAergic and glutamatergic synapses in CTX and HPC",
         "experimental_context": {
           "system": "mouse",
           "genotype": "Wwox P47T/P47T vs Wwox WT/WT",
@@ -655,15 +705,19 @@
         "audit_note": "REPOINTED 2026-09-13 after a blind locator audit found the artefact one page off. The page numbers were written from a mistaken mapping; the panels described were the ones actually inspected. The mapping is now taken from the supplementary PDF's own text layer, which prints the figure number on each page, not from counting renders. As first written, entry 33 pointed at the CTX panel, which shows the OPPOSITE of its proposition.",
         "contradicts_locator": {
           "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36828035.json",
-          "entry": 12,
-          "what_changed": "The panel cited for GABAergic suppression in HPC plots no GABAergic row; the claim is narrowed to CTX as far as the plotted pathways show, and sub-threshold HPC enrichment is explicitly not excluded.",
+          "entry": 33,
+          "what_changed": "2026-09-26 blind audit found an overshoot or unsupported relation in the prior proposition; narrowed it to the measured source and recorded the verdict in disease-models/wwox/research/locator_audits/2026-09-26_B7_blind_audit.md. Prior wording began: THE HIPPOCAMPAL GABAERGIC HALF OF THE SENTENCE IS NOT AMONG THE PATHWAYS ITS CITED PANEL PLOTS: Supplementary Fig. S12 (",
           "audit": {
             "auditors": 1,
             "verdicts": [
-              "blind locator audit, 2026-09-13, general-purpose auditor receiving only (proposition, quote, anchor) triples plus the artefacts, no dossier, no claim record, no reader identity; it opened every named image"
-            ]
+              "OVERSHOOT",
+              "CORRECTED"
+            ],
+            "method": "Independent no-history mirror agent; triple plus primary source only; verdict table in disease-models/wwox/research/locator_audits/2026-09-26_B7_blind_audit.md"
           }
-        }
+        },
+        "qualifies": "entries[12]",
+        "qualifies_needle": "GABAergic and glutamatergic synapses in CTX and HPC"
       },
       {
         "proposition": "THE SUPPLEMENT CITED FOR THE PER-ANIMAL SEIZURE CLAIM SHOWS GROUP MEANS, NOT PER-ANIMAL COUNTS: Supplementary Fig. S3a/b are two-bar graphs of mean seizure number and mean spikes/hour with SEM, n=3 per genotype. They establish the group difference; they do NOT display the individual animals, so 'all three mutants had more than 4 seizures in 24 h' remains attested by the running text alone and cannot be checked against this panel. The running text's per-animal range (11-22 seizures over 43-53 h) is the only individual-level information available, and S3a gives no time window at all, so the panel does not even share the 24 h unit of the claim it is cited for.",
@@ -692,13 +746,26 @@
         "found_or_sought": "found"
       },
       {
-        "proposition": "A NEGATIVE THE AUTHORS STATE: myelination by Mbp staining is not different between homozygote and wild type, despite the oligodendrocyte deficit.",
+        "proposition": "The authors report no statistically significant difference in Mbp staining in the measured parietal cortex above the corpus callosum between homozygote and wild type; this does not establish equivalent myelination elsewhere or by other measures.",
         "snippet": "no significant differences in Mbp staining were detected when comparing",
         "surface": "body",
         "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
         "anchor": "Results 2.6 (oligodendrocyte section), citing Supplementary Figs. 6a-d",
         "panel_text_relation": "text_only",
-        "found_or_sought": "found"
+        "found_or_sought": "found",
+        "contradicts_locator": {
+          "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36828035.json",
+          "entry": 36,
+          "what_changed": "2026-09-26 blind audit found an overshoot or unsupported relation in the prior proposition; narrowed it to the measured source and recorded the verdict in disease-models/wwox/research/locator_audits/2026-09-26_B7_blind_audit.md. Prior wording began: A NEGATIVE THE AUTHORS STATE: myelination by Mbp staining is not different between homozygote and wild type, despite the",
+          "audit": {
+            "auditors": 1,
+            "verdicts": [
+              "OVERSHOOT",
+              "CORRECTED"
+            ],
+            "method": "Independent no-history mirror agent; triple plus primary source only; verdict table in disease-models/wwox/research/locator_audits/2026-09-26_B7_blind_audit.md"
+          }
+        }
       },
       {
         "proposition": "THE NEGATIVE IS CARRIED BY ITS PANELS AT BOTH AGES: Supplementary Fig. S6c and S6d plot Mbp+ area fraction for top and middle cortical regions at 80 and 250 days with no significance marks anywhere, n=3 per group. The 250-day top-region bars trend lower in the mutant and are still unmarked, so the negative is a non-significant difference at n=3 rather than a demonstrated equivalence.",
@@ -852,13 +919,26 @@
         "found_or_sought": "found"
       },
       {
-        "proposition": "THE CEREBELLAR LOSS IS CELL-TYPE SELECTIVE, WHICH IS A CONTROL AND NOT A NULL: Purkinje cells fall sharply while basket cells in the same sections are unchanged, so the degeneration is not a global loss of cerebellar neurons or a sectioning artefact.",
+        "proposition": "The article reports reduced Purkinje counts and basket-cell counts without a significant genotype difference in the sampled cerebellar regions. This supports relative cell-type selectivity of those two readouts, not intactness of all other neuron classes or exclusion of sectioning effects.",
         "snippet": "the number of basket cells in the same regions remained unchanged",
         "surface": "body",
         "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
         "anchor": "Results 2.7, citing Fig. 5c and 5e",
         "panel_text_relation": "text_only",
-        "found_or_sought": "found"
+        "found_or_sought": "found",
+        "contradicts_locator": {
+          "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36828035.json",
+          "entry": 51,
+          "what_changed": "2026-09-26 blind audit found an overshoot or unsupported relation in the prior proposition; narrowed it to the measured source and recorded the verdict in disease-models/wwox/research/locator_audits/2026-09-26_B7_blind_audit.md. Prior wording began: THE CEREBELLAR LOSS IS CELL-TYPE SELECTIVE, WHICH IS A CONTROL AND NOT A NULL: Purkinje cells fall sharply while basket ",
+          "audit": {
+            "auditors": 1,
+            "verdicts": [
+              "OVERSHOOT",
+              "CORRECTED"
+            ],
+            "method": "Independent no-history mirror agent; triple plus primary source only; verdict table in disease-models/wwox/research/locator_audits/2026-09-26_B7_blind_audit.md"
+          }
+        }
       },
       {
         "proposition": "A PERIPHERAL FINDING THAT TRAVELS WITH THE BRAIN PHENOTYPE: relative kidney and liver weights are increased in the homozygote, which together with the cholestasis and nephropathy of Supplementary Table 4 makes this model's phenotype not purely neurological.",

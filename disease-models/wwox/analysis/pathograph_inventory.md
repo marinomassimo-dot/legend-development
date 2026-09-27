@@ -26,18 +26,18 @@ annotations is reported below whatever it happens to be.
 
 | Measure | Count |
 |---|---|
-| Claim nodes | 40 |
-| Claim→claim wikilink occurrences | 54 |
-| …distinct directed links | 42 |
-| …undirected edges they collapse into | 31 |
+| Claim nodes | 41 |
+| Claim→claim wikilink occurrences | 55 |
+| …distinct directed links | 43 |
+| …undirected edges they collapse into | 32 |
 | Edges carrying a declared relation type | 0 |
 | Nodes carrying a biological scale | 0 |
 | Deep-dive manifests read | 109 |
-| …of which bound to at least one claim | 46 |
-| Propositions scanned | 2635 |
-| …carrying a relational connective | 620 |
-| …locator-backed candidates | 584 |
-| …locator-backed and bound to a claim | 263 |
+| …of which bound to at least one claim | 47 |
+| Propositions scanned | 2637 |
+| …carrying a relational connective | 619 |
+| …locator-backed candidates | 583 |
+| …locator-backed and bound to a claim | 268 |
 
 The scanned population is three declared surfaces and no others: every claim
 `Title`, every row of the working model's BLOCK 2 mirror, and every
@@ -56,7 +56,7 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 | CLAIM 004 | AAV9-WWOX neuron-targeted rescue shows multi-domain in vivo improvement | consolidated baseline | DATO | P7 — gene therapy readiness | NOT_ANNOTATED | 4 | 3 |
 | CLAIM 005 | Reduced GABAergic interneurons and glial activation in WWOX-KO | consolidated baseline | DATO | P2 — GABAergic vulnerability; P6 — neuro | NOT_ANNOTATED | 10 | 3 |
 | CLAIM 006 | P47T model shows progressive hippocampal astrogliosis; microglial progression shown for morpholo | consolidated baseline | DATO + INFERENZA prudente | P6 — neuroinflammation / glia | NOT_ANNOTATED | 0 | 1 |
-| CLAIM 007 | P47T abolishes or near-abolishes WWOX recovery by two PPPY peptides in vitro | consolidated baseline | DATO | P3 — MYC/Wnt / interaction logic | NOT_ANNOTATED | 0 | 3 |
+| CLAIM 007 | P47T abolishes or near-abolishes WWOX recovery by two PPPY peptides in vitro | consolidated baseline | DATO | P3 — MYC/Wnt / interaction logic | NOT_ANNOTATED | 1 | 4 |
 | CLAIM 008 | WOREE and SCAR12 form a genotype-phenotype spectrum | consolidated baseline | DATO | Clinical spectrum / genotype-phenotype | NOT_ANNOTATED | 0 | 3 |
 | CLAIM 009 | WWOX deficiency plausibly alters mitochondrial quality control, redox and energy efficiency | in observation | INFERENZA | P5 — metabolism / mitochondria / redox / | NOT_ANNOTATED | 5 | 9 |
 | CLAIM 010 | Mitophagy may be more relevant than senolytics for WWOX-related mitochondrial dysfunction | background only | IPOTESI | P5 — metabolism / mitochondria / mitopha | NOT_ANNOTATED | 0 | 0 |
@@ -90,6 +90,7 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 | CLAIM 038 | Elevated BUN and creatinine recur across Wwox rodent models with two competing explanations — re | in observation | DATO (le misure) + IPOTESI (entrambe le  | P5 — metabolismo / rene | NOT_ANNOTATED | 5 | 3 |
 | CLAIM 039 | Ataxic gait is the most penetrant phenotype of the rat `lde/lde` model — 95% versus 0% — and **n | in observation | DATO | P1 — neurosviluppo / funzione motoria | NOT_ANNOTATED | 3 | 1 |
 | CLAIM 040 | Neuronal restoration of WWOX suppresses spike-wave discharges in the `Wwox`-null mouse to a leve | in observation | DATO | P1 — neurosviluppo; P7 — eccitabilità di | NOT_ANNOTATED | 6 | 1 |
+| CLAIM 041 | In the P47T knock-in mouse, sampled cerebellar regions show fewer calbindin-positive Purkinje pr | in observation | DATO (mouse histology) + INFERENZA (rela | P1 — cerebellar neuronal structure; adja | NOT_ANNOTATED | 1 | 2 |
 
 ## 2 · Edges declared by the registry
 
@@ -105,6 +106,7 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 | CLAIM 005 <-> CLAIM 036 | **one-way** | Evidence boundary | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 057 |
 | CLAIM 005 <-> CLAIM 037 | yes | Evidence boundary, Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 058 |
 | CLAIM 005 <-> CLAIM 040 | yes | Evidence boundary, Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
+| CLAIM 007 <-> CLAIM 041 | **one-way** | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 007, PAPER 112 |
 | CLAIM 009 <-> CLAIM 028 | **one-way** | ⚠️ Counter-directional evidence (BATCH_20260726_001) | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 054 |
 | CLAIM 009 <-> CLAIM 034 | yes | Summary, ⚠️ Counter-directional evidence (BATCH_20260726_001) | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 054, PAPER 071 |
 | CLAIM 011 <-> CLAIM 040 | **one-way** | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 011 |
@@ -145,7 +147,7 @@ reported as `RELATION_TYPE_UNRECOGNISED` and is never coerced into a type.
 
 ## 3 · Where the causal content actually sits
 
-19 of 40 claim titles state a
+19 of 41 claim titles state a
 relation, and every declared edge states none. The causal content of this
 model is largely **inside its nodes**: *"Neuronal WWOX deletion induces
 non-cell-autonomous hypomyelination"* is a cause, a relation and an effect
@@ -210,6 +212,7 @@ is matched as one string, so an adverb inserted into it — *"contributes
 | CLAIM 005 <-> CLAIM 011 | CLAIM 005 -> CLAIM 011 | CLAIM 011 -> CLAIM 005 |
 | CLAIM 005 <-> CLAIM 016 | CLAIM 005 -> CLAIM 016 | CLAIM 016 -> CLAIM 005 |
 | CLAIM 005 <-> CLAIM 036 | CLAIM 036 -> CLAIM 005 | CLAIM 005 -> CLAIM 036 |
+| CLAIM 007 <-> CLAIM 041 | CLAIM 041 -> CLAIM 007 | CLAIM 007 -> CLAIM 041 |
 | CLAIM 009 <-> CLAIM 028 | CLAIM 009 -> CLAIM 028 | CLAIM 028 -> CLAIM 009 |
 | CLAIM 011 <-> CLAIM 040 | CLAIM 040 -> CLAIM 011 | CLAIM 011 -> CLAIM 040 |
 | CLAIM 016 <-> CLAIM 037 | CLAIM 016 -> CLAIM 037 | CLAIM 037 -> CLAIM 016 |
@@ -246,7 +249,6 @@ working model with no edge between them in the registry.
 | Node | Verdict | Material found in the repository |
 |---|---|---|
 | CLAIM 006 | ANNOTATION_GAP_CONFIRMED | LOCATOR_PROPOSITION_BOUND, SHARED_EVIDENTIAL_PAPER, UNLINKED_PROSE_MENTION |
-| CLAIM 007 | ANNOTATION_GAP_CONFIRMED | LOCATOR_PROPOSITION_BOUND, SELF_RELATIONAL_TITLE, SHARED_EVIDENTIAL_PAPER, UNLINKED_PROSE_MENTION |
 | CLAIM 008 | REVIEW_MATERIAL_PRESENT | LOCATOR_PROPOSITION_BOUND, SHARED_EVIDENTIAL_PAPER |
 | CLAIM 010 | NO_RELATION_MATERIAL_IN_REPOSITORY | — |
 | CLAIM 012 | NO_RELATION_MATERIAL_IN_REPOSITORY | — |
@@ -282,13 +284,13 @@ place to look, not a set of missing edges.
 | CLAIM 002 ↔ CLAIM 032 | PAPER 039 |
 | CLAIM 005 ↔ CLAIM 038 | PAPER 057, PAPER 058 |
 | CLAIM 006 ↔ CLAIM 007 | PAPER 007 |
+| CLAIM 006 ↔ CLAIM 041 | PAPER 007 |
 | CLAIM 007 ↔ CLAIM 008 | PAPER 042 |
 | CLAIM 007 ↔ CLAIM 019 | PAPER 042 |
 | CLAIM 007 ↔ CLAIM 030 | PAPER 042 |
 | CLAIM 007 ↔ CLAIM 033 | PAPER 042 |
-| CLAIM 008 ↔ CLAIM 019 | PAPER 040, PAPER 042 |
 
-Showing 12 of 24. The complete list is in the export.
+Showing 12 of 25. The complete list is in the export.
 
 ## 5 · Candidate edges — propositions already written, awaiting review
 
@@ -300,15 +302,15 @@ each side is a reading, and every record carries `endpoints_resolved: false`.
 | Source | Candidates |
 |---|---|
 | claim_title | 19 |
-| locator_proposition | 584 |
+| locator_proposition | 583 |
 | working_model_mirror_title | 17 |
 
 | Connective class (lexical) | Candidates |
 |---|---|
 | ARROW | 16 |
 | ASSOCIATIVE | 27 |
-| CAUSAL | 526 |
-| DEPENDENCY | 51 |
+| CAUSAL | 524 |
+| DEPENDENCY | 52 |
 
 A connective class is a property of the word, not a verdict about the
 relationship. An `ASSOCIATIVE` connective does not make an edge `ASSOCIATED`.
@@ -330,7 +332,7 @@ relationship. An `ASSOCIATIVE` connective does not make an edge `ASSOCIATED`.
 | CLAIM 016 | claim_title | `contribute to` | GSK3β hyperactivation may contribute to seizure susceptibility in WWOX deficiency |
 | CLAIM 018 | claim_title | `causes` | The exon 6 splice-site variant c.517-2A>G is pathogenic and causes exon 6 skipping in humans |
 
-Showing 12 of 299 bound candidates; the
+Showing 12 of 304 bound candidates; the
 complete set, with evidence and provenance, is in the export. The worklist
 in cost order — what needs an annotation, what needs a type, what needs a
 decomposition, what needs a reading — is printed by:
@@ -347,6 +349,6 @@ carried no connective from the lexicon.
 ## Provenance
 
 Derived from 112 input files; digest
-`6d72fa980d2a3f3e`. Sources: the claim, paper and
+`32f9169c79226ea5`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 

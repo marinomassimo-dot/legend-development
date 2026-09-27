@@ -4235,7 +4235,7 @@ media come indice. **Current status:** ⬜ aperto.
 
 ---
 
-## FT-083 — `PMID 36828035` (Hussain 2023) · 🔴 due partial receipt sotto DUE claim consolidated baseline
+## FT-083 — `PMID 36828035` (Hussain 2023) · ✅ lettura completa e claim corrette
 
 **Paper:** PMID 36828035 — Hussain T, Sanchez K, Crayton J, *et al.*, *WWOX P47T Partial
 Loss-Of-Function Mutation Induces Epilepsy, Progressive Neuroinflammation, and Cerebellar
@@ -4250,7 +4250,9 @@ baseline`**, e porta `Identifier: pending normalization` con un Full title che n
 nessun articolo singolo. Due claim di baseline poggiano quindi su un paper che nessuno ha finito di
 leggere e su un record la cui identità non è normalizzata. È anche, indipendentemente, l'unico
 riferimento di questa lista con fenotipo **epilettico** — quindi rilevante per il genotipo di
-riferimento e non solo per l'igiene del registro. **Priorità:** ALTA. **Current status:** ⬜ aperto.
+riferimento e non solo per l'igiene del registro. **Priorità storica:** ALTA. **Stato all'apertura:** ⬜ aperto.
+
+**Current status (2026-09-27):** ✅ RISOLTA — `FTR-20260913-36828035-03` attesta la lettura completa; `PAPER 007` ha titolo e PMID normalizzati; `BATCH_20260926_ALDAZ` ha ristretto `CLAIM 006/007` dopo audit cieco. Il paragrafo precedente descrive lo stato all'apertura. `BATCH_20260926_ALDAZ_R7` aggiunge il confine istologico in `CLAIM 041` e corregge i locator contestati. Nessun nuovo full-text read è dovuto per questo PMID.
 
 ---
 
@@ -8186,6 +8188,15 @@ raggiungibile da qui.
 16q23-24, instabilità di FRA16D), non fonti di fenotipo WWOX-DEE.
 
 **Next action:** richiederli all'operatore insieme agli altri bloccati. Unread è scritto come unread.
+
+---
+
+## FT-192 — `PMID 7644498` and `PMID 11042109` · antecedents of the WW1/PPPY interpretation
+
+**Papers:** PMID 7644498 · PMID 11042109. Identifiers and relevance are from `CC-20260913-15064722-01` §5; neither has a complete-read receipt in the current ledger.
+**Priority:** MEDIUM — read PMID 7644498 first, because the candidate identifies it as the source for the Group-I WW/PPPY framing and the peptide used in PMID 15064722; PMID 11042109 concerns the SIMPLE PPSY/NEDD4 context.
+**Current status:** OPEN — antecedents named, no conclusion imported from their unread texts.
+**Next action:** retrieve and read the primary sources before expanding CLAIM 007 beyond the tested WW1/WBP-1/SIMPLE assays.
 
 ---
 

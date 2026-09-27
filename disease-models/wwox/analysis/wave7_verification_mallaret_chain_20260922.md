@@ -178,7 +178,7 @@ what I was about to write:
 - **Finding 2 — the consequence I had not thought to draw.** The *"recoverable window"* heuristic
   (ΔΔG 0.8–3.5) classifies **all three** variants as `stability (rescuable window)` while their
   phenotypes diverge ⇒ the window has no demonstrated predictive value, and the argument
-  *"7/13 pathogenic ClinVar missense fall in the recoverable window, therefore misfolding
+  **Withdrawn heuristic, quoted for audit:** *"7/13 pathogenic ClinVar missense fall in the recoverable window, therefore misfolding
   dominance"* — **cited in `CLAIM 019` in support of the proteostatic hypothesis** — is explicitly
   demoted there.
 - **Finding 3 — what *does* discriminate.** Burial. And it resolves the P47T anomaly rather than

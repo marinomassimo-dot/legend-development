@@ -368,13 +368,26 @@
   "verbatim_locators": {
     "entries": [
       {
-        "proposition": "THE LIGAND RESULT, AND IT IS A DIRECT BINDING EXPERIMENT RATHER THAN AN INFERENCE FROM A SCREEN: the N-terminal WW domain alone, and the tandem construct, bound the PPPY peptide. This is the primary evidence for the PPxY specificity that this repository's WW1-scaffold logic descends from.",
+        "proposition": "In the tested in-vitro system, isolated WWOX WW1 and the WW1+WW2 tandem bind the WBP-1 PPPY peptide among four peptide probes. This is peptide-level evidence, not a direct test of the whole PPxY family or of P47T.",
         "snippet": "GST–WWOX-1 and -2 and GST–WWOX-1 specifically bound the peptide containing the PPPY motif",
         "surface": "body",
         "artifact": "files/fulltext/PMID15064722_LudesMeyers2004_PMCreader.txt",
         "anchor": "Results, 'WWOX contains a group I WW domain', first paragraph, on Figure 1b",
         "panel_text_relation": "text_only",
-        "abstract_snippet": "we identify the specific proline-rich ligand for WWOX as PPXY and show that the amino-terminal WW domain is responsible for this interaction"
+        "abstract_snippet": "we identify the specific proline-rich ligand for WWOX as PPXY and show that the amino-terminal WW domain is responsible for this interaction",
+        "contradicts_locator": {
+          "manifest": "disease-models/wwox/research/deepdive_manifests/PMID15064722.json",
+          "entry": 0,
+          "what_changed": "2026-09-26 blind audit found an overshoot or unsupported relation in the prior proposition; narrowed it to the measured source and recorded the verdict in disease-models/wwox/research/locator_audits/2026-09-26_B7_blind_audit.md. Prior wording began: THE LIGAND RESULT, AND IT IS A DIRECT BINDING EXPERIMENT RATHER THAN AN INFERENCE FROM A SCREEN: the N-terminal WW domai",
+          "audit": {
+            "auditors": 1,
+            "verdicts": [
+              "OVERSHOOT",
+              "CORRECTED"
+            ],
+            "method": "Independent no-history mirror agent; triple plus primary source only; verdict table in disease-models/wwox/research/locator_audits/2026-09-26_B7_blind_audit.md"
+          }
+        }
       },
       {
         "proposition": "THE PAPER'S OWN NEGATIVE ABOUT THE SECOND WW DOMAIN, stated absolutely - and its own panel does not carry it absolutely (see the Figure 1b attestation).",
@@ -404,13 +417,26 @@
         "abstract_anchoring_waived": "Residue boundaries of the GST constructs (AA 16-53 and AA 53-94) appear only in Materials and methods. The abstract names no residue and no construct, so it cannot anchor a domain-boundary fact."
       },
       {
-        "proposition": "THE LIGAND IS A NINE-RESIDUE BIOTINYLATED PEPTIDE, NOT A PROTEIN: the PPxY evidence of Figure 1b is peptide-level, and the peptide is WBP-1's.",
+        "proposition": "The WBP-1 ligand in Figure 1b is a 14-residue biotinylated synthetic peptide (SGSGGTPPPPYTVG), not a protein; the embedded WBP-1 core gtpPPPYtv is nine residues.",
         "snippet": "WBP-1 (PPPY) biotin-SGSGGTPPPPYTVG",
         "surface": "body",
         "artifact": "files/fulltext/PMID15064722_LudesMeyers2004_PMCreader.txt",
         "anchor": "Materials and methods, peptide list",
         "panel_text_relation": "text_only",
-        "abstract_anchoring_waived": "The nine-residue biotinylated peptide sequence appears only in the Materials and methods peptide list. The abstract contains no sequence of any kind."
+        "abstract_anchoring_waived": "The nine-residue biotinylated peptide sequence appears only in the Materials and methods peptide list. The abstract contains no sequence of any kind.",
+        "contradicts_locator": {
+          "manifest": "disease-models/wwox/research/deepdive_manifests/PMID15064722.json",
+          "entry": 4,
+          "what_changed": "2026-09-26 blind audit found an overshoot or unsupported relation in the prior proposition; narrowed it to the measured source and recorded the verdict in disease-models/wwox/research/locator_audits/2026-09-26_B7_blind_audit.md. Prior wording began: THE LIGAND IS A NINE-RESIDUE BIOTINYLATED PEPTIDE, NOT A PROTEIN: the PPxY evidence of Figure 1b is peptide-level, and t",
+          "audit": {
+            "auditors": 1,
+            "verdicts": [
+              "OVERSHOOT",
+              "CORRECTED"
+            ],
+            "method": "Independent no-history mirror agent; triple plus primary source only; verdict table in disease-models/wwox/research/locator_audits/2026-09-26_B7_blind_audit.md"
+          }
+        }
       },
       {
         "proposition": "THE SCREEN'S SCALE AND SUBSTRATE - and the only neural element in the entire paper is that the cDNA library was human brain, expressed in bacteria.",
@@ -422,22 +448,48 @@
         "abstract_snippet": "Using the WWOX WW domains as a probe, we screened high-density protein arrays and identified five candidate-binding partners"
       },
       {
-        "proposition": "FIVE CANDIDATES CAME OUT OF THE ARRAY, and the paper states no selection criterion for them anywhere.",
+        "proposition": "The article reports five array candidate clones. Figure 2a calls the circled spots duplicate-positive colonies, a qualitative selection criterion; it provides no quantitative cutoff.",
         "snippet": "we identified five bacterial clones that express candidate WWOX-binding proteins",
         "surface": "body",
         "artifact": "files/fulltext/PMID15064722_LudesMeyers2004_PMCreader.txt",
         "anchor": "Results, 'Identification of potential WWOX ligand proteins'",
         "panel_text_relation": "text_only",
-        "abstract_snippet": "Using the WWOX WW domains as a probe, we screened high-density protein arrays and identified five candidate-binding partners"
+        "abstract_snippet": "Using the WWOX WW domains as a probe, we screened high-density protein arrays and identified five candidate-binding partners",
+        "contradicts_locator": {
+          "manifest": "disease-models/wwox/research/deepdive_manifests/PMID15064722.json",
+          "entry": 6,
+          "what_changed": "2026-09-26 blind audit found an overshoot or unsupported relation in the prior proposition; narrowed it to the measured source and recorded the verdict in disease-models/wwox/research/locator_audits/2026-09-26_B7_blind_audit.md. Prior wording began: FIVE CANDIDATES CAME OUT OF THE ARRAY, and the paper states no selection criterion for them anywhere.",
+          "audit": {
+            "auditors": 1,
+            "verdicts": [
+              "OVERSHOOT",
+              "CORRECTED"
+            ],
+            "method": "Independent no-history mirror agent; triple plus primary source only; verdict table in disease-models/wwox/research/locator_audits/2026-09-26_B7_blind_audit.md"
+          }
+        }
       },
       {
-        "proposition": "ONE OF THE FIVE WAS NEVER IDENTIFIED AT ALL, which is a limit on the candidate list the downstream literature repeats as 'five partners'.",
+        "proposition": "At publication time, one of the five array clones had not been identified as a cellular encoded protein and lacked a recognizable motif in then-current databases.",
         "snippet": "One clone has not been identified as a cellular encoded protein and contains no recognizable protein structural motifs in current protein databases",
         "surface": "body",
         "artifact": "files/fulltext/PMID15064722_LudesMeyers2004_PMCreader.txt",
         "anchor": "Results, after the candidate enumeration",
         "panel_text_relation": "text_only",
-        "abstract_anchoring_waived": "That one of the five clones was never identified is stated only in Results. The abstract says 'five candidate-binding partners' without qualification, so quoting it here would import the very overstatement this entry records."
+        "abstract_anchoring_waived": "That one of the five clones was never identified is stated only in Results. The abstract says 'five candidate-binding partners' without qualification, so quoting it here would import the very overstatement this entry records.",
+        "contradicts_locator": {
+          "manifest": "disease-models/wwox/research/deepdive_manifests/PMID15064722.json",
+          "entry": 7,
+          "what_changed": "2026-09-26 blind audit found an overshoot or unsupported relation in the prior proposition; narrowed it to the measured source and recorded the verdict in disease-models/wwox/research/locator_audits/2026-09-26_B7_blind_audit.md. Prior wording began: ONE OF THE FIVE WAS NEVER IDENTIFIED AT ALL, which is a limit on the candidate list the downstream literature repeats as",
+          "audit": {
+            "auditors": 1,
+            "verdicts": [
+              "OVERSHOOT",
+              "CORRECTED"
+            ],
+            "method": "Independent no-history mirror agent; triple plus primary source only; verdict table in disease-models/wwox/research/locator_audits/2026-09-26_B7_blind_audit.md"
+          }
+        }
       },
       {
         "proposition": "EVERY CANDIDATE CARRIES THE MOTIF - stated as a property of the sequences, which is consistency with the screen rather than independent confirmation of binding.",
@@ -449,23 +501,49 @@
         "abstract_anchoring_waived": "The abstract does not state that every candidate carries at least one PPXY motif; that is a Results sentence introducing Table 1."
       },
       {
-        "proposition": "THE CANDIDATES CARRY A MOTIF FAMILY, NOT ONE SEQUENCE - PPAY, PPSY and PPPY across the five, with COTE1 carrying the compound run PPPYYPPEY - and only TWO of those were ever tested directly: PPPY as a synthetic peptide (Figure 1b) and PPSY inside SIMPLE (Figure 3a). So 'WWOX binds PPxY' is a family-level statement resting on two tested members.",
+        "proposition": "Table 1 names the candidate proteins. Its caption alone does not establish the listed PPAY/PPSY/PPPY sequences or which motifs were directly assayed; those require the table rows and Figs. 1b and 3a.",
         "snippet": "Identity of WWOX candidate binding partners",
         "surface": "body",
         "artifact": "files/fulltext/PMID15064722_LudesMeyers2004_PMCreader.txt",
-        "anchor": "Table 1 caption, quoted verbatim. 🔴 The table's DATA ROWS cannot be quoted from this surface: the extraction isolates every cell on its own line, so any row-spanning quote would be a stitched quote, which this repository blocks. The cell contents are therefore stated in the proposition and are readable in the same table region of the fingerprinted surface: WBP-1 PY1 PPAY / PY2 PPPY (AAD10950); SIMPLE PY1 PPSY / PY2 PPSY (BAB32547); NF-kB AP PY1 PPSY / PY2 PPAY / PY3 PPPY (BAC77360); COTE1 PY1,2,3 PPPYYPPEY / PY4 PPSY (P81408); Unknown PY1 PPAY, no accession.",
+        "anchor": "Table 1 caption and adjacent rows; the caption identifies the table, while motif sequences require the separately visible data cells. Figures 1b and 3a are the direct-assay anchors.",
         "panel_text_relation": "text_only",
         "found_or_sought": "found",
-        "abstract_anchoring_waived": "Table 1's contents - the PPAY/PPSY/PPPY family and the accessions - appear nowhere in the abstract, which names only 'PPXY' as a single ligand."
+        "abstract_anchoring_waived": "Table 1's contents - the PPAY/PPSY/PPPY family and the accessions - appear nowhere in the abstract, which names only 'PPXY' as a single ligand.",
+        "contradicts_locator": {
+          "manifest": "disease-models/wwox/research/deepdive_manifests/PMID15064722.json",
+          "entry": 9,
+          "what_changed": "2026-09-26 blind audit found an overshoot or unsupported relation in the prior proposition; narrowed it to the measured source and recorded the verdict in disease-models/wwox/research/locator_audits/2026-09-26_B7_blind_audit.md. Prior wording began: THE CANDIDATES CARRY A MOTIF FAMILY, NOT ONE SEQUENCE - PPAY, PPSY and PPPY across the five, with COTE1 carrying the com",
+          "audit": {
+            "auditors": 1,
+            "verdicts": [
+              "OVERSHOOT",
+              "CORRECTED"
+            ],
+            "method": "Independent no-history mirror agent; triple plus primary source only; verdict table in disease-models/wwox/research/locator_audits/2026-09-26_B7_blind_audit.md"
+          }
+        }
       },
       {
-        "proposition": "THE ONLY PARTNER-LEVEL PPxY DEPENDENCE DEMONSTRATED BY MUTAGENESIS, and note the word: 'significantly' in a paper that reports no statistical test anywhere.",
+        "proposition": "SIMPLE PPSY-site mutagenesis reduced interaction without a reported statistical test behind the word significant. WBP-1 PPPY was also mutagenized; SIMPLE is not the only partner-level motif test.",
         "snippet": "Mutation of the first SIMPLE PPSY motif significantly reduced the interaction",
         "surface": "body",
         "artifact": "files/fulltext/PMID15064722_LudesMeyers2004_PMCreader.txt",
         "anchor": "Results, 'WWOX WW domain binding specificity'",
         "panel_text_relation": "text_only",
-        "abstract_snippet": "a specific PPSY motif in the SIMPLE amino-acid sequence was required to interact with the amino-terminal WW domain of WWOX"
+        "abstract_snippet": "a specific PPSY motif in the SIMPLE amino-acid sequence was required to interact with the amino-terminal WW domain of WWOX",
+        "contradicts_locator": {
+          "manifest": "disease-models/wwox/research/deepdive_manifests/PMID15064722.json",
+          "entry": 10,
+          "what_changed": "2026-09-26 blind audit found an overshoot or unsupported relation in the prior proposition; narrowed it to the measured source and recorded the verdict in disease-models/wwox/research/locator_audits/2026-09-26_B7_blind_audit.md. Prior wording began: THE ONLY PARTNER-LEVEL PPxY DEPENDENCE DEMONSTRATED BY MUTAGENESIS, and note the word: 'significantly' in a paper that r",
+          "audit": {
+            "auditors": 1,
+            "verdicts": [
+              "OVERSHOOT",
+              "CORRECTED"
+            ],
+            "method": "Independent no-history mirror agent; triple plus primary source only; verdict table in disease-models/wwox/research/locator_audits/2026-09-26_B7_blind_audit.md"
+          }
+        }
       },
       {
         "proposition": "AND THE DOUBLE MUTANT ABOLISHES IT - the cleanest single result in the paper, with the load control running the wrong way, which strengthens it.",
@@ -486,13 +564,26 @@
         "abstract_anchoring_waived": "The abstract mentions MCF-7 only for immunofluorescence co-localisation, not for the GST pull-down of endogenous SIMPLE from MCF-7 extract, which is a different experiment in a different figure."
       },
       {
-        "proposition": "WW1 IS REQUIRED, NOT MERELY SUFFICIENT - the domain-requirement result that makes a WW1 missense mechanistically interpretable.",
+        "proposition": "For endogenous SIMPLE in MCF-7 lysate, a WW1-inactivating construct loses the lower SIMPLE pull-down band while a WW2-inactivating construct retains it. This demonstrates WW1 requirement for that partner and assay, not every WW1 missense or partner.",
         "snippet": "mutation of the first WW domain eliminated the interaction, while the mutated second WW domain retained binding activity",
         "surface": "body",
         "artifact": "files/fulltext/PMID15064722_LudesMeyers2004_PMCreader.txt",
         "anchor": "Results, 'WWOX WW domain binding specificity'",
         "panel_text_relation": "text_only",
-        "abstract_snippet": "a specific PPSY motif in the SIMPLE amino-acid sequence was required to interact with the amino-terminal WW domain of WWOX"
+        "abstract_snippet": "a specific PPSY motif in the SIMPLE amino-acid sequence was required to interact with the amino-terminal WW domain of WWOX",
+        "contradicts_locator": {
+          "manifest": "disease-models/wwox/research/deepdive_manifests/PMID15064722.json",
+          "entry": 13,
+          "what_changed": "2026-09-26 blind audit found an overshoot or unsupported relation in the prior proposition; narrowed it to the measured source and recorded the verdict in disease-models/wwox/research/locator_audits/2026-09-26_B7_blind_audit.md. Prior wording began: WW1 IS REQUIRED, NOT MERELY SUFFICIENT - the domain-requirement result that makes a WW1 missense mechanistically interpr",
+          "audit": {
+            "auditors": 1,
+            "verdicts": [
+              "OVERSHOOT",
+              "CORRECTED"
+            ],
+            "method": "Independent no-history mirror agent; triple plus primary source only; verdict table in disease-models/wwox/research/locator_audits/2026-09-26_B7_blind_audit.md"
+          }
+        }
       },
       {
         "proposition": "THE AUTHORS' OWN HEDGE, CARRIED VERBATIM INCLUDING ITS GRAMMATICAL SLIP: both constructs lost signal, which is why WW2 is offered as a stabiliser rather than a non-participant.",
@@ -550,17 +641,30 @@
         "abstract_anchoring_waived": "Residue-level substitutions read off a figure panel are pixel facts; the abstract names no residue and no mutant construct."
       },
       {
-        "proposition": "🔴 THE ARRAY SHOWS MORE SIGNAL THAN THE PAPER IDENTIFIES. Five duplicate pairs are circled and named, and at least two further prominent dark spots are present and circled by nobody, plus several small dark spots at the top-right corner. Combined with the absence of any stated selection criterion, 'five candidates' is a SELECTION from this autoradiograph, not its content - a limit on completeness that the downstream 'five WWOX partners' phrasing loses.",
-        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2a: a partial view of a high-density protein array autoradiograph, regular grid of faint duplicate spots. Five circled duplicate pairs are labelled COTE1 (upper left), WBP-1 (right), SIMPLE/PIG7 (centre), Unknown (left) and NF-KB AP (lower right). At least two further prominent dark spots are visible and NOT circled - one above and left of the WBP-1 circle, one below and left of the SIMPLE/PIG7 circle - together with several small dark spots in the top-right corner.",
+        "proposition": "Figure 2a circles five duplicate-positive candidate locations and also contains at least two uncircled dark spots. The uncircled spots are not proved duplicate-positive candidates; the panel alone does not establish additional validated partners or exhaustiveness.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2a: a partial view of a high-density protein array autoradiograph, regular grid of faint duplicate spots. Five circled duplicate pairs are labelled COTE1 (upper left), WBP-1 (right), SIMPLE/PIG7 (centre), Unknown (left) and NF-KB AP (lower right). At least two further prominent dark spots are visible and NOT circled - one above and left of the WBP-1 circle, one below and to the right of the SIMPLE/PIG7 circle - together with several small dark spots in the top-right corner.",
         "surface": "figure",
         "artifact": "files/figures/PMID15064722/native/img-002.png",
         "anchor": "Figure 2, panel a, native embedded raster 1601x1207 at 400 ppi, inspected at native scale and at 2x",
         "panel_text_relation": "panel_only",
         "found_or_sought": "found",
-        "abstract_anchoring_waived": "Uncircled dark spots on an autoradiograph are a pixel fact about what the panel shows beyond what the text selects. No abstract sentence can attest it, and the abstract states the selected count instead."
+        "abstract_anchoring_waived": "Uncircled dark spots on an autoradiograph are a pixel fact about what the panel shows beyond what the text selects. No abstract sentence can attest it, and the abstract states the selected count instead.",
+        "contradicts_locator": {
+          "manifest": "disease-models/wwox/research/deepdive_manifests/PMID15064722.json",
+          "entry": 19,
+          "what_changed": "2026-09-26 blind audit found an overshoot or unsupported relation in the prior proposition; narrowed it to the measured source and recorded the verdict in disease-models/wwox/research/locator_audits/2026-09-26_B7_blind_audit.md. Prior wording began: 🔴 THE ARRAY SHOWS MORE SIGNAL THAN THE PAPER IDENTIFIES. Five duplicate pairs are circled and named, and at least two fu",
+          "audit": {
+            "auditors": 1,
+            "verdicts": [
+              "OVERSHOOT",
+              "CORRECTED"
+            ],
+            "method": "Independent no-history mirror agent; triple plus primary source only; verdict table in disease-models/wwox/research/locator_audits/2026-09-26_B7_blind_audit.md"
+          }
+        }
       },
       {
-        "proposition": "THE CONFIRMATION PANEL CARRIES FOUR CANDIDATES, NOT FIVE: the unidentified clone is absent from it, so the fifth candidate rests on array signal alone and was never re-tested by far-Western. The paper's own sentence agrees - it says 'this set of four'.",
+        "proposition": "Figure 2b shows four named far-Western confirmation lanes; the unidentified fifth clone has no confirmation lane or retest reported in this article. This is absence of a reported retest, not proof that none was ever performed.",
         "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2b: two stacked panels over FOUR lanes labelled COTE1, NF-KB AP, WBP-1, SIMPLE/PIG7. Top panel (Farwestern) shows a band in every one of the four lanes; bottom panel (Western, anti-His) shows expression in all four. There is no fifth lane and no lane for the 'Unknown' clone circled in panel a.",
         "surface": "figure",
         "artifact": "files/figures/PMID15064722/native/img-002.png",
@@ -572,7 +676,20 @@
           "cell_line": "E. coli lysate, nickel-agarose purified",
           "endpoint": "radiolabelled WW-domain probe binding"
         },
-        "abstract_anchoring_waived": "That the confirmation panel carries four candidates rather than five is a property of the figure's lane count. The abstract states 'five candidate-binding partners' and so cannot anchor this."
+        "abstract_anchoring_waived": "That the confirmation panel carries four candidates rather than five is a property of the figure's lane count. The abstract states 'five candidate-binding partners' and so cannot anchor this.",
+        "contradicts_locator": {
+          "manifest": "disease-models/wwox/research/deepdive_manifests/PMID15064722.json",
+          "entry": 20,
+          "what_changed": "2026-09-26 blind audit found an overshoot or unsupported relation in the prior proposition; narrowed it to the measured source and recorded the verdict in disease-models/wwox/research/locator_audits/2026-09-26_B7_blind_audit.md. Prior wording began: THE CONFIRMATION PANEL CARRIES FOUR CANDIDATES, NOT FIVE: the unidentified clone is absent from it, so the fifth candida",
+          "audit": {
+            "auditors": 1,
+            "verdicts": [
+              "OVERSHOOT",
+              "CORRECTED"
+            ],
+            "method": "Independent no-history mirror agent; triple plus primary source only; verdict table in disease-models/wwox/research/locator_audits/2026-09-26_B7_blind_audit.md"
+          }
+        }
       },
       {
         "proposition": "THE PPxY-DEPENDENCE SERIES, LANE BY LANE - AND ONE READOUT WEAKNESS THE TEXT DOES NOT NAME. For SIMPLE the series is clean and in the claimed direction: wild type binds, first-motif mutant is much weaker, second-motif mutant is unaffected, double mutant is absent - and the double mutant's total-protein lane is visibly the HEAVIEST of the eight, so the loss is not a loading artefact. For WBP-1, however, the pulled-down band sits at the SAME height as the asterisked nonspecific GST band that runs across all eight lanes, so 'mutagenesis demonstrated it is the target' rests on intensity at a position the paper itself marks as nonspecific.",

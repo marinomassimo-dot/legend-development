@@ -43,7 +43,7 @@ edition: public
 ## 2. DISEASE-MODEL (WORKING-MODEL) VERSION
 
 ```yaml
-working_model_version: WM_v5.5
+working_model_version: WM_v5.6
 working_model_file: disease-models/wwox/registries/working_model_current.md
 narrative_view: disease-models/wwox/disease_model.md
 notes: "Canonical disease-level working model derived from public literature; disease_model.md is its narrative reader-facing view. The private individual-level record is not part of this edition."
@@ -105,8 +105,8 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20260926_ALDAZ_R6
-last_batch_commit_date: 2026-09-26
+last_batch_commit_id: BATCH_20260926_ALDAZ_R7
+last_batch_commit_date: 2026-09-27
 last_batch_commit_type: MANUAL
 ```
 
@@ -121,8 +121,8 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20260926_BATCH_ALDAZ_R6
-last_lint_date: 2026-09-26
+last_lint_id: LINT_20260927_BATCH_ALDAZ_R7
+last_lint_date: 2026-09-27
 last_lint_result: WARN
 ```
 
@@ -208,8 +208,8 @@ to make a suite green — the only way to move it is to have made the change you
 
 ```yaml
 growth_anchor_ledger: framework/state/growth_anchors.jsonl
-growth_anchor_events: 30
-growth_anchor_head: 927ad9c746e5ad3ee60e6843cfe94979d0500b76463fdda8bdade3d9b2132a95
+growth_anchor_events: 31
+growth_anchor_head: e6f825fe21be8f7af0f2b3c23fd2492d023e421f1dee6a5557a916d13d4dfb21
 ```
 
 ```bash
@@ -257,7 +257,7 @@ baseline below must equal the live count, never preserve historical padding.
 
 ```yaml
 unread_premise_baseline: 0
-unread_premise_measured_on: 2026-09-26
+unread_premise_measured_on: 2026-09-27
 ```
 
 **It is a ratchet, not a wall.** Blocking on the whole legacy backlog would only teach sessions
