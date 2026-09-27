@@ -288,6 +288,16 @@ class TheDocumentedCommandRunsOnTheRealRegistries(unittest.TestCase):
 class ALegacyTriageCodeIsNotTheCanonicalPathway(unittest.TestCase):
     """FASE-1 triage wrote "P6 — DDR / genome stability"; canonical P6 is neuroinflammation."""
 
+    def test_legacy_labels_never_gain_canonical_meaning_by_code_collision(self):
+        for code in range(1, 10):
+            for label in ("DDR / genome stability", "bone / RUNX2 axis",
+                          "immune / glia / inflammation"):
+                with self.subTest(code=code, label=label):
+                    record = f"**Primary pathway:** P{code} — {label}"
+                    self.assertEqual(graph.pathway_matches(record), [])
+                    mixed = record + "\n**Secondary pathway:** P5 — metabolism"
+                    self.assertEqual(graph.pathway_matches(mixed), ["P5"])
+
     def test_a_ddr_record_is_not_filed_under_neuroinflammation(self):
         self.assertEqual(graph.pathway_matches("**Primary pathway:** P6 — DDR / genome stability"), [])
 

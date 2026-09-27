@@ -5371,7 +5371,7 @@ Serves to:
 **Genotype/model tag:** cell lines, SCID xenograft and human tumour series; no neural material and no WWOX disease variant
 **Transferability:** T3
 **clinical relevance:** LOW — unchanged: a breast-oncology axis in non-neural systems; its value to this corpus is mechanistic, not clinical
-**Claim links:** none — held for the claim batch
+**Claim links:** 026 — VOPP1 interaction limb only
 **Working Model impact:** none in this batch — the candidate's `CLAIM 026` sentence is held for the claim batch
 **Report mentions:** corpus alignment · `CC-20260914-30285739-01` · `BATCH_20260926_ALDAZ_R2`
 **Next action:** none — read and registered

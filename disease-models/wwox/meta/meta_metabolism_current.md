@@ -1,7 +1,7 @@
 # META — Metabolism / HIF1A / AMPK
 **Version:** v1.1
 **Status:** emerging → consolidating (expanded)
-**Last update:** 2026-04-17 — Commit 181–220: metabolic branch expanded beyond Warburg-only; WWOX/HIF1A ratio as systems-level state marker; trafficking–metabolism coupling node added
+**Last update:** 2026-09-26 — `BATCH_20260926_ALDAZ_R4`: CLAIM 026 coupling reclassified as an untested hypothesis; interactome co-association and pathway annotation retained. Prev: 2026-04-17 — Commit 181–220: metabolic branch expanded beyond Warburg-only; WWOX/HIF1A ratio as systems-level state marker; trafficking–metabolism hypothesis added
 
 ---
 
@@ -145,7 +145,7 @@ The metabolism branch should no longer be summarized as a narrow WWOX–HIF1A–
 
 - the **WWOX/HIF1A ratio** functions as a systems-level indicator of maladaptive state rather than a simple two-gene relationship (paper 191; CLAIM 025);
 - low WWOX / high HIF1A states are associated not only with glycolytic activation but also with inflammatory and Wnt-related components;
-- WWOX-related metabolic dysregulation may involve a **trafficking–metabolism interface**, supported by interactome data linking WWOX to ER/Golgi/endosomal/lysosomal systems and catabolic pathways converging on **Acetyl-CoA** (paper 182; CLAIM 026).
+- **Untested hypothesis (`CLAIM 026`):** WWOX may connect trafficking and metabolism. One HEK293T prey list shows co-association with trafficking-annotated proteins and enrichment for catabolic pathways; Acetyl-CoA convergence is map topology, with no trafficking assay or metabolic flux measurement (`PAPER 032`). An independent non-neural study supports the VOPP1 interaction limb only (`PAPER 103`).
 
 ### Practical interpretation
 This branch should be read as:

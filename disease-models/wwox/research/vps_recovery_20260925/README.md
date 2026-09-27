@@ -1,10 +1,17 @@
 # VPS recovery — 2026-09-25
 
-> 🔴 **DO NOT DELETE `backup/vps-main-2026-09-25` OR `~/legend-vps-backup-2026-09-25.bundle`
-> UNTIL THE HELD SCIENCE BATCH (§7) IS DECIDED AND CLOSED.** Today they are the only copy of every
-> file listed in §5 as `DISPOSITIONED` — above all the VPS batch reports and the claim, ledger and
-> working-model text §7 would re-derive.
+> 🔴 **DO NOT DELETE `backup/vps-main-2026-09-25` OR `~/legend-vps-backup-2026-09-25.bundle`.**
+> They still hold unique evidence and historical batch reports listed in §5 as `DISPOSITIONED`.
 > Neither is published, and neither may be: both are local to the VPS.
+
+**Current status (2026-09-27).** §7 is the 2026-09-25 recovery snapshot, not an active request
+for an operator decision. G4.3 reading artefacts, receipts and queue entries are recovered;
+`fulltext_receipts.py verify` confirms 236 anchored events. The literature-status migration
+landed in `BATCH_20260926_LITVOCAB`. Aldaz R1–R6 now cover registration, assessments, discovery
+ledger corrections and the bounded CLAIM 026/029/032 updates through `WM_v5.5`; CLAIM 006/007
+were narrowed in `BATCH_20260926_ALDAZ`. R7 and the remaining partially propagated candidates
+are separate scientific work, subject to `BATCH_COMMIT` and source verification. The 75 withdrawn
+VPS task records remain dispositioned, not restored as canonical tasks.
 
 **What this note is.** An index of work done on the VPS checkout between 2026-09-12 and
 2026-09-17 that never reached `main`. That work lived on a `main` that had diverged from
@@ -33,7 +40,7 @@ current state, in recovery group G4 (a separate session).
 | G4.2 | receipt validator: a null parent admitted for a strictly earlier independent reading | `2690265` |
 | G4.3 | the readings as one step: dossiers, manifests, queue entries (renumbered, §6), 29 receipts by rechain (207 → 236), the 37 VPS candidates re-queued, and the seven notes the receipts declare as outputs | `af09f7a`, `55803b5` |
 | G4.4 part 1 | `BATCH_20260926_ALDAZ_R1`: the 25 readings registered in the paper registry, nothing propagated (PAPER 098–115) | `a364dab` |
-| G4.4 science | **HELD for the operator** — §7 | — |
+| G4.4 science | **Historical hold superseded** by the Aldaz batches; §7 records the original decision point, with remaining candidate work still open | `BATCH_20260926_ALDAZ` through `BATCH_20260926_ALDAZ_R6` |
 | G4.5–G4.6 | inventory accounting (every row RECOVERED or DISPOSITIONED); the retrieval manifest's +85-line append | this note's commit |
 
 ## 1 · Identifiers that mean something else here
@@ -196,7 +203,11 @@ All 17 queue entries the VPS created collide with different entries on `main` (w
 
 Also applied in G4.3: the VPS updates to six existing entries `main` never changed (`FT-010`, `FT-038`, `FT-045`, `FT-057`, `FT-079`, `FT-085`); `FT-096` was left as it is, both sides having added the same separator. In the recovered live files, `PAPER 093`–`096`, VPS `WM_v4.x` and VPS batch ids are annotated in place `(VPS numbering, PMID …)` / `(VPS batch, never on main)`, and inline paths or links to records kept in the backup became `git show 06ee25a:<path>` commands.
 
-## 7 · HELD for the operator — the science the VPS batches propagated
+## 7 · Historical hold — the science the VPS batches proposed
+
+> **Status 2026-09-27:** The hold below describes what was undecided on 2026-09-25.
+> The current disposition is stated at the top of this file. Do not re-open its operator
+> stop from the historical wording below; assess remaining candidates against current canon.
 
 `BATCH_20260926_ALDAZ` (the re-derivation of `BATCH_20260913_001`–`004`, `BATCH_20260914_005`–`008` and `BATCH_20260915_009` on the current state) was **not run**. Two STOP rules of the recovery mandate fire, each on its own:
 

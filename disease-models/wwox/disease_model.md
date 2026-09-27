@@ -2,6 +2,8 @@
 
 > **Public, de-identified disease-level model.** Derived from the LEGEND working model with the individual clinical record removed (clinical presentation, treatment regimen, and case-specific surveillance are not included). What remains is the disease-level mechanistic synthesis, the genotype-interpretation rules, the literature-anchored data, and the decision-logic framework — all from public literature. **Not medical advice.** Specific variants appear only as decoupled public worked examples — a destabilizing SDR missense on one side, a canonical splice-acceptor variant on the other — never assembled into one person's genotype.
 
+**Current working model:** WM_v5.5 (`BATCH_20260926_ALDAZ_R6`).
+
 **Model version lineage:** v3.0 (2026-07-14) — a MAJOR baseline reversal (see the repair changelog at the end) illustrating the epistemic discipline in action.
 
 ---
@@ -26,13 +28,13 @@
 
 **Domain cooperativity.** WW-domain biology depends on WW1–WW2 tandem cooperativity; variant interpretation should consider tandem stability, partner-recognition geometry, and residual interaction architecture — not isolated single-domain logic. *(CLAIM 024 / paper 204.)*
 
-**Metabolic branch.** Beyond a simple HIF1A/Warburg framing, the WWOX/HIF1A axis appears to be a broader state indicator linked to glycolysis, inflammatory tone, Wnt-related signaling, and possibly state-transition biology; interactome data suggest a trafficking–metabolism interface (ER/Golgi/endosomal/lysosomal) with Acetyl-CoA-centered catabolic convergence. *(CLAIM 025 / paper 191; CLAIM 026 / Hussain 2018.)*
+**Metabolic branch.** Beyond a simple HIF1A/Warburg framing, the WWOX/HIF1A axis appears to be a broader state indicator linked to glycolysis, inflammatory tone, Wnt-related signaling, and possibly state-transition biology; one HEK293T interactome co-purifies with trafficking proteins and is annotation-enriched for catabolic pathways. Acetyl-CoA convergence is a pathway-map reading; functional trafficking–metabolism coupling remains untested. An independent non-neural paper supports the VOPP1 interaction limb. *(CLAIM 025 / paper 191; CLAIM 026 / Hussain 2018 and Bonin 2018.)*
 
 > **Integrity exclusion (a worked example of source-integrity discipline):** the HGF/Met–TAZ–WWOX bone-metastasis line does **not** count as independent corroboration — the primary (PMID 28151481) was retracted in 2022 for western-blot control manipulation/reuse, and a review (PMID 28045433) reuses its data/dependencies. The WWOX/HIF1α axis stands only on the independent sources. No baseline claim depended on the invalidated line.
 
 **Research-facing (not yet core).** HYAL-2 / HA / SMAD4 / WWOX — a high-value ECM/membrane-to-nucleus and injury-response branch, retained but not promoted. *(CLAIM 027 / paper 214.)*
 
-**Cross-pathway interpretive principle.** WWOX output is strongly partner- and context-dependent. Expression level alone is insufficient to infer uniform functional benefit — **"more WWOX = better" is not a safe default** across contexts. *(CLAIM 028 / papers 213, 218, 206, 214.)* WWOX may also contribute to ATM-linked DNA-damage-response competence and genome-stability maintenance — a plausible structural-vulnerability branch. *(CLAIM 029 / Abu-Odeh 2014.)*
+**Cross-pathway interpretive principle.** WWOX output is strongly partner- and context-dependent. Expression level alone is insufficient to infer uniform functional benefit — **"more WWOX = better" is not a safe default** across contexts. *(CLAIM 028 / papers 213, 218, 206, 214.)* WWOX may also contribute to ATM-linked DNA-damage-response competence and genome-stability maintenance — a plausible structural-vulnerability branch. *(CLAIM 029 / Abu-Odeh 2014, PAPER 027; murine B-cell repair and tumour observations in PAPER 110/115 remain context-limited and do not transfer to CNS.)*
 
 ---
 
@@ -86,7 +88,7 @@
 - **Safety caveat:** DRG / peripheral-organ dose-limiting toxicity at high systemic AAV dose → favors targeted/controlled delivery (a pediatric regulatory concern).
 - **Epigenetic option (future / extension):** dCas9/CRISPRa upregulation of endogenous WWOX for **hypomorphic** states — potentially relevant to residual-function missense alleles; not actionable now.
 - **First-in-human (background/observation):** a WWOX gene therapy reported given to an infant with WWOX epilepsy (ICV) — the strongest external signal for the GT axis; awaiting peer-reviewed clinical data. NOT a datum.
-- Partial restoration may be sufficient (genotype–phenotype suggests haploinsufficiency is tolerated) — which **lowers the therapeutic threshold**.
+- Partial restoration remains a testable possibility for measured endpoints. The dose, corrected-cell fraction and treatment time needed for neurological rescue are unknown (CLAIM 032).
 
 ---
 
@@ -104,7 +106,7 @@ Full canonical status lives in [`registries/claim_registry_current.md`](registri
 - 028 WWOX output partner/context-dependent; expression ≠ uniform benefit · INFERENZA · flagged for review
 - 030 Severity tracks residual **function**, not protein abundance · in observation
 - 031 It is a **DEE, not an EE**: seizure control does not save development · in observation
-- 032 Haploinsufficiency is tolerated: the therapeutic threshold is well below full restoration · in observation
+- 032 One WWOX copy preserves some observed endpoints; spontaneous tumour excess and absent CNS dose data leave the neurological rescue threshold open · in observation
 
 ---
 

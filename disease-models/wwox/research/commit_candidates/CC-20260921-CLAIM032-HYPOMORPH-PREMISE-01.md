@@ -173,3 +173,9 @@ animal is a usable `TX-002`/`TX-003` platform.
 
 ⚠️ Unchanged and still required by this candidate independently: the *"vitale"* / **"viable to 2
 years"** reading must not propagate while the primary reports a **significantly shorter lifespan**.
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260926_ALDAZ_R6` (2026-09-26, ACTOR_ID `orchestrator`), append-only
+
+**Status:** SUPERSEDED IN PART: its unread-primary premise is false after FTR-20260914-17823927-01 was recovered into the 236-event ledger. Its genotype-class and CNS threshold cautions were retained.

@@ -15,7 +15,7 @@ Register of research candidates that emerged from the bootstrap. NOT a list of c
 **Status:** high-interest
 **Linked research lines:** RL-GABA-001 / RL-GABA-002
 **Rationale:** clarify whether the GABA paradox depends on persistence of a depolarizing state
-**Priority:** HIGH
+**Priority:** MEDIUM
 **Clinical status:** research only
 **Next action:** look for WWOX-specific papers or bridge literature with reverse validation
 
@@ -61,10 +61,10 @@ Register of research candidates that emerged from the bootstrap. NOT a list of c
 
 ---
 
-## RC-007 — WWOX as trafficking–metabolism coupling node
-**Status:** high-interest
-**Linked research lines:** RL-003 / new endomembrane axis
-**Rationale:** interactome data suggest that WWOX may connect endomembrane transport systems (ER/Golgi/endosomal/lysosomal) with central catabolic pathways converging on Acetyl-CoA; this branch could explain aspects of synaptic, myelin or glial dysfunction not covered by HIF1A signaling alone
+## RC-007 — Test whether WWOX couples trafficking and metabolism
+**Status:** exploratory hypothesis
+**Linked research lines:** RL-003 / RL-ARCH-001
+**Rationale:** PAPER 032 provides trafficking-protein co-association and pathway annotation in HEK293T, while PAPER 103 independently supports one VOPP1 interaction. No functional coupling, Acetyl-CoA flux or neural consequence has been measured; test these before assigning mechanistic weight.
 **Priority:** HIGH
 **Clinical status:** research only
 **Next action:** look for studies on WWOX and organelles / trafficking / metabolic compartmentalization in neurons or glia
