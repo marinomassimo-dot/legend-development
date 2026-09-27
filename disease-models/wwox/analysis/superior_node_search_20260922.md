@@ -321,9 +321,20 @@ once, and the filters are close to mutually exclusive in a field this size:
    an EE**; `N-15` calls counting seizure control as developmental protection *"the most consequential negative
    in the whole portfolio."* This filter removes every symptomatic axis, including the one genuinely
    genotype-specific in-vivo result the field has (ethosuximide).
-2. **It must have a window that is still open after diagnosis** — `DL-MECH-011` puts the gene-therapy window at
-   **P1–P5 in the mouse**; `DL-MECH-031` calls it neonatal; the radial-glia abnormality is **not corrected even
-   by WWOX restitution**. This filter removes everything that acts on neurogenesis or corticogenesis.
+2. **It must have a window that is still open after diagnosis** — 🔵 **restated 2026-09-27
+   (`CC-20260922-POSTDIAGNOSIS-WINDOW-01` §1, Mirror finding F5 on `BATCH_20260927_001`):** efficacy is
+   **demonstrated P0–P5** in the mouse; the **upper bound is unknown and unmeasurable in this model**, which
+   dies at 3–4 weeks — so this filter **is not to be used to remove candidates until an upper bound exists**.
+   The primary says so of itself: the inability to assess later intervention *"likely reflects a combination of
+   **model-specific biological constraints and technical limitations, rather than a definitive boundary for
+   therapeutic responsiveness**"* (`fulltext_dossiers/PMID42422765_partial_locators.md`; `D-31` — the set of
+   ages an experiment tested is not the window it measured). See the append-only rectification at
+   `discovery_ledger_current.md` `DL-MECH-011`. The earlier wording of this filter — *"`DL-MECH-011` puts the
+   gene-therapy window at P1–P5 in the mouse"* — is what §1 of that candidate corrects, and the pruning done
+   in this dated artefact under the old wording is **not re-derived here**. `DL-MECH-031` calls it neonatal; the
+   radial-glia abnormality is **not corrected even by WWOX restitution**. Read as restated, this filter no longer
+   removes everything that acts on neurogenesis or corticogenesis; it ranks such candidates lower for an
+   unmeasured upper bound.
 3. **There must be an intervention arm somewhere in a WWOX-deficient system** — and the downstream census
    measured that there are exactly **four positive arms in the entire literature**, with `Wwox AND (animal
    model) AND (nine named drugs)` returning **3 PubMed records total**, all already held.

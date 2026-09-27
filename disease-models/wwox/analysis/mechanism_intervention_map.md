@@ -624,7 +624,7 @@ each carries what would **revive** it — nothing dies silently.
 ### N-01 — mTOR inhibitors (rapamycin / everolimus) → **`INSUFFICIENT` — mai misurato a livello proteico in alcun sistema WWOX**
 **Failure mode:** *`INSUFFICIENT` — mai misurato a livello proteico in alcun sistema WWOX.* The reflex move in genetic DEE, imported from TSC.
 The only WWOX-specific measurement touching this axis shows **mTOR/EIF4EBP1 DOWN and autophagy DOWN**
-in WWOX-KO cerebral organoids. An mTOR inhibitor pushes the **same way as the lesion**.
+in WWOX-KO cerebral organoids. An mTOR inhibitor would push the **same direction as the only directional datum** — a **non-locatored transcriptomic signal at n = 2/4**, **not a measurement of mTORC1 signalling**.
 ⚠️ **Honest weight of the negative:** this rests on one transcriptomic dataset (`n=2` WT vs `n=4` KO,
 EV selection at raw `P<0.01`), so it is a **weak measurement pointing the wrong way**, not a
 demonstration of harm. The correct verdict is therefore *no positive rationale exists, and the only
