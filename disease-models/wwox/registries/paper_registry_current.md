@@ -274,7 +274,7 @@ The canonical P1–P7 codes follow the WWOX working model and claim registry. **
 **clinical relevance:** HIGH
 **Claim links:** 011
 **Role:** P7 design-principle paper
-**Note:** AAV9-hSynI-hWWOX ICV neonatale; rescue dose-dependent durable su survival, ECoG/SWD, myelination, gliosis; neuron-specific targeting; full KO ≠ the reference genotype ma design principles sono trasferibili alla logica di trial-readiness. — Versione published (peer-reviewed, OMTA vol 34) del preprint bioRxiv; riferimento preprint conservato per tracciabilità. Design-principle quantitativi dai supplementari S1–S8 (BATCH_20260703 discovery): promotore SynI neuronale ottimale vs MBP/CMV; WPRE aumenta WWOX 3–16.7×/regione (trade-off dose↔sicurezza; la review PAPER 029 lo sintetizza come "WPRE removed to avoid overexpression"); espressione durevole fino a P300; neuron-specific (fegato negativo). Gap traslazionale per il genotipo di riferimento: nessun dato post-onset/età avanzata. Main-text OMTA full da recuperare (NS-019).
+**Note:** AAV9-hSynI-hWWOX ICV neonatale; rescue dose-dependent durable su survival, ECoG/SWD, myelination, gliosis; neuron-specific targeting; full KO ≠ the reference genotype ma design principles sono trasferibili alla logica di trial-readiness. — Versione published (peer-reviewed, OMTA vol 34) del preprint bioRxiv; riferimento preprint conservato per tracciabilità. Design-principle quantitativi dai supplementari S1–S8 (BATCH_20260703 discovery): promotore SynI neuronale ottimale vs MBP/CMV; WPRE aumenta WWOX 3–16.7×/regione (trade-off dose↔sicurezza; la review PAPER 029 lo sintetizza come "WPRE removed to avoid overexpression"); espressione durevole fino a P300; neuron-specific (fegato negativo). Gap traslazionale per il genotipo di riferimento: nessun dato post-onset/età avanzata. Main-text OMTA full da recuperare (NS-019). ⚠️ `UPSTREAM_CITATION_FAILURE` (`CC-20260826-UPSTREAM-CITATION-FAILURE-01`, propagated `BATCH_20260927_001`): this paper's framing of its Figure 7 as confirmatory rests on reference 43 = [[paper_registry_current#PAPER 063]], a review with no new cohort, so its ECoG dataset is plausibly the first of its kind in the null rather than a replication.
 🔴 **Corretto 2026-08-10 (`CC-20260810-42422765-S8`, BATCH_20260810_002) — la scorciatoia «finestra terapeutica P1–P5» è stata rimossa perché la Figura S8 non la sostiene.** Al suo posto, ciò che S8 mostra davvero: **efficacia dimostrata a più dosi postnatali precoci, P5 incluso; l'intervallo è campionato in modo incompleto per ciascun endpoint e il limite superiore oltre P5 non è stato testato.** In dettaglio, e ogni punto è una precisazione che la scorciatoia cancellava: (1) **nessuna evidenza P0 va attribuita a S8** — S8 non contiene alcun gruppo trattato a P0; (2) la sopravvivenza a **P40** include P1/P2/P3/P5 ma **non P4**; la sopravvivenza a **P300** include **solo P1 e P5**; (3) peso e glicemia a **P14** includono P1–P5, ma i test disegnati sono WT-vs-KO e WT-vs-P5 — **non esiste un confronto trattato-vs-KO**, e `ns` non è equivalenza; (4) i pannelli istologici/molecolari **E–I testano solo P5**; MBP è rappresentativa e non quantificata, e le statistiche GFAP confrontano WT-vs-KO e WT-vs-P5, non KO-vs-P5. *«P1–P5» leggeva come un intervallo continuo e validato ciò che è un insieme di punti campionati a maglie larghe, con il confronto che conta — trattato contro non trattato — mai disegnato.*
 🔴 **Completamento 2026-08-15 (`CC-20260814-42422765-01`, BATCH_20260815_001).** Articolo e supplementi S1–S8 sono ora letti integralmente. L'espressione a lungo termine resta regionalmente disomogenea e sovrafisiologica nei sopravvissuti; P300 è una coorte survivor-selected e non prova sostituzione fisiologica uniforme. In S2 le etichette del grafico indicano `n=5`, la didascalia `n=4`: entrambe le numerosità sono preservate come discrepanza.
 
@@ -418,7 +418,7 @@ The canonical P1–P7 codes follow the WWOX working model and claim registry. **
 **Journal/source:** *Epilepsia*
 **Identifier:** PMID 36779245 / PMC PMC10952634 / DOI 10.1111/epi.17542
 **Status:** filtered_in
-**Evidence depth:** complete_fulltext_read — `FTR-20260804-36779245-02`; manifest `deepdive_manifests/PMID36779245.json` (5 locators, schema v2, strict PASS, 3 declared gaps); declaration reconciled from the ledger by `CC-20260920-REGISTRY-LEDGER-DEPTH-01` (BATCH_20260920_001) — the reading is the receipt's, not this batch's
+**Evidence depth:** complete_fulltext_read — `FTR-20260804-36779245-02`; manifest `deepdive_manifests/PMID36779245.json` (20 locators, schema v2, strict PASS, 3 declared gaps); declaration reconciled from the ledger by `CC-20260920-REGISTRY-LEDGER-DEPTH-01` (BATCH_20260920_001) — the reading is the receipt's, not this batch's
 **Primary pathway:** clinical spectrum / natural history / survival analysis
 **Model/species:** human — 13 pazienti, 12 famiglie, 5 centri
 **Genotype/model:** biallelic WWOX variants — N/N / N/M / M/M
@@ -441,7 +441,7 @@ The canonical P1–P7 codes follow the WWOX working model and claim registry. **
 **Journal/source:** *Acta Neuropathologica Communications*
 **Identifier:** PMID 32000863 / DOI 10.1186/s40478-020-0883-3
 **Status:** processed
-**Evidence depth:** complete_fulltext_read — `FTR-20260804-32000863-01`; manifest `deepdive_manifests/PMID32000863.json` (5 locators, schema v2, strict PASS, 3 declared gaps); declaration reconciled from the ledger by `CC-20260920-REGISTRY-LEDGER-DEPTH-01` (BATCH_20260920_001) — the reading is the receipt's, not this batch's
+**Evidence depth:** complete_fulltext_read — `FTR-20260804-32000863-01`; manifest `deepdive_manifests/PMID32000863.json` (25 locators, schema v2, strict PASS, 3 declared gaps); declaration reconciled from the ledger by `CC-20260920-REGISTRY-LEDGER-DEPTH-01` (BATCH_20260920_001) — the reading is the receipt's, not this batch's
 **Primary pathway:** P3 — prenatal structure / GSK3β
 **Secondary pathway:** P4 / P1
 **Model/species:** mouse
@@ -450,7 +450,7 @@ The canonical P1–P7 codes follow the WWOX working model and claim registry. **
 **clinical relevance:** HIGH
 **Claim links:** 015, 016
 **Role:** structural / GSK3β anchor paper
-**Note:** severe model; supports prenatal malformation axis and GSK3β as research node; full text still prioritized
+**Note:** severe model; supports prenatal malformation axis and GSK3β as research node; full text still prioritized. ⚠️ `UPSTREAM_CITATION_FAILURE` (`CC-20260826-UPSTREAM-CITATION-FAILURE-01`, propagated `BATCH_20260927_001`): this is the only primary source for spontaneous behavioural seizures in a Wwox-null mouse, and its own observation is opportunistic husbandry plus one video — a floor, not a rate. It carries more weight than its citation count suggests and less certainty than its unanimity suggests.
 
 ---
 
@@ -463,7 +463,7 @@ The canonical P1–P7 codes follow the WWOX working model and claim registry. **
 **Journal/source:** *Frontiers in Neuroscience*
 **Identifier:** PMID 32581702 / DOI 10.3389/fnins.2020.00644
 **Status:** processed
-**Evidence depth:** complete_fulltext_read — `FTR-20260810-32581702-01`; manifest `deepdive_manifests/PMID32581702.json` (10 locators, schema v2, strict PASS, 0 gaps); declaration reconciled from the ledger by `CC-20260920-REGISTRY-LEDGER-DEPTH-01` (BATCH_20260920_001) — the reading is the receipt's, not this batch's
+**Evidence depth:** complete_fulltext_read — `FTR-20260810-32581702-01`; manifest `deepdive_manifests/PMID32581702.json` (21 locators, schema v2, strict PASS, 0 gaps); declaration reconciled from the ledger by `CC-20260920-REGISTRY-LEDGER-DEPTH-01` (BATCH_20260920_001) — the reading is the receipt's, not this batch's
 **Primary pathway:** P3 — prenatal structure / migration
 **Secondary pathway:** P4
 **Model/species:** human fetal tissue + rat + hNPC
@@ -487,7 +487,7 @@ The canonical P1–P7 codes follow the WWOX working model and claim registry. **
 **Journal/source:** *International Journal of Molecular Sciences*
 **Identifier:** PMID 31340538 / DOI 10.3390/ijms20143596
 **Status:** processed
-**Evidence depth:** complete_fulltext_read — `FTR-20260806-31340538-01`; manifest `deepdive_manifests/PMID31340538.json` (4 locators, schema v2, strict PASS, 0 gaps); declaration reconciled from the ledger by `CC-20260920-REGISTRY-LEDGER-DEPTH-01` (BATCH_20260920_001) — the reading is the receipt's, not this batch's
+**Evidence depth:** complete_fulltext_read — `FTR-20260806-31340538-01`; manifest `deepdive_manifests/PMID31340538.json` (11 locators, schema v2, strict PASS, 0 gaps); declaration reconciled from the ledger by `CC-20260920-REGISTRY-LEDGER-DEPTH-01` (BATCH_20260920_001) — the reading is the receipt's, not this batch's
 **Primary pathway:** P4 — myelination / white matter
 **Secondary pathway:** P3
 **Model/species:** rat
@@ -551,7 +551,7 @@ The canonical P1–P7 codes follow the WWOX working model and claim registry. **
 **Journal/source:** *Cell Death and Differentiation*
 **Identifier:** PMID 25012504 / DOI 10.1038/cdd.2014.95
 **Status:** processed
-**Evidence depth:** complete_fulltext_read — `FTR-20260814-25012504-01`; manifest `deepdive_manifests/PMID25012504.json` (5 locators, schema v2, strict PASS, 0 gaps); declaration reconciled from the ledger by `CC-20260920-REGISTRY-LEDGER-DEPTH-01` (BATCH_20260920_001) — the reading is the receipt's, not this batch's
+**Evidence depth:** complete_fulltext_read — `FTR-20260814-25012504-01`; manifest `deepdive_manifests/PMID25012504.json` (22 locators, schema v2, strict PASS, 0 gaps); declaration reconciled from the ledger by `CC-20260920-REGISTRY-LEDGER-DEPTH-01` (BATCH_20260920_001) — the reading is the receipt's, not this batch's
 **Primary pathway:** P5 — metabolism / HIF1A
 **Secondary pathway:** none
 **Model/species:** cell / animal metabolic models
@@ -2567,7 +2567,7 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Identifier:** PMID 18487609 / PMC2490770 / DOI 10.1074/jbc.M800855200
 **Tier (FASE 1):** B
 **Status:** read — corpus placeholder, not promoted (`CC-20260914-PLACEHOLDER-READS-01`, `BATCH_20260926_ALDAZ_R2`); see `Evidence depth`
-**Evidence depth:** complete_fulltext_read — `FTR-20260811-18487609-01`; manifest `deepdive_manifests/PMID18487609.json` (5 locators, schema v2, strict PASS, 0 gaps); declaration reconciled from the ledger by `CC-20260920-REGISTRY-LEDGER-DEPTH-01` (BATCH_20260920_001) — the reading is the receipt's, not this batch's
+**Evidence depth:** complete_fulltext_read — `FTR-20260811-18487609-01`; manifest `deepdive_manifests/PMID18487609.json` (23 locators, schema v2, strict PASS, 0 gaps); declaration reconciled from the ledger by `CC-20260920-REGISTRY-LEDGER-DEPTH-01` (BATCH_20260920_001) — the reading is the receipt's, not this batch's
 **LIT link:** LIT-0222
 **Primary pathway:** P5 — metabolism / mitochondria / redox
 **Model/species:** mouse
@@ -3556,7 +3556,7 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Identifier:** PMID 24550385 / PMC3979411 / DOI 10.1074/jbc.M113.506790
 **Tier (FASE 1):** C
 **Status:** read — corpus placeholder, not promoted (`CC-20260914-PLACEHOLDER-READS-01`, `BATCH_20260926_ALDAZ_R2`); see `Evidence depth`
-**Evidence depth:** complete_fulltext_read — `FTR-20260810-24550385-02`; manifest `deepdive_manifests/PMID24550385.json` (7 locators, schema v2, strict PASS, 0 gaps); declaration reconciled from the ledger by `CC-20260920-REGISTRY-LEDGER-DEPTH-01` (BATCH_20260920_001) — the reading is the receipt's, not this batch's
+**Evidence depth:** complete_fulltext_read — `FTR-20260810-24550385-02`; manifest `deepdive_manifests/PMID24550385.json` (20 locators, schema v2, strict PASS, 0 gaps); declaration reconciled from the ledger by `CC-20260920-REGISTRY-LEDGER-DEPTH-01` (BATCH_20260920_001) — the reading is the receipt's, not this batch's
 **LIT link:** LIT-0272
 **Primary pathway:** P5 — metabolism / mitochondria / redox
 **Model/species:** not assessed in triage
@@ -5047,7 +5047,7 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Identifier:** PMID 22634283 / PMC3412936 / DOI 10.1016/j.jmb.2012.05.015
 **Tier (FASE 1):** C
 **Status:** read — corpus placeholder, not promoted (`CC-20260914-PLACEHOLDER-READS-01`, `BATCH_20260926_ALDAZ_R2`); see `Evidence depth`
-**Evidence depth:** complete_fulltext_read — `FTR-20260811-22634283-02`; manifest `deepdive_manifests/PMID22634283.json` (5 locators, schema v2, strict PASS, 0 gaps); declaration reconciled from the ledger by `CC-20260920-REGISTRY-LEDGER-DEPTH-01` (BATCH_20260920_001) — the reading is the receipt's, not this batch's
+**Evidence depth:** complete_fulltext_read — `FTR-20260811-22634283-02`; manifest `deepdive_manifests/PMID22634283.json` (14 locators, schema v2, strict PASS, 0 gaps); declaration reconciled from the ledger by `CC-20260920-REGISTRY-LEDGER-DEPTH-01` (BATCH_20260920_001) — the reading is the receipt's, not this batch's
 **LIT link:** LIT-0346
 **Primary pathway:** oncology / tumor suppressor biology
 **Model/species:** not assessed in triage
@@ -6078,7 +6078,7 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Identifier:** PMID 31428585 / PMC6688159 / DOI 10.3389/fonc.2019.00719
 **Tier (FASE 1):** C
 **Status:** read — corpus placeholder, not promoted (`CC-20260914-PLACEHOLDER-READS-01`, `BATCH_20260926_ALDAZ_R2`); see `Evidence depth`
-**Evidence depth:** complete_fulltext_read — `FTR-20260909-31428585-02`; manifest `deepdive_manifests/PMID31428585.json` (7 locators, schema v2, strict PASS, 0 gaps); declaration reconciled from the ledger by `CC-20260920-REGISTRY-LEDGER-DEPTH-01` (BATCH_20260920_001) — the reading is the receipt's, not this batch's
+**Evidence depth:** complete_fulltext_read — `FTR-20260909-31428585-02`; manifest `deepdive_manifests/PMID31428585.json` (20 locators, schema v2, strict PASS, 0 gaps); declaration reconciled from the ledger by `CC-20260920-REGISTRY-LEDGER-DEPTH-01` (BATCH_20260920_001) — the reading is the receipt's, not this batch's
 **LIT link:** LIT-0397
 **Primary pathway:** P5 — metabolism / mitochondria / redox
 **Model/species:** not assessed in triage
@@ -6206,7 +6206,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Record provenance:** 🔴 **POST-HARVEST, AND THE IDENTIFIER SAYS SO.** This paper was published after the 2026-08-06 corpus harvest, so it holds no corpus-paper number and has no `LIT-0###` entry. `CORPUS P401` would claim a position in a harvest it was never in, and the 31 gaps inside 182–400 are other papers' numbers, so the record is keyed on the identity that is primary, stable and already how every receipt and manifest names a study: the PMID. One convention extended by one form (`growth_anchors.RECORD_PATTERNS`), no second numbering, no allocator, no migration — every historical `CORPUS P###` and `CORPUS-STUB-###` is untouched. Created by `CC-20260920-EIGHT-RECORD-CLASSIFICATION-01` (BATCH_20260920_003).
 **Tier (FASE 1):** not applicable — the FASE 1 triage covered corpus papers 221–400 only, and this record has no corpus-paper number at all
 **Status:** read — post-harvest corpus record, classified CORPUS by the operator on 2026-09-20
-**Evidence depth:** complete_fulltext_read — `FTR-20260811-42082822-01`; manifest `deepdive_manifests/PMID42082822.json` (5 locators, schema v2, strict PASS, 0 gaps)
+**Evidence depth:** complete_fulltext_read — `FTR-20260811-42082822-01`; manifest `deepdive_manifests/PMID42082822.json` (9 locators, schema v2, strict PASS, 0 gaps)
 **Primary pathway:** none on-axis — hypospadias and 46,XY disorders of sexual development
 **Model/species:** human — one 7-month-old proband, with family genotyping and Western blot
 **Genotype/model:** `p.Ala141Thr`, homozygous in the proband. No WWOX-DEE allele, no neural endpoint, no CNS measurement anywhere in the paper.
@@ -6252,7 +6252,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Identifier:** PMID 38182577 / PMC PMC10770339 / DOI 10.1038/s41419-023-06378-8
 **Tier (FASE 1):** not applicable — the FASE 1 triage covered corpus papers 221–400 only; this record is outside that window and the reading is complete, so a reading-priority label has no verdict to carry here (`BATCH_20260920_002`)
 **Status:** read — corpus placeholder resolved into its own corpus record (`CC-20260920-EIGHT-RECORD-CLASSIFICATION-01`, BATCH_20260920_002)
-**Evidence depth:** complete_fulltext_read — `FTR-20260810-38182577-02`; manifest `deepdive_manifests/PMID38182577.json` (7 locators, schema v2, strict PASS, 0 gaps)
+**Evidence depth:** complete_fulltext_read — `FTR-20260810-38182577-02`; manifest `deepdive_manifests/PMID38182577.json` (30 locators, schema v2, strict PASS, 0 gaps)
 **Primary pathway:** P8 — bone / RUNX2 axis
 **Model/species:** mouse (Osterix1-Cre; Wwox/Trp53) plus human osteosarcoma tumours
 **Genotype/model:** no WWOX-DEE allele; somatic double knockout in bone
@@ -6275,7 +6275,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Identifier:** PMID 38499540 / PMC PMC10948869 / DOI 10.1038/s41420-024-01878-8
 **Tier (FASE 1):** not applicable — the FASE 1 triage covered corpus papers 221–400 only; this record is outside that window and the reading is complete, so a reading-priority label has no verdict to carry here (`BATCH_20260920_002`)
 **Status:** read — corpus placeholder resolved into its own corpus record (`CC-20260920-EIGHT-RECORD-CLASSIFICATION-01`, BATCH_20260920_002)
-**Evidence depth:** complete_fulltext_read — `FTR-20260909-38499540-02`; manifest `deepdive_manifests/PMID38499540.json` (7 locators, schema v2, strict PASS, 0 gaps)
+**Evidence depth:** complete_fulltext_read — `FTR-20260909-38499540-02`; manifest `deepdive_manifests/PMID38499540.json` (34 locators, schema v2, strict PASS, 0 gaps)
 **Primary pathway:** P6 — DDR / genome stability
 **Model/species:** mouse (K14-Cre; Brca1; Wwox) plus human TNBC cell lines
 **Genotype/model:** no WWOX-DEE allele; mammary tumorigenesis
@@ -6298,7 +6298,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Identifier:** PMID 27308504 / PMC PMC4905350 / DOI 10.1080/23723556.2015.1008288
 **Tier (FASE 1):** not applicable — the FASE 1 triage covered corpus papers 221–400 only; this record is outside that window and the reading is complete, so a reading-priority label has no verdict to carry here (`BATCH_20260920_002`)
 **Status:** read — corpus placeholder resolved into its own corpus record (`CC-20260920-EIGHT-RECORD-CLASSIFICATION-01`, BATCH_20260920_002)
-**Evidence depth:** complete_fulltext_read — `FTR-20260810-27308504-01`; manifest `deepdive_manifests/PMID27308504.json` (12 locators, schema v2, strict PASS, 0 gaps)
+**Evidence depth:** complete_fulltext_read — `FTR-20260810-27308504-01`; manifest `deepdive_manifests/PMID27308504.json` (14 locators, schema v2, strict PASS, 0 gaps)
 **Primary pathway:** P6 — DDR / genome stability
 **Model/species:** human and mouse, secondary — FRA16D common fragile site, WWOX–ATM association
 **Genotype/model:** no WWOX-DEE allele; DNA-damage response at a common fragile site
@@ -6815,7 +6815,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **clinical relevance:** HIGH come mappa di ricerca; **BACKGROUND come evidenza di claim**
 **Claim links:** none — **è una sintesi, non una replica indipendente dei primari che elenca**
 **Role:** promosso da `CORPUS-STUB-003` (BATCH_20260810_005) via `CC-20260810-34831305-01`; il placeholder è conservato append-only.
-**Note:** 🔴 **Il valore è che il gruppo primario del gene mette più sistemi-modello su una sola mappa causale; il limite è che la lettura non può ereditare lo statuto `DATO` dei primari solo perché li enumera.** Reperti di superficie: sono nominate quattro delezioni cell-targeted (Nestin-Cre, Synapsin-I-Cre, GFAP-Cre, Olig2-Cre) e **solo Nestin e Synapsin ricapitolano il fenotipo null** nell'intervallo riportato; l'accoppiamento neurone→oligodendrocita è riassunto come **difetto di maturazione** (OL maturi ↓, OPC ↑, mielinizzazione ↓); è distinto un compartimento umano **assente o poco sviluppato nei roditori** (glia radiale esterna / oSVZ) mentre WWOX precoce negli organoidi si concentra nella glia radiale ventricolare; l'arricchimento trascrizionale negli organoidi WWOX-KO (trasporto elettronico ATP-linked, OXPHOS, glicolisi/gluconeogenesi, ciclo cellulare, regionalizzazione Wnt) è **programma di espressione, non misura di flusso**. 🔴 **Tre tensioni registrate, non appianate.** (1) *Inflazione di sintesi:* la review descrive il litio come soppressore delle crisi da PTZ **nel contesto KO**; l'audit d'immagine già persistito del primario PMID 32000863 mostra la soppressione nei pannelli **WT, eterozigote e KO** — quindi **non può sostenere un rescue farmacologico WWOX-specifico** (vedi [[claim_registry_current#CLAIM 016]]). (2) *«Efficient and safe» eccede l'evidenza:* non ci sono dati umani né esperimenti formali di sicurezza in questa fonte; è un'ipotesi di design preclinico. (3) *Compressione dei modelli:* Tabella 1 e Figura 2 collassano ceppi distinti, modelli cell-targeted e bracci negativi, il che migliora la leggibilità e oscura **quale modello sostenga quale affermazione causale**. ⚠️ Debito: figure servite dalla CDN PMC a 757×434 e 772×550 contro originali dichiarati nell'XML di 4542×2601 e 4248×3026 — **artefatti scalati**, ispezionati ai pixel nativi perché leggibili; le rotte `/bin/` e il pacchetto OA hanno restituito HTTP 404. **Assenza del supplementary dedotta** dalla struttura XML completa, non da una dichiarazione dell'editore.
+**Note:** 🔴 **Il valore è che il gruppo primario del gene mette più sistemi-modello su una sola mappa causale; il limite è che la lettura non può ereditare lo statuto `DATO` dei primari solo perché li enumera.** Reperti di superficie: sono nominate quattro delezioni cell-targeted (Nestin-Cre, Synapsin-I-Cre, GFAP-Cre, Olig2-Cre) e **solo Nestin e Synapsin ricapitolano il fenotipo null** nell'intervallo riportato; l'accoppiamento neurone→oligodendrocita è riassunto come **difetto di maturazione** (OL maturi ↓, OPC ↑, mielinizzazione ↓); è distinto un compartimento umano **assente o poco sviluppato nei roditori** (glia radiale esterna / oSVZ) mentre WWOX precoce negli organoidi si concentra nella glia radiale ventricolare; l'arricchimento trascrizionale negli organoidi WWOX-KO (trasporto elettronico ATP-linked, OXPHOS, glicolisi/gluconeogenesi, ciclo cellulare, regionalizzazione Wnt) è **programma di espressione, non misura di flusso**. 🔴 **Tre tensioni registrate, non appianate.** (1) *Inflazione di sintesi:* la review descrive il litio come soppressore delle crisi da PTZ **nel contesto KO**; l'audit d'immagine già persistito del primario PMID 32000863 mostra la soppressione nei pannelli **WT, eterozigote e KO** — quindi **non può sostenere un rescue farmacologico WWOX-specifico** (vedi [[claim_registry_current#CLAIM 016]]). (2) *«Efficient and safe» eccede l'evidenza:* non ci sono dati umani né esperimenti formali di sicurezza in questa fonte; è un'ipotesi di design preclinico. (3) *Compressione dei modelli:* Tabella 1 e Figura 2 collassano ceppi distinti, modelli cell-targeted e bracci negativi, il che migliora la leggibilità e oscura **quale modello sostenga quale affermazione causale**. ⚠️ Debito: figure servite dalla CDN PMC a 757×434 e 772×550 contro originali dichiarati nell'XML di 4542×2601 e 4248×3026 — **artefatti scalati**, ispezionati ai pixel nativi perché leggibili; le rotte `/bin/` e il pacchetto OA hanno restituito HTTP 404. **Assenza del supplementary dedotta** dalla struttura XML completa, non da una dichiarazione dell'editore. ⚠️ Standing caution (`CC-20260826-UPSTREAM-CITATION-FAILURE-01`, propagated `BATCH_20260927_001`): this review is cited as the authority for a null-mouse seizure measurement it does not contain, and it is independently recorded in [[claim_registry_current#CLAIM 016]] as narrowing what its primary left broad. It is a citation conduit, not a source of measurement.
 **Wikilinks:** [[paper_registry_current#CORPUS-STUB-003]] · [[paper_registry_current#PAPER 004]] · [[paper_registry_current#PAPER 005]] · [[claim_registry_current#CLAIM 003]] · [[claim_registry_current#CLAIM 004]] · [[claim_registry_current#CLAIM 016]] · [[full_text_queue_current#FT-049]] · [[literature_tracking_log_current#LIT-0030]]
 
 ---
@@ -7170,7 +7170,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Tier (FASE 1):** not applicable — the FASE 1 triage covered corpus papers 221–400 only; this record is outside that window and the reading is complete, so a reading-priority label has no verdict to carry here (`BATCH_20260920_002`)
 **Status:** processed
 **Record provenance:** read in full; corpus placeholder promoted to a PAPER record by `CC-20260920-EIGHT-RECORD-CLASSIFICATION-01` (BATCH_20260920_002). `processed` and not `claim_linked`: this reading creates no claim.
-**Evidence depth:** complete_fulltext_read — `FTR-20260810-39416860-01`; manifest `deepdive_manifests/PMID39416860.json` (7 locators, schema v2, strict PASS, 0 gaps)
+**Evidence depth:** complete_fulltext_read — `FTR-20260810-39416860-01`; manifest `deepdive_manifests/PMID39416860.json` (11 locators, schema v2, strict PASS, 0 gaps)
 **Primary pathway:** clinical description / natural history — no pathway is measured in this paper
 **Model/species:** human — one boy, onset at one month, death at six months
 **Genotype/model:** 🔴 **SDR-domain missense, and its pathogenicity is NOT established by this paper.** The authors' own last sentence says so, and a second DEE-gene variant is present (`CACNA1A c.4646A>G p.Gln1549Arg`, heterozygous — the inheritance detail is in the published paper and in the reading manifest, and is deliberately not restated here). The phenotype is first-hand; the attribution to WWOX is not.
@@ -7194,7 +7194,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Tier (FASE 1):** not applicable — the FASE 1 triage covered corpus papers 221–400 only; this record is outside that window and the reading is complete, so a reading-priority label has no verdict to carry here (`BATCH_20260920_002`)
 **Status:** processed
 **Record provenance:** read in full; this PMID was in no registry at all, so the record is new, created by `CC-20260920-EIGHT-RECORD-CLASSIFICATION-01` (BATCH_20260920_002). `processed` and not `claim_linked`: this reading creates no claim.
-**Evidence depth:** complete_fulltext_read — `FTR-20260810-42397075-04`; manifest `deepdive_manifests/PMID42397075.json` (6 locators, schema v2, strict PASS, 0 gaps)
+**Evidence depth:** complete_fulltext_read — `FTR-20260810-42397075-04`; manifest `deepdive_manifests/PMID42397075.json` (30 locators, schema v2, strict PASS, 0 gaps)
 **Primary pathway:** P3 — prenatal structure / neurogenesis
 **Model/species:** human — iPSC-derived neural organoids: wild-type, isogenic WWOX-knockout, and patient-derived lines
 **Genotype/model:** WOREE and SCAR12 patient lines carried alongside an engineered null; the paper names both syndromes
@@ -7218,7 +7218,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Tier (FASE 1):** not applicable — the FASE 1 triage covered corpus papers 221–400 only; this record is outside that window and the reading is complete, so a reading-priority label has no verdict to carry here (`BATCH_20260920_002`)
 **Status:** processed
 **Record provenance:** read in full; corpus placeholder promoted to a PAPER record by `CC-20260920-EIGHT-RECORD-CLASSIFICATION-01` (BATCH_20260920_002). `processed` and not `claim_linked`: this reading creates no claim.
-**Evidence depth:** complete_fulltext_read — `FTR-20260806-33255508-01`; manifest `deepdive_manifests/PMID33255508.json` (4 locators, schema v2, strict PASS, 0 gaps)
+**Evidence depth:** complete_fulltext_read — `FTR-20260806-33255508-01`; manifest `deepdive_manifests/PMID33255508.json` (8 locators, schema v2, strict PASS, 0 gaps)
 **Primary pathway:** review across axes — no primary measurement of its own
 **Model/species:** human and mouse, secondary — expression databases, Allen Mouse Brain Atlas, single-cell RNA-seq
 **Genotype/model:** no allele of its own; it reviews SCAR12 (MIM 614322), EIEE28/WOREE (MIM 616211) and WWOX copy-number variants in ASD

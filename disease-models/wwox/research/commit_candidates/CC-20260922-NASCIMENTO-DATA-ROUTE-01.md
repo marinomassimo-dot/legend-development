@@ -201,3 +201,11 @@ to uninformative.
 🟢 **What the Operator affirms as sound, and it is the technical half:** the case-insensitive `WWOX`
 hits in the `ECstream` repository were **seven, all inside `data:image/png;base64` payloads** — a
 verified false-positive class, not evidence of any kind. That check stands.
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260927_001` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** NOT INTEGRATED
+
+Reason: verified — it names no scientific current file as a target and carries no scientific-file edit. Its content is a correction to `CC-20260922-POSTNATAL-SVZ-01` §7c(iii)/§7d (the data route, the count-matrix tier, and the controlled-access inference that is wrong for that tier) plus one analysis file, so **it travels with that candidate**, which stays open. Its `D-37` lesson is left for a ledger-only pass; this batch skips the optional D-rows.

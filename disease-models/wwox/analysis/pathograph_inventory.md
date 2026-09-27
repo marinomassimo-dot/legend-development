@@ -27,9 +27,9 @@ annotations is reported below whatever it happens to be.
 | Measure | Count |
 |---|---|
 | Claim nodes | 41 |
-| Claim→claim wikilink occurrences | 55 |
-| …distinct directed links | 43 |
-| …undirected edges they collapse into | 32 |
+| Claim→claim wikilink occurrences | 56 |
+| …distinct directed links | 44 |
+| …undirected edges they collapse into | 33 |
 | Edges carrying a declared relation type | 0 |
 | Nodes carrying a biological scale | 0 |
 | Deep-dive manifests read | 109 |
@@ -58,7 +58,7 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 | CLAIM 006 | P47T model shows progressive hippocampal astrogliosis; microglial progression shown for morpholo | consolidated baseline | DATO + INFERENZA prudente | P6 — neuroinflammation / glia | NOT_ANNOTATED | 0 | 1 |
 | CLAIM 007 | P47T abolishes or near-abolishes WWOX recovery by two PPPY peptides in vitro | consolidated baseline | DATO | P3 — MYC/Wnt / interaction logic | NOT_ANNOTATED | 1 | 4 |
 | CLAIM 008 | WOREE and SCAR12 form a genotype-phenotype spectrum | consolidated baseline | DATO | Clinical spectrum / genotype-phenotype | NOT_ANNOTATED | 0 | 3 |
-| CLAIM 009 | WWOX deficiency plausibly alters mitochondrial quality control, redox and energy efficiency | in observation | INFERENZA | P5 — metabolism / mitochondria / redox / | NOT_ANNOTATED | 5 | 9 |
+| CLAIM 009 | WWOX deficiency plausibly alters mitochondrial quality control, redox and energy efficiency | in observation | INFERENZA | P5 — metabolism / mitochondria / redox / | NOT_ANNOTATED | 6 | 9 |
 | CLAIM 010 | Mitophagy may be more relevant than senolytics for WWOX-related mitochondrial dysfunction | background only | IPOTESI | P5 — metabolism / mitochondria / mitopha | NOT_ANNOTATED | 0 | 0 |
 | CLAIM 011 | AAV9-hSynI-hWWOX: dose-dependent durable rescue in Wwox-null murine model su domini multipli inc | flagged for review | DATO preclinico (full text reviewed) | P7 — gene therapy readiness; P4 — myelin | NOT_ANNOTATED | 2 | 1 |
 | CLAIM 012 | Fenotipo WWOX severo neonatale-fatale con MRI inizialmente normale: genotipo-severità heterogene | consolidated baseline | DATO descrittivo (full text reviewed) | clinical spectrum / genotype-phenotype | NOT_ANNOTATED | 0 | 1 |
@@ -74,7 +74,7 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 | CLAIM 022 | Severe WWOX-null phenotypes can begin prenatally and may include detectable fetal brain abnormal | consolidated baseline | DATO | prenatal developmental architecture / se | NOT_ANNOTATED | 0 | 0 |
 | CLAIM 023 | WWOX controls partner-protein function not only by binding, but by subcellular rerouting that ch | consolidated baseline | DATO | signaling organization / routing / scaff | NOT_ANNOTATED | 0 | 2 |
 | CLAIM 024 | WWOX WW-domain function depends on WW1–WW2 tandem cooperativity, not only on isolated domain int | consolidated baseline | DATO | domain architecture / variant interpreta | NOT_ANNOTATED | 0 | 1 |
-| CLAIM 025 | The WWOX/HIF1A ratio may function as a systems-level marker of maladaptive biological state, lin | in observation | DATO + INFERENZA | P5 — metabolism / state transition / inf | NOT_ANNOTATED | 0 | 1 |
+| CLAIM 025 | The WWOX/HIF1A ratio may function as a systems-level marker of maladaptive biological state, lin | in observation | DATO + INFERENZA | P5 — metabolism / state transition / inf | NOT_ANNOTATED | 1 | 1 |
 | CLAIM 026 | WWOX co-associates with trafficking proteins; its co-purifying partners show metabolic pathway a | in observation | DATO (co-association and pathway annotat | P5 — trafficking / endomembrane systems  | NOT_ANNOTATED | 0 | 2 |
 | CLAIM 027 | WWOX may act as an ECM/membrane-to-nucleus signaling node through HYAL-2/SMAD4 complexes, with c | in observation | INFERENZA | ECM / membrane signaling / injury respon | NOT_ANNOTATED | 0 | 0 |
 | CLAIM 028 | WWOX biological output is strongly partner- and context-dependent; expression level alone is ins | flagged for review | INFERENZA — principio interpretativo tra | cross-pathway interpretive principle | NOT_ANNOTATED | 4 | 5 |
@@ -107,6 +107,7 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 | CLAIM 005 <-> CLAIM 037 | yes | Evidence boundary, Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 058 |
 | CLAIM 005 <-> CLAIM 040 | yes | Evidence boundary, Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
 | CLAIM 007 <-> CLAIM 041 | **one-way** | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 007, PAPER 112 |
+| CLAIM 009 <-> CLAIM 025 | **one-way** | Clinical meaning | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
 | CLAIM 009 <-> CLAIM 028 | **one-way** | ⚠️ Counter-directional evidence (BATCH_20260726_001) | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 054 |
 | CLAIM 009 <-> CLAIM 034 | yes | Summary, ⚠️ Counter-directional evidence (BATCH_20260726_001) | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 054, PAPER 071 |
 | CLAIM 011 <-> CLAIM 040 | **one-way** | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 011 |
@@ -213,6 +214,7 @@ is matched as one string, so an adverb inserted into it — *"contributes
 | CLAIM 005 <-> CLAIM 016 | CLAIM 005 -> CLAIM 016 | CLAIM 016 -> CLAIM 005 |
 | CLAIM 005 <-> CLAIM 036 | CLAIM 036 -> CLAIM 005 | CLAIM 005 -> CLAIM 036 |
 | CLAIM 007 <-> CLAIM 041 | CLAIM 041 -> CLAIM 007 | CLAIM 007 -> CLAIM 041 |
+| CLAIM 009 <-> CLAIM 025 | CLAIM 025 -> CLAIM 009 | CLAIM 009 -> CLAIM 025 |
 | CLAIM 009 <-> CLAIM 028 | CLAIM 009 -> CLAIM 028 | CLAIM 028 -> CLAIM 009 |
 | CLAIM 011 <-> CLAIM 040 | CLAIM 040 -> CLAIM 011 | CLAIM 011 -> CLAIM 040 |
 | CLAIM 016 <-> CLAIM 037 | CLAIM 016 -> CLAIM 037 | CLAIM 037 -> CLAIM 016 |
@@ -234,7 +236,6 @@ wikilink, so the relation is asserted in text and invisible to the graph.
 | Claim | Names | In field |
 |---|---|---|
 | CLAIM 006 | CLAIM 007 | Genotype/model relevance |
-| CLAIM 025 | CLAIM 009 | Clinical meaning |
 | CLAIM 030 | CLAIM 033 | Wording record (BATCH_20260926_MALLARET, 2026-09-26) |
 
 **Working-model co-mentions.** Two claims named in one sentence of the
@@ -260,7 +261,6 @@ working model with no edge between them in the registry.
 | CLAIM 022 | NO_RELATION_MATERIAL_IN_REPOSITORY | — |
 | CLAIM 023 | REVIEW_MATERIAL_PRESENT | LOCATOR_PROPOSITION_BOUND, SELF_RELATIONAL_TITLE |
 | CLAIM 024 | REVIEW_MATERIAL_PRESENT | LOCATOR_PROPOSITION_BOUND, SELF_RELATIONAL_TITLE, SHARED_EVIDENTIAL_PAPER |
-| CLAIM 025 | ANNOTATION_GAP_CONFIRMED | LOCATOR_PROPOSITION_BOUND, UNLINKED_PROSE_MENTION, WORKING_MODEL_COMENTION |
 | CLAIM 026 | ANNOTATION_GAP_CONFIRMED | LOCATOR_PROPOSITION_BOUND, WORKING_MODEL_COMENTION |
 | CLAIM 027 | NO_RELATION_MATERIAL_IN_REPOSITORY | — |
 | CLAIM 029 | REVIEW_MATERIAL_PRESENT | LOCATOR_PROPOSITION_BOUND |
@@ -349,6 +349,6 @@ carried no connective from the lexicon.
 ## Provenance
 
 Derived from 112 input files; digest
-`32f9169c79226ea5`. Sources: the claim, paper and
+`68dadd9566f99dc1`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 

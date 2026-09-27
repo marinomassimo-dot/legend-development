@@ -188,3 +188,11 @@ document metadata and only one is. The distinguishing test is whether a command 
 value from the artefact — and for `Author`, in this repository, none can. A field that must be
 typed in by the thing it describes is an **attestation**, not a measurement, and it should be
 labelled as one or omitted.
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260927_001` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** NOT INTEGRATED
+
+Reason: a metadata/provenance proposal about the commit-candidate header format; it edits no scientific surface. Kept as the record of why no `Author:` field is asserted — one shared git identity makes it underivable — and its own warning stands: quoting the git addresses would trip `scripts/public_release_gate.py`, so they are not reproduced here.

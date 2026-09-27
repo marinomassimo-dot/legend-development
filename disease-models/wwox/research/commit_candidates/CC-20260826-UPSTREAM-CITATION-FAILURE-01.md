@@ -198,3 +198,13 @@ defect is a review standing where a **primary measurement** is claimed. The disc
 ## Review required
 
 None for queueing. §5's annotations are MINOR; §6 is a proposal, not an implementation.
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260927_001` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** PROPAGATED IN PART
+
+§5.1–§5.3 applied: the `Note` fields of `PAPER 011`, `PAPER 019` and `PAPER 063` carry the `UPSTREAM_CITATION_FAILURE` annotations in this candidate's own wording, with its §7 self-limits preserved — no verdict is written anywhere on Mallaret 2014 or on Aldaz 2014 BBA, which this author had not read. Verified before editing: none of the three notes carried the annotation, and the same defect class is already canonical in `CLAIM 016`'s evidence boundary.
+
+**Not propagated, so this candidate stays open:** §6, the `UPSTREAM_CITATION_FAILURE` capability proposal with its denominator rule, which is a harness item and is handed to Harness Engineering in this batch's report, not implemented as an edit.

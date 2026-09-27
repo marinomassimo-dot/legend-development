@@ -205,3 +205,13 @@ two are visibly linked.
 > reported in a minority of tissues; **residual brain protein is not established**.* And therefore:
 > **`Wwox^gt/gt` must not be called a validated hypomorph for CNS therapeutic rescue** unless and
 > until CNS residual expression is demonstrated.
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260927_001` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** PROPAGATED
+
+Propagated 2026-09-22 (`bbe9969`), verified in `CLAIM 037`, which carries the `PREMISE: NOBODY_LOOKED` audiogenic-provocation sentence and the `REVIVAL_TRIGGER` naming the acquisition of PMID 24369382's body. Do not re-apply.
+
+🔴 **And the propagated text is now contradicted by the ledger, which this batch records without repairing.** `FTR-20260913-24369382-01` is a `complete_fulltext_read` of PMID 24369382, and `fulltext_dossiers/PMID24369382.md` reports the null mice on 11–14 kHz exposure: 3 of 8 seized at 16 days, the four survivors all seized at 20 days, 8 wild-type littermates seized zero times. `CLAIM 037` still says the body "is not served by any route" and that no Wwox mouse of any allele has ever been audiogenically provoked — so its own `REVIVAL_TRIGGER` has fired. Repairing `CLAIM 037` (and the `CLAIM 005` boundary) is a new scientific edit on a title that calls the audiogenic phenotype rat-specific: it needs its own candidate and its own review, and `BATCH_20260927_001` deliberately does not make it.

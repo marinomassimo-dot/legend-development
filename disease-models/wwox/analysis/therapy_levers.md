@@ -14,7 +14,7 @@
 ## A — Act now (available; protects the window)
 
 - **A1. Targeted seizure control — Vigabatrin.** In a WWOX-DEE case, vigabatrin reversed infantile spasms (PMID **39101447**, 2024). Symptomatic, does not modify WWOX; the most solid "buy-time" base.
-- **A2. Lithium (GSK3β inhibition) — the strongest repurposing signal.** In Wwox-deficient mice GSK3β is elevated in cortex, hippocampus and cerebellum; **lithium inhibits GSK3β and abolishes seizures** (PMID **32000863**, Acta Neuropathol Commun 2020). Acts *downstream* of WWOX loss → **genotype-agnostic**. Lithium is available and used in pediatrics (with tight monitoring: therapeutic window, thyroid, kidney). A preclinical hypothesis to discuss with a clinical team — not medical advice.
+- **A2. Lithium (GSK3β inhibition) — a repurposing signal whose genotype specificity was tested and not found.** In Wwox-deficient mice GSK3β is elevated in cortex, hippocampus and cerebellum; **lithium inhibits GSK3β and abolishes seizures** (PMID **32000863**, Acta Neuropathol Commun 2020). Acts *downstream* of WWOX loss → **genotype-agnostic**. Lithium is available and used in pediatrics (with tight monitoring: therapeutic window, thyroid, kidney). A preclinical hypothesis to discuss with a clinical team — not medical advice.
 
 ## B — Mechanistically-grounded repurposing (months; needs validation)
 
@@ -37,7 +37,7 @@
 ## Practical priorities (for clinical discussion)
 
 1. **Now:** optimize seizure control (vigabatrin among options) — protects the myelin/network window.
-2. **To discuss with the team:** lithium as a preclinically-grounded disease modifier (GSK3β) — tight monitoring.
+2. **To discuss with the team:** lithium — a general anticonvulsant with a WWOX-adjacent mechanistic rationale that has not been demonstrated; no developmental endpoint has ever been measured under lithium in any WWOX system — tight monitoring.
 3. **To build:** patient-iPSC/organoids as an n-of-1 bench for repurposing and allele-specific ASO.
 4. **Goal:** AAV9-WWOX gene therapy (already effective in mouse) — support the path to the clinic.
 

@@ -93,3 +93,11 @@ Class A: `CORPUS P305` now says it is promoted to `PAPER 086` (same PMID, the re
 
 ### Disposition correction — 2026-09-26, ACTOR_ID `orchestrator`
 The R2 PROPAGATED status covers class A only. Class B (`CORPUS P182`, `CORPUS P210`) has no owning item on current main; it remains open here until an explicit candidate or batch takes ownership. "Routed as its own item" in the R2 disposition was premature.
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260927_001` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** PROPAGATED
+
+Class A carried by `BATCH_20260926_ALDAZ_R2`, verified: `CORPUS P305` says it is promoted to `PAPER 086` and its `Next action` is neutralised; `CORPUS-STUB-053` names `PAPER 007` as the live record. Class B (`CORPUS P182`, `CORPUS P210`) was never proposed as an edit by this candidate and has no owner here — the R2 disposition's own correction says so. It is named as an open item for a separate candidate rather than held against this file.

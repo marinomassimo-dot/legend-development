@@ -113,11 +113,11 @@ interest is not admission.
   only WWOX-specific measurement that touches mTOR is the WWOX-KO cerebral-organoid transcriptome,
   where **mTOR/EIF4EBP1 is DOWN and autophagy is DOWN**
   ([[discovery_ledger_current#🎯 DL-MECH-034 — Il fenotipo Warburg è confermato **in tessuto neurale umano**: chiude il gap che indeboliva l'ipotesi chetogenica|DL-MECH-034]]). An mTOR inhibitor — the reflex repurposing move in
-  genetic DEE, imported from TSC — would push the **same direction as the lesion**. The only other
+  genetic DEE, imported from TSC — would push the **same direction as the only directional datum**, which is a **non-locatored transcriptomic signal at n = 2/4** and is **not a measurement of mTORC1 signalling**. The only other
   WWOX record naming mTOR is `CORPUS-STUB-043` in the paper registry (an LPS lung-injury study),
   status `not_processed`: **nobody has read it, so it cannot carry a direction** and is not cited
-  here as evidence for or against. See §5, N-01. **This is the single most consequential negative
-  in the file.**
+  here as evidence for or against. See §5, N-01. **This is a negative whose weight rests on one weak
+  datum.**
 - **Senolytics.** CLAIM 010 is `background only` / `IPOTESI`, with no WWOX model and no CNS anchor.
 - **DNA-damage-response / ATM.** CLAIM 029 is `in observation` and structurally important, but the
   therapeutic direction is inverted for a developing brain: WWOX loss causes progenitor
@@ -621,8 +621,8 @@ not been discriminated.
 *A well-reasoned exclusion is worth as much as a promotion.* Each carries its **failure mode**, and
 each carries what would **revive** it — nothing dies silently.
 
-### N-01 — mTOR inhibitors (rapamycin / everolimus) → **wrong biological direction**
-**Failure mode:** *acts in the wrong direction.* The reflex move in genetic DEE, imported from TSC.
+### N-01 — mTOR inhibitors (rapamycin / everolimus) → **`INSUFFICIENT` — mai misurato a livello proteico in alcun sistema WWOX**
+**Failure mode:** *`INSUFFICIENT` — mai misurato a livello proteico in alcun sistema WWOX.* The reflex move in genetic DEE, imported from TSC.
 The only WWOX-specific measurement touching this axis shows **mTOR/EIF4EBP1 DOWN and autophagy DOWN**
 in WWOX-KO cerebral organoids. An mTOR inhibitor pushes the **same way as the lesion**.
 ⚠️ **Honest weight of the negative:** this rests on one transcriptomic dataset (`n=2` WT vs `n=4` KO,
@@ -808,8 +808,7 @@ slowing.
 1. **Seizure control must not be counted as developmental protection** (N-15). Cognitive impairment
    precedes the epileptic encephalopathy and does not improve when seizures are controlled. This
    re-scores the entire "buy time" logic and is why causal levers carry the portfolio.
-2. **mTOR inhibition points the wrong way** (N-01). The reflex DEE repurposing move, and the only
-   WWOX-specific directional datum is unfavourable — with the weakness of that datum stated.
+2. **mTOR inhibition has never been measured at the protein level in any WWOX system** (N-01) — demoted from this list by `BATCH_20260927_001` (`CC-20260826-MTOR-DIRECTION-01`), no direction asserted. The class stays out at every tier and stays in `DEPRIORITIZE`; what changes is the reason.
 3. **Lithium's WWOX-specific rationale does not survive its own figure** (N-02). Seizure suppression
    in **all three genotypes including wild type** makes it an anticonvulsant, not a mechanism drug —
    and it activates Wnt, which is already hyperactivated.

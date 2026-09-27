@@ -126,3 +126,11 @@ Add to `CLAIM 032`:
   environment (no PMCID / empty PMC body). The Tochigi pooling statement is the delegate's reading.
 - **This candidate changes a `VERY HIGH` clinical-relevance claim that carries the dose argument.
   It is the one item in this batch that most deserves the operator's own eyes.**
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260927_001` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** PROPAGATED
+
+Propagated by `BATCH_20260921_001`, verified in `CLAIM 032`: the title now reads "Una copia di WWOX conserva alcuni endpoint osservati, ma non definisce una soglia terapeutica del SNC" and the summary carries "Cognizione, EEG ed eccitabilità di rete non sono valutati sistematicamente (`PREMISE: NOBODY_LOOKED`)". This block exists so the queue counter reads the disposition rather than the header alone.

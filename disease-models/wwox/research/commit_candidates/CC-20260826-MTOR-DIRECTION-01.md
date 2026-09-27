@@ -168,3 +168,11 @@ undetermined, not merely unmeasured.
 
 **Target WM:** none — no working-model change proposed.
 **Batch gate:** not a `BATCH_COMMIT` object.
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260927_001` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** PROPAGATED
+
+All four sites. `discovery_ledger_current.md` `DL-MECH-034`: an **append-only** rectification — the ledger is append-only, so the `(DATO)` tag is qualified in place by a new bullet in the convention of the 2026-09-26 rectifications rather than edited — recording the datum as transcriptomic, non-locatored, non-FDR, n = 2/4, with the direction preserved. Verified first-hand: `deepdive_manifests/PMID34268881.json` holds **18** locators (the candidate says 12; the count grew) and **none** names mTOR, `EIF4EBP1` or autophagy, and the dossier names none either. `mechanism_intervention_map.md` sites M1, M2 and M3 are repaired, the correctly-bounded `CORPUS-STUB-043` sentence is preserved byte for byte, and no token sweep on `autophag` was run — the WWOX-turnover/CMA axis shares the word and nothing else. mTOR inhibitors stay `DEPRIORITIZE`; only the reason changes.

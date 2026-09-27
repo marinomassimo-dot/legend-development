@@ -179,3 +179,11 @@ MANIFEST STRICT"*.
 
 *No canonical file edited by this candidate. Item (c) is canonical and is proposed for
 `BATCH_COMMIT` only. No reading occurred; no receipt claimed. Not medical advice.*
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260927_001` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** PROPAGATED
+
+Items (a), (b), (b2) and (c) applied; line numbers in the candidate were stale, so every anchor was the record or heading text. (a) `discovery_ledger_current.md` `DL-MECH-020`: the superseded sentence is preserved verbatim and a forward pointer to `DL-MECH-095` follows it. (b) and (b2) `full_text_queue_current.md`: `FT-059` and `FT-062` keep their headings verbatim and each gains the superseded banner naming its append-only correction — verified, both corrections exist in the same file, and `FTR-20260814-34268881-03` is a **partial** read, which the banner states as the candidate words it. (c) `paper_registry_current.md` `PAPER 094`: `6 locators` → `30 locators`, applied once with the count re-derivation. The optional `D-20` row is not landed.

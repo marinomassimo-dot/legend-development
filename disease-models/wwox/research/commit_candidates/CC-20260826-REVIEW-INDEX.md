@@ -154,3 +154,11 @@ routing of documents already in §1.
    the corpus self-contradictory.** Route the eleven deltas as one unit.
 2. **`CC-20260826-PROVENANCE-01` §E must not ship on its own.** Its justification cites
    [`CC-20260826-CLAIM037-01`](CC-20260826-CLAIM037-01.md), which §2 lists as **superseded**.
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260927_001` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** NOT INTEGRATED
+
+Reason: routing table over the 2026-08-25/26 set, asserting no claim and changing nothing. Its own counts declare themselves stale and its §1 routing was overtaken by `BATCH_20260922_SEIZURE` and `BATCH_20260926_ALDAZ`; its §2 supersession list stays useful as a reading aid.

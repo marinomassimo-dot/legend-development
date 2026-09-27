@@ -182,3 +182,13 @@ are re-labelled: unacquirable *by attempt*, not by licence.**
   `translating time` residual error **in days** — Workman 2013 and Clancy 2007 both return
   `full_text: ""` and Europe PMC REST is `connect_rejected`. It explicitly declined to quote a
   cross-species correlation coefficient as a confidence interval for one species pair. **Right call.**
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260927_001` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** PROPAGATED IN PART
+
+**§1 only.** `discovery_ledger_current.md` `DL-MECH-011`: an append-only rectification restates the filter as "efficacy demonstrated P0–P5; upper bound unknown and unmeasurable in this model, which dies at 3–4 weeks" and stops it being used to remove candidates until an upper bound exists, with the primary's own sentence quoted verbatim from `fulltext_dossiers/PMID42422765_partial_locators.md` (verified present) and `D-31` named. 
+
+**Still owed, so this candidate stays open:** §2 (Semple 2013, no receipt), §3 (cohort ages, partial receipts) and §4 (Sanai 2011, no receipt) are not locator-backed and were deliberately kept out of the ledger text; the `CLAIM 014` title-versus-body mismatch is flagged by the candidate and is not a canonical edit this batch makes. Flagged for Mirror ex-post review under §21e: it reverses the direction of a conclusion an earlier session reported.

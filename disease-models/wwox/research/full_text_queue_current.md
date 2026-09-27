@@ -2471,6 +2471,8 @@ anche questo paper cita.
 
 ## FT-059 — Steinberg 2021, organoidi: 🟡 superficie recuperata, **69 pannelli da leggere**, lettura NON iniziata
 
+🔴 **THIS HEADING IS SUPERSEDED — see `CORREZIONE APPEND-ONLY FT-059` (this file, 2026-08-14).** The reading **was** done: `FTR-20260814-34268881-03`, main text read in all sections, 91 references enumerated. The residual debt is **the absent source**, not the reading. The heading is preserved verbatim because it records what the queue believed on the day it was written. *(Pointer added by `BATCH_20260927_001`, `CC-20260921-SUPERSEDED-TEXT-POINTERS-01`.)*
+
 **Paper:** PMID 34268881 / DOI 10.15252/emmm.202013610 — Steinberg et al. 2021, *EMBO Mol Med*
 ([[paper_registry_current#PAPER 039]])
 **Title:** Modeling genetic epileptic encephalopathies using brain organoids
@@ -2809,6 +2811,8 @@ pannelli etichettati, Table S1 in PPTX e 54 riferimenti. Receipt
 ---
 
 ## FT-062 — Salah 2013: la fonte a cui lo stato attribuisce già la stabilizzazione ITCH, mai letta
+
+🔴 **THIS HEADING IS SUPERSEDED — see `CORREZIONE APPEND-ONLY FT-062` (this file, 2026-08-14).** Salah 2013 (`PMID 23370280`) was read completely — all sections, 6/6 figures, 23/23 panels, 66/66 references — receipt `FTR-20260814-23370280-01`. *«mai letta»* records what the queue believed when the entry was opened and is preserved for that reason only. *(Pointer added by `BATCH_20260927_001`, `CC-20260921-SUPERSEDED-TEXT-POINTERS-01`.)*
 
 **Paper:** PMID 23370280 — Salah Z., Bar-mag T., Kohn Y., Pichiorri F., Palumbo T., Melino G.,
 Aqeilan R. I., 2013

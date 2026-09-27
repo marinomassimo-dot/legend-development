@@ -281,3 +281,13 @@ mirror `consolidated baseline (full text)` — an additive qualifier, `INFO` at 
 - **Does not propose a new screening schema.** The two findings in §2 need surfaces the current
   screen does not read — the mirror table and the dismissal ledger — which is a capability
   proposal, deliberately not bundled here.
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260927_001` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** PROPAGATED IN PART
+
+**Edit 1 only.** `working_model_current.md` BLOCK 2: the mirror row for `017` is rewritten from `CLAIM 017`'s actual title, type, pathway, transferability, status and source. Verified first-hand: the row had carried "Ketogenic diet has small but real human support …" while `CLAIM 017` is the human-spectrum claim, and the ketogenic datum survives in this file's BLOCK 1 prose ("Ketogenic diet associated with seizure improvement in 3/5 WOREE patients (Chong 2023)"), so nothing is lost by the rewrite.
+
+**Still owed, so this candidate stays open:** edit 2 — who owns the ketogenic-diet proposition, and whether a consolidated-baseline dietary statement becomes a claim or model prose. That is a therapeutic-adjacent decision the candidate itself reserves to the operator. The `DIS-011` revival of §2.A is the same act as `CC-20260826-FIVECLAIM-HARDENING-01` Δ11 and must be done once, in one batch; neither is in this batch's scope.

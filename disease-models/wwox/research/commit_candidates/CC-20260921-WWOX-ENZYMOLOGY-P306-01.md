@@ -218,3 +218,11 @@ undefined physiological substrate/activity"*. Proposed:
 record; none is invented here. Other DOIs — [24932569](https://doi.org/10.1016/j.bbcan.2014.06.001) ·
 [38161429](https://doi.org/10.3390/ijms25010316).
 Not medical advice.*
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260927_001` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** DEFERRED
+
+Deferred by this batch's own scope: the Km and cofactor statements it would write into `TX-003` rest on the PubMed **abstract** only — the paper is unacquirable on every route (`FT-130`: no DOI, no PMC), so no receipt and no verbatim locator is possible — and this batch does not write abstract-depth quantities into a therapeutic record. The re-tier of `CORPUS P306` and `LIT-0306` travels with the same candidate and is held with it rather than split, so that the tier and the reason land together. The optional `D-19` row is not landed.

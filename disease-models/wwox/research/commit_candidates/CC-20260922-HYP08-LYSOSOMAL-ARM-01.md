@@ -175,3 +175,11 @@ gap but **which of our own reagents would have given us a false negative inside 
   `"did not significantly alter I1061T protein levels (Supplementary Fig.)"`) — the *sentences* are
   verbatim running text and stand on their own, but **the panels behind them have not been seen**,
   which is exactly the distinction `FT-126` exists to keep.
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260927_001` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** PROPAGATED
+
+Both targets, append-only. `therapeutic_hypotheses_ledger_current.md` `HYP-20260709-08`: bafilomycin A1 is added to the lysosomal arm in parallel with chloroquine and NH₄Cl, with the rule that a chloroquine/NH₄Cl negative does not close the lysosomal branch and only a Baf negative does, plus §2's step-order correction (inhibitor arms first, chase second, chase from the stabilised condition). `discovery_ledger_current.md` `DL-BIO-001`: the same reagent-sensitivity caution, scoped to reagent sensitivity only — no NPC1 ER-phagy/ERAD biology is imported. Verified: the receipt is `FTR-20260922-30202070-01`, `partial_fulltext_read`, and the propagated text says so and makes no panel claim, because both load-bearing quotations point at figure references the route stripped. §3's flags (Koch 2011, N-glycosylation, the SUnSET/OP-puro design trap, Gelsthorpe, Nakasone) are explicitly not landed, and the optional `D-26` row is not landed.
