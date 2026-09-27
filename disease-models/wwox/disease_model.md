@@ -2,7 +2,7 @@
 
 > **Public, de-identified disease-level model.** Derived from the LEGEND working model with the individual clinical record removed (clinical presentation, treatment regimen, and case-specific surveillance are not included). What remains is the disease-level mechanistic synthesis, the genotype-interpretation rules, the literature-anchored data, and the decision-logic framework — all from public literature. **Not medical advice.** Specific variants appear only as decoupled public worked examples — a destabilizing SDR missense on one side, a canonical splice-acceptor variant on the other — never assembled into one person's genotype.
 
-**Current working model:** WM_v5.6 (`BATCH_20260926_ALDAZ_R7`).
+**Current working model:** WM_v6.0 (`BATCH_20260927_002`).
 
 **Model version lineage:** v3.0 (2026-07-14) — a MAJOR baseline reversal (see the repair changelog at the end) illustrating the epistemic discipline in action.
 
@@ -112,6 +112,10 @@ Full canonical status lives in [`registries/claim_registry_current.md`](registri
 ---
 
 ## Repair changelog (the epistemic discipline in action)
+
+**WM v5.7 → v6.0 (2026-09-27) — MAJOR, a negative withdrawn.** Two canonical records said the seizure phenotype of WWOX rodent models was audiogenic **only in the rat**, and one of them added that the paper carrying the mouse observation could not be read here — *"no `n`, no strain, no stimulus protocol and no control"* — and that no `Wwox` mouse had ever been audiogenically provoked in any inspectable method, as a standing `PREMISE: NOBODY_LOOKED`. The paper (Mallaret 2014, PMID 24369382) had in fact been read in full from this repository's own full-text directory two weeks earlier: a failed remote retrieval had been recorded as a corpus-level absence. Its Methods and Results carry a protocol (11 and 14 kHz tones, 5–10 min, speakers on three sides of conventional polycarbonate cages, video-recorded), two denominators (3 of 8 constitutive knock-outs at 16 days; the four survivors at 20 days) and a comparator (0 of 8 wild types) — behavioural and **unscored**, one laboratory, no EEG, and handling also provoked seizures *on some occasions*, so the stimulus is not shown to be specifically acoustic. **Withdrawn:** the two false clauses, the premise, the rat-only sentence in the `consolidated baseline` interneuron claim, and four smaller misstatements (a 2020 date for a 2014 record; a "commentary" that is the article's own front-matter summary; the mouse data attributed to the wrong null line; a 2–3-week lifespan against the source's *3 to 4 weeks maximum*). **Unchanged:** the prohibition on asserting **epileptogenesis as a measured process** in any WWOX model — nobody has measured that transition, and a provocation is provoked susceptibility, not epileptogenesis; the kindling-like progression as a rat-only result; every rat datum; both claims' status; and **T3** for any transfer of an audiogenic phenotype to a human genotype. A constitutive biallelic null models neither human missense allele.
+
+*(The withdrawal was written as a candidate, audited blind against the source before propagation, and landed with the operator's authorisation. A negative is a claim, and it is read and retired like one.)*
 
 **WM v2.1 → v3.0 (2026-07-14) — MAJOR baseline reversal.** Withdrew the equation `normal mRNA + absent protein = post-translational degradation`. Johannsen 2018 explicitly states two alternatives: impaired translation **or** premature degradation. Consequences: CLAIM 019 keeps the human datum on the exact variant but downgrades the cause to unresolved; CMA, `LRSVQ`, and the helix-lid model remain hypotheses transferred from P252A/AlphaFold, **not** a demonstrated Q230P mechanism; C299R withdrawn as a validated catalytic/off-lid control; the first experimental gate separates synthesis, insolubility, and turnover, with abundance and function measured together; an SDR stabilizer is `conditional / not design-ready`.
 

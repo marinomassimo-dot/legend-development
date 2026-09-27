@@ -8341,6 +8341,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Next action:** full-text retrieval + deep-dive in next session
 **Flags:** FASE 1 batch entry / no deep-dive yet
 **Note:** Title: The tumour suppressor gene WWOX is mutated in autosomal recessive cerebellar ataxia with epilepsy and mental retardation
+**Resolved (`BATCH_20260927_002`, 2026-09-27):** ✅ **letto integralmente il 2026-09-13**, receipt `FTR-20260913-24369382-01` (`complete_fulltext_read`; manifest `deepdive_manifests/PMID24369382.json`, 35 locator), su `files/fulltext/PMID24369382_Mallaret2014_PMCreader.html`. Registrato come [[paper_registry_current#PAPER 042]]; questa voce resta come lineage di triage. **Current status:** processed — full text reviewed. **Claim links:** 007 · 008 · 019 · 030 · 033 · **037** (provocazione audiogena e crisi spontanee nel topo `Wwox`-null costitutivo, comportamentali e non scorate, con comparatore wild-type `n = 8`). Il precedente `FTR-20260726-24369382-01` (`legacy_reconstruction`) è superato per nome. Coda `FT-128` chiusa dalla lettura; il debito dichiarato residuo è Supplementary Video 1.
 
 ## LIT-0295
 **Short title:** Generation and characterization of mice carrying a conditional allele of the...

@@ -224,3 +224,13 @@ and to `CC-20260922-SEIZURE-ASCERTAINMENT-01` for what is genuinely new.
 queued against it."* The lesson I first drew — about chains named in batch logs rather than in
 claims — is the same lesson one level up: **a repair queued and unapplied is a finding stored where
 its reader will not be standing.**
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260927_002` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** **SUPERSEDED IN PART — §1 satisfied, §2c overtaken by the reading.** Not propagated as written, and not closed as a whole.
+
+- **§1 (the naming repair) is satisfied.** `CLAIM 005`'s chain sentence now names all four papers — PMID 19936220 (`PAPER 057`), PMID 19500159 (`PAPER 058`), the terminus PMID 17803050 (`PAPER 059`) and PMID 24369382 (`PAPER 042`) — and states that Mallaret 2014 is **not** a link of that chain. The wording differs from this candidate's, because its sentence *"Mallaret … has never been read in full"* is **now false**: the paper was read in full on 2026-09-13 (`FTR-20260913-24369382-01`), which is what `BATCH_20260927_002` propagates.
+- **§2c is overtaken.** Its proposed boundary text — *"the contesting evidence is unread"*, *"abstract depth"*, *"the prohibition stands"*, `REVIVAL_TRIGGER: acquisition of PMID 24369382's body` — describes a state that ended on 2026-09-13. The body is read; the mouse audiogenic provocation is recorded from the Results and Methods with its denominators and comparator; the trigger has fired and is replaced.
+- **What survives untouched and is still owed:** §2a's append-only correction to the `PMID30370248` dossier (already written there), and §2d's four refusals, of which the one that matters is unchanged in substance — **the prohibition on asserting epileptogenesis as a measured process is not lifted**, and `BATCH_20260927_002` left it byte-identical.
