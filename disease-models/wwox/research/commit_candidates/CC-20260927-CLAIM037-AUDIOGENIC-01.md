@@ -209,3 +209,21 @@ statement is added, removed or implied anywhere in this candidate.
   `CC-20260922-SEIZURE-ASCERTAINMENT-01`, `CC-20260826-CLAIM037-01`, the `BATCH_20260922_SEIZURE`
   changelog row and the `BATCH_20260927_001` report. Found none; all three of the latter record the
   contradiction as an open residue.
+
+---
+
+## BLIND LOCATOR AUDIT — outcome (2026-09-27, appended by the Orchestrator)
+
+Record: [`2026-09-27_CLAIM037_audiogenic_blind_audit.md`](../locator_audits/2026-09-27_CLAIM037_audiogenic_blind_audit.md).
+17 triples: **11 SUPPORTED · 2 OVERSHOOT (minor) · 3 UNDERSHOOT · 0 NOT_IN_SOURCE · 1 UNVERIFIABLE_SURFACE** (triple 17, a declared figure attestation). All 16 text quotes verbatim in the source.
+
+Owed before propagation — wording follows the source, not the triple:
+- **T6** keep the qualifier *"on some occasions"* (handling-induced seizures).
+- **T9** drop "home cage": the source says *"conventional polycarbonate cages"*; anchor is the 3rd Methods paragraph (also T10).
+- **T4** carry *"at different times"* and the sphincter sign; record that the Fig. 4 legend describes three mice while the text says all four seized.
+- **T15** carry both reasons: *"the severe condition and early death"*.
+- **T16** carry the full rat comparison (rat condition "similar to" patients and knock-out mice; mutated WWOX not detected in rat tissue blots; human disease milder than both models).
+
+Scope the audit adds (the source contradicts, beyond D1–D7): CLAIM 037 title clause "behaviourally since 2020"; "no n, no strain, no stimulus protocol and no control"; the "independent" commentary sentence (it is the article's own front-matter summary); the attribution of the mouse spontaneous/provoked data to the NCKU nulls and the "three genotypes" tally (the data are the BK5-Cre full knock-out); lifespan "2–3 settimane" vs the source's "3 to 4 weeks maximum" (partial); the Impact-on-WM sentence. **CLAIM 005 (`consolidated baseline`)**: *"Seizures in the Wwox literature are a rat lde/lde phenotype"* is directly contradicted; the chain sentences ending at the rat-only negative are partially contradicted. CLAIM 005's prohibition on asserting epileptogenesis as measured is **not** contradicted (the paper measures no such process).
+
+Consequence: this candidate narrows a `consolidated baseline` claim and text set by an operator-authorised MAJOR batch → **MAJOR**, operator one-line OK required before the BATCH_COMMIT writes (legend-commit carve-out).
