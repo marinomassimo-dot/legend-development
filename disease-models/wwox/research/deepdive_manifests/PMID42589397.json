@@ -1,0 +1,108 @@
+{
+ "schema_version": 2,
+ "pmid": "42589397",
+ "doi": "10.3390/ijms27156740",
+ "receipt": "FTR-20260921-42589397-01",
+ "landing": [
+  "CLAIM 025",
+  "CC-20260922-CLAIM025-SIGN-INVARIANCE-01"
+ ],
+ "skills_considered": [
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "No deep dive was run. The pass persisted verbatim locators for sentences already quoted by wave-2 commit candidates; a deep dive would have produced a dossier this pass does not claim."
+  },
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "PMC JATS re-acquired by E-utilities efetch on 2026-09-27 because the artifact the prior receipt fingerprints is not present in this checkout."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Triples are handed to the audit through the commit candidate's LOCATOR TRIPLES FOR BLIND AUDIT section, not run here: producer must not be verifier."
+  }
+ ],
+ "group_assessment": {
+  "waived": "Waived by name. This is NOT a deep dive: it is a targeted locator-capture pass on a paper already carried in the registry with a prior receipt, opened to persist the verbatim sentences that wave-2 commit candidates quote. The deep-dive steps belong to whichever reading promotes or re-rates this record, and waiving them here is cheaper and more honest than filling them from metadata that no one used. Scope of this pass is recorded in the accompanying receipt."
+ },
+ "field_density": {
+  "waived": "Waived by name. This is NOT a deep dive: it is a targeted locator-capture pass on a paper already carried in the registry with a prior receipt, opened to persist the verbatim sentences that wave-2 commit candidates quote. The deep-dive steps belong to whichever reading promotes or re-rates this record, and waiving them here is cheaper and more honest than filling them from metadata that no one used. Scope of this pass is recorded in the accompanying receipt."
+ },
+ "multihop": {
+  "waived": "Waived by name. This is NOT a deep dive: it is a targeted locator-capture pass on a paper already carried in the registry with a prior receipt, opened to persist the verbatim sentences that wave-2 commit candidates quote. The deep-dive steps belong to whichever reading promotes or re-rates this record, and waiving them here is cheaper and more honest than filling them from metadata that no one used. Scope of this pass is recorded in the accompanying receipt."
+ },
+ "corpus_crossquery": {
+  "waived": "Waived by name. This is NOT a deep dive: it is a targeted locator-capture pass on a paper already carried in the registry with a prior receipt, opened to persist the verbatim sentences that wave-2 commit candidates quote. The deep-dive steps belong to whichever reading promotes or re-rates this record, and waiving them here is cheaper and more honest than filling them from metadata that no one used. Scope of this pass is recorded in the accompanying receipt."
+ },
+ "retraction_check": {
+  "waived": "Waived by name. This is NOT a deep dive: it is a targeted locator-capture pass on a paper already carried in the registry with a prior receipt, opened to persist the verbatim sentences that wave-2 commit candidates quote. The deep-dive steps belong to whichever reading promotes or re-rates this record, and waiving them here is cheaper and more honest than filling them from metadata that no one used. Scope of this pass is recorded in the accompanying receipt."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42589397_ZZ2026_PMC_2026-09-27.xml",
+   "sha256": "ae7f429190e0b48faaf91f9df0c79e66dd7986d23c65c21f5564ef8607f898af",
+   "kind": "article_text",
+   "note": "PMC JATS XML acquired 2026-09-27 for a first-hand read of the subtype-direction and statistical-fragility sentences that CC-20260922-CLAIM025-SIGN-INVARIANCE-01 had only by another actor's attestation.",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=13467099&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-09-27",
+    "derived": false,
+    "result_sha256": "ae7f429190e0b48faaf91f9df0c79e66dd7986d23c65c21f5564ef8607f898af"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "JATS from E-utilities efetch db=pmc id=13467099, 193,422 bytes. Abstract separated from body by the validator's own extraction; every locator is matched against the body.",
+  "abstract_anchoring_waived": "No locator draws on the abstract; every entry is matched against the body of the declared JATS artifact.",
+  "note": "Coverage of this pass: Abstract, Results (stratification, Cox models, pathway/immune/hormone sections), Discussion, Methods and Limitations read from the JATS running text. Figures and supplementary tables NOT inspected: the figures are supplementary in this article and the Supplementary tables (S4-S8) that carry the per-subtype survival numbers are a separate file not fetched here -- so the lineage-by-lineage DFS numbers remain unverified at panel level and only the authors' running-text statements about them are receipted.",
+  "entries": [
+   {
+    "proposition": "THE SUBTYPE DIRECTIONS ARE HEDGED IN THE SOURCE AND MUST BE HEDGED IN THE CLAIM: the paper says TENDED, and CC-20260922-CLAIM025-SIGN-INVARIANCE-01's delta-2 wording ('si associa a DFS peggiore') is stronger than this sentence. Read first-hand 2026-09-27, which discharges that candidate's blocking verification item 1.",
+    "snippet": "Patients with Basal-like and HER2-enriched BRCA tended to show more favourable DFS in the high-ratio group, whereas those with Luminal A, Luminal B, and OV tumours showed more favourable DFS in the low-ratio group",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42589397_ZZ2026_PMC_2026-09-27.xml",
+    "anchor": "Results, 'Patient Stratification and Subtype Composition', Kaplan-Meier paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE SOURCE ITSELF REFUSES THE PROGNOSTIC READING OF THOSE DIRECTIONS. This is the sentence that licenses a QUALIFY of CLAIM 025 and forbids any strengthening of it.",
+    "snippet": "Given the modest number of DFS events per subtype and the exploratory nature of the subgroup cutpoints, these effects are descriptive and hypothesis-generating rather than formally validated prognostic groupings.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42589397_ZZ2026_PMC_2026-09-27.xml",
+    "anchor": "Results, 'Patient Stratification and Subtype Composition', sentence immediately following the subtype-direction sentence",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "WHAT THE PAPER GENUINELY STRENGTHENS IS THE RATIO ARCHITECTURE, NOT THE SIGN: in the combined model the ratio survives and the single transcripts do not. This is CLAIM 025's core architectural proposition and the half that must not be lost in qualifying the claim.",
+    "snippet": "remained significant in the combined model with WWOX and HIF1A (HR 0.31, 95% CI 0.14–0.70, p = 4.8 × 10−3), whereas the individual genes lost significance",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42589397_ZZ2026_PMC_2026-09-27.xml",
+    "anchor": "Results, continuous-ratio Cox models, BRCA sentence",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "AND THE DISCRIMINATION IS NEGLIGIBLE ONCE OPTIMISM IS CORRECTED, which is why this source can refuse a direction and cannot raise a corroboration weight.",
+    "snippet": "the optimism-corrected C-indices were centred close to 0 with a wide interval (approximately −0.50 to 0.46)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42589397_ZZ2026_PMC_2026-09-27.xml",
+    "anchor": "Results, LASSO-Cox full breast cohort, bootstrap internal validation sentence",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE OVARIAN COHORT -- THE LARGER ONE -- IS NOT SIGNIFICANT AT ALL in the single-predictor model, which is the second half of the evidence boundary proposed for CLAIM 025.",
+    "snippet": "In OV, the ratio was not significantly associated with DFS in the single-predictor model (HR 1.11, 95% CI 0.92–1.35, p = 0.27; concordance 0.49)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42589397_ZZ2026_PMC_2026-09-27.xml",
+    "anchor": "Results, continuous-ratio Cox models, OV sentence",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}

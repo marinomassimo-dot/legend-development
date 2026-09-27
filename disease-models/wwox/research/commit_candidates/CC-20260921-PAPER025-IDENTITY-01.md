@@ -306,3 +306,102 @@ The two that bear on any future use of this paper's data:
 
 **Growth delta unchanged: `claims +0 · papers +0 · corpus +0`.** `PAPER 025` is corrected, not added;
 `CORPUS-STUB-059` is promoted, not created.
+
+---
+
+## WAVE-2 READINESS (2026-09-27)
+
+**Actor:** ACTOR_ID `scientist`, wave-2 package `splice_sdr` · **Verdict: split.**
+- **(a) identity of `PAPER 025` — byline, title, short title, DOI → `READY_MINOR`** (ops below).
+- **(c) promotion of `CORPUS-STUB-059` / `LIT-0083` with verified metadata → `READY_MINOR`** (ops below).
+- **(a)'s and A4's NOTE CONTENT — the measured-RNA wording with 593/504 bp, the 1:177 carrier rate and
+  the Methods § 2.4 quotation → `DEFERRED`.** One line why: **the evidence bytes are gone from this
+  checkout** — `FTR-20260923-30853297-01/-02` declare
+  `files/fulltext/PMID30853297_WeiszHubshman2019.pdf` and the publisher figure package, and **neither
+  file exists here** (`files/` is gitignored, so a branch transports the receipt and not the evidence),
+  while the article has **no PMC deposit** and is **not open access** on any free route (Unpaywall
+  `is_oa: false`; Europe PMC *"Subscription required"*). No locator can be persisted against bytes that
+  are absent, and no paid access was attempted. **What exactly would unblock it:** the operator-supplied
+  `PIIS1090379818304112.pdf` restored to `files/fulltext/PMID30853297_WeiszHubshman2019.pdf`, fingerprinted,
+  a deterministic extracted TXT declared as `article_text`, and then the three A4 quotations persisted as
+  locators in a new `deepdive_manifests/PMID30853297.json`.
+- **(b) the `PREMISE` note on `CLAIM 018` / `CLAIM 019` → `CLOSE`, closing status `NOT INTEGRATED`.**
+  Evidence: A4 establishes that *"Read depth: abstract only"* is **false** — the paper was read at body
+  depth on 2026-09-23 — so the abstract-depth `PREMISE` note (b) proposes would enter the claim registry
+  as a statement contradicted by the receipt ledger. It must not land in any form, and nothing replaces
+  it: the claims' content was never in question (§5).
+
+**`context_policy` declared: `QUESTION_DRIVEN`** — the questions were bibliographic identity (who wrote
+`PMID 30853297`, what is its title, what is its DOI, and what is `PMID 30356099`'s byline) and the
+presence of the declared evidence artifacts. Registry records were reached with `registry_records.py`.
+
+### 1 · What was done
+
+1. **The byline, title and DOI were re-verified at the source** — PubMed metadata, retrieved 2026-09-27:
+   first author **Weisz-Hubshman M**, last author **Heimer G**, 24 authors, title *"Novel WWOX
+   deleterious variants cause early infantile epileptic encephalopathy, severe developmental delay and
+   dysmorphism among Yemenite Jews"*, `Eur J Paediatr Neurol` 2019;**23**(3):418–426,
+   **`doi: 10.1016/j.ejpn.2019.02.003`**, `pii: S1090-3798(18)30411-2`. This is a **fourth** surface
+   agreeing with §1 and A1, and the registry remains the only outlier. According to PubMed;
+   [DOI](https://doi.org/10.1016/j.ejpn.2019.02.003).
+2. **`PMID 30356099`'s metadata were verified for the promotion** — **Piard J**, Hawkes L, Milh M,
+   Villard L, … Kini U, Philippe C; *"The phenotypic spectrum of WWOX-related disorders: 20 additional
+   cases of WOREE syndrome and review of the literature"*; `Genet Med` 2019;**21**(6):1308–1318;
+   `doi: 10.1038/s41436-018-0339-3`; `PMC6752669`; **electronic publication 2018-10-25**, which is the
+   online-first/issue-year trap A3 names, live for this record. According to PubMed;
+   [DOI](https://doi.org/10.1038/s41436-018-0339-3).
+3. 🔴 **An evidence-locality finding, recorded because it bears on more than this candidate.** Both
+   receipts for `PMID 30853297` name artifacts that are **not present in this checkout**, so a reading
+   this repository counts as done cannot be re-verified here at all. The receipt is historically true and
+   operationally unverifiable — exactly the condition `fulltext_read_receipt.md` warns about — and it is
+   what makes A4's note content undeliverable rather than merely unfinished.
+4. **No reading was performed for this item**, and none is claimed: nothing here rests on the body of
+   either paper. No receipt is written by this package for `PMID 30853297` or `PMID 30356099`.
+
+### 2 · Exact operation list for the batch executor
+
+#### OP 1 — `paper_registry_current.md` · `PAPER 025` (**FULL REWRITE** file; described as full-rewrite edits)
+- `replace-within`: old `**Short title:** Piard 2019 EJPN exon 6 / Q230P` → new `**Short title:** Weisz-Hubshman 2019 EJPN exon 6 / Q230P`
+- `replace-within`: old `**Full title:** Novel WWOX deleterious variants cause early infantile epileptic encephalopathy, severe developmental delay and dysmorphic features` → new `**Full title:** Novel WWOX deleterious variants cause early infantile epileptic encephalopathy, severe developmental delay and dysmorphism among Yemenite Jews`
+- `replace-within`: old `**Authors:** Piard et al.` → new `**Authors:** Weisz-Hubshman M, Meirson H, Michaelson-Cohen R, Beeri R, Tzur S, Bormans C, Modai S, Shomron N, Shilon Y, Banne E, Orenstein N, Konen O, Marek-Yagel D, Veber A, Shalva N, Imagawa E, Matsumoto N, Lev D, Lerman Sagie T, Raas-Rothschild A, Ben-Zeev B, Basel-Salmon L, Behar DM, Heimer G`
+- `replace-within`: old `**Journal/source:** *European Journal of Paediatric Neurology*` → new `**Journal/source:** *Eur J Paediatr Neurol* 2019;23(3):418-426`
+- `replace-within`: old `**Identifier:** PMID 30853297 / DOI 10.1016/j.ejpn.2019.02.003` → new `**Identifier:** PMID 30853297 / DOI 10.1016/j.ejpn.2019.02.003 (verified at PubMed and against the publisher PII S1090-3798(18)30411-2, 2026-09-27) / no PMCID`
+- `replace-within`: old `**Note:** important for allele-specific logic and exon-based pathogenicity` → new
+
+```text
+**Note:** important for allele-specific logic and exon-based pathogenicity. 🔴 **Byline corrected 2026-09-27:** the record carried *"Piard et al."*, the first author of a DIFFERENT 2019 WWOX paper (`PMID 30356099`, Genet Med, the 20-case WOREE cohort) — the identifier of one paper with the byline of another. Corrected against four independent surfaces (PubMed metadata, the publisher's own figure package, this model's splice-transcript census, and Oliver 2023's Table S1, which lists the two papers as separate rows). Nothing about `CLAIM 018` or `CLAIM 019` changes: a wrong byline is not a wrong finding. ⚠️ **Read depth is NOT abstract-only** — `FTR-20260923-30853297-01/-02`, `partial_fulltext_read`, body pages read — and any note asserting abstract depth for this record contradicts the receipt ledger. 🔴 The declared evidence artifacts are **absent from this checkout**, so the reading cannot be re-verified here; the content of that reading (RT-PCR product sizes, the founder carrier rate, Methods § 2.4) is therefore NOT written into this record until the bytes are restored and locatored.
+```
+
+#### OP 2 — `paper_registry_current.md` · `CORPUS-STUB-059` → a new `PAPER` record (full rewrite)
+Promote with the verified metadata of item 2 above. Required fields as drafted:
+`Short title: Piard 2019 Genet Med — WOREE phenotypic spectrum, 20 additional cases` ·
+`Authors:` the verified byline (Piard J … Philippe C) · `Journal/source: *Genet Med* 2019;21(6):1308-1318` ·
+`Identifier: PMID 30356099 / PMCID PMC6752669 / DOI 10.1038/s41436-018-0339-3` ·
+`Status: processed` · `Evidence depth: partial_fulltext_read (FTR-20260811-30356099-01, FTR-20260921-30356099-02)` ·
+`Role: largest WOREE cohort in the model's cohort reasoning; genotype-phenotype correlation, null genotypes most severe` ·
+`Note:` carry (i) the erratum `PMID 30783266` link with *"administrative: one patient investigated by genome rather than exome sequencing; no case count, genotype, phenotype or outcome changes"*, and (ii) 🔴 **the online-first trap, by name:** *"issue year 2019, electronic publication 2018-10-25; Oliver 2023's Table S1 cites it as 'Piard J et al. Genet in Med. 2018'. ONE paper — a PAPER record created from Oliver's string would duplicate this one."*
+**The stub is replaced by the PAPER record, not kept beside it**, and `CORPUS-STUB-059` is removed in the
+same rewrite so that no record with an empty `Authors` field survives for a byline to be borrowed from
+again.
+
+#### OP 3 — `literature_tracking_log_current.md` · `LIT-0083` (record-scoped)
+- `replace-within`: old `**Short title:** corpus paper 59` → new `**Short title:** Piard 2019 Genet Med — WOREE phenotypic spectrum (20 additional cases)`
+- `replace-within`: old `**Authors:** not yet extracted` → new `**Authors:** Piard J, Hawkes L, Milh M, Villard L, Borgatti R, Romaniello R, Fradin M, Capri Y, Héron D, Nougues MC, Nava C, Tarta Arsene O, Shears D, Taylor J, Pagnamenta A, Taylor JC, Sogawa Y, Johnson D, Firth H, Vasudevan P, Jones G, Nguyen-Morel MA, Busa T, Roubertie A, van den Born M, Brischoux-Boucher E, Koenig M, Mignot C, Kini U, Philippe C`
+- `replace-within`: old `**Year:** unknown` → new `**Year:** 2019 (issue) / 2018-10-25 (online first) — one paper, two citable years`
+- `replace-within`: old `**Source type:** not yet screened` → new `**Source type:** primary cohort + review`
+- `replace-within`: old `**Journal/source:** not yet extracted` → new `**Journal/source:** Genet Med 2019;21(6):1308-1318`
+- `replace-within`: old `**Status:** discovered` → new `**Status:** processed`
+- `replace-within`: old `**Next action:** screening and tier assignment` → new `**Next action:** none — promoted to a PAPER record 2026-09-27; erratum PMID 30783266 linked (administrative)`
+
+#### OP 4 — `dismissal_ledger_current.md` · `D-22` row
+As drafted in §4(e), **number allocated by the batch** (`D-17` reserved). Text unchanged.
+
+### 3 · What is still pending
+
+The three A4 quotations, and with them A4's replacement `Note` wording and the `1:177`-belongs-to-the-splice-allele
+caveat. All three are **one restored PDF away**, and none of them is needed for the identity ops above.
+
+> ⚠️ **Record-scoped, and one of these strings is not unique:** `**Authors:** not yet extracted` occurs
+> **145** times in `literature_tracking_log_current.md` on the current tree. The executor addresses
+> `LIT-0083` and replaces within that record; the `PAPER 025` strings above were each measured as
+> occurring **exactly once** in `paper_registry_current.md`.

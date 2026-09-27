@@ -194,3 +194,63 @@ on an exon-6-affecting allele**. 🔴 **It also means the defect was latent in a
 was meant to execute** — the same class as the `+8`-versus-6-nt sign error repaired in that packet
 earlier this session, and found the same way: by comparing the packet against a second allele rather
 than re-reading it alone.
+
+---
+
+## WAVE-2 READINESS (2026-09-27)
+
+**Actor:** ACTOR_ID `scientist`, wave-2 package `splice_sdr` ·
+**Verdict: split.** §1 + §4 constraint 4 → **`READY_MINOR`, and the §1 half is APPLIED OUTSIDE BATCH**
+(`therapeutic_strategies_current.md` is not one of the four scientific current files, and this edit moves
+neither a `SCORE` nor a `SAFETY` line). §2/§3 (the ceiling revision) → **`READY_MAJOR`, not applied**:
+it changes the stated expected value of a named strategy and rests on an unmeasured branch.
+**`context_policy` declared: `QUESTION_DRIVEN`** for the one source reopened (`PMID 30362252`, for the
+normaliser question of §4 constraint 4); `SYNTHESIS` for the rest, which is adjudication against the
+repository's own records.
+
+### 1 · APPLIED OUTSIDE BATCH — §1, the unconditional half
+
+`disease-models/wwox/therapeutics/therapeutic_strategies_current.md`, record `TX-001`, `Mechanism`:
+
+- **old text (verbatim):** `Exon skipping, cryptic acceptors, intron retention or multiple isoforms could emerge.`
+- **new text (now in the file):** `Exon skipping is EXCLUDED by architecture — exon 9 is the terminal exon, there is no exon 10 and no intron in the 3'UTR, so skipping it is not a splice outcome but the absence of one; what remains open is cryptic acceptors, intron retention, intronic polyadenylation or multiple isoforms. ⚠️ All four published WWOX splice-allele measurements report skipping, so the field's empirical prior is INAPPLICABLE to this allele rather than merely weak (2026-09-27, wave-2 splice_sdr).`
+
+Nothing else in `TX-001` is touched: **`Provisional scoring` is unchanged**, and no obstacle, gate or
+next action is re-ranked.
+
+### 2 · §4 constraint 4 is now RECEIPTED rather than attested
+
+The Davids normaliser sentence was read first-hand from PMC JATS this session and is locatored in
+`deepdive_manifests/PMID30362252.json` (entry 3, verified): *"The residual expression of the exon 1–2
+junction may be explained by the amplification of NM_130791.3, which has increased expression of its
+exon 5–6 junction."* Receipt prepared, **not** recorded: `receipts_pending/splice_sdr_30362252_1.json`.
+§8's second, independent failure mode of the same normaliser (junction overlap at the `c.517` acceptor)
+remains **another actor's attested work** and is labelled so in §8 already.
+
+### 3 · Exact operation list for the batch executor (the parts NOT applied)
+
+#### OP 1 — `therapeutic_strategies_current.md` · `TX-001` · a `Ceiling note` (`READY_MAJOR`)
+**Op:** `insert-after` the `Mechanism` bullet.
+
+**new text:**
+
+```text
+- **Ceiling note (2026-09-27, CONDITIONAL — the `c.1063` outcome is PREDICTED, `DS_AG 0.64`, never measured):** the expected value of this strategy is **bimodal**, and the experiment that resolves it is the gating assay this record already requires. IF the cryptic acceptor at `c.1063` is used, the transcript is in-frame, carries no PTC and encodes a **412-aa** protein (`p.Gln353_Gln354del`) — correction then recovers **two residues, not a protein**, and the stated efficacy endpoint (*"la frazione di trascritto correttamente spliced"*) can move a long way while the protein endpoint barely moves. IF intron-8 retention or intronic polyadenylation dominates, correction recovers **a protein from none**. 🔴 What collapses under the first branch is the FRAMING of this strategy as restoring an absent protein, **not** the strategy: two residues carrying a tertiary staple and a helix N-cap are not nothing, and the missense allele in trans is untouched by any of this. **No re-score:** `FLAG FIRST; SCORE ONLY AFTER MECHANISM + REAGENT + ALLELE VERIFICATION`, and none of the three is satisfied.
+```
+
+#### OP 2 — `tx001_experiment_decision_packet_20260921.md` · design section (`READY_MINOR`, **not** applied here)
+Add constraints 2, 3 and 4 of §4 as rows, each with its false-negative direction named. **Not applied
+by this package** because that packet is being edited by the wave-2 items that own it; applying a
+third hand's rows to the same table is how a laboratory document acquires two different constraint
+lists. The row texts are §4 items 2–4 verbatim.
+
+#### OP 3 — `Provisional scoring`
+**Explicitly NO operation.** §5 item 4 of this candidate refuses a re-score, and that refusal is carried
+forward unchanged.
+
+### 4 · What is still pending
+
+- **The ceiling note is gated on nothing except a decision**, and the decision is the batch's: it is
+  `READY_MAJOR` because it moves a strategy's expected-value framing, not because evidence is missing.
+- Edits 2–3's conditional half remains **conditional on the unmeasured `c.1063` outcome**, and that
+  wording is in the note itself rather than in a promise to add it later.
