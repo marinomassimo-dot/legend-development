@@ -182,7 +182,9 @@ The canonical P1–P7 codes follow the WWOX working model and claim registry. **
 **Status:** integrated
 **Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260913-36828035-03`; manifest `deepdive_manifests/PMID36828035.json`, dossier `fulltext_dossiers/PMID36828035.md`. Earlier partial receipts `FTR-20260826-36828035-01` / `-02` stand in the ledger.
 **Identity record (BATCH_20260926_ALDAZ, 2026-09-26):** until this batch the record carried an invented `Full title` (a restatement of `CLAIM 006` + `CLAIM 007`, not the title of any article) and no identifier, so an identity query for PMID 36828035 could not reach it. Normalised from the article XML. The same paper is also `PAPER 112` (registered by `BATCH_20260926_ALDAZ_R1`) and `CORPUS-STUB-053` → `PAPER 112`; both are kept append-only and point here. Transferability and clinical relevance are unchanged by this normalisation: the proposal to raise clinical relevance to MODERATE (CC-20260826-PROVENANCE-PAPER007-01 §3.B) is not adopted: the field rates relevance to the reference genotype, both claims this record carries hold P47T ≠ Q230P and stay T3, and the paper's value as the corpus's electro-behavioural seizure dataset for a long-lived WWOX mouse is carried by `CLAIM 037`, not by this field.
+**Survival boundary — cite the CURVE, not the text's mean (`CC-20260826-PMID36828035-02` §6.3, verified at source 2026-09-27).** The running text gives a **mean long-term survival of 393 ± 32 days** for the homozygote against **495 ± 23** for the heterozygote and **542 ± 8** for wild type, and the caption reports the test over a cohort of **n = 14 / 30 / 25** with **log-rank p = 0.001**. 🔴 **The mean and the plotted curve are not reconcilable at face value**, and the paper states no computation rule for the mean: Figure 1b runs to 600 days with about **26 % of homozygotes still alive at the last plotted day** and a 50 % crossing near **470–500 d**, while **wild type itself ends near 0.90, not flat at 1.0** — so "comparable to wild type" has a moving comparator here too. Any canonical use of this dataset quotes the curve, the three cohort sizes and the log-rank value; a bare "mean survival 393 days" understates the homozygote's tail and hides the comparator's own decline. Locators: `deepdive_manifests/PMID36828035.json` entries 13–15 (text), 18 (panel), 56–57 (caption and test, added 2026-09-27).
 **Primary pathway:** P6 — neuroinflammation
+**White-matter boundary — the Olig2⁺ deficit is a CORPUS-CALLOSUM measurement and it is not a myelin result (`CC-20260826-CLAIM006-HARDENING-01` residue, 2026-09-27).** Figure 4e counts Olig2⁺ oligodendrocytes *"in three independent 500 μm2 regions spanning the entire imaged corpus callosum"*, `n = 3` mice per group, unpaired t-test at `p < 0.01`: mutant ≈122 vs wild type ≈205 at 80 days and ≈117 vs ≈235 at 250 days, each with an asterisk. 🔴 **No within-genotype 80-vs-250-day bracket is drawn, so progression is UNTESTED**, and the widening relative gap is driven by the **wild type rising**, not by the mutant falling — 80 days is the earliest age sampled, not a demonstrated onset. ⚠️ **The same paper reports no myelin difference in the region above it**: *"no significant differences in Mbp staining were detected when comparing"* the two genotypes in parietal cortex above the corpus callosum (Results 2.6, Supplementary Figs. 6a–d), which does not establish equivalent myelination elsewhere or by other measures but does forbid reading the cell-count deficit as a demonstrated hypomyelination. **Scope:** this is white matter, **not** the hippocampal compartment of [[claim_registry_current#CLAIM 006]], and it is not carried by any claim today; `Olig2` appears in no claim but [[claim_registry_current#CLAIM 003]], whose residual oligodendroglial limb is a different model and a different question. Locators: `deepdive_manifests/PMID36828035.json` entries 23 (panel), 36 (Mbp), 58 (caption, added 2026-09-27).
 **Secondary pathway:** P3 — interaction logic
 **Model/species:** mouse / functional variant study
 **Genotype/model:** P47T
@@ -418,7 +420,7 @@ The canonical P1–P7 codes follow the WWOX working model and claim registry. **
 **Journal/source:** *Epilepsia*
 **Identifier:** PMID 36779245 / PMC PMC10952634 / DOI 10.1111/epi.17542
 **Status:** filtered_in
-**Evidence depth:** complete_fulltext_read — `FTR-20260804-36779245-02`; manifest `deepdive_manifests/PMID36779245.json` (20 locators, schema v2, strict PASS, 3 declared gaps); declaration reconciled from the ledger by `CC-20260920-REGISTRY-LEDGER-DEPTH-01` (BATCH_20260920_001) — the reading is the receipt's, not this batch's
+**Evidence depth:** complete_fulltext_read — `FTR-20260804-36779245-02`; manifest `deepdive_manifests/PMID36779245.json` (30 locators, schema v2, 3 declared gaps; structural PASS — two declared artefacts, including the 2026-08 XML the first 20 locators quote, are absent from this deployment, which is an evidence-locality fact and not a provenance failure of the reading); declaration reconciled from the ledger by `CC-20260920-REGISTRY-LEDGER-DEPTH-01` (BATCH_20260920_001) — the reading is the receipt's, not this batch's. **Two later PARTIAL re-reads exist and NEITHER supersedes the complete one** (`CC-20260914-EVIDENCE-DEPTH-01`, re-derived from the ledger 2026-09-27): `FTR-20260810-36779245-03` (methods, results, tables, discussion) and `FTR-20260923-36779245-04` (**supplementary only** — it read `Table S1`, the surface `-02` recorded as `unavailable`, and found a variant/ACMG census with no age, outcome or survival column). A later partial is an ADDITION to the covered surface, never a downgrade of the complete event, and the two together are why this record's depth does not move. Ten locators were added on 2026-09-27 (entries 20-29, by two wave-2 packages) from a re-acquired PMC surface (`PMID36779245_Oliver2023_PMC_2026-09-27.xml`), declared beside the historical artefact rather than substituted for it.
 **Primary pathway:** clinical spectrum / natural history / survival analysis
 **Model/species:** human — 13 pazienti, 12 famiglie, 5 centri
 **Genotype/model:** biallelic WWOX variants — N/N / N/M / M/M
@@ -565,13 +567,13 @@ The canonical P1–P7 codes follow the WWOX working model and claim registry. **
 ---
 
 ## PAPER 025
-**Short title:** Piard 2019 EJPN exon 6 / Q230P
-**Full title:** Novel WWOX deleterious variants cause early infantile epileptic encephalopathy, severe developmental delay and dysmorphic features
-**Authors:** Piard et al.
+**Short title:** Weisz-Hubshman 2019 EJPN exon 6 / Q230P
+**Full title:** Novel WWOX deleterious variants cause early infantile epileptic encephalopathy, severe developmental delay and dysmorphism among Yemenite Jews
+**Authors:** Weisz-Hubshman M, Meirson H, Michaelson-Cohen R, Beeri R, Tzur S, Bormans C, Modai S, Shomron N, Shilon Y, Banne E, Orenstein N, Konen O, Marek-Yagel D, Veber A, Shalva N, Imagawa E, Matsumoto N, Lev D, Lerman Sagie T, Raas-Rothschild A, Ben-Zeev B, Basel-Salmon L, Behar DM, Heimer G
 **Year:** 2019
 **Source type:** human case series
-**Journal/source:** *European Journal of Paediatric Neurology*
-**Identifier:** PMID 30853297 / DOI 10.1016/j.ejpn.2019.02.003
+**Journal/source:** *Eur J Paediatr Neurol* 2019;23(3):418-426
+**Identifier:** PMID 30853297 / DOI 10.1016/j.ejpn.2019.02.003 (verified at PubMed and against the publisher PII S1090-3798(18)30411-2, 2026-09-27) / no PMCID
 **Status:** processed
 **Primary pathway:** genotype-phenotype / exon 6 logic
 **Secondary pathway:** clinical spectrum
@@ -581,7 +583,7 @@ The canonical P1–P7 codes follow the WWOX working model and claim registry. **
 **clinical relevance:** HIGH
 **Claim links:** 018, 019
 **Role:** exon 6 skipping + Q230P compound-context anchor
-**Note:** important for allele-specific logic and exon-based pathogenicity
+**Note:** important for allele-specific logic and exon-based pathogenicity. 🔴 **Byline corrected 2026-09-27:** the record carried *"Piard et al."*, the first author of a DIFFERENT 2019 WWOX paper (`PMID 30356099`, Genet Med, the 20-case WOREE cohort) — the identifier of one paper with the byline of another. Corrected against four independent surfaces (PubMed metadata, the publisher's own figure package, this model's splice-transcript census, and Oliver 2023's Table S1, which lists the two papers as separate rows). Nothing about [[claim_registry_current#CLAIM 018]] or [[claim_registry_current#CLAIM 019]] changes: a wrong byline is not a wrong finding. ⚠️ **Read depth is NOT abstract-only** — `FTR-20260923-30853297-01/-02`, `partial_fulltext_read`, body pages read — and any note asserting abstract depth for this record contradicts the receipt ledger. 🔴 The declared evidence artifacts are **absent from this checkout**, so the reading cannot be re-verified here; the content of that reading (RT-PCR product sizes, the founder carrier rate, Methods § 2.4) is therefore NOT written into this record until the bytes are restored and locatored.
 
 
 ## PAPER 026
@@ -1303,16 +1305,6 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Claim links:** 028
 **Next action:** none — upgraded to PAPER 026
 **Note:** Preserved for lossless corpus alignment. Full integrated record now lives in PAPER 026.
-
-## CORPUS-STUB-059
-**Corpus paper no:** 59
-**Full title:** The phenotypic spectrum of WWOX-related disorders: 20 additional cases of WOREE syndrome and review of the literature
-**Identifier:** PMID 30356099 / DOI 10.1038/s41436-018-0339-3
-**Status:** not_processed
-**Registry role:** corpus placeholder only
-**Claim links:** none
-**Next action:** screening / triage required
-**Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record.
 
 ## CORPUS-STUB-060
 **Corpus paper no:** 60
@@ -4239,18 +4231,18 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Year:** 2011
 **Source type:** Article
 **Journal/source:** Z Naturforsch C J Biosci
-**Identifier:** PMID 21476439
-**Tier (FASE 1):** C
+**Identifier:** PMID 21476439 / DOI 10.1515/znc-2011-1-210
+**Tier (FASE 1):** A
 **Status:** screened — corpus placeholder
 **LIT link:** LIT-0306
 **Primary pathway:** P5 — metabolism / mitochondria / redox
 **Model/species:** not assessed in triage
 **Genotype/model:** unassigned in triage
 **Transferability:** unassigned in triage
-**clinical relevance:** LOW
+**clinical relevance:** HIGH
 **Claim links:** none — triage only
-**Role:** background corpus only
-**Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration.
+**Role:** deep-dive — full text required; the only published assay of WWOX catalysis
+**Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration. 🔴 **Re-tiered 2026-09-27 (C / LOW → A / HIGH):** this is the only published measurement of WWOX catalytic activity — dehydrogenase activity on steroid substrates with NAD⁺ and NADP⁺ and published Km values, oxidation only (abstract depth; `PREMISE: UNREAD_PRIMARY`, no receipt, no locator). **Acquisition, corrected:** a DOI DOES exist — `10.1515/znc-2011-1-210` — and Unpaywall and OpenAlex both classify the article hybrid open access with a publisher-hosted PDF; the publisher answers automated fetches with HTTP 202 and zero bytes. The blocker is an automated-traffic challenge, **not** the absence of a deposit: one human fetch of the publisher PDF closes it, at no cost (`FT-130`, packet item `A11`). **NOT promoted to a PAPER record:** no reading stands behind it.
 
 ## CORPUS P307
 **Short title:** WW domain-containing proteins, WWOX and YAP, compete for interaction with Erb...
@@ -6400,17 +6392,17 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Journal/source:** *Brain* 2014;137(Pt 2):411-419
 **Identifier:** PMID 24369382 / PMCID PMC3914474 / DOI 10.1093/brain/awt338
 **Status:** claim_linked
-**Evidence depth:** complete_fulltext_read — receipt `FTR-20260913-24369382-01` (2026-09-13, `scientist-a`; count corrected by `FTR-20260913-24369382-02`). Work manifest `deepdive_manifests/PMID24369382.json`, schema v2, 35 verbatim locators (28 body on the PMC reader text, 7 figure attestations). All four printed figures inspected as images; no tables printed. Declared debt: Supplementary Video 1 and the supplementary index are unreachable; no conclusion rests on either.
+**Evidence depth:** complete_fulltext_read — receipt `FTR-20260913-24369382-01` (2026-09-13, `scientist-a`; count corrected by `FTR-20260913-24369382-02`). Work manifest `deepdive_manifests/PMID24369382.json`, schema v2, 42 verbatim locators (35 body on the PMC reader text, 7 figure attestations; entries 35–41 added 2026-09-27 by wave-2 `m002`, verified `--verify-artifacts --require-current-schema` PASS). All four printed figures inspected as images; no tables printed. Declared debt: Supplementary Video 1 and the supplementary index are unreachable; no conclusion rests on either.
 **Primary pathway:** genotype-phenotype / WW1 domain function
 **Model/species:** human (fibroblasti di paziente; due famiglie) + topo Wwox-KO costitutivo — i Methods: *"constitutive recombination and producing full knock-out progeny"* (femmine BK5-Cre × Wwox flox/flox); l'intestazione dei Results dice *"Conditional knock-out mouse model"*: l'animale è un KO completo derivato da un allele condizionale
 **Genotype/model:** **p.Pro47Thr omozigote** (WW1) e **p.Gly372Arg omozigote** (SDR) — entrambi SCAR12, presentazione *"milder"* rispetto ai modelli murino e di ratto secondo gli autori
 **Transferability:** T1/T2 — genotipo caution OBBLIGATORIA: P47T ≠ Q230P (domini e meccanismi diversi)
 **clinical relevance:** HIGH — fornisce UNA riga della serie allelica su cui poggia [[claim_registry_current#CLAIM 030]]: P47T omozigote con proteina presente nei fibroblasti del paziente e binding al peptide PPPY perduto in vitro, fenotipo SCAR12 (*"milder"* rispetto ai modelli murino e di ratto secondo gli autori). 🔴 **La dissociazione abbondanza/severità NON è dimostrata da questo paper:** l'abbondanza è misurata in UN SOLO individuo, su tre passaggi della stessa coltura contro quattro linee di controllo, *"based on visual inspection"*, senza densitometria né statistica, e per G372R non è misurata affatto. La dimostrazione è la costruzione CROSS-PAPER di `CLAIM 030`, la cui conclusione non è intaccata. 🔴 La Discussione usa l'abbondanza nella direzione OPPOSTA: attribuisce la presentazione umana più lieve rispetto ai modelli murino e di ratto a una *partial loss of function*, per due ragioni congiunte — la proteina P47T è *"still present, at least in human skin fibroblasts"* e il dominio deidrogenasi/reduttasi è *"presumably still functional in Family 1 and partially functional in Family 2, unlike the dehydrogenase/reductase domain of the WWOX mouse and rat models"*; l'assenza di proteina nel ratto *lde* è affermata separatamente, su dato citato (*"Mutated WWOX is not detected in western blots of lde rat tissues"*).
-**Claim links:** 007, 008, 019, 030, 033 · 037 (the mouse audiogenic and spontaneous seizure dataset, added by `BATCH_20260927_002`) · 005 (its imported-premise boundary cites this paper; same batch)
-**Role:** fonte primaria della serie allelica; àncora della regola "P47T ≠ Q230P"; **e — registrato 2026-09-27 da `BATCH_20260927_002` — l'unica fonte di una provocazione audiogena con comparatore wild-type in un topo `Wwox`, su cui poggia ora [[claim_registry_current#CLAIM 037]]
-**Mouse seizure dataset (registered by `BATCH_20260927_002`, 2026-09-27; audited blind the same day):** il paper contiene l'unico esperimento di provocazione audiogena su un topo `Wwox` con comparatore. Genotipo: `Wwox^flox/flox` × femmine `BK5-Cre`, Cre *"activated in oocytes … leading to constitutive recombination and producing full knock-out progeny"* — **KO completo**, benché l'intestazione dei Results dica *"Conditional knock-out mouse model"*. Protocollo (Materials and methods, *"Animal experiments"*, terzo capoverso): toni digitali **11 e 14 kHz**, 5–10 min, animali *"in conventional polycarbonate cages"*, altoparlanti su tre lati, comportamento videoregistrato. Risultati: **3 su 8** KO a 16 giorni (*"in the first minutes after sound exposure"*); a 20 giorni **i quattro sopravvissuti** convulsionano *"at different times"*, con *"uncontrolled sphincter relaxation"* — ⚠️ la didascalia della Fig. 4 descrive **tre** topi (il primo a 30 s, poi *"two other mice"* a 4 min) mentre il testo dice tutti e quattro, e il paper non dice se i quattro includano i tre del giorno 16; comparatore **0 su 8** wild-type di età e background corrispondenti su 11 o 14 kHz; *"Other stimuli such as animal handling also induced seizures on some occasions"* → la specificità acustica **non è stabilita**; crisi spontanee da *"∼2 weeks of age"* **senza denominatore** e senza procedura di osservazione nei Methods. Classe di evidenza: **comportamentale e fotografica, non scorata** — nessun EEG, nessuna scala, nessuna latenza, nessuna statistica; Fig. 4 sono sedici fotogrammi (manifest entry 33). Debito dichiarato: Supplementary Video 1 non recuperato, e nessuna affermazione vi poggia. Un solo laboratorio — quello stesso dell'allele (Ludes-Meyers et al., 2009) — mai replicato indipendentemente. ⚠️ Il KO costitutivo **non modella** nessuno dei due alleli missense umani dello stesso paper: T2 per la vulnerabilità da perdita biallelica, **T3** per qualunque trasferimento del fenotipo audiogeno a un genotipo umano.
+**Claim links:** 007, 008, 019, 030, 033 · 037 (the mouse audiogenic and spontaneous seizure dataset, added by `BATCH_20260927_002`)
+**Role:** fonte primaria della serie allelica; àncora della regola "P47T ≠ Q230P"; **e — registrato 2026-09-27 da `BATCH_20260927_002` — l'unica fonte, nel corpus letto qui al 2026-09-27 (`PREMISE: INFERENZA`), di una provocazione audiogena con comparatore wild-type in un topo `Wwox`**, su cui poggia ora [[claim_registry_current#CLAIM 037]]
+**Mouse seizure dataset (registered by `BATCH_20260927_002`, 2026-09-27; audited blind the same day):** il paper contiene l'unico esperimento di provocazione audiogena su un topo `Wwox` con comparatore nel corpus letto qui al 2026-09-27 (`PREMISE: INFERENZA` — un universale di corpus, non di letteratura). Genotipo: `Wwox^flox/flox` × femmine `BK5-Cre`, Cre *"activated in oocytes … leading to constitutive recombination and producing full knock-out progeny"* — **KO completo**, benché l'intestazione dei Results dica *"Conditional knock-out mouse model"*. Protocollo (Materials and methods, *"Animal experiments"*, terzo capoverso): toni digitali **11 e 14 kHz**, 5–10 min, animali *"in conventional polycarbonate cages"*, altoparlanti su tre lati, comportamento videoregistrato. Risultati: **3 su 8** KO a 16 giorni (*"in the first minutes after sound exposure"*); a 20 giorni **i quattro sopravvissuti** convulsionano *"at different times"*, con *"uncontrolled sphincter relaxation"* — ⚠️ la didascalia della Fig. 4 descrive **tre** topi (il primo a 30 s, poi *"two other mice"* a 4 min) mentre il testo dice tutti e quattro, e il paper non dice se i quattro includano i tre del giorno 16; comparatore **0 su 8** wild-type di età e background corrispondenti su 11 o 14 kHz; *"Other stimuli such as animal handling also induced seizures on some occasions"* → la specificità acustica **non è stabilita**; crisi spontanee da *"∼2 weeks of age"* **senza denominatore** e senza procedura di osservazione nei Methods. Classe di evidenza: **comportamentale e fotografica, non scorata** — nessun EEG, nessuna scala, nessuna latenza, nessuna statistica; Fig. 4 sono sedici fotogrammi (manifest `entries[33]`, 0-based). Debito dichiarato: Supplementary Video 1 non recuperato, e nessuna affermazione vi poggia. Un solo laboratorio — quello stesso dell'allele (Ludes-Meyers et al., 2009) — mai replicato indipendentemente. ⚠️ Il KO costitutivo **non modella** nessuno dei due alleli missense umani dello stesso paper: T2 per la vulnerabilità da perdita biallelica, **T3** per qualunque trasferimento del fenotipo audiogeno a un genotipo umano.
 **Note:** Promosso in BATCH_20260710_A da [[paper_registry_current#CORPUS P294]]. **Finding decisivo:** Western blot su fibroblasti del paziente P47T (passaggi 10/13/14 vs 4 controlli): *"Based on visual inspection, similar amounts of the mutant and wild-type WWOX protein"*, *"suggesting that the mutation does not alter global protein levels"*; nessuna densitometria né statistica. **La proteina P47T è presente** — su *"visual inspection"* dichiarata, in un solo individuo, tre passaggi della stessa coltura contro quattro controlli: l'abbondanza non è quantificata. Peptide pull-down in vitro con costrutti di fusione e un solo peptide (WBP1, motivo PPPY): gli autori riportano che i costrutti p.Pro47Thr *"failed to interact"* e che la mutazione è *"sufficient to abrogate the affinity"*. In figura (Fig. 3) la corsia del costrutto tandem WW1-2 mutante è vuota entro la misura; quella del costrutto WW1-only mutante non è strettamente vuota (≤ ~2,5–2,8% della densità integrata della corsia wild-type — limite superiore: la corsia wild-type è saturata), ma quella densità è contigua a una scia che si assottiglia dalla banda wild-type saturata e il pannello non distingue binding residuo da alone laterale (lettura di figura attestata, non quantificata dagli autori). La generalizzazione a *"PPXY motif containing interacting partners"* è della didascalia degli autori, non del dato. Gli autori attribuiscono la mitezza a una *partial loss of function*: proteina *"still present, at least in human skin fibroblasts"* e dominio SDR *"presumably still functional in Family 1"*. Pazienti della Famiglia 1: 17-26 anni al 2014. *(`BATCH_20260926_MALLARET`: testo fin qui sottoposto ad audit cieco in quattro giri.)* → **Nessuna menzione di Gln230.** Vedi [[claim_registry_current#CLAIM 030]].
-**Wikilinks:** [[claim_registry_current#CLAIM 007]] · [[claim_registry_current#CLAIM 008]] · [[claim_registry_current#CLAIM 019]] · [[claim_registry_current#CLAIM 030]] · [[claim_registry_current#CLAIM 033]]
+**Wikilinks:** [[claim_registry_current#CLAIM 007]] · [[claim_registry_current#CLAIM 008]] · [[claim_registry_current#CLAIM 019]] · [[claim_registry_current#CLAIM 030]] · [[claim_registry_current#CLAIM 033]] · [[claim_registry_current#CLAIM 037]] · [[claim_registry_current#CLAIM 005]]
 
 ---
 
@@ -7743,5 +7735,27 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Role:** isoform-discrimination anchor for the GSK-3β node — the source of "tau is a disfavoured substrate for β2", **not** "β2 is a weak kinase": on the synthetic peptide pGS-2 the two isoforms are equally active (234.5 ± 7.8 for β1 against 246.5 ± 2.4 nmol/min/mg for β2), and both phosphorylate APP at Thr668 to a similar level.
 **LIT link:** none — this PMID has no literature-log record, and this batch does not create one
 **Note:** 🔴 **Boundary that travels with the record:** the Figure 3 titration series are **not matched** between isoforms (β1 runs 0-0.1-0.3-1-3, β2 runs 0-0.3-1-3-10, no shared top concentration), so **no fold figure may be taken from Figure 3**. The C-terminal deletion is asymmetric: the same 40-residue tail is indispensable to one isoform and dispensable to the other; the higher-order-structure explanation is the authors' hypothesis, and no GSK-3β2 structure exists to settle it. **Canonical use today:** cited by the discovery ledger in `DL-MECH-066` and `DL-MECH-068`; the reading manifest also lists `DL-MECH-067` and `DL-BIO-013` as landing context. The full-text queue (`FT-026`, with its two resolved references queued as `FT-027` and `FT-028`), per the manifest's landing. **Provenance ceiling, declared:** none of the reading's artefacts is present on this disk, so this identity block rests on the manifest and an external bibliographic lookup; re-acquisition is owed before the record is cited outside this corpus.
+
+---
+## PAPER 117
+**Short title:** Piard 2019 Genet Med — WOREE phenotypic spectrum, 20 additional cases
+**Full title:** The phenotypic spectrum of WWOX-related disorders: 20 additional cases of WOREE syndrome and review of the literature
+**Authors:** Piard J, Hawkes L, Milh M, Villard L, Borgatti R, Romaniello R, Fradin M, Capri Y, Héron D, Nougues MC, Nava C, Tarta Arsene O, Shears D, Taylor J, Pagnamenta A, Taylor JC, Sogawa Y, Johnson D, Firth H, Vasudevan P, Jones G, Nguyen-Morel MA, Busa T, Roubertie A, van den Born M, Brischoux-Boucher E, Koenig M, Mignot C, Kini U, Philippe C
+**Year:** 2019
+**Source type:** primary cohort + review of the literature
+**Journal/source:** *Genet Med* 2019;21(6):1308-1318
+**Identifier:** PMID 30356099 / PMCID PMC6752669 / DOI 10.1038/s41436-018-0339-3
+**Status:** processed
+**Record provenance:** created by `BATCH_20260927_003` (2026-09-27) from `CC-20260921-PAPER025-IDENTITY-01` OP 2, which promotes `CORPUS-STUB-059` / `LIT-0083` with metadata verified at PubMed on 2026-09-27. The stub is replaced, not kept beside this record.
+**Evidence depth:** `partial_fulltext_read` — receipts `FTR-20260811-30356099-01` and `FTR-20260921-30356099-02` (a third, `FTR-20260927-30356099-03`, reads the presentation-age and diagnosis-age questions); manifest `deepdive_manifests/PMID30356099.json`
+**Primary pathway:** genotype-phenotype / human clinical spectrum
+**Model/species:** human
+**Genotype/model:** biallelic WWOX variants across null and missense classes; the largest WOREE cohort in this model's cohort reasoning
+**Transferability:** T1
+**clinical relevance:** HIGH
+**Claim links:** none declared by this batch — the record is created for identity and cohort reasoning, and no claim link is added to clear a warning
+**Role:** largest WOREE cohort in the model's cohort reasoning; genotype-phenotype correlation, null genotypes most severe
+**LIT link:** [[literature_tracking_log_current#LIT-0083]]
+**Note:** Erratum `PMID 30783266` is linked and is **administrative**: one patient was investigated by genome rather than exome sequencing; no case count, genotype, phenotype or outcome changes. 🔴 **The online-first trap, by name:** issue year 2019, electronic publication 2018-10-25; Oliver 2023's Table S1 cites it as *"Piard J et al. Genet in Med. 2018"*. **ONE paper** — a PAPER record created from Oliver's string would duplicate this one. ⚠️ This is also the byline that was borrowed by `PAPER 025` (`PMID 30853297`, EJPN) until 2026-09-27; the two are separate papers by different first authors.
 
 ---

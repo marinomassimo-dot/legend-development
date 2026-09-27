@@ -208,8 +208,8 @@ to make a suite green — the only way to move it is to have made the change you
 
 ```yaml
 growth_anchor_ledger: framework/state/growth_anchors.jsonl
-growth_anchor_events: 31
-growth_anchor_head: e6f825fe21be8f7af0f2b3c23fd2492d023e421f1dee6a5557a916d13d4dfb21
+growth_anchor_events: 32
+growth_anchor_head: 331c3a36212de1ed11682855038c9f0947d89cc6d067dfea166f545fb4fe19a9
 ```
 
 ```bash
@@ -320,8 +320,8 @@ above the trigger the next `BATCH_COMMIT` either propagates or records why not. 
 as `SCALE_TRIGGER`: nothing is wrong, something is due.
 
 ```yaml
-panel_relation_legacy_baseline: 13
-panel_relation_legacy_ids: ["PMID17803050", "PMID19500159", "PMID19936220", "PMID22193544", "PMID24871327", "PMID30290271", "PMID30755385", "PMID31340538", "PMID33255508", "PMID34747138", "PMID35716775", "PMID37519886", "PMID40875931"]
+panel_relation_legacy_baseline: 12
+panel_relation_legacy_ids: ["PMID17803050", "PMID19500159", "PMID19936220", "PMID24871327", "PMID30290271", "PMID30755385", "PMID31340538", "PMID33255508", "PMID34747138", "PMID35716775", "PMID37519886", "PMID40875931"]
 ```
 
 🔴 **The eighteen are `unknown_legacy`, and the field is NOT backfilled by inference.** A
