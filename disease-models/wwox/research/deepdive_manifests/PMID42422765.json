@@ -512,6 +512,24 @@
     "artifact": "files/fulltext/PMID42422765_Obeid2026_PMC_2026-09-27.xml",
     "anchor": "Materials and methods, 'Plasmid vectors', final sentence — the only vector-quantity sentence in the Methods",
     "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE NULL USED FOR THE ECoG / SWD DATA IS THE AQEILAN-LABORATORY ALLELE ON FVB, NOT THE NCKU WD1/WD234 NULL AND NOT THE ALDAZ BK5-Cre x flox LINE: the Methods say the KO's generation 'was previously reported' and cite reference 69, which the reference list resolves to Aqeilan et al. 2007, 'Targeted deletion of Wwox reveals a tumor suppressor function' (next entry). CLAIM 037's genotype tally therefore counts five genotypes, not four. Added 2026-09-27 (wave-2 m002; Mirror N6 on BATCH_20260927_002).",
+    "snippet": "Mice were kept on an FVB (Friend leukemia Virus B) background.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42422765_Obeid2026_PMC_2026-09-27.xml",
+    "anchor": "Materials and methods, 'Mice' (sec4.2), first paragraph, second sentence; the first sentence cites bib69",
+    "panel_text_relation": "text_only",
+    "abstract_anchoring_waived": "Added 2026-09-27 (m002): the abstract names no allele or background; a Methods provenance fact has no abstract counterpart."
+   },
+   {
+    "proposition": "REFERENCE 69, cited for the KO's generation, is Aqeilan et al. 2007 (PNAS 104:3949-3954), the targeted-deletion Wwox allele. Added 2026-09-27 (wave-2 m002; Mirror N6).",
+    "snippet": "Targeted deletion of Wwox reveals a tumor suppressor function",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42422765_Obeid2026_PMC_2026-09-27.xml",
+    "anchor": "References, bib69",
+    "panel_text_relation": "text_only",
+    "abstract_anchoring_waived": "Added 2026-09-27 (m002): a reference-list identity has no abstract counterpart."
    }
   ]
  }

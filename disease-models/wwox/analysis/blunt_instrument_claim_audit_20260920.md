@@ -377,6 +377,17 @@ exact failure mode. They are listed with the same chain, compressed.
 | **`CLAIM 004`** | no tumours observed after AAV9 rescue | *"il non-rilievo di tumori qualificato **tre volte** (*gross*, *limited number*, *8–11 months*) in un oncosoppressore con periferia ancora null"* | The endpoint is named and triple-qualified in the claim's own text. ⚠️ **One gap worth noting, not a defect:** the instrument is *gross* necropsy, and `CLAIM 036` records a live, untested allegation that gross/histology misses Wwox-associated osteosarcoma where μCT finds it. The two claims do not cross-reference | `SOUND`, with a missing cross-link |
 | **`CLAIM 014`** | Tochigi excluded from the prenatal leg | *"**PMID 31340538 (Tochigi) contributes early postnatal maturation and hypomyelination at PND5–21 — not prenatal migration, not cortical layering** … It measures no prenatal time point."* | The conclusion is **right** and the prenatal leg correctly rests on Iacomino and Kośla instead. ⚠️ **What is absent is the reason it is right:** that paper did not merely fail to measure migration, it **affirmatively denied it** — *"Wwox is **not required** for proliferation and migration of immature neurons"* — on bulk NeuN, and the **same investigators overturned it one year later** with Satb2/Tbr1 and E16.5 BrdU. The corpus's cleanest worked example of this failure mode is not recorded in canon | `SOUND`, with a high-value addition available |
 
+> ⚠️ **Note appended 2026-09-27** (Scientist, wave-2 `m002`, Mirror review of `BATCH_20260927_002`, follow-up 6)
+> on the **`CLAIM 037`** row above: the clause praised there as *"the textbook execution"* — keeping the authors'
+> alternative *"i topi potrebbero morire prima di convulsionare"* — was **deleted from `CLAIM 037` as falsified**
+> on 2026-09-22 (`BATCH_20260922_SEIZURE`: null-mouse seizures documented inside the lifespan), and the negative
+> the row quotes (*"non hanno epilessia riportata"*) was itself shown to be a survey artefact. On 2026-09-27
+> (`BATCH_20260927_002`) the audiogenic limb followed: Mallaret 2014, read in full, provoked constitutive
+> `Wwox`-null mice audiogenically with a wild-type comparator. The row's **method** point stands — `CLAIM 037`
+> did separate *never tested* from *tested negative* — but its **content** was wrong, and the verdict `SOUND`
+> should be read as *sound in form, falsified in substance*. The row is kept as written, as the record of
+> the audit's 2026-09-20 judgement.
+
 **One coverage note, not a verdict.** `CLAIM 021` (Breton 2021, `consolidated baseline`) is sound for
 its stated scope — neuron-specific `Wwox` loss, neocortical slice LFP and patch-clamp. But its source
 contains the **strongest independent heterozygote signal in the literature** (4/23 het slices vs 0/11

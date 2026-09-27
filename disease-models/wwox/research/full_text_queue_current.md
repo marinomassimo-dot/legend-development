@@ -6210,6 +6210,52 @@ finding obtainable entirely from papers we can read.
 third link inside the claim, records the contradiction, adds a `REVIVAL_TRIGGER` on acquisition.
 **The prohibition is not lifted.**
 
+### ✅ CLOSURE — appended 2026-09-27 (Scientist, wave-2 package `m002`, Mirror F8 on `BATCH_20260927_002`)
+
+*Append-only. Every sentence above is kept as the record of what was believed on 2026-09-22; this
+block states what is true now, and where the text above is false.*
+
+**Reading status:** ✅ **CLOSED** — `complete_fulltext_read`, receipt **`FTR-20260913-24369382-01`**
+(2026-09-13, `contemporaneous_receipt`, `prior_receipt` `FTR-20260726-24369382-01`), corrected by
+`FTR-20260913-24369382-02` (`receipt_correction`, same day). Surface
+`files/fulltext/PMID24369382_Mallaret2014_PMCreader.html`, sha256
+`a3a15a3be0353058fcb6160d602e03f5605b5148edfbb8de081d9f98e45a1413` (re-hashed 2026-09-27, equal to
+the receipt's `source_fingerprint`). Manifest `research/deepdive_manifests/PMID24369382.json`,
+**42 locators** after this package (entries 35–41 added 2026-09-27; `deepdive_manifest.py --pmid
+24369382 --verify-artifacts --require-current-schema` → PASS, 0 gaps). Propagated to canonical by
+`BATCH_20260927_002` (`CLAIM 037`, `CLAIM 005`, `PAPER 042`, `LIT-0294`, WM_v6.0).
+
+**What above is now false, and why:**
+- *"the one link … that was never read"* and **Current depth** `legacy_reconstruction` — the body
+  was read in full on 2026-09-13, **nine days before this entry was opened**. The entry recorded a
+  remote-route result as the state of the corpus.
+- *"This is a paywall, not a route failure … no route will produce it"* and *"Acquisition is a human
+  action"* — the licensed PMC reader surface was already in this repository's `files/` directory.
+  The copyright pre-test measured the **licence**, not the corpus; it cannot say what is already held.
+- *"If nobody has ever audiogenically provoked … a Wwox-null mouse, the mouse/rat discordance is
+  `PREMISE: NOBODY_LOOKED`"* — the premise is **falsified**: the body reports audiogenic provocation
+  of constitutive `Wwox`-null mice at 16 days (*«three of eight»*) and 20 days (the four survivors,
+  *«All knock-out mice presented at different times with seizures»*; the Fig. 4 legend accounts for
+  three), against *«No wild-type mice of matched age and background (n = 8)»*. Retired in canonical
+  by `BATCH_20260927_002`.
+- The day-16 / *"77% dead by day 17"* framing does not transfer to this cohort: *«They eventually
+  died before 4 weeks of age from failure to thrive»*, and four nulls were alive at day 20.
+
+**The five reading questions above, answered from the body** (manifest entries in brackets, 0-based):
+1. The mouse seizure experiment **is in the body** — Results, *«Conditional knock-out mouse model»*
+   [17, 18, 19, 35, 37, 38]; behavioural and unscored, no EEG, no sex stated.
+2. The line is the Aldaz `BK5-Cre` × `Wwox^flox/flox` constitutive full knock-out [20], which the
+   paper calls *«our mice Wwox knock-out model (Ludes-Meyers et al., 2009)»* — i.e. the allele of
+   PMID 19936220 (`PAPER 057`), **not** the NCKU WD1/WD234 null. The two papers' survival figures
+   differ (77% dead by day 17 there; four alive at day 20 here) and are recorded side by side, not
+   reconciled.
+3–5. Recorded in `PAPER 042` (P47T protein presence and binding, the G372R family) by
+   `BATCH_20260926_MALLARET`; not re-litigated here.
+
+**Disposition:** closed; no route is to be spent on this paper. `CC-20260922-CLAIM005-CHAIN-NAMING-01`
+was marked **SUPERSEDED IN PART** by `BATCH_20260927_002`. **The epileptogenesis prohibition is
+still not lifted** — the body measures no longitudinal conversion (see `DIS-011` re-audit, 2026-09-27).
+
 ---
 
 ## FT-129 — The Domain D method set: ten citations declared at their true depth, because the ratchet caught me claiming zero
@@ -6366,6 +6412,12 @@ is not this actor's to initiate. What is recorded is a capability mapping, nothi
 
 1. **Record `21476439` as unacquirable**, not as unread — the same disposition as PMID 24369382
    (`FT-128`) and PMID 18216017 (`FT-129`). Stop spending routes on all three.
+   ⚠️ **Correction appended 2026-09-27 (m002, Mirror F8):** PMID 24369382 is **not** an
+   unacquirable-paper precedent — its body was in `files/fulltext/` and was read in full on
+   2026-09-13 (`FTR-20260913-24369382-01`; see the `FT-128` closure). The disposition for
+   `21476439` stands on its own two routes; the comparison with `FT-128` is withdrawn, and the one
+   with `FT-129` (`18216017`) is unaffected. **Before recording any paper as unacquirable, check
+   `files/` and the receipt ledger first** — a licence test does not see what is already held.
 2. Carry the **oxidation-only / no-reduction** asymmetry into any future functional-readout design.
    It is already in `CC-20260921-WWOX-ENZYMOLOGY-P306-01`; this entry is where a reader looking for
    the paper will land, so it is restated here rather than pointed at.
@@ -6399,6 +6451,9 @@ for a canonical claim; each supports a **flag**, never a scored candidate.
 that `28097321` is likely **unacquirable** here (same class as `FT-128`/`FT-129`); the three COPII papers are
 open and cheap if and only if `NODE 3`'s killer experiment (ERES count + cargo transit in WWOX-KO human
 neural cells) ever returns a positive.
+⚠️ **Correction appended 2026-09-27 (m002, Mirror F8):** `FT-128` is not an unacquirable class — its
+body was held locally and read on 2026-09-13 (see the `FT-128` closure); the comparison stands only for
+`FT-129`.
 **Next action:** none unless `NODE 3` is promoted above flag status. Do not spend acquisition routes on
 `28097321` before then.
 

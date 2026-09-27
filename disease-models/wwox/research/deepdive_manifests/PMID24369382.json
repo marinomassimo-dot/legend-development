@@ -857,6 +857,83 @@
     "anchor": "Figure 1, panel C, both alignment blocks, twelve species rows",
     "panel_text_relation": "text_confirmed_by_panel",
     "found_or_sought": "found"
+   },
+   {
+    "proposition": "PER THE RESULTS TEXT, ALL FOUR SURVIVORS SEIZED AT DAY 20 ('at different times'), with sphincter relaxation. The Fig. 4 legend (next entry) accounts for three mice; the paper does not reconcile the two counts and does not say whether the four survivors include the three that seized at day 16. Added 2026-09-27 (m002; Mirror F2).",
+    "snippet": "All knock-out mice presented at different times with seizures, consisting as before of wild running followed by tonic contractions and clonic movements, and had uncontrolled sphincter relaxation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24369382_Mallaret2014_PMCreader.html",
+    "anchor": "Results, 'Conditional knock-out mouse model', sentence after 'At 20 days, the four surviving mice were exposed to a 14 kHz tone.'",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "mouse",
+     "genotype": "Wwox full constitutive knock-out (BK5-Cre x Wwox flox/flox), 129SV/C57Bl/6",
+     "treatment": "14 kHz tone at 20 days",
+     "comparator": "wild-type mice of matched age and background, n = 8, zero seizures",
+     "endpoint": "audiogenic tonic-clonic seizure, observed on video, unscored"
+    },
+    "abstract_anchoring_waived": "Added 2026-09-27 (wave-2 m002, Mirror review of BATCH_20260927_002): the abstract states the mouse phenotype without denominator, day or stimulus detail; anchoring this body datum to it would let a simplification corroborate a quantity it does not contain."
+   },
+   {
+    "proposition": "THE FIG. 4 LEGEND ACCOUNTS FOR THREE MICE at day 20: a first mouse after 30 s of sound exposure, then two other mice after 4 min. This is the legend's count against the Results text's four. Added 2026-09-27 (m002; Mirror F2, audit T4).",
+    "snippet": "After 4 min sound exposure, two other mice also experienced clonic movements",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24369382_Mallaret2014_PMCreader.html",
+    "anchor": "Figure 4 caption, second sentence of the (B) clause",
+    "panel_text_relation": "text_only",
+    "abstract_anchoring_waived": "Added 2026-09-27 (wave-2 m002, Mirror review of BATCH_20260927_002): the abstract states the mouse phenotype without denominator, day or stimulus detail; anchoring this body datum to it would let a simplification corroborate a quantity it does not contain."
+   },
+   {
+    "proposition": "ACOUSTIC SPECIFICITY IS NOT ESTABLISHED: handling also provoked seizures in the knock-out mice on some occasions. Added 2026-09-27 (m002; Mirror F4).",
+    "snippet": "Other stimuli such as animal handling also induced seizures on some occasions.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24369382_Mallaret2014_PMCreader.html",
+    "anchor": "Results, 'Conditional knock-out mouse model', after the 20-day exposure and the lethargy sentence",
+    "panel_text_relation": "text_only",
+    "abstract_anchoring_waived": "Added 2026-09-27 (wave-2 m002, Mirror review of BATCH_20260927_002): the abstract states the mouse phenotype without denominator, day or stimulus detail; anchoring this body datum to it would let a simplification corroborate a quantity it does not contain."
+   },
+   {
+    "proposition": "THE WILD-TYPE COMPARATOR IS 0 OF 8 on 11 or 14 kHz exposure (matched age and background). Added 2026-09-27 (m002; Mirror F4).",
+    "snippet": "No wild-type mice of matched age and background (n = 8) presented with seizures upon 11 or 14 kHz sound exposure.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24369382_Mallaret2014_PMCreader.html",
+    "anchor": "Results, 'Conditional knock-out mouse model', closing sentence",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "mouse",
+     "genotype": "Wwox full constitutive knock-out (BK5-Cre x Wwox flox/flox), 129SV/C57Bl/6",
+     "treatment": "14 kHz tone at 20 days",
+     "comparator": "wild-type mice of matched age and background, n = 8, zero seizures",
+     "endpoint": "audiogenic tonic-clonic seizure, observed on video, unscored"
+    },
+    "abstract_anchoring_waived": "Added 2026-09-27 (wave-2 m002, Mirror review of BATCH_20260927_002): the abstract states the mouse phenotype without denominator, day or stimulus detail; anchoring this body datum to it would let a simplification corroborate a quantity it does not contain."
+   },
+   {
+    "proposition": "THE MOUSE LIFESPAN FIGURE IS CITED, NOT MEASURED HERE: 3 to 4 weeks maximum, attributed to Aqeilan 2008 and Ludes-Meyers 2009. It falsifies the '2-3 settimane nel topo' figure carried in DIS-011 and CLAIM 037's rat-caveat clause. Added 2026-09-27 (m002; Mirror F7).",
+    "snippet": "These knock-out mice are characterized by a short lifespan of only 3 to 4 weeks maximum",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24369382_Mallaret2014_PMCreader.html",
+    "anchor": "Results, 'Conditional knock-out mouse model', opening paragraph, second sentence",
+    "panel_text_relation": "text_only",
+    "abstract_anchoring_waived": "Added 2026-09-27 (m002): the abstract says only 'short-lived'; it carries no lifespan figure to anchor to."
+   },
+   {
+    "proposition": "THE STUDIED KNOCK-OUT MICE DIED BEFORE 4 WEEKS of failure to thrive, so seizures at day 16 and day 20 fall inside the observed lifespan: the 'they may die before they seize' explanation does not hold for this cohort. Added 2026-09-27 (m002; Mirror F7).",
+    "snippet": "They eventually died before 4 weeks of age from failure to thrive.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24369382_Mallaret2014_PMCreader.html",
+    "anchor": "Results, 'Conditional knock-out mouse model', penultimate sentence",
+    "panel_text_relation": "text_only",
+    "abstract_anchoring_waived": "Added 2026-09-27 (m002): the abstract says only 'short-lived'; it carries no age at death."
+   },
+   {
+    "proposition": "THE PAPER'S RAT COMPARISON, IN THE BODY: the lde rat is said to present with ataxic gait and audiogenic seizures, citing Suzuki 2007 and 2009. The abstract frames the same comparison as 'a phenotype previously observed in the spontaneous Wwox mutant rat presenting with ataxia and epilepsy' (Mirror N4, T16 completeness). Added 2026-09-27 (m002).",
+    "snippet": "results in a condition similar to the presentation of the mutant WWOX patients and the Wwox knock-out mice, as homozygous lde rats present with ataxic gait and audiogenic seizures",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24369382_Mallaret2014_PMCreader.html",
+    "anchor": "Discussion, second paragraph, the lde rat comparison",
+    "panel_text_relation": "text_only",
+    "abstract_snippet": "a phenotype previously observed in the spontaneous Wwox mutant rat presenting with ataxia and epilepsy"
    }
   ]
  }
