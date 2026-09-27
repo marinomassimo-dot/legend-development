@@ -134,3 +134,11 @@ fail loudly on the day it appears rather than joining a backlog.
 
 *No canonical file edited by this candidate. No reading occurred; no receipt claimed.
 Not medical advice.*
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260927_001` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** PROPAGATED
+
+`paper_registry_current.md`, sixteen `Evidence depth` locator counts re-derived **today** rather than copied from the candidate's table: `framework/scripts/locator_count_crosscheck.py` reported 34 declarations, 18 matching and 16 mismatching, every mismatch understating its manifest by +2 to +27, and the sixteen new values are the ones it printed. Re-run after the rewrite: **34 declarations, 34 match, 0 mismatch**. `PAPER 094`'s 6 → 30 is the same edit `CC-20260921-SUPERSEDED-TEXT-POINTERS-01` item (c) asks for and was applied once. The optional `D-23` dismissal row is not landed — this batch skips the optional D-rows, and the row's cost cell has no verbatim source.

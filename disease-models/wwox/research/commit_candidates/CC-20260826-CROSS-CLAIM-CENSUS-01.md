@@ -195,3 +195,11 @@ coverage it does not have.
 [`CC-20260826-SEIZURE-RECONCILIATION-01`](CC-20260826-SEIZURE-RECONCILIATION-01.md).
 §2 requires **one figure to be read** (PMID 34747138, Appendix Fig S1A) before any canonical
 effect. §5 is a proposal, not an edit.
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260927_001` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** SUPERSEDED
+
+Its MAJOR item was propagated by `BATCH_20260922_SEIZURE` through `CC-20260826-SEIZURE-RECONCILIATION-01`, and its only open canonical effect was explicitly deferred until a figure was read — Appendix Fig S1A of PMID 34747138, since read by `CC-20260826-DOSE-ADJUDICATION-01`, which falsifies this candidate's own WPRE prediction. Superseded by supersession. The `NOT_A_CONTRADICTION` dismissal table it records is kept as an analysis record so the next census does not re-litigate those pairs.

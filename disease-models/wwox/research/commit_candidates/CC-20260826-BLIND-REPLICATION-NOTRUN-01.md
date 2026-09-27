@@ -108,3 +108,11 @@ returning `ELIGIBLE` / `CONTAMINATED` with the naming object. It would have retu
 
 None. This record makes no claim and changes nothing. It exists so that the absence of a blind
 result is legible as a **deliberate refusal to fabricate one**, rather than as an omission.
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260927_001` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** NOT INTEGRATED
+
+Reason: determination record over a harness/benchmark procedure, with no canonical target. Its own header says no test was run and no result is claimed, and its verdict is `BLIND_REPLICATION_EXECUTED: NO`. Kept in the append-only queue as the audit trail for why the blind replication did not run.

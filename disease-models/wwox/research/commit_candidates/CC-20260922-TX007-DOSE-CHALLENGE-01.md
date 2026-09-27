@@ -429,3 +429,13 @@ it, and reported that it does not hold.** That is the standard.
 
 **§4b is therefore replaced by §10. The unit defect is real, bounded at exactly 2×, and confined to
 the absolute axis — the 2.1× step itself is robust.**
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260927_001` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** PROPAGATED IN PART
+
+**§2 only.** `discovery_ledger_current.md` `DL-MOL-005`: an append-only rectification strikes "indipendente", re-labels the 2021 study a previous proof-of-concept from the same laboratory and the mWwox≈hWWOX comparison a within-study control rather than a replication, and records that no independent laboratory has replicated any part of the WWOX gene substitution (census 2026-09-22: 3 records, one laboratory). The measured findings are not demoted — multi-domain rescue, durability to P300 and the absence of hepatic expression stand, per the operator rule the candidate cites — and line 112 is not rewritten, because the ledger is append-only. Verified: `PAPER 005` (Repudi 2021) and `PAPER 011` (Obeid 2026) share the senior author, and PMID 34747138 administers a single dose, so every dose-response statement rests on PMID 42422765 alone.
+
+**Still owed:** §3 (journal-name drift), §4/§9/§10 and §9d. Flagged for Mirror ex-post review under §21e: it lowers the evidential standing of the strongest therapeutic arm.

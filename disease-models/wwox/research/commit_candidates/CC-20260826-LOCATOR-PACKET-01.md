@@ -360,3 +360,11 @@ Fields the operator asked for that were not already in each entry. `SOURCE_EXIST
 4. **Where a `pdf_text_dump` is the only surface** (`L-037-a/b/c`), a quote that fails to match
    character-for-character is expected and is **not by itself a finding** — re-check against the
    rendered page before recording a mismatch.
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260927_001` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** NOT INTEGRATED
+
+Reason: verification instrument (14 blind triples), asserting no claim and changing nothing. The audits it was written for were subsequently performed independently and persisted under `research/locator_audits/` (the 2026-09-26 PMID 36828035 and PMID 24369382 blind audits and the R7 audits). The file is kept as the audit trail and is not routed as a change.

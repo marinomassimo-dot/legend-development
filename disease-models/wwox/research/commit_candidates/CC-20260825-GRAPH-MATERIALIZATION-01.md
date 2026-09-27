@@ -57,3 +57,11 @@ last is mechanical:
 **Target WM:** current at BATCH_COMMIT time; rebase required.
 **Batch gate:** intentionally untouched.
 **Ordering:** independent of the two CLAIM 016 candidates; no conflict.
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260927_001` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** PROPAGATED
+
+`claim_registry_current.md#CLAIM 025`, `Clinical meaning`: "Raffina CLAIM 009:" is now "Raffina [[claim_registry_current#CLAIM 009]]:". Wording and direction unchanged, no reverse link added, no relation asserted that the sentence did not already state. Verified: `CLAIM 009` exists and the prose mention was unlinked.

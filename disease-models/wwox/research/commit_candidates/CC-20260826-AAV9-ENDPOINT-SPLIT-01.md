@@ -299,3 +299,13 @@ reproduce the existing gap.*
 
 **Target WM:** MAJOR bump if committed as classified — declared at batch time.
 **Batch gate:** intentionally untouched.
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260927_001` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** PROPAGATED IN PART
+
+**Part 1 only.** `claim_registry_current.md#CLAIM 011`: the flag's final clause "e la lettura che li risolverebbe è `partial_fulltext_read`" is replaced by this candidate's own verbatim replacement recording the discharge. Verified in the receipt ledger before editing: `FTR-20260814-42422765-06` is `complete_fulltext_read` with every coverage field read (tables `not_present`), and `deepdive_manifests/PMID42422765.json` holds 29 locators — 16 figure and 13 body — exactly as the replacement states. `Status: flagged for review` is unchanged, and no `Summary`, endpoint or dose wording moved.
+
+**Still owed, so this candidate stays open:** Part 2 (endpoint × dose × window narrowing, MOTOR → `PARTIAL / NOT_NORMALISED`), which the candidate itself classifies MAJOR fail-closed and which collides with the whole dose family and the FIVECLAIM pair on `CLAIM 004`/`011`; and the two `therapy_levers.md` items D-L1 and D-L2.

@@ -137,3 +137,11 @@ mice. **Report cells, slices, animals AND litters for every group. All four.**
   until data exist. This candidate replaces its `Next action` — *"look for WWOX-specific data on
   the chloride gradient"* — with a design, and nothing else.
 - **Is not medical advice** and proposes no treatment.
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260927_001` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** PROPAGATED
+
+`research_lines_current.md` `RL-GABA-002`: the closure conditions are recorded — the two-axis truth table (`DF_GABA` × mIPSC) with its four outcomes in the candidate's own wording, including the `BOTH` cell's "order of correction matters: raising GABAergic tone before fixing the gradient could worsen"; the requirement that both mIPSC arms be recorded in the same cell before and after TTX; and that a null failing its positive control, its power declaration or its attrition report is `NOT_TESTED`, never `NOT_DIFFERENT`. No `n` is proposed. Propagated third of the three. The status of the line does not change, and no BLOCK-1 field is touched. Flagged for Mirror ex-post review under §21e: the "could worsen" clause is a therapeutic-direction statement, even inside a research line.

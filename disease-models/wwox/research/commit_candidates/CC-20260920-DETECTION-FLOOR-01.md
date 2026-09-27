@@ -107,3 +107,11 @@ thing afterwards, with one fewer thing that a careful reader could use against i
   `CLAIM 014`'s evidence boundary) are **deliberately not included**: they are under source
   verification in a separate task, and a candidate written before that returns would be exactly the
   error this one exists to correct.
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260927_001` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** PROPAGATED
+
+Part (a) propagated by `BATCH_20260921_001`, verified in `CLAIM 030`: "Q230P (SDR) ha proteina non rilevata al Western blot → severo. `PREMISE: DETECTION_FLOOR` — non rilevata non è assente". Part (b), the `D-17` dismissal row, was DEFERRED by the operator and is operator-reserved: it is named here and is not a scientific-file edit this batch may make.

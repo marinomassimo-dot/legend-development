@@ -116,3 +116,11 @@ assay) with a wild-type arm run in parallel.*
 
 **Target WM:** none.
 **Batch gate:** not a `BATCH_COMMIT` object.
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260927_001` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** PROPAGATED
+
+All three downstream records. `therapeutic_strategies_current.md` `TX-005`: the `Mechanism` bullet now carries `CLAIM 016`'s boundary — a general anticonvulsant effect, not a WWOX-specific rescue, and a negative result in an assay of demonstrated sensitivity, with lithium suppressing PTZ seizures in all three genotypes (Fig. 7d) while ethosuximide in the same figure and cohort is `n.s.` in `+/+` and `+/−` — and `EVID` is carried on the failed specificity test rather than on the mechanistic rationale. `therapy_levers.md`: A2 becomes "a repurposing signal whose genotype specificity was tested and not found", and practical priority 2 replaces "disease modifier" with this candidate's own replacement wording. 🔴 **The safety text is preserved byte for byte** — `TX-005`'s `Caution` bullet and its `SAFETY 1` score, A2's monitoring sentence and its "not medical advice" clause, and the file's closing disclaimer are all untouched, and the change removes a therapeutic implication rather than adding one. The verdict stays `DEPRIORITIZE`. Flagged for Mirror ex-post review under §21e, and named to the operator because priority 2 sits under "for clinical discussion".

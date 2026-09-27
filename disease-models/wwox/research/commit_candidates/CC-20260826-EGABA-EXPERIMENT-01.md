@@ -403,3 +403,11 @@ state rather than merely correlate them across cohorts.
 
 None for queueing — this modifies nothing. It is offered as the specified test that
 `RL-GABA-002` has been missing.
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260927_001` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** PROPAGATED
+
+`research_lines_current.md` `RL-GABA-002`: `Next action` now names the specified decisive experiment — gramicidin-perforated-patch measurement of the sign and driving force of GABA in WWOX LoF — and records that the corpus holds zero measurements of the sign of GABA in any WWOX model, so searching for further published chloride-gradient data cannot close the line. Propagated first of the three EGABA candidates, as one ordered change, so that none overwrites another's `Next action`. The line's status stays `high-interest / unresolved`.

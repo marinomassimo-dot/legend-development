@@ -179,3 +179,11 @@ years"** reading must not propagate while the primary reports a **significantly 
 ## BATCH DISPOSITION — `BATCH_20260926_ALDAZ_R6` (2026-09-26, ACTOR_ID `orchestrator`), append-only
 
 **Status:** SUPERSEDED IN PART: its unread-primary premise is false after FTR-20260914-17823927-01 was recovered into the 236-event ledger. Its genotype-class and CNS threshold cautions were retained.
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260927_001` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** SUPERSEDED
+
+Already dispositioned `SUPERSEDED IN PART` by `BATCH_20260926_ALDAZ_R6`; this batch closes it. Verified: `CLAIM 032` cites `PAPER 098` in `Source` and states that the contrast with a null dying before weaning concerns distinct models and quantifies no threshold of brain function — which covers proposals (a) and (c) and the genotype-class and CNS cautions. Proposal (a)'s text asserts "mai letto da LEGEND" / "abstract only, nessuna ricevuta", now false against `FTR-20260914-17823927-01`; (d)'s `FT-111` acquisition entry is obsolete for the same reason; (e)'s `D-18` row rests on a premise that is also false, so if that lesson is still wanted it must be re-drafted, not propagated as written.

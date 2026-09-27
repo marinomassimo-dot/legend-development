@@ -153,3 +153,11 @@ Item **A** (`PAPER 007`) only: propagated except A(5) — the note on both claim
 ## BATCH DISPOSITION — `BATCH_20260926_ALDAZ_R5` (2026-09-26, ACTOR_ID `orchestrator`), append-only
 
 **Status:** PROPAGATED IN PART — §B identity repair: PAPER 027 corrected and made canonical for PMID 25331887; PAPER 030 retained as an explicit historical duplicate. Two partial receipts named; no promotion of claim strength. The remaining read/locator debt is unchanged.
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260927_001` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** DEFERRED
+
+Deferred by this batch's own scope: item C repoints the `Source` of `CLAIM 002`, a `consolidated baseline` claim, onto `PAPER 094`, and a locator audit of that reading is owed before a consolidated-baseline claim's foundation is moved. Items A, B and D are already spent or satisfied (`BATCH_20260926_ALDAZ` / `_R5`; `PAPER 039` declares `partial_fulltext_read — FTR-20260814-34268881-03`), and item E's `meta_gaba` rewrite is explicitly not drafted in the candidate — it must be written from `CLAIM 037` / `CLAIM 040` / `DIS-011` as landed, not from the withdrawn `CC-20260826-CLAIM037-01` wording it cites.

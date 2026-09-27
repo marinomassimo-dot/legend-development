@@ -184,3 +184,11 @@ measured*), and it is the rule that makes `P1–P5` readable as what it is.
   compound heterozygote.
 - **`UNREAD_PREMISE`: measured before landing, not predicted.** No new PMID is introduced —
   `17823927` and `36779245` are both already registered.
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260927_001` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** PROPAGATED
+
+The core statement is canonical through `BATCH_20260926_ALDAZ_R6` from a **complete** read (`FTR-20260914-17823927-01`), verified in `CLAIM 032` ("Wwox è non rilevabile nei tessuti saggiati salvo un segnale tenue nel testicolo; il **cervello non è stato saggiato**") and in the `DL-MECH-046` append-only rectification. The candidate's own premise — the primary unreachable, abstract depth — is superseded by that receipt, and the lifespan datum is now the Breslow figure. Residues NOT landed and named here rather than carried: the `D-35` and `D-36` dismissal rows are operator directives and this batch skips the optional D-rows.

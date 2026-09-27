@@ -62,3 +62,11 @@ Two canonical claims in the same registry state opposite things about the same a
 `CLAIM 011` records ECoG spike-wave discharges in `Wwox`-null mice as a domain its gene therapy
 rescues, and `CLAIM 037` states that seizures are *"explicitly absent in Wwox-null mice"* — and
 neither cites the other.
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260927_001` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** NOT INTEGRATED
+
+Reason: navigation instrument over the 2026-08-26 repair set, with no scientific-file edit; its own header says index only. Its ranking is also stale — its item 1, `CC-20260826-CLAIM037-01`, was superseded and the repair landed as `BATCH_20260922_SEIZURE`.

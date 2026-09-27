@@ -244,3 +244,13 @@ discharge from a focal artefact.
 ## Review required
 
 None for queueing — this modifies nothing.
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260927_001` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** PROPAGATED
+
+`research_lines_current.md` `RL-GABA-002`: the pre-specified test is recorded — `PRIMARY_ENDPOINT` = `DF_GABA` = `E_GABA` − `V_rest`, per neuron by gramicidin-perforated patch at P14–P16, contrast `Wwox^−/−` versus littermate `Wwox^+/+` at P14–P16 only, every other window and genotype secondary. Propagated second of the three.
+
+⚠️ **One thing was written from the candidate and not from the triage of it:** the resource map of §9 **forces two sub-cohorts, not one** — a P14 `DF_GABA` measurement is impossible in an animal whose P21 EEG is still wanted — so the propagated text says two sub-cohorts sharing a breeding cohort, with Arm B first as the decision gate, which is what §9 states.
