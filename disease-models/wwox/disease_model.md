@@ -2,7 +2,7 @@
 
 > **Public, de-identified disease-level model.** Derived from the LEGEND working model with the individual clinical record removed (clinical presentation, treatment regimen, and case-specific surveillance are not included). What remains is the disease-level mechanistic synthesis, the genotype-interpretation rules, the literature-anchored data, and the decision-logic framework — all from public literature. **Not medical advice.** Specific variants appear only as decoupled public worked examples — a destabilizing SDR missense on one side, a canonical splice-acceptor variant on the other — never assembled into one person's genotype.
 
-**Current working model:** WM_v5.5 (`BATCH_20260926_ALDAZ_R6`).
+**Current working model:** WM_v5.6 (`BATCH_20260926_ALDAZ_R7`).
 
 **Model version lineage:** v3.0 (2026-07-14) — a MAJOR baseline reversal (see the repair changelog at the end) illustrating the epistemic discipline in action.
 
@@ -46,6 +46,7 @@
 - N/N genotype → higher risk of seizures, hypertonia, respiratory complications vs N/M and M/M (Gao 2025, n=50).
 - AAV9-hSynI-hWWOX: dose-dependent durable rescue in a Wwox-null murine model, including ECoG/SWD reduction (Obeid 2026).
 - Ketogenic diet associated with seizure improvement in 3/5 WOREE patients (Chong 2023).
+- In the P47T knock-in mouse, sampled cerebellar regions have fewer calbindin-positive Purkinje profiles than wild type at 80 and 250 days; basket-cell genotype tests are nonsignificant at both ages. This does not test progression within P47T or transfer to Q230P. *(CLAIM 041 / Hussain 2023.)*
 
 ### Inferences (INFERENZA)
 - Ca²⁺ / network dysregulation as a primary driver of hyperexcitability — plausible, supported.

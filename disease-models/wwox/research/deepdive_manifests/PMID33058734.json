@@ -562,16 +562,29 @@
         "abstract_anchoring_waived": "The declared surface is a page crop or a figure render, not a text artefact with an extractable abstract, so no abstract_snippet can be matched against it; the abstract of this article is also not an evidentiary surface for any proposition carried out of this reading."
       },
       {
-        "proposition": "LPS arm read as images: asterisks on the WWOX KO bar in panels A (BAL leukocytes), B (BAL protein) and D (BAL:serum FITC-dextran). In the PBS condition of panel B the KO bar sits slightly BELOW flox, so there is no baseline leak difference in the unchallenged animal - consistent with the text's own statement that untreated KO and control do not differ.",
+        "proposition": "In the LPS experiment, Fig. 3 marks the WWOX KO challenged bars in panels A, B and D. Under PBS in panel B the KO bar sits slightly below flox; Results report no statistically significant untreated genotype difference, not baseline equivalence.",
         "snippet": "EC-specific WWOX KO mice exhibit greater vascular leak during LPS-induced ARDS.",
         "surface": "figure",
         "artifact": "files/figure_renders/PMID33058734/fig3_full.png",
         "anchor": "fig3_full.png: 600 dpi render of the printed figure region, inspected as an image at native resolution.",
         "panel_text_relation": "text_confirmed_by_panel",
-        "abstract_anchoring_waived": "The declared surface is a page crop or a figure render, not a text artefact with an extractable abstract, so no abstract_snippet can be matched against it; the abstract of this article is also not an evidentiary surface for any proposition carried out of this reading."
+        "abstract_anchoring_waived": "The declared surface is a page crop or a figure render, not a text artefact with an extractable abstract, so no abstract_snippet can be matched against it; the abstract of this article is also not an evidentiary surface for any proposition carried out of this reading.",
+        "contradicts_locator": {
+          "manifest": "disease-models/wwox/research/deepdive_manifests/PMID33058734.json",
+          "entry": 26,
+          "what_changed": "2026-09-26 blind audit found an overshoot or unsupported relation in the prior proposition; narrowed it to the measured source and recorded the verdict in disease-models/wwox/research/locator_audits/2026-09-26_B7_blind_audit.md. Prior wording began: LPS arm read as images: asterisks on the WWOX KO bar in panels A (BAL leukocytes), B (BAL protein) and D (BAL:serum FITC",
+          "audit": {
+            "auditors": 1,
+            "verdicts": [
+              "OVERSHOOT",
+              "CORRECTED"
+            ],
+            "method": "Independent no-history mirror agent; triple plus primary source only; verdict table in disease-models/wwox/research/locator_audits/2026-09-26_B7_blind_audit.md"
+          }
+        }
       },
       {
-        "proposition": "Read as an image at 600 dpi and re-adjudicated by blind audit at 900 dpi: there is NO asterisk and no significance bracket on ANY bar of panels A, B and C - **twelve bars in this figure**, four per panel (flox and KO at PBS, flox and KO at LPS) across three panels, and TWENTY-FOUR across this figure and Figure 6 together. The absence is the finding, and it is the visual confirmation of the text's 'none were statistically significant' - not a case of significance left unmarked. TWO THINGS STRENGTHEN IT beyond the missing marks: this figure's caption prints NO '*P < 0.05' key at all, unlike Figures 3 and 5, so the absence sits in a figure that defines no significance marker; and the caption title and the Results state the negative in words, so it is asserted and not merely inferred. TWO THINGS QUALIFY IT: the non-significance rests on n = 3 independent experiments, means +/- SD; and it is true of the GENOTYPE contrast only - the LPS-versus-PBS induction is large in every panel. Several PBS bars are degenerate or undrawn in the vector content, so the VISIBLE count is fewer than the nominal twelve.",
+        "proposition": "Figure 4 has three cytokine panels with 12 nominal genotype-by-condition positions, but fewer visible filled bars because the PBS pair in panel B is zero-height or undrawn. No significance marker is drawn. The Results and caption explicitly report no statistically significant LPS KO-versus-flox cytokine difference (n=3), not equivalence, and neither PBS nor LPS-versus-PBS is thereby tested.",
         "snippet": "EC-specific WWOX KO mice do not exhibit greater BAL cytokines during LPS-induced ARDS.",
         "surface": "figure",
         "artifact": "files/figure_renders/PMID33058734/fig4_full.png",
@@ -581,14 +594,14 @@
         "contradicts_locator": {
           "manifest": "disease-models/wwox/research/deepdive_manifests/PMID33058734.json",
           "entry": 27,
-          "what_changed": "The bar count was UNDERSTATED at six by counting only the treated-condition bars and ignoring every PBS bar. Each panel carries four bars (flox and KO at PBS, flox and KO at LPS), so the figure carries twelve and the Figure 4 / Figure 6 pair carries twenty-four. Direction unaffected - no asterisk anywhere - so the locator understated the BREADTH of a negative it did not misstate. Added in the same amendment: this caption prints no significance key at all, the negative is stated in words, it rests on n = 3, and it holds for the genotype contrast and not the stimulus effect.",
+          "what_changed": "2026-09-26 blind audit found an overshoot or unsupported relation in the prior proposition; narrowed it to the measured source and recorded the verdict in disease-models/wwox/research/locator_audits/2026-09-26_B7_blind_audit.md. Prior wording began: Read as an image at 600 dpi and re-adjudicated by blind audit at 900 dpi: there is NO asterisk and no significance brack",
           "audit": {
             "auditors": 1,
             "verdicts": [
-              "SUPPORTED",
+              "OVERSHOOT",
               "CORRECTED"
             ],
-            "method": "legend-locator-audit, blind R4: (proposition, snippet, anchor) triples plus source artefacts only; no dossier, no manifest, no reader identity, no candidate, no claim record and NO expected answer; separate agent with no session history, 2026-09-14, task ALDAZ-R4-33058734-20260914, dispatched under ALDAZ-EXEC-20260913. Per-triple verdict on this entry: SUPPORTED on the proposition as a claim - the negative is real - with the embedded BAR COUNT found inaccurate. The auditor counted the bars itself and reported FOUR per panel and TWELVE per figure against the six asserted, reached by extracting filled vector rectangles from the PDF, excluding the six legend swatches per figure by size (5.67 pt squares) and y-position, individuating bars by fill colour (flox 0.30,0.51,0.74; KO 0.76,0.31,0.31) and x-position, then confirming against 900 dpi per-panel renders; a vector-text scan of both figure regions returned ZERO asterisk glyphs. It was explicitly instructed to report its own number whatever it was and not to reconcile toward the triple. Owner check before applying, 2026-09-14: the twelve-per-figure arithmetic independently reproduces what verification wave W4 measured at 600 dpi on a different day by a different method (four bars per panel = flox and KO at PBS and at stimulus, three panels), and that correction had already reached DL-MECH-012, the dossier dispositions and FT-178 while never reaching this manifest. Direction unaffected in every reading: no asterisk anywhere, so the locator UNDERSTATED the breadth of a negative it did not misstate. Amendment applied as a declared revision; the snippet, which is the verbatim caption title, was found accurate and is untouched."
+            "method": "Independent no-history mirror agent; triple plus primary source only; verdict table in disease-models/wwox/research/locator_audits/2026-09-26_B7_blind_audit.md"
           }
         }
       },
@@ -602,7 +615,7 @@
         "abstract_anchoring_waived": "The declared surface is a page crop or a figure render, not a text artefact with an extractable abstract, so no abstract_snippet can be matched against it; the abstract of this article is also not an evidentiary surface for any proposition carried out of this reading."
       },
       {
-        "proposition": "Read as an image and re-adjudicated by blind audit at 900 dpi: NO asterisk and no significance bracket on ANY bar - **twelve bars in this figure**, four per panel (flox and KO at PBS, flox and KO at MRSA) across three panels - and the x-axes read PBS and MRSA, while this figure's own legend describes LPS-treated animals and LPS-treated controls (entries[18]). The panel QUALIFIES its own legend: the negative result is real for the MRSA experiment, and the comparator the legend names belongs to Figure 4. As in Figure 4, the caption prints NO '*P < 0.05' key at all, the negative is stated in words in the caption title and the Results, it rests on n = 3, and it is true of the GENOTYPE contrast and not of the stimulus effect. Panel B's PBS pair is absent or zero-height in the vector content itself, which is geometry rather than a resolution limit.",
+        "proposition": "Figure 6 has three cytokine panels with 12 nominal genotype-by-condition positions, fewer visible filled bars because the PBS pair in panel B is zero-height or undrawn, and no significance markers. Results explicitly report no statistically significant MRSA KO-versus-flox cytokine difference (n=3); the caption comparison sentence mistakenly says LPS. The absent markers alone do not establish a tested negative or equivalence.",
         "snippet": "EC-specific WWOX KO mice do not exhibit greater BAL cytokines during MRSA-induced ARDS.",
         "surface": "figure",
         "artifact": "files/figure_renders/PMID33058734/fig6_full.png",
@@ -624,25 +637,38 @@
         "contradicts_locator": {
           "manifest": "disease-models/wwox/research/deepdive_manifests/PMID33058734.json",
           "entry": 29,
-          "what_changed": "Same understatement as entries[27] and the same correction: six bars to twelve, four per panel (flox and KO at PBS, flox and KO at MRSA), twenty-four across the pair. The legend-mismatch finding and the bears_on pointer to entries[18] are unchanged. Added: no significance key in the caption, the negative stated in words, n = 3, genotype contrast only, and panel B's PBS pair absent or zero-height in the vector content.",
+          "what_changed": "2026-09-26 blind audit found an overshoot or unsupported relation in the prior proposition; narrowed it to the measured source and recorded the verdict in disease-models/wwox/research/locator_audits/2026-09-26_B7_blind_audit.md. Prior wording began: Read as an image and re-adjudicated by blind audit at 900 dpi: NO asterisk and no significance bracket on ANY bar - **tw",
           "audit": {
             "auditors": 1,
             "verdicts": [
-              "SUPPORTED",
+              "OVERSHOOT",
               "CORRECTED"
             ],
-            "method": "legend-locator-audit, blind R4: (proposition, snippet, anchor) triples plus source artefacts only; no dossier, no manifest, no reader identity, no candidate, no claim record and NO expected answer; separate agent with no session history, 2026-09-14, task ALDAZ-R4-33058734-20260914, dispatched under ALDAZ-EXEC-20260913. Per-triple verdict on this entry: SUPPORTED on the proposition as a claim - the negative is real - with the embedded BAR COUNT found inaccurate. The auditor counted the bars itself and reported FOUR per panel and TWELVE per figure against the six asserted, reached by extracting filled vector rectangles from the PDF, excluding the six legend swatches per figure by size (5.67 pt squares) and y-position, individuating bars by fill colour (flox 0.30,0.51,0.74; KO 0.76,0.31,0.31) and x-position, then confirming against 900 dpi per-panel renders; a vector-text scan of both figure regions returned ZERO asterisk glyphs. It was explicitly instructed to report its own number whatever it was and not to reconcile toward the triple. Owner check before applying, 2026-09-14: the twelve-per-figure arithmetic independently reproduces what verification wave W4 measured at 600 dpi on a different day by a different method (four bars per panel = flox and KO at PBS and at stimulus, three panels), and that correction had already reached DL-MECH-012, the dossier dispositions and FT-178 while never reaching this manifest. Direction unaffected in every reading: no asterisk anywhere, so the locator UNDERSTATED the breadth of a negative it did not misstate. Amendment applied as a declared revision; the snippet, which is the verbatim caption title, was found accurate and is untouched."
+            "method": "Independent no-history mirror agent; triple plus primary source only; verdict table in disease-models/wwox/research/locator_audits/2026-09-26_B7_blind_audit.md"
           }
         }
       },
       {
-        "proposition": "Read as an image: the WWOX KO/PBS trace falls substantially below the WWOX flox/PBS trace, which recovers toward 0.95 by 10 hours while KO/PBS declines to about 0.71. Isolated KO endothelial cells therefore lose resistance relative to control cells WITH NO PATHOGEN at all - a baseline, cell-autonomous barrier difference in culture that the unchallenged in vivo comparison did not show.",
+        "proposition": "Figure 7A descriptively shows the isolated endothelial-cell WWOX KO/PBS trace below flox/PBS near 10 hours. No statistical test is reported for the PBS genotype contrast, so the trace does not establish a baseline cell-autonomous barrier defect; the challenged MRSA comparison is a separate result.",
         "snippet": "(A) The scatter plot depicts changes in TER over the course of 10 hours following introduction of MRSA to the cell culture media.",
         "surface": "figure",
         "artifact": "files/figure_renders/PMID33058734/fig7_full.png",
         "anchor": "fig7_full.png: 600 dpi render of the printed figure region, inspected as an image at native resolution.",
         "panel_text_relation": "panel_only",
-        "abstract_anchoring_waived": "The declared surface is a page crop or a figure render, not a text artefact with an extractable abstract, so no abstract_snippet can be matched against it; the abstract of this article is also not an evidentiary surface for any proposition carried out of this reading."
+        "abstract_anchoring_waived": "The declared surface is a page crop or a figure render, not a text artefact with an extractable abstract, so no abstract_snippet can be matched against it; the abstract of this article is also not an evidentiary surface for any proposition carried out of this reading.",
+        "contradicts_locator": {
+          "manifest": "disease-models/wwox/research/deepdive_manifests/PMID33058734.json",
+          "entry": 30,
+          "what_changed": "2026-09-26 blind audit found an overshoot or unsupported relation in the prior proposition; narrowed it to the measured source and recorded the verdict in disease-models/wwox/research/locator_audits/2026-09-26_B7_blind_audit.md. Prior wording began: Read as an image: the WWOX KO/PBS trace falls substantially below the WWOX flox/PBS trace, which recovers toward 0.95 by",
+          "audit": {
+            "auditors": 1,
+            "verdicts": [
+              "OVERSHOOT",
+              "CORRECTED"
+            ],
+            "method": "Independent no-history mirror agent; triple plus primary source only; verdict table in disease-models/wwox/research/locator_audits/2026-09-26_B7_blind_audit.md"
+          }
+        }
       },
       {
         "proposition": "Read as an image: asterisks on the MRSA WWOX KO bar in all three panels - IL-6, KC and MCP-1 - in CULTURE SUPERNATANTS of isolated endothelial cells. This is the one place in the paper where WWOX loss significantly raises inflammatory output, and it is ex vivo in isolated cells rather than in the lung. In panel C the PBS KO bar sits BELOW the PBS flox bar.",
