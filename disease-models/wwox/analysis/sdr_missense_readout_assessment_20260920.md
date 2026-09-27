@@ -346,3 +346,35 @@ DOIs — [22193544](https://doi.org/10.1038/cdd.2011.188) · [24932569](https://
 [29808465](https://doi.org/10.1007/s10048-018-0549-5) · [31752354](https://doi.org/10.3390/cancers11111818) ·
 [32764489](https://doi.org/10.3390/cancers12082189) · [34140629](https://doi.org/10.1038/s42003-021-02271-2) ·
 [36498839](https://doi.org/10.3390/ijms232314510) · [41677633](https://doi.org/10.3390/cells15030270).*
+
+
+---
+
+## 🔴 CORRECTION — 2026-09-27 (append-only; wave-2 package `splice_sdr`, ACTOR_ID `scientist`)
+
+**What is withdrawn.** § 6 closes with *"Identifying a physiological substrate is the experiment that
+would make a genuinely complementary second readout possible. It is not in this corpus, and **on the
+census run here it is not anywhere**."* 🔴 **The last clause is too strong and is withdrawn.**
+
+**What replaces it.** `PMID 21476439` (Sałuda-Gorgul et al. 2011, *Z Naturforsch C*) reports **WWOX
+dehydrogenase activity on steroid substrates with both NAD⁺ and NADP⁺ and published Km values**, with
+**no reduction activity observed** using NADH/NADPH — in a **crude extract**, on **wild-type protein
+only**, with **no disease allele**, **no catalytically-dead triad control** and **no folded-monomer
+normalisation**. `PREMISE: UNREAD_PRIMARY` — this repository holds the **abstract**, not the paper, so
+the statement is *owed a reading*, not *doubted*. The paper was in the registry as `CORPUS P306`,
+`background only`, throughout.
+
+**The narrowed statement that survives, and it is the one § 6 needed:** **no *physiological* substrate
+is assigned, and no function-per-molecule assay exists for any allele.** An activity **report** is not
+an **assay**; `PROTEIN AMOUNT` and `PROTEIN FUNCTION` remain different questions, and only the first has
+ever been measured on a WOREE allele.
+
+**Acquisition state, corrected against the queue as well.** `FT-130` records the paper as *"no DOI · no
+PMCID"* on three PubMed-family routes. 🔴 **A DOI exists:** `10.1515/znc-2011-1-210` (Crossref; a legacy
+`10.5560/znc.2011.66c0073` also resolves to the same article), and both **Unpaywall** and **OpenAlex**
+classify it **hybrid open access** with a publisher PDF URL. The publisher host answers an automated
+fetch with **HTTP 202 and zero bytes** — a bot challenge, not a paywall — so the paper is still
+**unacquired here**, and the blocker is now named precisely: **one browser or human fetch of
+`https://www.degruyter.com/document/doi/10.1515/znc-2011-1-210/pdf`**, at no cost. ⚠️ **The lesson is
+the one this repository keeps re-learning in a new costume:** three routes agreed, and all three were
+**PubMed-family** — agreement among siblings is not independence. No paid access was attempted.

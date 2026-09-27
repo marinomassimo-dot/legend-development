@@ -149,3 +149,41 @@ It survived four hours, and the thing that killed it was available in the reposi
 - ⛔ **Still owed:** PMID 26345274's body has never been read (`FT-032`, packet `A8`) and would
   convert five abstract-depth patients into five read ones. It is now the **highest-value
   unacquired paper for this allele**, and the natural experiment above is only as good as it.
+
+---
+
+## WAVE-2 READINESS (2026-09-27)
+
+**Actor:** ACTOR_ID `scientist`, wave-2 package `splice_sdr` ·
+**Verdict: `CLOSE` — closing status `SUPERSEDED`** (its content lands, but not from here).
+**`context_policy` declared: `SYNTHESIS`** — this item is adjudicated against the repository's own
+files and git history, with `registry_records.py` as the route to registry records; no source was
+reopened for it.
+
+### Why it closes, with the evidence
+
+1. **§1 (the provenance correction) has already travelled.** `CC-20260922-SPLICE-ARM-01` §1 carries it
+   in the current file, in the body text: *"⚠️ **Corrected in `CC-20260922-EXON7-NATURAL-EXPERIMENT-01`
+   §1: the draft of this paragraph attached a count from one paper to a quotation from another.**"*
+   Nothing is owed to a canonical surface for it.
+2. **§2–§4 (the withdrawal) have already travelled too**, into `CC-20260922-SPLICE-ARM-01` §8, which
+   states the withdrawal, the 62-residue arithmetic, the ADH/SDR boundary quotation and the `D-30`
+   formulation. Verified line by line against the current text of that candidate in this tree.
+3. **The only residue was the three-regime point for `DL-MECH-045` and a `D-30` row, neither with
+   exact text.** Both are now **drafted and carried** by `CC-20260922-SPLICE-ARM-01`'s
+   `WAVE-2 READINESS` **OP 2**, which appends the three regimes, the `D-30` formulation and the
+   fold-versus-frame distinction to `DL-MECH-045` as one append-only block.
+4. **Nothing in this candidate is lost by closing it**, and one of its statements is **strengthened
+   elsewhere**: the structural half of §2a (*"in-frame is not a hypomorph"*) now sits next to a
+   measured comparison — 62 residues from a domain interior against 2 residues at a helix edge, with
+   the AlphaFold pLDDT values re-measured in this session.
+
+**Closing status: `SUPERSEDED` by `CC-20260922-SPLICE-ARM-01` (its §8 and its `WAVE-2 READINESS`
+OP 2).** Not `NOT INTEGRATED`: the content integrates, under another candidate's identifier.
+
+### What is still owed, and it is owed to the queue and not to this candidate
+
+⛔ **`PMID 26345274`'s body has never been read** (`FT-032`, packet `A8`). The natural experiment of §3
+rests on **one** read patient and **five** abstract-depth ones. Acquisition was **not** attempted in
+this package (out of scope: this item closes rather than opens), and the debt stays where it already
+is, in the queue.

@@ -1,0 +1,108 @@
+{
+ "schema_version": 2,
+ "pmid": "30362252",
+ "doi": "10.1002/humu.23675",
+ "receipt": "FTR-20260726-30362252-01",
+ "landing": [
+  "PAPER 044",
+  "CC-20260922-SPLICE-ARM-01"
+ ],
+ "skills_considered": [
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "No deep dive was run. The pass persisted verbatim locators for sentences already quoted by wave-2 commit candidates; a deep dive would have produced a dossier this pass does not claim."
+  },
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "PMC JATS re-acquired by E-utilities efetch on 2026-09-27 because the artifact the prior receipt fingerprints is not present in this checkout."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Triples are handed to the audit through the commit candidate's LOCATOR TRIPLES FOR BLIND AUDIT section, not run here: producer must not be verifier."
+  }
+ ],
+ "group_assessment": {
+  "waived": "Waived by name. This is NOT a deep dive: it is a targeted locator-capture pass on a paper already carried in the registry with a prior receipt, opened to persist the verbatim sentences that wave-2 commit candidates quote. The deep-dive steps belong to whichever reading promotes or re-rates this record, and waiving them here is cheaper and more honest than filling them from metadata that no one used. Scope of this pass is recorded in the accompanying receipt."
+ },
+ "field_density": {
+  "waived": "Waived by name. This is NOT a deep dive: it is a targeted locator-capture pass on a paper already carried in the registry with a prior receipt, opened to persist the verbatim sentences that wave-2 commit candidates quote. The deep-dive steps belong to whichever reading promotes or re-rates this record, and waiving them here is cheaper and more honest than filling them from metadata that no one used. Scope of this pass is recorded in the accompanying receipt."
+ },
+ "multihop": {
+  "waived": "Waived by name. This is NOT a deep dive: it is a targeted locator-capture pass on a paper already carried in the registry with a prior receipt, opened to persist the verbatim sentences that wave-2 commit candidates quote. The deep-dive steps belong to whichever reading promotes or re-rates this record, and waiving them here is cheaper and more honest than filling them from metadata that no one used. Scope of this pass is recorded in the accompanying receipt."
+ },
+ "corpus_crossquery": {
+  "waived": "Waived by name. This is NOT a deep dive: it is a targeted locator-capture pass on a paper already carried in the registry with a prior receipt, opened to persist the verbatim sentences that wave-2 commit candidates quote. The deep-dive steps belong to whichever reading promotes or re-rates this record, and waiving them here is cheaper and more honest than filling them from metadata that no one used. Scope of this pass is recorded in the accompanying receipt."
+ },
+ "retraction_check": {
+  "waived": "Waived by name. This is NOT a deep dive: it is a targeted locator-capture pass on a paper already carried in the registry with a prior receipt, opened to persist the verbatim sentences that wave-2 commit candidates quote. The deep-dive steps belong to whichever reading promotes or re-rates this record, and waiving them here is cheaper and more honest than filling them from metadata that no one used. Scope of this pass is recorded in the accompanying receipt."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID30362252_Davids2019_PMC_2026-09-27.xml",
+   "sha256": "4bfc73890bf903a8dcfd36fb0ea7f8970eed808581c08160f1def7335999d6ca",
+   "kind": "article_text",
+   "note": "PMC JATS XML acquired 2026-09-27 for a targeted locator-capture pass; the prior receipt FTR-20260726-30362252-01 is a legacy reconstruction and fingerprints no artifact present in this checkout.",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=6296882&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-09-27",
+    "derived": false,
+    "result_sha256": "4bfc73890bf903a8dcfd36fb0ea7f8970eed808581c08160f1def7335999d6ca"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "JATS from E-utilities efetch db=pmc id=6296882, 57,578 bytes, 27 body paragraphs, 4 figure captions, no Methods section element (brief report; methods in a non-open-access supplement). Every text locator is matched against the body of that artifact; figure-legend locators are quoted from the captions of the same artifact.",
+  "abstract_anchoring_waived": "No locator draws on the abstract; every entry is matched against the body of the declared JATS artifact.",
+  "note": "Coverage of this pass: Abstract, Introduction/case narrative, Results (expression analysis), Discussion and all four figure legends read from the JATS. Methods: not present in the PMC body. Supplementary: Supp. Figures S1-S4 and Tables S1-S4 exist as one docx that is NOT open access (Europe PMC: 'Article with id PMC6296882 is not open access one'; the PMC bin URL answers a bot challenge) -- unavailable, declared. Panels were not inspected; the Figure 2 legends were read as text.",
+  "entries": [
+   {
+    "proposition": "THE RUNNING TEXT RESOLVES NOTHING: the body states the two alternatives -- not expressed OR degraded -- in the same disjunctive form this repository refuses to collapse elsewhere. This is the sentence CC-20260922-SPLICE-ARM-01 section 2 substitutes for the abstract's indicative, and it is now receipted rather than attested.",
+    "snippet": "The exon 1–2 junction, however, was detected and was only slightly reduced in our patient, whereas the exon 7–8 junction was barely detectable, suggesting that the two longer transcripts were not expressed or were degraded.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30362252_Davids2019_PMC_2026-09-27.xml",
+    "anchor": "Results, expression-analysis paragraph (qPCR of the four junction assays), third sentence",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "AND THE CANDIDATE'S SECOND FINDING IS WRONG AS STATED: the words nonsense mediated decay DO occur in the body -- in the Figure 2B legend, as an inference drawn from the same junction qPCR. So the divergence is not abstract-versus-body; it is running-text hedge versus figure-legend assertion inside one paper. Adjudicated first-hand 2026-09-27.",
+    "snippet": "indicating that the deletion causes nonsense mediated decay of the two longer transcripts",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID30362252_Davids2019_PMC_2026-09-27.xml",
+    "anchor": "Figure 2 legend, panel B (qPCR of WWOX mRNA junctions)",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "THE EXON 4-6 NORMALISER MOVES WITH THE LESION, MEASURED BY THE AUTHORS: the short isoform's own junction rises as the long isoform is lost. This is the support for CC-20260922-SPLICE-ARM-01 section 3.3 and for constraint 4 of CC-20260922-TX001-CEILING-REASSESSMENT-01.",
+    "snippet": "The residual expression of the exon 1–2 junction may be explained by the amplification of NM_130791.3, which has increased expression of its exon 5–6 junction.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30362252_Davids2019_PMC_2026-09-27.xml",
+    "anchor": "Results, expression-analysis paragraph, sentence following the junction-assay result",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE 46 kDa AND 19 kDa VALUES ARE RECOVERABLE AFTER ALL, from the figure legend of a structured surface. CC-20260922-SPLICE-ARM-01 section 6 recorded them as not re-verifiable because the extraction route it used had deleted them; on the JATS they are printed, so PAPER 044's Western figures stand on a locator instead of on an unverifiable extraction.",
+    "snippet": "Western blot analysis shows the lack of expression of the longest transcript at 46kDa in the proband",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID30362252_Davids2019_PMC_2026-09-27.xml",
+    "anchor": "Figure 2 legend, panel C (isoform-resolved Western)",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "NO NMD-INHIBITION REAGENT APPEARS ANYWHERE IN THE AVAILABLE TEXT, and the Methods are not in the PMC body at all -- the brief report's methods sit in a supplement that is not open access. Machine-checked on the declared artifact: cycloheximide, puromycin, emetine and UPF1 occur zero times; the body carries no Methods section element. So the NMD attribution is an inference from junction ratios, and the absence of a translation block is a property of what is readable here, declared rather than assumed.",
+    "snippet": "Quantitative polymerase chain reaction (qPCR) analysis of WWOX mRNA shows a decrease in expression of the exon-1–2 junction in fibroblasts of the proband, no expression of the exon 5–6 junction and negligible expression of the exon 7–8 junction",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID30362252_Davids2019_PMC_2026-09-27.xml",
+    "anchor": "Figure 2 legend, panel B, first clause -- the whole quantitative basis of the NMD statement",
+    "panel_text_relation": "panel_only"
+   }
+  ]
+ }
+}
