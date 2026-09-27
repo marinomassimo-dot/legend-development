@@ -8291,3 +8291,24 @@ not supply the floor.
 For the Operator: `PAPER 044`'s `Evidence depth` should read `partial_fulltext_read` with the
 coverage fields it actually has, OR a contemporaneous receipt should be written that earns
 `complete`. **Nothing here touches a gated candidate.**
+
+---
+
+## 2026-09-27 — TWO QUESTIONS FOR THE AUTHORS OF PMID 42422765, NOT READING DEBT (appended, ACTOR_ID `scientist`, wave-2 "dose")
+
+Applied outside a batch: this file is not one of the four scientific current files. Source:
+`CC-20260826-DOSE-DECISION-TABLE-01` §6.4 and `CC-20260826-DOSE-TRANSFERABLE-QUANTITY-01` §5.4, merged into
+one entry so the queue carries them once.
+
+- **(a) Figure S3C — measurement age and n are stated nowhere.** The caption gives neither, and the
+  comparable Repudi panel is **P19, n = 3**. Transduction percentage rises for weeks after neonatal
+  injection, so a comparison across an unknown age gap is not a comparison.
+- **(b) Figure 5A–D — the GC normaliser is not named.** The caption reads *"Vector genome copies (GC) …
+  normalized to WT levels"*, and wild-type animals receive no vector, so the normaliser is not a vector
+  quantity. The two readings that fit differ by a factor that cannot be derived from the figure.
+
+🔴 **Neither is a reading debt and neither is obtainable by further reading of this corpus** — no
+re-acquisition, deeper render or supplementary page can supply a field the authors did not print. They are
+recorded here so they are not re-attempted as reading, and so that any future contact with the authors or
+any deposited protocol closes them. ⚠️ Both block the same thing: axis 2 and axis 4 of the dose decision
+table cannot move from `CONFOUNDED`/`UNMEASURED` to `SUPPORTED` without them.

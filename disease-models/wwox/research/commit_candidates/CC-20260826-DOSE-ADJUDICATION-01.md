@@ -210,3 +210,107 @@ is the part that is safe to use.
 quantity and contradicts a threshold currently used to reason about trial dosing. It also
 **retracts a prediction this session published** in the census candidate, which is recorded here
 rather than quietly amended.
+
+---
+
+## WAVE-2 READINESS (2026-09-27)
+
+**Actor:** `scientist`, wave-2 package "dose", under the operator standing authorisation of 2026-09-27.
+**context_policy declared:** `QUESTION_DRIVEN` — this session held LEGEND's records (candidate text, claim
+registry, manifests) before opening any source, so `SOURCE_FIRST` was not available to it and is not
+claimed. What it admitted is named where it is used.
+**Evidence base re-derived first, because it changes what any verdict here can mean:**
+🔴 `evidence_presence.py --pmid 42422765 --pmid 34747138` → **0 of 28 declared artifacts present in this
+checkout** (`VERDICT: NO LOCAL EVIDENCE`). Every figure value in this candidate therefore rests on the
+recorded attestation of the session that had panel access, not on a fresh panel read. One structured
+surface was re-acquired to repair what could be repaired from text:
+`files/fulltext/PMID42422765_Obeid2026_PMC_2026-09-27.xml`, sha256
+`7bea83346b708e541d2c432e5da4029f69673e1abc3c6fe70926ad0e3ec2eef2`, efetch `db=pmc id=13343157`,
+recorded in `research/retrieval_manifest.jsonl` and declared in
+`deepdive_manifests/PMID42422765.json` with its `acquisition_recipe`. Receipt prepared and **not**
+recorded (the ledger is a hash chain and sibling packages run in parallel):
+`scratchpad/receipts_pending/dose_42422765_1.json` (`FTR-20260927-42422765-07`,
+`partial_fulltext_read`, prior `FTR-20260814-42422765-06`, `reread_reason:
+new_question_outside_prior_coverage`).
+
+### Verdict: **READY_MAJOR** (change class MAJOR, unchanged from §9 — operator authorisation still required)
+
+**What was done.**
+1. **Disposition contradiction adjudicated.** Nothing of this candidate is propagated: `CLAIM 004`
+   carries its 2026-08-10 comparator boundary but **no dose basis and no vector configuration**; `CLAIM 011`
+   carries the LD/HD threshold with **no vector-configuration boundary**; and `registry_records.py get
+   --id "dismissal_ledger_current"` reaches **no** entry for a transferable vg dose. Verified at commit
+   `db7fbeb`, claim-registry digest `fbaef2510878`.
+2. **Family head confirmed.** `CC-20260826-DOSE-TRANSFERABLE-QUANTITY-01` is closed as **SUPERSEDED** by
+   `CC-20260826-DOSE-DECISION-TABLE-01` in this wave (see that file), so this candidate now has **one**
+   dependent, not two, and the batch propagates two wordings rather than three.
+3. **Two of this candidate's load-bearing sentences were promoted from prose to receipted locators** in
+   `deepdive_manifests/PMID42422765.json` (entries 29–30, machine-verified): the WPRE-removal rationale and
+   the *"higher vector doses"* consequence. They are quoted in §5 of this file's sibling candidates and had
+   no persisted locator anywhere.
+4. **Not re-verified and not claimable as re-verified:** Appendix Fig S1A at 300 dpi, Repudi Fig 2C, Obeid
+   Fig 3B. The bytes are absent (see above). The §1 adjudication recipe remains reproducible from a
+   reader's own copy, which is what rule 5e asks of it.
+
+### Exact operation list for `batch_commit.py propagate`
+
+**File `disease-models/wwox/registries/claim_registry_current.md` · record `CLAIM 004` · op
+`replace-within`**
+
+- *old text (verbatim from the current file, the final sentence of the Summary field):*
+  `espressione durevole ≥9 mesi.`
+- *new text:*
+  `espressione durevole ≥9 mesi. 🔴 **Dose e configurazione, insieme e mai la dose sola (2026-09-27, `CC-20260826-DOSE-ADJUDICATION-01`):** il vettore è `AAV9-hSynI-hWWOX` **privo di WPRE** (Appendix Fig S1A, letta a 300 dpi; il paper 2021 non menziona WPRE) e la dose è **2 × 10¹⁰ GC/emisfero, entrambi gli emisferi, totale ≈4 × 10¹⁰ GC** — base dichiarata due volte (Results e Methods), mentre la legenda di Fig 2A stampa il solo `(2 × 10¹⁰)`. Citare la dose senza configurazione e senza base è ciò che rende la quantità non trasferibile.`
+
+**File `disease-models/wwox/registries/claim_registry_current.md` · record `CLAIM 011` · op
+`replace-within`**
+
+- *old text (verbatim, inside the 🔴 flag):*
+  `` `REVIVAL_TRIGGER`: un braccio a dose intermedia fra 1.23 e 2.63 × 10¹¹ vg localizzerebbe la soglia — l'esperimento più informativo che questo paper implica. ``
+- *new text:* the text proposed by `CC-20260922-CLAIM011-DOSE-ENDPOINTS-01` Δ2 **plus** this candidate's
+  boundary, appended as one sentence:
+  `⚠️ **Confine di configurazione (2026-09-27):** la soglia è una soglia **per questo vettore, questo lotto e questa consegna** — il predecessore dello stesso laboratorio, con la stessa architettura WPRE-free, ottiene ≈93 % di sopravvivenza a 270 giorni a una dose **3–6× più bassa** (Repudi 2021, ≈4 × 10¹⁰ GC totali), quindi il numero non è una costante biologica. Il `REVIVAL_TRIGGER` deve riportare anche le **copie di genoma consegnate per regione**, non solo la dose iniettata.`
+
+**File `disease-models/wwox/research/dismissal_ledger_current.md` · op `append`** (non-canonical,
+append-only; the batch appends it so that the three dose candidates produce **one** entry)
+
+- *new record id:* **`DIS-021`** — the next free id, verified by `registry_records.py catalog --source dismissal_ledger_current` (20 records, `DIS-001`…`DIS-020`, none on dose transferability). *Record:* `"A vg dose measured in one WWOX gene-therapy study transfers to another"` → ❌ **REJECTED**,
+  on the three independent grounds the decision table states (within-study non-linearity; the ≈44× WPRE
+  dose-equivalence; the two papers not reporting the same physical quantity).
+  `REVIVAL_TRIGGER`: two studies reporting **regional WWOX protein relative to WT** at a matched, stated
+  age, agreeing on outcome at matched protein.
+
+### LOCATOR TRIPLES FOR BLIND AUDIT
+
+| proposition | verbatim quote | anchor |
+|---|---|---|
+| The 2026 paper's own words say that removing WPRE was a precaution taken in the absence of an observation, not a safety result. | "Although no overt toxicity was observed in prior studies, we removed WPRE as a proactive risk-mitigation step to improve the predictability and control of neuronal WWOX expression for potential clinical translation." | `PMID42422765_Obeid2026_PMC_2026-09-27.xml`, Discussion, paragraph on control of transgene expression (manifest entry 29) |
+| The same paper states that the lower expression has to be bought back with more capsid — which is what makes a vg number a property of the construct rather than of the biology. | "However, this reduction in expression necessitates the use of higher vector doses to achieve comparable therapeutic outcomes." | same artifact, Results, "Removal of WPRE enables controlled WWOX expression while maintaining therapeutic efficacy at higher vector doses", final sentence (manifest entry 30) |
+| The 2026 doses are printed as bare `vg` with no unit convention anywhere in the running text. | "For translational relevance, we evaluated two clinically applicable doses: an LD (1.23 × 1011 vg) and a higher dose (HD, 2.63 × 1011 vg) (Figure 3A)." | same artifact, Results, dose-response section, first paragraph (manifest entry 31) |
+| The Methods state no dose at all — the only vector quantity in them is how the titre was assayed. | "Viral titers were determined by RT-qPCR using bGH primers." | same artifact, Materials and methods, "Plasmid vectors", final sentence (manifest entry 33) |
+| The injection is bilateral, one injection per hemisphere, which bounds the unit ambiguity at exactly 2×. | "A Micro-4 nano-pump controller was used to ensure a steady injection rate of 1–1.5 μL/min, delivering 2.0 μL/hemisphere through a Hamilton syringe with a 32G needle (World Precision Instruments)." | same artifact, Materials and methods, "ICV injection of AAV particles into P0-P5 Wwox-null mice" (manifest entry 32) |
+| Repudi's total dose is per-hemisphere twice over, so the comparator for the 2026 study is ≈4 × 10¹⁰ GC total. | "Approximately 1 µl (2 × 10¹⁰ GC/hemisphere) virus was dispensed … The other hemisphere was injected in the same way." | `PMID34747138_locators.md` / `deepdive_manifests/PMID34747138.json`, Methods, local JATS XML surface — **artifact bytes absent from this checkout, attestation carried forward, re-acquisition owed** |
+
+**What is still pending:** operator authorisation (§9); a blind locator audit of the figure triples
+(Appendix Fig S1A, Repudi Fig 2C, Obeid Fig 3B) is **not runnable** until the bytes are re-acquired — that
+is the one gate this wave could not discharge, and it bears only on the figure triples, not on the six
+text triples above.
+
+### Addendum — a cross-file contradiction this candidate already resolves, recorded so the resolution is findable
+
+Two analysis files still say the question is open: `analysis/model_horizon_and_p47t_platform_20260922.md`
+lines 174–179 — *"The one surface that could still carry a WPRE is `Appendix Fig 1`, the vector schematic —
+which is referenced in the Results and was NOT served… The unread 2021 Appendix vector map remains the only
+way to close it"* — and `analysis/tx007_dose_challenge_20260922.md` line 505, which names the same unread
+Appendix. 🔴 **It is not unread.** §1–§2 of this candidate read it on 2026-08-26 at 300 dpi from
+`EMMM-13-e14599-s001.pdf` page 2 (`source_pdf_sha256 1e5c30a9…f86cd2`, `image_sha256 e362bdf8…c61f9c02`) and
+found **all three constructs WPRE-free**. ⇒ the 2021 vector question is **closed**, and the repository's
+phrase *"the configuration of the 2021 proof-of-concept"* is an inference that the Appendix **contradicts**
+rather than merely fails to support. This wave relabelled the live site
+(`analysis/tx007_genotype_class_ceiling_20260921.md`, dated correction block) and left the two files above
+untouched, because they are not this package's targets — a one-line pointer in each is the cheapest possible
+follow-up and is named here so it is not rediscovered a third time.
+⚠️ Stated with its own limit: the 300-dpi render is **not present in this checkout** (`files/` holds none of
+the 10 artifacts of PMID 34747138), so this is the recorded attestation of the reading session, replayable
+from a reader's own copy by the §1 recipe and not re-verified today.
+

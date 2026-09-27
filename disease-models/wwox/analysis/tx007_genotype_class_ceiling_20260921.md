@@ -376,3 +376,40 @@ receipt-backed locator manifests** and are labelled as such wherever they appear
 ---
 
 **End.** Not medical advice. Read-only toward every canonical file; nothing promoted, nothing committed.
+
+---
+
+## CORRECTION APPENDED 2026-09-27 — ACTOR_ID `scientist`, wave-2 package "dose" (append-only; nothing above is rewritten)
+
+context_policy: `QUESTION_DRIVEN` — the question was whether §4.1's two author quotations and its three
+fold-change columns survive a first-hand check of the primary, and whether "the configuration of the 2021
+proof-of-concept" is a statement of the 2021 paper.
+
+1. 🔴 **§4.1's phrase *"With the WPRE element — the configuration of the 2021 proof-of-concept"* is an
+   INFERENCE, not a 2021 statement, and is relabelled here rather than in place.** The 2021 paper
+   (`PMID 34747138`) never mentions WPRE; its three vectors are `AAV9-hSynI-mWwox-IRES-EGFP`,
+   `AAV9-hSynI-hWWOX` and `AAV9-hSynI-EGFP`, and Appendix Fig S1A shows all three as WPRE-free
+   (`CC-20260826-DOSE-ADJUDICATION-01` §2, read at 300 dpi). The WPRE attribution comes from Obeid 2026's
+   own framing (*"we generated … vectors lacking the WPRE element"*) applied backwards.
+   ⇒ read the sentence as: *"With the WPRE element — the configuration Obeid 2026 describes as its earlier
+   construct, an inference about the 2021 vector and not a 2021 statement; the 2021 Appendix vector map shows
+   WPRE-free constructs"*. `PREMISE_TAG: INFERENZA`. This discharges §9d of
+   `CC-20260922-TX007-DOSE-CHALLENGE-01` for this file.
+
+2. ✅ **Both author quotations are now receipted against a structured surface.** Re-acquired PMC JATS XML
+   (`files/fulltext/PMID42422765_Obeid2026_PMC_2026-09-27.xml`, sha256 `7bea83346b708e541d2c432e5da4029f69673e1abc3c6fe70926ad0e3ec2eef2`, efetch
+   `db=pmc id=13343157`, 2026-09-27) carries both verbatim; they are manifest entries 29 and 30 of
+   `deepdive_manifests/PMID42422765.json`, machine-verified. §0's provenance caveat — that they came from an
+   unreceipted in-act fetch — is therefore discharged for these two sentences.
+
+3. ✅ **All three fold-change columns of §4.1/§1b trace to a recorded figure attestation, and the
+   near-miss that the triage warned about does not apply.** 8.2 / 10.7 / 5.6 / **1.4** = manifest entry 28
+   (S5J at P300); 4.6 / 4.7 / 3.1 / **0.6** = manifest entry 19 (**S6D** at P300); 25.6 / 22.3 / 11.6 / 6.2 =
+   manifest entry 15 (Figure 2E, WWOX+WPRE at 4E10). ⚠️ The neighbouring `S6E` values *1 / 0.9 / 0.3 / 0.6*
+   are **four wild-type lanes** and are NOT the cerebellar 0.6 used here — the coincidence of the trailing
+   0.6 is exactly the confusion this note exists to foreclose.
+
+4. ⛔ **Not re-verified here, and still owed:** the panels themselves. None of the 18 artifacts this
+   manifest fingerprints is present in this checkout (`evidence_presence.py`: 0/18), so every figure value
+   above rests on the recorded attestation of the session that had panel access, not on a fresh read.
+   Unblocking step: re-acquire `mmc1.pdf` and `gr1–gr7.jpg`, then re-render S5J, S6D and Fig 2E.
