@@ -131,7 +131,7 @@ last_lint_result: WARN
 ## 6. OPERATIONAL STATE
 
 ```yaml
-current_state: READY
+current_state: IN_BATCH_COMMIT
 deep_dive_gate: OPEN
 ingest_gate: OPEN
 batch_commit_gate: OPEN
