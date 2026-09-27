@@ -979,6 +979,30 @@
         "audit_note": "REPOINTED 2026-09-13 after a blind locator audit found the artefact one page off. The page numbers were written from a mistaken mapping; the panels described were the ones actually inspected. The mapping is now taken from the supplementary PDF's own text layer, which prints the figure number on each page, not from counting renders. As first written, entry 33 pointed at the CTX panel, which shows the OPPOSITE of its proposition."
       },
       {
+        "proposition": "SURVIVAL, THE CAPTION'S COHORT SIZES: the Kaplan-Meier cohort is 14 wild type, 30 heterozygotes and 25 homozygotes. Added 2026-09-27 (wave-2 provenance package, survival-curve residue) so the curve-versus-mean boundary on PAPER 007 carries its denominators from a text surface, not only from the raster read in entry 18.",
+        "snippet": "Kaplan-Meier comparative survival in days of a cohort of WwoxWT/WT wildtype (blue line, n = 14), WwoxP47T/WT heterozygous (red line, n = 30), and WwoxP47T/P47T homozygous (green line, n = 25) mice.",
+        "anchor": "Figure 1 caption, panel b",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "SURVIVAL, THE TEST THE PAPER REPORTS: the homozygote differs from both wild type and heterozygote by log-rank p = 0.001. The running text gives no statement of how its 393-day mean was computed (over all animals, over decedents, or restricted), which is why the curve and not the mean is the datum to cite. Added 2026-09-27 (wave-2 provenance).",
+        "snippet": "The difference in survival was statistically significant between the WwoxP47T/P47T and the WwoxWT/WT and WwoxP47T/WT groups (Log-rank p-value=0.001) (Fig. 1b).",
+        "anchor": "Results 2.2, sentence following the 393 / 495 / 542-day figures",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THE OLIG2+ COUNT IS A CORPUS-CALLOSUM MEASUREMENT, NOT A HIPPOCAMPAL ONE, AND ITS UNIT IS THE REGION: three 500 square-micrometre regions per mouse, n = 3 mice per group, unpaired t-test at p < 0.01. Added 2026-09-27 (wave-2 provenance package, oligodendrocyte residue of the glia hardening candidate) as the text-surface partner of the panel attestation in entry 23.",
+        "snippet": "Bar graph showing quantitative measurement of Olig2 positive oligodendrocytes counted in three independent 500 μm2 regions spanning the entire imaged corpus callosum.",
+        "anchor": "Figure 4 caption, panel e",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
         "proposition": "The only age the paper attaches to its seizure ascertainment is the age of the EEG cohort: video-EEG was run on ADULT mice older than 6 weeks, n = 3 per genotype. No juvenile recording is reported, so the paper measures seizures in adults and does not measure when they began. 'Recorded in adults' is not 'onset in adulthood'. [Added 2026-09-27, ACTOR_ID scientist, wave-2 package development, for the MODEL-HORIZON candidate, section 4.]",
         "snippet": "was performed during 24-hour sessions in adult (aged >6 weeks)",
         "anchor": "Methods 4.4, 'Video electroencephalography (EEG)'",

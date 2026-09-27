@@ -1,0 +1,285 @@
+{
+ "schema_version": 2,
+ "pmid": "38161429",
+ "doi": "10.3389/fped.2023.1301166",
+ "receipt": "FTR-20260927-38161429-02",
+ "landing": [
+  "FTR-20260927-38161429-02",
+  "CC-20260922-VERMIS-HYPOPLASIA-FREQUENCY-01",
+  "discovery_ledger_current"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: PMC10757851 is open access and the JATS XML came back on the first NCBI efetch call; the recipe is recorded on the artefact."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered: no consolidated-baseline claim is narrowed. The target is one sentence of the append-only discovery ledger, and the reading REMOVES an overstated frequency rather than adding a claim."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Declined: this is a bounded verification of three strings in a mini-review, not a discovery pass."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "research_type": "descriptive_clinical",
+  "output_kind": "mini_review",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "A paediatric-neurology and neuroradiology group (IRCCS Gaslini, Genoa) writing a literature mini-review whose declared subject is the radiological spectrum of WOREE. It contributes NO new cohort: every count in its Table 1 is carried from the studies it collates, so it is a denominator instrument and never a primary measurement. Read under that limit.",
+  "total_publications": 1,
+  "publications_on_gene": 1,
+  "counts_measured": "Not a per-author sweep: this record's weighting rests on the article's own declaration that it contributes no new cohort. publications_on_gene is 1 — this mini-review — for the group as it appears on this paper."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "WWOX AND (neuroimaging OR MRI)",
+    "route": "PubMed esearch 2026-09-27",
+    "count": 20
+   },
+   {
+    "query": "WWOX AND \"cerebellar vermis\"",
+    "route": "PubMed esearch 2026-09-27",
+    "count": 1
+   },
+   {
+    "query": "WOREE AND MRI",
+    "route": "PubMed esearch 2026-09-27",
+    "count": 3
+   }
+  ],
+  "note": "The density measurement is itself the point: ONE PubMed record ties WWOX to the phrase 'cerebellar vermis', which is why a 'described in most cases' frequency could never have rested on a measured denominator."
+ },
+ "multihop": {
+  "performed": false,
+  "reason": "Deliberately not performed. This event verifies three strings inside one collation; its references are the studies the collation counts, and following them would be a different reading with its own coverage map. The one reference this reading needed to attribute correctly — the five-patient cohort whose cerebellum was unaffected — is resolved inside the body text itself and is recorded as a locator. The 35 gene-direct references are enumerated and recorded as queued debt rather than resolved; none is claimed as read by this event.",
+  "references_enumerated": 70,
+  "enumeration_method": "Counted mechanically on the fingerprinted JATS XML: 70 <ref> elements, all 70 carrying a PubMed identifier. Gene-direct = reference text naming WWOX/Wwox/WOX1/FRA16D/16q23, matched over the de-marked reference text: 35 of 70.",
+  "gene_direct_count": 35,
+  "gene_direct_refs_in_source": [
+   "33255508",
+   "36779245",
+   "25411445",
+   "30746283",
+   "30094525",
+   "30356099",
+   "33914858",
+   "16941225",
+   "24932569",
+   "10786676",
+   "26675548",
+   "26499798",
+   "30619736",
+   "15064722",
+   "21115974",
+   "28283473",
+   "30290271",
+   "17823927",
+   "24330518",
+   "32300104"
+  ],
+  "resolved": [],
+  "queued": [
+   {
+    "pmid": "33255508",
+    "queue": "not queued by this actor: this event is a bounded three-string verification inside a collation, and the full-text queue is owned by the orchestrator; the list is recorded here so the debt is visible rather than absorbed",
+    "reason": "Gene-direct reference of a collating mini-review; following it would be a reading of the primary, which this event does not perform and does not claim."
+   },
+   {
+    "pmid": "36779245",
+    "queue": "not queued by this actor: this event is a bounded three-string verification inside a collation, and the full-text queue is owned by the orchestrator; the list is recorded here so the debt is visible rather than absorbed",
+    "reason": "Gene-direct reference of a collating mini-review; following it would be a reading of the primary, which this event does not perform and does not claim."
+   },
+   {
+    "pmid": "25411445",
+    "queue": "not queued by this actor: this event is a bounded three-string verification inside a collation, and the full-text queue is owned by the orchestrator; the list is recorded here so the debt is visible rather than absorbed",
+    "reason": "Gene-direct reference of a collating mini-review; following it would be a reading of the primary, which this event does not perform and does not claim."
+   },
+   {
+    "pmid": "30746283",
+    "queue": "not queued by this actor: this event is a bounded three-string verification inside a collation, and the full-text queue is owned by the orchestrator; the list is recorded here so the debt is visible rather than absorbed",
+    "reason": "Gene-direct reference of a collating mini-review; following it would be a reading of the primary, which this event does not perform and does not claim."
+   },
+   {
+    "pmid": "30094525",
+    "queue": "not queued by this actor: this event is a bounded three-string verification inside a collation, and the full-text queue is owned by the orchestrator; the list is recorded here so the debt is visible rather than absorbed",
+    "reason": "Gene-direct reference of a collating mini-review; following it would be a reading of the primary, which this event does not perform and does not claim."
+   },
+   {
+    "pmid": "30356099",
+    "queue": "not queued by this actor: this event is a bounded three-string verification inside a collation, and the full-text queue is owned by the orchestrator; the list is recorded here so the debt is visible rather than absorbed",
+    "reason": "Gene-direct reference of a collating mini-review; following it would be a reading of the primary, which this event does not perform and does not claim."
+   },
+   {
+    "pmid": "33914858",
+    "queue": "not queued by this actor: this event is a bounded three-string verification inside a collation, and the full-text queue is owned by the orchestrator; the list is recorded here so the debt is visible rather than absorbed",
+    "reason": "Gene-direct reference of a collating mini-review; following it would be a reading of the primary, which this event does not perform and does not claim."
+   },
+   {
+    "pmid": "16941225",
+    "queue": "not queued by this actor: this event is a bounded three-string verification inside a collation, and the full-text queue is owned by the orchestrator; the list is recorded here so the debt is visible rather than absorbed",
+    "reason": "Gene-direct reference of a collating mini-review; following it would be a reading of the primary, which this event does not perform and does not claim."
+   },
+   {
+    "pmid": "24932569",
+    "queue": "not queued by this actor: this event is a bounded three-string verification inside a collation, and the full-text queue is owned by the orchestrator; the list is recorded here so the debt is visible rather than absorbed",
+    "reason": "Gene-direct reference of a collating mini-review; following it would be a reading of the primary, which this event does not perform and does not claim."
+   },
+   {
+    "pmid": "10786676",
+    "queue": "not queued by this actor: this event is a bounded three-string verification inside a collation, and the full-text queue is owned by the orchestrator; the list is recorded here so the debt is visible rather than absorbed",
+    "reason": "Gene-direct reference of a collating mini-review; following it would be a reading of the primary, which this event does not perform and does not claim."
+   },
+   {
+    "pmid": "26675548",
+    "queue": "not queued by this actor: this event is a bounded three-string verification inside a collation, and the full-text queue is owned by the orchestrator; the list is recorded here so the debt is visible rather than absorbed",
+    "reason": "Gene-direct reference of a collating mini-review; following it would be a reading of the primary, which this event does not perform and does not claim."
+   },
+   {
+    "pmid": "26499798",
+    "queue": "not queued by this actor: this event is a bounded three-string verification inside a collation, and the full-text queue is owned by the orchestrator; the list is recorded here so the debt is visible rather than absorbed",
+    "reason": "Gene-direct reference of a collating mini-review; following it would be a reading of the primary, which this event does not perform and does not claim."
+   },
+   {
+    "pmid": "30619736",
+    "queue": "not queued by this actor: this event is a bounded three-string verification inside a collation, and the full-text queue is owned by the orchestrator; the list is recorded here so the debt is visible rather than absorbed",
+    "reason": "Gene-direct reference of a collating mini-review; following it would be a reading of the primary, which this event does not perform and does not claim."
+   },
+   {
+    "pmid": "15064722",
+    "queue": "not queued by this actor: this event is a bounded three-string verification inside a collation, and the full-text queue is owned by the orchestrator; the list is recorded here so the debt is visible rather than absorbed",
+    "reason": "Gene-direct reference of a collating mini-review; following it would be a reading of the primary, which this event does not perform and does not claim."
+   },
+   {
+    "pmid": "21115974",
+    "queue": "not queued by this actor: this event is a bounded three-string verification inside a collation, and the full-text queue is owned by the orchestrator; the list is recorded here so the debt is visible rather than absorbed",
+    "reason": "Gene-direct reference of a collating mini-review; following it would be a reading of the primary, which this event does not perform and does not claim."
+   },
+   {
+    "pmid": "28283473",
+    "queue": "not queued by this actor: this event is a bounded three-string verification inside a collation, and the full-text queue is owned by the orchestrator; the list is recorded here so the debt is visible rather than absorbed",
+    "reason": "Gene-direct reference of a collating mini-review; following it would be a reading of the primary, which this event does not perform and does not claim."
+   },
+   {
+    "pmid": "30290271",
+    "queue": "not queued by this actor: this event is a bounded three-string verification inside a collation, and the full-text queue is owned by the orchestrator; the list is recorded here so the debt is visible rather than absorbed",
+    "reason": "Gene-direct reference of a collating mini-review; following it would be a reading of the primary, which this event does not perform and does not claim."
+   },
+   {
+    "pmid": "17823927",
+    "queue": "not queued by this actor: this event is a bounded three-string verification inside a collation, and the full-text queue is owned by the orchestrator; the list is recorded here so the debt is visible rather than absorbed",
+    "reason": "Gene-direct reference of a collating mini-review; following it would be a reading of the primary, which this event does not perform and does not claim."
+   },
+   {
+    "pmid": "24330518",
+    "queue": "not queued by this actor: this event is a bounded three-string verification inside a collation, and the full-text queue is owned by the orchestrator; the list is recorded here so the debt is visible rather than absorbed",
+    "reason": "Gene-direct reference of a collating mini-review; following it would be a reading of the primary, which this event does not perform and does not claim."
+   },
+   {
+    "pmid": "32300104",
+    "queue": "not queued by this actor: this event is a bounded three-string verification inside a collation, and the full-text queue is owned by the orchestrator; the list is recorded here so the debt is visible rather than absorbed",
+    "reason": "Gene-direct reference of a collating mini-review; following it would be a reading of the primary, which this event does not perform and does not claim."
+   }
+  ],
+  "gene_direct_note": "The 20 listed are the first 20 of the 35 gene-direct references, recorded to show the enumeration is real; the remaining 15 are in the source's reference list and none is followed by this event. No hop is claimed as read."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "note": "Checked against this corpus before reading: no deepdive manifest and no dossier existed for PMID 38161429, and the only receipt was FTR-20260726-38161429-01, partial, with every coverage field unknown_legacy and its output the paper registry record PAPER 046. No locator for this article existed anywhere, which is why the candidate's blocking item could not be discharged from the corpus.",
+  "query": "Does this corpus already hold a locator, manifest or dossier for PMID 38161429, and what does its existing receipt cover?",
+  "hits": 1,
+  "result": "One hit and it is the defect: the only record is receipt FTR-20260726-38161429-01, partial, every coverage field unknown_legacy, output = paper_registry PAPER 046. No manifest, no dossier and no locator existed, so the candidate's blocking item could not be discharged from the corpus and had to be read at source."
+ },
+ "retraction_check": {
+  "performed": true,
+  "status": "no_flag",
+  "evidence": "PubMed record for PMID 38161429 carries no retraction, expression of concern or correction notice; the PMC JATS read here carries no such notice in its front matter.",
+  "result": "no_flag",
+  "dependencies": {
+   "schema": "retraction_check.dependencies/1",
+   "tool": "framework/scripts/dependency_integrity.py screen --pmid 38161429 --manifest-block",
+   "paper_verdict": "UNSCREENABLE_NO_SNAPSHOT",
+   "screened": false,
+   "reference_source": "jats_local",
+   "references_declared": 70,
+   "references_screened": 0,
+   "references_with_doi": 0,
+   "flagged": [],
+   "noted": [],
+   "unscreenable": {
+    "UNSCREENABLE_NO_SNAPSHOT": 70
+   },
+   "snapshot": {
+    "date": "1970-01-01",
+    "days_since_fetch": null,
+    "rows": 0,
+    "sha256": null,
+    "note": "No snapshot exists in this checkout; the date field carries the epoch as a placeholder that no reader can mistake for a fetch, and days_since_fetch is null. files/retraction_watch/ is gitignored corpus material and is empty here."
+   },
+   "citing_relation": "Nothing is flagged because nothing was screened, and the two must not be read as the same state. This event asserts only that PMID 38161429 itself carries no retraction or concern notice in PubMed or in its PMC front matter; the integrity status of the 70 studies it collates is UNKNOWN here. It matters for this particular article more than for most, because a collation's counts are exactly the sum of its dependencies."
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID38161429_Battaglia2023_PMC_2026-09-27.xml",
+   "sha256": "5bea706afd5e69ca08bf4e822707b025e036c26e1c36388ac81690e5a83f8fd2",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=10757851&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-09-27",
+    "derived": false,
+    "result_sha256": "5bea706afd5e69ca08bf4e822707b025e036c26e1c36388ac81690e5a83f8fd2"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "NCBI elink pubmed->pmc for 38161429 returns PMC10757851; the efetch XML above is the full body, 48,507 characters of text after markup removal.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; all four quote the body, Table 1 or a figure caption.",
+  "entries": [
+   {
+    "proposition": "THE DENOMINATOR THE LEDGER'S 'most cases' NEVER HAD: in the only literature collation whose declared subject is the WOREE radiological spectrum, cerebellar vermis hypoplasia is recorded as 2:2 in Table 1 against a total of 101 collated patients. The 2:2 is one study's own count, not a rate over the collation.",
+    "snippet": "Hypoplasia of the cerebellar vermis 2:2",
+    "anchor": "Table 1, 'Hypoplasia of the cerebellar vermis' row; the table's last row reads 'Total number of patients 101' and its footnote reads '+, number of patients unspecified'",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38161429_Battaglia2023_PMC_2026-09-27.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE REVIEW ITSELF PLACES VERMIS HYPOPLASIA AMONG THE LESS SPECIFIC, LOWER-FREQUENCY FINDINGS — the opposite of 'described in most cases'.",
+    "snippet": "cerebellar vermis hypoplasia were observed in a lower percentage of cases, and therefore these findings seem to be less specific",
+    "anchor": "Results, closing sentence of the imaging-frequency paragraph, immediately before the Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38161429_Battaglia2023_PMC_2026-09-27.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A FIVE-PATIENT COHORT IN WHICH THE CEREBELLUM WAS EXPLICITLY UNAFFECTED, attributed here first-hand: the sentence belongs to the Tabarki cohort of five patients from two unrelated families carrying the same homozygous WWOX variant, reference 51 of this review.",
+    "snippet": "Of note, the cerebellum was not affected",
+    "anchor": "Results, narrative of the collated studies, the sentence closing the Tabarki et al. paragraph ('five patients from two unrelated families'), citing reference 51",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38161429_Battaglia2023_PMC_2026-09-27.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "WHAT THE REVIEW DOES CALL PREDOMINANT, so that the correction removes a frequency without removing the finding: corpus callosum hypoplasia and brain atrophy, not cerebellar vermis hypoplasia.",
+    "snippet": "hypoplasia of the corpus callosum and brain atrophy appeared to be the predominant MRI alterations",
+    "anchor": "Discussion, sentence following 'This review analyzed 101 cases of children with various mutations in the WWOX gene associated with WOREE syndrome from 2014 to 2023'",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38161429_Battaglia2023_PMC_2026-09-27.xml",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}

@@ -4,6 +4,12 @@
 **Status:** non-canonical analysis file. **READ-ONLY toward every canonical file** — no registry, no
 ledger, no state manifest, no receipt touched. **Public edition. Not medical advice.**
 
+> ⚠️ **Correction appended 2026-09-27** (Scientist, wave-2 `m002`, Mirror review of `BATCH_20260927_002`):
+> the statements below that Mallaret 2014's body is unreadable, that no `Wwox` mouse was ever audiogenically
+> provoked, and the `PREMISE: NOBODY_LOOKED` built on them are **falsified**. See
+> [§ Correction 2026-09-27](#correction-2026-09-27--mallaret-2014-was-readable-and-it-reports-a-mouse-audiogenic-provocation)
+> at the end of this file. The rest of the census is not affected unless that section says so.
+
 ---
 
 ## 0 · The question, and why it is not the question the brief opened with
@@ -143,6 +149,11 @@ search is not evidence of absence: here the query returns zero **and the fact is
 > 🔴 **No. Nobody has ever applied an acoustic stimulus to a Wwox-null mouse under a scored protocol.
 > The mouse/rat discordance on audiogenic seizure is UNTESTED, not observed.**
 > **`PREMISE: NOBODY_LOOKED`.**
+
+> ⚠️ **Superseded 2026-09-27 — see the Correction at the end of this file.** The answer is **yes**:
+> Mallaret 2014 (read in full 2026-09-13, `FTR-20260913-24369382-01`) exposed constitutive `Wwox`-null
+> mice to 11–14 kHz tones at 16 and 20 days, with a wild-type comparator. The table below is kept as
+> written; its rows 2 and 4 are corrected there.
 
 The complete provocation inventory of the Wwox rodent literature:
 
@@ -374,3 +385,51 @@ Sources cited at abstract depth or from repository records, with DOI verified th
 [21499303](https://doi.org/10.1038/onc.2011.115).
 Cited from LEGEND's own prior full-text reads without re-verification this session:
 `19500159`, `17803050`, `19936220`, `30370248`.
+
+---
+
+## Correction 2026-09-27 — Mallaret 2014 was readable, and it reports a mouse audiogenic provocation
+
+*Append-only; Scientist, wave-2 package `m002`, on the Mirror ex-post review of `BATCH_20260927_002`
+(`research/session_evaluations/2026-09-27_BATCH_20260927_002_mirror_review.md`, follow-up 3). Nothing
+above is deleted; this section states which of it is false.*
+
+**What was wrong.** This census (2026-09-22) treated Mallaret 2014 as paywalled and unreadable. Its
+body had already been read in full on **2026-09-13** from this repository's own `files/fulltext/`
+directory — receipt `FTR-20260913-24369382-01`, `complete_fulltext_read`, surface
+`PMID24369382_Mallaret2014_PMCreader.html`, sha256 `a3a15a3b…1413`. A copyright pre-test measured the
+licence, not what the repository already held. The body is inspected, and says (manifest
+`research/deepdive_manifests/PMID24369382.json`, entries 17–20 and 35–40):
+
+- genotype: male `Wwox^flox/flox` × female `BK5-Cre`, recombination in oocytes, *«producing full
+  knock-out progeny»* — a constitutive whole-body null of the Aldaz line (Ludes-Meyers 2009);
+- 16 days: 11–14 kHz tone, 5–10 min, *«A few knock-out mice (three of eight) presented with
+  audiogenic tonic-clonic seizures in the first minutes after sound exposure»*;
+- 20 days: *«the four surviving mice were exposed to a 14 kHz tone. All knock-out mice presented at
+  different times with seizures»* — the Fig. 4 legend accounts for three;
+- comparator: *«No wild-type mice of matched age and background (n = 8) presented with seizures upon
+  11 or 14 kHz sound exposure»*;
+- specificity: *«Other stimuli such as animal handling also induced seizures on some occasions»*;
+- evidence class: behavioural, video and still frames, **unscored** — no EEG, no scoring scale, no
+  latency series, no statistic; single laboratory.
+
+**Corrections, by location:**
+
+| where above | as written | now |
+|---|---|---|
+| § 0, second paragraph | *"Mallaret's body is paywalled and unreadable here"* | read in full 2026-09-13; see above |
+| § 1, Mallaret row | *"the body is paywalled … No method, no n"* | method, two denominators and a comparator are in the body |
+| **Q2** answer | *"No. Nobody has ever applied an acoustic stimulus to a Wwox-null mouse under a scored protocol"* | **Yes, under an unscored protocol:** Mallaret 2014 did, with a 0/8 wild-type comparator. *Under a scored protocol* is still true — no scoring scale was used — but the sentence's force ("untested, not observed") is withdrawn |
+| **Q2** premise | `PREMISE: NOBODY_LOOKED` | **retired, falsified** (canonical: `CLAIM 037`, `BATCH_20260927_002`) |
+| provocation table, row 2 | pilocarpine/PTZ in the NCKU null is *"the **only** provocation ever applied to a mouse"* | false: the audiogenic provocation of the Aldaz null (2014) precedes it. It is the only **chemoconvulsant** provocation in the rows |
+| provocation table, row 4 | audiogenic in any mouse: *"never performed, in any Wwox mouse, of any allele, by any laboratory"* | performed — Aldaz-line constitutive null, 16 and 20 days, unscored, no EEG |
+| provocation table, row 5 | kindling etc. *"never performed, in any Wwox rodent"* | unchanged by this reading: the two mouse exposures are at different ages in a survivorship-reduced cohort, not a repeated-session series |
+| § 2, Q2 discussion, point 2 | *"The one claim that someone did look is unreadable"* | readable, and read |
+| § 4, first row | *"Acquisition is a human action"* | no acquisition was needed |
+| § 2, Q2 discussion, point 1, last sentence | *"The audiogenic protocol that yields 95% in the rat … was never run on the mouse"* | the **rat's** protocol (three trials, latency measured) was not; an audiogenic protocol was |
+
+**What survives.** The census method (per-paper ascertainment, `not performed ≠ not reported`), the
+query-count floor argument, and every row not listed above. The **electrographic** limb is unchanged:
+no EEG of an audiogenically provoked `Wwox` mouse exists in the corpus read here as of 2026-09-27, and
+the **kindling-like** progression remains documented only in the rat. The prohibition on asserting
+**epileptogenesis** as a measured process (`CLAIM 005`) is untouched.
