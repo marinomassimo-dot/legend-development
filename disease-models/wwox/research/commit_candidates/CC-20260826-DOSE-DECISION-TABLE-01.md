@@ -209,3 +209,70 @@ Repudi side and none is imputed.
 
 None for queueing. §6.1–6.2 are MODERATE annotations that ride with
 [`CC-20260826-DOSE-ADJUDICATION-01`](CC-20260826-DOSE-ADJUDICATION-01.md)'s operator review.
+
+---
+
+## WAVE-2 READINESS (2026-09-27)
+
+**Actor:** `scientist`, wave-2 package "dose". **context_policy declared:** `QUESTION_DRIVEN` — the
+session held LEGEND's records before opening any source and says so rather than claiming `SOURCE_FIRST`.
+**Evidence base:** `evidence_presence.py` reports **0 of 28 artifacts present** for PMID 42422765 and
+PMID 34747138 in this checkout, so no figure value here was re-read from pixels. One structured surface was
+re-acquired — `files/fulltext/PMID42422765_Obeid2026_PMC_2026-09-27.xml`, sha256 `7bea83346b708e541d2c432e5da4029f69673e1abc3c6fe70926ad0e3ec2eef2`, efetch
+`db=pmc id=13343157` — declared in `deepdive_manifests/PMID42422765.json` with its `acquisition_recipe`
+and logged in `research/retrieval_manifest.jsonl`. Receipt prepared, **not recorded**:
+`scratchpad/receipts_pending/dose_42422765_1.json` (`FTR-20260927-42422765-07`).
+
+### Verdict: **READY_MAJOR** (change class MODERATE in itself; it rides on `CC-20260826-DOSE-ADJUDICATION-01`'s operator gate and it qualifies a `consolidated baseline` quantity, so it is classified fail-closed with the parent)
+
+**What was done.**
+1. **Disposition verified, not trusted.** None of §6 is in canon: `CLAIM 004` has no dose basis and no
+   age/n on the transduction figures; `CLAIM 011` has no non-linearity sentence; the dismissal ledger holds
+   20 records (`DIS-001`…`DIS-020`) and none on dose transferability
+   (`registry_records.py catalog --source dismissal_ledger_current`, commit `db7fbeb`).
+2. **The family duplication is resolved in this wave.**
+   `CC-20260826-DOSE-TRANSFERABLE-QUANTITY-01` is closed **SUPERSEDED** by this candidate, on this
+   candidate's own §0 evidence — it corrects that candidate's §2 conclusion from "the direction survives
+   both readings" to a region-dependent difference, and restates its §5 in corrected form. This candidate's
+   own sentence *"Does not supersede it"* is therefore **adjudicated as withdrawn**: it was written before
+   §0 closed the branch, and propagating both wordings would put two versions of the same quantity in one
+   record.
+3. **§1's Discussion quotation and §0.2's unit finding now have text-surface support that does not depend
+   on the absent bytes.** The re-acquired JATS XML confirms, machine-checked: the Methods contain **no dose
+   at all** (0 occurrences of `vg`, `1.23`, `2.63` across their 14,659 characters — the only vector quantity
+   is *"Viral titers were determined by RT-qPCR using bGH primers"*), and the injection is *"2.0 μL/hemisphere"*
+   with *"The procedure was repeated for the contralateral hemisphere."* ⇒ §0.2's verdict — Obeid states no
+   dose basis while Repudi states one twice — is confirmed from the primary, and it is confirmed **more
+   strongly** than §0.2 argued: the basis is absent from the Methods rather than merely unstated beside a dose.
+4. **Applied outside batch (non-canonical, MINOR):** §6.4's two author questions, appended to
+   `disease-models/wwox/research/full_text_queue_current.md` as a dated block naming both as **questions for
+   the authors, not reading debt**.
+
+### Exact operation list for `batch_commit.py propagate`
+
+**File `.../claim_registry_current.md` · record `CLAIM 011` · op `replace-within`**
+
+- *old text (verbatim):* `` `PREMISE_TAG`: ogni inferenza del tipo *«una dose più bassa e più sicura aiuterebbe comunque»* legge la dose-risposta come continuo, e il pannello B la **rifiuta** per la sopravvivenza in questo modello. ``
+- *new text:* the same sentence, then: `⚠️ **Non-linearità (2026-09-27, `CC-20260826-DOSE-DECISION-TABLE-01`):** nello stesso studio l'espressione per genoma è **non lineare nella dose e dipendente dalla regione** — un raddoppio della dose moltiplica la proteina WWOX per **3–17×** secondo la regione (S3E) — e un singolo elemento della cassetta (WPRE) vale un'equivalenza di dose di **≈44×** (S3F). La soglia LD/HD **non è una costante biologica** e non va citata senza configurazione del vettore e finestra di follow-up.`
+
+**File `.../claim_registry_current.md` · record `CLAIM 004` · op `replace-within`**
+
+- *old text (verbatim, inside the Evidence-boundary field):* `trasduzione **60–70%** dei neuroni (non quasi-totale);`
+- *new text:* `trasduzione **60–70%** dei neuroni (non quasi-totale) — ⚠️ **con la sua età e la sua n (2026-09-27): P19, n = 3 topi, 3 sezioni sagittali identiche ciascuno** (Fig 2G), e a **dose totale ≈4 × 10¹⁰ GC (2 × 10¹⁰/emisfero, entrambi gli emisferi)**; il confronto con l'omologo del 2026 (Fig S3C) resta bloccato dall'altro lato, dove **né età né n sono dichiarate**;`
+
+**File `.../research/dismissal_ledger_current.md` · op `append`** — **one** entry for the whole dose family,
+in this candidate's §6.3 wording (three independent grounds; `REVIVAL_TRIGGER` = regional WWOX protein
+relative to WT at a matched, stated age). Id `DIS-021`.
+
+### LOCATOR TRIPLES FOR BLIND AUDIT
+
+| proposition | verbatim quote | anchor |
+|---|---|---|
+| The 2026 paper never states a dose basis: its Methods contain no dose, only how the titre was measured. | "Viral titers were determined by RT-qPCR using bGH primers." | `PMID42422765_Obeid2026_PMC_2026-09-27.xml`, Materials and methods, "Plasmid vectors", final sentence (manifest entry 33) |
+| The injection is bilateral with one injection per hemisphere, so a `vg` figure of unstated basis is ambiguous by exactly a factor of two. | "A Micro-4 nano-pump controller was used to ensure a steady injection rate of 1–1.5 μL/min, delivering 2.0 μL/hemisphere through a Hamilton syringe with a 32G needle (World Precision Instruments)." | same artifact, Methods, "ICV injection of AAV particles into P0-P5 Wwox-null mice" (manifest entry 32) |
+| The doses are printed as bare `vg` in the running text, with no per-hemisphere or per-animal qualifier. | "For translational relevance, we evaluated two clinically applicable doses: an LD (1.23 × 1011 vg) and a higher dose (HD, 2.63 × 1011 vg) (Figure 3A)." | same artifact, Results, dose-response section (manifest entry 31) |
+| Repudi states its basis per hemisphere and injects both, so its comparator total is ≈4 × 10¹⁰ GC. | "Approximately 1 µl (2 × 10¹⁰ GC/hemisphere) virus was dispensed … The other hemisphere was injected in the same way." | `deepdive_manifests/PMID34747138.json`, Methods — **bytes absent from this checkout; attestation carried forward** |
+| The region-dependent non-linearity that makes the threshold a study constant rather than a biological one. | *(figure attestation, no quotable characters)* S3E densitometry relative to the 4 × 10¹⁰ WPRE-free arm: cortex 3.0, hippocampus 3.0, midbrain 5.5, cerebellum 16.7 at 8 × 10¹⁰ | `deepdive_manifests/PMID42422765.json` entry 26 (Supplementary Figure S3, mmc1.pdf page 4 at 300 dpi) — **bytes absent; figure triple not auditable until re-acquired** |
+
+**Still pending:** the operator gate on the parent; `Fig S3C`'s age and n and `Fig 5A–D`'s GC normaliser
+remain **questions for the authors** and are not obtainable by any further reading of this corpus.

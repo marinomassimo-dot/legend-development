@@ -174,3 +174,44 @@ of a within-study non-linearity, not a separate puzzle.
 
 None for queueing. §5.1–5.2 are MODERATE annotations that ride with
 [`CC-20260826-DOSE-ADJUDICATION-01`](CC-20260826-DOSE-ADJUDICATION-01.md)'s operator review.
+
+---
+
+## WAVE-2 READINESS (2026-09-27)
+
+**Actor:** `scientist`, wave-2 package "dose". **context_policy declared:** `QUESTION_DRIVEN` — the
+session held LEGEND's records before opening any source and says so rather than claiming `SOURCE_FIRST`.
+**Evidence base:** `evidence_presence.py` reports **0 of 28 artifacts present** for PMID 42422765 and
+PMID 34747138 in this checkout, so no figure value here was re-read from pixels. One structured surface was
+re-acquired — `files/fulltext/PMID42422765_Obeid2026_PMC_2026-09-27.xml`, sha256 `7bea83346b708e541d2c432e5da4029f69673e1abc3c6fe70926ad0e3ec2eef2`, efetch
+`db=pmc id=13343157` — declared in `deepdive_manifests/PMID42422765.json` with its `acquisition_recipe`
+and logged in `research/retrieval_manifest.jsonl`. Receipt prepared, **not recorded**:
+`scratchpad/receipts_pending/dose_42422765_1.json` (`FTR-20260927-42422765-07`).
+
+### Verdict: **CLOSE — SUPERSEDED** (closing status: **SUPERSEDED**, not propagated)
+
+**Adjudication, from the files and the history.** This candidate and
+`CC-20260826-DOSE-DECISION-TABLE-01` carry the same four proposed effects, and the decision table carries
+them **corrected**:
+
+| This candidate (§2, §5) | The decision table |
+|---|---|
+| Repudi's per-hemisphere / total basis is an open branch; *"the direction survives both readings"* | §0.1 **closes the branch** from the Results sentence — `2 × 10¹⁰/hemisphere`, both hemispheres, **4 × 10¹⁰ total** — and the corrected pairing makes the difference **region-dependent, inverting in cerebellum (≈0.93×)**, not uniform. **This candidate's §2 conclusion is superseded, not merely extended.** |
+| §5.1 CLAIM 011 non-linearity sentence | §6.1, same sentence |
+| §5.2 CLAIM 004 transduction with age and n | §6.2, same **plus** the dose basis |
+| §5.3 dismissal entry on two grounds | §6.3, the same entry on **three** |
+| §5.4 full-text-queue author question (S3C age/n) | §6.4, the same **plus** the Fig 5A–D normaliser |
+
+**Evidence for the closing status.** Nothing of either candidate is in canon (verified at commit `db7fbeb`:
+no dose basis or non-linearity note on `CLAIM 004`/`CLAIM 011`; 20 dismissal records, none on dose
+transferability). The decision table's own sentence *"Does not supersede it"* is **adjudicated as withdrawn
+in this wave** — it was written in the same act that corrected this candidate's §2, and propagating both
+wordings would write two versions of one quantity into one record. **No content is lost:** every §5 item
+survives in the decision table's operation list, and this candidate stays in place as the record of how the
+branch was opened and on what basis it was closed.
+
+**Consequence for the batch:** the dose family propagates **two** candidates (`DOSE-ADJUDICATION` head +
+`DOSE-DECISION-TABLE` dependent), not three, and **one** dismissal entry (`DIS-021`).
+
+**No operation list, by construction** — a `CLOSE/SUPERSEDED` candidate contributes no edit. The only act it
+needs is the status line the batch writes when it lands its successor.

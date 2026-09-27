@@ -25,7 +25,7 @@
 
 ## C — The cure in progress (definitive; advanced preclinical)
 
-- **C1. Neuronal AAV9-WWOX gene therapy — fixes both alleles.** AAV9 with WWOX cDNA under the neuronal Synapsin-I promoter (**AAV-SynI-WWOX**) rescued Wwox-null mouse phenotypes — epilepsy, hypomyelination, lethality (PMID **34747138**, EMBO Mol Med 2021). By replacing functional WWOX in neurons, it bypasses any allele combination.
+- **C1. Neuronal AAV9-WWOX gene therapy — fixes both alleles.** AAV9 with WWOX cDNA under the neuronal Synapsin-I promoter (**AAV-SynI-WWOX**) improved **survival and epileptiform activity**, and improved myelination **on the comparisons the study draws** (PMID **34747138**, EMBO Mol Med 2021). 🔴 On the single panel where treated animals are compared with wild type — unmyelinated axons per field, WT ≈26 vs treated ≈52 — the comparison is **significant against the rescue**; on the remaining myelin panels the wild-type-versus-treated comparison is **not drawn**, so the residual gap is `NOT_TESTED` (`deepdive_manifests/PMID34747138.json` entries 9–10; applied 2026-09-27 from `CC-20260826-AAV9-ENDPOINT-SPLIT-01` D-L1). By replacing functional WWOX in neurons, it bypasses any allele combination.
 - **C2. Proof that restoring WWOX reverses the phenotype.** In WOREE-derived brain organoids, WWOX re-expression corrected cortical/molecular CNS anomalies (PMID **34268881**, EMBO Mol Med 2021).
 - **C3. Splice-switching ASO — conditional.** For a canonical splice-acceptor variant (e.g. c.1057-2A>G), **an ASO does not repair the sequence** and cannot recreate an abolished acceptor site. It could only *redirect* splicing if a **productive outcome** exists (an in-frame skip, a usable cryptic site) — which must be demonstrated on the real transcript first. If the sequence itself must be corrected, base/prime editing is the alternative. The *Milasen* n-of-1 precedent is regulatory, not proof of amenability. Requires n-of-1 development.
 
@@ -39,6 +39,6 @@
 1. **Now:** optimize seizure control (vigabatrin among options) — protects the myelin/network window.
 2. **To discuss with the team:** lithium — a general anticonvulsant with a WWOX-adjacent mechanistic rationale that has not been demonstrated; no developmental endpoint has ever been measured under lithium in any WWOX system — tight monitoring.
 3. **To build:** patient-iPSC/organoids as an n-of-1 bench for repurposing and allele-specific ASO.
-4. **Goal:** AAV9-WWOX gene therapy (already effective in mouse) — support the path to the clinic.
+4. **Goal:** AAV9-WWOX gene therapy — effective in mouse **on survival, spike-wave discharges and gliosis, at high dose, in the P0–P5 window**; **motor and locomotor behaviour is not impaired and not normalised**; cognition and developmental trajectory were **not measured** (applied 2026-09-27 from `CC-20260826-AAV9-ENDPOINT-SPLIT-01` D-L2) — support the path to the clinic.
 
 Artifacts: `WWOX_therapy_map.png` · `WWOX_therapy_levers.csv` (added after clean-check; the private column linking levers to an individual is removed).
