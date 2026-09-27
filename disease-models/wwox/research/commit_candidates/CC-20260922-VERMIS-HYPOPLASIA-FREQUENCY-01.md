@@ -140,3 +140,11 @@ canonical file is touched; `CLAIM 039` is untouched by this act.
 `disease-models/wwox/research/discovery_ledger_current.md`.
 
 **Pending:** one receipt to append (`provenance_38161429_1.json`), by whoever holds the ledger lock.
+
+## BATCH DISPOSITION — `BATCH_20260927_003` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** **PROPAGATED** — `BATCH_20260927_003` (MINOR, MANUAL, `WM_v6.0` → `WM_v6.1`).
+
+Closed as **PROPAGATED**: the only target it names is the discovery-ledger frequency clause, and that clause is corrected outside batch, append-only, to *described in WOREE cases* with `PREMISE: FREQUENCY_UNESTABLISHED` and a `REVIVAL_TRIGGER`. The blocking item is discharged at the source: the `2:2` row, the *"less specific"* sentence, the attributed *"Of note, the cerebellum was not affected"* (re-verified verbatim against `files/fulltext/PMID38161429_Battaglia2023_PMC_2026-09-27.xml`) and the predominant-findings sentence are persisted locators. `CLAIM 039` is untouched and is left **more open**, not settled.
+
+**Mirror ex-post review due** under §21e — see the batch report at `session_evaluations/2026-09-27_BATCH_20260927_003.md`.

@@ -563,3 +563,11 @@ Phase 4.7 (pathograph regeneration; expect shared-evidence pairs 35 → 30).
 
 **Pending, owned elsewhere:** recording the two receipts (Orchestrator / batch executor, in ledger order
 after `dose`'s `-07`); the benchmark fixtures of follow-up 9 (Harness Engineering).
+
+## BATCH DISPOSITION — `BATCH_20260927_003` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** **PROPAGATED** — `BATCH_20260927_003` (MINOR, MANUAL, `WM_v6.0` → `WM_v6.1`).
+
+All 26 ops applied: twelve `replace-within` on `CLAIM 005` (×4) and `CLAIM 037` (×8), six on `working_model_current.md` (**including** the three OPTIONAL historical pointers — a reader who lands on a withdrawn framing should meet the withdrawal beside it), six inside `PAPER 042` in the full rewrite, and two in `disease_model.md`. Every `old` string was re-measured at this head: **26 of 26 occur exactly once**. Every locator triple of §4 was re-verified verbatim against the fingerprinted surfaces: **9 of 9 SUPPORTED**, including the Fig. 4 legend's *"two other mice"*, the handling sentence, the `0/8` comparator, *"3 to 4 weeks maximum"*, the abstract's rat clause, the front-matter opening, the FVB background and bib69. `CLAIM 005`'s prohibition span is **byte-identical** — none of `C5-1`…`C5-4` intersects it — and the `PAPER 042` `Claim links: 005` edge that had been added to clear an advisory warning is **removed**, as F5 asked. The predicted Phase-4.7 effect was observed: `CLAIM 005`'s shared-evidence count fell 4 → 3 and `test_trace_claim_foundation` stayed green (20/20). The two pending receipts and the frozen benchmark fixtures remain owned elsewhere and were not touched.
+
+**Mirror ex-post review due** under §21e — see the batch report at `session_evaluations/2026-09-27_BATCH_20260927_003.md`.

@@ -405,3 +405,11 @@ caveat. All three are **one restored PDF away**, and none of them is needed for 
 > **145** times in `literature_tracking_log_current.md` on the current tree. The executor addresses
 > `LIT-0083` and replaces within that record; the `PAPER 025` strings above were each measured as
 > occurring **exactly once** in `paper_registry_current.md`.
+
+## BATCH DISPOSITION — `BATCH_20260927_003` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** **PROPAGATED IN PART** — `BATCH_20260927_003` (MINOR, MANUAL, `WM_v6.0` → `WM_v6.1`).
+
+**(a)** `OP 1` applied to `PAPER 025` (short title, full title, byline, journal, identifier, and the byline-correction note). **(c)** `OP 2` applied: `CORPUS-STUB-059` is **replaced** by the new record `PAPER 117` and `OP 3` completes `LIT-0083` and points it there — papers 106 → 107, corpus 361 → 360, declared with `growth_anchors.py record`. **(e)** the ledger row landed as **`D-22`**, the number the candidate proposed, with `D-17` left reserved. 🔴 **DEFERRED, for the reason the readiness section gives:** the A4 note content (the 593/504 bp measured-RNA wording, the 1:177 carrier rate, the Methods § 2.4 quotation) — the evidence bytes are absent from every checkout reachable here, and no locator may be written against bytes nobody can open. **(b)** stays **NOT INTEGRATED**: the abstract-depth `PREMISE` note contradicts the receipt ledger and must not land in any form.
+
+**Mirror ex-post review due** under §21e — see the batch report at `session_evaluations/2026-09-27_BATCH_20260927_003.md`.

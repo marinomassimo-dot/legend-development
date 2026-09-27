@@ -391,3 +391,11 @@ one re-acquired artefact).
 
 **Pending:** the author-data request for the 62 literature cases' per-individual survival rows —
 the only thing that would let the "remove `Q230P`" recomputation be done at all.
+
+## BATCH DISPOSITION — `BATCH_20260927_003` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** **PROPAGATED** — `BATCH_20260927_003` (MINOR, MANUAL, `WM_v6.0` → `WM_v6.1`).
+
+`OP 1`–`OP 3` applied: the 45/15/15 denominators and the 13-plus-62 assembly warning in `CLAIM 033`'s Summary, reservation **(6)** before the operational corollary, and the two-tailed `Q230P` observation in `CLAIM 030`. Six Oliver quotations were re-verified verbatim against `files/fulltext/PMID36779245_Oliver2023_PMC_2026-09-27.xml` and the two `PMID 40875931` strings against that paper's persisted locators. The claim is **not** reversed — `p = .0085` stands and null/null stays the worst class on the assembled data; what is refused is the transfer of a class statistic to an individual. §5's finding that no therapeutic surface cites the survival statistic was re-checked: nothing to remove, and no `SCORE` or `SAFETY` text moved.
+
+**Mirror ex-post review due** under §21e — see the batch report at `session_evaluations/2026-09-27_BATCH_20260927_003.md`.

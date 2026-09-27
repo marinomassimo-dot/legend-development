@@ -337,3 +337,11 @@ Four pending receipt JSONs, **`fulltext_receipts.py record` deliberately NOT run
 🔴 **Evidence-locality: `files/fulltext/PMID33255508_Aldaz2020.xml` was absent from this deployment** and was re-acquired free by NCBI efetch (`db=pmc`, `PMC7727818`), **reproducing the declared digest `92f0f3bc…` byte for byte**; its nine figure JPGs and two supplementary tables are still absent and nothing here rests on an image.
 
 **DEFAULTS_TAKEN.** (1) *The drafted relabel did not exist and the row could not be left as it was* → drafted it as two append-only bullets rather than editing the table cell, which is what an append-only ledger admits. (2) *The first draft quoted a sentence naming family relationships and `public_release_gate.py` BLOCKED it* → replaced the quotation with the paper's own genotype-only grouping clause, in the ledger and in the manifest; safe because the evidential content (heterozygous carriers, n = 2 vs 2) is identical and the privacy surface is smaller. (3) *`PMID 38122823` had no manifest and no receipt while two candidates leaned on its body* → created both, with the deep-dive sections waived **by name** rather than filled from metadata nobody used. (4) *`D-32` is `MINOR` and non-canonical* → left as an op with the number unallocated, because sibling candidates claim adjacent `D-` numbers and two batches treated the `D-`rows as operator directives. **STOP_LOG: empty.**
+
+## BATCH DISPOSITION — `BATCH_20260927_003` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** **PROPAGATED** — `BATCH_20260927_003` (MINOR, MANUAL, `WM_v6.0` → `WM_v6.1`).
+
+The one op the readiness section left for the batch landed: the `DEFAULTS THAT BIT US` row, allocated **`D-20`** (the candidate proposed `D-32`). The privacy choice its package recorded was preserved: nothing in the row names a family relationship, and `public_release_gate.py` passes with zero blocks.
+
+**Mirror ex-post review due** under §21e — see the batch report at `session_evaluations/2026-09-27_BATCH_20260927_003.md`.

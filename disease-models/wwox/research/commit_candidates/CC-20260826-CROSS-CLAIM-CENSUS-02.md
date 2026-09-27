@@ -239,3 +239,11 @@ Canonical file, so it is still a `BATCH_COMMIT` object, but it is record-scoped,
 
 - The prose sentences round 3 wanted in `CLAIM 031`/`CLAIM 033` (*"the same single patient, counted once"*) and in `CLAIM 032`/`CLAIM 033` (the `DO_NOT_INFER` about a missense allele versus a wild-type allele). They are **real and unwritten**, they change what the claims mean, and they are **DEFERRED to a claim-scoped candidate** rather than smuggled in beside a link. 🔴 Until that lands, the double-counting risk round 3 identified is mitigated only by adjacency.
 - Any LINT change. Round 1 §5's proposal is untouched here.
+
+## BATCH DISPOSITION — `BATCH_20260927_003` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** **PROPAGATED IN PART** — `BATCH_20260927_003` (MINOR, MANUAL, `WM_v6.0` → `WM_v6.1`).
+
+`OP-1`–`OP-8` applied: twelve claim-to-claim wikilinks on `CLAIM 004 · 005 · 011 · 016 · 031 · 032 · 033 · 037`, `Wikilinks` fields only, closed under reciprocity. Every `old` line was measured against the live records first and matched byte for byte. The `m002` sequencing warning on `CLAIM 005` and `CLAIM 037` was honoured: the wikilink ops and the Mirror ops address different lines of the same records and were composed into one atomic record-scoped list. **IN PART, deliberately:** the prose sentences round 3 wants in `CLAIM 031`/`CLAIM 033` and `CLAIM 032`/`CLAIM 033` are **not** written — they change what the claims mean and are a claim-scoped decision, so the candidate stays queued for them.
+
+**Mirror ex-post review due** under §21e — see the batch report at `session_evaluations/2026-09-27_BATCH_20260927_003.md`.

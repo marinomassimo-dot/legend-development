@@ -377,3 +377,11 @@ audit trigger. **Applied outside batch:** `deepdive_manifests/PMID36828035.json`
 its own is **undecided**, deliberately. It needs a record decision (new claim vs `PAPER 007`
 boundary as above), and one measurement would settle what it means — the myelin endpoints
 `CC-20260826-CLAIM003-01` §4 specifies, applied to white matter in this model.
+
+## BATCH DISPOSITION — `BATCH_20260927_003` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** **PROPAGATED** — `BATCH_20260927_003` (MINOR, MANUAL, `WM_v6.0` → `WM_v6.1`).
+
+`OP 1` applied to `PAPER 007` in the paper-registry full rewrite: the corpus-callosum Olig2⁺ boundary, with the region, the three 500 μm² sampling regions, `n = 3` per group, the **untested** 80-vs-250-day comparison, the widening gap driven by the wild type rising, and the paper's own *"no significant differences in Mbp staining"* result above it. Both quotations were re-verified verbatim against `files/fulltext/PMID36828035_Hussain2023_PMC.xml` in the root checkout before the op was applied. No claim is created and `CLAIM 006` is untouched; the cerebellar half stays **SUPERSEDED by `CLAIM 041`**. Whether the white-matter datum becomes a claim of its own is still open and is not pre-empted.
+
+**Mirror ex-post review due** under §21e — see the batch report at `session_evaluations/2026-09-27_BATCH_20260927_003.md`.

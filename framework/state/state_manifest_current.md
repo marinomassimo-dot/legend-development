@@ -43,7 +43,7 @@ edition: public
 ## 2. DISEASE-MODEL (WORKING-MODEL) VERSION
 
 ```yaml
-working_model_version: WM_v6.0
+working_model_version: WM_v6.1
 working_model_file: disease-models/wwox/registries/working_model_current.md
 narrative_view: disease-models/wwox/disease_model.md
 notes: "Canonical disease-level working model derived from public literature; disease_model.md is its narrative reader-facing view. The private individual-level record is not part of this edition."
@@ -105,7 +105,7 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20260927_002
+last_batch_commit_id: BATCH_20260927_003
 last_batch_commit_date: 2026-09-27
 last_batch_commit_type: MANUAL
 ```
@@ -121,7 +121,7 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20260927_BATCH_20260927_002
+last_lint_id: LINT_20260927_BATCH_20260927_003
 last_lint_date: 2026-09-27
 last_lint_result: WARN
 ```
@@ -208,8 +208,8 @@ to make a suite green — the only way to move it is to have made the change you
 
 ```yaml
 growth_anchor_ledger: framework/state/growth_anchors.jsonl
-growth_anchor_events: 31
-growth_anchor_head: e6f825fe21be8f7af0f2b3c23fd2492d023e421f1dee6a5557a916d13d4dfb21
+growth_anchor_events: 32
+growth_anchor_head: 331c3a36212de1ed11682855038c9f0947d89cc6d067dfea166f545fb4fe19a9
 ```
 
 ```bash
@@ -320,8 +320,8 @@ above the trigger the next `BATCH_COMMIT` either propagates or records why not. 
 as `SCALE_TRIGGER`: nothing is wrong, something is due.
 
 ```yaml
-panel_relation_legacy_baseline: 13
-panel_relation_legacy_ids: ["PMID17803050", "PMID19500159", "PMID19936220", "PMID22193544", "PMID24871327", "PMID30290271", "PMID30755385", "PMID31340538", "PMID33255508", "PMID34747138", "PMID35716775", "PMID37519886", "PMID40875931"]
+panel_relation_legacy_baseline: 12
+panel_relation_legacy_ids: ["PMID17803050", "PMID19500159", "PMID19936220", "PMID24871327", "PMID30290271", "PMID30755385", "PMID31340538", "PMID33255508", "PMID34747138", "PMID35716775", "PMID37519886", "PMID40875931"]
 ```
 
 🔴 **The eighteen are `unknown_legacy`, and the field is NOT backfilled by inference.** A

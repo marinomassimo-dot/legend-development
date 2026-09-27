@@ -325,3 +325,11 @@ Nothing here narrows or reverses a claim about the world. The mirror-row repair 
 ### Pending
 
 - Operator decision on the ketogenic promotion; `m002` for `DIS-011`; the shared cross-link list in `…-CENSUS-02`.
+
+## BATCH DISPOSITION — `BATCH_20260927_003` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** **PROPAGATED IN PART** — `BATCH_20260927_003` (MINOR, MANUAL, `WM_v6.0` → `WM_v6.1`).
+
+Edit 1 (the `017` mirror row) is **PROPAGATED** by `BATCH_20260927_001`, re-verified in the live working model at line level. The MAJOR half of edit 2 is resolved: the ketogenic proposition exists only as sourced model prose with its denominator, and no claim was created — measured, not assumed (`ketogenic|chetogenic` returns zero in the claim registry). Round 3's four adjudicated pairs landed **here**, as `OP-3`/`OP-6`/`OP-7`/`OP-8` of `…-CENSUS-02`'s list. Finding 2.A (`DIS-011`'s fired revival trigger) was done by the `m002` package outside batch. **DEFERRED, and why this stays open:** whether the 3/5 ketogenic datum is promoted to a claim of its own is a therapeutic-adjacent decision reserved to the operator, and nothing in the corpus is wrong while it waits.
+
+**Mirror ex-post review due** under §21e — see the batch report at `session_evaluations/2026-09-27_BATCH_20260927_003.md`.

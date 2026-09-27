@@ -27,9 +27,9 @@ annotations is reported below whatever it happens to be.
 | Measure | Count |
 |---|---|
 | Claim nodes | 41 |
-| Claim→claim wikilink occurrences | 58 |
-| …distinct directed links | 44 |
-| …undirected edges they collapse into | 33 |
+| Claim→claim wikilink occurrences | 83 |
+| …distinct directed links | 60 |
+| …undirected edges they collapse into | 38 |
 | Edges carrying a declared relation type | 0 |
 | Nodes carrying a biological scale | 0 |
 | Deep-dive manifests read | 116 |
@@ -53,19 +53,19 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 | CLAIM 001 | Vigabatrin associated with VABAM in WWOX-DEE | conflicting evidence | DATO | P2 — GABAergic vulnerability / safety | NOT_ANNOTATED | 3 | 4 |
 | CLAIM 002 | WWOX-LoF causes network hyperexcitability; AAV-WWOX rescues organoid phenotype | consolidated baseline | DATO + INFERENZA prudente | P1 — Ca²⁺ / network dysregulation; P7 —  | NOT_ANNOTATED | 1 | 4 |
 | CLAIM 003 | Neuronal WWOX deletion induces non-cell-autonomous hypomyelination | consolidated baseline | DATO | P4 — myelination / white matter | NOT_ANNOTATED | 2 | 1 |
-| CLAIM 004 | AAV9-WWOX neuron-targeted rescue shows multi-domain in vivo improvement | consolidated baseline | DATO | P7 — gene therapy readiness | NOT_ANNOTATED | 4 | 3 |
-| CLAIM 005 | Reduced GABAergic interneurons and glial activation in WWOX-KO | consolidated baseline | DATO | P2 — GABAergic vulnerability; P6 — neuro | NOT_ANNOTATED | 12 | 4 |
+| CLAIM 004 | AAV9-WWOX neuron-targeted rescue shows multi-domain in vivo improvement | consolidated baseline | DATO | P7 — gene therapy readiness | NOT_ANNOTATED | 10 | 3 |
+| CLAIM 005 | Reduced GABAergic interneurons and glial activation in WWOX-KO | consolidated baseline | DATO | P2 — GABAergic vulnerability; P6 — neuro | NOT_ANNOTATED | 20 | 3 |
 | CLAIM 006 | P47T model shows progressive hippocampal astrogliosis; microglial progression shown for morpholo | consolidated baseline | DATO + INFERENZA prudente | P6 — neuroinflammation / glia | NOT_ANNOTATED | 0 | 1 |
 | CLAIM 007 | P47T abolishes or near-abolishes WWOX recovery by two PPPY peptides in vitro | consolidated baseline | DATO | P3 — MYC/Wnt / interaction logic | NOT_ANNOTATED | 1 | 4 |
 | CLAIM 008 | WOREE and SCAR12 form a genotype-phenotype spectrum | consolidated baseline | DATO | Clinical spectrum / genotype-phenotype | NOT_ANNOTATED | 0 | 3 |
 | CLAIM 009 | WWOX deficiency plausibly alters mitochondrial quality control, redox and energy efficiency | in observation | INFERENZA | P5 — metabolism / mitochondria / redox / | NOT_ANNOTATED | 6 | 9 |
 | CLAIM 010 | Mitophagy may be more relevant than senolytics for WWOX-related mitochondrial dysfunction | background only | IPOTESI | P5 — metabolism / mitochondria / mitopha | NOT_ANNOTATED | 0 | 0 |
-| CLAIM 011 | AAV9-hSynI-hWWOX: dose-dependent durable rescue in Wwox-null murine model su domini multipli inc | flagged for review | DATO preclinico (full text reviewed) | P7 — gene therapy readiness; P4 — myelin | NOT_ANNOTATED | 2 | 1 |
+| CLAIM 011 | AAV9-hSynI-hWWOX: dose-dependent durable rescue in Wwox-null murine model su domini multipli inc | flagged for review | DATO preclinico (full text reviewed) | P7 — gene therapy readiness; P4 — myelin | NOT_ANNOTATED | 9 | 1 |
 | CLAIM 012 | Fenotipo WWOX severo neonatale-fatale con MRI inizialmente normale: genotipo-severità heterogene | consolidated baseline | DATO descrittivo (full text reviewed) | clinical spectrum / genotype-phenotype | NOT_ANNOTATED | 0 | 1 |
 | CLAIM 013 | In WWOX-DEE, genotipi biallelici null/null associati a maggiore rischio di crisi, ipertonia e co | in observation | DATO con limiti metodologici dichiarati | Clinical spectrum / genotype-phenotype / | NOT_ANNOTATED | 0 | 2 |
 | CLAIM 014 | WWOX loss perturbs prenatal cortical development, neuronal migration and cortical maturation acr | consolidated baseline | DATO | P3 — neurodevelopment / migration / cort | NOT_ANNOTATED | 0 | 3 |
 | CLAIM 015 | Part of WWOX-related epileptic encephalopathy likely arises on a structurally misassembled prena | consolidated baseline | INFERENZA strongly supported | P3 / P1 / P4 | NOT_ANNOTATED | 0 | 3 |
-| CLAIM 016 | GSK3β hyperactivation may contribute to seizure susceptibility in WWOX deficiency | in observation | DATO (abbondanza, murino) + **DATO mecca | emerging node — GSK3β / seizure suscepti | NOT_ANNOTATED | 7 | 2 |
+| CLAIM 016 | GSK3β hyperactivation may contribute to seizure susceptibility in WWOX deficiency | in observation | DATO densitometrico NOT_TESTED (murino)  | emerging node — GSK3β / seizure suscepti | NOT_ANNOTATED | 12 | 2 |
 | CLAIM 017 | WWOX-related human disease spans a spectrum from severe WOREE/WWOX-DEE to milder SCAR12-like phe | consolidated baseline | DATO | human spectrum / genotype-phenotype | NOT_ANNOTATED | 1 | 0 |
 | CLAIM 018 | The exon 6 splice-site variant c.517-2A>G is pathogenic and causes exon 6 skipping in humans | consolidated baseline | DATO | genotype / splicing / pathogenicity | NOT_ANNOTATED | 0 | 1 |
 | CLAIM 019 | Q230P is pathogenic in severe human compound context and must not be treated as a benign or weak | consolidated baseline | DATO (endpoint funzionale: mRNA normale  | genotype / compound-context interpretati | NOT_ANNOTATED | 8 | 4 |
@@ -80,16 +80,16 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 | CLAIM 028 | WWOX biological output is strongly partner- and context-dependent; expression level alone is ins | flagged for review | INFERENZA — principio interpretativo tra | cross-pathway interpretive principle | NOT_ANNOTATED | 4 | 5 |
 | CLAIM 029 | WWOX contributes directly to DNA-damage-response competence and genome-stability maintenance, at | in observation | DATO + INFERENZA prudente | genome stability / ATM / DNA damage resp | NOT_ANNOTATED | 0 | 4 |
 | CLAIM 030 | In WWOX the severity tracks residual protein FUNCTION, not protein abundance | in observation | DATO (serie allelica su cellule di pazie | genotype / protein function / proteostas | NOT_ANNOTATED | 9 | 6 |
-| CLAIM 031 | WWOX-DEE is a developmental AND epileptic encephalopathy: seizure control does not rescue develo | in observation | DATO (osservazione clinica) + INFERENZA  | clinical course / therapeutic strategy | NOT_ANNOTATED | 3 | 2 |
-| CLAIM 032 | Una copia di WWOX conserva alcuni endpoint osservati, ma non definisce una soglia terapeutica de | in observation | DATO (endpoint specifici in topo, ratto  | P7 — gene therapy readiness / dose-thres | NOT_ANNOTATED | 5 | 14 |
-| CLAIM 033 | Biallelic null WWOX carries higher mortality than genotypes with at least one missense — but the | in observation | DATO (statistica di coorte) + IPOTESI (l | genotype-phenotype / prognosis | NOT_ANNOTATED | 3 | 2 |
+| CLAIM 031 | WWOX-DEE is a developmental AND epileptic encephalopathy: seizure control does not rescue develo | in observation | DATO (osservazione clinica) + INFERENZA  | clinical course / therapeutic strategy | NOT_ANNOTATED | 5 | 2 |
+| CLAIM 032 | Una copia di WWOX conserva alcuni endpoint osservati, ma non definisce una soglia terapeutica de | in observation | DATO (endpoint specifici in topo, ratto  | P7 — gene therapy readiness / dose-thres | NOT_ANNOTATED | 7 | 14 |
+| CLAIM 033 | Biallelic null WWOX carries higher mortality than genotypes with at least one missense — but the | in observation | DATO (statistica di coorte) + IPOTESI (l | genotype-phenotype / prognosis | NOT_ANNOTATED | 7 | 2 |
 | CLAIM 034 | In a post-mitotic excitable neuron under metabolic stress, WWOX up-regulation is pro-oxidant — r | in observation | DATO (sistema fotorecettoriale) + ESPANS | P5 — metabolism / redox · secondario P1  | NOT_ANNOTATED | 6 | 2 |
 | CLAIM 035 | WWOX is a direct, residue-mapped inhibitor of GSK3β through an Axin-like docking motif in the SD | in observation | DATO (biochimica, cinque saggi ortogonal | P1 neurosviluppo / GSK3β–Tau–microtubuli | NOT_ANNOTATED | 6 | 1 |
-| CLAIM 036 | A systemic constitutive Wwox-null mouse at P18 is metabolically decompensated, so any brain phen | in observation | DATO (le misure) + INFERENZA (la portata | P5 — metabolismo / rene; confondente tra | NOT_ANNOTATED | 5 | 4 |
-| CLAIM 037 | Seizure-related phenotypes in WWOX rodent models are documented in the rat `lde/lde` (audiogenic | in observation | DATO | P2 — eccitabilità / epilettogenesi | NOT_ANNOTATED | 11 | 3 |
-| CLAIM 038 | Elevated BUN and creatinine recur across Wwox rodent models with two competing explanations — re | in observation | DATO (le misure) + IPOTESI (entrambe le  | P5 — metabolismo / rene | NOT_ANNOTATED | 5 | 3 |
+| CLAIM 036 | A systemic constitutive Wwox-null mouse at P18 is metabolically decompensated, so any brain phen | in observation | DATO (le misure) + INFERENZA (la portata | P5 — metabolismo / rene; confondente tra | NOT_ANNOTATED | 7 | 4 |
+| CLAIM 037 | Seizure-related phenotypes in WWOX rodent models are documented in the rat `lde/lde` (audiogenic | in observation | DATO | P2 — eccitabilità / epilettogenesi | NOT_ANNOTATED | 19 | 3 |
+| CLAIM 038 | Elevated BUN and creatinine recur across Wwox rodent models with two competing explanations — re | in observation | DATO (le misure) + IPOTESI (entrambe le  | P5 — metabolismo / rene | NOT_ANNOTATED | 7 | 3 |
 | CLAIM 039 | Ataxic gait is the most penetrant phenotype of the rat `lde/lde` model — 95% versus 0% — and **n | in observation | DATO | P1 — neurosviluppo / funzione motoria | NOT_ANNOTATED | 3 | 1 |
-| CLAIM 040 | Neuronal restoration of WWOX suppresses spike-wave discharges in the `Wwox`-null mouse to a leve | in observation | DATO | P1 — neurosviluppo; P7 — eccitabilità di | NOT_ANNOTATED | 6 | 1 |
+| CLAIM 040 | Neuronal restoration of WWOX suppresses spike-wave discharges in the `Wwox`-null mouse to a leve | in observation | DATO | P1 — neurosviluppo; P7 — eccitabilità di | NOT_ANNOTATED | 10 | 1 |
 | CLAIM 041 | In the P47T knock-in mouse, sampled cerebellar regions show fewer calbindin-positive Purkinje pr | in observation | DATO (mouse histology) + INFERENZA (rela | P1 — cerebellar neuronal structure; adja | NOT_ANNOTATED | 1 | 2 |
 
 ## 2 · Edges declared by the registry
@@ -99,20 +99,23 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 | CLAIM 001 <-> CLAIM 002 | **one-way** | Clinical meaning | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
 | CLAIM 001 <-> CLAIM 031 | yes | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 045 |
 | CLAIM 003 <-> CLAIM 004 | yes | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
-| CLAIM 004 <-> CLAIM 005 | **one-way** | Evidence boundary | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
+| CLAIM 004 <-> CLAIM 005 | yes | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
+| CLAIM 004 <-> CLAIM 011 | yes | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
+| CLAIM 004 <-> CLAIM 037 | yes | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
 | CLAIM 004 <-> CLAIM 040 | **one-way** | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
-| CLAIM 005 <-> CLAIM 011 | **one-way** | Evidence boundary | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
-| CLAIM 005 <-> CLAIM 016 | **one-way** | Evidence boundary | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
+| CLAIM 005 <-> CLAIM 011 | yes | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
+| CLAIM 005 <-> CLAIM 016 | yes | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
 | CLAIM 005 <-> CLAIM 036 | **one-way** | Evidence boundary | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 057 |
-| CLAIM 005 <-> CLAIM 037 | yes | Evidence boundary | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 042, PAPER 058 |
-| CLAIM 005 <-> CLAIM 040 | yes | Evidence boundary, Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
+| CLAIM 005 <-> CLAIM 037 | yes | Evidence boundary, Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 058 |
+| CLAIM 005 <-> CLAIM 040 | yes | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
 | CLAIM 007 <-> CLAIM 041 | **one-way** | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 007, PAPER 112 |
 | CLAIM 009 <-> CLAIM 025 | **one-way** | Clinical meaning | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
 | CLAIM 009 <-> CLAIM 028 | **one-way** | ⚠️ Counter-directional evidence (BATCH_20260726_001) | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 054 |
 | CLAIM 009 <-> CLAIM 034 | yes | Summary, ⚠️ Counter-directional evidence (BATCH_20260726_001) | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 054, PAPER 071 |
-| CLAIM 011 <-> CLAIM 040 | **one-way** | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 011 |
+| CLAIM 011 <-> CLAIM 037 | yes | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
+| CLAIM 011 <-> CLAIM 040 | yes | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 011 |
 | CLAIM 016 <-> CLAIM 035 | yes | Meccanismo aggiunto (BATCH_20260726_001), Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 056 |
-| CLAIM 016 <-> CLAIM 037 | **one-way** | Clinical meaning | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
+| CLAIM 016 <-> CLAIM 037 | yes | Clinical meaning, Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
 | CLAIM 016 <-> CLAIM 039 | **one-way** | Evidence boundary | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
 | CLAIM 016 <-> CLAIM 040 | **one-way** | Clinical meaning | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
 | CLAIM 017 <-> CLAIM 020 | **one-way** | Clinical meaning | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
@@ -125,10 +128,12 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 | CLAIM 030 <-> CLAIM 033 | **one-way** | Clinical meaning | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 042 |
 | CLAIM 030 <-> CLAIM 035 | **one-way** | Clinical meaning | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 056 |
 | CLAIM 031 <-> CLAIM 032 | **one-way** | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 049 |
-| CLAIM 036 <-> CLAIM 038 | yes | Summary, Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 057 |
+| CLAIM 031 <-> CLAIM 033 | yes | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
+| CLAIM 032 <-> CLAIM 033 | yes | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
+| CLAIM 036 <-> CLAIM 038 | yes | Summary, Vincolo di confronto (`CC-20260922-CLAIM038-UNIT-CLASS-01`, 2026-09-27) | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 057 |
 | CLAIM 037 <-> CLAIM 038 | yes | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 058, PAPER 059 |
 | CLAIM 037 <-> CLAIM 039 | yes | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 059 |
-| CLAIM 037 <-> CLAIM 040 | **one-way** | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
+| CLAIM 037 <-> CLAIM 040 | yes | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
 
 Every edge carrying `NO_DECLARED_RELATION_ANNOTATION` is an edge that exists
 and has never been given a direction of causation, an intermediate, or an
@@ -208,16 +213,11 @@ is matched as one string, so an adverb inserted into it — *"contributes
 | Edge | Declared | Not declared |
 |---|---|---|
 | CLAIM 001 <-> CLAIM 002 | CLAIM 001 -> CLAIM 002 | CLAIM 002 -> CLAIM 001 |
-| CLAIM 004 <-> CLAIM 005 | CLAIM 005 -> CLAIM 004 | CLAIM 004 -> CLAIM 005 |
 | CLAIM 004 <-> CLAIM 040 | CLAIM 040 -> CLAIM 004 | CLAIM 004 -> CLAIM 040 |
-| CLAIM 005 <-> CLAIM 011 | CLAIM 005 -> CLAIM 011 | CLAIM 011 -> CLAIM 005 |
-| CLAIM 005 <-> CLAIM 016 | CLAIM 005 -> CLAIM 016 | CLAIM 016 -> CLAIM 005 |
 | CLAIM 005 <-> CLAIM 036 | CLAIM 036 -> CLAIM 005 | CLAIM 005 -> CLAIM 036 |
 | CLAIM 007 <-> CLAIM 041 | CLAIM 041 -> CLAIM 007 | CLAIM 007 -> CLAIM 041 |
 | CLAIM 009 <-> CLAIM 025 | CLAIM 025 -> CLAIM 009 | CLAIM 009 -> CLAIM 025 |
 | CLAIM 009 <-> CLAIM 028 | CLAIM 009 -> CLAIM 028 | CLAIM 028 -> CLAIM 009 |
-| CLAIM 011 <-> CLAIM 040 | CLAIM 040 -> CLAIM 011 | CLAIM 011 -> CLAIM 040 |
-| CLAIM 016 <-> CLAIM 037 | CLAIM 016 -> CLAIM 037 | CLAIM 037 -> CLAIM 016 |
 | CLAIM 016 <-> CLAIM 039 | CLAIM 039 -> CLAIM 016 | CLAIM 016 -> CLAIM 039 |
 | CLAIM 016 <-> CLAIM 040 | CLAIM 016 -> CLAIM 040 | CLAIM 040 -> CLAIM 016 |
 | CLAIM 017 <-> CLAIM 020 | CLAIM 017 -> CLAIM 020 | CLAIM 020 -> CLAIM 017 |
@@ -228,7 +228,6 @@ is matched as one string, so an adverb inserted into it — *"contributes
 | CLAIM 030 <-> CLAIM 033 | CLAIM 033 -> CLAIM 030 | CLAIM 030 -> CLAIM 033 |
 | CLAIM 030 <-> CLAIM 035 | CLAIM 035 -> CLAIM 030 | CLAIM 030 -> CLAIM 035 |
 | CLAIM 031 <-> CLAIM 032 | CLAIM 032 -> CLAIM 031 | CLAIM 031 -> CLAIM 032 |
-| CLAIM 037 <-> CLAIM 040 | CLAIM 040 -> CLAIM 037 | CLAIM 037 -> CLAIM 040 |
 
 **Unlinked prose mentions.** A claim names another claim in prose with no
 wikilink, so the relation is asserted in text and invisible to the graph.
@@ -282,15 +281,15 @@ place to look, not a set of missing edges.
 | CLAIM 002 ↔ CLAIM 004 | PAPER 082, PAPER 083 |
 | CLAIM 002 ↔ CLAIM 030 | PAPER 039 |
 | CLAIM 002 ↔ CLAIM 032 | PAPER 039 |
-| CLAIM 005 ↔ CLAIM 007 | PAPER 042 |
-| CLAIM 005 ↔ CLAIM 008 | PAPER 042 |
-| CLAIM 005 ↔ CLAIM 019 | PAPER 042 |
-| CLAIM 005 ↔ CLAIM 030 | PAPER 042 |
-| CLAIM 005 ↔ CLAIM 033 | PAPER 042 |
 | CLAIM 005 ↔ CLAIM 038 | PAPER 057, PAPER 058 |
 | CLAIM 006 ↔ CLAIM 007 | PAPER 007 |
+| CLAIM 006 ↔ CLAIM 041 | PAPER 007 |
+| CLAIM 007 ↔ CLAIM 008 | PAPER 042 |
+| CLAIM 007 ↔ CLAIM 019 | PAPER 042 |
+| CLAIM 007 ↔ CLAIM 030 | PAPER 042 |
+| CLAIM 007 ↔ CLAIM 033 | PAPER 042 |
 
-Showing 12 of 35. The complete list is in the export.
+Showing 12 of 30. The complete list is in the export.
 
 ## 5 · Candidate edges — propositions already written, awaiting review
 
@@ -349,6 +348,6 @@ carried no connective from the lexicon.
 ## Provenance
 
 Derived from 119 input files; digest
-`f032e929ffe67f1b`. Sources: the claim, paper and
+`c94791bb4429e9a8`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 

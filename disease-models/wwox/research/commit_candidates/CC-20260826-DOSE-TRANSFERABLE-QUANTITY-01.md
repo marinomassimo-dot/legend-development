@@ -215,3 +215,11 @@ branch was opened and on what basis it was closed.
 
 **No operation list, by construction** — a `CLOSE/SUPERSEDED` candidate contributes no edit. The only act it
 needs is the status line the batch writes when it lands its successor.
+
+## BATCH DISPOSITION — `BATCH_20260927_003` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** **SUPERSEDED** — `BATCH_20260927_003` (MINOR, MANUAL, `WM_v6.0` → `WM_v6.1`).
+
+Closed as **SUPERSEDED** by `CC-20260826-DOSE-DECISION-TABLE-01`, whose operation list carries all four of its effects in corrected form — the per-hemisphere/total branch is closed from the Results sentence and the corrected pairing makes the difference region-dependent, inverting in cerebellum, which supersedes this candidate's §2 rather than extending it. No content is lost and no edit is owed: this file stays in place as the record of how the branch was opened and on what basis it was closed. The dose family therefore propagates two candidates, not three, in the batch that carries it.
+
+**Mirror ex-post review due** under §21e — see the batch report at `session_evaluations/2026-09-27_BATCH_20260927_003.md`.

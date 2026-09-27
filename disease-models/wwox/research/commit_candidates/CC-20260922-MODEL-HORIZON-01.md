@@ -193,3 +193,11 @@ Two pending receipt JSONs, **`fulltext_receipts.py record` deliberately NOT run*
 🔴 **Evidence-locality finding worth more than this candidate.** `files/fulltext/PMID34747138_Repudi2021_PMC.xml` — the artefact behind twenty persisted locators — was **absent from this deployment**. It was re-acquired free from Europe PMC (`.../PMC8649866/fullTextXML`) and **reproduced the declared digest `7da156e8…` byte for byte**; NCBI efetch of the same article returns a different serialisation (`c430d5d2…`), so the route is part of the recipe. Nine figure artefacts that manifest declares are still absent and no locator added here rests on an image.
 
 **DEFAULTS_TAKEN.** (1) *A quotation in §1 was not verbatim* → corrected and persisted as a locator instead of being left as a candidate-only sentence; safe because the meaning is unchanged and the source is now bound to a digest. (2) *§5 asserted a missing fact that the primary states* → read the Methods and recorded the fact rather than leaving a false gap; the gap that survives (backcrossing) is narrower and named. (3) *The `D-34` row is `MINOR` and non-canonical but the `D-`row lane is claimed by two sibling candidates and was skipped by two batches as an operator directive* → specified as an op with the number left to the batch, rather than minting a number that could collide. **STOP_LOG: empty.**
+
+## BATCH DISPOSITION — `BATCH_20260927_003` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** **PROPAGATED** — `BATCH_20260927_003` (MINOR, MANUAL, `WM_v6.0` → `WM_v6.1`).
+
+The one op the readiness section left for the batch landed: the `DEFAULTS THAT BIT US` row, allocated **`D-21`** (the candidate proposed `D-34`; the ledger's free numbers are `D-18`–`D-23`, `D-17` reserved). Everything else was already applied outside batch by its package and no canonical file was owed anything. The `D-31` reference inside the row text was rewritten as prose, because no such row exists in this ledger.
+
+**Mirror ex-post review due** under §21e — see the batch report at `session_evaluations/2026-09-27_BATCH_20260927_003.md`.

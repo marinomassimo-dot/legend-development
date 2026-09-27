@@ -2658,11 +2658,11 @@ Serves to:
 ---
 
 ## LIT-0083
-**Short title:** corpus paper 59
-**Authors:** not yet extracted
-**Year:** unknown
-**Source type:** not yet screened
-**Journal/source:** not yet extracted
+**Short title:** Piard 2019 Genet Med — WOREE phenotypic spectrum (20 additional cases)
+**Authors:** Piard J, Hawkes L, Milh M, Villard L, Borgatti R, Romaniello R, Fradin M, Capri Y, Héron D, Nougues MC, Nava C, Tarta Arsene O, Shears D, Taylor J, Pagnamenta A, Taylor JC, Sogawa Y, Johnson D, Firth H, Vasudevan P, Jones G, Nguyen-Morel MA, Busa T, Roubertie A, van den Born M, Brischoux-Boucher E, Koenig M, Mignot C, Kini U, Philippe C
+**Year:** 2019 (issue) / 2018-10-25 (online first) — one paper, two citable years
+**Source type:** primary cohort + review
+**Journal/source:** Genet Med 2019;21(6):1308-1318
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 30356099 / DOI 10.1038/s41436-018-0339-3
 **Date discovered:** 2026-04-12
@@ -2670,7 +2670,7 @@ Serves to:
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 59
-**Status:** discovered
+**Status:** processed
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -2678,7 +2678,7 @@ Serves to:
 **Claim links:** none
 **Working Model impact:** none yet
 **Report mentions:** corpus alignment
-**Next action:** screening and tier assignment
+**Next action:** none — promoted to [[paper_registry_current#PAPER 117]] 2026-09-27 (`BATCH_20260927_003`); erratum PMID 30783266 linked (administrative)
 **Flags:** corpus placeholder / not yet screened
 **Note:** Title: The phenotypic spectrum of WWOX-related disorders: 20 additional cases of WOREE syndrome and review of the literature
 
@@ -8724,7 +8724,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Year:** 2011
 **Source type:** Article
 **Journal/source:** Z Naturforsch C J Biosci
-**Identifier:** PMID 21476439
+**Identifier:** PMID 21476439 / DOI 10.1515/znc-2011-1-210
 **Date discovered:** 2026-04-18
 **Date screened:** 2026-04-18
 **Date processed:** triage only
@@ -8734,8 +8734,8 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Discovery query:** corpus paper 306
 **Priority:** low / background
 **Quality status:** peer-reviewed (PubMed listing)
-**Filter decision:** background only
-**Tier:** C
+**Filter decision:** deep-dive — full text required
+**Tier:** A
 **Status:** screened
 **Primary pathway:** P5 — metabolism / mitochondria / redox
 **Genotype/model tag:** unassigned in triage
@@ -8743,12 +8743,12 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Transferability:** unassigned in triage
 **Directness to the reference genotype:** unassigned in triage
 **Over-inference risk:** standard triage — not evaluated
-**clinical relevance:** LOW
+**clinical relevance:** HIGH
 **Claim links:** none — triage only
 **Working Model impact:** none yet
 **Report mentions:** FASE 1 triage 221–400
-**Current status:** screened — C
-**Next action:** background-only; escalate only on convergence signal
+**Current status:** queued for deep-dive — A; unacquired, not unread
+**Next action:** record as UNACQUIRED, not unread — hybrid-OA publisher PDF exists at DOI 10.1515/znc-2011-1-210 and is blocked only by an automated-traffic challenge; one human fetch closes it (FT-130 / packet A11). Do not re-run automated acquisition.
 **Flags:** FASE 1 batch entry / no deep-dive yet
 **Note:** Title: WWOX oxidoreductase--substrate and enzymatic characterization
 

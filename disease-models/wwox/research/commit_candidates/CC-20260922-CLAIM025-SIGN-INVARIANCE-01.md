@@ -200,3 +200,11 @@ verify before applying it.)
 
 Only the supplementary tables (S4–S8) for a table-level check of the per-subtype directions. It changes
 no wording proposed above, and the claim is qualified at the strength the running text supports.
+
+## BATCH DISPOSITION — `BATCH_20260927_003` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** **PROPAGATED** — `BATCH_20260927_003` (MINOR, MANUAL, `WM_v6.0` → `WM_v6.1`).
+
+`OP 1`–`OP 3` applied to `CLAIM 025`: the restricted `cross-context support`, the directionality paragraph appended to the Summary, and the new evidence boundary beside the 2026-09-09 one. All six quoted strings — including *"tended to show more favourable DFS in the high-ratio group"*, the authors' *"descriptive and hypothesis-generating"* sentence, `HR 1.11`, `concordance 0.49` and the bootstrap interval — were re-verified verbatim against `files/fulltext/PMID42589397_ZZ2026_PMC_2026-09-27.xml`. The readiness section's own correction stands: the candidate's *"il segno si inverte"* is **not** written, because the source declines to assert it. The disjointness from `CC-20260825-GRAPH-MATERIALIZATION-01` was verified — the `Clinical meaning` line already carries the `CLAIM 009` wikilink and was not touched.
+
+**Mirror ex-post review due** under §21e — see the batch report at `session_evaluations/2026-09-27_BATCH_20260927_003.md`.

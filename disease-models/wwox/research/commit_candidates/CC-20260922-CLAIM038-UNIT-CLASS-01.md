@@ -181,3 +181,11 @@ unit at all.
 
 **Change class:** MINOR (unit annotation + comparison bound). **Review floor:** R2, as declared.
 **Pending:** §6.2 — re-verify `CLAIM 036`'s mouse chemistry against PMID 19936220's own table.
+
+## BATCH DISPOSITION — `BATCH_20260927_003` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** **PROPAGATED** — `BATCH_20260927_003` (MINOR, MANUAL, `WM_v6.0` → `WM_v6.1`).
+
+`OP 1`–`OP 3` applied: the Summary's unit pointer, the unit note on `CLAIM 038` and the comparison bound on `CLAIM 036`. Δ1 as originally drafted stays **refused** — the printed `mg/ml` is kept, because making LEGEND's text disagree with the page it quotes is worse than the defect it would fix. Both locator rows (BUN and GLU) were checked in `deepdive_manifests/PMID17803050.json` before the ops were applied; §6.2 (re-verifying `CLAIM 036`'s mouse chemistry against its own primary) stays open and is not claimed.
+
+**Mirror ex-post review due** under §21e — see the batch report at `session_evaluations/2026-09-27_BATCH_20260927_003.md`.
