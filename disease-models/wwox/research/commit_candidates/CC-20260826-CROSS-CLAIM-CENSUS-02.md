@@ -176,3 +176,66 @@ contradictions every round would be measuring its own threshold, not the corpus.
 
 None for queueing. The confirmed contradictions carry their own authorization requirements in
 their own candidates.
+
+
+---
+
+## WAVE-2 READINESS (2026-09-27)
+
+**Actor:** `scientist`, wave-2 package `seizure`, under the Orchestrator's wave-2 dispatch. **Append-only: nothing above this line was rewritten.**
+
+**context_policy:** `SYNTHESIS` over the claim registry, by record (`registry_records.py get --id …`), never by grep over the two large registries. No source was reopened: this item adds **links**, not evidence. Prior knowledge admitted and named: this candidate, round 1 and round 3 (`…-CENSUS-03`), the current `Wikilinks` field of every claim it names.
+
+### What was done
+
+1. **The underspecification the triage named is decided here, as the dispatch allows:** 🔴 **`Wikilinks` field only, no prose.** A back-link in a prose field means authoring a sentence, which is not a mechanical repair and is not batchable as one; the discriminator this candidate itself proposes (`[NOT CROSS-LINKED]`) reads the **`Wikilinks` field**, so a link there is what turns the screen off. Any explanatory sentence is a separate, later, claim-scoped decision. **DEFAULTS_TAKEN:** field-only, because it is the reversible half and the half the tooling actually consumes.
+2. **Measured the current state, record by record** (no grep): `CLAIM 004` links `PAPER 005 · PAPER 063 · CLAIM 003`; `CLAIM 011` links `PAPER 011` only; `CLAIM 005` links `PAPER 006` only; `CLAIM 016` links `PAPER 019 · PAPER 056 · CLAIM 035`; `CLAIM 037` links `PAPER 058 · PAPER 059 · PAPER 042 · CLAIM 005 · CLAIM 038 · CLAIM 039`. **So `CLAIM 037 → CLAIM 005` exists and `CLAIM 005 → CLAIM 037` does not**: the pair is half-linked, which the screen counts as linked in one direction and is exactly the asymmetry §1's discriminator was built to catch.
+3. **The link list is made exact** below, closed under reciprocity, and restricted to the pairs this candidate and round 3 **adjudicated** — the two confirmed contradictions plus the three `RESOLVED_BY_CONTEXT` pairs whose flagging recurs every run (`005↔011` glia, `031↔033` one-patient double count, `032↔033` corroboration). Nothing ambiguous is linked.
+4. **The script upgrade** (`+4` term, `[NOT CROSS-LINKED]` label) was verified present in `framework/scripts/cross_claim_contradiction_census.py`; **no harness change is proposed here.**
+
+### Verdict: **READY_MINOR**
+
+Canonical file, so it is still a `BATCH_COMMIT` object, but it is record-scoped, additive, and changes no proposition, status, type or source. **No locator triples are owed:** a wikilink asserts no fact about the world.
+
+### Exact operation list (`batch_commit.py propagate`, file `claim_registry_current.md`, one atomic list)
+
+**OP-1** · record `CLAIM 004` · `replace-within`
+- **old:** `**Wikilinks:** [[paper_registry_current#PAPER 005]] · [[paper_registry_current#PAPER 063]] · [[claim_registry_current#CLAIM 003]]`
+- **new:** `**Wikilinks:** [[paper_registry_current#PAPER 005]] · [[paper_registry_current#PAPER 063]] · [[claim_registry_current#CLAIM 003]] · [[claim_registry_current#CLAIM 011]] · [[claim_registry_current#CLAIM 005]] · [[claim_registry_current#CLAIM 037]]`
+
+**OP-2** · record `CLAIM 011` · `replace-within`
+- **old:** `**Wikilinks:** [[paper_registry_current#PAPER 011]]`
+- **new:** `**Wikilinks:** [[paper_registry_current#PAPER 011]] · [[claim_registry_current#CLAIM 004]] · [[claim_registry_current#CLAIM 005]] · [[claim_registry_current#CLAIM 037]] · [[claim_registry_current#CLAIM 040]]`
+
+**OP-3** · record `CLAIM 005` · `replace-within`
+- **old:** `**Wikilinks:** [[paper_registry_current#PAPER 006]]`
+- **new:** `**Wikilinks:** [[paper_registry_current#PAPER 006]] · [[claim_registry_current#CLAIM 004]] · [[claim_registry_current#CLAIM 011]] · [[claim_registry_current#CLAIM 016]] · [[claim_registry_current#CLAIM 037]] · [[claim_registry_current#CLAIM 040]]`
+- ⚠️ **`CLAIM 005` is owned by the `m002` package this wave.** Sequence this OP after theirs, or hand it to them.
+
+**OP-4** · record `CLAIM 016` · `replace-within`
+- **old:** `**Wikilinks:** [[paper_registry_current#PAPER 019]] · [[paper_registry_current#PAPER 056]] · [[claim_registry_current#CLAIM 035]]`
+- **new:** `**Wikilinks:** [[paper_registry_current#PAPER 019]] · [[paper_registry_current#PAPER 056]] · [[claim_registry_current#CLAIM 035]] · [[claim_registry_current#CLAIM 037]] · [[claim_registry_current#CLAIM 040]] · [[claim_registry_current#CLAIM 005]]`
+- 🔴 **identical to OP-3 of `CC-20260826-FIVECLAIM-PACKAGE-01` (Δ6). Apply once.**
+
+**OP-5** · record `CLAIM 037` · `replace-within`
+- **old:** `**Wikilinks:** [[paper_registry_current#PAPER 058]] · [[paper_registry_current#PAPER 059]] · [[paper_registry_current#PAPER 042]] · [[claim_registry_current#CLAIM 005]] · [[claim_registry_current#CLAIM 038]] · [[claim_registry_current#CLAIM 039]]`
+- **new:** `**Wikilinks:** [[paper_registry_current#PAPER 058]] · [[paper_registry_current#PAPER 059]] · [[paper_registry_current#PAPER 042]] · [[claim_registry_current#CLAIM 005]] · [[claim_registry_current#CLAIM 038]] · [[claim_registry_current#CLAIM 039]] · [[claim_registry_current#CLAIM 004]] · [[claim_registry_current#CLAIM 011]] · [[claim_registry_current#CLAIM 016]] · [[claim_registry_current#CLAIM 040]]`
+- ⚠️ `CLAIM 037` is `m002`'s and is also touched by `CC-20260826-CLAIM037-01`'s OP-1 (a different line of the same record). Compose all three into one record-scoped list.
+
+**OP-6** · record `CLAIM 031` · `replace-within` *(round 3's one-patient double count)*
+- **old:** `**Wikilinks:** [[paper_registry_current#PAPER 045]] · [[paper_registry_current#PAPER 018]] · [[paper_registry_current#PAPER 011]] · [[claim_registry_current#CLAIM 001]]`
+- **new:** `**Wikilinks:** [[paper_registry_current#PAPER 045]] · [[paper_registry_current#PAPER 018]] · [[paper_registry_current#PAPER 011]] · [[claim_registry_current#CLAIM 001]] · [[claim_registry_current#CLAIM 033]]`
+
+**OP-7** · record `CLAIM 033` · `replace-within`
+- **old:** `**Wikilinks:** [[paper_registry_current#PAPER 018]] · [[paper_registry_current#PAPER 040]] · [[paper_registry_current#PAPER 041]] · [[paper_registry_current#PAPER 042]] · [[claim_registry_current#CLAIM 019]] · [[claim_registry_current#CLAIM 030]]`
+- **new:** `**Wikilinks:** [[paper_registry_current#PAPER 018]] · [[paper_registry_current#PAPER 040]] · [[paper_registry_current#PAPER 041]] · [[paper_registry_current#PAPER 042]] · [[claim_registry_current#CLAIM 019]] · [[claim_registry_current#CLAIM 030]] · [[claim_registry_current#CLAIM 031]] · [[claim_registry_current#CLAIM 032]]`
+
+**OP-8** · record `CLAIM 032` · `replace-within`
+- **old:** ` · [[claim_registry_current#CLAIM 019]] · [[claim_registry_current#CLAIM 031]]`
+- **new:** ` · [[claim_registry_current#CLAIM 019]] · [[claim_registry_current#CLAIM 031]] · [[claim_registry_current#CLAIM 033]]`
+- **executor note:** this is a suffix of `CLAIM 032`'s `Wikilinks` line; address it with the full line if `replace-within` reports ambiguity.
+
+### What is NOT proposed
+
+- The prose sentences round 3 wanted in `CLAIM 031`/`CLAIM 033` (*"the same single patient, counted once"*) and in `CLAIM 032`/`CLAIM 033` (the `DO_NOT_INFER` about a missense allele versus a wild-type allele). They are **real and unwritten**, they change what the claims mean, and they are **DEFERRED to a claim-scoped candidate** rather than smuggled in beside a link. 🔴 Until that lands, the double-counting risk round 3 identified is mitigated only by adjacency.
+- Any LINT change. Round 1 §5's proposal is untouched here.

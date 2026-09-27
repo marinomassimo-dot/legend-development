@@ -104,3 +104,49 @@ blockade does not exceed the network benefit.*
 
 **Target WM:** MINOR bump if committed (claim modification, no reversal) — declared at batch time.
 **Batch gate:** intentionally untouched.
+
+
+---
+
+## WAVE-2 READINESS (2026-09-27)
+
+**Actor:** `scientist`, wave-2 package `seizure`, under the Orchestrator's wave-2 dispatch. **Append-only: nothing above this line was rewritten.**
+
+**context_policy:** `QUESTION_DRIVEN` — declared before the source was reopened. The question: *does the d-APV result support the proposed upgrade, and does it support it at text level or only at panel level?* Prior knowledge admitted and named: this candidate, the current `CLAIM 021` record (via `registry_records.py get --id "CLAIM 021" --hops 1`), `deepdive_manifests/PMID34634460.json`, receipt `FTR-20260810-34634460-02`, and `mechanism_intervention_map.md` CHAIN B.
+
+### What was done
+
+1. **`CLAIM 021` re-read at its CURRENT text.** The target clause is unchanged by `BATCH_20260922_SEIZURE` and `BATCH_20260927_002` (those batches moved `CLAIM 037` and `CLAIM 005`, not `CLAIM 021`): the Summary still ends *"Bursting depends on NMDAR and gap junction activity."* No rebase of the wording was needed; the proposal is restated against that string below.
+2. **The primary was reopened first-hand** (Europe PMC `fullTextXML` for `PMC8609180`, sha256 `934b4e1a42ac19f5cd8912994fb171beabdeb94a6631b23d9a383dab1db906aa`). 🔴 **That digest is byte-identical to the `article_text` artefact the manifest declares** — which matters, because **all seven artefacts the manifest names are ABSENT from the shared checkout's `files/` tree today** (`paper_packet.py packet --pmid 34634460`: *0 present, 7 declared-and-absent*). The NCBI `efetch` route returns a different serialisation (`b01bfa4f…`), so the *route* is part of the recipe. A pending receipt records the re-read: `receipts_pending/seizure_34634460_1.json` (`partial_fulltext_read`, `new_question_outside_prior_coverage`, prior `FTR-20260810-34634460-02`). **`fulltext_receipts.py record` was NOT run** — parallel packages are appending to the same hash chain.
+3. **The upgrade is text-supported; its magnitude is not.** The *abolition* and the *reversibility on washout* are in the running text, verbatim (triples below). The **~1.85× washout overshoot is a figure attestation only** (manifest entry 3), and **its image is not in this checkout**, so the proposed wording is rebased to keep the overshoot as an attested panel read, explicitly labelled, rather than as a printed number.
+4. **One new qualification found while reading, which the candidate did not have:** in the same treatment series the authors report that maximal phase–amplitude coupling *shifted* under the pannexin blocker in 10 of 25 bursts. It does not touch the d-APV result, but it shows the pharmacology series is not a clean three-arm ladder, and it is recorded in the pending receipt and in `N-16` (applied outside batch by `CC-20260826-PANNEXIN-N16-01`).
+
+### Verdict: **READY_MAJOR**
+
+Change class **MAJOR** — the candidate's own fail-closed `MAJOR?` is resolved *upward* here, not downward: the edit rewrites a clause of a `consolidated baseline` Summary and raises a mechanism's tier. Operator authorisation + blind locator audit before propagation; the triples are supplied below for that audit. **This does not promote memantine** and does not touch `R-02`.
+
+### Exact operation list (`batch_commit.py propagate`)
+
+**OP-1** · file `disease-models/wwox/registries/claim_registry_current.md` · record `CLAIM 021` · op `replace-within`
+- **old text (verbatim, current file):** `Bursting depends on NMDAR and gap junction activity.`
+- **new text:** `NMDAR blockade (d-APV, 50 µM) abolishes the pathological burst in the neuron-specific `Wwox` S-KO neocortical slice at P13–P17 — a pharmacological dependence established INSIDE the WWOX-deficient system — and the burst returns on washout; on the panel the washout frequency overshoots baseline ≈1.85× (figure attestation, `deepdive_manifests/PMID34634460.json` entry 3, not a printed value). The gap-junction half of this dependence is NOT attributable at this concentration — see the carbenoxolone boundary.`
+- **note for the executor:** the final clause presupposes `CC-20260826-GAPJUNCTION-ATTRIBUTION-01`'s OP-1. **If that candidate is refused, drop the final sentence and keep the existing gap-junction clause** — the two remain independent, exactly as this candidate's header says.
+
+**OP-2** · file `disease-models/wwox/analysis/mechanism_intervention_map.md` · `CHAIN B` · op `replace-within` — **NOT applied outside batch**, although the file is non-canonical, because the tier change is the MAJOR half of this item.
+- **old text (verbatim):** `It is scored **T2** here, deliberately conservatively, and the resolution is`
+- **new text:** `It was scored **T2** here, deliberately conservatively; the re-read that resolves it exists (`FTR-20260810-34634460-02`, ten days older than this file) and the dependence IS pharmacological, so the chain is **T1 for the tool compound d-APV only** — memantine has still never been given to a WWOX system. What remains is`
+
+### LOCATOR TRIPLES FOR BLIND AUDIT
+
+| proposition | verbatim quote | anchor |
+|---|---|---|
+| NMDAR blockade abolishes the burst in the WWOX-deficient slice | "Blocking glutamatergic neurotransmission with d-APV (50 μM) eliminated the spontaneous bursting events" | Results 2.2, `PMC8609180` JATS, sha256 `934b4e1a…` |
+| The abolition is reversible, so it is pharmacological rather than damage | "Upon washout, the frequency, duration and peak-to-trough amplitude returned to normal" | Results 2.2, same artefact |
+| The authors state the dependence as a requirement, not a correlation | "These data suggest that NMDAR-mediated glutamatergic neurotransmission is a requirement for the generation of these neocortical bursts" | Results 2.2, closing sentence |
+| The window is late-stage by the authors' own statement, which bounds any chronic proposal | "the chosen age group may mimic a late-stage disorder of WWOX" | Discussion 3.4, final sentences |
+| The ≈1.85× washout overshoot is a panel read, not a printed number | "[figure attestation - pixels cannot be quote-matched] … heights are approximately Base 1.0, CBX 0.15, BB-FCF 2.55, dAPV-washout 1.85 …" | `deepdive_manifests/PMID34634460.json` `verbatim_locators.entries[3]`, Figure 3 panel D (image NOT present in this checkout) |
+
+### Pending / what would block propagation
+
+- Operator authorisation (MAJOR) and the blind locator audit of the five triples above.
+- 🔴 **Evidence locality:** the six figure JPEGs and the XML are missing from `files/`. The XML is re-acquirable (digest verified); the figures are not, from any route reachable here. A blind audit of triple 5 therefore **cannot be run in this checkout** and must either re-acquire the figures or record the audit as text-only on triples 1–4.

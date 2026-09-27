@@ -291,3 +291,37 @@ mirror `consolidated baseline (full text)` — an additive qualifier, `INFO` at 
 **Edit 1 only.** `working_model_current.md` BLOCK 2: the mirror row for `017` is rewritten from `CLAIM 017`'s actual title, type, pathway, transferability, status and source. Verified first-hand: the row had carried "Ketogenic diet has small but real human support …" while `CLAIM 017` is the human-spectrum claim, and the ketogenic datum survives in this file's BLOCK 1 prose ("Ketogenic diet associated with seizure improvement in 3/5 WOREE patients (Chong 2023)"), so nothing is lost by the rewrite.
 
 **Still owed, so this candidate stays open:** edit 2 — who owns the ketogenic-diet proposition, and whether a consolidated-baseline dietary statement becomes a claim or model prose. That is a therapeutic-adjacent decision the candidate itself reserves to the operator. The `DIS-011` revival of §2.A is the same act as `CC-20260826-FIVECLAIM-HARDENING-01` Δ11 and must be done once, in one batch; neither is in this batch's scope.
+
+
+---
+
+## WAVE-2 READINESS (2026-09-27)
+
+**Actor:** `scientist`, wave-2 package `seizure`, under the Orchestrator's wave-2 dispatch. **Append-only: nothing above this line was rewritten.**
+
+**context_policy:** `SYNTHESIS` over the registry, the working model and the two research ledgers, by record; plus `QUESTION_DRIVEN` adjudication of one disposition against **git history**. No source was reopened — neither of this round's two findings is about a paper. Prior knowledge admitted and named: this candidate, round 2, `CC-20260826-FIVECLAIM-HARDENING-01` §1/Δ11, the current `working_model_current.md`, `claim_registry_current.md#CLAIM 017`, `dismissal_ledger_current.md#DIS-011`.
+
+### What was done
+
+1. **Edit 1 — the `017` mirror row — is DONE, and the adjudication is from git, not from the file alone.** At this HEAD `working_model_current.md:176` reads `| 017 | WWOX-related human disease spans a spectrum from severe WOREE/WWOX-DEE to milder SCAR12-like phenotypes | DATO | human spectrum / genotype-phenotype | T1 | consolidated baseline | …PAPER 040… |` — i.e. `CLAIM 017`'s own title, type, pathway, transferability, status and source, exactly as this candidate specified. `git log -S "Ketogenic diet has small but real human support"` returns **two** commits: `a2e0dd0` (the founding public-edition commit, which introduced the drifted row) and **`c99dfe5` — `BATCH_20260927_001`**, which removed it. ⇒ **CLOSE — PROPAGATED** for edit 1.
+2. **The ketogenic-diet proposition has been de-facto resolved by option (b), not (a), and the MAJOR defect is therefore GONE.** Measured: `ketogenic|chetogenic` returns **0** in `claim_registry_current.md` (so no diet claim was created), and the proposition now exists **only as model prose** at `working_model_current.md:97` and `disease_model.md:48`, both reading *"Ketogenic diet associated with seizure improvement in 3/5 WOREE patients (Chong 2023)"* — a sourced statement with its denominator, **no longer asserting `consolidated baseline`, no longer occupying a claim ID it does not own**. The five things the candidate said the assertion lacked (evidence boundary, genotype caution, clinical meaning with the medical-advice disclaimer, transferability justification, its own ID) are no longer *lacked by a baseline assertion*: they are not required of prose that claims nothing.
+3. **What survives of edit 2 is the smaller, optional question**, and it is **DEFERRED**: should the 3/5 datum be *promoted* to a claim of its own with a full evidence boundary (the candidate's recommended option (a))? That is a therapeutic-adjacent promotion — a dietary intervention in a paediatric epileptic encephalopathy — and promoting it is a scientific decision with a `BLOCCO 1`-adjacent clinical face, reserved to the operator by the triage of this lot. It is **not** a defect repair any more, and nothing in the corpus is wrong while it waits.
+4. **Finding 2.A (`DIS-011`'s fired revival trigger) is NOT touched here.** Verified still live (`DIS-011` reads `RIGETTATA` with trigger (a) *"qualunque EEG o osservazione di crisi in un topo Wwox-null"*, which `CLAIM 040`'s ECoG and Cheng 2020's observations satisfy). It is owned this wave by the **`m002` package** (Mirror-002 repairs of `DIS-011` and `DL-MECH-075`) and it is **the same act** as `CC-20260826-FIVECLAIM-HARDENING-01` Δ11: **it must be done once, in one batch**, with the narrow epistemological verdict preserved (EPILEPTOGENESIS as a *process* stays unmeasured).
+5. **The four round-3 pairs and the cross-links** (`005↔011` glia, `031↔033` one patient, `032↔033` corroboration, and the `031↔037` / `005↔031` screen artefacts that Δ1 already defused) are carried as OP-3/OP-6/OP-7/OP-8 of `CC-20260826-CROSS-CLAIM-CENSUS-02`'s operation list in this wave. **Not duplicated here.**
+6. **The capability gap this round named is restated, unfixed and unclaimed:** nothing in the repository re-evaluates a `REVIVAL_TRIGGER` when new evidence lands — `DIS-011`'s trigger fired in the same batch that wrote the claims firing it. No tool is proposed here; the gap belongs to a capability-scout record, not to a science batch.
+
+### Verdict: **READY_MINOR**, with one DEFERRED residue and one item handed to `m002`
+
+- **READY_MINOR:** the cross-link half, whose exact operations live in `CC-20260826-CROSS-CLAIM-CENSUS-02`'s readiness block (OP-3, OP-6, OP-7, OP-8). Nothing else in this file is proposed to a batch executor.
+- **CLOSE — PROPAGATED:** edit 1 (the `017` mirror row), by `BATCH_20260927_001` / `c99dfe5`.
+- **CLOSE — the MAJOR half of edit 2 is resolved** by the same commit, through option (b): the diet proposition is model prose with a denominator and no baseline status.
+- **DEFERRED:** promoting the 3/5 ketogenic datum to a claim of its own. **One line on what would unblock it:** an operator decision that a dietary-intervention datum may hold a canonical claim ID, plus the evidence boundary a promotion would need written first (n = 5, 3/5 responders, uncontrolled, unblinded, `Chong 2023`, genotype caution, *«Non è parere medico»*) — no reading is owed, the source is already in the registry.
+- **Handed to `m002`:** finding 2.A / Δ11 (`DIS-011` revival).
+
+### Why there is no `### LOCATOR TRIPLES FOR BLIND AUDIT` section
+
+Nothing here narrows or reverses a claim about the world. The mirror-row repair asserted no new proposition (it copied `CLAIM 017`'s own fields), the cross-links assert none, and the one proposition that would need triples — the ketogenic promotion — is **DEFERRED unwritten** rather than proposed.
+
+### Pending
+
+- Operator decision on the ketogenic promotion; `m002` for `DIS-011`; the shared cross-link list in `…-CENSUS-02`.
