@@ -760,6 +760,12 @@ symptom control, **only causal levers can change it** — which is why R-01 and 
 carry the weight, and why every downstream candidate in §4 is honestly labelled as symptomatic or
 slowing.
 
+### N-16 — Pannexin-1 blockade (brilliant blue FCF and congeners) on the CLAIM 021 network node → **the only WWOX measurement points the wrong way, and it was never tested**
+**Failure mode:** *a negative stated as an absence of effect, when what exists is an untested point estimate in the adverse direction.* In the only WWOX system in which a selective pannexin-1 blocker has ever been applied (`Wwox` S-KO neocortical slice, P13–P17), normalized burst frequency rose to **≈ 2.55 during treatment and ≈ 2.6 at washout against a baseline of 1.0**, carrying **no significance marker and no reported test** — while the paper's Results and Discussion describe the arm as *"had minimal effect on the network excitability in the `Wwox` S-KO model"*. Panel attestation, `deepdive_manifests/PMID34634460.json` entry 3, receipt `FTR-20260810-34634460-02`.
+⇒ **DEPRIORITIZE.** ⚠️ Scope, stated so the negative is not read as stronger than it is: this means *"the only WWOX measurement points the wrong way and was not tested"*, **not** *"pannexins are uninvolved in WWOX network pathology"*. Two facts from the same paper cut against over-reading it: the authors explicitly keep a pannexin-1 blocker open *"at earlier developmental stages"*, and in the same treatment arm **the range of maximal phase-amplitude coupling shifted from delta-gamma to delta-HFO in 10 of 25 bursts**, which the authors read as a subset of bursts being pannexin-influenced — so the arm is not even a clean no-effect arm in its authors' own reading (verified first-hand in the body, 2026-09-27).
+**Revival:** a **powered, significance-tested** pannexin-blocker arm in a WWOX system reporting a **reduction** in burst frequency, at an **earlier** developmental stage than P13–P17.
+*Recorded 2026-09-27 outside a `BATCH_COMMIT` (analysis layer, no canonical target) by `CC-20260826-PANNEXIN-N16-01`; its `CLAIM 021` limb is NOT applied and stays with the two MAJOR-classified pharmacology candidates.*
+
 ---
 
 ## 6. Prioritization
@@ -771,7 +777,7 @@ slowing.
 | **READY_FOR_WWOX_PRECLINICAL_CONSIDERATION** | **R-01** AAV9-hSynI-WWOX |
 | **PROMISING_BUT_MECHANISTIC_GAP** | **R-02** memantine/NMDAR · **R-05** ketogenic diet · **R-09** proteostasis programme (SDR missense class) |
 | **TRANSFER_HYPOTHESIS** | **R-03** Wnt/tankyrase · **R-06** anti-neuroinflammatory (class) · **R-08** base/prime editing |
-| **DEPRIORITIZE** | **R-04** lithium · N-01 mTOR inhibitors · N-03 Na-blockers · N-07 digoxin · N-08 DCA · N-09 pTyr33 peptide · N-10 splice-switching ASO · N-11 4-PBA/TUDCA (ER rationale) · N-12 HSP70 co-inducers · N-13 pro-myelinating agents · N-14 antioxidants on the ROS rationale |
+| **DEPRIORITIZE** | **R-04** lithium · N-01 mTOR inhibitors · N-03 Na-blockers · N-07 digoxin · N-08 DCA · N-09 pTyr33 peptide · N-10 splice-switching ASO · N-11 4-PBA/TUDCA (ER rationale) · N-12 HSP70 co-inducers · N-13 pro-myelinating agents · N-14 antioxidants on the ROS rationale · **N-16 pannexin-1 blockade** |
 | **INSUFFICIENT_EVIDENCE** | **R-07** bumetanide · Zfra peptide (monitor, do not promote) · anti-miR-153 (pleiotropic; conserved because it *proves the principle*, not because it is the molecule) · WWOX-mimetic peptides (the safety argument is rejected; the objective is not) |
 
 > **Note on ranking method.** Priority is a holistic reading, not a sum. R-01 leads on mechanism and
