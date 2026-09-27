@@ -220,6 +220,24 @@
         "anchor": "Discussion, 'WWOX, cancer, and lung disease?'",
         "panel_text_relation": "text_only",
         "found_or_sought": "sought — carried a question from this morning's mouse paper into this afternoon's human cohort, which is the whole point of reading them on the same day"
+      },
+      {
+        "proposition": "PRESENTATION AGE, not diagnosis age: in the 20-patient cohort the mean age of seizure onset is 1.6 months (day 1 to 7 months). The paper states how each molecular diagnosis was made but reports no age at molecular diagnosis; the only temporal mention of the molecular diagnosis is the RNA-sampling sentence in the Discussion (entry after this one). [Added 2026-09-27, ACTOR_ID scientist, wave-2 package development, QUESTION_DRIVEN re-read.]",
+        "snippet": "was 1.6 months ranging from day 1 to 7 months",
+        "anchor": "Results, 'Neurodevelopmental data'",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID30356099_Piard2019_EPMC.xml",
+        "found_or_sought": "sought",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The single place the paper refers to the time of the molecular diagnosis gives no age: it explains why RNA was not studied. A token sweep of the body for 'diagnos' returns no age at molecular diagnosis; this is a bounded sweep statement, not a claim that the datum does not exist in the supplementary tables, which are not on disk. [Added 2026-09-27, ACTOR_ID scientist, wave-2 package development, QUESTION_DRIVEN re-read.]",
+        "snippet": "performed for other patients because appropriate blood samples were not available at",
+        "anchor": "Discussion, splicing-variant paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID30356099_Piard2019_EPMC.xml",
+        "found_or_sought": "sought",
+        "panel_text_relation": "text_only"
       }
     ]
   }

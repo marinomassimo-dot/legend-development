@@ -229,6 +229,24 @@
         "surface": "figure",
         "artifact": "files/fulltext/figures/PMID34747138/fig_p03_1404x1326.png",
         "anchor": "Comparison of the two retrieval routes, recorded in the locator file"
+      },
+      {
+        "proposition": "The authors state that the knockout's death before 4 weeks, not a biological boundary, is why no adult recording of the untreated knockout exists: the age range measured was set by survival. NOTE the verbatim wording contains 'in vivo' ('could not perform in vivo recordings'), which the MODEL-HORIZON candidate's quotation dropped without marking. [Added 2026-09-27, ACTOR_ID scientist, wave-2 package development, QUESTION_DRIVEN re-read.]",
+        "snippet": "Since KO mice died within less than 4 weeks, we could not perform ",
+        "anchor": "Results, 'Neuronal restoration of WWOX decreases hyperexcitability and neuroinflammation in Wwox-null mice', paragraph after the Figure 3 legend",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID34747138_Repudi2021_PMC.xml",
+        "found_or_sought": "sought",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The same limit is stated for behaviour: untreated null mice could not be assessed at all, so every behavioural comparison in the paper is rescued-versus-wild-type, never rescued-versus-untreated. [Added 2026-09-27, ACTOR_ID scientist, wave-2 package development, QUESTION_DRIVEN re-read.]",
+        "snippet": "Unfortunately, we could not assess behavior of Wwox‐null mice due to their poor conditions and premature death",
+        "anchor": "Results, 'Behavioral and motor functions of Wwox-null mice upon neuronal WWOX restoration', first paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID34747138_Repudi2021_PMC.xml",
+        "found_or_sought": "sought",
+        "panel_text_relation": "text_only"
       }
     ]
   }

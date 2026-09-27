@@ -8381,3 +8381,68 @@ re-acquisition, deeper render or supplementary page can supply a field the autho
 recorded here so they are not re-attempted as reading, and so that any future contact with the authors or
 any deposited protocol closes them. ⚠️ Both block the same thing: axis 2 and axis 4 of the dose decision
 table cannot move from `CONFOUNDED`/`UNMEASURED` to `SUPPORTED` without them.
+
+## 2026-09-27 — READING-DEBT CENSUS FOR THREE ALDAZ-LOT CANDIDATES, AND `FT-057`'s STALE LINE (appended, ACTOR_ID `scientist`, wave-2 "development")
+
+Applied outside a batch: this file is not one of the four scientific current files. Source: the `§`-numbered
+reading-debt sections of `CC-20260913-15064722-01`, `CC-20260913-24369382-01` and `CC-20260913-36828035-01`,
+whose only residue was this debt. **No `FT-` id is minted here**: three wave-2 packages are appending to this
+file today and an id taken in parallel is a collision. Every state below was **measured today** with
+`fulltext_receipts.py status` and `registry_records.py get` — not carried from the candidates.
+
+🔴 **`FT-057`'s line *"ricevuta parziale … `24369382`"* is STALE and is corrected here rather than in place**
+(the entry is append-only history): `PMID 24369382` has a **complete** read since 2026-09-13,
+`FTR-20260913-24369382-01` (count corrected by `-02`), manifest `PMID24369382.json` STRICT PASS, 35 locators.
+Two more names on that same line are likewise closed: `19500159` and `18487609` are complete reads
+(`FTR-20260806-19500159-01`, `FTR-20260811-18487609-01`).
+
+**(a) `CC-20260913-24369382-01` §6 — six references. Nothing is unrecorded any more:**
+
+| PMID | state today | where the debt lives |
+|---|---|---|
+| 17470496 Gribaa 2007 | unread, unacquired — **the highest-value item of the three sets**, and the clinical baseline of `PAPER 042` | `FT-177`, already open with its preflight plan |
+| 19465938 Bouteille 2009 | unread | `FT-180` |
+| 19500159 Suzuki 2009 | ✅ complete read | closed |
+| 18487609 Aqeilan 2008 | ✅ complete read | closed |
+| 22071891 White 2011 | unread; registry `CORPUS P349` / `LIT-0349`, *screened* | 🔴 **no queue entry** — recorded here |
+| 20410308 Tapia 2010 | unread; **no record in any registry** (`registry_records.py get --pmid 20410308` → NO RECORD MATCHED) | 🔴 **no queue entry** — recorded here |
+
+**(b) `CC-20260913-15064722-01` §5 — the twelve-reference census, resolved against today's state.** Five of
+the twelve have neither a receipt nor a queue entry, and all five are **method/interactomics antecedents of the
+WW-domain framing**, not WWOX papers. According to PubMed: `11274176` — *"Mycobacterium bovis Bacillus
+Calmette-Guerin and its cell wall complex induce a novel lysosomal membrane protein, SIMPLE …"*,
+[DOI](https://doi.org/10.1074/jbc.M011660200); `12761501` — *"Large-scale identification and characterization
+of human genes that activate NF-kappaB and MAPK signaling pathways"*,
+[DOI](https://doi.org/10.1038/sj.onc.1206406); `9331372` — *"Identification of three additional genes
+contiguous to the glucocerebrosidase locus on chromosome 1q21"*,
+[DOI](https://doi.org/10.1101/gr.7.10.1020) (the source of `COTE1`); `9776767` — *"A method for global protein
+expression and antibody screening on high-density filters of an arrayed cDNA library"*,
+[DOI](https://doi.org/10.1093/nar/26.21.5007) (the array platform of Fig. 1b's screen); `10744724` — Bedford
+*et al.*, *"A novel pro-Arg motif recognized by WW domains"*, [DOI](https://doi.org/10.1074/jbc.275.14.10359).
+🎯 **`10744724` is the one of the five that bears on a claim**: it is a WW-domain **motif-class** paper by a
+co-author of `PMID 15064722`, and `CLAIM 007`'s motif-family language is exactly what this repository has
+narrowed twice. The other seven are accounted for: `7644498` and `11042109` in `FT-192`; `10786676` in
+`FT-176`; `11719429` in `FT-032`; `11058590` in `FT-143`; `12514174` in `FT-046`/`FT-063`; `14526170` a
+complete read (`FTR-20260913-14526170-01`).
+⚠️ **Priority, stated so nobody reads a list as a plan: `10744724` first, and only if `CLAIM 007`'s motif
+wording is reopened. The other four are provenance, not evidence, and none of them may be cited for a WWOX
+statement.**
+
+**(c) `CC-20260913-36828035-01` §6 — the seventeen references queued on `FT-083`. Eight are now closed, four
+have no entry anywhere:**
+
+- ✅ complete reads: `22574198`, `30619736`, `15064722`, `31275852`, `27869163`, `28283473`, `33058734`.
+  Partial: `33914858` (carried independently, `FT-041`/`FT-063`/`FT-113`).
+- queued and unread: `10786676` (`FT-176`), `26390919` (`FT-006`), `30350478` (`FT-084`), `25411445`
+  (`FT-057`), `30094525` (`FT-032`).
+- 🔴 **no queue entry, unread, registry placeholders only:** `30154439` (`CORPUS-STUB-129` / `LIT-0148`,
+  *not_processed*), `23765596` (`CORPUS P374`, *screened*), `34852950` (`CORPUS-STUB-033` / `LIT-0059`,
+  *not_processed*), `30746283` (`CORPUS P253` — *"Novel Homozygous Mutation in the WWOX Gene Causes Seizures
+  and Global Developmental Delay"*, **a WWOX clinical primary**, *screened*). 🎯 **`30746283` is the
+  highest-value of the four**: it is a WWOX case primary sitting at placeholder depth.
+
+**What this section does and does not do.** It closes §6/§5 of the three candidates as *declared* debt —
+every reference is now either read, queued under a named `FT-` entry, or named here with its measured state,
+so nothing is invisible to the reading plan. It does **not** read anything, promote anything or claim that an
+unread reference supports any statement. **Nothing here is evidence.** Whoever next holds this file can mint
+`FT-` entries for the eleven 🔴 rows from this section without re-resolving a single identifier.
