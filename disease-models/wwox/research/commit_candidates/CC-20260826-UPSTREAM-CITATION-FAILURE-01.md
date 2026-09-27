@@ -208,3 +208,55 @@ None for queueing. §5's annotations are MINOR; §6 is a proposal, not an implem
 §5.1–§5.3 applied: the `Note` fields of `PAPER 011`, `PAPER 019` and `PAPER 063` carry the `UPSTREAM_CITATION_FAILURE` annotations in this candidate's own wording, with its §7 self-limits preserved — no verdict is written anywhere on Mallaret 2014 or on Aldaz 2014 BBA, which this author had not read. Verified before editing: none of the three notes carried the annotation, and the same defect class is already canonical in `CLAIM 016`'s evidence boundary.
 
 **Not propagated, so this candidate stays open:** §6, the `UPSTREAM_CITATION_FAILURE` capability proposal with its denominator rule, which is a harness item and is handed to Harness Engineering in this batch's report, not implemented as an edit.
+
+---
+
+## WAVE-2 READINESS (2026-09-27)
+
+**context_policy declared:** `SYNTHESIS`. This adjudication integrates existing records — the three
+`PAPER` notes, `CLAIM 016`'s evidence boundary and the shipped tooling — reached through
+`registry_records.py get`, never by grepping a registry. No source was reopened: nothing here
+turns on a fact inside a paper.
+
+**Actor:** `scientist`, wave-2 package `provenance`.
+
+### What I did
+
+1. **Verified §5's three annotations first-hand in the live registry**, rather than from the
+   candidate's own disposition. `PAPER 011` (PMID 42422765), `PAPER 019` (PMID 32000863) and
+   `PAPER 063` (PMID 34831305) each carry an `UPSTREAM_CITATION_FAILURE` annotation in the
+   candidate's own wording, propagated by `BATCH_20260927_001`; three occurrences, one per record,
+   and no fourth anywhere in the file.
+2. **Verified §6 as implemented, by running it**, not by reading its commit message.
+   `framework/scripts/upstream_citation_census.py` exists at `8d6922b` and satisfies §6's three
+   binding requirements:
+   - it resolves a citation against complete reads held in this checkout and prints one row per
+     citation with the receipt that makes it adjudicable;
+   - it **reports the denominator every time**, which is §6's explicit condition — over
+     `files/fulltext/PMID36828035_Hussain2023_PMC.xml` it printed *"DENOMINATOR: 18 of 61
+     citation(s) resolvable against a complete read in this checkout (0 without a PMID). The other
+     43 cannot be adjudicated here, and their absence from the tally is not evidence of
+     support."*;
+   - the verdict column is the **reader's** (`--adjudications`), so the tool never classifies a
+     source by type and cannot become the automatic distrust of reviews §6 forbids.
+3. **Checked what §6 does NOT do**, because that is where a capability proposal usually drifts: it
+   writes nothing to any registry, asserts no `SUPPORTED`/`NOT_CONTAINED`/`CONTRADICTED` of its
+   own, and an unadjudicated run prints `ADJUDICATED: 0 of 18` rather than an implied clean bill.
+
+### Verdict — **CLOSE**, closing status **PROPAGATED**
+
+Both halves of this candidate have landed, each in the layer that owns it.
+
+| Part | Where it landed | Evidence |
+|---|---|---|
+| §5.1 `PAPER 011` Note | `paper_registry_current.md` | annotation present, `BATCH_20260927_001` |
+| §5.2 `PAPER 019` Note | `paper_registry_current.md` | annotation present, same batch |
+| §5.3 `PAPER 063` Note | `paper_registry_current.md` | annotation present, same batch |
+| §6 the check itself | `framework/scripts/upstream_citation_census.py` at `8d6922b` | run this session over a JATS full text and over an explicit PMID list; denominator line reproduced above |
+| §7 self-limits | preserved | no verdict on Mallaret 2014 or Aldaz 2014 BBA appears in any of the three notes |
+
+Nothing is owed. The candidate is closed, not deferred, and the tool is the durable form of §6 —
+a proposal that became a runnable check is the outcome §6 asked for, and the only thing a further
+batch could add is verdicts, which are per-reading work and belong to the readings.
+
+**Change class:** none remaining — no canonical edit is proposed by this section.

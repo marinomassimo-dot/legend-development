@@ -135,43 +135,127 @@
    "path": "files/fulltext/PMID25331887_AbuOdeh2014_assets/pdf_figures/Fig1_p2_xref20.png",
    "sha256": "c8c485e40c36a046da1039179a5593d00960fb05c2ff0203f4aa42bcc79790bd",
    "kind": "figure",
-   "unrecoverable_in_this_environment": "Declared absent rather than quietly dropped. These seven PNGs were extracted from the article PDF BY XREF with PyMuPDF (the method framework/scripts/figure_ppi_preflight.py uses, `import fitz`). This deployment has NO fitz and NO pip (`python3 -m pip` reports 'No module named pip'), so they cannot be regenerated here. poppler was tried and does not reproduce them: pdfimages -png over the same byte-identical PDF yields 14 images, none matching any declared digest, because the PNG re-encoding differs. The ARTICLE PDF ITSELF re-derives byte-identical (42df070a...), so the source is intact and only the derived crops are unrecoverable. They are kept declared, and this manifest therefore FAILS --verify-artifacts on exactly these seven paths, because removing them to obtain a green verdict would delete the record of what the prior reading actually inspected."
+   "unrecoverable_in_this_environment": "Declared absent rather than quietly dropped. These seven PNGs were extracted from the article PDF BY XREF with PyMuPDF (the method framework/scripts/figure_ppi_preflight.py uses, `import fitz`). This deployment has NO fitz and NO pip (`python3 -m pip` reports 'No module named pip'), so they cannot be regenerated here. poppler was tried and does not reproduce them: pdfimages -png over the same byte-identical PDF yields 14 images, none matching any declared digest, because the PNG re-encoding differs. The ARTICLE PDF ITSELF re-derives byte-identical (42df070a...), so the source is intact and only the derived crops are unrecoverable. They are kept declared, and this manifest therefore FAILS --verify-artifacts on exactly these seven paths, because removing them to obtain a green verdict would delete the record of what the prior reading actually inspected.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID25331887_AbuOdeh2014.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref); converted to RGB when n - alpha > 3; Pixmap.tobytes('png')",
+     "join": ""
+    },
+    "acquired_on": "2026-09-27"
+   },
+   "note": "REGENERATED 2026-09-27 (wave-2 provenance package): PyMuPDF 1.28.2 is now installed, and re-extracting this xref from the byte-identical article PDF (42df070a...) reproduces the declared sha256 exactly — all seven of the seven. The 'unrecoverable_in_this_environment' statement beside this note was true of the 2026-09-09 deployment (no fitz, no pip) and is kept as history; it no longer describes this one."
   },
   {
    "path": "files/fulltext/PMID25331887_AbuOdeh2014_assets/pdf_figures/Fig2_p3_xref98.png",
    "sha256": "08ce0765e19c9ce60a3dd201a3ac16c9ae7c646ddaa9c54e00217a82cd44acae",
    "kind": "figure",
-   "unrecoverable_in_this_environment": "Declared absent rather than quietly dropped. These seven PNGs were extracted from the article PDF BY XREF with PyMuPDF (the method framework/scripts/figure_ppi_preflight.py uses, `import fitz`). This deployment has NO fitz and NO pip (`python3 -m pip` reports 'No module named pip'), so they cannot be regenerated here. poppler was tried and does not reproduce them: pdfimages -png over the same byte-identical PDF yields 14 images, none matching any declared digest, because the PNG re-encoding differs. The ARTICLE PDF ITSELF re-derives byte-identical (42df070a...), so the source is intact and only the derived crops are unrecoverable. They are kept declared, and this manifest therefore FAILS --verify-artifacts on exactly these seven paths, because removing them to obtain a green verdict would delete the record of what the prior reading actually inspected."
+   "unrecoverable_in_this_environment": "Declared absent rather than quietly dropped. These seven PNGs were extracted from the article PDF BY XREF with PyMuPDF (the method framework/scripts/figure_ppi_preflight.py uses, `import fitz`). This deployment has NO fitz and NO pip (`python3 -m pip` reports 'No module named pip'), so they cannot be regenerated here. poppler was tried and does not reproduce them: pdfimages -png over the same byte-identical PDF yields 14 images, none matching any declared digest, because the PNG re-encoding differs. The ARTICLE PDF ITSELF re-derives byte-identical (42df070a...), so the source is intact and only the derived crops are unrecoverable. They are kept declared, and this manifest therefore FAILS --verify-artifacts on exactly these seven paths, because removing them to obtain a green verdict would delete the record of what the prior reading actually inspected.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID25331887_AbuOdeh2014.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref); converted to RGB when n - alpha > 3; Pixmap.tobytes('png')",
+     "join": ""
+    },
+    "acquired_on": "2026-09-27"
+   },
+   "note": "REGENERATED 2026-09-27 (wave-2 provenance package): PyMuPDF 1.28.2 is now installed, and re-extracting this xref from the byte-identical article PDF (42df070a...) reproduces the declared sha256 exactly — all seven of the seven. The 'unrecoverable_in_this_environment' statement beside this note was true of the 2026-09-09 deployment (no fitz, no pip) and is kept as history; it no longer describes this one."
   },
   {
    "path": "files/fulltext/PMID25331887_AbuOdeh2014_assets/pdf_figures/Fig3_p4_xref171.png",
    "sha256": "1c5427f53eb5b30467365cfcc5ea2f336786afe8c504dd0625ae69435e643250",
    "kind": "figure",
-   "unrecoverable_in_this_environment": "Declared absent rather than quietly dropped. These seven PNGs were extracted from the article PDF BY XREF with PyMuPDF (the method framework/scripts/figure_ppi_preflight.py uses, `import fitz`). This deployment has NO fitz and NO pip (`python3 -m pip` reports 'No module named pip'), so they cannot be regenerated here. poppler was tried and does not reproduce them: pdfimages -png over the same byte-identical PDF yields 14 images, none matching any declared digest, because the PNG re-encoding differs. The ARTICLE PDF ITSELF re-derives byte-identical (42df070a...), so the source is intact and only the derived crops are unrecoverable. They are kept declared, and this manifest therefore FAILS --verify-artifacts on exactly these seven paths, because removing them to obtain a green verdict would delete the record of what the prior reading actually inspected."
+   "unrecoverable_in_this_environment": "Declared absent rather than quietly dropped. These seven PNGs were extracted from the article PDF BY XREF with PyMuPDF (the method framework/scripts/figure_ppi_preflight.py uses, `import fitz`). This deployment has NO fitz and NO pip (`python3 -m pip` reports 'No module named pip'), so they cannot be regenerated here. poppler was tried and does not reproduce them: pdfimages -png over the same byte-identical PDF yields 14 images, none matching any declared digest, because the PNG re-encoding differs. The ARTICLE PDF ITSELF re-derives byte-identical (42df070a...), so the source is intact and only the derived crops are unrecoverable. They are kept declared, and this manifest therefore FAILS --verify-artifacts on exactly these seven paths, because removing them to obtain a green verdict would delete the record of what the prior reading actually inspected.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID25331887_AbuOdeh2014.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref); converted to RGB when n - alpha > 3; Pixmap.tobytes('png')",
+     "join": ""
+    },
+    "acquired_on": "2026-09-27"
+   },
+   "note": "REGENERATED 2026-09-27 (wave-2 provenance package): PyMuPDF 1.28.2 is now installed, and re-extracting this xref from the byte-identical article PDF (42df070a...) reproduces the declared sha256 exactly — all seven of the seven. The 'unrecoverable_in_this_environment' statement beside this note was true of the 2026-09-09 deployment (no fitz, no pip) and is kept as history; it no longer describes this one."
   },
   {
    "path": "files/fulltext/PMID25331887_AbuOdeh2014_assets/pdf_figures/Fig4_p5_xref9.png",
    "sha256": "6af07e05611e032ae200c2f65aa7b7f70563178ba222955940aabb6db4bc02c5",
    "kind": "figure",
-   "unrecoverable_in_this_environment": "Declared absent rather than quietly dropped. These seven PNGs were extracted from the article PDF BY XREF with PyMuPDF (the method framework/scripts/figure_ppi_preflight.py uses, `import fitz`). This deployment has NO fitz and NO pip (`python3 -m pip` reports 'No module named pip'), so they cannot be regenerated here. poppler was tried and does not reproduce them: pdfimages -png over the same byte-identical PDF yields 14 images, none matching any declared digest, because the PNG re-encoding differs. The ARTICLE PDF ITSELF re-derives byte-identical (42df070a...), so the source is intact and only the derived crops are unrecoverable. They are kept declared, and this manifest therefore FAILS --verify-artifacts on exactly these seven paths, because removing them to obtain a green verdict would delete the record of what the prior reading actually inspected."
+   "unrecoverable_in_this_environment": "Declared absent rather than quietly dropped. These seven PNGs were extracted from the article PDF BY XREF with PyMuPDF (the method framework/scripts/figure_ppi_preflight.py uses, `import fitz`). This deployment has NO fitz and NO pip (`python3 -m pip` reports 'No module named pip'), so they cannot be regenerated here. poppler was tried and does not reproduce them: pdfimages -png over the same byte-identical PDF yields 14 images, none matching any declared digest, because the PNG re-encoding differs. The ARTICLE PDF ITSELF re-derives byte-identical (42df070a...), so the source is intact and only the derived crops are unrecoverable. They are kept declared, and this manifest therefore FAILS --verify-artifacts on exactly these seven paths, because removing them to obtain a green verdict would delete the record of what the prior reading actually inspected.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID25331887_AbuOdeh2014.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref); converted to RGB when n - alpha > 3; Pixmap.tobytes('png')",
+     "join": ""
+    },
+    "acquired_on": "2026-09-27"
+   },
+   "note": "REGENERATED 2026-09-27 (wave-2 provenance package): PyMuPDF 1.28.2 is now installed, and re-extracting this xref from the byte-identical article PDF (42df070a...) reproduces the declared sha256 exactly — all seven of the seven. The 'unrecoverable_in_this_environment' statement beside this note was true of the 2026-09-09 deployment (no fitz, no pip) and is kept as history; it no longer describes this one."
   },
   {
    "path": "files/fulltext/PMID25331887_AbuOdeh2014_assets/pdf_figures/Fig5_p6_xref85.png",
    "sha256": "608c91c299aa07ea6f548b8809b0c7614cdefc997bd54c5140190ebeaa2b9a03",
    "kind": "figure",
-   "unrecoverable_in_this_environment": "Declared absent rather than quietly dropped. These seven PNGs were extracted from the article PDF BY XREF with PyMuPDF (the method framework/scripts/figure_ppi_preflight.py uses, `import fitz`). This deployment has NO fitz and NO pip (`python3 -m pip` reports 'No module named pip'), so they cannot be regenerated here. poppler was tried and does not reproduce them: pdfimages -png over the same byte-identical PDF yields 14 images, none matching any declared digest, because the PNG re-encoding differs. The ARTICLE PDF ITSELF re-derives byte-identical (42df070a...), so the source is intact and only the derived crops are unrecoverable. They are kept declared, and this manifest therefore FAILS --verify-artifacts on exactly these seven paths, because removing them to obtain a green verdict would delete the record of what the prior reading actually inspected."
+   "unrecoverable_in_this_environment": "Declared absent rather than quietly dropped. These seven PNGs were extracted from the article PDF BY XREF with PyMuPDF (the method framework/scripts/figure_ppi_preflight.py uses, `import fitz`). This deployment has NO fitz and NO pip (`python3 -m pip` reports 'No module named pip'), so they cannot be regenerated here. poppler was tried and does not reproduce them: pdfimages -png over the same byte-identical PDF yields 14 images, none matching any declared digest, because the PNG re-encoding differs. The ARTICLE PDF ITSELF re-derives byte-identical (42df070a...), so the source is intact and only the derived crops are unrecoverable. They are kept declared, and this manifest therefore FAILS --verify-artifacts on exactly these seven paths, because removing them to obtain a green verdict would delete the record of what the prior reading actually inspected.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID25331887_AbuOdeh2014.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref); converted to RGB when n - alpha > 3; Pixmap.tobytes('png')",
+     "join": ""
+    },
+    "acquired_on": "2026-09-27"
+   },
+   "note": "REGENERATED 2026-09-27 (wave-2 provenance package): PyMuPDF 1.28.2 is now installed, and re-extracting this xref from the byte-identical article PDF (42df070a...) reproduces the declared sha256 exactly — all seven of the seven. The 'unrecoverable_in_this_environment' statement beside this note was true of the 2026-09-09 deployment (no fitz, no pip) and is kept as history; it no longer describes this one."
   },
   {
    "path": "files/fulltext/PMID25331887_AbuOdeh2014_assets/pdf_figures/Fig6_p7_xref160.png",
    "sha256": "9c075363ce9a8f63e7700c1a7ddf9c4e385b5f5af5e54de6d8bcc0fe7cca1f53",
    "kind": "figure",
-   "unrecoverable_in_this_environment": "Declared absent rather than quietly dropped. These seven PNGs were extracted from the article PDF BY XREF with PyMuPDF (the method framework/scripts/figure_ppi_preflight.py uses, `import fitz`). This deployment has NO fitz and NO pip (`python3 -m pip` reports 'No module named pip'), so they cannot be regenerated here. poppler was tried and does not reproduce them: pdfimages -png over the same byte-identical PDF yields 14 images, none matching any declared digest, because the PNG re-encoding differs. The ARTICLE PDF ITSELF re-derives byte-identical (42df070a...), so the source is intact and only the derived crops are unrecoverable. They are kept declared, and this manifest therefore FAILS --verify-artifacts on exactly these seven paths, because removing them to obtain a green verdict would delete the record of what the prior reading actually inspected."
+   "unrecoverable_in_this_environment": "Declared absent rather than quietly dropped. These seven PNGs were extracted from the article PDF BY XREF with PyMuPDF (the method framework/scripts/figure_ppi_preflight.py uses, `import fitz`). This deployment has NO fitz and NO pip (`python3 -m pip` reports 'No module named pip'), so they cannot be regenerated here. poppler was tried and does not reproduce them: pdfimages -png over the same byte-identical PDF yields 14 images, none matching any declared digest, because the PNG re-encoding differs. The ARTICLE PDF ITSELF re-derives byte-identical (42df070a...), so the source is intact and only the derived crops are unrecoverable. They are kept declared, and this manifest therefore FAILS --verify-artifacts on exactly these seven paths, because removing them to obtain a green verdict would delete the record of what the prior reading actually inspected.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID25331887_AbuOdeh2014.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref); converted to RGB when n - alpha > 3; Pixmap.tobytes('png')",
+     "join": ""
+    },
+    "acquired_on": "2026-09-27"
+   },
+   "note": "REGENERATED 2026-09-27 (wave-2 provenance package): PyMuPDF 1.28.2 is now installed, and re-extracting this xref from the byte-identical article PDF (42df070a...) reproduces the declared sha256 exactly — all seven of the seven. The 'unrecoverable_in_this_environment' statement beside this note was true of the 2026-09-09 deployment (no fitz, no pip) and is kept as history; it no longer describes this one."
   },
   {
    "path": "files/fulltext/PMID25331887_AbuOdeh2014_assets/pdf_figures/Fig7_p8_xref221.png",
    "sha256": "5e3e59178f0e388e9fd0dff4ff1a7ba5dbc0af4b487592e90b035f260d7c1282",
    "kind": "figure",
-   "unrecoverable_in_this_environment": "Declared absent rather than quietly dropped. These seven PNGs were extracted from the article PDF BY XREF with PyMuPDF (the method framework/scripts/figure_ppi_preflight.py uses, `import fitz`). This deployment has NO fitz and NO pip (`python3 -m pip` reports 'No module named pip'), so they cannot be regenerated here. poppler was tried and does not reproduce them: pdfimages -png over the same byte-identical PDF yields 14 images, none matching any declared digest, because the PNG re-encoding differs. The ARTICLE PDF ITSELF re-derives byte-identical (42df070a...), so the source is intact and only the derived crops are unrecoverable. They are kept declared, and this manifest therefore FAILS --verify-artifacts on exactly these seven paths, because removing them to obtain a green verdict would delete the record of what the prior reading actually inspected."
+   "unrecoverable_in_this_environment": "Declared absent rather than quietly dropped. These seven PNGs were extracted from the article PDF BY XREF with PyMuPDF (the method framework/scripts/figure_ppi_preflight.py uses, `import fitz`). This deployment has NO fitz and NO pip (`python3 -m pip` reports 'No module named pip'), so they cannot be regenerated here. poppler was tried and does not reproduce them: pdfimages -png over the same byte-identical PDF yields 14 images, none matching any declared digest, because the PNG re-encoding differs. The ARTICLE PDF ITSELF re-derives byte-identical (42df070a...), so the source is intact and only the derived crops are unrecoverable. They are kept declared, and this manifest therefore FAILS --verify-artifacts on exactly these seven paths, because removing them to obtain a green verdict would delete the record of what the prior reading actually inspected.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID25331887_AbuOdeh2014.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(doc, xref); converted to RGB when n - alpha > 3; Pixmap.tobytes('png')",
+     "join": ""
+    },
+    "acquired_on": "2026-09-27"
+   },
+   "note": "REGENERATED 2026-09-27 (wave-2 provenance package): PyMuPDF 1.28.2 is now installed, and re-extracting this xref from the byte-identical article PDF (42df070a...) reproduces the declared sha256 exactly — all seven of the seven. The 'unrecoverable_in_this_environment' statement beside this note was true of the 2026-09-09 deployment (no fitz, no pip) and is kept as history; it no longer describes this one."
   },
   {
    "path": "files/supplement/PMID25331887/pnas.201409252SI.pdf",
@@ -640,11 +724,20 @@
     "panel_text_relation": "panel_only",
     "found_or_sought": "found",
     "audit_status": "AUDITED 2026-09-09 — blind locator audit, verdict applied"
+   },
+   {
+    "proposition": "The ligase contribution to damage-induced WWOX ubiquitination is supported in the main text by a depletion experiment, so the ITCH role in the claim is main-text provenance and not supplement provenance. Paired with entries 22-24: a reduction, not an abolition.",
+    "snippet": "ITCH depletion resulted in decrease WWOX ubiquitination upon DNA damage (Fig. 7B)",
+    "anchor": "Results, 'Ub E3 Ligase ITCH Ubiquitinates WWOX After DNA Damage', knockdown paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC_2026-09-09.html",
+    "panel_text_relation": "text_only"
    }
   ],
   "note": "Coverage: the article body is COMPLETE — Introduction, Results, Discussion, Materials and Methods and the reference list read in sequence from the PMC HTML, and all seven main figures inspected as images at the resolution the authors deposited, extracted from the fingerprinted PDF rather than taken from the publisher's downsampled CDN copies. THE SUPPLEMENT IS NOT READ AND CANNOT BE: figures S1-S7 are cited throughout and several are load-bearing — S2B carries the WWOX+/+ / +/- / -/- MEF comparison, S3C the reporter construct validation, S4 the domain mapping, S6C the K63-versus-K48 discrimination and S7B the half-life measurement quoted in entries[18]. The supplementary PDF is not retrievable by any sanctioned route: PMC reports 'identifier PMC4226089 is not Open Access', Europe PMC returns 'Article with id PMC4226089 is not open access one', and the publisher's DCSupplemental URL serves an HTML page rather than the file. The local PDF is the ten-page main article and does not contain it. This is a bounded, named gap with the routes that were tried recorded, not an omission — and it is why the receipt for this reading is partial_fulltext_read.",
   "supplement_note": "SUPPLEMENT PAID. FTR-20260810-25331887-01 recorded supplementary as 'unavailable'. The SI Appendix was retrieved on 2026-09-09 and all six pages were read. Its text layer is SUSPECT and was refused by the validator, so under rule 5d the rendered pages are the reference surface and all ten SI locators are visual attestations against fingerprinted 200-dpi page renders, not quotes from the defective layer. Europe PMC cannot supply this article as XML: its API answers 'Article with id PMC4226089 is not open access one', which is also why fullTextXML 404s and supplementaryFiles is empty. The route that worked was the PMC instance path through the repository's own pmc_pow_fetch.py.",
   "audit_note": "R4 SATISFIED for all ten supplementary locators. A blind locator audit was dispatched during wave 2; the auditor completed but its report did not reach that session, which was killed by a session rate limit. The session refused to reconstruct the verdicts from memory and shipped the ten locators marked [UNAUDITED] with the candidate HELD. The orchestrator later relayed the auditor's report VERBATIM and the verdicts are applied here. Outcome: SUPPORTED on triples 2, 4, 7 and 8; OVERSHOOT on 0, 1, 3, 5, 6 and 9; zero NOT_IN_SOURCE among the attestations themselves, but FIVE clauses struck as not in this source ('that opens the paper's model'; 'the domain assignment the disease model needs / only in the supplement'; 'already recorded three times in this paper's main figures'; 'the half-life claim'; and 'ITCH-dependent' in CLAIM 029's own text). TWO DRAFT ATTESTATIONS WERE FACTUALLY WRONG AND ARE CORRECTED, NOT ARGUED: gamma-H2AX foci do NOT persist at 48 h (zero red-positive pixels in BOTH genotypes; only the 24 h persistence is real), and the Fig. S4B Coomassie loading is NOT comparable (GST-WWOX lanes run 1.4-1.6x darker), so that panel orders fragments and does not quantify them. THE AUDITOR'S OWN DECLARED LIMITS BIND EVERY NUMBER ABOVE AND ARE REPRODUCED RATHER THAN SUMMARISED: it read ONLY the six rendered SI pages and opened no dossier, manifest, ledger or PDF text layer; all density figures are ORDINAL readings off a 200-dpi render with several bands saturated at the render's black point, and are valid as relative comparisons WITHIN A SINGLE PANEL ONLY, never across panels, blots or antibodies; and one band on the Fig. S4B left gel (x 490-520) sits on a lane boundary and could not be assigned, though it is far weaker than the ATM-Middle band either way and changes no verdict. Any cross-panel inference from these numbers is a use the auditor explicitly refuses.",
-  "strict_validation_status": "FAIL, on seven paths and nothing else: the xref-extracted figure PNGs, unrecoverable in this deployment for want of PyMuPDF (no fitz, no pip; poppler re-encodes and does not reproduce the bytes). Everything else verifies — the re-fetched article HTML, the byte-identical article PDF, the SI Appendix, the six 200-dpi SI page renders, and all 39 locators including the 17 prior text locators re-verified character-for-character. Kept declared rather than deleted for a green verdict."
+  "strict_validation_status": "FAIL, on seven paths and nothing else: the xref-extracted figure PNGs, unrecoverable in this deployment for want of PyMuPDF (no fitz, no pip; poppler re-encodes and does not reproduce the bytes). Everything else verifies — the re-fetched article HTML, the byte-identical article PDF, the SI Appendix, the six 200-dpi SI page renders, and all 39 locators including the 17 prior text locators re-verified character-for-character. Kept declared rather than deleted for a green verdict.",
+  "strict_validation_status_2026_09_27": "PASS. Re-run 2026-09-27 with --verify-artifacts --require-current-schema: all 16 artefacts and all 39 locators verify; the seven xref PNGs regenerate byte-identical with PyMuPDF 1.28.2 (recipes now declared on each). The FAIL statement above is the 2026-09-09 state, kept as history."
  }
 }

@@ -250,6 +250,62 @@
     "surface": "figure",
     "artifact": "files/fulltext/PMID36779245_Oliver2023_assets/EPI-64-1351-g003.jpg",
     "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "THE DENOMINATORS BEHIND CLAIM 033's SURVIVAL STATISTIC, which the claim did not carry: the 75 pooled cases split 45 null/null, 15 null/missense, 15 missense/missense, so the 'at least one missense' class is 30 of 75. Read first-hand 2026-09-27 from a re-acquired PMC surface.",
+    "snippet": "We stratified all 75 cases into one of three genetic groups: (1) null/null (",
+    "anchor": "Results, 'mortality-genotype relationship' paragraph, immediately before the Kaplan-Meier sentence; the three group sizes follow inline as n = 45, n = 15, n = 15",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_2026-09-27.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE DEATHS ARE NOT CONCENTRATED IN THE NULL CLASS IN THE PROSPECTIVE ARM: the three deceased patients of the 13-patient cohort are Patients 5, 6 and 8, and Table 1 makes 5 missense/missense and 6 missense/null. Two of three deaths carry a missense allele.",
+    "snippet": "Three patients (Patients 5, 6, 8) died at age 8, 11, and 6",
+    "anchor": "Results, clinical features paragraph following the movement-disorder sentence",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_2026-09-27.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE TWO HOMOZYGOUS Q230P PATIENTS SIT AT OPPOSITE TAILS OF THE SAME COHORT: Table 1 gives Patient 2 and Patient 5 both as c.689A>C p.Gln230Pro homozygous, and the ages row makes Patient 2 the oldest living patient at 23 years 11 months while Patient 5 is deceased at 8 years 3 months.",
+    "snippet": "c.689A &gt; C, p.Gln230Pro (homozygous)",
+    "anchor": "Table 1, 'WWOX (NM_016373.3) variant(s) (hg19)' row, Patient 2 cell; Patient 5 carries the same string one cell class further along and the age row reads '8 y 3 m (dec.)'",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_2026-09-27.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE OLDEST LIVING PATIENT IS NAMED AS SUCH IN THE DISCUSSION, and the same sentence pair is where the two pooled strata are compared: this cohort is notably older yet its mortality is lower, 23 per cent against 38 per cent. This is the ascertainment asymmetry the pooled Kaplan-Meier does not carry as a bias term.",
+    "snippet": "despite our patient group being notably older (mean",
+    "anchor": "Discussion, comparison with published cases, citing Table 3; the clause continues '= 8 years 2 months vs. 3 years 4 months), the mortality was lower (23% vs. 38%)'",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_2026-09-27.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "CENSORING IS AGE AT PUBLICATION, NOT FOLLOW-UP: the caption defines each censoring dash as the most recent age known to be living. In a cohort assembled from the literature this is informative censoring, and the paper does not address it.",
+    "snippet": "Each vertical dash in A denotes the most recent age known to be living of each individual (censored observations).",
+    "anchor": "Figure 4 caption",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_2026-09-27.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE HYPOMORPHIC READING OF 'MISSENSE' IS THE AUTHORS' OWN HYPOTHESIS AND THEY SAY IT IS UNTESTED — which is precisely reservation (1) of CLAIM 033, now anchored in the source rather than inferred.",
+    "snippet": "Functional studies would be required to support this hypothesis.",
+    "anchor": "Discussion, sentence following the hypomorphic-allele suggestion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_2026-09-27.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE SINGLE NON-DRUG-RESISTANT PATIENT OF THE COHORT IS PATIENT 5, who is homozygous Q230P and died at 8 years 3 months. n = 1, and it is recorded so that it is never read as a treatment-response signal.",
+    "snippet": "Epilepsy was resistant to antiseizure medications (ASMs) in all patients, except Patient 5.",
+    "anchor": "Results, antiseizure-medication paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_2026-09-27.xml",
+    "panel_text_relation": "text_only"
    }
   ],
   "note": "Twenty locators. Two are anchored to inspected figure images and one to a table cell read against its neighbours; the rest to text. The figures were retrieved and inspected earlier the same day via the pmc.ncbi.nlm.nih.gov/articles/instance/<PMCID>/bin/ route, after four earlier routes had failed and the figures had been recorded as unobtainable.\n\n🔴 LOCATOR AUDIT AND REPAIR 2026-08-10. All twenty text snippets were matched against the local XML; THIRTEEN did not occur in it. Every one was the transcription class — the quote written as the page reads rather than extracted as the artifact contains — and this journal's markup is the worst case in the corpus: non-breaking hyphens (`WWOX‐DEE` written `WWOX-DEE`), en dashes (`Kaplan–Meier`, `spike–wave`, `7–8 Hz`), curly quotation marks, and superscript reference numbers interleaved in the running text (`hypomyelination, 13 , 46 , 47 , 48 a finding`). NOTHING WAS REWORDED: each snippet is the same span re-taken from the extracted text, and both ends were verified to land where the recorded quote landed, folded to alphanumerics so the comparison survives exactly the characters the transcription mangled. All thirteen now match in STRICT mode. No quote here was ever absent from the paper — the defect was fidelity, not integrity.\n\n🔴 SCHEMA v2 UPGRADE 2026-08-10. Three artifacts declared and fingerprinted: the JATS XML and the two figure images. The images are why this manifest could not reach v2 before today — the note above said they had been retrieved and inspected, and they were in no checkout: `files/` is gitignored, so the inspection travelled and its subject did not. Both were re-retrieved from pmc.ncbi.nlm.nih.gov/articles/instance/10952634/bin/ and re-inspected in this run, at 709x368 (Figure 3) and 709x226 (Figure 4).\n\nThe two figure locators had the FIGURE CAPTION in the snippet slot while their own propositions said \"read from the figure image rather than its caption\" — the manifest declared a reading of an image and carried the text that was not the evidence for it. The snippets now describe what the images show, which is the convention PMID34831305 set for `surface: figure`, and the captions are preserved here verbatim so nothing is lost: Figure 4 — \"Survival analysis for 75 individuals with WWOX developmental and epileptic encephalopathy stratified by genetic variant group. (A) Time to death. (B) Time to seizure onset.\"; Figure 3 — \"Location and type of pathogenic WWOX variants in our cohort (top) of 13 patients and those from the literature (bottom).\"\n\nPanel/text relation is declared on all twenty locators. Five text statements are marked `text_confirmed_by_panel` because the panel was read for that statement in this run: entries 1, 2 and 3 against Figure 4, which prints p = 0.0085 and p = 0.65 on its face and from which the 5-year separation can be read directly, and entries 4 and 5 against Figure 3's marker placement. Entry 0 is deliberately left `text_only`: it claims that one versus two missense variants makes no difference, and Figure 4A orders null/missense above missense/missense with overlapping bands. That is a QUALIFICATION — neither a confirmation nor a contradiction — and the vocabulary has no value for it. Recording it as confirmed would have been the over-claim; the gap is reported rather than papered over."
@@ -269,6 +325,21 @@
    "path": "files/fulltext/PMID36779245_Oliver2023_assets/EPI-64-1351-g004.jpg",
    "sha256": "65ab0f9e5534bddebd331cf4b980853eae20145eb252f2af56ba8ff3afcfe0db",
    "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID36779245_Oliver2023_PMC_2026-09-27.xml",
+   "sha256": "780f42de9b3982fa5bf9bf1e6bb76f71384c943aa197fb2d4de80be7ac7e7a34",
+   "kind": "article_text",
+   "note": "PMC JATS XML re-acquired 2026-09-27 (wave-2 provenance package) because the 2026-08 artefact declared above is absent from this checkout, so no locator could be re-verified. A different serialisation of the same article, declared beside the historical surface rather than substituted for it; the locators added on 2026-09-27 quote THIS file.",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=10952634&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-09-27",
+    "derived": false,
+    "result_sha256": "780f42de9b3982fa5bf9bf1e6bb76f71384c943aa197fb2d4de80be7ac7e7a34"
+   }
   }
  ]
 }

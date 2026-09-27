@@ -286,3 +286,94 @@ corroboration, not verification: **both reads used the same rasters and the same
 **Status:** **PROPAGATED IN PART** — `BATCH_20260926_ALDAZ`.
 
 Propagated, with the audited wording in place of the drafted one: `CLAIM 006` title, summary and the method boundaries of §2 (pseudoreplication at n = 3 mice, two time points, no multiplicity correction, no declared blinding); the working-model mirror; Δ-B (`therapy_levers.md` §B2); Δ-B was propagated **minus** its "no age-dependent signal to act on" / "flat endpoint" clauses, which inherit the refused null — §B2 states only that the abundance comparison was not tested; Δ-A and Δ-C as **append-only notes** on `DL-MECH-012`, `DL-BIO-085` and its downstream `DL-REPO-002` (the ledger is append-only, so the entries are annotated, not rewritten); `RL-NEUROINF-001`. **Still owed:** the corpus-callosum Olig2⁺ and cerebellar Purkinje/basket-cell content its proposed summary adds. It was not in the audited text, and it belongs with the new cerebellar claim `CC-20260913-36828035-01` §4 asks for, not inside a hippocampal glia claim. The candidate stays queued for that.
+
+---
+
+## WAVE-2 READINESS (2026-09-27)
+
+**context_policy declared:** `QUESTION_DRIVEN`. One question, put back to a source already read to
+completion: where exactly does the paper place the Olig2⁺ count, on what sampling unit, and what
+does it report for myelin in that same region. Records reached by `registry_records.py get --id`;
+source read at `files/fulltext/PMID36828035_Hussain2023_PMC.xml` and the Figure 4 raster.
+
+**Actor:** `scientist`, wave-2 package `provenance`.
+
+### 1 · What was still owed, and what of it is already spent
+
+`BATCH_20260926_ALDAZ` propagated the audited `CLAIM 006` wording, the §2 method boundaries, the
+working-model mirror, Δ-B (minus its refused null clauses), Δ-A and Δ-C as append-only ledger notes,
+and `RL-NEUROINF-001`. Its disposition leaves two things owed: the **corpus-callosum Olig2⁺**
+content and the **cerebellar Purkinje/basket** content.
+
+🔵 **The cerebellar half is spent.** `CLAIM 041` (landed `BATCH_20260926_ALDAZ_R7`, receipt
+`FTR-20260913-36828035-03`) carries the Purkinje/basket contrast — fewer calbindin⁺ profiles at
+both ages, basket counts with no significant genotype difference — and carries it **better than this
+candidate drafted it**: its evidence boundary states that the panels do not compare 80 with 250 days
+within the mutant, so *"progression or nonprogression is untested"*, where this candidate's Summary
+said *"established by 80 days and flat"*. Verified in the live record. **That half is SUPERSEDED by
+`CLAIM 041`.**
+
+🔴 **The corpus-callosum half is real and still unwritten.** `Olig2` appears in no claim but
+`CLAIM 003`. The candidate's own Correction 1 is why it cannot simply be appended to `CLAIM 006`:
+the measurement is in the **corpus callosum**, and `CLAIM 006` is scoped to the hippocampus.
+
+### 2 · What I did
+
+**Verified the region and the sampling unit at source** rather than carrying the candidate's
+quotation, and added the caption as a persisted locator (`deepdive_manifests/PMID36828035.json`
+entry 58): *"Bar graph showing quantitative measurement of Olig2 positive oligodendrocytes counted
+in three independent 500 μm2 regions spanning the entire imaged corpus callosum."* — with the
+caption's own unit and test, `n = 3` mice per group, unpaired Student's t-test at `p < 0.01`. The
+panel attestation already persisted as entry 23 (WT ~205 vs mutant ~122 at 80 days; ~235 vs ~117 at
+250 days; **no within-genotype bracket**, and the relative gap widens because **wild type rises**).
+
+**Read the paper's own myelin result in the same region**, because without it an oligodendrocyte
+deficit reads as a myelin deficit: *"no significant differences in Mbp staining were detected when
+comparing"* wild type and homozygote in the parietal cortex above the corpus callosum
+(Results 2.6, Supplementary Figs. 6a–d; manifest entry 36, itself narrowed by a 2026-09-26 blind
+audit from an earlier over-reading).
+
+**Read Figure 4 at the pixels** to confirm the panel and its brackets before proposing any wording.
+
+### Verdict — **READY_MINOR**
+
+The proposal below is a **registry boundary on `PAPER 007`**, not a new claim and not an edit to
+`CLAIM 006`. It records a measured deficit with the three things that bound it — region, sampling
+unit, and the untested age comparison — plus the paper's own Mbp null. **No claim is created**: a
+white-matter/oligodendrocyte claim would need a decision this section does not take, and the
+candidate itself says the content *"belongs with the new cerebellar claim … not inside a hippocampal
+glia claim"*. Writing it on the paper record puts the datum where a reader of that paper meets it,
+and leaves the claim decision open rather than pre-empted.
+
+### Operation list for `batch_commit.py propagate`
+
+**File:** `disease-models/wwox/registries/paper_registry_current.md` — **full rewrite** (the paper
+registry is propagated by full rewrite). One line changes inside `PAPER 007`.
+
+**OP 1 · record `PAPER 007` · replace one line**
+
+*old (verbatim, from the current file):*
+
+```
+**Secondary pathway:** P3 — interaction logic
+```
+
+*new:*
+
+```
+**White-matter boundary — the Olig2⁺ deficit is a CORPUS-CALLOSUM measurement and it is not a myelin result (`CC-20260826-CLAIM006-HARDENING-01` residue, 2026-09-27).** Figure 4e counts Olig2⁺ oligodendrocytes *"in three independent 500 μm2 regions spanning the entire imaged corpus callosum"*, `n = 3` mice per group, unpaired t-test at `p < 0.01`: mutant ≈122 vs wild type ≈205 at 80 days and ≈117 vs ≈235 at 250 days, each with an asterisk. 🔴 **No within-genotype 80-vs-250-day bracket is drawn, so progression is UNTESTED**, and the widening relative gap is driven by the **wild type rising**, not by the mutant falling — 80 days is the earliest age sampled, not a demonstrated onset. ⚠️ **The same paper reports no myelin difference in the region above it**: *"no significant differences in Mbp staining were detected when comparing"* the two genotypes in parietal cortex above the corpus callosum (Results 2.6, Supplementary Figs. 6a–d), which does not establish equivalent myelination elsewhere or by other measures but does forbid reading the cell-count deficit as a demonstrated hypomyelination. **Scope:** this is white matter, **not** the hippocampal compartment of [[claim_registry_current#CLAIM 006]], and it is not carried by any claim today; `Olig2` appears in no claim but [[claim_registry_current#CLAIM 003]], whose residual oligodendroglial limb is a different model and a different question. Locators: `deepdive_manifests/PMID36828035.json` entries 23 (panel), 36 (Mbp), 58 (caption, added 2026-09-27).
+**Secondary pathway:** P3 — interaction logic
+```
+
+**Change class:** MINOR (one registry boundary line; no claim, no status, no working-model change).
+**Review floor:** the candidate's own `MAJOR` / R4 applies to the `CLAIM 006` narrowing, which
+**already landed audited**; this residue narrows nothing and creates nothing, so it carries no new
+audit trigger. **Applied outside batch:** `deepdive_manifests/PMID36828035.json` (entry 58).
+
+**On propagation:** the corpus-callosum half is discharged and the cerebellar half is
+**SUPERSEDED by `CLAIM 041`** — at that point this candidate may be closed.
+
+**Pending, and named so it is not lost:** whether the white-matter datum should become a claim of
+its own is **undecided**, deliberately. It needs a record decision (new claim vs `PAPER 007`
+boundary as above), and one measurement would settle what it means — the myelin endpoints
+`CC-20260826-CLAIM003-01` §4 specifies, applied to white matter in this model.
