@@ -105,13 +105,11 @@ def claim_links_from_paper(block: str) -> list[str]:
     )
 
 
-# The FASE-1 corpus triage used its own codes, and three of them collide with the working
-# model's P1-P7: its "P6 — DDR / genome stability" is not the canonical P6 (neuroinflammation
-# and glia), and its P8/P9 have no canonical meaning. Those records keep their labels (the label,
-# not the code, is authoritative for them), so a legacy code is removed before matching rather
-# than read as the canonical pathway it happens to share a number with.
+# FASE-1 triage used pathway labels whose code numbers are not authoritative for the
+# canonical P1-P7 legend. Remove every code attached to one of those legacy labels,
+# regardless of its number; a future recoding must not silently create a new collision.
 LEGACY_TRIAGE_CODE = re.compile(
-    r"\bP6\s*[—-]\s*DDR\b|\bP8\s*[—-]\s*bone\b|\bP9\s*[—-]\s*immune\b", re.I
+    r"\bP\d+\s*[—-]\s*(?:DDR\b|bone\b|immune\b)", re.I
 )
 PATHWAY_CODE_RANGE = re.compile(r"\bP[1-7]\s*[–—-]\s*P[1-7]\b")
 
