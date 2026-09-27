@@ -9,7 +9,8 @@ for an operator decision. G4.3 reading artefacts, receipts and queue entries are
 `fulltext_receipts.py verify` confirms 236 anchored events. The literature-status migration
 landed in `BATCH_20260926_LITVOCAB`. Aldaz R1–R6 now cover registration, assessments, discovery
 ledger corrections and the bounded CLAIM 026/029/032 updates through `WM_v5.5`; CLAIM 006/007
-were narrowed in `BATCH_20260926_ALDAZ`. R7 and the remaining partially propagated candidates
+were narrowed in `BATCH_20260926_ALDAZ`. R7 (`WM_v5.6`) added audited CLAIM 007 provenance,
+bounded CLAIM 041 and corrected three manifests. Remaining partially propagated candidates
 are separate scientific work, subject to `BATCH_COMMIT` and source verification. The 75 withdrawn
 VPS task records remain dispositioned, not restored as canonical tasks.
 
@@ -40,7 +41,7 @@ current state, in recovery group G4 (a separate session).
 | G4.2 | receipt validator: a null parent admitted for a strictly earlier independent reading | `2690265` |
 | G4.3 | the readings as one step: dossiers, manifests, queue entries (renumbered, §6), 29 receipts by rechain (207 → 236), the 37 VPS candidates re-queued, and the seven notes the receipts declare as outputs | `af09f7a`, `55803b5` |
 | G4.4 part 1 | `BATCH_20260926_ALDAZ_R1`: the 25 readings registered in the paper registry, nothing propagated (PAPER 098–115) | `a364dab` |
-| G4.4 science | **Historical hold superseded** by the Aldaz batches; §7 records the original decision point, with remaining candidate work still open | `BATCH_20260926_ALDAZ` through `BATCH_20260926_ALDAZ_R6` |
+| G4.4 science | **Historical hold superseded** by the Aldaz batches; §7 records the original decision point, with remaining candidate work still open | `BATCH_20260926_ALDAZ` through `BATCH_20260926_ALDAZ_R7` |
 | G4.5–G4.6 | inventory accounting (every row RECOVERED or DISPOSITIONED); the retrieval manifest's +85-line append | this note's commit |
 
 ## 1 · Identifiers that mean something else here
