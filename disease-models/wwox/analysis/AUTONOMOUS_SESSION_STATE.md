@@ -476,6 +476,13 @@ receipts, analysis and one harness upgrade.
 6. 🔴 **Nobody has ever audiogenically provoked a Wwox mouse**, and **`Wwox^gt/gt` has never been
    observed, EEG'd or provoked** (`Epilepsy` cell empty in Suzuki's Table 2). The survival-confound
    explanation is an *unattempted experiment on an available animal*, not an open question.
+   ⚠️ **CORRECTED 2026-09-27** (Scientist, wave-2 `m002`, Mirror review of `BATCH_20260927_002`):
+   *"no/nobody … audiogenically provoked a Wwox mouse"* is **false**. Mallaret 2014 (`PAPER 042`, read in
+   full 2026-09-13, `FTR-20260913-24369382-01`) exposed constitutive `Wwox`-null mice of the Aldaz line
+   to 11–14 kHz tones at 16 days (three of eight seized) and 20 days (the four survivors, per the Results
+   text; three in the Fig. 4 legend), with 0/8 wild type — behavioural, unscored, no EEG. `PREMISE:
+   NOBODY_LOOKED` is retired in `CLAIM 037` (WM_v6.0). What remains unattempted is the **rat's**
+   repeated-session protocol and any **EEG** of a provoked mouse; the `gt/gt` point is not affected.
    ⚠️ **CORRECTED 2026-09-22:** I wrote *"viable 2 years"* here. That is **Suzuki's Table 2, a
    secondary source at `panel` depth**, and the **primary contradicts it** — Ludes-Meyers 2007's own
    abstract says the `gt/gt` mice *"had a **significantly shorter lifespan**."* Both are on file,
@@ -556,6 +563,13 @@ everything is candidates, queue entries and analysis.
    mouse of any allele has ever been audiogenically provoked**, so the species contrast under a
    canonical claim has never been run with the same stimulus. → `CC-20260922-SEIZURE-ASCERTAINMENT-01`
    (`D-27`).
+   ⚠️ **CORRECTED 2026-09-27** (same correction as item 6 of the list above) (Scientist, wave-2 `m002`, Mirror review of `BATCH_20260927_002`):
+   *"no/nobody … audiogenically provoked a Wwox mouse"* is **false**. Mallaret 2014 (`PAPER 042`, read in
+   full 2026-09-13, `FTR-20260913-24369382-01`) exposed constitutive `Wwox`-null mice of the Aldaz line
+   to 11–14 kHz tones at 16 days (three of eight seized) and 20 days (the four survivors, per the Results
+   text; three in the Fig. 4 legend), with 0/8 wild type — behavioural, unscored, no EEG. `PREMISE:
+   NOBODY_LOOKED` is retired in `CLAIM 037` (WM_v6.0). What remains unattempted is the **rat's**
+   repeated-session protocol and any **EEG** of a provoked mouse; the `gt/gt` point is not affected.
 
 3. 🔴 **`HYP-20260709-08`'s lysosomal arm would have returned a false negative.** It specifies
    chloroquine + NH₄Cl, imported from a paper run in **over-expressing CAL-62 cells**. Schultz 2018

@@ -154,6 +154,17 @@ a citation. So the repository currently holds:
 in how many animals, on which background, against which controls. **That is a precise acquisition ask, on a paper
 whose PMC deposit exists but is closed.**
 
+> ⚠️ **Superseded — note appended 2026-09-27** (Scientist, wave-2 `m002`, Mirror review of `BATCH_20260927_002`,
+> follow-up 7). Reason 1 (*"Abstract depth only. No methods, no n …"*) and the acquisition ask were already false
+> when written: the body had been read in full on 2026-09-13 from this repository's `files/fulltext/`
+> (`FTR-20260913-24369382-01`, `complete_fulltext_read`). It carries methods, two denominators (3/8 at 16 days;
+> the four survivors at 20 days per the Results, three in the Fig. 4 legend), a 0/8 wild-type comparator and the
+> strain: the Aldaz `BK5-Cre` × `Wwox^flox/flox` constitutive null (Ludes-Meyers 2009) — which settles reason 3's
+> *"whose mouse"*. Reason 2's lifespan premise is also superseded (*"a short lifespan of only 3 to 4 weeks
+> maximum"*; mice seized at days 16 and 20). Reason 4 (not independent: Chong 2023 repeats Mallaret) stands. The
+> flag was resolved by `BATCH_20260927_002` (MAJOR): `CLAIM 037` records the mouse audiogenic phenotype, and
+> `CLAIM 005`'s prohibition on asserting **epileptogenesis** as a measured process is unchanged.
+
 ---
 
 ## 7 · Corrections
