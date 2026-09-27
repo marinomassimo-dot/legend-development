@@ -80,3 +80,104 @@ from `CLAIM 036`:
 
 **Gate state at proposal:** `legend_lint` PASS · growth anchors PASS (`unread_premises = 0`) ·
 receipt chain 201, tail-anchored · publication gate PASS, 0 blocks.
+
+---
+
+## WAVE-2 READINESS (2026-09-27)
+
+**context_policy declared:** `QUESTION_DRIVEN`. One question, asked of a known source: what unit
+does the rat primary actually print in its Table 2. Held going in: `CLAIM 038`, `CLAIM 036` and
+this candidate. Records reached by `registry_records.py get --id`, never by grepping a registry.
+
+**Actor:** `scientist`, wave-2 package `provenance`.
+
+### What I did — §6.1's verification, which decides the shape of Δ1
+
+The candidate makes Δ1 conditional: *"If the primary itself prints `mg/ml`, the correction becomes
+a **flag on the source** rather than an edit to our transcription, and the wording changes
+accordingly."*
+
+🔴 **The primary prints `mg/ml`.** `deepdive_manifests/PMID17803050.json` entry 25 carries the row
+verbatim from the page adjudication
+`page_adjudications/PMID17803050/p04_table2_BUN_CRE_GLU.png`:
+
+> `BUN (mg/ml) 12.6 q 4.3 40.3 q 3.7c 10.1 q 2.7 35.6 q 12.8d`
+> — Table 2, *"Plasma concentrations of biochemical markers in 28-d-old rats"*, BUN row, page 4
+
+**And the corroboration is one row down, which the candidate did not have.** Entry 26 gives
+`GLU (mg/ml) 169.0 q 26.7 145.4 q 26.5 155.0 q 30.1 157.4 q 38.9`. A glucose of 169 mg/ml is
+16,900 mg/dL. **Two analytes on the same table carry the same impossible unit**, so this is a
+mislabelled unit header in the source's Table 2, not a transcription error of ours and not a single
+typo.
+
+⇒ **LEGEND's transcription is faithful and must not be "corrected".** Δ1 as drafted — replace
+`mg/ml` with `mg/dL` — is **refused**, exactly as the candidate's own §6 instructed. It is redrafted
+below as a source-unit flag that keeps the printed unit and says what is wrong with it.
+
+Δ2 was unconditional and is unchanged in substance.
+
+### Verdict — **READY_MINOR**
+
+`CLAIM 038` is `in observation`, no finding is reversed, no status moves, no baseline is touched:
+the direction and significance results — which are what the claim asserts — do not depend on the
+unit at all.
+
+### Operation list for `batch_commit.py propagate`
+
+**File:** `disease-models/wwox/registries/claim_registry_current.md` — record-scoped.
+
+**OP 1 · record `CLAIM 038` · `replace-within`**
+
+*old (verbatim, from the current file):*
+
+```
+**Summary:** Nel ratto a 28 giorni: BUN 12.6 → **40.3** mg/ml (♀, `P<0.05`) e 10.1 → **35.6** (♂, `P<0.01`);
+```
+
+*new:*
+
+```
+**Summary:** Nel ratto a 28 giorni: BUN 12.6 → **40.3** mg/ml ⚠️ *(unità come stampata dal primario; vedi la nota di unità in fondo a questo record)* (♀, `P<0.05`) e 10.1 → **35.6** (♂, `P<0.01`);
+```
+
+**OP 2 · record `CLAIM 038` · `replace-within`**
+
+*old (verbatim):*
+
+```
+**Wikilinks:** [[paper_registry_current#PAPER 059]] · [[paper_registry_current#PAPER 057]] · [[claim_registry_current#CLAIM 036]] · [[claim_registry_current#CLAIM 037]]
+```
+
+*new:*
+
+```
+**Nota di unità — è un difetto DELLA FONTE, non della nostra trascrizione (`CC-20260922-CLAIM038-UNIT-CLASS-01`, verificato 2026-09-27).** La Table 2 di [[paper_registry_current#PAPER 059]] stampa `BUN (mg/ml)` e `GLU (mg/ml)`: le cifre trascritte qui sono **fedeli alla stampa**. Ma `40.3 mg/ml` è `4.030 mg/dL` e `169.0 mg/ml` di glucosio è `16.900 mg/dL` — valori non compatibili con un mammifero vivo, e il fattore è lo stesso (1.000) su entrambe le righe: l'intestazione di unità di quella tabella è **sbagliata alla fonte**, non c'è un refuso singolo, e le cifre vanno lette come `mg/dL`. Locator: `deepdive_manifests/PMID17803050.json` entries 25 e 26, dall'aggiudicazione di pagina `page_adjudications/PMID17803050/p04_table2_BUN_CRE_GLU.png`. 🔴 **Nessun confronto numerico fra modelli è autorizzato da questa claim e da [[claim_registry_current#CLAIM 036]]** — solo **direzione e significatività**. Le chimiche di topo e ratto provengono da laboratori, età, sessi e piattaforme diversi, e le unità dei due primari divergono; un'affermazione della forma *"il ratto ha BUN più alto del topo"* **non è ricostruibile** da questi record.
+**Wikilinks:** [[paper_registry_current#PAPER 059]] · [[paper_registry_current#PAPER 057]] · [[claim_registry_current#CLAIM 036]] · [[claim_registry_current#CLAIM 037]]
+```
+
+**OP 3 · record `CLAIM 036` · `replace-within`**
+
+*old (verbatim):*
+
+```
+**Wikilinks:** [[paper_registry_current#PAPER 057]] · [[claim_registry_current#CLAIM 005]] · [[claim_registry_current#CLAIM 038]]
+```
+
+*new:*
+
+```
+**Vincolo di confronto (`CC-20260922-CLAIM038-UNIT-CLASS-01`, 2026-09-27):** le cifre di questo record sono in `mg/dL` come stampate dal proprio primario; quelle del ratto in [[claim_registry_current#CLAIM 038]] sono stampate in `mg/ml` dalla **loro** fonte, con l'unità sbagliata all'origine. **Nessun confronto numerico fra i due modelli è autorizzato** — solo direzione e significatività. Vedi la nota di unità in `CLAIM 038`.
+**Wikilinks:** [[paper_registry_current#PAPER 057]] · [[claim_registry_current#CLAIM 005]] · [[claim_registry_current#CLAIM 038]]
+```
+
+### What this section refuses
+
+- ❌ **No unit rewrite.** Changing `mg/ml` to `mg/dL` in the Summary would make LEGEND's text
+  disagree with the page it quotes, which is worse than the defect it fixes.
+- ❌ **No assertion that the two models agree or disagree quantitatively.** OP 2 and OP 3 forbid the
+  question from being answered from the registry; they do not answer it.
+- ❌ **Nothing about the mouse figures at `CLAIM 036`** beyond the comparison bound: §6.2's
+  verification of those figures against their own primary is not done here and is not claimed.
+
+**Change class:** MINOR (unit annotation + comparison bound). **Review floor:** R2, as declared.
+**Pending:** §6.2 — re-verify `CLAIM 036`'s mouse chemistry against PMID 19936220's own table.

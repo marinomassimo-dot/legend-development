@@ -87,3 +87,84 @@ transferability, relevance or claim link is written.
 
 ### Disposition correction — 2026-09-26, ACTOR_ID `orchestrator`
 The SUPERSEDED status above applies only to the six `Evidence depth` lines. The candidate's PAPER 018 proposal to state that the later partial re-read `FTR-20260810-36779245-03` does not supersede the complete read remains owed, as does reconciliation of PAPER 018's `filtered_in` status with its complete-fulltext receipt. These are open items, not zero-edit supersessions.
+
+---
+
+## WAVE-2 READINESS (2026-09-27)
+
+**context_policy declared:** `SYNTHESIS`. The inputs are the ledger's own events
+(`fulltext_receipts.py status --pmid 36779245`) and the live `PAPER 018` record reached with
+`registry_records.py get --id`; no source was reopened for this item and nothing here turns on a
+fact inside a paper.
+
+**Actor:** `scientist`, wave-2 package `provenance`.
+
+### What I did
+
+1. **Re-derived the ledger state for PMID 36779245 rather than trusting the candidate's wording.**
+   Four events exist:
+
+   | event | depth | prior | reread_reason | coverage |
+   |---|---|---|---|---|
+   | `FTR-20260804-36779245-01` | partial | — | first_read | figures `captions_only` |
+   | `FTR-20260804-36779245-02` | **complete** | `-01` | inadequate_prior_coverage | everything read; supplementary `unavailable` |
+   | `FTR-20260810-36779245-03` | partial | `-02` | inadequate_prior_coverage | methods/results/tables/discussion |
+   | `FTR-20260923-36779245-04` | partial | `-03` | new_version_or_supplement | **supplementary only** |
+
+2. 🔴 **The candidate's clause is stale exactly as its triage said.** It names only `-03`, while a
+   **second** later partial (`-04`, the supplement, 2026-09-23) now exists. Written as drafted, the
+   clause would protect the complete read against one successor and be silent about the other —
+   and the silent one is the one that read a surface `-02` recorded as `unavailable`. The clause is
+   re-derived below to cover both, and to say what `-04` adds rather than only that it does not
+   supersede.
+3. **Checked the six-line part** the candidate opened with: six `Evidence depth` lines are present
+   (e.g. `PAPER 018`'s own `complete_fulltext_read — FTR-20260804-36779245-02`), landed by
+   `BATCH_20260920_001` / ALDAZ. That half is spent.
+4. **Counted the manifest as it stands now**: `deepdive_manifests/PMID36779245.json` holds **27**
+   locators after this package added seven (entries 20–26) for
+   `CC-20260921-CLAIM033-REPLICATION-01`. The record's current text says 20, so the op below
+   re-derives the number instead of leaving a count that was true last week. ⚠️ The record's
+   *"strict PASS"* is also no longer reproducible in a fresh checkout: two declared artefacts,
+   including the 2026-08 one the first 20 locators quote, are **absent from this deployment**, so
+   the honest statement is structural PASS with the artefact locality named.
+
+### Verdict — **READY_MINOR**
+
+One provenance line on one registry record. No claim moves, no depth is upgraded or downgraded, no
+reading is re-graded: the op writes down what the ledger already says.
+
+### Operation list for `batch_commit.py propagate`
+
+**File:** `disease-models/wwox/registries/paper_registry_current.md` — **full rewrite** (the paper
+registry is propagated by full rewrite; `propagate` refuses it by name, exit 4). Every other
+section is copied verbatim; only the two lines below change inside `PAPER 018`.
+
+**OP 1 · record `PAPER 018` · replace one line**
+
+*old (verbatim, from the current file):*
+
+```
+**Evidence depth:** complete_fulltext_read — `FTR-20260804-36779245-02`; manifest `deepdive_manifests/PMID36779245.json` (20 locators, schema v2, strict PASS, 3 declared gaps); declaration reconciled from the ledger by `CC-20260920-REGISTRY-LEDGER-DEPTH-01` (BATCH_20260920_001) — the reading is the receipt's, not this batch's
+```
+
+*new:*
+
+```
+**Evidence depth:** complete_fulltext_read — `FTR-20260804-36779245-02`; manifest `deepdive_manifests/PMID36779245.json` (27 locators, schema v2, 3 declared gaps; structural PASS — two declared artefacts, including the 2026-08 XML the first 20 locators quote, are absent from this deployment, which is an evidence-locality fact and not a provenance failure of the reading); declaration reconciled from the ledger by `CC-20260920-REGISTRY-LEDGER-DEPTH-01` (BATCH_20260920_001) — the reading is the receipt's, not this batch's. **Two later PARTIAL re-reads exist and NEITHER supersedes the complete one** (`CC-20260914-EVIDENCE-DEPTH-01`, re-derived from the ledger 2026-09-27): `FTR-20260810-36779245-03` (methods, results, tables, discussion) and `FTR-20260923-36779245-04` (**supplementary only** — it read `Table S1`, the surface `-02` recorded as `unavailable`, and found a variant/ACMG census with no age, outcome or survival column). A later partial is an ADDITION to the covered surface, never a downgrade of the complete event, and the two together are why this record's depth does not move. Seven locators were added on 2026-09-27 from a re-acquired PMC surface (`PMID36779245_Oliver2023_PMC_2026-09-27.xml`), declared beside the historical artefact rather than substituted for it.
+```
+
+### The second residual — **DEFERRED**, deliberately
+
+`PAPER 018` carries `Status: filtered_in` against a complete receipt and `Claim links: pending`
+while `CLAIM 033`, `CLAIM 017` and `CLAIM 030` name it as Source. The candidate itself refuses to
+decide that, and so does this section: **it is a lifecycle judgement, not a provenance repair**,
+and `BATCH_20260920_001` deliberately did not change it either (*"whether this reading produces a
+claim is a scientific question it did not ask"*). **What would unblock it:** one decision, by the
+Orchestrator under §21d, on whether a record cited as Source by three claims may keep
+`filtered_in` / `Claim links: pending` — applied once across every record in that state, not on this
+one alone. Writing it here would settle a vocabulary question for the whole registry from a sample
+of one.
+
+**Change class:** MINOR (registry provenance line). **Review floor:** R2 as declared.
+**Pending:** the lifecycle decision above; the six-line part is spent — **CLOSE / SUPERSEDED** by
+`BATCH_20260920_001` and the ALDAZ batches.

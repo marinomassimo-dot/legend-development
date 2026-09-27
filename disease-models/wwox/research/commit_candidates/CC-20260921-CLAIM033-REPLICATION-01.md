@@ -253,3 +253,141 @@ DOIs — [36779245](https://doi.org/10.1111/epi.17542) · PMCID `PMC10952634` �
 confirms `29808465` as unobtainable by any automated route here. *This session reconstructed two
 DOIs from memory earlier and caught both; nothing here is carried without a copy.*
 Not medical advice, and nothing in this candidate is a prognosis.*
+
+---
+
+## WAVE-2 READINESS (2026-09-27)
+
+**context_policy declared:** `QUESTION_DRIVEN` for the re-opening of PMID 36779245 (question: are
+the five sentences this candidate rests on in the paper, and in what words), `SYNTHESIS` for the
+rest. Records reached by `registry_records.py get --id`, never by grepping a registry.
+
+**Actor:** `scientist`, wave-2 package `provenance`.
+
+### 1 · Blocker (1) — the Oliver quotations now have persisted locators
+
+The candidate's §1–§4 rested on quotations that lived only in
+`analysis/oliver2023_table1_independent_reconstruction_20260921.md`: **no locator for them existed
+in `deepdive_manifests/PMID36779245.json`**, and the manifest's own declared artefact
+(`PMID36779245_Oliver2023_PMC.xml`) is **absent from this deployment**, so nothing could be
+re-verified.
+
+Re-acquired free and declared beside the historical surface rather than substituted for it:
+`files/fulltext/PMID36779245_Oliver2023_PMC_2026-09-27.xml`, sha256 `780f42de…`, NCBI efetch
+`db=pmc id=10952634`, recipe recorded. **Seven locators added** (entries 20–26), each quoting that
+file, each verified by `deepdive_manifest.py --verify-artifacts` against the root checkout:
+
+1. the denominators — *"We stratified all 75 cases into one of three genetic groups: (1) null/null
+   ("* … n = 45 / 15 / 15;
+2. the deaths — *"Three patients (Patients 5, 6, 8) died at age 8, 11, and 6"* years;
+3. the two homozygous `Q230P` rows of Table 1, at opposite tails;
+4. the ascertainment asymmetry — *"despite our patient group being notably older (mean"* … 8 y 2 m
+   vs 3 y 4 m, mortality 23 % vs 38 %;
+5. the censoring definition — *"Each vertical dash in A denotes the most recent age known to be
+   living of each individual (censored observations)."*;
+6. the authors' own hedge on the hypomorphic reading — *"Functional studies would be required to
+   support this hypothesis."*;
+7. the single non-drug-resistant patient — *"Epilepsy was resistant to antiseizure medications
+   (ASMs) in all patients, except Patient 5."*
+
+### 2 · Blocker (2) — the `TABLE S1` wording is stale and is re-derived
+
+Proposals (b)/(d) say the recomputation is *"blocked on TABLE S1"* and §4bis calls it a **route**
+problem on an open-access file. That is superseded: `FTR-20260923-36779245-04` read the supplement,
+and `analysis/oliver2023_tableS1_and_q230p_cohort_map_20260923.md` §1 records what it is — a
+**variant/ACMG census**, 90 allele-observations × 9 columns, with **no age, no outcome, no date of
+death, no survival time and no genotype-class column**. 🔴 **The per-individual survival rows for
+the 62 literature cases are not in the published supplement at all.** The blocker is therefore
+**not a route**: it is data the paper never published, and the remedy is an `AUTHOR_DATA_REQUEST`.
+
+**Applied outside batch:** `research/full_text_queue_current.md` `FT-122` gains an append-only
+§3 recording exactly that, leaving §1 and §2 intact. (§2, `PMID 29808465`, stays
+`EVIDENCE_BLOCKED` and is untouched.)
+
+### 3 · Blocker (3) and proposal (a0)
+
+The reservation number is **(6)**, not "fifth": `CLAIM 033` already carries `(5)` from
+`BATCH_20260909_001`. And **(a0) is already satisfied** — `CLAIM 033`'s `Wikilinks` line already
+reaches `[[claim_registry_current#CLAIM 019]]`; verified in the live record, no edit owed.
+
+### 4 · Also applied outside batch — `D-24`
+
+`dismissal_ledger_current.md` → `🩸 DEFAULTS THAT BIT US` gains the row `D-24`, in the candidate's
+own sense but with the locators this session persisted, and with `D-17` explicitly left reserved
+and not reused. The ledger is append-only and nothing earlier was rewritten.
+
+### 5 · §6's therapeutic consequence — checked, and there is nothing to change
+
+§6 says *"`TX-003` must stop citing the survival statistic as support"*. Verified first-hand across
+`therapeutics/therapeutic_strategies_current.md` and `analysis/therapy_levers.md`: **neither
+surface cites PMID 36779245, `CLAIM 033`, or the survival statistic anywhere**, and `TX-003`'s
+mechanism paragraph rests on the Q230P protein datum alone. **No SCORE and no SAFETY text moves,
+and none is proposed** — there is nothing to remove. Recorded so the next reader does not go
+looking for a citation that is not there.
+
+### Verdict — **READY_MINOR**
+
+`CLAIM 033` is `in observation`; nothing is reversed, no status moves, no baseline is narrowed, and
+the log-rank result stands as what it is. `CLAIM 030` gains an observation that its own thesis
+predicts.
+
+### Operation list for `batch_commit.py propagate`
+
+**File:** `disease-models/wwox/registries/claim_registry_current.md` — record-scoped.
+
+**OP 1 · record `CLAIM 033` · `replace-within`** — the denominators, into the Summary.
+
+*old (verbatim):*
+
+```
+Le varianti di sito di splicing accettore/donatore sono codificate come **null**. Mortalità complessiva ~35%, causa dominante **respiratoria**.
+```
+
+*new:*
+
+```
+Le varianti di sito di splicing accettore/donatore sono codificate come **null**. Mortalità complessiva ~35%, causa dominante **respiratoria**. **Denominatori (aggiunti `BATCH` 2026-09; locator `deepdive_manifests/PMID36779245.json` entry 20):** i 75 casi sono **45 null/null, 15 null/missense, 15 missense/missense** — la classe «almeno una missense» è **30 su 75**, e le due classi missense sono **aggregate** nel confronto significativo. I 75 sono **13 pazienti nuovi + 62 dalla letteratura**, che contiene coorti già censite altrove: **non sommare mai queste coorti fra loro**.
+```
+
+**OP 2 · record `CLAIM 033` · `replace-within`** — the sixth reservation, inserted before the
+operational corollary.
+
+*old (verbatim):*
+
+```
+**Corollario operativo:** la RT-qPCR sulla giunzione esone 8→9
+```
+
+*new:*
+
+```
+**(6) Riserva aggiunta (wave-2 `provenance`, 2026-09-27; `CC-20260921-CLAIM033-REPLICATION-01`). L'associazione non replica, e dentro la coorte che la genera i morti non stanno dove la classe li vorrebbe.** (a) **Mancata replica:** nella coorte di registro `PMID 40875931`, Table 2, il confronto di mortalità fra classi genotipiche **non è significativo** (`0 (0.0) 1 (7.7) 0 (0.0) 2 2.44 0.432`), con **zero morti fra i null/null**; l'unico decesso porta una missense — *"case ID 11 with WWOX variants (p.(Gln72\*); p.(Gln230Pro)) was the only individual who died prematurely"* — la Discussion di quel paper afferma il contrario della propria Table 2, e gli autori dichiarano un bias di arruolamento verso i viventi. (b) **Dentro la coorte generatrice**, dei tre decessi — *"Three patients (Patients 5, 6, 8) died at age 8, 11, and 6 years"* — **due portano un allele missense** (Paziente 5 missense/missense, Paziente 6 missense/null); solo il Paziente 8 è null/null. E i due `Q230P` omozigoti della stessa Table 1 occupano **i due estremi opposti**: il più anziano vivente a 23 anni e 11 mesi, e un decesso a 8 anni e 3 mesi. (c) **Asimmetria di arruolamento fra i due strati aggregati in un unico Kaplan–Meier:** *"despite our patient group being notably older (mean = 8 years 2 months vs. 3 years 4 months), the mortality was lower (23% vs. 38%)"* — gli autori la notano e **non la trattano come termine di bias**. (d) **La censura è l'età alla pubblicazione, non il follow-up:** *"Each vertical dash in A denotes the most recent age known to be living of each individual (censored observations)"* — in una coorte assemblata dalla letteratura un caso a esito precoce è riportato **perché** è morto, mentre un vivente è riportato all'età a cui qualcuno lo ha scritto: censura informativa, mai affrontata, e **nessun numero a rischio è riportato**. (e) **La lettura ipomorfa della classe missense è l'ipotesi degli autori e loro stessi la dichiarano non testata:** *"Functional studies would be required to support this hypothesis."* 🔴 **Nulla di tutto ciò rovescia il claim**: il `p = .0085` resta ciò che è, e null/null resta la classe peggiore sui dati assemblati. Ciò che non regge è il trasferimento della statistica di classe a un individuo. ⚠️ **La ricomputazione «togliendo Q230P» non è bloccata da una rotta ma da un dato mai pubblicato**: la `TABLE S1` è stata letta (`FTR-20260923-36779245-04`) ed è un censimento di varianti/ACMG senza età, esito, data di decesso né classe genotipica — la via aperta è una **richiesta dati agli autori**. Locator: `deepdive_manifests/PMID36779245.json` entries 20–26.
+**Corollario operativo:** la RT-qPCR sulla giunzione esone 8→9
+```
+
+**OP 3 · record `CLAIM 030` · `replace-within`** — the both-tails observation, before the Wikilinks
+line.
+
+*old (verbatim):*
+
+```
+**Wikilinks:** [[paper_registry_current#PAPER 039]] · [[paper_registry_current#PAPER 041]] · [[paper_registry_current#PAPER 042]] · [[paper_registry_current#PAPER 040]] · [[paper_registry_current#PAPER 089]] · [[claim_registry_current#CLAIM 019]] · [[claim_registry_current#CLAIM 032]]
+```
+
+*new:*
+
+```
+**Osservazione a due code (wave-2 `provenance`, 2026-09-27; `CC-20260921-CLAIM033-REPLICATION-01` §5c).** Nella coorte di [[paper_registry_current#PAPER 018]], Table 1, **due pazienti `Q230P` omozigoti** — stesso genotipo, stessa coorte — stanno agli estremi opposti dell'esito: uno è il **più anziano vivente dello studio (23 anni e 11 mesi)**, l'altro è **deceduto a 8 anni e 3 mesi**. ✅ Questo **rafforza** la tesi di questo claim invece di contrastarla: se la gravità segue la **funzione residua** e non l'abbondanza né la classe sintattica, un genotipo che copre entrambe le code è esattamente ciò che ci si aspetta di vedere. ⚠️ Non è un dato di risposta al trattamento e non va letto come tale: l'unico paziente non farmaco-resistente della coorte è uno dei due, `n = 1`. Locator: `deepdive_manifests/PMID36779245.json` entries 22 e 26.
+**Wikilinks:** [[paper_registry_current#PAPER 039]] · [[paper_registry_current#PAPER 041]] · [[paper_registry_current#PAPER 042]] · [[paper_registry_current#PAPER 040]] · [[paper_registry_current#PAPER 089]] · [[claim_registry_current#CLAIM 019]] · [[claim_registry_current#CLAIM 032]]
+```
+
+**Not proposed:** (a0) — already present. (e) `D-24` — applied outside batch. (d) `FT-122` — applied
+outside batch. §6 — nothing to change, see §5 above.
+
+**Change class:** MINOR (one reservation, denominators, one observation). **Review floor:** R3 as
+declared; Mirror ex post. **Applied outside batch:** `dismissal_ledger_current.md` (`D-24`),
+`full_text_queue_current.md` (`FT-122` §3), `deepdive_manifests/PMID36779245.json` (7 locators +
+one re-acquired artefact).
+
+**Pending:** the author-data request for the 62 literature cases' per-individual survival rows —
+the only thing that would let the "remove `Q230P`" recomputation be done at all.

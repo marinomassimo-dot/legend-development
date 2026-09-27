@@ -161,3 +161,102 @@ Item **A** (`PAPER 007`) only: propagated except A(5) — the note on both claim
 **Status:** DEFERRED
 
 Deferred by this batch's own scope: item C repoints the `Source` of `CLAIM 002`, a `consolidated baseline` claim, onto `PAPER 094`, and a locator audit of that reading is owed before a consolidated-baseline claim's foundation is moved. Items A, B and D are already spent or satisfied (`BATCH_20260926_ALDAZ` / `_R5`; `PAPER 039` declares `partial_fulltext_read — FTR-20260814-34268881-03`), and item E's `meta_gaba` rewrite is explicitly not drafted in the candidate — it must be written from `CLAIM 037` / `CLAIM 040` / `DIS-011` as landed, not from the withdrawn `CC-20260826-CLAIM037-01` wording it cites.
+
+---
+
+## WAVE-2 READINESS (2026-09-27)
+
+**context_policy declared:** `SYNTHESIS` for the record-by-record disposition (inputs reached with
+`registry_records.py get --id`, never by grepping a registry); `QUESTION_DRIVEN` for the two points
+checked back against sources — the qualifications the refereed Steinberg reading carries
+(`deepdive_manifests/PMID42397075.json`, 30 locators) and the preprint provenance of the Abudiab
+line (`deepdive_manifests/PMID42128308.json` entries 8 and 23).
+
+**Actor:** `scientist`, wave-2 package `provenance`.
+
+### 1 · Where each item actually stands, verified in the live files
+
+| item | state | evidence |
+|---|---|---|
+| **A** `PAPER 007` identity | **spent** | propagated `BATCH_20260926_ALDAZ`; superseded in place by `CC-20260826-PROVENANCE-PAPER007-01`. A(5) rides with the cerebellar work, now landed as `CLAIM 041` |
+| **B** `PAPER 027` / `PAPER 030` | **spent** | `BATCH_20260926_ALDAZ_R5`; `PAPER 027` is canonical for PMID 25331887, authorship corrected, `PAPER 030` kept as an explicit historical duplicate |
+| **C** `PAPER 001` → `PAPER 094`, `CLAIM 002` Source | 🔴 **still open** | `PAPER 001` still reads `Status: integrated` with no supersession; `CLAIM 002` `Source` still reads *"Steinberg et al., 2024 preprint"* and its `Wikilinks` name only `PAPER 001` and `PAPER 039` |
+| **D** `PAPER 039` depth | **satisfied independently** | the record declares `partial_fulltext_read — FTR-20260814-34268881-03` |
+| **E** `meta_gaba_paradox_current.md:19` | **satisfied, by another hand** | the blockquote now carries *"Withdrawn here as stale"* (2026-09-27): the two asserted-absence sentences are gone and the chain finding is kept |
+| **E** `meta_network_myelin_glia_current.md:92` | **applied outside batch, this session** | the dual-myelin line now carries the unrefereed-preprint qualification, `IPOTESI`, plus the conditional-requirement shape from Table 1 |
+
+### 2 · Item C, and why it is not bookkeeping
+
+The candidate calls C *"pure propagation debt"*. It is more than that in one respect, which is why
+this section does not treat it as mechanical: repointing `CLAIM 002`'s `Source` **moves the
+foundation of a `consolidated baseline` claim** from an unrefereed preprint to a refereed paper
+that was read completely — and the refereed reading carries qualifications the claim does not. Two
+of them narrow what the claim's own Summary says (*"firing aumentato e normalizzato dal rescue"*),
+and one is a `🔴 TEXT CONTRADICTED BY PANEL` pair. Moving the source without moving those
+qualifications would leave the claim resting on a reading whose own boundaries it does not carry.
+
+🔵 **The preprint record stays resolvable, and that is deliberate**: the 2026 review still cites the
+preprint DOI [`deepdive_manifests/PMID42128308.json` entry 24], so `PAPER 001` is marked
+**superseded**, never deleted or merged away.
+
+### Verdict — **READY_MAJOR** (item C) · items A, B, D, E **CLOSE / PROPAGATED or applied**
+
+### Operation list for `batch_commit.py propagate`
+
+**OP 1 · `disease-models/wwox/registries/paper_registry_current.md` · record `PAPER 001` ·
+full-rewrite edit** (the paper registry is propagated by full rewrite; every other section copied
+verbatim).
+
+*old (verbatim, from the current file):*
+
+```
+**Status:** integrated
+```
+
+*new:*
+
+```
+**Status:** superseded by [[paper_registry_current#PAPER 094]] — the refereed version of this work, PMID 42397075 / DOI 10.1093/brain/awag239, *Brain* 2026, read completely (`FTR-20260810-42397075-04`). 🔵 **Kept append-only and resolvable rather than merged away:** the 2026 review still cites this preprint's DOI, so the identity has live downstream traffic (`deepdive_manifests/PMID42128308.json` entry 24). Nothing measured here is withdrawn; what changes is which record a claim may rest on. (`CC-20260826-PROVENANCE-01` §C.)
+```
+
+**OP 2 · `disease-models/wwox/registries/claim_registry_current.md` · record `CLAIM 002` ·
+`replace-within`** — the Source and the Wikilinks, in one operation.
+
+*old (verbatim):*
+
+```
+**Source:** Steinberg et al., 2024 preprint; Steinberg et al., 2021, *EMBO Molecular Medicine*, full text reviewed
+**Wikilinks:** [[paper_registry_current#PAPER 001]] · [[paper_registry_current#PAPER 039]]
+```
+
+*new:*
+
+```
+**Source:** [[paper_registry_current#PAPER 094]] — Steinberg et al. 2026, *Brain*, PMID 42397075, **complete read** `FTR-20260810-42397075-04`, manifest `deepdive_manifests/PMID42397075.json` (30 locators); the 2024 bioRxiv record [[paper_registry_current#PAPER 001]] is **superseded by it** and kept resolvable · Steinberg et al., 2021, *EMBO Molecular Medicine*, **partial_fulltext_read** `FTR-20260814-34268881-03` ([[paper_registry_current#PAPER 039]])
+**Confini che la lettura referata porta e questo claim non portava (`CC-20260826-PROVENANCE-01` §C; propagati insieme al ripuntamento della Source).** 🔴 **(1) Il testo dichiara un confronto che la figura non disegna:** il rescue è descritto come riportare l'ipereccitabilità *"to a level similar to the WT organoids [Fig. 6A(ii)]"*, ma quel pannello porta le parentesi di significatività **solo** per WT-vs-EGFP e EGFP-vs-trattato — **nessuna parentesi unisce WT e trattato**. **(2) Gli autori stessi delimitano ciò che la terapia raggiunge:** *"rescued neuronal functional phenotypes without correcting RG abnormalities"*. **(3) Il rescue non controlla il proprio livello di espressione:** la proteina WWOX dopo AAV9 va da **0.4× a 7×** il wild type a seconda della linea, con lo stesso vettore. **(4) Il fenotipo di composizione è quasi tutto del knockout ingegnerizzato** (Fig. 2F, frazione neuronale log2FC ≈ −2.6 contro WT), mentre le linee di paziente hanno composizione quasi normale e un fenotipo di **maturazione**. **(5)** *"No randomization or blinding was applied in this study"*. Nessuna misura è ritirata: il claim resta `consolidated baseline` e ciò che cambia è che le sue qualificazioni sono ora quelle della fonte referata.
+**Wikilinks:** [[paper_registry_current#PAPER 094]] · [[paper_registry_current#PAPER 001]] · [[paper_registry_current#PAPER 039]]
+```
+
+⚠️ **`PAPER 094`'s own `Claim links` line** (`none — this record carries a reading, not a claim`)
+must be updated to `002` in the same batch, as a full-rewrite edit of that record; otherwise LINT's
+`UNLINKED_SUPPORT` check sees a claim naming a paper that does not name it back.
+
+### LOCATOR TRIPLES FOR BLIND AUDIT
+
+proposition | verbatim quote | anchor
+---|---|---
+The paper's text asserts a comparison with wild type that the cited panel does not draw. | "hyperexcitability to a level similar to the WT organoids [Fig. 6A(ii)]." | PMID 42397075, Results p. 13, describing Figure 6A(ii); `deepdive_manifests/PMID42397075.json` entry 10
+The panel half of the same pair: the WT-versus-treated bracket does not exist. | "[figure attestation — pixels cannot be quote-matched] Figure 6A(ii): brackets present for WT vs EGFP and for EGFP vs AAV9-hSynI-WWOX; no bracket joining WT and the treated condition." | PMID 42397075, Figure 6 panel A(ii), inspected at native resolution; manifest entry 11
+The authors state the scope of what the rescue corrects. | "rescued neuronal functional phenotypes without correcting RG abnormalities" | PMID 42397075, Discussion p. 16; manifest entry 12
+Delivered WWOX protein is not controlled to a physiological level: it spans 0.4× to 7× wild type across lines with the same vector. | "[figure attestation — pixels cannot be quote-matched] Supplementary Figure 1: panel M, WWOX over HSP-90 relative to JH WT = 1 — WPM S1 0.1, WPM D1 0.1, WPM D3 0.3, WPM S1 AAV9 7. Panel L — JH WT 1, LM-iPS 0.2, WSM S2 AAV9 0.4, WSM S5 AAV9 0.4, LM-iPS AAV9 0.9." | PMID 42397075, Supplementary figures volume page 2, panels K–M, 170 effective ppi; manifest entry 28
+The central composition phenotype is almost entirely the engineered knockout's; the patient lines carry a maturation phenotype instead. | "[figure attestation — pixels cannot be quote-matched] Figure 2F, 'RGs and Neu cell fraction changes', log2FC versus WT: WWOX-KO Neu about -2.6 and RGs about +0.55; SCAR12 Neu about -0.2 and RGs about -0.15; WOREE both within about 0.05." | PMID 42397075, Figure 2 panels D–F, read at 174 effective ppi; manifest entry 2
+The study declares no randomization and no blinding. | "No randomization or blinding was applied in this study" | PMID 42397075, Statistical analysis; manifest entry 19
+The superseded preprint identity has live downstream traffic and must stay resolvable. | "Extending these observations to a patient-relevant context, a follow-up study employed AAV9-WWOX gene therapy in human WWOX-deficient organoids (Steinberg et al., 2024)" | PMID 42128308, Section 10.4, whose reference-list entry carries the preprint DOI; `deepdive_manifests/PMID42128308.json` entry 24
+
+**Change class:** MAJOR by consequence — the `Source` of a `consolidated baseline` claim moves, and
+five boundaries from the refereed reading enter with it. **Review floor:** R3+ / blind locator audit
+on the triples above. **Applied outside batch:**
+`disease-models/wwox/meta/meta_network_myelin_glia_current.md` (item E, myelin line).
+
+**Pending:** the audit, and `PAPER 094`'s `Claim links` in the same batch. Items A, B, D and the
+`meta_gaba` half of E are closed — **PROPAGATED** — and nothing is owed on them.

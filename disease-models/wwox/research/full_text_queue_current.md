@@ -5646,6 +5646,20 @@ primary **and** carries a **measured** exon-6 skip for `c.517-2A>G`. Three of th
 questions — the detection floor, the survival arithmetic, and the only measured WWOX splice
 transcript — sit across these three papers, and none of the three has been read to receipt depth.
 
+### 3 · 🔵 UPDATE 2026-09-27 (wave-2 `provenance`, append-only) — §1's premise is spent
+
+`TABLE S1` **was obtained** on 2026-09-23 (`FTR-20260923-36779245-04`, partial, supplementary only)
+and it **is not what §1 assumed**: it is a variant/ACMG census — 90 allele-observations across
+`Publication · Patient ID · WWOX variants · Consequence · Country of origin · Recurrent · # times
+reported · ACMG criteria met · ACMG classification` — with **no age, no outcome, no date of death,
+no survival time and no genotype-class column**
+(`analysis/oliver2023_tableS1_and_q230p_cohort_map_20260923.md` §1). **The per-individual survival
+rows for the 62 literature cases are therefore not in the published supplement at all**, so the
+recomputation §1 was opened for is not blocked on a route: it is blocked on data the paper never
+published. **The route is now an AUTHOR_DATA_REQUEST**, not a fetch, and §1's *"it is a file that
+should be fetchable"* no longer describes this item. §2 is unchanged: `PMID 29808465` stays
+`EVIDENCE_BLOCKED`.
+
 
 ---
 

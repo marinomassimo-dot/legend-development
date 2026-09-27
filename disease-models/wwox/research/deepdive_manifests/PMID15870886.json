@@ -91,7 +91,15 @@
    "14638866",
    "14695174"
   ],
-  "resolved": [],
+  "resolved": [
+   {
+    "pmid": "11572989",
+    "receipt": "FTR-20260927-11572989-01 (pending: written to the wave-2 receipts_pending set, NOT appended to the ledger, because parallel packages are appending to the same hash chain)",
+    "depth": "partial_fulltext_read",
+    "what_it_settles": "The load-bearing antecedent named by CC-20260914-15870886-01 section 6 is now read first-hand (Results and Discussion of PMC58744, 5 locators in deepdive_manifests/PMID11572989.json). It does NOT say the exon 6-8 transcript is THE predominant aberrant ovarian species: it reports the transcript in tumour cell lines, finds full-length alone in normal surface epithelium and a 16-tissue normal panel, and states in the same sentence that 'screening of a larger panel of normal samples will be necessary to confirm that these splice variants are not physiological'. Gourley 2005's own finding of the same species in 9 of 13 non-malignant ovaries therefore FULFILS the antecedent's stated caveat rather than conflicting with it.",
+    "resolved_on": "2026-09-27 (wave-2 provenance package)"
+   }
+  ],
   "queued": [
    {
     "pmid": "10910080",
@@ -124,11 +132,6 @@
     "reason": "Bednarek 2001, source of the in vivo tumour-suppression claim cited in Introduction and Discussion."
    },
    {
-    "pmid": "11572989",
-    "queue": "not queued by this actor: routed to the orchestrator in CC-20260914-15870886-01, because this contract does not own the queue file",
-    "reason": "Paige 2001 PNAS, the same group's first report of Delta6-8 as the predominant ovarian aberrant transcript; the variant-4 premise of this paper rests on it."
-   },
-   {
     "pmid": "11956080",
     "queue": "not queued by this actor: routed to the orchestrator in CC-20260914-15870886-01, because this contract does not own the queue file",
     "reason": "Gene-direct reference with no complete receipt in this corpus (fulltext_receipts.py status exit 1, 2026-09-14)."
@@ -154,7 +157,8 @@
     "reason": "Watanabe 2003, the proteasome-blockade short-isoform result the Discussion argues with."
    }
   ],
-  "resolved_depth_declaration": "RESOLVED MEANS A PERSISTED complete_fulltext_read RECEIPT, measured with fulltext_receipts.py status --pmid on 2026-09-14, and nothing more. 0 of 12 gene-direct references resolve, and 0 of all 28 references. The load-bearing antecedent is 11572989 (Paige 2001), the source of the premise that Delta6-8 is the predominant ovarian aberrant transcript; it has no receipt. This gap is DECLARED, not waived: it is why this manifest reports one declared gap."
+  "resolved_depth_declaration": "RESOLVED MEANS A PERSISTED complete_fulltext_read RECEIPT, measured with fulltext_receipts.py status --pmid on 2026-09-14, and nothing more. 0 of 12 gene-direct references resolve, and 0 of all 28 references. The load-bearing antecedent is 11572989 (Paige 2001), the source of the premise that Delta6-8 is the predominant ovarian aberrant transcript; it has no receipt. This gap is DECLARED, not waived: it is why this manifest reports one declared gap.",
+  "resolution_note": "One of the twelve gene-direct references is resolved; eleven remain queued, so the declared gap STANDS and no complete receipt may be written for this PMID from this manifest. Recorded this way rather than as a closure: reducing a gap is not closing it."
  },
  "corpus_crossquery": {
   "performed": true,

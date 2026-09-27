@@ -1,0 +1,192 @@
+{
+ "schema_version": 2,
+ "pmid": "11572989",
+ "doi": "10.1073/pnas.191175898",
+ "receipt": "FTR-20260927-11572989-01",
+ "landing": [
+  "FTR-20260927-11572989-01",
+  "CC-20260914-15870886-01",
+  "deepdive_manifests/PMID15870886.json"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: PMC58744's efetch XML carries front matter only (3,150 characters, no <body>), and the PMC article page returned the whole body to an identified GET on the first attempt. Both facts are recorded rather than the second alone, because the XML route silently looks like a successful acquisition."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered: first contact with this source, no persisted locator to contradict, and no claim is narrowed. The reading exists to discharge one declared multihop gap."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Declined: this is a bounded antecedent read for a named premise, not a discovery pass over a 2001 oncology paper."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 1,
+  "publications_on_gene": 1,
+  "research_type": "experimental_lab",
+  "output_kind": "primary_research",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "counts_measured": "Not a per-author PubMed sweep: this is a bounded antecedent read and the weighting rests on the article's own Methods rather than on the group's output volume.",
+  "weighting": "The Edinburgh ICRF medical-oncology and human-genetics groups that built the 16q23 PAC contig, reading their own region: native competence for positional cloning, cDNA selection, RT-PCR and mutation screening, and the paper stays inside that competence. No functional assay, no animal, no neural tissue and no germline disease material — everything it says about WWOX function is prediction from domain structure."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "WWOX AND ovarian",
+    "route": "PubMed esearch 2026-09-14 (carried from the sibling reading of PMID 15870886)",
+    "count": 49
+   }
+  ],
+  "note": "Density was not re-measured for this event beyond the counts the sibling reading already holds: the question asked of this source was what its own sentences say about the exon 6-8 transcript, which no field count can answer."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 17,
+  "enumeration_method": "Counted on the fingerprinted PMC article page: the reference list holds 17 numbered entries. 🔴 The PMC rendering of this 2001 article prints NO article titles in the reference list, so a mechanical title match for WWOX/FRA16D/16q23 returns zero and would have been a false negative. Gene-direct references were therefore identified from the citing sentences in the body: refs 4 (the authors' own 16q23 contig), 5 and 7 (FRA16D), 6 (the WWOX cloning paper) and 8 (the WOX1/p53 study).",
+  "gene_direct_count": 5,
+  "gene_direct_refs_in_source": [
+   "10749141",
+   "10749140",
+   "10786676",
+   "10861292",
+   "11058590"
+  ],
+  "resolved": [],
+  "queued": [
+   {
+    "pmid": "10749141",
+    "queue": "not queued by this actor: the full-text queue is the orchestrator's, and this event is a single-hop antecedent read; the debt is recorded here so it stays visible",
+    "reason": "Gene-direct antecedent identified from the citing sentence, not from the reference list, which prints no titles in this rendering."
+   },
+   {
+    "pmid": "10749140",
+    "queue": "not queued by this actor: the full-text queue is the orchestrator's, and this event is a single-hop antecedent read; the debt is recorded here so it stays visible",
+    "reason": "Gene-direct antecedent identified from the citing sentence, not from the reference list, which prints no titles in this rendering."
+   },
+   {
+    "pmid": "10786676",
+    "queue": "not queued by this actor: the full-text queue is the orchestrator's, and this event is a single-hop antecedent read; the debt is recorded here so it stays visible",
+    "reason": "Gene-direct antecedent identified from the citing sentence, not from the reference list, which prints no titles in this rendering."
+   },
+   {
+    "pmid": "10861292",
+    "queue": "not queued by this actor: the full-text queue is the orchestrator's, and this event is a single-hop antecedent read; the debt is recorded here so it stays visible",
+    "reason": "Gene-direct antecedent identified from the citing sentence, not from the reference list, which prints no titles in this rendering."
+   },
+   {
+    "pmid": "11058590",
+    "queue": "not queued by this actor: the full-text queue is the orchestrator's, and this event is a single-hop antecedent read; the debt is recorded here so it stays visible",
+    "reason": "Gene-direct antecedent identified from the citing sentence, not from the reference list, which prints no titles in this rendering."
+   }
+  ],
+  "reason": "The five gene-direct antecedents are enumerated and recorded as unresolved debt; none is read by this event, which exists to discharge ONE hop of another manifest and does not open a chain of its own. Neither resolved nor queued lists are populated, so this manifest carries its own declared gap and no complete receipt may be written from it."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does this corpus hold a receipt, manifest or dossier for PMID 11572989, the load-bearing antecedent named by CC-20260914-15870886-01 section 6?",
+  "hits": 0,
+  "result": "None. The PMID appears only as a queued gene-direct hop inside deepdive_manifests/PMID15870886.json, which is exactly the declared gap this reading was performed to reduce."
+ },
+ "retraction_check": {
+  "performed": true,
+  "status": "no_flag",
+  "result": "no_flag",
+  "evidence": "PubMed and the PMC front matter for PMID 11572989 carry no retraction, correction or expression-of-concern notice.",
+  "dependencies": {
+   "schema": "retraction_check.dependencies/1",
+   "tool": "framework/scripts/dependency_integrity.py screen --pmid 11572989 --manifest-block",
+   "paper_verdict": "UNSCREENABLE_NO_SNAPSHOT",
+   "screened": false,
+   "reference_source": "pmc_html_local",
+   "references_declared": 17,
+   "references_screened": 0,
+   "references_with_doi": 8,
+   "flagged": [],
+   "noted": [],
+   "unscreenable": {
+    "UNSCREENABLE_NO_SNAPSHOT": 17
+   },
+   "snapshot": {
+    "date": "1970-01-01",
+    "days_since_fetch": null,
+    "rows": 0,
+    "sha256": null,
+    "note": "The tool fails closed in this deployment: files/retraction_watch/ holds no snapshot, so nothing is reported clean. The epoch date is a placeholder no reader can mistake for a fetch."
+   },
+   "citing_relation": "Nothing is flagged because nothing was screened. This event asserts only that PMID 11572989 itself carries no integrity notice."
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID11572989_Paige2001_PMC_2026-09-27.html",
+   "sha256": "e25999ebbf116ffeb9e08dc5f15ed851ef79499107c986f9296bbfbe3cd26a05",
+   "kind": "article_text",
+   "note": "PMC article page, the whole body. Recorded because the obvious route fails silently: efetch db=pmc for PMC58744 returns 3,150 characters of front matter with no <body> element at all, which parses as a successful acquisition and contains no Results.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC58744/",
+    "http_method": "GET",
+    "tier": "pmc_article_html",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-09-27",
+    "derived": false,
+    "result_sha256": "e25999ebbf116ffeb9e08dc5f15ed851ef79499107c986f9296bbfbe3cd26a05"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "NCBI elink pubmed->pmc for 11572989 returns PMC58744; the article page fetched above carries the full body, 41,559 characters of text after markup removal, including Results, Discussion and Tables 1-3.",
+  "abstract_anchoring_waived": "No locator quotes the abstract; all five quote Results or Discussion.",
+  "entries": [
+   {
+    "proposition": "THE PREMISE GOURLEY 2005 INHERITS, AND ITS AUTHORS' OWN CAVEAT ON IT: the exon 6-8-skipped transcript was called possibly cancer-associated only because normal surface epithelium and a 16-tissue normal panel showed full-length alone, and the same sentence says a larger normal panel is needed before calling the variants non-physiological. The later finding of the same transcript in 9 of 13 non-malignant ovaries fulfils this caveat rather than contradicting the paper.",
+    "snippet": "suggesting that the alternative transcripts B and D may be cancer-associated. However, screening of a larger panel of normal samples will be necessary to confirm that these splice variants are not physiological.",
+    "anchor": "Results, 'WWOX (FORII Transcript) Demonstrates Alternative Splicing', final two sentences",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID11572989_Paige2001_PMC_2026-09-27.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE SKIPPED TRANSCRIPT IS NOT ATTRIBUTABLE TO GENOMIC DELETION IN THE LINES THAT CARRY IT ALONGSIDE FULL LENGTH: heterozygosity for exon 6, 7 or 8 SNPs in the same lines makes single-allele exon loss unlikely, and the authors read the species as RNA processing.",
+    "snippet": "This suggests that, in these samples at least, the alternative transcripts were not caused by genomic deletion of exons on a single WWOX allele. It is therefore likely that these transcripts are produced by RNA processing",
+    "anchor": "Results, 'WWOX (FORII Transcript) Demonstrates Alternative Splicing'",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID11572989_Paige2001_PMC_2026-09-27.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "WHAT THE PAPER DID MEASURE AS DELETION, with its denominators — the homozygous losses are in cell lines, each counted against the number of lines of that tumour type screened.",
+    "snippet": "WX330 and NCI-H69 (2 of 12 small cell lung carcinoma cell lines\nanalyzed) showed homozygous deletion of exons 6–8, and PANC1 (1 of 2\npancreatic carcinoma cell lines screened) showed loss of exons 7–8.",
+    "anchor": "Results, 'The WWOX Gene Is Homozygously Deleted in Several Tumor Types'",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID11572989_Paige2001_PMC_2026-09-27.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "NO TRUNCATING POINT MUTATION WAS FOUND IN ANY OF THE SEQUENCED MATERIAL — the negative that makes deletion, not point mutation, this gene's inactivation mode in cancer, and the one a later reader must not convert into a statement about germline WWOX disease alleles.",
+    "snippet": "but no truncating point mutations,",
+    "anchor": "Results, 'Missense Polymorphisms Were Detected in Primary Tumors and Tumor Cell Lines'; the full clause reads 'Eleven polymorphisms (three silent and eight missense), but no truncating point mutations, were identified within the coding region of WWOX'",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID11572989_Paige2001_PMC_2026-09-27.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE PAPER'S OWN FRAME FOR THE SKIPPING, which is the fragile site and not a splicing lesion: it draws the parallel with FHIT, where exon skipping by RT-PCR is frequent and inactivating point mutations are rare. Recorded because it bounds any transfer of 'aberrant WWOX transcript' language toward a splice-site disease allele.",
+    "snippet": "FHIT also exhibits a high frequency of alternative splicing because of exon skipping as detected by RT-PCR",
+    "anchor": "Discussion, the FHIT-precedent paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID11572989_Paige2001_PMC_2026-09-27.html",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}
