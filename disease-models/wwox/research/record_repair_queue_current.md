@@ -40,7 +40,9 @@ delegated streams had reported; the last two streams and this session's own veri
 **17 plus 1 verified-clean** on 2026-09-26; a blind external cross-check of the same variant added
 **six more** on 2026-09-27, giving **23 actions plus 1 verified-clean**. The number in a report is a
 measurement at a moment. It is recorded moving rather than retro-fitted, and the rises are not a sign
-the record is deteriorating — each one is a defect that was there before anybody looked.
+the record is deteriorating — each one is a defect that was there before anybody looked. `REP-25`
+brings it to **24 plus 1 verified-clean**, and it is the exception to that last sentence: it is a
+defect this session created.
 
 ---
 
@@ -72,6 +74,7 @@ the record is deteriorating — each one is a defect that was there before anybo
 | `REP-22` | model | preventive | This locus's constraint metrics are miscalibrated and must not be cited | `OPEN` |
 | `REP-23` | model | coverage | The closest structural analogue of the variant is absent from the record | `OPEN` |
 | `REP-24` | model | over-claim | The gene-therapy window may already be closed at diagnosis | `OPEN` |
+| `REP-25` | model | over-claim | A "matched pair" of alleles where neither abundance has a number | `OPEN` |
 
 ---
 
@@ -651,7 +654,53 @@ gene-replacement row. None of them withdraws the class; all three bound it.
 
 ---
 
-## Closing rule
+## REP-25 · A "matched pair" of alleles where neither abundance has a number
+
+**LAYER** model · **SEVERITY** over-claim · **PATH** `T0` · **Author of the defect:** this session
+
+**What is wrong.** On 2026-09-26 the orchestrator reported to the operator that `P47T` and the variant
+of interest form *"a perfectly matched pair — one allele with protein present and function defective,
+one with protein absent. Each resolves the other."* That framing is not available, and the reason is
+that **neither side carries a number**:
+
+| Allele | What was actually measured | What it lacks |
+|---|---|---|
+| `P47T` | protein **present at visually similar abundance** in donor-derived fibroblasts | **unquantified** — no densitometry, no standard curve; cerebellar abundance unresolved |
+| the variant of interest | **not detected** in a detergent-soluble fraction | **no stated limit of detection** |
+
+🔴 **An unquantified presence compared against an unbounded absence is not a comparison.** It is two
+measurements, neither of which has a magnitude, arranged so that the gap between them looks like a
+result. A "matched pair" claims that the two differ in a known way on a shared axis; here the axis has
+no units on either end.
+
+**Converges with a concurrent correction, which is the useful part.** Another actor independently
+retracted the same read-across on 2026-09-27, recording that `P47T` is a WW1 lesion whose abundance is
+*visually similar, unquantified*, and closing with **"Q230P ≠ P47T ≠ G372R ≠ A141T ≠ P252A."** So the
+record reached the right conclusion on its own; what needed retracting was the orchestrator's framing
+of it, which had already reached the operator.
+
+**FIX** — Record the prohibition: the pair may be used as evidence **only once at least one side
+carries a calibrated abundance** — a dilution series against a standard, reported in cell-equivalents
+or absolute units, not a visual comparison. Until then it is a **motivation for an experiment**, never
+a premise in an argument. Cross-reference the two routes that would supply a number:
+`EXP-20260926-Q230P-PROTEIN-FATE-03`, which is designed to produce exactly that calibrated figure for
+the variant of interest, and an interlibrary request for the `P47T` source, which would establish
+whether its figure is quantifiable at all.
+
+**VERIFY** — no surface presents the two alleles as a matched pair without a calibrated abundance on
+at least one side, and the experiment record names the dependency.
+
+---
+
+### A pattern in this queue worth naming
+
+**Three of the 24 action rows were authored by this session, and all three have the same shape:**
+`REP-07` propagated a property of a bacterial enzyme onto the human protein; `REP-10` gave a wrong
+reason for a right primer choice; `REP-25` arranged two unmeasured quantities into a pair. None of the
+three changed a conclusion, and that is precisely why none would have been noticed — **a framing that
+sounds sharper than its evidence survives review, because review checks conclusions.** The queue
+records them alongside the inherited defects rather than in a separate section, because separating an
+actor's own errors from the record's errors is how they stop being counted.
 
 A row leaves this file only into `CLOSED` with its verification named, or into `WONT_FIX` with its
 reason. 🔴 **Nothing is deleted** — a defect that was silently removed is a defect that will return

@@ -294,6 +294,14 @@ degradation; label in the pellet ⇒ aggregation, which has never been looked fo
 
 **FALSIFIER** — the premise that Q230P behaves as a null. Any quantified soluble pool refutes it.
 
+🔗 **Something else depends on this experiment's number, and it is worth stating because it is not
+obvious.** `P47T` and this variant are often reached for as a complementary pair — one allele with
+protein present and function defective, one with protein absent. **That pair is unusable today**
+(`REP-25`): `P47T`'s abundance is *visually similar, unquantified*, and this variant's is *not
+detected, no floor stated*. Two magnitudes, neither measured. **This experiment supplies one of the two
+numbers**, which is what would convert the pair from a motivation into a premise. The other route is
+an interlibrary request for the `P47T` source, to establish whether its figure is quantifiable at all.
+
 **UNNECESSARY_IF** — nothing. This is the fork.
 
 **COST** — days once material exists. **MATERIAL** — `HUMAN_REQUIRED`, shared harvest with `-04`.
