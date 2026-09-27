@@ -227,3 +227,29 @@ Owed before propagation — wording follows the source, not the triple:
 Scope the audit adds (the source contradicts, beyond D1–D7): CLAIM 037 title clause "behaviourally since 2020"; "no n, no strain, no stimulus protocol and no control"; the "independent" commentary sentence (it is the article's own front-matter summary); the attribution of the mouse spontaneous/provoked data to the NCKU nulls and the "three genotypes" tally (the data are the BK5-Cre full knock-out); lifespan "2–3 settimane" vs the source's "3 to 4 weeks maximum" (partial); the Impact-on-WM sentence. **CLAIM 005 (`consolidated baseline`)**: *"Seizures in the Wwox literature are a rat lde/lde phenotype"* is directly contradicted; the chain sentences ending at the rat-only negative are partially contradicted. CLAIM 005's prohibition on asserting epileptogenesis as measured is **not** contradicted (the paper measures no such process).
 
 Consequence: this candidate narrows a `consolidated baseline` claim and text set by an operator-authorised MAJOR batch → **MAJOR**, operator one-line OK required before the BATCH_COMMIT writes (legend-commit carve-out).
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260927_002` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** **PROPAGATED — as corrected by the blind locator audit** — `BATCH_20260927_002` (MAJOR, MANUAL, `WM_v5.7` → `WM_v6.0`), commit `1cdb1a4` and the batch's closing commit.
+
+**Operator authorisation, verbatim** (2026-09-27, shown the MAJOR proposal on `CLAIM 037` and `CLAIM 005`): *"procedi tu, ti autorizzo su tutto"*. This is the one-line OK the `legend-commit` carve-out requires for a MAJOR change; the `HUMAN_GATE` this candidate declared in §4 is therefore satisfied, not bypassed.
+
+**D1–D7 applied, with the audit's corrections taking precedence over this candidate's own wording:**
+
+| Item | Applied as |
+|---|---|
+| D1 | clause 1 struck; the withdrawal states that a remote-retrieval failure bounds that route, never the corpus |
+| D2 | clause 2 struck; `PREMISE: NOBODY_LOOKED` **retired as falsified**, with its reason, not deleted silently |
+| D3 | recorded with both denominators, the comparator and the unscored evidence class — and with the audit's corrections: **T6** keeps *"on some occasions"*; **T9** says *"conventional polycarbonate cages"*, **not** "home cage"; **T4** carries *"at different times"* and the uncontrolled sphincter relaxation, and records that the Fig. 4 legend accounts for three mice while the text says all four; **T15** carries both reasons, *"the severe condition and early death"*; **T16** carries the full rat comparison (condition *"similar to"* the patients and the knock-out mice, *"Mutated WWOX is not detected in western blots of lde rat tissues"*, and the milder human presentation) |
+| D4 | recorded as a method fact: whole-body null under a Results heading that says *conditional*; it models neither human missense allele of the same paper |
+| D5 | title amended; wording sharpened to say that the **kindling-like** progression (a latency shortening across repeated sessions in one cohort) is what remains rat-only |
+| D6 | `REVIVAL_TRIGGER` replaced; the old one is recorded as having fired |
+| D7 | `Source` and `Wikilinks` gain `PAPER 042` with receipt `FTR-20260913-24369382-01` |
+
+**Beyond D1–D7, from the audit's contradiction list (all applied):** the title clause *"behaviourally since 2020"* → 2014; *"no `n`, no strain, no stimulus protocol and no control"* withdrawn with the protocol, the two denominators, the strain and the comparator quoted in its place; the *"independent"* commentary sentence corrected — that text is the article's own front-matter summary; the NCKU attribution and the *"three genotypes"* tally corrected to name the `BK5-Cre` full knock-out and four genotypes; the mouse lifespan *"2–3 settimane"* corrected against *"3 to 4 weeks maximum"*; the **Impact on Working Model** sentence rewritten so it no longer says the datum is measured on a rat model only, and so it does not say *epilettogenesi*. **`CLAIM 005`:** the rat-only sentence withdrawn and the chain sentence repaired, with the **prohibition on asserting epileptogenesis as a measured process left byte-identical** — the audit found it not contradicted, and the source measures no such process.
+
+**Not done, deliberately:** no `Status` change on either claim (the candidate proposed none, and none is warranted: a behavioural, unscored, single-laboratory result with a moving denominator consolidates nothing, and `CLAIM 005` stays `consolidated baseline`); no BLOCCO 1 field; no therapeutic statement; no edit to the rat evidence or its caveats; nothing rests on Supplementary Video 1, still an unretrieved declared debt. §6's triple 17 stays a **declared figure attestation**: the auditor did not open the PNG, and no statement in the propagated text depends on the frame count beyond what the legend says.
+
+**Mirror ex-post review due** under §21e — see the batch report at `session_evaluations/2026-09-27_BATCH_20260927_002.md`.
