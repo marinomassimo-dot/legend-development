@@ -165,6 +165,43 @@ class TheAuditFindsWhatItShould(unittest.TestCase):
                            "--corpus", str(self.workspace.root / "nowhere"), "--strict"])
         self.assertEqual(0, code, "an unauditable corpus is not a failure, and not a pass")
 
+    def run_main(self, *extra) -> str:
+        buffer = io.StringIO()
+        with redirect_stdout(buffer):
+            audit.main(["--root", str(self.workspace.root), *extra])
+        return buffer.getvalue()
+
+    def test_a_declared_surface_absent_here_prints_the_corpus_hint(self) -> None:
+        """HANDOFF-2 of CC-20260826-PMID36828035-DURABILITY-01.
+
+        In a worktree `files/` is gitignored and absent, which is the normal state. The run
+        used to say `unauditable` and stop; the reader then spent one failed run per worktree
+        finding `--corpus`. The hint names the flag in the same output.
+        """
+        self.workspace.manifest(
+            [entry("restored survival in Wwox null mice")],
+            schema=2,
+            artifacts=[{"path": "files/fulltext/PMID12345678_absent.xml",
+                        "sha256": "a" * 64, "kind": "article_text"}])
+        out = self.run_main("--corpus", str(self.workspace.root / "nowhere"))
+        hint = [line for line in out.splitlines() if line.startswith("HINT:")]
+        self.assertEqual(1, len(hint), out)
+        self.assertIn("1 manifest(s) declare surfaces absent from this tree", hint[0])
+        self.assertIn("--corpus", hint[0])
+
+    def test_a_readable_corpus_with_every_surface_present_prints_no_hint(self) -> None:
+        self.workspace.manifest([entry("restored survival in Wwox null mice")])
+        out = self.run_main("--corpus", str(self.workspace.corpus))
+        self.assertNotIn("HINT:", out)
+
+    def test_the_hint_names_the_primary_checkout_corpus_only_when_it_exists(self) -> None:
+        """A hint must never name a place that is not there; a non-repository gets the
+        placeholder, not a guessed path."""
+        line = audit.corpus_hint(self.workspace.root, self.workspace.root / "nowhere", 0)
+        self.assertIn("no corpus at", line)
+        self.assertIn("<checkout that holds files/>", line)
+        self.assertEqual("", audit.corpus_hint(self.workspace.root, self.workspace.corpus, 0))
+
     def test_strict_fails_when_a_quote_is_not_found(self) -> None:
         self.workspace.manifest([entry("restored fertility in Wwox null mice")])
         self.assertEqual(1, audit.main(["--root", str(self.workspace.root),
