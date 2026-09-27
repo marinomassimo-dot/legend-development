@@ -29,6 +29,9 @@ import subprocess
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import dismech_independent_protocol as protocol  # noqa: E402  (the scope reader lives there)
+
 REPO = Path(__file__).resolve().parents[4]
 BASELINE = REPO / "disease-models/wwox/analysis/data/dismech_phase2_baseline.json"
 
@@ -75,6 +78,42 @@ def main() -> int:
 
     changes = []
     for name, entry in sorted(baseline["inputs"].items()):
+        # An input sealed by a POLICY does not carry a whole-file `sha256`, and each policy
+        # is re-sealed on its own terms. Before 2026-09-27 this loop assumed every input
+        # carried a plain `sha256` and died with `KeyError: 'sha256'` on the first policy
+        # entry, so the tool could not re-seal the baseline it exists for.
+        policy = entry.get("verification_policy")
+        if policy == "append_only_prefix":
+            # A sealed prefix must never move. Nothing is re-sealed here; if the prefix has
+            # changed, that is the incident the seal exists to surface, not bookkeeping.
+            lines = (REPO / entry["path"]).read_bytes().splitlines(keepends=True)
+            count = entry["prefix_event_count"]
+            prefix = hashlib.sha256(b"".join(lines[:count])).hexdigest()
+            if len(lines) < count or prefix != entry["prefix_sha256"]:
+                raise SystemExit(f"{name}: the sealed append-only prefix has moved — "
+                                 "that is an incident, not a re-seal")
+            continue
+        if policy == "sealed_scope":
+            # The scope hashes MUST move with the anchor. `verify_phase2_baseline` treats
+            # working-tree scope drift as information ("correction is the product"), but its
+            # frozen half compares the declared hash against the blob AT `git_head_at_freeze`
+            # — so a re-seal that moves the anchor and leaves the scope hash behind is
+            # guaranteed to fail, which is what happened on 2026-09-27 when BATCH_20260927_003
+            # corrected `CLAIM 016`. Re-derived here with the protocol's own scope reader, so
+            # the sealed bytes are the declared blocks and never the whole file.
+            text = (REPO / entry["path"]).read_text(encoding="utf-8")
+            scope = protocol.registry_scope_bytes(text, entry["scope_blocks"])
+            current = hashlib.sha256(scope).hexdigest()
+            if current != entry.get("scope_sha256"):
+                changes.append(f"{name} scope: {str(entry.get('scope_sha256'))[:12]}… -> {current[:12]}…")
+            entry["scope_sha256"] = current
+            for block in entry["scope_blocks"]:
+                one = hashlib.sha256(
+                    protocol.registry_scope_bytes(text, [block])).hexdigest()
+                if one != entry.get("scope_block_sha256", {}).get(block):
+                    changes.append(f"{name} {block}: -> {one[:12]}…")
+                entry.setdefault("scope_block_sha256", {})[block] = one
+            continue
         current = _sha256(entry["path"])
         if current != entry["sha256"]:
             changes.append(f"{name}: {entry['sha256'][:12]}… -> {current[:12]}…")
