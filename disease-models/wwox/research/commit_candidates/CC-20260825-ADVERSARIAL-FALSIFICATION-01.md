@@ -882,3 +882,11 @@ manifests are consistently sharper than its claims, and nothing measures the gap
 ### Pending
 
 - If the operator wants any of the NOT INTEGRATED propositions pursued, each becomes its own task with a reading: `CLAIM 002`/`CLAIM 003` rest on `PAPER 001/027/030` and `PMID 33914858`, whose **only** local surface is a `SUSPECT` PDF text layer — so the unblocking act is **re-acquisition of a structured surface or a page adjudication**, not another pass over the same bytes. That is why `FT-044` is suspended rather than read.
+
+## BATCH DISPOSITION — `BATCH_20260927_003` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** **SUPERSEDED** — `BATCH_20260927_003` (MINOR, MANUAL, `WM_v6.0` → `WM_v6.1`).
+
+Closed on its readiness section's own terms, re-verified at this head: items #2, #5, #6 and #7 and the `CLAIM 037` section are **SUPERSEDED** (they are in canonical in other wording), and the remaining propositions are **NOT INTEGRATED** — every one is a qualification of a `consolidated baseline` claim produced by a pass that recorded no reading and no receipt, and `PMID 33914858`'s only local surface is a text layer that destroys the comparator. Nothing of it is propagated from this file and nothing is discarded: each proposition is re-openable as its own candidate with a reading behind it.
+
+**Mirror ex-post review due** under §21e — see the batch report at `session_evaluations/2026-09-27_BATCH_20260927_003.md`.

@@ -452,3 +452,11 @@ Its surviving MAJOR limbs' triples live where their operations live: `CC-2026082
 ### Pending
 
 - Operator authorisation for Δ4/Δ5 via `FIVECLAIM-PACKAGE`; `m002` for Δ10/Δ11; the *one unit* routing requirement of §7 across those two owners.
+
+## BATCH DISPOSITION — `BATCH_20260927_003` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** **DEFERRED** — `BATCH_20260927_003` (MINOR, MANUAL, `WM_v6.0` → `WM_v6.1`).
+
+**Not closed, and not propagated.** Its readiness verdict is `READY_MAJOR`: Δ1–Δ3/Δ7/Δ8 are already propagated, Δ9 was applied outside batch on a non-canonical meta surface, Δ10–Δ11 belong to the `m002` package, and Δ4–Δ6 live in `CC-20260826-FIVECLAIM-PACKAGE-01` — but its §7 *route the surviving deltas as one unit* requirement still binds the MAJOR batch that carries them. This batch is MINOR and touches none of them. Deferred to the MAJOR batch with its `BASELINE_EFFECT` / `DO_NOT_INFER` fields intact as that batch's review material.
+
+**Mirror ex-post review due** under §21e — see the batch report at `session_evaluations/2026-09-27_BATCH_20260927_003.md`.

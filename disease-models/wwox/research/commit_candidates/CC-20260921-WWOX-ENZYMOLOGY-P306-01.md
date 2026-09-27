@@ -330,3 +330,11 @@ table and the substrate/cofactor list, and only then §4(c)'s `TX-003` line.
 > `**Next action:** background-only; …` similarly. The executor addresses the **record**
 > (`CORPUS P306`, `LIT-0306`) and replaces within it; a file-wide replace would rewrite a third of the
 > corpus. `record_scoped_edit.py` refuses an ambiguous anchor, which is the safety net, not the plan.
+
+## BATCH DISPOSITION — `BATCH_20260927_003` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** **PROPAGATED IN PART** — `BATCH_20260927_003` (MINOR, MANUAL, `WM_v6.0` → `WM_v6.1`).
+
+**(a)** `OP 1` and `OP 2` applied: `CORPUS P306` re-tiered `C / LOW → A / HIGH` with the corrected acquisition line, and `LIT-0306` re-tiered and recorded as **UNACQUIRED, not unread**. Every anchor was addressed **record-scoped**, exactly as the readiness section's warning required — the same strings occur 147–176 times file-wide. **(d)** landed as **`D-18`** and the family-agreement row as **`D-19`**; the numbers are the batch's allocation and shift the candidate's own proposal by one, because `D-24` was already taken and `D-17` is reserved. 🔴 **(c) `TX-003`'s obstacle line stays DEFERRED:** every quantity in it is abstract-depth, and no receipt or locator can exist while the paper is unread. **(OP 4, `FT-130`)** was not applied by this batch either: the queue is a shared-append surface and the readiness section explicitly withheld it.
+
+**Mirror ex-post review due** under §21e — see the batch report at `session_evaluations/2026-09-27_BATCH_20260927_003.md`.

@@ -168,3 +168,11 @@ of one.
 **Change class:** MINOR (registry provenance line). **Review floor:** R2 as declared.
 **Pending:** the lifecycle decision above; the six-line part is spent — **CLOSE / SUPERSEDED** by
 `BATCH_20260920_001` and the ALDAZ batches.
+
+## BATCH DISPOSITION — `BATCH_20260927_003` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** **PROPAGATED IN PART** — `BATCH_20260927_003` (MINOR, MANUAL, `WM_v6.0` → `WM_v6.1`).
+
+`OP 1` applied to `PAPER 018`, with **two figures re-derived by the verifier rather than carried**: the manifest holds **30** locators at this head, not 27, and **ten** were added on 2026-09-27 (entries 20–29, by two wave-2 packages), not seven — the candidate's numbers were true when its package wrote them and went stale in the same wave. The ledger statement itself (two later PARTIAL re-reads, neither superseding the complete one) was re-derived from the receipt ledger and is accurate. The second residue — `Status: filtered_in` and `Claim links: pending` against a complete receipt — stays **DEFERRED**: it is a registry-wide lifecycle decision, and this batch declined to settle it from a sample of one. It is also the reason this batch's one new LINT warning was left standing rather than cleared with an evidential edge.
+
+**Mirror ex-post review due** under §21e — see the batch report at `session_evaluations/2026-09-27_BATCH_20260927_003.md`.

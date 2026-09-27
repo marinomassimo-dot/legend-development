@@ -187,3 +187,11 @@ OP 2).** Not `NOT INTEGRATED`: the content integrates, under another candidate's
 rests on **one** read patient and **five** abstract-depth ones. Acquisition was **not** attempted in
 this package (out of scope: this item closes rather than opens), and the debt stays where it already
 is, in the queue.
+
+## BATCH DISPOSITION — `BATCH_20260927_003` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** **SUPERSEDED** — `BATCH_20260927_003` (MINOR, MANUAL, `WM_v6.0` → `WM_v6.1`).
+
+Closed as **SUPERSEDED by `CC-20260922-SPLICE-ARM-01`** (its §1, its §8 and its readiness `OP 2`), verified line by line against that candidate's current text: the provenance correction, the withdrawal, the 62-residue arithmetic, the ADH/SDR boundary quotation and the `D-30` formulation all travel there, and the three-regime point for `DL-MECH-045` is drafted in its `OP 2`. Not `NOT INTEGRATED`: the content integrates, under another identifier. The reading debt on `PMID 26345274` stays in the queue, where it already is.
+
+**Mirror ex-post review due** under §21e — see the batch report at `session_evaluations/2026-09-27_BATCH_20260927_003.md`.

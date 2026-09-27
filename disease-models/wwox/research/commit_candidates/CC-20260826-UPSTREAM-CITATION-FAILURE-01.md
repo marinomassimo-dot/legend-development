@@ -260,3 +260,11 @@ a proposal that became a runnable check is the outcome §6 asked for, and the on
 batch could add is verdicts, which are per-reading work and belong to the readings.
 
 **Change class:** none remaining — no canonical edit is proposed by this section.
+
+## BATCH DISPOSITION — `BATCH_20260927_003` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** **PROPAGATED** — `BATCH_20260927_003` (MINOR, MANUAL, `WM_v6.0` → `WM_v6.1`).
+
+Closed as **PROPAGATED**: the three `UPSTREAM_CITATION_FAILURE` annotations on `PAPER 011`, `PAPER 019` and `PAPER 063` were landed by `BATCH_20260927_001` and are present, one per record with no fourth anywhere; §6 exists as a runnable check (`framework/scripts/upstream_citation_census.py`), which prints its denominator every time and leaves the verdict to the reader. Nothing canonical is owed. Verdicts are per-reading work and belong to the readings, not to another batch.
+
+**Mirror ex-post review due** under §21e — see the batch report at `session_evaluations/2026-09-27_BATCH_20260927_003.md`.

@@ -254,3 +254,11 @@ forward unchanged.
   `READY_MAJOR` because it moves a strategy's expected-value framing, not because evidence is missing.
 - Edits 2–3's conditional half remains **conditional on the unmeasured `c.1063` outcome**, and that
   wording is in the note itself rather than in a promise to add it later.
+
+## BATCH DISPOSITION — `BATCH_20260927_003` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** **PROPAGATED IN PART** — `BATCH_20260927_003` (MINOR, MANUAL, `WM_v6.0` → `WM_v6.1`).
+
+§1 (the `TX-001` `Mechanism` line: exon skipping excluded by architecture, the field's prior declared inapplicable rather than weak) was applied outside batch by its package on a therapeutic surface that is not one of the four current files, and §4 constraint 4 is now receipted. 🔴 **§2/§3's ceiling note is DEFERRED to the MAJOR batch and was NOT applied:** it changes the stated expected value of a named strategy and rests on an unmeasured branch, which is `READY_MAJOR` by the candidate's own classification. `Provisional scoring` is untouched, and `OP 2` on the experiment packet stays with the items that own that file.
+
+**Mirror ex-post review due** under §21e — see the batch report at `session_evaluations/2026-09-27_BATCH_20260927_003.md`.

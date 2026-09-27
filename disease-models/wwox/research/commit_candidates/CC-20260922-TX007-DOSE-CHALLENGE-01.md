@@ -498,3 +498,11 @@ structured surface**, and the damage taxonomy needs two mechanisms, `DELETED` an
 
 **Pending:** the Mirror ex-post review this candidate asks for, because it lowered the evidential standing of
 the strongest therapeutic arm. Under §21e that is a review after the fact and **not** a hold on this closure.
+
+## BATCH DISPOSITION — `BATCH_20260927_003` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** **PROPAGATED** — `BATCH_20260927_003` (MINOR, MANUAL, `WM_v6.0` → `WM_v6.1`).
+
+Closed as **PROPAGATED**: §2 landed in `BATCH_20260927_001` and was re-verified against the file (append-only respected, the rectification bullet present); §3's fourteen journal-name corrections are in place and the two surviving occurrences are **inside the record of the defect** and must not be repaired; §9d is applied outside batch as a dated `PREMISE_TAG: INFERENZA` relabel; §4/§9/§10 are self-retiring and propose no edit. The Mirror ex-post review it asks for is a review after the fact under §21e, not a hold on this closure — and it is listed in this batch's report.
+
+**Mirror ex-post review due** under §21e — see the batch report at `session_evaluations/2026-09-27_BATCH_20260927_003.md`.

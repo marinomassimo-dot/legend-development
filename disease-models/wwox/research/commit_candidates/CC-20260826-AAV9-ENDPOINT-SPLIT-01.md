@@ -398,3 +398,11 @@ that is the single concrete blocker on Part 2 beyond its review ladder.
 **Pending on Part 2:** Mirror (MAJOR, fail-closed) → operator; a blind locator audit that can only cover the
 four text triples until the figure bytes are re-acquired; and `M5`'s `NOT_RECORDED` bracket, which needs
 `mmc1.pdf` page 6.
+
+## BATCH DISPOSITION — `BATCH_20260927_003` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** **PROPAGATED IN PART** — `BATCH_20260927_003` (MINOR, MANUAL, `WM_v6.0` → `WM_v6.1`).
+
+Part 1 is **PROPAGATED** — verified from the live `CLAIM 011` record and from `git log -S`, not from the triage's stale claim that the self-contradiction is still there: the clause left in `BATCH_20260927_001` and the replacement text is present. `D-L1`, `D-L2` and the two `mechanism_intervention_map.md` repairs were applied outside batch by the `dose` package. **Part 2 is `READY_MAJOR` and stays open**, which is why this disposition is IN PART and not closing: it narrows `CLAIM 004`, `CLAIM 011` and `TX-007`, its `M5` bracket is still `NOT_RECORDED` for an evidence-transport reason, and three of its seven audit triples rest on figure bytes absent from every checkout here.
+
+**Mirror ex-post review due** under §21e — see the batch report at `session_evaluations/2026-09-27_BATCH_20260927_003.md`.

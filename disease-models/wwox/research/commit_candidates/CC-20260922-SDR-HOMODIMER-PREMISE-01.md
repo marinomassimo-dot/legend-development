@@ -168,3 +168,11 @@ change from §4 item 3's assumption — recorded rather than silently dropped.
 Only §6 item 2's **Methods-reaching re-census** (trap (e)): a corpus-wide, full-text search for WWOX
 self-association evidence in Methods and supplements. It cannot change the tag — `UNVERIFIED` is
 already the weakest claim compatible with a negative census — so it gates nothing.
+
+## BATCH DISPOSITION — `BATCH_20260927_003` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Status:** **PROPAGATED** — `BATCH_20260927_003` (MINOR, MANUAL, `WM_v6.0` → `WM_v6.1`).
+
+The `replace-within` on the `Q230P` structural node of `discovery_ledger_current.md` applied: the homodimerisation clause is now `PREMISE: UNVERIFIED`, with the inherited-import provenance, the negative census, the **WW1-not-SDR** monomer record, the p-WWOX/p-p53 heterodimer as the only positive, and a `REVIVAL_TRIGGER`. The monomer quotation was re-verified verbatim against both `PMID24308844_Schuchardt2013_PMC.xml` surfaces. The monomer limitation itself is **not** deleted. The downstream files that quote the clause were confirmed to quote it *as the text under examination* and were correctly left alone.
+
+**Mirror ex-post review due** under §21e — see the batch report at `session_evaluations/2026-09-27_BATCH_20260927_003.md`.
