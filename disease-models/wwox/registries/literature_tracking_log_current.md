@@ -3028,7 +3028,7 @@ Serves to:
 **Genotype/model tag:** `Wwox^ΔHep` (Alb-Cre × Wwox^fl/fl), DEN-induced HCC, ± high-fat diet — not a WWOX-DEE allele
 **Transferability:** T3
 **clinical relevance:** INDIRECT
-**Claim links:** none — held for the claim batch (`CC-20260913-29724996-03` proposes `CLAIM 025`, qualifying evidence, the link `PAPER 091` already carries)
+**Claim links:** CLAIM 025 (qualifying evidence; no new claim)
 **Working Model impact:** none — no working-model block is redefined by this record
 **Report mentions:** corpus alignment
 **Next action:** none — read and integrated
