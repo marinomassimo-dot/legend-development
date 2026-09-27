@@ -427,3 +427,108 @@ trap (`"c.606-1G>A"` → 0 unexpanded) and from `[All Fields]` not indexing Meth
 ways for a query-count zero to be meaningless.** The `PREMISE: NOBODY_LOOKED` on this allele is
 nonetheless sound: `WWOX AND "1057-2"` → 0 with the **same query shape** as the positive control
 `WWOX AND "606-1G"` → PMID 26345274.
+
+---
+
+## WAVE-2 READINESS (2026-09-27)
+
+**Actor:** ACTOR_ID `scientist`, wave-2 package `splice_sdr` · **Verdict: `READY_MAJOR`** for §2 (a
+canonical `PAPER` record's quoted finding is narrowed and a stated finding of this candidate is
+corrected); `READY_MINOR` for the §1/§7/§8/§9 residue, which is carried as one append-only block on
+`DL-MECH-045` and one on `DL-BIO-002`.
+**`context_policy` declared: `QUESTION_DRIVEN`.** LEGEND's prior position — `PAPER 044`'s Note and
+`DL-MECH-045` — was held while the source was opened, and the questions were fixed first: *does the
+body say "nonsense-mediated decay"; what does the running text say instead; was any translation block
+used; are the 46/19 kDa values recoverable*.
+
+### 1 · The reading owed by §2 is DONE, and it changes one of §2's three findings
+
+`PMID 30362252` was acquired as **PMC JATS** (`efetch db=pmc id=6296882`) into
+`files/fulltext/PMID30362252_Davids2019_PMC_2026-09-27.xml`
+(`sha256 4bfc73890bf903a8dcfd36fb0ea7f8970eed808581c08160f1def7335999d6ca`) and read. A **new
+schema-v2 manifest** `deepdive_manifests/PMID30362252.json` carries **5 verbatim locators**, all
+verified — `deepdive_manifest.py --pmid 30362252 --verify-artifacts` → **PASS**, no `BLOCK`.
+
+| §2 finding | verdict after the first-hand read |
+|---|---|
+| 1 · the body states two alternatives and resolves neither | ✅ **UPHELD**, and now receipted: *"…suggesting that the two longer transcripts were not expressed or were degraded."* |
+| 2 · *"the words nonsense-mediated appear in the abstract and nowhere in the body"* | 🔴 **FALSE, and withdrawn.** The **Figure 2B legend** — body of the article — reads *"indicating that the deletion causes nonsense mediated decay of the two longer transcripts"*. The divergence is **running-text hedge versus figure-legend assertion inside one paper**, not abstract versus body |
+| 3 · no NMD inhibitor was used | ✅ **UPHELD, and bounded honestly.** Machine-checked on the declared artifact: `cycloheximide`, `puromycin`, `emetine`, `UPF1` occur **zero** times — **and the PMC body carries no Methods section at all** (brief report; the methods sit in a supplement Europe PMC reports as *"not open access one"*, whose PMC `bin` URL answers a bot challenge). So *"no NMD inhibitor was used"* is a statement about **every surface reachable free**, and is declared as such rather than as a property of the experiment |
+
+🔵 **And §6's extraction defect is resolved rather than carried:** the `46 kDa` / `19 kDa` / `33 kDa`
+values that the earlier route had deleted are **printed in the Figure 2C legend of the JATS** and are
+now locatored, so `PAPER 044`'s Western figures no longer rest on an unverifiable extraction.
+
+🔵 **§3.3's normaliser argument is receipted too** — *"The residual expression of the exon 1–2 junction
+may be explained by the amplification of NM_130791.3, which has increased expression of its exon 5–6
+junction."* That is the sentence constraint 4 of `CC-20260922-TX001-CEILING-REASSESSMENT-01` rests on.
+
+**Receipt prepared, NOT recorded:** `receipts_pending/splice_sdr_30362252_1.json` —
+`FTR-20260927-30362252-02`, `partial_fulltext_read`,
+`reread_reason: new_question_outside_prior_coverage`, prior `FTR-20260726-30362252-01` (a legacy
+reconstruction that fingerprints no artifact present in this checkout).
+
+### 2 · Exact operation list for the batch executor
+
+#### OP 1 — `disease-models/wwox/registries/paper_registry_current.md` · record `PAPER 044` · `Note`
+**Paper registry = FULL REWRITE** (`propagate` refuses this file by name, exit 4): the edit below is
+described as a full-rewrite edit with every other section copied verbatim.
+
+**old text (verbatim from the current file, inside `**Note:**`):**
+
+```text
+**Finding trasferibile:** *"the deletion led to **nonsense-mediated decay** of the NM_016373.3 transcript; the exon 6 of an **alternative transcript (NM_130791.3), lacking the short-chain dehydrogenase**, was utilized"*.
+```
+
+**new text:**
+
+```text
+**Finding trasferibile (letto dal CORPO, 2026-09-27, `FTR-20260927-30362252-02`):** il corpo afferma una **disgiunzione**, non l'NMD — *"the exon 7–8 junction was barely detectable, suggesting that the two longer transcripts were **not expressed or were degraded**"* — mentre *"nonsense mediated decay"* compare nell'**abstract** e nella **legenda della Figura 2B**, come inferenza tratta dallo stesso qPCR di giunzione. ⚠️ **Nessun blocco della traduzione è stato usato** su nessuna superficie raggiungibile gratuitamente: `cycloheximide`, `puromycin`, `emetine`, `UPF1` = 0 occorrenze, e **il corpo PMC non contiene affatto la sezione Methods** (i metodi sono in un supplemento non open-access). Un rapporto di giunzione non dimostra NMD senza un blocco della traduzione: le due alternative — mancata espressione contro degradazione — **restano irrisolte**, esattamente come in [[claim_registry_current#CLAIM 019]]. Al Western (legenda Fig. 2C, verbatim): *"the lack of expression of the longest transcript at 46kDa in the proband"*, con l'isoforma corta a **19 kDa** aumentata e la terza (**33 kDa**) non rilevata in paziente né controllo → **abbondanza senza funzione**.
+```
+
+Everything else in `PAPER 044`'s `Note` — the triple-assay template sentence, the exon-9/NMD-escape
+caveat, the MRS lactate outlier — is **copied verbatim and unchanged**. `Evidence depth` is **not**
+changed: the record's declared prior read is not in question; only its quotation was.
+
+#### OP 2 — `disease-models/wwox/research/discovery_ledger_current.md` · record `DL-MECH-045`
+**Op:** `append` (a dated append-only block at the END of the `DL-MECH-045` record; **the heading is
+NOT touched**, because many wikilinks embed its full text and re-titling it would silently re-resolve
+them). This one block carries §7c, §8, §9a–§9d **and** the residue of
+`CC-20260922-EXON7-NATURAL-EXPERIMENT-01` and item 3 of `CC-20260922-NMD-PREMISE-WITHDRAWAL-01`.
+
+**new text (appended):**
+
+```text
+- 🔵 **Append-only, 2026-09-27 (wave-2 `splice_sdr`) — il MECCANISMO predetto è ritirato; il VERDETTO NMD è confermato.** Il frameshift da sito criptico `+8` è **escluso dalla sequenza di riferimento**: `c.1063` è l'unica posizione di inizio il cui dinucleotide a monte può essere `AG`, e `c.1061 = A` è stabilito da due record ClinVar indipendenti sulla colonna di conseguenza proteica (`c.1060C>T` → `p.Gln354Ter`; `c.1062G>A` → `p.Gln354=`) ⇒ codone 354 = `CAG`. L'esito predetto è quindi una **delezione in-frame di due codoni, `p.Gln353_Gln354del`** (412 aa), **senza PTC e senza alcuna questione NMD** — il verdetto di NMD-escape di questa voce **regge, per una via diversa da quella con cui è stato raggiunto**. Etichetta che deve viaggiare con il risultato: **`PREDICTED at transcript level — PROTEIN CONSEQUENCE UNKNOWN AND STRUCTURALLY CONTESTED`**. ⚠️ `DS_AG 0.64` è moderato e **nessuno ha mai misurato l'RNA di questo allele**; la ritenzione dell'introne 8 (~779 kb) resta un esito concorrente che darebbe la risposta opposta. 🔴 **Tre regimi in un solo gene, e non si trasferiscono l'uno nell'altro:** frameshift interno (esone 6), in-frame interno (esone 7, 186 nt, `mod 3 = 0`), ultimo esone (esone 9, dove lo skipping non è nemmeno un esito definito). `D-30`: **in-frame è un'affermazione sul reading frame, non sulla piega** — lo skip in-frame dell'esone 7 rimuove 62 residui dall'interno del dominio ADH/SDR (110–414 a.a., verbatim da `PMC3354054`) e i suoi omozigoti pubblicati hanno WOREE severo tipico, mentre `p.Gln353_Gln354del` tocca 2 residui al bordo N-terminale di un'elica: **il motivo per cui l'esone 7 muore è dipendente dalla piega e non si trasferisce.** Struttura misurata direttamente sul modello AlphaFold locale in questa sessione: pLDDT **353 = 85.81, 354 = 87.25** (i valori 60.47/76.38 appartengono a **350/351** — una misattribuzione di tre residui), contatti CA(i,i+4) elicoidali da **350** a **361**, quindi 353/354 stanno **vicino al bordo N-terminale dell'elica, non a metà**. **Nessuno può decidere l'esito proteico senza l'esperimento wet.**
+```
+
+#### OP 3 — `disease-models/wwox/research/discovery_ledger_current.md` · record `DL-BIO-002`
+**Op:** `append` (dated block at the END of the record; the causal statement line is **not** rewritten —
+this ledger is append-only on leads).
+
+**new text (appended):**
+
+```text
+- 🔵 **Append-only, 2026-09-27 (wave-2 `splice_sdr`).** Lo statement causale `→ frameshift/PTC → NMD or truncated_protein` ha **entrambi i rami esclusi** per l'esito sopravvissuto: `→ accettore criptico c.1063 → p.Gln353_Gln354del in-frame → nessun PTC → nessun NMD` **(PREDETTO, mai misurato)**. Derivazione: coordinate ClinVar + basi di riferimento, `DP_AG` privato **non più load-bearing**; falsificatore residuo: una misura RNA dell'allele. L'esperimento nominato da questa voce **non cambia**, ma la sua risoluzione sì: il prodotto aberrante è **6 nt PIÙ CORTO**, il 2.2% di un amplicone di ~271 nt ⇒ **elettroforesi capillare/GeneScan denaturante con standard di sizing a 6 nt, non agarosio e non PAGE nativo**, Sanger su ogni banda inclusa quella apparentemente normale, più una reazione ancorata all'introne 8 e 3' RACE (una specie con ritenzione **non ha l'esone 9** e la sua assenza verrebbe letta come conferma dell'esito criptico).
+```
+
+### 3 · LOCATOR TRIPLES FOR BLIND AUDIT
+
+(proposition | verbatim quote | anchor)
+
+1. The body of `PMID 30362252` resolves the transcript question as an unresolved disjunction, not as NMD | *"The exon 1–2 junction, however, was detected and was only slightly reduced in our patient, whereas the exon 7–8 junction was barely detectable, suggesting that the two longer transcripts were not expressed or were degraded."* | `files/fulltext/PMID30362252_Davids2019_PMC_2026-09-27.xml` — Results, expression-analysis paragraph, third sentence
+2. The phrase "nonsense mediated decay" does occur inside the article body, in a figure legend, as an inference from the junction qPCR | *"indicating that the deletion causes nonsense mediated decay of the two longer transcripts"* | same artifact — Figure 2 legend, panel B
+3. The quantitative basis of that NMD statement is junction qPCR alone | *"Quantitative polymerase chain reaction (qPCR) analysis of WWOX mRNA shows a decrease in expression of the exon-1–2 junction in fibroblasts of the proband, no expression of the exon 5–6 junction and negligible expression of the exon 7–8 junction"* | same artifact — Figure 2 legend, panel B, first clause
+4. The 46 kDa long isoform is the species lost, and the value is printed on a structured surface | *"Western blot analysis shows the lack of expression of the longest transcript at 46kDa in the proband"* | same artifact — Figure 2 legend, panel C
+5. The exons 4–6 normaliser moves with the lesion, measured by these authors | *"The residual expression of the exon 1–2 junction may be explained by the amplification of NM_130791.3, which has increased expression of its exon 5–6 junction."* | same artifact — Results, sentence following the junction-assay result
+6. Domain boundaries used by the three-regime argument are the source's own words | *"various WWOX functional domains, ww1 (1–60 a.a.), ww2 (40–110 a.a.), ww (1–110 a.a.) and ADH (110–414 a.a.)"* | `files/fulltext/PMID22193544_Wang2012_PMC.xml` — Introduction, domain architecture sentence
+
+### 4 · What is still pending
+
+- The supplement of `PMID 30362252` (Supp. Tables S1–S4, Supp. Figures S1–S4, and the Methods) is
+  **not open access** on any free route tried: Europe PMC answers *"Article with id PMC6296882 is not
+  open access one"*, and the PMC `bin` URL answers a bot challenge. **No paid access was attempted.**
+  What it would add: the Methods paragraph, and Supp. Table S1's 23-patient table that `PAPER 044`'s
+  `Evidence depth` already declares unretrieved.
+- §4/§9f's query-hygiene rules (`D-28`, and mode (f)) are **not** in this operation list: D-number
+  allocation across this lot is one pass and belongs to whichever candidate the batch numbers first.

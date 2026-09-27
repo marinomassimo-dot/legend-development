@@ -226,3 +226,107 @@ Not medical advice.*
 **Status:** DEFERRED
 
 Deferred by this batch's own scope: the Km and cofactor statements it would write into `TX-003` rest on the PubMed **abstract** only — the paper is unacquirable on every route (`FT-130`: no DOI, no PMC), so no receipt and no verbatim locator is possible — and this batch does not write abstract-depth quantities into a therapeutic record. The re-tier of `CORPUS P306` and `LIT-0306` travels with the same candidate and is held with it rather than split, so that the tier and the reason land together. The optional `D-19` row is not landed.
+
+---
+
+## WAVE-2 READINESS (2026-09-27)
+
+**Actor:** ACTOR_ID `scientist`, wave-2 package `splice_sdr` · **Verdict: split, and the split is the
+point.**
+- **(a) re-tier of `CORPUS P306` / `LIT-0306`, with a corrected acquisition line → `READY_MINOR`** (ops
+  below).
+- **(b) narrowing of `sdr_missense_readout_assessment_20260920.md` § 6 → APPLIED OUTSIDE BATCH** (analysis
+  file, non-canonical, append-only respected).
+- **(c) `TX-003`'s obstacle line → `DEFERRED`.** One line why: the Km / cofactor / substrate statements
+  rest on the **PubMed abstract only**, no receipt and no verbatim locator is possible while the paper is
+  unread, and this package does not write abstract-depth quantities into a therapeutic record. What would
+  unblock it: **the full text** (see the corrected route below), then a receipt and locators for the Km
+  table and the substrate/cofactor list.
+- **(d) the `D-19` row → `READY_MINOR`**, number unallocated (the batch allocates `D-18`+ in one pass;
+  `D-17` is reserved, operator-deferred).
+
+**`context_policy` declared: `QUESTION_DRIVEN`** — the question was the paper's acquisition state and
+nothing about its content; the registry record was reached with `registry_records.py get --pmid 21476439`
+and the queue entry read at its own lines.
+
+### 1 · 🔴 The acquisition verdict in `FT-130` and in §4(a) is WRONG, and the correction is cheap
+
+`FT-130` records *"`PMID 21476439` · no DOI · no PMCID"* and *"all consulted routes agree: no DOI, no PMC
+deposit"*, on `convert_article_ids`, `get_article_metadata` and `get_copyright_status`. Re-checked
+2026-09-27 on routes **outside** that family:
+
+| route | result |
+|---|---|
+| Crossref bibliographic query | **`DOI 10.1515/znc-2011-1-210`** — *"WWOX Oxidoreductase – Substrate and Enzymatic Characterization"*, *Zeitschrift für Naturforschung C*, 2011 (a legacy `10.5560/znc.2011.66c0073` resolves to the same article) |
+| Unpaywall on that DOI | `is_oa: true`, one OA location, publisher-hosted PDF |
+| OpenAlex on that DOI | `is_oa: true`, `oa_status: hybrid`, `any_repository_has_fulltext: false` |
+| direct fetch of the publisher PDF URL | **HTTP 202, zero bytes** — an automated-traffic challenge, on two publisher hosts and on the HTML surface too |
+
+🔴 **So the paper is not *"not retrievable by any automated route"* because it has no digital deposit; it
+is unretrieved because the publisher refuses automated fetches.** Those are different blockers with
+different unblocks, and the second one costs a human **one click**.
+
+⚠️ **And the methodological lesson is sharper than the one `FT-130` drew.** That entry congratulated
+itself on using *"two independent routes… all consulted routes agree"*. **All three were PubMed-family
+routes.** Agreement among siblings is not independence — and this is the same error class the entry was
+written to avoid, one level up. That belongs in the dismissal ledger next to `D-19`, and is proposed
+below as one row.
+
+### 2 · Exact operation list for the batch executor
+
+#### OP 1 — `paper_registry_current.md` · `CORPUS P306` (**FULL REWRITE** file; described as full-rewrite edits)
+- `replace-within`: old `**Tier (FASE 1):** C` → new `**Tier (FASE 1):** A`
+- `replace-within`: old `**clinical relevance:** LOW` → new `**clinical relevance:** HIGH` *(within the `CORPUS P306` record only)*
+- `replace-within`: old `**Role:** background corpus only` → new `**Role:** deep-dive — full text required; the only published assay of WWOX catalysis`
+- `replace-within`: old `**Identifier:** PMID 21476439` → new `**Identifier:** PMID 21476439 / DOI 10.1515/znc-2011-1-210`
+- `replace-within` the `Note`: old
+
+```text
+**Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration.
+```
+
+  new
+
+```text
+**Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration. 🔴 **Re-tiered 2026-09-27 (C / LOW → A / HIGH):** this is the only published measurement of WWOX catalytic activity — dehydrogenase activity on steroid substrates with NAD⁺ and NADP⁺ and published Km values, oxidation only (abstract depth; `PREMISE: UNREAD_PRIMARY`, no receipt, no locator). **Acquisition, corrected:** a DOI DOES exist — `10.1515/znc-2011-1-210` — and Unpaywall and OpenAlex both classify the article hybrid open access with a publisher-hosted PDF; the publisher answers automated fetches with HTTP 202 and zero bytes. The blocker is an automated-traffic challenge, **not** the absence of a deposit: one human fetch of the publisher PDF closes it, at no cost (`FT-130`, packet item `A11`). **NOT promoted to a PAPER record:** no reading stands behind it.
+```
+
+#### OP 2 — `literature_tracking_log_current.md` · `LIT-0306` (record-scoped)
+- `replace-within`: old `**Filter decision:** background only` → new `**Filter decision:** deep-dive — full text required`
+- `replace-within`: old `**Tier:** C` → new `**Tier:** A`
+- `replace-within`: old `**clinical relevance:** LOW` → new `**clinical relevance:** HIGH`
+- `replace-within`: old `**Identifier:** PMID 21476439` → new `**Identifier:** PMID 21476439 / DOI 10.1515/znc-2011-1-210`
+- `replace-within`: old `**Next action:** background-only; escalate only on convergence signal` → new `**Next action:** record as UNACQUIRED, not unread — hybrid-OA publisher PDF exists at DOI 10.1515/znc-2011-1-210 and is blocked only by an automated-traffic challenge; one human fetch closes it (FT-130 / packet A11). Do not re-run automated acquisition.`
+- `replace-within`: old `**Current status:** screened — C` → new `**Current status:** queued for deep-dive — A; unacquired, not unread`
+
+#### OP 3 — `dismissal_ledger_current.md` · `🩸 DEFAULTS THAT BIT US` · two rows (numbers allocated by the batch)
+- **row A (this candidate's `D-19`):** *"the tool that finds unread gold reported none, so there is none"* — full text as in §4(d), including the detection rule: **before trusting any selector-based tool's empty result, check that its selectors match more than zero records in the live document.**
+- **row B (new, 2026-09-27):** *"three routes agreed that the paper has no DOI, so it has none"* — **why it is FALSE here:** the three routes were `convert_article_ids`, `get_article_metadata` and `get_copyright_status`, **all PubMed-family**; Crossref returns a DOI and Unpaywall/OpenAlex return a hybrid-OA PDF for the same paper. **Detection rule:** before recording an identifier or an acquisition state as absent, check **one route outside the family that just answered** — agreement among siblings is not independence.
+
+#### OP 4 — `full_text_queue_current.md` · `FT-130`
+**Op:** `append` a dated correction block to the entry (append-only; the wrong verdict is preserved and
+labelled, not rewritten), carrying §1's table and the corrected next action. ⚠️ **Not applied by this
+package**: the queue is edited by several wave-2 packages and a same-file append is where their edits
+would collide.
+
+### 3 · `TX-003`: why DEFERRED and not READY
+
+§4(c)'s replacement text is **correct as prose and unsupported as a record**: every quantity in it comes
+from the abstract. The batch disposition of `BATCH_20260927_001` already deferred this candidate on
+exactly that ground and this section **agrees with it rather than overriding it** — but it narrows the
+deferral: the re-tier (OP 1/OP 2) is **not** abstract-depth prose in a therapeutic record, it is a
+reading-priority change with its reason attached, and it is ready now. **Nothing about `TX-003`'s score
+moves under any reading of this item** (§5).
+
+### 4 · What is still pending
+
+One human fetch of the publisher PDF. After it: a `FULLTEXT_READ_RECEIPT`, verbatim locators for the Km
+table and the substrate/cofactor list, and only then §4(c)'s `TX-003` line.
+
+> ⚠️ **Every `old text` above is RECORD-SCOPED, and several of these strings are not unique in the file.**
+> Measured on the current tree: `**Note:** FASE 1 triage 221–400 — no deep-dive performed. …` occurs **176**
+> times, `**Role:** background corpus only` **147**, `**Filter decision:** background only` **156**,
+> `**Tier:** C` / `**clinical relevance:** LOW` / `**Current status:** screened — C` and
+> `**Next action:** background-only; …` similarly. The executor addresses the **record**
+> (`CORPUS P306`, `LIT-0306`) and replaces within it; a file-wide replace would rewrite a third of the
+> corpus. `record_scoped_edit.py` refuses an ambiguous anchor, which is the safety net, not the plan.
