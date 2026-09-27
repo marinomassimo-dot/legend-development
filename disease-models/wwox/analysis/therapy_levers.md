@@ -14,7 +14,7 @@
 ## A — Act now (available; protects the window)
 
 - **A1. Targeted seizure control — Vigabatrin.** In a WWOX-DEE case, vigabatrin reversed infantile spasms (PMID **39101447**, 2024). Symptomatic, does not modify WWOX; the most solid "buy-time" base.
-- **A2. Lithium (GSK3β inhibition) — a repurposing signal whose genotype specificity was tested and not found.** In Wwox-deficient mice GSK3β is elevated in cortex, hippocampus and cerebellum; **lithium inhibits GSK3β and abolishes seizures** (PMID **32000863**, Acta Neuropathol Commun 2020). Acts *downstream* of WWOX loss → **genotype-agnostic**. Lithium is available and used in pediatrics (with tight monitoring: therapeutic window, thyroid, kidney). A preclinical hypothesis to discuss with a clinical team — not medical advice.
+- **A2. Lithium (GSK3β inhibition) — a repurposing signal whose genotype specificity was tested and not found.** In Wwox-deficient mice GSK3β is elevated in cortex, hippocampus and cerebellum; **lithium inhibits GSK3β and abolishes seizures** (PMID **32000863**, Acta Neuropathol Commun 2020). Acts *downstream* of WWOX loss → **genotype-agnostic**. The effect is a **general anticonvulsant effect, not a WWOX-specific rescue** — lithium suppressed PTZ seizures in all three genotypes including wild type (Fig. 7d; boundary from `TX-005` / `CLAIM 016`, `CC-20260826-LITHIUM-BOUNDARY-01`). Lithium is available and used in pediatrics (with tight monitoring: therapeutic window, thyroid, kidney). A preclinical hypothesis to discuss with a clinical team — not medical advice.
 
 ## B — Mechanistically-grounded repurposing (months; needs validation)
 
