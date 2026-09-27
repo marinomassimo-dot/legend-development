@@ -1,0 +1,110 @@
+{
+  "schema_version": 2,
+  "pmid": "21964341",
+  "doi": "10.1038/nature10487",
+  "receipt": "FTR-20260927-21964341-01",
+  "landing": [
+    "CC-20260922-POSTDIAGNOSIS-WINDOW-01",
+    "CC-20260922-POSTNATAL-SVZ-01"
+  ],
+  "skills_considered": [
+    {
+      "skill": "legend-deepdive",
+      "used": false,
+      "reason": "No deep dive was run. This pass persists verbatim locators for statements a wave-2 commit candidate carries, read QUESTION_DRIVEN; a deep dive would have produced a dossier this pass does not claim."
+    },
+    {
+      "skill": "find-fulltext",
+      "used": false,
+      "reason": "Not needed: the PMC JATS body was served directly by NCBI E-utilities efetch db=pmc on 2026-09-27, recipe recorded on the artefact."
+    }
+  ],
+  "group_assessment": {
+    "waived": "Waived by name. This is NOT a deep dive: it is a QUESTION_DRIVEN, partial locator-capture pass (ACTOR_ID scientist, wave-2 package development, 2026-09-27) opened to persist the verbatim sentences that the POSTDIAGNOSIS-WINDOW commit candidate relied on through a delegate's read that was never receipted. The deep-dive steps belong to whichever reading promotes this paper into a registry record; filling them here from metadata no one used would be less honest than waiving them. Scope is in the pending receipt."
+  },
+  "field_density": {
+    "waived": "Waived by name. This is NOT a deep dive: it is a QUESTION_DRIVEN, partial locator-capture pass (ACTOR_ID scientist, wave-2 package development, 2026-09-27) opened to persist the verbatim sentences that the POSTDIAGNOSIS-WINDOW commit candidate relied on through a delegate's read that was never receipted. The deep-dive steps belong to whichever reading promotes this paper into a registry record; filling them here from metadata no one used would be less honest than waiving them. Scope is in the pending receipt."
+  },
+  "multihop": {
+    "waived": "Waived by name. This is NOT a deep dive: it is a QUESTION_DRIVEN, partial locator-capture pass (ACTOR_ID scientist, wave-2 package development, 2026-09-27) opened to persist the verbatim sentences that the POSTDIAGNOSIS-WINDOW commit candidate relied on through a delegate's read that was never receipted. The deep-dive steps belong to whichever reading promotes this paper into a registry record; filling them here from metadata no one used would be less honest than waiving them. Scope is in the pending receipt."
+  },
+  "corpus_crossquery": {
+    "waived": "Waived by name. This is NOT a deep dive: it is a QUESTION_DRIVEN, partial locator-capture pass (ACTOR_ID scientist, wave-2 package development, 2026-09-27) opened to persist the verbatim sentences that the POSTDIAGNOSIS-WINDOW commit candidate relied on through a delegate's read that was never receipted. The deep-dive steps belong to whichever reading promotes this paper into a registry record; filling them here from metadata no one used would be less honest than waiving them. Scope is in the pending receipt."
+  },
+  "retraction_check": {
+    "waived": "Waived by name. This is NOT a deep dive: it is a QUESTION_DRIVEN, partial locator-capture pass (ACTOR_ID scientist, wave-2 package development, 2026-09-27) opened to persist the verbatim sentences that the POSTDIAGNOSIS-WINDOW commit candidate relied on through a delegate's read that was never receipted. The deep-dive steps belong to whichever reading promotes this paper into a registry record; filling them here from metadata no one used would be less honest than waiving them. Scope is in the pending receipt."
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID21964341_Sanai2011_PMC.xml",
+      "sha256": "09ea3f432ae9468ac85c935c9051b31990e5f01238dabd6f433ae7ed5351347e",
+      "kind": "article_text",
+      "acquisition_recipe": {
+        "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=3197903&rettype=xml",
+        "http_method": "GET",
+        "tier": "ncbi_efetch_pmc_xml",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-09-27",
+        "derived": false,
+        "result_sha256": "09ea3f432ae9468ac85c935c9051b31990e5f01238dabd6f433ae7ed5351347e"
+      }
+    }
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "PMC JATS from E-utilities efetch; abstract separated from body by the validator's own extraction; every locator is matched against the body.",
+    "abstract_anchoring_waived": "No locator draws on the abstract; every entry is matched against the body of the declared JATS artifact.",
+    "note": "Coverage of this pass: the whole main text of this Letter and the Methods read for one question (is the human postnatal SVZ/RMS compartment still active at the WOREE presentation age); figure captions only; supplementary unavailable on this route. The sample-size phrase '10 neurosurgical resections + 50 autopsied brains' quoted in the candidate was NOT located in the served body or abstract and is not carried. No WWOX datum exists in this paper; it measures the tissue, never the gene.",
+    "entries": [
+      {
+        "proposition": "Human SVZ immature-neuron density falls steeply in the first six months after birth (DCX+ cells, 25-fold), across 16 specimens aged 0-17 years.",
+        "snippet": "The emergence of the gap layer coincides with the decline in DCX(+) immature neurons (25-fold during the first 6 months; n=16, ages 0–17 years",
+        "anchor": "Main text (Letter; no section headings), SVZ cytoarchitecture paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID21964341_Sanai2011_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Between 6 and 18 months the network of putative migratory neurons is depleted and the adult gap-layer structure appears; the compartment is still active at the ages at which WOREE presents.",
+        "snippet": "Progressively, between 6 to 18 months of age, the SVZ is depleted of this dense network of putative migratory neurons",
+        "anchor": "Main text, SVZ cytoarchitecture paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID21964341_Sanai2011_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "After 18 months proliferation and immature neurons are at adult trace levels.",
+        "snippet": "After 18 months, Ki67(+) proliferative activity and the number of DCX(+) immature neurons assume trace levels seen in adults",
+        "anchor": "Main text, SVZ cytoarchitecture paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID21964341_Sanai2011_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The infant RMS is continuous at 1 day, 1 week, 1, 3 and 6 months in six autopsied brains.",
+        "snippet": "Using autopsied material (n=6) (ages 1 day; 1 week; 1, 3, and 6 months), serial sagittal and coronal reconstruction of the ventral forebrain revealed an uninterrupted column of cells",
+        "anchor": "Main text, RMS paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID21964341_Sanai2011_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "A medial migratory stream to ventromedial prefrontal cortex is present at 4-6 months and absent at 8-18 months.",
+        "snippet": "This medial migratory stream (MMS) was observed in human specimens ages 4–6 months but not 8–18 months",
+        "anchor": "Main text, MMS paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID21964341_Sanai2011_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The MMS was looked for in mouse (P4-P20) and not found: a human-specific compartment no mouse window can model.",
+        "snippet": "We analyzed serial sections of mouse brains at P4, P8, P16 and P20 and did not detect a MMS",
+        "anchor": "Main text, MMS paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID21964341_Sanai2011_PMC.xml",
+        "panel_text_relation": "text_only"
+      }
+    ]
+  }
+}

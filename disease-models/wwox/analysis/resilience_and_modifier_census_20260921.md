@@ -111,7 +111,7 @@ the allele, the targeting strategy, the driver and the laboratory:
 | **`Wwox`-null (Aldaz line)** | targeted deletion; LEGEND records the systemic null as generated with **EIIA-Cre** (`CLAIM 036`) | **43% dead by 72 h, 77% by day 17** | Aldaz / Ludes-Meyers | LEGEND dossier `PMID19936220.md`, **full text read**; the dossier also flags **survivor bias**: the animals plotted at day 17 are the survivors of a cohort 77% of which was dead |
 | **`Wwox`-null (Aqeilan line)** | targeted null | **death at 3–4 weeks**, repeatedly recorded | Aqeilan | LEGEND ledger, multiple entries |
 | **`Wwox^gt/gt` hypomorph** | gene-trap; **protein low but DETECTABLE** | **viable, shortened lifespan** | — | LEGEND ledger |
-| **`Wwox^P47T/P47T` knock-in** | missense, WW1 PPxY disruption; **protein equal to wild type** | survives to **adult-onset** epilepsy, cerebellar neurodegeneration, ataxia | Aldaz (Hussain 2023) | LEGEND `DL-BIO-085` |
+| **`Wwox^P47T/P47T` knock-in** | missense, WW1 PPxY disruption; **protein equal to wild type** | survives to adulthood; epilepsy **recorded in adults (>6 weeks), onset age not reported** *(rectified 2026-09-27 from "adult-onset": recorded in adults ≠ onset in adulthood — `deepdive_manifests/PMID36828035.json` entries 56–58, `CC-20260922-MODEL-HORIZON-01` §4)*, cerebellar neurodegeneration, ataxia | Aldaz (Hussain 2023) | LEGEND `DL-BIO-085` |
 | **`lde/lde` rat** | spontaneous 13 bp deletion, exon 9 | **3–12 weeks** | Suzuki | `CLAIM 037`, full texts read |
 
 **Answer to the brief's question: it is not one thing, and none of the three candidate explanations has been

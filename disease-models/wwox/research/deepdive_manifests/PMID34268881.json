@@ -371,7 +371,34 @@
     "anchor": "Figure 4 legend, panel H",
     "panel_text_relation": "text_only",
     "found_or_sought": "found"
-   }
+   },
+    {
+      "proposition": "The G372R protein datum is IMMUNOFLUORESCENCE in the ventricular zone of patient-derived forebrain organoids, reported without quantification: signal present in the two parents, 'barely any' in the two affected children. It is not a western, not densitometry, and carries no statistic. [Added 2026-09-27, ACTOR_ID scientist, wave-2 package development, QUESTION_DRIVEN re-read.]",
+      "snippet": "while in the VZ of WPM F2 and WPM M3, WWOX was detected, barely any signal was observed in WPM D1 and S1",
+      "anchor": "Results, 'Brain organoids of patient-derived WWOX-related developmental and epileptic encephalopathies'",
+      "surface": "body",
+      "artifact": "files/fulltext/PMID34268881_Steinberg2021_PMC.xml",
+      "found_or_sought": "sought",
+      "panel_text_relation": "text_only"
+    },
+    {
+      "proposition": "The comparators of the G372R organoid datum are heterozygous CARRIERS of the same family, not wild-type donors: the two comparator lines are grouped by the paper itself as healthy heterozygotes, n = 2 against n = 2 affected homozygotes. Relationship terms are deliberately not carried into this record. [Added 2026-09-27, ACTOR_ID scientist, wave-2 package development, QUESTION_DRIVEN re-read.]",
+      "snippet": "both are healthy heterozygotes, grouped together",
+      "anchor": "Figure EV5 legend, statistics clause (the comparator grouping)",
+      "surface": "body",
+      "artifact": "files/fulltext/PMID34268881_Steinberg2021_PMC.xml",
+      "found_or_sought": "found",
+      "panel_text_relation": "text_only"
+    },
+    {
+      "proposition": "The same paper states that WWOX expression varies markedly among healthy heterozygous parents, which weakens a two-versus-two heterozygote comparison as a baseline. [Added 2026-09-27, ACTOR_ID scientist, wave-2 package development, QUESTION_DRIVEN re-read.]",
+      "snippet": "although there is a marked difference in WWOX expression in the healthy heterozygote parents from different families",
+      "anchor": "Discussion",
+      "surface": "body",
+      "artifact": "files/fulltext/PMID34268881_Steinberg2021_PMC.xml",
+      "found_or_sought": "found",
+      "panel_text_relation": "text_only"
+    }
   ]
  }
 }

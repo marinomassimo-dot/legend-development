@@ -250,7 +250,34 @@
     "surface": "figure",
     "artifact": "files/fulltext/PMID36779245_Oliver2023_assets/EPI-64-1351-g003.jpg",
     "panel_text_relation": "panel_only"
-   }
+   },
+    {
+      "proposition": "PRESENTATION AGE in the 13-patient cohort: median seizure onset 5 weeks (1 day to 10 months, mean 9 weeks). This is the presentation floor the post-diagnosis window argument uses; the cohort reports no age at molecular diagnosis in the served body (token sweep of 'diagnos': no age). [Added 2026-09-27, ACTOR_ID scientist, wave-2 package development, QUESTION_DRIVEN re-read.]",
+      "snippet": "Seizures began at a median of 5",
+      "anchor": "Results, 'Patients'",
+      "surface": "body",
+      "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_efetch_2026-09-27.xml",
+      "found_or_sought": "sought",
+      "panel_text_relation": "text_only"
+    },
+    {
+      "proposition": "Seizure onset is a presentation floor, not disease onset: development was already abnormal from birth in 11 of 13 patients. [Added 2026-09-27, ACTOR_ID scientist, wave-2 package development, QUESTION_DRIVEN re-read.]",
+      "snippet": "Development was abnormal from birth in 11 of 13 patients, with 9 of 13 patients not meeting any developmental milestones at seizure onset",
+      "anchor": "Results, 'Patients'",
+      "surface": "body",
+      "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_efetch_2026-09-27.xml",
+      "found_or_sought": "found",
+      "panel_text_relation": "text_only"
+    },
+    {
+      "proposition": "The authors' own caveat on reading seizure onset as the start of disease. [Added 2026-09-27, ACTOR_ID scientist, wave-2 package development, QUESTION_DRIVEN re-read.]",
+      "snippet": "With EIDEE, it is often difficult to ascertain whether early development is normal prior to seizure onset",
+      "anchor": "Discussion",
+      "surface": "body",
+      "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_efetch_2026-09-27.xml",
+      "found_or_sought": "found",
+      "panel_text_relation": "text_only"
+    }
   ],
   "note": "Twenty locators. Two are anchored to inspected figure images and one to a table cell read against its neighbours; the rest to text. The figures were retrieved and inspected earlier the same day via the pmc.ncbi.nlm.nih.gov/articles/instance/<PMCID>/bin/ route, after four earlier routes had failed and the figures had been recorded as unobtainable.\n\n🔴 LOCATOR AUDIT AND REPAIR 2026-08-10. All twenty text snippets were matched against the local XML; THIRTEEN did not occur in it. Every one was the transcription class — the quote written as the page reads rather than extracted as the artifact contains — and this journal's markup is the worst case in the corpus: non-breaking hyphens (`WWOX‐DEE` written `WWOX-DEE`), en dashes (`Kaplan–Meier`, `spike–wave`, `7–8 Hz`), curly quotation marks, and superscript reference numbers interleaved in the running text (`hypomyelination, 13 , 46 , 47 , 48 a finding`). NOTHING WAS REWORDED: each snippet is the same span re-taken from the extracted text, and both ends were verified to land where the recorded quote landed, folded to alphanumerics so the comparison survives exactly the characters the transcription mangled. All thirteen now match in STRICT mode. No quote here was ever absent from the paper — the defect was fidelity, not integrity.\n\n🔴 SCHEMA v2 UPGRADE 2026-08-10. Three artifacts declared and fingerprinted: the JATS XML and the two figure images. The images are why this manifest could not reach v2 before today — the note above said they had been retrieved and inspected, and they were in no checkout: `files/` is gitignored, so the inspection travelled and its subject did not. Both were re-retrieved from pmc.ncbi.nlm.nih.gov/articles/instance/10952634/bin/ and re-inspected in this run, at 709x368 (Figure 3) and 709x226 (Figure 4).\n\nThe two figure locators had the FIGURE CAPTION in the snippet slot while their own propositions said \"read from the figure image rather than its caption\" — the manifest declared a reading of an image and carried the text that was not the evidence for it. The snippets now describe what the images show, which is the convention PMID34831305 set for `surface: figure`, and the captions are preserved here verbatim so nothing is lost: Figure 4 — \"Survival analysis for 75 individuals with WWOX developmental and epileptic encephalopathy stratified by genetic variant group. (A) Time to death. (B) Time to seizure onset.\"; Figure 3 — \"Location and type of pathogenic WWOX variants in our cohort (top) of 13 patients and those from the literature (bottom).\"\n\nPanel/text relation is declared on all twenty locators. Five text statements are marked `text_confirmed_by_panel` because the panel was read for that statement in this run: entries 1, 2 and 3 against Figure 4, which prints p = 0.0085 and p = 0.65 on its face and from which the 5-year separation can be read directly, and entries 4 and 5 against Figure 3's marker placement. Entry 0 is deliberately left `text_only`: it claims that one versus two missense variants makes no difference, and Figure 4A orders null/missense above missense/missense with overlapping bands. That is a QUALIFICATION — neither a confirmation nor a contradiction — and the vocabulary has no value for it. Recording it as confirmed would have been the over-claim; the gap is reported rather than papered over."
  },
@@ -269,6 +296,21 @@
    "path": "files/fulltext/PMID36779245_Oliver2023_assets/EPI-64-1351-g004.jpg",
    "sha256": "65ab0f9e5534bddebd331cf4b980853eae20145eb252f2af56ba8ff3afcfe0db",
    "kind": "figure"
-  }
+  },
+   {
+     "path": "files/fulltext/PMID36779245_Oliver2023_PMC_efetch_2026-09-27.xml",
+     "kind": "article_text",
+     "acquisition_recipe": {
+       "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=10952634&rettype=xml",
+       "http_method": "GET",
+       "tier": "ncbi_efetch_pmc_xml",
+       "user_agent_policy": "none",
+       "acquired_on": "2026-09-27",
+       "derived": false,
+       "note": "Declared as a NEW artefact beside files/fulltext/PMID36779245_Oliver2023_PMC.xml (sha 3aff9ecb...), which is absent from this deployment and which neither efetch (780f42de...), Europe PMC fullTextXML (60b5a7bf...) nor PMC OAI (c1e3310c...) reproduces byte for byte on 2026-09-27. The earlier locators keep pointing at the earlier artefact; nothing is re-bound.",
+       "result_sha256": "780f42de9b3982fa5bf9bf1e6bb76f71384c943aa197fb2d4de80be7ac7e7a34"
+     },
+     "sha256": "780f42de9b3982fa5bf9bf1e6bb76f71384c943aa197fb2d4de80be7ac7e7a34"
+   }
  ]
 }

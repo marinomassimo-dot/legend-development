@@ -977,6 +977,51 @@
         "panel_text_relation": "panel_only",
         "found_or_sought": "found",
         "audit_note": "REPOINTED 2026-09-13 after a blind locator audit found the artefact one page off. The page numbers were written from a mistaken mapping; the panels described were the ones actually inspected. The mapping is now taken from the supplementary PDF's own text layer, which prints the figure number on each page, not from counting renders. As first written, entry 33 pointed at the CTX panel, which shows the OPPOSITE of its proposition."
+      },
+      {
+        "proposition": "The only age the paper attaches to its seizure ascertainment is the age of the EEG cohort: video-EEG was run on ADULT mice older than 6 weeks, n = 3 per genotype. No juvenile recording is reported, so the paper measures seizures in adults and does not measure when they began. 'Recorded in adults' is not 'onset in adulthood'. [Added 2026-09-27, ACTOR_ID scientist, wave-2 package development, for the MODEL-HORIZON candidate, section 4.]",
+        "snippet": "was performed during 24-hour sessions in adult (aged >6 weeks)",
+        "anchor": "Methods 4.4, 'Video electroencephalography (EEG)'",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
+        "found_or_sought": "sought — the question was whether any age of seizure onset is stated anywhere in the body",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The Results section that introduces the seizure phenotype states that spontaneous seizures were observed and describes their semiology, with no age at first seizure. Read end to end for this question, the body gives no onset age for the P47T homozygote; the 'adult-onset' / 'esordio adulto' wording in LEGEND files is therefore stronger than the source. [Added 2026-09-27, ACTOR_ID scientist, wave-2 package development, for the MODEL-HORIZON candidate, section 4.]",
+        "snippet": "displayed signs of spontaneous seizures, occasionally beginning with wild running and jumping",
+        "anchor": "Results 2.3, 'WwoxP47T/P47T mice display chronic spontaneous generalized tonic-clonic seizures', first sentence",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
+        "found_or_sought": "sought",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The Introduction's summary sentence places the seizure activity in animals that had reached adulthood; it asserts the state of adult mice, not the timing of onset. [Added 2026-09-27, ACTOR_ID scientist, wave-2 package development, for the MODEL-HORIZON candidate, section 4.]",
+        "snippet": "these mice reached adulthood and displayed intense seizure activity",
+        "anchor": "Introduction, final paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
+        "found_or_sought": "found",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "STRAIN BACKGROUND, founder level: the P47T knock-in was generated in FVB/6N embryos, and the line is maintained by heterozygous crosses with littermate controls. No backcross to another strain is stated. So the P47T background IS stated in the primary (FVB-derived), contrary to 'not stated in any surface read'; what remains unstated is any later backcrossing. [Added 2026-09-27, ACTOR_ID scientist, wave-2 package development, for the MODEL-HORIZON candidate, section 5.]",
+        "snippet": "FVB/6 N female mice were used as embryo donors and ICR females were used as the surrogates",
+        "anchor": "Methods, 'Development of Wwox P47T mouse model'",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
+        "found_or_sought": "sought",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Colony maintenance with littermate controls, the second half of the strain statement. [Added 2026-09-27, ACTOR_ID scientist, wave-2 package development, for the MODEL-HORIZON candidate, section 5.]",
+        "snippet": "mice were used to maintain the line and bred to homozygosity along with heterozygous and wildtype littermate controls",
+        "anchor": "Methods, 'Development of Wwox P47T mouse model'",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36828035_Hussain2023_PMC.xml",
+        "found_or_sought": "found",
+        "panel_text_relation": "text_only"
       }
     ],
     "note": "Twenty-six locators. Seventeen are anchored to running text or figure LEGENDS; NINE are anchored to figure PIXELS inspected at native resolution (Figures 1, 3, 4, 5) and are marked surface=figure. Figures 2, 6, 7, 8 and 9 were downloaded but NOT inspected and carry no locator. Coverage remains partial_fulltext_read because the four declared supplementary files are SOURCE_ACCESS_BLOCKED: PMC serves them through a JavaScript download interstitial that returns a 1,814-byte HTML page under the requested filename. Four text locators still cite Supplementary Figs S2a / S3a-b and Supplementary Table 4 as the source of a number not seen, and each says so in its anchor. Reading debt: clear the interstitial with a JS-capable client, and inspect Figures 2, 6-9."

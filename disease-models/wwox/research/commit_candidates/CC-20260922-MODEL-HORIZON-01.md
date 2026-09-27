@@ -149,3 +149,47 @@ class as *"first observed abnormal" ≠ "onset"*, which this repository has now 
 - **Genotype classes kept rigidly separate throughout** — null ≠ `P47T` ≠ `gt/gt` ≠ rat `lde/lde` ≠
   human compound heterozygote — which is the whole point of §2.
 - **`UNREAD_PREMISE`: measured at 0 before landing, not predicted.**
+
+## WAVE-2 READINESS (2026-09-27)
+
+**Actor:** ACTOR_ID `scientist`, wave-2 package `development`, branch `task/wave2-development`.
+**`context_policy`: `QUESTION_DRIVEN`**, declared before either source was opened, and declared honestly rather than as `SOURCE_FIRST`: this session already held this candidate's own conclusions. Held going in — this candidate and its two package siblings, the manifests for `PMID 36828035` (56 locators) and `PMID 34747138` (20), and `CLAIM 032` / `DL-BIO-085` retrieved with `registry_records.py` (the two large registries were never grepped wholesale). Questions, stated as narrowly as the facts required: *does Hussain 2023 state an age of onset for the P47T homozygote anywhere in its body; does it state the strain background; and are §1's three 2021 quotations verbatim?*
+
+**Verdict: `READY_MINOR`** — and the one operation left for the batch is the `D-34` row. Everything else in this candidate is now either **applied outside batch** (below) or **already propagated** by an earlier batch.
+
+### 1 · What was done — the work itself, not a note about it
+
+1. 🔴 **§4's defect is confirmed at the source and repaired in both files that carried it.** Hussain 2023 (`PMID 36828035`, complete read `FTR-20260913-36828035-03`) states **no age of onset at all**. The only age attached to seizure ascertainment is the EEG cohort's — *"was performed during 24-hour sessions in adult (aged >6 weeks)"*, Methods 4.4, n = 3 per genotype — while Results 2.3 introduces the phenotype as *"displayed signs of spontaneous seizures, occasionally beginning with wild running and jumping"*, with no age, and the Introduction says only *"these mice reached adulthood and displayed intense seizure activity"*. **Three locators added** to `deepdive_manifests/PMID36828035.json` (**entries 56–58**); manifest still **STRICT PASS, 0 gaps**, artefact digest reproduced.
+2. ✅ **§1's three quotations were checked against the primary body, and one is not verbatim.** The 2021 paper reads *"Since KO mice died within less than 4 weeks, we could not perform **in vivo** recordings in adult KO mice"* — the words *in vivo* were dropped without an ellipsis. The candidate's point is unaffected and the quotation is corrected. **Two locators added** to `deepdive_manifests/PMID34747138.json` (**entries 20–21**), the second being the behaviour limb — *"Unfortunately, we could not assess behavior of Wwox-null mice due to their poor conditions and premature death"*, which is why every behavioural comparison in that paper is rescued-versus-wild-type and never rescued-versus-untreated. §1's two Discussion sentences were **already persisted** (entries 6–7) and were re-matched rather than duplicated.
+3. 🔴 **§5's strain-background bullet is wrong in the safe direction and is corrected: the `P47T` background IS stated in the primary.** Methods, *Development of Wwox P47T mouse model*: *"FVB/6 N female mice were used as embryo donors and ICR females were used as the surrogates"*, with the line maintained by heterozygous crosses and **littermate** controls. **Two locators added** (`PMID36828035.json` **entries 59–60**). What remains unstated is any later backcrossing; the `gt/gt` background stays unnamed in its own primary (`PMID17823927.json` entry 41).
+4. 🔵 **§3(b)'s lifespan reconciliation is settled by a reading this candidate did not have.** `FTR-20260914-17823927-01` is a **complete** read of Ludes-Meyers 2007: survival is *"significantly decreased"* (**P = 0.0188, Breslow**) over a study **censored at 104 weeks** (*"Mice were allowed to live out their life span or until 104 weeks of age"*), with the tumour excess **female-only** (9/14 vs 3/15; males *"similar between the two genotypes"*, 5/14 vs 5/18, footnote `P = 0.23` which is the χ² statistic and not its P). **So *"viable to 2 years"* is an end of observation, not a lifespan** — which is stronger than the candidate's *"carry both with their depths"*, and it means §3(b) is closed rather than pending.
+5. ⛔ **§3(c) stands unchanged and is not re-attempted**: `PMC4143238` serves an empty body, so `H11` stays blocked by an unmade Western and not by a licence.
+
+### 2 · Applied outside batch (non-canonical targets, `MINOR`)
+
+| file | what changed | how |
+|---|---|---|
+| `research/discovery_ledger_current.md` `DL-BIO-085` | append-only rectification: the table cell reads as *"crisi spontanee registrate in adulti (>6 settimane); età d'esordio non riportata"*, with the two verbatim sentences and the locator entries named | append-only bullet; **no earlier text rewritten** |
+| `analysis/resilience_and_modifier_census_20260921.md` l.114 | *"adult-onset"* → *"epilepsy **recorded in adults (>6 weeks), onset age not reported**"*, with a dated in-line marker | single-clause replacement, rest of the row byte-identical |
+| `analysis/model_horizon_and_p47t_platform_20260922.md` | the `H5` cell gains the sex-specific tumour figures, the Breslow result and the 104-week censoring; a dated append-only *Rectification* section records the non-verbatim quotation, the FVB background and the onset repair | one cell edited with its own marker + append at end of file |
+| `analysis/seizure_ascertainment_census_20260922.md` | the two *"2 years"* sites are qualified as an observation cut-off with the Breslow result | in-line dated markers |
+
+**The four scientific current files and `disease_model.md` were not touched.** `fulltext_receipts.py record` was **not** run.
+
+### 3 · Exact operation list for `batch_commit.py propagate`
+
+One operation only, and it is the one this package deliberately does not apply itself, because two earlier batches recorded that the optional `D-` rows are operator directives and skipped them:
+
+| # | file | record | op | old (verbatim from the current file) | new |
+|---|---|---|---|---|---|
+| **M1** | `research/dismissal_ledger_current.md` | `DEFAULTS THAT BIT US` table, after the `D-06` row | `insert-after` | `| **D-06** | *(meta)* *the tool built for a problem is immune to that problem* |` *(anchor line only; nothing in it is replaced)* | a new row, **number allocated by the batch** (`D-34` proposed; `D-35`/`D-36` are claimed by `CC-20260922-SEIZURE-ASCERTAINMENT-01` and `CC-20260922-GTGT-CNS-QUALIFICATION-01`): `| **D-34** | *a platform that can answer a question is a model of the disease* | 🔴 **False, and the horizon table measures it**: of twelve portfolio questions with a horizon beyond ~P30, **nine do not transfer** to any animal in this corpus — for most, structurally, because *the animal ends before the question starts*. `Wwox`-null dies at 3–4 weeks; `Wwox^P47T/P47T` reaches adulthood but is **the mild allelic class** and carries a **progressively degenerating cerebellar background** that confounds any durability read; `Wwox^gt/gt` is the only structurally correct animal for a residual-protein question and **its brain has never been assayed**. | Four therapeutic arms were pruned on a window that was never measured (`D-31`), and `H11` is blocked by one unmade Western rather than by biology |` |
+
+⚠️ **Nothing else is owed to the batch by this candidate.** §2's horizon table, §5's platform bullets and §6's provenance are analysis-layer statements already on disk; §1 is now locators; §3 is propagated or closed; §4 is applied above.
+
+### 4 · Receipts and pending
+
+Two pending receipt JSONs, **`fulltext_receipts.py record` deliberately NOT run** (the ledger is a hash chain and sibling packages are appending in parallel): `receipts_pending/development_36828035_1.json` (`FTR-20260927-36828035-04`, `partial_fulltext_read`) and `receipts_pending/development_34747138_1.json` (`FTR-20260927-34747138-03`, `partial_fulltext_read`).
+
+🔴 **Evidence-locality finding worth more than this candidate.** `files/fulltext/PMID34747138_Repudi2021_PMC.xml` — the artefact behind twenty persisted locators — was **absent from this deployment**. It was re-acquired free from Europe PMC (`.../PMC8649866/fullTextXML`) and **reproduced the declared digest `7da156e8…` byte for byte**; NCBI efetch of the same article returns a different serialisation (`c430d5d2…`), so the route is part of the recipe. Nine figure artefacts that manifest declares are still absent and no locator added here rests on an image.
+
+**DEFAULTS_TAKEN.** (1) *A quotation in §1 was not verbatim* → corrected and persisted as a locator instead of being left as a candidate-only sentence; safe because the meaning is unchanged and the source is now bound to a digest. (2) *§5 asserted a missing fact that the primary states* → read the Methods and recorded the fact rather than leaving a false gap; the gap that survives (backcrossing) is narrower and named. (3) *The `D-34` row is `MINOR` and non-canonical but the `D-`row lane is claimed by two sibling candidates and was skipped by two batches as an operator directive* → specified as an op with the number left to the batch, rather than minting a number that could collide. **STOP_LOG: empty.**

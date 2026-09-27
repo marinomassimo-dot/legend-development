@@ -438,3 +438,19 @@ is already done at birth, and that the size of the irreducible prenatal componen
 | Reference markers / citation targets (stripped by PMC extraction) | For the two Chang reviews I cannot identify which primary paper reports the "<15 days after birth" mouse cascade data. It is cited but untraceable from this surface. |
 | Supplementary material in every deposit | Empty or absent throughout. Nothing above depends on it. |
 | PMIDs 31543760, 34268881, 34634460, 38161429, 42190144 | Triaged from metadata only, not read. Kośla/Bednarek 2019 (hNPC differentiation transcriptome, PMC6730490) is the highest-value unread item — its dataset is the one reanalysed in PMID 32581702 §"Transcriptomic Analyses" and a direct read would test that reanalysis. Recommended for a follow-on wave. |
+
+---
+
+## Refinement, append-only — 2026-09-27 (ACTOR_ID `scientist`, wave-2 package `development`)
+
+Applied under `CC-20260922-POSTNATAL-SVZ-01` §3. Nothing above is rewritten: the `FLAT` record in § 3 and § 7 stays, because it captured the authors' own headline. What it lacked is the modulation *inside* that headline, now read first-hand in the review's body.
+
+**Aldaz & Hussain 2020 (PMID 33255508, `PMC7727818`) says both things in one paragraph**, and the two are not a disagreement — read QUESTION_DRIVEN on 2026-09-27, locators persisted in `deepdive_manifests/PMID33255508.json` entries 8–10:
+
+| what the review says | verbatim | how to carry it |
+|---|---|---|
+| the headline | *"WWOX mRNA expression is quite uniform from conception to adulthood in all depicted brain regions"* | the `FLAT` record — correct as a headline |
+| the modulation | *"All regions show relatively higher expression levels in early embryonal life slowly decreasing during fetal development until birth to slightly increase again WWOX expression in postnatal life and early childhood up to adolescence"* | a **slow** prenatal decline and a **slight** postnatal rise, then stability — a modulation within the uniformity, described in the authors' own hedged words |
+| the regional exception | *"WWOX expression in cerebellar cortex (red line) clearly behaves differently showing a more significant increase in early postnatal life"* | the one region where the human series points the favourable way for a post-diagnosis window — 🔵 and the same region where vector coverage is reported weakest, so the two reasons to keep the cerebellar axis separate now point in opposite directions. **Worth recording; not a therapeutic inference.** |
+
+⚠️ **Both halves carry the same two bounds as the `FLAT` record:** neither description is a measurement by its authors — both are secondary readings of one array database (HBT, Affymetrix) — and this corpus's own sources state that WWOX mRNA and protein dissociate (§ 2 above). The *"U-shape versus FLAT"* contradiction reported by a delegate is therefore **downgraded, not resolved in favour of either side**: there is one paragraph, and it contains both sentences.

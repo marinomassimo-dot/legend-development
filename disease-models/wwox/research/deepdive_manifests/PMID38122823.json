@@ -1,0 +1,119 @@
+{
+  "schema_version": 2,
+  "pmid": "38122823",
+  "doi": "10.1038/s41586-023-06981-x",
+  "receipt": "FTR-20260927-38122823-01",
+  "landing": [
+    "CC-20260922-POSTNATAL-SVZ-01",
+    "CC-20260922-POSTDIAGNOSIS-WINDOW-01"
+  ],
+  "skills_considered": [
+    {
+      "skill": "legend-deepdive",
+      "used": false,
+      "reason": "No deep dive was run. This pass persists the verbatim sentences a wave-2 commit candidate carries and answers one question; a deep dive would have produced a dossier this pass does not claim."
+    },
+    {
+      "skill": "find-fulltext",
+      "used": false,
+      "reason": "Not needed: the PMC JATS body was served directly by NCBI E-utilities efetch db=pmc on 2026-09-27; the recipe is on the artefact."
+    }
+  ],
+  "group_assessment": {
+    "waived": "Waived by name. This is NOT a deep dive: it is a QUESTION_DRIVEN, partial locator-capture pass (ACTOR_ID scientist, wave-2 package development, 2026-09-27) over a paper this repository has no registry record for, opened only to persist the sentences the POSTNATAL-SVZ commit candidate carries from a delegate read that was never receipted. The deep-dive steps belong to whichever reading promotes this paper into a record. Scope is in the pending receipt."
+  },
+  "field_density": {
+    "waived": "Waived by name. This is NOT a deep dive: it is a QUESTION_DRIVEN, partial locator-capture pass (ACTOR_ID scientist, wave-2 package development, 2026-09-27) over a paper this repository has no registry record for, opened only to persist the sentences the POSTNATAL-SVZ commit candidate carries from a delegate read that was never receipted. The deep-dive steps belong to whichever reading promotes this paper into a record. Scope is in the pending receipt."
+  },
+  "multihop": {
+    "waived": "Waived by name. This is NOT a deep dive: it is a QUESTION_DRIVEN, partial locator-capture pass (ACTOR_ID scientist, wave-2 package development, 2026-09-27) over a paper this repository has no registry record for, opened only to persist the sentences the POSTNATAL-SVZ commit candidate carries from a delegate read that was never receipted. The deep-dive steps belong to whichever reading promotes this paper into a record. Scope is in the pending receipt."
+  },
+  "corpus_crossquery": {
+    "waived": "Waived by name. This is NOT a deep dive: it is a QUESTION_DRIVEN, partial locator-capture pass (ACTOR_ID scientist, wave-2 package development, 2026-09-27) over a paper this repository has no registry record for, opened only to persist the sentences the POSTNATAL-SVZ commit candidate carries from a delegate read that was never receipted. The deep-dive steps belong to whichever reading promotes this paper into a record. Scope is in the pending receipt."
+  },
+  "retraction_check": {
+    "waived": "Waived by name. This is NOT a deep dive: it is a QUESTION_DRIVEN, partial locator-capture pass (ACTOR_ID scientist, wave-2 package development, 2026-09-27) over a paper this repository has no registry record for, opened only to persist the sentences the POSTNATAL-SVZ commit candidate carries from a delegate read that was never receipted. The deep-dive steps belong to whichever reading promotes this paper into a record. Scope is in the pending receipt."
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID38122823_Nascimento2023_PMC.xml",
+      "sha256": "9b3c52cfd966e877b087813592ad83e792aa642ec5c3e77761a5b70c05d7a323",
+      "kind": "article_text",
+      "acquisition_recipe": {
+        "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=10901738&rettype=xml",
+        "http_method": "GET",
+        "tier": "ncbi_efetch_pmc_xml",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-09-27",
+        "derived": false,
+        "result_sha256": "9b3c52cfd966e877b087813592ad83e792aa642ec5c3e77761a5b70c05d7a323",
+        "note": "Served with figures and supplementary files absent; the supplementary captions ARE in the markup, the files are not."
+      }
+    }
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "PMC JATS from E-utilities efetch, 179,744 bytes; every locator matched against the body by the validator.",
+    "abstract_anchoring_waived": "No locator draws on the abstract.",
+    "note": "Coverage of this pass: Results and the Methods subsection on dataset integration, plus the supplementary captions, read for two questions (does the postnatal periventricular object exist and what bounds it; is any accession named). Figures, supplementary files and most of the Methods NOT read. 🔴 MEASURED HERE, FIRST-HAND: the string 'WWOX' occurs ZERO times in this artefact (case-sensitive count over the whole XML, 2026-09-27) — which bounds PRESENCE IN THE TEXT only, never expression: a per-nucleus zero at bulk-level abundance needs a matched-abundance dropout control, and a caption-level absence is not a measurement.",
+    "entries": [
+      {
+        "proposition": "The postnatal periventricular microdissection this candidate turns on is a SINGLE two-week-old donor, sequenced by snRNA-seq.",
+        "snippet": "we microdissected this region from a two-week-old sample and performed single-nucleus RNA sequencing",
+        "anchor": "Results, 'The EC stream contains migrating interneurons'",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID38122823_Nascimento2023_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "A radial-glia cluster was captured in that postnatal object, distinct from differentiated astrocytes: the compartment is real and postnatal.",
+        "snippet": "our snRNA-seq of the stream captured a cluster that expressed RG markers",
+        "anchor": "Results, 'The EC stream is produced by CGE progenitors'",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID38122823_Nascimento2023_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The authors' own negative blocks the onward reading: no intermediate progenitors for interneurons and no trajectory from the local radial glia to the immature inhibitory neurons were found. A WWOX measurement here would be 'WWOX in postnatal human periventricular radial glia', never 'WWOX in the progenitor supplying the stream'.",
+        "snippet": "we did not find intermediate progenitors for interneurons or a differentiation trajectory connecting the local RG to the immature inhibitory neurons",
+        "anchor": "Results, 'The EC stream is produced by CGE progenitors'",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID38122823_Nascimento2023_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The merged object's postnatal entorhinal arm is an AGE SERIES from 14 days to 27 years, so the achievable scope of a reanalysis is wider than the single periventricular donor; the periventricular microdissection itself stays n = 1.",
+        "snippet": "nuclei from the postnatal EC between 14 days and 27",
+        "anchor": "Results, 'The postnatal EC stream supplies LAMP5+ neurons', Fig. 4a,b paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID38122823_Nascimento2023_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The data-availability statement in the served body is a bare deferral to the publisher DOI: no accession is named anywhere in it.",
+        "snippet": "statements of data and code availability are available at",
+        "anchor": "Online content",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID38122823_Nascimento2023_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The paper's only GEO mention names a PREVIOUS study's adult-EC dataset that was re-used, not this study's deposit — the mis-attribution trap a future reanalysis would fall into.",
+        "snippet": "retrieved from the Gene Expression Omnibus (GEO) from a previous study from the adult EC",
+        "anchor": "Methods, 'Read alignment, quality control and integration with adult EC dataset'",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID38122823_Nascimento2023_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "An accession-free route exists: the supplementary differential-expression tables are free files, and a WWOX row in them would be a presence statement. Caption verified verbatim in the served markup.",
+        "snippet": "DE genes in EC stream dataset. Results of a differential gene-expression test (Wilcoxon rank sum) in the dataset containing the EC stream microdissection.",
+        "anchor": "Supplementary Table 4 caption (supplementary-material MOESM6, 41586_2023_6981_MOESM6_ESM.xlsx)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID38122823_Nascimento2023_PMC.xml",
+        "panel_text_relation": "text_only"
+      }
+    ]
+  }
+}

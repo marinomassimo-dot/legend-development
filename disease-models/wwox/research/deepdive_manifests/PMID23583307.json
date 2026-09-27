@@ -1,0 +1,102 @@
+{
+  "schema_version": 2,
+  "pmid": "23583307",
+  "doi": "10.1016/j.pneurobio.2013.04.001",
+  "receipt": "FTR-20260927-23583307-01",
+  "landing": [
+    "CC-20260922-POSTDIAGNOSIS-WINDOW-01",
+    "DL-MECH-011"
+  ],
+  "skills_considered": [
+    {
+      "skill": "legend-deepdive",
+      "used": false,
+      "reason": "No deep dive was run. This pass persists verbatim locators for statements a wave-2 commit candidate carries, read QUESTION_DRIVEN; a deep dive would have produced a dossier this pass does not claim."
+    },
+    {
+      "skill": "find-fulltext",
+      "used": false,
+      "reason": "Not needed: the PMC JATS body was served directly by NCBI E-utilities efetch db=pmc on 2026-09-27, recipe recorded on the artefact."
+    }
+  ],
+  "group_assessment": {
+    "waived": "Waived by name. This is NOT a deep dive: it is a QUESTION_DRIVEN, partial locator-capture pass (ACTOR_ID scientist, wave-2 package development, 2026-09-27) opened to persist the verbatim sentences that the POSTDIAGNOSIS-WINDOW commit candidate relied on through a delegate's read that was never receipted. The deep-dive steps belong to whichever reading promotes this paper into a registry record; filling them here from metadata no one used would be less honest than waiving them. Scope is in the pending receipt."
+  },
+  "field_density": {
+    "waived": "Waived by name. This is NOT a deep dive: it is a QUESTION_DRIVEN, partial locator-capture pass (ACTOR_ID scientist, wave-2 package development, 2026-09-27) opened to persist the verbatim sentences that the POSTDIAGNOSIS-WINDOW commit candidate relied on through a delegate's read that was never receipted. The deep-dive steps belong to whichever reading promotes this paper into a registry record; filling them here from metadata no one used would be less honest than waiving them. Scope is in the pending receipt."
+  },
+  "multihop": {
+    "waived": "Waived by name. This is NOT a deep dive: it is a QUESTION_DRIVEN, partial locator-capture pass (ACTOR_ID scientist, wave-2 package development, 2026-09-27) opened to persist the verbatim sentences that the POSTDIAGNOSIS-WINDOW commit candidate relied on through a delegate's read that was never receipted. The deep-dive steps belong to whichever reading promotes this paper into a registry record; filling them here from metadata no one used would be less honest than waiving them. Scope is in the pending receipt."
+  },
+  "corpus_crossquery": {
+    "waived": "Waived by name. This is NOT a deep dive: it is a QUESTION_DRIVEN, partial locator-capture pass (ACTOR_ID scientist, wave-2 package development, 2026-09-27) opened to persist the verbatim sentences that the POSTDIAGNOSIS-WINDOW commit candidate relied on through a delegate's read that was never receipted. The deep-dive steps belong to whichever reading promotes this paper into a registry record; filling them here from metadata no one used would be less honest than waiving them. Scope is in the pending receipt."
+  },
+  "retraction_check": {
+    "waived": "Waived by name. This is NOT a deep dive: it is a QUESTION_DRIVEN, partial locator-capture pass (ACTOR_ID scientist, wave-2 package development, 2026-09-27) opened to persist the verbatim sentences that the POSTDIAGNOSIS-WINDOW commit candidate relied on through a delegate's read that was never receipted. The deep-dive steps belong to whichever reading promotes this paper into a registry record; filling them here from metadata no one used would be less honest than waiving them. Scope is in the pending receipt."
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID23583307_Semple2013_PMC.xml",
+      "sha256": "7688c87c068e224470dd50663714ec1ed2749b896f8806bf64b7b5db4790ce1a",
+      "kind": "article_text",
+      "acquisition_recipe": {
+        "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=3737272&rettype=xml",
+        "http_method": "GET",
+        "tier": "ncbi_efetch_pmc_xml",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-09-27",
+        "derived": false,
+        "result_sha256": "7688c87c068e224470dd50663714ec1ed2749b896f8806bf64b7b5db4790ce1a"
+      }
+    }
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "PMC JATS from E-utilities efetch; abstract separated from body by the validator's own extraction; every locator is matched against the body.",
+    "abstract_anchoring_waived": "No locator draws on the abstract; every entry is matched against the body of the declared JATS artifact.",
+    "note": "Coverage of this pass: Abstract, sections 1, 2, 4 and 5 and Table 1 read for one question (does any sourced index map mouse P1-P5 to a human age, and with what spread). Sections on neurogenesis, immune response, behaviour, and the figures were NOT read. Partial by design.",
+    "entries": [
+      {
+        "proposition": "One human age maps to two rodent ages far apart depending on the milestone: human term matches rat day 7.4 by GABA-synthesising enzyme level, and rat day 20.4 by choline acetyltransferase level (Romijn 1991, as reported by this review). A rodent-to-human age equivalence therefore carries no single number.",
+        "snippet": "A similar calculation to determine 16.2% of the adult rat levels corresponds to 7.4 days of age in the rat",
+        "anchor": "4. Synaptogenesis and neurotransmission, Romijn paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID23583307_Semple2013_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The second, much later mapping from the same paragraph.",
+        "snippet": "the relative levels of the choline acetyltransferase enzyme at birth compared with adulthood in humans was strikingly later, at pnd 20.4 in the rat cortex",
+        "anchor": "4. Synaptogenesis and neurotransmission, Romijn paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID23583307_Semple2013_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The review draws the conclusion itself: equating ages on one milestone may mislead.",
+        "snippet": "equating ages based upon a single milestone or event may lead to misinterpretation",
+        "anchor": "4. Synaptogenesis and neurotransmission, Romijn paragraph, closing sentence",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID23583307_Semple2013_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The one sourced interval for the earliest postnatal days is white-matter based and already nine weeks wide: rodent days 1-3 map to 23-32 gestational weeks, day 7 to 32-36 weeks (Craig 2003, rats AND mice). So rodent P1-P5 sits at or before human term on this index; no index in the review places it after term.",
+        "snippet": "estimating that white matter development and axonal outgrowth in the rodent CNS at pnd 1–3 corresponds to 23–32 weeks gestation in human infants, while pnd 7 is analogous to 32–36 weeks",
+        "anchor": "5. Myelination, Back/Craig paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID23583307_Semple2013_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Rat and mouse do not share even the neural-tube date, so a rat-anchored index is not automatically a mouse index.",
+        "snippet": "Neural tube formation occurs approximately mid-gestation in rodents, on gestational day (gd) 10.5–11 and 9–9.5 in rats and mice, respectively",
+        "anchor": "2. Gross neuroanatomy, first paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID23583307_Semple2013_PMC.xml",
+        "panel_text_relation": "text_only"
+      }
+    ]
+  }
+}

@@ -295,6 +295,60 @@
         "surface": "body",
         "artifact": "files/fulltext/PMID33255508_Aldaz2020.xml",
         "anchor": "Section 4, Conclusions"
+      },
+      {
+        "proposition": "The authors' headline description of the Human Brain Transcriptome WWOX mRNA series is UNIFORM from conception to adulthood; this is a secondary reading of an array database, not a measurement by the authors. [Added 2026-09-27, ACTOR_ID scientist, wave-2 package development, QUESTION_DRIVEN re-read.]",
+        "snippet": "WWOX mRNA expression is quite uniform from conception to adulthood in all depicted brain regions",
+        "anchor": "2. WWOX Expression in CNS, HBT paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID33255508_Aldaz2020.xml",
+        "found_or_sought": "sought",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Within that uniformity the authors describe a SLOW prenatal decline and a SLIGHT postnatal rise to adolescence, then stability: a modulation, not a disagreement with the flat headline. [Added 2026-09-27, ACTOR_ID scientist, wave-2 package development, QUESTION_DRIVEN re-read.]",
+        "snippet": "All regions show relatively higher expression levels in early embryonal life slowly decreasing during fetal development until birth to slightly increase again WWOX expression in postnatal life and early childhood up to adolescence",
+        "anchor": "2. WWOX Expression in CNS, HBT paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID33255508_Aldaz2020.xml",
+        "found_or_sought": "sought",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Cerebellar cortex is described as the exception, with a more marked early-postnatal increase that stays higher to adolescence. [Added 2026-09-27, ACTOR_ID scientist, wave-2 package development, QUESTION_DRIVEN re-read.]",
+        "snippet": "WWOX expression in cerebellar cortex (red line) clearly behaves differently showing a more significant increase in early postnatal life",
+        "anchor": "2. WWOX Expression in CNS, HBT paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID33255508_Aldaz2020.xml",
+        "found_or_sought": "found",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The review's G372R paragraph opens by attributing the family to Mallaret 2014: it describes that study, it does not report a new measurement. [Added 2026-09-27, ACTOR_ID scientist, wave-2 package development, QUESTION_DRIVEN re-read.]",
+        "snippet": "In the same study, a second consanguineous Israeli-Palestinian family with two affected children was described",
+        "anchor": "3.1. WWOX in Spinocerebellar Ataxia Type 12 (SCAR12)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID33255508_Aldaz2020.xml",
+        "found_or_sought": "sought",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Two sentences before its protein statement the review calls the functional consequence of G372R unclear. [Added 2026-09-27, ACTOR_ID scientist, wave-2 package development, QUESTION_DRIVEN re-read.]",
+        "snippet": "its functional consequence is unclear at this point",
+        "anchor": "3.1. WWOX in Spinocerebellar Ataxia Type 12 (SCAR12)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID33255508_Aldaz2020.xml",
+        "found_or_sought": "found",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The review states that BOTH missense variants leave fibroblast WWOX protein unaltered, citing Mallaret 2014 ([5]); Mallaret's fibroblasts come from one Family 1 (P47T) patient only, so for G372R this sentence extends a measurement the primary does not report. No method, n or control is given here. [Added 2026-09-27, ACTOR_ID scientist, wave-2 package development, QUESTION_DRIVEN re-read.]",
+        "snippet": "Analysis from patient fibroblasts showed that both described missense mutations do not alter WWOX protein expression",
+        "anchor": "3.1. WWOX in Spinocerebellar Ataxia Type 12 (SCAR12)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID33255508_Aldaz2020.xml",
+        "found_or_sought": "sought",
+        "panel_text_relation": "text_only"
       }
     ]
   }

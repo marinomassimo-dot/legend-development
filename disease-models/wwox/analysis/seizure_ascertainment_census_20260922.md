@@ -202,7 +202,7 @@ both sexes, against littermate controls. It requires a sound chamber and existin
 | `33914858`/`34747138` Repudi 2021 | unscored monitoring | death 3–4 wk; behavioural seizures reported from P9 | 🟢 window inside the lifespan |
 | `42422765` Obeid 2026 | ECoG **P14 → P21** | KO dies ~P21–28 | 🟡 window covers roughly the **final week** only; below P14 unbounded |
 | `36828035` Hussain 2023 (`P47T`) | **21–53 h of video-EEG**, adult >6 wk | animal lives **>1 year** | 🔴 **inverted failure**: the window under-samples the lifespan by more than two orders of magnitude, and there is **no juvenile recording at all** in an animal modelling a childhood-onset disorder |
-| `17823927` Ludes-Meyers 2007 (`Wwox^gt/gt`) | **none, ever** | 🔴 **viable into adulthood; Suzuki 2009 Table 2 records viability as 2 years** | 🔴🔴 **the decisive untested case — see below** |
+| `17823927` Ludes-Meyers 2007 (`Wwox^gt/gt`) | **none, ever** | 🔴 **viable into adulthood; Suzuki 2009 Table 2 records viability as 2 years** — 🔵 *rectified 2026-09-27: "2 years" is the primary's END OF OBSERVATION (censored at 104 weeks), not a lifespan; survival is significantly shorter than wild type (Breslow P = 0.0188), roughly half alive at ~104 weeks (`FTR-20260914-17823927-01`; `PMID17823927.json` entries 17, 22, 23)* | 🔴🔴 **the decisive untested case — see below** |
 
 #### 🔴🔴 The `Wwox^gt/gt` hypomorph is the experiment the field has been arguing about, and it has been sitting unused since 2007
 
@@ -210,7 +210,7 @@ Suzuki 2009's explanation for the mouse/rat discordance — *"the KO mice may di
 experience epileptic seizure"* — is testable only in a Wwox-deficient rodent that **does not** die
 early. **Exactly one exists.** `Wwox^gt/gt` (`PMID 17823927`) has no detectable Wwox protein in most
 tissues examined, is viable, and Suzuki's own Table 2 records its viability as **2 years** against
-the null's 2–3 weeks.
+the null's 2–3 weeks. *(Rectified 2026-09-27: the 2 years is the primary's 104-week observation cut-off, with survival significantly shorter than wild type — Breslow P = 0.0188 — so the animal outlives the null by far but is not a normal-lifespan animal; complete read `FTR-20260914-17823927-01`.)*
 
 **It has never been observed for seizures. Never EEG'd. Never provoked. Never given a single
 neurological endpoint.** Its published endpoints are B-cell lymphoma, testicular atrophy and
