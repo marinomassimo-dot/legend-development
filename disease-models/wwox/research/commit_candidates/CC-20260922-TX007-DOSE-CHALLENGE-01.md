@@ -439,3 +439,62 @@ the absolute axis — the 2.1× step itself is robust.**
 **§2 only.** `discovery_ledger_current.md` `DL-MOL-005`: an append-only rectification strikes "indipendente", re-labels the 2021 study a previous proof-of-concept from the same laboratory and the mWwox≈hWWOX comparison a within-study control rather than a replication, and records that no independent laboratory has replicated any part of the WWOX gene substitution (census 2026-09-22: 3 records, one laboratory). The measured findings are not demoted — multi-domain rescue, durability to P300 and the absence of hepatic expression stand, per the operator rule the candidate cites — and line 112 is not rewritten, because the ledger is append-only. Verified: `PAPER 005` (Repudi 2021) and `PAPER 011` (Obeid 2026) share the senior author, and PMID 34747138 administers a single dose, so every dose-response statement rests on PMID 42422765 alone.
 
 **Still owed:** §3 (journal-name drift), §4/§9/§10 and §9d. Flagged for Mirror ex-post review under §21e: it lowers the evidential standing of the strongest therapeutic arm.
+
+---
+
+## WAVE-2 READINESS (2026-09-27)
+
+**Actor:** `scientist`, wave-2 package "dose", scope = **the residue after §2**.
+**context_policy declared:** `QUESTION_DRIVEN`.
+
+### Verdict: **CLOSE — status PROPAGATED** (with one Mirror ex-post review still owed, which is not a hold)
+
+**§2 — PROPAGATED.** Confirmed against the file, not taken from the disposition note: `DL-MOL-005`'s line 112
+is unchanged (append-only respected) and the rectification bullet is present, striking *"indipendente"*,
+re-labelling the 2021 study a previous proof-of-concept **from the same laboratory** and the mWwox≈hWWOX
+comparison an intra-study control, and recording the one-laboratory census. Landed in `BATCH_20260927_001`.
+
+**§3 — CLOSE, PROPAGATED, and the residue is intentional.** A repository-wide sweep today finds
+*"Mol Ther Oncol"* / *"Mol Ther Methods Clin Dev"* in exactly **two** files:
+`analysis/tx007_dose_challenge_20260922.md` lines 521–523 and this candidate's own §3 table. In both places
+the strings appear **inside the record of the defect**, quoted as wrong (*"— wrong."*, *"the expansion is
+wrong"*). ⇒ all 14 live citations are corrected as §3 states, and the two remaining occurrences must **not**
+be repaired: repairing them would erase the evidence that the drift happened. Verified separately that the
+correct name — *Molecular Therapy Advances* (`Mol Ther Adv`) — is what the primary itself prints: the
+re-acquired JATS carries `<journal-id journal-id-type="nlm-ta">Mol Ther Adv</journal-id>` and DOI
+`10.1016/j.omta.2026.201791`, and `PAPER 011` and `CLAIM 011` both already read *Molecular Therapy Advances
+(OMTA — Mol Ther Adv)*.
+
+**§9d — DONE, applied outside batch.** The item *"label 'WPRE-lacking 2021 configuration' as an inference
+from the 2026 paper wherever stated"* had one live site:
+`analysis/tx007_genotype_class_ceiling_20260921.md:175` (*"With the WPRE element — the configuration of the
+2021 proof-of-concept"*). A dated, append-only correction block now relabels it `PREMISE_TAG: INFERENZA`,
+with the grounds: the 2021 paper never mentions WPRE, and its Appendix Fig S1A shows all three constructs
+WPRE-free (`CC-20260826-DOSE-ADJUDICATION-01` §2). The second site,
+`analysis/model_horizon_and_p47t_platform_20260922.md:178`, already quotes the phrase **as** the repository's
+own unlabelled inference and needs no repair. In the same act, `analysis/mechanism_intervention_map.md`
+`R-01`'s `INTERVENTION` row stopped describing the therapeutic configuration as WPRE-bearing — that was the
+same inference, propagated one file further and stated as fact about the vector.
+
+**§4 / §9 / §10 — nothing owed.** They are this candidate's own append-only self-corrections (§4a replaced by
+§9, §4b by §10) and they propose **no** edit to any surface: §9 records that the censoring claim and its
+counter-claim are both unsupported, and §10 records the ratio as invariant and the unit defect as bounded at
+exactly 2×. 🎯 **§10's bounded-2× conclusion is now independently confirmed on the primary** by this wave:
+the Methods state no dose at all and the protocol is one injection per hemisphere
+(`FTR-20260927-42422765-07`, manifest entries 31–33) — which is exactly what makes the factor **2 and not
+unbounded**. The sentence §10 was written to retire — *"the unit ambiguity is the size of the effect"* — stays
+withdrawn.
+
+🆕 **One thing this wave adds to §10e's surface census.** §10e downgraded the third LD/HD exponent surface
+because a web-search snippet now returns *"1.23 × 10 vg"*, exponent deleted, leaving the margin at one
+surface. **A third primary-artefact surface exists again:** the re-acquired PMC JATS
+(`PMID42422765_Obeid2026_PMC_2026-09-27.xml`), where the exponent is **not deleted but flattened** —
+`10<sup>11</sup>` reads as `1011`. ⇒ the dose values are 🟢 HIGH on **two figure/text primaries plus one
+structured surface**, and the damage taxonomy needs two mechanisms, `DELETED` and `FLATTENED`, not one
+(carried into `CC-20260921-TX007-CEILING-AND-DOSE-CONTROL-01` §3(d)).
+
+**No operation list:** every canonical effect of this candidate is either propagated (§2) or self-retired
+(§4/§9/§10); §3 and §9d are closed on non-canonical surfaces and recorded above as **applied outside batch**.
+
+**Pending:** the Mirror ex-post review this candidate asks for, because it lowered the evidential standing of
+the strongest therapeutic arm. Under §21e that is a review after the fact and **not** a hold on this closure.

@@ -214,6 +214,21 @@
    "path": "files/fulltext/PMID42422765_Obeid2026_assets/S_p07_300dpi.png",
    "sha256": "b66881aeed0ae06b56fa813eee8373eaceaf507572e1950990d303b5d2707fcf",
    "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID42422765_Obeid2026_PMC_2026-09-27.xml",
+   "sha256": "7bea83346b708e541d2c432e5da4029f69673e1abc3c6fe70926ad0e3ec2eef2",
+   "kind": "article_text",
+   "note": "PMC JATS XML re-acquired 2026-09-27 because none of the bytes the 2026-08 manifest fingerprints are present in this checkout (evidence_presence.py: 0/18 present). Structured surface preferred over the PDF per rule 5d; the 2026-08 HTML artifact is retained above as the historical surface.",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=13343157&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-09-27",
+    "derived": false,
+    "result_sha256": "7bea83346b708e541d2c432e5da4029f69673e1abc3c6fe70926ad0e3ec2eef2"
+   }
   }
  ],
  "verbatim_locators": {
@@ -457,6 +472,46 @@
     "artifact": "files/fulltext/PMID42422765_Obeid2026_assets/S_p07_300dpi.png",
     "anchor": "Supplementary Figure S5, panels A-K, mmc1.pdf page 7 rendered at 300 dpi",
     "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "THE AUTHORS' OWN ACCOUNT OF WHY WPRE WAS REMOVED IS A NON-OBSERVATION, NOT A SAFETY RESULT. Quoted verbatim from a structured surface so that CC-20260921-TX007-CEILING-AND-DOSE-CONTROL-01 §1b no longer rests on an unreceipted in-act fetch.",
+    "snippet": "Although no overt toxicity was observed in prior studies, we removed WPRE as a proactive risk-mitigation step to improve the predictability and control of neuronal WWOX expression for potential clinical translation.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42422765_Obeid2026_PMC_2026-09-27.xml",
+    "anchor": "Discussion, paragraph on control of transgene expression for efficacy and safety",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE PRICE OF THAT SAFETY MARGIN, STATED BY THE AUTHORS: less expression per genome has to be bought back with more capsid. This is the sentence CC-20260921-TX007-CEILING-AND-DOSE-CONTROL-01 §1b and CC-20260922-TX007-DOSE-CHALLENGE-01 §10d both use, and it is now receipted.",
+    "snippet": "However, this reduction in expression necessitates the use of higher vector doses to achieve comparable therapeutic outcomes.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42422765_Obeid2026_PMC_2026-09-27.xml",
+    "anchor": "Results, 'Removal of WPRE enables controlled WWOX expression while maintaining therapeutic efficacy at higher vector doses', final sentence",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE LD/HD DOSE VALUES ARE PRINTED IN THE RUNNING TEXT AND IN THE FIGURE 3 CAPTION, NOT ONLY ON THE PANEL — so CLAIM 011's 1.23/2.63 endpoints have a text-surface attestation independent of the raster read of gr3.jpg. This discharges verification item 1 of CC-20260922-CLAIM011-DOSE-ENDPOINTS-01 for the printed values. The unit convention is absent here exactly as that candidate states: the doses are bare vg.",
+    "snippet": "For translational relevance, we evaluated two clinically applicable doses: an LD (1.23 × 1011 vg) and a higher dose (HD, 2.63 × 1011 vg) (Figure 3A).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42422765_Obeid2026_PMC_2026-09-27.xml",
+    "anchor": "Results, 'WWOX gene therapy improves survival and systemic phenotypes in a dose-dependent manner', first paragraph; the same two values recur in the Figure 3, Figure 5 and Figure 6 captions",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE INJECTION IS BILATERAL ICV AT 2.0 µL PER HEMISPHERE, WHICH IS WHAT BOUNDS THE UNIT AMBIGUITY AT EXACTLY A FACTOR OF 2 RATHER THAN LEAVING IT UNBOUNDED. Discharges verification item 3 of CC-20260922-CLAIM011-DOSE-ENDPOINTS-01.",
+    "snippet": "A Micro-4 nano-pump controller was used to ensure a steady injection rate of 1–1.5 μL/min, delivering 2.0 μL/hemisphere through a Hamilton syringe with a 32G needle (World Precision Instruments).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42422765_Obeid2026_PMC_2026-09-27.xml",
+    "anchor": "Materials and methods, 'ICV injection of AAV particles into P0-P5 Wwox-null mice'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE METHODS STATE NO DOSE AT ALL: the only quantitative statement about vector in the whole Methods is how the titre was assayed. Machine-checked on the declared artifact: across the 14,659 characters from 'Materials and methods' to 'Data and code availability' the strings 'vg', '1.23', '2.63' and any exponent form of 10 to the 10th or 11th occur zero times. Discharges verification item 2 of CC-20260922-CLAIM011-DOSE-ENDPOINTS-01, which is the strongest single support for 'the convention is never stated'.",
+    "snippet": "Viral titers were determined by RT-qPCR using bGH primers.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42422765_Obeid2026_PMC_2026-09-27.xml",
+    "anchor": "Materials and methods, 'Plasmid vectors', final sentence — the only vector-quantity sentence in the Methods",
+    "panel_text_relation": "text_only"
    }
   ]
  }

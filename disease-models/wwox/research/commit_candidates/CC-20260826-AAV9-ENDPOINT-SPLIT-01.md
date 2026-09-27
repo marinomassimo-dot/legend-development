@@ -309,3 +309,92 @@ reproduce the existing gap.*
 **Part 1 only.** `claim_registry_current.md#CLAIM 011`: the flag's final clause "e la lettura che li risolverebbe è `partial_fulltext_read`" is replaced by this candidate's own verbatim replacement recording the discharge. Verified in the receipt ledger before editing: `FTR-20260814-42422765-06` is `complete_fulltext_read` with every coverage field read (tables `not_present`), and `deepdive_manifests/PMID42422765.json` holds 29 locators — 16 figure and 13 body — exactly as the replacement states. `Status: flagged for review` is unchanged, and no `Summary`, endpoint or dose wording moved.
 
 **Still owed, so this candidate stays open:** Part 2 (endpoint × dose × window narrowing, MOTOR → `PARTIAL / NOT_NORMALISED`), which the candidate itself classifies MAJOR fail-closed and which collides with the whole dose family and the FIVECLAIM pair on `CLAIM 004`/`011`; and the two `therapy_levers.md` items D-L1 and D-L2.
+
+---
+
+## WAVE-2 READINESS (2026-09-27)
+
+**Actor:** `scientist`, wave-2 package "dose", scope = **the residue after Part 1**.
+**context_policy declared:** `QUESTION_DRIVEN`.
+
+### Part 1 — **CLOSE, status PROPAGATED** (adjudicated against the file and the history, not taken from a report)
+
+The triage handed to this wave stated that `CLAIM 011` *"still self-contradicts exactly as the CC
+describes"*. **That is stale and it is corrected here.** Verified at commit `db7fbeb`
+(`registry_records.py get --id "CLAIM 011"`, claim-registry digest `fbaef2510878`): the clause
+*"e la lettura che li risolverebbe è `partial_fulltext_read`"* is **gone**, and the flag now carries this
+candidate's own replacement verbatim — *"✅ **Condizione di rinvio assolta il 2026-08-14** —
+`FTR-20260814-42422765-06`, `complete_fulltext_read`, 29 locator (16 attestazioni di figura, 13 snippet di
+corpo)…"*. History: `git log -S` on both strings returns **`c99dfe5` — "BATCH_20260927_001: propagate the
+pointer and count repairs, and order the changelog"**, which is where the old clause left and the new text
+arrived. `Status: flagged for review` is unchanged, as Part 1 promised. ⇒ **Part 1 is propagated; nothing of
+it is owed.**
+
+### D-L1 and D-L2 — **APPLIED OUTSIDE BATCH** (analysis layer, MINOR, as this candidate's severance states)
+
+`disease-models/wwox/analysis/therapy_levers.md`, both verified present exactly once before editing:
+
+- **D-L1 · C1** — *"rescued Wwox-null mouse phenotypes — epilepsy, hypomyelination, lethality"* → replaced by
+  the improvement wording with the 🔴 wild-type comparison spelled out (unmyelinated axons per field, WT ≈26
+  vs treated ≈52, significant **against** the rescue; the remaining myelin panels' WT-versus-treated
+  comparison `NOT_TESTED`), citing `deepdive_manifests/PMID34747138.json` entries 9–10. ✅ **The preservation
+  constraint is met:** *"By replacing functional WWOX in neurons, it bypasses any allele combination"*
+  survives byte-for-byte, and the word *"partially"* was not introduced.
+- **D-L2 · Practical priority 4** — *"AAV9-WWOX gene therapy (already effective in mouse)"* → replaced by the
+  endpoint-scoped wording: effective on **survival, spike-wave discharges and gliosis, at high dose, in the
+  P0–P5 window**; **motor and locomotor behaviour not impaired and not normalised**; cognition and
+  developmental trajectory **not measured**. ⚠️ This is the version that depends on the MOTOR correction, and
+  it is written at that correction rather than before it.
+
+**Two further stale sites in `analysis/mechanism_intervention_map.md`, repaired in the same act** because
+this candidate owns `R-01` and the wording contradicted its own MOTOR correction:
+- the stress-test row for `R-01` read *"Retained for survival/SWD/**motor**/gliosis at HD"* — `motor` removed,
+  with the reason named;
+- `R-01`'s `KNOWN_MAJOR_SAFETY_CONSTRAINTS` DRG clause is now labelled **TRANSFERRED (T4/T5)** with its
+  review source (PMID 42128308 §11) and the statement that **no DRG assessment exists in either WWOX paper**
+  — this candidate's own `TRANSFER_BOUNDARY`, applied;
+- (and, from the sibling dose candidates, `R-01`'s `INTERVENTION` row no longer describes the therapeutic
+  configuration as WPRE-bearing, and `MAIN_TRANSLATIONAL_RISK` no longer says the threshold is *"below
+  2.63 × 10¹¹ vg"*).
+
+### Verdict on Part 2: **READY_MAJOR** — unchanged class, fail-closed, **not applied**
+
+**What was verified for it in this wave.** `CLAIM 004` still carries `crisi` and `letalità` unqualified in
+its Summary and `CLAIM 011` still carries `comportamento` unqualified — so Part 2's `CURRENT_TARGET` table is
+accurate today. `M5`'s `NOT_RECORDED` bracket (S4A, KO arm) is **still `NOT_RECORDED`**: closing it needs the
+`mmc1.pdf` page 6 render, and 🔴 **none of the 18 artifacts this manifest fingerprints is present in this
+checkout** (`evidence_presence.py`). The candidate's own condition — *"M5's KO bracket … should be closed by
+a re-read before Part 2 reaches Mirror"* — therefore stands **unmet for an evidence-transport reason**, and
+that is the single concrete blocker on Part 2 beyond its review ladder.
+
+### Exact operation list for `batch_commit.py propagate` (Part 2)
+
+1. **`.../claim_registry_current.md` · `CLAIM 011` · `replace-within`** — *old:* `comportamento, mielinizzazione, gliosi` ·
+   *new:* `comportamento locomotorio/motorio (nessun endpoint cognitivo misurato; `PARTIAL / NOT_NORMALISED` — 3 degli 8 pannelli della Fig 4 differiscono dal WT nella direzione dell'eccesso, senza correzione per molteplicità), mielinizzazione (`UNRESOLVED` nello studio di dose: nessun braccio trattato è quantificato), gliosi (`RESCUE` a dose alta, `NO_RESCUE` a dose bassa)` — boundary line naming `CLAIM 031`.
+2. **`.../claim_registry_current.md` · `CLAIM 004` · `replace-within`** — *old:* `crisi, atassia,` ·
+   *new:* `crisi (SWD/ECoG: il confronto decisivo trattato-vs-WT è tracciato e nullo), atassia,` — plus, at the
+   end of the Evidence-boundary field, the `(endpoint × dose × finestra)` closing constraint: **no statement of
+   the form "the phenotype is rescued" is supported**.
+3. **`.../therapeutics/therapeutic_strategies_current.md` · `TX-007` · `replace-within`** — *old:* `neonatal ICV → seizure/myelin/survival rescue in the Wwox-null mouse` ·
+   *new:* `neonatal ICV → rescue of **survival** and of **spike-wave discharges**, with **myelination partially restored and unresolved in the dose study**, in the Wwox-null mouse`. ⚠️ This does **not** move a `SCORE` or the `SAFETY` text and is still bundled into Part 2 because it is the same narrowing.
+4. **`analysis/mechanism_intervention_map.md` · `R-01`** — the class `SPLIT` written into the record itself
+   (the stress-test row already carries it): retain `READY_FOR_WWOX_PRECLINICAL_CONSIDERATION` for
+   survival · SWD · gliosis at HD in P0–P5; `PROMISING_BUT_GAP` for cognition · developmental trajectory ·
+   myelin-in-the-dose-study · cerebellum · post-neonatal administration. Non-canonical, **MINOR by itself but
+   left with Part 2** because it is the class statement the MAJOR narrowing decides.
+
+### LOCATOR TRIPLES FOR BLIND AUDIT
+
+| proposition | verbatim quote | anchor |
+|---|---|---|
+| The paper's own text asserts no significant locomotor difference, which the caption's asterisk definition and the panels refuse. | "Locomotor activity parameters, including movement velocity and total distance traveled, as well as spatial exploration of center and periphery zones, showed no significant differences between groups (Figures 4B, 4D–4G)" | `deepdive_manifests/PMID42422765.json` entry 1, article body |
+| The caption fixes what the asterisk means, so the sentence and the panels cannot both be right. | "Statistical analysis was performed using Student’s t test (∗p < 0.05; ns, not significant), Error bars represent mean ± SD" | manifest entry 2, Figure 4 caption, final sentence |
+| Three of eight Figure 4 panels differ significantly from wild type, in the exceed direction. | *(figure attestation)* Panel 4D velocity WT ~9.5 vs KO+W HD ~11.5, bracket `*`; panel 4E total distance ~3400 vs ~4300, bracket `*`; panels 4F–4J `ns` | manifest entry 0 — **bytes absent from this checkout; not auditable until re-acquired** |
+| There is no untreated-disease arm at P90 and there cannot be one, so the only comparison the design permits is against wild type. | "LD-treated mice did not survive to P90; therefore, analyses were limited to WT and HD-treated groups" | manifest entry 11, Results, behaviour section |
+| The epilepsy panel prints a non-significant value where the text claims a significant elevation. | "Averaged spike counts further confirmed a significant elevation in spike activity in KO animals (Figure 7C)" | manifest entry 4, article body — paired with entry 3's panel attestation of `0.2000` printed above the WT–KO bracket (**figure bytes absent**) |
+| Myelination in the dose study is never quantified in a treated arm. | *(figure attestation)* S7 panel I: three MBP images labelled WT-RI, KO+W-LD, KO+W-HD, no axis, no bar, no significance marker | manifest entry 6 — **bytes absent** |
+| On the one panel where treated animals are compared with wild type for myelin, the comparison is significant against the rescue. | *(figure attestation)* EM figure, "Unmyelinated axons per FOV", WT ≈26 vs treated ≈52, bracket `**`; the myelinated-axon panels bracket only WT-vs-KO and KO-vs-rescued | `deepdive_manifests/PMID34747138.json` entry 9 — **bytes absent** |
+
+**Pending on Part 2:** Mirror (MAJOR, fail-closed) → operator; a blind locator audit that can only cover the
+four text triples until the figure bytes are re-acquired; and `M5`'s `NOT_RECORDED` bracket, which needs
+`mmc1.pdf` page 6.
