@@ -648,8 +648,8 @@ invisible. But one of the two hits is precisely on point:
 3. The in-silico evidence cannot substitute, and not merely because a prediction is not a
    measurement: **§6.1 shows the predictor is inverted against the six measurements that exist.**
    The `+1.514 kcal/mol` is evidentially empty in both directions.
-4. Read-across is closed in every direction the repository has: `P47T` is a WW1 lesion with normal
-   protein and a retracted read-across; `G372R` is a qualitative organoid IF with a carrier-genotype
+4. P47T-to-Q230P read-across is retracted: `P47T` is a WW1 lesion with protein present at visually
+   similar abundance in Mallaret fibroblasts, unquantified, while Hussain cerebellar abundance is unresolved; `G372R` is a qualitative organoid IF with a carrier-genotype
    comparator; `P252A` is a **ClinVar-`Benign`** CMV transgene in thyroid carcinoma; `A141T` is a
    different tissue, a different phenotype, n=1, no statistic. **Q230P ≠ P47T ≠ G372R ≠ A141T ≠ P252A.**
 5. The fold-family transfer (§8) supplies a **prior**, not an answer — and it supplies a prior that

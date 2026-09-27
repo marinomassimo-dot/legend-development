@@ -8,6 +8,8 @@ purchase, quotation and any commercial commitment are `HUMAN_REQUIRED`.
 **Nothing here is medical advice.** No molecule, dose, route or clinical recommendation appears below.
 **Alleles are never pooled.** Each row is one reagent, or one measurement on one allele in one system.
 
+**Q230P interpretation boundary (2026-09-27):** The cause of the reported protein non-detection remains unresolved. Impaired translation, insolubility, and accelerated turnover are competing possibilities; reagent specificity alone cannot select among them. Historical wording below is evidence and audit trail, not a demonstrated degradation mechanism for Q230P.
+
 > 🎯 **AMENDED IN PLACE 2026-09-23 by SCIENTIST 2** (`scientist-2`), on first-hand reading of the complete
 > source bundle for `PMID 33914858` (Repudi *et al.* 2021, *Brain*) — a paper that had **zero receipts and
 > zero full-text access** when this census was written. **Four additive edits, no deletion, no verdict

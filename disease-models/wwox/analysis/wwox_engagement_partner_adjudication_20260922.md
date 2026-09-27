@@ -10,6 +10,8 @@ stage, no push. **Nothing here is medical advice.** No molecule, dose or route f
 appears. The reference genotype is a WWOX-DEE genotype class; no individual-level record is
 reintroduced.
 
+**Q230P interpretation boundary (2026-09-27):** The cause of its protein non-detection remains unresolved. Impaired translation, insolubility, and accelerated turnover remain distinct possibilities. The P252A and P282A observations below are other-allele controls and do not establish a degradation mechanism for Q230P.
+
 ---
 
 ## VERDICT UP FRONT
