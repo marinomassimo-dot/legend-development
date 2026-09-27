@@ -9,8 +9,10 @@ summaries and cumulative memory.
 from __future__ import annotations
 
 import re
+import tempfile
 import unittest
 from pathlib import Path
+from unittest import mock
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -25,7 +27,56 @@ def markdown_lines():
             yield path.relative_to(ROOT), number, line
 
 
+def markdown_statements(text):
+    """Join soft-wrapped prose without crossing Markdown item or table boundaries."""
+    start, parts = None, []
+    boundary = re.compile(r"^\s*(?:#{1,6}\s|[-*+]\s|\d+[.)]\s|\||>)")
+    for number, line in enumerate(text.splitlines(), 1):
+        if not line.strip() or boundary.match(line):
+            if parts:
+                yield start, " ".join(parts)
+                start, parts = None, []
+            if not line.strip():
+                continue
+        if start is None:
+            start = number
+        parts.append(line.strip())
+    if parts:
+        yield start, " ".join(parts)
+
+
 class ScientificConsistencyTests(unittest.TestCase):
+    def test_wrapped_statements_and_unrelated_variants_do_not_hide_assertions(self) -> None:
+        cases = (
+            (
+                self.test_p47t_is_not_asserted_as_q230p_read_across_proof,
+                "4. P47T read-across to Q230P is\n   retracted.\n",
+                "4. P47T read-across to Q230P is\n   proven.\n",
+            ),
+            (
+                self.test_retracted_recoverable_window_is_not_reasserted,
+                '- The "recoverable window" claim is\n  withdrawn.\n',
+                '- The "recoverable window" claim is\n  proven.\n',
+            ),
+            (
+                self.test_q230p_protein_loss_cause_remains_unresolved,
+                "Q230P protein loss has an unresolved cause.\n\n"
+                "- P252A shows protein degradation.\n",
+                "Q230P is a degradation lesion.\n",
+            ),
+        )
+        with tempfile.TemporaryDirectory(dir=ROOT) as directory:
+            fixture_root = Path(directory)
+            fixture = fixture_root / "fixture.md"
+            with mock.patch.dict(globals(), {"WWOX": fixture_root}):
+                for guard, qualified, stale in cases:
+                    with self.subTest(guard=guard.__name__):
+                        fixture.write_text(qualified, encoding="utf-8")
+                        guard()
+                        fixture.write_text(stale, encoding="utf-8")
+                        with self.assertRaises(AssertionError):
+                            guard()
+
     def test_k63_is_not_presented_as_a_universal_cma_route(self) -> None:
         stale = []
         shortcuts = (
@@ -79,14 +130,12 @@ class ScientificConsistencyTests(unittest.TestCase):
             r"(?i)\b(?:not|non|no proof|retract(?:ed|ion)?|ritirat|withdrawn|"
             r"comparator|caution|non dimostrat)\b"
         )
-        for path, number, line in markdown_lines():
-            if not re.search(r"(?i)\bP47T\b", line):
-                continue
-            if not re.search(r"(?i)read[- ]across|legge attraverso", line):
-                continue
-            if negation.search(line):
-                continue
-            stale.append(f"{path}:{number}: {line.strip()}")
+        for path in sorted(WWOX.rglob("*.md")):
+            for number, statement in markdown_statements(path.read_text(encoding="utf-8")):
+                if (re.search(r"(?i)\bP47T\b", statement)
+                        and re.search(r"(?i)read[- ]across|legge attraverso", statement)
+                        and not negation.search(statement)):
+                    stale.append(f"{path.relative_to(ROOT)}:{number}: {statement}")
         self.assertFalse(
             stale,
             "Retracted P47T→Q230P read-across remains asserted:\n"
@@ -103,9 +152,10 @@ class ScientificConsistencyTests(unittest.TestCase):
             r"no predictive|non ha valore predittivo|does not discriminate|"
             r"non discrimina|heuristic|euristic|not a guarantee)"
         )
-        for path, number, line in markdown_lines():
-            if window.search(line) and not qualification.search(line):
-                stale.append(f"{path}:{number}: {line.strip()}")
+        for path in sorted(WWOX.rglob("*.md")):
+            for number, statement in markdown_statements(path.read_text(encoding="utf-8")):
+                if window.search(statement) and not qualification.search(statement):
+                    stale.append(f"{path.relative_to(ROOT)}:{number}: {statement}")
         self.assertFalse(
             stale,
             "Retracted ΔΔG recoverability window remains asserted:\n"
@@ -207,22 +257,20 @@ class ScientificConsistencyTests(unittest.TestCase):
 
         for path in sorted(WWOX.rglob("*.md")):
             text = path.read_text(encoding="utf-8")
-            lines = text.splitlines()
-            for number, line in enumerate(lines, 1):
+            for number, line in enumerate(text.splitlines(), 1):
                 if (
                     any(pattern.search(line) for pattern in collapsed_conclusions)
                     and not explicit_retraction.search(line)
                 ):
                     stale.append(f"{path.relative_to(ROOT)}:{number}: {line.strip()}")
-            if (
-                q230p.search(text)
-                and protein_loss_claim.search(text)
-                and not competing_mechanism.search(text)
-            ):
-                stale.append(
-                    f"{path.relative_to(ROOT)}: document asserts a protein-loss "
-                    "mechanism without preserving the unresolved alternatives"
-                )
+            for number, statement in markdown_statements(text):
+                if (q230p.search(statement) and protein_loss_claim.search(statement)
+                        and not competing_mechanism.search(statement)
+                        and not explicit_retraction.search(statement)):
+                    stale.append(
+                        f"{path.relative_to(ROOT)}:{number}: Q230P protein-loss "
+                        "mechanism stated without unresolved alternatives"
+                    )
 
         self.assertFalse(
             stale,
