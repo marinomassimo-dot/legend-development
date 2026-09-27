@@ -41,6 +41,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import subprocess
 import sys
 from pathlib import Path
 
@@ -184,6 +185,43 @@ def audit_one(path: Path, corpus: Path) -> dict:
     return result
 
 
+def primary_checkout_corpus(root: Path) -> Path | None:
+    """The corpus of the checkout that owns this repository, when `root` is a linked worktree.
+
+    `files/` is gitignored, so it exists in the one checkout that fetched the artifacts and in
+    no worktree. `git rev-parse --git-common-dir` names the `.git` every worktree shares; its
+    parent is that checkout. Returns None when it cannot be derived, when `root` IS that
+    checkout, or when the checkout holds no corpus — a hint must never name a place that is
+    not there.
+    """
+    result = subprocess.run(["git", "-C", str(root), "rev-parse", "--path-format=absolute",
+                             "--git-common-dir"], capture_output=True, text=True)
+    if result.returncode != 0 or not result.stdout.strip():
+        return None
+    primary = Path(result.stdout.strip()).parent
+    if primary.resolve() == root.resolve():
+        return None
+    candidate = primary / "files" / "fulltext"
+    return candidate if candidate.is_dir() else None
+
+
+def corpus_hint(root: Path, corpus: Path, absent_here: int) -> str:
+    """One line for a run that could not see its surfaces — the errand, not the defect.
+
+    HANDOFF-2 of CC-20260826-PMID36828035-DURABILITY-01: in a worktree the absence of `files/`
+    is the NORMAL state, and a run that only said `unauditable` cost every reader one failed
+    run per worktree before they found `--corpus`. Empty when there is nothing to hint.
+    """
+    if not absent_here and corpus.is_dir():
+        return ""
+    what = (f"{absent_here} manifest(s) declare surfaces absent from this tree"
+            if absent_here else f"no corpus at {corpus}")
+    primary = primary_checkout_corpus(root)
+    target = str(primary) if primary else "<checkout that holds files/>/files/fulltext"
+    return (f"HINT: {what} — files/ is gitignored and exists only in the checkout that "
+            f"fetched it; re-run with --corpus {target}")
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     parser.add_argument("--root", default=str(ROOT))
@@ -197,13 +235,14 @@ def main(argv: list[str] | None = None) -> int:
     root = Path(args.root).resolve()
     corpus = Path(args.corpus) if args.corpus else root / "files" / "fulltext"
 
-    audited = unauditable = missing_total = 0
+    audited = unauditable = missing_total = absent_here = 0
     for path in manifests(root, args.disease):
         if args.pmid and args.pmid not in path.stem:
             continue
         result = audit_one(path, corpus)
         if result["reason"]:
             unauditable += 1
+            absent_here += result.get("cause") == "surface_absent_here"
             print(f"  {result['pmid']:>10}  schema={result['schema']}  "
                   f"— {result['reason']}")
             continue
@@ -222,6 +261,9 @@ def main(argv: list[str] | None = None) -> int:
           f"{missing_total} quote(s) not found")
     if missing_total:
         print(CLOSED_SET_NOTE)
+    hint = corpus_hint(root, corpus, absent_here)
+    if hint:
+        print(hint)
     if not audited:
         print("NOTHING AUDITED — a corpus that cannot be read is not a corpus with no defects")
         return 0

@@ -78,7 +78,8 @@ Run everything as `python3 <path> --help` first. Paths are repo-relative.
 
 | You want | Run |
 |---|---|
-| does every locator's quote actually occur in the artifact it was taken from | `framework/scripts/locator_audit.py` |
+| does every locator's quote actually occur in the artifact it was taken from (in a worktree, pass `--corpus`; the run prints the hint when it cannot see its surfaces) | `framework/scripts/locator_audit.py` |
+| a paper's load-bearing citations — **how many this checkout can adjudicate** (the denominator, always printed), and the reader's `SUPPORTED` / `NOT_CONTAINED` / `CONTRADICTED` tally against it; the judgement stays with the reader | `framework/scripts/upstream_citation_census.py` |
 | which readings contradicted an already-persisted locator, and were they audited | `framework/scripts/locator_contradiction_audit.py` |
 | where the identifiers inside a locator's proposition came from | `framework/scripts/locator_identifier_provenance.py` |
 | do the quotations inside prose dossiers occur in a paper anybody can point at | `framework/scripts/dossier_quote_audit.py` |
