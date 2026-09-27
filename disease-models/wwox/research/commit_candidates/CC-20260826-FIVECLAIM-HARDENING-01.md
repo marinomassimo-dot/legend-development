@@ -409,3 +409,46 @@ missing artefact.
 itself on the surface the other half repairs — §0.
 🔴 **Locator audit REQUIRED before the MAJOR edits.** No new locator is needed: packet groups A and
 B already cover every string above.
+
+
+---
+
+## WAVE-2 READINESS (2026-09-27)
+
+**Actor:** `scientist`, wave-2 package `seizure`, under the Orchestrator's wave-2 dispatch. **Append-only: nothing above this line was rewritten.**
+
+**context_policy:** `SYNTHESIS` over the eleven deltas' targets, with the `QUESTION_DRIVEN` reading of PMID 34747138 recorded in `CC-20260826-FIVECLAIM-PACKAGE-01`'s block (Δ5 is shared). Prior knowledge admitted and named: this candidate, `CC-20260826-FIVECLAIM-PACKAGE-01`, the current claim registry, `working_model_current.md` (WM_v6.0 + changelog), `meta/meta_gaba_paradox_current.md`, `research/discovery_ledger_current.md`, `research/dismissal_ledger_current.md`.
+
+### What was done — each of the eleven deltas re-pointed at the current text
+
+| Δ | Target | State verified at this HEAD | Disposition in this wave |
+|---|---|---|---|
+| Δ1–Δ3, Δ7 | `CLAIM 037` Title / boundary, `CLAIM 005` prohibition, new `CLAIM 040` | propagated by `BATCH_20260922_SEIZURE`; `CLAIM 037`/`CLAIM 005` moved again by `BATCH_20260927_002` | **CLOSE — PROPAGATED.** Not re-proposed. `CLAIM 005`/`CLAIM 037` are `m002`'s this wave |
+| Δ4, Δ5, Δ6 | `CLAIM 011`, `CLAIM 004`, `CLAIM 016` | still live, verbatim | **Owned by `CC-20260826-FIVECLAIM-PACKAGE-01`**, whose readiness block carries the exact operations, the rebased Δ5 and the triples. **Do not apply twice** |
+| Δ8 | `working_model_current.md` claim-mirror row `037` | 🔴 **already repaired** — row 196 now mirrors the post-`BATCH_20260927_002` title (rat + null mouse + `P47T` + mouse audiogenic, kindling rat-only) | **CLOSE — PROPAGATED.** The candidate's premise (*"a second copy of a deleted falsehood"*) no longer holds |
+| Δ9 | `meta/meta_gaba_paradox_current.md` provenance directive | still carried the two asserted-absence sentences | **✅ APPLIED OUTSIDE BATCH** — see below |
+| Δ10 | `discovery_ledger_current.md` `DL-MECH-075` headline | still live | **Not touched — owned by the `m002` package** (Mirror-002 repairs of `DL-MECH-075`). The wording proposed here remains available to it |
+| Δ11 | `dismissal_ledger_current.md` `DIS-011` | still `RIGETTATA` with a fired trigger | **Not touched — owned by the `m002` package.** Also the same act as `CC-20260826-CROSS-CLAIM-CENSUS-03` §2.A: **do it once** |
+
+### Δ9 — applied outside batch, and why that is not a smuggled MAJOR
+
+`meta/meta_gaba_paradox_current.md` is a **non-canonical meta surface**, and by 2026-09-27 its directive was a **stale copy of two sentences already deleted from canonical by operator-authorised batches** — `CLAIM 037`'s *«explicitly absent in Wwox-null mice»* (`BATCH_20260922_SEIZURE`, WM_v5.0) and `CLAIM 005`'s *«Seizures in the Wwox literature are a rat `lde/lde` phenotype»* (`BATCH_20260927_002`, WM_v6.0). Propagating an authorised deletion into a mirror is **MINOR by construction**; it decides nothing new. Applied:
+
+- the two asserted-absence sentences are **withdrawn in place** (append-style, with the old wording quoted so the history is legible), naming the two batches that deleted them and the four mouse datasets an instruction to read murine seizure context as rat-derived would suppress;
+- what stays in force is stated explicitly: `NOT_REPORTED ≠ ABSENT`, and `CLAIM 005`'s prohibition on asserting **epileptogenesis as a measured process**;
+- the terminal-source sentence is corrected from *"mice show no epilepsy"* to *"epilepsy … **has not been reported** — a survey artefact of its four uninstrumented sources"*;
+- the chain finding, the metabolic-decompensation caveat and every link of the traced chain are **untouched**; version stamped `v1.2` with a dated `Last update` line saying it was applied outside a `BATCH_COMMIT` and why.
+
+🔴 **What was deliberately NOT done there:** the blockquote's wikilink to `DIS-011` was left exactly as it is, because `DIS-011`'s heading is `m002`'s to change and a link rewritten now would break at their edit.
+
+### Verdict: **READY_MAJOR** — but as a *routing* document, not as an operation list of its own
+
+Nothing in this candidate is left for a batch executor to apply **from this file**: Δ1–Δ3/Δ7/Δ8 are closed, Δ4–Δ6 are in `FIVECLAIM-PACKAGE`'s list, Δ9 is applied, Δ10–Δ11 are `m002`'s. It is `READY_MAJOR` rather than `CLOSE` because its §7 requirement — **route the surviving deltas as one unit, under operator authorisation** — still binds the batch that carries Δ4–Δ6 and `m002`'s Δ10–Δ11 together, and its `BASELINE_EFFECT` / `DO_NOT_INFER` fields are the review material for them.
+
+### LOCATOR TRIPLES FOR BLIND AUDIT
+
+Its surviving MAJOR limbs' triples live where their operations live: `CC-20260826-FIVECLAIM-PACKAGE-01` (Δ4–Δ6, re-derived first-hand today) and `CC-20260826-LOCATOR-PACKET-01` groups A/B (Δ10–Δ11, unchanged). ✅ **Δ9's repair needs none of its own** — it asserts nothing new; its warrant is the two changelog rows `WM_v5.0` and `WM_v6.0`, quoted verbatim inside the repaired blockquote.
+
+### Pending
+
+- Operator authorisation for Δ4/Δ5 via `FIVECLAIM-PACKAGE`; `m002` for Δ10/Δ11; the *one unit* routing requirement of §7 across those two owners.

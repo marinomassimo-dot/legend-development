@@ -848,3 +848,37 @@ manifests are consistently sharper than its claims, and nothing measures the gap
 - The adjudication of PMID 33914858 covers pages 1, 4, 5 and 6 only. The remaining thirteen
   pages — including the myelin quantification, the organoid arm and the full Discussion — were
   not read.
+
+
+---
+
+## WAVE-2 READINESS (2026-09-27)
+
+**Actor:** `scientist`, wave-2 package `seizure`, under the Orchestrator's wave-2 dispatch. **Append-only: nothing above this line was rewritten.**
+
+**context_policy:** `SYNTHESIS` — this item is adjudicated from the repository's own files and git history, not from a source. No reading was owed by it and none is claimed for it: 🔴 **the pass itself issued no `FULLTEXT_READ_RECEIPT`** (its §0 says so), so nothing in it ever cleared reading debt. Prior knowledge admitted and named: this candidate, the current claim and paper registries via `registry_records.py`, `working_model_current.md` changelog, `full_text_queue_current.md` `FT-044`, the four wave-2 triage lots.
+
+### What was done — item-by-item adjudication against the current tree
+
+| Item | Verified at this HEAD | Disposition |
+|---|---|---|
+| Its own headline — *"no continuous video-EEG in a `Wwox`-null mouse"* | retracted **inside this file** as false (PAPER 011 ECoG) | already self-corrected |
+| #2 `CLAIM 037` | rewritten by `BATCH_20260922_SEIZURE` and again by `BATCH_20260927_002` | **PROPAGATED**, in other wording, via `CC-20260826-SEIZURE-RECONCILIATION-01`; the only residue is the `Transferability` tag, now carried by `CC-20260826-CLAIM037-01`'s readiness block |
+| #5 `PAPER 094` | exists in `paper_registry_current.md` (PMID 42397075, `ALDAZ_R1`), with two later assessment notes | **PROPAGATED** |
+| #6 `PAPER 007` | title/identifier repaired (`BATCH_20260926_ALDAZ`) | **PROPAGATED** |
+| #7 `PAPER 030` | `**Status:** superseded`, with the identity correction recorded on the canonical record (PMID 25331887 = Abu-Odeh, not Schrock) | **PROPAGATED** |
+| `CLAIM 032`, `CLAIM 021` items | reached by `CC-20260826-CLAIM032-01` (the `CLAIM 021` pooling residue is `READY_MINOR` there this wave) | **carried by the per-claim candidate** |
+| `CLAIM 002`, `CLAIM 003`, `CLAIM 036`, `CLAIM 039`, `CLAIM 014/015`, `meta_network_myelin_glia` | untouched here; each is a **baseline qualification with no receipt behind it** | **NOT INTEGRATED** — see below |
+| PMID 33914858 | no manifest and no dossier exist for it anywhere under `disease-models/wwox/research/deepdive_manifests/`; `FT-044` remains **suspended** because the PDF's text layer destroys the comparator (*"`P 5 0.05`"* for *"P < 0.05"*), recorded on the canonical `PAPER` record itself | **NOT INTEGRATED**, and correctly so |
+
+### Verdict: **CLOSE — SUPERSEDED in part, NOT INTEGRATED in part**
+
+- **SUPERSEDED:** items #2, #5, #6, #7 and the `CLAIM 037` section (by `CC-20260826-SEIZURE-RECONCILIATION-01` → `BATCH_20260922_SEIZURE`; by `BATCH_20260926_ALDAZ*`; and by `CC-20260826-FIVECLAIM-PACKAGE-01`, which supersedes its `CLAIM 037` section by that candidate's own §Mode).
+- **NOT INTEGRATED, and closed as such rather than left queued:** every remaining proposal is a **qualification of a `consolidated baseline` claim produced by a pass that recorded no complete read and no receipt** — `CLAIM 002`, `CLAIM 003`, `CLAIM 036`, `CLAIM 039`, `CLAIM 014/015`, `meta_network_myelin_glia`, and the `PMID 33914858` items read from rendered page images only. Under the scientific discipline those cannot enter a `BATCH_COMMIT` from here: a MAJOR qualification of a baseline claim needs a reading, a manifest with `verbatim_locators`, and a blind locator audit. **The propositions are not discarded** — they are re-openable exactly as this file states them, and the route is a per-claim candidate with a reading behind it, which is what happened to every item of this file that did land.
+- **Evidence that closing loses nothing:** four of its seven numbered items are already in canonical; the fifth is queued with a reading (`CLAIM 021` pooling); and the unread remainder is, verbatim, what a locator audit exists to refuse.
+
+**Closing status:** `SUPERSEDED` (items #2/#5/#6/#7) + `NOT INTEGRATED` (the receiptless baseline qualifications). **No operation list** — nothing from this file is proposed to a batch executor.
+
+### Pending
+
+- If the operator wants any of the NOT INTEGRATED propositions pursued, each becomes its own task with a reading: `CLAIM 002`/`CLAIM 003` rest on `PAPER 001/027/030` and `PMID 33914858`, whose **only** local surface is a `SUSPECT` PDF text layer — so the unblocking act is **re-acquisition of a structured surface or a page adjudication**, not another pass over the same bytes. That is why `FT-044` is suspended rather than read.

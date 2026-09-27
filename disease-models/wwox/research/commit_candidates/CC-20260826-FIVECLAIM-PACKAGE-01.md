@@ -349,3 +349,61 @@ directions.
 🔴 **Locator audit REQUIRED before the MAJOR edits** —
 [`CC-20260826-LOCATOR-PACKET-01`](CC-20260826-LOCATOR-PACKET-01.md) is built for a reviewer who
 must not inherit this candidate's conclusions.
+
+
+---
+
+## WAVE-2 READINESS (2026-09-27)
+
+**Actor:** `scientist`, wave-2 package `seizure`, under the Orchestrator's wave-2 dispatch. **Append-only: nothing above this line was rewritten.**
+
+**context_policy:** `QUESTION_DRIVEN` — one question, declared before the source was opened: *what endpoint does PMID 34747138 actually measure behind the words «crisi» and «letalità» in `CLAIM 004`'s Summary?* Prior knowledge admitted and named: this candidate, `CLAIM 004/005/011/016/037/040` at WM_v6.0, `deepdive_manifests/PMID34747138.json`, `CC-20260826-LOCATOR-PACKET-01`.
+
+### What was done
+
+1. **Rebased on the current registry. Δ1, Δ2, Δ3 and Δ7 are DONE** (`BATCH_20260922_SEIZURE`, WM_v5.0, via `CC-20260826-SEIZURE-RECONCILIATION-01`; `CLAIM 005`'s prohibition is retargeted, `CLAIM 037`'s clause deleted, `CLAIM 040` exists, and `BATCH_20260927_002` moved `CLAIM 037`/`CLAIM 005` again). **None is re-proposed.** `CLAIM 005` and `CLAIM 037` are additionally owned by the `m002` package this wave and are **not touched here**.
+2. **Δ4 and Δ6 verified live and made batch-exact** (operations below). `CLAIM 011`'s Summary still contains *"surrogato elettrofisiologico delle crisi"*; `CLAIM 016` still carries no cross-reference to `CLAIM 037`/`CLAIM 040`.
+3. **Δ5 was the item that needed real work, and it changed under it.** 🔴 **Its cited locators `L-004-a` / `L-004-b` DO NOT EXIST** — `CC-20260826-LOCATOR-PACKET-01` contains the groups `L-037`, `L-016`, `L-011`, `L-DOSE`, `L-007` and no `L-004`, and the 20 entries of `deepdive_manifests/PMID34747138.json` contain **no firing-rate and no survival-curve locator**. A MAJOR qualification of a `consolidated baseline` claim was standing on identifiers nobody had written.
+4. **So the paper was reopened first-hand** (Europe PMC `fullTextXML` for `PMC8649866`, sha256 `7da156e82cb7014f837d8c29374d888cb99ecc3268d1c383af2c3d0832b988bb`; the manifest's declared artefacts are absent from `files/` in this checkout). Pending receipt: `receipts_pending/seizure_34747138_1.json` (`partial_fulltext_read`, `new_question_outside_prior_coverage`, prior `FTR-20260810-34747138-01`). `fulltext_receipts.py record` NOT run. Result, in three parts:
+   - **Confirmed:** the rescued electrophysiological endpoint is **cell-attached firing rate** at P18–21, ≈6-fold higher in KO, with **no significant difference** between either rescue arm and wild type.
+   - 🔴 **Corrected against the candidate:** the paper is **not silent on seizures**. It states that no spontaneous seizures were observed in rescued mice — an **observation, unscored, no protocol, no denominator**. Δ5's *"crisi unqualified"* therefore stands as *"unscored"*, not as *"never reported"*, and the new text says so.
+   - 🔴 **Withdrawn from Δ5:** the parenthetical *"≈93 % a 270 giorni"* and *"la curva raggiunge 0 % entro ~330 d"*. No figure image exists in this checkout and the body prints no such fractions; the paper's own words are *"prolonged life span"*, with censoring for animals removed for analysis. The nearest persisted support is `L-DOSE-c`, another candidate's locator, itself flagged as a few-percent-uncertain CDN-rendition read.
+5. **Ownership conflict restated, unresolved by design:** `CC-20260826-AAV9-ENDPOINT-SPLIT-01` and `CC-20260826-DOSE-ADJUDICATION-01` edit the same `CLAIM 004`/`CLAIM 011` sentences and belong to another wave-2 package. **One candidate must own the `CLAIM 004` Summary**; this item's OP-2 is written so it can be dropped wholesale if the dose package's version is preferred.
+
+### Verdict: **READY_MAJOR** (Δ4, Δ6, and a rebased Δ5)
+
+- Δ4 — `CLAIM 011`, narrowing a seizure-surrogate statement: **MAJOR** on the safe side (the claim is `flagged for review`, not baseline, but the edit narrows an endpoint's meaning).
+- Δ5 — `CLAIM 004`, `consolidated baseline`: **MAJOR**, rebased as above.
+- Δ6 — `CLAIM 016`, additive: **MINOR**, carried inside the same operation list.
+
+### Exact operation list (`batch_commit.py propagate`)
+
+**OP-1 (Δ4)** · `claim_registry_current.md` · record `CLAIM 011` · `replace-within`
+- **old text (verbatim):** `ipereccitabilità / SWD su ECoG (spike-wave discharges — surrogato elettrofisiologico delle crisi)`
+- **new text:** `ipereccitabilità / SWD su ECoG (spike-wave discharges — **correlato elettrografico di tipo assenza**, non un surrogato dei tipi convulsivi — tonico, clonico, tonico-clonico, mioclonico, spasmi — che compongono lo spettro WOREE; il dominio ECoG è ora aggiudicato a livello di pannello, vedi [[claim_registry_current#CLAIM 040]])`
+- the dose flag is **not** lifted and is not touched.
+
+**OP-2 (Δ5, rebased)** · `claim_registry_current.md` · record `CLAIM 004` · `replace-within`
+- **old text (verbatim):** `recupera sopravvivenza/letalità postnatale, crescita, ipoglicemia, crisi, atassia, mielinizzazione`
+- **new text:** `**estende la sopravvivenza** (Kaplan–Meier, «prolonged life span» nelle parole della fonte, con censura degli animali prelevati per le analisi — **non** sopravvivenza pari al WT), crescita, ipoglicemia, **ipereccitabilità neuronale misurata come frequenza di scarica in cell-attached a P18–21 (≈6× nel KO; nessuna differenza significativa fra braccio riscattato e WT), più l'osservazione — non scorata, senza protocollo né denominatore — di nessuna crisi spontanea nei topi riscattati**, atassia, mielinizzazione`
+- **executor note:** drop this OP if `CC-20260826-AAV9-ENDPOINT-SPLIT-01` owns the `CLAIM 004` Summary in the same batch.
+
+**OP-3 (Δ6)** · `claim_registry_current.md` · record `CLAIM 016` · `replace-within`
+- **old text (verbatim):** `**Wikilinks:** [[paper_registry_current#PAPER 019]] · [[paper_registry_current#PAPER 056]] · [[claim_registry_current#CLAIM 035]]`
+- **new text:** `**Wikilinks:** [[paper_registry_current#PAPER 019]] · [[paper_registry_current#PAPER 056]] · [[claim_registry_current#CLAIM 035]] · [[claim_registry_current#CLAIM 037]] · [[claim_registry_current#CLAIM 040]] · [[claim_registry_current#CLAIM 005]]`
+- **note:** the *floor-not-a-rate* caveat and the *"epileptogenesis is the source's word"* record Δ6 also asked for were **already propagated** by `BATCH_20260922_SEIZURE` (see the WM_v5.0 changelog row); only the cross-links are outstanding, and they are also OP-4 of `CC-20260826-CROSS-CLAIM-CENSUS-02`'s list — **apply once.**
+
+### LOCATOR TRIPLES FOR BLIND AUDIT
+
+| proposition | verbatim quote | anchor |
+|---|---|---|
+| The rescued electrophysiological endpoint is a cell-attached firing rate, not a scored seizure | "we determined next the neuronal hyperexcitability or epileptic activity in brains of P18-21 … by performing cell-attached electrophysiology recordings" | Results, hyperexcitability section, `PMC8649866` JATS sha256 `7da156e8…` |
+| The magnitude is ≈6-fold in the knockout | "The average firing rate over 30 WT, 30 KO+AAV9-mWwox, 30 KO+AAV9-hWWOX, and 45 KO recorded neurons was about 6-fold higher in KO pups compared to the WT pups" | same paragraph |
+| The rescue-to-wild-type statement is a non-significance statement | "No significant difference in average firing rate was observed between the KO+AAV9-mWwox or KO+AAV9-hWWOX and the WT pups (Fig 3B)" | same paragraph |
+| The paper DOES report a seizure observation, unscored — so "crisi" is unqualified, not unfounded | "As we did not observe any spontaneous seizures in rescued mice" | Results, immediately before the cell-attached experiment |
+| The survival endpoint is an extension in the source's own words, with censoring | "Kaplan–Meier survival graph indicates prolonged life span of Wwox knockout mice injected with AAV9-hSynI-mWwox [total n = 18, spontaneously dead n = 6, mice taken out for electrophysiology/electron microscopy/analysis…]" | Figure legend, survival panel |
+| 🔴 Counter-declaration: the numbers Δ5 originally carried are NOT in the text | — (absence; the body prints no survival fraction and no terminal day) | Withdrawn from the proposal; nearest persisted support is `L-DOSE-c`, another candidate's CDN-rendition panel read |
+
+### Pending
+
+- Operator authorisation (Δ4, Δ5) + blind locator audit; the `CLAIM 004` ownership decision against the dose/endpoint-split package; `CLAIM 005`/`CLAIM 037` limbs excluded (owned by `m002`).
