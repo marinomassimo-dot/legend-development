@@ -35,10 +35,12 @@ PATH      T0 | BATCH_COMMIT | RECEIPT | ACQUISITION
 STATUS    OPEN | IN_PROGRESS | CLOSED (with the verification) | WONT_FIX (with the reason)
 ```
 
-🔴 **Count note, stated rather than smoothed:** the operator was told *fourteen* while five of six
-delegated streams had reported. The last two streams and this session's own verification raised it to
-**17 actions plus 1 verified-clean**. The number in a report is a measurement at a moment, and it is
-recorded moving rather than retro-fitted.
+🔴 **Count note, stated rather than smoothed.** The operator was told *fourteen* while five of six
+delegated streams had reported; the last two streams and this session's own verification raised it to
+**17 plus 1 verified-clean** on 2026-09-26; a blind external cross-check of the same variant added
+**six more** on 2026-09-27, giving **23 actions plus 1 verified-clean**. The number in a report is a
+measurement at a moment. It is recorded moving rather than retro-fitted, and the rises are not a sign
+the record is deteriorating — each one is a defect that was there before anybody looked.
 
 ---
 
@@ -64,6 +66,12 @@ recorded moving rather than retro-fitted.
 | `REP-16` | **harness** | 🔴 stale | "No full text in PMC" is an XML verdict, not a full-text verdict | `OPEN` |
 | `REP-17` | model | stale | Structural coordinates are four versions behind | `OPEN` |
 | `REP-18` | model | ✅ verified-clean | Retraction hygiene checked and correct — recorded so it is not re-opened | `CLOSED` |
+| `REP-19` | model | 🔴 invalidates-an-experiment | A curated domain profile puts the catalytic residue 12.6 Å from the active site | `OPEN` |
+| `REP-20` | model | 🔴 coverage | The variant has a second protein numbering, and every search so far used one | `OPEN` |
+| `REP-21` | model | preventive | Two annotated isoforms do not contain residue 230 at all | `OPEN` |
+| `REP-22` | model | preventive | This locus's constraint metrics are miscalibrated and must not be cited | `OPEN` |
+| `REP-23` | model | coverage | The closest structural analogue of the variant is absent from the record | `OPEN` |
+| `REP-24` | model | over-claim | The gene-therapy window may already be closed at diagnosis | `OPEN` |
 
 ---
 
@@ -85,11 +93,25 @@ identical to the hundredth of an ångström:
 | `Tyr293` OH → `Lys297` NZ | 4.17 Å |
 
 `Ser281` cannot participate in catalysis at that distance. The tetrad is
-**`Asn232 – Ser260 – Tyr293 – Lys297`**, and `Ser260` sits 33 residues before the catalytic tyrosine
-— the spacing a short-chain dehydrogenase/reductase with an insertion in its fold would give.
-Independently, UniProt annotates residue 260 as a substrate site, and the repository's **own**
-first-shell cleft list already contains `S260 4.19` and **omits `S281` entirely**. The evidence was
-in the file.
+**`Asn232 – Ser260 – Tyr293 – Lys297`**. Independently, UniProt annotates residue 260 as a substrate
+site, and the repository's **own** first-shell cleft list already contains `S260 4.19` and **omits
+`S281` entirely**. The evidence was in the file.
+
+**Corrected 2026-09-27, and the correction is a narrowing, not a reversal.** An earlier version of
+this row justified `Ser260` by a residue-spacing argument (*"33 residues before the catalytic
+tyrosine — the spacing an SDR with an insertion in its fold would give"*). That argument was weak and
+is withdrawn: the canonical spacing is ~13, and 33 is not explained by invoking an insertion whose
+position was not measured. **`Ser260` stands on the geometry alone, which is sufficient** — 4.44 Å to
+the catalytic tyrosine hydroxyl against 12.56 Å for the alternative (`REP-19`). A right conclusion
+reached by a decorative argument is the failure mode `REP-10` records, and it recurred here in the
+same file that records it.
+
+**Independently cross-checked, 2026-09-27.** A blind external analysis of the same variant, built from
+different tools, **did not make this error** — it went to a curated domain profile and obtained
+`Asn232`, `Tyr293` and `Lys297` correctly. So the `Ser281` attribution is a defect of **this
+repository and of the primary literature it inherited**, not a universal one, and it would not have
+been caught by consulting an annotation database. It was caught by measuring. See `REP-19` for the
+error that the annotation database *does* carry.
 
 **Provenance of the error.** The source (PMID 24932569, PMC4151823) says the residues were
 *"predicted to be required"*, attributes the data to **unpublished observations**, and its readout was
@@ -479,6 +501,153 @@ caught by a delegate and excluded before use.
 
 **No action.** Recorded so the question is not re-opened, and so the working practice that caught both
 is visible.
+
+---
+
+## REP-19 · 🔴 A curated domain profile puts the catalytic residue 12.6 Å from the active site
+
+**LAYER** model · **SEVERITY** invalidates-an-experiment · **PATH** `T0`
+
+**What is wrong.** The NCBI CDD / InterPro profile for this domain family (`cd09809`,
+*human_WWOX_like_SDR_c-like*) annotates the active site, at residue level, as
+**`Asn232 · Thr266 · Tyr293 · Lys297`**. Measured on the structural model, on both versions held:
+
+| | → `Tyr293` OH | → `Lys297` NZ | → `Asn232` ND2 |
+|---|---|---|---|
+| **`Ser260` OG** | **4.44 Å** | 6.73 Å | 9.19 Å |
+| `Thr266` OG1 | **12.56 Å** | 13.17 Å | 11.80 Å |
+
+**`Thr266` is far outside catalytic range and cannot be the third member of the tetrad.**
+
+**Why the profile is wrong, which matters more than that it is.** `Thr266` falls **inside the
+βE→αF insertion at 263–276**. A profile annotation is transferred by alignment to a family
+consensus; an insertion that the consensus does not have will absorb the aligned position and
+carry the annotation into itself. This is a predictable failure mode of residue-level profile
+transfer in a domain with an insertion, not a one-off.
+
+🎯 **And the diagnostic detail: the external analysis that carried this annotation had already
+measured `Ser260`–`Tyr293` at 4.09 Å and written it down, then adopted `Thr266` from the profile
+anyway.** It measured the right thing and deferred to the database. That is the specific error this
+row exists to prevent — in either direction, since `REP-01` is the same error with the roles
+reversed, a literature prediction beating a measurement.
+
+**FIX** — Record that `cd09809`'s active-site annotation is refuted at residue 266 by geometry, with
+the insertion as the stated cause. Keep the profile's other three residues, which the geometry
+supports. Any catalytic-dead control remains **`N232A` / `S260A` / `Y293F` / `K297A`**; **`T266A`
+is not a catalytic control** and an experiment using it as one would return an uninterpretable
+null for the same reason `S281A` would.
+
+**VERIFY** — no surface names `Thr266` as catalytic without the refutation beside it, and the
+dismissal ledger carries the annotation as a recorded negative.
+
+---
+
+## REP-20 · 🔴 The variant has a second protein numbering, and every search so far used one
+
+**LAYER** model · **SEVERITY** coverage · **PATH** `T0`
+
+**What is wrong.** The same nucleotide change is numbered **`p.Gln117Pro` on `NM_001291997.2`
+(`c.350A>C`)** and `p.Gln230Pro` on the MANE transcript. **One variant, two numberings.**
+
+Every literature and database search this programme has run used the second numbering. Any report,
+submission or case description written under **`Q117P`** has therefore been invisible to all of it —
+including to the recurrence count, the person-count reconciliation and the unread-premise baseline.
+
+**FIX** — Add `Q117P` and `c.350A>C` as mandatory search aliases wherever this allele is queried, and
+re-run the recurrence and reconciliation searches with both. Record the alias in the allele's own row
+so it cannot be dropped again.
+
+**VERIFY** — a search under the alias returns either new records, which are triaged, or a stated zero
+with the query shown.
+
+---
+
+## REP-21 · Two annotated isoforms do not contain residue 230 at all
+
+**LAYER** model · **SEVERITY** preventive · **PATH** `T0`
+
+**What is wrong.** Residue 230 is **absent from WWOX isoforms 5 (Δ173–352) and 7 (Δ214–414)**. An
+assay that reads either isoform **cannot report this variant**, whatever it detects. Nothing in the
+record says so, and the antibody census does not map its reagents to isoforms.
+
+**Why this is not academic.** Several planned readouts detect WWOX with reagents whose isoform
+reactivity is unstated, and the proteotypic peptide markers designed for the mass-spectrometry arm
+include two that lie inside the deleted intervals.
+
+**FIX** — Record the constraint beside every WWOX detection reagent and every peptide marker, and
+state which isoforms each one can and cannot report.
+
+**VERIFY** — the detection surfaces name their isoform coverage.
+
+---
+
+## REP-22 · This locus's constraint metrics are miscalibrated and must not be cited
+
+**LAYER** model · **SEVERITY** preventive · **PATH** `T0`
+
+**What is wrong.** Population constraint metrics for this gene read, naively, as *"loss of function is
+tolerated"*. They must not be used, in either direction, and the reason is internal to the data:
+**the synonymous observed/expected ratio is also ~1.77.** When even synonymous variation runs 1.77×
+expected, the expectation model is miscalibrated at the locus — unsurprising at a common fragile
+site. A low probability of loss-of-function intolerance is in any case the expectation for a
+recessive gene whose heterozygous carriers are healthy, so it carries no information here either.
+
+**FIX** — Record the prohibition with the synonymous ratio as its justification, so that the metric
+cannot be quoted later as evidence of tolerance — which is the specific misuse available to a reader
+who finds the number without the caveat.
+
+**VERIFY** — no surface cites constraint metrics for this gene as evidence.
+
+---
+
+## REP-23 · The closest structural analogue of the variant is absent from the record
+
+**LAYER** model · **SEVERITY** coverage · **PATH** `T0`
+
+**What is wrong.** **`L239R`** is buried, on the **same helix** as residue 230, **3.46 Å from the
+KFERQ-like motif** (measured here), scored high by the same predictors, and reported as homozygous
+WOREE with microcephaly. It is the **closest structural analogue of the variant of interest**, and it
+appears nowhere in this programme's analogue comparisons, which reach instead for alleles 15–49 Å
+away in different domains or a different fold element.
+
+🔴 **There are no protein-level or functional data for `L239R` either** — so it transfers nothing
+today. It is recorded because the *analogue set* is the thing that was wrong: a comparison built from
+distant alleles while the nearest one was never named.
+
+**FIX** — Add `L239R` to the analogue set with its geometry and its empty data column. Re-read the
+analogue comparisons to see which conclusions rested on distance-inappropriate transfers.
+
+**VERIFY** — the analogue table contains it, with its distances and an explicit `no data` cell.
+
+---
+
+## REP-24 · The gene-therapy window may already be closed at diagnosis
+
+**LAYER** model · **SEVERITY** over-claim · **PATH** `BATCH_COMMIT` for the therapeutic surface
+
+**What is wrong.** The in-vivo rescue that makes gene replacement the only class with efficacy
+evidence was effective in an **early postnatal window (P1–P5 in mouse)**. The therapeutic surfaces
+carry the efficacy and the dose, and **not** the window's clinical consequence: that window maps to a
+human period **most affected individuals have already passed by the time of diagnosis**, since
+seizure onset is around two months.
+
+This compounds a finding already in the record: within this genotype, both pharmacological seizure
+control and spontaneous electrographic normalisation have occurred, and **neither moved
+development**. Together they say the intervention window and the diagnostic window may not overlap —
+which is a first-order constraint on the whole programme, not a caveat on one vector.
+
+Two further gates belong in the same row, because they bound the same class:
+1. 🔴 **No dominant-negative or proteotoxic effect has been excluded** for this allele. All efficacy
+   data come from a **null** background, not a missense knock-in. If the mutant protein aggregates,
+   supplying a wild-type copy may not be sufficient — see the experiment opened for exactly this.
+2. 🟢 A partial answer to the dose-control defect already recorded: **removing the `WPRE` element
+   enabled dose calibration**, and a neuron-restricted promoter outperformed non-specific and
+   glia-directed vectors.
+
+**FIX** — Attach the window, the null-background bound and the dominant-negative gate to every
+gene-replacement row. None of them withdraws the class; all three bound it.
+
+**VERIFY** — no therapeutic surface states the efficacy without the window.
 
 ---
 

@@ -91,8 +91,15 @@ them. A harvest protocol written after the material arrives has already wasted i
 | [`EXP-20260926-EXON7-ARCHITECTURE-04`](#exp-20260926-exon7-architecture-04) | Whether the transcript contains the exon carrying the variant | `HUMAN_REQUIRED` | `READY` |
 | [`EXP-20260926-SDR-INTEGRITY-READOUT-05`](#exp-20260926-sdr-integrity-readout-05) | Whether a readout exists that a WW1-competent, SDR-dead rescue would fail | `CELL_LINE` | `PROPOSED` |
 | [`EXP-20260926-WWOX-COFACTOR-BINDING-06`](#exp-20260926-wwox-cofactor-binding-06) | Whether WWOX binds a dinucleotide cofactor at all | `IN_VITRO` | `PROPOSED` |
+| [`EXP-20260927-DOMINANT-NEGATIVE-07`](#exp-20260927-dominant-negative-07) | Whether the mutant protein interferes with a supplied wild-type copy — the gate on gene replacement | `CELL_LINE` | `PROPOSED` |
 
 **Shared harvest:** `-03` and `-04` are the same donor-derived sample. Neither is run alone.
+
+**Cheapest first, and it is not a coincidence.** Four of these seven need **no donor material**:
+`-01`, `-05`, `-06` and `-07` run in cell lines or in vitro, and `-02` uses an animal that already
+exists. Only `-03` and `-04` are `HUMAN_REQUIRED`, and they share one harvest. The programme is
+therefore not blocked on access to material — a conclusion worth stating plainly, because the
+preceding handoff had ordered the work the other way round.
 
 ---
 
@@ -143,12 +150,38 @@ window.
 **FALSIFIER** — The reasoning says the lesion is a backbone lesion. If Q230L is as unstable as
 Q230P, the backbone account is insufficient and the side chain is load-bearing.
 
-🔴 **The prior is unfavourable and is recorded as such.** `Gln230` is **invariant across ten species
-including *Drosophila melanogaster*** at 29.7 % global identity — under stricter purifying selection
-than the catalytic-asparagine position two residues away. Conservation of that depth is an argument
-*against* tolerating substitution. **That is precisely why this is run rather than assumed**, and
-why a negative here is as valuable as a positive: it retires a route for the cost of two
-site-directed mutants.
+🔴 **The prior is unfavourable and is recorded as such — and it worsened on 2026-09-27.** Three
+arguments against tolerating any substitution here:
+
+1. **Conservation.** `Gln230` is **invariant across 20 of 21 orthologues** with alignment coverage,
+   from primates through chicken, *Xenopus*, zebrafish, coelacanth and *Drosophila melanogaster*;
+   only one basal chordate carries a different residue. Stricter purifying selection than the
+   catalytic-asparagine position two residues away.
+2. 🔴 **The side chain does real work, and this is the argument that most damages the hypothesis.**
+   `Gln230`'s side chain makes **four** polar contacts and staples **three** structural elements
+   together — its own helix, the 221–223 loop and the 182–187 helix. Verified here to the hundredth
+   of an ångström: `OE1`···`Thr221` OG1 **2.54 Å** · `NE2`···`Asp223` OD2 **2.72 Å** ·
+   `NE2`···`Ala185` O **3.20 Å** · `NE2`···`Leu184` O **3.46 Å**. Two of those partners are
+   annotated cofactor-binding residues, so this residue holds the catalytic helix against the
+   cofactor-binding loop. **Neither leucine nor serine can make four hydrogen bonds.** A proline
+   abolishes five interactions — the four above plus the backbone donor; leucine and serine restore
+   the backbone donor and replace little else.
+3. The programme's earlier framing of `Gln230` as a *second-shell* residue is therefore **withdrawn**.
+   It is a packing determinant, not a passenger.
+
+🟡 **One counter-indication, kept at low weight because its own source is discredited here.** A
+structure-based missense classifier scores `Q230A` and `Q230G` as *likely benign* while scoring
+`Q230P` as likely pathogenic — i.e. it attributes the damage to the proline specifically rather than
+to loss of the glutamine, which would favour this experiment's premise. But the same classifier
+scores **two WWOX variants that are experimentally null as likely benign**, in this very protein. A
+same-protein counterexample retires the classifier as evidence in either direction.
+
+🎯 **Why the experiment's value went UP while its prior went DOWN.** Two independent analyses of this
+variant now hold **opposite predictions** for a non-proline substitution at 230 — one from the
+hydrogen-bond network, one from the classifier's per-residue pattern — and **two site-directed
+mutants separate them**. An experiment that decides between two documented, opposed predictions is
+worth more than one that confirms a consensus. A negative retires an entire therapeutic route for the
+cost of two mutants, and it is the cheapest route-retirement available to this programme.
 
 **UNNECESSARY_IF** — `-03` shows Q230P protein is abundant and functional untreated.
 
@@ -309,6 +342,18 @@ sequenceable, so the cost is nil.
 **FALSIFIER** — none needed; this is a measurement, not an inference. Its value is that three of its
 four branches change `-03`.
 
+🟡 **The prior moved on 2026-09-27, and the experiment did not.** Two independent splice predictors
+run on the reference transcript return **no predicted splicing effect** — acceptor gain 0.000,
+acceptor loss 0.001, donor gain 0.001, donor loss 0.002, with the native exon-7 donor essentially
+unchanged (0.978 → 0.980) — and a second tool agrees. This programme had never run a splice predictor,
+so it is new evidence, and it makes the skipped branch **less likely**.
+
+🔴 **It does not close the question and does not lower this experiment's rank.** A prediction is not a
+measurement; the branch that the prediction disfavours is the branch that would invalidate the gel
+window and the antibody choice of `-03`; and exon-7 abundance, allele-specific expression and
+transcript half-life remain unmeasured whatever the splice-site scores say. The experiment costs hours
+and shares a harvest it does not consume alone.
+
 **Standing derivation, now fact.** The CDS is **byte-identical across `NM_016373.2`, `.3` and `.4`**
 (1245 nt, 414 aa); the versions differ only in UTR length, so `c.` coordinates do not move. Exon 7 is
 `c.606–791`, 186 nt, in-frame. A skipped product is **`p.(Pro203_Arg264del)`**, 352 aa,
@@ -349,6 +394,24 @@ every rescue experiment becomes interpretable. Readout is WW-dependent after all
 
 **FALSIFIER** — a readout that moves when only the WW domains are intact is not an SDR readout,
 however it was labelled.
+
+🎯 **A second, sharper readout was identified on 2026-09-27, and it comes with a distinctive
+signature.** `Gln230` is in **direct contact with the KFERQ-like chaperone-mediated-autophagy motif
+`LRSVQ` at 187–191** — measured here at **3.95 Å**, to `Leu187` — and two of its four hydrogen-bond
+partners (`Leu184`, `Ala185`) lie in the same helix as that motif. That motif is a **demonstrated**
+HSC70 recognition site in WWOX for a different allele, not a sequence coincidence. Also at 3.46 Å from
+the motif: **`L239R`**, another disease-associated position on the same helix.
+
+⇒ **Falsifiable hypothesis with its own experimental signature:** the substitution locally unfolds the
+184–191 helix and **exposes the CMA motif**, routing the protein to a lysosomal rather than
+proteasomal fate. Signature: **rescued by lysosomal inhibition, not by proteasomal inhibition.**
+
+🔴 **Recorded as `SPECULATIVE` and bounded three ways.** The precedent allele is **surface-exposed**
+(relative accessibility 0.53) and **20.6 Å away**; its work used **overexpressed tagged constructs in
+a cancer line**, not endogenous protein in a neural cell; and a buried helix-core substitution is at
+least as likely to be triaged to the proteasome or to aggregate. What the precedent legitimately
+licenses is narrow: that a WWOX missense allele *can* be cleared without proteasome involvement, and
+that the motif is functional. It licenses **no pathway assignment** for this allele.
 
 **Confirmatory tier, not screening tier.** Patient-derived neural organoids carry a genuine human
 functional readout that **gene therapy has been shown to normalise**. Using organoid
@@ -403,6 +466,15 @@ worst available selectivity target for a central-nervous-system agent in an infa
 inherits the whole dehydrogenase proteome. A positive result here licenses a mechanism, not a
 molecule.
 
+🔴 **And a harder bound, obtained independently on 2026-09-27, which this programme had reasoned its
+way to but never measured.** A curated target-tractability assessment returns, for this gene:
+**no approved drug, no clinical candidate, no chemical probe, and every small-molecule tractability
+bucket `false` — including both "high-quality pocket" and "medium-quality pocket".** Combined with
+zero experimental coverage of the domain, a selective stabiliser for this allele is a **de novo
+discovery programme starting from no structure and no pocket**, not a repurposing exercise. That is
+a curated assessment rather than an inference, so it is the stronger form of the conclusion this
+programme had already reached, and it belongs wherever a stabiliser is proposed.
+
 **FALSIFIER** — the structural inference that the cofactor site is functional.
 
 **UNNECESSARY_IF** — nothing cheaper. **COST** — days. **MATERIAL** — `IN_VITRO`, purchasable
@@ -410,6 +482,107 @@ protein. **STATUS** — `PROPOSED`. **RESULT** — —
 
 ---
 
+## EXP-20260927-DOMINANT-NEGATIVE-07
+
+**DECIDES** — Does the mutant protein interfere with wild-type WWOX? This gates **gene replacement**,
+which is currently the only modality with demonstrated functional rescue in a patient-derived model —
+so it gates the programme's strongest route, and nobody has tested it.
+
+**Why it is its own record and not an arm of `-03`.** When this experiment was first proposed to the
+operator it was described as an arm of the patient-cell protein-fate experiment. That was wrong:
+`-03` is `HUMAN_REQUIRED` and this is a co-expression experiment in a cell line. Binding it to `-03`
+would have made the programme's strongest gate wait on its scarcest reagent, for no reason.
+
+**The gap it closes.** Every efficacy datum for gene replacement comes from a **null** background —
+an animal with no protein at all — not from a missense knock-in. Gene addition assumes the supplied
+wild-type copy works in the presence of whatever the mutant allele produces. If the mutant protein is
+insoluble or aggregation-prone — the branch `-03` may return — that assumption is not safe: an
+aggregating species can sequester its correctly-folded counterpart.
+
+**DESIGN** — Co-express wild-type WWOX with the variant, across a titration of mutant-to-wild-type
+ratio, in a WWOX-deficient cell line. Ask of the **wild-type** protein: is its abundance reduced, its
+solubility shifted, or its function (read on the `-05` readout) impaired, relative to wild type
+expressed alone at the same level? Controls: wild type alone at matched expression; empty vector
+co-expression to control for promoter competition; and a catalytic-dead arm
+(**`N232A` / `S260A` / `Y293F` / `K297A`** — 🔴 never `S281A`, `REP-01`; 🔴 never `T266A`, `REP-19`)
+to separate interference from loss of activity.
+
+**BRANCHES**
+
+| Result | Consequence |
+|---|---|
+| Wild type unaffected at every ratio | 🟢 Gene addition is not gated on this. The strongest route loses a bound it currently carries |
+| Wild-type abundance or solubility reduced | 🔴 Dominant-negative. **Gene addition may be insufficient by itself**, and the design question becomes addition *plus* removal — or correction instead of addition |
+| Wild-type function impaired without abundance change | 🟡 Interference at the interface, not at the level of protein fate. Names a mechanism and keeps the route with a monitor |
+| Effect only at supraphysiological mutant load | 🟡 An artefact of the assay's own overexpression. Report the ratio at which it appears and do not transfer it |
+
+**FALSIFIER** — the assumption, currently unstated wherever gene replacement is proposed, that the
+mutant allele is inert toward a supplied wild-type copy.
+
+**UNNECESSARY_IF** — `-03` shows no mutant protein anywhere at a quantified floor, in which case there
+is nothing to interfere. 🔴 **Note the asymmetry: that is the same result which would make the
+proteostasis routes pointless and the replacement route unobstructed.** One measurement, opposite
+consequences for two classes — which is why `-03` outranks every molecule question.
+
+**COST** — days. **MATERIAL** — `CELL_LINE`. **STATUS** — `PROPOSED`. **RESULT** — —
+
+---
+
+## Independent corroboration — a blind external analysis, 2026-09-27
+
+A separate analysis of the same variant, built from a different tool set and without access to this
+repository, was compared against these records. It is logged here because it changes the **confidence**
+attached to several premises above, and because what it got wrong is as useful as what it got right.
+
+**Reproduced exactly, from independent code on the same public model** — the strongest validation
+available to a computational premise, since two implementations agreeing to the hundredth of an
+ångström is not a shared assumption:
+
+| Premise | Both |
+|---|---|
+| Backbone amide → `Glu226` carbonyl, the first helical `i,i−4` bond | **3.03 Å** |
+| `Gln230` ↔ catalytic `Asn232`, minimum heavy atom | **3.42 Å** |
+| `Gln230` → `Tyr293` · → the glycine-rich motif | 9.4 · 12.1 Å |
+| Relative solvent accessibility of `Gln230` | **0.00** |
+| Mapping of the published primers; both amplicons bracket exon 7 and sample neither | identical spans |
+| Exon 7 in-frame, 186 nt = 62 codons | identical |
+| The founding blot sampled the soluble fraction only, with a single discontinued polyclonal of undeclared epitope, **and no matched control fibroblast line** | identical |
+| One experimental structure exists, covering a WW domain; the catalytic domain has **zero** coverage | identical |
+| "Missense → normal protein level" is false as a WWOX generalisation | identical |
+| **The pivotal question — would restoring abundance restore function — is `UNKNOWN`, and every stabilisation strategy is gated on it** | identical |
+
+**Where it was wrong, and the programme is right:** it adopted a curated profile's active-site
+annotation naming a residue that sits **12.56 Å** from the catalytic tyrosine — recorded as
+`REP-19`, with the insertion that causes the mis-transfer named. 🔴 It had **measured the correct
+residue at 4.09 Å and written it down**, then deferred to the database.
+
+**Where the programme was wrong, and it is right:** four findings this analysis had never made, all
+verified here before adoption — the four-hydrogen-bond network that retires the *second-shell*
+framing of `Gln230` (`EXP-...-01`), the contact with the chaperone-mediated-autophagy motif
+(`EXP-...-05`), the closest structural analogue being absent from the analogue set (`REP-23`), and
+four guards the record lacked (`REP-20` to `REP-22`, `REP-24`).
+
+**Where each found something the other could not.** The external analysis did **not** find the
+catalytic-serine error (`REP-01`) — it bypassed the literature that carries it — and it **closed the
+base-editing route one step early**, concluding that because reversion needs a transversion no editor
+performs, base editing is inapplicable. `EXP-...-01` exists because the lesion is a *backbone* lesion,
+so the goal is not restoring the glutamine but removing the proline. Conversely it supplied the
+strongest argument **against** that route, in the hydrogen-bond network.
+
+🎯 **The routing lesson, which generalises past this variant.** The external analysis is markedly
+stronger on **variant annotation** — population frequency, clinical aggregation, splice prediction,
+target tractability, domain profiles, orthologue depth, deep-mutational-scan coverage. This programme
+is markedly stronger on **full-text reading and record integrity** — a figure-level read that moved a
+therapeutic status, a full-text mechanism that overturned a protocol design rule, and the internal
+contradictions in this queue. These are different capabilities, not degrees of the same one, and work
+should be routed accordingly rather than duplicated.
+
+---
+
 ## Amendments
 
-*(none — this file was created on 2026-09-26)*
+**2026-09-27** — `-01` prior sharpened and the *second-shell* framing withdrawn; `-04` prior moved by
+splice prediction with the branch table unchanged; `-05` gained a second readout and a falsifiable
+clearance hypothesis; `-06` gained a curated tractability bound; `-07` opened. **No branch table was
+edited.** Every change above is an addition to context or a new record; the pre-registered outcomes of
+`-01` through `-06` stand as written on 2026-09-26.
