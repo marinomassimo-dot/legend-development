@@ -392,3 +392,137 @@ triples can be audited blind; the harness row (5).
 **Verdict: `PROPAGATED IN PART`.** **The `SAFETY` move is made.** `TX-007` `SAFETY 1–2` → **`SAFETY 1`**, with the ceiling note and the biodistribution note as **two separate bullets**, which this candidate's §1b-bis required and which merging would have destroyed. `CLAIM 011` takes the ceiling extension, and `D-23` is the `DEFAULTS THAT BIT US` row — **the next free number, skipping the reserved `D-17` and the taken `D-24`**, as this candidate itself insisted. 🔴 **The score rests on what the text can prove, not on the absent supplement.** The audit returned all three figure triples `UNVERIFIABLE_SURFACE`, so the *«7 of 8 `ns`»* count, the P300 regional multiples and the `Dead` labels of S5A–D are **declared attestations**. What carries the move instead is a **measured absence on the artefact**: `neoplas` 0, `carcinog` 0, `histopatholog` 0, `necropsy` 0 — the dose-ranging study performs no tumour surveillance of any kind. ⚠️ **And the authors' own framing, which this candidate had dropped, now sits beside LEGEND's reading:** they write that *«widespread, stable expression was maintained at P240 and P300 throughout the cortex, hippocampus, midbrain, cerebellum, and spinal cord»*. *«Least-reached region»* is text-supported and relative; *«never reaches wild type at any dose»* is a reading of absent panels and is **not** asserted. **Residue:** §3(b)'s window/age append is **not applied** — the caveat is already general and §2's refusal-for-cause is recorded in the candidate, so re-stating it in the record adds no bound; and item 5, the `extraction_damage_report.py` damage row, is **harness** and stays with Harness Engineering, which is editing `framework/` in parallel.
 
 **Operator authorisation, verbatim (2026-09-27, given in writing after being shown the MAJOR proposals):** *«procedi tu, ti autorizzo su tutto»*. **Mirror ex-post review due** under §21e — see `session_evaluations/2026-09-27_BATCH_20260927_004.md`.
+
+---
+
+## RESIDUE READINESS (2026-09-28)
+
+**Actor:** `scientist`, task `residue-readiness`, branch `task/residue-readiness` from `main` at
+`c38da96`. **Append-only: nothing above this line — including the `BATCH_20260927_004` disposition
+block — was altered.**
+
+`context_policy: QUESTION_DRIVEN` — the question is *"is §3(b)'s window/age append still live, and
+if so what exactly does the source support"*. The two gene-therapy artefacts were re-opened
+against that question and nothing else. Prior records were reached **by record** with
+`registry_records.py get --id …`.
+
+### What was re-measured, and against which artefact
+
+| Re-measured | Against | Digest, re-hashed today |
+|---|---|---|
+| Is the slope still on canon | `disease-models/wwox/therapeutics/therapeutic_strategies_current.md`, `TX-007` | file sha256 `5543af338f966a426d4eecea…`; **1 occurrence** of *"smaller the reversible fraction"*, still verbatim and unqualified |
+| Is the window shorthand still on the derived surface | `disease-models/wwox/analysis/mechanism_intervention_map.md`, `PEDIATRIC_OR_DEVELOPMENTAL_RELEVANCE` row | file sha256 `d15d101e80379604892660c2…`; **1 occurrence** each of *"Efficacious window P0–P5 in mouse"* and *"The older the recipient…"* |
+| The salvage record this residue rests on | `disease-models/wwox/analysis/tx007_window_and_ceiling_20260921.md` | file sha256 `7953004e2a7d79be9786477d…`, on `main` |
+| `N1` · `N2` · `N3` · `N4`, **first-hand** | `files/fulltext/PMID42422765_Obeid2026_PMC_2026-09-27.xml` | `7bea83346b708e541d2c432e5da4029f69673e1abc3c6fe70926ad0e3ec2eef2` — **equal to the fingerprint `FTR-20260927-42422765-08` already carries** |
+| `N1` · `N3`, **first-hand** | `files/fulltext/PMID34747138_Repudi2021_PMC.xml` | `7da156e82cb7014f837d8c29374d888cb99ecc3268d1c383af2c3d0832b988bb` — **equal to the fingerprint `FTR-20260927-34747138-03` already carries** |
+| `CLAIM 011` status (this candidate's other target) | `claim_registry_current.md`, record `f836b16610a1`-neighbour query | `flagged for review`; its ceiling extension is present, landed by `BATCH_20260927_004` |
+
+🟢 **PROVENANCE UPGRADE, and it is the substantive contribution of this section.** §7.1 of the
+salvage record declares, without softening, that *"ZERO first-order artefacts exist in this
+checkout for any of the five gene-therapy sources"* and that **every quotation in that file is
+SECOND-ORDER** — dossier- or manifest-derived. Both artefacts are present in the **root checkout**,
+their sha256 recomputed today and **equal to the fingerprints the receipt ledger already carries**.
+Eight of that file's locators were therefore re-matched **first-order** today, against the article:
+`L01`, `L02`, `L03`, `L04`, `L06`, `L07`, `L28`, `L30`. Two receipts are prepared for this
+(`FTR-20260928-42422765-09`, `FTR-20260928-34747138-04`) and are **not** recorded by this actor.
+
+### The four negatives, tested first-hand
+
+| Negative | Verdict | First-hand evidence |
+|---|---|---|
+| **N1** — no WWOX gene-therapy experiment anywhere in LEGEND's holdings treats later than mouse P5 | ✅ **CORROBORATED, and now first-order** | Obeid's own Discussion: *«Therapeutic rescue beyond this early postnatal window was not explored, as Wwox-null mice rapidly deteriorate with progressive neurological dysfunction and early lethality, precluding effective intervention at later stages.»* Repudi 2021: *«prompted us to treat these mice very early on in their life (P0). Nevertheless, attempts to treat post-natal Wwox-null mice by different route of AAV administration should and will be explored in the future.»* Age-token census over the Repudi surface: `P0` × 3, and **no `P1`/`P5`/`P7`/`P10`/`P14`/`P21`/`P30` token at all** ⇒ one treatment age, no age axis |
+| **N2** — no experiment varies age at treatment outside P1–P5 | ✅ **structural core CORROBORATED**; 🔴 **its panel sub-clause is CONTRADICTED by the body and is corrected here** | The structural core holds: nothing in either paper treats outside P0–P5. **But** N2 states *"no P0 arm, no P4 arm at all"*, read off Figure S8, and the **Results text says the opposite**: *«we performed ICV injection of AAV9-hSynI-hWWOX in Wwox-null mice at daily intervals from P0 to P5, with at least three littermates treated per time point»*, with a Methods heading *«ICV injection of AAV particles into P0-P5 Wwox-null mice»*. ⇒ **a text-versus-panel discrepancy, recorded and not adjudicated**: the body declares six daily arms with n ≥ 3 each; the dossier's S8 audit (`L35`, *"It does not contain a P0-treated group."*) reads fewer. **Neither is asserted as settled**, and the residue below is written so that it does not depend on which is right |
+| **N3** — no migration, lamination or progenitor endpoint has ever been measured in a gene-therapy-treated animal | ✅ **CORROBORATED, and upgraded from a holdings-level zero to an artefact-level zero** | Token census over **both** treated-animal artefacts: `brdu` 0, `lamination` 0, `laminar` 0, `satb2` 0, `tbr1` 0, `ctip2` 0, `radial glia` 0, `migration` 0, `birth-dating` 0, `cux1` 0, `layer marker` 0 — **with six positive controls non-zero on the same surfaces** (`myelin` 31 / 38, `astrogliosis` 2 / 2, `gfap` 2 / 7), so the zeros are not an extraction artefact |
+| **N4** — the *"efficacious window P0–P5"* phrasing does not survive its own panel | ⚠️ **CORROBORATED, but the target must be re-aimed, and this is the finding that changes the op** | *"P0–P5"* is **source-supported as the interval that was tested**: the Results say *«at any time point between P0 and P5»*, the Methods heading says `P0-P5`. It is not the phrase that fails. ⚠️ Even the paper is not self-consistent about the lower bound — the **abstract** says *«efficacy was shown in an early postnatal therapeutic window (P1–P5)»*. 🔴 **What has no source at all is the SLOPE.** The source declines it in its own words: *«the inability to assess later intervention likely reflects a combination of model-specific biological constraints and technical limitations, rather than a definitive boundary for therapeutic responsiveness»*, and *«human patients with WWOX-related encephalopathies may exhibit different developmental trajectories, disease kinetics, and therapeutic responsiveness, potentially allowing for later intervention»*. ⇒ canon asserts a monotone decline in reversibility with age; **the only source reports a tested interval, an untested exterior, and an explicit refusal to read the boundary as biological** |
+
+### Per-delta table
+
+| Item | Proposal | Verdict | What settles it |
+|---|---|---|---|
+| **§3(a)** | `TX-007` `SAFETY 1–2` → `SAFETY 1` with the ceiling note | ✅ **already done** | `BATCH_20260927_004`; `TX-007` `Scoring` reads `SAFETY 1 (… **and no measured upper bound on expression**…)` with the 🔴 **Ceiling note** below it |
+| **§3(a-bis)** | biodistribution as its **own** line, not inside the dose sentence | ✅ **already done, as two separate bullets** | `TX-007` carries ⚠️ **Biodistribution — a SEPARATE finding from the dose finding, and kept on its own line for that reason** |
+| **§3(a-bis)′** | *"cerebellum never reaches wild type at any dose or timepoint"*; the regional multiples 8–25× / 5–11× / 1.4× / 0.6× | 🔴 **now wrong / correctly refused** | `BATCH_20260927_004` refused them: the figure triples returned `UNVERIFIABLE_SURFACE`, so the multiples are **declared attestations**, and the batch landed the authors' own weaker wording instead (*«most prominently in the cortex and to a lesser extent in the hippocampus, midbrain, and cerebellum»*). **Do not re-propose the multiples**; today's first-order pass did not recover the panels either |
+| **§3(c)** | `CLAIM 011` ceiling extension | ✅ **already done** | `BATCH_20260927_004`; `CLAIM 011` is `flagged for review` and carries the extension |
+| **§3(d)** | `extraction_damage_report.py` damage row `VECTOR_GENOME_EXPONENT_DELETED` | ⏸ **not a batch item** | `BATCH_20260927_004` held it as **harness**, with Harness Engineering. Unchanged by this section |
+| **§3(e)** | `DEFAULTS THAT BIT US` row | ✅ **already done** | landed as **`D-23`**, the next free number, skipping the reserved `D-17` |
+| **§3(b)** | window/age append | 🔴 **STILL OWED, and the deferral's stated reason does not hold** | `BATCH_20260927_004`'s residue line reads *"the caveat is already general and §2's refusal-for-cause is recorded in the candidate, so re-stating it in the record adds no bound."* Re-measured: the caveat is **not** general — it asserts *"The older the patient, the smaller the reversible fraction"*, a **monotone slope**, in a canonical current file; and the derived surface asserts *"Efficacious window P0–P5 in mouse"* alongside it. A bound that lives only in a commit candidate bounds nothing a reader of `TX-007` will see. ⇒ the deferral was made on the premise that the target text was already hedged, and the target text is not hedged |
+
+**Headline counts: 4 already done · 1 still owed (§3(b)) · 1 now wrong (the regional multiples) ·
+1 not a batch item (harness).**
+
+### Verdict — **READY_MINOR**
+
+**Change class: MINOR.** Both ops **weaken an unsupported assertion and keep the conservative
+clinical posture intact**: neither raises an expectation, neither changes `BLOCCO 1`, neither
+touches a `consolidated baseline` claim, and neither creates or removes a claim. The `TX-007`
+recommendation itself — *aim at functional protection/recovery, not reversal of developmental
+damage; reduce damage / buy time, not a reset* — is **carried through unchanged**, which is why
+this is not a policy change in the direct-clinical tier: what changes is the **stated warrant** for
+a caution, not the caution. `WM_v` bump: **MINOR**.
+
+⚠️ **Why the ops do not simply delete the window statement.** *"P0–P5"* is what the experiment
+tested, and deleting it would discard a real bound — the same error `CC-20260826-SEIZURE-RECONCILIATION-01`
+§Δ3 named when it refused to delete a malformed prohibition. The repair is to say what the interval
+**is** (tested, not demonstrated as a boundary) and to retire the slope, which no source carries.
+
+### Op list
+
+Both `old` strings were measured **unique in their file** (hence in their record): 1 occurrence
+each, counted today. Quotes inside `new` are given as they match the artefacts after XML
+tag-stripping and whitespace normalisation.
+
+**Op C1 — `therapeutic_strategies_current.md`, `TX-007` window/age caveat.**
+
+- **file:** `disease-models/wwox/therapeutics/therapeutic_strategies_current.md`
+- **record id:** `TX-007 — AAV9-WWOX gene therapy (gene addition) — the north-star, now FIRST-IN-HUMAN ⭐`
+- **op:** `replace-within`
+- **old** (verbatim, unique):
+  `The older the patient, the smaller the reversible fraction.`
+- **new:**
+
+  ```text
+  🔴 **The age SLOPE is retired as unsourced (2026-09-28, `CC-20260921-TX007-CEILING-AND-DOSE-CONTROL-01` §3(b); verified first-hand against the primary).** What the only dose-and-age source reports is a **tested interval and an untested exterior**, not a decline: *«we performed ICV injection of AAV9-hSynI-hWWOX in Wwox-null mice at daily intervals from P0 to P5»*, and then *«Therapeutic rescue beyond this early postnatal window was not explored, as Wwox-null mice rapidly deteriorate with progressive neurological dysfunction and early lethality, precluding effective intervention at later stages»* — an **absence of experiment**, in an animal that dies at three weeks. The authors decline the biological reading explicitly: *«the inability to assess later intervention likely reflects a combination of model-specific biological constraints and technical limitations, rather than a definitive boundary for therapeutic responsiveness»*, and *«human patients with WWOX-related encephalopathies may exhibit different developmental trajectories, disease kinetics, and therapeutic responsiveness, potentially allowing for later intervention»*. ⚠️ **`NOT_MEASURED ≠ SMALLER`.** No experiment in any WWOX model varies age at treatment beyond mouse P5; no human age-at-treatment datum of any kind exists. `PREMISE: NOBODY_LOOKED` on the shape of the age–response. **The clinical posture below is unchanged and does not depend on the slope:** it rests on the progenitor/radial-glia defect being unrepaired by neuronal restoration, which is measured, and on irreversibility (`REVERS 0`). `REVIVAL_TRIGGER`: any intervention arm at an age beyond P5 in any WWOX animal model, or any human age-stratified outcome.
+  ```
+- **effect on the surrounding text:** the sentence that follows — *"For a patient older than the neonatal window: reasonable to aim at **functional protection/recovery**, not reversal of developmental damage."* — and the *"reduce damage / buy time, not a reset"* clause are **kept verbatim and untouched**.
+
+**Op C2 — `mechanism_intervention_map.md`, `PEDIATRIC_OR_DEVELOPMENTAL_RELEVANCE`.**
+
+- **file:** `disease-models/wwox/analysis/mechanism_intervention_map.md`
+- **record id:** the `TX-007` field table, row `PEDIATRIC_OR_DEVELOPMENTAL_RELEVANCE`
+- **op:** `replace-within`
+- **old** (verbatim, unique):
+  `Efficacious window P0–P5 in mouse. Neuronal rescue does **not** repair the prenatal progenitor/radial-glia defect. The older the recipient, the smaller the reversible fraction`
+- **new:**
+
+  ```text
+  **P0–P5 is the interval that was TESTED in mouse, not a demonstrated boundary** — daily arms from P0 to P5 with at least three littermates per time point, and *«Therapeutic rescue beyond this early postnatal window was not explored»* (⚠️ the paper's own abstract says *«(P1–P5)»* where its Results say *«between P0 and P5»*; the lower bound is not stated consistently, and the dossier's Figure S8 audit reads fewer arms than the body declares — a text-versus-panel discrepancy, recorded and unresolved). Neuronal rescue does **not** repair the prenatal progenitor/radial-glia defect — **that limb is measured, and it is the one this row rests on.** 🔴 **The age slope is retired as unsourced (2026-09-28):** the authors attribute the untested exterior to *«model-specific biological constraints and technical limitations, rather than a definitive boundary for therapeutic responsiveness»* and allow that humans may permit later intervention. `NOT_MEASURED ≠ SMALLER
+  ```
+
+**Op C3 — append-only correction note on the salvage record itself.**
+
+- **file:** `disease-models/wwox/analysis/tx007_window_and_ceiling_20260921.md`
+- **record id:** the file's own dated header block (append at the end of the file)
+- **op:** `append`
+- **new:** a dated note recording, without editing the body: **(i)** eight locators re-matched
+  **first-order** today against the two artefacts named above, with their sha256, superseding §7.1's
+  *"ZERO first-order artefacts exist in this checkout"* for `PMID 42422765` and `PMID 34747138`;
+  **(ii)** `N2`'s panel sub-clause (*no P0 arm, no P4 arm*) is **contradicted by the body text**,
+  which declares daily arms P0→P5 with n ≥ 3 per time point — recorded as a text-versus-panel
+  discrepancy, not adjudicated; **(iii)** `N4` is re-aimed: *"P0–P5"* is the tested interval and is
+  source-supported, while the **slope** is what no source carries, and that is what ops C1/C2 retire.
+
+### LOCATOR TRIPLES FOR BLIND AUDIT
+
+(No intervention arm was administered later than the early postnatal window, and the reason given is the animal's condition rather than a measured loss of efficacy | "Therapeutic rescue beyond this early postnatal window was not explored, as Wwox-null mice rapidly deteriorate with progressive neurological dysfunction and early lethality, precluding effective intervention at later stages." | PMID 42422765 — files/fulltext/PMID42422765_Obeid2026_PMC_2026-09-27.xml, sha256 7bea83346b708e541d2c432e5da4029f69673e1abc3c6fe70926ad0e3ec2eef2 — Results, end of the section headed "Early postnatal WWOX gene therapy achieves durable therapeutic rescue", in the sentence immediately before the Discussion heading)
+
+(The authors decline to read the untested exterior of the window as a biological boundary | "rather than a definitive boundary for therapeutic responsiveness" | PMID 42422765 — same artefact and sha256 — Discussion, in the sentence beginning "Accordingly, the inability to assess later intervention likely reflects a combination of model-specific biological constraints and technical limitations")
+
+(The authors state that human patients may tolerate later intervention than the mouse | "potentially allowing for later intervention" | PMID 42422765 — same artefact and sha256 — Discussion, in the sentence beginning "In contrast, human patients with WWOX-related encephalopathies may exhibit different developmental trajectories, disease kinetics, and therapeutic responsiveness")
+
+(The age-varying experiment sampled daily treatment ages from P0 to P5 with at least three animals per age | "at daily intervals from P0 to P5, with at least three littermates treated per time point" | PMID 42422765 — same artefact and sha256 — Results, section headed "Early postnatal WWOX gene therapy achieves durable therapeutic rescue", second sentence, immediately after "All preceding treatments were administered at P0-P1")
+
+(The paper's own abstract states the window with a different lower bound than its Results | "efficacy was shown in an early postnatal therapeutic window (P1–P5), supporting durable rescue" | PMID 42422765 — same artefact and sha256 — abstract, in the sentence immediately before "Collectively, these findings define key design and dosing principles")
+
+(The 2021 gene-therapy experiment treated at a single age and its authors state later routes were not attempted | "prompted us to treat these mice very early on in their life (P0). Nevertheless, attempts to treat post-natal Wwox-null mice by different route of AAV administration should and will be explored in the future." | PMID 34747138 — files/fulltext/PMID34747138_Repudi2021_PMC.xml, sha256 7da156e82cb7014f837d8c29374d888cb99ecc3268d1c383af2c3d0832b988bb — Discussion, in the paragraph immediately before the paragraph beginning "In summary, our current findings indicate")
+
+(Tumour surveillance in treated animals was limited in number and bounded in age | "we did not detect gross tumor formation in the limited number of adult Wwox-null mice treated with AAV9-hSynI-WWOX that we examined (age 8-11 months)" | PMID 34747138 — same artefact and sha256 — Discussion, in the paragraph on WWOX as a tumour suppressor, immediately before the sentence beginning "This is not surprising and consistent with data showing")
