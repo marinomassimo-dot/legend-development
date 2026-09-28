@@ -405,6 +405,87 @@ class UnboundedSpan(unittest.TestCase):
                 self.assertTrue(out.endswith(block))
 
 
+TWO_PURPOSES = """# Paper Registry Current
+
+## Purpose
+first purpose
+
+## PAPER 001
+PMID-free body
+
+# Triage Corpus
+
+## Purpose
+second purpose
+
+## PAPER 002
+another body
+"""
+
+
+class HeadingUnderItsParent(unittest.TestCase):
+    """Benchmark J · J5: `--under` names the enclosing heading of a duplicated section heading."""
+
+    def test_the_bare_heading_is_still_refused(self):
+        with self.assertRaises(rse.Refusal) as caught:
+            rse.apply_ops(TWO_PURPOSES, [op(op="replace-within", heading="Purpose",
+                                            old="first", new="1st")], H2)
+        self.assertEqual(caught.exception.code, "ANCHOR_AMBIGUOUS")
+
+    def test_under_reaches_one_section_and_leaves_its_twin_byte_equal(self):
+        for parent, old, new in (("Paper Registry Current", "first purpose", "first aim"),
+                                 ("Triage Corpus", "second purpose", "second aim")):
+            with self.subTest(parent=parent):
+                out, _ = rse.apply_ops(TWO_PURPOSES, [op(
+                    op="replace-within", heading="Purpose", under=parent, old=old, new=new)], H2)
+                self.assertEqual(out, TWO_PURPOSES.replace(old, new))
+
+    def test_an_insert_after_the_qualified_section_lands_under_that_parent(self):
+        out, _ = rse.apply_ops(TWO_PURPOSES, [op(
+            op="insert-after", heading="Purpose", under="Triage Corpus",
+            text="## Legend\nadded\n\n")], H2)
+        self.assertEqual(out, TWO_PURPOSES.replace("second purpose\n\n",
+                                                   "second purpose\n\n## Legend\nadded\n\n"))
+
+    def test_a_parent_that_does_not_enclose_it_is_missing(self):
+        with self.assertRaises(rse.Refusal) as caught:
+            rse.apply_ops(TWO_PURPOSES, [op(op="replace-within", heading="Purpose",
+                                            under="PAPER 001", old="first", new="1st")], H2)
+        self.assertEqual(caught.exception.code, "ANCHOR_MISSING")
+
+    def test_under_alone_names_nothing(self):
+        with self.assertRaises(rse.Refusal) as caught:
+            rse.apply_ops(TWO_PURPOSES, [op(op="append", under="Triage Corpus", text="x\n")], H2)
+        self.assertEqual(caught.exception.code, "ANCHOR_MISSING")
+
+    def test_two_hits_under_one_parent_stay_ambiguous(self):
+        doubled = TWO_PURPOSES + "\n## Purpose\nthird purpose\n"
+        with self.assertRaises(rse.Refusal) as caught:
+            rse.apply_ops(doubled, [op(op="replace-within", heading="Purpose",
+                                       under="Triage Corpus", old="third", new="3rd")], H2)
+        self.assertEqual(caught.exception.code, "ANCHOR_AMBIGUOUS")
+
+    def test_the_command_line_and_an_ops_file_both_carry_it(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "paper_registry_current.md"
+            path.write_bytes(TWO_PURPOSES.encode())
+            done = subprocess.run(
+                [sys.executable, str(TOOL), "replace-within", "--file", str(path), "--heading",
+                 "Purpose", "--under", "Triage Corpus", "--old", "second", "--new", "2nd",
+                 "--apply"], capture_output=True, text=True)
+            self.assertEqual(done.returncode, 0, done.stderr)
+            self.assertEqual(path.read_text(), TWO_PURPOSES.replace("second", "2nd"))
+            ops = Path(tmp) / "ops.json"
+            ops.write_text(json.dumps([{"op": "replace-within", "heading": "Purpose",
+                                        "under": "Paper Registry Current", "old": "first",
+                                        "new": "1st"}]))
+            done = subprocess.run([sys.executable, str(TOOL), "apply", "--file", str(path),
+                                   "--ops", str(ops), "--apply"], capture_output=True, text=True)
+            self.assertEqual(done.returncode, 0, done.stderr)
+            self.assertEqual(path.read_text(),
+                             TWO_PURPOSES.replace("second", "2nd").replace("first", "1st"))
+
+
 class Command(unittest.TestCase):
     def run_tool(self, *args):
         return subprocess.run([sys.executable, str(TOOL), *args], capture_output=True, text=True)

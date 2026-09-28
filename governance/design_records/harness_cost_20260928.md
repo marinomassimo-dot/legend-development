@@ -161,7 +161,7 @@ scientist packages whose receipts then declare it (**legitimate: the brief carri
 | Bottleneck | Frequency | Measured cost | Avoidable | Confidence | Action |
 |---|---|---|---:|---|---|
 | WM history in every scientific preload | every reading comparison, forge, deep dive | ≈75 KB of 110 KB (~19 k tok est.) per load | ≈68 % of the WM | high (bytes), medium (loads — § 2 shows adjudication routes don't load it whole) | **HUMAN_REQUIRED** — G1 triggers fired |
-| Paper-registry FULL rewrite in `BATCH_COMMIT` | every batch that touches it (6 of 7 recent) | ≈1.2 MB in + out per batch | ≈98 % | high | J5 only if a heading-path anchor passes a new pre-registered replay |
+| Paper-registry FULL rewrite in `BATCH_COMMIT` | every batch that touches it (6 of 7 recent) | ≈1.2 MB in + out per batch | ≈98 % | high | **J5 run the same day:** 328 / 328, S = 0 ([`J5_RESULTS.md`](../../framework/eval/benchmarks/BENCH-J-RECORD-SCOPED-EDIT/J5_RESULTS.md)); adoption in Phase 4.0 is § 9 |
 | `batch_queue` fuzzy classification | every build: Phase 4.7, freshness checks, the suite (once now) | ≈40 s | unknown without a tighter exact bound | medium | a real upper bound on `ratio()` (e.g. per-row LCS on the top-k) is research, not a micro-fix |
 | Release gate privacy scan | every landing, the battery twice | ≈22 s | ≈2 s exact | high | no change |
 | Determinism suite's gate + guard arms | every battery | ≈120 s | 0 (intentional) | high | no change |
@@ -172,6 +172,13 @@ scientist packages whose receipts then declare it (**legitimate: the brief carri
 A3 qualifications into live sections through a `BATCH_COMMIT`, after which the history can move to
 a cold file and every scientific route sheds ≈75 KB. *Option B:* keep the whole-file preload and
 raise the trigger. The harness can measure either, but choosing is a scientific-canon decision.
+
+**Paper registry through `BATCH_COMMIT` record by record.** J5 supports it as evidence (328 / 328,
+S = 0, seven recent batches clean out of sample). *Option A:* lift the paper registry's refusal in
+`batch_commit.py propagate` and extend `prompt_batch_commit.md` Phase 4.0, using `--under` where a
+heading repeats — ≈1.2 MB of model-visible rewrite per batch becomes ≈20 KB. *Option B:* keep the
+FULL rewrite for the largest canonical file until renames or deletions have been seen in
+production on the three families already switched.
 
 ## 10 · Re-running
 
