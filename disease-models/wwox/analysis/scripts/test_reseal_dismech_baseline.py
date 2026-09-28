@@ -70,6 +70,7 @@ As first sealed.
 
 sys.path.insert(0, str(HERE))
 import dismech_independent_protocol as protocol  # noqa: E402
+import reseal_dismech_baseline as reseal  # noqa: E402  (the ordinal rules are pure functions)
 
 
 def digest(payload: bytes) -> str:
@@ -302,6 +303,114 @@ class TheOtherRefusals(ResealFixture):
         self.assertEqual(0, done.returncode, done.stdout + done.stderr)
         self.assertEqual(digest((self.repo / AUTHORED).read_bytes()),
                          self.read_baseline()["inputs"]["authored_assertions"]["sha256"])
+
+
+class TheRevisionLabelMustGoUp(unittest.TestCase):
+    """The ordinal rules, exercised on the pure functions — no git, no fixture needed."""
+
+    def test_the_ordinal_is_read_from_the_label(self) -> None:
+        self.assertEqual(18, reseal.label_ordinal("rev.18 (BATCH_X): why"))
+        self.assertEqual(7, reseal.label_ordinal("rev. 7 (spaced)"))
+        self.assertIsNone(reseal.label_ordinal("the seal of 2026-09-28"))
+
+    def test_the_field_wins_over_the_label(self) -> None:
+        self.assertEqual(20, reseal.stored_ordinal(
+            {"revision": "rev.3 (mis-spelled)", "revision_ordinal": 20}))
+
+    def test_a_pre_field_baseline_is_ordered_by_its_label(self) -> None:
+        """The live baseline carries `rev.18` and no field; no migration may be needed."""
+        self.assertEqual(18, reseal.stored_ordinal({"revision": "rev.18 (BATCH_20260928_001)"}))
+
+    def test_a_lower_label_is_refused(self) -> None:
+        ordinal, refusal = reseal.next_ordinal({"revision": "rev.18"}, "rev.3 (oops)", None)
+        self.assertIsNone(ordinal)
+        self.assertIn("does not exceed", refusal)
+        self.assertIn("rev.19", refusal, "the refusal must say which label would be accepted")
+
+    def test_a_duplicate_label_is_refused(self) -> None:
+        """`rev.16` was written twice in 2026-08; distinct is not enough, monotone is."""
+        ordinal, refusal = reseal.next_ordinal({"revision": "rev.16"}, "rev.16 (again)", None)
+        self.assertIsNone(ordinal)
+        self.assertIn("does not exceed", refusal)
+
+    def test_a_higher_label_is_accepted(self) -> None:
+        self.assertEqual((19, None), reseal.next_ordinal({"revision": "rev.18"}, "rev.19 (up)",
+                                                         None))
+
+    def test_a_label_without_an_ordinal_is_refused_unless_one_is_given(self) -> None:
+        ordinal, refusal = reseal.next_ordinal({"revision": "rev.18"}, "the September seal", None)
+        self.assertIsNone(ordinal)
+        self.assertIn("could not be ordered", refusal)
+        self.assertEqual((19, None), reseal.next_ordinal(
+            {"revision": "rev.18"}, "the September seal", 19))
+
+    def test_an_explicit_ordinal_must_still_go_up(self) -> None:
+        ordinal, refusal = reseal.next_ordinal({"revision": "rev.18"}, "rev.99 (label lies)", 2)
+        self.assertIsNone(ordinal)
+        self.assertIn("does not exceed", refusal)
+
+    def test_the_superseded_seal_is_captured_whole(self) -> None:
+        entry = reseal.history_entry({"revision": "rev.17 — extractor strips separators",
+                                      "frozen_at": "2026-08-07T00:00:00Z",
+                                      "git_head_at_freeze": "497f4ee"})
+        self.assertEqual(17, entry["revision_ordinal"])
+        self.assertIn("extractor strips separators", entry["revision"])
+        self.assertEqual("497f4ee", entry["git_head_at_freeze"])
+
+
+class TheLabelHistorySurvivesAReseal(ResealFixture):
+    def test_a_lower_label_is_refused_end_to_end_and_writes_nothing(self) -> None:
+        self.drift_claim_016()
+        self.commit("this batch's own edit")
+        before = (self.repo / BASELINE).read_bytes()
+        done = self.reseal("--revision", "rev.1 (same as stored)", "--absorb", "CLAIM 016")
+        self.assertEqual(2, done.returncode, done.stdout + done.stderr)
+        self.assertIn("does not exceed", done.stdout)
+        self.assertEqual(before, (self.repo / BASELINE).read_bytes())
+
+    def test_check_refuses_a_bad_label_before_reporting_changes(self) -> None:
+        """A label that will be refused is better learned in --check than after the work."""
+        done = self.reseal("--check", "--revision", "rev.1 (stale)")
+        self.assertEqual(2, done.returncode, done.stdout + done.stderr)
+        self.assertIn("does not exceed", done.stdout)
+
+    def test_a_reseal_records_the_ordinal_and_keeps_the_previous_note(self) -> None:
+        self.drift_claim_016()
+        self.commit("this batch's own edit")
+        head = self.git("rev-parse", "HEAD")
+        done = self.reseal("--revision", "rev.2 (CLAIM 016 withdrawn)", "--absorb", "CLAIM 016")
+        self.assertEqual(0, done.returncode, done.stdout + done.stderr)
+        baseline = self.read_baseline()
+        self.assertEqual(2, baseline["revision_ordinal"])
+        self.assertEqual([{"revision": "rev.1 (the seal under test)", "revision_ordinal": 1,
+                           "frozen_at": "2026-09-01T00:00:00Z",
+                           "git_head_at_freeze": "0" * 40}],
+                         baseline["revision_history"])
+        self.assertEqual(head, baseline["git_head_at_freeze"])
+
+    def test_history_accumulates_and_never_records_the_new_anchor_for_the_old_label(self) -> None:
+        self.drift_claim_016()
+        self.commit("first edit")
+        first_head = self.git("rev-parse", "HEAD")
+        self.assertEqual(0, self.reseal("--revision", "rev.2 (first)",
+                                        "--absorb", "CLAIM 016").returncode)
+        self.commit("the baseline itself")
+        self.write(AUTHORED, json.dumps({"assertions": ["second"]}) + "\n")
+        self.commit("second edit")
+        self.assertEqual(0, self.reseal("--revision", "rev.5 (second, skipping 3 and 4)").returncode)
+        baseline = self.read_baseline()
+        self.assertEqual(5, baseline["revision_ordinal"])
+        self.assertEqual([1, 2], [entry["revision_ordinal"]
+                                 for entry in baseline["revision_history"]])
+        self.assertEqual(first_head, baseline["revision_history"][1]["git_head_at_freeze"],
+                         "the superseded entry must carry the anchor it was sealed on")
+
+    def test_history_is_printable_and_writes_nothing(self) -> None:
+        before = (self.repo / BASELINE).read_bytes()
+        done = self.reseal("--history")
+        self.assertEqual(0, done.returncode, done.stdout + done.stderr)
+        self.assertIn("rev.1 (the seal under test)", done.stdout)
+        self.assertEqual(before, (self.repo / BASELINE).read_bytes())
 
 
 if __name__ == "__main__":

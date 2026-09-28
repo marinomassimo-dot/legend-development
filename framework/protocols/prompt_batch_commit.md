@@ -122,21 +122,46 @@ If conflicts are unresolved → ABORT the batch + produce a `conflict_report.md`
 Before touching any current file:
 
 ```
-Create a snapshot in /backup/YYYYMMDD_HHMM/:
-  - working_model_current.md
-  - claim_registry_current.md
-  - paper_registry_current.md
-  - literature_tracking_log_current.md
-  - meta_*_current.md
-  - research_*_current.md
-  - biomarker_candidates_current.md
-  - clinical_monitoring_endpoints_current.md
-  - state_manifest_current.md (pre-batch snapshot)
+python3 framework/scripts/batch_commit.py snapshot --dest backup/YYYYMMDD_HHMM
 ```
+
+🔴 **The list below is the declaration the tool reads, not a reminder to a human.**
+`batch_commit.py snapshot` parses this fenced block and copies every path it names; a path
+added here is snapshotted by the next batch with no code change, and
+`framework/scripts/test_batch_commit_snapshot.py` turns red when a path named here is not in
+the snapshot the tool writes. It is written this way because the hand-maintained list drifted:
+on 2026-09-28 BATCH_20260928_001 edited `therapeutic_strategies_current.md`, which neither the
+tool's list nor this declaration named, and had to copy it into the snapshot by hand — a file
+outside the snapshot is a file § 5's ABORT cannot restore.
+
+SNAPSHOT_DECLARATION (repo-relative; a `*` glob is expanded at snapshot time):
+```
+  - disease-models/wwox/registries/working_model_current.md
+  - disease-models/wwox/registries/claim_registry_current.md
+  - disease-models/wwox/registries/paper_registry_current.md
+  - disease-models/wwox/registries/literature_tracking_log_current.md
+  - disease-models/wwox/meta/meta_*_current.md
+  - disease-models/wwox/research/research_*_current.md
+  - disease-models/wwox/biomarker_endpoint/biomarker_candidates_current.md
+  - disease-models/wwox/biomarker_endpoint/clinical_monitoring_endpoints_current.md
+  - disease-models/wwox/therapeutics/therapeutic_strategies_current.md
+  - framework/state/state_manifest_current.md
+  - framework/state/state_history.md
+```
+
+**What is deliberately NOT here.** The append-only ledgers (`fulltext_read_receipts.jsonl`,
+`discovery_ledger_current.md`, `dismissal_ledger_current.md`, `full_text_queue_current.md`,
+`therapeutic_hypotheses_ledger_current.md`, `experiment_ledger_current.md`) are excluded by
+design: a batch appends to them rather than rewriting them, and restoring one from a pre-batch
+snapshot would silently discard whatever a concurrent actor appended while the batch ran. An
+ABORT leaves their appends standing; that is the lesser loss, and it is stated so nobody
+"completes" the declaration by adding them.
 
 Record the snapshot path in `legend_activity_log.md`.
 
-> **Without a complete snapshot: ABORT.**
+> **Without a complete snapshot: ABORT.** The tool enforces this literally: if a declared
+> non-glob path is missing from the working tree, or if any of the four scientific current
+> files is not covered by the declaration, `snapshot` refuses and writes nothing.
 
 ---
 
