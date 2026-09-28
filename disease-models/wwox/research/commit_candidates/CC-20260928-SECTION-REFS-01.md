@@ -2,7 +2,8 @@
 
 **Candidate ID:** CC-20260928-SECTION-REFS-01
 **Status:** `PROPOSED — NOT PROPAGATED`
-**Base head:** `b24779b` (branch `task/section-refs`, `c38da96` + this package + merge of `main` @ `e946f79`)
+**Base head:** branch `task/section-refs` at land time. The five `old` strings were re-measured
+unique after `main` @ `4632dbe` was merged in (`a794560`), so the ops apply to `main` as it stands.
 **Author:** ACTOR_ID `scientist`, package `section-refs`, dispatched by the Orchestrator under the
 operator's standing authorisation of 2026-09-28.
 **Source of the task:** `scripts/test_section_references.py`, shipped by Harness Engineering on
