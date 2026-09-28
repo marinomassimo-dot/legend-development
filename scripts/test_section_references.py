@@ -39,7 +39,7 @@ rounded to zero.
 The first run found 82 unresolvable references repository-wide against 3 on the normative
 surface, and most of the 82 sat under `disease-models/`. A Scientist pass on 2026-09-28
 repaired that backlog to 17 and handed back the per-prefix numbers; this pass re-measured them
-after the grammar repairs below took the census to **11 of 1154**, and widened on the result:
+after the grammar repairs below took the census to **11 of 1155**, and widened on the result:
 
   gated 2026-09-28    `disease-models/wwox/analysis/`               289 checked, 0 unresolvable
                       `disease-models/wwox/research/commit_candidates/`  110 checked, 0
