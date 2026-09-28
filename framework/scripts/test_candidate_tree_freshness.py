@@ -289,6 +289,97 @@ class NoLeftovers(ToyRepo):
         self.assertNotIn(str(box), git(self.repo, "worktree", "list"))
 
 
+SEALED = "disease-models/toy/analysis/data/toy_sealed.jsonl"
+SEALED_SCRIPT = "disease-models/{disease}/analysis/scripts/toy_seal_gen.py"
+# Deliberately headerless: this is the shape of a surface whose bytes are hash-sealed, so no
+# provenance line may be added to it. Only its declaration can make it discoverable.
+SEALED_GEN = '''\
+import argparse, json, sys
+from pathlib import Path
+
+def render():
+    text = Path("disease-models/toy/registries/input.txt").read_text().strip()
+    return json.dumps({"derived_from": text}, sort_keys=True) + "\\n"
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--out", default="")
+parser.add_argument("--verify-bytes", dest="verify", default="")
+args = parser.parse_args()
+if args.verify:
+    if Path(args.verify).read_text() != render():
+        print("BYTES DIFFER")
+        sys.exit(1)
+    print("BYTES IDENTICAL")
+    sys.exit(0)
+Path(args.out).write_text(render())
+'''
+SEALED_DECLARATION = {SEALED_SCRIPT: ctf.Generator(
+    inputs=("disease-models/{disease}/registries/input.txt",),
+    check=("--verify-bytes", "{surface}"),
+    regenerate="python3 " + SEALED_SCRIPT + " --out {surface}",
+    surfaces=("disease-models/{disease}/analysis/data/toy_sealed.jsonl",))}
+
+
+class ADeclaredSurfaceWithNoHeader(ToyRepo):
+    """A generated surface that cannot declare itself is still discovered, checked and STALE.
+
+    The DisMech sidecar's shape, in a toy repository: a `.jsonl` with no provenance header, a
+    generator inside a disease model (so the declaration key carries `{disease}`), and a
+    `--verify-bytes` freshness check.
+    """
+
+    def setUp(self) -> None:
+        super().setUp()
+        self.write(SEALED_SCRIPT.format(disease="toy"), SEALED_GEN)
+        (self.repo / SEALED).parent.mkdir(parents=True, exist_ok=True)
+        self.reseal()
+        self.commit("sealed surface", ".")
+        patcher = mock.patch.dict(ctf.GENERATORS, SEALED_DECLARATION)
+        patcher.start()
+        self.addCleanup(patcher.stop)
+
+    def reseal(self) -> None:
+        subprocess.run([sys.executable, SEALED_SCRIPT.format(disease="toy"), "--out", SEALED],
+                       cwd=self.repo, check=True)
+
+    def sealed_status(self, report: ctf.Report) -> str:
+        [result] = [r for r in report.results if r.surface == SEALED]
+        return result.status
+
+    def test_the_headerless_surface_is_discovered_at_all(self):
+        self.assertNotIn(SEALED, [p.relative_to(self.repo).as_posix() for p
+                                  in suite_discovery().self_declaring_surfaces(self.repo)],
+                         "the toy sealed surface must NOT declare itself — otherwise this "
+                         "fixture is not testing the declaration source")
+        self.assertEqual({SEALED: {SEALED_SCRIPT.format(disease="toy")}},
+                         ctf.declared_surfaces(self.repo, SEALED_DECLARATION))
+
+    def test_an_input_landed_without_the_sealed_surface_is_stale(self):
+        self.branch()
+        self.write(INPUT, "delta\n")
+        self.commit("input only", INPUT)
+        report = ctf.evaluate(self.repo, tip="task/x", base="main")
+        self.assertEqual(ctf.STALE, self.sealed_status(report))
+        self.assertEqual(1, report.exit_code)
+        self.assertIn("toy_seal_gen.py --out " + SEALED, ctf.render(report))
+
+    def test_the_input_landed_with_the_regenerated_surface_is_fresh(self):
+        self.branch()
+        self.write(INPUT, "delta\n")
+        self.regenerate()
+        self.reseal()
+        self.commit("input and both surfaces", INPUT, SURFACE, SEALED)
+        report = ctf.evaluate(self.repo, tip="task/x", base="main")
+        self.assertEqual(ctf.FRESH, self.sealed_status(report))
+        self.assertEqual(0, report.exit_code)
+
+
+def suite_discovery():
+    sys.path.insert(0, str(ROOT / "scripts"))
+    import test_generated_surfaces_are_regenerated as suite
+    return suite
+
+
 class TheRealDeclarations(unittest.TestCase):
     """The map in this repository: every discovered surface declared, every input real."""
 
@@ -298,14 +389,15 @@ class TheRealDeclarations(unittest.TestCase):
         self.assertIs(suite.generated_surfaces, ctf.generated_surfaces)
 
     def test_every_surface_in_this_checkout_has_a_declared_generator(self):
+        declared = set(ctf.expand_generators(ROOT))
         for path, scripts in ctf.generated_surfaces(ROOT).items():
             with self.subTest(surface=path.relative_to(ROOT).as_posix()):
-                self.assertTrue(scripts & set(ctf.GENERATORS),
+                self.assertTrue(scripts & declared,
                                 f"{path} names {sorted(scripts)}, none declared")
 
     def test_every_declared_generator_and_input_exists(self):
         """A renamed input would make its surface NOT_AFFECTED forever — a silent pass."""
-        for script, generator in ctf.GENERATORS.items():
+        for script, generator in ctf.expand_generators(ROOT).items():
             self.assertTrue((ROOT / script).is_file(), script)
             for pattern in generator.inputs:
                 resolved = pattern.format(disease="wwox")
@@ -335,13 +427,42 @@ class TheRealDeclarations(unittest.TestCase):
     def test_a_harness_only_change_triggers_nothing(self):
         surfaces = {script: path.relative_to(ROOT).as_posix()
                     for path, scripts in ctf.generated_surfaces(ROOT).items() for script in scripts}
-        for script, generator in ctf.GENERATORS.items():
+        for script, generator in ctf.expand_generators(ROOT).items():
             if generator.check is None:
                 continue
             with self.subTest(script=script):
                 self.assertEqual([], ctf.triggers_for(
                     ROOT, surfaces[script], script, generator,
                     ["framework/scripts/task_close.py", "governance/ANNEX_INDEX.md"]))
+
+    def test_the_declared_surfaces_are_discovered_and_checked(self):
+        """A surface nobody can add a header to is still discovered, and its check is real.
+
+        The DisMech sidecar's bytes are pinned by `dismech_phase2_baseline.json`, so it cannot
+        carry a "Generated by" line; it is declared in `GENERATORS.surfaces` instead. BEFORE
+        2026-09-27 nothing discovered it: BATCH_20260927_003 corrected `CLAIM 016`, the sidecar
+        drifted, and its own suite reported it after the batch had closed.
+        """
+        declared = ctf.declared_surfaces(ROOT)
+        self.assertTrue(declared, "no generator declares a surface any more")
+        for surface, scripts in declared.items():
+            with self.subTest(surface=surface):
+                self.assertTrue((ROOT / surface).is_file())
+                for script in scripts:
+                    generator = ctf.expand_generators(ROOT)[script]
+                    self.assertIsNotNone(generator.check,
+                                         f"{surface} is declared without a freshness check")
+                    status, detail, _ = ctf.run_check(ROOT, surface, script, generator, 300)
+                    self.assertEqual(ctf.FRESH, status, f"{surface}: {detail}")
+
+    def test_a_registry_edit_triggers_every_declared_surface(self):
+        """The claim registry is the sidecar's input, so a claim edit must re-check it."""
+        changed = "disease-models/wwox/registries/claim_registry_current.md"
+        for surface, scripts in ctf.declared_surfaces(ROOT).items():
+            for script in scripts:
+                with self.subTest(surface=surface):
+                    self.assertEqual([changed], ctf.triggers_for(
+                        ROOT, surface, script, ctf.expand_generators(ROOT)[script], [changed]))
 
 
 if __name__ == "__main__":
