@@ -298,6 +298,12 @@ def validate_new_receipt(receipt: Any) -> list[str]:
     if not isinstance(receipt, dict):
         return []
     errors: list[str] = []
+    workflow = receipt.get("workflow")
+    if isinstance(workflow, str) and SELF_NEGATING_WORKFLOW.search(workflow):
+        errors.append(
+            "workflow says this event is not in the ledger, and appending it makes that "
+            "sentence false forever: describe the preparation in the past tense (\"was not "
+            "appended at preparation time\"), never the ledger's present contents")
     if receipt.get("record_kind") == "contemporaneous_receipt":
         source_kind = receipt.get("source_kind")
         if source_kind not in SOURCE_KINDS:
@@ -316,6 +322,24 @@ def validate_new_receipt(receipt: Any) -> list[str]:
                     "an abstract or PubMed record URL cannot support partial/complete "
                     "full-text evidence")
     return errors
+
+
+# A prepared receipt often travels as a JSON file for somebody else to append, and its
+# `workflow` prose has twice said so in the PRESENT TENSE — "this event is explicitly NOT in
+# the ledger". True while it is a file; false the instant it is appended, and then durable,
+# because the ledger is append-only and hash-chained and a `receipt_correction` is scoped to
+# "where the output went, never what was read" (§7.1), which a narrative tense is not. Both
+# times a later reader took the sentence at face value and a canonical record landed saying an
+# event already in the ledger was still owed (Mirror, BATCH_20260928_002 FINDING 1, and again
+# on BATCH_20260928_003). The durable fix is refusing the sentence at the one moment it turns
+# false, which is here: a note in an operating memory or a report appendix is not read by the
+# next actor, and `active_lessons/` is not yet materialised. Proposed by Mirror as the only
+# remedy that makes the class unreachable; the describing-the-preparation form is fine.
+SELF_NEGATING_WORKFLOW = re.compile(
+    r"\b(?:is|are)\s+(?:explicitly\s+)?not\s+(?:yet\s+)?in\s+the\s+ledger\b"
+    r"|\bnot\s+recorded\s+in\s+the\s+ledger\b"
+    r"|\bthis\s+event\s+is\s+not\s+(?:yet\s+)?appended\b",
+    re.IGNORECASE)
 
 
 def validate_receipt(receipt: Any, root: Optional[Path] = None) -> list[str]:
