@@ -90,7 +90,10 @@ if str(HERE) not in sys.path:
 #: Measured 2026-09-28 over 116 manifests: 98 CONFORMS, 16 non-conforming (13 NOT_THE_PRODUCER, 2 UNNAMED, 1 UNKNOWN_EVENT), 2 UNCHECKABLE. A CEILING.
 #: It fell from 17 the same day, when `manifest_receipt_repoint.py` repaired PMID42589397.json —
 #: the one case wrong under BOTH of the readings the field used to carry. Lowered, never raised.
-BASELINE_DEFECTS = 16
+#: It fell to 15 on 2026-09-28 (`BATCH_20260928_007`): PMID15870886.json, the one UNKNOWN_EVENT, now
+#: names FTR-20260928-15870886-01, a recorded complete reading whose outputs name the manifest
+#: (the 2026-09-14 event it named was never in the ledger). 117 manifests, 15 non-conforming.
+BASELINE_DEFECTS = 15
 
 DEFECTS = ("NOT_THE_PRODUCER", "UNNAMED", "UNKNOWN_EVENT", "NO_RECEIPT")
 
