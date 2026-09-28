@@ -114,6 +114,13 @@ solo gli estrattori PDF.
 
 ## Tornata 4 — K-Dense, reef, ZJUNLP, ARK, runtime Claude Code / Codex (righe 20-32)
 
+Questa tornata coincide per intero con la **coda post-Tier-1** che l'operatore ha confermato
+nella tornata 5: Claude Code → Codex → Reef → reef-eval → AutoSciRub → SkillNet →
+SkillNet-Fabric → ARK → K-Dense BYOK → Scientific Agents → Scientific Agent Skills, più K-Bench
+come benchmark trasversale. La coda è chiusa. I nomi del longlist di mining (ContinuumCellAgent,
+Orion, SpatialDataAgent, HGNet, MedLog, bio-posttrain, Flowcept/PROV-AGENT, BioRouter,
+EurekAgent, M3A, BiomniBench, BioDesignBench, MatClaw, NIMO) **non** sono stati promossi e qui
+non sono censiti; Open-Rosalind è stato visto a parte (riga 10).
 CORAL, AutoScientists e ToolUniverse sono già coperti dalle tornate 1-3. K-Bench non ha un
 repo: se ne prende solo la rubrica (riga 23). SpliceAI non c'è in nessuna delle librerie di
 skill guardate; per lo splicing l'unico candidato è `alphagenome` (riga 22).
