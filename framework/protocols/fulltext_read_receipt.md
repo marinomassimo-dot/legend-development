@@ -449,9 +449,18 @@ second decision, not a mechanical repoint.
 **What a repair leaves behind is prose, and prose is not a check.** Records and reviews that say
 the field "still names `<old>`" become wrong the moment it does not, so a successful run lists every
 tracked file naming the old identifier. A canonical registry sentence moves only through
-`BATCH_COMMIT`; it is routed, never edited by the repair. And three committed derived surfaces
-declare the manifest directory among their inputs, so a landing that carries a repair owes
-`candidate_tree_freshness.py` — the tool prints that command every time.
+`BATCH_COMMIT`; it is routed, never edited by the repair.
+
+🔴 **And one digest does move with the repair.** `pathograph_export.jsonl`'s derivation manifest
+carries `inputs.digest`, an aggregate SHA-256 over all 119 input files — every deep-dive manifest
+among them — so a one-byte `receipt` change makes `pathograph.py --check` report DRIFT and
+`candidate_tree_freshness.py` return STALE. Nothing digests a manifest individually; the pin is
+keyed to the input *set*, which is why a search for a digest keyed to a manifest path does not find
+it. **A repair is therefore not finished until `pathograph.py` is re-run and both surfaces land in
+the same commit.** Measured on the `PMID42589397.json` repair: `coverage_report.md` and
+`batch_queue.md` FRESH, `pathograph_inventory.md` STALE. The tool prints the freshness command every
+time, and that is what it is for — the first draft of its own docstring asserted the opposite and
+the check corrected it within the hour.
 
 **The tail, classified 2026-09-28 by the instrument itself** (which is how the classification stays
 a measurement): 10 repairable and unrepaired · 5 artifact-divergence, awaiting the second decision

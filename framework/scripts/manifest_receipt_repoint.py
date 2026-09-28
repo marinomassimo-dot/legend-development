@@ -66,8 +66,18 @@ it). On any post-condition failure the original bytes go back and the exit code 
 
 WHAT PINS A MANIFEST'S BYTES — the survey behind the post-conditions
 ---------------------------------------------------------------------
-Nothing digests a manifest. There is no anchor, no sealed baseline and no ledger field carrying a
-manifest's SHA-256; a receipt's `outputs` name the manifest as a PATH plus prose. What does bind:
+🔴 **One digest does move with the repair, and the first version of this docstring said none did.**
+`pathograph_export.jsonl`'s derivation manifest carries `inputs.digest`, an AGGREGATE SHA-256 over
+all 119 input files — every deep-dive manifest among them. So a one-byte change to a `receipt`
+changes that digest, `pathograph.py --check` reports DRIFT, and `candidate_tree_freshness.py`
+returns STALE. The claim "nothing digests a manifest" was written from a grep for a digest keyed to
+a manifest PATH; the pin is keyed to the input SET, which that search could not see. The check
+found it in the same hour, which is the argument for running it rather than reasoning about it.
+**So the repair is not finished until `pathograph.py` is re-run and the two surfaces land in the
+same commit** — the tool prints the freshness command every time, and this is what it is for.
+
+There is no anchor, no sealed baseline and no ledger field carrying an individual manifest's
+SHA-256; a receipt's `outputs` name the manifest as a PATH plus prose. What else binds:
 
   * `require_work_manifest` → `source_artifacts` (path + sha256) against the receipt's
     `source_locator`/`source_fingerprint`, for a NEW `complete_fulltext_read` append. It never
@@ -78,9 +88,9 @@ manifest's SHA-256; a receipt's `outputs` name the manifest as a PATH plus prose
   * the locators are verified against `source_artifacts`, not against `receipt`.
   * three committed derived surfaces declare the manifest directory among their inputs —
     `coverage_report.md`, `batch_queue.md`, `pathograph_inventory.md` — so `candidate_tree_freshness.py`
-    will RUN their freshness checks on any landing that carries this repair. None of the three emits
-    a receipt identifier, so they are expected FRESH; that is a claim to verify, not to assume, and
-    the tool prints the command.
+    RUNS their freshness checks on any landing that carries this repair. Measured 2026-09-28 on the
+    `PMID42589397.json` repair: the first two FRESH, `pathograph_inventory.md` **STALE** through the
+    aggregate digest above. Never assume; run it.
 
 Point-of-use PROSE is the one thing a repair does leave stale, and prose is not a check: records
 and reviews that say the field "still names <old>" become wrong the moment it does not. So a
