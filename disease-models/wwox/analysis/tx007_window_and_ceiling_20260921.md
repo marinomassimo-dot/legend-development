@@ -376,3 +376,49 @@ Two things, neither of which exists, and both of which the repository already na
 ---
 
 *Non-canonical analysis-layer file. `READ-ONLY` toward every canonical file and every ledger — no `BATCH_COMMIT`, no commit candidate, no receipt, no registry edit, no re-ranking of `TX-001`–`TX-007`, no trial proposed. Sources are LEGEND's own dossiers, deep-dive manifests, registries and ledgers; no external retrieval was performed and no new full text was opened. **Not medical advice and not a treatment recommendation.***
+---
+
+## APPEND-ONLY CORRECTION NOTE — 2026-09-28, `BATCH_20260928_004`, ACTOR_ID `scientist`
+
+**Source:** `CC-20260921-TX007-CEILING-AND-DOSE-CONTROL-01` op `C3`, propagated by
+`BATCH_20260928_004` under the operator's standing authorisation of 2026-09-28, verbatim:
+*«procedi, ti autorizzo a migliorare tutto quello che trovi… l'autorizzazione supera anche cose
+fatte da me in passato»*. **Nothing above this line is altered.** Three records, in the order they
+bear on this file's own conclusions.
+
+**(i) §7.1's *«ZERO first-order artefacts exist in this checkout»* is SUPERSEDED for two PMIDs.**
+Both artefacts are present in the root checkout and their sha256 was recomputed by this batch and is
+**equal to the fingerprint the receipt ledger already carries**:
+`files/fulltext/PMID42422765_Obeid2026_PMC_2026-09-27.xml`, sha256
+`7bea83346b708e541d2c432e5da4029f69673e1abc3c6fe70926ad0e3ec2eef2`, and
+`files/fulltext/PMID34747138_Repudi2021_PMC.xml`, sha256
+`7da156e82cb7014f837d8c29374d888cb99ecc3268d1c383af2c3d0832b988bb`. Eight of this file's locators —
+`L01`, `L02`, `L03`, `L04`, `L06`, `L07`, `L28`, `L30` — were re-matched **first-order** against the
+articles on 2026-09-28. ⚠️ The supersession is **scoped to these two PMIDs**; §7.1's statement stands
+for the other three gene-therapy sources it names, and no other quotation in this file is upgraded.
+
+**(ii) `N2`'s panel sub-clause is CONTRADICTED by the body text — recorded, NOT adjudicated.**
+`N2` states *«no P0 arm, no P4 arm at all»*, read off Figure S8. The Results text says the opposite:
+*«we performed ICV injection of AAV9-hSynI-hWWOX in Wwox-null mice at daily intervals from P0 to P5,
+with at least three littermates treated per time point»*, under a Methods heading *«ICV injection of
+AAV particles into P0-P5 Wwox-null mice»*. So the body declares six daily arms with `n ≥ 3` each while
+the dossier's S8 audit (`L35`, *«It does not contain a P0-treated group.»*) reads fewer. 🔴 **Neither
+side is asserted as settled.** `N2`'s structural core — that nothing in either paper treats outside
+P0–P5 — is CORROBORATED and is independent of which side is right, and the canonical ops this note
+accompanies were written so that they do not depend on the adjudication either.
+
+**(iii) `N4` is RE-AIMED, and this is the substantive correction.** *«P0–P5»* is **source-supported as
+the interval that was tested** — the Results say *«at any time point between P0 and P5»* and the Methods
+heading says `P0-P5` — so it is **not** the phrase that fails. ⚠️ The paper is not even self-consistent
+on its lower bound: its **abstract** says *«efficacy was shown in an early postnatal therapeutic window
+(P1–P5)»*. 🔴 **What has no source at all is the SLOPE**, and the authors decline it in their own
+words: *«the inability to assess later intervention likely reflects a combination of model-specific
+biological constraints and technical limitations, rather than a definitive boundary for therapeutic
+responsiveness»*, and *«human patients with WWOX-related encephalopathies may exhibit different
+developmental trajectories, disease kinetics, and therapeutic responsiveness, potentially allowing for
+later intervention»*. Ops `C1` (`therapeutic_strategies_current.md`, `TX-007`) and `C2`
+(`mechanism_intervention_map.md`) retire the slope and **keep the tested interval**, because deleting
+the interval would discard a real bound. Every quotation above was re-verified first-hand against the
+two fingerprinted artefacts by the propagating batch (producer ≠ verifier).
+
+**Not medical advice.**

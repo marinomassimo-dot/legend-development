@@ -235,6 +235,7 @@ wikilink, so the relation is asserted in text and invisible to the graph.
 | Claim | Names | In field |
 |---|---|---|
 | CLAIM 006 | CLAIM 007 | Genotype/model relevance |
+| CLAIM 032 | CLAIM 040 | Impact on Working Model |
 
 **Working-model co-mentions.** Two claims named in one sentence of the
 working model with no edge between them in the registry.
@@ -374,6 +375,6 @@ carried no connective from the lexicon.
 ## Provenance
 
 Derived from 119 input files; digest
-`71491ba0598240e8`. Sources: the claim, paper and
+`fc83953f6458c3ff`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 
