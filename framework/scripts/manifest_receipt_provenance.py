@@ -60,12 +60,15 @@ Closing the field does not retro-fit 116 manifests. Measured on 2026-09-28 the c
 the known tail stays visible and countable. Lower the ceiling when the tail is repaired; never
 raise it.
 
-🔴 **There is no sanctioned instrument to repair one of these, and this tool does not write.**
-`--repoint-manifests` only follows a `--rename`d identifier during a `rechain`, and the protocol
-forbids pointing it at this case; `receipt_correction` is ledger-side and `require_work_manifest`
-skips it; nothing else in the repository writes a manifest's `receipt`. So a repair is a separate,
-named task with its own instrument, and until then this tool's job is to make the tail visible and
-to stop it growing. It prints the value each defect SHOULD carry, so that task starts measured.
+🔴 **THIS TOOL DOES NOT WRITE. `manifest_receipt_repoint.py` is the instrument that does.**
+Written 2026-09-28, the day after this one: it takes a PMID, derives the target through `assess`
+below — the same function, so writer and checker cannot drift — and refuses everything the ledger
+cannot settle, including the `UNKNOWN_EVENT`/`UNCHECKABLE` classes and the artifact-divergence
+class this tool's report does not distinguish. It has no `--to`, because a caller-supplied target
+is how a wrong value gets in. `--repoint-manifests` remains what it always was: it only follows a
+`--rename`d identifier during a `rechain`, and the protocol still forbids pointing it at a target
+decision. This tool's job is to make the tail visible, to stop it growing, and to print the value
+each defect SHOULD carry, so the repair starts measured.
 
     python3 framework/scripts/manifest_receipt_provenance.py                 # report, exit 0
     python3 framework/scripts/manifest_receipt_provenance.py --check         # gate on the ceiling
@@ -84,8 +87,10 @@ HERE = Path(__file__).resolve().parent
 if str(HERE) not in sys.path:
     sys.path.insert(0, str(HERE))
 
-#: Measured 2026-09-28 over 116 manifests: 97 CONFORMS, 17 non-conforming (13 NOT_THE_PRODUCER, 3 UNNAMED, 1 UNKNOWN_EVENT), 2 UNCHECKABLE. A CEILING.
-BASELINE_DEFECTS = 17
+#: Measured 2026-09-28 over 116 manifests: 98 CONFORMS, 16 non-conforming (13 NOT_THE_PRODUCER, 2 UNNAMED, 1 UNKNOWN_EVENT), 2 UNCHECKABLE. A CEILING.
+#: It fell from 17 the same day, when `manifest_receipt_repoint.py` repaired PMID42589397.json —
+#: the one case wrong under BOTH of the readings the field used to carry. Lowered, never raised.
+BASELINE_DEFECTS = 16
 
 DEFECTS = ("NOT_THE_PRODUCER", "UNNAMED", "UNKNOWN_EVENT", "NO_RECEIPT")
 
@@ -226,9 +231,12 @@ def render(findings: list[Finding]) -> str:
             lines.append(f"      names it  {', '.join(finding.naming) or '—'}")
             if finding.note:
                 lines.append(f"      {finding.note}")
-        lines.append("  NOTHING IS REPAIRED HERE: no sanctioned instrument writes this field "
-                     "(rechain --repoint-manifests follows a rename and is forbidden for this "
-                     "case), so a repair is its own task with its own instrument.")
+        lines.append("  NOTHING IS REPAIRED HERE: this tool reports. The instrument that writes "
+                     "the field is `manifest_receipt_repoint.py --pmid <PMID>` (dry run; add "
+                     "--apply), which re-derives the target through this module rather than "
+                     "taking one from its caller, and refuses the classes the ledger cannot "
+                     "settle. `rechain --repoint-manifests` follows a rename and is still "
+                     "forbidden for a target decision.")
     unchecked = [finding for finding in findings if finding.verdict == "UNCHECKABLE"]
     if unchecked:
         lines += ["", f"{len(unchecked)} UNCHECKABLE — reported, not a defect: "
