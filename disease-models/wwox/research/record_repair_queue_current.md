@@ -734,6 +734,22 @@ carried is worth keeping; the present tense is not. The receipt ledger's own acc
 **VERIFY** — `grep -n "still names" disease-models/wwox/registries/*.md` returns no row for
 PMID 42589397, and `manifest_receipt_provenance.py --pmid 42589397` reports `CONFORMS`.
 
+**➕ 2026-09-28, appended by ACTOR_ID `scientist` (`mirror002b` package) — the op list exists; the row
+stays OPEN.** Both sentences have `old`/`new` ops written against them in
+[`commit_candidates/CC-20260928-MIRROR002B-REPAIRS-01.md`](commit_candidates/CC-20260928-MIRROR002B-REPAIRS-01.md):
+`P118-2` (§ 2.2, folded into the same record's FINDING-1 op rather than raced as a second candidate)
+and `LIT-1` (§ 2.3). Each `old` was measured as occurring **exactly once in its file and once in its
+record**, and both were simulated. Verified first-hand before the ops were written, not taken from the
+hand-off: the manifest on disk carries `"receipt": "FTR-20260927-42589397-02"`, its
+`source_artifacts[0].sha256` is `ae7f429190e0b48faaf91f9df0c79e66dd7986d23c65c21f5564ef8607f898af`, the
+ledger's `-01` carries `source_fingerprint
+572a7e6b14b8d10ec993c901dd367b2163437077f5b6fb429e874a5fc43e6e16` — a **different document** — and
+`manifest_receipt_provenance.py --pmid 42589397` reports `1 manifest(s) · CONFORMS 1`. 🔴 **This row
+does not move to `CLOSED` here:** the sentences are canonical and are still on disk in the present
+tense until a `BATCH_COMMIT` propagates the candidate, and a row closed on a candidate rather than on a
+propagation would be exactly the kind of close this queue refuses. The propagating batch runs the VERIFY
+above and closes it.
+
 ---
 
 ### A pattern in this queue worth naming
