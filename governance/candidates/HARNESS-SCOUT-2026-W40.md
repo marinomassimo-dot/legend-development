@@ -30,6 +30,13 @@ fondo, instradati e non valutati.
 | 10 | Open-Rosalind (maris205) | https://github.com/maris205/open-rosalind | 21 wrapper di skill (UniProt, ClinVar, gnomAD, STRING, ChEMBL, Open Targets, GWAS Catalog, HPA, Bgee, PDB, PharmGKB, BLAST, PubChem, BindingDB, CIViC, EFO…) dentro un agente proprio con planner a template fissi, UI React, SQLite e log JSONL. Tutte le sorgenti le copre già la riga 9; l'agente e la UI duplicano Claude Code. L'unica idea portabile, "fatti solo dai tool registrati, ogni chiamata in una traccia JSONL", LEGEND ce l'ha già con le receipt | 0 | MIT | 12 stelle, un solo maintainer. Richiede OpenRouter. Online per quasi tutte le skill | REJECT | |
 | 11 | Claude Science (Anthropic, beta dal 2026-06-30) | https://www.anthropic.com/news/claude-science-ai-workbench | App separata, **non Claude Code**, chiusa: più di 60 skill e connettori (nominati: UniProt, PDB, Ensembl, Reactome, ClinVar, ChEMBL, GEO, PubMed), modelli NVIDIA BioNeMo (Evo 2, Boltz-2, OpenFold3), rendering 3D di strutture e tracce genomiche, calcolo su SSH/HPC o Modal, artefatti riproducibili con codice, ambiente e cronologia, un reviewer agent su citazioni e calcoli. Non si integra nel harness. Serve all'operatore come banco di calcolo (struttura e varianti) su input pubblici, con il risultato che rientra in LEGEND come IPOTESI | 0 harness; 1-2 per una prova dell'operatore | proprietaria, inclusa nei piani Pro, Max, Team ed Enterprise (beta) | Il calcolo su Modal può essere a pagamento. Nessun input dall'overlay privato. I suoi artefatti non sono receipt LEGEND | WATCH | |
 | 12 | Connettori claude.ai Life Sciences già presenti ma non autorizzati | connettori claude.ai della sessione (Clinical Trials, bioRxiv, Synapse) | Tre connettori sono già elencati in questa sessione ma aspettano l'OAuth. bioRxiv copre i preprint (oggi `find-fulltext` e wwox-scout lo raggiungono solo via web), Clinical Trials serve al tracker terapeutico | 0,5 (autorizzazione dell'operatore dalle impostazioni dei connettori claude.ai) | termini del servizio | Nessuno nuovo: stessi confini di privacy di PubMed | ADOPT | |
+| 13 | DisMech: schema #7439 (direzione separata dalla directness) | https://github.com/monarch-initiative/dismech | Upstream ha **rimosso `PARTIAL` e `WRONG_STATEMENT`**: `EvidenceItemSupportEnum` ora vale solo SUPPORT, REFUTE o NO_EVIDENCE, e c'è un nuovo slot `directness` (DIRECT, INDIRECT, UNKNOWN). Verificato sul `dismech.yaml` di `main` il 2026-09-28. `disease-models/wwox/analysis/dismech_export_spec.md` mappa ancora DATO-indiretto e INFERENZA su `PARTIAL` (righe 318-319) e cita `WRONG_STATEMENT`. La directness di LEGEND ha finalmente un campo di destinazione nativo | 5 (ri-pin, diff della spec, crosswalk v3) | BSD-3-Clause | Lo schema upstream si muove ogni settimana (quattro commit di schema dal 17 al 28 settembre): pin esplicito obbligatorio. Nessun dato esce | ADOPT | |
+| 14 | DisMech: hook PreToolUse "simula l'edit → valida → exit 2" | https://github.com/monarch-initiative/dismech (`.claude/hooks/validate_disorder_hook.py`) | Il pattern di guardia prima dell'edit, instradato al worktree che si sta davvero modificando e non al checkout principale. Candidato per le modifiche ai file canonici | 4 | BSD-3-Clause | Scrive sotto `.claude/`, quindi serve l'autorizzazione dell'operatore. Da confrontare con la guard esistente prima di adottarlo, perché potrebbe essere un doppione. Il dettaglio viene da un report di subagent e non l'ho letto io | WATCH | |
+| 15 | ARA: `trace/exploration_tree.yaml` | https://github.com/ARA-Labs/Agent-Native-Research-Artifact | Un grafo del percorso di ricerca con i vicoli ciechi e le piste non ancora provate. Chiude la domanda della riga 7 (traiettorie) senza bisogno di uno store nuovo, se diventa un campo del ledger di discovery che c'è già. Il suo `research-fuzzer` (predizione prima dell'azione, auto-confutazione) è già coperto da `preregister_prediction` | 6 | MIT | Rischio di due fonti di verità in competizione con claim e receipt. L'installer npx scrive in `.claude/`: va portato a mano | TRIAL | |
+| 16 | Autoresearch: declassamento automatico con CI e `min_effect` | https://github.com/hugoferreira/autoresearch | In `legend-research-loop`: bootstrap BCa al 95% con seed, confronto con il baseline originale e con il miglior baseline precedente, e un "supported" che scende da solo a INCONCLUSIVE se il CI attraversa lo zero o l'effetto è sotto il `min_effect` preregistrato | 4 (clean-room in Python) | **nessuna licenza**: si prende l'idea, non il codice | Si applica solo agli esperimenti di harness misurabili, non alla scienza | TRIAL | |
+| 17 | Gemma curation agents: dismiss-rate per giudice e per categoria | https://github.com/PavlidisLab/gemma-curation-agents-v1.1 | La precisione di Mirror misurata dalle disposizioni che l'operatore o lo Scientist danno ai suoi rilievi. Serve alla parte "misurare la qualità della review" | 4 | Apache-2.0 (il file LICENSE; l'API riporta NOASSERTION) | Da verificare prima: i record Mirror hanno un campo di disposizione? Se no, cresce il costo | TRIAL | |
+| 18 | BioDSA: `biodsa/tools/` (Open Targets, HPO, STRING, Reactome, ChEMBL, UniProt, GO, HPA, openFDA…) | https://github.com/RyanWangZf/BioDSA | Wrapper Python standalone su API pubbliche: è l'alternativa alla riga 9 per i lookup live. La takeaway 25 del design record (§129) preferisce l'architettura sottile di ToolUniverse | 8 | MIT | Doppione della riga 9: solo uno dei due. L'autenticazione per servizio non è documentata e UMLS vuole una licenza | WATCH | |
+| 19 | scholar-loop: calibrazione per agente (`CalibrationLog`) | https://github.com/renee-jia/scholar-loop | Punteggiare più tardi ogni predizione contro l'esito e restituire all'agente la fiducia accumulata. Si somma al backtest della riga 2, che fornisce proprio gli esiti | 8 | MIT | Nella biologia rara la verità arriva lenta o non arriva: il segnale sarebbe scarso. Si valuta dopo il TRIAL della riga 2 | WATCH | |
 
 ## Top 3 for this week
 
@@ -81,6 +88,28 @@ solo gli estrattori PDF.
 
 "da verificare" significa che il README non lo nomina; si controlla nel TRIAL della riga 9.
 
+## Tornata 3 — le 18 repo Tier-1: sono già state lette tutte
+
+L'elenco incollato dall'operatore corrisponde, nello stesso ordine, alle **Review 01-18** di
+[`governance/design_records/sviluppo_lettori.md`](../design_records/sviluppo_lettori.md),
+archiviate il 2026-09-11: 10.612 righe, con le 25 takeaway del § 129. Non si ri-scoutano da capo.
+Questa tornata ha fatto due sole cose: cercare **delta upstream** dopo le review e **pattern
+concreti** da portare nel harness che non fossero ancora nella tabella. Il risultato sono le
+righe 13-19. Sulla base del README, per le altre non c'è delta:
+
+- Robin (Review 01), AutoScientists (02, **senza licenza**), ATHENA (07, modello da 8B su GPU; la parte utile è ToolUniverse, riga 9), Medea (09, LLM a pagamento; MedeaDB contiene trascrittomi di pazienti).
+- CORAL (05, serve un grader calcolabile che la scienza di LEGEND non ha; si riapre dopo il TRIAL della riga 2).
+- Paperclip (06, runtime già rifiutato in `GOVERNANCE_v3.1.1.md` e `prior_art_review_v3.1.md`).
+- ARIS (08: il reviewer cross-model è a pagamento; la regola "si scarta un'idea solo nominando il paper che la contiene già" è coperta da `enumerate_baseline_before_scoring`).
+- ResearchOS (12, 0 stelle, 4 commit), llm4xray (13, fuori dominio), AI-Scientist-v2 (14, licenza custom, GPU, 15-20 $ a run, fermo dal 2025-12), OpenScientist (15, solo provider a pagamento).
+
+🔴 **La domanda più utile per il prossimo intervento non è quale repo leggere, ma quali dei
+pattern marcati `ADOPT CANDIDATE` nel design record siano già implementati.** Il § 121
+(BioDSA) e il § 124 (Autoresearch) da soli ne elencano più di 15: capability allowlist per
+task, token telemetry, fail-to-INCONCLUSIVE, fresh independent gate reviewer, frozen brief,
+content-addressed raw artifacts… Un censimento "candidato → implementato sì/no, dove" costa
+circa 3 h ed è il vero backlog del harness.
+
 ## Watch-list carried forward
 
 | candidate | first seen | why still WATCH |
@@ -89,7 +118,7 @@ solo gli estrattori PDF.
 | ResearchBench | 2026-09-28 | Il sottoinsieme retrieval-only è economico, ma nessuna domanda di LEGEND ne ha ancora bisogno; si riapre se `connect_domains` va misurato |
 | MC-NEST | 2026-09-28 | Il pattern è coperto da forge e discovery-method; si riapre solo se il TRIAL 1 mostra che le ipotesi vengono potate prima di essere raffinate |
 | Apprendimento dalle traiettorie di ricerca | 2026-09-28 | Dipende dall'audit del Top 3 n. 3 |
-| Ecosistema MIMS Harvard / Zitnik | carried (dal radar) | ToolUniverse è estratto alla riga 9 (TRIAL); ATHENA, AutoScientists e Medea restano WATCH |
+| Ecosistema MIMS Harvard / Zitnik | carried (dal radar) | ToolUniverse è alla riga 9 (TRIAL); ATHENA, AutoScientists e Medea sono già stati letti (Review 07, 02, 09) e non hanno delta: si chiude come ecosistema |
 | Claude Science | 2026-09-28 | App chiusa, fuori dal harness; si riapre se espone skill o connettori riusabili in Claude Code |
 
 ## Looked at and rejected (one line each)
