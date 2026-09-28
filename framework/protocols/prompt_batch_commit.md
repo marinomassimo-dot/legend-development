@@ -137,6 +137,7 @@ outside the snapshot is a file § 5's ABORT cannot restore.
 SNAPSHOT_DECLARATION (repo-relative; a `*` glob is expanded at snapshot time):
 ```
   - disease-models/wwox/registries/working_model_current.md
+  - disease-models/wwox/registries/working_model_history*.md
   - disease-models/wwox/registries/claim_registry_current.md
   - disease-models/wwox/registries/paper_registry_current.md
   - disease-models/wwox/registries/literature_tracking_log_current.md
@@ -262,7 +263,7 @@ A batch with a disease-model change updates `working_model_current.md` and:
 - Bumps `working_model_version`:
   - MINOR for normal changes
   - MAJOR for baseline reversals / authorized URGENT
-- Update the WM change log
+- Update the WM change log — in the **cold** [`working_model_history.md`](../../disease-models/wwox/registries/working_model_history.md), not in the hot file: the batch's `Last update` note at the top of its first section, its row at the top of the `## Changelog` table, and, for a MAJOR batch, its narrative section after the table. The hot `working_model_current.md` keeps one `**Last update:**` line, replaced by the batch, and a `## Changelog` that points to the history. A qualification that is still live goes into the hot file's live sections too — the history is never a source of a current value (split by `BATCH_20260928_004`, operator decision A of 2026-09-28)
 - Verify that every cited claim exists and has a compatible status
 
 Publication integrity is independent of lifecycle Status. Preserve existing retraction
@@ -272,7 +273,7 @@ lifecycle vocabulary. An unmapped historical Status remains visible until its li
 can be assigned without changing the integrity exclusion; no new integrity registry is needed.
 
 For a purely structural batch with no disease-model change, preserve the WM version,
-WM timestamps and WM changelog. Record the changed fields and the evidence for zero
+WM timestamps and the WM changelog rows (in `working_model_history.md`). Record the changed fields and the evidence for zero
 scientific delta in the batch report. Status changes affecting evidence eligibility,
 claim meaning, support or uncertainty are not structural spelling corrections.
 
@@ -478,8 +479,9 @@ the receipt ledger, and both lists are closed. `BATCH_20260928_001` corrected tw
 changelog rows in place and Mirror passed it as legitimate — correctly, because there was no rule
 to break. This section is the rule, so the next batch is not deciding it again from scratch.
 
-It governs every **historical record of a completed act**: a `## Changelog` row in
-`working_model_current.md`, and a `batch_<ID>_scope` / `batch_<ID>_candidates` entry in
+It governs every **historical record of a completed act**: a `## Changelog` row, `Last update`
+note or MAJOR-batch section in `working_model_history.md` (in `working_model_current.md` until
+`BATCH_20260928_004`), and a `batch_<ID>_scope` / `batch_<ID>_candidates` entry in
 `framework/state/state_history.md` § 4.
 
 **What MAY be corrected in place** — the *description of a past act*. What that batch did, which

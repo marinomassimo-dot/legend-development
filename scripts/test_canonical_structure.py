@@ -54,15 +54,22 @@ class CanonicalStructureTests(unittest.TestCase):
         self.assertEqual({}, duplicates, f"Duplicate record identifiers: {duplicates}")
 
     def test_working_model_keeps_required_architecture(self) -> None:
+        """The hot file keeps its blocks and a `## Changelog` that points to the cold history;
+        the changelog itself, with its oldest rows, lives in `working_model_history.md` since
+        `BATCH_20260928_004` (operator decision A, 2026-09-28)."""
         working = text("working_model_current.md")
+        history = text("working_model_history.md")
         required = (
             "# BLOCK 1",
             "# BLOCK 2",
             "# BLOCK 3",
             "## Changelog",
+            "working_model_history.md",
         )
         missing = [marker for marker in required if marker not in working]
-        changelog = working.split("## Changelog", 1)[-1]
+        missing.extend(f"history: {marker}" for marker in ("## Changelog", "never a source of a current value")
+                       if marker not in history)
+        changelog = history.split("## Changelog", 1)[-1]
         missing.extend(
             marker
             for marker in (
