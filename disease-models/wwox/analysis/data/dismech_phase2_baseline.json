@@ -1,6 +1,6 @@
 {
-  "frozen_at": "2026-09-27T23:16:01Z",
-  "git_head_at_freeze": "cac4faa7a48bfd3eef9583a0f820573b847dc6a6",
+  "frozen_at": "2026-09-28T00:34:16Z",
+  "git_head_at_freeze": "1a41f3c279dedcc266341a7c15f1ae3ae6cb13c4",
   "git_verification_policy": "baseline bytes must match HEAD; every declared input and output must match git_head_at_freeze:path via git cat-file; freeze commit must be an ancestor of HEAD",
   "inputs": {
     "authored_assertions": {
@@ -23,15 +23,15 @@
       "path": "disease-models/wwox/registries/claim_registry_current.md",
       "scope_block_sha256": {
         "CLAIM 016": "0ab5090c34f0351dcb140610a90fed9938e3d14325c1533ef5ee1ae35395971c",
-        "CLAIM 024": "ec0386de2fc625e3ee6a8654ee7b51959fa4cf921b7ff3debb4c78cdb9a2e9d8",
-        "CLAIM 035": "1d98248cb4dc7932ab8891ae28a01a1e8cccfaf35453c0bb73368ac01e53fd14"
+        "CLAIM 024": "b720170fc2e4f0c150c5b72d75ac271aad8ebb7120d8d30054b125ba4e17afc7",
+        "CLAIM 035": "0582d392272d5abe68f3578d87aa7d2372a0e8f26f7ffd264fdc5b88e3b4201e"
       },
       "scope_blocks": [
         "CLAIM 016",
         "CLAIM 024",
         "CLAIM 035"
       ],
-      "scope_sha256": "fcbff4ff2d339efb2e15b3e9352aff3e267fc4b7ea0a8fb5cda04f3ec201e25d",
+      "scope_sha256": "7cb76a03a3c460f2cd4a193ca527795a46dda1730fce75f4a5277406476c6d37",
       "verification_policy": "sealed_scope"
     },
     "derivation_script": {
@@ -55,14 +55,14 @@
       "scope_block_sha256": {
         "PAPER 019": "14fcd6c20d7f5864457f9543d2a1eb079cdc58ddc948b2a866a0d3d33ef66a6c",
         "PAPER 055": "99d27a6d8a6baca392aa17fca7827bf7c843146a5824951fbd9f1054a73145c4",
-        "PAPER 056": "12bd6327bfb56e50f25474a372dd3395353ebe0acd4b4cc9e577f7b03fdbd24c"
+        "PAPER 056": "e11bbf2a3ae03dd575f4fecdb256508d81157ac123feeadff83a83a817778526"
       },
       "scope_blocks": [
         "PAPER 019",
         "PAPER 055",
         "PAPER 056"
       ],
-      "scope_sha256": "867ca36187ae7a112ba3cc4ba591eb827885f78e4765f4cc5111ae270f436e06",
+      "scope_sha256": "59d32d6aee722fd1eac06a20a32e99566aeded8aac7fac265ab74dd626335c18",
       "verification_policy": "sealed_scope"
     },
     "receipt_ledger": {
@@ -113,9 +113,9 @@
   "output": {
     "path": "disease-models/wwox/analysis/data/dismech_sidecar_016_024_035.jsonl",
     "records": 49,
-    "sha256": "0328db86ee760ba9ee6ff352aa37e6a50ee9675eca95252414c48731c5e01128"
+    "sha256": "5395422fc64d76ac41f5cc0bd694ce1f8da385b8d60cf9391a3bfc5904da1c9f"
   },
-  "revision": "rev.13 (BATCH_20260927_003, 2026-09-27): CLAIM 016's abundance assertion was withdrawn, so the sidecar re-derives to new bytes and the frozen output hash is re-sealed. The sealed_scope hashes move with the anchor because the frozen half of verify_phase2_baseline compares them against the blob at git_head_at_freeze. DISCLOSED: this re-seal also absorbs a PRE-EXISTING scope drift on PAPER 019 from BATCH_20260927_001 (c99dfe5) that the informational drift policy had left standing; nothing sealed was widened.",
+  "revision": "rev.14 (BATCH_20260927_004, 2026-09-27): the wave-2 MAJOR batch edited CLAIM 024 (the WW1-sufficiency rider bounding tandem cooperativity), CLAIM 035 (the two intervals 388-407 / 388-412 separated, and the cell-free qualifier on the microtubule limb) and PAPER 056's Note (the same two defects at their second surface). All three drifted blocks are THIS batch's own edits, each declared in the WM_v7.0 changelog row and in the MAJOR repair section, and each is named explicitly with --absorb. Nothing sealed is widened and no pre-existing drift belonging to another batch is absorbed here.",
   "window": {
     "before_phase5_pr": "Run assert_exportable(). It supersedes the manual re-verification this field used to describe: it reports per-block drift and refuses to export over anything unacknowledged. The risk it protects against is unchanged \u2014 shipping a contribution derived from superseded claims.",
     "closed_on": "2026-08-06",
