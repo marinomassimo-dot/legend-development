@@ -506,3 +506,143 @@ this package**. Numbers re-measured here.
 - It does not fetch Supplementary S4–S8 or `mmc1.pdf`; both debts stay declared and open.
 
 **Not medical advice.**
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260928_002` (2026-09-28, ACTOR_ID `scientist`), append-only
+
+**Nothing above this line was rewritten.** **Status: `PROPAGATED`** — all **9** operations applied,
+0 deferred, 0 refused. `record_scoped_edit` refused nothing.
+
+`BATCH_20260928_002`: MINOR, MANUAL, `WM_v7.1` → **`WM_v7.2`**, under the operator's standing
+authorisation of 2026-09-27 given in writing, verbatim: ***«procedi tu, ti autorizzo su tutto»***.
+Sole candidate of the batch; no collision with any other candidate. Base `main` `082ed19`, branch
+`task/batch-20260928-002`.
+
+**The verifier re-measured everything before writing, and the candidate's own numbers reproduced.**
+All **9** `old` strings occur **exactly once** inside their addressed record (measured, not taken from
+§2): `CLAIM 030` 123169–132935, `CLAIM 002` 6026–17301, WM `Working Model Current` 0–28680, WM
+`Changelog` 52708–84811, `PAPER 118` 595115–598521, `PAPER 001` 2807–5092, `LIT-0420` 518196–521108.
+Both fingerprinted artefacts re-hashed **equal**
+(`PMID36779245_Oliver2023_PMC_2026-09-27.xml` =
+`780f42de9b3982fa5bf9bf1e6bb76f71384c943aa197fb2d4de80be7ac7e7a34`,
+`PMID42589397_ZZ2026_PMC_2026-09-27.xml` =
+`ae7f429190e0b48faaf91f9df0c79e66dd7986d23c65c21f5564ef8607f898af`), and **all 10 locator triples of
+§3 verified**, each quotation occurring exactly once in the bytes. The post-propagation character
+counts match §2.6 **exactly** for all four files the candidate predicted: claim registry
+194 837 → **197 111**, literature log 521 108 → **521 670**, paper registry 598 521 → **601 712**,
+`disease_model.md` 22 467 → **23 132**.
+
+| op | record | verdict |
+|---|---|---|
+| `C30-1` (FINDINGS 1 + 2) | `CLAIM 030` | **PROPAGATED** — the scope narrowing lands as written. Both its factual limbs were re-derived from the Table 1 markup here, and its `Speech` figure (**11/13**) is the one the table supports |
+| `C2-1` (FINDING 10, contested in part) | `CLAIM 002` | **PROPAGATED** as an annotation, not as a defect repair. The four-event lineage's claim that `-03` is the first event whose `outputs` name the manifest is the candidate's measurement; the protocol's OPEN declaration is quoted correctly |
+| `WM-1` (FINDINGS 1 + 2) | WM `Working Model Current` (the `BATCH_20260928_001` `Last update` line) | **PROPAGATED** |
+| `WM-2` (FINDINGS 1 + 2) | WM `heading: Changelog` (the `WM_v7.1` row) | **PROPAGATED on the `heading` anchor, and the anchor choice is vindicated by measurement.** `id: BLOCK 3` resolves to **49194 → 96155 = `len(text)`**, i.e. a span running to EOF that would have covered the whole changelog; `heading: Changelog` resolves to **52708 → 84811**, bounded by `## BATCH_20260927_004`. Re-measured on `082ed19`: `record_scoped_edit.py` is **byte-identical to the candidate's base `748a94b`**, so Harness Engineering's fix had not landed at propagation time and nothing about the anchors changed |
+| `P118-1` (FINDING 3) | `PAPER 118` | **PROPAGATED** — appended, the pre-existing provenance sentence carried into the `new` unchanged. `Claim links: 025` itself not edited |
+| `P118-2` (FINDINGS 4 + 5 + 6) | `PAPER 118` | **PROPAGATED** — the stray `PMID36779245.json` residue deleted, the one/five gap senses separated, the 2026-09-28 capture named with its bound. Triples 9–10 verified 1× each on the artefact |
+| `PR-1` (FINDING 10, contested in part) | `PAPER 001` | **PROPAGATED** as an annotation |
+| `LIT-1` (FINDINGS 4 + 5) | `LIT-0420` | **PROPAGATED** |
+| `DM-1` (FINDINGS 1 + 2) | `disease_model.md`, the `WM v7.0 → v7.1` repair-changelog paragraph | **PROPAGATED** — the narrative view carried the strongest form of the universal (*«every severity axis the table prints»*) and loses it in the same batch as the registries |
+
+### The two substantive points, verified first-hand by the verifier
+
+Parsed from the JATS markup of `files/fulltext/PMID36779245_Oliver2023_PMC_2026-09-27.xml`
+(Table 1 is `table-wrap` 1 of 3, **22 rows**), never from linearised text.
+
+1. **«The discordance is survival only» is FALSE.** Patients 2 and 5 differ on
+   `Short stature` (*No* / *Yes*), on `Ophthalmologic features`
+   (*«Absent eye contact; erratic ocular movements»* / *«Poor eye contact»*), and on the three context
+   rows the review did not name — `Country` (*Italy (Italian)* / *France (North African)*),
+   `Family history for epilepsy` (*No* / *Yes (father's siblings)*) and `Consanguineous` (*No* / *Yes*).
+   🔴 **The verifier found a sixth difference the candidate does not name:** `Genetic studies`
+   (*ES* / *ES (gene panel)*) — a methods row, not an examination axis, so it changes nothing the
+   candidate asserts, and it is recorded rather than folded in. Alignment checked **before** any value
+   was read across: rows 3–8 carry **13** cells each and the `colspan="2"` cell is the **9th data
+   cell** — *«c.728dupT, p.Gln244ProfsTer26 (pat)/exon 5 duplication, p.His173GlyfsTer14 (mat)»* in
+   row 3, *«Null/null»* in row 4, *«US (Anglo-American/Hispanic)»* in row 5 — covering patients
+   **9–10**, i.e. **after** both patients of interest. The examination rows carry **14** cells and no
+   `colspan`. Both patients are `c.689A > C, p.Gln230Pro (homozygous)` / `Missense/missense`.
+2. **`Speech` is NOT invariant across the 13 patients.** `Intellectual disability` = `Profound`
+   **13/13** ✅ · `Walking/ambulant` = `No` **13/13** ✅ · `Speech` = `Nonverbal` **11/13** ❌ —
+   patient **6** carries *«Single word "Dad"»* and patient **10** *«Single word "Mama"»*. The
+   reviewer's *«all 13 … zero variance»* is false on that axis; the candidate's narrower statement is
+   what landed, and **triple 8, which records the reviewer's error, is kept**.
+
+### `paper_registry_current.md` — the verbatim-outside post-condition, checked
+
+`propagate` refuses this file by name (exit 4), so it took the **full-rewrite** path: exactly **three**
+substitutions, each asserted to occur **1×** immediately before it was made. The result was then diffed
+against `HEAD` hunk by hunk. **Exactly two hunks exist** (`git diff -U0`: `@@ -53 +53 @@` and
+`@@ -7782,2 +7782,2 @@`), and **every changed line falls inside an addressed record and nowhere
+else** — the first inside `PAPER 001` (2807–5092 before, 2807–5678 after), the second inside
+`PAPER 118` (595115–598521 before, 595701–601712 after). Independently of the diff, the file was
+re-partitioned with `registry_records`: **482 blocks before and after, the same key set, 480 of them
+byte-identical**, and the only two whose bytes changed are `PAPER 001` and `PAPER 118`. This is the
+same byte-exact standard `BATCH_20260928_001`'s statement was independently confirmed against.
+
+### Cardinality, measured and not predicted
+
+`growth_anchors.py check` after propagation: **claims 41 · papers 108 · corpus 361 · literature 401 |
+registry_only 10 | unread_premises 0 — VERDICT PASS**, identical to the pre-flight measurement. The
+candidate's §2.6 prediction is therefore correct, and **no `growth_anchors.py record` event is owed**
+because no anchor moved.
+
+### DisMech Phase-2 sidecar and baseline — no re-seal owed, and why
+
+`derive_dismech_sidecar.py` was re-run inside Phase 4.7 and the sidecar is **byte-identical**
+(`git status` does not list it): this batch touches `CLAIM 030`, `CLAIM 002`, `PAPER 001` and
+`PAPER 118`, and **none of them is a sealed block**. `reseal_dismech_baseline.py --check` after the
+propagation commit reports **one** change — `anchor: da8b08b57 -> c5eec225e` — and **no drifted sealed
+block at all**: the claim-registry `scope_sha256` and its `CLAIM 016 / 024 / 035` per-block digests,
+and the paper-registry `scope_sha256` and its `PAPER 019 / 055 / 056` digests, are all unchanged. The
+baseline's own `window.verification_scope` says it in terms: *«Editing a registry outside that scope is
+not a violation of this freeze; editing inside it is.»* **So nothing was absorbed, no `--revision` was
+consumed, and the stored `rev.18` stands** — see DECISIONS_TAKEN in the batch report for why spending
+`rev.19` on an anchor-only drift would have made Mirror's own `M10` label problem worse. All four
+DisMech suites are green with the anchor drift standing (37 · 23 · 44 · **27**).
+
+### Carried unchanged, and NOT closed
+
+- **`CLAIM 016 → CLAIM 033` is recorded, not closed.** §5(b)'s rule stands: a back-link is an
+  unadjudicated adjacency judgement, and the dedicated graph-hygiene candidate decides all fifteen
+  one-directional edges as a set. This batch added **no** wikilink.
+- **The five Harness Engineering hand-offs of §6 are carried into the batch report unchanged** —
+  Mirror `7` (`dismech_phase2_baseline.json` revision labels / `revision_ordinal`), `8`
+  (`prompt_batch_commit.md` §7: write the changelog-row rule down), `12` (`batch_queue.py` resolution
+  order), `13` (`record_scoped_edit.py` `_span_from` EOF fallback) and the **field half of `4`**
+  (manifest `receipt` re-pointing, two fields with two different problems, routed separately). No
+  file under `framework/` was touched by this batch.
+- **The three CONTESTED findings stay contested**, as §4 states them: FINDING 2's count, FINDING 5's
+  noun, FINDING 10's *«broken»*. Nothing here silently resolves one.
+
+### What the candidate got wrong or left loose, recorded rather than repaired
+
+1. **§6's item `7` is already in tension with the tool as shipped on `082ed19`.** It asks that
+   *«`revision_ordinal` must be derived, never inferred from the string»*, while
+   `reseal_dismech_baseline.py` on `082ed19` states in its own help that the ordinal *«is parsed from
+   `rev.N` in the label, or given outright with `--revision-ordinal`»* — i.e. the shipped design
+   infers it from the string by default and offers the explicit value as an override. Recorded for
+   the hand-off's owner, not repaired here; this batch consumed no revision. §6's item `13` — refuse
+   or at minimum print a record whose scope runs to EOF — is **confirmed by measurement** above.
+2. **§2.4's containment claim is right for the wrong reason.** `LIT-0420` is the **last** record of
+   `literature_tracking_log_current.md`, so *its* span also runs to EOF (518196 → 521108 = `len(text)`)
+   — the very defect §6's item `13` describes. `LIT-1` is safe only because its `old` is unique in the
+   **whole file**, not because the record anchor bounded it. The same is true of `PAPER 118`. If
+   Harness Engineering makes the tool refuse EOF-spanning records, `LIT-1`'s anchor will need a
+   `heading` form exactly as `WM-2` already has, and the candidate does not say so.
+3. **§2.6's working-model figure is not the batch's figure.** `96 155 → 96 960` is the two candidate
+   ops alone; the landed file is **101 156** characters, because Phase 4.6 adds the `WM_v7.2` version
+   line, the new `Last update` line and the new changelog row. Not an error in the candidate — it
+   simulated its own ops — but a reader comparing the file to §2.6 will mis-read it.
+4. **The snapshot declaration does not cover `disease_model.md`, and the candidate does not mention
+   it.** See the batch report; this is a finding against the **declaration**, not against the
+   candidate's op.
+
+**No `PROPAGATED IN PART` residue remains from this candidate.** Its own §5 items were applied
+outside any batch before it was written, and §5(d)'s prepared receipt
+(`FTR-20260928-42589397-03`, `reread_reason: receipt_correction`) is **still owed and still
+unrecorded** — this batch wrote **no** receipt and the ledger stands at **259** chained events,
+tail-anchored.
+
+**Not medical advice.**
