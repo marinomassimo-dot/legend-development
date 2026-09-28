@@ -47,6 +47,33 @@ Three things close that, all of them here:
 Nothing is rewritten retroactively: the labels already in git stay as they are, and the history
 field starts at the first re-seal after 2026-09-28.
 
+🔴 **THREE CONVENTIONS HAVE GOVERNED THIS LABEL, AND THE NEXT WRITER MUST NOT INVENT A FOURTH.**
+The series below is not noise; it is three different rules applied in turn by different actors:
+
+  1. **monotone-per-line** (2026-08-04, `rev.7 → 8 → 9`) — one counter per line of work, restarted
+     whenever a new line began, which is why `rev.7` and `rev.12` each occur more than once;
+  2. **reset-on-branch** (2026-08-04/06, `rev.12 → 7`, `rev.17 → 13`) — the label was carried over
+     from whichever baseline the batch branched from, so it DESCENDS across a branch boundary;
+  3. **highest-ever + 1** (2026-09-28, `rev.18`) — the only rule now permitted to write, and the
+     one this tool enforces: the new ordinal must exceed the stored one.
+
+Conventions 1 and 2 are history and are not re-applied. A label that would repeat or descend is
+refused, so writing under convention 1 or 2 is no longer possible — which is the point.
+
+🔴 **The ordinal is DERIVED, and ordering is never read off the spelling.** `revision_ordinal` is
+parsed from `rev.N` ONCE, at the moment of the write, and from then on it is the stored integer
+that orders seals. A reader who compares two labels as text is applying convention 3 to a series
+written under three, and gets the wrong answer: `rev.14` (2026-09-27) is LATER than `rev.17`
+(2026-08-07). `--history` derives the ordinals for the pre-2026-09-28 seals the only way they can
+be derived — by parsing their labels out of git — and prints the rule it used beside them, so the
+derivation is auditable rather than assumed.
+
+🔴 **The count is a tool answer, not a grep.** The label history has been miscounted three times
+by three different actors — 13, 15 and 16 — because three different things are countable: 16
+commits touch the file, they carry 13 distinct label STRINGS, and the ordinal series has 16
+entries with repeats. `--history` prints all of those numbers with the commits behind them, so the
+next reader asks the tool instead of eyeballing `git log`.
+
 Usage
 -----
     reseal_dismech_baseline.py --check       # report what would change, and what it would refuse
@@ -137,28 +164,89 @@ def history_entry(baseline: dict) -> dict:
             "git_head_at_freeze": baseline.get("git_head_at_freeze")}
 
 
-def print_history(baseline: dict) -> int:
-    """Every label this baseline has carried — the field first, then git for the older seals."""
-    for entry in baseline.get("revision_history", []):
-        print(f"  [{entry.get('revision_ordinal')}] {entry.get('frozen_at')} "
-              f"{str(entry.get('git_head_at_freeze'))[:9]} {entry.get('revision')}")
-    relative = BASELINE.relative_to(REPO).as_posix()
-    log = _git("log", "--follow", "--format=%H", "--", relative).splitlines()
-    seen: set[str] = set()
-    print(f"labels in git for {relative}, newest first:")
-    for commit in log:
+CONVENTIONS = (
+    ("monotone-per-line", "one counter per line of work, restarted when a new line began "
+                          "(rev.7 -> 8 -> 9); this is why 7 and 12 each occur more than once"),
+    ("reset-on-branch", "the label carried over from the baseline the batch branched from, so it "
+                        "DESCENDS across a branch boundary (rev.12 -> 7, rev.17 -> 13)"),
+    ("highest-ever + 1", "the only rule that may write today, and the one this tool enforces: the "
+                         "new ordinal must EXCEED the stored one"),
+)
+
+DERIVATION_RULE = (
+    "one row per COMMIT that touched the file (git log --follow), oldest first, with no "
+    "deduplication by label; the ordinal of each row is the integer matched by "
+    r"/\brev\.\s*(\d+)/ in that commit's `revision` string, which is how a pre-2026-09-28 seal's "
+    "ordinal is recoverable at all. A commit whose blob does not parse as JSON, or whose label "
+    "carries no rev.N, is printed with an ordinal of `-` and counted in `commits` only."
+)
+
+
+def label_series(relative: str) -> list[tuple[str, str, str | None, int | None]]:
+    """(commit, date, label, ordinal) for EVERY commit that touched the file, oldest first.
+
+    🔴 No deduplication. The version this replaced skipped a label it had already printed, so the
+    two identical `rev.16` seals (2026-08-04 and 2026-08-06) collapsed into one row and the
+    printed list had 13 entries against 16 commits — which is exactly how the history came to be
+    counted as 13 by one actor, 15 by another and 16 by a third. Repeats ARE the finding here.
+    """
+    log = _git("log", "--follow", "--format=%H\t%ad", "--date=short", "--", relative).splitlines()
+    rows: list[tuple[str, str, str | None, int | None]] = []
+    for line in log:
+        commit, _, date = line.partition("\t")
         blob = subprocess.run(["git", "show", f"{commit}:{relative}"], cwd=REPO,
                               capture_output=True, text=True)
-        if blob.returncode != 0:
-            continue
-        try:
-            label = json.loads(blob.stdout).get("revision")
-        except json.JSONDecodeError:
-            continue
-        if not label or label in seen:
-            continue
-        seen.add(label)
-        print(f"  {commit[:9]} [{label_ordinal(label)}] {label}")
+        label: str | None = None
+        if blob.returncode == 0:
+            try:
+                label = json.loads(blob.stdout).get("revision")
+            except json.JSONDecodeError:
+                label = None
+        rows.append((commit, date, label, label_ordinal(label)))
+    rows.reverse()
+    return rows
+
+
+def print_history(baseline: dict) -> int:
+    """Every label this baseline has carried, the counts a reader keeps getting wrong, and the
+    rule used to derive them — so the answer comes from the tool and not from a grep."""
+    field = baseline.get("revision_history", [])
+    print(f"revision_history field ({len(field)} superseded seal(s) recorded in the file; the "
+          "field was added 2026-09-28, so earlier seals live only in git):")
+    for entry in field:
+        print(f"  [{entry.get('revision_ordinal')}] {entry.get('frozen_at')} "
+              f"{str(entry.get('git_head_at_freeze'))[:9]} {entry.get('revision')}")
+    if not field:
+        print("  (none yet)")
+
+    relative = BASELINE.relative_to(REPO).as_posix()
+    rows = label_series(relative)
+    print(f"\nevery commit that touched {relative}, OLDEST first:")
+    for commit, date, label, ordinal in rows:
+        mark = "" if ordinal is not None else "  <- no rev.N in the label"
+        print(f"  {commit[:9]} {date} [{ordinal if ordinal is not None else '-'}] "
+              f"{str(label)[:72]}{mark}")
+
+    series = [ordinal for _c, _d, _l, ordinal in rows if ordinal is not None]
+    labels = {label for _c, _d, label, _o in rows if label}
+    print(f"\nordinal series, oldest -> newest: {' -> '.join(str(o) for o in series)}")
+    print("THREE COUNTS, all correct, which is why this history has been miscounted three times "
+          "(13, 15 and 16, by three different actors):")
+    print(f"  commits touching the file      : {len(rows)}")
+    print(f"  distinct label STRINGS         : {len(labels)}")
+    print(f"  ordinals in the series         : {len(series)}"
+          f" (highest ever {max(series) if series else '-'};"
+          f" repeats {sorted({o for o in series if series.count(o) > 1})})")
+    stored = stored_ordinal(baseline)
+    print(f"  stored revision_ordinal now    : {stored}"
+          f" -> the next seal must be rev.{(stored + 1) if stored is not None else '?'} or higher")
+    print(f"\nDERIVATION RULE: {DERIVATION_RULE}")
+    print("THE SERIES IS NOT NOISE — three conventions produced it, and only the third may write:")
+    for name, description in CONVENTIONS:
+        print(f"  - {name}: {description}")
+    print("A label is never compared as TEXT to order two seals: rev.14 (2026-09-27) is later "
+          "than rev.17 (2026-08-07). Ordering is the stored revision_ordinal, derived once at "
+          "the write.")
     return 0
 
 

@@ -140,6 +140,7 @@ SNAPSHOT_DECLARATION (repo-relative; a `*` glob is expanded at snapshot time):
   - disease-models/wwox/registries/claim_registry_current.md
   - disease-models/wwox/registries/paper_registry_current.md
   - disease-models/wwox/registries/literature_tracking_log_current.md
+  - disease-models/wwox/disease_model.md
   - disease-models/wwox/meta/meta_*_current.md
   - disease-models/wwox/research/research_*_current.md
   - disease-models/wwox/biomarker_endpoint/biomarker_candidates_current.md
@@ -159,9 +160,23 @@ ABORT leaves their appends standing; that is the lesser loss, and it is stated s
 
 Record the snapshot path in `legend_activity_log.md`.
 
+🔴 **`disease_model.md` was absent from this list until 2026-09-28 and the tool did not notice**,
+because the only coverage condition was the four scientific current files — and that file is a
+canonical disease-model file by `state_manifest_current.md` § 3.1, written by two batches on
+2026-09-28 alone. BATCH_20260928_002 measured the gap, deliberately did NOT hand-copy it into its
+own snapshot (hand-copying fixes one batch and leaves the declaration wrong for the next, which is
+the drift this declaration exists to end) and fell back to `git checkout --` on abort, which works
+only because the file is tracked. The reason the tool could not catch it is worth stating: **the
+coverage condition names four files, while the propagation phases below can write every file in
+this list.** Widening the condition to "every file the propagation phases can write" would close
+the class rather than this instance, and it is not done here because it needs one source of truth
+for that set — which is this block, and a block cannot verify itself. Until then: a batch that
+writes a canonical file NOT in this list adds it here, in the same commit, before propagating.
+
 > **Without a complete snapshot: ABORT.** The tool enforces this literally: if a declared
 > non-glob path is missing from the working tree, or if any of the four scientific current
-> files is not covered by the declaration, `snapshot` refuses and writes nothing.
+> files is not covered by the declaration, `snapshot` refuses and writes nothing. The second
+> condition is a FLOOR, not the coverage this list promises — see the note above.
 
 ---
 
@@ -418,6 +433,52 @@ event stays visible in the chain and is simply superseded.
 
 Enforced by `test_active_receipts_never_name_an_output_that_cannot_ship` in
 `scripts/test_fulltext_trace_contract.py`.
+
+### 7.2 Correcting the historical record of a completed act
+
+🔴 **The working-model changelog is NOT append-only, and no normative file ever said it was.**
+Two actors verified that independently on 2026-09-28: `LEGEND_CORE` § 5's append-only carve-out
+list names the commit log, the activity log and the inbox, `state_manifest_current.md` § 3.3 names
+the receipt ledger, and both lists are closed. `BATCH_20260928_001` corrected two historical
+changelog rows in place and Mirror passed it as legitimate — correctly, because there was no rule
+to break. This section is the rule, so the next batch is not deciding it again from scratch.
+
+It governs every **historical record of a completed act**: a `## Changelog` row in
+`working_model_current.md`, and a `batch_<ID>_scope` / `batch_<ID>_candidates` entry in
+`framework/state/state_history.md` § 4.
+
+**What MAY be corrected in place** — the *description of a past act*. What that batch did, which
+candidate carried it, which record it touched, a count, a date, an identifier, a typo, a wrong
+figure or panel reference. These are facts about the act, and a false fact about a past act is
+worth more corrected than preserved.
+
+**What may NOT be corrected in place** — the row's **stated conclusion**. A conclusion is
+superseded by a **new row** that names the row it supersedes; the old row keeps its own words. A
+batch that overwrites a conclusion destroys the only record that the model once held it, which is
+the history the changelog exists to be.
+
+**Every in-place correction carries three things inside the row it corrects:**
+
+1. the **correcting candidate** (`CC-…`) and the **date**;
+2. the **wording it replaces, verbatim** — short, quoted, in the row itself, e.g.
+   `Fig 7d [corrected 2026-08-26 from "Fig 7b" by CC-20260826-GSK3B-S9-AXIS-01]`;
+3. nothing else. The correction does not take the opportunity to improve neighbouring prose: it is
+   a `replace-within` on the defective string, and the bytes around it stay.
+
+🔴 **Item 2 is the one that is easy to skip and the only one that pays the cost Mirror named.** A
+corrected row now carries a **forward reference** — it cites a candidate that did not exist when
+the version it documents was released — so a reader working from the file alone can no longer
+reconstruct what that version SAID at that version. That is a real loss and it is accepted, on the
+condition that the superseded wording travels in the row. A marker without the old words trades a
+false statement for an unreadable one. Git still holds the bytes; the file must not need it.
+
+A row corrected this way is **not** a re-dated row: `frozen`/`released` dates, the version label
+and the batch id are the act's own and never move. Correcting a row is not re-releasing a version.
+
+This closes what `CC-20260826-GSK3B-S9-AXIS-01` `D2` left open — whether a completed batch's scope
+record may be corrected in place with an inline marker. It may, on these three conditions. `D2`
+reserved the *form* of that marker and condition 2 is now that form, so a future `D2`-shaped
+correction is specified rather than escalated.
 
 Final batch output:
 - N commit candidates `PROPAGATED`

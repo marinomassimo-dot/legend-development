@@ -359,15 +359,70 @@ a reviewer's inference. Same class as `<fig\b` matching `<fig-count>`: **a plaus
 that answers a different question from the one you asked**, invisible to any check that only
 verifies the result is well-formed, because the result is well-formed.
 
-🟡 **OPEN, deliberately not decided in a merge: what does a manifest's `receipt` point at —
-the reading that PRODUCED the manifest, or the most recent reading of that paper?** The
-validator requires the field and checks nothing about its target, so the tooling has no
-opinion. `PMID42422765.json` declares `…-04` while `…-05` is a later receipt for the same
-paper whose `outputs` name the manifest file. Under one reading `-04` is right, under the
-other `-05` is; both are internally consistent, and neither is a referential defect. Changing
-it swaps one truth for another, which is why `rechain --repoint-manifests` must never be
-pointed at this case: it exists to follow a **renamed identifier**, not to re-decide which
-reading a manifest documents.
+🟢 **CLOSED 2026-09-28 — a manifest's `receipt` names the reading that PRODUCED the manifest:
+the EARLIEST ledger event for the same study whose `outputs` name that manifest file.** It was
+carried as 🟡 OPEN between two readings ("produced it" against "most recently read that paper"),
+and the validator required the field while checking nothing about its target, so nobody could say
+whether a given value was a defect. Two manifests flagged in the week of 2026-09-28 made the cost
+of leaving it open concrete: `PMID42589397.json` declares `…-01`, which names the manifest in no
+output at all and fingerprints an older artifact than the one every locator in it verifies against
+(wrong under BOTH readings), while `PMID42397075.json` declares `…-03`, the first event whose
+outputs name it, with the later `…-04` naming it nowhere (wrong under NEITHER). An open field
+cannot tell those two apart, and one of them is a real defect.
+
+Why "produced" and not "most recent", in the order that decided it:
+
+1. **"Most recent" is a semantics this repository cannot maintain.** Its correct value changes
+   every time anybody re-reads the paper, and the only code path that writes the field —
+   `rechain --repoint-manifests` — follows a renamed identifier and may not be used to re-decide
+   a target. That is a permanent defect generator, not a convention. "Produced" is fixed when the
+   manifest is written and never moves.
+2. **It would duplicate the ledger.** `fulltext_receipts.py status --pmid` already answers "what
+   is the latest reading of this paper, and at what depth", authoritatively. A manifest field that
+   restates it adds nothing and can only fall out of step with it.
+3. **A manifest IS the work record of one reading.** `require_work_manifest` already binds a
+   receipt to its own manifest at append time; the relation the tooling enforces runs
+   receipt → the manifest that reading produced.
+4. It is **derivable**, which is what makes a check possible at all. "Most recently attests" is
+   not even well defined — attests by any later receipt for the paper, or only by one that names
+   the manifest?
+
+🔴 **Deriving PRODUCTION from `outputs` is not the 2026-08-11 trap above, and the difference is the
+question asked.** `outputs` is what the run TOUCHED; "which run touched this file first" is exactly
+a production question. What the trap did was infer what a receipt ATTESTS from the same field, and
+nothing here does that. Cross-study events are excluded: `FTR-20260810-25331887-01` legitimately
+wrote into `PMID38499540.json` as real multihop work, and a reading of one paper never produces
+another paper's manifest.
+
+**Conformance is checked, not conventional:**
+
+```bash
+python3 framework/scripts/manifest_receipt_provenance.py            # report
+python3 framework/scripts/manifest_receipt_provenance.py --check    # gate on the declared ceiling
+```
+
+Verdicts: `CONFORMS` · `NOT_THE_PRODUCER` (the declared receipt touched the manifest, an earlier
+same-study one produced it) · `UNNAMED` (the declared receipt's outputs do not name the manifest at
+all — the sharper defect, unreadable as a difference of convention) · `UNKNOWN_EVENT` · `NO_RECEIPT`
+· `UNCHECKABLE` (no same-study event names the manifest, so the append-only ledger cannot answer;
+reported, never a defect).
+
+**The declared debt.** Closing the field does not retro-fit the corpus. Measured 2026-09-28 over
+116 manifests: 97 `CONFORMS`, 17 non-conforming (13 `NOT_THE_PRODUCER`, 3 `UNNAMED`, 1
+`UNKNOWN_EVENT`), 2 `UNCHECKABLE`. Most of the 13 were written under the reading now retired, and
+they are a visible, countable tail rather than a silence. `--check` fails when the count EXCEEDS the
+ceiling the tool declares, so a NEW non-conforming manifest is loud at write time; lower the
+ceiling as the tail is repaired and never raise it.
+
+🔴 **The protocol provides NO instrument to repair one of these, and that is stated rather than
+implied.** `rechain --repoint-manifests` only moves a `receipt` whose value is the OLD side of a
+`--rename`, and this section still forbids pointing it at a target decision; `receipt_correction`
+is ledger-side and preserves the reading's substantive fields, and `require_work_manifest` returns
+early for it; nothing else in the repository writes a manifest's `receipt`. A manifest is also not
+hand-edited: its `source_artifacts` are fingerprinted and its locators are verified against them.
+So repairing `PMID42589397.json` is a separate task that must first provide the instrument. Until
+then the check names the value each defect should carry, so that task starts measured instead of
+starting with a survey.
 
 `source_fingerprint` is mandatory whenever a **contemporaneous** receipt names a local
 artifact. A receipt over a file that carries no digest claims "I read *this* document"

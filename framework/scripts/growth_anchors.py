@@ -308,7 +308,34 @@ CANDIDATE_STEM = re.compile(r"^(?:commit[_-]candidate[_-]|CC-)(.+)$", re.I)
 # itself (prompt_batch_commit.md Phase 7), read at its LAST heading, because later batches
 # append and never rewrite. A mention of the words in prose is not a heading.
 DISPOSITION_HEADING = re.compile(r"(?m)^#{1,6}\s*BATCH DISPOSITION\b")
-DISPOSITION_STATUS = re.compile(r"\*\*Status:\*\*[^A-Za-z]*([A-Z][A-Z ]*[A-Z])")
+# 🔴 The status is the thing that CLOSES a candidate, and the pattern that read it required one
+# exact spelling: `**Status:**` with the colon inside the bold and the value outside it. Both
+# candidates BATCH_20260928_001 propagated wrote
+#     **Nothing above this line was rewritten.** **Status: `PROPAGATED`** — all 19 operations
+# i.e. the colon and the backticked value inside one bold span. No match, so no closing status was
+# found and both stayed in the backlog: the counter said 30 where the real backlog was 28, and the
+# batch that wrote them never learned its close had not counted. Everything after `**Status` up to
+# the first letter is now punctuation to skip — colon, closing asterisks, backtick, spaces, in any
+# order — because which of those a writer used is not a statement about the candidate.
+#
+# 🔴 AND THE FIELD IS CALLED `Verdict` MORE OFTEN THAN IT IS CALLED `Status`. Measured over the 30
+# candidates the counter listed: 26 disposition blocks write `**Verdict: `PROPAGATED`.**` and only
+# the two 2026-09-28 ones write `Status`. The parser knew one of the two names, so 16 candidates
+# that declare a plain closing verdict were counted as open — the same defect as the punctuation,
+# one field name over, and much larger. Both names are the same act and both are read.
+DISPOSITION_STATUS = re.compile(r"\*\*(?:Status|Verdict)\b[^A-Za-z]*([A-Z][A-Z ]*[A-Z])")
+# A disposition block whose status is unreadable is a CHECK_ERROR — except for the ones already on
+# disk when the check was written, which are named here rather than absorbed into a number. A
+# candidate is append-only and is not edited to satisfy a tool: this list is the declared debt, and
+# ANY OTHER unreadable block fails `check`, so the next one is loud at write time. Never add to it
+# to make a run pass; fix the line instead.
+KNOWN_UNREADABLE_DISPOSITIONS = frozenset({
+    # `**Status confirmed: `PROPAGATED IN PART`**` — a fourth spelling, with a word between the
+    # field name and its value. Its verdict is IN PART either way, so the backlog count is
+    # unaffected; what is affected is that a close-shaped line cannot be read, which is exactly
+    # what this check exists to say out loud.
+    "CC-20260922-CLAIM025-SIGN-INVARIANCE-01",
+})
 DISPOSITION_CLOSING = ("PROPAGATED", "INTEGRATED", "SUPERSEDED", "CLOSED", "NOT INTEGRATED")
 HEADER_STATUS = re.compile(r"(?m)^\*\*Status:?\*\*:?\s*(.+)$")
 CANDIDATE_ID_LINE = re.compile(r"(?m)^\*\*Candidate ID:\*\*\s*(\S+)")
@@ -345,16 +372,26 @@ def candidate_identity(path: Path) -> str:
 
 
 def candidate_disposition(text: str) -> str | None:
-    """`closed`, `pending`, or None when the candidate carries no lifecycle record of its own.
+    """`closed`, `pending`, `unreadable`, or None when the candidate carries no lifecycle record.
 
     The protocol keeps a DEFERRED candidate in the queue, and a candidate applied IN PART still
     owes its remaining sections, so neither closes it. A pre-2026-09-09 candidate records its
     lifecycle only in its header `Status`, naming the batch that committed it.
+
+    🔴 `unreadable` exists because widening the pattern is the SMALLER half of the fix. A batch
+    writes a disposition block, moves on, and the counter disagrees in silence — which is how two
+    closed candidates spent a day being counted as open. A disposition block whose status this
+    parser cannot read is therefore a distinct, reported state: it still counts as pending, so the
+    count fails closed, and `check` names the file so the AUTHOR learns instead of the next reader
+    guessing. Same choice `candidate_tree_freshness` made for an undeclared generated surface: an
+    input the tool cannot read is CHECK_ERROR by design, never a quiet zero.
     """
     headings = [match.start() for match in DISPOSITION_HEADING.finditer(text)]
     if headings:
         status = DISPOSITION_STATUS.search(text, headings[-1])
-        label = status.group(1).strip() if status else ""
+        if status is None:
+            return "unreadable"
+        label = status.group(1).strip()
         closing = label.startswith(DISPOSITION_CLOSING) and "IN PART" not in label
         return "closed" if closing else "pending"
     header = HEADER_STATUS.search(text)
@@ -372,7 +409,26 @@ def candidate_directories(root: Path, disease: str) -> list[Path]:
 
 
 def measure_candidate_backlog(root: Path, disease: str) -> list[str]:
-    """Candidate files present on disk that no disposition record or batch scope closes.
+    """Candidate files present on disk that no disposition record or batch scope closes."""
+    return survey_candidates(root, disease)[0]
+
+
+def measure_unreadable_dispositions(root: Path, disease: str) -> list[str]:
+    """Candidates whose `## BATCH DISPOSITION` block carries a status this parser cannot read.
+
+    Separate from the backlog because it is a different statement: the backlog says work is DUE,
+    this says the tool and the author disagree about whether work is DONE — and the second is a
+    defect in the record, not a decision for the next batch.
+    """
+    return survey_candidates(root, disease)[1]
+
+
+def survey_candidates(root: Path, disease: str) -> tuple[list[str], list[str]]:
+    """(pending, unreadable-disposition) over every candidate on disk, in one pass.
+
+    Discovery, classification and disposition are three steps: a file is a candidate by its
+    stem, its identity comes from its declared ID or its name, and its state comes from its own
+    last `## BATCH DISPOSITION` heading or header `Status` before any scope mention.
 
     Discovery, classification and disposition are three steps: a file is a candidate by its
     stem, its identity comes from its declared ID or its name, and its state comes from its own
@@ -393,6 +449,7 @@ def measure_candidate_backlog(root: Path, disease: str) -> list[str]:
 
     pending: dict[str, str] = {}
     closed: set[str] = set()
+    unreadable: list[str] = []
     for directory in candidate_directories(root, disease):
         if not directory.is_dir():
             continue
@@ -406,6 +463,11 @@ def measure_candidate_backlog(root: Path, disease: str) -> list[str]:
             except OSError:
                 text = ""
             state = candidate_disposition(text)              # disposition, own record first
+            if state == "unreadable":
+                # Fail closed AND say so: the candidate stays in the backlog, and the author is
+                # told by name that its close did not count.
+                unreadable.append(identity)
+                state = "pending"
             if state is None:
                 state = "closed" if any(key in blob for blob in consumed_blobs) else "pending"
             if state == "closed":
@@ -413,7 +475,7 @@ def measure_candidate_backlog(root: Path, disease: str) -> list[str]:
                 pending.pop(key, None)
             elif key not in closed:
                 pending.setdefault(key, identity)
-    return sorted(pending.values())
+    return sorted(pending.values()), sorted(unreadable)
 
 
 def candidate_backlog_trigger(live: dict[str, Any]) -> list[str]:
@@ -531,6 +593,10 @@ def measure_all(root: Path, disease: str) -> dict[str, Any]:
         # is supposed to move in both directions, so anchoring it would manufacture a
         # violation on every batch and train sessions to ignore this module.
         "candidate_backlog": measure_candidate_backlog(root, disease),
+        # Not a population and not anchored: a defect in the RECORD. A disposition block whose
+        # status the parser cannot read means the author's close did not count and nothing said
+        # so, which is how two PROPAGATED candidates were counted as open for a day.
+        "unreadable_dispositions": measure_unreadable_dispositions(root, disease),
         # Measured on every call like everything else here, and deliberately *not* an
         # anchored value: sizes are expected to move constantly, so anchoring them would
         # produce a violation on every batch. Only the acknowledgement is anchored.
@@ -771,6 +837,25 @@ def cmd_check(root: Path, disease: str, _args) -> int:
     backlog = candidate_backlog_trigger(live)
     for item in backlog:
         print(f"  [BACKLOG] {item}")
+    # 🔴 NOT a trigger and NOT a backlog: this one FAILS. A disposition block the parser cannot
+    # read means the tool and the author disagree about whether the work is DONE, and the author
+    # is the only one who can fix it — so it must be loud at write time, not discovered by the
+    # reader of a wrong headline a day later. Reporting it as a decision that is "due" would put
+    # it in the same bucket as an ordinary backlog and it would be read as ordinary.
+    unreadable = live.get("unreadable_dispositions") or []
+    undeclared = [item for item in unreadable if item not in KNOWN_UNREADABLE_DISPOSITIONS]
+    for item in unreadable:
+        known = " (declared, pre-existing)" if item not in undeclared else ""
+        print(f"  [CHECK_ERROR] UNREADABLE_DISPOSITION{known}: {item} carries a "
+              "`## BATCH DISPOSITION` block whose Status/Verdict this tool cannot read, so its "
+              "close does not count and it is still in the backlog. Write it as "
+              "`**Verdict:** PROPAGATED` — the value in CAPS, nothing between the field name and "
+              "its value: a close nothing can parse is not a close.")
+    if undeclared:
+        print(f"VERDICT: CHECK_ERROR — {len(undeclared)} disposition block(s) this tool cannot "
+              "read and nobody declared; the backlog above is fail-closed and cannot be trusted "
+              "to be minimal")
+        return 1
     if violations:
         print("VERDICT: BLOCK — growth anchors disagree with the live model")
         return 1

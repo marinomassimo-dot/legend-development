@@ -87,6 +87,7 @@ Run everything as `python3 <path> --help` first. Paths are repo-relative.
 | does any locator stand on a panel its own erratum corrected | `framework/scripts/erratum_scope_check.py` |
 | a manifest flag that IMPROVED without the work behind it | `framework/scripts/manifest_flag_drift.py` |
 | does a manifest's queued multi-hop id name **this** paper's debt | `framework/scripts/manifest_queue_id_crosscheck.py` |
+| does a manifest's `receipt` name the reading that **produced** it — the decided semantics (`fulltext_read_receipt.md`), with the declared non-conformance ceiling; reports, never writes | `framework/scripts/manifest_receipt_provenance.py --check` |
 | does a candidate, ledger or analysis file cite an `FT-` entry that was never written | `framework/scripts/manifest_queue_id_crosscheck.py --prose` |
 | does the registry's declared locator count still match the manifest it names | `framework/scripts/locator_count_crosscheck.py` |
 | every number in an orchestration record sitting beside what produced it | `framework/scripts/record_number_provenance.py` |
@@ -139,7 +140,7 @@ Run everything as `python3 <path> --help` first. Paths are repo-relative.
 |---|---|
 | the post-batch self-evaluation gate | `framework/scripts/session_self_eval.py` |
 | the mechanical backup/restore phases of `BATCH_COMMIT`, and its Phase 4 record-scoped propagation (`propagate --file … --ops …`, refused for the paper registry) | `framework/scripts/batch_commit.py` |
-| edit **one record or range** of a Markdown registry — every other byte proven unchanged — or be refused (duplicate id, fenced heading, nested record, re-segmentation); dry run by default, atomic batch with `apply --ops` | `framework/scripts/record_scoped_edit.py replace --file … --id "CLAIM 006" --text-file …` |
+| edit **one record or range** of a Markdown registry — every other byte proven unchanged — or be refused (duplicate id, fenced heading, nested record, re-segmentation, or an **unbounded span** — the last block at its level has no heading to close it, so an end assumed to be EOF that covers other headings is refused until `--to-eof` says the record really reaches it); dry run by default, atomic batch with `apply --ops` | `framework/scripts/record_scoped_edit.py replace --file … --id "CLAIM 006" --text-file …` |
 | land a committed, verified task, detach its worktree, delete its branch | `framework/scripts/task_close.py` |
 | what is not on `main` and how old it is — the weekly §21e sweep | `framework/scripts/branch_hygiene.py` |
 | local commits or dirty worktrees absent from development `main` — daily, read-only report | `framework/scripts/daily_push_check.py` |
@@ -176,6 +177,7 @@ refs or observe clones on other hosts. A missing or
 |---|---|
 | the fail-closed publication gate | `scripts/public_release_gate.py` |
 | every release suite at once | `scripts/run_release_regressions.py` |
+| the same battery while a **concurrent** actor is writing a tracked file (a batch writing its own report): declare the path so it is printed but does not fail the verdict. The runner attributes writes by TIMESTAMP and cannot tell a suite's write from a peer's — an `UNATTRIBUTED WRITE` in the FAIL summary says exactly that, and a re-run on a quiescent tree is the other way to settle it | `scripts/run_release_regressions.py --expect-write "disease-models/wwox/research/session_evaluations/*.md"` |
 | an independent, read-only privacy scan of the staging tree | `scripts/independent_privacy_scan.py` |
 | a ref-scoped privacy scan of **commit metadata** | `scripts/commit_metadata_scan.py` |
 

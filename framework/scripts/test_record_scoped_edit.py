@@ -211,6 +211,200 @@ class Refusals(unittest.TestCase):
                                 op(op="delete", id="CLAIM 099")], H2)
 
 
+#: The real `working_model_current.md` shape: identity level 1, three `#` BLOCKs, and the file's
+#: own `##` sections — `Changelog` among them — sitting after the LAST `#` BLOCK with no `#`
+#: heading to close it. `id: BLOCK 3` therefore spanned to EOF and covered the whole changelog.
+WM = """# Working Model Current
+
+> not medical advice
+
+# BLOCK 1 — one-pager
+**Version:** WM_v7.1
+
+---
+
+# BLOCK 2 — claim mirror
+| id | claim |
+|---|---|
+| 001 | x |
+
+---
+
+# BLOCK 3 — flowchart logic summary
+step one
+
+## Monitoring endpoints
+an endpoint
+
+## Changelog
+
+a historical row
+
+## BATCH_20260928_001 — WM_v7.0 → WM_v7.1
+what that batch did
+"""
+
+
+class UnboundedSpan(unittest.TestCase):
+    """The last block at its level has no following heading, so its end was ASSUMED to be EOF.
+    An assumed end that covers headings is not a record boundary and must not pass silently."""
+
+    LEVELS = (1,)
+
+    def refusal(self, ops, text=WM, levels=None):
+        with self.assertRaises(rse.Refusal) as caught:
+            rse.apply_ops(text, ops, levels or self.LEVELS)
+        return caught.exception
+
+    def test_the_span_is_measured_and_reported(self):
+        span = rse.resolve(WM, op(op="replace", id="BLOCK 3"), self.LEVELS)
+        self.assertEqual(span.end, len(WM))
+        self.assertTrue(span.to_eof)
+        self.assertEqual([t for _lv, t in span.swallowed],
+                         ["Monitoring endpoints", "Changelog",
+                          "BATCH_20260928_001 — WM_v7.0 → WM_v7.1"])
+        # a block whose end the file DOES state is bounded and carries nothing
+        bounded = rse.resolve(WM, op(op="replace", id="BLOCK 2"), self.LEVELS)
+        self.assertFalse(bounded.to_eof)
+        self.assertEqual(bounded.swallowed, ())
+
+    def test_every_end_sensitive_op_on_the_last_record_is_refused(self):
+        for one in (op(op="replace", id="BLOCK 3", text="# BLOCK 3 — flowchart logic summary\nx\n"),
+                    op(op="replace-within", id="BLOCK 3", old="step one", new="step 1"),
+                    op(op="delete", id="BLOCK 3"),
+                    op(op="insert-after", id="BLOCK 3", text="# BLOCK 4 — new\nx\n")):
+            with self.subTest(one.op):
+                refusal = self.refusal([one])
+                self.assertEqual(refusal.code, "UNBOUNDED_SPAN", str(refusal))
+                self.assertIn("## Changelog", str(refusal))
+
+    def test_an_edit_anchored_on_the_last_record_could_reach_the_changelog(self):
+        """The defect, not merely its symptom: without the refusal, `id: BLOCK 3` edits the
+        changelog, because the changelog is inside the span the tool called BLOCK 3."""
+        refusal = self.refusal([op(op="replace-within", id="BLOCK 3", old="a historical row",
+                                   new="a rewritten row")])
+        self.assertEqual(refusal.code, "UNBOUNDED_SPAN")
+        out, _ = rse.apply_ops(WM, [op(op="replace-within", id="BLOCK 3", to_eof=True,
+                                       old="a historical row", new="a rewritten row")],
+                               self.LEVELS)
+        self.assertIn("a rewritten row", out)   # --to-eof is the caller SAYING it meant this
+
+    def test_to_eof_lifts_the_refusal_and_the_report_says_it_was_asserted(self):
+        _out, report = rse.apply_ops(WM, [op(op="replace-within", id="BLOCK 3", to_eof=True,
+                                             old="step one", new="step 1")], self.LEVELS)
+        self.assertTrue(report.ops[0]["span_end_assumed"])
+        self.assertTrue(report.ops[0]["to_eof_asserted"])
+        self.assertIn("## Changelog", report.ops[0]["span_swallows"])
+
+    def test_eof_really_is_the_end_when_nothing_follows(self):
+        """A genuinely-last record with no heading after it is not refused: the assumption is
+        only unsafe where there is something to be wrong about."""
+        plain = "## CLAIM 001\n**Title:** one\n\n---\n\n## CLAIM 002\n**Title:** two\n"
+        span = rse.resolve(plain, op(op="replace", id="CLAIM 002"), H2)
+        self.assertTrue(span.to_eof)
+        self.assertEqual(span.swallowed, ())
+        out, report = rse.apply_ops(plain, [op(op="replace-within", id="CLAIM 002", old="two",
+                                               new="2")], H2)
+        self.assertEqual(out, plain.replace("two", "2"))
+        self.assertFalse(report.ops[0]["to_eof_asserted"])
+
+    def test_appending_to_a_genuinely_last_record_still_works(self):
+        out, _ = rse.apply_ops(WM, [op(op="append", text="\n---\n\n# BLOCK 4 — new\nx\n")],
+                               self.LEVELS)
+        self.assertTrue(out.endswith("# BLOCK 4 — new\nx\n"))
+        # and a new neighbour may still be put BEFORE the unbounded record: insert-before uses
+        # only the block's start, which the file does state.
+        out2, _ = rse.apply_ops(WM, [op(op="insert-before", id="BLOCK 3",
+                                        text="# BLOCK 2b — new\nx\n\n---\n\n")], self.LEVELS)
+        self.assertIn("# BLOCK 2b — new", out2)
+
+    def test_the_sub_block_remains_addressable_by_its_own_heading(self):
+        """The refusal's first remedy: `## Changelog` has its own bounded span."""
+        span = rse.resolve(WM, op(op="replace", heading="Changelog"), self.LEVELS)
+        self.assertFalse(span.to_eof)
+        out, _ = rse.apply_ops(WM, [op(op="replace-within", heading="Changelog",
+                                       old="a historical row", new="a corrected row")],
+                              self.LEVELS)
+        self.assertEqual(out, WM.replace("a historical row", "a corrected row"))
+
+    def test_a_nested_record_in_the_tail_is_still_the_sharper_refusal(self):
+        text = "# Title\n\n## CLAIM 001\nx\n"
+        self.refusal([op(op="delete", heading="Title")], text=text, levels=H2)
+        self.assertEqual(self.refusal([op(op="delete", heading="Title")], text=text,
+                                      levels=H2).code, "NESTED_RECORD")
+
+    def test_the_live_working_model_exhibits_the_shape(self):
+        """Not a fixture: the canonical file this defect was measured on."""
+        source = ROOT / "disease-models/wwox/registries/working_model_current.md"
+        text = source.read_bytes().decode("utf-8")
+        span = rse.resolve(text, op(op="replace", id="BLOCK 3"), (1,))
+        self.assertTrue(span.to_eof)
+        self.assertEqual(span.end, len(text))
+        self.assertIn("Changelog", [t for _lv, t in span.swallowed])
+        with self.assertRaises(rse.Refusal) as caught:
+            rse.apply_ops(text, [op(op="replace-within", id="BLOCK 3", old="Changelog",
+                                    new="Changelog")], (1,))
+        self.assertEqual(caught.exception.code, "UNBOUNDED_SPAN")
+        # and the records at the end of the other canonical surfaces are NOT affected
+        for name, levels in (("claim_registry_current", (2,)), ("paper_registry_current", (2,)),
+                             ("literature_tracking_log_current", (2,))):
+            other = (ROOT / f"disease-models/wwox/registries/{name}.md").read_bytes().decode()
+            last = rse.identity_headings(other, levels)[-1]
+            with self.subTest(name):
+                self.assertEqual(rse._span_from(other, last[0], last[1], last[2],
+                                                "record").swallowed, ())
+
+    def test_the_last_record_of_every_registry_reaches_eof_and_only_one_is_refused(self) -> None:
+        """🔴 THE REFUSAL MUST NOT BE BLUNT, measured on the live files, not reasoned about.
+
+        `BLOCK 3`, `PAPER 118` and `LIT-0420` are ALL EOF-spanning — the last record of every
+        registry is, by construction — and BATCH_20260928_002 edited the latter two legitimately.
+        A refusal keyed on "the span reaches EOF" alone would have refused two of that batch's
+        nine ops, and editing the newest PAPER or LIT record is the commonest edit here. What
+        makes the difference is whether the assumed tail COVERS anything: only `BLOCK 3` does.
+        """
+        cases = (("working_model_current.md", "BLOCK 3", (1,), True),
+                 ("paper_registry_current.md", "PAPER 118", (2,), False),
+                 ("literature_tracking_log_current.md", "LIT-0420", (2,), False))
+        for name, record, levels, refused in cases:
+            path = ROOT / "disease-models/wwox/registries" / name
+            text = path.read_bytes().decode("utf-8")
+            span = rse.resolve(text, op(op="replace", id=record), levels)
+            with self.subTest(record):
+                self.assertTrue(span.to_eof, f"{record} must be the EOF-spanning last record")
+                self.assertEqual(span.end, len(text))
+                # the commonest edit in the repository: a replace-within on the newest record
+                needle = text[span.start:span.start + 24]
+                ops = [op(op="replace-within", id=record, old=needle, new=needle)]
+                if refused:
+                    self.assertNotEqual(span.swallowed, ())
+                    with self.assertRaises(rse.Refusal) as caught:
+                        rse.apply_ops(text, ops, levels)
+                    self.assertEqual(caught.exception.code, "UNBOUNDED_SPAN")
+                else:
+                    self.assertEqual(span.swallowed, (),
+                                     f"{record} covers nothing, so nothing may be refused")
+                    out, report = rse.apply_ops(text, ops, levels)
+                    self.assertEqual(out, text)
+                    self.assertTrue(report.ops[0]["span_end_assumed"],
+                                    "the assumed end is still REPORTED where it is not refused")
+                    self.assertEqual([], report.ops[0]["span_swallows"])
+
+    def test_appending_to_the_genuinely_last_record_of_each_registry_still_works(self) -> None:
+        """The other half of the same guarantee, on all three real files: a new PAPER / LIT /
+        BLOCK still lands after the record that is currently last."""
+        cases = (("working_model_current.md", (1,), "# BLOCK 9 — test\nx\n"),
+                 ("paper_registry_current.md", (2,), "## PAPER 999\n**Identifier:** PMID 1\n"),
+                 ("literature_tracking_log_current.md", (2,), "## LIT-9999\n**Status:** x\n"))
+        for name, levels, block in cases:
+            path = ROOT / "disease-models/wwox/registries" / name
+            text = path.read_bytes().decode("utf-8")
+            with self.subTest(name):
+                out, _ = rse.apply_ops(text, [op(op="append", text="\n---\n\n" + block)], levels)
+                self.assertTrue(out.startswith(text))
+                self.assertTrue(out.endswith(block))
+
+
 class Command(unittest.TestCase):
     def run_tool(self, *args):
         return subprocess.run([sys.executable, str(TOOL), *args], capture_output=True, text=True)

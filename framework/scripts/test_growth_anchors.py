@@ -602,6 +602,76 @@ class CandidateQueueDiscoveryAndDisposition(unittest.TestCase):
                  "# c\n**Status:** proposed — not integrated, not committed\n")
         self.assertEqual(["CC-20260826-MTOR-DIRECTION-01"], self.backlog())
 
+    # -- the spelling of the status, which is what actually closes a candidate ----------
+    def test_the_colon_and_the_value_may_sit_inside_one_bold_span(self) -> None:
+        """🔴 The exact line both BATCH_20260928_001 candidates wrote. The pattern required
+        `**Status:**` with the value OUTSIDE the bold, so no closing status was found and two
+        PROPAGATED candidates stayed in the backlog — 30 against a real 28 — and the batch that
+        wrote them never learned its close had not counted."""
+        self.put(self.queue, "CC-20260928-MIRROR003-REPAIRS-01.md",
+                 "# c\n\n## BATCH DISPOSITION — `BATCH_20260928_001`, append-only\n\n"
+                 "**Nothing above this line was rewritten.** **Status: `PROPAGATED`** — all 19 "
+                 "operations applied.\n")
+        self.assertEqual([], self.backlog())
+        self.assertEqual([], ga.measure_unreadable_dispositions(self.root, "wwox"))
+
+    def test_the_field_is_read_under_both_of_its_names(self) -> None:
+        """🔴 The larger half of the same defect: 26 of the 30 candidates the counter listed
+        write `Verdict`, not `Status`, and only `Status` was read — so 16 candidates declaring a
+        plain closing verdict were counted as open."""
+        self.put(self.queue, "CC-20260826-CLAIM002-01.md",
+                 "# c\n\n## BATCH DISPOSITION — `BATCH_20260927_004`, append-only\n\n"
+                 "**Verdict: `PROPAGATED`.** Both operations applied on `CLAIM 002`.\n")
+        self.put(self.queue, "CC-20260826-AAV9-ENDPOINT-SPLIT-01.md",
+                 "# c\n\n## BATCH DISPOSITION — `BATCH_20260927_004`, append-only\n\n"
+                 "**Verdict: `PROPAGATED IN PART`.** Part 2 propagated.\n")
+        self.put(self.queue, "CC-20260826-CLAIM003-01.md",
+                 "# c\n\n## BATCH DISPOSITION — `BATCH_20260927_004`, append-only\n\n"
+                 "**Verdict: `DEFERRED`.** Confirmed deferred.\n")
+        self.assertEqual(["CC-20260826-AAV9-ENDPOINT-SPLIT-01", "CC-20260826-CLAIM003-01"],
+                         self.backlog(), "IN PART and DEFERRED still owe work; a plain "
+                                         "PROPAGATED verdict closes")
+
+    def test_a_disposition_whose_status_cannot_be_read_is_reported_and_fails_closed(self) -> None:
+        """🔴 The half that matters more than the regex. Widening a pattern fixes today's files;
+        what closes the loop is that an author whose close did not count is TOLD. The candidate
+        stays pending (fail closed) and its name is reported."""
+        self.put(self.queue, "CC-20260922-CLAIM025-SIGN-INVARIANCE-01.md",
+                 "# c\n\n## BATCH DISPOSITION — `BATCH_20260928_001`, append-only\n\n"
+                 "**Status confirmed: `PROPAGATED IN PART`**, and the residue is closed.\n")
+        self.assertEqual(["CC-20260922-CLAIM025-SIGN-INVARIANCE-01"], self.backlog(),
+                         "an unreadable status must not silently close a candidate")
+        self.assertEqual(["CC-20260922-CLAIM025-SIGN-INVARIANCE-01"],
+                         ga.measure_unreadable_dispositions(self.root, "wwox"))
+
+    def test_only_an_undeclared_unreadable_disposition_fails_the_check(self) -> None:
+        """The declared list is the pre-existing debt, not a way to pass: a block nobody named
+        fails, and the known one is printed either way."""
+        self.put(self.queue, "CC-20260922-CLAIM025-SIGN-INVARIANCE-01.md",
+                 "# c\n\n## BATCH DISPOSITION — x, append-only\n\n"
+                 "**Status confirmed: `PROPAGATED IN PART`**\n")
+        self.assertIn("CC-20260922-CLAIM025-SIGN-INVARIANCE-01",
+                      ga.KNOWN_UNREADABLE_DISPOSITIONS)
+        self.put(self.queue, "CC-20260929-BRAND-NEW-01.md",
+                 "# c\n\n## BATCH DISPOSITION — y, append-only\n\n"
+                 "**Outcome achieved: `PROPAGATED`**\n")
+        unreadable = ga.measure_unreadable_dispositions(self.root, "wwox")
+        self.assertEqual(["CC-20260922-CLAIM025-SIGN-INVARIANCE-01", "CC-20260929-BRAND-NEW-01"],
+                         unreadable)
+        self.assertEqual(["CC-20260929-BRAND-NEW-01"],
+                         [item for item in unreadable
+                          if item not in ga.KNOWN_UNREADABLE_DISPOSITIONS],
+                         "a new unreadable disposition must not be absorbed by the declared list")
+
+    def test_a_status_line_with_no_uppercase_value_does_not_close_by_accident(self) -> None:
+        """Anti-vacuity on the widened pattern: `[^A-Za-z]*` skips punctuation, never words."""
+        self.put(self.queue, "CC-20260929-PROSE-01.md",
+                 "# c\n\n## BATCH DISPOSITION — z, append-only\n\n"
+                 "**Status** is unchanged and nothing was applied.\n")
+        self.assertEqual(["CC-20260929-PROSE-01"], self.backlog())
+        self.assertEqual(["CC-20260929-PROSE-01"],
+                         ga.measure_unreadable_dispositions(self.root, "wwox"))
+
 
 class TheRealCheckoutIsMeasured(unittest.TestCase):
     """The two read-only commands over this checkout's registries and growth ledger.
