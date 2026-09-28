@@ -212,3 +212,9 @@ flattening, as manifest entries 31 and 33 do.
 **Pending:** nothing of this candidate's own verification. It is batch-ready as a MINOR precision, and it
 must be merged with the two other `CLAIM 011` rewrites (`DOSE-ADJUDICATION`, `DOSE-DECISION-TABLE`,
 `TX007-CEILING`) into **one** atomic operation list for that record.
+
+## BATCH DISPOSITION — `BATCH_20260927_004` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Verdict: `PROPAGATED`.** All three deltas applied. Blind audit `…wave2_audit_A.md`: **4 of 4 SUPPORTED**. Δ1 records the printed LD/HD values with the **JATS flattening carried in the quotation** (`1.23 × 1011 vg`, as the surface prints it), the never-declared unit convention, the absence of any dose in the Methods, and the bound of **exactly 2** with the invariant `HD/LD = 2.1382`. Δ2 was **merged into one `replace-within` with `CC-20260826-DOSE-ADJUDICATION-01`'s configuration boundary**, in that order, exactly as this candidate's own merge note required — two candidates rewriting one sentence is one operation, not two. Δ3 closes the unit verification on the primary and records the two distinct silent dose corruptions of the two extraction routes (exponent **DELETED** in text/HTML, **FLATTENED** in JATS XML). Nothing of this candidate is owed.
+
+**Operator authorisation, verbatim (2026-09-27, given in writing after being shown the MAJOR proposals):** *«procedi tu, ti autorizzo su tutto»*. **Mirror ex-post review due** under §21e — see `session_evaluations/2026-09-27_BATCH_20260927_004.md`.

@@ -407,3 +407,9 @@ must not inherit this candidate's conclusions.
 ### Pending
 
 - Operator authorisation (Δ4, Δ5) + blind locator audit; the `CLAIM 004` ownership decision against the dose/endpoint-split package; `CLAIM 005`/`CLAIM 037` limbs excluded (owned by `m002`).
+
+## BATCH DISPOSITION — `BATCH_20260927_004` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Verdict: `PROPAGATED IN PART`.** `OP-1` (Δ4) and `OP-2` (Δ5, rebased) applied. Blind audit `…wave2_audit_E.md`: **6 of 6 SUPPORTED**, including the absence claim, which the auditor checked as an absence. 🔴 **`OP-3` (Δ6) was NOT applied because it was already done** — `CLAIM 016`'s `Wikilinks` already name `CLAIM 037`, `CLAIM 040` and `CLAIM 005`, landed by `BATCH_20260927_003`'s cross-link census. Measured against the live record, not taken from the candidate. That is a **stale** readiness claim rather than a false one, and applying it twice is what the candidate's own *apply once* note existed to prevent. **This candidate's `OP-2` won the `CLAIM 004` Summary** over `CC-20260826-AAV9-ENDPOINT-SPLIT-01`'s competing op, and the reason is in that candidate's disposition: this wording is source-accurate for Repudi 2021 and fully audited, the other attributed an Obeid endpoint to a Repudi claim. The audit's two notes are carried: the ≈6-fold keeps the source's own *about*, and the survival censoring is quoted from the figure legend with its counts. The withdrawn *≈93 % a 270 giorni* numbers stay withdrawn.
+
+**Operator authorisation, verbatim (2026-09-27, given in writing after being shown the MAJOR proposals):** *«procedi tu, ti autorizzo su tutto»*. **Mirror ex-post review due** under §21e — see `session_evaluations/2026-09-27_BATCH_20260927_004.md`.

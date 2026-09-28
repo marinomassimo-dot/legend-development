@@ -267,3 +267,9 @@ safe because a retracted sub-claim that leaves no trace is how the same error co
 (3) *`surface`/`artifact` were missing on nine pre-existing locators* → re-verified all nine
 first-hand and then declared them, rather than declaring them on trust or leaving the validator gap
 open. **STOP_LOG: empty — no reserved act and no condition without a safe default was met.**
+
+## BATCH DISPOSITION — `BATCH_20260927_004` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Verdict: `PROPAGATED`.** The single op `T1` applied — **once**, because it and the sibling's `S3` are the same edit reached from two directions, exactly as both candidates warned. Blind audit `…wave2_audit_C.md`: **4 of 4 SUPPORTED**. Two of the audit's notes are carried into the wording: the restoration is **partial** in the source's own words (*«the new equilibrium reached a higher turbidity»*), not a return to baseline, and the `WWOX L404A` negative is quoted with it. The Methods quotation carries `0.2 mg/μl` as the artefact prints it, which is this candidate's own §2b retraction honoured rather than re-opened. Nothing is owed.
+
+**Operator authorisation, verbatim (2026-09-27, given in writing after being shown the MAJOR proposals):** *«procedi tu, ti autorizzo su tutto»*. **Mirror ex-post review due** under §21e — see `session_evaluations/2026-09-27_BATCH_20260927_004.md`.

@@ -262,3 +262,9 @@ forward unchanged.
 §1 (the `TX-001` `Mechanism` line: exon skipping excluded by architecture, the field's prior declared inapplicable rather than weak) was applied outside batch by its package on a therapeutic surface that is not one of the four current files, and §4 constraint 4 is now receipted. 🔴 **§2/§3's ceiling note is DEFERRED to the MAJOR batch and was NOT applied:** it changes the stated expected value of a named strategy and rests on an unmeasured branch, which is `READY_MAJOR` by the candidate's own classification. `Provisional scoring` is untouched, and `OP 2` on the experiment packet stays with the items that own that file.
 
 **Mirror ex-post review due** under §21e — see the batch report at `session_evaluations/2026-09-27_BATCH_20260927_003.md`.
+
+## BATCH DISPOSITION — `BATCH_20260927_004` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Verdict: `PROPAGATED IN PART`.** `OP 1` applied: `TX-001` gains the **conditional ceiling note**, the `READY_MAJOR` half this candidate did not apply itself. §1 was already in the file. `OP 3` is honoured as written: **explicitly no operation** on `Provisional scoring`, and this batch did not re-score. **Residue:** `OP 2`, the three design constraints as rows in `tx001_experiment_decision_packet_20260921.md`, is **not applied** — for the candidate's own reason, that the packet is being edited by the items that own it and a third hand's rows are how a laboratory document acquires two different constraint lists. **What would unblock it:** one owner for that packet's design table.
+
+**Operator authorisation, verbatim (2026-09-27, given in writing after being shown the MAJOR proposals):** *«procedi tu, ti autorizzo su tutto»*. **Mirror ex-post review due** under §21e — see `session_evaluations/2026-09-27_BATCH_20260927_004.md`.

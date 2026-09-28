@@ -282,3 +282,9 @@ Methods-reaching surface.
   not underwrite. Item 5's withdrawal does not depend on it.
 - The **cheapest experiment named in §1.3** (allele-specific ±NMD-block in a heterozygous carrier LCL)
   is a material ask, not a repository act, and is unchanged.
+
+## BATCH DISPOSITION — `BATCH_20260927_004` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Verdict: `PROPAGATED`.** `OP 1` applied: the therapeutic-hypotheses ledger's **Premise A is withdrawn in place**, with the withdrawn wording preserved inside the replacement rather than deleted, and replaced by a labelled conditional. `OP 2` was carried by `CC-20260922-SPLICE-ARM-01`'s ledger blocks, exactly as this candidate instructed, so the two cannot write two different sentences into one record. `OP 3` landed as **`D-25`**. **The structural contradiction is propagated as §4 resolved it, and symmetrically:** pLDDT 353/354 = 85.81/87.25, the 60.47/76.38 values belong to **350/351**, and the helix runs 350–361, so the residues sit near its N-terminal edge. 🔴 **The higher confidence does not make the deletion benign — it makes the confidence argument unavailable in BOTH directions**, and that is written into the ledger and into `TX-001`'s ceiling note. **No re-score, and the proteotoxic flag now applies to both alleles rather than one** — which is a widening of a caution, not a narrowing. §4.2's contact inventory is **not** underwritten by this batch either, as §5 asks.
+
+**Operator authorisation, verbatim (2026-09-27, given in writing after being shown the MAJOR proposals):** *«procedi tu, ti autorizzo su tutto»*. **Mirror ex-post review due** under §21e — see `session_evaluations/2026-09-27_BATCH_20260927_004.md`.

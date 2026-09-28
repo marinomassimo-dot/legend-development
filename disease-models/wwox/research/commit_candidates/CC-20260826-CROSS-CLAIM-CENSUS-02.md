@@ -247,3 +247,9 @@ Canonical file, so it is still a `BATCH_COMMIT` object, but it is record-scoped,
 `OP-1`–`OP-8` applied: twelve claim-to-claim wikilinks on `CLAIM 004 · 005 · 011 · 016 · 031 · 032 · 033 · 037`, `Wikilinks` fields only, closed under reciprocity. Every `old` line was measured against the live records first and matched byte for byte. The `m002` sequencing warning on `CLAIM 005` and `CLAIM 037` was honoured: the wikilink ops and the Mirror ops address different lines of the same records and were composed into one atomic record-scoped list. **IN PART, deliberately:** the prose sentences round 3 wants in `CLAIM 031`/`CLAIM 033` and `CLAIM 032`/`CLAIM 033` are **not** written — they change what the claims mean and are a claim-scoped decision, so the candidate stays queued for them.
 
 **Mirror ex-post review due** under §21e — see the batch report at `session_evaluations/2026-09-27_BATCH_20260927_003.md`.
+
+## BATCH DISPOSITION — `BATCH_20260927_004` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Verdict: `PROPAGATED`.** **Closed: the residue this candidate named is written.** `BATCH_20260927_003` applied `OP-1`–`OP-8` (twelve reciprocal claim-to-claim wikilinks, fields only) and recorded itself `IN PART`, because *the prose sentences round 3 wants in `CLAIM 031`/`CLAIM 033` and `CLAIM 032`/`CLAIM 033` are not written — they change what the claims mean and are a claim-scoped decision*. Both are written in this batch, on all four records, in the wording `CC-20260826-CROSS-CLAIM-CENSUS-03` §1 adjudicated. 🔴 **The double-counting risk round 3 identified is no longer mitigated only by adjacency**: it is stated in both records that name the patient. Nothing of this candidate is owed.
+
+**Operator authorisation, verbatim (2026-09-27, given in writing after being shown the MAJOR proposals):** *«procedi tu, ti autorizzo su tutto»*. **Mirror ex-post review due** under §21e — see `session_evaluations/2026-09-27_BATCH_20260927_004.md`.
