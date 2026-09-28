@@ -42,7 +42,7 @@ delegated streams had reported; the last two streams and this session's own veri
 measurement at a moment. It is recorded moving rather than retro-fitted, and the rises are not a sign
 the record is deteriorating — each one is a defect that was there before anybody looked. `REP-25`
 brings it to **24 plus 1 verified-clean**, and it is the exception to that last sentence: it is a
-defect this session created. `REP-26` (2026-09-28) brings it to **25 plus 1 verified-clean**, and it
+defect this session created. `REP-26` (2026-09-28) brings it to **25 plus 1 verified-clean** — and is `CLOSED` the same day by the propagation `BATCH_20260928_003`, and it
 is the second exception of a different kind: it was *created by closing another defect*, which is the
 ordinary cost of a repair whose point-of-use prose is canonical and moves on a slower path.
 
@@ -77,7 +77,7 @@ ordinary cost of a repair whose point-of-use prose is canonical and moves on a s
 | `REP-23` | model | coverage | The closest structural analogue of the variant is absent from the record | `OPEN` |
 | `REP-24` | model | over-claim | The gene-therapy window may already be closed at diagnosis | `OPEN` |
 | `REP-25` | model | over-claim | A "matched pair" of alleles where neither abundance has a number | `OPEN` |
-| `REP-26` | model | stale | Two registries still say a manifest's `receipt` "still names" a value it no longer does | `OPEN` |
+| `REP-26` | model | stale | Two registries still say a manifest's `receipt` "still names" a value it no longer does | `CLOSED` 2026-09-28 by the propagation `BATCH_20260928_003` |
 
 ---
 
@@ -749,6 +749,8 @@ does not move to `CLOSED` here:** the sentences are canonical and are still on d
 tense until a `BATCH_COMMIT` propagates the candidate, and a row closed on a candidate rather than on a
 propagation would be exactly the kind of close this queue refuses. The propagating batch runs the VERIFY
 above and closes it.
+
+**✅ CLOSED 2026-09-28 by the propagation `BATCH_20260928_003`** (ACTOR_ID `scientist`, WM_v7.2 → WM_v7.3), not by the candidate. `P118-2` and `LIT-1` of [`commit_candidates/CC-20260928-MIRROR002B-REPAIRS-01.md`](commit_candidates/CC-20260928-MIRROR002B-REPAIRS-01.md) were propagated into `paper_registry_current.md` (`PAPER 118`, inside the full-rewrite path) and `literature_tracking_log_current.md` (`LIT-0420`, record-scoped through `batch_commit.py propagate`), and both `old` strings were re-measured by the propagating batch as occurring exactly once in their file and once in their record before anything was written. **VERIFY, run on the post-propagation tree:** `manifest_receipt_provenance.py --pmid 42589397` → `1 manifest(s) · CONFORMS 1`. ⚠️ **The grep half of the VERIFY needs reading rather than counting, and this is worth recording for the next row written this way.** `grep -n "still names" disease-models/wwox/registries/*.md` still returns two lines for PMID 42589397 — but neither *asserts* the stale present tense any more: both are the § 7.2 correction markers quoting the superseded wording verbatim, *«…, from «still names `FTR-20260921-42589397-01` …»»*, which § 7.2 **requires** to travel inside the corrected sentence. The substantive condition — that no canonical record tells a reader the defect is outstanding and routes them to a finished task — holds in both records; a literal grep for the old words cannot distinguish an assertion from a quotation of it, so a VERIFY written as a bare grep over prose that a § 7.2 correction will quote is satisfiable only by inspection. The receipt ledger's own account (`FTR-20260928-42589397-03`) was **not** touched, as this row instructs.
 
 ---
 

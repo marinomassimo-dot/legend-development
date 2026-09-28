@@ -87,7 +87,7 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 | CLAIM 035 | WWOX is a direct, residue-mapped inhibitor of GSK3β through an Axin-like docking motif in the SD | in observation | DATO (biochimica, cinque saggi ortogonal | P1 neurosviluppo / GSK3β–Tau–microtubuli | NOT_ANNOTATED | 6 | 1 |
 | CLAIM 036 | A systemic constitutive Wwox-null mouse at P18 is metabolically decompensated, so any brain phen | in observation | DATO (le misure) + INFERENZA (la portata | P5 — metabolismo / rene; confondente tra | NOT_ANNOTATED | 7 | 4 |
 | CLAIM 037 | Seizure-related phenotypes in WWOX rodent models are documented in the rat `lde/lde` (audiogenic | in observation | DATO | P2 — eccitabilità / epilettogenesi | NOT_ANNOTATED | 19 | 3 |
-| CLAIM 038 | Elevated BUN and creatinine recur across Wwox rodent models with two competing explanations — re | in observation | DATO (le misure) + IPOTESI (entrambe le  | P5 — metabolismo / rene | NOT_ANNOTATED | 7 | 3 |
+| CLAIM 038 | Elevated BUN recurs across Wwox rodent models — and creatinine is elevated in the rat, the only  | in observation | DATO (le misure) + IPOTESI (entrambe le  | P5 — metabolismo / rene | NOT_ANNOTATED | 7 | 3 |
 | CLAIM 039 | Ataxic gait is the most penetrant phenotype of the rat `lde/lde` model — 95% versus 0% — and **n | in observation | DATO | P1 — neurosviluppo / funzione motoria | NOT_ANNOTATED | 3 | 1 |
 | CLAIM 040 | Neuronal restoration of WWOX suppresses spike-wave discharges in the `Wwox`-null mouse to a leve | in observation | DATO | P1 — neurosviluppo; P7 — eccitabilità di | NOT_ANNOTATED | 12 | 1 |
 | CLAIM 041 | In the P47T knock-in mouse, sampled cerebellar regions show fewer calbindin-positive Purkinje pr | in observation | DATO (mouse histology) + INFERENZA (rela | P1 — cerebellar neuronal structure; adja | NOT_ANNOTATED | 1 | 2 |
@@ -365,6 +365,6 @@ carried no connective from the lexicon.
 ## Provenance
 
 Derived from 119 input files; digest
-`0e668e438bd77b85`. Sources: the claim, paper and
+`408d3f64291b9282`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 
