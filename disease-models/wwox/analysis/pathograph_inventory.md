@@ -32,12 +32,12 @@ annotations is reported below whatever it happens to be.
 | …undirected edges they collapse into | 40 |
 | Edges carrying a declared relation type | 0 |
 | Nodes carrying a biological scale | 0 |
-| Deep-dive manifests read | 116 |
-| …of which bound to at least one claim | 49 |
-| Propositions scanned | 2727 |
-| …carrying a relational connective | 628 |
-| …locator-backed candidates | 591 |
-| …locator-backed and bound to a claim | 273 |
+| Deep-dive manifests read | 117 |
+| …of which bound to at least one claim | 50 |
+| Propositions scanned | 2732 |
+| …carrying a relational connective | 631 |
+| …locator-backed candidates | 594 |
+| …locator-backed and bound to a claim | 276 |
 
 The scanned population is three declared surfaces and no others: every claim
 `Title`, every row of the working model's BLOCK 2 mirror, and every
@@ -255,7 +255,7 @@ working model with no edge between them in the registry.
 | CLAIM 013 | REVIEW_MATERIAL_PRESENT | LOCATOR_PROPOSITION_BOUND, SELF_RELATIONAL_TITLE, SHARED_EVIDENTIAL_PAPER |
 | CLAIM 014 | REVIEW_MATERIAL_PRESENT | LOCATOR_PROPOSITION_BOUND, SELF_RELATIONAL_TITLE, SHARED_EVIDENTIAL_PAPER |
 | CLAIM 015 | REVIEW_MATERIAL_PRESENT | LOCATOR_PROPOSITION_BOUND, SHARED_EVIDENTIAL_PAPER |
-| CLAIM 018 | REVIEW_MATERIAL_PRESENT | SELF_RELATIONAL_TITLE, SHARED_EVIDENTIAL_PAPER |
+| CLAIM 018 | REVIEW_MATERIAL_PRESENT | LOCATOR_PROPOSITION_BOUND, SELF_RELATIONAL_TITLE, SHARED_EVIDENTIAL_PAPER |
 | CLAIM 021 | REVIEW_MATERIAL_PRESENT | LOCATOR_PROPOSITION_BOUND, SELF_RELATIONAL_TITLE, SHARED_EVIDENTIAL_PAPER |
 | CLAIM 022 | NO_RELATION_MATERIAL_IN_REPOSITORY | — |
 | CLAIM 023 | REVIEW_MATERIAL_PRESENT | LOCATOR_PROPOSITION_BOUND, SELF_RELATIONAL_TITLE |
@@ -301,12 +301,12 @@ each side is a reading, and every record carries `endpoints_resolved: false`.
 | Source | Candidates |
 |---|---|
 | claim_title | 19 |
-| locator_proposition | 591 |
+| locator_proposition | 594 |
 | working_model_mirror_title | 18 |
 
 | Connective class (lexical) | Candidates |
 |---|---|
-| AMBIGUOUS_LEXICAL_FORM | 395 |
+| AMBIGUOUS_LEXICAL_FORM | 398 |
 | ARROW | 16 |
 | ASSOCIATIVE | 27 |
 | CAUSAL | 137 |
@@ -340,7 +340,7 @@ its sentence is a reading, and this tool does not perform readings.
 | CLAIM 016 | claim_title | `contribute to` | GSK3β hyperactivation may contribute to seizure susceptibility in WWOX deficiency |
 | CLAIM 018 | claim_title | `causes` | The exon 6 splice-site variant c.517-2A>G is pathogenic and causes exon 6 skipping in humans |
 
-Showing 12 of 310 bound candidates; the
+Showing 12 of 313 bound candidates; the
 complete set, with evidence and provenance, is in the export. The worklist
 in cost order — what needs an annotation, what needs a type, what needs a
 decomposition, what needs a reading — is printed by:
@@ -356,7 +356,7 @@ carried no connective from the lexicon.
 
 ## Provenance
 
-Derived from 119 input files; digest
-`9e5e1760a93a99e8`. Sources: the claim, paper and
+Derived from 120 input files; digest
+`20c57f145b2c9bb2`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 

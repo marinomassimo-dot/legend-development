@@ -56,8 +56,8 @@ in this repository, cited to the **same panel, S3E**, with **mutually exclusive*
 evidence: it keeps **S3E** and **S3F** as *different panels answering different questions* —
 
 - **S3E** = the **dose** pair, both arms labelled WPRE-free → `3.0 / 3.0 / 5.5 / 16.7`
-- **S3F** = the **WPRE** pair, `KO+W-WPRE (6E10 vg)` vs `KO+W (2.63E11 vg)` → an implied **≈44×
-  dose-equivalence for one cassette element**
+- **S3F** = the **WPRE** pair, `KO+W-WPRE (6E10 vg)` vs `KO+W (2.63E11 vg)` → an implied **>4.4× dose-equivalence for one cassette element**
+  (2.63E11/6E10 = 4.38; corrected 2026-09-28 by `BATCH_20260928_007` from «≈44×» against `mmc1.pdf` p. 4, and a lower bound because the higher-dose WPRE-free arm does not reach the WPRE arm)
 
 `DL-MECH-009` takes S3E's numbers and assigns them S3F's variable. Independently, Scientist U derived
 WPRE multipliers from **Fig 2E** as **3.8×–24×, cerebellum highest** — a *different panel* with a

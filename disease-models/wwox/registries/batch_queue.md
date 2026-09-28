@@ -8,7 +8,7 @@
 
 ## ▶ Start here
 
-**351 records have not been processed.** **189** of them have a free full text and can be worked immediately.
+**351 records have not been processed.** **188** of them have a free full text and can be worked immediately.
 
 | Verdict | Records | What it means |
 |---|---:|---|
@@ -82,11 +82,11 @@ time; it does not redistribute or license the article text.
 | Status | Records | Share |
 |---|---:|---:|
 | **Not found by identifier** — run the intake gate | 301 | 43% |
-| **Catalogued, never processed** — the reading debt | 140 | 20% |
+| **Catalogued, never processed** — the reading debt | 139 | 20% |
 | Known to the tracking log only | 115 | 16% |
 | Processed from the abstract | 3 | 0% |
 | Partial full text read | 42 | 6% |
-| Full text read | 105 | 15% |
+| Full text read | 106 | 15% |
 
 ⚠️ This second table combines registry state with the authoritative append-only
 `fulltext_read_receipts.jsonl`. Historical registry-only full-text declarations remain
@@ -232,7 +232,6 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [18629536](https://pubmed.ncbi.nlm.nih.gov/18629536/) | 2009 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | catalogued only | Loss of WWOX expression in human extrahepatic cholangiocarcinoma. |
 | [18620777](https://pubmed.ncbi.nlm.nih.gov/18620777/) | 2008 | ✅ | Journal Article; Research Support, N.I.H., Extramural; Research Support, Non-U.S. Gov't | catalogued only | The JNK inhibitor SP600129 enhances apoptosis of HCC cells induced by the tumor suppressor WWOX. |
 | [17609426](https://pubmed.ncbi.nlm.nih.gov/17609426/) | 2007 | ✅ | Journal Article; Multicenter Study; Research Support, Non-U.S. Gov't | catalogued only | Gene mapping and expression analysis of 16q loss of heterozygosity identifies WWOX and CYLD as being important in determining clinical outcome in multiple myeloma. |
-| [15870886](https://pubmed.ncbi.nlm.nih.gov/15870886/) | 2005 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | catalogued only | WWOX mRNA expression profile in epithelial ovarian cancer supports the role of WWOX variant 1 as a tumour suppressor, although the role of variant 4 remains unclear. |
 | [15798093](https://pubmed.ncbi.nlm.nih.gov/15798093/) | 2005 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | catalogued only | Components of DNA damage checkpoint pathway regulate UV exposure-dependent alterations of gene expression of FHIT and WWOX at chromosome fragile sites. |
 | [15073846](https://pubmed.ncbi.nlm.nih.gov/15073846/) | 2004 | ✅ | Journal Article; Research Support, Non-U.S. Gov't; Research Support, U.S. Gov't, P.H.S. | catalogued only | The fragile genes FHIT and WWOX are inactivated coordinately in invasive breast carcinoma. |
 | [38407561](https://pubmed.ncbi.nlm.nih.gov/38407561/) | 2024 | — | Case Reports; Journal Article; Research Support, Non-U.S. Gov't | catalogued only | Identification of a novel splice-site WWOX variant with paternal uniparental isodisomy in a patient with infantile epileptic encephalopathy. |
@@ -661,7 +660,7 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [41007296](https://pubmed.ncbi.nlm.nih.gov/41007296/) | 2025 | ✅ | Journal Article | screened | Prognostic Significance of WWOX/HIF1A Ratio in Cancer Subtypes: Insights into Metabolism, ECM, and EMT. |
 | [28151481](https://pubmed.ncbi.nlm.nih.gov/28151481/) | 2017 | ✅ | Journal Article; Retracted Publication | screened | 🛑 RETRACTED — Epigenetic regulation of HGF/Met receptor axis is critical for the outgrowth of bone metastasis from breast carcinoma. |
 
-*(showing all 556 outstanding records)*
+*(showing all 555 outstanding records)*
 
 ## Already processed from this seed
 
@@ -711,6 +710,7 @@ for an entirely unprocessed record.
 | [18047428](https://pubmed.ncbi.nlm.nih.gov/18047428/) | 2007 | ✅ | full text | CORPUS P286 | Association between decreased WWOX protein expression and thyroid cancer development. |
 | [16152610](https://pubmed.ncbi.nlm.nih.gov/16152610/) | 2006 | ✅ | full text | CORPUS P367 | Characterization of the tumor suppressor gene WWOX in primary human oral squamous cell carcinomas. |
 | [16187332](https://pubmed.ncbi.nlm.nih.gov/16187332/) | 2005 | ✅ | full text | CORPUS P385 | Expression of common chromosomal fragile site genes, WWOX/FRA16D and FHIT/FRA3B is downregulated by exposure to environmental carcinogens, UV, and BPDE but not by IR. |
+| [15870886](https://pubmed.ncbi.nlm.nih.gov/15870886/) | 2005 | ✅ | full text | CORPUS P337 | WWOX mRNA expression profile in epithelial ovarian cancer supports the role of WWOX variant 1 as a tumour suppressor, although the role of variant 4 remains unclear. |
 | [15692750](https://pubmed.ncbi.nlm.nih.gov/15692750/) | 2005 | ✅ | full text | CORPUS P324 | Frequent loss of WWOX expression in breast cancer: correlation with estrogen receptor status. |
 | [15266310](https://pubmed.ncbi.nlm.nih.gov/15266310/) | 2004 | ✅ | full text | CORPUS P244 | Frequent downregulation and loss of WWOX gene expression in human hepatocellular carcinoma. |
 | [30470736](https://pubmed.ncbi.nlm.nih.gov/30470736/) | 2018 | ✅ | full text | receipt FTR-20260909-30470736-01 | ℹ️ CORRECTION NOTICE — Author Correction: WWOX controls hepatic HIF1α to suppress hepatocyte proliferation and neoplasia. |
@@ -738,7 +738,7 @@ for an entirely unprocessed record.
 | [25331887](https://pubmed.ncbi.nlm.nih.gov/25331887/) | 2014 | ✅ | partial full text | PAPER 027 | WWOX, the common fragile site FRA16D gene product, regulates ATM activation and the DNA damage response. |
 | [20146584](https://pubmed.ncbi.nlm.nih.gov/20146584/) | 2010 | ✅ | partial full text | PAPER 085 | WWOX gene and gene product: tumor suppression through specific protein interactions. |
 | [36537114](https://pubmed.ncbi.nlm.nih.gov/36537114/) | 2023 | — | partial full text | PAPER 017 | Expansion of the clinical and molecular spectrum of WWOX-related epileptic encephalopathy. |
-| [30853297](https://pubmed.ncbi.nlm.nih.gov/30853297/) | 2019 | — | partial full text | receipt FTR-20260923-30853297-02 | Novel WWOX deleterious variants cause early infantile epileptic encephalopathy, severe developmental delay and dysmorphism among Yemenite Jews. |
+| [30853297](https://pubmed.ncbi.nlm.nih.gov/30853297/) | 2019 | — | partial full text | receipt FTR-20260928-30853297-03 | Novel WWOX deleterious variants cause early infantile epileptic encephalopathy, severe developmental delay and dysmorphism among Yemenite Jews. |
 | [29808465](https://pubmed.ncbi.nlm.nih.gov/29808465/) | 2018 | — | partial full text | receipt FTR-20260923-29808465-02 | A novel missense variant in the SDR domain of the WWOX gene leads to complete loss of WWOX protein with early-onset epileptic encephalopathy and severe developmental delay. |
 | [42193054](https://pubmed.ncbi.nlm.nih.gov/42193054/) | 2026 | ✅ | full text | PAPER 012 | WWOX-Related Epileptic Encephalopathy (WOREE Syndrome): Clinical Case Study and Literature Review. |
 | [42128308](https://pubmed.ncbi.nlm.nih.gov/42128308/) | 2026 | ✅ | full text | PAPER 029 | WWOX in brain development and disease: Molecular mechanisms and therapeutic opportunities. |
@@ -822,7 +822,7 @@ for an entirely unprocessed record.
 | [40875931](https://pubmed.ncbi.nlm.nih.gov/40875931/) | 2025 | — | full text | PAPER 014 | WWOX-Related Developmental and Epileptic Encephalopathy: Expanding the Clinical Spectrum and Deciphering the Genotype-Phenotype. |
 | [30361190](https://pubmed.ncbi.nlm.nih.gov/30361190/) | 2018 | — | full text | PAPER 045 | West syndrome, developmental and epileptic encephalopathy, and severe CNS disorder associated with WWOX mutations. |
 
-*(showing all 150 processed records from the seed)*
+*(showing all 151 processed records from the seed)*
 
 ## How to work one
 

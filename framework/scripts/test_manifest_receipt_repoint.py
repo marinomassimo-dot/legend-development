@@ -335,7 +335,9 @@ class TheLiveCorpus(unittest.TestCase):
                 self.assertIn("ARTIFACT DIVERGENCE", done.stderr)
 
     def test_the_manifests_with_no_producer_in_the_ledger_are_refused(self) -> None:
-        for pmid in ("15870886", "34214506", "35716775"):
+        # 15870886 left this list on 2026-09-28 (BATCH_20260928_007): it got a recorded producer
+        # (a receipt, which is what this refusal says it needs), and now reads CONFORMS.
+        for pmid in ("34214506", "35716775"):
             with self.subTest(pmid):
                 done = self.run_tool("--pmid", pmid)
                 self.assertEqual(1, done.returncode, done.stdout)
@@ -355,7 +357,10 @@ class TheLiveCorpus(unittest.TestCase):
                 done = self.run_tool("--pmid", pmid)
                 self.assertEqual(0, done.returncode, done.stderr)
                 self.assertIn("DRY RUN", done.stdout)
-        self.assertEqual(len(expected) + 5 + 1, mrp.BASELINE_DEFECTS,
+        # The no-producer term was 1 (PMID15870886, UNKNOWN_EVENT) until 2026-09-28, when
+        # BATCH_20260928_007 recorded its producing reading; 34214506 and 35716775 are UNCHECKABLE,
+        # which the ceiling does not count.
+        self.assertEqual(len(expected) + 5 + 0, mrp.BASELINE_DEFECTS,
                          "the ceiling must equal repairable + artifact-divergence + no-producer; "
                          "if it does not, one of the three classes has moved unmeasured")
 

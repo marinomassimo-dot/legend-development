@@ -339,3 +339,15 @@ Edit 1 (the `017` mirror row) is **PROPAGATED** by `BATCH_20260927_001`, re-veri
 **Verdict: `PROPAGATED IN PART`.** **Edit 2's claim-scoped prose is written — the residue two batches deferred.** `CLAIM 031` and `CLAIM 033` now say, in both records, that the drug-responsiveness observation is **the same single patient, counted once**: one source, `n = 1`, so the line acquires no false apparent replication. And `CLAIM 032` and `CLAIM 033` carry the reciprocal **`DO_NOT_INFER`**: chaining a **null/wild-type** genotype with one **fully functional** allele to a **null/missense** genotype of **unmeasured** residual function into *«one missense allele is nearly as good as one wild-type allele»* is supported by neither, and `CLAIM 033`'s own reservation (1) falsifies the premise — Q230P is missense and abolishes the protein. These are prose that changes what the claims mean, which is why `BATCH_20260927_003` would not write them beside a wikilink and this MAJOR batch does. 🔴 **DEFERRED: the ketogenic 3/5 promotion, and the operator's blanket authorisation is deliberately not read as settling it.** Whether a dietary-intervention datum may hold a canonical claim ID is a question of **who owns a proposition**, not a factual matter the authorisation can decide, so the dispatch's rule applies and **the conservative option that asserts less was taken**: the datum stays sourced model prose with its denominator (*«Ketogenic diet associated with seizure improvement in 3/5 WOREE patients (Chong 2023)»*), no claim ID is minted, and nothing in the corpus is wrong while it waits. **What would unblock it:** an explicit operator decision that a dietary datum may hold a claim ID, plus the evidence boundary a promotion would need written first (n = 5, 3/5 responders, uncontrolled, unblinded, `Chong 2023`, genotype caution, *«Non è parere medico»*). No reading is owed. Edit 1 and the round-3 cross-links landed in earlier batches.
 
 **Operator authorisation, verbatim (2026-09-27, given in writing after being shown the MAJOR proposals):** *«procedi tu, ti autorizzo su tutto»*. **Mirror ex-post review due** under §21e — see `session_evaluations/2026-09-27_BATCH_20260927_004.md`.
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260928_007` (2026-09-28, ACTOR_ID `orchestrator`), append-only
+
+**Nothing above this line was rewritten.** Operator instruction, verbatim: *«procedi sempre»*. The residue was re-derived against `main` `7352d52`; every op was produced by a reader other than the batch actor and verified by the batch actor against the source bytes before propagation.
+
+**Verdict:** DEFERRED
+
+Unchanged and re-measured: the ketogenic 3/5 datum is model prose in the working model and holds no claim ID; minting one needs an **operator decision** that a dietary-intervention datum may hold a canonical claim, and its evidence boundary written first. No reading is owed.
+
+**Not medical advice.**
