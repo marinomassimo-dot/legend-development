@@ -172,11 +172,11 @@ assembler lists the titles and stops there.
 | CLAIM 001 | `associated with` | ASSOCIATIVE | finite or multiword | Vigabatrin associated with VABAM in WWOX-DEE |
 | CLAIM 002 | `causes` | CAUSAL | finite or multiword | WWOX-LoF causes network hyperexcitability; AAV-WWOX rescues organoid phenotype |
 | CLAIM 003 | `induces` | CAUSAL | finite or multiword | Neuronal WWOX deletion induces non-cell-autonomous hypomyelination |
-| CLAIM 004 | `rescue` | CAUSAL | ambiguous bare form | AAV9-WWOX neuron-targeted rescue shows multi-domain in vivo improvement |
-| CLAIM 005 | `reduced` | CAUSAL | ambiguous bare form | Reduced GABAergic interneurons and glial activation in WWOX-KO |
+| CLAIM 004 | `rescue` | AMBIGUOUS_LEXICAL_FORM | ambiguous bare form | AAV9-WWOX neuron-targeted rescue shows multi-domain in vivo improvement |
+| CLAIM 005 | `reduced` | AMBIGUOUS_LEXICAL_FORM | ambiguous bare form | Reduced GABAergic interneurons and glial activation in WWOX-KO |
 | CLAIM 007 | `abolishes` | CAUSAL | finite or multiword | P47T abolishes or near-abolishes WWOX recovery by two PPPY peptides in vitro |
-| CLAIM 009 | `control` | CAUSAL | ambiguous bare form | WWOX deficiency plausibly alters mitochondrial quality control, redox and energy efficienc |
-| CLAIM 011 | `rescue` | CAUSAL | ambiguous bare form | AAV9-hSynI-hWWOX: dose-dependent durable rescue in Wwox-null murine model su domini multip |
+| CLAIM 009 | `control` | AMBIGUOUS_LEXICAL_FORM | ambiguous bare form | WWOX deficiency plausibly alters mitochondrial quality control, redox and energy efficienc |
+| CLAIM 011 | `rescue` | AMBIGUOUS_LEXICAL_FORM | ambiguous bare form | AAV9-hSynI-hWWOX: dose-dependent durable rescue in Wwox-null murine model su domini multip |
 | CLAIM 013 | `associati a` | ASSOCIATIVE | finite or multiword | In WWOX-DEE, genotipi biallelici null/null associati a maggiore rischio di crisi, ipertoni |
 | CLAIM 014 | `perturbs` | CAUSAL | finite or multiword | WWOX loss perturbs prenatal cortical development, neuronal migration and cortical maturati |
 | CLAIM 016 | `contribute to` | CAUSAL | finite or multiword | GSK3β hyperactivation may contribute to seizure susceptibility in WWOX deficiency |
@@ -184,7 +184,7 @@ assembler lists the titles and stops there.
 | CLAIM 021 | `destabilizes` | CAUSAL | finite or multiword | WWOX loss directly destabilizes neocortical network physiology through combined synaptic a |
 | CLAIM 023 | `regulates` | CAUSAL | finite or multiword | WWOX controls partner-protein function not only by binding, but by subcellular rerouting t |
 | CLAIM 024 | `depends on` | DEPENDENCY | finite or multiword | WWOX WW-domain function depends on WW1–WW2 tandem cooperativity, not only on isolated doma |
-| CLAIM 031 | `control` | CAUSAL | ambiguous bare form | WWOX-DEE is a developmental AND epileptic encephalopathy: seizure control does not rescue  |
+| CLAIM 031 | `control` | AMBIGUOUS_LEXICAL_FORM | ambiguous bare form | WWOX-DEE is a developmental AND epileptic encephalopathy: seizure control does not rescue  |
 | CLAIM 034 | `reduces` | CAUSAL | finite or multiword | In a post-mitotic excitable neuron under metabolic stress, WWOX up-regulation is pro-oxida |
 | CLAIM 035 | `requires` | DEPENDENCY | finite or multiword | WWOX is a direct, residue-mapped inhibitor of GSK3β through an Axin-like docking motif in  |
 | CLAIM 040 | `suppresses` | CAUSAL | finite or multiword | Neuronal restoration of WWOX suppresses spike-wave discharges in the `Wwox`-null mouse to  |
@@ -323,13 +323,22 @@ each side is a reading, and every record carries `endpoints_resolved: false`.
 
 | Connective class (lexical) | Candidates |
 |---|---|
+| AMBIGUOUS_LEXICAL_FORM | 395 |
 | ARROW | 16 |
 | ASSOCIATIVE | 27 |
-| CAUSAL | 532 |
+| CAUSAL | 137 |
 | DEPENDENCY | 53 |
 
 A connective class is a property of the word, not a verdict about the
 relationship. An `ASSOCIATIVE` connective does not make an edge `ASSOCIATED`.
+
+🔴 `AMBIGUOUS_LEXICAL_FORM` is the class of the 20 bare forms this corpus uses
+as nouns and adjectives at least as often as verbs — `control` (*"mitochondrial
+quality control"*, *"a time-matched control"*), `reduced` (*"reduced g-ratio"*),
+`rescue`, `increase`, `block`. They keep their lexicon class in the export's
+`lexicon_class` field and they stay in the queue; what they no longer do is
+appear as `CAUSAL` in the field a reader reads. Which of them is a relation in
+its sentence is a reading, and this tool does not perform readings.
 
 ### 5.1 Candidates bound to a claim node
 
