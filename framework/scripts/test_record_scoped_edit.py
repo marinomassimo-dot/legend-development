@@ -445,5 +445,39 @@ class Command(unittest.TestCase):
         self.assertEqual(out, text)
 
 
+class TheDocumentedRefusalConditionIsTheImplementedOne(unittest.TestCase):
+    """🔴 `UNBOUNDED_SPAN` is keyed on COVERING HEADINGS, never on reaching EOF.
+
+    The shipped condition is right and `Op.to_eof`'s documentation described a stricter tool
+    than the one that ships — "an op on a span whose end the file does not state" — which is the
+    overbroad design someone could re-implement from the text alone. It would refuse the
+    commonest edit in the repository, because the LAST record of every registry reaches EOF.
+    This case pins the doc to the behaviour the cases above already pin.
+    """
+
+    def test_the_to_eof_documentation_names_the_headings_condition(self) -> None:
+        # The attribute docstring is not introspectable, so the source of the class is read.
+        source = (Path(rse.__file__).read_text(encoding="utf-8")
+                  .split("to_eof: bool = False", 1)[1].split('"""')[1])
+        self.assertIn("COVERING HEADINGS", source)
+        self.assertNotIn("Only then may an op", source)
+        self.assertIn("swallowed", source,
+                      "the doc must point at the predicate a reader can check")
+
+    def test_and_the_behaviour_it_documents(self) -> None:
+        """The same claim, executed: EOF alone does not refuse; a covered heading does."""
+        reaches_eof = "## CLAIM 001\nbody\n\n---\n\n## CLAIM 002\nbody two\n"
+        rse.apply_ops(reaches_eof,
+                      [op(op="replace-within", id="CLAIM 002", old="two", new="2")], H2)
+        covers_a_heading = reaches_eof + "\n### A sub-heading the record may not own\nx\n"
+        span = rse.resolve(covers_a_heading, op(op="replace", id="CLAIM 002"), H2)
+        self.assertTrue(span.to_eof)
+        self.assertNotEqual(span.swallowed, ())
+        with self.assertRaises(rse.Refusal) as caught:
+            rse.apply_ops(covers_a_heading,
+                          [op(op="replace-within", id="CLAIM 002", old="two", new="2")], H2)
+        self.assertEqual(caught.exception.code, "UNBOUNDED_SPAN")
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=1)

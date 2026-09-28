@@ -29,6 +29,12 @@ PRIORITY_TESTS = (
     "scripts/test_fresh_clone_reader_journey.py",
     "scripts/test_mission_contract.py",
     "scripts/test_link_targets.py",
+    # Beside `test_link_targets` because it closes the gap between it and
+    # `test_fresh_clone_reader_journey`: fragments and wikilinks are checked, inline paths are
+    # checked, and a `§NN` citation into a named normative file was checked by neither. A live
+    # misattribution of the anti-gate rule to a nonexistent `LEGEND_CORE` §26 sat on `main` for
+    # six days after being caught once, in two files, with every suite green.
+    "scripts/test_section_references.py",
     "scripts/test_public_claims_contract.py",
     "scripts/test_skill_packages.py",
     "scripts/test_agent_pipeline_contract.py",

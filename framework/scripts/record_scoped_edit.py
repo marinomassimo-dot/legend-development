@@ -119,8 +119,16 @@ class Op:
     new: str = ""
     rename_to: str = ""
     to_eof: bool = False
-    """The caller asserts the addressed block really does run to end of file. Only then may an op
-    act on a span whose end the file does not state (`UNBOUNDED_SPAN`)."""
+    """The caller asserts the addressed block really does run to end of file.
+
+    🔴 IT IS NOT NEEDED MERELY BECAUSE A SPAN REACHES EOF. `UNBOUNDED_SPAN` is keyed on the
+    assumed tail COVERING HEADINGS, not on the span ending at EOF, and this field is the way past
+    that one condition. The distinction is the whole design: the LAST record of every registry
+    reaches EOF (`CLAIM 041`, `PAPER 118`, `LIT-0420`, `DL-MECH-113`, `DIS-020` on this checkout),
+    so a refusal keyed on EOF would refuse the commonest edit in the repository — appending to or
+    amending the newest record — and the flag would have to be passed on nearly every op, which is
+    how an assertion stops being read. See `_check_bounded`: `not span.swallowed` returns
+    early. Do not "simplify" the condition to `span.to_eof`."""
 
     @classmethod
     def from_dict(cls, raw: dict[str, Any]) -> "Op":

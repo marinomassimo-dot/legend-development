@@ -26,8 +26,20 @@ committed against itself and recorded.
 
 ## §0 · The one design constraint that outranks everything below
 
-`LEGEND_CORE` **§26** forbids answering a scientific mistake with a new gate, authority, auditor,
-registry or workflow. **Every primitive here is therefore proposed as a habit, never as a check.**
+The operator's **task directive §26** forbids answering a scientific mistake with a new gate,
+authority, auditor, registry or workflow. **Every primitive here is therefore proposed as a habit,
+never as a check.**
+
+> ⚠️ **§26 is the directive's, not `LEGEND_CORE`'s.** This paragraph attributed it to
+> "LEGEND_CORE §26" — written without the backticks a checker reads — from 2026-09-22 to
+> 2026-09-28. `framework/instruction/LEGEND_CORE.md` ends at
+> [`## 22. FINAL MAXIMS`](LEGEND_CORE.md#22-final-maxims) and has no §23–§29; the rule is the
+> operator's task directive, which is how every commit candidate in the repository cites it
+> (*"per the operator's §26"*) and which
+> [`CAND-20260819-ORCHSURF.md`](../../governance/candidates/CAND-20260819-ORCHSURF.md) had
+> already disambiguated in writing (*"directive §26, not body §26"*). Nothing about the
+> constraint changed; only its address did. Every bare *"§26"* below is the same directive.
+> `scripts/test_section_references.py` now fails on a `§NN` that its named file does not define.
 A primitive that becomes a gate has failed, because a gate converts a thinking move into a
 compliance move, and a compliance move is satisfied by the cheapest output that passes it.
 
@@ -387,3 +399,40 @@ class), and the buffer-name finding (changed how a census must be read). **Three
 from `recursive_reread` or `verify_the_omitted_clause` — the two primitives I am NOT proposing for
 V0.** That tension is real, it is not resolved, and it is the reason V0 should not be implemented on
 this evidence.
+
+---
+
+## §10 · Harness triage of 2026-09-28 — the shadow-mode residue, and one negative control
+
+**Author:** Harness Engineering (`plan`), task `harness-20260928c`. Triaging
+[`HANDOFF-20260928-DISCOVERY-METHOD-SHADOW-RESIDUE.md`](../../governance/candidates/HANDOFF-20260928-DISCOVERY-METHOD-SHADOW-RESIDUE.md),
+which compared the unmerged `LEGEND_DISCOVERY_METHOD_V0_SHADOW_MODE.md` against the shipped skill.
+**Still an evidence record. Still not normative, still not a gate.**
+
+| Hand-off item | Verdict | What was done |
+|---|---|---|
+| 1 · the §26 misattribution | **ADOPT** | Repaired here (§0) and — which the hand-off did not catch — in the shipped skill, which carried the same sentence. `scripts/test_section_references.py` now fails on a `§NN` its named file does not define |
+| 2 · V0 shipped the wrong set | **ADOPT as a finding** | Recorded in the skill's § 4 as a selection defect, with the three absent names and the two that entered with zero instances. Not repaired by adding three primitives |
+| 2 · `verify_the_omitted_clause` | **TRIAL** | Shipped as a second habit inside the skill's § 2.7 (§ 2.7b), at its corrected count, with a firable discard criterion. Not an eighth primitive: the set stays at seven |
+| 2 · `gate_is_not_quantity` | **WATCH** | Its 5 instances are a count whose definition is not reproduced anywhere a reader of the skill can check, and adopting on an unreadable count is the selection defect repeated |
+| 3 · the A/B counting rule | **ADOPT** | In the skill's § 2.7b as a table, and in § 3 as the general rule: a count that merges two mechanisms is not a count |
+| 4a · `outcome_distribution_width`'s repaired formula | **WATCH** | Deliberately not shipped. Its author's own caveat applies to it: *"repairs of broken rules are exactly the kind that look right and are not."* The instance already ships as fixture E |
+| 4b · the missing negative control | **TRIAL** | One observation recorded below. The designed `legend-research-loop` run is still owed and is named as owed in the skill |
+| landing the shadow file | **REJECT** | A 2026-09-22 instruction-layer draft for something that shipped as an optional skill; landing it would give the subject a second address |
+| numeric KEEP / DROP thresholds | **REJECT** | ⚠️ On measurement, the premise is partly wrong: the skill's discard table is **already** numeric where a number is meaningful (*"over ten uses, the chosen hypothesis is first-listed in ≥8"*, *"three consecutive re-reads"*). What the shadow file adds is a **promotion** threshold, and a toolkit that gates nothing does not need a bar for entry — it needs a criterion that can remove something, which it has |
+
+### §10.1 · The negative control, such as it is
+
+🟡 **One observation, not an experiment, and labelled as the weaker thing it is.**
+`diverge_hypotheses` was applied during this task to a case where it should not have helped: a test
+asserting `dirty_at_snapshot` failed with `'isease-models/...'`, one character short. Two
+mechanistically distinct explanations were enumerated (a porcelain status prefix of a different
+width; a rename arrow in the path) before the instrument was changed instead — `git diff
+--name-only HEAD` asks the question directly, so no parse of a status column exists to be wrong
+about.
+
+**Effect class: `NO EFFECT`.** The fan of hypotheses did not produce the fix; replacing the
+measurement did, and it would have been reached without diverging. 🔴 **What this is evidence of,
+stated narrowly:** on a mechanical off-by-one with a cheap direct measurement available, divergence
+is ceremony. It says nothing about divergence on a mechanistic question, which is what the primitive
+claims. One correct null is one, and the sample still has no designed negatives in it.
