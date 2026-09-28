@@ -246,3 +246,33 @@ that regenerates it. What is still owed is the **canonical write**: replacing th
 which is exactly what `batch_commit_gate: BLOCK_BATCH_COMMIT` is holding — and because the
 needles are now in the recipe, that write copies them rather than re-deriving 29 strings by
 hand, which would have been 29 chances to be wrong.
+
+## 🔴 What this adjudication did NOT settle: the unit tokens of Table 2
+
+Recorded 2026-09-28 (ACTOR_ID `scientist`, task `vps-residue-salvage`, from
+`research/commit_candidates/CC-20260922-CLAIM038-UNIT-CLASS-02.md` Δ4).
+
+**The five adjudicated locators restore operators and values. Not one of them names a unit.** The
+*"the page prints"* column above gives, for `entries[25]` and `entries[26]`, the numbers and their
+`±` signs — `12.6 ± 4.3`, `169.0 ± 26.7` — and its text-layer column elides the row header as
+`BUN …` / `GLU …`. So the render was made, verified and digested, and the one token a downstream
+claim went on to argue about was never read off it.
+
+**And the needles cannot supply it.** `adjudications.json` resolves those two rows with the literal
+needles `"BUN (mg/ml)"` and `"GLU (mg/ml)"` — strings drawn from the `SUSPECT` layer and matched
+against the `SUSPECT` layer. 🔴 **A needle cannot adjudicate the character it is made of.** That is
+sound for its stated purpose (`needles.why`: each needle must be a fragment of the snippet it
+adjudicates, so it cannot drift to another sentence) and it is exactly why it is silent here: a
+corrupted snippet yields a corrupted needle. The substitution map this page confirms includes
+`q → ±` **on the BUN row itself**, and a `d → m` would be one printable substitution among the
+~145 this layer carries.
+
+**Consequence, stated so nobody re-derives it from the same characters.** The unit of Table 2 is
+`UNADJUDICATED` — neither confirmed as the source's nor established as a transcription artefact.
+🔵 **`REVIVAL_TRIGGER`:** regenerate `p04_table2_BUN_CRE_GLU.png` from a copy of the PDF with
+`regenerate_adjudications.py write --pmid 17803050` and **read the row label**. The instrument was
+pointed at this row once and returned everything except the answer.
+
+**This is a defect in the adjudication recipe, not in the science it certified.** The values,
+operators and the five locators' containment are unaffected, and §"The adjudication CONFIRMS the
+science" above stands.

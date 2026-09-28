@@ -486,3 +486,36 @@ Identifier conversion run on 16 PMIDs; PMID 33914858 returned **no PMCID**.
   non-PubMed source consulted. A paper measuring myelin in a WWOX system but using none of these
   terms in its indexed fields would be missed.
 - **Nothing here is medical advice.**
+
+---
+
+## 🔴 Correction, 2026-09-28 — one zero in the orchestrator note above is over-general
+
+ACTOR_ID `scientist`, task `vps-residue-salvage`. Recorded here because this file is where the
+sentence is read.
+
+The note prepended above states, as a residue travelling with `A4`, that **"no g-ratio and no
+electron microscopy exist anywhere in this literature"**. 🔴 **That is false of this repository.**
+`PMID 34747138` (Repudi 2021, `PAPER 005`, `complete_fulltext_read`, receipt
+`FTR-20260810-34747138-01`) holds **both**: `deepdive_manifests/PMID34747138.json` returns `g-ratio`
+×2 and `Electron microscop` ×2, and `fulltext_dossiers/PMID34747138_locators.md` returns `g-ratio`
+and `unmyelinated axon`.
+
+**What the scope should have been.** §1 of this file scopes its own zeros correctly, to *the paper
+read* (`PMID 31340538`). The note generalised them to *the literature*, which is the error this
+file's own next paragraph names in the same breath — **"a delegate's census describes THE FIELD,
+never THIS REPOSITORY"** — and the two sentences sit eleven lines apart. The rule was written
+directly above the instance it would have caught.
+
+**And the direction of the correction is not comfortable.** The g-ratio is the one myelin measure
+that **normalises** to wild type in treated animals, while unmyelinated-axon counts stay
+significantly **worse** than wild type (~26/field in WT vs ~52 in treated, `**`). So the measures
+exist, and the one drawn against wild type runs **against** the rescue. A zero asserted over the
+field hid a measured result that qualifies the myelin rescue, which is the expensive kind of
+over-general negative.
+
+**Scope of this correction.** It corrects the note's zero, nothing else. §1 and §2 of this file are
+untouched and correct, `A4` remains worth acquiring for the reason §"What is genuinely open" gives,
+and no canonical file is edited here. Originally recorded read-only in
+[`tx007_window_and_ceiling_20260921.md`](tx007_window_and_ceiling_20260921.md) §8.1 item 4 on
+2026-09-21, on an unmerged branch; applied here when that file landed.

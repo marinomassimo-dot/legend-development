@@ -14,6 +14,15 @@ bounded CLAIM 041 and corrected three manifests. Remaining partially propagated 
 are separate scientific work, subject to `BATCH_COMMIT` and source verification. The 75 withdrawn
 VPS task records remain dispositioned, not restored as canonical tasks.
 
+**Residue census (2026-09-28).** [`residue_census_20260928.md`](residue_census_20260928.md), next to
+this note, classifies all 311 unique patches of `backup/vps-main-2026-09-25` by the fate of their
+content: 215 paths are on `main`, 208 superseded or obsolete by construction, 40 superseded harness,
+20 the operator-reserved mandate-continuity package, **0 private or unpublishable** (measured with
+`scripts/public_release_gate.py` against an extraction of the backup tip), and **5 paths carrying
+scientifically live content not on `main`**. It also names the eight detached worktrees that hold
+nothing, and the precondition that makes retiring them safe — the backup branch must still exist.
+It is persisted verbatim; its own §5 states what it could not measure.
+
 **What this note is.** An index of work done on the VPS checkout between 2026-09-12 and
 2026-09-17 that never reached `main`. That work lived on a `main` that had diverged from
 `origin/main` (325 local commits against 244 remote ones). It is recovered **as files, never as
@@ -177,6 +186,30 @@ Each row's `recover_with` is the exact command, `git show 06ee25a:<original_path
 | **Total (458)** | **121** | **337** |
 
 No row is unaccounted. The `disposition` and `detail` columns of the TSV give, per file, the landing commit or the one-line reason.
+
+### 5.1 · `disposition` repair — 2026-09-28
+
+The TSV was last written at `e1173ca` (2026-09-26) and its `disposition`/`detail` columns had not
+moved since, while the README header was updated twice afterwards. The TSV is the machine-readable
+surface, so it was the one telling a reader the wrong thing. Three defects, each re-measured against
+`main` at `cf40b73` before repair, and **83 of the 458 rows rewritten**:
+
+| Defect | Rows | Repair |
+|---|---:|---|
+| `detail` still read *"held for the operator … stopped by the mandate's STOP rules"*, a hold superseded on 2026-09-27 | **20** | **17 → `DISCHARGED`**, each naming the batch that re-derived the surface on `main` (`BATCH_20260926_ALDAZ_R4`/`_R5`, `BATCH_20260927_001`/`_003`/`_004`, `BATCH_20260928_001`/`_002`; one — `analysis/scripts/test_reseal_dismech_baseline.py` — by harness landings `9ae0f58`, `18098bf`, `91c6c9b`, outside any batch). **3 → `DEFERRED_OPEN`**: `analysis/proteostasis_rationale.md` (present, no commit since 2026-09-26), `analysis/data/dismech_phase2_baseline_rev17_superseded.json` and `research/2026-09-13_D8_dismech_reseal_report.md` (both still absent from `main`; the DisMech reseal of §4's "Also G4") |
+| `detail` still read *"re-disposition belongs to the held science batch"* | **43** | **39 → `DISCHARGED`**, each naming the batch its last `BATCH DISPOSITION` block on `main` cites. **4 → `DEFERRED_OPEN`**, the records that carry no disposition block on `main` at all: `CC-20260826-PMID36828035-01`, `CC-20260826-SEIZURE-RECONCILIATION-01`, `PROPOSAL-20260810-EVIDENCE-PAIR-RATCHET`, `PROPOSAL-20260826-LOCATOR-TO-CLAIM-PROPAGATION` |
+| `DISPOSITIONED` conflated *"decided never to bring in"* with *"deferred to a batch that has since partly run"* and with *"reserved to the operator"* | **20** | the mandate-continuity package moved to its own state, **`RESERVED_OPERATOR`** — reserved is not a decision never to bring it in |
+
+**Vocabulary now.** `RECOVERED` 121 · `DISPOSITIONED` 254 (decided never to bring in) ·
+`DISCHARGED` 56 (was deferred; the deferral has since been met on `main`) · `DEFERRED_OPEN` 7
+(was deferred; still is) · `RESERVED_OPERATOR` 20. Total 458, unchanged; no row was added, removed
+or re-pathed. The measurement is re-runnable: the `DISCHARGED`/`DEFERRED_OPEN` split for the 43
+comes from the **last** `BATCH DISPOSITION` block of each candidate — never from the presence of the
+heading, because 13 of the recovered candidates carry a *first* block naming a VPS batch that never
+existed on `main`.
+
+One correction to the census this repair is based on: it reported the 20-row hold as flatly
+discharged by the Aldaz batches. Per file it is **17**, not 20.
 
 ## 6 · G4.3 — full-text queue renumbering (VPS → `main`)
 
