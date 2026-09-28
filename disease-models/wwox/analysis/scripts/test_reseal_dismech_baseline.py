@@ -21,6 +21,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 import shutil
 import subprocess
 import sys
@@ -468,6 +469,38 @@ class TheLabelHistorySurvivesAReseal(ResealFixture):
             self.assertIn(convention, reseal.__doc__ or "")
         self.assertEqual(3, len(reseal.CONVENTIONS))
         self.assertIn("EXCEED", dict(reseal.CONVENTIONS)["highest-ever + 1"])
+
+
+class TheHelpStatesTheContractTheBodyEnforces(unittest.TestCase):
+    """🔴 `--help` is the only documentation most callers read, and it said less than the body.
+
+    The body's contract is that the ordinal is derived ONCE, at the write, and that ordering is
+    never read off the spelling — the reason `rev.14` (2026-09-27) is later than `rev.17`
+    (2026-08-07). `--revision`'s help line said only "revision label to record (required to
+    write)", which is compatible with the opposite design, so a caller reading the help alone
+    would compare labels as text. The shipped behaviour was right; the text was not.
+    """
+
+    def help_for(self, option: str) -> str:
+        """The REAL `--help`, through the real entry point: a help string asserted from the
+        parser object could pass while the shipped CLI printed something else."""
+        done = subprocess.run([sys.executable, str(HERE / "reseal_dismech_baseline.py"),
+                               "--help"], capture_output=True, text=True,
+                              env={**os.environ, "COLUMNS": "100"})
+        self.assertEqual(done.returncode, 0, done.stdout + done.stderr)
+        # `rindex`: the flag appears first in the wrapped usage line, where no help text lives.
+        start = done.stdout.rindex(option)
+        return done.stdout[start:start + 700]
+
+    def test_revision_help_names_the_derivation_and_the_monotonicity(self) -> None:
+        text = self.help_for("--revision REVISION")
+        for phrase in ("ONCE", "revision_ordinal", "exceed", "spelling"):
+            self.assertIn(phrase, text, f"--revision help does not state {phrase!r}")
+
+    def test_revision_help_carries_the_counterexample_that_makes_it_concrete(self) -> None:
+        text = self.help_for("--revision REVISION")
+        self.assertIn("rev.14", text)
+        self.assertIn("rev.17", text)
 
 
 if __name__ == "__main__":

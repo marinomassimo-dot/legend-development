@@ -165,5 +165,49 @@ class SnapshotRefusesRatherThanUnderCover(unittest.TestCase):
         self.assertFalse(dest.exists(), "a refused snapshot must leave no directory behind")
 
 
+class TheProtocolStatesTheRestoreWithItsBase(unittest.TestCase):
+    """🔴 The abort command was correct in exactly the window the abort does not happen in.
+
+    Phase 5 fires `ABORT + restore from snapshot` on a post-propagation BLOCK, and a batch
+    commits its propagation together with the Phase 4.7 surfaces. `git checkout -- <path>`
+    restores the pre-batch value only before that commit; afterwards it restores the batch's own
+    output and exits 0. The protocol now states the restore with its base and requires the
+    pre-batch SHA at Phase 3. This case is why that text cannot quietly revert to the bare form.
+    """
+
+    @classmethod
+    def setUpClass(cls) -> None:
+        cls.text = (REPO / batch_commit.PROTOCOL).read_text(encoding="utf-8")
+
+    def test_phase_3_requires_the_pre_batch_commit(self) -> None:
+        phase_3 = self.text.split("### Phase 3")[1].split("### Phase 4")[0]
+        self.assertIn("PRE_BATCH_COMMIT", phase_3)
+        self.assertIn("batch_commit.py base", phase_3)
+
+    def test_every_restore_instruction_names_a_base_or_names_its_window(self) -> None:
+        """A bare `git checkout -- <path>` may appear only in a sentence that bounds it."""
+        # The unit is the PARAGRAPH, not the line: the qualifying clause legitimately wraps
+        # ("only while the propagation is neither / staged nor committed"), and a line-by-line
+        # predicate called both repaired sentences defects.
+        bounded = re.compile(
+            r"unstaged|staged|committed|before the propagation|which window|WITHOUT a base"
+        )
+        unbounded = []
+        offset = 1
+        for block in self.text.split("\n\n"):
+            if re.search(r"git checkout\s+--\s", block) and not bounded.search(block):
+                unbounded.append(f"{offset}: {block.strip().splitlines()[0]}")
+            offset += block.count("\n") + 2
+        self.assertFalse(
+            unbounded,
+            "a bare `git checkout -- <path>` with no window stated:\n" + "\n".join(unbounded),
+        )
+
+    def test_the_abort_protocol_names_the_base_qualified_command(self) -> None:
+        abort = self.text.split("## 5. ABORT PROTOCOL")[1].split("## 6.")[0]
+        self.assertIn("git checkout <PRE_BATCH_COMMIT> -- <path>", abort)
+        self.assertIn("pre-batch commit:", abort)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
