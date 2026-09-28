@@ -142,6 +142,41 @@ class RecordScopedPropagation(unittest.TestCase):
             self.assertEqual(code, 3)
             self.assertIn(f"FULL_FALLBACK {self.CLAIMS} ANCHOR_MISSING", message)
 
+    def test_a_b2_shaped_op_is_refused_at_propagate_and_declarable(self) -> None:
+        """🔴 The batch-level half of `CROSS_LINE_MOVE`, and why no separate batch check is added.
+
+        The refusal lives in the editor, so `propagate` inherits it for free — earliest, cheapest,
+        and it reaches every caller. It needs no op-list-wide counterpart: `apply_ops` anchors each
+        op on the text the previous one produced, so a split done by two ops is seen by the second;
+        and content cannot cross RECORDS at all, because every other block must stay byte-identical.
+        """
+        from batch_commit import propagate
+        grounds = ("L'evidenza di questa claim e il topo Wwox+/- e i portatori umani: un genotipo "
+                   "null/wild-type, con un allele pienamente funzionale. La classe che sopravvive "
+                   "meglio in CLAIM 033 porta un allele missense di funzione residua non misurata. "
+                   "Concatenarle implica una equivalenza funzionale che nessuna fonte misura.")
+        self.assertGreaterEqual(len(grounds.encode()), 200, "the fixture must reach the floor")
+        infer = "DO_NOT_INFER — questa claim e CLAIM 033 concordano, e la catena e vietata."
+        cite = "DO_NOT_CITE — the P47T/WT heterozygote is not a demonstrated negative."
+        text = f"# Claim Registry\n\n## CLAIM 032\n{infer} {grounds}\n{cite}\n"
+        moved = f"# Claim Registry\n\n## CLAIM 032\n{infer}\n{cite} {grounds}\n"
+        self.assertEqual(len(text.encode()), len(moved.encode()), "B2 was byte-conserving")
+        with tempfile.TemporaryDirectory() as temporary:
+            path = Path(temporary) / self.CLAIMS
+            path.parent.mkdir(parents=True)
+            path.write_bytes(text.encode())
+            block = moved[moved.index("## CLAIM 032"):]
+            ops = self._ops(temporary, [{"op": "replace", "id": "CLAIM 032", "text": block}])
+            code, message = propagate(temporary, self.CLAIMS, ops, apply=True)
+            self.assertEqual(code, 3)
+            self.assertIn(f"FULL_FALLBACK {self.CLAIMS} CROSS_LINE_MOVE", message)
+            self.assertEqual(path.read_bytes(), text.encode(), "a refusal writes nothing")
+            declared = self._ops(temporary, [{"op": "replace", "id": "CLAIM 032",
+                                              "text": block, "reflow": True}])
+            code, message = propagate(temporary, self.CLAIMS, declared, apply=True)
+            self.assertEqual(code, 0, message)
+            self.assertEqual(path.read_bytes(), moved.encode())
+
     def test_paper_registry_is_record_scoped_and_under_names_one_purpose(self) -> None:
         """J5: the paper registry joins the other three; its twin `## Purpose` needs `under`."""
         from batch_commit import RECORD_SCOPED, propagate

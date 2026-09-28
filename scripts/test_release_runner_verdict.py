@@ -2,8 +2,10 @@
 """The aggregate release verdict must disclose skipped verification."""
 from __future__ import annotations
 
+import contextlib
 import importlib.util
 import io
+import os
 import shutil
 import subprocess
 import sys
@@ -305,6 +307,45 @@ class EverySuiteCanBeAskedWhyItSkipped(unittest.TestCase):
                          runner.extract_skip_reasons("s\n\nOK (skipped=1)\n"))
         self.assertEqual(["because"],
                          runner.extract_skip_reasons("test_x (M.C) ... skipped 'because'\n"))
+
+
+class TheRunAnnouncesItsIdentity(unittest.TestCase):
+    """🔴 A run a session cannot name is a run it stops with `pkill -f`.
+
+    Measured 2026-09-28: `pkill -f run_release_regressions.py` killed a PEER's battery, because
+    the pattern matches every session's on a shared checkout and the runner announced nothing.
+    `framework/scripts/process_wait.py` already owns "name matching is not identity", so no second
+    mechanism is added — the banner speaks that tool's `PID:START` format and `--pid-file` writes
+    it where that tool reads it.
+    """
+
+    def test_the_identity_is_this_process_in_process_wait_s_own_format(self) -> None:
+        sys.path.insert(0, str(ROOT / "framework" / "scripts"))
+        import process_wait  # noqa: PLC0415
+
+        buffer = io.StringIO()
+        with contextlib.redirect_stdout(buffer):
+            identity = runner.announce_identity(None)
+        pid, start = process_wait.parse_identity(identity)
+        self.assertEqual(pid, os.getpid())
+        self.assertEqual(start, process_wait.start_ticks(os.getpid()),
+                         "PID alone is not identity: a recycled PID is a different process")
+        printed = buffer.getvalue()
+        self.assertIn(identity, printed)
+        self.assertIn("pkill -f run_release_regressions.py", printed,
+                      "the banner must name the trap, or it only names the PID")
+
+    def test_the_pid_file_is_written_where_process_wait_reads_it(self) -> None:
+        sys.path.insert(0, str(ROOT / "framework" / "scripts"))
+        import process_wait  # noqa: PLC0415
+
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "nested" / "battery.pid"
+            with contextlib.redirect_stdout(io.StringIO()):
+                identity = runner.announce_identity(str(path))
+            self.assertEqual(path.read_text(encoding="utf-8").strip(), identity)
+            self.assertEqual(process_wait.parse_identity(path.read_text(encoding="utf-8")),
+                             (os.getpid(), process_wait.start_ticks(os.getpid())))
 
 
 if __name__ == "__main__":

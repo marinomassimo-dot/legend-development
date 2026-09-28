@@ -45,6 +45,19 @@ explicit: address the sub-block by its own `--heading`, or pass `--to-eof` (`"to
 ops file) to assert that the record does reach the end of the file — an append to a genuinely-last
 record stays possible either way. A last block that covers no heading is not refused at all.
 
+🔴 AND A BYTE-CONSERVING MOVE INSIDE THE RECORD IS NOT AN EDIT OF THE RECORD
+----------------------------------------------------------------------------
+Everything proven below is about the record's OUTSIDE. `BATCH_20260928_005` op `B2` moved 488
+bytes of grounds from one STATEMENT LINE of a record onto another — severing a `DO_NOT_INFER`
+prohibition from its grounds and re-parenting them under a `DO_NOT_CITE` prohibition about a
+different allele — and every proof here held, because the record's boundary, its record set and
+(at the repair) even its total were untouched. An edit that moves a run of ≥ 200 bytes out of one
+line of the addressed record and into a line that does not continue it is now REFUSED with
+`CROSS_LINE_MOVE`; an op that means to split or join a statement declares it with `--reflow`
+(`"reflow": true`), as `--to-eof` declares the other. A line merely changing length, a line
+relocated intact, and an indented or blockquoted line are not refused. Measured over Benchmark J's
+72 historical events: zero legitimate edits refused. See `cross_line_moves`.
+
 OPERATIONS
 ----------
   replace         the whole block → new text (its own heading first)
@@ -70,7 +83,8 @@ REFUSALS (exit 3; nothing written)
   `--rename-to`) · RESEGMENTATION (new text carries a heading at or above the block's level —
   the "`##` record swallows the following `#`" defect of D0 — or would glue onto the next
   heading) · UNBOUNDED_SPAN (the block's end is EOF by assumption and covers headings; see above)
-  · OLD_NOT_UNIQUE / OLD_ABSENT (`replace-within`) · DUPLICATE_ID (an insert whose
+  · CROSS_LINE_MOVE (content reparented across a statement boundary inside the addressed
+  record without `--reflow`; see above) · OLD_NOT_UNIQUE / OLD_ABSENT (`replace-within`) · DUPLICATE_ID (an insert whose
   record already exists) · POSTCONDITION (a check above failed: a defect of this tool, reported).
 
     python3 framework/scripts/record_scoped_edit.py blocks --file <md>
@@ -102,6 +116,24 @@ import registry_records as rr  # noqa: E402
 OPS = ("replace", "replace-within", "insert-before", "insert-after", "append", "delete")
 SEPARATOR_RUN = re.compile(r"\A(?:[ \t]*(?:---)?[ \t]*\n)+")
 
+#: 🔴 THE DEFECT THIS NUMBER IS CALIBRATED ON, AND THE FLOOR IS MEASURED, NOT CHOSEN.
+#: `BATCH_20260928_005` op `B2` re-parented 488 bytes of grounds from a `DO_NOT_INFER` statement
+#: onto a `DO_NOT_CITE` statement about a different allele, leaving the prohibition a bare edict.
+#: Every proof this repository runs held: the record boundary untouched, `propagate`'s
+#: all-or-nothing proof satisfied, `grep -c "Concatenarle in"` returning 1 before and 1 after.
+#:
+#: The floor is bytes and not sentences because a sentence is a judgement and a byte count is not.
+#: Replayed over `BENCH-J-RECORD-SCOPED-EDIT/j0_corpus.json` — 72 historical (commit, file)
+#: events, 337 changed records — the refusal count by floor is: 40 B → 23 records (6.8 %), 80 B →
+#: 2, 120 B → 0, 200 B → 0, 400 B → 0. So the honest floor is anywhere at or above 120, and 200 is
+#: taken for the margin it leaves a corpus this one does not contain, not to buy a number back.
+#: `B2`'s own run is 487 bytes, so the margin is not bought at the defect's expense either. Over
+#: 99 more recent (commit, file) events it fires three times, and all three are real cross-line
+#: moves: `B2` itself at `da250b5`, its Mirror repair at `327a558`, and `a225a9a3` moving a 424-byte
+#: supersession note off a `Status:` line — the last two being exactly the intentional reflows that
+#: `--reflow` exists to declare. See `cross_line_moves`.
+MOVED_BYTES_FLOOR = 200
+
 
 class Refusal(Exception):
     """A scope violation or an ambiguous anchor. Nothing has been written when this is raised."""
@@ -122,6 +154,16 @@ class Op:
     new: str = ""
     rename_to: str = ""
     under: str = ""
+    reflow: bool = False
+    """The caller declares that this op MEANS to split or join a statement inside the record.
+
+    🔴 THE ESCAPE MUST EXIST AND MUST BE EXPLICIT, exactly as `--to-eof` is for the EOF-spanning
+    span. Splitting a paragraph that has grown two arguments, or joining two that were one, is a
+    legitimate edit; doing it BY ACCIDENT, inside an op whose footer swears the record's meaning is
+    unchanged, is `B2`. So the act is not forbidden — it is made undeniable, and a reviewer reading
+    the op list can see which ops claimed it. Setting it on every op to make a batch pass is the
+    one way to lose the guarantee, and it is visible in the op list when someone does."""
+
     to_eof: bool = False
     """The caller asserts the addressed block really does run to end of file.
 
@@ -137,7 +179,7 @@ class Op:
     @classmethod
     def from_dict(cls, raw: dict[str, Any]) -> "Op":
         known = {k: raw[k] for k in ("op", "id", "heading", "preamble", "text", "old", "new",
-                                     "rename_to", "under", "to_eof") if k in raw}
+                                     "rename_to", "under", "to_eof", "reflow") if k in raw}
         if known.get("op") not in OPS:
             raise ValueError(f"unknown op {raw.get('op')!r}; expected one of {', '.join(OPS)}")
         return cls(**known)
@@ -427,13 +469,232 @@ def apply_one(text: str, op: Op, levels: tuple[int, ...]) -> tuple[str, dict[str
                  "span": [span.start, span.end], "span_end_assumed": span.to_eof,
                  "span_swallows": [f"{'#' * lv} {t}" for lv, t in span.swallowed],
                  "to_eof_asserted": bool(op.to_eof),
+                 # The batch report can show that the op list did not silently change the record's
+                 # line shape, and which ops declared that they meant to.
+                 "lines": [len(statement_lines(target)), len(statement_lines(new_block))]
+                 if op.op in ("replace", "replace-within") else [],
+                 "reflow_asserted": bool(op.reflow),
                  "replaced_bytes": len(text[start:end].encode()),
                  "inserted_bytes": len(insert.encode()), "new_records": expect_new,
                  "removed_records": expect_gone}
 
 
+# ------------------------------------------------- statement boundaries inside one record
+#
+# 🔴 A BYTE-CONSERVING EDIT WAS INVISIBLE TO EVERY PROOF ABOVE.
+#
+# Everything this tool proves is about the record's OUTSIDE: the bytes before and after the
+# edited range, the other blocks, the record set. Inside the addressed record it proves nothing,
+# and it does not have to for the containment argument to hold — but `BATCH_20260928_005` op `B2`
+# showed what that leaves open. It inserted a new `DO_NOT_CITE` statement INSIDE the existing
+# `DO_NOT_INFER` line of `CLAIM 032`, so that the prohibition was left standing as a bare edict
+# and its 488 bytes of grounds — which argue about the `Wwox^+/−` null/wild-type genotype,
+# `CLAIM 033` and Q230P — ended up under a prohibition about the `P47T/WT` missense heterozygote,
+# joined to that statement's REVIVAL_TRIGGER by a single space. Two allele arguments, merged
+# across a boundary the batch's own footer swore was unchanged. The record's boundary was
+# untouched, so `propagate`'s all-or-nothing proof held; the record set was unchanged, so the
+# post-condition held; `grep -c "Concatenarle in"` returned 1 before and 1 after, so every
+# presence check held. It survived a FULL BATCH CYCLE and was caught by an ex-post Mirror review
+# two batches later, as BLOCKING-SCIENTIFIC. The repair (`327a558`) is byte-for-byte conserving:
+# 219 + 2,659 = 707 + 2,171 = 2,878 B.
+#
+# WHY THE OBVIOUS INVARIANTS ARE THE WRONG ONES, each measured rather than argued:
+#
+#  · "the number of PARAGRAPHS in the record is unchanged" — `B2` leaves the paragraph count
+#    unchanged, so it catches nothing here. Worse, the two prohibitions of `CLAIM 032` are
+#    ADJACENT LINES with no blank line between them, so a blank-line partition puts both
+#    statements and their grounds in ONE unit and cannot see a move between them at all. A first
+#    draft of this check keyed on blank lines and did NOT fire on `da250b5`. Hence
+#    `statement_lines`.
+#  · "every line's length is unchanged" — a legitimate `replace-within` changes a line's length
+#    and a legitimate `append` adds lines, so this refuses nearly every real edit.
+#  · "a per-line digest plus a declared expected-change set" — the declaration would have to
+#    enumerate the lines the op touches, which is the op itself restated; an op list that declares
+#    its own diff proves nothing about whether the diff moved meaning.
+#
+# So the signature checked is about CONTENT and not shape: a run of bytes LEAVES one statement of
+# the record and is GAINED, verbatim, by a statement that does not continue it. Both halves are
+# required. A line relocated intact is a reorder and is exempt. A deletion whose text happens to
+# exist elsewhere in the record is not reported, because no line gained it. Indenting or
+# blockquoting a line does not move it (`LINE_FURNITURE`).
+
+
+def statement_lines(block: str) -> list[str]:
+    """The block's statement lines: its non-blank lines, in order.
+
+    🔴 THE LINE AND NOT THE BLANK-LINE PARAGRAPH, because that is the boundary the defect crossed.
+    In `claim_registry_current.md` the two prohibitions of `CLAIM 032` are ADJACENT LINES with no
+    blank line between them — `🔴 **`DO_NOT_INFER` …**` then `🔴 **`DO_NOT_CITE` …**` — so a
+    blank-line partition puts both, and their grounds, in one unit and sees nothing when content
+    moves from one to the other. Measured: a first draft of this check keyed on blank lines and did
+    NOT fire on `da250b5`, the commit that introduced `B2`. The registries write one statement per
+    line; the line is the unit a reader attributes meaning to, so it is the unit checked.
+    """
+    return [line for line in block.split("\n") if line.strip()]
+
+
+def _folded(value: str) -> str:
+    """Whitespace-folded text: a join that replaced a newline with a space still matches."""
+    return " ".join(value.split())
+
+
+#: Bytes of shared opening that identify which after-line CONTINUES a given before-line. These
+#: lines open with a distinctive marker and field name (`🔴 **`DO_NOT_CITE` — …`, `**Last
+#: update:** …`), so the opening is what a reader uses to say "this is the same statement,
+#: edited" — and the check needs exactly that, because a statement edited in place is not a
+#: statement whose content was reparented.
+#:
+#: 🔴 MEASURED, TWICE, AND BOTH TIMES DOWNWARD. At 24 B the J0 replay reported 5 refusals, and all
+#: five were the same artefact: the registries' `**Last update:**` line shares exactly 23 bytes of
+#: opening with its own replacement (`**Last update:** 2026-0`), so the line was read as removed
+#: and the note it keeps was read as reparented. The floor exists only to stop a one-character
+#: coincidence pairing two unrelated lines; every real field opening is longer than 8 bytes, and
+#: ranking is by LONGEST shared opening, so the right pair still wins where several are possible.
+CONTINUATION_PREFIX_BYTES = 8
+
+#: Leading Markdown furniture — blockquote, list and table markers — stripped before two lines'
+#: openings are compared. 🔴 The second measured artefact: `419b6803` blockquoted an existing
+#: `CLAIM 004` flag by prefixing `> `, which left the two lines sharing NO opening at all, so 768
+#: bytes of an unchanged statement were reported as reparented. Indenting or quoting a statement
+#: does not move it.
+LINE_FURNITURE = re.compile(r"\A[\s>*+|-]*")
+
+
+def _opening(line: str) -> str:
+    return LINE_FURNITURE.sub("", line)
+
+
+def _prefix_bytes(left: str, right: str) -> int:
+    """Bytes the two lines share from the start, ignoring leading Markdown furniture."""
+    left, right = _opening(left), _opening(right)
+    limit = min(len(left), len(right))
+    index = 0
+    while index < limit and left[index] == right[index]:
+        index += 1
+    return len(left[:index].encode())
+
+
+def _continuations(before: list[str], after: list[str]) -> dict[int, int]:
+    """before-line index → the after-line index that continues it.
+
+    Identical text first, so an untouched line is never mistaken for a rewritten neighbour; then
+    the longest shared opening, once, greedily. A line with no continuation was removed outright.
+    """
+    taken: set[int] = set()
+    found: dict[int, int] = {}
+    by_text: dict[str, list[int]] = {}
+    for index, line in enumerate(after):
+        by_text.setdefault(line, []).append(index)
+    for index, line in enumerate(before):
+        for candidate in by_text.get(line, ()):
+            if candidate not in taken:
+                found[index] = candidate
+                taken.add(candidate)
+                break
+    ranked = sorted(
+        ((_prefix_bytes(before[i], after[j]), i, j)
+         for i in range(len(before)) if i not in found
+         for j in range(len(after)) if j not in taken),
+        key=lambda item: (-item[0], item[1], item[2]))
+    for shared, i, j in ranked:
+        if shared < CONTINUATION_PREFIX_BYTES or i in found or j in taken:
+            continue
+        found[i] = j
+        taken.add(j)
+    return found
+
+
+def _residue(line: str, continuation: str, floor: int) -> list[str]:
+    """Runs of ≥ `floor` bytes that this line lost — not present in the line that continues it."""
+    if not continuation:
+        return [line] if len(line.encode()) >= floor else []
+    return [line[i1:i2] for tag, i1, i2, _j1, _j2 in difflib.SequenceMatcher(
+        None, line, continuation, autojunk=False).get_opcodes()
+        if tag in ("delete", "replace") and len(line[i1:i2].encode()) >= floor]
+
+
+def _gained(line: str, predecessor: str, floor: int) -> list[str]:
+    """Runs of ≥ `floor` bytes this line gained — absent from the line it continues."""
+    if not predecessor:
+        return [line] if len(line.encode()) >= floor else []
+    return [line[j1:j2] for tag, _i1, _i2, j1, j2 in difflib.SequenceMatcher(
+        None, predecessor, line, autojunk=False).get_opcodes()
+        if tag in ("insert", "replace") and len(line[j1:j2].encode()) >= floor]
+
+
+def _shared_run(source: str, destination: str, floor: int) -> str:
+    """The longest run the two share, once whitespace is folded, if it reaches `floor` bytes."""
+    left, right = _folded(source), _folded(destination)
+    match = difflib.SequenceMatcher(None, left, right, autojunk=False).find_longest_match(
+        0, len(left), 0, len(right))
+    run = left[match.a:match.a + match.size]
+    return run if len(run.encode()) >= floor else ""
+
+
+def cross_line_moves(old_block: str, new_block: str,
+                     floor: int = MOVED_BYTES_FLOOR) -> list[tuple[str, str, str]]:
+    """(from, to, the moved run) for every run of ≥ `floor` bytes REPARENTED inside one block.
+
+    A run is reparented when it leaves one statement line of the block and is GAINED, verbatim, by
+    a line that does not continue it. Both halves are required, and that is what keeps the check
+    narrow: a line that merely changes length loses nothing to anyone, a deletion whose text
+    happens to exist elsewhere in the record is not reported because no line gained it, and a line
+    relocated intact is a reorder and is exempted explicitly below.
+    """
+    before, after = statement_lines(old_block), statement_lines(new_block)
+    continuation = _continuations(before, after)
+    predecessor = {j: i for i, j in continuation.items()}
+    lost = {i: _residue(line, after[continuation[i]] if i in continuation else "", floor)
+            for i, line in enumerate(before)}
+    entered = {j: _gained(line, before[predecessor[j]] if j in predecessor else "", floor)
+               for j, line in enumerate(after)}
+    found: list[tuple[str, str, str]] = []
+    for source, runs in lost.items():
+        for destination, arrivals in entered.items():
+            if continuation.get(source) == destination:
+                continue
+            for gone in runs:
+                for arrived in arrivals:
+                    run = _shared_run(gone, arrived, floor)
+                    if not run:
+                        continue
+                    # A whole line that left one place and arrived intact in another is a
+                    # REORDER: no statement is severed and no two arguments are merged, so it
+                    # passes. Reparenting is a PART of a line landing inside another.
+                    if (_folded(run) == _folded(before[source])
+                            and _folded(run) == _folded(after[destination])):
+                        continue
+                    found.append((f"line {source + 1}", f"line {destination + 1}", run))
+    return found
+
+
+def _check_line_boundaries(target: str, new_block: str, span: Span, op: Op) -> None:
+    """Refuse an edit that reparents content across a line boundary inside the record."""
+    if op.reflow:
+        return
+    moved = cross_line_moves(target, new_block)
+    if not moved:
+        return
+    where, into, run = moved[0]
+    excerpt = _folded(run)
+    excerpt = excerpt[:120] + ("…" if len(excerpt) > 120 else "")
+    raise Refusal("CROSS_LINE_MOVE",
+                  f"{len(run.encode())} byte(s) leave {where} of {span.key!r} and are gained, "
+                  f"verbatim, by {into}, which does not continue it: the edit REPARENTS content "
+                  f"across a statement boundary INSIDE the addressed record — which every proof "
+                  f"here misses, because the record's own boundary, its record set and (in the "
+                  f"repair's case) even its total are untouched. BATCH_20260928_005 op B2 severed "
+                  f"a DO_NOT_INFER prohibition from its grounds exactly so, leaving a bare edict "
+                  f"and two allele arguments merged in one paragraph, and it took an ex-post "
+                  f"Mirror review two batches later to see it. Moved run: {excerpt!r}"
+                  + (f" — and {len(moved) - 1} more" if len(moved) > 1 else "")
+                  + ". Address each line with its own op, or pass --reflow (\"reflow\": true) to "
+                    "declare that this op means to split or join a statement.")
+
+
 def _check_replacement(target: str, new_block: str, span: Span, op: Op,
                        levels: tuple[int, ...], text: str) -> None:
+    _check_line_boundaries(target, new_block, span, op)
     if span.kind == "preamble":
         if _headings(new_block):
             raise Refusal("RESEGMENTATION", "the preamble may not gain a heading")
@@ -573,6 +834,12 @@ def main(argv: list[str] | None = None) -> int:
                            help="assert that the addressed block really runs to end of file; "
                                 "without it an op on a span whose end the file does not state, "
                                 "and which covers headings, is refused (UNBOUNDED_SPAN)")
+        if name in ("replace", "replace-within"):
+            p.add_argument("--reflow", action="store_true",
+                           help="declare that this op means to split or join a statement inside "
+                                "the record; without it, content re-parented from one line of "
+                                "the addressed record onto another is refused "
+                                "(CROSS_LINE_MOVE)")
         if name in ("replace", "insert-before", "insert-after", "append"):
             p.add_argument("--text", default=None)
             p.add_argument("--text-file", type=Path)
@@ -618,7 +885,8 @@ def main(argv: list[str] | None = None) -> int:
                       new=_arg_text(getattr(args, "new", None), getattr(args, "new_file", None)),
                       rename_to=getattr(args, "rename_to", "") or "",
                       under=getattr(args, "under", "") or "",
-                      to_eof=bool(getattr(args, "to_eof", False)))]
+                      to_eof=bool(getattr(args, "to_eof", False)),
+                      reflow=bool(getattr(args, "reflow", False)))]
     except (OSError, ValueError, TypeError) as error:
         print(f"invalid invocation: {error}", file=sys.stderr)
         return 2

@@ -219,6 +219,28 @@ For each commit candidate (in the order fixed in Phase 1), apply the changes.
 |---|---|
 | `working_model_current.md` · `claim_registry_current.md` · `literature_tracking_log_current.md` · `paper_registry_current.md` | **record-scoped**: every change of the batch to that file as ONE atomic list of operations — `replace` / `replace-within` a record or range, `insert-after` / `insert-before` / `append` a new record, `delete` — applied with `python3 framework/scripts/batch_commit.py propagate --file <file> --ops <ops.json>` (dry run), then the same with `--apply`. The editor (`record_scoped_edit.py`) proves before writing that every byte outside the addressed records is unchanged, and refuses an ambiguous, fenced or nested anchor or an edit that would re-segment the file. For the working model prefer `replace-within` (a changelog row, a version line, a mirror row). A section heading the file carries twice — the paper registry's two `## Purpose` — is named with `"under"`, the exact text of its enclosing heading (`"heading": "Purpose", "under": "Paper Registry Current"`). |
 
+🔴 **A byte-conserving move inside a record is not an edit of that record, and one op must not do
+two.** The proof above is about the record's OUTSIDE. `BATCH_20260928_005` op `B2` spliced a new
+`DO_NOT_CITE` statement INSIDE the existing `DO_NOT_INFER` line of `CLAIM 032`, leaving the
+prohibition a bare edict and re-parenting its 488 bytes of grounds — which argue about a
+null/wild-type genotype — under a prohibition about a missense heterozygote. The record boundary
+was untouched, the record set unchanged and `grep -c` for the surviving sentence returned 1 before
+and after, so **every** check this protocol runs passed; it survived a full batch cycle and was
+caught by an ex-post Mirror review two batches later, BLOCKING-SCIENTIFIC. The editor now refuses
+`CROSS_LINE_MOVE` when ≥ 200 bytes leave one statement line of the addressed record and are gained
+verbatim by a line that does not continue it. A line merely changing length, a line relocated
+intact and a line that gains a `> ` are not refused; replayed over Benchmark J's 72 historical
+events it refuses **zero** legitimate edits
+([`j6_cross_line_replay.py`](../eval/benchmarks/BENCH-J-RECORD-SCOPED-EDIT/j6_cross_line_replay.py)
+re-derives that number).
+
+**An op that MEANS to split or join a statement declares it**, exactly as `to_eof` declares an
+EOF-spanning span: `"reflow": true` in the ops file (`--reflow` on the CLI). Declaring it is
+cheap and visible in the op list, so a reviewer can see which ops claimed it; setting it on every
+op to make a batch pass is the one way to lose the guarantee, and it is equally visible. Write one
+op per statement wherever that is possible — it is what makes the footer's "nothing else moved"
+true rather than sworn.
+
 **A refusal is never forced.** Exit 3 writes nothing and prints a `FULL_FALLBACK <file> <code>`
 line. Either the operation list is wrong — fix it and rerun — or the edit is outside what the
 editor can prove (an unaddressable anchor, a re-segmentation, an identity change it cannot
@@ -443,6 +465,33 @@ In `session_commit_log.md`:
 - Do not remove from the queue — the queue is append-only
 
 > **Never delete commit candidates from the queue.** Only mark them.
+
+🔴 **NAMING A CANDIDATE IN THE BATCH SCOPE CLOSES IT, WHATEVER THE SENTENCE AROUND THE ID SAYS.**
+`growth_anchors.py` derives the backlog from the scopes — *consumed = named in a scope, pending =
+on disk and named nowhere* — by folding the whole text of `state_manifest_current.md` and
+`state_history.md` and asking whether the identifier occurs. **There is no reading of the
+sentence.** So "QUEUED AND DELIBERATELY NOT PROPAGATED HERE: `CC-…`" closes that candidate exactly
+as "PROPAGATED `CC-…`" does. It has happened twice: `batch_20260928_005_scope` closed
+`CC-20260928-GRAPH-HYGIENE-01` from inside the words *"NOT IN SCOPE and still queued"*, and
+`BATCH_20260928_006`'s first draft closed a **peer's** candidate from inside *"ROUTED ELSEWHERE,
+NOT TOUCHED"*. The backlog is the **trigger** that fires the next `BATCH_COMMIT`, so the wrong
+number is silent, and it lands on the candidate's author rather than on the actor who wrote the
+scope.
+
+Two rules follow, and both are cheap:
+
+1. **Name in the scope only the candidates this batch propagated.** A candidate the batch
+   deliberately left queued, deferred, or routed to another actor gets its disposition in the
+   **batch report** (Phase 8.2), never in the manifest or its history. Ids are safe everywhere
+   else — a batch report, `capability_scout_log.md`, `analysis/`, `governance/`, a commit message,
+   the candidate's own text — because this is the only reader that folds those two files, and
+   `test_growth_anchors.py` asserts it.
+2. **Write the `## BATCH DISPOSITION` block on every candidate this batch propagated.** That block
+   is the candidate's own attestation; a mention is what somebody else wrote about it.
+   `growth_anchors.py check` now reports `SCOPE_CLOSED_NO_DISPOSITION` for every candidate closed
+   by a mention alone, and **fails** on one that is not declared in
+   `growth_anchors.DECLARED_MENTION_CLOSURES` — so the asymmetry is loud at the author's next run
+   instead of being read off a wrong headline days later.
 
 ### 7.1 Re-point the receipts of everything this batch propagated
 

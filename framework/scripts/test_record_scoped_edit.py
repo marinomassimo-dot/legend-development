@@ -560,5 +560,155 @@ class TheDocumentedRefusalConditionIsTheImplementedOne(unittest.TestCase):
         self.assertEqual(caught.exception.code, "UNBOUNDED_SPAN")
 
 
+class CrossLineMove(unittest.TestCase):
+    """🔴 The `B2` shape: content re-parented from one statement of a record onto another.
+
+    `BATCH_20260928_005` op `B2` survived a full batch cycle because every proof this repository
+    runs is about the record's OUTSIDE. These fixtures are built so the defect can actually occur
+    — two real statement lines, a real ≥ 200-byte run moving verbatim from one to the other — and
+    the passes are built from the edits that must stay possible: a line changing length, an
+    append, a reorder, a blockquote, a deletion.
+    """
+
+    #: The 488 bytes `B2` moved, in the shape it moved them: the grounds of a `DO_NOT_INFER`
+    #: prohibition, which argue about a null/wild-type genotype.
+    GROUNDS = (
+        "L'evidenza di questa claim e il topo `Wwox^+/-` e i portatori umani: un genotipo "
+        "**null/wild-type**, con un allele **pienamente funzionale**. La classe che sopravvive "
+        "meglio in `CLAIM 033` porta **un allele missense** di funzione residua **non misurata**. "
+        "Concatenarle in un allele basta implica una equivalenza funzionale che nessuna delle due "
+        "fonti misura, e la catena e percio vietata in qualunque eterozigote WWOX."
+    )
+    INFER = ("[RED] **`DO_NOT_INFER` (2026-09-27, `CENSUS-03`) — questa claim e `CLAIM 033` "
+             "concordano, e proprio per questo la catena fra loro e vietata.**")
+    CITE = ("[RED] **`DO_NOT_CITE` — the `P47T/WT` heterozygote is not a demonstrated negative "
+            "for haploinsufficiency.** Three separate reasons, each sufficient on its own, and "
+            "a REVIVAL_TRIGGER: a powered survival comparison in that genotype.")
+
+    def record(self, *lines: str) -> str:
+        return "## CLAIM 032\n**Title:** thirty-two\n" + "".join(f"{line}\n" for line in lines)
+
+    def file(self, *lines: str) -> str:
+        return self.record(*lines) + "\n---\n\n## CLAIM 033\n**Title:** thirty-three\n"
+
+    def block(self, text: str) -> str:
+        """The addressed record's own span, separator included, as `replace` must be given it."""
+        return text[:text.index("## CLAIM 033")]
+
+    def test_the_grounds_are_long_enough_for_the_fixture_to_exhibit_the_defect(self) -> None:
+        """A suite whose fixture is under the floor proves nothing about the floor."""
+        self.assertGreaterEqual(len(self.GROUNDS.encode()), rse.MOVED_BYTES_FLOOR)
+
+    def test_b2_is_refused(self) -> None:
+        """Two statements in one record, N bytes moving from one to the other, total conserved."""
+        before = self.file(f"{self.INFER} {self.GROUNDS}", self.CITE)
+        after = self.file(self.INFER, f"{self.CITE} {self.GROUNDS}")
+        self.assertEqual(len(before.encode()), len(after.encode()),
+                         "the fixture must be byte-conserving, or it is not the B2 shape")
+        with self.assertRaises(rse.Refusal) as caught:
+            rse.apply_ops(before, [op(op="replace", id="CLAIM 032",
+                                      text=self.block(after))], H2)
+        self.assertEqual(caught.exception.code, "CROSS_LINE_MOVE")
+        self.assertIn("reflow", str(caught.exception))
+
+    def test_b2_as_it_actually_happened_is_refused(self) -> None:
+        """`da250b5`: a NEW statement spliced INSIDE an existing line, whose tail it re-parents.
+
+        Not byte-conserving — the new prohibition is new prose — which is why a check keyed on the
+        record's total would have caught only the repair and not the op that did the damage. What
+        moved is the 488 bytes of grounds, and that is what is detected.
+        """
+        before = self.file(f"{self.INFER} {self.GROUNDS}")
+        after = self.file(self.INFER, f"{self.CITE} {self.GROUNDS}")
+        self.assertNotEqual(len(before.encode()), len(after.encode()))
+        with self.assertRaises(rse.Refusal) as caught:
+            rse.apply_ops(before, [op(op="replace", id="CLAIM 032",
+                                      text=self.block(after))], H2)
+        self.assertEqual(caught.exception.code, "CROSS_LINE_MOVE")
+
+    def test_reflow_is_the_declared_escape(self) -> None:
+        """The escape exists, is explicit, and is recorded in the op report."""
+        before = self.file(f"{self.INFER} {self.GROUNDS}", self.CITE)
+        after = self.file(self.INFER, f"{self.CITE} {self.GROUNDS}")
+        out, report = rse.apply_ops(
+            before, [op(op="replace", id="CLAIM 032", reflow=True, text=self.block(after))], H2)
+        self.assertEqual(out, after)
+        self.assertTrue(report.ops[0]["reflow_asserted"])
+
+    def test_reflow_arrives_through_an_ops_file(self) -> None:
+        """`propagate` reads an ops file, so the declaration must survive `Op.from_dict`."""
+        self.assertTrue(rse.Op.from_dict({"op": "replace", "id": "X", "reflow": True}).reflow)
+        self.assertFalse(rse.Op.from_dict({"op": "replace", "id": "X"}).reflow)
+
+    def test_a_replace_within_that_changes_a_line_length_passes(self) -> None:
+        before = self.file(f"{self.INFER} {self.GROUNDS}", self.CITE)
+        out, report = rse.apply_ops(before, [op(op="replace-within", id="CLAIM 032",
+                                                old="vietata.**", new="vietata e lo resta.**")],
+                                    H2)
+        self.assertIn("vietata e lo resta", out)
+        # heading, Title, the two prohibitions, and the trailing `---` the span carries.
+        self.assertEqual(report.ops[0]["lines"], [5, 5])
+
+    def test_adding_a_line_passes(self) -> None:
+        before = self.file(f"{self.INFER} {self.GROUNDS}", self.CITE)
+        after = self.file(f"{self.INFER} {self.GROUNDS}", self.CITE, "**Wikilinks:** none")
+        out, _report = rse.apply_ops(before, [op(op="replace", id="CLAIM 032",
+                                                 text=self.block(after))], H2)
+        self.assertEqual(out, after)
+
+    def test_a_line_relocated_intact_is_a_reorder_and_passes(self) -> None:
+        before = self.file(self.INFER, self.CITE, "**Wikilinks:** none")
+        after = self.file(self.CITE, self.INFER, "**Wikilinks:** none")
+        out, _report = rse.apply_ops(before, [op(op="replace", id="CLAIM 032",
+                                                 text=self.block(after))], H2)
+        self.assertEqual(out, after)
+
+    def test_blockquoting_a_line_does_not_move_it(self) -> None:
+        """`419b6803` prefixed `> ` onto an existing flag; the statement did not move."""
+        long_line = f"{self.INFER} {self.GROUNDS}"
+        before = self.file(long_line, self.CITE)
+        after = self.file(f"> {long_line}", self.CITE)
+        out, _report = rse.apply_ops(before, [op(op="replace", id="CLAIM 032",
+                                                 text=self.block(after))], H2)
+        self.assertEqual(out, after)
+
+    def test_a_deletion_is_not_a_move_when_no_line_gained_the_text(self) -> None:
+        """Both halves are required: text that leaves and arrives nowhere is a deletion."""
+        before = self.file(f"{self.INFER} {self.GROUNDS}", self.CITE)
+        after = self.file(self.INFER, self.CITE)
+        out, _report = rse.apply_ops(before, [op(op="replace", id="CLAIM 032",
+                                                 text=self.block(after))], H2)
+        self.assertEqual(out, after)
+
+    def test_the_floor_is_load_bearing_in_both_directions(self) -> None:
+        """Under the floor a move passes; over it, it is refused. The constant is not decoration."""
+        for payload, expected in (("x" * 150, None), ("y" * 250, "CROSS_LINE_MOVE")):
+            before = self.file(f"{self.INFER} {payload}", self.CITE)
+            after = self.file(self.INFER, f"{self.CITE} {payload}")
+            ops = [op(op="replace", id="CLAIM 032", text=self.block(after))]
+            if expected is None:
+                rse.apply_ops(before, ops, H2)
+                continue
+            with self.assertRaises(rse.Refusal) as caught:
+                rse.apply_ops(before, ops, H2)
+            self.assertEqual(caught.exception.code, expected)
+
+    def test_the_floor_records_what_it_was_measured_against(self) -> None:
+        """A constant with no measurement beside it is a constant the next reader will retune."""
+        source = Path(rse.__file__).read_text(encoding="utf-8")
+        comment = source.split("MOVED_BYTES_FLOOR = 200")[0].rsplit("SEPARATOR_RUN", 1)[1]
+        for token in ("j0_corpus.json", "72 historical", "120 B", "da250b5"):
+            self.assertIn(token, comment,
+                          "the floor must carry the replay it was chosen from")
+
+    def test_the_rejected_invariants_are_executed_and_not_merely_argued(self) -> None:
+        """`B2` leaves both the paragraph count and the line count unchanged; content moved."""
+        before = self.file(f"{self.INFER} {self.GROUNDS}", self.CITE)
+        after = self.file(self.INFER, f"{self.CITE} {self.GROUNDS}")
+        self.assertEqual(before.count("\n\n"), after.count("\n\n"))
+        self.assertEqual(len(rse.statement_lines(before)), len(rse.statement_lines(after)))
+        self.assertTrue(rse.cross_line_moves(before, after))
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=1)
