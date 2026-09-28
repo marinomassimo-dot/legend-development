@@ -48,9 +48,11 @@ def clean(path: Path, include_ignored: bool = False) -> None:
         more = f" (+{len(entries) - 10} more)" if len(entries) > 10 else ""
         raise GitError(
             f"checkout is not clean: {path} — {len(entries)} entry(ies): {shown}{more}. "
-            "A `??` path may be another actor's work in progress: it is theirs to commit, move "
-            "to their own worktree or stash, not yours to dispose of. Your own changes: commit "
-            "them on your task branch.")
+            "A `??` path may be another actor's work in progress, and this check cannot tell "
+            "that from a path you forgot. If it is theirs, the remedy is theirs and it is one of "
+            "two: commit it on the branch it belongs to, or move it to their own worktree. Not a "
+            "stash — that takes it out of their working tree, which is a disposal, not a "
+            "preservation. If it is yours, commit it on your task branch.")
     for marker in ("MERGE_HEAD", "CHERRY_PICK_HEAD", "REVERT_HEAD", "rebase-merge", "rebase-apply"):
         location = Path(git(["rev-parse", "--git-path", marker], path).strip())
         if not location.is_absolute():

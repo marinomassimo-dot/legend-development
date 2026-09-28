@@ -69,6 +69,8 @@ class TaskClosure(unittest.TestCase):
         self.assertEqual(result.returncode, 2, result.stdout)
         self.assertIn("governance/SOMEONE-ELSES-WORK.md", result.stderr)
         self.assertIn("another actor's work in progress", result.stderr)
+        self.assertIn("commit it on the branch it belongs to", result.stderr)
+        self.assertNotIn("or stash", result.stderr)
         self.assert_kept()
 
     def test_dirty_checkout_is_refused(self):
