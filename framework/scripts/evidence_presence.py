@@ -39,6 +39,25 @@ mismatch is never normal.
 bytes are the ones the manifest names. It says nothing about whether anybody read them, which
 is the receipt ledger's question and not this one. Conflating the two is exactly the
 `outputs`-attests-reading trap the receipt protocol records.
+
+## `--search DIR` and `--restore` — absent is often MISPLACED, and the digest finds it
+
+Measured on **2026-09-28** (`BATCH_20260928_007`). Two commit candidates had been deferred for a
+day on *"artefact absent — no file matching that paper exists in `files/`"*, and a batch analyst
+reported a third reading as unverifiable for the same reason. All four PDFs were on the disk the
+whole time: the operator had uploaded them on 2026-09-27 and they sat in the upload cache under
+upload names, never copied to the `files/fulltext/` paths their receipts declare. A search by
+**path** cannot find a file stored under another name; a search by **SHA-256** can, and a digest
+match is the only thing that makes a found file the *same* evidence rather than a similar one.
+The same day, a supplementary zip fetched for one question turned out to hold nine more artefacts
+another manifest had declared absent, byte-identical.
+
+`--search DIR` (repeatable) hashes every regular file under each directory and, for each ABSENT
+artefact with a declared digest, reports `RECOVERABLE` with the file that matches. It changes
+nothing. `--restore` additionally copies each exact match to its declared path. It never
+overwrites an existing file, never writes outside the root, and restores only on digest equality,
+so the result is exactly the bytes the manifest fingerprinted or nothing. `files/` is gitignored,
+so a restore is a local act that commits nothing.
 """
 
 from __future__ import annotations
@@ -188,6 +207,47 @@ def availability_counts(rows: dict[str, dict]) -> dict[str, list[str]]:
     return grouped
 
 
+def index_by_digest(directories: list[Path]) -> dict[str, Path]:
+    """sha256 -> first regular file with that digest, over every file under `directories`."""
+    index: dict[str, Path] = {}
+    for directory in directories:
+        if not directory.is_dir():
+            continue
+        for candidate in sorted(directory.rglob("*")):
+            if candidate.is_file() and not candidate.is_symlink():
+                try:
+                    index.setdefault(sha256_of(candidate), candidate)
+                except OSError:
+                    continue
+    return index
+
+
+def recoverable(reports: list[dict], index: dict[str, Path]) -> list[tuple[str, Path]]:
+    """(declared relative path, found file) for every ABSENT artefact whose digest is indexed."""
+    found = []
+    for report in reports:
+        for row in report.get("artifacts", []):
+            if row["state"] == ABSENT and row["declared_sha256"] in index:
+                found.append((row["path"], index[row["declared_sha256"]]))
+    return found
+
+
+def restore(root: Path, pairs: list[tuple[str, Path]]) -> list[str]:
+    """Copy each exact match to its declared path. Never overwrites; never leaves the root."""
+    import shutil
+
+    written = []
+    resolved_root = root.resolve()
+    for rel, source in pairs:
+        target = (root / rel).resolve()
+        if resolved_root not in target.parents or target.exists():
+            continue
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(source, target)
+        written.append(rel)
+    return written
+
+
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(
         description=(
@@ -203,6 +263,17 @@ def main(argv: list[str] | None = None) -> int:
         "--fail-on-mismatch",
         action="store_true",
         help="exit non-zero on a DIGEST_MISMATCH only. Absence is never an error here.",
+    )
+    ap.add_argument(
+        "--search",
+        action="append",
+        metavar="DIR",
+        help="look for ABSENT artefacts by SHA-256 under DIR (repeatable); reports only",
+    )
+    ap.add_argument(
+        "--restore",
+        action="store_true",
+        help="with --search: copy each exact digest match to its declared path (never overwrites)",
     )
     args = ap.parse_args(argv)
 
@@ -244,6 +315,18 @@ def main(argv: list[str] | None = None) -> int:
             for row in bad:
                 marker = "MISMATCH" if row["state"] == MISMATCH else row["state"]
                 print(f"            {marker}: {row['path']}")
+
+    if args.search:
+        pairs = recoverable(reports, index_by_digest([Path(d) for d in args.search]))
+        for rel, source in pairs:
+            print(f"  [RECOVERABLE] {rel}  <-  {source}")
+        if args.restore:
+            written = restore(root, pairs)
+            for rel in written:
+                print(f"  [RESTORED]    {rel}")
+            print(f"restored: {len(written)} of {len(pairs)} recoverable (digest-equal copies only)")
+        else:
+            print(f"recoverable: {len(pairs)} (add --restore to copy them into place)")
 
     total_artifacts = sum(totals.values())
     print(

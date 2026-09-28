@@ -102,6 +102,49 @@ class EvidencePresenceTest(unittest.TestCase):
         self.assertEqual(rec["pmid"], "111")
         self.assertEqual(rec["artifacts"][0]["state"], "PRESENT")
 
+    # --search / --restore (2026-09-28): absent is often misplaced, and only a digest finds it
+    def misplaced(self, body: bytes = b"hello evidence") -> tuple[Path, Path]:
+        root = self.fixture(body=body, write_file=False)
+        cache = self.tmp / "upload-cache"
+        cache.mkdir()
+        (cache / "9d7dd3b0-Some_Publisher_Download.pdf").write_bytes(body)
+        (cache / "unrelated.pdf").write_bytes(b"not the evidence")
+        return root, cache
+
+    def test_search_reports_a_misplaced_artefact_by_digest_and_writes_nothing(self):
+        root, cache = self.misplaced()
+        out = self.run_tool(root, "--search", str(cache))
+        self.assertEqual(out.returncode, 0, out.stderr)
+        self.assertIn("[RECOVERABLE] files/fulltext/a.xml", out.stdout)
+        self.assertIn("Some_Publisher_Download", out.stdout)
+        self.assertFalse((root / "files" / "fulltext" / "a.xml").exists())
+
+    def test_restore_copies_only_a_digest_equal_file(self):
+        root, cache = self.misplaced()
+        out = self.run_tool(root, "--search", str(cache), "--restore")
+        self.assertEqual(out.returncode, 0, out.stderr)
+        self.assertEqual((root / "files" / "fulltext" / "a.xml").read_bytes(), b"hello evidence")
+        again = self.run_tool(root)
+        self.assertIn("present and matching", again.stdout)
+
+    def test_restore_never_matches_on_name_alone(self):
+        root = self.fixture(body=b"the real bytes", write_file=False)
+        cache = self.tmp / "upload-cache"
+        cache.mkdir()
+        (cache / "a.xml").write_bytes(b"same name, different bytes")
+        out = self.run_tool(root, "--search", str(cache), "--restore")
+        self.assertIn("recoverable", out.stdout.lower())
+        self.assertFalse((root / "files" / "fulltext" / "a.xml").exists())
+
+    def test_restore_never_overwrites_a_mismatched_file(self):
+        root = self.fixture(body=b"hello evidence", declared=hashlib.sha256(b"hello evidence").hexdigest())
+        (root / "files" / "fulltext" / "a.xml").write_bytes(b"tampered")
+        cache = self.tmp / "upload-cache"
+        cache.mkdir()
+        (cache / "copy.bin").write_bytes(b"hello evidence")
+        self.run_tool(root, "--search", str(cache), "--restore")
+        self.assertEqual((root / "files" / "fulltext" / "a.xml").read_bytes(), b"tampered")
+
     def test_unreadable_manifest_is_a_finding_not_a_crash(self):
         root = self.fixture()
         bad = root / "disease-models" / "wwox" / "research" / "deepdive_manifests" / "PMID222.json"
