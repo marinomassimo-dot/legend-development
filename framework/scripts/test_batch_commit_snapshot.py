@@ -21,6 +21,7 @@ from __future__ import annotations
 
 import glob
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -71,6 +72,28 @@ class SnapshotCoversTheDeclaration(unittest.TestCase):
         """The exact file whose absence was found by hand, pinned by name."""
         self.assertIn("disease-models/wwox/therapeutics/therapeutic_strategies_current.md",
                       batch_commit.snapshot_targets(str(REPO)))
+
+    def test_every_canonical_disease_model_file_of_manifest_3_1_is_covered(self) -> None:
+        """🔴 The second file found missing by hand, and the class it belongs to.
+
+        `disease_model.md` was absent from the declaration until 2026-09-28 although
+        `state_manifest_current.md` § 3.1 lists it as canonical and two batches wrote it that
+        day. The tool did not refuse because its coverage condition names the four scientific
+        current files only — a FLOOR, not the coverage the declaration promises. Pinning § 3.1's
+        whole table closes the class instead of the instance: a canonical file added there and not
+        here fails HERE, before a batch discovers it on an abort that cannot restore.
+        """
+        manifest = (REPO / "framework/state/state_manifest_current.md").read_text(encoding="utf-8")
+        section = manifest.split("### 3.1")[1].split("###")[0]
+        canonical = re.findall(r"`(disease-models/[^`]+\.md)`", section)
+        self.assertGreaterEqual(len(canonical), 5, "§ 3.1's table was not read")
+        targets = batch_commit.snapshot_targets(str(REPO))
+        for rel in canonical:
+            with self.subTest(rel=rel):
+                self.assertIn(rel, targets,
+                              f"{rel} is canonical by state_manifest § 3.1 but the Phase 3 "
+                              "SNAPSHOT_DECLARATION does not cover it: an ABORT could not "
+                              "restore it, and the abort reports success either way")
 
     def test_scientific_current_files_and_state_are_covered(self) -> None:
         targets = batch_commit.snapshot_targets(str(REPO))

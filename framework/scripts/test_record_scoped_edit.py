@@ -354,6 +354,56 @@ class UnboundedSpan(unittest.TestCase):
                 self.assertEqual(rse._span_from(other, last[0], last[1], last[2],
                                                 "record").swallowed, ())
 
+    def test_the_last_record_of_every_registry_reaches_eof_and_only_one_is_refused(self) -> None:
+        """🔴 THE REFUSAL MUST NOT BE BLUNT, measured on the live files, not reasoned about.
+
+        `BLOCK 3`, `PAPER 118` and `LIT-0420` are ALL EOF-spanning — the last record of every
+        registry is, by construction — and BATCH_20260928_002 edited the latter two legitimately.
+        A refusal keyed on "the span reaches EOF" alone would have refused two of that batch's
+        nine ops, and editing the newest PAPER or LIT record is the commonest edit here. What
+        makes the difference is whether the assumed tail COVERS anything: only `BLOCK 3` does.
+        """
+        cases = (("working_model_current.md", "BLOCK 3", (1,), True),
+                 ("paper_registry_current.md", "PAPER 118", (2,), False),
+                 ("literature_tracking_log_current.md", "LIT-0420", (2,), False))
+        for name, record, levels, refused in cases:
+            path = ROOT / "disease-models/wwox/registries" / name
+            text = path.read_bytes().decode("utf-8")
+            span = rse.resolve(text, op(op="replace", id=record), levels)
+            with self.subTest(record):
+                self.assertTrue(span.to_eof, f"{record} must be the EOF-spanning last record")
+                self.assertEqual(span.end, len(text))
+                # the commonest edit in the repository: a replace-within on the newest record
+                needle = text[span.start:span.start + 24]
+                ops = [op(op="replace-within", id=record, old=needle, new=needle)]
+                if refused:
+                    self.assertNotEqual(span.swallowed, ())
+                    with self.assertRaises(rse.Refusal) as caught:
+                        rse.apply_ops(text, ops, levels)
+                    self.assertEqual(caught.exception.code, "UNBOUNDED_SPAN")
+                else:
+                    self.assertEqual(span.swallowed, (),
+                                     f"{record} covers nothing, so nothing may be refused")
+                    out, report = rse.apply_ops(text, ops, levels)
+                    self.assertEqual(out, text)
+                    self.assertTrue(report.ops[0]["span_end_assumed"],
+                                    "the assumed end is still REPORTED where it is not refused")
+                    self.assertEqual([], report.ops[0]["span_swallows"])
+
+    def test_appending_to_the_genuinely_last_record_of_each_registry_still_works(self) -> None:
+        """The other half of the same guarantee, on all three real files: a new PAPER / LIT /
+        BLOCK still lands after the record that is currently last."""
+        cases = (("working_model_current.md", (1,), "# BLOCK 9 — test\nx\n"),
+                 ("paper_registry_current.md", (2,), "## PAPER 999\n**Identifier:** PMID 1\n"),
+                 ("literature_tracking_log_current.md", (2,), "## LIT-9999\n**Status:** x\n"))
+        for name, levels, block in cases:
+            path = ROOT / "disease-models/wwox/registries" / name
+            text = path.read_bytes().decode("utf-8")
+            with self.subTest(name):
+                out, _ = rse.apply_ops(text, [op(op="append", text="\n---\n\n" + block)], levels)
+                self.assertTrue(out.startswith(text))
+                self.assertTrue(out.endswith(block))
+
 
 class Command(unittest.TestCase):
     def run_tool(self, *args):

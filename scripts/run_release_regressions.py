@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import fnmatch
 import os
 import re
 import subprocess
@@ -286,6 +287,39 @@ def mtime_verdict(path: Path, started: float, finished: float) -> str:
     return f"written INSIDE the window at {clock(mtime)} - this suite or a concurrent editor ({window})"
 
 
+def path_is_declared(path: str, declared: list[str]) -> bool:
+    """Did the caller warn that a CONCURRENT actor is writing this path?
+
+    A declared write is excluded from the verdict and still printed, every time: the runner's
+    whole value is that it names what changed, so an exemption that also silences the line would
+    be the defect this guard exists for. Matched as an exact repo-relative path or as a glob, and
+    a declaration that matches nothing is simply inert.
+
+    🔴 The glob is matched COMPONENT BY COMPONENT, because bare `fnmatch` lets `*` cross `/`:
+    `disease-models/wwox/*.md` would then also exempt `disease-models/wwox/a/b.md`, so a
+    declaration naming one directory would silently cover a whole subtree. `**` is the only way to
+    span directories and it has to be written. Caught by this guard's own suite while that suite
+    was being written, which is the only reason it is not the shipped behaviour.
+    """
+    parts = path.split("/")
+    for item in declared:
+        if path == item:
+            return True
+        if "**" in item:
+            head, _, tail = item.partition("**")
+            if not path.startswith(head):
+                continue
+            leaf = tail.strip("/")
+            if leaf and not fnmatch.fnmatch(parts[-1], leaf):
+                continue
+            return True
+        pattern = item.split("/")
+        if len(pattern) == len(parts) and all(
+                fnmatch.fnmatch(part, glob) for part, glob in zip(parts, pattern)):
+            return True
+    return False
+
+
 def tracked_state(trees: tuple[str, ...], root: Path = ROOT) -> dict[str, str]:
     """{path: blob-or-worktree hash} for every tracked file under the guarded trees.
 
@@ -324,6 +358,15 @@ def main() -> int:
         action="append",
         metavar="RELATIVE_TEST_PATH",
         help="run only the named regression target; repeat for more than one",
+    )
+    parser.add_argument(
+        "--expect-write",
+        action="append",
+        default=[],
+        metavar="PATH_OR_GLOB",
+        help="a path a CONCURRENT actor is known to be writing while this battery runs (a batch "
+             "writing its own report, say). Declared writes are still printed, and are never "
+             "silently exempt, but they do not fail the verdict. Repeatable.",
     )
     args = parser.parse_args()
 
@@ -366,12 +409,21 @@ def main() -> int:
         if after != baseline:
             changed = sorted(set(after.items()) ^ set(baseline.items()))
             paths = sorted({path for path, _ in changed})
-            writers.append((relative, paths))
-            print(f"TRACKED_FILES_WRITTEN_BY_SUITE {relative}: {len(paths)} path(s)",
+            declared = [path for path in paths if path_is_declared(path, args.expect_write)]
+            undeclared = [path for path in paths if path not in declared]
+            verdicts = {path: mtime_verdict(ROOT / path, started, finished)
+                        for path in undeclared}
+            if undeclared:
+                writers.append((relative, undeclared, verdicts))
+            print(f"TRACKED_FILES_WRITTEN_BY_SUITE {relative}: {len(paths)} path(s)"
+                  + (f" ({len(declared)} declared with --expect-write)" if declared else ""),
                   flush=True)
-            for path in paths[:20]:
-                print(f"  wrote {path}  {mtime_verdict(ROOT / path, started, finished)}",
+            for path in declared[:20]:
+                print(f"  wrote {path}  DECLARED CONCURRENT WRITE — excluded from the verdict, "
+                      f"printed anyway ({mtime_verdict(ROOT / path, started, finished)})",
                       flush=True)
+            for path in undeclared[:20]:
+                print(f"  wrote {path}  {verdicts[path]}", flush=True)
             baseline = after
         skips.extend((relative, reason) for reason in extract_skip_reasons(result.stdout))
         if result.returncode:
@@ -382,9 +434,31 @@ def main() -> int:
     sys.stdout.flush()
     if failures or writers:
         print("REGRESSION VERDICT: FAIL", file=sys.stderr)
-        for relative, paths in writers:
-            print(f"- {relative}: WROTE {len(paths)} tracked file(s) under a guarded tree",
-                  file=sys.stderr)
+        # 🔴 THE SUMMARY LINE MUST CARRY THE ATTRIBUTION, OR IT MISLEADS THE READER WHO ONLY
+        # READS IT. Until 2026-09-28 this said "WROTE N tracked file(s)" whatever the mtime
+        # verdict two hundred lines above had concluded, so a run during a concurrent batch
+        # reported `test_batch_queue.py: WROTE 1 tracked file(s)` about the BATCH's own report.
+        # Three actors each spent a re-run on that — twice in two days — and a FAIL that teaches
+        # people to re-run instead of to read is worse than the write it was guarding against.
+        # The entry still FAILS (fail closed: the guard exists because 54 dossiers were once
+        # overwritten and nobody could say by what), but it now says what the runner does and
+        # does not know, and how to settle it.
+        for relative, paths, verdicts in writers:
+            unattributed = [path for path in paths
+                            if verdicts.get(path, "").startswith("written INSIDE")]
+            if len(unattributed) == len(paths):
+                print(f"- {relative}: UNATTRIBUTED WRITE of {len(paths)} tracked file(s) under a "
+                      "guarded tree. Every one was written INSIDE this suite's window, and the "
+                      "runner attributes by TIMESTAMP: it cannot tell this suite's write from a "
+                      "concurrent actor's. Settle it by re-running on a quiescent tree, or, when "
+                      "a concurrent batch owns the path, by naming it with --expect-write. "
+                      "Do NOT exempt the suite.", file=sys.stderr)
+            else:
+                print(f"- {relative}: WROTE {len(paths)} tracked file(s) under a guarded tree "
+                      f"({len(paths) - len(unattributed)} outside any other suite's window, so "
+                      "attributed to this one)", file=sys.stderr)
+            for path in paths[:20]:
+                print(f"    {path}: {verdicts.get(path, 'no mtime verdict')}", file=sys.stderr)
         for relative, returncode in failures:
             print(f"- {relative}: exit {returncode}", file=sys.stderr)
         # 🔴 SKIPS ARE PRINTED ON THIS PATH TOO. Until 2026-09-18 they were printed only when

@@ -177,6 +177,7 @@ refs or observe clones on other hosts. A missing or
 |---|---|
 | the fail-closed publication gate | `scripts/public_release_gate.py` |
 | every release suite at once | `scripts/run_release_regressions.py` |
+| the same battery while a **concurrent** actor is writing a tracked file (a batch writing its own report): declare the path so it is printed but does not fail the verdict. The runner attributes writes by TIMESTAMP and cannot tell a suite's write from a peer's — an `UNATTRIBUTED WRITE` in the FAIL summary says exactly that, and a re-run on a quiescent tree is the other way to settle it | `scripts/run_release_regressions.py --expect-write "disease-models/wwox/research/session_evaluations/*.md"` |
 | an independent, read-only privacy scan of the staging tree | `scripts/independent_privacy_scan.py` |
 | a ref-scoped privacy scan of **commit metadata** | `scripts/commit_metadata_scan.py` |
 

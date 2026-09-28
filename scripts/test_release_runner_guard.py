@@ -127,6 +127,56 @@ class TheLoopIsWired(unittest.TestCase):
         self.assertIn("TRACKED_FILES_WRITTEN_BY_SUITE", self.source)
         self.assertIn("if failures or writers:", self.source)
 
+    def test_the_failure_summary_carries_the_attribution_it_measured(self) -> None:
+        """🔴 The line the reader actually reads. It said `WROTE N tracked file(s)` whatever the
+        mtime verdict had concluded, so a battery run during a concurrent batch blamed
+        `test_batch_queue.py` for the BATCH's own report — twice in two days, a re-run each time.
+        A FAIL that teaches people to re-run instead of to read is worse than nothing.
+        """
+        self.assertIn("UNATTRIBUTED WRITE", self.source)
+        self.assertIn("attributes by TIMESTAMP", self.source)
+        self.assertIn("--expect-write", self.source)
+        # and the entry still fails: the guard exists because 54 dossiers were overwritten
+        self.assertIn("Do NOT exempt the suite.", self.source)
+
+
+class ADeclaredConcurrentWriteIsExcludedAndStillPrinted(unittest.TestCase):
+    """`--expect-write` is the escape hatch for a batch writing its own report while the battery
+    runs. It must never become a silent exemption: it excludes from the VERDICT and nothing else.
+    """
+
+    def test_an_exact_path_and_a_glob_both_match(self) -> None:
+        self.assertTrue(runner.path_is_declared(
+            "disease-models/wwox/research/session_evaluations/report.md",
+            ["disease-models/wwox/research/session_evaluations/report.md"]))
+        self.assertTrue(runner.path_is_declared(
+            "disease-models/wwox/research/session_evaluations/report.md",
+            ["disease-models/wwox/research/session_evaluations/*.md"]))
+
+    def test_nothing_is_declared_by_default(self) -> None:
+        self.assertFalse(runner.path_is_declared("disease-models/wwox/anything.md", []))
+
+    def test_a_declaration_cannot_exempt_more_than_it_names(self) -> None:
+        self.assertFalse(runner.path_is_declared("governance/annex_a.md",
+                                                 ["disease-models/wwox/*.md"]))
+        self.assertFalse(runner.path_is_declared("disease-models/wwox/a/b.md",
+                                                 ["disease-models/wwox/*.md"]),
+                         "fnmatch's `*` must not be read as a recursive wildcard here")
+        # spanning directories is possible, but it has to be written
+        self.assertTrue(runner.path_is_declared("disease-models/wwox/a/b.md",
+                                                ["disease-models/wwox/**"]))
+        self.assertTrue(runner.path_is_declared("disease-models/wwox/a/b.md",
+                                                ["disease-models/wwox/**/*.md"]))
+        self.assertFalse(runner.path_is_declared("disease-models/wwox/a/b.json",
+                                                 ["disease-models/wwox/**/*.md"]))
+        self.assertFalse(runner.path_is_declared("governance/a/b.md",
+                                                 ["disease-models/wwox/**"]))
+
+    def test_a_declared_write_is_still_printed(self) -> None:
+        source = (ROOT / "scripts" / "run_release_regressions.py").read_text(encoding="utf-8")
+        self.assertIn("DECLARED CONCURRENT WRITE", source)
+        self.assertIn("printed anyway", source)
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

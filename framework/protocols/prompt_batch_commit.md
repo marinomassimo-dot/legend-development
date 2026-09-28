@@ -140,6 +140,7 @@ SNAPSHOT_DECLARATION (repo-relative; a `*` glob is expanded at snapshot time):
   - disease-models/wwox/registries/claim_registry_current.md
   - disease-models/wwox/registries/paper_registry_current.md
   - disease-models/wwox/registries/literature_tracking_log_current.md
+  - disease-models/wwox/disease_model.md
   - disease-models/wwox/meta/meta_*_current.md
   - disease-models/wwox/research/research_*_current.md
   - disease-models/wwox/biomarker_endpoint/biomarker_candidates_current.md
@@ -159,9 +160,23 @@ ABORT leaves their appends standing; that is the lesser loss, and it is stated s
 
 Record the snapshot path in `legend_activity_log.md`.
 
+🔴 **`disease_model.md` was absent from this list until 2026-09-28 and the tool did not notice**,
+because the only coverage condition was the four scientific current files — and that file is a
+canonical disease-model file by `state_manifest_current.md` § 3.1, written by two batches on
+2026-09-28 alone. BATCH_20260928_002 measured the gap, deliberately did NOT hand-copy it into its
+own snapshot (hand-copying fixes one batch and leaves the declaration wrong for the next, which is
+the drift this declaration exists to end) and fell back to `git checkout --` on abort, which works
+only because the file is tracked. The reason the tool could not catch it is worth stating: **the
+coverage condition names four files, while the propagation phases below can write every file in
+this list.** Widening the condition to "every file the propagation phases can write" would close
+the class rather than this instance, and it is not done here because it needs one source of truth
+for that set — which is this block, and a block cannot verify itself. Until then: a batch that
+writes a canonical file NOT in this list adds it here, in the same commit, before propagating.
+
 > **Without a complete snapshot: ABORT.** The tool enforces this literally: if a declared
 > non-glob path is missing from the working tree, or if any of the four scientific current
-> files is not covered by the declaration, `snapshot` refuses and writes nothing.
+> files is not covered by the declaration, `snapshot` refuses and writes nothing. The second
+> condition is a FLOOR, not the coverage this list promises — see the note above.
 
 ---
 
