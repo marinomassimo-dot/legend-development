@@ -244,6 +244,46 @@ the quiet direction, reporting as done work that nobody did.
 
 ## 7. Dated notes
 
+`BATCH_20260928_001` scope corrections, 2026-09-28 (`scientist`, package `mirror0928`): three clauses in
+§ 4's `batch_20260928_001_scope` are false or wrong by one, found by the Mirror ex-post review of that
+batch (persisted at
+`disease-models/wwox/research/session_evaluations/2026-09-28_BATCH_20260928_001_mirror_review.md`,
+verdict CONFIRMED WITH FINDINGS — 0 BLOCKING, 6 MINOR, 7 NOTE) and each re-measured first-hand here
+before being recorded. § 4 is never edited, so they are corrected here.
+**(a) "The discordance is survival only" is false** (Mirror FINDING 1). Table 1 of PMID 36779245, parsed
+from the JATS markup here (artefact sha256
+`780f42de9b3982fa5bf9bf1e6bb76f71384c943aa197fb2d4de80be7ac7e7a34`, re-hashed equal), prints two further
+examination axes on which patients 2 and 5 **differ** — `Short stature` (P2 *No*, P5 *Yes*) and
+`Ophthalmologic features` (P2 *"Absent eye contact; erratic ocular movements"*, P5 *"Poor eye contact"*) —
+and three context rows besides (`Country`, `Family history for epilepsy`, `Consanguineous`). What is true,
+and what the claim's argument needs, is the **scoped** statement: on the three axes this claim uses as
+*gravità* — intellectual disability, speech, ambulation — the pair is concordant, and the discordance
+that bears on outcome is survival. No file defines *gravità* as exactly that triple, which is why the
+universal *only* was reachable; the claim now names its own axes. The canonical wording in
+`claim_registry_current.md` `CLAIM 030`, `working_model_current.md` (`Last update` and the `WM_v7.1`
+changelog row) and `disease_model.md` is repaired by `CC-20260928-MIRROR0928-REPAIRS-01`.
+**(b) "which carries no supplementary captions" is false** (Mirror FINDING 9). That clause, about
+`files/fulltext/PMID42422765_Obeid2026_PMC_2026-09-27.xml` (sha256
+`7bea83346b708e541d2c432e5da4029f69673e1abc3c6fe70926ad0e3ec2eef2`, re-hashed equal), is disproved by the
+same sentence that carries it and by this batch's own report: the artefact holds exactly **two**
+`<supplementary-material>` container captions (*«Document S1. Figures S1–S8»*, *«Document S2. Article
+plus supplemental information»*) and the token `supplementary` **40** times. The defensible statement is
+that it carries no caption of any supplementary **panel** `S1`–`S8`. Corrected outside any batch in the
+two surfaces the clause reached — `therapeutics/therapeutic_strategies_current.md` § `TX-007` and
+`research/dismissal_ledger_current.md` `D-23`, the second not named by the review. The safety score does
+**not** move: it rests on the four zero surveillance-token counts, which hold.
+**(c) "11 one-directional claim edges … the other ten" is wrong by one, and counts a different thing**
+(Mirror FINDING 11). Measured here on `analysis/data/pathograph_export.jsonl`, `bbdb430` → `bc7346a`:
+one-directional claim→claim edges went **16 → 15**. `CLAIM 016 ↔ CLAIM 040` closed as declared;
+`CLAIM 030 ↔ CLAIM 033` **also** closed, undeclared, as a side effect of the batch's own closing
+wikilink; and `CLAIM 016 ↔ CLAIM 033` was **created**, undeclared and one-way. The figure 11 and the
+figure 16 are two unnamed rules: the candidate counted claim wikilinks declared in the `**Wikilinks:**`
+field only, the pathograph counts them in **any** declared field (nine such fields in this export) and
+counts undirected pairs. Neither undeclared movement is a scientific error; the residue handed to the
+graph-hygiene candidate was wrong by one item and is corrected in
+`research/commit_candidates/CC-20260928-MIRROR003-REPAIRS-01.md`'s appended correction note, where both
+rules are stated. The working figure is **15**.
+
 `BATCH_20260927_003` scope corrections, 2026-09-28 (`scientist`, package `m003`): three figures in
 § 4's `batch_20260927_003_scope` are wrong or overstated, found by the Mirror ex-post review of that
 batch (persisted at
