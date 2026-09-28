@@ -88,6 +88,7 @@ Run everything as `python3 <path> --help` first. Paths are repo-relative.
 | a manifest flag that IMPROVED without the work behind it | `framework/scripts/manifest_flag_drift.py` |
 | does a manifest's queued multi-hop id name **this** paper's debt | `framework/scripts/manifest_queue_id_crosscheck.py` |
 | does a manifest's `receipt` name the reading that **produced** it — the decided semantics (`fulltext_read_receipt.md`), with the declared non-conformance ceiling; reports, never writes | `framework/scripts/manifest_receipt_provenance.py --check` |
+| to **repair** one such `receipt` to the value the ledger derives — no `--to`, every other byte proven identical, and refused when the derivation is not unique, not possible, or would name a reading of an artifact the manifest does not declare | `framework/scripts/manifest_receipt_repoint.py --pmid …` (dry run; add `--apply`) |
 | does a candidate, ledger or analysis file cite an `FT-` entry that was never written | `framework/scripts/manifest_queue_id_crosscheck.py --prose` |
 | does the registry's declared locator count still match the manifest it names | `framework/scripts/locator_count_crosscheck.py` |
 | every number in an orchestration record sitting beside what produced it | `framework/scripts/record_number_provenance.py` |

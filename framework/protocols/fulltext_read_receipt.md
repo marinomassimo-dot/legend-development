@@ -412,17 +412,51 @@ reported, never a defect).
 `UNKNOWN_EVENT`), 2 `UNCHECKABLE`. Most of the 13 were written under the reading now retired, and
 they are a visible, countable tail rather than a silence. `--check` fails when the count EXCEEDS the
 ceiling the tool declares, so a NEW non-conforming manifest is loud at write time; lower the
-ceiling as the tail is repaired and never raise it.
+ceiling as the tail is repaired and never raise it. **The tail is 16 since later the same day**,
+when the instrument below repaired `PMID42589397.json`.
 
-🔴 **The protocol provides NO instrument to repair one of these, and that is stated rather than
-implied.** `rechain --repoint-manifests` only moves a `receipt` whose value is the OLD side of a
-`--rename`, and this section still forbids pointing it at a target decision; `receipt_correction`
-is ledger-side and preserves the reading's substantive fields, and `require_work_manifest` returns
-early for it; nothing else in the repository writes a manifest's `receipt`. A manifest is also not
-hand-edited: its `source_artifacts` are fingerprinted and its locators are verified against them.
-So repairing `PMID42589397.json` is a separate task that must first provide the instrument. Until
-then the check names the value each defect should carry, so that task starts measured instead of
-starting with a survey.
+### The repair instrument
+
+🔴 **A decided semantics with a check and no writer leaves exactly one route open — the hand edit
+this protocol forbids.** `rechain --repoint-manifests` only moves a `receipt` whose value is the
+OLD side of a `--rename`, and this section still forbids pointing it at a target decision;
+`receipt_correction` is ledger-side and preserves the reading's substantive fields, and
+`require_work_manifest` returns early for it. So the field got its own writer:
+
+```bash
+python3 framework/scripts/manifest_receipt_repoint.py --pmid 42589397           # dry run
+python3 framework/scripts/manifest_receipt_repoint.py --pmid 42589397 --apply
+```
+
+It repairs ONE field of ONE manifest and **derives the target itself**, through the same `assess`
+the check uses, so writer and checker cannot drift. **It has no `--to`** — a caller-supplied target
+is how `FTR-20260921-42589397-01` got in, and it is exactly what `--repoint-manifests` is forbidden
+to do. Every other byte is asserted identical before the write and proven identical against the
+file on disk afterwards; a failed post-condition restores the original bytes.
+
+It **refuses**, with no flag to waive any of them: a `CONFORMS` field · a manifest with no
+`receipt` key (it substitutes a value, it never adds a key) · `UNCHECKABLE` and `UNKNOWN_EVENT`
+with no naming event, because the ledger then holds no producer to point at and an append-only
+ledger is not rewritten to manufacture one · a derivation that is not unique, when the earliest
+naming event by append order and by `event_at` disagree · a needle that does not occur exactly once
+· and **artifact divergence**: the derived producer fingerprints an artifact the manifest does not
+declare among its `source_artifacts`. That last one is the class that makes a batch repair unsafe.
+`require_work_manifest` binds a receipt's `source_locator`/`source_fingerprint` to those artifacts,
+so re-pointing there would satisfy this check and contradict that binding — a later, deeper reading
+rewrote a manifest an earlier reading created, and *which reading the manifest describes* is a
+second decision, not a mechanical repoint.
+
+**What a repair leaves behind is prose, and prose is not a check.** Records and reviews that say
+the field "still names `<old>`" become wrong the moment it does not, so a successful run lists every
+tracked file naming the old identifier. A canonical registry sentence moves only through
+`BATCH_COMMIT`; it is routed, never edited by the repair. And three committed derived surfaces
+declare the manifest directory among their inputs, so a landing that carries a repair owes
+`candidate_tree_freshness.py` — the tool prints that command every time.
+
+**The tail, classified 2026-09-28 by the instrument itself** (which is how the classification stays
+a measurement): 10 repairable and unrepaired · 5 artifact-divergence, awaiting the second decision
+· 1 `UNKNOWN_EVENT` whose declared id is in no ledger event and which no event claims to have
+produced — that one needs a receipt, not a repoint.
 
 `source_fingerprint` is mandatory whenever a **contemporaneous** receipt names a local
 artifact. A receipt over a file that carries no digest claims "I read *this* document"

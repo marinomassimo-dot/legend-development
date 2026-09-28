@@ -158,7 +158,11 @@ class TheGate(Fixture):
         self.assertEqual(0, done.returncode, done.stderr)
         self.assertIn("NOT_THE_PRODUCER", done.stdout)
         self.assertIn("NOTHING IS REPAIRED HERE", done.stdout,
-                      "the report must say that no instrument writes this field")
+                      "the report must say that THIS tool does not write the field")
+        self.assertIn("manifest_receipt_repoint.py", done.stdout,
+                      "and it must route the reader to the instrument that does — a checker "
+                      "that says 'nothing repairs this' after the repair tool exists sends the "
+                      "next session to the hand edit the repository forbids")
 
     def test_check_fails_only_above_the_ceiling(self) -> None:
         root = self.one_defect()
@@ -192,11 +196,14 @@ class TheLiveCorpus(unittest.TestCase):
         by_name = {finding.manifest: finding for finding in mrp.survey(ROOT, "wwox")}
         self.assertEqual("CONFORMS", by_name["PMID42397075.json"].verdict,
                          "-03 is the event that produced it, so the decision leaves it alone")
-        flagged = by_name["PMID42589397.json"]
-        self.assertEqual("UNNAMED", flagged.verdict,
-                         "-01 names this manifest in no output, so it is wrong under BOTH of the "
-                         "readings the field used to carry")
-        self.assertEqual("FTR-20260927-42589397-02", flagged.should_be)
+        repaired = by_name["PMID42589397.json"]
+        # It was UNNAMED until 2026-09-28: `-01` named this manifest in no output at all, so it
+        # was wrong under BOTH of the readings the field used to carry. That is why it was the
+        # first case `manifest_receipt_repoint.py` was pointed at, and this assertion is the
+        # repair's regression — a later pass that re-points it away from the producer turns red.
+        self.assertEqual("CONFORMS", repaired.verdict)
+        self.assertEqual("FTR-20260927-42589397-02", repaired.declared)
+        self.assertEqual("FTR-20260927-42589397-02", repaired.should_be)
 
 
 if __name__ == "__main__":
