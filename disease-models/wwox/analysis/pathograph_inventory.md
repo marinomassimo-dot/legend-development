@@ -27,15 +27,15 @@ annotations is reported below whatever it happens to be.
 | Measure | Count |
 |---|---|
 | Claim nodes | 41 |
-| Claim→claim wikilink occurrences | 83 |
-| …distinct directed links | 60 |
-| …undirected edges they collapse into | 38 |
+| Claim→claim wikilink occurrences | 90 |
+| …distinct directed links | 62 |
+| …undirected edges they collapse into | 39 |
 | Edges carrying a declared relation type | 0 |
 | Nodes carrying a biological scale | 0 |
 | Deep-dive manifests read | 116 |
 | …of which bound to at least one claim | 47 |
 | Propositions scanned | 2724 |
-| …carrying a relational connective | 627 |
+| …carrying a relational connective | 628 |
 | …locator-backed candidates | 591 |
 | …locator-backed and bound to a claim | 272 |
 
@@ -50,8 +50,8 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 
 | Node | Declared title | Status | Type | Pathway | Scale | Deg | Papers |
 |---|---|---|---|---|---|---|---|
-| CLAIM 001 | Vigabatrin associated with VABAM in WWOX-DEE | conflicting evidence | DATO | P2 — GABAergic vulnerability / safety | NOT_ANNOTATED | 3 | 4 |
-| CLAIM 002 | WWOX-LoF causes network hyperexcitability; AAV-WWOX rescues organoid phenotype | consolidated baseline | DATO + INFERENZA prudente | P1 — Ca²⁺ / network dysregulation; P7 —  | NOT_ANNOTATED | 1 | 4 |
+| CLAIM 001 | Vigabatrin associated with VABAM in WWOX-DEE | conflicting evidence | DATO | P2 — GABAergic vulnerability / safety | NOT_ANNOTATED | 4 | 4 |
+| CLAIM 002 | WWOX-LoF causes network hyperexcitability; AAV-WWOX rescues organoid phenotype | consolidated baseline | DATO + INFERENZA prudente | P1 — Ca²⁺ / network dysregulation; P7 —  | NOT_ANNOTATED | 2 | 4 |
 | CLAIM 003 | Neuronal WWOX deletion induces non-cell-autonomous hypomyelination | consolidated baseline | DATO | P4 — myelination / white matter | NOT_ANNOTATED | 2 | 1 |
 | CLAIM 004 | AAV9-WWOX neuron-targeted rescue shows multi-domain in vivo improvement | consolidated baseline | DATO | P7 — gene therapy readiness | NOT_ANNOTATED | 10 | 3 |
 | CLAIM 005 | Reduced GABAergic interneurons and glial activation in WWOX-KO | consolidated baseline | DATO | P2 — GABAergic vulnerability; P6 — neuro | NOT_ANNOTATED | 20 | 3 |
@@ -60,7 +60,7 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 | CLAIM 008 | WOREE and SCAR12 form a genotype-phenotype spectrum | consolidated baseline | DATO | Clinical spectrum / genotype-phenotype | NOT_ANNOTATED | 0 | 3 |
 | CLAIM 009 | WWOX deficiency plausibly alters mitochondrial quality control, redox and energy efficiency | in observation | INFERENZA | P5 — metabolism / mitochondria / redox / | NOT_ANNOTATED | 6 | 9 |
 | CLAIM 010 | Mitophagy may be more relevant than senolytics for WWOX-related mitochondrial dysfunction | background only | IPOTESI | P5 — metabolism / mitochondria / mitopha | NOT_ANNOTATED | 0 | 0 |
-| CLAIM 011 | AAV9-hSynI-hWWOX: dose-dependent durable rescue in Wwox-null murine model su domini multipli inc | flagged for review | DATO preclinico (full text reviewed) | P7 — gene therapy readiness; P4 — myelin | NOT_ANNOTATED | 9 | 1 |
+| CLAIM 011 | AAV9-hSynI-hWWOX: dose-dependent durable rescue in Wwox-null murine model su domini multipli inc | flagged for review | DATO preclinico (full text reviewed) | P7 — gene therapy readiness; P4 — myelin | NOT_ANNOTATED | 11 | 1 |
 | CLAIM 012 | Fenotipo WWOX severo neonatale-fatale con MRI inizialmente normale: genotipo-severità heterogene | consolidated baseline | DATO descrittivo (full text reviewed) | clinical spectrum / genotype-phenotype | NOT_ANNOTATED | 0 | 1 |
 | CLAIM 013 | In WWOX-DEE, genotipi biallelici null/null associati a maggiore rischio di crisi, ipertonia e co | in observation | DATO con limiti metodologici dichiarati | Clinical spectrum / genotype-phenotype / | NOT_ANNOTATED | 0 | 2 |
 | CLAIM 014 | WWOX loss perturbs prenatal cortical development, neuronal migration and cortical maturation acr | consolidated baseline | DATO | P3 — neurodevelopment / migration / cort | NOT_ANNOTATED | 0 | 3 |
@@ -80,23 +80,23 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 | CLAIM 028 | WWOX biological output is strongly partner- and context-dependent; expression level alone is ins | flagged for review | INFERENZA — principio interpretativo tra | cross-pathway interpretive principle | NOT_ANNOTATED | 4 | 5 |
 | CLAIM 029 | WWOX contributes directly to DNA-damage-response competence and genome-stability maintenance, at | in observation | DATO + INFERENZA prudente | genome stability / ATM / DNA damage resp | NOT_ANNOTATED | 0 | 4 |
 | CLAIM 030 | In WWOX the severity tracks residual protein FUNCTION, not protein abundance | in observation | DATO (serie allelica su cellule di pazie | genotype / protein function / proteostas | NOT_ANNOTATED | 9 | 6 |
-| CLAIM 031 | WWOX-DEE is a developmental AND epileptic encephalopathy: seizure control does not rescue develo | in observation | DATO (osservazione clinica) + INFERENZA  | clinical course / therapeutic strategy | NOT_ANNOTATED | 5 | 2 |
-| CLAIM 032 | Una copia di WWOX conserva alcuni endpoint osservati, ma non definisce una soglia terapeutica de | in observation | DATO (endpoint specifici in topo, ratto  | P7 — gene therapy readiness / dose-thres | NOT_ANNOTATED | 7 | 14 |
-| CLAIM 033 | Biallelic null WWOX carries higher mortality than genotypes with at least one missense — but the | in observation | DATO (statistica di coorte) + IPOTESI (l | genotype-phenotype / prognosis | NOT_ANNOTATED | 7 | 2 |
+| CLAIM 031 | WWOX-DEE is a developmental AND epileptic encephalopathy: seizure control does not rescue develo | in observation | DATO (osservazione clinica) + INFERENZA  | clinical course / therapeutic strategy | NOT_ANNOTATED | 8 | 2 |
+| CLAIM 032 | Una copia di WWOX conserva alcuni endpoint osservati, ma non definisce una soglia terapeutica de | in observation | DATO (endpoint specifici in topo, ratto  | P7 — gene therapy readiness / dose-thres | NOT_ANNOTATED | 9 | 14 |
+| CLAIM 033 | Biallelic null WWOX carries higher mortality than genotypes with at least one missense — but the | in observation | DATO (statistica di coorte) + IPOTESI (l | genotype-phenotype / prognosis | NOT_ANNOTATED | 11 | 2 |
 | CLAIM 034 | In a post-mitotic excitable neuron under metabolic stress, WWOX up-regulation is pro-oxidant — r | in observation | DATO (sistema fotorecettoriale) + ESPANS | P5 — metabolism / redox · secondario P1  | NOT_ANNOTATED | 6 | 2 |
 | CLAIM 035 | WWOX is a direct, residue-mapped inhibitor of GSK3β through an Axin-like docking motif in the SD | in observation | DATO (biochimica, cinque saggi ortogonal | P1 neurosviluppo / GSK3β–Tau–microtubuli | NOT_ANNOTATED | 6 | 1 |
 | CLAIM 036 | A systemic constitutive Wwox-null mouse at P18 is metabolically decompensated, so any brain phen | in observation | DATO (le misure) + INFERENZA (la portata | P5 — metabolismo / rene; confondente tra | NOT_ANNOTATED | 7 | 4 |
 | CLAIM 037 | Seizure-related phenotypes in WWOX rodent models are documented in the rat `lde/lde` (audiogenic | in observation | DATO | P2 — eccitabilità / epilettogenesi | NOT_ANNOTATED | 19 | 3 |
 | CLAIM 038 | Elevated BUN and creatinine recur across Wwox rodent models with two competing explanations — re | in observation | DATO (le misure) + IPOTESI (entrambe le  | P5 — metabolismo / rene | NOT_ANNOTATED | 7 | 3 |
 | CLAIM 039 | Ataxic gait is the most penetrant phenotype of the rat `lde/lde` model — 95% versus 0% — and **n | in observation | DATO | P1 — neurosviluppo / funzione motoria | NOT_ANNOTATED | 3 | 1 |
-| CLAIM 040 | Neuronal restoration of WWOX suppresses spike-wave discharges in the `Wwox`-null mouse to a leve | in observation | DATO | P1 — neurosviluppo; P7 — eccitabilità di | NOT_ANNOTATED | 10 | 1 |
+| CLAIM 040 | Neuronal restoration of WWOX suppresses spike-wave discharges in the `Wwox`-null mouse to a leve | in observation | DATO | P1 — neurosviluppo; P7 — eccitabilità di | NOT_ANNOTATED | 11 | 1 |
 | CLAIM 041 | In the P47T knock-in mouse, sampled cerebellar regions show fewer calbindin-positive Purkinje pr | in observation | DATO (mouse histology) + INFERENZA (rela | P1 — cerebellar neuronal structure; adja | NOT_ANNOTATED | 1 | 2 |
 
 ## 2 · Edges declared by the registry
 
 | Edge | Reciprocal | Declared in | Type | Basis | Shared evidence |
 |---|---|---|---|---|---|
-| CLAIM 001 <-> CLAIM 002 | **one-way** | Clinical meaning | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
+| CLAIM 001 <-> CLAIM 002 | yes | Clinical meaning, Summary | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
 | CLAIM 001 <-> CLAIM 031 | yes | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 045 |
 | CLAIM 003 <-> CLAIM 004 | yes | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
 | CLAIM 004 <-> CLAIM 005 | yes | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
@@ -112,8 +112,9 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 | CLAIM 009 <-> CLAIM 025 | **one-way** | Clinical meaning | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
 | CLAIM 009 <-> CLAIM 028 | **one-way** | ⚠️ Counter-directional evidence (BATCH_20260726_001) | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 054 |
 | CLAIM 009 <-> CLAIM 034 | yes | Summary, ⚠️ Counter-directional evidence (BATCH_20260726_001) | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 054, PAPER 071 |
+| CLAIM 011 <-> CLAIM 031 | **one-way** | Summary | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
 | CLAIM 011 <-> CLAIM 037 | yes | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
-| CLAIM 011 <-> CLAIM 040 | yes | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 011 |
+| CLAIM 011 <-> CLAIM 040 | yes | Summary, Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 011 |
 | CLAIM 016 <-> CLAIM 035 | yes | Meccanismo aggiunto (BATCH_20260726_001), Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 056 |
 | CLAIM 016 <-> CLAIM 037 | yes | Clinical meaning, Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
 | CLAIM 016 <-> CLAIM 039 | **one-way** | Evidence boundary | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
@@ -128,8 +129,8 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 | CLAIM 030 <-> CLAIM 033 | **one-way** | Clinical meaning | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 042 |
 | CLAIM 030 <-> CLAIM 035 | **one-way** | Clinical meaning | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 056 |
 | CLAIM 031 <-> CLAIM 032 | **one-way** | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 049 |
-| CLAIM 031 <-> CLAIM 033 | yes | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
-| CLAIM 032 <-> CLAIM 033 | yes | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
+| CLAIM 031 <-> CLAIM 033 | yes | Clinical meaning, Summary | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
+| CLAIM 032 <-> CLAIM 033 | yes | Clinical meaning, Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
 | CLAIM 036 <-> CLAIM 038 | yes | Summary, Vincolo di confronto (`CC-20260922-CLAIM038-UNIT-CLASS-01`, 2026-09-27) | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 057 |
 | CLAIM 037 <-> CLAIM 038 | yes | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 058, PAPER 059 |
 | CLAIM 037 <-> CLAIM 039 | yes | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 059 |
@@ -202,7 +203,6 @@ is matched as one string, so an adverb inserted into it — *"contributes
 | Node | Relational in | Connective | That wording | The other wording |
 |---|---|---|---|---|
 | CLAIM 018 | registry title only | `causes` | The exon 6 splice-site variant c.517-2A>G is pathogenic and causes exo | Exon-6 splice disruption is a confirmed pathogenic mechanism in human  |
-| CLAIM 035 | registry title only | `requires` | WWOX is a direct, residue-mapped inhibitor of GSK3β through an Axin-li | WWOX is a direct, residue-mapped inhibitor of GSK3β via an Axin-like S |
 
 ## 4 · What is absent, separated by *kind* of absence
 
@@ -212,12 +212,12 @@ is matched as one string, so an adverb inserted into it — *"contributes
 
 | Edge | Declared | Not declared |
 |---|---|---|
-| CLAIM 001 <-> CLAIM 002 | CLAIM 001 -> CLAIM 002 | CLAIM 002 -> CLAIM 001 |
 | CLAIM 004 <-> CLAIM 040 | CLAIM 040 -> CLAIM 004 | CLAIM 004 -> CLAIM 040 |
 | CLAIM 005 <-> CLAIM 036 | CLAIM 036 -> CLAIM 005 | CLAIM 005 -> CLAIM 036 |
 | CLAIM 007 <-> CLAIM 041 | CLAIM 041 -> CLAIM 007 | CLAIM 007 -> CLAIM 041 |
 | CLAIM 009 <-> CLAIM 025 | CLAIM 025 -> CLAIM 009 | CLAIM 009 -> CLAIM 025 |
 | CLAIM 009 <-> CLAIM 028 | CLAIM 009 -> CLAIM 028 | CLAIM 028 -> CLAIM 009 |
+| CLAIM 011 <-> CLAIM 031 | CLAIM 011 -> CLAIM 031 | CLAIM 031 -> CLAIM 011 |
 | CLAIM 016 <-> CLAIM 039 | CLAIM 039 -> CLAIM 016 | CLAIM 016 -> CLAIM 039 |
 | CLAIM 016 <-> CLAIM 040 | CLAIM 016 -> CLAIM 040 | CLAIM 040 -> CLAIM 016 |
 | CLAIM 017 <-> CLAIM 020 | CLAIM 017 -> CLAIM 020 | CLAIM 020 -> CLAIM 017 |
@@ -242,7 +242,25 @@ working model with no edge between them in the registry.
 
 | Claims | Sentence |
 |---|---|
+| CLAIM 002 ↔ CLAIM 004 | - **Every claim's `Status`.** `CLAIM 002`, `CLAIM 004`, `CLAIM 021` and `CLAIM 024` remain `consolidated baseline`; `CLAIM 011` remains `flagged for r |
+| CLAIM 002 ↔ CLAIM 011 | - **Every claim's `Status`.** `CLAIM 002`, `CLAIM 004`, `CLAIM 021` and `CLAIM 024` remain `consolidated baseline`; `CLAIM 011` remains `flagged for r |
+| CLAIM 002 ↔ CLAIM 021 | - **Every claim's `Status`.** `CLAIM 002`, `CLAIM 004`, `CLAIM 021` and `CLAIM 024` remain `consolidated baseline`; `CLAIM 011` remains `flagged for r |
+| CLAIM 002 ↔ CLAIM 024 | - **Every claim's `Status`.** `CLAIM 002`, `CLAIM 004`, `CLAIM 021` and `CLAIM 024` remain `consolidated baseline`; `CLAIM 011` remains `flagged for r |
+| CLAIM 002 ↔ CLAIM 035 | - **Every claim's `Status`.** `CLAIM 002`, `CLAIM 004`, `CLAIM 021` and `CLAIM 024` remain `consolidated baseline`; `CLAIM 011` remains `flagged for r |
+| CLAIM 002 ↔ CLAIM 037 | - **Every claim's `Status`.** `CLAIM 002`, `CLAIM 004`, `CLAIM 021` and `CLAIM 024` remain `consolidated baseline`; `CLAIM 011` remains `flagged for r |
+| CLAIM 004 ↔ CLAIM 021 | - **Every claim's `Status`.** `CLAIM 002`, `CLAIM 004`, `CLAIM 021` and `CLAIM 024` remain `consolidated baseline`; `CLAIM 011` remains `flagged for r |
+| CLAIM 004 ↔ CLAIM 024 | - **Every claim's `Status`.** `CLAIM 002`, `CLAIM 004`, `CLAIM 021` and `CLAIM 024` remain `consolidated baseline`; `CLAIM 011` remains `flagged for r |
+| CLAIM 004 ↔ CLAIM 035 | - **Every claim's `Status`.** `CLAIM 002`, `CLAIM 004`, `CLAIM 021` and `CLAIM 024` remain `consolidated baseline`; `CLAIM 011` remains `flagged for r |
+| CLAIM 011 ↔ CLAIM 021 | - **Every claim's `Status`.** `CLAIM 002`, `CLAIM 004`, `CLAIM 021` and `CLAIM 024` remain `consolidated baseline`; `CLAIM 011` remains `flagged for r |
+| CLAIM 011 ↔ CLAIM 024 | - **Every claim's `Status`.** `CLAIM 002`, `CLAIM 004`, `CLAIM 021` and `CLAIM 024` remain `consolidated baseline`; `CLAIM 011` remains `flagged for r |
+| CLAIM 011 ↔ CLAIM 035 | - **Every claim's `Status`.** `CLAIM 002`, `CLAIM 004`, `CLAIM 021` and `CLAIM 024` remain `consolidated baseline`; `CLAIM 011` remains `flagged for r |
+| CLAIM 021 ↔ CLAIM 024 | - **Every claim's `Status`.** `CLAIM 002`, `CLAIM 004`, `CLAIM 021` and `CLAIM 024` remain `consolidated baseline`; `CLAIM 011` remains `flagged for r |
+| CLAIM 021 ↔ CLAIM 035 | - **Every claim's `Status`.** `CLAIM 002`, `CLAIM 004`, `CLAIM 021` and `CLAIM 024` remain `consolidated baseline`; `CLAIM 011` remains `flagged for r |
+| CLAIM 021 ↔ CLAIM 037 | - **Every claim's `Status`.** `CLAIM 002`, `CLAIM 004`, `CLAIM 021` and `CLAIM 024` remain `consolidated baseline`; `CLAIM 011` remains `flagged for r |
+| CLAIM 024 ↔ CLAIM 035 | - **Every claim's `Status`.** `CLAIM 002`, `CLAIM 004`, `CLAIM 021` and `CLAIM 024` remain `consolidated baseline`; `CLAIM 011` remains `flagged for r |
+| CLAIM 024 ↔ CLAIM 037 | - **Every claim's `Status`.** `CLAIM 002`, `CLAIM 004`, `CLAIM 021` and `CLAIM 024` remain `consolidated baseline`; `CLAIM 011` remains `flagged for r |
 | CLAIM 025 ↔ CLAIM 026 | *(CLAIM 025 / paper 191; CLAIM 026 / PAPER 032 and PAPER 103.)* |
+| CLAIM 035 ↔ CLAIM 037 | - **Every claim's `Status`.** `CLAIM 002`, `CLAIM 004`, `CLAIM 021` and `CLAIM 024` remain `consolidated baseline`; `CLAIM 011` remains `flagged for r |
 
 ### 4.2 Isolated nodes
 
@@ -256,10 +274,10 @@ working model with no edge between them in the registry.
 | CLAIM 014 | REVIEW_MATERIAL_PRESENT | LOCATOR_PROPOSITION_BOUND, SELF_RELATIONAL_TITLE, SHARED_EVIDENTIAL_PAPER |
 | CLAIM 015 | REVIEW_MATERIAL_PRESENT | LOCATOR_PROPOSITION_BOUND, SHARED_EVIDENTIAL_PAPER |
 | CLAIM 018 | REVIEW_MATERIAL_PRESENT | SELF_RELATIONAL_TITLE, SHARED_EVIDENTIAL_PAPER |
-| CLAIM 021 | REVIEW_MATERIAL_PRESENT | LOCATOR_PROPOSITION_BOUND, SELF_RELATIONAL_TITLE |
+| CLAIM 021 | ANNOTATION_GAP_CONFIRMED | LOCATOR_PROPOSITION_BOUND, SELF_RELATIONAL_TITLE, WORKING_MODEL_COMENTION |
 | CLAIM 022 | NO_RELATION_MATERIAL_IN_REPOSITORY | — |
 | CLAIM 023 | REVIEW_MATERIAL_PRESENT | LOCATOR_PROPOSITION_BOUND, SELF_RELATIONAL_TITLE |
-| CLAIM 024 | REVIEW_MATERIAL_PRESENT | LOCATOR_PROPOSITION_BOUND, SELF_RELATIONAL_TITLE, SHARED_EVIDENTIAL_PAPER |
+| CLAIM 024 | ANNOTATION_GAP_CONFIRMED | LOCATOR_PROPOSITION_BOUND, SELF_RELATIONAL_TITLE, SHARED_EVIDENTIAL_PAPER, WORKING_MODEL_COMENTION |
 | CLAIM 026 | ANNOTATION_GAP_CONFIRMED | LOCATOR_PROPOSITION_BOUND, WORKING_MODEL_COMENTION |
 | CLAIM 027 | NO_RELATION_MATERIAL_IN_REPOSITORY | — |
 | CLAIM 029 | REVIEW_MATERIAL_PRESENT | LOCATOR_PROPOSITION_BOUND |
@@ -302,14 +320,14 @@ each side is a reading, and every record carries `endpoints_resolved: false`.
 |---|---|
 | claim_title | 19 |
 | locator_proposition | 591 |
-| working_model_mirror_title | 17 |
+| working_model_mirror_title | 18 |
 
 | Connective class (lexical) | Candidates |
 |---|---|
 | ARROW | 16 |
 | ASSOCIATIVE | 27 |
 | CAUSAL | 532 |
-| DEPENDENCY | 52 |
+| DEPENDENCY | 53 |
 
 A connective class is a property of the word, not a verdict about the
 relationship. An `ASSOCIATIVE` connective does not make an edge `ASSOCIATED`.
@@ -331,7 +349,7 @@ relationship. An `ASSOCIATIVE` connective does not make an edge `ASSOCIATED`.
 | CLAIM 016 | claim_title | `contribute to` | GSK3β hyperactivation may contribute to seizure susceptibility in WWOX deficiency |
 | CLAIM 018 | claim_title | `causes` | The exon 6 splice-site variant c.517-2A>G is pathogenic and causes exon 6 skipping in humans |
 
-Showing 12 of 308 bound candidates; the
+Showing 12 of 309 bound candidates; the
 complete set, with evidence and provenance, is in the export. The worklist
 in cost order — what needs an annotation, what needs a type, what needs a
 decomposition, what needs a reading — is printed by:
@@ -348,6 +366,6 @@ carried no connective from the lexicon.
 ## Provenance
 
 Derived from 119 input files; digest
-`c94791bb4429e9a8`. Sources: the claim, paper and
+`46a9526a886badbb`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 
