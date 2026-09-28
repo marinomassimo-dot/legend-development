@@ -1,6 +1,6 @@
 {
-  "frozen_at": "2026-09-28T00:34:16Z",
-  "git_head_at_freeze": "1a41f3c279dedcc266341a7c15f1ae3ae6cb13c4",
+  "frozen_at": "2026-09-28T03:13:48Z",
+  "git_head_at_freeze": "da8b08b57bf6106512041234c3f8946790c35717",
   "git_verification_policy": "baseline bytes must match HEAD; every declared input and output must match git_head_at_freeze:path via git cat-file; freeze commit must be an ancestor of HEAD",
   "inputs": {
     "authored_assertions": {
@@ -22,7 +22,7 @@
     "claim_registry": {
       "path": "disease-models/wwox/registries/claim_registry_current.md",
       "scope_block_sha256": {
-        "CLAIM 016": "0ab5090c34f0351dcb140610a90fed9938e3d14325c1533ef5ee1ae35395971c",
+        "CLAIM 016": "d160b2d76011e77f374c057c53e7b9241349344ca984bdcbded6fe8be52330c5",
         "CLAIM 024": "b720170fc2e4f0c150c5b72d75ac271aad8ebb7120d8d30054b125ba4e17afc7",
         "CLAIM 035": "0582d392272d5abe68f3578d87aa7d2372a0e8f26f7ffd264fdc5b88e3b4201e"
       },
@@ -31,7 +31,7 @@
         "CLAIM 024",
         "CLAIM 035"
       ],
-      "scope_sha256": "7cb76a03a3c460f2cd4a193ca527795a46dda1730fce75f4a5277406476c6d37",
+      "scope_sha256": "786ca9213bd19968e31888a5f5471c780000b11ba2a84ea56655777ba4ca4546",
       "verification_policy": "sealed_scope"
     },
     "derivation_script": {
@@ -55,14 +55,14 @@
       "scope_block_sha256": {
         "PAPER 019": "14fcd6c20d7f5864457f9543d2a1eb079cdc58ddc948b2a866a0d3d33ef66a6c",
         "PAPER 055": "99d27a6d8a6baca392aa17fca7827bf7c843146a5824951fbd9f1054a73145c4",
-        "PAPER 056": "e11bbf2a3ae03dd575f4fecdb256508d81157ac123feeadff83a83a817778526"
+        "PAPER 056": "d84d2f78863fe569d145839004871a9edb248436d06641ed601c7f82200f3662"
       },
       "scope_blocks": [
         "PAPER 019",
         "PAPER 055",
         "PAPER 056"
       ],
-      "scope_sha256": "59d32d6aee722fd1eac06a20a32e99566aeded8aac7fac265ab74dd626335c18",
+      "scope_sha256": "a8042da5c0cfcb11e880ca0aceeee4ad976cd8b28241d7db5cbb863226f62051",
       "verification_policy": "sealed_scope"
     },
     "receipt_ledger": {
@@ -115,7 +115,7 @@
     "records": 49,
     "sha256": "5395422fc64d76ac41f5cc0bd694ce1f8da385b8d60cf9391a3bfc5904da1c9f"
   },
-  "revision": "rev.14 (BATCH_20260927_004, 2026-09-27): the wave-2 MAJOR batch edited CLAIM 024 (the WW1-sufficiency rider bounding tandem cooperativity), CLAIM 035 (the two intervals 388-407 / 388-412 separated, and the cell-free qualifier on the microtubule limb) and PAPER 056's Note (the same two defects at their second surface). All three drifted blocks are THIS batch's own edits, each declared in the WM_v7.0 changelog row and in the MAJOR repair section, and each is named explicitly with --absorb. Nothing sealed is widened and no pre-existing drift belonging to another batch is absorbed here.",
+  "revision": "rev.18 (BATCH_20260928_001, 2026-09-28): the Mirror ex-post repair batch edited CLAIM 016's Impact-on-Working-Model line (the abundance datum withdrawn outright rather than a level conceded, CC-20260928-MIRROR003-REPAIRS-01 M4) and PAPER 056's Note (two unbalanced emphasis markers removed, no word of prose changed, CC-20260928-MIRROR004-REPAIRS-01 F3). Both drifted blocks are THIS batch's own edits, each declared in the WM_v7.1 changelog row and in the batch scope, and each named explicitly with --absorb; no pre-existing drift belonging to another batch is absorbed. LABEL CHOSEN DELIBERATELY: the label is not monotone and Harness Engineering holds an open hand-off about it (rev.7 -> 12 -> 7 -> 12 -> 7 -> 8 -> 9 -> 15 -> 16 -> 16 -> 17 -> 13 -> 14, re-derived from git here). The highest label ever used is rev.17 (497f4ee, 2026-08-07), so rev.18 is the first label strictly above every previous one: it makes the current baseline the highest-labelled seal, which is the property a reader assumes, instead of re-using rev.15 and duplicating an existing label while still sitting below 16 and 17.",
   "window": {
     "before_phase5_pr": "Run assert_exportable(). It supersedes the manual re-verification this field used to describe: it reports per-block drift and refuses to export over anything unacknowledged. The risk it protects against is unchanged \u2014 shipping a contribution derived from superseded claims.",
     "closed_on": "2026-08-06",
