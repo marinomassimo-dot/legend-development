@@ -42,7 +42,9 @@ delegated streams had reported; the last two streams and this session's own veri
 measurement at a moment. It is recorded moving rather than retro-fitted, and the rises are not a sign
 the record is deteriorating — each one is a defect that was there before anybody looked. `REP-25`
 brings it to **24 plus 1 verified-clean**, and it is the exception to that last sentence: it is a
-defect this session created.
+defect this session created. `REP-26` (2026-09-28) brings it to **25 plus 1 verified-clean**, and it
+is the second exception of a different kind: it was *created by closing another defect*, which is the
+ordinary cost of a repair whose point-of-use prose is canonical and moves on a slower path.
 
 ---
 
@@ -75,6 +77,7 @@ defect this session created.
 | `REP-23` | model | coverage | The closest structural analogue of the variant is absent from the record | `OPEN` |
 | `REP-24` | model | over-claim | The gene-therapy window may already be closed at diagnosis | `OPEN` |
 | `REP-25` | model | over-claim | A "matched pair" of alleles where neither abundance has a number | `OPEN` |
+| `REP-26` | model | stale | Two registries still say a manifest's `receipt` "still names" a value it no longer does | `OPEN` |
 
 ---
 
@@ -689,6 +692,47 @@ whether its figure is quantifiable at all.
 
 **VERIFY** — no surface presents the two alleles as a matched pair without a calibrated abundance on
 at least one side, and the experiment record names the dependency.
+
+---
+
+## REP-26 · Two registries still say a manifest's `receipt` "still names" a value it no longer does
+
+**LAYER** model · **SEVERITY** stale · **PATH** `BATCH_COMMIT` · **Author of the defect:** the repair
+that closed the underlying one
+
+**What is wrong.** On 2026-09-28 `manifest_receipt_repoint.py` repaired
+`deepdive_manifests/PMID42589397.json`, whose `receipt` named `FTR-20260921-42589397-01` — a
+verification receipt of another actor's reading, which names the manifest in no output at all and
+fingerprints a different artifact from the one every locator in it verifies against. The derived
+producer, `FTR-20260927-42589397-02`, is now the field's value and the manifest `CONFORMS`.
+
+Two canonical registries describe the field in the state it was in, in the present tense:
+
+| File | What it says |
+|---|---|
+| `paper_registry_current.md` (PAPER 118) | «The manifest's own `receipt` field **still names** `FTR-20260921-42589397-01` … routed to whoever owns manifest re-pointing; the manifest is not hand-edited» |
+| `literature_tracking_log_current.md` (LIT-0420) | «its `receipt` field **still names** `FTR-20260921-42589397-01` and is routed for re-pointing» |
+
+🔴 **The repair moves the field, not the sentences about it.** Nothing mechanical is now wrong: no
+check reads those sentences, `deepdive_manifest.py` still validates, and the fingerprint binding
+`require_work_manifest` enforces is *better* aligned than before — `-02`'s `source_fingerprint` is the
+artifact the manifest declares, `-01`'s is not. What is wrong is that a reader of either registry is
+told a defect is outstanding and routed to a task that is done.
+
+**Why it was not fixed in the same act.** Both files are canonical, and a canonical sentence moves
+only through `BATCH_COMMIT` under `LINT`. Editing them from the repair would be exactly the
+convenience this repository refuses. The repair tool therefore *lists* every tracked file naming the
+old identifier and says so; this row is where that list stops being terminal output.
+
+**FIX** — In the next `BATCH_COMMIT`, replace both "still names" sentences with the outcome: the field
+names `FTR-20260927-42589397-02`, the reading that produced the manifest, repaired 2026-09-28 by
+`manifest_receipt_repoint.py` under the semantics decided that day. The historical fact that `-01` was
+carried is worth keeping; the present tense is not. The receipt ledger's own account of the field
+(`FTR-20260928-42589397-03`, "NOT CORRECTED HERE, AND DELIBERATELY") is append-only history and is
+**correct as written** — it describes the state at its own event time and is not touched.
+
+**VERIFY** — `grep -n "still names" disease-models/wwox/registries/*.md` returns no row for
+PMID 42589397, and `manifest_receipt_provenance.py --pmid 42589397` reports `CONFORMS`.
 
 ---
 
