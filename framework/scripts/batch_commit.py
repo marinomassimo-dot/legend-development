@@ -8,11 +8,13 @@ byte outside the addressed records proven unchanged before anything is written. 
 benchmark did not support is refused here by name, and keeps the full rewrite.
 """
 import argparse
+import datetime
 import glob
 import json
 import os
 import re
 import shutil
+import subprocess
 import sys
 from legend_lint import CURRENTS
 
@@ -110,6 +112,60 @@ RECORD_SCOPED = (
 )
 
 
+# 🔴 THE SNAPSHOT CARRIES ITS OWN BASE, BECAUSE THE ABORT COMMAND IS NOT WRITABLE WITHOUT IT.
+# `git checkout -- <path>` restores the pre-batch value only while the propagation is neither
+# staged nor committed. From the first `git add` onward it restores the BATCH's own output and
+# reports success — and the Phase 5 / § 5 ABORT lives partly in that later window, because a
+# batch commits its propagation with the surfaces Phase 4.7 regenerates. The only command that
+# is correct in both windows names its base: `git checkout <pre-batch SHA> -- <path>`. That SHA
+# is knowable exactly once — at Phase 3, before anything is written — so it is recorded here, in
+# the snapshot, by the tool that takes it. A SHA an aborting actor has to reconstruct from the
+# reflog under time pressure is a SHA that gets guessed.
+BASE_FILE = "SNAPSHOT_BASE.json"
+
+
+def snapshot_base(repo_root, targets):
+    """The pre-batch git base of this snapshot, and what the base can and cannot restore.
+
+    `dirty_at_snapshot` is the honest half: for a declared path already modified when the
+    snapshot was taken, the base commit holds the value before THAT edit too, so restoring it
+    from the SHA discards work the snapshot preserved. For those paths the snapshot directory
+    is the only correct source, and the field says which they are instead of leaving an
+    aborting actor to find out afterwards.
+    """
+    def git(*arguments):
+        try:
+            done = subprocess.run(("git", *arguments), cwd=repo_root, check=True,
+                                  capture_output=True, text=True)
+        except (OSError, subprocess.CalledProcessError):
+            return None
+        return done.stdout.strip()
+
+    head = git("rev-parse", "HEAD")
+    if head is None:
+        return {
+            "pre_batch_commit": None,
+            "branch": None,
+            "dirty_at_snapshot": [],
+            "taken_at": datetime.datetime.now().astimezone().isoformat(timespec="seconds"),
+            "note": "not a git checkout: the snapshot directory is the only restore source",
+        }
+    # `git diff --name-only HEAD` and not `git status --porcelain`: the condition that matters
+    # is "already differs from the base commit", which is what makes the SHA the wrong source,
+    # and it is asked directly instead of being recovered by slicing a status line by column.
+    differs = git("diff", "--name-only", "HEAD", "--", *targets) or ""
+    dirty = sorted({line.strip() for line in differs.splitlines() if line.strip()})
+    return {
+        "pre_batch_commit": head,
+        "branch": git("rev-parse", "--abbrev-ref", "HEAD"),
+        "dirty_at_snapshot": dirty,
+        "taken_at": datetime.datetime.now().astimezone().isoformat(timespec="seconds"),
+        "note": ("restore with `batch_commit.py restore`; `git checkout "
+                 f"{head} -- <path>` is the base-qualified fallback, and is WRONG for the "
+                 "paths in dirty_at_snapshot"),
+    }
+
+
 def snapshot(repo_root, dest, protocol_rel=PROTOCOL):
     targets = snapshot_targets(repo_root, protocol_rel)
     os.makedirs(dest, exist_ok=True)
@@ -118,16 +174,58 @@ def snapshot(repo_root, dest, protocol_rel=PROTOCOL):
         dst = os.path.join(dest, rel)
         os.makedirs(os.path.dirname(dst), exist_ok=True)
         shutil.copy2(src, dst)
+    with open(os.path.join(dest, BASE_FILE), "w", encoding="utf-8") as handle:
+        json.dump(snapshot_base(repo_root, targets), handle, indent=2)
+        handle.write("\n")
     return targets
 
 
+def read_base(snapshot_dir):
+    """The recorded base of a snapshot, or None for a snapshot taken before it was recorded."""
+    path = os.path.join(snapshot_dir, BASE_FILE)
+    if not os.path.isfile(path):
+        return None
+    with open(path, encoding="utf-8") as handle:
+        return json.load(handle)
+
+
+def base_report(snapshot_dir):
+    """The ABORT paragraph an actor can paste, or None when this snapshot records no base."""
+    base = read_base(snapshot_dir)
+    if base is None:
+        return None
+    head = base.get("pre_batch_commit")
+    lines = [f"PRE_BATCH_COMMIT: {head or '(not a git checkout)'}"
+             f"   branch: {base.get('branch') or '-'}"]
+    lines.append(f"Record it in the activity log beside the snapshot path ({snapshot_dir}).")
+    lines.append("ABORT restores with, in this order:")
+    lines.append(f"  python3 framework/scripts/batch_commit.py restore "
+                 f"--snapshot-dir {snapshot_dir} --confirm-restore")
+    if head:
+        lines.append(f"  git checkout {head} -- <path>      "
+                     "# base-qualified fallback for a path the snapshot does not hold")
+        lines.append("  `git checkout -- <path>` WITHOUT a base is correct only until the "
+                     "propagation is staged or committed; after that it restores the batch.")
+    dirty = base.get("dirty_at_snapshot") or []
+    if dirty:
+        lines.append("  NOT restorable from the SHA — already modified when the snapshot was "
+                     "taken; use the snapshot directory:")
+        lines.extend(f"    {rel}" for rel in dirty)
+    return "\n".join(lines)
+
+
 def snapshot_contents(snapshot_dir):
-    """What a snapshot directory actually holds, repo-relative."""
+    """What a snapshot directory actually holds, repo-relative.
+
+    `SNAPSHOT_BASE.json` is metadata ABOUT the snapshot, not a file of the repository, and is
+    excluded: `restore` copies back exactly what this returns, so including it would write the
+    metadata into the repository root on every abort.
+    """
     held = []
     for directory, _children, files in os.walk(snapshot_dir):
         held.extend(os.path.relpath(os.path.join(directory, name), snapshot_dir)
                     .replace(os.sep, "/") for name in files)
-    return sorted(held)
+    return sorted(rel for rel in held if rel != BASE_FILE)
 
 
 def restore(snapshot_dir, repo_root):
@@ -192,6 +290,13 @@ def main(argv=None):
         action="store_true",
         help="required acknowledgement because restore overwrites current files",
     )
+    base_parser = subparsers.add_parser(
+        "base",
+        help="print the pre-batch commit a snapshot recorded, and the ABORT commands that "
+             "are correct after the propagation has been staged or committed",
+    )
+    base_parser.add_argument("--snapshot-dir", required=True)
+
     propagate_parser = subparsers.add_parser(
         "propagate",
         help="Phase 4 for a record-scoped current file: one atomic batch of "
@@ -216,6 +321,18 @@ def main(argv=None):
         print(f"Snapshot written to {args.dest} — {len(targets)} file(s):")
         for rel in targets:
             print(f"  {rel}")
+        print()
+        print(base_report(args.dest))
+        return 0
+    if args.command == "base":
+        report = base_report(args.snapshot_dir)
+        if report is None:
+            print(f"{args.snapshot_dir} records no base (taken before "
+                  f"{BASE_FILE} existed): restore from the snapshot directory, and derive the "
+                  "pre-batch SHA from the activity log entry Phase 3 requires.",
+                  file=sys.stderr)
+            return 1
+        print(report)
         return 0
     if args.command == "propagate":
         code, message = propagate(args.repo_root, args.file, args.ops, args.apply)
@@ -225,6 +342,11 @@ def main(argv=None):
         parser.error("restore requires --confirm-restore")
     restored = restore(args.snapshot_dir, args.repo_root)
     print(f"Snapshot restored from {args.snapshot_dir} — {len(restored)} file(s)")
+    base = read_base(args.snapshot_dir)
+    if base and base.get("pre_batch_commit"):
+        print(f"Pre-batch commit of this snapshot: {base['pre_batch_commit']} — a path the "
+              "snapshot does not hold is restored with `git checkout "
+              f"{base['pre_batch_commit']} -- <path>`, never with a bare `git checkout --`.")
     return 0
 
 

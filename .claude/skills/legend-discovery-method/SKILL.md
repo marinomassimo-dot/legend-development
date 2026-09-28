@@ -9,8 +9,9 @@ description: LEGEND Scientific Discovery Method V0 — an OPTIONAL toolkit of se
 is the normal case, not a deviation. Nothing here blocks a `BATCH_COMMIT`, a deep dive, a
 hand-back or anything else. Nothing here creates a registry, a role, an approval or a form.
 
-`LEGEND_CORE` **§26** forbids answering a scientific mistake with a new gate, authority, auditor,
-registry or workflow. **Every primitive below is a habit, never a check.** A primitive that
+The operator's **task directive §26** — *not* a section of `LEGEND_CORE.md`, which ends at
+`## 22. FINAL MAXIMS` — forbids answering a scientific mistake with a new gate, authority,
+auditor, registry or workflow. **Every primitive below is a habit, never a check.** A primitive that
 becomes a gate has failed, because a gate converts a thinking move into a compliance move, and a
 compliance move is satisfied by the cheapest output that passes it.
 
@@ -340,6 +341,42 @@ science.
 **Sequencing matters:** do not apply the critic so early that DIVERGE never happens. Expand first,
 then break.
 
+#### 2.7b · 🟡 **TRIAL (2026-09-28) — the omitted limiting clause, source-side**
+
+⚠️ **On trial, not shipped as an eighth primitive.** It is a second habit inside 2.7, because the
+success criterion of this skill is that it stays small.
+
+**THE HABIT.** When a source's result is carried into a proposition, ask what the SOURCE itself
+qualifies it with — a unit, a range, a `±`, an `n`, a condition of the assay — and check that the
+qualifier travelled. Not "is the quote accurate" (2.7 already covers that) but **"did the source
+limit its own claim in a way the proposition drops."**
+
+🔴 **TWO MECHANISMS, AND ONLY ONE OF THEM IS A READING PRIMITIVE.** The scorecard recorded six
+instances under one name. They split:
+
+| | mechanism | what it justifies |
+|---|---|---|
+| **A** | **SOURCE OMISSION** — the limiting clause is in the source and was not propagated | this habit |
+| **B** | **HAND-BACK COMPRESSION** — a delegate found it and left it out of its summary | agent communication and harness design, **not** a reading habit |
+
+**Counted correctly, A has 2–3 instances, not 6.** Merging A and B measures how much a hand-back
+compresses and calls it a property of the literature. Mechanism B belongs to whoever designs the
+hand-back format; it is not improved by a reader being more careful.
+
+**THE INSTANCE THAT CARRIES IT** is source-side and reached canon: two Table 2 rows were resolved
+with the needles `"BUN (mg/ml)"` and `"GLU (mg/ml)"` — strings drawn from a layer classified
+`SUSPECT` and matched against that same layer — while the rendered page names **no unit on either
+row**. The omission propagated as an assertion that the source's unit header was wrong at source,
+and is retracted by a dated commit candidate. The needle used to find the row was made of the
+character in doubt.
+
+**DISCARD IF** three consecutive uses find a clause that was already carried, **or** its finds are
+mechanism B on inspection — in which case the repair belongs to the hand-back format and this habit
+is measuring somebody else's defect.
+
+⚪ **Not a check, not a gate, and not owed on every read.** Reserve it for a proposition that is
+about to become load-bearing.
+
 ---
 
 ## 3 · Observability — measure value, not compliance
@@ -351,6 +388,12 @@ For each primitive actually used, record **one line**: did it change anything?
 
 **A primitive that merely ran does not count. Only outcome changes count.** A primitive repeatedly
 producing `NO EFFECT` should be simplified, made rarer, or removed.
+
+🔴 **A COUNT THAT MERGES TWO MECHANISMS IS NOT A COUNT.** Before a number is used to justify
+keeping something, split it by mechanism and ask whether each part is evidence about the same
+thing. 2.7b's headline count of six was two mechanisms — a source omitting a clause, and a delegate
+compressing one out of a hand-back — and only one of them is evidence about reading. The larger
+number survived because nobody asked what it was a count OF.
 
 There is no store for this and none should be built — the session self-evaluation
 ([`legend-session-self-eval`](../legend-session-self-eval/SKILL.md)) and the git history already
@@ -378,8 +421,31 @@ Each primitive's own discard criterion, written so that it can actually fire:
 | `compress_experiment` | it cuts a component a later result shows was discriminating (log cuts precisely so this can be checked) |
 | `recursive_reread` | three consecutive deliberate re-reads return `NONE` or `NEW DETAIL` only |
 
+| `verify_the_omitted_clause` (2.7b, 🟡 TRIAL) | three consecutive uses find a clause already carried, or its finds are mechanism B |
+
 🔴 **Honest state at V0.** Most of these have never been observed to fail. That is not evidence
 they are sound — it is evidence that too few cases have been built that could break them.
+
+### 🔴 V0 SHIPPED THE WRONG SET, AND THAT IS A SELECTION DEFECT, NOT A MISSING FEATURE
+
+Measured 2026-09-28. Three names carrying the strongest rows on the scorecard appear nowhere in
+this skill, while `compress_experiment` and adversarial verification entered with **zero** recorded
+instances. So the shipped seven are the primitives an author remembered proposing, not the ones
+with the most recorded outcome changes. The finding is about **how candidate lists get written**,
+and it is recorded here rather than repaired by adding three primitives to a toolkit whose own
+success criterion is that it stays small:
+
+| Name | Recorded | 2026-09-28 verdict |
+|---|---|---|
+| `verify_the_omitted_clause` | 6 instances — the strongest row | 🟡 **TRIAL** as the habit in 2.7b, at its corrected count of 2–3 |
+| `gate_is_not_quantity` | 5 instances across 4 domains | ⚪ **WATCH** — the scorecard's own wording is not reproduced anywhere a reader of this skill can check, and a primitive adopted from a count whose definition cannot be read is the defect above repeated |
+| `outcome_distribution_width` | 1 instance + the only recorded FAILURE | ⚪ **WATCH** — its revised rule (`score = OUTCOME WIDTH × HYPOTHESIS DISCRIMINATION`, plus "check that any arm you add perturbs ONLY the variable in question") is deliberately **not** shipped: it is a repair of the rule that broke, and its own author's caveat is that *"repairs of broken rules are exactly the kind that look right and are not."* The **instance** is already here, as fixture E |
+
+🔴 **AND THERE IS STILL NO NEGATIVE CONTROL.** Every row above is a sample with no correct-nulls in
+it: no primitive has been run deliberately on a case where it should NOT help, with the null
+recorded. Until that exists, a `KEEP` verdict is a statement about a sample selected on success.
+One such observation was recorded on 2026-09-28 (see the proposal's § 10); a designed run through
+[`legend-research-loop`](../legend-research-loop/SKILL.md) is still owed.
 
 ### 🟢 `preregister_prediction` — **KEEP**, on the strongest evidence any primitive here has
 
@@ -429,7 +495,8 @@ any of these come out differently needs a reason.
 
 ## 6 · What this skill deliberately does not do
 
-- ❌ No gate. Not one primitive may block a `BATCH_COMMIT`, a deep dive or a hand-back. (§26)
+- ❌ No gate. Not one primitive may block a `BATCH_COMMIT`, a deep dive or a hand-back.
+  (directive §26)
 - ❌ No new registry, ledger, state file or second scientific registry. Every artefact these
   primitives need already exists: git commits for pre-registration, the discovery ledger for
   hypotheses, `FULLTEXT_READ_RECEIPT` for re-reads.

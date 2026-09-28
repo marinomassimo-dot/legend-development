@@ -158,7 +158,34 @@ snapshot would silently discard whatever a concurrent actor appended while the b
 ABORT leaves their appends standing; that is the lesser loss, and it is stated so nobody
 "completes" the declaration by adding them.
 
-Record the snapshot path in `legend_activity_log.md`.
+Record the snapshot path **and the pre-batch commit SHA** in `legend_activity_log.md`.
+
+🔴 **PRE_BATCH_COMMIT — recorded here because Phase 3 is the only moment it is knowable.**
+`snapshot` writes it into the snapshot as `SNAPSHOT_BASE.json` and prints it, together with the
+restore commands, so the correct one is writable at the moment it is needed rather than
+reconstructed from the reflog while a batch is aborting. Reprint it at any time with:
+
+```
+python3 framework/scripts/batch_commit.py base --snapshot-dir backup/YYYYMMDD_HHMM
+```
+
+🔴 **A RESTORE COMMAND WITHOUT ITS BASE IS RIGHT IN THE WRONG WINDOW.**
+`git checkout -- <path>` restores the pre-batch value **only while the propagation is neither
+staged nor committed.** From the first `git add` onward it restores the *batch's own* output and
+exits 0 — and the Phase 5 / § 5 ABORT lives partly in that later window, because a batch commits
+its propagation together with the surfaces Phase 4.7 regenerates. So the fallback below is
+stated with its base, in the order an ABORT uses it:
+
+1. `python3 framework/scripts/batch_commit.py restore --snapshot-dir <path> --confirm-restore`
+   — the primary restore, and the only correct source for a path that was **already modified**
+   when the snapshot was taken (`SNAPSHOT_BASE.json` names those under `dirty_at_snapshot`).
+2. `git checkout <PRE_BATCH_COMMIT> -- <path>` — the base-qualified fallback for a tracked path
+   the snapshot does not hold, correct in **both** windows.
+3. `git checkout -- <path>` — correct only before the propagation is staged. Never written at
+   Phase 5 without checking which window the batch is in.
+
+⚠️ An untracked or gitignored path has no base: for it the snapshot is the only source, which is
+the argument for the declaration above being complete rather than for a wider `git` command.
 
 🔴 **`disease_model.md` was absent from this list until 2026-09-28 and the tool did not notice**,
 because the only coverage condition was the four scientific current files — and that file is a
@@ -166,7 +193,8 @@ canonical disease-model file by `state_manifest_current.md` § 3.1, written by t
 2026-09-28 alone. BATCH_20260928_002 measured the gap, deliberately did NOT hand-copy it into its
 own snapshot (hand-copying fixes one batch and leaves the declaration wrong for the next, which is
 the drift this declaration exists to end) and fell back to `git checkout --` on abort, which works
-only because the file is tracked. The reason the tool could not catch it is worth stating: **the
+only because the file is tracked — and, as the base note above records, only while the propagation
+is still unstaged. The reason the tool could not catch it is worth stating: **the
 coverage condition names four files, while the propagation phases below can write every file in
 this list.** Widening the condition to "every file the propagation phases can write" would close
 the class rather than this instance, and it is not done here because it needs one source of truth
@@ -364,8 +392,13 @@ Run `LINT_AUTOMATIC` on the post-propagation state.
 |---|---|
 | `PASS` or `INFO` | Proceed to Phase 6 |
 | `WARN_BUT_PROCEED` | Proceed to Phase 6, record the warning |
-| `BLOCK_BATCH_COMMIT` | ABORT + restore from snapshot |
+| `BLOCK_BATCH_COMMIT` | ABORT + restore from snapshot, **with the Phase 3 base** |
 | `BLOCK_SYSTEM` | ABORT + restore + escalate to the operator |
+
+⚠️ **This is the post-propagation window.** By the time this LINT runs the propagation may already
+be committed, so the restore is the ordered sequence Phase 3 states — `batch_commit.py restore`,
+then `git checkout <PRE_BATCH_COMMIT> -- <path>`. A bare `git checkout -- <path>` here restores the
+batch and reports success.
 
 Logic: the pre-flight LINT verifies that you may start; the post-propagation LINT verifies that the result is coherent.
 
@@ -505,6 +538,7 @@ Final batch output:
 - conflicts encountered: N (resolved: N, escalated: 0)
 - post-propagation LINT: [outcome]
 - snapshot path: /backup/YYYYMMDD_HHMM/
+- pre-batch commit: <40-hex SHA, from Phase 3 / SNAPSHOT_BASE.json>
 - duration: HH:MM
 - outcome: SUCCESS | ABORTED | PARTIAL_RECOVERY
 ```
@@ -576,7 +610,11 @@ Without clear textual authorization → ABORT.
 If at any phase the batch must be aborted:
 
 1. **Immediate stop** of execution
-2. **Restore from the Phase 3 snapshot** (all files to pre-batch values)
+2. **Restore from the Phase 3 snapshot** (all files to pre-batch values), then, for a tracked path
+   the snapshot does not hold, `git checkout <PRE_BATCH_COMMIT> -- <path>` with the SHA Phase 3
+   recorded. Never a bare `git checkout -- <path>`: once the propagation is staged or committed it
+   restores the batch's own output and exits 0.
+   `python3 framework/scripts/batch_commit.py base --snapshot-dir <path>` prints both.
 3. **Update the manifest**: `current_state: BLOCKED_BY_LINT` or `BLOCKED_SYSTEM` depending on the reason
 4. **Append to the activity log**:
    ```
@@ -584,6 +622,7 @@ If at any phase the batch must be aborted:
    - phase reached: N
    - reason: [...]
    - snapshot restored from: [path]
+   - pre-batch commit: [PRE_BATCH_COMMIT]
    - commit candidates left in queue: K
    ```
 5. **Notify the operator** with an explicit ABORT report

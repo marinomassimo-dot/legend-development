@@ -267,7 +267,13 @@ def undeclared_absorptions(baseline: dict, absorb: list[str]) -> list[str]:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--check", action="store_true", help="report, write nothing")
-    parser.add_argument("--revision", help="revision label to record (required to write)")
+    parser.add_argument("--revision",
+                        help="revision label to record (required to write). Its `rev.N` is "
+                             "parsed ONCE, here, into the stored revision_ordinal, which must "
+                             "exceed the stored one; from then on that integer orders seals and "
+                             "no ordering is ever read off the spelling — rev.14 (2026-09-27) is "
+                             "later than rev.17 (2026-08-07). Use --revision-ordinal when the "
+                             "label does not spell rev.N")
     parser.add_argument("--revision-ordinal", type=int, default=None,
                         help="the integer that orders this seal, when the label does not spell "
                              "it as rev.N; it must still exceed the stored ordinal")
