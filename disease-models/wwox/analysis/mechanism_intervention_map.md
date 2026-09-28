@@ -205,10 +205,15 @@ neuron-specific WWOX loss
   → ↑excitatory drive, ↓spontaneous inhibition, depolarization, ↑firing, ↑sag,
     post-inhibitory rebound in L2/3 pyramidal neurons   [CLAIM 021 — measured]
   → spontaneous bursting, altered oscillatory organization, ↑phase-amplitude coupling
-  → bursting DEPENDS ON NMDAR activity and gap junctions [CLAIM 021 — dependence stated]
+  → bursting DEPENDS ON NMDAR activity [CLAIM 021 — NMDAR half only; the gap-junction half of this
+    dependence was WITHDRAWN as not attributable 2026-09-27 (`BATCH_20260927_004`,
+    `CC-20260826-GAPJUNCTION-ATTRIBUTION-01`) — see the withdrawn node below]
   → ACTIONABLE NODE: NMDAR (pharmacologically established with d-APV inside the WWOX system)
   → NODE WITHDRAWN PENDING OCCLUSION: connexin gap junctions — the carbenoxolone effect is real and not attributable (no washout reversal; the authors write that CBX *«may not be specific to gap junctions»*, that it *«could block NMDA receptors … which could partially account for our observations»* — a cited possibility with NO concentration attached — and that it *«blocks pannexin channels»*). Not «uninvolved»: untested. (2026-09-27, `BATCH_20260927_004`, `CC-20260826-GAPJUNCTION-ATTRIBUTION-01`.)
-  → INTERVENTION: memantine (approved) · MK-801/APV (tools) · carbenoxolone (tool)
+  → INTERVENTION: memantine (approved) · MK-801/APV (tools) · carbenoxolone (tool — ⚠️ sits under the
+    WITHDRAWN node: CBX's 87% suppression is real but NOT attributable to gap junctions, so this entry
+    is a tool for an untested node, not an intervention with a mechanism; 2026-09-27,
+    `BATCH_20260927_004`)
   → EXPECTED EFFECT: ↓ burst frequency/amplitude, ↓ phase-amplitude coupling
 ```
 
