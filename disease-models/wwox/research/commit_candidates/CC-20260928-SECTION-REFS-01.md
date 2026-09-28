@@ -228,14 +228,14 @@ Harness Engineering's surface, so the fix — give the script an `argparse` fron
 
 ---
 
-## BATCH DISPOSITION — `BATCH_20260928_004` (2026-09-28, ACTOR_ID `scientist`), append-only
+## BATCH DISPOSITION — `BATCH_20260928_005` (2026-09-28, ACTOR_ID `scientist`), append-only
 
 **Nothing above this line was rewritten.**
 
 **Status: `PROPAGATED`**
 **Verdict:** PROPAGATED
 
-`BATCH_20260928_004`: MINOR, MANUAL, `WM_v7.3` → **`WM_v7.4`**, under the operator's standing authorisation of 2026-09-28, given in writing, verbatim:
+`BATCH_20260928_005`: MINOR, MANUAL, `WM_v7.3` → **`WM_v7.4`**, under the operator's standing authorisation of 2026-09-28, given in writing, verbatim:
 ***«procedi, ti autorizzo a migliorare tutto quello che trovi… l'autorizzazione supera anche cose
 fatte da me in passato»***.
 Base `main` `a923e10`, branch `task/batch-20260928-004`. **Four of five ops applied; the fifth is
@@ -290,3 +290,5 @@ Engineering's. **No claim, premise tag, revival trigger, score or datum changed 
 written or recorded (ledger 262 chained).
 
 **Mirror ex-post review due** under §21e. **Not medical advice.**
+
+⚠️ **Batch renumbered `BATCH_20260928_004` → `BATCH_20260928_005` during landing.** A different actor landed the **structural** `BATCH_20260928_004` — the hot/cold split of the working-model history — while this batch was in its post-propagation gates. Two batches cannot share an id (one `last_batch_commit_id`, one `state_history` yaml key), and renumbering the **landed** one would be a history rewrite, which §21d reserves. So this batch, still unlanded, became `005`; the WM target did not move, because the structural batch bumped no version. Every id in this block reads `005`; the propagation commit `da250b5` predates the collision and its message still says `004`.

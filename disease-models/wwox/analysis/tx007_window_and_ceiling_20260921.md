@@ -378,10 +378,10 @@ Two things, neither of which exists, and both of which the repository already na
 *Non-canonical analysis-layer file. `READ-ONLY` toward every canonical file and every ledger — no `BATCH_COMMIT`, no commit candidate, no receipt, no registry edit, no re-ranking of `TX-001`–`TX-007`, no trial proposed. Sources are LEGEND's own dossiers, deep-dive manifests, registries and ledgers; no external retrieval was performed and no new full text was opened. **Not medical advice and not a treatment recommendation.***
 ---
 
-## APPEND-ONLY CORRECTION NOTE — 2026-09-28, `BATCH_20260928_004`, ACTOR_ID `scientist`
+## APPEND-ONLY CORRECTION NOTE — 2026-09-28, `BATCH_20260928_005`, ACTOR_ID `scientist`
 
 **Source:** `CC-20260921-TX007-CEILING-AND-DOSE-CONTROL-01` op `C3`, propagated by
-`BATCH_20260928_004` under the operator's standing authorisation of 2026-09-28, verbatim:
+`BATCH_20260928_005` under the operator's standing authorisation of 2026-09-28, verbatim:
 *«procedi, ti autorizzo a migliorare tutto quello che trovi… l'autorizzazione supera anche cose
 fatte da me in passato»*. **Nothing above this line is altered.** Three records, in the order they
 bear on this file's own conclusions.
