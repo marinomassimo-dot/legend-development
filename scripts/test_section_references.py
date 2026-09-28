@@ -48,7 +48,10 @@ after the grammar repairs below took the census to **11 of 1154**, and widened o
 The original exclusion of the commit candidates rested on a premise that turned out false —
 that a candidate cannot be repaired without a `BATCH_COMMIT`. `prompt_batch_commit.md` §7.2
 licenses exactly this in-place identifier correction under its three-part marker, and 17
-candidates were repaired that way. Together the three prefixes are 42 % of the population.
+candidates were repaired that way. The gated population goes 65 -> 552 of 1155, i.e. +487 (the
+three prefixes hold 491 references, four of which — `governance/`'s own root files — were
+already gated by name); 42 % of every checkable reference in the repository moved from being
+counted to being enforced.
 
 Still censused, with today's number, so the next widening is a **read of `--census`** and not a
 re-derivation:
@@ -358,7 +361,12 @@ def unresolved_references(
 class SectionReferenceTests(unittest.TestCase):
     def test_normative_section_references_resolve(self) -> None:
         problems, checked = unresolved_references(normative_only=True)
-        self.assertGreater(checked, 40, "the population collapsed; the pattern stopped matching")
+        # Anti-vacuity floor, raised with the surface: 552 references are gated at the
+        # 2026-09-28 widening, against 65 before it. A floor of 40 would have gone on passing
+        # after the widened prefixes silently stopped matching — which is the failure a floor
+        # exists to catch. A floor, never an exact count (`growth_anchors.py`: the quiet
+        # birthday).
+        self.assertGreater(checked, 400, "the population collapsed; the pattern stopped matching")
         self.assertFalse(
             problems,
             f"Section references with no such section ({len(problems)} of {checked} "
