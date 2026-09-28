@@ -43,7 +43,7 @@ edition: public
 ## 2. DISEASE-MODEL (WORKING-MODEL) VERSION
 
 ```yaml
-working_model_version: WM_v7.5
+working_model_version: WM_v7.6
 working_model_file: disease-models/wwox/registries/working_model_current.md
 narrative_view: disease-models/wwox/disease_model.md
 notes: "Canonical disease-level working model derived from public literature; disease_model.md is its narrative reader-facing view. The private individual-level record is not part of this edition."
@@ -106,7 +106,7 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20260928_006
+last_batch_commit_id: BATCH_20260928_007
 last_batch_commit_date: 2026-09-28
 last_batch_commit_type: MANUAL
 ```
@@ -122,7 +122,7 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20260928_BATCH_20260928_006
+last_lint_id: LINT_20260928_BATCH_20260928_007
 last_lint_date: 2026-09-28
 last_lint_result: WARN
 ```
@@ -160,8 +160,8 @@ and a mismatch is `BLOCK_SYSTEM` — reading history you cannot trust is worse t
 
 ```yaml
 fulltext_ledger_path: disease-models/wwox/registries/fulltext_read_receipts.jsonl
-fulltext_ledger_events: 262
-fulltext_ledger_head: 284a6a92d3502acc649a86825dd93a29175c40fdb154169fdbb04ac30aa68a97
+fulltext_ledger_events: 266
+fulltext_ledger_head: be7c0d4fdd8116cd7e52377931b9de28eddcc4dc6ed9beac5e6d0b64e21fc058
 ```
 
 Maintained automatically — `fulltext_receipts.py record` re-anchors after every append.

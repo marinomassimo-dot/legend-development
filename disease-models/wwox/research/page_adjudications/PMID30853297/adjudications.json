@@ -1,0 +1,101 @@
+{
+  "schema_version": 2,
+  "pmid": "30853297",
+  "citation": "Weisz-Hubshman M et al. 2019, Eur J Paediatr Neurol 23(3):418-426",
+  "rights": {
+    "notice": "Publisher PDF (Elsevier), subscription article",
+    "open_licence": null,
+    "pmc_deposit": false,
+    "redistribution": "NOT_REDISTRIBUTED",
+    "why": "Not open access (no PMCID; Unpaywall is_oa false and Europe PMC 'Subscription required' as recorded 2026-09-27 in CC-20260921-PAPER025-IDENTITY-01). The crops reproduce printed text, so only this recipe is published; the images regenerate from a reader's own copy of the PDF."
+  },
+  "source_pdf": {
+    "path": "files/fulltext/PMID30853297_WeiszHubshman2019.pdf",
+    "sha256": "9cb9d2a27100ffde68cb60478cbd0e2bf5504d9dd46f2ed547849425851c06c4"
+  },
+  "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30853297.json",
+  "renderer": {
+    "name": "PyMuPDF",
+    "version": "1.28.2",
+    "call": "page.get_pixmap(clip=Rect(crop), dpi=dpi).tobytes('png')"
+  },
+  "why_rendered": "The PyMuPDF and pdftotext text layers of this PDF are both REFUSED by deepdive_manifest.screen_suspect_surface (C0_CONTROL: 13 controls, U+0001-U+0003, in the qPCR formula, Table 1 and one SD value) and carry the Elsevier printable substitutions ('¼' for '=', 'e' for an en dash, 'þ' for '+', '50'/'30' for 5'/3'). Rule 5d: the rendered page is the reference surface, so every locator is rendered_text.",
+  "artifacts": [
+    {
+      "file": "p423_s3.4_cdna_products.png",
+      "page": 6,
+      "crop": [
+        305,
+        280,
+        552,
+        364
+      ],
+      "dpi": 300,
+      "sha256": "c26f75b2f176c6c2f50de003b154010a12d7ffc13cbd98638c2dafa020e6360c",
+      "adjudicates": [
+        {
+          "locator": "entries[0]",
+          "needle": "family 2 yielded two PCR products sized 593 bp"
+        },
+        {
+          "locator": "entries[1]",
+          "needle": "yielded only the 504 bp band"
+        }
+      ]
+    },
+    {
+      "file": "p420_s2.4_cdna_methods.png",
+      "page": 3,
+      "crop": [
+        302,
+        470,
+        552,
+        518
+      ],
+      "dpi": 300,
+      "sha256": "8c3829f6dce48eb0f980515c95838907f59d0acb1a330157c5bf57ff48da33f0",
+      "adjudicates": [
+        {
+          "locator": "entries[2]",
+          "needle": "(LAEOVA), followed by gel electrophoresis and sequencing by"
+        }
+      ]
+    },
+    {
+      "file": "p423_s3.3_carrier_rate.png",
+      "page": 6,
+      "crop": [
+        305,
+        166,
+        552,
+        238
+      ],
+      "dpi": 300,
+      "sha256": "831bc53954e952b162b52ad1b6c42ddb8dae5000aa91691bd11d48d65605cd89",
+      "adjudicates": [
+        {
+          "locator": "entries[3]",
+          "needle": "detected in two out of the 353"
+        }
+      ]
+    },
+    {
+      "file": "p423_fig4C_legend_control.png",
+      "page": 6,
+      "crop": [
+        45,
+        681,
+        552,
+        697
+      ],
+      "dpi": 300,
+      "sha256": "60e0e929c193a98745834a91a4f9a8a6b0b4eecf5cf75d12f368209d66c0049f",
+      "adjudicates": [
+        {
+          "locator": "entries[4]",
+          "needle": "A control sample yielded one PCR product"
+        }
+      ]
+    }
+  ]
+}

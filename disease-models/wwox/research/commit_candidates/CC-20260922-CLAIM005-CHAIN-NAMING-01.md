@@ -234,3 +234,15 @@ its reader will not be standing.**
 - **§1 (the naming repair) is satisfied.** `CLAIM 005`'s chain sentence now names all four papers — PMID 19936220 (`PAPER 057`), PMID 19500159 (`PAPER 058`), the terminus PMID 17803050 (`PAPER 059`) and PMID 24369382 (`PAPER 042`) — and states that Mallaret 2014 is **not** a link of that chain. The wording differs from this candidate's, because its sentence *"Mallaret … has never been read in full"* is **now false**: the paper was read in full on 2026-09-13 (`FTR-20260913-24369382-01`), which is what `BATCH_20260927_002` propagates.
 - **§2c is overtaken.** Its proposed boundary text — *"the contesting evidence is unread"*, *"abstract depth"*, *"the prohibition stands"*, `REVIVAL_TRIGGER: acquisition of PMID 24369382's body` — describes a state that ended on 2026-09-13. The body is read; the mouse audiogenic provocation is recorded from the Results and Methods with its denominators and comparator; the trigger has fired and is replaced.
 - **What survives untouched and is still owed:** §2a's append-only correction to the `PMID30370248` dossier (already written there), and §2d's four refusals, of which the one that matters is unchanged in substance — **the prohibition on asserting epileptogenesis as a measured process is not lifted**, and `BATCH_20260927_002` left it byte-identical.
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260928_007` (2026-09-28, ACTOR_ID `orchestrator`), append-only
+
+**Nothing above this line was rewritten.** Operator instruction, verbatim: *«procedi sempre»*. The residue was re-derived against `main` `7352d52`; every op was produced by a reader other than the batch actor and verified by the batch actor against the source bytes before propagation.
+
+**Verdict:** SUPERSEDED
+
+§1 landed in `BATCH_20260927_002` in different wording; §2c was withdrawn and overtaken by the 2026-09-13 reading of Mallaret 2014 (`FTR-20260913-24369382-01`). The one stale surface that remained — the `PMID30370248` dossier's claim that Mallaret's body was unread and paywalled — is corrected by an append-only block there. §2d's refusals and the prohibition are untouched.
+
+**Not medical advice.**

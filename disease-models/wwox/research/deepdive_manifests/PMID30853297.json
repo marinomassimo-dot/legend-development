@@ -1,0 +1,233 @@
+{
+  "schema_version": 2,
+  "pmid": "30853297",
+  "doi": "10.1016/j.ejpn.2019.02.003",
+  "receipt": "FTR-20260928-30853297-03",
+  "receipt_note": "The targeted receipt that persisted these rendered_text locators (BATCH_20260928_007, 2026-09-28): producer re-read on the restored PDF plus a blind locator audit; its outputs name this manifest.",
+  "landing": [
+    "FTR-20260923-30853297-01",
+    "FTR-20260923-30853297-02",
+    "paper_registry_current"
+  ],
+  "skills_considered": [
+    {
+      "skill": "find-fulltext",
+      "used": false,
+      "reason": "Not needed: the operator restored the publisher PDF, byte-identical to the receipted artefact (sha256 9cb9d2a2...)."
+    },
+    {
+      "skill": "legend-deepdive",
+      "used": false,
+      "reason": "This pass persists locators for a reading already receipted on 2026-09-23; no new reading of the paper's conclusions was performed."
+    },
+    {
+      "skill": "legend-locator-audit",
+      "used": false,
+      "reason": "Owed, not declined: PAPER 025 is the source of CLAIM 018 (consolidated baseline), so the orchestrator should dispatch a blind audit on the triples listed in the producer report before the note lands."
+    }
+  ],
+  "group_assessment": {
+    "performed": true,
+    "total_publications": 141,
+    "publications_on_gene": 1,
+    "counts_measured": "PubMed search 2026-09-28: 'Heimer G[Author]' total_count 141; 'Heimer G[Author] AND WWOX' total_count 1 (this paper). Author-name counts are not disambiguated.",
+    "research_type": "descriptive_clinical",
+    "is_primary_group_for_disease": false,
+    "is_primary_group_for_gene": false,
+    "weighting": "Israeli clinical-genetics consortium (pediatric neurology and genetics units, with a commercial genomics partner). Full weight on the clinical description and the carrier screen as observations; the RNA result is one gel lane in one homozygote with no densitometry or NMD block, so its interpretation carries less weight than the size observation itself."
+  },
+  "field_density": {
+    "wwox_directed": true,
+    "queries": [
+      {
+        "query": "Heimer G[Author] AND WWOX",
+        "route": "PubMed search 2026-09-28",
+        "count": 1
+      },
+      {
+        "query": "Heimer G[Author]",
+        "route": "PubMed search 2026-09-28",
+        "count": 141
+      }
+    ],
+    "note": "The group has one WWOX paper; its weight here is as a clinical series, not as a WWOX laboratory."
+  },
+  "multihop": {
+    "waived": "Locator-persistence pass for a reading receipted 2026-09-23; no multi-hop was performed in this pass. Measured, as a pointer and not as a hop: the reference list holds 19 entries on the PyMuPDF surface, and refs 1-4, 6-10 and 14 name WWOX in their titles. They are not resolved to PMIDs here, and that is declared debt."
+  },
+  "corpus_crossquery": {
+    "waived": "No new question was put to the local corpus in this pass. The cross-surface identity comparison for this PMID (registry vs census vs Oliver 2023 Table S1) is already recorded in CC-20260921-PAPER025-IDENTITY-01 A1."
+  },
+  "retraction_check": {
+    "performed": true,
+    "route": "PubMed get_article_metadata(['30853297']), 2026-09-28",
+    "result": "article_types: ['Journal Article']; no Retracted Publication or Published Erratum type and no correction linkage returned for this PMID."
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID30853297_WeiszHubshman2019.pdf",
+      "sha256": "9cb9d2a27100ffde68cb60478cbd0e2bf5504d9dd46f2ed547849425851c06c4",
+      "kind": "article_binary",
+      "note": "Operator-supplied publisher PDF (PII S1090-3798(18)30411-2), restored 2026-09-28, byte-identical to the source_fingerprint of FTR-20260923-30853297-01/-02. 9 pages, journal pp. 418-426.",
+      "acquisition_recipe": {
+        "no_recipe": "Operator-supplied publisher PDF of a subscription article; no free route exists (no PMCID, Unpaywall is_oa false, Europe PMC subscription required), and no paid access is attempted.",
+        "acquired_on": "2026-09-23"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID30853297_WeiszHubshman2019_fitz.txt",
+      "sha256": "748dde5d9fe7378530ab533032a1284a8d8d844c11183c43a8060d20b066ac5f",
+      "kind": "article_text",
+      "note": "Deterministic PyMuPDF text layer, declared for provenance and search only. It is REFUSED as a quote surface by screen_suspect_surface (C0_CONTROL, 13 controls; plus printable '¼' for '=' and 'e' for en dash), so NO locator here is verified against it; every locator is rendered_text on a page adjudication.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID30853297_WeiszHubshman2019.pdf",
+        "extractor": {
+          "name": "PyMuPDF",
+          "version": "1.28.2",
+          "call": "page.get_text() default mode, pages 1-9 in order",
+          "join": ""
+        },
+        "acquired_on": "2026-09-28",
+        "result_sha256": "748dde5d9fe7378530ab533032a1284a8d8d844c11183c43a8060d20b066ac5f"
+      }
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID30853297/p423_s3.4_cdna_products.png",
+      "sha256": "c26f75b2f176c6c2f50de003b154010a12d7ffc13cbd98638c2dafa020e6360c",
+      "kind": "figure",
+      "note": "page 6 crop at 300 dpi, regenerated from the source PDF by regenerate_adjudications.py; the image is not shipped, the recipe is (rule 5e)"
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID30853297/p420_s2.4_cdna_methods.png",
+      "sha256": "8c3829f6dce48eb0f980515c95838907f59d0acb1a330157c5bf57ff48da33f0",
+      "kind": "figure",
+      "note": "page 3 crop at 300 dpi, regenerated from the source PDF by regenerate_adjudications.py; the image is not shipped, the recipe is (rule 5e)"
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID30853297/p423_s3.3_carrier_rate.png",
+      "sha256": "831bc53954e952b162b52ad1b6c42ddb8dae5000aa91691bd11d48d65605cd89",
+      "kind": "figure",
+      "note": "page 6 crop at 300 dpi, regenerated from the source PDF by regenerate_adjudications.py; the image is not shipped, the recipe is (rule 5e)"
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID30853297/p423_fig4C_legend_control.png",
+      "sha256": "60e0e929c193a98745834a91a4f9a8a6b0b4eecf5cf75d12f368209d66c0049f",
+      "kind": "figure",
+      "note": "page 6 crop at 300 dpi, regenerated from the source PDF by regenerate_adjudications.py; the image is not shipped, the recipe is (rule 5e)"
+    }
+  ],
+  "verbatim_locators": {
+    "source_fulltext_indexed": false,
+    "source_fulltext_indexed_evidence": "No PMCID (PubMed ID converter returns the PMID alone, 2026-09-21); Europe PMC 'Subscription required' and Unpaywall is_oa false as recorded 2026-09-27 in CC-20260921-PAPER025-IDENTITY-01 WAVE-2 READINESS. Not re-queried in this pass.",
+    "abstract_anchoring_waived": "The abstract carries two of these propositions in weaker form ('Complementary DNA sequencing demonstrated ... skipping of exon six'; 'A carrier rate of 1:177 was found among Yemenite Jews') but not the product sizes, the CI, the test or the Methods sequencing statement; and no declared text surface exposes an abstract to verify an abstract_snippet against.",
+    "entries": [
+      {
+        "proposition": "RT-PCR of blood-derived cDNA across exon 6 gives two products, 593 bp and 504 bp, in the compound heterozygotes (family 2).",
+        "snippet": "of family 2 yielded two PCR products sized 593 bp and 504 bp.",
+        "surface": "rendered_text",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID30853297/p423_s3.4_cdna_products.png",
+        "anchor": "Results § 3.4 'Complementary DNA analysis in families 2 and 3', journal p. 423 (PDF page 6), right column",
+        "page_anchor": {
+          "page": 6,
+          "crop_pdf_points": [
+            305,
+            280,
+            552,
+            364
+          ],
+          "dpi": 300,
+          "needle": "family 2 yielded two PCR products sized 593 bp",
+          "image_sha256": "c26f75b2f176c6c2f50de003b154010a12d7ffc13cbd98638c2dafa020e6360c",
+          "source_pdf_sha256": "9cb9d2a27100ffde68cb60478cbd0e2bf5504d9dd46f2ed547849425851c06c4"
+        },
+        "panel_text_relation": "text_only",
+        "note": "panel_text_relation text_only by necessity (BATCH_20260928_007): the blind locator audit found that Fig. 4C (\"Family 3, cDNA analysis\") has NO family-2 lane; its two-band lane belongs to a family-3 relative (pedigree detail omitted in this public edition). The family-2 result rests on the running text alone and is not displayed."
+      },
+      {
+        "proposition": "The c.517-2A>G homozygote yields only the 504 bp product, which the authors attribute to an 89 bp deletion of exon six caused by loss of the exon 5/6 acceptor; the Results frame this as consistent with prediction, not as a displayed junction read.",
+        "snippet": "of family 3 yielded only the 504 bp band (Fig. 4C). This is consistent with the prediction that the mutated splice-site variant abolishes the acceptor splice-site between exons five and six resulting in an 89 bp deletion of exon six in the mutant allele.",
+        "surface": "rendered_text",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID30853297/p423_s3.4_cdna_products.png",
+        "anchor": "Results § 3.4, journal p. 423 (PDF page 6), right column",
+        "page_anchor": {
+          "page": 6,
+          "crop_pdf_points": [
+            305,
+            280,
+            552,
+            364
+          ],
+          "dpi": 300,
+          "needle": "yielded only the 504 bp band",
+          "image_sha256": "c26f75b2f176c6c2f50de003b154010a12d7ffc13cbd98638c2dafa020e6360c",
+          "source_pdf_sha256": "9cb9d2a27100ffde68cb60478cbd0e2bf5504d9dd46f2ed547849425851c06c4"
+        },
+        "panel_text_relation": "text_confirmed_by_panel"
+      },
+      {
+        "proposition": "Methods state that the cDNA products were sequenced (ABI Prism 3100), so sequencing is stated in Methods as well as in the abstract; the tissue is blood (same section).",
+        "snippet": "cDNA amplification was carried out with Red load Taq Master*5 (LAEOVA), followed by gel electrophoresis and sequencing by ABI Prism 3100 Genetic Analyzer (Perkin Elmer).",
+        "surface": "rendered_text",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID30853297/p420_s2.4_cdna_methods.png",
+        "anchor": "Methods § 2.4 'Complementary DNA analysis', journal p. 420 (PDF page 3), right column",
+        "page_anchor": {
+          "page": 3,
+          "crop_pdf_points": [
+            302,
+            470,
+            552,
+            518
+          ],
+          "dpi": 300,
+          "needle": "(LAEOVA), followed by gel electrophoresis and sequencing by",
+          "image_sha256": "8c3829f6dce48eb0f980515c95838907f59d0acb1a330157c5bf57ff48da33f0",
+          "source_pdf_sha256": "9cb9d2a27100ffde68cb60478cbd0e2bf5504d9dd46f2ed547849425851c06c4"
+        },
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The 1:177 carrier rate is measured for c.517-2A>G alone: 2 carriers among 353 Yemenite Jewish controls (706 chromosomes), stated 95% CI 0.0016-0.0204 by the binomial exact approach.",
+        "snippet": "this variant was detected in two out of the 353 (706 chromosomes) Yemenite Jewish control samples that were tested, establishing a carrier rate of 1:177 for this variant indicating a 95% confidence interval of 0.0016–0.0204 for carrier frequency in this population, using the binomial exact confidence interval approach.",
+        "surface": "rendered_text",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID30853297/p423_s3.3_carrier_rate.png",
+        "anchor": "Results § 3.3 (carrier rate determination), journal p. 423 (PDF page 6), right column top",
+        "page_anchor": {
+          "page": 6,
+          "crop_pdf_points": [
+            305,
+            166,
+            552,
+            238
+          ],
+          "dpi": 300,
+          "needle": "detected in two out of the 353",
+          "image_sha256": "831bc53954e952b162b52ad1b6c42ddb8dae5000aa91691bd11d48d65605cd89",
+          "source_pdf_sha256": "9cb9d2a27100ffde68cb60478cbd0e2bf5504d9dd46f2ed547849425851c06c4"
+        },
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "593 bp is the product of a control (wild-type) sample, which is what licenses labelling 593 bp as the wild-type product.",
+        "snippet": "A control sample yielded one PCR product sized 593 bp.",
+        "surface": "rendered_text",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID30853297/p423_fig4C_legend_control.png",
+        "anchor": "Fig. 4 legend, panel (C), journal p. 423 (PDF page 6)",
+        "page_anchor": {
+          "page": 6,
+          "crop_pdf_points": [
+            45,
+            681,
+            552,
+            697
+          ],
+          "dpi": 300,
+          "needle": "A control sample yielded one PCR product",
+          "image_sha256": "60e0e929c193a98745834a91a4f9a8a6b0b4eecf5cf75d12f368209d66c0049f",
+          "source_pdf_sha256": "9cb9d2a27100ffde68cb60478cbd0e2bf5504d9dd46f2ed547849425851c06c4"
+        },
+        "panel_text_relation": "text_confirmed_by_panel"
+      }
+    ]
+  }
+}

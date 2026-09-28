@@ -419,3 +419,15 @@ caveat. All three are **one restored PDF away**, and none of them is needed for 
 **Verdict: `DEFERRED`.** **Confirmed deferred, and the reason was re-measured rather than carried.** The A4 note content — the 593/504 bp measured-RNA wording, the 1:177 carrier rate and the Methods § 2.4 quotation — needs the operator-supplied `PIIS1090379818304112.pdf`. Searched this session across the root checkout's whole `files/` tree (`fulltext/`, `supplement/`, `supplements/`, `page_renders/`, `figure_renders/`): **no file matching that PII or that paper exists in any of them**. No locator may be written against bytes nobody can open. **What would unblock it:** the operator's PDF restored to `files/`, fingerprinted, declared in a manifest with its acquisition recipe, and the three A4 quotations persisted as verbatim locators. Everything else in this candidate landed in `BATCH_20260927_003`; proposal **(b)** stays `NOT INTEGRATED` for the reason that batch gave — an abstract-depth `PREMISE` note contradicting the receipt ledger must not land in any form.
 
 **Operator authorisation, verbatim (2026-09-27, given in writing after being shown the MAJOR proposals):** *«procedi tu, ti autorizzo su tutto»*. **Mirror ex-post review due** under §21e — see `session_evaluations/2026-09-27_BATCH_20260927_004.md`.
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260928_007` (2026-09-28, ACTOR_ID `orchestrator`), append-only
+
+**Nothing above this line was rewritten.** Operator instruction, verbatim: *«procedi sempre»*. The residue was re-derived against `main` `7352d52`; every op was produced by a reader other than the batch actor and verified by the batch actor against the source bytes before propagation.
+
+**Verdict:** PROPAGATED
+
+The A4 note is propagated to `PAPER 025`. The operator's PDF was found in the upload cache and restored byte-identical to the receipted fingerprint; the three A4 quotations (plus the Fig. 4C legend) are persisted as `rendered_text` locators in `deepdive_manifests/PMID30853297.json` (the text layer is refused by the suspect-surface screen) under `FTR-20260928-30853297-03`. 🔴 **A blind locator audit changed the note:** Fig. 4C has no family-2 lane (the two-band lane belongs to a family-3 relative whose legend genotype label disagrees with the pedigree; pedigree detail omitted in this public edition); the Abstract states exon-six skipping as *demonstrated* while the Results hedge it; gnomAD 3/246,218 is the missense allele's only population figure. Two defects in the prior receipt (a *no space characters* instrument claim; *Redload/PerkinElmer*) are corrected forward in the new receipt. Proposal (b) stays NOT INTEGRATED.
+
+**Not medical advice.**

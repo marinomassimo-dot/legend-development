@@ -35,7 +35,7 @@
 ### B.3 The junction and the amplicons
 - **The affected junction** is the intron 8 / exon 9 acceptor. The public worked-example allele of this class is `c.1057-2A>G`.
 - **Junction amplicon:** forward primer in **exon 8**, reverse primer in **exon 9**, positioned so the amplicon **spans the exon 8→9 junction**. 🔴 **CORRECTED 2026-09-22 — read this, not what it replaced.** **WWOX has NINE exons: there is no exon 10, so "exon 9 skipping" is not a definable outcome.** Real outcome set: **cryptic acceptor at `c.1063`** — the only available `AG` — giving a product **6 nt SHORTER** than normal; **intron-8 read-through/retention** (778,856 nt, cannot be a mature mRNA, and **carries no exon 9, so the exon-9 reverse primer has no site and this species is simply ABSENT from the trace — its absence must NOT be read as support for the cryptic-acceptor outcome**); **intronic polyadenylation or an alternative terminal exon** (documented in this gene by Schirmer).
-- **Normaliser amplicon:** **exons 4–6** ("core"), which lie upstream of the affected junction and report total WWOX transcript.
+- **Normaliser amplicon:** **exons 4–6** ("core"), which lie upstream of the affected junction and report total WWOX transcript. 🔴 **Constraint (2026-09-28, `BATCH_20260928_007`, from `CC-20260922-TX001-CEILING-REASSESSMENT-01` §4 item 4): do NOT read the aberrant:normal ratio against this denominator alone** — see § B.8, constraint 4.
 - 🔴 **A published assay of exactly this shape already exists and should be redesigned from, not reinvented:** Schirmer MA *et al.* 2016, *J Natl Cancer Inst* (`PMID 26857392`, PMC4859408) quantifies **exon 8→9 junction transcripts against core exon 4–6 transcripts**, reporting a ratio of **~67 %** with intra-line correlation **r = 0.68** (r = 0.80 under gemcitabine), in **89 lymphoblastoid lines**. It also documents alternative transcripts **terminating within intron 8**. `DL-BIO-003` already names it as the template.
 - ⚠️ **No primer sequences are given in this packet, deliberately.** They are not derivable with certainty from the records held here, the exon 8/9 boundary is the object under test, and a wrong primer placement would silently answer a different question. **Design them from the canonical transcript (`NM_016373.4`) and the Schirmer assay, and validate on the healthy control first.**
 
@@ -65,6 +65,16 @@
 | Transcript terminating within intron 8 | — | ❌ separate 3′-anchored reaction; Schirmer documents these exist |
 
 ---
+
+### B.8 Design constraints — each one, alone, otherwise forces a FALSE NEGATIVE
+
+Added 2026-09-28 by `BATCH_20260928_007` from `CC-20260922-TX001-CEILING-REASSESSMENT-01` § 4 items 2–4 (item 1, the 6-nt sizing, is already in § B.7). Items 2 and 3 are the candidate's reasoning verbatim; item 4 is re-worded to the source's own hedge.
+
+| # | Constraint | False-negative direction if ignored |
+|---|---|---|
+| 2 | 🔴 **An intron-8-anchored reaction plus 3′ RACE is MANDATORY.** A retention species **has no exon 9**, so an exon-8→9 assay cannot see it. | Its absence is silently misread as *support for the cryptic outcome* — the assay fails in the direction of the hypothesis being tested. |
+| 3 | 🔴 **The ±cycloheximide arm has less power than this packet implies.** Under the surviving outcome there is **no PTC**, so there is nothing for EJC-dependent NMD to act on. Keep the arm — to catch a competing PTC species and to probe long-3′UTR NMD — with a vehicle twin and an **endogenous NMD-sensitive positive control**. A 779-kb retained intron is likely nuclear-retained and exosome-cleared — not NMD, and cycloheximide-insensitive. | A null ±CHX read as informative about the main branch; a CHX-insensitive loss scored as "no NMD" or as NMD. |
+| 4 | 🔴 **Do not normalise to the exon 4–6 core alone.** Davids 2019 (PMID 30362252) offers, as the authors' own hedged explanation, that the short isoform's exon 5–6 junction rises when the long isoform is lost — *«The residual expression of the exon 1–2 junction may be explained by the amplification of NM_130791.3, which has increased expression of its exon 5–6 junction.»* (locatored in `deepdive_manifests/PMID30362252.json` entry 3). If that holds, the core denominator moves with the lesion. Carry a second, lesion-independent normaliser (a housekeeping transcript and/or an exon 1–2 junction reported separately) and report both. | The core denominator compresses the very aberrant:normal ratio the assay exists to measure. |
 
 ## C · WHAT IT WOULD RESOLVE
 

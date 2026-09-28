@@ -266,3 +266,15 @@ on the triples above. **Applied outside batch:**
 **Verdict: `PROPAGATED IN PART`.** **Item C is split, and the half that rests on persisted records is propagated:** `PAPER 001` is marked `Status: superseded` and pointed at `PAPER 094`, kept **resolvable and never merged away**, with the whole reasoning in its `Note` (the first attempt put it in `Status` and Phase 5 returned `BLOCK_BATCH_COMMIT: INVALID_STATUS` — the gate was right and the prose moved, with nothing dropped). `CLAIM 002` carries a dated provenance note recording the supersession and the deferral. Items A, B, D and the `meta_gaba` half of E were already closed. 🔴 **DEFERRED, and this is the one deferral in this batch that cost something:** the repointing of `CLAIM 002`'s `Source`, and the five boundaries the refereed reading carries with it. All **7 of 7** triples came back `UNVERIFIABLE_SURFACE` — **for absence of bytes, not on the merits**: no artefact of PMID 42397075 or PMID 42128308 exists in `files/fulltext/` and PubMed returns **no PMCID for either**, so there is no free full text to re-derive them from. Moving the foundation of a `consolidated baseline` claim onto a reading whose bytes nobody can open is precisely the move the locator discipline exists to prevent, so nothing was spent on it and nothing was written. **What would unblock it:** a structured surface of PMID 42397075 by any lawful free route, read to a receipt, with the five boundaries as verbatim locators. `PAPER 094`'s `Claim links` stays `none` until then, because declaring it without the Source move would assert an edge in one direction only.
 
 **Operator authorisation, verbatim (2026-09-27, given in writing after being shown the MAJOR proposals):** *«procedi tu, ti autorizzo su tutto»*. **Mirror ex-post review due** under §21e — see `session_evaluations/2026-09-27_BATCH_20260927_004.md`.
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260928_007` (2026-09-28, ACTOR_ID `orchestrator`), append-only
+
+**Nothing above this line was rewritten.** Operator instruction, verbatim: *«procedi sempre»*. The residue was re-derived against `main` `7352d52`; every op was produced by a reader other than the batch actor and verified by the batch actor against the source bytes before propagation.
+
+**Verdict:** DEFERRED
+
+Unchanged: repointing `CLAIM 002`'s `Source` to `PAPER 094` needs a surface of PMID 42397075 (*Brain* 2026, DOI 10.1093/brain/awag239). Europe PMC reports it not open access (no PMCID); no artefact exists in this deployment, and the manifest's declared artefacts are absent. **Unblock:** the operator supplies the publisher PDF or HTML.
+
+**Not medical advice.**

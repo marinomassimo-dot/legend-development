@@ -9788,8 +9788,8 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Identifier:** PMID 15870886 / PMC4166600 / DOI 10.3892/ijo.26.6.1681
 **Date discovered:** 2026-04-18
 **Date screened:** 2026-04-18
-**Date processed:** triage only
-**Date last touched:** 2026-09-26
+**Date processed:** 2026-09-28 (`BATCH_20260928_007`)
+**Date last touched:** 2026-09-28
 **Discovery window:** FASE 1 triage 221–400
 **Discovery source:** 400_paper.txt batch corpus
 **Discovery query:** corpus paper 337
@@ -9797,22 +9797,23 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Quality status:** peer-reviewed (PubMed listing)
 **Filter decision:** background only
 **Tier:** C
-**Status:** screened
-**Status note:** identity completed by `BATCH_20260926_ALDAZ_R2` (`CC-20260914-15870886-01`); a reading exists whose manifest is now complete (0 gaps, the PMID 11572989 hop resolved 2026-09-27; corretto 2026-09-28, `CC-20260914-15870886-01` § RESIDUE RE-CHECK, al posto di *«with one declared multihop gap»*) but which has **no persisted receipt**, so no reading depth is declared and the triage status stands
-**Primary pathway:** oncology / tumor suppressor biology
-**Genotype/model tag:** unassigned in triage
+**Status:** processed
+**Status note:** complete_fulltext_read — `FTR-20260928-15870886-01` (contemporaneous re-read 2026-09-28, route (b) of `CC-20260914-15870886-01`; the 2026-09-14 reading `FTR-20260914-15870886-01` had not been appended to the ledger when this record was written); identity completed by `BATCH_20260926_ALDAZ_R2`, remaining fields by `BATCH_20260928_007`. Superseded wording kept verbatim: *«identity completed by `BATCH_20260926_ALDAZ_R2` (`CC-20260914-15870886-01`); a reading exists whose manifest is now complete (0 gaps, the PMID 11572989 hop resolved 2026-09-27; corretto 2026-09-28, `CC-20260914-15870886-01` § RESIDUE RE-CHECK, al posto di *«with one declared multihop gap»*) but which has **no persisted receipt**, so no reading depth is declared and the triage status stands»*
+**Primary pathway:** oncology / tumor suppressor biology — adult ovarian-cancer mRNA expression
+**Genotype/model tag:** 71 adult epithelial ovarian tumours + 13 contralateral ovaries; PEO1hyg1.6 transfectants; no WWOX germline allele, no neural material
 **Species:** human
-**Transferability:** unassigned in triage
-**Directness to the reference genotype:** unassigned in triage
+**Transferability:** T3
+**Directness to the reference genotype:** none — adult ovarian cancer
 **Over-inference risk:** standard triage — not evaluated
 **clinical relevance:** LOW
-**Claim links:** none — triage only
-**Working Model impact:** none yet
+**Claim links:** none — the reading proposes none
+**Working Model impact:** none — no working-model block is redefined by this record
 **Report mentions:** FASE 1 triage 221–400
-**Current status:** screened — C
-**Next action:** background-only; escalate only on convergence signal
-**Flags:** FASE 1 batch entry / no deep-dive yet
+**Current status:** processed — C
+**Next action:** none — read and registered
+**Flags:** read — receipt `FTR-20260928-15870886-01`
 **Note:** Title: WWOX mRNA expression profile in epithelial ovarian cancer supports the role of WWOX variant 1 as a tumour suppressor, although the role of variant 4 remains unclear
+**Evidence depth:** complete_fulltext_read — receipt `FTR-20260928-15870886-01`; manifest `deepdive_manifests/PMID15870886.json`
 
 ## LIT-0338
 **Short title:** Aberrant expression of WWOX protein in epithelial ovarian cancer: a clinicopa...
@@ -12494,9 +12495,9 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Claim links:** 025 (bounding source, non-corroborating: same group, same dataset family, tumour only, no perturbation)
 **Working Model impact:** none — no block is redefined; the record bounds an existing claim's direction
 **Report mentions:** `CC-20260922-CLAIM025-SIGN-INVARIANCE-01` · `BATCH_20260927_003` · `CC-20260928-MIRROR003-REPAIRS-01`
-**Next action:** Supplementary Tables S4–S8 unfetched — the per-subtype survival numbers are receipted at the level of the authors' running text only
-**Flags:** read — partial; supplementary debt open
-**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20260927-42589397-02`; manifest `deepdive_manifests/PMID42589397.json`, **7** verbatim locators — 5 persisted with `FTR-20260927-42589397-02`, 2 appended 2026-09-28 (entries 6–7, `Results 2.6.2` and `Methods 5.1`) inside that receipt's declared coverage and re-verified verbatim here; its `receipt` field carried `FTR-20260921-42589397-01` and now names **`FTR-20260927-42589397-02`**, the reading that produced it — 🟢 repaired 2026-09-28 by `framework/scripts/manifest_receipt_repoint.py`, which derives the value from the ledger; `manifest_receipt_provenance.py --pmid 42589397` reports **CONFORMS**. The old value named this manifest in no `outputs` and fingerprinted a different document from the artefact the manifest declares, so the repair tightened the artefact binding as well as the pointer (present tense corrected 2026-09-28 by `CC-20260928-MIRROR002B-REPAIRS-01`, discharging `REP-26`, from *«still names `FTR-20260921-42589397-01` and is routed for re-pointing»*). **One** evidence gap is declared (Supplementary Tables S4–S8 unfetched); the **five** are the manifest's `waived` deep-dive sections, which `deepdive_manifest.py` prints as *"5 gap(s)"* in its own vocabulary (disambiguated 2026-09-28, `CC-20260928-MIRROR0928-REPAIRS-01`, Mirror FINDINGS 4 and 5)
+**Next action:** none owed on the supplement — Supplementary Tables S4–S8 read 2026-09-28 (`FTR-20260928-42589397-04`); ⚠️ Table S7's HR column contradicts its own «more favourable DFS group» labels for HER2-enriched and Luminal B (detail in [[paper_registry_current#PAPER 118]]); an author query on the HR orientation is optional, not blocking
+**Flags:** read — partial (body + Supplementary File S1); supplementary S4–S8 debt discharged 2026-09-28; source-internal Table S7 inconsistency recorded
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20260927-42589397-02`; manifest `deepdive_manifests/PMID42589397.json`, **7** verbatim locators — 5 persisted with `FTR-20260927-42589397-02`, 2 appended 2026-09-28 (entries 6–7, `Results 2.6.2` and `Methods 5.1`) inside that receipt's declared coverage and re-verified verbatim here; its `receipt` field carried `FTR-20260921-42589397-01` and now names **`FTR-20260927-42589397-02`**, the reading that produced it — 🟢 repaired 2026-09-28 by `framework/scripts/manifest_receipt_repoint.py`, which derives the value from the ledger; `manifest_receipt_provenance.py --pmid 42589397` reports **CONFORMS**. The old value named this manifest in no `outputs` and fingerprinted a different document from the artefact the manifest declares, so the repair tightened the artefact binding as well as the pointer (present tense corrected 2026-09-28 by `CC-20260928-MIRROR002B-REPAIRS-01`, discharging `REP-26`, from *«still names `FTR-20260921-42589397-01` and is routed for re-pointing»*). **One** evidence gap was declared (Supplementary Tables S4–S8 unfetched) and is discharged by `FTR-20260928-42589397-04`; the **five** are the manifest's `waived` deep-dive sections, which `deepdive_manifest.py` prints as *"5 gap(s)"* in its own vocabulary (disambiguated 2026-09-28, `CC-20260928-MIRROR0928-REPAIRS-01`, Mirror FINDINGS 4 and 5)
 **Registry record:** [[paper_registry_current#PAPER 118]]
 **Note:** Title: WWOX/HIF1A Balance Delineates Context-Dependent Molecular States in Breast Cancer Subtypes and Ovarian Carcinoma. The authors declare their subtype effects *"descriptive and hypothesis-generating rather than formally validated prognostic groupings"*.
 

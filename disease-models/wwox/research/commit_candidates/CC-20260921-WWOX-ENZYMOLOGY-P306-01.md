@@ -344,3 +344,15 @@ table and the substrate/cofactor list, and only then §4(c)'s `TX-003` line.
 **Verdict: `DEFERRED`.** **Confirmed deferred, on the condition the dispatch itself named: if the PDF is absent, defer.** It is absent — no artefact for `CORPUS P306` exists anywhere under the root checkout's `files/` tree, and `FT-130` records that the paper has no PMC deposit and is blocked behind an automated-traffic challenge. Every quantity `§4(c)` would write into `TX-003`'s obstacle line — the Km, the cofactor, the substrate statement — is **abstract-depth**, and a therapeutic record does not take abstract-depth quantities. 🔴 **`TX-003`'s score does not move and its obstacle line is unchanged**, which is the conservative outcome: leaving the obstacle line as it stands overstates nothing, while narrowing it on abstract-depth numbers would make `TX-003` look better characterised than it is. **What would unblock it:** one human fetch of the publisher PDF (the DOI `10.1515/znc-2011-1-210` exists and the article is hybrid OA), then a receipt and verbatim locators. The re-tier of `CORPUS P306` and `LIT-0306` already landed in `BATCH_20260927_003`.
 
 **Operator authorisation, verbatim (2026-09-27, given in writing after being shown the MAJOR proposals):** *«procedi tu, ti autorizzo su tutto»*. **Mirror ex-post review due** under §21e — see `session_evaluations/2026-09-27_BATCH_20260927_004.md`.
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260928_007` (2026-09-28, ACTOR_ID `orchestrator`), append-only
+
+**Nothing above this line was rewritten.** Operator instruction, verbatim: *«procedi sempre»*. The residue was re-derived against `main` `7352d52`; every op was produced by a reader other than the batch actor and verified by the batch actor against the source bytes before propagation.
+
+**Verdict:** DEFERRED
+
+Unchanged: no artefact and no receipt for PMID 21476439. OpenAlex lists it as hybrid OA at `degruyter.com/document/doi/10.1515/znc-2011-1-210/pdf`, but that host answers automated clients with HTTP 202 and an empty body (tested 2026-09-28). **Unblock:** one manual browser download by the operator.
+
+**Not medical advice.**

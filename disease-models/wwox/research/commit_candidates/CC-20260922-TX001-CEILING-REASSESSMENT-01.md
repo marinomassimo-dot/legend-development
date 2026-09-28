@@ -268,3 +268,15 @@ forward unchanged.
 **Verdict: `PROPAGATED IN PART`.** `OP 1` applied: `TX-001` gains the **conditional ceiling note**, the `READY_MAJOR` half this candidate did not apply itself. §1 was already in the file. `OP 3` is honoured as written: **explicitly no operation** on `Provisional scoring`, and this batch did not re-score. **Residue:** `OP 2`, the three design constraints as rows in `tx001_experiment_decision_packet_20260921.md`, is **not applied** — for the candidate's own reason, that the packet is being edited by the items that own it and a third hand's rows are how a laboratory document acquires two different constraint lists. **What would unblock it:** one owner for that packet's design table.
 
 **Operator authorisation, verbatim (2026-09-27, given in writing after being shown the MAJOR proposals):** *«procedi tu, ti autorizzo su tutto»*. **Mirror ex-post review due** under §21e — see `session_evaluations/2026-09-27_BATCH_20260927_004.md`.
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260928_007` (2026-09-28, ACTOR_ID `orchestrator`), append-only
+
+**Nothing above this line was rewritten.** Operator instruction, verbatim: *«procedi sempre»*. The residue was re-derived against `main` `7352d52`; every op was produced by a reader other than the batch actor and verified by the batch actor against the source bytes before propagation.
+
+**Verdict:** PROPAGATED
+
+`OP 2` is applied: constraints 2–4 of §4 are a new § B.8 of `tx001_experiment_decision_packet_20260921.md`, each with its false-negative direction, and § B.3's normaliser line points to it. Constraint 4 is re-worded to the source's hedge: Davids 2019 says the rise of the short isoform *«may be explained by»*, which §4's *«Davids measured»* overstated. `OP 3` (no re-score) is honoured.
+
+**Not medical advice.**
