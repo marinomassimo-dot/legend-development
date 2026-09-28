@@ -12,11 +12,13 @@ a regeneration shows a reader numbers that no longer describe the repository.
 
 from __future__ import annotations
 
+import io
 import re
 import subprocess
 import sys
 import textwrap
 import unittest
+from contextlib import redirect_stderr, redirect_stdout
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
@@ -990,27 +992,29 @@ class QueueIntegrityTests(unittest.TestCase):
             self._papers_claiming_full_text(noise + "## paper 007\nfull text reviewed\n"), 1)
 
     def test_committed_queue_is_current(self) -> None:
+        """The CLI's own `--check` branch and exit code, run in this process.
+
+        As a subprocess it classified the whole seed from scratch a second time: `build` is
+        memoised per root, and the live-corpus tests below need the same report, so a fresh
+        interpreter repeated ~40 s of the suite's ~90 s (measured 2026-09-28) for an identical
+        answer. `main` is the code path; only the process boundary is gone."""
         self.assertTrue(QUEUE.is_file(), f"missing generated queue: {QUEUE}")
-        result = subprocess.run(
-            [
-                sys.executable,
-                str(ROOT / "framework" / "scripts" / "batch_queue.py"),
-                "--root",
-                str(ROOT),
-                "--check",
-                str(QUEUE),
-            ],
-            capture_output=True,
-            text=True,
-        )
+        argv, out, err = sys.argv, io.StringIO(), io.StringIO()
+        sys.argv = ["batch_queue.py", "--root", str(ROOT), "--check", str(QUEUE)]
+        try:
+            with redirect_stdout(out), redirect_stderr(err):
+                code = bq.main()
+        finally:
+            sys.argv = argv
         self.assertEqual(
-            result.returncode,
+            code,
             0,
             "The committed batch queue has drifted. Regenerate it:\n"
             "  python3 framework/scripts/batch_queue.py "
             "--out disease-models/wwox/registries/batch_queue.md\n"
-            f"{result.stdout}{result.stderr}",
+            f"{out.getvalue()}{err.getvalue()}",
         )
+        self.assertIn("OK:", out.getvalue())
 
 
 class ActionabilityTests(unittest.TestCase):

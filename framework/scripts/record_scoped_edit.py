@@ -27,6 +27,9 @@ or a higher level. Anchors:
 
   --id "CLAIM 006"        a record, by its identity token (`### 🔴 DL-MECH-029 — …` is DL-MECH-029)
   --heading "Changelog"   a section or nested sub-block, by its exact heading text
+    --under "Paper Registry Current"   only with --heading: keep the hit whose enclosing
+                          headings include this exact text (two `## Purpose` sections under
+                          different `#` parents; Benchmark J · J5)
   --preamble              the bytes before the first heading
 
 🔴 AN END NOBODY WROTE DOWN IS NOT A BOUNDARY
@@ -118,6 +121,7 @@ class Op:
     old: str = ""
     new: str = ""
     rename_to: str = ""
+    under: str = ""
     to_eof: bool = False
     """The caller asserts the addressed block really does run to end of file.
 
@@ -133,13 +137,15 @@ class Op:
     @classmethod
     def from_dict(cls, raw: dict[str, Any]) -> "Op":
         known = {k: raw[k] for k in ("op", "id", "heading", "preamble", "text", "old", "new",
-                                     "rename_to", "to_eof") if k in raw}
+                                     "rename_to", "under", "to_eof") if k in raw}
         if known.get("op") not in OPS:
             raise ValueError(f"unknown op {raw.get('op')!r}; expected one of {', '.join(OPS)}")
         return cls(**known)
 
     def anchor(self) -> str:
-        return (f"id={self.id}" if self.id else f"heading={self.heading}" if self.heading
+        return (f"id={self.id}" if self.id
+                else f"heading={self.heading}" + (f" under={self.under}" if self.under else "")
+                if self.heading
                 else "preamble" if self.preamble else "end-of-file")
 
 
@@ -215,6 +221,18 @@ def _span_from(text: str, offset: int, level: int, key: str, kind: str) -> Span:
     return Span(offset, len(text), level, key, kind, to_eof=True, swallowed=swallowed)
 
 
+def enclosing_headings(heads: list[tuple[int, int, int, str]], offset: int) -> list[str]:
+    """The exact texts of the headings that enclose the heading at `offset`: for each strictly
+    lower level, the nearest one before it — the path a reader sees above that heading."""
+    index = next(i for i, h in enumerate(heads) if h[0] == offset)
+    level, out = heads[index][2], []
+    for _o, _l, lv, title in reversed(heads[:index]):
+        if lv < level:
+            out.append(title.strip())
+            level = lv
+    return out
+
+
 def resolve(text: str, op: Op, levels: tuple[int, ...]) -> Span:
     """The one span an anchor names, or a refusal that says why there is not exactly one."""
     heads = _headings(text)
@@ -241,8 +259,14 @@ def resolve(text: str, op: Op, levels: tuple[int, ...]) -> Span:
             if wanted in _fenced_heading_texts(text):
                 raise Refusal("FENCED_ANCHOR", f"heading {wanted!r} exists only inside a code fence")
             raise Refusal("ANCHOR_MISSING", f"no heading {wanted!r}")
+        if op.under:
+            parent = op.under.strip()
+            hits = [h for h in hits if parent in enclosing_headings(heads, h[0])]
+            if not hits:
+                raise Refusal("ANCHOR_MISSING", f"no heading {wanted!r} under {parent!r}")
         if len(hits) > 1:
-            raise Refusal("ANCHOR_AMBIGUOUS", f"heading {wanted!r} occurs {len(hits)} times")
+            raise Refusal("ANCHOR_AMBIGUOUS", f"heading {wanted!r} occurs {len(hits)} times"
+                          + (f" under {op.under.strip()!r}" if op.under else ""))
         offset, level, title = hits[0]
         index = next(i for i, h in enumerate(heads) if h[0] == offset)
         own_end = heads[index + 1][0] if index + 1 < len(heads) else len(text)
@@ -322,6 +346,8 @@ def _check_bounded(span: Span, op: Op) -> None:
 
 def apply_one(text: str, op: Op, levels: tuple[int, ...]) -> tuple[str, dict[str, Any]]:
     """Apply one operation to `text` and prove its scope, or raise `Refusal`."""
+    if op.under and not op.heading:
+        raise Refusal("ANCHOR_MISSING", "--under qualifies a --heading and names nothing alone")
     cut = min(levels)
     before_blocks = rr.partition(text, levels)
     before_ids = [k for _o, _lv, k in identity_headings(text, levels)]
@@ -533,13 +559,16 @@ def main(argv: list[str] | None = None) -> int:
         p.add_argument("--json", action="store_true")
         if name == "apply":
             p.add_argument("--ops", type=Path, required=True,
-                           help="JSON list of {op, id|heading|preamble, text|old|new, rename_to}")
+                           help="JSON list of {op, id|heading[+under]|preamble, text|old|new, rename_to}")
             continue
         if name != "append":
             group = p.add_mutually_exclusive_group(required=True)
             group.add_argument("--id", default="")
             group.add_argument("--heading", default="")
             group.add_argument("--preamble", action="store_true")
+            p.add_argument("--under", default="",
+                           help="with --heading: the exact text of an enclosing heading, to "
+                                "choose between sections that share a heading")
             p.add_argument("--to-eof", action="store_true",
                            help="assert that the addressed block really runs to end of file; "
                                 "without it an op on a span whose end the file does not state, "
@@ -588,6 +617,7 @@ def main(argv: list[str] | None = None) -> int:
                       old=_arg_text(getattr(args, "old", None), getattr(args, "old_file", None)),
                       new=_arg_text(getattr(args, "new", None), getattr(args, "new_file", None)),
                       rename_to=getattr(args, "rename_to", "") or "",
+                      under=getattr(args, "under", "") or "",
                       to_eof=bool(getattr(args, "to_eof", False)))]
     except (OSError, ValueError, TypeError) as error:
         print(f"invalid invocation: {error}", file=sys.stderr)
