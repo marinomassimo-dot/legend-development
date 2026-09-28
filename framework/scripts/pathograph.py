@@ -66,6 +66,12 @@ almost all of them noise. Deleting them would have taken *"WWOX loss reduced mye
 with them, so they are kept, marked `AMBIGUOUS_BARE_FORM` and sorted to the back of the
 review queue. Neither limit is hidden: both are reported in the output.
 
+🔴 On 2026-09-28 the second limit was found to be under-declared rather than hidden: the
+quarantine was in `morphology` and in the queue order, while `connective_class` went on saying
+`CAUSAL` about *"mitochondrial quality control"*. It now says `AMBIGUOUS_LEXICAL_FORM`, and
+the lexicon class moves to its own field. The before/after pair and the measurement of the
+whole arm-noun class are at `AMBIGUOUS_CLASS` below.
+
 ## Coverage is reported, never assumed
 
 Most locator-backed propositions belong to papers that no claim declares as a source. A
@@ -200,6 +206,78 @@ AMBIGUOUS_FORMS = frozenset({
     "impaired", "produce", "reduce", "reduced", "rescue", "rescued", "restored",
     "block", "blocks", "trigger", "suppressed", "disrupted", "induced",
 })
+
+# 🔴 THE CLASS OF AN AMBIGUOUS WORD IS AMBIGUITY (2026-09-28)
+# ----------------------------------------------------------
+# Quarantining these forms to the back of the queue was half the repair. The other half was
+# missing for as long as the export also wrote `"connective_class": "CAUSAL"` next to them, and
+# a reader — human or tool — takes a field named `connective_class` at its word. It was read at
+# its word: a Scientist pass measured `"…against a time-matched **control** of ~0.87"` emitting
+# `connective: control`, `connective_class: CAUSAL`, and reported it as an arm noun read as a
+# causal connective. The disambiguator existed, in `morphology` and in two lines of output
+# prose, one field away from the assertion it qualified. A caveat one field away from the claim
+# it limits is the failure mode this repository is named after.
+#
+# MEASURED BEFORE (`pathograph_export.jsonl` at `dbb05cc`, 628 relational propositions):
+#
+#   `control` primary                                                            157
+#   `controls` primary                                                             34
+#   any `control` hit anywhere in `connectives_all`                                222
+#   ALL ambiguous bare forms as primary, every one of them typed `CAUSAL`      395 / 628
+#
+# The 222 held across a regeneration, which is what proved the defect is in this parse and not
+# in a stale surface. So the repair is here, and a regeneration is the proof rather than the fix.
+#
+# MEASURED AFTER, same 628 propositions, nothing dropped and nothing hand-edited:
+#
+#   propositions typed `CAUSAL`                                      532 -> 137
+#   propositions typed `CAUSAL` through a `control` hit              222 -> 0
+#   propositions emitted / lost                                      628 -> 628 / 0
+#   claim titles in the self-relational table whose stated "relation" is a bare
+#       noun or adjective, and which used to read `CAUSAL`: 5 of 19 — `CLAIM 004`
+#       and `CLAIM 011` (`rescue`), `CLAIM 005` (`reduced`), `CLAIM 009`
+#       (*"mitochondrial quality control"*) and `CLAIM 031` (*"seizure control"*).
+#       The hand-off expected at least three.
+#
+# The 137 that remain are finite or multi-word forms — `causes`, `induces`, `abolishes`,
+# `perturbs`, `destabilizes`, `suppresses` — and none of them is a noun in this corpus. That
+# is the number this layer can actually support, and it was 532 the day before.
+#
+# 🔴 THE HAND-OFF'S OWN MEASURING COMMAND STILL RETURNS 222, AND THAT IS CORRECT.
+# `grep -c "CAUSAL:control" disease-models/wwox/analysis/data/pathograph_export.jsonl` reads
+# `connectives_all`, which is the *lexicon's* record — "the closed lexicon matched the string
+# `control`, under its CAUSAL entry" — and that statement was and remains true. It is the
+# provenance of the match, deliberately raw, and rewriting it would destroy the only field that
+# says what the instrument actually did. The field that was wrong is the one that types the
+# proposition, and it is the one that changed. Anyone re-measuring this repair must ask for
+# that field, not for the lexicon's receipt:
+#
+#   after (0):   grep -c '"connective": "control", *"connective_class": "CAUSAL"' <export>
+#   or, robustly, over `connective` + `connective_class` together:
+#     python3 -c 'import json,sys; rows=[json.loads(l) for l in open(sys.argv[1])]; \
+#       print(sum(1 for r in rows if r.get("connective","").lower() in {"control","controls"} \
+#       and r.get("connective_class")=="CAUSAL"))' <export>
+#
+# A reader who greps the receipt and concludes nothing changed would be making, on this file,
+# exactly the mistake this file exists to prevent: reading a provenance record as a verdict.
+#
+# 🔴 AND THE ARM-NOUN CLASS WAS MEASURED BEFORE `control` WAS TOUCHED, because fixing the
+# instance a census happened to catch is how the next one survives. The other members —
+# `vehicle`, `sham`, `baseline`, `comparator`, `untreated`, `mock` — are **not in the lexicon at
+# all** and cannot misparse: they are nouns only, so they never entered a lexicon of relational
+# verbs. Occurrences in the 628 propositions, for the record: untreated 13, comparator 12,
+# baseline 9, mock 5, sham 1, vehicle 0 — every one of them invisible to `find_connectives`.
+# `control`/`controls` are the *only* arm nouns here, and only because they double as verbs
+# (*"WWOX controls partner-protein function"*). That is why the repair is keyed on the
+# noun/verb ambiguity that put them in the lexicon, not on an arm-noun list: an arm-noun list
+# would have had one entry and would have missed `reduced` (60), `rescue` (37) and `increase`
+# (24), which are the same defect in a different word.
+#
+# What is NOT done here: guessing the part of speech. *"quality control"* and *"WWOX controls"*
+# are separated by grammar this tool has no parser for, and a determiner heuristic misses
+# *"mitochondrial quality control"* on the first sentence tried. Declaring the ambiguity is
+# what the parse can support; resolving it is a reading, and a reading is the Scientist's.
+AMBIGUOUS_CLASS = "AMBIGUOUS_LEXICAL_FORM"
 
 # Node attributes that exist in the operator's model of this layer but nowhere in the
 # registries. They are emitted at their real state so the report distinguishes "annotation
@@ -522,7 +600,12 @@ class Pathograph:
             "source_ref": source_ref,
             "text": text,
             "connective": primary.text,
-            "connective_class": primary.klass,
+            # 🔴 An ambiguous bare form does NOT carry its lexicon class into this field. See
+            # THE CLASS OF AN AMBIGUOUS WORD IS AMBIGUITY above: the lexicon class is kept,
+            # under its own name, and `connective_class` stops saying `CAUSAL` about a word
+            # this corpus uses as a noun.
+            "connective_class": AMBIGUOUS_CLASS if primary.ambiguous else primary.klass,
+            "lexicon_class": primary.klass,
             "connectives_all": sorted({f"{hit.klass}:{hit.text}" for hit in hits}),
             "morphology": "AMBIGUOUS_BARE_FORM" if primary.ambiguous else "FINITE_OR_MULTIWORD",
             # A split on a string, presented as a split on a string. Which biological entity
@@ -751,6 +834,7 @@ class Pathograph:
                     "title": candidate["text"],
                     "connective": candidate["connective"],
                     "connective_class": candidate["connective_class"],
+                    "lexicon_class": candidate["lexicon_class"],
                     "morphology": candidate["morphology"],
                     "candidate_id": candidate["candidate_id"],
                 })
@@ -1116,6 +1200,14 @@ def render_markdown(graph: dict, command: str) -> str:
     out.append("")
     out.append("A connective class is a property of the word, not a verdict about the")
     out.append("relationship. An `ASSOCIATIVE` connective does not make an edge `ASSOCIATED`.")
+    out.append("")
+    out.append("🔴 `AMBIGUOUS_LEXICAL_FORM` is the class of the 20 bare forms this corpus uses")
+    out.append("as nouns and adjectives at least as often as verbs — `control` (*\"mitochondrial")
+    out.append("quality control\"*, *\"a time-matched control\"*), `reduced` (*\"reduced g-ratio\"*),")
+    out.append("`rescue`, `increase`, `block`. They keep their lexicon class in the export's")
+    out.append("`lexicon_class` field and they stay in the queue; what they no longer do is")
+    out.append("appear as `CAUSAL` in the field a reader reads. Which of them is a relation in")
+    out.append("its sentence is a reading, and this tool does not perform readings.")
     out.append("")
     out.append("### 5.1 Candidates bound to a claim node")
     out.append("")

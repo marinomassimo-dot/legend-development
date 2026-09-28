@@ -233,6 +233,53 @@ class CandidatesAreExtractedNeverResolved(unittest.TestCase):
         self.assertEqual(by_claim["CLAIM 001"]["morphology"], "AMBIGUOUS_BARE_FORM")
         self.assertEqual(by_claim["CLAIM 002"]["review_priority"], "NORMAL")
         self.assertEqual(by_claim["CLAIM 002"]["morphology"], "FINITE_OR_MULTIWORD")
+        # The quarantine reaches the class field too, and the lexicon class is not lost.
+        self.assertEqual(by_claim["CLAIM 001"]["connective_class"], "AMBIGUOUS_LEXICAL_FORM")
+        self.assertEqual(by_claim["CLAIM 001"]["lexicon_class"], "CAUSAL")
+        self.assertEqual(by_claim["CLAIM 002"]["connective_class"], "CAUSAL")
+        self.assertEqual(by_claim["CLAIM 002"]["lexicon_class"], "CAUSAL")
+
+    def test_an_arm_noun_is_not_typed_as_a_causal_connective(self) -> None:
+        """🔴 The defect measured on 2026-09-28, as its own case.
+
+        *"…against a time-matched control of ~0.87"* emitted `connective_class: CAUSAL`, and
+        the field a reader reads was the one that was wrong: the disambiguator sat in
+        `morphology`, one field away. 222 of 628 propositions were reachable through a
+        `control` hit and the count survived a regeneration, which is what located the defect
+        in this parse. The proposition is still emitted — deleting it was always the wrong
+        repair — it is simply no longer typed causal.
+        """
+        with tempfile.TemporaryDirectory() as raw:
+            tmp = build(Path(raw), claims="".join([
+                claim("001", "G-ratio fell against a time-matched control of ~0.87"),
+                claim("002", "WWOX deficiency alters mitochondrial quality control and redox"),
+                claim("003", "WWOX controls partner function by subcellular rerouting"),
+            ]))
+            graph = assemble(tmp)
+        by_claim = {candidate["bound_claims"][0]: candidate
+                    for candidate in graph["candidates"]
+                    if candidate["source_kind"] == "claim_title"}
+        for cid in ("CLAIM 001", "CLAIM 002", "CLAIM 003"):
+            self.assertIn(cid, by_claim, "the proposition was dropped, not reclassified")
+            self.assertEqual(by_claim[cid]["connective"], "control"
+                             if cid != "CLAIM 003" else "controls")
+            self.assertEqual(by_claim[cid]["connective_class"], "AMBIGUOUS_LEXICAL_FORM")
+            self.assertEqual(by_claim[cid]["lexicon_class"], "CAUSAL")
+        # 🔴 `CLAIM 003` is the verb sense, and it is treated identically. That is the point:
+        # this tool declares the ambiguity, it does not resolve it. Resolving it is a reading.
+
+    def test_the_other_arm_nouns_are_not_in_the_lexicon_at_all(self) -> None:
+        """Constraint measured before `control` was touched, so the class is not fixed by instance.
+
+        `vehicle`, `sham`, `baseline`, `comparator`, `untreated`, `mock` are nouns only, so
+        they never entered a lexicon of relational verbs and cannot misparse. `control` is in
+        the lexicon *because it doubles as a verb*, which is why the repair is keyed on the
+        noun/verb ambiguity and not on a list of arm nouns.
+        """
+        for word in ("vehicle", "sham", "baseline", "comparator", "untreated", "mock"):
+            self.assertEqual(
+                [], pathograph.find_connectives(f"measured against the {word} at 80 days"),
+                f"{word} has entered the lexicon; the arm-noun measurement needs redoing")
 
     def test_an_unambiguous_form_anchors_the_split_wherever_it_sits(self) -> None:
         with tempfile.TemporaryDirectory() as raw:
