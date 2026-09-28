@@ -482,7 +482,8 @@ under explicit operator authorisation), subsequently refined by `BATCH_20260927_
 `BATCH_20260927_003`, `BATCH_20260927_004` and `BATCH_20260928_001`. **Evidence:** the five deltas
 are all on `main` in the records and with the wording quoted in the table above; the batch id is
 present in three files on `main`; and the candidate's own append-only propagation block, with its
-five verification conditions and its one declared drop, is at lines 335–426 of this file.
+five verification conditions and its one declared drop, opens at line 303 of this file and runs
+to the line before this section.
 
 🔴 **Its central assertion no longer holds, because the headline it called false has since
 changed.** The candidate's finding in one sentence is that *"`CLAIM 005` contains the sentence
