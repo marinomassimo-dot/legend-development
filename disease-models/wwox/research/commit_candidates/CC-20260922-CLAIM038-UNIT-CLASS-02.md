@@ -277,3 +277,121 @@ was applied: OP 1 and OP 2 above touch `claim_registry_current.md` and therefore
 
 **Gate state at this landing:** see the task's session report. `legend_lint` no BLOCK ·
 `fulltext_receipts.py verify` OK, 259 chained · publication gate PASS, 0 blocks.
+
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260928_003` (2026-09-28, ACTOR_ID `scientist`), append-only
+
+**Nothing above this line was rewritten.** **Status: `PROPAGATED`**
+**Verdict:** PROPAGATED
+
+`BATCH_20260928_003`: MINOR, MANUAL, `WM_v7.2` → **`WM_v7.3`**, under the operator's standing
+authorisation of 2026-09-28 given in writing, verbatim: ***«procedi, ti autorizzo a migliorare tutto
+quello che trovi… l'autorizzazione supera anche cose fatte da me in passato»***. Base `main`
+`6b41e25`, branch `task/batch-20260928-003`. **Its two declared ops were propagated as four**, and the
+two additions are stated below rather than folded in silently.
+
+🔴 **Δ1′ retracts canon, and the argument was verified first-hand before a byte was written — it
+HOLDS.** `page_adjudications/PMID17803050/README.md` states verbatim that the text surface *«is
+`SUSPECT` and refused by `deepdive_manifest.py`: its PDF text layer carries 34 C0 controls plus roughly
+145 printable substitutions. It cannot back a locator. **The rendered page adjudicates.**»*; its *«the
+page prints»* column, read row by row, restores `<`, `±`, `⁺`, `⁻` and `χ²` for the adjudicated
+locators and **names no unit on either of the two rows at issue**, writing their text-layer side as
+`BUN …` / `GLU …`; and the confirmed substitution map includes **`q → ±` on the BUN row itself**.
+`adjudications.json` was loaded and searched: the two needles `"BUN (mg/ml)"` and `"GLU (mg/ml)"` are
+present **verbatim and exactly once each**, at `artifacts[1].adjudicates[0].needle` and
+`artifacts[1].adjudicates[1].needle`, and the file's own `needles.why` requires that each needle *«is
+also a fragment of the snippet of the locator it adjudicates»* — so the needle is by construction drawn
+from the `SUSPECT` layer and matched against it. **A needle cannot adjudicate the character it is made
+of.** The unit is `UNADJUDICATED` in both directions; `mg/ml` stands exactly as transcribed, nothing is
+normalised, and §28 is honoured. Δ4 was already applied to that README by the landing task and was
+re-read here in place.
+
+⚠️ **The retraction needed two ops the candidate did not name, because the retracted conclusion was
+carried in two further canonical places.** The candidate's `OP 1` replaces only the trailing sentence
+of `CLAIM 038`'s unit note. Measured at `6b41e25`, the same conclusion was also asserted by **(a)** that
+note's own bolded header, *«**Nota di unità — è un difetto DELLA FONTE, non della nostra
+trascrizione**»*, and **(b)** `CLAIM 036`'s *«Vincolo di confronto»*, *«quelle del ratto in `CLAIM 038`
+sono stampate in `mg/ml` dalla **loro** fonte, con l'unità sbagliata all'origine»*. Retracting the
+sentence and leaving the header and the cross-reference asserting it would have left the record
+contradicting itself, so both were corrected in the same act, each carrying its superseded wording
+verbatim. Those are the only two: `sbagliata alla fonte`, the note header and `l'unità sbagliata
+all'origine` were grepped across all four current files and `disease_model.md`, and after this batch
+**no canonical record asserts that the source misprints the unit**.
+
+🔴 **Δ3's creatinine zero was re-derived, and the candidate's surface count was wrong.** The readiness
+section declares *«**both** surfaces this repository holds for PMID 19936220»* and names two. This
+repository holds **three**: `research/deepdive_manifests/PMID19936220.json`,
+`research/fulltext_dossiers/PMID19936220.md` and
+`research/session_evaluations/2026-08-06_PMID19936220.md` — which is what the candidate's own **body**
+§4 says (*«the complete set of three surfaces»*), so the readiness section contradicts the body it
+summarises. Re-measured case-insensitively on all three: `creatinin|creatinina` → **0 · 0 · 0**, with
+`BUN` as positive control → **1 · 3 · 1** and every one of the 20 `\bCRE\b` hits resolving to the
+**`Cre` recombinase** (`EIIA-Cre`, `Cre-loxP`, `Cre-Recombinase Deletion`, `BK5-Cre`). The dossier's
+P18 blood-chemistry table carries **glucose, total CO₂, BUN, calcium and WBC** and **no creatinine
+row**. The finding is therefore **stronger** than declared — zero on three surfaces, not two — and the
+propagated text says *three*. **Δ3 stands.**
+
+⚠️ **Δ3 was propagated in a different shape than written, for a structural reason.** The candidate's
+`OP 2` `new` appends an `**Evidence boundary — creatinina, misurata in UN SOLO modello:**` line
+**immediately after the `**Title:**` line**. `CLAIM 038` already has an `**Evidence boundary:**` field,
+and that placement would have created a second `Evidence boundary`-prefixed field wedged between
+`Title` and `Status`, breaking the record's field order and duplicating a field name. The title
+narrowing was propagated exactly as written; the creatinine boundary was appended **inside the
+existing `Evidence boundary` field**, with the same content and the same `REVIVAL_TRIGGER`. Nothing was
+dropped.
+
+🔴 **A fourth op the candidate did not name, and it was mandatory.** `working_model_current.md`
+`BLOCK 2` is the claim-registry mirror and the file itself states it *«must stay synchronized with
+[the registry] (a LINT consistency rule)»*. Its row `038` carried the same title clause — *«Elevated
+BUN and creatinine recur across Wwox rodent models»* — so narrowing the claim's `Title` without the
+mirror row would have left the model asserting in one file what it had just withdrawn in another. The
+mirror row is narrowed with the title, and it names the correction and its candidate.
+
+| op | record | file | verdict |
+|---|---|---|---|
+| `OP 1` (Δ1′) | `CLAIM 038` unit-note sentence | claim registry | ✅ PROPAGATED — retracts canon |
+| **added** | `CLAIM 038` unit-note **header** | claim registry | ✅ PROPAGATED — same retraction, carried |
+| `OP 2` (Δ3) | `CLAIM 038` `Title` | claim registry | ✅ PROPAGATED |
+| `OP 2` (Δ3) | `CLAIM 038` `Evidence boundary` | claim registry | ✅ PROPAGATED — re-placed, see above |
+| **added** | `CLAIM 036` *«Vincolo di confronto»* | claim registry | ✅ PROPAGATED — same retraction, carried |
+| **added** | `BLOCK 2` mirror row `038` | working model | ✅ PROPAGATED — § 4.6 sync rule |
+| Δ2 | — | — | ⚪ NOT AN OP — already propagated by `BATCH_20260927_003`, carried forward verbatim |
+| Δ4 | `page_adjudications/PMID17803050/README.md` | non-canonical | ⚪ ALREADY APPLIED outside a batch, re-read in place here |
+
+**The flagged spread did NOT reach canon, and that is a measurement, not a reassurance.** The candidate
+warns that `CC-20260921-CLAIM032-HYPOMORPH-PREMISE-01` §2 attributes creatinine to the mouse read and
+that the candidate is already `PROPAGATED` (`BATCH_20260926_ALDAZ_R6`). Read by record with
+`registry_records.py get --id "CLAIM 032"` and then measured on the raw record bytes, **`CLAIM 032`
+carries zero occurrences of `creatinin`, `BUN`, `19936220` and `17803050`** — the clause never landed
+in the claim. Mapping every `creatinin`/`creatinina` occurrence in the two large registries to its
+owning record: **three in `claim_registry_current.md`, all in `CLAIM 038`** (its title, its rat
+chemistry line and a field-density search string), and **two in `paper_registry_current.md`, both in
+`PAPER 059`**, the rat primary, where creatinine is correctly attributed. 🔴 **So no canonical
+correction was owed for the spread, and none was invented.** What is owed is a correction to the
+*candidate document* `CC-20260921-CLAIM032-HYPOMORPH-PREMISE-01` §2 itself, which still says
+*«hypoglycaemia, raised BUN and creatinine on LEGEND's own complete reads of `19936220` and
+`17803050`»* against a mouse surface that holds no creatinine measurement. That is a research-layer
+document, not one of the four current files, and it is **recorded here as a follow-up** rather than
+edited in this batch's canonical op list.
+
+**What this batch refused to widen.** `-01`'s §6.2 — re-verifying `CLAIM 036`'s mouse figures against
+PMID 19936220's own table — stays open and is not claimed. No unit was rewritten anywhere. No
+statement that the source misprints the unit was substituted for the one retracted: `UNADJUDICATED` is
+weaker in **both** directions, which is the point. `CLAIM 038`'s `Status` (`in observation`), `Type`,
+`Transferability`, `clinical relevance` and every direction and significance verdict are untouched,
+and *«uremico senza essere ipoglicemico»* stands.
+
+**No blind locator audit was due and none was run**, for the reason the readiness section gives and
+which was re-checked against the trigger: `CLAIM 038` is `in observation`, not `consolidated baseline`,
+and this batch declares `MINOR`.
+
+**Gates on the post-propagation tree:** `legend_lint.py` **WARN**, no BLOCK, warning set identical to
+pre-flight; `growth_anchors check` **PASS**, cardinality unchanged; `public_release_gate.py` **PASS, 0
+blocks**; `fulltext_receipts.py verify` → `OK: 260 chained`, **no receipt written**;
+`test_scientific_consistency.py`, `test_canonical_structure.py`, `test_trace_claim_foundation.py`,
+`test_fulltext_trace_contract.py`, `test_pathograph.py`, `test_manifest_receipt_provenance.py` and the
+four DisMech suites all exit **0**.
+
+**Not medical advice.**

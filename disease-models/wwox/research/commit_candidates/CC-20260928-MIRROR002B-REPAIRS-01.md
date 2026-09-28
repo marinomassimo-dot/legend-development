@@ -550,3 +550,128 @@ generated surface is touched by this package**.
   license it.
 
 **Not medical advice.**
+
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260928_003` (2026-09-28, ACTOR_ID `scientist`), append-only
+
+**Nothing above this line was rewritten.** **Status: `PROPAGATED`**
+**Verdict:** PROPAGATED
+
+`BATCH_20260928_003`: MINOR, MANUAL, `WM_v7.2` → **`WM_v7.3`**, under the operator's standing
+authorisation of 2026-09-28 given in writing, verbatim: ***«procedi, ti autorizzo a migliorare tutto
+quello che trovi… l'autorizzazione supera anche cose fatte da me in passato»***. Base `main`
+`6b41e25`, branch `task/batch-20260928-003`. All **11** declared operations applied; **0** deferred,
+**0** refused; `record_scoped_edit` refused nothing.
+
+**Every `old` was re-measured by the verifier, not inherited.** All eleven occur **exactly once** in
+their file and once in their addressed record, measured at `6b41e25` before anything was written. The
+five "before" character counts of §2.6 reproduced **exactly** — claim registry 197 111, paper registry
+601 712, literature log 521 670, working model 101 156, `disease_model.md` 23 132 — so the base the
+simulation was run against is the base that was propagated.
+
+**The fingerprinted artefact was re-hashed equal**:
+`files/fulltext/PMID36779245_Oliver2023_PMC_2026-09-27.xml` =
+`780f42de9b3982fa5bf9bf1e6bb76f71384c943aa197fb2d4de80be7ac7e7a34`, read in the root checkout.
+**All 16 locator triples of §3 were re-verified against those bytes by an independent re-parse of the
+JATS markup** — 6 `table-wrap` elements, the first labelled `TABLE 1`, caption *"Genetic and
+neurological examination features."*, **22 `tr` rows**; the `Examination` rows 11–22 carry 14 cells
+with no `colspan`, the `Genetics` rows 4–9 carry 13 because the **ninth data cell** bears
+`colspan="2"` and covers patients **9–10**, after both patients of interest. T1–T12 reproduce cell for
+cell: three axes at zero variance (`Intellectual disability` `Profound` 13/13, `Walking/ambulant` `No`
+13/13, **`Axial hypotonia` `Yes` 13/13**), `Speech` at three distinct values modal 11/13, `Movement
+disorder` at six distinct values modal 5/13, `Short stature` 7/6 with patients 2 and 5 differing,
+`Scoliosis` 9/13, `Acquired microcephaly` 10/13, `Spasticity/limb hypertonia` 10/13, `Facial
+dysmorphisms` and `Feeding tube` and `Ophthalmologic features` 11/13. T13–T16 reproduce too, including
+the abbreviation key's `ES, exome sequencing`.
+
+🔴 **F4's second limb stays CONTESTED and the batch did not close it.** T15's negative was tested
+rather than accepted: the Methods § 2.3 quotation is verbatim in the artefact, and a full-text search
+of the artefact for `panel` returns **five** occurrences — the Methods sentence, three inside Table 1
+itself, the antiepileptic abbreviation key (*perampanel*) and the Discussion's *«multiexon gene panels
+and a move toward genome (over exome) sequencing»* — and **not one of them states what any
+laboratory retained outside its panel**. Whether patients 2 and 5 were equally screened is therefore
+**not decidable on this artefact**, `C30-2` writes it as an **OPEN boundary** with its
+`REVIVAL_TRIGGER`, and no op of this batch asserts unequal screening.
+
+**§ 7.2 was checked element by element on all three working-model rows.** `WM-1`, `WM-2` and `WM-3`
+each carry, **inside the row they correct**, (1) the correcting candidate `CC-20260928-MIRROR002B-REPAIRS-01`
+and the date 2026-09-28, (2) the superseded wording **verbatim** — *«which of the two targets
+`framework/protocols/fulltext_read_receipt.md` leaves open a manifest's `receipt` field names»*, *«so
+the concordance is the absence of a discriminating axis in that table»*, *«one of the two targets the
+receipt protocol leaves open»* — each of which was verified to be a literal substring of the `old`
+string it replaces, and (3) nothing else: the bytes around each replaced string are unchanged, no row
+is re-dated, no `frozen`/`released` date, version label or batch id moves, and **no row's stated
+conclusion is overwritten** — the `WM_v7.2` row keeps its own conclusion that the reviewer's *«all 13,
+zero variance»* is false on `Speech`, and the new `WM_v7.3` row names the row it corrects so a reader
+has both routes.
+
+| op | record | file | verdict |
+|---|---|---|---|
+| `C2-1` | `CLAIM 002` | claim registry | ✅ PROPAGATED |
+| `C30-1` | `CLAIM 030` | claim registry | ✅ PROPAGATED (narrowing) |
+| `C30-2` | `CLAIM 030` | claim registry | ✅ PROPAGATED (narrowing, boundary left OPEN) |
+| `PR-1` | `PAPER 001` | paper registry (full rewrite) | ✅ PROPAGATED |
+| `P118-1` | `PAPER 118` | paper registry (full rewrite) | ✅ PROPAGATED |
+| `P118-2` | `PAPER 118` | paper registry (full rewrite) | ✅ PROPAGATED — discharges `REP-26` |
+| `LIT-1` | `LIT-0420` | literature log | ✅ PROPAGATED — discharges `REP-26` |
+| `WM-1` | `Working Model Current` l. 7 | working model | ✅ PROPAGATED (§ 7.2) |
+| `WM-2` | `Changelog`, `WM_v7.2` row | working model | ✅ PROPAGATED (§ 7.2) |
+| `WM-3` | `Changelog`, `WM_v7.2` row | working model | ✅ PROPAGATED (§ 7.2) |
+| `DM-1` | `WM v7.0 → v7.1` paragraph | `disease_model.md` | ✅ PROPAGATED (narrowing) |
+
+**Measured after propagation, not predicted.** claim registry 197 111 → **203 845** and paper registry
+601 712 → **604 347** and literature log 521 670 → **522 451** and working model 101 156 → **108 927**
+— all four larger than §2.6 forecast, because this batch merged a second candidate into the same op
+lists (see the collision note below); `disease_model.md` 23 132 → **23 822**, which is §2.6's figure
+**exactly**. Per-op deltas measured: `C2-1` +484 (forecast +484), `C30-1` +1 643 (+1 643), `C30-2`
++1 757 (forecast +1 756), `PR-1` +497 (+497), `P118-1` +564 (+564), `P118-2` +1 574 (forecast
++1 576), `LIT-1` +604 (forecast +605), `WM-1` +377 (+377), `WM-2` +595 (+595), `WM-3` +326 (+326),
+`DM-1` +690 (+690). **Three forecasts were off by one or two characters and are recorded as such**;
+none changes a verdict.
+
+**The full-rewrite guard held at block level, which is the check §2.2 asked for.** `record_scoped_edit
+blocks` on `paper_registry_current.md` before and after: **482** blocks (469 records + 13 sections),
+**same key set and same order**, diffed mechanically; the preamble byte-identical; **108** `PAPER`
+records before and after; `PAPER 019` / `055` / `056` byte-identical; exactly **two** blocks differ,
+`PAPER 001` and `PAPER 118`. §2.2's *«482 level-2 blocks»* is correct under the tool's own partition
+(a raw `^## ` count gives 480 — the difference is the file's level-1 sections, and the candidate's
+figure is the one the tool reports).
+
+⚠️ **Two records of this candidate were merged with a second candidate's ops, and whose wording won is
+recorded.** `claim_registry_current.md` carried **eight** ops in one atomic batch, not three: this
+candidate's `C2-1`, `C30-1` and `C30-2`, plus four ops from
+[`CC-20260922-CLAIM038-UNIT-CLASS-02`](CC-20260922-CLAIM038-UNIT-CLASS-02.md) on `CLAIM 038` and one
+on `CLAIM 036`. **No two ops touched the same record**, so no wording had to be chosen over another:
+`CLAIM 002` / `CLAIM 030` are this candidate's alone and its wording is what landed verbatim.
+`literature_tracking_log_current.md` carried **two** ops — this candidate's `LIT-1` on `LIT-0420` and
+the `LIT-0337` note op from `CC-20260914-15870886-01`, again disjoint records.
+`working_model_current.md` carried **seven** — this candidate's three plus one `BLOCK 2` mirror-row op
+the other candidate obliged and three Phase-4.6 additions.
+
+**Gates on the post-propagation tree.** `legend_lint.py` **WARN**, no BLOCK, and the warning set is
+**identical** to the pre-flight set — this batch introduced none. `fulltext_receipts.py verify` →
+`OK: 260 chained receipt(s), tail anchored`; 🔴 **no receipt was written or recorded by this batch**,
+as the dispatch required, so the prepared `FTR-20260928-36779245-06` of §5(e) is still unappended and
+still owed to whoever holds the ledger. `growth_anchors check` **PASS**, cardinality unchanged at
+`claims=41 · papers=108 · corpus=361 · literature=401 | registry_only=10 | unread_premises=0`, so **no
+`growth_anchors record` was due**; the backlog moved 17 → 15 and the declared pre-existing
+`CHECK_ERROR` on `CC-20260922-CLAIM025-SIGN-INVARIANCE-01` is untouched. `public_release_gate.py`
+**PASS, 0 blocks**. `reseal_dismech_baseline.py --check` was run and **no sealed block drifted**: the
+sidecar regenerated **byte-identical**, none of `CLAIM 016 / 024 / 035` or `PAPER 019 / 055 / 056` was
+touched, and **no `--absorb` and no new revision ordinal were owed** — exactly as §7 predicted.
+
+**§1.1 conditions 6 and 7 stay untested here too**, for the reason the candidate gives, and the
+protective fact was re-verified rather than inherited: no op of this batch touched any of the six
+sealed blocks.
+
+**Carried forward, unchanged, and owed to somebody else:** the three Harness Engineering hand-offs of
+§6 (`F9` on the Phase-3 restore command, `F5` on the `record_scoped_edit` docstring, `F6` on the
+resealer's help line) — nothing under `framework/`, `governance/`, `scripts/`, `roles/` or `.claude/`
+was written by this batch either. 🔴 **One addition to `F9`, measured by this batch:** the pre-batch
+commit it asks Phase 3 to record is `6b41e25c8b0a1365a0d7e525f943c4b20335b67d`, and the correct
+restore for this batch after its propagation commit is therefore
+`git checkout 6b41e25 -- <path>`, not `git checkout -- <path>`.
+
+**Not medical advice.**
