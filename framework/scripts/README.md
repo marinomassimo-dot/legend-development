@@ -139,7 +139,7 @@ Run everything as `python3 <path> --help` first. Paths are repo-relative.
 |---|---|
 | the post-batch self-evaluation gate | `framework/scripts/session_self_eval.py` |
 | the mechanical backup/restore phases of `BATCH_COMMIT`, and its Phase 4 record-scoped propagation (`propagate --file … --ops …`, refused for the paper registry) | `framework/scripts/batch_commit.py` |
-| edit **one record or range** of a Markdown registry — every other byte proven unchanged — or be refused (duplicate id, fenced heading, nested record, re-segmentation); dry run by default, atomic batch with `apply --ops` | `framework/scripts/record_scoped_edit.py replace --file … --id "CLAIM 006" --text-file …` |
+| edit **one record or range** of a Markdown registry — every other byte proven unchanged — or be refused (duplicate id, fenced heading, nested record, re-segmentation, or an **unbounded span** — the last block at its level has no heading to close it, so an end assumed to be EOF that covers other headings is refused until `--to-eof` says the record really reaches it); dry run by default, atomic batch with `apply --ops` | `framework/scripts/record_scoped_edit.py replace --file … --id "CLAIM 006" --text-file …` |
 | land a committed, verified task, detach its worktree, delete its branch | `framework/scripts/task_close.py` |
 | what is not on `main` and how old it is — the weekly §21e sweep | `framework/scripts/branch_hygiene.py` |
 | local commits or dirty worktrees absent from development `main` — daily, read-only report | `framework/scripts/daily_push_check.py` |

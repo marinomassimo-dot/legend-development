@@ -29,6 +29,19 @@ or a higher level. Anchors:
   --heading "Changelog"   a section or nested sub-block, by its exact heading text
   --preamble              the bytes before the first heading
 
+🔴 AN END NOBODY WROTE DOWN IS NOT A BOUNDARY
+---------------------------------------------
+A block runs to the next heading at or above its level — and the LAST block at its level has no
+such heading, so its end was silently taken to be EOF. In `working_model_current.md` that made
+`id: BLOCK 3` span 49194 → 96155 and cover `## Changelog` and every batch section after it: the
+containment this tool exists to make executable was not in force, and the next `id:`-anchored edit
+on that record could land in the changelog. Such a span is now reported as an ASSUMED end, and an
+op that depends on where the block ends (`replace`, `replace-within`, `delete`, `insert-after`) is
+REFUSED with `UNBOUNDED_SPAN` when the assumed tail covers headings. Two ways past it, both
+explicit: address the sub-block by its own `--heading`, or pass `--to-eof` (`"to_eof": true` in an
+ops file) to assert that the record does reach the end of the file — an append to a genuinely-last
+record stays possible either way. A last block that covers no heading is not refused at all.
+
 OPERATIONS
 ----------
   replace         the whole block → new text (its own heading first)
@@ -53,7 +66,8 @@ REFUSALS (exit 3; nothing written)
   rewrites that record too) · IDENTITY_CHANGED (the new text renames the block without
   `--rename-to`) · RESEGMENTATION (new text carries a heading at or above the block's level —
   the "`##` record swallows the following `#`" defect of D0 — or would glue onto the next
-  heading) · OLD_NOT_UNIQUE / OLD_ABSENT (`replace-within`) · DUPLICATE_ID (an insert whose
+  heading) · UNBOUNDED_SPAN (the block's end is EOF by assumption and covers headings; see above)
+  · OLD_NOT_UNIQUE / OLD_ABSENT (`replace-within`) · DUPLICATE_ID (an insert whose
   record already exists) · POSTCONDITION (a check above failed: a defect of this tool, reported).
 
     python3 framework/scripts/record_scoped_edit.py blocks --file <md>
@@ -104,11 +118,14 @@ class Op:
     old: str = ""
     new: str = ""
     rename_to: str = ""
+    to_eof: bool = False
+    """The caller asserts the addressed block really does run to end of file. Only then may an op
+    act on a span whose end the file does not state (`UNBOUNDED_SPAN`)."""
 
     @classmethod
     def from_dict(cls, raw: dict[str, Any]) -> "Op":
         known = {k: raw[k] for k in ("op", "id", "heading", "preamble", "text", "old", "new",
-                                     "rename_to") if k in raw}
+                                     "rename_to", "to_eof") if k in raw}
         if known.get("op") not in OPS:
             raise ValueError(f"unknown op {raw.get('op')!r}; expected one of {', '.join(OPS)}")
         return cls(**known)
@@ -125,6 +142,12 @@ class Span:
     level: int
     key: str
     kind: str
+    to_eof: bool = False
+    """No heading at or above `level` follows: the block's end was ASSUMED to be EOF, not read
+    off a boundary in the file. See `swallowed`."""
+    swallowed: tuple[tuple[int, str], ...] = ()
+    """(level, heading text) of every heading strictly inside an unbounded span — the content the
+    span covers because the file gave it no end, which may or may not belong to the record."""
 
 
 @dataclass
@@ -173,9 +196,15 @@ def identity_headings(text: str, levels: tuple[int, ...]) -> list[tuple[int, int
 
 
 def _span_from(text: str, offset: int, level: int, key: str, kind: str) -> Span:
+    """The block's bytes. When no heading at or above `level` follows, the end is not READ off the
+    file — it is assumed to be EOF, and every heading inside that assumed tail is recorded so the
+    caller is told what the span covers instead of finding out afterwards (D0/EOF defect)."""
     heads = _headings(text)
-    end = next((h[0] for h in heads if h[0] > offset and h[2] <= level), len(text))
-    return Span(offset, end, level, key, kind)
+    end = next((h[0] for h in heads if h[0] > offset and h[2] <= level), None)
+    if end is not None:
+        return Span(offset, end, level, key, kind)
+    swallowed = tuple((h[2], h[3].strip()) for h in heads if offset < h[0] < len(text))
+    return Span(offset, len(text), level, key, kind, to_eof=True, swallowed=swallowed)
 
 
 def resolve(text: str, op: Op, levels: tuple[int, ...]) -> Span:
@@ -251,6 +280,38 @@ def _trail_norm(block: str) -> str:
     return re.sub(r"(?:\n[ \t]*(?:---)?[ \t]*)+\n?\Z", "", block)
 
 
+#: ops whose effect depends on where the addressed block ENDS. `insert-before` uses only the
+#: block's start, and `append` has no anchor at all, so neither can be mis-scoped by an
+#: unstated end.
+END_SENSITIVE = ("replace", "replace-within", "delete", "insert-after")
+
+
+def _check_bounded(span: Span, op: Op) -> None:
+    """🔴 An end nobody wrote down is not a record boundary.
+
+    The last block at its identity level has no following heading to stop it, so its span was
+    silently taken to EOF — which in `working_model_current.md` made `id: BLOCK 3` cover the whole
+    `## Changelog` and every batch section after it, and a tool that exists to make narrowness
+    EXECUTABLE gave that edit no containment at all (Benchmark J; Mirror finding 13 on
+    BATCH_20260928_001). The span is still computed the same way — `registry_records.partition`
+    decides what a block is and nothing is re-parsed here — but an assumed end is now stated and,
+    when it covers headings, refused: the caller either addresses the sub-block by its own
+    `--heading`, or says with `--to-eof` that the record really does reach the end of the file.
+
+    A genuinely-last record with nothing after it (`CLAIM 041`, `PAPER 118`, `LIT-0420`,
+    `DL-MECH-113`, `DIS-020` on this checkout) swallows no heading and is not refused: the
+    assumption is only unsafe where there is something to be wrong about.
+    """
+    if op.op not in END_SENSITIVE or not span.to_eof or not span.swallowed or op.to_eof:
+        return
+    inside = "; ".join(f"{'#' * lv} {title}" for lv, title in span.swallowed)
+    raise Refusal("UNBOUNDED_SPAN", f"no heading at or above level {span.level} follows "
+                  f"{span.key!r}, so its end is EOF by assumption, not by a boundary in the file: "
+                  f"the span {span.start}→{span.end} covers {len(span.swallowed)} heading(s) "
+                  f"that may not belong to it ({inside}). Address the sub-block by its own "
+                  "--heading, or pass --to-eof to assert that the record does run to end of file")
+
+
 def apply_one(text: str, op: Op, levels: tuple[int, ...]) -> tuple[str, dict[str, Any]]:
     """Apply one operation to `text` and prove its scope, or raise `Refusal`."""
     cut = min(levels)
@@ -272,6 +333,9 @@ def apply_one(text: str, op: Op, levels: tuple[int, ...]) -> tuple[str, dict[str
         if nested:
             raise Refusal("NESTED_RECORD", f"{span.key!r} contains record(s) {', '.join(nested)}; "
                           "editing it would rewrite them — address them by their own id")
+    # After NESTED_RECORD: when the assumed tail holds whole records, that is the sharper
+    # refusal and the one the caller can act on directly.
+    _check_bounded(span, op)
     if op.op == "replace":
         new_block = op.text
         _check_replacement(target, new_block, span, op, levels, text)
@@ -326,6 +390,9 @@ def apply_one(text: str, op: Op, levels: tuple[int, ...]) -> tuple[str, dict[str
     _postconditions(text, out, start, end, insert, span, op, levels, before_blocks, before_ids,
                     expect_new, expect_gone, grows)
     return out, {"op": op.op, "anchor": op.anchor(), "key": span.key, "range": [start, end],
+                 "span": [span.start, span.end], "span_end_assumed": span.to_eof,
+                 "span_swallows": [f"{'#' * lv} {t}" for lv, t in span.swallowed],
+                 "to_eof_asserted": bool(op.to_eof),
                  "replaced_bytes": len(text[start:end].encode()),
                  "inserted_bytes": len(insert.encode()), "new_records": expect_new,
                  "removed_records": expect_gone}
@@ -465,6 +532,10 @@ def main(argv: list[str] | None = None) -> int:
             group.add_argument("--id", default="")
             group.add_argument("--heading", default="")
             group.add_argument("--preamble", action="store_true")
+            p.add_argument("--to-eof", action="store_true",
+                           help="assert that the addressed block really runs to end of file; "
+                                "without it an op on a span whose end the file does not state, "
+                                "and which covers headings, is refused (UNBOUNDED_SPAN)")
         if name in ("replace", "insert-before", "insert-after", "append"):
             p.add_argument("--text", default=None)
             p.add_argument("--text-file", type=Path)
@@ -489,6 +560,14 @@ def main(argv: list[str] | None = None) -> int:
         repeated = sorted({k for k in dups if dups.count(k) > 1})
         if repeated:
             print(f"DUPLICATE record ids (every edit anchored on them is refused): {repeated}")
+        for offset, level, key in identity_headings(text, levels):
+            span = _span_from(text, offset, level, key, "record")
+            if span.to_eof and span.swallowed:
+                print(f"UNBOUNDED span {key!r} {span.start}→{span.end}: no heading at or above "
+                      f"level {level} follows, so the end is assumed. It covers "
+                      + "; ".join(f"{'#' * lv} {t}" for lv, t in span.swallowed)
+                      + " — replace/replace-within/delete/insert-after here are refused "
+                        "(UNBOUNDED_SPAN) unless --to-eof says the record reaches EOF.")
         return 0
     try:
         if args.command == "apply":
@@ -500,7 +579,8 @@ def main(argv: list[str] | None = None) -> int:
                       text=_arg_text(getattr(args, "text", None), getattr(args, "text_file", None)),
                       old=_arg_text(getattr(args, "old", None), getattr(args, "old_file", None)),
                       new=_arg_text(getattr(args, "new", None), getattr(args, "new_file", None)),
-                      rename_to=getattr(args, "rename_to", "") or "")]
+                      rename_to=getattr(args, "rename_to", "") or "",
+                      to_eof=bool(getattr(args, "to_eof", False)))]
     except (OSError, ValueError, TypeError) as error:
         print(f"invalid invocation: {error}", file=sys.stderr)
         return 2
@@ -522,6 +602,13 @@ def main(argv: list[str] | None = None) -> int:
         print(json.dumps({**summary, "diff": diff}, ensure_ascii=False, indent=1))
     else:
         sys.stdout.write(diff)
+        for info in report.ops:
+            print(f"  scope {info['key']!r}: span {info['span'][0]}→{info['span'][1]}"
+                  + (" (end ASSUMED — no following heading at or above the block's level"
+                     + (f"; covers {', '.join(info['span_swallows'])}"
+                        if info["span_swallows"] else "; covers no heading") + ")"
+                     if info["span_end_assumed"] else "")
+                  + (" — asserted with --to-eof" if info["to_eof_asserted"] else ""))
         print(("APPLIED" if args.apply else "DRY RUN — nothing written; add --apply") +
               f": {len(report.ops)} op(s), keys {report.changed_keys}")
     return 0
