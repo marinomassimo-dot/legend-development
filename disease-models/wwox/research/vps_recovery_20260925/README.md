@@ -163,7 +163,14 @@ names a missing script.
 Each row's `recover_with` is the exact command, `git show 06ee25a:<original_path>`;
 `git cat-file -p <blob_in_06ee25a>` returns the same bytes. Counts per group:
 
-| Group | RECOVERED | DISPOSITIONED |
+> ⚠️ **The table below is the 2026-09-26 two-way split and is kept as written, because its
+> per-group rows are still the accounting of which files were recovered.** Its `DISPOSITIONED`
+> column is no longer the TSV's vocabulary: 83 of those rows were re-classed on 2026-09-28 into
+> `DISCHARGED`, `DEFERRED_OPEN` and `RESERVED_OPERATOR`, so the column total of **337** is now
+> **254 + 56 + 7 + 20**. **Read §5.1 before quoting any figure from this table**, and read the TSV
+> rather than this table for any per-file state.
+
+| Group | RECOVERED | DISPOSITIONED (2026-09-26 split — see §5.1) |
 |---|---:|---:|
 | Commit candidates (G4) | 37 | 43 |
 | Comparison notes (analysis) | 2 | 9 |
@@ -185,7 +192,10 @@ Each row's `recover_with` is the exact command, `git show 06ee25a:<original_path
 | Verifications | 0 | 22 |
 | **Total (458)** | **121** | **337** |
 
-No row is unaccounted. The `disposition` and `detail` columns of the TSV give, per file, the landing commit or the one-line reason.
+No row is unaccounted. The `disposition` and `detail` columns of the TSV give, per file, the landing
+commit or the one-line reason. ⚠️ **"No row is unaccounted" is true of rows and was never true of
+work** — a dispositioned file is an accounted file, not a redundant one, and until 2026-09-28 the
+column could not say whether a deferral had since been met. §5.1 is that repair.
 
 ### 5.1 · `disposition` repair — 2026-09-28
 
