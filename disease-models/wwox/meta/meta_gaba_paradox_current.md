@@ -91,6 +91,16 @@ This formulation explains why the data can appear discordant without being incom
 
 ---
 
+## 🔴 Competing mechanism, and only one of the two is measured (2026-09-27, `BATCH_20260927_004`, `CC-20260826-CLAIM002-01`)
+
+Two accounts of the same organoid pattern are **competing, not complementary**. **Hypofunction** says inhibition is weak; **depolarizing GABA** says the «inhibition» is excitatory. Only the first has a measurement in a WWOX system: sIPSC amplitude more than halved in Breton 2021 (`S-CTLs 57.3 ± 31.0pA; S-KOs 27.5 ± 19.4 pA`), with the authors' own reading *«favors excitation over inhibition, primarily through an impairment in the amplitude of the inhibitory currents»* — both re-verified verbatim on 2026-09-27 against `files/fulltext/PMID34634460_Breton2021_EPMC_2026-09-27.xml` (sha256 `934b4e1a…`).
+
+The depolarizing-GABA account has **no WWOX datum at all**. In Steinberg 2021 all four occurrences of *depolariz* sit in **one Discussion paragraph** whose support is four citations to general developmental neuroscience, and the authors' own verb is *«further strengthens the idea that depolarizing GABA plays a key role in seizure susceptibility»*. **Token census over the declared artefact** (`PMID34268881_Steinberg2021_PMC.xml`, re-measured 2026-09-27): `KCC2` 0 · `NKCC1` 0 · `SLC12A5` 0 · `SLC12A2` 0 · `gramicidin` 0 · `perforated patch` 0 · `bumetanide` 0. The corpus's one reversal-potential dataset is **non-informative by construction** on GABA polarity: whole-cell patch dialyses the cytoplasm and sets `[Cl⁻]ᵢ` from the pipette.
+
+⚠️ **Attribution, corrected by the blind audit** (`research/locator_audits/2026-09-27_wave2_audit_B.md`, OVERSHOOT): the authors' surprise at the marker pattern is theirs (*«This finding is even more surprising when considering the decrease in GABA receptor components seen by RNA-seq.»*), but the inference *«so marker direction cannot discriminate between the two mechanisms»* is **LEGEND's, not the source's** — the source's own reading of the same pattern is *«This can indicate a disruption in development of normal and balanced neuronal networks, supporting the increased electrical activity observed in these organoids.»*
+
+🔴 **The safety caution does not move, and that is the point of writing this down.** `BLOCCO 1`'s caution on GABAergic drugs rests on the human safety signal against the human efficacy reports, and `CLAIM 001` already states that mechanism does not predict clinical response. What changes is that the **mechanistic** half of the caution is now marked **unmeasured** rather than non-predictive — a caution resting on an unmeasured premise is fragile in the dangerous direction. **Decisive experiment:** E_GABA in gramicidin-perforated patch, layer II/III pyramidal neurons, S-KO vs S-CTL, P13–P17, with the driving force `E_GABA − V_rest` as a second endpoint. **Not medical advice.**
+
 ## Working Hypotheses (IPOTESI)
 
 **Hypothesis 1 — Developmental GABA immaturity**

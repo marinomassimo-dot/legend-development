@@ -276,3 +276,9 @@ relative to WT at a matched, stated age). Id `DIS-021`.
 
 **Still pending:** the operator gate on the parent; `Fig S3C`'s age and n and `Fig 5A–D`'s GC normaliser
 remain **questions for the authors** and are not obtainable by any further reading of this corpus.
+
+## BATCH DISPOSITION — `BATCH_20260927_004` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Verdict: `PROPAGATED IN PART`.** `CLAIM 004`'s transduction figure now carries **its age and its n** — P19, n = 3, three identical sagittal sections — quoted verbatim from the Fig 2G legend, which this batch verified first-hand rather than carrying from the candidate. `CLAIM 011`'s `PREMISE_TAG` gains the non-linearity, **written at the level the source supports**. 🔴 **That is the residue, and it is deliberate:** the audit returned the S3E per-region multipliers (cortex 3.0, hippocampus 3.0, midbrain 5.5, cerebellum 16.7) and the ≈44× WPRE dose-equivalence as `UNVERIFIABLE_SURFACE` — no supplementary artefact of that PMID exists in `files/fulltext/` — so they enter as **declared supplementary attestations** and the propagated sentence rests instead on two verified text quotations: the dose-dependent regional increase, and *«increasing the vector dose in the absence of WPRE failed to recapitulate the expression levels achieved with lower dose (LD) containing WPRE»*. `DIS-021` is this candidate's §6.3 wording and was written once, under the parent. **What would unblock the residue:** `mmc1.pdf` for PMID 42422765, acquired by any free route, re-rendered at the declared dpi and re-read — then the multipliers become quotable figures rather than attestations.
+
+**Operator authorisation, verbatim (2026-09-27, given in writing after being shown the MAJOR proposals):** *«procedi tu, ti autorizzo su tutto»*. **Mirror ex-post review due** under §21e — see `session_evaluations/2026-09-27_BATCH_20260927_004.md`.

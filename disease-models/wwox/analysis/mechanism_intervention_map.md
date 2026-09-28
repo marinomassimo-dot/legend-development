@@ -206,7 +206,8 @@ neuron-specific WWOX loss
     post-inhibitory rebound in L2/3 pyramidal neurons   [CLAIM 021 — measured]
   → spontaneous bursting, altered oscillatory organization, ↑phase-amplitude coupling
   → bursting DEPENDS ON NMDAR activity and gap junctions [CLAIM 021 — dependence stated]
-  → ACTIONABLE NODE: NMDAR · connexin gap junctions
+  → ACTIONABLE NODE: NMDAR (pharmacologically established with d-APV inside the WWOX system)
+  → NODE WITHDRAWN PENDING OCCLUSION: connexin gap junctions — the carbenoxolone effect is real and not attributable (no washout reversal; the authors write that CBX *«may not be specific to gap junctions»*, that it *«could block NMDA receptors … which could partially account for our observations»* — a cited possibility with NO concentration attached — and that it *«blocks pannexin channels»*). Not «uninvolved»: untested. (2026-09-27, `BATCH_20260927_004`, `CC-20260826-GAPJUNCTION-ATTRIBUTION-01`.)
   → INTERVENTION: memantine (approved) · MK-801/APV (tools) · carbenoxolone (tool)
   → EXPECTED EFFECT: ↓ burst frequency/amplitude, ↓ phase-amplitude coupling
 ```
@@ -216,7 +217,7 @@ neuron-specific WWOX loss
 established **pharmacologically** (blockers applied to the WWOX-deficient system — which would make
 the acute anti-bursting effect a T1 datum for the tool compounds) or by another route. The
 distinction decides whether Chain B is a **T1 chain with a translation gap** or a **T2 chain with an
-untested conjunction**. It is scored **T2** here, deliberately conservatively, and the resolution is
+untested conjunction**. It was scored **T2** here, deliberately conservatively; the re-read that resolves it exists (`FTR-20260810-34634460-02`) and the dependence IS pharmacological, so the chain is **T1 for the tool compound d-APV only** — memantine has still never been given to a WWOX system, and `R-02` is untouched. ⚠️ And the window bounds any chronic proposal only as the authors bound it: the P13–P17 age group *«may mimic a late-stage disorder»* and they *«cannot rule out»* an earlier-stage pannexin route — a stated possibility, twice hedged, **not** a statement that the window IS late-stage (2026-09-27, `BATCH_20260927_004`, `CC-20260826-NMDAR-CONJUNCTION-01`, corrected by the blind audit). What remains is
 a single re-read of PMID 34634460 with verbatim locators. **This is the highest-value, lowest-cost
 open item in the file.**
 
@@ -414,7 +415,7 @@ compound **in its approved indication**, never in WWOX.
 | **MAIN_TRANSLATIONAL_RISK** | the **window**. Also: a **threshold**, not a gradient — at the printed LD (1.23 × 10¹¹ vg) survival is not rescued while the printed HD (2.63 × 10¹¹ vg) plateaus, so the threshold lies **between** the two and "a lower, safer dose" is refused by the data. ⚠️ **Corrected 2026-09-27:** the earlier wording (“below 2.63 × 10¹¹”) read the upper bracket as the threshold, and the primary never states the dose unit — bare `vg`, no dose in the Methods, bilateral ICV at 2.0 µL/hemisphere — so the **absolute** endpoints are uncertain by a factor of 2 (`LD ∈ [1.23, 2.46]`, `HD ∈ [2.63, 5.26] × 10¹¹ vg`) while the **ratio** `HD/LD = 2.1382` is invariant. Specify any intermediate arm as a fraction of the primary’s HD, never in absolute vg (`CC-20260922-CLAIM011-DOSE-ENDPOINTS-01`) |
 | **DECISIVE_PRECLINICAL_TEST** | **delayed, post-onset dosing in a hypomorphic (non-null) model**, with SWD/ECoG and myelin readouts; plus an **intermediate-dose arm between 1.23 and 2.63 × 10¹¹ vg** to localize the threshold |
 
-**Class:** `READY_FOR_WWOX_PRECLINICAL_CONSIDERATION` — and it is the only entry in it.
+**Class:** `SPLIT` — written into the record itself on 2026-09-27 (`BATCH_20260927_004`, `CC-20260826-AAV9-ENDPOINT-SPLIT-01` Part 2, op 4), because one class label over nine endpoints was the defect. **`READY_FOR_WWOX_PRECLINICAL_CONSIDERATION`** for **survival · spike-wave discharges · gliosis**, at **high dose**, in the **P0–P5** window. **`PROMISING_BUT_GAP`** for **cognition · developmental trajectory · myelination-in-the-dose-study · cerebellum · post-neonatal administration** — none of these is measured, quantified in a treated arm, or reached by the vector at a level any efficacy endpoint tested. ⚠️ **Motor/locomotor behaviour is in neither list:** the source's running text asserts no locomotor difference (*«showed no significant differences between groups (Figures 4B, 4D–4G)»*) and in its own voice asserts one exceedance outside that set (*«Treated KO mice exhibited significantly higher motor coordination and learning compared with WT mice (Figure 4K).»*), while the panel-level count that would adjudicate the conflict is a **declared attestation over absent bytes**. `NOT_IMPAIRED_AND_NOT_NORMALISED`, and the conflict is recorded rather than resolved. It remains the only entry in the ready class for the three endpoints named.
 
 ---
 
@@ -475,7 +476,7 @@ platform to run it has existed for years.
 | **TARGET** | GSK3β (among many) |
 | **MECHANISM** | claimed: inhibits a kinase de-repressed by WWOX loss |
 | **EVIDENCE_LEVEL** | 🔴 **T5, not T2.** The WWOX experiment **failed its specificity test**: lithium suppressed PTZ seizures in **all three genotypes, wild type included**. What was shown is an anticonvulsant working in an animal that has seizures |
-| **WWOX_DIRECT_EVIDENCE** | GSK3β **abundance** elevated in Wwox-null cortex/hippocampus/cerebellum (2 sources; `WWOX AND GSK3` returns 5 PubMed records in total) — and the load-bearing premise *abundance reports activity* is tagged `PREMISE: DEFAULT_FROM_TEXTBOOK`, because in this very system abundance and activity are **dissociable** (S9-independent inhibition) |
+| **WWOX_DIRECT_EVIDENCE** | GSK3β **Ser9 phosphorylation reduced** in Wwox-null cortex/hippocampus/cerebellum, read by the authors as activation (one western, one site, `STATISTICAL_STATUS: NOT_TESTED`; `WWOX AND GSK3` returns 5 PubMed records in total). **No cited source reports elevated abundance**, so the premise *abundance reports activity* has no datum under it — ⚠️ and the narrower correction the 2026-09-27 blind audit forced: total GSK3β **is** blotted and densitometered in Wang 2012's Figure 1, so what is missing is its **stated invariance**, not the measurement (`BATCH_20260927_004`, `CC-20260826-GSK3B-S9-AXIS-01` `D8`/`D13`) — and the load-bearing premise *abundance reports activity* is tagged `PREMISE: DEFAULT_FROM_TEXTBOOK`, because in this very system abundance and activity are **dissociable** (S9-independent inhibition) |
 | **NEAR_DISEASE_EVIDENCE** | lithium in paediatric neuropsychiatry; nothing in genetic DEE |
 | **HUMAN_USE_STATUS** | approved, used in paediatrics with tight monitoring |
 | **CLINICAL_MATURITY** | high as a compound; **the WWOX rationale is what fails, not the drug** |

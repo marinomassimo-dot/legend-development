@@ -460,3 +460,9 @@ Its surviving MAJOR limbs' triples live where their operations live: `CC-2026082
 **Not closed, and not propagated.** Its readiness verdict is `READY_MAJOR`: Δ1–Δ3/Δ7/Δ8 are already propagated, Δ9 was applied outside batch on a non-canonical meta surface, Δ10–Δ11 belong to the `m002` package, and Δ4–Δ6 live in `CC-20260826-FIVECLAIM-PACKAGE-01` — but its §7 *route the surviving deltas as one unit* requirement still binds the MAJOR batch that carries them. This batch is MINOR and touches none of them. Deferred to the MAJOR batch with its `BASELINE_EFFECT` / `DO_NOT_INFER` fields intact as that batch's review material.
 
 **Mirror ex-post review due** under §21e — see the batch report at `session_evaluations/2026-09-27_BATCH_20260927_003.md`.
+
+## BATCH DISPOSITION — `BATCH_20260927_004` (2026-09-27, ACTOR_ID `scientist`), append-only
+
+**Verdict: `PROPAGATED`.** **Its §7 routing requirement is discharged, which is the only thing it was still open for.** This candidate is a routing document, not an operation list: Δ1–Δ3, Δ7 and Δ8 were closed before this batch, Δ9 was applied outside batch, and Δ10–Δ11 were done by the `m002` package. Its requirement was that the surviving deltas travel **as one unit under operator authorisation**, and Δ4–Δ6 land here, in this batch, under the authorisation recorded below, alongside the `m002` work already applied. `BATCH_20260927_003` deliberately left it `DEFERRED` rather than closing a MAJOR routing requirement inside a MINOR batch; that reservation is now satisfied rather than waived. Its `BASELINE_EFFECT` and `DO_NOT_INFER` fields were the review material for Δ4–Δ6 and are cited in the batch report.
+
+**Operator authorisation, verbatim (2026-09-27, given in writing after being shown the MAJOR proposals):** *«procedi tu, ti autorizzo su tutto»*. **Mirror ex-post review due** under §21e — see `session_evaluations/2026-09-27_BATCH_20260927_004.md`.
