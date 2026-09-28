@@ -92,6 +92,40 @@ class FulltextReceiptTests(unittest.TestCase):
         self.assertEqual(receipts.validate_receipt(receipt), [])
         self.assertEqual(receipts.validate_new_receipt(receipt), [])
 
+    def test_a_workflow_that_says_it_is_not_in_the_ledger_is_refused_at_the_write(self) -> None:
+        """A prepared receipt's prose must not assert the ledger's present contents.
+
+        Twice this week a receipt travelled as a JSON file whose `workflow` said, in the
+        present tense, that the event "is explicitly NOT in the ledger" — true of a file,
+        false forever once appended, and then durable, because the ledger is append-only and
+        `receipt_correction` is scoped to where an output went and not to a narrative tense.
+        Both times a later reader believed the sentence and a canonical record landed saying
+        an event already in the ledger was still owed. The refusal is at the write, which is
+        the one moment the sentence turns false; the past-tense form is fine.
+        """
+        receipt = example("FTR-20260725-42193054-01")
+        for prose in ("prepared as JSON and is explicitly NOT in the ledger",
+                      "this event is not yet appended by its author",
+                      "not recorded in the ledger; the appender must verify"):
+            receipt["workflow"] = prose
+            self.assertTrue(
+                any("not in the ledger" in error
+                    for error in receipts.validate_new_receipt(receipt)), prose)
+        receipt["workflow"] = "was not appended at preparation time; the integrator appended it"
+        self.assertEqual(receipts.validate_new_receipt(receipt), [])
+
+    def test_history_keeps_a_self_negating_workflow_rather_than_halting_on_it(self) -> None:
+        """The live ledger carries one such sentence and must stay loadable.
+
+        `validate_receipt` runs over every line whenever the ledger is loaded, so putting the
+        refusal there would not correct the past — it would halt the system on a record that
+        cannot be edited. Measured: the guard in `validate_receipt` turned `verify` red on the
+        real ledger. Grandfathered on purpose, same shape as the state manifest's ratchets.
+        """
+        receipt = example("FTR-20260725-42193054-01")
+        receipt["workflow"] = "prepared as JSON and is explicitly NOT in the ledger"
+        self.assertEqual(receipts.validate_receipt(receipt), [])
+
     def test_new_receipt_uses_precision_not_midnight_string_guessing(self) -> None:
         receipt = example("FTR-20260725-42193054-01")
         receipt["analysis_at"] = "2026-07-25T00:00:00Z"
