@@ -1,0 +1,50 @@
+{
+ "H059": {
+  "same_strength": "PASS — no hedge moved. The source's own attributions survive word for word: the quoted phrase is still 'the abstract's and a figure legend's inference from junction qPCR', the body still 'suggesting that the two longer transcripts were not expressed or were degraded', and 'no translation block was used on any freely reachable surface' is carried unchanged. Nothing is upgraded to a measurement and nothing is withdrawn that was not withdrawn.",
+  "same_scope": "PASS — still scoped to PAPER 044 and to freely reachable surfaces; batch attribution BATCH_20260927_004 is correct (the source bullet sits in that batch's 'Withdrawn:' list). Only the label words 'transferable finding' are dropped, which narrows rather than broadens.",
+  "nothing_added": "PASS — no new proposition. The shared label ('Withdrawn by BATCH_20260927_004, and binding on this example') is a batch-id plus a label naming what is qualified.",
+  "placement": "PASS — under Worked example B (canonical splice-acceptor variant), whose live text asserts only a null-PREDICTED expectation 'until an RNA readout measures it'. No stronger NMD statement is left standing anywhere in the live region (grep: NMD appears only here and in the CLAIM 021 mirror row, on NMDAR).",
+  "verdict": "FAITHFUL",
+  "fix": null
+ },
+ "H060": {
+  "same_strength": "PASS — 'unsourced, untagged, and contradicted by the architecture (exon 9 is terminal)' and 'replaced by a labelled conditional' are verbatim; only the word 'now' is dropped from 'now applying'. No hedge added or removed.",
+  "same_scope": "PASS on the statement itself — the flag is still the therapeutic-hypotheses ledger's, and the withdrawal is still attributed to BATCH_20260927_004 (correct: the bullet is in that batch's 'Withdrawn:' list).",
+  "nothing_added": "PASS — 'and binding on this example' is a label of applicability, permitted, and the splice axis is exactly what example B carries.",
+  "placement": "CONCERN — two issues. (a) 'the proteotoxic flag applying to both alleles rather than one' sits under Worked example B only, five lines below the live rule 'These rules are allele-wise. Each worked example below is carried independently: the public edition never assembles them into one person's genotype.' A reader can take 'both alleles' to mean examples A and B composing one genotype — the linkage this edition excludes. (b) 'proteotoxic' occurs nowhere else in the live file, so the second allele that gains the flag is named nowhere a reader can check; example A says nothing about it.",
+  "verdict": "FIX_NEEDED",
+  "fix": "Replace the clause '— is replaced by a labelled conditional, with the proteotoxic flag applying to **both** alleles rather than one.' with: '— is replaced by a labelled conditional, with the ledger's proteotoxic flag applying there to **both** alleles of its compound-heterozygous genotype class rather than one (this file's worked examples remain carried independently).' Words of the source are kept; only the locus of 'both alleles' is made explicit so it cannot be read as assembling examples A and B."
+ },
+ "H061": {
+  "same_strength": "PASS on the restated sentence — 'what is absent is the **stated invariance**, not the measurement — `NOT_ASSERTED`, not `MEASURE_ABSENT`' is carried exactly, and 'Its Figure 1 legend blots and densitometers it' becomes 'Wang 2012's Figure 1 legend blots and densitometers total GSK3β' (the pronoun resolved, no strength change). The withdrawn readiness claim itself ('that Wang 2012 never reports total GSK3β anywhere') is not restated, correctly: it was false.",
+  "same_scope": "PASS — still Wang 2012, still Figure 1 legend, batch attribution BATCH_20260927_004 correct.",
+  "nothing_added": "PASS — 'Qualification (BATCH_20260927_004):' is label plus batch id.",
+  "placement": "FAIL — it is placed in the right paragraph but is left contradicting a stronger live statement earlier in that same sentence-chain: the paragraph still reads '(GSK3β abundance and phospho-S9 unchanged while kinase output changes)'. That parenthetical asserts precisely the invariance H061 says the source never states. CLAIM 035 supports phospho-S9 invariance ('tutto questo avviene con **fosfo-GSK3β-S9 invariata**') and asserts nothing about total-abundance invariance. So the file now asserts the invariance in one clause and denies it was ever stated in the next.",
+  "verdict": "FIX_NEEDED",
+  "fix": "In the same sentence, replace '(GSK3β abundance and phospho-S9 unchanged while kinase output changes)' with '(phospho-S9 unchanged while kinase output changes)'. This removes the abundance-invariance assertion that H061 reclassifies as `NOT_ASSERTED`, leaves the S9 invariance that CLAIM 035 does carry, and leaves the appended Qualification sentence as written."
+ },
+ "H066": {
+  "same_strength": "PASS — 'a measured efficacy floor with **no measured ceiling**', 'whose induction is pro-apoptotic', '`REVERS 0`', '**no tumour surveillance**' and 'an absence measured on the text, not on the missing supplement' are all carried verbatim; the score lands at `SAFETY 1`, the value the source moves it to. The dropped '`SAFETY 1–2` →' is the history-shaped transition, not a strength.",
+  "same_scope": "PASS — still TX-007, still the dose-ranging study, still the text surface rather than the missing supplement; batch attribution BATCH_20260927_004 correct (source bullet is in that batch's 'Bounded, not reversed:' list).",
+  "nothing_added": "PASS.",
+  "placement": "PASS — in the Gene therapy context list beside the existing DRG/peripheral-organ 'Safety caveat' bullet. No competing SAFETY value for TX-007 exists anywhere in the live region (only other SAFETY hit is the 'ACTIVE 2 — GABAergic vulnerability (SAFETY)' heading), so nothing stronger is left standing.",
+  "verdict": "FAITHFUL",
+  "fix": null
+ },
+ "H072": {
+  "same_strength": "PASS — every word survives; only the first sentence loses its bold and its initial capital. 'does **not** promote memantine' keeps its emphasis, and 'd-APV is a tool compound and has never been given to a human' is verbatim.",
+  "same_scope": "CONCERN — the label narrows the attribution. In the source this bullet is in BATCH_20260927_004's batch-wide 'Unchanged' list, so 'no drug is recommended, no dose is transferred, and no molecule enters or leaves a class' is a guarantee about the whole batch. The restatement heads it 'on the `CLAIM 021` withdrawal', which fits the second sentence but silently shrinks the first from batch-wide to one withdrawal.",
+  "nothing_added": "PASS on content; the label itself is the only added framing, and it is the scope defect above rather than a new claim.",
+  "placement": "PASS — directly under the Network hyperexcitability paragraph that carries CLAIM 021, which is what the carbenoxolone/memantine/d-APV sentence qualifies.",
+  "verdict": "FIX_NEEDED",
+  "fix": "Replace the label '**`BATCH_20260927_004`, on the `CLAIM 021` withdrawal:**' with '**Unchanged in `BATCH_20260927_004`, and binding here:**' — restoring the batch-wide scope the source gives the first sentence while keeping the pointer to where it applies."
+ },
+ "H097": {
+  "same_strength": "PASS — '`conditional / not design-ready`' is carried exactly; only the leading 'an' is capitalised into a standalone sentence. No hedge moved.",
+  "same_scope": "PASS — still an SDR stabilizer; batch attribution BATCH_20260714_001 correct (the bullet is in that batch's 'Consequences:' list).",
+  "nothing_added": "PASS — batch id only.",
+  "placement": "PASS — immediately after Worked example A (the destabilizing SDR missense), whose live text already leaves the cause 'unresolved' and calls the HSC70/lysosome read-across 'a bridge hypothesis, not a demonstrated mechanism'. Nothing nearby claims a design-ready stabilizer, so no stronger statement is left standing.",
+  "verdict": "FAITHFUL",
+  "fix": null
+ }
+}
