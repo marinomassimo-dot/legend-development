@@ -646,3 +646,64 @@ unrecorded** — this batch wrote **no** receipt and the ledger stands at **259*
 tail-anchored.
 
 **Not medical advice.**
+
+---
+
+## CORRECTION NOTE — 2026-09-28, appended by ACTOR_ID `scientist` (`mirror002b` package), append-only
+
+> **Nothing above is rewritten.** Source: the MIRROR ex-post review of `BATCH_20260928_002`, persisted
+> at [`session_evaluations/2026-09-28_BATCH_20260928_002_mirror_review.md`](../session_evaluations/2026-09-28_BATCH_20260928_002_mirror_review.md)
+> (CONFIRMED — 0 BLOCKING, 6 MINOR, 3 NOTE). These are the two NOTEs in which the reviewer is right and
+> this candidate's readiness text was wrong, plus the one Deferred statement that went stale. Each was
+> re-measured first-hand before it was accepted. The findings that need a current file are in
+> [`CC-20260928-MIRROR002B-REPAIRS-01.md`](CC-20260928-MIRROR002B-REPAIRS-01.md).
+
+### C1 · § 6 hand-off `13` and the §2.4 containment reasoning are withdrawn as over-broad (Mirror FINDING 5, NOTE)
+
+🔴 **`PAPER 118` and `LIT-0420` are the last record of their file at their level, so span-to-EOF IS
+the record — exactly.** Re-measured here: `PAPER 118` spans 595 115 → 598 521 and 598 521 is
+`len(text)` of `paper_registry_current.md`; `LIT-0420` spans 518 196 → 521 108 and 521 108 is
+`len(text)` of `literature_tracking_log_current.md`; **no heading follows either**. For the last record
+at its level the `_span_from` EOF fallback returns the record's **true end**. There is therefore **no
+containment loss** on those two ops, nothing was worked around, and neither `old` string needed to be
+unique *file-wide* to be unique *in its record* — the claim in §2.4 that the containment reasoning was
+"right for the wrong reason" is itself wrong, and is withdrawn.
+
+**The hand-off is amended to the form the shipped tool already uses.** `a510aa7` adjudicated it the
+same way and the shipped `record_scoped_edit.py` keys its refusal on a span that **covers headings**,
+not on one that merely reaches EOF — because a refusal keyed on EOF alone *"would have refused two of
+its nine"* ops, i.e. two **correct** ops. Hand-off `13` therefore reads, from this note forward:
+*refuse (or print) a record-scoped span that covers one or more headings; reaching EOF is not by itself
+a defect, because for the last record at its level EOF is the record's end.* `id: "BLOCK 3"` in
+`working_model_current.md` remains a genuine instance — it covers six `##` headings including the whole
+`## Changelog` — and that limb of the hand-off stands unchanged.
+
+### C2 · § 6 hand-off `7`'s "tension with the shipped resealer" is with a help line, not with the design (Mirror FINDING 6, NOTE)
+
+The item asked the resealer to stop inferring a revision ordinal from a label's spelling, and recorded
+a tension with the shipped tool. 🔴 **Re-read, the design already does what the item asks.** The help
+text reads as if the ordinal were parsed from the string at read time; the tool's own body states the
+actual contract — the ordinal is parsed **once, at the write**, stored as an integer, and *"ordering is
+never read off the spelling"*. The hand-off is amended to: **align the help line with the contract the
+body states.** The abridged-history and three-coexisting-conventions limbs of hand-off `7`, and the
+re-derived sequence `7, 7, 7, 12, 7, 12, 7, 8, 9, 15, 16, 16, 17, 13, 14, 18` over 16 commits, are
+unaffected and stand.
+
+### C3 · The BATCH DISPOSITION's closing statement on `FTR-20260928-42589397-03` is struck (Mirror FINDING 1, MINOR)
+
+The disposition's last paragraph says §5(d)'s prepared receipt is *«still owed and still unrecorded»*.
+🔴 **It was recorded before the batch began.** `FTR-20260928-42589397-03` was appended by the
+Orchestrator at commit **`082ed19`** (committer date 2026-09-28 05:52:41 +0000, `event_at
+2026-09-28T05:49:52Z`) — **this batch's own base commit**, 44 minutes before the propagation commit
+`c5eec22` (06:36:42 +0000). Verified here with `fulltext_receipts.py status --pmid 42589397`: the
+recorded event carries `prior_receipt: FTR-20260927-42589397-02`, `reread_reason: receipt_correction`,
+the unchanged `source_fingerprint`
+`ae7f429190e0b48faaf91f9df0c79e66dd7986d23c65c21f5564ef8607f898af` and an `evidence_basis` naming the
+same two appended manifest entries and the same 5 → 7 count — it is the event §5(d) prepared, recorded.
+The figure *«259 chained events, tail-anchored»* in the same paragraph is **correct and already
+includes it**; what was wrong was the status read off that count. `PAPER 118`'s canonical clause
+carrying the same statement is repaired by `CC-20260928-MIRROR002B-REPAIRS-01` op `P118-1`, and the
+matching Deferred row of the batch report is struck by its ERRATUM § E1.
+
+**Neither the candidate's nine propagated ops nor the batch's verdict is reopened by this note.**
+**Not medical advice.**
