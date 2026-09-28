@@ -28,10 +28,30 @@ the finding the seal exists to produce.
 for a re-seal is recorded, and writing without one leaves the previous batch's reason standing
 over new bytes.
 
+🔴 **The label must go UP, and the ordinal is what says so.** `--revision` was free text, and
+the labels re-derived from git are not a sequence: `rev.7 → 12 → 7 → 12 → 7 → 8 → 9 → 15 → 16
+→ 16 → 17 → 13 → 14 → 18`. A reader who sees `rev.14` on a baseline and `rev.17` in an older
+commit cannot tell which seal is later, and nothing stopped the next writer from typing `rev.3`.
+Three things close that, all of them here:
+
+  - `revision_ordinal`, an integer, orders seals independently of how the label is spelled.
+    It is parsed from `rev.N` in the label, or given outright with `--revision-ordinal`.
+  - a refusal when the new ordinal does not EXCEED the stored one. Monotone, not merely
+    distinct: a duplicate label (`rev.16` twice, 2026-08) is as unreadable as a lower one.
+  - `revision_history`, appended on every write, so the note attached to the seal being
+    replaced survives in the file. It did not before: `rev.17`'s substantive note — "extractor
+    strips trailing block separators; per-block digests added" — is recoverable only from git,
+    and `--history` re-derives exactly that, read-only, for the seals written before this field
+    existed.
+
+Nothing is rewritten retroactively: the labels already in git stay as they are, and the history
+field starts at the first re-seal after 2026-09-28.
+
 Usage
 -----
     reseal_dismech_baseline.py --check       # report what would change, and what it would refuse
-    reseal_dismech_baseline.py --revision "rev.7 (why)" --absorb "CLAIM 016"
+    reseal_dismech_baseline.py --history     # every label this baseline has carried, from git
+    reseal_dismech_baseline.py --revision "rev.19 (why)" --absorb "CLAIM 016"
 """
 from __future__ import annotations
 
@@ -39,6 +59,7 @@ import argparse
 import datetime
 import hashlib
 import json
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -67,6 +88,80 @@ def _dirty(paths: list[str]) -> list[str]:
     return [line[3:].strip() for line in status.splitlines() if line.strip()]
 
 
+LABEL_ORDINAL = re.compile(r"(?i)\brev\.\s*(\d+)")
+
+
+def label_ordinal(label: str | None) -> int | None:
+    """The integer in a `rev.N` label, or None when the label does not carry one."""
+    if not label:
+        return None
+    match = LABEL_ORDINAL.search(label)
+    return int(match.group(1)) if match else None
+
+
+def stored_ordinal(baseline: dict) -> int | None:
+    """The ordinal of the seal now in the file: the field if present, else its label.
+
+    The field did not exist before 2026-09-28, so the label is the fallback — and the live
+    baseline's `rev.18` reads as 18 without any migration. A seal carrying neither is not
+    ordered, and the caller must say what ordinal it is writing.
+    """
+    if isinstance(baseline.get("revision_ordinal"), int):
+        return baseline["revision_ordinal"]
+    return label_ordinal(baseline.get("revision"))
+
+
+def next_ordinal(baseline: dict, label: str, given: int | None) -> tuple[int | None, str | None]:
+    """(ordinal to write, refusal reason). A label that does not go up is refused."""
+    previous = stored_ordinal(baseline)
+    ordinal = given if given is not None else label_ordinal(label)
+    if ordinal is None:
+        return None, ("the revision label carries no `rev.N` ordinal and --revision-ordinal was "
+                      "not given, so this seal could not be ordered against the previous one")
+    if previous is None:
+        return ordinal, None
+    if ordinal <= previous:
+        return None, (f"revision ordinal {ordinal} does not exceed the stored {previous} "
+                      f"({baseline.get('revision', '')[:60]!r}…). A seal's label must go UP: the "
+                      "label history is already non-monotone (rev.7 -> 12 -> 7 -> 12 -> 7 -> 8 "
+                      "-> 9 -> 15 -> 16 -> 16 -> 17 -> 13 -> 14 -> 18) and a reader cannot tell "
+                      f"which seal is later. Use rev.{previous + 1} or higher.")
+    return ordinal, None
+
+
+def history_entry(baseline: dict) -> dict:
+    """The record of the seal being replaced, so its note survives this write."""
+    return {"revision": baseline.get("revision"),
+            "revision_ordinal": stored_ordinal(baseline),
+            "frozen_at": baseline.get("frozen_at"),
+            "git_head_at_freeze": baseline.get("git_head_at_freeze")}
+
+
+def print_history(baseline: dict) -> int:
+    """Every label this baseline has carried — the field first, then git for the older seals."""
+    for entry in baseline.get("revision_history", []):
+        print(f"  [{entry.get('revision_ordinal')}] {entry.get('frozen_at')} "
+              f"{str(entry.get('git_head_at_freeze'))[:9]} {entry.get('revision')}")
+    relative = BASELINE.relative_to(REPO).as_posix()
+    log = _git("log", "--follow", "--format=%H", "--", relative).splitlines()
+    seen: set[str] = set()
+    print(f"labels in git for {relative}, newest first:")
+    for commit in log:
+        blob = subprocess.run(["git", "show", f"{commit}:{relative}"], cwd=REPO,
+                              capture_output=True, text=True)
+        if blob.returncode != 0:
+            continue
+        try:
+            label = json.loads(blob.stdout).get("revision")
+        except json.JSONDecodeError:
+            continue
+        if not label or label in seen:
+            continue
+        seen.add(label)
+        print(f"  {commit[:9]} [{label_ordinal(label)}] {label}")
+    return 0
+
+
 def undeclared_absorptions(baseline: dict, absorb: list[str]) -> list[str]:
     """Sealed blocks whose drift this re-seal would zero without anybody declaring it.
 
@@ -85,12 +180,28 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--check", action="store_true", help="report, write nothing")
     parser.add_argument("--revision", help="revision label to record (required to write)")
+    parser.add_argument("--revision-ordinal", type=int, default=None,
+                        help="the integer that orders this seal, when the label does not spell "
+                             "it as rev.N; it must still exceed the stored ordinal")
+    parser.add_argument("--history", action="store_true",
+                        help="print every label this baseline has carried (field + git) and exit")
     parser.add_argument("--absorb", action="append", metavar="BLOCK", default=[],
                         help="a sealed block whose drift THIS re-seal is meant to absorb, "
                              'e.g. --absorb "CLAIM 016"; repeatable')
     arguments = parser.parse_args()
 
     baseline = json.loads(BASELINE.read_text(encoding="utf-8"))
+    if arguments.history:
+        return print_history(baseline)
+    # Validated BEFORE any hashing, and in --check too: a label the tool will refuse is better
+    # learned while there is still time to choose another one than after the drift report.
+    ordinal = None
+    if arguments.revision or arguments.revision_ordinal is not None:
+        ordinal, refusal = next_ordinal(baseline, arguments.revision or "",
+                                        arguments.revision_ordinal)
+        if refusal:
+            print(f"REFUSED: {refusal}")
+            return 2
     declared = [entry["path"] for entry in baseline["inputs"].values()]
     declared.append(baseline["output"]["path"])
 
@@ -206,11 +317,18 @@ def main() -> int:
     if arguments.check:
         return 0
 
+    # Captured BEFORE the anchor and timestamp move: a history entry written afterwards would
+    # record the new seal's anchor against the old seal's label, which is worse than no history.
+    superseded = history_entry(baseline)
     baseline["git_head_at_freeze"] = head
     baseline["frozen_at"] = datetime.datetime.now(
         datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     if arguments.revision:
+        # Append the seal being replaced before overwriting it, so its reason is still in the
+        # file afterwards. Before this, every superseded label lived only in git history.
+        baseline.setdefault("revision_history", []).append(superseded)
         baseline["revision"] = arguments.revision
+        baseline["revision_ordinal"] = ordinal
     BASELINE.write_text(json.dumps(baseline, indent=2, sort_keys=True) + "\n",
                         encoding="utf-8")
     print(f"re-sealed on {head[:9]} — now commit the baseline itself")

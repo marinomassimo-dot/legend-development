@@ -9,19 +9,42 @@ import tempfile
 import unittest
 from pathlib import Path
 
+import shutil
+
+import batch_commit
 from batch_commit import main, restore, snapshot
 from legend_lint import CURRENTS
+
+REPO = Path(__file__).resolve().parents[2]
+
+
+def declared_fixture(root: Path) -> list[str]:
+    """A temp root carrying the real snapshot declaration and every file it names.
+
+    Since 2026-09-28 the snapshot's coverage comes from `prompt_batch_commit.md`, and it
+    REFUSES when a declared path is absent — so a fixture that wants a snapshot must hold the
+    declaration and the declared files, exactly as the repository does.
+    """
+    (root / batch_commit.PROTOCOL).parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(REPO / batch_commit.PROTOCOL, root / batch_commit.PROTOCOL)
+    written = []
+    for pattern in batch_commit.declared_patterns(str(root)):
+        if any(character in pattern for character in "*?["):
+            continue  # an empty family is legitimate; nothing to materialise
+        (root / pattern).parent.mkdir(parents=True, exist_ok=True)
+        (root / pattern).write_text(f"seed {pattern}\n", encoding="utf-8")
+        written.append(pattern)
+    return written
 
 
 class SnapshotTests(unittest.TestCase):
     def test_snapshot_then_restore_in_temporary_repository(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
+            declared_fixture(root)
             current = root / CURRENTS[0]
-            current.parent.mkdir(parents=True)
             current.write_text("v1", encoding="utf-8")
             state = root / "framework/state/state_manifest_current.md"
-            state.parent.mkdir(parents=True)
             state.write_text("current_state: READY\n", encoding="utf-8")
 
             snapshot_dir = root / "backup" / "snapshot"
@@ -40,8 +63,8 @@ class SnapshotTests(unittest.TestCase):
         """A batch writes its scope to the cold half; an ABORT must not keep that half."""
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
+            declared_fixture(root)
             history = root / "framework/state/state_history.md"
-            history.parent.mkdir(parents=True)
             history.write_text("batch_1_scope: before\n", encoding="utf-8")
             snapshot_dir = root / "backup" / "snapshot"
             snapshot(str(root), str(snapshot_dir))
@@ -132,8 +155,11 @@ class TheRealCurrentFilesAreSnapshotted(unittest.TestCase):
     ROOT = Path(__file__).resolve().parents[2]
 
     def test_snapshot_copies_every_present_current_file_and_writes_nothing_back(self) -> None:
-        from batch_commit import EXTRA
-        present = [rel for rel in CURRENTS + EXTRA if (self.ROOT / rel).is_file()]
+        # The population is the protocol's declaration, not a list repeated here: that
+        # duplication is exactly the defect of 2026-09-28. `test_batch_commit_snapshot.py`
+        # owns the declaration's own coverage; this case owns byte fidelity and no write-back.
+        present = [rel for rel in batch_commit.snapshot_targets(str(self.ROOT))
+                   if (self.ROOT / rel).is_file()]
         if not present:
             self.skipTest("skipped: no current file present in this checkout")
         before = {rel: (self.ROOT / rel).read_bytes() for rel in present}
