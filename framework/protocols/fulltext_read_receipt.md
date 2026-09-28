@@ -35,6 +35,32 @@ analysing the paper.
 
 This gate saves tokens without turning an old shallow pass into a permanent false negative.
 
+## `workflow` names the route, never the ledger's present contents
+
+A prepared receipt often travels as a JSON file for somebody else to append. Its `workflow`
+prose must describe **the route and the preparation**, and must not assert what the ledger
+does or does not currently contain. A sentence like *"this event is explicitly NOT in the
+ledger"* is true of a file and **false forever once the event is appended** — and then
+durable, because the ledger is append-only and hash-chained, and a `receipt_correction` is
+scoped by its own rule to *where an output went, never what was read*, which a narrative
+tense is not. Write the past tense instead: *"was not appended at preparation time"*.
+
+This is not a style preference. It happened twice in one week, and both times a later reader
+took the present tense at face value: a canonical `PAPER` record landed asserting that an
+event already in the ledger was still owed, in a batch whose own base commit contained it
+(Mirror ex-post, `BATCH_20260928_002` FINDING 1 and `BATCH_20260928_003`). The integrator's
+half of the rule is the same shape: **an event's presence is never inferred from the ledger's
+total count** — `fulltext_receipts.py status --pmid <PMID>` answers it, a count does not — and
+an integrator who appends a prepared receipt names its `event_id` and the commit to the next
+actor.
+
+`fulltext_receipts.py` refuses such a `workflow` at the **write**, through
+`validate_new_receipt`, which is the one moment the sentence turns false. It is deliberately
+**not** checked by `validate_receipt`: that runs over every line whenever the ledger is
+loaded, so the same rule there would not correct the past — it would halt the system on a
+record that can no longer be edited. The live ledger carries exactly one such sentence and is
+grandfathered, visible, and left alone.
+
 ## Before reading: context policy
 
 `reread_reason` answers *why is this source being opened again*. `context_policy` answers a
@@ -321,7 +347,7 @@ FULLTEXT_READ_RECEIPT:
   study_id: {pmid: "...", doi: "..."}
   event_at: YYYY-MM-DDTHH:MM:SSZ
   analysis_at: YYYY-MM-DDTHH:MM:SSZ
-  workflow: <skill/agent/ad-hoc route>
+  workflow: <skill/agent/ad-hoc route>   # names the route; never the ledger's contents (below)
   evidence_depth: complete_fulltext_read
   source_locator: <PMCID, lawful URL, or local path>
   source_fingerprint: <sha256 when a lawful local artifact exists, otherwise null>

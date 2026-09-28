@@ -52,6 +52,7 @@ BENCH = ROOT / "framework/eval/benchmarks/BENCH-J-RECORD-SCOPED-EDIT"
 SPEC = BENCH / "labels_spec.json"
 CORPUS = BENCH / "j0_corpus.json"
 J2_RESULTS = BENCH / "j2_results.json"
+J5_RESULTS = BENCH / "j5_results.json"
 
 # The files BATCH_COMMIT rewrites — `prompt_batch_commit.md` Phase 3 (snapshot list) and Phase 4
 # (4.1–4.6), restricted to those that exist in this edition. The derived surfaces of Phase 4.7
@@ -654,8 +655,26 @@ def anchor_for(key: str, kind: str, heading: str) -> dict[str, Any]:
     return {"heading": heading}
 
 
+def qualified(anchor: dict[str, Any], key: str,
+              qualify: tuple[str, tuple[int, ...]] | None) -> dict[str, Any]:
+    """J5 only: a `heading` anchor whose text the parent carries more than once gains `under`,
+    the nearest enclosing heading of that unit in the parent. Off (None) in J2."""
+    if qualify is None or "heading" not in anchor:
+        return anchor
+    import record_scoped_edit as rse
+    text, levels = qualify
+    heads = rse._headings(text)
+    wanted = anchor["heading"].strip()
+    if sum(1 for h in heads if h[3].strip() == wanted) < 2:
+        return anchor
+    block = next((b for b in unit_map(text, levels) if b.key == key), None)
+    enclosing = rse.enclosing_headings(heads, block.start) if block is not None else []
+    return {**anchor, "under": enclosing[0]} if enclosing else anchor
+
+
 def expected_and_ops(units: list[UnitDiff], parent_keys: list[str], labels: dict[str, str],
-                     mode: str) -> tuple[list[tuple[str, str]], list[dict[str, Any]]]:
+                     mode: str, qualify: tuple[str, tuple[int, ...]] | None = None
+                     ) -> tuple[list[tuple[str, str]], list[dict[str, Any]]]:
     """X (as an ordered list of (key, text)) and the record-scoped operations derived from E."""
     edit = {hid for hid, label in labels.items() if label in EDIT}
     by_old = {u.old: u for u in units if u.old is not None}
@@ -669,8 +688,8 @@ def expected_and_ops(units: list[UnitDiff], parent_keys: list[str], labels: dict
         if unit.child_text is None:                        # deleted in the child
             hid = unit.groups[0][0][5]
             if hid in edit:
-                ops.append({"op": "delete", **anchor_for(pkey, unit.kind, unit.heading),
-                            "_hunks": [hid]})
+                ops.append({"op": "delete", **qualified(
+                    anchor_for(pkey, unit.kind, unit.heading), pkey, qualify), "_hunks": [hid]})
             else:
                 x.append((pkey, unit.parent_text or ""))
             continue
@@ -679,7 +698,7 @@ def expected_and_ops(units: list[UnitDiff], parent_keys: list[str], labels: dict
         hids = [op[5] for group in unit.groups for op in group if op[5] in edit]
         if not hids and unit.key == unit.old:
             continue
-        anchor = anchor_for(pkey, unit.kind, unit.heading)
+        anchor = qualified(anchor_for(pkey, unit.kind, unit.heading), pkey, qualify)
         rename = {"rename_to": unit.key} if unit.key != unit.old else {}
         if mode == "record" or rename:
             ops.append({"op": "replace", **anchor, "text": text, **rename, "_hunks": hids})
@@ -700,11 +719,13 @@ def expected_and_ops(units: list[UnitDiff], parent_keys: list[str], labels: dict
         kinds = {u.key: (u.kind, u.heading) for u in units}
         if before is not None:
             pos = next(i for i, (k, _) in enumerate(x) if k == before) + 1
-            ops.append({"op": "insert-after", **anchor_for(before, *kinds[before]),
+            ops.append({"op": "insert-after", **qualified(anchor_for(before, *kinds[before]),
+                                                          before, qualify),
                         "text": unit.child_text, "_hunks": [hid]})
         elif after is not None:
             pos = next(i for i, (k, _) in enumerate(x) if k == after)
-            ops.append({"op": "insert-before", **anchor_for(after, *kinds[after]),
+            ops.append({"op": "insert-before", **qualified(anchor_for(after, *kinds[after]),
+                                                           after, qualify),
                         "text": unit.child_text, "_hunks": [hid]})
         else:
             pos = len(x)
@@ -762,11 +783,12 @@ def diagnose(code: str, op: dict[str, Any]) -> str:
 
 
 def replay_event(before: str, after: str, path: str, commit12: str, labels: dict[str, str],
-                 mode: str) -> dict[str, Any]:
+                 mode: str, qualify: bool = False) -> dict[str, Any]:
     import record_scoped_edit as rse
     levels = stem_levels(path)
     units, parent_keys, _child_keys = unit_diffs(before, after, path, commit12)
-    x_units, ops = expected_and_ops(units, parent_keys, labels, mode)
+    x_units, ops = expected_and_ops(units, parent_keys, labels, mode,
+                                    (before, levels) if qualify else None)
     expected = "".join(text for _k, text in x_units)
     current, refused, applied = before, [], 0
     for op in ops:
@@ -850,7 +872,9 @@ def plant(before: str, after: str, path: str, ctx: dict[str, Any], event: dict[s
     return None
 
 
-def j2(repo: Path, corpus: dict[str, Any], control: bool = True) -> dict[str, Any]:
+def j2(repo: Path, corpus: dict[str, Any], control: bool = True, qualify: bool = False,
+       only: str = "") -> dict[str, Any]:
+    """`qualify` and `only` are J5's: qualified heading anchors, one family. J2 uses neither."""
     events_out = []
     families: dict[str, dict[str, Any]] = {}
     controls = []
@@ -860,7 +884,7 @@ def j2(repo: Path, corpus: dict[str, Any], control: bool = True) -> dict[str, An
         parent = git(repo, "rev-parse", commit["parent"]).strip()
         ctx = None
         for event in commit["files"]:
-            if event.get("file_event"):
+            if event.get("file_event") or (only and Path(event["file"]).stem != only):
                 continue
             path = event["file"]
             before, after = show(repo, parent, path), show(repo, sha, path)
@@ -868,7 +892,8 @@ def j2(repo: Path, corpus: dict[str, Any], control: bool = True) -> dict[str, An
             row = {"commit": commit["commit"], "duplicate_of": commit["duplicate_of"],
                    "file": path, "hunks": len(event["hunks"])}
             for mode in ("record", "range"):
-                row[mode] = replay_event(before, after, path, commit["commit"], labels, mode)
+                row[mode] = replay_event(before, after, path, commit["commit"], labels, mode,
+                                         qualify)
             if control and not commit["duplicate_of"]:
                 if ctx is None:
                     brought = "" if commit["kind"] == "commit" else next(
@@ -951,15 +976,23 @@ def main(argv: list[str] | None = None) -> int:
     p2.add_argument("--corpus", type=Path, default=CORPUS)
     p2.add_argument("--out", type=Path, default=J2_RESULTS)
     p2.add_argument("--no-control", action="store_true")
+    p5 = sub.add_parser("j5", help="J2's replay of the paper-registry family with duplicated "
+                                   "section headings qualified by --under (PREREGISTRATION_J5)")
+    p5.add_argument("--repo", type=Path, default=ROOT)
+    p5.add_argument("--corpus", type=Path, default=CORPUS)
+    p5.add_argument("--out", type=Path, default=J5_RESULTS)
+    p5.add_argument("--no-control", action="store_true")
     args = parser.parse_args(argv)
     if args.command == "j0":
         doc = j0(args.repo, args.rev)
         dump(doc, args.out)
         print(json.dumps(doc["summary"], indent=1))
         return 0
-    if args.command == "j2":
+    if args.command in ("j2", "j5"):
         corpus = json.loads(args.corpus.read_text(encoding="utf-8"))
-        doc = j2(args.repo, corpus, control=not args.no_control)
+        doc = (j2(args.repo, corpus, control=not args.no_control) if args.command == "j2" else
+               j2(args.repo, corpus, control=not args.no_control, qualify=True,
+                  only="paper_registry_current"))
         lines = ["{"]
         for key in ("corpus_rev", "families", "control"):
             lines.append(f"  {json.dumps(key)}: {json.dumps(doc[key], ensure_ascii=False)},")
