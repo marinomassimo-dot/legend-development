@@ -12471,3 +12471,33 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Note:** Title: Low levels of WWOX protein immunoexpression correlate with tumour grade and a less favourable outcome in patients with urinary bladder tumours
 
 ---
+
+## LIT-0420
+**Short title:** Hammouz 2026 IJMS — WWOX/HIF1A balance across BRCA subtypes and ovarian carcinoma (TCGA, DFS proxy)
+**Authors:** Hammouz RY, Maciejek K, Bednarek AK
+**Year:** 2026
+**Source type:** primary research — retrospective bioinformatic analysis of TCGA RNA-seq and clinical data
+**Journal/source:** *Int J Mol Sci* 2026;27(15):6740
+**Identifier type:** PMID / DOI / PMCID
+**Identifier value:** PMID 42589397 / DOI 10.3390/ijms27156740 / PMC13467099
+**Date discovered:** 2026-09-21 (`FT-144`, singleton imported from `human_genotype_and_claim025_wave1b_20260921.md`)
+**Date processed:** 2026-09-27 (first-hand read, `FTR-20260927-42589397-02`)
+**Discovery window:** wave-1b sibling-node import, 2026-09-21
+**Discovery source:** `FT-144`; the PMID had no record in this log (checked by PMID, DOI, PMCID and title — the same group's PMID 41007296 is `LIT-0019` and is a DIFFERENT paper)
+**Discovery query:** `CLAIM 025` sign-invariance bound
+**Status:** processed
+**Status note:** `partial_fulltext_read` — receipts `FTR-20260921-42589397-01` (a verification receipt of another actor's reading, tables and figures declared unavailable) and `FTR-20260927-42589397-02` (first-hand, PMC JATS XML). 🔴 **Record created 2026-09-28 by `CC-20260928-MIRROR003-REPAIRS-01` (Mirror M3):** the reading bounded `CLAIM 025` on 2026-09-27 while no registry record named this PMID at all, so the bound was invisible to `trace_claim_foundation` and LINT could only emit `UNLINKED_SUPPORT_UNCHECKED`.
+**Primary pathway:** P5 — HIF1A / metabolismo (contesto oncologico)
+**Genotype/model tag:** dati umani tumorali TCGA (mammella, ovaio); nessun allele WWOX, nessun materiale neurale, nessuna perturbazione
+**Transferability:** T3
+**clinical relevance:** BACKGROUND — bounds `CLAIM 025` on the direction of the ratio–outcome association; authorises no CNS transfer
+**Claim links:** 025 (bounding source, non-corroborating: same group, same dataset family, tumour only, no perturbation)
+**Working Model impact:** none — no block is redefined; the record bounds an existing claim's direction
+**Report mentions:** `CC-20260922-CLAIM025-SIGN-INVARIANCE-01` · `BATCH_20260927_003` · `CC-20260928-MIRROR003-REPAIRS-01`
+**Next action:** Supplementary Tables S4–S8 unfetched — the per-subtype survival numbers are receipted at the level of the authors' running text only
+**Flags:** read — partial; supplementary debt open
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20260927-42589397-02`; manifest `deepdive_manifests/PMID42589397.json` (7 verbatim locators, 5 declared gaps)
+**Registry record:** [[paper_registry_current#PAPER 118]]
+**Note:** Title: WWOX/HIF1A Balance Delineates Context-Dependent Molecular States in Breast Cancer Subtypes and Ovarian Carcinoma. The authors declare their subtype effects *"descriptive and hypothesis-generating rather than formally validated prognostic groupings"*.
+
+---
