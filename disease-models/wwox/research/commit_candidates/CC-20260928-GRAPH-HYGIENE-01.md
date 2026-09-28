@@ -44,7 +44,7 @@ falsifier **holds**; FINDING 8 stands, and this file is its second limb satisfie
 🔴 **State which rule you used.** The two rules give different numbers, and every previous round quoted
 a number without naming its rule, which is how *15* and *11* came to look like a disagreement about
 facts when they were a disagreement about counting. Both were re-derived here **from the claim registry
-itself**, by re-partitioning it on `## CLAIM nnn` and matching `[[claim_registry_current#CLAIM nnn]]`,
+itself**, by re-partitioning it on `## CLAIM nnn` and matching the wikilink form `claim_registry_current#CLAIM <n>` (written with double brackets in the registry),
 independently of the `pathograph` export — and the any-field figure then reproduced the export's own
 `findings.asymmetric_links` list edge for edge.
 

@@ -2,7 +2,7 @@
 
 **Candidate ID:** CC-20260928-MIRROR002B-REPAIRS-01
 **Status:** `PROPOSED — NOT PROPAGATED`
-**Base head:** `cf40b73` (`main` at dispatch; written on `task/mirror002b-repairs`)
+**Base head:** `e3f4201` — `main` merged into `task/mirror002b-repairs` after Harness Engineering landed `ee94838`; dispatched against `cf40b73`, re-measured against the merge. ⚠️ **The op list grew by two after the merge** (`P118-2` widened, `LIT-1` added): see § 2.2 and § 2.3.
 **Author:** ACTOR_ID `scientist`, package `mirror002b`, dispatched by the Orchestrator under the
 operator's standing authorisation of 2026-09-28 (*"improve whatever is improvable, including choices the
 operator authorised earlier in a sub-optimal form"*; *"procedi sempre"*).
@@ -13,7 +13,13 @@ operator authorised earlier in a sub-optimal form"*; *"procedi sempre"*).
 section, and one of those retractions is what makes FINDING 2 possible).
 This candidate carries **only the items that need one of the four scientific current files or
 `disease_model.md`**: **FINDING 1** (canonical half), **FINDING 2**, **FINDING 3**, **FINDING 4**, and
-the canonical residue of **FINDING 7** (none — see § 4.2). FINDINGS 5 and 6 are NOTEs applied outside
+the canonical residue of **FINDING 7** (none — see § 4.2). It **also discharges `REP-26`** of
+[`research/record_repair_queue_current.md`](../record_repair_queue_current.md), which Harness
+Engineering opened at `ee94838` after `manifest_receipt_repoint.py` repaired
+`deepdive_manifests/PMID42589397.json`'s `receipt` field and left two canonical records saying, in the
+present tense, that it *«still names»* the old value — the same two records (`PAPER 118`, `LIT-0420`)
+this candidate already opens, so the clauses are folded into **one op list per record** rather than
+racing two candidates on the same lines. FINDINGS 5 and 6 are NOTEs applied outside
 any batch as append-only correction notes; FINDING 8 is the stub
 [`CC-20260928-GRAPH-HYGIENE-01.md`](CC-20260928-GRAPH-HYGIENE-01.md); FINDING 9 is a Harness
 Engineering hand-off and is deliberately **not** written here (§ 6). Everything applied outside this
@@ -38,9 +44,11 @@ each row) · `DM-1` MINOR (narrative view, tracks `C30-1`).
 `fulltext_receipts.py status --pmid` to settle FINDING 1) · the ledger verified as a chain:
 `fulltext_receipts.py verify` → `OK: 259 chained receipt(s), tail anchored`. 🔴 **No
 `fulltext_receipts.py record` was run by this package.** The PMID 36779245 artefact was re-read this
-session and the reading is a **re-measurement inside an already-receipted coverage**, so a
-`receipt_correction` event is prepared as JSON under the session scratchpad's `receipts_pending/` and
-is **not** appended — see § 5(e).
+session and it **read the Methods, which the prior receipt `FTR-20260927-36779245-05` declares
+`not_read`** — so the reading widens coverage and the owed event is a **new `partial_fulltext_read`**,
+`FTR-20260928-36779245-06`, not a `receipt_correction`. It is prepared as JSON under the session
+scratchpad's `receipts_pending/` and is **not** appended — see § 5(e), which records why the first
+classification of this event was wrong.
 **Artefact re-hashed this session:** `files/fulltext/PMID36779245_Oliver2023_PMC_2026-09-27.xml` =
 `780f42de9b3982fa5bf9bf1e6bb76f71384c943aa197fb2d4de80be7ac7e7a34` (**equal** to the fingerprint
 `PAPER 018`'s lineage carries). Read in the **root checkout**, which is where the gitignored full texts
@@ -72,7 +80,7 @@ what does `growth_anchors check` report at HEAD.*
 **A reviewer's output is not gospel — including a reviewer that has just retracted three of its own
 findings.** Every statement below was re-measured against the source, the tool or the current file
 before it was accepted. Each `old` string was measured as occurring **exactly once in its whole file**
-and **exactly once inside its own record**, and the whole ten-op list was **simulated** (§ 2.6).
+and **exactly once inside its own record**, and the whole eleven-op list was **simulated** (§ 2.6).
 
 | # | Mirror severity | verdict here | what was measured |
 |---|---|---|---|
@@ -103,7 +111,7 @@ and **exactly once inside its own record**, and the whole ten-op list was **simu
 ## 2 · PROPOSED_DELTA — exact operation lists
 
 Every `old` is **verbatim from the current file at `cf40b73`** and was measured as occurring exactly
-once in the file and once in its record (§ 2.6). Ten ops over four files.
+once in the file and once in its record (§ 2.6). **Eleven ops over five files.**
 
 ### 2.1 `disease-models/wwox/registries/claim_registry_current.md` — `batch_commit.py propagate` (record-scoped)
 
@@ -158,24 +166,60 @@ recommended.
 
 **`P118-2` · `PAPER 118` · `replace-within` · MINOR (ground; the conclusion is unchanged and hardens from "wrong under both open targets" to "a defect under the decided rule") · FINDING 2**
 
-- `old` (unique in file, unique in record):
-  > which is **neither** the reading that produced the manifest **nor** the most recent reading of this paper — the two targets `framework/protocols/fulltext_read_receipt.md` deliberately leaves open for that field — so it is wrong under **both** and is routed to whoever owns manifest re-pointing
-- `new`:
-  > which is **not** the reading that produced the manifest and not the most recent reading of this paper either — and since 2026-09-28 that is no longer a matter of two open targets: `framework/protocols/fulltext_read_receipt.md` is 🟢 **CLOSED** on the producing reading (*«a manifest's `receipt` names the reading that PRODUCED the manifest: the EARLIEST ledger event for the same study whose `outputs` name that manifest file»*), under which this value is a **defect**: `manifest_receipt_provenance.py` classifies it `UNNAMED` — *«the declared receipt's outputs do not name this manifest at all»* — and gives the correct value as `FTR-20260927-42589397-02`. It is routed to whoever owns manifest re-pointing, and the tool states that no sanctioned instrument writes the field, so the repair is its own task with its own instrument (ground rewritten 2026-09-28 by `CC-20260928-MIRROR002B-REPAIRS-01`, Mirror FINDING 2 on `BATCH_20260928_002`, replacing *«the two targets … deliberately leaves open for that field»*: that OPEN was closed 25 minutes after the propagating batch's last commit, and the conclusion here is unchanged)
+🔴 **This op is larger than Mirror scoped it, because the defect grew while this candidate was being
+written.** Mirror's FINDING 2 asked only that the *stale protocol OPEN* be replaced as the clause's
+ground. On 2026-09-28 Harness Engineering then landed `ee94838`, which built
+`framework/scripts/manifest_receipt_repoint.py` **and used it**: the manifest's `receipt` field was
+repaired from `FTR-20260921-42589397-01` to `FTR-20260927-42589397-02`, derived from the ledger.
+So the clause's *present tense* — *«still names `FTR-20260921-42589397-01`»* — is now **false on disk**,
+and `REP-26` of [`research/record_repair_queue_current.md`](../record_repair_queue_current.md) was
+opened for exactly this. Harness correctly did not touch the record: a canonical sentence moves only
+through `BATCH_COMMIT`. **One op list per record beats two candidates racing on the same lines**, so
+this op covers the whole sentence and **discharges `REP-26`**.
 
-**Post-condition for this file (the full-rewrite guard):** 601 712 → **603 606** characters; **482**
+- `old` (unique in file, unique in record):
+  > The manifest's own `receipt` field still names `FTR-20260921-42589397-01`, which is **neither** the reading that produced the manifest **nor** the most recent reading of this paper — the two targets `framework/protocols/fulltext_read_receipt.md` deliberately leaves open for that field — so it is wrong under **both** and is routed to whoever owns manifest re-pointing; the manifest is not hand-edited.
+- `new`:
+  > The manifest's `receipt` field carried `FTR-20260921-42589397-01` until 2026-09-28 and now names **`FTR-20260927-42589397-02`**, the reading that produced it. 🟢 **Repaired 2026-09-28 by `framework/scripts/manifest_receipt_repoint.py`**, which derives the value from the ledger rather than from any report, under the semantics `framework/protocols/fulltext_read_receipt.md` decided the same day (CLOSED: *«a manifest's `receipt` names the reading that PRODUCED the manifest: the EARLIEST ledger event for the same study whose `outputs` name that manifest file»*); `manifest_receipt_provenance.py --pmid 42589397` now reports **CONFORMS**. 🔴 **The old value was wrong on two independent grounds, and the second is the checkable one:** `-01` names this manifest in no `outputs` at all (`UNNAMED`), *and* its `source_fingerprint` is `572a7e6b14b8d10ec993c901dd367b2163437077f5b6fb429e874a5fc43e6e16` — a **different document** from the `ae7f429190e0b48faaf91f9df0c79e66dd7986d23c65c21f5564ef8607f898af` this manifest declares in `source_artifacts` and against which every locator in it verifies, which `-02` fingerprints exactly. The repair therefore tightened the artefact binding `require_work_manifest` enforces, not only the pointer semantics. ⚠️ The manifest was **not** hand-edited: it was rewritten by a sanctioned instrument, and its bytes are pinned — `pathograph_export.jsonl`'s derivation manifest carries an **aggregate** sha256 over its whole 119-file input set, deep-dive manifests included, so the one-byte change made the pathograph STALE and it was regenerated in the same landing. (Present tense corrected 2026-09-28 by `CC-20260928-MIRROR002B-REPAIRS-01`, discharging **`REP-26`** of `research/record_repair_queue_current.md` and applying Mirror FINDING 2 on `BATCH_20260928_002`, from *«still names `FTR-20260921-42589397-01` … the two targets `fulltext_read_receipt.md` deliberately leaves open for that field … routed to whoever owns manifest re-pointing»*.)
+
+**Verified first-hand before this op was written, not taken from the hand-off:** the manifest on disk
+carries `"receipt": "FTR-20260927-42589397-02"`; its `source_artifacts[0].sha256` is
+`ae7f429190e0b48faaf91f9df0c79e66dd7986d23c65c21f5564ef8607f898af`; the ledger's `-01` carries
+`source_fingerprint 572a7e6b14b8d10ec993c901dd367b2163437077f5b6fb429e874a5fc43e6e16` and `-02` carries
+`ae7f4291…f898af`; `manifest_receipt_provenance.py --pmid 42589397` → `1 manifest(s) · CONFORMS 1`.
+
+**Post-condition for this file (the full-rewrite guard):** 601 712 → **604 349** characters; **482**
 level-2 blocks before and after, **same key set and same order**; **480 byte-identical**; the only two
 whose bytes differ are `PAPER 001` and `PAPER 118`; **the preamble byte-identical**; 108 `PAPER`
 records before and after; `PAPER 019 / 055 / 056` byte-identical.
 
-### 2.3 `disease-models/wwox/registries/literature_tracking_log_current.md` — **NO OP**
+### 2.3 `disease-models/wwox/registries/literature_tracking_log_current.md` — `batch_commit.py propagate` (record-scoped)
 
-⚠️ **Mirror's FINDING 2 locator says the stale framing *«appears in `PAPER 118` / `LIT-0420`»*. Measured:
-it does not appear in `LIT-0420`.** That record's `Evidence depth` says only *«its `receipt` field still
-names `FTR-20260921-42589397-01` and is routed for re-pointing»* — true before the decision and true
-after it, and strictly stronger under the decided rule. No op is owed and none is written; the
-literature log is **not** in this candidate's scope. Recorded so the next reader does not look for a
-missing edit. (§ 4.3)
+⚠️ **This file entered scope after the candidate was drafted, and for a different reason than Mirror
+gave.** Mirror's FINDING 2 locator says the stale *«deliberately open»* framing *«appears in `PAPER
+118` / `LIT-0420`»*; measured, **it does not appear in `LIT-0420`** (§ 4.3, CONTESTED). What `LIT-0420`
+does carry is the same **present-tense** statement about the manifest field that `ee94838` falsified,
+so the record is in scope under `REP-26` and not under Mirror's locator. One op.
+
+**`LIT-1` · `LIT-0420` · `replace-within` · MINOR (present tense of a repaired field) · `REP-26`**
+
+- `old` (unique in file, unique in record):
+  > its `receipt` field still names `FTR-20260921-42589397-01` and is routed for re-pointing
+- `new`:
+  > its `receipt` field carried `FTR-20260921-42589397-01` and now names **`FTR-20260927-42589397-02`**, the reading that produced it — 🟢 repaired 2026-09-28 by `framework/scripts/manifest_receipt_repoint.py`, which derives the value from the ledger; `manifest_receipt_provenance.py --pmid 42589397` reports **CONFORMS**. The old value named this manifest in no `outputs` and fingerprinted a different document from the artefact the manifest declares, so the repair tightened the artefact binding as well as the pointer (present tense corrected 2026-09-28 by `CC-20260928-MIRROR002B-REPAIRS-01`, discharging `REP-26`, from *«still names `FTR-20260921-42589397-01` and is routed for re-pointing»*)
+
+**Post-condition for this file:** 521 670 → **522 275** characters; **423** level-2 blocks before and
+after, same key set and same order; exactly **one** block differs, `LIT-0420`; 401 `LIT-` records before
+and after; preamble byte-identical.
+
+🔴 **`REP-26`'s own VERIFY condition is what the propagating batch must run:** `grep -n "still names"
+disease-models/wwox/registries/*.md` returns no row for PMID 42589397, and
+`manifest_receipt_provenance.py --pmid 42589397` reports `CONFORMS`. When both hold, the batch moves
+`REP-26` to `CLOSED` in `research/record_repair_queue_current.md` with that verification named — a
+non-canonical surface, so it is closed outside the batch's canonical op list. ⚠️ **The receipt ledger's
+own account of the field** (`FTR-20260928-42589397-03`, *«NOT CORRECTED HERE, AND DELIBERATELY»*) is
+append-only history, describes the state at its own event time, is **correct as written** and is **not
+touched** — `REP-26` says so explicitly and this candidate obeys it.
 
 ### 2.4 `disease-models/wwox/registries/working_model_current.md` — `batch_commit.py propagate` (record-scoped)
 
@@ -239,23 +283,26 @@ The propagating batch snapshots it with the rest and **does not** hand-copy it.
 
 ### 2.6 Simulation — run, not predicted
 
-The ten ops were applied in order to in-memory copies of the four files, by exact string replacement,
-with `count(old) == 1` asserted per op **and** per record. All ten applied. Measured, not forecast:
+The eleven ops were applied in order to in-memory copies of the five files, by exact string
+replacement, with `count(old) == 1` asserted per op **and** per record. All eleven applied. Measured,
+not forecast, at merge base `e3f4201` (`main` after `ee94838`):
 
 | file | before | after | Δ |
 |---|---|---|---|
 | `claim_registry_current.md` | 197 111 | **200 994** | +3 883 |
-| `paper_registry_current.md` | 601 712 | **603 606** | +1 894 |
+| `paper_registry_current.md` | 601 712 | **604 349** | +2 637 |
+| `literature_tracking_log_current.md` | 521 670 | **522 275** | +605 |
 | `working_model_current.md` | 101 156 | **102 454** | +1 298 (excl. Phase 4.6) |
 | `disease_model.md` | 23 132 | **23 822** | +690 |
 
-⚠️ **The four "before" figures are exactly the four the Mirror review measured after
-`BATCH_20260928_002`** (197 111 / 601 712 / 101 156 / 23 132), from an independent partition. That
-agreement is a cross-check on the base, not a prediction about the result. Per-op deltas:
-`P118-1` +564 · `P118-2` +833 · `C2-1` +484 · `PR-1` +497 · `C30-1` +1 643 · `C30-2` +1 756 · `WM-1`
-+377 · `WM-2` +595 · `WM-3` +326 · `DM-1` +690.
+⚠️ **The five "before" figures are exactly the five the Mirror review measured after
+`BATCH_20260928_002`** (197 111 / 601 712 / 521 670 / 101 156 / 23 132), from an independent partition
+— and they are unchanged by `ee94838`, which touched no current file. That agreement is a cross-check
+on the base, not a prediction about the result. Per-op deltas:
+`P118-1` +564 · `P118-2` +1 576 · `LIT-1` +605 · `C2-1` +484 · `PR-1` +497 · `C30-1` +1 643 ·
+`C30-2` +1 756 · `WM-1` +377 · `WM-2` +595 · `WM-3` +326 · `DM-1` +690.
 **A predicted number that happens to be right is still not a measurement**: the batch re-measures all
-four after propagation and reports what it measured.
+five after propagation and reports what it measured.
 
 **Cardinality must not move:** `claims=41 · papers=108 · corpus=361 · literature=401 |
 registry_only=10 | unread_premises=0`. Not one op adds, removes or re-segments a record.
@@ -361,9 +408,18 @@ because it was **closed**. No canonical op.
 
 The finding says the stale framing *«appears in `PAPER 118` / `LIT-0420`»*. `LIT-0420`'s `Evidence
 depth` and `Status note` were read in full: they say the manifest's `receipt` *«still names
-`FTR-20260921-42589397-01` and is routed for re-pointing»* and nothing about two open targets. That
-sentence is **true under the decided rule and stronger under it**. No op; recorded so nobody looks for
-a missing edit. The `CLAIM 002` and `PAPER 001` limbs of the locator are exact and are repaired.
+`FTR-20260921-42589397-01` and is routed for re-pointing»* and **nothing about two open targets**. That
+sentence was true under the decided rule and *stronger* under it, so on Mirror's ground **no op was
+owed** and the candidate's first draft wrote none.
+
+⚠️ **The record nevertheless has an op — `LIT-1` — and the distinction matters.** `ee94838` repaired
+the field on disk, so the sentence's **present tense** became false for a reason Mirror could not have
+seen (its review predates the tool by hours). `LIT-1` therefore lands under **`REP-26`**, not under
+FINDING 2, and the contest stands exactly as stated: the stale *«deliberately open»* framing Mirror
+located in this record **is not in it**. The `CLAIM 002` and `PAPER 001` limbs of the locator are exact
+and are repaired as FINDING 2 asks. 🔴 **Recorded rather than quietly merged**, because a finding
+repaired for a different reason than it gives is a finding that was not confirmed, and the next reader
+must be able to tell the two apart.
 
 ### 4.4 · One statement in `CLAIM 030` that this candidate deliberately does NOT touch
 
@@ -421,15 +477,33 @@ rule today, and the stub says why.
 **(d)** Nothing was written to `framework/`, `governance/`, `scripts/`, `roles/` or `.claude/` by this
 package. FINDING 9 and the amended FINDING 5 / 6 hand-offs are stated in the session report (§ 6).
 
-**(e) A receipt is prepared, not recorded.** The PMID 36779245 re-reading behind § 3 is a
-re-measurement **inside an already-receipted coverage** and adds twelve locator-grade measurements, so a
-`reread_reason: receipt_correction` event is owed on that lineage. 🔴 **This package did not run
-`fulltext_receipts.py record`** — the mandate forbids it. The event is prepared as JSON under the
-session scratchpad's `receipts_pending/` directory, with the re-hashed artefact fingerprint, the
-unchanged coverage map, and an `evidence_basis` that names the twelve axes and the Methods § 2.3 read.
-**The lesson of FINDING 1 is applied to this very sentence:** whoever records it must then check with
-`fulltext_receipts.py status --pmid 36779245` that it is there, and **not** infer its status from the
-ledger's total count — that inference is exactly what FINDING 1 caught.
+**(e) A receipt is prepared, not recorded — and it is NOT a `receipt_correction`.** 🔴 **This package
+did not run `fulltext_receipts.py record`**: the dispatch forbids it. The event is prepared as
+`FTR-20260928-36779245-06.json` under the session scratchpad's `receipts_pending/` directory.
+
+⚠️ **The class of the event was measured, not assumed, and the first assumption was wrong.** The
+obvious reading was that § 3's re-measurement sits **inside** the coverage of
+`FTR-20260927-36779245-05` and is therefore a metadata `receipt_correction`. It does not.
+`-05`'s coverage map declares **`methods: "not_read"`**, and to test Mirror's own declared falsifier
+for FINDING 4 this reading **read the Methods** (§ 2.3, *Genetic variants*). A reading that opens a
+section a prior receipt declares unread **widens coverage**, so the honest instrument is a new
+`partial_fulltext_read` event with a widened coverage map and `prior_receipt:
+FTR-20260927-36779245-05` — not a correction of the prior one. Recording it as a `receipt_correction`
+would have understated what was read, which is the same failure mode in the opposite direction from the
+one FINDING 1 caught. The prepared JSON carries: the re-hashed fingerprint
+`780f42de9b3982fa5bf9bf1e6bb76f71384c943aa197fb2d4de80be7ac7e7a34` (**equal** to `-05`'s), the widened
+coverage (`methods` `not_read` → `read`, everything else unchanged), an `evidence_basis` that states all
+twelve axes with their distinct-value and modal counts, the four-row Genetics comparison, the Methods
+§ 2.3 quotation in full and the declared gap (Supplementary Methods unfetched), and a `workflow` note
+recording that it is deliberately not in the ledger.
+
+**No manifest was edited by this package.** `deepdive_manifests/PMID36779245.json` is unchanged; the
+twelve measurements live in § 3 of this candidate, because appending manifest entries is a write the
+dispatch did not authorise.
+
+**The lesson of FINDING 1 is applied to this very sentence:** whoever records the event must then check
+with `fulltext_receipts.py status --pmid 36779245` that it is there, and **not** infer its status from
+the ledger's total count — that inference is exactly what FINDING 1 caught.
 
 ---
 
@@ -443,7 +517,7 @@ generated surface is touched by this package**.
 |---|---|---|
 | **F9** (MINOR) | `framework/protocols/prompt_batch_commit.md` § Phase 3 note | **`git checkout -- <path>` is the pre-batch value only BEFORE the propagation commit.** Phase 5 fires `ABORT + restore from snapshot` on a post-propagation `BLOCK_BATCH_COMMIT`, and a batch has *committed* the propagation by then — so from that commit onward `git checkout -- <path>` restores the **post**-batch bytes and the only correct restore is `git checkout <pre-batch commit> -- <path>` (or a revert of the propagation commit). The command as written is right exactly during the uncommitted window and silently wrong after it, which is the window the Phase-5 ABORT actually lives in. **The fix is two sentences in Phase 3:** state the restore with its base, and require the **pre-batch commit SHA to be recorded in Phase 3** beside the `SNAPSHOT_DECLARATION`, so the correct command is writable when it is needed. Moot for `disease_model.md` (`a510aa7` put it in the declaration); the reasoning is what gets reused. |
 | **F5** (NOTE) | `framework/scripts/record_scoped_edit.py` — hand-off `13` amended | **The refusal is keyed on covering headings, not on reaching EOF, and the shipped tool already does this.** For the last record at its level the `_span_from` EOF fallback returns the record's **true end**: `PAPER 118` 595 115 → 598 521 = `len(text)`, `LIT-0420` 518 196 → 521 108 = `len(text)`, no heading after either. A refusal keyed on EOF alone would have refused two **correct** ops. The genuine instance is `id: "BLOCK 3"` in `working_model_current.md`, 49 194 → 96 155, which covers six `##` headings including the whole `## Changelog`. **Nothing to implement if the current behaviour is as `a510aa7` describes; the ask is that the docstring say *covering headings*, so the next reader does not implement the overbroad version.** |
-| **F6** (NOTE) | `framework/scripts/reseal_dismech_baseline.py` — hand-off `7` amended | **Align the help line with the contract the body states.** The help text reads as if the revision ordinal were inferred from a label's spelling at read time; the body parses it **once, at the write**, stores an integer, and states *«ordering is never read off the spelling»*. One line of help text. The abridged-history and three-coexisting-conventions limbs of the original hand-off stand. |
+| **F6** (NOTE) | `disease-models/wwox/analysis/scripts/reseal_dismech_baseline.py` — hand-off `7` amended | **Align the help line with the contract the body states.** The help text reads as if the revision ordinal were inferred from a label's spelling at read time; the body parses it **once, at the write**, stores an integer, and states *«ordering is never read off the spelling»*. One line of help text. The abridged-history and three-coexisting-conventions limbs of the original hand-off stand. |
 
 ---
 
@@ -455,14 +529,21 @@ generated surface is touched by this package**.
   `anchor:` only.
 - It does not move any claim `Status`, `Type`, `Transferability`, `clinical relevance`, BLOCCO 1 field
   or therapeutic `SCORE`/`SAFETY` value; it adds, removes and re-segments **no** record.
-- It does not touch `literature_tracking_log_current.md`, `therapeutic_strategies_current.md`, the
-  dismissal ledger, the discovery ledger, the full-text queue, any manifest, the receipt ledger, any
-  tool or any generated surface.
+- It does not touch `therapeutic_strategies_current.md`, the dismissal ledger, the discovery ledger,
+  the full-text queue, any manifest, the receipt ledger, any tool or any generated surface. Its one
+  literature-log op (`LIT-1`) is scoped to `LIT-0420` alone.
 - It does not close a claim→claim edge or add a wikilink: that is
   `CC-20260928-GRAPH-HYGIENE-01`'s scope and it is a **stub**, not a proposal.
-- It does not re-point `deepdive_manifests/PMID42589397.json`'s `receipt`, which is a real defect under
-  the decided rule and **needs an instrument nobody has written**. It records that the field is now
-  adjudicated rather than deferred, which is the change FINDING 2's second limb asks for.
+- It does not re-point any manifest and does not edit one. `deepdive_manifests/PMID42589397.json`
+  was repaired by `manifest_receipt_repoint.py` at `ee94838`, by a sanctioned instrument and from the
+  ledger; this candidate only brings two canonical sentences into agreement with that outcome, and the
+  receipt ledger's own append-only account of the field is left exactly as written.
+- ⚠️ **It asserts nothing about the other non-conforming manifests.** 16 remain; of those, 10 are
+  reported batch-repairable by the same tool, **5 are refused for artefact divergence** — a later,
+  deeper reading rewrote a manifest an earlier reading created, so *which* reading the manifest
+  describes is a **scientific** decision and not a mechanical repoint — and 1 has no producing event in
+  the ledger at all and needs a **reading**, not a repoint. None of that is decided here, and no record
+  this candidate touches implies otherwise.
 - It does not reopen `BATCH_20260928_002`'s `MINOR` classification, its `WM_v7.1 → WM_v7.2` bump, or
   any of the nine ops that batch propagated. Mirror's verdict on it is **CONFIRMED**.
 - It does not assert *«the two patients were not equally screened»* — see § 4.1. The artefact does not
