@@ -370,3 +370,48 @@ and unaffected by anything here.
 class `MINOR` throughout. Six locator triples offered for blind audit, one of them adversarial against
 this candidate's own `TX7-1`. No score, `Status`, `Classification`, `Transferability`, `Claim links`,
 `BLOCCO 1` field or clinical position moves. **Nothing here is medical advice.**
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260928_001` (2026-09-28, ACTOR_ID `scientist`), append-only
+
+**Nothing above this line was rewritten.** **Status: `PROPAGATED`** — all 12 operations applied.
+
+`BATCH_20260928_001`: MINOR, MANUAL, `WM_v7.0` → **`WM_v7.1`**, under the operator's standing
+authorisation of 2026-09-27 given in writing, verbatim: ***«procedi tu, ti autorizzo su tutto»***.
+Propagated jointly with `CC-20260928-MIRROR003-REPAIRS-01`; the two candidates collide on **no
+record**.
+
+| op | record | verdict |
+|---|---|---|
+| `C2-1` (`F1(b)`) | `CLAIM 002` | **PROPAGATED** — and the two locators were verified, not taken on the candidate's word: `deepdive_manifests/PMID42397075.json` entries **13** and **20** (indices 12, 19), `"surface": "body"`, anchors *"Discussion, p. 16"* and *"Statistical analysis"*, each `snippet` **byte-equal** to the string `CLAIM 002` carries |
+| `C2-2` (`F1(b)`, `F1(d)`) | `CLAIM 002` | PROPAGATED |
+| `C21-1` (`N1`) | `CLAIM 021` | PROPAGATED — the restored conjunction re-verified verbatim, 1 occurrence, on `PMID34634460_Breton2021_EPMC_2026-09-27.xml` (`934b4e1a42ac19f5cd8912994fb171beabdeb94a6631b23d9a383dab1db906aa`, re-hashed **equal**) |
+| `PR-1` | `PAPER 001` | PROPAGATED |
+| `PR-18` (`N5`) | `PAPER 018` | PROPAGATED |
+| `PR-31` (`F2`) | `PAPER 031` | PROPAGATED — its five quotations all re-verified verbatim, 1 occurrence each, on the same artefact |
+| `PR-56a`, `PR-56b` (`F3`) | `PAPER 056` | PROPAGATED. ⚠️ **Measurement nuance:** the `Note`'s `**` count is **54 → 52** when the `**Note:**` label is counted and 52 → 50 when it is not, which is what the candidate measured. The **net −2 and the absence of any `****` sequence are confirmed**, and not one word of prose changed. This block is sealed and is absorbed by name in `rev.18` |
+| `WM-1` (`N2`) | WM `Working Model Current` | PROPAGATED — co-edited with `MIRROR003`'s `WM-2` in the same record, on a different sentence; both wordings stand in full |
+| `WM-2` (`N2`, `F1`) | WM `BATCH_20260927_004` changelog block | PROPAGATED |
+| `WM-3` (`N2`) | WM `BATCH_20260927_004` changelog block | PROPAGATED |
+| `TX7-1` (`N3`) | `TX-007` ceiling note | PROPAGATED — **`SAFETY 1` does not move**, verified by count before and after |
+
+**`N3`'s contest is carried as a contest, and the verifier re-measured it independently.** On
+`PMID42422765_Obeid2026_PMC_2026-09-27.xml` (`7bea83346b708e541d2c432e5da4029f69673e1abc3c6fe70926ad0e3ec2eef2`, re-hashed **equal**), counted on the
+raw bytes: `Figure S1` **0**, `Table S1` **0** — as Mirror said — but `supplementary` **40**,
+`mmc1` **36**, `S3E` **1**, `S5J` **0**, `S7I` **0**, `histolog` **2**, `tumor` **13** /
+`tumour` **1**, and `neoplas` · `carcinog` · `histopatholog` · `necropsy` all **0**. Every figure the
+candidate declares reproduces exactly. The two `<supplementary-material>` elements are present and
+the first is captioned *«Document S1. Figures S1–S8»*, pointing at an `mmc1.pdf` absent from every
+reachable checkout. **Mirror's supporting count is wrong and its conclusion is right**, exactly as the
+candidate recorded; nothing here is silently resolved.
+
+**`F1`'s refusal is upheld.** Labelling a receipted, manifested `complete_fulltext_read`
+`UNVERIFIABLE_SURFACE`, or de-quoting a verified string, would misdescribe the reading; the
+point-of-use citation by receipt + manifest entry is the repair, and the two manifest snippets were
+checked byte-for-byte here before it was allowed.
+
+**Residue, still open:** `deepdive_manifests/PMID42397075.json`'s stale `receipt` field (`-03` while
+every citing record names `-04`) — **confirmed by this batch and deliberately not edited**, a receipt
+fingerprinting a manifest not being a bookkeeping surface; the `mmc1.pdf` acquisition, which is what
+would close Mirror's own first falsifier.

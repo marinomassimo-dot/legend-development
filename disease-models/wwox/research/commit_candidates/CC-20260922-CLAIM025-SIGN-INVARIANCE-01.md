@@ -238,3 +238,34 @@ tracer shows `PAPER 091` **and** `PAPER 118`, 2/2 manifest-backed.
 
 **Still open, unchanged:** Supplementary Tables S4–S8 for the table-level check of the per-subtype
 directions.
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260928_001` (2026-09-28, ACTOR_ID `scientist`), append-only
+
+**Nothing above this line was rewritten.** **Status confirmed: `PROPAGATED IN PART`**, and the
+residue the correction above names is now **closed**.
+
+`BATCH_20260928_001` (MINOR, MANUAL, `WM_v7.0` → `WM_v7.1`), under the operator's standing
+authorisation of 2026-09-27 given in writing, verbatim: ***«procedi tu, ti autorizzo su tutto»***,
+propagated `CC-20260928-MIRROR003-REPAIRS-01` in full. The registry record this candidate owed
+exists: **`PAPER 118`** in the paper registry and **`LIT-0420`** in the literature log, both for
+PMID 42589397.
+
+Verified by the propagating batch, first-hand and not on the producer's word, **before** the
+`Claim links: 025` field was allowed to stand: the receipt `FTR-20260927-42589397-02` is in the
+ledger as a `contemporaneous_receipt`, `partial_fulltext_read`, `reread_reason:
+new_question_outside_prior_coverage`, with `source_fingerprint`
+`ae7f429190e0b48faaf91f9df0c79e66dd7986d23c65c21f5564ef8607f898af` — **equal to the sha256 of the
+artefact re-hashed on disk in this batch** — and `deepdive_manifests/PMID42589397.json` holds 7
+`verbatim_locators.entries`, three of whose quotations this batch re-verified verbatim against those
+bytes. The field therefore rests on a reading, which is the whole difference from the anti-pattern
+Mirror's F5 named.
+
+Measured after propagation, not predicted: `legend_lint.py` no longer emits
+`[INFO] UNLINKED_SUPPORT_UNCHECKED` for `CLAIM 025` and **adds nothing**, and
+`trace_claim_foundation --claim "CLAIM 025"` returns `PAPER 091` **and** `PAPER 118`, **2/2
+manifest-backed**, with no species drift.
+
+**Still open, unchanged:** Supplementary Tables S4–S8, for the table-level check of the per-subtype
+directions. `PAPER 118` and `LIT-0420` carry that debt explicitly.

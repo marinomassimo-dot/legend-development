@@ -652,3 +652,73 @@ does not move), and **M3 + N6 are structural** (papers 107 → 108, corpus 360 �
 `revision_ordinal` field on `reseal_dismech_baseline.py`, plus restoring `rev.17`'s note from git);
 the ten remaining one-directional claim→claim edges (§6 — a dedicated graph-hygiene candidate); the
 Supplementary S4–S8 debt of `PAPER 118`.
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260928_001` (2026-09-28, ACTOR_ID `scientist`), append-only
+
+**Nothing above this line was rewritten.** **Status: `PROPAGATED`** — all 19 operations applied.
+
+`BATCH_20260928_001`: MINOR, MANUAL, `WM_v7.0` → **`WM_v7.1`**, under the operator's standing
+authorisation of 2026-09-27 given in writing, verbatim: ***«procedi tu, ti autorizzo su tutto»***.
+Propagated jointly with `CC-20260928-MIRROR004-REPAIRS-01`; the two candidates collide on **no
+record**, and the one file-level and one record-level co-edit are named in the batch report.
+
+| op | record | verdict |
+|---|---|---|
+| `C30-1` (B1) | `CLAIM 030` | **PROPAGATED** — and the classification was re-adjudicated, not accepted. See below |
+| `C38-1` (M2) | `CLAIM 038` | PROPAGATED |
+| `C16-1` (M4) | `CLAIM 016` | PROPAGATED — its sealed block drifted as predicted and is absorbed by name in `rev.18` |
+| `C5-1` (M5) | `CLAIM 005` | PROPAGATED — the two edges render `reference only (wikilink_only)` and the species-drift finding is unchanged, both measured |
+| `C40-1` (M6a) | `CLAIM 040` | PROPAGATED |
+| `C33-1`, `C33-2` (M8) | `CLAIM 033` | PROPAGATED |
+| `C25-1`, `C25-2` (N4) | `CLAIM 025` | PROPAGATED |
+| `WM-1` (M4) | WM `BLOCK 2` | PROPAGATED |
+| `WM-2` (N2, M6a) | WM `Working Model Current` | PROPAGATED — co-edited with `MIRROR004`'s `WM-1` in the same record, on a different sentence |
+| `WM-3` (N2, M6a) | WM `BLOCK 3` | PROPAGATED. ⚠️ **Locator correction:** the sentence is in the `WM_v6.1` **changelog row**, not in the flowchart-logic prose the section heading names. The record id is right and the op is well formed; the description is not |
+| `P7-1` (M7) | `PAPER 007` | PROPAGATED |
+| `P117-1`, `P117-2` (M9) | `PAPER 117` | PROPAGATED |
+| `P306-1`, `P306-2` (M9) | `CORPUS P306` | PROPAGATED |
+| `P59-1` (N6) | `CORPUS-STUB-059` | PROPAGATED — restored between `CORPUS-STUB-058` and `CORPUS-STUB-060`, ordinal sequence closed |
+| `P118-1` (M3) | `PAPER 118` | PROPAGATED — `Claim links: 025` allowed to stand only after the receipt and the manifest were verified first-hand (below) |
+| `LIT-1` (M3) | `LIT-0420` | PROPAGATED — inserted after `LIT-0419` |
+
+**B1's classification, adjudicated by the verifier on its own reading and not carried over.**
+`MINOR — INFERENCE WITHDRAWN` **stands**, and the batch's grounds are its own. Table 1 of PMID
+36779245 was re-read off the JATS XML (`780f42de9b3982fa5bf9bf1e6bb76f71384c943aa197fb2d4de80be7ac7e7a34`, re-hashed **equal**) **with the column
+alignment checked cell by cell before any value was read across**: the variant, genetic-combination
+and country rows carry 12 data cells for 13 patients because one `colspan="2"` cell covers the
+sibling pair at **columns 9–10** — *after* both patients of interest — so the columns line up and
+patients 2 and 5 are read correctly. Both carry `c.689A > C, p.Gln230Pro (homozygous)` and
+`Missense/missense`; both are `Profound` / `Nonverbal` / `Walking: No`; the ages are `23 y 11 m, M`
+and `8 y 3 m (dec.), F`. The concordance the candidate added beyond the review is **confirmed** and
+the discordance is survival only. It is **not** a baseline reversal: `CLAIM 030` is `in observation`,
+its `Status`, `Type` and `Transferability` do not move, no datum changes, and the claim's thesis —
+severity tracks residual function — is untouched. What is withdrawn is a **corroboration**, and
+withdrawing a corroboration from a non-baseline claim is a MINOR change under §7.
+
+**`PAPER 118`'s `Claim links: 025` — the condition was checked, not assumed.** The receipt
+`FTR-20260927-42589397-02` is in the ledger as a `contemporaneous_receipt`, `partial_fulltext_read`,
+with `source_fingerprint` equal to the sha256 of the artefact re-hashed on disk here, and
+`deepdive_manifests/PMID42589397.json` holds 7 `verbatim_locators.entries`. A first-hand reading with
+a receipt and a manifest stands behind the field, so it was propagated and the advisory is cleared by
+evidence rather than by declaration.
+
+**§6's contest is carried as a contest.** M6b is **not resolved** by this batch: the graph fact
+stands, the attribution to `BATCH_20260927_003` does not, and the ten remaining one-directional
+claim→claim edges are recorded and untouched, for a dedicated graph-hygiene candidate.
+
+**One prediction of §3 was wrong, and it was wrong only because of the merge.** §3 predicted the
+paper-registry `sealed_scope` hash would **not** move. Measured: it moved, because
+`CC-20260928-MIRROR004-REPAIRS-01` edits `PAPER 056`, which is a sealed block and which this
+candidate could not see. Both drifted blocks are named with `--absorb` in `rev.18`.
+
+**Owed and discharged:** `growth_anchors.py record --batch BATCH_20260928_001 --papers +1 --corpus +1
+--literature +1`, measured against the files after propagation and not taken from this candidate —
+papers 107 → **108**, corpus 360 → **361**, literature 400 → **401**, `claims` 41, `registry_only`
+10 and `unread_premises` 0 all unchanged. `growth_anchors check` → **PASS**;
+`test_canonical_structure.py` → **4/4 OK**.
+
+**Residue, still open:** M10 (Harness Engineering — the revision-label monotonicity check; this batch
+chose `rev.18` so as not to make it worse, and said why in the seal itself); the ten one-directional
+claim→claim edges of §6; `PAPER 118`'s Supplementary S4–S8 debt.
