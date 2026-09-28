@@ -217,6 +217,54 @@ class TheCliIsDriven(unittest.TestCase):
         self.assertEqual(self.tip, run(["rev-parse", "task/test"], self.repo).strip())
 
 
+class ARemoteFirstTaskBase(unittest.TestCase):
+    """A task cut from `origin/main` (§21e hygiene, 2026-09-28): it lands, its branch is deleted,
+    and the lander is told which unpublished commits on main are not theirs."""
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory(prefix="legend-close-remote-")
+        self.addCleanup(self.tmp.cleanup)
+        base = Path(self.tmp.name)
+        self.origin = base / "origin.git"
+        run(["init", "-q", "--bare", "-b", "main", str(self.origin)], base)
+        self.repo = base / "root"
+        run(["clone", "-q", str(self.origin), str(self.repo)], base)
+        run(["config", "user.name", "close-test"], self.repo)
+        run(["config", "user.email", "close@example.invalid"], self.repo)
+        commit(self.repo, "base", "base")
+        run(["push", "-q", "-u", "origin", "main"], self.repo)
+        commit(self.repo, "peer", "a peer's unpublished commit")
+        self.wt = base / "task space"
+        run(["worktree", "add", "--track", "-b", "task/remote", str(self.wt), "origin/main"],
+            self.repo)
+        run(["config", "user.name", "close-test"], self.wt)
+        commit(self.wt, "task", "the task's own commit")
+        self.tip = run(["rev-parse", "HEAD"], self.wt).strip()
+
+    def test_a_branch_tracking_origin_main_is_deleted_after_landing(self):
+        self.assertIn("origin/main", run(["branch", "-vv", "--list", "task/remote"], self.repo))
+        result = run_cli(self.wt)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual(result.stdout.splitlines()[-1], "TASK_CLOSED")
+        run(["merge-base", "--is-ancestor", self.tip, "main"], self.repo)
+        self.assertEqual("", run(["branch", "--list", "task/remote"], self.repo).strip())
+
+    def test_the_push_note_names_only_the_commits_the_task_did_not_make(self):
+        result = run_cli(self.wt, "--dry-run")
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual(result.stdout.splitlines()[-1], "DRY_RUN")
+        self.assertIn("PUSH_NOTE", result.stderr)
+        self.assertIn("a peer's unpublished commit", result.stderr)
+        self.assertNotIn("the task's own commit", result.stderr)
+
+    def test_no_note_when_main_carries_nothing_foreign(self):
+        run(["push", "-q", "origin", "main"], self.repo)
+        run(["fetch", "-q", "origin"], self.repo)
+        result = run_cli(self.wt, "--dry-run")
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertNotIn("PUSH_NOTE", result.stderr)
+
+
 class GeneratedSurfaceFreshnessOnLanding(unittest.TestCase):
     """task_close verifies the generated surfaces on the MERGE RESULT before touching main.
 
