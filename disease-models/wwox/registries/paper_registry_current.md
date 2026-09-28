@@ -41,7 +41,7 @@ The canonical P1–P7 codes follow the WWOX working model and claim registry. **
 **Source type:** preprint / organoid study
 **Journal/source:** bioRxiv
 **Identifier:** preprint
-**Status:** superseded by [[paper_registry_current#PAPER 094]] — the refereed version of this work, PMID 42397075 / DOI 10.1093/brain/awag239, *Brain* 2026, read completely (`FTR-20260810-42397075-04`, manifest `deepdive_manifests/PMID42397075.json`, 30 locators). 🔵 **Kept append-only and resolvable rather than merged away:** nothing measured here is withdrawn, and the identity is still cited downstream. ⚠️ **What this supersession does NOT do, deliberately:** it does not move [[claim_registry_current#CLAIM 002]]'s `Source`. That repointing, and the five boundaries the refereed reading carries, are **DEFERRED** — no artefact of PMID 42397075 exists in this checkout and PubMed returns no PMCID for it, so the blind audit of those seven triples came back `UNVERIFIABLE_SURFACE` 7/7 for absence of bytes, not on the merits (`research/locator_audits/2026-09-27_wave2_audit_B.md`). (`CC-20260826-PROVENANCE-01` §C, `BATCH_20260927_004`.)
+**Status:** superseded
 **Primary pathway:** P1 — Ca²⁺ / network dysregulation
 **Secondary pathway:** P3 / P7
 **Model/species:** human organoids
@@ -50,7 +50,7 @@ The canonical P1–P7 codes follow the WWOX working model and claim registry. **
 **clinical relevance:** HIGH
 **Claim links:** 002
 **Role:** core baseline paper
-**Note:** key paper for network dysregulation, radial glia, MYC, AAV rescue
+**Note:** key paper for network dysregulation, radial glia, MYC, AAV rescue. 🔵 **Superseded 2026-09-27 (`BATCH_20260927_004`, `CC-20260826-PROVENANCE-01` §C) by [[paper_registry_current#PAPER 094]]** — the refereed version of this work, PMID 42397075 / DOI 10.1093/brain/awag239, *Brain* 2026, read completely (`FTR-20260810-42397075-04`, manifest `deepdive_manifests/PMID42397075.json`, 30 locators). **Kept append-only and resolvable rather than merged away:** nothing measured here is withdrawn, and the preprint identity is still cited downstream. ⚠️ **What this supersession does NOT do, deliberately:** it does not move [[claim_registry_current#CLAIM 002]]'s `Source`. That repointing, and the five boundaries the refereed reading carries, are **DEFERRED** — no artefact of PMID 42397075 exists in this checkout and PubMed returns no PMCID for it, so the blind audit of those seven triples came back `UNVERIFIABLE_SURFACE` 7/7 **for absence of bytes, not on the merits** (`research/locator_audits/2026-09-27_wave2_audit_B.md`). Moving the foundation of a `consolidated baseline` claim onto a reading whose bytes nobody can open is the one move the locator discipline exists to prevent.
 
 ---
 
@@ -706,8 +706,8 @@ The canonical P1–P7 codes follow the WWOX working model and claim registry. **
 **Genotype/model:** neuron-specific conditional KO; non null/null sistemico, non compound het
 **Transferability:** T2
 **clinical relevance:** HIGH
-**Claim links:** 021
-**Role:** fonte primaria verificata di CLAIM 021 (network-state pathology come core pathway)
+**Claim links:** 021 · 002 (the sIPSC amplitude measurement this record carries is the competing, MEASURED account of the organoid GABA pattern — added 2026-09-27, `BATCH_20260927_004`, when `CLAIM 002` began citing it by wikilink; the edge is evidential, not an advisory-silencing declaration)
+**Role:** fonte primaria verificata di CLAIM 021 (network-state pathology come core pathway); fonte della misura funzionale inibitoria che `CLAIM 002` oppone all'ipotesi immature-GABA
 **Note:** Promosso 2026-07-05 (CC-2026-07-05-003) da placeholder corpus a PAPER pieno; CLAIM 021 era ancorato solo a [[paper_registry_current#CORPUS P210]] (identificato via review Obeid 2026), ora ancorato a full-text verificato. According to PubMed, [DOI](https://doi.org/10.1016/j.nbd.2021.105529). Contenuto verificato: burst neocorticali spontanei (36/42 slice KO vs 0/11 WT), assenti in ippocampo (patologia predominante di rete neocorticale), propagazione L2/3→L5 ~11 mm/s, accoppiamento fase-ampiezza delta-gamma/theta-HFO (biomarker epilessia pediatrica); burst NMDAR- e gap-junction-dipendenti (d-APV abolisce; carbenoxolone ↓87%; pannexina no); ↑ampiezza mEPSC (postsinaptico), ↓ampiezza+frequenza sIPSC (sbilancio E/I); piramidali L2/3 depolarizzati, ↑sag/Ih, ↑rebound post-inibitorio. Lead terapeutici (IPOTESI, non DATO): blocco gap-junction / modulazione NMDAR — ⚠️ CBX non specifico, Ih-blocker (ZD7288) controversi. ⚠️ Duplicati corpus **CORPUS P210** e **CORPUS P300** (stesso paper) → mergiare in un prossimo BATCH_COMMIT.
 **Wikilinks:** [[claim_registry_current#CLAIM 021]]
 
