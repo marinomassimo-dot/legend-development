@@ -722,3 +722,77 @@ papers 107 → **108**, corpus 360 → **361**, literature 400 → **401**, `cla
 **Residue, still open:** M10 (Harness Engineering — the revision-label monotonicity check; this batch
 chose `rev.18` so as not to make it worse, and said why in the seal itself); the ten one-directional
 claim→claim edges of §6; `PAPER 118`'s Supplementary S4–S8 debt.
+
+---
+
+## CORRECTION NOTE — 2026-09-28, ACTOR_ID `scientist` (`CC-20260928-MIRROR0928-REPAIRS-01`), append-only
+
+> Appended, not rewritten: nothing above this line is altered. Source: the MIRROR ex-post review of
+> `BATCH_20260928_001`, persisted verbatim at
+> `research/session_evaluations/2026-09-28_BATCH_20260928_001_mirror_review.md`. Every figure below was
+> re-measured first-hand here, and where the reviewer's own figure did not reproduce, this note says so.
+
+**(1) FINDING 3 — the licensing ground stated in §"`PAPER 118`'s `Claim links: 025`" is the wrong
+ground, and as written it licenses the defect Mirror's `F5` forbade.** That paragraph ends *"A
+first-hand reading with a receipt and a manifest stands behind the field, so it was propagated and the
+advisory is cleared by evidence rather than by declaration."* A receipt and a manifest establish that a
+**reading happened**; they say nothing about whether the paper is **evidence for the claim**, so a
+receipted reading of an irrelevant paper would clear `UNLINKED_SUPPORT_UNCHECKED` equally well — which
+is exactly `F5`'s defect (`claim_links` is an evidential edge in
+`trace_claim_foundation.EVIDENTIAL_EDGES`). 🔴 **The correct ground, and the one that actually holds:**
+`CLAIM 025`'s **`Evidence boundary` derives its bound from this paper's own Cox models and event
+counts** (`228` OV patients / `161` events against `390` BRCA / `22` events; `HR 1.11, 95% CI
+0.92–1.35, p = 0.27`, concordance `0.49`) — so the evidential edge is **true**, and the receipt plus
+manifest are the *provenance* of the reading that established it, not the licence for the field. The
+canonical wording at the point of use (`PAPER 118` `**Record provenance:**`) is repaired by
+`CC-20260928-MIRROR0928-REPAIRS-01`, since the paper registry is a scientific current file.
+
+**(2) FINDING 11 — §6's residue is wrong by one item, and the two documents count different things.**
+Re-measured here on `analysis/data/pathograph_export.jsonl`, `bbdb430` → `bc7346a` (39 → 40
+`claim_edge` records; one-directional = `reciprocal: false`):
+
+| movement | edge | declaring field, as the export records it | declared in §6? |
+|---|---|---|---|
+| **closed** | `CLAIM 016 ↔ CLAIM 040` | `Wikilinks` | ✅ yes — `C40-1` |
+| **closed** | `CLAIM 030 ↔ CLAIM 033` | side effect of `B1`'s own closing wikilink *«vedi [[claim_registry_current#CLAIM 033]] riserva (6)»* | ❌ **no** |
+| **created, one-way** | `CLAIM 016 ↔ CLAIM 033`, direction `CLAIM 033 → CLAIM 016` | `Nota di direzione (INFERENZA, taglia in entrambi i sensi)` — the wikilink `C33-1` put inside reservation (6)(a) | ❌ **no** |
+
+**One-directional claim→claim edges therefore went 16 → 15**, not 11 → 10. Neither undeclared movement
+is a scientific error — both wikilinks are substantively correct — but the residue handed forward was
+wrong by one item, and it is corrected here.
+
+🔴 **The residue sentence *"the ten remaining one-directional claim→claim edges"* is superseded by
+this note.** The working figure for the graph-hygiene candidate is **15 one-directional edges measured
+on `pathograph_export.jsonl`**, which after this batch are: `004↔040 · 005↔036 · 007↔041 · 009↔025 ·
+009↔028 · 011↔031 · 016↔033 · 016↔039 · 017↔020 · 019↔033 · 028↔034 · 028↔035 · 030↔032 · 030↔035 ·
+031↔032`. Of these, **`016↔033` was created by `BATCH_20260928_001`** and is the only one any batch of
+this repair series created; the other fourteen pre-date it. `CLAIM 016 → CLAIM 033` is **recorded, not
+closed**: §6's own rule stands — adding a back-link is an adjacency judgement, none of these was
+adjudicated, and a dedicated candidate decides them as a set.
+
+🔴 **The two counting rules, named — this is why 11 and 16 were never the same measurement.**
+Neither document stated its rule, so both figures were readable as the other's.
+
+- **Rule A — §6's `11`:** a directed claim→claim edge exists when claim *X*'s **`**Wikilinks:**` field
+  and that field only** names claim *Y*. Measured over the 41-claim graph at authoring time.
+- **Rule B — the pathograph's `16`/`15`:** a directed claim→claim edge exists when a claim wikilink
+  appears in **any declared field** of the record. In this export those fields are nine: `Wikilinks`
+  (25 edges), `Clinical meaning` (10), `Summary` (7), `Evidence boundary` (3), `Source` (3), and four
+  named prose blocks. The unit counted is the **undirected pair** (`edge_id` = `A <-> B`), and
+  one-directional means `reciprocal: false`.
+
+Rule B is strictly wider than Rule A, and the five edges §6 never listed are exactly the ones declared
+outside `**Wikilinks:**` (`009↔025` and `017↔020` in `Clinical meaning`, `011↔031` in `Summary`,
+`016↔039` in `Evidence boundary`, `009↔028` in a named prose block). **The graph-hygiene candidate
+must state which rule it uses in its first sentence**, because the two differ by five items on a
+41-claim graph.
+
+**(3) What this note does NOT do.** `rev.18`'s label convention (Mirror FINDING 7) and the in-place
+changelog-row rule (FINDING 8) are routed to Harness Engineering as hand-offs and are deliberately not
+written here or into `framework/protocols/prompt_batch_commit.md`, which Harness Engineering is editing
+today. The corrected label measurement travels with that hand-off: **16** commits touch
+`analysis/data/dismech_phase2_baseline.json` and yield 16 labels —
+`7, 7, 7, 12, 7, 12, 7, 8, 9, 15, 16, 16, 17, 13, 14, 18` — not the **13** this candidate's report
+printed and not the **15** the review states. The conclusion is unaffected: the highest prior label is
+**17** (`497f4ee82`), `rev.15` already exists (`8ca27121f`), so `rev.18` is the first label strictly
+above every previous one and the judgement stands.

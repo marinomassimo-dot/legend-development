@@ -415,3 +415,45 @@ checked byte-for-byte here before it was allowed.
 every citing record names `-04`) — **confirmed by this batch and deliberately not edited**, a receipt
 fingerprinting a manifest not being a bookkeeping surface; the `mmc1.pdf` acquisition, which is what
 would close Mirror's own first falsifier.
+
+---
+
+## CORRECTION NOTE — 2026-09-28, ACTOR_ID `scientist` (`CC-20260928-MIRROR0928-REPAIRS-01`), append-only
+
+> Appended, not rewritten: nothing above this line is altered. Source: the MIRROR ex-post review of
+> `BATCH_20260928_001`, persisted verbatim at
+> `research/session_evaluations/2026-09-28_BATCH_20260928_001_mirror_review.md`, FINDING 9.
+
+🔴 **`t6`'s proposition contradicts `t6`'s own evidence cell, and the contradiction shipped.** The
+triple reads *"The census artefact carries no supplementary captions and names the file that does"*
+while its evidence cell, in the same row, records *"two `<supplementary-material>` elements, the first
+captioned «Document S1. Figures S1–S8»"*. A proposition asserting the absence of supplementary captions
+and an evidence cell printing two of them cannot both be right. Re-measured first-hand here on
+`files/fulltext/PMID42422765_Obeid2026_PMC_2026-09-27.xml` (sha256
+`7bea83346b708e541d2c432e5da4029f69673e1abc3c6fe70926ad0e3ec2eef2`, re-hashed **equal**):
+`<supplementary-material` **2** · the token `supplementary` **40** · `mmc1` **36** · `Figure S1` **0** ·
+`Table S1` **0** · `neoplas` `carcinog` `histopatholog` `necropsy` all **0** · `histolog` **2** ·
+`tumor` 13 + `tumour` 1 = **14**. Container captions: *«Document S1. Figures S1–S8»* and *«Document S2.
+Article plus supplemental information»*.
+
+**The defensible proposition, and the one the argument actually needs:** *the artefact carries no
+caption of any supplementary **panel** `S1`–`S8` — only two `<supplementary-material>` container
+captions — so the four zero counts are asserted of the running text and of the article's own captions,
+and a supplementary surveillance panel is not excluded.* That is what `t6` should have offered for
+audit, and it is what the two surfaces the false clause reached now say.
+
+⚠️ **The false clause reached two surfaces, not the one the review named.** Repaired outside any batch,
+each by a minimal edit carrying a dated correction marker:
+
+| surface | status |
+|---|---|
+| `therapeutics/therapeutic_strategies_current.md` § `TX-007` ceiling note | ✎ corrected 2026-09-28 — the surface the review named; this strategy's safety score does **not** move, and the multiset of `SAFETY` values in the file is byte-identical before and after |
+| `research/dismissal_ledger_current.md` `D-23` scope clause | ✎ corrected 2026-09-28 — **not named by the review**; found by tracing `TX7-1`'s sibling op |
+
+🔴 **Why this is worth the note and not just the edit.** `t6` was offered as the triple that breaks
+`TX7-1` if it fails — *"If a reader finds supplementary captions in that artefact, the scope sentence is
+wrong and must be rewritten"*. A reader did; the artefact does; and the row that said so was the row
+that carried the disproof in its own evidence cell. The lesson is not that a count was wrong — every
+count in `t6` reproduces exactly — but that **a proposition and its evidence were read as agreeing
+because they were written in the same breath**, which is the one failure mode an offered-for-audit table
+is supposed to remove. The score move is unaffected: it rests on the four zero counts, which hold.
