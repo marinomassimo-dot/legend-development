@@ -162,7 +162,8 @@ dates, its version label and its batch id do not move, and its stated conclusion
 
 ## 3 · Post-propagation expectation, stated so it can be checked
 
-After these five ops land, `python3 scripts/test_section_references.py --census` should report
+After these five ops land, the repository-wide census (`scripts/test_section_references.py`
+with `--census`) should report
 **12 unresolvable**, down from 68 at `4249755` and from 17 on this branch. The residue is, exhaustively:
 
 | residue | n | why it stays |
@@ -206,3 +207,21 @@ verbatim, in its own line.
   right-hand column — *does the citing sentence survive the corrected address* — which is the only
   place this candidate could hide a content change behind a pointer change.
 - **The `WM-1` op is the one to read twice**: it is the only op inside a historical changelog row.
+
+---
+
+## 7 · One harness defect found by landing this candidate — handed off, not fixed here
+
+🔴 **`scripts/test_section_references.py` does not expose `--census` in its `--help`.** It has no
+`argparse`; `--census` is read straight off `sys.argv` (line 308) while `--help` falls through to
+`unittest`'s own parser, which lists `-v`, `-q`, `--locals`, `--durations`, `-f`, `-c`, `-b`, `-k`
+and nothing else. Consequence, measured here: `scripts/test_documented_commands.py`
+(`test_documented_cli_flags_exist`) goes **red** on any markdown that documents the flag in the
+guarded `python3 <path> --flag` form — which this candidate's §3 did on its first draft, and which
+made four cases of `scripts/test_repository_surface_determinism.py` fail, since that suite runs the
+documented-commands guard on a disposable worktree. The eleven documents already carrying
+`scripts/test_section_references.py --census` escape only because they omit the `python3` prefix the
+matcher keys on, so **the repository currently cannot document its newest tool's only flag in the
+form its own convention prefers.** Repaired on this side by using the unprefixed form. The tool is
+Harness Engineering's surface, so the fix — give the script an `argparse` front that declares
+`--census`, or teach the guard the flag — is proposed, not applied.
