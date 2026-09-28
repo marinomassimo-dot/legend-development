@@ -112,6 +112,7 @@ python3 scripts/public_release_gate.py                  # the publication gate
 python3 scripts/run_release_regressions.py              # every release suite at once
 python3 governance/scripts/governance_fingerprint.py compose --all   # per-role governance fingerprint
 python3 scripts/test_tool_routing.py                    # every shipped tool is routed, exactly once
+python3 scripts/test_section_references.py --census     # `<file>` §NN references, per directory
 ```
 
 Persist receipts with `fulltext_receipts.py record`. Hand-editing the ledger breaks its hash chain

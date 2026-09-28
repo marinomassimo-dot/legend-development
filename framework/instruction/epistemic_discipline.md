@@ -21,14 +21,22 @@ The four levels above cover only **positive assertions**. A knowledge system tha
 
 > **The most dangerous premises are the ones too obvious to write down.** Nobody annotates *"polyubiquitination leads to the proteasome"* as a claim to cite — it is background knowledge. Precisely for that reason it is never tagged, and therefore never verified. *(It is false as a universal rule: K48 chains commonly support proteasomal turnover, whereas K63 chains have several context-dependent roles, including trafficking and selective autophagy. CMA involvement has to be established for the substrate and context.)*
 
-### Three binding obligations
+### Three binding obligations — §2.1, §2.2, §2.3
 
-1. **`PREMISE_TAG` — every rejection, and every non-trivial conclusion, must NAME its load-bearing premise and tag it:** `PREMISE: DATO` · `PREMISE: INFERENZA` · 🔴 `PREMISE: DEFAULT_FROM_TEXTBOOK`.
-   > 🔴 A `DEFAULT_FROM_TEXTBOOK` is **not a foundation: it is a research target.** A conclusion resting on one is **provisional by construction.**
+> **Each obligation carries its own number, and those numbers are the ones to cite.**
+> They were unnumbered until 2026-09-28, and two actors independently invented the same
+> numbering for them: an analysis record cited §2.2 for `REVIVAL_TRIGGER` and
+> `learning/plan/SCIENTIST-FIRST-REAL-PAPER-PILOT-001.md` cited §2.3 for the re-audit rule.
+> Both rules existed and both arguments were sound — the defect was here, in a target that
+> did not carry the number it was being cited by. Numbering it is the repair; the reference
+> `epistemic_discipline.md` §2 still resolves, because §2 is this section's parent.
 
-2. **`REVIVAL_TRIGGER` — nothing dies in silence.** Every rejection is recorded with **what evidence would reopen it.**
+**2.1 · `PREMISE_TAG` — every rejection, and every non-trivial conclusion, must NAME its load-bearing premise and tag it:** `PREMISE: DATO` · `PREMISE: INFERENZA` · 🔴 `PREMISE: DEFAULT_FROM_TEXTBOOK`.
+> 🔴 A `DEFAULT_FROM_TEXTBOOK` is **not a foundation: it is a research target.** A conclusion resting on one is **provisional by construction.**
 
-3. **Re-audit rule** — the loop that makes this compound. **Every time a new mechanistic `DATO` arrives, re-scan the dismissal ledger** for rejections whose premise that datum touches. Without this step you have self-*correction*, not self-*improvement*.
+**2.2 · `REVIVAL_TRIGGER` — nothing dies in silence.** Every rejection is recorded with **what evidence would reopen it.**
+
+**2.3 · Re-audit rule** — the loop that makes this compound. **Every time a new mechanistic `DATO` arrives, re-scan the dismissal ledger** for rejections whose premise that datum touches. Without this step you have self-*correction*, not self-*improvement*.
 
 ## 3. Defaults that have bitten this domain
 
