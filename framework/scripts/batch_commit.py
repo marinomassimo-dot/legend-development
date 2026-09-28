@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 """Mechanical helper for the BATCH_COMMIT backup/restore phases, and for record-scoped propagation.
 
-`propagate` is Phase 4 for the current files Benchmark J supported
-(`framework/eval/benchmarks/BENCH-J-RECORD-SCOPED-EDIT/J3_DECISION.md`, PARTIALLY_SUPPORTED):
-one atomic batch of record-scoped operations per file, through `record_scoped_edit.py`, every
-byte outside the addressed records proven unchanged before anything is written. A file the
-benchmark did not support is refused here by name, and keeps the full rewrite.
+`propagate` is Phase 4 for the four scientific current files, all of which Benchmark J supported
+(`framework/eval/benchmarks/BENCH-J-RECORD-SCOPED-EDIT/J3_DECISION.md` for three,
+`J5_RESULTS.md` for the paper registry): one atomic batch of record-scoped operations per file,
+through `record_scoped_edit.py`, every byte outside the addressed records proven unchanged before
+anything is written. When the editor refuses, nothing is written and the file falls back to the
+FULL rewrite for that batch — the refusal says so in one greppable line. Any other file is
+refused by name.
 """
 import argparse
 import datetime
@@ -103,12 +105,14 @@ def snapshot_targets(repo_root, protocol_rel=PROTOCOL):
             + ", ".join(uncovered))
     return list(dict.fromkeys(targets))
 
-# Benchmark J · J3: the families whose every legitimate historical edit the editor reproduced.
-# `paper_registry_current.md` lost one (a duplicated `## Purpose` heading) and is NOT here.
+# Benchmark J: the families whose every legitimate historical edit the editor reproduced — three
+# at J3; the paper registry at J5 (328 / 328, S = 0), once `--under` could name one of its two
+# `## Purpose` sections.
 RECORD_SCOPED = (
     "disease-models/wwox/registries/working_model_current.md",
     "disease-models/wwox/registries/claim_registry_current.md",
     "disease-models/wwox/registries/literature_tracking_log_current.md",
+    "disease-models/wwox/registries/paper_registry_current.md",
 )
 
 
@@ -245,15 +249,15 @@ def restore(snapshot_dir, repo_root):
 def propagate(repo_root, rel, ops_path, apply=False):
     """Apply one atomic batch of record-scoped operations to one supported current file.
 
-    Returns (exit code, message). 0 applied or clean dry run · 3 refused (nothing written) ·
-    4 the file is not one Benchmark J supported: propagate it by full rewrite.
+    Returns (exit code, message). 0 applied or clean dry run · 3 refused (nothing written; the
+    file takes the FULL rewrite for this batch, recorded in the report) · 4 not a record-scoped
+    current file.
     """
     import record_scoped_edit as rse
     rel = rel.replace(os.sep, "/")
     if rel not in RECORD_SCOPED:
-        return 4, (f"{rel} is not propagated record by record: Benchmark J (J3_DECISION.md) "
-                   "did not support it. Use the full rewrite of prompt_batch_commit.md Phase 4 "
-                   "for this file.")
+        return 4, (f"{rel} is not a record-scoped current file ({', '.join(RECORD_SCOPED)}); "
+                   "nothing was written.")
     path = os.path.join(repo_root, rel)
     with open(path, "rb") as handle:
         text = handle.read().decode("utf-8")
@@ -262,7 +266,13 @@ def propagate(repo_root, rel, ops_path, apply=False):
     try:
         out, report = rse.apply_ops(text, ops, rse.levels_for(rel))
     except rse.Refusal as refusal:
-        return 3, f"REFUSED — {refusal}. Nothing was written to {rel}."
+        # 🔴 A REFUSAL IS NEVER FORCED. It is either a mistake in the operation list — fix it and
+        # rerun — or an edit outside what the editor can prove, which that file takes by FULL
+        # rewrite for this batch. The marker line is what later measures how often that is.
+        return 3, (f"REFUSED — {refusal}. Nothing was written to {rel}.\n"
+                   f"FULL_FALLBACK {rel} {refusal.code} — fix the operation list if it is wrong; "
+                   "otherwise propagate this file by full rewrite for this batch and record this "
+                   "line in the batch report (prompt_batch_commit.md Phase 4.0).")
     if apply and out != text:
         with open(path, "wb") as handle:
             handle.write(out.encode("utf-8"))
@@ -307,7 +317,7 @@ def main(argv=None):
                                   help="repo-relative current file, e.g. "
                                        "disease-models/wwox/registries/claim_registry_current.md")
     propagate_parser.add_argument("--ops", required=True,
-                                  help="JSON list of {op, id|heading|preamble, text|old|new, rename_to}")
+                                  help="JSON list of {op, id|heading[+under]|preamble, text|old|new, rename_to}")
     propagate_parser.add_argument("--apply", action="store_true")
     args = parser.parse_args(argv)
 

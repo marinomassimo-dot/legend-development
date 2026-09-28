@@ -83,6 +83,40 @@ class Replay(unittest.TestCase):
             self.assertEqual(result["counts"].get("VERBATIM_COPY_DRIFT:prevented"), 1, mode)
 
 
+class ProductionAnchors(unittest.TestCase):
+    """The replay addresses a working-model edit the way today's editor lets production do it."""
+
+    WM = ("# Working Model Current\n\n# BLOCK 1 — one\nlive\n\n# BLOCK 3 — flow\nflow\n\n"
+          "## Changelog\n\n| d | v |\n|---|---|\n| 2 | v2 |\n\n## Gene notes\nnote\n")
+
+    def unit(self):
+        units, _pk, _ck = bench.unit_diffs(self.WM, self.WM, "working_model_current.md", "0" * 12)
+        return next(u for u in units if u.key.startswith("BLOCK 3"))
+
+    def test_an_edit_inside_a_nested_section_is_anchored_on_its_heading(self):
+        op = {"op": "replace-within", "id": "BLOCK 3", "old": "| 2 | v2 |\n",
+              "new": "| 3 | v3 |\n| 2 | v2 |\n"}
+        got = bench.production_anchor(op, self.unit(), self.WM, (1,))
+        self.assertEqual((got.get("heading"), "id" in got, got.get("to_eof")),
+                         ("Changelog", False, None))
+
+    def test_a_new_section_in_the_last_block_asserts_to_eof(self):
+        op = {"op": "replace-within", "id": "BLOCK 3", "old": "| 2 | v2 |\n",
+              "new": "| 2 | v2 |\n\n## BATCH_X — new\nwhy\n"}
+        got = bench.production_anchor(op, self.unit(), self.WM, (1,))
+        self.assertEqual((got.get("id"), got.get("to_eof")), ("BLOCK 3", True))
+        import record_scoped_edit as rse
+        clean = {k: v for k, v in got.items() if not k.startswith("_")}
+        out, _ = rse.apply_one(self.WM, rse.Op.from_dict(clean), (1,))
+        self.assertEqual(out, self.WM.replace("| 2 | v2 |\n", op["new"]))
+
+    def test_a_record_without_nested_headings_is_untouched(self):
+        units, _pk, _ck = bench.unit_diffs(self.WM, self.WM, "working_model_current.md", "0" * 12)
+        block1 = next(u for u in units if u.key.startswith("BLOCK 1"))
+        op = {"op": "replace-within", "id": "BLOCK 1", "old": "live", "new": "alive"}
+        self.assertEqual(bench.production_anchor(op, block1, self.WM, (1,)), op)
+
+
 class CommittedResults(unittest.TestCase):
     def test_documents_quote_the_committed_figures(self):
         corpus = json.loads(bench.CORPUS.read_text(encoding="utf-8"))
@@ -96,11 +130,17 @@ class CommittedResults(unittest.TestCase):
                      "working_model_current.md"):
             self.assertEqual(lost[name], 0, name)
         self.assertEqual(sum(fam["silent"] for fam in results["families"].values()), 0)
+        # J5 (PREREGISTRATION_J5.md): the paper registry, replayed with `under`, lost nothing.
+        j5 = json.loads(bench.J5_RESULTS.read_text(encoding="utf-8"))["families"]
+        j5_supported = {name for name, fam in j5.items()
+                        if not fam["lost_record"] and not fam["lost_range"] and not fam["silent"]}
+        self.assertEqual(j5_supported, {"paper_registry_current.md"})
         import batch_commit
         supported = {Path(p).name for p in batch_commit.RECORD_SCOPED}
         self.assertEqual(supported, {name for name, n in lost.items() if n == 0
                                      and name.endswith("_current.md")
-                                     and not name.startswith(("meta_", "research_"))})
+                                     and not name.startswith(("meta_", "research_"))}
+                         | j5_supported)
 
 
 if __name__ == "__main__":
