@@ -35,8 +35,22 @@ def clean(path: Path, include_ignored: bool = False) -> None:
     flags = ["status", "--porcelain", "--untracked-files=all", "--ignore-submodules=none"]
     if include_ignored:
         flags.append("--ignored")
-    if git(flags, path).strip():
-        raise GitError(f"checkout is not clean: {path}")
+    state = git(flags, path).strip()
+    if state:
+        # 🔴 THE REFUSAL NAMES THE PATHS, because the directory alone does not say what to do.
+        # On 2026-09-28 one untracked file in the root checkout — another actor's in-progress
+        # weekly scout — blocked every actor's landing, and "checkout is not clean: <root>" cost
+        # two rounds of guessing before the path was found. The guard itself is unchanged: any
+        # untracked file still refuses, because a merge into a checkout holding one can clobber
+        # a path the incoming commits add. Only the diagnosis is added.
+        entries = [line for line in state.splitlines() if line.strip()]
+        shown = "; ".join(entry.strip() for entry in entries[:10])
+        more = f" (+{len(entries) - 10} more)" if len(entries) > 10 else ""
+        raise GitError(
+            f"checkout is not clean: {path} — {len(entries)} entry(ies): {shown}{more}. "
+            "A `??` path may be another actor's work in progress: it is theirs to commit, move "
+            "to their own worktree or stash, not yours to dispose of. Your own changes: commit "
+            "them on your task branch.")
     for marker in ("MERGE_HEAD", "CHERRY_PICK_HEAD", "REVERT_HEAD", "rebase-merge", "rebase-apply"):
         location = Path(git(["rev-parse", "--git-path", marker], path).strip())
         if not location.is_absolute():

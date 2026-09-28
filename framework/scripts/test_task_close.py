@@ -59,6 +59,18 @@ class TaskClosure(unittest.TestCase):
         self.assertEqual(before, run(["rev-parse", "main"], self.repo))
         self.assert_kept()
 
+    def test_the_refusal_names_the_paths_and_whose_they_may_be(self):
+        """"not clean: <dir>" cost two rounds of guessing on 2026-09-28; the paths are named."""
+        stranger = self.repo / "governance" / "SOMEONE-ELSES-WORK.md"
+        stranger.parent.mkdir(parents=True, exist_ok=True)
+        stranger.write_text("in progress\n", encoding="utf-8")
+        self.addCleanup(stranger.unlink)
+        result = run_cli(self.wt)
+        self.assertEqual(result.returncode, 2, result.stdout)
+        self.assertIn("governance/SOMEONE-ELSES-WORK.md", result.stderr)
+        self.assertIn("another actor's work in progress", result.stderr)
+        self.assert_kept()
+
     def test_dirty_checkout_is_refused(self):
         for checkout in (self.repo, self.wt):
             with self.subTest(checkout=checkout):
