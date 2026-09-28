@@ -270,6 +270,31 @@ class TheOtherRefusals(ResealFixture):
         self.assertEqual(2, done.returncode, done.stdout + done.stderr)
         self.assertIn("not committed", done.stdout)
 
+    def test_the_refused_path_is_printed_whole_and_unstaged_is_the_case_that_bit(self) -> None:
+        """The refusal names a file, so the name has to be copyable.
+
+        Until 2026-09-28 it was not. `_dirty` sliced `status --porcelain`'s fixed two-column
+        prefix with `line[3:]`, while `_git` returns `stdout.strip()` — which eats the LEADING
+        space of a worktree-only modification (` M path` -> `M path`), so the slice ate the
+        path's first character and the refusal printed `isease-models/wwox/...`. The test above
+        never saw it because it asserts only the sentence. It bit the FIRST line of the output
+        and only for UNSTAGED changes, which is why this case leaves the drift unstaged and
+        the next one stages it: a fixture that stages its change cannot reproduce the defect.
+        """
+        self.drift_claim_016()
+        done = self.reseal("--revision", "rev.2 (dirty)", "--absorb", "CLAIM 016")
+        self.assertEqual(2, done.returncode, done.stdout + done.stderr)
+        self.assertIn(f"  - {CLAIMS}", done.stdout)
+        self.assertNotIn(CLAIMS[1:] + "\n", done.stdout.replace(CLAIMS, ""))
+
+    def test_a_staged_declared_path_is_refused_and_named_whole_too(self) -> None:
+        self.drift_claim_016()
+        subprocess.run(["git", "add", "--", CLAIMS], cwd=self.repo, check=True,
+                       capture_output=True)
+        done = self.reseal("--revision", "rev.2 (staged)", "--absorb", "CLAIM 016")
+        self.assertEqual(2, done.returncode, done.stdout + done.stderr)
+        self.assertIn(f"  - {CLAIMS}", done.stdout)
+
     def test_a_moved_append_only_prefix_is_an_incident(self) -> None:
         lines = (self.repo / LEDGER).read_text(encoding="utf-8").splitlines()
         lines[0] = json.dumps({"event_id": "FTR-01", "rewritten": True})

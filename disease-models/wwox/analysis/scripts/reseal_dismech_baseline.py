@@ -110,9 +110,25 @@ def _sha256(relative: str) -> str:
 
 
 def _dirty(paths: list[str]) -> list[str]:
-    """Paths with uncommitted or untracked content — bytes git could not recover."""
-    status = _git("status", "--porcelain", "--", *paths)
-    return [line[3:].strip() for line in status.splitlines() if line.strip()]
+    """Paths with uncommitted or untracked content — bytes git could not recover.
+
+    Asked as two direct questions rather than by slicing `status --porcelain`'s fixed
+    two-column prefix. The column form was wrong here in the way a column form usually is:
+    `_git` returns `stdout.strip()`, which eats the LEADING space of a worktree-only
+    modification (` M path` -> `M path`), after which `line[3:]` eats the first character of
+    the path. The refusal then printed `isease-models/wwox/...` — a path a reader may copy,
+    in the one message whose whole job is to name a file precisely. It bit only the first
+    line of the output, and only for unstaged changes, which is the commonest case and the
+    least likely to be noticed in a test that stages its fixture.
+    """
+    tracked = _git("diff", "--name-only", "HEAD", "--", *paths)
+    untracked = _git("ls-files", "--others", "--exclude-standard", "--", *paths)
+    seen: list[str] = []
+    for line in tracked.splitlines() + untracked.splitlines():
+        path = line.strip()
+        if path and path not in seen:
+            seen.append(path)
+    return seen
 
 
 LABEL_ORDINAL = re.compile(r"(?i)\brev\.\s*(\d+)")
