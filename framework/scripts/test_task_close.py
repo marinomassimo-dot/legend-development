@@ -257,6 +257,15 @@ class ARemoteFirstTaskBase(unittest.TestCase):
         self.assertIn("a peer's unpublished commit", result.stderr)
         self.assertNotIn("the task's own commit", result.stderr)
 
+    def test_the_note_is_last_in_a_merged_stream(self):
+        """`task_close 2>&1 | tail -n` must still show it."""
+        merged = subprocess.run([sys.executable, str(SCRIPT), "--dry-run"], cwd=self.wt,
+                                stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True,
+                                timeout=120)
+        self.assertEqual(merged.returncode, 0, merged.stdout)
+        tail = merged.stdout.splitlines()[-2:]
+        self.assertTrue(any("a peer's unpublished commit" in line for line in tail), tail)
+
     def test_no_note_when_main_carries_nothing_foreign(self):
         run(["push", "-q", "origin", "main"], self.repo)
         run(["fetch", "-q", "origin"], self.repo)

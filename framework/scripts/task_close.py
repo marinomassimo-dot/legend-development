@@ -237,6 +237,11 @@ def main(argv: list[str] | None = None) -> int:
     except (GitError, OSError):
         foreign = []
     if foreign:
+        # Flushed first so the note is the LAST thing in a merged stream: piped stdout is
+        # block-buffered and stderr is not, so without this `task_close 2>&1 | tail -3` printed
+        # the git commands and TASK_CLOSED and cut the note off — measured 2026-09-28, when a
+        # push published a peer's unpushed batch that this note had named.
+        sys.stdout.flush()
         print(f"PUSH_NOTE: pushing main now also publishes {len(foreign)} commit(s) this task "
               "did not make (as of the last fetch):", file=sys.stderr)
         for line in foreign:
