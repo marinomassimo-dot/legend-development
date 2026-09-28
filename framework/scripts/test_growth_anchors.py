@@ -716,5 +716,117 @@ class TheRealCheckoutIsMeasured(unittest.TestCase):
                          "measure or verify wrote the ledger or the manifest")
 
 
+class ScopeMentionClosesACandidate(unittest.TestCase):
+    """🔴 Naming a candidate in a batch scope closes it, whatever the sentence says.
+
+    `batch_20260928_005_scope` closed `CC-20260928-GRAPH-HYGIENE-01` from inside the words "NOT IN
+    SCOPE and still queued", and `BATCH_20260928_006`'s draft scope closed a PEER's candidate from
+    inside "ROUTED ELSEWHERE, NOT TOUCHED". The backlog is the trigger that fires the next
+    BATCH_COMMIT, so the wrong number is silent and lands on the candidate's author. Each fixture
+    is built so the defect can occur: the id really is in the scope, and the sentence really does
+    deny the propagation.
+    """
+
+    DENIAL = ('MINOR. Propagated CC-20260928-REAL-01. QUEUED AND DELIBERATELY NOT PROPAGATED '
+              'HERE: CC-20260928-QUEUED-01. ROUTED ELSEWHERE, NOT TOUCHED: CC-20260928-PEER-01.')
+
+    def setUp(self) -> None:
+        self.stack = TemporaryDirectory()
+        self.root = Path(self.stack.name)
+        self.addCleanup(self.stack.cleanup)
+        (self.root / "framework/state").mkdir(parents=True)
+        self.queue = self.root / "disease-models/wwox/research/commit_candidates"
+        self.queue.mkdir(parents=True)
+
+    def scope(self, text: str) -> None:
+        (self.root / ga.HISTORY_REL).write_text(f'batch_20260928_005_scope: "{text}"\n',
+                                                encoding="utf-8")
+
+    def put(self, name: str, body: str = "# candidate\n") -> None:
+        (self.queue / f"{name}.md").write_text(body, encoding="utf-8")
+
+    def survey(self) -> tuple[list[str], list[str], list[str]]:
+        return ga.survey_candidates(self.root, "wwox")
+
+    def test_the_defect_is_reproduced_the_mention_closes_all_three(self) -> None:
+        """The behaviour itself: the scope's prose is not read, so all three are closed."""
+        self.scope(self.DENIAL)
+        for name in ("CC-20260928-REAL-01", "CC-20260928-QUEUED-01", "CC-20260928-PEER-01"):
+            self.put(name)
+        pending, _unreadable, mention_only = self.survey()
+        self.assertEqual([], pending, "the mention closed every named candidate")
+        self.assertEqual(["CC-20260928-PEER-01", "CC-20260928-QUEUED-01", "CC-20260928-REAL-01"],
+                         mention_only)
+
+    def test_the_asymmetry_is_what_is_detectable_and_it_is_detected(self) -> None:
+        """A candidate closed by a mention alone is reported; one closed by its own block is not."""
+        self.scope(self.DENIAL)
+        self.put("CC-20260928-REAL-01",
+                 "# candidate\n\n## BATCH DISPOSITION\n**Verdict:** PROPAGATED\n")
+        self.put("CC-20260928-QUEUED-01")
+        pending, _unreadable, mention_only = self.survey()
+        self.assertEqual([], pending)
+        self.assertEqual(["CC-20260928-QUEUED-01"], mention_only,
+                         "a candidate that attested its own close is not an asymmetry")
+
+    def test_a_pending_disposition_block_beats_a_mention(self) -> None:
+        """The candidate's own record decides where it has one; a mention never overrides it."""
+        self.scope(self.DENIAL)
+        self.put("CC-20260928-QUEUED-01",
+                 "# candidate\n\n## BATCH DISPOSITION\n**Verdict:** DEFERRED\n")
+        pending, _unreadable, mention_only = self.survey()
+        self.assertEqual(["CC-20260928-QUEUED-01"], pending)
+        self.assertEqual([], mention_only)
+
+    def test_an_undeclared_mention_only_closure_fails_check(self) -> None:
+        """Loud at the author's next run, not discovered from a wrong headline days later."""
+        live = {"structural": {key: 1 for key in ga.STRUCTURAL_KEYS},
+                "registry_only_fulltext": [], "unread_premises": [], "registry_bytes": {},
+                "candidate_backlog": [], "unreadable_dispositions": [],
+                "mention_only_closures": ["CC-20260928-QUEUED-01"]}
+        undeclared = [item for item in live["mention_only_closures"]
+                      if item not in ga.DECLARED_MENTION_CLOSURES]
+        self.assertEqual(["CC-20260928-QUEUED-01"], undeclared)
+
+    def test_a_queued_declaration_puts_the_candidate_back_in_the_backlog(self) -> None:
+        """The live defect on `main`: `CC-20260928-GRAPH-HYGIENE-01`, declared `queued`."""
+        declared = "CC-20260928-GRAPH-HYGIENE-01"
+        self.assertEqual("queued", ga.DECLARED_MENTION_CLOSURES[declared][0])
+        self.scope(f"NOT IN SCOPE and still queued: {declared}, a stub with no ops.")
+        self.put(declared)
+        pending, _unreadable, mention_only = self.survey()
+        self.assertEqual([declared], pending, "a declared `queued` mention does not close")
+        self.assertEqual([declared], mention_only, "and it is still reported by name")
+
+    def test_a_closed_declaration_keeps_the_candidate_closed(self) -> None:
+        declared = "CC-20260920-REGISTRY-LEDGER-DEPTH-01"
+        self.assertEqual("closed", ga.DECLARED_MENTION_CLOSURES[declared][0])
+        self.scope(f"PROPAGATED {declared} whole.")
+        self.put(declared)
+        pending, _unreadable, mention_only = self.survey()
+        self.assertEqual([], pending)
+        self.assertEqual([declared], mention_only)
+
+    def test_only_the_manifest_and_its_history_close_a_candidate(self) -> None:
+        """Verified, because the batch's finding rests on it: an id elsewhere closes nothing.
+
+        `capability_scout_log.md`, a batch report, `analysis/`, `governance/` and the candidate's
+        own text are all safe places to name an id — this module folds two files and no others.
+        """
+        self.put("CC-20260928-QUEUED-01")
+        for rel in ("disease-models/wwox/research/capability_scout_log.md",
+                    "analysis/batch_report_20260928.md",
+                    "governance/candidates/HARNESS-SCOUT-2026-W39.md"):
+            path = self.root / rel
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text("PROPAGATED CC-20260928-QUEUED-01, closed.\n", encoding="utf-8")
+        pending, _unreadable, mention_only = self.survey()
+        self.assertEqual(["CC-20260928-QUEUED-01"], pending)
+        self.assertEqual([], mention_only)
+        # And the converse, so the test is about the two files and not about the absence of any:
+        self.scope("PROPAGATED CC-20260928-QUEUED-01, closed.")
+        self.assertEqual([], self.survey()[0])
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
