@@ -1,6 +1,17 @@
-> **Provenance.** Persisted verbatim by the Orchestrator's dispatch of 2026-09-28 from a read-only
-> census produced by ACTOR_ID `junior-harness`; the repository was not modified by it. Nothing below
-> this header is edited — no word, figure or heading is changed.
+> **Provenance.** Persisted by the Orchestrator's dispatch of 2026-09-28 from a read-only census
+> produced by ACTOR_ID `junior-harness`; the repository was not modified by it.
+>
+> **ONE MECHANICAL TRANSFORMATION, and no word, figure or heading is changed.** §2.2's table names
+> `LEGEND_DISCOVERY_METHOD_V0_SHADOW_MODE.md` as an inline repository path — and says in the same
+> cell that it is *"absent on `main`"*, which is exactly what
+> `scripts/test_fresh_clone_reader_journey.py::test_inline_repository_paths_resolve` refuses: a
+> reader-facing document may not name a file a fresh clone does not have. The one occurrence was
+> rewritten into the retrieval command for it, which is this recovery's own established convention
+> for a path that exists only on another ref (README §6: *"inline paths or links to records kept in
+> the backup became `git show 06ee25a:<path>` commands"*). The path itself is unchanged inside the
+> command, and the sentence around it is untouched. Nothing else in the text is altered — the
+> classifications, counts, verdicts, honest limits and DEFAULTS_TAKEN are the census author's own
+> words. The publication gate was PASS with 0 blocks before and after, and needed no digest expanded.
 
 # VPS residue census — 2026-09-28
 
@@ -216,7 +227,7 @@ state manifest. It touches `analysis/`, `research/`, one commit candidate, and t
 |---|---:|---|
 | **(a) on `main`, `main` ahead** | **4** | `full_text_queue_current.md` (1 % of branch lines absent), `LEGEND_SCIENTIFIC_DISCOVERY_METHOD_V0_PROPOSAL.md` (1 %), `native_primitive_scorecard_20260922.md` (30 %), `AUTONOMOUS_SESSION_STATE.md` (8 %, scratch state) |
 | **(b) not on `main`, live** | **8** | `analysis/q230p_fractionation_and_orthogonal_detection_20260922.md`, `analysis/q230p_nascent_synthesis_discriminator_20260922.md`, `analysis/systemic_rescue_mechanism_and_peripheral_panel_20260922.md`, `research/recursive_reread_3_4_units_20260922.md`, `research/FINAL_REPORT_fifth_run_20260922.md`, `research/OPERATOR_DECISION_PACKET_7_20260922.md`, `research/session_evaluations/2026-09-22_orchestrator_fifth_autonomous_run.md`, **`research/commit_candidates/CC-20260922-CLAIM038-UNIT-CLASS-02.md`** |
-| **(d) harness** | **1** | `framework/instruction/LEGEND_DISCOVERY_METHOD_V0_SHADOW_MODE.md` — absent on `main`; the PROPOSAL beside it is on `main` and 1 % ahead. A shadow-mode instruction file for a method that shipped as the optional `legend-discovery-method` skill: **probably superseded**, and that judgement needs a reader, not a count. |
+| **(d) harness** | **1** | `git show origin/claude/q230p-molecular-state-systemic-yruqvc:framework/instruction/LEGEND_DISCOVERY_METHOD_V0_SHADOW_MODE.md` — absent on `main`; the PROPOSAL beside it is on `main` and 1 % ahead. A shadow-mode instruction file for a method that shipped as the optional `legend-discovery-method` skill: **probably superseded**, and that judgement needs a reader, not a count. |
 
 The load-bearing item is **`CC-20260922-CLAIM038-UNIT-CLASS-02.md`**: `main` carries
 `…-UNIT-CLASS-01`, and `-02` is the later revision. It is the only commit candidate on either
