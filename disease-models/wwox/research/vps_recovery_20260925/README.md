@@ -23,6 +23,28 @@ scientifically live content not on `main`**. It also names the eight detached wo
 nothing, and the precondition that makes retiring them safe — the backup branch must still exist.
 It is persisted verbatim; its own §5 states what it could not measure.
 
+**Decision-A1 reading census (2026-09-28).**
+[`a1_reading_census_20260928.md`](a1_reading_census_20260928.md), next to this note, closes the
+single largest gap the residue census declared in its own §5 — *whether the `DISPOSITIONED`
+"decision A1" records hold science not recorded elsewhere.* The residue census measured those
+files; this one **reads** them. The set is re-derived from `inventory.tsv` as **139** records, not
+the 133 the earlier budget named, and it declares its own reading depth per group (50 in full, 22
+substantial, 45 at low depth, 8 machine-verified, 5 partially unread) together with what that floor
+would have missed. Result: **nothing private** (re-tested by reading, not only by the gate — so the
+branch's handling does not change), 63 superseded, 62 process, 0 unreadable, and **twelve findings
+that are not on `main`**, of which **nine are defects standing on `main`** and three are `main`
+contradicting itself. None of the twelve is new biology; every one is a defect, a caveat or a
+decision — the class a file census cannot see. Its transferable lesson: the recovery propagated
+findings *through artefacts*, so a finding whose target was not itself a recovered artefact had
+nothing to travel in.
+
+Disposition of those twelve, 2026-09-28, task `a1-residue-repairs`: eight repaired directly on
+their non-canonical surfaces, two (`L4`, `L2`) written into
+[`../commit_candidates/CC-20260928-A1-RESIDUE-01.md`](../commit_candidates/CC-20260928-A1-RESIDUE-01.md)
+because they are canonical or change what a claim may rest on, and three handed off (`C2`, `L6`,
+`L3`'s generator fix). One of the census's own findings was **contested and partly refuted** on
+re-measurement; the candidate records which and why.
+
 **What this note is.** An index of work done on the VPS checkout between 2026-09-12 and
 2026-09-17 that never reached `main`. That work lived on a `main` that had diverged from
 `origin/main` (325 local commits against 244 remote ones). It is recovered **as files, never as
@@ -211,15 +233,56 @@ surface, so it was the one telling a reader the wrong thing. Three defects, each
 | `DISPOSITIONED` conflated *"decided never to bring in"* with *"deferred to a batch that has since partly run"* and with *"reserved to the operator"* | **20** | the mandate-continuity package moved to its own state, **`RESERVED_OPERATOR`** — reserved is not a decision never to bring it in |
 
 **Vocabulary now.** `RECOVERED` 121 · `DISPOSITIONED` 254 (decided never to bring in) ·
-`DISCHARGED` 56 (was deferred; the deferral has since been met on `main`) · `DEFERRED_OPEN` 7
+`DISCHARGED` 57 (was deferred; the deferral has since been met on `main`) · `DEFERRED_OPEN` 6
 (was deferred; still is) · `RESERVED_OPERATOR` 20. Total 458, unchanged; no row was added, removed
-or re-pathed. The measurement is re-runnable: the `DISCHARGED`/`DEFERRED_OPEN` split for the 43
+or re-pathed. (`DISCHARGED` 56 → **57** and `DEFERRED_OPEN` 7 → **6** on 2026-09-28; see the
+second repair below.) The measurement is re-runnable: the `DISCHARGED`/`DEFERRED_OPEN` split for the 43
 comes from the **last** `BATCH DISPOSITION` block of each candidate — never from the presence of the
 heading, because 13 of the recovered candidates carry a *first* block naming a VPS batch that never
 existed on `main`.
 
 One correction to the census this repair is based on: it reported the 20-row hold as flatly
 discharged by the Aldaz batches. Per file it is **17**, not 20.
+
+### 5.2 · `disposition` repair — 2026-09-28 · one row was never open, and the reason matters more than the row
+
+**`CC-20260826-SEIZURE-RECONCILIATION-01` was never open, and is re-classed `DEFERRED_OPEN` →
+`DISCHARGED`.** Established first-hand by the readiness pass on the three residue candidates (landed
+`fa28130`, verdict `CLOSE` on this one), and **re-verified independently** by task
+`a1-residue-repairs` before the row was touched:
+
+- the candidate's last disposition block is an **`h1`** at line 303 reading
+  *`# ✅ PROPAGATED — `BATCH_20260922_SEIZURE`, 2026-09-22, under explicit Operator authorization`* —
+  an `h1` that **contains no `BATCH DISPOSITION` string**, so **every heading-based test missed it**;
+- `BATCH_20260922_SEIZURE` is **real and on `main`**: 3 hits in `working_model_current.md`, 2 in
+  `claim_registry_current.md`, 2 in `framework/state/state_history.md` (`WM_v4.5 → WM_v5.0`, MAJOR,
+  operator-authorised).
+
+🔴 **This is § 5.1's counting trap, sign-flipped — and the pair is the real finding.**
+[`residue_census_20260928.md`](residue_census_20260928.md) § 3.2 warns that a disposition heading can
+be **present** for a batch that **never existed** on `main` (13 of the recovered candidates carry
+exactly that). This row shows the heading can be **absent** for a batch that **did**. **Together the
+two halves make heading-presence useless as a test in either direction.** The correct test is the one
+§ 5.1 already half-states: **the LAST disposition block's actor-and-batch line, never the literal
+heading** — and a `READY_*` verdict with owed ops is **not a disposition at all**. Implementing that
+test is routed to Harness Engineering and is deliberately **not** done here.
+
+**The residual six were re-derived from the TSV rather than inherited**, because this column has now
+been wrong twice (§ 5.1's 20-that-was-17, and this 7-that-is-6). Each was tested by its last block,
+not by a heading:
+
+| Row still `DEFERRED_OPEN` | Why it is genuinely open |
+|---|---|
+| `commit_candidates/CC-20260826-PMID36828035-01.md` | **no disposition block of any kind.** ⚠️ The same readiness pass rated it `READY_MINOR` with **two owed ops** — which is a readiness verdict, **not** a close |
+| `commit_candidates/PROPOSAL-20260810-EVIDENCE-PAIR-RATCHET.md` | no disposition block of any kind |
+| `commit_candidates/PROPOSAL-20260826-LOCATOR-TO-CLAIM-PROPAGATION.md` | no disposition block of any kind |
+| `analysis/data/dismech_phase2_baseline_rev17_superseded.json` | still **absent** from `main` (verified) |
+| `analysis/proteostasis_rationale.md` | **present** on `main`, no commit since 2026-09-26 (and it is also sites 1–2 of the P47T residue perimeter in [`../commit_candidates/CC-20260928-A1-RESIDUE-01.md`](../commit_candidates/CC-20260928-A1-RESIDUE-01.md) § 4) |
+| `research/2026-09-13_D8_dismech_reseal_report.md` | still **absent** from `main` (verified) |
+
+⚠️ **`residue_census_20260928.md` § 3.3 still classes the re-classed row as open, and is deliberately
+left unedited** — it is read-only history, persisted verbatim. The correction lives in the TSV row
+(the machine-readable surface, which is what tells a reader the wrong thing) and here.
 
 ## 6 · G4.3 — full-text queue renumbering (VPS → `main`)
 

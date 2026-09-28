@@ -754,6 +754,67 @@ above and closes it.
 
 ---
 
+## REP-27 · A receipt `workflow` field written in the present tense about the ledger's contents
+
+**LAYER** harness · **SEVERITY** class · **PATH** non-canonical (this row plus the guard that now
+refuses the class) · **Author of the defect:** two prepared receipts, and the integration route that
+appended them unchanged
+
+**What is wrong.** A prepared receipt often travels as a JSON file for somebody else to append. Twice
+in one week a `workflow` field described that fact in the **present tense** — the recorded wording
+being *«this event is prepared as JSON … and is explicitly NOT in the ledger»*. That sentence is true
+of a file and **false forever once the event is appended**, and then **durable**, because the ledger
+is append-only and hash-chained: hand-editing it halts LEGEND, the only licensed mutation is a new
+event, and § 7.1's `receipt_correction` is scoped by its own words to *«where the output went, never
+what was read»* — which a narrative tense is not.
+
+🔴 **Both times a later reader took the present tense at face value**, and a canonical record landed
+asserting that an event **already in the ledger** was still owed — in a batch whose own base commit
+contained it. Diagnosed in the Mirror ex-post reviews of `BATCH_20260928_002` (FINDING 1) and
+`BATCH_20260928_003` (the erratum, and FINDING 5 against its remedy); the second review's own words:
+*«the sentence that caused both recurrences is still in the ledger, will be read again, and is by
+design uncorrectable.»*
+
+**An append-only record that was correct at its own event time is not a defect**, and the offending
+ledger events are therefore **left untouched, correctly**. What this row tracks is the **class**, not
+those two events.
+
+**Why this row and nothing more.** The two durable halves of the remedy are **already on `main` and
+were verified first-hand for this row** (2026-09-28, task `a1-residue-repairs`):
+
+| Remedy | State | Locator |
+|---|---|---|
+| the protocol sentence | ✅ **landed** | `framework/protocols/fulltext_read_receipt.md`, § *«`workflow` names the route, never the ledger's present contents»*, which prescribes the past tense (*«was not appended at preparation time»*) and records that it happened twice |
+| the writer-side guard | ✅ **landed** | `framework/scripts/fulltext_receipts.py`, `SELF_NEGATING_WORKFLOW` — refuses the sentence **at the moment of appending**, the one moment at which it turns false |
+
+The guard is what makes the class *unreachable* and the protocol sentence is what makes it *cheap to
+avoid*; Mirror's FINDING 5 was that the originally offered remedy (an operating-memory note plus a
+report appendix) was **not durable**, because neither surface is read by the next actor and
+`active_lessons/` is *«not yet materialized»*. That objection is now discharged by the guard.
+**So what remained of FINDING 5 is this row alone: the class named, in a surface that is read.**
+
+**FIX** — None pending. The class is named here, prescribed in the protocol and refused by the
+writer. This row exists so that the class is discoverable from the queue rather than only from a
+review, and so that a future actor who loosens or removes `SELF_NEGATING_WORKFLOW` can see what it
+was for.
+
+**VERIFY** — Two mechanical conditions, both currently true:
+
+1. `fulltext_receipts.py record` refuses a `workflow` asserting the ledger's present contents —
+   exercised by `SELF_NEGATING_WORKFLOW` in `framework/scripts/fulltext_receipts.py`;
+2. no **active** receipt's `workflow` contains a present-tense claim about the ledger's contents. ⚠️
+   The two historical events that carry it are **excluded by construction** and must stay so: they are
+   append-only history, correct at their event time, and a VERIFY that demanded their absence would be
+   unsatisfiable — the same defect `REP-26` records against a VERIFY drafted as a bare absence grep
+   over prose the repository's own rules oblige to be quoted.
+
+**STATUS** `OPEN` as a named class with no pending act — kept rather than closed, because closing it
+would delete the only queue-side record of why the guard exists. Recorded 2026-09-28 by ACTOR_ID
+`scientist`, task `a1-residue-repairs`, from
+[`session_evaluations/2026-09-28_BATCH_20260928_003_mirror_review.md`](session_evaluations/2026-09-28_BATCH_20260928_003_mirror_review.md)
+FINDING 5.
+---
+
 ### A pattern in this queue worth naming
 
 **Three of the 24 action rows were authored by this session, and all three have the same shape:**
