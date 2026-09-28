@@ -208,3 +208,33 @@ no wording proposed above, and the claim is qualified at the strength the runnin
 `OP 1`–`OP 3` applied to `CLAIM 025`: the restricted `cross-context support`, the directionality paragraph appended to the Summary, and the new evidence boundary beside the 2026-09-09 one. All six quoted strings — including *"tended to show more favourable DFS in the high-ratio group"*, the authors' *"descriptive and hypothesis-generating"* sentence, `HR 1.11`, `concordance 0.49` and the bootstrap interval — were re-verified verbatim against `files/fulltext/PMID42589397_ZZ2026_PMC_2026-09-27.xml`. The readiness section's own correction stands: the candidate's *"il segno si inverte"* is **not** written, because the source declines to assert it. The disjointness from `CC-20260825-GRAPH-MATERIALIZATION-01` was verified — the `Clinical meaning` line already carries the `CLAIM 009` wikilink and was not touched.
 
 **Mirror ex-post review due** under §21e — see the batch report at `session_evaluations/2026-09-27_BATCH_20260927_003.md`.
+
+## DISPOSITION CORRECTION — 2026-09-28, ACTOR_ID `scientist` (package `m003`), append-only
+
+**Nothing above this line was rewritten.** **Status re-disposed: `PROPAGATED` → `PROPAGATED IN
+PART`** — `BATCH_20260927_003` (MINOR, MANUAL, `WM_v6.0` → `WM_v6.1`).
+
+Written after the Mirror ex-post review of that batch, finding `M3`. The three ops above were applied
+and their six quoted strings are verbatim; what this candidate **did not** propose, and owed, is the
+**registry record for the source it bound the claim to**. `CLAIM 025`'s new evidence boundary names
+`PMID 42589397 / PMC13467099`, carries a receipt (`FTR-20260927-42589397-02`, a first-hand
+`partial_fulltext_read`) and a manifest — and **no PAPER, CORPUS or LIT record named that PMID at
+all**. Verified first-hand: `registry_records.py get --pmid 42589397` returns no record, and the
+literal occurs in the three registries only inside `CLAIM 025` itself.
+
+Two consequences, both measured:
+- `trace_claim_foundation --claim "CLAIM 025"` showed the claim resting on `PAPER 091` **alone** — the
+  bounding source was invisible in the foundation graph;
+- LINT could only emit `[INFO] UNLINKED_SUPPORT_UNCHECKED … no registry record's Identifier names this
+  PMID` instead of the `WARN_BUT_PROCEED` it would otherwise raise. 🔴 The same batch refused to
+  silence a warning on `PAPER 018` with a false evidential edge and then left this screen off for the
+  other reason — by leaving the paper unregistered. That symmetry is the finding.
+
+**Repaired by** [`CC-20260928-MIRROR003-REPAIRS-01.md`](CC-20260928-MIRROR003-REPAIRS-01.md), which
+creates `PAPER 118` and `LIT-0420` for the paper, with `Claim links: 025` declared as a **bounding,
+non-corroborating** edge because a first-hand reading with a receipt stands behind it. Measured after
+that candidate is applied: the `INFO UNLINKED_SUPPORT_UNCHECKED` is gone with nothing added, and the
+tracer shows `PAPER 091` **and** `PAPER 118`, 2/2 manifest-backed.
+
+**Still open, unchanged:** Supplementary Tables S4–S8 for the table-level check of the per-subtype
+directions.

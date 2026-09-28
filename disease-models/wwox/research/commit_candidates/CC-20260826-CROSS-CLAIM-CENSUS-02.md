@@ -253,3 +253,43 @@ Canonical file, so it is still a `BATCH_COMMIT` object, but it is record-scoped,
 **Verdict: `PROPAGATED`.** **Closed: the residue this candidate named is written.** `BATCH_20260927_003` applied `OP-1`–`OP-8` (twelve reciprocal claim-to-claim wikilinks, fields only) and recorded itself `IN PART`, because *the prose sentences round 3 wants in `CLAIM 031`/`CLAIM 033` and `CLAIM 032`/`CLAIM 033` are not written — they change what the claims mean and are a claim-scoped decision*. Both are written in this batch, on all four records, in the wording `CC-20260826-CROSS-CLAIM-CENSUS-03` §1 adjudicated. 🔴 **The double-counting risk round 3 identified is no longer mitigated only by adjacency**: it is stated in both records that name the patient. Nothing of this candidate is owed.
 
 **Operator authorisation, verbatim (2026-09-27, given in writing after being shown the MAJOR proposals):** *«procedi tu, ti autorizzo su tutto»*. **Mirror ex-post review due** under §21e — see `session_evaluations/2026-09-27_BATCH_20260927_004.md`.
+
+## CORRECTION NOTE — 2026-09-28, ACTOR_ID `scientist` (package `m003`), append-only
+
+**Nothing above this line was rewritten.** Written after the Mirror ex-post review of
+`BATCH_20260927_003` (findings `M6` and `N2`), whose canonical repair is proposed in
+[`CC-20260928-MIRROR003-REPAIRS-01.md`](CC-20260928-MIRROR003-REPAIRS-01.md) op `C40-1`.
+
+**1 · The count is 23 directed links over 14 pairs, not twelve.** Counted from this candidate's own
+`OP-1`…`OP-8`: `CLAIM 004` +3, `CLAIM 011` +4, `CLAIM 005` +5, `CLAIM 016` +3, `CLAIM 037` +4,
+`CLAIM 031` +1, `CLAIM 032` +1, `CLAIM 033` +2 = **23 directed edges** over **14 distinct pairs**, of
+which **13 were newly connected** — the fourteenth, `CLAIM 005 ↔ CLAIM 037`, already carried the
+`037 → 005` direction, which §2 of this candidate itself points out. The figure *twelve* in §193, in
+the BATCH DISPOSITION above, in the batch report and in the working model's `WM_v6.1` changelog is
+reachable by no counting rule any of those surfaces states. The two working-model occurrences are
+canonical and are repaired by ops `WM-2`/`WM-3` of the repairs candidate.
+
+**2 · *"closed under reciprocity"* is false for exactly one of this candidate's own adjudicated
+pairs.** Recomputed over the whole 41-claim `Wikilinks` graph: of the 14 pairs these ops touched, **13
+are closed and one is not** — **`CLAIM 016 → CLAIM 040`**, added by `OP-4`, has no return edge
+(`CLAIM 040`'s `Wikilinks`: `PAPER 011 · CLAIM 004 · 005 · 011 · 037`). This matters operationally and
+not only editorially: the `[NOT CROSS-LINKED]` discriminator this candidate introduced reads the
+`Wikilinks` field, so the screen this op existed to turn off **stays on** for that pair. The return
+edge is added by op `C40-1` of the repairs candidate.
+
+**3 · The other ten one-directional edges are pre-existing and are NOT repaired — recorded here as a
+measurement.** The Mirror review's M6 also names `CLAIM 040 → CLAIM 004` as *"likewise left
+unreciprocated"*. That is **contested**: `040 → 004` pre-existed, `004 ↔ 040` is not in this
+candidate's adjudicated pair set, and `OP-1` added `011 · 005 · 037` to `CLAIM 004` and never `040`.
+The full census of one-directional claim→claim edges at `a3f68b1` is:
+
+| edge | created by `BATCH_20260927_003`? |
+|---|---|
+| `CLAIM 016 → CLAIM 040` | ✅ yes — `OP-4`. Repaired |
+| `CLAIM 040 → CLAIM 004` | ❌ no — pre-existing, never adjudicated |
+| `CLAIM 030 → 032` · `032 → 031` · `033 → 019` · `033 → 030` · `034 → 028` · `035 → 028` · `035 → 030` · `036 → 005` · `041 → 007` | ❌ no — nine pre-existing, untouched |
+
+Closing the ten is a graph-hygiene decision for a dedicated candidate: each is a link some record
+chose to make one-directionally, none was adjudicated here, and adding a back-link is an adjacency
+judgement — this candidate's own rule is *"Nothing ambiguous is linked."* Treating `040 → 004`
+differently from the other nine only because a reviewer named it would be the arbitrary act.

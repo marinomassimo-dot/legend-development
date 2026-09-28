@@ -241,6 +241,28 @@ the quiet direction, reporting as done work that nobody did.
 
 ## 7. Dated notes
 
+`BATCH_20260927_003` scope corrections, 2026-09-28 (`scientist`, package `m003`): three figures in
+§ 4's `batch_20260927_003_scope` are wrong or overstated, found by the Mirror ex-post review of that
+batch (persisted at
+`disease-models/wwox/research/session_evaluations/2026-09-27_BATCH_20260927_003_mirror_review.md`).
+§ 4 is never edited, so they are corrected here.
+**(a) `mg/ml → mg/dL` is ×100, not 1000** (Mirror `M2`). That scope line says *"169.0 mg/ml of glucose
+fixes the factor at 1000 on both rows"*; 1 dL = 100 ml, and the two conversions in `CLAIM 038`'s own
+sentence are `40.3 → 4.030` and `169.0 → 16.900`, i.e. ×100. The figure in the canonical claim is
+repaired by `CC-20260928-MIRROR003-REPAIRS-01` op `C38-1`; the wrong factor was never used to alter a
+transcribed value, and no numerical cross-model comparison ever rested on it.
+**(b) The quotation count disagrees with the batch report** (Mirror `N2`). This line says *"39
+quotations re-verified verbatim, 39 of 39"*; `session_evaluations/2026-09-27_BATCH_20260927_003.md`
+says *"38 of 38 verbatim"*, twice. Neither figure is re-derivable from what either surface records, so
+neither is corrected to the other: the disagreement itself is the record, and the lesson is that a
+count of re-verified quotations must be written beside the list it counted.
+**(c) The `CLAIM 005` repair named mouse datasets only** (Mirror `N3`). This line says *"the human and
+mouse datasets that had already falsified the rat-only sentence named"*. `CC-20260927-MIRROR002-REPAIRS-01`
+op `C5-4` names `PAPER 019`, `PAPER 011` and `PAPER 007` — **all mouse**. The human limb was handled
+differently and well, by scoping the sentence to *"`Wwox` **rodent models**"* so that it no longer
+asserts anything about humans at all; that is a good resolution of the finding's first half, but it is
+not the one this scope line describes. The canonical text is correct; only this description of it was.
+
 Harness quota-resume audit, 2026-09-11 (`plan`): desktop user preference enabled and
 backup verified; installed Claude Code native path excludes the current VS Code panel
 runtime. Real resumption remains unverified; no periodic resumer added. Evidence and
