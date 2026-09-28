@@ -14,10 +14,24 @@ refuses to write.
 The set of sealed paths is never widened here. Adding an input is a deliberate edit to the
 baseline, reviewed on its own; this tool only refreshes what is already declared.
 
+🔴 **Absorbing a drift is a declared act.** A `sealed_scope` block's drift is *informational*
+by design (`verify_phase2_baseline` does not fail on it, `scope_drift` reports it), so it can
+stand for weeks — and a re-seal silently zeroes every such signal, including ones that belong
+to somebody else's batch. That happened on 2026-09-27: BATCH_20260927_003 re-sealed for its own
+`CLAIM 016` correction and absorbed a `PAPER 019` drift left standing by BATCH_20260927_001,
+which it could only disclose in prose afterwards. So every drifted block must be **named** with
+`--absorb`, or already acknowledged in `dismech_drift_acknowledgements.jsonl` against its
+current digest; otherwise this refuses. A block you did not touch turning up in the refusal is
+the finding the seal exists to produce.
+
+`--revision` is required to write, for the same reason: the revision label is where the reason
+for a re-seal is recorded, and writing without one leaves the previous batch's reason standing
+over new bytes.
+
 Usage
 -----
-    reseal_dismech_baseline.py --check       # report what would change
-    reseal_dismech_baseline.py --revision "rev.7 (why)"
+    reseal_dismech_baseline.py --check       # report what would change, and what it would refuse
+    reseal_dismech_baseline.py --revision "rev.7 (why)" --absorb "CLAIM 016"
 """
 from __future__ import annotations
 
@@ -53,10 +67,27 @@ def _dirty(paths: list[str]) -> list[str]:
     return [line[3:].strip() for line in status.splitlines() if line.strip()]
 
 
+def undeclared_absorptions(baseline: dict, absorb: list[str]) -> list[str]:
+    """Sealed blocks whose drift this re-seal would zero without anybody declaring it.
+
+    A block qualifies as declared when it is named on the command line, or when the protocol's
+    own drift log already carries an acknowledgement bound to the digest the registry holds NOW
+    (`unresolved_drift` expires an acknowledgement the moment the block moves again, so an old
+    one cannot license a new absorption).
+    """
+    named = set(absorb or ())
+    pending = protocol.unresolved_drift(BASELINE, REPO)
+    return sorted(item["block"] for item in pending
+                  if item.get("block") not in named)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--check", action="store_true", help="report, write nothing")
-    parser.add_argument("--revision", help="revision label to record")
+    parser.add_argument("--revision", help="revision label to record (required to write)")
+    parser.add_argument("--absorb", action="append", metavar="BLOCK", default=[],
+                        help="a sealed block whose drift THIS re-seal is meant to absorb, "
+                             'e.g. --absorb "CLAIM 016"; repeatable')
     arguments = parser.parse_args()
 
     baseline = json.loads(BASELINE.read_text(encoding="utf-8"))
@@ -76,6 +107,29 @@ def main() -> int:
         print("Commit them first, then re-seal, then commit the baseline.")
         return 2
 
+    undeclared = undeclared_absorptions(baseline, arguments.absorb)
+    if undeclared:
+        print("REFUSED: this re-seal would absorb drift nobody declared, and an absorbed "
+              "drift signal cannot be recovered:")
+        for block in undeclared:
+            print(f"  - {block}")
+        print("Name each block this re-seal is MEANT to absorb:")
+        print("  " + " ".join(f'--absorb "{block}"' for block in undeclared))
+        print("A block you did not change is a finding: acknowledge it in "
+              "dismech_drift_acknowledgements.jsonl (dismech_independent_protocol.py drift), "
+              "or find out whose batch moved it, before you absorb it here.")
+        return 2
+    drifted = {item["block"] for item in protocol.scope_drift(BASELINE, REPO)}
+    for block in arguments.absorb:
+        if block not in drifted:
+            print(f"note: --absorb {block!r} names a block that has not drifted")
+
+    if not arguments.check and not arguments.revision:
+        print("REFUSED: --revision is required to write. The revision label is where the "
+              "reason for a re-seal lives; without one the previous reason would stand over "
+              "new bytes.")
+        return 2
+
     changes = []
     for name, entry in sorted(baseline["inputs"].items()):
         # An input sealed by a POLICY does not carry a whole-file `sha256`, and each policy
@@ -88,10 +142,21 @@ def main() -> int:
             # changed, that is the incident the seal exists to surface, not bookkeeping.
             lines = (REPO / entry["path"]).read_bytes().splitlines(keepends=True)
             count = entry["prefix_event_count"]
-            prefix = hashlib.sha256(b"".join(lines[:count])).hexdigest()
-            if len(lines) < count or prefix != entry["prefix_sha256"]:
+            if len(lines) < count:
+                raise SystemExit(f"{name}: {len(lines)} events, below the sealed prefix of "
+                                 f"{count} — the ledger was truncated, which is an incident, "
+                                 "not a re-seal")
+            if hashlib.sha256(b"".join(lines[:count])).hexdigest() != entry["prefix_sha256"]:
                 raise SystemExit(f"{name}: the sealed append-only prefix has moved — "
                                  "that is an incident, not a re-seal")
+            # The whole-file `sha256` this entry still carries is NOT sealed under this policy
+            # (`verify_phase2_baseline` never reads it for an append-only input) and is not
+            # refreshed: an append-only ledger's whole-file hash is stale by construction the
+            # next time anything is appended. Said out loud so the stale field is not read as
+            # an authoritative one.
+            if entry.get("sha256") and entry["sha256"] != _sha256(entry["path"]):
+                print(f"note: {name} carries a whole-file sha256 that this policy does not "
+                      "seal and this tool does not refresh")
             continue
         if policy == "sealed_scope":
             # The scope hashes MUST move with the anchor. `verify_phase2_baseline` treats
@@ -102,7 +167,11 @@ def main() -> int:
             # corrected `CLAIM 016`. Re-derived here with the protocol's own scope reader, so
             # the sealed bytes are the declared blocks and never the whole file.
             text = (REPO / entry["path"]).read_text(encoding="utf-8")
-            scope = protocol.registry_scope_bytes(text, entry["scope_blocks"])
+            try:
+                scope = protocol.registry_scope_bytes(text, entry["scope_blocks"])
+            except ValueError as exc:
+                raise SystemExit(f"{name}: a sealed block no longer resolves ({exc}) — a "
+                                 "renamed or removed record is an incident, not a re-seal")
             current = hashlib.sha256(scope).hexdigest()
             if current != entry.get("scope_sha256"):
                 changes.append(f"{name} scope: {str(entry.get('scope_sha256'))[:12]}… -> {current[:12]}…")

@@ -1,0 +1,308 @@
+#!/usr/bin/env python3
+"""Regressions for `reseal_dismech_baseline.py` — what a re-seal may and may not absorb.
+
+🔴 WHY THIS EXISTS
+------------------
+A re-seal moves an anchor and re-hashes what is sealed, which zeroes every drift signal the
+baseline was carrying — including signals that belong to somebody else. On 2026-09-27
+BATCH_20260927_003 re-sealed for its own `CLAIM 016` correction and, in the same write, absorbed
+a `PAPER 019` scope drift left standing by BATCH_20260927_001. It disclosed that in prose
+afterwards, which is the best a tool with no opinion allows. The tool now has an opinion: every
+drifted sealed block must be named with `--absorb`, or already acknowledged against the digest
+the registry holds now. This suite is what keeps that opinion.
+
+Everything runs in a throw-away git repository built with the real repository's layout, so the
+two scripts under test find their own `REPO`/`REPO_ROOT` inside the fixture and no sealed file
+of this repository is read, written or re-sealed.
+
+Run: `python3 disease-models/wwox/analysis/scripts/test_reseal_dismech_baseline.py`
+"""
+from __future__ import annotations
+
+import hashlib
+import json
+import shutil
+import subprocess
+import sys
+import tempfile
+import unittest
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+RESEAL = "disease-models/wwox/analysis/scripts/reseal_dismech_baseline.py"
+PROTOCOL = "disease-models/wwox/analysis/scripts/dismech_independent_protocol.py"
+CLAIMS = "disease-models/wwox/registries/claim_registry_current.md"
+PAPERS = "disease-models/wwox/registries/paper_registry_current.md"
+LEDGER = "disease-models/wwox/registries/fulltext_read_receipts.jsonl"
+BASELINE = "disease-models/wwox/analysis/data/dismech_phase2_baseline.json"
+OUTPUT = "disease-models/wwox/analysis/data/dismech_sidecar_016_024_035.jsonl"
+AUTHORED = "disease-models/wwox/analysis/data/dismech_authored_assertions.json"
+DRIFT_LOG = "disease-models/wwox/analysis/data/dismech_drift_acknowledgements.jsonl"
+
+CLAIM_REGISTRY = """# Claim registry
+
+## CLAIM 016
+
+**Status:** consolidated baseline
+
+GSK3beta abundance, as first sealed.
+
+---
+
+## CLAIM 024
+
+**Status:** working hypothesis
+
+Untouched by any test below.
+
+---
+"""
+PAPER_REGISTRY = """# Paper registry
+
+## PAPER 019
+
+**Claim links:** CLAIM 016
+
+As first sealed.
+
+---
+"""
+
+sys.path.insert(0, str(HERE))
+import dismech_independent_protocol as protocol  # noqa: E402
+
+
+def digest(payload: bytes) -> str:
+    return hashlib.sha256(payload).hexdigest()
+
+
+def block_digest(text: str, block: str) -> str:
+    return digest(protocol.registry_scope_bytes(text, [block]))
+
+
+class ResealFixture(unittest.TestCase):
+    """A repository shaped like this one, with a baseline of the real shape."""
+
+    def setUp(self) -> None:
+        self._tmp = tempfile.TemporaryDirectory(prefix="legend-reseal-test-")
+        self.addCleanup(self._tmp.cleanup)
+        self.repo = Path(self._tmp.name) / "repo"
+        for relative in (RESEAL, PROTOCOL):
+            (self.repo / relative).parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(HERE / Path(relative).name, self.repo / relative)
+        self.write(CLAIMS, CLAIM_REGISTRY)
+        self.write(PAPERS, PAPER_REGISTRY)
+        self.write(LEDGER, "".join(
+            json.dumps({"event_id": f"FTR-{n:02d}"}) + "\n" for n in range(1, 4)))
+        self.write(AUTHORED, json.dumps({"assertions": []}) + "\n")
+        self.write(OUTPUT, json.dumps({"record_kind": "header"}) + "\n")
+        self.write(BASELINE, json.dumps(self.baseline(), indent=2, sort_keys=True) + "\n")
+        self.git("init", "-q", "-b", "main")
+        self.git("config", "user.name", "reseal-test")
+        self.git("config", "user.email", "reseal@example.invalid")
+        self.commit("seed")
+
+    # ----------------------------------------------------------------- fixture helpers
+
+    def write(self, relative: str, text: str) -> None:
+        path = self.repo / relative
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(text, encoding="utf-8")
+
+    def read_baseline(self) -> dict:
+        return json.loads((self.repo / BASELINE).read_text(encoding="utf-8"))
+
+    def baseline(self) -> dict:
+        ledger_bytes = (self.repo / LEDGER).read_bytes()
+        prefix = b"".join(ledger_bytes.splitlines(keepends=True)[:2])
+        return {
+            "frozen_at": "2026-09-01T00:00:00Z",
+            "git_head_at_freeze": "0" * 40,
+            "inputs": {
+                "authored_assertions": {
+                    "path": AUTHORED,
+                    "sha256": digest((self.repo / AUTHORED).read_bytes())},
+                "claim_registry": {
+                    "path": CLAIMS, "verification_policy": "sealed_scope",
+                    "scope_blocks": ["CLAIM 016", "CLAIM 024"],
+                    "scope_sha256": digest(protocol.registry_scope_bytes(
+                        CLAIM_REGISTRY, ["CLAIM 016", "CLAIM 024"])),
+                    "scope_block_sha256": {
+                        "CLAIM 016": block_digest(CLAIM_REGISTRY, "CLAIM 016"),
+                        "CLAIM 024": block_digest(CLAIM_REGISTRY, "CLAIM 024")}},
+                "paper_registry": {
+                    "path": PAPERS, "verification_policy": "sealed_scope",
+                    "scope_blocks": ["PAPER 019"],
+                    "scope_sha256": digest(protocol.registry_scope_bytes(
+                        PAPER_REGISTRY, ["PAPER 019"])),
+                    "scope_block_sha256": {
+                        "PAPER 019": block_digest(PAPER_REGISTRY, "PAPER 019")}},
+                "receipt_ledger": {
+                    "path": LEDGER, "verification_policy": "append_only_prefix",
+                    "prefix_event_count": 2, "prefix_sha256": digest(prefix),
+                    "prefix_tail_event_id": "FTR-02",
+                    "sha256": digest(ledger_bytes)},
+            },
+            "output": {"path": OUTPUT, "records": 1,
+                       "sha256": digest((self.repo / OUTPUT).read_bytes())},
+            "revision": "rev.1 (the seal under test)",
+        }
+
+    def git(self, *args: str) -> str:
+        return subprocess.run(["git", *args], cwd=self.repo, check=True,
+                              capture_output=True, text=True).stdout.strip()
+
+    def commit(self, message: str) -> None:
+        self.git("add", "-A")
+        self.git("commit", "-q", "-m", message)
+
+    def reseal(self, *args: str) -> subprocess.CompletedProcess:
+        return subprocess.run([sys.executable, RESEAL, *args], cwd=self.repo,
+                              capture_output=True, text=True)
+
+    def drift_claim_016(self) -> None:
+        self.write(CLAIMS, CLAIM_REGISTRY.replace(
+            "GSK3beta abundance, as first sealed.",
+            "GSK3beta abundance, withdrawn: single-lane densitometry, NOT_TESTED."))
+
+    def drift_paper_019(self) -> None:
+        """Somebody else's batch moved a sealed paper block and left the drift standing."""
+        self.write(PAPERS, PAPER_REGISTRY.replace(
+            "As first sealed.", "Edited by an earlier, unrelated batch."))
+
+
+class AnUndeclaredAbsorptionIsRefused(ResealFixture):
+    def test_the_paper_019_case_is_refused_and_nothing_is_written(self) -> None:
+        """The 2026-09-27 defect, reproduced: one batch's re-seal, two batches' drift."""
+        self.drift_claim_016()
+        self.drift_paper_019()
+        self.commit("this batch's claim edit, plus a drift left by an earlier batch")
+        before = (self.repo / BASELINE).read_bytes()
+        done = self.reseal("--revision", "rev.2 (CLAIM 016 withdrawn)", "--absorb", "CLAIM 016")
+        self.assertEqual(2, done.returncode, done.stdout + done.stderr)
+        self.assertIn("REFUSED", done.stdout)
+        self.assertIn("PAPER 019", done.stdout)
+        self.assertNotIn("CLAIM 016\n", done.stdout.split("Name each block")[0])
+        self.assertEqual(before, (self.repo / BASELINE).read_bytes(),
+                         "a refused re-seal must not write")
+
+    def test_check_mode_reports_the_refusal_too(self) -> None:
+        """`--check` is the mode a batch runs first; it must not look clean."""
+        self.drift_paper_019()
+        self.commit("unrelated drift")
+        done = self.reseal("--check")
+        self.assertEqual(2, done.returncode, done.stdout + done.stderr)
+        self.assertIn("PAPER 019", done.stdout)
+
+    def test_naming_every_drifted_block_is_accepted(self) -> None:
+        self.drift_claim_016()
+        self.drift_paper_019()
+        self.commit("both")
+        done = self.reseal("--revision", "rev.2 (both declared)",
+                           "--absorb", "CLAIM 016", "--absorb", "PAPER 019")
+        self.assertEqual(0, done.returncode, done.stdout + done.stderr)
+        sealed = self.read_baseline()
+        self.assertEqual("rev.2 (both declared)", sealed["revision"])
+        self.assertEqual(self.git("rev-parse", "HEAD"), sealed["git_head_at_freeze"])
+        current = (self.repo / CLAIMS).read_text(encoding="utf-8")
+        self.assertEqual(block_digest(current, "CLAIM 016"),
+                         sealed["inputs"]["claim_registry"]["scope_block_sha256"]["CLAIM 016"])
+        self.assertEqual(digest(protocol.registry_scope_bytes(current, ["CLAIM 016", "CLAIM 024"])),
+                         sealed["inputs"]["claim_registry"]["scope_sha256"])
+
+    def test_an_untouched_block_keeps_its_hash(self) -> None:
+        """Re-sealing is not a licence to move what did not move."""
+        self.drift_claim_016()
+        self.commit("claim 016 only")
+        before = self.read_baseline()["inputs"]["claim_registry"]["scope_block_sha256"]
+        done = self.reseal("--revision", "rev.2 (016)", "--absorb", "CLAIM 016")
+        self.assertEqual(0, done.returncode, done.stdout + done.stderr)
+        after = self.read_baseline()["inputs"]["claim_registry"]["scope_block_sha256"]
+        self.assertEqual(before["CLAIM 024"], after["CLAIM 024"])
+        self.assertNotEqual(before["CLAIM 016"], after["CLAIM 016"])
+
+    def test_absorbing_a_block_that_did_not_drift_is_only_a_note(self) -> None:
+        done = self.reseal("--check", "--absorb", "CLAIM 024")
+        self.assertEqual(0, done.returncode, done.stdout + done.stderr)
+        self.assertIn("has not drifted", done.stdout)
+
+
+class AnAcknowledgementLicensesAnAbsorption(ResealFixture):
+    """The protocol's own drift log is the other way to declare an absorption."""
+
+    def acknowledge(self, block: str, live_sha256: str) -> None:
+        self.write(DRIFT_LOG, json.dumps({
+            "block": block, "live_sha256": live_sha256,
+            "verdict": "no_reissue_needed", "by": "reseal-test"}) + "\n")
+
+    def test_an_acknowledgement_bound_to_the_current_digest_is_enough(self) -> None:
+        self.drift_paper_019()
+        self.acknowledge("PAPER 019",
+                         block_digest((self.repo / PAPERS).read_text(encoding="utf-8"),
+                                      "PAPER 019"))
+        self.commit("drift plus its acknowledgement")
+        done = self.reseal("--revision", "rev.2 (acknowledged)")
+        self.assertEqual(0, done.returncode, done.stdout + done.stderr)
+
+    def test_a_stale_acknowledgement_does_not_carry_over(self) -> None:
+        """An acknowledgement expires when the block moves again — `unresolved_drift`'s rule."""
+        self.drift_paper_019()
+        self.acknowledge("PAPER 019", "0" * 64)
+        self.commit("drift plus a stale acknowledgement")
+        done = self.reseal("--revision", "rev.2 (stale ack)")
+        self.assertEqual(2, done.returncode, done.stdout + done.stderr)
+        self.assertIn("PAPER 019", done.stdout)
+
+
+class TheOtherRefusals(ResealFixture):
+    def test_writing_without_a_revision_is_refused(self) -> None:
+        self.drift_claim_016()
+        self.commit("claim 016")
+        done = self.reseal("--absorb", "CLAIM 016")
+        self.assertEqual(2, done.returncode, done.stdout + done.stderr)
+        self.assertIn("--revision is required", done.stdout)
+
+    def test_an_uncommitted_declared_path_is_refused(self) -> None:
+        self.drift_claim_016()
+        done = self.reseal("--revision", "rev.2 (dirty)", "--absorb", "CLAIM 016")
+        self.assertEqual(2, done.returncode, done.stdout + done.stderr)
+        self.assertIn("not committed", done.stdout)
+
+    def test_a_moved_append_only_prefix_is_an_incident(self) -> None:
+        lines = (self.repo / LEDGER).read_text(encoding="utf-8").splitlines()
+        lines[0] = json.dumps({"event_id": "FTR-01", "rewritten": True})
+        self.write(LEDGER, "\n".join(lines) + "\n")
+        self.commit("the ledger prefix was rewritten")
+        done = self.reseal("--revision", "rev.2 (prefix)")
+        self.assertNotEqual(0, done.returncode)
+        self.assertIn("incident, not a re-seal", done.stdout + done.stderr)
+
+    def test_appending_to_the_ledger_never_re_seals_the_prefix(self) -> None:
+        with (self.repo / LEDGER).open("a", encoding="utf-8") as handle:
+            handle.write(json.dumps({"event_id": "FTR-04"}) + "\n")
+        self.commit("a receipt was appended")
+        before = self.read_baseline()["inputs"]["receipt_ledger"]
+        done = self.reseal("--revision", "rev.2 (append)")
+        self.assertEqual(0, done.returncode, done.stdout + done.stderr)
+        self.assertEqual(before, self.read_baseline()["inputs"]["receipt_ledger"],
+                         "an append-only input must come out of a re-seal untouched")
+
+    def test_a_removed_sealed_block_is_a_clean_refusal(self) -> None:
+        self.write(CLAIMS, CLAIM_REGISTRY.split("## CLAIM 024")[0])
+        self.commit("CLAIM 024 removed")
+        done = self.reseal("--revision", "rev.2 (removed)", "--absorb", "CLAIM 024")
+        self.assertNotEqual(0, done.returncode)
+        self.assertNotIn("Traceback", done.stderr)
+        self.assertIn("no longer resolves", done.stdout + done.stderr)
+
+    def test_a_plain_input_is_re_hashed(self) -> None:
+        self.write(AUTHORED, json.dumps({"assertions": ["one"]}) + "\n")
+        self.commit("authored assertions edited")
+        done = self.reseal("--revision", "rev.2 (authored)")
+        self.assertEqual(0, done.returncode, done.stdout + done.stderr)
+        self.assertEqual(digest((self.repo / AUTHORED).read_bytes()),
+                         self.read_baseline()["inputs"]["authored_assertions"]["sha256"])
+
+
+if __name__ == "__main__":
+    unittest.main(verbosity=2)
