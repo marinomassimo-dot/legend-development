@@ -208,6 +208,7 @@ refs or observe clones on other hosts. A missing or
 | **Benchmark J** — whether a record-scoped editor can replace BATCH_COMMIT's whole-file rewrite without losing a legitimate edit (J0 corpus labelling, J2 replay, over the repository's own history) | `framework/scripts/record_edit_bench.py j0` · `… j2` |
 | what model actually ran, per turn, and what the run cost — read from a transcript | `framework/scripts/session_model_census.py` |
 | what the runtime actually says about quota, with a timestamp — and when it says nothing | `framework/scripts/quota_state.py` |
+| what a `` `<file>` §NN `` cross-reference costs the repository: the unresolvable ones, and then a per-directory table of **checked · unresolvable · gated** — the read a *widening* decision is made from, instead of re-deriving the per-prefix numbers by hand. Reports, never fails; the gated subset is the failing assertion of the same file, run with no arguments | `python3 scripts/test_section_references.py --census` |
 
 ## 11 · Disease-model analysis (public, WWOX)
 
