@@ -201,7 +201,7 @@ immunohistochemical control at any point in the chain** and **no neural validati
 calls stand as that paper's observations. What changes is that the reagent basis is no longer a
 declared unknown pointing at an unread paper — it is measured and closed.
 
-The premise withdrawal that `ALDAZ-FT-B-003` recorded for `fulltext_dossiers/PMID16941225.md` §4.1
+The premise withdrawal that `ALDAZ-FT-B-003` recorded for `fulltext_dossiers/PMID16941225.md` §4 item 1 [ref corrected 2026-09-28 from "§4.1" · CC-20260928-SECTION-REFS-01]
 (`PREMISE: INFERENZA — the delegated control is adequate` → `PREMISE: DATO` with the boundary)
 **completes here** and can be stated without a forward reference. 🔴 Not edited by this task: it is a
 previous lot's artefact and it is named for whoever propagates.

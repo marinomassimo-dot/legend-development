@@ -1061,3 +1061,22 @@ not pass, no negative in that battery is evidence* — is recorded in `SLR-mirro
 learning and is **not** self-ratified; if it is to bind, it goes the G.2 route.
 
 **WRONG-REASON LOAD-BEARING PASSES in the candidate: 0.**
+
+---
+
+## SECTION-REFERENCE CORRECTION NOTE — 2026-09-28, ACTOR_ID `scientist` (`CC-20260928-SECTION-REFS-01`), append-only
+
+> **Nothing above this line was rewritten.** This record is another actor's, so the defective
+> cross-reference is named here instead of being edited in place. Found by
+> `scripts/test_section_references.py --census`, which resolves a `` `<file>` §<label> ``
+> citation against the sections the cited file actually defines. The wrong reference is quoted
+> below without backticks around the filename, which is how this repository quotes a reference
+> it must reproduce without re-asserting it.
+
+**One occurrence, a subsection that does not exist.** Line 320 cites *"controlled_benchmark_ab.md
+§4.5, bullet 2"*. `framework/protocols/controlled_benchmark_ab.md` §4 defines §4.1–§4.4 and no §4.5;
+the quoted bullet — *"The command enumerates the unchecked surface from the tree, per actor, on
+every run"* — is at **line 309, inside `### 4.3 · No visibility A↔B, no prior output — and how it is
+checked after the fact`**, and bullet 2 there is the bullet the review quotes. **Right reference:**
+`controlled_benchmark_ab.md` **§4.3, bullet 2**. The quoted wording is verbatim correct and the
+finding is unaffected.

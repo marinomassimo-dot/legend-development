@@ -111,7 +111,7 @@ dodge.** The field is the label of one triage exercise — `literature_tracking_
 **179 records carry it and every one is a corpus paper inside 221–400; zero are outside.** All six
 corpus papers here are numbered 4, 22, 27, 113, 123 and 175, and `PAPER 094` has no corpus number
 at all. Assigning one would invent a verdict from an exercise that never looked at them — and it is
-moot anyway, because `gold_is_in_the_details.md` § 1 says a tier means *"only later in the queue,
+moot anyway, because `gold_is_in_the_details.md` rule 1 [ref corrected 2026-09-28 from "§ 1" · CC-20260928-SECTION-REFS-01] says a tier means *"only later in the queue,
 never never"*, and all seven have been read.
 
 The other four are assigned from the readings. Scales are the ones already in force: `T1/T2/T3`,

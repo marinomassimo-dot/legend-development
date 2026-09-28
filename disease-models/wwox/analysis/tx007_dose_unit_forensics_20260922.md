@@ -88,7 +88,7 @@ a session that re-fetches and trusts the fetch over the archive will silently lo
    2.63 × 10¹¹ vg" is uncertain by a factor of 2 in its endpoints and exact in its width.**
 
 3. 🔴 **The prior wave's central framing is wrong, and this is the correction that matters most.**
-   `tx007_dose_challenge_20260922.md` §1.5 and §4.1, and `CC-20260922-…-01` §4b, state: *"the
+   `tx007_dose_challenge_20260922.md` §1 item 5 [ref corrected 2026-09-28 from "§1.5" · CC-20260928-SECTION-REFS-01] and §4.1, and `CC-20260922-…-01` §4b, state: *"the
    per-hemisphere-vs-total ambiguity is a factor of **2**. The LD→HD step is **2.1×**. ⇒ **the ambiguity is
    the size of the effect**"*. 🆕 **A common-mode factor is not "the size of" a ratio it cancels out of.**
    The two numbers are numerically similar and **logically unrelated**: one is an uncertainty on the
@@ -506,7 +506,7 @@ the same class of defect as the missing `/hemisphere`: **the number is stated, i
 **Ordered by how load-bearing they are. Each names the file and what it says.**
 
 **O-1 — "the ambiguity is the size of the effect" is a category error, and it is the prior wave's
-load-bearing sentence.** `tx007_dose_challenge_20260922.md` §1.5, §4.1 and `CC-20260922-TX007-DOSE-CHALLENGE-01.md`
+load-bearing sentence.** `tx007_dose_challenge_20260922.md` §1 item 5 [ref corrected 2026-09-28 from "§1.5" · CC-20260928-SECTION-REFS-01], §4.1 and `CC-20260922-TX007-DOSE-CHALLENGE-01.md`
 §4b. The unit ambiguity is **common-mode** and **cancels exactly** from `HD/LD`; the ratio is **2.1382 under
 every permitted reading** (§4.1). The defect is real but confined to the **absolute** axis, where it is
 **exactly 2×**. ⇒ **the ~2.1× step is robust, and `TX-007`'s internal dose–response structure was never

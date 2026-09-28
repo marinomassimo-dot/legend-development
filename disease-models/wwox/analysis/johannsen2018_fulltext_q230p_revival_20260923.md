@@ -162,7 +162,7 @@ This was not predicted, was not looked for, and is the most consequential thing 
 Amplicon lengths confirmed on gel (Fig. 3a): **277 bp** (core) and **200 bp** (3′).
 
 **Now place the variant.** `q230p_structural_mechanism_20260922.md` §0.1 and
-`missense_splice_reclassification_risk_20260921.md` §81 give the repository's exon map:
+`missense_splice_reclassification_risk_20260921.md` §1.4 [ref corrected 2026-09-28 from "§81" · CC-20260928-SECTION-REFS-01] give the repository's exon map:
 
 ```
 exon 6  c.517–c.605     exon 7  c.606–B     exon 8  c.B+1–1056     (754 ≤ B ≤ 843)
@@ -406,7 +406,7 @@ proposed for any genotype.
   Fig. 3c's band pattern is taken from the legend and Results prose, not from the panel. A
   figure-asserted negative would need the image.
 - The exon map used in §3 (`exon 7 = c.606–B`, `754 ≤ B ≤ 843`) is the **repository's own**, carried
-  from `missense_splice_reclassification_risk_20260921.md` §81, which itself declares the exon 7/8
+  from `missense_splice_reclassification_risk_20260921.md` §1.4 [ref corrected 2026-09-28 from "§81" · CC-20260928-SECTION-REFS-01], which itself declares the exon 7/8
   boundary `UNKNOWN` within a 90-nt window. 🟢 **The conclusion is insensitive to `B`:** exon 7
   begins at `c.606`, the core amplicon ends at `c.605`, and the 3′ amplicon begins at `c.B+1` — so
   exon 7 is excluded from both for **every** admissible `B`.

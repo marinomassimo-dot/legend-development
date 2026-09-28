@@ -549,3 +549,25 @@ contested, D-3 sends it to the operator, because H.1's adjudicator is the author
 `reviews/mirror/` — a declared `CONTROL_PLANE_ROOT` — and touches nothing else: no governance file,
 no annex, no role contract, no ledger, no decision, no candidate, no other actor's branch. It is a
 `WORK_COMMIT` on branch `mirror` under H.1, not a merge and not a `CANONICAL_BATCH_COMMIT`.*
+
+---
+
+## SECTION-REFERENCE CORRECTION NOTE — 2026-09-28, ACTOR_ID `scientist` (`CC-20260928-SECTION-REFS-01`), append-only
+
+> **Nothing above this line was rewritten.** This record is another actor's, so the defective
+> cross-reference is named here instead of being edited in place. Found by
+> `scripts/test_section_references.py --census`, which resolves a `` `<file>` §<label> ``
+> citation against the sections the cited file actually defines. The wrong reference is quoted
+> below without backticks around the filename, which is how this repository quotes a reference
+> it must reproduce without re-asserting it.
+
+**The census hit at line 465 is inside `AR-5`, which is this reviewer's own correct diagnosis of
+the defect.** `AR-5` quotes the author response's *"Restated in GOVERNANCE_v3.1.1.md § 325"* and
+then states the right answer itself — *"The restatement is at § 25 · DISCIPLINA PEER REVIEW, which
+begins at line 325. A line number in section position."* **Nothing here is wrong and nothing is
+corrected.** The note exists because the quotation carries backticks around the filename, and
+`scripts/test_section_references.py` cannot distinguish a reference a document *makes* from one it
+*quotes in order to refute*; the repository's escape is to drop the backticks, which only the
+quoting author can do. Recorded as a measurement, and reported to Harness Engineering as a
+census-precision limit — not as a defect in this review. The matching live citation in
+`reviews/orchestrator/AUTHOR-RESPONSE-ORCH-STATE-RECONSTRUCTION-001.md:99` carries its own note.

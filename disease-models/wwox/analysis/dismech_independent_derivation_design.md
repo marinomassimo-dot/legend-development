@@ -7,7 +7,7 @@
 > Public, disease-level and de-identified. Nothing here is medical advice.
 
 **Date:** 2026-08-04 · **Revision:** 12 · **Status:** CLEAN AUTHORED RUN, reconciliation pending
-**Governs:** the independent second derivation owed by `dismech_export_spec.md` §14.1  
+**Governs:** the independent second derivation owed by `dismech_export_spec.md` §14 question 1 [ref corrected 2026-09-28 from "§14.1" · CC-20260928-SECTION-REFS-01]  
 **Integrity baseline:** `data/dismech_phase2_baseline.json`  
 **Blind contract:** `dismech_blind_derivation_contract.md`  
 **Protocol tool:** `disease-models/wwox/analysis/scripts/dismech_independent_protocol.py`

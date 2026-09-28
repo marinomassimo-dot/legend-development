@@ -177,7 +177,7 @@ omissions. Every allele-observation is attributed to the publication that made i
   any undetected overlap between Piard's and Oliver's literature aggregation.
 
 > 🔴 **THIS CONTRADICTS THE REPOSITORY'S STANDING COUNT.**
-> `missense_splice_reclassification_risk_20260921.md` §13 states `p.(Gln230Pro)` has **"8 patients,
+> `missense_splice_reclassification_risk_20260921.md` § 2.1 row 11 [ref corrected 2026-09-28 from "§13" · CC-20260928-SECTION-REFS-01] states `p.(Gln230Pro)` has **"8 patients,
 > 6 families."** Today's reconstruction gives **10–11 individuals**. The discrepancy is **not**
 > resolved here and **no canonical count is changed**. The most likely causes, in order: (a) the
 > older figure predates Oliver's Table S1 and Weisz-Hubshman's full text; (b) family-level vs

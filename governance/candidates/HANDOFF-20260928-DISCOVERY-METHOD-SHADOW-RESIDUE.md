@@ -34,7 +34,7 @@ subject that already has one. The four items below are what is worth extracting 
 **Measured 2026-09-28, not taken from the shadow file:**
 
 - `framework/instruction/LEGEND_SCIENTIFIC_DISCOVERY_METHOD_V0_PROPOSAL.md:29` reads
-  *"`LEGEND_CORE` **§26** forbids answering a scientific mistake with a new gate, authority,
+  *"LEGEND_CORE **§26** forbids answering a scientific mistake with a new gate, authority,
   auditor, registry or workflow."*
 - `framework/instruction/LEGEND_CORE.md` **has no §26.** It ends at `## 22. FINAL MAXIMS`;
   `grep -cE '^## 2[3-9]\.'` returns **0**.
