@@ -84,7 +84,15 @@ FULL_TEXT_MARKERS = (
     "complete_fulltext_read",
     "full text read",
 )
-PARTIAL_MARKERS = ("partial full text", "parziale")
+# 🔴 `partial_fulltext_read` is the RECEIPT LEDGER's own vocabulary (`RECEIPT_DEPTH` below spells
+# it that way) and it is what a registry record writes in `**Evidence depth:**` when it cites its
+# receipts. It was absent here, so `PAPER 117` — `partial_fulltext_read`, three receipts — read as
+# `abstract only`, and the deepest-record rule then let a RECEIPT own the PMID instead of the paper
+# record that had done the reading. The depth census was right only because the receipt happened to
+# exist; the `record` column named `receipt FTR-20260927-30356099-03` where the registry holds
+# `PAPER 117`. Adding the spelling moves no count (measured: all six depth buckets unchanged) and
+# makes the row name the record.
+PARTIAL_MARKERS = ("partial full text", "parziale", "partial_fulltext_read")
 DEPTH_RANK = {
     "unmatched": 0,
     "catalogued only": 1,

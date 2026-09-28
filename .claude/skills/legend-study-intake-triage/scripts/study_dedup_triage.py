@@ -364,6 +364,45 @@ def resolve_known_class(record: dict[str, str]) -> str:
     return "KNOWN_INTEGRATED"
 
 
+# 🔴 HOW FAR THE RECORD SAYS THE PAPER HAS GOT. A paper may legitimately own SEVERAL records —
+# the convention is that a corpus placeholder promoted into a full record is re-statused
+# (`superseded`, `promoted — see …`, `resolved — duplicate of …`) and KEPT, never deleted — so an
+# identifier resolves to more than one block and something has to choose. `match_row` chose the
+# first in physical file order, which is the placeholder whenever the stub was written before the
+# paper. Measured on 2026-09-28: `PMID 30356099` resolved to `CORPUS-STUB-059` (`superseded`) and
+# not to `PAPER 117` (`processed`, partial full text, three receipts), so the batch queue's
+# headline counted a paper nobody had processed that the registry holds at partial-full-text
+# depth. Nothing was lost — the per-seed row still stated the depth — but the number a reader
+# works from was wrong, and file order is not a statement about anything.
+# The fix is WITHIN a file, not across files. Which SURFACE holds a record already carries a
+# meaning, and `classify_seen_files` states it: the paper registry answers first, because being
+# in the tracking log means screened and being in the paper registry means held. Ranking the
+# class alone across surfaces was measured and rejected — it let ~140 seeds be resolved by a
+# `LIT-…` tracking-log row (KNOWN_INTEGRATED by `resolve_known_class`, because only CORPUS ids and
+# `not_processed` mark a placeholder) in front of a corpus stub in the paper registry, turning
+# "screened" into "done" and moving `outstanding` 404 -> 169 on a defect that is not there. So
+# file precedence comes first and promotion breaks ties inside one file, which is exactly where
+# the placeholder and the record that replaced it both live.
+PROMOTION_RANK = {"CORPUS_CATALOGUED": 0, "IN_PIPELINE": 1, "KNOWN_INTEGRATED": 2}
+FILE_RANK = {relative: len(REGISTRY_FILES) - position
+             for position, relative in enumerate(REGISTRY_FILES)}
+
+
+def promoted_match(matches: list[tuple[str, dict[str, str]]]) -> tuple[str, dict[str, str]]:
+    """The most-promoted of several records that carry the same identifier, on the most
+    authoritative surface that holds one.
+
+    Stable: equal rank keeps the earlier record, so the only resolutions that move are the ones
+    where a superseded placeholder stood in front of the record that replaced it.
+    """
+    def rank(pair: tuple[str, dict[str, str]]) -> tuple[int, int]:
+        record = pair[1]
+        return (FILE_RANK.get(record["source_file"], 0),
+                PROMOTION_RANK.get(resolve_known_class(record), 0))
+
+    return max(matches, key=rank)
+
+
 def match_row(
     row: dict[str, str],
     records: list[dict[str, str]],
@@ -380,16 +419,27 @@ def match_row(
         if bare:
             identifiers["pmid"].add(bare.group(1))
 
+    # EVERY exact-identifier match, then the most promoted of them — see PROMOTION_RANK. The
+    # version that returned the first match in file order tallied a promoted paper by the
+    # superseded placeholder standing in front of it.
+    exact: list[tuple[str, dict[str, str]]] = []
     for record in records:
         for kind in ("doi", "pmid", "pmcid"):
             record_ids = set(filter(None, record[kind].split(";")))
             if identifiers[kind] and record_ids and identifiers[kind] & record_ids:
-                return {
-                    "class": resolve_known_class(record),
-                    "score": "100",
-                    "match": record["id"],
-                    "reason": f"exact {kind.upper()} match in {record['source_file']}",
-                }
+                exact.append((kind, record))
+                break
+    if exact:
+        kind, record = promoted_match(exact)
+        others = [other["id"] for _k, other in exact if other is not record]
+        return {
+            "class": resolve_known_class(record),
+            "score": "100",
+            "match": record["id"],
+            "reason": f"exact {kind.upper()} match in {record['source_file']}"
+                      + (f"; most promoted of {len(exact)} records carrying this identifier "
+                         f"({', '.join(others)})" if others else ""),
+        }
 
     if id_index:
         for kind in ("pmid", "doi", "pmcid"):

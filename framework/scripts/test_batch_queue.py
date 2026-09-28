@@ -24,6 +24,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import batch_queue as bq  # noqa: E402
 import fulltext_receipts as receipts  # noqa: E402
+# The queue's headline classes come from the intake gate, not from a second classifier here, so
+# the regression for a mis-resolved PMID belongs against that gate as the queue reaches it.
+import study_dedup_triage as triage  # noqa: E402  (path added by batch_queue's import)
 
 ROOT = Path(__file__).resolve().parents[2]
 REGISTRIES = ROOT / "disease-models" / "wwox" / "registries"
@@ -138,6 +141,65 @@ class JoinTests(unittest.TestCase):
         index = bq.registry_index(registries)
         self.assertEqual(index["pmid:33333335"]["depth"], "full text")
         self.assertEqual(index["pmid:33333335"]["record"], "PAPER 039")
+
+    def test_the_receipt_spelling_of_partial_depth_is_read(self) -> None:
+        """`partial_fulltext_read` is what a record writes when it cites its receipts, and
+        `PARTIAL_MARKERS` did not hold it — so `PAPER 117` read as `abstract only` and the
+        deepest-record rule handed the PMID to a RECEIPT instead of the paper record."""
+        registries = fixture(
+            self,
+            textwrap.dedent(
+                """\
+                ## PAPER 117
+                **Identifier:** PMID 30356099 / PMCID PMC6752669 / DOI 10.1038/s41436-018-0339-3
+                **Status:** processed
+                **Evidence depth:** `partial_fulltext_read` — receipts `FTR-20260811-30356099-01`
+                """
+            )
+        )
+        index = bq.registry_index(registries)
+        self.assertEqual(index["pmid:30356099"]["depth"], "partial full text")
+        self.assertEqual(index["pmid:30356099"]["record"], "PAPER 117")
+
+    def test_the_tally_resolves_a_pmid_by_its_promoted_record(self) -> None:
+        """🔴 The 2026-09-28 shape, on the classifier the queue's headline counts with.
+
+        Restoring `CORPUS-STUB-059` gave PMID 30356099 two paper-registry records — the
+        superseded placeholder and `PAPER 117` — and the classifier returned the first match in
+        physical file order, so the headline called a partial-full-text paper unprocessed.
+        """
+        temporary = TemporaryDirectory()
+        self.addCleanup(temporary.cleanup)
+        root = Path(temporary.name)
+        registry = root / triage.REGISTRY_FILES[0]
+        registry.parent.mkdir(parents=True)
+        registry.write_text(
+            textwrap.dedent(
+                """\
+                ## CORPUS-STUB-059
+                **Full title:** Genetic and phenotypic spectrum of WWOX in twenty cases
+                **Identifier:** PMID 30356099 / DOI 10.1038/s41436-018-0339-3
+                **Status:** superseded
+
+                ## PAPER 117
+                **Full title:** Genetic and phenotypic spectrum of WWOX in twenty cases
+                **Identifier:** PMID 30356099 / DOI 10.1038/s41436-018-0339-3
+                **Status:** processed
+                **Evidence depth:** `partial_fulltext_read` — receipts `FTR-20260811-30356099-01`
+                """
+            ), encoding="utf-8")
+        records = triage.build_index(root)
+        self.assertEqual([record["id"] for record in records],
+                         ["CORPUS-STUB-059", "PAPER 117"], "fixture lost the file order")
+        verdict = triage.match_row(
+            {"line": "Genetic and phenotypic spectrum of WWOX in twenty cases. — PMID 30356099"
+                     " · DOI 10.1038/s41436-018-0339-3 · YEAR 2019", "aggregate": "no", "raw": ""},
+            records, triage.build_identifier_index(root))
+        self.assertEqual(verdict["match"], "PAPER 117")
+        self.assertEqual(verdict["class"], "KNOWN_INTEGRATED")
+        self.assertNotEqual(bq.ACTION[verdict["class"]],
+                            bq.ACTION["CORPUS_CATALOGUED"],
+                            "a promoted paper was still counted as never processed")
 
     def test_doi_match_is_case_insensitive(self) -> None:
         registries = fixture(
