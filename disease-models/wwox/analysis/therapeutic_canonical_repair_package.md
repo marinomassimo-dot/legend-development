@@ -31,7 +31,7 @@ reviewed, accepted or rejected **without reference to any other candidate in thi
 the other. `C` and `D` both edit one sentence of `CLAIM 021` and are still **kept apart**, because a
 reviewer can accept the NMDAR upgrade and refuse the gap-junction withdrawal on independent grounds.
 
-`CHANGE_CLASS` follows `LEGEND_CORE` §157 — **MAJOR** = baseline-claim reversal or block
+`CHANGE_CLASS` follows `LEGEND_CORE` §9 [ref corrected 2026-09-28 from "§157" · CC-20260928-SECTION-REFS-01] — **MAJOR** = baseline-claim reversal or block
 redefinition; **MINOR** = everything else; **MAJOR?** = arguable, routed to Mirror fail-closed per
 Annex H.1.
 

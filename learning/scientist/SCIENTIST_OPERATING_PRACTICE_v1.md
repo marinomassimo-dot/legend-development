@@ -1062,3 +1062,22 @@ own founding observation is that *what gets discarded silently is what compounds
 A Scientist contract's job is not to invent this workflow. It is to make it **owed**.
 
 *Not medical advice. This document is a rehearsal product and carries no standing.*
+
+---
+
+## SECTION-REFERENCE CENSUS NOTE — 2026-09-28, ACTOR_ID `scientist` (`CC-20260928-SECTION-REFS-01`)
+
+🟢 **Three citations in this file are named by `scripts/test_section_references.py --census` and all
+three are CORRECT. Do not "repair" them.** The three are deep_dive_manual.md § 4bis (line 152),
+§ 10bis (line 198) and § 4ter (line 236). `framework/manuals/deep_dive_manual.md` defines
+`## 4bis.`, `## 10bis.` and `## 4ter.` — the Italian-ordinal heading form this repository uses
+throughout (`2bis`, `4bis`, `4ter` appear in `LEGEND_CORE.md`, in commit candidates and in the
+manual itself).
+
+**Why the census names them.** The checker's section-label grammar admits at most **one** trailing
+lower-case letter (`21c`, `5e`), so it truncates `4bis` to `4b`, `10bis` to `10b` and `4ter` to `4t`
+— on **both** sides: the heading is not recorded as a definition and the reference is not recognised
+as naming it. Measured 2026-09-28 by re-running the checker's own `unresolved_references()` with the
+suffix widened to `[a-z]+`: the repository-wide census drops from **68 to 65**, and the three that
+disappear are exactly these. **Reported to Harness Engineering as a grammar defect in the checker,
+not repaired here** — `scripts/` is Harness Engineering's surface.

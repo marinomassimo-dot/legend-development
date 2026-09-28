@@ -145,7 +145,7 @@ Classification: candidate for lawful later integration via `BATCH_COMMIT`, chang
 
 ### 1.6 Page-adjudication recipe — published as a recipe, never as the image
 
-`CLAUDE.md` §5e. Source `40478_2020_883_Fig7_HTML.png`, sha256 `ced68a66…62542`. PIL 11.3.0,
+`gold_is_in_the_details.md` §5e [ref corrected 2026-09-28 from "CLAUDE.md §5e" · CC-20260928-SECTION-REFS-01]. Source `40478_2020_883_Fig7_HTML.png`, sha256 `ced68a66…62542`. PIL 11.3.0,
 `Image.crop(box)` then `resize(w*s, h*s, Image.LANCZOS)`, saved PNG. Crops written to the session
 scratchpad, **outside the repository**; the reproduction is not shipped.
 

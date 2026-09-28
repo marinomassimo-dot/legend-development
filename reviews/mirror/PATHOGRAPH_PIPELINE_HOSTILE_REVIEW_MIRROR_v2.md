@@ -498,3 +498,23 @@ ENDORSED AS WRITTEN
 MIRROR ASSERTS NO SCIENTIFIC VERDICT. No biological relation was adjudicated.
 No forced consensus. No personal identifiers. Nothing canonical was mutated by this review.
 ```
+
+---
+
+## SECTION-REFERENCE CORRECTION NOTE — 2026-09-28, ACTOR_ID `scientist` (`CC-20260928-SECTION-REFS-01`), append-only
+
+> **Nothing above this line was rewritten.** This record is another actor's, so the defective
+> cross-reference is named here instead of being edited in place. Found by
+> `scripts/test_section_references.py --census`, which resolves a `` `<file>` §<label> ``
+> citation against the sections the cited file actually defines. The wrong reference is quoted
+> below without backticks around the filename, which is how this repository quotes a reference
+> it must reproduce without re-asserting it.
+
+**One occurrence, a line number in section position.** Line 460 cites
+*"SCIENTIST-FIRST-PILOT-EXECUTION-CONTRACT-001 § 396"* for *"dispatch surfaces carry no
+conclusion-shaped prompt by declared design"*. `learning/plan/SCIENTIST-FIRST-PILOT-EXECUTION-CONTRACT-001.md`
+defines no §396; **line 396** is the row *"a research question, an evidence target, a hypothesis to
+test, an anticipated conclusion | absent from every input file by design"* inside
+`### 2.3 · Forbidden information — with the mechanism and its honest reach`. **Right reference:**
+that contract's **§ 2.3**. The safeguard the review demonstrates is the one that row states, so the
+finding is unaffected.

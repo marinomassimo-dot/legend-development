@@ -48,7 +48,7 @@ re-measure it without guessing what *"everything"* meant.
 ## 1 · PHASE 2 — Six separable canonical repair candidates
 
 Each candidate is written to be **acceptable or rejectable on its own**. None depends on another
-being accepted. `CHANGE_CLASS` follows `LEGEND_CORE` §157 — **MAJOR** = baseline-claim reversal or
+being accepted. `CHANGE_CLASS` follows `LEGEND_CORE` §9 [ref corrected 2026-09-28 from "§157" · CC-20260928-SECTION-REFS-01] — **MAJOR** = baseline-claim reversal or
 block redefinition; **MINOR** = everything else. Where the class is genuinely arguable it is marked
 `MAJOR?` and routed to Mirror, fail-closed, per Annex H.1.
 

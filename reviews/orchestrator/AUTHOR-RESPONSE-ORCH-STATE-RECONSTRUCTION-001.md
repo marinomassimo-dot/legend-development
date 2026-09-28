@@ -549,3 +549,22 @@ on branch `author-response-orch-state-reconstruction` based on `main` @ `788c357
 file under `reviews/`, a declared `CONTROL_PLANE_ROOT`, and touches nothing else: no governance
 file, no role contract, no annex, no ledger, no decision, no candidate, and no other actor's branch.
 It is a `WORK_COMMIT` on its own branch — not a `CANONICAL_BATCH_COMMIT`, and not a merge.*
+
+---
+
+## SECTION-REFERENCE CORRECTION NOTE — 2026-09-28, ACTOR_ID `scientist` (`CC-20260928-SECTION-REFS-01`), append-only
+
+> **Nothing above this line was rewritten.** This record is another actor's, so the defective
+> cross-reference is named here instead of being edited in place. Found by
+> `scripts/test_section_references.py --census`, which resolves a `` `<file>` §<label> ``
+> citation against the sections the cited file actually defines. The wrong reference is quoted
+> below without backticks around the filename, which is how this repository quotes a reference
+> it must reproduce without re-asserting it.
+
+**One occurrence, a line number in section position, already adjudicated by the reviewer.** The
+`AUTHOR_RESPONSE` row of §0.2 (line 99) ends *"Restated in GOVERNANCE_v3.1.1.md § 325"*.
+`governance/GOVERNANCE_v3.1.1.md` defines no §325; **line 325** is where `## 25 · DISCIPLINA PEER
+REVIEW` begins. **Right reference:** `GOVERNANCE_v3.1.1.md` **§ 25**. This is exactly what
+`reviews/mirror/REV-AUTHOR-RESPONSE-ORCH-STATE-RECONSTRUCTION-001.md` `AR-5` found, and `AR-5` also
+records that *"the content cited is accurate and complete"* — so the validation verdict
+(`AUTHOR_RESPONSE` = **defined**) is unaffected.

@@ -56,7 +56,7 @@ causal.** That is the proposition adjudicated below.
 | **Shared evidence** (`PAPER 056`) | Wang H-Y *et al.* 2012, *Cell Death Differ* 19:1049 · PMID 22193544 · PMC3354054 · DOI 10.1038/cdd.2011.188 | `files/fulltext/PMID22193544_Wang2012_PMC_JATS.xml` | sha256 `eb6f568d046f8df831d15e7f8795fcb1d6ac713ec6305f7ded3ad2a330388268`, 96 230 bytes |
 | Endpoint evidence for `CLAIM 016` (`PAPER 019`) | Cheng Y-Y *et al.* 2020, *Acta Neuropathol Commun* 8:6 · PMID 32000863 | `files/fulltext/PMID32000863_Cheng2020_PMC.xml` + Fig. 7 PNG | sha256 `792b5b29…f00f5` · `ced68a66…62542` |
 
-Structured JATS preferred over PDF throughout (`CLAUDE.md` §5d). Abstract held separate from
+Structured JATS preferred over PDF throughout (`gold_is_in_the_details.md` §5d [ref corrected 2026-09-28 from "CLAUDE.md §5d" · CC-20260928-SECTION-REFS-01]). Abstract held separate from
 body; **every locator below is BODY-EXACT**, none is abstract-sourced.
 
 **Verification performed this session, not inherited:** the nine verbatim locators recorded in
