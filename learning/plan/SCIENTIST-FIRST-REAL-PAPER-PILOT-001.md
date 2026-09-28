@@ -448,7 +448,7 @@ Two of the pilot's seven output concepts acquire a second, inter-corpus scope th
 | Object | Where it goes | Why there |
 |---|---|---|
 | paper-vs-corpus **contradiction** | 🔴 `unresolved_disagreements.md` — **the file does not exist on any ref** (§ 8, `B-11`) | § 8.3 sends every disagreement flag there to *stay* unresolved; § 27 makes that a legitimate outcome |
-| a corpus **negative** the paper reopens | `dismissal_ledger_current.md`, with its `REVIVAL_TRIGGER` | `epistemic_discipline` § 2.3: *"every time a new mechanistic `DATO` arrives, re-scan the dismissal ledger."* A rejection recorded anywhere else is a rejection nobody re-scans |
+| a corpus **negative** the paper reopens | `dismissal_ledger_current.md`, with its `REVIVAL_TRIGGER` | `epistemic_discipline` § 2 obligation 3 [ref corrected 2026-09-28 from "§ 2.3" · CC-20260928-SECTION-REFS-01]: *"every time a new mechanistic `DATO` arrives, re-scan the dismissal ledger."* A rejection recorded anywhere else is a rejection nobody re-scans |
 | a corpus **premise** the paper undercuts | the addendum, tagged `supersedes_premise`, plus the `PREMISE_TAG` it displaces | `PREMISE: DEFAULT_FROM_TEXTBOOK` is the class most likely to be hit |
 | corroboration | the commit candidate's *Proposed canonical propagation* | the shape `CC-20260811-21075834-01` already uses |
 

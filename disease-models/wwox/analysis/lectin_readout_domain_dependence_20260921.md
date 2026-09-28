@@ -46,7 +46,7 @@ well be SDR-dependent. LEGEND has no evidence that can say so.
 **Hops from LEGEND to the experiment: 2 — and hop 2 terminates in a non-document.**
 
 **Is it first-hand?** The *review* is first-hand (read, receipted). The *result* is not, and cannot
-be made so: there is nothing to retrieve. `sdr_missense_readout_assessment_20260920.md` § 0.3 already
+be made so: there is nothing to retrieve. `chang_aldaz_contradiction_packet_20260920.md` § 0.3 [ref corrected 2026-09-28 from "sdr_missense_readout_assessment_20260920.md § 0.3" · CC-20260928-SECTION-REFS-01] already
 classified it **"ACQUISITION-BLOCKED — named, not adjudicated. There is no source to read."**
 
 Two further defects that bound how much weight it can carry, both already on LEGEND's books:

@@ -138,7 +138,7 @@ candidates**, and they are the same five the instrument-based route reaches from
 |---|---|
 | The three-tissue convergence *"local interneuron relatively spared, principal/projection neuron hit"* | 🟢 **YES, in full** — `GLOBAL_ESCAPE_SWEEP_20260923.md` `Q-4`, held as a `READY` candidate node |
 | The adversarial note *"Purkinje cells are themselves GABAergic, so the axis is not GABAergic-versus-glutamatergic"* | 🟢 **YES** — pre-registered in the same `Q-4` row |
-| `36828035`'s weak denominator and outcome-selected fields | 🟢 **YES** — `cerebellar_measurement_census_20260922.md` A7 and § 3.4; `community_continuation_packet_20260922.md` § 180–181 |
+| `36828035`'s weak denominator and outcome-selected fields | 🟢 **YES** — `cerebellar_measurement_census_20260922.md` A7 and § 3.4; `community_continuation_packet_20260922.md:180–181` [ref corrected 2026-09-28 from "§ 180–181" · CC-20260928-SECTION-REFS-01] |
 | `n = 3`, section-level pseudoreplication, three different asterisk thresholds | 🟢 **YES** — `CC-20260826-CLAIM006-HARDENING-01.md` § 2 |
 | The `S-KO` interneuron arm is the **not-pyramidal residue**, its `n` `CURRENTLY UNRECOVERED`, and the authors' own unadjusted-confound concession | 🟢 **YES** — `interneuron_null_explanandum_audit_20260923.md` §§ 2.1–2.2 |
 | ⚪ **The reference space of the cerebellar count is itself a measured dependent variable of the genotype** | 🔴 **NO** |

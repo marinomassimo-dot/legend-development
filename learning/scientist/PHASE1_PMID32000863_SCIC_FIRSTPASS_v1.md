@@ -407,7 +407,7 @@ exposure, plus a post-treatment pSer9 western demonstrating target engagement.
 1. **Lithium's control-genotype result is omitted from every text surface.** Panel 7d marks `****`
    in `+/+` and `+/−`; abstract, Results and caption name only `−/−`. A text-only extractor —
    human or machine — curates a genotype-restricted edge the figure does not support. This is
-   exactly the failure class `DISMECH_INTEGRATION.md` §23 already names as its worked example.
+   exactly the failure class the worked example in `DISMECH_INTEGRATION.md` under *“Why this pairing is not arbitrary”* [ref corrected 2026-09-28 from "DISMECH_INTEGRATION.md §23" · CC-20260928-SECTION-REFS-01] already names as its worked example.
 2. 🔴 **`****` is used but never defined.** The Figure 7 legend declares only *"n.s.,
    non-significant. *** P < 0.001"*. Panel d's three brackets are all four-asterisk. I searched the
    full cleaned XML: **`****` occurs 0 times**; it exists only inside the image. **The significance

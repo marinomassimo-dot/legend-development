@@ -103,7 +103,7 @@ serves as the positive control for the surface.
 | `3–16.7×` (S3E) attribution **UNRESOLVED**: WPRE effect vs `4E10→8E10` dose effect | same, § 5.4; saturation file § 1 |
 | WPRE "contradiction" is a **scope difference**, Figs 3–7 WPRE-free on both sides | same, § 5.3; saturation file § 5 |
 | Dose non-monotonicity **CLOSED** as follow-up-horizon artefact | `CC-20260826-DOSE-ADJUDICATION-01` § 6 |
-| Volume is a stated constant `2.0 µL/hemisphere`; "HD spread further" REFUSED | `tx007_per_arm_delivery_reconstruction_20260922.md` § 7.1 |
+| Volume is a stated constant `2.0 µL/hemisphere`; "HD spread further" REFUSED | `tx007_per_arm_delivery_reconstruction_20260922.md` § 7 finding `T-3`, and § 3.1 [ref corrected 2026-09-28 from "§ 7.1" · CC-20260928-SECTION-REFS-01] |
 | `CLAIM 039` already narrowed and propagated; cerebellar contribution neither established nor excluded | `claim_registry_current.md` CLAIM 039; `CC-20260920-CLAIM039-CEREBELLAR-01` |
 | `PMID 32581702`: delayed cerebellar foliation at P1 in `lde/lde` | CLAIM 039 evidence boundary |
 | `PREMISE: DETECTION_FLOOR` vocabulary — *not detected* ≠ *absent* | `CC-20260920-DETECTION-FLOOR-01` |

@@ -304,7 +304,7 @@ blurring them.
 - **Repair layer** — Mirror's `KEEP / TEST / TOOL PATCH / CONTRACT PATCH / HUMAN GATE`. Mirror
   states these are *"the dispatch's local analytical categories."* They are **not governed
   vocabulary** and are used here for analysis only.
-- **Change class** — governed. `GOVERNANCE_v3.1.1.md` § 250 defines `MAJOR` strictly: *"SOLO
+- **Change class** — governed. `GOVERNANCE_v3.1.1.md` § 12 [ref corrected 2026-09-28 from "§ 250" · CC-20260928-SECTION-REFS-01] defines `MAJOR` strictly: *"SOLO
   governance/authority/gate/epistemic policy; breaking a schema/registry canonici;
   distruttivo/irreversibile; qualsiasi spesa."* § 244 gives the MAJOR route (**GATE 3**):
   `Plan candidate → Mirror hostile review → MIRROR PASS → HUMAN_APPROVAL → commit`.

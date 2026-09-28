@@ -285,7 +285,7 @@ mechanism, and if you diverge, say why. **I did not look, and I diverged silentl
 3. 🔴 **The rule is in the bootstrap file I am required to read first, and I cited it.** My
    worktree's `CLAUDE.md` line 142 names `regenerate_adjudications.py` inside §5e — and my Phase I
    addendum §1.6 is headed *"Page-adjudication recipe — published as a recipe, never as the image ·
-   `CLAUDE.md` §5e."* **I cited the section as my authority, implemented the half that says
+   `gold_is_in_the_details.md` §5e [ref corrected 2026-09-28 from "CLAUDE.md §5e" · CC-20260928-SECTION-REFS-01]."* **I cited the section as my authority, implemented the half that says
    *publish the derivation, not the derived*, and did not implement the half that specifies
    *which* derivation and names the script that checks it.**
 

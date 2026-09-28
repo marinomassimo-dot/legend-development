@@ -424,3 +424,91 @@ laboratory, `PREMISE: DEFAULT_FROM_TEXTBOOK` on proteasomal turnover) · the sta
 **epileptogenesis as unmeasured in every WWOX model** · and no claim of EEG normality anywhere else.
 
 **Snapshot before edit:** `claim_registry.pre_seizure_recon.md` (scratchpad), for diffing.
+
+---
+
+## RESIDUE READINESS (2026-09-28)
+
+**Actor:** `scientist`, task `residue-readiness`, worktree branch `task/residue-readiness` from
+`main` at `c38da96`. **Append-only: nothing above this line was altered.**
+
+`context_policy: QUESTION_DRIVEN` — the question is *"of this candidate's five deltas, which are
+on `main`, which are still owed, and which are now wrong"*, and LEGEND's own records are the
+intended input. The prior records were reached **by record** with
+`registry_records.py get --id … --source claim_registry_current`, never by loading or grepping a
+registry, and the three source artefacts were re-opened only to settle named propositions.
+
+### What was re-measured, and against which artefact
+
+| Re-measured | Against | Digest, re-hashed today |
+|---|---|---|
+| `CLAIM 037`, `CLAIM 005`, `CLAIM 016`, `CLAIM 040` current text | `claim_registry_current.md` | surface `6f616a851d36`; records `43f3a144f3d9` (037), `78a81ff9e64a` (005), `bd3482765cb7` (016), `4c11b5d0aa43` (040) |
+| `PAPER 011` / `PAPER 058` / `PAPER 059` current text | `paper_registry_current.md` | surface `bc9c72aafa89` |
+| Whether `BATCH_20260922_SEIZURE` is a real `main` batch or a VPS id | string census over `working_model_current.md` (3), `claim_registry_current.md` (2), `framework/state/state_history.md` (2) | **real, and on `main`** |
+| The Cheng 2020 spontaneous- and provoked-seizure sentences | `files/fulltext/PMID32000863_Cheng2020_PMC.xml` (root checkout) | present |
+| The Hussain 2023 video-EEG sentence | `files/fulltext/PMID36828035_Hussain2023_PMC.xml` | `004c59b54b5f57e462ccb39643b5f3adb44e7ecaef5eff8d786cb77c3568fd22` — **equal to the value §0 of the sibling candidate declares** |
+| The Obeid 2026 window and ECoG sentences | `files/fulltext/PMID42422765_Obeid2026_PMC_2026-09-27.xml` | `7bea83346b708e541d2c432e5da4029f69673e1abc3c6fe70926ad0e3ec2eef2` |
+| `PMID 33914858` artefact, cited by the superseded candidate | `ls files/fulltext \| grep 33914858` in the **root checkout** | 🔴 **still absent** — the drop recorded in the propagation note stands |
+
+🔴 **The census's classification of this candidate is a detection artefact, and the mechanism is
+worth naming.** `residue_census_20260928.md` §3.3 lists this file as *"426 lines, open, no
+disposition"* and ranks it item 1 of the live residue. It is not open. Its disposition block is
+headed `# ✅ PROPAGATED — BATCH_20260922_SEIZURE, 2026-09-22, under explicit Operator
+authorization` — an `h1` with no `BATCH DISPOSITION` string in it. Any test that answers *"is this
+candidate consumed?"* by matching the heading `BATCH DISPOSITION` misses it, which is the **same
+counting trap the census itself documents in §3.2**, sign-flipped: §3.2 warns that the heading can
+be present for a batch that never existed, and this file shows the heading can be absent for a
+batch that did.
+
+### Per-delta table
+
+| Δ | Proposal | Verdict | What settles it |
+|---|---|---|---|
+| **Δ1** | `CLAIM 037` title: delete *"explicitly absent in Wwox-null mice"* | ✅ **already done**, then **superseded** | `BATCH_20260922_SEIZURE` deleted the clause. `BATCH_20260927_002` (MAJOR, operator-authorised) then rewrote the replacement: the candidate's *"behaviourally since 2020"* is on `main` as **"behaviourally since 2014"**, and the candidate's *"the audiogenic kindling phenotype remains rat-specific"* is split — **audiogenic is no longer rat-specific**, only **kindling-like** is |
+| **Δ1′** | the candidate's own replacement wording | 🔴 **now wrong** | applying it today would reinstate a 2020 date the registry corrected to 2014 and re-fuse `audiogenic` with `kindling-like`, a fusion `BATCH_20260927_002` separated against Mallaret 2014 |
+| **Δ2** | `CLAIM 037` evidence boundary: `NOT_REPORTED ≠ ABSENT`; delete *"i topi potrebbero morire prima di convulsionare"* | ✅ **already done** | `CLAIM 037` `Evidence boundary` opens with the `NOT_REPORTED ≠ ABSENT` record, names PMID 19500159 as a survey over four papers none of which recorded, and carries *"La clausola … è DELETED as falsified"* with the two verified falsifiers (P12 spontaneous, P14–P21 SWD) |
+| **Δ2′** | the third falsifier — *"`Syn-Cre` seizes from P9"* | ✅ **correctly dropped, and stays dropped** | the propagation note's condition 5 dropped it for want of `PMID 33914858`; re-measured today, that artefact is **still absent from the root checkout**, so the drop is not a stale caution |
+| **Δ3** | `CLAIM 005`: retarget the prohibition from the *animal* to the *process* | ✅ **already done, verbatim in substance** | `CLAIM 005` now reads *"No canonical statement may assert EPILEPTOGENESIS — the process of acquiring an enduring predisposition to spontaneous recurrent seizures — in ANY WWOX model…"*, with the four-axis non-merger rule, the *"nomenclature borrowed from the field"* note and the `PMID 19936220` scope sentence |
+| **Δ4** | `CLAIM 016`: cross-reference + *floor, not a rate* on Cheng's spontaneous observation | ✅ **already done** | `CLAIM 016` carries *"Aggiunta 2026-09-22 (`BATCH_20260922_SEIZURE`), solo rimando"* with the cross-reference to `CLAIM 037`/`CLAIM 040` and *"osservazione opportunistica durante la gestione dell'animale più un singolo video … un pavimento, non un tasso"* |
+| **Δ5** | new `CLAIM 040` | ✅ **already done** | `CLAIM 040` exists (`in observation`, `DATO`), sourced to `PAPER 011` Fig. 7E, carrying `n = 5`, single channel, no recovery interval, the P14 observation floor, the SD/SEM discrepancy, the panel-7C Mann–Whitney-floor reading and the *SWD is not a synonym for seizure* clause |
+| **targets carrying no delta** | `CLAIM 004`, `CLAIM 011`, `CLAIM 015`, `PAPER 011` | ✅ **nothing was owed** | §3 proposes exactly five edits and none of them is on these four; they are cited as context (`CLAIM 004`/`011` as claims the prohibition contradicted, `CLAIM 015` as the well-formed contrast case, `PAPER 011` as Δ5's source). All four are unchanged by this reading |
+
+**Headline counts: 6 already done · 0 still owed · 1 now wrong · 4 targets that owed nothing.**
+
+### Verdict — **CLOSE**
+
+**Status: `PROPAGATED`** by `BATCH_20260922_SEIZURE` (2026-09-22, `WM_v4.5 → WM_v5.0`, MAJOR,
+under explicit operator authorisation), subsequently refined by `BATCH_20260927_002`,
+`BATCH_20260927_003`, `BATCH_20260927_004` and `BATCH_20260928_001`. **Evidence:** the five deltas
+are all on `main` in the records and with the wording quoted in the table above; the batch id is
+present in three files on `main`; and the candidate's own append-only propagation block, with its
+five verification conditions and its one declared drop, opens at line 303 of this file and runs
+to the line before this section.
+
+🔴 **Its central assertion no longer holds, because the headline it called false has since
+changed.** The candidate's finding in one sentence is that *"`CLAIM 005` contains the sentence
+'No canonical statement may describe a Wwox-null mouse as showing epileptogenesis', and three
+canonical claims in the same file already do — while `CLAIM 037`'s title asserts the phenotype is
+'explicitly absent in Wwox-null mice'."* Measured against the current text: `CLAIM 005` carries no
+such sentence, and `CLAIM 037`'s title carries no such clause. **Both halves of the contradiction
+are gone.** Nothing survives to narrow: the candidate is not narrowed, it is closed.
+
+🔴 **The MAJOR classification does not survive as residue, and that is not a reversal of it.** It
+was correct on 2026-08-26 — a `DATO` headline deleted as false, a prohibition inside a
+`consolidated baseline` claim rewritten, a new claim proposed — and it was **discharged as MAJOR**,
+with the `WM_v5.0` bump and the operator authorisation the class requires. What is left today is a
+closing disposition, which changes no claim, adds no claim and bumps no working-model version.
+⇒ **no `WM_v` bump, no operator authorisation, no blind locator audit**: an audit is owed by a
+reading that *touches* a baseline claim, and this act touches none.
+
+**No op list** — a `CLOSE` verdict emits none. The one act available to a batch is to append a
+dated `## BATCH DISPOSITION` block to **this file** recording `CLOSE — already PROPAGATED by
+BATCH_20260922_SEIZURE`, so that the next census's heading test reaches it. That is a change to a
+commit candidate, not to canon.
+
+⚠️ **One harness finding, handed to Harness Engineering and not implemented here.** Whatever tool
+or query answers *"which candidates carry no disposition"* should test the **last** block of a
+candidate by its actor-and-batch line, as the census's own §3.2 prescribes, and must not require
+the literal heading `BATCH DISPOSITION`: this file is the counterexample on `main`, and a second
+one is `CC-20260921-TX007-CEILING-AND-DOSE-CONTROL-01`, which the same census correctly reads only
+because its block *does* carry the string.

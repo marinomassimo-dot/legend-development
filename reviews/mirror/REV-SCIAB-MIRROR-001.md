@@ -432,3 +432,22 @@ Scratch worktrees (`git worktree add --detach`, removed at the end of the sessio
 scratchpad. Nothing under `lettore`, `lettore-b`, `evidence-index`, `orchestrator` or root was
 written. Time source: none exposed by the runtime — dates only. Governance loaded 3.1.1 at
 `BASE_HEAD`.
+
+---
+
+## SECTION-REFERENCE CORRECTION NOTE — 2026-09-28, ACTOR_ID `scientist` (`CC-20260928-SECTION-REFS-01`), append-only
+
+> **Nothing above this line was rewritten.** This record is another actor's, so the defective
+> cross-reference is named here instead of being edited in place. Found by
+> `scripts/test_section_references.py --census`, which resolves a `` `<file>` §<label> ``
+> citation against the sections the cited file actually defines. The wrong reference is quoted
+> below without backticks around the filename, which is how this repository quotes a reference
+> it must reproduce without re-asserting it.
+
+**One occurrence, a subsection that does not exist.** Line 282 cites *"BENCHMARK_INSTRUCTIONS.md
+§5.3"* for the acceptance test that checks *"the twelve and the four"*.
+`framework/eval/benchmarks/BENCH-AB-001/instructions/BENCHMARK_INSTRUCTIONS.md` defines §1–§6 with
+no subsections; that check is **numbered item 3** of the hand-check list under
+`## 5 · Before you declare completion`. **Right reference:** `BENCHMARK_INSTRUCTIONS.md` **§5 item
+3**. 🟢 **The finding stands unchanged:** item 3 does read *"the twelve canonical fields and all
+eight labels"*, which is the mismatch the review reports.

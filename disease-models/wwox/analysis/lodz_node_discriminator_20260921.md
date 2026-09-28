@@ -136,7 +136,7 @@ myelin-basic-protein trajectory, no onset date anywhere.
 
 **Timing of Wwox expression in development:** ⚠️ **NOT STATED — and this is the sharpest negative in
 the paper.** The review's *own lab's* primary `31543760` contains a FANTOM5 datum (fetal brain
-9.2 vs adult 17.7 TPM RLE, recorded in `hnpc_differentiation_audit_20260920.md` §Q4b) that bears
+9.2 vs adult 17.7 TPM RLE, recorded in `hnpc_differentiation_audit_20260920.md` §Q4 (b) [ref corrected 2026-09-28 from "§Q4b" · CC-20260928-SECTION-REFS-01]) that bears
 directly on developmental expression timing. **The review does not carry it.** A review of
 *"the WWOX gene in brain development"* omits the only expression-versus-developmental-stage number
 its own group had published.

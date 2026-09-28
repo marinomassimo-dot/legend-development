@@ -4189,7 +4189,7 @@ ladder) mentre in quello della mammella la banda corre sopra i 39 kD senza che 4
 **Conseguenza per questa voce:** ogni chiamata per tipo cellulare dell'atlante `16941225` — e ogni
 negativo d'organo — **va qualificata** come poggiante su un reagente la cui validazione è di grado
 immunoblot su epitelio, non immunoistochimica e non neurale. `QUALIFICATA, non refutata`: la premessa
-`INFERENZA — il controllo delegato è adeguato` del dossier `PMID16941225.md` §4.1 è **ritirata** e
+`INFERENZA — il controllo delegato è adeguato` del dossier `PMID16941225.md` §4 item 1 [ref corrected 2026-09-28 from "§4.1" · CC-20260928-SECTION-REFS-01] è **ritirata** e
 sostituita da `PREMISE: DATO` con quel confine.
 
 **Residuo che resta aperto, ed è nuovo:** `PMID 14526170`, capolinea della catena — vedi `FT-179`.
@@ -6336,7 +6336,7 @@ Sałuda-Gorgul A, Seta K, Nowakowska M, **Bednarek AK** — *"WWOX oxidoreductas
 enzymatic characterization."* *Z Naturforsch C J Biosci* 2011;**66**(1–2):73–82.
 Medical University of Łódź, Department of Analytical Chemistry.
 **Opened:** 2026-09-22 · **Actor:** Orchestrator, closing an Operator-flagged follow-up
-**Replaces a dangling reference:** `CC-20260921-WWOX-ENZYMOLOGY-P306-01` §151 points at
+**Replaces a dangling reference:** `CC-20260921-WWOX-ENZYMOLOGY-P306-01` §4 (a) [ref corrected 2026-09-28 from "§151" · CC-20260928-SECTION-REFS-01] points at
 *"`FT-112` / packet item `A11`"*. 🔴 **`FT-112` does not exist in this queue** — `grep` returns zero
 occurrences. The candidate has been pointing at an entry that was never written. **That is the same
 "existence in the wrong place" pattern as everything else this session**, in its cheapest form: a
@@ -8366,7 +8366,7 @@ coverage fields it actually has, OR a contemporaneous receipt should be written 
 ## 2026-09-27 — TWO QUESTIONS FOR THE AUTHORS OF PMID 42422765, NOT READING DEBT (appended, ACTOR_ID `scientist`, wave-2 "dose")
 
 Applied outside a batch: this file is not one of the four scientific current files. Source:
-`CC-20260826-DOSE-DECISION-TABLE-01` §6.4 and `CC-20260826-DOSE-TRANSFERABLE-QUANTITY-01` §5.4, merged into
+`CC-20260826-DOSE-DECISION-TABLE-01` §6 item 4 [ref corrected 2026-09-28 from "§6.4" · CC-20260928-SECTION-REFS-01] and `CC-20260826-DOSE-TRANSFERABLE-QUANTITY-01` §5 item 4 [ref corrected 2026-09-28 from "§5.4" · CC-20260928-SECTION-REFS-01], merged into
 one entry so the queue carries them once.
 
 - **(a) Figure S3C — measurement age and n are stated nowhere.** The caption gives neither, and the

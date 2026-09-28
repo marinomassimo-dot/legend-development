@@ -146,7 +146,7 @@ Derived mechanically (edge table × paper registry identifiers × `files/fulltex
 | Class | Edges | Meaning |
 |---|---|---|
 | `PRIMARY_AVAILABLE` | **12** | ≥1 shared paper with a local artifact **and** a deep-dive manifest — adjudicable now |
-| `ARTIFACT_ONLY_NO_MANIFEST` | **1** | artifact on disk, no manifest; PDF-only surface, so `CLAUDE.md` §5d applies before any locator |
+| `ARTIFACT_ONLY_NO_MANIFEST` | **1** | artifact on disk, no manifest; PDF-only surface, so `gold_is_in_the_details.md` §5d [ref corrected 2026-09-28 from "CLAUDE.md §5d" · CC-20260928-SECTION-REFS-01] applies before any locator |
 | `SHARED_PAPER_NO_LOCAL_ARTIFACT` | **4** | the shared paper exists in the registry; its evidence does not exist on this disk |
 | `NO_SHARED_PAPER` | **3** | no shared evidential paper at all |
 | | **20** | |
@@ -182,7 +182,7 @@ Per edge:
 `PAPER 041` = PMID 29808465 (Johannsen 2018) is the shared evidence for **three** edges —
 `019<->030`, `019<->032`, `030<->032` — and the paper registry records its evidence depth as
 *"abstract only — full text paywalled"*. `CLAIM 019` is `consolidated baseline`. Under
-`CLAUDE.md` §8 an abstract is not a reading and cannot clear reading debt; it follows that three
+`gold_is_in_the_details.md` rule 8 [ref corrected 2026-09-28 from "CLAUDE.md §8" · CC-20260928-SECTION-REFS-01] an abstract is not a reading and cannot clear reading debt; it follows that three
 edges of the Q230P cluster **cannot be typed from primary evidence at all** until that full text
 is acquired. This is not a defect in the claims — it is a bounded, nameable acquisition task.
 

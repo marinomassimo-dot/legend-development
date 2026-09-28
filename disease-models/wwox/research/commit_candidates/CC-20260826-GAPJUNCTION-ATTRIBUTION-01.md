@@ -33,7 +33,7 @@ be the same error with the sign flipped.
 
 **CHANGE_CLASS:** **MAJOR?** → Mirror, fail-closed. A withdrawal inside a `consolidated baseline`
 claim is a reversal *on that axis* even though the claim as a whole survives. Whether that meets the
-`LEGEND_CORE` §157 definition of *baseline-claim reversal* is exactly the doubtful question Annex H.1
+`LEGEND_CORE` §9 [ref corrected 2026-09-28 from "§157" · CC-20260928-SECTION-REFS-01] definition of *baseline-claim reversal* is exactly the doubtful question Annex H.1
 assigns to Mirror.
 
 **CANONICAL_TARGETS:** `claim_registry_current.md#CLAIM 021` — **`BATCH_COMMIT` only.** Secondary:
