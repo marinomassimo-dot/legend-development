@@ -193,6 +193,7 @@ class RecordScopedPropagation(unittest.TestCase):
                          "--file", rel, "--ops", self._ops(temporary, ops)],
                         capture_output=True, text=True)
                     self.assertEqual(done.returncode, code, done.stdout + done.stderr)
+                    self.assertEqual(f"exit {code}:" in done.stderr, code != 0, done.stderr)
 
     def test_a_file_outside_the_four_is_refused_by_name(self) -> None:
         from batch_commit import propagate
