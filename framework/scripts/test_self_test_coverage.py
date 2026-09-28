@@ -26,6 +26,7 @@ from __future__ import annotations
 
 import io
 import json
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -186,6 +187,7 @@ class SyntheticSuites(unittest.TestCase):
         self.tmp = Path(self._tmp.name)
         self.addCleanup(self._tmp.cleanup)
         self.tracer = stc._tracer_dir()
+        self.addCleanup(shutil.rmtree, self.tracer, True)
 
     def _measure(self, suite: str) -> dict:
         root = _tree(self.tmp, suite)
@@ -241,6 +243,7 @@ class WritingAGuardedTreeIsRefused(unittest.TestCase):
         self.tmp = Path(self._tmp.name)
         self.addCleanup(self._tmp.cleanup)
         self.tracer = stc._tracer_dir()
+        self.addCleanup(shutil.rmtree, self.tracer, True)
         self.artefact = self.tmp / "disease-models" / "wwox" / "artefact.json"
         self.artefact.parent.mkdir(parents=True)
         self.artefact.write_text("{}", encoding="utf-8")
@@ -306,6 +309,24 @@ class WritingAGuardedTreeIsRefused(unittest.TestCase):
         self.assertEqual(code, 1, buffer.getvalue())
         self.assertEqual(self.artefact.read_text(encoding="utf-8"), "{}")
 
+    def test_guarded_run_leaves_no_tracer_directory_behind(self) -> None:
+        """Each tracer is a directory in /tmp; one was left per call until 2026-09-28."""
+        made: list[Path] = []
+        real = stc._tracer_dir
+
+        def recording() -> Path:
+            made.append(real())
+            return made[-1]
+
+        stc._tracer_dir = recording
+        try:
+            result = stc.guarded_run([sys.executable, "-c", "pass"], self.tmp, timeout=60)
+        finally:
+            stc._tracer_dir = real
+        self.assertEqual(result["rc"], 0, result["output"])
+        self.assertEqual(len(made), 1)
+        self.assertFalse(made[0].exists(), f"tracer left behind: {made[0]}")
+
     def test_guarded_run_protects_any_command(self) -> None:
         """The way a mutation matrix is run from now on."""
         result = stc.guarded_run(
@@ -351,6 +372,7 @@ class HistoricalDefect(unittest.TestCase):
         self.tmp = Path(self._tmp.name)
         self.addCleanup(self._tmp.cleanup)
         self.tracer = stc._tracer_dir()
+        self.addCleanup(shutil.rmtree, self.tracer, True)
 
     def _version(self, rev: str) -> str:
         result = subprocess.run(

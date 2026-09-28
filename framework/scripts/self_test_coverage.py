@@ -92,6 +92,7 @@ import argparse
 import ast
 import json
 import os
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -220,6 +221,8 @@ def _tracer_dir() -> Path:
 
     ``sitecustomize`` is imported by every interpreter start, including the subprocesses the
     suites spawn, which is the only way to see a CLI driven the way these suites drive it.
+    The caller removes it: each one left behind was a directory in /tmp, 17 per run of this
+    tool's own suite and 3,474 on this host by 2026-09-28.
     """
     path = Path(tempfile.mkdtemp(prefix="legend-selftest-tracer-"))
     (path / "sitecustomize.py").write_text(_TRACER, encoding="utf-8")
@@ -271,7 +274,11 @@ def guarded_run(command: list[str], root: Path, timeout: int = 600) -> dict:
     This is how a mutation matrix is run: a deliberately broken tool driven through its
     real-artefact cases must not be able to reach the corpus, whatever the mutation is.
     """
-    result = run_instrumented(command, _tracer_dir(), root, timeout=timeout, root=root)
+    tracer = _tracer_dir()
+    try:
+        result = run_instrumented(command, tracer, root, timeout=timeout, root=root)
+    finally:
+        shutil.rmtree(tracer, ignore_errors=True)
     result["refused"] = bool(result["writes"])
     return result
 
@@ -453,9 +460,12 @@ def survey(root: Path, only: list[str] | None = None, workers: int = 8,
         wanted = {Path(name).name for name in only}
         targets = [path for path in targets if path.name in wanted]
     tracer = _tracer_dir()
-    with ThreadPoolExecutor(max_workers=max(1, workers)) as pool:
-        rows = list(pool.map(
-            lambda path: measure_script(path, tracer, root, timeout=timeout), targets))
+    try:
+        with ThreadPoolExecutor(max_workers=max(1, workers)) as pool:
+            rows = list(pool.map(
+                lambda path: measure_script(path, tracer, root, timeout=timeout), targets))
+    finally:
+        shutil.rmtree(tracer, ignore_errors=True)
     return sorted(rows, key=lambda row: row["script"])
 
 
