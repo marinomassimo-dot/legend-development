@@ -170,6 +170,31 @@ class RecordScopedPropagation(unittest.TestCase):
             self.assertEqual(path.read_bytes(),
                              text.replace("second", "2nd").replace("body\n", "body, read\n").encode())
 
+    def test_the_command_line_exits_with_the_refusal_code(self) -> None:
+        """A batch mid-propagation keys on the PROCESS exit status, not on the function's return:
+        4 for a file outside the four, 3 for an editor refusal, 0 for a clean dry run."""
+        import subprocess
+        import sys
+        script = Path(__file__).resolve().parent / "batch_commit.py"
+        with tempfile.TemporaryDirectory() as temporary:
+            self._repo(temporary, self.CLAIMS)
+            other = Path(temporary) / "disease-models/wwox/registries/working_model_history.md"
+            other.write_text("# History\n", encoding="utf-8")
+            cases = (
+                ("disease-models/wwox/registries/working_model_history.md", [], 4),
+                (self.CLAIMS, [{"op": "delete", "id": "CLAIM 404"}], 3),
+                (self.CLAIMS, [{"op": "replace-within", "id": "CLAIM 002",
+                                "old": "in observation", "new": "x"}], 0),
+            )
+            for rel, ops, code in cases:
+                with self.subTest(rel=rel, expected=code):
+                    done = subprocess.run(
+                        [sys.executable, str(script), "propagate", "--repo-root", temporary,
+                         "--file", rel, "--ops", self._ops(temporary, ops)],
+                        capture_output=True, text=True)
+                    self.assertEqual(done.returncode, code, done.stdout + done.stderr)
+                    self.assertEqual(f"exit {code}:" in done.stderr, code != 0, done.stderr)
+
     def test_a_file_outside_the_four_is_refused_by_name(self) -> None:
         from batch_commit import propagate
         other = "disease-models/wwox/research/some_note.md"

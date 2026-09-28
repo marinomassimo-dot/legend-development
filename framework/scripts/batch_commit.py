@@ -347,6 +347,12 @@ def main(argv=None):
     if args.command == "propagate":
         code, message = propagate(args.repo_root, args.file, args.ops, args.apply)
         print(message, file=sys.stderr if code else sys.stdout)
+        if code:
+            # Measured 2026-09-28: a peer read this refusal as exit 0 through `| head`. A pipeline
+            # reports its LAST command's status, which would hide an exit 3 mid-batch exactly so.
+            print(f"exit {code}: this refusal is carried by the exit status, which a pipeline "
+                  "does not preserve — read $? directly or run under `set -o pipefail`.",
+                  file=sys.stderr)
         return code
     if not args.confirm_restore:
         parser.error("restore requires --confirm-restore")
