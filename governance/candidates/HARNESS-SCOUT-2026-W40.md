@@ -26,6 +26,10 @@ fondo, instradati e non valutati.
 | 6 | Micro-upgrade del radar "DIVERGE → PREDICT → DISCRIMINATE" come nuova fase tra Evidence e Mirror | radar (nessun repo) | Nessuna capacità nuova: DIVERGE, PREDICT e DISCRIMINATE sono già `diverge_hypotheses`, `preregister_prediction` e `compress_experiment`, e REVISIT è `recursive_reread`. I suoi quattro "test decisivi" però sono un buon disegno di valutazione e vanno nel TRIAL della riga 1 | 0 come fase; il disegno di valutazione è incluso nella riga 1 | n/a | Aggiungerla come fase o workflow obbligatorio viola la direttiva di task §26 citata in `legend-discovery-method` (nessun nuovo gate o workflow), e l'autore della skill dice che la primitiva che diventa gate ha fallito | REJECT | |
 | 7 | Apprendimento di skill dalle traiettorie di ricerca | radar (ispirato alle trace di AgentIdeaBench) | Conservare query → risultato → guadagno di ipotesi e distillarne abitudini di ricerca riutilizzabili. Prerequisito da verificare prima: se le query di ricerca oggi sopravvivono in una receipt o in un transcript | 2 (solo l'audit); build non stimata | n/a | Rischio di un nuovo store, che `discovery-method` § 3 esclude esplicitamente ("There is no store for this and none should be built") | WATCH | |
 | 8 | Ecosistema MIMS Harvard / Zitnik (ToolUniverse, ATHENA, AutoScientists, Medea) | radar (watchlist portata avanti) | Watchlist a livello di ecosistema, nessun artefatto singolo proposto questa settimana | 0 | varie | Nessuna in questa tornata; non riaperto | WATCH | |
+| 9 | ToolUniverse (mims-harvard) | https://github.com/mims-harvard/ToolUniverse | Il livello di **lookup live** che a LEGEND manca: il README dichiara più di 1000 tool (UniProt, openFDA, Open Targets, PubMed, Europe PMC, bioRxiv, Semantic Scholar più modelli ML), esposti come server MCP, plugin di Claude Code, SDK Python e CLI `tu`, con un Compact Mode che riduce il catalogo a 4-5 tool di scoperta. Oggi quasi tutto il `_external_repos/MANIFEST.md` è DESCRIBED, cioè instradato ma non richiamabile: gli unici lookup di database dal vivo sono PubMed/Scholar (connettori claude.ai) e `kg_thin_slice.py` (Monarch + DGIdb) | 4 (TRIAL: MCP via `uvx tooluniverse` in Compact Mode, 10 lookup WWOX a livello di gene, output instradato come IPOTESI secondo le regole del MANIFEST, voce MANIFEST con pin) | Apache-2.0; alcuni provider richiedono chiavi proprie | Contesto: 1000 tool senza Compact Mode. Rete: solo query su gene, allele o molecola pubblici, mai l'overlay privato. Un risultato di tool non è una lettura (`gold_is_in_the_details`). Installarlo come plugin tocca `.claude/`, che richiede l'autorizzazione dell'operatore. `uvx` c'è già; il modulo non è installato | TRIAL | |
+| 10 | Open-Rosalind (maris205) | https://github.com/maris205/open-rosalind | 21 wrapper di skill (UniProt, ClinVar, gnomAD, STRING, ChEMBL, Open Targets, GWAS Catalog, HPA, Bgee, PDB, PharmGKB, BLAST, PubChem, BindingDB, CIViC, EFO…) dentro un agente proprio con planner a template fissi, UI React, SQLite e log JSONL. Tutte le sorgenti le copre già la riga 9; l'agente e la UI duplicano Claude Code. L'unica idea portabile, "fatti solo dai tool registrati, ogni chiamata in una traccia JSONL", LEGEND ce l'ha già con le receipt | 0 | MIT | 12 stelle, un solo maintainer. Richiede OpenRouter. Online per quasi tutte le skill | REJECT | |
+| 11 | Claude Science (Anthropic, beta dal 2026-06-30) | https://www.anthropic.com/news/claude-science-ai-workbench | App separata, **non Claude Code**, chiusa: più di 60 skill e connettori (nominati: UniProt, PDB, Ensembl, Reactome, ClinVar, ChEMBL, GEO, PubMed), modelli NVIDIA BioNeMo (Evo 2, Boltz-2, OpenFold3), rendering 3D di strutture e tracce genomiche, calcolo su SSH/HPC o Modal, artefatti riproducibili con codice, ambiente e cronologia, un reviewer agent su citazioni e calcoli. Non si integra nel harness. Serve all'operatore come banco di calcolo (struttura e varianti) su input pubblici, con il risultato che rientra in LEGEND come IPOTESI | 0 harness; 1-2 per una prova dell'operatore | proprietaria, inclusa nei piani Pro, Max, Team ed Enterprise (beta) | Il calcolo su Modal può essere a pagamento. Nessun input dall'overlay privato. I suoi artefatti non sono receipt LEGEND | WATCH | |
+| 12 | Connettori claude.ai Life Sciences già presenti ma non autorizzati | connettori claude.ai della sessione (Clinical Trials, bioRxiv, Synapse) | Tre connettori sono già elencati in questa sessione ma aspettano l'OAuth. bioRxiv copre i preprint (oggi `find-fulltext` e wwox-scout lo raggiungono solo via web), Clinical Trials serve al tracker terapeutico | 0,5 (autorizzazione dell'operatore dalle impostazioni dei connettori claude.ai) | termini del servizio | Nessuno nuovo: stessi confini di privacy di PubMed | ADOPT | |
 
 ## Top 3 for this week
 
@@ -55,6 +59,28 @@ fondo, instradati e non valutati.
    parte (receipt, transcript di subagent)? Se sì, TRIAL leggendole; se no, la riga resta
    WATCH, perché costruire uno store è escluso.
 
+## Tornata 2 — cosa hanno in più rispetto a LEGEND (2026-09-28)
+
+LEGEND è più forte sul metodo (epistemica, receipt, parità delle fonti, discovery) e più debole
+sui lookup strutturati in tempo reale e sul calcolo. Il MANIFEST instrada molti strumenti, ma
+quasi tutti sono DESCRIBED, cioè nessuna sessione li può chiamare. `tool_preflight.py` verifica
+solo gli estrattori PDF.
+
+| Capacità | LEGEND oggi | ToolUniverse | Open-Rosalind | Claude Science |
+|---|---|---|---|---|
+| Varianti (ClinVar, gnomAD) | ClinVar DESCRIBED, nessun lookup live | da verificare | sì | ClinVar |
+| Proteina (UniProt, PDB, AlphaFold) | AlphaFold DB DESCRIBED | UniProt nominato | UniProt, PDB | UniProt, PDB, OpenFold3, Boltz-2 |
+| Target e malattia (Open Targets) | no | sì | sì | non nominato |
+| Interazioni ed espressione (STRING, HPA, GTEx, Bgee) | GTEx DESCRIBED | da verificare | STRING, HPA, Bgee | GEO, Reactome |
+| Farmaci e sicurezza (ChEMBL, PubChem, openFDA) | DGIdb via `kg_thin_slice.py`; ADMET-AI DESCRIBED | openFDA nominato | ChEMBL, PubChem, BindingDB, PharmGKB | ChEMBL |
+| Trial clinici | connettore claude.ai non autorizzato | da verificare | sì | non nominato |
+| Letteratura | PubMed + Scholar MCP, cascata full-text, PaperQA | PubMed, Europe PMC, bioRxiv, S2 | PubMed | PubMed |
+| Calcolo (struttura, genomica, docking) | ESM/ThermoMPNN DESCRIBED, nessuna GPU | modelli ML dichiarati, non enumerati | BLAST | BioNeMo + Modal/HPC |
+| Visualizzazione 3D e tracce genomiche | no | no | no | sì |
+| Epistemica, receipt, parità delle fonti | **sì, e solo LEGEND** | no | log JSONL | reviewer agent su citazioni e calcoli |
+
+"da verificare" significa che il README non lo nomina; si controlla nel TRIAL della riga 9.
+
 ## Watch-list carried forward
 
 | candidate | first seen | why still WATCH |
@@ -63,12 +89,14 @@ fondo, instradati e non valutati.
 | ResearchBench | 2026-09-28 | Il sottoinsieme retrieval-only è economico, ma nessuna domanda di LEGEND ne ha ancora bisogno; si riapre se `connect_domains` va misurato |
 | MC-NEST | 2026-09-28 | Il pattern è coperto da forge e discovery-method; si riapre solo se il TRIAL 1 mostra che le ipotesi vengono potate prima di essere raffinate |
 | Apprendimento dalle traiettorie di ricerca | 2026-09-28 | Dipende dall'audit del Top 3 n. 3 |
-| Ecosistema MIMS Harvard / Zitnik | carried (dal radar) | Si segue come ecosistema, nessun artefatto singolo |
+| Ecosistema MIMS Harvard / Zitnik | carried (dal radar) | ToolUniverse è estratto alla riga 9 (TRIAL); ATHENA, AutoScientists e Medea restano WATCH |
+| Claude Science | 2026-09-28 | App chiusa, fuori dal harness; si riapre se espone skill o connettori riusabili in Claude Code |
 
 ## Looked at and rejected (one line each)
 
 - La fase obbligatoria "DIVERGE → PREDICT → DISCRIMINATE" — duplica quattro primitive esistenti e diventerebbe un gate (§26). Il suo disegno di valutazione viene tenuto (Top 3 n. 1).
 - Il codice MC-NEST — nessuna licenza, API GPT-4, fermo da un anno.
+- Open-Rosalind — i suoi 21 wrapper sono un sottoinsieme della riga 9; l'agente e la UI duplicano Claude Code.
 
 ## Fuori dal perimetro harness — instradato, non valutato
 
