@@ -145,3 +145,68 @@ created the condition.
 **Target:** `WM_v7.4` → **`WM_v7.5`**, MINOR, MANUAL.
 
 **Not medical advice.**
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260928_006` (2026-09-28, ACTOR_ID `scientist`), append-only
+
+**Nothing above this line was rewritten.**
+
+**Status: `PROPAGATED`**
+**Verdict:** PROPAGATED
+
+`BATCH_20260928_006`: MINOR, MANUAL, `WM_v7.4` → **`WM_v7.5`**, under the operator's standing
+authorisation of 2026-09-28. Base `main` `3fe7c49`, branch `task/mirror-b11-repair`, snapshot
+`backup/20260928_1700`, `PRE_BATCH_COMMIT` `d0c15e8318d39f82444e51bebd58517302529f99`.
+**Both ops applied. Both `old` strings re-measured by the propagating batch: 2/2 at count 1 in
+their record.**
+
+**APPLIED: `C32-1` (Mirror B11) — and Mirror's falsifier was re-run before the op, not after.**
+At `a923e10` the `DO_NOT_INFER` is a **single line** carrying header and grounds together —
+**693 characters / 707 bytes** — so the join is `B2`'s own and not pre-existing. The op is one
+`record_scoped_edit.py replace-within` on `CLAIM 032`, moving **488 bytes** and composing **no
+prose**. The three verifications the op owed:
+
+| # | verification | result |
+|---|---|---|
+| 1 | line 615 equals its `a923e10` form byte-for-byte | ✅ **707 B on both sides**, sha256 `a7f0c7b0002961c21f0829c1810634686440cde09ab74fd220cabe3435ba7356` identical |
+| 2 | line 616 ends at *"…in any WWOX heterozygote of any allele."* | ✅ |
+| 3 | `grep -c "Concatenarle in"` still **1** | ✅ |
+
+**Conservation, measured as a fourth check nobody asked for:** 219 + 2,659 = **2,878 B** before,
+707 + 2,171 = **2,878 B** after. The repair is byte-conserving in the same way the defect was, which
+is the point — nothing was added and nothing was lost.
+
+⚠️ **Unit correction to the review itself.** Mirror's `212 B`, `2,619 B`, `695 B` and `481 B` are
+**character** counts, not bytes; the paragraph is dense in multi-byte glyphs (🔴, `−`, `«»`, accented
+vowels). In bytes: 219 / 2,659 / 707 / 488. **The finding is unaffected** — every one of its
+structural claims reproduces — and the unit is corrected so the next reader measures the same thing.
+
+**APPLIED: `WM-A9` (Mirror A9) — falsifier only PARTLY testable here, and it ran Mirror's way on the
+part that was.** The artefact Mirror did not read is present in the ROOT checkout
+(`files/fulltext/PMID22193544_Wang2012_PMC.xml`, PMC3354054) and was read. The article's **only**
+invariance statement is *«We found that the phosphorylation levels of phospho-GSK3βS9 and
+phospho-β-catenin remained normal.»* — **phospho species only**. Figure 1b blots total `GSK3β`
+alongside `phospho-GSK3βS9`; Figure 1c densitometers the Figure 1b panel. So the **measurement
+exists and its invariance is never stated**, which is exactly what the same working-model paragraph
+already recorded from `BATCH_20260927_004` as `NOT_ASSERTED`, not `MEASURE_ABSENT` — the working
+model was contradicting its own adjacent qualification. 🔴 **What was NOT testable, declared rather
+than worked around:** whether Figure 1c's bars *show* total-GSK3β invariance. The figure images
+(`cdd2011188f1.jpg` … `f6.jpg`) are **not** in the local corpus — only the PMC XML is — and three
+PMC image routes returned HTML rather than the image. No receipt was written or recorded, no new
+full-text route was opened, and nothing in the repair rests on the panel.
+
+⚠️ **NOTE left open for Mirror, deliberately.** The `BATCH_20260927_004` qualification that follows
+the corrected parenthesis now reads as the **grounds** for the deletion rather than as a
+qualification of a live over-assertion. It remains **true** and **live** and was not touched;
+whether its opening clause should be re-pointed is left to the reviewer rather than decided by the
+actor that created the condition.
+
+**Gates at the landed tree:** LINT **WARN, no BLOCK**, warning set **identical to pre-flight (11
+`WARN_BUT_PROCEED`)** · `fulltext_receipts.py verify` **OK, 262 chained**, before and after ·
+`growth_anchors.py check` **PASS**, cardinality unchanged (claims 41 · papers 108 · corpus 361 ·
+literature 401) · `public_release_gate.py` **PASS, 0 blocks** · the named suites and the four
+DisMech suites **exit 0** each, measured by true exit status with no pipeline ·
+`run_release_regressions.py` **no red**.
+
+**Not medical advice.**
