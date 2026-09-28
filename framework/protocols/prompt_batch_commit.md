@@ -419,6 +419,52 @@ event stays visible in the chain and is simply superseded.
 Enforced by `test_active_receipts_never_name_an_output_that_cannot_ship` in
 `scripts/test_fulltext_trace_contract.py`.
 
+### 7.2 Correcting the historical record of a completed act
+
+🔴 **The working-model changelog is NOT append-only, and no normative file ever said it was.**
+Two actors verified that independently on 2026-09-28: `LEGEND_CORE` § 5's append-only carve-out
+list names the commit log, the activity log and the inbox, `state_manifest_current.md` § 3.3 names
+the receipt ledger, and both lists are closed. `BATCH_20260928_001` corrected two historical
+changelog rows in place and Mirror passed it as legitimate — correctly, because there was no rule
+to break. This section is the rule, so the next batch is not deciding it again from scratch.
+
+It governs every **historical record of a completed act**: a `## Changelog` row in
+`working_model_current.md`, and a `batch_<ID>_scope` / `batch_<ID>_candidates` entry in
+`framework/state/state_history.md` § 4.
+
+**What MAY be corrected in place** — the *description of a past act*. What that batch did, which
+candidate carried it, which record it touched, a count, a date, an identifier, a typo, a wrong
+figure or panel reference. These are facts about the act, and a false fact about a past act is
+worth more corrected than preserved.
+
+**What may NOT be corrected in place** — the row's **stated conclusion**. A conclusion is
+superseded by a **new row** that names the row it supersedes; the old row keeps its own words. A
+batch that overwrites a conclusion destroys the only record that the model once held it, which is
+the history the changelog exists to be.
+
+**Every in-place correction carries three things inside the row it corrects:**
+
+1. the **correcting candidate** (`CC-…`) and the **date**;
+2. the **wording it replaces, verbatim** — short, quoted, in the row itself, e.g.
+   `Fig 7d [corrected 2026-08-26 from "Fig 7b" by CC-20260826-GSK3B-S9-AXIS-01]`;
+3. nothing else. The correction does not take the opportunity to improve neighbouring prose: it is
+   a `replace-within` on the defective string, and the bytes around it stay.
+
+🔴 **Item 2 is the one that is easy to skip and the only one that pays the cost Mirror named.** A
+corrected row now carries a **forward reference** — it cites a candidate that did not exist when
+the version it documents was released — so a reader working from the file alone can no longer
+reconstruct what that version SAID at that version. That is a real loss and it is accepted, on the
+condition that the superseded wording travels in the row. A marker without the old words trades a
+false statement for an unreadable one. Git still holds the bytes; the file must not need it.
+
+A row corrected this way is **not** a re-dated row: `frozen`/`released` dates, the version label
+and the batch id are the act's own and never move. Correcting a row is not re-releasing a version.
+
+This closes what `CC-20260826-GSK3B-S9-AXIS-01` `D2` left open — whether a completed batch's scope
+record may be corrected in place with an inline marker. It may, on these three conditions. `D2`
+reserved the *form* of that marker and condition 2 is now that form, so a future `D2`-shaped
+correction is specified rather than escalated.
+
 Final batch output:
 - N commit candidates `PROPAGATED`
 - M commit candidates `SUPERSEDED`
