@@ -225,3 +225,70 @@ matcher keys on, so **the repository currently cannot document its newest tool's
 form its own convention prefers.** Repaired on this side by using the unprefixed form. The tool is
 Harness Engineering's surface, so the fix — give the script an `argparse` front that declares
 `--census`, or teach the guard the flag — is proposed, not applied.
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260928_005` (2026-09-28, ACTOR_ID `scientist`), append-only
+
+**Nothing above this line was rewritten.**
+
+**Status: `PROPAGATED`**
+**Verdict:** PROPAGATED
+
+`BATCH_20260928_005`: MINOR, MANUAL, `WM_v7.3` → **`WM_v7.4`**, under the operator's standing authorisation of 2026-09-28, given in writing, verbatim:
+***«procedi, ti autorizzo a migliorare tutto quello che trovi… l'autorizzazione supera anche cose
+fatte da me in passato»***.
+Base `main` `a923e10`, branch `task/batch-20260928-004`. **Four of five ops applied; the fifth is
+DROPPED because it is NOT A DEFECT.**
+
+🔴 **`WM-1` — the `therapy_levers.md` §B2 citation in the `WM_v5.1` changelog row — DROPPED, NOT
+DEFERRED.** The batch actor re-ran `python3 scripts/test_section_references.py --census` first-hand
+rather than propagating § 2's list. That citation **no longer appears in the census at all**: it
+resolves, because `analysis/therapy_levers.md` defines its levers as list-item bold definitions and the
+checker learned to see them. ⇒ **`registries/` was `4` red, not five**, and an op against a resolving
+citation would have edited a historical changelog row for nothing. This also means § 3's post-landing
+expectation of **12 unresolvable** was already satisfied *before* this batch: the census read **12**
+at pre-flight, not 17.
+
+**APPLIED, and the four are exactly the rows the census printed:**
+
+| op | record | file | verdict |
+|---|---|---|---|
+| `C30-1` | `CLAIM 030` | claim registry | ✅ PROPAGATED |
+| `P385-1` | `CORPUS P385` | paper registry | ✅ PROPAGATED |
+| `P099-1` | `PAPER 099` | paper registry | ✅ PROPAGATED |
+| `P101-1` | `PAPER 101` | paper registry | ✅ PROPAGATED |
+| `WM-1` | `## Changelog`, `WM_v5.1` row | working model | ⚪ DROPPED — the citation resolves; not a defect |
+
+All four `old` strings re-measured **unique in their file, hence in their record** (count 1 each).
+Each `new` carries the address it replaces, verbatim, inside the record.
+
+🟢 **§ 1's right-hand column — the one judgement § 6 asks a second reader for — was re-checked
+independently for all four, and all four survive.** The pointer change carries no content change:
+`CC-20260921-CLAIM033-REPLICATION-01` § 5 is a lettered list whose **(c)** is the `CLAIM 030` both-tails
+op; `PMID20146584.md` § 3 **is** the registered UV directional conflict, with no narrower sub-address
+ever available; `CC-20260914-15266310-01` § 3 **(a)** carries the `INFERENZA, non DATO` tag the registry
+line declares; `PMID16941225.md` § 4 negative **1** is precisely the `PREMISE: INFERENZA` the deferred
+premise completion names.
+
+**MERGED COLLISIONS, declared because two of them are genuine.** `paper_registry_current.md` was
+**full-rewritten once** with this candidate's three ops **plus** `CC-20260826-PMID36828035-01` `B1`, as
+one op list. And `CLAIM 030` is touched by **two** candidates — this one's `C30-1` and
+`CC-20260928-A1-RESIDUE-01`'s `C30-1` — **on the same line 577**, on **non-overlapping bytes**, so
+**neither wording was overridden**: this candidate owns the section-reference bytes, the other owns the
+stray-bracket byte. ⚠️ Checked deliberately, because the two interact through a bracket count: this
+op's `new` adds one `(` and one `)` (`§5 (c)`), the other removes one unopened `)`, and the block
+balances at **53 / 53** afterwards — verified, not assumed.
+
+**RESIDUAL, measured after landing:** `disease-models/wwox/registries` = **0** unresolvable of 32
+checked. Repository-wide **12 → 8**, all eight outside the registries — `reviews/mirror` 4,
+`research/session_evaluations` 3, `reviews/orchestrator` 1 — and none of them the Scientist's to
+rewrite. The gated normative surface stays at 0.
+
+§ 7's harness defect (`--census` invisible to `--help`) is **not** fixed here; it remains Harness
+Engineering's. **No claim, premise tag, revival trigger, score or datum changed anywhere.** No receipt
+written or recorded (ledger 262 chained).
+
+**Mirror ex-post review due** under §21e. **Not medical advice.**
+
+⚠️ **Batch renumbered `BATCH_20260928_004` → `BATCH_20260928_005` during landing.** A different actor landed the **structural** `BATCH_20260928_004` — the hot/cold split of the working-model history — while this batch was in its post-propagation gates. Two batches cannot share an id (one `last_batch_commit_id`, one `state_history` yaml key), and renumbering the **landed** one would be a history rewrite, which §21d reserves. So this batch, still unlanded, became `005`; the WM target did not move, because the structural batch bumped no version. Every id in this block reads `005`; the propagation commit `da250b5` predates the collision and its message still says `004`.

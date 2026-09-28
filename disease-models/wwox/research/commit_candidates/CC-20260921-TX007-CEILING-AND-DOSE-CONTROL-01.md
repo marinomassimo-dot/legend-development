@@ -526,3 +526,89 @@ tag-stripping and whitespace normalisation.
 (The 2021 gene-therapy experiment treated at a single age and its authors state later routes were not attempted | "prompted us to treat these mice very early on in their life (P0). Nevertheless, attempts to treat post-natal Wwox-null mice by different route of AAV administration should and will be explored in the future." | PMID 34747138 — files/fulltext/PMID34747138_Repudi2021_PMC.xml, sha256 7da156e82cb7014f837d8c29374d888cb99ecc3268d1c383af2c3d0832b988bb — Discussion, in the paragraph immediately before the paragraph beginning "In summary, our current findings indicate")
 
 (Tumour surveillance in treated animals was limited in number and bounded in age | "we did not detect gross tumor formation in the limited number of adult Wwox-null mice treated with AAV9-hSynI-WWOX that we examined (age 8-11 months)" | PMID 34747138 — same artefact and sha256 — Discussion, in the paragraph on WWOX as a tumour suppressor, immediately before the sentence beginning "This is not surprising and consistent with data showing")
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260928_005` (2026-09-28, ACTOR_ID `scientist`), append-only
+
+**Nothing above this line was rewritten.**
+
+**Status: `PROPAGATED`**
+**Verdict:** PROPAGATED
+
+`BATCH_20260928_005`: MINOR, MANUAL, `WM_v7.3` → **`WM_v7.4`**, under the operator's standing authorisation of 2026-09-28, given in writing, verbatim:
+***«procedi, ti autorizzo a migliorare tutto quello che trovi… l'autorizzazione supera anche cose
+fatte da me in passato»***.
+Base `main` `a923e10`, branch `task/batch-20260928-004`. **All three ops of the `RESIDUE READINESS`
+section applied.** This closes §3(b), the one item `BATCH_20260927_004` deferred.
+
+🔴 **THE SLOPE READING WAS RE-VERIFIED FIRST-HAND BEFORE A BYTE WAS WRITTEN, AND IT HOLDS.** The
+batch actor was the verifier, not the producer, and the artefact was re-hashed in the root checkout:
+`files/fulltext/PMID42422765_Obeid2026_PMC_2026-09-27.xml`, sha256
+`7bea83346b708e541d2c432e5da4029f69673e1abc3c6fe70926ad0e3ec2eef2` — **equal to the fingerprint
+`FTR-20260927-42422765-08` carries**; and
+`files/fulltext/PMID34747138_Repudi2021_PMC.xml`, sha256
+`7da156e82cb7014f837d8c29374d888cb99ecc3268d1c383af2c3d0832b988bb`. Four findings, in the order they
+bear on the op:
+
+1. **The tested interval is source-supported and is NOT the phrase that fails.** *«we performed ICV
+   injection of AAV9-hSynI-hWWOX in Wwox-null mice at daily intervals from P0 to P5, with at least
+   three littermates treated per time point»* (Results), *«at any time point between P0 and P5»*, and
+   the Methods heading *«ICV injection of AAV particles into P0-P5 Wwox-null mice»*. All present.
+2. **The paper is not self-consistent on its own lower bound.** Its **abstract** reads *«efficacy was
+   shown in an early postnatal therapeutic window (P1–P5), supporting durable rescue»* against the
+   Results' *«between P0 and P5»*. Confirmed on the artefact.
+3. **The untested exterior is an ABSENCE OF EXPERIMENT, and the stated reason is the animal.**
+   *«Therapeutic rescue beyond this early postnatal window was not explored, as Wwox-null mice rapidly
+   deteriorate with progressive neurological dysfunction and early lethality, precluding effective
+   intervention at later stages»*.
+4. 🔴 **The authors DECLINE the biological reading in their own words** — *«the inability to assess
+   later intervention likely reflects a combination of model-specific biological constraints and
+   technical limitations, **rather than a definitive boundary for therapeutic responsiveness**»* —
+   **and allow the opposite for humans**: *«human patients with WWOX-related encephalopathies may
+   exhibit different developmental trajectories, disease kinetics, and therapeutic responsiveness,
+   **potentially allowing for later intervention**»*. The 2021 paper independently treats at a single
+   age and says later routes were not attempted.
+
+⇒ **What canon asserted was a monotone SLOPE; what the only source reports is a tested interval, an
+untested exterior and an explicit refusal to read the boundary as biological.** The op retires the
+slope and **keeps the interval**. The readiness section's re-aiming of `N4` is correct as written.
+
+**Op `C1` — `therapeutic_strategies_current.md`, `TX-007`: APPLIED.** `old` re-measured unique, count
+1. 🔴 **The conservative clinical posture is kept VERBATIM and was verified byte-for-byte after the
+edit:** *«For a patient older than the neonatal window: reasonable to aim at **functional
+protection/recovery**, not reversal of developmental damage. Consistent with "reduce damage / buy
+time", not a reset.»* is untouched, and so is the progenitor/radial-glia limb that precedes it. The
+posture rests on **measured** facts — the unrepaired progenitor defect and `REVERS 0` — not on the
+slope, and the replacement text says so explicitly. **No score moves.**
+
+**Op `C2` — `mechanism_intervention_map.md`, `PEDIATRIC_OR_DEVELOPMENTAL_RELEVANCE`: APPLIED.** `old`
+re-measured unique, count 1.
+
+**Op `C3` — append-only correction note on `analysis/tx007_window_and_ceiling_20260921.md`: APPLIED.**
+Appended at end of file; nothing in the body altered. It records (i) the two PMIDs for which § 7.1's
+*«ZERO first-order artefacts»* is superseded — **scoped to those two**, the statement standing for the
+other three sources — (ii) `N2`'s panel sub-clause as **contradicted by the body and NOT adjudicated**,
+and (iii) `N4` re-aimed onto the slope.
+
+🟢 **`N2`'s NOT-ADJUDICATED property is preserved, deliberately and verifiably.** The body declares
+six daily arms with `n ≥ 3`; the dossier's Figure S8 audit (`L35`) reads fewer. **Neither side is
+asserted as settled anywhere in the landed text**, and every landed sentence is true under either
+reading: `C2` says *«the dossier's Figure S8 audit reads fewer arms than the body declares — a
+text-versus-panel discrepancy, recorded and unresolved»*, and the slope retirement rests on the
+authors' Discussion sentences, which no panel count can move.
+
+**Not re-proposed, correctly:** the regional multiples (8–25× / 5–11× / 1.4× / 0.6×) and *«cerebellum
+never reaches wild type»*, refused for cause by `BATCH_20260927_004` as `UNVERIFIABLE_SURFACE`. §3(d)'s
+`extraction_damage_report.py` row stays **harness**, with Harness Engineering, and is not a batch item.
+
+**Change class MINOR:** the ops **weaken an unsupported assertion**; no `BLOCCO 1` change, no
+`consolidated baseline` claim touched, no claim created or removed, and the direct-clinical
+recommendation is carried through unchanged — what changed is the stated **warrant** for a caution, not
+the caution. **No receipt written or recorded** (ledger 262 chained): the two receipts the readiness
+section names (`FTR-20260928-42422765-09`, `FTR-20260928-34747138-04`) are **not** recorded by this
+batch either.
+
+**Mirror ex-post review due** under §21e. **Not medical advice.**
+
+⚠️ **Batch renumbered `BATCH_20260928_004` → `BATCH_20260928_005` during landing.** A different actor landed the **structural** `BATCH_20260928_004` — the hot/cold split of the working-model history — while this batch was in its post-propagation gates. Two batches cannot share an id (one `last_batch_commit_id`, one `state_history` yaml key), and renumbering the **landed** one would be a history rewrite, which §21d reserves. So this batch, still unlanded, became `005`; the WM target did not move, because the structural batch bumped no version. Every id in this block reads `005`; the propagation commit `da250b5` predates the collision and its message still says `004`.
