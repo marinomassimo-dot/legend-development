@@ -64,7 +64,8 @@ Commit candidates must declare their intended `target_wm_version`.
 
 | File | Status | Notes |
 |------|--------|-------|
-| `disease-models/wwox/registries/working_model_current.md` | present | **canonical** disease-level working model — claim mirror, changelog, decision blocks |
+| `disease-models/wwox/registries/working_model_current.md` | present | **canonical** disease-level working model — the current model: decision blocks, claim mirror, live qualifications (hot) |
+| `disease-models/wwox/registries/working_model_history.md` | present | the working model's **cold** history — `Last update` notes, changelog, MAJOR-batch narratives; written only by `BATCH_COMMIT` Phase 4.6; read on demand, never at startup, never a source of a current value (split by `BATCH_20260928_004`) |
 | `disease-models/wwox/disease_model.md` | present | narrative reader-facing view of the same model |
 | `disease-models/wwox/registries/claim_registry_current.md` | present | canonical claims (public literature) |
 | `disease-models/wwox/registries/paper_registry_current.md` | present | integrated / baseline-linked papers |
@@ -105,7 +106,7 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20260928_003
+last_batch_commit_id: BATCH_20260928_004
 last_batch_commit_date: 2026-09-28
 last_batch_commit_type: MANUAL
 ```
@@ -121,7 +122,7 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20260928_BATCH_20260928_003
+last_lint_id: LINT_20260928_BATCH_20260928_004
 last_lint_date: 2026-09-28
 last_lint_result: WARN
 ```

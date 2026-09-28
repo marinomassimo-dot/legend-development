@@ -241,25 +241,7 @@ working model with no edge between them in the registry.
 
 | Claims | Sentence |
 |---|---|
-| CLAIM 002 ↔ CLAIM 004 | - **Every claim's `Status`.** `CLAIM 002`, `CLAIM 004`, `CLAIM 021` and `CLAIM 024` remain `consolidated baseline`; `CLAIM 011` remains `flagged for r |
-| CLAIM 002 ↔ CLAIM 011 | - **Every claim's `Status`.** `CLAIM 002`, `CLAIM 004`, `CLAIM 021` and `CLAIM 024` remain `consolidated baseline`; `CLAIM 011` remains `flagged for r |
-| CLAIM 002 ↔ CLAIM 021 | - **Every claim's `Status`.** `CLAIM 002`, `CLAIM 004`, `CLAIM 021` and `CLAIM 024` remain `consolidated baseline`; `CLAIM 011` remains `flagged for r |
-| CLAIM 002 ↔ CLAIM 024 | - **Every claim's `Status`.** `CLAIM 002`, `CLAIM 004`, `CLAIM 021` and `CLAIM 024` remain `consolidated baseline`; `CLAIM 011` remains `flagged for r |
-| CLAIM 002 ↔ CLAIM 035 | - **Every claim's `Status`.** `CLAIM 002`, `CLAIM 004`, `CLAIM 021` and `CLAIM 024` remain `consolidated baseline`; `CLAIM 011` remains `flagged for r |
-| CLAIM 002 ↔ CLAIM 037 | - **Every claim's `Status`.** `CLAIM 002`, `CLAIM 004`, `CLAIM 021` and `CLAIM 024` remain `consolidated baseline`; `CLAIM 011` remains `flagged for r |
-| CLAIM 004 ↔ CLAIM 021 | - **Every claim's `Status`.** `CLAIM 002`, `CLAIM 004`, `CLAIM 021` and `CLAIM 024` remain `consolidated baseline`; `CLAIM 011` remains `flagged for r |
-| CLAIM 004 ↔ CLAIM 024 | - **Every claim's `Status`.** `CLAIM 002`, `CLAIM 004`, `CLAIM 021` and `CLAIM 024` remain `consolidated baseline`; `CLAIM 011` remains `flagged for r |
-| CLAIM 004 ↔ CLAIM 035 | - **Every claim's `Status`.** `CLAIM 002`, `CLAIM 004`, `CLAIM 021` and `CLAIM 024` remain `consolidated baseline`; `CLAIM 011` remains `flagged for r |
-| CLAIM 011 ↔ CLAIM 021 | - **Every claim's `Status`.** `CLAIM 002`, `CLAIM 004`, `CLAIM 021` and `CLAIM 024` remain `consolidated baseline`; `CLAIM 011` remains `flagged for r |
-| CLAIM 011 ↔ CLAIM 024 | - **Every claim's `Status`.** `CLAIM 002`, `CLAIM 004`, `CLAIM 021` and `CLAIM 024` remain `consolidated baseline`; `CLAIM 011` remains `flagged for r |
-| CLAIM 011 ↔ CLAIM 035 | - **Every claim's `Status`.** `CLAIM 002`, `CLAIM 004`, `CLAIM 021` and `CLAIM 024` remain `consolidated baseline`; `CLAIM 011` remains `flagged for r |
-| CLAIM 021 ↔ CLAIM 024 | - **Every claim's `Status`.** `CLAIM 002`, `CLAIM 004`, `CLAIM 021` and `CLAIM 024` remain `consolidated baseline`; `CLAIM 011` remains `flagged for r |
-| CLAIM 021 ↔ CLAIM 035 | - **Every claim's `Status`.** `CLAIM 002`, `CLAIM 004`, `CLAIM 021` and `CLAIM 024` remain `consolidated baseline`; `CLAIM 011` remains `flagged for r |
-| CLAIM 021 ↔ CLAIM 037 | - **Every claim's `Status`.** `CLAIM 002`, `CLAIM 004`, `CLAIM 021` and `CLAIM 024` remain `consolidated baseline`; `CLAIM 011` remains `flagged for r |
-| CLAIM 024 ↔ CLAIM 035 | - **Every claim's `Status`.** `CLAIM 002`, `CLAIM 004`, `CLAIM 021` and `CLAIM 024` remain `consolidated baseline`; `CLAIM 011` remains `flagged for r |
-| CLAIM 024 ↔ CLAIM 037 | - **Every claim's `Status`.** `CLAIM 002`, `CLAIM 004`, `CLAIM 021` and `CLAIM 024` remain `consolidated baseline`; `CLAIM 011` remains `flagged for r |
 | CLAIM 025 ↔ CLAIM 026 | *(CLAIM 025 / paper 191; CLAIM 026 / PAPER 032 and PAPER 103.)* |
-| CLAIM 035 ↔ CLAIM 037 | - **Every claim's `Status`.** `CLAIM 002`, `CLAIM 004`, `CLAIM 021` and `CLAIM 024` remain `consolidated baseline`; `CLAIM 011` remains `flagged for r |
 
 ### 4.2 Isolated nodes
 
@@ -273,10 +255,10 @@ working model with no edge between them in the registry.
 | CLAIM 014 | REVIEW_MATERIAL_PRESENT | LOCATOR_PROPOSITION_BOUND, SELF_RELATIONAL_TITLE, SHARED_EVIDENTIAL_PAPER |
 | CLAIM 015 | REVIEW_MATERIAL_PRESENT | LOCATOR_PROPOSITION_BOUND, SHARED_EVIDENTIAL_PAPER |
 | CLAIM 018 | REVIEW_MATERIAL_PRESENT | SELF_RELATIONAL_TITLE, SHARED_EVIDENTIAL_PAPER |
-| CLAIM 021 | ANNOTATION_GAP_CONFIRMED | LOCATOR_PROPOSITION_BOUND, SELF_RELATIONAL_TITLE, SHARED_EVIDENTIAL_PAPER, WORKING_MODEL_COMENTION |
+| CLAIM 021 | REVIEW_MATERIAL_PRESENT | LOCATOR_PROPOSITION_BOUND, SELF_RELATIONAL_TITLE, SHARED_EVIDENTIAL_PAPER |
 | CLAIM 022 | NO_RELATION_MATERIAL_IN_REPOSITORY | — |
 | CLAIM 023 | REVIEW_MATERIAL_PRESENT | LOCATOR_PROPOSITION_BOUND, SELF_RELATIONAL_TITLE |
-| CLAIM 024 | ANNOTATION_GAP_CONFIRMED | LOCATOR_PROPOSITION_BOUND, SELF_RELATIONAL_TITLE, SHARED_EVIDENTIAL_PAPER, WORKING_MODEL_COMENTION |
+| CLAIM 024 | REVIEW_MATERIAL_PRESENT | LOCATOR_PROPOSITION_BOUND, SELF_RELATIONAL_TITLE, SHARED_EVIDENTIAL_PAPER |
 | CLAIM 026 | ANNOTATION_GAP_CONFIRMED | LOCATOR_PROPOSITION_BOUND, WORKING_MODEL_COMENTION |
 | CLAIM 027 | NO_RELATION_MATERIAL_IN_REPOSITORY | — |
 | CLAIM 029 | REVIEW_MATERIAL_PRESENT | LOCATOR_PROPOSITION_BOUND |
@@ -374,6 +356,6 @@ carried no connective from the lexicon.
 ## Provenance
 
 Derived from 119 input files; digest
-`71491ba0598240e8`. Sources: the claim, paper and
+`4bb2a75706c8e06a`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 
