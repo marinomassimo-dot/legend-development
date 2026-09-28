@@ -20,8 +20,14 @@ status: BINDING — operator decision 2026-09-05, DEC-20260905-AGILE-HARNESS-MOD
 > - the governance-layer duty "adjudicates a doubtful MAJOR classification" has no object for
 >   harness changes, which are not classified. It remains for scientific baseline reversals
 >   (`legend-locator-audit`, working-model MAJOR bumps);
-> - the §21d blind review is a condition of a **push**, which stays refused for every agent
->   and stays the operator's. It is not a condition of any landing on `main`;
+> - the §21d blind review is not a condition of any landing on `main`, and no longer of a
+>   development push either: `DEC-20260926-DAILY-DEVELOPMENT-PUSH` made pushes to the
+>   development repository the agents' own, under the conditions §21d lists there — that list
+>   prevails over this line, which is not restated here because a rule with two homes is a rule
+>   with two versions. Publication to the **public release** repository stays the operator's
+>   (§21d RESERVED). Corrected 2026-09-28, from *"is a condition of a push, which stays refused
+>   for every agent and stays the operator's"*: the review that found it had nearly filed a
+>   finding against a compliant push on the strength of this line;
 > - Mirror lands its own reviews and learning on `main` at task end like every actor, and its
 >   103 unlanded commits on branch `mirror` are landed by this actor under §21e item 4.
 >
