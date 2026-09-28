@@ -412,6 +412,63 @@ class TheLabelHistorySurvivesAReseal(ResealFixture):
         self.assertIn("rev.1 (the seal under test)", done.stdout)
         self.assertEqual(before, (self.repo / BASELINE).read_bytes())
 
+    def test_history_prints_every_commit_and_never_deduplicates_a_repeated_label(self) -> None:
+        """🔴 THE MISCOUNT ITSELF. The version this replaced skipped a label it had already
+        printed, so a repeated label collapsed into one row: 13 printed entries against 16
+        commits, and three actors counted this history as 13, 15 and 16. A repeat is the finding.
+        """
+        # rev.1 (the seal under test) is already committed by the fixture. Write the SAME label
+        # twice, as rev.16 really was on 2026-08-04 and 2026-08-06.
+        for step, label in enumerate(("rev.4 — the repeated label", "rev.4 — the repeated label",
+                                      "rev.9 — after the repeat"), start=1):
+            self.write(AUTHORED, json.dumps({"assertions": [f"edit {step}"]}) + "\n")
+            self.commit(f"edit {step}")
+            ordinal = ("--revision-ordinal", str(step + 3)) if step == 2 else ()
+            done = self.reseal("--revision", label, *ordinal)
+            self.assertEqual(0, done.returncode, done.stdout + done.stderr)
+            self.commit(f"the baseline itself {step}")
+
+        printed = self.reseal("--history")
+        self.assertEqual(0, printed.returncode, printed.stdout + printed.stderr)
+        rows = [line for line in printed.stdout.splitlines()
+                if "the repeated label" in line and line.startswith("  ")
+                and "revision_history" not in line]
+        self.assertGreaterEqual(len([row for row in rows if "] rev.4" in row]), 2,
+                                "a label written twice must be printed twice:\n" + printed.stdout)
+
+        series = next(line for line in printed.stdout.splitlines()
+                      if line.startswith("ordinal series"))
+        self.assertIn("1 -> 4 -> 4 -> 9", series, printed.stdout)
+        # 🔴 And the caveat the rule states out loud: the git-side series is DERIVED from the
+        # label's spelling, which is all a pre-field seal has. The second seal here was written
+        # with --revision-ordinal 5 under a label that still says rev.4, so the field says 5 and
+        # the derivation says 4. The rule is printed beside the series precisely so that reading
+        # the difference is possible instead of surprising.
+        self.assertEqual([1, 4, 5], [entry["revision_ordinal"]
+                                     for entry in self.read_baseline()["revision_history"]])
+
+        # The three counts, each labelled, so nobody has to choose which one "the count" is.
+        commits = int(next(line for line in printed.stdout.splitlines()
+                           if "commits touching the file" in line).split(":")[1])
+        labels = int(next(line for line in printed.stdout.splitlines()
+                          if "distinct label STRINGS" in line).split(":")[1])
+        self.assertGreater(commits, labels,
+                           "the two counts must be reported separately and must differ here")
+        self.assertIn("DERIVATION RULE:", printed.stdout)
+        self.assertIn("git log --follow", printed.stdout)
+        # and the three conventions are named where the next writer will read them
+        for convention in ("monotone-per-line", "reset-on-branch", "highest-ever + 1"):
+            self.assertIn(convention, printed.stdout, f"{convention} is not named")
+        self.assertIn("the next seal must be rev.", printed.stdout)
+
+    def test_the_three_conventions_are_named_in_the_tool_itself(self) -> None:
+        """Not only in the printed output: a reader opening the source must meet them too, so
+        the next writer cannot invent a fourth without reading about the first three."""
+        for convention in ("monotone-per-line", "reset-on-branch", "highest-ever + 1"):
+            self.assertIn(convention, reseal.__doc__ or "")
+        self.assertEqual(3, len(reseal.CONVENTIONS))
+        self.assertIn("EXCEED", dict(reseal.CONVENTIONS)["highest-ever + 1"])
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
