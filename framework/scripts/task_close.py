@@ -4,6 +4,11 @@
 Run from your own task worktree after the required checks (LEGEND_CORE §21e).
 The default keeps that worktree for the next task. --remove-worktree is for a closed chat
 and is refused while the worktree holds untracked OR ignored files, or is locked.
+A task may be cut from `origin/main` rather than from a local `main` that carries other actors'
+unpublished commits (`git worktree add --no-track -b task/<id> <path> origin/main`); it lands the
+same way. After landing, a `PUSH_NOTE` on stderr lists the commits a push of main would publish
+that this task did not make — information for the pusher, never a refusal.
+
 No staging, force, stash, reset, push or conflict resolution is performed. A merge that
 conflicts is aborted so the checkout holding main stays exactly as it was; the task branch
 and worktree are kept, and the repair is made on the task side before retrying.
@@ -176,12 +181,34 @@ def close_task(start: Path, remove_worktree: bool = False,
         if git(["rev-parse", "HEAD"], source).strip() != tip:
             raise GitError("task HEAD changed during landing; keeping the branch")
         git(commands[1][3:], source)
+        # A task branch cut from `origin/main` tracks it, and `branch -d` then measures "fully
+        # merged" against that upstream — which has not moved until main is pushed, so the
+        # delete was refused AFTER a correct landing (2026-09-28). Ancestry in main was verified
+        # just above; the upstream is dropped only now, and only for this branch.
+        if git(["for-each-ref", "--format=%(upstream)", f"refs/heads/{branch}"],
+               destination).strip():
+            git(["branch", "--unset-upstream", branch], destination)
         git(commands[2][3:], destination)
         if remove_worktree:
             git(commands[3][3:], destination)
     finally:
         lock.unlink()
     return commands
+
+
+def unpublished_foreign(start: Path, tip: str) -> list[str]:
+    """Commits a push of main would publish that the task did not make — informational only.
+
+    Measured against main's upstream as last fetched (no network). Empty when main has no
+    upstream. The landing merge itself is excluded with the other merges."""
+    try:
+        upstream = git(["rev-parse", "--abbrev-ref", "--symbolic-full-name", "main@{upstream}"],
+                       start).strip()
+        out = git(["log", "--no-merges", "--format=%h %an %s", f"{upstream}..main", f"^{tip}"],
+                  start)
+    except GitError:
+        return []
+    return [line for line in out.splitlines() if line.strip()]
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -204,6 +231,16 @@ def main(argv: list[str] | None = None) -> int:
         return 2
     print("\n".join(shlex.join(command) for command in commands))
     print("DRY_RUN" if args.dry_run else "TASK_CLOSED")
+    try:
+        tip = git(["rev-parse", "HEAD"], Path.cwd()).strip()
+        foreign = unpublished_foreign(Path.cwd(), tip)
+    except (GitError, OSError):
+        foreign = []
+    if foreign:
+        print(f"PUSH_NOTE: pushing main now also publishes {len(foreign)} commit(s) this task "
+              "did not make (as of the last fetch):", file=sys.stderr)
+        for line in foreign:
+            print(f"  {line}", file=sys.stderr)
     return 0
 
 

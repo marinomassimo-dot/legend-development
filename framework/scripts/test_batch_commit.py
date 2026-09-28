@@ -133,17 +133,51 @@ class RecordScopedPropagation(unittest.TestCase):
             self.assertIn("ANCHOR_MISSING", message)
             self.assertEqual(path.read_bytes(), self.TEXT.encode())
 
-    def test_paper_registry_keeps_the_full_rewrite(self) -> None:
+    def test_refusal_names_the_full_fallback(self) -> None:
+        from batch_commit import propagate
+        with tempfile.TemporaryDirectory() as temporary:
+            self._repo(temporary, self.CLAIMS)
+            ops = self._ops(temporary, [{"op": "delete", "id": "CLAIM 404"}])
+            code, message = propagate(temporary, self.CLAIMS, ops, apply=True)
+            self.assertEqual(code, 3)
+            self.assertIn(f"FULL_FALLBACK {self.CLAIMS} ANCHOR_MISSING", message)
+
+    def test_paper_registry_is_record_scoped_and_under_names_one_purpose(self) -> None:
+        """J5: the paper registry joins the other three; its twin `## Purpose` needs `under`."""
         from batch_commit import RECORD_SCOPED, propagate
         papers = "disease-models/wwox/registries/paper_registry_current.md"
-        self.assertNotIn(papers, RECORD_SCOPED)
-        self.assertTrue(set(RECORD_SCOPED) <= set(CURRENTS))
+        self.assertIn(papers, RECORD_SCOPED)
+        self.assertEqual(set(RECORD_SCOPED), set(CURRENTS))
+        text = ("# Paper Registry Current\n\n## Purpose\nfirst\n\n## PAPER 001\nbody\n\n"
+                "# Triage Corpus\n\n## Purpose\nsecond\n\n## CORPUS P200\nstub\n")
         with tempfile.TemporaryDirectory() as temporary:
-            path = self._repo(temporary, papers)
+            path = Path(temporary) / papers
+            path.parent.mkdir(parents=True)
+            path.write_bytes(text.encode())
+            bare = self._ops(temporary, [{"op": "replace-within", "heading": "Purpose",
+                                          "old": "second", "new": "2nd"}])
+            code, message = propagate(temporary, papers, bare, apply=True)
+            self.assertEqual(code, 3)
+            self.assertIn("ANCHOR_AMBIGUOUS", message)
+            self.assertIn("FULL_FALLBACK", message)
+            self.assertEqual(path.read_bytes(), text.encode())
+            qualified = self._ops(temporary, [
+                {"op": "replace-within", "heading": "Purpose", "under": "Triage Corpus",
+                 "old": "second", "new": "2nd"},
+                {"op": "replace-within", "id": "PAPER 001", "old": "body", "new": "body, read"}])
+            code, message = propagate(temporary, papers, qualified, apply=True)
+            self.assertEqual(code, 0, message)
+            self.assertEqual(path.read_bytes(),
+                             text.replace("second", "2nd").replace("body\n", "body, read\n").encode())
+
+    def test_a_file_outside_the_four_is_refused_by_name(self) -> None:
+        from batch_commit import propagate
+        other = "disease-models/wwox/research/some_note.md"
+        with tempfile.TemporaryDirectory() as temporary:
+            path = self._repo(temporary, other)
             ops = self._ops(temporary, [{"op": "delete", "id": "CLAIM 001"}])
-            code, message = propagate(temporary, papers, ops, apply=True)
+            code, message = propagate(temporary, other, ops, apply=True)
             self.assertEqual(code, 4)
-            self.assertIn("full rewrite", message)
             self.assertEqual(path.read_bytes(), self.TEXT.encode())
 
 

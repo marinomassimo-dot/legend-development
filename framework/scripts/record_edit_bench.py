@@ -672,8 +672,55 @@ def qualified(anchor: dict[str, Any], key: str,
     return {**anchor, "under": enclosing[0]} if enclosing else anchor
 
 
+def production_anchor(op: dict[str, Any], unit: UnitDiff, file_text: str,
+                      levels: tuple[int, ...]) -> dict[str, Any]:
+    """Address an op the way a production batch must today (prompt_batch_commit Phase 4.0).
+
+    Since `e9c9172` the editor refuses an id-anchored op on a record whose end is ASSUMED and
+    whose span covers headings (UNBOUNDED_SPAN) — the working model's `# BLOCK 3`, which holds
+    `## Changelog` and the batch sections. It offers two ways past, and production uses both:
+      - name the nested section (`--heading Changelog`) when the edit lies wholly inside it and
+        adds no heading of that section's level; `under` is added if the file repeats it;
+      - otherwise keep the id and assert `--to-eof` — true exactly when the record is the last
+        one in the file, which is checked here, not assumed.
+    An op on a record with no nested headings is returned unchanged, so every other family
+    replays exactly as it did in J2."""
+    if "id" not in op or op["op"] not in ("replace-within", "replace") or not unit.parent_text:
+        return op
+    import record_scoped_edit as rse
+    text = unit.parent_text
+    heads = [h for h in rse._headings(text) if h[0] > 0]
+    if not heads:
+        return op
+    if op["op"] == "replace-within":
+        pos = text.find(op["old"])
+        inside = []
+        for index, (offset, _line, level, title) in enumerate(heads):
+            end = next((h[0] for h in heads[index + 1:] if h[2] <= level), len(text))
+            if pos >= 0 and offset <= pos and pos + len(op["old"]) <= end:
+                inside.append((offset, level, title.strip()))
+        if inside:
+            offset, level, title = max(inside)
+            added = [lv for _o, _l, lv, _t in rse._headings(op["new"]) if lv <= level]
+            if not added:
+                narrowed = {k: v for k, v in op.items() if k != "id"}
+                narrowed["heading"] = title
+                file_heads = rse._headings(file_text)
+                if sum(1 for h in file_heads if h[3].strip() == title) > 1:
+                    block = next(b for b in unit_map(file_text, levels) if b.key == unit.old)
+                    enclosing = rse.enclosing_headings(file_heads, block.start + offset)
+                    if enclosing:
+                        narrowed["under"] = enclosing[0]
+                return narrowed
+    block = next((b for b in unit_map(file_text, levels) if b.key == unit.old), None)
+    if block is not None and block.end == len(file_text):
+        return {**op, "to_eof": True}
+    return op
+
+
 def expected_and_ops(units: list[UnitDiff], parent_keys: list[str], labels: dict[str, str],
-                     mode: str, qualify: tuple[str, tuple[int, ...]] | None = None
+                     mode: str, qualify: tuple[str, tuple[int, ...]] | None = None,
+                     production: tuple[str, tuple[int, ...]] | None = None
                      ) -> tuple[list[tuple[str, str]], list[dict[str, Any]]]:
     """X (as an ordered list of (key, text)) and the record-scoped operations derived from E."""
     edit = {hid for hid, label in labels.items() if label in EDIT}
@@ -701,9 +748,11 @@ def expected_and_ops(units: list[UnitDiff], parent_keys: list[str], labels: dict
         anchor = qualified(anchor_for(pkey, unit.kind, unit.heading), pkey, qualify)
         rename = {"rename_to": unit.key} if unit.key != unit.old else {}
         if mode == "record" or rename:
-            ops.append({"op": "replace", **anchor, "text": text, **rename, "_hunks": hids})
+            replace = {"op": "replace", **anchor, "text": text, **rename, "_hunks": hids}
+            ops.append(production_anchor(replace, unit, *production) if production else replace)
         else:
-            ops.extend(range_ops(unit, edit, anchor))
+            ops.extend(production_anchor(op, unit, *production) if production else op
+                       for op in range_ops(unit, edit, anchor))
     # E-added units, in child order, each after its nearest preceding unit in X
     child_order = [u.key for u in units if u.child_text is not None]
     placed = {k for k, _ in x}
@@ -788,7 +837,7 @@ def replay_event(before: str, after: str, path: str, commit12: str, labels: dict
     levels = stem_levels(path)
     units, parent_keys, _child_keys = unit_diffs(before, after, path, commit12)
     x_units, ops = expected_and_ops(units, parent_keys, labels, mode,
-                                    (before, levels) if qualify else None)
+                                    (before, levels) if qualify else None, (before, levels))
     expected = "".join(text for _k, text in x_units)
     current, refused, applied = before, [], 0
     for op in ops:
