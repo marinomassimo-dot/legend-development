@@ -505,6 +505,33 @@ def scan_privacy_and_secrets(root: Path, findings: list[Finding]) -> None:
     hex_fragment = re.compile(
         r"(?<![0-9A-Za-z])(?=[0-9A-Fa-f]*[0-9])[0-9A-Fa-f]{12,}(?![0-9A-Za-z])"
     )
+    # 🔴 THE THRESHOLD IS NOT LOWERED, AND THIS IS WHERE THAT DECISION IS RECORDED.
+    # An 8-hex abbreviation of a digest (`abcd1234…`) is SHORTER than the carve-out above, so an
+    # alphabetic run inside it reads as a candidate identifier and the gate blocks. That happened
+    # to two agents on 2026-09-28; both wrote the full 64-hex digest instead, which is this
+    # repository's convention and exempt by construction, and shipped. Considered and rejected:
+    #   - lowering the carve-out to 8: at 8 characters the "it is an address, not a word" argument
+    #     stops holding. A three-letter name needs only five hex neighbours to disappear, and the
+    #     gate is a privacy control: a weakening that buys convenience is the wrong trade, and one
+    #     nobody would notice, because a false NEGATIVE prints nothing. MEASURED on this
+    #     repository, 2026-09-28: over 1614 scanned text files, 1013 alphabetic candidate tokens
+    #     sit inside an 8-11 hex run and are examined today; a carve-out at 8 would stop examining
+    #     all 1013. That is the cost, and it buys the author nothing a full digest does not.
+    #   - exempting a truncated digest next to a digest-ish context word: that makes the exemption
+    #     depend on prose the author controls, i.e. an author who writes "sha256" gets a carve-out
+    #     an author who does not write it never sees. A privacy carve-out steered by an adjacent
+    #     word is a carve-out anybody can request by typing the word.
+    # So detection is UNCHANGED and the inconvenience is answered where it is met: a block whose
+    # token sits inside a short hex run carries the convention in its message (see below).
+    # The pattern is used for the HINT ONLY and never to skip a finding.
+    short_hex_fragment = re.compile(
+        r"(?<![0-9A-Za-z])(?=[0-9A-Fa-f]*[0-9])[0-9A-Fa-f]{8,11}(?![0-9A-Za-z])"
+    )
+    TRUNCATED_DIGEST_HINT = (
+        " If this is a truncated digest or short commit SHA, write the full 64-hex digest: "
+        "the repository's convention, exempt by construction (a 12+ hex run is read as a "
+        "content address). The threshold is deliberately not lowered for abbreviations."
+    )
     # A fourth token is exact-only in the private set above, and deliberately so: it is also
     # an ordinary Italian word, and `test_common_lowercase_homonym_does_not_block` pins that.
     # Inside a FILESYSTEM PATH it cannot be that word, so its casefolded digest is consulted
@@ -627,6 +654,8 @@ def scan_privacy_and_secrets(root: Path, findings: list[Finding]) -> None:
             continue
         digest_spans = [m.span() for m in hex_run.finditer(text)]
         digest_spans += [m.span() for m in hex_fragment.finditer(text)]
+        # Not added to `digest_spans`: these spans change no verdict, only a message.
+        short_spans = [m.span() for m in short_hex_fragment.finditer(text)]
         for match in identifier_token.finditer(text):
             if not is_sensitive(match.group(0)):
                 continue
@@ -649,13 +678,16 @@ def scan_privacy_and_secrets(root: Path, findings: list[Finding]) -> None:
                     )
                 )
                 continue
+            hint = (TRUNCATED_DIGEST_HINT
+                    if any(start <= match.start() and match.end() <= end
+                           for start, end in short_spans) else "")
             findings.append(
                 Finding(
                     "BLOCK",
                     "DIRECT_IDENTIFIER",
                     rel,
                     line_number(text, match.start()),
-                    "Legacy personal identifier remains in public material.",
+                    "Legacy personal identifier remains in public material." + hint,
                 )
             )
         for root_match in path_root.finditer(text):

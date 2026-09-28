@@ -128,6 +128,53 @@ class GateTests(unittest.TestCase):
         self.assertIn("DIRECT_IDENTIFIER", self.scan_text(
             "short.jsonl", '{"candidate_id": "RPC-' + token + '5967531"}\n'))
 
+    def messages(self, name: str, text: str) -> list[str]:
+        root = self.make_repo()
+        (root / name).write_text(text, encoding="utf-8")
+        findings: list = []
+        GATE.scan_privacy_and_secrets(root, findings)
+        return [item.message for item in findings if item.severity == "BLOCK"]
+
+    def test_a_truncated_digest_still_blocks_and_the_block_carries_the_convention(self) -> None:
+        """The 2026-09-28 decision, pinned: the threshold is NOT lowered for abbreviations.
+
+        An 8-hex abbreviation of a digest is below the carve-out, so a private token inside one
+        blocks — as it did for two agents on the same day. What changed is only the message: the
+        block now names the convention (write the full 64-hex digest) at the point the author
+        meets it. A test that only checked the hint would pass on a gate that had stopped
+        blocking, so the block is asserted first.
+        """
+        token = "".join(map(chr, (98, 101, 97)))
+        text = f"digest {token}1eef25 recorded\n"
+        self.assertIn("DIRECT_IDENTIFIER", self.scan_text("record.md", text))
+        self.assertTrue(any("full 64-hex digest" in message
+                            for message in self.messages("record.md", text)),
+                        "a block inside a short hex run must carry the digest convention")
+
+    def test_an_identifier_in_ordinary_prose_carries_no_digest_hint(self) -> None:
+        """The hint must not become boilerplate on every identifier block."""
+        token = "".join(map(chr, (98, 101, 97)))
+        text = f"the note mentions {token} plainly\n"
+        self.assertIn("DIRECT_IDENTIFIER", self.scan_text("prose.md", text))
+        self.assertFalse(any("full 64-hex digest" in message
+                             for message in self.messages("prose.md", text)))
+
+    def test_the_hint_pattern_never_exempts_a_finding(self) -> None:
+        """Structural, because this is the property a privacy control cannot get wrong.
+
+        The short-run pattern exists for a MESSAGE. If it were ever added to the exemption
+        spans, 1013 tokens measured on this repository (2026-09-28) would stop being examined.
+        The scanner's source is asserted directly: the short spans are computed, and the line
+        that computes them must not feed `digest_spans`.
+        """
+        source = Path(GATE.__file__).read_text(encoding="utf-8")
+        body = source.split("def scan_privacy_and_secrets")[1]
+        self.assertIn("short_spans = [m.span() for m in short_hex_fragment.finditer(text)]", body)
+        self.assertNotIn("digest_spans += [m.span() for m in short_hex_fragment", body)
+        for line in body.splitlines():
+            if "short_hex_fragment" in line and "short_spans" not in line:
+                self.assertNotIn("digest_spans", line, line)
+
     def test_jsonl_parental_rules_are_scoped_to_one_record(self) -> None:
         """A maternal word in one record and a paternal word in another are two records,
         not one pairing; and the reference-genotype safeguard reads the record, not the file."""

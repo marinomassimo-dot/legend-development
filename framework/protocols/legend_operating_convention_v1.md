@@ -514,6 +514,24 @@ literature are legitimate and the gate discriminates. **`public_release_gate.py`
 instrument; it is also the safe one, because it never prints the value it matched.** A raw grep is
 broader than the gate and is not evidence of a leak. *Counted here without printing a single value.*
 
+**S.7.7d — 🔴 CITE A DIGEST IN FULL: 64 hex characters, never an abbreviation.** When a record, a
+report, a commit candidate or a session evaluation quotes a sha256 — a seal, a blob, a receipt
+chain link, a baseline anchor — write the **whole 64-character digest**. A truncated digest in the
+`abcd1234…` style is shorter than the gate's content-address carve-out, which starts at **12 hex
+characters**, so an alphabetic run inside it (three letters is enough) is examined as a candidate
+identifier and `public_release_gate.py` emits `[BLOCK] DIRECT_IDENTIFIER` on a line that holds no
+identifier at all. This cost two agents a diagnosis each on 2026-09-28; both repaired it by
+writing the full digest, which is exempt by construction.
+
+**The threshold is deliberately NOT lowered to cover abbreviations**, and the reasoning is in
+`public_release_gate.py` beside the pattern: measured over 1614 scanned text files on that date,
+a carve-out at 8 hex characters would stop examining **1013** alphabetic candidate tokens, and a
+false negative in a privacy control prints nothing at all. The inconvenience is answered in the
+message instead — a block whose token sits inside an 8–11 hex run now states this convention — so
+an author who hits it is told what to write rather than left to infer it. A short **git** SHA in
+prose (`748a94b`) is fine until a letter run inside it happens to match; when the gate blocks one,
+write the full 40-character SHA rather than arguing with the gate.
+
 **S.7.8 — `VERDICT_TRANSFER: NONE` is the default.** A verdict carried from another record is not a
 verdict.
 
