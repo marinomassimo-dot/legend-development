@@ -1,0 +1,2682 @@
+{
+ "reviewer": "producer",
+ "units": [
+  {
+   "uid": "H001",
+   "class": "A",
+   "why": "Its live content is the two retractions and two narrowings, all of which now stand in the claim records and in the BLOCK 2 mirror; the rest is batch identity, authorisation and op counts.",
+   "live_elements": [
+    {
+     "element": "`CLAIM 038` no longer asserts that the `mg/ml` unit header of PMID 17803050 is *sbagliata alla fonte*",
+     "concerns": "CLAIM 038",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 038",
+      "quote": "il token dell'unità **NON è aggiudicato**"
+     }
+    },
+    {
+     "element": "that token sits on a text layer this repository classifies `SUSPECT`",
+     "concerns": "CLAIM 038",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 038",
+      "quote": "il livello di testo di quel PDF è classificato **`SUSPECT`**"
+     }
+    },
+    {
+     "element": "The same retraction is applied ... to `CLAIM 036`'s comparison constraint",
+     "concerns": "CLAIM 036",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 036",
+      "quote": "**Nessun confronto numerico fra i due modelli è autorizzato** — solo direzione e significatività."
+     }
+    },
+    {
+     "element": "`CLAIM 038`'s title stops asserting creatinine recurrence",
+     "concerns": "CLAIM 038",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 038)",
+      "quote": "creatinine recurrence **`UNDETERMINED`**"
+     }
+    },
+    {
+     "element": "`CLAIM 030` drops a false universal for a bounded measurement of all twelve Table 1 examination axes",
+     "concerns": "CLAIM 030",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 030",
+      "quote": "**tre hanno varianza nulla**"
+     }
+    },
+    {
+     "element": "records the `Genetic studies` boundary as **OPEN**",
+     "concerns": "CLAIM 030",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 030",
+      "quote": "il suo confine resta APERTO"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H002",
+   "class": "A",
+   "why": "Its live content is the withdrawal of the survival-only universal and the CLAIM 030 severity-axis naming, both now carried in CLAIM 030; everything else is op counts, cardinality and residue deletion.",
+   "live_elements": [
+    {
+     "element": "the previous row's *«the discordance is survival only»* is false",
+     "concerns": "CLAIM 030",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 030",
+      "quote": "resta **neutra** fra questa tesi e le sue rivali"
+     }
+    },
+    {
+     "element": "patients 2 and 5 also differ on `Short stature` and `Ophthalmologic features`",
+     "concerns": "CLAIM 030",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 030",
+      "quote": "**due ulteriori assi d'esame su cui i due pazienti differiscono**"
+     }
+    },
+    {
+     "element": "the reviewer's own *«all 13, zero variance»* is itself false on `Speech`",
+     "concerns": "CLAIM 030",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 030",
+      "quote": "`Speech` è `Nonverbal` in **11/13** (i pazienti 6 e 10 hanno una parola singola), quindi a varianza minima ma **non nulla**"
+     }
+    },
+    {
+     "element": "`CLAIM 030` now **names its own severity axes**",
+     "concerns": "CLAIM 030",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 030",
+      "quote": "**tre hanno varianza nulla**"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H003",
+   "class": "A",
+   "why": "Every scientific move it reports — the CLAIM 030 withdrawal, the unit factor, the CLAIM 033 and CLAIM 025 repairs — is present in the claim records or the mirror; the candidate IDs, op counts and cardinality deltas are provenance.",
+   "live_elements": [
+    {
+     "element": "`CLAIM 030`'s two-tailed `Q230P` observation no longer *«rafforza»* the claim",
+     "concerns": "CLAIM 030",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 030",
+      "quote": "resta **neutra** fra questa tesi e le sue rivali"
+     }
+    },
+    {
+     "element": "`CLAIM 033`(6a) stops calling a one-event Fisher test a non-replication",
+     "concerns": "CLAIM 033",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 033",
+      "quote": "**Non replicata, su un test senza eventi:**"
+     }
+    },
+    {
+     "element": "`CLAIM 038`'s `mg/ml → mg/dL` factor is corrected to **×100**",
+     "concerns": "CLAIM 038",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 038",
+      "quote": "(**×100**, perché 1 dL = 100 ml"
+     }
+    },
+    {
+     "element": "`CLAIM 016`'s mirror wording stops conceding an abundance level",
+     "concerns": "CLAIM 016",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 016)",
+      "quote": "the abundance datum is **withdrawn** — Fig. 7c is single-lane densitometry, `NOT_TESTED` in both directions"
+     }
+    },
+    {
+     "element": "`CLAIM 025`'s ovarian cohort is disambiguated (`n = 228`, the largest of five molecular strata but smaller than the `n = 390` breast cohort)",
+     "concerns": "CLAIM 025",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 025",
+      "quote": "(`n = 228` — **il più numeroso dei cinque strati molecolari**"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H004",
+   "class": "A",
+   "why": "The withdrawals, demotions and bounds it announces are all written into the claims and the mirror; the audit tallies and authorisation quote are process.",
+   "live_elements": [
+    {
+     "element": "`CLAIM 021` ... **withdraws the gap-junction half** of *«Bursting depends on NMDAR and gap junction activity»*",
+     "concerns": "CLAIM 021",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 021)",
+      "quote": "the gap-junction half of the burst dependence is WITHDRAWN as not attributable"
+     }
+    },
+    {
+     "element": "`CLAIM 002` ... demotes its **immature/depolarizing-GABA** half from a measured *firma* to `IPOTESI`",
+     "concerns": "CLAIM 002",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 002)",
+      "quote": "the immature/depolarizing-GABA half is `IPOTESI`, not a measured signature"
+     }
+    },
+    {
+     "element": "the `BLOCCO 1` vigabatrin position **does not move**",
+     "concerns": "BLOCK 1 — ACTIVE 2 GABAergic vulnerability",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 1 §1 ACTIVE 2",
+      "quote": "**The three positions above are byte-identical and do not move**"
+     }
+    },
+    {
+     "element": "`CLAIM 024` gains the WW1-sufficiency rider that **bounds its generality**",
+     "concerns": "CLAIM 024",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 024)",
+      "quote": "for at least one partner (ATM) the isolated WW1 domain is sufficient in a HEK293 lysate pull-down, so tandem cooperativity is NOT required for every interaction"
+     }
+    },
+    {
+     "element": "`CLAIM 037`'s transferability becomes **per axis**",
+     "concerns": "CLAIM 037",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 037)",
+      "quote": "**per axis (2026-09-27):** T2 biallelic-loss vulnerability · T2 electrographic epileptiform activity in the mouse null"
+     }
+    },
+    {
+     "element": "`CLAIM 004`/`CLAIM 011` endpoints are split (endpoint × dose × window) and no statement of the form *«the phenotype is rescued»* survives",
+     "concerns": "CLAIM 004; CLAIM 011",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 004",
+      "quote": "**Vincolo di chiusura (endpoint × dose × finestra)"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H005",
+   "class": "A",
+   "why": "Its narrowings are all now in the claim records; the candidate count, the cross-link census and the record-creation list are provenance.",
+   "live_elements": [
+    {
+     "element": "`CLAIM 016` no longer asserts an **abundance** datum",
+     "concerns": "CLAIM 016",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 016)",
+      "quote": "the abundance datum is **withdrawn** — Fig. 7c is single-lane densitometry, `NOT_TESTED` in both directions"
+     }
+    },
+    {
+     "element": "`CLAIM 029` gains the SI evidence boundary",
+     "concerns": "CLAIM 029",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 029",
+      "quote": "*\"K63 ubiquitination of WWOX on Lys274\"* is **the damage-induced increment, not the bulk**"
+     }
+    },
+    {
+     "element": "`CLAIM 033` gains the 45/15/15 denominators and a sixth reservation — the mortality association does not replicate in the registry cohort",
+     "concerns": "CLAIM 033",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 033",
+      "quote": "**Non replicata, su un test senza eventi:**"
+     }
+    },
+    {
+     "element": "`CLAIM 025` is bounded on the **direction** of the ratio–outcome association, which the source declares descriptive",
+     "concerns": "CLAIM 025",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 025",
+      "quote": "*\"these effects are descriptive and hypothesis-generating rather than formally validated prognostic groupings\"*"
+     }
+    },
+    {
+     "element": "`CLAIM 038`/`CLAIM 036` record ... that no numerical cross-model comparison is authorised",
+     "concerns": "CLAIM 036; CLAIM 038",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 036",
+      "quote": "**Nessun confronto numerico fra i due modelli è autorizzato** — solo direzione e significatività."
+     }
+    },
+    {
+     "element": "with `CLAIM 005`'s prohibition on asserting epileptogenesis **untouched**",
+     "concerns": "CLAIM 005",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 005",
+      "quote": "**No canonical statement may assert EPILEPTOGENESIS — the *process* of acquiring an enduring predisposition to spontaneous recurrent seizures — in ANY WWOX model, because no study has measured that process:**"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H006",
+   "class": "A",
+   "why": "The audiogenic mouse datum, the retired premise and the rat-only kindling restriction are all in CLAIM 037 / CLAIM 005 and in the mirror row 037.",
+   "live_elements": [
+    {
+     "element": "the audiogenic negative on `CLAIM 037` and the rat-only seizure sentence in `CLAIM 005` ... are **withdrawn as false**",
+     "concerns": "CLAIM 005; CLAIM 037",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 005",
+      "quote": "the sentence *«Seizures in the Wwox literature are a rat `lde/lde` phenotype»* is **withdrawn as false**"
+     }
+    },
+    {
+     "element": "The constitutive `Wwox`-null **mouse** carries a documented audiogenic provocation with a wild-type comparator (3/8 at 16 days ...; 0/8 wild type), behavioural and unscored — no EEG, no scoring scale",
+     "concerns": "CLAIM 037",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 037)",
+      "quote": "the **audiogenic** phenotype is documented in the constitutive `Wwox`-null **mouse** too (behavioural, unscored, no EEG, one laboratory, wild-type comparator 0/8; handling also provoked seizures, so acoustic specificity is not established)"
+     }
+    },
+    {
+     "element": "`PREMISE: NOBODY_LOOKED` is retired as falsified",
+     "concerns": "CLAIM 037",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 037",
+      "quote": "`NOT_REPORTED ≠ ABSENT`, and the old negative was a survey artefact."
+     }
+    },
+    {
+     "element": "**The kindling-like progression remains documented only in the rat**",
+     "concerns": "CLAIM 037",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 037)",
+      "quote": "T3 kindling-like progression (rat only)"
+     }
+    },
+    {
+     "element": "`CLAIM 005`'s prohibition on asserting epileptogenesis as a measured process is **untouched**",
+     "concerns": "CLAIM 005",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 005",
+      "quote": "**No canonical statement may assert EPILEPTOGENESIS — the *process* of acquiring an enduring predisposition to spontaneous recurrent seizures — in ANY WWOX model, because no study has measured that process:**"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H007",
+   "class": "A",
+   "why": "Its two substantive items — the CLAIM 016 panel citation and the CLAIM 011 flag correction — are in the claim records; the locator re-derivations, the changelog repair and the mirror rewrite are process.",
+   "live_elements": [
+    {
+     "element": "`CLAIM 016` cites the lithium panel correctly (Fig. 7d) and keeps the ethosuximide panel as a distinct experiment",
+     "concerns": "CLAIM 016",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 016",
+      "quote": "**il litio ha soppresso le crisi da PTZ in TUTTI E TRE i genotipi, wild-type incluso** (Fig. 7d"
+     }
+    },
+    {
+     "element": "`CLAIM 011` drops the false `partial_fulltext_read` clause while staying `flagged for review`",
+     "concerns": "CLAIM 011",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 011)",
+      "quote": "**flagged for review**"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H008",
+   "class": "A",
+   "why": "Both additions are carried by the claims and the mirror; the batch label is provenance.",
+   "live_elements": [
+    {
+     "element": "audited WW1/WBP-1/SIMPLE antecedent added to CLAIM 007",
+     "concerns": "CLAIM 007",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 007)",
+      "quote": "WW1/WBP-1/SIMPLE biochemistry is an independent non-neural antecedent"
+     }
+    },
+    {
+     "element": "CLAIM 041 records the P47T cerebellar cell-marker contrast at two ages without a progression or Q230P inference",
+     "concerns": "CLAIM 041",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 041)",
+      "quote": "basket-cell genotype tests nonsignificant at both ages, with no within-mutant progression test"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H009",
+   "class": "A",
+   "why": "Its live content is the CLAIM 032 endpoint distinction and the absence of a CNS threshold, both in the claim and the mirror.",
+   "live_elements": [
+    {
+     "element": "CLAIM 032 distinguishes heterozygote endpoints, spontaneous tumour excess, tissue-restricted mammary controls and the homozygous hypomorph",
+     "concerns": "CLAIM 032",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 032)",
+      "quote": "tumori spontanei negli eterozigoti e ipomorfo omozigote vitale ma compromesso delimitano l’inferenza (`PREMISE: NOBODY_LOOKED`)"
+     }
+    },
+    {
+     "element": "No numerical CNS or therapeutic rescue threshold is established",
+     "concerns": "CLAIM 032",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 032)",
+      "quote": "non definisce una soglia terapeutica del SNC"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H010",
+   "class": "A",
+   "why": "The bounded B-cell observations live in CLAIM 029 and its mirror row; the duplicate-identity repair is registry bookkeeping.",
+   "live_elements": [
+    {
+     "element": "CLAIM 029 gains separate, bounded murine B-cell pathway-choice and MYC-driven tumour-genomics observations",
+     "concerns": "CLAIM 029",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 029)",
+      "quote": "whole-body-null B-cell repair junctions shift without greater local mutation frequency, and MYC-driven knockout tumours show context-limited instability"
+     }
+    },
+    {
+     "element": "Claim remains in observation; no CNS or therapeutic inference",
+     "concerns": "CLAIM 029",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 029)",
+      "quote": "T2 conceptual for ATM; T3 for murine B-cell observations"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H011",
+   "class": "A",
+   "why": "The narrowing of CLAIM 026 to two observations plus an untested coupling is in the claim, the mirror row and the Mechanistic architecture metabolic paragraph.",
+   "live_elements": [
+    {
+     "element": "CLAIM 026 narrowed from a measured trafficking–metabolism “coupling node” to two observations on one HEK293T prey list and an untested coupling hypothesis",
+     "concerns": "CLAIM 026",
+     "represented_at": {
+      "where": "L",
+      "locator": "Mechanistic architecture — Metabolic branch refinement",
+      "quote": "**Functional trafficking–metabolism coupling has not been measured**"
+     }
+    },
+    {
+     "element": "independent VOPP1 co-IP from PAPER 103 added with directness and transfer limits",
+     "concerns": "CLAIM 026",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 026)",
+      "quote": "WWOX co-associates with trafficking proteins; metabolic pathway annotation on the same prey list, with coupling untested"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H012",
+   "class": "A",
+   "why": "Each P47T qualification it lists is written into CLAIM 030 / CLAIM 033 and the mirror; the species correction on a corpus record is bookkeeping outside (L)/(C).",
+   "live_elements": [
+    {
+     "element": "P47T protein is **present, similar to controls by eye, not quantified** ... — not \"a livelli normali\"",
+     "concerns": "CLAIM 030; CLAIM 033",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 030)",
+      "quote": "In WWOX, severity tracks **residual function**, not protein abundance"
+     }
+    },
+    {
+     "element": "binding is **lost in vitro to one PPPY peptide** — not \"PPxY binding abolished\"",
+     "concerns": "CLAIM 007; CLAIM 030",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 007)",
+      "quote": "P47T abolishes or near-abolishes WWOX recovery by two PPPY peptides in vitro"
+     }
+    },
+    {
+     "element": "the milder presentation is the authors' *presumably*-hedged attribution to residual protein and a presumably functional SDR domain",
+     "concerns": "CLAIM 030",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 030)",
+      "quote": "In WWOX, severity tracks **residual function**, not protein abundance"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H013",
+   "class": "A",
+   "why": "The two narrowings, the pseudoreplication limit and the P47T ≠ Q230P guard are all in the claims, the mirror and the Genotype-rules worked example.",
+   "live_elements": [
+    {
+     "element": "microglial progression is shown for **morphology only**, and progression of microglial **abundance is untested, not shown to be absent**",
+     "concerns": "CLAIM 006",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 006)",
+      "quote": "microglial progression shown for morphology only"
+     }
+    },
+    {
+     "element": "the statistics are pseudoreplicated (subfields or cells of n = 3 mice), and with only two time points the data give a direction, not a rate",
+     "concerns": "CLAIM 006",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 006)",
+      "quote": "T3 ⚠️ genotype caution"
+     }
+    },
+    {
+     "element": "WWOX recovery by **two PPPY oligopeptides** in one cerebellar pull-down at n = 2 is abolished or near-abolished — not \"PPxY binding to WW-domain partners\"",
+     "concerns": "CLAIM 007",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 007)",
+      "quote": "P47T abolishes or near-abolishes WWOX recovery by two PPPY peptides in vitro"
+     }
+    },
+    {
+     "element": "P47T ≠ Q230P is unchanged",
+     "concerns": "Genotype interpretation rules — Worked example A",
+     "represented_at": {
+      "where": "L",
+      "locator": "Genotype interpretation rules — Worked example A",
+      "quote": "p.Gln230Pro (Q230P) ≠ P47T: do not auto-transfer P47T data across variants."
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H014",
+   "class": "A",
+   "why": "Its four-axis separation, the retargeted prohibition, CLAIM 040 and the floor-not-a-rate caveat are all carried by CLAIM 005, CLAIM 016, CLAIM 037 and mirror row 040.",
+   "live_elements": [
+    {
+     "element": "**`CLAIM 037`'s headline clause *«explicitly absent in Wwox-null mice»* is DELETED as false**",
+     "concerns": "CLAIM 037",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 037",
+      "quote": "`NOT_REPORTED ≠ ABSENT`, and the old negative was a survey artefact."
+     }
+    },
+    {
+     "element": "**`CLAIM 005`'s prohibition is RETARGETED, not deleted** — it now bans asserting *epileptogenesis as a process*",
+     "concerns": "CLAIM 005",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 005",
+      "quote": "**No canonical statement may assert EPILEPTOGENESIS — the *process* of acquiring an enduring predisposition to spontaneous recurrent seizures — in ANY WWOX model, because no study has measured that process:**"
+     }
+    },
+    {
+     "element": "**`CLAIM 040` added** (neuronal WWOX restoration suppresses SWD to `ns` versus WT)",
+     "concerns": "CLAIM 040",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 040)",
+      "quote": "`n=5`/group, single channel, no post-surgical recovery interval, P14–P21 only"
+     }
+    },
+    {
+     "element": "`CLAIM 016` gains a cross-reference and a floor-not-a-rate caveat",
+     "concerns": "CLAIM 016",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 016",
+      "quote": "**un pavimento, non un tasso.** Il braccio PTZ/pilocarpina è invece protocollato (Racine, 60 min, tre genotipi)."
+     }
+    },
+    {
+     "element": "**Four axes are kept separate throughout: spontaneous seizures · provoked susceptibility · susceptibility as a threshold · formal epileptogenesis**",
+     "concerns": "CLAIM 005",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 005",
+      "quote": "**Four axes must not be merged: spontaneous seizures · provoked susceptibility · seizure susceptibility as a threshold · formal epileptogenesis.**"
+     }
+    },
+    {
+     "element": "`NOT_REPORTED ≠ ABSENT` preserved and dated",
+     "concerns": "CLAIM 037",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 037",
+      "quote": "`NOT_REPORTED ≠ ABSENT`, and the old negative was a survey artefact."
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H015",
+   "class": "A",
+   "why": "Both retired absolutes and the CLAIM 039 double negative are present in the claims and the mirror.",
+   "live_elements": [
+    {
+     "element": "*haploinsufficiency is not deleterious* is now bounded by its endpoint class",
+     "concerns": "CLAIM 032",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 032)",
+      "quote": "Una copia di WWOX conserva alcuni endpoint osservati, ma non definisce una soglia terapeutica del SNC"
+     }
+    },
+    {
+     "element": "*proteina assente* is now *proteina non rilevata*",
+     "concerns": "CLAIM 030; CLAIM 019",
+     "represented_at": {
+      "where": "L",
+      "locator": "Genotype interpretation rules — Worked example A",
+      "quote": "the transcript is normal and protein is not detected"
+     }
+    },
+    {
+     "element": "`CLAIM 039`'s cerebellar limb now states that **neither evidence stream establishes nor excludes** a cerebellar contribution",
+     "concerns": "CLAIM 039",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 039)",
+      "quote": "neither evidence stream establishes nor excludes a cerebellar contribution"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H016",
+   "class": "A",
+   "why": "This stacked note's live statements — the lithium genotype boundary, the non-cell-autonomous bound, the traced imported-premise chain, the four claims added in observation and the corrected PAPER 021 reading — are all present in the claims, the mirror and BLOCK 1; the promotions, duplicate resolutions and mirror-desync history are provenance.",
+   "live_elements": [
+    {
+     "element": "il litio ha soppresso le crisi da PTZ in tutti e tre i genotipi, wild-type incluso",
+     "concerns": "CLAIM 016",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 016",
+      "quote": "**il litio ha soppresso le crisi da PTZ in TUTTI E TRE i genotipi, wild-type incluso** (Fig. 7d"
+     }
+    },
+    {
+     "element": "`CLAIM 003` riceve il confine di *«non-cell-autonoma»*: è una componente, non l'intero fenomeno",
+     "concerns": "CLAIM 003",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 003)",
+      "quote": "Neuronal WWOX deletion → non-cell-autonomous hypomyelination"
+     }
+    },
+    {
+     "element": "il g-ratio normalizza, gli assoni non mielinizzati no",
+     "concerns": "CLAIM 004",
+     "represented_at": {
+      "where": "L",
+      "locator": "Gene therapy context — Repudi 2021 *EMBO*",
+      "quote": "those brackets are drawn WT-vs-KO and KO-vs-rescued, never WT-vs-rescued"
+     }
+    },
+    {
+     "element": "epileptogenesis is not measured there at all",
+     "concerns": "CLAIM 005",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 005",
+      "quote": "the only brain measurement in that paper is organ weight"
+     }
+    },
+    {
+     "element": "**Wwox-null mice show no epilepsy** ... Two citation hops had converted an explicit negative about a rat into a positive assertion about a mouse",
+     "concerns": "CLAIM 005; CLAIM 037",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 037",
+      "quote": "`NOT_REPORTED ≠ ABSENT`, and the old negative was a survey artefact."
+     }
+    },
+    {
+     "element": "**036** (a systemic Wwox-null mouse at P18 is metabolically decompensated, so brain phenotypes in that window carry a quantified confounder)",
+     "concerns": "CLAIM 036",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 036)",
+      "quote": "A systemic Wwox-null mouse at P18 is metabolically decompensated, so any brain phenotype in that window carries a quantified systemic confounder"
+     }
+    },
+    {
+     "element": "**038** (elevated BUN/creatinine recur across models with two competing and untested explanations — renal insufficiency or seizure-driven hypercatabolism)",
+     "concerns": "CLAIM 038",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 038)",
+      "quote": "with two competing explanations, renal insufficiency or seizure-driven hypercatabolism, neither ever tested"
+     }
+    },
+    {
+     "element": "**039** (ataxia at 95% versus 0%, non-cerebellar, the most penetrant phenotype of the `lde` model)",
+     "concerns": "CLAIM 039",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 039)",
+      "quote": "Ataxic gait is the most penetrant phenotype of the rat `lde/lde` model — 95% versus 0%"
+     }
+    },
+    {
+     "element": "`CLAIM 014/015` now state that it contributes early postnatal maturation (PND5–21), not prenatal migration or layering",
+     "concerns": "CLAIM 014; CLAIM 015",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 014)",
+      "quote": "WWOX loss perturbs prenatal cortical development, migration and cortical maturation across species"
+     }
+    },
+    {
+     "element": "its medication caution (*\"Supports caution with strong GABAergic burden\"*) **deleted**",
+     "concerns": "CLAIM 005",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 005)",
+      "quote": "no medication implication"
+     }
+    },
+    {
+     "element": "Degradation withdrawn as a datum and the experimental branches reopened",
+     "concerns": "CLAIM 019",
+     "represented_at": {
+      "where": "L",
+      "locator": "Genotype interpretation rules — Worked example A",
+      "quote": "In homozygous fibroblasts of this exact variant the transcript is normal and protein is not detected. The cause remains **unresolved** — impaired translation, insolubility, or premature degradation."
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H017",
+   "class": "A",
+   "why": "The same retraction and two narrowings as H001, all present in the claims and the mirror; candidate IDs, op counts, the § 7.2 in-place corrections and the cardinality statement are provenance.",
+   "live_elements": [
+    {
+     "element": "The unit is therefore **`UNADJUDICATED`** in both directions; nothing is normalised, `mg/ml` stands exactly as transcribed",
+     "concerns": "CLAIM 038",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 038",
+      "quote": "il token dell'unità **NON è aggiudicato**"
+     }
+    },
+    {
+     "element": "what survives independently of any render is that the values are commensurable with the mouse **only** under a `mg/dL` reading",
+     "concerns": "CLAIM 036; CLAIM 038",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 036",
+      "quote": "**Nessun confronto numerico fra i due modelli è autorizzato** — solo direzione e significatività."
+     }
+    },
+    {
+     "element": "`CLAIM 038`'s title stops asserting creatinine recurrence across the rodent models",
+     "concerns": "CLAIM 038",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 038)",
+      "quote": "creatinine recurrence **`UNDETERMINED`**"
+     }
+    },
+    {
+     "element": "three at zero variance (intellectual disability, ambulation and **axial hypotonia**, 13/13 each), nine discriminating",
+     "concerns": "CLAIM 030",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 030",
+      "quote": "**tre hanno varianza nulla**"
+     }
+    },
+    {
+     "element": "the screening-equivalence question is recorded as an **OPEN boundary**",
+     "concerns": "CLAIM 030",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 030",
+      "quote": "il suo confine resta APERTO"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H018",
+   "class": "A",
+   "why": "Its live content is the withdrawn universal and the CLAIM 030 re-measurement, both in CLAIM 030; the op counts, the deleted residue and the narrative-view edit are provenance.",
+   "live_elements": [
+    {
+     "element": "*«the discordance being survival only»* is false on the Table 1 markup",
+     "concerns": "CLAIM 030",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 030",
+      "quote": "resta **neutra** fra questa tesi e le sue rivali"
+     }
+    },
+    {
+     "element": "exactly three have zero variance, intellectual disability, ambulation and **axial hypotonia**, all 13/13",
+     "concerns": "CLAIM 030",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 030",
+      "quote": "**tre hanno varianza nulla**"
+     }
+    },
+    {
+     "element": "the pair's neutrality follows from the allele-level premise alone and never needed the universal",
+     "concerns": "CLAIM 030",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 030",
+      "quote": "resta **neutra** fra questa tesi e le sue rivali"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H019",
+   "class": "A",
+   "why": "Every scientific correction it records is in the claims or the mirror; the edge census, the created records and the cardinality deltas are provenance.",
+   "live_elements": [
+    {
+     "element": "`CLAIM 030`'s two-tailed `Q230P` pair is **neutral**, not corroborating",
+     "concerns": "CLAIM 030",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 030",
+      "quote": "resta **neutra** fra questa tesi e le sue rivali"
+     }
+    },
+    {
+     "element": "the `mg/ml → mg/dL` factor is **×100**",
+     "concerns": "CLAIM 038",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 038",
+      "quote": "(**×100**, perché 1 dL = 100 ml"
+     }
+    },
+    {
+     "element": "`CLAIM 033`(6a) becomes *non replicata su un test senza eventi* (**one** death among 44 genotyped individuals)",
+     "concerns": "CLAIM 033",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 033",
+      "quote": "**Non replicata, su un test senza eventi:**"
+     }
+    },
+    {
+     "element": "`CLAIM 016`'s mirror row withdraws the abundance datum outright",
+     "concerns": "CLAIM 016",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 016)",
+      "quote": "the abundance datum is **withdrawn** — Fig. 7c is single-lane densitometry, `NOT_TESTED` in both directions"
+     }
+    },
+    {
+     "element": "`CLAIM 025`'s ovarian stratum is disambiguated and its event structure recorded",
+     "concerns": "CLAIM 025",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 025",
+      "quote": "(`n = 228` — **il più numeroso dei cinque strati molecolari**"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H020",
+   "class": "A",
+   "why": "The two withdrawals, two bounds, two endpoint splits and the withdrawn NMD premise are all carried in the claims and the mirror, except the therapeutic score value, which is ledger bookkeeping.",
+   "live_elements": [
+    {
+     "element": "`CLAIM 021`'s gap-junction dependence ... the authors themselves write that CBX *«may not be specific to gap junctions»*",
+     "concerns": "CLAIM 021",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 021)",
+      "quote": "the gap-junction half of the burst dependence is WITHDRAWN as not attributable"
+     }
+    },
+    {
+     "element": "`CLAIM 002`'s immature-GABA *signature* (demoted to `IPOTESI`; ... `KCC2`/`NKCC1`/`gramicidin`/`bumetanide` all 0 on the declared artefact)",
+     "concerns": "CLAIM 002",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 002)",
+      "quote": "the immature/depolarizing-GABA half is `IPOTESI`, not a measured signature"
+     }
+    },
+    {
+     "element": "`CLAIM 024` (for at least one partner, isolated WW1 is sufficient in a HEK293 lysate pull-down, so tandem cooperativity is not required for every interaction)",
+     "concerns": "CLAIM 024",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 024)",
+      "quote": "for at least one partner (ATM) the isolated WW1 domain is sufficient in a HEK293 lysate pull-down, so tandem cooperativity is NOT required for every interaction"
+     }
+    },
+    {
+     "element": "`CLAIM 037` (transferability per axis; the electrographic limb reaches T2 on the text, not on the panel)",
+     "concerns": "CLAIM 037",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 037)",
+      "quote": "**per axis (2026-09-27):** T2 biallelic-loss vulnerability · T2 electrographic epileptiform activity in the mouse null"
+     }
+    },
+    {
+     "element": "`CLAIM 004` and `CLAIM 011`, with the closing `(endpoint × dose × window)` constraint",
+     "concerns": "CLAIM 004; CLAIM 011",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 004",
+      "quote": "**Vincolo di chiusura (endpoint × dose × finestra)"
+     }
+    },
+    {
+     "element": "`CLAIM 035` and `PAPER 056` separate `WWOX388−407` (required for the interaction) from `WWOX388−412` (the conserved motif)",
+     "concerns": "CLAIM 035",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 035)",
+      "quote": "two intervals, separated 2026-09-27"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H021",
+   "class": "A",
+   "why": "Each listed boundary is present in its claim record or mirror row; the candidate counts, the cross-link census and the record creations are provenance.",
+   "live_elements": [
+    {
+     "element": "the abundance assertion is withdrawn and replaced by single-lane `NOT_TESTED` densitometry",
+     "concerns": "CLAIM 016",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 016)",
+      "quote": "the abundance datum is **withdrawn** — Fig. 7c is single-lane densitometry, `NOT_TESTED` in both directions"
+     }
+    },
+    {
+     "element": "K63 as the damage increment rather than the bulk",
+     "concerns": "CLAIM 029",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 029",
+      "quote": "*\"K63 ubiquitination of WWOX on Lys274\"* is **the damage-induced increment, not the bulk**"
+     }
+    },
+    {
+     "element": "`ITCH` as main-text **reduction** provenance",
+     "concerns": "CLAIM 029",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 029",
+      "quote": "the supplement contains no ITCH blot, lane, label or legend on any of its six pages"
+     }
+    },
+    {
+     "element": "reservation (6) — non-replication in the registry cohort ... informative censoring",
+     "concerns": "CLAIM 033",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 033",
+      "quote": "censura informativa, mai affrontata"
+     }
+    },
+    {
+     "element": "45/15/15 denominators, the 13-plus-62 assembly warning",
+     "concerns": "CLAIM 033",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 033",
+      "quote": "**13 pazienti nuovi + 62 dalla letteratura**"
+     }
+    },
+    {
+     "element": "the direction of the ratio–DFS association is not invariant and is declared descriptive by its source",
+     "concerns": "CLAIM 025",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 025",
+      "quote": "*\"these effects are descriptive and hypothesis-generating rather than formally validated prognostic groupings\"*"
+     }
+    },
+    {
+     "element": "no numerical cross-model comparison is authorised",
+     "concerns": "CLAIM 036; CLAIM 038",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 036",
+      "quote": "**Nessun confronto numerico fra i due modelli è autorizzato** — solo direzione e significatività."
+     }
+    },
+    {
+     "element": "with the epileptogenesis prohibition byte-identical",
+     "concerns": "CLAIM 005",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 005",
+      "quote": "**No canonical statement may assert EPILEPTOGENESIS — the *process* of acquiring an enduring predisposition to spontaneous recurrent seizures — in ANY WWOX model, because no study has measured that process:**"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H022",
+   "class": "A",
+   "why": "The audiogenic dataset, every withdrawn clause and the retained prohibition are in CLAIM 037 and CLAIM 005; the audit verdict tallies are process.",
+   "live_elements": [
+    {
+     "element": "that PMID 24369382's body *is not served by any route available here* ... (the body was in `files/` and was read in full on 2026-09-13)",
+     "concerns": "CLAIM 037",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 037",
+      "quote": "`NOT_REPORTED ≠ ABSENT`, and the old negative was a survey artefact."
+     }
+    },
+    {
+     "element": "that a *commentary independently transmits* it (it is the article's own front-matter summary)",
+     "concerns": "CLAIM 037",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 037",
+      "quote": "is **the article's own front-matter summary**"
+     }
+    },
+    {
+     "element": "the mouse lifespan *2–3 settimane* against the source's *3 to 4 weeks maximum*",
+     "concerns": "CLAIM 037",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 037",
+      "quote": "*«a short lifespan of only 3 to 4 weeks maximum»*"
+     }
+    },
+    {
+     "element": "**3 of 8** knock-outs at 16 days ... **0 of 8** wild types of matched age and background; handling also induced seizures *on some occasions*",
+     "concerns": "CLAIM 037",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 037)",
+      "quote": "wild-type comparator 0/8; handling also provoked seizures, so acoustic specificity is not established"
+     }
+    },
+    {
+     "element": "**The kindling-like progression remains documented only in the rat.**",
+     "concerns": "CLAIM 037",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 037)",
+      "quote": "T3 kindling-like progression (rat only)"
+     }
+    },
+    {
+     "element": "*Seizures in the Wwox literature are a rat `lde/lde` phenotype* is withdrawn",
+     "concerns": "CLAIM 005",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 005",
+      "quote": "the sentence *«Seizures in the Wwox literature are a rat `lde/lde` phenotype»* is **withdrawn as false**"
+     }
+    },
+    {
+     "element": "**Its prohibition on asserting epileptogenesis as a measured process is untouched**",
+     "concerns": "CLAIM 005",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 005",
+      "quote": "**No canonical statement may assert EPILEPTOGENESIS — the *process* of acquiring an enduring predisposition to spontaneous recurrent seizures — in ANY WWOX model, because no study has measured that process:**"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H023",
+   "class": "A",
+   "why": "Its two scientific corrections are in CLAIM 016 and CLAIM 011; the locator re-derivations, the mirror rewrite and the changelog ordering are provenance, and the displaced ketogenic proposition survives in BLOCK 1.",
+   "live_elements": [
+    {
+     "element": "`CLAIM 016`'s evidence boundary now cites the lithium panel as Fig. 7d and names the ethosuximide panel (Fig. 7b) as a distinct experiment",
+     "concerns": "CLAIM 016",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 016",
+      "quote": "**il litio ha soppresso le crisi da PTZ in TUTTI E TRE i genotipi, wild-type incluso** (Fig. 7d"
+     }
+    },
+    {
+     "element": "`CLAIM 011`'s flag stops asserting that the resolving reading is `partial_fulltext_read` ... while the record stays `flagged for review`",
+     "concerns": "CLAIM 011",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 011)",
+      "quote": "**flagged for review**"
+     }
+    },
+    {
+     "element": "an unrelated ketogenic-diet proposition, which survives in this file's BLOCK 1 prose",
+     "concerns": "BLOCK 1 — DATA",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 1 §0 DATA (WWOX literature)",
+      "quote": "Ketogenic diet associated with seizure improvement in 3/5 WOREE patients (Chong 2023)."
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H024",
+   "class": "A",
+   "why": "Both records' content is in CLAIM 007 and CLAIM 041 with their limits; the receipts and audit reference are provenance.",
+   "live_elements": [
+    {
+     "element": "CLAIM 007 receives audited WW1/WBP-1/SIMPLE antecedent with tissue/genotype limits",
+     "concerns": "CLAIM 007",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 007)",
+      "quote": "WW1/WBP-1/SIMPLE biochemistry is an independent non-neural antecedent"
+     }
+    },
+    {
+     "element": "CLAIM 041 records the P47T Purkinje/basket marker contrast at both sampled ages, without a progression claim",
+     "concerns": "CLAIM 041",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 041)",
+      "quote": "basket-cell genotype tests nonsignificant at both ages, with no within-mutant progression test"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H025",
+   "class": "A",
+   "why": "The reconciled CLAIM 032 limits and the explicit absence of a measured CNS rescue are in the claim and the mirror row.",
+   "live_elements": [
+    {
+     "element": "CLAIM 032 reconciled with PAPER 078 spontaneous tumours, PAPER 098 hypomorph survival/protein compartments and PAPER 107 conditional mammary limits",
+     "concerns": "CLAIM 032",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 032)",
+      "quote": "tumori spontanei negli eterozigoti e ipomorfo omozigote vitale ma compromesso delimitano l’inferenza"
+     }
+    },
+    {
+     "element": "The dose/mosaicism inference is explicitly unmeasured for CNS rescue",
+     "concerns": "CLAIM 032",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 032)",
+      "quote": "non definisce una soglia terapeutica del SNC"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H026",
+   "class": "A",
+   "why": "The two bounded B-cell observations are in CLAIM 029 and its mirror row; the duplicate repair is bookkeeping.",
+   "live_elements": [
+    {
+     "element": "CLAIM 029 receives two separate murine B-cell observations, each with model, comparator and mechanism limits",
+     "concerns": "CLAIM 029",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 029)",
+      "quote": "whole-body-null B-cell repair junctions shift without greater local mutation frequency, and MYC-driven knockout tumours show context-limited instability"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H027",
+   "class": "A",
+   "why": "The scoping of CLAIM 026 to co-association plus annotation with an untested coupling is in the claim, the mirror and the architecture paragraph.",
+   "live_elements": [
+    {
+     "element": "CLAIM 026 scoped to co-association plus annotation, coupling kept as untested hypothesis",
+     "concerns": "CLAIM 026",
+     "represented_at": {
+      "where": "L",
+      "locator": "Mechanistic architecture — Metabolic branch refinement",
+      "quote": "**Functional trafficking–metabolism coupling has not been measured**"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H028",
+   "class": "A",
+   "why": "The P47T abundance and binding qualifications are in CLAIM 030 / CLAIM 033 and mirror row 007; the receipt, audit and candidate references are provenance.",
+   "live_elements": [
+    {
+     "element": "protein present and similar to controls on visual inspection, not quantified",
+     "concerns": "CLAIM 030; CLAIM 033",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 030)",
+      "quote": "In WWOX, severity tracks **residual function**, not protein abundance"
+     }
+    },
+    {
+     "element": "binding lost in vitro to one PPPY peptide (GST-WW fusion constructs)",
+     "concerns": "CLAIM 007; CLAIM 030",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 007)",
+      "quote": "P47T abolishes or near-abolishes WWOX recovery by two PPPY peptides in vitro"
+     }
+    },
+    {
+     "element": "milder presentation as the authors' hedged attribution",
+     "concerns": "CLAIM 030",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 030)",
+      "quote": "In WWOX, severity tracks **residual function**, not protein abundance"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H029",
+   "class": "A",
+   "why": "Both narrowings and their statistical limits are in CLAIM 006 and CLAIM 007 and their mirror rows; the candidate dispositions and ledger alignments are provenance.",
+   "live_elements": [
+    {
+     "element": "astrogliosis progresses, microglial progression is morphological only, microglial abundance progression is untested",
+     "concerns": "CLAIM 006",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 006)",
+      "quote": "microglial progression shown for morphology only"
+     }
+    },
+    {
+     "element": "evidence boundary records pseudoreplication (n = 3 mice), two time points, no multiplicity correction, no declared blinding",
+     "concerns": "CLAIM 006",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 006)",
+      "quote": "T3 ⚠️ genotype caution"
+     }
+    },
+    {
+     "element": "`CLAIM 007` title and summary bound to two PPPY oligopeptides, one tissue, n = 2",
+     "concerns": "CLAIM 007",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 007)",
+      "quote": "P47T abolishes or near-abolishes WWOX recovery by two PPPY peptides in vitro"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H030",
+   "class": "A",
+   "why": "The deletion, the retarget, the four axes, CLAIM 040 and the retained rat caveats are all present in CLAIM 005, CLAIM 016, CLAIM 037, CLAIM 040 and their mirror rows.",
+   "live_elements": [
+    {
+     "element": "*«…and it is explicitly absent in Wwox-null mice»* **deleted as false**",
+     "concerns": "CLAIM 037",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 037",
+      "quote": "`NOT_REPORTED ≠ ABSENT`, and the old negative was a survey artefact."
+     }
+    },
+    {
+     "element": "keeping the true part — the audiogenic/kindling phenotype is rat-specific ⚠️ *(Audiogenic limb withdrawn by WM_v6.0, 2026-09-27; kindling-like still rat-only.)*",
+     "concerns": "CLAIM 037",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 037)",
+      "quote": "T3 kindling-like progression (rat only)"
+     }
+    },
+    {
+     "element": "the clause *«i topi potrebbero morire prima di convulsionare»* is **deleted as falsified**",
+     "concerns": "CLAIM 037",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 037",
+      "quote": "*«a short lifespan of only 3 to 4 weeks maximum»*"
+     }
+    },
+    {
+     "element": "**Every rat caveat is retained verbatim** — 95% female-only, 34% is a floor, vacuolisation unmatched, single laboratory",
+     "concerns": "CLAIM 039; CLAIM 037",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 039)",
+      "quote": "**endpoint: light-microscopy histology at ~28 d, no quantitative motor test**"
+     }
+    },
+    {
+     "element": "It now bans asserting **epileptogenesis as a process** in any WWOX model",
+     "concerns": "CLAIM 005",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 005",
+      "quote": "**No canonical statement may assert EPILEPTOGENESIS — the *process* of acquiring an enduring predisposition to spontaneous recurrent seizures — in ANY WWOX model, because no study has measured that process:**"
+     }
+    },
+    {
+     "element": "the spontaneous-seizure observation is **opportunistic husbandry plus one video — a floor, not a rate**",
+     "concerns": "CLAIM 016",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 016",
+      "quote": "**un pavimento, non un tasso.** Il braccio PTZ/pilocarpina è invece protocollato (Racine, 60 min, tre genotipi)."
+     }
+    },
+    {
+     "element": "**New `CLAIM 040`**: neuronal AAV9-hSynI-hWWOX restores SWD to `ns` versus WT (`n=5`/group, single channel, no recovery interval, P14–P21 ...)",
+     "concerns": "CLAIM 040",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 040)",
+      "quote": "`n=5`/group, single channel, no post-surgical recovery interval, P14–P21 only"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H031",
+   "class": "A",
+   "why": "The retired absolutes, the detection-floor rewording and the CLAIM 039 double negative are in the claims and the mirror; the stub promotion and the operator deferral are provenance.",
+   "live_elements": [
+    {
+     "element": "**the state of the evidence is «insufficient for a general conclusion of no phenotype», not «no phenotype»**",
+     "concerns": "CLAIM 032",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 032)",
+      "quote": "Una copia di WWOX conserva alcuni endpoint osservati, ma non definisce una soglia terapeutica del SNC"
+     }
+    },
+    {
+     "element": "carry `PREMISE: NOBODY_LOOKED` on cognition, EEG and network excitability",
+     "concerns": "CLAIM 032",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 032)",
+      "quote": "(`PREMISE: NOBODY_LOOKED`)"
+     }
+    },
+    {
+     "element": "*proteina assente* → *proteina non rilevata al Western blot*, `PREMISE: DETECTION_FLOOR`",
+     "concerns": "CLAIM 030; CLAIM 019",
+     "represented_at": {
+      "where": "L",
+      "locator": "Genotype interpretation rules — Worked example A",
+      "quote": "the transcript is normal and protein is not detected"
+     }
+    },
+    {
+     "element": "records that **neither evidence stream establishes nor excludes a cerebellar contribution**",
+     "concerns": "CLAIM 039",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 039)",
+      "quote": "neither evidence stream establishes nor excludes a cerebellar contribution"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H032",
+   "class": "A",
+   "why": "Its live content — the CLAIM 023 narrowing and the boundaries added to CLAIM 002, 017, 019, 030 — is in the architecture section, the claims and the mirror; the record counts and back-fills are provenance.",
+   "live_elements": [
+    {
+     "element": "**`CLAIM 023` NARROWED** — an untested phosphorylation↔rerouting coupling removed from its title and from this mirror",
+     "concerns": "CLAIM 023",
+     "represented_at": {
+      "where": "L",
+      "locator": "Mechanistic architecture — WWOX as routing / scaffold protein",
+      "quote": "**no experiment in it manipulates phosphorylation and measures localisation**"
+     }
+    },
+    {
+     "element": "`CLAIM 002` gains a marker-selective cortical-layering boundary and two adjacent nulls",
+     "concerns": "CLAIM 002",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 002)",
+      "quote": "the immature/depolarizing-GABA half is `IPOTESI`, not a measured signature"
+     }
+    },
+    {
+     "element": "`CLAIM 030` gains the codon-47 genotype-matching boundary and an independent but non-independent corroboration",
+     "concerns": "CLAIM 030",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 030",
+      "quote": "resta **neutra** fra questa tesi e le sue rivali"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H033",
+   "class": "C",
+   "why": "Counts of candidates and records, a list of which records were corrected or qualified, and a stale-candidate recognition — provenance only, with no scientific statement of its own.",
+   "live_elements": []
+  },
+  {
+   "uid": "H034",
+   "class": "A",
+   "why": "Its live content is the lithium genotype boundary, the CLAIM 003 non-cell-autonomous bound and the Figure 3B threshold; the mirror-desync narrative, promotions and duplicate-pointer repair are provenance.",
+   "live_elements": [
+    {
+     "element": "lithium suppressed PTZ seizures in all three genotypes, wild type included",
+     "concerns": "CLAIM 016",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 016",
+      "quote": "**il litio ha soppresso le crisi da PTZ in TUTTI E TRE i genotipi, wild-type incluso** (Fig. 7d"
+     }
+    },
+    {
+     "element": "`CLAIM 003` the *non-cell-autonomous* boundary: a component, not the whole phenomenon",
+     "concerns": "CLAIM 003",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 003)",
+      "quote": "Neuronal WWOX deletion → non-cell-autonomous hypomyelination"
+     }
+    },
+    {
+     "element": "`CLAIM 011` **stays** `flagged for review` with the Figure 3B threshold written into the three narrative lines that repeated *«dose-dependent»*",
+     "concerns": "CLAIM 011",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 011)",
+      "quote": "`dose-dependent` descrive un continuo dove la Figura 3B mostra una SOGLIA"
+     }
+    },
+    {
+     "element": "`CLAIM 004` **returns** to `consolidated baseline`, its flag resolved ... with the missing wild-type comparator written into the claim",
+     "concerns": "CLAIM 004",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 004)",
+      "quote": "il confronto contro il WT o non è tracciato, o è significativo contro il rescue"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H035",
+   "class": "A",
+   "why": "The traced premise chain, the four new claims and the PAPER 021 reading correction are all carried by CLAIM 005, CLAIM 036–039 and mirror rows 014/036/038/039.",
+   "live_elements": [
+    {
+     "element": "PMID 19936220 measures no epileptogenesis in any form ... its only brain measurement is organ weight",
+     "concerns": "CLAIM 005",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 005",
+      "quote": "the only brain measurement in that paper is organ weight"
+     }
+    },
+    {
+     "element": "PMID 19500159 states in three places, plus a Table 2 whose `Epilepsy` row is **empty for both mouse models**, that Wwox-null **mice show no epilepsy**",
+     "concerns": "CLAIM 005; CLAIM 037",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 037",
+      "quote": "`NOT_REPORTED ≠ ABSENT`, and the old negative was a survey artefact."
+     }
+    },
+    {
+     "element": "**036** systemic metabolic decompensation of the P18 mouse null as a quantified confounder for any brain phenotype in that window",
+     "concerns": "CLAIM 036",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 036)",
+      "quote": "A systemic Wwox-null mouse at P18 is metabolically decompensated, so any brain phenotype in that window carries a quantified systemic confounder"
+     }
+    },
+    {
+     "element": "**038** the recurring BUN/creatinine signature with **two competing untested explanations**, renal insufficiency versus seizure-driven hypercatabolism",
+     "concerns": "CLAIM 038",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 038)",
+      "quote": "with two competing explanations, renal insufficiency or seizure-driven hypercatabolism, neither ever tested"
+     }
+    },
+    {
+     "element": "**039** ataxia at 95% versus 0%, non-cerebellar, the most penetrant phenotype of the model",
+     "concerns": "CLAIM 039",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 039)",
+      "quote": "Ataxic gait is the most penetrant phenotype of the rat `lde/lde` model — 95% versus 0%"
+     }
+    },
+    {
+     "element": "CLAIM 014/015 now state it contributes early postnatal maturation (PND5–21), not prenatal assembly",
+     "concerns": "CLAIM 014; CLAIM 015",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 014)",
+      "quote": "WWOX loss perturbs prenatal cortical development, migration and cortical maturation across species"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H036",
+   "class": "A",
+   "why": "The CLAIM 005 narrowing, the deleted caution and the recorded evidence boundary are in CLAIM 005 and its mirror row; the identifier normalisation and integrity audit are provenance.",
+   "live_elements": [
+    {
+     "element": "its clinical meaning *\"Supports caution with strong GABAergic burden\"* **deleted**: the study tests no drug, no GABA concentration, no inhibitory current and no E/I ratio",
+     "concerns": "CLAIM 005",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 005)",
+      "quote": "no medication implication"
+     }
+    },
+    {
+     "element": "PV is lower in DG, CA1 **and the whole hippocampus (−44%)**, NPY **only in DG**",
+     "concerns": "CLAIM 005",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 005)",
+      "quote": "Reduced interneuron **markers** (PV whole-hippocampus + DG/CA1; NPY **DG only**)"
+     }
+    },
+    {
+     "element": "Early death and epileptogenesis in this model are **imported premises** ... not re-measured here",
+     "concerns": "CLAIM 005",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 005",
+      "quote": "the only brain measurement in that paper is organ weight"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H037",
+   "class": "A",
+   "why": "The new claims 034/035, the CLAIM 016 reframing, the CLAIM 009 counter-directional note and the SDR no-touch zone are all in the claims, the mirror and the architecture SDR section.",
+   "live_elements": [
+    {
+     "element": "**034** the sign of WWOX↔ROS is context-dependent",
+     "concerns": "CLAIM 034",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 034)",
+      "quote": "the sign of WWOX↔ROS is context-dependent, not monotonic"
+     }
+    },
+    {
+     "element": "**035** WWOX is a residue-mapped direct inhibitor of GSK3β",
+     "concerns": "CLAIM 035",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 035)",
+      "quote": "WWOX is a direct, residue-mapped inhibitor of GSK3β via an Axin-like SDR motif; S9-independent, Tau-dependent output"
+     }
+    },
+    {
+     "element": "**016** enriched: reframed from \"GSK3β elevated\" to \"GSK3β de-repressed\", with a `PREMISE_TAG` on the abundance-reports-activity assumption",
+     "concerns": "CLAIM 016",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 016)",
+      "quote": "now framed as **de-repression** (loss of a physical brake)"
+     }
+    },
+    {
+     "element": "**009** carries a mandatory counter-directional note and stays `in observation`",
+     "concerns": "CLAIM 009",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 009)",
+      "quote": "⚠️ counter-directional evidence recorded (CLAIM 034)"
+     }
+    },
+    {
+     "element": "new section on measurable SDR function and the 388–407/L404 no-touch zone",
+     "concerns": "Mechanistic architecture — SDR-domain function",
+     "represented_at": {
+      "where": "L",
+      "locator": "Mechanistic architecture — SDR-domain function is measurable",
+      "quote": "the canonical ERLIQ 402–406 degron contains a residue required for a demonstrated function"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H038",
+   "class": "C",
+   "why": "A canonical-synchronisation row: a mirror restoration and a source-pointer correction, with the row itself stating that no scientific or clinical-policy content changed.",
+   "live_elements": []
+  },
+  {
+   "uid": "H039",
+   "class": "C",
+   "why": "A pointer row for the MAJOR baseline reversal whose content is carried by the repair section below it; the row itself holds only date, version and batch identity.",
+   "live_elements": []
+  },
+  {
+   "uid": "H040",
+   "class": "A",
+   "why": "The three new claims and the CLAIM 019 / CLAIM 001 dispositions are in the mirror rows and the Worked example; the paper additions and identifier normalisation are provenance.",
+   "live_elements": [
+    {
+     "element": "**030** severity tracks residual function, not abundance",
+     "concerns": "CLAIM 030",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 030)",
+      "quote": "In WWOX, severity tracks **residual function**, not protein abundance"
+     }
+    },
+    {
+     "element": "**031** it is a DEE, not an EE",
+     "concerns": "CLAIM 031",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 031)",
+      "quote": "It is a **DEE, not an EE**: seizure control does not save development"
+     }
+    },
+    {
+     "element": "**032** haploinsufficiency is not deleterious",
+     "concerns": "CLAIM 032",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 032)",
+      "quote": "Una copia di WWOX conserva alcuni endpoint osservati, ma non definisce una soglia terapeutica del SNC"
+     }
+    },
+    {
+     "element": "CLAIM 019 updated (Johannsen promotes to DATO only the endpoint `normal transcript + protein not detected`)",
+     "concerns": "CLAIM 019",
+     "represented_at": {
+      "where": "L",
+      "locator": "Genotype interpretation rules — Worked example A",
+      "quote": "In homozygous fibroblasts of this exact variant the transcript is normal and protein is not detected. The cause remains **unresolved** — impaired translation, insolubility, or premature degradation."
+     }
+    },
+    {
+     "element": "CLAIM 001 corroborated on both sides, `conflicting evidence` confirmed",
+     "concerns": "CLAIM 001",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 001)",
+      "quote": "**conflicting evidence**"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H041",
+   "class": "A",
+   "why": "The retraction and the dependency exclusion are a live source-integrity constraint, and the WM's live Integrity-exclusion paragraph states both.",
+   "live_elements": [
+    {
+     "element": "primary PMID 28151481 marked retracted/invalidated in tracking; the dependent review PMID 28045433 downgraded to `background only / dependency-contaminated`",
+     "concerns": "Mechanistic architecture — Integrity exclusion",
+     "represented_at": {
+      "where": "L",
+      "locator": "Mechanistic architecture — Integrity exclusion (source-integrity discipline, worked example)",
+      "quote": "the primary (PMID 28151481) was retracted in 2022 for manipulation/reuse of western-blot controls"
+     }
+    },
+    {
+     "element": "the line excluded from corroboration of the HIF1α/WWOX branch",
+     "concerns": "Mechanistic architecture — Integrity exclusion",
+     "represented_at": {
+      "where": "L",
+      "locator": "Mechanistic architecture — Integrity exclusion (source-integrity discipline, worked example)",
+      "quote": "The WWOX/HIF1α axis stands only on the independent sources already registered."
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H042",
+   "class": "C",
+   "why": "Source normalisation only, explicitly no version bump: which claim was anchored to which paper record — audit-trail provenance.",
+   "live_elements": []
+  },
+  {
+   "uid": "H043",
+   "class": "C",
+   "why": "Metadata reconciliation only (preprint → peer-reviewed, stub → full-text-reviewed), explicitly no bump and no new content.",
+   "live_elements": []
+  },
+  {
+   "uid": "H044",
+   "class": "C",
+   "why": "A wikilink retrofit that promotes a corpus record and closes a missing-wikilink warning — structural bookkeeping.",
+   "live_elements": []
+  },
+  {
+   "uid": "H045",
+   "class": "A",
+   "why": "Its live content is the gene-therapy design context and the CLAIM 025 nuance, all present in the Gene therapy context section and the mirror; the queued primaries are process.",
+   "live_elements": [
+    {
+     "element": "gene-therapy context gains design principles + DRG safety",
+     "concerns": "Gene therapy context",
+     "represented_at": {
+      "where": "L",
+      "locator": "Gene therapy context",
+      "quote": "**Safety caveat:** DRG / peripheral-organ dose-limiting toxicity at high systemic AAV dose"
+     }
+    },
+    {
+     "element": "dCas9-hypomorphic option",
+     "concerns": "Gene therapy context",
+     "represented_at": {
+      "where": "L",
+      "locator": "Gene therapy context",
+      "quote": "**Epigenetic option (future / ESPANSIONE):** dCas9/CRISPRa upregulation of endogenous WWOX for **hypomorphic** states"
+     }
+    },
+    {
+     "element": "first-in-human (background)",
+     "concerns": "Gene therapy context",
+     "represented_at": {
+      "where": "L",
+      "locator": "Gene therapy context",
+      "quote": "a WWOX gene therapy reported as administered to an infant with WWOX epilepsy (ICV route)"
+     }
+    },
+    {
+     "element": "CLAIM 025 nuanced (HIF1α-independent tension)",
+     "concerns": "CLAIM 025",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 025)",
+      "quote": "WWOX/HIF1A ratio as a systems-level state marker linking glycolysis, inflammation and Wnt-adjacent signalling"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H046",
+   "class": "C",
+   "why": "Status-vocabulary normalisation across registry and mirror: which statuses were renamed to the standard vocabulary, i.e. superseded states and mechanics.",
+   "live_elements": []
+  },
+  {
+   "uid": "H047",
+   "class": "C",
+   "why": "A lint supplement restoring one mirror row, with the row itself recording no content change.",
+   "live_elements": []
+  },
+  {
+   "uid": "H048",
+   "class": "A",
+   "why": "Both items are live model content and both stand in the live architecture prose and the mirror rows.",
+   "live_elements": [
+    {
+     "element": "CLAIM 028 refined with paper 218 quantitative p73-binding support",
+     "concerns": "CLAIM 028",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 028)",
+      "quote": "expression level ≠ uniform benefit"
+     }
+    },
+    {
+     "element": "ATM/DDR axis added as CLAIM 029",
+     "concerns": "CLAIM 029",
+     "represented_at": {
+      "where": "L",
+      "locator": "Mechanistic architecture — Cross-pathway interpretive principle",
+      "quote": "WWOX may also contribute directly to **ATM-linked DNA-damage-response competence** and genome-stability maintenance."
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H049",
+   "class": "C",
+   "why": "A record that the Mechanistic Architecture section was added and BLOCK 2 expanded — the sections it names are the live file; the row itself is edit history.",
+   "live_elements": []
+  },
+  {
+   "uid": "H050",
+   "class": "A",
+   "why": "It records three live dispositions that the mirror still carries.",
+   "live_elements": [
+    {
+     "element": "CLAIM 015 promoted to consolidated baseline",
+     "concerns": "CLAIM 015",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 015)",
+      "quote": "consolidated baseline"
+     }
+    },
+    {
+     "element": "CLAIM 016 reframed as amplifier-node logic",
+     "concerns": "CLAIM 016",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 016)",
+      "quote": "emerging node"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H051",
+   "class": "C",
+   "why": "A bootstrap row: which claims were added to the mirror and which interpretation was introduced — process, and its content is the live file.",
+   "live_elements": []
+  },
+  {
+   "uid": "H052",
+   "class": "A",
+   "why": "Its listed additions are live model content that the file still carries in BLOCK 1, BLOCK 3, the genotype rules and the mirror.",
+   "live_elements": [
+    {
+     "element": "CLAIM 001 → conflicting evidence",
+     "concerns": "CLAIM 001",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 001)",
+      "quote": "**conflicting evidence**"
+     }
+    },
+    {
+     "element": "genotype-class framework added",
+     "concerns": "Genotype interpretation rules",
+     "represented_at": {
+      "where": "L",
+      "locator": "Genotype interpretation rules (method)",
+      "quote": "**Genotype classes** (Gao 2025): N/N · N/M · M/M."
+     }
+    },
+    {
+     "element": "surveillance expanded (respiratory, ophthalmic, EEG priority)",
+     "concerns": "BLOCK 1 §2 SURVEILLANCE pathways",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 1 §2 SURVEILLANCE pathways",
+      "quote": "**EEG remains more sensitive than early MRI** for network-severity assessment"
+     }
+    },
+    {
+     "element": "Q230P SDR mechanism added to genotype rules",
+     "concerns": "Genotype interpretation rules — Worked example A",
+     "represented_at": {
+      "where": "L",
+      "locator": "Genotype interpretation rules — Worked example A",
+      "quote": "The HSC70/lysosome read-across from P252A is a **bridge hypothesis**, not a demonstrated mechanism."
+     }
+    },
+    {
+     "element": "BLOCK 3 vigabatrin note updated",
+     "concerns": "BLOCK 3 — flowchart logic summary",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 3 — flowchart logic summary",
+      "quote": "apply strong caution; conflicting evidence on vigabatrin (VABAM risk vs occasional seizure reduction); position unchanged"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H053",
+   "class": "C",
+   "why": "A pre-scan row recording that two claims were added to the mirror — process only.",
+   "live_elements": []
+  },
+  {
+   "uid": "H054",
+   "class": "C",
+   "why": "\"Baseline established\" — the origin row of the version series, provenance only.",
+   "live_elements": []
+  },
+  {
+   "uid": "H055",
+   "class": "C",
+   "why": "A framing sentence about what kind of error the batch's two withdrawals were — commentary on the repair, not a statement a Scientist reasons from today.",
+   "live_elements": []
+  },
+  {
+   "uid": "H056",
+   "class": "C",
+   "why": "A section label introducing the withdrawal list.",
+   "live_elements": []
+  },
+  {
+   "uid": "H057",
+   "class": "A",
+   "why": "The gap-junction withdrawal, its non-specificity ground and the explicit 'not uninvolved' guard are carried by mirror row 021 and by CLAIM 021's own record.",
+   "live_elements": [
+    {
+     "element": "*Bursting depends on NMDAR **and gap junction** activity* ... **does not reverse on washout**, and the authors write that CBX *«may not be specific to gap junctions»*",
+     "concerns": "CLAIM 021",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 021)",
+      "quote": "the gap-junction half of the burst dependence is WITHDRAWN as not attributable"
+     }
+    },
+    {
+     "element": "**This is a withdrawal of attribution, not a claim that gap junctions are uninvolved — occlusion was never tested.**",
+     "concerns": "CLAIM 021",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 021)",
+      "quote": "Not «uninvolved» — untested."
+     }
+    },
+    {
+     "element": "In a preparation where d-APV **alone** eliminates the burst",
+     "concerns": "CLAIM 021",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 021",
+      "quote": "*«Blocking glutamatergic neurotransmission with d-APV (50 μM) eliminated the spontaneous bursting events»*"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H058",
+   "class": "A",
+   "why": "The demotion of the GABA signature, its zero-occurrence ground and the competing amplitude account are in mirror row 002 and in BLOCK 1's GABA lines.",
+   "live_elements": [
+    {
+     "element": "*firma GABAergica immatura* — the word *firma* means a measured pattern, and there is no WWOX measurement under it",
+     "concerns": "CLAIM 002",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 002)",
+      "quote": "the immature/depolarizing-GABA half is `IPOTESI`, not a measured signature"
+     }
+    },
+    {
+     "element": "Demoted to `IPOTESI` with `PREMISE: DEFAULT_FROM_TEXTBOOK`, beside the corpus's one functional inhibitory measurement, which locates the defect in **amplitude**, not polarity",
+     "concerns": "CLAIM 002; BLOCK 1 §0 INFERENCE",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 1 §0 INFERENCE",
+      "quote": "inhibitory **amplitude hypofunction** (measured, in a WWOX system) versus **depolarizing GABA** (`IPOTESI`, no WWOX datum). Only the first has a measurement."
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H059",
+   "class": "B",
+   "why": "The downgrade of the quoted nonsense-mediated-decay finding to an abstract/figure-legend inference against the body's own disjunction is a live evidence downgrade, and it lives only on a paper record — neither the WM live sections nor any claim record carries it.",
+   "live_elements": [
+    {
+     "element": "*«the deletion led to nonsense-mediated decay»* is the abstract's and a figure legend's inference from junction qPCR; the **body** says *«suggesting that the two longer transcripts were not expressed or were degraded»*, and no translation block was used on any freely reachable surface",
+     "concerns": "Genotype interpretation rules — Worked example B (a canonical splice-acceptor variant)",
+     "missing_because": "absent",
+     "proposed_destination": "Genotype interpretation rules — Worked example B",
+     "proposed_text": "A reported nonsense-mediated decay is the abstract's and a figure legend's inference from junction qPCR: the body says *«suggesting that the two longer transcripts were not expressed or were degraded»*, and no translation block was used on any freely reachable surface."
+    }
+   ]
+  },
+  {
+   "uid": "H060",
+   "class": "B",
+   "why": "The withdrawal of the NMD premise that closed the splice axis, its contradiction by the terminal exon, and the proteotoxic flag now applying to both alleles are live and unsourced anywhere a current reader sees: the premise sat in the therapeutic-hypotheses ledger, which is neither (L) nor (C).",
+   "live_elements": [
+    {
+     "element": "**The NMD premise closing the splice axis** ... unsourced, untagged, and contradicted by the architecture (exon 9 is terminal). Replaced by a labelled conditional",
+     "concerns": "Genotype interpretation rules — Worked example B (a canonical splice-acceptor variant)",
+     "missing_because": "absent",
+     "proposed_destination": "Genotype interpretation rules — Worked example B",
+     "proposed_text": "An NMD premise closing the splice axis is unsourced, untagged, and contradicted by the architecture (exon 9 is terminal): it is replaced by a labelled conditional."
+    },
+    {
+     "element": "with the proteotoxic flag now applying to **both** alleles rather than one",
+     "concerns": "Genotype interpretation rules — Worked example B",
+     "missing_because": "absent",
+     "proposed_destination": "Genotype interpretation rules — Worked example B",
+     "proposed_text": "The proteotoxic flag applies to **both** alleles rather than one."
+    }
+   ]
+  },
+  {
+   "uid": "H061",
+   "class": "B",
+   "why": "The distinction it draws — the total-GSK3β measurement exists in Wang 2012 and what is absent is the stated invariance (`NOT_ASSERTED`, not `MEASURE_ABSENT`) — is a live premise-class correction; the only total-GSK3β record at (C) is CLAIM 016's Figure 7c densitometry in a different source, so the element is absent for CLAIM 035.",
+   "live_elements": [
+    {
+     "element": "that Wang 2012 never reports total GSK3β anywhere. Its Figure 1 legend blots and densitometers it. What is absent is the **stated invariance**, not the measurement — `NOT_ASSERTED`, not `MEASURE_ABSENT`",
+     "concerns": "CLAIM 035; Mechanistic architecture — SDR-domain function is measurable",
+     "missing_because": "absent",
+     "proposed_destination": "BLOCK 2 row for CLAIM 035",
+     "proposed_text": "Wang 2012's Figure 1 legend blots and densitometers total GSK3β: what is absent is the **stated invariance**, not the measurement — `NOT_ASSERTED`, not `MEASURE_ABSENT`."
+    }
+   ]
+  },
+  {
+   "uid": "H062",
+   "class": "C",
+   "why": "A section label introducing the bounded-not-reversed list.",
+   "live_elements": []
+  },
+  {
+   "uid": "H063",
+   "class": "A",
+   "why": "The WW1-sufficiency bound and the surviving framework are both in mirror row 024 and in the live Domain-cooperativity paragraph.",
+   "live_elements": [
+    {
+     "element": "for at least one partner (ATM), **isolated WW1 is sufficient in a HEK293 lysate pull-down**, so tandem cooperativity is not required for every WWOX interaction",
+     "concerns": "CLAIM 024",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 024)",
+      "quote": "for at least one partner (ATM) the isolated WW1 domain is sufficient in a HEK293 lysate pull-down, so tandem cooperativity is NOT required for every interaction"
+     }
+    },
+    {
+     "element": "The claim's framework stands; its generality does not",
+     "concerns": "CLAIM 024; Mechanistic architecture — Domain cooperativity",
+     "represented_at": {
+      "where": "L",
+      "locator": "Mechanistic architecture — Domain cooperativity",
+      "quote": "**the presence of two PPxY motifs in a partner does not establish that WW2 is occupied**"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H064",
+   "class": "A",
+   "why": "The per-axis transferability and the text-not-panel distinction, including what is and is not assertable, are carried verbatim in mirror row 037.",
+   "live_elements": [
+    {
+     "element": "transferability is now **per axis**, because the three axes do not have the same evidence",
+     "concerns": "CLAIM 037",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 037)",
+      "quote": "**per axis (2026-09-27):** T2 biallelic-loss vulnerability · T2 electrographic epileptiform activity in the mouse null"
+     }
+    },
+    {
+     "element": "**treated-versus-wild-type equivalence is not assertable; the reduction is**",
+     "concerns": "CLAIM 037",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 037)",
+      "quote": "the Fig 7E pairwise assignment is a declared panel attestation, so the SWD *reduction* is assertable and treated-vs-WT *equivalence* is not"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H065",
+   "class": "A",
+   "why": "The endpoint split and the prohibition on any 'the phenotype is rescued' statement are written into CLAIM 004's closing constraint and mirrored in rows 004 and 011.",
+   "live_elements": [
+    {
+     "element": "endpoints are split and each is cited as `(endpoint × dose × window)`",
+     "concerns": "CLAIM 004; CLAIM 011",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 004",
+      "quote": "**Vincolo di chiusura (endpoint × dose × finestra)"
+     }
+    },
+    {
+     "element": "**No statement of the form *«the phenotype is rescued»* is supported by either record.**",
+     "concerns": "CLAIM 004; CLAIM 011",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 004)",
+      "quote": "il confronto contro il WT o non è tracciato, o è significativo contro il rescue"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H066",
+   "class": "B",
+   "why": "The tumour-surveillance absence is at (C) in CLAIM 032, but the therapeutic reading built on it — a measured efficacy floor with no measured ceiling, on a pro-apoptotic tumour suppressor delivered by a `REVERS 0` vector — exists only in the therapeutic ledger and this history row, so a current WM/claim reader does not see the ceiling statement.",
+   "live_elements": [
+    {
+     "element": "in a dose-ranging study containing **no tumour surveillance** — an absence measured on the text, not on the missing supplement",
+     "concerns": "CLAIM 032",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 032",
+      "quote": "**questo articolo non contiene alcuna sorveglianza tumorale** — assenza misurata su questo artefatto"
+     }
+    },
+    {
+     "element": "A measured efficacy floor with **no measured ceiling**, on a tumour suppressor whose induction is pro-apoptotic, delivered by a vector with `REVERS 0`",
+     "concerns": "Gene therapy context; CLAIM 032",
+     "missing_because": "absent",
+     "proposed_destination": "Gene therapy context",
+     "proposed_text": "The gene-therapy evidence is a measured efficacy floor with **no measured ceiling**, on a tumour suppressor whose induction is pro-apoptotic, delivered by a vector with `REVERS 0`, in a dose-ranging study containing **no tumour surveillance** — an absence measured on the text, not on the missing supplement."
+    }
+   ]
+  },
+  {
+   "uid": "H067",
+   "class": "C",
+   "why": "A section label introducing the unchanged list.",
+   "live_elements": []
+  },
+  {
+   "uid": "H068",
+   "class": "A",
+   "why": "BLOCK 1's own ACTIVE 2 lines carry the byte-identical positions, the ground they rest on and the fragility argument.",
+   "live_elements": [
+    {
+     "element": "**`BLOCCO 1` and every clinical position.** The vigabatrin caution, phenobarbital caution and benzodiazepine rescue lines are **byte-identical**",
+     "concerns": "BLOCK 1 §1 ACTIVE 2",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 1 §1 ACTIVE 2 — GABAergic vulnerability (SAFETY)",
+      "quote": "**The three positions above are byte-identical and do not move**"
+     }
+    },
+    {
+     "element": "it rests on the human safety signal against the human efficacy reports, and `CLAIM 001` already states that mechanism does not predict clinical response",
+     "concerns": "BLOCK 1 §1 ACTIVE 2; CLAIM 001",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 1 §1 ACTIVE 2 — GABAergic vulnerability (SAFETY)",
+      "quote": "they rest on the human safety signal against the human efficacy reports, not on the mechanism"
+     }
+    },
+    {
+     "element": "**A caution resting on an unmeasured premise is fragile in the dangerous direction; that is why the demotion strengthens it.**",
+     "concerns": "BLOCK 1 §1 ACTIVE 2",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 1 §1 ACTIVE 2 — GABAergic vulnerability (SAFETY)",
+      "quote": "Removing an unmeasured justification from a caution makes the caution less fragile, not weaker."
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H069",
+   "class": "A",
+   "why": "The prohibition is a live guard and it stands verbatim in CLAIM 005 and in mirror row 005.",
+   "live_elements": [
+    {
+     "element": "no canonical statement may assert **epileptogenesis as a process** in any WWOX model",
+     "concerns": "CLAIM 005",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 005",
+      "quote": "**No canonical statement may assert EPILEPTOGENESIS — the *process* of acquiring an enduring predisposition to spontaneous recurrent seizures — in ANY WWOX model, because no study has measured that process:**"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H070",
+   "class": "A",
+   "why": "The statuses it lists are live and all appear in the BLOCK 2 mirror rows; the 'withdrawn attribution is not a demoted claim' rule is carried by row 021's own wording.",
+   "live_elements": [
+    {
+     "element": "`CLAIM 002`, `CLAIM 004`, `CLAIM 021` and `CLAIM 024` remain `consolidated baseline`; `CLAIM 011` remains `flagged for review`; `CLAIM 035` and `CLAIM 037` remain `in observation`",
+     "concerns": "CLAIM 002; CLAIM 004; CLAIM 011; CLAIM 021; CLAIM 024; CLAIM 035; CLAIM 037",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (Status column)",
+      "quote": "consolidated baseline"
+     }
+    },
+    {
+     "element": "**A withdrawn attribution is not a demoted claim.**",
+     "concerns": "CLAIM 021",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 021)",
+      "quote": "the gap-junction half of the burst dependence is WITHDRAWN as not attributable"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H071",
+   "class": "C",
+   "why": "An inventory of therapeutic-ledger score fields that did not move — scoring bookkeeping about a file outside the working model, with no scientific statement of its own.",
+   "live_elements": []
+  },
+  {
+   "uid": "H072",
+   "class": "B",
+   "why": "The batch's explicit non-inferences are live safety guards: a current reader of the WM or the claim registry is nowhere told that the carbenoxolone withdrawal does not promote memantine, nor that d-APV is a tool compound never given to a human.",
+   "live_elements": [
+    {
+     "element": "The carbenoxolone withdrawal does **not** promote memantine; d-APV is a tool compound and has never been given to a human",
+     "concerns": "CLAIM 021; BLOCK 1 §1 ACTIVE 1 — Ca²⁺ / network dysregulation",
+     "missing_because": "absent",
+     "proposed_destination": "BLOCK 2 row for CLAIM 021",
+     "proposed_text": "No drug is recommended, no dose is transferred, and no molecule enters or leaves a class: the carbenoxolone withdrawal does **not** promote memantine, and d-APV is a tool compound that has never been given to a human."
+    },
+    {
+     "element": "No drug is recommended, no dose is transferred",
+     "concerns": "BLOCK 1 §1 ACTIVE 2",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 1 §1 ACTIVE 2 — GABAergic vulnerability (SAFETY)",
+      "quote": "**Not medical advice.**"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H073",
+   "class": "C",
+   "why": "Audit mechanics and counts: how many unverifiable figure values were carried as declared attestations, how the count was corrected, and which two triples were written — the surviving discipline (attestation labelled at point of use) is already applied inside the claims it labels.",
+   "live_elements": []
+  },
+  {
+   "uid": "H074",
+   "class": "C",
+   "why": "Auditor, packet and triple counts plus the rewriting mechanics; the one substantive boundary it quotes is already carried at (C) in CLAIM 021's record, which prints the authors' own hedged *«may mimic a late-stage disorder»* sentence.",
+   "live_elements": []
+  },
+  {
+   "uid": "H075",
+   "class": "C",
+   "why": "A horizontal rule.",
+   "live_elements": []
+  },
+  {
+   "uid": "H076",
+   "class": "A",
+   "why": "The reversal of a negative by its own source, and the fact that the body was read in full from this repository, are recorded in CLAIM 037's evidence boundary.",
+   "live_elements": [
+    {
+     "element": "`CLAIM 037` said the body of PMID 24369382 was not served by any route available here ... and that **no** `Wwox` mouse of any allele had ever been audiogenically provoked in any inspectable method, carrying that as `PREMISE: NOBODY_LOOKED`",
+     "concerns": "CLAIM 037",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 037",
+      "quote": "`NOT_REPORTED ≠ ABSENT`, and the old negative was a survey artefact."
+     }
+    },
+    {
+     "element": "A remote-retrieval failure had been recorded as a corpus-level absence",
+     "concerns": "CLAIM 037",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 037)",
+      "quote": "the **audiogenic** phenotype is documented in the constitutive `Wwox`-null **mouse** too"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H077",
+   "class": "C",
+   "why": "A section label introducing the withdrawal list.",
+   "live_elements": []
+  },
+  {
+   "uid": "H078",
+   "class": "A",
+   "why": "The withdrawal of the two clauses and of their premise as falsified is recorded in CLAIM 037.",
+   "live_elements": [
+    {
+     "element": "the two clauses above, and the premise with them (falsified, not merely unsupported)",
+     "concerns": "CLAIM 037",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 037",
+      "quote": "`NOT_REPORTED ≠ ABSENT`, and the old negative was a survey artefact."
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H079",
+   "class": "A",
+   "why": "The withdrawal of rat-specificity for the audiogenic axis and of the abstract-depth qualifier, with the protocol, denominators and comparator now recorded, is carried verbatim in mirror row 037.",
+   "live_elements": [
+    {
+     "element": "*audiogenic … remains rat-specific* and *ASSERTED for the mouse at abstract depth only* — the mouse experiment has a protocol, two denominators and a comparator",
+     "concerns": "CLAIM 037",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 037)",
+      "quote": "the **audiogenic** phenotype is documented in the constitutive `Wwox`-null **mouse** too (behavioural, unscored, no EEG, one laboratory, wild-type comparator 0/8"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H080",
+   "class": "A",
+   "why": "The correction that the 'independent commentary' is the article's own front-matter summary — i.e. not independent transmission — is in CLAIM 037.",
+   "live_elements": [
+    {
+     "element": "the *independent* commentary sentence: that text is the article's own front-matter summary",
+     "concerns": "CLAIM 037",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 037",
+      "quote": "is **the article's own front-matter summary**"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H081",
+   "class": "A",
+   "why": "The withdrawn attribution of the mouse data to the NCKU nulls alone, and the corrected genotype tally, are carried by CLAIM 037's source enumeration and its mirror row, which name the constitutive null separately from the NCKU and Aqeilan-line nulls.",
+   "live_elements": [
+    {
+     "element": "the attribution of the mouse spontaneous and provoked data to the NCKU `WD1/WD234` nulls alone, and the *three genotypes* tally with it",
+     "concerns": "CLAIM 037",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 037, Source)",
+      "quote": "PAPER 042 / PMID 24369382 (constitutive mouse null, audiogenic + spontaneous, behavioural) + PMID 32000863 (mouse null, behavioural + provoked) + PMID 42422765 (mouse null, ECoG) + PMID 36828035 (`P47T`, video-EEG)"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H082",
+   "class": "A",
+   "why": "Both corrected facts — the 2014 date of the mouse behavioural record and the source's own lifespan wording — are in CLAIM 037 and its mirror row.",
+   "live_elements": [
+    {
+     "element": "*behaviourally since 2020* (the mouse behavioural record is 2014)",
+     "concerns": "CLAIM 037",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 037)",
+      "quote": "in the **Wwox-null mouse** (behavioural since 2014, electrographic since 2026)"
+     }
+    },
+    {
+     "element": "the mouse lifespan *2–3 settimane* (the source says *3 to 4 weeks maximum*, and four nulls were alive to be stimulated at day 20)",
+     "concerns": "CLAIM 037",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 037",
+      "quote": "*«a short lifespan of only 3 to 4 weeks maximum»*"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H083",
+   "class": "A",
+   "why": "The withdrawal of the rat-only sentence and of the chain sentence that ended at the rat-only negative is recorded in CLAIM 005's evidence boundary and in mirror row 005.",
+   "live_elements": [
+    {
+     "element": "in `CLAIM 005`, `consolidated baseline`: *Seizures in the Wwox literature are a rat `lde/lde` phenotype*, and the chain sentence that ended at the rat-only negative",
+     "concerns": "CLAIM 005",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 005",
+      "quote": "the sentence *«Seizures in the Wwox literature are a rat `lde/lde` phenotype»* is **withdrawn as false**"
+     }
+    },
+    {
+     "element": "the chain sentence that ended at the rat-only negative",
+     "concerns": "CLAIM 005",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 005)",
+      "quote": "its imported-premise boundary no longer says seizures are rat-only (corrected 2026-09-27, `BATCH_20260927_002`)"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H084",
+   "class": "C",
+   "why": "A section label introducing the unchanged list.",
+   "live_elements": []
+  },
+  {
+   "uid": "H085",
+   "class": "A",
+   "why": "The prohibition, the reason it survives this source, and the axis distinction (an audiogenic provocation is provoked susceptibility) are all in CLAIM 005.",
+   "live_elements": [
+    {
+     "element": "no canonical statement may assert **epileptogenesis as a process** in any WWOX model",
+     "concerns": "CLAIM 005",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 005",
+      "quote": "**No canonical statement may assert EPILEPTOGENESIS — the *process* of acquiring an enduring predisposition to spontaneous recurrent seizures — in ANY WWOX model, because no study has measured that process:**"
+     }
+    },
+    {
+     "element": "An audiogenic provocation is **provoked susceptibility**, one of the four axes that must not be merged",
+     "concerns": "CLAIM 005",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 005",
+      "quote": "**Four axes must not be merged: spontaneous seizures · provoked susceptibility · seizure susceptibility as a threshold · formal epileptogenesis.**"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H086",
+   "class": "A",
+   "why": "The rat-only status of the kindling-like progression, the repeated-session series and the reason the mouse exposures do not match it are in mirror row 037 and in CLAIM 037's record.",
+   "live_elements": [
+    {
+     "element": "the **kindling-like** progression as a rat-only result",
+     "concerns": "CLAIM 037",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 037)",
+      "quote": "T3 kindling-like progression (rat only)"
+     }
+    },
+    {
+     "element": "the rat's 19/20 on three stimulations with 56±24 → 36±4 → 25±3 s latencies is still the only repeated-session series in the corpus read here",
+     "concerns": "CLAIM 037",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 037",
+      "quote": "**19/20 (95%)** su tre stimolazioni (coorte **solo femminile**, denominatore al netto di 3 morti)"
+     }
+    },
+    {
+     "element": "the two mouse exposures are at different ages with a survivorship-reduced denominator",
+     "concerns": "CLAIM 037",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 037",
+      "quote": "with **no count, no denominator** and no observation procedure in Methods"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H087",
+   "class": "A",
+   "why": "Each retained item — the rat data and caveats, the absence of seizure measurement in PMID 19936220, the survey character of PMID 19500159's Table 2 — is in CLAIM 005 and CLAIM 037.",
+   "live_elements": [
+    {
+     "element": "the statement that PMID 19936220 contains no seizure measurement",
+     "concerns": "CLAIM 005",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 005",
+      "quote": "the only brain measurement in that paper is organ weight"
+     }
+    },
+    {
+     "element": "the description of PMID 19500159's Table 2 as a survey artefact",
+     "concerns": "CLAIM 037",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 037",
+      "quote": "`NOT_REPORTED ≠ ABSENT`, and the old negative was a survey artefact."
+     }
+    },
+    {
+     "element": "every rat datum and every caveat on it",
+     "concerns": "CLAIM 039",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 039)",
+      "quote": "**endpoint: light-microscopy histology at ~28 d, no quantitative motor test**"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H088",
+   "class": "A",
+   "why": "The statuses, the T3 transfer ceiling and the not-medical-advice discipline are in the mirror rows and BLOCK 1; the model-mismatch guard is mirrored in row 037's per-axis transferability.",
+   "live_elements": [
+    {
+     "element": "both claims' **Status** (`in observation`; `consolidated baseline`)",
+     "concerns": "CLAIM 005; CLAIM 037",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (rows 005 and 037)",
+      "quote": "in observation"
+     }
+    },
+    {
+     "element": "**T3** for any transfer of an audiogenic phenotype to a human genotype",
+     "concerns": "CLAIM 037",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 2 — claim registry mirror (row 037)",
+      "quote": "T3 any transfer to a human genotype"
+     }
+    },
+    {
+     "element": "A constitutive biallelic null models neither human missense allele of the same paper",
+     "concerns": "CLAIM 037; Genotype interpretation rules",
+     "represented_at": {
+      "where": "L",
+      "locator": "Genotype interpretation rules (method)",
+      "quote": "**WWOX variants are not interchangeable**; extrapolation from full-KO models requires explicit caution."
+     }
+    },
+    {
+     "element": "BLOCK 1, every therapeutic surface, and the not-medical-advice discipline",
+     "concerns": "BLOCK 1",
+     "represented_at": {
+      "where": "L",
+      "locator": "BLOCK 1 §1 ACTIVE 2 — GABAergic vulnerability (SAFETY)",
+      "quote": "**Not medical advice.**"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H089",
+   "class": "C",
+   "why": "Process narrative: the repair was written as a candidate, audited blind, and authorised — plus the general maxim about how a negative is handled.",
+   "live_elements": []
+  },
+  {
+   "uid": "H090",
+   "class": "C",
+   "why": "A horizontal rule.",
+   "live_elements": []
+  },
+  {
+   "uid": "H091",
+   "class": "A",
+   "why": "The withdrawal of the degradation equation and the source's two alternatives are carried by the live Worked example A.",
+   "live_elements": [
+    {
+     "element": "The equation `normal mRNA + absent protein = post-translational degradation` is **withdrawn**. Johannsen 2018 explicitly states two alternatives: impaired translation **or** premature degradation",
+     "concerns": "CLAIM 019; Genotype interpretation rules — Worked example A",
+     "represented_at": {
+      "where": "L",
+      "locator": "Genotype interpretation rules — Worked example A",
+      "quote": "In homozygous fibroblasts of this exact variant the transcript is normal and protein is not detected. The cause remains **unresolved** — impaired translation, insolubility, or premature degradation."
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H092",
+   "class": "C",
+   "why": "A section label introducing the consequences list.",
+   "live_elements": []
+  },
+  {
+   "uid": "H093",
+   "class": "A",
+   "why": "The retained human endpoint with an unresolved cause is stated in Worked example A.",
+   "live_elements": [
+    {
+     "element": "CLAIM 019 retains the human datum on the exact variant, but downgrades the *cause* to unresolved",
+     "concerns": "CLAIM 019; Genotype interpretation rules — Worked example A",
+     "represented_at": {
+      "where": "L",
+      "locator": "Genotype interpretation rules — Worked example A",
+      "quote": "In homozygous fibroblasts of this exact variant the transcript is normal and protein is not detected. The cause remains **unresolved** — impaired translation, insolubility, or premature degradation."
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H094",
+   "class": "A",
+   "why": "The bridge-hypothesis status of the P252A read-across and of the CMA / `LRSVQ` / helix-lid model is in Worked example A and in CLAIM 019's record.",
+   "live_elements": [
+    {
+     "element": "CMA, the `LRSVQ` motif and the helix-lid model remain hypotheses transferred from P252A/AlphaFold, **not** a Q230P mechanism",
+     "concerns": "CLAIM 019; Genotype interpretation rules — Worked example A",
+     "represented_at": {
+      "where": "L",
+      "locator": "Genotype interpretation rules — Worked example A",
+      "quote": "The HSC70/lysosome read-across from P252A is a **bridge hypothesis**, not a demonstrated mechanism."
+     }
+    },
+    {
+     "element": "remain hypotheses transferred from P252A",
+     "concerns": "CLAIM 019",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 019",
+      "quote": "non prova di CMA, del motivo `LRSVQ` o del trigger elicoidale. Il test decisivo deve separare sintesi, insolubilità e degradazione e associare l'abbondanza a un readout funzionale."
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H095",
+   "class": "A",
+   "why": "The retraction of the C299R annotation is recorded in CLAIM 019's own record.",
+   "live_elements": [
+    {
+     "element": "C299R is withdrawn as a validated catalytic / off-lid control",
+     "concerns": "CLAIM 019",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 019",
+      "quote": "L'annotazione precedente di C299R come lesione catalitica/off-lid è ritirata"
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H096",
+   "class": "A",
+   "why": "The experimental-gate rule and the abundance-with-function rule are both live and both stated in the Genotype interpretation rules and in CLAIM 019.",
+   "live_elements": [
+    {
+     "element": "the first experimental gate must separate **synthesis, insolubility and turnover**; abundance and function must be measured together",
+     "concerns": "CLAIM 019; Genotype interpretation rules",
+     "represented_at": {
+      "where": "L",
+      "locator": "Genotype interpretation rules (method)",
+      "quote": "**Separate synthesis · solubility · turnover · route · function.**"
+     }
+    },
+    {
+     "element": "abundance and function must be measured together",
+     "concerns": "CLAIM 019",
+     "represented_at": {
+      "where": "C",
+      "locator": "CLAIM 019",
+      "quote": "non prova di CMA, del motivo `LRSVQ` o del trigger elicoidale. Il test decisivo deve separare sintesi, insolubilità e degradazione e associare l'abbondanza a un readout funzionale."
+     }
+    }
+   ]
+  },
+  {
+   "uid": "H097",
+   "class": "B",
+   "why": "A therapeutic-readiness verdict on the SDR stabilizer is a live design ceiling, and neither the WM live sections nor a claim record states it: the live SDR paragraph gives the stable-but-inert trap but never says the stabilizer is `conditional / not design-ready`.",
+   "live_elements": [
+    {
+     "element": "an SDR stabilizer is `conditional / not design-ready`",
+     "concerns": "Mechanistic architecture — SDR-domain function is measurable; CLAIM 019",
+     "missing_because": "absent",
+     "proposed_destination": "Mechanistic architecture — SDR-domain function is measurable — and one region of it must not be touched",
+     "proposed_text": "An SDR stabilizer is `conditional / not design-ready`."
+    }
+   ]
+  },
+  {
+   "uid": "H098",
+   "class": "C",
+   "why": "An unchanged-list closing a version repair: the human phenotype, the genotype classification, the BLOCK 1 logic and the primary data did not move, and no clinical indication derives from the repair — provenance about the repair's scope, and each item it names is the live file.",
+   "live_elements": []
+  },
+  {
+   "uid": "H099",
+   "class": "C",
+   "why": "A pointer noting that this reversal is the worked example behind the premise/false-negative discipline in the framework instruction file — process documentation.",
+   "live_elements": []
+  }
+ ]
+}

@@ -1,0 +1,8 @@
+{
+ "H059": "- **`PAPER 044`'s quoted transferable finding:** *«the deletion led to nonsense-mediated decay»* is the abstract's and a figure legend's inference from junction qPCR; the **body** says *«suggesting that the two longer transcripts were not expressed or were degraded»*, and no translation block was used on any freely reachable surface.",
+ "H060": "- **The NMD premise closing the splice axis** in the therapeutic-hypotheses ledger — unsourced, untagged, and contradicted by the architecture (exon 9 is terminal). Replaced by a labelled conditional, with the proteotoxic flag now applying to **both** alleles rather than one.",
+ "H061": "- **A readiness claim of this batch's own inputs:** that Wang 2012 never reports total GSK3β anywhere. Its Figure 1 legend blots and densitometers it. What is absent is the **stated invariance**, not the measurement — `NOT_ASSERTED`, not `MEASURE_ABSENT`.",
+ "H066": "- **`TX-007`:** `SAFETY 1–2` → **`SAFETY 1`**. A measured efficacy floor with **no measured ceiling**, on a tumour suppressor whose induction is pro-apoptotic, delivered by a vector with `REVERS 0`, in a dose-ranging study containing **no tumour surveillance** — an absence measured on the text, not on the missing supplement.",
+ "H072": "- **No drug is recommended, no dose is transferred, and no molecule enters or leaves a class.** The carbenoxolone withdrawal does **not** promote memantine; d-APV is a tool compound and has never been given to a human.",
+ "H097": "- an SDR stabilizer is `conditional / not design-ready`."
+}
