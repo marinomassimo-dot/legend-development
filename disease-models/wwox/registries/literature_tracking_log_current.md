@@ -12496,7 +12496,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Report mentions:** `CC-20260922-CLAIM025-SIGN-INVARIANCE-01` · `BATCH_20260927_003` · `CC-20260928-MIRROR003-REPAIRS-01`
 **Next action:** Supplementary Tables S4–S8 unfetched — the per-subtype survival numbers are receipted at the level of the authors' running text only
 **Flags:** read — partial; supplementary debt open
-**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20260927-42589397-02`; manifest `deepdive_manifests/PMID42589397.json` (7 verbatim locators, 5 declared gaps)
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20260927-42589397-02`; manifest `deepdive_manifests/PMID42589397.json`, **7** verbatim locators — 5 persisted with `FTR-20260927-42589397-02`, 2 appended 2026-09-28 (entries 6–7, `Results 2.6.2` and `Methods 5.1`) inside that receipt's declared coverage and re-verified verbatim here; its `receipt` field still names `FTR-20260921-42589397-01` and is routed for re-pointing. **One** evidence gap is declared (Supplementary Tables S4–S8 unfetched); the **five** are the manifest's `waived` deep-dive sections, which `deepdive_manifest.py` prints as *"5 gap(s)"* in its own vocabulary (disambiguated 2026-09-28, `CC-20260928-MIRROR0928-REPAIRS-01`, Mirror FINDINGS 4 and 5)
 **Registry record:** [[paper_registry_current#PAPER 118]]
 **Note:** Title: WWOX/HIF1A Balance Delineates Context-Dependent Molecular States in Breast Cancer Subtypes and Ovarian Carcinoma. The authors declare their subtype effects *"descriptive and hypothesis-generating rather than formally validated prognostic groupings"*.
 
