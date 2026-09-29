@@ -4,6 +4,10 @@
 Run from your own task worktree after the required checks (LEGEND_CORE §21e).
 The default keeps that worktree for the next task. --remove-worktree is for a closed chat
 and is refused while the worktree holds untracked OR ignored files, or is locked.
+On success it prints `MERGED_MAIN <full object ID>` before `TASK_CLOSED`: the identity to compare
+when verifying "the tested commit is the one about to be pushed" — the full ID, never a prefix and
+never a hash typed from an abbreviated display.
+
 A task may be cut from `origin/main` rather than from a local `main` that carries other actors'
 unpublished commits (`git worktree add --no-track -b task/<id> <path> origin/main`); it lands the
 same way. After landing, a `PUSH_NOTE` on stderr lists the commits a push of main would publish
@@ -43,11 +47,14 @@ def clean(path: Path, include_ignored: bool = False) -> None:
         # two rounds of guessing before the path was found. The guard itself is unchanged: any
         # untracked file still refuses, because a merge into a checkout holding one can clobber
         # a path the incoming commits add. Only the diagnosis is added.
-        entries = [line for line in state.splitlines() if line.strip()]
-        shown = "; ".join(entry.strip() for entry in entries[:10])
-        more = f" (+{len(entries) - 10} more)" if len(entries) > 10 else ""
+        # NOT stripped: the two leading columns are the status (` M` unstaged, `M ` staged,
+        # `??` untracked), and stripping them made an unstaged and a staged edit read alike.
+        entries = [line.rstrip() for line in git(flags, path).splitlines() if line.strip()]
+        shown = "\n".join(f"  {entry}" for entry in entries[:10])
+        more = f"\n  (+{len(entries) - 10} more)" if len(entries) > 10 else ""
         raise GitError(
-            f"checkout is not clean: {path} — {len(entries)} entry(ies): {shown}{more}. "
+            f"checkout is not clean: {path} — {len(entries)} entry(ies) "
+            f"(`git status --porcelain`: XY path):\n{shown}{more}\n"
             "A `??` path may be another actor's work in progress, and this check cannot tell "
             "that from a path you forgot. If it is theirs, the remedy is theirs and it is one of "
             "two: commit it on the branch it belongs to, or move it to their own worktree. Not a "
@@ -246,6 +253,15 @@ def main(argv: list[str] | None = None) -> int:
         print(f"task_close: {exc}", file=sys.stderr)
         return 2
     print("\n".join(shlex.join(command) for command in commands))
+    if not args.dry_run:
+        # The FULL object ID, for machine comparison: `git log` and this tool's own PUSH_NOTE
+        # abbreviate, and a hash typed from an abbreviation has its tail guessed (2026-09-28,
+        # when a "verified == main" check was written with an invented tail). Compare THIS,
+        # or `git rev-parse main` — never a hand-typed hash, never a prefix.
+        try:
+            print("MERGED_MAIN " + git(["rev-parse", "--verify", "refs/heads/main"], Path.cwd()).strip())
+        except (GitError, OSError):
+            pass
     print("DRY_RUN" if args.dry_run else "TASK_CLOSED")
     try:
         tip = git(["rev-parse", "HEAD"], Path.cwd()).strip()

@@ -83,6 +83,44 @@ class TaskClosure(unittest.TestCase):
                 self.assert_kept()
                 path.unlink()
 
+    def test_every_dirty_shape_in_either_checkout_is_named_and_left_intact(self):
+        """Modified tracked, staged and untracked, in the destination (another actor's checkout)
+        and in the task worktree: the exact path and its `git status` code are named, no stash or
+        deletion happens, the content survives, and the branch is kept."""
+        shapes = {
+            "modified": ("base", " M", lambda c, p: p.write_text("edited by someone\n")),
+            "staged": ("staged.txt", "A ", lambda c, p: (p.write_text("staged\n"),
+                                                        run(["add", "--", p.name], c))),
+            "untracked": ("somebody-elses-file.md", "??", lambda c, p: p.write_text("wip\n")),
+        }
+        for label, (name, code, make) in shapes.items():
+            for checkout in (self.repo, self.wt):
+                with self.subTest(shape=label, checkout=checkout.name):
+                    path = checkout / name
+                    before = path.read_text() if path.exists() else None
+                    make(checkout, path)
+                    written = path.read_text()
+                    with self.assertRaises(tc.GitError) as caught:
+                        tc.close_task(self.wt)
+                    message = str(caught.exception)
+                    # the exact line, status columns and all: an unstaged and a staged edit of
+                    # the same file must not read alike
+                    self.assertIn(f"\n  {code} {name}", message)
+                    self.assertIn("work in progress", message)
+                    self.assertEqual(path.read_text(), written, "the refusal touched the file")
+                    self.assertEqual(run(["stash", "list"], self.repo).strip(), "",
+                                     "a stash was created")
+                    self.assert_kept()
+                    if label == "untracked":
+                        path.unlink()
+                    else:
+                        run(["reset", "-q", "--hard", "HEAD"], checkout)
+                        if label == "staged" and path.exists():
+                            path.unlink()
+                    self.assertEqual(run(["status", "--porcelain"], checkout).strip(), "")
+                    if before is not None:
+                        self.assertEqual(path.read_text(), before)
+
     def test_ignored_material_prevents_removal(self):
         (self.wt / ".gitignore").write_text("private-cache\n")
         run(["add", ".gitignore"], self.wt)
@@ -223,6 +261,19 @@ class TheCliIsDriven(unittest.TestCase):
         self.assertEqual("", run(["branch", "--list", "task/test"], self.repo).strip())
         self.assertEqual("", run(["branch", "--show-current"], self.wt).strip())
 
+    def test_closure_prints_the_full_merged_object_id_before_the_verdict(self):
+        result = run_cli(self.wt)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        lines = result.stdout.splitlines()
+        self.assertEqual(lines[-1], "TASK_CLOSED")
+        merged = [line for line in lines if line.startswith("MERGED_MAIN ")]
+        self.assertEqual(len(merged), 1, lines)
+        self.assertRegex(merged[0], r"^MERGED_MAIN [0-9a-f]{40}$")
+        self.assertEqual(merged[0].split()[1], run(["rev-parse", "main"], self.repo).strip())
+
+    def test_a_dry_run_prints_no_merged_id(self):
+        self.assertNotIn("MERGED_MAIN", run_cli(self.wt, "--dry-run").stdout)
+
     def test_a_refusal_is_exit_2_with_the_reason_on_stderr(self):
         result = run_cli(self.repo)
         self.assertEqual(result.returncode, 2)
@@ -279,6 +330,22 @@ class ARemoteFirstTaskBase(unittest.TestCase):
         self.assertEqual(merged.returncode, 0, merged.stdout)
         tail = merged.stdout.splitlines()[-2:]
         self.assertTrue(any("a peer's unpublished commit" in line for line in tail), tail)
+
+    def test_the_note_counts_and_lists_several_foreign_commits_and_never_the_tasks_own(self):
+        for index in (2, 3):
+            commit(self.repo, f"peer{index}", f"peer commit number {index}")
+        result = run_cli(self.wt, "--dry-run")
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn("publishes 3 commit(s) this task did not make", result.stderr)
+        for subject in ("a peer's unpublished commit", "peer commit number 2",
+                        "peer commit number 3"):
+            self.assertIn(subject, result.stderr)
+        self.assertNotIn("the task's own commit", result.stderr)
+        # display abbreviates; identity does not: each listed commit resolves to one full ID
+        for line in [l for l in result.stderr.splitlines() if l.startswith("  ")]:
+            abbreviated = line.split()[0]
+            full = run(["rev-parse", "--verify", abbreviated + "^{commit}"], self.repo).strip()
+            self.assertRegex(full, r"^[0-9a-f]{40}$")
 
     def test_no_note_when_main_carries_nothing_foreign(self):
         run(["push", "-q", "origin", "main"], self.repo)
