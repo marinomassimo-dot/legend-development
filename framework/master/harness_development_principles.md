@@ -140,6 +140,14 @@ below is a consequence of that one sentence.
     paste. Target on an unattended run: no stop for lack of a default.
     → [`LEGEND_CORE.md` §21c](../instruction/LEGEND_CORE.md#21c-stop-policy) (SAFE_DEFAULTS), [`legend`](../../.claude/skills/legend/SKILL.md) autonomy contract
 
+## F · Language
+
+30. **Chat in the language of the question; files always in English.** Every actor, on every
+    runtime, replies in the language the operator's message was written in, and uses it for the
+    whole reply, reports built from English subagent output included. Every file, and every
+    commit message, is written in English whatever the language of the dictation; a dictation is
+    quoted verbatim at the foot of the file it produced. The rule is language-agnostic by design.
+
 ---
 
 ## Tensions, and how they are resolved
@@ -176,3 +184,10 @@ The operator added principles 28 and 29 later the same day:
 > aggiungiamo pensiero divergente per favorire intuizioni (non ricordo bene come avevi chimato il
 > pattern), Humani in the loop è un eccezione il loop deve andare avanti da solo anche per ore ed
 > ore senza operatore
+
+and principle 30:
+
+> se ti scrivo in italiano nella chat rispondimi sempre in italiano non voglio misunderstanding
+>
+> [...] deve essere un principio scalabile a livello glabale, Chat nell astessa lingua con cui ti
+> vengono poste le domande, files always <english
