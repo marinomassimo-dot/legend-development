@@ -84,6 +84,15 @@ protocol it would extend or replace); **integration cost in hours** (a number, n
 (last commit, open issues, single maintainer?); **risk** (privacy, licensing, network, model
 size, correctness claims without evaluation); **what it would replace**, if anything.
 
+**Judge every candidate against
+[`harness_development_principles.md`](../../../framework/master/harness_development_principles.md)**
+(operator instruction, 2026-09-29). A candidate that would add a gate, an approval step, a new
+registry or a human-in-the-loop dependency is a pattern to rework or a `REJECT`, whatever its
+stars; one that answers a concrete need of the Scientists or of Harness Engineering, imports
+as a pattern rather than a runtime, cuts cost or tokens, lets the loop run unattended, or feeds
+discovery (divergence, re-reading, leads for therapies and experiments) ranks higher. Cite the
+principle numbers in the `what it adds` or `risk` cell when they decide the verdict.
+
 ## Output contract
 
 One file per week: `governance/candidates/HARNESS-SCOUT-<YYYY>-W<WW>.md` (ISO week).
