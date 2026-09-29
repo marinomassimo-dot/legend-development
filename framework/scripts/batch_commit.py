@@ -280,6 +280,91 @@ def propagate(repo_root, rel, ops_path, apply=False):
     return 0, f"{verb}: {rel} — {len(report.ops)} op(s) on {report.changed_keys}"
 
 
+DRIFT_STALE = 5
+_SCOPE_KEY = re.compile(r"^\+(batch_[a-z0-9_]+?)_scope:", re.IGNORECASE | re.MULTILINE)
+STATE_HISTORY = "framework/state/state_history.md"
+
+
+def _resolve_against(repo_root, against):
+    """`origin/main` when it exists, else `main`: the ref another actor lands on."""
+    for candidate in ([against] if against else ["origin/main", "main"]):
+        done = subprocess.run(("git", "rev-parse", "--verify", f"{candidate}^{{commit}}"),
+                              cwd=repo_root, capture_output=True, text=True)
+        if done.returncode == 0:
+            return candidate, done.stdout.strip()
+    raise RuntimeError(f"cannot resolve {against or 'origin/main or main'} to a commit")
+
+
+def drift(repo_root, against="", batch_id="", candidates=(), targets=None):
+    """Has the ref other actors land on moved under this batch in a way that matters?
+
+    An optimistic check, not a lock. The pre-flight reads THIS checkout, so two actors on
+    branches cut from the same base both read READY, and the snapshot records
+    `pre_batch_commit` without anything ever comparing it with a moved main; the first
+    detection was a textual merge conflict at landing, hours after the work (2026-09-28:
+    two batches numbered BATCH_20260928_004). This asks the question early and cheaply, from
+    identities and paths, using only what is already fetched — no network, no reservation.
+
+    STALE when upstream commits that HEAD lacks (a) changed a surface the snapshot declares,
+    (b) recorded a batch scope in state_history, (c) touched a candidate file this batch
+    plans to propagate, or (d) already used this batch's ID. Upstream movement that touches
+    none of those is reported as FRESH: harness commits elsewhere are not this batch's news.
+    Returns a report dict; `stale` is the verdict.
+    """
+    def git(*arguments):
+        done = subprocess.run(("git", *arguments), cwd=repo_root, capture_output=True, text=True)
+        if done.returncode:
+            raise RuntimeError(f"git {' '.join(arguments[:2])}: {done.stderr.strip()[:200]}")
+        return done.stdout
+
+    ref, tip = _resolve_against(repo_root, against)
+    head = git("rev-parse", "HEAD").strip()
+    behind = int(git("rev-list", "--count", f"HEAD..{tip}").strip())
+    report = {"head": head, "against": ref, "against_sha": tip, "behind": behind,
+              "files": [], "batches": [], "candidates": [], "collision": False, "stale": False}
+    if behind == 0:
+        return report
+    if targets is None:
+        targets = snapshot_targets(repo_root)
+    changed = git("diff", "--name-only", f"HEAD...{tip}").split("\n")
+    changed = [line for line in changed if line.strip()]
+    declared = set(targets)
+    report["files"] = sorted(path for path in changed if path in declared)
+    history = git("diff", f"HEAD...{tip}", "--", STATE_HISTORY)
+    report["batches"] = sorted({m.group(1).upper() for m in _SCOPE_KEY.finditer(history)})
+    names = {os.path.basename(path): path for path in changed}
+    report["candidates"] = sorted(name for name in candidates if f"{name}.md" in names)
+    report["collision"] = bool(batch_id) and batch_id.upper() in report["batches"]
+    report["stale"] = bool(report["files"] or report["batches"] or report["candidates"]
+                           or report["collision"])
+    return report
+
+
+def render_drift(report):
+    head = (f"{report['against']} = {report['against_sha']}", f"HEAD = {report['head']}")
+    if not report["stale"]:
+        moved = (f"; {report['behind']} upstream commit(s) touch none of the declared surfaces, "
+                 "batch scopes or candidates named" if report["behind"] else "")
+        return "\n".join([f"DRIFT FRESH{moved}", *head])
+    lines = [f"DRIFT STALE — {report['against']} is {report['behind']} commit(s) ahead of HEAD"]
+    lines.extend(head)
+    if report["collision"]:
+        lines.append("  BATCH ID COLLISION: this batch's ID is already used upstream — renumber "
+                     "before Phase 4")
+    if report["batches"]:
+        lines.append("  batches landed upstream: " + ", ".join(report["batches"]))
+    if report["files"]:
+        lines.append("  declared surfaces changed upstream: " + ", ".join(report["files"]))
+    if report["candidates"]:
+        lines.append("  candidates already touched upstream (a disposition may exist): "
+                     + ", ".join(report["candidates"]))
+    lines.append("  as of the last fetch (no network here): `git fetch` first if that is old.")
+    lines.append("  remedy: merge the ref into your task branch, re-run `growth_anchors.py "
+                 "check`, revalidate the candidate IDs you plan to propagate, rebuild the "
+                 "operation list, and run this again.")
+    return "\n".join(lines)
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     subparsers = parser.add_subparsers(dest="command", required=True)
@@ -319,6 +404,19 @@ def main(argv=None):
     propagate_parser.add_argument("--ops", required=True,
                                   help="JSON list of {op, id|heading[+under]|preamble, text|old|new, rename_to}")
     propagate_parser.add_argument("--apply", action="store_true")
+
+    drift_parser = subparsers.add_parser(
+        "drift",
+        help="has main moved under this batch in a way that matters? (batch scope, declared "
+             "surface, candidate, or ID collision) — exit 0 FRESH, 5 STALE; no network, no lock",
+    )
+    drift_parser.add_argument("--repo-root", default=".")
+    drift_parser.add_argument("--against", default="",
+                              help="ref to compare with (default: origin/main, else main)")
+    drift_parser.add_argument("--batch-id", default="",
+                              help="this batch's ID, to catch a collision with a landed one")
+    drift_parser.add_argument("--candidate", action="append", default=[],
+                              help="a CC-… ID this batch plans to propagate; repeatable")
     args = parser.parse_args(argv)
 
     if args.command == "snapshot":
@@ -344,6 +442,14 @@ def main(argv=None):
             return 1
         print(report)
         return 0
+    if args.command == "drift":
+        try:
+            report = drift(args.repo_root, args.against, args.batch_id, args.candidate)
+        except (RuntimeError, DeclarationError) as error:
+            print(f"drift: {error}", file=sys.stderr)
+            return 2
+        print(render_drift(report))
+        return DRIFT_STALE if report["stale"] else 0
     if args.command == "propagate":
         code, message = propagate(args.repo_root, args.file, args.ops, args.apply)
         print(message, file=sys.stderr if code else sys.stdout)

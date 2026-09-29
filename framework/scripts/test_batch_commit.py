@@ -241,6 +241,127 @@ class RecordScopedPropagation(unittest.TestCase):
             self.assertEqual(path.read_bytes(), self.TEXT.encode())
 
 
+class DriftDetectsAMovedMain(unittest.TestCase):
+    """`drift` — optimistic, early, and from identities: did main move under this batch?
+
+    Real repositories, a real upstream commit: the 2026-09-28 incident (two batches numbered
+    BATCH_20260928_004) was found only by a textual merge conflict at landing.
+    """
+
+    CLAIMS = "disease-models/wwox/registries/claim_registry_current.md"
+    CANDIDATE_DIR = "disease-models/wwox/research/commit_candidates"
+
+    def _git(self, *arguments, cwd=None):
+        done = subprocess.run(("git", *arguments), cwd=cwd or self.repo, capture_output=True,
+                              text=True)
+        self.assertEqual(done.returncode, 0, done.stderr)
+        return done.stdout.strip()
+
+    def _write(self, rel, text, cwd=None):
+        path = Path(cwd or self.repo) / rel
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(text, encoding="utf-8")
+
+    def setUp(self) -> None:
+        self._tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self._tmp.cleanup)
+        self.repo = Path(self._tmp.name) / "root"
+        self.repo.mkdir()
+        self._git("init", "-q", "-b", "main")
+        self._git("config", "user.name", "drift-test")
+        self._git("config", "user.email", "drift@example.invalid")
+        self._write(self.CLAIMS, "# Claims\n\n## CLAIM 001\nbody\n")
+        self._write("framework/state/state_history.md", "```yaml\nbatch_20260101_001_scope: x\n```\n")
+        self._write("notes/unrelated.md", "n\n")
+        self._write(f"{self.CANDIDATE_DIR}/CC-A-01.md", "# A\n")
+        self._git("add", "-A")
+        self._git("commit", "-q", "-m", "base")
+        # the actor's task branch, cut from the base
+        self._git("branch", "task/mine")
+        self.targets = [self.CLAIMS, "framework/state/state_history.md"]
+
+    def _upstream(self, message, **files):
+        """Another actor lands on main while `task/mine` stays where it was."""
+        self._git("switch", "-q", "main")
+        for rel, text in files.items():
+            self._write(rel.replace("__", "/"), text)
+        self._git("add", "-A")
+        self._git("commit", "-q", "-m", message)
+        self._git("switch", "-q", "task/mine")
+
+    def _drift(self, **kwargs):
+        from batch_commit import drift
+        return drift(str(self.repo), against="main", targets=self.targets, **kwargs)
+
+    def test_nothing_landed_is_fresh(self) -> None:
+        self._git("switch", "-q", "task/mine")
+        report = self._drift(batch_id="BATCH_20260101_002")
+        self.assertFalse(report["stale"])
+        self.assertEqual(report["behind"], 0)
+
+    def test_unrelated_upstream_movement_is_fresh_and_says_so(self) -> None:
+        from batch_commit import render_drift
+        self._git("switch", "-q", "task/mine")
+        self._upstream("harness elsewhere", **{"notes/unrelated.md".replace("/", "__"): "changed\n"})
+        report = self._drift(batch_id="BATCH_20260101_002", candidates=["CC-A-01"])
+        self.assertEqual((report["stale"], report["behind"]), (False, 1))
+        self.assertIn("touch none of the declared surfaces", render_drift(report))
+
+    def test_a_declared_surface_changed_upstream_is_stale(self) -> None:
+        self._git("switch", "-q", "task/mine")
+        self._upstream("a batch", **{self.CLAIMS.replace("/", "__"): "# Claims\n\n## CLAIM 001\nnew\n"})
+        report = self._drift()
+        self.assertTrue(report["stale"])
+        self.assertEqual(report["files"], [self.CLAIMS])
+
+    def test_the_duplicate_batch_id_of_2026_09_28_is_a_collision(self) -> None:
+        from batch_commit import render_drift
+        self._git("switch", "-q", "task/mine")
+        self._upstream("BATCH_20260101_002 landed", **{
+            "framework/state/state_history.md".replace("/", "__"):
+                "```yaml\nbatch_20260101_002_scope: y\nbatch_20260101_001_scope: x\n```\n"})
+        report = self._drift(batch_id="BATCH_20260101_002")
+        self.assertTrue(report["collision"] and report["stale"])
+        self.assertEqual(report["batches"], ["BATCH_20260101_002"])
+        self.assertIn("BATCH ID COLLISION", render_drift(report))
+        self.assertFalse(self._drift(batch_id="BATCH_20260101_003")["collision"])
+
+    def test_a_candidate_touched_upstream_is_named(self) -> None:
+        self._git("switch", "-q", "task/mine")
+        self._upstream("disposition", **{f"{self.CANDIDATE_DIR}/CC-A-01.md".replace("/", "__"): "# A\ndisposed\n"})
+        report = self._drift(candidates=["CC-A-01", "CC-B-02"])
+        self.assertEqual((report["stale"], report["candidates"]), (True, ["CC-A-01"]))
+
+    def test_after_merging_main_the_same_question_is_fresh(self) -> None:
+        self._git("switch", "-q", "task/mine")
+        self._upstream("a batch", **{self.CLAIMS.replace("/", "__"): "# Claims\n\n## CLAIM 001\nnew\n"})
+        self.assertTrue(self._drift()["stale"])
+        self._git("merge", "-q", "--no-edit", "main")
+        self.assertFalse(self._drift()["stale"])
+
+    def test_the_command_line_exits_5_stale_0_fresh_2_unresolvable(self) -> None:
+        import contextlib
+        import io
+        from batch_commit import main
+        self._write("disease-models/wwox/registries/x.md", "x\n")
+        # a protocol declaration naming the two surfaces, so the CLI can derive its targets
+        self._write("framework/protocols/prompt_batch_commit.md",
+                    "SNAPSHOT_DECLARATION (x)\n```\n  - " + self.CLAIMS
+                    + "\n  - framework/state/state_history.md\n```\n")
+        self._git("add", "-A")
+        self._git("commit", "-q", "-m", "protocol")
+        self._git("branch", "-f", "task/mine")
+        self._git("switch", "-q", "task/mine")
+        self._upstream("a batch", **{self.CLAIMS.replace("/", "__"): "# Claims\n\n## CLAIM 001\nnew\n"})
+        codes = {}
+        for label, argv in (("stale", ["drift", "--repo-root", str(self.repo), "--against", "main"]),
+                            ("fresh", ["drift", "--repo-root", str(self.repo), "--against", "HEAD"]),
+                            ("bad", ["drift", "--repo-root", str(self.repo), "--against", "no-such-ref"])):
+            with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()):
+                codes[label] = main(argv)
+        self.assertEqual(codes, {"stale": 5, "fresh": 0, "bad": 2})
+
+
 class TheRealCurrentFilesAreSnapshotted(unittest.TestCase):
     """``snapshot`` through ``main`` over this checkout: the four current files and the state
     manifest are copied OUT to a temp dir, byte-identical, and the originals are untouched.

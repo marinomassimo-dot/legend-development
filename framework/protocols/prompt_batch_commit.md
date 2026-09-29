@@ -62,6 +62,7 @@ Before starting the BATCH_COMMIT, verify in order:
 | No unmerged active parallel branch | ABORT — complete the merge first |
 | `session_commit_log.md` contains at least 1 commit candidate | ABORT (nothing to commit) |
 | Backup of the current files available | ABORT — create a backup first |
+| Main has not moved under you: `python3 framework/scripts/batch_commit.py drift --batch-id <ID> --candidate <CC-ID> …` says FRESH | **STALE** → merge main into the task branch, re-run `growth_anchors.py check`, revalidate every candidate ID you plan to propagate (one a landed batch already dispositioned is not propagated twice), renumber on a collision. Run it again immediately before Phase 4 `--apply` and before landing |
 
 If all checks pass → set `current_state: IN_BATCH_COMMIT` in the manifest and proceed.
 
