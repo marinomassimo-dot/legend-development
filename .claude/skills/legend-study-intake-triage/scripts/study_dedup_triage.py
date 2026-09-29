@@ -403,6 +403,91 @@ def promoted_match(matches: list[tuple[str, dict[str, str]]]) -> tuple[str, dict
     return max(matches, key=rank)
 
 
+class _TitleBound:
+    """An exact upper bound on difflib's ratio against EVERY title, for one query, in one pass.
+
+    `SequenceMatcher.ratio()` is `2*M/T` where M is the total length of the matching blocks it
+    finds — and those blocks always form a common subsequence, so `M <= LCS(a, b)` and therefore
+    `ratio <= 2*LCS/T`, for every input and every junk setting. That is a bound, not a heuristic.
+    The cost is what made it unusable per pair (~100 µs of Python); it is cheap here because the
+    LCS length is bit-parallel (Crochemore et al., Hyyrö): one big-integer step per query
+    character, and ALL titles ride on one wide integer, a zero guard bit after each so a carry
+    cannot cross into its neighbour. One query against ~1,000 titles is ~1.4 ms, against ~50 ms
+    for the full ratios it replaces (measured 2026-09-29: 196k full `ratio()` calls in one
+    batch-queue build fall to ~9k)."""
+
+    __slots__ = ("offsets", "data", "masks")
+
+    def __init__(self, titles: tuple[str, ...]) -> None:
+        offsets, position, total = [], 0, 0
+        for title in titles:
+            offsets.append(position)
+            position += len(title) + 1          # +1: the guard bit, always 0
+        total = position
+        data = bytearray((total >> 3) + 1)
+        masks: dict[str, bytearray] = {}
+        for title, offset in zip(titles, offsets):
+            for index, char in enumerate(title):
+                bit = offset + index
+                data[bit >> 3] |= 1 << (bit & 7)
+                row = masks.get(char)
+                if row is None:
+                    row = masks[char] = bytearray((total >> 3) + 1)
+                row[bit >> 3] |= 1 << (bit & 7)
+        self.offsets = offsets
+        self.data = int.from_bytes(data, "little")
+        self.masks = {char: int.from_bytes(row, "little") for char, row in masks.items()}
+
+    def lcs_lengths(self, query: str, titles: tuple[str, ...]) -> list[int]:
+        data, masks = self.data, self.masks
+        vector = data                            # 1 = "not matched yet"; guards stay 0
+        for char in query:
+            hit = vector & masks.get(char, 0)
+            vector = ((vector + hit) | (vector - hit)) & data
+        return [len(title) - ((vector >> offset) & ((1 << len(title)) - 1)).bit_count()
+                if title else 0
+                for title, offset in zip(titles, self.offsets)]
+
+
+_BOUNDS: dict[tuple[str, ...], _TitleBound] = {}
+
+
+def _title_bound(titles: tuple[str, ...]) -> _TitleBound:
+    bound = _BOUNDS.get(titles)
+    if bound is None:
+        if len(_BOUNDS) >= 4:                    # one per record list in a process is the norm
+            _BOUNDS.clear()
+        bound = _BOUNDS[titles] = _TitleBound(titles)
+    return bound
+
+
+def best_title(query: str, titles: list[str]) -> tuple[float, int | None]:
+    """`(ratio, index)` of the FIRST title, in order, with the highest `SequenceMatcher` ratio.
+
+    `(0.0, None)` when none scores above 0. Exactly what a scan of every title in file order with
+    a strict `>` returns, ties included; the bound only decides which titles need the full ratio.
+    Titles are visited by descending bound (ties by index), and the walk stops when the next
+    bound falls BELOW the best ratio found — a bound EQUAL to it is still visited, because that
+    title could tie and sit earlier in the file.
+    """
+    key = tuple(titles)
+    lcs = _title_bound(key).lcs_lengths(query, key)
+    total = len(query)
+    ranked = sorted((-2.0 * n / (total + len(title)), index)
+                    for index, (n, title) in enumerate(zip(lcs, key)) if n)
+    matcher = difflib.SequenceMatcher(None, query, "")
+    best_ratio, best_index = 0.0, None
+    for negative_bound, index in ranked:
+        if -negative_bound < best_ratio:
+            break
+        matcher.set_seq2(key[index])
+        ratio = matcher.ratio()
+        if ratio > best_ratio or (ratio == best_ratio and best_index is not None
+                                  and index < best_index):
+            best_ratio, best_index = ratio, index
+    return best_ratio, best_index
+
+
 def match_row(
     row: dict[str, str],
     records: list[dict[str, str]],
@@ -461,21 +546,10 @@ def match_row(
 
     line_years = years(source_text)
     line_author = first_author(line)
-    best: tuple[float, dict[str, str] | None] = (0.0, None)
-    # ratio() <= quick_ratio() <= real_quick_ratio(), over the same denominator, so a record
-    # whose cheap upper bound cannot beat the current best is skipped without the full ratio.
-    # The comparison stays strict, so the chosen record — ties included — is unchanged; only
-    # the ~4M `find_longest_match` calls behind a batch-queue build are avoided.
-    matcher = difflib.SequenceMatcher(None, normalized, "")
-    for record in records:
-        if record["norm_title"]:
-            matcher.set_seq2(record["norm_title"])
-            if matcher.real_quick_ratio() <= best[0] or matcher.quick_ratio() <= best[0]:
-                continue
-            ratio = matcher.ratio()
-            if ratio > best[0]:
-                best = ratio, record
-    ratio, record = best
+    # The title of the first record, in file order, with the highest ratio — chosen by
+    # `best_title`, which runs the full ratio only where an exact upper bound allows a win.
+    ratio, index = best_title(normalized, [record["norm_title"] for record in records])
+    record = records[index] if index is not None else None
     if record is None:
         return new_or_out_of_scope(line, 0, "", "no candidate match")
 

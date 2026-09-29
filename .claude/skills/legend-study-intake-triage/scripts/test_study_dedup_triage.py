@@ -11,8 +11,82 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import study_dedup_triage as triage  # noqa: E402
 
 
+def _reference_lcs(a: str, b: str) -> int:
+    """Textbook dynamic programme: the oracle for the bit-parallel bound."""
+    previous = [0] * (len(b) + 1)
+    for x in a:
+        row = [0]
+        for j, y in enumerate(b, 1):
+            row.append(previous[j - 1] + 1 if x == y else max(previous[j], row[-1]))
+        previous = row
+    return previous[-1]
+
+
+def _reference_best(query: str, titles: list[str]) -> tuple[float, int | None]:
+    """The scan `match_row` used to run: every title, file order, strict `>`, no pruning."""
+    best: tuple[float, int | None] = (0.0, None)
+    for index, title in enumerate(titles):
+        if title:
+            ratio = triage.difflib.SequenceMatcher(None, query, title).ratio()
+            if ratio > best[0]:
+                best = ratio, index
+    return best
+
+
+def check_title_bound(failures: list[str]) -> None:
+    """The LCS bound is exact, is a true upper bound, and `best_title` equals the full scan.
+
+    Small alphabets on purpose: they force repeated characters, full matches (a carry into the
+    guard bit), duplicate titles (ties) and empty titles — the cases a bound-ordered walk gets
+    wrong if its stopping rule is off by one."""
+    import random
+    rng = random.Random(20260929)
+    alphabets = ("ab", "abc", "abcdefgh", "abcdefghijklmnopqrstuvwxyz ", "aé漢字 ")
+    for case in range(400):
+        alphabet = alphabets[case % len(alphabets)]
+        pool = ["".join(rng.choice(alphabet) for _ in range(rng.randint(0, 14)))
+                for _ in range(rng.randint(1, 9))]
+        titles = pool + [rng.choice(pool) for _ in range(rng.randint(0, 3))]   # duplicates: ties
+        query = "".join(rng.choice(alphabet) for _ in range(rng.randint(1, 16)))
+        key = tuple(titles)
+        lengths = triage._TitleBound(key).lcs_lengths(query, key)
+        for title, length in zip(titles, lengths):
+            expected = _reference_lcs(query, title) if title else 0
+            if length != expected:
+                failures.append(f"LCS {query!r} vs {title!r}: {length} != {expected}")
+                return
+            if title:
+                bound = 2.0 * length / (len(query) + len(title))
+                ratio = triage.difflib.SequenceMatcher(None, query, title).ratio()
+                if ratio > bound:
+                    failures.append(f"bound {bound} below ratio {ratio} for {query!r}/{title!r}")
+                    return
+        got, want = triage.best_title(query, titles), _reference_best(query, titles)
+        if got != want:
+            failures.append(f"best_title {got} != full scan {want} for {query!r} in {titles!r}")
+            return
+    if triage.best_title("zzz", ["abc", "", "ab"]) != (0.0, None):
+        failures.append("a query sharing no character must select nothing")
+    if triage.best_title("abc", ["", "abc", "abc"]) != (1.0, 1):
+        failures.append("an exact tie must go to the earlier title")
+    # a real corpus sample: the shipped registry titles, perturbed, against the full scan
+    root = Path(__file__).resolve().parents[4]
+    records = triage.build_index(root)
+    real = [record["norm_title"] for record in records]
+    populated = [i for i, title in enumerate(real) if len(title) >= 18]
+    for step, index in enumerate(populated[:: max(1, len(populated) // 12)][:12]):
+        chars = list(real[index])
+        for _ in range(rng.randint(0, 8)):
+            chars[rng.randrange(len(chars))] = rng.choice("abcdefghijklmnopqrstuvwxyz ")
+        query = "".join(chars)
+        if triage.best_title(query, real) != _reference_best(query, real):
+            failures.append(f"real-corpus sample {step}: best_title differs from the full scan")
+            return
+
+
 def main() -> int:
     failures: list[str] = []
+    check_title_bound(failures)
 
     identifiers = triage.extract_identifiers(
         "PMID: 12345678 DOI 10.1000/example.1 PMCID PMC123456"
