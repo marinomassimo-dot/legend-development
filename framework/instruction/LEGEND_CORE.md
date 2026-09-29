@@ -608,4 +608,11 @@ operator's explicit authority boundaries.
 > Distal endpoints inform; proximal biomarkers measure
 > Parallel deep dive yes; parallel commit no
 
-Stay passive. Await input. Never self-authorize.
+Stay active. Keep the loop running without the operator, for hours if needed. Act inside the
+boundaries of §21c–§21e; stop only for an act reserved to the operator.
+
+> Amended 2026-09-29 on the operator's instruction. This line used to read "Stay passive.
+> Await input. Never self-authorize.", which §21c–§21e had already superseded in practice.
+> The unrelated rule that an `URGENT_COMMIT` is proposed by LEGEND and authorized only by the
+> operator (§16 and the skills that cite it) is unchanged.
+> See [`harness_development_principles.md`](../master/harness_development_principles.md), principle 29.
