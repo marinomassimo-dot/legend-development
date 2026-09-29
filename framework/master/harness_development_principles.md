@@ -119,6 +119,26 @@ below is a consequence of that one sentence.
 27. **Privacy is the layering.** Generic engine, public disease model, and a private overlay that
     is never in this repository and never leaves its perimeter. No query to an external tool
     carries individual-level data. → [`CLAUDE.md`](../../CLAUDE.md) § 0
+28. **Divergent thinking, to invite insight.** When one mechanism arrives quickly, write down its
+    rivals: 3–7 mechanistically distinct explanations, each with the readout that separates it
+    from its neighbours (`diverge_hypotheses`). Look for the answer in a neighbouring field that
+    shares none of the vocabulary, and bring back both what transfers and what does not
+    (`connect_domains`). Diverge before converging: a critic that prunes early kills the immature
+    idea that would have become the good one. It is a habit, not a quota: a genuinely
+    single-explanation case returns one and says so.
+    → [`legend-discovery-method`](../../.claude/skills/legend-discovery-method/SKILL.md) §§ 2.2–2.3
+
+## E · Autonomy
+
+29. **Human-in-the-loop is the exception; the loop runs on its own.** The laboratory works for
+    hours without the operator. The operator's absence is a condition with a safe default, never
+    a reason to stop. While tasks remain and no reserved act blocks them, the turn does not end:
+    claim the next task and continue. A question that has a default is answered by executing the
+    default and reporting it. The operator reads DEFAULTS_TAKEN and DECISIONS_TAKEN when present,
+    and a wrong default is corrected after the fact. The operator is needed only for the reserved
+    acts of principle 8, and each such stop is stated in four lines so it costs the operator one
+    paste. Target on an unattended run: no stop for lack of a default.
+    → [`LEGEND_CORE.md` §21c](../instruction/LEGEND_CORE.md#21c-stop-policy) (SAFE_DEFAULTS), [`legend`](../../.claude/skills/legend/SKILL.md) autonomy contract
 
 ---
 
@@ -129,6 +149,8 @@ below is a consequence of that one sentence.
 | "Not too rigorous" (20) against receipts, LINT and `BATCH_COMMIT` | Principle 21: freedom in discovery space, provenance only at promotion. Receipts are method, not ceremony (§21e GATES). |
 | "No gates" (2) against learned gates and regression suites | Principle 3: an automatic check that reports is a test; a gate is waiting on someone. |
 | "Continuous upgrades" (10) against a harness that must stay simple (5) | Principles 14 and 15: look before building, and drop what shows no effect. A small toolkit that is used beats a large one that is complied with. |
+| "The loop runs on its own" (29) against `LEGEND_CORE.md` §22, whose last line reads *"Stay passive. Await input. Never self-authorize."* | **Open.** §21c–§21e (operator decisions of 2026-09-03 and 2026-09-05) govern stopping and deciding, and §22 predates them; but §21e's precedence list does not name §22, so the literal text still contradicts this principle. Proposed repair: an amendment callout on that line pointing to §21c–§21d. It needs to be recorded as a harness change of its own. |
+| "Diverge" (28) against a critic that ranks and prunes (forge's critique step) | Diverge first, prune after: divergence is a habit, and the critic does not see the set until it exists. |
 
 ---
 
@@ -149,3 +171,8 @@ below is a consequence of that one sentence.
 
 Principles 1–2, 5, 9–13, 16, 19–22 and 24 come from this dictation. Principles 3–4, 6–8, 14–15,
 17–18, 23 and 25–27 were added by Harness Engineering from the canonical homes named beside each.
+The operator added principles 28 and 29 later the same day:
+
+> aggiungiamo pensiero divergente per favorire intuizioni (non ricordo bene come avevi chimato il
+> pattern), Humani in the loop è un eccezione il loop deve andare avanti da solo anche per ore ed
+> ore senza operatore
