@@ -43,7 +43,7 @@ edition: public
 ## 2. DISEASE-MODEL (WORKING-MODEL) VERSION
 
 ```yaml
-working_model_version: WM_v7.6
+working_model_version: WM_v7.7
 working_model_file: disease-models/wwox/registries/working_model_current.md
 narrative_view: disease-models/wwox/disease_model.md
 notes: "Canonical disease-level working model derived from public literature; disease_model.md is its narrative reader-facing view. The private individual-level record is not part of this edition."
@@ -106,8 +106,8 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20260928_007
-last_batch_commit_date: 2026-09-28
+last_batch_commit_id: BATCH_20260929_001
+last_batch_commit_date: 2026-09-29
 last_batch_commit_type: MANUAL
 ```
 
@@ -122,8 +122,8 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20260928_BATCH_20260928_007
-last_lint_date: 2026-09-28
+last_lint_id: LINT_20260929_BATCH_20260929_001
+last_lint_date: 2026-09-29
 last_lint_result: WARN
 ```
 
@@ -160,8 +160,8 @@ and a mismatch is `BLOCK_SYSTEM` — reading history you cannot trust is worse t
 
 ```yaml
 fulltext_ledger_path: disease-models/wwox/registries/fulltext_read_receipts.jsonl
-fulltext_ledger_events: 266
-fulltext_ledger_head: be7c0d4fdd8116cd7e52377931b9de28eddcc4dc6ed9beac5e6d0b64e21fc058
+fulltext_ledger_events: 267
+fulltext_ledger_head: 0b2ced187e440f1c2dcb53bc9495cc35ed6ad47d3ca2d044483f3d8d01f5c21a
 ```
 
 Maintained automatically — `fulltext_receipts.py record` re-anchors after every append.
@@ -209,8 +209,8 @@ to make a suite green — the only way to move it is to have made the change you
 
 ```yaml
 growth_anchor_ledger: framework/state/growth_anchors.jsonl
-growth_anchor_events: 33
-growth_anchor_head: c6a22b808ad584b4ac13229d52f2fc64022ae5668ccb1c3184858278b386f67e
+growth_anchor_events: 34
+growth_anchor_head: 8e8d19c8111426b5f60a5a4d24f6b440a1c653d287a7d9a54ac4675f00cf2536
 ```
 
 ```bash
@@ -258,7 +258,7 @@ baseline below must equal the live count, never preserve historical padding.
 
 ```yaml
 unread_premise_baseline: 0
-unread_premise_measured_on: 2026-09-28
+unread_premise_measured_on: 2026-09-29
 ```
 
 **It is a ratchet, not a wall.** Blocking on the whole legacy backlog would only teach sessions

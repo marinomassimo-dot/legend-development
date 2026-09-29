@@ -45,7 +45,7 @@
 - Non-cell-autonomous hypomyelination in neuronal WWOX deletion (Repudi 2021).
 - N/N genotype → higher risk of seizures, hypertonia, respiratory complications vs N/M and M/M (Gao 2025, n=50).
 - AAV9-hSynI-hWWOX: dose-dependent durable rescue in a Wwox-null murine model, including ECoG/SWD reduction (Obeid 2026).
-- Ketogenic diet associated with seizure improvement in 3/5 WOREE patients (Chong 2023).
+- Ketogenic diet: three of five patients in one WOREE series are reported as responders; the number exposed is not stated, and the one Q230P carrier has no diet entry (Chong 2023; [[claim_registry_current#CLAIM 042]]).
 - In the P47T knock-in mouse, sampled cerebellar regions have fewer calbindin-positive Purkinje profiles than wild type at 80 and 250 days; basket-cell genotype tests are nonsignificant at both ages. This does not test progression within P47T or transfer to Q230P. *(CLAIM 041 / Hussain 2023.)*
 
 ### Inferences (INFERENZA)
