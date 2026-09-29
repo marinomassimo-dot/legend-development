@@ -351,3 +351,15 @@ Edit 1 (the `017` mirror row) is **PROPAGATED** by `BATCH_20260927_001`, re-veri
 Unchanged and re-measured: the ketogenic 3/5 datum is model prose in the working model and holds no claim ID; minting one needs an **operator decision** that a dietary-intervention datum may hold a canonical claim, and its evidence boundary written first. No reading is owed.
 
 **Not medical advice.**
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260929_001` (2026-09-29, ACTOR_ID `orchestrator`), append-only
+
+**Nothing above this line was rewritten.** Operator decision, verbatim: *«ok per id di claim per chetogenica»*.
+
+**Verdict:** PROPAGATED
+
+The last residue — the ketogenic promotion, deferred for want of an operator decision — is discharged: the operator decided a dietary datum may hold a claim ID, and `CC-20260929-KETOGENIC-CLAIM-01` wrote the evidence boundary first, as this candidate required, and propagated `CLAIM 042`. Re-reading the source changed two terms of the boundary this candidate anticipated: «3/5 responders» is not a response rate (the number exposed is not stated), and the one Q230P carrier has no diet entry.
+
+**Not medical advice.**

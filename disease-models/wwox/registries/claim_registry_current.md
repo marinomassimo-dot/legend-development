@@ -784,3 +784,21 @@ If comparable studies conflict:
 **Source:** [[paper_registry_current#PAPER 007]] (Hussain et al. 2023, PMID 36828035, Fig. 5d/e; complete receipt `FTR-20260913-36828035-03`)
 **Wikilinks:** [[paper_registry_current#PAPER 007]] · [[claim_registry_current#CLAIM 007]]
 **Impact on Working Model:** add a model-specific cerebellar histology observation; no BLOCCO 1 or therapeutic change.
+
+
+---
+
+## CLAIM 042
+**Title:** In one WOREE case series, three of five patients are reported to have improved seizure control after a ketogenic diet; the number of patients exposed is not stated and no Q230P carrier is among the responders
+**Status:** in observation
+**Type:** DATO (uncontrolled case series, clinical report) + INFERENZA (the authors' suggestion of benefit)
+**Pathway:** P1 — clinical epilepsy management; P5 — metabolic context
+**Genotype/model relevance:** human WOREE, five paediatric patients; the three reported responders carry splice-region (one at +5) or exon-deletion alleles on both sides, none a missense; the one Q230P carrier (compound heterozygous with an exon-5 deletion) has no ketogenic-diet entry in the source
+**Transferability:** T2 — human WOREE; not demonstrated for the Q230P-bearing genotype class
+**clinical relevance:** MODERATE — a low-risk-to-describe, clinically available intervention with a small, uncontrolled human signal; not a treatment recommendation
+**Summary:** Chong et al. 2023 report that «the institution of a ketogenic diet in patients 1, 2, and 4 notably improved seizure control», and Table 1 marks those three patients «Responded to ketogenic diet». The authors hedge in the discussion — «It may be premature to assert the potential beneficial effects of a ketogenic diet as they need to be evaluated carefully in a larger cohort» — and conclude more strongly that it «should be considered». Earlier reports cited by the same paper describe ketogenic-diet use in WOREE «with varying degrees of success».
+**Clinical meaning:** Non cambia la pratica e non è parere medico. Documents that a ketogenic diet has been used in WOREE with reported seizure improvement in some patients, which is information for discussion with a treating clinical team, not an indication.
+**Evidence boundary:** n = 5; uncontrolled, unblinded, retrospective case series; no seizure-frequency measure, no timing or duration of the diet, and no definition of «responded» in the retrieved text; the denominator of patients exposed to the diet is **not stated**, so «3/5» must not be read as a response rate; responses are reported only in patients whose alleles are splice-region changes or exon deletions on both sides, and the single Q230P carrier has **no** ketogenic-diet entry — neither response nor non-response — so nothing here transfers to the Q230P-bearing genotype class; the authors' conclusion («should be considered»; «the seizures in most patients responded») is stronger than their own discussion («may be premature») and than their own count of three; the paper calls all five genotypes «predicted null» although patient 5 carries a missense allele, and patient 5 also carries a de novo likely-pathogenic *GRIA4* variant, so her seizure course is confounded; co-medication during the diet is not reported in the retrieved passages. `PREMISE_TAG`: any statement that the ketogenic diet «works» in WOREE, or in the reference genotype, rests on this series and on uncontrolled earlier reports only. `REVIVAL_TRIGGER`: a report with the number exposed, a seizure-frequency endpoint, or any documented diet exposure in a Q230P carrier.
+**Source:** [[paper_registry_current#PAPER 017]] (Chong et al. 2023, PMID 36537114; publisher passages via Scholar Gateway, receipt `FTR-20260929-36537114-02`; blind locator audit 2026-09-29, T1–T5 SUPPORTED)
+**Wikilinks:** [[paper_registry_current#PAPER 017]] · [[claim_registry_current#CLAIM 001]] · [[claim_registry_current#CLAIM 009]]
+**Impact on Working Model:** replaces the model prose «seizure improvement in 3/5 WOREE patients» with a pointer to this claim and its denominator caveat; no BLOCCO 1 change, no therapeutic score.

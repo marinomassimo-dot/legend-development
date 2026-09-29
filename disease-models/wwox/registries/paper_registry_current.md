@@ -408,7 +408,7 @@ The canonical P1–P7 codes follow the WWOX working model and claim registry. **
 **clinical relevance:** MODERATE-HIGH
 **Claim links:** 001 (dato misto vigabatrin) / 009 (supporto P5) / 013 supportivo
 **Role:** KD support + Q230P SDR mechanism + spectrum expansion
-**Note:** KD associata a miglioramento crisi in 3/5 (P1, P2, P4); vigabatrin: resistente in P3, combinato con KD in P4; lattato lievemente elevato in P4 (2.4-3.3 mmol/L); Q230P/SDR: trascritto normale ma proteina assente/instabile → meccanismo post-traduzionale → compatibile con funzione residua parziale nel genotipo di riferimento; pancreatite ricorrente e sordità neurosensoriale come feature espansive; valutazione visiva indicata (4/5 con deficit visivo)
+**Note:** KD associata a miglioramento crisi in 3/5 (P1, P2, P4) [corretto 2026-09-29 da `BATCH_20260929_001`: la fonte nomina **tre** responder (P1, P2, P4) ma **non dice quanti dei cinque abbiano iniziato la dieta**, quindi «3/5» non è un tasso di risposta; l'unica portatrice di `p.Gln230Pro` (P5, eterozigote composta con delezione dell'esone 5, più una variante *GRIA4* de novo) **non ha alcuna voce di dieta** in Tabella 1; «tutti null/null» ripete la previsione degli autori (*«predicted to be null»*), non una misura per l'allele missense — receipt `FTR-20260929-36537114-02`, [[claim_registry_current#CLAIM 042]]]; vigabatrin: resistente in P3, combinato con KD in P4; lattato lievemente elevato in P4 (2.4-3.3 mmol/L); Q230P/SDR: trascritto normale ma proteina assente/instabile → meccanismo post-traduzionale → compatibile con funzione residua parziale nel genotipo di riferimento; pancreatite ricorrente e sordità neurosensoriale come feature espansive; valutazione visiva indicata (4/5 con deficit visivo)
 
 ---
 
