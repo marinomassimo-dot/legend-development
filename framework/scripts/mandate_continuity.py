@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """Reconcile an Orchestrator mandate from its durable record, and keep the session on it.
 
-Three commands, one source of truth — the `AUTHORISED_QUEUE*` block of an Annex A task record
+Four commands, one source of truth — the `AUTHORISED_QUEUE*` block of an Annex A task record
 under `ledger/tasks/<actor>/<TASK_ID>.json` (schema: Annex A.1c):
 
     python3 framework/scripts/mandate_continuity.py status --task ALDAZ-EXEC-20260913
     python3 framework/scripts/mandate_continuity.py normalise --task <TASK_ID> [--write]
     python3 framework/scripts/mandate_continuity.py stop-hook      # Claude Code Stop hook
+    python3 framework/scripts/mandate_continuity.py events [--last N]   # what the hook did
 
 `status` prints the verdict the continuity procedure needs at bootstrap, after every milestone
 and after every compaction or recall (cross_session_transport.md §12): CONTINUE with the next
@@ -23,7 +24,11 @@ binding marker an actor or the operator wrote as a plain-text LINE of its own �
 
 — computes the verdict from the record on disk, and BLOCKS the turn from ending while the
 verdict is CONTINUE or MALFORMED, handing the session the next step or the repair. A session
-that never wrote a marker is never touched. The block is bounded: after `MAX_CONSECUTIVE_BLOCKS`
+that is bound by no marker and no launcher is never touched. A launcher (an operator, a
+scheduled routine) can bind an unattended session without depending on the model to write a
+marker, by starting it with `LEGEND_MANDATE_TASK=<TASK_ID>` in its environment; that session is
+then held to the record's verdict exactly as a marker-bound one is, and is released by the
+record (MANDATE_STATE), not by a marker. The block is bounded: after `MAX_CONSECUTIVE_BLOCKS`
 blocks with no change to the queue's statuses and no new commit, the stop is allowed through
 and the count is reported, so a session that genuinely cannot progress is not trapped. If the
 count cannot be persisted the stop is allowed, because an unbounded block is worse than a
@@ -46,9 +51,19 @@ that an unwritable state directory made unbounded, the release marker the hook's
 carried back into the transcript, and the whole-file hash that a logged stop reset; each is a
 test below now.
 
+Everything the hook decides about a bound session, and every error or unreadable transcript,
+is appended to `events.jsonl` in its state directory (machine-local, never in the repository,
+rotated at 256 KB), because a hook that fails open fails silently and a silent hook cannot be
+measured. `events` summarises it: blocks issued, stops let through and why, errors, unparseable
+transcripts. A hook that has only ever logged errors is broken, not quiet.
+
+Runtime scope: `status`, `normalise` and the record schema are runtime-agnostic and any runtime
+can call them. `stop-hook` is the Claude Code adapter: it reads the Claude Code hook payload and
+transcript format. Another runtime needs its own adapter over `status`.
+
 What this does NOT guarantee: model compliance after the last block, runtime liveness, quota.
-It is a repository hook, opt-in per session by marker, and it enforces the mandate record — not
-§21c, which remains procedural guidance and reserved text.
+It is a repository hook, opt-in per session by marker or by launcher, and it enforces the
+mandate record — not §21c, which remains procedural guidance and reserved text.
 """
 from __future__ import annotations
 
@@ -59,6 +74,7 @@ import os
 import re
 import subprocess
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -72,6 +88,10 @@ MAX_TOTAL_BLOCKS = 12   # per session and mandate; progress resets the consecuti
 # negated mention inside a sentence ("do NOT write MANDATE_BOUND: T-1 yet") does not bind.
 MARKER_RE = re.compile(r"^\s*MANDATE_(BOUND|RELEASED):\s*([A-Za-z0-9][A-Za-z0-9_.-]*)\s*$", re.M)
 DISABLE_ENV = "LEGEND_MANDATE_HOOK"
+BIND_ENV = "LEGEND_MANDATE_TASK"   # a launcher binds an unattended session; no model cooperation
+TASK_ID_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9_.-]*$")
+EVENTS_FILE = "events.jsonl"
+EVENTS_MAX_BYTES = 256 * 1024
 # Words that look like evidence and point at nothing (Junior review 2, D5).
 # Only the unambiguous ones: a false hold costs more than a rare false pass, and the record's
 # honesty is the actor's obligation — the schema refuses a non-pointer, not a weak one.
@@ -409,24 +429,45 @@ def _outside_fences(text: str) -> str:
     return "\n".join(kept)
 
 
-def binding_from_transcript(path: Path) -> str | None:
-    """The last marker LINE in this session's own text wins; RELEASED clears BOUND."""
+def scan_transcript(path: Path) -> tuple[str | None, int, int]:
+    """(binding, non-empty lines, lines that parsed as JSON objects).
+
+    The last marker LINE in this session's own text wins; RELEASED clears BOUND. The two counts
+    are the hook's only way to notice that the transcript format has changed under it: a file
+    with lines and no parseable entry is a format this code does not read, not an unbound
+    session."""
     bound: str | None = None
+    lines = entries = 0
     try:
         with path.open(encoding="utf-8", errors="replace") as fh:
             for line in fh:
+                if not line.strip():
+                    continue
+                lines += 1
                 try:
                     entry = json.loads(line)
                 except ValueError:
                     continue
                 if not isinstance(entry, dict):
                     continue
+                entries += 1
                 for text in _text_blocks(entry):
                     for kind, task in MARKER_RE.findall(_outside_fences(text)):
                         bound = task if kind == "BOUND" else (None if task == bound else bound)
     except OSError:
-        return None
-    return bound
+        return None, 0, 0
+    return bound, lines, entries
+
+
+def binding_from_transcript(path: Path) -> str | None:
+    """The last marker LINE in this session's own text wins; RELEASED clears BOUND."""
+    return scan_transcript(path)[0]
+
+
+def launcher_binding() -> str | None:
+    """The task a launcher bound this process to, or None. A malformed id binds nothing."""
+    value = os.environ.get(BIND_ENV, "").strip()
+    return value if TASK_ID_RE.match(value) else None
 
 
 # ---------------------------------------------------------------- bounded stop hook
@@ -462,12 +503,19 @@ def state_dir() -> Path:
 
 def decide(payload: dict, root: Path, *, max_blocks: int = MAX_CONSECUTIVE_BLOCKS) -> dict:
     """Pure decision: returns {'action': 'allow'|'block', 'reason': str, 'status': dict|None}."""
-    transcript = payload.get("transcript_path")
-    if not isinstance(transcript, str) or not transcript:
-        return {"action": "allow", "reason": "no transcript in payload", "status": None}
-    task = binding_from_transcript(Path(transcript))
+    task = launcher_binding()
     if not task:
-        return {"action": "allow", "reason": "session bound to no mandate", "status": None}
+        transcript = payload.get("transcript_path")
+        if not isinstance(transcript, str) or not transcript:
+            return {"action": "allow", "reason": "no transcript in payload", "status": None}
+        task, lines, entries = scan_transcript(Path(transcript))
+        if not task:
+            if lines and not entries:
+                return {"action": "allow", "status": None, "event": "TRANSCRIPT_UNPARSEABLE",
+                        "reason": f"transcript has {lines} lines and none parses as a JSON "
+                                  "object: the format changed or the path is wrong, so no "
+                                  "session can be bound through it"}
+            return {"action": "allow", "reason": "session bound to no mandate", "status": None}
     status = status_for(root, task)
     if status["stop_allowed"]:
         return {"action": "allow", "reason": render(status), "status": status}
@@ -518,17 +566,67 @@ def decide(payload: dict, root: Path, *, max_blocks: int = MAX_CONSECUTIVE_BLOCK
     return {"action": "block", "reason": _defuse(reason), "status": status}
 
 
+def log_event(kind: str, **fields) -> None:
+    """Append one line to the hook's own event log. Best effort: it never raises and never
+    changes a decision. Rotated once at EVENTS_MAX_BYTES, keeping one previous file."""
+    try:
+        sdir = state_dir()
+        sdir.mkdir(parents=True, exist_ok=True)
+        target = sdir / EVENTS_FILE
+        if target.exists() and target.stat().st_size > EVENTS_MAX_BYTES:
+            target.replace(sdir / (EVENTS_FILE + ".1"))
+        record = {"ts": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "kind": kind}
+        record.update({k: (str(v)[:240] if isinstance(v, str) else v) for k, v in fields.items()})
+        with target.open("a", encoding="utf-8") as fh:
+            fh.write(json.dumps(record, ensure_ascii=False) + "\n")
+    except Exception:  # noqa: BLE001 — observability must not become a failure mode
+        pass
+
+
+def read_events(limit: int = 20) -> tuple[dict, list[dict]]:
+    """(counts by kind, the last `limit` events) across the current and previous log file."""
+    rows: list[dict] = []
+    sdir = state_dir()
+    for name in (EVENTS_FILE + ".1", EVENTS_FILE):
+        try:
+            with (sdir / name).open(encoding="utf-8") as fh:
+                for line in fh:
+                    try:
+                        row = json.loads(line)
+                    except ValueError:
+                        continue
+                    if isinstance(row, dict):
+                        rows.append(row)
+        except OSError:
+            continue
+    counts: dict[str, int] = {}
+    for row in rows:
+        counts[str(row.get("kind"))] = counts.get(str(row.get("kind")), 0) + 1
+    return counts, rows[-limit:] if limit > 0 else []
+
+
 def stop_hook(stdin_text: str, root: Path = ROOT) -> tuple[int, str, str]:
     """Returns (exit_code, stdout, stderr). Fails open on every error."""
     if os.environ.get(DISABLE_ENV, "").lower() in ("off", "0", "false", "no"):
         return 0, "", ""
+    session = "unknown"
     try:
         payload = json.loads(stdin_text or "{}")
         if not isinstance(payload, dict):
+            log_event("ERROR", reason="payload is not an object")
             return 0, "", "mandate_continuity: payload is not an object; allowing"
+        session = str(payload.get("session_id") or "unknown")
         decision = decide(payload, root)
     except Exception as exc:  # noqa: BLE001 — a hook must never trap the session
+        log_event("ERROR", session=session, reason=f"{type(exc).__name__}: {exc}")
         return 0, "", f"mandate_continuity: {type(exc).__name__}: {exc}; allowing"
+    status = decision.get("status") or {}
+    if decision.get("event"):
+        log_event(decision["event"], session=session, reason=decision["reason"])
+    elif status:
+        log_event("BLOCK" if decision["action"] == "block" else "ALLOW", session=session,
+                  task=status.get("task"), verdict=status.get("verdict"),
+                  reason=str(decision["reason"]).splitlines()[-1] if decision["reason"] else "")
     if decision["action"] == "block":
         return 0, json.dumps({"decision": "block", "reason": decision["reason"]}), ""
     note = decision["reason"] if decision.get("status") else ""
@@ -551,7 +649,24 @@ def main(argv: list[str] | None = None) -> int:
     nm.add_argument("--task", required=True)
     nm.add_argument("--root", type=Path, default=ROOT)
     nm.add_argument("--write", action="store_true")
+    ev = sub.add_parser("events", help="what the stop hook decided on this machine")
+    ev.add_argument("--last", type=int, default=20, help="how many recent events to print")
     args = parser.parse_args(argv)
+
+    if args.command == "events":
+        counts, rows = read_events(args.last)
+        print(f"state dir: {state_dir()}")
+        if not counts:
+            print("no events recorded: the hook has not run on a bound session, or is not installed")
+            return 0
+        print("counts: " + ", ".join(f"{k}={v}" for k, v in sorted(counts.items())))
+        broken = counts.get("ERROR", 0) + counts.get("TRANSCRIPT_UNPARSEABLE", 0)
+        if broken and not (counts.get("BLOCK", 0) or counts.get("ALLOW", 0)):
+            print("WARNING: only errors and unreadable transcripts so far; the hook is likely "
+                  "broken, not quiet")
+        for row in rows:
+            print("  " + " ".join(f"{k}={row[k]}" for k in row))
+        return 0
 
     if args.command == "stop-hook":
         try:
