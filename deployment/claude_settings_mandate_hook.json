@@ -1,0 +1,25 @@
+{
+  "_comment": [
+    "Stop hook for Orchestrator mandate continuity — merge this 'hooks' block into",
+    ".claude/settings.json (project) or .claude/settings.local.json (this machine).",
+    "The hook keeps a session that wrote 'MANDATE_BOUND: <TASK_ID>' from ending its turn",
+    "while that task record's AUTHORISED_QUEUE still has executable steps. Sessions without",
+    "the marker are never touched; the block is bounded (three refusals without progress)",
+    "and fails open. Installing it is a one-time operator act: the repository's own actors",
+    "cannot write the active settings file. See framework/scripts/mandate_continuity.py and",
+    "framework/protocols/cross_session_transport.md section 11."
+  ],
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 framework/scripts/mandate_continuity.py stop-hook",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}

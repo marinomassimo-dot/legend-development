@@ -469,3 +469,80 @@ its subjects is more checkable, not less general.
 grep for actor names returns non-zero on this file and is expected to. It would return **zero** on
 a protocol that branched on `ACTOR_ID` through a variable, which is precisely the failure this
 property exists to exclude. Use a grep to build the inventory; use the deletion test to decide.
+
+## 12 · Autonomous mandate continuity
+
+> Condensed from the VPS line's §12 (`backup/vps-main-2026-09-25`, written 2026-09-14 to
+> 2026-09-17, ported 2026-09-30). Kept: the decision table, the context rule, the queue schema
+> and the bounded Stop hook. Left out on purpose: the long verdict prose (it lives in
+> `framework/scripts/mandate_continuity.py` and its tests, one home) and any obligation to hold
+> a mandate open for a review, which §21e does not make a precondition of anything.
+
+**Why it exists.** On 2026-09-14 two Orchestrator sessions of five hours each ended with under
+ten percent of their budget used. One declared "a safe stopping point before compaction" and
+ended its turn; a turn that ends triggers neither compaction nor resumption, so the session sat
+idle for hours. A queue also closed itself, written as prose that no program could reconcile.
+Every rule that would have prevented both was already loaded in the session.
+
+**The rule.** An assigned Orchestrator receiving a goal, roadmap or work queue runs it to the
+end. The operator is a source of mandates and of the few reserved decisions of §21d, not a step
+in the loop; a human who has to wake the coordinator is the bottleneck this section removes.
+Authority and scientific guarantees stay those of `LEGEND_CORE.md` §21c–§21e, and an explicit
+single-turn or narrower operator mandate still wins.
+
+### Decision table — apply it before ending any turn
+
+| Observed condition | Action |
+|---|---|
+| Authorised work is executable | Execute or delegate it. Do not end on "ready", "next step" or "nothing else needed". |
+| A child or process is active and nothing independent is left | Wait with the runtime's own mechanism and collect its persisted output before replacing it. |
+| One item is blocked or needs a reserved decision | Park that item with cause, evidence and unblock condition; continue the independent ones. |
+| A goal is complete but the queue is not | Start the next eligible goal without another approval. |
+| Every remaining item is demonstrably blocked | Keep the mandate incomplete, record each blocker and its recovery, and stop with a one-line reason. |
+| The runtime actually refuses to continue (limit, quota) | Checkpoint to disk, report the observed limit in one line, never label the mandate complete. |
+| All acceptance criteria are evidenced | Complete the mandate; cancel only its own remaining recalls. |
+| The operator cancels or pauses | Honour it at once and preserve the state. |
+
+A finished wave, a delivered report, a clean tree, a checkpoint, night-time and the operator's
+absence do not end a mandate. Do not invent maintenance, repeat passed tests without cause, or
+exceed an explicit budget to stay busy.
+
+### Context is a continuity boundary, not a stop
+
+On the Claude Code runtime compaction is automatic: the runtime summarises the conversation and
+the session continues; nothing on disk is touched. **An advance context warning is never a reason
+to end the turn.** Checkpoint to disk (the record's step statuses), then start the next step.
+Do not fill the context on purpose, and do not stop mid-write to satisfy a percentage. Only a
+runtime that has actually refused to continue is a limit, and it is reported as one.
+After compaction or recall, reload the mandate and reconcile from the record, never from the chat
+summary.
+
+### The queue is a schema, not prose
+
+The mandate lives in the task record as an `AUTHORISED_QUEUE*` block (Annex A.1c):
+`MANDATE_STATE` plus, per objective, steps that each carry a `status` (`TODO`, `IN_PROGRESS`,
+`DONE` with `evidence`, `BLOCKED` with a named `blocker`).
+`python3 framework/scripts/mandate_continuity.py status --task <TASK_ID>` prints the verdict:
+`CONTINUE` with the next step, `ALL_BLOCKED`, `COMPLETE_PENDING`, `RELEASED`, or a hold
+(`EVIDENCE_PENDING`, `INCONSISTENT_COMPLETE`, `MALFORMED`). Run it at bootstrap, after every
+milestone, after every compaction and on every recall, and update the statuses as work lands.
+
+### The bounded Stop hook
+
+Where it is installed (block in
+[`deployment/claude_settings_mandate_hook.json`](../../deployment/claude_settings_mandate_hook.json)),
+Claude Code runs `mandate_continuity.py stop-hook` whenever a session is about to end its turn.
+A session opts in by writing one plain-text line of its own, `MANDATE_BOUND: <TASK_ID>`, and out
+with `MANDATE_RELEASED: <TASK_ID>`; the operator may write either. For a bound session whose
+record says `CONTINUE` or one of the holds, the hook refuses the end of turn and hands back the
+next step. It never touches an unbound session, is **bounded** (three refusals in a row without
+a status or evidence change in the queue, twelve in all per session and mandate), and fails open
+on every error. `LEGEND_MANDATE_HOOK=off` disables it.
+
+Installing it is a one-time operator act on the project settings: this repository's actors
+cannot write the active settings file, and are right not to.
+
+**What it does not do.** It does not make the model obey after the last refusal, keep a runtime
+alive, measure quota, or start anything: no supervisor, scheduler or watchdog is installed by
+this section, in line with the prior-art decision that rejected external heartbeats. Repository
+tests show the hook's logic, not that a Claude-hosted actor keeps working.
