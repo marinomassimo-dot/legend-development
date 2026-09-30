@@ -493,6 +493,156 @@ class StopHook(unittest.TestCase):
         self.assertEqual(json.loads(r.stdout)["decision"], "block")
 
 
+class LauncherBindingAndEvents(unittest.TestCase):
+    """A launcher can bind an unattended session, and everything the hook does to a bound
+    session is observable (2026-09-30, operator-authorised addition to the reviewed hook)."""
+
+    def setUp(self) -> None:
+        self.tmp = tempfile.TemporaryDirectory()
+        self.root = Path(self.tmp.name)
+        (self.root / "ledger/tasks/orchestrator").mkdir(parents=True)
+        subprocess.run(["git", "init", "-q"], cwd=self.root, check=True)
+        subprocess.run(["git", "-c", "user.email=t@t", "-c", "user.name=t", "commit", "-q",
+                        "--allow-empty", "-m", "init"], cwd=self.root, check=True)
+        self.state = self.root / "hookstate"
+        os.environ["LEGEND_MANDATE_HOOK_STATE"] = str(self.state)
+        os.environ.pop(mc.DISABLE_ENV, None)
+        os.environ.pop(mc.BIND_ENV, None)
+        self.transcript = self.root / "session.jsonl"
+        self.transcript.write_text(transcript_lines(("assistant", "no marker here", False)))
+        self.payload = {"session_id": "s-1", "transcript_path": str(self.transcript),
+                        "hook_event_name": "Stop", "stop_hook_active": False}
+
+    def tearDown(self) -> None:
+        for name in ("LEGEND_MANDATE_HOOK_STATE", mc.DISABLE_ENV, mc.BIND_ENV):
+            os.environ.pop(name, None)
+        self.tmp.cleanup()
+
+    def put_record(self, q: dict) -> None:
+        (self.root / "ledger/tasks/orchestrator/T-1.json").write_text(
+            json.dumps(record(q)), encoding="utf-8")
+
+    def run_hook(self) -> tuple[int, str, str]:
+        return mc.stop_hook(json.dumps(self.payload), self.root)
+
+    def events(self) -> list[dict]:
+        return mc.read_events(1000)[1]
+
+    todo = {"OBJ_1": [{"step": "x", "status": "TODO"}]}
+
+    # ---- launcher binding -------------------------------------------------------------
+    def test_a_launcher_binds_a_session_that_wrote_no_marker(self) -> None:
+        self.put_record(queue(self.todo))
+        os.environ[mc.BIND_ENV] = "T-1"
+        d = json.loads(self.run_hook()[1])
+        self.assertEqual(d["decision"], "block")
+        self.assertIn("block 1/", d["reason"])
+
+    def test_a_launcher_binding_needs_no_transcript_at_all(self) -> None:
+        self.put_record(queue(self.todo))
+        os.environ[mc.BIND_ENV] = "T-1"
+        del self.payload["transcript_path"]
+        self.assertEqual(json.loads(self.run_hook()[1])["decision"], "block")
+
+    def test_a_launcher_binding_is_bounded_like_a_marker_binding(self) -> None:
+        self.put_record(queue(self.todo))
+        os.environ[mc.BIND_ENV] = "T-1"
+        for _ in range(mc.MAX_CONSECUTIVE_BLOCKS):
+            self.assertEqual(json.loads(self.run_hook()[1])["decision"], "block")
+        self.assertEqual(self.run_hook()[1], "")
+
+    def test_a_launcher_bound_session_is_released_by_the_record(self) -> None:
+        self.put_record(queue({"OBJ_1": [{"step": "x", "status": "DONE", "evidence": "commit abc"}]},
+                              state="COMPLETE"))
+        os.environ[mc.BIND_ENV] = "T-1"
+        self.assertEqual(self.run_hook()[1], "")
+
+    def test_a_malformed_launcher_id_binds_nothing(self) -> None:
+        self.put_record(queue(self.todo))
+        for bad in ("", "  ", "../etc/passwd", "T 1", "-T-1", "T-1;rm"):
+            os.environ[mc.BIND_ENV] = bad
+            self.assertIsNone(mc.launcher_binding(), bad)
+            self.assertEqual(self.run_hook()[1], "", bad)
+
+    def test_the_disable_switch_still_beats_a_launcher_binding(self) -> None:
+        self.put_record(queue(self.todo))
+        os.environ[mc.BIND_ENV] = "T-1"
+        os.environ[mc.DISABLE_ENV] = "off"
+        self.assertEqual(self.run_hook(), (0, "", ""))
+
+    # ---- events -----------------------------------------------------------------------
+    def test_a_block_and_the_allow_that_follows_are_both_logged(self) -> None:
+        self.put_record(queue(self.todo))
+        self.transcript.write_text(transcript_lines(("assistant", "MANDATE_BOUND: T-1", False)))
+        for _ in range(mc.MAX_CONSECUTIVE_BLOCKS + 1):
+            self.run_hook()
+        kinds = [e["kind"] for e in self.events()]
+        self.assertEqual(kinds, ["BLOCK"] * mc.MAX_CONSECUTIVE_BLOCKS + ["ALLOW"])
+        first = self.events()[0]
+        self.assertEqual((first["task"], first["verdict"], first["session"]), ("T-1", "CONTINUE", "s-1"))
+        self.assertRegex(first["ts"], r"^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\dZ$")
+
+    def test_an_unbound_session_writes_nothing(self) -> None:
+        self.put_record(queue(self.todo))
+        self.run_hook()
+        self.assertEqual(self.events(), [])
+        self.assertFalse((self.state / mc.EVENTS_FILE).exists())
+
+    def test_an_unparseable_transcript_is_logged_and_still_allowed(self) -> None:
+        self.transcript.write_text("<<< not json >>>\nstill not json\n")
+        self.assertEqual(self.run_hook()[1], "")
+        self.assertEqual([e["kind"] for e in self.events()], ["TRANSCRIPT_UNPARSEABLE"])
+
+    def test_an_empty_transcript_is_not_a_format_change(self) -> None:
+        self.transcript.write_text("")
+        self.run_hook()
+        self.assertEqual(self.events(), [])
+
+    def test_an_error_is_logged_and_the_hook_still_fails_open(self) -> None:
+        code, out, err = mc.stop_hook("[1, 2]", self.root)
+        self.assertEqual((code, out), (0, ""))
+        self.assertEqual([e["kind"] for e in self.events()], ["ERROR"])
+
+    def test_logging_can_never_raise_or_change_the_decision(self) -> None:
+        (self.state).write_text("this path is a file, so no directory can be made there")
+        mc.log_event("BLOCK", task="T-1")   # must not raise
+        self.assertEqual(mc.read_events(5), ({}, []))
+
+    def test_the_log_rotates_and_reads_across_both_files(self) -> None:
+        big = "x" * 200   # every line is at least this long, whatever else it carries
+        rounds = mc.EVENTS_MAX_BYTES // 200 + 50
+        for _ in range(rounds):
+            mc.log_event("ALLOW", reason=big)
+        self.assertTrue((self.state / (mc.EVENTS_FILE + ".1")).exists())
+        counts, last = mc.read_events(3)
+        self.assertEqual(len(last), 3)
+        self.assertGreater(counts["ALLOW"], 100)
+
+    def test_long_reasons_are_truncated(self) -> None:
+        mc.log_event("ALLOW", reason="y" * 5000)
+        self.assertLessEqual(len(self.events()[0]["reason"]), 240)
+
+    def test_the_events_command_summarises_and_warns_about_a_broken_hook(self) -> None:
+        script = HERE / "mandate_continuity.py"
+        env = {**os.environ, "LEGEND_MANDATE_HOOK_STATE": str(self.state)}
+
+        def run() -> str:
+            r = subprocess.run([sys.executable, str(script), "events", "--last", "5"],
+                               capture_output=True, text=True, env=env)
+            self.assertEqual(r.returncode, 0, r.stderr)
+            return r.stdout
+
+        self.assertIn("no events recorded", run())
+        mc.log_event("ERROR", reason="boom")
+        out = run()
+        self.assertIn("ERROR=1", out)
+        self.assertIn("likely broken", out)
+        mc.log_event("BLOCK", task="T-1", verdict="CONTINUE")
+        out = run()
+        self.assertIn("BLOCK=1", out)
+        self.assertNotIn("likely broken", out)
+
+
 class Wiring(unittest.TestCase):
     """The hook is installed in the project settings and reachable from the instructions."""
 
