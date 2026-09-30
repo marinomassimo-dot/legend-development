@@ -282,3 +282,15 @@ remain **questions for the authors** and are not obtainable by any further readi
 **Verdict: `PROPAGATED IN PART`.** `CLAIM 004`'s transduction figure now carries **its age and its n** — P19, n = 3, three identical sagittal sections — quoted verbatim from the Fig 2G legend, which this batch verified first-hand rather than carrying from the candidate. `CLAIM 011`'s `PREMISE_TAG` gains the non-linearity, **written at the level the source supports**. 🔴 **That is the residue, and it is deliberate:** the audit returned the S3E per-region multipliers (cortex 3.0, hippocampus 3.0, midbrain 5.5, cerebellum 16.7) and the ≈44× WPRE dose-equivalence as `UNVERIFIABLE_SURFACE` — no supplementary artefact of that PMID exists in `files/fulltext/` — so they enter as **declared supplementary attestations** and the propagated sentence rests instead on two verified text quotations: the dose-dependent regional increase, and *«increasing the vector dose in the absence of WPRE failed to recapitulate the expression levels achieved with lower dose (LD) containing WPRE»*. `DIS-021` is this candidate's §6.3 wording and was written once, under the parent. **What would unblock the residue:** `mmc1.pdf` for PMID 42422765, acquired by any free route, re-rendered at the declared dpi and re-read — then the multipliers become quotable figures rather than attestations.
 
 **Operator authorisation, verbatim (2026-09-27, given in writing after being shown the MAJOR proposals):** *«procedi tu, ti autorizzo su tutto»*. **Mirror ex-post review due** under §21e — see `session_evaluations/2026-09-27_BATCH_20260927_004.md`.
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260928_007` (2026-09-28, ACTOR_ID `orchestrator`), append-only
+
+**Nothing above this line was rewritten.** Operator instruction, verbatim: *«procedi sempre»*. The residue was re-derived against `main` `7352d52`; every op was produced by a reader other than the batch actor and verified by the batch actor against the source bytes before propagation.
+
+**Verdict:** PROPAGATED
+
+The residue — the S3E per-region multipliers and the WPRE dose-equivalence carried as declared attestations — is discharged by the same supplement (`FTR-20260928-42422765-10`). The multipliers are **confirmed as printed numerals** (cortex 3.0, hippocampus 3.0, midbrain 5.5, cerebellum 16.7; verified on the 600-dpi render by the batch actor). 🔴 **This candidate's *≈44×* was wrong by an order of magnitude:** S3F pairs `6E10` with `2.63E11` vg, i.e. **>4.4×** (a qualitative lower bound, images only). `CLAIM 011` is corrected in canon; §4 axis 8 and §6.1 of this file carry the old figure and are superseded by this block. Two author questions (Fig S3C age and n; the Fig 5A–D normaliser) are not reading debt and stay in the full-text queue.
+
+**Not medical advice.**

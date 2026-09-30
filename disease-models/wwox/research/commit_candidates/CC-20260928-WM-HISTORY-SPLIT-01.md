@@ -141,3 +141,28 @@ Final: A 71 (4 of them paper-level) · B → promoted 7 · C 21.
 | H097 | batch section block | 355–355 | B | A | B → promoted | Worked example A |
 | H098 | batch section block | 357–357 | C | A | A | — |
 | H099 | batch section block | 359–359 | C | C | C | — |
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+
+- **Batch:** `BATCH_20260928_004` (structural, MANUAL, 2026-09-28) · **WM version:** `WM_v7.3`, unchanged
+- **Landed:** `c5eb296` (propagation, 7 record-scoped ops) · `001b1ea` (Phase 4.7 pathograph) · `0bfe4c2` (batch report) · published at `1e130f0`
+- **Propagated in full**, with one item deliberately left open rather than decided by a structural
+  batch: **H061** — the SDR parenthesis *«GSK3β abundance and phospho-S9 unchanged»* beside the
+  `NOT_ASSERTED` total-GSK3β qualification. The ex-post review then established that `CLAIM 035`
+  asserts only *«fosfo-GSK3β-S9 invariata»*, so aligning the parenthesis with its own cited claim is
+  mechanical rather than scientific; the repair is carried by a later batch, with the review's
+  falsifier attached (if Wang 2012 Fig. 1 shows total invariance, `CLAIM 035` is the under-scoped
+  record instead).
+- **Ex-post Mirror review (2026-09-28): CONFIRMED**, three MINOR and two NOTEs, no BLOCKING finding.
+  The four self-nominated weak points all survived; `1e130f0^` was reconstructed and diffed against
+  hot + cold by two independent routes — 0 lines lost, insertions only, 1,689 chars across 5 sites —
+  and `git revert -m 1 1e130f0` restores the pre-split file byte for byte.
+- **Findings routed to Harness Engineering and closed with this disposition:** `A11` (this block was
+  missing, so a fully propagated candidate still counted in the backlog), `A14` and `X2` (the class-A
+  routing premise and the enumeration limit, recorded in
+  [`wm_history_split_20260928/README.md`](../wm_history_split_20260928/README.md)), `X1`
+  (`roles/mirror.md`'s stale push clause).

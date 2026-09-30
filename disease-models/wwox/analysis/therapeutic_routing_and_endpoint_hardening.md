@@ -181,7 +181,7 @@ any dose.
 | M2 | Open-field **total distance** | 4E | 🔴 `STRUCTURALLY_UNAVAILABLE` | **drawn** | **↑ exceed** (≈3 400 → ≈4 300) | **`*` (p < 0.05)** | 🔴 1 of 8, **uncorrected** | **≈ 1.26×** | 🔴 **NO** |
 | M3 | **Rotarod** latency to fall | 4K | 🔴 `STRUCTURALLY_UNAVAILABLE` | **drawn** | **↑ exceed** (≈85 s → ≈145 s) | **`*` (p < 0.05)** | 🔴 1 of 8, **uncorrected** | **≈ 1.71×** | 🔴 **NO** |
 | M4 | Elevated-plus-maze **velocity** | 4F–4J | 🔴 `STRUCTURALLY_UNAVAILABLE` | **drawn** | none detected | **`ns`** | same figure | — | ⚠️ **`NO_DIFFERENCE_DETECTED`**, not equivalence |
-| M5 | S4A four-arm motor measure | S4A | ⚠️ `NOT_RECORDED` — KO arm **present** (≈3.6 vs WT ≈0), **bracket not recorded in the locator** | **drawn** | HD ≈0.3 vs WT ≈0 | **`ns`** (WT-vs-HD); **`***`** LD-vs-HD | not stated | — | ⚠️ `NO_DIFFERENCE_DETECTED` |
+| M5 | S4A four-arm motor measure | S4A | ✅ **CLOSED 2026-09-28** (`BATCH_20260928_007`, `FTR-20260928-42422765-10`; `mmc1.pdf` p. 6 at 600 dpi, sha256 `dd4919a80af937037309eddd2939db4f11af230e00849bf4b362832bcb5572e9`) — KO **3.60** vs WT **0.10** (figure-read, pixel centroid), bracket **`****`**; KO-vs-LD also **`****`**. 🔴 The comparison this debt was registered under, **KO-vs-HD, is not drawn in the panel at all** [was: «⚠️ `NOT_RECORDED` — KO arm **present** (≈3.6 vs WT ≈0), **bracket not recorded in the locator**»] | **drawn** | HD ≈0.3 vs WT ≈0 | **`ns`** (WT-vs-HD); **`***`** LD-vs-HD | not stated | — | ⚠️ `NO_DIFFERENCE_DETECTED` |
 
 > ### `MOTOR: PARTIAL / NOT_NORMALISED` — **3 of 4 P90 motor measures differ significantly from wild type, all in the exceed direction.**
 > `RESCUE` is unavailable for this domain for two independent reasons: the sufficiency comparison is
@@ -531,7 +531,7 @@ Figure 7c densitometry, re-read at 3× from the native 1946×1627 image (`+/+`, 
 | total GSK3β across genotypes, Fig. 7c | **`NOT_TESTED`** — no test drawn | paper |
 | lithium `−/−` vs `+/+` contrast, Fig. 7d | **`NOT_TESTED`** — three within-genotype brackets, **no between-genotype bracket** | paper |
 | ethosuximide converse for lithium | **`NOT_REPORTED`** — the text states the genotype pattern for ethosuximide and *"non dichiara il converso"* for lithium | paper |
-| S4A KO-vs-HD bracket (§2.3, M5) | 🆕 **`NOT_RECORDED`** | 🔴 **us** |
+| S4A WT-vs-KO and KO-vs-LD brackets (§2.3, M5) — registered as "KO-vs-HD", which the panel does not draw | ✅ **RESOLVED 2026-09-28** (`BATCH_20260928_007`), both **`****`** [was: «🆕 **`NOT_RECORDED`**»] | 🔴 **us** |
 
 ### 5.4 The mutual exclusion — unchanged, and it is the substantive finding
 

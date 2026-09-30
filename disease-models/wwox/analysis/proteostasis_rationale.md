@@ -44,7 +44,7 @@ Classifying the 13 pathogenic ClinVar missense variants by mapped ΔΔG produced
 
 The P47T mouse was read as belonging to the same mechanistic class — destabilizing, far from the active site, partial LoF, animal surviving > 1 year — and therefore as a bench where any proteostatic molecule effective on the class would transfer.
 
-> 🔴 **Retracted.** P47T is **not** mechanistically equivalent: it has **normal protein levels** and a **WW1/PPxY binding defect** — a different lesion in a different domain. It remains a legitimate *comparator model*, not a read-across bench, and no proof about a buried SDR missense can be routed through it. G372R likewise is a natural-variant comparator, **not** a validated negative control. See `MECHANISM_TRANSFER_FIREWALL` in [`../../../framework/eval/learned_gates_registry.md`](../../../framework/eval/learned_gates_registry.md).
+> 🔴 **Retracted.** P47T is **not** mechanistically equivalent: it has protein **present, of similar abundance to controls on visual inspection, not quantified**, and a **PPPY-binding defect measured in vitro against one peptide** [corretto 2026-09-28 da «it has **normal protein levels** and a **WW1/PPxY binding defect**» in `BATCH_20260928_007`, census decision-A1 `L2` sito 1 (`CC-20260928-A1-RESIDUE-01` §4)] — a different lesion in a different domain. It remains a legitimate *comparator model*, not a read-across bench, and no proof about a buried SDR missense can be routed through it. G372R likewise is a natural-variant comparator, **not** a validated negative control. See `MECHANISM_TRANSFER_FIREWALL` in [`../../../framework/eval/learned_gates_registry.md`](../../../framework/eval/learned_gates_registry.md).
 
 ---
 
@@ -86,7 +86,7 @@ The rationale above rested on a premise that was never itself checked: *normal m
 | "Therefore the protein is degraded" | **Withdrawn.** Synthesis, insolubility and turnover are three separate questions. **CAUSE UNRESOLVED.** |
 | The ΔΔG recoverability band as a predictor | **Withdrawn** — a heuristic with no demonstrated predictive value. |
 | The "misfolding-dominant" population tally | **Withdrawn** — it inherited its meaning from the band. |
-| P47T ↔ Q230P mechanistic equivalence / read-across bench | **Withdrawn** — P47T has normal protein and a WW1/PPxY defect. Comparator only. |
+| P47T ↔ Q230P mechanistic equivalence / read-across bench | **Withdrawn** — P47T has protein present (not quantified) and an in-vitro PPPY-binding defect. Comparator only. [corretto 2026-09-28 da «P47T has normal protein and a WW1/PPxY defect. Comparator only.» in `BATCH_20260928_007`, census decision-A1 `L2` sito 2 (`CC-20260928-A1-RESIDUE-01` §4)] |
 | C299R as a validated catalytic / off-site control | **Withdrawn** — sequence distance is not structural independence (`CONTROL_TOPOLOGY_CHECK`). |
 | CMA route, the `LRSVQ` motif, the helix-lid model | **Hypotheses transferred from P252A / AlphaFold**, not a mechanism for this variant. |
 | An SDR stabilizer as a design-ready lever | **`conditional / not design-ready`.** |

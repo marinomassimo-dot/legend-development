@@ -408,9 +408,77 @@ def candidate_directories(root: Path, disease: str) -> list[Path]:
     ]
 
 
+# 🔴 NAMING A CANDIDATE IN A SCOPE CLOSES IT, WHATEVER THE SENTENCE AROUND THE ID SAYS.
+#
+# `Consumed = named in a scope` is read by `key in blob` over the WHOLE folded text of the manifest
+# and its history: there is no reading of the sentence the id sits in, and there cannot be one — a
+# scope is a paragraph of prose, not a grammar. Measured 2026-09-28 and it has already happened
+# twice:
+#
+#  · `batch_20260928_005_scope` on `main` names `CC-20260928-GRAPH-HYGIENE-01` inside the words
+#    "NOT IN SCOPE and still queued", and CLOSED it. The candidate is on disk, carries no
+#    disposition, was never propagated, and the backlog counts 15 where it is 16.
+#  · `BATCH_20260928_006`'s first draft scope named one candidate inside "QUEUED AND DELIBERATELY
+#    NOT PROPAGATED HERE" and a PEER's candidate inside "ROUTED ELSEWHERE, NOT TOUCHED", closing
+#    both — dropping the backlog 15 → 14 and closing another actor's candidate with no disposition
+#    written by its author. A human reading the backlog list caught it; no check saw it.
+#
+# WHY THIS IS WORSE THAN AN ORDINARY WRONG NUMBER, and why it is reported rather than triaged:
+# the backlog is a TRIGGER — `CANDIDATE_BACKLOG_TRIGGER` is what fires the next BATCH_COMMIT — so
+# the error is silent by construction, and it damages the candidate's AUTHOR, who is not the actor
+# who wrote the scope. Nothing the author can run would have told them.
+#
+# THE FIX IS AN ASYMMETRY, NOT A GRAMMAR. Retrofitting a declared `propagated_ids:` field would
+# require editing two dozen historical scopes in `state_history.md`, which is a history rewrite
+# (§21d RESERVED) — and a scope that declares its own ids is still prose about itself. What is
+# checkable without touching history is the asymmetry the defect always has: a candidate closed by
+# a MENTION alone, with no `## BATCH DISPOSITION` block of its own. A mention is what one actor
+# wrote ABOUT a candidate; a disposition block is what the propagation wrote ON it. Only the second
+# is an attestation, and `prompt_batch_commit.md` Phase 7 already requires it of every candidate a
+# batch propagates. So a mention-only close means either the batch skipped Phase 7, or the scope
+# named an id it did not propagate — and both are worth one loud line.
+#
+# WHERE IDS ARE SAFE. Only `state_manifest_current.md` and `state_history.md` are folded here, so
+# an id named anywhere else closes nothing: a batch report, `capability_scout_log.md` (verified —
+# it is neither file and is not read by this module), a candidate's own text, `analysis/`,
+# `governance/`, a commit message. A scope that must discuss a candidate it did not propagate says
+# so in its report, not in the manifest.
+#
+# Each entry is DECLARED with what it is, never absorbed into a number — the same choice
+# `KNOWN_UNREADABLE_DISPOSITIONS` makes one field over. `closed` means the mention records a real
+# propagation that predates Phase 7 disposition blocks; `queued` means the mention is prose and the
+# candidate is still owed, so it counts as PENDING and the backlog stops being one short. Never add
+# an entry to make a run pass: write the disposition block, or de-name the id.
+DECLARED_MENTION_CLOSURES: dict[str, tuple[str, str]] = {
+    "CC-20260826-SEIZURE-RECONCILIATION-01": (
+        "closed", "propagated by batch_20260922_seizure_scope, which states it by name and "
+                  "predates the Phase 7 disposition block"),
+    "CC-20260920-EIGHT-RECORD-CLASSIFICATION-01": (
+        "closed", "propagated across batch_20260920_002 and _003, the second stating that it "
+                  "closed the eighth and last record; predates Phase 7"),
+    "CC-20260920-REGISTRY-LEDGER-DEPTH-01": (
+        "closed", "propagated whole by batch_20260920_001; predates Phase 7"),
+    "CC-20260928-GRAPH-HYGIENE-01": (
+        "queued", "batch_20260928_005_scope names it inside 'NOT IN SCOPE and still queued'. It "
+                  "was NOT propagated: a stub with no ops and a dated review trigger. The mention "
+                  "closed it and the backlog read 15 for 16. Counted as pending here; the scope "
+                  "is repaired by its own actor, this module does not edit the manifest"),
+}
+
+
 def measure_candidate_backlog(root: Path, disease: str) -> list[str]:
     """Candidate files present on disk that no disposition record or batch scope closes."""
     return survey_candidates(root, disease)[0]
+
+
+def measure_mention_only_closures(root: Path, disease: str) -> list[str]:
+    """Candidates a manifest/history MENTION closes, with no disposition block of their own.
+
+    Separate from the backlog and from `unreadable_dispositions` because it is a third statement:
+    not "work is due" and not "the author's close cannot be parsed", but "nothing the candidate's
+    own author wrote says this was propagated, and a sentence somebody else wrote closed it".
+    """
+    return survey_candidates(root, disease)[2]
 
 
 def measure_unreadable_dispositions(root: Path, disease: str) -> list[str]:
@@ -423,8 +491,20 @@ def measure_unreadable_dispositions(root: Path, disease: str) -> list[str]:
     return survey_candidates(root, disease)[1]
 
 
-def survey_candidates(root: Path, disease: str) -> tuple[list[str], list[str]]:
-    """(pending, unreadable-disposition) over every candidate on disk, in one pass.
+def state_mentions(root: Path, identity: str) -> bool:
+    """Is this identifier named anywhere in the state manifest or its cold history?
+
+    The same fold `survey_candidates` applies, so "is it mentioned" and "does the mention close
+    it" can never disagree. Used to decide whether a `DECLARED_MENTION_CLOSURES` entry is still
+    about anything: in a fixture root that names nobody, no entry is stale — it is simply absent.
+    """
+    key = candidate_key(identity)
+    return any(key in candidate_key(path.read_text(encoding="utf-8"))
+               for path in (root / MANIFEST_REL, root / HISTORY_REL) if path.is_file())
+
+
+def survey_candidates(root: Path, disease: str) -> tuple[list[str], list[str], list[str]]:
+    """(pending, unreadable-disposition, mention-only-closure) over every candidate, in one pass.
 
     Discovery, classification and disposition are three steps: a file is a candidate by its
     stem, its identity comes from its declared ID or its name, and its state comes from its own
@@ -450,6 +530,7 @@ def survey_candidates(root: Path, disease: str) -> tuple[list[str], list[str]]:
     pending: dict[str, str] = {}
     closed: set[str] = set()
     unreadable: list[str] = []
+    mention_only: list[str] = []
     for directory in candidate_directories(root, disease):
         if not directory.is_dir():
             continue
@@ -469,13 +550,23 @@ def survey_candidates(root: Path, disease: str) -> tuple[list[str], list[str]]:
                 unreadable.append(identity)
                 state = "pending"
             if state is None:
-                state = "closed" if any(key in blob for blob in consumed_blobs) else "pending"
+                # 🔴 The mention rule, and the asymmetry it hides. A candidate with NO lifecycle
+                # record of its own is closed by being named anywhere in the manifest or its
+                # history — which is the only path by which a sentence somebody else wrote decides
+                # a candidate's state. Every such close is reported by name, and a declaration of
+                # `queued` says the mention is prose, so the candidate stays pending.
+                if any(key in blob for blob in consumed_blobs):
+                    mention_only.append(identity)
+                    verdict = DECLARED_MENTION_CLOSURES.get(identity, ("closed", ""))[0]
+                    state = "pending" if verdict == "queued" else "closed"
+                else:
+                    state = "pending"
             if state == "closed":
                 closed.add(key)
                 pending.pop(key, None)
             elif key not in closed:
                 pending.setdefault(key, identity)
-    return sorted(pending.values()), sorted(unreadable)
+    return sorted(pending.values()), sorted(unreadable), sorted(mention_only)
 
 
 def candidate_backlog_trigger(live: dict[str, Any]) -> list[str]:
@@ -597,6 +688,9 @@ def measure_all(root: Path, disease: str) -> dict[str, Any]:
         # status the parser cannot read means the author's close did not count and nothing said
         # so, which is how two PROPAGATED candidates were counted as open for a day.
         "unreadable_dispositions": measure_unreadable_dispositions(root, disease),
+        # Also a defect in the RECORD and not a population: a candidate whose only close is a
+        # sentence in somebody else's batch scope. See DECLARED_MENTION_CLOSURES.
+        "mention_only_closures": measure_mention_only_closures(root, disease),
         # Measured on every call like everything else here, and deliberately *not* an
         # anchored value: sizes are expected to move constantly, so anchoring them would
         # produce a violation on every batch. Only the acknowledgement is anchored.
@@ -851,6 +945,37 @@ def cmd_check(root: Path, disease: str, _args) -> int:
               "close does not count and it is still in the backlog. Write it as "
               "`**Verdict:** PROPAGATED` — the value in CAPS, nothing between the field name and "
               "its value: a close nothing can parse is not a close.")
+    # 🔴 Also FAILS, and for the same reason one field over: a candidate closed by a MENTION in
+    # somebody else's batch scope, with no disposition block of its own. The backlog is a TRIGGER,
+    # so a candidate wrongly closed is a silent wrong number in the thing that fires the next
+    # BATCH_COMMIT — and it damages the candidate's author, who would never see it. Declared
+    # entries are named, never absorbed (DECLARED_MENTION_CLOSURES).
+    mention_only = live.get("mention_only_closures") or []
+    unnamed = [item for item in mention_only if item not in DECLARED_MENTION_CLOSURES]
+    for item in mention_only:
+        verdict, why = DECLARED_MENTION_CLOSURES.get(item, ("", ""))
+        print(f"  [CHECK_ERROR] SCOPE_CLOSED_NO_DISPOSITION: {item} is closed only by being NAMED "
+              f"in the state manifest or its history; it carries no `## BATCH DISPOSITION` block, "
+              f"so nothing its own author wrote says it was propagated. A mention is not an "
+              f"attestation: the sentence around the id is not read, so 'queued and deliberately "
+              f"not propagated here' closes a candidate exactly as 'PROPAGATED' does."
+              + (f" DECLARED {verdict}: {why}." if verdict
+                 else " Write the Phase 7 disposition block on the candidate, or de-name the id in"
+                      " the scope and give its disposition in the batch report — a batch report,"
+                      " `capability_scout_log.md` and the candidate's own text close nothing."))
+    # A declaration that no longer applies is declared debt nobody owes: once the candidate
+    # carries its own disposition block, the entry is dead and should go, or the list becomes the
+    # permanent silence this module refuses elsewhere.
+    for item in sorted(set(DECLARED_MENTION_CLOSURES) - set(mention_only)):
+        if state_mentions(root, item):
+            print(f"  [STALE] DECLARED_MENTION_CLOSURE: {item} is still named in the state but "
+                  f"now carries its own lifecycle record; remove its entry from "
+                  f"DECLARED_MENTION_CLOSURES.")
+    if unnamed:
+        print(f"VERDICT: CHECK_ERROR — {len(unnamed)} candidate(s) closed by a scope mention with "
+              "no disposition of their own and no declaration; the backlog above is wrong by up "
+              "to that many, in the direction that stops a BATCH_COMMIT from firing")
+        return 1
     if undeclared:
         print(f"VERDICT: CHECK_ERROR — {len(undeclared)} disposition block(s) this tool cannot "
               "read and nobody declared; the backlog above is fail-closed and cannot be trusted "

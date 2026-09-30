@@ -269,3 +269,15 @@ manifest-backed**, with no species drift.
 
 **Still open, unchanged:** Supplementary Tables S4–S8, for the table-level check of the per-subtype
 directions. `PAPER 118` and `LIT-0420` carry that debt explicitly.
+
+---
+
+## BATCH DISPOSITION — `BATCH_20260928_007` (2026-09-28, ACTOR_ID `orchestrator`), append-only
+
+**Nothing above this line was rewritten.** Operator instruction, verbatim: *«procedi sempre»*. The residue was re-derived against `main` `7352d52`; every op was produced by a reader other than the batch actor and verified by the batch actor against the source bytes before propagation.
+
+**Verdict:** PROPAGATED
+
+The last residue — *«Supplementary Tables S4–S8, for the table-level check of the per-subtype directions»* — is discharged: Supplementary File S1 was acquired (Europe PMC supplementaryFiles, PMC13467099) and read under `FTR-20260928-42589397-04`, and Table S7 was verified against the PDF by the batch actor, Fig S1 against its image. Non-invariance holds at table level; 🔴 Table S7's HR column contradicts its own «more favourable» labels for HER2-enriched and Luminal B, and the Kaplan–Meier curves side with the HRs. Propagated to `CLAIM 025` (three ops, the `PREMISE_TAG` narrowed to *invariant* direction), `PAPER 118` and `LIT-0420`. This block also restates the closing verdict in a form the backlog counter reads, because the previous block's *«Status confirmed:»* could not be parsed.
+
+**Not medical advice.**

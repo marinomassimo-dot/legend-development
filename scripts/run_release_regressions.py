@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import atexit
 import fnmatch
 import os
 import re
@@ -350,6 +351,42 @@ def tracked_state(trees: tuple[str, ...], root: Path = ROOT) -> dict[str, str]:
     return {path: digest for path, digest in zip(paths, digests)}
 
 
+# 🔴 THIS RUN HAS AN IDENTITY, AND IT SAYS SO — BECAUSE `pkill -f` DOES NOT HAVE ONE.
+#
+# Measured 2026-09-28: a session ran `pkill -f run_release_regressions.py` to stop its own stale
+# battery. That pattern matches EVERY session's battery on a shared checkout, so it killed a peer's
+# run mid-flight, and the peer saw a truncated output with no failing target — which is exactly the
+# shape of a real failure, and exactly the shape of the environment explanation that hid four real
+# failures this week. The killer had no way to name its own run, and the victim had no way to tell
+# what happened.
+#
+# `framework/scripts/process_wait.py` already exists for precisely this — "process-name matching is
+# not identity" is its opening line, and it reads `PID:START` from `--identity` or a pid file. So
+# nothing new is built here: this prints the identity in that tool's own format, and `--pid-file`
+# writes it where that tool reads it. The trap is named in the banner because the fix is behavioural
+# and a banner is where a session looks.
+def announce_identity(pid_file: str | None) -> str:
+    """Print this run's `PID:START` identity, optionally writing it where `process_wait` reads it."""
+    sys.path.insert(0, str(ROOT / "framework" / "scripts"))
+    try:
+        import process_wait  # noqa: PLC0415
+
+        start = process_wait.start_ticks(os.getpid())
+    except (ImportError, OSError):
+        start = None
+    identity = f"{os.getpid()}:{start}" if start is not None else str(os.getpid())
+    print(f"BATTERY IDENTITY: {identity} — stop THIS run with `kill {os.getpid()}`, or wait on it "
+          f"with `python3 framework/scripts/process_wait.py --identity {identity} --timeout <s>`. "
+          f"NEVER `pkill -f run_release_regressions.py`: that pattern matches every session's "
+          f"battery on this checkout, and on 2026-09-28 it killed a peer's run.")
+    if pid_file:
+        path = Path(pid_file)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(identity + "\n", encoding="utf-8")
+        atexit.register(lambda: path.unlink(missing_ok=True))
+    return identity
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(
         description="Run the complete public-release regression inventory."
@@ -374,11 +411,20 @@ def main() -> int:
              "writing its own report, say). Declared writes are still printed, and are never "
              "silently exempt, but they do not fail the verdict. Repeatable.",
     )
+    parser.add_argument(
+        "--pid-file",
+        metavar="PATH",
+        help="write this run's `PID:START` identity here, in the format "
+             "`framework/scripts/process_wait.py --pid-file` reads, and remove it at exit. "
+             "Untracked paths only; the identity is printed either way.",
+    )
     args = parser.parse_args()
 
     if args.list:
         print("\n".join(TESTS))
         return 0
+
+    announce_identity(args.pid_file)
 
     selected = tuple(args.only) if args.only else TESTS
     unknown = [relative for relative in selected if relative not in TESTS]

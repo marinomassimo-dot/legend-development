@@ -256,3 +256,45 @@ state into that conversation rather than a slope nobody has measured.
 
 **Status:** ⬜ **PROPOSAL — awaiting Operator.** Not propagated, `TX-007` not re-ranked, no scoring
 field changed.
+
+---
+
+## APPEND-ONLY CORRECTION NOTE — 2026-09-28, `BATCH_20260928_006`, ACTOR_ID `scientist`
+
+**Source:** the Mirror ex-post review of `BATCH_20260928_004` + `BATCH_20260928_005`, finding **B2**'s
+residual carrier, persisted at
+[`../research/session_evaluations/2026-09-28_BATCH_20260928_004_005_mirror_review.md`](../research/session_evaluations/2026-09-28_BATCH_20260928_004_005_mirror_review.md),
+under the operator's standing authorisation of 2026-09-28. Written in the same append-only form as op
+`C3` on this file's sibling
+[`../analysis/tx007_window_and_ceiling_20260921.md`](../analysis/tx007_window_and_ceiling_20260921.md).
+**Nothing above this line is altered.**
+
+🔴 **§ 2.1 misquotes canon in the PRESENT TENSE, and the tense is the whole defect.** It opens
+*"`TX-007` **carries** a window caveat drawn from the group's own preclinical work"* and then quotes
+the age **slope** — *"The older the patient, the smaller the reversible fraction"* — before building an
+age-eligibility argument on it (*"the answer points the other way"*, against the sponsor's registered
+**2–25 years**).
+
+**`TX-007` no longer carries that sentence.** `BATCH_20260928_005` **retired** it from
+`therapeutic_strategies_current.md` as unsourced (op `C1`), and from
+`../analysis/mechanism_intervention_map.md` (op `C2`), because the only dose-and-age source reports a
+**tested interval and an untested exterior** and its authors decline the biological reading in their
+own words: *«rather than a definitive boundary for therapeutic responsiveness»*. The tested interval
+`P0–P5` was kept.
+
+⚠️ **What this file gets RIGHT, and why the correction is a tense and not a retraction.** This file's
+own **line 211** already adjudicates the same sentence as *"🔴 **NO MEASUREMENT, IN ANY SPECIES.**"*,
+in a table whose whole purpose is to separate the caveat's measured half from its unmeasured half. So
+the file **cannot mislead a decision**: a reader who reaches § 3 finds the sentence marked unsourced
+by the file itself. What is wrong is narrower and still worth correcting: **§ 2.1 attributes to canon,
+in the present tense, a sentence canon no longer contains**, and an age-eligibility argument is built
+on that attribution before the adjudication arrives.
+
+**What to read instead.** § 2.1's *external* observation stands untouched and needs no slope: the
+sponsor's own first ICV AAV9 neurodevelopmental trial enrols **2–25 years**, which is a registered
+fact about a **different gene and a different disease** (`MZ-1866` / `TCF4` / Pitt–Hopkins), carrying
+this file's own caveat. The **WWOX** posture is unchanged and rests where it always rested — on the
+unrepaired progenitor / radial-glia defect and on `REVERS 0`, never on the slope.
+
+**Nothing else in this file is corrected, no conclusion is withdrawn, and the `Status` line above is
+untouched.** `TX-007` is not re-ranked and no scoring field changes. **Not medical advice.**

@@ -782,3 +782,42 @@ This changes operational monitoring only; no scientific inference or current fil
 
 **Cost / API / privacy risk:** none; local Git and standard-library code only.
 **Next micro-step:** observe the next scheduled report for its branch and detached lists.
+
+## 2026-09-28 · Scientist · `BATCH_20260928_006` — a scope that MENTIONS closes, and a defect no check could see
+
+**Reusable gap, with the evidence, and it is two gaps that share one lesson.**
+
+🔴 **(1) `growth_anchors` cannot tell a propagation record from a prose mention.** Its backlog is
+computed as *candidate files on disk that no disposition record or batch scope **names***. So the first
+draft of this batch's `state_history.md` § 4 scope — which named `CC-20260928-A1-RESIDUE-02` inside a
+clause reading *"QUEUED AND DELIBERATELY NOT PROPAGATED HERE"* and a peer's
+`CC-20260928-WM-HISTORY-SPLIT-01` inside a clause reading *"ROUTED ELSEWHERE, NOT TOUCHED"* — **closed
+both**. The backlog fell from 15 to 14 and a **peer's** candidate was closed without its author ever
+writing a disposition. The scope said the opposite of what the counter read, in the same sentence.
+**Caught by reading the backlog list against what the batch had actually done — by no check.**
+*Interim repair, applied:* both ids removed from the scope, replaced by unambiguous descriptions, with
+the reason stated **inside the scope itself** so the next author does not re-learn it; the ids live in
+the batch report instead. Backlog restored to **16**. *Not wired:* a marker the scope could use to
+mention a candidate without closing it (`not_propagated:` / `routed:` keys the matcher subtracts), or a
+matcher that reads the clause around the id. That is **harness** and is handed to Harness Engineering;
+`designed_for_growth` says correct the record and reuse existing mechanism before adding a guard, and
+one occurrence is a repair.
+
+🔴 **(2) A byte-conserving edit is invisible to every proof this repository runs.** `B11`, the finding
+this batch repaired, existed for a whole batch cycle because op `B2` **moved** text rather than adding
+or removing it: the record-scoped editor's proof that *"every byte outside the addressed records is
+unchanged"* held, every presence check held, and `grep -c` on the moved string returned **1** at every
+revision. What actually broke was **which paragraph a sentence belonged to** — structure, not content —
+and nothing in the toolchain measures that. *Not wired, deliberately:* the candidate instrument would
+be a per-record **paragraph-boundary digest** (count and byte-length of each line inside an addressed
+record, compared before and after), which `record_scoped_edit.py` could compute for free since it
+already partitions the file. It would have turned `B11` from a Mirror finding into a propagation
+refusal. **This is the one item here worth building**, and it is a harness change, so it is named for
+Harness Engineering rather than attempted from a reading branch.
+
+**Cost / API / privacy risk:** none. Everything above is local, stdlib-only and read-only toward the
+four scientific current files; no external retrieval, no spend, no new dependency.
+
+**Next surgical micro-step:** not a script. `L4` is still **OWED** — `CC-20260928-A1-RESIDUE-02` is
+written, measured and queued, and `main` carries `CLAIM 026`'s datum with none of its adjudication. The
+capability most missing at this moment is a batch that lands it, not a tool.

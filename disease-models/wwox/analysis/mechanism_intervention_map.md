@@ -338,7 +338,7 @@ normal transcript + protein NOT DETECTED in patient fibroblasts     [measured]
   → cause UNRESOLVED: impaired translation OR insolubility OR premature degradation
                                                         [the source does not discriminate]
   → severity tracks residual FUNCTION, not abundance    [CLAIM 030 — allelic series:
-                                                         P47T normal protein + abolished PPxY -> MILD;
+                                                         P47T protein present (not quantified) + PPPY binding abolished-or-near-abolished in vitro -> MILD; [corretto 2026-09-28 da «P47T normal protein + abolished PPxY -> MILD;» in `BATCH_20260928_007`, census decision-A1 `L2` sito 3 (`CC-20260928-A1-RESIDUE-01` §4)]
                                                          G372R barely detectable -> MILD;
                                                          Q230P absent -> SEVERE]
   → ACTIONABLE NODE: folding / turnover / function - which one is UNKNOWN

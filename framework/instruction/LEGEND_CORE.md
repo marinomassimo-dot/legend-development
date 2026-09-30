@@ -412,6 +412,17 @@ SAFE_DEFAULTS (seeded from 2026-09-02/03):
     machine. Stop the low-value thread, not the whole machine. Declared 2026-09-23 after a
     run reported TOP FIVE NEED HUMANS as ALL USEFUL SCIENCE NEEDS HUMANS, with the
     counterexample in its own files (`GLOBAL_ESCAPE_SWEEP_20260923.md` §2)
+  - an advance context warning, or a quota that has not been measured, with authorised work
+    remaining → on the Claude Code runtime compaction is automatic and disk state survives it, so
+    checkpoint the task record's step statuses and start the next step; ending the turn "to wait
+    for compaction" or "for the quota reset" is itself a class-3 stop. A limit counts only when
+    the runtime has actually refused to continue, and is then reported in one line. Hindsight
+    default from the Aldaz batch (2026-09-14), where two five-hour sessions ended with under ten
+    percent of their budget used
+  - a mandate whose queue is written as prose → convert it to the Annex A.1c schema
+    (`MANDATE_STATE`, per-step `status`) before the first dispatch and reconcile it with
+    `python3 framework/scripts/mandate_continuity.py status --task <TASK_ID>` at every boundary;
+    the record's verdict, not the chat, decides whether the turn may end
 
 ---
 

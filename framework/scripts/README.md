@@ -70,7 +70,7 @@ Run everything as `python3 <path> --help` first. Paths are repo-relative.
 | to apply an **operator-authorized, scope-limited** edit to one record of an append-only JSONL ledger — or to be refused | `framework/scripts/scoped_record_edit.py --file … --id … --field … --old … --new …` (dry run; add `--apply`) |
 | to find out **which string counts an extracted full-text artifact can answer**, before offering a zero as evidence | `framework/scripts/extraction_damage_report.py files/fulltext/<artifact>.txt` |
 | whether a deep-dive work manifest satisfies the gate, or which waiver it owes | `framework/scripts/deepdive_manifest.py` |
-| do the bytes a manifest fingerprints exist in **this** checkout | `framework/scripts/evidence_presence.py` |
+| do the bytes a manifest fingerprints exist in **this** checkout — and, with `--search DIR`, is an "absent" one merely misplaced under another name (found by SHA-256; `--restore` copies exact matches only) | `framework/scripts/evidence_presence.py` |
 | a resumable work queue from a dated bibliography snapshot | `framework/scripts/batch_queue.py` |
 | what the papers in a lot are to each other, resolved before the reading rather than after | `framework/scripts/lot_internal_edges.py` |
 
@@ -153,6 +153,7 @@ Run everything as `python3 <path> --help` first. Paths are repo-relative.
 | when the shared checkout moved, and when it deliberately did not | `framework/scripts/sync_epochs.py` |
 | classify, hand off, resume or sync a laboratory across hosts | `framework/scripts/legend_handoff.py` |
 | what harness work is due at session start | `framework/scripts/harness_session_start.py` |
+| may an assigned mandate's turn end — the verdict of its `AUTHORISED_QUEUE` record, and the bounded Claude Code Stop hook that holds a bound session to it | `framework/scripts/mandate_continuity.py` |
 | the packet that lets a phase start in a new context, derived from artefacts and verified | `framework/scripts/phase_handoff.py` |
 | task display fields derived from every structured queue — never a runtime release decision | `framework/scripts/task_summary.py` |
 | a commit subject that names the surface touched, never the conclusion reached (convention S.6.7) | `framework/scripts/commit_subject.py` |
