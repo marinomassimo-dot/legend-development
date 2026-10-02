@@ -1,0 +1,191 @@
+{
+ "schema_version": 2,
+ "pmid": "37095367",
+ "doi": "10.1007/s12035-023-03346-3",
+ "receipt": "FTR-20261002-37095367-01",
+ "landing": [
+  "fulltext_dossiers/PMID37095367.md",
+  "CC-20261002-INTAKE-A-REGISTRY-01",
+  "disease-models/wwox/research/intake_wave_20261002_A.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Tier 1 of its cascade (NCBI efetch PMC JATS) returned a full body; Europe PMC supplementaryFiles supplied the figures and deposited supplements."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline by the reader: the brief fixes SOURCE_FIRST, and a delegated deep dive would have been handed LEGEND's prior answer or none of the class-level question."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Producer must not be verifier: the triples go to the blind audit through the LOCATOR TRIPLES section of the wave's commit candidates."
+  }
+ ],
+ "context_policy": "SOURCE_FIRST",
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 14,
+  "publications_on_gene": 1,
+  "counts_measured": "PubMed esearch 2026-10-02: 'Bayanova M[au]' 14; 'Bayanova M[au] AND WWOX' 1",
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "A national-centre WGS diagnostic series (n = 20). The WWOX observation (two variants, compound heterozygous, a familial case) is weighted as one case with ACMG calls made on a commercial platform; phase, parental genotypes and per-variant ACMG class are not reported, so the 'compound heterozygous' label is the authors' assertion, not a demonstrated trans configuration."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "WWOX AND whole genome sequencing AND epilepsy",
+    "route": "PubMed esearch 2026-10-02",
+    "count": 9
+   }
+  ],
+  "note": "Multi-gene diagnostic series; WWOX is one of 14 diagnosed genes."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 58,
+  "enumeration_method": "<ref> elements in the PMC JATS ref-list; 58.",
+  "gene_direct_refs_in_source": [
+   "33255508",
+   "30356099"
+  ],
+  "resolved": [
+   {
+    "pmid": "33255508",
+    "how": "Held: PAPER 095 (Aldaz & Hussain 2020 review)."
+   },
+   {
+    "pmid": "30356099",
+    "how": "Held: PAPER 117 (Piard 2019)."
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Which artefacts for this paper already exist in the shared files/ tree, and does any receipt or registry record already hold it?",
+  "hits": 0,
+  "finding": "No artefact and no receipt. Registry: no identity record; one mention in the discovery ledger, where the paper is described as a corrigendum - the type error ft116_cohort_triage_20260921.md section 2.2 already named. PubMed types it 'Journal Article' and links one 'Erratum in' record; the article's own change history says the correction concerns an author surname."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-02",
+  "route": "PubMed esummary (eutils) 2026-10-02, pubtype and references fields",
+  "result": "Journal Article. PubMed links 'Erratum in' (Mol Neurobiol 2025;62(5):6628); the article's Change history records it as a correction of one author's surname. No retraction or expression of concern. The erratum body itself was not fetched.",
+  "hold": false
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID37095367_Bayanova2023_PMC.xml",
+   "sha256": "c92f0ee3b3f54a5b4e525e8a67766fd076f74646c84eca8870d9baec5f3396d7",
+   "kind": "article_text",
+   "note": "PMC JATS; body with Tables 1-2 inline.",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=10293429&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-02",
+    "derived": false,
+    "result_sha256": "c92f0ee3b3f54a5b4e525e8a67766fd076f74646c84eca8870d9baec5f3396d7"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID37095367_assets/12035_2023_3346_Fig1_HTML.jpg",
+   "sha256": "272db3b5834fc328326602069fe2eef1fdd5ed5fbd141e2d4b991d413e2e62a3",
+   "kind": "figure",
+   "note": "Figure 1, pedigrees of the five familial cases, inspected. Member of the Europe PMC supplementaryFiles archive for PMC10293429, stored beside it as PMID37095367_PMC10293429_supplementaryFiles.zip; the archive's route and sha256 are recorded in research/intake_wave_20261002_A.md.",
+   "acquisition_recipe": {
+    "no_recipe": "extracted from the declared supplementaryFiles archive with Python zipfile; the archive itself carries the route"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID37095367_assets/12035_2023_3346_MOESM1_ESM.docx",
+   "sha256": "c68b9a99cb40693cd92580f37ded8170b6611d830645832b1d4ac1b8afe0cbc6",
+   "kind": "supplement_text",
+   "note": "ESM 1: phenotype table of the six undiagnosed cases; read in full; no WWOX content. Member of the Europe PMC supplementaryFiles archive for PMC10293429, stored beside it as PMID37095367_PMC10293429_supplementaryFiles.zip; the archive's route and sha256 are recorded in research/intake_wave_20261002_A.md.",
+   "acquisition_recipe": {
+    "no_recipe": "extracted from the declared supplementaryFiles archive with Python zipfile; the archive itself carries the route"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC JATS from efetch db=pmc id=10293429 (138,388 bytes); Tables 1 and 2 sit inside a paragraph and flatten into the body surface.",
+  "abstract_anchoring_waived": "No locator draws on the abstract; every text entry is matched against the body, table or a declared supplement surface.",
+  "entries": [
+   {
+    "proposition": "ALLELE CLASS / ZYGOSITY: one WWOX case, a missense plus a canonical splice-donor variant, labelled AR compound heterozygous; transcript NM_016373.4; WGS. Phase and parental genotypes are not reported.",
+    "snippet": "WWOX (NM_016373.4) c.911C>A (p.Ser304Tyr) c.230+1G>T (Splice donor) AR, compound heterozygous",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID37095367_Bayanova2023_PMC.xml",
+    "anchor": "Table 1 (familial cases), the WWOX row",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PHENOTYPE BAND: focal seizures from one month, psychomotor delay and spastic ataxia; imaging with hydrocephalus and atrophy; an affected sibling with epilepsy and spastic ataxia died at 11 months (sibling not genotyped in the paper).",
+    "snippet": "Focal 1 PMD, spastic ataxia Spike-slow wave complexes in the right parietotemporal leads",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID37095367_Bayanova2023_PMC.xml",
+    "anchor": "Table 1, WWOX row, phenotype and EEG columns",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "AFFECTED SIBLING, reported in the table, not genotyped in the paper.",
+    "snippet": "with epilepsy and spastic ataxia, died at the age of 11 months",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID37095367_Bayanova2023_PMC.xml",
+    "anchor": "Table 1, WWOX row, 'Additional information'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "BOTH VARIANTS REPORTED AS NOVEL by the authors; the pathogenicity call is the paper's own (ACMG on the Franklin platform), with no per-variant class printed.",
+    "snippet": "This patient was found to have compound heterozygous variants in the WWOX gene. Both genetic variants have not previously been described.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37095367_Bayanova2023_PMC.xml",
+    "anchor": "Results, paragraph on the WWOX case",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "HOW THE CALL WAS MADE: ACMG/AMP five-tier classification on a commercial interpretation platform.",
+    "snippet": "Variant interpretation followed the 5-level classification system recommended by the American College of Medical Genetics and Genomics and the Association for Molecular Pathology (ACMG/AMP) and was conducted on the Franklin platform (Franklin by Genoox, Genoox, USA).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37095367_Bayanova2023_PMC.xml",
+    "anchor": "Materials and Methods, 'Interpretation of Genetic Variants'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "INCLUSION CRITERION THE WWOX CASE DOES NOT OBVIOUSLY MEET: no structural MRI change, while the WWOX case's MRI shows hydrocephalus and atrophy.",
+    "snippet": "The absence of structural changes in magnetic resonance imaging of the brain (MRI), which may be the cause of epilepsy",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37095367_Bayanova2023_PMC.xml",
+    "anchor": "Materials and Methods, 'Study Participants', inclusion criteria",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PEDIGREE INCONSISTENCY: in the WWOX pedigree the proband arrow points at a sib drawn as an unaffected open symbol, while two other sibs (one deceased) are drawn as filled affected symbols. The text says the proband is a girl with seizures, so either the arrow or the shading is wrong; the figure cannot say which individual was sequenced.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1, the pedigree labelled WWOX: one sibship of six; two sibs filled (one struck through as deceased); the proband arrow beside a third sib drawn open; both parents drawn open.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID37095367_assets/12035_2023_3346_Fig1_HTML.jpg",
+    "anchor": "Figure 1, the pedigree labelled WWOX",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[1]",
+    "qualifies_needle": "PMD, spastic ataxia Spike-slow"
+   },
+   {
+    "proposition": "SUPPLEMENT HAS NO WWOX CONTENT: ESM 1 tabulates only the six undiagnosed cases.",
+    "snippet": "Table 1. Phenotype of 6 cases without confirmed genetic diagnosis",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID37095367_assets/12035_2023_3346_MOESM1_ESM.docx",
+    "anchor": "ESM 1, table title",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}

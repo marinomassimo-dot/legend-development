@@ -1,0 +1,229 @@
+{
+ "schema_version": 2,
+ "pmid": "30746283",
+ "doi": "10.1515/tnsci-2018-0029",
+ "receipt": "FTR-20261002-30746283-01",
+ "landing": [
+  "fulltext_dossiers/PMID30746283.md",
+  "CC-20261002-HETEROZYGOTE-CARRIERS-01",
+  "CC-20261002-INTAKE-A-REGISTRY-01",
+  "disease-models/wwox/research/intake_wave_20261002_A.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Tier 1 of its cascade (NCBI efetch PMC JATS) returned a full body; Europe PMC supplementaryFiles supplied the figures and deposited supplements."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline by the reader: the brief fixes SOURCE_FIRST, and a delegated deep dive would have been handed LEGEND's prior answer or none of the class-level question."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Producer must not be verifier: the triples go to the blind audit through the LOCATOR TRIPLES section of the wave's commit candidates."
+  }
+ ],
+ "context_policy": "SOURCE_FIRST",
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 14,
+  "publications_on_gene": 1,
+  "counts_measured": "PubMed esearch 2026-10-02: 'Ehaideb S[au]' 14; 'Ehaideb S[au] AND WWOX' 1",
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "A clinical genetics group reporting two consanguineous families with commercial-laboratory WES and Sanger confirmation. The observation (genotype, segregation in family 1, phenotype) is weighted as a case report; the interpretation (splice consequence, the 'one functional copy is sufficient' sentence, the review table) carries no experimental weight and the review table contains transcription errors, so it is not used as a source for any other paper's allele."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "WWOX AND epileptic encephalopathy",
+    "route": "PubMed esearch 2026-10-02",
+    "count": 68
+   }
+  ],
+  "note": "Case report plus literature table; WWOX-directed by title but not a field leader."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 31,
+  "enumeration_method": "<ref> elements in the PMC JATS ref-list, counted by the reading aid; 31.",
+  "gene_direct_refs_in_source": [
+   "24369382",
+   "24456803",
+   "27495153",
+   "25411445",
+   "29808465",
+   "28721938",
+   "25403906",
+   "26345274",
+   "25716914",
+   "17470496"
+  ],
+  "resolved": [
+   {
+    "pmid": "24369382",
+    "how": "Held: PAPER 042 (Mallaret 2014)."
+   },
+   {
+    "pmid": "24456803",
+    "how": "Held: PAPER 043 (Abdel-Salam 2014), the first report of p.Arg54*; this paper's family 2 is a different, later family with the same allele."
+   },
+   {
+    "pmid": "27495153",
+    "how": "Held: PAPER 049 (Elsaadany 2016)."
+   },
+   {
+    "pmid": "29808465",
+    "how": "Held: PAPER 041 (Johannsen 2018). This paper's Table 1 transcribes that source's allele as 'c.689A<C' / 'p.Gly230Pro'; the held source is the authority for the allele, recorded in the intake note as a transcription error of this secondary table."
+   },
+   {
+    "pmid": "25411445",
+    "how": "Held at stub depth only (CORPUS-STUB-114 / LIT-0134); CLAIM 030 already records it as not read. Not re-opened here; the debt is pre-existing and named in the intake note."
+   },
+   {
+    "pmid": "25403906",
+    "how": "Held as CORPUS P362 / LIT-0362 (placeholder)."
+   },
+   {
+    "pmid": "28721938",
+    "how": "Mention-only in the registries (Tarta-Arsene 2017). Not opened: it is a cited secondary row of this paper's review table, not a premise of any proposition carried here; named as debt in the intake note."
+   },
+   {
+    "pmid": "26345274",
+    "how": "Mention-only (Tabarki 2015). Not opened, same reason; named as debt in the intake note."
+   },
+   {
+    "pmid": "25716914",
+    "how": "Mention-only (Valduga 2015). Not opened, same reason; named as debt in the intake note."
+   },
+   {
+    "pmid": "17470496",
+    "how": "Mention-only (Gribaa 2007, linkage paper preceding Mallaret 2014). Not opened, same reason."
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Which artefacts for this paper already exist in the shared files/ tree, and does any receipt or registry record already hold it?",
+  "hits": 0,
+  "finding": "No artefact under files/ and no receipt (fulltext_receipts.py status exited 1 with []). Registry identity: CORPUS P253 / LIT-0253, a FASE-1 placeholder ('no deep-dive performed'). Acquired fresh."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-02",
+  "route": "PubMed esummary (eutils) 2026-10-02, pubtype and references fields",
+  "result": "Journal Article; no retraction, expression of concern or erratum linked in PubMed.",
+  "hold": false
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID30746283_Ehaideb2018_PMC.xml",
+   "sha256": "bfa69a29938b61847beb6e08e56534ec9b4bd5cc9c3b94222f95e85c3e4375f0",
+   "kind": "article_text",
+   "note": "PMC JATS; the whole article body, Table 1 and the single figure legend.",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=6368664&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-02",
+    "derived": false,
+    "result_sha256": "bfa69a29938b61847beb6e08e56534ec9b4bd5cc9c3b94222f95e85c3e4375f0"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID30746283_assets/tnsci-09-203-g001.jpg",
+   "sha256": "b82a6220155dbd4c7a6cb681f4288d00c4c0ef4ce9092305abebc218e6136c7b",
+   "kind": "figure",
+   "note": "Figure 1 (brain MRI of patient 3) as served, inspected at native size. Member of the Europe PMC supplementaryFiles archive for PMC6368664, stored beside it as PMID30746283_PMC6368664_supplementaryFiles.zip; the archive's route and sha256 are recorded in research/intake_wave_20261002_A.md.",
+   "acquisition_recipe": {
+    "no_recipe": "extracted from the declared supplementaryFiles archive with Python zipfile; the archive itself carries the route"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC JATS from E-utilities efetch db=pmc id=6368664 (73,381 bytes). Table 1 is in the body and flattens with spaces in the validator's surface.",
+  "abstract_anchoring_waived": "No locator draws on the abstract; every text entry is matched against the body, table or a declared supplement surface.",
+  "entries": [
+   {
+    "proposition": "ALLELE CLASS / ZYGOSITY / SEGREGATION, family 1: a homozygous canonical splice-donor variant (intron 4, +1) found by WES; both parents and an unaffected sister are reported heterozygous carriers. The carrier phenotype is the authors' word 'healthy', not an examination.",
+    "snippet": "Whole exome sequencing (WES) revealed novel homozygous variant in intron 4 of the WWOX gene, NM_016373.3: c.409+1G > T (Ch16:78149052 G>T). Parents and healthy sister tested and they are carrier for the same mutation.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30746283_Ehaideb2018_PMC.xml",
+    "anchor": "Result, first clinical report (family 1 proband), final sentences",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PHENOTYPE BAND, family 1 proband: onset at two months with focal seizures evolving to infantile spasms, refractory; a DEE band.",
+    "snippet": "At two months he started to have focal seizure with secondary generalization followed by infantile spasms. The seizure was refractory to antiepileptic medications.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30746283_Ehaideb2018_PMC.xml",
+    "anchor": "Result, first clinical report (family 1 proband)",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "NO RNA OR FUNCTIONAL TEST of the splice allele: its consequence is stated as a possibility only.",
+    "snippet": "This mutation might cause intron sequence to be included in the mRNA or the elimination of exon.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30746283_Ehaideb2018_PMC.xml",
+    "anchor": "Discussion, paragraph on family 1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "ALLELE CLASS / ZYGOSITY, family 2: two affected siblings homozygous for the previously reported nonsense allele p.Arg54*; the paper reports no parental testing for this family.",
+    "snippet": "WES revealed previously reported homozygous non sense mutation c.160G > T (p.Arg54*), which resulted in a premature termination.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30746283_Ehaideb2018_PMC.xml",
+    "anchor": "Result, third clinical report (family 2, second affected sib)",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PHENOTYPE BAND, family 2 index: early spasms with burst suppression on EEG; severe DEE band.",
+    "snippet": "electroencephalogram (EEG) low voltage interval with burst suppression",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30746283_Ehaideb2018_PMC.xml",
+    "anchor": "Result, second clinical report (family 2 index)",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE AUTHORS' HAPLOSUFFICIENCY SENTENCE is an inference from the zygosity of reported cases, not a measurement; and it states 'all homozygous' while the same paper's Table 1 lists a compound heterozygote (see next entry).",
+    "snippet": "All of these mutations are homozygous and most of them are located in or near the first WW domain, suggesting that one functional copy of the WWOX gene is sufficient for conducting normal neuronal activity.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30746283_Ehaideb2018_PMC.xml",
+    "anchor": "Discussion, first paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "INTERNAL INCONSISTENCY: Table 1 itself records a compound heterozygote among the reviewed cases.",
+    "snippet": "Compound heterozygous for both mutations in trans configuration",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID30746283_Ehaideb2018_PMC.xml",
+    "anchor": "Table 1, row 'Nature of the mutation'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "TRANSCRIPTION ERROR IN THE REVIEW TABLE: the Johannsen 2018 allele is printed as a glycine-230 change with a reversed nucleotide arrow. Genotype caution: this secondary table must not be used as a source for the Q230P allele.",
+    "snippet": "(a) Might cause intron insertion or exon skipping (b) p.Arg54* p.Gly230Pro",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID30746283_Ehaideb2018_PMC.xml",
+    "anchor": "Table 1, row 'Amino acid change', first two study columns (this study; the 2018 Q230P report)",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1 inspected: sagittal and axial MRI of the family-2 sister show a thin corpus callosum, volume loss and asymmetric ventricular enlargement, as the legend states.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1, three panels A-C: sagittal T1 with arrow on a thin corpus callosum; axial T2 and T1 with red arrows on reduced white matter and a star in an enlarged left lateral ventricle.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID30746283_assets/tnsci-09-203-g001.jpg",
+    "anchor": "Figure 1, panels A-C",
+    "panel_text_relation": "text_confirmed_by_panel"
+   }
+  ]
+ }
+}

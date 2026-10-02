@@ -1,0 +1,273 @@
+{
+ "schema_version": 2,
+ "pmid": "40191585",
+ "doi": "10.1093/nargab/lqaf033",
+ "receipt": "FTR-20261002-40191585-01",
+ "landing": [
+  "fulltext_dossiers/PMID40191585.md",
+  "CC-20261002-HETEROZYGOTE-CARRIERS-01",
+  "CC-20261002-INTAKE-A-REGISTRY-01",
+  "disease-models/wwox/research/intake_wave_20261002_A.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Tier 1 of its cascade (NCBI efetch PMC JATS) returned a full body; Europe PMC supplementaryFiles supplied the figures and deposited supplements."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline by the reader: the brief fixes SOURCE_FIRST, and a delegated deep dive would have been handed LEGEND's prior answer or none of the class-level question."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Producer must not be verifier: the triples go to the blind audit through the LOCATOR TRIPLES section of the wave's commit candidates."
+  }
+ ],
+ "context_policy": "SOURCE_FIRST",
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 335,
+  "publications_on_gene": 2,
+  "counts_measured": "PubMed esearch 2026-10-02: 'Bahlo M[au]' 335 (senior author); 'Bahlo M[au] AND WWOX' 2",
+  "research_type": "mixed",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "A statistical-genetics group (computational half) working with the epilepsy clinical group that published the held WWOX-DEE cohort (Oliver 2023, PAPER 018; clinical half). The observation (carrier counts, haplotype sharing) is weighted as population-genetic data; the pathogenicity of the variant is inherited by citation, not assessed, and no carrier phenotype is reported."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "WWOX AND founder",
+    "route": "PubMed esearch 2026-10-02",
+    "count": 7
+   }
+  ],
+  "note": "Methods paper; WWOX is one of two worked examples."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 66,
+  "enumeration_method": "<ref> elements in the PMC JATS ref-list; 66.",
+  "gene_direct_refs_in_source": [
+   "24456803",
+   "24369382",
+   "36779245"
+  ],
+  "resolved": [
+   {
+    "pmid": "24456803",
+    "how": "Held: PAPER 043."
+   },
+   {
+    "pmid": "24369382",
+    "how": "Held: PAPER 042."
+   },
+   {
+    "pmid": "36779245",
+    "how": "Held: PAPER 018 (Oliver 2023), same clinical group. Its Table 1 lists two p.Glu17Lys carriers (Patients 6 and 12), each with c.49G>A in trans with a deletion; read in the held XML after the first pass, for the overlap judgement."
+   }
+  ],
+  "note": "Supplementary reference 21 (Weisz-Hubshman 2019, PMID 30853297, held as PAPER 025) is the citation for a named founder-population origin of WWOX c.49G>A; checked against the held PDF text layer after the first pass (see intake note)."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Which artefacts for this paper already exist in the shared files/ tree, and does any receipt or registry record already hold it?",
+  "hits": 0,
+  "finding": "No artefact, no receipt, no registry record. LEGEND holds p.Glu17Lys from PMID 30356099 and PMID 36779245; ft116 triage notes a third, gene-inferred occurrence (PMID 31618474)."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-02",
+  "route": "PubMed esummary (eutils) 2026-10-02, pubtype and references fields",
+  "result": "Journal Article; no retraction, expression of concern or erratum linked.",
+  "hold": false
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID40191585_Robertson2025_PMC.xml",
+   "sha256": "f1b4cb31a4898024a1fe9bc0420f53150952074c20d2a8e41a8b44ba617e4691",
+   "kind": "article_text",
+   "note": "PMC JATS; body and four figure legends.",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=11970371&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-02",
+    "derived": false,
+    "result_sha256": "f1b4cb31a4898024a1fe9bc0420f53150952074c20d2a8e41a8b44ba617e4691"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID40191585_assets/lqaf033fig4.jpg",
+   "sha256": "91d9b5cd27d72773fa31562af79a19d10cc0fe7db9e3a43a3d34c6b5d34dc5d7",
+   "kind": "figure",
+   "note": "Figure 4 (FH score distributions, panels B and D are WWOX), inspected. Member of the Europe PMC supplementaryFiles archive for PMC11970371, stored beside it as PMID40191585_PMC11970371_supplementaryFiles.zip; the archive's route and sha256 are recorded in research/intake_wave_20261002_A.md.",
+   "acquisition_recipe": {
+    "no_recipe": "extracted from the declared supplementaryFiles archive with Python zipfile; the archive itself carries the route"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID40191585_assets/lqaf033fig1.jpg",
+   "sha256": "a981e783b559204fe3eb4beebbc143072378a4bf27ead2ef95ff09f77e257265",
+   "kind": "figure",
+   "note": "Figure 1, HMM schematic, inspected. Member of the Europe PMC supplementaryFiles archive for PMC11970371, stored beside it as PMID40191585_PMC11970371_supplementaryFiles.zip; the archive's route and sha256 are recorded in research/intake_wave_20261002_A.md.",
+   "acquisition_recipe": {
+    "no_recipe": "extracted from the declared supplementaryFiles archive with Python zipfile; the archive itself carries the route"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID40191585_assets/lqaf033fig2.jpg",
+   "sha256": "6d57491fa0350ac272d3b783748ff1d9ed5caa9d687229444852433a82200d4e",
+   "kind": "figure",
+   "note": "Figure 2, simulation sensitivity, inspected. Member of the Europe PMC supplementaryFiles archive for PMC11970371, stored beside it as PMID40191585_PMC11970371_supplementaryFiles.zip; the archive's route and sha256 are recorded in research/intake_wave_20261002_A.md.",
+   "acquisition_recipe": {
+    "no_recipe": "extracted from the declared supplementaryFiles archive with Python zipfile; the archive itself carries the route"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID40191585_assets/lqaf033fig3.jpg",
+   "sha256": "c5281d065610af17ac832b485c8cbc59385d95d3f941d0179fc74b44f26b39b8",
+   "kind": "figure",
+   "note": "Figure 3, simulation AUPRC, inspected. Member of the Europe PMC supplementaryFiles archive for PMC11970371, stored beside it as PMID40191585_PMC11970371_supplementaryFiles.zip; the archive's route and sha256 are recorded in research/intake_wave_20261002_A.md.",
+   "acquisition_recipe": {
+    "no_recipe": "extracted from the declared supplementaryFiles archive with Python zipfile; the archive itself carries the route"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID40191585_assets/lqaf033_supplemental_file.pdf",
+   "sha256": "a7e5b83aeeab95da0b197fbc13630642b9381e160bcd07b9de62b2b5aa805869",
+   "kind": "supplement_binary",
+   "note": "41-page supplement PDF; its text is verified through the derived PyMuPDF surface below. Member of the Europe PMC supplementaryFiles archive for PMC11970371, stored beside it as PMID40191585_PMC11970371_supplementaryFiles.zip; the archive's route and sha256 are recorded in research/intake_wave_20261002_A.md.",
+   "acquisition_recipe": {
+    "no_recipe": "extracted from the declared supplementaryFiles archive with Python zipfile; the archive itself carries the route"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID40191585_assets/lqaf033_supplemental_file_pymupdf.txt",
+   "sha256": "0dd5040682826f65904daa574666d95b64b8e21f3c5df5d52fd14ae9b7e9e0ad",
+   "kind": "supplement_text",
+   "note": "Text layer of the supplement. Read: Supplementary Note 3, the Fig S11/S12 legends, Tables S1 and S6. Not read: Notes 1-2 and the simulation tables and figures.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID40191585_assets/lqaf033_supplemental_file.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_text() default mode",
+     "join": ""
+    },
+    "acquired_on": "2026-10-02"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID40191585_assets/suppfigS12_p25_embedded.png",
+   "sha256": "def16a9753776b67acb622f9780a7ddd34205fd9ae460fc657ed82bcc6648cd2",
+   "kind": "figure",
+   "note": "Supplementary Figure 12 (WWOX c.49G>A haplotype sharing): the embedded PNG extracted from PDF page 25 with PyMuPDF extract_image (2626 x 1804 px), inspected.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID40191585_assets/lqaf033_supplemental_file.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "doc.extract_image(xref) for the single image on page 25",
+     "join": ""
+    },
+    "acquired_on": "2026-10-02"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC JATS from efetch db=pmc id=11970371 (126,806 bytes). Italics around gene symbols are inline markup and do not break the surface.",
+  "abstract_anchoring_waived": "No locator draws on the abstract; every text entry is matched against the body, table or a declared supplement surface.",
+  "entries": [
+   {
+    "proposition": "GENE ATTRIBUTION, read: p.E17K is a WWOX variant (c.49G>A); the other worked variant, p.Cys121Trp, is in SCN1B.",
+    "snippet": "FoundHaplo was used to predict carriers of the SCN1B c.363C>G (p.Cys121Trp) (OMIM: 604233) and WWOX c.49G>A (p.E17K) (OMIM: 616211) rare variants in two cohorts.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40191585_Robertson2025_PMC.xml",
+    "anchor": "Materials and methods, 'Detecting the SCN1B c.363C>G and WWOX c.49G>A rare epilepsy variants'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PATHOGENICITY IS INHERITED BY CITATION, and the population frequency is stated.",
+    "snippet": "WWOX c.49G>A has a MAF of 0.01037% in gnomAD [46, 47] and causes autosomal recessive developmental and epileptic encephalopathy [52–54].",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40191585_Robertson2025_PMC.xml",
+    "anchor": "Materials and methods, same section",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "HETEROZYGOTE COUNT: 172 UK Biobank participants carry the WWOX variant by WES; zygosity per carrier is not stated, and no phenotype of any carrier is reported anywhere in the paper.",
+    "snippet": "identified two individuals in the Epi25 cohort and 171 individuals in the UKBB cohort who carried the SCN1B c.363C>G variant and 172 individuals in the UKBB who carried the WWOX c.49G>A variant",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40191585_Robertson2025_PMC.xml",
+    "anchor": "Materials and methods, cohort paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FOUNDER: all carriers share a core haplotype around the WWOX variant, so its recurrence across reports is one ancestral allele, not repeated mutation.",
+    "snippet": "All of the 175 WWOX c.49G>A carriers shared a core haplotype of 157 kb.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40191585_Robertson2025_PMC.xml",
+    "anchor": "Results, 'Detecting individuals with the SCN1B c.363C>G and WWOX c.49G>A rare epilepsy variants'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "NO CARRIER IN THE EPILEPSY COHORT: zero WWOX c.49G>A carriers among 1,573 epilepsy patients. At the UKBB carrier rate (172 of 468,481) about 0.6 carriers would be expected in 1,573 people (reader's arithmetic), so the zero is uninformative.",
+    "snippet": "There are no WWOX c.49G>A carriers in the Epi25 cohort, but FoundHaplo identified 23 noncarriers (1.5% false positive rate).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40191585_Robertson2025_PMC.xml",
+    "anchor": "Results, same section",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE DISEASE HAPLOTYPES COME FROM THREE AFFECTED-CHILD/PARENT DUOS recruited by the same clinical research centre as the held WWOX-DEE cohort; the affected children's second allele and zygosity are not stated.",
+    "snippet": "The WWOX c.49G>A (p.E17K) disease haplotypes were derived from a cohort of three",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID40191585_assets/lqaf033_supplemental_file_pymupdf.txt",
+    "anchor": "Supplementary Note 3, 'Deriving the SCN1B c.363C>G and WWOX c.49G>A disease haplotypes'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "VARIANT CONFIRMATION in the six duo members by WES.",
+    "snippet": "c.49G>A disease variant was confirmed in all six individuals through WES.",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID40191585_assets/lqaf033_supplemental_file_pymupdf.txt",
+    "anchor": "Supplementary Note 3",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FOUNDER-ORIGIN CITATION: the supplement's founder table gives WWOX c.49G>A a named founder population and cites its reference 21 (Weisz-Hubshman 2019) for it; the population label is not reproduced in this public edition. The held text layer of that paper does not name c.49G>A or Glu17 (see intake note); the attribution is not supported by the source it cites.",
+    "snippet": "cephalopathy 28 DEE28 616211 WWOX c.49G>A AR WWOX coding",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID40191585_assets/lqaf033_supplemental_file_pymupdf.txt",
+    "anchor": "Supplementary Table 1 (page 26), row 'Developmental and epileptic encephalopathy 28'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 4 inspected: panel B (Epi25, WWOX) has no red carrier points, only grey non-carriers above the 99th-percentile line; panel D (UKBB, WWOX) shows red carriers concentrated above the threshold and the top-100 line.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4, panel B 'WWOX c.49G>A Epi25': violin with grey points just above the critical line and no red points; panel D 'UKBB': red carrier points clustered above the black 99th-percentile and brown top-100 lines.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID40191585_assets/lqaf033fig4.jpg",
+    "anchor": "Figure 4, panels B and D",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "Supplementary Figure 12 inspected: about 175 horizontal bars centred on the WWOX variant; a dark-orange core is shared by every bar and yellow extensions vary, reaching about 8 Mb on one side for the longest.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Figure 12: x-axis 'Distance in kilobase pairs from the WWOX c.49G>A variant' from -8000 to 2000+; legend 'Core ancestral haplotype' (dark orange) and 'Extended haplotype' (yellow); every bar crosses the dotted zero line.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID40191585_assets/suppfigS12_p25_embedded.png",
+    "anchor": "Supplementary Figure 12",
+    "panel_text_relation": "text_confirmed_by_panel"
+   }
+  ]
+ }
+}

@@ -1,0 +1,214 @@
+{
+ "schema_version": 2,
+ "pmid": "32081867",
+ "doi": "10.1038/s41598-020-59922-3",
+ "receipt": "FTR-20261002-32081867-01",
+ "landing": [
+  "fulltext_dossiers/PMID32081867.md",
+  "CC-20261002-HETEROZYGOTE-CARRIERS-01",
+  "CC-20261002-INTAKE-A-REGISTRY-01",
+  "disease-models/wwox/research/intake_wave_20261002_A.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Tier 1 of its cascade (NCBI efetch PMC JATS) returned a full body; Europe PMC supplementaryFiles supplied the figures and deposited supplements."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline by the reader: the brief fixes SOURCE_FIRST, and a delegated deep dive would have been handed LEGEND's prior answer or none of the class-level question."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Producer must not be verifier: the triples go to the blind audit through the LOCATOR TRIPLES section of the wave's commit candidates."
+  }
+ ],
+ "context_policy": "SOURCE_FIRST",
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 51,
+  "publications_on_gene": 1,
+  "counts_measured": "PubMed esearch 2026-10-02: 'Bacchelli E[au]' 51; 'Bacchelli E[au] AND WWOX' 1",
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "An ASD genetics group with a family-based array design. The observation (CNV coordinates, inheritance, case/control status) is weighted as array data with qPCR validation for a declared subset only; the WWOX 'significant role' sentence is the authors' interpretation from one case plus citation, with no WWOX-specific statistic."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "WWOX AND autism",
+    "route": "PubMed esearch 2026-10-02",
+    "count": 9
+   }
+  ],
+  "note": "Genome-wide CNV study; WWOX is one of nine highlighted genes."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 57,
+  "enumeration_method": "<ref> elements in the PMC JATS ref-list; 57.",
+  "gene_direct_refs_in_source": [],
+  "note": "The WWOX statement cites Leppa 2016 (ref 6, PMID 27569545), which is not WWOX-directed by title and is mention-only in the registries; named as debt in the intake note."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Which artefacts for this paper already exist in the shared files/ tree, and does any receipt or registry record already hold it?",
+  "hits": 0,
+  "finding": "No artefact, no receipt, no registry record."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-02",
+  "route": "PubMed esummary (eutils) 2026-10-02, pubtype and references fields",
+  "result": "Journal Article; no retraction, expression of concern or erratum linked.",
+  "hold": false
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID32081867_Bacchelli2020_PMC.xml",
+   "sha256": "dad25ab0ab9a16481cc4a41852978ba30cf2c582c6314f526975e21d9ee619bc",
+   "kind": "article_text",
+   "note": "PMC JATS; Tables 1-3 inline in the body.",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=7035424&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-02",
+    "derived": false,
+    "result_sha256": "dad25ab0ab9a16481cc4a41852978ba30cf2c582c6314f526975e21d9ee619bc"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID32081867_assets/41598_2020_59922_Fig3_HTML.jpg",
+   "sha256": "e3f2b8c6d2b885a5a5433fd3cf0239b5be44867a71053d450a2e4eae1eba8124",
+   "kind": "figure",
+   "note": "Figure 3 (CNVs at SFARI genes; panel d is WWOX), inspected. Member of the Europe PMC supplementaryFiles archive for PMC7035424, stored beside it as PMID32081867_PMC7035424_supplementaryFiles.zip; the archive's route and sha256 are recorded in research/intake_wave_20261002_A.md.",
+   "acquisition_recipe": {
+    "no_recipe": "extracted from the declared supplementaryFiles archive with Python zipfile; the archive itself carries the route"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID32081867_assets/41598_2020_59922_Fig1_HTML.jpg",
+   "sha256": "4fb6e0adbbd746ada9650e8437683e9ed4026e391483442cac0ca9d3238664df",
+   "kind": "figure",
+   "note": "Figure 1, design schematic, inspected. Member of the Europe PMC supplementaryFiles archive for PMC7035424, stored beside it as PMID32081867_PMC7035424_supplementaryFiles.zip; the archive's route and sha256 are recorded in research/intake_wave_20261002_A.md.",
+   "acquisition_recipe": {
+    "no_recipe": "extracted from the declared supplementaryFiles archive with Python zipfile; the archive itself carries the route"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID32081867_assets/41598_2020_59922_Fig2_HTML.jpg",
+   "sha256": "93d38d097503cdd7d928776968db5f611bd20e2ff165ca5955b404a28c8a3c32",
+   "kind": "figure",
+   "note": "Figure 2, VPS13B, inspected. Member of the Europe PMC supplementaryFiles archive for PMC7035424, stored beside it as PMID32081867_PMC7035424_supplementaryFiles.zip; the archive's route and sha256 are recorded in research/intake_wave_20261002_A.md.",
+   "acquisition_recipe": {
+    "no_recipe": "extracted from the declared supplementaryFiles archive with Python zipfile; the archive itself carries the route"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID32081867_assets/41598_2020_59922_MOESM2_ESM.xlsx",
+   "sha256": "60cfb6d16890e40db039ef3eed44cccbaa9ba4b68ec61105d89784de5fa6efb0",
+   "kind": "supplement_binary",
+   "note": "Supplementary Tables S1-S6, xlsx container; verified through the derived text below. Member of the Europe PMC supplementaryFiles archive for PMC7035424, stored beside it as PMID32081867_PMC7035424_supplementaryFiles.zip; the archive's route and sha256 are recorded in research/intake_wave_20261002_A.md.",
+   "acquisition_recipe": {
+    "no_recipe": "extracted from the declared supplementaryFiles archive with Python zipfile; the archive itself carries the route"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID32081867_assets/41598_2020_59922_MOESM2_ESM_xlsxdump.txt",
+   "sha256": "5fa838ff5f12e9b0a2a3b244a94fc70d4b6212b02576f676c54ac59897d64838",
+   "kind": "supplement_text",
+   "note": "Cell dump of all sheets. Read: headers of every sheet, all of Table S1 (qPCR-validated CNVs), the WWOX rows of S3 and S4, and Table S5 in full. Not read row by row: the remaining ~900 CNV rows of S3.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID32081867_assets/41598_2020_59922_MOESM2_ESM.xlsx",
+    "extractor": {
+     "name": "xlsxdump_extractor.py (stdlib zipfile + ElementTree; copy stored beside the output)",
+     "version": "sha256 e78717eee66df4340ae927e1a4c4d683dccd3f02dfa4af3588fc434d3faddd92",
+     "call": "python3 xlsxdump_extractor.py <xlsx> > <txt>; one line per row, cells as REF=value joined by ' | ', shared strings resolved",
+     "join": "\n"
+    },
+    "acquired_on": "2026-10-02"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID32081867_assets/41598_2020_59922_MOESM1_ESM.docx",
+   "sha256": "19a05d2d11189d168631d879e0ca1568e26dbc04e983124751ec43a68c5dcc35",
+   "kind": "supplement_text",
+   "note": "Supplementary Methods docx; the control-sample and CNV QC/validation paragraphs were read; its embedded Figure S1 qPCR images were not inspected. Member of the Europe PMC supplementaryFiles archive for PMC7035424, stored beside it as PMID32081867_PMC7035424_supplementaryFiles.zip; the archive's route and sha256 are recorded in research/intake_wave_20261002_A.md.",
+   "acquisition_recipe": {
+    "no_recipe": "extracted from the declared supplementaryFiles archive with Python zipfile; the archive itself carries the route"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC JATS from efetch db=pmc id=7035424 (137,893 bytes). Supplementary xlsx verified through a declared derived dump.",
+  "abstract_anchoring_waived": "No locator draws on the abstract; every text entry is matched against the body, table or a declared supplement surface.",
+  "entries": [
+   {
+    "proposition": "THE CASE CNV IS NOT A CANONICAL-EXON DELETION by the paper's own description: it involves the last exon of the two shorter WWOX transcripts. Mapped against Ensembl GRCh37 (reader's computation), the interval lies inside canonical intron 5.",
+    "snippet": "deletion involving the last exon of the two shorter gene transcript variants of the WWOX gene (NM_130791.3 and NR_120436.1)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32081867_Bacchelli2020_PMC.xml",
+    "anchor": "Results, 'Rare inherited copy number variants in ASD candidate genes'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "COORDINATES AND ZYGOSITY of the case: a 58,751 bp heterozygous loss, inherited from one parent, in a boy with high-functioning PDD-NOS, normal IQ, normal EEG and MRI.",
+    "snippet": "E24=chr16:78302399-78361149 | F24=12 | G24=58751",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID32081867_assets/41598_2020_59922_MOESM2_ESM_xlsxdump.txt",
+    "anchor": "Table S5 (sheet 'Table S5'), the WWOX row",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PHENOTYPE OF THE CASE, verbatim.",
+    "snippet": "M24=High functioning PDD-NOS | N24=PDD-NOS on ADOS and ADI-R; normal IQ on WISC-IV (TIQ 115); normal EEG and brain MRI",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID32081867_assets/41598_2020_59922_MOESM2_ESM_xlsxdump.txt",
+    "anchor": "Table S5, the WWOX row",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A CONTROL CARRIES A HETEROZYGOUS WWOX LOSS: array call at chr16:78,386,295-78,466,632, which on Ensembl GRCh37 spans canonical exons 6 and 7 and most of exon 8 (reader's computation). Not in the qPCR-validated list; boundaries are array estimates.",
+    "snippet": "C294=16 | D294=78386295 | E294=78466632 | F294=Loss | G294=WWOX",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID32081867_assets/41598_2020_59922_MOESM2_ESM_xlsxdump.txt",
+    "anchor": "Table S3 (sheet 'Table S3', rare CNVs), the control WWOX row",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "WHO THE CONTROLS ARE: adults without psychiatric history recruited at a headache centre for a nicotine study; no neurological or EEG assessment is described.",
+    "snippet": "without psychiatric history, recruited at the Division of Toxicology and Clinical Pharmacology, Headache Centre",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID32081867_assets/41598_2020_59922_MOESM1_ESM.docx",
+    "anchor": "Supplementary Methods, control sample",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE AUTHORS' WWOX INFERENCE rests on one case and a citation, and proposes a weak-risk role for heterozygous variants. No WWOX-specific test statistic is reported.",
+    "snippet": "Rare CNVs overlapping WWOX have been reported at greater frequency in ASD cases versus unaffected controls6, thus suggesting that WWOX heterozygous variants act as weak risk factors, generally associated with milder ASD phenotypes, as in our case.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32081867_Bacchelli2020_PMC.xml",
+    "anchor": "Discussion",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 3 panel d inspected: the case deletion (proband and transmitting parent) and the control deletion are drawn as non-overlapping red bars over the 5' part of WWOX; the control bar lies further 3', nearer 78.4-78.47 Mb.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3 panel d 'chr16 (q23.1-q23.2)': two red bars near 78.30-78.36 Mb under Probands and Parents; one red bar under Controls near 78.39-78.47 Mb, not overlapping them; WWOX transcript tracks below.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID32081867_assets/41598_2020_59922_Fig3_HTML.jpg",
+    "anchor": "Figure 3, panel d",
+    "panel_text_relation": "text_confirmed_by_panel"
+   }
+  ]
+ }
+}
