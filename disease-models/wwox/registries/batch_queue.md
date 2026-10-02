@@ -16,8 +16,8 @@
 | 🟢 **`CORPUS_CATALOGUED`** | 289 | catalogued and deduplicated, never analytically processed |
 | 🟡 `OUT_OF_SCOPE_LIKELY` | 196 | no scope signal in the title — later in the queue, **never discarded** |
 | 🟡 `AMBIGUOUS` | 4 | identifiers must be resolved before ingest |
-| ⏳ `IN_PIPELINE` | 54 | already in flight |
-| ✅ `KNOWN_INTEGRATED` | 108 | done — read depth in the table below |
+| ⏳ `IN_PIPELINE` | 52 | already in flight |
+| ✅ `KNOWN_INTEGRATED` | 110 | done — read depth in the table below |
 
 The two green rows are the answer to *"where do I start?"*. The table further down lists
 every record in this order, so a second person can take the next unclaimed row without
@@ -711,10 +711,8 @@ for an entirely unprocessed record.
 | [31618474](https://pubmed.ncbi.nlm.nih.gov/31618474/) | 2019 | ✅ | partial full text | receipt FTR-20260921-31618474-01 | ✎ corrected — The Genetic Landscape of Epilepsy of Infancy with Migrating Focal Seizures. |
 | [30783266](https://pubmed.ncbi.nlm.nih.gov/30783266/) | 2019 | ✅ | partial full text | receipt FTR-20260921-30783266-01 | ℹ️ CORRECTION NOTICE — Correction: The phenotypic spectrum of WWOX-related disorders: 20 additional cases of WOREE syndrome and review of the literature. |
 | [29067327](https://pubmed.ncbi.nlm.nih.gov/29067327/) | 2017 | ✅ | partial full text | receipt FTR-20260920-29067327-01 | Zfra restores memory deficits in Alzheimer's disease triple-transgenic mice by blocking aggregation of TRAPPC6AΔ, SH3GLB2, tau, and amyloid β, and inflammatory NF-κB activation. |
-| [28763065](https://pubmed.ncbi.nlm.nih.gov/28763065/) | 2017 | ✅ | partial full text | receipt FTR-20261002-28763065-01 | Genome-wide association analysis identifies common variants influencing infant brain volumes. |
 | [27845895](https://pubmed.ncbi.nlm.nih.gov/27845895/) | 2017 | ✅ | partial full text | receipt FTR-20260921-27845895-01 | Hyaluronan activates Hyal-2/WWOX/Smad4 signaling and causes bubbling cell death when the signaling complex is overexpressed. |
 | [25650666](https://pubmed.ncbi.nlm.nih.gov/25650666/) | 2015 | ✅ | partial full text | receipt FTR-20260921-25650666-02 | Trafficking protein particle complex 6A delta (TRAPPC6AΔ) is an extracellular plaque-forming protein in the brain. |
-| [41378749](https://pubmed.ncbi.nlm.nih.gov/41378749/) | 2025 | ✅ | full text | receipt FTR-20261002-41378749-01 | Folate Interaction With Genetic Risk for Neural Tube Defects Among Infants in Bangladesh. |
 | [41442931](https://pubmed.ncbi.nlm.nih.gov/41442931/) | 2026 | — | abstract only | PAPER 003 | Vigabatrin-Associated Brain Magnetic Resonance Imaging Abnormalities in Two Children With WW domain-containing oxidoreductase-Related Epileptic Encephalopathy Syndrome. |
 | [32185845](https://pubmed.ncbi.nlm.nih.gov/32185845/) | 2020 | — | abstract only | PAPER 026 | Phosphorylation of the WWOX Protein Regulates Its Interaction with p73. |
 | [41153369](https://pubmed.ncbi.nlm.nih.gov/41153369/) | 2025 | ✅ | partial full text | receipt FTR-20260921-41153369-01 | Genetic Etiology of Developmental and Epileptic Encephalopathy in a Turkish Cohort: A Single-Center Study with Targeted Gene Panel and Whole Exome Sequencing. |
@@ -728,6 +726,7 @@ for an entirely unprocessed record.
 | [32081867](https://pubmed.ncbi.nlm.nih.gov/32081867/) | 2020 | ✅ | partial full text | PAPER 124 | An integrated analysis of rare CNV and exome variation in Autism Spectrum Disorder using the Infinium PsychArray. |
 | [31543760](https://pubmed.ncbi.nlm.nih.gov/31543760/) | 2019 | ✅ | partial full text | receipt FTR-20260920-31543760-01 | The WWOX Gene Influences Cellular Pathways in the Neuronal Differentiation of Human Neural Progenitor Cells. |
 | [30356099](https://pubmed.ncbi.nlm.nih.gov/30356099/) | 2019 | ✅ | partial full text | PAPER 117 | ✎ corrected — The phenotypic spectrum of WWOX-related disorders: 20 additional cases of WOREE syndrome and review of the literature. |
+| [28763065](https://pubmed.ncbi.nlm.nih.gov/28763065/) | 2017 | ✅ | partial full text | PAPER 132 | Genome-wide association analysis identifies common variants influencing infant brain volumes. |
 | [25331887](https://pubmed.ncbi.nlm.nih.gov/25331887/) | 2014 | ✅ | partial full text | PAPER 027 | WWOX, the common fragile site FRA16D gene product, regulates ATM activation and the DNA damage response. |
 | [20146584](https://pubmed.ncbi.nlm.nih.gov/20146584/) | 2010 | ✅ | partial full text | PAPER 085 | WWOX gene and gene product: tumor suppression through specific protein interactions. |
 | [17679088](https://pubmed.ncbi.nlm.nih.gov/17679088/) | 2007 | ✅ | partial full text | PAPER 128 | An AT-rich sequence in human common fragile site FRA16D causes fork stalling and chromosome breakage in S. cerevisiae. |
@@ -740,6 +739,7 @@ for an entirely unprocessed record.
 | [41562193](https://pubmed.ncbi.nlm.nih.gov/41562193/) | 2026 | ✅ | full text | PAPER 010 | Endogenous Processes Underlying Clock-Like Mutational Signatures. |
 | [42397075](https://pubmed.ncbi.nlm.nih.gov/42397075/) | 2026 | ✅ | full text | PAPER 094 | Disrupted WWOX-MYC interplay impairs neurogenesis in human brain organoids. |
 | [42422765](https://pubmed.ncbi.nlm.nih.gov/42422765/) | 2026 | ✅ | full text | PAPER 011 | Neuron-specific WWOX gene therapy produces dose-dependent, durable rescue in a model of WWOX-related epileptic encephalopathy. |
+| [41378749](https://pubmed.ncbi.nlm.nih.gov/41378749/) | 2025 | ✅ | full text | PAPER 131 | Folate Interaction With Genetic Risk for Neural Tube Defects Among Infants in Bangladesh. |
 | [41090157](https://pubmed.ncbi.nlm.nih.gov/41090157/) | 2025 | ✅ | full text | PAPER 115 | B-cell-specific Wwox deletion promotes plasmablastic tumor development and proinflammatory signatures in myeloma model. |
 | [39868255](https://pubmed.ncbi.nlm.nih.gov/39868255/) | 2025 | ✅ | full text | PAPER 114 | Partial Wwox Loss of Function Increases Severity of Murine Sepsis and Neuroinflammation. |
 | [39507621](https://pubmed.ncbi.nlm.nih.gov/39507621/) | 2024 | ✅ | full text | PAPER 015 | Case report: Adult patient with WWOX developmental and epileptic encephalopathy: 40 years of observation. |

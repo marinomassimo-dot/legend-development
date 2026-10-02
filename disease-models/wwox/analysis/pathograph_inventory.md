@@ -33,7 +33,7 @@ annotations is reported below whatever it happens to be.
 | Edges carrying a declared relation type | 0 |
 | Nodes carrying a biological scale | 0 |
 | Deep-dive manifests read | 134 |
-| …of which bound to at least one claim | 60 |
+| …of which bound to at least one claim | 61 |
 | Propositions scanned | 2854 |
 | …carrying a relational connective | 648 |
 | …locator-backed candidates | 610 |
@@ -52,7 +52,7 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 |---|---|---|---|---|---|---|---|
 | CLAIM 001 | Vigabatrin associated with VABAM in WWOX-DEE | conflicting evidence | DATO | P2 — GABAergic vulnerability / safety | NOT_ANNOTATED | 5 | 4 |
 | CLAIM 002 | WWOX-LoF causes network hyperexcitability; AAV-WWOX rescues organoid phenotype | consolidated baseline | DATO + INFERENZA prudente | P1 — Ca²⁺ / network dysregulation; P7 —  | NOT_ANNOTATED | 2 | 5 |
-| CLAIM 003 | Neuronal WWOX deletion induces non-cell-autonomous hypomyelination | consolidated baseline | DATO | P4 — myelination / white matter | NOT_ANNOTATED | 2 | 2 |
+| CLAIM 003 | Neuronal WWOX deletion induces non-cell-autonomous hypomyelination | consolidated baseline | DATO | P4 — myelination / white matter | NOT_ANNOTATED | 2 | 3 |
 | CLAIM 004 | AAV9-WWOX neuron-targeted rescue shows multi-domain in vivo improvement | consolidated baseline | DATO | P7 — gene therapy readiness | NOT_ANNOTATED | 10 | 3 |
 | CLAIM 005 | Reduced GABAergic interneurons and glial activation in WWOX-KO | consolidated baseline | DATO | P2 — GABAergic vulnerability; P6 — neuro | NOT_ANNOTATED | 20 | 3 |
 | CLAIM 006 | P47T model shows progressive hippocampal astrogliosis; microglial progression shown for morpholo | consolidated baseline | DATO + INFERENZA prudente | P6 — neuroinflammation / glia | NOT_ANNOTATED | 0 | 2 |
@@ -364,6 +364,6 @@ carried no connective from the lexicon.
 ## Provenance
 
 Derived from 137 input files; digest
-`3b070695e68918ec`. Sources: the claim, paper and
+`70a9ca6024062317`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 
