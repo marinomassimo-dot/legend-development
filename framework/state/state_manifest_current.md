@@ -212,8 +212,8 @@ to make a suite green — the only way to move it is to have made the change you
 
 ```yaml
 growth_anchor_ledger: framework/state/growth_anchors.jsonl
-growth_anchor_events: 34
-growth_anchor_head: 8e8d19c8111426b5f60a5a4d24f6b440a1c653d287a7d9a54ac4675f00cf2536
+growth_anchor_events: 35
+growth_anchor_head: 5d9c12a2e8eee163f455d34a747167a402d4accacf55872330a8a07725182796
 ```
 
 ```bash
@@ -261,7 +261,7 @@ baseline below must equal the live count, never preserve historical padding.
 
 ```yaml
 unread_premise_baseline: 0
-unread_premise_measured_on: 2026-09-29
+unread_premise_measured_on: 2026-10-02
 ```
 
 **It is a ratchet, not a wall.** Blocking on the whole legacy backlog would only teach sessions

@@ -89,3 +89,19 @@ evidence") stays: it is still correct.
 - (The spina-bifida WWOX variants are intronic | Three variants on chromosome 16 were within the 8th intron of WWOX | PMID 41378749, Results, Association Without Folate)
 - (Multiple testing was handled only by a suggestive threshold | We addressed multiple comparisons by only considering loci above the suggestive threshold | PMID 41378749, Methods, Association Studies)
 - (The technical replication replicated two other loci | Two previously identified nominal loci were replicated using the imputed dosages computed on the Michigan Imputation Server | PMID 41378749, Results, Technical Replication Results)
+
+## BATCH DISPOSITION — `BATCH_20261002_001` (2026-10-02, ACTOR_ID `scientist`), append-only
+
+**Nothing above this line was rewritten.**
+
+**Verdict:** PROPAGATED
+
+**MINOR** confirmed: triage metadata of `CORPUS P263` / `LIT-0263` corrected and one research-queue
+negative narrowed. It narrows no claim — `FT-142` is a full-text-queue record, not a claim, and no
+`consolidated baseline` claim is touched — so no blind locator audit was owed. All eleven ops (4 + 6 + 1)
+applied as written, exit 0, each `old` re-proved unique by the editor inside its own record.
+`background_only` for `LIT-0263` was kept as the author chose it: the log's own vocabulary defines
+`processed` as *«Fully read»*, and the review's four figure images are still owed.
+§ 3's declaration that this candidate creates no `PAPER` record for PMID 37501399, 28763065,
+41378749 or 31315632 is what made `CC-20261002-INTAKE-WAVE-ORPHANS-01` necessary; 28763065 and
+41378749 keep their landing in `FT-142`, and the other two now have `PAPER 125` and `PAPER 126`.

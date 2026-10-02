@@ -42,3 +42,18 @@ The brief framed the 16q23.1 duplication as LEGEND's first gene-**dose-gain** da
 (172 carriers by WES, no phenotype reported | 172 individuals in the UKBB who carried the WWOX c.49G>A variant | PMID 40191585, Materials and methods; files/fulltext/PMID40191585_Robertson2025_PMC.xml)
 (the founder table row for WWOX c.49G>A and its founder-origin citation | cephalopathy 28 DEE28 616211 WWOX c.49G>A AR WWOX coding | PMID 40191585, Supplementary Table 1 page 26; files/fulltext/PMID40191585_assets/lqaf033_supplemental_file_pymupdf.txt)
 (all examined carriers share one core haplotype | All of the 175 WWOX c.49G>A carriers shared a core haplotype of 157 kb. | PMID 40191585, Results; files/fulltext/PMID40191585_Robertson2025_PMC.xml)
+
+## BATCH DISPOSITION — `BATCH_20261002_001` (2026-10-02, ACTOR_ID `scientist`), append-only
+
+**Nothing above this line was rewritten.**
+
+**Verdict:** PROPAGATED
+
+**MINOR** confirmed: four rejections into the non-canonical dismissal ledger, no canonical file and
+no claim status touched. `DIS-022`–`DIS-025` held their provisional numbers (live highest was
+`DIS-021`); `CC-20261002-BIOMARKER-REJECTIONS-01` had already moved to `DIS-026`–`DIS-029`, so no
+renumbering was needed and the `PAPER` records of `CC-20261002-INTAKE-A-REGISTRY-01` that cite
+`DIS-022`, `DIS-023` and `DIS-025` are correct as written. Applied as one `insert-after DIS-020`
+merged with this wave's other dismissal block, so the ledger reads `DIS-022` … `DIS-029` in
+numeric order; the editor refused the first form of that insert (`RESEGMENTATION`: the text had to
+end with a newline) and the refusal was fixed rather than forced.

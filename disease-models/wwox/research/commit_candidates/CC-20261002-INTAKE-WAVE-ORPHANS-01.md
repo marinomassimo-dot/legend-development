@@ -218,9 +218,14 @@ explicit `partial_fulltext_read` in `Evidence depth` and the owed surfaces named
 - **It upgrades no reading depth.** Four of the six records say `partial_fulltext_read` and name
   what is owed.
 
-## BATCH DISPOSITION
+## BATCH DISPOSITION — `BATCH_20261002_001` (2026-10-02, ACTOR_ID `scientist`), append-only
 
-**PROPAGATED** by `BATCH_20261002_001` (2026-10-02, ACTOR_ID `scientist`, branch
-`task/batch-20261002-intake-2`). Ops applied as written, with `PAPER 125`–`130` and
-`LIT-0426`–`0429` confirmed free at propagation time. `ORPHAN_COMPLETE_READ` count after
-propagation: 0.
+**Nothing above this line was rewritten.**
+
+**Verdict:** PROPAGATED
+
+Branch `task/batch-20261002-intake-2`. Both op lists applied as written, record-scoped, exit 0:
+19 ops on `paper_registry_current.md` (shared with `CC-20261002-INTAKE-A-REGISTRY-01` and
+`CC-20261002-B-NONLINEAGE-01`) and 24 on `literature_tracking_log_current.md`. `PAPER 125`–`130`
+and `LIT-0426`–`0429` were confirmed free at propagation time (`registry_records.py catalog`:
+live highest `PAPER 118`, `LIT-0420`). `ORPHAN_COMPLETE_READ` after propagation: **0** (4 before).
