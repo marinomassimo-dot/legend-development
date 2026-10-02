@@ -99,8 +99,11 @@ reproducing the neuronal viability loss.
 ## 3 · Question 2 — biomarkers that measure WWOX
 
 Eight candidate readouts across four sources. **All eight fail §13**, and the scoring, the premises
-and the revival triggers are in `CC-20261002-BIOMARKER-REJECTIONS-01` (proposed entries DIS-022 to
-DIS-025). The summary:
+and the revival triggers are in `CC-20261002-BIOMARKER-REJECTIONS-01` (proposed entries DIS-026 to
+DIS-029 — renumbered from 022–025 on 2026-10-02 to yield to Scientist A's
+`CC-20261002-DOSE-GAIN-DISMISSAL-01`, which claimed the same four numbers first and is cited by
+`CC-20261002-INTAKE-A-REGISTRY-01`; this candidate's numbers had no downstream citation, so it is
+the cheaper side to move). The summary:
 
 | Candidate | Dependence shown by | System | Type | Patient-samplable | §13 |
 |---|---|---|---|---|---|
@@ -254,7 +257,15 @@ untouched by this wave.
 | ID | Class | Targets | Triples |
 |---|---|---|---|
 | `CC-20261002-WWOX-DOSE-CEILING-01` | **MINOR** | `CLAIM 011` (append a `PREMISE_TAG`), `BLOCK 1 §4` (append one bullet) | 13 |
-| `CC-20261002-BIOMARKER-REJECTIONS-01` | **MINOR** | `dismissal_ledger_current.md` (append DIS-022 … DIS-025) | 9 |
+| `CC-20261002-BIOMARKER-REJECTIONS-01` | **MINOR** | `dismissal_ledger_current.md` (append DIS-026 … DIS-029) | 9 |
+
+⚠️ **Numbering collision, resolved in this actor's own work rather than left for the integrator.**
+Scientist A's `CC-20261002-DOSE-GAIN-DISMISSAL-01` proposes `DIS-022`–`DIS-025` in the same file and
+in the same wave, and A's `CC-20261002-INTAKE-A-REGISTRY-01` already cites three of those ids in
+`PAPER` records. This candidate's ids were cited by nothing, so it is the cheaper side to move and
+it moved: **`DIS-022`–`DIS-025` → `DIS-026`–`DIS-029`.** Both candidates anchor their insert on
+`DIS-020`'s last line; whichever lands second appends after the other's block, and neither op
+depends on being first.
 
 Neither narrows nor reverses a `consolidated baseline` claim. No canonical scientific current file
 is edited by the second candidate at all.
