@@ -1,0 +1,254 @@
+{
+ "schema_version": 2,
+ "pmid": "28763065",
+ "doi": "10.1038/tp.2017.159",
+ "receipt": "FTR-20261002-28763065-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID28763065.md",
+  "disease-models/wwox/research/intake_wave_20261002_B.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261002-B-NONLINEAGE-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261002-B-INTRON8-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is a research surface another batch owns; the one lead this reading touches (DL-MECH-107) is proposed through a commit candidate instead of an edit."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "Nothing in this paper supplies a therapeutic lever for the reference genotype class; forging hypotheses from a nominal or review-level signal would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "The paper tests no compound, dose or intervention, so there is no molecule for BLOCK-1 triage."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes are proposed as commit candidates for a later BATCH_COMMIT."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; the triples are published in the candidate for an auditor to run."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 304,
+  "publications_on_gene": 1,
+  "research_type": "mixed",
+  "is_primary_group_for_disease": false,
+  "weighting": "PubMed counts 2026-10-02: senior author Gilmore JH[au] 304 records, 1 intersecting WWOX (this paper); first author Xia K[au] AND WWOX 1. An infant neuroimaging and statistical-genetics group (MRI cohort plus GWAS, i.e. mixed descriptive-clinical and computational). Imaging and twin-model statistics are native expertise; the WWOX discussion is a first encounter drawn from cited literature."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND \"white matter\"",
+    "count": 6,
+    "source": "PubMed ESearch 2026-10-02"
+   },
+   {
+    "query": "WWOX AND infant AND MRI",
+    "count": 10,
+    "source": "PubMed ESearch 2026-10-02"
+   },
+   {
+    "query": "WWOX AND (GWAS OR \"genome-wide association\")",
+    "count": 53,
+    "source": "PubMed ESearch 2026-10-02"
+   }
+  ],
+  "note": "WWOX with white matter is sparse (6 records). No independent infant-MRI GWAS replication of rs10514437 was found in this reading; the paper itself reports the SNP absent from both comparison cohorts."
+ },
+ "multihop": {
+  "references_enumerated": 65,
+  "gene_direct_refs_in_source": [
+   "24503545"
+  ],
+  "resolved": [
+   "24503545"
+  ],
+  "queued": [],
+  "note": "All 65 references enumerated. One is WWOX-direct: ref 54, Chiang et al. 2013 (WOX1 in human nervous system tumours), cited for axonal WOX1 expression. It has no registry record (registry_records.py get --pmid 24503545: no match) and is named as reading debt in the analysis note, not queued here because the queue belongs to the integrator."
+ },
+ "corpus_crossquery": {
+  "query": "Does any registry record name this paper or rs10514437? (registry_records.py get --pmid 28763065)",
+  "hits": 1,
+  "note": "One mention: FT-142, which queued this paper as developmental-timing context and states it is not a WWOX paper. This reading finds a WWOX-locus association in the abstract and Table 1, so the FT-142 wording is narrowed in CC-20261002-B-NONLINEAGE-01."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-02 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn, CommentIn or UpdateIn link; publication types Journal Article; Research Support, Non-U.S. Gov't; Research Support, N.I.H., Extramural.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 65,
+   "references_screened": 64,
+   "references_with_doi": 64,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 22,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID28763065_Xia2017_PMC.xml",
+   "sha256": "7366416d94badaa8274158221f381ee55312d9237b1fdf938eb9e56924010624",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5611727/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "7366416d94badaa8274158221f381ee55312d9237b1fdf938eb9e56924010624"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID28763065_Xia2017_supplement/tp2017159x1.docx",
+   "sha256": "e1c75bd56034e34e214d85cd86066bc92db1bb6cd777edf6b95e6ea43a8f3bc1",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "no_recipe": "Member tp2017159x1.docx extracted unchanged by Python zipfile from the Europe PMC REST supplementaryFiles bundle for PMC5611727 (fetched 2026-10-02; the bundle itself was not retained)."
+   }
+  },
+  {
+   "path": "files/fulltext/PMID28763065_Xia2017_supplement/tp2017159f1.jpg",
+   "sha256": "56d8415dd886f72e785c92f9c3e697ba0019ab883508ec3451fb0b284f43235a",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member tp2017159f1.jpg extracted unchanged by Python zipfile from the Europe PMC REST supplementaryFiles bundle for PMC5611727 (fetched 2026-10-02; bundle not retained)."
+   }
+  },
+  {
+   "path": "files/fulltext/PMID28763065_Xia2017_supplement/tp2017159f2.jpg",
+   "sha256": "cfb7822190a07f47751d008f05d9a362f20386e645a3944446dd156e706a5808",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member tp2017159f2.jpg extracted unchanged by Python zipfile from the Europe PMC REST supplementaryFiles bundle for PMC5611727 (fetched 2026-10-02; bundle not retained)."
+   }
+  },
+  {
+   "path": "files/fulltext/PMID28763065_Xia2017_supplement/tp2017159f3.jpg",
+   "sha256": "9732bf138dfbe67dbeb424dc86abe06a24317d6c9b1ea2f3d087e43f0e3dbeb8",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member tp2017159f3.jpg extracted unchanged by Python zipfile from the Europe PMC REST supplementaryFiles bundle for PMC5611727 (fetched 2026-10-02; bundle not retained)."
+   }
+  },
+  {
+   "path": "files/fulltext/PMID28763065_Xia2017_supplement/tp2017159f4.jpg",
+   "sha256": "66da6ffd4578ed1f6918dff5e9f6f1e4d0e55d1bdfee82634574d5865346a7a0",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member tp2017159f4.jpg extracted unchanged by Python zipfile from the Europe PMC REST supplementaryFiles bundle for PMC5611727 (fetched 2026-10-02; bundle not retained)."
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The WWOX intronic SNP did not reach the study’s own genome-wide threshold for white matter volume.",
+    "snippet": "An intronic SNP in WWOX (rs10514437) fell just short of genome-wide significance for WM",
+    "anchor": "Results, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28763065_Xia2017_PMC.xml",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "The study threshold is a Bonferroni division of the conventional threshold by four phenotypes.",
+    "snippet": "were considered genome-wide significant (Bonferroni correction for four MRI phenotypes",
+    "anchor": "Methods, Statistical methods",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28763065_Xia2017_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "rs10514437 is directly genotyped, not imputed.",
+    "snippet": "Note that all SNPs are imputed with the exception of rs10514437",
+    "anchor": "Table 1 footnote",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID28763065_Xia2017_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A1 in Table 1 is the effect allele; the per-allele difference is effect size over mean volume.",
+    "snippet": "A1 is the effective allele and A2 is the reference allele. Diff./allele is the ratio of effect size over mean brain volume.",
+    "anchor": "Table 1 footnote",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID28763065_Xia2017_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The adolescent and adult cohorts are not a replication sample, by the authors’ statement.",
+    "snippet": "These comparisons do not represent a conventional replication sample.",
+    "anchor": "Discussion, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28763065_Xia2017_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors call for independent replication.",
+    "snippet": "consequently independent replication is critical",
+    "anchor": "Discussion, conclusion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28763065_Xia2017_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The link to white matter is an interpretation resting on cited adult WOX1 expression, not on a measurement in this study.",
+    "snippet": "are high in neuronal axons and nerve bundles such as corpus callosum and striatal fascicles",
+    "anchor": "Discussion, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28763065_Xia2017_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Table 10 reports no PNC and no ENIGMA2 value for rs10514437 (NA): it was not tested in either comparison cohort.",
+    "snippet": "rs10514437 WWOX -6617 1.56E-08 NA NA NA",
+    "anchor": "Supplementary Information, Supplementary Table 10",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID28763065_Xia2017_supplement/tp2017159x1.docx",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Table 8: the effect allele G has frequency about 0.97 in the current sample; the minor allele is A.",
+    "snippet": "rs10514437 G A 0.03 0.97 0.98 0.83 1.00 0.98 0.95",
+    "anchor": "Supplementary Information, Supplementary Table 8",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID28763065_Xia2017_supplement/tp2017159x1.docx",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC5611727/fullTextXML returned HTTP 200 with a full JATS body on 2026-10-02; the artefact declared above is that response, so every body and table quote can be re-verified externally."
+ }
+}
