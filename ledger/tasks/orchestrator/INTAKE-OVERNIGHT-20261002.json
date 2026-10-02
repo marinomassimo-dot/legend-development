@@ -1,0 +1,37 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+  "_note": "Operator directive of 2026-10-02: keep the literature going for about ten hours while the operator is away; when a batch finishes, propose and dispatch the next one; keep the Scientists busy. Standing authorisations (procedi sempre; improve anything) and the section 21d reserved list still bind.",
+  "TASK_ID": "INTAKE-OVERNIGHT-20261002",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "OWNER": "orchestrator",
+  "ACTOR_ID": "orchestrator",
+  "PRIORITY": "HIGH",
+  "OBJECTIVE": "Run successive intake waves of three Scientists each: select studies from the queue by abstract plus a real full-text body check, dispatch, integrate receipts in a worktree, BATCH_COMMIT, Mirror review, battery, push to development.",
+  "AUTHORISED_QUEUE_20261002": {
+    "MANDATE_STATE": "OPEN",
+    "OBJ_WAVE1": {
+      "order": 1,
+      "steps": [
+        {"step": "Scientists A and B returned; receipts recorded and branches landed on main", "status": "DONE", "evidence": "main e5a680a (task integ-intake-20261002); ledger 278 OK"},
+        {"step": "Scientist C returns; record its receipts and land its branch", "status": "IN_PROGRESS"},
+        {"step": "BATCH_COMMIT of the A, B and C candidates through a Scientist; Mirror ex-post review", "status": "TODO"},
+        {"step": "Fresh-clone battery on the exact SHA, gate, LINT, receipts verify, safe_push to development", "status": "TODO"}
+      ]
+    },
+    "OBJ_WAVE2": {
+      "order": 2,
+      "steps": [
+        {"step": "Select the next 15 to 18 studies (queue, Europe PMC body check, dedup against registries and analysis triage), write the selection record under research/", "status": "TODO"},
+        {"step": "Dispatch three Scientists on it (brief updated with the lessons of wave 1: bare source_locator, receipts recorded in an integration worktree, no landing before receipts)", "status": "TODO"},
+        {"step": "Integrate returns, BATCH_COMMIT, Mirror review, battery, push", "status": "TODO"}
+      ]
+    },
+    "OBJ_WAVE3": {
+      "order": 3,
+      "steps": [
+        {"step": "Select, dispatch, integrate, batch, review, push the third wave", "status": "TODO"}
+      ]
+    }
+  }
+}
