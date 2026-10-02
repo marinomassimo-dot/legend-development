@@ -1486,7 +1486,7 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Registry role:** corpus placeholder only
 **Claim links:** none
 **Next action:** screening / triage required
-**Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record.
+**Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record. **Promoted 2026-10-02 to [[paper_registry_current#PAPER 130]] by `CC-20261002-INTAKE-WAVE-ORPHANS-01` (first-hand `partial_fulltext_read`, receipt `FTR-20261002-37897534-01`); this placeholder is kept as history and its `Status: not_processed` describes the placeholder, not the paper.**
 
 ## CORPUS-STUB-078
 **Corpus paper no:** 78
@@ -1546,7 +1546,7 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Registry role:** corpus placeholder only
 **Claim links:** none
 **Next action:** screening / triage required
-**Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record.
+**Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record. **Promoted 2026-10-02 to [[paper_registry_current#PAPER 129]] by `CC-20261002-INTAKE-WAVE-ORPHANS-01` (first-hand `partial_fulltext_read`, receipt `FTR-20261002-33195192-01`); this placeholder is kept as history and its `Status: not_processed` describes the placeholder, not the paper.**
 
 ## CORPUS-STUB-084
 **Corpus paper no:** 84
@@ -3202,7 +3202,7 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **clinical relevance:** MODERATE-HIGH
 **Claim links:** none — triage only
 **Role:** secondary full-text target
-**Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration.
+**Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration. **Promoted 2026-10-02 to [[paper_registry_current#PAPER 119]] by `CC-20261002-INTAKE-A-REGISTRY-01` (first-hand full-text read `FTR-20261002-30746283-01`); this placeholder is kept as history.**
 
 ## CORPUS P254
 **Short title:** New syngeneic inflammatory-related lung cancer metastatic model harboring dou...
@@ -3397,16 +3397,16 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Journal/source:** Oncotarget
 **Identifier:** PMID 25537520 / PMC4322972 / DOI 10.18632/oncotarget.2961
 **Tier (FASE 1):** B
-**Status:** screened — corpus placeholder
+**Status:** read — partial full text (FTR-20261002-25537520-01; figures captions only) — no claim promoted
 **LIT link:** LIT-0263
-**Primary pathway:** P6 — DDR / genome stability
-**Model/species:** rat
+**Primary pathway:** review — neuronal injury, tau/GSK-3β, TGF-β/TIAF1, neurodevelopment (triage value "P6 — DDR / genome stability" corrected 2026-10-02 by CC-20261002-B-NONLINEAGE-01)
+**Model/species:** review — secondary source, no primary data (triage value "rat" corrected 2026-10-02 by CC-20261002-B-NONLINEAGE-01)
 **Genotype/model:** unassigned in triage
 **Transferability:** unassigned in triage
 **clinical relevance:** MODERATE
 **Claim links:** none — triage only
 **Role:** secondary full-text target
-**Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration.
+**Note:** FASE 1 triage 221–400. Read 2026-10-02 (dossier fulltext_dossiers/PMID25537520.md): a provenance map, not evidence. Its epilepsy and developmental sentences rest on PMID 24369382, PMID 24456803 and PMID 19500159, each held from the primary; its tau-inhibitor, TIAF1 (cited as "unpublished") and in-vivo transcription-factor statements are the authors' own laboratory, and its Conclusion asserts in-vivo transcription-factor control that its own body says "remains to be established". Do not cite its sentences as independent support. Entry reserved for future promotion to PAPER 0NN on deep-dive integration.
 
 ## CORPUS P265
 **Short title:** MiR-214 Mediates Cell Proliferation and Apoptosis of Nasopharyngeal Carcinoma...
@@ -7795,3 +7795,255 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Note:** ⚠️ **Not the same paper as `LIT-0019`** (PMID 41007296, *Biology* 2025, same group, overall survival): checked by PMID, DOI, PMCID and title. 🔴 The authors' own hedge travels with the record: the subtype directions are *"tended to show"*, and the breast bootstrap leaves optimism-corrected C-indices *"centred close to 0 with a wide interval (approximately −0.50 to 0.46)"*.
 
 ---
+
+## PAPER 119
+**Short title:** Ehaideb 2018 Transl Neurosci — two families, homozygous splice-donor and homozygous nonsense WWOX alleles, with a review table
+**Full title:** Novel Homozygous Mutation in the WWOX Gene Causes Seizures and Global Developmental Delay: Report and Review
+**Authors:** Ehaideb SN et al.
+**Year:** 2018
+**Source type:** primary research — case report (two families) with literature review
+**Journal/source:** *Transl Neurosci* 2018;9:203
+**Identifier:** PMID 30746283 / PMCID PMC6368664 / DOI 10.1515/tnsci-2018-0029
+**Status:** processed
+**Record provenance:** created by `CC-20261002-INTAKE-A-REGISTRY-01` (intake wave 2026-10-02, Scientist A). Provisional number: if `PAPER 119` is taken when this batch runs, the integrator renumbers and updates the `LIT link`.
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261002-30746283-01`; manifest `deepdive_manifests/PMID30746283.json`; dossier `research/fulltext_dossiers/PMID30746283.md`
+**Primary pathway:** clinical spectrum / WWOX-DEE
+**Model/species:** human
+**Genotype/model:** homozygous canonical splice donor `c.409+1G>T` (one child; carrier parents and sib); homozygous `p.Arg54*` (two sibs, no parental testing)
+**Transferability:** T1 (human WWOX-DEE; null-class alleles, not the reference genotype class)
+**clinical relevance:** MODERATE — adds two families and a carrier observation; no measurement
+**Claim links:** 032 (carrier observation in the qualification paragraph of `CC-20261002-HETEROZYGOTE-CARRIERS-01`; not a supporting source)
+**Role:** Splice-donor allele with no RNA test, and three heterozygous carriers described only as *«healthy»*. 🔴 Its review Table 1 transcribes the Q230P report as `p.Gly230Pro` / `c.689A<C`, and its Discussion says *«All of these mutations are homozygous»* beside a compound heterozygote in the same table — do not use this table as a source for any allele.
+**LIT link:** [[literature_tracking_log_current#LIT-0253]]
+**Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.
+
+## PAPER 120
+**Short title:** Bayanova 2023 Mol Neurobiol — WGS in 20 children with early-onset epilepsy; one WWOX compound heterozygote (missense + splice donor)
+**Full title:** Whole-Genome Sequencing Among Kazakhstani Children with Early-Onset Epilepsy Revealed New Gene Variants and Phenotypic Variability
+**Authors:** Bayanova M et al.
+**Year:** 2023
+**Source type:** primary research — diagnostic WGS case series (n = 20)
+**Journal/source:** *Mol Neurobiol* 2023;60(8)
+**Identifier:** PMID 37095367 / PMCID PMC10293429 / DOI 10.1007/s12035-023-03346-3
+**Status:** processed
+**Record provenance:** created by `CC-20261002-INTAKE-A-REGISTRY-01` (intake wave 2026-10-02, Scientist A). Provisional number: if `PAPER 120` is taken when this batch runs, the integrator renumbers and updates the `LIT link`.
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261002-37095367-01`; manifest `deepdive_manifests/PMID37095367.json`; dossier `research/fulltext_dossiers/PMID37095367.md`
+**Primary pathway:** clinical spectrum / WWOX-DEE
+**Model/species:** human
+**Genotype/model:** `c.911C>A p.(Ser304Tyr)` + `c.230+1G>T`, labelled compound heterozygous; phase not shown
+**Transferability:** T2 (one case; segregation and function absent)
+**clinical relevance:** LOW-MODERATE — one new case, alleles named, no segregation
+**Claim links:** none
+**Role:** One case with two novel alleles called by ACMG on a commercial platform. 🔴 It is a Journal Article, not a corrigendum: its linked erratum corrects an author surname. The WWOX pedigree's proband arrow marks a sib drawn unaffected.
+**LIT link:** [[literature_tracking_log_current#LIT-0421]]
+**Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.
+
+## PAPER 121
+**Short title:** Rim 2018 BMC Med Genomics — 172-gene panel in 74 intractable early-onset epilepsies; one WWOX compound heterozygote (last-exon nonsense + exon 6–8 duplication)
+**Full title:** Efficient strategy for the molecular diagnosis of intractable early-onset epilepsy using targeted gene sequencing
+**Authors:** Rim JH et al.
+**Year:** 2018
+**Source type:** primary research — diagnostic panel series (n = 74)
+**Journal/source:** *BMC Med Genomics* 2018;11:6
+**Identifier:** PMID 29390993 / PMCID PMC5796507 / DOI 10.1186/s12920-018-0320-7
+**Status:** processed
+**Record provenance:** created by `CC-20261002-INTAKE-A-REGISTRY-01` (intake wave 2026-10-02, Scientist A). Provisional number: if `PAPER 121` is taken when this batch runs, the integrator renumbers and updates the `LIT link`.
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261002-29390993-01`; manifest `deepdive_manifests/PMID29390993.json`; dossier `research/fulltext_dossiers/PMID29390993.md`
+**Primary pathway:** clinical spectrum / WWOX-DEE · allele classes
+**Model/species:** human
+**Genotype/model:** `c.1060C>T p.(Gln354Ter)` (last coding exon) + intragenic exon 6–8 duplication, phase by parental testing; infantile-spasm group
+**Transferability:** T1 (human; neither allele is the reference genotype's)
+**clinical relevance:** MODERATE — the only intragenic WWOX duplication in LEGEND, with carrier parents asymptomatic by inclusion criterion
+**Claim links:** 032 (carrier observation; not a supporting source)
+**Role:** An intragenic duplication called without PVS1; a direct tandem copy of exons 6–8 would be in frame (540 nt, reader's arithmetic), so its class is uncertain. The nonsense allele lies in the last exon (NMD escape expected; not addressed by the source). 🔴 Not a dose-gain datum.
+**LIT link:** [[literature_tracking_log_current#LIT-0422]]
+**Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.
+
+## PAPER 122
+**Short title:** Szymańska 2014 Biomed Res Int — seven neurodevelopmental/neurometabolic cases; a 16q23.1 duplication called 'WWOX and MAF'
+**Full title:** The Analysis of Genetic Aberrations in Children with Inherited Neurometabolic and Neurodevelopmental Disorders
+**Authors:** Szymańska K et al.
+**Year:** 2014
+**Source type:** primary research — clinical case series (n = 7)
+**Journal/source:** *Biomed Res Int* 2014:424796
+**Identifier:** PMID 24949445 / PMCID PMC4052700 / DOI 10.1155/2014/424796
+**Status:** processed
+**Record provenance:** created by `CC-20261002-INTAKE-A-REGISTRY-01` (intake wave 2026-10-02, Scientist A). Provisional number: if `PAPER 122` is taken when this batch runs, the integrator renumbers and updates the `LIT link`.
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261002-24949445-01`; manifest `deepdive_manifests/PMID24949445.json`; dossier `research/fulltext_dossiers/PMID24949445.md`
+**Primary pathway:** gene dose (rejected reading)
+**Model/species:** human
+**Genotype/model:** array-CGH duplication, NCBI36 chr16:77,445,915–78,190,209, inheritance unknown
+**Transferability:** T3 for WWOX (the CNV holds only WWOX exon 9)
+**clinical relevance:** BACKGROUND — recorded so the dose-gain reading is not made again
+**Claim links:** none — the rejection is `DIS-022` (`CC-20261002-DOSE-GAIN-DISMISSAL-01`)
+**Role:** 🔴 The authors' *«affects two dose-sensitive genes: WWOX … and MAF»* is not supported by their own coordinates: mapped to GRCh37 (Ensembl, reader's computation) the interval holds only WWOX's last exon and the 3′ part of intron 8. Not a WWOX dose-gain datum.
+**LIT link:** [[literature_tracking_log_current#LIT-0423]]
+**Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.
+
+## PAPER 123
+**Short title:** Robertson 2025 NAR Genom Bioinform — FoundHaplo; WWOX p.Glu17Lys is a founder allele carried by 172 UK Biobank participants
+**Full title:** Identifying individuals with rare disease variants by inferring shared ancestral haplotypes from SNP array data
+**Authors:** Robertson E et al.
+**Year:** 2025
+**Source type:** primary research — statistical-genetics method with application
+**Journal/source:** *NAR Genom Bioinform* 2025;7(2):lqaf033
+**Identifier:** PMID 40191585 / PMCID PMC11970371 / DOI 10.1093/nargab/lqaf033
+**Status:** processed
+**Record provenance:** created by `CC-20261002-INTAKE-A-REGISTRY-01` (intake wave 2026-10-02, Scientist A). Provisional number: if `PAPER 123` is taken when this batch runs, the integrator renumbers and updates the `LIT link`.
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261002-40191585-01`; manifest `deepdive_manifests/PMID40191585.json`; dossier `research/fulltext_dossiers/PMID40191585.md`
+**Primary pathway:** population genetics of WWOX alleles
+**Model/species:** human
+**Genotype/model:** missense `c.49G>A p.(Glu17Lys)`; 172 UKBB carriers by WES (zygosity per carrier unstated, no phenotype); 0 of 1,573 in an epilepsy cohort; 157 kb core haplotype shared by all 175 carriers
+**Transferability:** T2 for allele frequency; none for phenotype (no carrier phenotype reported)
+**clinical relevance:** MODERATE — fixes the gene of `p.E17K` and makes its recurrence a founder effect; licenses nothing about carriers
+**Claim links:** 032 (missense-carrier observation, under `DO_NOT_INFER`; not a supporting source)
+**Role:** Answers by reading that `p.E17K` is WWOX `c.49G>A` (and `p.Cys121Trp` is SCN1B). Its disease haplotypes come from three duos at the clinical centre of PAPER 018; two are likely PAPER 018's two `p.Glu17Lys` patients (INFERENZA) — counted once. 🔴 Its supplementary founder-origin citation (reference 21, PAPER 025) is not supported by that paper's text layer (`DIS-025`).
+**LIT link:** [[literature_tracking_log_current#LIT-0424]]
+**Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.
+
+## PAPER 124
+**Short title:** Bacchelli 2020 Sci Rep — PsychArray CNVs in 128 ASD families; one intronic-for-canonical WWOX deletion in a case, one exon 6–8 deletion in a control
+**Full title:** An integrated analysis of rare CNV and exome variation in Autism Spectrum Disorder using the Infinium PsychArray
+**Authors:** Bacchelli E et al.
+**Year:** 2020
+**Source type:** primary research — family-based case-control CNV study
+**Journal/source:** *Sci Rep* 2020;10:3198
+**Identifier:** PMID 32081867 / PMCID PMC7035424 / DOI 10.1038/s41598-020-59922-3
+**Status:** processed
+**Record provenance:** created by `CC-20261002-INTAKE-A-REGISTRY-01` (intake wave 2026-10-02, Scientist A). Provisional number: if `PAPER 124` is taken when this batch runs, the integrator renumbers and updates the `LIT link`.
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261002-32081867-01`; manifest `deepdive_manifests/PMID32081867.json`; dossier `research/fulltext_dossiers/PMID32081867.md`
+**Primary pathway:** gene dose / heterozygous carriers
+**Model/species:** human
+**Genotype/model:** case: heterozygous loss inside canonical intron 5 (shorter isoforms' last exon); control: heterozygous loss spanning canonical exons 6–7 and most of 8 (reader's mapping, unvalidated)
+**Transferability:** T2 (human array data; no WWOX expression test)
+**clinical relevance:** LOW-MODERATE — the one exon-level null-class heterozygote of the wave sits in a control without psychiatric history, neurologically unassessed
+**Claim links:** 032 (carrier observation; not a supporting source)
+**Role:** 🔴 The paper's *«significant role of … WWOX … in ASD susceptibility»* rests on one case whose deletion does not remove a canonical WWOX exon (`DIS-023`) plus a citation, with no WWOX-specific statistic. Table S5 prints the cytoband as `16p23.1` for a 16q23.1 interval.
+**LIT link:** [[literature_tracking_log_current#LIT-0425]]
+**Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.
+
+## PAPER 125
+**Short title:** Yang 2023 Zoological Research — marmoset colony WGS; a 17-SNP intronic WWOX haplotype suggestively associated with handling-evoked seizures
+**Full title:** Population genetics of marmosets in Asian primate research centers and loci associated with epileptic risk revealed by whole-genome sequencing
+**Authors:** Yang X et al.
+**Year:** 2023
+**Source type:** primary research — population-genetics WGS with pedigree association
+**Journal/source:** *Zoological Research* 2023;44(5):837-847
+**Identifier:** PMID 37501399 / PMCID PMC10559097 / DOI 10.24272/j.issn.2095-8137.2022.514
+**Status:** processed
+**Record provenance:** created by `CC-20261002-INTAKE-WAVE-ORPHANS-01` (intake wave 2026-10-02, batch integrator) to land a reading that `CC-20261002-B-NONLINEAGE-01` § 3 deliberately left without a registry record.
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261002-37501399-01`; manifest `deepdive_manifests/PMID37501399.json`; dossier `research/fulltext_dossiers/PMID37501399.md`
+**Primary pathway:** non-lineage association signals / intron 8
+**Model/species:** common marmoset (*Callithrix jacchus*), 38 animals in two captive colonies
+**Genotype/model:** no WWOX copy-number event; 17 intronic SNPs on one haplotype in the last intron of the marmoset WWOX model transcript
+**Transferability:** T3 (non-coding primate association; no WWOX function measured)
+**clinical relevance:** BACKGROUND — an earned near-null, recorded so it is not later counted as primate evidence that WWOX variation causes epilepsy
+**Claim links:** none — `CLAIM 037` is explicitly untouched (`research/intake_wave_20261002_B.md` § 2)
+**Role:** 🔴 The abstract's deletion sentence is about a **KCTD18-like** CNV, not WWOX: the CNV tables hold no WWOX event. The WWOX signal is SNP-only, suggestive (LAMP P 2.4e-6 to 9.2e-6 against a 1e-5 threshold), with λ 0.825, carriers among unaffected animals in one colony, and no genome-wide signal by the authors' own statement. Annotated into `DL-MECH-107` by `CC-20261002-B-INTRON8-01` as **not** convergence.
+**LIT link:** [[literature_tracking_log_current#LIT-0426]]
+**Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.
+
+## PAPER 126
+**Short title:** Chou 2019 Cell Commun Signal — p53/TIAF1/WWOX triad; the brain-aggregation statement rests on one xenograft arm
+**Full title:** A p53/TIAF1/WWOX triad exerts cancer suppression but may cause brain protein aggregation due to p53/WWOX functional antagonism
+**Authors:** Chou PY, Lin SR, Lee MH et al.
+**Year:** 2019
+**Source type:** primary research — cell and xenograft study
+**Journal/source:** *Cell Commun Signal* 2019;17:76
+**Identifier:** PMID 31315632 / PMCID PMC6637503 / DOI 10.1186/s12964-019-0382-y
+**Status:** processed
+**Record provenance:** created by `CC-20261002-INTAKE-WAVE-ORPHANS-01` (intake wave 2026-10-02, batch integrator) to land a reading that `CC-20261002-B-NONLINEAGE-01` § 3 deliberately left without a registry record.
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261002-31315632-01`; manifest `deepdive_manifests/PMID31315632.json`; dossier `research/fulltext_dossiers/PMID31315632.md`
+**Primary pathway:** aggregation / TIAF1 lineage
+**Model/species:** cell lines plus nude-mouse xenograft (Wwox-intact)
+**Genotype/model:** no WWOX-DEE genotype; overexpression and knockdown in tumour lines
+**Transferability:** T3 (tumour-bearing mice with intact Wwox; no neural WWOX-loss arm)
+**clinical relevance:** BACKGROUND — an earned null for the brain
+**Claim links:** none — `CLAIM 003`, `CLAIM 006`, `CLAIM 030`, `CLAIM 037` are all untouched by this reading
+**Role:** 🔴 Single-laboratory lineage, not independent support: 26 of 56 references, and all six behind the brain-aggregation background sentence, are the same laboratory, and `WWOX AND TIAF1 NOT Chang NS[au]` returns 0 on PubMed. The brain statement rests on **one** xenograft experiment, one lane per condition, with non-reducing blots in which the α-tubulin housekeeping control also aggregates; the authors state the mechanism is unknown, and the SDR-vs-WW binding account contradicts itself inside the paper. It down-weights nothing and adds no independent replication to `DL-BIO-004`.
+**LIT link:** [[literature_tracking_log_current#LIT-0427]]
+**Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.
+
+## PAPER 127
+**Short title:** Kałuzińska 2021 Cancers — PLEK2/RRM2/GCSH, a 'WWOX-dependent' glioma triad defined by a correlation, not a perturbation
+**Full title:** PLEK2, RRM2, GCSH: A Novel WWOX-Dependent Biomarker Triad of Glioblastoma at the Crossroads of Cytoskeleton Reorganization and Metabolism Alterations
+**Authors:** Kałuzińska Ż et al.
+**Year:** 2021
+**Source type:** primary research — bioinformatic analysis of public bulk tumour expression data
+**Journal/source:** *Cancers* 2021;13(12):2955
+**Identifier:** PMID 34204789 / PMCID PMC8231639 / DOI 10.3390/cancers13122955
+**Status:** processed
+**Record provenance:** created by `CC-20261002-INTAKE-WAVE-ORPHANS-01` (intake wave 2026-10-02, batch integrator); the reading's own candidate, `CC-20261002-BIOMARKER-REJECTIONS-01`, records the rejection and creates no registry record.
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261002-34204789-01`; manifest `deepdive_manifests/PMID34204789.json`; dossier `research/fulltext_dossiers/PMID34204789.md`. Figure panels and supplement are **not** read and are owed.
+**Primary pathway:** biomarkers (rejected)
+**Model/species:** human bulk tumour RNA-seq (672 samples, public data)
+**Genotype/model:** none — WWOX is a stratifying variable, never a manipulated one
+**Transferability:** T3 (glioma classification; no neural WWOX-loss system)
+**clinical relevance:** BACKGROUND — recorded so the title is not transferred to this model
+**Claim links:** none — the rejection is `DIS-026` (`CC-20261002-BIOMARKER-REJECTIONS-01`)
+**Role:** 🔴 *«WWOX-dependent»* here means a cut-point on WWOX transcript abundance (222.6) plus a Spearman correlation (|R| 0.42–0.44). **There is no knockdown, no overexpression, no rescue and no protein measurement in the study**, so none of the three genes is a readout of a WWOX state. The authors do not overclaim: *«usefulness of PLEK2 , RRM2 , and GCSH as diagnostic or predictive biomarkers is yet to be confirmed»*. Same department as `PAPER 128`'s companion reading PMID 37781246 (Bednarek, Łódź) — the two are not independent.
+**LIT link:** [[literature_tracking_log_current#LIT-0428]]
+**Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.
+
+## PAPER 128
+**Short title:** Zhang & Freudenreich 2007 Mol Cell — the FRA16D Flex1 AT-repeat stalls replication forks and breaks chromosomes in yeast
+**Full title:** An AT-rich sequence in human common fragile site FRA16D causes fork stalling and chromosome breakage in *S. cerevisiae*
+**Authors:** Zhang H, Freudenreich CH
+**Year:** 2007
+**Source type:** primary research — yeast genetics / replication
+**Journal/source:** *Mol Cell* 2007;27(3):367-379
+**Identifier:** PMID 17679088 / PMCID PMC2144737 / DOI 10.1016/j.molcel.2007.06.012
+**Status:** processed
+**Record provenance:** created by `CC-20261002-INTAKE-WAVE-ORPHANS-01` (intake wave 2026-10-02, batch integrator); `CC-20261002-BIOMARKER-REJECTIONS-01` § 4 states deliberately that this paper is **not** entered in the biomarker ledger in either direction.
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261002-17679088-01`; manifest `deepdive_manifests/PMID17679088.json`; dossier `research/fulltext_dossiers/PMID17679088.md`. Figure panels and supplement are **not** read and are owed.
+**Primary pathway:** locus fragility / FRA16D architecture
+**Model/species:** *Saccharomyces cerevisiae* (often `rad52Δ`/`rad50Δ`, with hydroxyurea)
+**Genotype/model:** none — a human DNA sequence element assayed in yeast; no WWOX protein, transcript or function is measured
+**Transferability:** T3 — **OFF-AXIS for the assigned hypothesis.** Every measurement is somatic and mitotic, and the authors' own prediction terminates in *«cancer-causing rearrangements»*; it supports no statement about germline exon-scale deletions or about why one allele class is deleted. *«WWOX»* occurs 9 times in 189,143 bytes.
+**clinical relevance:** BACKGROUND — a mechanistic precedent, not evidence about WWOX
+**Claim links:** none
+**Role:** What transfers is one mechanistic precedent: FRA16D carries a characterised replication-barrier element (Flex1; Flex4 and Flex5-p do **not** increase fragility), which is a real reason this locus is rearrangement-prone. 🔴 The paper never states which WWOX intron or exon Flex1 lies in — the fact the hypothesis would turn on is absent from the body. Carried as `LEAD-C1` (Flex1 AT-repeat length as a candidate rearrangement-risk covariate, `IPOTESI`, blocked on acquiring Finnis 2005) in `research/intake_wave_20261002_C.md` § 4, and as neither a biomarker nor a rejected biomarker.
+**LIT link:** [[literature_tracking_log_current#LIT-0429]]
+**Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.
+
+## PAPER 129
+**Short title:** Chou 2020 Front Cell Dev Biol — `Wwox−/−` mouse skin; pERK and total ERK1/2 reduced in keratinocytes
+**Full title:** Wwox Deficiency Causes Downregulation of Prosurvival ERK Signaling and Abnormal Homeostatic Responses in Mouse Skin
+**Authors:** Chou PY et al.
+**Year:** 2020
+**Source type:** primary research — constitutive knockout mouse tissue study
+**Journal/source:** *Front Cell Dev Biol* 2020;8:558432
+**Identifier:** PMID 33195192 / PMCID PMC7652735 / DOI 10.3389/fcell.2020.558432
+**Status:** processed
+**Record provenance:** created by `CC-20261002-INTAKE-WAVE-ORPHANS-01` (intake wave 2026-10-02, batch integrator), promoting the corpus placeholder `CORPUS-STUB-083`, which is kept as history.
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261002-33195192-01`; manifest `deepdive_manifests/PMID33195192.json`; dossier `research/fulltext_dossiers/PMID33195192.md`. Figure panels and the supplement — including Supplementary Figure S9, which carries the total-ERK half of the result — are **not** read and are owed.
+**Primary pathway:** ERK signalling / tissue homeostasis
+**Model/species:** mouse (constitutive `Wwox−/−` and littermates), HaCaT cells
+**Genotype/model:** constitutive null; **no** overexpression arm (loss of function only)
+**Transferability:** T2 for the perturbation, T3 for the tissue — keratinocytes, hair follicles, dermis and fat; **no neural tissue anywhere in the paper**
+**clinical relevance:** MODERATE — the one WWOX-dependence in this wave shown by a real perturbation, in a tissue a living patient can be biopsied from
+**Claim links:** none — `CLAIM 011` is annotated by `CC-20261002-WWOX-DOSE-CEILING-01`, which cites this paper for a two-sided statement about level, not as support
+**Role:** Supplies two things and no more. (a) The pERK observation (*«keratinocytes expressed significantly reduced levels of pERK and total ERK1/2 protein»*, IHC over 25 regions from 3 mice), **rejected as a disease biomarker on specificity and retained by name only as a possible pharmacodynamic readout inside a controlled system** — `DIS-027`. (b) The explicit statement *«A certain amount of WWOX expression may be necessary for maintaining normal physiological functions in cells»*, with raised WWOX increasing proliferation in HT29 **cited from Nowakowska 2014, which is unread**. 🔴 Same Tainan laboratory and same knockout line as `PAPER 130`: the two are one group, not two.
+**LIT link:** [[literature_tracking_log_current#LIT-0106]]
+**Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.
+
+## PAPER 130
+**Short title:** Cheng 2023 Cell Mol Life Sci — `Wwox` loss, senescence escape and genome instability in MEFs and fibroblasts
+**Full title:** Loss of the fragile WWOX gene leads to senescence escape and genome instability
+**Authors:** Cheng YY et al.
+**Year:** 2023
+**Source type:** primary research — knockout and knockdown cell study
+**Journal/source:** *Cell Mol Life Sci* 2023;80(11):338
+**Identifier:** PMID 37897534 / PMCID PMC10613160 / DOI 10.1007/s00018-023-04950-1
+**Status:** processed
+**Record provenance:** created by `CC-20261002-INTAKE-WAVE-ORPHANS-01` (intake wave 2026-10-02, batch integrator), promoting the corpus placeholder `CORPUS-STUB-077`, which is kept as history.
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261002-37897534-01`; manifest `deepdive_manifests/PMID37897534.json`; dossier `research/fulltext_dossiers/PMID37897534.md`. Figure panels and the supplement are **not** read and are owed.
+**Primary pathway:** senescence / genome instability / redox
+**Model/species:** mouse embryonic fibroblasts, HEK293T, human dermal fibroblasts — **no neural and no in vivo arm**
+**Genotype/model:** `Wwox−/−` knockout plus knockdown; ⚠️ the comparator in most figures is `Wwox+/−`, **not** wild type
+**Transferability:** T2 for the perturbation, T3 for the phenotype (culture passages 20–30)
+**clinical relevance:** MODERATE — carries one therapeutic-direction lead and four rejected biomarker candidates
+**Claim links:** none — adjacent to `CLAIM 009` (redox, *in observation*) and `CLAIM 034` and resolving neither
+**Role:** Source of `DIS-028` (γ-H2AX rejected as a WWOX readout because it rises both when WWOX is **lost**, here, and when WWOX is **added**, PMID 42395553 — the two papers do not cite each other, and the observation belongs to reading them together) and of `DIS-029` (SA-β-gal, p16/p21/p27 and microsatellite instability rejected as generic and unsamplable). The **NAC rescue** — *«during the passage culture prevented microsatellite instability and resulted in senescence induction in the late-passage Wwox −/− MEFs»* — is carried as `LEAD-C2` (`IPOTESI`) in `research/intake_wave_20261002_C.md` § 4 and is **deliberately not promoted**: it is a fibroblast-culture result with no neural and no in vivo arm. 🔴 Same laboratory and knockout line as `PAPER 129`.
+**LIT link:** [[literature_tracking_log_current#LIT-0100]]
+**Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.
