@@ -58,9 +58,19 @@ Neither paper cites the other. A readout that moves the same way under opposite 
 cannot report the direction of the quantity it is supposed to measure — which disqualifies it
 independently of any tier argument.
 
-## 3 · Op — `dismissal_ledger_current.md`, APPEND to the end of the file
+## 3 · Op — `dismissal_ledger_current.md`, APPEND after the last existing entry
 
-`old` (verbatim, the current final line of the file, measured unique):
+⚠️ **Numbering, declared.** These were `DIS-022`–`DIS-025` when first written and were renumbered to
+`DIS-026`–`DIS-029` on 2026-10-02, because Scientist A's `CC-20261002-DOSE-GAIN-DISMISSAL-01`
+claimed `DIS-022`–`DIS-025` in the same file in the same wave **and** A's
+`CC-20261002-INTAKE-A-REGISTRY-01` already cites three of those ids in `PAPER` records. This
+candidate's ids were cited by nothing, so this is the cheaper side to move, and it moved rather than
+leaving the collision for the integrator.
+
+`old` (verbatim, `DIS-020`'s last line — the final line of the file on `main` at the time of
+writing, measured unique). ⚠️ If a peer's entries land first, this anchor is no longer the final
+line; the insert still goes **after the last entry in the file**, and nothing in this op depends on
+being first:
 ```text
 - **`REVIVAL_TRIGGER`:** confronto longitudinale o a età multiple, con unità animale e conteggi microgliali comparabili.
 ```
@@ -69,25 +79,25 @@ independently of any tier argument.
 ```text
 - **`REVIVAL_TRIGGER`:** confronto longitudinale o a età multiple, con unità animale e conteggi microgliali comparabili.
 
-### DIS-022 — «PLEK2, RRM2 and GCSH are a WWOX-dependent biomarker triad» → ❌ **REJECTED — the dependence was never tested**
+### DIS-026 — «PLEK2, RRM2 and GCSH are a WWOX-dependent biomarker triad» → ❌ **REJECTED — the dependence was never tested**
 - **PREMISE: DATO** (2026-10-02, `CC-20261002-BIOMARKER-REJECTIONS-01`, from a complete read of PMID 34204789, receipt `FTR-20261002-34204789-01`). "WWOX-dependent" in that title means two things and neither is a perturbation: patients were split on a **WWOX expression cut-point** in bulk tumour RNA-seq (*«Optimal WWOX expression cut-point was determined to separate high- and low-expressing groups of patients. The obtained cut-off value, 222.6, had significantly separated groups»*), and the three genes were then ranked by **Spearman correlation with WWOX transcript abundance** (|R| = 0.42–0.44). **There is no knockdown, no overexpression, no rescue and no protein measurement anywhere in the study.**
 - **§13:** fails at the first clause — a second transcript co-varying with WWOX transcript across bulk tumours measures neither WWOX protein, nor WWOX activity, nor anything perturbed by changing WWOX. Not Tier 1, not Tier 2 (the causal linkage is the untested part), not Tier 3 (it is not a clinical endpoint either). Every reported AUC discriminates a **tumour class**, never a WWOX state. Sampling requires tumour tissue.
 - **Confine:** the work is not weak inside its own frame — glioma classification — and the authors do not overclaim: *«usefulness of PLEK2 , RRM2 , and GCSH as diagnostic or predictive biomarkers is yet to be confirmed»*. What is rejected is the transfer of a title to this model.
 - **`REVIVAL_TRIGGER`:** any experiment in which WWOX is actually perturbed in a neural system and one of these three is measured as a response.
 
-### DIS-023 — «pERK is a candidate WWOX biomarker» → ❌ **REJECTED as a disease biomarker; RETAINED by name as a possible pharmacodynamic readout**
+### DIS-027 — «pERK is a candidate WWOX biomarker» → ❌ **REJECTED as a disease biomarker; RETAINED by name as a possible pharmacodynamic readout**
 - **PREMISE: DATO** (2026-10-02, from a complete read of PMID 33195192, receipt `FTR-20261002-33195192-01`). Here the dependence **was** tested — constitutive `Wwox−/−` mice against littermates — and the result is real: *«keratinocytes expressed significantly reduced levels of pERK and total ERK1/2 protein»*, by immunohistochemistry quantified over 25 regions from 3 mice. ⚠️ The **total**-ERK half sits in Supplementary Figure S9, which was not read; only the running-text assertion is receipted.
 - **§13:** Tier 2 **by position** in the pathway and **failing on specificity**. MEK/ERK phosphorylation reports hundreds of upstream inputs, and a fall in pERK is the ordinary accompaniment of the reduced proliferation this tissue also shows, so the readout cannot distinguish "WWOX is low" from "these cells are dividing less". Measured in mouse skin of a constitutive null; no human WWOX-DEE tissue has been assayed for it anywhere in the source or its citations.
 - **Confine, and the half that is NOT rejected:** skin is accessible by punch biopsy in a living patient, unlike brain — which is why this is the only candidate in the batch with any sampling route at all. It is **retained by name as a possible *pharmacodynamic* readout inside a controlled experimental system**, where the perturbation is known and pERK is read as a response. That is a different use from a patient biomarker and must not be conflated with one. 🔴 No CSF, blood or imaging route exists for it.
 - **`REVIVAL_TRIGGER`:** a demonstration that pERK in an accessible tissue tracks WWOX functional state **across a restoration**, not merely across a null-versus-wild-type contrast.
 
-### DIS-024 — «γ-H2AX can report WWOX state» → ❌ **REJECTED — the readout is NON-MONOTONIC in WWOX**
+### DIS-028 — «γ-H2AX can report WWOX state» → ❌ **REJECTED — the readout is NON-MONOTONIC in WWOX**
 - **PREMISE: DATO** (2026-10-02, from two complete reads in the same wave: PMID 37897534, receipt `FTR-20261002-37897534-01`, and PMID 42395553, receipt `FTR-20261002-42395553-01`). γ-H2AX rises when WWOX is **lost** — *«was highly expressed in late-passage Wwox −/− MEFs»* — and rises when WWOX is **added**, both as applied recombinant protein above a 10–100 ng/mL threshold and as a stable transgene (⚠️ the second source is a **bioRxiv preprint, NOT peer reviewed**, and its neuronal arm uses extracellular applied protein with no heat-denatured or endotoxin control reported). **Neither paper cites the other; the observation belongs to reading them together.**
 - **§13:** not a gene readout (Tier 1); not specific to any WWOX-proximal pathway (Tier 2) — it is the generic double-strand-break marker; and disqualified independently of tier because **a readout that moves the same way under opposite perturbations cannot report the direction of the quantity it measures**. Requires fixed cells; no neural sampling route in a living patient.
 - **Confine:** this does **not** say either observation is wrong, and it does not say WWOX is unrelated to DNA damage. It says γ-H2AX cannot serve as the instrument.
 - **`REVIVAL_TRIGGER`:** a dose–response in **one** system spanning WWOX-null through wild type to overexpression, showing a monotonic γ-H2AX relation — which would mean one of the two observations above is an artefact and would identify which.
 
-### DIS-025 — «SA-β-gal, p16/p21/p27, or microsatellite instability are WWOX biomarkers» → ❌ **REJECTED — generic, and not samplable**
+### DIS-029 — «SA-β-gal, p16/p21/p27, or microsatellite instability are WWOX biomarkers» → ❌ **REJECTED — generic, and not samplable**
 - **PREMISE: DATO** (2026-10-02, from a complete read of PMID 37897534, receipt `FTR-20261002-37897534-01`). All four respond to WWOX loss in that system, and the perturbation is genuine (knockout plus knockdown). ⚠️ The comparator in most of its figures is `Wwox+/−`, **not** wild type.
 - **§13:** SA-β-gal is a generic senescence stain requiring live cultured cells; p16/p21/p27 are generic cell-cycle inhibitors measured by western in fibroblasts; microsatellite instability was accumulated over passages 20–30 in culture and is a property of that regime as much as of the genotype. None is a WWOX readout; none has a patient sampling route for neural tissue.
 - **Confine:** the **NAC rescue** in the same paper is a therapeutic-direction lead, not a biomarker, and is deliberately not promoted here — it is a fibroblast-culture result with no neural and no in vivo arm, recorded in `disease-models/wwox/research/intake_wave_20261002_C.md`.
