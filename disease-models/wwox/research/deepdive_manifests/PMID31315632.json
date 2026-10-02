@@ -1,0 +1,331 @@
+{
+ "schema_version": 2,
+ "pmid": "31315632",
+ "doi": "10.1186/s12964-019-0382-y",
+ "receipt": "FTR-20261002-31315632-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID31315632.md",
+  "disease-models/wwox/research/intake_wave_20261002_B.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261002-B-NONLINEAGE-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is a research surface another batch owns; the one lead this reading touches (DL-MECH-107) is proposed through a commit candidate instead of an edit."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "Nothing in this paper supplies a therapeutic lever for the reference genotype class; forging hypotheses from a nominal or review-level signal would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "The paper tests no compound, dose or intervention, so there is no molecule for BLOCK-1 triage."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes are proposed as commit candidates for a later BATCH_COMMIT."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; the triples are published in the candidate for an auditor to run."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 138,
+  "publications_on_gene": 66,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "PubMed counts 2026-10-02 for the senior author Chang NS[au]: 138 records, 66 intersecting WWOX. Wet-lab cell biology (overexpression, FRET, yeast two-hybrid, xenograft). 26 of 56 references carry the same group (25 as Chang NS, one as Chang N); all six references behind the introduction’s brain-aggregation statement are the group’s own. Execution weight applies to the cell assays; the brain-aggregation reading rests on one xenograft experiment with no independent replication."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND TIAF1",
+    "count": 9,
+    "source": "PubMed ESearch 2026-10-02"
+   },
+   {
+    "query": "WWOX AND TIAF1 NOT Chang NS[au]",
+    "count": 0,
+    "source": "PubMed ESearch 2026-10-02"
+   },
+   {
+    "query": "WWOX AND p53 AND TIAF1",
+    "count": 6,
+    "source": "PubMed ESearch 2026-10-02"
+   }
+  ],
+  "note": "The triad has no record outside the originating laboratory. Independence for the brain-aggregation claim is zero by this measure."
+ },
+ "multihop": {
+  "references_enumerated": 56,
+  "gene_direct_refs_in_source": [
+   "30158849",
+   "21368882",
+   "22534828",
+   "27551439",
+   "25650666",
+   "29067327"
+  ],
+  "resolved": [
+   "30158849",
+   "21368882",
+   "22534828",
+   "27551439",
+   "25650666",
+   "29067327"
+  ],
+  "queued": [],
+  "note": "All 56 references enumerated (XML without PMIDs; the brain-aggregation chain refs 3 and 22–26 resolved by title). All six are the Chang laboratory. Liu 2018 (30158849) and Chang 2016 (27551439) are identity records; 25650666 was adversarially re-read under DL-BIO-004; 21368882 has no record."
+ },
+ "corpus_crossquery": {
+  "query": "Does any registry record name this paper or carry the p53/TIAF1/WWOX triad or a WWOX-p53 antagonism as a claim? (registry_records.py get --pmid 31315632; --theme TIAF1)",
+  "hits": 0,
+  "note": "No record names the paper; TIAF1 appears only in research ledgers (DL-BIO-004, FT-100, FT-101, FT-102), none of which this paper changes beyond adding one more same-laboratory node."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-02 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn, CommentIn or UpdateIn link; publication types Journal Article; Research Support, Non-U.S. Gov't; Research Support, U.S. Gov't, Non-P.H.S..",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 56,
+   "references_screened": 55,
+   "references_with_doi": 55,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 22,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID31315632_Chou2019_PMC.xml",
+   "sha256": "c6decb4ef991c60f5dac8dd0a0a3e8bafc0faf8a689ede2a42dde64926ccf4cb",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6637503/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "c6decb4ef991c60f5dac8dd0a0a3e8bafc0faf8a689ede2a42dde64926ccf4cb"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID31315632_Chou2019_supplement/12964_2019_382_MOESM1_ESM.pdf",
+   "sha256": "65ed98e0eb71555d503f03e2ff159cd0e18207187209150a95f92264e64aaeab",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://static-content.springer.com/esm/art%3A10.1186%2Fs12964-019-0382-y/MediaObjects/12964_2019_382_MOESM1_ESM.pdf",
+    "http_method": "GET",
+    "tier": "publisher open-access ESM (Springer Nature static content)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "65ed98e0eb71555d503f03e2ff159cd0e18207187209150a95f92264e64aaeab"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID31315632_Chou2019_supplement/12964_2019_382_Fig1_HTML.png",
+   "sha256": "cd79a216f3845673c7de1ebd66fc04d360ea5f727ae801225c7cae2ca5f5ee07",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1186%2Fs12964-019-0382-y/MediaObjects/12964_2019_382_Fig1_HTML.png",
+    "http_method": "GET",
+    "tier": "publisher open-access figure (Springer Nature media CDN)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "cd79a216f3845673c7de1ebd66fc04d360ea5f727ae801225c7cae2ca5f5ee07"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID31315632_Chou2019_supplement/12964_2019_382_Fig2_HTML.png",
+   "sha256": "0a5630ea2c4131817e4538e0c59b6bf97569fcd70286f062c4bb1245fb21a9d6",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1186%2Fs12964-019-0382-y/MediaObjects/12964_2019_382_Fig2_HTML.png",
+    "http_method": "GET",
+    "tier": "publisher open-access figure (Springer Nature media CDN)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "0a5630ea2c4131817e4538e0c59b6bf97569fcd70286f062c4bb1245fb21a9d6"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID31315632_Chou2019_supplement/12964_2019_382_Fig3_HTML.png",
+   "sha256": "23590bf5d274bd28cc776e316306cff45584540d4aa66404003f01fb05167cc2",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1186%2Fs12964-019-0382-y/MediaObjects/12964_2019_382_Fig3_HTML.png",
+    "http_method": "GET",
+    "tier": "publisher open-access figure (Springer Nature media CDN)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "23590bf5d274bd28cc776e316306cff45584540d4aa66404003f01fb05167cc2"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID31315632_Chou2019_supplement/12964_2019_382_Fig4_HTML.png",
+   "sha256": "9054f143a551afefe78fa9c22a7dfc054b07e24748b02509c599fe37257418f1",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1186%2Fs12964-019-0382-y/MediaObjects/12964_2019_382_Fig4_HTML.png",
+    "http_method": "GET",
+    "tier": "publisher open-access figure (Springer Nature media CDN)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "9054f143a551afefe78fa9c22a7dfc054b07e24748b02509c599fe37257418f1"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID31315632_Chou2019_supplement/12964_2019_382_Fig5_HTML.png",
+   "sha256": "76995c355a6a2b5a43bd2f93aa09a4cff919ac5eeb2aeca9ef0b73ccb5f4632b",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1186%2Fs12964-019-0382-y/MediaObjects/12964_2019_382_Fig5_HTML.png",
+    "http_method": "GET",
+    "tier": "publisher open-access figure (Springer Nature media CDN)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "76995c355a6a2b5a43bd2f93aa09a4cff919ac5eeb2aeca9ef0b73ccb5f4632b"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID31315632_Chou2019_supplement/12964_2019_382_Fig6_HTML.png",
+   "sha256": "df5771f3157c2c1326d2e708e02e138e1796ae6a0054ba0059e7c6da5b6439aa",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1186%2Fs12964-019-0382-y/MediaObjects/12964_2019_382_Fig6_HTML.png",
+    "http_method": "GET",
+    "tier": "publisher open-access figure (Springer Nature media CDN)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "df5771f3157c2c1326d2e708e02e138e1796ae6a0054ba0059e7c6da5b6439aa"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID31315632_Chou2019_supplement/12964_2019_382_Fig7_HTML.png",
+   "sha256": "aee9c753d3955a54f323db342fab7600669ca1b20dd468800e527373f03d7bd4",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1186%2Fs12964-019-0382-y/MediaObjects/12964_2019_382_Fig7_HTML.png",
+    "http_method": "GET",
+    "tier": "publisher open-access figure (Springer Nature media CDN)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "aee9c753d3955a54f323db342fab7600669ca1b20dd468800e527373f03d7bd4"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID31315632_Chou2019_supplement/12964_2019_382_Fig8_HTML.png",
+   "sha256": "fdc54cb6ba7d6947af2c69a0154406fb7e23cfe3ac5519ea4b1c7c57357a1269",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1186%2Fs12964-019-0382-y/MediaObjects/12964_2019_382_Fig8_HTML.png",
+    "http_method": "GET",
+    "tier": "publisher open-access figure (Springer Nature media CDN)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "fdc54cb6ba7d6947af2c69a0154406fb7e23cfe3ac5519ea4b1c7c57357a1269"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The brain data come from nude mice carrying human lung-cancer xenografts; the host brains are not WWOX-deficient.",
+    "snippet": "Nude mice received subcutaneous injections of these cells twice on both sides of the flanks",
+    "anchor": "Figure 7 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31315632_Chou2019_PMC.xml"
+   },
+   {
+    "proposition": "The figure legend reads as one mouse per group.",
+    "snippet": "Spleen enlargement occurred in all mice except in the mouse harboring WWOX-expressing NCI-H1299",
+    "anchor": "Figure 7 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31315632_Chou2019_PMC.xml"
+   },
+   {
+    "proposition": "A housekeeping protein is also reported as aggregated, which weakens the specificity of the aggregation readout.",
+    "snippet": "Housekeeping protein α-tubulin was also aggregated.",
+    "anchor": "Results, final section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31315632_Chou2019_PMC.xml"
+   },
+   {
+    "proposition": "The authors state the cause of brain aggregation is unknown.",
+    "snippet": "For unknown reasons, the growing tumors induce protein aggregation in the mouse brain and lung.",
+    "anchor": "Discussion, para 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31315632_Chou2019_PMC.xml"
+   },
+   {
+    "proposition": "The cytokine mechanism is a belief, not a measurement.",
+    "snippet": "We believe that cytokines released by growing cancer cells induce protein aggregation.",
+    "anchor": "Discussion, para 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31315632_Chou2019_PMC.xml"
+   },
+   {
+    "proposition": "How the flank tumours affect the brain is stated as unknown.",
+    "snippet": "How the tumor cells in the flanks control neurodegeneration in the brain is unknown and remains to be established.",
+    "anchor": "Discussion, para 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31315632_Chou2019_PMC.xml"
+   },
+   {
+    "proposition": "Yeast two-hybrid: the SDR domain did not bind TIAF1.",
+    "snippet": "Also, the SDR domain of WWOX did not bind TIAF1.",
+    "anchor": "Results, TIAF1 binds the first N-terminal WW domain of WWOX",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31315632_Chou2019_PMC.xml"
+   },
+   {
+    "proposition": "The FRET section concludes that WWOX joins via the SDR domain, contradicting the yeast two-hybrid result in the same paper.",
+    "snippet": "WWOX joins the complex via its C-terminal SDR domain to stabilize the complex triad",
+    "anchor": "Results, Activated p53 binds TIAF1, final sentence",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31315632_Chou2019_PMC.xml"
+   },
+   {
+    "proposition": "Statistics are Student’s t-tests in Excel.",
+    "snippet": "Data were analyzed by Student’s t test among controls and tested groups using Microsoft excel.",
+    "anchor": "Methods, Statistical analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31315632_Chou2019_PMC.xml"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC6637503/fullTextXML returned HTTP 200 with a full JATS body on 2026-10-02; the artefact declared above is that response, so every body and table quote can be re-verified externally."
+ }
+}
