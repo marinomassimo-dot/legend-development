@@ -156,7 +156,7 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Only one affected child was genotyped; the elder affected sib was never seen by the authors and is counted as probably affected.",
+    "proposition": "Genotype evidence covers one affected individual; a second, presumed-affected family member was not examined or tested by the authors.",
     "snippet": "Patient II:1 died several years ago and has not been seen by the authors",
     "anchor": "Results, para 2",
     "surface": "body",

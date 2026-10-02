@@ -170,8 +170,8 @@
     }
    },
    {
-    "proposition": "Measured junction: exon 5 fused to exon 7 in proband and carrier parent.",
-    "snippet": "showed the proband and his father had the same deleted exon 6 fragment",
+    "proposition": "Measured junction: exon 5 fused to exon 7 (RT-PCR product sequenced).",
+    "snippet": "fusing exon 5 and 7 of WWOX (Figures 1C,D)",
     "anchor": "Results, Mutation Identification and Confirmation",
     "surface": "body",
     "artifact": "files/fulltext/PMID35573960_Riva2022_PMC.xml",

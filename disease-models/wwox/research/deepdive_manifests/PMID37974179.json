@@ -182,7 +182,7 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The inheritance sentence swaps the two paternal deletion sizes relative to the coordinates and to the preceding paragraph.",
+    "proposition": "The inheritance sentence swaps the sizes of the two deletions on the two-deletion allele, relative to the coordinates and to the preceding paragraph.",
     "snippet": "the discontinuous deletion of intron 5(53,904 bp) and exon 6(13,260 bp)",
     "anchor": "Results, Molecular findings, para 3",
     "surface": "body",
@@ -256,7 +256,7 @@
     "panel_text_relation": "text_confirmed_by_panel"
    },
    {
-    "proposition": "The authors' own supplement summarises the paternal allele as intron 5 plus exon 6 deletions and the maternal one as exons 6-8.",
+    "proposition": "The authors' own supplement summarises one allele as intron 5 plus exon 6 deletions and the other as exons 6-8.",
     "snippet": "the discontinuous deletion of intron 5 , exon 6 and the exons 6-8 deletion of WWOX",
     "anchor": "Additional file 1, Supplementary Table 1, Mutations row",
     "surface": "supplement",
