@@ -140,3 +140,18 @@ as a Latin `g`. ⚠️ The `PMID37897534…xml` surface separates the genotype t
 8. (In a different system the same DNA-damage marker rose above a concentration threshold of added protein | `While treatment with 10ng/mL of rWWOX did not alter g-H2AX levels (Tukey's test, p=0.6018), treatment with either 100ng/mL (Tukey's test, p=0.0139) or 150ng/mL of rWWOX (Tukey's test, p=0.0038) significantly increased g-H2AX levels compared to vehicle-treated cells.` | `files/fulltext/PMID42395553_Petrozziello2026_bioRxiv.txt` · Figure 5 legend, panel B)
 
 9. (Raising the protein by transgene also raised that marker, as a stated increase over the untransfected control | `WWOX levels were significantly increased in SH-SY5Y overexpressing WWOX (WWOXOE) cells compared to NTC (Mann-Whitney U test=1, p=0.0476)` | `files/fulltext/PMID42395553_Petrozziello2026_bioRxiv.txt` · Figure 5 legend, panel C)
+
+## BATCH DISPOSITION — `BATCH_20261002_001` (2026-10-02, ACTOR_ID `scientist`), append-only
+
+**Nothing above this line was rewritten.**
+
+**Verdict:** PROPAGATED
+
+**MINOR** confirmed: append-only into the non-canonical dismissal ledger; no canonical current file,
+no claim, no promotion, and `biomarker_candidates_current.md` / `clinical_monitoring_endpoints_current.md`
+untouched — so Phase 4.5's three discipline checks have nothing to fail on. `DIS-026`–`DIS-029` kept
+the numbers this candidate had already yielded to `CC-20261002-DOSE-GAIN-DISMISSAL-01`; the integrator
+merged both blocks into one `insert-after DIS-020` so the ledger reads `DIS-022` … `DIS-029` in order,
+which is exactly what both candidates said they did not depend on. Applied as written, exit 0.
+§ 4's deliberate non-entry of PMID 17679088 in either direction is honoured: that paper's landing is
+`PAPER 128`, a mechanistic-precedent record that is neither a biomarker nor a rejected biomarker.
