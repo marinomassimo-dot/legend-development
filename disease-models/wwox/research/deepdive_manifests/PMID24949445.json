@@ -78,7 +78,28 @@
   "at": "2026-10-02",
   "route": "PubMed esummary (eutils) 2026-10-02, pubtype and references fields",
   "result": "Journal Article; no retraction, expression of concern or erratum linked.",
-  "hold": false
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 28,
+   "references_screened": 24,
+   "references_with_doi": 24,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 22,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 4
+   }
+  }
  },
  "source_artifacts": [
   {

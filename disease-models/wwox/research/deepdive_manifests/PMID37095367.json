@@ -77,7 +77,28 @@
   "at": "2026-10-02",
   "route": "PubMed esummary (eutils) 2026-10-02, pubtype and references fields",
   "result": "Journal Article. PubMed links 'Erratum in' (Mol Neurobiol 2025;62(5):6628); the article's Change history records it as a correction of one author's surname. No retraction or expression of concern. The erratum body itself was not fetched.",
-  "hold": false
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 58,
+   "references_screened": 54,
+   "references_with_doi": 54,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 22,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 4
+   }
+  }
  },
  "source_artifacts": [
   {
