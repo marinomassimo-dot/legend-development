@@ -1,0 +1,270 @@
+{
+ "schema_version": 2,
+ "pmid": "37974179",
+ "doi": "10.1186/s12920-023-01731-4",
+ "receipt": "FTR-20261003-37974179-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID37974179.md",
+  "disease-models/wwox/research/intake_wave_20261003_A.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003-A-REGISTRY-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003-A-DONG-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is a research surface owned by other batches; the one ledger correction this reading supports is proposed through the intake note rather than edited."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A patient genotype-phenotype report supplies no therapeutic lever for the reference genotype class; forging hypotheses from one case would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is tested as an intervention with a measured outcome beyond clinical anecdote, so there is no molecule to send to BLOCK-1 triage."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate for a later BATCH_COMMIT."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The triples are published in the candidates for a blind auditor; the reader of a paper cannot audit their own locators."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 20,
+  "publications_on_gene": 1,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "PubMed counts 2026-10-02: Li ZM[au] AND Zhongshan 20; Li ZM[au] AND WWOX 1. A prenatal-diagnosis laboratory; the structural-variant work (WGS + gap-PCR + Sanger junctions) is the strength, the clinical description is thin and partly borrowed in wording.",
+  "external_provenance": {
+   "source": "NCBI E-utilities esearch rettype=count, terms as stated",
+   "date": "2026-10-02"
+  }
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (whole genome sequencing) AND deletion",
+    "count": 6,
+    "source": "PubMed ESearch 2026-10-02"
+   }
+  ],
+  "note": "Few WWOX patient deletions have been resolved to breakpoints; most are exon-level calls."
+ },
+ "multihop": {
+  "references_enumerated": 25,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "25 references enumerated. WWOX patient references (Piard, Mallaret, Mignot, Abdel-Salam, Chong, Ehaideb) are background; Piard and Abdel-Salam were read in this wave."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 37974179 (run AFTER the first pass)",
+  "hits": 2,
+  "note": "CORPUS-STUB-096 and LIT-0118 placeholders only; DL-MECH-053 in the discovery ledger describes the alleles as 'splice-acceptor del ex6-8' and 'missense allele with two deletions', which the source does not support (both alleles are deletions). See CC-20261003-A-DONG-01 and the intake note."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-02 via PubMed metadata (get_article_metadata): no retraction, expression of concern or correction listed among the publication types for PMID 37974179.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 25,
+   "references_screened": 23,
+   "references_with_doi": 23,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 22,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID37974179_Dong2023_PMC.xml",
+   "sha256": "371fbdbfcae6194bf155eef44f404d06bbbbf779991174029f6441295c69fd70",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10652538/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "371fbdbfcae6194bf155eef44f404d06bbbbf779991174029f6441295c69fd70"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID37974179_Dong2023_supplement/12920_2023_1731_MOESM1_ESM.docx",
+   "sha256": "37cef416126477808afb88a16c69c89de0bffc759b3c8fac8dbd8ae45fad4589",
+   "kind": "supplement_text",
+   "acquisition_recipe": {
+    "no_recipe": "Member '12920_2023_1731_MOESM1_ESM.docx' extracted unchanged by Python zipfile from the Europe PMC REST supplementaryFiles bundle for PMC10652538 (HTTP 200, application/zip, fetched 2026-10-02); the bundle itself was not persisted because it also carries patient photographs, which this public edition does not retrieve into files/."
+   }
+  },
+  {
+   "path": "files/fulltext/PMID37974179_Dong2023_supplement/12920_2023_1731_MOESM2_ESM.docx",
+   "sha256": "ca79cabe12d711faf2f6bf5e69fbb558c5e54744281487436bf719eea07a42ad",
+   "kind": "supplement_text",
+   "acquisition_recipe": {
+    "no_recipe": "Member '12920_2023_1731_MOESM2_ESM.docx' extracted unchanged by Python zipfile from the Europe PMC REST supplementaryFiles bundle for PMC10652538 (HTTP 200, application/zip, fetched 2026-10-02); the bundle itself was not persisted because it also carries patient photographs, which this public edition does not retrieve into files/."
+   }
+  },
+  {
+   "path": "files/fulltext/PMID37974179_Dong2023_supplement/12920_2023_1731_Fig1_HTML.jpg",
+   "sha256": "2f4cf8b85f8c3a1868f429f9750033baa13d3d205c881aa0b7936e557d93b341",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member '12920_2023_1731_Fig1_HTML.jpg' extracted unchanged by Python zipfile from the Europe PMC REST supplementaryFiles bundle for PMC10652538 (HTTP 200, application/zip, fetched 2026-10-02); the bundle itself was not persisted because it also carries patient photographs, which this public edition does not retrieve into files/."
+   }
+  },
+  {
+   "path": "files/fulltext/PMID37974179_Dong2023_supplement/12920_2023_1731_Fig2_HTML.jpg",
+   "sha256": "58a0eb9955ebfeee14d6570f91a199d68208b6d6f3347520ad56a3c6ad26a139",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member '12920_2023_1731_Fig2_HTML.jpg' extracted unchanged by Python zipfile from the Europe PMC REST supplementaryFiles bundle for PMC10652538 (HTTP 200, application/zip, fetched 2026-10-02); the bundle itself was not persisted because it also carries patient photographs, which this public edition does not retrieve into files/."
+   }
+  },
+  {
+   "path": "files/fulltext/PMID37974179_Dong2023_supplement/12920_2023_1731_Fig3_HTML.jpg",
+   "sha256": "3bbb17c16e8311ed074f7ad6a96d0ea26c545f68a2f553d7bef7ed448f0dbd80",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member '12920_2023_1731_Fig3_HTML.jpg' extracted unchanged by Python zipfile from the Europe PMC REST supplementaryFiles bundle for PMC10652538 (HTTP 200, application/zip, fetched 2026-10-02); the bundle itself was not persisted because it also carries patient photographs, which this public edition does not retrieve into files/."
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Exome CNV calling reported a homozygous exon 6 deletion.",
+    "snippet": "The WES analysis revealed a homozygous deletion involving exon 6 of the WWOX gene in the proband.",
+    "anchor": "Results, Molecular findings, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37974179_Dong2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Genome sequencing assigns the intron-5 deletion a size of about 13.3 kb.",
+    "snippet": "Another deletion about 13,261 bp in length involved intron 5",
+    "anchor": "Results, Molecular findings, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37974179_Dong2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The inheritance sentence swaps the two paternal deletion sizes relative to the coordinates and to the preceding paragraph.",
+    "snippet": "the discontinuous deletion of intron 5(53,904 bp) and exon 6(13,260 bp)",
+    "anchor": "Results, Molecular findings, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37974179_Dong2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The consequence of the in-frame exons 6-8 deletion is theoretical (predicted), not measured.",
+    "snippet": "theoretically produces a protein with normal WW domains, but due to the disruption of the SDR domain, it may retain poor residual function",
+    "anchor": "Discussion, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37974179_Dong2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The exon 6 deletion's frameshift consequence is predicted.",
+    "snippet": "is a common deletion predicted to cause a frameshift mutation resulting in a truncated protein with loss of function",
+    "anchor": "Discussion, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37974179_Dong2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Only two antiseizure drugs are named.",
+    "snippet": "The administration of antiepileptic drugs (sodium valproate and topiramate tablet) was not effective.",
+    "anchor": "Results, Clinical features",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37974179_Dong2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The 'earliest onset' claim is made for day-15 onset; day-1 onsets are already published.",
+    "snippet": "Our proband had the earliest onset of epilepsy, presenting on the 15th day of life.",
+    "anchor": "Discussion, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37974179_Dong2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "This clause is word-for-word the clause Riva 2022 writes about its own patient.",
+    "snippet": "his multidaily tonic seizures never responded to any pharmacological treatment",
+    "anchor": "Discussion, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37974179_Dong2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Survival endpoint.",
+    "snippet": "He died at the age of two and a half years because of persistent seizures.",
+    "anchor": "Results, Clinical features",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37974179_Dong2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The pedigree draws the proband as a filled circle (the female symbol), while the text uses he/his and the supplementary table gives Male; PubMed indexes the record with MeSH Female.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 1a: generation III, individual 1, filled circle with arrow; Figure 1b: exon-6 qPCR fold change about 0 for the proband and about 0.37-0.39 for three carriers, about 1 for two non-carriers and the control.",
+    "anchor": "Figure 1, panels a-b",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID37974179_Dong2023_supplement/12920_2023_1731_Fig1_HTML.jpg",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "contradicts": "entries[8]",
+    "contradicts_needle": "He died at the age"
+   },
+   {
+    "proposition": "Gap-PCR products and junction sequences: 4-bp microhomology at the exons 6-8 deletion, ATACACACACAC insertion at the exon 6 deletion junction; schematic d labels 13,260 bp and 53,904 bp deletions.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 3a-d: three gap-PCR gels (800, 900, 1300 bp products) with Sanger junctions; panel d schematic with a red 177,204 bp bar spanning exons 6-8 and blue 13,260 bp and 53,904 bp bars.",
+    "anchor": "Figure 3",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID37974179_Dong2023_supplement/12920_2023_1731_Fig3_HTML.jpg",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "The authors' own supplement summarises the paternal allele as intron 5 plus exon 6 deletions and the maternal one as exons 6-8.",
+    "snippet": "the discontinuous deletion of intron 5 , exon 6 and the exons 6-8 deletion of WWOX",
+    "anchor": "Additional file 1, Supplementary Table 1, Mutations row",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID37974179_Dong2023_supplement/12920_2023_1731_MOESM1_ESM.docx",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC10652538/fullTextXML returned HTTP 200 with a full JATS body on 2026-10-02; the declared artefact is that response, byte for byte."
+ }
+}
