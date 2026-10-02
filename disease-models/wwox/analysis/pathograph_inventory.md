@@ -32,12 +32,12 @@ annotations is reported below whatever it happens to be.
 | …undirected edges they collapse into | 42 |
 | Edges carrying a declared relation type | 0 |
 | Nodes carrying a biological scale | 0 |
-| Deep-dive manifests read | 134 |
+| Deep-dive manifests read | 137 |
 | …of which bound to at least one claim | 50 |
-| Propositions scanned | 2854 |
-| …carrying a relational connective | 648 |
-| …locator-backed candidates | 610 |
-| …locator-backed and bound to a claim | 276 |
+| Propositions scanned | 2897 |
+| …carrying a relational connective | 662 |
+| …locator-backed candidates | 624 |
+| …locator-backed and bound to a claim | 278 |
 
 The scanned population is three declared surfaces and no others: every claim
 `Title`, every row of the working model's BLOCK 2 mirror, and every
@@ -308,15 +308,15 @@ each side is a reading, and every record carries `endpoints_resolved: false`.
 | Source | Candidates |
 |---|---|
 | claim_title | 20 |
-| locator_proposition | 610 |
+| locator_proposition | 624 |
 | working_model_mirror_title | 18 |
 
 | Connective class (lexical) | Candidates |
 |---|---|
-| AMBIGUOUS_LEXICAL_FORM | 412 |
+| AMBIGUOUS_LEXICAL_FORM | 421 |
 | ARROW | 16 |
 | ASSOCIATIVE | 27 |
-| CAUSAL | 140 |
+| CAUSAL | 145 |
 | DEPENDENCY | 53 |
 
 A connective class is a property of the word, not a verdict about the
@@ -347,7 +347,7 @@ its sentence is a reading, and this tool does not perform readings.
 | CLAIM 016 | claim_title | `contribute to` | GSK3β hyperactivation may contribute to seizure susceptibility in WWOX deficiency |
 | CLAIM 018 | claim_title | `causes` | The exon 6 splice-site variant c.517-2A>G is pathogenic and causes exon 6 skipping in humans |
 
-Showing 12 of 314 bound candidates; the
+Showing 12 of 316 bound candidates; the
 complete set, with evidence and provenance, is in the export. The worklist
 in cost order — what needs an annotation, what needs a type, what needs a
 decomposition, what needs a reading — is printed by:
@@ -363,7 +363,7 @@ carried no connective from the lexicon.
 
 ## Provenance
 
-Derived from 137 input files; digest
-`53e59c1965294466`. Sources: the claim, paper and
+Derived from 140 input files; digest
+`13d1ded3dff6c43a`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 
