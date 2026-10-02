@@ -1,0 +1,161 @@
+{
+  "schema_version": 2,
+  "pmid": "33195192",
+  "doi": "10.3389/fcell.2020.558432",
+  "receipt": "FTR-20261002-33195192-01",
+  "landing": [
+    "CC-20261002-WWOX-DOSE-CEILING-01",
+    "CC-20261002-BIOMARKER-REJECTIONS-01",
+    "intake_wave_20261002_C"
+  ],
+  "skills_considered": [
+    {
+      "skill": "find-fulltext",
+      "used": true,
+      "reason": "Invoked by name for PMID 17679088 and PMID 42395553, whose Europe PMC fullTextXML route returned HTTP 500. The cascade resolved both: the 2007 paper via the PMC author-manuscript HTML surface (the publisher forbids XML download and the Cell Press bronze-OA PDF is bot-blocked at 403), the preprint via the bioRxiv .full.pdf endpoint. The four PMC-indexed papers needed no cascade."
+    },
+    {
+      "skill": "legend-deepdive",
+      "used": false,
+      "reason": "Not run. This wave is a first full read of six records none of which is in the registries; the dossier, the locators and the commit candidates were produced directly under the Scientist brief. A legend-deepdive pass would duplicate them."
+    },
+    {
+      "skill": "legend-locator-audit",
+      "used": false,
+      "reason": "Not run here by design: the producer of a reading must not be its verifier. The triples are handed to the blind audit through the commit candidates' LOCATOR TRIPLES FOR BLIND AUDIT sections."
+    }
+  ],
+  "group_assessment": {
+    "performed": true,
+    "total_publications": 103,
+    "publications_on_gene": 30,
+    "counts_measured": "PubMed esearch 2026-10-02: 'Hsu LJ[au]' 103, 'Hsu LJ[au] AND WWOX' 30. The unqualified count is inflated by author-name ambiguity and is not used for weighting.",
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": false,
+    "is_primary_group_for_gene": true,
+    "weighting": "Hsu and Chang at National Cheng Kung University — one of the two founding WWOX laboratories, working on their own knockout line. Primary for the gene; the disease studied here is skin homeostasis, not WWOX-DEE. NOT INDEPENDENT of PMID 37897534 in this wave: same senior author, same mouse line.",
+    "note": "Li-Jin Hsu and Nan-Shan Chang, National Cheng Kung University -- one of the two founding WWOX laboratories, and the same senior author as PMID 37897534 in this wave. These two records are NOT independent of each other. The Wwox knockout line is the group's own."
+  },
+  "field_density": {
+    "wwox_directed": true,
+    "queries": [
+      {
+        "query": "Hsu LJ[au] AND WWOX",
+        "route": "PubMed esearch 2026-10-02",
+        "count": 30
+      }
+    ],
+    "note": "High WWOX density and high measurement density: knockout mice with a heterozygous arm carried throughout, primary keratinocytes, HaCaT knockdown, histology, TEM, flow cytometry, corneometry and fibre-optic thermometry. 323 WWOX/Wwox mentions in the JATS."
+  },
+  "multihop": {
+    "performed": false,
+    "references_enumerated": 75,
+    "gene_direct_refs_in_source": [],
+    "enumeration_method": "<ref> elements counted in the JATS: 75. Not classified by gene-directedness.",
+    "resolved": [],
+    "queued": [],
+    "note": "ONE HOP QUEUED BY NAME: Nowakowska et al. 2014 (HT29 colon adenocarcinoma, raised WWOX increasing proliferation). It is the second independent instance of added WWOX doing the opposite of the tumour-suppressor expectation, and it is carried here only as this paper's citation of it."
+  },
+  "corpus_crossquery": {
+    "performed": true,
+    "query": "Is there an existing pharmacodynamic-marker candidate for WWOX, and would pERK qualify under section 13?",
+    "hits": 0,
+    "finding": "No candidate exists, and pERK does not qualify as a disease biomarker: it is a Tier 2-shaped readout by position in the pathway but it reports hundreds of upstream inputs, it was measured here by immunohistochemistry in mouse skin of a constitutive null, and the direction (reduced) is the ordinary consequence of reduced proliferation. Recorded as a rejected candidate with its reason."
+  },
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-10-02",
+    "route": "PubMed esummary / get_article_metadata for 33195192",
+    "result": "No retraction, no expression of concern, no erratum. Article type 'Journal Article'.",
+    "hold": false,
+    "dependencies": {
+      "flagged": [
+        {
+          "citing_relation": "citation only. Fabbri 2005 is cited once, in the Discussion, inside a list of papers supporting the sentence that WWOX overexpression suppresses growth in malignant cells. It supplies no reagent, no method and no data to PMID 33195192, and nothing this reading carries from PMID 33195192 depends on it. ALREADY HELD BY THE MODEL: the same source is PAPER 082, status background_only, Integrity status PUBLICATION_INTEGRITY_HOLD, deliberately linked to no claim; the expression of concern (PMID 28373548) is narrow in scope -- one beta-actin panel in Figure 1B -- and is not a retraction. This screen rediscovered independently what the registry already records, and changes nothing.",
+          "doi": "10.1073/pnas.0505485102",
+          "nature": "Expression of concern",
+          "reason_verbatim": "Concerns/Issues about Data;Duplication of/in Image;Error in Image;Investigation by Company/Institution;Original Data and/or Images not Provided and/or not Available;",
+          "retraction_date": "4/3/2017 0:00",
+          "retraction_pmid": "28373548",
+          "verdict": "FLAGGED_EXPRESSION_OF_CONCERN"
+        }
+      ],
+      "noted": [],
+      "paper_verdict": "FLAGGED_EXPRESSION_OF_CONCERN",
+      "reference_source": "network",
+      "references_declared": 75,
+      "references_screened": 74,
+      "references_with_doi": 74,
+      "schema": "retraction_check.dependencies/1",
+      "screened": true,
+      "snapshot": {
+        "date": "2026-09-10",
+        "days_since_fetch": 22,
+        "rows": 72476,
+        "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+      },
+      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+      "unscreenable": {
+        "UNSCREENABLE_NO_DOI": 1
+      }
+    }
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID33195192_Chou2020_PMC.xml",
+      "sha256": "ef330947352977c26f7be0eb422682c065cd986709e8f5bfa52cc301872b15cd",
+      "kind": "article_text",
+      "note": "Europe PMC JATS for PMC7652735, 168,547 bytes. CC BY 4.0.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7652735/fullTextXML",
+        "http_method": "GET",
+        "tier": "europepmc_fulltextxml",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-02",
+        "derived": false,
+        "result_sha256": "ef330947352977c26f7be0eb422682c065cd986709e8f5bfa52cc301872b15cd"
+      }
+    }
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC JATS, 168,547 bytes; Abstract, Introduction, Materials and Methods, Results, Discussion, Conclusion and all figure legends present in the body. CC BY 4.0.",
+    "abstract_anchoring_waived": "Stated per entry. Where an entry draws on the abstract it says so in its anchor; every entry is matched against the declared artifact as a whole.",
+    "note": "COVERAGE: whole article read, including Materials and Methods, every figure legend with its n and its test, and the Discussion. NOT INSPECTED: Supplementary Figures S1-S10, which are a separate file not fetched -- so the transepidermal water loss (S1), loricrin (S2), cell-cycle (S3), TUNEL (S4), fur length (S5), embryonic hair follicles (S6), CD34 (S7), E-cadherin (S8), total ERK1/2 (S9) and dermal collagen (S10) results are carried only by the authors' running text and not by their panels. THE TOTAL-ERK RESULT IS ONE OF THESE: the running text asserts reduced total ERK1/2 and points to Supplementary Figure S9, whose bytes were not read.",
+    "entries": [
+      {
+        "proposition": "THE PHARMACODYNAMIC READOUT THE ASSIGNMENT ASKED ABOUT, WITH ITS EXACT SCOPE: it is pERK AND total ERK, in mouse epidermal keratinocytes of a constitutive whole-body null, by immunohistochemistry.",
+        "snippet": "keratinocytes expressed significantly reduced levels of pERK and total ERK1/2 protein",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID33195192_Chou2020_PMC.xml",
+        "anchor": "Results, 'Wwox Loss Reduces E-Cadherin, ERK, and p63 Expression in Keratinocytes'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THE PAPER'S OWN STATEMENT OF CONTEXT-DEPENDENCE, which is the general principle the dose question turns on and which this paper states more plainly than any other source in the batch.",
+        "snippet": "the control of cell growth and apoptosis by WWOX may depend on cell types, such as their tissue origin, differentiation state or differences between normal, benign and malignant cells",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID33195192_Chou2020_PMC.xml",
+        "anchor": "Discussion, paragraph on pleiotropic functions",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "A SECOND, INDEPENDENT INSTANCE OF RAISED WWOX DOING THE OPPOSITE OF THE TUMOUR-SUPPRESSOR EXPECTATION -- reported here as a citation to Nowakowska 2014, NOT measured by these authors. It is carried as a pointer to an unread source, not as a datum.",
+        "snippet": "in low-grade invasive HT29 colon adenocarcinoma cells, increased WWOX expression promotes cell proliferation but inhibits apoptosis",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID33195192_Chou2020_PMC.xml",
+        "anchor": "Discussion, same paragraph, citing Nowakowska et al. 2014",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "AND THE AUTHORS DRAW THE TWO-SIDED CONCLUSION EXPLICITLY. Written in 2020, independently of the 2026 preprint, it is the same proposition: the quantity matters in both directions.",
+        "snippet": "A certain amount of WWOX expression may be necessary for maintaining normal physiological functions in cells.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID33195192_Chou2020_PMC.xml",
+        "anchor": "Discussion, paragraph on pleiotropic functions, sentence following the cell-type dependence sentence",
+        "panel_text_relation": "text_only"
+      }
+    ]
+  }
+}

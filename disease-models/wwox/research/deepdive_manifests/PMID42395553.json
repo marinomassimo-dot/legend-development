@@ -1,0 +1,211 @@
+{
+  "schema_version": 2,
+  "pmid": "42395553",
+  "doi": "10.64898/2026.06.24.734331",
+  "receipt": "FTR-20261002-42395553-01",
+  "landing": [
+    "CC-20261002-WWOX-DOSE-CEILING-01",
+    "intake_wave_20261002_C"
+  ],
+  "skills_considered": [
+    {
+      "skill": "find-fulltext",
+      "used": true,
+      "reason": "Invoked by name for PMID 17679088 and PMID 42395553, whose Europe PMC fullTextXML route returned HTTP 500. The cascade resolved both: the 2007 paper via the PMC author-manuscript HTML surface (the publisher forbids XML download and the Cell Press bronze-OA PDF is bot-blocked at 403), the preprint via the bioRxiv .full.pdf endpoint. The four PMC-indexed papers needed no cascade."
+    },
+    {
+      "skill": "legend-deepdive",
+      "used": false,
+      "reason": "Not run. This wave is a first full read of six records none of which is in the registries; the dossier, the locators and the commit candidates were produced directly under the Scientist brief. A legend-deepdive pass would duplicate them."
+    },
+    {
+      "skill": "legend-locator-audit",
+      "used": false,
+      "reason": "Not run here by design: the producer of a reading must not be its verifier. The triples are handed to the blind audit through the commit candidates' LOCATOR TRIPLES FOR BLIND AUDIT sections."
+    }
+  ],
+  "group_assessment": {
+    "performed": true,
+    "total_publications": 68,
+    "publications_on_gene": 1,
+    "counts_measured": "PubMed esearch 2026-10-02: 'Sadri-Vakili G[au]' 68, 'Sadri-Vakili G[au] AND WWOX' 1 — this preprint. The senior author has no prior WWOX record.",
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": false,
+    "is_primary_group_for_gene": false,
+    "weighting": "A high-credibility Huntington's disease group (Mass General Brigham / Harvard; Gusella, DiFiglia, Mouro Pinto) entering WWOX for the first time. Their HD measurements carry full weight; their WWOX reagents are a single commercial antibody (Abcam ab137726) used for blotting, immunodepletion and the recombinant-protein work alike, and a single commercial recombinant protein. On the WWOX side this is an adjacent-field first paper, which is exactly where a reagent artefact would not be caught. Declared conflict: one author advises Harness Therapeutics and has had Pfizer support.",
+    "note": "Mass General Brigham / Harvard HD groups (Sadri-Vakili, Gusella, DiFiglia, Mouro Pinto) plus Pouladi at UBC. High-credibility HD genetics and neuropathology groups; this is their first WWOX paper and no author is from the WWOX field. Declared conflict: one author advises Harness Therapeutics and has had Pfizer support. The group's WWOX-specific antibody validation rests on one commercial reagent (Abcam ab137726) used for blotting, immunodepletion and the rWWOX work alike."
+  },
+  "field_density": {
+    "wwox_directed": true,
+    "queries": [
+      {
+        "query": "Sadri-Vakili G[au] AND WWOX",
+        "route": "PubMed esearch 2026-10-02",
+        "count": 1
+      }
+    ],
+    "note": "Low WWOX density in a high-density HD paper. WWOX is the subject of the title but the group's entire WWOX output is this preprint, and every WWOX reagent is bought in."
+  },
+  "multihop": {
+    "performed": false,
+    "references_enumerated": 72,
+    "gene_direct_refs_in_source": [],
+    "enumeration_method": "Reference list counted from the derived text: 72 numbered entries. Gene-directedness not classified — the WWOX references are reached through reviews (36-43) rather than through primary data, which is itself the observation worth recording.",
+    "resolved": [],
+    "queued": [],
+    "note": "The hop that matters is not in this bibliography: Obeid 2026 (PMID 42422765, PAPER 011 / CLAIM 011) raises neuronal WWOX in vivo and reports benefit. This preprint does not cite it. The two were read against each other in the analysis note instead."
+  },
+  "corpus_crossquery": {
+    "performed": true,
+    "query": "Does any canonical record state what happens when WWOX is INCREASED, and does the gene-therapy limb carry an upper bound?",
+    "hits": 0,
+    "finding": "No. CLAIM 011 and BLOCK 1 section 4 reason exclusively about clearing a floor — 'below 2.63 x 10^11 vg survival is not rescued at all' — and no claim, in either direction, records a consequence of raising WWOX. The absence is the finding and is what CC-20261002-WWOX-DOSE-CEILING-01 proposes to record."
+  },
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-10-02",
+    "route": "PubMed esummary / get_article_metadata for 42395553",
+    "result": "No retraction, no expression of concern, no erratum. Article types: 'Journal Article', 'Preprint'. NOT PEER REVIEWED — the page banner states the preprint 'was not certified by peer review'.",
+    "hold": false,
+    "dependencies": {
+      "flagged": [],
+      "noted": [],
+      "paper_verdict": "SCREENED_CLEAN",
+      "reference_source": "cache",
+      "references_declared": 72,
+      "references_screened": 71,
+      "references_with_doi": 71,
+      "schema": "retraction_check.dependencies/1",
+      "screened": true,
+      "snapshot": {
+        "date": "2026-09-10",
+        "days_since_fetch": 22,
+        "rows": 72476,
+        "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+      },
+      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+      "unscreenable": {
+        "UNSCREENABLE_NO_DOI": 1
+      }
+    }
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID42395553_Petrozziello2026_bioRxiv.pdf",
+      "sha256": "90078770d759d421a77ab5485e1f553575a5c2efd04df3accc076c6ae062b746",
+      "kind": "article_binary",
+      "note": "bioRxiv v1 PDF, 39 pages, posted 2026-06-26. The preprint carries 'All rights reserved. No reuse allowed without permission' on every page; it is read here, not redistributed.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.biorxiv.org/content/10.64898/2026.06.24.734331v1.full.pdf",
+        "http_method": "GET",
+        "tier": "biorxiv_full_pdf",
+        "user_agent_policy": "browser_like",
+        "acquired_on": "2026-10-02",
+        "derived": false,
+        "result_sha256": "90078770d759d421a77ab5485e1f553575a5c2efd04df3accc076c6ae062b746"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID42395553_Petrozziello2026_bioRxiv.txt",
+      "sha256": "d6a73e97f03edee920598c5fb84cc7906c4d35b11cb5de3188f83b99ae84e7b3",
+      "kind": "article_text",
+      "note": "DERIVED text layer of the PDF above, produced locally by `pdftotext -layout -nopgbrk`. Every verbatim locator for this record is matched against THIS surface. The derivation is lossy in two ways that a quote must carry: it renders the Greek gamma of gamma-H2AX as a Latin 'g' throughout, and it preserves end-of-line hyphenation as a hyphen plus a space ('SH- SY5Y', 'vehicle- treated'). A quote taken from here is verbatim against this artifact and is NOT the spelling the page prints.",
+      "acquisition_recipe": {
+        "resolved_url": "local derivation from PMID42395553_Petrozziello2026_bioRxiv.pdf",
+        "http_method": "NONE",
+        "tier": "local_pdftotext_layout_nopgbrk",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-02",
+        "derived": true,
+        "result_sha256": "d6a73e97f03edee920598c5fb84cc7906c4d35b11cb5de3188f83b99ae84e7b3",
+        "derived_from": "files/fulltext/PMID42395553_Petrozziello2026_bioRxiv.pdf",
+        "extractor": {
+          "name": "pdftotext (poppler)",
+          "version": "24.02.0",
+          "call": "pdftotext -layout -nopgbrk files/fulltext/PMID42395553_Petrozziello2026_bioRxiv.pdf files/fulltext/PMID42395553_Petrozziello2026_bioRxiv.txt"
+        }
+      }
+    }
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "pdftotext -layout over the 39-page bioRxiv PDF, 83,821 bytes of running text covering Abstract, Introduction, Material and Methods, Results, Discussion, references, Table 1 and every figure legend. Locators are matched against that derived text.",
+    "abstract_anchoring_waived": "Stated per entry. Where an entry draws on the abstract it says so in its anchor; every entry is matched against the declared artifact as a whole.",
+    "note": "COVERAGE: the complete preprint was read -- abstract, introduction, methods, results, discussion with its stated limitations, Table 1, and the figure legends of Figures 1-7 with their test statistics. NOT INSPECTED at pixel level: the plotted data points inside Figures 1-7 and every Supplementary Figure (1-3), which are a separate file not fetched; the rWWOX dose-response curve itself (Supplementary Figure 2) is therefore carried only by the running-text sentence and the legend, not by its panel. ONE INTERNAL DISCREPANCY NOTED AND NOT RESOLVED: Methods state '13 control and 21 HD PFC' were assessed, while the Figure 3A legend states n=18 HD vs n=13 control; nothing in the read text reconciles them. TRANSCRIPTION HAZARD DECLARED: this derived surface spells gamma-H2AX as 'g-H2AX' and keeps line-break hyphenation; see the artifact note.",
+    "entries": [
+      {
+        "proposition": "THE DOSE-RESPONSE EXISTS AND IS STATED BY THE AUTHORS, AND IT IS A RESPONSE TO EXTRACELLULAR RECOMBINANT PROTEIN, NOT TO A TRANSGENE. This is the sentence that any claim about 'too much WWOX' must be built on, and it is also the sentence that limits such a claim to applied protein in a neuroblastoma line.",
+        "snippet": "Treatment with rWWOX caused cell death in a dose- and time-dependent manner in SH- SY5Y cells, with significant decreases observed at 100 or 500ng/mL after 24h and at 10, 100 or 500ng/mL after 48h",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42395553_Petrozziello2026_bioRxiv.txt",
+        "anchor": "Results, 'Increases in WWOX induce neuronal toxicity in HD ESC-derived cortical neurons', first result paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THE ONE NEURONAL TOXICITY DATUM IN THE WHOLE BATCH, AND IT IS GENOTYPE-INDEPENDENT: applied rWWOX killed the isogenic CONTROL neurons too, so the effect is not a property of the disease background.",
+        "snippet": "Our results revealed a significant decrease in cell viability in both rWWOX-treated HD cortical neurons (65Q) and their isogenic controls (27Q) compared to the respective vehicle- treated cells",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42395553_Petrozziello2026_bioRxiv.txt",
+        "anchor": "Results, same paragraph, sentence on ESC-derived cortical neurons",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "AND THE STATISTICS CONFIRM THAT GENOTYPE DOES NOT MODIFY THE TOXICITY: the treatment effect is large, the genotype term is small, and the interaction is absent. This is why the datum cannot be read as 'HD neurons are selectively vulnerable to WWOX'.",
+        "snippet": "Two-way ANOVA revealed a significant effect of treatment [F(1, 28)=78.44; p<0.0001], and genotype [F(1,28)=6.181; p=0.0192], with no significant treatment x genotype interaction [F(1,28)=0.3129; p=0.5804]",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID42395553_Petrozziello2026_bioRxiv.txt",
+        "anchor": "Figure 4 legend, panel B",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THE EXPOSURE IS A COMMERCIAL RECOMBINANT PROTEIN APPLIED TO THE MEDIUM. No heat-denatured control, no irrelevant-protein control and no endotoxin assessment is reported anywhere in the methods, and no mechanism is offered by which an extracellular 46 kDa protein reaches the nucleus. This is the single largest reason the toxicity datum cannot yet be carried as a property of WWOX.",
+        "snippet": "Recombinant full-length human WWOX protein (rWWOX) was purchased from Pepmic Co (Suzhou, China). Cells were incubated with 1, 10, 100 or 500ng/mL rWWOX for 24h or 48h before measuring cell viability by MTT assay",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42395553_Petrozziello2026_bioRxiv.txt",
+        "anchor": "Material and Methods, 'SH-SY5Y cell culture treatments', Recombinant protein treatment",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THERE IS A THRESHOLD, NOT A SLOPE, FOR THE DNA-DAMAGE READOUT: 10 ng/mL does nothing and 100 ng/mL does. Quoted from the derived text, which spells the Greek gamma as 'g'.",
+        "snippet": "While treatment with 10ng/mL of rWWOX did not alter g-H2AX levels (Tukey’s test, p=0.6018), treatment with either 100ng/mL (Tukey’s test, p=0.0139) or 150ng/mL of rWWOX (Tukey’s test, p=0.0038) significantly increased g-H2AX levels compared to vehicle-treated cells.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID42395553_Petrozziello2026_bioRxiv.txt",
+        "anchor": "Figure 5 legend, panel B",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THE INTRACELLULAR OVEREXPRESSION ARM IS MODEST IN MAGNITUDE AND LIVES IN A NEUROBLASTOMA LINE, NOT IN NEURONS. The only quantification offered for how much WWOX was added is this one Mann-Whitney statement; no fold-change is printed in the text.",
+        "snippet": "WWOX levels were significantly increased in SH-SY5Y overexpressing WWOX (WWOXOE) cells compared to NTC (Mann-Whitney U test=1, p=0.0476)",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID42395553_Petrozziello2026_bioRxiv.txt",
+        "anchor": "Figure 5 legend, panel C",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THE AUTHORS' OWN CONCLUSION, AND IT IS A TWO-SIDED ONE. This is the sentence that licenses recording an upper bound as a live question and refuses any stronger reading.",
+        "snippet": "our findings indicate that elevated WWOX can also promote DNA damage. Together, these observations suggest that maintaining appropriate WWOX levels may be important for cellular homeostasis.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42395553_Petrozziello2026_bioRxiv.txt",
+        "anchor": "Discussion, paragraph on complementary approaches",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THE EARNED NEGATIVE: raising WWOX moved the damage marker and did NOT move the repeat-instability endpoint. The authors report it as a dissociation, which is what keeps the paper's own title honest.",
+        "snippet": "WWOX overexpression did not alter the rate of CAG repeat instability at any time point",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42395553_Petrozziello2026_bioRxiv.txt",
+        "anchor": "Results, 'WWOX overexpression increases g-H2AX levels but does not alter repeat instability in RPE-1AAVS1-CAG115 cells'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "WHAT THE AUTHORS EXPLICITLY DECLINE TO CONCLUDE. They do not claim a direction for therapy, in HD or anywhere else; modulation of WWOX is named as an open question, not a recommendation.",
+        "snippet": "Defining the relationship between mutant HTT and WWOX will be important to determine whether modulation of WWOX can mitigate disease-relevant phenotypes.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42395553_Petrozziello2026_bioRxiv.txt",
+        "anchor": "Discussion, limitations paragraph",
+        "panel_text_relation": "text_only"
+      }
+    ]
+  }
+}

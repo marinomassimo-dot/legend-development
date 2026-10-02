@@ -1,0 +1,157 @@
+{
+  "schema_version": 2,
+  "pmid": "17679088",
+  "doi": "10.1016/j.molcel.2007.06.012",
+  "receipt": "FTR-20261002-17679088-01",
+  "landing": [
+    "intake_wave_20261002_C"
+  ],
+  "skills_considered": [
+    {
+      "skill": "find-fulltext",
+      "used": true,
+      "reason": "Invoked by name for PMID 17679088 and PMID 42395553, whose Europe PMC fullTextXML route returned HTTP 500. The cascade resolved both: the 2007 paper via the PMC author-manuscript HTML surface (the publisher forbids XML download and the Cell Press bronze-OA PDF is bot-blocked at 403), the preprint via the bioRxiv .full.pdf endpoint. The four PMC-indexed papers needed no cascade."
+    },
+    {
+      "skill": "legend-deepdive",
+      "used": false,
+      "reason": "Not run. This wave is a first full read of six records none of which is in the registries; the dossier, the locators and the commit candidates were produced directly under the Scientist brief. A legend-deepdive pass would duplicate them."
+    },
+    {
+      "skill": "legend-locator-audit",
+      "used": false,
+      "reason": "Not run here by design: the producer of a reading must not be its verifier. The triples are handed to the blind audit through the commit candidates' LOCATOR TRIPLES FOR BLIND AUDIT sections."
+    }
+  ],
+  "group_assessment": {
+    "performed": true,
+    "total_publications": 68,
+    "publications_on_gene": 1,
+    "counts_measured": "PubMed esearch 2026-10-02: 'Freudenreich CH[au]' 68, 'Freudenreich CH[au] AND WWOX' 1 — this paper; 'Freudenreich CH[au] AND FRA16D' 5.",
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": false,
+    "is_primary_group_for_gene": false,
+    "weighting": "A primary group for REPEAT INSTABILITY AND FRAGILE SITES, not for WWOX. That is the correct weighting for what this paper measures: the breakage behaviour of a DNA sequence. It measures no WWOX protein and no WWOX function, and the gene name appears 9 times in 189,143 bytes.",
+    "note": "Catherine Freudenreich, Tufts -- an established repeat-instability and fragile-site laboratory. The YAC breakage assay is the group's own, previously used for CAG/CTG repeats. The FRA16D clones were supplied by Richards and Finnis, the authors of the polymorphism survey this paper's key lead depends on, which is a shared-material dependency rather than an independent corroboration."
+  },
+  "field_density": {
+    "wwox_directed": false,
+    "queries": [
+      {
+        "query": "Freudenreich CH[au] AND WWOX",
+        "route": "PubMed esearch 2026-10-02",
+        "count": 1
+      }
+    ],
+    "note": "MEASURED EARNED NULL FOR DENSITY: 9 occurrences of 'WWOX' in 189,143 bytes, all of them naming the gene the fragile site spans or citing it as a tumour suppressor. This is a FRA16D paper, not a WWOX paper, and nothing in it measures WWOX."
+  },
+  "multihop": {
+    "performed": false,
+    "references_enumerated": 40,
+    "gene_direct_refs_in_source": [],
+    "enumeration_method": "Reference anchors counted in the PMC HTML: 40. Not classified by gene-directedness.",
+    "resolved": [],
+    "queued": [],
+    "note": "ONE HOP QUEUED BY NAME AND IT IS THE DECIDING ONE: Finnis et al. 2005 holds both the Flex1 AT-allele distribution in the population and the position of Flex1 within the WWOX gene. This paper states neither, so nothing here can be placed against a named WWOX exon without it."
+  },
+  "corpus_crossquery": {
+    "performed": true,
+    "query": "Does the model's account of exon-scale deletion allele classes rest on any mechanism, and is that mechanism germline or somatic?",
+    "hits": 0,
+    "finding": "The model carries deletion allele classes phenotypically and names no breakage mechanism for them. This paper supplies a mechanism but for the wrong event class: every measurement here is somatic, mitotic, in yeast, and the authors' own prediction terminates in cancer-causing rearrangements. The transfer to germline deletion is unsupported and is written as such."
+  },
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-10-02",
+    "route": "PubMed esummary / get_article_metadata for 17679088",
+    "result": "No retraction, no expression of concern, no erratum. Article types 'Journal Article' and 'Research Support, N.I.H., Extramural'. The read surface is the NIH AUTHOR MANUSCRIPT and carries the publisher's disclaimer that it is an unedited accepted manuscript; wording may differ from the version of record.",
+    "hold": false,
+    "dependencies": {
+      "flagged": [],
+      "noted": [],
+      "paper_verdict": "SCREENED_CLEAN",
+      "reference_source": "network",
+      "references_declared": 40,
+      "references_screened": 36,
+      "references_with_doi": 36,
+      "schema": "retraction_check.dependencies/1",
+      "screened": true,
+      "snapshot": {
+        "date": "2026-09-10",
+        "days_since_fetch": 22,
+        "rows": 72476,
+        "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+      },
+      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+      "unscreenable": {
+        "UNSCREENABLE_NO_DOI": 4
+      }
+    }
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID17679088_Zhang2007_PMC.html",
+      "sha256": "43aedafd764c7e31199f05f085831e9eb1678c6aa3cec93856fffb0dfa62cfda",
+      "kind": "article_text",
+      "note": "PMC reader HTML for PMC2144737 (NIH author manuscript, NIHMSID NIHMS28262), 189,143 bytes, carrying Summary, Introduction, RESULTS, DISCUSSION, EXPERIMENTAL PROCEDURES and every figure legend. The XML route is refused by the publisher ('The publisher of this article does not allow downloading of the full text in XML form.') and the Cell Press bronze-OA PDF returns 403 to every non-interactive client tried. This HTML is the lawful free surface that carries the body.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2144737/",
+        "http_method": "GET",
+        "tier": "pmc_reader_html",
+        "user_agent_policy": "browser_like",
+        "acquired_on": "2026-10-02",
+        "derived": false,
+        "result_sha256": "43aedafd764c7e31199f05f085831e9eb1678c6aa3cec93856fffb0dfa62cfda"
+      }
+    }
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "PMC reader HTML for the NIH author manuscript, 189,143 bytes; Summary, Introduction, RESULTS with its five subsections, DISCUSSION with its four subsections, EXPERIMENTAL PROCEDURES and all six figure legends present.",
+    "abstract_anchoring_waived": "Stated per entry. Where an entry draws on the abstract it says so in its anchor; every entry is matched against the declared artifact as a whole.",
+    "note": "COVERAGE: whole author manuscript read, including every figure legend and the Experimental Procedures. NOT INSPECTED: the Supplemental Data (NIHMS28262-supplement-01.pdf), a separate file not fetched -- so the Southern-blot mapping of healing sites, Figure S1 (PFGE of the control YAC) and Figure S2 (yeast chromosome I flexibility) are carried only by the running text. WHAT THE PAPER DOES NOT LOCATE, AND IT MATTERS FOR THE ASSIGNMENT: the article never states which WWOX intron or exon Flex1 lies in. Figure 2B plots WWOX/FOR exons against the FlexStab trace, but the panel bytes were not inspected and no sentence in the body gives the position. Any statement placing Flex1 relative to a named WWOX exon would have to come from Finnis et al. 2005, which is not read.",
+    "entries": [
+      {
+        "proposition": "THE CORE RESULT AND ITS EXACT EVIDENCE CLASS: a yeast genetic assay, with a negative result for three of the four tested FRA16D sequences. The specificity is what makes it a real finding rather than 'AT-rich DNA breaks'.",
+        "snippet": "We have developed an assay to study human common fragile site FRA16D in yeast and used it to test whether regions of high flexibility increase chromosome breakage in a quantitative manner. We report that a short ~500 bp AT rich region that spans the peak of highest flexibility and contains a polymorphic perfect AT repeat increases chromosome fragility, whereas three other tested sequences within FRA16D do not.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID17679088_Zhang2007_PMC.html",
+        "anchor": "Introduction, final paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THE MECHANISM, MEASURED: fork stalling on 2-D gels, scaling with the length of the AT repeat. This is the part that could in principle transfer to any organism's replication.",
+        "snippet": "we have demonstrated that the Flex1 region stalls replication fork progression in a manner dependent on the length of a variable perfect AT repeat predicted to form a cruciform structure",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID17679088_Zhang2007_PMC.html",
+        "anchor": "DISCUSSION, opening paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THE GERMLINE-RELEVANT HOOK, AND THE ONE GENUINELY NEW LEAD THIS PAPER OFFERS THE DISEASE MODEL: the fragility determinant is a COMMON HUMAN POLYMORPHISM with an 11-88 repeat range, so it is a candidate genomic covariate that is genotypable from blood.",
+        "snippet": "highly polymorphic in the population (97% heterozygosity) with alleles varying between 11–88 AT repeats, and alleles of 34 repeats or greater are quite common.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID17679088_Zhang2007_PMC.html",
+        "anchor": "Discussion, 'A Model for the Mechanism behind the Chromosome Breaks and Rearrangements Found at Common Fragile Sites', citing Finnis et al. 2005",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THE AUTHORS' OWN PREDICTION, AND NOTE ITS ENDPOINT: cancer-causing rearrangements. The paper's entire frame is somatic and oncological; it predicts nothing about germline or developmental disease.",
+        "snippet": "The fact that longer Flex1 AT alleles caused a significantly stronger replication barrier predicts that human alleles with longer AT length at the Flex1 locus could predispose to cancer-causing rearrangements in the FRA16D region.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID17679088_Zhang2007_PMC.html",
+        "anchor": "Discussion, 'The Consequences of Fork Stalling in the FRA16D Flex1 Region', final sentence",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "AND THE AUTHORS RECORD THAT THE HUMAN ASSOCIATION IS ABSENT AND THEIR OWN EFFECT IS SUBTLE. This is the sentence that stops the lead from being written as anything stronger than a hypothesis.",
+        "snippet": "Although a relationship between AT length and fragility could not be documented in the Finnis et al. study, a comparison of fragility rates of the different alleles in our assay suggests that the effect may be subtle.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID17679088_Zhang2007_PMC.html",
+        "anchor": "Discussion, same subsection, sentence following the polymorphism sentence",
+        "panel_text_relation": "text_only"
+      }
+    ]
+  }
+}
