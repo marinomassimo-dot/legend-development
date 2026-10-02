@@ -14,12 +14,12 @@
 **MINOR** — evidence added on both sides of a claim already `conflicting evidence`; status unchanged; no BLOCCO 1 change.
 
 ## Registry landing
-PMID 39101447 → `PAPER 016`; PMID 35573960 → `PAPER 125` (created by `CC-20261003-A-REGISTRY-01`, which must run first).
+PMID 39101447 → `PAPER 016`; PMID 35573960 → `PAPER 133` (created by `CC-20261003-A-REGISTRY-01`, which must run first).
 
 ## Ordering
 The receipts `FTR-20261003-<pmid>-01` named below must be appended to the ledger before this candidate is propagated, so that no record cites a receipt the ledger does not hold.
 
-## Op list — `claim_registry_current.md` (record-scoped; dry run 2026-10-03 against `main` f5f9468 with `record_scoped_edit.py apply`: exit 0, 1 op(s), keys ['CLAIM 001'])
+## Op list — `claim_registry_current.md` (record-scoped; dry run 2026-10-03 against `main` ba5682f with `record_scoped_edit.py apply`: exit 0, 1 op(s), keys ['CLAIM 001'])
 
 ```json
 [
@@ -27,12 +27,12 @@ The receipts `FTR-20261003-<pmid>-01` named below must be appended to the ledger
   "op": "replace-within",
   "id": "CLAIM 001",
   "old": "**Nessun VABAM né peggioramento riportato in questo studio.**",
-  "new": "**Nessun VABAM né peggioramento riportato in questo studio.** — **Wave 2 2026-10-03 (`CC-20261003-A-VIGABATRIN-01`), due letture complete:** (a) You 2024 ([[paper_registry_current#PAPER 016]], `FTR-20261003-39101447-01`): a 11 mesi, con vigabatrin aggiunto a tre farmaci, il VEEG registra ancora attacchi elettrici focali e spasmi *«not noticed at home by her parents»*; la libertà da crisi riportata è **clinica** (*«no visible seizures»*) fino a 13 mesi. Il dato è riduzione delle crisi visibili, non controllo elettrografico. (b) Riva 2022 ([[paper_registry_current#PAPER 125]], `FTR-20261003-35573960-01`): in un genotipo null/null predetto con esordio al primo giorno, vigabatrin **inefficace** (con valproato, clonazepam, clobazam, levetiracetam, rufinamide, CBD; ACTH e dieta chetogenica senza effetto) eppure mantenuto in terapia; non è una sindrome di West. Entrambi `n = 1`, genotipi null predetti, nessuna RMN di sicurezza. Lo status `conflicting evidence` non cambia."
+  "new": "**Nessun VABAM né peggioramento riportato in questo studio.** — **Wave 2 2026-10-03 (`CC-20261003-A-VIGABATRIN-01`), due letture complete:** (a) You 2024 ([[paper_registry_current#PAPER 016]], `FTR-20261003-39101447-01`): a 11 mesi, con vigabatrin aggiunto a tre farmaci, il VEEG registra ancora attacchi elettrici focali e spasmi *«not noticed at home by her parents»*; la libertà da crisi riportata è **clinica** (*«no visible seizures»*) fino a 13 mesi. Il dato è riduzione delle crisi visibili, non controllo elettrografico. (b) Riva 2022 ([[paper_registry_current#PAPER 133]], `FTR-20261003-35573960-01`): in un genotipo null/null predetto con esordio al primo giorno, vigabatrin **inefficace** (con valproato, clonazepam, clobazam, levetiracetam, rufinamide, CBD; ACTH e dieta chetogenica senza effetto) eppure mantenuto in terapia; non è una sindrome di West. Entrambi `n = 1`, genotipi null predetti, nessuna RMN di sicurezza. Lo status `conflicting evidence` non cambia."
  }
 ]
 ```
 
-## Op list — `paper_registry_current.md` (record-scoped; dry run 2026-10-03 against `main` f5f9468 with `record_scoped_edit.py apply`: exit 0, 2 op(s), keys ['PAPER 016', 'PAPER 016'])
+## Op list — `paper_registry_current.md` (record-scoped; dry run 2026-10-03 against `main` ba5682f with `record_scoped_edit.py apply`: exit 0, 2 op(s), keys ['PAPER 016', 'PAPER 016'])
 
 ```json
 [
@@ -51,7 +51,7 @@ The receipts `FTR-20261003-<pmid>-01` named below must be appended to the ledger
 ]
 ```
 
-## Op list — `discovery_ledger_current.md` (record-scoped; dry run 2026-10-03 against `main` f5f9468 with `record_scoped_edit.py apply`: exit 0, 1 op(s), keys ['DL-MOL-007'])
+## Op list — `discovery_ledger_current.md` (record-scoped; dry run 2026-10-03 against `main` ba5682f with `record_scoped_edit.py apply`: exit 0, 1 op(s), keys ['DL-MOL-007'])
 
 ```json
 [
@@ -59,7 +59,7 @@ The receipts `FTR-20261003-<pmid>-01` named below must be appended to the ledger
   "op": "replace-within",
   "id": "DL-MOL-007",
   "old": "→ [[clinical_monitoring_endpoints_current]], NON biomarker WWOX.",
-  "new": "→ [[clinical_monitoring_endpoints_current]], NON biomarker WWOX.\n- 🔵 **Rettifica append-only, 2026-10-03 (`CC-20261003-A-VIGABATRIN-01`, lettura `FTR-20261003-35573960-01`):** fenobarbitale e nitrazepam non sono riportati come *inefficaci* ma come sospesi per eventi avversi (*«determined adverse events such as extreme drowsiness or increased secretions»*). Il vigabatrin, elencato fra gli inefficaci, resta fra gli ASM correnti. Identity record ora proposto: [[paper_registry_current#PAPER 125]]."
+  "new": "→ [[clinical_monitoring_endpoints_current]], NON biomarker WWOX.\n- 🔵 **Rettifica append-only, 2026-10-03 (`CC-20261003-A-VIGABATRIN-01`, lettura `FTR-20261003-35573960-01`):** fenobarbitale e nitrazepam non sono riportati come *inefficaci* ma come sospesi per eventi avversi (*«determined adverse events such as extreme drowsiness or increased secretions»*). Il vigabatrin, elencato fra gli inefficaci, resta fra gli ASM correnti. Identity record ora proposto: [[paper_registry_current#PAPER 133]]."
  }
 ]
 ```

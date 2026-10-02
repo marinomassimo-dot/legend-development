@@ -20,7 +20,7 @@ PMID 30356099 → `PAPER 117`; PMID 30853297 → `PAPER 025` (both exist).
 ## Ordering
 The receipts `FTR-20261003-<pmid>-01` named below must be appended to the ledger before this candidate is propagated, so that no record cites a receipt the ledger does not hold.
 
-## Op list — `claim_registry_current.md` (record-scoped; dry run 2026-10-03 against `main` f5f9468 with `record_scoped_edit.py apply`: exit 0, 1 op(s), keys ['CLAIM 018'])
+## Op list — `claim_registry_current.md` (record-scoped; dry run 2026-10-03 against `main` ba5682f with `record_scoped_edit.py apply`: exit 0, 1 op(s), keys ['CLAIM 018'])
 
 ```json
 [
