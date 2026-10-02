@@ -1,0 +1,329 @@
+{
+ "schema_version": 2,
+ "pmid": "26302329",
+ "doi": "10.1371/journal.pone.0136356",
+ "receipt": "FTR-20261003-26302329-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID26302329.md",
+  "disease-models/wwox/research/intake_wave_20261003_C.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003-C-APOPTOSIS-DIRECTION-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "A single Europe PMC REST fullTextXML call returned a body on the first try, so the cascade was never needed; the route is recorded in the acquisition recipe instead."
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is a canonical surface a Scientist does not edit; the one lead this reading touches is proposed through a commit candidate."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "This source supplies no therapeutic lever for the reference genotype class; forging hypotheses from a model-only or cancer-only signal would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed by this reading, so there is no molecule for a BLOCK-1 triage."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes are proposed as commit candidates for a later BATCH_COMMIT."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; the triples are published in the candidates for an auditor to run."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 149,
+  "publications_on_gene": 9,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "PubMed ESearch 2026-10-02: Richards RI[au] 149 records, 9 intersecting WWOX. The Adelaide fragile-site group built and published the Drosophila WWOX model itself and is the primary group for WWOX in Drosophila, which is why its ROS premise is self-cited rather than measured here. It is not a neurological or clinical WWOX group: its frame is cancer and genome instability throughout."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND Drosophila",
+    "count": 11,
+    "source": "PubMed ESearch 2026-10-02"
+   },
+   {
+    "query": "WWOX AND reactive oxygen species",
+    "count": 12,
+    "source": "PubMed ESearch 2026-10-02"
+   }
+  ],
+  "note": "Eleven WWOX-and-Drosophila records exist and this group authored most of them, so the fly WWOX literature is close to a single-group literature; agreement within it is weaker evidence than it looks."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 70,
+  "gene_direct_refs_in_source": [
+   "16223882"
+  ],
+  "resolved": [
+   "16223882"
+  ],
+  "queued": [],
+  "enumeration_method": "All 70 references enumerated from the JATS deposit; 35 mention WWOX or FRA16D. One is resolved by PMID here and only one, because it is the dependency the integrity screen flagged (Fabbri 2005, PMID 16223882, expression of concern) and resolving it was required to state its citing_relation. The remaining WWOX-mentioning references are background citations that carry no measurement into this paper and are not opened as hops by this reading."
+ },
+ "corpus_crossquery": {
+  "query": "Does any registry record already name this paper or a WWOX gene-dosage result in Drosophila? registry_records.py get --pmid 26302329",
+  "hits": 2,
+  "note": "Only the identity records CORPUS P270 and LIT-0270 exist; no claim, discovery lead or dismissal names this paper. The gene-dosage result in Supplementary Figure 1F and the Figure 5G labelling contradiction are both new to the corpus."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-02 by PubMed EFetch over all six wave-2 group-C PMIDs in one call: publication types are Journal Article (plus Research Support, Non-U.S. Gov't where applicable) and no CommentsCorrections RefType of any kind is returned, so there is no RetractionIn, ErratumIn, ExpressionOfConcernIn, CommentIn or UpdateIn link.",
+  "dependencies": {
+   "flagged": [
+    {
+     "citing_relation": "citation only - reference 17 (Fabbri 2005, PMID 16223882), cited once in the Introduction as background for 'restoration of WWOX activity in cancer cells inhibits their growth in vivo'. It supplies no reagent, method, cell line or datum to this paper.",
+     "doi": "10.1073/pnas.0505485102",
+     "nature": "Expression of concern",
+     "reason_verbatim": "Concerns/Issues about Data;Duplication of/in Image;Error in Image;Investigation by Company/Institution;Original Data and/or Images not Provided and/or not Available;",
+     "retraction_date": "4/3/2017 0:00",
+     "retraction_pmid": "28373548",
+     "verdict": "FLAGGED_EXPRESSION_OF_CONCERN"
+    },
+    {
+     "citing_relation": "citation only - reference 63 (Trapasso 2008), cited once in the Discussion as background for other common-fragile-site gene products regulating ROS. It supplies no reagent, method or datum to this paper.",
+     "doi": "10.1074/jbc.m709062200",
+     "nature": "Retraction",
+     "reason_verbatim": "Error in Image;",
+     "retraction_date": "8/3/2017 0:00",
+     "retraction_pmid": "28842474",
+     "verdict": "FLAGGED_RETRACTION"
+    }
+   ],
+   "noted": [],
+   "paper_verdict": "FLAGGED_RETRACTION",
+   "reference_source": "network",
+   "references_declared": 70,
+   "references_screened": 60,
+   "references_with_doi": 60,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 22,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 10
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID26302329_OKeefe2015_PMC.xml",
+   "sha256": "bbd1d0f6b315ee3e3dd60fa87046baa4d4753a32b3c6a66dee0c503f25926c73",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4547717/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "bbd1d0f6b315ee3e3dd60fa87046baa4d4753a32b3c6a66dee0c503f25926c73"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID26302329_assets/pone.0136356.g001.jpg",
+   "sha256": "08cf6acef851c42ed2f48a052a6153149a8ffab7d9ee8b68968e663e1d5749c2",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4547717/supplementaryFiles?includeInlineImage=true",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip, includeInlineImage)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "08cf6acef851c42ed2f48a052a6153149a8ffab7d9ee8b68968e663e1d5749c2"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID26302329_assets/pone.0136356.g002.jpg",
+   "sha256": "b73c44a164fb894fc6642c52fde44d19615d17b981d585653588e375cdcb6e53",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4547717/supplementaryFiles?includeInlineImage=true",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip, includeInlineImage)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "b73c44a164fb894fc6642c52fde44d19615d17b981d585653588e375cdcb6e53"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID26302329_assets/pone.0136356.g003.jpg",
+   "sha256": "0a2eedcccec7542e686f8d6f22fcd5ecf12cfb407561167bcb851b79b295f159",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4547717/supplementaryFiles?includeInlineImage=true",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip, includeInlineImage)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "0a2eedcccec7542e686f8d6f22fcd5ecf12cfb407561167bcb851b79b295f159"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID26302329_assets/pone.0136356.g004.jpg",
+   "sha256": "44946d0029d714573ce81e42877bc22a68080122dc73fbf0f45b64b80c08a3bc",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4547717/supplementaryFiles?includeInlineImage=true",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip, includeInlineImage)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "44946d0029d714573ce81e42877bc22a68080122dc73fbf0f45b64b80c08a3bc"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID26302329_assets/pone.0136356.g005.jpg",
+   "sha256": "d623e7ea61879ec8ffd6c399164491bec260e99b58e98d9d28c24f37f7c50fe0",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4547717/supplementaryFiles?includeInlineImage=true",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip, includeInlineImage)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "d623e7ea61879ec8ffd6c399164491bec260e99b58e98d9d28c24f37f7c50fe0"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID26302329_assets/pone.0136356.g006.jpg",
+   "sha256": "8c13c0830540bc27d0224536b0b4aefba1c91ffb292f9dc590760021aafc78c6",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4547717/supplementaryFiles?includeInlineImage=true",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip, includeInlineImage)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "8c13c0830540bc27d0224536b0b4aefba1c91ffb292f9dc590760021aafc78c6"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID26302329_assets/pone.0136356.g007.jpg",
+   "sha256": "4fa29654aa6fe9bf9c76253f0562eb0a102e324d62517f934015f64f95086534",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4547717/supplementaryFiles?includeInlineImage=true",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip, includeInlineImage)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "4fa29654aa6fe9bf9c76253f0562eb0a102e324d62517f934015f64f95086534"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID26302329_assets/pone.0136356.s001.tif",
+   "sha256": "1ba199ad4b20ab6bb624bf30532fc236e1d04bb9d9a67d31d5b345d76931cf3f",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4547717/supplementaryFiles?includeInlineImage=true",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip, includeInlineImage)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "1ba199ad4b20ab6bb624bf30532fc236e1d04bb9d9a67d31d5b345d76931cf3f"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Reducing WWOX suppresses TNFalpha-induced cell death in vivo; the direction is loss-protects.",
+    "snippet": "resulted in suppression of the Egr/TNF",
+    "anchor": "Results, Altered WWOX modulates ectopic Egr/TNFalpha eye phenotypes, para 1 (sentence continues 'alpha-mediated rough eye phenotype')",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26302329_OKeefe2015_PMC.xml",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "The ROS link is explicitly a hypothesis carried from the group's earlier work, not a measurement in this paper.",
+    "snippet": "a likely mechanism by which WWOX contributes to the Egr/TNF",
+    "anchor": "Discussion, para 5 (the sentence continues with the Egr/TNFalpha-mediated cell death pathway being via its regulation of ROS)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26302329_OKeefe2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A complete Drosophila WWOX null is viable to adulthood, which bounds how much a negative result in this organism can say about a human biallelic-loss phenotype.",
+    "snippet": "or where WWOX function is completely removed (trans-heterozygous for independent WWOX alleles)",
+    "anchor": "Results, Requirement for WWOX tumor suppressor activity in vivo, final paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26302329_OKeefe2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Ectopic WWOX alone produces no phenotype; the modulation appears only under stress.",
+    "snippet": "Ectopic expression of WWOX alone does not result in any obvious cell death-induced phenotype",
+    "anchor": "Results, Altered WWOX modulates ectopic Egr/TNFalpha eye phenotypes, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26302329_OKeefe2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The most severely affected discs were excluded from the clonal quantification, and the exclusion falls far more heavily on the knockdown arm than on the control arm.",
+    "snippet": "Significant disruption to eye disc morphology was observed in 13/52 pairs of the Scrib",
+    "anchor": "Materials and Methods, Clonal analyses (sentence continues with the 31/50 figure for the WWOX-IR clones)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26302329_OKeefe2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The paper's own text and figure legend both state that decreasing WWOX decreases the caspase-3 area, and that increasing WWOX increases it.",
+    "snippet": "Conversely, increased WWOX expression increased the relative area of Caspase 3 staining",
+    "anchor": "Results, WWOX modifies Caspase 3 staining in response to ectopic Egr/TNFalpha",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26302329_OKeefe2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The only quantification supporting that claim is labelled in the opposite sense: in the plot, the up-WWOX column is the lower one and the down-WWOX column the higher one.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5 panel G, 'Relative area of Caspase 3', carries three x-axis columns labelled (left to right) 'up-TNFa control', 'up-TNFa up-WWOX' and 'up-TNFa down-WWOX', with means at about 21.5, 18 and 24 percent and brackets marked ** over control-versus-up-WWOX and * over control-versus-down-WWOX.",
+    "anchor": "Figure 5, panel G; native JPEG inspected",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID26302329_assets/pone.0136356.g005.jpg",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "found_or_sought": "found",
+    "contradicts": "entries[5]",
+    "contradicts_needle": "increased WWOX expression increased the relative area of Caspase 3 staining"
+   },
+   {
+    "proposition": "A single heterozygous loss-of-function allele measurably shifts the endpoint, which makes this a true in-vivo gene-dosage assay rather than an all-or-nothing knockout comparison.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Figure 1 panel F, 'Adult eye size', plots three genotypes - wild type, WWOX1/+ and WWOX2/+ - at about 26, 29 and 32 times ten to the fourth pixels, with drawn brackets marked * and **** respectively; panel I shows the empty-vector lane at essentially zero Wwox/Tubulin signal while the ORF and cDNA lanes sit at about 0.33 and 0.35.",
+    "anchor": "Supplementary Figure 1, panels F and I; layered TIFF flattened (composite layer) and inspected",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID26302329_assets/pone.0136356.s001.tif",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "The article's full text was served by the Europe PMC REST fullTextXML endpoint with an HTTP 200 and a non-empty <body> element on 2026-10-02, which is what inEPMC/fullTextIdList membership means operationally: every body quote above is externally verifiable by re-fetching that endpoint."
+ }
+}
