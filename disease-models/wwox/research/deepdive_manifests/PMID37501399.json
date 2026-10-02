@@ -243,84 +243,96 @@
     "snippet": "The sites that exceeded the threshold were mainly located in two protein-coding genes",
     "anchor": "Results, Analysis of epileptic marmosets and controls, para 2",
     "surface": "body",
-    "artifact": "files/fulltext/PMID37501399_Yang2023_PMC.xml"
+    "artifact": "files/fulltext/PMID37501399_Yang2023_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "The genotype counts in Table 1 are given as control/case.",
     "snippet": "The numbers indicate the number of each genotype in Control group/Case group",
     "anchor": "Table 1 footnote",
     "surface": "table",
-    "artifact": "files/fulltext/PMID37501399_Yang2023_PMC.xml"
+    "artifact": "files/fulltext/PMID37501399_Yang2023_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "Several WWOX SNPs lie on one haplotype; they are not independent signals.",
     "snippet": "Several SNPs in the WWOX gene were confirmed in the same haplotype",
     "anchor": "Results, Analysis of epileptic marmosets and controls, para 2",
     "surface": "body",
-    "artifact": "files/fulltext/PMID37501399_Yang2023_PMC.xml"
+    "artifact": "files/fulltext/PMID37501399_Yang2023_PMC.xml",
+    "panel_text_relation": "text_confirmed_by_panel"
    },
    {
     "proposition": "The deletion enriched in epileptic animals is a KCTD18-like deletion, not a WWOX deletion.",
     "snippet": "Notably, the KCTD18-like deletion was enriched in epileptic marmosets of the CLEA pedigree",
     "anchor": "Results, Analysis of epileptic marmosets and controls, para 4",
     "surface": "body",
-    "artifact": "files/fulltext/PMID37501399_Yang2023_PMC.xml"
+    "artifact": "files/fulltext/PMID37501399_Yang2023_PMC.xml",
+    "panel_text_relation": "text_confirmed_by_panel"
    },
    {
     "proposition": "The KCTD18-like deletion association does not survive multiple-testing correction, by the authors’ own statement.",
     "snippet": "P-value for KCTD18-like was no longer significant after multiple testing correction",
     "anchor": "Discussion, para 5",
     "surface": "body",
-    "artifact": "files/fulltext/PMID37501399_Yang2023_PMC.xml"
+    "artifact": "files/fulltext/PMID37501399_Yang2023_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "No SNP reached genome-wide significance; WWOX is offered as a candidate only.",
     "snippet": "Although we did not find any signals that reached genome-wide significance",
     "anchor": "Discussion, para 4",
     "surface": "body",
-    "artifact": "files/fulltext/PMID37501399_Yang2023_PMC.xml"
+    "artifact": "files/fulltext/PMID37501399_Yang2023_PMC.xml",
+    "panel_text_relation": "text_confirmed_by_panel"
    },
    {
     "proposition": "Controls include unaffected siblings, i.e. related animals; the association is a pedigree-based case-control analysis.",
     "snippet": "Unaffected siblings and unrelated unaffected individuals were treated as controls according to the LAMP manual",
     "anchor": "Methods, SNV calling, para 3",
     "surface": "body",
-    "artifact": "files/fulltext/PMID37501399_Yang2023_PMC.xml"
+    "artifact": "files/fulltext/PMID37501399_Yang2023_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "The case definition is at least one witnessed handling-evoked seizure.",
     "snippet": "Marmosets that exhibited at least one witnessed seizure induced by handling were classified as epileptic marmosets",
     "anchor": "Methods, Animals",
     "surface": "body",
-    "artifact": "files/fulltext/PMID37501399_Yang2023_PMC.xml"
+    "artifact": "files/fulltext/PMID37501399_Yang2023_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "The epilepsy type is not established: no ictal EEG was collected.",
     "snippet": "we were unable to collect ictal EEG data for identifying the specific type of epilepsy",
     "anchor": "Discussion, limitations",
     "surface": "body",
-    "artifact": "files/fulltext/PMID37501399_Yang2023_PMC.xml"
+    "artifact": "files/fulltext/PMID37501399_Yang2023_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "Sample size is acknowledged by the authors as limiting reliability.",
     "snippet": "Firstly, the relatively small sample size of available marmosets may limit the reliability of our findings.",
     "anchor": "Discussion, limitations",
     "surface": "body",
-    "artifact": "files/fulltext/PMID37501399_Yang2023_PMC.xml"
+    "artifact": "files/fulltext/PMID37501399_Yang2023_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "Chimerism was handled by an allele-balance filter, and the authors state their data cannot quantify chimerism.",
     "snippet": "Variants with an allele balance below 0.25 were excluded to minimize the influence of chimerism.",
     "anchor": "Methods, SNV calling",
     "surface": "body",
-    "artifact": "files/fulltext/PMID37501399_Yang2023_PMC.xml"
+    "artifact": "files/fulltext/PMID37501399_Yang2023_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "The association set used fingernail samples only, split 11/9 (CLEA) and 6/5 (CAS) control/case.",
     "snippet": "CLEA: 11 control marmosets/nine epileptic marmosets; CAS: six control marmosets/five epileptic marmosets",
     "anchor": "Methods, SNV calling, para 3",
     "surface": "body",
-    "artifact": "files/fulltext/PMID37501399_Yang2023_PMC.xml"
+    "artifact": "files/fulltext/PMID37501399_Yang2023_PMC.xml",
+    "panel_text_relation": "text_only"
    }
   ],
   "source_fulltext_indexed": true,

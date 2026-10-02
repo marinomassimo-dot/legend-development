@@ -266,63 +266,72 @@
     "snippet": "Nude mice received subcutaneous injections of these cells twice on both sides of the flanks",
     "anchor": "Figure 7 legend",
     "surface": "body",
-    "artifact": "files/fulltext/PMID31315632_Chou2019_PMC.xml"
+    "artifact": "files/fulltext/PMID31315632_Chou2019_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "The figure legend reads as one mouse per group.",
     "snippet": "Spleen enlargement occurred in all mice except in the mouse harboring WWOX-expressing NCI-H1299",
     "anchor": "Figure 7 legend",
     "surface": "body",
-    "artifact": "files/fulltext/PMID31315632_Chou2019_PMC.xml"
+    "artifact": "files/fulltext/PMID31315632_Chou2019_PMC.xml",
+    "panel_text_relation": "text_confirmed_by_panel"
    },
    {
     "proposition": "A housekeeping protein is also reported as aggregated, which weakens the specificity of the aggregation readout.",
     "snippet": "Housekeeping protein α-tubulin was also aggregated.",
     "anchor": "Results, final section",
     "surface": "body",
-    "artifact": "files/fulltext/PMID31315632_Chou2019_PMC.xml"
+    "artifact": "files/fulltext/PMID31315632_Chou2019_PMC.xml",
+    "panel_text_relation": "text_confirmed_by_panel"
    },
    {
     "proposition": "The authors state the cause of brain aggregation is unknown.",
     "snippet": "For unknown reasons, the growing tumors induce protein aggregation in the mouse brain and lung.",
     "anchor": "Discussion, para 5",
     "surface": "body",
-    "artifact": "files/fulltext/PMID31315632_Chou2019_PMC.xml"
+    "artifact": "files/fulltext/PMID31315632_Chou2019_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "The cytokine mechanism is a belief, not a measurement.",
     "snippet": "We believe that cytokines released by growing cancer cells induce protein aggregation.",
     "anchor": "Discussion, para 5",
     "surface": "body",
-    "artifact": "files/fulltext/PMID31315632_Chou2019_PMC.xml"
+    "artifact": "files/fulltext/PMID31315632_Chou2019_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "How the flank tumours affect the brain is stated as unknown.",
     "snippet": "How the tumor cells in the flanks control neurodegeneration in the brain is unknown and remains to be established.",
     "anchor": "Discussion, para 5",
     "surface": "body",
-    "artifact": "files/fulltext/PMID31315632_Chou2019_PMC.xml"
+    "artifact": "files/fulltext/PMID31315632_Chou2019_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "Yeast two-hybrid: the SDR domain did not bind TIAF1.",
     "snippet": "Also, the SDR domain of WWOX did not bind TIAF1.",
     "anchor": "Results, TIAF1 binds the first N-terminal WW domain of WWOX",
     "surface": "body",
-    "artifact": "files/fulltext/PMID31315632_Chou2019_PMC.xml"
+    "artifact": "files/fulltext/PMID31315632_Chou2019_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "The FRET section concludes that WWOX joins via the SDR domain, contradicting the yeast two-hybrid result in the same paper.",
     "snippet": "WWOX joins the complex via its C-terminal SDR domain to stabilize the complex triad",
     "anchor": "Results, Activated p53 binds TIAF1, final sentence",
     "surface": "body",
-    "artifact": "files/fulltext/PMID31315632_Chou2019_PMC.xml"
+    "artifact": "files/fulltext/PMID31315632_Chou2019_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "Statistics are Student’s t-tests in Excel.",
     "snippet": "Data were analyzed by Student’s t test among controls and tested groups using Microsoft excel.",
     "anchor": "Methods, Statistical analysis",
     "surface": "body",
-    "artifact": "files/fulltext/PMID31315632_Chou2019_PMC.xml"
+    "artifact": "files/fulltext/PMID31315632_Chou2019_PMC.xml",
+    "panel_text_relation": "text_only"
    }
   ],
   "source_fulltext_indexed": true,

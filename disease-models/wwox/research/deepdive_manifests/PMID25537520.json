@@ -153,49 +153,56 @@
     "snippet": "Whether WWOX regulates the function of transcription factors in neuronal survival or death in vivo remains to be established.",
     "anchor": "WWOX in neuronal death signaling, para 1",
     "surface": "body",
-    "artifact": "files/fulltext/PMID25537520_Chang2014_PMC.xml"
+    "artifact": "files/fulltext/PMID25537520_Chang2014_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "The Conclusion asserts the opposite of the body: substantial in-vivo evidence for transcription-factor control.",
     "snippet": "In conclusion, substantial evidence has shown that WWOX participates in the control of the function of transcription factors in vivo.",
     "anchor": "Conclusion and perspectives",
     "surface": "body",
-    "artifact": "files/fulltext/PMID25537520_Chang2014_PMC.xml"
+    "artifact": "files/fulltext/PMID25537520_Chang2014_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "The WWOX-TIAF1 interaction is supported in this review by unpublished data from the same group.",
     "snippet": "WWOX is able to interact with TIAF1 (Chang et al., unpublished)",
     "anchor": "WWOX in neurological disease pathology, para 3",
     "surface": "body",
-    "artifact": "files/fulltext/PMID25537520_Chang2014_PMC.xml"
+    "artifact": "files/fulltext/PMID25537520_Chang2014_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "The neurodegeneration-inhibitor statement rests on the authors’ own prior work.",
     "snippet": "We have shown that WWOX is an inhibitor of neurodegeneration, because of its interaction with tau",
     "anchor": "Introduction, para 2",
     "surface": "body",
-    "artifact": "files/fulltext/PMID25537520_Chang2014_PMC.xml"
+    "artifact": "files/fulltext/PMID25537520_Chang2014_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "WWOX functional deficiency in Drosophila produced no neural disease phenotype.",
     "snippet": "functional deficiency of WWOX in Drosophila fails to generate the disease phenotypes in the neural system",
     "anchor": "WWOX in metabolic syndrome and neural development, para 3",
     "surface": "body",
-    "artifact": "files/fulltext/PMID25537520_Chang2014_PMC.xml"
+    "artifact": "files/fulltext/PMID25537520_Chang2014_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "The review’s developmental conclusion is drawn from the human family, the nonsense case and the lde rat.",
     "snippet": "Overall, these reports clearly indicate that germline loss-of-function of WWOX leads to developmental deficiency in the neural system.",
     "anchor": "WWOX in metabolic syndrome and neural development, para 2",
     "surface": "body",
-    "artifact": "files/fulltext/PMID25537520_Chang2014_PMC.xml"
+    "artifact": "files/fulltext/PMID25537520_Chang2014_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "The statement that WWOX downregulation in AD causes neuronal damage is supported only by reviews (refs 1, 2, 4).",
     "snippet": "and that downregulation of WWOX in AD causes neuronal damage",
     "anchor": "WWOX in metabolic syndrome and neural development, para 3",
     "surface": "body",
-    "artifact": "files/fulltext/PMID25537520_Chang2014_PMC.xml"
+    "artifact": "files/fulltext/PMID25537520_Chang2014_PMC.xml",
+    "panel_text_relation": "text_only"
    }
   ],
   "source_fulltext_indexed": true,

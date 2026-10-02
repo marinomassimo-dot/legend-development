@@ -180,63 +180,72 @@
     "snippet": "An intronic SNP in WWOX (rs10514437) fell just short of genome-wide significance for WM",
     "anchor": "Results, para 1",
     "surface": "body",
-    "artifact": "files/fulltext/PMID28763065_Xia2017_PMC.xml"
+    "artifact": "files/fulltext/PMID28763065_Xia2017_PMC.xml",
+    "panel_text_relation": "text_confirmed_by_panel"
    },
    {
     "proposition": "The study threshold is a Bonferroni division of the conventional threshold by four phenotypes.",
     "snippet": "were considered genome-wide significant (Bonferroni correction for four MRI phenotypes",
     "anchor": "Methods, Statistical methods",
     "surface": "body",
-    "artifact": "files/fulltext/PMID28763065_Xia2017_PMC.xml"
+    "artifact": "files/fulltext/PMID28763065_Xia2017_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "rs10514437 is directly genotyped, not imputed.",
     "snippet": "Note that all SNPs are imputed with the exception of rs10514437",
     "anchor": "Table 1 footnote",
     "surface": "table",
-    "artifact": "files/fulltext/PMID28763065_Xia2017_PMC.xml"
+    "artifact": "files/fulltext/PMID28763065_Xia2017_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "A1 in Table 1 is the effect allele; the per-allele difference is effect size over mean volume.",
     "snippet": "A1 is the effective allele and A2 is the reference allele. Diff./allele is the ratio of effect size over mean brain volume.",
     "anchor": "Table 1 footnote",
     "surface": "table",
-    "artifact": "files/fulltext/PMID28763065_Xia2017_PMC.xml"
+    "artifact": "files/fulltext/PMID28763065_Xia2017_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "The adolescent and adult cohorts are not a replication sample, by the authors’ statement.",
     "snippet": "These comparisons do not represent a conventional replication sample.",
     "anchor": "Discussion, para 3",
     "surface": "body",
-    "artifact": "files/fulltext/PMID28763065_Xia2017_PMC.xml"
+    "artifact": "files/fulltext/PMID28763065_Xia2017_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "The authors call for independent replication.",
     "snippet": "consequently independent replication is critical",
     "anchor": "Discussion, conclusion",
     "surface": "body",
-    "artifact": "files/fulltext/PMID28763065_Xia2017_PMC.xml"
+    "artifact": "files/fulltext/PMID28763065_Xia2017_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "The link to white matter is an interpretation resting on cited adult WOX1 expression, not on a measurement in this study.",
     "snippet": "are high in neuronal axons and nerve bundles such as corpus callosum and striatal fascicles",
     "anchor": "Discussion, para 1",
     "surface": "body",
-    "artifact": "files/fulltext/PMID28763065_Xia2017_PMC.xml"
+    "artifact": "files/fulltext/PMID28763065_Xia2017_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "Supplementary Table 10 reports no PNC and no ENIGMA2 value for rs10514437 (NA): it was not tested in either comparison cohort.",
     "snippet": "rs10514437 WWOX -6617 1.56E-08 NA NA NA",
     "anchor": "Supplementary Information, Supplementary Table 10",
     "surface": "supplement",
-    "artifact": "files/fulltext/PMID28763065_Xia2017_supplement/tp2017159x1.docx"
+    "artifact": "files/fulltext/PMID28763065_Xia2017_supplement/tp2017159x1.docx",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "Supplementary Table 8: the effect allele G has frequency about 0.97 in the current sample; the minor allele is A.",
     "snippet": "rs10514437 G A 0.03 0.97 0.98 0.83 1.00 0.98 0.95",
     "anchor": "Supplementary Information, Supplementary Table 8",
     "surface": "supplement",
-    "artifact": "files/fulltext/PMID28763065_Xia2017_supplement/tp2017159x1.docx"
+    "artifact": "files/fulltext/PMID28763065_Xia2017_supplement/tp2017159x1.docx",
+    "panel_text_relation": "text_only"
    }
   ],
   "source_fulltext_indexed": true,

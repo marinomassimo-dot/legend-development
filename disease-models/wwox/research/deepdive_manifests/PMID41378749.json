@@ -163,49 +163,56 @@
     "snippet": "Three variants on chromosome 16 were within the 8th intron of WWOX",
     "anchor": "Results, Association Without Folate",
     "surface": "body",
-    "artifact": "files/fulltext/PMID41378749_MondragonEstrada2025_PMC.xml"
+    "artifact": "files/fulltext/PMID41378749_MondragonEstrada2025_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "Multiple testing was handled only by a suggestive threshold; no genome-wide threshold was applied.",
     "snippet": "We addressed multiple comparisons by only considering loci above the suggestive threshold",
     "anchor": "Methods, Association Studies",
     "surface": "body",
-    "artifact": "files/fulltext/PMID41378749_MondragonEstrada2025_PMC.xml"
+    "artifact": "files/fulltext/PMID41378749_MondragonEstrada2025_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "The technical replication replicated two loci, CNTN5 and CTNNA2; the WWOX locus is not among them.",
     "snippet": "Two previously identified nominal loci were replicated using the imputed dosages computed on the Michigan Imputation Server",
     "anchor": "Results, Technical Replication Results",
     "surface": "body",
-    "artifact": "files/fulltext/PMID41378749_MondragonEstrada2025_PMC.xml"
+    "artifact": "files/fulltext/PMID41378749_MondragonEstrada2025_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "The authors describe the analysis as hypothesis-generating and list small cohort and confounding as limitations.",
     "snippet": "the potential for unmeasured confounding factors to modify the observed associations",
     "anchor": "Discussion, limitations",
     "surface": "body",
-    "artifact": "files/fulltext/PMID41378749_MondragonEstrada2025_PMC.xml"
+    "artifact": "files/fulltext/PMID41378749_MondragonEstrada2025_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "The abstract’s named SNP rs7184417 has its own statistics in Table S2 (OR 6.22, p 3.42E-06, imputation R2 0.78), distinct from rs28688166.",
     "snippet": "rs7184417 T C 0.20446 6.22376 3.42E-06 0.779877 WWOX",
     "anchor": "Supplemental Table 2",
     "surface": "supplement",
-    "artifact": "files/fulltext/PMID41378749_MondragonEstrada2025_supplement/BDR2-117-e70007-s001.docx"
+    "artifact": "files/fulltext/PMID41378749_MondragonEstrada2025_supplement/BDR2-117-e70007-s001.docx",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "The lead WWOX SNP is imputed with R2 0.78 and has cohort allele frequency 0.22.",
     "snippet": "rs28688166 C T 0.223037 6.20425 2.22E-06 0.776826 WWOX",
     "anchor": "Supplemental Table 2",
     "surface": "supplement",
-    "artifact": "files/fulltext/PMID41378749_MondragonEstrada2025_supplement/BDR2-117-e70007-s001.docx"
+    "artifact": "files/fulltext/PMID41378749_MondragonEstrada2025_supplement/BDR2-117-e70007-s001.docx",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "Cases and controls differ markedly in age at study visit.",
     "snippet": "Age at study visit (days), mean (SD) 44 (65.1) 175 (90.2)",
     "anchor": "Table 1",
     "surface": "table",
-    "artifact": "files/fulltext/PMID41378749_MondragonEstrada2025_PMC.xml"
+    "artifact": "files/fulltext/PMID41378749_MondragonEstrada2025_PMC.xml",
+    "panel_text_relation": "text_only"
    }
   ],
   "source_fulltext_indexed": true,
