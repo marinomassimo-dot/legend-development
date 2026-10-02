@@ -12709,3 +12709,49 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Report mentions:** `research/intake_wave_20261002_C.md` § 4 (`LEAD-C1`) · `CC-20261002-INTAKE-WAVE-ORPHANS-01`
 **Next action:** Finnis 2005 owed before anything is asserted about where Flex1 sits inside WWOX; figure panels and supplement owed for a complete read
 **Evidence depth:** `partial_fulltext_read` — manifest `deepdive_manifests/PMID17679088.json`
+
+## LIT-0430
+**Short title:** Mondragon-Estrada 2025 Birth Defects Res — spina bifida GWAS; three imputed WWOX intron-8 SNPs, nominal and unreplicated
+**Authors:** Mondragon-Estrada E et al.
+**Year:** 2025
+**Source type:** primary research — case-control GWAS
+**Journal/source:** *Birth Defects Research* 2025;117(12):e70007
+**Identifier type:** PMID / DOI / PMCID
+**Identifier value:** PMID 41378749 / DOI 10.1002/bdr2.70007 / PMC12697008
+**Date discovered:** before 2026-10-02 (queued as `FT-142`)
+**Date processed:** 2026-10-02 (first-hand read, `FTR-20261002-41378749-01`)
+**Discovery source:** Orchestrator selection record of intake wave 2026-10-02
+**Status:** processed
+**Status note:** `complete_fulltext_read`; record created by `CC-20261002-INTAKE-WAVE-ORPHANS-01` § 6
+**Primary pathway:** non-lineage association signals / intron 8
+**Species:** human infants
+**Transferability:** T3 — nominal, imputed, not technically replicated
+**clinical relevance:** BACKGROUND — an earned null
+**Claim links:** none
+**Working Model impact:** none — no block is redefined
+**Report mentions:** `research/intake_wave_20261002_B.md` · `CC-20261002-B-INTRON8-01` · `CC-20261002-B-NONLINEAGE-01` · `CC-20261002-INTAKE-WAVE-ORPHANS-01`
+**Next action:** none owed
+**Evidence depth:** `complete_fulltext_read` — manifest `deepdive_manifests/PMID41378749.json`
+
+## LIT-0431
+**Short title:** Xia 2017 Transl Psychiatry — infant brain-volume GWAS; rs10514437 (WWOX intron) below the study's own threshold, unreplicated
+**Authors:** Xia K et al.
+**Year:** 2017
+**Source type:** primary research — GWAS of neonatal MRI volumes
+**Journal/source:** *Transl Psychiatry* 2017;7(8):e1188
+**Identifier type:** PMID / DOI / PMCID
+**Identifier value:** PMID 28763065 / DOI 10.1038/tp.2017.159 / PMC5611727
+**Date discovered:** before 2026-10-02 (queued as `FT-142`)
+**Date processed:** 2026-10-02 (first-hand read, `FTR-20261002-28763065-01`)
+**Discovery source:** Orchestrator selection record of intake wave 2026-10-02
+**Status:** processed
+**Status note:** `partial_fulltext_read` — supplement read by label only, appendix plot books unread; record created by `CC-20261002-INTAKE-WAVE-ORPHANS-01` § 6
+**Primary pathway:** white matter / non-lineage association signals
+**Species:** human infants
+**Transferability:** T3 — common variation, normal-range volumetry
+**clinical relevance:** BACKGROUND — bounded context; the minor allele goes with *more* white matter
+**Claim links:** none — `CLAIM 003` explicitly untouched
+**Working Model impact:** none — no block is redefined
+**Report mentions:** `research/intake_wave_20261002_B.md` · `CC-20261002-B-INTRON8-01` · `CC-20261002-B-NONLINEAGE-01` · `CC-20261002-INTAKE-WAVE-ORPHANS-01`
+**Next action:** supplement appendices owed for a complete read
+**Evidence depth:** `partial_fulltext_read` — manifest `deepdive_manifests/PMID28763065.json`

@@ -8047,3 +8047,45 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Role:** Source of `DIS-028` (γ-H2AX rejected as a WWOX readout because it rises both when WWOX is **lost**, here, and when WWOX is **added**, PMID 42395553 — the two papers do not cite each other, and the observation belongs to reading them together) and of `DIS-029` (SA-β-gal, p16/p21/p27 and microsatellite instability rejected as generic and unsamplable). The **NAC rescue** — *«during the passage culture prevented microsatellite instability and resulted in senescence induction in the late-passage Wwox −/− MEFs»* — is carried as `LEAD-C2` (`IPOTESI`) in `research/intake_wave_20261002_C.md` § 4 and is **deliberately not promoted**: it is a fibroblast-culture result with no neural and no in vivo arm. 🔴 Same laboratory and knockout line as `PAPER 129`.
 **LIT link:** [[literature_tracking_log_current#LIT-0100]]
 **Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.
+
+## PAPER 131
+**Short title:** Mondragon-Estrada 2025 Birth Defects Res — spina bifida GWAS in Bangladesh; three imputed WWOX intron-8 SNPs, nominal and unreplicated
+**Full title:** Folate Interaction With Genetic Risk for Neural Tube Defects Among Infants in Bangladesh
+**Authors:** Mondragon-Estrada E et al.
+**Year:** 2025
+**Source type:** primary research — case-control GWAS (89 cases / 97 controls in the association models)
+**Journal/source:** *Birth Defects Research* 2025;117(12):e70007
+**Identifier:** PMID 41378749 / PMCID PMC12697008 / DOI 10.1002/bdr2.70007
+**Status:** processed
+**Record provenance:** created by `CC-20261002-INTAKE-WAVE-ORPHANS-01` § 6 (intake wave 2026-10-02, batch integrator). Its only landing before this batch was the queue record `FT-142`, which satisfies LINT and not the paper registry.
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261002-41378749-01`; manifest `deepdive_manifests/PMID41378749.json`; dossier `research/fulltext_dossiers/PMID41378749.md`
+**Primary pathway:** non-lineage association signals / intron 8
+**Model/species:** human infants
+**Genotype/model:** three imputed (R² 0.78) common SNPs inside WWOX **intron 8**; no WWOX-DEE genotype
+**Transferability:** T3 — common non-coding variation, nominal significance, no function
+**clinical relevance:** BACKGROUND — an earned null; the authors call the work *«hypothesis-generating»*
+**Claim links:** none
+**Role:** 🔴 Three source-internal corrections, each measured on reading: the abstract's *«coding region of WWOX»* means the gene body — the variants are **intronic**; the abstract pairs rs7184417 with rs28688166's statistics; and the association models use 89/97, not the 91/97 of the cohort description. OR ≈ 6.2 at p 2.2e-6 against a **suggestive** threshold only, and the locus is **absent from the paper's own technical replication**, which reproduced two other loci. Annotated into `DL-MECH-107` by `CC-20261002-B-INTRON8-01` as **not** convergence; `FT-142`'s negative was narrowed by `CC-20261002-B-NONLINEAGE-01` from *«not a WWOX paper»* to *«not a WWOX-function paper»*.
+**LIT link:** [[literature_tracking_log_current#LIT-0430]]
+**Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.
+
+## PAPER 132
+**Short title:** Xia 2017 Transl Psychiatry — infant brain-volume GWAS; rs10514437 (WWOX intron) with white-matter volume, below the study's own threshold
+**Full title:** Genome-wide association analysis identifies common variants influencing infant brain volumes
+**Authors:** Xia K et al.
+**Year:** 2017
+**Source type:** primary research — GWAS of neonatal MRI volumes (561 infants)
+**Journal/source:** *Transl Psychiatry* 2017;7(8):e1188
+**Identifier:** PMID 28763065 / PMCID PMC5611727 / DOI 10.1038/tp.2017.159
+**Status:** processed
+**Record provenance:** created by `CC-20261002-INTAKE-WAVE-ORPHANS-01` § 6 (intake wave 2026-10-02, batch integrator), for the same reason as `PAPER 131`: its only landing was `FT-142`.
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261002-28763065-01`; manifest `deepdive_manifests/PMID28763065.json`; dossier `research/fulltext_dossiers/PMID28763065.md`. Supplement read by label only (appendix plot books unread) and owed.
+**Primary pathway:** white matter / non-lineage association signals
+**Model/species:** human infants, MRI at about 5 weeks
+**Genotype/model:** rs10514437, genotyped (not imputed), MAF 0.03, in a WWOX intron; no WWOX-DEE genotype
+**Transferability:** T3 — normal-range volumetry in common variation; neither supports nor bounds a biallelic-null mechanism
+**clinical relevance:** BACKGROUND — bounded context, not evidence
+**Claim links:** none — `CLAIM 003` (hypomyelination, `consolidated baseline`) is explicitly **untouched**: this is volume in normal-range infants, and it neither supports nor narrows that claim
+**Role:** P 1.56e-8 against the study's own four-phenotype threshold of 1.25e-8, **unreplicated** (unavailable in PNC and ENIGMA2), with no eQTL and no functional link. 🔴 **The direction matters and is easy to invert:** the effect is given per copy of the **common** allele (−3.76% WM), so the **minor** allele goes with *more* white matter. Survives only as *«WWOX-locus common variation may be associated with infant WM volume — unreplicated»*.
+**LIT link:** [[literature_tracking_log_current#LIT-0431]]
+**Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.

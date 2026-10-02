@@ -218,6 +218,58 @@ explicit `partial_fulltext_read` in `Evidence depth` and the owed surfaces named
 - **It upgrades no reading depth.** Four of the six records say `partial_fulltext_read` and name
   what is owed.
 
+## 6 · Addendum — two readings whose only landing was the full-text queue
+
+🔴 **`legend_lint.py`'s `ORPHAN_COMPLETE_READ` is the weaker of the two checks, and running the
+release battery is what showed it.** LINT accepts any of six landing files, `full_text_queue_current.md`
+among them, so PMID 41378749 and PMID 28763065 counted as landed through `FT-142`.
+`framework/scripts/test_batch_queue.py::test_coverage_is_not_overstated_against_the_registry`
+asks the stricter question — *is there a **registry** record carrying this PMID* — and named one
+study:
+
+```
+python3 framework/scripts/test_batch_queue.py      # exit 1, before this addendum
+AssertionError: Lists differ: [] != ['41378749']
+  IDENTITY: these studies were read in full and no registry record carries their PMID.
+  Only a BATCH_COMMIT closes this.  READ_STUDIES=110 REGISTERED_STUDIES=111
+```
+
+The finding is **pre-existing** — PMID 41378749's receipt landed on `main` before this batch, so
+the suite was already red at the pre-batch commit — and this batch is the first that can close it.
+PMID 28763065 is registered in the same breath: it is a `partial_fulltext_read`, so the suite does
+not name it, but its only landing was the same queue record and the asymmetry would be invisible.
+`FT-142` keeps its narrowed sentence; these records do not replace it.
+
+```json
+[
+ {
+  "op": "insert-after",
+  "id": "PAPER 130",
+  "text": "\n## PAPER 131\n**Short title:** Mondragon-Estrada 2025 Birth Defects Res — spina bifida GWAS in Bangladesh; three imputed WWOX intron-8 SNPs, nominal and unreplicated\n**Full title:** Folate Interaction With Genetic Risk for Neural Tube Defects Among Infants in Bangladesh\n**Authors:** Mondragon-Estrada E et al.\n**Year:** 2025\n**Source type:** primary research — case-control GWAS (89 cases / 97 controls in the association models)\n**Journal/source:** *Birth Defects Research* 2025;117(12):e70007\n**Identifier:** PMID 41378749 / PMCID PMC12697008 / DOI 10.1002/bdr2.70007\n**Status:** processed\n**Record provenance:** created by `CC-20261002-INTAKE-WAVE-ORPHANS-01` § 6 (intake wave 2026-10-02, batch integrator). Its only landing before this batch was the queue record `FT-142`, which satisfies LINT and not the paper registry.\n**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261002-41378749-01`; manifest `deepdive_manifests/PMID41378749.json`; dossier `research/fulltext_dossiers/PMID41378749.md`\n**Primary pathway:** non-lineage association signals / intron 8\n**Model/species:** human infants\n**Genotype/model:** three imputed (R² 0.78) common SNPs inside WWOX **intron 8**; no WWOX-DEE genotype\n**Transferability:** T3 — common non-coding variation, nominal significance, no function\n**clinical relevance:** BACKGROUND — an earned null; the authors call the work *«hypothesis-generating»*\n**Claim links:** none\n**Role:** 🔴 Three source-internal corrections, each measured on reading: the abstract's *«coding region of WWOX»* means the gene body — the variants are **intronic**; the abstract pairs rs7184417 with rs28688166's statistics; and the association models use 89/97, not the 91/97 of the cohort description. OR ≈ 6.2 at p 2.2e-6 against a **suggestive** threshold only, and the locus is **absent from the paper's own technical replication**, which reproduced two other loci. Annotated into `DL-MECH-107` by `CC-20261002-B-INTRON8-01` as **not** convergence; `FT-142`'s negative was narrowed by `CC-20261002-B-NONLINEAGE-01` from *«not a WWOX paper»* to *«not a WWOX-function paper»*.\n**LIT link:** [[literature_tracking_log_current#LIT-0430]]\n**Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.\n"
+ },
+ {
+  "op": "insert-after",
+  "id": "PAPER 131",
+  "text": "\n## PAPER 132\n**Short title:** Xia 2017 Transl Psychiatry — infant brain-volume GWAS; rs10514437 (WWOX intron) with white-matter volume, below the study's own threshold\n**Full title:** Genome-wide association analysis identifies common variants influencing infant brain volumes\n**Authors:** Xia K et al.\n**Year:** 2017\n**Source type:** primary research — GWAS of neonatal MRI volumes (561 infants)\n**Journal/source:** *Transl Psychiatry* 2017;7(8):e1188\n**Identifier:** PMID 28763065 / PMCID PMC5611727 / DOI 10.1038/tp.2017.159\n**Status:** processed\n**Record provenance:** created by `CC-20261002-INTAKE-WAVE-ORPHANS-01` § 6 (intake wave 2026-10-02, batch integrator), for the same reason as `PAPER 131`: its only landing was `FT-142`.\n**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261002-28763065-01`; manifest `deepdive_manifests/PMID28763065.json`; dossier `research/fulltext_dossiers/PMID28763065.md`. Supplement read by label only (appendix plot books unread) and owed.\n**Primary pathway:** white matter / non-lineage association signals\n**Model/species:** human infants, MRI at about 5 weeks\n**Genotype/model:** rs10514437, genotyped (not imputed), MAF 0.03, in a WWOX intron; no WWOX-DEE genotype\n**Transferability:** T3 — normal-range volumetry in common variation; neither supports nor bounds a biallelic-null mechanism\n**clinical relevance:** BACKGROUND — bounded context, not evidence\n**Claim links:** none — `CLAIM 003` (hypomyelination, `consolidated baseline`) is explicitly **untouched**: this is volume in normal-range infants, and it neither supports nor narrows that claim\n**Role:** P 1.56e-8 against the study's own four-phenotype threshold of 1.25e-8, **unreplicated** (unavailable in PNC and ENIGMA2), with no eQTL and no functional link. 🔴 **The direction matters and is easy to invert:** the effect is given per copy of the **common** allele (−3.76% WM), so the **minor** allele goes with *more* white matter. Survives only as *«WWOX-locus common variation may be associated with infant WM volume — unreplicated»*.\n**LIT link:** [[literature_tracking_log_current#LIT-0431]]\n**Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.\n"
+ }
+]
+```
+
+```json
+[
+ {
+  "op": "insert-after",
+  "id": "LIT-0429",
+  "text": "\n## LIT-0430\n**Short title:** Mondragon-Estrada 2025 Birth Defects Res — spina bifida GWAS; three imputed WWOX intron-8 SNPs, nominal and unreplicated\n**Authors:** Mondragon-Estrada E et al.\n**Year:** 2025\n**Source type:** primary research — case-control GWAS\n**Journal/source:** *Birth Defects Research* 2025;117(12):e70007\n**Identifier type:** PMID / DOI / PMCID\n**Identifier value:** PMID 41378749 / DOI 10.1002/bdr2.70007 / PMC12697008\n**Date discovered:** before 2026-10-02 (queued as `FT-142`)\n**Date processed:** 2026-10-02 (first-hand read, `FTR-20261002-41378749-01`)\n**Discovery source:** Orchestrator selection record of intake wave 2026-10-02\n**Status:** processed\n**Status note:** `complete_fulltext_read`; record created by `CC-20261002-INTAKE-WAVE-ORPHANS-01` § 6\n**Primary pathway:** non-lineage association signals / intron 8\n**Species:** human infants\n**Transferability:** T3 — nominal, imputed, not technically replicated\n**clinical relevance:** BACKGROUND — an earned null\n**Claim links:** none\n**Working Model impact:** none — no block is redefined\n**Report mentions:** `research/intake_wave_20261002_B.md` · `CC-20261002-B-INTRON8-01` · `CC-20261002-B-NONLINEAGE-01` · `CC-20261002-INTAKE-WAVE-ORPHANS-01`\n**Next action:** none owed\n**Evidence depth:** `complete_fulltext_read` — manifest `deepdive_manifests/PMID41378749.json`\n"
+ },
+ {
+  "op": "insert-after",
+  "id": "LIT-0430",
+  "text": "\n## LIT-0431\n**Short title:** Xia 2017 Transl Psychiatry — infant brain-volume GWAS; rs10514437 (WWOX intron) below the study's own threshold, unreplicated\n**Authors:** Xia K et al.\n**Year:** 2017\n**Source type:** primary research — GWAS of neonatal MRI volumes\n**Journal/source:** *Transl Psychiatry* 2017;7(8):e1188\n**Identifier type:** PMID / DOI / PMCID\n**Identifier value:** PMID 28763065 / DOI 10.1038/tp.2017.159 / PMC5611727\n**Date discovered:** before 2026-10-02 (queued as `FT-142`)\n**Date processed:** 2026-10-02 (first-hand read, `FTR-20261002-28763065-01`)\n**Discovery source:** Orchestrator selection record of intake wave 2026-10-02\n**Status:** processed\n**Status note:** `partial_fulltext_read` — supplement read by label only, appendix plot books unread; record created by `CC-20261002-INTAKE-WAVE-ORPHANS-01` § 6\n**Primary pathway:** white matter / non-lineage association signals\n**Species:** human infants\n**Transferability:** T3 — common variation, normal-range volumetry\n**clinical relevance:** BACKGROUND — bounded context; the minor allele goes with *more* white matter\n**Claim links:** none — `CLAIM 003` explicitly untouched\n**Working Model impact:** none — no block is redefined\n**Report mentions:** `research/intake_wave_20261002_B.md` · `CC-20261002-B-INTRON8-01` · `CC-20261002-B-NONLINEAGE-01` · `CC-20261002-INTAKE-WAVE-ORPHANS-01`\n**Next action:** supplement appendices owed for a complete read\n**Evidence depth:** `partial_fulltext_read` — manifest `deepdive_manifests/PMID28763065.json`\n"
+ }
+]
+```
+
 ## BATCH DISPOSITION — `BATCH_20261002_001` (2026-10-02, ACTOR_ID `scientist`), append-only
 
 **Nothing above this line was rewritten.**
