@@ -2,9 +2,9 @@
 
 ## WWOX loss-of-function (WOREE / WWOX-DEE) — disease-level working model
 
-**Version:** WM_v7.7_2026-09-29
+**Version:** WM_v7.8_2026-10-02
 **Date baseline:** 2026-03-28
-**Last update:** 2026-09-29 — `BATCH_20260929_001` (**MINOR** — MANUAL, ACTOR_ID `orchestrator`; operator decision verbatim: *«ok per id di claim per chetogenica»*): the ketogenic-diet datum gets its own claim, **`CLAIM 042`**, with its evidence boundary written first (from `CC-20260929-KETOGENIC-CLAIM-01`, discharging the last residue of `CC-20260826-CROSS-CLAIM-CENSUS-03`). A targeted re-read of Chong 2023 (publisher passages; receipt `FTR-20260929-36537114-02`; blind locator audit T1–T5 SUPPORTED) corrects the model prose on two points. 🔴 **«3/5» is not a response rate:** the source names three responders but not how many of the five started the diet. 🔴 **The one Q230P carrier is not among the responders and has no diet entry at all**, so nothing about the diet transfers to the Q230P-bearing genotype class. The live DATA line and `PAPER 017`'s note are corrected in place, carrying the superseded wording. Claims 41 → **42**; no other claim, BLOCCO 1 field or therapeutic score moved. **Not medical advice.**
+**Last update:** 2026-10-02 — `BATCH_20261002_001` (**MINOR** — MANUAL, ACTOR_ID `scientist`; intake wave 2026-10-02, eight commit candidates propagated). Only `BLOCK 1 §4` changed in this file: one appended bullet recording that the dose reasoning has a floor and no measured ceiling. No block is redefined, no claim changes status, and the full note is in [`working_model_history.md`](working_model_history.md).
 
 > **Public edition — de-identified.** This is the **canonical, complete** disease-level working model: the fourth Layer-2 "current" file, the one the LINT engine requires alongside the claim / paper / literature registries. It carries the full claim mirror, the full version changelog and the full mechanistic architecture.
 > [`../disease_model.md`](../disease_model.md) is the **narrative reader-facing view** of the same model — shorter, prose-first, meant to be read top-to-bottom. Where the two differ in completeness, **this file is canonical**.
@@ -137,6 +137,7 @@ WWOX may also contribute directly to **ATM-linked DNA-damage-response competence
 - Pathway P7 therefore matures from **proof-of-concept to design-principle stage**: neuron targeting, expression control, dose calibration and the early window are the operative variables.
 - In humans, efficacy, safety and the optimal window remain under investigation.
 - **Partial rescue is expected to be beneficial** in genotype classes retaining a missense allele (Gao 2025 genotype–phenotype suggests partial restoration may suffice).
+- ⚠️ **The dose reasoning above has a floor and no ceiling, and nothing in this corpus has measured one** [added 2026-10-02, `CC-20261002-WWOX-DOSE-CEILING-01`]. Obeid 2026 reports no overexpression-toxicity endpoint, and no claim in this model states any consequence of *raising* WWOX. Outside the vector setting, three sources now say raising it is not uniformly benign — applied recombinant WWOX protein reduced viability of human ESC-derived cortical neurons **equally in disease and isogenic control cells** (PMID 42395553, ⚠️ **preprint, not peer reviewed**, applied protein rather than a transgene, no heat-denatured or endotoxin control reported, no in vivo arm); WWOX overexpression increased proliferation in 1 of 4 glioblastoma lines (PMID 37781246); and *«A certain amount of WWOX expression may be necessary for maintaining normal physiological functions in cells»* (PMID 33195192). 🟢 **None of this changes a dose position, and none of it is a hazard claim** — no source has a vector, a dose or an in vivo endpoint. It is recorded so that the absence of a ceiling is visible as an open question rather than as a settled one. See [[claim_registry_current#CLAIM 011]]. **Not medical advice.**
 
 ### Trial-readiness actions (generic)
 - Complete genetics.

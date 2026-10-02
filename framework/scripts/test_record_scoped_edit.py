@@ -357,18 +357,22 @@ class UnboundedSpan(unittest.TestCase):
     def test_the_last_record_of_every_registry_reaches_eof_and_only_one_is_refused(self) -> None:
         """🔴 THE REFUSAL MUST NOT BE BLUNT, measured on the live files, not reasoned about.
 
-        `BLOCK 3`, `PAPER 118` and `LIT-0420` are ALL EOF-spanning — the last record of every
-        registry is, by construction — and BATCH_20260928_002 edited the latter two legitimately.
-        A refusal keyed on "the span reaches EOF" alone would have refused two of that batch's
-        nine ops, and editing the newest PAPER or LIT record is the commonest edit here. What
-        makes the difference is whether the assumed tail COVERS anything: only `BLOCK 3` does.
+        `BLOCK 3` and the last record of each big registry are ALL EOF-spanning — the last
+        record of every registry is, by construction — and BATCH_20260928_002 edited the latter
+        two legitimately (then `PAPER 118` and `LIT-0420`; `BATCH_20261002_001` moved both tails
+        on to `PAPER 130` and `LIT-0429`, which is why the two registry rows are now DERIVED and
+        not pinned — a batch that appends a record must not have to edit this suite, and a
+        pinned name turned it red for doing exactly what it is here to allow). What makes the
+        difference is whether the assumed tail COVERS anything: only `BLOCK 3` does.
         """
         cases = (("working_model_current.md", "BLOCK 3", (1,), True),
-                 ("paper_registry_current.md", "PAPER 118", (2,), False),
-                 ("literature_tracking_log_current.md", "LIT-0420", (2,), False))
+                 ("paper_registry_current.md", None, (2,), False),
+                 ("literature_tracking_log_current.md", None, (2,), False))
         for name, record, levels, refused in cases:
             path = ROOT / "disease-models/wwox/registries" / name
             text = path.read_bytes().decode("utf-8")
+            if record is None:  # the live last record, whatever this batch left there
+                record = rse.identity_headings(text, levels)[-1][2]
             span = rse.resolve(text, op(op="replace", id=record), levels)
             with self.subTest(record):
                 self.assertTrue(span.to_eof, f"{record} must be the EOF-spanning last record")

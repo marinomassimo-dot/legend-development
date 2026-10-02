@@ -44,3 +44,20 @@ The receipts `FTR-20261002-30746283-01`, `-29390993-01`, `-32081867-01` and `-40
 (the case deletion involves the last exon of shorter transcripts | deletion involving the last exon of the two shorter gene transcript variants of the WWOX gene (NM_130791.3 and NR_120436.1) | PMID 32081867, Results; files/fulltext/PMID32081867_Bacchelli2020_PMC.xml)
 (172 UK Biobank participants carry the WWOX missense | 172 individuals in the UKBB who carried the WWOX c.49G>A variant | PMID 40191585, Materials and methods; files/fulltext/PMID40191585_Robertson2025_PMC.xml)
 (carrier copy number is not determined by the method | Additionally, FoundHaplo cannot determine the exact number of disease haplotype copies in a test individual. | PMID 40191585, Discussion; files/fulltext/PMID40191585_Robertson2025_PMC.xml)
+
+## BATCH DISPOSITION — `BATCH_20261002_001` (2026-10-02, ACTOR_ID `scientist`), append-only
+
+**Nothing above this line was rewritten.**
+
+**Verdict:** PROPAGATED
+
+Class re-judged by the integrator against `prompt_batch_commit.md` §7 and confirmed **MINOR**:
+`CLAIM 032` is `in observation`, not a `consolidated baseline` claim, and the op is a pure append
+after the record's last statement. No blind locator audit was therefore owed. Applied as written
+(`replace-within`, 1 of 2 ops on `claim_registry_current.md`, exit 0). The record's own
+`DO_NOT_INFER` and `DO_NOT_CITE` lines were measured byte-identical before and after (sha256 per
+line; none lost; the record gained exactly one line), so the appended carrier paragraph did not
+re-parent either prohibition's grounds — the `BATCH_20260928_005` op-`B2` defect class, excluded by
+measurement rather than by care. The four carrier observations land with the `PAPER` records of
+`CC-20261002-INTAKE-A-REGISTRY-01` (`PAPER 119`, `121`, `123`, `124`), whose provisional numbers
+held.
