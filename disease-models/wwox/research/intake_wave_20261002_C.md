@@ -202,7 +202,54 @@ a neural or in vivo Wwox-deficient system where NAC does not move the phenotype.
   `deepdive_manifest.py` correctly refuses as an unverifiable text surface; `-nopgbrk` re-derives it
   cleanly. The same derivation renders **γ as a Latin `g`**, which every quote from it must carry.
 
-## 7 · Candidates produced
+## 7 · Gates, and the one suite that is red
+
+| Gate | Result |
+|---|---|
+| `legend_lint.py .` | exit 0, **0** `BLOCK_BATCH_COMMIT` / `BLOCK_SYSTEM` |
+| `fulltext_receipts.py verify` | exit 0 — `OK: 267 chained receipt(s), tail anchored` |
+| `growth_anchors.py check` | exit 0 — **PASS**; backlog 5 → 7, which is this wave's two candidates and is expected |
+| `scripts/public_release_gate.py` | exit 0 — **VERDICT: PASS**, 0 `[BLOCK]`, and **0** `[REVIEW]` lines touching any file of this wave |
+| `test_section_references.py` · `test_link_targets.py` · `test_fresh_clone_reader_journey.py` · `test_pathograph.py` | all exit 0, OK |
+| `candidate_tree_freshness.py` | exit 0 — **VERDICT: FRESH** |
+| `pathograph.py --verify` | **CURRENT** after regeneration with the generator |
+| `scripts/run_release_regressions.py` | **exit 1 — one suite red:** `test_manifest_receipt_provenance.py` |
+
+### The red suite, diagnosed to its cause
+
+`test_the_declared_ceiling_is_the_measured_count` asserts `BASELINE_DEFECTS == 15` and measured
+**21**. The six extra are exactly this wave's six manifests, all class **`UNKNOWN_EVENT`** — *"the
+declared receipt is not in the ledger"*.
+
+🟢 **That is the brief's own instruction, not a defect in the work.** The receipts are prepared and
+deliberately **not** recorded, because the ledger is hash-chained and three scientists are writing
+in parallel; the Orchestrator trial-records them in a scratch clone and appends them in event-ID
+order. Between landing and that append, the suite must read 21.
+
+**It closes on append, and that was verified rather than assumed** — the six pending receipts were
+loaded alongside the live 267-event ledger and the module's own `assess()` re-run over every
+manifest:
+
+```
+BEFORE append  total defects = 21 (ceiling 15) | my six: all UNKNOWN_EVENT
+AFTER  append  total defects = 15 (ceiling 15) | my six: all CONFORMS
+```
+
+🔴 **One repair this check forced, and it would have been a silent defect.** The receipt JSONs
+originally carried no `outputs` field. Appending them in that shape would have moved the six from
+`UNKNOWN_EVENT` to **`UNCHECKABLE`** — *"no same-study event names this manifest among its
+outputs"* — which is not a defect class the ceiling counts and would therefore have passed the
+suite while leaving six manifests permanently unattributable. Each receipt now names its manifest,
+its dossier and this note in `outputs`, which is what makes the simulated result `CONFORMS`.
+
+**The ceiling was not raised.** The module says *"re-measure and lower it when the tail is repaired
+— never raise it"*, and the 15 pre-existing defects (13 `NOT_THE_PRODUCER`, 2 `UNNAMED`) are
+untouched by this wave.
+
+**Action for the Orchestrator:** append the six `sciC_<pmid>_1.json` receipts, then re-run
+`python3 framework/scripts/test_manifest_receipt_provenance.py` and expect exit 0.
+
+## 8 · Candidates produced
 
 | ID | Class | Targets | Triples |
 |---|---|---|---|
