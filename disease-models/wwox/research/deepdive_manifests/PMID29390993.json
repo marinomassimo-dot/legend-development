@@ -1,0 +1,223 @@
+{
+ "schema_version": 2,
+ "pmid": "29390993",
+ "doi": "10.1186/s12920-018-0320-7",
+ "receipt": "FTR-20261002-29390993-01",
+ "landing": [
+  "fulltext_dossiers/PMID29390993.md",
+  "CC-20261002-HETEROZYGOTE-CARRIERS-01",
+  "CC-20261002-INTAKE-A-REGISTRY-01",
+  "disease-models/wwox/research/intake_wave_20261002_A.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Tier 1 of its cascade (NCBI efetch PMC JATS) returned a full body; Europe PMC supplementaryFiles supplied the figures and deposited supplements."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline by the reader: the brief fixes SOURCE_FIRST, and a delegated deep dive would have been handed LEGEND's prior answer or none of the class-level question."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Producer must not be verifier: the triples go to the blind audit through the LOCATOR TRIPLES section of the wave's commit candidates."
+  }
+ ],
+ "context_policy": "SOURCE_FIRST",
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 186,
+  "publications_on_gene": 1,
+  "counts_measured": "PubMed esearch 2026-10-02: 'Kang HC[au] AND epilepsy' 186 (senior author; the first author has no separable record); 'Kang HC[au] AND WWOX' 1",
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "A national referral epilepsy centre with an in-house laboratory pipeline. The observation (the WWOX patient's two alleles, parental testing, exon-level depth plot) is weighted as a laboratory-grade diagnostic call with phase established by parental testing; the clinical detail for that patient is only the syndrome class in Table S4."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "WWOX AND epilepsy AND gene panel",
+    "route": "PubMed esearch 2026-10-02",
+    "count": 7
+   }
+  ],
+  "note": "172-gene panel series; WWOX is one of 17 diagnosed genes."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 24,
+  "enumeration_method": "<ref> elements in the PMC JATS ref-list; 24.",
+  "gene_direct_refs_in_source": [],
+  "note": "No reference is WWOX-directed; the paper cites no WWOX source for its WWOX patient."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Which artefacts for this paper already exist in the shared files/ tree, and does any receipt or registry record already hold it?",
+  "hits": 0,
+  "finding": "No artefact, no receipt, no registry record. ft116_cohort_triage_20260921.md held it at abstract level only."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-02",
+  "route": "PubMed esummary (eutils) 2026-10-02, pubtype and references fields",
+  "result": "Journal Article; no retraction, expression of concern or erratum linked.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 24,
+   "references_screened": 24,
+   "references_with_doi": 24,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 22,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID29390993_Rim2018_PMC.xml",
+   "sha256": "63ddf492152993063dbf79dbefcd7275380d5516b0c39debf35496cd37c65687",
+   "kind": "article_text",
+   "note": "PMC JATS; Tables 1-3 inline in the body.",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=5796507&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-02",
+    "derived": false,
+    "result_sha256": "63ddf492152993063dbf79dbefcd7275380d5516b0c39debf35496cd37c65687"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID29390993_assets/12920_2018_320_Fig1_HTML.jpg",
+   "sha256": "8d58c486131188782e120cd74eb3a979d2e9f204a5b9a8041f3a9035ca2d2870",
+   "kind": "figure",
+   "note": "Figure 1, pipeline flow chart, inspected. Member of the Europe PMC supplementaryFiles archive for PMC5796507, stored beside it as PMID29390993_PMC5796507_supplementaryFiles.zip; the archive's route and sha256 are recorded in research/intake_wave_20261002_A.md.",
+   "acquisition_recipe": {
+    "no_recipe": "extracted from the declared supplementaryFiles archive with Python zipfile; the archive itself carries the route"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID29390993_assets/12920_2018_320_Fig2_HTML.jpg",
+   "sha256": "97f284a97dff10deae83bb55f13bc6f9ff8abf2e641581251781511b0d77a8af",
+   "kind": "figure",
+   "note": "Figure 2, exon-level depth plots including panel a-2 (WWOX), inspected at native size. Member of the Europe PMC supplementaryFiles archive for PMC5796507, stored beside it as PMID29390993_PMC5796507_supplementaryFiles.zip; the archive's route and sha256 are recorded in research/intake_wave_20261002_A.md.",
+   "acquisition_recipe": {
+    "no_recipe": "extracted from the declared supplementaryFiles archive with Python zipfile; the archive itself carries the route"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID29390993_assets/12920_2018_320_MOESM1_ESM.xlsx",
+   "sha256": "964ae264890de9f172e44712f9e948fc7d2ef311f3ef8a6e7a957e6f7db92d20",
+   "kind": "supplement_binary",
+   "note": "Additional file 1 (Tables S1-S5), xlsx container; verified through the derived text below. Member of the Europe PMC supplementaryFiles archive for PMC5796507, stored beside it as PMID29390993_PMC5796507_supplementaryFiles.zip; the archive's route and sha256 are recorded in research/intake_wave_20261002_A.md.",
+   "acquisition_recipe": {
+    "no_recipe": "extracted from the declared supplementaryFiles archive with Python zipfile; the archive itself carries the route"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID29390993_assets/12920_2018_320_MOESM1_ESM_xlsxdump.txt",
+   "sha256": "3c409384d77966dc9c0349af4f93fdb2c3b718dffb8e516ee9243f1a827c8bf8",
+   "kind": "supplement_text",
+   "note": "Deterministic cell dump of all five sheets, read in full.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID29390993_assets/12920_2018_320_MOESM1_ESM.xlsx",
+    "extractor": {
+     "name": "xlsxdump_extractor.py (stdlib zipfile + ElementTree; copy stored beside the output)",
+     "version": "sha256 e78717eee66df4340ae927e1a4c4d683dccd3f02dfa4af3588fc434d3faddd92",
+     "call": "python3 xlsxdump_extractor.py <xlsx> > <txt>; one line per row, cells as REF=value joined by ' | ', shared strings resolved",
+     "join": "\n"
+    },
+    "acquired_on": "2026-10-02"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC JATS from efetch db=pmc id=5796507 (98,824 bytes); Table 1 flattens with spaces into the body surface. The xlsx supplement is verified through a declared derived text dump.",
+  "abstract_anchoring_waived": "No locator draws on the abstract; every text entry is matched against the body, table or a declared supplement surface.",
+  "entries": [
+   {
+    "proposition": "ALLELE 1 of the WWOX patient: a nonsense variant (PVS1-based Pathogenic call), heterozygous, inherited from one parent; transcript NM_016373.2. The codon lies in the last coding exon (exon 9 starts at c.1057 by LEGEND's boundary map), a point the paper does not make.",
+    "snippet": "AR NM_016373.2 c.1060C > T p.Gln354Ter Heterozygosity Pathogenic PVS1, PM2, PM3, PP4",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID29390993_Rim2018_PMC.xml",
+    "anchor": "Table 1, first WWOX row",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "ALLELE 2 of the WWOX patient: an intragenic duplication of exons 6-8, Likely pathogenic without PVS1, inherited from the other parent. Phase is established by parental testing; whether the duplication is tandem and in frame is not reported.",
+    "snippet": "AR NM_016373.2 exon 6–8 duplication _ Heterozygosity Likely pathogenic PM2, PM3, PP4, PP5",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID29390993_Rim2018_PMC.xml",
+    "anchor": "Table 1, second WWOX row",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "HOW THE DUPLICATION WAS CALLED: relative read depth on the panel, confirmation of exon-level CNVs by MLPA.",
+    "snippet": "Large exonic deletions and duplications were confirmed using the MLPA kit (MRC Holland).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29390993_Rim2018_PMC.xml",
+    "anchor": "Methods, 'Confirmation using other methods'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2 a-2 inspected: normalized depth for the WWOX patient is raised across WWOX exons 6, 7 and 8 of NM_016373 and returns to baseline at exon 9, with the ExomeDepth call bar spanning those exons.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2 panel a-2 (WWOX): nine exon boxes on NM_016373; the purple normalized-depth trace sits about +0.3 to +0.5 over boxes 6-8 and near 0 elsewhere; red bar labelled 'Heterozygous duplication of exon 6-8'.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID29390993_assets/12920_2018_320_Fig2_HTML.jpg",
+    "anchor": "Figure 2, panel a-2",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "HETEROZYGOUS CARRIERS, class level: both parents of every proband were asymptomatic by an inclusion criterion; the WWOX patient's two parents each carry one of the two alleles. 'Asymptomatic' is an enrolment condition, not a reported examination.",
+    "snippet": "and (7) offspring of asymptomatic",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29390993_Rim2018_PMC.xml",
+    "anchor": "Methods, 'Patients and clinical information', inclusion criteria",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PHENOTYPE BAND OF THE COHORT: drug-resistant early-onset epilepsy with progressive delay or an epileptic-encephalopathy syndrome.",
+    "snippet": "(3) diagnosed with drug-resistant epilepsy and progressive developmental delay or with a known epileptic encephalopathy syndrome",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29390993_Rim2018_PMC.xml",
+    "anchor": "Methods, inclusion criteria",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PHENOTYPE BAND OF THE WWOX PATIENT: the supplement places the one WWOX patient in the infantile-spasm group; no other per-patient phenotype is published.",
+    "snippet": "F3=BRAT1 (1), CDKL5 (2), COL4A1 (1), DNM1 (1), GNAO1 (2), KCNQ2 (2), MECP2 (1), STXBP1 (3), WWOX (1), CNV (2)",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID29390993_assets/12920_2018_320_MOESM1_ESM_xlsxdump.txt",
+    "anchor": "Table S4, row 'Infantile spasm', column 'List of affected genes'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1 inspected: the analysis flow chart includes ExomeDepth and normalized-depth exonic CNV calling, consensus discussion, confirmation and parental study, as the Methods state.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1 flow chart: Raw data, BWA, GATK; branches Pindel/Manta, Normalized depth/ExomeDepth (Exonic CNVs), CopywriteR; then consensus discussion, confirmation (Sanger, MLPA, microarray), parental study, final ACMG assessment.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID29390993_assets/12920_2018_320_Fig1_HTML.jpg",
+    "anchor": "Figure 1",
+    "panel_text_relation": "text_confirmed_by_panel"
+   }
+  ]
+ }
+}

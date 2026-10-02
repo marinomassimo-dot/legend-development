@@ -1,0 +1,177 @@
+{
+ "schema_version": 2,
+ "pmid": "24949445",
+ "doi": "10.1155/2014/424796",
+ "receipt": "FTR-20261002-24949445-01",
+ "landing": [
+  "fulltext_dossiers/PMID24949445.md",
+  "CC-20261002-DOSE-GAIN-DISMISSAL-01",
+  "CC-20261002-INTAKE-A-REGISTRY-01",
+  "disease-models/wwox/research/intake_wave_20261002_A.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Tier 1 of its cascade (NCBI efetch PMC JATS) returned a full body; Europe PMC supplementaryFiles supplied the figures and deposited supplements."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline by the reader: the brief fixes SOURCE_FIRST, and a delegated deep dive would have been handed LEGEND's prior answer or none of the class-level question."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Producer must not be verifier: the triples go to the blind audit through the LOCATOR TRIPLES section of the wave's commit candidates."
+  }
+ ],
+ "context_policy": "SOURCE_FIRST",
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 238,
+  "publications_on_gene": 1,
+  "counts_measured": "PubMed esearch 2026-10-02: 'Szymanska K[au]' 238; 'Szymanska K[au] AND WWOX' 1",
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "A child-neurology group reporting seven heterogeneous cases. The observation (array coordinates, phenotype, unknown inheritance) is weighted as one case; the interpretation that the duplication affects WWOX dose is the authors' and is tested here against their own coordinates."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "WWOX AND duplication",
+    "route": "PubMed esearch 2026-10-02",
+    "count": 18
+   }
+  ],
+  "note": "Seven-case series; one case carries a 16q23.1 duplication."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 28,
+  "enumeration_method": "<ref> elements in the PMC JATS ref-list; 28.",
+  "gene_direct_refs_in_source": [
+   "22484428",
+   "18371080"
+  ],
+  "resolved": [
+   {
+    "pmid": "22484428",
+    "how": "Held as CORPUS-STUB-121 / LIT-0140 (WWOX apoptosis in A549). Background only; no proposition here rests on it."
+   },
+   {
+    "pmid": "18371080",
+    "how": "Mention-only (WOX1 in MPP+ neuronal death). Background only; no proposition here rests on it; not opened."
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Which artefacts for this paper already exist in the shared files/ tree, and does any receipt or registry record already hold it?",
+  "hits": 0,
+  "finding": "No artefact, no receipt, no registry record."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-02",
+  "route": "PubMed esummary (eutils) 2026-10-02, pubtype and references fields",
+  "result": "Journal Article; no retraction, expression of concern or erratum linked.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 28,
+   "references_screened": 24,
+   "references_with_doi": 24,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 22,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 4
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID24949445_Szymanska2014_PMC.xml",
+   "sha256": "728096ca8f49a18bddcad30fe8f0c004bfd2cbf1a9497c8481240b913ffe476d",
+   "kind": "article_text",
+   "note": "PMC JATS; Tables 1-4 in floats-group. The paper has no figures, and Europe PMC returns no supplementary files for it.",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4052700&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-02",
+    "derived": false,
+    "result_sha256": "728096ca8f49a18bddcad30fe8f0c004bfd2cbf1a9497c8481240b913ffe476d"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC JATS from efetch db=pmc id=4052700 (76,159 bytes).",
+  "abstract_anchoring_waived": "No locator draws on the abstract; every text entry is matched against the body, table or a declared supplement surface.",
+  "entries": [
+   {
+    "proposition": "THE DUPLICATION AS PRINTED: array CGH, hg18 coordinates, size 0.744-0.827 Mb, inheritance unknown.",
+    "snippet": "1 Array CGH arr 16q23.1 (77,445,915–78,190,209) dup 0.744–0.827 Unknown",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID24949445_Szymanska2014_PMC.xml",
+    "anchor": "Table 4, patient 1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE AUTHORS' DOSE INTERPRETATION, which this reading tests against the coordinates: mapped to GRCh37 the interval covers only the last WWOX exon and the 3' part of intron 8 (plus MAF), not the whole gene.",
+    "snippet": "The duplication found in Patient 1 affects two dose-sensitive genes: WWOX (OMIM 605131) and MAF (OMIM 177075).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24949445_Szymanska2014_PMC.xml",
+    "anchor": "Discussion, paragraph on patient 1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "SEGREGATION NOT ESTABLISHED: no paternal DNA; the significance is called limited by the authors.",
+    "snippet": "The significance of this change in our patient is limited by the lack of paternal DNA and detailed clinical data about speech development in the father.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24949445_Szymanska2014_PMC.xml",
+    "anchor": "Discussion, paragraph on patient 1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PHENOTYPE BAND: a non-progressive neurodevelopmental disorder with severe expressive language impairment and declining nonverbal IQ, plus epilepsy whose EEG normalised on valproate. Not a DEE band.",
+    "snippet": "epilepsy—valproic acid resulted in a complete EEG normalization",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID24949445_Szymanska2014_PMC.xml",
+    "anchor": "Table 1, patient 1, 'Clinical symptoms'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PHENOTYPE BAND, cognitive course: nonverbal IQ falling across repeated testing.",
+    "snippet": "6 yr—nonverbal Leiter scale IQ-75; 11 yr and 13 yr—nonverbal scale of the WISC-R test IQ 52; 17 yr—nonverbal scale of the WISC-R test IQ 42",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID24949445_Szymanska2014_PMC.xml",
+    "anchor": "Table 2, patient 1, 'Intellectual functioning'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE LINK TO WWOX IS SPECULATIVE in the authors' own words.",
+    "snippet": "It is difficult to attribute deep speech and language impairment, which dominates in the clinical picture of this patient, to the duplication of a specific gene",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24949445_Szymanska2014_PMC.xml",
+    "anchor": "Discussion, paragraph on CMIP",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}
