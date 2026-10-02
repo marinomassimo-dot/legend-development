@@ -6759,7 +6759,7 @@ a materially new research programme and **the Operator's decision**.
 Bears on the therapeutic-window question, which this branch has open from two directions: the
 **post-diagnosis window** (`D-31` — `P1–P5` is the set of ages tested, **not** a window) and the
 **model-horizon versus therapeutic-window** distinction (`D-36`).
-⚠️ **Neither paper is a WWOX paper.** They are queued as **developmental-timing context**, and must
+⚠️ **Neither paper is a WWOX-function paper — but both report a WWOX-locus association** (narrowed 2026-10-02 from "Neither paper is a WWOX paper.", CC-20261002-B-NONLINEAGE-01): PMID 28763065, rs10514437 (WWOX intron, genotyped, MAF 0.03) with infant white-matter volume, P 1.56e-8 against a study threshold of 1.25e-8, unreplicated, minor allele associated with *more* white matter; PMID 41378749, three imputed WWOX intron-8 SNPs nominally associated with spina bifida (OR about 6.2, p 2.2e-6, suggestive threshold only), absent from the technical replication. Neither is a finding. Both read 2026-10-02 (FTR-20261002-28763065-01, partial; FTR-20261002-41378749-01, complete). They are queued as **developmental-timing context**, and must
 never be cited as WWOX evidence.
 
 ---
