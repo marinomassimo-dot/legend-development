@@ -1,0 +1,278 @@
+{
+  "schema_version": 2,
+  "pmid": "25650666",
+  "doi": "10.18632/oncotarget.2876",
+  "receipt": "FTR-20261003-25650666-02",
+  "landing": [
+    "FTR-20261003-25650666-02",
+    "disease-models/wwox/research/fulltext_dossiers/PMID25650666.md",
+    "disease-models/wwox/research/intake_wave_20261003_B.md"
+  ],
+  "skills_considered": [
+    {
+      "skill": "legend-deepdive",
+      "used": false,
+      "reason": "Run inline; figure inspection and locator capture had to come from the same open document as the text reading."
+    },
+    {
+      "skill": "find-fulltext",
+      "used": false,
+      "reason": "Europe PMC fullTextXML returned HTTP 200 with a body on the first attempt; figures, PDF and supplements came from the PMC open-access S3 mirror, which needed no cascade."
+    },
+    {
+      "skill": "legend-locator-audit",
+      "used": false,
+      "reason": "OWED. This reading narrows claims that the working model may rest on and carries text-versus-panel contradictions, which is exactly the trigger."
+    }
+  ],
+  "group_assessment": {
+    "performed": true,
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": false,
+    "is_primary_group_for_gene": false,
+    "total_publications": 0,
+    "publications_on_gene": 0,
+    "counts_note": "total_publications and publications_on_gene are 0 because no per-author output count was measured in this pass. A zero here means NOT MEASURED, not zero publications.",
+    "note": "Research-group knowledge base excluded from the public edition; this rests on measured PubMed counts and the paper's own author and reference lists.",
+    "counts_measured": "PubMed esearch 2026-10-02 (tool=LEGEND-research): 'WWOX AND TIAF1' 9 records and 'WWOX AND TIAF1 NOT Chang NS[au]' 0 records; '\"TRAPPC6A\" AND (aggregation OR plaque)' 4 records, all four from this laboratory; 'Zfra' 17 records and 'Zfra NOT Chang NS[au]' 1 record, which is an unrelated zebrafish androgen-receptor paper matching the string by accident; 'WWOX AND \"dorsal root ganglion\"' 1 record, the group's own.",
+    "self_citation_measured": "Of this paper's 41 references none carries a PMID in the deposit, so authorship was read from the reference strings: 17 of 41 name Chang NS or Sze CI (41 percent).",
+    "weighting": "Originating laboratory of the TRAPPC6A-delta node and, on the measurement above, the only one publishing on it. Its measurements are not thereby wrong; they are unreplicated."
+  },
+  "field_density": {
+    "wwox_directed": true,
+    "queries": [
+      {
+        "query": "WWOX AND TIAF1 NOT Chang NS[au]",
+        "route": "PubMed esearch 2026-10-02",
+        "count": 0
+      },
+      {
+        "query": "\"TRAPPC6A\" AND (aggregation OR plaque)",
+        "route": "PubMed esearch 2026-10-02",
+        "count": 4
+      }
+    ],
+    "note": "Maximum density for the mechanism, zero density outside one laboratory."
+  },
+  "multihop": {
+    "performed": false,
+    "references_enumerated": 41,
+    "gene_direct_refs_in_source": [],
+    "enumeration_method": "41 references parsed from the JATS back matter; the deposit carries no PMID for any of them, so authorship was read from the citation strings and no multihop queue was built.",
+    "resolved": [],
+    "queued": []
+  },
+  "corpus_crossquery": {
+    "performed": true,
+    "query": "Does any laboratory other than this one report TRAPPC6A-delta aggregation or pT181-tau in a Wwox-null brain?",
+    "hits": 0,
+    "finding": "No. The isoform itself (GenBank FJ418644) and the four antibodies that detect it are this laboratory's own reagents, and the four aggregation papers are its own."
+  },
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-10-02",
+    "route": "PubMed esummary pubtype for 25650666 and exact DOI/PMID match against files/retraction_watch/retractionwatch_20261002.csv (72870 rows)",
+    "result": "No retraction, no expression of concern, no erratum; no Retraction Watch row.",
+    "hold": false,
+    "dependencies": {
+      "flagged": [],
+      "noted": [],
+      "paper_verdict": "SCREENED_CLEAN",
+      "reference_source": "network",
+      "references_declared": 41,
+      "references_screened": 38,
+      "references_with_doi": 38,
+      "schema": "retraction_check.dependencies/1",
+      "screened": true,
+      "snapshot": {
+        "date": "2026-09-10",
+        "days_since_fetch": 22,
+        "rows": 72476,
+        "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+      },
+      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+      "unscreenable": {
+        "UNSCREENABLE_NO_DOI": 3
+      }
+    }
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID25650666_Chang2015_PMC.xml",
+      "sha256": "a1d44f6d2454c505b2bcad8b7934555736944dc23c8fbc130f4cf8719f11f7d3",
+      "kind": "article_text",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4414138/fullTextXML",
+        "http_method": "GET",
+        "tier": "europepmc_rest_fulltextxml",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-02",
+        "derived": false,
+        "result_sha256": "a1d44f6d2454c505b2bcad8b7934555736944dc23c8fbc130f4cf8719f11f7d3"
+      }
+    },
+    {
+      "path": "files/supplements/PMID25650666/PMC4414138.1.pdf",
+      "sha256": "dbcdb3335c16bb09286da2303870ee097fc6d29ee236cfbc3e9b4e5a3ea37ba3",
+      "kind": "article_binary",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4414138.1/PMC4414138.1.pdf",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-02",
+        "derived": false,
+        "result_sha256": "dbcdb3335c16bb09286da2303870ee097fc6d29ee236cfbc3e9b4e5a3ea37ba3"
+      },
+      "note": "The typeset article PDF. Its embedded figure images are 1500-1750 px wide against 550 px for the PMC figure rasters, which is why the panel readings below are taken from it."
+    },
+    {
+      "path": "files/supplements/PMID25650666/oncotarget-06-3578-s001.pdf",
+      "sha256": "138ae74a7475613ff477d8639c234222c3b70f0cacb27104c59ad12050829cb5",
+      "kind": "article_binary",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4414138.1/oncotarget-06-3578-s001.pdf",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-02",
+        "derived": false,
+        "result_sha256": "138ae74a7475613ff477d8639c234222c3b70f0cacb27104c59ad12050829cb5"
+      }
+    },
+    {
+      "path": "files/figure_renders/PMID25650666/pdfimg_p07_0.jpeg",
+      "sha256": "5b0f5256f833496de132260679d08ec56a1bb34183b099a7f2879523a5c415c4",
+      "kind": "figure",
+      "acquisition_recipe": {
+        "resolved_url": "derived: pymupdf extract_image of the single embedded image on page 7 of PMC4414138.1.pdf (1500x1196 px) = article Figure 5",
+        "http_method": "GET",
+        "tier": "local_pdf_image_extraction",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-02",
+        "derived": true,
+        "result_sha256": "5b0f5256f833496de132260679d08ec56a1bb34183b099a7f2879523a5c415c4",
+        "derived_from": "files/supplements/PMID25650666/PMC4414138.1.pdf",
+        "extractor": {
+          "name": "pymupdf",
+          "version": "1.28.2",
+          "call": "pymupdf.open(<pdf>).extract_image(xref) for the embedded image of the named page, bytes written unchanged"
+        }
+      }
+    },
+    {
+      "path": "files/figure_renders/PMID25650666/pdfimg_p05_0.jpeg",
+      "sha256": "6a234a2087f80902c7d0c18d100a239a75efa21df1e05dc3ed4aba8acd3dc166",
+      "kind": "figure",
+      "acquisition_recipe": {
+        "resolved_url": "derived: pymupdf extract_image of the single embedded image on page 5 of PMC4414138.1.pdf (1750x1032 px) = article Figure 3",
+        "http_method": "GET",
+        "tier": "local_pdf_image_extraction",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-02",
+        "derived": true,
+        "result_sha256": "6a234a2087f80902c7d0c18d100a239a75efa21df1e05dc3ed4aba8acd3dc166",
+        "derived_from": "files/supplements/PMID25650666/PMC4414138.1.pdf",
+        "extractor": {
+          "name": "pymupdf",
+          "version": "1.28.2",
+          "call": "pymupdf.open(<pdf>).extract_image(xref) for the embedded image of the named page, bytes written unchanged"
+        }
+      }
+    },
+    {
+      "path": "files/figure_renders/PMID25650666/supp/sp02_0.jpeg",
+      "sha256": "dd0398494501d02402ff393487d75cc8dc3ce47ca2daf312f3d588e726fed4e5",
+      "kind": "figure",
+      "acquisition_recipe": {
+        "resolved_url": "derived: pymupdf extract_image of the first embedded image on page 2 of oncotarget-06-3578-s001.pdf = Supplementary Figure 2",
+        "http_method": "GET",
+        "tier": "local_pdf_image_extraction",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-02",
+        "derived": true,
+        "result_sha256": "dd0398494501d02402ff393487d75cc8dc3ce47ca2daf312f3d588e726fed4e5",
+        "derived_from": "files/supplements/PMID25650666/oncotarget-06-3578-s001.pdf",
+        "extractor": {
+          "name": "pymupdf",
+          "version": "1.28.2",
+          "call": "pymupdf.open(<pdf>).extract_image(xref) for the embedded image of the named page, bytes written unchanged"
+        }
+      }
+    }
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC JATS XML fingerprinted; all six figure rasters, the typeset article PDF and the supplementary PDF retrieved from the PMC open-access S3 mirror. The PMC figure rasters are 550 px wide and illegible at panel level, so every panel reading below is taken from images extracted out of the article PDF at 1500-1750 px. The supplementary PDF's five pages were read in full and its four embedded figure images extracted and inspected.",
+    "abstract_anchoring_waived": "No locator is abstract-anchored, and one entry exists precisely because the abstract and the Results disagree.",
+    "entries": [
+      {
+        "proposition": "THE ABSTRACT'S HUMAN CLAIM IS NOT WHAT THE RESULTS REPORT. The abstract says filter retardation showed TPC6A-delta aggregation 'preceding' amyloid-beta generation in middle-aged normal hippocampi; the Results report no difference between controls and Alzheimer cases for this protein.",
+        "snippet": "No significant difference was shown in TPC6A or TIAF1 aggregation",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID25650666_Chang2015_PMC.xml",
+        "anchor": "Figure 3 legend / Results, 'Aggregation of TPC6A and TIAF1 in nondemented human hippocampi'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "FIGURE ATTESTATION. Figure 3A is the panel behind the sentence above and it adjudicates: the TPC6A bars carry p = 0.942 and the TIAF1 bars p = 0.850, while p-WWOX (p = 0.036), NFT (p = 0.014) and amyloid-beta (p = 0.003) do separate. The null is therefore not a power failure of the assay: the same blot separates three other analytes on the same samples.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3A bar chart '% Protein aggregation in hippocampus', C vs AD pairs: TPC6A p=0.942, TIAF1 p=0.850, p-WWOX p=0.036, NFT p=0.014, Abeta p=0.003.",
+        "surface": "figure",
+        "artifact": "files/figure_renders/PMID25650666/pdfimg_p05_0.jpeg",
+        "anchor": "Figure 3A, image extracted from page 5 of the article PDF at 1750 px width",
+        "panel_text_relation": "text_confirmed_by_panel"
+      },
+      {
+        "proposition": "The human filter-retardation result that the abstract reports was obtained with the pan-specific antibody, which by the paper's own Methods cannot distinguish wild-type TPC6A from the delta isoform. So no human measurement in this paper is isoform-resolved.",
+        "snippet": "Western blotting was then carried out using specific antibodies for TPC6A (pan-specific)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID25650666_Chang2015_PMC.xml",
+        "anchor": "Figure 3 legend, panel A",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Antibody validation for all four homemade antisera is peptide blocking only. No genetic null, no knockdown and no pre-immune serum control is reported for them.",
+        "snippet": "Specificity of the antisera was tested using the synthetic peptides to block immunostaining",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID25650666_Chang2015_PMC.xml",
+        "anchor": "Methods, 'Antibodies and antibody production in rabbits'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THE EARLIER PARTIAL READING COULD NOT SEE THIS, AND IT MATTERS. The pT181-tau claim - the only tau datum in a young WWOX-null brain anywhere in this corpus - is a count of aggregates in whole brain-hemisphere sections, n = 5, p = 0.0176, with heterozygous animals included and indistinguishable from wild type. It is a stereological-style count, not a biochemical measurement of tau phosphorylation.",
+        "snippet": "pT181-Tau aggregates were significantly increased in the brain hemisphere sections",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID25650666_Chang2015_PMC.xml",
+        "anchor": "Results, 'Wwox gene ablation induces TPC6A-delta and tau aggregation in the brain of 3-week-old knockout mice'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "FIGURE ATTESTATION qualifying the sentence above. Figure 5D shows three photomicrographs (two Wwox-/-, one Wwox+/+) and one bar chart with three genotype bars: +/+ about 11, -/+ about 6, -/- about 26 aggregates, error bars that overlap between +/+ and -/-, and a single bracket labelled p = 0.0176 drawn from +/+ to -/-. The heterozygote mean is BELOW wild type, so this panel carries no dose-dependence and the brief's reading of it as a graded genotype effect is not supported.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 5D 'pT181-Tau': three micrographs labelled Wwox -/-, Wwox -/-, Wwox +/+; bar chart '# of pT181 Tau aggregates' with bars +/+ ~11, -/+ ~6, -/- ~26 and a bracket p = 0.0176 spanning +/+ to -/-.",
+        "surface": "figure",
+        "artifact": "files/figure_renders/PMID25650666/pdfimg_p07_0.jpeg",
+        "anchor": "Figure 5D, image extracted from page 7 of the article PDF at 1500 px width",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[4]",
+        "qualifies_needle": "aggregates were significantly increased in the brain hemisphere sections"
+      },
+      {
+        "proposition": "The Wwox-null mouse used here is a whole-body constitutive knockout that dies at about a month, so every phenotype it carries is read at a developmental stage no human WWOX-DEE genotype class can be compared with directly, and against a survival ceiling that bounds any latency statement made from it.",
+        "snippet": "The mice can only survive for about a month",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID25650666_Chang2015_PMC.xml",
+        "anchor": "Results, 'Wwox gene ablation induces TPC6A-delta and tau aggregation in the brain of 3-week-old knockout mice'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "SUPPLEMENT-VERSUS-METHODS CONTRADICTION found only by reading the supplementary PDF. The Methods name the pan-specific peptide as residues 84-100 and the second phosphosite as Tyr112; Supplementary Figure 1 names the same peptide as residues 70-86 and the site as Tyr116. The peptide sequence is identical in both, so the numbering - not the reagent - is inconsistent.",
+        "snippet": "amino acid #84–100 for pan-specific antibody production",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID25650666_Chang2015_PMC.xml",
+        "anchor": "Methods, 'Antibodies and antibody production in rabbits', peptide 1",
+        "panel_text_relation": "text_only"
+      }
+    ]
+  }
+}
