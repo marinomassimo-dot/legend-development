@@ -2,7 +2,7 @@
  "schema_version": 2,
  "pmid": "30356099",
  "doi": "10.1038/s41436-018-0339-3",
- "receipt": "FTR-20261003-30356099-01",
+ "receipt": "FTR-20260811-30356099-01",
  "landing": [
   "FTR-20260811-30356099-01",
   "full_text_queue_current.md#FT-002",
@@ -412,10 +412,10 @@
    }
   ]
  },
- "prior_receipts": [
-  "FTR-20260811-30356099-01",
+ "later_receipts": [
   "FTR-20260921-30356099-02",
-  "FTR-20260927-30356099-03"
+  "FTR-20260927-30356099-03",
+  "FTR-20261003-30356099-01"
  ],
  "context_policy_20261003": "SOURCE_FIRST (scientist A, wave 2): first pass written from the article and its four supplementary tables before this manifest, any registry record or claim was opened.",
  "supplement_findings_20261003": {
