@@ -24,8 +24,9 @@
           "evidence": "main 87ed1e7; ledger 284 events; C receipts re-issued as partial_fulltext_read by C"
         },
         {
-          "step": "BATCH_COMMIT of the A, B and C candidates through a Scientist; Mirror ex-post review (Scientist E dispatched after D's classifier halt; D wrote nothing)",
-          "status": "IN_PROGRESS"
+          "step": "BATCH_COMMIT of wave 1 candidates; Mirror ex-post review",
+          "status": "DONE",
+          "evidence": "BATCH_20261002_001 main ba5682f; Mirror review main c5257f5 (candidates CC-20261003-MIRROR-01..03 pending propagation)"
         },
         {
           "step": "Fresh-clone battery on the exact SHA, gate, LINT, receipts verify, safe_push to development",
@@ -47,7 +48,7 @@
           "evidence": "wave 2 Scientists A, B, C dispatched; brief scratchpad scientist_brief_20261003_w2.md"
         },
         {
-          "step": "Integrate returns, BATCH_COMMIT, Mirror review, battery, push",
+          "step": "Integrate wave 2 returns (A landed, receipts recorded eb01d5f; B and C resumed after rate limit), then one BATCH_COMMIT of A-w2 + B-w2 + C-w2 + MIRROR-01..03 candidates, Mirror review, battery, push",
           "status": "IN_PROGRESS"
         }
       ]
@@ -56,7 +57,26 @@
       "order": 3,
       "steps": [
         {
-          "step": "Select, dispatch, integrate, batch, review, push the third wave",
+          "step": "Select the third wave",
+          "status": "DONE",
+          "evidence": "scratchpad wave3_selection.md"
+        },
+        {
+          "step": "Dispatch wave 3 Scientists A, B, C",
+          "status": "DONE",
+          "evidence": "three agents dispatched; brief scientist_brief_20261003_w3.md"
+        },
+        {
+          "step": "Integrate wave 3 returns, BATCH_COMMIT, Mirror, battery, push",
+          "status": "TODO"
+        }
+      ]
+    },
+    "OBJ_PUSH": {
+      "order": 4,
+      "steps": [
+        {
+          "step": "Battery on exact final SHA, gate, LINT, receipts verify, safe_push to development main (main is 44+ commits ahead of the last push)",
           "status": "TODO"
         }
       ]
