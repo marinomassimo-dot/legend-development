@@ -268,3 +268,11 @@ the receipt and cannot ask whether the thing read was a study — while the oper
 that they are not studies and must not enter the study population. Closing that last unit means
 correcting the numerator's semantics, with the classifier § 6 describes, and **not** the guard.
 It is named here and proposed nowhere: it is the next decision, not this candidate's.
+
+---
+
+## BATCH DISPOSITION — written 2026-10-03 by `BATCH_20261003_001` (ACTOR_ID `scientist`, Scientist F), append-only
+
+**Verdict:** PROPAGATED
+
+Propagated across `batch_20260920_002` and `batch_20260920_003`, the second of which states that it closed the eighth and last record. Both scopes predate the Phase 7 `## BATCH DISPOSITION` requirement, so this candidate was closed by a mention alone. This block is the missing attestation; the facts are the two scopes' own.

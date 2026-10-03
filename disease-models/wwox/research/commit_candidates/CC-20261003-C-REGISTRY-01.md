@@ -98,3 +98,13 @@ record declares a reading whose receipt is not in the ledger. Both records below
 
 (A PFS panel PMID 28749468 reports as showing an effect prints a non-significant P-value. | [figure attestation] Figure 7 panel e is titled "PFS by WWOX expression relative to normal, TCGA with Tax" and prints "n=333, p=0.13" in its header. | PMID 28749468, Figure 7 panel e; files/fulltext/PMID28749468_assets/cddis2017346f7.jpg)
 ```
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261003_001` (2026-10-03, ACTOR_ID `scientist`, Scientist F), append-only
+
+**Verdict:** PROPAGATED — RE-ANCHORED
+
+Propagated record-scoped by `BATCH_20261003_001` (2026-10-03, ACTOR_ID `scientist`, Scientist F) — the ops below were read from this file by script, never retyped; every byte outside the addressed records was proven unchanged before anything was written. Post-propagation LINT: WARN, 0 BLOCK.
+
+`paper_registry_current.md` 2 ops (**`PAPER 135` created**, `CORPUS-STUB-126` enriched) and `literature_tracking_log_current.md` 2 ops (**`LIT-0433` created**, `LIT-0145` enriched). The declared numbers were free and are unchanged; the inserts were re-anchored after `PAPER 134` / `LIT-0432`, which this candidate's numbering note asks for by name if A propagates first. Both new records declare `partial_fulltext_read` and say what is missing.

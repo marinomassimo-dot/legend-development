@@ -108,3 +108,13 @@ The six receipts `FTR-20261003-<pmid>-0N` must be appended **before** these reco
 (The Methods group size that PAPER 138's Role field contrasts with its Figure 3 legend | `received four consecutive injections of Zfra4–10 solution (2 mM in PBS, 100 μL each injection)` | PMID 36498839, Methods 4.4, 'Animals')
 
 (The declared patent carried in PAPER 138's Role field | `Method for treating Alzheimer’s disease` | PMID 36498839, Section 6, 'Patents')
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261003_001` (2026-10-03, ACTOR_ID `scientist`, Scientist F), append-only
+
+**Verdict:** PROPAGATED — RENUMBERED
+
+Propagated record-scoped by `BATCH_20261003_001` (2026-10-03, ACTOR_ID `scientist`, Scientist F) — the ops below were read from this file by script, never retyped; every byte outside the addressed records was proven unchanged before anything was written. Post-propagation LINT: WARN, 0 BLOCK.
+
+`paper_registry_current.md` 6 ops (`PAPER 136`–`141`) and `literature_tracking_log_current.md` 6 ops (`LIT-0434`–`0439`). The declared numbers were free and are unchanged; **the anchors were re-anchored** as this candidate's own numbering note authorises — the first insert now follows `PAPER 135` / `LIT-0433` rather than `PAPER 132` / `LIT-0431`, so that applying A, C, B leaves the file contiguous. Depth declarations were checked against the landed receipts one by one: two `complete`, three `partial` and one review with no depth of its own, every one of them matching its receipt's coverage map.
