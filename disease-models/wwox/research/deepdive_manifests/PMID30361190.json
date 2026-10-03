@@ -48,27 +48,85 @@
   "note": "Low author density on the gene; the paper's weight is its two primary cases."
  },
  "multihop": {
-  "performed": false,
-  "reason": "Not performed: the question for this event is whether the paper's own Table 1 rows are primary or re-described; following each row to its source is the follow-up named in the intake note.",
+  "performed": true,
   "references_enumerated": 23,
-  "enumeration_method": "Reference list counted on the derived text and confirmed by the Crossref screen (23 declared).",
+  "enumeration_method": "23 numbered references on the derived text (Crossref screen agrees). Europe PMC holds no reference list for this DOI, so gene-direct references were identified by title from the printed list and resolved to PMIDs by PubMed title search, then each was checked with fulltext_receipts.py status.",
   "gene_direct_refs_in_source": [
    "24456803",
-   "25411445"
+   "25403906",
+   "10786676",
+   "11719429",
+   "25537520",
+   "27495153",
+   "17470496",
+   "24369382",
+   "25411445",
+   "26345274",
+   "25416187",
+   "25716914"
   ],
-  "resolved": [],
-  "queued": [
+  "gene_direct_count": 12,
+  "resolved": [
    {
     "pmid": "24456803",
-    "queue": "not queued by this actor: named in the intake note as a follow-up, not as a queue entry",
-    "reason": "Source of rows in Table 1 that the authors state were partly re-interpreted from published images."
+    "how": "Already read in this corpus before this event (receipts FTR-20261003-24456803-01; depth complete_fulltext_read). Followed as a hop by checking what this paper says it reports against that reading where this event's argument depended on it; not re-read here."
+   },
+   {
+    "pmid": "25537520",
+    "how": "Already read in this corpus before this event (receipts FTR-20261002-25537520-01; depth partial_fulltext_read). Followed as a hop by checking what this paper says it reports against that reading where this event's argument depended on it; not re-read here."
+   },
+   {
+    "pmid": "27495153",
+    "how": "Already read in this corpus before this event (receipts FTR-20261003-27495153-01; depth complete_fulltext_read). Followed as a hop by checking what this paper says it reports against that reading where this event's argument depended on it; not re-read here."
+   },
+   {
+    "pmid": "24369382",
+    "how": "Already read in this corpus before this event (receipts FTR-20260913-24369382-01, FTR-20260913-24369382-02, FTR-20260927-24369382-03, FTR-20260927-24369382-04; depth complete_fulltext_read/partial_fulltext_read). Followed as a hop by checking what this paper says it reports against that reading where this event's argument depended on it; not re-read here."
+   }
+  ],
+  "queued": [
+   {
+    "pmid": "25403906",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "10786676",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "11719429",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "17470496",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
    },
    {
     "pmid": "25411445",
-    "queue": "not queued by this actor: named in the intake note as a follow-up, not as a queue entry",
-    "reason": "Source of rows in Table 1 that the authors state were partly re-interpreted from published images."
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "26345274",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "25416187",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "25716914",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
    }
-  ]
+  ],
+  "note": "Twelve gene-direct entries; Abdel-Salam 2014 (PMID 24456803) was matched by hand because the title search returned nothing. Resolved hops are earlier corpus readings, not re-reads."
  },
  "corpus_crossquery": {
   "performed": true,

@@ -48,21 +48,90 @@
   "note": "The author-string variant is itself a de-duplication hazard: a name search does not join this paper to the cohort that re-reports the patient."
  },
  "multihop": {
-  "performed": false,
-  "reason": "Not performed as a hop from the reference list: the decisive comparison is with a LATER paper (Piard 2019, PMID 30356099) that does not cite this one. Its Supplemental Table 1 was read row by row in this event; see the intake note.",
+  "performed": true,
   "references_enumerated": 15,
-  "enumeration_method": "Reference list counted on the derived text and confirmed by the Crossref screen (15 declared).",
+  "enumeration_method": "15 references (Europe PMC MED references API and Crossref agree); gene-direct by title match; status per PMID from fulltext_receipts.py.",
   "gene_direct_refs_in_source": [
-   "30356099"
+   "24456803",
+   "24932569",
+   "10786676",
+   "25403906",
+   "17470496",
+   "24369382",
+   "25411445",
+   "10861292",
+   "19500159",
+   "26345274",
+   "25716914",
+   "22193544",
+   "22484428"
   ],
-  "resolved": [],
+  "gene_direct_count": 13,
+  "resolved": [
+   {
+    "pmid": "24456803",
+    "how": "Already read in this corpus before this event (receipts FTR-20261003-24456803-01; depth complete_fulltext_read). Followed as a hop by checking what this paper says it reports against that reading where this event's argument depended on it; not re-read here."
+   },
+   {
+    "pmid": "24932569",
+    "how": "Already read in this corpus before this event (receipts FTR-20260913-24932569-02, FTR-20260920-24932569-01; depth complete_fulltext_read/partial_fulltext_read). Followed as a hop by checking what this paper says it reports against that reading where this event's argument depended on it; not re-read here."
+   },
+   {
+    "pmid": "24369382",
+    "how": "Already read in this corpus before this event (receipts FTR-20260913-24369382-01, FTR-20260913-24369382-02, FTR-20260927-24369382-03, FTR-20260927-24369382-04; depth complete_fulltext_read/partial_fulltext_read). Followed as a hop by checking what this paper says it reports against that reading where this event's argument depended on it; not re-read here."
+   },
+   {
+    "pmid": "19500159",
+    "how": "Already read in this corpus before this event (receipts FTR-20260806-19500159-01; depth complete_fulltext_read). Followed as a hop by checking what this paper says it reports against that reading where this event's argument depended on it; not re-read here."
+   },
+   {
+    "pmid": "22193544",
+    "how": "Already read in this corpus before this event (receipts FTR-20260726-22193544-01, FTR-20260726-22193544-02, FTR-20260726-22193544-03, FTR-20260927-22193544-06, FTR-20260804-22193544-04, FTR-20260804-22193544-05; depth complete_fulltext_read/partial_fulltext_read/queried_not_full_read). Followed as a hop by checking what this paper says it reports against that reading where this event's argument depended on it; not re-read here."
+   }
+  ],
   "queued": [
    {
-    "pmid": "30356099",
-    "queue": "not queued by this actor: named in the intake note as a follow-up, not as a queue entry",
-    "reason": "The later cohort that tabulates the same patient as one of its 'novel' cases."
+    "pmid": "10786676",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "25403906",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "17470496",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "25411445",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "10861292",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "26345274",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "25716914",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "22484428",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
    }
-  ]
+  ],
+  "note": "The decisive comparison for this paper is with a LATER report that is not in its reference list: Piard 2019 (PMID 30356099), whose Supplemental Table 1 was read row by row in this event (see intake note)."
  },
  "corpus_crossquery": {
   "performed": true,

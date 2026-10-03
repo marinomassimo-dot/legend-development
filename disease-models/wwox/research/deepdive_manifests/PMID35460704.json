@@ -1,0 +1,238 @@
+{
+ "schema_version": 2,
+ "pmid": "35460704",
+ "doi": "10.1016/j.jlr.2022.100209",
+ "pmcid": "PMC9126845",
+ "receipt": "FTR-20261003-35460704-01",
+ "receipt_note": "Prepared as a JSON file for the integrator and not appended at preparation time; the Orchestrator records intake wave 4 receipts in event order.",
+ "landing": [
+  "FTR-20261003-35460704-01",
+  "disease-models/wwox/research/intake_wave_20261003w4_B.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W4-B-CARRIER-01.md"
+ ],
+ "landing_note": "Intake wave 4 2026-10-03, Scientist B, group B (does WWOX dose read out continuously in white matter and in one-allele carriers). This paper is the human heterozygote arm.",
+ "skills_considered": [
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline. Six papers were read as one question and the per-paper dossier plus this manifest carry the same structure the skill would have produced."
+  },
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Europe PMC REST fullTextXML returned a body on the first attempt; the supplement came from the Europe PMC supplementaryFiles archive."
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true,
+   "reason": "paper_packet.py packet and registry_records.py get were run for this PMID before the source was opened: no registry record of any kind exists for it, and no receipt."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED. The triples travel to the blind audit through the commit candidate; the producer of a reading must not be its verifier."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Not invoked. The assigned question is a measurement question about an existing cohort, and no primitive would have changed what the supplement states."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "total_publications": 138,
+  "publications_on_gene": 2,
+  "counts_measured": "PubMed esearch 2026-10-03 (tool=LEGEND-research) on the corresponding author: 'Pullinger CR[au]' 138, 'Pullinger CR[au] AND WWOX' 2. The group's output is lipid genomics; WWOX enters it only through a candidate-gene list.",
+  "weighting": "Independent of every WWOX laboratory in this corpus. That independence is the reason the record is worth holding and also the reason its WWOX content is thin: nobody here was studying WWOX.",
+  "note": "Research-group knowledge base is excluded from the public edition; this rests on the paper's own author affiliations."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "WWOX occurrences in the body of PMC9126845",
+    "route": "reading the acquired JATS",
+    "count": 6
+   },
+   {
+    "query": "WWOX rows in supplemental Tables S3 and S4",
+    "route": "reading the acquired supplement mmc1.pdf",
+    "count": 3
+   }
+  ],
+  "note": "Minimum density: WWOX is a row in two variant tables and three sentences of discussion. It is never measured, never perturbed and never analysed on its own."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 87,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "The reference list is numbered to 87 in the body. The WWOX-directed citation is reference 22 (the HDL-C association) and reference 73 (the neurodevelopmental/neurodegenerative association); neither is dereferenced here.",
+  "resolved": [],
+  "queued": [],
+  "dedup_performed": "Not performed: this reading does not open the paper's antecedents."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "What does the corpus already assert about this paper?",
+  "hits": 0,
+  "finding": "registry_records.py get --pmid 35460704 returns NO RECORD MATCHED across all seven surfaces, and fulltext_receipts.py status --pmid 35460704 exits 1 with an empty list. The paper is new to the laboratory in every sense, so nothing here can be a correction; the candidate proposes its first landing."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-03",
+  "route": "PubMed article metadata for this PMID (article_types: Journal Article; Research Support, Non-U.S. Gov't; Research Support, N.I.H., Extramural). No retraction, erratum, expression of concern or correction notice is carried.",
+  "result": "No retraction, no expression of concern, no erratum.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 87,
+   "references_screened": 80,
+   "references_with_doi": 80,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 7
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID35460704_Dong2022_PMC.xml",
+   "sha256": "d16c23055a39f229f243e1427223dc51504e6a5e6526a5249f2d8732c01775d7",
+   "kind": "article_text",
+   "note": "Europe PMC REST fullTextXML for PMC9126845, acquired 2026-10-03 for this reading.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9126845/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_rest_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "d16c23055a39f229f243e1427223dc51504e6a5e6526a5249f2d8732c01775d7"
+   }
+  },
+  {
+   "path": "files/supplements/PMID35460704/mmc1.pdf",
+   "sha256": "ae450059ac810c38ab1cad861546f7c32da2520056c285bef81ab494b19e1568",
+   "kind": "supplement_binary",
+   "note": "Supplemental Tables S1-S6 and supplemental Figures S1-S3, 52 pages, extracted from the Europe PMC supplementaryFiles archive for PMC9126845. The first fetch of that archive was truncated (no end-of-central-directory record) and was re-fetched; the digest here is of the complete member file.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9126845/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "europepmc_rest_supplementaryfiles",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "ae450059ac810c38ab1cad861546f7c32da2520056c285bef81ab494b19e1568"
+   }
+  },
+  {
+   "path": "files/supplements/PMID35460704/mmc1_pdftotext.txt",
+   "sha256": "28431cce21f36058c9c357171145fb7b4b7d4c04fcae3d143e04186bf33db3c3",
+   "kind": "supplement_text",
+   "note": "Deterministic poppler pdftotext 24.02.0 text layer of mmc1.pdf, -layout -nopgbrk. Declared as the surface the supplement locators are matched against; the variant rows are plain ASCII and the two WWOX rows were also read on the rendered page.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID35460704/mmc1.pdf",
+    "acquired_on": "2026-10-03",
+    "lossiness": "Column alignment is preserved well enough to read the variant tables row by row; the ClinVar disease column wraps across lines, and two table titles are typeset as images of digits ('Supplemental Table S34' where the body cites S4).",
+    "extractor": {
+     "name": "pdftotext (poppler)",
+     "version": "24.02.0",
+     "call": "pdftotext -layout -nopgbrk mmc1.pdf mmc1_pdftotext.txt"
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "JATS from the Europe PMC fullTextXML endpoint for PMC9126845, 223219 bytes; every body locator is matched against it by deepdive_manifest.py --verify-artifacts.",
+  "abstract_anchoring_waived": "No locator draws on the abstract; the abstract's 'WWOX (n = 4)' is carried by the body sentence quoted below, which is the one the supplement resolves.",
+  "note": "Coverage: abstract, introduction, Materials and methods, all Results sections, Discussion, Tables 1-6, all three figure legends, the data-availability and conflict statements, and supplemental Tables S1-S6 read for WWOX row by row. Figure panels gr1-gr3 were NOT inspected as images; the reading is declared partial for that reason.",
+  "entries": [
+   {
+    "proposition": "WWOX IS ONE OF ELEVEN GENES WITH THE HIGHEST OCCURRENCE OF DAMAGING VARIANTS AMONG THE 104 HDL CANDIDATE GENES, AT n = 4. This is an occurrence count inside a candidate-gene list, not an association.",
+    "snippet": "The 11 HDL genes with the highest occurrence of damaging variants were ABCA1 (n = 20), STAB1 (n = 9), OSBPL1A (n = 8), CPS1 (n = 8), CD36 (n = 7), LRP1 (n = 6), and ABCA8 (n = 6), GOT2 (n = 5), AMPD3 (n = 5), WWOX (n = 4), and IRS1 (n = 4)",
+    "surface": "body",
+    "anchor": "Results, Candidate gene analysis, paragraph on the 104 HDL candidate genes",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human cohort — 204 individuals selected for HDL-C below the 10th percentile of the UCSF GRA population",
+     "genotype": "rare heterozygous and homozygous variants in 104 HDL candidate genes",
+     "treatment": "none; no participant was on a lipid-altering medication at sampling",
+     "comparator": "none for WWOX; no normal-HDL-C cohort was sequenced",
+     "endpoint": "count of probably-damaging variant occurrences per gene"
+    },
+    "artifact": "files/fulltext/PMID35460704_Dong2022_PMC.xml"
+   },
+   {
+    "proposition": "THE GENOME-WIDE SIGNIFICANT BURDEN IS IN FOUR GENES AND WWOX IS NOT ONE OF THEM. The WWOX n = 4 is therefore explicitly not an association in this paper.",
+    "snippet": "Binomial analysis for rare (MAF ≤ 0.001) heterozygous D-Mis or LoF variants identified the ABCA1, LDLR, HK3, and CFTR genes with genome-wide statistical significance",
+    "surface": "body",
+    "anchor": "Results, Binomial and PANTHER analysis results, first sentence",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human cohort — the same 204 individuals",
+     "genotype": "rare damaging missense or loss-of-function, MAF <= 0.001",
+     "treatment": "none",
+     "comparator": "de novo mutability expectation adjusted by this cohort's base-pair coverage, with control data sets where coverage was reliable",
+     "endpoint": "one-tailed binomial enrichment per gene"
+    },
+    "artifact": "files/fulltext/PMID35460704_Dong2022_PMC.xml"
+   },
+   {
+    "proposition": "THE COHORT HAS NO NORMAL-HDL-C COMPARATOR AT ALL, BY THE AUTHORS' OWN STATEMENT. Nothing in this paper licenses a statement that WWOX heterozygotes are enriched among people with low HDL-C.",
+    "snippet": "we were not able to compare the prevalence of mutations among a cohort considered to have normal levels",
+    "surface": "body",
+    "anchor": "Discussion, final paragraph, limitation of the candidate-gene approach",
+    "panel_text_relation": "text_only",
+    "artifact": "files/fulltext/PMID35460704_Dong2022_PMC.xml"
+   },
+   {
+    "proposition": "NO COPY-NUMBER EVENT WAS FOUND IN ANY OF THE 104 HDL CANDIDATE GENES, SO THERE IS NO WWOX DELETION OR DUPLICATION IN THIS COHORT. An earned null on the structural-variant axis, within the stated sensitivity limit.",
+    "snippet": "No CNVs were found among our list of 104 HDL candidate genes",
+    "surface": "body",
+    "anchor": "Results, Copy number variants, final sentences",
+    "panel_text_relation": "text_only",
+    "artifact": "files/fulltext/PMID35460704_Dong2022_PMC.xml"
+   },
+   {
+    "proposition": "THE FOUR WWOX OCCURRENCES ARE THREE DISTINCT HETEROZYGOUS MISSENSE ALLELES, AND THE ONE CARRIED BY TWO PARTICIPANTS IS ANNOTATED BENIGN IN ClinVar AND IS COMMON AT gnomAD 7.5e-03. No loss-of-function, no frameshift, no splice allele, no homozygote.",
+    "snippet": "WWOX      16-78149000-C>T         p.Arg120Trp        7.50E-03 rs141361080   other|Benign|Benign",
+    "surface": "supplement",
+    "anchor": "Supplemental Table S4 (printed 'Supplemental Table S34'), 'Rare heterozygous damaging variants among HDL candidate genes', WWOX rows",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human cohort — the 204 low-HDL-C participants",
+     "genotype": "WWOX p.Gly30Arg (1 participant), p.Arg120Trp (2 participants), p.Leu307Val (1 participant), all heterozygous missense",
+     "treatment": "none",
+     "comparator": "none",
+     "endpoint": "variant annotation and damaging prediction count out of ten tools"
+    },
+    "artifact": "files/supplements/PMID35460704/mmc1_pdftotext.txt"
+   },
+   {
+    "proposition": "THE PAPER'S ONLY CNS SENTENCE ABOUT WWOX IS A CONDITIONAL SPECULATION THE AUTHORS WRITE IN THE SUBJUNCTIVE, NOT A FINDING OF THIS STUDY.",
+    "snippet": "A critical structural or functional role for the WWOX gene in the CNS would account for the observation that mutations at that locus are associated with neurodevelopmental and neurodegenerative disorders, including Alzheimer disease",
+    "surface": "body",
+    "anchor": "Discussion, paragraph on cancer and CNS associations of the identified loci",
+    "panel_text_relation": "text_only",
+    "artifact": "files/fulltext/PMID35460704_Dong2022_PMC.xml"
+   }
+  ]
+ }
+}
