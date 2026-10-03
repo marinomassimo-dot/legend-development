@@ -1,0 +1,314 @@
+{
+ "schema_version": 2,
+ "pmid": "35792847",
+ "doi": "10.1684/epd.2022.1444",
+ "receipt": "FTR-20261003-35792847-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/intake_wave_20261003w5_B.md",
+  "disease-models/wwox/research/fulltext_dossiers/PMID35792847.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W5-B-PATIENT-OVERLAP-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W5-B-ALBARADIE-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W5-B-REGISTRY-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is a research surface another batch owns; this wave's question is patient provenance and counting, so findings are proposed through commit candidates instead of ledger edits."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No source in this group tests a therapy against a mechanism; forging hypotheses from single-patient drug histories would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed as a candidate; anti-seizure medication histories in case reports are clinical descriptions, not molecules for BLOCK-1 triage."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes are proposed as commit candidates for a later BATCH_COMMIT."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; the triples are published in the candidates for an auditor to run."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 58,
+  "publications_on_gene": 1,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "PubMed counts 2026-10-03: Al Baradie R[au] 58 records, 1 intersecting WWOX (this paper). A paediatric neurology clinical service reporting its own patients retrospectively, with a literature table compiled by the same team; no functional work. Credible as a clinical description; its literature aggregation is unaudited by the authors against patient overlap."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND epilepsy",
+    "count": 67,
+    "source": "PubMed ESearch 2026-10-03"
+   },
+   {
+    "query": "WWOX AND exome AND consanguineous",
+    "count": 12,
+    "source": "PubMed ESearch 2026-10-03"
+   }
+  ],
+  "note": "At least three earlier WWOX case sources from the same national population (Ehaideb 2018, Tabarki 2015, Mallaret 2014 family 1) predate this series and share alleles with it, which is why overlap had to be tested patient by patient."
+ },
+ "multihop": {
+  "references_enumerated": 23,
+  "gene_direct_refs_in_source": [
+   "24456803",
+   "30356099",
+   "24369382",
+   "30746283",
+   "28721938",
+   "30361190",
+   "27495153",
+   "25416187"
+  ],
+  "resolved": [
+   "24456803",
+   "30356099",
+   "24369382",
+   "30746283",
+   "28721938",
+   "30361190"
+  ],
+  "queued": [
+   "27495153",
+   "25416187"
+  ],
+  "note": "All 23 references enumerated from the reference list. Six WWOX case sources were resolved against held artefacts to test patient overlap (Ehaideb 2018 family 2 is a probable re-description of this paper's family 2; Tarta-Arsene 2017 and Piard 2019 patient 8 are listed as separate rows in Table 3 although they are one patient). Elsaadany 2016 (W44X) is resolved only at allele level: no patient here carries W44X. Tabarki 2015 (homozygous c.606-1G>A per a secondary review table) is unread and leaves one possible overlap with family 3 unresolved."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 35792847; --theme Arg54, 606-1G, Ehaideb, Tabarki, Pro47Thr",
+  "hits": 2,
+  "note": "Identity hits only: CORPUS-STUB-060 and LIT-0084 (placeholders, not processed). Allele themes reach PAPER 119 (Ehaideb 2018), PAPER 045 (Shaukat 2018), PAPER 043 (Abdel-Salam 2014), PAPER 046 (Tabarki, via review)."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-03 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn or CommentIn link; publication type Journal Article.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 23,
+   "references_screened": 22,
+   "references_with_doi": 22,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID35792847_AlBaradie2022_JLE.pdf",
+   "sha256": "799208b99f5c7b1b9bac081d258a2d455491b644f5501a3ae42666127f1dc37e",
+   "kind": "article_binary",
+   "note": "Publisher bronze-OA PDF, 16 pages, from the JLE download endpoint that OpenAlex lists; digest identical to the selector's copy. Its text layer is NOT used: pdftotext (-layout and -raw) and PyMuPDF 1.28.2 all emit four C0 controls for box-bullet glyphs, which the verifier refuses; the page was read as rendered and the two figure pages were inspected at 110 dpi.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.jle.com/fr/revues/epd/e-docs/epilepsy_in_patients_with_wwox_related_epileptic_encephalopathy_woree_syndrome_322616/article.phtml?tab=download&pj_key=doc_attach_53426",
+    "http_method": "GET",
+    "tier": "publisher_bronze_oa_pdf",
+    "user_agent_policy": "browser_like",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "799208b99f5c7b1b9bac081d258a2d455491b644f5501a3ae42666127f1dc37e"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID35792847_AlBaradie2022_JLE_fulltext.html",
+   "sha256": "034512f32f31e8483b95e83dfbd16973e6f459ebeabe970e62497fa723d81f87",
+   "kind": "article_text",
+   "note": "Publisher HTML full-text tab of the same article (JLE, tab=texte), persisted as served. Carries body, Tables 1-3 as text and the reference list; no C0 controls. It does not carry the abstract, which is on a separate tab declared below. Every body and table locator is matched against this surface.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.jle.com/fr/revues/epd/e-docs/epilepsy_in_patients_with_wwox_related_epileptic_encephalopathy_woree_syndrome_322616/article.phtml?tab=texte",
+    "http_method": "GET",
+    "tier": "publisher_html_fulltext",
+    "user_agent_policy": "browser_like",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "034512f32f31e8483b95e83dfbd16973e6f459ebeabe970e62497fa723d81f87"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID35792847_AlBaradie2022_JLE_abstract.html",
+   "sha256": "61537a1d3b454b95db09adb64c83da0b9c21a76dc97a7ac297746758511d4aa3",
+   "kind": "supplement_text",
+   "note": "Publisher HTML abstract tab (JLE, tab=resume), persisted as served; declared only so the abstract's own words can be verified. It is not a supplement of the article; supplement_text is the only text kind the schema offers for a second structured surface.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.jle.com/fr/revues/epd/e-docs/epilepsy_in_patients_with_wwox_related_epileptic_encephalopathy_woree_syndrome_322616/article.phtml?tab=resume",
+    "http_method": "GET",
+    "tier": "publisher_html_abstract",
+    "user_agent_policy": "browser_like",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "61537a1d3b454b95db09adb64c83da0b9c21a76dc97a7ac297746758511d4aa3"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": false,
+  "abstract_anchoring_waived": "The locators carry table cells, per-patient case text and literature-table rows; the abstract names no allele, no family and no literature row, so it cannot anchor any of them.",
+  "source_fulltext_indexed_evidence": "MEASURED 2026-10-03: Europe PMC search for this PMID returns inEPMC 'N', no PMCID. The quotes are externally checkable only against the publisher's own HTML and PDF declared above.",
+  "entries": [
+   {
+    "proposition": "All nine patients of the series carry homozygous WWOX variants; the series is described as nine patients from six families.",
+    "snippet": "We identified nine patients in our cohort who had a homozygous pathogenic mutation in the WWOX gene and presented with WOREE syndrome.",
+    "anchor": "Results, first paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35792847_AlBaradie2022_JLE_fulltext.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Family 6 (one patient) is homozygous for the Q230P missense allele.",
+    "snippet": "Patient 6 WWOX c.689A>C (p.Gln230Pro) Homozygous WES Missense",
+    "anchor": "Table 2, Patient 6 row",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID35792847_AlBaradie2022_JLE_fulltext.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Family 3 carries a homozygous canonical splice-acceptor allele, c.606-1G>A, in two affected brothers.",
+    "snippet": "Patient 3.1 WWOX c.606-1G>A Homozygous WES Splice site Patient 3.2 WWOX c.606-1G>A Homozygous Familial mutation testing Splice site",
+    "anchor": "Table 2, Patients 3.1 and 3.2 rows",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID35792847_AlBaradie2022_JLE_fulltext.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Families 2 and 5 carry the homozygous R54* nonsense allele.",
+    "snippet": "Patient 2.1 WWOX c.160C>T (p.Arg54*) Homozygous WES Nonsense Patient 2.2 WWOX c.160C>T (p.Arg54*) Homozygous WES Nonsense",
+    "anchor": "Table 2, Patients 2.1 and 2.2 rows",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID35792847_AlBaradie2022_JLE_fulltext.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "An affected brother of the Q230P-homozygous patient was found heterozygous only and labelled a carrier; his second allele was not found at publication.",
+    "snippet": "The brother of Patient 6 harbours a familial heterozygous missense pathogenic c.689A>C p.(Gln230Pro) variant and was labelled as a carrier, although his clinical presentation was similar to his brother",
+    "anchor": "Results, Genetics",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35792847_AlBaradie2022_JLE_fulltext.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors leave the carrier brother's genotype open.",
+    "snippet": "Further testing is underway to determine whether the heterozygous variant is a disease-causing compound heterozygous variant.",
+    "anchor": "Results, Genetics",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35792847_AlBaradie2022_JLE_fulltext.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The family 2 sister was first seen at this centre at 18 months together with her younger brother.",
+    "snippet": "She was first seen in our hospital at the age of 18 months, with her younger brother.",
+    "anchor": "Results, Patient 2.2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35792847_AlBaradie2022_JLE_fulltext.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The family 2 sister's dysmorphology is described as hypertelorism, large ears and a high arched palate.",
+    "snippet": "She has hypertelorism, large ears, a high arched palate, and no neurocutaneous stigmata.",
+    "anchor": "Results, Patient 2.2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35792847_AlBaradie2022_JLE_fulltext.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The family 2 sister's MRI is described as asymmetrical volume loss with asymmetrical ventricular dilatation and callosal thinning.",
+    "snippet": "Brain MRI showed generalized asymmetrical brain tissue volume loss with asymmetrical ventricular dilatation and thinning of the corpus callosum.",
+    "anchor": "Results, Patient 2.2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35792847_AlBaradie2022_JLE_fulltext.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The literature table lists the three Ehaideb 2018 children as separate literature patients (male, male, female; onset two months).",
+    "snippet": "Ehaideb et al. (2018) [19] 1 M Seizure 2 months Focal to bilateral tonic-clonic Epileptic Spasms No NA Refractory NA 2 M Seizure 2 months Epileptic spasms No NA Burst suppression 3 F Seizure 2 months Epileptic spasms No NA Hypsarrhythmia",
+    "anchor": "Table 3 (continued), Ehaideb rows",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID35792847_AlBaradie2022_JLE_fulltext.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The literature table lists the Tarta-Arsene 2017 patient as a separate row from the Piard series.",
+    "snippet": "Tarta-Arsene et al. (2017) [15] 1 M Seizure 4 weeks Focal to bilateral Epileptic spasms Generalized tonic No PHB, VGB ACTH BG: slow MF spikes Hypsarrhythmia",
+    "anchor": "Table 3 (continued), Tarta-Arsene row",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID35792847_AlBaradie2022_JLE_fulltext.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The literature denominator is 61 patients from 19 studies, giving 70 with the nine of this series.",
+    "snippet": "Sixty-one patients with WWOX gene mutation and WOREE syndrome, reported in 19 studies, were identified from the literature search.",
+    "anchor": "Results, first paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35792847_AlBaradie2022_JLE_fulltext.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The literature table includes the SCAR12 linkage family (Gribaa 2007) among WOREE patients.",
+    "snippet": "Gribaa et al. (2007) [5] 3 M Seizure 9 months GTC No PHB",
+    "anchor": "Table 3 (continued), Gribaa rows",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID35792847_AlBaradie2022_JLE_fulltext.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "One P47T-homozygous sibling is ambulant with action tremor and ataxic gait.",
+    "snippet": "action tremors, and an ataxic gait.",
+    "anchor": "Results, Patient 1.2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35792847_AlBaradie2022_JLE_fulltext.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "One P47T-homozygous patient was diagnosed with acute lymphoblastic leukaemia.",
+    "snippet": "He was later diagnosed with acute lymphoblastic leukaemia after a complete blood count revealed pancytopenia.",
+    "anchor": "Results, Patient 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35792847_AlBaradie2022_JLE_fulltext.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Vigabatrin effectiveness is stated as not established.",
+    "snippet": "nine patients with epileptic spasms were treated with vigabatrin, but the data on its effectiveness are not well established.",
+    "anchor": "Discussion, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35792847_AlBaradie2022_JLE_fulltext.html",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}
