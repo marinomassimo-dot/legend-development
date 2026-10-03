@@ -89,3 +89,13 @@ any measured quantity.
 
 (The fly phenotype is a day-to-night redistribution on a strong hypomorph, with the circadian clock untouched. | [figure attestation] Figure 2 panel A plots relative Wwox mRNA at 1.0 for the control and about 0.08 for the mutant with a bracket marked ****; panel C plots daytime sleep at about 500 against about 300 minutes and night-time sleep at about 560 against about 650 minutes, both marked ****; panel E plots free-running period at about 23.5 hours for both genotypes with rhythmicity printed as 96.9 and 96.7 percent; panel F marks the daytime bout-length difference ** and the night-time one n.s. | PMID 39952983, Figure 2 panels A, C, E and F; files/figures/PMID39952983/41598_2024_81158_Fig2_HTML.jpg)
 ```
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261003_001` (2026-10-03, ACTOR_ID `scientist`, Scientist F), append-only
+
+**Verdict:** PROPAGATED
+
+Propagated record-scoped by `BATCH_20261003_001` (2026-10-03, ACTOR_ID `scientist`, Scientist F) — the ops below were read from this file by script, never retyped; every byte outside the addressed records was proven unchanged before anything was written. Post-propagation LINT: WARN, 0 BLOCK.
+
+`discovery_ledger_current.md`, 1 op on `DL-MECH-013`. The lead keeps its *Drosophila* value and loses the word *bridge*; status unchanged.

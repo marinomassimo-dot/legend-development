@@ -4942,6 +4942,8 @@ quella numerosità non sono visti, la contro-evidenza resta **flag, non reversio
 **Next action:** recuperare i pannelli di §3.5 quando esista una rotta di acquisizione che
 preservi le immagini; nel frattempo **non promuovere la contro-evidenza oltre lo stato di flag**.
 
+🟢 **DISCHARGED 2026-10-03** by `CC-20261003-B-ZFRA-TRANSFER-01` (intake wave 2, Scientist B). The panel was acquired: `mmc1.docx` from the PMC open-access S3 mirror, its `word/media/image1.tiff` extracted and rendered (`files/figure_renders/PMID29067327/supp_fig1.png`, sha256 `a796f685b2e70fa378b0fcb07ba97afbeaad5348bc014f5c0cd39bf42327c755`). 🔴 **The outcome is worse than a flag.** Supplementary Figure 1 carries **no genotype label on any bar**, no n per bar, no error convention and no statistical test; its x-axes read 3, >10, 8, 10 months and contain **no age 12**, while its legend asserts a drop *«greater than 55%»* at ages 10–12. Under either assignment of the two bar pairs to the two genotypes the drops are ≈ 43%/13% and ≈ 52%/33%. The counter-evidence to [[claim_registry_current#CLAIM 032]] therefore **does not survive inspection at all** and is rejected in `DIS-030`, not promoted. The real heterozygote cognitive measurement is in PMID 36498839 (Figure 5A–C), which is a different source and is carried separately.
+
 ---
 
 ## FT-105 — PMID 27569545 · **RETTIFICA DI STATO di `FT-103`: non "non letto" ma bloccato da licenza**
@@ -7313,7 +7315,7 @@ negative in this repository under-counts by an unknown amount.**
 ## FT-159
 **Paper:** PMID 19918364 / PMCID PMC2771921 — Li M-Y, … Chang N-S, *WWOX/WOX1 in dorsal root ganglia
 after sciatic nerve transection*, *PLoS ONE* 2009, [DOI](https://doi.org/10.1371/journal.pone.0007820)
-**Priority:** **LOW** — read at served depth; the debt is formal
+**Priority:** **LOW** — read at served depth; the debt is formal — 🟢 **DISCHARGED 2026-10-03** by `CC-20261003-B-WWOX-DIRECTION-01` (intake wave 2, Scientist B): the JATS deposit, all eight figures and all nine supplementary TIFFs were acquired and a receipt was written (`FTR-20261003-19918364-01`, **`partial_fulltext_read`** — two of the nine supplementary TIFFs were rendered and inspected and the other seven were read as captions, so the receipt's own coverage correction refuses `complete` over `captions_only`; depth corrected by `BATCH_20261003_001`, which found the op declaring `complete_fulltext_read`), with manifest `deepdive_manifests/PMID19918364.json`. The audit's finding is **confirmed at source** — the paper classifies by soma diameter only and `nocicept`, `unmyelin`, `IB4`, `CGRP` and `substance P` occur zero times — and three further bounds were added in [[claim_registry_current#CLAIM 044]]: the directional claim is a HEK-293 reporter assay, the chronic accumulation is equal on the uninjured side, and the headline percentages are bin labels of a categorical heat map.
 **Why:** Cited by [[ataxia_without_cerebellar_lesion_20260922]] to **weaken its own** proprioceptive
 hypothesis. 🟢 Served surface read in full (48,831 chars) 2026-09-22; **no receipt written**.
 🔴 **The citing use is PARTIALLY SUPPORTED and the paper is harder on that hypothesis than the citing

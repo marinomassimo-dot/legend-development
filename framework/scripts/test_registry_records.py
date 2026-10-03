@@ -735,13 +735,28 @@ class AFieldFilterReportsItsDenominator(unittest.TestCase):
                          & self._independent_claim_scan("Status", "consolidated baseline"))
 
     def test_an_unsatisfiable_filter_returns_nothing_rather_than_ignoring_itself(self) -> None:
-        """Anti-vacuity: a filter that never removes anything is not a filter."""
-        found = rr.select(ROOT, "wwox", theme="myelin",
-                          constraints=[("Status", "in observation")], hops=0,
-                          sources=["claim_registry_current"])
-        self.assertEqual(set(), self._independent_claim_scan("Status", "in observation")
-                         & {"CLAIM 003", "CLAIM 004", "CLAIM 011", "CLAIM 014", "CLAIM 015"},
-                         "the corpus changed; this case needs a new pair")
+        """Anti-vacuity: a filter that never removes anything is not a filter.
+
+        🔴 The pair is DERIVED, not typed. This case used `myelin` + `in observation` against a
+        hand-written list of five claim ids, and `BATCH_20261003_001` falsified it without
+        touching any of the five: `CLAIM 044` is `in observation` and matches the theme because
+        it quotes the string `unmyelin` while recording that a source classifies neurons by
+        diameter alone. The guard fired exactly as written — *the corpus changed; this case needs
+        a new pair* — so the fix is to stop pinning the pair to a list of ids that a later batch
+        can invalidate from the outside. The theme selection and the independent scan now supply
+        both halves, and the only typed constant is the status value, whose emptiness the guard
+        itself checks.
+        """
+        status = "conflicting evidence"
+        theme_only = rr.select(ROOT, "wwox", theme="myelin", hops=0,
+                               sources=["claim_registry_current"])
+        themed = {record.record_id for record, _ in theme_only.hits}
+        self.assertTrue(themed, "the theme selection must not be empty, or nothing is narrowed")
+        self.assertEqual(set(), self._independent_claim_scan("Status", status) & themed,
+                         "the corpus changed: a myelin-themed claim now carries this status, so "
+                         "this case needs a new status value")
+        found = rr.select(ROOT, "wwox", theme="myelin", constraints=[("Status", status)],
+                          hops=0, sources=["claim_registry_current"])
         self.assertEqual([], found.hits)
 
     def test_a_record_asked_for_by_name_is_not_withheld_by_a_filter(self) -> None:

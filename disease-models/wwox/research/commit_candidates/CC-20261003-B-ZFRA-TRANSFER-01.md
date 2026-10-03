@@ -66,3 +66,13 @@ They are rejected in one record because they are the same citation doing two job
 (Figure attestation: the supplementary panel's own content | `[figure attestation - pixels cannot be quote-matched] Supplementary Fig. S1: two panels, 'Short-term memory' bars at months 3 (~78), >10 (~45), 8 (~75), 10 (~65); 'Long-term memory' bars at months 3 (~87), >10 (~42), 8 (~75), 10 (~50); a red horizontal line at 50 percent and a red vertical line between the second and third bar of each panel; y-axis '% Exploration time'; no genotype appears on either axis.` | PMID 29067327, Supplementary Figure 1, `files/figure_renders/PMID29067327/supp_fig1.png`)
 
 (Figure attestation: the histology statistics are over fields and cells | `[figure attestation - pixels cannot be quote-matched] Fig 3C '# of pT181-Tau tangles per field', PBS ~13 vs Zfra ~9, p < 0.001, 'n = 10'; Fig 3D '% Reduction in intracellular pS35-TPC6A', PBS 100 vs Zfra ~40, p < 0.00001, 'n = 40'.` | PMID 29067327, Figure 3, `files/figures/PMID29067327/native/gr3.jpg`)
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261003_001` (2026-10-03, ACTOR_ID `scientist`, Scientist F), append-only
+
+**Verdict:** PROPAGATED
+
+Propagated record-scoped by `BATCH_20261003_001` (2026-10-03, ACTOR_ID `scientist`, Scientist F) — the ops below were read from this file by script, never retyped; every byte outside the addressed records was proven unchanged before anything was written. Post-propagation LINT: WARN, 0 BLOCK.
+
+`dismissal_ledger_current.md` 1 op — **`DIS-030` created** after `DIS-029`, the number free at propagation time — and `full_text_queue_current.md` 1 op discharging `FT-104`. Applied in the same batch as `CC-20261003-B-HET-ENDPOINT-01`, as the candidate requires, so no reader meets `CLAIM 032`'s firing without the rejection that bounds it.
