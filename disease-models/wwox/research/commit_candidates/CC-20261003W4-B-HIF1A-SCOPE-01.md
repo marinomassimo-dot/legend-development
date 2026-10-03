@@ -78,3 +78,10 @@ them and runs the dry propagation before `--apply`.
 5. The nuclear translocation asserted in the Discussion was not detected by the blot | We didn’t observed WWOX influence on HIF1α protein in nuclear fraction. | PMID 35328751, Results 2.6.1, same artefact
 6. Whole-cell immunocytochemistry reports the opposite direction from the cytoplasmic blot | WWOX downregulation resulted in HIF1α increase in normoxia normoglycemia and hyperglycemia condition (both p < 0.01). | PMID 35328751, Results 2.7, same artefact
 7. The paper's own therapeutic language targets WWOX in diabetes and not the brain | However, strategies to normalize glucose metabolism by targeting WWOX may have promise as therapies in the future. | PMID 35328751, Conclusions, final sentence, same artefact
+
+
+## BATCH DISPOSITION — `BATCH_20261003_003` (2026-10-03, ACTOR_ID `scientist`, Scientist H), append-only
+
+**Verdict:** PROPAGATED
+
+**PROPAGATED.** Three ops on `PAPER 023`, each `old` re-measured unique within the record. Dry run executed by this batch. One integrator amendment (**AM7**, blind audit 3 T05): the oxidative negative is the **citrate synthase** one only — pyruvate dehydrogenase activity does fall significantly in the overexpression arm under hypoxia (p < 0.001) — so the record no longer reads as a null for the whole oxidative arm. Audit 3 confirmed the blot/immunocytochemistry contradiction (T04, T12), the partial depletion labelled «KO» (T13), the sign reversal of glucose uptake (T07) and the lactate direction of the re-supply arm (T20): 7/7 quotes found.
