@@ -1,0 +1,191 @@
+{
+  "schema_version": 2,
+  "pmid": "36951961",
+  "doi": "10.1172/JCI164575",
+  "pmcid": "PMC10178841",
+  "receipt": "FTR-20261003-36951961-01",
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID36951961_Chen2023_PMC.xml",
+      "sha256": "6f2f5bfc5d0d3f5339e894cb3840f8369b801d73ba6cc25843822beefbb6d958",
+      "kind": "article_text",
+      "note": "The recessive-null, intrathecal, IND-directed architecture closest to a WWOX programme. Read for what an immunosuppressed primate still shows and for how a human dose is actually constructed from animal data.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10178841/fullTextXML",
+        "http_method": "GET",
+        "tier": "europepmc_fulltextxml",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-03",
+        "derived": false,
+        "result_sha256": "6f2f5bfc5d0d3f5339e894cb3840f8369b801d73ba6cc25843822beefbb6d958",
+        "http_status": 200,
+        "bytes": 149046
+      }
+    },
+    {
+      "path": "files/fulltext/PMID36951961_Chen2023_T1.jpg",
+      "sha256": "71e5f6ee0a711354ad7d88e869b8e72948e75cdec5096958457ae0e3a4fff597",
+      "kind": "table",
+      "note": "Table 1 as served by PMC (jci-133-164575-g056.jpg, 57392 bytes). The Europe PMC JATS declares this table-wrap with a graphic and no table body, so the per-animal lumbar-DRG incidences exist only in this image. Fetched from the PMC article instance route after the europepmc.org articles route returned HTTP 403.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/10178841/bin/jci-133-164575-g056.jpg",
+        "http_method": "GET",
+        "tier": "pmc_instance_bin",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-03",
+        "derived": false,
+        "result_sha256": "71e5f6ee0a711354ad7d88e869b8e72948e75cdec5096958457ae0e3a4fff597"
+      }
+    }
+  ],
+  "landing": [
+    "disease-models/wwox/research/intake_wave_20261003w6_C.md",
+    "disease-models/wwox/research/fulltext_dossiers/PMID36951961.md"
+  ],
+  "skills_considered": [
+    {
+      "skill": "legend-deepdive",
+      "used": false,
+      "reason": "Run by hand as a scientist reading, not through the skill: the brief fixes the dossier structure, the manifest schema and the receipt schema, and the skill would have produced a commit candidate for a paper that names no gene of this disease model."
+    },
+    {
+      "skill": "find-fulltext",
+      "used": true,
+      "reason": "Europe PMC fullTextXML returned a body on the first attempt (HTTP 200, 149046 bytes); the cascade was not needed. The rendered Table 1 image was fetched separately after the europepmc.org articles route returned HTTP 403."
+    },
+    {
+      "skill": "legend-locator-audit",
+      "used": false,
+      "reason": "Triples are handed to the audit through the commit candidate's LOCATOR TRIPLES FOR BLIND AUDIT section: the producer must not be the verifier."
+    }
+  ],
+  "group_assessment": {
+    "performed": true,
+    "total_publications": 146703,
+    "publications_on_gene": 6,
+    "counts_measured": "PubMed esearch 2026-10-03: 'Chen X[au]' 146703 and 'Chen X[au] AND WWOX' 6 - a surname-initial query over a very common name, an upper bound on the corpus and NOT a group identity. The more informative measured count is 'Chen X[au] AND AP4M1' = 3.",
+    "research_type": "mixed",
+    "is_primary_group_for_disease": false,
+    "is_primary_group_for_gene": false,
+    "weighting": "An academic consortium writing the regulatory package an approved IND rests on, with two independent laboratories replicating the in-vitro arm and the GLP work contracted to Charles River. The GLP observations - per-animal DRG incidences, nerve-conduction velocities, NOAELs - carry the highest weight in this group, and the paper publishes its own adverse findings including a top-dose sensory deficit. The INTERPRETATION has an interest: the same text argues that the resulting human dose is acceptable and that NHP studies may become unnecessary. Weight the table, read the acceptability argument as an argument.",
+    "note": "Research-group knowledge base is excluded from the public edition, so this rests on measured PubMed counts, the Methods and the declaration of interests. For common surnames the author query is an upper bound on one person's output and is recorded as such, not as a group identity."
+  },
+  "field_density": {
+    "wwox_directed": false,
+    "wwox_hits_in_source": 0,
+    "queries": [
+      {
+        "query": "count of the literal string WWOX over the whole JATS tree of the declared artifact",
+        "route": "python3 xml.etree itertext over files/fulltext/PMID36951961_Chen2023_PMC.xml, 2026-10-03",
+        "count": 0
+      },
+      {
+        "query": "Chen X[au] AND WWOX",
+        "route": "PubMed esearch 2026-10-03",
+        "count": 6
+      }
+    ],
+    "measured_by": "count of the string WWOX over the whole JATS tree, 2026-10-03",
+    "note": "Zero. This is an earned null for the gene and the source is read only for the transferable AAV-safety question, with the transfer limit stated in the dossier."
+  },
+  "multihop": {
+    "performed": false,
+    "references_enumerated": 61,
+    "pmid_bearing_references": 59,
+    "gene_direct_refs_in_source": [],
+    "enumeration_method": "All <ref> elements counted and all pub-id[pub-id-type=pmid] values parsed from the declared JATS artifact.",
+    "resolved": [],
+    "queued": [],
+    "gap_declared": "Off-WWOX source: the gene appears zero times, so no reference of this paper is gene-direct and the gene-direct hop set is empty by measurement, not by omission. 59 PMID-bearing references enumerated from the JATS; none is resolved and none is individually queued, because the transferable question this paper was read for is answered inside it. The one reference this group repeatedly depends on and cannot read is PMID 32845779 (the multi-capsid primate DRG series), blocked at the publisher on every route the wave tried."
+  },
+  "corpus_crossquery": {
+    "performed": true,
+    "query": "Does this corpus already hold an artifact or a receipt for this PMID, and is the paper already in the registries?",
+    "hits": 0,
+    "finding": "paper_packet.py packet --pmid 36951961 at commit 663970aa07f1: no manifest, no artifacts, depth=none, receipts=0, no acquisition route recorded, and no identity in the registry. First reading in every sense."
+  },
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-10-03",
+    "route": "NCBI ESummary db=pubmed for the six PMIDs of this group",
+    "result": "No retraction, no expression of concern, no erratum. One 'Comment in' is recorded: J Clin Invest 2023;133(10):e170226.",
+    "hold": false,
+    "dependencies": {
+      "flagged": [],
+      "noted": [],
+      "paper_verdict": "SCREENED_CLEAN",
+      "reference_source": "network",
+      "references_declared": 61,
+      "references_screened": 56,
+      "references_with_doi": 56,
+      "schema": "retraction_check.dependencies/1",
+      "screened": true,
+      "snapshot": {
+        "date": "2026-09-10",
+        "days_since_fetch": 23,
+        "rows": 72476,
+        "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+      },
+      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+      "unscreenable": {
+        "UNSCREENABLE_NO_DOI": 5
+      }
+    }
+  },
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC JATS for PMC10178841, 149046 bytes, sha256 recorded in full above.",
+    "note": "Abstract, Introduction, Results, Discussion and Methods read in full from the JATS running text. TABLE 1 CARRIES NO BODY IN THE JATS and was fetched as its rendered image and READ AT PANEL LEVEL, which is where the per-animal DRG incidences in the dossier come from. Other figure panels not inspected (captions only); Supplemental Figures 1-6, Supplemental Tables 1-3 and Supplemental Data Files 1-3 (the two GLP study reports) not fetched.",
+    "entries": [
+      {
+        "proposition": "THE PRIMATE ARM OF THIS PACKAGE WAS FULLY IMMUNOSUPPRESSED THROUGHOUT, with a corticosteroid and an mTOR inhibitor, the second begun twelve days before dosing.",
+        "snippet": "all animals received i.v. methylprednisolone starting on day 1 until the study termination",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36951961_Chen2023_PMC.xml",
+        "anchor": "Results, 'AAV9/AP4M1 gene therapy was safe and well tolerated in WT NHPs in a GLP study', study-design paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "AND UNDER THAT REGIMEN EVERY DOSED ANIMAL STILL HAD A LUMBAR SENSORY-GANGLION INFILTRATE. This is the sentence that separates the immune-addressable part from the part that is not.",
+        "snippet": "there were minimal mononuclear cell infiltrates in lumbar DRG in all AAV9/AP4M1-dosed animals",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36951961_Chen2023_PMC.xml",
+        "anchor": "Results, 'Similar degrees of minimal-to-mild DRG toxicity were observed in both rat and NHP toxicology studies'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THE REGIMEN DID WORK ON WHAT IT WAS AIMED AT - the T-cell readout was null, and the authors say so with the condition attached.",
+        "snippet": "the AAV9/AP4M1 vector did not generate a detectable T cell immune response to either AAV9 or the human AP4M1 protein in WT NHPs under the immunosuppressant protocol",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36951961_Chen2023_PMC.xml",
+        "anchor": "Results, same section, ELISpot paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THE HISTOLOGY ACQUIRED A FUNCTIONAL CORRELATE ONLY AT THE TOP DOSE, and only in the sensory modality.",
+        "snippet": "consistent with dose-dependent damage to sensory but not motor neurons",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36951961_Chen2023_PMC.xml",
+        "anchor": "Discussion, toxicology-summary paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "AND THE FIELD'S OWN DISCRIMINATING EXPERIMENT IS NAMED HERE: silencing the transgene in the ganglion resolved the histopathology, which makes the residue expression-driven rather than capsid-driven.",
+        "snippet": "incorporation of a miRNA binding site specific to DRG resolved this histopathology, suggesting that high transgene expression was driving the toxicity in DRG",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36951961_Chen2023_PMC.xml",
+        "anchor": "Discussion, DRG-risk paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THE HUMAN DOSE IS AN ALLOMETRIC CONSTRUCT FROM CSF VOLUME, NOT A DOSE ANY ANIMAL RECEIVED, and the margin over the highest tested dose is about two-fold.",
+        "snippet": "the toxicology studies across three species provide safety data up to an approximately 2-fold overdose in the HED",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36951961_Chen2023_PMC.xml",
+        "anchor": "Discussion, human-equivalent-dose paragraph",
+        "panel_text_relation": "text_only"
+      }
+    ]
+  }
+}

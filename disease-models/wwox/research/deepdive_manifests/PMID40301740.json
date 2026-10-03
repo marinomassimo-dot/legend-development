@@ -1,0 +1,160 @@
+{
+  "schema_version": 2,
+  "pmid": "40301740",
+  "doi": "10.1186/s10020-025-01207-4",
+  "pmcid": "PMC12042585",
+  "receipt": "FTR-20261003-40301740-01",
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID40301740_Ma2025_PMC.xml",
+      "sha256": "f6c49665c008763ee025e6f6672cae62244cb5f4448384161212ff64c1c5f8b7",
+      "kind": "article_text",
+      "note": "The dose-ranging and safety counterpart in the one indication whose human outcome is already known. Read as the negative control on the sensory-ganglion question; the reading found the paper's own figure legend contradicts its text.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12042585/fullTextXML",
+        "http_method": "GET",
+        "tier": "europepmc_fulltextxml",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-03",
+        "derived": false,
+        "result_sha256": "f6c49665c008763ee025e6f6672cae62244cb5f4448384161212ff64c1c5f8b7",
+        "http_status": 200,
+        "bytes": 88943
+      }
+    }
+  ],
+  "landing": [
+    "disease-models/wwox/research/intake_wave_20261003w6_C.md",
+    "disease-models/wwox/research/fulltext_dossiers/PMID40301740.md"
+  ],
+  "skills_considered": [
+    {
+      "skill": "legend-deepdive",
+      "used": false,
+      "reason": "Run by hand as a scientist reading, not through the skill: the brief fixes the dossier structure, the manifest schema and the receipt schema, and the skill would have produced a commit candidate for a paper that names no gene of this disease model."
+    },
+    {
+      "skill": "find-fulltext",
+      "used": true,
+      "reason": "Europe PMC fullTextXML returned a body on the first attempt (HTTP 200, 88943 bytes); the cascade was not needed."
+    },
+    {
+      "skill": "legend-locator-audit",
+      "used": false,
+      "reason": "Triples are handed to the audit through the commit candidate's LOCATOR TRIPLES FOR BLIND AUDIT section: the producer must not be the verifier."
+    }
+  ],
+  "group_assessment": {
+    "performed": true,
+    "total_publications": 43909,
+    "publications_on_gene": 2,
+    "counts_measured": "PubMed esearch 2026-10-03: 'Ma X[au]' 43909 and 'Ma X[au] AND WWOX' 2 - a surname-initial query over a very common name, an upper bound and NOT a group identity. 'Ma X[au] AND SMN1' = 3.",
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": false,
+    "is_primary_group_for_gene": false,
+    "weighting": "A developer's preclinical package for a product already in three clinical trials. The reporting is the thinnest in this group: one NHP dose level, one histology timepoint, H&E and one immunostain, no graded pathology table, no nerve conduction, and a figure legend that contradicts the running text. Its central negative - no DRG pathology - is therefore the least constrained observation in the group and must be carried as such, not as a counterexample of equal weight to the graded studies.",
+    "note": "Research-group knowledge base is excluded from the public edition, so this rests on measured PubMed counts, the Methods and the declaration of interests. For common surnames the author query is an upper bound on one person's output and is recorded as such, not as a group identity."
+  },
+  "field_density": {
+    "wwox_directed": false,
+    "wwox_hits_in_source": 0,
+    "queries": [
+      {
+        "query": "count of the literal string WWOX over the whole JATS tree of the declared artifact",
+        "route": "python3 xml.etree itertext over files/fulltext/PMID40301740_Ma2025_PMC.xml, 2026-10-03",
+        "count": 0
+      },
+      {
+        "query": "Ma X[au] AND WWOX",
+        "route": "PubMed esearch 2026-10-03",
+        "count": 2
+      }
+    ],
+    "measured_by": "count of the string WWOX over the whole JATS tree, 2026-10-03",
+    "note": "Zero. This is an earned null for the gene and the source is read only for the transferable AAV-safety question, with the transfer limit stated in the dossier."
+  },
+  "multihop": {
+    "performed": false,
+    "references_enumerated": 27,
+    "pmid_bearing_references": 0,
+    "gene_direct_refs_in_source": [],
+    "enumeration_method": "All <ref> elements counted and all pub-id[pub-id-type=pmid] values parsed from the declared JATS artifact.",
+    "resolved": [],
+    "queued": [],
+    "gap_declared": "Off-WWOX source: the gene appears zero times, so no reference of this paper is gene-direct and the gene-direct hop set is empty by measurement, not by omission. 0 PMID-bearing references enumerated from the JATS; none is resolved and none is individually queued, because the transferable question this paper was read for is answered inside it. The one reference this group repeatedly depends on and cannot read is PMID 32845779 (the multi-capsid primate DRG series), blocked at the publisher on every route the wave tried."
+  },
+  "corpus_crossquery": {
+    "performed": true,
+    "query": "Does this corpus already hold an artifact or a receipt for this PMID, and is the paper already in the registries?",
+    "hits": 0,
+    "finding": "paper_packet.py packet --pmid 40301740 at commit 663970aa07f1: no manifest, no artifacts, depth=none, receipts=0, no acquisition route recorded, and no identity in the registry. First reading in every sense."
+  },
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-10-03",
+    "route": "NCBI ESummary db=pubmed for the six PMIDs of this group",
+    "result": "No retraction, no expression of concern, no erratum.",
+    "hold": false,
+    "dependencies": {
+      "flagged": [],
+      "noted": [],
+      "paper_verdict": "SCREENED_CLEAN",
+      "reference_source": "network",
+      "references_declared": 27,
+      "references_screened": 25,
+      "references_with_doi": 25,
+      "schema": "retraction_check.dependencies/1",
+      "screened": true,
+      "snapshot": {
+        "date": "2026-09-10",
+        "days_since_fetch": 23,
+        "rows": 72476,
+        "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+      },
+      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+      "unscreenable": {
+        "UNSCREENABLE_NO_DOI": 2
+      }
+    }
+  },
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC JATS for PMC12042585, 88943 bytes, sha256 recorded in full above.",
+    "note": "Abstract, Introduction, Materials and methods, Results and Discussion read in full from the JATS running text. TABLES 1 AND 2 CARRY NO BODY IN THE JATS (served as images, not fetched), so the serum-chemistry statement is receipted only as running text. Figure PANELS not inspected (captions only) - which is why the contradiction between the Results text and the Figure 7 legend is recorded and NOT resolved. Supplementary Tables 1-2 and the supplemental appendix not fetched. The reference list of this JATS carries no PMIDs.",
+    "entries": [
+      {
+        "proposition": "A PRIMATE INTRATHECAL AAV9 STUDY THAT REPORTS NO SENSORY-GANGLION PATHOLOGY AT ALL, at a dose inside the range at which others report it.",
+        "snippet": "Hematoxylin and eosin (H&E) staining revealed no signs of inflammatory cell infiltration or neuronal necrosis in the treated monkeys",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID40301740_Ma2025_PMC.xml",
+        "anchor": "Results, 'Safety and biodistribution of AAV9-coSMN1 following intrathecal administration in cynomolgus monkeys'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "AND THE DISCUSSION REPEATS IT AS A POSITIVE SAFETY CLAIM, with no immunosuppression reported anywhere in the paper.",
+        "snippet": "no toxic inflammatory responses were observed in the DRG, despite robust SMN protein expression",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID40301740_Ma2025_PMC.xml",
+        "anchor": "Discussion, DRG paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "BUT THE PAPER'S OWN FIGURE LEGEND SAYS SOMETHING WEAKER THAN ITS TEXT. The contradiction is recorded, not resolved, because the panels were not inspected.",
+        "snippet": "Representative pictures showing minor detectable sign of toxicity",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID40301740_Ma2025_PMC.xml",
+        "anchor": "Figure 7 legend",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "AND THE PAPER SUPPLIES A CEILING ON EFFICACY, NOT ONLY ON SAFETY: more vector bought nothing above a saturating dose.",
+        "snippet": "increasing the dose to 1.6E+14 vg/kg did not result in additional therapeutic benefit compared to the 8.0E+13 vg/kg group",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID40301740_Ma2025_PMC.xml",
+        "anchor": "Results, 'Dose-Dependent rescue of phenotype in SMA Type 3 mouse model following ICV injection of AAV9-coSMN1'",
+        "panel_text_relation": "text_only"
+      }
+    ]
+  }
+}

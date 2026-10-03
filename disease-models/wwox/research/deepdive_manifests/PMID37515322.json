@@ -1,0 +1,168 @@
+{
+  "schema_version": 2,
+  "pmid": "37515322",
+  "doi": "10.1016/j.ymthe.2023.07.020",
+  "pmcid": "PMC10556189",
+  "receipt": "FTR-20261003-37515322-01",
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID37515322_Hudry2023_PMC.xml",
+      "sha256": "0a1aad3f4c79db6901e5059081d0bcf84818424e207913415c722a56343d8b1b",
+      "kind": "article_text",
+      "note": "Named reading debt of the wave: the primary behind reference 10 of PMID 41257285. Liver-injury aggregation across six cynomolgus studies, read for what bounds and what modifies the systemic toxicity of a CSF-route AAV9 dose.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10556189/fullTextXML",
+        "http_method": "GET",
+        "tier": "europepmc_fulltextxml",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-03",
+        "derived": false,
+        "result_sha256": "0a1aad3f4c79db6901e5059081d0bcf84818424e207913415c722a56343d8b1b",
+        "http_status": 200,
+        "bytes": 134828
+      }
+    }
+  ],
+  "landing": [
+    "disease-models/wwox/research/intake_wave_20261003w6_C.md",
+    "disease-models/wwox/research/fulltext_dossiers/PMID37515322.md"
+  ],
+  "skills_considered": [
+    {
+      "skill": "legend-deepdive",
+      "used": false,
+      "reason": "Run by hand as a scientist reading, not through the skill: the brief fixes the dossier structure, the manifest schema and the receipt schema, and the skill would have produced a commit candidate for a paper that names no gene of this disease model."
+    },
+    {
+      "skill": "find-fulltext",
+      "used": true,
+      "reason": "Europe PMC fullTextXML returned a body on the first attempt (HTTP 200, 134828 bytes); the cascade was not needed."
+    },
+    {
+      "skill": "legend-locator-audit",
+      "used": false,
+      "reason": "Triples are handed to the audit through the commit candidate's LOCATOR TRIPLES FOR BLIND AUDIT section: the producer must not be the verifier."
+    }
+  ],
+  "group_assessment": {
+    "performed": true,
+    "total_publications": 57,
+    "publications_on_gene": 0,
+    "counts_measured": "PubMed esearch 2026-10-03: 'Hudry E[au]' 57, 'Hudry E[au] AND WWOX' 0.",
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": false,
+    "is_primary_group_for_gene": false,
+    "weighting": "A gene-therapy sponsor's own nonclinical safety aggregation. The OBSERVATIONS - transaminase kinetics, histopathology grades, vector loads, and above all the empty-capsid and promoterless-vector negatives - are GLP-grade and carry full weight; they are the kind of measurement only this kind of group can make. The INTERPRETATION is written by the developer of the product whose toxicity is being characterised, and it is the interpretation that frames prednisolone's marginal effects as encouraging. Weight the negatives, discount the framing.",
+    "note": "Research-group knowledge base is excluded from the public edition, so this rests on measured PubMed counts, the Methods and the declaration of interests. For common surnames the author query is an upper bound on one person's output and is recorded as such, not as a group identity."
+  },
+  "field_density": {
+    "wwox_directed": false,
+    "wwox_hits_in_source": 0,
+    "queries": [
+      {
+        "query": "count of the literal string WWOX over the whole JATS tree of the declared artifact",
+        "route": "python3 xml.etree itertext over files/fulltext/PMID37515322_Hudry2023_PMC.xml, 2026-10-03",
+        "count": 0
+      },
+      {
+        "query": "Hudry E[au] AND WWOX",
+        "route": "PubMed esearch 2026-10-03",
+        "count": 0
+      }
+    ],
+    "measured_by": "count of the string WWOX over the whole JATS tree, 2026-10-03",
+    "note": "Zero. This is an earned null for the gene and the source is read only for the transferable AAV-safety question, with the transfer limit stated in the dossier."
+  },
+  "multihop": {
+    "performed": false,
+    "references_enumerated": 39,
+    "pmid_bearing_references": 35,
+    "gene_direct_refs_in_source": [],
+    "enumeration_method": "All <ref> elements counted and all pub-id[pub-id-type=pmid] values parsed from the declared JATS artifact.",
+    "resolved": [],
+    "queued": [],
+    "gap_declared": "Off-WWOX source: the gene appears zero times, so no reference of this paper is gene-direct and the gene-direct hop set is empty by measurement, not by omission. 35 PMID-bearing references enumerated from the JATS; none is resolved and none is individually queued, because the transferable question this paper was read for is answered inside it. The one reference this group repeatedly depends on and cannot read is PMID 32845779 (the multi-capsid primate DRG series), blocked at the publisher on every route the wave tried."
+  },
+  "corpus_crossquery": {
+    "performed": true,
+    "query": "Does this corpus already hold an artifact or a receipt for this PMID, and is the paper already in the registries?",
+    "hits": 0,
+    "finding": "paper_packet.py packet --pmid 37515322 at commit 663970aa07f1: no manifest, no artifacts, depth=none, receipts=0, no acquisition route recorded, and no identity in the registry. First reading in every sense."
+  },
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-10-03",
+    "route": "NCBI ESummary db=pubmed for the six PMIDs of this group",
+    "result": "No retraction, no expression of concern, no erratum.",
+    "hold": false,
+    "dependencies": {
+      "flagged": [],
+      "noted": [],
+      "paper_verdict": "SCREENED_CLEAN",
+      "reference_source": "cache",
+      "references_declared": 38,
+      "references_screened": 34,
+      "references_with_doi": 34,
+      "schema": "retraction_check.dependencies/1",
+      "screened": true,
+      "snapshot": {
+        "date": "2026-09-10",
+        "days_since_fetch": 23,
+        "rows": 72476,
+        "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+      },
+      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+      "unscreenable": {
+        "UNSCREENABLE_NO_DOI": 4
+      }
+    }
+  },
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC JATS for PMC10556189, 134828 bytes, sha256 recorded in full above.",
+    "note": "Abstract, Introduction, Results, Discussion and Materials and methods read in full from the JATS running text. Figure PANELS not inspected (captions only) and Supplemental Document S1 (Figures S1-S8, Tables S1-S8) not fetched, so the per-study design table and the antibody tables are unverified at source. No number carried in the dossier lives in a figure panel: every one is from the running text.",
+    "entries": [
+      {
+        "proposition": "THE INJURY AFTER A CSF-ROUTE DOSE REQUIRES A TRANSDUCING, EXPRESSING GENOME, NOT THE CAPSID: empty capsid and a promoterless genome caused neither transaminase rise nor microscopic change, despite a robust anti-capsid antibody response in the same animals.",
+        "snippet": "Those findings support the premise that the full vector is necessary in the transaminase activity elevations noted and that transduction and/or expression of transgenes may be involved in asymptomatic liver injury after IT administration of scAAV9",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID37515322_Hudry2023_PMC.xml",
+        "anchor": "Discussion, empty-capsid and promoterless-vector paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "IMMUNOSUPPRESSION DID NOT PREVENT THE INJURY AFTER INTRATHECAL DOSING, neither a corticosteroid nor B-cell depletion plus an mTOR inhibitor.",
+        "snippet": "Co-administration of prednisolone (1 mg/kg) or rituximab plus everolimus with scAAV9-CBA-SMN1 did not prevent the increase in transaminases",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID37515322_Hudry2023_PMC.xml",
+        "anchor": "Results, 'Clinical signs, liver enzyme elevations, and impact of immunosuppression ... after IT administration', penultimate sentence",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "NOR DID IT BLUNT THE HUMORAL RESPONSE, despite achieved peripheral B-cell depletion - so the antibody arm is not the lever either.",
+        "snippet": "No pronounced difference in anti-AAV9 antibody response existed with co-administration of prednisolone",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID37515322_Hudry2023_PMC.xml",
+        "anchor": "Results, 'Immunogenicity against AAV9'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THE CORRELATE OF CELL DEATH IS VECTOR LOAD RATHER THAN PEAK TRANSGENE EXPRESSION, which is what makes dose, not cassette strength, the first lever.",
+        "snippet": "the affected hepatocytes were not necessarily the cells expressing the transgene at the highest expression concentrations",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID37515322_Hudry2023_PMC.xml",
+        "anchor": "Discussion, molecular-localisation paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THE DOSE STEP TO LETHALITY IS STEEP AND IT IS SYSTEMIC: about 2e14 vg/kg IV killed every treated animal within eight days.",
+        "snippet": "was not tolerated and resulted in moribundity and mortality in all treated animals by Day 7 or 8 post dose",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID37515322_Hudry2023_PMC.xml",
+        "anchor": "Results, 'Acute toxicity and lethality after IV administration of scAAV9-CBA-ASPA'",
+        "panel_text_relation": "text_only"
+      }
+    ]
+  }
+}
