@@ -138,6 +138,176 @@
     "acquired_on": "2026-10-03",
     "lossiness": "SUSPECT. See the note above; the file is an index, not evidence."
    }
+  },
+  {
+   "path": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.pdf",
+   "sha256": "113522bb09b42a2dc0252bc1d7b112b66e3a68323ab1348c042f0ac8c8e8fa4c",
+   "kind": "article_binary",
+   "note": "Typeset publisher PDF of Brain 144(10):3061-3077, 17 pages, seven figures (pages 6, 7, 8, 10, 11, 12, 14 carry the only embedded rasters besides the page-1 logo, counted with `pdfimages -list`), no tables. This is the evidentiary surface of the wave-5 R reading: every article locator below is `rendered_text` or `figure`, read on pages rendered with poppler pdftoppm at the dpi each locator states. font-screen verdict UNDECIDED (0 UNTRUSTWORTHY, 0 SUSPECT_FONTS).",
+   "acquisition_recipe": {
+    "no_recipe": "Operator-supplied 2026-10-03 (the full typeset article and its complete supplementary archive, which the laboratory had never held before); lawful per the operator. Received into the ROOT files/fulltext/ and hardlinked into the worktree; every digest below was re-computed by the reader with sha256sum before use.",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "113522bb09b42a2dc0252bc1d7b112b66e3a68323ab1348c042f0ac8c8e8fa4c"
+   },
+   "added_by": "wave5-R"
+  },
+  {
+   "path": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.txt",
+   "sha256": "665f777280b0476f6e5cb69997027c1b0ae0052e738a2b68fce0335ef40e7124",
+   "kind": "article_text",
+   "note": "Derived text layer, declared for provenance and page indexing ONLY and REFUSED AS A QUOTE SURFACE. Measured by the validator's own screen (`screen_suspect_surface`, 2026-10-03): SUSPECT — 24 C0 controls, first U+0018 at offset 6970 (the degree sign of '37 C'). It also carries the known printable substitutions of this journal's PDFs: 'P 5 0.05' for 'P < 0.05', 'fold change 41.5' for '> 1.5', 'delta (55 Hz)' for '(<5 Hz)', 'P 4 0.01' for 'P <= 0.01', 'lm'/'mm' for micrometre, 'Ca2 +' spacing, and Greek letters dropped (PDGFRa, Wnt/b-catenin, TGFb). Two-column layout is interleaved line by line. No locator is matched against this file.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.pdf",
+    "extractor": {
+     "name": "pdftotext (poppler)",
+     "version": "24.02.0",
+     "call": "pdftotext -layout -nopgbrk PMID33914858_Repudi2021_Brain_operator_supplied.pdf PMID33914858_Repudi2021_Brain_operator_supplied.txt"
+    },
+    "acquired_on": "2026-10-03",
+    "lossiness": "SUSPECT (C0 controls, comparator and Greek-letter loss, column interleaving). Index only."
+   },
+   "added_by": "wave5-R"
+  },
+  {
+   "path": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied_supplement/awab174_supplementary_data.zip",
+   "sha256": "cfb264e45a6d6e2d7082853de293431594c8235cf087fbecbd0b3fcf1956c276",
+   "kind": "supplement_binary",
+   "note": "The journal's single supplementary archive. Extracted to extracted/awab174-suppl_data/ (six files: File009.pdf, File010.mp4, File011.mp4, File012.xlsx, File013.xlsx, File014.xlsx) plus the derived File009.txt.",
+   "acquisition_recipe": {
+    "no_recipe": "Operator-supplied 2026-10-03 (the full typeset article and its complete supplementary archive, which the laboratory had never held before); lawful per the operator. Received into the ROOT files/fulltext/ and hardlinked into the worktree; every digest below was re-computed by the reader with sha256sum before use.",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "cfb264e45a6d6e2d7082853de293431594c8235cf087fbecbd0b3fcf1956c276"
+   },
+   "added_by": "wave5-R"
+  },
+  {
+   "path": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied_supplement/extracted/awab174-suppl_data/brain-2020-02464-File009.pdf",
+   "sha256": "686ebcd80ef3108290877c4b5f39a006100c7528a4408c6e74317124a35c8cab",
+   "kind": "supplement_binary",
+   "note": "Supplementary methods, nine supplementary figures (rasters on PDF pages 7-15) and their legends, 21 pages. Byte-identical (same sha256) to the File009 named by FTR-20260923-33914858-01. All nine figure pages were rendered at 100 dpi and inspected; Supplementary Fig. 6B, 6E, 8 and 9 were read on those renders.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied_supplement/awab174_supplementary_data.zip",
+    "extractor": {
+     "name": "python zipfile (stdlib)",
+     "version": "Python 3.12.3",
+     "call": "python3 -c \"import zipfile; zipfile.ZipFile('awab174_supplementary_data.zip').extractall('extracted/')\"  # each member's sha256 re-verified against the extracted file on 2026-10-03"
+    },
+    "acquired_on": "2026-10-03",
+    "lossiness": "none (archive member)"
+   },
+   "added_by": "wave5-R"
+  },
+  {
+   "path": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied_supplement/extracted/awab174-suppl_data/brain-2020-02464-File009.txt",
+   "sha256": "76f82dc286cf7c49c6624ab76bf9fa8fce9217bb0b8e814a6bac9cbf8db0a7f1",
+   "kind": "supplement_text",
+   "note": "Derived text of File009. The validator's screen returns CLEAN on it (no C0 control, no printable substitution, comparators present). Supplement locators below are matched against it exactly. 🔴 It carries a legend for Supplementary Fig. 3, which FTR-20260923-33914858-01 recorded as MISSING from this same file (same sha256): the earlier finding was a property of that reading's extractor, not of the file.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied_supplement/extracted/awab174-suppl_data/brain-2020-02464-File009.pdf",
+    "extractor": {
+     "name": "pdftotext (poppler)",
+     "version": "24.02.0",
+     "call": "pdftotext -layout -nopgbrk brain-2020-02464-File009.pdf brain-2020-02464-File009.txt"
+    },
+    "acquired_on": "2026-10-03",
+    "lossiness": "CLEAN by the validator screen; superscripts flattened (mm2)."
+   },
+   "added_by": "wave5-R"
+  },
+  {
+   "path": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied_supplement/extracted/awab174-suppl_data/brain-2020-02464-File010.mp4",
+   "sha256": "87ec870a96251af9ee3211d4b7b0599360d1a035c2e1cbd41ca46ced6adf52bd",
+   "kind": "supplement_binary",
+   "note": "Video, 7.38 s, 1080x1920, h264+aac. 🔴 DIFFERENT sha256 from the File010 named by FTR-20260923-33914858-01 (2ef48d08...): a second byte-level instance of this supplement member exists. Eight frames sampled (fps 8/15, tiled) with a bundled ffmpeg 7.0.2: a small mouse lying on its side/back among larger cage-mates. No on-frame label identifies a genotype; mapping to 'Supplementary Video 1' is by filename ordinal only (INFERENZA).",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied_supplement/awab174_supplementary_data.zip",
+    "extractor": {
+     "name": "python zipfile (stdlib)",
+     "version": "Python 3.12.3",
+     "call": "python3 -c \"import zipfile; zipfile.ZipFile('awab174_supplementary_data.zip').extractall('extracted/')\"  # each member's sha256 re-verified against the extracted file on 2026-10-03"
+    },
+    "acquired_on": "2026-10-03",
+    "lossiness": "none (archive member)"
+   },
+   "added_by": "wave5-R"
+  },
+  {
+   "path": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied_supplement/extracted/awab174-suppl_data/brain-2020-02464-File011.mp4",
+   "sha256": "8665d7bc09ad45cc275c6a0442f64619bc060d39933fb6de6150497b55119515",
+   "kind": "supplement_binary",
+   "note": "Video, 14.95 s, 352x640. Eight frames sampled: a mouse on its back with limb movement over consecutive frames, consistent with the Supplementary Video 2 caption (S-KO tonic-clonic). Genotype not identifiable on-frame; audio not analysed.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied_supplement/awab174_supplementary_data.zip",
+    "extractor": {
+     "name": "python zipfile (stdlib)",
+     "version": "Python 3.12.3",
+     "call": "python3 -c \"import zipfile; zipfile.ZipFile('awab174_supplementary_data.zip').extractall('extracted/')\"  # each member's sha256 re-verified against the extracted file on 2026-10-03"
+    },
+    "acquired_on": "2026-10-03",
+    "lossiness": "none (archive member)"
+   },
+   "added_by": "wave5-R"
+  },
+  {
+   "path": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied_supplement/extracted/awab174-suppl_data/brain-2020-02464-File012.xlsx",
+   "sha256": "fde8917f99c16b9353b5226e9b595fefdfd7236f8fe05c0555b70bdc528c8d0e",
+   "kind": "supplement_binary",
+   "note": "Supplementary Table 1, sheet 'SKO_vs_S_Crtl_6_6_Crtx,hippo', 16,054 genes x 31 columns. Read with a stdlib OOXML reader; quantities carried in `xlsx_recounts`. No locator (xlsx cannot carry one).",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied_supplement/awab174_supplementary_data.zip",
+    "extractor": {
+     "name": "python zipfile (stdlib)",
+     "version": "Python 3.12.3",
+     "call": "python3 -c \"import zipfile; zipfile.ZipFile('awab174_supplementary_data.zip').extractall('extracted/')\"  # each member's sha256 re-verified against the extracted file on 2026-10-03"
+    },
+    "acquired_on": "2026-10-03",
+    "lossiness": "none (archive member)"
+   },
+   "added_by": "wave5-R"
+  },
+  {
+   "path": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied_supplement/extracted/awab174-suppl_data/brain-2020-02464-File013.xlsx",
+   "sha256": "aa56cc63d4b2888bbf47443fd4a313fb6f4f88392fb5fab57940832f8695e0d6",
+   "kind": "supplement_binary",
+   "note": "Supplementary Table 2, sheet 'KO_WT_7_vs_7_unBatch', 17,042 genes x 33 columns. Quantities carried in `xlsx_recounts`.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied_supplement/awab174_supplementary_data.zip",
+    "extractor": {
+     "name": "python zipfile (stdlib)",
+     "version": "Python 3.12.3",
+     "call": "python3 -c \"import zipfile; zipfile.ZipFile('awab174_supplementary_data.zip').extractall('extracted/')\"  # each member's sha256 re-verified against the extracted file on 2026-10-03"
+    },
+    "acquired_on": "2026-10-03",
+    "lossiness": "none (archive member)"
+   },
+   "added_by": "wave5-R"
+  },
+  {
+   "path": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied_supplement/extracted/awab174-suppl_data/brain-2020-02464-File014.xlsx",
+   "sha256": "e636aa224ff48f105b1e11e66b4ea159c2a92bf82a1ff331fc269ae34fe89dc6",
+   "kind": "supplement_binary",
+   "note": "Supplementary Table 3, two sheets ('Primer Squence' 59 rows; 'Antibodies' 19 rows), read row by row in full. Findings in `xlsx_recounts`.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied_supplement/awab174_supplementary_data.zip",
+    "extractor": {
+     "name": "python zipfile (stdlib)",
+     "version": "Python 3.12.3",
+     "call": "python3 -c \"import zipfile; zipfile.ZipFile('awab174_supplementary_data.zip').extractall('extracted/')\"  # each member's sha256 re-verified against the extracted file on 2026-10-03"
+    },
+    "acquired_on": "2026-10-03",
+    "lossiness": "none (archive member)"
+   },
+   "added_by": "wave5-R"
   }
  ],
  "verbatim_locators": {
@@ -274,6 +444,669 @@
     },
     "panel_text_relation": "text_only",
     "artifact": "files/fulltext/PMID33914858_Repudi2021_OUP_browserprint.pdf"
+   },
+   {
+    "proposition": "THE HETEROZYGOTE SLICE-BURSTING PROPORTION, AS THE RUNNING TEXT STATES IT, NOW READ ON THE TYPESET PAGE: 0/11 control slices (7 animals), 4/23 S-HT slices (14 animals), 36/42 S-KO slices (24 animals). A proportion of slices; no test of S-HT against control is reported for it anywhere in the paper or supplement.",
+    "snippet": "In total, 0% S-Control slices showed bursting (0 of n = 11 slices across seven animals), 17% of slices from S-HT animals showed bursting (4 of n = 23 slices across 14 animals) and 86% of slices from S-KO animals showed bursting (36 of n = 42 slices across 24 animals).",
+    "surface": "rendered_text",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.pdf",
+    "anchor": "Results, 'Neuronal deletion of Wwox results in epileptic seizures', right column of journal page 3065 (PDF page 5)",
+    "page_anchor": {
+     "page": 5,
+     "dpi": 110,
+     "render_call": "pdftoppm -r 110 -f 5 -l 5 -png",
+     "source_pdf_sha256": "113522bb09b42a2dc0252bc1d7b112b66e3a68323ab1348c042f0ac8c8e8fa4c",
+     "crop_published": false,
+     "crop_note": "No crop image published; the page regenerates from the declared PDF digest with the render call."
+    },
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "mouse neocortex, in vivo and acute slice",
+     "genotype": "S-Control (Wwox+/+; Syn1-Cre+), S-HT (Wwox+/flox; Syn1-Cre+), S-KO (Wwoxflox/flox; Syn1-Cre+)",
+     "timepoint": "P13-P17",
+     "treatment": "none",
+     "comparator": "S-Control slices",
+     "endpoint": "proportion of acute neocortical slices with spontaneous bursting"
+    },
+    "added_by": "wave5-R"
+   },
+   {
+    "proposition": "THE FIGURE 2 LEGEND COUNTS THE SAME EXPERIMENT BY ANIMAL: bursting slices came from 3 of 14 S-HT animals and 20 of 24 S-KO animals; the legend's ~20% and ~84% are animal-level shares, the text's 17% and 86% slice-level.",
+    "snippet": "four slices from three S-HT animals showed bursting",
+    "surface": "rendered_text",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.pdf",
+    "anchor": "Figure 2 legend, panel B, journal page 3067 (PDF page 7)",
+    "page_anchor": {
+     "page": 7,
+     "dpi": 110,
+     "render_call": "pdftoppm -r 110 -f 7 -l 7 -png",
+     "source_pdf_sha256": "113522bb09b42a2dc0252bc1d7b112b66e3a68323ab1348c042f0ac8c8e8fa4c",
+     "crop_published": false,
+     "crop_note": "No crop image published; the page regenerates from the declared PDF digest with the render call."
+    },
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "mouse neocortex, in vivo and acute slice",
+     "genotype": "S-Control (Wwox+/+; Syn1-Cre+), S-HT (Wwox+/flox; Syn1-Cre+), S-KO (Wwoxflox/flox; Syn1-Cre+)",
+     "timepoint": "P13-P17",
+     "treatment": "none",
+     "comparator": "S-Control",
+     "endpoint": "animals contributing a bursting slice"
+    },
+    "added_by": "wave5-R"
+   },
+   {
+    "proposition": "THE PAPER DOES ASSERT A BEHAVIOURAL NULL FOR THE SYNAPSIN HETEROZYGOTE — as an unquantified statement with no data, n or test shown. The wave-4 record that 'no behavioural endpoint is reported for the heterozygote at all' is too strong: one is asserted, none is measured.",
+    "snippet": "carrying one intact allele of Wwox did not show any abnormal phenotypes and was behaviourally indistinguishable from control mice",
+    "surface": "rendered_text",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.pdf",
+    "anchor": "Results, first section, right column, journal page 3065 (PDF page 5)",
+    "page_anchor": {
+     "page": 5,
+     "dpi": 110,
+     "render_call": "pdftoppm -r 110 -f 5 -l 5 -png",
+     "source_pdf_sha256": "113522bb09b42a2dc0252bc1d7b112b66e3a68323ab1348c042f0ac8c8e8fa4c",
+     "crop_published": false,
+     "crop_note": "No crop image published; the page regenerates from the declared PDF digest with the render call."
+    },
+    "panel_text_relation": "text_only",
+    "added_by": "wave5-R"
+   },
+   {
+    "proposition": "THE NESTIN HETEROZYGOTE IS LIKEWISE DECLARED NORMAL BY VISUAL INSPECTION ONLY, AND THE AUTHORS TRANSFER THAT TO HUMAN CARRIERS — an inference from 'no visible abnormal phenotype' in a conditional mouse to human heterozygous carriers, with no measurement behind either half.",
+    "snippet": "did not show any visible abnormal phenotype, which is in accordance with the absence of neurological symptoms in heterozygous carriers in human individuals",
+    "surface": "rendered_text",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.pdf",
+    "anchor": "Results, first section, left column, journal page 3065 (PDF page 5)",
+    "page_anchor": {
+     "page": 5,
+     "dpi": 110,
+     "render_call": "pdftoppm -r 110 -f 5 -l 5 -png",
+     "source_pdf_sha256": "113522bb09b42a2dc0252bc1d7b112b66e3a68323ab1348c042f0ac8c8e8fa4c",
+     "crop_published": false,
+     "crop_note": "No crop image published; the page regenerates from the declared PDF digest with the render call."
+    },
+    "panel_text_relation": "text_only",
+    "added_by": "wave5-R"
+   },
+   {
+    "proposition": "WHERE THE HETEROZYGOTE ENTERS A STATISTICAL CONTRAST AT ALL, IT IS AS THE COMPARATOR OF THE HOMOZYGOTE: in vivo 12-20 Hz S-KO > S-HT; in vitro 3-13 Hz S-KO > S-HT and S-Control. No S-HT vs S-Control test is reported.",
+    "snippet": "In vivo 12–20 Hz shows elevated power in S-KO as compared with S-HT and 7–15 Hz for S-KO as compared with S-Control",
+    "surface": "rendered_text",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.pdf",
+    "anchor": "Figure 2 legend, panel D, journal page 3067 (PDF page 7)",
+    "page_anchor": {
+     "page": 7,
+     "dpi": 110,
+     "render_call": "pdftoppm -r 110 -f 7 -l 7 -png",
+     "source_pdf_sha256": "113522bb09b42a2dc0252bc1d7b112b66e3a68323ab1348c042f0ac8c8e8fa4c",
+     "crop_published": false,
+     "crop_note": "No crop image published; the page regenerates from the declared PDF digest with the render call."
+    },
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "mouse neocortex, in vivo and acute slice",
+     "genotype": "S-Control (Wwox+/+; Syn1-Cre+), S-HT (Wwox+/flox; Syn1-Cre+), S-KO (Wwoxflox/flox; Syn1-Cre+)",
+     "timepoint": "P13-P17",
+     "treatment": "none",
+     "comparator": "S-HT and S-Control",
+     "endpoint": "spectral power by frequency"
+    },
+    "added_by": "wave5-R"
+   },
+   {
+    "proposition": "PANEL 2D, READ AT 250 DPI: in vivo, the S-HT (blue) spectrum runs at or above the S-KO (red) below ~5 Hz and its 0-4.9 Hz box sits beside the S-KO box, while in vitro the S-HT spectrum lies BELOW the S-Control. The heterozygote is therefore not a smooth intermediate between control and homozygote on this measure, and the direction of its departure differs between preparations. Reader's estimate from rendered axes; no test of it exists in the paper.",
+    "snippet": "0-4.9  5-9  10-15  15-30  30-500   Frequency (Hz)",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.pdf",
+    "anchor": "Figure 2D, journal page 3067 (PDF page 7), crop x 0.48-0.97 / y 0.36-0.76 of the page",
+    "page_anchor": {
+     "page": 7,
+     "dpi": 250,
+     "render_call": "python3 crop.py <pdf> 7 250 <out> 0.48 0.36 0.97 0.76  (pdftoppm -r 250 -x/-y/-W/-H crop of the same fractions)",
+     "source_pdf_sha256": "113522bb09b42a2dc0252bc1d7b112b66e3a68323ab1348c042f0ac8c8e8fa4c",
+     "crop_published": false,
+     "crop_note": "No crop image published; the page regenerates from the declared PDF digest with the render call."
+    },
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[10]",
+    "qualifies_needle": "12–20 Hz shows elevated power in S-KO as compared with S-HT",
+    "experimental_context": {
+     "system": "mouse neocortex, in vivo and acute slice",
+     "genotype": "S-Control (Wwox+/+; Syn1-Cre+), S-HT (Wwox+/flox; Syn1-Cre+), S-KO (Wwoxflox/flox; Syn1-Cre+)",
+     "timepoint": "P13-P17",
+     "treatment": "none",
+     "comparator": "S-Control",
+     "endpoint": "spectral power by frequency"
+    },
+    "added_by": "wave5-R",
+    "snippet_note": "Panel transcription: the labels as drawn, in the order they are drawn, read off the rendered panel. It is a reading of pixels, not a string extracted from a text layer, and the text layer of this artefact is refused."
+   },
+   {
+    "proposition": "THE TEXT STATES THE EVOKED RESPONSE IS LARGER IN S-KO THAN IN BOTH S-CONTROL AND S-HT.",
+    "snippet": "the electrophysiological evoked field responses, in vitro, were larger in the S-KOs as compared with the S-Controls and S-HTs",
+    "surface": "rendered_text",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.pdf",
+    "anchor": "Results, first paragraph of journal page 3069 (PDF page 9), left column",
+    "page_anchor": {
+     "page": 9,
+     "dpi": 110,
+     "render_call": "pdftoppm -r 110 -f 9 -l 9 -png",
+     "source_pdf_sha256": "113522bb09b42a2dc0252bc1d7b112b66e3a68323ab1348c042f0ac8c8e8fa4c",
+     "crop_published": false,
+     "crop_note": "No crop image published; the page regenerates from the declared PDF digest with the render call."
+    },
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "acute neocortical slice",
+     "genotype": "S-Control (Wwox+/+; Syn1-Cre+), S-HT (Wwox+/flox; Syn1-Cre+), S-KO (Wwoxflox/flox; Syn1-Cre+)",
+     "timepoint": "P13-P17",
+     "treatment": "layer V stimulation",
+     "comparator": "S-Control and S-HT",
+     "endpoint": "layer II/III evoked field amplitude"
+    },
+    "added_by": "wave5-R"
+   },
+   {
+    "proposition": "PANEL 2F QUALIFIES IT: for the FIRST peak the only bracket is S-Ctrl vs S-KO (*); S-HT vs S-KO is not marked. For the SECOND peak S-Ctrl vs S-KO (**) and S-HT vs S-KO (*). No S-HT vs S-Ctrl bracket on either peak; the S-HT first-peak median sits above the control's with a wide box.",
+    "snippet": "Amplitude (mV)  1st Peak  2nd Peak",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.pdf",
+    "anchor": "Figure 2F, journal page 3067 (PDF page 7)",
+    "page_anchor": {
+     "page": 7,
+     "dpi": 250,
+     "render_call": "python3 crop.py <pdf> 7 250 <out> 0.48 0.36 0.97 0.76",
+     "source_pdf_sha256": "113522bb09b42a2dc0252bc1d7b112b66e3a68323ab1348c042f0ac8c8e8fa4c",
+     "crop_published": false,
+     "crop_note": "No crop image published; the page regenerates from the declared PDF digest with the render call."
+    },
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[12]",
+    "qualifies_needle": "were larger in the S-KOs as compared with the S-Controls and S-HTs",
+    "experimental_context": {
+     "system": "acute neocortical slice",
+     "genotype": "S-Control (Wwox+/+; Syn1-Cre+), S-HT (Wwox+/flox; Syn1-Cre+), S-KO (Wwoxflox/flox; Syn1-Cre+)",
+     "timepoint": "P13-P17",
+     "treatment": "layer V stimulation",
+     "comparator": "S-Control and S-HT",
+     "endpoint": "layer II/III evoked field amplitude"
+    },
+    "added_by": "wave5-R",
+    "snippet_note": "Panel transcription: the labels as drawn, in the order they are drawn, read off the rendered panel. It is a reading of pixels, not a string extracted from a text layer, and the text layer of this artefact is refused."
+   },
+   {
+    "proposition": "THE TEXT STATES A 3.5-4-FOLD LOSS OF MYELINATED AXONS AND A 6-FOLD EXCESS OF UNMYELINATED OPTIC-NERVE AXONS.",
+    "snippet": "significantly a greater number (6-fold) of unmyelinated axons in optic nerves of S-KO",
+    "surface": "rendered_text",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.pdf",
+    "anchor": "Results, myelination section, right column, journal page 3069 (PDF page 9)",
+    "page_anchor": {
+     "page": 9,
+     "dpi": 110,
+     "render_call": "pdftoppm -r 110 -f 9 -l 9 -png",
+     "source_pdf_sha256": "113522bb09b42a2dc0252bc1d7b112b66e3a68323ab1348c042f0ac8c8e8fa4c",
+     "crop_published": false,
+     "crop_note": "No crop image published; the page regenerates from the declared PDF digest with the render call."
+    },
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "mouse brain, in vivo",
+     "genotype": "S-KO versus S-Control",
+     "timepoint": "P17",
+     "endpoint": "transmission electron microscopy axon counts per field of view",
+     "treatment": "none",
+     "comparator": "age-matched S-Control"
+    },
+    "added_by": "wave5-R"
+   },
+   {
+    "proposition": "FIGURE 5B DOES NOT SUPPORT '6-FOLD'. Read at 600 dpi, the optic-nerve S-Control mean line sits at ~65 and the S-KO at ~275 (~4.2x); the text's own averages (55 and 270) give 4.9x. In the corpus callosum the panel means (~184 vs ~55) give ~3.3x, below the text's 3.5-4. Every rounding goes in the direction that enlarges the effect.",
+    "snippet": "number of unmyelinated axons per FOV",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.pdf",
+    "anchor": "Figure 5B, lower plot, journal page 3071 (PDF page 11)",
+    "page_anchor": {
+     "page": 11,
+     "dpi": 600,
+     "render_call": "python3 crop.py <pdf> 11 600 <out> 0.46 0.20 0.60 0.31",
+     "source_pdf_sha256": "113522bb09b42a2dc0252bc1d7b112b66e3a68323ab1348c042f0ac8c8e8fa4c",
+     "crop_published": false,
+     "crop_note": "No crop image published; the page regenerates from the declared PDF digest with the render call."
+    },
+    "panel_text_relation": "text_contradicted_by_panel",
+    "contradicts": "entries[14]",
+    "contradicts_needle": "(6-fold)",
+    "experimental_context": {
+     "system": "mouse brain, in vivo",
+     "genotype": "S-KO versus S-Control",
+     "timepoint": "P17",
+     "endpoint": "transmission electron microscopy axon counts per field of view",
+     "treatment": "none",
+     "comparator": "age-matched S-Control"
+    },
+    "added_by": "wave5-R"
+   },
+   {
+    "proposition": "THE FIGURE 5B LEGEND GIVES AXON TOTALS PER GENOTYPE, n = 3 MICE, AND A STUDENT'S t-TEST.",
+    "snippet": "Graphs represent the myelinated axons (S-Control, n = 2500 and S-KO, n = 1200) in corpus callosum",
+    "surface": "rendered_text",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.pdf",
+    "anchor": "Figure 5 legend, panel B, journal page 3071 (PDF page 11)",
+    "page_anchor": {
+     "page": 11,
+     "dpi": 110,
+     "render_call": "pdftoppm -r 110 -f 11 -l 11 -png",
+     "source_pdf_sha256": "113522bb09b42a2dc0252bc1d7b112b66e3a68323ab1348c042f0ac8c8e8fa4c",
+     "crop_published": false,
+     "crop_note": "No crop image published; the page regenerates from the declared PDF digest with the render call."
+    },
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "mouse brain, in vivo",
+     "genotype": "S-KO versus S-Control",
+     "timepoint": "P17",
+     "endpoint": "transmission electron microscopy axon counts per field of view",
+     "treatment": "none",
+     "comparator": "age-matched S-Control"
+    },
+    "added_by": "wave5-R"
+   },
+   {
+    "proposition": "THE PLOTTED UNIT IS THE FIELD OF VIEW, NOT THE MOUSE: ~14 S-Control and ~13 S-KO points in the corpus callosum (and ~13 / ~15 in optic nerve) from n = 3 mice per genotype, so the *** is computed over fields (pseudoreplication). The legend totals do not reconcile with the points: 13 S-KO fields x ~55 axons is ~715, not 1200. Error bars look SD-wide in the callosal plot and SEM-narrow on the optic-nerve S-KO, while the legend says SEM. Point counts are the reader's, from a 600 dpi render.",
+    "snippet": "number of myelinated axons per FOV",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.pdf",
+    "anchor": "Figure 5B, upper plot, journal page 3071 (PDF page 11)",
+    "page_anchor": {
+     "page": 11,
+     "dpi": 600,
+     "render_call": "python3 crop.py <pdf> 11 600 <out> 0.46 0.08 0.60 0.20",
+     "source_pdf_sha256": "113522bb09b42a2dc0252bc1d7b112b66e3a68323ab1348c042f0ac8c8e8fa4c",
+     "crop_published": false,
+     "crop_note": "No crop image published; the page regenerates from the declared PDF digest with the render call."
+    },
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[16]",
+    "qualifies_needle": "S-Control, n = 2500 and S-KO, n = 1200",
+    "experimental_context": {
+     "system": "mouse brain, in vivo",
+     "genotype": "S-KO versus S-Control",
+     "timepoint": "P17",
+     "endpoint": "transmission electron microscopy axon counts per field of view",
+     "treatment": "none",
+     "comparator": "age-matched S-Control"
+    },
+    "added_by": "wave5-R"
+   },
+   {
+    "proposition": "THE TEXT CALLS THE MYELINATION GO TERM A SIGNIFICANT DOWNREGULATION.",
+    "snippet": "gene ontology (GO) term analysis indicated a significant downregulation of genes associated with myelination and ensheathment of neurons",
+    "surface": "rendered_text",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.pdf",
+    "anchor": "Results, RNA-seq section, left column, journal page 3069 (PDF page 9)",
+    "page_anchor": {
+     "page": 9,
+     "dpi": 110,
+     "render_call": "pdftoppm -r 110 -f 9 -l 9 -png",
+     "source_pdf_sha256": "113522bb09b42a2dc0252bc1d7b112b66e3a68323ab1348c042f0ac8c8e8fa4c",
+     "crop_published": false,
+     "crop_note": "No crop image published; the page regenerates from the declared PDF digest with the render call."
+    },
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "mouse cortex + hippocampus bulk RNA-seq",
+     "genotype": "S-KO versus S-Control",
+     "timepoint": "P17",
+     "endpoint": "GO enrichment"
+    },
+    "added_by": "wave5-R"
+   },
+   {
+    "proposition": "FIGURE 3C SHOWS THE MYELINATION AND ENSHEATHMENT TERMS ON A NEGATIVE-REGULATION FDR SCALE OF 0.09-0.11, while every one of the twelve UP-regulated terms shown is a spliceosome, RNA-splicing, centromere or proteasome term the text never mentions. An FDR near 0.1 passes the usual GSEA 0.25 convention and fails a 0.05 one; the paper does not state which it applies.",
+    "snippet": "MYELINATION (BP)   ENSHEATHMENT OF NEURONS (BP)",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.pdf",
+    "anchor": "Figure 3C, journal page 3068 (PDF page 8)",
+    "page_anchor": {
+     "page": 8,
+     "dpi": 300,
+     "render_call": "python3 crop.py <pdf> 8 300 <out> 0.64 0.06 0.86 0.25",
+     "source_pdf_sha256": "113522bb09b42a2dc0252bc1d7b112b66e3a68323ab1348c042f0ac8c8e8fa4c",
+     "crop_published": false,
+     "crop_note": "No crop image published; the page regenerates from the declared PDF digest with the render call."
+    },
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[18]",
+    "qualifies_needle": "significant downregulation of genes associated with myelination",
+    "experimental_context": {
+     "system": "mouse cortex + hippocampus bulk RNA-seq",
+     "genotype": "S-KO versus S-Control",
+     "timepoint": "P17",
+     "endpoint": "GO enrichment"
+    },
+    "added_by": "wave5-R",
+    "snippet_note": "Panel transcription: the labels as drawn, in the order they are drawn, read off the rendered panel. It is a reading of pixels, not a string extracted from a text layer, and the text layer of this artefact is refused."
+   },
+   {
+    "proposition": "CC1 AND OPC COUNTS IN THE CORPUS CALLOSUM ARE THREE SECTIONS FROM EACH OF THREE MICE PER GENOTYPE; the panel plots nine points per group (CC1 ~155 vs ~72, ~2.1-fold; PDGFR-alpha ~43 vs ~70), so the test is again over sections, and the panel's *** is not defined in the legend.",
+    "snippet": "from three independent sections of S-Control (n = 3) and S-KO mice (n = 3)",
+    "surface": "rendered_text",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.pdf",
+    "anchor": "Figure 4 legend, panel G, journal page 3070 (PDF page 10)",
+    "page_anchor": {
+     "page": 10,
+     "dpi": 110,
+     "render_call": "pdftoppm -r 110 -f 10 -l 10 -png",
+     "source_pdf_sha256": "113522bb09b42a2dc0252bc1d7b112b66e3a68323ab1348c042f0ac8c8e8fa4c",
+     "crop_published": false,
+     "crop_note": "No crop image published; the page regenerates from the declared PDF digest with the render call."
+    },
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "mouse brain, in vivo",
+     "genotype": "S-KO versus S-Control",
+     "timepoint": "P17",
+     "comparator": "S-Control",
+     "endpoint": "CC1+ and PDGFR-alpha+ cells per 0.5 mm2 corpus callosum"
+    },
+    "added_by": "wave5-R"
+   },
+   {
+    "proposition": "THE SUPPLEMENTARY FIG. 6B LEGEND PRINTS THE TWO GENOTYPE VALUES THE WRONG WAY ROUND: it says cells are reduced in S-KO and then gives S-KO the LARGER number and the control the smaller one.",
+    "snippet": "shows significantly reduced cells in S-KO (12±4) compared to the S- Control (7±3)",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied_supplement/extracted/awab174-suppl_data/brain-2020-02464-File009.txt",
+    "anchor": "Supplementary Figure Legends, Supplementary Fig 6(B), File009 text layer",
+    "panel_text_relation": "text_only",
+    "added_by": "wave5-R"
+   },
+   {
+    "proposition": "THE PANEL SETTLES IT THE OTHER WAY: Supplementary Fig. 6B plots the control bar at about 13 cells and the S-KO bar at about 6.8 per 0.5 mm2 of corpus callosum, so the direction in the sentence is right and the two numbers in its parentheses are transposed.",
+    "snippet": "Number of cells in CC (0.5mm2)   CC1 + NG2",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied_supplement/extracted/awab174-suppl_data/brain-2020-02464-File009.pdf",
+    "anchor": "Supplementary Fig. 6B, File009 PDF page 12 rendered at 100 dpi",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "contradicts_needle": "S-KO (12±4) compared to the S- Control (7±3)",
+    "page_anchor": {
+     "page": 12,
+     "dpi": 100,
+     "render_call": "pdftoppm -r 100 -f 12 -l 12 -png",
+     "source_pdf_sha256": "686ebcd80ef3108290877c4b5f39a006100c7528a4408c6e74317124a35c8cab",
+     "crop_published": false,
+     "crop_note": "Supplement page rendered from the declared File009.pdf digest; no crop published."
+    },
+    "added_by": "wave5-R",
+    "contradicts": "entries[21]",
+    "snippet_note": "Panel transcription: the labels as drawn, in the order they are drawn, read off the rendered panel. It is a reading of pixels, not a string extracted from a text layer, and the text layer of this artefact is refused."
+   },
+   {
+    "proposition": "THE NO-CELL-DEATH RESULT IS A CO-STAIN AT ONE AGE WITH NO QUANTIFICATION: cleaved caspase-3 and CC1 at P18, read as images, with no count, no n and no test in the legend.",
+    "snippet": "(apoptotic cell marker) showing no significant cell death in S-KO and S-Control at P18",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied_supplement/extracted/awab174-suppl_data/brain-2020-02464-File009.txt",
+    "anchor": "Supplementary Figure Legends, Supplementary Fig 6(E), File009 text layer",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "added_by": "wave5-R"
+   },
+   {
+    "proposition": "THE CELL-AUTONOMY ARGUMENT RESTS ON ONE VALIDATION PANEL: WWOX staining is stated to be intact in CC1-positive oligodendrocytes of the S-KO, which is what makes the oligodendrocyte phenotype non-cell-autonomous by construction. It is an immunofluorescence image at P17 with no quantification of residual WWOX.",
+    "snippet": "Intact\n\nlevels of WWOX are maintained in oligodendrocytes (stained with CC1) in S-KO compared to S-",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied_supplement/extracted/awab174-suppl_data/brain-2020-02464-File009.txt",
+    "anchor": "Supplementary Figure Legends, Supplementary Fig 1(D), File009 text layer",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "added_by": "wave5-R"
+   },
+   {
+    "proposition": "THE NESTIN CONDITIONAL CARRIES ITS OWN ELECTRON-MICROSCOPY COUNTS, AND THEY ARE WIDER AND WEAKER THAN THE NEURONAL ONES: myelinated axons per field 148 ± 45 (N-Control) versus 45 ± 26 (N-KO), unmyelinated optic-nerve axons 195 ± 35 versus 440 ± 210, n = 3 per genotype at P18. The N-KO unmyelinated spread is half its own mean.",
+    "snippet": "myelinated axons (N-Control, average=148±45, N-KO, average=45±26)",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied_supplement/extracted/awab174-suppl_data/brain-2020-02464-File009.txt",
+    "anchor": "Supplementary Figure Legends, Supplementary Fig 5(G), File009 text layer",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "added_by": "wave5-R"
+   },
+   {
+    "proposition": "THE OLIGODENDROCYTE-DELETION ARM IS A SINGLE NEGATIVE OBSERVATION: MBP staining in O-KO versus O-Control at P17, declared comparable. No electron microscopy, no g-ratio, no axon count, no CC1/OPC count, no later age and no quantification of any kind is reported for the O-KO.",
+    "snippet": "comparable myelin signal in O-KO compared to O-Control at P17",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied_supplement/extracted/awab174-suppl_data/brain-2020-02464-File009.txt",
+    "anchor": "Supplementary Figure Legends, Supplementary Fig 8(A), File009 text layer",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "added_by": "wave5-R"
+   },
+   {
+    "proposition": "THE NEOCORTICAL-ORIGIN CLAIM HAS A SUPPLEMENTARY FIGURE AND ITS LEGEND IS PRESENT IN THIS ARTEFACT: depth profiles of 1125 bursts from three S-KO brains, 149 / 834 / 142 per example, over 100-200 s of recording. All three examples are S-KO; the comparison genotype in the depth panel is S-HT, not S-Control.",
+    "snippet": "A total of 1125 bursts were identified across all layers",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied_supplement/extracted/awab174-suppl_data/brain-2020-02464-File009.txt",
+    "anchor": "Supplementary Figure Legends, Supplementary Fig 3(C), File009 text layer",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "added_by": "wave5-R"
+   },
+   {
+    "proposition": "SUPPLEMENTARY FIG. 3B SHOWS THE HETEROZYGOTE'S DEPTH RECORDING SIDE BY SIDE WITH THE HOMOZYGOTE'S: six depths from 150 to 2000 micrometres, the S-HT traces carrying no discernible bursts at any depth while the S-KO traces burst at 150-1000. It is the paper's only published heterozygote in-vivo trace set and it is a single animal per genotype with no quantification.",
+    "snippet": "Estimated depth from surface (µm)",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied_supplement/extracted/awab174-suppl_data/brain-2020-02464-File009.pdf",
+    "anchor": "Supplementary Fig. 3B, File009 PDF page 9 rendered at 100 dpi",
+    "panel_text_relation": "panel_only",
+    "page_anchor": {
+     "page": 9,
+     "dpi": 100,
+     "render_call": "pdftoppm -r 100 -f 9 -l 9 -png",
+     "source_pdf_sha256": "686ebcd80ef3108290877c4b5f39a006100c7528a4408c6e74317124a35c8cab",
+     "crop_published": false,
+     "crop_note": "Supplement page rendered from the declared File009.pdf digest; no crop published."
+    },
+    "added_by": "wave5-R",
+    "snippet_note": "Panel transcription: the labels as drawn, in the order they are drawn, read off the rendered panel. It is a reading of pixels, not a string extracted from a text layer, and the text layer of this artefact is refused."
+   },
+   {
+    "proposition": "THE OLIGODENDROCYTE AND ASTROCYTE DELETIONS ARE REPORTED AS A FLAT NEGATIVE, AND THE PAPER TURNS THAT NEGATIVE INTO ITS CENTRAL INFERENCE: because O-KO and G-KO have no phenotype, WWOX's function is said to be the neuronal one.",
+    "snippet": "we examined the consequences of ablating WWOX expression in oligodendrocytes (using Olig2-Cre+/–) and astrocytes (using GFAP-Cre) and observed no phenotype abnormalities",
+    "surface": "rendered_text",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.pdf",
+    "anchor": "Results, first section, right column, journal page 3065 (PDF page 5)",
+    "panel_text_relation": "text_only",
+    "page_anchor": {
+     "page": 5,
+     "dpi": 110,
+     "render_call": "pdftoppm -r 110 -f 5 -l 5 -png",
+     "source_pdf_sha256": "113522bb09b42a2dc0252bc1d7b112b66e3a68323ab1348c042f0ac8c8e8fa4c",
+     "crop_published": false,
+     "crop_note": "No crop image published; the page regenerates from the declared PDF digest with the render call."
+    },
+    "added_by": "wave5-R"
+   },
+   {
+    "proposition": "THE O-KO AND G-KO NEGATIVE IS POWERED FOR SURVIVAL AND WEIGHT ONLY, AT ONE EARLY AGE, WITH SMALL GROUPS AND A LOG-RANK P OF EXACTLY 1.0: O-Control n = 11 and O-KO n = 10, G-Control n = 8 and G-KO n = 9, followed to about 120 days with weight to P16.",
+    "snippet": "O-Control, n = 11 and O-KO, n = 10, P-value 1.0, no significance, log-rank Mantel-Cox test",
+    "surface": "rendered_text",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.pdf",
+    "anchor": "Figure 1 legend, panels J-O, journal page 3066 (PDF page 6)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "page_anchor": {
+     "page": 6,
+     "dpi": 110,
+     "render_call": "pdftoppm -r 110 -f 6 -l 6 -png",
+     "source_pdf_sha256": "113522bb09b42a2dc0252bc1d7b112b66e3a68323ab1348c042f0ac8c8e8fa4c",
+     "crop_published": false,
+     "crop_note": "No crop image published; the page regenerates from the declared PDF digest with the render call."
+    },
+    "added_by": "wave5-R"
+   },
+   {
+    "proposition": "THE IN-VITRO NON-CELL-AUTONOMY EXPERIMENT IS A CO-CULTURE OF WILD-TYPE OPCs ON WWOX-NULL DORSAL-ROOT-GANGLION NEURONS, n = 4 per condition FROM TWO EXPERIMENTS, with the counts expressed as percentages of cells rather than cells per axon length.",
+    "snippet": "Results are shown in a box plot from two independent experiments (WT-DRGs + WT-OPCs, n = 4; KO-",
+    "surface": "rendered_text",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.pdf",
+    "anchor": "Figure 6 legend, panel D, journal page 3072 (PDF page 12)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "page_anchor": {
+     "page": 12,
+     "dpi": 110,
+     "render_call": "pdftoppm -r 110 -f 12 -l 12 -png",
+     "source_pdf_sha256": "113522bb09b42a2dc0252bc1d7b112b66e3a68323ab1348c042f0ac8c8e8fa4c",
+     "crop_published": false,
+     "crop_note": "No crop image published; the page regenerates from the declared PDF digest with the render call."
+    },
+    "added_by": "wave5-R"
+   },
+   {
+    "proposition": "THE CO-CULTURE USES THE CONSTITUTIVE NULL, NOT THE NEURONAL CONDITIONAL, AND ITS NEURONS ARE PERIPHERAL: embryonic dorsal-root-ganglion neurons from Wwox-null embryos. The in-vitro demonstration of neuron-to-oligodendrocyte signalling therefore comes from a different genotype and a different neuronal class than the in-vivo phenotype it is offered to explain.",
+    "snippet": "we performed a co-culture assay of wild-type OPCs with DRG neurons isolated either from wild-type or Wwox-null mice",
+    "surface": "rendered_text",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.pdf",
+    "anchor": "Results, 'Neuronal WWOX promotes the differentiation...', right column, journal page 3071 (PDF page 11)",
+    "panel_text_relation": "text_only",
+    "page_anchor": {
+     "page": 11,
+     "dpi": 110,
+     "render_call": "pdftoppm -r 110 -f 11 -l 11 -png",
+     "source_pdf_sha256": "113522bb09b42a2dc0252bc1d7b112b66e3a68323ab1348c042f0ac8c8e8fa4c",
+     "crop_published": false,
+     "crop_note": "No crop image published; the page regenerates from the declared PDF digest with the render call."
+    },
+    "added_by": "wave5-R"
+   },
+   {
+    "proposition": "THE HUMAN ORGANOID RESULT IS THREE VERSUS FOUR ORGANOIDS, AND ITS HEADLINE NUMBER IS A RESTING MEMBRANE POTENTIAL OF -52.1 ± 0.90 mV IN WILD TYPE AGAINST -21.28 ± 6.91 mV IN THE KNOCKOUT: a 2.4-fold difference in mean with a 7.7-fold difference in dispersion, tested with a Student's t-test.",
+    "snippet": "OS-WT RMP = –52.1 ± 0.90 mV, OS-WWWOX-KO RMP = –21.28 ± 6.91 mV",
+    "surface": "rendered_text",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.pdf",
+    "anchor": "Figure 7 legend, panel B, journal page 3074 (PDF page 14)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "page_anchor": {
+     "page": 14,
+     "dpi": 110,
+     "render_call": "pdftoppm -r 110 -f 14 -l 14 -png",
+     "source_pdf_sha256": "113522bb09b42a2dc0252bc1d7b112b66e3a68323ab1348c042f0ac8c8e8fa4c",
+     "crop_published": false,
+     "crop_note": "No crop image published; the page regenerates from the declared PDF digest with the render call."
+    },
+    "added_by": "wave5-R"
+   },
+   {
+    "proposition": "THE ORGANOID MYELIN RESULT IS A PERCENTAGE FROM TWO AND THREE ORGANOIDS: the electron-microscopy bar in Figure 7I is built from OS-WT n = 2 and OS-WWOX-KO n = 3 at week 37, with no error bar, no test and no axon count printed.",
+    "snippet": "Bar graph represents the percentage of myelinated\nand unmyelinated axons in OS-WT (n = 2) and OS-WWOX-KO (n = 3)",
+    "surface": "rendered_text",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.pdf",
+    "anchor": "Figure 7 legend, panel I, journal page 3074 (PDF page 14)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "page_anchor": {
+     "page": 14,
+     "dpi": 110,
+     "render_call": "pdftoppm -r 110 -f 14 -l 14 -png",
+     "source_pdf_sha256": "113522bb09b42a2dc0252bc1d7b112b66e3a68323ab1348c042f0ac8c8e8fa4c",
+     "crop_published": false,
+     "crop_note": "No crop image published; the page regenerates from the declared PDF digest with the render call."
+    },
+    "added_by": "wave5-R"
+   },
+   {
+    "proposition": "THE AUTHORS THEMSELVES READ THE ORGANOID DIFFERENCE AS DEVELOPMENTAL DELAY RATHER THAN AS A MYELIN PHENOTYPE AT WEEK 15, AND BOTH GENOTYPES ARE IMMATURE: the resting potentials of both lines are stated to be less negative than mature neurons.",
+    "snippet": "less negative than typical mature neurons, suggesting that these cells are still in the process of development",
+    "surface": "rendered_text",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.pdf",
+    "anchor": "Results, oligocortical spheroid section, right column, journal page 3072 (PDF page 12)",
+    "panel_text_relation": "text_only",
+    "page_anchor": {
+     "page": 12,
+     "dpi": 110,
+     "render_call": "pdftoppm -r 110 -f 12 -l 12 -png",
+     "source_pdf_sha256": "113522bb09b42a2dc0252bc1d7b112b66e3a68323ab1348c042f0ac8c8e8fa4c",
+     "crop_published": false,
+     "crop_note": "No crop image published; the page regenerates from the declared PDF digest with the render call."
+    },
+    "added_by": "wave5-R"
+   },
+   {
+    "proposition": "THE PAPER DOES CARRY A DATA-AVAILABILITY STATEMENT, AND IT DEPOSITS NOTHING: data and code are offered on request to the corresponding author, with no accession for either RNA-seq dataset.",
+    "snippet": "The data and code that support the findings of this study are available from the corresponding author upon reasonable request.",
+    "surface": "rendered_text",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.pdf",
+    "anchor": "Data and code availability, left column, journal page 3065 (PDF page 5)",
+    "panel_text_relation": "text_only",
+    "page_anchor": {
+     "page": 5,
+     "dpi": 110,
+     "render_call": "pdftoppm -r 110 -f 5 -l 5 -png",
+     "source_pdf_sha256": "113522bb09b42a2dc0252bc1d7b112b66e3a68323ab1348c042f0ac8c8e8fa4c",
+     "crop_published": false,
+     "crop_note": "No crop image published; the page regenerates from the declared PDF digest with the render call."
+    },
+    "added_by": "wave5-R"
+   },
+   {
+    "proposition": "THE WHOLE PAPER IS TESTED WITH A TWO-TAILED UNPAIRED STUDENT'S t-TEST (with log-rank for survival and Wilcoxon rank-sum for the evoked responses), AND NO CORRECTION FOR MULTIPLE COMPARISONS IS STATED ANYWHERE.",
+    "snippet": "The two-tailed unpaired Student’s t-test was used to test the statistical significance.",
+    "surface": "rendered_text",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.pdf",
+    "anchor": "Materials and methods, Statistical analysis, journal page 3065 (PDF page 5)",
+    "panel_text_relation": "text_only",
+    "page_anchor": {
+     "page": 5,
+     "dpi": 110,
+     "render_call": "pdftoppm -r 110 -f 5 -l 5 -png",
+     "source_pdf_sha256": "113522bb09b42a2dc0252bc1d7b112b66e3a68323ab1348c042f0ac8c8e8fa4c",
+     "crop_published": false,
+     "crop_note": "No crop image published; the page regenerates from the declared PDF digest with the render call."
+    },
+    "added_by": "wave5-R"
+   },
+   {
+    "proposition": "THE SINGLE-NUCLEUS RESULT IS ONE ANIMAL PER GENOTYPE: the UMAP depletion of mature and myelinating oligodendrocytes is computed from S-Control n = 1 and S-KO n = 1, and the percentages in the running text (15%, 68%, 150%) are cluster-share ratios from that single pair.",
+    "snippet": "analysed from snRNA-seq of S-Control (n = 1) and S-KO (n = 1) at P17",
+    "surface": "rendered_text",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.pdf",
+    "anchor": "Figure 3 legend, panel F, journal page 3068 (PDF page 8)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "page_anchor": {
+     "page": 8,
+     "dpi": 110,
+     "render_call": "pdftoppm -r 110 -f 8 -l 8 -png",
+     "source_pdf_sha256": "113522bb09b42a2dc0252bc1d7b112b66e3a68323ab1348c042f0ac8c8e8fa4c",
+     "crop_published": false,
+     "crop_note": "No crop image published; the page regenerates from the declared PDF digest with the render call."
+    },
+    "added_by": "wave5-R"
+   }
+  ]
+ },
+ "xlsx_recounts": {
+  "method": "Each workbook was read cell by cell with a stdlib OOXML reader (zipfile + xml.etree over xl/worksheets, resolving sharedStrings), not with a spreadsheet application. A spreadsheet cannot carry a verbatim locator, so the numbers below are recorded here with the recipe that reproduces them from the declared digests.",
+  "reader": "/tmp/claude-1000/-home-desktop-legend-development/b0198743-b9d3-4438-a282-1b8b9addbfc3/scratchpad/sciR/xlsx_read.py (stdlib only; prints sheet name, row count and any requested rows)",
+  "added_by": "wave5-R",
+  "findings": [
+   {
+    "file": "brain-2020-02464-File012.xlsx",
+    "sheet": "SKO_vs_S_Crtl_6_6_Crtx,hippo",
+    "finding": "The paper's '730 upregulated and 579 downregulated genes (P-value < 0.01, fold change > 1.5)' reproduces EXACTLY from this sheet — but only on the UNADJUSTED p-value and the unshrunk log2 fold change. Recounted: p<0.01 & |log2FC|>log2(1.5) gives 730 up / 579 down; the same filter on the shrunken estimate the authors also supply gives 488 / 388; and on the adjusted p-value (padj<0.01) it gives 281 / 280. The headline DEG count is therefore an uncorrected one in a paper that states no multiple-comparison correction anywhere."
+   },
+   {
+    "file": "brain-2020-02464-File012.xlsx",
+    "sheet": "SKO_vs_S_Crtl_6_6_Crtx,hippo",
+    "finding": "Of the 23 genes the running text lists as significantly downregulated in Fig. 3E, 21 have padj < 0.01 in this sheet; TWO DO NOT: Enpp2 padj = 0.281 and Myrf padj = 0.134 (Mag is 0.0355, significant but above 0.01). Myrf matters: it is the myelin regulatory factor, and the maturation-block reading leans on it."
+   },
+   {
+    "file": "brain-2020-02464-File012.xlsx",
+    "finding": "The per-sample columns show the design is UNBALANCED and the imbalance is not stated in the paper: S-KO 3 cortex + 3 hippocampus, S-Control 4 cortex + 2 hippocampus. Wwox itself: log2FC -1.86, padj 1.69e-8, with residual normalised counts in S-KO cortex (172.74 / 187.02 / 331.42) an order of magnitude above S-KO hippocampus (18.82 / 18.82 / 28.01) — Synapsin-Cre deletion is far from complete in cortex at the transcript level, and the paper never says so."
+   },
+   {
+    "file": "brain-2020-02464-File013.xlsx",
+    "sheet": "KO_WT_7_vs_7_unBatch",
+    "finding": "The pooled hippocampal comparison (null + N-KO + S-KO against WT + N-Control + S-Control) gives Wwox log2FC -3.14, padj 2.9e-32, and the per-sample columns un-pool it: residual Wwox counts are 28.29 / 32.45 in the constitutive null, 5.06 / 25.52 in N-KO and 32.52 / 33.04 / 49.01 in S-KO against 294-307 in WT. The three genotypes are NOT graded on residual transcript; they are saturated together, which is an argument the paper could have made and does not."
+   },
+   {
+    "file": "brain-2020-02464-File014.xlsx",
+    "sheets": [
+     "Primer Squence",
+     "Antibodies"
+    ],
+    "finding": "Read row by row. 13 mouse and 6 human primer pairs, all oligodendrocyte/myelin genes: there is NO Wwox primer pair and no housekeeping pair, although the supplementary methods name 'HPRT or UBC'. Ten primary antibodies; the anti-WWOX row carries dilution 1:5000 with catalogue 'N.A' and an EMPTY source cell, in a table whose nine other rows are populated — an authorial declaration of absence. Three secondaries only (anti-mouse 488, anti-mouse 647, anti-rat Cy5) and NO anti-rabbit secondary at all, although four primaries are rabbit (WWOX, MBP, NG2, GFAP) and all four are imaged in published panels; no DAPI or Hoechst is listed although Hoechst is labelled in Supplementary Fig. 1 and Figure 6C."
    }
   ]
  }
