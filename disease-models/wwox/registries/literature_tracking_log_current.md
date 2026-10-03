@@ -581,7 +581,7 @@ Serves to:
 **Final decision label:** tensione evidence vigabatrin
 **Claim links:** 001 (conflicting evidence trigger)
 **Working Model impact:** CLAIM 001 → conflicting evidence; posizione clinica generale su vigabatrin invariata
-**Evidence depth:** full text reviewed (PMC open access)
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261003-39101447-01`; manifest `deepdive_manifests/PMID39101447.json`
 **Full text status:** found — PMC11298992
 **Status:** integrated
 **Next action:** none
@@ -3648,7 +3648,7 @@ Serves to:
 **Claim links:** none
 **Working Model impact:** none yet
 **Report mentions:** corpus alignment
-**Next action:** screening and tier assignment
+**Next action:** none — processed 2026-10-03 (`FTR-20261003-37974179-01`, `complete_fulltext_read`) and promoted to [[paper_registry_current#PAPER 134]] by `CC-20261003-A-REGISTRY-01`; Dong XS et al. 2023, *BMC Med Genomics* 16:291; the placeholder fields above are kept as history
 **Flags:** corpus placeholder / not yet screened
 **Note:** Title: Identification of compound heterozygous deletion of the WWOX gene in WOREE syndrome
 
@@ -4386,7 +4386,8 @@ Serves to:
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 126
-**Status:** discovered
+**Status:** processed
+**Status note:** 🟢 **Enriched 2026-10-03 by `CC-20261003-C-REGISTRY-01`** from the stub state (*«not yet extracted»*, *«not yet screened»*) on a first-hand reading: Janczar S, Nautiyal J, Xiao Y, Curry E, Sun M, Zanini E, Paige AJW, Gabra H, *Cell Death Dis* 2017;8(7):e2955, primary research — cell-line experimental plus two public microarray survival cohorts. `partial_fulltext_read` — receipt `FTR-20261003-28749468-01`; manifest `deepdive_manifests/PMID28749468.json` (9 verbatim locators, PASS with artefact verification); dossier `research/fulltext_dossiers/PMID28749468.md`. Body, all eight figure images and the full supplementary legend set read; the nine-page supplementary figure PDF not inspected panel by panel; 52-item reference list enumerated and screened mechanically (`SCREENED_CLEAN`), not read. Primary pathway: ER stress / UPR (oncological context). Genotype/model tag: human ovarian carcinoma lines, PEO1 being a WWOX-null by homozygous deletion of exons 4-8; no WWOX allele of the reference genotype class and no neural material. Transferability: T3. clinical relevance: BACKGROUND. 🔴 Every quantified endpoint measures WWOX as **pro-death under stress**, so a «rescue» in this system means restoring the cell's ability to die — recorded in `CC-20261003-C-APOPTOSIS-DIRECTION-01`, which also qualifies `DL-MECH-023` because Figures 5c-5e carry no significance marker and the KIRA6 viability increment is the same in the WWOX-expressing and WWOX-null clones. Not medical advice.
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -10565,7 +10566,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Working Model impact:** none yet
 **Report mentions:** FASE 1 triage 221–400
 **Current status:** screened — A
-**Next action:** full-text retrieval + deep-dive in next session
+**Next action:** none — promoted earlier to [[paper_registry_current#PAPER 043]]; first receipted full-text read 2026-10-03 (`FTR-20261003-24456803-01`, `complete_fulltext_read`)
 **Flags:** FASE 1 batch entry / no deep-dive yet
 **Note:** Title: The supposed tumor suppressor gene WWOX is mutated in an early lethal microcephaly syndrome with epilepsy, growth retardation and retinal degeneration
 
@@ -12755,3 +12756,107 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Report mentions:** `research/intake_wave_20261002_B.md` · `CC-20261002-B-INTRON8-01` · `CC-20261002-B-NONLINEAGE-01` · `CC-20261002-INTAKE-WAVE-ORPHANS-01`
 **Next action:** supplement appendices owed for a complete read
 **Evidence depth:** `partial_fulltext_read` — manifest `deepdive_manifests/PMID28763065.json`
+
+## LIT-0432
+**Short title:** Riva 2022 Front Pediatr — WOREE with p.Arg264* and an exon-6-only deletion missed by exome CNV calling
+**Authors:** Riva A et al.; Zara F, Iacomino M
+**Year:** 2022
+**Source type:** primary research — single case report
+**Journal/source:** *Front Pediatr* 2022;10:847549
+**Identifier type:** PMID / DOI / PMCID
+**Identifier value:** PMID 35573960 / DOI 10.3389/fped.2022.847549 / PMC9100683
+**Date discovered:** before 2026-07-05 (cited in the discovery ledger, DL-MOL-007, with no identity record)
+**Date processed:** 2026-10-03 (first-hand read, `FTR-20261003-35573960-01`)
+**Discovery source:** Orchestrator selection record of intake wave 2 2026-10-03
+**Status:** processed
+**Status note:** `complete_fulltext_read`; record created by `CC-20261003-A-REGISTRY-01`
+**Primary pathway:** clinical spectrum / WWOX-DEE · allele detection
+**Transferability:** T1 for allele detection; T3 for genotypes with residual protein
+**clinical relevance:** MODERATE
+**Claim links:** 001 (through `CC-20261003-A-VIGABATRIN-01`)
+**Working Model impact:** none — no block is redefined
+**Report mentions:** `research/intake_wave_20261003_A.md` · `CC-20261003-A-REGISTRY-01`
+**Next action:** none owed
+**Evidence depth:** `complete_fulltext_read` — manifest `deepdive_manifests/PMID35573960.json`
+
+## LIT-0433
+**Short title:** Kim 2025 Sci Rep — WWOX intronic SNVs and self-reported sleep duration in two Korean cohorts, with a Drosophila Wwox hypomorph
+**Authors:** Kim S, Kang SW, Kim SE, Kim HJ, Kim SA, Lee YW, Kim EY, Shin C, Lee HW
+**Year:** 2025
+**Source type:** primary research — genome-wide association study (n = 8,840) with an invertebrate functional arm
+**Journal/source:** *Sci Rep* 2025;15(1):5552
+**Identifier type:** PMID / DOI / PMCID
+**Identifier value:** PMID 39952983 / DOI 10.1038/s41598-024-81158-8 / PMC11828923
+**Date discovered:** earlier (the PMID is addressed by `FT-016` and by `DL-MECH-013`); no record existed in this log or in the paper registry until now
+**Date processed:** 2026-10-03 (first-hand read, `FTR-20261003-39952983-02`, prior `FTR-20260811-39952983-01`)
+**Discovery window:** intake wave 2, 2026-10-03, group C
+**Discovery source:** `FT-016`
+**Discovery query:** models and metabolic/ER-stress axis in WWOX loss — which endpoint could serve as a rescue readout
+**Status:** processed
+**Status note:** `partial_fulltext_read` — body, Tables 1-3, both figure images and the supplementary DOCX read; Supplementary Figures 1 and 2 (Manhattan and Q-Q plots) not inspected as images; 58-item reference list enumerated and screened mechanically, not read. 🔴 **Record created 2026-10-03 by this candidate:** the PMID was addressed by a queue entry and a discovery lead but by no registry record, which is the `ORPHAN_COMPLETE_READ` shape LINT blocks on.
+**Primary pathway:** behavioural / network-state endpoints (non-seizure)
+**Genotype/model tag:** human common intronic SNVs `rs16948804` and `rs4887991` at 16q23.1-q23.2 (one LD block, distal gene body); *Drosophila* `Wwox^f04545` insertion hypomorph, mRNA at about 8 per cent of control, homozygous, males only
+**Transferability:** T3 — no WWOX-DEE allele, no patient, no measured WWOX expression in any human
+**clinical relevance:** LOW — a non-seizure behavioural endpoint exists in the fly; the human arm licenses nothing
+**Claim links:** none
+**Working Model impact:** none — `DL-MECH-013` is qualified by `CC-20261003-C-SLEEP-SUGGESTIVE-01`, no block is redefined
+**Report mentions:** `research/intake_wave_20261003_C.md` · `CC-20261003-C-SLEEP-SUGGESTIVE-01`
+**Next action:** none owed; Supplementary Figures 1-2 remain unviewed and are not blocking
+**Flags:** read — partial; human arm below conventional genome-wide significance **by the authors' own statement**
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261003-39952983-02`; manifest `deepdive_manifests/PMID39952983.json` (14 verbatim locators, PASS with artefact verification); dossier `research/fulltext_dossiers/PMID39952983.md`
+**Registry record:** [[paper_registry_current#PAPER 135]]
+**Note:** 🔴 The paper measures **no human WWOX expression**: the Results sentence *«The associations between WWOX expression and sleep parameters are presented in Table 2»* describes a genotype table, and the same conflation appears in the Abstract. ⚠️ The declared artefacts of this paper's deep-dive manifest were **absent from the corpus** at the start of this reading and the manifest was BLOCK; a Europe PMC re-fetch returned byte-identical files, which were restored under their declared names. Not medical advice.
+
+## LIT-0434
+**PMID:** 27551439
+**Short title:** Chang 2015 Cell Death Discov — WWOX dysfunction and the sequential TRAPPC6AΔ/TIAF1/tau/Aβ aggregation cascade
+**Status:** processed
+**Route:** Europe PMC REST `fullTextXML` (HTTP 200 with a body), with figures, article PDF and supplements from the PMC open-access S3 mirror; read 2026-10-03 by ACTOR_ID `scientist` (Scientist B) under `context_policy: SOURCE_FIRST`.
+**Outcome:** INGEST — `paper_registry_current#PAPER 136`.
+**Record provenance:** created by `CC-20261003-B-REGISTRY-01` (intake wave 2 2026-10-03). Provisional number; the integrator renumbers in event order.
+**PAPER link:** [[paper_registry_current#PAPER 136]]
+
+## LIT-0435
+**PMID:** 25650666
+**Short title:** Chang 2015 Oncotarget — TRAPPC6AΔ as an extracellular plaque-forming protein; pT181-tau in the 3-week-old Wwox-null brain
+**Status:** processed
+**Route:** Europe PMC REST `fullTextXML` (HTTP 200 with a body), with figures, article PDF and supplements from the PMC open-access S3 mirror; read 2026-10-03 by ACTOR_ID `scientist` (Scientist B) under `context_policy: SOURCE_FIRST`.
+**Outcome:** INGEST — `paper_registry_current#PAPER 137`.
+**Record provenance:** created by `CC-20261003-B-REGISTRY-01` (intake wave 2 2026-10-03). Provisional number; the integrator renumbers in event order.
+**PAPER link:** [[paper_registry_current#PAPER 137]]
+
+## LIT-0436
+**PMID:** 36498839
+**Short title:** Lin 2022 IJMS — MPP+ and TPC6AΔ in a neuroblastoma line; Wwox heterozygote memory and cortical plaques at 10–11 months
+**Status:** processed
+**Route:** Europe PMC REST `fullTextXML` (HTTP 200 with a body), with figures, article PDF and supplements from the PMC open-access S3 mirror; read 2026-10-03 by ACTOR_ID `scientist` (Scientist B) under `context_policy: SOURCE_FIRST`.
+**Outcome:** INGEST — `paper_registry_current#PAPER 138`.
+**Record provenance:** created by `CC-20261003-B-REGISTRY-01` (intake wave 2 2026-10-03). Provisional number; the integrator renumbers in event order.
+**PAPER link:** [[paper_registry_current#PAPER 138]]
+
+## LIT-0437
+**PMID:** 29067327
+**Short title:** Lee 2017 Alzheimers Dement (N Y) — Zfra4–10 peptide in 3×Tg-AD mice; not a WWOX model
+**Status:** processed
+**Route:** Europe PMC REST `fullTextXML` (HTTP 200 with a body), with figures, article PDF and supplements from the PMC open-access S3 mirror; read 2026-10-03 by ACTOR_ID `scientist` (Scientist B) under `context_policy: SOURCE_FIRST`.
+**Outcome:** INGEST — `paper_registry_current#PAPER 139`.
+**Record provenance:** created by `CC-20261003-B-REGISTRY-01` (intake wave 2 2026-10-03). Provisional number; the integrator renumbers in event order.
+**PAPER link:** [[paper_registry_current#PAPER 139]]
+
+## LIT-0438
+**PMID:** 19918364
+**Short title:** Li 2009 PLoS One — WOX1 activation with CREB and NF-κB in rat DRG after sciatic transection; the pro-death direction
+**Status:** processed
+**Route:** Europe PMC REST `fullTextXML` (HTTP 200 with a body), with figures, article PDF and supplements from the PMC open-access S3 mirror; read 2026-10-03 by ACTOR_ID `scientist` (Scientist B) under `context_policy: SOURCE_FIRST`.
+**Outcome:** INGEST — `paper_registry_current#PAPER 140`.
+**Record provenance:** created by `CC-20261003-B-REGISTRY-01` (intake wave 2 2026-10-03). Provisional number; the integrator renumbers in event order.
+**PAPER link:** [[paper_registry_current#PAPER 140]]
+
+## LIT-0439
+**PMID:** 34359949
+**Short title:** Hsu 2021 Cells — review of WWOX binding partners in neurodegeneration; provenance of the SDR–tau mechanism
+**Status:** processed
+**Route:** Europe PMC REST `fullTextXML` (HTTP 200 with a body), with figures, article PDF and supplements from the PMC open-access S3 mirror; read 2026-10-03 by ACTOR_ID `scientist` (Scientist B) under `context_policy: SOURCE_FIRST`.
+**Outcome:** INGEST — `paper_registry_current#PAPER 141`.
+**Record provenance:** created by `CC-20261003-B-REGISTRY-01` (intake wave 2 2026-10-03). Provisional number; the integrator renumbers in event order.
+**PAPER link:** [[paper_registry_current#PAPER 141]]

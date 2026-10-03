@@ -62,3 +62,13 @@ Nothing here is rejected. The source's direction may be right; what the reading 
 (Figure attestation: the time course is a categorical heat map | `[figure attestation - pixels cannot be quote-matched] Fig 4 is a table-like grid, rows p-WOX1 / c-Jun / p-JNK / ATF3 / p-CREB / NF-kB / Smad4 x Contra and Ipsi x small and med/large, columns 0.5 h, 6 h, 1 d, 3-7 d, 2 m, cells coloured by a five-step key: none 0%, very low <20%, low 20-40%, moderate 40-65%, high >65%; two p-CREB cells marked n.d.` | PMID 19918364, Figure 4, `files/figures/PMID19918364/native/pone.0007820.g004.jpg`)
 
 (Figure attestation: no panel of the reporter figure contains a neuron | `[figure attestation - pixels cannot be quote-matched] Fig 5A Gal4 response-element schematic; 5B 'Control' Gal4-CMV; 5C 'Activated by WOX1' c-Jun and Elk-1; 5D 'Inhibited by WOX1' CREB, CRE, AP-1 as vector-versus-WOX1 pairs; 5E WWOX domain map with fold-activation 4.69 (WOX1), 7.90 (WW domains), 0.02 (SDR), 0.00 (ECFP).` | PMID 19918364, Figure 5, `files/figures/PMID19918364/native/pone.0007820.g005.jpg`)
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261003_001` (2026-10-03, ACTOR_ID `scientist`, Scientist F), append-only
+
+**Verdict:** PROPAGATED
+
+Propagated record-scoped by `BATCH_20261003_001` (2026-10-03, ACTOR_ID `scientist`, Scientist F) — the ops below were read from this file by script, never retyped; every byte outside the addressed records was proven unchanged before anything was written. Post-propagation LINT: WARN, 0 BLOCK.
+
+`claim_registry_current.md` 1 op — **`CLAIM 044` created** at `in observation` after `CLAIM 043` — and `full_text_queue_current.md` 1 op discharging `FT-159`. The BLOCK 2 mirror row was added by the integrator for the same reason as `CLAIM 043`'s. 🔴 **The queue op's depth label was wrong and was corrected before propagating:** it declared `complete_fulltext_read` where the landed receipt carries `supplementary: captions_only` and its own coverage correction refuses `complete`, and where this wave's own `PAPER 140` declares `partial_fulltext_read`. The discharge now states `partial_fulltext_read` with the reason.

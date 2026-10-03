@@ -285,14 +285,14 @@ The canonical P1–P7 codes follow the WWOX working model and claim registry. **
 
 ## PAPER 012
 **Short title:** Sapuppo 2026 WOREE syndrome plus
-**Full title:** WOREE syndrome: Clinical Case Study and Literature Review
+**Full title:** WWOX-Related Epileptic Encephalopathy (WOREE Syndrome): Clinical Case Study and Literature Review
 **Authors:** Sapuppo et al.
 **Year:** 2026
 **Source type:** human case report (peer-reviewed)
 **Journal/source:** Current Issues in Molecular Biology 2026;48(5):449 (MDPI)
 **Identifier:** PMID 42193054 · PMCID PMC13205014 · DOI 10.3390/cimb48050449
 **Status:** integrated
-**Evidence depth:** full text reviewed
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261003-42193054-01` (the earlier `FTR-20260726-42193054-01` is a legacy reconstruction); manifest `deepdive_manifests/PMID42193054.json`; dossier `research/fulltext_dossiers/PMID42193054.md`
 **Primary pathway:** clinical spectrum / genotype-phenotype
 **Secondary pathway:** P5 hypothesis-adjacent / weak P7 contextual
 **Model/species:** human
@@ -301,7 +301,7 @@ The canonical P1–P7 codes follow the WWOX working model and claim registry. **
 **clinical relevance:** MODERATE
 **Claim links:** 012
 **Role:** phenotype-severity refinement paper
-**Note:** MRI precoce normale non esclude rete severamente disorganizzata; nomenclatura "WOREE syndrome plus" non operativamente validata. Versione published del preprint Preprints.org [titolo preprint precedente: "WWOX Gene Disease as Infantile Catastrophic Epileptic Encephalopathy (WOREE Syndrome Plus): A Comprehensive Case Study with Brief Literature Update"] — stesso caso: CNV 38 kb esoni 6–7 + c.1043del p.Phe348Serfs*57 esone 8, ClinVar 421407. INCOERENZA PRISMA interna nella literature review (200→150→30 full-text; testo dichiara '70 esclusi su 30 full-text' = contraddizione aritmetica; nessuna figura PRISMA): conteggio review a bassa affidabilità, case report non invalidato. Test parentale non eseguito → cis/trans non determinato. Nessuno studio funzionale. Varianti del genotipo di riferimento (Q230P, c.1057-2A>G) NON presenti.
+**Note:** MRI precoce normale non esclude rete severamente disorganizzata; nomenclatura "WOREE syndrome plus" non operativamente validata. Versione published del preprint Preprints.org [titolo preprint precedente: "WWOX Gene Disease as Infantile Catastrophic Epileptic Encephalopathy (WOREE Syndrome Plus): A Comprehensive Case Study with Brief Literature Update"] — stesso caso: CNV 38 kb esoni 6–7 + c.1043del p.Phe348Serfs*57 esone 8, ClinVar 421407. INCOERENZA PRISMA interna nella literature review (200→150→30 full-text; testo dichiara '70 esclusi su 30 full-text' = contraddizione aritmetica; nessuna figura PRISMA): conteggio review a bassa affidabilità, case report non invalidato. Test parentale non eseguito → cis/trans non determinato. Nessuno studio funzionale. Varianti del genotipo di riferimento (Q230P, c.1057-2A>G) NON presenti. 🔴 **Table 1 verificata riga per riga 2026-10-03 (`CC-20261003-A-SAPUPPO-01`):** tutte le righe tranne il caso indice trascrivono pazienti già contati — otto da Piard 2019 ([[paper_registry_current#PAPER 117]]) e uno da Dong 2023 ([[paper_registry_current#PAPER 134]], citato come rif. 11 = Mignot); secondi alleli omessi (delezione esone 4; G137E; H150P), `c.517_791del` etichettata in frame (275 nt, fuori frame), età d'esordio alterate (*«2–3 d»* dove la fonte dà 1 g, 5 g, 2,5 m, 3 m), sesso del paziente Dong invertito rispetto al testo della fonte, conseguenza proteica del caso indice data come quella della sola delezione dell'esone 6. **Non usare la Table 1 come fonte di conteggio; contare solo il caso indice.**
 
 ---
 
@@ -378,15 +378,15 @@ The canonical P1–P7 codes follow the WWOX working model and claim registry. **
 **Journal/source:** *Molecular Genetics & Genomic Medicine*
 **Identifier:** PMID 39101447 / PMC PMC11298992 / DOI 10.1002/mgg3.2500
 **Status:** integrated
-**Evidence depth:** full text reviewed (PMC open access)
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261003-39101447-01` (earlier: `FTR-20260921-39101447-01`, partial); manifest `deepdive_manifests/PMID39101447.json`; dossier `research/fulltext_dossiers/PMID39101447.md`
 **Primary pathway:** P2 — safety / AED management
 **Model/species:** human
-**Genotype/model:** omozigote splice site c.172+1G>C (null/null per effetto funzionale; proteina troncata da minigene)
+**Genotype/model:** omozigote splice site donatore c.172+1G>C (isodisomia inferita da LOH copy-neutral); minigene esoni 1–3 in HEK293T: **skipping dell'esone 2** (WT 426 bp, mutante 361 bp; 65 nt, fuori frame) — la troncatura è una traduzione in silico; nessun RNA del paziente, nessuna proteina (corretto `CC-20261003-A-VIGABATRIN-01`)
 **Transferability:** T1 (umano) — genotipo null/null ≠ the reference genotype compound het missense + splice
 **clinical relevance:** MODERATE-HIGH — safety-relevant (conflicting evidence vigabatrin)
 **Claim links:** 001 (conflicting evidence)
 **Role:** tensione evidence su vigabatrin; non pro-vigabatrin
-**Note:** riduzione crisi con VGB 200 mg/kg/die in 1 caso null/null; senza MRI controllo per VABAM; follow-up brevissimo (13 mesi); non invalida Choi 2026; genotipo null/null ≠ the reference genotype
+**Note:** riduzione delle crisi **visibili** con VGB in 1 caso null/null, ma il VEEG a 11 mesi registra ancora attacchi elettrici e spasmi non notati a casa; senza MRI controllo per VABAM; follow-up brevissimo (13 mesi); non invalida Choi 2026; genotipo null/null ≠ the reference genotype
 
 ---
 
@@ -1665,7 +1665,7 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Status:** not_processed
 **Registry role:** corpus placeholder only
 **Claim links:** none
-**Next action:** screening / triage required
+**Next action:** none — upgraded to [[paper_registry_current#PAPER 134]] by `CC-20261003-A-REGISTRY-01` (receipt `FTR-20261003-37974179-01`); this placeholder is kept as history
 **Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record.
 
 ## CORPUS-STUB-098
@@ -1939,7 +1939,14 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Corpus paper no:** 126
 **Full title:** WWOX sensitises ovarian cancer cells to paclitaxel via modulation of the ER stress response
 **Identifier:** PMID 28749468 / DOI 10.1038/cddis.2017.346
-**Status:** not_processed
+**Status:** processed
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261003-28749468-01`; manifest `deepdive_manifests/PMID28749468.json` (9 verbatim locators, PASS with artefact verification); dossier `research/fulltext_dossiers/PMID28749468.md`
+**Primary pathway:** ER stress / UPR (oncological context)
+**Model/species:** human ovarian carcinoma cell lines; PEO1 is a WWOX-null by homozygous deletion of exons 4-8. No neural material anywhere in the paper
+**Transferability:** T3 — no WWOX allele of the reference genotype class; the stressor is a chemotherapeutic
+**clinical relevance:** BACKGROUND
+**Role:** 🔴 Every quantified endpoint measures WWOX as **pro-death under stress**: restoring it roughly halves survival under paclitaxel and tunicamycin, removing it roughly doubles it. A «rescue» in this system is the restoration of the cell's ability to die, which is the wrong sign for a neurodevelopmental disorder — recorded as a cross-species direction in `CC-20261003-C-APOPTOSIS-DIRECTION-01`. ⚠️ The paper's central IRE-1 claim is weaker than its prose: Figures 5c-5e carry **no significance marker and no P-value at all**, the absolute viability increment from KIRA6 is the same in the WWOX-expressing and WWOX-null clones (about 0.19 against about 0.18), Figure 7e is reported as positive and prints `p=0.13`, and the Figure 6 legend declares panels a-h for a six-panel figure
+**Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record. 🟢 **Read first-hand 2026-10-03 (`CC-20261003-C-REGISTRY-01`, intake wave 2, Scientist C); the stub is enriched rather than promoted, and the placeholder is kept as history.** Not medical advice.
 **Registry role:** corpus placeholder only
 **Claim links:** none
 **Next action:** screening / triage required
@@ -6473,15 +6480,15 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Journal/source:** *Orphanet J Rare Dis* 2014;9:12
 **Identifier:** PMID 24456803 / PMCID PMC3918143 / DOI 10.1186/1750-1172-9-12
 **Status:** claim_linked
-**Evidence depth:** full text reviewed (coverage_status: complete_fulltext_read)
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261003-24456803-01` (the earlier `FTR-20260726-24456803-01` is a legacy reconstruction without a coverage map, so the previous `complete` wording had no receipt behind it until now); manifest `deepdive_manifests/PMID24456803.json`; dossier `research/fulltext_dossiers/PMID24456803.md`
 **Primary pathway:** clinical spectrum / null biallelico
 **Model/species:** human — famiglia egiziana consanguinea
-**Genotype/model:** **p.Arg54\* omozigote** (c.160G>T, esone 2) — nonsenso, null biallelico "puro"
+**Genotype/model:** **p.Arg54\* omozigote** (`c.160C>T`, esone 2) — nonsenso, null biallelico **predetto** (nessun saggio di RNA o proteina dell'allele umano). 🔴 Nomenclatura: il corpo del paper e la Table 2 scrivono `c.160G>T`, ma la Figure 1D e l'Additional file 1 degli stessi autori scrivono `c.160C>T`, e su NM_016373.4 la posizione c.160 è **C** (codone 54 = CGA): `G>T` non può generare p.Arg54\*. Usare `c.160C>T` (correzione `CC-20261003-A-ARG54-01`)
 **Transferability:** T1
 **clinical relevance:** HIGH — è il benchmark del caso peggiore (proteina zero su entrambi gli alleli)
 **Claim links:** 030, 032
 **Role:** estremo inferiore della serie allelica; sostiene il claim sull'aploinsufficienza
-**Note:** Promosso in BATCH_20260710_B da [[paper_registry_current#CORPUS P359]]. Fenotipo index: esordio crisi a **2 mesi**, risposta **parziale** a valproato + lamotrigina; **microcefalia progressiva/acquisita** (OFC −3.6 SD a 3 mesi → **−4.6 SD a 12 mesi**); nessuna tappa di sviluppo acquisita; **atrofia ottica + pigmentazione retinica anomala**, ERG ridotto, VEP ritardato; RMN: atrofia sopratentoriale, pattern girale semplificato, ipoplasia ippocampo/lobo temporale, **corpo calloso sottile**; **cervelletto non menzionato**. **Screening metabolico e mitocondriale interamente normale** (ammonio, lattato, aminoacidi, acidi organici, VLCFA, biopsia muscolare). **Morte a 16 mesi in stato epilettico.** Sorella: morta a 3 mesi. ⭐ **Citazione chiave per [[claim_registry_current#CLAIM 032]]:** *"As in rats, **no tumors** were observed in the patient or **heterozygous mutation carriers**"* → i portatori eterozigoti sono sani e non oncologicamente a rischio. ⚠️ Limiti: famiglia singola, **nessun assay proteico** (la nullità è inferita dal nonsenso), nessuna autopsia.
+**Note:** Promosso in BATCH_20260710_B da [[paper_registry_current#CORPUS P359]]. Fenotipo index: esordio crisi a **2 mesi**, risposta **parziale** a valproato + lamotrigina; **microcefalia progressiva/acquisita** (OFC −3.6 SD a 3 mesi → **−4.6 SD a 12 mesi**); nessuna tappa di sviluppo acquisita; **atrofia ottica + pigmentazione retinica anomala**, ERG ridotto, VEP ritardato; RMN: atrofia sopratentoriale, pattern girale semplificato, ipoplasia ippocampo/lobo temporale, **corpo calloso sottile**; **cervelletto non menzionato**. **Screening metabolico su sangue e urine normale** (funzione epatica e renale, emocromo, emogasanalisi, ammonio, lattato sierico, urea, elettroliti, aminoacidi e acidi organici, VLCFA). 🔴 Corretto 2026-10-03 (`CC-20261003-A-ARG54-01`): la versione precedente aggiungeva *«mitocondriale»* e *«biopsia muscolare»*, che il paper non riporta. **Morte a 16 mesi in stato epilettico.** Sorella maggiore: morta a 3 mesi con decorso simile, **mai vista dagli autori e mai genotipizzata** (*«probably affected»*) — non è un secondo omozigote confermato. ⭐ **Citazione chiave per [[claim_registry_current#CLAIM 032]]:** *"As in rats, **no tumors** were observed in the patient or **heterozygous mutation carriers**"* → nessun tumore **finora** nei portatori eterozigoti di questa famiglia. ⚠️ Corretto 2026-10-03 (`CC-20261003-A-ARG54-01`): la frase precedente (*«non oncologicamente a rischio»*) contraddiceva gli autori, che nello stesso paragrafo scrivono *«an increased cumulative lifetime risk, especially if exposed to carcinogenic agents, seems conceivable»* e consigliano controlli preventivi. È un'osservazione su una famiglia, non un negativo di rischio. ⚠️ Limiti: famiglia singola, **nessun assay proteico** (la nullità è inferita dal nonsenso), nessuna autopsia.
 **Wikilinks:** [[claim_registry_current#CLAIM 030]] · [[claim_registry_current#CLAIM 032]]
 
 ---
@@ -7760,7 +7767,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Identifier:** PMID 30356099 / PMCID PMC6752669 / DOI 10.1038/s41436-018-0339-3
 **Status:** processed
 **Record provenance:** created by `BATCH_20260927_003` (2026-09-27) from `CC-20260921-PAPER025-IDENTITY-01` OP 2, which promotes `CORPUS-STUB-059` / `LIT-0083` with metadata verified at PubMed on 2026-09-27. The stub is replaced, not kept beside this record.
-**Evidence depth:** `partial_fulltext_read` — receipts `FTR-20260811-30356099-01` and `FTR-20260921-30356099-02` (a third, `FTR-20260927-30356099-03`, reads the presentation-age and diagnosis-age questions); manifest `deepdive_manifests/PMID30356099.json`
+**Evidence depth:** `partial_fulltext_read` — receipts `FTR-20260811-30356099-01` and `FTR-20260921-30356099-02` (a third, `FTR-20260927-30356099-03`, reads the presentation-age and diagnosis-age questions); a fourth, `FTR-20261003-30356099-01`, reads every section, all three figures and Supplemental Tables 1–4, and stays partial only because the manifest's multihop queue (nine WWOX-direct references) is open; manifest `deepdive_manifests/PMID30356099.json`; dossier `research/fulltext_dossiers/PMID30356099.md`
 **Primary pathway:** genotype-phenotype / human clinical spectrum
 **Model/species:** human
 **Genotype/model:** biallelic WWOX variants across null and missense classes; the largest **primary** WOREE case series in the corpus read here as of 2026-09-28 (20 new cases; `PREMISE: INFERENZA`) — **not** the largest cohort, see `Role`
@@ -7769,7 +7776,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Claim links:** none declared by this batch — the record is created for identity and cohort reasoning, and no claim link is added to clear a warning
 **Role:** largest **primary** WOREE case series in the corpus read here as of 2026-09-28 — **20 new cases** (`PREMISE: INFERENZA`); as *cohorts* both `PMID 40875931` (50 individuals / 45 families) and [[paper_registry_current#PAPER 018]] (75 pooled: 13 primary + 62 from the literature) are **larger**. Genotype-phenotype correlation, null genotypes most severe. Scoped 2026-09-28 by `CC-20260928-MIRROR003-REPAIRS-01` M9; the earlier unqualified *"largest WOREE cohort"* was false against two records this registry already holds
 **LIT link:** [[literature_tracking_log_current#LIT-0083]]
-**Note:** Erratum `PMID 30783266` is linked and is **administrative**: one patient was investigated by genome rather than exome sequencing; no case count, genotype, phenotype or outcome changes. 🔴 **The online-first trap, by name:** issue year 2019, electronic publication 2018-10-25; Oliver 2023's Table S1 cites it as *"Piard J et al. Genet in Med. 2018"*. **ONE paper** — a PAPER record created from Oliver's string would duplicate this one. ⚠️ This is also the byline that was borrowed by `PAPER 025` (`PMID 30853297`, EJPN) until 2026-09-27; the two are separate papers by different first authors.
+**Note:** Erratum `PMID 30783266` is linked and is **administrative**: one patient was investigated by genome rather than exome sequencing; no case count, genotype, phenotype or outcome changes. 🔴 **The online-first trap, by name:** issue year 2019, electronic publication 2018-10-25; Oliver 2023's Table S1 cites it as *"Piard J et al. Genet in Med. 2018"*. **ONE paper** — a PAPER record created from Oliver's string would duplicate this one. ⚠️ This is also the byline that was borrowed by `PAPER 025` (`PMID 30853297`, EJPN) until 2026-09-27; the two are separate papers by different first authors. 🔴 **Supplement read 2026-10-03 (`FTR-20261003-30356099-01`, `CC-20261003-A-PIARD-01`; class-level, figures from Supplemental Tables 1–4 recounted by script):** (1) the body's *«8 of 20»* premature deaths sits beside a mean (40 months) and range that belong to **nine** deaths listed in S1, only five of them under 36 months; S4's *«Deceased 20/37»* reconciles only with nine here plus the literature deaths **including a terminated pregnancy**. (2) The seven-patient null group behind *«the most severe clinical presentation»* includes a homozygous deletion that by its own S1 coordinates also removes NUDT7, VAT1L and CLEC3A, a never-genotyped sibling, a terminated pregnancy and two W44\* homozygotes **alive** at 7 y and 20 m; the series' homozygous p.Arg264\* sibling pair (deaths at 8 y 11 m and 5 y 2 m) is outside it. (3) *«premature death has never been described in patients with missense … only genotype»* holds only under the < 3 y definition: a **homozygous p.Gln230Pro** patient died at 3 y 3 m (S1). (4) S2 labels the Mallaret homozygous family `p.(Pro47Arg)` where S3 and Figure 1b give `p.Pro47Thr`; S2's three p.(Gly137Glu) families are two in S1; Figure 1a labels the exon-6 deletion in-frame (89 nt, out-of-frame). (5) Measured RNA exists for two patients only — a canonical acceptor `c.173-1G>T` → `r.[173_230del]` (exon 3 skipping) and p.Ser318Leu (no anomaly); the protein row is headed *«not based on experimental evidence»*. (6) `PREMISE: INFERENZA` — patient P8 (intron-2 acceptor + exon-8 frameshift, onset 1 m, West, death ≈ 3 y) matches the Tarta-Arsene 2017 case as tabulated by PMID 35573960 on six attributes; do not sum the two sources until Tarta-Arsene 2017 is read. `c.517-2A>G` occurs **nowhere** in this paper's body or its four supplementary tables (0 matches).
 
 ---
 
@@ -8089,3 +8096,192 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Role:** P 1.56e-8 against the study's own four-phenotype threshold of 1.25e-8, **unreplicated** (unavailable in PNC and ENIGMA2), with no eQTL and no functional link. 🔴 **The direction matters and is easy to invert:** the effect is given per copy of the **common** allele (−3.76% WM), so the **minor** allele goes with *more* white matter. Survives only as *«WWOX-locus common variation may be associated with infant WM volume — unreplicated»*.
 **LIT link:** [[literature_tracking_log_current#LIT-0431]]
 **Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.
+
+## PAPER 133
+**Short title:** Riva 2022 Front Pediatr — WOREE with p.Arg264* and an exon-6-only deletion missed by exome CNV calling; fibroblast RT-PCR
+**Full title:** A Phenotypic-Driven Approach for the Diagnosis of WOREE Syndrome
+**Authors:** Riva A, Nobile G, Giacomini T, et al.; Zara F, Iacomino M
+**Year:** 2022
+**Source type:** primary research — single case report
+**Journal/source:** *Front Pediatr* 2022;10:847549
+**Identifier:** PMID 35573960 / PMCID PMC9100683 / DOI 10.3389/fped.2022.847549
+**Status:** processed
+**Record provenance:** created by `CC-20261003-A-REGISTRY-01` (intake wave 2 2026-10-03, Scientist A). Provisional number: the integrator renumbers if taken and updates the `LIT link`.
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261003-35573960-01`; manifest `deepdive_manifests/PMID35573960.json`; dossier `research/fulltext_dossiers/PMID35573960.md`
+**Primary pathway:** clinical spectrum / WWOX-DEE · allele detection
+**Model/species:** human
+**Genotype/model:** stop `c.790C>T p.(Arg264*)` (exon 7) + 84.8 kb deletion removing exon 6 only (out-of-frame skip), each from an unaffected parent; predicted null/null
+**Transferability:** T1 for allele detection; T3 for any genotype with residual protein
+**clinical relevance:** MODERATE — a measured transcript consequence of an exon deletion (exon 5–7 junction in patient fibroblast RNA) and an exome CNV false negative
+**Claim links:** 001 (drug-response observation, through `CC-20261003-A-VIGABATRIN-01`)
+**Role:** Day-1 onset; vigabatrin, ACTH, ketogenic diet and five other drugs ineffective; phenobarbital and nitrazepam stopped for adverse events (not reported ineffective). 🔴 The exome CNV analysis was *«unremarkable»*: allele-class censuses built on NGS-diagnosed patients are lower bounds for single-exon deletions. No protein; the stop allele's NMD not tested.
+**LIT link:** [[literature_tracking_log_current#LIT-0432]]
+**Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.
+
+## PAPER 134
+**Short title:** Dong 2023 BMC Med Genomics — compound WWOX deletions (exons 6–8 / intron-5 + exon-6) resolved by WGS and gap PCR after exome called a homozygous exon 6 deletion
+**Full title:** Identification of compound heterozygous deletion of the WWOX gene in WOREE syndrome
+**Authors:** Dong XS, Wen XJ, Zhang S, Wang DG, Xiong Y, Li ZM
+**Year:** 2023
+**Source type:** primary research — single case report with structural-variant resolution
+**Journal/source:** *BMC Med Genomics* 2023;16:291
+**Identifier:** PMID 37974179 / PMCID PMC10652538 / DOI 10.1186/s12920-023-01731-4
+**Status:** processed
+**Record provenance:** created by `CC-20261003-A-REGISTRY-01`; promotes [[paper_registry_current#CORPUS-STUB-096]] (kept as history). Provisional number.
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261003-37974179-01`; manifest `deepdive_manifests/PMID37974179.json`; dossier `research/fulltext_dossiers/PMID37974179.md`
+**Primary pathway:** clinical spectrum / allele architecture
+**Model/species:** human
+**Genotype/model:** one allele: 177 kb deletion of exons 6–8 (in-frame, predicted); other allele: two separate deletions — 13.26 kb inside intron 5 and 53.9 kb removing exon 6 only (out-of-frame, predicted); breakpoints by gap PCR and Sanger, phase by segregation
+**Transferability:** T1 for allele detection; none for missense or splice-acceptor classes
+**clinical relevance:** MODERATE — the exome call was right on exon-6 dosage and blind to the heterozygous loss of exons 7–8 and to phase
+**Claim links:** none
+**Role:** No RNA or protein from either allele. 🔴 Source-internal defects: the inheritance sentence swaps the two deletion sizes of the two-deletion allele; the pedigree draws the proband with the female symbol while the text and supplement say male; the *«earliest onset»* claim (day 15) is contradicted by published day-1 onsets, and the drug-resistance clause is verbatim from PMID 35573960 although only two drugs are named. Tabulated again by PMID 42193054 under a wrong reference number — count once.
+**LIT link:** [[literature_tracking_log_current#LIT-0118]]
+**Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.
+
+## PAPER 135
+**Short title:** Kim 2025 Sci Rep — WWOX intronic SNVs and self-reported sleep duration (n = 8,840), with a Drosophila Wwox hypomorph
+**Full title:** Genome-wide identification and functional validation of the WW domain containing oxidoreductase gene associated with sleep duration
+**Authors:** Kim S, Kang SW, Kim SE, Kim HJ, Kim SA, Lee YW, Kim EY, Shin C, Lee HW
+**Year:** 2025
+**Source type:** primary research — genome-wide association study with an invertebrate functional arm
+**Journal/source:** *Sci Rep* 2025;15(1):5552
+**Identifier:** PMID 39952983 / PMCID PMC11828923 / DOI 10.1038/s41598-024-81158-8
+**Status:** processed
+**Record provenance:** created 2026-10-03 by `CC-20261003-C-REGISTRY-01` (intake wave 2, Scientist C). 🔴 **Why it did not exist:** the PMID was addressed by `FT-016` and by `DL-MECH-013` but by no registry record, so a reading of it would have been an `ORPHAN_COMPLETE_READ` for LINT. Provisional number: if `PAPER 135` is taken when this batch runs, the integrator renumbers and updates the `LIT link`.
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261003-39952983-02` (prior `FTR-20260811-39952983-01`, `inadequate_prior_coverage`); manifest `deepdive_manifests/PMID39952983.json` (14 verbatim locators, PASS with artefact verification); dossier `research/fulltext_dossiers/PMID39952983.md`
+**Primary pathway:** behavioural / network-state endpoints (non-seizure)
+**Model/species:** human community cohorts (Ansan n = 4,635, Ansung n = 4,205) and *Drosophila melanogaster*
+**Genotype/model:** common intronic SNVs `rs16948804` and `rs4887991` at 16q23.1-q23.2, one LD block in the distal gene body; *Drosophila* `Wwox^f04545` insertion hypomorph (mRNA at about 8 per cent of control), homozygous, backcrossed six times, males only
+**Transferability:** T3 — no WWOX-DEE allele, no patient, no measured WWOX expression in any human
+**clinical relevance:** LOW — supplies a non-seizure behavioural endpoint in the fly; the human arm licenses nothing about the reference genotype class
+**Claim links:** none
+**Role:** The only source in the corpus with a quantified **non-seizure behavioural** endpoint for *Wwox* loss: daytime sleep falls from about 500 to about 300 minutes with daytime bout length shortened, while night-time sleep RISES from about 560 to about 650 minutes and the free-running period and rhythmicity are untouched — a day-to-night redistribution, not a uniform loss, with **no rescue arm, one allele, one control background and males only**. 🔴 The human arm is **suggestive by the authors' own statement** (*«the WWOX gene did not reach the conventional genome-wide significance level»*; *«the number of subjects in each cohort was not sufficient for GWAS»*), the reported Bonferroni values imply correction over about 1.8e5 tests rather than the 6.42 million imputed SNVs, and the effect — 12 to 18 minutes — co-moves with **time in bed** while habitual sleep efficiency and the Epworth score do not move at all.
+**LIT link:** [[literature_tracking_log_current#LIT-0433]]
+**Note:** class-level record; no individual-level detail is carried in this public edition. ⚠️ The declared artefacts of this paper's deep-dive manifest were absent from the corpus at the start of this reading and the manifest was BLOCK; a Europe PMC re-fetch returned byte-identical files (sha256 match on all four), which were restored under their declared names, and the manifest now validates PASS with artefact verification on. Not medical advice.
+
+## PAPER 136
+**Short title:** Chang 2015 Cell Death Discov — WWOX dysfunction and the sequential TRAPPC6AΔ/TIAF1/tau/Aβ aggregation cascade
+**Full title:** WWOX dysfunction induces sequential aggregation of TRAPPC6AΔ, TIAF1, tau and amyloid β, and causes apoptosis
+**Authors:** Chang JY, Chang NS
+**Year:** 2015
+**Source type:** primary research — cell biology (FRET, co-IP, aggregation assays) plus one mouse genotype
+**Journal/source:** *Cell Death Discov* 2015;1:15003
+**Identifier:** PMID 27551439 / PMCID PMC4981022 / DOI 10.1038/cddiscovery.2015.3
+**Status:** processed
+**Record provenance:** created by `CC-20261003-B-REGISTRY-01` (intake wave 2 2026-10-03, Scientist B). Provisional number: if `PAPER 136` is taken when this batch runs, the integrator renumbers and updates the `LIT link`.
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261003-27551439-02`; manifest `deepdive_manifests/PMID27551439.json`; dossier `research/fulltext_dossiers/PMID27551439.md`
+**Primary pathway:** P4 — proteostasis / aggregation cascade
+**Model/species:** cell lines (COS7, HEK293, SK-N-SH, SCC-9, BCC, B16F10, Jurkat, L929), Wwox−/− and Wwox+/+ MEF, Wwox−/− mouse cortex
+**Genotype/model:** constitutive Wwox null (mouse) and WWOX knockdown/over-expression in lines; no human allele
+**Transferability:** T3 — no neuron with a WWOX genotype; the cell-death assay is transient over-expression and does not discriminate the Δ isoform from wild type
+**clinical relevance:** BACKGROUND — fixes the ordering claim of the cascade and bounds it; licenses no therapeutic inference
+**Claim links:** 043 (evidence-class bound; this is the paper the bound is measured on)
+**Role:** The fixed point of the cascade-ordering claim, and the reading narrows it. The order is inferred from TGF-β1 shuttling kinetics in fibroblasts and from siRNA asymmetry reported in the companion paper; the one endogenous WWOX/TPC6A interaction is a co-IP in HEK293; the apoptosis link is transient over-expression in which wild-type TPC6A is **equally potent** as the Δ isoform. 🔴 Three internal inconsistencies are carried: Results say the Y112F mutant aggregates less and the Discussion says it does not (Figure 5a reports p = 0.040 for Y112F and p = 0.002 for S35G, i.e. the mutant called non-aggregating has the strongest TGF-β1 response); the Discussion names Tyr216 for a step the Results and Figure 5i call Tyr112, in a protein of 159–173 residues; and the S35G mutant is said both to fail to aggregate and to aggregate significantly more under TGF-β1. 🔴 Figure 7 has **no wild-type comparator**: its control is the same Wwox−/− tissue with the antibodies peptide-blocked.
+**LIT link:** [[literature_tracking_log_current#LIT-0434]]
+**Note:** class-level record; no individual-level detail is carried in this public edition. This paper belongs to a corpus in which one laboratory supplies every record of the mechanism: PubMed 2026-10-02 returns 0 records for `WWOX AND TIAF1 NOT Chang NS[au]` and 4 for `"TRAPPC6A" AND (aggregation OR plaque)`, all four of them this group's. Not medical advice.
+
+## PAPER 137
+**Short title:** Chang 2015 Oncotarget — TRAPPC6AΔ as an extracellular plaque-forming protein; pT181-tau in the 3-week-old Wwox-null brain
+**Full title:** Trafficking protein particle complex 6A delta (TRAPPC6AΔ) is an extracellular plaque-forming protein in the brain
+**Authors:** Chang JY, Lee MH, Lin SR, Yang LY, Sun HS, Sze CI, Hong Q, Lin YS, Chou YT, Hsu LJ, Jan MS, Gong CX, Chang NS
+**Year:** 2015
+**Source type:** primary research — isoform isolation, antibody production, human post-mortem IHC and filter retardation, mouse knockout IHC
+**Journal/source:** *Oncotarget* 2015;6(5):3578–3589
+**Identifier:** PMID 25650666 / PMCID PMC4414138 / DOI 10.18632/oncotarget.2876
+**Status:** processed
+**Record provenance:** created by `CC-20261003-B-REGISTRY-01` (intake wave 2 2026-10-03, Scientist B). Provisional number: if `PAPER 137` is taken when this batch runs, the integrator renumbers and updates the `LIT link`.
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261003-25650666-03`; manifest `deepdive_manifests/PMID25650666.json`; dossier `research/fulltext_dossiers/PMID25650666.md`
+**Primary pathway:** P4 — proteostasis / aggregation cascade
+**Model/species:** human post-mortem cortex and hippocampus; constitutive Wwox knockout mouse (3 weeks); COS7; SK-N-SH; APP/PS1 mouse
+**Genotype/model:** constitutive Wwox null (exon 1, and separately exons 2/3/4); no human WWOX allele
+**Transferability:** T3 — a constitutive null that dies at about a month models no human missense or splice allele; the human arm has no WWOX genotype
+**clinical relevance:** MODERATE — the only tau datum in a young WWOX-null brain in this corpus, now bounded
+**Claim links:** 043 (evidence-class bound)
+**Role:** The founding paper of the cascade's first node. 🔴 Panel-level reading (from images embedded in the article PDF at 1500–1750 px, because the PMC rasters are 550 px and unreadable) changes two things the earlier partial reading could not see. **(1)** Figure 3A: the human filter-retardation comparison is **null** for this protein — p = 0.942 (TPC6A) and p = 0.850 (TIAF1) — while p-WWOX (0.036), NFT (0.014) and Aβ (0.003) separate on the same blot, so the null is not an assay failure and the abstract's *«preceding Aβ generation»* is a reading of a flat cross-section. **(2)** Figure 5D, the pT181-tau claim: Wwox+/+ ≈ 11, Wwox−/+ ≈ **6**, Wwox−/− ≈ 26 aggregates, n = 5, one bracket p = 0.0176 — **the heterozygote mean is below wild type**, so the panel carries no gene dosage and is a section count, not tau biochemistry. 🔴 The human measurement used the pan-specific antibody, which the Methods say cannot resolve the isoforms; all four antisera are validated by peptide blocking only. ⚠️ The supplementary PDF contradicts the Methods on antibody numbering (84–100/Tyr112 versus 70–86/Tyr116 for the identical peptide).
+**LIT link:** [[literature_tracking_log_current#LIT-0435]]
+**Note:** class-level record; no individual-level detail is carried in this public edition. This paper belongs to a corpus in which one laboratory supplies every record of the mechanism: PubMed 2026-10-02 returns 0 records for `WWOX AND TIAF1 NOT Chang NS[au]` and 4 for `"TRAPPC6A" AND (aggregation OR plaque)`, all four of them this group's. Not medical advice.
+
+## PAPER 138
+**Short title:** Lin 2022 IJMS — MPP+ and TPC6AΔ in a neuroblastoma line; Wwox heterozygote memory and cortical plaques at 10–11 months
+**Full title:** Zfra Inhibits the TRAPPC6AΔ-Initiated Pathway of Neurodegeneration
+**Authors:** Lin YH, Shih YH, Yap YV, Chen YW, Kuo HL, Liu TY, Hsu LJ, Kuo YM, Chang NS
+**Year:** 2022
+**Source type:** primary research — cell-line pharmacology, mouse behaviour and immunohistochemistry
+**Journal/source:** *Int J Mol Sci* 2022;23(23):14510
+**Identifier:** PMID 36498839 / PMCID PMC9739312 / DOI 10.3390/ijms232314510
+**Status:** processed
+**Record provenance:** created by `CC-20261003-B-REGISTRY-01` (intake wave 2 2026-10-03, Scientist B). Provisional number: if `PAPER 138` is taken when this batch runs, the integrator renumbers and updates the `LIT link`.
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261003-36498839-02`; manifest `deepdive_manifests/PMID36498839.json`; dossier `research/fulltext_dossiers/PMID36498839.md`
+**Primary pathway:** P4 — proteostasis / aggregation cascade; P7 — heterozygote endpoints
+**Model/species:** Wwox+/+, +/− and −/− MEF; SK-N-SH; 3×Tg-AD mice; Wwox+/− and Wwox+/+ mice at 3, 10 and 11 months
+**Genotype/model:** constitutive Wwox heterozygote and null (mouse); the treated cohort is 3×Tg-AD with wild-type Wwox
+**Transferability:** T3 for the cascade; **T2 for the heterozygote behavioural endpoint**, which is a null/wild-type genotype measured on a cognitive readout
+**clinical relevance:** MODERATE — carries the first cognitive endpoint in a WWOX heterozygote found in this corpus
+**Claim links:** 032 (fires its stated `REVIVAL_TRIGGER`: *«an EEG/cognitive endpoint in any WWOX heterozygote of any allele»*) · 043 (evidence-class bound)
+**Role:** 🟢 The usable content is Figure 5: Wwox+/− mice at 10–11 months perform worse than wild type on novel-object recognition and in the water maze (n = 5; ANOVA with Bonferroni) and carry more hippocampal TPC6AΔ plaques (** p < 0.01), while the authors themselves report that pS37-TIAF1, TIAF1, wild-type TPC6A and pT181-tau are **not** significantly increased in the heterozygote. 🔴 The headline pT12-WWOX result is **contradicted by its own panel**: Figure 7C's immunointensity chart reports **p > 0.05**, and the significant plaque count rests on n = 3 with one of three animals near zero. 🔴 Three internal inconsistencies: Methods say three weekly injections and Results say four; Methods say five mice per group and the Figure 3 legend says ten, naming the groups *«sham»* and *«control»* with no Zfra group; the Figure 5 legend says n = 5 and then n = 20 for the same panels, and Figure 5B's y-axis says *«% Exploration time»* for an escape-latency curve. ⚠️ The paper declares a patent on the intervention it evaluates. ⚠️ Supplementary Figures S1–S5 (including the pT12-WWOX antibody characterisation) were acquired but **not opened**.
+**LIT link:** [[literature_tracking_log_current#LIT-0436]]
+**Note:** class-level record; no individual-level detail is carried in this public edition. This paper belongs to a corpus in which one laboratory supplies every record of the mechanism: PubMed 2026-10-02 returns 0 records for `WWOX AND TIAF1 NOT Chang NS[au]` and 4 for `"TRAPPC6A" AND (aggregation OR plaque)`, all four of them this group's. Not medical advice.
+
+## PAPER 139
+**Short title:** Lee 2017 Alzheimers Dement (N Y) — Zfra4–10 peptide in 3×Tg-AD mice; not a WWOX model
+**Full title:** Zfra restores memory deficits in Alzheimer's disease triple-transgenic mice by blocking aggregation of TRAPPC6AΔ, SH3GLB2, tau and amyloid β
+**Authors:** Lee MH, Shih YH, Lin SR, Chang JY, Lin YH, Sze CI, Kuo YM, Chang NS
+**Year:** 2017
+**Source type:** primary research — interventional mouse study plus cell-free biochemistry
+**Journal/source:** *Alzheimers Dement (N Y)* 2017;3(2):152–168
+**Identifier:** PMID 29067327 / PMCID PMC5651433 / DOI 10.1016/j.trci.2017.02.001
+**Status:** processed
+**Record provenance:** created by `CC-20261003-B-REGISTRY-01` (intake wave 2 2026-10-03, Scientist B). Provisional number: if `PAPER 139` is taken when this batch runs, the integrator renumbers and updates the `LIT link`.
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261003-29067327-02`; manifest `deepdive_manifests/PMID29067327.json`; dossier `research/fulltext_dossiers/PMID29067327.md`
+**Primary pathway:** P8 — therapeutic candidates (peptide)
+**Model/species:** 3×Tg-AD mice (Psen1 M146V, APPswe, tau P301L) with **wild-type Wwox**; nude mice with melanoma; human post-mortem hippocampus; MCF7, DU145, L929, COS7
+**Genotype/model:** no WWOX allele in the treated cohort; one supplementary Wwox+/− behavioural panel with no treatment arm
+**Transferability:** T3 — transfer to a congenital biallelic WWOX loss crosses a different gene, a different lesion and a different developmental window
+**clinical relevance:** MODERATE as a bounded therapeutic read; it is **not** a WWOX intervention
+**Claim links:** 043 (evidence-class bound)
+**Role:** 🔴 **Not a WWOX model.** Dose and route, for the record: Zfra4–10 at 2 mM in 100 µL PBS by tail vein, four weekly injections from 10 months, PBS sham as the only comparator — no vehicle-plus-scrambled arm, no dose–response, no pharmacokinetics (the melanoma arm uses 1 mM in water). 🔴 **Blinding and randomisation are not mentioned**: the strings `blind` and `randomi` occur zero times in the fingerprinted artefact. 🔴 Group sizes are inconsistent four ways — Methods 5/5, Figure 1A 6/5, Figure 1B 12/10, Figure 2 3/5 — and the histology statistics are computed over fields (n = 10) and cells (n = 40), not animals. 🔴 **The paper's only WWOX-genotype datum does not reproduce its own legend.** Supplementary Figure 1, now extracted and inspected, claims a drop *«greater than 55%»* at ages 10–12 in Wwox+/− against under 50% in 3×Tg; the figure's axes read 3, >10, 8, 10 months, carry **no genotype label**, contain no age 12, no n per bar and no test, and under either assignment of bar pairs the drops are ≈ 43%/13% and ≈ 52%/33%. 🟢 Earned negatives the authors report against themselves: no neurogenesis, Z cells do not reach the brain, and efficacy fails when treatment starts at 12 months.
+**LIT link:** [[literature_tracking_log_current#LIT-0437]]
+**Note:** class-level record; no individual-level detail is carried in this public edition. This paper belongs to a corpus in which one laboratory supplies every record of the mechanism: PubMed 2026-10-02 returns 0 records for `WWOX AND TIAF1 NOT Chang NS[au]` and 4 for `"TRAPPC6A" AND (aggregation OR plaque)`, all four of them this group's. Not medical advice.
+
+## PAPER 140
+**Short title:** Li 2009 PLoS One — WOX1 activation with CREB and NF-κB in rat DRG after sciatic transection; the pro-death direction
+**Full title:** Dramatic co-activation of WWOX/WOX1 with CREB and NF-κB in delayed loss of small dorsal root ganglion neurons upon sciatic nerve transection in rats
+**Authors:** Li MY, Lai FJ, Hsu LJ, Lo CP, Cheng CL, Lin SR, Lee MH, Chang JY, Subhan D, Tsai MS, Sze CI, Pugazhenthi S, Chang NS, Chen ST
+**Year:** 2009
+**Source type:** primary research — in-vivo rat nerve-injury time course, p53-knockout mice, cell-line reporter assays, FRET, immuno-EM
+**Journal/source:** *PLoS One* 2009;4(11):e7820
+**Identifier:** PMID 19918364 / PMCID PMC2771921 / DOI 10.1371/journal.pone.0007820
+**Status:** processed
+**Record provenance:** created by `CC-20261003-B-REGISTRY-01` (intake wave 2 2026-10-03, Scientist B). Provisional number: if `PAPER 140` is taken when this batch runs, the integrator renumbers and updates the `LIT link`.
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261003-19918364-01`; manifest `deepdive_manifests/PMID19918364.json`; dossier `research/fulltext_dossiers/PMID19918364.md`
+**Primary pathway:** P3 — neuronal injury and WWOX directionality
+**Model/species:** adult Sprague-Dawley rat DRG and spinal cord; p53−/− mice; HEK-293; SK-N-SH; primary DRG cultures
+**Genotype/model:** wild-type rats — endogenous injury-induced WWOX activation, no WWOX allele
+**Transferability:** T3 for a loss-of-function genotype; the measurement is of WWOX **gain** of nuclear activity under stress
+**clinical relevance:** MODERATE — the one record whose direction is pro-death for activated WWOX, which bears on any strategy that raises WWOX activity
+**Claim links:** 044 (directional ambiguity)
+**Role:** 🟢 In-vivo time course over two months with sham and contralateral controls. 🔴 Three bounds found at source. **(1)** The directional claim — WOX1 inhibits CREB/CRE/AP-1 and enhances NF-κB — is a **Gal4-fusion luciferase assay after transient over-expression in HEK-293 fibroblasts**; no panel of Figure 5 contains a neuron. **(2)** The chronic accumulation is **not lateralised**: Supplementary Figure S3 gives ≈ 72% of small neurons with nuclear p-WOX1 contralaterally against ≈ 71% ipsilaterally at month 2, with sham already at 31–37%, so axotomy is not its sufficient cause. **(3)** The abstract's *«>65%»* and *«40–65%»* are **bin labels of a categorical heat map** (Figure 4) with no n, no error and no test. Neuronal death at the endpoint is *«less than 5%»*. 🟢 Confirmed at source, discharging `FT-159`: the paper classifies neurons **by diameter only** (<20, 20–30, >30 µm) and the strings `nocicept`, `unmyelin`, `IB4`, `CGRP` and `substance P` occur zero times — the size→modality step is LEGEND's imported convention, not the authors'. ⚠️ One of its 53 references (PNAS 2005, WWOX restoration in lung cancer) carries a 2017 editorial expression of concern and is cited for background only.
+**LIT link:** [[literature_tracking_log_current#LIT-0438]]
+**Note:** class-level record; no individual-level detail is carried in this public edition. This paper belongs to a corpus in which one laboratory supplies every record of the mechanism: PubMed 2026-10-02 returns 0 records for `WWOX AND TIAF1 NOT Chang NS[au]` and 4 for `"TRAPPC6A" AND (aggregation OR plaque)`, all four of them this group's. Not medical advice.
+
+## PAPER 141
+**Short title:** Hsu 2021 Cells — review of WWOX binding partners in neurodegeneration; provenance of the SDR–tau mechanism
+**Full title:** WWOX and Its Binding Proteins in Neurodegeneration
+**Authors:** Hsu CY, Lee KT, Sun TY, Sze CI, Huang SS, Hsu LJ, Chang NS
+**Year:** 2021
+**Source type:** secondary — narrative review (PubMed article type includes Review)
+**Journal/source:** *Cells* 2021;10(7):1781
+**Identifier:** PMID 34359949 / PMCID PMC8304785 / DOI 10.3390/cells10071781
+**Status:** processed
+**Record provenance:** created by `CC-20261003-B-REGISTRY-01` (intake wave 2 2026-10-03, Scientist B). Provisional number: if `PAPER 141` is taken when this batch runs, the integrator renumbers and updates the `LIT link`.
+**Evidence depth:** secondary source — a review carries no reading depth of its own; receipt `FTR-20261003-34359949-02` records a `partial_fulltext_read` of the review text, Table 1 and all figure legends
+**Primary pathway:** P4 — proteostasis / aggregation cascade (provenance record)
+**Model/species:** none — no cohort, no experiment; its three figures are schematics
+**Genotype/model:** none
+**Transferability:** n/a — a review contributes no transferable datum; nothing may inherit DATO status from it
+**clinical relevance:** BACKGROUND — provenance only
+**Claim links:** 043 (evidence-class bound; the review is where the mechanism is stated most compactly)
+**Role:** 🔴 **The sentence that matters most for an SDR-destabilising allele occurs only in this review's abstract.** *«WWOX binds Tau via its C-terminal SDR domain»* occurs exactly once in the fingerprinted artefact, inside `<abstract>`, and **zero times in the body**; the body states only the GSK-3β version, attributed to two same-laboratory primaries (Sze 2004 J Biol Chem, PMID 15126504, which LEGEND holds as abstract-only; and Wang 2012 Cell Death Differ, PMID 22193544). There is no third, independent primary. 🔴 *«it only takes less than 15 days after birth»* is a **ceiling imposed by the null mouse's one-month lifespan**, not a measured latency, and is juvenile rather than embryonic. 🔴 *«the stronger the binding, the better»* is an **analogy transferred from cancer suppression**, used in §10.3 to motivate a therapeutic programme, with no neuronal measurement. 🟢 The review is self-critical in one place that applies to its own group's data: on the p73 literature it writes that *«transient overexpression may cause artificial binding effects»*.
+**LIT link:** [[literature_tracking_log_current#LIT-0439]]
+**Note:** class-level record; no individual-level detail is carried in this public edition. This paper belongs to a corpus in which one laboratory supplies every record of the mechanism: PubMed 2026-10-02 returns 0 records for `WWOX AND TIAF1 NOT Chang NS[au]` and 4 for `"TRAPPC6A" AND (aggregation OR plaque)`, all four of them this group's. Not medical advice.
