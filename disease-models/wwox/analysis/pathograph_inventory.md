@@ -26,15 +26,15 @@ annotations is reported below whatever it happens to be.
 
 | Measure | Count |
 |---|---|
-| Claim nodes | 44 |
-| Claim→claim wikilink occurrences | 98 |
-| …distinct directed links | 70 |
-| …undirected edges they collapse into | 44 |
+| Claim nodes | 45 |
+| Claim→claim wikilink occurrences | 99 |
+| …distinct directed links | 71 |
+| …undirected edges they collapse into | 45 |
 | Edges carrying a declared relation type | 0 |
 | Nodes carrying a biological scale | 0 |
 | Deep-dive manifests read | 180 |
-| …of which bound to at least one claim | 78 |
-| Propositions scanned | 3230 |
+| …of which bound to at least one claim | 79 |
+| Propositions scanned | 3232 |
 | …carrying a relational connective | 702 |
 | …locator-backed candidates | 662 |
 | …locator-backed and bound to a claim | 313 |
@@ -52,7 +52,7 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 |---|---|---|---|---|---|---|---|
 | CLAIM 001 | Vigabatrin associated with VABAM in WWOX-DEE | conflicting evidence | DATO | P2 — GABAergic vulnerability / safety | NOT_ANNOTATED | 5 | 7 |
 | CLAIM 002 | WWOX-LoF causes network hyperexcitability; AAV-WWOX rescues organoid phenotype | consolidated baseline | DATO + INFERENZA prudente | P1 — Ca²⁺ / network dysregulation; P7 —  | NOT_ANNOTATED | 2 | 5 |
-| CLAIM 003 | Neuronal WWOX deletion induces non-cell-autonomous hypomyelination | consolidated baseline | DATO | P4 — myelination / white matter | NOT_ANNOTATED | 2 | 3 |
+| CLAIM 003 | Neuronal WWOX deletion induces non-cell-autonomous hypomyelination | consolidated baseline | DATO | P4 — myelination / white matter | NOT_ANNOTATED | 3 | 3 |
 | CLAIM 004 | AAV9-WWOX neuron-targeted rescue shows multi-domain in vivo improvement | consolidated baseline | DATO | P7 — gene therapy readiness | NOT_ANNOTATED | 10 | 3 |
 | CLAIM 005 | Reduced GABAergic interneurons and glial activation in WWOX-KO | consolidated baseline | DATO | P2 — GABAergic vulnerability; P6 — neuro | NOT_ANNOTATED | 20 | 3 |
 | CLAIM 006 | P47T model shows progressive hippocampal astrogliosis; microglial progression shown for morpholo | consolidated baseline | DATO + INFERENZA prudente | P6 — neuroinflammation / glia | NOT_ANNOTATED | 0 | 2 |
@@ -94,6 +94,7 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 | CLAIM 042 | In one WOREE case series, three of five patients are reported to have improved seizure control a | in observation | DATO (uncontrolled case series, clinical | P1 — clinical epilepsy management; P5 —  | NOT_ANNOTATED | 2 | 1 |
 | CLAIM 043 | The WWOX → TRAPPC6AΔ/TIAF1 → caspase → tau/Aβ cascade has no link measured in a neuron carrying  | in observation | DATO (what each cited link measures, rea | P4 — proteostasis / aggregation cascade | NOT_ANNOTATED | 3 | 5 |
 | CLAIM 044 | The direction of WWOX activity in stressed neurons is unresolved: one in-vivo record makes activ | in observation | DATO (the injury time course and its bou | P3 — neuronal injury and WWOX directiona | NOT_ANNOTATED | 2 | 2 |
+| CLAIM 045 | One WWOX allele is not electrophysiologically silent in the murine neocortex, and no endpoint be | in observation | DATO (la proporzione) + INFERENZA (la le | P2 — eccitabilità / rete neocorticale | NOT_ANNOTATED | 1 | 2 |
 
 ## 2 · Edges declared by the registry
 
@@ -103,6 +104,7 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 | CLAIM 001 <-> CLAIM 031 | yes | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 045 |
 | CLAIM 001 <-> CLAIM 042 | **one-way** | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 017 |
 | CLAIM 003 <-> CLAIM 004 | yes | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
+| CLAIM 003 <-> CLAIM 045 | **one-way** | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 004 |
 | CLAIM 004 <-> CLAIM 005 | yes | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
 | CLAIM 004 <-> CLAIM 011 | yes | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
 | CLAIM 004 <-> CLAIM 037 | yes | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
@@ -162,7 +164,7 @@ reported as `RELATION_TYPE_UNRECOGNISED` and is never coerced into a type.
 
 ## 3 · Where the causal content actually sits
 
-21 of 44 claim titles state a
+21 of 45 claim titles state a
 relation, and every declared edge states none. The causal content of this
 model is largely **inside its nodes**: *"Neuronal WWOX deletion induces
 non-cell-autonomous hypomyelination"* is a cause, a relation and an effect
@@ -224,6 +226,7 @@ is matched as one string, so an adverb inserted into it — *"contributes
 | Edge | Declared | Not declared |
 |---|---|---|
 | CLAIM 001 <-> CLAIM 042 | CLAIM 042 -> CLAIM 001 | CLAIM 001 -> CLAIM 042 |
+| CLAIM 003 <-> CLAIM 045 | CLAIM 045 -> CLAIM 003 | CLAIM 003 -> CLAIM 045 |
 | CLAIM 004 <-> CLAIM 040 | CLAIM 040 -> CLAIM 004 | CLAIM 004 -> CLAIM 040 |
 | CLAIM 005 <-> CLAIM 036 | CLAIM 036 -> CLAIM 005 | CLAIM 005 -> CLAIM 036 |
 | CLAIM 007 <-> CLAIM 041 | CLAIM 041 -> CLAIM 007 | CLAIM 007 -> CLAIM 041 |
@@ -370,6 +373,6 @@ carried no connective from the lexicon.
 ## Provenance
 
 Derived from 183 input files; digest
-`40be9678e0fba343`. Sources: the claim, paper and
+`8f9723b39e255e84`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 

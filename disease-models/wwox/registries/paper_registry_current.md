@@ -109,9 +109,9 @@ The canonical P1–P7 codes follow the WWOX working model and claim registry. **
 **Genotype/model:** neuronal deletion
 **Transferability:** T2
 **clinical relevance:** MODERATE
-**Claim links:** 003
+**Claim links:** 003 · 045 (the heterozygote arm of the same figure set, cited by `CLAIM 045` as a proportion without a statistical test) [added 2026-10-03 by `BATCH_20261003_003`, closing the reciprocal-link defect class Mirror F2 named on `BATCH_20261003_001`]
 **Role:** myelination anchor paper
-**Evidence depth:** `partial_fulltext_read` on the surface that can be audited today — receipt `FTR-20261003-33914858-02` (rendered browser print; its coverage map reads `results`/`methods`/`figures` read, the rest `not_read`). The earlier `FTR-20260923-33914858-01` is recorded `complete_fulltext_read`, but on the publisher HTML that is **absent from this checkout** (see the artefact-debt note below), so this record does not inherit that depth (BATCH_20261003_003, depth read off the ledger's coverage maps). Ricevute `FTR-20260923-33914858-01` e `FTR-20261003-33914858-02`, manifest `deepdive_manifests/PMID33914858.json` (6 locator su pagina resa, validatore PASS), dossier `fulltext_dossiers/PMID33914858.md`.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) on the surface that can be audited today — receipt `FTR-20261003-33914858-02` (rendered browser print; its coverage map reads `results`/`methods`/`figures` read, the rest `not_read`). The earlier `FTR-20260923-33914858-01` is recorded in the ledger at **complete** depth, but on the publisher HTML that is **absent from this checkout** (see the artefact-debt note below), so this record does not inherit that depth (BATCH_20261003_003, depth read off the ledger's coverage maps). Ricevute `FTR-20260923-33914858-01` e `FTR-20261003-33914858-02`, manifest `deepdive_manifests/PMID33914858.json` (6 locator su pagina resa, validatore PASS), dossier `fulltext_dossiers/PMID33914858.md`.
 **Quantità, dalla pagina stampata (2026-10-03, `CC-20261003W4-B-REGISTRY-01`), che la nota qui sotto rimandava a un PDF mai ottenuto:** assoni mielinizzati per campo nel corpo calloso a P17, S-Control 180 ± 40 contro S-KO 55 ± 35 — circa **3.3 volte**, non le «3.5–4 volte» a cui il testo corrente del lavoro arrotonda; assoni non mielinizzati nel nervo ottico 55 ± 20 contro 270 ± 60; g-ratio significativamente più alto in entrambi i tratti; oligodendrociti maturi CC1-positivi ridotti di **due volte** con OPC significativamente più numerosi; **nessuna morte oligodendrocitaria** significativa (CC1 + caspasi 3 clivata). Limite di potenza su ogni numero di spessore: l'analisi del g-ratio è potenziata a livello di assone, circa 600 assoni, 100 per topo, **n = 3 per genotipo**.
 🔴 **Debito di artefatto, dichiarato 2026-10-03:** l'HTML dell'editore che la ricevuta `FTR-20260923-33914858-01` dichiara come propria superficie di testo autorevole — `files/fulltext/PMID33914858_Repudi2021_OUP.html`, sha256 `3baf27af9f906a8bfa013924a90a0eca7713b25463d6f039fddef0242caac902` — **non è presente in questo checkout**, né lo sono i cinque supplementi che quella ricevuta nomina; cercati per nome su tutta la macchina e per SHA-256 su 504 file candidati. I locator di quella lettura sono quindi **non auditabili** finché l'artefatto non rientra. La ri-acquisizione è stata ritentata il 2026-10-03 e fallisce su ogni rotta libera: OUP risponde HTTP 403 dietro Cloudflare su tre URL, non esiste PMCID, Unpaywall e OpenAlex nominano solo quella posizione bronze con `has_repository_copy: false`, e l'indice CDX di Wayback non ha alcuna cattura. Cosa sbloccherebbe: una copia dell'operatore dello stesso HTML, o un prestito interbibliotecario.
 **Note:** justifies MRI + DTI logic. Identifier normalizzato + abstract/key-findings verificati via PubMed 2026-07-05 (CC-2026-07-05-002). Full-text PDF OA-ma-bot-blocked (Oxford advance-access) → handoff `files/fulltext/PMID33914858_Repudi2021.handoff.md` per recupero manuale; arricchimento quantitativo del claim rimandato al PDF. Reperto cross-pathway (abstract): organoidi cerebrali umani WWOX-KO mostrano iperattivazione + ipomielinizzazione → cross-link [[claim_registry_current#CLAIM 002]]. ⚠️ Duplicato corpus **CORPUS-STUB-087** (stesso DOI) → mergiare in un prossimo BATCH_COMMIT.
@@ -8535,7 +8535,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Identifier:** PMID 32389029 / PMCID PMC7400721 / DOI 10.1177/1535370220924618
 **Status:** processed
 **Record provenance:** created by `CC-20261003W4-A-REGISTRY-01` (intake wave 4 2026-10-03, Scientist A). Provisional number: the integrator renumbers if taken and updates the `LIT link`. Promotes [[paper_registry_current#CORPUS-STUB-007]] (kept as history).
-**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261003-32389029-01` (figure images unobtainable; schematics read as captions); manifest `deepdive_manifests/PMID32389029.json`; dossier `research/fulltext_dossiers/PMID32389029.md`
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261003-32389029-01` (figure images unobtainable; schematics read as captions); manifest `deepdive_manifests/PMID32389029.json`; dossier `research/fulltext_dossiers/PMID32389029.md`
 **Primary pathway:** CNS development / review
 **Model/species:** review
 **Genotype/model:** n/a
@@ -8595,7 +8595,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Journal/source:** *Journal of Lipid Research* 2022;63(6):100209
 **Identifier:** PMID 35460704 / PMCID PMC9126845 / DOI 10.1016/j.jlr.2022.100209
 **Status:** processed
-**Evidence depth:** `partial_fulltext_read` — ricevuta `FTR-20261003-35460704-01`, JATS Europe PMC, manifest `deepdive_manifests/PMID35460704.json` (6 locator, validatore PASS con `--verify-artifacts`), dossier `fulltext_dossiers/PMID35460704.md`. Parziale: pannelli non ispezionati come immagini, lista dei riferimenti non letta.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — ricevuta `FTR-20261003-35460704-01`, JATS Europe PMC, manifest `deepdive_manifests/PMID35460704.json` (6 locator, validatore PASS con `--verify-artifacts`), dossier `fulltext_dossiers/PMID35460704.md`. Parziale: pannelli non ispezionati come immagini, lista dei riferimenti non letta.
 **Integrity status:** clean
 **Primary pathway:** P5 — metabolismo / lipidi
 **Model/species:** umano, 204 persone selezionate per HDL-C sotto il 10º percentile di una sola coorte di ricerca
@@ -8615,8 +8615,9 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Source type:** 🔴 **preprint bioRxiv, NON sottoposto a peer review** — v1 del 2025-11-24, CC-BY-NC-ND. Layer di ricerca: non può alzare lo stato di alcuna claim.
 **Journal/source:** bioRxiv
 **Identifier:** DOI 10.1101/2025.11.22.689900 / bioRxiv PPR1124524 — **nessun PMID**
-**Status:** processed (research layer)
-**Evidence depth:** `partial_fulltext_read` — ricevuta `FTR-20261003-PPR1124524-01`, PDF bioRxiv `files/fulltext/PPR1124524_Abudiab2025_bioRxiv.pdf` con layer di testo derivato, dossier `fulltext_dossiers/PPR1124524.md`. **Nessun deep-dive manifest**: i manifest sono indicizzati per PMID e un file con nome PPR non sarebbe risolvibile dal modulo di provenance; i locator stanno nel dossier e in `CC-20261003W4-B-MYELIN-CELLAUT-01`.
+**Status:** processed
+**Registry role:** research layer — a preprint founds no claim (status vocabulary corrected by `BATCH_20261003_003` from «processed (research layer)», which LINT refuses as INVALID_STATUS; nothing else in the record changed)
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — ricevuta `FTR-20261003-PPR1124524-01`, PDF bioRxiv `files/fulltext/PPR1124524_Abudiab2025_bioRxiv.pdf` con layer di testo derivato, dossier `fulltext_dossiers/PPR1124524.md`. **Nessun deep-dive manifest**: i manifest sono indicizzati per PMID e un file con nome PPR non sarebbe risolvibile dal modulo di provenance; i locator stanno nel dossier e in `CC-20261003W4-B-MYELIN-CELLAUT-01`.
 **Integrity status:** clean
 **Primary pathway:** P4 — mielinizzazione / sostanza bianca
 **Model/species:** topo (condizionale Olig2-Cre; colture OPC dal null costitutivo), linea Oli-neu, HEK293T, dati umani snRNA-seq di lesioni di sclerosi multipla
@@ -8636,8 +8637,9 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Source type:** 🔴 **preprint bioRxiv, NON sottoposto a peer review** — v1 del 2025-05-07, CC-BY. Layer di ricerca.
 **Journal/source:** bioRxiv
 **Identifier:** DOI 10.1101/2025.05.01.651195 / bioRxiv PPR1015434 — **nessun PMID**
-**Status:** processed (research layer)
-**Evidence depth:** `partial_fulltext_read` — ricevuta `FTR-20261003-PPR1015434-01`, JATS Europe PMC `files/fulltext/PPR1015434_LucasClarke2025_EPMC.xml` più supplemento, dossier `fulltext_dossiers/PPR1015434.md`. Nessun manifest, per la stessa ragione di `PAPER 157`.
+**Status:** processed
+**Registry role:** research layer — a preprint founds no claim (status vocabulary corrected by `BATCH_20261003_003` from «processed (research layer)», which LINT refuses as INVALID_STATUS; nothing else in the record changed)
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — ricevuta `FTR-20261003-PPR1015434-01`, JATS Europe PMC `files/fulltext/PPR1015434_LucasClarke2025_EPMC.xml` più supplemento, dossier `fulltext_dossiers/PPR1015434.md`. Nessun manifest, per la stessa ragione di `PAPER 157`.
 **Integrity status:** clean
 **Primary pathway:** P5 — metabolismo (piruvato / UPR)
 **Model/species:** *Drosophila melanogaster*
@@ -8660,7 +8662,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Identifier:** PMID 42349402 / PMCID PMC13555566 / DOI 10.1016/j.ymthe.2026.06.007
 **Status:** processed
 **Record provenance:** created by `CC-20261003w4-C-REGISTRY-01` (intake wave 4 2026-10-03, Scientist C, group C); numbers measured and assigned by `BATCH_20261003_003`
-**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261003-42349402-01`; manifest `deepdive_manifests/PMID42349402.json`; dossier `research/fulltext_dossiers/PMID42349402.md`. Partial: figure panels not inspected as images and no supplementary file fetched — owed.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261003-42349402-01`; manifest `deepdive_manifests/PMID42349402.json`; dossier `research/fulltext_dossiers/PMID42349402.md`. Partial: figure panels not inspected as images and no supplementary file fetched — owed.
 **Primary pathway:** P7 gene-therapy design
 **Model/species:** mouse (C57BL/6J, VGAT-tdTomato), AAV-PHP.eB intravenous and intraparenchymal
 **Genotype/model:** no WWOX allele; this source does not mention WWOX
@@ -8681,7 +8683,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Identifier:** PMID 41992613 / PMCID PMC13330066 / DOI 10.1016/j.ymthe.2026.04.027
 **Status:** processed
 **Record provenance:** created by `CC-20261003w4-C-REGISTRY-01` (intake wave 4 2026-10-03, Scientist C, group C); numbers measured and assigned by `BATCH_20261003_003`
-**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261003-41992613-01`; manifest `deepdive_manifests/PMID41992613.json`; dossier `research/fulltext_dossiers/PMID41992613.md`. Partial: figure panels not inspected as images and no supplementary file fetched — owed.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261003-41992613-01`; manifest `deepdive_manifests/PMID41992613.json`; dossier `research/fulltext_dossiers/PMID41992613.md`. Partial: figure panels not inspected as images and no supplementary file fetched — owed.
 **Primary pathway:** P7 gene-therapy design
 **Model/species:** SMNΔ7 mouse, Wistar Han rat (male only), juvenile cynomolgus macaque
 **Genotype/model:** no WWOX allele; this source does not mention WWOX
@@ -8702,7 +8704,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Identifier:** PMID 42458834 / PMCID PMC13555558 / DOI 10.1016/j.ymthe.2026.07.032
 **Status:** processed
 **Record provenance:** created by `CC-20261003w4-C-REGISTRY-01` (intake wave 4 2026-10-03, Scientist C, group C); numbers measured and assigned by `BATCH_20261003_003`
-**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261003-42458834-01`; manifest `deepdive_manifests/PMID42458834.json`; dossier `research/fulltext_dossiers/PMID42458834.md`. Partial: figure panels not inspected as images and no supplementary file fetched — owed.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261003-42458834-01`; manifest `deepdive_manifests/PMID42458834.json`; dossier `research/fulltext_dossiers/PMID42458834.md`. Partial: figure panels not inspected as images and no supplementary file fetched — owed.
 **Primary pathway:** P7 gene-therapy design
 **Model/species:** wild-type C57BL/6J mouse, bilateral i.c.v. at P1 and intrathecal at P21
 **Genotype/model:** no WWOX allele; this source does not mention WWOX
@@ -8723,7 +8725,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Identifier:** PMID 41404412 / PMCID PMC12704302 / DOI 10.1016/j.omtm.2025.101643
 **Status:** processed
 **Record provenance:** created by `CC-20261003w4-C-REGISTRY-01` (intake wave 4 2026-10-03, Scientist C, group C); numbers measured and assigned by `BATCH_20261003_003`
-**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261003-41404412-01`; manifest `deepdive_manifests/PMID41404412.json`; dossier `research/fulltext_dossiers/PMID41404412.md`. Partial: figure panels not inspected as images and no supplementary file fetched — owed.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261003-41404412-01`; manifest `deepdive_manifests/PMID41404412.json`; dossier `research/fulltext_dossiers/PMID41404412.md`. Partial: figure panels not inspected as images and no supplementary file fetched — owed.
 **Primary pathway:** P7 gene-therapy design / BLOCK-1 safety
 **Model/species:** cynomolgus macaque, intra-cisterna magna and intrathecal lumbar
 **Genotype/model:** no WWOX allele; this source does not mention WWOX
@@ -8744,7 +8746,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Identifier:** PMID 35331006 / PMCID PMC9347375 / DOI 10.1089/hum.2021.255
 **Status:** processed
 **Record provenance:** created by `CC-20261003w4-C-REGISTRY-01` (intake wave 4 2026-10-03, Scientist C, group C); numbers measured and assigned by `BATCH_20261003_003`
-**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261003-35331006-01`; manifest `deepdive_manifests/PMID35331006.json`; dossier `research/fulltext_dossiers/PMID35331006.md`. Partial: figure panels not inspected as images and no supplementary file fetched — owed.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261003-35331006-01`; manifest `deepdive_manifests/PMID35331006.json`; dossier `research/fulltext_dossiers/PMID35331006.md`. Partial: figure panels not inspected as images and no supplementary file fetched — owed.
 **Primary pathway:** P7 gene-therapy design / BLOCK-1 safety
 **Model/species:** cynomolgus macaque, intrathecal lumbar with iohexol contrast, plus an intravenous arm
 **Genotype/model:** no WWOX allele; this source does not mention WWOX
@@ -8765,7 +8767,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Identifier:** PMID 36700120 / PMCID PMC9852542 / DOI 10.1016/j.omtm.2022.12.012
 **Status:** processed
 **Record provenance:** created by `CC-20261003w4-C-REGISTRY-01` (intake wave 4 2026-10-03, Scientist C, group C); numbers measured and assigned by `BATCH_20261003_003`
-**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261003-36700120-01`; manifest `deepdive_manifests/PMID36700120.json`; dossier `research/fulltext_dossiers/PMID36700120.md`. Partial: figure panels not inspected as images and no supplementary file fetched — owed.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261003-36700120-01`; manifest `deepdive_manifests/PMID36700120.json`; dossier `research/fulltext_dossiers/PMID36700120.md`. Partial: figure panels not inspected as images and no supplementary file fetched — owed.
 **Primary pathway:** P7 gene-therapy design / toxicity surveillance
 **Model/species:** cynomolgus macaque, nine pooled studies, intrathecal and intravenous
 **Genotype/model:** no WWOX allele; this source does not mention WWOX
