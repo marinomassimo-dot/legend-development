@@ -103,9 +103,13 @@ Identifier values, exactly as PubMed gives them:
 
 ### 3 · Cross-links
 
-Each `PAPER` record's `LIT link` field wikilinks its paired record as
-`[[literature_tracking_log_current#LIT-0441]]` (and so on, zero-padded to four digits, matching the
-existing convention at `PAPER 132`).
+Each `PAPER` record's `LIT link` field wikilinks its paired record, zero-padded to four digits,
+matching the existing convention at `PAPER 132` — that is, a double-bracket link whose target is
+`literature_tracking_log_current` and whose fragment is the paired `LIT-NNNN` record id. The link
+is written at commit time, not here: these records do not yet exist, and a live wikilink to a
+record that has not been appended fails `scripts/test_link_targets.py` (both the record-target and
+the exact-heading test). The integrator writes the links in the same op list that creates the
+targets.
 
 ## Integrity facts the integrator should carry forward
 
