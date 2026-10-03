@@ -19,7 +19,7 @@
 | 36271927 | `PAPER 151` (new) | `LIT-0029` (exists) | PAPER yes — no `CORPUS` or `PAPER` record existed | this candidate |
 | 24520212 | `PAPER 152` (new, promotes `CORPUS-STUB-037`) | `LIT-0061` (exists) | PAPER yes | this candidate |
 
-**Numbers are provisional.** Measured 2026-10-03 with `registry_records.py catalog` on `main` 296cd5b: highest landed `PAPER 132`, `LIT-0431`. Open unpropagated candidates claim up to `PAPER 147` and `LIT-0441` (`git grep` over `commit_candidates/`). This candidate takes `PAPER 148`-`152` and `LIT-0442`. Wave-4 peers B and C may claim the same numbers; the integrator renumbers in event order, updates the wikilinks `PAPER 148`-`152` used in the other `CC-20261003W4-A-*` candidates, and re-anchors the first `insert-after` of each list on the highest `PAPER` / `LIT` record then present (the dry run anchored on the landed `PAPER 132` / `LIT-0431`).
+**Numbers are provisional.** Measured 2026-10-03 ~11:30Z with `registry_records.py catalog` after merging `main` 31da5fa: highest landed `PAPER 142`, `LIT-0440`. Open unpropagated candidates claim up to `PAPER 147` and `LIT-0441` (`git grep` over `commit_candidates/`). This candidate takes `PAPER 148`-`152` and `LIT-0442`. Wave-4 peers B and C may claim the same numbers; the integrator renumbers in event order, updates the wikilinks `PAPER 148`-`152` used in the other `CC-20261003W4-A-*` candidates, and re-anchors the first `insert-after` of each list on the highest `PAPER` / `LIT` record then present (the dry run anchored on the landed `PAPER 142` / `LIT-0440`).
 
 ## Change class
 **MINOR** — paper additions and placeholder promotion (§ 7). No claim status, no working-model block.
@@ -27,13 +27,13 @@
 ## Ordering
 Receipts (prepared, not appended): `FTR-20261003-{30361190,28721938,33300063,32389029,36271927,24520212}-01`. They must be appended before this candidate is propagated, so no record cites a receipt the ledger does not hold.
 
-## Op list — `paper_registry_current.md` (record-scoped; dry run 2026-10-03 with `record_scoped_edit.py apply` on copies of `main` 296cd5b: exit 0, 11 op(s), keys ['PAPER 132', 'PAPER 148', 'PAPER 149', 'PAPER 150', 'PAPER 151', 'CORPUS-STUB-056', 'CORPUS-STUB-056', 'CORPUS-STUB-007', 'CORPUS-STUB-007', 'CORPUS-STUB-037', 'CORPUS-STUB-037'])
+## Op list — `paper_registry_current.md` (record-scoped; dry run 2026-10-03 with `record_scoped_edit.py apply` on copies of `main` 31da5fa (merged into the branch): exit 0, 11 op(s), keys ['PAPER 142', 'PAPER 148', 'PAPER 149', 'PAPER 150', 'PAPER 151', 'CORPUS-STUB-056', 'CORPUS-STUB-056', 'CORPUS-STUB-007', 'CORPUS-STUB-007', 'CORPUS-STUB-037', 'CORPUS-STUB-037'])
 
 ```json
 [
  {
   "op": "insert-after",
-  "id": "PAPER 132",
+  "id": "PAPER 142",
   "text": "\n## PAPER 148\n**Short title:** Tarta-Arsene 2017 Epileptic Disord — one WOREE patient, normal head circumference; the same patient as Piard 2019 P8\n**Full title:** Practical clues for diagnosing WWOX encephalopathy\n**Authors:** Tarta-Arsene O, Barca D, Craiu D, Iliescu C\n**Year:** 2017\n**Source type:** primary research — clinical commentary on a single case\n**Journal/source:** *Epileptic Disord* 2017;19(3):357-361\n**Identifier:** PMID 28721938 / DOI 10.1684/epd.2017.0924 — bronze OA (publisher PDF)\n**Status:** processed\n**Record provenance:** created by `CC-20261003W4-A-REGISTRY-01` (intake wave 4 2026-10-03, Scientist A). Provisional number: the integrator renumbers if taken and updates the `LIT link`. No earlier `CORPUS`, `PAPER` or `LIT` record existed (`FT-121`).\n**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261003-28721938-01`; manifest `deepdive_manifests/PMID28721938.json`; dossier `research/fulltext_dossiers/PMID28721938.md`\n**Primary pathway:** clinical spectrum / WWOX-DEE\n**Model/species:** human\n**Genotype/model:** compound heterozygous `c.173-1G>T` (intron 2 acceptor; splice effect predicted in this paper, measured as exon 3 skipping for the same allele in another patient of PMID 30356099) + `c.918del p.(Glu306Aspfs*21)`; predicted null / null\n**Transferability:** T1 for the null/null clinical course\n**clinical relevance:** MODERATE\n**Claim links:** none\n**Role:** Normal head circumference throughout with progressive atrophy; first MRI thin corpus callosum with normal myelination for age; death at almost 3 years. 🔴 **Count once:** identical genotype and every compared attribute match [[paper_registry_current#PAPER 117]] Patient 8, which Piard presents as novel without citing this report (`PREMISE: INFERENZA`, `CC-20261003W4-A-PATIENT-OVERLAP-01`). Do not sum the two sources.\n**LIT link:** [[literature_tracking_log_current#LIT-0442]]\n**Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.\n"
  },
  {
@@ -95,13 +95,13 @@ Receipts (prepared, not appended): `FTR-20261003-{30361190,28721938,33300063,323
 ]
 ```
 
-## Op list — `literature_tracking_log_current.md` (record-scoped; dry run 2026-10-03 with `record_scoped_edit.py apply` on copies of `main` 296cd5b: exit 0, 6 op(s), keys ['LIT-0431', 'LIT-0080', 'LIT-0034', 'LIT-0029', 'LIT-0061', 'LIT-0356'])
+## Op list — `literature_tracking_log_current.md` (record-scoped; dry run 2026-10-03 with `record_scoped_edit.py apply` on copies of `main` 31da5fa (merged into the branch): exit 0, 6 op(s), keys ['LIT-0440', 'LIT-0080', 'LIT-0034', 'LIT-0029', 'LIT-0061', 'LIT-0356'])
 
 ```json
 [
  {
   "op": "insert-after",
-  "id": "LIT-0431",
+  "id": "LIT-0440",
   "text": "\n## LIT-0442\n**Short title:** Tarta-Arsene 2017 Epileptic Disord — one WOREE patient, normal head circumference (= Piard 2019 P8)\n**Authors:** Tarta-Arsene O, Barca D, Craiu D, Iliescu C\n**Year:** 2017\n**Source type:** primary research — clinical commentary, single case\n**Journal/source:** *Epileptic Disord* 2017;19(3):357-361\n**Identifier type:** PMID / DOI\n**Identifier value:** PMID 28721938 / DOI 10.1684/epd.2017.0924\n**Date discovered:** 2026-09-21 (harvest-to-registry gap, `FT-121`)\n**Date processed:** 2026-10-03 (`FTR-20261003-28721938-01`)\n**Discovery source:** Orchestrator selection record of intake wave 4 2026-10-03\n**Status:** processed\n**Status note:** `complete_fulltext_read`; record created by `CC-20261003W4-A-REGISTRY-01`\n**Primary pathway:** clinical spectrum / WWOX-DEE\n**Transferability:** T1 for the null/null clinical course\n**clinical relevance:** MODERATE\n**Claim links:** none\n**Working Model impact:** none — no block is redefined\n**Report mentions:** `research/intake_wave_20261003w4_A.md` · `CC-20261003W4-A-REGISTRY-01` · `CC-20261003W4-A-PATIENT-OVERLAP-01`\n**Next action:** none owed — count the patient once with Piard 2019 P8\n**Evidence depth:** `complete_fulltext_read` — manifest `deepdive_manifests/PMID28721938.json`\n"
  },
  {

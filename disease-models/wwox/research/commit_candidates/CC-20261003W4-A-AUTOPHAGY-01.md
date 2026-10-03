@@ -14,7 +14,7 @@ The title's direction holds on **steady-state protein abundance** (WWOX up → B
 ## Change class
 **MINOR**.
 
-## Op list — `full_text_queue_current.md` (record-scoped; dry run 2026-10-03 with `record_scoped_edit.py apply` on copies of `main` 296cd5b: exit 0, 1 op(s), keys ['FT-074'])
+## Op list — `full_text_queue_current.md` (record-scoped; dry run 2026-10-03 with `record_scoped_edit.py apply` on copies of `main` 31da5fa (merged into the branch): exit 0, 1 op(s), keys ['FT-074'])
 
 ```json
 [

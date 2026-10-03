@@ -15,7 +15,7 @@ This confirms the wave-2 hypothesis in the open `CC-20261003-A-PIARD-01` item (6
 ## Change class
 **MINOR** — identity annotation; no claim or block changes. If the Piard wave-2 candidate is propagated first, this op's anchor (`LIT link` line) is unaffected.
 
-## Op list — `paper_registry_current.md` (record-scoped; dry run 2026-10-03 with `record_scoped_edit.py apply` on copies of `main` 296cd5b: exit 0, 1 op(s), keys ['PAPER 117'])
+## Op list — `paper_registry_current.md` (record-scoped; dry run 2026-10-03 with `record_scoped_edit.py apply` on copies of `main` 31da5fa (merged into the branch): exit 0, 1 op(s), keys ['PAPER 117'])
 
 ```json
 [
@@ -28,7 +28,7 @@ This confirms the wave-2 hypothesis in the open `CC-20261003-A-PIARD-01` item (6
 ]
 ```
 
-## Op list — `full_text_queue_current.md` (record-scoped; dry run 2026-10-03 with `record_scoped_edit.py apply` on copies of `main` 296cd5b: exit 0, 1 op(s), keys ['FT-121'])
+## Op list — `full_text_queue_current.md` (record-scoped; dry run 2026-10-03 with `record_scoped_edit.py apply` on copies of `main` 31da5fa (merged into the branch): exit 0, 1 op(s), keys ['FT-121'])
 
 ```json
 [
