@@ -63,7 +63,7 @@ human arm is a suggestive intronic association on a self-reported item in a gene
 population, not a measurement in anyone with a WWOX disorder, and the two arms are not joined by
 any measured quantity.
 
-## Op list — `discovery_ledger_current.md` (record-scoped; dry run 2026-10-03 against `f5f946837924`)
+## Op list — `discovery_ledger_current.md` (record-scoped; dry run 2026-10-03 against `0ed6ad4` (main `eb01d5f` merged))
 
 ```json
 [

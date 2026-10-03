@@ -202,7 +202,7 @@ Dossiers: `fulltext_dossiers/PMID{25649963,26302329,28749468,31543760,39952983}.
 dated addendum appended to `fulltext_dossiers/PMID34268881.md` (the existing dossier was **not**
 replaced).
 
-Candidates, all with executable op lists dry-run against `f5f946837924` at exit 0:
+Candidates, all with executable op lists dry-run against `0ed6ad4` (main `eb01d5f` merged) at exit 0:
 
 | Candidate | Class | Ops |
 |---|---|---|
@@ -213,7 +213,7 @@ Candidates, all with executable op lists dry-run against `f5f946837924` at exit 
 | `CC-20261003-C-REGISTRY-01` | MINOR | 2 ops on the tracking log + 2 on the paper registry |
 
 Registry landings: five of six PMIDs already have one. Only **PMID 39952983** had no record in
-either canonical surface — `LIT-0421` and `PAPER 119` are proposed for it — and PMID 28749468's
+either canonical surface — `LIT-0433` and `PAPER 135` are proposed for it — and PMID 28749468's
 two records were unscreened stubs, which are enriched rather than promoted.
 
 ---

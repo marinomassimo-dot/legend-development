@@ -79,7 +79,7 @@ about the knockout.
   and this reading independently inspected all twelve distributed figure images. Reconciling the
   queue entry with that history is the Orchestrator's, not a Scientist's.
 
-## Op list — `discovery_ledger_current.md` (record-scoped; dry run 2026-10-03 against `f5f946837924`)
+## Op list — `discovery_ledger_current.md` (record-scoped; dry run 2026-10-03 against `0ed6ad4` (main `eb01d5f` merged))
 
 ```json
 [

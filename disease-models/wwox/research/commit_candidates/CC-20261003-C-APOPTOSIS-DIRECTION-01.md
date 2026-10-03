@@ -82,7 +82,7 @@ the general premise that *WWOX restoration suppresses tumour growth in vivo*. It
 to PMID 26302329 itself, and this candidate proposes no action on it — it is recorded because any
 future record that leans on "WWOX restoration works in vivo" should know which source carries it.
 
-## Op list — `discovery_ledger_current.md` (record-scoped; dry run 2026-10-03 against `f5f946837924`)
+## Op list — `discovery_ledger_current.md` (record-scoped; dry run 2026-10-03 against `0ed6ad4` (main `eb01d5f` merged))
 
 ```json
 [

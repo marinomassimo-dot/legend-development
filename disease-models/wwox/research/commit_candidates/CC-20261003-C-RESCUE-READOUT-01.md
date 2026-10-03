@@ -97,7 +97,7 @@ rejected so the rejection is not re-done.
 * `DL-MECH-021` already records the zebrafish SDR-only rescue. This lead does not restate it as
   new; it uses it.
 
-## Op list — `discovery_ledger_current.md` (record-scoped; dry run 2026-10-03 against `f5f946837924`)
+## Op list — `discovery_ledger_current.md` (record-scoped; dry run 2026-10-03 against `0ed6ad4` (main `eb01d5f` merged))
 
 ```json
 [
