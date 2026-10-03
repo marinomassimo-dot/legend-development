@@ -14,10 +14,10 @@
 |---|---:|---|
 | 🟢 **`NEW`** | 55 | never seen by the system — **the front of the queue** |
 | 🟢 **`CORPUS_CATALOGUED`** | 285 | catalogued and deduplicated, never analytically processed |
-| 🟡 `OUT_OF_SCOPE_LIKELY` | 196 | no scope signal in the title — later in the queue, **never discarded** |
+| 🟡 `OUT_OF_SCOPE_LIKELY` | 195 | no scope signal in the title — later in the queue, **never discarded** |
 | 🟡 `AMBIGUOUS` | 4 | identifiers must be resolved before ingest |
 | ⏳ `IN_PIPELINE` | 47 | already in flight |
-| ✅ `KNOWN_INTEGRATED` | 119 | done — read depth in the table below |
+| ✅ `KNOWN_INTEGRATED` | 120 | done — read depth in the table below |
 
 The two green rows are the answer to *"where do I start?"*. The table further down lists
 every record in this order, so a second person can take the next unclaimed row without
@@ -695,7 +695,6 @@ for an entirely unprocessed record.
 | [15692750](https://pubmed.ncbi.nlm.nih.gov/15692750/) | 2005 | ✅ | full text | CORPUS P324 | Frequent loss of WWOX expression in breast cancer: correlation with estrogen receptor status. |
 | [15266310](https://pubmed.ncbi.nlm.nih.gov/15266310/) | 2004 | ✅ | full text | CORPUS P244 | Frequent downregulation and loss of WWOX gene expression in human hepatocellular carcinoma. |
 | [30470736](https://pubmed.ncbi.nlm.nih.gov/30470736/) | 2018 | ✅ | full text | receipt FTR-20260909-30470736-01 | ℹ️ CORRECTION NOTICE — Author Correction: WWOX controls hepatic HIF1α to suppress hepatocyte proliferation and neoplasia. |
-| [21212468](https://pubmed.ncbi.nlm.nih.gov/21212468/) | 2010 | ✅ | full text | receipt FTR-20261003-21212468-01 | Zfra is a small wizard in the mitochondrial apoptosis. |
 | [42092735](https://pubmed.ncbi.nlm.nih.gov/42092735/) | 2026 | ✅ | partial full text | receipt FTR-20261003-42092735-01 | WWOX Mutation as a Rare Cause of Neonatal-Infantile Parkinsonism Mimicking a Neurotransmitter Disorder: A Case Report. |
 | [42395553](https://pubmed.ncbi.nlm.nih.gov/42395553/) | 2026 | ✅ | partial full text | receipt FTR-20261002-42395553-01 | WWOX contributes to DNA damage, but not somatic instability in Huntington's disease. |
 | [42523332](https://pubmed.ncbi.nlm.nih.gov/42523332/) | 2026 | ✅ | partial full text | receipt FTR-20260921-42523332-01 | Golgi CATCHR complexes function as organizing hubs for vesicle tethering and fusion. |
@@ -804,6 +803,7 @@ for an entirely unprocessed record.
 | [21318118](https://pubmed.ncbi.nlm.nih.gov/21318118/) | 2011 | ✅ | full text | PAPER 064 | Common fragile site tumor suppressor genes and corresponding mouse models of cancer. |
 | [21115974](https://pubmed.ncbi.nlm.nih.gov/21115974/) | 2011 | ✅ | full text | PAPER 086 | The tumor suppressor gene WWOX links the canonical and noncanonical NF-κB pathways in HTLV-I Tax-mediated tumorigenesis. |
 | [21075834](https://pubmed.ncbi.nlm.nih.gov/21075834/) | 2011 | ✅ | full text | PAPER 071 | Drosophila orthologue of WWOX, the chromosomal fragile site FRA16D tumour suppressor gene, functions in aerobic metabolism and regulates reactive oxygen species. |
+| [21212468](https://pubmed.ncbi.nlm.nih.gov/21212468/) | 2010 | ✅ | full text | PAPER 142 | Zfra is a small wizard in the mitochondrial apoptosis. |
 | [19936220](https://pubmed.ncbi.nlm.nih.gov/19936220/) | 2009 | ✅ | full text | PAPER 057 | Generation and characterization of mice carrying a conditional allele of the Wwox tumor suppressor gene. |
 | [19500159](https://pubmed.ncbi.nlm.nih.gov/19500159/) | 2009 | ✅ | full text | PAPER 058 | A spontaneous mutation of the Wwox gene and audiogenic seizures in rats with lethal dwarfism and epilepsy. |
 | [18974271](https://pubmed.ncbi.nlm.nih.gov/18974271/) | 2009 | ✅ | full text | PAPER 076 | Targeted ablation of the WW domain-containing oxidoreductase tumor suppressor leads to impaired steroidogenesis. |
