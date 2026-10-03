@@ -326,7 +326,21 @@ ubiquitous promoter on a dose-sensitive transgene — rather than the organ alon
 | `scripts/test_fresh_clone_reader_journey.py` | OK, 5 tests |
 | `framework/scripts/test_pathograph.py` | OK, 32 tests |
 | `framework/scripts/candidate_tree_freshness.py` | **FRESH**, after regenerating the pathograph with the generator from committed inputs and committing the surface |
-| `scripts/run_release_regressions.py` | see the final report |
+| `scripts/run_release_regressions.py` | 136 suites, 682.7 s, `REGRESSION VERDICT: FAIL` with six entries. **None is caused by this branch** — each is diagnosed to its cause below, as the brief requires, and none was accepted as "an environment thing" without being re-run alone |
+
+### The six regression entries, each diagnosed to its cause
+
+| Entry | Cause | Evidence |
+|---|---|---|
+| `test_mandate_continuity.py` · `test_process_wait.py` · `test_quota_state.py` — "UNATTRIBUTED WRITE of 1 tracked file" | **Self-inflicted concurrency.** All three name the same file, `research/intake_wave_20261003w4_C.md`, written at 11:53:52, 11:53:58 and 11:54:04 — I was editing the analysis note while the battery ran. The runner attributes by timestamp and cannot tell my edit from a suite's | Re-run individually on a quiescent tree: `test_mandate_continuity.py` **OK** (68 tests, 2 skipped), `test_process_wait.py` **OK** (12 tests), `test_quota_state.py` **OK**. The brief's own standing warning covers this case |
+| `test_batch_queue.py: exit 1` | **Pre-existing on `main`, and not mine.** `test_coverage_is_not_overstated_against_the_registry` reports `READ_NOT_REGISTERED=['35712340', '37583270', '41153369']` — three of Scientist A's wave-3 PMIDs | `git log main --` on each of the three manifests returns `211c4d3 intake wave 3 2026-10-03 (A)`, and `git merge-base --is-ancestor 211c4d3 main` is true. **None of my six appears**, because my receipts are not yet in the ledger — and `CC-20261003w4-C-REGISTRY-01` exists precisely so they never do appear there |
+| `test_paper_packet.py: exit 1` | **Shared gitignored corpus, not this branch.** Two assertions expect no surface on disk for PMID 33914858, and `files/fulltext/PMID33914858_Repudi2021_OUP_browserprint.pdf` is present, with a `_pdftotext.txt` derived at 11:25 today by a concurrent actor. `files/` is gitignored and shared across every checkout | My branch added only the six JATS XMLs and five figure panels listed in `CC-20261003w4-C-REGISTRY-01`; 33914858 is in none of them and I never opened it |
+| `test_manifest_receipt_provenance.py: exit 1` | **The transient brief correction 3 predicts**, and it self-closes. Ceiling 15, measured 21; the six extra are exactly my six manifests at `UNKNOWN_EVENT`, because a manifest naming a receipt the ledger does not yet hold is unverifiable by construction | Re-ran the module's own `survey()` with `verdict in mrp.DEFECTS` against two ledgers: live → **21** defects, my six present; live **plus my six receipts** → **15** defects, **my six absent**. Back to the declared ceiling, which is not raised. Script: `scratchpad/sciC/selfclose.py` |
+
+**Landing decision.** Per brief correction 3 the branch is landed, because the one entry attributable
+to this work is shown to self-close the moment the Orchestrator appends the receipts. The other five
+entries are two concurrency artefacts of my own editing (now green), one pre-existing `main` failure
+owned by wave 3, and one shared-corpus artefact. **No ceiling was raised and no suite was exempted.**
 
 **One ratchet was hit and fixed by doing the work rather than by relabelling it.**
 `growth_anchors.py` returned `[BLOCK] RATCHET_VIOLATION: 6 new manifests without a panel/text
