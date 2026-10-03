@@ -2,7 +2,7 @@
  "schema_version": 2,
  "pmid": "38161429",
  "doi": "10.3389/fped.2023.1301166",
- "receipt": "FTR-20261003-38161429-01",
+ "receipt": "FTR-20260927-38161429-02",
  "landing": [
   "FTR-20260927-38161429-02",
   "CC-20260922-VERMIS-HYPOPLASIA-FREQUENCY-01",
@@ -204,7 +204,7 @@
  "retraction_check": {
   "performed": true,
   "status": "no_flag",
-  "evidence": "PubMed record for PMID 38161429 carries no retraction, expression of concern or correction notice; the PMC JATS read here carries no such notice in its front matter. Re-checked 2026-10-03 (PubMed: Journal Article, Review; no notice); dependency screen re-run against the 2026-09-10 snapshot. Re-checked 2026-10-03 (PubMed: Journal Article, Review; no notice); dependency screen re-run against the 2026-09-10 snapshot. Re-checked 2026-10-03 (PubMed: Journal Article, Review; no notice); dependency screen re-run against the 2026-09-10 snapshot.",
+  "evidence": "PubMed record for PMID 38161429 carries no retraction, expression of concern or correction notice; the PMC JATS read here carries no such notice in its front matter. Re-checked 2026-10-03 (PubMed: Journal Article, Review; no notice); dependency screen re-run against the 2026-09-10 snapshot. Re-checked 2026-10-03 (PubMed: Journal Article, Review; no notice); dependency screen re-run against the 2026-09-10 snapshot. Re-checked 2026-10-03 (PubMed: Journal Article, Review; no notice); dependency screen re-run against the 2026-09-10 snapshot. Re-checked 2026-10-03 (PubMed: Journal Article, Review; no notice); dependency screen re-run against the 2026-09-10 snapshot.",
   "result": "no_flag",
   "dependencies": {
    "flagged": [],
