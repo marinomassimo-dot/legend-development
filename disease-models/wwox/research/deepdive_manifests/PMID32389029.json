@@ -1,0 +1,171 @@
+{
+ "schema_version": 2,
+ "pmid": "32389029",
+ "doi": "10.1177/1535370220924618",
+ "receipt": "FTR-20261003-32389029-01",
+ "landing": [
+  "intake_wave_20261003w4_A",
+  "CC-20261003W4-A-REGISTRY-01",
+  "CC-20261003W4-A-REVIEWS-01"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not invoked by name: the artifact route was already located by the selector (Europe PMC JATS, or a publisher bronze-OA PDF located through OpenAlex) and was re-fetched by this reader, digest-identical to the selector's copy."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not run: dossier, locators and candidates were produced directly under the Scientist brief; a second pass would duplicate them."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not run by the reader by design: the producer of a reading is not its verifier. Triples are handed to the blind audit in the commit candidates."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "research_type": "experimental_lab",
+  "output_kind": "narrative_review",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": true,
+  "total_publications": 80,
+  "publications_on_gene": 38,
+  "counts_measured": "PubMed esearch 2026-10-03: 'Bednarek AK[au]' 80, 'Bednarek AK[au] AND WWOX' 38.",
+  "weighting": "The Lodz group that co-cloned WWOX; high gene density, cancer-first. Same group as PMID 36271927; the two reviews are not independent."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "WWOX AND brain AND review[pt]",
+    "route": "PubMed esearch 2026-10-03",
+    "count": 20
+   }
+  ],
+  "note": "One of twenty brain-related WWOX reviews; read here as a provenance map, not as evidence."
+ },
+ "multihop": {
+  "performed": false,
+  "reason": "Not performed beyond the two case series this event read directly; the review's other gene-direct primaries are named in the intake note.",
+  "references_enumerated": 89,
+  "enumeration_method": "89 <ref> elements counted on the JATS XML; Crossref screen declared 89.",
+  "gene_direct_refs_in_source": [
+   "30361190",
+   "30356099",
+   "31543760"
+  ],
+  "resolved": [],
+  "queued": [
+   {
+    "pmid": "30361190",
+    "queue": "not queued by this actor: named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Primary behind the review's clinical paragraph or its brain-development paragraph."
+   },
+   {
+    "pmid": "30356099",
+    "queue": "not queued by this actor: named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Primary behind the review's clinical paragraph or its brain-development paragraph."
+   },
+   {
+    "pmid": "31543760",
+    "queue": "not queued by this actor: named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Primary behind the review's clinical paragraph or its brain-development paragraph."
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does any canonical record rest on this review?",
+  "hits": 2,
+  "finding": "Only the placeholders CORPUS-STUB-007 and LIT-0034. No claim cites it; the reading pays no debt behind a canonical statement."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-03",
+  "route": "PubMed get_article_metadata for 32389029",
+  "result": "No retraction, expression of concern or correction in the PubMed record. Article types: Journal Article, Research Support Non-U.S. Gov't, Review.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 89,
+   "references_screened": 84,
+   "references_with_doi": 84,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 5
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID32389029_Kosla2020_PMC.xml",
+   "sha256": "5b0aa3abfb9a2a41ee4dc87ce10533cf7313b351e075b2eeb91d23a50f8909c0",
+   "kind": "article_text",
+   "note": "Europe PMC JATS XML, full body, tables and reference list present.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7400721/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_fulltextxml",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "5b0aa3abfb9a2a41ee4dc87ce10533cf7313b351e075b2eeb91d23a50f8909c0"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC JATS XML: abstract, all sections, Table 1 and its cells, both figure captions, 89 references.",
+  "abstract_anchoring_waived": "All entries are body quotes.",
+  "note": "COVERAGE: everything but the two figure images, which are schematics; Europe PMC returned 403 for both images and the PMC page served a challenge page. Captions read only.",
+  "entries": [
+   {
+    "proposition": "The review equates WOREE with biallelic premature stops and complete absence of WWOX.",
+    "snippet": "In the second form, the presence of premature STOP codons in two alleles results in a complete lack of WWOX expression",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32389029_Kosla2020_PMC.xml",
+    "anchor": "Section 'Encephalopathy', paragraph 2",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "An uncited claim that most germline mutations may be embryonic-lethal.",
+    "snippet": "germline mutations are observed very rare and in great majority may be lethal in embryonic development",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32389029_Kosla2020_PMC.xml",
+    "anchor": "Conclusion",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A heterozygous-animal memory statement, cited to a paper on Zfra in triple-transgenic Alzheimer mice.",
+    "snippet": "heterozygous WWOX+/− animals have been found to demonstrate a higher rate of memory decline",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32389029_Kosla2020_PMC.xml",
+    "anchor": "Section 'Neurodegeneration', paragraph 2 (ref 60)",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The running text cites the astrocytoma immunohistochemistry study; Table 1 cites a different reference number for the same findings.",
+    "snippet": "Its expression was determined in astrocytoma tumor samples of various grades from 38 patients by immunohistochemical staining",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32389029_Kosla2020_PMC.xml",
+    "anchor": "Section 'Astrocytomas' (ref 70) vs Table 1 row 'Astrocytoma' (ref 68)",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}
