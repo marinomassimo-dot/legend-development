@@ -1,0 +1,240 @@
+{
+ "schema_version": 2,
+ "pmid": "39358605",
+ "doi": "10.1038/s44321-024-00148-5",
+ "receipt": "FTR-20261003-39358605-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID39358605.md",
+  "disease-models/wwox/research/intake_wave_20261003w5_A.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W5-A-REGISTRY-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W5-A-CARGO-CASSETTE-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W5-A-TRANSGENE-IMMUNITY-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W5-A-WINDOW-STATUS-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W5-A-DOSE-TWO-SIDED-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is a research surface owned by other batches; every transferable lesson here is proposed as a commit candidate instead of written into the ledger."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A gene-replacement lesson from another gene is not a WWOX therapeutic hypothesis; forging one would convert a stated transfer limit into a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No small molecule with a SMILES is proposed, so the BLOCK-1 ADMET gate has nothing to triage."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The triples are published for a blind auditor; a reader cannot audit their own locators."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "No author-level PubMed census was run for this reading: the paper is about another gene entirely and contributes only transferable method, so group standing on WWOX is not the weighting that matters. What was recorded instead is declared competing interest, read from the paper itself and carried in the dossier.",
+  "external_provenance": {
+   "source": "not applicable — no external author census performed",
+   "date": "2026-10-03"
+  }
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND gene replacement",
+    "count": 2,
+    "source": "PubMed ESearch rettype=count 2026-10-03"
+   },
+   {
+    "query": "WWOX AND biodistribution",
+    "count": 0,
+    "source": "PubMed ESearch rettype=count 2026-10-03"
+   },
+   {
+    "query": "WWOX AND dorsal root ganglia",
+    "count": 2,
+    "source": "PubMed ESearch rettype=count 2026-10-03"
+   }
+  ]
+ },
+ "multihop": {
+  "references_enumerated": 0,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference lists were not enumerated in this pass and no multi-hop expansion was performed; the coverage key 'references' is declared not_read for that reason."
+ },
+ "corpus_crossquery": {
+  "query": "paper_packet.py packet --pmid 39358605 (run BEFORE the first pass, technical state only)",
+  "hits": 0,
+  "note": "NO RECORD MATCHED on any registry surface (paper_packet.py packet --pmid, 2026-10-03): first reading, no prior receipt. The paper does not mention WWOX."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-03 via NCBI E-utilities efetch (db=pubmed, retmode=xml): the publication types carry no retraction, expression of concern or correction notice, and no CommentsCorrections element of any RefType is present for this PMID.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 55,
+   "references_screened": 53,
+   "references_with_doi": 53,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID39358605_Wiseman2024_PMC.xml",
+   "sha256": "cf51af29dfde9af66b196419d5a541f3b1acd56f24d83dd3cf13168c895a3eb5",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11554807/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-03",
+    "result_sha256": "cf51af29dfde9af66b196419d5a541f3b1acd56f24d83dd3cf13168c895a3eb5"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Partial restoration of the complex was enough to correct the cargo phenotype in cells.",
+    "snippet": "restoration of AP4B1 protein levels via gene replacement approaches was sufficient to restore the AP-4 complex",
+    "anchor": "Results, in vitro",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39358605_Wiseman2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The immunogenicity study was run in wild-type animals, which already express the orthologue.",
+    "snippet": "Safety studies in WT mice included study 1: ELISpot reactivity",
+    "anchor": "Results, non-GLP safety",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39358605_Wiseman2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Those animals were dosed in the first days of life, when tolerance is most readily induced.",
+    "snippet": "Wild-type mice C57BL/6 (P1-3) were administered control vector",
+    "anchor": "Methods, ELISpot safety study",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39358605_Wiseman2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The only immune assay measures T-cell interferon release; no antibody assay is reported.",
+    "snippet": "This assay detects INF-γ secretion from activated T cells in response to a stimulant",
+    "anchor": "Results, non-GLP safety",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39358605_Wiseman2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Structural endpoints were rescued only by neonatal treatment while motor endpoints were rescued at both ages.",
+    "snippet": "In contrast to treatment of neonates, treatment in adults did not show any significant improvement",
+    "anchor": "Results, adult dose-response",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39358605_Wiseman2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Adult treatment still rescued motor function despite leaving the anatomy unchanged.",
+    "snippet": "significant functional recovery of motor phenotypes was observed",
+    "anchor": "Discussion, window paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39358605_Wiseman2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The human dose was derived by scaling to cerebrospinal-fluid volume on regulatory advice.",
+    "snippet": "FDA guidance to us was to scale up human dosing by cerebrospinal fluid (CSF) volume",
+    "anchor": "Discussion, clinical dose",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39358605_Wiseman2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A specific human dose is proposed for a four-year-old from the primate high dose.",
+    "snippet": "corresponds to a human dose of 4",
+    "anchor": "Discussion, clinical dose",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39358605_Wiseman2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Treatment-related microscopic nerve and spinal-cord findings were dose- and time-dependent.",
+    "snippet": "These treatment-related microscopic findings displayed a dose and time dependence in the severity and incidence of histopathological findings",
+    "anchor": "Results, NHP toxicology",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39358605_Wiseman2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A strong ubiquitous promoter cannot always be used because of the packaging limit.",
+    "snippet": "this promoter combined with larger transgene lengths often exceeds the limits of AAV9 packaging capacity",
+    "anchor": "Discussion, promoter paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39358605_Wiseman2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "One animal that received the therapeutic vector died unexplained during the one-year study.",
+    "snippet": "There was one unexplained death at 80 days post-treatment",
+    "anchor": "Results, long-term safety",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39358605_Wiseman2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A treatment-associated white-cell rise occurred in the therapeutic arm and resolved by one year.",
+    "snippet": "Elevation in white blood cell count (WBC) was observed in the ICM cohort treated with AAV9/CBh-hAP4B1",
+    "anchor": "Results, long-term safety",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39358605_Wiseman2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST fullTextXML returned HTTP 200 with a full JATS body for PMC11554807 on 2026-10-03; the declared article artefact is that response, byte for byte."
+ }
+}

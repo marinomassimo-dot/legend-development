@@ -26,18 +26,18 @@ annotations is reported below whatever it happens to be.
 
 | Measure | Count |
 |---|---|
-| Claim nodes | 44 |
-| Claim→claim wikilink occurrences | 98 |
-| …distinct directed links | 70 |
-| …undirected edges they collapse into | 44 |
+| Claim nodes | 45 |
+| Claim→claim wikilink occurrences | 99 |
+| …distinct directed links | 71 |
+| …undirected edges they collapse into | 45 |
 | Edges carrying a declared relation type | 0 |
 | Nodes carrying a biological scale | 0 |
-| Deep-dive manifests read | 164 |
-| …of which bound to at least one claim | 75 |
-| Propositions scanned | 3107 |
-| …carrying a relational connective | 689 |
-| …locator-backed candidates | 649 |
-| …locator-backed and bound to a claim | 307 |
+| Deep-dive manifests read | 198 |
+| …of which bound to at least one claim | 79 |
+| Propositions scanned | 3393 |
+| …carrying a relational connective | 718 |
+| …locator-backed candidates | 678 |
+| …locator-backed and bound to a claim | 313 |
 
 The scanned population is three declared surfaces and no others: every claim
 `Title`, every row of the working model's BLOCK 2 mirror, and every
@@ -52,7 +52,7 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 |---|---|---|---|---|---|---|---|
 | CLAIM 001 | Vigabatrin associated with VABAM in WWOX-DEE | conflicting evidence | DATO | P2 — GABAergic vulnerability / safety | NOT_ANNOTATED | 5 | 7 |
 | CLAIM 002 | WWOX-LoF causes network hyperexcitability; AAV-WWOX rescues organoid phenotype | consolidated baseline | DATO + INFERENZA prudente | P1 — Ca²⁺ / network dysregulation; P7 —  | NOT_ANNOTATED | 2 | 5 |
-| CLAIM 003 | Neuronal WWOX deletion induces non-cell-autonomous hypomyelination | consolidated baseline | DATO | P4 — myelination / white matter | NOT_ANNOTATED | 2 | 3 |
+| CLAIM 003 | Neuronal WWOX deletion induces non-cell-autonomous hypomyelination | consolidated baseline | DATO | P4 — myelination / white matter | NOT_ANNOTATED | 3 | 3 |
 | CLAIM 004 | AAV9-WWOX neuron-targeted rescue shows multi-domain in vivo improvement | consolidated baseline | DATO | P7 — gene therapy readiness | NOT_ANNOTATED | 10 | 3 |
 | CLAIM 005 | Reduced GABAergic interneurons and glial activation in WWOX-KO | consolidated baseline | DATO | P2 — GABAergic vulnerability; P6 — neuro | NOT_ANNOTATED | 20 | 3 |
 | CLAIM 006 | P47T model shows progressive hippocampal astrogliosis; microglial progression shown for morpholo | consolidated baseline | DATO + INFERENZA prudente | P6 — neuroinflammation / glia | NOT_ANNOTATED | 0 | 2 |
@@ -94,6 +94,7 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 | CLAIM 042 | In one WOREE case series, three of five patients are reported to have improved seizure control a | in observation | DATO (uncontrolled case series, clinical | P1 — clinical epilepsy management; P5 —  | NOT_ANNOTATED | 2 | 1 |
 | CLAIM 043 | The WWOX → TRAPPC6AΔ/TIAF1 → caspase → tau/Aβ cascade has no link measured in a neuron carrying  | in observation | DATO (what each cited link measures, rea | P4 — proteostasis / aggregation cascade | NOT_ANNOTATED | 3 | 5 |
 | CLAIM 044 | The direction of WWOX activity in stressed neurons is unresolved: one in-vivo record makes activ | in observation | DATO (the injury time course and its bou | P3 — neuronal injury and WWOX directiona | NOT_ANNOTATED | 2 | 2 |
+| CLAIM 045 | One WWOX allele is not electrophysiologically silent in the murine neocortex, and no endpoint be | in observation | DATO (la proporzione) + INFERENZA (la le | P2 — eccitabilità / rete neocorticale | NOT_ANNOTATED | 1 | 2 |
 
 ## 2 · Edges declared by the registry
 
@@ -103,6 +104,7 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 | CLAIM 001 <-> CLAIM 031 | yes | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 045 |
 | CLAIM 001 <-> CLAIM 042 | **one-way** | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 017 |
 | CLAIM 003 <-> CLAIM 004 | yes | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
+| CLAIM 003 <-> CLAIM 045 | **one-way** | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 004 |
 | CLAIM 004 <-> CLAIM 005 | yes | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
 | CLAIM 004 <-> CLAIM 011 | yes | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
 | CLAIM 004 <-> CLAIM 037 | yes | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
@@ -162,7 +164,7 @@ reported as `RELATION_TYPE_UNRECOGNISED` and is never coerced into a type.
 
 ## 3 · Where the causal content actually sits
 
-21 of 44 claim titles state a
+21 of 45 claim titles state a
 relation, and every declared edge states none. The causal content of this
 model is largely **inside its nodes**: *"Neuronal WWOX deletion induces
 non-cell-autonomous hypomyelination"* is a cause, a relation and an effect
@@ -224,6 +226,7 @@ is matched as one string, so an adverb inserted into it — *"contributes
 | Edge | Declared | Not declared |
 |---|---|---|
 | CLAIM 001 <-> CLAIM 042 | CLAIM 042 -> CLAIM 001 | CLAIM 001 -> CLAIM 042 |
+| CLAIM 003 <-> CLAIM 045 | CLAIM 045 -> CLAIM 003 | CLAIM 003 -> CLAIM 045 |
 | CLAIM 004 <-> CLAIM 040 | CLAIM 040 -> CLAIM 004 | CLAIM 004 -> CLAIM 040 |
 | CLAIM 005 <-> CLAIM 036 | CLAIM 036 -> CLAIM 005 | CLAIM 005 -> CLAIM 036 |
 | CLAIM 007 <-> CLAIM 041 | CLAIM 041 -> CLAIM 007 | CLAIM 007 -> CLAIM 041 |
@@ -314,16 +317,16 @@ each side is a reading, and every record carries `endpoints_resolved: false`.
 | Source | Candidates |
 |---|---|
 | claim_title | 21 |
-| locator_proposition | 649 |
+| locator_proposition | 678 |
 | working_model_mirror_title | 19 |
 
 | Connective class (lexical) | Candidates |
 |---|---|
-| AMBIGUOUS_LEXICAL_FORM | 439 |
+| AMBIGUOUS_LEXICAL_FORM | 459 |
 | ARROW | 18 |
-| ASSOCIATIVE | 27 |
-| CAUSAL | 150 |
-| DEPENDENCY | 55 |
+| ASSOCIATIVE | 29 |
+| CAUSAL | 154 |
+| DEPENDENCY | 58 |
 
 A connective class is a property of the word, not a verdict about the
 relationship. An `ASSOCIATIVE` connective does not make an edge `ASSOCIATED`.
@@ -353,7 +356,7 @@ its sentence is a reading, and this tool does not perform readings.
 | CLAIM 016 | claim_title | `contribute to` | GSK3β hyperactivation may contribute to seizure susceptibility in WWOX deficiency |
 | CLAIM 018 | claim_title | `causes` | The exon 6 splice-site variant c.517-2A>G is pathogenic and causes exon 6 skipping in humans |
 
-Showing 12 of 347 bound candidates; the
+Showing 12 of 353 bound candidates; the
 complete set, with evidence and provenance, is in the export. The worklist
 in cost order — what needs an annotation, what needs a type, what needs a
 decomposition, what needs a reading — is printed by:
@@ -369,7 +372,7 @@ carried no connective from the lexicon.
 
 ## Provenance
 
-Derived from 167 input files; digest
-`93472709b27fff45`. Sources: the claim, paper and
+Derived from 201 input files; digest
+`78d499a572a3baac`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 
