@@ -149,8 +149,16 @@
   "entries": [
    {
     "proposition": "Patient 10 carries two WWOX variants (an initiator-codon change classed LP and H78Y classed VUS) and a pathogenic ATP7A frameshift.",
-    "snippet": "10 WWOX WWOX ATP7A# Maternal Paternal Maternal Chr16:78133677T > C Chr16:78148874C > T ChrX:77271345DelG p.M1? p.H78Y p.G865Dfs*5",
+    "snippet": "Chr16:78133677T > C Chr16:78148874C > T ChrX:77271345DelG p.M1? p.H78Y p.G865Dfs*5",
     "anchor": "Table 2, patient 10 row",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID35715422_Yang2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The ACMG calls in Table 2 for patient 10 are LP, VUS and P (WWOX initiator codon, WWOX H78Y, ATP7A frameshift).",
+    "snippet": "rs758588684 – – 0;0.0000323039 0;0 0;0 PD PD PD D D D WES LP VUS P",
+    "anchor": "Table 2, patient 10 row, annotation and classification cells",
     "surface": "table",
     "artifact": "files/fulltext/PMID35715422_Yang2022_PMC.xml",
     "panel_text_relation": "text_only"

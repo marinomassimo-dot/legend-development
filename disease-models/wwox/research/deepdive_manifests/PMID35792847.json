@@ -65,12 +65,12 @@
     "source": "PubMed ESearch 2026-10-03"
    },
    {
-    "query": "WWOX AND Saudi",
-    "count": 10,
+    "query": "WWOX AND exome AND consanguineous",
+    "count": 12,
     "source": "PubMed ESearch 2026-10-03"
    }
   ],
-  "note": "Ten PubMed records pair WWOX with Saudi; at least three Saudi-centre WWOX case sources (Ehaideb 2018, Tabarki 2015, Mallaret 2014 family 1) predate this series, which is why overlap had to be tested."
+  "note": "At least three earlier WWOX case sources from the same national population (Ehaideb 2018, Tabarki 2015, Mallaret 2014 family 1) predate this series and share alleles with it, which is why overlap had to be tested patient by patient."
  },
  "multihop": {
   "references_enumerated": 23,

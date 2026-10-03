@@ -257,23 +257,23 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The paper's own Table 2 classifies both WWOX alleles as variants of unknown significance; the paternal allele is two intronic deletions detected by microarray.",
-    "snippet": "Paternal Intronic Deletions: Chr16:78,180,536-78,185,186 x1 and Chr16:78,200,089-78,218,016 x1 NA NA 0 NA NA NA CMA VUS",
-    "anchor": "Table 2, Patient 93 paternal row",
+    "proposition": "The paper's own Table 2 classifies both WWOX alleles as variants of unknown significance; the second allele is two intronic deletions detected by microarray.",
+    "snippet": "Intronic Deletions: Chr16:78,180,536-78,185,186 x1 and Chr16:78,200,089-78,218,016 x1 NA NA 0 NA NA NA CMA VUS",
+    "anchor": "Table 2, Patient 93, second-allele row",
     "surface": "table",
     "artifact": "files/fulltext/PMID31618474_Burgess2019_PMC_efetch.xml",
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The maternal E17K allele is classified VUS in Table 2.",
-    "snippet": "93 WWOX Maternal Chr16:78133724G>A p.E17K rs780345312 02/196758 PD D 29 WES VUS",
-    "anchor": "Table 2, Patient 93 maternal row",
+    "proposition": "The E17K allele is classified VUS in Table 2.",
+    "snippet": "Chr16:78133724G>A p.E17K rs780345312 02/196758 PD D 29 WES VUS",
+    "anchor": "Table 2, Patient 93, first-allele row",
     "surface": "table",
     "artifact": "files/fulltext/PMID31618474_Burgess2019_PMC_efetch.xml",
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Supplementary Table 1 places the two paternal deletions in introns 3 and 4, records a non-consanguineous female recruited in Australia, and says the patient was not previously reported.",
+    "proposition": "Supplementary Table 1 places the two deletions of the second allele in introns 3 and 4.",
     "snippet": "Compound heterozygous: c.49G>A p.E17K and 2x intronic deletions: intron 3 and 4, 16q23.1(78,180,536-78,185,186)x1 and 16q23.1(78,200,089-78,218,016)x1",
     "anchor": "Supplementary Table 1, row for Patient 93",
     "surface": "supplement",
