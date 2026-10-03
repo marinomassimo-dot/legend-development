@@ -1,0 +1,115 @@
+{
+ "schema_version": 2,
+ "pmid": "42205472",
+ "doi": "10.3389/fddev.2026.1735474",
+ "receipt": "FTR-20261003-42205472-01",
+ "landing": [
+  "disease-models/wwox/research/intake_wave_20261003w5_C.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "PMC JATS acquired directly by E-utilities efetch; the cascade was not needed because the record is open access with a body."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "No deep dive was run. This is an intake first reading of a paper with no WWOX content; it produces a dossier and locators, not canonical claims."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Triples are handed to the audit through the commit candidates' LOCATOR TRIPLES FOR BLIND AUDIT sections, not run here: producer must not be verifier."
+  }
+ ],
+ "group_assessment": {
+  "waived": "Waived by name. This is a wave-5 intake first reading under SOURCE_FIRST: the paper carries no WWOX content (zero occurrences) and is read only as transferable delivery-safety evidence. No canonical claim is promoted by this pass, so the deep-dive steps that exist to rate a claim are not run; the pass's scope is recorded in the accompanying receipt and in the dossier's 'what I did not read' section."
+ },
+ "field_density": {
+  "waived": "Waived by name. This is a wave-5 intake first reading under SOURCE_FIRST: the paper carries no WWOX content (zero occurrences) and is read only as transferable delivery-safety evidence. No canonical claim is promoted by this pass, so the deep-dive steps that exist to rate a claim are not run; the pass's scope is recorded in the accompanying receipt and in the dossier's 'what I did not read' section."
+ },
+ "multihop": {
+  "waived": "Waived by name. This is a wave-5 intake first reading under SOURCE_FIRST: the paper carries no WWOX content (zero occurrences) and is read only as transferable delivery-safety evidence. No canonical claim is promoted by this pass, so the deep-dive steps that exist to rate a claim are not run; the pass's scope is recorded in the accompanying receipt and in the dossier's 'what I did not read' section."
+ },
+ "corpus_crossquery": {
+  "waived": "Waived by name. This is a wave-5 intake first reading under SOURCE_FIRST: the paper carries no WWOX content (zero occurrences) and is read only as transferable delivery-safety evidence. No canonical claim is promoted by this pass, so the deep-dive steps that exist to rate a claim are not run; the pass's scope is recorded in the accompanying receipt and in the dossier's 'what I did not read' section."
+ },
+ "retraction_check": {
+  "waived": "Waived by name. PubMed article-type and comments-corrections screening was not run as a network call in this pass; the acquired PMC record carries no retraction, correction or expression-of-concern notice in its front matter. All six records are 2025-2026 publications. This is declared as a gap, not as a clean result."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42205472_Engelhard2026_PMC.xml",
+   "sha256": "d1445705678ba0bb6a45ec649d901820d60781f6b843177f4cc41ecc02629db6",
+   "kind": "article_text",
+   "note": "PMC JATS XML re-acquired by E-utilities efetch on 2026-10-03 by this reader for the wave-5 intake first reading; body present.",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=13201979&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "d1445705678ba0bb6a45ec649d901820d60781f6b843177f4cc41ecc02629db6"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "JATS from E-utilities efetch db=pmc. Body separated from front matter by the reader's own extraction; every locator is matched against the normalised body text of the declared artefact.",
+  "abstract_anchoring_waived": "No locator draws on the abstract; every entry is matched against the body.",
+  "note": "Coverage: abstract, highlights, introduction, all four substantive sections and the conclusion read from the JATS running text. TABLE 4 and TABLE 7 were read in full and CELL-WISE from the XML table structure; Tables 1, 2, 3, 5 and 6 read by title only. Figures 1-6 are schematics, not data panels; captions read and no number is drawn from a figure. SUPPLEMENTARY MATERIAL 2, which the body names as holding the paediatric CSF-flow detail and which is the part of this paper most relevant to the question, was NOT fetched. This is a narrative review: every number in it is attributed to a cited primary and none of those primaries was read.",
+  "entries": [
+   {
+    "proposition": "THIS SOURCE IS SCOPED TO INTRAVENTRICULAR DELIVERY, NOT INTRATHECAL DELIVERY, CONTRARY TO THE TITLE UNDER WHICH IT WAS ASSIGNED; ROUTE IS THE VARIABLE THE READING SET WAS ASSEMBLED TO SEPARATE FROM DOSE.",
+    "snippet": "The appreciation of these effects on CSF circulation will help predict variability in the intraventricular delivery of viral vectors and other biopharmaceuticals and inform the design of preclinical studies and clinical trials.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42205472_Engelhard2026_PMC.xml",
+    "anchor": "Diseases affecting CSF flow, 'Actionable guidance for intraventricular dosing in preclinical studies and clinical trials'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE REVIEW STATES THAT FIXED DOSING ACROSS A POPULATION IS CURRENT PRACTICE AND THAT A CSF ROUTE REQUIRES INDIVIDUALISED CONSIDERATION OF PATHWAY PATENCY AND VENTRICULAR VOLUME INSTEAD.",
+    "snippet": "In the case of intraventricular therapies, dosing considerations may need to include factors such as the patency of the pathways and estimated ventricular volume (at a minimum), much as a pediatric dosing schedule is adjusted according to weight.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42205472_Engelhard2026_PMC.xml",
+    "anchor": "Additional factors in physiological CSF flow variability, 'Effects of age and sex on CSF flow'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "AGE IS NAMED BY THE AUTHORS AMONG THE TOP THREE DRIVERS OF VARIABILITY IN DELIVERED DOSE AT TARGET.",
+    "snippet": "According to a synthesis of the currently available literature, the most significant factors expected to cause variability of CSF macrocirculation would be overall CSF production, anatomical pathway variation, and age.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42205472_Engelhard2026_PMC.xml",
+    "anchor": "Additional factors in physiological CSF flow variability, synthesis",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PAEDIATRIC CSF DYNAMICS CHANGE RAPIDLY WITH AGE, AND THE DETAIL IS DEFERRED BY THE AUTHORS TO A SUPPLEMENT THAT IS NOT PART OF THE BODY AND WAS NOT RETRIEVED.",
+    "snippet": "A more detailed consideration of CSF flow dynamics in the pediatric population is provided in Supplementary Material 2.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42205472_Engelhard2026_PMC.xml",
+    "anchor": "Additional factors in physiological CSF flow variability, 'Effects of age and sex on CSF flow'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A PATIENT-MEASURABLE, NON-TERMINAL ROUTE TO QUANTIFYING HOW MUCH VECTOR REACHES THE TARGET EXISTS IN PRINCIPLE THROUGH ISOTOPE-LABELLED CAPSID IMAGING; THE REVIEW CITES IT RATHER THAN DEMONSTRATING IT.",
+    "snippet": "More recently, antibodies and AAV9 capsids (as examples) can be labeled with PET isotopes such as carbon-11, fluorine-18, and zirconium-89, enabling noninvasive tracking and quantitative biodistribution studies in vivo, including after intraventricular administration (Pandit-Taskar et al., 2019; Allen et al., 2022; Bansal et al., 2025).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42205472_Engelhard2026_PMC.xml",
+    "anchor": "Diseases affecting CSF flow, 'Direct assessment of the movement of therapeutic agents through the CSF'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE REVIEW CARRIES, AS A CITED PATTERN AND NOT AS ITS OWN MEASUREMENT, THAT VECTOR-ASSOCIATED DORSAL ROOT GANGLION TOXICITY IS MOST SEVERE AND CONSISTENT IN THE LUMBOSACRAL GANGLIA IN PRIMATE STUDIES.",
+    "snippet": "CSF-administered or peripheral-blood-administered viral vectors are known to present a risk of inducing DRG toxicity (Hinderer et al., 2018; Hawley et al., 2025), which tends to be most severe and consistent in the lumbosacral DRGs in non-human primate studies (Buss et al., 2022).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42205472_Engelhard2026_PMC.xml",
+    "anchor": "Anatomy of the CSF pathways, 'Spinal pathways'",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}

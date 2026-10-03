@@ -1,0 +1,163 @@
+{
+ "schema_version": 2,
+ "pmid": "41210171",
+ "doi": "10.1016/j.omtm.2025.101602",
+ "receipt": "FTR-20261003-41210171-01",
+ "landing": [
+  "disease-models/wwox/research/intake_wave_20261003w5_C.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "PMC JATS acquired directly by E-utilities efetch; the cascade was not needed because the record is open access with a body."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "No deep dive was run. This is an intake first reading of a paper with no WWOX content; it produces a dossier and locators, not canonical claims."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Triples are handed to the audit through the commit candidates' LOCATOR TRIPLES FOR BLIND AUDIT sections, not run here: producer must not be verifier."
+  }
+ ],
+ "group_assessment": {
+  "waived": "Waived by name. This is a wave-5 intake first reading under SOURCE_FIRST: the paper carries no WWOX content (zero occurrences) and is read only as transferable delivery-safety evidence. No canonical claim is promoted by this pass, so the deep-dive steps that exist to rate a claim are not run; the pass's scope is recorded in the accompanying receipt and in the dossier's 'what I did not read' section."
+ },
+ "field_density": {
+  "waived": "Waived by name. This is a wave-5 intake first reading under SOURCE_FIRST: the paper carries no WWOX content (zero occurrences) and is read only as transferable delivery-safety evidence. No canonical claim is promoted by this pass, so the deep-dive steps that exist to rate a claim are not run; the pass's scope is recorded in the accompanying receipt and in the dossier's 'what I did not read' section."
+ },
+ "multihop": {
+  "waived": "Waived by name. This is a wave-5 intake first reading under SOURCE_FIRST: the paper carries no WWOX content (zero occurrences) and is read only as transferable delivery-safety evidence. No canonical claim is promoted by this pass, so the deep-dive steps that exist to rate a claim are not run; the pass's scope is recorded in the accompanying receipt and in the dossier's 'what I did not read' section."
+ },
+ "corpus_crossquery": {
+  "waived": "Waived by name. This is a wave-5 intake first reading under SOURCE_FIRST: the paper carries no WWOX content (zero occurrences) and is read only as transferable delivery-safety evidence. No canonical claim is promoted by this pass, so the deep-dive steps that exist to rate a claim are not run; the pass's scope is recorded in the accompanying receipt and in the dossier's 'what I did not read' section."
+ },
+ "retraction_check": {
+  "waived": "Waived by name. PubMed article-type and comments-corrections screening was not run as a network call in this pass; the acquired PMC record carries no retraction, correction or expression-of-concern notice in its front matter. All six records are 2025-2026 publications. This is declared as a gap, not as a clean result."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41210171_Vono2025_PMC.xml",
+   "sha256": "7719691c7a9f53c12326619210937daa82d40cf274c01068a7af5b506e6b8b50",
+   "kind": "article_text",
+   "note": "PMC JATS XML re-acquired by E-utilities efetch on 2026-10-03 by this reader for the wave-5 intake first reading; body present.",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=12590263&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "7719691c7a9f53c12326619210937daa82d40cf274c01068a7af5b506e6b8b50"
+   }
+  },
+  {
+   "path": "files/supplement/PMID41210171_mmc1.pdf",
+   "sha256": "8516285e88857754b733dc047899d6f02b30941f3bec8fc635e9e744c6cd61f5",
+   "kind": "supplement_binary",
+   "note": "Supplementary Document S1 (Figures S1-S2, Tables S1-S3), fetched and read as a derived text layer via pdftotext -layout -nopgbrk; searched exhaustively for DRG incidence or severity data and none is present.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/12590263/bin/mmc1.pdf",
+    "http_method": "GET",
+    "tier": "pmc_instance_binary",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "8516285e88857754b733dc047899d6f02b30941f3bec8fc635e9e744c6cd61f5"
+   }
+  },
+  {
+   "path": "files/figure_renders/sciC_w5/PMID41210171_fig6.jpg",
+   "sha256": "b3e5a6235013a2024339c43a221956343a89f7deaac87826594d6f86c0415814",
+   "kind": "figure",
+   "note": "Figure 6 rendered and read at panel level; panel C carries the per-group brain incidence and severity counts and the single dose level (identical across all treated groups), panel D the CSF IL-12p40 scatter with its p-value annotation.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/12590263/bin/gr6.jpg",
+    "http_method": "GET",
+    "tier": "pmc_instance_binary",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "b3e5a6235013a2024339c43a221956343a89f7deaac87826594d6f86c0415814"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "JATS from E-utilities efetch db=pmc. Body separated from front matter by the reader's own extraction; every locator is matched against the normalised body text of the declared artefact.",
+  "abstract_anchoring_waived": "No locator draws on the abstract; every entry is matched against the body.",
+  "note": "Coverage: abstract, introduction, all Results subsections, Discussion and all Materials and methods subsections read from the JATS running text. Supplementary Document S1 was FETCHED, converted with pdftotext -layout -nopgbrk and read: it contains Tables S1-S3 (titre tables) and no pathology data. FIGURE 6 WAS RENDERED AND READ AT PANEL LEVEL (declared artefact files/figure_renders/sciC_w5/PMID41210171_fig6.jpg); panel C carries the per-group brain incidence and severity counts and the single dose level, and panel D the CSF IL-12p40 scatter. Figures 1-5 were read as captions only, and the supplementary FIGURES S1-S2 were not inspected as images. Entries marked panel_read are supported by the rendered panel in addition to the quoted sentence.",
+  "entries": [
+   {
+    "proposition": "PRE-EXISTING ANTI-CAPSID IMMUNITY DOES NOT BOUND CNS DELIVERY BY THE INTRATHECAL ROUTE, BUT DOES REDISTRIBUTE VECTOR AWAY FROM THE DORSAL ROOT GANGLIA AND OTHER PERIPHERAL TISSUE.",
+    "snippet": "However, vg biodistribution to some peripheral tissues, such as to the dorsal root ganglia (DRG), liver, and heart, was reduced in these animals.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41210171_Vono2025_PMC.xml",
+    "anchor": "Results, 'High-serum anti-AAV9 TAb titers did not impact CNS vg biodistribution'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE DORSAL ROOT GANGLION FINDING IN THIS STUDY IS QUALITATIVE: THE HISTOPATHOLOGY IS LISTED IN PROSE AND SHOWN AS ONE REPRESENTATIVE PHOTOMICROGRAPH, WITH NO INCIDENCE OR SEVERITY COUNT ANYWHERE IN THE ARTICLE OR ITS SUPPLEMENT.",
+    "snippet": "These histopathology findings were mostly minimal to slight in severity with high individual variabilities and included mononuclear cell infiltrate, neuronal degeneration, axonal degeneration, and gliosis in the brain, intrathecal injection site, spinal cord, cauda equina/spinal nerve roots, and/or DRG (Figure 6A).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41210171_Vono2025_PMC.xml",
+    "anchor": "Results, 'Clinical evaluations and pathology assessments over 4 weeks excluded major safety concerns'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE FIGURE CAPTION ITSELF STATES THAT THE PATHOLOGY INCLUDING THE DORSAL ROOT GANGLION LESION OCCURRED WITHOUT IMPACT OF PRE-EXISTING ANTIBODY TITRE, SO THIS LESION IS NOT THE IMMUNE-DRIVEN COMPONENT.",
+    "snippet": "Representative photomicrograph of scAAV9-CBA-mCherry-related findings observed in animals across scAAV9-CBA-mCherry-administered groups without impact of pre-existing AAV9-Ab titers (A).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41210171_Vono2025_PMC.xml",
+    "anchor": "Figure 6 caption, panel A",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "THE BRAIN INFILTRATE TREND ATTRIBUTED TO PRE-EXISTING IMMUNITY IS HEDGED BY THE AUTHORS AS A TREND AND IS DECLARED NON-ADVERSE.",
+    "snippet": "These changes were asymptomatic and not accompanied with any detrimental effects in the vascular or perivascular cells, including inflammatory, degenerative, or necrotic changes, and were considered non-adverse.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41210171_Vono2025_PMC.xml",
+    "anchor": "Results, pathology paragraph",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[1]",
+    "qualifies_needle": "mononuclear cell infiltrate, neuronal degeneration, axonal degeneration, and gliosis in the brain"
+   },
+   {
+    "proposition": "THE CSF INFLAMMATION SIGNAL ATTRIBUTED TO PRE-EXISTING IMMUNITY IS CONCEDED BY THE AUTHORS TO BE INCONCLUSIVE.",
+    "snippet": "A trend toward higher IL-12p40 levels was observed in a subset of animals with medium and high anti-AAV9 TAb titers, but the results were not conclusive because of high inter-animal variability (Figure 6D).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41210171_Vono2025_PMC.xml",
+    "anchor": "Results, IL-12p40 paragraph",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "THE ANIMALS WERE NOT IMMUNOSUPPRESSED, SO THE MODIFIABILITY OF THE IMMUNE COMPONENT IS UNTESTED IN THIS STUDY.",
+    "snippet": "Animals did not receive immunosuppression.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41210171_Vono2025_PMC.xml",
+    "anchor": "Materials and methods, 'Dosing procedure and intrathecal administration'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE STUDY POPULATION IS JUVENILE-TO-YOUNG-ADULT, FEMALE ONLY AND SMALL, WHICH BOUNDS EVERY TRANSFER FROM IT AND IN PARTICULAR FORBIDS ANY INFERENCE ABOUT AN INFANT RECIPIENT.",
+    "snippet": "This non-GLP study included 15 female cynomolgus macaques (Mauritius).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41210171_Vono2025_PMC.xml",
+    "anchor": "Materials and methods, 'Animal specifications'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE AUTHORS' OWN POLICY CONCLUSION IS THAT SEROSTATUS SHOULD NOT BE USED ALONE TO EXCLUDE A CANDIDATE FROM INTRATHECAL DOSING.",
+    "snippet": "These data also suggest that using serum anti-AAV TAb titers as a criterion for patient eligibility for treatments delivered intrathecally could potentially lead to the unnecessary exclusion of patients who may benefit from these treatments.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41210171_Vono2025_PMC.xml",
+    "anchor": "Discussion, eligibility paragraph",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}
