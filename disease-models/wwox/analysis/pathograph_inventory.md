@@ -33,7 +33,7 @@ annotations is reported below whatever it happens to be.
 | Edges carrying a declared relation type | 0 |
 | Nodes carrying a biological scale | 0 |
 | Deep-dive manifests read | 164 |
-| …of which bound to at least one claim | 73 |
+| …of which bound to at least one claim | 75 |
 | Propositions scanned | 3107 |
 | …carrying a relational connective | 689 |
 | …locator-backed candidates | 649 |
@@ -50,7 +50,7 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 
 | Node | Declared title | Status | Type | Pathway | Scale | Deg | Papers |
 |---|---|---|---|---|---|---|---|
-| CLAIM 001 | Vigabatrin associated with VABAM in WWOX-DEE | conflicting evidence | DATO | P2 — GABAergic vulnerability / safety | NOT_ANNOTATED | 5 | 5 |
+| CLAIM 001 | Vigabatrin associated with VABAM in WWOX-DEE | conflicting evidence | DATO | P2 — GABAergic vulnerability / safety | NOT_ANNOTATED | 5 | 7 |
 | CLAIM 002 | WWOX-LoF causes network hyperexcitability; AAV-WWOX rescues organoid phenotype | consolidated baseline | DATO + INFERENZA prudente | P1 — Ca²⁺ / network dysregulation; P7 —  | NOT_ANNOTATED | 2 | 5 |
 | CLAIM 003 | Neuronal WWOX deletion induces non-cell-autonomous hypomyelination | consolidated baseline | DATO | P4 — myelination / white matter | NOT_ANNOTATED | 2 | 3 |
 | CLAIM 004 | AAV9-WWOX neuron-targeted rescue shows multi-domain in vivo improvement | consolidated baseline | DATO | P7 — gene therapy readiness | NOT_ANNOTATED | 10 | 3 |
@@ -370,6 +370,6 @@ carried no connective from the lexicon.
 ## Provenance
 
 Derived from 167 input files; digest
-`852878497cac42d2`. Sources: the claim, paper and
+`93472709b27fff45`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 
