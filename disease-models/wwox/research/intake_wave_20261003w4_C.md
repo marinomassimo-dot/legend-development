@@ -310,7 +310,32 @@ ubiquitous promoter on a dose-sensitive transgene — rather than the organ alon
 
 ---
 
-## 8 · DEFAULTS_TAKEN · DECISIONS_TAKEN · STOP_LOG
+## 8 · Gate numbers
+
+| Gate | Result |
+|---|---|
+| `deepdive_manifest.py --pmid <N> --verify-artifacts --require-current-schema` | **PASS**, 6 of 6, 0 gaps |
+| `dependency_integrity.py screen --manifest-block` | **SCREENED_CLEAN**, 6 of 6; 1–4 refs each `UNSCREENABLE_NO_DOI`, 0 flagged; snapshot 2026-09-10, 72 476 rows |
+| `fulltext_receipts.py validate` on a throwaway ledger copy with the six receipts appended | **OK: 326 valid receipt(s)** (320 → 326) |
+| `fulltext_receipts.py verify` on the real ledger | **OK: 320 chained receipt(s), tail anchored** — untouched, as required |
+| `legend_lint.py .` | exit 0, **0** `BLOCK_BATCH_COMMIT` or `BLOCK_SYSTEM` |
+| `growth_anchors.py check` | **PASS** — anchors match. One `[BACKLOG] CANDIDATE_BACKLOG` at 20 candidates, expected: new candidates raise the backlog |
+| `scripts/public_release_gate.py` | **VERDICT: PASS**, exit 0, **0** `[BLOCK]`; none of the standing `[REVIEW]` lines is in a file this task wrote |
+| `scripts/test_section_references.py` | OK, 13 tests |
+| `scripts/test_link_targets.py` | OK, 5 tests — **after a fix**: the registry candidate first carried a live wikilink to a `LIT` record it only proposes, which failed both the record-target and the exact-heading test. Now rendered as an instruction |
+| `scripts/test_fresh_clone_reader_journey.py` | OK, 5 tests |
+| `framework/scripts/test_pathograph.py` | OK, 32 tests |
+| `framework/scripts/candidate_tree_freshness.py` | **FRESH**, after regenerating the pathograph with the generator from committed inputs and committing the surface |
+| `scripts/run_release_regressions.py` | see the final report |
+
+**One ratchet was hit and fixed by doing the work rather than by relabelling it.**
+`growth_anchors.py` returned `[BLOCK] RATCHET_VIOLATION: 6 new manifests without a panel/text
+relation`. The enum admits no value for "a panel bears on this sentence and I did not look", and the
+module's own comment says that when no admitted value is true the defect is the enum and forcing one
+writes a known falsehood into canonical state. So the five panels that bear on a locator were
+fetched and read; see § 3b for what that changed.
+
+## 9 · DEFAULTS_TAKEN · DECISIONS_TAKEN · STOP_LOG
 
 **DEFAULTS_TAKEN**
 1. Declared all six readings `partial_fulltext_read` rather than fetching supplements, because
@@ -327,6 +352,9 @@ ubiquitous promoter on a dose-sensitive transgene — rather than the organ alon
    that never mention the gene cannot.
 5. Did not run `legend-discovery-method`: the group was assigned as a contradiction to characterise,
    not to resolve.
+6. When the panel/text ratchet blocked, fetched and read the five bearing panels rather than
+   labelling every locator `text_only`. The default could have been to relabel; relabelling would
+   have written a falsehood, and in the event four of the five panels changed something.
 
 **DECISIONS_TAKEN**
 1. **Did not decide the DRG contradiction**, as instructed, and recorded it as an open question with
@@ -337,8 +365,12 @@ ubiquitous promoter on a dose-sensitive transgene — rather than the organ alon
    I judged correct.
 4. **Classified NfL, NF-H, CXCL10 and MIP1α as Tier 3 under LEGEND_CORE §13** and routed them to a
    toxicity-surveillance record, not to any WWOX biomarker record.
-5. Hardlinked the six artefacts from the root `files/` into the worktree (`ln -f`) rather than
-   symlinking, per brief § 4.
+5. Hardlinked the six artefacts and the five figure panels from the root `files/` into the worktree
+   (`ln -f`) rather than symlinking, per brief § 4.
+6. **Recorded that one of my own first-pass statements was wrong** rather than silently editing it:
+   § 3b names the statement, the pass that produced it and the panel that falsified it. A reading
+   that quietly corrects itself teaches the next session nothing about where text-only reading
+   fails.
 
 **STOP_LOG**
 - **One model safety halt.** My first response in this session was stopped by a safety classifier
