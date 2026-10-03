@@ -34,9 +34,9 @@ annotations is reported below whatever it happens to be.
 | Nodes carrying a biological scale | 0 |
 | Deep-dive manifests read | 204 |
 | …of which bound to at least one claim | 79 |
-| Propositions scanned | 3436 |
-| …carrying a relational connective | 719 |
-| …locator-backed candidates | 679 |
+| Propositions scanned | 3422 |
+| …carrying a relational connective | 722 |
+| …locator-backed candidates | 682 |
 | …locator-backed and bound to a claim | 313 |
 
 The scanned population is three declared surfaces and no others: every claim
@@ -317,7 +317,7 @@ each side is a reading, and every record carries `endpoints_resolved: false`.
 | Source | Candidates |
 |---|---|
 | claim_title | 21 |
-| locator_proposition | 679 |
+| locator_proposition | 682 |
 | working_model_mirror_title | 19 |
 
 | Connective class (lexical) | Candidates |
@@ -325,8 +325,8 @@ each side is a reading, and every record carries `endpoints_resolved: false`.
 | AMBIGUOUS_LEXICAL_FORM | 460 |
 | ARROW | 18 |
 | ASSOCIATIVE | 29 |
-| CAUSAL | 154 |
-| DEPENDENCY | 58 |
+| CAUSAL | 156 |
+| DEPENDENCY | 59 |
 
 A connective class is a property of the word, not a verdict about the
 relationship. An `ASSOCIATIVE` connective does not make an edge `ASSOCIATED`.
@@ -373,6 +373,6 @@ carried no connective from the lexicon.
 ## Provenance
 
 Derived from 207 input files; digest
-`f907bf9d115553a9`. Sources: the claim, paper and
+`c4ff0c90db8aa781`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 

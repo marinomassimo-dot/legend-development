@@ -1,0 +1,168 @@
+{
+  "schema_version": 2,
+  "pmid": "41078870",
+  "doi": "10.1016/j.omtm.2025.101593",
+  "pmcid": "PMC12509745",
+  "receipt": "FTR-20261003-41078870-01",
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID41078870_Okai2025_PMC.xml",
+      "sha256": "4d34f140c8e0af6bc1cd89521b2deb22c7776ec73088f174bc4cb4f1127be53f",
+      "kind": "article_text",
+      "note": "Four capsids against one fixed intracisterna-magna route and one dose. Read for whether capsid choice is a lever on sensory-ganglion exposure; the reading found instead that the study's safety statement is made under undeclared weekly corticosteroid cover.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12509745/fullTextXML",
+        "http_method": "GET",
+        "tier": "europepmc_fulltextxml",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-03",
+        "derived": false,
+        "result_sha256": "4d34f140c8e0af6bc1cd89521b2deb22c7776ec73088f174bc4cb4f1127be53f",
+        "http_status": 200,
+        "bytes": 184534
+      }
+    }
+  ],
+  "landing": [
+    "disease-models/wwox/research/intake_wave_20261003w6_C.md",
+    "disease-models/wwox/research/fulltext_dossiers/PMID41078870.md"
+  ],
+  "skills_considered": [
+    {
+      "skill": "legend-deepdive",
+      "used": false,
+      "reason": "Run by hand as a scientist reading, not through the skill: the brief fixes the dossier structure, the manifest schema and the receipt schema, and the skill would have produced a commit candidate for a paper that names no gene of this disease model."
+    },
+    {
+      "skill": "find-fulltext",
+      "used": true,
+      "reason": "Europe PMC fullTextXML returned a body on the first attempt (HTTP 200, 184534 bytes); the cascade was not needed."
+    },
+    {
+      "skill": "legend-locator-audit",
+      "used": false,
+      "reason": "Triples are handed to the audit through the commit candidate's LOCATOR TRIPLES FOR BLIND AUDIT section: the producer must not be the verifier."
+    }
+  ],
+  "group_assessment": {
+    "performed": true,
+    "total_publications": 371,
+    "publications_on_gene": 0,
+    "counts_measured": "PubMed esearch 2026-10-03: 'Okai T[au]' 371 (common surname-initial query, upper bound), 'Okai T[au] AND WWOX' 0.",
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": false,
+    "is_primary_group_for_gene": false,
+    "weighting": "Sponsor study, all authors employed by the sponsor. The measurements - vector genomes, transgene mRNA, graded IHC by two board-certified pathologists - carry full weight. The INTERPRETATION carries a specific, locatable deficit: the paper's safety conclusion is stated in abstract, results and discussion without once restating that every animal was under weekly systemic methylprednisolone, a fact confined to one Methods sentence. That is not a reason to doubt the numbers and it is a reason to refuse the sentence 'ICM delivery is safe with all of these AAVs' as written.",
+    "note": "Research-group knowledge base is excluded from the public edition, so this rests on measured PubMed counts, the Methods and the declaration of interests. For common surnames the author query is an upper bound on one person's output and is recorded as such, not as a group identity."
+  },
+  "field_density": {
+    "wwox_directed": false,
+    "wwox_hits_in_source": 0,
+    "queries": [
+      {
+        "query": "count of the literal string WWOX over the whole JATS tree of the declared artifact",
+        "route": "python3 xml.etree itertext over files/fulltext/PMID41078870_Okai2025_PMC.xml, 2026-10-03",
+        "count": 0
+      },
+      {
+        "query": "Okai T[au] AND WWOX",
+        "route": "PubMed esearch 2026-10-03",
+        "count": 0
+      }
+    ],
+    "measured_by": "count of the string WWOX over the whole JATS tree, 2026-10-03",
+    "note": "Zero. This is an earned null for the gene and the source is read only for the transferable AAV-safety question, with the transfer limit stated in the dossier."
+  },
+  "multihop": {
+    "performed": false,
+    "references_enumerated": 60,
+    "pmid_bearing_references": 59,
+    "gene_direct_refs_in_source": [],
+    "enumeration_method": "All <ref> elements counted and all pub-id[pub-id-type=pmid] values parsed from the declared JATS artifact.",
+    "resolved": [],
+    "queued": [],
+    "gap_declared": "Off-WWOX source: the gene appears zero times, so no reference of this paper is gene-direct and the gene-direct hop set is empty by measurement, not by omission. 59 PMID-bearing references enumerated from the JATS; none is resolved and none is individually queued, because the transferable question this paper was read for is answered inside it. The one reference this group repeatedly depends on and cannot read is PMID 32845779 (the multi-capsid primate DRG series), blocked at the publisher on every route the wave tried."
+  },
+  "corpus_crossquery": {
+    "performed": true,
+    "query": "Does this corpus already hold an artifact or a receipt for this PMID, and is the paper already in the registries?",
+    "hits": 0,
+    "finding": "paper_packet.py packet --pmid 41078870 at commit 663970aa07f1: no manifest, no artifacts, depth=none, receipts=0, no acquisition route recorded, and no identity in the registry. First reading in every sense."
+  },
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-10-03",
+    "route": "NCBI ESummary db=pubmed for the six PMIDs of this group",
+    "result": "No retraction, no expression of concern, no erratum.",
+    "hold": false,
+    "dependencies": {
+      "flagged": [],
+      "noted": [],
+      "paper_verdict": "SCREENED_CLEAN",
+      "reference_source": "network",
+      "references_declared": 60,
+      "references_screened": 56,
+      "references_with_doi": 56,
+      "schema": "retraction_check.dependencies/1",
+      "screened": true,
+      "snapshot": {
+        "date": "2026-09-10",
+        "days_since_fetch": 23,
+        "rows": 72476,
+        "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+      },
+      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+      "unscreenable": {
+        "UNSCREENABLE_NO_DOI": 4
+      }
+    }
+  },
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC JATS for PMC12509745, 184534 bytes, sha256 recorded in full above.",
+    "note": "Abstract, Introduction, Results, Discussion and Materials and methods read in full from the JATS running text. Tables 1, 2 and 3 were re-extracted CELL-WISE from the JATS rather than read from flattened text. Figure PANELS not inspected (captions only); Supplemental Document S1 (Figures S1-S8, Tables S1-S6, S9) and Tables S7, S8, S10, S11 not fetched, so the clinical-chemistry and haematology tables behind the tolerability statement are unverified at source.",
+    "entries": [
+      {
+        "proposition": "THE SAFETY STATEMENT OF THIS STUDY WAS MADE UNDER WEEKLY SYSTEMIC CORTICOSTEROID COVER, a fact that appears only in Methods and in neither the abstract, the results nor the discussion.",
+        "snippet": "For immunosuppression, methylprednisolone acetate (Depo-medrol, Pfizer, 20 mg/mL or 40 mg/mL) was administered intramuscularly to the femoral or gluteal muscle weekly",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41078870_Okai2025_PMC.xml",
+        "anchor": "Materials and methods, 'ICM AAV administration and CSF collection', final sentence",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "UNDER THAT COVER THE SENSORY-GANGLION FINDING WAS ALMOST ABSENT: one ganglion in one of eleven dosed animals.",
+        "snippet": "Neuronal degeneration and necrosis with the presence of mononuclear cell infiltrate was detected only in a sacral DRG of one animal of the AAV5-treated group",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41078870_Okai2025_PMC.xml",
+        "anchor": "Results, 'Toxicity endpoints'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "AND THE AUTHORS THEMSELVES REFUSE THE TRANSGENE-LOAD EXPLANATION on their own data, because transduction was uniformly high and pathology was not.",
+        "snippet": "we conclude that there is no clear evidence linking the transgene overexpression/increased vector genome transduction to the DRG findings",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41078870_Okai2025_PMC.xml",
+        "anchor": "Discussion, first paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "CAPSID IS NOT A LEVER ON WHERE THIS ROUTE PUTS THE VECTOR - the authors decline to rank the four.",
+        "snippet": "these differences are not robust, and we could not conclude which AAV would be superior",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41078870_Okai2025_PMC.xml",
+        "anchor": "Discussion, serotype-comparison paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "AND THE ROUTE DOES NOT REACH THE DEEP BRAIN WITH ANY OF THE FOUR CAPSIDS, which is the cost side of choosing it.",
+        "snippet": "No HA immunoreactivity was detectable in deep brain region such as substantia nigra or striatum for any of the AAVs",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41078870_Okai2025_PMC.xml",
+        "anchor": "Results, 'Immunohistochemistry', final sentence before Table 2",
+        "panel_text_relation": "text_only"
+      }
+    ]
+  }
+}
