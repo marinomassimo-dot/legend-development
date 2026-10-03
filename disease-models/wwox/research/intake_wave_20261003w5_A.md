@@ -170,6 +170,12 @@ PMID 39358605's reagents-and-tools table records that its CBh plasmid came from 
 investigator. The promoter-strength trade-off is attested by one design tradition plus one
 independent group (PMID 40988338, hSyn1).
 
+Two of the six are also linked by citation: PMID 40809677 names the trial registration of
+PMID 41314141 among the early-phase trials that establish the precedent for CNS AAV administration
+to young children. The mechanism paper and the clinical paper are therefore about the same
+intervention class, which is why their disagreement about what early delivery buys — tolerance in one,
+an untested assumption in the other — is worth more than a coincidence of topic.
+
 Also noted for dose positioning: PMID 41314141's human dose (1×10^15 vg total, intrathecal) is about
 2.5× the human dose PMID 39358605 proposes for a four-year-old (4×10^14 genome copies,
 intracisterna magna, scaled by CSF volume on FDA advice). Different diseases, different routes,
@@ -208,6 +214,24 @@ different scaling — carried as positioning, not as a dose for anything.
 
 No source was OFF-AXIS and none DEFERRED: all six were acquired lawfully and free from Europe PMC,
 and one supplement was acquired from the PMC article instance.
+
+## Dedup, integrity and reading debt
+
+`paper_packet.py packet --pmid <N>` was run for all six before any reading: every one returned
+"no title recorded · manifest: none — this is a first reading · prior read: depth=none · receipts=0 ·
+acquisition: no route recorded". **No reading debt was discharged by this wave**, because no existing
+registry statement depended on any of these six — they had no registry presence at all, which is why
+`CC-20261003W5-A-REGISTRY-01` creates it. Correspondingly, **no registry statement needed
+correcting**: there was none to compare against the source. PubMed `efetch` showed no retraction,
+expression of concern or correction notice and no `CommentsCorrections` element for any of the six,
+and `dependency_integrity.py screen --manifest-block` returned `SCREENED_CLEAN` for all six
+(26/30, 58/65, 53/55, 46/48, 47/49 and 83/89 references screened). PMID 41712149's 89 screened
+references independently corroborate the 89 reference call-outs counted in its body.
+
+Patient-overlap check (brief rule 19): only PMID 41314141 reports patients, four children with a
+different gene in a different disease, so no overlap with this corpus is possible. The animal-level
+analogue of the double-count problem did appear and is recorded: PMID 41712282's vehicle control arms
+for the P10 sleep and power-spectrum analysis were already published by the same group.
 
 ## Coverage honesty
 
