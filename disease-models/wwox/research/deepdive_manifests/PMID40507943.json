@@ -1,0 +1,276 @@
+{
+ "schema_version": 2,
+ "pmid": "40507943",
+ "doi": "10.3390/ijms26115132",
+ "receipt": "FTR-20261003-40507943-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID40507943.md",
+  "disease-models/wwox/research/intake_wave_20261003w6_A.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W6-A-HYAL2-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W6-A-REGISTRY-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is not the reader's to write; its one consequence from this wave is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "None of the six sources supplies a measured lever for the reference genotype class; forging hypotheses here would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is tested against a WWOX readout in this source; nothing to send to BLOCK-1 triage."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The triples are published in the candidates for a blind auditor; the reader cannot audit their own locators."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 1,
+  "research_type": "mixed",
+  "is_primary_group_for_disease": false,
+  "weighting": "A review from the laboratory that originated the HYAL-2/WWOX/SMAD4 and C1q-WWOX work; every WWOX experiment it re-presents is its own, in cancer cell lines. Credible as a summary of that laboratory's work; not independent of it. Not a per-author sweep."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "registry_records.py --theme HYAL-2 (LEGEND)",
+    "count": 15,
+    "source": "LEGEND registries 2026-10-03"
+   }
+  ],
+  "note": "LEGEND's HYAL-2/WWOX/SMAD4 axis (CLAIM 027) is sourced to a corpus placeholder with identifier PENDING; this review is the newest restatement of that laboratory's axis."
+ },
+ "multihop": {
+  "references_enumerated": 209,
+  "gene_direct_refs_in_source": [
+   "27845895",
+   "19484134",
+   "34140629",
+   "19366691",
+   "27999774",
+   "35883580"
+  ],
+  "resolved": [
+   {
+    "pmid": "27845895",
+    "how": "Ref 5 (Hsu 2017, HA/Hyal-2/WWOX/Smad4) has a receipted reading in LEGEND (FTR-20260921-27845895-01); it is the experimental source of Figure 1 here."
+   },
+   {
+    "pmid": "19484134",
+    "how": "Ref 206 (Hong 2009, C1q activates WWOX in prostate cancer cells) has a receipted reading in LEGEND (FTR-20260921-19484134-01); it is the source of Figure 4 panels A-F here."
+   },
+   {
+    "pmid": "34140629",
+    "how": "Ref 205 (Chen 2021) has a receipted reading in LEGEND (FTR-20260920-34140629-01); cited here only in the AD-risk sentence, which it does not address."
+   }
+  ],
+  "queued": [
+   {
+    "queue": "CC-20261003W6-A-HYAL2-01",
+    "why": "Refs 9 (Hsu 2009 JBC, PMID 19366691), 56 (Hsu 2016, PMID 27999774), 207 (Liu 2022 Cells, PMID 35883580) and refs 7, 8, 204 (same laboratory) are restatements or extensions of the same axis; no conclusion of this reading rests on them; landings suggested in the candidate."
+   }
+  ],
+  "disposition": "Gene-direct references enumerated by WWOX/WOX1 in the reference text; three resolved by existing receipted readings, the rest queued with a reason."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 40507943 (no record); --theme HYAL-2 / C1q / Alzheimer and --id CLAIM 027 after the first pass",
+  "hits": 15,
+  "note": "CLAIM 027 (HYAL-2/WWOX/SMAD4, in observation) mentions possible CNS-injury relevance; this review supplies no neural datum for it (CC-20261003W6-A-HYAL2-01)."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-03 via PubMed metadata (get_article_metadata): publication types ['Journal Article', 'Review']; no retraction, expression of concern or correction listed for PMID 40507943.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 209,
+   "references_screened": 205,
+   "references_with_doi": 205,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --doi 10.3390/ijms26115132 --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 4
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID40507943_Hsu2025_PMC.xml",
+   "sha256": "04c299eea6db74393a2d1bc83055fe064819a04ac31581f4aa1619580dc10804",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12155404/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "result_sha256": "04c299eea6db74393a2d1bc83055fe064819a04ac31581f4aa1619580dc10804"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID40507943_Hsu2025_supplement/ijms-26-05132-g001.jpg",
+   "sha256": "2caeab4a080def69866ec226c2dfe318178783ad09fe7f4ff440c057c8722f84",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12155404.1/ijms-26-05132-g001.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets (AWS open data bucket)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "result_sha256": "2caeab4a080def69866ec226c2dfe318178783ad09fe7f4ff440c057c8722f84"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID40507943_Hsu2025_supplement/ijms-26-05132-g004.jpg",
+   "sha256": "e7fc035a0f4095afe6dade66cc5a0b9b3388a5c6d7c1b8a5784b84fd9c5b9836",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12155404.1/ijms-26-05132-g004.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets (AWS open data bucket)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "result_sha256": "e7fc035a0f4095afe6dade66cc5a0b9b3388a5c6d7c1b8a5784b84fd9c5b9836"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The HYAL-2/WWOX/SMAD4 experiment re-presented in Figure 1 used transfected tagged constructs in DU145 prostate cancer cells.",
+    "snippet": "(A,B) WWOX functional prostate DU145 cells were transfected with three indicated expression plasmids tagged with ECFP, EGFP, or DsRedl and then added native HA.",
+    "anchor": "Figure 1 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40507943_Hsu2025_PMC.xml",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "The C1q-WWOX section is set in DU145 prostate cancer cells.",
+    "snippet": "Human DU145 prostate cancer cells express functional WWOX (WWOXf) [204,205].",
+    "anchor": "Section 6.1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40507943_Hsu2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The microvilli/apoptosis panel uses transient over-expression of EGFP-WWOX.",
+    "snippet": "Transiently overexpressed EGFP-WWOX induces clustered punctate formation on the ventral cell surface (see arrowheads; 600× magnification).",
+    "anchor": "Figure 4 legend, panels E-F",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40507943_Hsu2025_PMC.xml",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "The authors state that whether the HYAL-2/WWOX/SMAD4 complex is overexpressed in vivo is unknown.",
+    "snippet": "Whether the HYAL-2/WWOX/SMAD4 complex is overexpressed in vivo is unknown.",
+    "anchor": "Section 6.6",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40507943_Hsu2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review calls WWOX a risk factor for Alzheimer's disease, citing refs 5, 29, 204, 205 and 206.",
+    "snippet": "WWOX is a known tumor suppressor and is a risk factor for Alzheimer’s disease [5,29,204,205,206].",
+    "anchor": "Section 6.1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40507943_Hsu2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Ref 29, one of the five cited for the Alzheimer risk statement, is a lung-cancer hyaluronan-metabolism paper.",
+    "snippet": "Targeting hyaluronan metabolism-related molecules associated with resistant tumor-initiating cells potentiates chemotherapy efficacy in lung cancer.",
+    "anchor": "References, ref 29",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40507943_Hsu2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Ref 206, also cited for the Alzheimer risk statement, is a prostate-cancer apoptosis paper.",
+    "snippet": "Complement C1q activates tumor suppressor WWOX to induce apoptosis in prostate cancer cells.",
+    "anchor": "References, ref 206",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40507943_Hsu2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review proposes sonicated hyaluronan for cancer and probably neurodegeneration without a neural experiment.",
+    "snippet": "Sonication is a reliable approach to generating disordered HA for treating cancer and probably neurodegeneration.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40507943_Hsu2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A patent on modified hyaluronan held by the senior author is listed.",
+    "snippet": "United States Patent US9375447B2: Modified hyaluronan and uses thereof in cancer treatment, by Nan-Shan Chang and Wan-Pei Su, National Cheng Kung University, Taiwan.",
+    "anchor": "Section 9, Patents",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40507943_Hsu2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review declares no conflicts of interest.",
+    "snippet": "Conflicts of Interest The authors declare no conflicts of interest.",
+    "anchor": "Conflicts of Interest",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40507943_Hsu2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1B's panel title names p53 where the legend and the panel's own schematic name WWOX.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 1B: chart title 'SMAD4/HYAL-2(-sp)/p53', n=5; the schematic beneath lists ECFP-Smad4, EGFP-Hyal-2 and DsRed-WWOX. Figure 1C title 'SMAD4/WWOX/p53', n=2.",
+    "anchor": "Figure 1B-C",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID40507943_Hsu2025_supplement/ijms-26-05132-g001.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Figure 4G-H links WWOX to neurodegeneration by schematic only, with a question mark; no panel shows neural data.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 4G: 'C1q and HA bind WWOX on the microvilli' arrow to 'Amyloid beta formation on the microvilli for causing neurodegeneration' with a '?'; 4H: text schematic of native, disordered and degraded HA and 'neurodegeneration'. Panels A-F are DU145 blots, images and charts.",
+    "anchor": "Figure 4G-H",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID40507943_Hsu2025_supplement/ijms-26-05132-g004.jpg",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC12155404/fullTextXML returned HTTP 200 with the full body and Table 1 on 2026-10-03; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure legend, a figure or a supplement."
+ }
+}
