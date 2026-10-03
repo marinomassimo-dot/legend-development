@@ -16,7 +16,7 @@
 **MINOR** — annotation; no claim status, block or consolidated baseline changed. It narrows nothing: it prevents a count from being inflated.
 
 ## Registry need
-PMIDs 40217411 and 42068099 need identity records — `CC-20261003W6-B-REGISTRY-01` (provisional `PAPER 155`/`156`, `LIT-0448`/`0449`).
+PMIDs 40217411 and 42068099 need identity records — `CC-20261003W6-B-REGISTRY-01` (provisional `PAPER 161`/`162`, `LIT-0454`/`0455`).
 
 ## Ordering
 Apply after `CC-20261003W6-B-CBDRESPONSE-01` or before — the two ops touch different sentences of `DL-MECH-030` (both dry-run exit 0 independently). Receipts `FTR-20261003-40217411-01`, `FTR-20261003-42068099-01` appended first.

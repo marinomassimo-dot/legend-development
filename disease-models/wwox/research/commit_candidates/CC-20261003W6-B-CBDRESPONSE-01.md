@@ -19,7 +19,7 @@ No held WWOX source is cited. Oliver 2023 (PMID 36779245; four CBD continuers; u
 **MINOR** — an annotation on a discovery-ledger record; no claim status, no working-model block, no consolidated baseline touched.
 
 ## Registry need
-PMID 40126049 needs `PAPER`/`LIT` identity records — carried by `CC-20261003W6-B-REGISTRY-01` (provisional `PAPER 151`, `LIT-0444`).
+PMID 40126049 needs `PAPER`/`LIT` identity records — carried by `CC-20261003W6-B-REGISTRY-01` (provisional `PAPER 157`, `LIT-0450`).
 
 ## Ordering
 Receipt `FTR-20261003-40126049-01` appended before propagation.

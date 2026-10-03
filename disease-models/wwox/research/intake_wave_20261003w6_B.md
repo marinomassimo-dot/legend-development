@@ -45,7 +45,7 @@ None of the six was a cited-and-unread primary behind an existing registry state
 |---|---|---|
 | `CC-20261003W6-B-CBDRESPONSE-01` | MINOR (annotation on `DL-MECH-030`) | 6 |
 | `CC-20261003W6-B-MOVEMENT-01` | MINOR (annotation on `DL-MECH-030`) | 7 |
-| `CC-20261003W6-B-REGISTRY-01` | MINOR (`PAPER 151`–`156`, `LIT-0444`–`0449`, provisional) | 5 |
+| `CC-20261003W6-B-REGISTRY-01` | MINOR (`PAPER 157`–`162`, `LIT-0450`–`0455`, provisional, after peer C) | 5 |
 
 ## What was not read (all six are `partial_fulltext_read`)
 - Figure panels were not inspected as images for any paper (legends read). For 40126049, Figure 1 was viewed once; this session was then halted by a model safety classifier, and per corrections 13/21 I did not reopen the image. All later extraction used scripts that print narrow slices. Counts carried rest on tables and text, not panels.
