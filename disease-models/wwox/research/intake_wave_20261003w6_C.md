@@ -117,33 +117,55 @@ The debt is **paid**: 37515322 was acquired lawfully, read first-hand and receip
 
 **Which carried claims now have a primary behind them, and does the wording hold?**
 
-`registry_records.py get --pmid 41257285` and `--pmid 37515322` were run at commit `d66d642168b6`.
-**Neither PMID has any record in any of the seven surfaces searched** (claim_registry,
-discovery_ledger, dismissal_ledger, full_text_queue, literature_tracking_log, paper_registry,
-working_model). So the honest answer is:
+`registry_records.py get --pmid 41257285` and `--pmid 37515322` were run at commit `777a45dbbd12`
+(after merging `main`). **Neither PMID has any record in any of the seven surfaces searched**
+(claim_registry, discovery_ledger, dismissal_ledger, full_text_queue, literature_tracking_log,
+paper_registry, working_model). But PMID 41257285 **was read in wave 5** and is carried in that
+wave's unlanded candidates, so the carried claims are candidate claims, not registry claims:
 
-- **No registry statement in this repository currently rests on reference 10 of PMID 41257285**,
-  because PMID 41257285 itself has no record here. The debt the brief named is a debt of the
-  *selection record*, not of the registry.
-- What the primary does do is **supply a source for a claim the repository has been making
-  without one** in its research layer: `CC-20261003W3-C-RESTORATION-SPEC-01` lists "DRG toxicity is
-  an AAV class effect" and "transient liver-enzyme rises in every arm" as transferable lessons
-  resting on a single STXBP1 paper (PMID 40349107). After this reading, the liver half of that has
-  a GLP-grade, 146-animal, six-study primary behind it, and the wording **holds with one
-  correction**: the liver injury after a CSF route is not a capsid effect but requires a
-  transducing, expressing genome, which the empty-capsid and promoterless arms establish directly.
-  That correction is proposed as `CC-20261003W6-C-DRG-ATTRIBUTION-01`.
-- **This is a negative finding reported as such, per §B1:** the brief's framing ("say which carried
-  claims now have a primary behind them") presupposes carried claims that, measured against the
-  registries, do not exist. Searched surfaces and commit are named above so the search can be
-  contested.
+**The one carried claim that reference 10 is the primary behind.** Wave 5 carries, in
+`CC-20261003W5-C-DRG-ATTRIBUTION-01` and `CC-20261003W5-C-TRANSGENE-NULL-IMMUNOSUPPRESSION-01`,
+this verbatim locator from PMID 41257285:
+
+> "Hepatic and DRG toxicities were only detected after administration of full AAV9 viral particles,
+> but not empty capsids or Promoterless test articles."
+
+and flags, in `CC-20261003W5-C-REGISTRY-01` (LIT-0454) and in the attribution candidate's own
+table, that "the histopathology is cited to a prior report, not measured here". **That prior report
+is reference 10, i.e. PMID 37515322, which this wave has now read first-hand.**
+
+**Does the wording hold? Half of it does, and the other half has no primary behind it.**
+
+- **The hepatic half holds, and is now sourced.** PMID 37515322 contains the arms directly: four
+  animals dosed with empty capsid and four with a promoterless genome, intrathecally, with no
+  transaminase elevation and no microscopic liver change, against transaminase rises and
+  single-cell hepatocyte necrosis in the full-vector arms — all despite a robust anti-AAV9 antibody
+  response in every group. The locator is in the manifest.
+- **The DRG half does not.** The string "DRG" occurs **once** in the whole of PMID 37515322, in the
+  abbreviation list of the Figure 1 legend, as a biodistribution tissue. The paper reports **no
+  dorsal-root-ganglion histopathology of any kind**, for any arm, including the empty-capsid and
+  promoterless arms. So the primary behind reference 10 does **not** support "DRG toxicities were
+  only detected after … full AAV9 viral particles"; it is silent on the DRG.
+- **Proposed correction**, carried in `CC-20261003W6-C-DRG-ATTRIBUTION-01` §3: wherever that
+  sentence is carried forward, it must be split — the empty-capsid/promoterless negative is a
+  **hepatic** result with a 146-animal primary behind it, and the DRG half remains sourced only to
+  the citing paper's own prose. Wave 4 independently holds the DRG half from PMID 36700120
+  (`CC-20261003W5-C-DRG-ATTRIBUTION-01` §0 says so), so the correction is about **which source
+  carries which half**, not about whether the DRG statement is true.
+- Separately, `CC-20261003W3-C-RESTORATION-SPEC-01` lists "transient liver-enzyme rises in every
+  arm" as a transferable lesson resting on a single STXBP1 paper; that now has an independent
+  146-animal primate primary behind it.
 
 ## 4 · Against the waves 3–5 records (read only after the first pass was written)
 
 Read after the dossiers were complete: `CC-20261003W3-C-RESTORATION-SPEC-01` (the restoration
 spec, with its window row and its off-target-organ-risk row) and `CC-20261002-WWOX-DOSE-CEILING-01`.
-Wave 4 and wave 5 records are **not on `main`** at commit `d66d642168b6` and could not be read;
-that is stated rather than worked around.
+Wave 4 and wave 5 records were **not on `main`** at commit `d66d642168b6`; `main` was merged after
+the first pass was written and committed, which brought in the wave-5 candidates
+(`CC-20261003W5-C-DRG-ATTRIBUTION-01`, `-TRANSGENE-NULL-IMMUNOSUPPRESSION-01`,
+`CC-20261003W5-A-WINDOW-STATUS-01`), and §4a below is the comparison that followed. Wave 4's own
+candidate `CC-20261003w4-C-DRG-CONTRADICTION-01` is still not on `main`; it is known here only
+through wave 5's summary of it, and that is stated rather than worked around.
 
 | Prior record | What this wave ADDS | What it BOUNDS | What it leaves UNTOUCHED |
 |---|---|---|---|
@@ -152,6 +174,16 @@ that is stated rather than worked around.
 | same record, **dose row** ("the highest dose was not the best dose") | C6 adds a third gene with the same shape: efficacy and CNS protein both saturated below the top dose tested. | — | — |
 | same record, **PD-assay row** ("nothing WWOX-specific exists") | C4 adds the dose language the repository lacks: a therapeutic window stated as **fold-of-endogenous** (60%–900%, with >20-fold measured as harmful), which is assay-anchored rather than vector-anchored. | — | The absence of a WWOX PD assay is untouched and is, if anything, more acute: without one, neither the floor nor the ceiling can be stated in these units. |
 | `CC-20261002-WWOX-DOSE-CEILING-01` ("raising WWOX can do harm or fail to help; none in a neuron-targeted vector setting") | Nothing WWOX-specific. What this wave adds is the **general form** of that ceiling in a vector setting: C4 measures an over-expression ceiling for another gene and designs to stay under it; C6 measures a saturation ceiling; C1 shows the expressing genome, not the capsid, is the hazard. | — | The WWOX-specific gap stands: no source here raises WWOX in any system. |
+
+### 4a · Against the wave-5 records, which arrived with the merge
+
+| Prior record | What this wave ADDS | What it BOUNDS | What it leaves UNTOUCHED |
+|---|---|---|---|
+| `CC-20261003W5-C-DRG-ATTRIBUTION-01`, the **agent hypothesis**: wave 4 had a Biogen dataset (dexamethasone + **tacrolimus** ± MMF, pathology reduced) against a Novartis dataset (prednisolone, and rituximab + everolimus, pathology unchanged), and wave 5 named the distinguishing agent as **calcineurin inhibition**, "not immunosuppression in general and not mTOR inhibition — everolimus sat in the failed arm while sirolimus sits in the human regimens" | **A fourth regimen, and it is the one that tests the hypothesis.** PMID 36951961 dosed its primates under methylprednisolone **plus rapamycin (sirolimus)** — an mTOR inhibitor **without** a calcineurin inhibitor — and every dosed animal still had a lumbar-DRG infiltrate. Wave 5's hypothesis predicted exactly that, and nothing in this wave contradicts it. | Bounds the hypothesis in one direction wave 5 could not: sirolimus's presence in the human triple regimens is now shown **not** to be sufficient on its own in a primate DRG, so the human regimens' protective component, if there is one, is tacrolimus or the combination — not sirolimus. | The calcineurin hypothesis itself is untouched and **still untested**: no source read in this wave administered a calcineurin inhibitor. |
+| same record, **§2.4 "a concurrent-control incidence is missing from most of the literature that reports it"** | **The missing measurement, supplied.** PMID 36951961's Table 1 — which has no JATS body and was fetched as its rendered image — prints per-animal lumbar-DRG incidences for dosed **and concurrent vehicle** animals at day 91: infiltration 100% in every dosed animal at both dose levels against **0% in both vehicle animals**, and neuronal degeneration 100% at 1.68 × 10^14 vg against 0% at 8.40 × 10^13 vg. This is a graded, concurrent-controlled, per-animal incidence, which is the object wave 5 said the literature usually lacks. | It bounds wave 5's procedural correction by showing it is satisfiable: the data exist, they are just not in the JATS. **The acquisition lesson is the actionable part** — a reader who takes the JATS as the article loses this table silently (§8). | Wave 5's power and procedure explanations are untouched: n = 2 per cohort here. |
+| `CC-20261003W5-C-TRANSGENE-NULL-IMMUNOSUPPRESSION-01`, the human pattern — four CSF-route programmes with a predicted-null or pre-sensitised recipient use three agents, including **SPG50: prednisolone + sirolimus + tacrolimus**, "given the predicted absence of endogenous expression for this patient" | **The preclinical package underneath that very row.** PMID 36951961 *is* the SPG50 IND package, and its primate arm used **methylprednisolone + rapamycin only — no tacrolimus**. So the human regimen for that programme **added a calcineurin inhibitor relative to the regimen under which the preclinical DRG infiltrate was observed in 100% of animals.** That is a concrete, sourced link between wave 5's human-practice pattern and the animal data that preceded it, and it is consistent with wave 5's reading of why. | Bounds the pattern's interpretation: the human triple regimen is not simply inherited from a preclinical regimen that worked — the preclinical regimen did not prevent the ganglion infiltrate. | The transgene-naivety rationale is untouched and, if anything, sharper: the SPG50 preclinical animals were **wild-type**, i.e. not transgene-naive, so the human recipient faces an immunological problem the package did not model. The same gap applies to a predicted-null WWOX recipient. |
+| `CC-20261003W5-A-WINDOW-STATUS-01`, which survived six further sources: results that look like window results resolve to **delivery** or to **dose**; revival trigger = "expression matched across ages and efficacy still falls with age" | A seventh source with the same shape. PMID 36951961 treated *Ap4m1*-KO mice at P7–P10 and at P90 and found "clear age- and dose-dependent effects with early intervention and high dose achieving the best therapeutic benefits" — but expression was measured by **qualitative RNAscope** and was never matched across the two ages. **Meets the pattern, does not meet the trigger.** | Strengthens the negative in the species that matters for toxicity: no source in this corpus has dosed a **neonatal primate** at all, so the window is unmeasured in exactly the species where the risk is measured. | `DIS-C-20261003w3` stands, unrevived. |
+| `CC-20261003W5-C-DOSE-SCALAR-01`, on fixed vector genomes per animal versus per kilogram | PMID 36951961 supplies the **explicit conversion** the repository can cite: human-equivalent dose by **CSF volume**, with the authors' own normative volumes (mouse 0.035 mL, rat 0.25 mL, NHP 12 mL, human 140 mL), and the resulting margin — the proposed 1 × 10^15 vg clinical dose sits about two-fold below the highest dose any animal received. | Bounds any comfort taken from "safe up to a human dose of 1 × 10^15 vg": **no animal ever received that dose**; it is an allometric construct, and the paper says so. | The vg/kg-versus-vg/animal question itself is untouched. |
 
 ## 5 · What would change the model if true, and what would falsify it
 

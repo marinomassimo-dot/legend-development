@@ -58,6 +58,36 @@ What is **untouched**: the usefulness of a DRG-detargeting element and of serum 
 biomarker, both from PMID 40349107. None of these six measured NfL; PMID 36951961 cites the
 miRNA-binding-site experiment as the field's own discriminating result and does not repeat it.
 
+### 3a · A correction to a sentence wave 5 carries, now that its primary has been read
+
+`CC-20261003W5-C-DRG-ATTRIBUTION-01` and `CC-20261003W5-C-TRANSGENE-NULL-IMMUNOSUPPRESSION-01`
+carry this locator from PMID 41257285: *"Hepatic and DRG toxicities were only detected after
+administration of full AAV9 viral particles, but not empty capsids or Promoterless test articles."*
+Wave 5 flags that the in-life toxicity data behind it are "cited to a prior report". **That prior
+report is reference 10 of PMID 41257285, i.e. PMID 37515322, read first-hand in this wave.**
+
+- The **hepatic** half is supported directly: PMID 37515322 contains four animals dosed
+  intrathecally with empty capsid and four with a promoterless genome, with no transaminase rise
+  and no microscopic liver change, against transaminase rises and single-cell hepatocyte necrosis
+  in the full-vector arms, and a robust anti-AAV9 antibody response in every group.
+- The **DRG** half is **not** supported by that primary. The string "DRG" occurs exactly once in
+  PMID 37515322 — in the abbreviation list of a figure legend, as a biodistribution tissue — and
+  the paper reports no dorsal-root-ganglion histopathology for any arm.
+- **Proposed op:** wherever this sentence is carried, split it and attribute each half separately.
+  The empty-capsid/promoterless **hepatic** negative gains a 146-animal, six-study primary
+  (PMID 37515322). The **DRG** half keeps the attribution wave 4 already gives it
+  (PMID 36700120) and must not be attributed to reference 10.
+
+### 3b · One further datum for wave 5's agent hypothesis
+
+Wave 5 proposed that the agent distinguishing the protected from the unprotected primate datasets
+is **calcineurin inhibition**, "not immunosuppression in general and not mTOR inhibition". PMID
+36951961 supplies a fourth regimen that tests the mTOR half directly: methylprednisolone **plus
+rapamycin (sirolimus)**, from twelve days before dosing to termination, and a lumbar-DRG infiltrate
+in **every dosed animal at both dose levels**. Sirolimus's presence in the human triple regimens is
+therefore shown not to be sufficient on its own in a primate ganglion. The calcineurin hypothesis
+remains **untested**: no source read in this wave administered a calcineurin inhibitor.
+
 ## 4 · Ops (provisional; anchors and next-free ids re-measured at commit time)
 
 ### 4.1 · `disease-models/wwox/research/research_lines_current.md`
