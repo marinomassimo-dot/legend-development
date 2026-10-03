@@ -1,0 +1,221 @@
+{
+ "schema_version": 2,
+ "pmid": "31353122",
+ "doi": "10.1016/j.braindev.2019.07.005",
+ "receipt": "FTR-20261003-31353122-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/intake_wave_20261003w5_B.md",
+  "disease-models/wwox/research/fulltext_dossiers/PMID31353122.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W5-B-CNV-CARRIER-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W5-B-REGISTRY-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is a research surface another batch owns; this wave's question is patient provenance and counting, so findings are proposed through commit candidates instead of ledger edits."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No source in this group tests a therapy against a mechanism; forging hypotheses from single-patient drug histories would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed as a candidate; anti-seizure medication histories in case reports are clinical descriptions, not molecules for BLOCK-1 triage."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes are proposed as commit candidates for a later BATCH_COMMIT."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; the triples are published in the candidates for an auditor to run."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 17,
+  "publications_on_gene": 1,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "PubMed counts 2026-10-03: Mori T[au] AND Kagami S[au] 17 records; Mori T[au] AND WWOX 1 (this report). A paediatric department with an in-house panel-sequencing pipeline; one patient, no functional work."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND deletion AND West syndrome",
+    "count": 6,
+    "source": "PubMed ESearch 2026-10-03"
+   },
+   {
+    "query": "16q23 deletion AND epilepsy",
+    "count": 1,
+    "source": "PubMed ESearch 2026-10-03"
+   }
+  ],
+  "note": "Few records describe a single-copy 16q deletion through WWOX with an epilepsy phenotype; this one declines to attribute it to WWOX."
+ },
+ "multihop": {
+  "references_enumerated": 11,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "All 11 references enumerated. None is a WWOX patient report; the WWOX discussion cites a mouse study (Hussain 2019) and the DECIPHER and ClinVar databases, whose entries are not literature records."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 31353122; --theme 16q22, PHLPP2",
+  "hits": 0,
+  "note": "No record names the paper; the selector's statement that it sits in the full-text queue appendix is not reproduced by registry_records.py."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-03 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn or CommentIn link; publication types Case Reports, Journal Article.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 11,
+   "references_screened": 7,
+   "references_with_doi": 7,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 4
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID31353122_Mori2019_IR.pdf",
+   "sha256": "116861b6a010ff93b77a516e39429b8268555fdfefde9b1fa1ac7c4d60ed6aec",
+   "kind": "article_binary",
+   "note": "Accepted-manuscript PDF (CC BY-NC-ND 4.0 notice on page 1) from the Tokushima University institutional repository, 15 pages. Fetched with an explicit Accept header; without it the repository answers 406. Figure pages were NOT inspected: Figure 1 is a facial photograph of the patient and was deliberately not viewed in this public-edition reading; Figures 2-3 were not rendered either.",
+   "acquisition_recipe": {
+    "resolved_url": "https://tokushima-u.repo.nii.ac.jp/record/2007203/files/braindev_41_10_888.pdf",
+    "http_method": "GET",
+    "tier": "green_oa_repository_pdf",
+    "user_agent_policy": "browser_like",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "116861b6a010ff93b77a516e39429b8268555fdfefde9b1fa1ac7c4d60ed6aec"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID31353122_Mori2019_IR.txt",
+   "sha256": "f189e591d5868ceae4c18ddf248607f648e5beabff10042e350ab95d767ecd1c",
+   "kind": "article_text",
+   "note": "DERIVED text layer by pdftotext -layout -nopgbrk; single-column manuscript, no C0 controls. Locators match this surface.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdftotext_layout_nopgbrk",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": true,
+    "result_sha256": "f189e591d5868ceae4c18ddf248607f648e5beabff10042e350ab95d767ecd1c",
+    "derived_from": "files/fulltext/PMID31353122_Mori2019_IR.pdf",
+    "extractor": {
+     "name": "pdftotext (poppler)",
+     "version": "24.02.0",
+     "call": "pdftotext -layout -nopgbrk files/fulltext/PMID31353122_Mori2019_IR.pdf files/fulltext/PMID31353122_Mori2019_IR.txt"
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": false,
+  "abstract_anchoring_waived": "The abstract states the deletion, the panel finding and the drug response in summary; the locators need the breakpoint, method, parental-DNA and database sentences that only the body carries, so abstract anchoring would not test them.",
+  "source_fulltext_indexed_evidence": "MEASURED 2026-10-03: Europe PMC returns inEPMC 'N', no PMCID. The quotes are checkable against the institutional-repository accepted manuscript declared above, not against the published version.",
+  "entries": [
+   {
+    "proposition": "The patient carries a heterozygous 6.8 Mb deletion of 16q22.2-q23.1 whose distal breakpoint lies inside WWOX.",
+    "snippet": "A 6.8 Mb heterozygous chromosomal deletion was detected within 16q22.2-q23.1, which contains 57 Refseq genes including PHLPP2 and WWOX",
+    "anchor": "Molecular genetic analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31353122_Mori2019_IR.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Both breakpoints lie within PHLPP2 and WWOX.",
+    "snippet": "Both breakpoints of the deleted region were located within those genes.",
+    "anchor": "Molecular genetic analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31353122_Mori2019_IR.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The other WWOX allele was examined by exon-targeted panel sequencing with coverage inspection, not by intronic, structural or RNA analysis.",
+    "snippet": "We conducted a targeted panel sequencing (TPS) for the targeted exons of 4813 disease-related genes",
+    "anchor": "Molecular genetic analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31353122_Mori2019_IR.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "No pathogenic variant was found on the other WWOX allele.",
+    "snippet": "no pathogenic variants were detected in the other allele of WWOX.",
+    "anchor": "Abstract",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31353122_Mori2019_IR.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Parental DNA was unavailable, so inheritance of the deletion is unknown.",
+    "snippet": "Parental DNA was unavailable; therefore, the deletion was not confirmed as occurring de novo.",
+    "anchor": "Molecular genetic analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31353122_Mori2019_IR.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors decline to attribute the phenotype to WWOX haploinsufficiency.",
+    "snippet": "Thus, the relationship between haploinsufficiency of WWOX and/or other genes located around WWOX and West syndrome remains unclear",
+    "anchor": "Discussion, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31353122_Mori2019_IR.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Seizures stopped after valproate plus lamotrigine following phenobarbital, valproate and zonisamide.",
+    "snippet": "Antiepileptic drug treatment was switched to a combination of VPA and LTG,",
+    "anchor": "Case report",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31353122_Mori2019_IR.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Two database cases with an overlapping maternally inherited deletion carried E17K on the other allele.",
+    "snippet": "the same missense variant with uncertain significance, NM_016373.3:c.49G>A/p.(Glu17Lys) within the other",
+    "anchor": "Discussion, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31353122_Mori2019_IR.txt",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}
