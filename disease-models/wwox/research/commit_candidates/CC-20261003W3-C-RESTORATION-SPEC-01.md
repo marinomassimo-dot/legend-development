@@ -141,3 +141,19 @@ without the protein, which is a different and larger finding).
 Its three ops (`research_lines_current.md`, `dismissal_ledger_current.md`, `research_candidates_current.md`) are described, not written: no record text exists to apply, and the dismissal it proposes is a NEGATIVE, which this repository records only with its premise lines and `REVIVAL_TRIGGER` written out verbatim. Writing those records is authorship, not integration. The candidate's window-related triples were put through a blind locator audit by this batch (see the batch report) so the next integrator inherits a verified evidence base. **Unblock:** the author writes the three records as exact text (next free `DIS-` is `DIS-031`), with the record ids the files actually use.
 
 **Not medical advice.**
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261003_004` (2026-10-03, ACTOR_ID `scientist`, Scientist I), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** PROPAGATED — the DEFERRED disposition of `BATCH_20261003_002` is superseded. Its three described records were written as **`RL-C-20261003w3`** and **`RC-C-20261003w3`**, and its dismissal op was **MERGED into `DIS-033`** with the wave-5 group-A window candidate, which states the same negative from a disjoint source set. Class **MINOR**: no claim is edited.
+
+**The previous batch's measurement stands and was re-checked:** this candidate is **not** superseded by the wave-4 `WINDOW-SPEC` work — disjoint sources, prose Jaccard 0.276 — which is why its parameter table landed as a record of its own rather than being dropped into the merged dismissal.
+
+**Four integrator amendments (blind audit).** (1) The serum-neurofilament figure of 1,719 pg/mL is the concentration the affected animals **reached**, not a pre-specified threshold. (2) The nerve-conduction change affected 2 of 4 animals in one arm and 2 of 3 in another, described as mild with no expected adverse clinical correlate, and the dorsal-root-ganglion findings are arm-level but single-animal. (3) The reporter line's copy-number duplication is in **one clone and its derivatives** and *«can confer»* a survival advantage — a potential, not a measured one. (4) One seizure endpoint behind the protein-null result rests on three animals per arm with no test, confidence interval or p value, and the paper's seizure case also rests on endpoints reported elsewhere with their own statistics.
+
+The protein-null datum itself — rescue under a cortical protein change of ~0.45 → ~0.49 of wild type, not significant — is carried with **both** of the source's live readings (insensitive antibody; full normalisation not required), neither chosen.
+
+**Not medical advice.**

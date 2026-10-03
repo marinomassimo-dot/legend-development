@@ -87,3 +87,17 @@ proposition drawn from these papers is carried, with its triples, in
 Its ops are a prose specification (a table of field values and a description of the LIT records), not an executable op list, and the numbers it declares (`CORPUS P401`–`P405`, `LIT-0432`–`0436`) were already taken (`LIT-0432`–`0443` exist after this batch). Nothing is owed urgently: the five PMIDs it would register carry `partial_fulltext_read` receipts only, so `legend_lint.py` raises no `ORPHAN_COMPLETE_READ` and `test_batch_queue.py` does not count them (measured on this branch). **Unblock:** an executable op list — five `insert-after CORPUS P400` records and five `LIT-` records after the highest `LIT-` then present — written against a fresh `registry_records.py catalog`.
 
 **Not medical advice.**
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261003_004` (2026-10-03, ACTOR_ID `scientist`, Scientist I), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** PROPAGATED — the DEFERRED disposition of `BATCH_20261003_002` is superseded by this batch, which wrote the executable ops its predecessor asked for. Class **MINOR**.
+
+**Renumbered and authored.** The declared `CORPUS P401`–`P405` were **still free** (highest `CORPUS P` measured 400) and were applied as declared; the declared `LIT-0432`–`0436` were long taken and became **`LIT-0471`–`0475`**. The five corpus records and five tracking-log records were **authored by the integrator** from this candidate's field tables — short and full titles, year, journal, tier, status, pathway, species and role — with DOIs taken from each reading's own receipt rather than invented, and each record naming this candidate as its origin.
+
+**Depth labels off the receipts:** all five PMIDs are `partial_fulltext_read`, and every record also carries the literal *partial full text*. PMID 41124647 needed no new record, exactly as the candidate said.
+
+**Not medical advice.**

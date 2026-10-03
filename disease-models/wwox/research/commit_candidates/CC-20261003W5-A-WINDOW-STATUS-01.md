@@ -129,3 +129,17 @@ statement about six artefacts on disk.
 (Restoring the gene in adulthood, after months of seizures, still rescued the phenotype. | reactivation at P90 (adulthood) also restored physiological Na | Gene-regulation strategies, `files/fulltext/PMID41712149_Balestrini2026_PMC.xml`)
 
 (Restoring the gene after symptoms had appeared gave complete rescue of both seizure types. | led to complete rescue of both spontaneous and thermally induced seizures | Gene-regulation strategies, `files/fulltext/PMID41712149_Balestrini2026_PMC.xml`)
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261003_004` (2026-10-03, ACTOR_ID `scientist`, Scientist I), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** PROPAGATED — **MERGED**. Its dismissal record and the dismissal op of `CC-20261003W3-C-RESTORATION-SPEC-01` state the same proposition from **disjoint** source sets, so the batch wrote **one** record, `DIS-033`, carrying both (wave-5: 41712282, 39358605, 40988338, 41314141, 41712149, 40809677; wave-3: 39847501, 42181696, 40349107, 40263630, 42521212), rather than two records of one negative. Class **MINOR**: no claim is edited.
+
+**Renumbered.** The declared `DIS-031` was taken — `DIS-031` and `DIS-032` landed with `BATCH_20261003_003` (the DRG and SMA-dose rejections) — so the record is **`DIS-033`**; `RC-A-20261003w5-02` kept its id.
+
+**Three integrator amendments, from the blind locator audit (five independent auditors, 148 triples, 0 NOT_SUPPORTED, 0 UNVERIFIABLE).** (1) The structural-versus-functional split of PMID 39358605 is not clean: adult treatment did significantly reduce calbindin-positive deep-cerebellar-nucleus spheroids, and the motor rescue is stated *«with our high dose»* — so the record now says a window claim must name its endpoint **and its dose**. (2) PMID 40988338's authors name **three** contributors to the age difference, isoform choice among them, and do not exclude age; the record says so. (3) The route recovery in PMID 41712282 is stated as greater brain expression by ICM than IT in adults; the **fraction** of the age deficit recovered is nowhere quantified, and the deficit itself is cited from the group's prior work.
+
+**Not medical advice.**

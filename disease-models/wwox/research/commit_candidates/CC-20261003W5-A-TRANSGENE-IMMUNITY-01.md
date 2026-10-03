@@ -141,3 +141,15 @@ class and reduce the requirement to the two-drug regimen.
 (The antibody does not detect the endogenous mouse protein, so there is no wild-type reference for expression level. | the NaCT antibody does not recognize endogenous mouse NaCT protein | Results, functional NaCT, `files/fulltext/PMID41712282_Bailey2026_PMC.xml`)
 
 (Transient cerebrospinal-fluid protein elevation affected about three-quarters of children on long-term intrathecal dosing. | occurred in approximately three-quarters of patients in the extension studies | RNA therapies, STK-001, `files/fulltext/PMID41712149_Balestrini2026_PMC.xml`)
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261003_004` (2026-10-03, ACTOR_ID `scientist`, Scientist I), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** PROPAGATED — **MERGED into `RL-GT-002`** together with `CC-20261003W5-C-TRANSGENE-NULL-IMMUNOSUPPRESSION-01`, which found the same CRIM-negative / predicted-null immunosuppression finding independently, from a disjoint source set (42134074, 41966056, 41257285 against this candidate's 41314141, 39358605, 41712282, 40809677, 41712149). One record with both source sets, not two records of one finding. `RC-A-20261003w5-01` was written as proposed: it is an experiment design, not a restatement of the finding. Class **MINOR**.
+
+**Three integrator amendments (blind audit).** (1) PMID 39358605 states the P1–3 dosing age and the ELISpot; the artefact contains no statement about tolerance induction, so *«when tolerance is most readily induced»* was removed as the reader's gloss. (2) PMID 40809677's four-fold vector difference between arms is stated by its authors as deliberate normalisation to a brain four times larger at 2 months — the unmatched-antigen-load caveat is this repository's, not the source's. (3) The three-quarters CSF-protein figure is *«irrespective of attribution»* above 50 mg/dL; the drug-attributed rates are about 27 % and 14 %.
+
+**Not medical advice.**

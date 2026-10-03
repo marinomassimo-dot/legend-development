@@ -198,3 +198,17 @@ deep-dive manifests, each of which passes `deepdive_manifest.py --pmid N --verif
 > programme. Please check in particular whether the source supports the *contrast* the candidate
 > draws between that programme and the three-agent programmes, or only the bare fact of the
 > prednisone regimen.
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261003_004` (2026-10-03, ACTOR_ID `scientist`, Scientist I), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** PROPAGATED — **MERGED into `RL-GT-002`**, not written as a record of its own. (The closing vocabulary `growth_anchors.py` reads is `PROPAGATED` / `INTEGRATED` / `SUPERSEDED` / `CLOSED` / `NOT INTEGRATED`; `MERGED` alone is not in it and would leave this candidate counted as open, so the verdict names both.)
+
+This candidate and `CC-20261003W5-A-TRANSGENE-IMMUNITY-01` state the same finding (a recipient predicted to express no endogenous transgene product is given the intensified regimen, and that class is where a biallelic null sits) from **disjoint** source sets. The batch wrote one record carrying both, with this candidate's reasoning chain, counter-evidence, falsifying experiment and **binding transfer limits** preserved inside it. Its op named `discovery_ledger_current.md` with a provisional `DIS-xxx` id; the merged home is the research-line record, which is where the two source sets can be read together.
+
+**Three integrator amendments (blind audit).** (1) In the CLN7 programme the review's own words are *«prednisone, sirolimus, and in some cases tacrolimus»* — the third agent is not universal there. (2) The *«48 weeks»* of the intracisternal programme is the regimen total, not each agent's duration (sirolimus 48 weeks, prednisone about 8, tacrolimus 24). (3) The 16-of-17 adverse-event attribution is *«possibly related to immunosuppression»* in a single patient, with several events also recorded as possibly related to study treatment — not an exclusive attribution against the vector.
+
+**Not medical advice.**

@@ -67,3 +67,19 @@
 (Al Baradie lists the Ehaideb children as separate literature patients | Ehaideb et al. (2018) [19] 1 M Seizure 2 months Focal to bilateral tonic-clonic Epileptic Spasms | PMID 35792847, Table 3 (continued); files/fulltext/PMID35792847_AlBaradie2022_JLE_fulltext.html)
 (Hengel's WWOX family is a previously published family | this family is published (PMID: 24369382) | PMID 32214227, Supplementary Table 1, WWOX row; files/fulltext/PMID32214227_Hengel2020_supplement/41431_2020_609_MOESM1_ESM_xlsxdump_tab.txt)
 (Hengel's Table 1 carries a WWOX row with homozygous G372R | NM_016373.4:c.1114G>C: p.(Gly372Arg) | PMID 32214227, Table 1, WWOX row; files/fulltext/PMID32214227_Hengel2020_PMC.xml)
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261003_004` (2026-10-03, ACTOR_ID `scientist`, Scientist I), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** PROPAGATED · class **MINOR**.
+
+**The INFERENZA labels are kept exactly as authored.** One overlap is stated by the authors themselves (Burgess patient 93 = the 2023 cohort's patient 6); the Ehaideb sibship / Al Baradie family 2 and the Tarta-Arsene 2017 / Piard patient 8 identifications remain **INFERRED** and are written as inferences, never as fact.
+
+**Renumbered:** the ops' references to group B's own new records moved to `PAPER 171`–`176`; `PAPER 018` and `PAPER 119` are pre-existing and keep their ids.
+
+**One integrator note (blind audit):** the claim that one source describes a sibling's MRI *in the same words* as another cannot be settled inside either artefact — the sentence occurs once per source — so it stays an inference about two documents, which is how the op writes it.
+
+**Not medical advice.**

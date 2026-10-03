@@ -6745,6 +6745,7 @@ now asserts reads for these papers, so the reading debt is declared here rather 
    cannot be searched for gene content on that surface.
 ⚠️ `PMID 37095367` is **not** a corrigendum; it is the primary Bayanova WGS report.
 ⚠️ `PMID 31618474` reports a second, **overlap-confounded** occurrence of `p.(Glu17Lys)`.
+🟢 **Resolved 2026-10-03 (intake wave 5, Scientist B, `CC-20261003W5-B-PATIENT-OVERLAP-01`).** `31618474` re-read at source with gene symbols, tables and supplement (`FTR-20261003-31618474-01`): its WWOX patient is **patient 6 of `PMID 36779245`** ([[paper_registry_current#PAPER 018]]), which says so itself — not a Piard patient (Piard's `p.(Glu17Lys)` carrier has `p.(Ser304Phe)` in trans). `32214227` re-read (`FTR-20261003-32214227-01`): Table 1 **does** carry a WWOX row — homozygous `p.(Gly372Arg)`, the published SCAR12 family of [[paper_registry_current#PAPER 042]] — so the FT-116 statement 'zero WWOX variants' was an artefact of the table-less extraction. `35715422` read (`FTR-20261003-35715422-01`): one WWOX carrier with an ATP7A second diagnosis. Registry landings `PAPER 172`/`158`/`160` (provisional, `CC-20261003W5-B-REGISTRY-01`). `37095367` untouched by this wave.
 
 ---
 

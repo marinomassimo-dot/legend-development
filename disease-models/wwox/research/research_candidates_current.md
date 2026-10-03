@@ -183,3 +183,44 @@ modifications are triggered by triage-depth work.
 **The four limits that travel with the panel.** Nonclinical only; fold-change and not concentration; not disease-specific, which is a specific problem in a developmental encephalopathy where background neurofilament may already be raised; and one sponsor's internal validation. CSF CXCL10 and MIP1α are carried as the earlier-rising candidates from PMID 41404412 with their own limit — reported in three studies from one sponsor, with no independent replication and no operating characteristics at all.
 
 🔴 Tier 3 under `LEGEND_CORE` §13 with respect to WWOX: these are vector-toxicity analytes, never WWOX disease biomarkers. Carried at `RL-C-20261003w4c`.
+
+---
+
+## RC-A-20261003w5-01 — Design the WWOX transgene-immunogenicity experiment in a protein-naive host, not in a wild-type animal
+**Status:** open · **Tag:** `INFERENZA` · **Opened:** 2026-10-03
+**Provenance:** Authored by `BATCH_20261003_004` from `CC-20261003W5-A-TRANSGENE-IMMUNITY-01` (intake wave 5, Scientist A); the finding it rests on is the merged record `RL-GT-002`.
+**Sources:** PMID 40809677 ([[paper_registry_current#PAPER 169]]) · PMID 41314141 ([[paper_registry_current#PAPER 165]]) · PMID 39358605 ([[paper_registry_current#PAPER 167]])
+**Gap:** every immunogenicity measurement in the 2024–2026 recessive-CNS gene-replacement sources read in intake wave 5 was made in an animal that already expresses the orthologue of the delivered protein, or was not made at all.
+**Shape of the experiment:** a WWOX-null host, dosed at the intended clinical age rather than in the first days of life, with (i) a T-cell readout against a WWOX peptide library, (ii) an anti-WWOX antibody readout, (iii) an anti-capsid readout and (iv) CNS histology for MHC II and CD3 — the four readouts that dissociated in PMID 40809677, where early expression suppressed the cellular and histological arms while the humoral response persisted.
+**Limits carried from the sources:** PMID 40809677's antigen is bacterial and its host wild type, and its two arms differ four-fold in vector — stated by the authors as deliberate normalisation to brain volume, so it bounds mechanism and not magnitude; PMID 41314141's negative ELISpots were obtained **under** triple immunosuppression, so they are not evidence that an unsuppressed null tolerates the protein; PMID 39358605's clean ELISpot was obtained in wild-type mice and cannot be read across to a null.
+**Not medical advice.**
+
+---
+
+## RC-A-20261003w5-02 — Retrieve the conditional-reactivation primary behind the adult-rescue claim
+**Status:** open · **Tag:** `INFERENZA` · **Opened:** 2026-10-03
+**Provenance:** Authored by `BATCH_20261003_004` from `CC-20261003W5-A-WINDOW-STATUS-01` (intake wave 5, Scientist A); it is the second, now-named revival trigger of `DIS-033`.
+**Sources:** PMID 41712149 ([[paper_registry_current#PAPER 170]]), reference 87 of that review
+**Why:** it is the only study design in the corpus in which transgene expression is matched across ages by construction, and therefore the only one that can address the standing window question without the delivery confound. It is currently held only as a sentence inside a narrative review whose own search window closes on 31 March 2025.
+**What to check at source:** whether rescue at P90 was measured on seizure endpoints only or also on behaviour and development; whether the comparison is to age-matched untreated animals; whether protein level was quantified against wild type; and whether one intact allele was required for the rescue — the last being the limit that decides whether the result can transfer to a biallelic null at all.
+**Not medical advice.**
+
+---
+
+## RC-A-20261003w5-03 — Decide, before any WWOX dose-finding design, which endpoint sets the dose
+**Status:** open · **Tag:** `INFERENZA` · **Opened:** 2026-10-03
+**Provenance:** Authored by `BATCH_20261003_004` from `CC-20261003W5-A-DOSE-TWO-SIDED-01` (intake wave 5, Scientist A); the finding is `RL-GT-004`.
+**Sources:** PMID 41712282 ([[paper_registry_current#PAPER 168]]) · PMID 39358605 ([[paper_registry_current#PAPER 167]])
+**The question to settle on paper first:** if the WWOX working model predicts both a metabolic axis and a seizure axis, and the two axes have different dose-responses — as they do for the one comparator gene in which both were measured at two doses, on the kindling paradigm — which one does the dose serve?
+**Why it cannot be deferred to the data:** the comparator could detect the mismatch only because its metabolic axis has a directly measurable analyte in blood and CSF. A WWOX programme without an equivalent pharmacodynamic readout would see one curve, not two, and would conclude it had found the dose. This is the conclusion `RC-C-20261003w3` reaches from a different direction, and it is reinforced by two sources whose dose cannot be stated in protein units at all: one whose antibody does not recognise the endogenous mouse protein, so there is no wild-type reference, and one whose target antibody was unreliable and had to be proxied by a partner subunit of the same complex.
+**Not medical advice.**
+
+---
+
+## RC-C-20261003w3 — Acquire a WWOX pharmacodynamic readout before specifying a restoration dose
+**Status:** open · **Tag:** `INFERENZA` · **Opened:** 2026-10-03
+**Provenance:** Authored by `BATCH_20261003_004` from the op specification of `CC-20261003W3-C-RESTORATION-SPEC-01` (intake wave 3, Scientist C), whose ops were a prose description; the finding is `RL-C-20261003w3`.
+**Sources:** PMID 42521212 ([[paper_registry_current#CORPUS P405]]) · PMID 42181696 ([[paper_registry_current#CORPUS P404]]) · PMID 40349107 ([[paper_registry_current#CORPUS P401]])
+**Why:** a restoration dose cannot be specified against an assay that cannot see the increment it produces. One source rescued survival and seizures while its own cortical protein measurement moved from ~0.45 to ~0.49 of wild type, not significantly — a result compatible with an insensitive antibody and with a rescue that needs no normalisation, and the paper keeps both readings.
+**Template, with its four limits carried:** an endogenous HiBiT knock-in plus LgBiT complementation, bidirectionally validated. (1) It is not WWOX-specific; (2) C-terminal tagging tolerance for WWOX is untested; (3) abundance is not oxidoreductase activity; (4) the source line's own caveats — single plating, unquantified dynamic range, and a 20q11.21 duplication including BCL2L1 present in **one clone and its derivatives**, which the authors say *«can confer»* a survival advantage — must be designed out rather than inherited.
+**Not medical advice.**

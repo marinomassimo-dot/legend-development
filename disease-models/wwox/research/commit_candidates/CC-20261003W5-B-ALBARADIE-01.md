@@ -39,3 +39,17 @@ PMID 35792847 shows one allele on both sides of the WOREE/SCAR12 line: three P47
 (the Q230P homozygote had a suppression-burst EEG | An EEG showed a suppression-burst background pattern | PMID 35792847, Results, Patient 6; files/fulltext/PMID35792847_AlBaradie2022_JLE_fulltext.html)
 (the Q230P homozygote has band heterotopia on MRI | Brain MRI showed supratentorial tissue volume loss with subcortical band heterotopia. | PMID 35792847, Results, Patient 6; files/fulltext/PMID35792847_AlBaradie2022_JLE_fulltext.html)
 (the abstract claims genotype-phenotype correlations | We established correlations between genotype and phenotype in our cases and previously reported cases. | PMID 35792847, Abstract, Results; files/fulltext/PMID35792847_AlBaradie2022_JLE_abstract.html)
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261003_004` (2026-10-03, ACTOR_ID `scientist`, Scientist I), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** PROPAGATED · class **MINOR** (`DL-MECH-022` is a discovery-ledger lead, not a claim; `CLAIM 019`, which the lead cross-references, is `consolidated baseline` and was **not** edited).
+
+**Renumbered:** the op's `PAPER 156` reference became **`PAPER 171`**.
+
+**Audit:** six triples, all quotes found, all supported — including that the Q230P allele is homozygous in the index patient while the affected sibling carries it heterozygously, which the op text already states. The INFERENZA tag on the continuum reading was kept as written.
+
+**Not medical advice.**

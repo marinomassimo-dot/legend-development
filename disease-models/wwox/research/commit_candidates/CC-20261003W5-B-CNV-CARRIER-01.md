@@ -43,3 +43,15 @@ Two heterozygous WWOX observations **with a phenotype** were read this wave, and
 (the authors leave the WWOX link unresolved | Thus, the relationship between haploinsufficiency of WWOX and/or other genes located around WWOX and West syndrome remains unclear | PMID 31353122, Discussion; files/fulltext/PMID31353122_Mori2019_IR.txt)
 (the affected sib is a Q230P heterozygote labelled a carrier | The brother of Patient 6 harbours a familial heterozygous missense pathogenic c.689A>C p.(Gln230Pro) variant and was labelled as a carrier | PMID 35792847, Results, Genetics; files/fulltext/PMID35792847_AlBaradie2022_JLE_fulltext.html)
 (the second allele search is unfinished | Further testing is underway to determine whether the heterozygous variant is a disease-causing compound heterozygous variant. | PMID 35792847, Results, Genetics; files/fulltext/PMID35792847_AlBaradie2022_JLE_fulltext.html)
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261003_004` (2026-10-03, ACTOR_ID `scientist`, Scientist I), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** PROPAGATED · class **MINOR**, judged against the **live** status of the target: `CLAIM 032` is `in observation` (measured in the claim registry before propagating), its status, type and summary are unchanged, and the op appends a boundary to the record. The baseline-adjacent audit was run anyway: eight triples, all quotes found, none NOT_SUPPORTED.
+
+The genotype caution travels with the record: an I136V carrier, a Menkes-Yang dual diagnosis and a Mori CNV carrier are **not** WOREE/SCAR12 observations, and a heterozygote is neither a demonstrated negative nor a positive for haploinsufficiency.
+
+**Not medical advice.**

@@ -142,3 +142,21 @@ Apply this candidate before its four siblings (they wikilink `PAPER 156`-`161`).
 (Al Baradie's literature denominator is 61 patients from 19 studies | Sixty-one patients with WWOX gene mutation and WOREE syndrome, reported in 19 studies, were identified from the literature search. | PMID 35792847, Results; files/fulltext/PMID35792847_AlBaradie2022_JLE_fulltext.html)
 (Al Baradie counts the SCAR12 linkage family among its literature patients | Gribaa et al. (2007) [5] 3 M Seizure 9 months GTC No PHB | PMID 35792847, Table 3 (continued); files/fulltext/PMID35792847_AlBaradie2022_JLE_fulltext.html)
 (Hengel's homozygous nonsense row with ID, epilepsy and callosal dysgenesis is TMCO1 | TMCO1 213980 2/4 TR24* Intellectual disability, epilepsy, corpus callosum dysgenesis NM_019026.4:c.616C>T: p.(Arg206*) | PMID 32214227, Table 1; files/fulltext/PMID32214227_Hengel2020_PMC.xml)
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261003_004` (2026-10-03, ACTOR_ID `scientist`, Scientist I), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** PROPAGATED · class **MINOR**.
+
+**Renumbered.** Declared `PAPER 156`–`161` and `LIT-0447`–`0451` were taken; applied as **`PAPER 171`–`176`** and **`LIT-0460`–`0464`**, the first `insert-after` re-anchored from `PAPER 150` to `PAPER 170` and from `LIT-0443` to `LIT-0459` so both registries stay contiguous after group A. Every internal cross-reference moved with its target; `PAPER 018`, `PAPER 042`, `PAPER 117`, `PAPER 119`, `LIT-0084`, `CORPUS-STUB-060` and `DL-MECH-059` are pre-existing records and were not renumbered.
+
+**Depth labels read off the receipts, not the candidate:** `complete_fulltext_read` for 35792847, 31618474, 35715422, 33919646 and 32214227; `partial_fulltext_read` for 31353122, whose two records now also carry the literal **partial full text**.
+
+**Two integrator amendments (blind audit).** (1) The Burgess 6.8 Mb deletion: the article names SCN1A and SCN2A but no chromosome or coordinates, so the chromosome-2 assignment is an inference from gene identity and is now labelled as one. (2) Al Baradie's literature table includes the SCAR12-linkage family's patients, but that article never labels them SCAR12 and lists spinocerebellar ataxia as a separate WWOX phenotype; the record no longer says it *counts six SCAR12 patients as WOREE*.
+
+**This candidate closed a block standing on `main`:** `legend_lint.py` was returning `BLOCK_BATCH_COMMIT / ORPHAN_COMPLETE_READ` for `FTR-20261003-33919646-01` before the batch, and the `PAPER 174` / `LIT-0462` landing closes it.
+
+**Not medical advice.**
