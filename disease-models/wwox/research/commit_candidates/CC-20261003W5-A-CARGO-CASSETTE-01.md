@@ -106,3 +106,15 @@ when measured rather than predicted — note that PMID 41712282's ten-fold figur
 (The coding sequence of this gene exceeds what one vector can carry, which forced a two-vector architecture. | genome size constraints (~4.7 kb), which preclude packaging the full human  | Gene-based therapies, preclinical gene replacement, `files/fulltext/PMID41712149_Balestrini2026_PMC.xml`)
 
 (The two-vector split-intein approach worked in two disease models. | employing a dual-vector delivery approach | Gene-based therapies, preclinical gene replacement, `files/fulltext/PMID41712149_Balestrini2026_PMC.xml`)
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261003_004` (2026-10-03, ACTOR_ID `scientist`, Scientist I), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** PROPAGATED as `RL-GT-003` (the declared id was free). Class **MINOR**.
+
+**One integrator amendment (blind audit):** the ten-fold transduction advantage of self-complementary packaging is **predicted** in that source, cited from references, not measured — the record states it as a prediction. The non-independence note (three of five sources sharing vector-design lineage) was carried verbatim, because it is the kind of sentence a later reader needs and nobody re-derives.
+
+**Not medical advice.**

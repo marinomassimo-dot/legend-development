@@ -122,3 +122,17 @@ quantity in two forms, carry neither silently: carry both with the discrepancy n
 > The auditor is asked to judge only whether each quote supports its proposition and whether the
 > source says more or less than the proposition claims. The panel values that contradict triples 2
 > and 5 are in the declared figure render, which the auditor should open.
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261003_004` (2026-10-03, ACTOR_ID `scientist`, Scientist I), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** PROPAGATED as **`DL-METH-119`** · class **MINOR**.
+
+The candidate's own self-report — a numeric table first read from flattened JATS text, which produced a wrong table and a false criticism of a correct source, withdrawn after cell-wise re-extraction — is carried **inside** the lead, because a method lead that hides its own instance teaches nothing. The lead proposes no gate, no LINT rule and no ratchet, and the batch added none.
+
+**Audit:** six triples, all quotes found, all supported. The millimetre scale-bar caption is confirmed verbatim in the source and is a publisher typo against the panel's micrometres — carried as a defect of the caption, never re-used as a measurement.
+
+**Not medical advice.**

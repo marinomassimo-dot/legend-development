@@ -37,3 +37,17 @@ The only review in LEGEND's reach that makes a WWOX-specific movement-phenotype 
 (Piard writes 'hypokinetic movements' only for patient 8, who is not among the review's six | hypokinetic movements | PMID 30356099, Supplemental Table 1, row 'Movement disorder', column Patient 8; files/fulltext/PMID30356099_Piard2019_supplement/41436_2018_339_MOESM1_ESM.xlsx)
 (Piard reports poor spontaneous movements across most of the cohort | Poor spontaneous movements were reported in 17 of 19 (89%). | PMID 30356099, Results, neurodevelopmental data; files/fulltext/PMID30356099_Piard2019_PMC_2026-09-27.xml)
 (the review names a recognition bias | However, as hyperkinetic MD might be easier to recognize, a potential bias cannot be completely excluded. | PMID 33919646, Discussion; files/fulltext/PMID33919646_Spagnoli2021_PMC.xml)
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261003_004` (2026-10-03, ACTOR_ID `scientist`, Scientist I), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** PROPAGATED · class **MINOR**.
+
+**Renumbered.** The declared `DIS-031` was taken twice over — `DIS-031`/`DIS-032` landed with the previous batch and `DIS-033` is this batch's merged window negative — so the record is **`DIS-034`**. Its `PAPER 159` reference became **`PAPER 174`**.
+
+**One integrator amendment (blind audit):** the exclusivity of the wording *hypokinetic movements* to one patient is verified in the primary's own supplement, while the membership of the review's six rests on the review's own table; the record now says which source carries which half. The `REVIVAL_TRIGGER` was carried verbatim.
+
+**Not medical advice.**

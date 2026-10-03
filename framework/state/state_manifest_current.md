@@ -43,7 +43,7 @@ edition: public
 ## 2. DISEASE-MODEL (WORKING-MODEL) VERSION
 
 ```yaml
-working_model_version: WM_v7.11
+working_model_version: WM_v7.12
 working_model_file: disease-models/wwox/registries/working_model_current.md
 narrative_view: disease-models/wwox/disease_model.md
 notes: "Canonical disease-level working model derived from public literature; disease_model.md is its narrative reader-facing view. The private individual-level record is not part of this edition."
@@ -106,12 +106,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20261003_003
+last_batch_commit_id: BATCH_20261003_004
 last_batch_commit_date: 2026-10-03
 last_batch_commit_type: MANUAL
-commit_candidates_propagated: 16
-target_wm_version: WM_v7.11
-trigger: MANUAL (operator-dispatched integration of intake wave 4; the backlog threshold of 5 was also met at 23)
+commit_candidates_propagated: 17
+target_wm_version: WM_v7.12
+trigger: MANUAL (operator-dispatched integration of intake wave 5 and the wave-3 group-C residue; the backlog threshold of 5 was also met)
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -125,7 +125,7 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20261003_BATCH_20261003_003
+last_lint_id: LINT_20261003_BATCH_20261003_004
 last_lint_date: 2026-10-03
 last_lint_result: WARN
 ```
@@ -212,8 +212,8 @@ to make a suite green — the only way to move it is to have made the change you
 
 ```yaml
 growth_anchor_ledger: framework/state/growth_anchors.jsonl
-growth_anchor_events: 40
-growth_anchor_head: 937ed6e6799ec8634939b3a17210069f65659514866e94fbf312945d3c76ce7e
+growth_anchor_events: 41
+growth_anchor_head: a73f8ae97a76fb4675483b5c8576a84a8e13bcd53f0a9e8285dcdaa4bea3baf9
 ```
 
 ```bash

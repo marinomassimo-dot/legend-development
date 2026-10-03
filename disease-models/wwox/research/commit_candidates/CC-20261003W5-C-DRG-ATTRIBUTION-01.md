@@ -210,3 +210,17 @@ plus `files/figure_renders/sciC_w5/PMID41948127_fig5.jpg` and
 `files/figure_renders/sciC_w5/PMID41210171_fig6.jpg`; digests are recorded in full in the
 corresponding deep-dive manifests, each of which passes
 `deepdive_manifest.py --pmid N --verify-artifacts`.
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261003_004` (2026-10-03, ACTOR_ID `scientist`, Scientist I), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** PROPAGATED as **`DL-METH-118`** · class **MINOR**.
+
+**Deduplication against the landed wave-4 records, measured:** `DIS-031` (*AAV DRG toxicity is immune-mediated and preventable* → NOT ESTABLISHED) and `RL-C-20261003w4a` already hold the immune-versus-dose-intrinsic question. This lead is **additive on a dimension neither addresses** — whether the lesion's increment over a concurrent control has been measured at all — and the record says in its own text that it does not supersede them and does not close their question.
+
+**Two integrator amendments (blind audit).** (1) The absence of an incidence and severity count in the second primate study is **dorsal-root-ganglion-specific**: that article does tabulate incidence and severity, for brain, and does give a qualitative severity range for the finding set. (2) The human negative at the highest doses belongs to the four-subject CLN7 trial and to one separate single-patient programme, not to the highest-dose programmes in general.
+
+**Not medical advice.**

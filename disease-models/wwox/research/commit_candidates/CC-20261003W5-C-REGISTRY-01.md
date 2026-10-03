@@ -227,3 +227,19 @@ appends, not edits.
 This candidate creates registry records and asserts no scientific proposition of its own; the
 propositions its records summarise are audited through the four substantive candidates of this wave,
 whose triples point at the same artefacts. No triples are offered here.
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261003_004` (2026-10-03, ACTOR_ID `scientist`, Scientist I), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** PROPAGATED · class **MINOR**.
+
+**Renumbered.** Declared `PAPER 162`–`167` and `LIT-0452`–`0457` were taken; applied as **`PAPER 177`–`182`** and **`LIT-0465`–`0470`**, after groups A and B, with every `LIT link` and `Paired with` anchor rewritten in both directions.
+
+**The six `LIT` records were authored by the integrator** from this candidate's shared-field list and its one-row-per-record table, in the tracking log's own record format; no field value was invented, and each record names this candidate as its origin. Every `Evidence depth` line carries `partial_fulltext_read` **and** the literal *partial full text*, which the receipts support for all six.
+
+**One integrator amendment (blind audit):** the single-patient intracisternal record's dorsal-root-ganglion sentence now says that **no formal nerve-conduction study was performed** while reflexes and symptoms were assessed — *«not measured»* alone overstated the source.
+
+**Not medical advice.**

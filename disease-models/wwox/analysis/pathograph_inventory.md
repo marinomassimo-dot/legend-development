@@ -33,7 +33,7 @@ annotations is reported below whatever it happens to be.
 | Edges carrying a declared relation type | 0 |
 | Nodes carrying a biological scale | 0 |
 | Deep-dive manifests read | 198 |
-| …of which bound to at least one claim | 79 |
+| …of which bound to at least one claim | 81 |
 | Propositions scanned | 3393 |
 | …carrying a relational connective | 718 |
 | …locator-backed candidates | 678 |
@@ -71,7 +71,7 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 | CLAIM 019 | Q230P is pathogenic in severe human compound context and must not be treated as a benign or weak | consolidated baseline | DATO (endpoint funzionale: mRNA normale  | genotype / compound-context interpretati | NOT_ANNOTATED | 8 | 4 |
 | CLAIM 020 | Selected WWOX-related trajectories may include survival into adulthood with severe disability an | consolidated baseline | DATO | natural history / clinical spectrum | NOT_ANNOTATED | 1 | 0 |
 | CLAIM 021 | WWOX loss directly destabilizes neocortical network physiology through combined synaptic and int | consolidated baseline | DATO | P1 — network hyperexcitability / cortica | NOT_ANNOTATED | 0 | 1 |
-| CLAIM 022 | Severe WWOX-null phenotypes can begin prenatally and may include detectable fetal brain abnormal | consolidated baseline | DATO | prenatal developmental architecture / se | NOT_ANNOTATED | 0 | 1 |
+| CLAIM 022 | Severe WWOX-null phenotypes can begin prenatally and may include detectable fetal brain abnormal | consolidated baseline | DATO | prenatal developmental architecture / se | NOT_ANNOTATED | 0 | 2 |
 | CLAIM 023 | WWOX controls partner-protein function not only by binding, but by subcellular rerouting that ch | consolidated baseline | DATO | signaling organization / routing / scaff | NOT_ANNOTATED | 0 | 2 |
 | CLAIM 024 | WWOX WW-domain function depends on WW1–WW2 tandem cooperativity, not only on isolated domain int | consolidated baseline | DATO | domain architecture / variant interpreta | NOT_ANNOTATED | 0 | 1 |
 | CLAIM 025 | The WWOX/HIF1A ratio may function as a systems-level marker of maladaptive biological state, lin | in observation | DATO + INFERENZA | P5 — metabolism / state transition / inf | NOT_ANNOTATED | 1 | 2 |
@@ -81,7 +81,7 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 | CLAIM 029 | WWOX contributes directly to DNA-damage-response competence and genome-stability maintenance, at | in observation | DATO + INFERENZA prudente | genome stability / ATM / DNA damage resp | NOT_ANNOTATED | 0 | 4 |
 | CLAIM 030 | In WWOX the severity tracks residual protein FUNCTION, not protein abundance | in observation | DATO (serie allelica su cellule di pazie | genotype / protein function / proteostas | NOT_ANNOTATED | 10 | 7 |
 | CLAIM 031 | WWOX-DEE is a developmental AND epileptic encephalopathy: seizure control does not rescue develo | in observation | DATO (osservazione clinica) + INFERENZA  | clinical course / therapeutic strategy | NOT_ANNOTATED | 8 | 3 |
-| CLAIM 032 | Una copia di WWOX conserva alcuni endpoint osservati, ma non definisce una soglia terapeutica de | in observation | DATO (endpoint specifici in topo, ratto  | P7 — gene therapy readiness / dose-thres | NOT_ANNOTATED | 10 | 19 |
+| CLAIM 032 | Una copia di WWOX conserva alcuni endpoint osservati, ma non definisce una soglia terapeutica de | in observation | DATO (endpoint specifici in topo, ratto  | P7 — gene therapy readiness / dose-thres | NOT_ANNOTATED | 10 | 21 |
 | CLAIM 033 | Biallelic null WWOX carries higher mortality than genotypes with at least one missense — but the | in observation | DATO (statistica di coorte) + IPOTESI (l | genotype-phenotype / prognosis | NOT_ANNOTATED | 13 | 3 |
 | CLAIM 034 | In a post-mitotic excitable neuron under metabolic stress, WWOX up-regulation is pro-oxidant — r | in observation | DATO (sistema fotorecettoriale) + ESPANS | P5 — metabolism / redox · secondario P1  | NOT_ANNOTATED | 6 | 3 |
 | CLAIM 035 | WWOX is a direct, residue-mapped inhibitor of GSK3β through an Axin-like docking motif in the SD | in observation | DATO (biochimica, cinque saggi ortogonal | P1 neurosviluppo / GSK3β–Tau–microtubuli | NOT_ANNOTATED | 6 | 1 |
@@ -273,7 +273,7 @@ working model with no edge between them in the registry.
 | CLAIM 015 | REVIEW_MATERIAL_PRESENT | LOCATOR_PROPOSITION_BOUND, SHARED_EVIDENTIAL_PAPER |
 | CLAIM 018 | REVIEW_MATERIAL_PRESENT | LOCATOR_PROPOSITION_BOUND, SELF_RELATIONAL_TITLE, SHARED_EVIDENTIAL_PAPER |
 | CLAIM 021 | REVIEW_MATERIAL_PRESENT | LOCATOR_PROPOSITION_BOUND, SELF_RELATIONAL_TITLE, SHARED_EVIDENTIAL_PAPER |
-| CLAIM 022 | NO_RELATION_MATERIAL_IN_REPOSITORY | — |
+| CLAIM 022 | REVIEW_MATERIAL_PRESENT | SHARED_EVIDENTIAL_PAPER |
 | CLAIM 023 | REVIEW_MATERIAL_PRESENT | LOCATOR_PROPOSITION_BOUND, SELF_RELATIONAL_TITLE |
 | CLAIM 024 | REVIEW_MATERIAL_PRESENT | LOCATOR_PROPOSITION_BOUND, SELF_RELATIONAL_TITLE, SHARED_EVIDENTIAL_PAPER |
 | CLAIM 026 | ANNOTATION_GAP_CONFIRMED | LOCATOR_PROPOSITION_BOUND, WORKING_MODEL_COMENTION |
@@ -305,7 +305,7 @@ place to look, not a set of missing edges.
 | CLAIM 006 ↔ CLAIM 007 | PAPER 007 |
 | CLAIM 006 ↔ CLAIM 030 | PAPER 126 |
 
-Showing 12 of 37. The complete list is in the export.
+Showing 12 of 38. The complete list is in the export.
 
 ## 5 · Candidate edges — propositions already written, awaiting review
 
@@ -373,6 +373,6 @@ carried no connective from the lexicon.
 ## Provenance
 
 Derived from 201 input files; digest
-`78d499a572a3baac`. Sources: the claim, paper and
+`82f6c27c85f2f28a`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 

@@ -136,3 +136,17 @@ dose after all and the design requirement weakens to "measure both and check".
 (Both gene-based routes share a dose-dependent immune and vector toxicity risk and unknown developmental consequences. | including dose-dependent immune responses, vector-related toxicity, and uncertainties regarding long-term expression and neurodevelopmental effects following early-life intervention | Gene-based therapies, closing paragraph, `files/fulltext/PMID41712149_Balestrini2026_PMC.xml`)
 
 (Upregulation carries its own overshoot risk. | theoretical risks related to excessive or off-target transcriptional activation | Gene-based therapies, closing paragraph, `files/fulltext/PMID41712149_Balestrini2026_PMC.xml`)
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261003_004` (2026-10-03, ACTOR_ID `scientist`, Scientist I), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** PROPAGATED as `RL-GT-004` plus `RC-A-20261003w5-03` (both declared ids free). Class **MINOR**.
+
+**Deduplication, measured rather than assumed:** this candidate and `CC-20261003W5-C-DOSE-SCALAR-01` were compared and are **not** the same finding — one is about two endpoints not sharing one dose-response and about high-dose harm reported below the headline, the other about three mutually non-convertible dose scalars; their source sets are disjoint (group A against group C) and they share no proposition. Both propagated, as separate records.
+
+**Three integrator amendments (blind audit).** (1) The low-dose/high-dose equality holds for the **pentylenetetrazol-kindling paradigm only**; the same paragraph reports greater benefit at the high dose in all other metrics, epileptic discharges included. (2) The treatment-associated white-cell rise *«had diminished»* by one year rather than resolved. (3) The nerve and dorsal-root-ganglion findings are arm-level but single-animal (1 of 3, 1 of 3, 1 of 4), with one animal in the detargeted arm still affected.
+
+**Not medical advice.**

@@ -252,3 +252,17 @@ fields is sourced by a triple in one of the four companion candidates
 findings not covered there are reproducible from the artefacts on disk by the commands printed in
 `research/fulltext_dossiers/PMID41314141.md` and `research/fulltext_dossiers/PMID39358605.md`. No
 triple is duplicated here.
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261003_004` (2026-10-03, ACTOR_ID `scientist`, Scientist I), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** PROPAGATED · class re-judged **MINOR** (no claim created, no `consolidated baseline` claim touched).
+
+**Renumbered.** `registry_records.py catalog --disease wwox` at `main` `59022b2` measured the highest `PAPER` at **164** and the highest `LIT-` at **0453**, so the declared `PAPER 151`–`156` / `LIT-0444`–`0449` were all taken by the wave-4 batch. Applied as **`PAPER 165`–`170`** and **`LIT-0454`–`0459`**, with every internal `LIT link` and `Paper link` moved with its target.
+
+**Two integrator repairs.** (1) Each of the six `LIT` records carried `**Disposition:**` and no `**Status:**`; the post-propagation LINT returned `INVALID_LIT_STATUS / MISSING_STATUS` and the bare vocabulary value `processed` was inserted as its own field above the Disposition line — nothing was dropped. (2) Every `Evidence depth` line now also carries the literal **partial full text**, because `partial_fulltext_read` alone is not a partial marker for `coverage_report.py` and a record without it classifies as `abstract`. Depth labels were read off `fulltext_receipts.py status --pmid` for all six PMIDs and are unchanged: all six are `partial_fulltext_read`.
+
+**Not medical advice.**

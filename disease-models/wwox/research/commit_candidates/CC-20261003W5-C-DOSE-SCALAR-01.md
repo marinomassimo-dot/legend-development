@@ -159,3 +159,21 @@ corresponding deep-dive manifests, each of which passes
 > Note for the auditor: the table in §2 is **not** offered as a locator triple, because it is a
 > table and not a sentence. If it is to be audited, it should be re-extracted cell-wise from
 > `files/fulltext/PMID42205472_Engelhard2026_PMC.xml`, table-wrap index 3, and compared.
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261003_004` (2026-10-03, ACTOR_ID `scientist`, Scientist I), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** PROPAGATED as **`DL-METH-117`** · class **MINOR**.
+
+**Renumbered:** the op declared a provisional `DIS-xxx` in the discovery ledger, whose sequence runs `DL-<CATEGORY>-NNN` and stood at **116**; the integrator assigned the next free number in that sequence.
+
+**Not a duplicate of `CC-20261003W5-A-DOSE-TWO-SIDED-01`** — measured, not assumed: disjoint source sets and no shared proposition. Both landed.
+
+**Two integrator amendments (blind audit).** (1) The human intracisternal dose is printed per gram of brain mass **with an absolute total in parentheses**, so per-gram is the primary expression rather than the only one. (2) The review's inadequacy-of-fixed-dosing statement is about **intraventricular** therapies, is hedged, and draws on non-paediatric trials — the lead's claim is about what a carried number means, not about what the review prescribes.
+
+The Table 4 figures were carried **as the candidate re-derived them cell-wise** from the JATS table structure (`Rat | 2.2 | 20 | 0.15 | 1 | 9.5`), not from flattened text.
+
+**Not medical advice.**
