@@ -32,12 +32,21 @@ annotations is reported below whatever it happens to be.
 | …undirected edges they collapse into | 42 |
 | Edges carrying a declared relation type | 0 |
 | Nodes carrying a biological scale | 0 |
+<<<<<<< HEAD
 | Deep-dive manifests read | 144 |
 | …of which bound to at least one claim | 64 |
 | Propositions scanned | 2930 |
 | …carrying a relational connective | 660 |
 | …locator-backed candidates | 622 |
 | …locator-backed and bound to a claim | 288 |
+=======
+| Deep-dive manifests read | 148 |
+| …of which bound to at least one claim | 64 |
+| Propositions scanned | 3007 |
+| …carrying a relational connective | 679 |
+| …locator-backed candidates | 641 |
+| …locator-backed and bound to a claim | 290 |
+>>>>>>> main
 
 The scanned population is three declared surfaces and no others: every claim
 `Title`, every row of the working model's BLOCK 2 mirror, and every
@@ -308,15 +317,26 @@ each side is a reading, and every record carries `endpoints_resolved: false`.
 | Source | Candidates |
 |---|---|
 | claim_title | 20 |
+<<<<<<< HEAD
 | locator_proposition | 622 |
+=======
+| locator_proposition | 641 |
+>>>>>>> main
 | working_model_mirror_title | 18 |
 
 | Connective class (lexical) | Candidates |
 |---|---|
+<<<<<<< HEAD
 | AMBIGUOUS_LEXICAL_FORM | 419 |
 | ARROW | 16 |
 | ASSOCIATIVE | 27 |
 | CAUSAL | 143 |
+=======
+| AMBIGUOUS_LEXICAL_FORM | 434 |
+| ARROW | 16 |
+| ASSOCIATIVE | 27 |
+| CAUSAL | 147 |
+>>>>>>> main
 | DEPENDENCY | 55 |
 
 A connective class is a property of the word, not a verdict about the
@@ -347,7 +367,7 @@ its sentence is a reading, and this tool does not perform readings.
 | CLAIM 016 | claim_title | `contribute to` | GSK3β hyperactivation may contribute to seizure susceptibility in WWOX deficiency |
 | CLAIM 018 | claim_title | `causes` | The exon 6 splice-site variant c.517-2A>G is pathogenic and causes exon 6 skipping in humans |
 
-Showing 12 of 326 bound candidates; the
+Showing 12 of 328 bound candidates; the
 complete set, with evidence and provenance, is in the export. The worklist
 in cost order — what needs an annotation, what needs a type, what needs a
 decomposition, what needs a reading — is printed by:
@@ -363,7 +383,12 @@ carried no connective from the lexicon.
 
 ## Provenance
 
+<<<<<<< HEAD
 Derived from 147 input files; digest
 `b418b1b6efbdbf06`. Sources: the claim, paper and
+=======
+Derived from 151 input files; digest
+`36d331f9d3d6d7a7`. Sources: the claim, paper and
+>>>>>>> main
 working-model registries, and every deep-dive work manifest.
 
