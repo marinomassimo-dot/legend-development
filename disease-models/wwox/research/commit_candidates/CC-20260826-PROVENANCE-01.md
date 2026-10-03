@@ -278,3 +278,16 @@ on the triples above. **Applied outside batch:**
 Unchanged: repointing `CLAIM 002`'s `Source` to `PAPER 094` needs a surface of PMID 42397075 (*Brain* 2026, DOI 10.1093/brain/awag239). Europe PMC reports it not open access (no PMCID); no artefact exists in this deployment, and the manifest's declared artefacts are absent. **Unblock:** the operator supplies the publisher PDF or HTML.
 
 **Not medical advice.**
+
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261003_002` (2026-10-03, ACTOR_ID `scientist`, Scientist G), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** DEFERRED
+
+Re-measured 2026-10-03: no artefact of PMID 42397075 exists in the root `files/fulltext/`, so repointing `CLAIM 002`'s `Source` (a consolidated baseline) still has no surface for its blind audit. **Unblock:** unchanged — a lawful surface of PMID 42397075 read to a receipt.
+
+**Not medical advice.**

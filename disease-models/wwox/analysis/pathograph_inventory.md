@@ -32,12 +32,12 @@ annotations is reported below whatever it happens to be.
 | …undirected edges they collapse into | 44 |
 | Edges carrying a declared relation type | 0 |
 | Nodes carrying a biological scale | 0 |
-| Deep-dive manifests read | 168 |
+| Deep-dive manifests read | 164 |
 | …of which bound to at least one claim | 75 |
-| Propositions scanned | 3130 |
-| …carrying a relational connective | 695 |
-| …locator-backed candidates | 655 |
-| …locator-backed and bound to a claim | 312 |
+| Propositions scanned | 3107 |
+| …carrying a relational connective | 689 |
+| …locator-backed candidates | 649 |
+| …locator-backed and bound to a claim | 307 |
 
 The scanned population is three declared surfaces and no others: every claim
 `Title`, every row of the working model's BLOCK 2 mirror, and every
@@ -50,7 +50,7 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 
 | Node | Declared title | Status | Type | Pathway | Scale | Deg | Papers |
 |---|---|---|---|---|---|---|---|
-| CLAIM 001 | Vigabatrin associated with VABAM in WWOX-DEE | conflicting evidence | DATO | P2 — GABAergic vulnerability / safety | NOT_ANNOTATED | 5 | 5 |
+| CLAIM 001 | Vigabatrin associated with VABAM in WWOX-DEE | conflicting evidence | DATO | P2 — GABAergic vulnerability / safety | NOT_ANNOTATED | 5 | 7 |
 | CLAIM 002 | WWOX-LoF causes network hyperexcitability; AAV-WWOX rescues organoid phenotype | consolidated baseline | DATO + INFERENZA prudente | P1 — Ca²⁺ / network dysregulation; P7 —  | NOT_ANNOTATED | 2 | 5 |
 | CLAIM 003 | Neuronal WWOX deletion induces non-cell-autonomous hypomyelination | consolidated baseline | DATO | P4 — myelination / white matter | NOT_ANNOTATED | 2 | 3 |
 | CLAIM 004 | AAV9-WWOX neuron-targeted rescue shows multi-domain in vivo improvement | consolidated baseline | DATO | P7 — gene therapy readiness | NOT_ANNOTATED | 10 | 3 |
@@ -314,15 +314,15 @@ each side is a reading, and every record carries `endpoints_resolved: false`.
 | Source | Candidates |
 |---|---|
 | claim_title | 21 |
-| locator_proposition | 655 |
+| locator_proposition | 649 |
 | working_model_mirror_title | 19 |
 
 | Connective class (lexical) | Candidates |
 |---|---|
-| AMBIGUOUS_LEXICAL_FORM | 443 |
+| AMBIGUOUS_LEXICAL_FORM | 439 |
 | ARROW | 18 |
-| ASSOCIATIVE | 28 |
-| CAUSAL | 151 |
+| ASSOCIATIVE | 27 |
+| CAUSAL | 150 |
 | DEPENDENCY | 55 |
 
 A connective class is a property of the word, not a verdict about the
@@ -353,7 +353,7 @@ its sentence is a reading, and this tool does not perform readings.
 | CLAIM 016 | claim_title | `contribute to` | GSK3β hyperactivation may contribute to seizure susceptibility in WWOX deficiency |
 | CLAIM 018 | claim_title | `causes` | The exon 6 splice-site variant c.517-2A>G is pathogenic and causes exon 6 skipping in humans |
 
-Showing 12 of 352 bound candidates; the
+Showing 12 of 347 bound candidates; the
 complete set, with evidence and provenance, is in the export. The worklist
 in cost order — what needs an annotation, what needs a type, what needs a
 decomposition, what needs a reading — is printed by:
@@ -369,7 +369,7 @@ carried no connective from the lexicon.
 
 ## Provenance
 
-Derived from 171 input files; digest
-`6cf77331a2850461`. Sources: the claim, paper and
+Derived from 167 input files; digest
+`93472709b27fff45`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 

@@ -74,3 +74,16 @@ None. This candidate asserts no scientific proposition: it proposes bookkeeping 
 is the identity metadata of the six papers and a pointer to each dossier. Every scientific
 proposition drawn from these papers is carried, with its triples, in
 `CC-20261003W3-C-ALLELE-CLASS-01` and `CC-20261003W3-C-RESTORATION-SPEC-01`.
+
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261003_002` (2026-10-03, ACTOR_ID `scientist`, Scientist G), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** DEFERRED
+
+Its ops are a prose specification (a table of field values and a description of the LIT records), not an executable op list, and the numbers it declares (`CORPUS P401`–`P405`, `LIT-0432`–`0436`) were already taken (`LIT-0432`–`0443` exist after this batch). Nothing is owed urgently: the five PMIDs it would register carry `partial_fulltext_read` receipts only, so `legend_lint.py` raises no `ORPHAN_COMPLETE_READ` and `test_batch_queue.py` does not count them (measured on this branch). **Unblock:** an executable op list — five `insert-after CORPUS P400` records and five `LIT-` records after the highest `LIT-` then present — written against a fresh `registry_records.py catalog`.
+
+**Not medical advice.**

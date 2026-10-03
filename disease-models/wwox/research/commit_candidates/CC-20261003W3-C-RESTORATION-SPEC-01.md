@@ -128,3 +128,16 @@ without the protein, which is a different and larger finding).
 (The uORF lever failed when the authors tried to act on it with ASOs. | failed to increase luciferase activity in transfected cells or in vitro translation systems | Discussion, first para, `files/fulltext/PMID42521212_Saravanan2026_PMC.xml`)
 
 (The reporter line carries a copy-number change that confers a growth advantage. | a 20q11.21 duplication including BCL2L1, which can confer a survival advantage | Results, reporter development, `files/fulltext/PMID42521212_Saravanan2026_PMC.xml`)
+
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261003_002` (2026-10-03, ACTOR_ID `scientist`, Scientist G), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** DEFERRED
+
+Its three ops (`research_lines_current.md`, `dismissal_ledger_current.md`, `research_candidates_current.md`) are described, not written: no record text exists to apply, and the dismissal it proposes is a NEGATIVE, which this repository records only with its premise lines and `REVIVAL_TRIGGER` written out verbatim. Writing those records is authorship, not integration. The candidate's window-related triples were put through a blind locator audit by this batch (see the batch report) so the next integrator inherits a verified evidence base. **Unblock:** the author writes the three records as exact text (next free `DIS-` is `DIS-031`), with the record ids the files actually use.
+
+**Not medical advice.**

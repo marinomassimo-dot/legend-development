@@ -43,6 +43,7 @@ Canonical audit trail of numbered claims relevant to the Working Model.
 **Source:** Choi et al. 2026 *Pediatric Neurology* (safety anchor) / You et al. 2024 *Mol Genet Genomic Med* (tensione evidence) / Chong et al. 2023 *AJMG* (dato misto) / Gao et al. 2025 *Neurology* (utilizzo clinico senza safety data)
 **Wikilinks:** [[paper_registry_current#PAPER 003]] (Choi) · [[paper_registry_current#PAPER 016]] (You) · [[paper_registry_current#PAPER 017]] (Chong) · [[paper_registry_current#PAPER 014]] (Gao) · [[paper_registry_current#PAPER 045]] (Shaukat — lato efficacia) · [[claim_registry_current#CLAIM 031]]
 **Impact on Working Model:** BLOCCO 1 safety position unchanged; BLOCCO 2 status updated to conflicting evidence
+**Additional efficacy observations (intake wave 3, 2026-10-03, `CC-20261003W3-A-VIGABATRIN-01`):** (a) [[paper_registry_current#PAPER 143]] (Nagarajan 2023): one child with a predicted null/null compound genotype (frameshift + nonsense) failed initial hormonal therapy and reached clinical spasm control on vigabatrin, seizure-free at 12 months; response there is defined clinically (cessation ≥ 4 weeks) with no electrographic criterion, and no safety imaging is reported. (b) [[paper_registry_current#PAPER 145]] (Serce Pehlevan 2026): homozygous p.Leu239Arg — vigabatrin added to phenobarbital did not stop spasms; valproate then clobazam did. Both n = 1 per drug, different genotypes, short follow-up; neither changes the status. Not medical advice.
 
 ---
 
