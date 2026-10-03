@@ -1,0 +1,261 @@
+{
+  "schema_version": 2,
+  "pmid": "29067327",
+  "doi": "10.1016/j.trci.2017.02.001",
+  "receipt": "FTR-20261003-29067327-02",
+  "landing": [
+    "FTR-20261003-29067327-02",
+    "disease-models/wwox/research/fulltext_dossiers/PMID29067327.md",
+    "disease-models/wwox/research/intake_wave_20261003_B.md"
+  ],
+  "skills_considered": [
+    {
+      "skill": "legend-deepdive",
+      "used": false,
+      "reason": "Run inline; figure inspection and locator capture had to come from the same open document as the text reading."
+    },
+    {
+      "skill": "find-fulltext",
+      "used": false,
+      "reason": "Europe PMC fullTextXML returned HTTP 200 with a body on the first attempt; figures, PDF and supplements came from the PMC open-access S3 mirror, which needed no cascade."
+    },
+    {
+      "skill": "legend-locator-audit",
+      "used": false,
+      "reason": "OWED. This reading narrows claims that the working model may rest on and carries text-versus-panel contradictions, which is exactly the trigger."
+    }
+  ],
+  "group_assessment": {
+    "performed": true,
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": false,
+    "is_primary_group_for_gene": false,
+    "total_publications": 0,
+    "publications_on_gene": 0,
+    "counts_note": "total_publications and publications_on_gene are 0 because no per-author output count was measured in this pass. A zero here means NOT MEASURED, not zero publications.",
+    "note": "Research-group knowledge base excluded from the public edition; this rests on measured PubMed counts and the paper's own author and reference lists.",
+    "counts_measured": "PubMed esearch 2026-10-02 (tool=LEGEND-research): 'WWOX AND TIAF1' 9 records and 'WWOX AND TIAF1 NOT Chang NS[au]' 0 records; '\"TRAPPC6A\" AND (aggregation OR plaque)' 4 records, all four from this laboratory; 'Zfra' 17 records and 'Zfra NOT Chang NS[au]' 1 record, which is an unrelated zebrafish androgen-receptor paper matching the string by accident; 'WWOX AND \"dorsal root ganglion\"' 1 record, the group's own.",
+    "self_citation_measured": "Of this paper's 48 references all 48 carry a PMID and 25 have Chang NS as an author (52 percent).",
+    "weighting": "Same laboratory. This is the only interventional paper in group B, and it is not a WWOX model: the treated animals are 3xTg-AD (Psen1 M146V, APPswe, tau P301L) with wild-type Wwox."
+  },
+  "field_density": {
+    "wwox_directed": true,
+    "queries": [
+      {
+        "query": "WWOX AND TIAF1 NOT Chang NS[au]",
+        "route": "PubMed esearch 2026-10-02",
+        "count": 0
+      },
+      {
+        "query": "\"TRAPPC6A\" AND (aggregation OR plaque)",
+        "route": "PubMed esearch 2026-10-02",
+        "count": 4
+      }
+    ],
+    "note": "Maximum density for the mechanism, zero density outside one laboratory."
+  },
+  "multihop": {
+    "performed": false,
+    "references_enumerated": 48,
+    "gene_direct_refs_in_source": [],
+    "enumeration_method": "48 reference PMIDs parsed from the JATS back matter and resolved by PubMed esummary for authorship only.",
+    "resolved": [],
+    "queued": []
+  },
+  "corpus_crossquery": {
+    "performed": true,
+    "query": "Does this paper contain any WWOX-genotype intervention datum?",
+    "hits": 1,
+    "finding": "One, and it is in the supplement: Supplementary Figure 1, a Wwox+/- versus 3xTg novel-object comparison with no treatment arm. The treated cohort has no WWOX genotype."
+  },
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-10-02",
+    "route": "PubMed esummary pubtype for 29067327 and exact DOI/PMID match against files/retraction_watch/retractionwatch_20261002.csv (72870 rows)",
+    "result": "No retraction, no expression of concern, no erratum; no Retraction Watch row.",
+    "hold": false,
+    "dependencies": {
+      "flagged": [],
+      "noted": [],
+      "paper_verdict": "SCREENED_CLEAN",
+      "reference_source": "network",
+      "references_declared": 48,
+      "references_screened": 46,
+      "references_with_doi": 46,
+      "schema": "retraction_check.dependencies/1",
+      "screened": true,
+      "snapshot": {
+        "date": "2026-09-10",
+        "days_since_fetch": 22,
+        "rows": 72476,
+        "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+      },
+      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+      "unscreenable": {
+        "UNSCREENABLE_NO_DOI": 2
+      }
+    }
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID29067327_Lee2017_PMC.xml",
+      "sha256": "a05d8ad3865a7e9f50557526e9c88ff9d91abd0867c6cf889bea977899332db8",
+      "kind": "article_text",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5651433/fullTextXML",
+        "http_method": "GET",
+        "tier": "europepmc_rest_fulltextxml",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-02",
+        "derived": false,
+        "result_sha256": "a05d8ad3865a7e9f50557526e9c88ff9d91abd0867c6cf889bea977899332db8"
+      }
+    },
+    {
+      "path": "files/figures/PMID29067327/native/gr1.jpg",
+      "sha256": "14716dca9537d84f0e6aaa5aa7499d78939cf6f0c44c548b8ad3c429134783d6",
+      "kind": "figure",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC5651433.1/gr1.jpg",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-02",
+        "derived": false,
+        "result_sha256": "14716dca9537d84f0e6aaa5aa7499d78939cf6f0c44c548b8ad3c429134783d6"
+      }
+    },
+    {
+      "path": "files/figures/PMID29067327/native/gr3.jpg",
+      "sha256": "7ec2aeb5ef9622c89cf65cb218700c4339bbb68d630fa28c00eb4722f430f33c",
+      "kind": "figure",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC5651433.1/gr3.jpg",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-02",
+        "derived": false,
+        "result_sha256": "7ec2aeb5ef9622c89cf65cb218700c4339bbb68d630fa28c00eb4722f430f33c"
+      }
+    },
+    {
+      "path": "files/supplements/PMID29067327/mmc1.docx",
+      "sha256": "de9bf3e209fa9ae24a146284af41f8766f2badd1e24a67e9c83bbe23e77f1ba6",
+      "kind": "article_binary",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC5651433.1/mmc1.docx",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-02",
+        "derived": false,
+        "result_sha256": "de9bf3e209fa9ae24a146284af41f8766f2badd1e24a67e9c83bbe23e77f1ba6"
+      }
+    },
+    {
+      "path": "files/figure_renders/PMID29067327/supp_fig1.png",
+      "sha256": "a796f685b2e70fa378b0fcb07ba97afbeaad5348bc014f5c0cd39bf42327c755",
+      "kind": "figure",
+      "acquisition_recipe": {
+        "resolved_url": "derived: word/media/image1.tiff extracted from mmc1.docx and converted to PNG at 1400 px width",
+        "http_method": "GET",
+        "tier": "local_docx_media_extraction",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-02",
+        "derived": true,
+        "result_sha256": "a796f685b2e70fa378b0fcb07ba97afbeaad5348bc014f5c0cd39bf42327c755",
+        "derived_from": "files/supplements/PMID29067327/mmc1.docx",
+        "extractor": {
+          "name": "python3 zipfile + ImageMagick convert",
+          "version": "python 3.12.3 / ImageMagick 6.9.x",
+          "call": "zipfile.ZipFile(mmc1.docx).read('word/media/image1.tiff') then `convert <tiff> -resize 1400x1400 <png>`"
+        }
+      }
+    }
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC JATS XML fingerprinted; all eight figure rasters and the supplementary .docx retrieved from the PMC open-access S3 mirror. The supplement's single figure was extracted from the .docx media stream and inspected as a raster - this is the residual debt FT-104 recorded, and it is the entry that changes what this paper can be used for.",
+    "abstract_anchoring_waived": "No locator is abstract-anchored. Every entry bounds the transfer of this intervention to a WWOX genotype.",
+    "entries": [
+      {
+        "proposition": "DOSE AND ROUTE, FOR THE RECORD: 2 mM Zfra4-10 in 100 microlitres of PBS, tail vein, four weekly injections starting at 10 months, with PBS as the only comparator. No vehicle-plus-scrambled-peptide arm, no dose-response, no pharmacokinetics.",
+        "snippet": "five 3×Tg mice received four consecutive weekly injections",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID29067327_Lee2017_PMC.xml",
+        "anchor": "Methods, 'Animals'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "BLINDING AND RANDOMISATION ARE NOT MENTIONED ANYWHERE IN THIS PAPER. The strings 'blind' and 'randomi' do not occur in the fingerprinted artefact - measured by grep over the XML, 0 occurrences of each. Every behavioural and histological readout is therefore unblinded as reported.",
+        "snippet": "two-tailed Mann–Whitney test (PBS group, ",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID29067327_Lee2017_PMC.xml",
+        "anchor": "Figure 2 legend - the statistical declaration, which states the test but no allocation or masking procedure",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THE GROUP SIZES ARE MUTUALLY INCONSISTENT ACROSS THE PAPER. Methods state five Zfra and five sham; Figure 1A states PBS n = 6, Zfra n = 5; Figure 1B states PBS n = 12, Zfra n = 10; Figure 2 states PBS n = 3, Zfra n = 5. Four different denominators for one cohort of ten animals.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1 panels A (Acquisition, 2-h delay p = .074, 24-h delay p = .008) and B (time in target quadrant p < .001, escape latency over 4 days, swimming speed) - two groups labelled PBS and Zfra throughout, with the group sizes carried only in the legend text, where they are 6/5 for panel A and 12/10 for panel B.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID29067327/native/gr1.jpg",
+        "anchor": "Figure 1, panels A and B, native PMC open-access raster, read against the Methods",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[0]",
+        "qualifies_needle": "received four consecutive weekly injections"
+      },
+      {
+        "proposition": "The statistics are computed over fields and cells, not over animals: n = 10 for tau tangles per field and n = 40 for counted neurons, in a cohort of at most ten mice. That is pseudoreplication, and it inflates every p value in the histology.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3C '# of pT181-Tau tangles per field', PBS ~13 vs Zfra ~9, p < 0.001, 'n = 10'; Fig 3D '% Reduction in intracellular pS35-TPC6A', PBS 100 vs Zfra ~40, p < 0.00001, 'n = 40'.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID29067327/native/gr3.jpg",
+        "anchor": "Figure 3, panels C and D, native PMC open-access raster",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "THE PAPER'S ONLY WWOX-GENOTYPE DATUM IS ONE UNLABELLED SUPPLEMENTARY BAR CHART, AND ITS NUMBERS DO NOT REPRODUCE ITS OWN LEGEND. The legend claims the Wwox+/- memory drop exceeds 55 percent at ages 10-12 against under 50 percent for 3xTg. The figure's x-axes read 3, >10, 8, 10 months with no genotype label on any bar and no age 12 anywhere; under either assignment of the two bar pairs to the two genotypes the drops are about 43 and 13 percent (short-term) and about 52 and 33 percent (long-term). No arrangement yields 'greater than 55 percent'. There is no n per bar, no statistic and no test.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Fig. S1: two panels, 'Short-term memory' bars at months 3 (~78), >10 (~45), 8 (~75), 10 (~65); 'Long-term memory' bars at months 3 (~87), >10 (~42), 8 (~75), 10 (~50); a red horizontal line at 50 percent and a red vertical line between the second and third bar of each panel; y-axis '% Exploration time'; no genotype appears on either axis.",
+        "surface": "figure",
+        "artifact": "files/figure_renders/PMID29067327/supp_fig1.png",
+        "anchor": "Supplementary Figure 1, extracted from the .docx media stream",
+        "panel_text_relation": "text_contradicted_by_panel",
+        "contradicts": "entries[5]",
+        "contradicts_needle": "Wwox heterozygous mice exhibited an age-related faster decline"
+      },
+      {
+        "proposition": "The sentence the supplementary panel contradicts, quoted verbatim from the body.",
+        "snippet": "Wwox heterozygous mice exhibited an age-related faster decline",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID29067327_Lee2017_PMC.xml",
+        "anchor": "Results, 'Wwox heterozygous mice exhibit enhanced memory decline'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The authors themselves state the mechanism of CNS delivery is unexplained: the cells the peptide activates do not reach the brain.",
+        "snippet": "Z cells did not appear to migrate to the brain",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID29067327_Lee2017_PMC.xml",
+        "anchor": "Results, 'Zfra induces Z cells to relocate out of the spleen and does not appear to migrate to the brain'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The authors' own efficacy ceiling: the intervention fails when started two months later than the treated cohort. Any transfer of this result to a congenital WWOX genotype has to cross that window, and the paper gives no basis for crossing it.",
+        "snippet": "injected Zfra fails to restore memory deficit",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID29067327_Lee2017_PMC.xml",
+        "anchor": "Discussion, paragraph on hippocampal extractions from postmortem material",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "An earned negative the paper reports against itself: the behavioural rescue is not explained by neurogenesis.",
+        "snippet": "Zfra treatment did not change the number of BrdU",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID29067327_Lee2017_PMC.xml",
+        "anchor": "Results, 'Zfra does not induce neurogenesis in 3xTg mice'",
+        "panel_text_relation": "text_only"
+      }
+    ]
+  }
+}

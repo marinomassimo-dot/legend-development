@@ -372,33 +372,138 @@
     "panel_text_relation": "text_only",
     "found_or_sought": "found"
    },
-    {
-      "proposition": "The G372R protein datum is IMMUNOFLUORESCENCE in the ventricular zone of patient-derived forebrain organoids, reported without quantification: signal present in the two parents, 'barely any' in the two affected children. It is not a western, not densitometry, and carries no statistic. [Added 2026-09-27, ACTOR_ID scientist, wave-2 package development, QUESTION_DRIVEN re-read.]",
-      "snippet": "while in the VZ of WPM F2 and WPM M3, WWOX was detected, barely any signal was observed in WPM D1 and S1",
-      "anchor": "Results, 'Brain organoids of patient-derived WWOX-related developmental and epileptic encephalopathies'",
-      "surface": "body",
-      "artifact": "files/fulltext/PMID34268881_Steinberg2021_PMC.xml",
-      "found_or_sought": "sought",
-      "panel_text_relation": "text_only"
-    },
-    {
-      "proposition": "The comparators of the G372R organoid datum are heterozygous CARRIERS of the same family, not wild-type donors: the two comparator lines are grouped by the paper itself as healthy heterozygotes, n = 2 against n = 2 affected homozygotes. Relationship terms are deliberately not carried into this record. [Added 2026-09-27, ACTOR_ID scientist, wave-2 package development, QUESTION_DRIVEN re-read.]",
-      "snippet": "both are healthy heterozygotes, grouped together",
-      "anchor": "Figure EV5 legend, statistics clause (the comparator grouping)",
-      "surface": "body",
-      "artifact": "files/fulltext/PMID34268881_Steinberg2021_PMC.xml",
-      "found_or_sought": "found",
-      "panel_text_relation": "text_only"
-    },
-    {
-      "proposition": "The same paper states that WWOX expression varies markedly among healthy heterozygous parents, which weakens a two-versus-two heterozygote comparison as a baseline. [Added 2026-09-27, ACTOR_ID scientist, wave-2 package development, QUESTION_DRIVEN re-read.]",
-      "snippet": "although there is a marked difference in WWOX expression in the healthy heterozygote parents from different families",
-      "anchor": "Discussion",
-      "surface": "body",
-      "artifact": "files/fulltext/PMID34268881_Steinberg2021_PMC.xml",
-      "found_or_sought": "found",
-      "panel_text_relation": "text_only"
-    }
+   {
+    "proposition": "The G372R protein datum is IMMUNOFLUORESCENCE in the ventricular zone of patient-derived forebrain organoids, reported without quantification: signal present in the two parents, 'barely any' in the two affected children. It is not a western, not densitometry, and carries no statistic. [Added 2026-09-27, ACTOR_ID scientist, wave-2 package development, QUESTION_DRIVEN re-read.]",
+    "snippet": "while in the VZ of WPM F2 and WPM M3, WWOX was detected, barely any signal was observed in WPM D1 and S1",
+    "anchor": "Results, 'Brain organoids of patient-derived WWOX-related developmental and epileptic encephalopathies'",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34268881_Steinberg2021_PMC.xml",
+    "found_or_sought": "sought",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The comparators of the G372R organoid datum are heterozygous CARRIERS of the same family, not wild-type donors: the two comparator lines are grouped by the paper itself as healthy heterozygotes, n = 2 against n = 2 affected homozygotes. Relationship terms are deliberately not carried into this record. [Added 2026-09-27, ACTOR_ID scientist, wave-2 package development, QUESTION_DRIVEN re-read.]",
+    "snippet": "both are healthy heterozygotes, grouped together",
+    "anchor": "Figure EV5 legend, statistics clause (the comparator grouping)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34268881_Steinberg2021_PMC.xml",
+    "found_or_sought": "found",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The same paper states that WWOX expression varies markedly among healthy heterozygous parents, which weakens a two-versus-two heterozygote comparison as a baseline. [Added 2026-09-27, ACTOR_ID scientist, wave-2 package development, QUESTION_DRIVEN re-read.]",
+    "snippet": "although there is a marked difference in WWOX expression in the healthy heterozygote parents from different families",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34268881_Steinberg2021_PMC.xml",
+    "found_or_sought": "found",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Results assert that the 4-AP response was absent in wild type.",
+    "snippet": "the KO line showed significantly increased activity, which was otherwise absent in WT traces",
+    "anchor": "Results, WWOX-depleted cerebral organoids exhibited hyperexcitability and epileptiform activity, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34268881_Steinberg2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Results and the Discussion both assert a decrease in the 30 to 79.9 Hz band.",
+    "snippet": "and a decrease in the 30‐ to 79.9‐Hz high‐frequency range",
+    "anchor": "Results, WWOX-depleted cerebral organoids exhibited hyperexcitability and epileptiform activity, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34268881_Steinberg2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Results assign TBR1, BCL11B, SATB2 and POU3F2 to layers I-IV and CUX1 and RELN to superficial layers V-VI.",
+    "snippet": "with layers I‐IV (marked by TBR1, BCL11B, SATB2, POU3F2) showing decreased expression and superficial layers V‐VI (marked by CUX1 and RELN) exhibiting marked increase",
+    "anchor": "Results, RNA-sequencing of WWOX-depleted cerebral organoids revealed major differentiation defects, final paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34268881_Steinberg2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The paper's own figure legend orders the same six markers from deepest to most superficial, which is the opposite assignment.",
+    "snippet": "from deepest to the most superficial: TBR1, BCL11B (CTIP2), SATB2, POU3F2 (BRN2), CUX1, and RELN",
+    "anchor": "Figure 4 legend, panel F",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34268881_Steinberg2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Results assert that the SCAR12 forebrain organoids showed no significant astrocytic difference.",
+    "snippet": "immunostaining and qPCR analyses for astrocytic levels did not reveal significant differences",
+    "anchor": "Results, Brain organoids of patient-derived WWOX-related developmental and epileptic encephalopathies, final paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34268881_Steinberg2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Methods state that the exact P-values for the manuscript are given in Appendix Table S1.",
+    "snippet": "Exact P‐values and the specific tests used are stated in Appendix",
+    "anchor": "Materials and Methods, Statistics, final sentences",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34268881_Steinberg2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The convulsant challenge is not genotype-selective: the panel cited for the claim draws a significance marker on the wild-type comparison too, and the proportional rise is larger in wild type than in the knockout.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure EV1 panel J plots four bars - WT baseline, WT 4-AP, KO baseline, KO 4-AP - at about 0.022, 0.067, 0.072 and 0.100 area-under-curve, with a drawn bracket marked * over the WT pair and a second drawn bracket marked * over the KO pair.",
+    "anchor": "Figure EV1, panel J; native JPEG inspected",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID34268881_assets/EMMM-13-e13610-g011.jpg",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "found_or_sought": "found",
+    "contradicts": "entries[21]",
+    "contradicts_needle": "otherwise absent in WT traces"
+   },
+   {
+    "proposition": "The high-frequency decrease the Results and Discussion rely on is marked non-significant in its own quantification.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure EV1 panel H, '30-79.9Hz Range - Week 7 COs', plots WT at about 0.0098 and KO at about 0.0035 with a drawn bracket labelled n.s., over 14 slices in each arm.",
+    "anchor": "Figure EV1, panel H; native JPEG inspected",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID34268881_assets/EMMM-13-e13610-g011.jpg",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "found_or_sought": "found",
+    "contradicts": "entries[22]",
+    "contradicts_needle": "a decrease in the 30‐ to 79.9‐Hz high‐frequency range"
+   },
+   {
+    "proposition": "The SCAR12 astrocytic comparison the Results call non-significant carries two drawn significance markers in its own panel.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure EV5 panel B, 'Astrocytic Markers qPCR - Forebrain Organoids - G372R Family', draws a bracket marked * over GFAP for WPM S1 and a second bracket marked * over ALDH1A1 for WPM S1, against the heterozygous parental lines.",
+    "anchor": "Figure EV5, panel B; native JPEG inspected",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID34268881_assets/EMMM-13-e13610-g005.jpg",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "found_or_sought": "found",
+    "contradicts": "entries[25]",
+    "contradicts_needle": "did not reveal significant differences"
+   },
+   {
+    "proposition": "The GABAergic rescue holds at protein level and not at transcript level within the same two panels of the same figure.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1 panel D plots GAD1 relative expression at about 1 for WT, about 8.5 for KO and about 7.5 for W-AAV, while panel F plots GAD67 surface area per nucleus at about 0.2, about 1.0 and about 0.1 for the same three genotypes with brackets marked **** on both contrasts.",
+    "anchor": "Figure 1, panels D and F; native JPEG inspected",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID34268881_assets/EMMM-13-e13610-g006.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "qualifies": "entries[26]",
+    "qualifies_needle": "Exact P‐values and the specific tests used"
+   }
   ]
- }
+ },
+ "reading_history": [
+  {
+   "receipt": "FTR-20261003-34268881-06",
+   "reader": "scientist (Scientist C), intake wave 2 2026-10-03",
+   "context_policy": "SOURCE_FIRST",
+   "what_changed": "Appended entries 21-30: six body sentences and four figure attestations recording text-versus-panel disagreements not previously captured (the 4-AP claim, the non-significant 30-79.9 Hz decrease, the inverted cortical-layer nomenclature against the paper's own legend, the SCAR12 astrocytic nulls, the scope of Appendix Table S1, and the GAD1 transcript that the W-AAV rescue does not restore). No existing entry was altered.",
+   "outputs": [
+    "disease-models/wwox/research/fulltext_dossiers/PMID34268881.md",
+    "disease-models/wwox/research/intake_wave_20261003_C.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261003-C-STEINBERG-PANELS-01.md"
+   ]
+  }
+ ]
 }
