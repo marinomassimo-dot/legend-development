@@ -110,3 +110,18 @@ Each record carries the class-level genotype, how it was called, what the paper 
 (the WWOX patient of the panel series sits in the infantile-spasm group | F3=BRAT1 (1), CDKL5 (2), COL4A1 (1), DNM1 (1), GNAO1 (2), KCNQ2 (2), MECP2 (1), STXBP1 (3), WWOX (1), CNV (2) | PMID 29390993, Table S4; files/fulltext/PMID29390993_assets/12920_2018_320_MOESM1_ESM_xlsxdump.txt)
 (the duplication's phenotype band includes epilepsy whose EEG normalised on valproate | epilepsy—valproic acid resulted in a complete EEG normalization | PMID 24949445, Table 1; files/fulltext/PMID24949445_Szymanska2014_PMC.xml)
 (the ASD case's phenotype | M24=High functioning PDD-NOS | N24=PDD-NOS on ADOS and ADI-R; normal IQ on WISC-IV (TIQ 115); normal EEG and brain MRI | PMID 32081867, Table S5; files/fulltext/PMID32081867_assets/41598_2020_59922_MOESM2_ESM_xlsxdump.txt)
+
+## BATCH DISPOSITION — `BATCH_20261002_001` (2026-10-02, ACTOR_ID `scientist`), append-only
+
+**Nothing above this line was rewritten.**
+
+**Verdict:** PROPAGATED
+
+**MINOR** confirmed: paper additions and one triage promotion. All seven paper-registry ops and all
+six literature-log ops applied as written, exit 0. The provisional numbers held — `registry_records.py
+catalog` measured live highest `PAPER 118` and `LIT-0420` on this branch, so `PAPER 119`–`124` and
+`LIT-0421`–`0425` were free and no renumbering was needed. Both `partial_fulltext_read` records
+(PMID 40191585, PMID 32081867) say so, and no record of this candidate declares `full text reviewed`.
+This candidate lands two of the four `ORPHAN_COMPLETE_READ`s LINT was blocking on (PMID 29390993 →
+`PAPER 121`, PMID 24949445 → `PAPER 122`); the other two are landed by
+`CC-20261002-INTAKE-WAVE-ORPHANS-01`.

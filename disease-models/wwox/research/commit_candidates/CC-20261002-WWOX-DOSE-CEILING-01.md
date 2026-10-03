@@ -139,3 +139,22 @@ as a Latin `g` and preserves line-break hyphenation as hyphen-plus-space.)
 12. (In one colon adenocarcinoma line a raised level is reported to increase proliferation and inhibit apoptosis | `in low-grade invasive HT29 colon adenocarcinoma cells, increased WWOX expression promotes cell proliferation but inhibits apoptosis` | `files/fulltext/PMID33195192_Chou2020_PMC.xml` · Discussion, same paragraph, citing Nowakowska et al. 2014)
 
 13. (A particular quantity, rather than simply more, is stated to be what normal function requires | `A certain amount of WWOX expression may be necessary for maintaining normal physiological functions in cells.` | `files/fulltext/PMID33195192_Chou2020_PMC.xml` · Discussion, sentence following the cell-type dependence sentence)
+
+## BATCH DISPOSITION — `BATCH_20261002_001` (2026-10-02, ACTOR_ID `scientist`), append-only
+
+**Nothing above this line was rewritten.**
+
+**Verdict:** PROPAGATED
+
+Class re-judged independently by the integrator and confirmed **MINOR**. `CLAIM 011`'s status is
+`flagged for review`, not `consolidated baseline`; both ops are pure appends; no claim changes
+status; `BLOCK 1 §4` gains one bullet and is not redefined; no therapeutic score and no dose
+position moves; the direct-clinical tier policy is unchanged. None of §7's MAJOR triggers is met,
+so no blind locator audit was owed. Applied as written (1 of 2 ops on `claim_registry_current.md`,
+1 of 3 on `working_model_current.md`), exit 0.
+The candidate's own honesty about what it does **not** show is what carries it: the preprint has no
+vector, no in vivo arm and no heat-denatured or endotoxin control; the glioblastoma result is in
+cancer lines whose authors refuse the causal reading; and the one in vivo result in the corpus
+stands. What landed is the recorded **absence** of a measured ceiling, not a hazard claim.
+`CLAIM 011`'s pre-existing `PREMISE` and `REVIVAL_TRIGGER` lines were measured byte-identical
+before and after (sha256 per line, none lost; the record gained exactly one line).
