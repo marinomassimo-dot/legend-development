@@ -1,0 +1,228 @@
+{
+ "schema_version": 2,
+ "pmid": "42092735",
+ "doi": "10.1111/jpc.70401",
+ "receipt": "FTR-20261003-42092735-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID42092735.md",
+  "disease-models/wwox/research/intake_wave_20261003w3_A.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W3-A-L239R-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W3-A-VIGABATRIN-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W3-A-REGISTRY-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is owned by other batches; the corrections this reading supports are proposed as commit candidates and in the intake note."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A clinical genotype-phenotype source supplies no therapeutic lever for the reference genotype class; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is tested with a measured outcome beyond clinical anecdote; nothing to send to BLOCK-1 triage."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The triples are published in the candidates for a blind auditor; the reader cannot audit their own locators."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 1,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "A neonatology and paediatric-neurology team reporting one infant to 4 months; the clinical description is credible, the neurotransmitter framing is untested (no CSF study) and the mechanism paragraph is borrowed. Not a per-author sweep."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND parkinsonism",
+    "count": 12,
+    "source": "PubMed ESearch 2026-10-03"
+   }
+  ],
+  "note": "12 records co-mention WWOX and parkinsonism, mostly adult Parkinson-disease association work; this is the only paediatric WWOX-DEE case framed as parkinsonism known to this reading."
+ },
+ "multihop": {
+  "references_enumerated": 14,
+  "gene_direct_refs_in_source": [
+   "30094525"
+  ],
+  "resolved": [],
+  "queued": [
+   {
+    "pmid": "30094525",
+    "queue": "not queued by this actor in the full-text queue (owned by the Orchestrator); recorded here as reading debt and named in the intake note",
+    "reason": "Reference 14, Serin 2018 (Neurol Sci), is this paper's cited prior report of homozygous p.L239R; whether that child had any hypokinetic-rigid sign is the allele-level question, and only its abstract was seen."
+   }
+  ],
+  "note": "14 references enumerated. Refs 4-5 (Steinberg and Aqeilan 2021 review; Cheng 2020 mouse) are mechanism sources cited for borrowed speculation and are held elsewhere in LEGEND; no fact about this child depends on them. Serin 2018 is queued above."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42092735 --hops 1 (run AFTER the first pass)",
+  "hits": 3,
+  "note": "Only FT-106 (queue) — no PAPER/LIT identity record. FT-107 and the 2026-09-21 parkinsonism audit take the cohort PMID 41153369 to be this paper's cited prior report; the cited prior report is Serin 2018. See CC-20261003W3-A-L239R-01."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-03 via PubMed metadata (get_article_metadata): publication types ['Case Reports', 'Journal Article']; no retraction, expression of concern or correction listed for PMID 42092735.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 14,
+   "references_screened": 13,
+   "references_with_doi": 13,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --doi 10.1111/jpc.70401 --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42092735_SercePehlevan2026_PMC.xml",
+   "sha256": "19d041ace7703e21c54d75c2b27e69da9732603f6a0cab2ab6f0c401c5bf16e7",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13378201/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "result_sha256": "19d041ace7703e21c54d75c2b27e69da9732603f6a0cab2ab6f0c401c5bf16e7"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID42092735_SercePehlevan2026_supplement/JPC-62-1273-g002.jpg",
+   "sha256": "592018385ea6c2b37a06413439c2f14dfc5d47fd59f9d62342ce12b31e276842",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/758a/13378201/f99cd1a5ae9e/JPC-62-1273-g002.jpg",
+    "http_method": "GET",
+    "tier": "PMC CDN figure blob",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-03",
+    "result_sha256": "592018385ea6c2b37a06413439c2f14dfc5d47fd59f9d62342ce12b31e276842"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID42092735_SercePehlevan2026_supplement/JPC-62-1273-g001.jpg",
+   "sha256": "efe229c6d092379d641d3208e6bb89a4258cd804e1c6d3011d2a7db72afdcd3c",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/758a/13378201/50c948fd5338/JPC-62-1273-g001.jpg",
+    "http_method": "GET",
+    "tier": "PMC CDN figure blob",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-03",
+    "result_sha256": "efe229c6d092379d641d3208e6bb89a4258cd804e1c6d3011d2a7db72afdcd3c"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "CSF neurotransmitters were never measured.",
+    "snippet": "Cerebrospinal fluid (CSF) neurotransmitter analysis was not performed.",
+    "anchor": "Case Presentation, para 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42092735_SercePehlevan2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Vigabatrin added to phenobarbital did not stop the spasms.",
+    "snippet": "Initially, vigabatrin was added to phenobarbital; however, the patient continued to experience epileptic spasms despite this combination.",
+    "anchor": "Case Presentation, para 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42092735_SercePehlevan2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Spasms ceased after clobazam was added to valproate.",
+    "snippet": "Following the addition of clobazam, the spasms completely subsided",
+    "anchor": "Case Presentation, para 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42092735_SercePehlevan2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "At 4 months, seizure-free for one month; hypokinetic features persisted.",
+    "snippet": "his hypokinetic movement disorder and parkinsonian symptoms persisted",
+    "anchor": "Case Presentation, para 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42092735_SercePehlevan2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Parents not consanguineous by report but from the same village.",
+    "snippet": "Although parental consanguinity was not present, both parents were from the same village.",
+    "anchor": "Case Presentation, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42092735_SercePehlevan2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A perinatal thalamic diffusion lesion preceded the presentation.",
+    "snippet": "showed a small diffusion‐restricted area in the left lateral thalamus",
+    "anchor": "Case Presentation, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42092735_SercePehlevan2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The cited prior report of the allele is described as without prominent parkinsonian features.",
+    "snippet": "The same WWOX variant has previously been reported in association with acquired microcephaly and severe epileptic encephalopathy without prominent parkinsonian features",
+    "anchor": "Discussion, para 8 (cites reference 14, Serin 2018)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42092735_SercePehlevan2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1 shows three axial MRI slices; the thalamic focus is not identifiable to this reader at published resolution.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 1: three axial panels labelled a, b, c; panel a shows enlarged lateral ventricles with T2-like contrast, panel b bright diffusion-like contrast, panel c FLAIR/T2 with frontotemporal extra-axial space.",
+    "anchor": "Figure 1",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID42092735_SercePehlevan2026_supplement/JPC-62-1273-g002.jpg",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC13378201/fullTextXML returned HTTP 200 with a full JATS body on 2026-10-03; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure legend or a figure."
+ }
+}
