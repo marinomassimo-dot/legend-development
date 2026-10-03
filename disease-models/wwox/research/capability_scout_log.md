@@ -821,3 +821,53 @@ four scientific current files; no external retrieval, no spend, no new dependenc
 **Next surgical micro-step:** not a script. `L4` is still **OWED** — `CC-20260928-A1-RESIDUE-02` is
 written, measured and queued, and `main` carries `CLAIM 026`'s datum with none of its adjudication. The
 capability most missing at this moment is a batch that lands it, not a tool.
+
+## 2026-10-03 · Scientist C · intake wave 5 (group C) — a numeric table read from flattened text is silently wrong, and nothing in the toolchain reads one by cell
+
+**Reusable gap, with the evidence, and it very nearly produced a false published finding.**
+
+🔴 **The repository has no cell-aware reader for a JATS table, and the obvious extraction is wrong
+in a way that looks right.** Reading PMID 42205472's Table 4 — the only cross-species brain and CSF
+volume table in this wave, and the table that would convert any primate dose into a human one — from
+the flattened `itertext()` of the `<table-wrap>` returns `Rat2.2200.1519.5`. Adjacent numeric cells
+concatenate **with no delimiter**, and that string admits several readings. The one I first took made
+the rat's CSF volume exceed the macaque's, and I had drafted a criticism of the source for an
+internally implausible cell before re-extracting the table **by cell boundary** from the XML, which
+gave `2.2 | 20 | 0.15 | 1 | 9.5` and showed the source is correct and self-consistent. **The defect
+was mine.** Nothing would have caught it: the manifest validator checks that a *quoted sentence*
+appears in the artefact, and a table is not a sentence; the locator-audit protocol adjudicates
+`(proposition | quote | anchor)` triples, and a table cell has no quote to adjudicate.
+
+*Interim repair, applied:* a six-line cell-wise reader was written into the session scratchpad and
+used for every table in this wave (PMID 42205472 Tables 4 and 7, PMID 42134074 Table 1, which is the
+index of every human intrathecal programme and whose dose and age columns are load-bearing). The
+correction and the near-miss are recorded in the dossier, in the analysis note §9 and in
+`CC-20261003W5-C-CARRIED-NUMBER-INTEGRITY-01`.
+
+*Not wired, and this is the item worth building:* the reader itself is trivial — iterate `tr`,
+collect `td`/`th`, join with a delimiter — but the **place** for it is `deepdive_manifest.py`, which
+already opens and normalises every declared artefact. If a locator could declare
+`surface: "table"` with a `cell` address rather than a quoted sentence, a table-derived number would
+become checkable by the same command that checks every other locator, and the blind audit would gain
+a triple kind it currently cannot express. That is a harness change and is named for Harness
+Engineering rather than attempted from a reading branch. One occurrence is a repair, not a gate —
+but the occurrence here was a *false criticism of a correct source*, which is the failure mode this
+repository is least able to detect, because nothing contradicts it.
+
+🟡 **Secondary, smaller:** PMC serves figure and supplement binaries at
+`https://pmc.ncbi.nlm.nih.gov/articles/instance/<pmcaid>/bin/<file>` while the documented-looking
+`articles/<PMCID>/bin/<file>` returns **404** for the same asset. `pmc_pow_fetch.py` works perfectly
+once given the right URL and solved the proof-of-work page for one supplement, but the path
+convention is nowhere written down, and panel-level reading is now effectively mandatory (wave 4's
+lesson, and reinforced here: both figures I rendered changed the reading). *Interim repair:* the
+working path is recorded in the analysis note §9 and in this entry. *Candidate micro-step:* one line
+in `framework/scripts/README.md` next to `pmc_pow_fetch.py`.
+
+**Cost / API / privacy risk:** none. Everything above is local and stdlib-only; the only external
+retrieval was free open-access fetching from PMC, with no spend and no new dependency.
+
+**Next surgical micro-step:** not a script from this branch. The highest-value missing item this
+wave identified is not a tool at all but a **document**: PMID 42134074's reference 81, the
+multi-capsid primate study that triggered the regulatory hold which stopped a human paediatric
+intrathecal programme. Every DRG-safety conclusion in this evidence base routes through a study
+LEGEND has not read.

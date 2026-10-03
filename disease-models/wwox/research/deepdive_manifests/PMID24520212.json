@@ -1,0 +1,390 @@
+{
+ "schema_version": 2,
+ "pmid": "24520212",
+ "doi": "10.7150/ijbs.7727",
+ "receipt": "FTR-20261003-24520212-01",
+ "landing": [
+  "intake_wave_20261003w4_A",
+  "CC-20261003W4-A-REGISTRY-01",
+  "CC-20261003W4-A-REVIEWS-01"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not invoked by name: the artifact route was already located by the selector (Europe PMC JATS, or a publisher bronze-OA PDF located through OpenAlex) and was re-fetched by this reader, digest-identical to the selector's copy."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not run: dossier, locators and candidates were produced directly under the Scientist brief; a second pass would duplicate them."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not run by the reader by design: the producer of a reading is not its verifier. Triples are handed to the blind audit in the commit candidates."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "research_type": "mixed",
+  "output_kind": "narrative_review",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "total_publications": 4,
+  "publications_on_gene": 4,
+  "counts_measured": "PubMed esearch 2026-10-03: 'Li J[au] AND Liu P[au] AND WWOX' 4; 'Liu P[au] AND WWOX AND Xi'an' 3.",
+  "weighting": "A translational-medicine group's short review; no primary WWOX data of its own in this paper."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "WWOX AND (metabolism OR metabolic) AND review[pt]",
+    "route": "PubMed esearch 2026-10-03",
+    "count": 53
+   }
+  ],
+  "note": "A 2014 cancer-first review, superseded by PMID 36271927 on metabolism."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 55,
+  "enumeration_method": "55 <ref> elements on the JATS XML (duplicates included); Europe PMC MED references API lists 50; gene-direct by title match (38); status per PMID from fulltext_receipts.py.",
+  "gene_direct_refs_in_source": [
+   "19957554",
+   "15073846",
+   "19936220",
+   "17360458",
+   "15073125",
+   "17178850",
+   "18974271",
+   "21731849",
+   "20535528",
+   "16288044",
+   "16818616",
+   "17947476",
+   "21901168",
+   "23381945",
+   "17142102",
+   "20530675",
+   "23370280",
+   "16360296",
+   "15580310",
+   "14695174",
+   "15070730",
+   "22634283",
+   "22555346",
+   "18487609",
+   "19458077",
+   "15692750",
+   "12591741",
+   "15044096",
+   "22574198",
+   "16225988",
+   "19465938",
+   "15982416",
+   "16941225",
+   "19500159",
+   "17909041",
+   "20074932",
+   "11956080",
+   "15548692"
+  ],
+  "gene_direct_count": 38,
+  "resolved": [
+   {
+    "pmid": "19936220",
+    "how": "Already read in this corpus before this event (receipts FTR-20260806-19936220-01, FTR-20260806-19936220-02; depth complete_fulltext_read). Followed as a hop by checking what this paper says it reports against that reading where this event's argument depended on it; not re-read here."
+   },
+   {
+    "pmid": "17360458",
+    "how": "Already read in this corpus before this event (receipts FTR-20260811-17360458-01; depth complete_fulltext_read). Followed as a hop by checking what this paper says it reports against that reading where this event's argument depended on it; not re-read here."
+   },
+   {
+    "pmid": "18974271",
+    "how": "Already read in this corpus before this event (receipts FTR-20260811-18974271-01; depth complete_fulltext_read). Followed as a hop by checking what this paper says it reports against that reading where this event's argument depended on it; not re-read here."
+   },
+   {
+    "pmid": "21731849",
+    "how": "Already read in this corpus before this event (receipts FTR-20260909-21731849-01; depth complete_fulltext_read). Followed as a hop by checking what this paper says it reports against that reading where this event's argument depended on it; not re-read here."
+   },
+   {
+    "pmid": "23370280",
+    "how": "Already read in this corpus before this event (receipts FTR-20260811-23370280-02, FTR-20260814-23370280-01, FTR-20260814-23370280-02, FTR-20260811-23370280-01; depth complete_fulltext_read/partial_fulltext_read). Followed as a hop by checking what this paper says it reports against that reading where this event's argument depended on it; not re-read here."
+   },
+   {
+    "pmid": "15070730",
+    "how": "Already read in this corpus before this event (receipts FTR-20260909-15070730-02, FTR-20260814-15070730-01; depth complete_fulltext_read/partial_fulltext_read). Followed as a hop by checking what this paper says it reports against that reading where this event's argument depended on it; not re-read here."
+   },
+   {
+    "pmid": "22634283",
+    "how": "Already read in this corpus before this event (receipts FTR-20260811-22634283-02, FTR-20260811-22634283-01; depth complete_fulltext_read/partial_fulltext_read). Followed as a hop by checking what this paper says it reports against that reading where this event's argument depended on it; not re-read here."
+   },
+   {
+    "pmid": "18487609",
+    "how": "Already read in this corpus before this event (receipts FTR-20260811-18487609-01; depth complete_fulltext_read). Followed as a hop by checking what this paper says it reports against that reading where this event's argument depended on it; not re-read here."
+   },
+   {
+    "pmid": "15692750",
+    "how": "Already read in this corpus before this event (receipts FTR-20260913-15692750-01; depth complete_fulltext_read). Followed as a hop by checking what this paper says it reports against that reading where this event's argument depended on it; not re-read here."
+   },
+   {
+    "pmid": "22574198",
+    "how": "Already read in this corpus before this event (receipts FTR-20260914-22574198-01; depth complete_fulltext_read). Followed as a hop by checking what this paper says it reports against that reading where this event's argument depended on it; not re-read here."
+   },
+   {
+    "pmid": "15982416",
+    "how": "Already read in this corpus before this event (receipts FTR-20260913-15982416-01; depth complete_fulltext_read). Followed as a hop by checking what this paper says it reports against that reading where this event's argument depended on it; not re-read here."
+   },
+   {
+    "pmid": "16941225",
+    "how": "Already read in this corpus before this event (receipts FTR-20260913-16941225-01; depth complete_fulltext_read). Followed as a hop by checking what this paper says it reports against that reading where this event's argument depended on it; not re-read here."
+   },
+   {
+    "pmid": "19500159",
+    "how": "Already read in this corpus before this event (receipts FTR-20260806-19500159-01; depth complete_fulltext_read). Followed as a hop by checking what this paper says it reports against that reading where this event's argument depended on it; not re-read here."
+   }
+  ],
+  "queued": [
+   {
+    "pmid": "19957554",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "15073846",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "15073125",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "17178850",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "20535528",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "16288044",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "16818616",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "17947476",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "21901168",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "23381945",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "17142102",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "20530675",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "16360296",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "15580310",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "14695174",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "22555346",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "19458077",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "12591741",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "15044096",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "16225988",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "19465938",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "17909041",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "20074932",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "11956080",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "15548692",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   }
+  ],
+  "note": "The heterozygote tumour primary (17360458) and the rat skeletal primary (19500159) are both read in the corpus; this review's restatements of them were compared with those readings."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does the registry already read the primary behind this review's heterozygote sentence?",
+  "hits": 1,
+  "finding": "Yes: CLAIM 032 reads PMID 17360458 as 10/58 vs 2/60 SPONTANEOUS tumours and 37/46 vs 20/42 after ENU. This review attaches the 10/58 vs 2/60 figures to ENU-treated mice and to lung papillary carcinoma."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-03",
+  "route": "PubMed get_article_metadata for 24520212",
+  "result": "No retraction, expression of concern or correction in the PubMed record. Article types: Journal Article, Research Support Non-U.S. Gov't, Review.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "UNSCREENABLE_NO_REFERENCE_LIST",
+   "reference_source": "network",
+   "references_declared": 0,
+   "references_screened": 0,
+   "references_with_doi": 0,
+   "schema": "retraction_check.dependencies/1",
+   "screened": false,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID24520212_Li2014_PMC.xml",
+   "sha256": "4d92edc8c93cdcf3a303f68fb7d0fd39df6f1d8f2981ce50a92d7e412b12d51f",
+   "kind": "article_text",
+   "note": "Europe PMC JATS XML, full body, tables and reference list present.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3920169/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_fulltextxml",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "4d92edc8c93cdcf3a303f68fb7d0fd39df6f1d8f2981ce50a92d7e412b12d51f"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID24520212_Li2014_figures/ijbsv10p0142g001.jpg",
+   "sha256": "8fa3fed1e8d5cde6963febb21cceb8af4dabdacf609b2b1c493977f28da0cfc6",
+   "kind": "figure",
+   "note": "Figure 1: domain map (WW 17-49, 58-90, NLS, SDR 121-330, Y33, Y287). Inspected.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/48dd/3920169/b1341395f2f2/ijbsv10p0142g001.jpg",
+    "http_method": "GET",
+    "tier": "publisher or PMC CDN figure image",
+    "user_agent_policy": "browser_like",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "8fa3fed1e8d5cde6963febb21cceb8af4dabdacf609b2b1c493977f28da0cfc6"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID24520212_Li2014_figures/ijbsv10p0142g002.jpg",
+   "sha256": "de8ab4fef27b1ea5f4a141d9406be1f0e8830c2887ca10752a2d3384fc888ef5",
+   "kind": "figure",
+   "note": "Figure 2: schematic of WWOX partners (AP-2gamma, deltaNp63alpha, ErbB4, c-Jun, RUNX2, WBP2/ER). Inspected.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/48dd/3920169/cb5c561df833/ijbsv10p0142g002.jpg",
+    "http_method": "GET",
+    "tier": "publisher or PMC CDN figure image",
+    "user_agent_policy": "browser_like",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "de8ab4fef27b1ea5f4a141d9406be1f0e8830c2887ca10752a2d3384fc888ef5"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC JATS XML: abstract, all sections, Table 1 cells, both figure captions, 55 references.",
+  "abstract_anchoring_waived": "Abstract entries are marked surface 'abstract'.",
+  "note": "COVERAGE: complete. The review contains no brain, epilepsy or human germline content.",
+  "entries": [
+   {
+    "proposition": "The review attaches 10/58 vs 2/60 to ENU-treated heterozygous mice.",
+    "snippet": "When mice are given a single dose of ENU (powerful chemical mutagen), 17.2 % (10/58) of the heterozygous WWOX KO mice develop papillary carcinoma of the lung, compared with 3.3% (2/60) of the wide type",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24520212_Li2014_PMC.xml",
+    "anchor": "Section 'WWOX deregulation is associated with carcinogenesis and metastasis' (ref 12)",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review states metabolic disease as a consequence of reduced WWOX, after a section whose evidence is homozygous knockout rodents.",
+    "snippet": "reduced or lost expression of WWOX will lead to development of metabolic diseases",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24520212_Li2014_PMC.xml",
+    "anchor": "Section 'Bone metabolism disorders', closing sentence (same wording in the Abstract)",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The skeletal sentence speaks of mice but cites a rat paper (ref 16).",
+    "snippet": "WWOX-/- mice also suffer a disorder of skeleton development and increased osteoclast activity, characterized by thinner cortical bones and decreased mineral density and bone volume",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24520212_Li2014_PMC.xml",
+    "anchor": "Section 'Bone metabolism disorders' (ref 16)",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}

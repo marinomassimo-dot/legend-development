@@ -1,0 +1,245 @@
+{
+ "schema_version": 2,
+ "pmid": "35328751",
+ "doi": "10.3390/ijms23063326",
+ "pmcid": "PMC8955937",
+ "receipt": "FTR-20261003-35328751-02",
+ "receipt_note": "Prepared as a JSON file for the integrator and not appended at preparation time. It is a re-read: the standing receipt FTR-20260921-35328751-01 covered the body from a text extraction with tables, figures, references and supplement all `unavailable`.",
+ "landing": [
+  "FTR-20261003-35328751-02",
+  "disease-models/wwox/research/intake_wave_20261003w4_B.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W4-B-HIF1A-SCOPE-01.md"
+ ],
+ "landing_note": "Intake wave 4 2026-10-03, Scientist B, group B. This paper is the metabolic dose arm: it is the only source in the group that moves WWOX in both directions in one system.",
+ "skills_considered": [
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline over six papers held against one question; the dossier and this manifest carry what the skill would have produced."
+  },
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Europe PMC REST fullTextXML returned a body for PMC8955937 on the first attempt. The supplementaryFiles endpoint returned HTTP 500 for this PMCID, so Figures S1-S6 remain unread."
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true,
+   "reason": "paper_packet.py packet and registry_records.py get were run first: PAPER 023 exists, CLAIM 009 links to it, and one partial receipt stands."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED. CLAIM 009 is `in observation`, not baseline, but the scope correction proposed here is handed to the blind audit through the candidate."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Not invoked. The question was whether WWOX dose reads out continuously on a metabolic endpoint; the paper's own two-directional design answers it without a reasoning primitive."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": true,
+  "total_publications": 80,
+  "publications_on_gene": 38,
+  "counts_measured": "PubMed esearch 2026-10-03 (tool=LEGEND-research): 'Bednarek AK[au]' 80, 'Bednarek AK[au] AND WWOX' 38.",
+  "weighting": "Medical University of Lodz, senior author Bednarek. Independent of both the Aqeilan (Hebrew University) and Chang/Hsu (NCKU) lineages, and WWOX is nearly half its output. Full weight on the measurements; the laboratory is a WWOX laboratory, not a diabetes laboratory, and its system is a skin fibroblast line.",
+  "note": "Research-group knowledge base is excluded from the public edition; this rests on measured PubMed counts and the paper's own affiliations."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "Bednarek AK[au] AND WWOX",
+    "route": "PubMed esearch 2026-10-03",
+    "count": 38
+   },
+   {
+    "query": "WWOX is the manipulated variable in this paper",
+    "route": "reading the Methods",
+    "count": 1
+   }
+  ],
+  "note": "Maximum density: WWOX is both subject and manipulated variable, in two directions."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 127,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "The body cites to [127]. The MDPI JATS deposit carries the reference list, but this reading did not dereference it; the two load-bearing WWOX antecedents are the authors' own gestational-diabetes study [50] and Abu-Remaileh's HIF1A work [26].",
+  "resolved": [],
+  "queued": [],
+  "dedup_performed": "Not performed."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "What does the corpus already assert about this paper, and does any of it misreport what the paper measured?",
+  "hits": 3,
+  "finding": "PAPER 023 records 'Model/species: mixed mechanistic / non-CNS direct' and 'Genotype/model: WWOX downregulation framework', and carries no evidence-depth line although a partial receipt has stood since 2026-09-21. Both fields are vaguer than the paper: the system is ONE immortalised human skin fibroblast line (1BR.3.N, ECACC 90020508) under four crossed sugar/oxygen conditions, the loss-of-function arm is a CRISPR/Cas9 polyclonal knockdown the paper itself calls KO (about three-fold lower mRNA), and there is a second arm — lentiviral WWOX cDNA overexpression at about 850-fold mRNA — that no registry record mentions at all. CLAIM 009 cites the paper for a redox/energetics inference and is not touched by this reading."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-03",
+  "route": "PubMed article metadata for this PMID (article_types: Journal Article only). No retraction, erratum or expression of concern is carried.",
+  "result": "No retraction, no expression of concern, no erratum.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 127,
+   "references_screened": 114,
+   "references_with_doi": 114,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 13
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID35328751_Baryla2022_PMC.xml",
+   "sha256": "3610388f72848bd63c6084576b9d243589ffb44e0ef9169691b515a09b5b9de8",
+   "kind": "article_text",
+   "note": "Europe PMC REST fullTextXML for PMC8955937, acquired 2026-10-03. This is a structured surface and replaces the text extraction behind the 2026-09-21 receipt, whose own evidence_basis recorded that italic tokens — including the italic p of p-values and the gene names in the title — had been deleted by the extractor.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8955937/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_rest_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "3610388f72848bd63c6084576b9d243589ffb44e0ef9169691b515a09b5b9de8"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "JATS from the Europe PMC fullTextXML endpoint for PMC8955937, 232616 bytes; every locator is matched against it by deepdive_manifest.py --verify-artifacts.",
+  "abstract_anchoring_waived": "No locator draws on the abstract. PubMed's abstract for this record is itself defective — the typesetter's italic deletion removes the gene names, leaving 'The axis Downregulation' — which is one more reason every quote here comes from the body.",
+  "note": "Coverage: abstract, introduction, all Results sections, Discussion, Conclusions, Materials and Methods, and all twelve figure legends in the JATS. Figure panels were NOT inspected as images and the supplementary figures S1-S6 could not be fetched (Europe PMC supplementaryFiles returns HTTP 500 for PMC8955937), so every statement about the overexpression arm rests on running text that carries its own numbers. The reading is partial for both reasons.",
+  "entries": [
+   {
+    "proposition": "THE LOSS-OF-FUNCTION ARM IS A PARTIAL DEPLETION THAT THE PAPER CALLS KO THROUGHOUT. Any claim inheriting the word knockout from this paper inherits about a three-fold mRNA reduction in a polyclonal population, not a null.",
+    "snippet": "The relative expression level of WWOX mRNA was three times lower in 1BR.3.N WWOX KO variant in comparison to CONTR, and 850 times higher in 1BR.3.N WWOX OE than WT.",
+    "surface": "body",
+    "anchor": "Results 2.1 Stable Transfection Confirmation",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "immortalised human skin fibroblast line",
+     "cell_line": "1BR.3.N (ECACC 90020508)",
+     "genotype": "CRISPR/Cas9 sgRNA knockdown (called KO) and lentiviral WWOX cDNA overexpression",
+     "treatment": "puromycin selection, polyclonal",
+     "comparator": "scrambled sgRNA control and empty-vector wild type",
+     "endpoint": "WWOX mRNA and protein level"
+    },
+    "artifact": "files/fulltext/PMID35328751_Baryla2022_PMC.xml"
+   },
+   {
+    "proposition": "GLUCOSE UPTAKE DOES NOT MOVE MONOTONICALLY WITH WWOX DOSE: THE SIGN OF THE LOSS-OF-FUNCTION EFFECT REVERSES BETWEEN CONDITIONS. A carrier-detectable uptake readout cannot be specified without naming the oxygen and glucose condition.",
+    "snippet": "We observed that WWOX silencing significantly increased glucose uptake in normoxia normoglycemia and reduced glucose uptake in hypoxia hyperglycemia conditions in the absence of insulin.",
+    "surface": "body",
+    "anchor": "Results 2.3 WWOX Depending Glucose Uptake, first paragraph",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "immortalised human skin fibroblast line",
+     "cell_line": "1BR.3.N",
+     "genotype": "WWOX knockdown versus scrambled control",
+     "treatment": "5.5 or 25 mM glucose, 19% or 1% O2, 48 h, with and without 1 microM insulin",
+     "timepoint": "48 h",
+     "comparator": "scrambled sgRNA control in the same condition",
+     "endpoint": "2-deoxyglucose uptake"
+    },
+    "artifact": "files/fulltext/PMID35328751_Baryla2022_PMC.xml"
+   },
+   {
+    "proposition": "THE RE-SUPPLY ARM DOES NOT RESTORE THE LACTATE ENDPOINT — IT RAISES IT IN TWO OF THE FOUR CONDITIONS. Lactate is therefore not a dose-faithful readout of WWOX in this system, and a re-supply programme cannot assume the loss-of-function direction simply inverts.",
+    "snippet": "Lactate concentration were significantly higher in case of WWOX overexpression in comparison to 1BR.3.N WT cell line in normoxia normoglycemia and hypoxia hyperglycemia",
+    "surface": "body",
+    "anchor": "Results 2.5, final paragraph on the overexpression variant",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "immortalised human skin fibroblast line",
+     "cell_line": "1BR.3.N",
+     "genotype": "WWOX cDNA overexpression versus empty-vector wild type",
+     "treatment": "the same four sugar/oxygen conditions",
+     "timepoint": "48 h",
+     "comparator": "empty-vector wild type in the same condition",
+     "endpoint": "medium L-lactate concentration"
+    },
+    "artifact": "files/fulltext/PMID35328751_Baryla2022_PMC.xml"
+   },
+   {
+    "proposition": "THE OXIDATIVE ARM WAS MEASURED AND WAS NULL. The Warburg framing in this paper rests on the glycolytic side alone; no mitochondrial endpoint moved.",
+    "snippet": "Nonetheless, in our study, citrate synthase expression and activity were tested and we did not observe WWOX influence on it.",
+    "surface": "body",
+    "anchor": "Discussion, paragraph on citrate synthase",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "immortalised human skin fibroblast line",
+     "cell_line": "1BR.3.N",
+     "genotype": "WWOX knockdown versus scrambled control",
+     "treatment": "all four sugar/oxygen conditions",
+     "timepoint": "48 h",
+     "comparator": "scrambled sgRNA control",
+     "endpoint": "citrate synthase expression and activity"
+    },
+    "artifact": "files/fulltext/PMID35328751_Baryla2022_PMC.xml"
+   },
+   {
+    "proposition": "THE DISCUSSION ASSERTS A NUCLEAR TRANSLOCATION THAT THE PAPER'S OWN FRACTIONATED BLOT DID NOT DETECT. The blot was positioned to see it and reported no effect; the sentence that survives is the HRE reporter, not the translocation.",
+    "snippet": "We didn’t observed WWOX influence on HIF1α protein in nuclear fraction.",
+    "surface": "body",
+    "anchor": "Results 2.6.1 Cytoplasmic and Nuclear Distribution of WWOX and HIF1α Proteins",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "immortalised human skin fibroblast line",
+     "cell_line": "1BR.3.N",
+     "genotype": "WWOX knockdown versus scrambled control",
+     "treatment": "all four sugar/oxygen conditions, 6 h",
+     "timepoint": "6 h",
+     "comparator": "scrambled sgRNA control, same fraction",
+     "endpoint": "HIF1 alpha immunoblot in nuclear and cytoplasmic fractions"
+    },
+    "artifact": "files/fulltext/PMID35328751_Baryla2022_PMC.xml"
+   },
+   {
+    "proposition": "THE PAPER'S CLAIM THAT HIF1A PROTEIN RISES ON WWOX LOSS IS CARRIED BY WHOLE-CELL IMMUNOCYTOCHEMISTRY, AND IT POINTS THE OTHER WAY FROM THE CYTOPLASMIC BLOT IN THE SAME CONDITIONS. Two assays of the same quantity disagree inside one paper, and only one of them is quoted in the Discussion.",
+    "snippet": "WWOX downregulation resulted in HIF1α increase in normoxia normoglycemia and hyperglycemia condition (both p < 0.01).",
+    "surface": "body",
+    "anchor": "Results 2.7 Immunocytochemistry of WWOX and HIF1α",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "immortalised human skin fibroblast line",
+     "cell_line": "1BR.3.N",
+     "genotype": "WWOX knockdown versus scrambled control",
+     "treatment": "all four sugar/oxygen conditions",
+     "comparator": "scrambled sgRNA control in the same condition",
+     "endpoint": "total corrected cell fluorescence for HIF1 alpha"
+    },
+    "artifact": "files/fulltext/PMID35328751_Baryla2022_PMC.xml"
+   },
+   {
+    "proposition": "THE PAPER'S OWN THERAPEUTIC LANGUAGE TARGETS WWOX IN DIABETES AND SAYS NOTHING ABOUT THE BRAIN OR ABOUT ANY METABOLIC INTERVENTION.",
+    "snippet": "However, strategies to normalize glucose metabolism by targeting WWOX may have promise as therapies in the future.",
+    "surface": "body",
+    "anchor": "Section 5 Conclusions, final sentence",
+    "panel_text_relation": "text_only",
+    "artifact": "files/fulltext/PMID35328751_Baryla2022_PMC.xml"
+   }
+  ]
+ }
+}

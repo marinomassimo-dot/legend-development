@@ -171,3 +171,15 @@ modifications are triggered by triage-depth work.
 
 ---
 
+
+## RC-C-20261003w4 — Before any WWOX vector study, design the toxicity-surveillance baseline rather than the threshold
+
+**Status:** open · **Tag:** `INFERENZA` · **Opened:** 2026-10-03
+**Provenance:** Authored by `BATCH_20261003_003` from the op specification of `CC-20261003w4-C-TOXBIOMARKER-01` (intake wave 4 2026-10-03, Scientist C), whose ops were a prose specification; the record text below is the integrator's, the substance and every figure are the candidate's. `context_policy: SOURCE_FIRST`. **Not medical advice.**
+**Sources:** PMID 36700120 ([[paper_registry_current#PAPER 164]]) · PMID 41404412 ([[paper_registry_current#PAPER 162]]) · PMID 41992613 ([[paper_registry_current#PAPER 160]])
+
+**The concrete acquisition.** A pre-dose blood draw per animal; longitudinal sampling at the time points where the signal actually lives (day 8 onward, maximum between days 15 and 28/29, with resolution by 52 weeks); and **both** a vehicle arm and an empty-capsid or promoter-less arm — because PMID 36700120 shows that the vehicle arm moves the marker and that capsid alone moves neither marker nor histology, so without both arms a rise cannot be attributed.
+
+**The four limits that travel with the panel.** Nonclinical only; fold-change and not concentration; not disease-specific, which is a specific problem in a developmental encephalopathy where background neurofilament may already be raised; and one sponsor's internal validation. CSF CXCL10 and MIP1α are carried as the earlier-rising candidates from PMID 41404412 with their own limit — reported in three studies from one sponsor, with no independent replication and no operating characteristics at all.
+
+🔴 Tier 3 under `LEGEND_CORE` §13 with respect to WWOX: these are vector-toxicity analytes, never WWOX disease biomarkers. Carried at `RL-C-20261003w4c`.

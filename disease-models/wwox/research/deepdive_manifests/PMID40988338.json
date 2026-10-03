@@ -1,0 +1,250 @@
+{
+ "schema_version": 2,
+ "pmid": "40988338",
+ "doi": "10.1016/j.ymthe.2025.09.040",
+ "receipt": "FTR-20261003-40988338-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID40988338.md",
+  "disease-models/wwox/research/intake_wave_20261003w5_A.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W5-A-REGISTRY-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W5-A-CARGO-CASSETTE-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W5-A-TRANSGENE-IMMUNITY-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W5-A-WINDOW-STATUS-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W5-A-DOSE-TWO-SIDED-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is a research surface owned by other batches; every transferable lesson here is proposed as a commit candidate instead of written into the ledger."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A gene-replacement lesson from another gene is not a WWOX therapeutic hypothesis; forging one would convert a stated transfer limit into a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No small molecule with a SMILES is proposed, so the BLOCK-1 ADMET gate has nothing to triage."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The triples are published for a blind auditor; a reader cannot audit their own locators."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "No author-level PubMed census was run for this reading: the paper is about another gene entirely and contributes only transferable method, so group standing on WWOX is not the weighting that matters. What was recorded instead is declared competing interest, read from the paper itself and carried in the dossier.",
+  "external_provenance": {
+   "source": "not applicable — no external author census performed",
+   "date": "2026-10-03"
+  }
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND AAV",
+    "count": 2,
+    "source": "PubMed ESearch rettype=count 2026-10-03"
+   },
+   {
+    "query": "WWOX AND gene replacement",
+    "count": 2,
+    "source": "PubMed ESearch rettype=count 2026-10-03"
+   },
+   {
+    "query": "WWOX AND self-complementary",
+    "count": 0,
+    "source": "PubMed ESearch rettype=count 2026-10-03"
+   }
+  ]
+ },
+ "multihop": {
+  "references_enumerated": 0,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference lists were not enumerated in this pass and no multi-hop expansion was performed; the coverage key 'references' is declared not_read for that reason."
+ },
+ "corpus_crossquery": {
+  "query": "paper_packet.py packet --pmid 40988338 (run BEFORE the first pass, technical state only)",
+  "hits": 0,
+  "note": "NO RECORD MATCHED on any registry surface (paper_packet.py packet --pmid, 2026-10-03): first reading, no prior receipt. The paper does not mention WWOX."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-03 via NCBI E-utilities efetch (db=pubmed, retmode=xml): the publication types carry no retraction, expression of concern or correction notice, and no CommentsCorrections element of any RefType is present for this PMID.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 65,
+   "references_screened": 58,
+   "references_with_doi": 58,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 7
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID40988338_Quinlan2025_PMC.xml",
+   "sha256": "1959b412a437c5f24be10884ebadb0d3eb3d474aa313c37b55dc3fd0edc138be",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12703155/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-03",
+    "result_sha256": "1959b412a437c5f24be10884ebadb0d3eb3d474aa313c37b55dc3fd0edc138be"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID40988338_Quinlan2025_PMC_supp_mmc1.pdf",
+   "sha256": "1c3695b7146302e97b450a6f7f8e829c650d9b8e15b26e3d98dc9955d4cf04ea",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/12703155/bin/mmc1.pdf",
+    "tier": "PMC article instance binary via proof-of-work solver (framework/scripts/pmc_pow_fetch.py)",
+    "http_method": "GET",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-03",
+    "result_sha256": "1c3695b7146302e97b450a6f7f8e829c650d9b8e15b26e3d98dc9955d4cf04ea"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID40988338_Quinlan2025_PMC_supp_mmc1.txt",
+   "sha256": "0c7292e8b9e65969390f713259aa043c7a279d23d7179b3eefa7bdc605ac090f",
+   "kind": "supplement_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/12703155/bin/mmc1.pdf",
+    "tier": "text layer derived locally from the persisted PDF with pdftotext -layout -nopgbrk; lossy for figure panels (printed labels recovered, plotted points not)",
+    "http_method": "GET",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-03",
+    "result_sha256": "0c7292e8b9e65969390f713259aa043c7a279d23d7179b3eefa7bdc605ac090f"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The cassette exceeds the nominal AAV packaging limit.",
+    "snippet": "a construct size of 5.1 kb ITR-to-ITR",
+    "anchor": "Results, transgene generation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40988338_Quinlan2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Packaging an oversized genome halved the yield relative to a same-day control within the limit.",
+    "snippet": "a 2-fold reduction in viral yield for our oversized construct",
+    "anchor": "Results, transgene generation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40988338_Quinlan2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The empty-capsid fraction was measured by electron microscopy.",
+    "snippet": "a full-to-empty capsid ratio of approximately 94.6:5.4",
+    "anchor": "Results, transgene generation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40988338_Quinlan2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The model is a heterozygote expressing about half of wild-type protein, not a null.",
+    "snippet": "expressed approximately half of the SynGAP protein levels of WT controls in the hippocampus",
+    "anchor": "Results, in vivo expression",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40988338_Quinlan2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Neonatal delivery reduced epileptiform activity but failed on every behavioural endpoint.",
+    "snippet": "did not mitigate this hyperactivity phenotype",
+    "anchor": "Results, P2 arm",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40988338_Quinlan2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors attribute the neonatal failure to expression level and distribution rather than to age.",
+    "snippet": "more robust behavioral rescue likely requires higher doses or improved delivery strategies",
+    "anchor": "Discussion, window paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40988338_Quinlan2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Raising the vector dose did not raise total protein, indicating a ceiling.",
+    "snippet": "suggesting a ceiling effect that limits overexpression",
+    "anchor": "Discussion, overexpression paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40988338_Quinlan2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A dose-associated surgical harm is reported only in the methods and never discussed.",
+    "snippet": "half of the mice that received the high-dose",
+    "anchor": "Methods, surgical protocol",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40988338_Quinlan2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Seizures were not abolished at any dose or age.",
+    "snippet": "did not completely prevent the occurrence of GTC seizures",
+    "anchor": "Discussion, epileptiform paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40988338_Quinlan2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors cite a precedent that restricting expression to the pathogenic cell class improved both safety and efficacy.",
+    "snippet": "targeting expression to inhibitory neurons improved therapeutic safety and efficacy",
+    "anchor": "Discussion, cell-type paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40988338_Quinlan2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST fullTextXML returned HTTP 200 with a full JATS body for PMC12703155 on 2026-10-03; the declared article artefact is that response, byte for byte."
+ }
+}

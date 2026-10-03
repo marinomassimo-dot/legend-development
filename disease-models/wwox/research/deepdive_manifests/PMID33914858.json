@@ -1,0 +1,280 @@
+{
+ "schema_version": 2,
+ "pmid": "33914858",
+ "doi": "10.1093/brain/awab174",
+ "pmcid": null,
+ "receipt": "FTR-20261003-33914858-02",
+ "receipt_note": "Prepared as a JSON file for the integrator and not appended at preparation time. It is a re-read: the standing receipt FTR-20260923-33914858-01 covers this paper with figures `captions_only`, and its declared authoritative artefact — the saved publisher HTML — is NOT present in this checkout (see source_artifacts).",
+ "landing": [
+  "FTR-20261003-33914858-02",
+  "disease-models/wwox/research/intake_wave_20261003w4_B.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W4-B-MYELIN-CELLAUT-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W4-B-CARRIER-01.md"
+ ],
+ "landing_note": "Intake wave 4 2026-10-03, Scientist B, group B. This is the myelin anchor of the corpus and the paper CLAIM 003 rests on; this pass went to the printed page for the quantities the registry had deferred to a PDF nobody could fetch.",
+ "skills_considered": [
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline over the group; the two companion candidates carry the propositions."
+  },
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "The cascade was re-run and FAILED for a new text surface: OUP's advance-article PDF, the article page and the article-lookup URL all return HTTP 403 behind a Cloudflare interstitial to this host; watermark.silverchair.com returns nothing; Unpaywall and OpenAlex name only that one bronze location; Semantic Scholar names the same URL; there is no PMCID and no repository copy (has_repository_copy false); the Wayback CDX index holds no capture of any awab174 URL. The reading therefore used the artefact already on disk."
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true,
+   "reason": "paper_packet.py packet was run first: it reports one prior partial receipt, figures owed, two recorded acquisition routes both ending in HTTP 403, and one undeclared artefact on disk."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED AND LOAD-BEARING. CLAIM 003 is a `consolidated baseline` claim, so the triples in both candidates must go to a blind audit before anything here touches it."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Not invoked. The group question named the comparison to make (this paper against the oligodendroglial conditional), so no primitive was needed to find it."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": true,
+  "is_primary_group_for_gene": true,
+  "total_publications": 138,
+  "publications_on_gene": 65,
+  "counts_measured": "PubMed esearch 2026-10-03 (tool=LEGEND-research): 'Aqeilan RI[au]' 138, 'Aqeilan RI[au] AND WWOX' 65.",
+  "weighting": "The senior laboratory of WWOX neurodevelopmental biology, with electrophysiology from Krembil (Carlen) and myelin biology from Weizmann (Peles) as co-authors. Full weight on the measurements. What it does not carry is independence from the oligodendroglial preprint read beside it in this group: that preprint is the same senior author, so the two are one laboratory's two experiments, not two witnesses.",
+  "note": "Research-group knowledge base is excluded from the public edition; this rests on measured PubMed counts and the paper's own author list."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "Aqeilan RI[au] AND WWOX",
+    "route": "PubMed esearch 2026-10-03",
+    "count": 65
+   },
+   {
+    "query": "WWOX is the deleted gene in every genotype of this paper",
+    "route": "reading the Methods",
+    "count": 1
+   }
+  ],
+  "note": "Maximum density: WWOX is the subject, the manipulated variable and the title."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 0,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "Not enumerated in this pass. The reference list was not re-read from the rendered pages; the prior receipt did not enumerate it either.",
+  "resolved": [],
+  "queued": [],
+  "dedup_performed": "Not performed."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "What does the corpus already assert about this paper, and is any of it wrong or now improvable?",
+  "hits": 4,
+  "finding": "PAPER 004 carries the paper as the myelination anchor and says the quantitative enrichment of the claim was deferred to a PDF that was never fetched; this reading supplies those quantities from the printed page. PAPER 004 also flags a duplicate identity, CORPUS-STUB-087, on the same DOI, still unmerged. CLAIM 003 is `consolidated baseline` and its evidence-boundary note states the condition that would settle the open half — 'Non promuovibile senza una delezione o un rescue Olig2/CNP-specifici'. That exact experiment now exists in a 2025 preprint read in this same group, which is NOT peer reviewed and therefore cannot change the claim's status. No registry statement about this paper was found to be false."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-03",
+  "route": "PubMed article metadata for this PMID (article_types: Journal Article; Research Support, Non-U.S. Gov't). No retraction, erratum or expression of concern is carried.",
+  "result": "No retraction, no expression of concern, no erratum.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 64,
+   "references_screened": 58,
+   "references_with_doi": 58,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 6
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID33914858_Repudi2021_OUP_browserprint.pdf",
+   "sha256": "8d1e751dbc31128431b9a4ae0c2cb68af90505fd8e8deaecdc46474df08a9d20",
+   "kind": "article_binary",
+   "note": "Operator-supplied browser print-to-PDF of the publisher HTML, 48 printed pages, already on disk and byte-identical to the companion artefact named by FTR-20260923-33914858-01. 🔴 The HTML that receipt declares as its AUTHORITATIVE TEXT SURFACE — files/fulltext/PMID33914858_Repudi2021_OUP.html, sha256 3baf27af9f906a8bfa013924a90a0eca7713b25463d6f039fddef0242caac902 — is NOT in this checkout: a search of the whole machine by name and a SHA-256 sweep of 504 candidate files under the home and temporary trees found no copy, nor of the five declared supplement files. This manifest therefore does not and cannot cite it.",
+   "acquisition_recipe": {
+    "no_recipe": "Operator-supplied in a prior session. No free route to a fresh copy exists today: OUP returns HTTP 403 behind Cloudflare on the advance-article PDF, the article page and the article-lookup URL; there is no PMCID; Unpaywall and OpenAlex name only that one bronze publisher location and record has_repository_copy false; the Wayback CDX index holds no capture. No paid access was attempted.",
+    "acquired_on": "2026-09-23",
+    "derived": false,
+    "result_sha256": "8d1e751dbc31128431b9a4ae0c2cb68af90505fd8e8deaecdc46474df08a9d20"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID33914858_Repudi2021_OUP_browserprint_pdftotext.txt",
+   "sha256": "de91c590783a38916f12b8a127813ef2d0f26c14be6f00e67aa0b23b342aa12d",
+   "kind": "article_text",
+   "note": "🔴 DECLARED FOR PROVENANCE AND PAGE INDEXING ONLY, AND REFUSED AS A QUOTE SURFACE. The prior receipt measured this PDF's damage profile directly: it destroys the less-than-or-equal sign in 4 of 4 occurrences, carries 0 of the HTML's 4, adds 12,025 non-printable characters, and renders the fi ligature as THORN so that 'significant' survives in 2 of 19 occurrences. Rule 5d refuses a SUSPECT surface rather than normalising it, so NO locator below is matched against this file; every text locator is `rendered_text`, read on the printed page. This file was used only to find which pages carry which content.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID33914858_Repudi2021_OUP_browserprint.pdf",
+    "extractor": {
+     "name": "pdftotext (poppler)",
+     "version": "24.02.0",
+     "call": "pdftotext -layout -nopgbrk PMID33914858_Repudi2021_OUP_browserprint.pdf PMID33914858_Repudi2021_OUP_browserprint_pdftotext.txt"
+    },
+    "acquired_on": "2026-10-03",
+    "lossiness": "SUSPECT. See the note above; the file is an index, not evidence."
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": false,
+  "source_fulltext_indexed_evidence": "No PMCID (Europe PMC search returns this record with pmcid None, 2026-10-03), no repository copy, and the only text layer held is refused by rule 5d. Nothing here is matched against an extracted text layer; the quotes were read as pixels on pages rendered at 140 dpi with `pdftoppm -r 140 -f <page> -l <page> -png`, which any reader holding the same PDF digest can reproduce.",
+  "abstract_anchoring_waived": "The PubMed abstract carries the direction of three of these propositions ('reduced maturation of oligodendrocytes, reduced myelinated axons') but none of the quantities, none of the n, and nothing at all about the heterozygote — which is the half of this paper the corpus had never recorded.",
+  "note": "🔴 COVERAGE OF THIS PASS IS DELIBERATELY NARROW AND IS NOT A FULL RE-READ. Five printed pages were inspected as images — 10, 19, 20, 26, 27 of 48 — chosen because they carry the myelin quantities the registry had deferred and the heterozygote arm. The abstract, introduction, discussion, supplementary material and reference list were NOT re-read in this pass; the prior receipt covers them at its own declared depth from a surface this checkout no longer holds. Figure panels were read as printed images at 140 dpi together with their legends, which is what rule 5d prescribes when the text layer is refused.",
+  "entries": [
+   {
+    "proposition": "THE MYELIN DEFICIT IN THE NEURONAL DELETION IS LARGE AND IS CARRIED BY THE AUTHORS' OWN COUNTS: ABOUT THREE AND A THIRD TIMES FEWER MYELINATED AXONS IN THE CORPUS CALLOSUM AT P17. The paper's running text rounds this to 3.5-4-fold; its own Figure 5B averages give 180 to 55.",
+    "snippet": "The number of myelinated axons (S-Control, average = 180 ± 40, S-KO, average = 55 ± 35) in corpus callosum and unmyelinated axons (S-Control, average = 55 ± 20, S-KO, average = 270 ± 60) in optic nerve is counted per field of view",
+    "surface": "rendered_text",
+    "anchor": "Results, myelination section, printed page 27 of 48 of the browser-print PDF (journal pp. 3061-3077), paragraph immediately above Figure 5",
+    "page_anchor": {
+     "page": 27,
+     "dpi": 140,
+     "render_call": "pdftoppm -r 140 -f 27 -l 27 -png",
+     "source_pdf_sha256": "8d1e751dbc31128431b9a4ae0c2cb68af90505fd8e8deaecdc46474df08a9d20",
+     "crop_published": false,
+     "crop_note": "No crop image is published. Rule 5e's recipe form was not used because the whole printed page is the adjudication here and the page is reproducible from the declared digest with the render call above."
+    },
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "mouse brain, in vivo",
+     "genotype": "Syn1-Cre neuronal conditional Wwox deletion (S-KO) versus S-Control",
+     "treatment": "none",
+     "timepoint": "P17",
+     "comparator": "age-matched S-Control, n = 3 per genotype, about 600 axons, 100 per mouse",
+     "endpoint": "transmission electron microscopy counts of myelinated and unmyelinated axons per field of view, and g-ratio"
+    },
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_OUP_browserprint.pdf"
+   },
+   {
+    "proposition": "THE CELLULAR SIGNATURE OF THE NEURONAL DELETION IS FEWER MATURE OLIGODENDROCYTES WITH MORE OPCs — A DIFFERENTIATION BLOCK READ OUT IN CELLS THAT NEVER LOST THE GENE. This is the signature an oligodendrocyte-intrinsic requirement would also produce, which is why the two cannot be told apart by the signature alone.",
+    "snippet": "Immunostaining with CC1 (marker of mature oligodendrocytes) and anti-PDGFR",
+    "surface": "rendered_text",
+    "anchor": "Results, cellular changes paragraph, printed page 26 of 48, sentence beginning 'Next, we assessed the cellular changes'",
+    "page_anchor": {
+     "page": 26,
+     "dpi": 140,
+     "render_call": "pdftoppm -r 140 -f 26 -l 26 -png",
+     "source_pdf_sha256": "8d1e751dbc31128431b9a4ae0c2cb68af90505fd8e8deaecdc46474df08a9d20",
+     "crop_published": false,
+     "crop_note": "The quote is truncated at the Greek alpha of PDGFR-alpha on purpose: the printed page carries the Greek letter and the refused text layer does not, and rule 5b forbids repairing a quote to make it match. The clause continues '(OPCs) showed a 2-fold reduction in CC1-positive cells and significantly more OPCs in the corpus callosum'."
+    },
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "mouse brain, in vivo",
+     "genotype": "S-KO versus S-Control",
+     "treatment": "none",
+     "timepoint": "P17",
+     "comparator": "age-matched S-Control, cells counted in 0.5 mm2 from three independent sections, n = 3 per genotype",
+     "endpoint": "CC1-positive and PDGFR-alpha-positive cell counts in corpus callosum"
+    },
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_OUP_browserprint.pdf"
+   },
+   {
+    "proposition": "THE OLIGODENDROCYTES ARE NOT DYING. The deficit is a maturation deficit, not a survival deficit, which is what makes a differentiation block the live explanation.",
+    "snippet": "no significant oligodendrocyte cell death was observed in S-KO tissues when stained for CC1 and cleaved caspase 3",
+    "surface": "rendered_text",
+    "anchor": "Results, cellular changes paragraph, printed page 26 of 48",
+    "page_anchor": {
+     "page": 26,
+     "dpi": 140,
+     "render_call": "pdftoppm -r 140 -f 26 -l 26 -png",
+     "source_pdf_sha256": "8d1e751dbc31128431b9a4ae0c2cb68af90505fd8e8deaecdc46474df08a9d20",
+     "crop_published": false,
+     "crop_note": "Read on the same printed page as the preceding locator."
+    },
+    "panel_text_relation": "text_only",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_OUP_browserprint.pdf"
+   },
+   {
+    "proposition": "🔴 THIS PAPER CONTAINS A HETEROZYGOTE ARM WITH A GRADED, SUB-CLINICAL ELECTROPHYSIOLOGICAL PHENOTYPE, AND NOTHING IN THE CORPUS RECORDS IT. One Wwox allele is not silent in the neocortex: 17% of slices from heterozygous animals burst where no control slice does, against 86% in the homozygous conditional.",
+    "snippet": "In total, 0% S-Control slices showed bursting (0 of n = 11 slices across seven animals), 17% of slices from S-HT animals showed bursting (4 of n = 23 slices across 14 animals) and 86% of slices from S-KO animals showed bursting (36 of n = 42 slices across 24 animals).",
+    "surface": "rendered_text",
+    "anchor": "Results, neocortical hyperexcitability section, printed page 20 of 48, paragraph following the Figure 2 legend",
+    "page_anchor": {
+     "page": 20,
+     "dpi": 140,
+     "render_call": "pdftoppm -r 140 -f 20 -l 20 -png",
+     "source_pdf_sha256": "8d1e751dbc31128431b9a4ae0c2cb68af90505fd8e8deaecdc46474df08a9d20",
+     "crop_published": false,
+     "crop_note": "The Figure 2 legend on the facing printed page 19 states the same experiment with different denominators ('four slices from three S-HT animals showed bursting (~20%)'; '36 slices from 20 S-KO animals showed bursting (~84%)'), counting the animals in which bursting occurred rather than the animals assayed. The percentages differ from the running text's 17% and 86%; both pages were read."
+    },
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "acute neocortical brain slices, mouse",
+     "genotype": "S-Control, S-HT (Syn1-Cre Wwox heterozygote) and S-KO",
+     "treatment": "none; spontaneous local field potential recording",
+     "timepoint": "P13-P17",
+     "comparator": "S-Control slices from the same protocol",
+     "endpoint": "proportion of slices showing spontaneous bursting"
+    },
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_OUP_browserprint.pdf"
+   },
+   {
+    "proposition": "THE HETEROZYGOTE IS NOT STATISTICALLY SEPARATED FROM THE CONTROL ON THE SPECTRAL MEASURE — THE SIGNIFICANT CONTRAST IS ALWAYS THE HOMOZYGOTE. The carrier signal in this paper is a proportion with no test, so it bounds how far the heterozygote datum can be carried.",
+    "snippet": "For 0–4.9 Hz and 5–9 Hz, S-KO power was significantly elevated as compared with S-Control only",
+    "surface": "rendered_text",
+    "anchor": "Figure 2 legend, panel D, printed page 20 of 48",
+    "page_anchor": {
+     "page": 20,
+     "dpi": 140,
+     "render_call": "pdftoppm -r 140 -f 20 -l 20 -png",
+     "source_pdf_sha256": "8d1e751dbc31128431b9a4ae0c2cb68af90505fd8e8deaecdc46474df08a9d20",
+     "crop_published": false,
+     "crop_note": "Read on the same printed page as the preceding locator; the en dashes in the frequency ranges are the page's own."
+    },
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "mouse neocortex, in vivo and acute slice",
+     "genotype": "S-Control, S-HT and S-KO",
+     "treatment": "none",
+     "timepoint": "P13-P17",
+     "comparator": "S-Control, n = 5 subjects in vivo; S-HT n = 7 subjects; S-KO n = 7 subjects",
+     "endpoint": "normalised spectral power by frequency band"
+    },
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_OUP_browserprint.pdf"
+   },
+   {
+    "proposition": "THE g-RATIO ANALYSIS IS POWERED AT THE AXON LEVEL AND NOT AT THE ANIMAL LEVEL, WHICH IS THE LIMIT ON EVERY MYELIN-THICKNESS NUMBER THIS PAPER CARRIES.",
+    "snippet": "myelinated axons (~600, 100 axons per mouse, n = 3 per genotype) from electron microsope images either from corpus callosum or optic nerve were analysed, by dividing inner axonal diameter over the total axonal diameter",
+    "surface": "rendered_text",
+    "anchor": "Materials and methods, Electron microscopy, printed page 10 of 48",
+    "page_anchor": {
+     "page": 10,
+     "dpi": 140,
+     "render_call": "pdftoppm -r 140 -f 10 -l 10 -png",
+     "source_pdf_sha256": "8d1e751dbc31128431b9a4ae0c2cb68af90505fd8e8deaecdc46474df08a9d20",
+     "crop_published": false,
+     "crop_note": "The misspelling 'microsope' is the page's own and is transcribed as printed."
+    },
+    "panel_text_relation": "text_only",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_OUP_browserprint.pdf"
+   }
+  ]
+ }
+}
