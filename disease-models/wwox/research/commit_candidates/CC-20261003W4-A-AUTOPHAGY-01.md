@@ -6,7 +6,7 @@
 **Not medical advice.** Class-level statements about published genotypes only.
 
 ## Target
-`full_text_queue_current.md` · `FT-074`: one status paragraph. (`PAPER 149` is created by `CC-20261003W4-A-REGISTRY-01`.) Debt paid: `33300063` was a stub read only by title in the autophagy-direction argument.
+`full_text_queue_current.md` · `FT-074`: one status paragraph. (`PAPER 152` is created by `CC-20261003W4-A-REGISTRY-01`.) Debt paid: `33300063` was a stub read only by title in the autophagy-direction argument.
 
 ## Finding (transfer limit: ovarian carcinoma lines, overexpression/one siRNA; nothing neural)
 The title's direction holds on **steady-state protein abundance** (WWOX up → Beclin-1/LC3 down; down → up), concordant with `24008736`; flux is clamped only on the paclitaxel arm. p-mTOR moves with WWOX dose in both directions — a correlation, no epistasis; p-p70S6K not detected although the Discussion asserts "mTOR/p70S6K"; PTX raises p-4E-BP1 while lowering p-mTOR. The abstract's "reduced WWOX" in the resistant line contradicts its Results. **The corpus-level conclusion of `FT-074` stands with one amendment** (mTOR route correlated with WWOX dose in one cancer system, causally untested).
@@ -14,15 +14,15 @@ The title's direction holds on **steady-state protein abundance** (WWOX up → B
 ## Change class
 **MINOR**.
 
-## Op list — `full_text_queue_current.md` (record-scoped; dry run 2026-10-03 with `record_scoped_edit.py apply` on copies of `main` 31da5fa (merged into the branch): exit 0, 1 op(s), keys ['FT-074'])
+## Op list — `full_text_queue_current.md` (record-scoped; dry run 2026-10-03 with `record_scoped_edit.py apply` on copies of `main` 663970a (merged into the branch, after `BATCH_20261003_002` landed): exit 0, 1 op(s), keys ['FT-074'])
 
 ```json
 [
  {
   "op": "replace-within",
   "id": "FT-074",
-  "old": "**Current status:** ⬜ aperto — debito di lettura dichiarato il 2026-08-26, nessuno dei quattro letto.",
-  "new": "**Current status:** ⬜ aperto — debito di lettura dichiarato il 2026-08-26, nessuno dei quattro letto.\n**Update 2026-10-03 (intake wave 4, Scientist A, `CC-20261003W4-A-AUTOPHAGY-01`):** `33300063` read in full from the publisher's bronze-OA PDF (`FTR-20261003-33300063-01`; the `-056` stub is promoted to `PAPER 149`, provisional). It is **concordant with `24008736` and has the same gap**: WWOX up → Beclin-1 and LC3 down, WWOX down → up, on representative blots without densitometry; the only chloroquine clamp is on the paclitaxel arm, never on a WWOX arm; no p62 on the WWOX arms. **New relative to the restricted form above:** p-mTOR moves with WWOX dose in both directions (overexpression up, siRNA down) — a measured phospho-correlation, still with no mTOR-inhibitor epistasis, total mTOR targets unmeasured and p-p70S6K not detected. The restricted form stands with one amendment: *the mTOR route is correlated with WWOX dose in one cancer system and untested causally anywhere in this corpus.* Still nothing neural. Remaining debt: `-043` (the discordant member) and `-177`."
+  "old": "**Next action aggiornata:** `-043` resta il primo da leggere",
+  "new": "✅ **`-056` letto per intero il 2026-10-03** (intake wave 4, Scientist A; ricevuta `FTR-20261003-33300063-01`, PDF bronze-OA dell'editore più Supplementary Figure S1; `CC-20261003W4-A-AUTOPHAGY-01`; lo stub è promosso a `PAPER 152`, numero provvisorio) — **tre dei quattro letti.** È **concordante con `-139` e ha la stessa lacuna**: WWOX su → Beclin-1 e LC3 giù, WWOX giù → su, su blot rappresentativi senza densitometria né statistica; l'unico clamp (clorochina) è sul braccio **paclitaxel**, mai su un braccio WWOX; nessun p62 sui bracci WWOX. **Nuovo rispetto alla forma ristretta:** p-mTOR segue la dose di WWOX in entrambe le direzioni (sovraespressione su, siRNA giù) — una correlazione fosfo misurata, senza epistasi con un inibitore di mTOR, con i totali dei bersagli a valle non misurati e p-p70S6K non rilevato (la Discussione scrive comunque «mTOR/p70S6K»). L'abstract dice «WWOX ridotto» nella linea resistente; i Results gli danno il WWOX basale più alto. Forma ristretta con un emendamento: *la via mTOR è correlata alla dose di WWOX in un sistema tumorale e non testata causalmente in nessun punto di questo corpus.* Ancora niente di neurale. La domanda posta a `-043` qui sotto vale anche per `-056`, e la risposta per `-056` è **no**.\n\n**Next action aggiornata:** `-043` resta il primo da leggere"
  }
 ]
 ```

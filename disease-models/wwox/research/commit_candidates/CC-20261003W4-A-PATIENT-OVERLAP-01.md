@@ -6,7 +6,7 @@
 **Not medical advice.** Class-level statements about published genotypes only.
 
 ## Target
-`paper_registry_current.md` · `PAPER 117` (Piard 2019): one field added before `LIT link`. `full_text_queue_current.md` · `FT-121`: one paragraph. (`PAPER 148` itself is created by `CC-20261003W4-A-REGISTRY-01`.)
+`paper_registry_current.md` · `PAPER 117` (Piard 2019): one field added before `LIT link`. `full_text_queue_current.md` · `FT-121`: one paragraph. (`PAPER 151` itself is created by `CC-20261003W4-A-REGISTRY-01`.)
 
 ## Finding
 The single patient of Tarta-Arsene 2017 (PMID 28721938) and Patient 8 of Piard 2019 (PMID 30356099, Supplemental Table 1) agree on: both alleles (`c.173-1G>T` + `c.918del`, two variants private to these reports), the frameshift's protein designation, sex, non-consanguinity, decreased fetal movements, seizure onset at about one month, West syndrome, EEG course (initially normal background, then hypsarrhythmia persisting in sleep), MRI course (thin corpus callosum, later atrophy with midbrain/brainstem flattening), normal head circumference, and death at "almost 3" years. Tarta-Arsene is a Piard co-author. **Neither paper states the identity**; Piard does not cite the 2017 report, omits it from its literature table, and counts P8 among 20 "additional" patients. `PREMISE: INFERENZA` (reader's, strong).
@@ -15,7 +15,7 @@ This confirms the wave-2 hypothesis in the open `CC-20261003-A-PIARD-01` item (6
 ## Change class
 **MINOR** — identity annotation; no claim or block changes. If the Piard wave-2 candidate is propagated first, this op's anchor (`LIT link` line) is unaffected.
 
-## Op list — `paper_registry_current.md` (record-scoped; dry run 2026-10-03 with `record_scoped_edit.py apply` on copies of `main` 31da5fa (merged into the branch): exit 0, 1 op(s), keys ['PAPER 117'])
+## Op list — `paper_registry_current.md` (record-scoped; dry run 2026-10-03 with `record_scoped_edit.py apply` on copies of `main` 663970a (merged into the branch, after `BATCH_20261003_002` landed): exit 0, 1 op(s), keys ['PAPER 117'])
 
 ```json
 [
@@ -23,12 +23,12 @@ This confirms the wave-2 hypothesis in the open `CC-20261003-A-PIARD-01` item (6
   "op": "replace-within",
   "id": "PAPER 117",
   "old": "**LIT link:** [[literature_tracking_log_current#LIT-0083]]",
-  "new": "**Patient overlap (2026-10-03, `CC-20261003W4-A-PATIENT-OVERLAP-01`):** 🔴 Patient 8 (Supplemental Table 1: `c.[173-1G>T];[c.918del]`, non-consanguineous, West syndrome, initially thin corpus callosum then atrophy with midbrain flattening, death at almost 3 y) matches the single patient of [[paper_registry_current#PAPER 148]] (Tarta-Arsene 2017) on genotype and on every compared attribute; Tarta-Arsene is a co-author here. This paper neither cites that report nor lists it in its literature table, and counts P8 among its '20 additional' patients. `PREMISE: INFERENZA` — one patient, reported twice: the new-patient count is at most 19, and any aggregate that adds Tarta-Arsene 2017 to this cohort counts him twice.\n**LIT link:** [[literature_tracking_log_current#LIT-0083]]"
+  "new": "**Patient overlap (2026-10-03, `CC-20261003W4-A-PATIENT-OVERLAP-01`):** 🔴 Patient 8 (Supplemental Table 1: `c.[173-1G>T];[c.918del]`, non-consanguineous, West syndrome, initially thin corpus callosum then atrophy with midbrain flattening, death at almost 3 y) matches the single patient of [[paper_registry_current#PAPER 151]] (Tarta-Arsene 2017) on genotype and on every compared attribute; Tarta-Arsene is a co-author here. This paper neither cites that report nor lists it in its literature table, and counts P8 among its '20 additional' patients. `PREMISE: INFERENZA` — one patient, reported twice: the new-patient count is at most 19, and any aggregate that adds Tarta-Arsene 2017 to this cohort counts him twice.\n**LIT link:** [[literature_tracking_log_current#LIT-0083]]"
  }
 ]
 ```
 
-## Op list — `full_text_queue_current.md` (record-scoped; dry run 2026-10-03 with `record_scoped_edit.py apply` on copies of `main` 31da5fa (merged into the branch): exit 0, 1 op(s), keys ['FT-121'])
+## Op list — `full_text_queue_current.md` (record-scoped; dry run 2026-10-03 with `record_scoped_edit.py apply` on copies of `main` 663970a (merged into the branch, after `BATCH_20261003_002` landed): exit 0, 1 op(s), keys ['FT-121'])
 
 ```json
 [
@@ -36,7 +36,7 @@ This confirms the wave-2 hypothesis in the open `CC-20261003-A-PIARD-01` item (6
   "op": "replace-within",
   "id": "FT-121",
   "old": "**Next action for both: a `CORPUS` placeholder, not a read.**",
-  "new": "**Resolved for `PMID 28721938` (2026-10-03, intake wave 4, Scientist A):** read in full (`FTR-20261003-28721938-01`); the non-independence above is now a source-level match, not only a shared author — the patient is Patient 8 of the Piard cohort (`CC-20261003W4-A-PATIENT-OVERLAP-01`). Registry landing: `PAPER 148` / `LIT-0442` (provisional numbers, `CC-20261003W4-A-REGISTRY-01`).\n\n**Next action for both: a `CORPUS` placeholder, not a read.**"
+  "new": "**Resolved for `PMID 28721938` (2026-10-03, intake wave 4, Scientist A):** read in full (`FTR-20261003-28721938-01`); the non-independence above is now a source-level match, not only a shared author — the patient is Patient 8 of the Piard cohort (`CC-20261003W4-A-PATIENT-OVERLAP-01`). Registry landing: `PAPER 151` / `LIT-0444` (provisional numbers, `CC-20261003W4-A-REGISTRY-01`).\n\n**Next action for both: a `CORPUS` placeholder, not a read.**"
  }
 ]
 ```
