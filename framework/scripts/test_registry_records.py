@@ -186,9 +186,22 @@ class CaseEReachableOnlyByExpansion(unittest.TestCase):
         zero = {r.record_id: why for r, why in at_zero.hits if r.source == "claim_registry_current"}
         one = {r.record_id: why for r, why in at_one.hits if r.source == "claim_registry_current"}
         self.assertTrue(zero, "the fixture needs a claim that links to the paper's record")
+        # What K1 pins is that a claim citing the paper BY ITS RECORD LINK is reached at hop 0 —
+        # the I03 miss. It does not pin that every hop-0 claim arrives that way: a claim whose
+        # `Source` names the bare PMID is reached as a plain `mention`, which is the oldest and
+        # most direct citation of all. Pinning the link-shaped reason for ALL of them made the
+        # case fail the moment a legitimate new claim cited the PMID directly (`CLAIM 045`,
+        # BATCH_20261003_003) without any of the K1 behaviour changing. So: at least one hop-0
+        # claim must arrive by record link, every hop-0 claim must arrive at hop 0, and the
+        # outward-only expansion below still has to cost a hop.
+        self.assertTrue(
+            any(why.startswith("mention (links to paper_registry_current#PAPER")
+                for why in zero.values()),
+            f"K1: a claim citing the paper by record link must be reached at hop 0; got {zero}",
+        )
         for claim, why in zero.items():
-            self.assertTrue(why.startswith("mention (links to paper_registry_current#PAPER"),
-                            (claim, why))
+            self.assertTrue(why.startswith("mention"), (claim, why))
+            self.assertNotIn("(hop 1)", why, (claim, why))
         outward_only = set(one) - set(zero)
         self.assertTrue(outward_only, "one hop must still add claims reached only outward")
         for claim in outward_only:
