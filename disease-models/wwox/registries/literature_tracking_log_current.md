@@ -1059,7 +1059,8 @@ Serves to:
 **Identifier type:** PMID
 **Identifier value:** 41677633
 **Date discovered:** 2026-03-27
-**Status:** superseded - see [[literature_tracking_log_current#LIT-0165]] (same PMID, promoted)
+**Status:** superseded
+**Superseded by:** [[literature_tracking_log_current#LIT-0165]] (same PMID, promoted). The pointer was written into `Status` by `CC-20261003W3-B-REGISTRY-01` and moved to this line by `BATCH_20261004_001` after Phase 5 returned `INVALID_LIT_STATUS`: the vocabulary takes the bare value, and nothing was dropped.
 **Filter reason:** 🔴 **Duplicate identity and an outdated rationale, corrected 2026-10-03 (`CC-20261003W3-B-REGISTRY-01`).** The same PMID is also carried by [[literature_tracking_log_current#LIT-0165]], which is the record promoted to [[paper_registry_current#PAPER 144]]; this one is kept as history and is no longer the live record. On the substance: the cell systems are indeed non-CNS (MEF, HeLa, SCC-15), but the paper is NOT only a cancer-apoptosis result - two of its endpoints (mitochondrial membrane potential, ROS) are measured on a constitutive `Wwox` null versus wild type, and in that comparison WWOX loss is PROTECTIVE under serum starvation. Read on 2026-10-03 (`partial_fulltext_read`) (integrator amendment, `BATCH_20261004_001`): receipt `FTR-20261003-41677633-02`, dossier `research/fulltext_dossiers/PMID41677633.md`
 **Transferability:** T4
 **clinical relevance:** VERY LOW
