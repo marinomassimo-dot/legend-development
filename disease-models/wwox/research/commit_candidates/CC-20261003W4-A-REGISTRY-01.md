@@ -141,3 +141,10 @@ Receipts (prepared, not appended): `FTR-20261003-{30361190,28721938,33300063,323
 (the intron-2 acceptor allele's splice effect is predicted in this paper | v.2.7.1) predicted a likely aberrant effect on splic- | PMID 28721938, Case study; files/fulltext/PMID28721938_TartaArsene2017_JLE.txt)
 (the only lysosomal clamp is on the paclitaxel arm in the sensitive line | agic flux induced by PTX, A2780 cells were co‑treated with | PMID 33300063, Results 'PTX increases autophagic flux'; files/fulltext/PMID33300063_Zhao2020_Spandidos.txt)
 (Table 1's reference numbers for astrocytoma differ from the running text's | Its expression was determined in astrocytoma tumor samples of various grades from 38 patients by immunohistochemical staining | PMID 32389029, section 'Astrocytomas' (ref 70) vs Table 1 (ref 68); files/fulltext/PMID32389029_Kosla2020_PMC.xml)
+
+
+## BATCH DISPOSITION — `BATCH_20261003_003` (2026-10-03, ACTOR_ID `scientist`, Scientist H), append-only
+
+**Verdict:** PROPAGATED
+
+**PROPAGATED.** Eleven ops on `paper_registry_current.md` and six on `literature_tracking_log_current.md`, record-scoped, exit 0. Numbers measured with `registry_records.py catalog` at `f110c76` (highest `PAPER 150`, `LIT-0443`): the declared `PAPER 151`–`155` and `LIT-0444` were **all free**, so nothing was renumbered here; the B and C chains were anchored after them instead (`PAPER 156`–`158`, `159`–`164`, `LIT-0445`–`0453`). One integrator amendment (AM3, from blind audit 2 T05): `PAPER 151`'s Role now carries the age with the myelination finding — the first MRI at 5 weeks reads normal myelination *for age*, the second at 2.6 years reads delayed myelination. A later repair also added *(partial full text)* to `PAPER 153`'s depth line, because `partial_fulltext_read` alone is not a marker `coverage_report` reads.

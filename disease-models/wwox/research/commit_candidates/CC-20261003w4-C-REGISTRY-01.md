@@ -178,3 +178,10 @@ targets.
 (The biomarker is not validated for clinical use, by its own authors. | To date, NfL measurements have not been incorporated into clinical trials for AAV therapies. | Discussion, clinical translation paragraph, `files/fulltext/PMID36700120_Johnson2022_PMC.xml`)
 
 (The pooled dataset comes from one sponsor's own warehouse, which is the basis for treating it as not independent of the other sponsor paper. | extracted from the Novartis study data warehouse | Materials and methods, data extraction and analyses, `files/fulltext/PMID36700120_Johnson2022_PMC.xml`)
+
+
+## BATCH DISPOSITION — `BATCH_20261003_003` (2026-10-03, ACTOR_ID `scientist`, Scientist H), append-only
+
+**Verdict:** PROPAGATED
+
+**PROPAGATED, authored and renumbered.** The candidate's ops were a **prose specification** (field tables, no executable list), so the integrator authored the twelve records it specifies — six `PAPER` and six `LIT` — carrying its short titles, pathways, models, roles and transfer limits, its identifier strings, and its common fields (`T3`, `BACKGROUND`, `Claim links: none`, the «does not mention WWOX» genotype line and the partial-read depth with its owed figure panels). Full titles, author lists and journal citations were taken from PubMed article metadata on 2026-10-03 rather than invented. Renumbered: the declared `PAPER 143`–`148` / `LIT-0441`–`0446` were all taken, applied as **`PAPER 159`–`164`** / **`LIT-0448`–`0453`**, with every `LIT link` and `PAPER` cross-reference written in the same op list that creates its target, so `test_link_targets.py` never sees a dangling wikilink. Not audited: no triple of this candidate touches a claim, and no claim rests on any of the six.

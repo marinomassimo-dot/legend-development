@@ -138,3 +138,10 @@ would make the validation a cross-study rather than a within-programme result.
 (In the other primate programme the biomarker tracked the lesion but the regimens did not change it, so a marker is not a mitigation. | microscopic DRG findings were not mitigated with coadministration of anti-inflammatory or immunosuppressive regimens | Conclusions, `files/fulltext/PMID35331006_Tukov2022_PMC.xml`)
 
 (That programme's own authors caution against translating their biomarker findings to patients. | The translational relevance of DRG pathology in humans is currently unknown | Discussion, clinical relevance paragraph, `files/fulltext/PMID35331006_Tukov2022_PMC.xml`)
+
+
+## BATCH DISPOSITION — `BATCH_20261003_003` (2026-10-03, ACTOR_ID `scientist`, Scientist H), append-only
+
+**Verdict:** PROPAGATED
+
+**PROPAGATED, authored from the prose specification.** `RL-C-20261003w4c` opens with the §13 ruling, as the candidate required: NfL, NF-H, CSF CXCL10 and MIP1α are **Tier 3 with respect to WWOX**, admissible only as vector-toxicity surveillance, and the record states explicitly that it does **not** belong to the biomarker line `RL-BIOM-001`. It carries the operating-characteristics table (ROC AUC, the five fold-change cut-offs with sensitivity and specificity, the denominators, the baselines) and all five caveats, including that the procedure itself moves the marker and that only fold changes — never a concentration — are validated. `RC-C-20261003w4` appended to `research_candidates_current.md` with the baseline-first acquisition and the two mandatory control arms. Nothing was recorded in any biomarker or endpoint file.

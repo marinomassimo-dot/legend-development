@@ -131,3 +131,10 @@ assumed: nothing in this reading shows that WWOX **is** dose-sensitive.
 (The apparent age effect is attributed by the authors to dose per body weight, not to a developmental window. | it is more likely a factor of a higher dose per body weight at the younger age | Results, rapid death due to myocardial degeneration, `files/fulltext/PMID42458834_Boitnott2026_PMC.xml`)
 
 (Bulk tissue measurement understates per-cell exposure, by the authors' own caveat. | represent average expression across bulk tissue | Results, rapid death due to myocardial degeneration, `files/fulltext/PMID42458834_Boitnott2026_PMC.xml`)
+
+
+## BATCH DISPOSITION — `BATCH_20261003_003` (2026-10-03, ACTOR_ID `scientist`, Scientist H), append-only
+
+**Verdict:** PROPAGATED
+
+**PROPAGATED, authored from the prose specification.** `RL-C-20261003w4b` (the five-parameter table with every transfer limit, the measured/inferred verdict per parameter, the heart as a sixth off-target organ with its cause, and the route-contingency caveat on every promoter-coverage figure) and **`DIS-032`** (the SMA upper-limb rejection, with the three mutually incompatible vg/kg normalisations and the boundary that excess harm is *not* denied — PMID 42458834 shows it independently). Appended after `DIS-031` as the candidate specified. Its declared `DIS-032` was free. **Not superseded by, and not superseding, `CC-20261003W3-C-RESTORATION-SPEC-01`:** measured rather than assumed — the two rest on **disjoint** source sets (wave-3 PMIDs 39847501/40263630/40349107/42181696/42521212 against wave-4 PMIDs 35331006/36700120/41992613/42349402/42458834) with a prose Jaccard overlap of 0.276, so the wave-3 candidate stays queued on its own evidence.
