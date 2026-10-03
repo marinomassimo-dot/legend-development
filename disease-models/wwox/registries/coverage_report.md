@@ -34,10 +34,10 @@ the whole known corpus, not the part already processed.
 ## Receipt trace
 
 - Authoritative ledger: `disease-models/wwox/registries/fulltext_read_receipts.jsonl`
-- **308** append-only events: **283** contemporaneous · **22** conservative legacy reconstructions · **1** invalidation(s) · **2** identity correction(s)
+- **314** append-only events: **289** contemporaneous · **22** conservative legacy reconstructions · **1** invalidation(s) · **2** identity correction(s)
 - **110** registry records have a persisted `complete_fulltext_read` receipt
 - **6** records still rely on a historical registry full-text declaration without a surviving complete coverage receipt
-- **38** receipt event(s) do not yet map to a registry record
+- **43** receipt event(s) do not yet map to a registry record
 
 A full-text marker in the registry is preserved as historical state, but it is not
 retroactively converted into a complete receipt. Only a contemporaneous or adequately

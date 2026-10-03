@@ -1,0 +1,163 @@
+{
+ "schema_version": 2,
+ "pmid": "40349107",
+ "doi": "10.1016/j.ymthe.2025.05.011",
+ "receipt": "FTR-20261003-40349107-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID40349107.md",
+  "disease-models/wwox/research/intake_wave_20261003w3_C.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W3-C-REGISTRY-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W3-C-RESTORATION-SPEC-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is a research surface owned by other batches; the corrections this reading supports are proposed as commit candidates rather than edited in place."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A transferable lesson from another gene is not a therapeutic hypothesis for WWOX; forging one here would convert a stated transfer limit into a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No small molecule with a SMILES is proposed as an intervention, so there is nothing for the BLOCK-1 ADMET gate to triage."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate for a later BATCH_COMMIT."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The triples are published in the candidates for a blind auditor; the reader of a paper cannot audit their own locators."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 6,
+  "publications_on_gene": 1,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "PubMed counts 2026-10-03: last author 'Tagliatela S[au]' 6, with STXBP1 1. An industry group (all authors one company); the work is an internal preclinical package, not an independent replication, and the vectors, promoters and detargeting element are proprietary.",
+  "external_provenance": {
+   "source": "NCBI E-utilities esearch rettype=count, terms as stated",
+   "date": "2026-10-03"
+  }
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "(gene therapy OR AAV) AND developmental and epileptic encephalopathy",
+    "count": 1075,
+    "source": "PubMed ESearch 2026-10-03"
+   }
+  ]
+ },
+ "multihop": {
+  "references_enumerated": 0,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference lists were not read in this pass and no multi-hop expansion was performed; the coverage key 'references' is declared not_read in the receipt for that reason."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 40349107 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "NO RECORD MATCHED across paper_registry, literature_tracking_log, claim_registry, discovery, dismissal and full-text-queue surfaces. That is a statement about this query over these files, not evidence the laboratory does not know the paper. CC-20261003W3-C-REGISTRY-01 proposes the landing."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-03 via PubMed get_article_metadata: no retraction, expression of concern or correction notice among the publication types for PMID 40349107.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 55,
+   "references_screened": 47,
+   "references_with_doi": 47,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 8
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID40349107_Aeran2025_PMC.xml",
+   "sha256": "cce8fcc05fdc2ff133d9b76b800010f3344edffd52c0d7ec8a601d5ca444d98a",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12461652/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-03",
+    "result_sha256": "cce8fcc05fdc2ff133d9b76b800010f3344edffd52c0d7ec8a601d5ca444d98a"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Dorsal-root-ganglion and spinal-cord adversity occurred in every arm without the detargeting element and in none with it.",
+    "snippet": "Potentially adverse findings in SC and DRG were observed after treatment with AAV9-EF1",
+    "anchor": "Results, NHP safety section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40349107_Aeran2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Serum neurofilament light was used as a toxicity biomarker with a stated threshold.",
+    "snippet": "all reached serum NfL concentrations of 1,719 pg/mL or greater",
+    "anchor": "Results, NHP safety section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40349107_Aeran2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Functional nerve-conduction changes occurred in half the animals in two arms.",
+    "snippet": "Vector-related peripheral sensory axonopathies were observed in 2/4 animals administered with AAV9-STXPro5-STXBP1",
+    "anchor": "Results, nerve conduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40349107_Aeran2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The therapeutic window is cited from other groups, not measured here.",
+    "snippet": "Other groups have also reported phenotypic reversal following adult delivery",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40349107_Aeran2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST fullTextXML returned HTTP 200 with a full JATS body on 2026-10-03; the declared article artefact is that response, byte for byte."
+ }
+}
