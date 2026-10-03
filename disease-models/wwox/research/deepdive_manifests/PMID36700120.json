@@ -1,0 +1,221 @@
+{
+ "schema_version": 2,
+ "pmid": "36700120",
+ "doi": "10.1016/j.omtm.2022.12.012",
+ "pmcid": "PMC9852542",
+ "receipt": "FTR-20261003-36700120-01",
+ "landing": [
+  "FTR-20261003-36700120-01",
+  "disease-models/wwox/research/intake_wave_20261003w4_C.md"
+ ],
+ "landing_note": "Intake wave 4 2026-10-03, Scientist C, group C (theme 5: epilepsy / CNS gene-therapy lessons transferable to a neuron-targeted AAV). The receipt is prepared and NOT appended: the Orchestrator records the wave's receipts in event order. This source contains no WWOX content and lands no canonical claim.",
+ "skills_considered": [
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true,
+   "reason": "paper_packet.py packet and fulltext_receipts.py status were run for each of the six PMIDs before any source was opened. All six returned exit 1 on status and 'manifest: none - this is a first reading', with no PAPER or LIT record and no recorded acquisition route."
+  },
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Europe PMC REST fullTextXML returned HTTP 200 with a body for all six PMCIDs on the first attempt. No paywall was met, no supplement endpoint was called, and nothing was paid for."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline. The six were read as one question (can the risks of a neuron-targeted AAV be bounded in advance, and for each parameter does the source measure it or assume it), and two of the six had to be read against each other sentence by sentence."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED. Triples are handed to the blind audit through the commit candidates' LOCATOR TRIPLES FOR BLIND AUDIT sections; the producer of a reading must not be its verifier."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Not invoked. The group was assigned as a contradiction to characterise and not to decide, so no primitive was needed; enumerate_baseline would have added nothing to a set in which every source states its own limits."
+  }
+ ],
+ "group_assessment": {
+  "research_type": "mixed",
+  "total_publications": 14,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-03 (tool=LEGEND-research): 'Tukov FF[au]' 14, 'Tukov FF[au] AND WWOX' 0. The identical count to PMID 35331006 is the point: the probe author is shared by both papers.",
+  "weighting": "The same sponsor as PMID 35331006, pooling its own study warehouse. The OBSERVATION carries the most weight of any source in this group on incidence and on assay performance, because the denominator is 260 animals with 18 to 21 dorsal root ganglia each, graded on a published five-point scale by a board-certified pathologist under peer-review consensus. The INTERPRETATION carries less, and the paper says so: the pooled percentages hide heterogeneous promoters, transgenes, doses and routes, the biomarker is confounded by the dosing procedure itself, and clinical validation is explicitly absent. Critically, this source may NOT be used as independent corroboration of PMID 35331006.",
+  "performed": true,
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "note": "None of the six sources in this group mentions WWOX (grep -icE 'wwox|wox1|16q23' over each artefact returns 0, run 2026-10-03). They are platform, dose and toxicology sources read for transferable method, so the group question is not 'is this laboratory authoritative on WWOX' but 'who paid for this measurement and does a second party corroborate it'. Four independent origins are represented: an academic viral-vector core (Gunma University), a sponsor with its own clinical candidate (Exegenesis Bio), an academic gene-therapy laboratory on foundation money (UT Southwestern), and two pharmaceutical sponsors (Biogen; Novartis). PMID 35331006 and PMID 36700120 are BOTH Novartis, share four authors (Tukov, Meseck, Penraat, Chand) and the latter pools data from the Novartis study warehouse, with three study descriptors matching the former's studies (Mauritius-origin non-GLP cohort; two studies using Omnipaque 180 contrast; an intravenous arm at about 1.0e14 vg/kg). They are therefore NOT independent sources and are not counted as mutual corroboration. Research-group knowledge base is excluded from the public edition; this rests on the papers' own author lists, affiliations and declarations of interest."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "grep -icE 'wwox|wox1|16q23|fragile site FRA16D' over the declared artefact",
+    "route": "local artefact scan 2026-10-03",
+    "count": 0
+   },
+   {
+    "query": "WWOX",
+    "route": "PubMed esearch 2026-10-03 (tool=LEGEND-research)",
+    "count": 710
+   },
+   {
+    "query": "WWOX AND (adeno-associated OR AAV)",
+    "route": "PubMed esearch 2026-10-03 (tool=LEGEND-research)",
+    "count": 2
+   },
+   {
+    "query": "WWOX AND dorsal root ganglion",
+    "route": "PubMed esearch 2026-10-03 (tool=LEGEND-research)",
+    "count": 2
+   },
+   {
+    "query": "WWOX AND neurofilament",
+    "route": "PubMed esearch 2026-10-03 (tool=LEGEND-research)",
+    "count": 1
+   },
+   {
+    "query": "AAV AND dorsal root ganglion AND toxicity",
+    "route": "PubMed esearch 2026-10-03 (tool=LEGEND-research)",
+    "count": 35
+   }
+  ],
+  "note": "Zero WWOX density in the source itself, and near-zero in the literature that would connect WWOX to this group's subject matter: against 710 WWOX records, only 2 also mention adeno-associated vectors or AAV, 2 mention dorsal root ganglion and 1 mentions neurofilament, while the AAV DRG-toxicity literature itself holds 35 records. This is an earned null on the gene axis and the expected result: the group was assigned as transferable-method sources, not as WWOX sources. Every statement carried out of this reading is a lesson from another gene or species with its transfer limit stated, never a WWOX datum. The numbers also establish why transfer is unavoidable here: there is no WWOX AAV safety literature to read instead."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 32,
+  "references_with_pmid": 32,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "ref elements counted in the JATS deposit; pub-id[pub-id-type=pmid] counted.",
+  "resolved": [],
+  "queued": [],
+  "dedup_performed": "Not performed: no reference in any of the six names WWOX, so no multi-hop expansion is warranted toward the disease model."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Which existing research-layer records already carry a dorsal-root-ganglion toxicity statement or an AAV CNS dose statement that this group would corroborate, sharpen or contradict? Measured with: git grep -l -i 'dorsal root ganglio' -- disease-models/wwox/research/",
+  "route": "local repository scan at commit 296cd5ba5596, 2026-10-03",
+  "hits": 9,
+  "note": "Compared, AFTER the first pass was written, against the wave-3 candidate CC-20261003W3-C-RESTORATION-SPEC-01 (the six-parameter restoration specification). Three contacts: (1) that candidate records PMID 40349107 using serum NfL as a toxicity biomarker with a threshold of 1,719 pg/mL or greater, and PMID 36700120 supplies the operating characteristics that threshold lacks (n=260, ROC AUC, sensitivity/specificity at five fold-change cut-offs); (2) that candidate states no therapeutic window has been measured for any DEE gene in its set, and PMID 41992613 is the closest thing in this corpus to a two-sided window result yet still does not measure one, which corroborates and sharpens the wave-3 negative rather than overturning it; (3) that candidate carries DRG toxicity as an AAV class effect, and PMIDs 41404412 / 35331006 / 36700120 are the literature in which the mechanism of that class effect is contested."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-03",
+  "route": "PubMed article metadata for the six PMIDs in one call (article_types inspected for a retraction, expression of concern or erratum notice), plus dependency_integrity.py screen --pmid <PMID> --manifest-block for the reference list.",
+  "result": "No retraction, no expression of concern, no erratum on this paper. Article type is 'Journal Article'; PMID 35331006 additionally carries 'Research Support, Non-U.S. Gov't'.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 32,
+   "references_screened": 31,
+   "references_with_doi": 31,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID36700120_Johnson2022_PMC.xml",
+   "sha256": "b1d3ce745474b78203f619c42841bba91931851febe7f9c6555d626acd4c6be8",
+   "kind": "article_text",
+   "note": "Europe PMC REST fullTextXML, acquired 2026-10-03 into the root checkout for a first-hand read of this group.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9852542/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_rest_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "b1d3ce745474b78203f619c42841bba91931851febe7f9c6555d626acd4c6be8"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "JATS from the Europe PMC fullTextXML endpoint for PMC9852542, 123089 bytes. Every locator is matched against the body of that artefact by deepdive_manifest.py --verify-artifacts.",
+  "abstract_anchoring_waived": "No locator draws on the abstract alone; every locator is matched against the body of the declared JATS artefact.",
+  "note": "Coverage: abstract, introduction, full Methods/Materials, every Results section, every main table as rendered in the JATS deposit, every main figure LEGEND, Discussion, the authors' own limitations, declarations and the supplementary-material captions. NO figure panel was opened as an image and NO supplementary file was fetched, so the reading is declared partial_fulltext_read, not complete.",
+  "entries": [
+   {
+    "proposition": "A PER-ANIMAL DETECTION THRESHOLD DOES EXIST IN THIS SOURCE, contrary to the assignment's premise that only a severity correlation was available.",
+    "snippet": "A cutoff of 1.5-fold in NfL from pre-dose values leads to the greatest sensitivity",
+    "surface": "body",
+    "anchor": "Results, correlation between NfL changes and DRG histopathology",
+    "artifact": "files/fulltext/PMID36700120_Johnson2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE LESION IS NOT DOSE-ORDERED IN THE POOLED DATASET EITHER, over the largest denominator available.",
+    "snippet": "Relatively little or no discernible dose response was reported in the DRG microscopic findings",
+    "surface": "body",
+    "anchor": "Results, early DRG microscopic findings",
+    "artifact": "files/fulltext/PMID36700120_Johnson2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE LESION REQUIRES TRANSGENE EXPRESSION: empty capsid and promoter-less constructs produced neither pathology nor biomarker rise.",
+    "snippet": "No DRG microscopic findings were observed in cynomolgus macaques administered empty AAV9 capsid",
+    "surface": "body",
+    "anchor": "Results, DRG microscopic evaluation",
+    "artifact": "files/fulltext/PMID36700120_Johnson2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE BIOMARKER IS CONFOUNDED BY THE PROCEDURE: the authors warn that a rise can occur without a microscopic correlate.",
+    "snippet": "may not have been associated with microscopic changes",
+    "surface": "body",
+    "anchor": "Discussion, assay performance paragraph",
+    "artifact": "files/fulltext/PMID36700120_Johnson2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The biomarker is not clinically validated, by the authors' own statement.",
+    "snippet": "To date, NfL measurements have not been incorporated into clinical trials for AAV therapies.",
+    "surface": "body",
+    "anchor": "Discussion, clinical translation paragraph",
+    "artifact": "files/fulltext/PMID36700120_Johnson2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Raised NfL is not disease-specific, which is the authors' stated obstacle to using it in a patient who already has a neurodegenerative disorder.",
+    "snippet": "Greater concentrations of NfL can occur with neuronal injury and are not disease specific",
+    "surface": "body",
+    "anchor": "Discussion, soluble biomarker paragraph",
+    "artifact": "files/fulltext/PMID36700120_Johnson2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE DATASET IS THE SPONSOR'S OWN WAREHOUSE, which is the basis for treating this source and PMID 35331006 as non-independent.",
+    "snippet": "extracted from the Novartis study data warehouse",
+    "surface": "body",
+    "anchor": "Materials and methods, data extraction and analyses",
+    "artifact": "files/fulltext/PMID36700120_Johnson2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "One of the pooled studies used Mauritius-origin animals, one of three descriptors matching the companion Novartis paper's studies.",
+    "snippet": "a small group of Mauritius-origin macaques from a European-based supplier were included in one non-GLP study",
+    "surface": "body",
+    "anchor": "Materials and methods, animal test system",
+    "artifact": "files/fulltext/PMID36700120_Johnson2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}
