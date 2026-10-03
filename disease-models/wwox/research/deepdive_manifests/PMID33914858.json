@@ -1136,6 +1136,23 @@
      "crop_note": "No crop image published; the page regenerates from the declared PDF digest with the render call."
     },
     "added_by": "wave5-R"
+   },
+   {
+    "proposition": "THE AUTHORS STATE THE LIMIT OF THEIR OWN NEGATIVE: the absence of a phenotype in the oligodendrocyte and astrocyte conditionals does not exclude a cell-autonomous WWOX function in those cells. The registry should carry this sentence, because the word 'non-cell-autonomous' rests on the negative it qualifies.",
+    "snippet": "though we cannot exclude the cell autonomous functions of WWOX in oligodendrocytes or astrocytes in other neurological disorders",
+    "surface": "rendered_text",
+    "artifact": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.pdf",
+    "anchor": "Discussion, right column, journal page 3073 (PDF page 13)",
+    "page_anchor": {
+     "page": 13,
+     "dpi": 110,
+     "render_call": "pdftoppm -r 110 -f 13 -l 13 -png",
+     "source_pdf_sha256": "113522bb09b42a2dc0252bc1d7b112b66e3a68323ab1348c042f0ac8c8e8fa4c",
+     "crop_published": false,
+     "crop_note": "No crop published; the page regenerates from the declared digest."
+    },
+    "panel_text_relation": "text_only",
+    "added_by": "wave5-R"
    }
   ]
  },
