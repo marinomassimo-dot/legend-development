@@ -109,3 +109,13 @@ The receipts `FTR-20261003-<pmid>-01` named below must be appended to the ledger
 (the deletion's transcript was examined in patient fibroblast RNA | The RT-PCR derived from fibroblast extracts of patient and unaffected parents and age-matched neurotypical control | PMID 35573960, Methods, Agarose Gel Electrophoresis; files/fulltext/PMID35573960_Riva2022_PMC.xml)
 (the exome reported a homozygous exon 6 deletion | The WES analysis revealed a homozygous deletion involving exon 6 of the WWOX gene in the proband. | PMID 37974179, Results, Molecular findings; files/fulltext/PMID37974179_Dong2023_PMC.xml)
 (the in-frame exons 6-8 deletion's consequence is not measured | theoretically produces a protein with normal WW domains, but due to the disruption of the SDR domain, it may retain poor residual function | PMID 37974179, Discussion para 2; files/fulltext/PMID37974179_Dong2023_PMC.xml)
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261003_001` (2026-10-03, ACTOR_ID `scientist`, Scientist F), append-only
+
+**Verdict:** PROPAGATED
+
+Propagated record-scoped by `BATCH_20261003_001` (2026-10-03, ACTOR_ID `scientist`, Scientist F) — the ops below were read from this file by script, never retyped; every byte outside the addressed records was proven unchanged before anything was written. Post-propagation LINT: WARN, 0 BLOCK.
+
+`paper_registry_current.md` 7 ops (`PAPER 133` and `PAPER 134` created, `CORPUS-STUB-096` upgraded, evidence depth of `PAPER 117` / `016` / `012` / `043` restated) and `literature_tracking_log_current.md` 4 ops (`LIT-0432` created; `LIT-0118`, `LIT-0016`, `LIT-0359` updated). **Numbering confirmed, not renumbered:** `registry_records.py catalog` measured the live maxima as `PAPER 132` / `LIT-0431` at propagation time, so this candidate's provisional `PAPER 133`–`134` and `LIT-0432` were free and were taken as declared. The peers' inserts were re-anchored after these records instead (C after `PAPER 134` / `LIT-0432`, B after `PAPER 135` / `LIT-0433`), which is the re-anchoring their own numbering notes authorise, and the result is contiguous `PAPER 133`–`141` / `LIT-0432`–`0439`.

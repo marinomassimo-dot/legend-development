@@ -59,3 +59,13 @@ Every claim in the chain depends on two homemade rabbit antisera validated by pe
 (Figure attestation: the in-vivo figure's control is the same knockout tissue with the antibodies blocked | `[figure attestation - pixels cannot be quote-matched] Fig 7a 'Wwox-/- brain cortex' FRETc = 75+/-9; Fig 7b same tissue, 'Antibodies blocked with peptides', FRETc = 5+/-3; Fig 7c pS35-TPC6A/TIAF1 FRETc = 105+/-7; Fig 7d 'Wwox-/- mouse brain' p-TPC6A at 40x/100x/400x over 'p-TPC6A (peptide blocking)'. No Wwox+/+ panel appears anywhere in the figure.` | PMID 27551439, Figure 7, `files/figures/PMID27551439/native/cddiscovery20153-f7.jpg`)
 
 (Figure attestation: the human null is not an assay failure | `[figure attestation - pixels cannot be quote-matched] Fig 3A bar chart '% Protein aggregation in hippocampus', C vs AD pairs: TPC6A p=0.942, TIAF1 p=0.850, p-WWOX p=0.036, NFT p=0.014, Abeta p=0.003.` | PMID 25650666, Figure 3A, `files/figure_renders/PMID25650666/pdfimg_p05_0.jpeg`)
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261003_001` (2026-10-03, ACTOR_ID `scientist`, Scientist F), append-only
+
+**Verdict:** PROPAGATED
+
+Propagated record-scoped by `BATCH_20261003_001` (2026-10-03, ACTOR_ID `scientist`, Scientist F) — the ops below were read from this file by script, never retyped; every byte outside the addressed records was proven unchanged before anything was written. Post-propagation LINT: WARN, 0 BLOCK.
+
+`claim_registry_current.md`, 1 op — **`CLAIM 043` created** at `in observation`, inserted after `CLAIM 042`; the number was free when measured at propagation time. 🔴 **The candidate did not write the BLOCK 2 mirror row**, and `legend_lint.py` returned `BLOCK_BATCH_COMMIT` / `CLAIM_MISSING_FROM_MIRROR` until the integrator added it; the row restates this record's own header fields and adds nothing. Re-judged **MINOR**: a new claim at `in observation` narrows no baseline record.

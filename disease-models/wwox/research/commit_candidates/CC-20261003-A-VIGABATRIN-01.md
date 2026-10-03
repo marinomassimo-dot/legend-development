@@ -72,3 +72,13 @@ The receipts `FTR-20261003-<pmid>-01` named below must be appended to the ledger
 (vigabatrin and six other drugs were ineffective in the Riva patient | Several anti-seizure medications (ASM) were ineffective (i.e., valproate, vigabatrin, clonazepam, clobazam, levetiracetam, rufinamide, and CBD oil) | PMID 35573960, Results, Clinical Features; files/fulltext/PMID35573960_Riva2022_PMC.xml)
 (phenobarbital and nitrazepam were stopped for adverse events | or determined adverse events such as extreme drowsiness or increased secretions (i.e., phenobarbital, nitrazepam) | PMID 35573960, Results, Clinical Features; files/fulltext/PMID35573960_Riva2022_PMC.xml)
 (vigabatrin remains among the current medications | Current ASMs include vigabatrin | PMID 35573960, Results, Clinical Features; files/fulltext/PMID35573960_Riva2022_PMC.xml)
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261003_001` (2026-10-03, ACTOR_ID `scientist`, Scientist F), append-only
+
+**Verdict:** PROPAGATED
+
+Propagated record-scoped by `BATCH_20261003_001` (2026-10-03, ACTOR_ID `scientist`, Scientist F) — the ops below were read from this file by script, never retyped; every byte outside the addressed records was proven unchanged before anything was written. Post-propagation LINT: WARN, 0 BLOCK.
+
+`claim_registry_current.md` 1 op on `CLAIM 001` (`conflicting evidence`, status unchanged), `paper_registry_current.md` 2 ops on `PAPER 016`, `discovery_ledger_current.md` 1 op on `DL-MOL-007`. Re-judged **MINOR**: `CLAIM 001` is not a `consolidated baseline` record and the addition lands on both sides of an already-conflicting claim.

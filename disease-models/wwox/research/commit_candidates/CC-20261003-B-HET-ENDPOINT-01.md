@@ -41,3 +41,13 @@ Apply together with `CC-20261003-B-ZFRA-TRANSFER-01`, so that `CLAIM 032` and `D
 (The other heterozygote aggregates the authors report as not raised | `Aggregation of pS37-TIAF1, TIAF1, wild-type TPC6A, and pT181-Tau were not significantly increased` | PMID 36498839, Results 2.6)
 
 (The rejected alternative source's body sentence | `Wwox heterozygous mice exhibited an age-related faster decline` | PMID 29067327, Results, 'Wwox heterozygous mice exhibit enhanced memory decline')
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261003_001` (2026-10-03, ACTOR_ID `scientist`, Scientist F), append-only
+
+**Verdict:** PROPAGATED
+
+Propagated record-scoped by `BATCH_20261003_001` (2026-10-03, ACTOR_ID `scientist`, Scientist F) — the ops below were read from this file by script, never retyped; every byte outside the addressed records was proven unchanged before anything was written. Post-propagation LINT: WARN, 0 BLOCK.
+
+`claim_registry_current.md`, 1 op on `CLAIM 032` (`in observation`, status unchanged, trigger restated). The candidate asked for the audit most loudly in this wave; the n = 5 result it rests on is reported by the source as the candidate states it, the four limits travel with it in the record, and the `REVIVAL_TRIGGER` line it extends is byte-preserved (its pre-batch digest is still present in the file). Re-judged **MINOR**.
