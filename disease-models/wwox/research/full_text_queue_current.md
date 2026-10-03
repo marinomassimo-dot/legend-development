@@ -969,7 +969,8 @@ La catena prosegue verso il ratto *lde* (`FT-042`/`FT-041`). Vedi `DL-MECH-073` 
 non-cell-autonoma da delezione neuronale di Wwox — e il sistema non ne ha mai avuto il testo
 fino al 2026-08-07. Nessuna receipt esiste per questo PMID.
 **Come è emerso:** corpus Aqeilan RI, gruppo 1 della sessione di lettura 2026-08-09.
-**Current status:** 🔴 **LETTURA SOSPESA 2026-08-09 — NESSUNA RECEIPT EMESSA.** La sospensione
+**Current status (2026-10-03):** ✅ **LETTO** sull'articolo tipografico e sul supplemento completi forniti dall'operatore — ricevuta `FTR-20261003-33914858-03`, `partial_fulltext_read` (partial full text; video supplementari campionati a fotogrammi, non visionati), manifest `deepdive_manifests/PMID33914858.json` con validatore `MANIFEST STRICT PASS` e 0 lacune, dossier `fulltext_dossiers/PMID33914858.md` parte 2. La sospensione del 2026-08-09 riguardava una superficie testuale non valida: quella diagnosi **regge** anche sul nuovo PDF (il suo layer di testo è rifiutato dallo stesso screen), e la lettura è stata fatta **sulle pagine rese**, non riparando il testo. Lo storico qui sotto è conservato invariato.
+**Current status storico:** 🔴 **LETTURA SOSPESA 2026-08-09 — NESSUNA RECEIPT EMESSA.** La sospensione
 **non** è per budget né per copertura incompleta: è per invalidità della superficie testuale.
 L'estrazione deterministica (PyMuPDF `get_text()`) restituisce dai Methods
 `Results were considered significant when P 5 0.05`, mentre la pagina **stampa** `P < 0.05`
@@ -8290,6 +8291,16 @@ raggiungibile da qui.
 
 ---
 
+
+## FT-193 — `doi 10.1016/j.omtm.2025.101643` (Grubor 2025) · the published source behind the field's «immunosuppression can greatly reduce but not eliminate» sentence
+
+**Paper:** Grubor B. *et al.*, «Inhibition of immune response reduces pathology in dorsal root ganglia and peripheral nerves in cynomolgus macaques following AAV gene therapy», *Mol Ther Methods Clin Dev* 2025;33. No PMID recorded here; identified by DOI from the reference list of PMID 42422766 ([[paper_registry_current#PAPER 184]]).
+**Why it is here:** `CC-20261003W6-C-IMMUNOSUPPRESSION-LIMIT-01` recorded that sentence as citing the authors' **unpublished** data. The blind locator audit of `BATCH_20261003_005` measured the reference and found it is a **published** article with a DOI. It is therefore the single most load-bearing unread paper on whether immunosuppression bounds CSF-route ganglion risk — the exact question `DIS-031` leaves open — and it is the only source named in this corpus that claims to have measured the comparison.
+**Priority:** HIGH — it is the stated evidence for a safety sentence this repository now carries in `DIS-031`, `DL-THER-116` and `RL-C-20261003w6`.
+**Current status:** OPEN — not acquired, not read. **No conclusion is imported from it:** the wave-6 arm of `DIS-031` stands on the four sources that were read, and records that only «reduce rather than eliminate» survives from the sentence this paper backs.
+**Next action:** acquire (`find-fulltext` by DOI) and read with graded per-arm DRG histopathology as the target datum; it is the second revival trigger of `DIS-031`'s wave-6 arm.
+
+---
 ## 🔴 CORRECTION 2026-09-23 — `PMID 29808465` is NOT without a DOI, and this file says both things
 
 **Raised by** Scientist B (`route_recovery_wave2_20260923.md` § 4, contradiction 2). **Verified
