@@ -33,3 +33,10 @@ The title's direction holds on **steady-state protein abundance** (WWOX up → B
 (the Discussion nevertheless says WWOX activated mTOR/p70S6K | Beclin‑1. Furthermore, WWOX activated mTOR/p70S6K | PMID 33300063, Discussion; files/fulltext/PMID33300063_Zhao2020_Spandidos.txt)
 (the abstract says the resistant line has reduced WWOX | (A2780/T) were characterized by reduced WWOX expression | PMID 33300063, Abstract; files/fulltext/PMID33300063_Zhao2020_Spandidos.txt)
 (the Results say the resistant line has the highest basal WWOX | EOC cell lines and the highest protein expression levels of | PMID 33300063, Results; files/fulltext/PMID33300063_Zhao2020_Spandidos.txt)
+
+
+## BATCH DISPOSITION — `BATCH_20261003_003` (2026-10-03, ACTOR_ID `scientist`, Scientist H), append-only
+
+**Verdict:** PROPAGATED
+
+**PROPAGATED.** One op on `FT-074`. One integrator amendment (**AM8**, blind audit 3 T14): the source says p-p70S6K *«was barely detected»*, not *not detected*; the op now carries the source's own word. Audit 3 also confirmed the abstract/Results contradiction on basal WWOX in the resistant line (T16) and that the only chloroquine clamp is on the paclitaxel arm (T02).

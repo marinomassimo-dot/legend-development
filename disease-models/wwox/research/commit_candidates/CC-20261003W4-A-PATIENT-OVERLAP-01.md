@@ -49,3 +49,10 @@ This confirms the wave-2 hypothesis in the open `CC-20261003-A-PIARD-01` item (6
 (Piard Patient 8 carries the same two alleles | c.[173-1G>T];[c.918del] | PMID 30356099, Supplemental Table 1, column 'Patient 8', row 'Mutation at the cDNA level'; files/fulltext/PMID30356099_Piard2019_supplement/41436_2018_339_MOESM1_ESM.xlsx)
 (Piard Patient 8 died at almost three years | almost 3 y | PMID 30356099, Supplemental Table 1, column 'Patient 8', row 'Age of death'; files/fulltext/PMID30356099_Piard2019_supplement/41436_2018_339_MOESM1_ESM.xlsx)
 (Piard Patient 8's EEG course | initially normal background with bilateral spikes, then hypsarrhythmia, which persisted in sleep up to the end of life | PMID 30356099, Supplemental Table 1, column 'Patient 8', row 'EEG'; files/fulltext/PMID30356099_Piard2019_supplement/41436_2018_339_MOESM1_ESM.xlsx)
+
+
+## BATCH DISPOSITION — `BATCH_20261003_003` (2026-10-03, ACTOR_ID `scientist`, Scientist H), append-only
+
+**Verdict:** PROPAGATED
+
+**PROPAGATED.** One op on `PAPER 117`, one on `FT-121`. Blind audit 3 independently reproduced both alleles of the 2017 report, the age at death, and Piard Supplemental Table 1 cell I40/I50 for Patient 8 (`c.[173-1G>T];[c.918del]`, *almost 3 y*) from the supplement's own XLSX: 7/7 SUPPORTED. The identity stays labelled `PREMISE: INFERENZA` — neither paper states it — and the op's consequence (count the patient once; the new-patient count is at most 19) is unchanged.

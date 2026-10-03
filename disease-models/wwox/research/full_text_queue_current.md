@@ -3919,6 +3919,8 @@ decidere se `-056` e `-139` valgono la lettura o una dismissione motivata con `R
 
 ✅ **`-043` resta non letto e non ha PMCID**; la sua direzione opposta (*WWOX attiva l'autofagia*) rimane non verificabile di prima mano. Ma lo stallo **non è più «un paper contro uno»**: censimento misurato il 2026-10-03 (`esearch`, tool=LEGEND-research) — `WWOX AND autophagy` = 10 record, di cui **8 né Chang NS né Hsu LJ**. Sul lato «sopprime» c'è un secondo laboratorio indipendente (PMID 33300063, carcinoma ovarico, paclitaxel, `CORPUS-STUB-056`); sul lato «attiva» c'è `-043` (PMID 36621327, danno polmonare acuto da LPS, mTOR–ULK1). La differenza fra i due poli non è solo il laboratorio: è lo **stress** (antimetabolita/chemioterapico contro infiammatorio) e il **tessuto** (epitelio tumorale contro epitelio polmonare in danno acuto). Nessuno dei due è neurale, nessuno dei due è un genotipo umano.
 
+✅ **`-056` letto per intero il 2026-10-03** (intake wave 4, Scientist A; ricevuta `FTR-20261003-33300063-01`, PDF bronze-OA dell'editore più Supplementary Figure S1; `CC-20261003W4-A-AUTOPHAGY-01`; lo stub è promosso a `PAPER 152`, numero provvisorio) — **tre dei quattro letti.** È **concordante con `-139` e ha la stessa lacuna**: WWOX su → Beclin-1 e LC3 giù, WWOX giù → su, su blot rappresentativi senza densitometria né statistica; l'unico clamp (clorochina) è sul braccio **paclitaxel**, mai su un braccio WWOX; nessun p62 sui bracci WWOX. **Nuovo rispetto alla forma ristretta:** p-mTOR segue la dose di WWOX in entrambe le direzioni (sovraespressione su, siRNA giù) — una correlazione fosfo misurata, senza epistasi con un inibitore di mTOR, con i totali dei bersagli a valle non misurati e p-p70S6K **appena rilevabile** («barely detected», la parola della fonte; corretto il 2026-10-03 da `BATCH_20261003_003` su audit cieco, da «non rilevato») (la Discussione scrive comunque «mTOR/p70S6K»). L'abstract dice «WWOX ridotto» nella linea resistente; i Results gli danno il WWOX basale più alto. Forma ristretta con un emendamento: *la via mTOR è correlata alla dose di WWOX in un sistema tumorale e non testata causalmente in nessun punto di questo corpus.* Ancora niente di neurale. La domanda posta a `-043` qui sotto vale anche per `-056`, e la risposta per `-056` è **no**.
+
 **Next action aggiornata:** `-043` resta il primo da leggere, e la domanda da portargli è ora precisa — *il suo LC3-II è misurato sotto clamp lisosomiale, e su una manipolazione di WWOX?* Se non lo è, nessuno dei due poli ha mai misurato il flusso sulla variabile giusta, e la contraddizione è fra due marcatori statici, non fra due flussi.
 
 ---
@@ -5198,6 +5200,8 @@ inverte**. È la stessa amputazione di clausola trovata oggi su `CORPUS-STUB-139
 **~3 volte** (§ 2.1). Ogni affermazione che eredita la parola «KO» da questo paper eredita una
 **deplezione parziale**.
 
+**Update 2026-10-03 (intake wave 4, Scientist A, `CC-20261003W4-A-REVIEWS-01`):** for `36271927` the debt is paid — Europe PMC JATS XML carries all 112 references with identifiers and the publisher CDN served Figure 1 (a schematic, inspected); `FTR-20261003-36271927-01`, `complete_fulltext_read`. The arc resolves to refs 26 (PMID 25012504), 14 (PMID 30755385), 15 (PMID 33520443, own group), 74 (PMID 35328751, own group), 84 and 88 (*Drosophila*): the five-strand reconstruction above holds. New: the myelination sentence ('usually shows also reduced myelination') is not supported by its cited Piard aggregate and cites one patient twice. `35328751` is untouched by this update.
+
 **Next action:** **nessuna rilettura automatica.** Il debito si chiude solo con una superficie che
 porti figure e bibliografia (HTML/PDF dell'editore), e serve a una sola domanda precisa: **quali
 primari reggano l'arco HIF1α**. Finché resta aperto, l'arco va citato per quello che la prosa nomina
@@ -5596,6 +5600,8 @@ Consistent with `DL-MECH-022`'s biallelic-null case at **OFC +0.37 SD**. ⚠️ 
 independent source**: `Tarta-Arsene O` is also a co-author on the Piard cohort above, so anyone
 counting these as two independent observations of "microcephaly not mandatory" is double-counting
 one clinician's patients.
+
+**Resolved for `PMID 28721938` (2026-10-03, intake wave 4, Scientist A):** read in full (`FTR-20261003-28721938-01`); the non-independence above is now a source-level match, not only a shared author — the patient is Patient 8 of the Piard cohort (`CC-20261003W4-A-PATIENT-OVERLAP-01`). Registry landing: `PAPER 151` / `LIT-0444` (provisional numbers, `CC-20261003W4-A-REGISTRY-01`).
 
 **Next action for both: a `CORPUS` placeholder, not a read.** Neither needs full text for the use
 made of it here, and neither should acquire the appearance of a reading it has not had.

@@ -166,3 +166,10 @@ CNS AAV's risk profile in advance, and it is answerable with existing reagents.
 (One of the pooled studies used animals of the same unusual origin as the companion paper's mechanistic study. | a small group of Mauritius-origin macaques from a European-based supplier were included in one non-GLP study | Materials and methods, animal test system, `files/fulltext/PMID36700120_Johnson2022_PMC.xml`)
 
 (The lesion shows no clear dose relationship in the pooled dataset either, over the largest available denominator. | Relatively little or no discernible dose response was reported in the DRG microscopic findings | Results, early DRG microscopic findings, `files/fulltext/PMID36700120_Johnson2022_PMC.xml`)
+
+
+## BATCH DISPOSITION — `BATCH_20261003_003` (2026-10-03, ACTOR_ID `scientist`, Scientist H), append-only
+
+**Verdict:** PROPAGATED
+
+**PROPAGATED, authored from the prose specification.** `RL-C-20261003w4a` appended to `research_lines_current.md` (the axis table, the three live explanations with their evidence, the constraint that the lesion requires transgene expression, the non-independence of the two Novartis papers with its three matching descriptors, and the transfer-limit paragraph) and **`DIS-031`** appended to `dismissal_ledger_current.md` with its `PREMISE: DATO` tag and its `REVIVAL_TRIGGER`, stating that **both** directions are unsupported as general claims. `DIS` was re-measured at 30, so the declared `DIS-031` was free. The research-lines anchor was first written as an `id` and the editor refused it (`ANCHOR_MISSING`, exit 3, nothing written) because `RL-*` records sit at the file's section level; re-keyed to the exact heading text and applied.
