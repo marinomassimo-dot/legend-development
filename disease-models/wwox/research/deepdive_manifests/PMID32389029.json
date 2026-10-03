@@ -139,28 +139,32 @@
     "snippet": "In the second form, the presence of premature STOP codons in two alleles results in a complete lack of WWOX expression",
     "surface": "body",
     "artifact": "files/fulltext/PMID32389029_Kosla2020_PMC.xml",
-    "anchor": "Section 'Encephalopathy', paragraph 2"
+    "anchor": "Section 'Encephalopathy', paragraph 2",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "An uncited claim that most germline mutations may be embryonic-lethal.",
     "snippet": "germline mutations are observed very rare and in great majority may be lethal in embryonic development",
     "surface": "body",
     "artifact": "files/fulltext/PMID32389029_Kosla2020_PMC.xml",
-    "anchor": "Conclusion"
+    "anchor": "Conclusion",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "A heterozygous-animal memory statement, cited to a paper on Zfra in triple-transgenic Alzheimer mice.",
     "snippet": "heterozygous WWOX+/− animals have been found to demonstrate a higher rate of memory decline",
     "surface": "body",
     "artifact": "files/fulltext/PMID32389029_Kosla2020_PMC.xml",
-    "anchor": "Section 'Neurodegeneration', paragraph 2 (ref 60)"
+    "anchor": "Section 'Neurodegeneration', paragraph 2 (ref 60)",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "The running text cites the astrocytoma immunohistochemistry study; Table 1 cites a different reference number for the same findings.",
     "snippet": "Its expression was determined in astrocytoma tumor samples of various grades from 38 patients by immunohistochemical staining",
     "surface": "body",
     "artifact": "files/fulltext/PMID32389029_Kosla2020_PMC.xml",
-    "anchor": "Section 'Astrocytomas' (ref 70) vs Table 1 row 'Astrocytoma' (ref 68)"
+    "anchor": "Section 'Astrocytomas' (ref 70) vs Table 1 row 'Astrocytoma' (ref 68)",
+    "panel_text_relation": "text_only"
    }
   ]
  }

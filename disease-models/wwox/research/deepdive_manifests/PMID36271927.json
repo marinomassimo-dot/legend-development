@@ -172,28 +172,32 @@
     "snippet": "A magnetic resonance imaging (MRI) of WOREE patients’ brains besides the varying brain structural defects usually shows also reduced myelination",
     "surface": "body",
     "artifact": "files/fulltext/PMID36271927_Baryla2022_PMC.xml",
-    "anchor": "Section 'The WWOX gene modulates lipid metabolism', paragraph 4 (refs 13, 65-68)"
+    "anchor": "Section 'The WWOX gene modulates lipid metabolism', paragraph 4 (refs 13, 65-68)",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "The osteopenia evidence in the body is the homozygous Wwox deletion in mice.",
     "snippet": "the homozygous deletion of Wwox in mice caused disturbances in bone metabolism, such as osteopenia",
     "surface": "body",
     "artifact": "files/fulltext/PMID36271927_Baryla2022_PMC.xml",
-    "anchor": "Section 'Influence of WWOX on bone metabolism', paragraph 1 (ref 24)"
+    "anchor": "Section 'Influence of WWOX on bone metabolism', paragraph 1 (ref 24)",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "The review's own verdict on WWOX and glucose metabolism in neurological disease.",
     "snippet": "The role of WWOX in the control of glucose metabolism in the context of neurological diseases requires further research",
     "surface": "body",
     "artifact": "files/fulltext/PMID36271927_Baryla2022_PMC.xml",
-    "anchor": "Section 'Participation of WWOX in glucose metabolism', end of paragraph 6"
+    "anchor": "Section 'Participation of WWOX in glucose metabolism', end of paragraph 6",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "The nuclear-translocation sentence, here only located; it was not re-verified against its primary in this event.",
     "snippet": "Additionally, it increases the translocation of HIF1A to the nucleus",
     "surface": "body",
     "artifact": "files/fulltext/PMID36271927_Baryla2022_PMC.xml",
-    "anchor": "Section 'Participation of WWOX in glucose metabolism', paragraph 4 (ref 74)"
+    "anchor": "Section 'Participation of WWOX in glucose metabolism', paragraph 4 (ref 74)",
+    "panel_text_relation": "text_only"
    }
   ]
  }

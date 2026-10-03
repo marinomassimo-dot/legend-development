@@ -148,49 +148,56 @@
     "snippet": "intron 2 of the WWOX gene, c.173-1G>T, was detected.",
     "surface": "body",
     "artifact": "files/fulltext/PMID28721938_TartaArsene2017_JLE.txt",
-    "anchor": "Case study, page 359 right column"
+    "anchor": "Case study, page 359 right column",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "Its splice effect is predicted in silico only in this paper.",
     "snippet": "v.2.7.1) predicted a likely aberrant effect on splic-",
     "surface": "body",
     "artifact": "files/fulltext/PMID28721938_TartaArsene2017_JLE.txt",
-    "anchor": "Case study, page 359 right column"
+    "anchor": "Case study, page 359 right column",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "Allele 2 is an exon-8 one-base deletion with frameshift.",
     "snippet": "c.918del (p.Glu306Aspfs*21), was also identified.",
     "surface": "body",
     "artifact": "files/fulltext/PMID28721938_TartaArsene2017_JLE.txt",
-    "anchor": "Case study, page 359 right column"
+    "anchor": "Case study, page 359 right column",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "Phase was established by parental testing.",
     "snippet": "confirmed that both variants were compound het-",
     "surface": "body",
     "artifact": "files/fulltext/PMID28721938_TartaArsene2017_JLE.txt",
-    "anchor": "Case study, page 360 left column"
+    "anchor": "Case study, page 360 left column",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "The family is not consanguineous.",
     "snippet": "Our patient was from a non-consanguineous family.",
     "surface": "body",
     "artifact": "files/fulltext/PMID28721938_TartaArsene2017_JLE.txt",
-    "anchor": "Discussion, page 360"
+    "anchor": "Discussion, page 360",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "Head circumference was normal at birth.",
     "snippet": "head circumference (HC) of 34.5 cm (P50). The boy",
     "surface": "body",
     "artifact": "files/fulltext/PMID28721938_TartaArsene2017_JLE.txt",
-    "anchor": "Case study, page 358 left column"
+    "anchor": "Case study, page 358 left column",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "Head circumference was normal at 2.6 years.",
     "snippet": "HC (50.5 cm; P85) and normal somatic growth.",
     "surface": "body",
     "artifact": "files/fulltext/PMID28721938_TartaArsene2017_JLE.txt",
-    "anchor": "Case study, page 359 left column"
+    "anchor": "Case study, page 359 left column",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "The first MRI showed a thin corpus callosum with normal myelination for age.",
@@ -213,21 +220,24 @@
     "snippet": "Our patient had aspiration pneumonia and died at the",
     "surface": "body",
     "artifact": "files/fulltext/PMID28721938_TartaArsene2017_JLE.txt",
-    "anchor": "Case study, page 360 left column"
+    "anchor": "Case study, page 360 left column",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "The authors' own literature count.",
     "snippet": "To date, almost 20 patients (including our patient)",
     "surface": "body",
     "artifact": "files/fulltext/PMID28721938_TartaArsene2017_JLE.txt",
-    "anchor": "Discussion, page 360"
+    "anchor": "Discussion, page 360",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "The authors' diagnostic point on microcephaly.",
     "snippet": "demonstrating that microcephaly is not mandatory for diagnosis",
     "surface": "body",
     "artifact": "files/fulltext/PMID28721938_TartaArsene2017_JLE.txt",
-    "anchor": "Abstract, page 357"
+    "anchor": "Abstract, page 357",
+    "panel_text_relation": "text_only"
    }
   ]
  }

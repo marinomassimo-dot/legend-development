@@ -154,42 +154,48 @@
     "snippet": "This can be associated with progressive",
     "surface": "body",
     "artifact": "files/fulltext/PMID30361190_Shaukat2018_JLE.txt",
-    "anchor": "Abstract, Conclusions, page 401"
+    "anchor": "Abstract, Conclusions, page 401",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "Child 1 carries a homozygous deletion of exons 3-4.",
     "snippet": "deletion affecting exons 3 to 4 of the WWOX gene",
     "surface": "body",
     "artifact": "files/fulltext/PMID30361190_Shaukat2018_JLE.txt",
-    "anchor": "Results, Genetic testing, page 405 left column"
+    "anchor": "Results, Genetic testing, page 405 left column",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "Child 2 carries a homozygous canonical splice-acceptor allele already reported by another group.",
     "snippet": "pathogenic splice site mutation, c.606-1G>A, in",
     "surface": "body",
     "artifact": "files/fulltext/PMID30361190_Shaukat2018_JLE.txt",
-    "anchor": "Results, Genetic testing, page 405 right column"
+    "anchor": "Results, Genetic testing, page 405 right column",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "Both parents of child 1 are heterozygous; no parental examination is reported anywhere in the paper.",
     "snippet": "number loss involving WWOX in both the mother and",
     "surface": "body",
     "artifact": "files/fulltext/PMID30361190_Shaukat2018_JLE.txt",
-    "anchor": "Results, Genetic testing, page 405"
+    "anchor": "Results, Genetic testing, page 405",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "Child 2's parents are first cousins; the next line calls the family history unremarkable, and no parental examination is reported.",
     "snippet": "The child was the first born to first-cousin parents, with",
     "surface": "body",
     "artifact": "files/fulltext/PMID30361190_Shaukat2018_JLE.txt",
-    "anchor": "Results, Clinical data, page 405 left column"
+    "anchor": "Results, Clinical data, page 405 left column",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "In family 1, two cousins had a similar neurological disease; their genotypes are not reported.",
     "snippet": "cousins with four healthy children. Two cousins had",
     "surface": "body",
     "artifact": "files/fulltext/PMID30361190_Shaukat2018_JLE.txt",
-    "anchor": "Results, Clinical data, page 403 left column"
+    "anchor": "Results, Clinical data, page 403 left column",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "Child 1's MRI is a single study at two months.",
@@ -204,49 +210,56 @@
     "snippet": "Age at MRI 0 m and 11 m NA na na na NA 2 m and 5 m NA 2m 2m",
     "surface": "body",
     "artifact": "files/fulltext/PMID30361190_Shaukat2018_JLE.txt",
-    "anchor": "Table 1 (continued), row 'Age at MRI', columns 'This study', page 410"
+    "anchor": "Table 1 (continued), row 'Age at MRI', columns 'This study', page 410",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "The DEE argument is qualified by the authors: the impairment did not improve with seizure control 'in some of these cases'.",
     "snippet": "better control of epileptic activity in some of",
     "surface": "body",
     "artifact": "files/fulltext/PMID30361190_Shaukat2018_JLE.txt",
-    "anchor": "Discussion, page 406 left column (sentence beginning 'In support of this hypothesis')"
+    "anchor": "Discussion, page 406 left column (sentence beginning 'In support of this hypothesis')",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "Table 1's totals: 13 families, 23 cases including the two of this study.",
     "snippet": "Families/number of 2/5 1/1 1/2 2/2 13/23",
     "surface": "body",
     "artifact": "files/fulltext/PMID30361190_Shaukat2018_JLE.txt",
-    "anchor": "Table 1 (continued), row 'Families/number of cases', page 409"
+    "anchor": "Table 1 (continued), row 'Families/number of cases', page 409",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "Table 1's first page lists 2/6, 1/1, 1/1 and 4/5 families/cases for the first four studies; with 2/5, 1/1, 1/2 and 2/2 these sum to 14 families, not the 13 printed.",
     "snippet": "Families/number of 2/6 1/1 1/1 4/5",
     "surface": "body",
     "artifact": "files/fulltext/PMID30361190_Shaukat2018_JLE.txt",
-    "anchor": "Table 1, row 'Families/number of cases', page 407"
+    "anchor": "Table 1, row 'Families/number of cases', page 407",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "Table 1 is partly a re-interpretation of other papers' images by one author, not a transcription of what those papers report.",
     "snippet": "When the MR images were available in the manuscript of these studies, extra interpretation was performed by JS to include features related to this table that were not described in the manuscript or figure legends in these reports",
     "surface": "body",
     "artifact": "files/fulltext/PMID30361190_Shaukat2018_JLE.txt",
-    "anchor": "Table 1 footnote '#', page 410"
+    "anchor": "Table 1 footnote '#', page 410",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "Vigabatrin resolved the spasms in child 1.",
     "snippet": "Vigabatrin was added and the spasms resolved",
     "surface": "body",
     "artifact": "files/fulltext/PMID30361190_Shaukat2018_JLE.txt",
-    "anchor": "Results, Clinical data, page 403 left column"
+    "anchor": "Results, Clinical data, page 403 left column",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "Child 2's head circumference at 11 months was -1.62 SD and was called acquired microcephaly.",
     "snippet": "HC 44 cm (SD: -1.62), consistent with failure to thrive",
     "surface": "body",
     "artifact": "files/fulltext/PMID30361190_Shaukat2018_JLE.txt",
-    "anchor": "Results, Clinical data, page 405 left column"
+    "anchor": "Results, Clinical data, page 405 left column",
+    "panel_text_relation": "text_only"
    }
   ]
  }

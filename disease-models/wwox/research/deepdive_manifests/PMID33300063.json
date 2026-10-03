@@ -161,21 +161,24 @@
     "snippet": "(A2780/T) were characterized by reduced WWOX expression",
     "surface": "body",
     "artifact": "files/fulltext/PMID33300063_Zhao2020_Spandidos.txt",
-    "anchor": "Abstract, page 1 left column"
+    "anchor": "Abstract, page 1 left column",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "The results say the resistant line has the HIGHEST basal WWOX protein of the three lines.",
     "snippet": "EOC cell lines and the highest protein expression levels of",
     "surface": "body",
     "artifact": "files/fulltext/PMID33300063_Zhao2020_Spandidos.txt",
-    "anchor": "Results, 'Anticancer drug-induced WWOX activation', page 4 left column"
+    "anchor": "Results, 'Anticancer drug-induced WWOX activation', page 4 left column",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "Basal WWOX mRNA is also higher in the resistant line.",
     "snippet": "Compared with in A2780 cells, a higher endogenous level of",
     "surface": "body",
     "artifact": "files/fulltext/PMID33300063_Zhao2020_Spandidos.txt",
-    "anchor": "Results, page 4 left column"
+    "anchor": "Results, page 4 left column",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "The only lysosomal clamp (chloroquine) is applied to the drug arm in the sensitive line.",
@@ -206,35 +209,40 @@
     "snippet": "p‐p70S6K kinase (at Thr389 and Ser371) was barely detected",
     "surface": "body",
     "artifact": "files/fulltext/PMID33300063_Zhao2020_Spandidos.txt",
-    "anchor": "Results, 'PTX mediates the mTOR signaling pathway', page 8 left column; Fig. 4A"
+    "anchor": "Results, 'PTX mediates the mTOR signaling pathway', page 8 left column; Fig. 4A",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "PTX raised phospho-4E-BP1 while lowering phospho-mTOR.",
     "snippet": "and increased the expression levels of p‐4E‐BP‐1 (Thr37/46).",
     "surface": "body",
     "artifact": "files/fulltext/PMID33300063_Zhao2020_Spandidos.txt",
-    "anchor": "Results, page 8 left column; Fig. 4A"
+    "anchor": "Results, page 8 left column; Fig. 4A",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "The discussion nevertheless says WWOX activated mTOR/p70S6K signalling.",
     "snippet": "Beclin‐1. Furthermore, WWOX activated mTOR/p70S6K",
     "surface": "body",
     "artifact": "files/fulltext/PMID33300063_Zhao2020_Spandidos.txt",
-    "anchor": "Discussion, page 10 left column"
+    "anchor": "Discussion, page 10 left column",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "Total levels of the downstream proteins were not measured.",
     "snippet": "and p‐4E‐BP‐1; total protein expression levels were not",
     "surface": "body",
     "artifact": "files/fulltext/PMID33300063_Zhao2020_Spandidos.txt",
-    "anchor": "Discussion, page 10 left column"
+    "anchor": "Discussion, page 10 left column",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "Phospho-WWOX antibody is a commercial Tyr33 reagent.",
     "snippet": "anti‐phosphorylated (p)‐Y33‐WWOX (cat. no. ab193624;",
     "surface": "body",
     "artifact": "files/fulltext/PMID33300063_Zhao2020_Spandidos.txt",
-    "anchor": "Materials and methods, Western blotting, page 2 right column"
+    "anchor": "Materials and methods, Western blotting, page 2 right column",
+    "panel_text_relation": "text_only"
    }
   ]
  }
