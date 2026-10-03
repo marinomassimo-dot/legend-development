@@ -2,11 +2,15 @@
  "schema_version": 2,
  "pmid": "38161429",
  "doi": "10.3389/fped.2023.1301166",
- "receipt": "FTR-20260927-38161429-02",
+ "receipt": "FTR-20261003-38161429-01",
  "landing": [
   "FTR-20260927-38161429-02",
   "CC-20260922-VERMIS-HYPOPLASIA-FREQUENCY-01",
-  "discovery_ledger_current"
+  "discovery_ledger_current",
+  "disease-models/wwox/research/fulltext_dossiers/PMID38161429.md",
+  "disease-models/wwox/research/intake_wave_20261003w3_A.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W3-A-BATTAGLIA-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W3-A-REGISTRY-01.md"
  ],
  "skills_considered": [
   {
@@ -200,30 +204,28 @@
  "retraction_check": {
   "performed": true,
   "status": "no_flag",
-  "evidence": "PubMed record for PMID 38161429 carries no retraction, expression of concern or correction notice; the PMC JATS read here carries no such notice in its front matter.",
+  "evidence": "PubMed record for PMID 38161429 carries no retraction, expression of concern or correction notice; the PMC JATS read here carries no such notice in its front matter. Re-checked 2026-10-03 (PubMed: Journal Article, Review; no notice); dependency screen re-run against the 2026-09-10 snapshot. Re-checked 2026-10-03 (PubMed: Journal Article, Review; no notice); dependency screen re-run against the 2026-09-10 snapshot. Re-checked 2026-10-03 (PubMed: Journal Article, Review; no notice); dependency screen re-run against the 2026-09-10 snapshot.",
   "result": "no_flag",
   "dependencies": {
-   "schema": "retraction_check.dependencies/1",
-   "tool": "framework/scripts/dependency_integrity.py screen --pmid 38161429 --manifest-block",
-   "paper_verdict": "UNSCREENABLE_NO_SNAPSHOT",
-   "screened": false,
-   "reference_source": "jats_local",
-   "references_declared": 70,
-   "references_screened": 0,
-   "references_with_doi": 0,
    "flagged": [],
    "noted": [],
-   "unscreenable": {
-    "UNSCREENABLE_NO_SNAPSHOT": 70
-   },
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 70,
+   "references_screened": 68,
+   "references_with_doi": 68,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
    "snapshot": {
-    "date": "1970-01-01",
-    "days_since_fetch": null,
-    "rows": 0,
-    "sha256": null,
-    "note": "No snapshot exists in this checkout; the date field carries the epoch as a placeholder that no reader can mistake for a fetch, and days_since_fetch is null. files/retraction_watch/ is gitignored corpus material and is empty here."
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
    },
-   "citing_relation": "Nothing is flagged because nothing was screened, and the two must not be read as the same state. This event asserts only that PMID 38161429 itself carries no retraction or concern notice in PubMed or in its PMC front matter; the integrity status of the 70 studies it collates is UNKNOWN here. It matters for this particular article more than for most, because a collation's counts are exactly the sum of its dependencies."
+   "tool": "framework/scripts/dependency_integrity.py screen --doi 10.3389/fped.2023.1301166 --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
   }
  },
  "source_artifacts": [
@@ -240,13 +242,25 @@
     "derived": false,
     "result_sha256": "5bea706afd5e69ca08bf4e822707b025e036c26e1c36388ac81690e5a83f8fd2"
    }
+  },
+  {
+   "path": "files/fulltext/PMID38161429_Battaglia2023_supplement/fped-11-1301166-g001.jpg",
+   "sha256": "d6570568c65fb796e2c3d2330f6dd32cc8f3a1ce6c54e237b665754868e2c9d3",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.frontiersin.org/files/Articles/1301166/fped-11-1301166-HTML/image_m/fped-11-1301166-g001.jpg",
+    "http_method": "GET",
+    "tier": "publisher figure image",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-03",
+    "result_sha256": "d6570568c65fb796e2c3d2330f6dd32cc8f3a1ce6c54e237b665754868e2c9d3"
+   }
   }
  ],
  "verbatim_locators": {
   "waived": false,
   "source_fulltext_indexed": true,
   "source_fulltext_indexed_evidence": "NCBI elink pubmed->pmc for 38161429 returns PMC10757851; the efetch XML above is the full body, 48,507 characters of text after markup removal.",
-  "abstract_anchoring_waived": "No locator uses the abstract as evidence; all four quote the body, Table 1 or a figure caption.",
   "entries": [
    {
     "proposition": "THE DENOMINATOR THE LEDGER'S 'most cases' NEVER HAD: in the only literature collation whose declared subject is the WOREE radiological spectrum, cerebellar vermis hypoplasia is recorded as 2:2 in Table 1 against a total of 101 collated patients. The 2:2 is one study's own count, not a rate over the collation.",
@@ -279,7 +293,88 @@
     "surface": "body",
     "artifact": "files/fulltext/PMID38161429_Battaglia2023_PMC_2026-09-27.xml",
     "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 1's total of 101 is a sum over overlapping sources; the Clinical section of the same paper counts 84 reported patients.",
+    "snippet": "84 patients have been reported in the literature with descriptions of the individual phenotypes",
+    "anchor": "Clinical findings, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38161429_Battaglia2023_PMC_2026-09-27.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review calls its 101 'cases'.",
+    "snippet": "This review analyzed 101 cases of children with various mutations in the WWOX gene associated with WOREE syndrome from 2014 to 2023.",
+    "anchor": "Imaging findings, closing paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38161429_Battaglia2023_PMC_2026-09-27.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Banne 2021, one of the summed sources, is itself a collation of 56 published cases.",
+    "snippet": "Similar features were found in 2021 by Banne et al., who retrospectively analyzed 45 variants in 56 WOREE published cases.",
+    "anchor": "Imaging findings, Banne/Oliver paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38161429_Battaglia2023_PMC_2026-09-27.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Piard: abnormal MRI in 80% — so not all patients have MRI anomalies.",
+    "snippet": "The study detected abnormal brain MRI in 80% of them",
+    "anchor": "Imaging findings, Johannsen/Piard paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38161429_Battaglia2023_PMC_2026-09-27.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The 13% progression figure is computed over all 101, including patients never re-imaged.",
+    "snippet": "approximately 13% of the patients included in the study also demonstrated age-related progression",
+    "anchor": "Imaging findings, closing paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38161429_Battaglia2023_PMC_2026-09-27.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In Oliver, 7 of 13 had serial MRI, and those showed progression.",
+    "snippet": "Lastly, 7 of 13 patients underwent serial MRI, which showed progression of the abnormalities with age",
+    "anchor": "Imaging findings, Banne/Oliver paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38161429_Battaglia2023_PMC_2026-09-27.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Q230P eight-case count is the review's citation of reference 1, not its own count.",
+    "snippet": "has been described both in homozygosity and in compound heterozygosity in eight cases overall",
+    "anchor": "Genetic findings, para 6 (cites reference 1)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38161429_Battaglia2023_PMC_2026-09-27.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The MS variant count is cited to a C6orf10 study.",
+    "snippet": "WWOX has been identified as a susceptible gene in MS and 48 WWOX pathogenic variants have been detected in affected patients",
+    "anchor": "Genetic findings, MS paragraph (cites reference 42)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38161429_Battaglia2023_PMC_2026-09-27.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1 re-uses one child and one fetus from Iacomino 2020.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 1: A' sagittal T1 with open arrow on thin corpus callosum and arrowhead on inferior vermis; A'' axial T2 with arrows on white matter; B' fetal and B'' post-mortem sagittal MRI with black arrows on the vermis. Legend ends 'Courtesy of Prof. Salpietro (50)'.",
+    "anchor": "Figure 1",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID38161429_Battaglia2023_supplement/fped-11-1301166-g001.jpg",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "The Discussion (and the abstract) claim MRI anomalies in all patients.",
+    "snippet": "Interestingly, all affected patients presented brain anomalies at MRI",
+    "anchor": "Discussion, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38161429_Battaglia2023_PMC_2026-09-27.xml",
+    "panel_text_relation": "text_only"
    }
   ]
- }
+ },
+ "context_policy": "SOURCE_FIRST"
 }
