@@ -1,0 +1,115 @@
+{
+ "schema_version": 2,
+ "pmid": "41966056",
+ "doi": "10.1016/j.ymthe.2026.04.016",
+ "receipt": "FTR-20261003-41966056-01",
+ "landing": [
+  "disease-models/wwox/research/intake_wave_20261003w5_C.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "PMC JATS acquired directly by E-utilities efetch; the cascade was not needed because the record is open access with a body."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "No deep dive was run. This is an intake first reading of a paper with no WWOX content; it produces a dossier and locators, not canonical claims."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Triples are handed to the audit through the commit candidates' LOCATOR TRIPLES FOR BLIND AUDIT sections, not run here: producer must not be verifier."
+  }
+ ],
+ "group_assessment": {
+  "waived": "Waived by name. This is a wave-5 intake first reading under SOURCE_FIRST: the paper carries no WWOX content (zero occurrences) and is read only as transferable delivery-safety evidence. No canonical claim is promoted by this pass, so the deep-dive steps that exist to rate a claim are not run; the pass's scope is recorded in the accompanying receipt and in the dossier's 'what I did not read' section."
+ },
+ "field_density": {
+  "waived": "Waived by name. This is a wave-5 intake first reading under SOURCE_FIRST: the paper carries no WWOX content (zero occurrences) and is read only as transferable delivery-safety evidence. No canonical claim is promoted by this pass, so the deep-dive steps that exist to rate a claim are not run; the pass's scope is recorded in the accompanying receipt and in the dossier's 'what I did not read' section."
+ },
+ "multihop": {
+  "waived": "Waived by name. This is a wave-5 intake first reading under SOURCE_FIRST: the paper carries no WWOX content (zero occurrences) and is read only as transferable delivery-safety evidence. No canonical claim is promoted by this pass, so the deep-dive steps that exist to rate a claim are not run; the pass's scope is recorded in the accompanying receipt and in the dossier's 'what I did not read' section."
+ },
+ "corpus_crossquery": {
+  "waived": "Waived by name. This is a wave-5 intake first reading under SOURCE_FIRST: the paper carries no WWOX content (zero occurrences) and is read only as transferable delivery-safety evidence. No canonical claim is promoted by this pass, so the deep-dive steps that exist to rate a claim are not run; the pass's scope is recorded in the accompanying receipt and in the dossier's 'what I did not read' section."
+ },
+ "retraction_check": {
+  "waived": "Waived by name. PubMed article-type and comments-corrections screening was not run as a network call in this pass; the acquired PMC record carries no retraction, correction or expression-of-concern notice in its front matter. All six records are 2025-2026 publications. This is declared as a gap, not as a clean result."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41966056_Wang2026_PMC.xml",
+   "sha256": "d742797b9570be3b99d8d2279763e11f7f1f369135a6dd7ee96d50392ce22ed8",
+   "kind": "article_text",
+   "note": "PMC JATS XML re-acquired by E-utilities efetch on 2026-10-03 by this reader for the wave-5 intake first reading; body present.",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=13239742&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "d742797b9570be3b99d8d2279763e11f7f1f369135a6dd7ee96d50392ce22ed8"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "JATS from E-utilities efetch db=pmc. Body separated from front matter by the reader's own extraction; every locator is matched against the normalised body text of the declared artefact.",
+  "abstract_anchoring_waived": "No locator draws on the abstract; every entry is matched against the body.",
+  "note": "Coverage: abstract, introduction, Results (clinical history, clinical outcomes, adverse events, biochemical outcomes, serologies, neurodevelopmental outcomes), Discussion and Materials and methods read from the JATS running text. Figure panels were NOT rendered: the numbers carried are stated in running text and quoted from there, and the one figure-derived locator is explicitly marked caption_only. Supplementary Video S1 and Documents S1-S3 (protocol, Tables S1-S3) were not fetched, so the 23-event adverse-event listing is receipted only as the running text's summary of Table S3.",
+  "entries": [
+   {
+    "proposition": "THE HUMAN INTRACISTERNAL DOSE LITERAL IS PRINTED WITH AN IMPOSSIBLE SIGN AND MUST NOT BE CARRIED AS PRINTED: a negative exponent of vector genome copies per gram of brain mass would denote a fraction of one genome copy. The paper's own paired figures recover the intended magnitudes by division; the printed form has lost the superscripts in both abstract and body.",
+    "snippet": "Following successful computed tomography (CT)-guided access to the cisterna magna with a 25-gauge neonatal spinal needle, 1E\u221210 vector genome copies/g brain mass (1.265E\u221213 genome copies) of RGX-111 in 5 mL of Elliotts B artificial CSF was injected over 5 min without adverse effects.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41966056_Wang2026_PMC.xml",
+    "anchor": "Results, 'Clinical outcomes', dosing paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DORSAL ROOT GANGLION TOXICITY WAS NOT MEASURED IN THIS HUMAN RECIPIENT: the authors state plainly that no nerve conduction studies were performed, and rest the inference on absence of reported paraesthesia and on deep tendon reflexes in a child dosed in the second year of life.",
+    "snippet": "Although no formal nerve conduction studies were performed, due to the protocol being a treatment investigational new drug (IND), the subject did not complain of paresthesias and did not demonstrate abnormal deep tendon reflexes, suggesting there was no clinically significant dorsal root ganglion (DRG) toxicity.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41966056_Wang2026_PMC.xml",
+    "anchor": "Discussion, DRG paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE ADVERSE EVENT BURDEN OF THIS PROCEDURE IS ATTRIBUTED BY THE INVESTIGATORS MAINLY TO THE IMMUNOSUPPRESSION RATHER THAN TO THE VECTOR.",
+    "snippet": "In total, 23 adverse events have been recorded to date (see Table S3); 17 occurred in the first year following dosing, and 16 of those were assessed to be possibly related to immunosuppression.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41966056_Wang2026_PMC.xml",
+    "anchor": "Results, 'Adverse events'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "TRANSGENE PRODUCT IN CSF DECLINED AFTER IMMUNOSUPPRESSION WAS WEANED, SO DURABILITY AND NOT ONLY TOXICITY HAS A MODIFIABLE IMMUNE COMPONENT ON THIS ROUTE.",
+    "snippet": "(A) CSF IDUA enzyme levels measured over 290 weeks suggest rapid-onset IDUA transgene expression (week 8), which peaked at 35 weeks and subsequently declined after weaning of immunosuppression began (blue arrow).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41966056_Wang2026_PMC.xml",
+    "anchor": "Figure 1 caption, panel A",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE CSF AND PLASMA ANTIBODY COMPARTMENTS ARE NOT EQUILIBRATED AFTER A DIRECT CNS DOSE.",
+    "snippet": "Note that despite direct CNS dosing of RGX-111, the ratio of plasma to CSF anti-IDUA titers obtained at the same time ranged from 320:1 to 1,280:1.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41966056_Wang2026_PMC.xml",
+    "anchor": "Results, 'Body fluid anti-IDUA serologies'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A TUMOUR WITH VECTOR GENOME INTEGRATION AFTER THE SAME ROUTE AND VECTOR IN A DIFFERENT CHILD IS CARRIED BY THIS PAPER AS A CITATION, NOT AS ITS OWN FINDING; IT IS AN OPEN READING DEBT.",
+    "snippet": "Finally, given the recent identification of an intraventricular CNS tumor demonstrating vector genome integration in a 5-year-old severe MPS I patient who had received ICM RGX-111 in the phase 1/2 open-label study (NCT03580083) at age 1 year,10 the absence of brain or spine neoplasms in our child more than 5.5 years post RGX-111 is important to note.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41966056_Wang2026_PMC.xml",
+    "anchor": "Discussion, neoplasm paragraph",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}
