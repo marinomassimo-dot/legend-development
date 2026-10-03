@@ -89,11 +89,13 @@
       "steps": [
         {
           "step": "Wave 4 (18 studies, scratchpad wave4_selection.md): Scientists A, B, C resumed after rate limit; integrate returns (receipts in event order via integration worktree)",
-          "status": "IN_PROGRESS"
+          "status": "DONE",
+          "evidence": "wave 4 receipts recorded (main f110c76); BATCH_20261003_003"
         },
         {
-          "step": "BATCH_H: wave 4 candidates + CC-20261004-MIRROR-01..03 + two deferred C-w3 candidates; Mirror review; battery; push",
-          "status": "TODO"
+          "step": "BATCH_H wave 4",
+          "status": "DONE",
+          "evidence": "BATCH_20261003_003 c0d4cc5; Mirror review f364603"
         }
       ]
     },
@@ -101,7 +103,31 @@
       "order": 6,
       "steps": [
         {
-          "step": "Select wave 5, dispatch Scientists, integrate, batch, review, push",
+          "step": "Wave 5 integrated",
+          "status": "DONE",
+          "evidence": "BATCH_20261003_004 e6df539"
+        }
+      ]
+    },
+    "OBJ_WAVE6": {
+      "order": 7,
+      "steps": [
+        {
+          "step": "Wave 6 (A,B,C) + Repudi 2021 re-reading: receipts recorded",
+          "status": "DONE",
+          "evidence": "main b066e4f; ledger 375"
+        },
+        {
+          "step": "BATCH_J: wave 6 + Repudi candidates (also CC-20261004-MIRROR-11..13), Mirror, battery on exact SHA, push",
+          "status": "IN_PROGRESS"
+        }
+      ]
+    },
+    "OBJ_STANDING_NEXT_WAVES": {
+      "order": 8,
+      "steps": [
+        {
+          "step": "Operator rule of 2026-10-03: whenever a literature batch completes, the Orchestrator proposes and dispatches the next literature wave on its own, choosing the logic by the scientific priorities that emerge (select with a read-only selector agent; same three tests: abstract substantive, lawful body, a question it could change; breadth over repetition). Emerging priority order: (1) allele-class function actually MEASURED (RNA/protein for splice, missense, deletion alleles) and carrier/heterozygote phenotypes (CLAIM 032/045 are thin); (2) restoration spec: WWOX pharmacodynamic assay first, window by endpoint class, immune cost for predicted-null recipients, neonatal DRG/tolerisation; (3) myelin cell-autonomy beyond the thin O-KO negative; (4) patient-overlap integrity (count once); (5) reading debts named by dossiers (Bouteille 2009, Celebi 2020, Serin 2018, Tabarki 2015, Hordeaux 2019/2020, Finnis 2005, Ko 2018) when lawful text appears; (6) periodic fresh-literature scan (WWOX/WOREE/SCAR12/EIEE28 by date). The neuro-WWOX pool is nearly exhausted: when a wave would have fewer than 12 qualifying studies, say so and shift weight to transferable lessons and debts rather than pad.",
           "status": "TODO"
         }
       ]
