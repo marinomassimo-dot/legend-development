@@ -12860,3 +12860,14 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Outcome:** INGEST — `paper_registry_current#PAPER 141`.
 **Record provenance:** created by `CC-20261003-B-REGISTRY-01` (intake wave 2 2026-10-03). Provisional number; the integrator renumbers in event order.
 **PAPER link:** [[paper_registry_current#PAPER 141]]
+
+## LIT-0440
+**PMID:** 21212468
+**Short title:** Dudekula 2010 Aging — Zfra in mitochondrial apoptosis; a perspective that performs no experiment
+**Status:** processed
+**Route:** Europe PMC REST `fullTextXML` into the root `files/fulltext/`, with the single figure from the PMC open-access mirror; read 2026-10-03 by ACTOR_ID `scientist` (Scientist B) under `context_policy: SOURCE_FIRST`, intake wave 3.
+**Outcome:** INGEST — `paper_registry_current#PAPER 142`.
+**Record provenance:** 🔴 identity landing written by `BATCH_20261003_001` to clear the `ORPHAN_COMPLETE_READ` block this reading left on `main`; the scientific landing is owed by wave 3, which authored the reading.
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261003-21212468-01`; manifest `deepdive_manifests/PMID21212468.json`
+**PAPER link:** [[paper_registry_current#PAPER 142]]
+**Note:** Not medical advice.

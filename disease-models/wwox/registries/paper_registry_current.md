@@ -8285,3 +8285,24 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Role:** 🔴 **The sentence that matters most for an SDR-destabilising allele occurs only in this review's abstract.** *«WWOX binds Tau via its C-terminal SDR domain»* occurs exactly once in the fingerprinted artefact, inside `<abstract>`, and **zero times in the body**; the body states only the GSK-3β version, attributed to two same-laboratory primaries (Sze 2004 J Biol Chem, PMID 15126504, which LEGEND holds as abstract-only; and Wang 2012 Cell Death Differ, PMID 22193544). There is no third, independent primary. 🔴 *«it only takes less than 15 days after birth»* is a **ceiling imposed by the null mouse's one-month lifespan**, not a measured latency, and is juvenile rather than embryonic. 🔴 *«the stronger the binding, the better»* is an **analogy transferred from cancer suppression**, used in §10.3 to motivate a therapeutic programme, with no neuronal measurement. 🟢 The review is self-critical in one place that applies to its own group's data: on the p73 literature it writes that *«transient overexpression may cause artificial binding effects»*.
 **LIT link:** [[literature_tracking_log_current#LIT-0439]]
 **Note:** class-level record; no individual-level detail is carried in this public edition. This paper belongs to a corpus in which one laboratory supplies every record of the mechanism: PubMed 2026-10-02 returns 0 records for `WWOX AND TIAF1 NOT Chang NS[au]` and 4 for `"TRAPPC6A" AND (aggregation OR plaque)`, all four of them this group's. Not medical advice.
+
+## PAPER 142
+**Short title:** Dudekula 2010 Aging — Zfra in mitochondrial apoptosis; a perspective that performs no experiment
+**Full title:** Zfra is a small wizard in the mitochondrial apoptosis
+**Authors:** Dudekula S, Lee MH, Hsu LJ, Chen SJ, Chang NS
+**Year:** 2010
+**Source type:** secondary — narrative perspective; `research-article` in the JATS deposit and *Journal Article* in PubMed, but the article has **no Methods, no Results**, one schematic figure and a 51-entry reference list
+**Journal/source:** *Aging (Albany NY)* 2010;2(12):1023–1029
+**Identifier:** PMID 21212468 / PMCID PMC3034171 / DOI 10.18632/aging.100263
+**Status:** processed
+**Record provenance:** 🔴 **Identity landing written by `BATCH_20261003_001`, not by the reader.** The reading is intake wave 3's, by ACTOR_ID `scientist` (Scientist B), branch `task/sci-B-20261003w3`, and its receipt landed on `main` with no registry record of any kind — which is `ORPHAN_COMPLETE_READ`, a `BLOCK_BATCH_COMMIT` that stopped every batch, not only its own wave's. Every field here is transcribed from that reading's own receipt, manifest and dossier. **The scientific landing is still owed by wave 3**: no claim link, no pathway assessment and no evidence boundary is asserted here, and the integrator did not open the article.
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261003-21212468-01`; manifest `deepdive_manifests/PMID21212468.json`; dossier `research/fulltext_dossiers/PMID21212468.md`. Coverage as the receipt declares it: body and figure read, tables and supplements `not_present`.
+**Primary pathway:** organelle-level apoptosis (Zfra / WWOX), as the wave's own selection question framed it
+**Model/species:** none — the article reports no experiment of its own
+**Genotype/model:** none
+**Transferability:** n/a — a perspective contributes no transferable datum; nothing may inherit `DATO` status from it
+**clinical relevance:** BACKGROUND — provenance only
+**Claim links:** none
+**Role:** 🔴 **Nothing in this article is a new measurement.** Its organelle statements — Zfra binding the first WW and the SDR domain, Ser8 phosphorylation and relocation to mitochondria, Bcl-2 / Bcl-xL downregulation without cytochrome-c release, membrane-potential dissipation — are each **cited** to earlier primaries of the same laboratory, and the dossier records that three of them carry one and the same citation. The article states its own limit: whether endogenous Zfra blocks the apoptotic function of p53 and WOX1 *«remains to be determined»*. No n, no statistic and no effect size appears anywhere, and there is no neuronal datum.
+**LIT link:** [[literature_tracking_log_current#LIT-0440]]
+**Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.

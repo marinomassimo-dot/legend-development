@@ -212,8 +212,8 @@ to make a suite green — the only way to move it is to have made the change you
 
 ```yaml
 growth_anchor_ledger: framework/state/growth_anchors.jsonl
-growth_anchor_events: 37
-growth_anchor_head: 38bb0a7f12c871334a4ad5ebd57926d8c598a406fa12068e8f3f4989eafcaee0
+growth_anchor_events: 38
+growth_anchor_head: 272719e4e0224aa284c193e60f5529e6579f0227fcfe375d35aa2429c8b00277
 ```
 
 ```bash
@@ -240,8 +240,8 @@ must be backed by a persisted `complete_fulltext_read` receipt, or `LINT_AUTOMAT
 `BLOCK_BATCH_COMMIT`.
 
 ```yaml
-registry_only_fulltext_declarations_baseline: 7
-registry_only_fulltext_declaration_ids: ["PAPER 014", "PAPER 028", "PAPER 044", "PAPER 045", "PAPER 046", "PAPER 049", "PAPER 050"]
+registry_only_fulltext_declarations_baseline: 6
+registry_only_fulltext_declaration_ids: ["PAPER 014", "PAPER 028", "PAPER 044", "PAPER 045", "PAPER 046", "PAPER 050"]
 ```
 
 Lowering the baseline is the intended direction of travel: back-fill a record with real
