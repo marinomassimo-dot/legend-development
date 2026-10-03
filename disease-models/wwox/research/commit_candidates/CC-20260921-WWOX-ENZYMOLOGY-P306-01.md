@@ -356,3 +356,16 @@ table and the substrate/cofactor list, and only then §4(c)'s `TX-003` line.
 Unchanged: no artefact and no receipt for PMID 21476439. OpenAlex lists it as hybrid OA at `degruyter.com/document/doi/10.1515/znc-2011-1-210/pdf`, but that host answers automated clients with HTTP 202 and an empty body (tested 2026-09-28). **Unblock:** one manual browser download by the operator.
 
 **Not medical advice.**
+
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261003_002` (2026-10-03, ACTOR_ID `scientist`, Scientist G), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** DEFERRED
+
+Re-measured 2026-10-03: no artefact for PMID 21476439 exists under the root `files/fulltext/`; every quantity `§4(c)` would write is abstract-depth. **Unblock:** unchanged — one manual download of the publisher PDF, then a receipt and verbatim locators.
+
+**Not medical advice.**

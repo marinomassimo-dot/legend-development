@@ -37,3 +37,16 @@ The receipts named below must be appended to the ledger before this candidate is
 (response means clinical cessation for at least four weeks | Response to treatment was defined by a complete clinical cessation of epileptic spasms lasting for at least 4‐week duration during the course of therapy. | PMID 37583270, Methods, Outcome measures; files/fulltext/PMID37583270_Nagarajan2023_PMC.xml)
 (vigabatrin with phenobarbital did not stop spasms in the p.Leu239Arg child | Initially, vigabatrin was added to phenobarbital; however, the patient continued to experience epileptic spasms despite this combination. | PMID 42092735, Case Presentation para 5; files/fulltext/PMID42092735_SercePehlevan2026_PMC.xml)
 (spasms stopped after clobazam was added | Following the addition of clobazam, the spasms completely subsided | PMID 42092735, Case Presentation para 5; files/fulltext/PMID42092735_SercePehlevan2026_PMC.xml)
+
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261003_002` (2026-10-03, ACTOR_ID `scientist`, Scientist G), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** PROPAGATED (MINOR — `CLAIM 001` is `conflicting evidence`, status unchanged)
+
+Links renumbered: Nagarajan is `PAPER 143`, Serce Pehlevan `PAPER 145`. Blind audit: 4 triples, 3 SUPPORTED, 1 SUPPORTED_NARROWER — clobazam was added after valproate had already reduced the spasms and the remission is one month on combined therapy, which the op's *valproate then clobazam* already states.
+
+**Not medical advice.**

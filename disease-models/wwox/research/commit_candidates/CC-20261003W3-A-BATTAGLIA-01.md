@@ -69,3 +69,16 @@ The receipts named below must be appended to the ledger before this candidate is
 (the 13% progression figure is stated over the whole review | approximately 13% of the patients included in the study also demonstrated age-related progression | PMID 38161429, Imaging findings, closing paragraph; files/fulltext/PMID38161429_Battaglia2023_PMC_2026-09-27.xml)
 (one cited study found abnormal MRI in 80% | The study detected abnormal brain MRI in 80% of them | PMID 38161429, Imaging findings, Johannsen/Piard paragraph; files/fulltext/PMID38161429_Battaglia2023_PMC_2026-09-27.xml)
 (the eight-case Q230P count is attributed to reference 1 | has been described both in homozygosity and in compound heterozygosity in eight cases overall | PMID 38161429, Genetic findings para 6; files/fulltext/PMID38161429_Battaglia2023_PMC_2026-09-27.xml)
+
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261003_002` (2026-10-03, ACTOR_ID `scientist`, Scientist G), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** PROPAGATED (MINOR)
+
+All five ops applied to `PAPER 046`. Blind audit: 6 triples, 6 SUPPORTED, with one MORE/LESS note acted on — the source states progression for the serially imaged subgroup, not per patient, so *all 7 progressed* was replaced by the source's own words (integrator amendment). `PAPER 046`'s registry-only `full text reviewed` declaration is now backed by a receipt.
+
+**Not medical advice.**

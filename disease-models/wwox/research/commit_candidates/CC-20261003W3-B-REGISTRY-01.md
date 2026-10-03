@@ -173,3 +173,16 @@ record cites a receipt the ledger does not hold. They are prepared, not recorded
 (the 2018 review names the lysosome once, in a list of compartments | WWOX localizes in many subcellular compartments, including cell membrane, mitochondrion, lysosome, nucleus, and others. | PMID 30158849, Hyal-2/WWOX TBI section; files/fulltext/PMID30158849_Liu2018_PMC.xml)
 (the mitochondrial statements of the Zfra perspective are attributed, not measured | At the mitochondrial level, Zfra downregulates the expression of apoptosis inhibitor Bcl-2 and Bcl-xL | PMID 21212468, 'Zfra executes mitochondrial apoptosis on its own manner'; files/fulltext/PMID21212468_Dudekula2010_PMC.xml)
 (WWOX appears in the TIAF1 paper only as cited background for another route | TGF-β1 binds membrane hyaluronidase type 2 (Hyal-2) for recruiting tumor suppressor WW domain-containing oxidoreductase (WOX1) (also named WWOX or FOR) and Smad4 to relocate to the nuclei | PMID 21368882, Results, TβRII-independent section; files/fulltext/PMID21368882_Lee2010_PMC.xml)
+
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261003_002` (2026-10-03, ACTOR_ID `scientist`, Scientist G), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** PROPAGATED (MINOR), with one op reconciled rather than applied
+
+**PMID 21212468 was not given a second record.** `PAPER 142` / `LIT-0440` already existed as the identity landing `BATCH_20261003_001` wrote; this candidate's scientific assessment was written INTO those records (provenance line updated, the candidate's own field values carried) and its `PAPER 143` / `LIT-0441` creation ops were dropped. **Renumbered:** 21368882 → `PAPER 146` / `LIT-0443`; 41677633 → `PAPER 147`; 24008736 → `PAPER 148`; 38542478 → `PAPER 149`; 30158849 → `PAPER 150`; every anchor and wikilink rewritten. **Integrator amendments:** (1) four `LIT` lines and `LIT-EX-005` said *read in full* where every receipt is `partial_fulltext_read` — now say so; (2) `PAPER 147`'s panel magnitudes carry the fact that no panel locator was persisted and the receipt declares `figures: captions_only`; (3) `LIT-EX-005`'s `Status` took the bare vocabulary value after Phase 5 returned `INVALID_LIT_STATUS`, the pointer moved to its own line.
+
+**Not medical advice.**

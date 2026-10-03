@@ -60,3 +60,16 @@ record cites a receipt the ledger does not hold. They are prepared, not recorded
 (the LC3 loss is routed to the proteasome in this paper | Treatment of SCC-15 cells with a proteasome inhibitor MG132 blocked MTX-induced LC3 protein downregulation, indicating that LC3 protein is degraded via the ubiquitin/proteasomal pathway post MTX treatment | PMID 24008736, Results 'MTX modulates autophagy in SCC cells'; files/fulltext/PMID24008736_Tsai2013_PMC.xml)
 (the causal order through mTOR is offered as a possibility | raising the possibility that WWOX may regulate autophagy through mTOR activation in MTX-treated SCC-15 cells | PMID 24008736, Results 'MTX treatment modulates mTOR signaling in SCC cells via WWOX'; files/fulltext/PMID24008736_Tsai2013_PMC.xml)
 (the file deposited as this article's supplement carries another study's figures | Supplementary Figure 1 | PMID 24008736, page 1 of the deposited supplementary PDF; files/supplements/PMID24008736/cddis2013308x1.pdf)
+
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261003_002` (2026-10-03, ACTOR_ID `scientist`, Scientist G), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** PROPAGATED (MINOR)
+
+One op applied to `FT-074`. Blind audit: all 5 triples SUPPORTED; the auditor independently confirmed the deposited `cddis2013308x1.pdf` is an unrelated haematology study (five figures, nothing on WWOX, methotrexate, carcinoma or autophagy), and that the article cites Supplementary Figures 5 and 7 which the deposit does not contain.
+
+**Not medical advice.**

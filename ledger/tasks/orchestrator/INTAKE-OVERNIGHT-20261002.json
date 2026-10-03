@@ -48,8 +48,9 @@
           "evidence": "wave 2 Scientists A, B, C dispatched; brief scratchpad scientist_brief_20261003_w2.md"
         },
         {
-          "step": "Integrate wave 2 returns (A landed, receipts recorded eb01d5f; B and C resumed after rate limit), then one BATCH_COMMIT of A-w2 + B-w2 + C-w2 + MIRROR-01..03 candidates, Mirror review, battery, push",
-          "status": "IN_PROGRESS"
+          "step": "Wave 2 integrated, BATCH_20261003_001 (WM_v7.9), Mirror review done",
+          "status": "DONE",
+          "evidence": "main 31da5fa; Mirror review 58bd066"
         }
       ]
     },
@@ -67,8 +68,9 @@
           "evidence": "three agents dispatched; brief scientist_brief_20261003_w3.md"
         },
         {
-          "step": "Integrate wave 3 returns, BATCH_COMMIT, Mirror, battery, push",
-          "status": "TODO"
+          "step": "Wave 3 integrated, BATCH_20261003_002 (WM_v7.10)",
+          "status": "DONE",
+          "evidence": "main 663970a"
         }
       ]
     },
@@ -76,7 +78,30 @@
       "order": 4,
       "steps": [
         {
-          "step": "Battery on exact final SHA, gate, LINT, receipts verify, safe_push to development main (main is 44+ commits ahead of the last push)",
+          "step": "Battery on exact SHA 663970a (136 targets, 0 red), gate, push to development",
+          "status": "DONE",
+          "evidence": "safe_push PUBLISHED sha=663970a verified=ls-remote"
+        }
+      ]
+    },
+    "OBJ_WAVE4": {
+      "order": 5,
+      "steps": [
+        {
+          "step": "Wave 4 (18 studies, scratchpad wave4_selection.md): Scientists A, B, C resumed after rate limit; integrate returns (receipts in event order via integration worktree)",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "step": "BATCH_H: wave 4 candidates + CC-20261004-MIRROR-01..03 + two deferred C-w3 candidates; Mirror review; battery; push",
+          "status": "TODO"
+        }
+      ]
+    },
+    "OBJ_WAVE5": {
+      "order": 6,
+      "steps": [
+        {
+          "step": "Select wave 5, dispatch Scientists, integrate, batch, review, push",
           "status": "TODO"
         }
       ]
