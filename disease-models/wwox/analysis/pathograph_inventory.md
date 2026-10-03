@@ -32,18 +32,11 @@ annotations is reported below whatever it happens to be.
 | …undirected edges they collapse into | 42 |
 | Edges carrying a declared relation type | 0 |
 | Nodes carrying a biological scale | 0 |
-| Deep-dive manifests read | 153 |
-<<<<<<< HEAD
-| …of which bound to at least one claim | 64 |
-| Propositions scanned | 3021 |
+| Deep-dive manifests read | 158 |
+| …of which bound to at least one claim | 65 |
+| Propositions scanned | 3071 |
 | …carrying a relational connective | 685 |
 | …locator-backed candidates | 647 |
-=======
-| …of which bound to at least one claim | 65 |
-| Propositions scanned | 3057 |
-| …carrying a relational connective | 679 |
-| …locator-backed candidates | 641 |
->>>>>>> main
 | …locator-backed and bound to a claim | 290 |
 
 The scanned population is three declared surfaces and no others: every claim
@@ -370,11 +363,7 @@ carried no connective from the lexicon.
 
 ## Provenance
 
-Derived from 156 input files; digest
-<<<<<<< HEAD
-`ce3b9515b8118e2b`. Sources: the claim, paper and
-=======
-`e035e4701b265cf8`. Sources: the claim, paper and
->>>>>>> main
+Derived from 161 input files; digest
+`f36f86ef80aff1c2`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 
