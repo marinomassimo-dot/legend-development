@@ -48,21 +48,128 @@
   "note": "Ten PubMed records join WWOX and autophagy; the direction is disputed among them (FT-074)."
  },
  "multihop": {
-  "performed": false,
-  "reason": "Not performed: the one gene-direct reference that carries the autophagy direction (Tsai 2013, PMID 24008736) was read earlier in the corpus.",
+  "performed": true,
   "references_enumerated": 44,
-  "enumeration_method": "44 numbered references counted on the reading-order text; Crossref returned no reference list for this DOI.",
+  "enumeration_method": "44 numbered references on the reading-order text; Europe PMC and Crossref hold no reference list for this DOI. Gene-direct references identified by title and resolved by PubMed title search; two (Gao 2016 osteosarcoma miR-214-3p; Baryla 2015 'Alteration of WWOX in human cancer') returned no PubMed hit and one (Lo 2015 review) returned several, so those three are named here and not listed.",
   "gene_direct_refs_in_source": [
-   "24008736"
+   "24137423",
+   "22213016",
+   "25476151",
+   "20480411",
+   "27550453",
+   "18620777",
+   "14555208",
+   "24008736",
+   "22736928",
+   "33191002",
+   "25612104",
+   "23534718",
+   "25891642",
+   "25659037",
+   "23459853",
+   "26820701",
+   "32132039",
+   "18460020",
+   "30622118"
   ],
-  "resolved": [],
-  "queued": [
+  "gene_direct_count": 19,
+  "resolved": [
+   {
+    "pmid": "27550453",
+    "how": "Already read in this corpus before this event (receipts FTR-20260810-27550453-01; depth complete_fulltext_read). Followed as a hop by checking what this paper says it reports against that reading where this event's argument depended on it; not re-read here."
+   },
    {
     "pmid": "24008736",
-    "queue": "not queued by this actor: named in the intake note as a follow-up, not as a queue entry",
-    "reason": "Already read in the corpus (FTR-20260921-24008736-01); the comparison is in the intake note."
+    "how": "Already read in this corpus before this event (receipts FTR-20260921-24008736-01, FTR-20261003-24008736-02; depth partial_fulltext_read). Followed as a hop by checking what this paper says it reports against that reading where this event's argument depended on it; not re-read here."
+   },
+   {
+    "pmid": "18460020",
+    "how": "Already read in this corpus before this event (receipts FTR-20260909-18460020-01; depth complete_fulltext_read). Followed as a hop by checking what this paper says it reports against that reading where this event's argument depended on it; not re-read here."
    }
-  ]
+  ],
+  "queued": [
+   {
+    "pmid": "24137423",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "22213016",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "25476151",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "20480411",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "18620777",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "14555208",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "22736928",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "33191002",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "25612104",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "23534718",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "25891642",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "25659037",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "23459853",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "26820701",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "32132039",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "30622118",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   }
+  ],
+  "note": "Tsai 2013 (PMID 24008736) is the one reference that carries the autophagy direction; its corpus readings are partial only because its deposited supplement belongs to another article (FT-074)."
  },
  "corpus_crossquery": {
   "performed": true,
