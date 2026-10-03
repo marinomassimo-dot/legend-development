@@ -14,6 +14,36 @@
 
 ---
 
+## 0 · Relation to `CC-20261003w4-C-DRG-CONTRADICTION-01` — read after this wave's first pass
+
+Wave 4 left the governing question open: two regulatory-grade primate datasets disagreed about
+whether AAV DRG toxicity is immune-preventable (Biogen, dexamethasone + **tacrolimus** ± MMF,
+pathology reduced across three cargos) or dose-intrinsic (Novartis, **prednisolone**, and
+**rituximab + everolimus** under complete B-cell depletion, pathology unchanged).
+
+**This candidate does not supersede that one and does not close its question.** It is additive in
+two directions:
+
+- **On attribution** (§2.4 below) — a dimension wave 4's candidate does not address: whether the
+  lesion's *increment over concurrent control* has been measured at all. It usually has not.
+- **On wave 4's "drug class" explanation** — three observations in this wave independently favour it,
+  and are set out in `research/intake_wave_20261003w5_C.md` §4b rather than repeated here. In
+  summary: the lesion is independent of *pre-existing antibody*, which is what rituximab targets;
+  the transcriptional axis is interferon/JAK-STAT rather than NF-κB, which is what prednisolone
+  targets; and human predicted-null programmes converge on tacrolimus-containing regimens. The
+  distinguishing agent is **calcineurin inhibition**, not immunosuppression in general and not mTOR
+  inhibition — everolimus sat in the failed arm while sirolimus sits in the human regimens.
+
+**None of the three is an intervention**, so the question remains open: one measured pre-existing
+rather than treatment-emergent immunity, one ran no immunosuppressed arm at all, and the human
+regimens were chosen to prevent anti-transgene responses rather than to protect the DRG. Wave 4's
+power and procedure explanations are untouched.
+
+**Already held by wave 4, not claimed here as new:** that empty capsid and promoterless constructs
+produce neither lesion nor NfL rise (wave 4 has this from PMID 36700120; PMID 41257285 is an
+**independent replication** in a different study and sponsor), the §13 Tier-3 ruling on NfL, and
+NfL's non-specificity in a developmental encephalopathy.
+
 ## 1 · The state of the question before this wave
 
 Waves 3–4 built a restoration spec and a window status in which dorsal-root-ganglion toxicity after

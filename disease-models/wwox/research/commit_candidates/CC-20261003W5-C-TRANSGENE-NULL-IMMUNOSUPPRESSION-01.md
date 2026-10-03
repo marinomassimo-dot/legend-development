@@ -82,6 +82,25 @@ the triple regimen, not the single-steroid regimen.**
    antibody; WWOX protein is intracellular and the antibody mechanism is not the same. What may
    transfer is loss of transduced cells to a cellular response, which this source does not measure.
 
+## 3b · A convergence with wave 4 that sharpens which agent matters
+
+`CC-20261003w4-C-DRG-CONTRADICTION-01` found that a **tacrolimus**-containing primate regimen reduced
+DRG pathology across three cargos while **prednisolone**, and **rituximab + everolimus** under
+complete B-cell depletion, did not. Its most parsimonious explanation was drug class — offered,
+as that candidate notes, by the party whose regimen worked.
+
+Every predicted-null regimen tabulated in §1 above **contains tacrolimus** (the CLN7 programme used
+it "in some cases"). The programme that used a steroid alone is the one whose recipients retain
+endogenous protein. So the human practice tabulated here and the primate mitigation result in
+wave 4 point at the same agent class from opposite ends of the evidence.
+
+**Two cautions against over-reading this.** First, the human regimens were chosen to prevent
+**anti-transgene** immune responses, not to protect the DRG; their DRG outcomes are incidental.
+Second, **mTOR inhibition does not separate the two results** — everolimus sat in wave 4's failed
+arm while sirolimus sits in every one of these human regimens — so if drug class is the explanation,
+the active element is calcineurin inhibition and the sirolimus component is doing something else or
+nothing. That is a prediction, not a finding, and §5's falsifying experiment is the way to test it.
+
 ## 4 · The nearest human disease precedent, and its limit
 
 **CLN7** — a paediatric, neurodegenerative, seizure-bearing disorder, dosed intrathecally with

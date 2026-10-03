@@ -228,6 +228,64 @@ adult at the same absolute dose** — for the CNS target immunity is irrelevant,
 seronegative recipient is the more exposed one. This inverts the selection card's framing. It is
 untested: no infant was dosed, DRG injury was never quantified in C2, and vector load is not injury.
 
+## 4b · Against waves 3–4 (read after the first pass was written, as the brief directs)
+
+Wave 4's group C left the governing question open in
+`CC-20261003w4-C-DRG-CONTRADICTION-01`: two regulatory-grade primate datasets disagreed about
+whether AAV DRG toxicity is immune-preventable or dose-intrinsic. One (Biogen, PMID 41404412)
+reduced pathology across three cargos with **dexamethasone + tacrolimus ± MMF**; the other
+(Novartis, PMID 35331006) could not reduce it with **prednisolone**, or with
+**rituximab + everolimus** even under complete B-cell depletion.
+
+### Where wave 5 only corroborates — stated so it is not mistaken for a new finding
+
+| Wave 4 already held | Wave 5 source | Status |
+|---|---|---|
+| Empty capsid and promoterless constructs produce neither lesion nor NfL rise (PMID 36700120) | PMID 41257285 reaches the same result in a different study, species cohort and sponsor | **independent replication**, not a new finding |
+| NfL and friends are **Tier 3** under §13 and are not WWOX biomarkers | reached independently in §2.5 above | corroboration |
+| NfL is "not disease specific, which is a specific problem in a developmental encephalopathy where background neurofilament may already be raised" | §2.4's "NfL trap" | **wave 4 said it first.** Wave 5 adds only that the same programme family uses NfL in the *opposite* direction — falling NfL as evidence of benefit (PMID 41948127) — so the marker is bidirectional *within* a treatment study, not merely non-specific |
+
+### Where wave 5 genuinely moves wave 4's open question
+
+Three independent observations in this group all point the same way, and none of them was available
+to wave 4:
+
+1. **The lesion is independent of *pre-existing* antibody** (PMID 41210171, stated in the Figure 6
+   caption). Novartis's failed arm was **rituximab-based B-cell depletion**, which targets humoral
+   immunity. A lesion that does not track pre-existing antibody is one that B-cell depletion would
+   not be expected to prevent — so **Novartis's negative is consistent with the immune hypothesis
+   rather than against it**, provided the relevant immunity is cellular.
+2. **The transcriptional axis is interferon / JAK-STAT, not NF-κB** (PMID 41257285), which the
+   authors offer as the reason "glucocorticoids are not always as potent as expected". Novartis's
+   other failed arm was **prednisolone**. Biogen's working arm added **tacrolimus**, a calcineurin
+   inhibitor acting on T cells.
+3. **Human programmes for predicted-null recipients converge on regimens containing tacrolimus**
+   (PMID 42134074, PMID 41966056; see §3).
+
+**The refinement this licenses:** wave 4's "drug class" explanation — its most parsimonious, and the
+one it noted was offered by the party whose regimen worked — is now supported from three directions
+that have nothing to do with that party. The distinguishing agent is **calcineurin inhibition**, not
+immunosuppression in general and not mTOR inhibition: everolimus sat in the *failed* arm while
+sirolimus sits in the human triple regimens, so mTOR inhibition alone does not separate the two.
+
+**The question still does not close, and this wave does not close it.** None of the three
+observations is an intervention: PMID 41210171 measured *pre-existing* immunity, not
+treatment-emergent cellular immunity; PMID 41257285 ran **no immunosuppressed arm at all**; and the
+human regimens in PMID 42134074 were chosen to prevent anti-transgene responses, not to protect the
+DRG, so their DRG outcomes are incidental rather than designed. Wave 4's power and procedure
+explanations (n = 2–3 per cell; iohexol contrast in one study and not the other) are untouched by
+anything here.
+
+**Cross-link, stated carefully because I first stated it wrongly.** Wave 4's PMID 35331006 is
+Novartis's set of studies answering an FDA partial clinical hold on the sponsor's own product.
+PMID 42134074 reports that the hold was prompted by "DRG toxicity identified in NHPs **by other
+investigators**" (its reference 81) — so **Tukov 2022 is the sponsor's response to the hold, not the
+study that triggered it.** The triggering study is a separate, unread primary; PMID 42134074's
+Table 1 indexes reference 81 as a multi-capsid primate study (AAV9, AAVhu68, AAV9-CRB3, AAV1, AAV5;
+1 × 10¹² – 3 × 10¹⁴ vg; animals 1–3 years). It is added to the reading debts in §7 and is arguably
+the single highest-value unread source now identifiable: it is the document that stopped a human
+paediatric intrathecal programme.
+
 ## 5 · What would change the model if true, and what would falsify it
 
 | Proposition | What would confirm it | What would falsify it |
@@ -274,7 +332,7 @@ all six had no registry record, no prior receipt and no manifest before this pas
 | C3 | ref 10, the authors' own prior study — the primary behind the NfL correlation, the histopathology and the in-life toxicity, none of which is measured in C3 |
 | C4 | Figure S23, the contract laboratory's NHP pathology report behind every safety statement; Figure S18, the mouse toxicology report |
 | C5 | Supplementary Material 2, the paediatric CSF-flow section — the part of that paper most relevant to this question; and the primaries behind Table 4 |
-| C6 | every programme reference, in particular ref 81, the NHP study that triggered the regulatory hold, and refs 33/107 (STRONG/STEER), 34 (GAN), 38 (CLN7), 85 (ALS), 86 (SPG50) |
+| C6 | every programme reference, and above all **reference 81, the multi-capsid primate study that triggered the regulatory hold** — indexed in its Table 1 as AAV9/AAVhu68/AAV9-CRB3/AAV1/AAV5 at 1 × 10¹² – 3 × 10¹⁴ vg in animals aged 1–3 years. On the evidence of this wave it is the highest-value unread source now identifiable: it is the document that stopped a human paediatric intrathecal programme. Also refs 33/107 (STRONG/STEER), 34 (GAN), 38 (CLN7), 85 (ALS), 86 (SPG50) |
 
 ## 8 · Patient-overlap check
 
