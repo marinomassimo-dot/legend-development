@@ -1,0 +1,203 @@
+{
+ "schema_version": 2,
+ "pmid": "41124647",
+ "doi": "10.1002/advs.202507602",
+ "receipt": "FTR-20261003-41124647-02",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID41124647.md",
+  "disease-models/wwox/research/intake_wave_20261003w3_C.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W3-C-REGISTRY-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W3-C-ALLELE-CLASS-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is a research surface owned by other batches; the corrections this reading supports are proposed as commit candidates rather than edited in place."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A transferable lesson from another gene is not a therapeutic hypothesis for WWOX; forging one here would convert a stated transfer limit into a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No small molecule with a SMILES is proposed as an intervention, so there is nothing for the BLOCK-1 ADMET gate to triage."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate for a later BATCH_COMMIT."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The triples are published in the candidates for a blind auditor; the reader of a paper cannot audit their own locators."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 711,
+  "publications_on_gene": 1,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "PubMed counts 2026-10-03: senior author 'Wang Hongzhi[au]' 711, with WWOX 1. A cancer-genetics laboratory independent of the WWOX neurodevelopmental field; this is its first WWOX paper under that author string. One proband, one kindred.",
+  "external_provenance": {
+   "source": "NCBI E-utilities esearch rettype=count, terms as stated",
+   "date": "2026-10-03"
+  }
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (gene therapy OR AAV OR antisense OR oligonucleotide)",
+    "count": 109,
+    "source": "PubMed ESearch 2026-10-03"
+   }
+  ]
+ },
+ "multihop": {
+  "references_enumerated": 54,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "54 references present in the JATS back matter; not read in this pass and no multi-hop expansion performed. The coverage key 'references' is declared not_read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 41124647 (run AFTER the first pass)",
+  "hits": 5,
+  "note": "CORPUS P348 and LIT-0348 (Tier C, 'screened - corpus placeholder', year recorded as 2026 where PubMed gives 2025); discovery-ledger entries DL-BIO-001 (2026-09-21 status update) and DL-MECH-047. DL-MECH-047 states both residues lie in the SDR domain; Figure 1D, inspected here, places P282A outside it. Neither surface records the gnomAD allele frequencies in Supplementary Table 4. See CC-20261003W3-C-ALLELE-CLASS-01."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-03 via PubMed get_article_metadata: no retraction, expression of concern or correction notice among the publication types for PMID 41124647.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 54,
+   "references_screened": 53,
+   "references_with_doi": 53,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41124647_Zhang2025_PMC.xml",
+   "sha256": "4d48045e3a67f0dd0b86f6fbff12819b66a88c7d6ac6f60b545b1881a9a5b6cb",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12767083/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-03",
+    "result_sha256": "4d48045e3a67f0dd0b86f6fbff12819b66a88c7d6ac6f60b545b1881a9a5b6cb"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID41124647_Zhang2025_supplement/ADVS-13-e07602-g003.jpg",
+   "sha256": "076059c2a61e0a6a27b49e21818af06b68c74dbaceb967b8585f830b37683313",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged by Python zipfile from the Europe PMC REST supplementaryFiles bundle for this article (HTTP 200, application/zip, fetched 2026-10-03); the bundle itself is not persisted because Europe PMC rebuilds it non-deterministically and its digest is therefore not stable."
+   }
+  },
+  {
+   "path": "files/fulltext/PMID41124647_Zhang2025_supplement/ADVS-13-e07602-s001.docx",
+   "sha256": "6e402eff70ea9bc41fbd1d2516c12628e46b8847c5ffb97f9e0d9d9600b16b95",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged by Python zipfile from the Europe PMC REST supplementaryFiles bundle for this article (HTTP 200, application/zip, fetched 2026-10-03); the bundle itself is not persisted because Europe PMC rebuilds it non-deterministically and its digest is therefore not stable."
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The proband, homozygous for both missense alleles, had no WWOX-related neurological disease.",
+    "snippet": "the cancer patient harboring germline homozygous WWOX P252A and P282A variants did not suffer from WWOX‐related nervous system disease",
+    "anchor": "Discussion, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41124647_Zhang2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Chaperone-mediated autophagy is the authors' speculation, not their finding.",
+    "snippet": "we speculated that lysosomal degradation of WWOX252A mutant protein occurred through chaperone‐mediated autophagy",
+    "anchor": "Results, degradation section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41124647_Zhang2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Abundance and function are confounded for P252A and the paper says so.",
+    "snippet": "likely due to the low abundance of the unstable WWOXP252A mutant",
+    "anchor": "Results, POLE4 section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41124647_Zhang2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors allow residual function rather than a complete null.",
+    "snippet": "may have some residual protein function to maintain the development of the neurological system",
+    "anchor": "Discussion, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41124647_Zhang2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "No nucleotide-excision-repair assay supports the POLE4 claim.",
+    "snippet": "the functional relevance of WWOX‐POLE4 interaction in nucleotide excision repair remains to be elucidated",
+    "anchor": "Discussion, POLE4 para",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41124647_Zhang2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The paper's own domain schematic places P252A inside the SDR and P282A outside it.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 1D, lower panel: a 414-residue protein bar with two diamond 'WW' boxes at ticks 16-49 and 57-90 and a box labelled 'SDR' spanning ticks 125-262; the labelled P252A tick falls inside the SDR box and the labelled P282A tick falls to the right of its 262 boundary.",
+    "anchor": "Figure 1D",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID41124647_Zhang2025_supplement/ADVS-13-e07602-g003.jpg",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "Both alleles are common in gnomAD and P282A is called tolerated by two of the paper's own predictors.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] (a table published only as a rendered page in the supplementary document) Supplementary Table 4 'WWOX germline variants detected in the patient': row 1 WWOX NM_016373 c.754C>G P252A, SIFT Deleterious, MutationTaster Disease causing, gnomAD allele frequency 0.0063, Genotype Homo; row 2 WWOX NM_016373 c.844C>G P282A, SIFT Tolerated, MutationTaster 'Polymorphism automatic', gnomAD allele frequency 0.0733, Genotype Homo.",
+    "anchor": "Supplementary Table 4",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID41124647_Zhang2025_supplement/ADVS-13-e07602-s001.docx",
+    "panel_text_relation": "text_confirmed_by_panel"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST fullTextXML returned HTTP 200 with a full JATS body on 2026-10-03; the declared article artefact is that response, byte for byte."
+ }
+}

@@ -1,0 +1,134 @@
+{
+  "schema_version": 2,
+  "pmid": "37897534",
+  "doi": "10.1007/s00018-023-04950-1",
+  "receipt": "FTR-20261002-37897534-01",
+  "landing": [
+    "CC-20261002-BIOMARKER-REJECTIONS-01",
+    "intake_wave_20261002_C"
+  ],
+  "skills_considered": [
+    {
+      "skill": "find-fulltext",
+      "used": true,
+      "reason": "Invoked by name for PMID 17679088 and PMID 42395553, whose Europe PMC fullTextXML route returned HTTP 500. The cascade resolved both: the 2007 paper via the PMC author-manuscript HTML surface (the publisher forbids XML download and the Cell Press bronze-OA PDF is bot-blocked at 403), the preprint via the bioRxiv .full.pdf endpoint. The four PMC-indexed papers needed no cascade."
+    },
+    {
+      "skill": "legend-deepdive",
+      "used": false,
+      "reason": "Not run. This wave is a first full read of six records none of which is in the registries; the dossier, the locators and the commit candidates were produced directly under the Scientist brief. A legend-deepdive pass would duplicate them."
+    },
+    {
+      "skill": "legend-locator-audit",
+      "used": false,
+      "reason": "Not run here by design: the producer of a reading must not be its verifier. The triples are handed to the blind audit through the commit candidates' LOCATOR TRIPLES FOR BLIND AUDIT sections."
+    }
+  ],
+  "group_assessment": {
+    "performed": true,
+    "total_publications": 103,
+    "publications_on_gene": 30,
+    "counts_measured": "PubMed esearch 2026-10-02: 'Hsu LJ[au]' 103, 'Hsu LJ[au] AND WWOX' 30. Same ambiguity caveat as PMID 33195192.",
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": false,
+    "is_primary_group_for_gene": true,
+    "weighting": "Same laboratory and same Wwox knockout line as PMID 33195192 in this wave; not an independent source.",
+    "note": "Li-Jin Hsu, National Cheng Kung University -- same senior author and same knockout line as PMID 33195192 in this wave. The two are NOT independent sources."
+  },
+  "field_density": {
+    "wwox_directed": true,
+    "queries": [
+      {
+        "query": "Hsu LJ[au] AND WWOX",
+        "route": "PubMed esearch 2026-10-02",
+        "count": 30
+      }
+    ],
+    "note": "High WWOX density, entirely non-neural: serial-passage MEFs, HEK293T and human dermal fibroblasts. 259 WWOX/Wwox mentions in the JATS."
+  },
+  "multihop": {
+    "performed": false,
+    "references_enumerated": 87,
+    "gene_direct_refs_in_source": [],
+    "enumeration_method": "<ref> elements counted in the JATS: 87. Not classified by gene-directedness.",
+    "resolved": [],
+    "queued": [],
+    "note": "The hop taken was internal to this wave: read against PMID 42395553's gamma-H2AX result, which is what produced the non-monotonicity finding. No external hop was required."
+  },
+  "corpus_crossquery": {
+    "performed": true,
+    "query": "Do CLAIM 009 (mitochondrial/redox, in observation) or CLAIM 034 (counter-direction) already carry a ROS-rescue result for a Wwox-null system?",
+    "hits": 2,
+    "finding": "Both claims exist and neither carries this one. The NAC rescue in Wwox-null MEFs is adjacent to CLAIM 009's redox axis and does not resolve its tension with CLAIM 034, because it is a fibroblast culture result with no neural or in vivo arm. Logged as a lead in the analysis note, not proposed as a claim."
+  },
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-10-02",
+    "route": "PubMed esummary / get_article_metadata for 37897534",
+    "result": "No retraction, no expression of concern, no erratum. Article type 'Journal Article'. The token 'retract' occurs once in the JATS, inside the reference list.",
+    "hold": false,
+    "dependencies": {
+      "flagged": [],
+      "noted": [],
+      "paper_verdict": "SCREENED_CLEAN",
+      "reference_source": "network",
+      "references_declared": 87,
+      "references_screened": 85,
+      "references_with_doi": 85,
+      "schema": "retraction_check.dependencies/1",
+      "screened": true,
+      "snapshot": {
+        "date": "2026-09-10",
+        "days_since_fetch": 22,
+        "rows": 72476,
+        "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+      },
+      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+      "unscreenable": {
+        "UNSCREENABLE_NO_DOI": 2
+      }
+    }
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID37897534_Cheng2023_PMC.xml",
+      "sha256": "e75eb12decfb3dddafda9b469101e416bd5130734dc8d86dfdf0d8b8cc273946",
+      "kind": "article_text",
+      "note": "Europe PMC JATS for PMC10613160, 180,204 bytes. The JATS inserts spaces inside the genotype token, so the body reads 'Wwox -/- MEFs' with the minus signs separated; quotes carry that spacing.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10613160/fullTextXML",
+        "http_method": "GET",
+        "tier": "europepmc_fulltextxml",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-02",
+        "derived": false,
+        "result_sha256": "e75eb12decfb3dddafda9b469101e416bd5130734dc8d86dfdf0d8b8cc273946"
+      }
+    }
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC JATS, 180,204 bytes; Abstract, Introduction, Materials and methods, Results, Discussion and all figure legends present in the body.",
+    "abstract_anchoring_waived": "Stated per entry. Where an entry draws on the abstract it says so in its anchor; every entry is matched against the declared artifact as a whole.",
+    "note": "COVERAGE: whole article read, including Materials and methods and every figure legend. NOT INSPECTED: Supplementary Figures 1-9 and Supplementary Table 1, a separate PDF not fetched -- so the cell-cycle fractions, the Hprt mutation assay, the microsatellite electropherograms, the HEK293T and human dermal fibroblast knockdown results, the MG132/p27 work, the MDM2 binding and the p21 promoter methylation are carried only by the running text. CONTROL GENOTYPE FLAGGED: the comparator throughout most figures is Wwox +/- , not wild type; Wwox +/+ appears only in Figures 2b, 4d, 5g-i and 6a-e. Nothing in this paper licenses a statement about heterozygotes versus wild type.",
+    "entries": [
+      {
+        "proposition": "THE DIRECTIONAL FACT THAT COLLIDES WITH THE 2026 PREPRINT AND IS THE BATCH'S MOST USEFUL SYNTHESIS: LOSS of WWOX raises the same DNA-damage marker that ADDED WWOX raises in the preprint. One marker, two opposite perturbations, same direction of change.",
+        "snippet": "was highly expressed in late-passage Wwox −/− MEFs",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID37897534_Cheng2023_PMC.xml",
+        "anchor": "Results, 'MEFs null for Wwox gene exhibit increased genome instability and aberrant cell growth and apoptosis after serial passages in culture', gamma-H2AX paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THE RESCUE ARM, WHICH IS THE ONLY THERAPEUTIC-DIRECTION LEAD IN THIS RECORD: an ordinary antioxidant prevented the instability phenotype in Wwox-null cells. It is a cell-culture result in fibroblasts, with no neural or in vivo arm.",
+        "snippet": "during the passage culture prevented microsatellite instability and resulted in senescence induction in the late-passage Wwox −/− MEFs",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID37897534_Cheng2023_PMC.xml",
+        "anchor": "Results, 'ROS suppression by antioxidant treatment leads to senescence induction in late-passage Wwox -/- MEFs'",
+        "panel_text_relation": "text_only"
+      }
+    ]
+  }
+}

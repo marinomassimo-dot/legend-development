@@ -1,0 +1,342 @@
+{
+ "schema_version": 2,
+ "pmid": "28749468",
+ "doi": "10.1038/cddis.2017.346",
+ "receipt": "FTR-20261003-28749468-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID28749468.md",
+  "disease-models/wwox/research/intake_wave_20261003_C.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003-C-APOPTOSIS-DIRECTION-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "A single Europe PMC REST fullTextXML call returned a body on the first try, so the cascade was never needed; the route is recorded in the acquisition recipe instead."
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is a canonical surface a Scientist does not edit; the one lead this reading touches is proposed through a commit candidate."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "This source supplies no therapeutic lever for the reference genotype class; forging hypotheses from a model-only or cancer-only signal would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed by this reading, so there is no molecule for a BLOCK-1 triage."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes are proposed as commit candidates for a later BATCH_COMMIT."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; the triples are published in the candidates for an auditor to run."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 180,
+  "publications_on_gene": 7,
+  "research_type": "mixed",
+  "is_primary_group_for_disease": false,
+  "weighting": "PubMed ESearch 2026-10-02: Gabra H[au] 180 records, 7 intersecting WWOX. A gynaecological-oncology translational group with a standing WWOX line in ovarian cancer (the PEO1 WWOX transfectants are their own, from a prior paper). Competent in the cell biology and in the microarray survival analysis; no neurological or developmental WWOX work. The paper was edited by R Aqeilan, which is declared in the deposit."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (endoplasmic reticulum stress OR unfolded protein response)",
+    "count": 2,
+    "source": "PubMed ESearch 2026-10-02"
+   },
+   {
+    "query": "WWOX AND paclitaxel",
+    "count": 3,
+    "source": "PubMed ESearch 2026-10-02"
+   }
+  ],
+  "note": "Only two records intersect WWOX with ER stress or the UPR. This is effectively the sole primary source for a WWOX-UPR link, so nothing in the literature replicates or contradicts it independently."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 52,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "enumeration_method": "All 52 references enumerated from the JATS deposit. The deposit carries no pub-id/pmid element on the reference list, so no gene-direct reference can be addressed by PMID from this artefact alone; declared empty rather than padded. The dependency screen below covers the same list by DOI and returns SCREENED_CLEAN."
+ },
+ "corpus_crossquery": {
+  "query": "Does any registry record already name this paper or a WWOX-UPR link? registry_records.py get --pmid 28749468",
+  "hits": 3,
+  "note": "CORPUS-STUB-126 and LIT-0145 are identity records and both are stubs ('not yet extracted', 'not yet screened'); DL-MECH-023 already states the WWOX-orients-UPR lead from this paper. This reading adds that Figures 5c-5e carry no statistics and that the KIRA6 increment is the same in both genotypes, which is what the lead's inferential step rests on."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-02 by PubMed EFetch over all six wave-2 group-C PMIDs in one call: publication types are Journal Article (plus Research Support, Non-U.S. Gov't where applicable) and no CommentsCorrections RefType of any kind is returned, so there is no RetractionIn, ErratumIn, ExpressionOfConcernIn, CommentIn or UpdateIn link.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 52,
+   "references_screened": 49,
+   "references_with_doi": 49,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 22,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID28749468_Janczar2017_PMC.xml",
+   "sha256": "e55350d9bca5f0e319a97503ac8545ea323876dc0823f7c3e48c45d37a40c4cf",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5550887/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "e55350d9bca5f0e319a97503ac8545ea323876dc0823f7c3e48c45d37a40c4cf"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID28749468_assets/cddis2017346f1.jpg",
+   "sha256": "b60747e8bc58522385012ca713ec6720702e9047d18677e7325769c8b2d32077",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5550887/supplementaryFiles?includeInlineImage=true",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip, includeInlineImage)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "b60747e8bc58522385012ca713ec6720702e9047d18677e7325769c8b2d32077"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID28749468_assets/cddis2017346f2.jpg",
+   "sha256": "f2905260f0d00ec023b6c646cde058e09201360400dc615a50b8badbe690533d",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5550887/supplementaryFiles?includeInlineImage=true",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip, includeInlineImage)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "f2905260f0d00ec023b6c646cde058e09201360400dc615a50b8badbe690533d"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID28749468_assets/cddis2017346f3.jpg",
+   "sha256": "d3adb4843cc60efd0bf340d2b6cf8b0a3829710b1a63c271f79868d4fedd0c9f",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5550887/supplementaryFiles?includeInlineImage=true",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip, includeInlineImage)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "d3adb4843cc60efd0bf340d2b6cf8b0a3829710b1a63c271f79868d4fedd0c9f"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID28749468_assets/cddis2017346f4.jpg",
+   "sha256": "118cd03bac4db993ee17d53b843f5cbd276893d8759a9eca2260abf811a461de",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5550887/supplementaryFiles?includeInlineImage=true",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip, includeInlineImage)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "118cd03bac4db993ee17d53b843f5cbd276893d8759a9eca2260abf811a461de"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID28749468_assets/cddis2017346f5.jpg",
+   "sha256": "cb8f0034707758a0b90bcd32a4cc31b790f4518fbbe64df55dbac01ba9b5dc4b",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5550887/supplementaryFiles?includeInlineImage=true",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip, includeInlineImage)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "cb8f0034707758a0b90bcd32a4cc31b790f4518fbbe64df55dbac01ba9b5dc4b"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID28749468_assets/cddis2017346f6.jpg",
+   "sha256": "aacea337260f80d9a8b8072d4195f1cf22ba175eaf50f58b52e89b16a9502974",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5550887/supplementaryFiles?includeInlineImage=true",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip, includeInlineImage)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "aacea337260f80d9a8b8072d4195f1cf22ba175eaf50f58b52e89b16a9502974"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID28749468_assets/cddis2017346f7.jpg",
+   "sha256": "bc52991220083b6b692b93171ecede95161be731893533c85720b31db66fa41e",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5550887/supplementaryFiles?includeInlineImage=true",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip, includeInlineImage)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "bc52991220083b6b692b93171ecede95161be731893533c85720b31db66fa41e"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID28749468_assets/cddis2017346f8.jpg",
+   "sha256": "6d87a301d93eb3dec90d83b5b1857a325bf4e325d3465def37c7258158ce3e72",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5550887/supplementaryFiles?includeInlineImage=true",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip, includeInlineImage)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "6d87a301d93eb3dec90d83b5b1857a325bf4e325d3465def37c7258158ce3e72"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID28749468_assets/cddis2017346x2.docx",
+   "sha256": "d417ebb48edc898541099876c7d7dc607a930aaba1213864878834d45a8b36e9",
+   "kind": "supplement_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5550887/supplementaryFiles?includeInlineImage=true",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip, includeInlineImage)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "d417ebb48edc898541099876c7d7dc607a930aaba1213864878834d45a8b36e9"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID28749468_assets/cddis2017346x1.pdf",
+   "sha256": "e0773dd8c1c7bdc49906bf8270c04155e73007bb1e225209a0c731c7b1eae4d0",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5550887/supplementaryFiles?includeInlineImage=true",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip, includeInlineImage)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "e0773dd8c1c7bdc49906bf8270c04155e73007bb1e225209a0c731c7b1eae4d0"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The gain-of-function host line is a human WWOX-null by homozygous deletion of exons 4 to 8, so this is restoration into a null background rather than overexpression above normal.",
+    "snippet": "is homozygously deleted for WWOX exons 4",
+    "anchor": "Materials and methods, Cell lines (sentence continues 'to 8 and lacks WWOX protein expression')",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28749468_Janczar2017_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Restoring WWOX increases death under stress and removing it increases survival; the rescued state in this system is greater apoptotic sensitivity.",
+    "snippet": "whereas WWOX siRNA knockdown increased survival",
+    "anchor": "Results, Paclitaxel induces ER stress response and WWOX determines cell fate in response to prolonged ER stress, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28749468_Janczar2017_PMC.xml",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "The paper states that PERK activation itself is unaffected by WWOX status, which narrows the WWOX-UPR link to the IRE-1 arm within this paper's own data.",
+    "snippet": "No changes in activation of PERK were observed as a result of WWOX status",
+    "anchor": "Results, Paclitaxel induces ER stress response and WWOX determines cell fate in response to prolonged ER stress, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28749468_Janczar2017_PMC.xml",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "The claimed WWOX-dependence of the IRE-1 inhibitor effect is asserted in the prose as a blunting of the inhibitor's effect in WWOX-absent cells.",
+    "snippet": "cells were less sensitive to KIRA6 and GSK2656157 as shown by the blunted effects on cell viability",
+    "anchor": "Results, Paclitaxel induces ER stress response and WWOX determines cell fate in response to prolonged ER stress, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28749468_Janczar2017_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The panel cited for that claim carries no significance marker and no P-value anywhere, and the absolute viability increment produced by KIRA6 is the same in the WWOX-expressing and the WWOX-null clone, so the blunting is a fold-change artefact of the lower baseline.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5 panels c, d and e carry grouped bars with error bars and no asterisk, bracket or P-value of any kind. In panel c (PEO1, 8 nM paclitaxel) the WWOX-8 bars read about 0.05 for paclitaxel alone and about 0.24 for paclitaxel plus KIRA6, while the Vector-9 bars read about 0.13 and about 0.31 - an increment of about 0.19 against about 0.18.",
+    "anchor": "Figure 5, panels c-e; native JPEG inspected",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID28749468_assets/cddis2017346f5.jpg",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "found_or_sought": "found",
+    "contradicts": "entries[3]",
+    "contradicts_needle": "blunted effects on cell viability"
+   },
+   {
+    "proposition": "The prose asserts that the present-versus-absent WWOX dichotomisation shows longer PFS in taxane-treated patients.",
+    "snippet": "this dichotomisation suggests longer PFS in patients with WWOX expression detectable at a level comparable to normal tissue",
+    "anchor": "Results, WWOX expression and PFS, final sentence",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28749468_Janczar2017_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A PFS panel reported in the prose as showing an effect is printed with a non-significant P-value.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 7 panel e is titled 'PFS by WWOX expression relative to normal, TCGA with Tax' and prints 'n=333, p=0.13' in its header.",
+    "anchor": "Figure 7, panel e; native JPEG inspected",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID28749468_assets/cddis2017346f7.jpg",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "found_or_sought": "found",
+    "contradicts": "entries[5]",
+    "contradicts_needle": "suggests longer PFS in patients with WWOX expression detectable"
+   },
+   {
+    "proposition": "The taxane-specificity of the survival association rests on nulls in very small subgroups rather than on a demonstrated interaction.",
+    "snippet": "the association between WWOX expression and OS was lost (TCGA n=33, hazard ratio=1.9, P=0.64; Tothill n=48, hazard ratio=1.0, P=0.98)",
+    "anchor": "Results, WWOX expression and OS",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28749468_Janczar2017_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The only statement this paper makes about the nervous system is a one-sentence expression and phenotype citation in the Introduction; nothing neural is measured.",
+    "snippet": "also in neuronal bodies throughout the central nervous system",
+    "anchor": "Introduction, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28749468_Janczar2017_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "The article's full text was served by the Europe PMC REST fullTextXML endpoint with an HTTP 200 and a non-empty <body> element on 2026-10-02, which is what inEPMC/fullTextIdList membership means operationally: every body quote above is externally verifiable by re-fetching that endpoint."
+ }
+}

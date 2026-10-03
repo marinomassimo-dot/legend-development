@@ -449,21 +449,17 @@ def candidate_directories(root: Path, disease: str) -> list[Path]:
 # propagation that predates Phase 7 disposition blocks; `queued` means the mention is prose and the
 # candidate is still owed, so it counts as PENDING and the backlog stops being one short. Never add
 # an entry to make a run pass: write the disposition block, or de-name the id.
-DECLARED_MENTION_CLOSURES: dict[str, tuple[str, str]] = {
-    "CC-20260826-SEIZURE-RECONCILIATION-01": (
-        "closed", "propagated by batch_20260922_seizure_scope, which states it by name and "
-                  "predates the Phase 7 disposition block"),
-    "CC-20260920-EIGHT-RECORD-CLASSIFICATION-01": (
-        "closed", "propagated across batch_20260920_002 and _003, the second stating that it "
-                  "closed the eighth and last record; predates Phase 7"),
-    "CC-20260920-REGISTRY-LEDGER-DEPTH-01": (
-        "closed", "propagated whole by batch_20260920_001; predates Phase 7"),
-    "CC-20260928-GRAPH-HYGIENE-01": (
-        "queued", "batch_20260928_005_scope names it inside 'NOT IN SCOPE and still queued'. It "
-                  "was NOT propagated: a stub with no ops and a dated review trigger. The mention "
-                  "closed it and the backlog read 15 for 16. Counted as pending here; the scope "
-                  "is repaired by its own actor, this module does not edit the manifest"),
-}
+#
+# 🔴 EMPTY ON PURPOSE since 2026-10-03, and that is the intended end state. The four entries this
+# list carried — `CC-20260826-SEIZURE-RECONCILIATION-01`, `CC-20260920-EIGHT-RECORD-CLASSIFICATION-01`,
+# `CC-20260920-REGISTRY-LEDGER-DEPTH-01` (all three `closed`, propagated before Phase 7 existed) and
+# `CC-20260928-GRAPH-HYGIENE-01` (`queued`: named inside *«NOT IN SCOPE and still queued»* and never
+# propagated) — were retired by `BATCH_20261003_001`, which wrote each candidate's own
+# `## BATCH DISPOSITION` block instead. A declaration is a promise to pay a debt, not a place to keep
+# it: once the author's own record exists, the entry is dead weight and the `[STALE]` line above says
+# so. The mechanism is exercised by `test_growth_anchors.py` against synthetic ids, so it stays tested
+# with the list empty.
+DECLARED_MENTION_CLOSURES: dict[str, tuple[str, str]] = {}
 
 
 def measure_candidate_backlog(root: Path, disease: str) -> list[str]:

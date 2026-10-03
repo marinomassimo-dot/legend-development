@@ -3911,7 +3911,15 @@ usa per un'affermazione sul registro che la lettura non tocca.
 **Next action:** leggere `-043` per primo (open access, ed è quello che il testo del secondo
 passaggio nomina come possibile origine mTORC1-indipendente della direzione autofagica); poi
 decidere se `-056` e `-139` valgono la lettura o una dismissione motivata con `REVIVAL_TRIGGER`.
-**Current status:** ⬜ aperto — debito di lettura dichiarato il 2026-08-26, nessuno dei quattro letto.
+**Current status:** 🟨 **parzialmente chiusa — due dei quattro letti, e la riga precedente (*«nessuno dei quattro letto»*) era già falsa quando il blocco 2026-09-21 sopra la contraddiceva.** Aggiornato 2026-10-03 (`CC-20261003W3-B-SUPPDEPOSIT-01`, intake wave 3, Scientist B).
+
+🔴 **IL BRACCIO LOSS-OF-FUNCTION DI `-139` NON È ISPEZIONABILE: il supplemento depositato sotto l'identificativo di PMID 24008736 è il supplemento di un altro articolo.** Misurato, non dedotto: il file `cddis2013308x1.pdf` (5 pagine, sha256 `dc13d0427a4777bf4e09661df3e6cab669f005edb232adbc5d2cb4bda957004f`) contiene cinque figure di uno studio ematologico non correlato, e **gli stessi byte** arrivano da due rotte indipendenti — il bucket open-data PMC OA S3 e l'endpoint `supplementaryFiles` di Europe PMC. Non è un errore di fetch e non è sistematico: il supplemento di PMID 21368882, preso con la stessa rotta nello stesso passaggio, è quello giusto. Conseguenza per questa voce: la **Supplementary Figure 7** — il pannello LC3-II nei MEF `Wwox+/−` e `Wwox−/−`, cioè l'unico braccio in cui la variabile è un genotipo germinale e non un farmaco, e il braccio che questa voce conta come membro loss-of-function dei quattro — **resta una singola frase di testo corrente senza pannello ispezionabile**. Idem per S4 (Atg12 a 21 kDa), S5 (MG132) e S6 (colocalizzazione e co-IP WWOX–mTOR). Cosa lo sbloccherebbe: il file supplementare dalla pagina dell'editore, oppure una richiesta all'autore corrispondente — nessuna delle due tentata qui (nessuna spesa esterna, nessuna corrispondenza senza l'operatore).
+
+✅ **`-139` riletto per intero il 2026-10-03 con i pannelli** (ricevuta `FTR-20261003-24008736-02`, dossier `research/fulltext_dossiers/PMID24008736.md`): la lettura 2026-09-21, fatta su un'estrazione testuale senza figure, **regge**, e due punti si precisano. (1) Il clamp lisosomiale esiste ed è quantificato — Fig 3c, LC3-II 1,0 / 0,5 (MTX) / 1,6 (E64d+pepstatina A) / 1,0 (MTX + E64d+pepstatina A) a 12 h — ma è applicato **al farmaco**, mai a una manipolazione di WWOX: il passo WWOX→autofagia non è mai misurato come flusso. (2) La perdita di LC3 è instradata al **proteasoma** (MG132 la blocca), che è una rotta diversa da quella lisosomiale che lo stesso laboratorio assegna nel 2026 a Bcl-XL/Mcl-1 nello stesso fondo SCC-15: carico diverso, non lo stesso meccanismo detto due volte.
+
+✅ **`-043` resta non letto e non ha PMCID**; la sua direzione opposta (*WWOX attiva l'autofagia*) rimane non verificabile di prima mano. Ma lo stallo **non è più «un paper contro uno»**: censimento misurato il 2026-10-03 (`esearch`, tool=LEGEND-research) — `WWOX AND autophagy` = 10 record, di cui **8 né Chang NS né Hsu LJ**. Sul lato «sopprime» c'è un secondo laboratorio indipendente (PMID 33300063, carcinoma ovarico, paclitaxel, `CORPUS-STUB-056`); sul lato «attiva» c'è `-043` (PMID 36621327, danno polmonare acuto da LPS, mTOR–ULK1). La differenza fra i due poli non è solo il laboratorio: è lo **stress** (antimetabolita/chemioterapico contro infiammatorio) e il **tessuto** (epitelio tumorale contro epitelio polmonare in danno acuto). Nessuno dei due è neurale, nessuno dei due è un genotipo umano.
+
+**Next action aggiornata:** `-043` resta il primo da leggere, e la domanda da portargli è ora precisa — *il suo LC3-II è misurato sotto clamp lisosomiale, e su una manipolazione di WWOX?* Se non lo è, nessuno dei due poli ha mai misurato il flusso sulla variabile giusta, e la contraddizione è fra due marcatori statici, non fra due flussi.
 
 ---
 
@@ -4941,6 +4949,8 @@ due sorgenti della contro-evidenza a [[claim_registry_current#CLAIM 032]]. Finch
 quella numerosità non sono visti, la contro-evidenza resta **flag, non reversione**.
 **Next action:** recuperare i pannelli di §3.5 quando esista una rotta di acquisizione che
 preservi le immagini; nel frattempo **non promuovere la contro-evidenza oltre lo stato di flag**.
+
+🟢 **DISCHARGED 2026-10-03** by `CC-20261003-B-ZFRA-TRANSFER-01` (intake wave 2, Scientist B). The panel was acquired: `mmc1.docx` from the PMC open-access S3 mirror, its `word/media/image1.tiff` extracted and rendered (`files/figure_renders/PMID29067327/supp_fig1.png`, sha256 `a796f685b2e70fa378b0fcb07ba97afbeaad5348bc014f5c0cd39bf42327c755`). 🔴 **The outcome is worse than a flag.** Supplementary Figure 1 carries **no genotype label on any bar**, no n per bar, no error convention and no statistical test; its x-axes read 3, >10, 8, 10 months and contain **no age 12**, while its legend asserts a drop *«greater than 55%»* at ages 10–12. Under either assignment of the two bar pairs to the two genotypes the drops are ≈ 43%/13% and ≈ 52%/33%. The counter-evidence to [[claim_registry_current#CLAIM 032]] therefore **does not survive inspection at all** and is rejected in `DIS-030`, not promoted. The real heterozygote cognitive measurement is in PMID 36498839 (Figure 5A–C), which is a different source and is carried separately.
 
 ---
 
@@ -6759,7 +6769,7 @@ a materially new research programme and **the Operator's decision**.
 Bears on the therapeutic-window question, which this branch has open from two directions: the
 **post-diagnosis window** (`D-31` — `P1–P5` is the set of ages tested, **not** a window) and the
 **model-horizon versus therapeutic-window** distinction (`D-36`).
-⚠️ **Neither paper is a WWOX paper.** They are queued as **developmental-timing context**, and must
+⚠️ **Neither paper is a WWOX-function paper — but both report a WWOX-locus association** (narrowed 2026-10-02 from "Neither paper is a WWOX paper.", CC-20261002-B-NONLINEAGE-01): PMID 28763065, rs10514437 (WWOX intron, genotyped, MAF 0.03) with infant white-matter volume, P 1.56e-8 against a study threshold of 1.25e-8, unreplicated, minor allele associated with *more* white matter; PMID 41378749, three imputed WWOX intron-8 SNPs nominally associated with spina bifida (OR about 6.2, p 2.2e-6, suggestive threshold only), absent from the technical replication. Neither is a finding. Both read 2026-10-02 (FTR-20261002-28763065-01, partial; FTR-20261002-41378749-01, complete). They are queued as **developmental-timing context**, and must
 never be cited as WWOX evidence.
 
 ---
@@ -7313,7 +7323,7 @@ negative in this repository under-counts by an unknown amount.**
 ## FT-159
 **Paper:** PMID 19918364 / PMCID PMC2771921 — Li M-Y, … Chang N-S, *WWOX/WOX1 in dorsal root ganglia
 after sciatic nerve transection*, *PLoS ONE* 2009, [DOI](https://doi.org/10.1371/journal.pone.0007820)
-**Priority:** **LOW** — read at served depth; the debt is formal
+**Priority:** **LOW** — read at served depth; the debt is formal — 🟢 **DISCHARGED 2026-10-03** by `CC-20261003-B-WWOX-DIRECTION-01` (intake wave 2, Scientist B): the JATS deposit, all eight figures and all nine supplementary TIFFs were acquired and a receipt was written (`FTR-20261003-19918364-01`, **`partial_fulltext_read`** — two of the nine supplementary TIFFs were rendered and inspected and the other seven were read as captions, so the receipt's own coverage correction refuses `complete` over `captions_only`; depth corrected by `BATCH_20261003_001`, which found the op declaring `complete_fulltext_read`), with manifest `deepdive_manifests/PMID19918364.json`. The audit's finding is **confirmed at source** — the paper classifies by soma diameter only and `nocicept`, `unmyelin`, `IB4`, `CGRP` and `substance P` occur zero times — and three further bounds were added in [[claim_registry_current#CLAIM 044]]: the directional claim is a HEK-293 reporter assay, the chronic accumulation is equal on the uninjured side, and the headline percentages are bin labels of a categorical heat map.
 **Why:** Cited by [[ataxia_without_cerebellar_lesion_20260922]] to **weaken its own** proprioceptive
 hypothesis. 🟢 Served surface read in full (48,831 chars) 2026-09-22; **no receipt written**.
 🔴 **The citing use is PARTIALLY SUPPORTED and the paper is harder on that hypothesis than the citing

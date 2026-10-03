@@ -43,7 +43,7 @@ edition: public
 ## 2. DISEASE-MODEL (WORKING-MODEL) VERSION
 
 ```yaml
-working_model_version: WM_v7.7
+working_model_version: WM_v7.10
 working_model_file: disease-models/wwox/registries/working_model_current.md
 narrative_view: disease-models/wwox/disease_model.md
 notes: "Canonical disease-level working model derived from public literature; disease_model.md is its narrative reader-facing view. The private individual-level record is not part of this edition."
@@ -106,9 +106,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20260929_001
-last_batch_commit_date: 2026-09-29
+last_batch_commit_id: BATCH_20261003_002
+last_batch_commit_date: 2026-10-03
 last_batch_commit_type: MANUAL
+commit_candidates_propagated: 9
+target_wm_version: WM_v7.10
+trigger: MANUAL (operator-dispatched integration of intake wave 3; the backlog threshold of 5 was also met at 16)
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -122,8 +125,8 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20260929_BATCH_20260929_001
-last_lint_date: 2026-09-29
+last_lint_id: LINT_20261003_BATCH_20261003_002
+last_lint_date: 2026-10-03
 last_lint_result: WARN
 ```
 
@@ -160,8 +163,8 @@ and a mismatch is `BLOCK_SYSTEM` — reading history you cannot trust is worse t
 
 ```yaml
 fulltext_ledger_path: disease-models/wwox/registries/fulltext_read_receipts.jsonl
-fulltext_ledger_events: 267
-fulltext_ledger_head: 0b2ced187e440f1c2dcb53bc9495cc35ed6ad47d3ca2d044483f3d8d01f5c21a
+fulltext_ledger_events: 320
+fulltext_ledger_head: df265b877ae373a48dba2468a1eb9c214906656eb2fcd6712e4bf0139100c6e8
 ```
 
 Maintained automatically — `fulltext_receipts.py record` re-anchors after every append.
@@ -209,8 +212,8 @@ to make a suite green — the only way to move it is to have made the change you
 
 ```yaml
 growth_anchor_ledger: framework/state/growth_anchors.jsonl
-growth_anchor_events: 34
-growth_anchor_head: 8e8d19c8111426b5f60a5a4d24f6b440a1c653d287a7d9a54ac4675f00cf2536
+growth_anchor_events: 39
+growth_anchor_head: 38db857f39dcbe9e882fd535c6f239bc18b7faac69b634a6b525c8af77337d1b
 ```
 
 ```bash
@@ -237,8 +240,8 @@ must be backed by a persisted `complete_fulltext_read` receipt, or `LINT_AUTOMAT
 `BLOCK_BATCH_COMMIT`.
 
 ```yaml
-registry_only_fulltext_declarations_baseline: 10
-registry_only_fulltext_declaration_ids: ["PAPER 012", "PAPER 014", "PAPER 016", "PAPER 028", "PAPER 043", "PAPER 044", "PAPER 045", "PAPER 046", "PAPER 049", "PAPER 050"]
+registry_only_fulltext_declarations_baseline: 5
+registry_only_fulltext_declaration_ids: ["PAPER 014", "PAPER 028", "PAPER 044", "PAPER 045", "PAPER 050"]
 ```
 
 Lowering the baseline is the intended direction of travel: back-fill a record with real
@@ -258,7 +261,7 @@ baseline below must equal the live count, never preserve historical padding.
 
 ```yaml
 unread_premise_baseline: 0
-unread_premise_measured_on: 2026-09-29
+unread_premise_measured_on: 2026-10-03
 ```
 
 **It is a ratchet, not a wall.** Blocking on the whole legacy backlog would only teach sessions
