@@ -1,0 +1,174 @@
+{
+ "schema_version": 2,
+ "pmid": "35712340",
+ "doi": "10.7759/cureus.25003",
+ "receipt": "FTR-20261003-35712340-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID35712340.md",
+  "disease-models/wwox/research/intake_wave_20261003w3_A.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W3-A-REGISTRY-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is owned by other batches; the corrections this reading supports are proposed as commit candidates and in the intake note."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A clinical genotype-phenotype source supplies no therapeutic lever for the reference genotype class; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is tested with a measured outcome beyond clinical anecdote; nothing to send to BLOCK-1 triage."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The triples are published in the candidates for a blind auditor; the reader cannot audit their own locators."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 1,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "A paediatric department reporting one child with a commercial exome; the attribution of the phenotype to WWOX is asserted, not tested, and the literature table carries transcription errors. Not a per-author sweep."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (I136V OR Ile136Val OR c.406A>G)",
+    "count": 1,
+    "source": "PubMed ESearch 2026-10-03"
+   }
+  ],
+  "note": "This is the only PubMed record naming the allele; no independent carrier is known."
+ },
+ "multihop": {
+  "references_enumerated": 14,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "14 references enumerated; WWOX-direct ones (Abdel-Salam, Ben-Salem, Mallaret, Ehaideb, Banne, Repudi, Aldaz) held elsewhere in LEGEND; none opened."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 35712340 --hops 1 (run AFTER the first pass)",
+  "hits": 2,
+  "note": "Only CORPUS-STUB-141 and LIT-0160 placeholders; no claim depends on the paper. Landing proposed in CC-20261003W3-A-REGISTRY-01."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-03 via PubMed metadata (get_article_metadata): publication types ['Case Reports', 'Journal Article']; no retraction, expression of concern or correction listed for PMID 35712340.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 14,
+   "references_screened": 14,
+   "references_with_doi": 14,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --doi 10.7759/cureus.25003 --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID35712340_Sukkar2022_PMC.xml",
+   "sha256": "b199ddb48050738975f1948e1de8d5b6a5aa92e6ba0157cbdd7df016b3050ce5",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9193507/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "result_sha256": "b199ddb48050738975f1948e1de8d5b6a5aa92e6ba0157cbdd7df016b3050ce5"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The child had no early seizure disorder; an affected sibling with seizures was not genotyped.",
+    "snippet": "our patient presented with a global developmental delay and no early seizure disorder despite a family history of seizures and cerebral palsy in his brother and cousin, respectively",
+    "anchor": "Discussion, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35712340_Sukkar2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "MRI was normal, no microcephaly, no optic atrophy.",
+    "snippet": "Additionally, the MRI was normal, with no progressive microcephaly or bilateral optic atrophy.",
+    "anchor": "Discussion, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35712340_Sukkar2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "At 21 months the child walks, runs and says ten words.",
+    "snippet": "Currently, at the age of 21 months, he can say 10 words but not complete sentences, climb stairs with assistance, walk, and run with recurrent falling.",
+    "anchor": "Case presentation, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35712340_Sukkar2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The splice effect is an in silico prediction only.",
+    "snippet": "The in silico predicted that the position of the identified variant might lead to significant alterations in mRNA splicing owing to an altered splice site.",
+    "anchor": "Case presentation, WES paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35712340_Sukkar2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors concede the phenotype only partially fits DEE28.",
+    "snippet": "From the available information, the patient phenotype appears partially supportive of DEE28.",
+    "anchor": "Discussion, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35712340_Sukkar2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 3 gives the protein change as Ile136Val.",
+    "snippet": "Amino acid change P.lle136Val - p.Arg54 p.Gly372Arg",
+    "anchor": "Table 3, Current case column, Amino acid change row",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35712340_Sukkar2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC9193507/fullTextXML returned HTTP 200 with a full JATS body and all three tables on 2026-10-03; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure legend or a figure."
+ }
+}
