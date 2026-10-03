@@ -1,0 +1,232 @@
+{
+ "schema_version": 2,
+ "pmid": "41712282",
+ "doi": "10.1172/JCI197503",
+ "receipt": "FTR-20261003-41712282-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID41712282.md",
+  "disease-models/wwox/research/intake_wave_20261003w5_A.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W5-A-REGISTRY-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W5-A-CARGO-CASSETTE-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W5-A-TRANSGENE-IMMUNITY-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W5-A-WINDOW-STATUS-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W5-A-DOSE-TWO-SIDED-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is a research surface owned by other batches; every transferable lesson here is proposed as a commit candidate instead of written into the ledger."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A gene-replacement lesson from another gene is not a WWOX therapeutic hypothesis; forging one would convert a stated transfer limit into a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No small molecule with a SMILES is proposed, so the BLOCK-1 ADMET gate has nothing to triage."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The triples are published for a blind auditor; a reader cannot audit their own locators."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "No author-level PubMed census was run for this reading: the paper is about another gene entirely and contributes only transferable method, so group standing on WWOX is not the weighting that matters. What was recorded instead is declared competing interest, read from the paper itself and carried in the dossier.",
+  "external_provenance": {
+   "source": "not applicable — no external author census performed",
+   "date": "2026-10-03"
+  }
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND AAV",
+    "count": 2,
+    "source": "PubMed ESearch rettype=count 2026-10-03"
+   },
+   {
+    "query": "WWOX AND self-complementary",
+    "count": 0,
+    "source": "PubMed ESearch rettype=count 2026-10-03"
+   },
+   {
+    "query": "WWOX AND biodistribution",
+    "count": 0,
+    "source": "PubMed ESearch rettype=count 2026-10-03"
+   }
+  ]
+ },
+ "multihop": {
+  "references_enumerated": 0,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference lists were not enumerated in this pass and no multi-hop expansion was performed; the coverage key 'references' is declared not_read for that reason."
+ },
+ "corpus_crossquery": {
+  "query": "paper_packet.py packet --pmid 41712282 (run BEFORE the first pass, technical state only)",
+  "hits": 0,
+  "note": "NO RECORD MATCHED on any registry surface (paper_packet.py packet --pmid, 2026-10-03): first reading, no prior receipt. The paper does not mention WWOX."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-03 via NCBI E-utilities efetch (db=pubmed, retmode=xml): the publication types carry no retraction, expression of concern or correction notice, and no CommentsCorrections element of any RefType is present for this PMID.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 48,
+   "references_screened": 46,
+   "references_with_doi": 46,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41712282_Bailey2026_PMC.xml",
+   "sha256": "90f1ceff3115de2c02f2a985cf1e202f4bcedb1896f3529a646d554137bc39f6",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13078891/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-03",
+    "result_sha256": "90f1ceff3115de2c02f2a985cf1e202f4bcedb1896f3529a646d554137bc39f6"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "A minimal promoter is what allows self-complementary packaging of this coding sequence.",
+    "snippet": "use of the short UsP allows self-complementary packaging of the 1.7 kb SLC13A5 coding sequence",
+    "anchor": "Results, vector design",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41712282_Bailey2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Self-complementary packaging is claimed to reach far more cells than single-stranded.",
+    "snippet": "predicted to stably transduce at least 10-fold more cells than single-stranded AAV",
+    "anchor": "Results, vector design",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41712282_Bailey2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The metabolic endpoint is dose-graded and the high dose drives it below the wild-type level.",
+    "snippet": "high dose–treated mice were decreased to 65%",
+    "anchor": "Results, functional NaCT",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41712282_Bailey2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The seizure endpoint does not share that dose-response: the low dose did as well as the high dose.",
+    "snippet": "low-dose AAV9/SLC13A5 administered at P10 provided similar benefit as high dose",
+    "anchor": "Discussion, dose paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41712282_Bailey2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors name a published developmental harm from overexpressing the same gene.",
+    "snippet": "was reported to cause autistic-like and jumping behaviors, and altered white matter integrity and synaptic plasticity",
+    "anchor": "Discussion, dose paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41712282_Bailey2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Delivery at the same dose and route fell by about an order of magnitude when the age of dosing rose.",
+    "snippet": "IT delivery of AAV9 in KO mice at P10 resulted in markedly higher brain transduction",
+    "anchor": "Results, biodistribution",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41712282_Bailey2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Changing the adult route recovered part of the lost brain exposure.",
+    "snippet": "ICM delivery resulted in greater brain expression as compared with IT injection",
+    "anchor": "Discussion, route paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41712282_Bailey2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Long-term consequences of excess expression were not assessed in this study.",
+    "snippet": "adverse effects related to prolonged or excessive NaCT expression were not evaluated in the present study",
+    "anchor": "Discussion, safety paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41712282_Bailey2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The chemoconvulsant challenge is not a model of the disease mechanism.",
+    "snippet": "PTZ does not model the primary metabolic defect underlying SLC13A5 citrate transporter disorder",
+    "anchor": "Discussion, PTZ paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41712282_Bailey2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The knockout genotype is not the patient genotype, because most patient variants are missense.",
+    "snippet": "most pathogenic variants identified in individuals affected with SLC13A5 citrate transporter disorder are missense mutations that produce partially functional or misfolded proteins",
+    "anchor": "Discussion, model paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41712282_Bailey2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The antibody does not detect the endogenous mouse protein, so there is no wild-type reference for expression level.",
+    "snippet": "the NaCT antibody does not recognize endogenous mouse NaCT protein",
+    "anchor": "Results, functional NaCT",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41712282_Bailey2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST fullTextXML returned HTTP 200 with a full JATS body for PMC13078891 on 2026-10-03; the declared article artefact is that response, byte for byte."
+ }
+}
