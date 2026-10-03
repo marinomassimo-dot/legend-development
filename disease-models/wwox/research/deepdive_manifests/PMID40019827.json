@@ -1,0 +1,194 @@
+{
+ "schema_version": 2,
+ "pmid": "40019827",
+ "doi": "10.1111/dmcn.16273",
+ "receipt": "FTR-20261003-40019827-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID40019827.md",
+  "disease-models/wwox/research/intake_wave_20261003w6_B.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W6-B-REGISTRY-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is owned by other batches; what this reading supports is proposed as commit candidates and in the intake note."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "An aggregation or real-world cohort supplies no new therapeutic lever for the reference genotype class; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is newly proposed; cannabidiol is an approved antiseizure medicine and nothing here is sent to BLOCK-1 triage."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The triples are published in the candidates for a blind auditor; the reader cannot audit their own locators."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "A systematic scoping review from one paediatric neuroimmunology group; WWOX appears only as a count inside two re-tabulated cohort rows. Credible as a re-tabulation; it adds no WWOX patient and no WWOX treatment response. Not a per-author sweep."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (infantile spasms OR epileptic spasms OR West syndrome)",
+    "count": 25,
+    "source": "PubMed ESearch rettype=count 2026-10-03"
+   }
+  ],
+  "note": "25 PubMed records tie WWOX to spasms; this source adds no per-patient WWOX data."
+ },
+ "multihop": {
+  "references_enumerated": 156,
+  "gene_direct_refs_in_source": [
+   "37583270",
+   "29455050"
+  ],
+  "resolved": [
+   "37583270"
+  ],
+  "queued": [
+   {
+    "pmid": "29455050",
+    "reason": "Primary behind the one-patient WWOX row of Table 2; not acquired in this wave (out of the assigned list)."
+   }
+  ],
+  "note": "156 references enumerated by count. The two rows naming WWOX cite ref 40 (PMID 37583270, receipt-complete, resolved) and ref 33 (PMID 29455050, a 2018 epileptic-encephalopathy panel cohort; no receipt; queued: it is the primary of the single-patient WWOX row and must be read before that patient is counted)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 40019827 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "No PAPER/LIT identity record and no receipt for this PMID before this reading (paper_packet.py packet: identity none, receipts 0)."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 156,
+   "references_screened": 142,
+   "references_with_doi": 142,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 14
+   }
+  },
+  "result": "Checked 2026-10-03 via PubMed metadata (get_article_metadata): publication types ['Journal Article', 'Scoping Review']; no retraction, expression of concern or correction listed for PMID 40019827."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID40019827_Innes2025_PMC.xml",
+   "sha256": "8543af21c13b3406ebb6459ab5ca03f5cc7af96b11b77984605583e551f913c4",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12237231/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "result_sha256": "8543af21c13b3406ebb6459ab5ca03f5cc7af96b11b77984605583e551f913c4"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Table 3 is the single confirmed-genetic cohort of 124 cases.",
+    "snippet": "Studies of IESS reporting confirmed genetic causes (one study with 124 cases)",
+    "anchor": "Table 3, caption",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40019827_Innes2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The 124-case cohort row lists WWOX with four patients.",
+    "snippet": "STXBP1 (4), WWOX (4), SCN1A (4)",
+    "anchor": "Table 3, row Nagarajan et al., monogenic causes cell",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40019827_Innes2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The 128-case panel cohort row lists WWOX with one patient.",
+    "snippet": "KCNB1 (2), DNM1 (2), SCN2A (2), ARX (1), WWOX (1), BRAT (1)",
+    "anchor": "Table 2, row Ko et al., monogenic causes cell",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40019827_Innes2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The panel cohort's yield was 34 of 128.",
+    "snippet": "Epileptic encephalopathy panel: 34 out of 128 (27%)",
+    "anchor": "Table 2, row Ko et al., genetic testing cell",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40019827_Innes2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2b pools genes seen in two or more individuals across 25 studies.",
+    "snippet": "identified in two or more individuals from 25 studies with 3176 children",
+    "anchor": "Figure 2, legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40019827_Innes2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors place any ACTH effect at a regulatory, not gene-specific, level.",
+    "snippet": "The heterogeneity in biological pathways indicates that the therapeutic effect of ACTH/steroids is plausible at a more regulatory rather than specific gene/protein level.",
+    "anchor": "Discussion, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40019827_Innes2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "No study has demonstrated a gene-expression mechanism of ACTH in IESS.",
+    "snippet": "However, no studies have definitively demonstrated this in IESS.",
+    "anchor": "Discussion, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40019827_Innes2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC12237231/fullTextXML returned HTTP 200 with a full JATS body on 2026-10-03; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure legend or the supplement."
+ }
+}
