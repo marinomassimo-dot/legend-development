@@ -35,3 +35,13 @@ The receipts `FTR-20261003-<pmid>-01` named below must be appended to the ledger
 
 ### LOCATOR TRIPLES FOR BLIND AUDIT
 (the Piard 2019 genotype-phenotype paragraph names its null genotypes without any exon-6 splice allele | These genotypes are observed in seven patients: homozygous deletion of exon 1 to 4 in P10 | PMID 30356099, Discussion, Phenotype/genotype correlations; files/fulltext/PMID30356099_Piard2019_EPMC.xml)
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261003_001` (2026-10-03, ACTOR_ID `scientist`, Scientist F), append-only
+
+**Verdict:** PROPAGATED
+
+Propagated record-scoped by `BATCH_20261003_001` (2026-10-03, ACTOR_ID `scientist`, Scientist F) — the ops below were read from this file by script, never retyped; every byte outside the addressed records was proven unchanged before anything was written. Post-propagation LINT: WARN, 0 BLOCK.
+
+`claim_registry_current.md`, 1 op on `CLAIM 018` (`consolidated baseline`). **Class kept as the author wrote it, MAJOR taken conservatively**, and the blind locator audit was run before propagating: the absence this repair rests on was measured independently — the allele string occurs **0 times** in the paper's body, **0 times** in each of its four supplementary tables and 0 times in its Figure 1, on both acquired surfaces. The claim's conclusion and status are unchanged.

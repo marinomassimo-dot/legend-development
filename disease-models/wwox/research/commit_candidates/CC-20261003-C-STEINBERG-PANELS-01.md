@@ -115,3 +115,13 @@ about the knockout.
 
 (The GABAergic rescue holds at protein level and not at transcript level within the same figure. | [figure attestation] Figure 1 panel D plots GAD1 relative expression at about 1 for WT, about 8.5 for KO and about 7.5 for W-AAV, while panel F plots GAD67 surface area per nucleus at about 0.2, about 1.0 and about 0.1 for the same three genotypes with brackets marked **** on both contrasts. | PMID 34268881, Figure 1 panels D and F; files/fulltext/PMID34268881_assets/EMMM-13-e13610-g006.jpg)
 ```
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261003_001` (2026-10-03, ACTOR_ID `scientist`, Scientist F), append-only
+
+**Verdict:** PROPAGATED
+
+Propagated record-scoped by `BATCH_20261003_001` (2026-10-03, ACTOR_ID `scientist`, Scientist F) — the ops below were read from this file by script, never retyped; every byte outside the addressed records was proven unchanged before anything was written. Post-propagation LINT: WARN, 0 BLOCK.
+
+`discovery_ledger_current.md`, 1 append — **`DL-METH-116`**. Number free at propagation time. `DL-MECH-098`, `DL-THER-105` and `PAPER 039` were not touched, as the candidate states.

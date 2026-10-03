@@ -165,3 +165,11 @@ empty § 6 after 2026-10-05 is the finding.)*
   not skip.
 
 **Not medical advice.**
+
+---
+
+## BATCH DISPOSITION — written 2026-10-03 by `BATCH_20261003_001` (ACTOR_ID `scientist`, Scientist F), append-only
+
+**Verdict:** DEFERRED
+
+🔴 **Not propagated, and still owed.** `batch_20260928_005_scope` names this candidate inside the words *«NOT IN SCOPE and still queued»*, and a mention closes a candidate whatever the sentence around the id says — so the backlog counter read one short while the work was never done. It is a stub with no ops and a dated review trigger. This block exists so the candidate's own record states what that scope's prose meant: **queued, not propagated**, and it is counted as pending again. `BATCH_20261003_001` did not touch its content.

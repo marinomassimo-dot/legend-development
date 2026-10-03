@@ -131,3 +131,13 @@ rejected so the rejection is not re-done.
 
 (The adhesion result on the ECM protein mixture is non-significant by the paper's own figure. | demonstrated considerably stronger adhesion to the ECM protein mixture (p = 0.0626) | PMID 31543760, Results, "WWOX Depletion Alters the Main Biological Functions of hNPC", para 2; files/fulltext/PMID31543760_Kosla2019_EPMC.xml)
 ```
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261003_001` (2026-10-03, ACTOR_ID `scientist`, Scientist F), append-only
+
+**Verdict:** PROPAGATED
+
+Propagated record-scoped by `BATCH_20261003_001` (2026-10-03, ACTOR_ID `scientist`, Scientist F) — the ops below were read from this file by script, never retyped; every byte outside the addressed records was proven unchanged before anything was written. Post-propagation LINT: WARN, 0 BLOCK.
+
+`discovery_ledger_current.md`, 1 append — **`DL-METH-114`**. The DL families share one sequence whose live maximum was 113 at propagation time, so 114 was free; `DL-THER-115` and `DL-METH-116` follow it in the same batch, in the order the three candidates declared.

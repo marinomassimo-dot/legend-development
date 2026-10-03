@@ -120,3 +120,13 @@ future record that leans on "WWOX restoration works in vivo" should know which s
 
 (Apoptosis in the ventricular zone falls on WWOX loss and returns toward wild type on restoration. | which revealed a decline in apoptosis of these cells upon WWOX‐KO, and was rescued in the W‐AAV COs | PMID 34268881, Results, "WWOX-depleted cerebral organoids exhibited impaired astrogenesis and DNA damage response", final para; files/fulltext/PMID34268881_Steinberg2021_PMC.xml)
 ```
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261003_001` (2026-10-03, ACTOR_ID `scientist`, Scientist F), append-only
+
+**Verdict:** PROPAGATED
+
+Propagated record-scoped by `BATCH_20261003_001` (2026-10-03, ACTOR_ID `scientist`, Scientist F) — the ops below were read from this file by script, never retyped; every byte outside the addressed records was proven unchanged before anything was written. Post-propagation LINT: WARN, 0 BLOCK.
+
+`discovery_ledger_current.md`, 2 ops — **`DL-THER-115`** appended and `DL-MECH-023` qualified. Number free at propagation time.
