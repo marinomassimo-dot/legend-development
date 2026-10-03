@@ -25,7 +25,7 @@
 ## Ordering
 The receipts named below must be appended to the ledger before this candidate is propagated, so that no record cites a receipt the ledger does not hold. Receipt: `FTR-20261003-38161429-01`.
 
-## Op list — `paper_registry_current.md` (record-scoped; dry run 2026-10-03 with `record_scoped_edit.py apply` on copies of `main` 0e6fd4e: exit 0, 5 op(s), keys ['PAPER 046' x5])
+## Op list — `paper_registry_current.md` (record-scoped; dry run 2026-10-03 with `record_scoped_edit.py apply` on copies of `main` c740c6e: exit 0, 5 op(s), keys ['PAPER 046' x5])
 
 ```json
 [
