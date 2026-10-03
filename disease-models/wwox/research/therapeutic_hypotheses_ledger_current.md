@@ -26,7 +26,7 @@
 - **Tag:** `IPOTESI`
 - **Enunciato falsificabile:** Se WWOX regola stabilità sonno/network-state, allora actigraphy + EEG sleep architecture dovrebbero mostrare pattern alterati in WWOX-DEE e migliorare parzialmente quando la rete è stabilizzata.
 - **Meccanismo:** WWOX variants associate a sleep duration in human GWAS; Wwox-LoF in fly altera durata/qualità del sonno senza abolire il ritmo circadiano.
-- **Evidenza PRO:** [[discovery_ledger_current#DL-MECH-013 — WWOX come regolatore di sleep/network-state: bridge umano + Drosophila funzionale|DL-MECH-013]]; convergenza con network-state/hyperexcitability già nel ledger.
+- **Evidenza PRO:** [[discovery_ledger_current#DL-MECH-013 — WWOX come regolatore di sleep/network-state: Drosophila funzionale, braccio umano SOLO SUGGESTIVO ⚠️|DL-MECH-013]]; convergenza con network-state/hyperexcitability già nel ledger.
 - **Evidenza CONTRO / incertezze:** endpoint distale, confondibile da farmaci, crisi, alimentazione, infezioni; non è biomarker WWOX Tier 1/2.
 - **Sicurezza (BLOCCO 1):** verde come misurazione; nessun intervento.
 - **Traslabilità al modello di malattia:** alta come monitoring passivo, bassa come biomarker causale.
