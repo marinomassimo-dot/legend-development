@@ -33,7 +33,7 @@ annotations is reported below whatever it happens to be.
 | Edges carrying a declared relation type | 0 |
 | Nodes carrying a biological scale | 0 |
 | Deep-dive manifests read | 216 |
-| …of which bound to at least one claim | 81 |
+| …of which bound to at least one claim | 82 |
 | Propositions scanned | 3556 |
 | …carrying a relational connective | 733 |
 | …locator-backed candidates | 693 |
@@ -79,7 +79,7 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 | CLAIM 027 | WWOX may act as an ECM/membrane-to-nucleus signaling node through HYAL-2/SMAD4 complexes, with c | in observation | INFERENZA | ECM / membrane signaling / injury respon | NOT_ANNOTATED | 0 | 0 |
 | CLAIM 028 | WWOX biological output is strongly partner- and context-dependent; expression level alone is ins | flagged for review | INFERENZA — principio interpretativo tra | cross-pathway interpretive principle | NOT_ANNOTATED | 4 | 5 |
 | CLAIM 029 | WWOX contributes directly to DNA-damage-response competence and genome-stability maintenance, at | in observation | DATO + INFERENZA prudente | genome stability / ATM / DNA damage resp | NOT_ANNOTATED | 0 | 4 |
-| CLAIM 030 | In WWOX the severity tracks residual protein FUNCTION, not protein abundance | in observation | DATO (serie allelica su cellule di pazie | genotype / protein function / proteostas | NOT_ANNOTATED | 10 | 7 |
+| CLAIM 030 | In WWOX the severity tracks residual protein FUNCTION, not protein abundance | in observation | DATO (serie allelica su cellule di pazie | genotype / protein function / proteostas | NOT_ANNOTATED | 10 | 8 |
 | CLAIM 031 | WWOX-DEE is a developmental AND epileptic encephalopathy: seizure control does not rescue develo | in observation | DATO (osservazione clinica) + INFERENZA  | clinical course / therapeutic strategy | NOT_ANNOTATED | 8 | 3 |
 | CLAIM 032 | Una copia di WWOX conserva alcuni endpoint osservati, ma non definisce una soglia terapeutica de | in observation | DATO (endpoint specifici in topo, ratto  | P7 — gene therapy readiness / dose-thres | NOT_ANNOTATED | 10 | 21 |
 | CLAIM 033 | Biallelic null WWOX carries higher mortality than genotypes with at least one missense — but the | in observation | DATO (statistica di coorte) + IPOTESI (l | genotype-phenotype / prognosis | NOT_ANNOTATED | 13 | 3 |
@@ -373,6 +373,6 @@ carried no connective from the lexicon.
 ## Provenance
 
 Derived from 219 input files; digest
-`f1b3cdd2eb2bd92c`. Sources: the claim, paper and
+`381277be5c4db570`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 

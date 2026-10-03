@@ -9625,7 +9625,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Genotype/model:** over-expression paradigm; no loss-of-function genotype
 **Transferability:** none to WWOX-DEE
 **clinical relevance:** LOW
-**Claim links:** none
+**Claim links:** CLAIM 027 (evidence boundary added by `CC-20261003W6-A-HYAL2-01`; this record is the review that adds no CNS evidence to that axis)
 **Role:** All WWOX data re-presented are DU145 over-expression experiments from the authors' laboratory; the nervous-system section never mentions WWOX; the Alzheimer-risk sentence cites five non-Alzheimer papers; a patent is listed beside a no-conflict declaration (see `CC-20261003W6-A-HYAL2-01`).
 **LIT link:** [[literature_tracking_log_current#LIT-0492]]
 **Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.
