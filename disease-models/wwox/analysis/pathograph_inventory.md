@@ -32,9 +32,9 @@ annotations is reported below whatever it happens to be.
 | …undirected edges they collapse into | 42 |
 | Edges carrying a declared relation type | 0 |
 | Nodes carrying a biological scale | 0 |
-| Deep-dive manifests read | 154 |
-| …of which bound to at least one claim | 64 |
-| Propositions scanned | 3039 |
+| Deep-dive manifests read | 159 |
+| …of which bound to at least one claim | 65 |
+| Propositions scanned | 3089 |
 | …carrying a relational connective | 681 |
 | …locator-backed candidates | 643 |
 | …locator-backed and bound to a claim | 290 |
@@ -363,7 +363,7 @@ carried no connective from the lexicon.
 
 ## Provenance
 
-Derived from 157 input files; digest
-`c0c1fea50258fa87`. Sources: the claim, paper and
+Derived from 162 input files; digest
+`b4984eec0e4fd779`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 
