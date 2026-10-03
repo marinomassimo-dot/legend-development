@@ -1,0 +1,176 @@
+{
+ "schema_version": 2,
+ "pmid": "38542478",
+ "doi": "10.3390/ijms25063507",
+ "pmcid": "PMC10970703",
+ "receipt": "FTR-20261003-38542478-01",
+ "landing": [
+  "FTR-20261003-38542478-01",
+  "disease-models/wwox/research/intake_wave_20261003w3_B.md"
+ ],
+ "landing_note": "Intake wave 3 2026-10-03, Scientist B, group B (organelle endpoints under WWOX loss or gain). The receipt is prepared and NOT appended: the Orchestrator records the wave's receipts in event order.",
+ "skills_considered": [
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline. The six papers of this group were read as one question (organelle endpoints under WWOX loss or gain), and the figure panels had to be inspected beside the running text of the same open artefact."
+  },
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Europe PMC REST fullTextXML returned a body for all six on the first attempt; figures and supplements came from the PMC OA S3 open-data bucket. No paywall was met and nothing was paid for."
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true,
+   "reason": "paper_packet.py packet and registry_records.py get were run per PMID before any source was opened; two of the six carry a prior partial receipt and one carries a prior manifest."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED. The triples are handed to the blind audit through the commit candidates' LOCATOR TRIPLES FOR BLIND AUDIT section; the producer of a reading must not be its verifier."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Not invoked. The group was assigned as a contradiction to characterise, not to resolve; enumerate_baseline would have added nothing the independence census does not already measure."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": true,
+  "total_publications": 138,
+  "publications_on_gene": 66,
+  "counts_measured": "PubMed esearch 2026-10-03 (tool=LEGEND-research): 'Chang NS[au]' 138, 'Chang NS[au] AND WWOX' 66, 'Hsu LJ[au]' 103, 'Hsu LJ[au] AND WWOX' 30.",
+  "weighting": "Five of the six papers in this group come from one laboratory lineage (Chang N-S / Hsu L-J, National Cheng Kung University). That laboratory originated WWOX and carries the gene's largest single output, so its measurements carry full weight; what it does NOT carry is independence. Two of its subjects are exclusive to it: 'Zfra NOT Chang NS[au]' returns 1 record and that record is an unrelated zebrafish androgen-receptor paper matching the string by accident; 'TIAF1 NOT Chang NS[au]' returns 5 of 20. The autophagy axis is the opposite case and is the reason this group is readable as a contradiction at all: 'WWOX AND autophagy' returns 10 records and 8 of them are from neither Chang NS nor Hsu LJ.",
+  "note": "Research-group knowledge base is excluded from the public edition; this rests on measured PubMed counts and on the papers' own author lists."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "Chang NS[au] AND WWOX",
+    "route": "PubMed esearch 2026-10-03",
+    "count": 66
+   },
+   {
+    "query": "Zfra",
+    "route": "PubMed esearch 2026-10-03",
+    "count": 17
+   }
+  ],
+  "note": "WWOX is a named subject, but this is a perspective review: no experiment is performed in it."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 112,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "112 <ref> elements, 113 PMIDs in the deposit. Two references were resolved by hand because they bear directly on the group's assigned question; the remaining bibliography was not classified.",
+  "resolved": [
+   {
+    "pmid": "33300063",
+    "why": "Reference 31 - 'WWOX promotes apoptosis and inhibits autophagy in paclitaxel-treated ovarian carcinoma cells'. A SECOND laboratory reporting the same sign as PMID 24008736, which changes the independence structure of the contradiction this group was built around."
+   },
+   {
+    "pmid": "35984507",
+    "why": "Reference 101 - 'WWOX inhibition by Zfra1-31 restores mitochondrial homeostasis and viability of neuronal cells exposed to high glucose'. An independent laboratory, a NEURONAL system, and the same sign as PMID 41677633: removing WWOX function protects the mitochondrion."
+   }
+  ],
+  "queued": [],
+  "dedup_performed": "The two resolved PMIDs were checked with registry_records.py: 33300063 is carried as CORPUS-STUB-056 (not_processed); 35984507 was not reached by the queries run here."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "What does the corpus already carry for this review, and does it record the hierarchy claim?",
+  "hits": 2,
+  "finding": "CORPUS-STUB-010 and LIT-0037 carry the identity; DL-MOL-006 carries the Zfra peptide axis. Nothing in the registries records that the 'overrides' relation is asserted by a review with no head-to-head experiment, which is the single fact a reader needs before treating Zfra and WWOX restoration as ranked alternatives."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-03",
+  "route": "PubMed efetch CommentsCorrections for the six PMIDs in one call",
+  "result": "No retraction, no expression of concern, no erratum on this paper.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 112,
+   "references_screened": 107,
+   "references_with_doi": 107,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 5
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID38542478_Chen2024_PMC.xml",
+   "sha256": "e130c6b8e4eaeb8a7957fada7fcd39bc299158bdac5893d4fd2bd61476a51ab6",
+   "kind": "article_text",
+   "note": "Europe PMC REST fullTextXML, acquired 2026-10-03 for a first-hand read of this group.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10970703/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_rest_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "e130c6b8e4eaeb8a7957fada7fcd39bc299158bdac5893d4fd2bd61476a51ab6"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "JATS from the Europe PMC fullTextXML endpoint for PMC10970703, 221292 bytes. Every body locator is matched against the body of that artefact by deepdive_manifest.py --verify-artifacts.",
+  "abstract_anchoring_waived": "No locator draws on the abstract; every text locator is matched against the body of the declared JATS artefact.",
+  "note": "Coverage: abstract, all eleven numbered sections, concluding remarks and the reference list. Figure legends read. Figure panels were NOT inspected as images - the seven figures are schematics of the authors' model and no proposition here rests on one - so the reading is declared partial. This article has no supplement.",
+  "entries": [
+   {
+    "proposition": "THE HIERARCHY IS ASSERTED IN THE SUMMARY OF A PERSPECTIVE REVIEW, NOT MEASURED. The word 'determined' appears without an accompanying experiment in this article, which performs none; the three routes it then lists are mechanisms, not a comparison of two therapeutic arms.",
+    "snippet": "We determined that Zfra overrides WWOX in suppressing cancer growth and the progression of neurodegeneration.",
+    "surface": "body",
+    "anchor": "Section 11, 'Summary and Concluding Remarks', second sentence",
+    "panel_text_relation": "text_only",
+    "artifact": "files/fulltext/PMID38542478_Chen2024_PMC.xml"
+   },
+   {
+    "proposition": "THE SAME ARTICLE STATES THE SAME RELATION CONDITIONALLY TWO PARAGRAPHS LATER. The two sentences are the range of what this source supports; a model that carries only the first has carried the stronger half of a hedge.",
+    "snippet": "Zfra may override WWOX deficiency in restoring normal physiological functions.",
+    "surface": "body",
+    "anchor": "Section 11.2, 'Concluding Remarks', final sentence",
+    "panel_text_relation": "text_only",
+    "artifact": "files/fulltext/PMID38542478_Chen2024_PMC.xml"
+   },
+   {
+    "proposition": "THE ONE GENOTYPE-LEVEL ORGANELLE-ADJACENT DATUM CITED HERE IS A HETEROZYGOTE FINDING, and it is cited, not shown. A heterozygous mouse cortex is the closest this review comes to a WWOX dose model, and the finding is an aggregation phenotype, not an organelle endpoint.",
+    "snippet": "A recent intriguing discovery is that pT12-WWOX occurs as aggregates in the cortex of heterozygous Wwox mice, but not in wild-type mice",
+    "surface": "body",
+    "anchor": "Section 11.1, 'pT12-WWOX as an Initiator of Protein Aggregation Cascade?', second sentence",
+    "panel_text_relation": "text_only",
+    "artifact": "files/fulltext/PMID38542478_Chen2024_PMC.xml"
+   },
+   {
+    "proposition": "THE REVIEW CARRIES, FROM AN INDEPENDENT LABORATORY AND A NEURONAL SYSTEM, THE SAME DIRECTION AS THE LYSOSOME PAPER: INHIBITING WWOX PROTECTS THE MITOCHONDRION. Activated WWOX is presented as the agent of mitochondrial apoptosis under a metabolic stress, which is the direction a WWOX-restoration strategy has to answer.",
+    "snippet": "WWOX becomes Y33-phosphorylated in response to high glucose, which leads to mitochondrial apoptosis.",
+    "surface": "body",
+    "anchor": "Section 10.3, 'Zfra1-31 for Treating Hyperglycemia/Diabetes-Associated Neurodegeneration', second paragraph",
+    "panel_text_relation": "text_only",
+    "artifact": "files/fulltext/PMID38542478_Chen2024_PMC.xml"
+   }
+  ]
+ }
+}
