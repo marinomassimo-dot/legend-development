@@ -3,12 +3,12 @@
  "pmid": "30158849",
  "doi": "10.3389/fnins.2018.00563",
  "pmcid": "PMC6104168",
- "receipt": "FTR-20261003-30158849-02",
+ "receipt": "FTR-20260811-30158849-01",
  "landing": [
   "FTR-20261003-30158849-02",
   "disease-models/wwox/research/intake_wave_20261003w3_B.md"
  ],
- "landing_note": "Intake wave 3 2026-10-03, Scientist B, group B (organelle endpoints under WWOX loss or gain). The receipt is prepared and NOT appended: the Orchestrator records the wave's receipts in event order.",
+ "landing_note": "Intake wave 3 2026-10-03, Scientist B, group B (organelle endpoints under WWOX loss or gain). The receipt is prepared and NOT appended: the Orchestrator records the wave's receipts in event order. The `receipt` field names FTR-20260811-30158849-01, the EARLIEST ledger event whose outputs name this manifest file, as manifest_receipt_provenance requires; this pass's own event, FTR-20261003-30158849-02, is named in `landing` and is the receipt the 2026-10-03 reading carries.",
  "skills_considered": [
   {
    "skill": "legend-deepdive",
