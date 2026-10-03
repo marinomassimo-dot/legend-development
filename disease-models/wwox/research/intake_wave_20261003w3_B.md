@@ -110,7 +110,7 @@ contradiction, and reading them as one would be the easy error.
 | `FT-074`: *«nessuno dei quattro letto»* | the record's own 2026-09-21 block says one was read | corrected (`CC-20261003W3-B-SUPPDEPOSIT-01`) |
 | `FT-074` counts PMID 24008736's `Wwox`-null MEF arm among the four | that arm lives in a supplementary figure the deposit does not carry | declared, with the two routes measured |
 | `FT-074`: the autophagy stalemate reduces to "one paper" | the axis has 10 records, 8 of them from other laboratories; a second independent lab is on the readable side | stated with the census |
-| LEGEND's phospho-code source is PMID 30158849 | that review maps residues to compartment and cell fate, never to a measured organelle endpoint, and contains no pT12 | stated in `PAPER 140`'s record text |
+| LEGEND's phospho-code source is PMID 30158849 | that review maps residues to compartment and cell fate, never to a measured organelle endpoint, and contains no pT12 | stated in `PAPER 147`'s record text |
 
 ### Where the wave-3 selection record was wrong
 - **B2.** It states *«`Wwox`-null MEFs show higher ROS and death on serum deprivation»*. Both the running
