@@ -1,0 +1,181 @@
+{
+ "schema_version": 2,
+ "pmid": "33612478",
+ "doi": "10.18632/aging.202514",
+ "pmcid": "PMC7950260",
+ "receipt": "FTR-20261003-33612478-01",
+ "receipt_note": "Prepared as a JSON file for the integrator and not appended at preparation time.",
+ "landing": [
+  "FTR-20261003-33612478-01",
+  "disease-models/wwox/research/intake_wave_20261003w4_B.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W4-B-REGISTRY-01.md"
+ ],
+ "landing_note": "Intake wave 4 2026-10-03, Scientist B, group B. Included deliberately as the weakest member of the group, so that the question of whether WWOX dose is read out continuously has a floor: nothing is perturbed here.",
+ "skills_considered": [
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline over the group; this manifest and the dossier carry the structure."
+  },
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Europe PMC REST fullTextXML returned a body for PMC7950260 on the first attempt; the supplementaryFiles archive holds only the five figure images already described by their legends."
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true,
+   "reason": "paper_packet.py packet and registry_records.py get were run first: the paper exists only as CORPUS-STUB-109, status not_processed, with no receipt."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED for the registry candidate's triples; no claim is proposed from this paper."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Not invoked. The paper's limits are structural (candidate-SNP association, linkage, multiplicity) and are read off the Methods."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "total_publications": 174,
+  "publications_on_gene": 2,
+  "counts_measured": "PubMed esearch 2026-10-03 (tool=LEGEND-research) on the senior author: 'Yin RX[au]' 174, 'Yin RX[au] AND WWOX' 2.",
+  "weighting": "A cardiovascular-epidemiology group at Guangxi Medical University with a long series of candidate-SNP studies in the same minority populations. Independent of every WWOX laboratory; also not a WWOX laboratory. The weight the reading gives it is that of one candidate-SNP association study, and the correlated series is itself a reason for caution.",
+  "note": "Research-group knowledge base is excluded from the public edition; this rests on measured PubMed counts and the paper's affiliations."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "Yin RX[au] AND WWOX",
+    "route": "PubMed esearch 2026-10-03",
+    "count": 2
+   },
+   {
+    "query": "WWOX SNPs genotyped in this paper",
+    "route": "reading the Methods",
+    "count": 2
+   }
+  ],
+  "note": "Low density: WWOX enters as two genotyped SNPs chosen from prior GWAS reports. The protein is never measured, no WWOX transcript is quantified, and no functional work is done."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 51,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "The body cites to [51]. The WWOX-directed antecedents are references 14, 22 and 23 (the Young Finns HDL-C association and the Spanish non-replication); none is dereferenced here.",
+  "resolved": [],
+  "queued": [],
+  "dedup_performed": "Not performed."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "What does the corpus already assert about this paper?",
+  "hits": 1,
+  "finding": "Only CORPUS-STUB-109, 'Status: not_processed', 'Registry role: corpus placeholder only', 'Claim links: none'. Nothing is asserted about the paper, so nothing can be misreported; the registry candidate upgrades the stub and records what the paper does and does not establish."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-03",
+  "route": "PubMed article metadata for this PMID (article_types: Journal Article; Research Support, Non-U.S. Gov't). No retraction, erratum or expression of concern is carried.",
+  "result": "No retraction, no expression of concern, no erratum.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 51,
+   "references_screened": 51,
+   "references_with_doi": 51,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID33612478_Liu2021_PMC.xml",
+   "sha256": "fd40936559a65a8a85e34145f25f3910c463c6fd87930c3ae11b055c39a33344",
+   "kind": "article_text",
+   "note": "Europe PMC REST fullTextXML for PMC7950260, acquired 2026-10-03.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7950260/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_rest_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "fd40936559a65a8a85e34145f25f3910c463c6fd87930c3ae11b055c39a33344"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "JATS from the Europe PMC fullTextXML endpoint for PMC7950260, 248636 bytes; every locator is matched against it by deepdive_manifest.py --verify-artifacts.",
+  "abstract_anchoring_waived": "No locator draws on the abstract. The abstract is in fact where this paper's two internal discrepancies live, and they are stated in the dossier against body sentences rather than quoted from the abstract.",
+  "note": "Coverage: abstract, introduction, all Results sections, Discussion, Materials and Methods, Tables 1-12 as deposited, and all five figure legends. Figure panels were NOT inspected as images; the deposited supplementary archive contains those same five figures and nothing else. The reading is partial for that reason.",
+  "entries": [
+   {
+    "proposition": "THE TWO WWOX SNPs ARE SEPARATED BY ABOUT 500 kb AND ARE IN WEAK LINKAGE DISEQUILIBRIUM WITH EACH OTHER, BY THE PAPER'S OWN STATEMENT. A haplotype built across that distance is not a statement about one WWOX allele.",
+    "snippet": "rs2222896 and rs2548861 at chromosomal positions 78058601 and 78624496, respectively, were about 500 kb from each other, resulting in a weak LD between them",
+    "surface": "body",
+    "anchor": "Discussion, paragraph on gene-gene interactions and linkage disequilibrium",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human population sample",
+     "genotype": "WWOX rs2222896 and rs2548861, genotyped by sequencing",
+     "treatment": "none; observational",
+     "comparator": "864 normolipidaemic versus 1129 dyslipidaemic participants of one ethnic group",
+     "endpoint": "linkage disequilibrium D prime and R squared"
+    },
+    "artifact": "files/fulltext/PMID33612478_Liu2021_PMC.xml"
+   },
+   {
+    "proposition": "THE AUTHORS THEMSELVES WITHDRAW THE WWOX INTRONIC SNP ASSOCIATION WITH HDL-C: THEY FAIL TO REPLICATE IT IN THE NORMOLIPIDAEMIC GROUP AND ATTRIBUTE THE DYSLIPIDAEMIC-GROUP SIGNAL TO NON-GENETIC FACTORS.",
+    "snippet": "Thus, we speculated that mutations at rs2548861 were not correlated with HDL-C concentration in these subjects.",
+    "surface": "body",
+    "anchor": "Discussion, paragraph comparing the Young Finns and Spanish studies",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human population sample",
+     "genotype": "WWOX rs2548861",
+     "treatment": "none; observational",
+     "comparator": "normal-lipid group n = 864 (P = 0.597) versus dyslipidaemia group n = 1129 (P = 0.001)",
+     "endpoint": "serum HDL-C concentration"
+    },
+    "artifact": "files/fulltext/PMID33612478_Liu2021_PMC.xml"
+   },
+   {
+    "proposition": "THE PAPER MEASURES NOTHING ABOUT WWOX FUNCTION AND SAYS SO: THE FUNCTIONAL WORK IS NAMED AS MISSING BY THE AUTHORS.",
+    "snippet": "biological function studies are needed to further examine the effects of interactions between these two genes on dyslipidemia",
+    "surface": "body",
+    "anchor": "Discussion, limitations list, item 4",
+    "panel_text_relation": "text_only",
+    "artifact": "files/fulltext/PMID33612478_Liu2021_PMC.xml"
+   },
+   {
+    "proposition": "THE SNP SELECTION WAS RESTRICTED TO COMMON VARIANTS, SO NOTHING IN THIS PAPER BEARS ON A RARE DAMAGING WWOX ALLELE OR ON ANY CARRIER OF ONE.",
+    "snippet": "Only SNPs with MAF greater than 10% were included.",
+    "surface": "body",
+    "anchor": "Materials and methods, SNP selection, principle 4",
+    "panel_text_relation": "text_only",
+    "artifact": "files/fulltext/PMID33612478_Liu2021_PMC.xml"
+   }
+  ]
+ }
+}
