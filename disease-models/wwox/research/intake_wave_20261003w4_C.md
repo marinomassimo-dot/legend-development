@@ -161,8 +161,11 @@ each with an explicit "what I did not read". Manifests: the matching `.json` und
 - **C2** — no histopathology in the arm that defines the dose ceiling; DRG never harvested in mice;
   no window in units of protein; the miRNA de-targeting element is carried unconfirmed by the
   sponsor's own statement.
-- **C3** — no n per group anywhere in the main text; no graded severity scale; no cardiac function
-  measurement; no DRG assessment; and the mechanism "not mechanistically addressed in this paper".
+- **C3** — no graded severity scale in the main text; no cardiac function measurement; no DRG
+  assessment; the mechanism "not mechanistically addressed in this paper"; and n per group absent
+  from the running text and the deposited captions — but **present inside the Figure 2 and Figure 3
+  plot legends** (n = 6 per sex for serum chemistry, n = 3 per group for the qPCR panels), which a
+  text-only reading does not see. See § 3b.
 - **C4** — no antigen-specific T cells detected; the effector mechanism is a postulate; n = 3 per
   group; no efficacy endpoint; nothing beyond 43 days against a predicted six-month requirement; and
   the authors state the immune mechanism **does not hold in mouse**.
@@ -172,6 +175,35 @@ each with an explicit "what I did not read". Manifests: the matching `.json` und
   see C4's day-5 events.
 - **C6** — not clinically validated; no concentration threshold, only fold-change; strata not
   resolved in the main text; no mechanism and no mitigation tested, so it cannot adjudicate § 2.
+
+### 3b · What opening five figure panels changed — including one of my own statements
+
+The first pass of this reading was text-only, which the brief permits but which the ratchet in
+`growth_anchors.py` does not: a manifest must declare, per locator, whether a panel bears on it.
+Rather than write `text_only` over locators that a panel does bear on — the module's own comment
+says "when no admitted value is true, the defect is the enum" — I fetched the five panels that bear
+on a locator from the PMC open-data bucket and read them. Four of the five changed something.
+
+| Panel | Relation | What it changed |
+|---|---|---|
+| C1 Figure 2D/2F | **qualifies the text** | The paper states once, for both cassettes, that "fewer than 50% of SST+ neurons were GFP positive". The panel plots them separately: cmGAD65 SST ≈27 %, but **cmGAD67 SST ≈51 %** — and cmGAD67 is the cassette carried into every therapeutic experiment. Figure 2F is the same shape: the PV enrichment the text calls selective against its own stated threshold of 1.5 sits essentially *on* 1.5 for cmGAD67, with animals from ≈1.2 to 1.8 |
+| C2 Figure 5A/5C | **confirms the text** | Vehicle animals carry grade-1 and grade-2 DRG findings in the sacral and lumbar severity plots, so the procedural contribution is visible and not merely asserted; and CSF NfL peaks at day 15 in **all three groups including vehicle** |
+| C3 Figure 2 and 3 legends | **panel-only information** | 🔴 **This falsified a statement I had already written.** My first-pass dossier said n per group was "not reported anywhere in the main text or in any figure legend". The group sizes *are* reported — inside the **plotted legends** of Figures 2 and 3, which the JATS caption does not carry: n = 6 per sex for serum chemistry, n = 3 per group for the qPCR panels. A text-only reading of a JATS deposit cannot see them |
+| C3 Figure 3D | **qualifies the text** | The brain *Cxcl10* rise is a **single timepoint at the margin** — one bracket, p = 0.044, on the P5 bar, three animals — while the heart and liver brackets on the same axis read p = 0.002 and p < 0.001 on bars one to two orders of magnitude higher, and the brain facets of Figures 3B and 3C carry no bracket at all. The brain signal forbids the unqualified word "unaffected" and is too thin to call an effect |
+| C4 Figure 5 | **qualifies the text** | The sentence claims day-5 infiltrates for four cell types. In the day-5 row CD20 shows a discrete focus and CD4 scattered signal, but NCR1, CD303 and CD68 are not visibly above the vehicle row, and the CD8 column is essentially unstained in every row including day 29. The quantification is in an unfetched supplement, so the panel neither confirms nor contradicts — it shows the sentence is not readable off the figure it points to |
+
+**The method lesson, which is the reusable part.** Three of these five findings are invisible to a
+JATS text extraction: group sizes inside a plotted legend, a significance bracket on one facet, and
+which rows of a representative image actually differ. A reading that declares `figures:
+captions_only` is not merely incomplete — it is incomplete in a direction that systematically
+favours the authors' summary sentence, because the summary is what the text carries and the
+qualification is what the panel carries. Three of the four changes above weakened a summary
+sentence. None strengthened one.
+
+**Coverage after this.** 1 of 8 panels opened for C1, 1 of 5 for C2, 2 of 3 for C3, 1 of 8 for C4,
+0 of 5 for C5, 0 of 5 for C6. The receipts still declare `figures: captions_only`, which understates
+what was done for four papers but is the safe direction and is the closest admitted value; each
+receipt's `evidence_basis` names exactly which panels were opened.
 
 ### Internal inconsistencies found in the sources (all three are checkable, none is fatal)
 

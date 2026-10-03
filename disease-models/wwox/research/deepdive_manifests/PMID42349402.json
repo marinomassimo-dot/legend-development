@@ -143,6 +143,21 @@
     "derived": false,
     "result_sha256": "6dc844f6610a108e88b23f67004363b6084b4e4bfdf4cd6d77ff089e27a96a65"
    }
+  },
+  {
+   "path": "files/figures/PMID42349402/gr2.webp",
+   "sha256": "2b42b68c6ecb4ee7e8499c3f072f6f453716cf8d29d3af2ea435fae0112927eb",
+   "kind": "figure",
+   "note": "Figure 2 (1600x1648), inspected as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13555566.1/gr2.webp",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "2b42b68c6ecb4ee7e8499c3f072f6f453716cf8d29d3af2ea435fae0112927eb"
+   }
   }
  ],
  "verbatim_locators": {
@@ -150,56 +165,89 @@
   "source_fulltext_indexed": true,
   "source_fulltext_indexed_evidence": "JATS from the Europe PMC fullTextXML endpoint for PMC13555566, 144044 bytes. Every locator is matched against the body of that artefact by deepdive_manifest.py --verify-artifacts.",
   "abstract_anchoring_waived": "No locator draws on the abstract alone; every locator is matched against the body of the declared JATS artefact.",
-  "note": "Coverage: abstract, introduction, full Methods/Materials, every Results section, every main table as rendered in the JATS deposit, every main figure LEGEND, Discussion, the authors' own limitations, declarations and the supplementary-material captions. NO figure panel was opened as an image and NO supplementary file was fetched, so the reading is declared partial_fulltext_read, not complete.",
+  "note": "Coverage: abstract, introduction, full Methods/Materials, every Results section, every main table as rendered in the JATS deposit, every main figure LEGEND, Discussion, the authors' own limitations, declarations and the supplementary-material captions. NO figure panel was opened as an image and NO supplementary file was fetched, so the reading is declared partial_fulltext_read, not complete. Figure 2 was additionally fetched from the PMC open-data bucket and inspected as an image at native resolution; it qualifies the SST statement in the running text. No other panel was opened.",
   "entries": [
    {
     "proposition": "PROMOTER SPECIFICITY IS ROUTE-DEPENDENT, NOT A PROPERTY OF THE CASSETTE ALONE: the same cassette lost about a third of its selectivity when injected into the parenchyma instead of the bloodstream.",
     "snippet": "direct hippocampal injection of AAV-GFP or AAV-hM4D(Gi) resulted in reduced specificity",
     "surface": "body",
     "anchor": "Results, chemogenetic manipulation",
-    "artifact": "files/fulltext/PMID42349402_Fukai2026_PMC.xml"
+    "artifact": "files/fulltext/PMID42349402_Fukai2026_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "The authors attribute the loss of specificity to the route rather than to the transgene.",
     "snippet": "it is influenced by the route of administration, with reduced specificity observed following direct parenchymal injection",
     "surface": "body",
     "anchor": "Results, chemogenetic manipulation",
-    "artifact": "files/fulltext/PMID42349402_Fukai2026_PMC.xml"
+    "artifact": "files/fulltext/PMID42349402_Fukai2026_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "The proposed cause of the route effect is local vector concentration, which makes it a dose phenomenon as well as a route phenomenon.",
     "snippet": "This reduction may be attributable to high local vector concentrations.",
     "surface": "body",
     "anchor": "Results, chemogenetic manipulation",
-    "artifact": "files/fulltext/PMID42349402_Fukai2026_PMC.xml"
+    "artifact": "files/fulltext/PMID42349402_Fukai2026_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "The PV-interneuron bias is quantified in both directions, which is what makes 'preferentially' auditable.",
     "snippet": "Approximately 85% of PV+ neurons were GFP positive",
     "surface": "body",
     "anchor": "Results, preferential targeting of PV-positive interneurons",
-    "artifact": "files/fulltext/PMID42349402_Fukai2026_PMC.xml"
+    "artifact": "files/fulltext/PMID42349402_Fukai2026_PMC.xml",
+    "panel_text_relation": "text_confirmed_by_panel"
    },
    {
     "proposition": "Off-target expression in excitatory neurons is not excluded by the measurement, only argued to be harmless for this particular cargo.",
     "snippet": "Although low-level expression in excitatory neurons cannot be completely excluded",
     "surface": "body",
     "anchor": "Discussion, preferential targeting and network control",
-    "artifact": "files/fulltext/PMID42349402_Fukai2026_PMC.xml"
+    "artifact": "files/fulltext/PMID42349402_Fukai2026_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "The seizure models are acute and induced, by the authors' own statement.",
     "snippet": "The present study primarily utilized acute seizure models",
     "surface": "body",
     "anchor": "Discussion, translational potential and limitations",
-    "artifact": "files/fulltext/PMID42349402_Fukai2026_PMC.xml"
+    "artifact": "files/fulltext/PMID42349402_Fukai2026_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "No toxicology was performed: long-term safety, off-target expression and peripheral distribution are all declared as future work.",
     "snippet": "further evaluation of long-term safety, off-target expression, and peripheral distribution will be required",
     "surface": "body",
     "anchor": "Discussion, translational potential and limitations",
-    "artifact": "files/fulltext/PMID42349402_Fukai2026_PMC.xml"
+    "artifact": "files/fulltext/PMID42349402_Fukai2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE PAPER GENERALISES ACROSS ITS TWO CASSETTES WHERE ITS OWN PANEL SEPARATES THEM: the SST reach is stated once, for both constructs together.",
+    "snippet": "fewer than 50% of SST+ neurons were GFP positive",
+    "surface": "body",
+    "anchor": "Results, preferential targeting of PV-positive interneurons",
+    "artifact": "files/fulltext/PMID42349402_Fukai2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PANEL READING. Figure 2D plots the two cassettes separately: the cmGAD65 SST bar sits near 27 %, but the cmGAD67 SST bar — the cassette carried forward into every therapeutic experiment — sits at about 51 %, with per-animal points spanning roughly 35-65 %. The blanket statement is true of one construct and not of the other. Figure 2F is the same shape: the PV enrichment the text reads as selective sits essentially ON the stated 1.5 threshold for cmGAD67, with individual animals from about 1.2 to 1.8.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2D, right pair of axes (cmGAD67): the PV+ bar sits at about 85 % and the SST+ bar at about 51 %, five animal points per bar; Figure 2D, left pair (cmGAD65): PV+ about 85 %, SST+ about 27 %. Figure 2F, cmGAD67: PV+ enrichment mean about 1.5 with points from about 1.2 to 1.8, SST+ about 0.75, others about 0.6.",
+    "surface": "figure",
+    "anchor": "Figure 2D and 2F",
+    "artifact": "files/figures/PMID42349402/gr2.webp",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[7]",
+    "qualifies_needle": "fewer than 50% of SST+ neurons",
+    "experimental_context": {
+     "system": "mouse",
+     "genotype": "wild-type C57BL/6J",
+     "treatment": "AAV-PHP.eB cmGAD65 or cmGAD67 GFP, 5.0e11 vg/mouse intravenous",
+     "timepoint": "3 weeks",
+     "comparator": "between the two cassettes",
+     "endpoint": "immunohistochemical co-localisation in M1/M2 cortex"
+    }
    }
   ]
  }

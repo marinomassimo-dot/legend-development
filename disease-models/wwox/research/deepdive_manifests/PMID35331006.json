@@ -157,56 +157,64 @@
     "snippet": "microscopic DRG findings were not mitigated with coadministration of anti-inflammatory or immunosuppressive regimens",
     "surface": "body",
     "anchor": "Conclusions",
-    "artifact": "files/fulltext/PMID35331006_Tukov2022_PMC.xml"
+    "artifact": "files/fulltext/PMID35331006_Tukov2022_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "THE NEGATIVE IS SCOPED TO ADAPTIVE IMMUNITY BY THE AUTHORS, NOT TO IMMUNITY AS SUCH.",
     "snippet": "suggesting that primary adaptive immune responses may not be a critical mediator",
     "surface": "body",
     "anchor": "Discussion, immunosuppression paragraph",
-    "artifact": "files/fulltext/PMID35331006_Tukov2022_PMC.xml"
+    "artifact": "files/fulltext/PMID35331006_Tukov2022_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "The authors explicitly leave innate immune activation on the table.",
     "snippet": "activation of the innate immune response in transduced cells was not excluded",
     "surface": "body",
     "anchor": "Discussion, pathogenesis paragraph",
-    "artifact": "files/fulltext/PMID35331006_Tukov2022_PMC.xml"
+    "artifact": "files/fulltext/PMID35331006_Tukov2022_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "THE LESION DOES NOT SHOW A DOSE RESPONSE, which means dose alone cannot be used to bound it.",
     "snippet": "did not demonstrate a dose response",
     "surface": "body",
     "anchor": "Discussion, comparison with other AAV gene therapies",
-    "artifact": "files/fulltext/PMID35331006_Tukov2022_PMC.xml"
+    "artifact": "files/fulltext/PMID35331006_Tukov2022_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "'Resolution' is redefined by the authors and does not mean the neurons came back.",
     "snippet": "Neuronal cell degeneration/neuron loss is generally not considered a reversible finding",
     "surface": "body",
     "anchor": "Discussion, resolution paragraph",
-    "artifact": "files/fulltext/PMID35331006_Tukov2022_PMC.xml"
+    "artifact": "files/fulltext/PMID35331006_Tukov2022_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "The authors state what they mean by resolution, which is lower incidence and severity, not repair.",
     "snippet": "was used to connote a decrease in the incidence and/or severity",
     "surface": "body",
     "anchor": "Discussion, resolution paragraph",
-    "artifact": "files/fulltext/PMID35331006_Tukov2022_PMC.xml"
+    "artifact": "files/fulltext/PMID35331006_Tukov2022_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "Human relevance is declared unknown by the authors.",
     "snippet": "The translational relevance of DRG pathology in humans is currently unknown",
     "surface": "body",
     "anchor": "Discussion, clinical relevance paragraph",
-    "artifact": "files/fulltext/PMID35331006_Tukov2022_PMC.xml"
+    "artifact": "files/fulltext/PMID35331006_Tukov2022_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "The immunosuppression comparison is reported as a qualitative similarity, with no statistic.",
     "snippet": "In general, these findings were reported as similar in incidence and severity in animals administered",
     "surface": "body",
     "anchor": "Results, thirteen-week intrathecal mechanistic study",
-    "artifact": "files/fulltext/PMID35331006_Tukov2022_PMC.xml"
+    "artifact": "files/fulltext/PMID35331006_Tukov2022_PMC.xml",
+    "panel_text_relation": "text_only"
    }
   ]
  }
