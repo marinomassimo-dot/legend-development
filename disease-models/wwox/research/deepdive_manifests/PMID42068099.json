@@ -1,0 +1,181 @@
+{
+ "schema_version": 2,
+ "pmid": "42068099",
+ "doi": "10.1002/mdc3.70641",
+ "receipt": "FTR-20261003-42068099-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID42068099.md",
+  "disease-models/wwox/research/intake_wave_20261003w6_B.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W6-B-REGISTRY-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W6-B-MOVEMENT-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is owned by other batches; what this reading supports is proposed as commit candidates and in the intake note."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "An aggregation or real-world cohort supplies no new therapeutic lever for the reference genotype class; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is newly proposed; cannabidiol is an approved antiseizure medicine and nothing here is sent to BLOCK-1 triage."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The triples are published in the candidates for a blind auditor; the reader cannot audit their own locators."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "A non-systematic structured review by three movement-disorder clinicians; every WWOX entry cites one source, a WWOX-DEE cohort held under PUBLICATION_INTEGRITY_HOLD. Not a per-author sweep."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (dystonia OR movement disorder OR movement disorders)",
+    "count": 14,
+    "source": "PubMed ESearch rettype=count 2026-10-03"
+   }
+  ],
+  "note": "14 PubMed records; this source is an aggregation, not a primary."
+ },
+ "multihop": {
+  "references_enumerated": 171,
+  "gene_direct_refs_in_source": [
+   "36779245"
+  ],
+  "resolved": [
+   "36779245"
+  ],
+  "queued": [],
+  "note": "171 references enumerated by count. All four WWOX rows cite ref 66 (PMID 36779245, receipt-complete; resolved). The IESS row's comprehensive-cohort footnote cites ref 7 (PMID 37583270, receipt-complete; resolved)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42068099 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "No PAPER/LIT identity record and no receipt for this PMID before this reading (paper_packet.py packet: identity none, receipts 0)."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 171,
+   "references_screened": 158,
+   "references_with_doi": 158,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 13
+   }
+  },
+  "result": "Checked 2026-10-03 via PubMed metadata (get_article_metadata): publication types ['Journal Article', 'Review']; no retraction, expression of concern or correction listed for PMID 42068099."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42068099_Mohammad2026_PMC.xml",
+   "sha256": "69ca109da0b5f4dd1072a5baff3c57a4648eb5f06e604ab12b5435d1ec379f1d",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13339248/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "result_sha256": "69ca109da0b5f4dd1072a5baff3c57a4648eb5f06e604ab12b5435d1ec379f1d"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The review is not systematic.",
+    "snippet": "Although this was not a systematic review",
+    "anchor": "Methods, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42068099_Mohammad2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 2 lists infantile-onset features with selected genes.",
+    "snippet": "Clinical and neuroimaging features in Infantile onset disorders with epilepsy and movement disorders",
+    "anchor": "Table 2, caption",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42068099_Mohammad2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The IESS row's comprehensive cohort is Nagarajan et al.",
+    "snippet": "A comprehensive cohort described by Nagarajan et al.",
+    "anchor": "Table 2, footnote",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42068099_Mohammad2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "WWOX is listed for excessive startle/hyperekplexia.",
+    "snippet": "Excessive startle/hyperekplexia ARHGEF9, 75 GRIA2, 71 GRIA3, 76 KCNQ2, 77 PURA, 78 STXBP1, 79 SCN1A, 41 SCN2A, 80 SCN8A, 81 WWOX, 66 YWHAG",
+    "anchor": "Table 2, row Excessive startle/hyperekplexia, key feature",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42068099_Mohammad2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "WWOX is listed for corpus callosum abnormalities.",
+    "snippet": "Corpus callosum abnormalities ARX, 107 FOXG1, 108 NAA10, 109 RHOBTB2, 54 TMEM63B, 59 UBA5, 110 WWOX 66",
+    "anchor": "Table 2, row Corpus callosum abnormalities, key feature",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42068099_Mohammad2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "WWOX is listed for white matter changes.",
+    "snippet": "White matter changes CACNA1B, 118 GABRB2, 119 GABRB3, 120 GRIA2, 83 NAA10, 109 WWOX 66",
+    "anchor": "Table 2, row White matter changes, key feature",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42068099_Mohammad2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC13339248/fullTextXML returned HTTP 200 with a full JATS body on 2026-10-03; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure legend or the supplement."
+ }
+}

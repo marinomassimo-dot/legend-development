@@ -1,0 +1,168 @@
+{
+  "schema_version": 2,
+  "pmid": "42422766",
+  "doi": "10.1016/j.omta.2026.201779",
+  "pmcid": "PMC13343144",
+  "receipt": "FTR-20261003-42422766-01",
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID42422766_Amaral2026_PMC.xml",
+      "sha256": "a24c49a3dbeb13351bb982237236ec664826d4d170b017422ef557634e37212c",
+      "kind": "article_text",
+      "note": "Route-versus-toxicity contrast in one cargo: intracisterna-magna versus intraparenchymal AAV9-GBA1 in adult cynomolgus, plus an early-postnatal mouse intracerebroventricular arm. Read for which part of the harm is route-driven.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13343144/fullTextXML",
+        "http_method": "GET",
+        "tier": "europepmc_fulltextxml",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-03",
+        "derived": false,
+        "result_sha256": "a24c49a3dbeb13351bb982237236ec664826d4d170b017422ef557634e37212c",
+        "http_status": 200,
+        "bytes": 167418
+      }
+    }
+  ],
+  "landing": [
+    "disease-models/wwox/research/intake_wave_20261003w6_C.md",
+    "disease-models/wwox/research/fulltext_dossiers/PMID42422766.md"
+  ],
+  "skills_considered": [
+    {
+      "skill": "legend-deepdive",
+      "used": false,
+      "reason": "Run by hand as a scientist reading, not through the skill: the brief fixes the dossier structure, the manifest schema and the receipt schema, and the skill would have produced a commit candidate for a paper that names no gene of this disease model."
+    },
+    {
+      "skill": "find-fulltext",
+      "used": true,
+      "reason": "Europe PMC fullTextXML returned a body on the first attempt (HTTP 200, 167418 bytes); the cascade was not needed."
+    },
+    {
+      "skill": "legend-locator-audit",
+      "used": false,
+      "reason": "Triples are handed to the audit through the commit candidate's LOCATOR TRIPLES FOR BLIND AUDIT section: the producer must not be the verifier."
+    }
+  ],
+  "group_assessment": {
+    "performed": true,
+    "total_publications": 292,
+    "publications_on_gene": 0,
+    "counts_measured": "PubMed esearch 2026-10-03: 'Amaral AC[au]' 292 (a common surname-initial query, an upper bound on one author's output), 'Amaral AC[au] AND WWOX' 0.",
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": false,
+    "is_primary_group_for_gene": false,
+    "weighting": "Sponsor study: every author but two was employed by the sponsor, the other two by the contract laboratory, and the sponsor funded it. That cuts BOTH ways here and the direction matters: the paper reports adverse findings that undercut a route its own competitors are in the clinic with, and reports early euthanasia in its own highest-dose arm. A negative safety finding published against interest is the strongest form this evidence takes, so the observations carry full weight; the comparison with a named competitor's disclosed preclinical data is the part written in a commercial frame.",
+    "note": "Research-group knowledge base is excluded from the public edition, so this rests on measured PubMed counts, the Methods and the declaration of interests. For common surnames the author query is an upper bound on one person's output and is recorded as such, not as a group identity."
+  },
+  "field_density": {
+    "wwox_directed": false,
+    "wwox_hits_in_source": 0,
+    "queries": [
+      {
+        "query": "count of the literal string WWOX over the whole JATS tree of the declared artifact",
+        "route": "python3 xml.etree itertext over files/fulltext/PMID42422766_Amaral2026_PMC.xml, 2026-10-03",
+        "count": 0
+      },
+      {
+        "query": "Amaral AC[au] AND WWOX",
+        "route": "PubMed esearch 2026-10-03",
+        "count": 0
+      }
+    ],
+    "measured_by": "count of the string WWOX over the whole JATS tree, 2026-10-03",
+    "note": "Zero. This is an earned null for the gene and the source is read only for the transferable AAV-safety question, with the transfer limit stated in the dossier."
+  },
+  "multihop": {
+    "performed": false,
+    "references_enumerated": 55,
+    "pmid_bearing_references": 0,
+    "gene_direct_refs_in_source": [],
+    "enumeration_method": "All <ref> elements counted and all pub-id[pub-id-type=pmid] values parsed from the declared JATS artifact.",
+    "resolved": [],
+    "queued": [],
+    "gap_declared": "Off-WWOX source: the gene appears zero times, so no reference of this paper is gene-direct and the gene-direct hop set is empty by measurement, not by omission. 0 PMID-bearing references enumerated from the JATS; none is resolved and none is individually queued, because the transferable question this paper was read for is answered inside it. The one reference this group repeatedly depends on and cannot read is PMID 32845779 (the multi-capsid primate DRG series), blocked at the publisher on every route the wave tried."
+  },
+  "corpus_crossquery": {
+    "performed": true,
+    "query": "Does this corpus already hold an artifact or a receipt for this PMID, and is the paper already in the registries?",
+    "hits": 0,
+    "finding": "paper_packet.py packet --pmid 42422766 at commit 663970aa07f1: no manifest, no artifacts, depth=none, receipts=0, no acquisition route recorded, and no identity in the registry. First reading in every sense."
+  },
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-10-03",
+    "route": "NCBI ESummary db=pubmed for the six PMIDs of this group",
+    "result": "No retraction, no expression of concern, no erratum.",
+    "hold": false,
+    "dependencies": {
+      "flagged": [],
+      "noted": [],
+      "paper_verdict": "SCREENED_CLEAN",
+      "reference_source": "network",
+      "references_declared": 55,
+      "references_screened": 54,
+      "references_with_doi": 54,
+      "schema": "retraction_check.dependencies/1",
+      "screened": true,
+      "snapshot": {
+        "date": "2026-09-10",
+        "days_since_fetch": 23,
+        "rows": 72476,
+        "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+      },
+      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+      "unscreenable": {
+        "UNSCREENABLE_NO_DOI": 1
+      }
+    }
+  },
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC JATS for PMC13343144, 167418 bytes, sha256 recorded in full above.",
+    "note": "Abstract, Introduction, Results, Discussion and Materials and methods read in full from the JATS running text. Figure PANELS not inspected (captions only); Supplemental Document S1 (Figures S1-S9, Tables S1, S3, S5, S6) and Data S1 (Tables S2, S4) not fetched, so the per-animal histopathology grids are unverified at source. No number carried in the dossier lives in a figure panel. The reference list of this JATS carries no PMIDs at all, so the multi-hop enumeration is by count only.",
+    "entries": [
+      {
+        "proposition": "AFTER THE CSF ROUTE THE SENSORY-GANGLION AND CORD INJURY WAS PRESENT AT EVERY DOSE LEVEL, INCLUDING THE LOWEST, in animals that received no immunosuppression.",
+        "snippet": "AAV9-GBA1-related histopathology findings were present at all dose levels and affected the DRG, TG, spinal cord, cauda equina, dorsal nerve roots, and peripheral nerves",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42422766_Amaral2026_PMC.xml",
+        "anchor": "Results, 'AAV9-GBA1 ICM and IPa delivery into NHPs produced distinct safety findings', ICM paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "AND THAT IS THE STUDY'S OWN STATEMENT OF ITS IMMUNOLOGICAL CONDITIONS: neither a neutralising-antibody screen nor immunosuppression was used.",
+        "snippet": "we did not pre-screen for neutralizing antibodies or utilize immunosuppression in the reported results",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42422766_Amaral2026_PMC.xml",
+        "anchor": "Discussion, paragraph comparing this ICM dataset with the PR001 disclosures",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THE PAPER'S ONLY STATEMENT ABOUT IMMUNOSUPPRESSION IS A CITATION TO UNPUBLISHED WORK, NOT A MEASUREMENT IN IT - and even that citation says reduce, not eliminate.",
+        "snippet": "data from our group suggest that immunosuppression can greatly reduce but not eliminate the severity and/or incidence of DRG, spinal cord, and other adverse histopathology findings",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42422766_Amaral2026_PMC.xml",
+        "anchor": "Discussion, final sentence of the same paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "TOTAL VECTOR PER BRAIN REGION DOES NOT EXPLAIN THE DIFFERENCE IN HARM: mouse and primate reached comparable vector levels with opposite histopathology.",
+        "snippet": "suggest that the total amount of vector delivered to a brain region is not the primary driver, but perhaps species and/or route of administration",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42422766_Amaral2026_PMC.xml",
+        "anchor": "Discussion, second paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THE CSF ROUTE BOUGHT NO MEASURABLE BRAIN EFFECT AT ALL IN THIS STUDY, so its sensory-ganglion cost was paid for nothing.",
+        "snippet": "no significant changes in GCase activity were detected in any brain region analyzed when compared with aCSF control animals",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42422766_Amaral2026_PMC.xml",
+        "anchor": "Results, 'IPa, but not ICM, delivery into NHPs produced enhanced transduction and functional hGCase expression in the brain'",
+        "panel_text_relation": "text_only"
+      }
+    ]
+  }
+}
