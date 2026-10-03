@@ -109,3 +109,16 @@
 (the child had no seizure disorder | our patient presented with a global developmental delay and no early seizure disorder despite a family history of seizures and cerebral palsy in his brother and cousin, respectively | PMID 35712340, Discussion para 1; files/fulltext/PMID35712340_Sukkar2022_PMC.xml)
 (the splice effect of c.406A>G is predicted only | The in silico predicted that the position of the identified variant might lead to significant alterations in mRNA splicing owing to an altered splice site. | PMID 35712340, Case presentation, WES paragraph; files/fulltext/PMID35712340_Sukkar2022_PMC.xml)
 (CSF neurotransmitters were not measured | Cerebrospinal fluid (CSF) neurotransmitter analysis was not performed. | PMID 42092735, Case Presentation para 4; files/fulltext/PMID42092735_SercePehlevan2026_PMC.xml)
+
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261003_002` (2026-10-03, ACTOR_ID `scientist`, Scientist G), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** PROPAGATED (MINOR)
+
+**Renumbered, not as declared:** `PAPER 142` was already the 2026-10-03 identity landing for PMID 21212468, so this candidate's records land as `PAPER 143` (37583270), `PAPER 144` (35712340), `PAPER 145` (42092735) and `LIT-0441` (37583270), `LIT-0442` (42092735); every wikilink inside the ops was rewritten with them. **Integrator amendment from blind audit (T08, SUPPORTED_NARROWER):** `PAPER 144` said *no seizures*; the source says *no early seizure disorder* at 21 months — the record now carries the source's words. Blind audit of this candidate's five triples: 5 SUPPORTED. Closes the `test_batch_queue.py` identity failure for 37583270 and 35712340.
+
+**Not medical advice.**
