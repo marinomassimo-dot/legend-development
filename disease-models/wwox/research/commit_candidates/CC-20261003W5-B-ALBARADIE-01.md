@@ -16,7 +16,7 @@ PMID 35792847 shows one allele on both sides of the WOREE/SCAR12 line: three P47
 ## Change class
 **MINOR** — an addition to an open discovery lead; no claim or block change.
 
-## Op list — `discovery_ledger_current.md` (record-scoped; dry run 2026-10-03 with `record_scoped_edit.py apply` (no `--apply`) on main 48f1fe9 (branch base; no registry file changed on the branch): exit 0, 1 op(s), anchors ['DL-MECH-022'])
+## Op list — `discovery_ledger_current.md` (record-scoped; dry run 2026-10-03 with `record_scoped_edit.py apply` (no `--apply`) on main f110c76 merged into the branch (no registry file changed on the branch): exit 0, 1 op(s), anchors ['DL-MECH-022'])
 
 ```json
 [

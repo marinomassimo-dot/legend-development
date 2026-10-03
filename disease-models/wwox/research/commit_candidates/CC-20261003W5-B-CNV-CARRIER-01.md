@@ -18,7 +18,7 @@ Two heterozygous WWOX observations **with a phenotype** were read this wave, and
 ## Change class
 **MINOR** — a qualification inside an `in observation` claim; no status change.
 
-## Op list — `claim_registry_current.md` (record-scoped; dry run 2026-10-03 with `record_scoped_edit.py apply` (no `--apply`) on main 48f1fe9 (branch base; no registry file changed on the branch): exit 0, 1 op(s), anchors ['CLAIM 032'])
+## Op list — `claim_registry_current.md` (record-scoped; dry run 2026-10-03 with `record_scoped_edit.py apply` (no `--apply`) on main f110c76 merged into the branch (no registry file changed on the branch): exit 0, 1 op(s), anchors ['CLAIM 032'])
 
 ```json
 [

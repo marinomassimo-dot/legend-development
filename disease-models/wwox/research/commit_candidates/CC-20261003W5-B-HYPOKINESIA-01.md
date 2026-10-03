@@ -14,7 +14,7 @@ The only review in LEGEND's reach that makes a WWOX-specific movement-phenotype 
 ## Change class
 **MINOR** — a dismissal entry (negative claim) with its revival trigger; no claim status or block change. It narrows a review-level sentence that no registry record currently cites.
 
-## Op list — `dismissal_ledger_current.md` (record-scoped; dry run 2026-10-03 with `record_scoped_edit.py apply` (no `--apply`) on main 48f1fe9 (branch base; no registry file changed on the branch): exit 0, 1 op(s), anchors ['EOF-append'])
+## Op list — `dismissal_ledger_current.md` (record-scoped; dry run 2026-10-03 with `record_scoped_edit.py apply` (no `--apply`) on main f110c76 merged into the branch (no registry file changed on the branch): exit 0, 1 op(s), anchors ['EOF-append'])
 
 ```json
 [

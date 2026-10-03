@@ -18,7 +18,7 @@
 ## Change class
 **MINOR** — identity annotations; no claim status or working-model block changes.
 
-## Op list — `paper_registry_current.md` (record-scoped; dry run 2026-10-03 with `record_scoped_edit.py apply` (no `--apply`) on main 48f1fe9 (branch base; no registry file changed on the branch): exit 0, 2 op(s), anchors ['PAPER 119', 'PAPER 018'])
+## Op list — `paper_registry_current.md` (record-scoped; dry run 2026-10-03 with `record_scoped_edit.py apply` (no `--apply`) on main f110c76 merged into the branch (no registry file changed on the branch): exit 0, 2 op(s), anchors ['PAPER 119', 'PAPER 018'])
 
 ```json
 [
@@ -37,7 +37,7 @@
 ]
 ```
 
-## Op list — `full_text_queue_current.md` (record-scoped; dry run 2026-10-03 with `record_scoped_edit.py apply` (no `--apply`) on main 48f1fe9 (branch base; no registry file changed on the branch): exit 0, 1 op(s), anchors ['FT-140'])
+## Op list — `full_text_queue_current.md` (record-scoped; dry run 2026-10-03 with `record_scoped_edit.py apply` (no `--apply`) on main f110c76 merged into the branch (no registry file changed on the branch): exit 0, 1 op(s), anchors ['FT-140'])
 
 ```json
 [

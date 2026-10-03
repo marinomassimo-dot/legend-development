@@ -59,7 +59,7 @@ Dossiers: `research/fulltext_dossiers/PMID<pmid>.md`. Manifests: `research/deepd
 | `CC-20261003W5-B-ALBARADIE-01` | MINOR | 6 |
 | `CC-20261003W5-B-HYPOKINESIA-01` | MINOR | 8 |
 | `CC-20261003W5-B-CNV-CARRIER-01` | MINOR | 8 |
-| `CC-20261003W5-B-REGISTRY-01` | MINOR (PAPER 156-161, LIT-0445-0449, provisional) | 7 |
+| `CC-20261003W5-B-REGISTRY-01` | MINOR (PAPER 156-161, LIT-0447-0451, provisional) | 7 |
 
 All op lists dry-ran with `record_scoped_edit.py apply` (exit 0); every triple's quote was re-matched against its artefact on disk.
 
@@ -68,7 +68,7 @@ All op lists dry-ran with `record_scoped_edit.py apply` (exit 0); every triple's
 2. Hengel Table S1: dumped in a TAB variant of the corpus xlsx extractor, because `D2=4` trips the verifier's chi-squared signature.
 3. Mori: figures deliberately not viewed (Figure 1 is a patient photograph); the reading is declared `partial_fulltext_read` rather than overclaimed.
 4. Spagnoli supplement: `pmc_pow_fetch.fetch` refuses `application/zip`; called with that MIME added from a scratch shim (capability gap, below).
-5. Registry numbers taken after the highest claimed on main (`PAPER 156`+, `LIT-0445`+), declared provisional.
+5. Registry numbers taken after the highest claimed on main (`PAPER 156`+, `LIT-0447`+), declared provisional.
 
 ## Capability gap
 `framework/scripts/pmc_pow_fetch.py` rejects `application/zip` supplements, the commonest MDPI/PMC supplement container; a one-line addition to its accepted MIME set would remove the shim. Not edited here (outside a Scientist's write scope).
