@@ -1060,8 +1060,8 @@ Serves to:
 **Identifier value:** 41677633
 **Date discovered:** 2026-03-27
 **Status:** superseded
-**Superseded by:** [[literature_tracking_log_current#LIT-0165]] (same PMID, promoted). The pointer was written into `Status` by `CC-20261003W3-B-REGISTRY-01` and moved to this line by `BATCH_20261004_001` after Phase 5 returned `INVALID_LIT_STATUS`: the vocabulary takes the bare value, and nothing was dropped.
-**Filter reason:** 🔴 **Duplicate identity and an outdated rationale, corrected 2026-10-03 (`CC-20261003W3-B-REGISTRY-01`).** The same PMID is also carried by [[literature_tracking_log_current#LIT-0165]], which is the record promoted to [[paper_registry_current#PAPER 144]]; this one is kept as history and is no longer the live record. On the substance: the cell systems are indeed non-CNS (MEF, HeLa, SCC-15), but the paper is NOT only a cancer-apoptosis result - two of its endpoints (mitochondrial membrane potential, ROS) are measured on a constitutive `Wwox` null versus wild type, and in that comparison WWOX loss is PROTECTIVE under serum starvation. Read on 2026-10-03 (`partial_fulltext_read`) (integrator amendment, `BATCH_20261004_001`): receipt `FTR-20261003-41677633-02`, dossier `research/fulltext_dossiers/PMID41677633.md`
+**Superseded by:** [[literature_tracking_log_current#LIT-0165]] (same PMID, promoted). The pointer was written into `Status` by `CC-20261003W3-B-REGISTRY-01` and moved to this line by `BATCH_20261003_002` after Phase 5 returned `INVALID_LIT_STATUS`: the vocabulary takes the bare value, and nothing was dropped.
+**Filter reason:** 🔴 **Duplicate identity and an outdated rationale, corrected 2026-10-03 (`CC-20261003W3-B-REGISTRY-01`).** The same PMID is also carried by [[literature_tracking_log_current#LIT-0165]], which is the record promoted to [[paper_registry_current#PAPER 144]]; this one is kept as history and is no longer the live record. On the substance: the cell systems are indeed non-CNS (MEF, HeLa, SCC-15), but the paper is NOT only a cancer-apoptosis result - two of its endpoints (mitochondrial membrane potential, ROS) are measured on a constitutive `Wwox` null versus wild type, and in that comparison WWOX loss is PROTECTIVE under serum starvation. Read on 2026-10-03 (`partial_fulltext_read`) (integrator amendment, `BATCH_20261003_002`): receipt `FTR-20261003-41677633-02`, dossier `research/fulltext_dossiers/PMID41677633.md`
 **Transferability:** T4
 **clinical relevance:** VERY LOW
 **Note:** Excluded. Conceptually interesting for apoptosis/redox but not translatable.
@@ -1306,7 +1306,7 @@ Serves to:
 **Claim links:** none
 **Working Model impact:** none yet
 **Report mentions:** corpus alignment
-**Next action:** none - screened and read on 2026-10-03 (`partial_fulltext_read`, per its receipt) (integrator amendment, `BATCH_20261004_001`) (intake wave 3, Scientist B); promoted to [[paper_registry_current#PAPER 150]] by `CC-20261003W3-B-REGISTRY-01`
+**Next action:** none - screened and read on 2026-10-03 (`partial_fulltext_read`, per its receipt) (integrator amendment, `BATCH_20261003_002`) (intake wave 3, Scientist B); promoted to [[paper_registry_current#PAPER 150]] by `CC-20261003W3-B-REGISTRY-01`
 **Flags:** corpus placeholder / not yet screened
 **Note:** Title: WWOX Phosphorylation, Signaling, and Role in Neurodegeneration
 
@@ -1414,7 +1414,7 @@ Serves to:
 **Claim links:** none
 **Working Model impact:** none yet
 **Report mentions:** corpus alignment
-**Next action:** none - screened and read on 2026-10-03 (`partial_fulltext_read`, per its receipt) (integrator amendment, `BATCH_20261004_001`) (intake wave 3, Scientist B); promoted to [[paper_registry_current#PAPER 149]] by `CC-20261003W3-B-REGISTRY-01`
+**Next action:** none - screened and read on 2026-10-03 (`partial_fulltext_read`, per its receipt) (integrator amendment, `BATCH_20261003_002`) (intake wave 3, Scientist B); promoted to [[paper_registry_current#PAPER 149]] by `CC-20261003W3-B-REGISTRY-01`
 **Flags:** corpus placeholder / not yet screened
 **Note:** Title: Zfra Overrides WWOX in Suppressing the Progression of Neurodegeneration
 
@@ -4751,7 +4751,7 @@ Serves to:
 **Claim links:** none
 **Working Model impact:** none yet
 **Report mentions:** corpus alignment
-**Next action:** none - screened and read on 2026-10-03 (`partial_fulltext_read`, per its receipt) (integrator amendment, `BATCH_20261004_001`) (intake wave 3, Scientist B); promoted to [[paper_registry_current#PAPER 148]] by `CC-20261003W3-B-REGISTRY-01`
+**Next action:** none - screened and read on 2026-10-03 (`partial_fulltext_read`, per its receipt) (integrator amendment, `BATCH_20261003_002`) (intake wave 3, Scientist B); promoted to [[paper_registry_current#PAPER 148]] by `CC-20261003W3-B-REGISTRY-01`
 **Flags:** corpus placeholder / not yet screened
 **Note:** Title: WWOX suppresses autophagy for inducing apoptosis in methotrexate-treated human squamous cell carcinoma
 
@@ -4943,7 +4943,7 @@ Serves to:
 **Claim links:** none
 **Working Model impact:** none yet
 **Report mentions:** corpus alignment
-**Next action:** none - screened and read on 2026-10-03 (`partial_fulltext_read`, per its receipt) (integrator amendment, `BATCH_20261004_001`) (intake wave 3, Scientist B); promoted to [[paper_registry_current#PAPER 147]] by `CC-20261003W3-B-REGISTRY-01`
+**Next action:** none - screened and read on 2026-10-03 (`partial_fulltext_read`, per its receipt) (integrator amendment, `BATCH_20261003_002`) (intake wave 3, Scientist B); promoted to [[paper_registry_current#PAPER 147]] by `CC-20261003W3-B-REGISTRY-01`
 **Flags:** corpus placeholder / not yet screened
 **Note:** Title: WWOX Induction Promotes Bcl-XL and Mcl-1 Degradation Through a Lysosomal Pathway upon Stress Response
 
@@ -12869,7 +12869,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Status:** processed
 **Route:** Europe PMC REST `fullTextXML` into the root `files/fulltext/`, with the single figure from the PMC open-access mirror; read 2026-10-03 by ACTOR_ID `scientist` (Scientist B) under `context_policy: SOURCE_FIRST`, intake wave 3.
 **Outcome:** INGEST — `paper_registry_current#PAPER 142`.
-**Record provenance:** 🔴 identity landing written by `BATCH_20261003_001` to clear the `ORPHAN_COMPLETE_READ` block this reading left on `main`; the scientific landing was completed on 2026-10-04 by `BATCH_20261004_001` from `CC-20261003W3-B-REGISTRY-01`, the candidate of the wave-3 reader who authored the reading (secondary throughout: every mitochondrial datum traces to one earlier primary of the same laboratory; `Transferability` T4; no claim link). No second record was created for this PMID.
+**Record provenance:** 🔴 identity landing written by `BATCH_20261003_001` to clear the `ORPHAN_COMPLETE_READ` block this reading left on `main`; the scientific landing was completed on 2026-10-03 by `BATCH_20261003_002` from `CC-20261003W3-B-REGISTRY-01`, the candidate of the wave-3 reader who authored the reading (secondary throughout: every mitochondrial datum traces to one earlier primary of the same laboratory; `Transferability` T4; no claim link). No second record was created for this PMID.
 **Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261003-21212468-01`; manifest `deepdive_manifests/PMID21212468.json`
 **PAPER link:** [[paper_registry_current#PAPER 142]]
 **Note:** Not medical advice.
@@ -12941,6 +12941,6 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Report mentions:** `research/intake_wave_20261003w3_B.md`
 **Next action:** none
 **Flags:** created by `CC-20261003W3-B-REGISTRY-01`; provisional number
-**Note:** Paired with [[paper_registry_current#PAPER 146]]. Read 2026-10-03 (`partial_fulltext_read`: figure panels from their legends only) (integrator amendment, `BATCH_20261004_001`); WWOX is not manipulated or measured in it - an earned null for the gene.
+**Note:** Paired with [[paper_registry_current#PAPER 146]]. Read 2026-10-03 (`partial_fulltext_read`: figure panels from their legends only) (integrator amendment, `BATCH_20261003_002`); WWOX is not manipulated or measured in it - an earned null for the gene.
 
 ---
