@@ -1,0 +1,175 @@
+{
+ "schema_version": 2,
+ "pmid": "21368882",
+ "doi": "10.1038/cddis.2010.83",
+ "pmcid": "PMC3032296",
+ "receipt": "FTR-20261003-21368882-01",
+ "landing": [
+  "FTR-20261003-21368882-01",
+  "disease-models/wwox/research/intake_wave_20261003w3_B.md"
+ ],
+ "landing_note": "Intake wave 3 2026-10-03, Scientist B, group B (organelle endpoints under WWOX loss or gain). The receipt is prepared and NOT appended: the Orchestrator records the wave's receipts in event order.",
+ "skills_considered": [
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline. The six papers of this group were read as one question (organelle endpoints under WWOX loss or gain), and the figure panels had to be inspected beside the running text of the same open artefact."
+  },
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Europe PMC REST fullTextXML returned a body for all six on the first attempt; figures and supplements came from the PMC OA S3 open-data bucket. No paywall was met and nothing was paid for."
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true,
+   "reason": "paper_packet.py packet and registry_records.py get were run per PMID before any source was opened; two of the six carry a prior partial receipt and one carries a prior manifest."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED. The triples are handed to the blind audit through the commit candidates' LOCATOR TRIPLES FOR BLIND AUDIT section; the producer of a reading must not be its verifier."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Not invoked. The group was assigned as a contradiction to characterise, not to resolve; enumerate_baseline would have added nothing the independence census does not already measure."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": true,
+  "total_publications": 138,
+  "publications_on_gene": 66,
+  "counts_measured": "PubMed esearch 2026-10-03 (tool=LEGEND-research): 'Chang NS[au]' 138, 'Chang NS[au] AND WWOX' 66, 'Hsu LJ[au]' 103, 'Hsu LJ[au] AND WWOX' 30.",
+  "weighting": "Five of the six papers in this group come from one laboratory lineage (Chang N-S / Hsu L-J, National Cheng Kung University). That laboratory originated WWOX and carries the gene's largest single output, so its measurements carry full weight; what it does NOT carry is independence. Two of its subjects are exclusive to it: 'Zfra NOT Chang NS[au]' returns 1 record and that record is an unrelated zebrafish androgen-receptor paper matching the string by accident; 'TIAF1 NOT Chang NS[au]' returns 5 of 20. The autophagy axis is the opposite case and is the reason this group is readable as a contradiction at all: 'WWOX AND autophagy' returns 10 records and 8 of them are from neither Chang NS nor Hsu LJ.",
+  "note": "Research-group knowledge base is excluded from the public edition; this rests on measured PubMed counts and on the papers' own author lists."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "WWOX AND TIAF1",
+    "route": "PubMed esearch 2026-10-03 (wave-2 measurement, re-used)",
+    "count": 9
+   }
+  ],
+  "note": "WWOX is NOT the subject. It appears three times: as a yeast-two-hybrid positive control (WOX1/p53), and twice as cited background for the TGF-beta1/Hyal-2/WOX1/Smad4 route. No WWOX manipulation, no WWOX readout."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 39,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "39 <ref> elements in the deposit; only 1 carries a PMID in the deposited XML, so the bibliography cannot be dereferenced by identifier without a title-by-title resolution that was not run.",
+  "resolved": [],
+  "queued": [],
+  "dedup_performed": "Not performed: no PMID list to deduplicate against the registry."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does the corpus already hold this paper's WWOX content under another record, and is the TIAF1 cascade already carried from the downstream papers read in wave 2?",
+  "hits": 0,
+  "finding": "No registry record of any kind names PMID 21368882 (registry_records.py get --pmid 21368882 exits 1, no hits). The reading debt this closes is therefore recorded nowhere in the registries; it exists only in the wave-3 selection record."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-03",
+  "route": "PubMed efetch CommentsCorrections for the six PMIDs in one call",
+  "result": "No retraction, no expression of concern, no erratum on this paper.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 39,
+   "references_screened": 39,
+   "references_with_doi": 39,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID21368882_Lee2010_PMC.xml",
+   "sha256": "491685dd173d026607a00e271a43fcbc14ff2b40d5f2394f2fe5b93311659ef7",
+   "kind": "article_text",
+   "note": "Europe PMC REST fullTextXML, acquired 2026-10-03 for a first-hand read of this group.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3032296/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_rest_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "491685dd173d026607a00e271a43fcbc14ff2b40d5f2394f2fe5b93311659ef7"
+   }
+  },
+  {
+   "path": "files/supplements/PMID21368882/cddis201083x2.pdf",
+   "sha256": "b565327e40d471c7c00a2074bc9fd76d308c8d4d1ca9fec3fad9f08ae0423af6",
+   "kind": "supplement_binary",
+   "note": "Deposited supplementary PDF, 15 pages, captions S1-S13 read. Verified to be THIS article s supplement.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3032296.1/cddis201083x2.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "b565327e40d471c7c00a2074bc9fd76d308c8d4d1ca9fec3fad9f08ae0423af6"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "JATS from the Europe PMC fullTextXML endpoint for PMC3032296, 116329 bytes. Every body locator is matched against the body of that artefact by deepdive_manifest.py --verify-artifacts.",
+  "abstract_anchoring_waived": "No locator draws on the abstract; every text locator is matched against the body of the declared JATS artefact.",
+  "note": "Coverage: abstract, introduction, all Results sections, Discussion, Materials and Methods, all eight figure legends and the 15-page supplementary PDF (captions S1-S13 read) from the JATS deposit and the deposited supplement. Figure PANELS of this paper were NOT inspected as images: no proposition here rests on a panel, and the reading is declared partial for that reason. The supplementary video (.avi) was not viewed.",
+  "entries": [
+   {
+    "proposition": "WWOX IS NOT MEASURED IN THIS PAPER. Its only substantive appearance in the Results is as cited background for the TGF-beta1/Hyal-2 route; no WWOX manipulation and no WWOX readout exists here. A claim that this paper supports a WWOX statement is a claim about its reference 14, not about its data.",
+    "snippet": "TGF-β1 binds membrane hyaluronidase type 2 (Hyal-2) for recruiting tumor suppressor WW domain-containing oxidoreductase (WOX1) (also named WWOX or FOR) and Smad4 to relocate to the nuclei",
+    "surface": "body",
+    "anchor": "Results, 'TGF-β1-induced TIAF1 self-binding occurs independently of TβRII', sentence 2",
+    "panel_text_relation": "text_only",
+    "artifact": "files/fulltext/PMID21368882_Lee2010_PMC.xml"
+   },
+   {
+    "proposition": "THE HUMAN DATA ARE CROSS-SECTIONAL PREVALENCES IN TWO GROUPS THAT DIFFER BY ~21 YEARS OF AGE, AND TIAF1 AGGREGATION ITSELF IS NOT MORE COMMON IN THE DEMENTED GROUP. The age difference is in the authors' own sentence and is never controlled.",
+    "snippet": "TIAF1 aggregation was present in 59.0% of postmortem nondemented human hippocampi (age 59.0±17.0, n=41), and 54% in older postmortem AD patients (age 80.0±8.8, n=97)",
+    "surface": "body",
+    "anchor": "Results, 'TIAF1 aggregates are abundant in the hippocampi of nondemented humans', filter-retardation paragraph",
+    "panel_text_relation": "text_only",
+    "artifact": "files/fulltext/PMID21368882_Lee2010_PMC.xml"
+   },
+   {
+    "proposition": "THE 17% VERSUS 48% FIGURES ARE CONDITIONAL PREVALENCES WITHIN TIAF1-POSITIVE SAMPLES, NOT A TIME COURSE. The brief that selected this paper quotes them as the human evidence that TIAF1 aggregation precedes amyloid; the source states them as a proportion, with no longitudinal sampling and no statistical test reported in this paragraph.",
+    "snippet": "Further analysis revealed that there was only 17% of the total TIAF1-positive samples possessing Aβ aggregates in the control group, and 48% for the AD group.",
+    "surface": "body",
+    "anchor": "Results, 'TIAF1 aggregates are abundant in the hippocampi of nondemented humans', final sentence",
+    "panel_text_relation": "text_only",
+    "artifact": "files/fulltext/PMID21368882_Lee2010_PMC.xml"
+   },
+   {
+    "proposition": "THE DIRECTION OF THE Thr668 EFFECT IS SPLIT BETWEEN THE ABSTRACT AND THE RESULTS. The abstract says aggregation leads to DEphosphorylation; the Results say overexpressed TIAF1 INCREASED Thr668 phosphorylation and that TGF-beta1 is what suppresses it. Anything carried from this paper must carry the two-step form.",
+    "snippet": "Importantly, phosphorylation of endogenous APP at Thr668 was significantly increased in cells overexpressing TIAF1/TIAF1, and that TGF-β1 suppressed the phosphorylation",
+    "surface": "body",
+    "anchor": "Results, 'TIAF1 self-aggregation precedes production of Aβ and amyloid fibrils', SK-N-SH paragraph",
+    "panel_text_relation": "text_only",
+    "artifact": "files/fulltext/PMID21368882_Lee2010_PMC.xml"
+   }
+  ]
+ }
+}

@@ -1,0 +1,182 @@
+{
+ "schema_version": 2,
+ "pmid": "21212468",
+ "doi": "10.18632/aging.100263",
+ "pmcid": "PMC3034171",
+ "receipt": "FTR-20261003-21212468-01",
+ "landing": [
+  "FTR-20261003-21212468-01",
+  "disease-models/wwox/research/intake_wave_20261003w3_B.md"
+ ],
+ "landing_note": "Intake wave 3 2026-10-03, Scientist B, group B (organelle endpoints under WWOX loss or gain). The receipt is prepared and NOT appended: the Orchestrator records the wave's receipts in event order.",
+ "skills_considered": [
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline. The six papers of this group were read as one question (organelle endpoints under WWOX loss or gain), and the figure panels had to be inspected beside the running text of the same open artefact."
+  },
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Europe PMC REST fullTextXML returned a body for all six on the first attempt; figures and supplements came from the PMC OA S3 open-data bucket. No paywall was met and nothing was paid for."
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true,
+   "reason": "paper_packet.py packet and registry_records.py get were run per PMID before any source was opened; two of the six carry a prior partial receipt and one carries a prior manifest."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED. The triples are handed to the blind audit through the commit candidates' LOCATOR TRIPLES FOR BLIND AUDIT section; the producer of a reading must not be its verifier."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Not invoked. The group was assigned as a contradiction to characterise, not to resolve; enumerate_baseline would have added nothing the independence census does not already measure."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": true,
+  "total_publications": 138,
+  "publications_on_gene": 66,
+  "counts_measured": "PubMed esearch 2026-10-03 (tool=LEGEND-research): 'Chang NS[au]' 138, 'Chang NS[au] AND WWOX' 66, 'Hsu LJ[au]' 103, 'Hsu LJ[au] AND WWOX' 30.",
+  "weighting": "Five of the six papers in this group come from one laboratory lineage (Chang N-S / Hsu L-J, National Cheng Kung University). That laboratory originated WWOX and carries the gene's largest single output, so its measurements carry full weight; what it does NOT carry is independence. Two of its subjects are exclusive to it: 'Zfra NOT Chang NS[au]' returns 1 record and that record is an unrelated zebrafish androgen-receptor paper matching the string by accident; 'TIAF1 NOT Chang NS[au]' returns 5 of 20. The autophagy axis is the opposite case and is the reason this group is readable as a contradiction at all: 'WWOX AND autophagy' returns 10 records and 8 of them are from neither Chang NS nor Hsu LJ.",
+  "note": "Research-group knowledge base is excluded from the public edition; this rests on measured PubMed counts and on the papers' own author lists."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "WWOX AND \"mitochondrial membrane potential\"",
+    "route": "PubMed esearch 2026-10-03",
+    "count": 4
+   },
+   {
+    "query": "Zfra NOT Chang NS[au]",
+    "route": "PubMed esearch 2026-10-03",
+    "count": 1
+   }
+  ],
+  "note": "WWOX/WOX1 is a named subject throughout, but the article is a narrative perspective: no experiment is performed in it."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 51,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "51 <ref> elements, 52 PMIDs in the deposit. The mitochondrial statements this group was selected for all trace to one primary reference, which was identified by reading the citations in place rather than by resolving the whole list.",
+  "resolved": [],
+  "queued": [],
+  "dedup_performed": "Not performed as a list."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Is PMID 21212468 carried anywhere in the registries, and is its ZFRA-versus-WWOX direction already asserted in LEGEND?",
+  "hits": 0,
+  "finding": "No registry record of any kind names PMID 21212468 (registry_records.py get exits 1). The 'Zfra counteracts WWOX' statement is therefore not carried, and if it is wanted it must enter through the primary it cites, not through this perspective."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-03",
+  "route": "PubMed efetch CommentsCorrections for the six PMIDs in one call",
+  "result": "No retraction, no expression of concern, no erratum on this paper.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 51,
+   "references_screened": 12,
+   "references_with_doi": 12,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 39
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID21212468_Dudekula2010_PMC.xml",
+   "sha256": "044dac8d70a2870036acc08d8a6f87fdedd5b08f606163e80b17e4569250411a",
+   "kind": "article_text",
+   "note": "Europe PMC REST fullTextXML, acquired 2026-10-03 for a first-hand read of this group.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3034171/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_rest_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "044dac8d70a2870036acc08d8a6f87fdedd5b08f606163e80b17e4569250411a"
+   }
+  },
+  {
+   "path": "files/figures/PMID21212468/aging-02-1023-g001.jpg",
+   "sha256": "288aafcb6157079db36e8977c31d65ee1783944f6009019c089b7cbd21afdfe8",
+   "kind": "figure",
+   "note": "Figure panel inspected as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3034171.1/aging-02-1023-g001.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "288aafcb6157079db36e8977c31d65ee1783944f6009019c089b7cbd21afdfe8"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "JATS from the Europe PMC fullTextXML endpoint for PMC3034171, 75391 bytes. Every body locator is matched against the body of that artefact by deepdive_manifest.py --verify-artifacts.",
+  "abstract_anchoring_waived": "No locator draws on the abstract; every text locator is matched against the body of the declared JATS artefact.",
+  "note": "Coverage: abstract, every section of the body, the single figure legend and the reference list. The one figure is a schematic and was inspected as an image. The article has no Methods, no Results and no supplement: it is a narrative perspective with one schematic, and every experimental statement in it is a citation to earlier primaries.",
+  "entries": [
+   {
+    "proposition": "THIS IS A SECONDARY SOURCE ON ITS CENTRAL MITOCHONDRIAL RESULT. The Bcl-2/Bcl-xL suppression, the absent cytochrome c release and the membrane-potential dissipation are all attributed to a prior primary; nothing is measured here. A datum carried from this paper is a datum carried from that primary.",
+    "snippet": "At the mitochondrial level, Zfra downregulates the expression of apoptosis inhibitor Bcl-2 and Bcl-xL",
+    "surface": "body",
+    "anchor": "'Zfra executes mitochondrial apoptosis on its own manner', second paragraph",
+    "panel_text_relation": "text_only",
+    "artifact": "files/fulltext/PMID21212468_Dudekula2010_PMC.xml"
+   },
+   {
+    "proposition": "THE MEMBRANE-POTENTIAL ENDPOINT IS STATED AS AN OVEREXPRESSION RESULT. It is a gain-of-function readout for Zfra, not a loss-of-function readout for WWOX, and it cannot be transferred to a WWOX-deficient genotype in either direction.",
+    "snippet": "Although Zfra may block cytochrome c release, overexpressed Zfra causes mitochondrial membrane potential (MMP) dissipation",
+    "surface": "body",
+    "anchor": "'Zfra induces mitochondrial membrane potential dissipation', first sentence",
+    "panel_text_relation": "text_only",
+    "artifact": "files/fulltext/PMID21212468_Dudekula2010_PMC.xml"
+   },
+   {
+    "proposition": "THE 'COUNTERACTS WWOX' RELATION IS AN INHIBITION OF A GAIN-OF-FUNCTION EFFECT, measured as blockade of the cytochrome c release that OVEREXPRESSED WOX1 produces. It says nothing about endogenous WWOX at physiological level, and the authors say so in the adjacent sentence about endogenous Zfra.",
+    "snippet": "For example, Zfra blocks WOX1-induced cytochrome c release",
+    "surface": "body",
+    "anchor": "'Zfra controls p53- and WOX1-regulated mitochondrial apoptosis', second paragraph",
+    "panel_text_relation": "text_only",
+    "artifact": "files/fulltext/PMID21212468_Dudekula2010_PMC.xml"
+   },
+   {
+    "proposition": "THE PAPER ITSELF MARKS THE ENDOGENOUS QUESTION AS OPEN. The whole Zfra-versus-WWOX hierarchy in this literature rests on overexpression, and this sentence is the authors' own statement of that limit.",
+    "snippet": "Whether the endogenous Zfra blocks the apoptotic function of p53 and WOX1 remains to be determined.",
+    "surface": "body",
+    "anchor": "'A role of Zfra in the nucleus', final paragraph",
+    "panel_text_relation": "text_only",
+    "artifact": "files/fulltext/PMID21212468_Dudekula2010_PMC.xml"
+   }
+  ]
+ }
+}

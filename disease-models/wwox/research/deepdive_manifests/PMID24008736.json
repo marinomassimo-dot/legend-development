@@ -1,0 +1,298 @@
+{
+ "schema_version": 2,
+ "pmid": "24008736",
+ "doi": "10.1038/cddis.2013.308",
+ "pmcid": "PMC3789168",
+ "receipt": "FTR-20261003-24008736-02",
+ "landing": [
+  "FTR-20261003-24008736-02",
+  "disease-models/wwox/research/intake_wave_20261003w3_B.md"
+ ],
+ "landing_note": "Intake wave 3 2026-10-03, Scientist B, group B (organelle endpoints under WWOX loss or gain). The receipt is prepared and NOT appended: the Orchestrator records the wave's receipts in event order.",
+ "skills_considered": [
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline. The six papers of this group were read as one question (organelle endpoints under WWOX loss or gain), and the figure panels had to be inspected beside the running text of the same open artefact."
+  },
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Europe PMC REST fullTextXML returned a body for all six on the first attempt; figures and supplements came from the PMC OA S3 open-data bucket. No paywall was met and nothing was paid for."
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true,
+   "reason": "paper_packet.py packet and registry_records.py get were run per PMID before any source was opened; two of the six carry a prior partial receipt and one carries a prior manifest."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED. The triples are handed to the blind audit through the commit candidates' LOCATOR TRIPLES FOR BLIND AUDIT section; the producer of a reading must not be its verifier."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Not invoked. The group was assigned as a contradiction to characterise, not to resolve; enumerate_baseline would have added nothing the independence census does not already measure."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": true,
+  "total_publications": 138,
+  "publications_on_gene": 66,
+  "counts_measured": "PubMed esearch 2026-10-03 (tool=LEGEND-research): 'Chang NS[au]' 138, 'Chang NS[au] AND WWOX' 66, 'Hsu LJ[au]' 103, 'Hsu LJ[au] AND WWOX' 30.",
+  "weighting": "Five of the six papers in this group come from one laboratory lineage (Chang N-S / Hsu L-J, National Cheng Kung University). That laboratory originated WWOX and carries the gene's largest single output, so its measurements carry full weight; what it does NOT carry is independence. Two of its subjects are exclusive to it: 'Zfra NOT Chang NS[au]' returns 1 record and that record is an unrelated zebrafish androgen-receptor paper matching the string by accident; 'TIAF1 NOT Chang NS[au]' returns 5 of 20. The autophagy axis is the opposite case and is the reason this group is readable as a contradiction at all: 'WWOX AND autophagy' returns 10 records and 8 of them are from neither Chang NS nor Hsu LJ.",
+  "note": "Research-group knowledge base is excluded from the public edition; this rests on measured PubMed counts and on the papers' own author lists."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "Chang NS[au] AND WWOX",
+    "route": "PubMed esearch 2026-10-03",
+    "count": 66
+   },
+   {
+    "query": "WWOX AND autophagy",
+    "route": "PubMed esearch 2026-10-03",
+    "count": 10
+   },
+   {
+    "query": "WWOX AND autophagy NOT Chang NS[au] NOT Hsu LJ[au]",
+    "route": "PubMed esearch 2026-10-03",
+    "count": 8
+   }
+  ],
+  "note": "Maximum density: WWOX is the subject of the paper and the manipulated variable."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 38,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "38 <ref> elements, 39 PMIDs present in the deposit (the deposit also carries the PMID of one related-article notice). Gene-directedness was not classified; that is triage work and is deferred.",
+  "resolved": [],
+  "queued": [],
+  "dedup_performed": "Not performed as a list; the one integrity-relevant reference was checked by hand (see corpus_crossquery)."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does the deposit carry an integrity notice on anything this paper depends on, and is the paper's own supplement retrievable?",
+  "hits": 2,
+  "finding": "Two findings. (1) The deposited reference list carries a related-article notice of type expression-of-concern on reference 15 (Fabbri et al. 2005, PNAS, WWOX gene restoration; the notice is deposited as PMC5402418). The expression of concern is on a work this paper cites in its introduction, not on this paper. (2) The supplementary PDF deposited for this article is NOT this article's supplement: the same bytes (sha256 dc13d0427a4777bf4e09661df3e6cab669f005edb232adbc5d2cb4bda957004f) are served by two independent routes - the PMC OA S3 open-data bucket and the Europe PMC supplementaryFiles endpoint - and both carry five figures of an unrelated haematology study. Supplementary Figures 1-7 of this paper, including Supplementary Figure 7 (the Wwox+/- and Wwox-/- MEF LC3-II arm), are therefore not retrievable from the deposit."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-03",
+  "route": "PubMed efetch CommentsCorrections, plus a scan of the JATS deposit for related-article elements",
+  "result": "No retraction, no expression of concern and no erratum on PMID 24008736 itself. The deposit does carry an expression-of-concern notice attached to its reference 15 (a cited work).",
+  "hold": false,
+  "dependencies": {
+   "flagged": [
+    {
+     "citing_relation": "citation only - reference 15, cited once in the Introduction as prior evidence that ectopic WWOX restoration inhibits tumour growth in vivo. No reagent, method, cell line or datum of this paper comes from it, and no result of this paper depends on it.",
+     "doi": "10.1073/pnas.0505485102",
+     "nature": "Expression of concern",
+     "reason_verbatim": "Concerns/Issues about Data;Duplication of/in Image;Error in Image;Investigation by Company/Institution;Original Data and/or Images not Provided and/or not Available;",
+     "retraction_date": "4/3/2017 0:00",
+     "retraction_pmid": "28373548",
+     "verdict": "FLAGGED_EXPRESSION_OF_CONCERN"
+    }
+   ],
+   "noted": [],
+   "paper_verdict": "FLAGGED_EXPRESSION_OF_CONCERN",
+   "reference_source": "cache",
+   "references_declared": 38,
+   "references_screened": 37,
+   "references_with_doi": 37,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID24008736_Tsai2013_PMC.xml",
+   "sha256": "08b9e0d797cddcead7f4eb9ccf7ff88205b3d28049061a389d12ac5e527c32ed",
+   "kind": "article_text",
+   "note": "Europe PMC REST fullTextXML, acquired 2026-10-03 for a first-hand read of this group.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3789168/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_rest_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "08b9e0d797cddcead7f4eb9ccf7ff88205b3d28049061a389d12ac5e527c32ed"
+   }
+  },
+  {
+   "path": "files/figures/PMID24008736/cddis2013308f2.jpg",
+   "sha256": "799c517c9d89cd285b9a5e9ce928843939c61751455502ee82ef814bbbeb7244",
+   "kind": "figure",
+   "note": "Figure panel inspected as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3789168.1/cddis2013308f2.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "799c517c9d89cd285b9a5e9ce928843939c61751455502ee82ef814bbbeb7244"
+   }
+  },
+  {
+   "path": "files/figures/PMID24008736/cddis2013308f3.jpg",
+   "sha256": "04098b4c2297b0787cedca1d6639046032d48ee559c4356ab57cd17ecf0482f1",
+   "kind": "figure",
+   "note": "Figure panel inspected as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3789168.1/cddis2013308f3.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "04098b4c2297b0787cedca1d6639046032d48ee559c4356ab57cd17ecf0482f1"
+   }
+  },
+  {
+   "path": "files/figures/PMID24008736/cddis2013308f4.jpg",
+   "sha256": "6f1dbc4034e602a133fad0a74d32885707dc14f188ce8f5c114aeda1e7e53943",
+   "kind": "figure",
+   "note": "Figure panel inspected as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3789168.1/cddis2013308f4.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "6f1dbc4034e602a133fad0a74d32885707dc14f188ce8f5c114aeda1e7e53943"
+   }
+  },
+  {
+   "path": "files/figures/PMID24008736/cddis2013308f5.jpg",
+   "sha256": "5bf221215dfcb495fbfb7fcad6da02b0a1a084df86917f0eaa5f073fa6384d50",
+   "kind": "figure",
+   "note": "Figure panel inspected as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3789168.1/cddis2013308f5.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "5bf221215dfcb495fbfb7fcad6da02b0a1a084df86917f0eaa5f073fa6384d50"
+   }
+  },
+  {
+   "path": "files/figures/PMID24008736/cddis2013308f6.jpg",
+   "sha256": "8609a43f6c3e0f6bbcc2e74a16cc874094bd9bc657255476b73c6b86e66db25b",
+   "kind": "figure",
+   "note": "Figure panel inspected as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3789168.1/cddis2013308f6.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "8609a43f6c3e0f6bbcc2e74a16cc874094bd9bc657255476b73c6b86e66db25b"
+   }
+  },
+  {
+   "path": "files/supplements/PMID24008736/cddis2013308x1.pdf",
+   "sha256": "dc13d0427a4777bf4e09661df3e6cab669f005edb232adbc5d2cb4bda957004f",
+   "kind": "supplement_binary",
+   "note": "DEPOSIT DEFECT, declared and fingerprinted rather than omitted: the file served under this article identifier is a different article s supplement. Identical bytes from the Europe PMC supplementaryFiles route. This article s Supplementary Figures 1-7 are not retrievable.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3789168.1/cddis2013308x1.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "dc13d0427a4777bf4e09661df3e6cab669f005edb232adbc5d2cb4bda957004f"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "JATS from the Europe PMC fullTextXML endpoint for PMC3789168, 114975 bytes. Every body locator is matched against the body of that artefact by deepdive_manifest.py --verify-artifacts.",
+  "abstract_anchoring_waived": "No locator draws on the abstract; every text locator is matched against the body of the declared JATS artefact.",
+  "note": "Coverage: abstract, introduction, all Results sections, Discussion, Materials and Methods, all six figure legends. Figure panels 1a, 1b, 2, 3, 4, 5 and 6 were inspected as images at native resolution. The supplementary material is declared UNAVAILABLE and not read, because the file deposited under this article's identifier is a different article's supplement (see corpus_crossquery); the reading is partial for that reason and for no other.",
+  "entries": [
+   {
+    "proposition": "THE FLUX CLAMP EXISTS AND IT IS ON THE DRUG, NOT ON WWOX. E64d plus pepstatin A were used to exclude accelerated lysosomal turnover as the explanation of the LC3-II loss - but the clamped comparison is MTX versus no MTX, with no WWOX manipulation in the clamped arm. The sign of the WWOX-to-autophagy step is therefore never measured under a flux clamp anywhere in this paper.",
+    "snippet": "the presence of E64d and pepstatin A did not prevent MTX-induced downregulation of LC3 protein expression",
+    "surface": "body",
+    "anchor": "Results, 'MTX modulates autophagy in SCC cells', LC3 paragraph",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "in vitro cell line",
+     "cell_line": "SCC-15",
+     "genotype": "parental",
+     "treatment": "MTX 10 ug/ml with or without E64d 30 uM + pepstatin A 15 uM",
+     "timepoint": "12 and 24 h",
+     "comparator": "untreated and inhibitor-only",
+     "endpoint": "LC3-II immunoblot"
+    },
+    "artifact": "files/fulltext/PMID24008736_Tsai2013_PMC.xml"
+   },
+   {
+    "proposition": "THE mTOR ARM IS A PHYSICAL INTERACTION PLUS A PHOSPHORYLATION CORRELATION, AND THE AUTHORS STATE THE CAUSAL ORDER AS A POSSIBILITY. No rapamycin or raptor arm separates mTOR from the autophagy readout.",
+    "snippet": "raising the possibility that WWOX may regulate autophagy through mTOR activation in MTX-treated SCC-15 cells",
+    "surface": "body",
+    "anchor": "Results, 'MTX treatment modulates mTOR signaling in SCC cells via WWOX', final sentence",
+    "panel_text_relation": "text_only",
+    "artifact": "files/fulltext/PMID24008736_Tsai2013_PMC.xml"
+   },
+   {
+    "proposition": "THE ONE LOSS-OF-FUNCTION ARM THAT REACHES OUTSIDE THE ONCOLOGY STRESS CONTEXT IS A SINGLE SENTENCE POINTING AT A SUPPLEMENTARY FIGURE THAT THE DEPOSIT DOES NOT CARRY. It is also the only arm of this paper in which a germline Wwox genotype, rather than a drug, is the variable - which is exactly the arm a WWOX-DEE genotype class could inherit.",
+    "snippet": "In our recently developed Wwox gene knockout mouse embryonic fibroblasts, increased expression of LC3-II protein was detected in the cytosolic protein extracts from the Wwox+/− and Wwox−/− cells using western blotting, as compared with the Wwox+/+ control cells",
+    "surface": "body",
+    "anchor": "Results, 'WWOX suppresses autophagy in SCC cells', third sentence",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "primary mouse embryonic fibroblast",
+     "cell_line": "MEF",
+     "genotype": "Wwox+/+, Wwox+/- and Wwox-/-",
+     "treatment": "none stated",
+     "timepoint": "not stated",
+     "comparator": "Wwox+/+",
+     "endpoint": "cytosolic LC3-II immunoblot"
+    },
+    "artifact": "files/fulltext/PMID24008736_Tsai2013_PMC.xml"
+   },
+   {
+    "proposition": "THE LC3 LOSS IS ROUTED TO THE PROTEASOME, NOT TO THE LYSOSOME, IN THIS SAME CELL LINE. That matters for the group's own later paper, which routes Bcl-XL and Mcl-1 degradation to the lysosome in the same SCC-15 background: the two routes are different cargo in one cell type, not one mechanism stated twice.",
+    "snippet": "Treatment of SCC-15 cells with a proteasome inhibitor MG132 blocked MTX-induced LC3 protein downregulation, indicating that LC3 protein is degraded via the ubiquitin/proteasomal pathway post MTX treatment",
+    "surface": "body",
+    "anchor": "Results, 'MTX modulates autophagy in SCC cells', LC3 paragraph, final sentence",
+    "panel_text_relation": "text_only",
+    "artifact": "files/fulltext/PMID24008736_Tsai2013_PMC.xml"
+   },
+   {
+    "proposition": "THE PAPER'S OWN SCOPE SENTENCE BINDS THE DIRECTION TO A DRUG, A TUMOUR AND AN APOPTOTIC ENDPOINT. A registry gloss that carries 'WWOX suppresses autophagy' without this clause has promoted a scoped result to an unscoped one.",
+    "snippet": "Thus, WWOX suppresses autophagy for inducing apoptosis in MTX-treated human SCC.",
+    "surface": "body",
+    "anchor": "Discussion, first paragraph",
+    "panel_text_relation": "text_only",
+    "artifact": "files/fulltext/PMID24008736_Tsai2013_PMC.xml"
+   }
+  ]
+ }
+}
