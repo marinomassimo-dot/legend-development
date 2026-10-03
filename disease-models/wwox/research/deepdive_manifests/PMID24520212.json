@@ -1,0 +1,188 @@
+{
+ "schema_version": 2,
+ "pmid": "24520212",
+ "doi": "10.7150/ijbs.7727",
+ "receipt": "FTR-20261003-24520212-01",
+ "landing": [
+  "intake_wave_20261003w4_A",
+  "CC-20261003W4-A-REGISTRY-01",
+  "CC-20261003W4-A-REVIEWS-01"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not invoked by name: the artifact route was already located by the selector (Europe PMC JATS, or a publisher bronze-OA PDF located through OpenAlex) and was re-fetched by this reader, digest-identical to the selector's copy."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not run: dossier, locators and candidates were produced directly under the Scientist brief; a second pass would duplicate them."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not run by the reader by design: the producer of a reading is not its verifier. Triples are handed to the blind audit in the commit candidates."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "research_type": "mixed",
+  "output_kind": "narrative_review",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "total_publications": 4,
+  "publications_on_gene": 4,
+  "counts_measured": "PubMed esearch 2026-10-03: 'Li J[au] AND Liu P[au] AND WWOX' 4; 'Liu P[au] AND WWOX AND Xi'an' 3.",
+  "weighting": "A translational-medicine group's short review; no primary WWOX data of its own in this paper."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "WWOX AND (metabolism OR metabolic) AND review[pt]",
+    "route": "PubMed esearch 2026-10-03",
+    "count": 53
+   }
+  ],
+  "note": "A 2014 cancer-first review, superseded by PMID 36271927 on metabolism."
+ },
+ "multihop": {
+  "performed": false,
+  "reason": "Not performed: the heterozygote tumour sentence is traced through the registry's existing reading of PMID 17360458 (CLAIM 032), not re-read here.",
+  "references_enumerated": 55,
+  "enumeration_method": "55 <ref> elements counted on the JATS XML (several duplicates: 21/30, 19/31, 23/26, 25/44, 27/50).",
+  "gene_direct_refs_in_source": [
+   "17360458",
+   "18487609",
+   "19500159"
+  ],
+  "resolved": [],
+  "queued": [
+   {
+    "pmid": "17360458",
+    "queue": "not queued by this actor: named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Primary behind the heterozygous-mouse tumour sentence or the skeletal sentence."
+   },
+   {
+    "pmid": "18487609",
+    "queue": "not queued by this actor: named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Primary behind the heterozygous-mouse tumour sentence or the skeletal sentence."
+   },
+   {
+    "pmid": "19500159",
+    "queue": "not queued by this actor: named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Primary behind the heterozygous-mouse tumour sentence or the skeletal sentence."
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does the registry already read the primary behind this review's heterozygote sentence?",
+  "hits": 1,
+  "finding": "Yes: CLAIM 032 reads PMID 17360458 as 10/58 vs 2/60 SPONTANEOUS tumours and 37/46 vs 20/42 after ENU. This review attaches the 10/58 vs 2/60 figures to ENU-treated mice and to lung papillary carcinoma."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-03",
+  "route": "PubMed get_article_metadata for 24520212",
+  "result": "No retraction, expression of concern or correction in the PubMed record. Article types: Journal Article, Research Support Non-U.S. Gov't, Review.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "UNSCREENABLE_NO_REFERENCE_LIST",
+   "reference_source": "network",
+   "references_declared": 0,
+   "references_screened": 0,
+   "references_with_doi": 0,
+   "schema": "retraction_check.dependencies/1",
+   "screened": false,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID24520212_Li2014_PMC.xml",
+   "sha256": "4d92edc8c93cdcf3a303f68fb7d0fd39df6f1d8f2981ce50a92d7e412b12d51f",
+   "kind": "article_text",
+   "note": "Europe PMC JATS XML, full body, tables and reference list present.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3920169/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_fulltextxml",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "4d92edc8c93cdcf3a303f68fb7d0fd39df6f1d8f2981ce50a92d7e412b12d51f"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID24520212_Li2014_figures/ijbsv10p0142g001.jpg",
+   "sha256": "8fa3fed1e8d5cde6963febb21cceb8af4dabdacf609b2b1c493977f28da0cfc6",
+   "kind": "figure",
+   "note": "Figure 1: domain map (WW 17-49, 58-90, NLS, SDR 121-330, Y33, Y287). Inspected.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/48dd/3920169/b1341395f2f2/ijbsv10p0142g001.jpg",
+    "http_method": "GET",
+    "tier": "publisher or PMC CDN figure image",
+    "user_agent_policy": "browser_like",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "8fa3fed1e8d5cde6963febb21cceb8af4dabdacf609b2b1c493977f28da0cfc6"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID24520212_Li2014_figures/ijbsv10p0142g002.jpg",
+   "sha256": "de8ab4fef27b1ea5f4a141d9406be1f0e8830c2887ca10752a2d3384fc888ef5",
+   "kind": "figure",
+   "note": "Figure 2: schematic of WWOX partners (AP-2gamma, deltaNp63alpha, ErbB4, c-Jun, RUNX2, WBP2/ER). Inspected.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/48dd/3920169/cb5c561df833/ijbsv10p0142g002.jpg",
+    "http_method": "GET",
+    "tier": "publisher or PMC CDN figure image",
+    "user_agent_policy": "browser_like",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "de8ab4fef27b1ea5f4a141d9406be1f0e8830c2887ca10752a2d3384fc888ef5"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC JATS XML: abstract, all sections, Table 1 cells, both figure captions, 55 references.",
+  "abstract_anchoring_waived": "Abstract entries are marked surface 'abstract'.",
+  "note": "COVERAGE: complete. The review contains no brain, epilepsy or human germline content.",
+  "entries": [
+   {
+    "proposition": "The review attaches 10/58 vs 2/60 to ENU-treated heterozygous mice.",
+    "snippet": "When mice are given a single dose of ENU (powerful chemical mutagen), 17.2 % (10/58) of the heterozygous WWOX KO mice develop papillary carcinoma of the lung, compared with 3.3% (2/60) of the wide type",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24520212_Li2014_PMC.xml",
+    "anchor": "Section 'WWOX deregulation is associated with carcinogenesis and metastasis' (ref 12)"
+   },
+   {
+    "proposition": "The review states metabolic disease as a consequence of reduced WWOX, after a section whose evidence is homozygous knockout rodents.",
+    "snippet": "reduced or lost expression of WWOX will lead to development of metabolic diseases",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24520212_Li2014_PMC.xml",
+    "anchor": "Section 'Bone metabolism disorders', closing sentence (same wording in the Abstract)"
+   },
+   {
+    "proposition": "The skeletal sentence speaks of mice but cites a rat paper (ref 16).",
+    "snippet": "WWOX-/- mice also suffer a disorder of skeleton development and increased osteoclast activity, characterized by thinner cortical bones and decreased mineral density and bone volume",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24520212_Li2014_PMC.xml",
+    "anchor": "Section 'Bone metabolism disorders' (ref 16)"
+   }
+  ]
+ }
+}

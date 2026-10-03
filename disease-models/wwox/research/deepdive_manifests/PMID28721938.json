@@ -1,0 +1,234 @@
+{
+ "schema_version": 2,
+ "pmid": "28721938",
+ "doi": "10.1684/epd.2017.0924",
+ "receipt": "FTR-20261003-28721938-01",
+ "landing": [
+  "intake_wave_20261003w4_A",
+  "CC-20261003W4-A-REGISTRY-01",
+  "CC-20261003W4-A-PATIENT-OVERLAP-01"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not invoked by name: the artifact route was already located by the selector (Europe PMC JATS, or a publisher bronze-OA PDF located through OpenAlex) and was re-fetched by this reader, digest-identical to the selector's copy."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not run: dossier, locators and candidates were produced directly under the Scientist brief; a second pass would duplicate them."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not run by the reader by design: the producer of a reading is not its verifier. Triples are handed to the blind audit in the commit candidates."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "research_type": "descriptive_clinical",
+  "output_kind": "clinical_commentary_single_case",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "total_publications": 13,
+  "publications_on_gene": 1,
+  "counts_measured": "PubMed esearch 2026-10-03: 'Tarta-Arsene O[au]' 13, 'Tarta-Arsene O[au] AND WWOX' 1. The Piard 2019 cohort lists her as 'Arsene OT', which this author query does not catch.",
+  "weighting": "A paediatric neurology clinic describing its own patient; full weight for the clinical course, none for any rate."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "Tarta-Arsene O[au] AND WWOX",
+    "route": "PubMed esearch 2026-10-03",
+    "count": 1
+   }
+  ],
+  "note": "The author-string variant is itself a de-duplication hazard: a name search does not join this paper to the cohort that re-reports the patient."
+ },
+ "multihop": {
+  "performed": false,
+  "reason": "Not performed as a hop from the reference list: the decisive comparison is with a LATER paper (Piard 2019, PMID 30356099) that does not cite this one. Its Supplemental Table 1 was read row by row in this event; see the intake note.",
+  "references_enumerated": 15,
+  "enumeration_method": "Reference list counted on the derived text and confirmed by the Crossref screen (15 declared).",
+  "gene_direct_refs_in_source": [
+   "30356099"
+  ],
+  "resolved": [],
+  "queued": [
+   {
+    "pmid": "30356099",
+    "queue": "not queued by this actor: named in the intake note as a follow-up, not as a queue entry",
+    "reason": "The later cohort that tabulates the same patient as one of its 'novel' cases."
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Is this patient already counted in the corpus under another citation?",
+  "hits": 2,
+  "finding": "FT-121 (declared non-independent by co-authorship only) and the open candidate CC-20261003-A-PIARD-01 (P8 matches on attributes tabulated by a third review). Read against Piard Supplemental Table 1 directly: identical genotype at both alleles and every compared attribute agrees."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-03",
+  "route": "PubMed get_article_metadata for 28721938",
+  "result": "No retraction, expression of concern or correction in the PubMed record. Article types: Case Reports, Journal Article.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 15,
+   "references_screened": 13,
+   "references_with_doi": 13,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID28721938_TartaArsene2017_JLE.pdf",
+   "sha256": "a8ffcb4d19275c65a91a7eafd25411d2ef0eafbc569f52a92df06d570eb7fb8b",
+   "kind": "article_binary",
+   "note": "Publisher bronze-OA PDF, 5 pages, located through OpenAlex and fetched by this reader; digest identical to the selector's copy.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.jle.com/download/epd-310109-37601-practical_clues_for_diagnosing_wwox_encephalopathy-a.pdf",
+    "http_method": "GET",
+    "tier": "publisher_bronze_oa_pdf",
+    "user_agent_policy": "browser_like",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "a8ffcb4d19275c65a91a7eafd25411d2ef0eafbc569f52a92df06d570eb7fb8b"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID28721938_TartaArsene2017_JLE.txt",
+   "sha256": "d7fd2309280eca318ad4c4d8d8f204fc558c94ae8238168c5b16323ee6a1f879",
+   "kind": "article_text",
+   "note": "DERIVED text layer produced with PyMuPDF 1.28.2 (page.get_text(), document order), NOT pdftotext: pdftotext -layout emitted the end-of-article glyph as the C0 control U+0002, which the verifier refuses; PyMuPDF maps the same glyph to U+25A1. Reading order is block order, so running text is contiguous; end-of-line hyphenation is kept as printed ('splic-').",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation from PMID28721938_TartaArsene2017_JLE.pdf",
+    "http_method": "NONE",
+    "tier": "local_pymupdf_get_text",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": true,
+    "result_sha256": "d7fd2309280eca318ad4c4d8d8f204fc558c94ae8238168c5b16323ee6a1f879",
+    "derived_from": "files/fulltext/PMID28721938_TartaArsene2017_JLE.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "''.join(page.get_text() for page in pymupdf.open('files/fulltext/PMID28721938_TartaArsene2017_JLE.pdf'))"
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "pdftotext -layout over the 5-page PDF: abstract, introduction, case study, discussion, both figure legends, references and the 'test yourself' box.",
+  "abstract_anchoring_waived": "No separate abstract surface; anchored by text.",
+  "note": "COVERAGE: every section and both figures (EEG and MRI panels) inspected at page resolution; the 'didactic slides' on the journal website were not fetched.",
+  "entries": [
+   {
+    "proposition": "Allele 1 is a canonical acceptor-site variant of intron 2.",
+    "snippet": "intron 2 of the WWOX gene, c.173-1G>T, was detected.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28721938_TartaArsene2017_JLE.txt",
+    "anchor": "Case study, page 359 right column"
+   },
+   {
+    "proposition": "Its splice effect is predicted in silico only in this paper.",
+    "snippet": "v.2.7.1) predicted a likely aberrant effect on splic-",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28721938_TartaArsene2017_JLE.txt",
+    "anchor": "Case study, page 359 right column"
+   },
+   {
+    "proposition": "Allele 2 is an exon-8 one-base deletion with frameshift.",
+    "snippet": "c.918del (p.Glu306Aspfs*21), was also identified.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28721938_TartaArsene2017_JLE.txt",
+    "anchor": "Case study, page 359 right column"
+   },
+   {
+    "proposition": "Phase was established by parental testing.",
+    "snippet": "confirmed that both variants were compound het-",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28721938_TartaArsene2017_JLE.txt",
+    "anchor": "Case study, page 360 left column"
+   },
+   {
+    "proposition": "The family is not consanguineous.",
+    "snippet": "Our patient was from a non-consanguineous family.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28721938_TartaArsene2017_JLE.txt",
+    "anchor": "Discussion, page 360"
+   },
+   {
+    "proposition": "Head circumference was normal at birth.",
+    "snippet": "head circumference (HC) of 34.5 cm (P50). The boy",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28721938_TartaArsene2017_JLE.txt",
+    "anchor": "Case study, page 358 left column"
+   },
+   {
+    "proposition": "Head circumference was normal at 2.6 years.",
+    "snippet": "HC (50.5 cm; P85) and normal somatic growth.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28721938_TartaArsene2017_JLE.txt",
+    "anchor": "Case study, page 359 left column"
+   },
+   {
+    "proposition": "The first MRI showed a thin corpus callosum with normal myelination for age.",
+    "snippet": "formed, but thin, corpus callosum and normal myelination for age",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28721938_TartaArsene2017_JLE.txt",
+    "anchor": "Figure 1 legend, page 358",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The second MRI showed atrophy with delayed myelination.",
+    "snippet": "showing significant supratentorial atrophy, delayed myelination",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28721938_TartaArsene2017_JLE.txt",
+    "anchor": "Figure 2 legend, page 359",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The patient died at almost three years.",
+    "snippet": "Our patient had aspiration pneumonia and died at the",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28721938_TartaArsene2017_JLE.txt",
+    "anchor": "Case study, page 360 left column"
+   },
+   {
+    "proposition": "The authors' own literature count.",
+    "snippet": "To date, almost 20 patients (including our patient)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28721938_TartaArsene2017_JLE.txt",
+    "anchor": "Discussion, page 360"
+   },
+   {
+    "proposition": "The authors' diagnostic point on microcephaly.",
+    "snippet": "demonstrating that microcephaly is not mandatory for diagnosis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID28721938_TartaArsene2017_JLE.txt",
+    "anchor": "Abstract, page 357"
+   }
+  ]
+ }
+}
