@@ -97,3 +97,16 @@ expected-homozygote arithmetic without touching the raw frequencies.
 (Abundance and function are confounded for P252A and the paper says so. | likely due to the low abundance of the unstable WWOXP252A mutant | Results, POLE4 section, `files/fulltext/PMID41124647_Zhang2025_PMC.xml`)
 
 (No nucleotide-excision-repair assay supports the POLE4 claim. | the functional relevance of WWOX‐POLE4 interaction in nucleotide excision repair remains to be elucidated | Discussion, POLE4 para, `files/fulltext/PMID41124647_Zhang2025_PMC.xml`)
+
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261003_002` (2026-10-03, ACTOR_ID `scientist`, Scientist G), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** PROPAGATED (MINOR — no claim rests on PMID 41124647)
+
+All four ops applied (`DL-MECH-047`, `DL-BIO-001`, `CORPUS P348`, `LIT-0348`). Blind audit: 7 triples — 4 SUPPORTED (including the Figure 1D domain geometry, read directly: SDR 125–262, P282A outside), 2 SUPPORTED_NARROWER, **1 NOT_SUPPORTED**. 🔴 **The failure:** the triple *«chaperone-mediated autophagy is the authors' speculation, not their finding»* is false — the speculation is followed by an HSC70 co-IP and LAMP1 co-localisation and a declarative conclusion of degradation *through chaperone-mediated autophagy in the lysosome* (no CMA-specific loss-of-function test such as LAMP2A knockdown is reported). **No op of this candidate writes that proposition**, so nothing propagated rests on it; it is recorded here so no later writer carries it. **Narrowings:** P252A at 0.0063 is below the conventional 1% threshold, so only P282A is *common*; and four of the paper's own predictors call P282A damaging. **Integrator amendment:** the Hardy-Weinberg conclusion in `DL-MECH-047` is now tagged INFERENZA with its two premises.
+
+**Not medical advice.**
