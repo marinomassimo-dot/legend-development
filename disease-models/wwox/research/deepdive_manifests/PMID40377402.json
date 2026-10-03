@@ -1,0 +1,197 @@
+{
+ "schema_version": 2,
+ "pmid": "40377402",
+ "doi": "10.1042/BCJ20240265",
+ "receipt": "FTR-20261003-40377402-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID40377402.md",
+  "disease-models/wwox/research/intake_wave_20261003w6_A.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W6-A-WNT-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W6-A-REGISTRY-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is not the reader's to write; its one consequence from this wave is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "None of the six sources supplies a measured lever for the reference genotype class; forging hypotheses here would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is tested against a WWOX readout in this source; nothing to send to BLOCK-1 triage."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The triples are published in the candidates for a blind auditor; the reader cannot audit their own locators."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "mixed",
+  "is_primary_group_for_disease": false,
+  "weighting": "A neurogenetics review group; WWOX appears in one table row with one citation. Credible as a review; contributes no primary WWOX data. Not a per-author sweep."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "registry_records.py --theme Dvl (LEGEND)",
+    "count": 12,
+    "source": "LEGEND registries 2026-10-03"
+   }
+  ],
+  "note": "The WWOX-Dishevelled nuclear-import function rests in LEGEND on two cancer-cell primaries (PMID 19465938, PMID 32368285), neither read at full text; this review re-cites one of them."
+ },
+ "multihop": {
+  "references_enumerated": 186,
+  "gene_direct_refs_in_source": [
+   "19465938"
+  ],
+  "resolved": [],
+  "queued": [
+   {
+    "queue": "CC-20261003W6-A-WNT-01",
+    "why": "Ref 63 (Bouteille 2009, PMID 19465938) is the only source of the WWOX table row. It is LEGEND's FT-180, still unread; FT-180 names that paper, not this one, so the hop is carried by the candidate rather than pointed at FT-180."
+   }
+  ],
+  "disposition": "One gene-direct reference, unread; the reading is therefore partial on multihop."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 40377402 (no record); --theme Dvl after the first pass",
+  "hits": 12,
+  "note": "Dvl hits include FT-180, CORPUS-STUB-132 and DL-MOL-003; this review adds no support independent of the primaries DL-MOL-003 already names (CC-20261003W6-A-WNT-01)."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-03 via PubMed metadata (get_article_metadata): publication types ['Journal Article', 'Review']; no retraction, expression of concern or correction listed for PMID 40377402.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 186,
+   "references_screened": 170,
+   "references_with_doi": 170,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --doi 10.1042/BCJ20240265 --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 16
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID40377402_Pascual2025_PMC.xml",
+   "sha256": "adb9996fdf60f4ba879c26d51c94d80f8a7e6231d0b6f50fd0f88c96165348d1",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12203940/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "result_sha256": "adb9996fdf60f4ba879c26d51c94d80f8a7e6231d0b6f50fd0f88c96165348d1"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID40377402_Pascual2025_supplement/BCJ-482-10-BCJ20240265-g002.jpg",
+   "sha256": "2d5e47d03bf82601390907c13d1228be50887e7ce894a0b25b406569a5a52323",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12203940.1/BCJ-482-10-BCJ20240265-g002.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets (AWS open data bucket)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "result_sha256": "2d5e47d03bf82601390907c13d1228be50887e7ce894a0b25b406569a5a52323"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The review's only WWOX statement is a Table 1 row assigning DEE28 the Wnt role of preventing nuclear import of Dvl proteins, cited to ref 63.",
+    "snippet": "WWOX Developmental and epileptic encephalopathy 28 AR 616,211 Preventing the nuclear import of the Dvl proteins [63]",
+    "anchor": "Table 1, WWOX row",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID40377402_Pascual2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 1 is captioned as Mendelian neurological disorders with deregulated Wnt signalling.",
+    "snippet": "Table 1 Mendelian neurological disorders associated with deregulated Wnt signaling.",
+    "anchor": "Table 1 caption",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID40377402_Pascual2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 1 is introduced in the section on excess Wnt in rare Mendelian neurodevelopmental disorders; the running text never discusses WWOX.",
+    "snippet": "Table 1 provides a list of rare NDDs associated with specific genetic variants that disrupt the Wnt signaling pathway.",
+    "anchor": "Excess Wnt in rare Mendelian NDDs",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40377402_Pascual2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Ref 63 is the 2009 Oncogene paper on WWOX inhibition of the Wnt/beta-catenin pathway (PMID 19465938).",
+    "snippet": "Inhibition of the Wnt/beta-catenin pathway by the WWOX tumor suppressor protein Oncogene 28 2569 2580",
+    "anchor": "References, ref 63",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40377402_Pascual2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The text counts 18 negative regulators among 59 Wnt-related ASD genes (the Figure 2 legend says 16, the donut shows 15).",
+    "snippet": "Over half of the top 102 ASD-related genes [77] (59 genes) are associated with the Wnt signaling pathway, with 18/59 acting as known negative regulators (Figure 2).",
+    "anchor": "Excess Wnt in ASD",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40377402_Pascual2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Figure 2 donut shows 15 negative-regulation genes of 59, and WWOX is not among the genes named in the figure.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 2 donut 'Wnt-related ASD genes', Total=59: segments 22, 15 (negative regulation), 9, 4 and 9; named genes PTK7, HECTD4, PPP5C, TM9SF4, CREBBP, IRF2BPL, MYT1L, SMARCC2, LDB1, MED13L, ARID1B, SETD5, RORB, TBL1XR1; no WWOX.",
+    "anchor": "Figure 2",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID40377402_Pascual2025_supplement/BCJ-482-10-BCJ20240265-g002.jpg",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC12203940/fullTextXML returned HTTP 200 with the full body and both tables on 2026-10-03; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure legend, a figure or a supplement."
+ }
+}

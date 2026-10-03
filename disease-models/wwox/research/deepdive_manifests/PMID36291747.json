@@ -1,0 +1,259 @@
+{
+ "schema_version": 2,
+ "pmid": "36291747",
+ "doi": "10.3390/biom12101538",
+ "receipt": "FTR-20261003-36291747-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID36291747.md",
+  "disease-models/wwox/research/intake_wave_20261003w6_A.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W6-A-REGISTRY-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is not the reader's to write; its one consequence from this wave is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "None of the six sources supplies a measured lever for the reference genotype class; forging hypotheses here would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is tested against a WWOX readout in this source; nothing to send to BLOCK-1 triage."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The triples are published in the candidates for a blind auditor; the reader cannot audit their own locators."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "An ophthalmology research group working an experimental autoimmune glaucoma model in rats; WWOX is one of 24 microarray probes plus one follow-up qPCR, not a subject of the group. Credible for the model, not a WWOX group. Not a per-author sweep: weighting rests on the paper's own design."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "registry_records.py --theme glaucoma (LEGEND)",
+    "count": 0,
+    "source": "LEGEND registries 2026-10-03"
+   }
+  ],
+  "note": "No LEGEND record concerns WWOX in an acquired (non-genetic) retinal injury model; this is the only such in-vivo record met in this wave."
+ },
+ "multihop": {
+  "references_enumerated": 75,
+  "gene_direct_refs_in_source": [
+   "32000863",
+   "32581702"
+  ],
+  "resolved": [
+   {
+    "pmid": "32000863",
+    "how": "Ref 74 (Cheng 2020, Wwox-deficient mice) is already read in LEGEND with a complete receipt; cited here only as background for the authors' interpretation."
+   },
+   {
+    "pmid": "32581702",
+    "how": "Ref 75 (Iacomino 2020) is already read in LEGEND with a complete receipt; cited here only in the discussion; no conclusion of this reading depends on it."
+   }
+  ],
+  "queued": [],
+  "disposition": "Two gene-direct references, both held at full-text depth; no reading debt is created."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 36291747 (before the first pass: NO RECORD MATCHED); --theme retina / glaucoma after it",
+  "hits": 0,
+  "note": "No registry record names this paper; a structured landing is proposed in CC-20261003W6-A-REGISTRY-01."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-03 via PubMed metadata (get_article_metadata): publication types ['Journal Article', 'Research Support, Non-U.S. Gov't']; no retraction, expression of concern or correction listed for PMID 36291747.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 75,
+   "references_screened": 65,
+   "references_with_doi": 65,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --doi 10.3390/biom12101538 --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 10
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID36291747_Reinehr2022_PMC.xml",
+   "sha256": "37122f2e31d6e0f0acbfbe98acd0d118df1db39944974784c187d9e8588510b9",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9599116/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "result_sha256": "37122f2e31d6e0f0acbfbe98acd0d118df1db39944974784c187d9e8588510b9"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID36291747_Reinehr2022_supplement/biomolecules-12-01538-g007.jpg",
+   "sha256": "b0bd0bda6103e3212c58323f5b80e6ca6248ff61fac1e26d76ca8b65ed6f9662",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9599116.1/biomolecules-12-01538-g007.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets (AWS open data bucket)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "result_sha256": "b0bd0bda6103e3212c58323f5b80e6ca6248ff61fac1e26d76ca8b65ed6f9662"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID36291747_Reinehr2022_supplement/biomolecules-12-01538-g009.jpg",
+   "sha256": "e67475afc67d1083007457c211620131fd8bdb8427c142b0152a17655672571e",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9599116.1/biomolecules-12-01538-g009.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets (AWS open data bucket)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "result_sha256": "e67475afc67d1083007457c211620131fd8bdb8427c142b0152a17655672571e"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID36291747_Reinehr2022_supplement/biomolecules-12-01538-s001.zip",
+   "sha256": "c0ea16ccde7b7d5ac0bbc7e22f9bdbe9dda86e167c6c7856149c3b5eb7a4e0df",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9599116.1/biomolecules-12-01538-s001.zip",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets (AWS open data bucket)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "result_sha256": "c0ea16ccde7b7d5ac0bbc7e22f9bdbe9dda86e167c6c7856149c3b5eb7a4e0df"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID36291747_Reinehr2022_supplement/biomolecules-1935305-supplementary_cells.txt",
+   "sha256": "ef28ed77ac3a6b2b94a5c1018fd8bcef7a79abce3c918e9e40644c80e6a8b621",
+   "kind": "supplement_text",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID36291747_Reinehr2022_supplement/biomolecules-12-01538-s001.zip",
+    "extractor": {
+     "name": "zipfile + xml.etree cell-wise sheet dump (scratch xl.py; one line per row, cell=value)",
+     "version": "Python 3.12.3",
+     "call": "python3 xl.py <file.xlsx> . 0"
+    },
+    "acquired_on": "2026-10-03",
+    "result_sha256": "ef28ed77ac3a6b2b94a5c1018fd8bcef7a79abce3c918e9e40644c80e6a8b621"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The microarray compared laser-microdissected inner retinal layers from three eyes per group.",
+    "snippet": "The laser microdissection was performed as described before by Plum et al., 2016, with minor changes (n = 3 eyes/group) [32].",
+    "anchor": "Methods 2.6",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36291747_Reinehr2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 4 lists the Wwox probe A_64_P028011 as down-regulated in immunised animals with p = 0.030 and a tabulated fold change of 0.864.",
+    "snippet": "A_64_P028011 Wwox Rattus norvegicus WW domain-containing oxidoreductase (Wwox), mRNA [NM_001106188] 0.030 0.864 (↓)",
+    "anchor": "Table 4 (re-extracted cell-wise)",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID36291747_Reinehr2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Whole-retina RT-qPCR gave Wwox at 0.24-fold in immunised animals, p = 0.002.",
+    "snippet": "It was also found that the mRNA expression levels of Wwox were downregulated in the ONA group (0.24-fold expression; p = 0.002; Figure 9C).",
+    "anchor": "Results 3.5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36291747_Reinehr2022_PMC.xml",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "Supplement Table S1 gives the Wwox probe's per-animal normalised log-scale intensities (ONA 6.80, 7.36, 6.77; control 8.35, 7.56, 8.30), raw p 0.030, FDR-adjusted p 0.187 and Bonferroni p 1; the tabulated 0.864 equals the ratio of the two group means of these log-scale values (6.977 / 8.072), whose linear equivalent is about 0.47 (reader's arithmetic from these cells).",
+    "snippet": "row 281 | A_64_P028011 | 6.7978751499999994 | 7.3594074000000003 | 6.774756 | 8.3509779999999996 | 7.5604937000000003 | 8.3041219999999996 | 3.0104636546742052E-2 | 0.18689652778858501 | 1 | 0.86440327705035791",
+    "anchor": "Supplement Table S1, sheet 'analysis normalized', row 281 (columns: probe, ONA 15/19/17, CO 20/16/18, p-value, p_fdr, p_bonferroni, FC ONA vs CO)",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID36291747_Reinehr2022_supplement/biomolecules-1935305-supplementary_cells.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Whole-retina RT-qPCR used three to four retinae per group.",
+    "snippet": "Each RT-qPCR was performed in duplicates from each retina (n = 3–4/group).",
+    "anchor": "Methods 2.3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36291747_Reinehr2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors' only interpretation of Wwox is a suggested regulatory role in the retina, drawn from prior literature, not from a test in this study.",
+    "snippet": "The findings of previous studies and our results have in common that loss of Wwox can affect and alter various components of the central nervous system, suggesting a regulatory role of Wwox in the retina.",
+    "anchor": "Discussion, paragraph on Gdf15 and Wwox",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36291747_Reinehr2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 9C: the immunised-group Wwox box lies wholly below the control line at 1, median about 0.22, box from about 0 to about 0.74, whisker to about 0.85; marked **.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 9C (Wwox): one ONA box plot; median line at about 0.22, box from about 0 to about 0.74, upper whisker about 0.85; dotted control line at 1; marked **.",
+    "anchor": "Figure 9C",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID36291747_Reinehr2022_supplement/biomolecules-12-01538-g009.jpg",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "Figure 7H: three paired control/immunised points for the Wwox probe; the middle pair nearly coincide.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 7H (P028011 - Wwox): three x-positions; control squares about 8.3, 7.5, 8.3 and ONA diamonds about 6.8, 7.4, 6.8 on a 0-16 normalised-intensity axis; the middle pair nearly coincide.",
+    "anchor": "Figure 7H",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID36291747_Reinehr2022_supplement/biomolecules-12-01538-g007.jpg",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC9599116/fullTextXML returned HTTP 200 with a full JATS body and both tables on 2026-10-03; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure legend, a figure or a supplement."
+ }
+}
