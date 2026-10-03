@@ -212,8 +212,8 @@ to make a suite green — the only way to move it is to have made the change you
 
 ```yaml
 growth_anchor_ledger: framework/state/growth_anchors.jsonl
-growth_anchor_events: 36
-growth_anchor_head: 145e6e109d0b31bca9ea0d5ebd593ed53397a92f23f1724cc554a27082a3e4e9
+growth_anchor_events: 37
+growth_anchor_head: 38bb0a7f12c871334a4ad5ebd57926d8c598a406fa12068e8f3f4989eafcaee0
 ```
 
 ```bash
@@ -240,8 +240,8 @@ must be backed by a persisted `complete_fulltext_read` receipt, or `LINT_AUTOMAT
 `BLOCK_BATCH_COMMIT`.
 
 ```yaml
-registry_only_fulltext_declarations_baseline: 10
-registry_only_fulltext_declaration_ids: ["PAPER 012", "PAPER 014", "PAPER 016", "PAPER 028", "PAPER 043", "PAPER 044", "PAPER 045", "PAPER 046", "PAPER 049", "PAPER 050"]
+registry_only_fulltext_declarations_baseline: 7
+registry_only_fulltext_declaration_ids: ["PAPER 014", "PAPER 028", "PAPER 044", "PAPER 045", "PAPER 046", "PAPER 049", "PAPER 050"]
 ```
 
 Lowering the baseline is the intended direction of travel: back-fill a record with real
@@ -261,7 +261,7 @@ baseline below must equal the live count, never preserve historical padding.
 
 ```yaml
 unread_premise_baseline: 0
-unread_premise_measured_on: 2026-10-02
+unread_premise_measured_on: 2026-10-03
 ```
 
 **It is a ratchet, not a wall.** Blocking on the whole legacy backlog would only teach sessions
