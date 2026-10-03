@@ -1,0 +1,317 @@
+{
+ "schema_version": 2,
+ "pmid": "31618474",
+ "doi": "10.1002/ana.25619",
+ "receipt": "FTR-20261003-31618474-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/intake_wave_20261003w5_B.md",
+  "disease-models/wwox/research/fulltext_dossiers/PMID31618474.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W5-B-PATIENT-OVERLAP-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W5-B-REGISTRY-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is a research surface another batch owns; this wave's question is patient provenance and counting, so findings are proposed through commit candidates instead of ledger edits."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No source in this group tests a therapy against a mechanism; forging hypotheses from single-patient drug histories would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed as a candidate; anti-seizure medication histories in case reports are clinical descriptions, not molecules for BLOCK-1 triage."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes are proposed as commit candidates for a later BATCH_COMMIT."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; the triples are published in the candidates for an auditor to run."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 676,
+  "publications_on_gene": 3,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "PubMed counts 2026-10-03: Scheffer IE[au] 676 records, 3 intersecting WWOX (this paper, the 2023 WWOX-DEE cohort and one other). A large international epilepsy-genetics consortium; the WWOX patient is one of 135 and is re-reported with RNA work in the same group's 2023 cohort."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND migrating focal seizures",
+    "count": 4,
+    "source": "PubMed ESearch 2026-10-03"
+   }
+  ],
+  "note": "Four PubMed records pair WWOX with migrating focal seizures; this is the first and its patient is re-described in the 2023 cohort."
+ },
+ "multihop": {
+  "references_enumerated": 49,
+  "gene_direct_refs_in_source": [
+   "30356099"
+  ],
+  "resolved": [
+   "30356099",
+   "36779245"
+  ],
+  "queued": [],
+  "note": "All 49 references enumerated; the only WWOX-direct reference is Piard 2018/2019, resolved against its held Supplemental Table 1 (its E17K carrier, patient 12, has a different trans allele). The forward citation 36779245 (Oliver 2023) was resolved because it states that its patient 6 was briefly reported in this paper."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 31618474; fulltext_receipts.py status --pmid 31618474",
+  "hits": 1,
+  "note": "Only FT-140 (full-text queue) names the paper; it calls the E17K occurrence overlap-confounded. The prior receipt FTR-20260921-31618474-01 is a verification of an extractor-damaged artefact with no gene symbols."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-03 by PubMed EFetch: one ErratumIn link (Ann Neurol 2020;87(4):658, PMID 32176372). The erratum's content was not retrieved: PubMed carries no abstract for it, Europe PMC has no full text, and the Wiley route is Cloudflare-gated. No retraction or expression of concern.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 49,
+   "references_screened": 49,
+   "references_with_doi": 49,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID31618474_Burgess2019_PMC_efetch.xml",
+   "sha256": "746a4a26741445f75b954a9246ce7ba4191dab22b5c4b1f4ebf3fb347bd93e32",
+   "kind": "article_text",
+   "note": "PMC author manuscript (NIHMS1616220) via NCBI efetch db=pmc; Europe PMC fullTextXML returns HTTP 500 for this PMCID. Gene symbols are intact in this surface (WWOX 10 occurrences), unlike the 2026-09-21 MCP text artefact.",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=7423163&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_author_manuscript",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "746a4a26741445f75b954a9246ce7ba4191dab22b5c4b1f4ebf3fb347bd93e32"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID31618474_Burgess2019_supplement/NIHMS1616220-supplement-Supp_Table_1.xlsx",
+   "sha256": "65394b5244e9cbefd76eb72c14f18bd5894a2619b4e63c2d02076f1278516ac8",
+   "kind": "supplement_binary",
+   "note": "Supplementary Table 1 (phenotypes of 135 patients).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/7423163/bin/NIHMS1616220-supplement-Supp_Table_1.xlsx",
+    "http_method": "GET",
+    "tier": "pmc_instance_bin_pow",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "65394b5244e9cbefd76eb72c14f18bd5894a2619b4e63c2d02076f1278516ac8"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID31618474_Burgess2019_supplement/NIHMS1616220-supplement-Supp_Table_2.xlsx",
+   "sha256": "c07069486a2b4513ed5ec504cd0cfab57f6374a4fff528cc011d847bed050775",
+   "kind": "supplement_binary",
+   "note": "Supplementary Table 2 (variants associated with EIMFS).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/7423163/bin/NIHMS1616220-supplement-Supp_Table_2.xlsx",
+    "http_method": "GET",
+    "tier": "pmc_instance_bin_pow",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "c07069486a2b4513ed5ec504cd0cfab57f6374a4fff528cc011d847bed050775"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID31618474_Burgess2019_supplement/NIHMS1616220-supplement-Supp_Table_3.docx",
+   "sha256": "434e99e65c3ac65e83587c3000018871cf680b8f913254297260cd1ced074fb0",
+   "kind": "supplement_binary",
+   "note": "Supplementary Table 3 (consortium authors and affiliations).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/7423163/bin/NIHMS1616220-supplement-Supp_Table_3.docx",
+    "http_method": "GET",
+    "tier": "pmc_instance_bin_pow",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "434e99e65c3ac65e83587c3000018871cf680b8f913254297260cd1ced074fb0"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID31618474_Burgess2019_supplement/NIHMS1616220-supplement-Supp_Table_1_xlsxdump.txt",
+   "sha256": "7722974c72ee7f7ba02898e616980144f86a047295714d564a7b611ef22fcbba",
+   "kind": "supplement_text",
+   "note": "Deterministic cell dump of Supplementary Table 1; identity columns read for all 135 rows, rows 54 and 93 read in full.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_xlsxdump",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": true,
+    "result_sha256": "7722974c72ee7f7ba02898e616980144f86a047295714d564a7b611ef22fcbba",
+    "derived_from": "files/fulltext/PMID31618474_Burgess2019_supplement/NIHMS1616220-supplement-Supp_Table_1.xlsx",
+    "extractor": {
+     "name": "xlsxdump_extractor.py (stdlib zipfile + ElementTree; copy stored beside the output)",
+     "version": "sha256 e78717eee66df4340ae927e1a4c4d683dccd3f02dfa4af3588fc434d3faddd92",
+     "call": "python3 xlsxdump_extractor.py <xlsx> > <txt>; one line per row, cells as REF=value joined by ' | ', shared strings resolved",
+     "join": "\n"
+    }
+   }
+  },
+  {
+   "path": "files/fulltext/PMID31618474_Burgess2019_supplement/NIHMS1616220-supplement-Supp_Table_2_xlsxdump.txt",
+   "sha256": "bf4c22e4fbd5b01b917feed486a279f134fe6817ea4a03950638c85a2d0abea5",
+   "kind": "supplement_text",
+   "note": "Deterministic cell dump of Supplementary Table 2; WWOX row read in full.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_xlsxdump",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": true,
+    "result_sha256": "bf4c22e4fbd5b01b917feed486a279f134fe6817ea4a03950638c85a2d0abea5",
+    "derived_from": "files/fulltext/PMID31618474_Burgess2019_supplement/NIHMS1616220-supplement-Supp_Table_2.xlsx",
+    "extractor": {
+     "name": "xlsxdump_extractor.py (stdlib zipfile + ElementTree; copy stored beside the output)",
+     "version": "sha256 e78717eee66df4340ae927e1a4c4d683dccd3f02dfa4af3588fc434d3faddd92",
+     "call": "python3 xlsxdump_extractor.py <xlsx> > <txt>; one line per row, cells as REF=value joined by ' | ', shared strings resolved",
+     "join": "\n"
+    }
+   }
+  },
+  {
+   "path": "files/fulltext/PMID31618474_Burgess2019_supplement/nihms-1616220-f0001.jpg",
+   "sha256": "54b97f0fac6245bcd8e4bb60f72da3fc802631de75fe0868ac6c18a8cba1a74a",
+   "kind": "figure",
+   "note": "Figure 1 (genetic landscape pie), inspected.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/7423163/bin/nihms-1616220-f0001.jpg",
+    "http_method": "GET",
+    "tier": "pmc_instance_bin_pow",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "54b97f0fac6245bcd8e4bb60f72da3fc802631de75fe0868ac6c18a8cba1a74a"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID31618474_Burgess2019_supplement/nihms-1616220-f0002.jpg",
+   "sha256": "8cff4dfb8ed3d52cbe4c3a5d6cab93f9a0820492a3348add55667f255ab4fcd8",
+   "kind": "figure",
+   "note": "Figure 2 (inheritance schematic), inspected.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/7423163/bin/nihms-1616220-f0002.jpg",
+    "http_method": "GET",
+    "tier": "pmc_instance_bin_pow",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "8cff4dfb8ed3d52cbe4c3a5d6cab93f9a0820492a3348add55667f255ab4fcd8"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": false,
+  "abstract_anchoring_waived": "The locators carry Table 2 and supplementary-table cells for one patient among 135; the abstract names WWOX only in a gene list and states nothing about the patient, the alleles or the chromosome 2 deletion.",
+  "source_fulltext_indexed_evidence": "MEASURED 2026-10-03: Europe PMC returns inEPMC 'Y', PMC7423163, isOpenAccess 'N', but its fullTextXML endpoint returns HTTP 500; the author manuscript is retrievable only through NCBI efetch db=pmc. Declared false because the machine route an external verifier would try first fails.",
+  "entries": [
+   {
+    "proposition": "The WWOX patient is compound heterozygous for a recurrent missense change and an intronic deletion whose splicing effect is predicted, not assayed, in this paper.",
+    "snippet": "We identified compound heterozygous variants in WWOX in Patient 93, a recurrent missense change (p.E17K)29 and a novel intronic deletion predicted to alter splicing.",
+    "anchor": "Results, Novel recessive EIMFS genes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31618474_Burgess2019_PMC_efetch.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The paper's own Table 2 classifies both WWOX alleles as variants of unknown significance; the paternal allele is two intronic deletions detected by microarray.",
+    "snippet": "Paternal Intronic Deletions: Chr16:78,180,536-78,185,186 x1 and Chr16:78,200,089-78,218,016 x1 NA NA 0 NA NA NA CMA VUS",
+    "anchor": "Table 2, Patient 93 paternal row",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID31618474_Burgess2019_PMC_efetch.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The maternal E17K allele is classified VUS in Table 2.",
+    "snippet": "93 WWOX Maternal Chr16:78133724G>A p.E17K rs780345312 02/196758 PD D 29 WES VUS",
+    "anchor": "Table 2, Patient 93 maternal row",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID31618474_Burgess2019_PMC_efetch.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Table 1 places the two paternal deletions in introns 3 and 4, records a non-consanguineous female recruited in Australia, and says the patient was not previously reported.",
+    "snippet": "Compound heterozygous: c.49G>A p.E17K and 2x intronic deletions: intron 3 and 4, 16q23.1(78,180,536-78,185,186)x1 and 16q23.1(78,200,089-78,218,016)x1",
+    "anchor": "Supplementary Table 1, row for Patient 93",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID31618474_Burgess2019_supplement/NIHMS1616220-supplement-Supp_Table_1_xlsxdump.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Table 1 records Patient 93 as not previously reported.",
+    "snippet": "W96=Not previously reported | X96=Reported",
+    "anchor": "Supplementary Table 1, row for Patient 93, column W",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID31618474_Burgess2019_supplement/NIHMS1616220-supplement-Supp_Table_1_xlsxdump.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Table 2 links the E17K allele to Piard patient 12, i.e. treats it as a different patient.",
+    "snippet": "WOREE (p.E17K Piard et al.2018 patient 12)",
+    "anchor": "Supplementary Table 2, WWOX row",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID31618474_Burgess2019_supplement/NIHMS1616220-supplement-Supp_Table_2_xlsxdump.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The cohort's 6.8 Mb deletion is a chromosome 2 deletion encompassing SCN1A and SCN2A, not a 16q deletion.",
+    "snippet": "Patient 54 had a heterozygous de novo 6.8 Mb deletion that included two known EIMFS genes, SCN1A and SCN2A.",
+    "anchor": "Results, Established EIMFS Genes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31618474_Burgess2019_PMC_efetch.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The WWOX patient developed epileptic spasms in addition to migrating focal seizures.",
+    "snippet": "Reported WWOX encephalopathy cases29 have had DEEs with infantile spasms and Lennox-Gastaut syndrome; our patient also developed epileptic spasms.",
+    "anchor": "Discussion, Novel genetic causes of EIMFS",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31618474_Burgess2019_PMC_efetch.xml",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}
