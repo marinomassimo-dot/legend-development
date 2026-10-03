@@ -1,0 +1,123 @@
+{
+ "schema_version": 2,
+ "pmid": "41257285",
+ "doi": "10.1016/j.omtm.2025.101617",
+ "receipt": "FTR-20261003-41257285-01",
+ "landing": [
+  "disease-models/wwox/research/intake_wave_20261003w5_C.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "PMC JATS acquired directly by E-utilities efetch; the cascade was not needed because the record is open access with a body."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "No deep dive was run. This is an intake first reading of a paper with no WWOX content; it produces a dossier and locators, not canonical claims."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Triples are handed to the audit through the commit candidates' LOCATOR TRIPLES FOR BLIND AUDIT sections, not run here: producer must not be verifier."
+  }
+ ],
+ "group_assessment": {
+  "waived": "Waived by name. This is a wave-5 intake first reading under SOURCE_FIRST: the paper carries no WWOX content (zero occurrences) and is read only as transferable delivery-safety evidence. No canonical claim is promoted by this pass, so the deep-dive steps that exist to rate a claim are not run; the pass's scope is recorded in the accompanying receipt and in the dossier's 'what I did not read' section."
+ },
+ "field_density": {
+  "waived": "Waived by name. This is a wave-5 intake first reading under SOURCE_FIRST: the paper carries no WWOX content (zero occurrences) and is read only as transferable delivery-safety evidence. No canonical claim is promoted by this pass, so the deep-dive steps that exist to rate a claim are not run; the pass's scope is recorded in the accompanying receipt and in the dossier's 'what I did not read' section."
+ },
+ "multihop": {
+  "waived": "Waived by name. This is a wave-5 intake first reading under SOURCE_FIRST: the paper carries no WWOX content (zero occurrences) and is read only as transferable delivery-safety evidence. No canonical claim is promoted by this pass, so the deep-dive steps that exist to rate a claim are not run; the pass's scope is recorded in the accompanying receipt and in the dossier's 'what I did not read' section."
+ },
+ "corpus_crossquery": {
+  "waived": "Waived by name. This is a wave-5 intake first reading under SOURCE_FIRST: the paper carries no WWOX content (zero occurrences) and is read only as transferable delivery-safety evidence. No canonical claim is promoted by this pass, so the deep-dive steps that exist to rate a claim are not run; the pass's scope is recorded in the accompanying receipt and in the dossier's 'what I did not read' section."
+ },
+ "retraction_check": {
+  "waived": "Waived by name. PubMed article-type and comments-corrections screening was not run as a network call in this pass; the acquired PMC record carries no retraction, correction or expression-of-concern notice in its front matter. All six records are 2025-2026 publications. This is declared as a gap, not as a clean result."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41257285_Aihara2025_PMC.xml",
+   "sha256": "58bd405d9110043e3ef98f9d1ca462aa1b7e7e7db4b1f08dbc63c80a705fd8ec",
+   "kind": "article_text",
+   "note": "PMC JATS XML re-acquired by E-utilities efetch on 2026-10-03 by this reader for the wave-5 intake first reading; body present.",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=12621450&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "58bd405d9110043e3ef98f9d1ca462aa1b7e7e7db4b1f08dbc63c80a705fd8ec"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "JATS from E-utilities efetch db=pmc. Body separated from front matter by the reader's own extraction; every locator is matched against the normalised body text of the declared artefact.",
+  "abstract_anchoring_waived": "No locator draws on the abstract; every entry is matched against the body.",
+  "note": "Coverage: abstract, introduction, all Results subsections, Discussion and all Materials and methods subsections read from the JATS running text. Figures 1-8 read as captions only and no number in the dossier is drawn from a panel. Supplementary Figures S1-S6 and Tables S1-S12 were NOT fetched; Figure S1A/B/C carries the biodistribution and transgene expression data on which the dissociation locator rests, so that locator is receipted on the authors' running-text description of their own figure. Reference 10, the primary behind every in-life and histopathology statement quoted here, is an open reading debt.",
+  "entries": [
+   {
+    "proposition": "CAPSID EXPOSURE ALONE IS NOT SUFFICIENT FOR THE ORGAN TOXICITY OF CONCERN: AT A COMPARABLE CAPSID DOSE, NEITHER EMPTY CAPSID NOR A GENOME WITHOUT A WORKING PROMOTER PRODUCED LIVER OR DORSAL ROOT GANGLION TOXICITY. THIS IS THE CLEANEST SEPARATION OF DOSE-DRIVEN FROM EXPRESSION-DRIVEN INJURY IN THE WAVE.",
+    "snippet": "Hepatic and DRG toxicities were only detected after administration of full AAV9 viral particles, but not empty capsids or Promoterless test articles.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41257285_Aihara2025_PMC.xml",
+    "anchor": "Results, 'In-life summary and organ toxicities'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A BLOOD-MEASURABLE MARKER TRACKED THE DORSAL ROOT GANGLION LESION, BUT IT IS REPORTED HERE AS A RESTATEMENT OF THE AUTHORS' PRIOR STUDY AND IS NOT MEASURED IN THIS PAPER.",
+    "snippet": "Single-cell necrosis and neuroinflammatory changes were also observed in DRGs, which correlated with elevated levels of NfL that peaked on day 28.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41257285_Aihara2025_PMC.xml",
+    "anchor": "Results, 'In-life summary and organ toxicities'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE MAGNITUDE OF TRANSGENE EXPRESSION DOES NOT PREDICT WHICH TISSUE IS INJURED, WHICH IS IN TENSION WITH ATTRIBUTING DORSAL ROOT GANGLION TOXICITY TO SUPRAPHYSIOLOGICAL EXPRESSION LEVEL.",
+    "snippet": "This discrepancy between vector genome biodistribution and transgene transcript level suggests that while both the capsid and an active payload are necessary to cause tissue pathology (liver and DRGs), the amount of transgene product itself is not directly predictive of the observed toxicities (even when expressing a foreign protein such as GFP).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41257285_Aihara2025_PMC.xml",
+    "anchor": "Results, 'In-life summary and organ toxicities', closing sentence",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE MODIFIABLE IMMUNE AXIS IDENTIFIED HERE SIGNALS THROUGH JAK/STAT RATHER THAN NF-KAPPA-B, WHICH THE AUTHORS OFFER AS A REASON GLUCOCORTICOIDS MAY BE INSUFFICIENT PROPHYLAXIS.",
+    "snippet": "This could provide some explanation as to why glucocorticoids are not always as potent as expected in preventing AAV-driven toxicity.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41257285_Aihara2025_PMC.xml",
+    "anchor": "Discussion, interferon pathway paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE ANIMALS RECEIVED NO IMMUNOSUPPRESSION, SO THE CLAIM THAT THE IMMUNE COMPONENT IS MODIFIABLE IS INFERENCE AND NOT MEASUREMENT IN THIS STUDY.",
+    "snippet": "However, it is important to note that unlike patients who receive glucocorticoids, which are potent nuclear factor (NF)-\u03baB inhibitors, no immunosuppressive regimen was provided to animals included in studies A or B.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41257285_Aihara2025_PMC.xml",
+    "anchor": "Discussion, immunosuppression paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE RESPONSE IS STILL PRESENT FOUR WEEKS AFTER A SINGLE DOSE, SO THE RELEVANT SAFETY WINDOW IS NOT CONFINED TO THE PERI-PROCEDURAL PERIOD.",
+    "snippet": "In summary, our work revealed a low-grade but long-lasting immunological response in known organs primarily targeted by AAV9.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41257285_Aihara2025_PMC.xml",
+    "anchor": "Discussion, summary paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE COHORT IS FEMALE-ONLY AND WAS PRE-SELECTED FOR THE LOWEST ANTI-CAPSID TITRES, WHICH IS THE EXACT COMPLEMENT OF THE SEROPOSITIVE-STRATIFIED STUDY IN THIS WAVE AND FORBIDS POOLING THE TWO.",
+    "snippet": "Animals with the lowest titers were included in the study.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41257285_Aihara2025_PMC.xml",
+    "anchor": "Materials and methods, 'Animals'",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}

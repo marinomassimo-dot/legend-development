@@ -1,0 +1,241 @@
+{
+ "schema_version": 2,
+ "pmid": "32214227",
+ "doi": "10.1038/s41431-020-0609-9",
+ "receipt": "FTR-20261003-32214227-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/intake_wave_20261003w5_B.md",
+  "disease-models/wwox/research/fulltext_dossiers/PMID32214227.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W5-B-PATIENT-OVERLAP-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W5-B-REGISTRY-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is a research surface another batch owns; this wave's question is patient provenance and counting, so findings are proposed through commit candidates instead of ledger edits."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No source in this group tests a therapy against a mechanism; forging hypotheses from single-patient drug histories would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed as a candidate; anti-seizure medication histories in case reports are clinical descriptions, not molecules for BLOCK-1 triage."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes are proposed as commit candidates for a later BATCH_COMMIT."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; the triples are published in the candidates for an auditor to run."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 539,
+  "publications_on_gene": 2,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "PubMed counts 2026-10-03: Schols L[au] 539 records, 2 intersecting WWOX (Mallaret 2014, co-authored, and this cohort). Neurogenetics group with exome pipeline; the WWOX family is the group's own previously published family."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND exome AND consanguineous",
+    "count": 12,
+    "source": "PubMed ESearch 2026-10-03"
+   }
+  ],
+  "note": "This cohort is one of twelve consanguinity exome records naming WWOX; its WWOX family is not new."
+ },
+ "multihop": {
+  "references_enumerated": 50,
+  "gene_direct_refs_in_source": [
+   "24369382"
+  ],
+  "resolved": [
+   "24369382"
+  ],
+  "queued": [],
+  "note": "All 50 references enumerated; ref 18 (Mallaret 2014) is the WWOX paper, confirmed by Table S1 ('this family is published (PMID: 24369382)'). Table 1's bracketed reference for the WWOX row ([24]) does not resolve to a WWOX paper in the reference list."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 32214227; --theme Hengel, TR08",
+  "hits": 1,
+  "note": "FT-140 only. The 2026-09-21 receipt and triage state that the paper has zero WWOX variants; the XML Table 1 and Table S1 refute that."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-03 by PubMed EFetch: one ErratumIn link (Eur J Hum Genet 2022;30(2):248, PMID 34050322, PMC8821631), read: a licence change to CC BY 4.0, no content correction. No retraction or expression of concern.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 50,
+   "references_screened": 46,
+   "references_with_doi": 46,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 4
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID32214227_Hengel2020_PMC.xml",
+   "sha256": "7ab421b0efe720cbaaa67da2c690f93f4293ee3e1fb48af5e999241be0e2d41f",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML; body, Tables 1-2, two figure legends, 50 references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7382450/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "7ab421b0efe720cbaaa67da2c690f93f4293ee3e1fb48af5e999241be0e2d41f"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID32214227_Hengel2020_supplement/41431_2020_609_MOESM1_ESM.xlsx",
+   "sha256": "bee73e378069c3ac757171936be0668e85c0fbcf14b5e3f97db71560ecd87f88",
+   "kind": "supplement_binary",
+   "note": "Supplementary Table 1 (variant annotations per family).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/7382450/bin/41431_2020_609_MOESM1_ESM.xlsx",
+    "http_method": "GET",
+    "tier": "pmc_instance_bin_pow",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "bee73e378069c3ac757171936be0668e85c0fbcf14b5e3f97db71560ecd87f88"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID32214227_Hengel2020_supplement/41431_2020_609_MOESM1_ESM_xlsxdump_tab.txt",
+   "sha256": "c0b4d3fb024271585a3acc23718f470463e32f1fc6862ad2b01b74f034bf63f6",
+   "kind": "supplement_text",
+   "note": "Deterministic cell dump of Supplementary Table 1 in a TAB variant (cell reference, TAB, value). The standard REF=value dump was refused by the verifier's printable-substitution screen because the cell reference D2 followed by '=4' matches its chi-squared signature; the cells themselves carry no statistics. Header and WWOX row read in full, all rows scanned for the WWOX family identifier.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_xlsxdump_tab",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": true,
+    "result_sha256": "c0b4d3fb024271585a3acc23718f470463e32f1fc6862ad2b01b74f034bf63f6",
+    "derived_from": "files/fulltext/PMID32214227_Hengel2020_supplement/41431_2020_609_MOESM1_ESM.xlsx",
+    "extractor": {
+     "name": "xlsxdump_tab_extractor.py (the stdlib extractor above with the cell separator changed from = to TAB; copy stored beside the output)",
+     "version": "sha256 aa04a9196e375edf699db81e36eea67c182d70f800791062e59663b57edbc845",
+     "call": "python3 xlsxdump_tab_extractor.py <xlsx> > <txt>",
+     "join": "\n"
+    }
+   }
+  },
+  {
+   "path": "files/fulltext/PMID32214227_Hengel2020_supplement/41431_2020_609_Fig1_HTML.jpg",
+   "sha256": "6021ad78bb5b747d460268c7ec7e06396138200cc79baeaaad2c4f8cf20af21e",
+   "kind": "figure",
+   "note": "Figure 1 (runs of homozygosity), inspected.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/7382450/bin/41431_2020_609_Fig1_HTML.jpg",
+    "http_method": "GET",
+    "tier": "pmc_instance_bin_pow",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "6021ad78bb5b747d460268c7ec7e06396138200cc79baeaaad2c4f8cf20af21e"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID32214227_Hengel2020_supplement/41431_2020_609_Fig2_HTML.jpg",
+   "sha256": "bc33a91d53802cbbfcae084c783e3f93ddd5088138a5ccad034aa8573bd576cd",
+   "kind": "figure",
+   "note": "Figure 2 (MTMR2 pedigree), inspected.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/7382450/bin/41431_2020_609_Fig2_HTML.jpg",
+    "http_method": "GET",
+    "tier": "pmc_instance_bin_pow",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "bc33a91d53802cbbfcae084c783e3f93ddd5088138a5ccad034aa8573bd576cd"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC 2026-10-03: inEPMC 'Y', PMC7382450, open access; fullTextXML served the body read here.",
+  "entries": [
+   {
+    "proposition": "Table 1 carries a WWOX row: one family, two affected, homozygous G372R, cerebellar ataxia and intellectual disability, marked as published separately.",
+    "snippet": "WWOX 616211 2/2 TR08* [24] Cerebellar ataxia, intellectual disability NM_016373.4:c.1114G>C: p.(Gly372Arg) hom Novel gene* [24], likely pathogenic, AR",
+    "anchor": "Table 1, WWOX row",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID32214227_Hengel2020_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The asterisk means the family was published separately.",
+    "snippet": "Families that have been published separately are marked with asterisk (*) and the respective reference is given.",
+    "anchor": "Table 1 footnote",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID32214227_Hengel2020_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The text names WWOX as a novel disease gene from this cohort, published elsewhere.",
+    "snippet": "to identify two novel disease genes (WWOX and PAX7, both published elsewhere [18, 19])",
+    "anchor": "Results, Extensions of the phenotypic spectrum and novel disease genes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32214227_Hengel2020_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The homozygous nonsense row with intellectual disability, epilepsy and corpus callosum dysgenesis is TMCO1, not WWOX.",
+    "snippet": "TMCO1 213980 2/4 TR24* Intellectual disability, epilepsy, corpus callosum dysgenesis NM_019026.4:c.616C>T: p.(Arg206*)",
+    "anchor": "Table 1, TMCO1 row",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID32214227_Hengel2020_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Table 1 names the WWOX family's prior publication.",
+    "snippet": "this family is published (PMID: 24369382)",
+    "anchor": "Supplementary Table 1, WWOX row, comment column",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID32214227_Hengel2020_supplement/41431_2020_609_MOESM1_ESM_xlsxdump_tab.txt",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}

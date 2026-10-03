@@ -1,0 +1,131 @@
+{
+ "schema_version": 2,
+ "pmid": "42134074",
+ "doi": "10.1016/j.ebiom.2026.106294",
+ "receipt": "FTR-20261003-42134074-01",
+ "landing": [
+  "disease-models/wwox/research/intake_wave_20261003w5_C.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "PMC JATS acquired directly by E-utilities efetch; the cascade was not needed because the record is open access with a body."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "No deep dive was run. This is an intake first reading of a paper with no WWOX content; it produces a dossier and locators, not canonical claims."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Triples are handed to the audit through the commit candidates' LOCATOR TRIPLES FOR BLIND AUDIT sections, not run here: producer must not be verifier."
+  }
+ ],
+ "group_assessment": {
+  "waived": "Waived by name. This is a wave-5 intake first reading under SOURCE_FIRST: the paper carries no WWOX content (zero occurrences) and is read only as transferable delivery-safety evidence. No canonical claim is promoted by this pass, so the deep-dive steps that exist to rate a claim are not run; the pass's scope is recorded in the accompanying receipt and in the dossier's 'what I did not read' section."
+ },
+ "field_density": {
+  "waived": "Waived by name. This is a wave-5 intake first reading under SOURCE_FIRST: the paper carries no WWOX content (zero occurrences) and is read only as transferable delivery-safety evidence. No canonical claim is promoted by this pass, so the deep-dive steps that exist to rate a claim are not run; the pass's scope is recorded in the accompanying receipt and in the dossier's 'what I did not read' section."
+ },
+ "multihop": {
+  "waived": "Waived by name. This is a wave-5 intake first reading under SOURCE_FIRST: the paper carries no WWOX content (zero occurrences) and is read only as transferable delivery-safety evidence. No canonical claim is promoted by this pass, so the deep-dive steps that exist to rate a claim are not run; the pass's scope is recorded in the accompanying receipt and in the dossier's 'what I did not read' section."
+ },
+ "corpus_crossquery": {
+  "waived": "Waived by name. This is a wave-5 intake first reading under SOURCE_FIRST: the paper carries no WWOX content (zero occurrences) and is read only as transferable delivery-safety evidence. No canonical claim is promoted by this pass, so the deep-dive steps that exist to rate a claim are not run; the pass's scope is recorded in the accompanying receipt and in the dossier's 'what I did not read' section."
+ },
+ "retraction_check": {
+  "waived": "Waived by name. PubMed article-type and comments-corrections screening was not run as a network call in this pass; the acquired PMC record carries no retraction, correction or expression-of-concern notice in its front matter. All six records are 2025-2026 publications. This is declared as a gap, not as a clean result."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42134074_Kagiava2026_PMC.xml",
+   "sha256": "04ccc505a3beafee422bed0f57872d8b989a8f948becc61aaf3de5469444a1d5",
+   "kind": "article_text",
+   "note": "PMC JATS XML re-acquired by E-utilities efetch on 2026-10-03 by this reader for the wave-5 intake first reading; body present.",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=13196305&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "04ccc505a3beafee422bed0f57872d8b989a8f948becc61aaf3de5469444a1d5"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "JATS from E-utilities efetch db=pmc. Body separated from front matter by the reader's own extraction; every locator is matched against the normalised body text of the declared artefact.",
+  "abstract_anchoring_waived": "No locator draws on the abstract; every entry is matched against the body.",
+  "note": "Coverage: abstract, introduction, the clinical-application sections in full, the outstanding questions and conclusions, and TABLE 1 read in full and CELL-WISE from the XML table structure. The preclinical rodent and large-animal sections were read by title only. There are no figures and no supplementary files. This is a narrative review: every datum in it is secondary, and none of the cited primaries was read - in particular the references behind the STRONG, STEER, GAN, CLN7, SPG50 and ALS programmes and behind the primate study that triggered the regulatory hold are open reading debts.",
+  "entries": [
+   {
+    "proposition": "PRIMATE DORSAL ROOT GANGLION HISTOPATHOLOGY HAS ALREADY FUNCTIONED AS A PROGRAMME-STOPPING REGULATORY SIGNAL FOR A HUMAN PAEDIATRIC INTRATHECAL PROGRAMME USING THIS CAPSID AND ROUTE.",
+    "snippet": "Concerns for DRG toxicity identified in NHPs by other investigators81 prompted the FDA to issue a hold on further enrolment.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42134074_Kagiava2026_PMC.xml",
+    "anchor": "Clinical applications, 'Spinal muscular atrophy (SMA)'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "HUMAN DORSAL ROOT GANGLION TOXICITY ON THIS ROUTE HAS APPEARED, AND WHERE IT APPEARED IT WAS SENSORY, MILD AND RESPONSIVE TO SYMPTOMATIC TREATMENT RATHER THAN PROGRESSIVE.",
+    "snippet": "Hepatotoxicity resolved by the end of the follow-up period 1 while symptoms related to DRG toxicity improved with symptomatic treatment.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42134074_Kagiava2026_PMC.xml",
+    "anchor": "Clinical applications, 'Spinal muscular atrophy (SMA)', STEER paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "AT THE HIGHEST INTRATHECAL DOSES REPORTED IN HUMANS, DORSAL ROOT GANGLION INTEGRITY WAS ASSESSED BY PATIENT-MEASURABLE MODALITIES AND NO SIGNAL WAS FOUND, WHICH ARGUES AGAINST A SIMPLE MONOTONIC DOSE-DRIVEN MECHANISM IN HUMANS.",
+    "snippet": "Notably there were no signs of DRG toxicity when assessed by MRI and peripheral nerve conduction studies.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42134074_Kagiava2026_PMC.xml",
+    "anchor": "Clinical applications, 'Ceroid lipofuscinosis type 7 (CLN7)'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE SAME NEGATIVE WAS OBTAINED BY CLINICAL AND ELECTROPHYSIOLOGICAL ASSESSMENT IN A SEPARATE SINGLE-PATIENT PROGRAMME DOSED AT THE TOP OF THE HUMAN INTRATHECAL RANGE.",
+    "snippet": "There was no clinical or electrophysiologic evidence of DRG toxicity: no neuropathic pain, and normal sensory exams and nerve conduction studies.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42134074_Kagiava2026_PMC.xml",
+    "anchor": "Clinical applications, 'Spastic paraplegia type 50 (SPG50)'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "WHERE THE RECIPIENT IS PREDICTED TO HAVE NO ENDOGENOUS EXPRESSION OF THE TRANSGENE PRODUCT, PROGRAMMES ADOPT TRIPLE IMMUNOSUPPRESSION RATHER THAN A STEROID ALONE. A BIALLELIC LOSS-OF-FUNCTION RECIPIENT FALLS IN THAT CLASS BY CONSTRUCTION.",
+    "snippet": "An immunosuppression regimen modelled from the GAN trial (prednisolone, sirolimus, and tacrolimus) was used to mitigate immune responses and promote tolerance to AP4M1, given the predicted absence of endogenous expression for this patient.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42134074_Kagiava2026_PMC.xml",
+    "anchor": "Clinical applications, 'Spastic paraplegia type 50 (SPG50)'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE SAME LOGIC IS STATED AS AN ENROLMENT RATIONALE IN THE PROGRAMME THE OTHERS WERE MODELLED ON, LINKING ABSENT ENDOGENOUS PROTEIN TO ANTI-TRANSGENE IMMUNE RISK.",
+    "snippet": "The cohort included individuals predicted to have no residual gigaxonin expression (CRIM-negative) and thus at higher risk of developing an immune response to transgene-expressed gigaxonin protein, as well as participants who were AAV9-seropositive (neutralising antibody titre \u22651:5) or seronegative at baseline.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42134074_Kagiava2026_PMC.xml",
+    "anchor": "Clinical applications, 'Giant axonal neuropathy (GAN)'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE REVIEW'S OWN MECHANISTIC POSITION IS THAT THE TOXICITY IS DRIVEN BY EXPRESSION LEVEL UNDER STRONG UBIQUITOUS PROMOTERS, AND ITS PROPOSED MITIGATION IS A WEAKER OR CELL-RESTRICTED PROMOTER.",
+    "snippet": "One of the main concerns that have to be addressed in future studies is the DRG toxicity mostly related to supraphysiological gene expression levels with strong ubiquitous promoters.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42134074_Kagiava2026_PMC.xml",
+    "anchor": "Outstanding questions",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE NEAREST HUMAN DISEASE PRECEDENT IN THIS SOURCE IS A PAEDIATRIC NEURODEGENERATIVE SEIZURE-BEARING DISORDER DOSED BY THE SAME ROUTE AND CAPSID UNDER TRIPLE IMMUNOSUPPRESSION, WITH AN UNCONTROLLED HISTORICAL COMPARISON AS ITS ONLY EFFICACY EVIDENCE.",
+    "snippet": "While the disease progressed in all subjects (6\u20138 years old at the time of publication), the >2 years long-term follow up suggested a deviation from the natural history of the disease including maintenance of respiratory function, maintenance of oral feeding, and relative stability in their seizures.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42134074_Kagiava2026_PMC.xml",
+    "anchor": "Clinical applications, 'Ceroid lipofuscinosis type 7 (CLN7)'",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}
