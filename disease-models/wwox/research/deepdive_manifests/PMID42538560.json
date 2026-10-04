@@ -1,0 +1,266 @@
+{
+ "schema_version": 2,
+ "pmid": "42538560",
+ "doi": "10.1186/s12987-026-00831-4",
+ "receipt": "FTR-20261004-42538560-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID42538560.md",
+  "disease-models/wwox/research/intake_wave_20261004w11_C.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W11-C-CPDIST-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W11-C-REGISTRY-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Discovery ledger is owned by another batch; no lead emerged from this reading."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "Nothing here supplies a lever for the reference genotype class; forging from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged; the paper tests no compound for BLOCK-1."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes go through commit candidates."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; triples are published in the candidates."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "Not assessed beyond the paper's own front matter; WWOX is not named in the paper (0 occurrences in the JATS XML). Rodent and porcine-explant AAV biodistribution work."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "choroid plexus AND adeno-associated virus",
+    "count": 29,
+    "source": "PubMed ESearch 2026-10-04"
+   },
+   {
+    "query": "WWOX AND choroid plexus",
+    "count": 0,
+    "source": "PubMed ESearch 2026-10-04"
+   },
+   {
+    "query": "WWOX AND AAV",
+    "count": 2,
+    "source": "PubMed ESearch 2026-10-04"
+   }
+  ],
+  "note": "No field-density query run: the paper contains no WWOX content; read only for the route-level question (ICV AAV distribution in the choroid plexus)."
+ },
+ "multihop": {
+  "references_enumerated": 92,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "92 references enumerated by count from the JATS reference list; none concerns WWOX (the gene is named zero times in the text), so no gene-direct hop exists."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42538560; paper_packet.py packet --pmid 42538560",
+  "hits": 0,
+  "note": "No registry record or prior receipt for this PMID."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-04 by PubMed EFetch: no RetractionIn, ErratumIn or ExpressionOfConcernIn; one CommentOn link (a comment-on-another-article link, not a correction notice); publication type Journal Article.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "UNSCREENABLE_NO_REFERENCE_LIST",
+   "reference_source": "network",
+   "references_declared": 0,
+   "references_screened": 0,
+   "references_with_doi": 0,
+   "schema": "retraction_check.dependencies/1",
+   "screened": false,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 22,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42538560_ICVchoroid2026_PMC.xml",
+   "sha256": "fb86c9c56c5166c5078b72633ff00cc5f3430ecc45deb274ed1dbdedc39510f0",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13428447/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "fb86c9c56c5166c5078b72633ff00cc5f3430ecc45deb274ed1dbdedc39510f0"
+   }
+  },
+  {
+   "path": "files/figures/PMID42538560/Fig5.png",
+   "sha256": "492969f5d2897f0b20bc5db17ad62cbd36251ec7a0f0a56fd7293700f75f9986",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1186%2Fs12987-026-00831-4/MediaObjects/12987_2026_831_Fig5_HTML.png",
+    "http_method": "GET",
+    "tier": "publisher figure image (open access)",
+    "user_agent_policy": "browser_like",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "492969f5d2897f0b20bc5db17ad62cbd36251ec7a0f0a56fd7293700f75f9986"
+   }
+  },
+  {
+   "path": "files/figures/PMID42538560/Fig6.png",
+   "sha256": "37a2c252b5bdf30966c2f1fe84c3b0f7c06ae991ff35d9143f2015392176247f",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1186%2Fs12987-026-00831-4/MediaObjects/12987_2026_831_Fig6_HTML.png",
+    "http_method": "GET",
+    "tier": "publisher figure image (open access)",
+    "user_agent_policy": "browser_like",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "37a2c252b5bdf30966c2f1fe84c3b0f7c06ae991ff35d9143f2015392176247f"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Low-dose experiment: unilateral injection into the left lateral ventricle of adult mice.",
+    "snippet": "genomes AAV unilaterally directly into the left lateral ventricle by stereotactic injection",
+    "anchor": "Results, tropism in vitro and in vivo, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42538560_ICVchoroid2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Injection volume was 10 microlitres at 0.5 microlitres per minute, 2 mm depth.",
+    "snippet": "Following infusion of 10 µl volume the needle remained in situ for 5 min",
+    "anchor": "Methods, Animals and treatments, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42538560_ICVchoroid2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Third-ventricle choroid plexus was poorly transduced despite transit through the foramen of Monro.",
+    "snippet": "third ventricle ChP was very poorly infected, though some green cells could be observed",
+    "anchor": "Results, uneven distribution, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42538560_ICVchoroid2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Contralateral choroid plexus transduction was considerably weaker than ipsilateral.",
+    "snippet": "Infection on the contralateral side was considerably weaker but present mainly dorsally",
+    "anchor": "Results, uneven distribution, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42538560_ICVchoroid2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The higher dose was chosen because low-dose distribution was inefficient.",
+    "snippet": "Due to the inefficient infection across the ventricle compartments in our EGFP experiment",
+    "anchor": "Results, Aqp1 editing in vivo, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42538560_ICVchoroid2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Contralateral editing was significantly below injected-side editing but about two thirds of it.",
+    "snippet": "gene editing still occurred at two thirds of the level on the injected side",
+    "anchor": "Results, Aqp1 editing in vivo, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42538560_ICVchoroid2026_PMC.xml",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "Strongest knockdown was caudal to the injection site, not at it.",
+    "snippet": "the strongest knockdown was not observed at the injection site, but more caudally",
+    "anchor": "Results, protein knockdown, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42538560_ICVchoroid2026_PMC.xml",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "Fourth-ventricle choroid plexus showed no significant knockdown.",
+    "snippet": "At the level of the fourth ventricle AAV-mediated knockdown of AQP1 is insignificant",
+    "anchor": "Results, protein knockdown, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42538560_ICVchoroid2026_PMC.xml",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "Fig. 6 right panels plot AQP1 optical density per level, injected versus contralateral, n of 4 points per group read from the rendered panel; the Fig. 6 percentages were recomputed from panel means (about 59/39, 78/55, 49/45 percent LV; 37 percent 3V).",
+    "snippet": "Right panels show fluorescent immunocytochemistry for choroid plexus AQP1 protein optical density",
+    "anchor": "Fig. 6 legend",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID42538560_ICVchoroid2026_PMC.xml",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "Whether dose escalation can overcome the ipsilateral bias without toxicity has not been examined in detail, by the authors' statement.",
+    "snippet": "whether dose escalation could overcome the bias to the ipsilateral side without inducing toxicity has not yet been examined in detail",
+    "anchor": "Discussion, distribution paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42538560_ICVchoroid2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state distribution may scale non-linearly with dose and ventricular volume to human brains.",
+    "snippet": "may produce non-linear relationships with dose and ventricular volume during scaling to human brains",
+    "anchor": "Discussion, limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42538560_ICVchoroid2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors expect secreted-protein overexpression to be less dependent on near-total choroid plexus infection than knockdown.",
+    "snippet": "may succeed ahead of knockdown approaches as they are less dependent on near total ChPE infection",
+    "anchor": "Discussion, last paragraphs",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42538560_ICVchoroid2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Ventricular tropism was not examined in the explant system.",
+    "snippet": "It is a limitation of this study that tropism to ChP in different ventricular compartments was not examined in the explant culture system",
+    "anchor": "Discussion, limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42538560_ICVchoroid2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC13428447/fullTextXML returned a full JATS body on 2026-10-04; the artefact declared is that response."
+ }
+}
