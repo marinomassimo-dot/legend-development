@@ -89,3 +89,23 @@ enumerated and searched, and the surfaces that were unavailable are named.
   executed.
 * **Transfer limit:** a review. Every residue statement it makes is carried from cited work, mostly
   the authoring group's; it says nothing about any missense allele class.
+
+## 5 · PMID 35328751 — Baryła 2022, WWOX/HIF1A axis in fibroblasts
+
+* **Verdict:** INGEST (re-read, panels and supplement). Receipt `sciC_35328751_1.json` →
+  `FTR-20261004-35328751-03`, `partial_fulltext_read`.
+* **Acquired:** twelve figures and the supplementary ZIP. The supplement was previously `unavailable`;
+  it covers the overexpression arm only.
+* **Panels:**
+  * Lactate rises with loss in all four conditions.
+  * **PDH and citrate synthase activity are unchanged by loss**, and one Results sentence mislabels PDH
+    as "PDK".
+  * The cytoplasmic HIF1α decrease holds in two of four conditions; in hypoxia hyperglycemia the
+    knockout bar is above control. One repetition is shown.
+* **FIND-X:** no ROS, ATP, respiration or mitochondrial-QC measurement appears on any surface.
+* **Answer for the arc:** the ketogenic rationale's step PDK↑ ⊣ PDH has **no measured step** here. It
+  rests on an mRNA, and the enzyme it should inhibit does not move.
+* **Candidate:** `CC-20261004W13-C-HIF1A-PANELS-01` — **MINOR** (CLAIM 009 source scope; DL-MECH-020
+  panel reading). Dry runs executed.
+* **Transfer limit:** one immortalised human skin fibroblast line with a polyclonal partial
+  depletion. It is not neural and models no allele class.
