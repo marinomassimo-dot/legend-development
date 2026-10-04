@@ -58,3 +58,11 @@ The JATS has no `table-wrap` and no `table` element (counts 0 and 0), the body t
 - (The control is uninjected wild type | Wild-type (WT) mice without injections served as controls. | Figure 7 legend, `files/fulltext/PMID42511902_Gao2026_PMC.xml`)
 - (Group size stated in the Methods | At least four biological replicates (individual mice) were carried out per group | Methods, quantification, `files/fulltext/PMID42511902_Gao2026_PMC.xml`)
 - (Figure 7 panels A to C: ALT and AST differ from wild type only for MacpnS1; ALP-2c is about 2.5 to 3 times wild type in all four groups | `[figure attestation]` Figure 7A to 7C | `files/fulltext/PMID42511902_Gao2026_figures/biomedicines-14-01426-g007.jpg`)
+
+## BATCH DISPOSITION — `BATCH_20261004_006` (2026-10-04, ACTOR_ID `scientist`, Scientist P), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** PROPAGATED
+
+Class re-judged **MINOR** (a paper record gains measured qualifications; one ledger lead gains a bullet). **Blind locator audit with pixel-level panel measurement: 10 triples and 4 independent checks — 10 SUPPORTED, 0 adverse.** The audit confirmed the text-versus-panel disagreement and **re-measured it**, so the landed figure is the auditor's band rather than the candidate's: about **8- to 11-fold** lower for one capsid and about **24- to 80-fold** for the other, against the paper's *«4- to 6-fold»*, with the two small bars explicitly unreadable to better than about ±50 % because they sit under their own dot clusters. Three further measurements were folded in: the article has **no table and no supplement at all**, so every number it carries is a bar in a figure with no deposited source data; the legends give 5, 4, 5, 6, 6, 6, 6 and 8 as n, including **two different n for one cohort in two panels of one figure**; and there is **no vehicle-injected and no reporter-only arm anywhere**, with all four capsids carrying the identical reporter genome — so the one finding common to all four (the phosphatase elevation, re-derived as 2.4- to 3.0-fold) is the least likely of them to be capsid-specific. Landed as 3 ops on `PAPER 214` and 1 appended bullet on `DL-METH-117`.

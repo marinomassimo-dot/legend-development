@@ -43,7 +43,7 @@ edition: public
 ## 2. DISEASE-MODEL (WORKING-MODEL) VERSION
 
 ```yaml
-working_model_version: WM_v7.18
+working_model_version: WM_v7.19
 working_model_file: disease-models/wwox/registries/working_model_current.md
 narrative_view: disease-models/wwox/disease_model.md
 notes: "Canonical disease-level working model derived from public literature; disease_model.md is its narrative reader-facing view. The private individual-level record is not part of this edition."
@@ -106,12 +106,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20261004_005
+last_batch_commit_id: BATCH_20261004_006
 last_batch_commit_date: 2026-10-04
 last_batch_commit_type: MANUAL
-commit_candidates_propagated: 11
-target_wm_version: WM_v7.18
-trigger: MANUAL (operator-dispatched integration of intake wave 11, groups A, B and C, with the wave-2 residue `CC-20260826-CLAIM003-01` re-authored and consumed; the backlog threshold of 5 was also met). The batch's first duty was a registry debt that **blocked** `BATCH_COMMIT`: the pre-flight `legend_lint` reported `ORPHAN_COMPLETE_READ` for PMID 40083435 and PMID 40884527, both completely read with receipts on `main` and carried by no registry record. All eleven wave PMIDs now have a landing — `PAPER 245` (the promotion of `CORPUS-STUB-041`), `PAPER 246`, `CORPUS-STUB-181`-`189`, `LIT-0539`-`0548`, and `LIT-0065` re-authored from front matter; PMID 40183601 needed no new record, because `PAPER 241`/`LIT-0533` were measured to exist on `main` at the start. No claim was created, none reversed and none narrowed: `CLAIM 003` (`consolidated baseline`) gains evidence-boundary text only, attributing every **quantitative** myelin endpoint of `PAPER 004` to a line other than the oligodendrocyte conditional and naming the qualitative readouts that line did receive — which closes the oldest debt in the queue after seven deferrals. A genotype-interpretation rule on uniparental isodisomy enters the working model. Nine independent blind locator audits ran before the propagation over **62 triples**: 58 SUPPORTED, 4 adverse, 0 UNVERIFIABLE, 0 artefacts absent [corrected in place 2026-10-04 from "56 SUPPORTED, 6 adverse"] — every adverse verdict repaired at source before landing. Step 0 measured every artefact of the scope present and digest-matching before any audit was dispatched. `public_release_gate` was re-run after the audit amendments: PASS, 0 BLOCK)
+commit_candidates_propagated: 13
+target_wm_version: WM_v7.19
+trigger: MANUAL (operator-dispatched integration of intake wave 12, the re-read wave, groups A, B and C; the backlog threshold of 5 was also met). Thirteen candidates, all thirteen propagated, none merged, none superseded, none deferred. No claim was created, none reversed, and no Status, Type or Summary changed anywhere. Three `consolidated baseline` claims gain evidence-boundary text only - `CLAIM 019`, `CLAIM 002` and `CLAIM 005` - the last two from candidates that declared themselves MAJOR and whose narrowings an independent blind audit confirmed. Two corrections of fact land in the disease-level record: the two homozygous Q230P patients are cousins, not sisters (the error had stood in `CLAIM 019`, `PAPER 041` and `DL-MECH-029`), and the Q230P transcript result is a comparison against three non-control lines with no control fibroblast, no dispersion and no n. No new registry record was owed: every candidate targeted a record that already existed, so no PAPER, CORPUS, LIT, CLAIM, DIS, FT or DL identifier was created. Thirteen independent blind locator audits ran BEFORE the propagation over 76 triples and 56 lettered checks: 66 SUPPORTED, 9 NOT_SUPPORTED_AS_LABELLED, 1 split, 0 UNVERIFIABLE, 0 artefacts absent - and three of the adverse verdicts overturned a candidate's own load-bearing sentence, every one repaired at source before landing. Step 0 measured all 143 artefacts of the scope present and digest-matching before any audit was dispatched, so no SHA-256 search was needed. `public_release_gate` was re-run after the audit amendments: PASS, 0 BLOCK)
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -125,7 +125,7 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20261004_BATCH_20261004_005
+last_lint_id: LINT_20261004_BATCH_20261004_006
 last_lint_date: 2026-10-04
 last_lint_result: WARN
 ```
