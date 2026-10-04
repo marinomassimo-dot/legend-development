@@ -21,6 +21,108 @@
         "http_status": 200,
         "bytes": 88943
       }
+    },
+    {
+      "path": "files/supplement/PMID40301740/10020_2025_1207_Fig7_HTML.png",
+      "sha256": "f8aa650ff331a3d3b44c4abe72cd77ee675595772f60d07ecbe9db935a3cb432",
+      "kind": "figure",
+      "note": "Figure 7 full-resolution raster (1960x2382 PNG) from the publisher static-content image route; panels A (H&E, cervical and lumbar) and B (SMN IHC, DRG and spinal cord, control vs treated) inspected as rendered pixels.",
+      "acquisition_recipe": {
+        "resolved_url": "https://static-content.springer.com/image/art%3A10.1186%2Fs10020-025-01207-4/MediaObjects/10020_2025_1207_Fig7_HTML.png",
+        "http_method": "GET",
+        "tier": "publisher_static_or_pmc_cdn",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "f8aa650ff331a3d3b44c4abe72cd77ee675595772f60d07ecbe9db935a3cb432",
+        "http_status": 200,
+        "bytes": 7300254
+      }
+    },
+    {
+      "path": "files/supplement/PMID40301740/10020_2025_1207_Tab1_HTML.jpg",
+      "sha256": "4060a7886f3c3f089273774a536dd06d21e16e8e279aec7f4479902d676f24a4",
+      "kind": "table",
+      "note": "Table 1 (serum chemistry, female mice, 13 weeks) - image-only in the JATS; read from the rendered image.",
+      "acquisition_recipe": {
+        "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/0463/12042585/4e9fda9686eb/10020_2025_1207_Tab1_HTML.jpg",
+        "http_method": "GET",
+        "tier": "publisher_static_or_pmc_cdn",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "4060a7886f3c3f089273774a536dd06d21e16e8e279aec7f4479902d676f24a4",
+        "http_status": 200,
+        "bytes": 81029
+      }
+    },
+    {
+      "path": "files/supplement/PMID40301740/10020_2025_1207_Tab2_HTML.jpg",
+      "sha256": "b257cbeabeabfe2276e617fdb622a69945a510f289ae6e8d5ce3bb30e767bd22",
+      "kind": "table",
+      "note": "Table 2 (serum chemistry, male mice, 13 weeks) - image-only in the JATS; read from the rendered image.",
+      "acquisition_recipe": {
+        "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/0463/12042585/e706a99afcc6/10020_2025_1207_Tab2_HTML.jpg",
+        "http_method": "GET",
+        "tier": "publisher_static_or_pmc_cdn",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "b257cbeabeabfe2276e617fdb622a69945a510f289ae6e8d5ce3bb30e767bd22",
+        "http_status": 200,
+        "bytes": 81214
+      }
+    },
+    {
+      "path": "files/supplement/PMID40301740/10020_2025_1207_MOESM1_ESM.xlsx",
+      "sha256": "61f7ee2c9155b8845c5b2234f0aeda1314be08bacd0e1981f6d56ecc6f3d1249",
+      "kind": "table",
+      "note": "Additional file 1 (workbook): per-animal vector-genome values by tissue, three dose groups, weeks 2/6/13; read cell-wise from the workbook XML. Text calls it Supplementary Table 1 (inference from file order and from the text sentence that cites it).",
+      "acquisition_recipe": {
+        "resolved_url": "https://static-content.springer.com/esm/art%3A10.1186%2Fs10020-025-01207-4/MediaObjects/10020_2025_1207_MOESM1_ESM.xlsx",
+        "http_method": "GET",
+        "tier": "publisher_static_or_pmc_cdn",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "61f7ee2c9155b8845c5b2234f0aeda1314be08bacd0e1981f6d56ecc6f3d1249",
+        "http_status": 200,
+        "bytes": 17656
+      }
+    },
+    {
+      "path": "files/supplement/PMID40301740/10020_2025_1207_MOESM2_ESM.xlsx",
+      "sha256": "13ec31f9bb6d596e5b081845690d7c978e1a21ddd3c40ca0d25be88d9f6f0fff",
+      "kind": "table",
+      "note": "Additional file 2 (workbook): anti-AAV9 and anti-SMN antibody titres per animal, 4 control and 8 treated, day 14/28/56/90; read cell-wise from the workbook XML. Text calls it Supplementary Table 2.",
+      "acquisition_recipe": {
+        "resolved_url": "https://static-content.springer.com/esm/art%3A10.1186%2Fs10020-025-01207-4/MediaObjects/10020_2025_1207_MOESM2_ESM.xlsx",
+        "http_method": "GET",
+        "tier": "publisher_static_or_pmc_cdn",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "13ec31f9bb6d596e5b081845690d7c978e1a21ddd3c40ca0d25be88d9f6f0fff",
+        "http_status": 200,
+        "bytes": 10619
+      }
+    },
+    {
+      "path": "files/supplement/PMID40301740/10020_2025_1207_MOESM3_ESM.pdf",
+      "sha256": "92180c2baa96d953c5f291ea668166a878b99491c64653b9e13d879ab1d560f4",
+      "kind": "supplement_binary",
+      "note": "Additional file 3 (one-page PDF): hSMN1 and coSMN1 nucleotide sequences only; read as text via pdftotext.",
+      "acquisition_recipe": {
+        "resolved_url": "https://static-content.springer.com/esm/art%3A10.1186%2Fs10020-025-01207-4/MediaObjects/10020_2025_1207_MOESM3_ESM.pdf",
+        "http_method": "GET",
+        "tier": "publisher_static_or_pmc_cdn",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "92180c2baa96d953c5f291ea668166a878b99491c64653b9e13d879ab1d560f4",
+        "http_status": 200,
+        "bytes": 41252
+      }
     }
   ],
   "landing": [
@@ -154,6 +256,73 @@
         "artifact": "files/fulltext/PMID40301740_Ma2025_PMC.xml",
         "anchor": "Results, 'Dose-Dependent rescue of phenotype in SMA Type 3 mouse model following ICV injection of AAV9-coSMN1'",
         "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The NHP anti-drug antibody result sits in a supplementary workbook; the running text gives it one sentence.",
+        "snippet": "were triggered two weeks after treatment (Supplementary Table 2) and persisted at a stable level",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID40301740_Ma2025_PMC.xml",
+        "anchor": "Results, NHP safety and biodistribution section",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Pre-dosing screen and anaesthetic are the only NHP pre-treatment conditions the Methods name; no immunosuppressant is named in the Methods.",
+        "snippet": "The nonhuman primates with a AAV9 neutralizing Ab of ≤ 1:50 were confirmed before treatment and anesthetized using intramuscular injection of ketamine",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID40301740_Ma2025_PMC.xml",
+        "anchor": "Materials and methods, animal injection paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Figure 7 panel A shows two H&E fields labelled Cervical and Lumbar and no control H&E field; no scale bar and no scoring are printed on the panel; the panel does not decide the legend-versus-text conflict.",
+        "snippet": "[panel attestation - Fig. 7 raster inspected] Panel A: two H&E fields (Cervical, Lumbar), a stray letter a in the top-left corner, no control field, no scale bar, no inflammation score. Panel B: SMN IHC, rows DRG and Spinal Cord, columns Control and AAV9-coSMN1.",
+        "surface": "figure",
+        "artifact": "files/supplement/PMID40301740/10020_2025_1207_Fig7_HTML.png",
+        "anchor": "Figure 7 panels A and B",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[0]",
+        "qualifies_needle": "no signs of inflammatory cell infiltration",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "Figure 7 panel B shows SMN signal in treated DRG as sparse granular cytoplasmic puncta in a few neurons, and stronger staining in treated spinal-cord neurons; no quantification is printed on the panel.",
+        "snippet": "[panel attestation - Fig. 7B inspected] Treated DRG: faint granular signal in the cytoplasm of one or two neurons; treated spinal cord: dense brown signal in large neurons; control panels unstained. No count, intensity value or scale bar printed.",
+        "surface": "figure",
+        "artifact": "files/supplement/PMID40301740/10020_2025_1207_Fig7_HTML.png",
+        "anchor": "Figure 7B",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "Table 1 (female mice, 13 weeks) prints mean +/- SD per dose group with no n, no test and no flag; ALT at the middle dose is 123 +/- 172 U/L against 61 +/- 19 control.",
+        "snippet": "[table attestation - rendered image read cell-wise] ALT(U/L): Control 61±19; 2.6E+13 vg/kg 62±23; 5.8E+13 vg/kg 123±172; 1.9E+14 vg/kg 50±14. AST(U/L): 74±14; 88±28; 104±54; 99±42.",
+        "surface": "figure",
+        "artifact": "files/supplement/PMID40301740/10020_2025_1207_Tab1_HTML.jpg",
+        "anchor": "Table 1",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "Table 2 (male mice, 13 weeks) prints total bilirubin at the high dose as 3.49 +/- 2.53 umol/L against 1.36 +/- 0.87 control, without n or test.",
+        "snippet": "[table attestation - rendered image read cell-wise] TBIL(µmol/L): Control 1.36±0.87; 2.6E+13 vg/kg 1.28±0.26; 5.8E+13 vg/kg 1.60±0.87; 1.9E+14 vg/kg 3.49±2.53. ALT(U/L): 100±60; 116±133; 81±38; 101±73.",
+        "surface": "figure",
+        "artifact": "files/supplement/PMID40301740/10020_2025_1207_Tab2_HTML.jpg",
+        "anchor": "Table 2",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "Additional file 2 holds anti-AAV9 and anti-SMN antibody titres for 4 control and 8 treated animals; all 8 treated animals are anti-AAV9 positive at day 14 and 7 of 8 are anti-SMN positive at day 28.",
+        "snippet": "[spreadsheet attestation - read cell-wise from the workbook XML] Anti-AAV9 Ab titer, Test group, D14: +(1:6400) +(1:1600) +(1:1600) +(1:1600) +(1:6400) +(1:1600) +(1:6400) +(1:1600); Anti-SMN Ab titer, Test group, D28: +(1:800) +(1:1600) +(1:800) +(1:6400) +(1:200) - +(1:100) +(1:1600); D90 anti-SMN last animal +(1:102400).",
+        "surface": "figure",
+        "artifact": "files/supplement/PMID40301740/10020_2025_1207_MOESM2_ESM.xlsx",
+        "anchor": "Additional file 2, anti-AAV9 and anti-SMN blocks",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "Additional file 1 lists 14 tissues per animal and none is a dorsal root ganglion, sciatic nerve or other peripheral-nerve row.",
+        "snippet": "[spreadsheet attestation - read cell-wise from the workbook XML] Tissue rows: liver, heart, Spleen, lung, kidney, brain, spinal cord, ovary/testis, uterus/Epididymis, ileum, colon, triceps muscle of arm, quadriceps femoris, blood. Footer: N/A: Below detection limit.",
+        "surface": "figure",
+        "artifact": "files/supplement/PMID40301740/10020_2025_1207_MOESM1_ESM.xlsx",
+        "anchor": "Additional file 1, tissue column, all three dose blocks",
+        "panel_text_relation": "panel_only"
       }
     ]
   }
