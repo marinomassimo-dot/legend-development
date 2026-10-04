@@ -1,0 +1,280 @@
+{
+ "schema_version": 2,
+ "pmid": "37946251",
+ "doi": "10.1186/s13073-023-01240-0",
+ "receipt": "FTR-20261004-37946251-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID37946251.md",
+  "disease-models/wwox/research/intake_wave_20261004w8_A.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W8-A-PATIENT-OVERLAP-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W8-A-REGISTRY-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "A re-report of an already-published WWOX patient with no new measurement; nothing to mine."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No intervention is tested."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is tested."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "A reader cannot audit their own locators."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "A clinical-genomics WGS programme. Credible on SV and splice detection; for WWOX it reports DNA-level validation only and points to an earlier case series for the patient."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "registry_records.py get --pmid 37946251 (LEGEND)",
+    "count": 0,
+    "source": "LEGEND registries 2026-10-04"
+   },
+   {
+    "query": "fulltext_receipts.py status --pmid 37946251",
+    "count": 0,
+    "source": "receipt ledger 2026-10-04"
+   },
+   {
+    "query": "registry_records.py get --theme 517_1056 / His173_Met352 / 705dup (after first pass)",
+    "count": 0,
+    "source": "LEGEND registries 2026-10-04"
+   }
+  ],
+  "note": "LEGEND holds no record of this paper; it holds Piard 2019 (PMID 30356099) as PAPER 117, whose Patient 11 this paper re-reports."
+ },
+ "multihop": {
+  "references_enumerated": 131,
+  "gene_direct_refs_in_source": [
+   "30356099"
+  ],
+  "resolved": [
+   {
+    "pmid": "30356099",
+    "how": "Piard 2019 is held with receipted readings in LEGEND; its Supplementary Table 1 (files/fulltext/PMID30356099_Piard2019_supplement/41436_2018_339_MOESM1_ESM.xlsx) was opened here and read cell-wise: Patient 11 is c.[517_1056del];[705dupG], the same genotype."
+   }
+  ],
+  "queued": [],
+  "disposition": "131 references enumerated from the JATS ref-list; one WWOX gene-direct reference (ref 97, Piard 2019, no PMID in the ref element; identified by title), resolved against the held artefact."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 37946251; --theme Pagnamenta, 517_1056, His173_Met352, 705dup, 'exons 6-8' after the first pass",
+  "hits": 2,
+  "note": "'Pagnamenta' hits PAPER 117 (Piard 2019, co-author) and its corpus stub; no record names this paper or the allele pair."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-04 via PubMed metadata (get_article_metadata): publication types ['Journal Article', \"Research Support, Non-U.S. Gov't\"]; no retraction, expression of concern or correction listed for PMID 37946251.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 131,
+   "references_screened": 120,
+   "references_with_doi": 120,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 24,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 11
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID37946251_Pagnamenta2023_PMC.xml",
+   "sha256": "79178fed9e2a7aa878e5acdce3c3878e9dafd8285ca41ab0d78a7b206d8ad737",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10636885/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": false,
+    "result_sha256": "79178fed9e2a7aa878e5acdce3c3878e9dafd8285ca41ab0d78a7b206d8ad737"
+   }
+  },
+  {
+   "path": "files/supplements/PMID37946251/s.zip",
+   "sha256": "cbb1d8092f78ea79f0c0f1fca657f847c0c24c1f8cd425eef8254cd46a6b35aa",
+   "kind": "supplement_binary",
+   "note": "Europe PMC supplementaryFiles container for PMC10636885, kept unchanged; the members cited below were extracted from it byte-for-byte.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10636885/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": false,
+    "result_sha256": "cbb1d8092f78ea79f0c0f1fca657f847c0c24c1f8cd425eef8254cd46a6b35aa"
+   }
+  },
+  {
+   "path": "files/supplements/PMID37946251/13073_2023_1240_Tab1_HTML.jpg",
+   "sha256": "79898bbf09530b674e4682cdd6ae86cedc0d292a6cd8398f52b09d804cb908c4",
+   "kind": "figure",
+   "note": "Table 1 as published (JPEG); the JATS table-wrap carries only the footnote. Read rotated and cropped to the WWOX row.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10636885/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip, member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": true,
+    "derived_from": "files/supplements/PMID37946251/s.zip",
+    "extractor": {
+     "name": "python3 -m zipfile",
+     "version": "Python 3.12",
+     "call": "zipfile -e, member written byte-for-byte"
+    },
+    "result_sha256": "79898bbf09530b674e4682cdd6ae86cedc0d292a6cd8398f52b09d804cb908c4"
+   }
+  },
+  {
+   "path": "files/supplements/PMID37946251/13073_2023_1240_MOESM3_ESM.xlsx",
+   "sha256": "31758d932fc874bfbfef6e371a6d1317c4832412fdc58f5002ae293db2624980",
+   "kind": "supplement_binary",
+   "note": "Additional file 3, Supplementary Tables S1-S9.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10636885/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip, member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": true,
+    "derived_from": "files/supplements/PMID37946251/s.zip",
+    "extractor": {
+     "name": "python3 -m zipfile",
+     "version": "Python 3.12",
+     "call": "zipfile -e, member written byte-for-byte"
+    },
+    "result_sha256": "31758d932fc874bfbfef6e371a6d1317c4832412fdc58f5002ae293db2624980"
+   }
+  },
+  {
+   "path": "files/supplements/PMID37946251/MOESM3_009Sev001_rows.txt",
+   "sha256": "bb487b01b3715f87d248b86e1cbb472caf05ecd5206039cffe581f159d83cd21",
+   "kind": "supplement_text",
+   "note": "Derived cell-wise text of the rows naming the WWOX case in Additional file 3, with each sheet's first three rows as header; nothing else of the workbook is represented. Contains a population-ancestry column that this edition does not carry.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID37946251/13073_2023_1240_MOESM3_ESM.xlsx",
+    "acquired_on": "2026-10-04",
+    "extractor": {
+     "name": "xlsx_rows.py (scratchpad, stdlib zipfile + regex)",
+     "version": "2026-10-04",
+     "call": "rows of sheet6 and sheet7 containing '009Sev001', sharedStrings resolved, XML entities unescaped"
+    },
+    "result_sha256": "bb487b01b3715f87d248b86e1cbb472caf05ecd5206039cffe581f159d83cd21"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC10636885/fullTextXML on 2026-10-04 returned HTTP 200 with a <body>; Table 1 is published only as an image, so its WWOX row is read from the image and the same facts are anchored cell-wise in Table S7.",
+  "entries": [
+   {
+    "proposition": "The WWOX allele pair is an in-frame 219 kb deletion of exons 6-8 in trans with c.705dup p.(His236fs); the 180-amino-acid loss 'including the mitochondrial targeting sequence' is stated from coordinates, with no RNA or protein assay reported.",
+    "snippet": "A fifth SV led to an in-frame 219 kb deletion of exons 6–8 of WWOX, leading to loss of 180 amino acids including the mitochondrial targeting sequence.",
+    "anchor": "Results, Structural variants, fifth SV paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37946251_Pagnamenta2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The paper itself states that this compound heterozygous genotype was previously reported in a published case series (ref 97 = Piard 2019), so the patient is not an independent observation.",
+    "snippet": "These compound heterozygous variants were previously reported as part of a case series expanding the phenotypic spectrum associated with this gene [97].",
+    "anchor": "Results, Structural variants, fifth SV paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37946251_Pagnamenta2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 1 (published as an image) names the case as Patient 11 of Piard 2019 Table S1, gives validation as PCR and Sanger sequencing (DNA only), consequence 'Inframe deletion', and the reason it was missed as the gene not being on the validated panel, with the deletion 'detectable by array'.",
+    "snippet": "Reported as Patient 11 (Table S1) in case series in Piard et al [97].",
+    "anchor": "Table 1, row 009Sev001 (13073_2023_1240_Tab1_HTML.jpg, 540x1651, rotated 90 degrees and cropped to the row; read at 150%)",
+    "surface": "figure",
+    "artifact": [
+     "files/supplements/PMID37946251/13073_2023_1240_Tab1_HTML.jpg"
+    ],
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[1]",
+    "qualifies_needle": "previously reported as part of a case series"
+   },
+   {
+    "proposition": "Table S7 lists the frameshift with zygosity 'hom' and the deletion 'het' in a case with one sequenced sample: the frameshift lies inside the deleted interval and is called hemizygous, which is what places the two alleles in trans; no parental genotypes are listed.",
+    "snippet": "D=WWOX | E=chr16:g.78424965_78424966insG | F=ENST00000566780.5:p.His236fs | G=frameshift_variant | H=CH | I=hom",
+    "anchor": "Additional file 3, Table S7 (sheet7), row 18, cell-wise",
+    "surface": "supplement",
+    "artifact": "files/supplements/PMID37946251/MOESM3_009Sev001_rows.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table S7 applies PVS1 (a null-variant criterion) to the in-frame deletion as well as to the frameshift; the deletion's consequence is annotated, not measured.",
+    "snippet": "G=inframe_deletion | H=CH | I=het | L=PMID: 30356099 | M=PVS1, PM2, PM3",
+    "anchor": "Additional file 3, Table S7 (sheet7), row 19, cell-wise",
+    "surface": "supplement",
+    "artifact": "files/supplements/PMID37946251/MOESM3_009Sev001_rows.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The row-level reason the WWOX case was missed before WGS is the panel's gene content, not an array failure.",
+    "snippet": "Q=Gene not incorporated into validated panel test at the time of referral",
+    "anchor": "Additional file 3, Table S7 (sheet7), rows 18-19, cell-wise",
+    "surface": "supplement",
+    "artifact": "files/supplements/PMID37946251/MOESM3_009Sev001_rows.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The paper's general statement groups the WWOX deletion with three other SVs said to be missable by arrays for probe coverage, thresholds or gene novelty; it is not specific to WWOX.",
+    "snippet": "Although in principle, four of these SVs (WWOX, two FOXD3 and DHRS3 variants) could have been detected by arrays, they were not picked up by standard of care testing prior to WGS referral",
+    "anchor": "Results, Structural variants, paragraph after the complex rearrangements",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37946251_Pagnamenta2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}

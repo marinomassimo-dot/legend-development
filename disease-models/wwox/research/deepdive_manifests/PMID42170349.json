@@ -1,0 +1,221 @@
+{
+ "schema_version": 2,
+ "pmid": "42170349",
+ "doi": "10.1016/j.omta.2026.201746",
+ "receipt": "FTR-20261004-42170349-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID42170349.md",
+  "disease-models/wwox/research/intake_wave_20261004w7_C1.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "A single-author commentary with no measurement; it relays a liver primary that is not a WWOX source."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "The piece contains no lever specific to a WWOX cassette."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is tested."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes go through candidates."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "A candidate from this reading narrows no consolidated baseline claim; triples are published for an auditor."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 324,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "weighting": "PubMed counts 2026-10-04: Flotte TR[au] 324 records, 0 intersecting WWOX. Single-author commentary (publication type News) by an AAV-clinical-immunology author; declares no competing interests. No measurement of its own and no WWOX content."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND AAV",
+    "count": 2,
+    "source": "PubMed ESearch 2026-10-04"
+   }
+  ],
+  "note": "WWOX appears zero times in the body (grep of the persisted JATS). Earned null for the gene."
+ },
+ "multihop": {
+  "references_enumerated": 10,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "All 10 references enumerated; none concerns WWOX. The relayed primary (ref 4, liver expression profiling after high-dose systemic AAV9-SMN1) is a toxicity primary, not a WWOX source, and is not queued as a hop."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42170349 (done after the first pass was written)",
+  "hits": 0,
+  "note": "Filled in the comparison step of the note."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-04 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn, CommentIn or UpdateIn link; publication type News.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 10,
+   "references_screened": 9,
+   "references_with_doi": 9,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 24,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42170349_Flotte2026_PMC.xml",
+   "sha256": "f4aa240ad6bf92862e9e50d5fdaf405a129aa8b9e956cf273772ee500d2cef9e",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13188094/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "f4aa240ad6bf92862e9e50d5fdaf405a129aa8b9e956cf273772ee500d2cef9e"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID42170349_Flotte2026_figures/gr1.jpg",
+   "sha256": "18f591205447194ab828df2d4631a62ef92ccd16b179defd2f560a290dc8ac7e",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13188094/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC supplementaryFiles archive, member gr1.jpg extracted unchanged (PMC reader pages answer a reCAPTCHA)",
+    "user_agent_policy": "browser_like",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "18f591205447194ab828df2d4631a62ef92ccd16b179defd2f560a290dc8ac7e"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST search (EXT_ID, SRC:MED) returned the PMCID and fullTextXML returned a JATS body on 2026-10-04; every locator is matched against the persisted JATS.",
+  "abstract_anchoring_waived": "No locator draws on an abstract; every entry is matched against the body or a table of the declared JATS artifact.",
+  "note": "Coverage: the whole running text, the single figure (a schematic, inspected as an image) and the 10 references were read. No abstract, table or supplement exists. The piece reports another group's primary; no data panel exists in it.",
+  "entries": [
+   {
+    "proposition": "The piece is a commentary on a separate primary: expression profiling of liver after high-dose systemic rAAV9-SMN1 in cynomolgus macaques and rats.",
+    "snippet": "examine the roles of unfolded protein responses (UPRs), DNA damage/p53 responses, innate immune and liver metabolic pathways in hepatotoxicity following high-dose systemic rAAV9-SMN1 administration in two different species",
+    "anchor": "Main text, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42170349_Flotte2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In the relayed primary, rats expressed the transgene less and lacked UPR induction; the commentator reads that as UPR tied to synthesis of the transgene product.",
+    "snippet": "Rats did not express the transgene as robustly and lacked induction of the UPR. This strongly suggests that UPR-related changes were specifically related to the synthesis of transgene product.",
+    "anchor": "Main text, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42170349_Flotte2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PERK-branch UPR magnitude was associated with transgene expression level across the relayed datasets, with pro-apoptotic mitochondrial genes induced.",
+    "snippet": "the magnitude of UPR activation, particularly the PERK-induced (endoplasmic reticulum [ER] stress) response, was strongly associated with the level of transgene expression.",
+    "anchor": "Main text, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42170349_Flotte2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Immune pathway activation and reduced liver-identity gene expression were seen in both species and both sexes (relayed).",
+    "snippet": "were seen across both species and both sexes of animals.",
+    "anchor": "Main text, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42170349_Flotte2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The commentator frames vector DNA as presenting hundreds of double-strand-break-like ends to the nucleus and notes that some results include apoptosis in cells lacking p53.",
+    "snippet": "presents the nuclear environment with hundreds of copies of what appear to be double-stranded DNA breaks.",
+    "anchor": "Main text, para 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42170349_Flotte2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Innate sensing of vector (TLR2, TLR9) is named as an initiating step independent of transgene expression.",
+    "snippet": "The activation of toll receptors is an initial step in activation of various innate immune response genes, including cytokine encoding genes.",
+    "anchor": "Main text, para 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42170349_Flotte2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The commentator ties dose-related toxicity to the dorsal root ganglia and says it is lower when transcriptional activity is lower (two earlier macaque papers cited).",
+    "snippet": "This form of dose-related toxicity has been observed in the dorsal root ganglia and is less significant when the transcriptional activity is lower.",
+    "anchor": "Main text, para 6",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42170349_Flotte2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The commentator states that natural infection does not model the multiplicities used in gene therapy.",
+    "snippet": "these multiplicities of infection would never be encountered in nature, so the lessons to be drawn from natural AAV infection are quite limited.",
+    "anchor": "Main text, para 7",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42170349_Flotte2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The piece states that none of the clinical toxicity syndromes was predicted before it appeared in humans.",
+    "snippet": "None of these empirically observed syndromes were predicted prior to being observed in humans, and the cellular and molecular basis for these syndromes is not well understood.",
+    "anchor": "Main text, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42170349_Flotte2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1 (schematic) orders the cell events: receptor binding, endosomal innate sensing, escape, uncoating, double-strand-break-like response, transcription and supra-physiologic translation with the unfolded protein response.",
+    "snippet": "Cellular events triggered by exposure to high systemic doses of rAAV vectors",
+    "anchor": "Figure 1 title",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42170349_Flotte2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}

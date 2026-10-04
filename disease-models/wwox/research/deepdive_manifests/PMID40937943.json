@@ -1,0 +1,137 @@
+{
+  "schema_version": 2,
+  "pmid": "40937943",
+  "doi": "10.1002/alz.70593",
+  "receipt": "FTR-20261004-40937943-01",
+  "context_policy": "SOURCE_FIRST",
+  "landing": [
+    "disease-models/wwox/research/fulltext_dossiers/PMID40937943.md",
+    "disease-models/wwox/research/intake_wave_20261004w7_A.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261004W7-A-REGISTRY-01.md"
+  ],
+  "skills_considered": [
+    {"skill": "find-fulltext", "used": true},
+    {"skill": "legend-study-intake-triage", "used": true},
+    {"skill": "legend-deepdive", "used": true},
+    {"skill": "legend-discovery", "used": false, "reason": "An ancestry contrast in an AD iPSC panel yields no WWOX lead to mine; the one consequence is a registry landing."},
+    {"skill": "legend-hypothesis-forge", "used": false, "reason": "No WWOX perturbation and no WWOX-linked myelin readout exists here."},
+    {"skill": "legend-safety-triage", "used": false, "reason": "No compound is tested."},
+    {"skill": "legend-commit", "used": false, "reason": "Scientists do not touch the four current files."},
+    {"skill": "legend-locator-audit", "used": false, "reason": "A reader cannot audit their own locators."}
+  ],
+  "group_assessment": {
+    "total_publications": 1,
+    "publications_on_gene": 0,
+    "research_type": "mixed",
+    "is_primary_group_for_disease": false,
+    "weighting": "Hussman Institute for Human Genomics (Miami) with Case Western, a large AD-genetics group with iPSC differentiation and multiome capability. No WWOX work; WWOX enters only as one row of an AD-GWAS gene list."
+  },
+  "field_density": {
+    "queries": [
+      {"query": "registry_records.py get --pmid 40937943 (LEGEND)", "count": 0, "source": "LEGEND registries 2026-10-04"},
+      {"query": "fulltext_receipts.py status --pmid 40937943", "count": 0, "source": "receipt ledger 2026-10-04"}
+    ],
+    "note": "LEGEND holds no record of this paper. It was selected as the only record found in which WWOX expression is measured in oligodendrocyte-lineage cells."
+  },
+  "multihop": {
+    "references_enumerated": 62,
+    "gene_direct_refs_in_source": [],
+    "resolved": [],
+    "queued": [],
+    "disposition": "The reference list holds no WWOX-direct primary: WWOX enters this paper only through AD GWAS gene lists cited as references 1, 3, 8, 37 and 38, none of which is a WWOX paper. Nothing is owed."
+  },
+  "corpus_crossquery": {
+    "query": "registry_records.py get --pmid 40937943; themes oligodendrocyte / myelin after the first pass",
+    "hits": 0,
+    "note": "No registry record names this paper."
+  },
+  "retraction_check": {
+    "checked": true,
+    "result": "Checked 2026-10-04 via PubMed metadata (get_article_metadata): publication types ['Journal Article']; no retraction, expression of concern or correction listed for PMID 40937943.",
+    "dependencies": {
+      "flagged": [],
+      "noted": [],
+      "paper_verdict": "SCREENED_CLEAN",
+      "reference_source": "network",
+      "references_declared": 62,
+      "references_screened": 61,
+      "references_with_doi": 61,
+      "schema": "retraction_check.dependencies/1",
+      "screened": true,
+      "snapshot": {"date": "2026-09-10", "days_since_fetch": 24, "rows": 72476, "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"},
+      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+      "unscreenable": {"UNSCREENABLE_NO_DOI": 1}
+    }
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID40937943_Ramirez2025_PMC.xml",
+      "sha256": "f7ed2cd7d88606e20f80d7e81ae74856cc108c1a770743a1088d41d970849970",
+      "kind": "article_text",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12426912/fullTextXML",
+        "http_method": "GET",
+        "tier": "Europe PMC REST fullTextXML",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "f7ed2cd7d88606e20f80d7e81ae74856cc108c1a770743a1088d41d970849970"
+      }
+    }
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC REST PMC12426912/fullTextXML on 2026-10-04 returned HTTP 200 with a <body> of 198,472 bytes; the paper is indexed in Europe PMC and PMC (PMC12426912), so the locators are anchored in the body and in Table 1, not in the abstract.",
+    "entries": [
+      {
+        "proposition": "WWOX is measured only as a differentially expressed gene between ancestry groups inside the iOL cluster; the sentence that introduces it miscounts its own list, writing 'five' before naming six genes.",
+        "snippet": "only five AD GWAS hits were differentially expressed: ADAM17, CLU, EPDR1, FGF12, MAF, and WWOX",
+        "anchor": "Results, comparison with AD GWAS loci",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID40937943_Ramirez2025_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The WWOX numbers are two ancestry contrasts in iPSC-derived oligodendrocytes: fold change -1.34 with adjusted p 1.95E-05 (AF versus AI) and -1.33 with adjusted p 9.59E-03 (EU versus AI), both marked as not differing between males and females.",
+        "snippet": "AF versus AI iOL WWOX −1.34 AF 1.95E‐05 No MAF −2.20 AF 1.47E‐02 No EU versus AI iOL WWOX −1.33 EU 9.59E‐03 No",
+        "anchor": "Table 1 (re-extracted cell-wise)",
+        "surface": "table",
+        "artifact": "files/fulltext/PMID40937943_Ramirez2025_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The p values are cell-level MAST statistics with the cell detection rate as the only covariate; donor is not modelled, so nuclei from the same line are treated as independent observations.",
+        "snippet": "The differential expression of genes between ancestral groups within each cluster was determined using the MAST test",
+        "anchor": "Methods, single-nucleus RNA-seq analysis",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID40937943_Ramirez2025_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The whole panel is 12 iPSC lines, four per ancestry, so each ancestry contrast rests on four donors.",
+        "snippet": "We generated a total of 12 iPSC lines (four AF, four AI, and four EU) in this study",
+        "anchor": "Results, first paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID40937943_Ramirez2025_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The denominator behind the p values is 47,898 nuclei across all 12 lines and all clusters, not per cluster.",
+        "snippet": "We characterized a total of 47,898 cells, with an average of 3991",
+        "anchor": "Results, single-nucleus transcriptomics",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID40937943_Ramirez2025_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "In the all-female re-analysis WWOX also reaches significance in the progenitor cluster, in one contrast of two AI females against four AF females.",
+        "snippet": "we identified two additional significant AD GWAS genes, ANK3 and WWOX, as differentially expressed between AI and AF",
+        "anchor": "Results, sex-stratified re-analysis",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID40937943_Ramirez2025_PMC.xml",
+        "panel_text_relation": "text_only"
+      }
+    ]
+  }
+}
