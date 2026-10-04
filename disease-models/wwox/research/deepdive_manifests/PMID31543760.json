@@ -478,6 +478,17 @@
     "disease-models/wwox/research/intake_wave_20261003_C.md",
     "disease-models/wwox/research/commit_candidates/CC-20261003-C-RESCUE-READOUT-01.md"
    ]
+  },
+  {
+   "receipt": "FTR-20261004-31543760-04",
+   "reader": "scientist (Scientist C), intake wave 13 2026-10-04",
+   "context_policy": "QUESTION_DRIVEN",
+   "what_changed": "Declared Data_Sheets 2-4 (Supplementary Figures S3-S5) and derived text layers of Data_Sheets 1, 2 and 4; appended seven entries. Supplementary Table 3 holds 108 gene-set rows against the body's 109; the knockdown-depth negative survives on every surface searched (Data_Sheet_3 labels not legible); no surface carries a migration, layering, glial or prenatal measurement. No earlier entry altered; the manifest receipt field stays on the producing reading.",
+   "outputs": [
+    "disease-models/wwox/research/fulltext_dossiers/PMID31543760.md",
+    "disease-models/wwox/research/intake_wave_20261004w13_C.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261004W13-C-CLAIM014-SCOPE-01.md"
+   ]
   }
  ]
 }
