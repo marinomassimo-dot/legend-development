@@ -43,7 +43,7 @@ edition: public
 ## 2. DISEASE-MODEL (WORKING-MODEL) VERSION
 
 ```yaml
-working_model_version: WM_v7.17
+working_model_version: WM_v7.18
 working_model_file: disease-models/wwox/registries/working_model_current.md
 narrative_view: disease-models/wwox/disease_model.md
 notes: "Canonical disease-level working model derived from public literature; disease_model.md is its narrative reader-facing view. The private individual-level record is not part of this edition."
@@ -106,12 +106,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20261004_004
+last_batch_commit_id: BATCH_20261004_005
 last_batch_commit_date: 2026-10-04
 last_batch_commit_type: MANUAL
-commit_candidates_propagated: 12
-target_wm_version: WM_v7.17
-trigger: MANUAL (operator-dispatched integration of intake wave 10, groups X and Y, with the residue enzymology candidate adjudicated and consumed; the backlog threshold of 5 was also met. The wave's first duty was a registry debt: PMID 21476439 had been read in full with its receipt on main and carried by no registry record, leaving test_batch_queue.py red on main with READ_NOT_REGISTERED; CORPUS P306 is now promoted to PAPER 244 and that suite closes. No claim was created, none reversed and no consolidated baseline claim narrowed: CLAIM 002, CLAIM 003 and CLAIM 005 gain evidence-boundary text only, including a measured earned null. Five independent blind locator audits ran before the propagation over 37 triples; four mis-labelled propositions and one unverifiable causal clause were repaired at source before landing. Mirror's ex-post review of the two previous batches landed mid-batch: its ruling MIRROR-RULING-20261004-D6 classifies the eight-batch-old residue D6 of CC-20260826-GSK3B-S9-AXIS-01 as MINOR, and it is propagated here under both binding conditions (CLAIM 016 and CLAIM 035 receive the reciprocal Ser9 boundary in ONE batch, both horns left open, no Status or Summary assertion changed). Its five repair candidates land with it, the privacy one first, and three further privacy sites found by intake wave 11 were repaired: two locator snippets of deepdive_manifests/PMID40183601.json revised to parental-free verbatim spans of the same rows with the revision declared in the manifest, the corresponding audit triple of the wave-9 candidate repaired, and the corpus/literature titles of PMID 38407561 and one preprint descriptor generalised. public_release_gate was re-run after every privacy op: PASS, 0 BLOCK. The six group-B artefacts were absent from files/fulltext and were restored by exact SHA-256 match from this session's scratchpad at zero spend before any bibliographic identity was measured)
+commit_candidates_propagated: 11
+target_wm_version: WM_v7.18
+trigger: MANUAL (operator-dispatched integration of intake wave 11, groups A, B and C, with the wave-2 residue `CC-20260826-CLAIM003-01` re-authored and consumed; the backlog threshold of 5 was also met). The batch's first duty was a registry debt that **blocked** `BATCH_COMMIT`: the pre-flight `legend_lint` reported `ORPHAN_COMPLETE_READ` for PMID 40083435 and PMID 40884527, both completely read with receipts on `main` and carried by no registry record. All eleven wave PMIDs now have a landing — `PAPER 245` (the promotion of `CORPUS-STUB-041`), `PAPER 246`, `CORPUS-STUB-181`-`189`, `LIT-0539`-`0548`, and `LIT-0065` re-authored from front matter; PMID 40183601 needed no new record, because `PAPER 241`/`LIT-0533` were measured to exist on `main` at the start. No claim was created, none reversed and none narrowed: `CLAIM 003` (`consolidated baseline`) gains evidence-boundary text only, attributing every **quantitative** myelin endpoint of `PAPER 004` to a line other than the oligodendrocyte conditional and naming the qualitative readouts that line did receive — which closes the oldest debt in the queue after seven deferrals. A genotype-interpretation rule on uniparental isodisomy enters the working model. Nine independent blind locator audits ran before the propagation over **62 triples**: 56 SUPPORTED, 6 adverse, 0 UNVERIFIABLE, 0 artefacts absent — every adverse verdict repaired at source before landing. Step 0 measured every artefact of the scope present and digest-matching before any audit was dispatched. `public_release_gate` was re-run after the audit amendments: PASS, 0 BLOCK)
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -125,7 +125,7 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20261004_BATCH_20261004_004
+last_lint_id: LINT_20261004_BATCH_20261004_005
 last_lint_date: 2026-10-04
 last_lint_result: WARN
 ```

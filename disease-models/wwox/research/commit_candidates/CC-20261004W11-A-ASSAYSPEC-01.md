@@ -75,3 +75,15 @@ A motif called high-affinity by sequence inspection is not one until it is titra
 The proposed mechanism was tested causally by mutating the motif and recovering the affinity. | This restored the binding affinity to be comparable to the isolated WW tandem | Results, Intramolecular interactions provide specificity for WW domain peptide recognition — files/fulltext/PMID38719828_MartinezLumbreras2024_PMC.xml
 
 The authors state their generalisation to other WW-tandem proteins as a hypothesis still to be tested. | Whether the internal proline-rich sequences that these proteins have, act in a similar way as in PRPF40A still needs further analysis | Discussion, Intramolecular autoinhibition proofreads the binding selectivity of WW domains — files/fulltext/PMID38719828_MartinezLumbreras2024_PMC.xml
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261004_005` (2026-10-04, ACTOR_ID `scientist`, Scientist O), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** PROPAGATED
+
+Class re-judged **MINOR** (a method-only research-layer lead). Landed as **`DL-MECH-116`**; the source's registry landing is **`CORPUS-STUB-181`** / **`LIT-0540`** (the candidate's provisional `CORPUS-STUB-180` and `LIT-0527` were both taken by earlier batches and were re-measured). **Blind locator audit: 9 triples, 9 QUOTE_FOUND, 7 SUPPORTED, 2 NOT_SUPPORTED_AS_LABELLED.** Both adverse verdicts were **repaired at source before landing**: (1) the candidate said a published tandem-WW structure *«was wrong because it was built on a truncated construct»*; the source hedges and offers **two** causes — a truncation of the C-terminal helix **or** erroneous automated NOE assignments — so the landed text states the requirement (boundaries justified by data) without asserting the cause; (2) *«a motif called high-affinity by sequence inspection is not one until it is titrated»* is **the reader's maxim, not the source's**, and is not carried. Two further qualifications folded in: the hundreds-of-micromolar baseline is **cited** (with the paper's own 150-600 micromolar individual-domain values and a Kd of about 1 micromolar for the highest-affinity tandem peptide), and the source **uses** two orthogonal techniques rather than declaring them required. The auditor confirmed the candidate's own prohibition: **WWOX is not in the authors' list** of WW-tandem proteins that may be autoinhibited.
+
+**Not medical advice.**
