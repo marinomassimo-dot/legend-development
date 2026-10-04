@@ -54,7 +54,7 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 | CLAIM 002 | WWOX-LoF causes network hyperexcitability; AAV-WWOX rescues organoid phenotype | consolidated baseline | DATO + INFERENZA prudente | P1 — Ca²⁺ / network dysregulation; P7 —  | NOT_ANNOTATED | 2 | 5 |
 | CLAIM 003 | Neuronal WWOX deletion induces non-cell-autonomous hypomyelination | consolidated baseline | DATO | P4 — myelination / white matter | NOT_ANNOTATED | 3 | 3 |
 | CLAIM 004 | AAV9-WWOX neuron-targeted rescue shows multi-domain in vivo improvement | consolidated baseline | DATO | P7 — gene therapy readiness | NOT_ANNOTATED | 10 | 3 |
-| CLAIM 005 | Reduced GABAergic interneurons and glial activation in WWOX-KO | consolidated baseline | DATO | P2 — GABAergic vulnerability; P6 — neuro | NOT_ANNOTATED | 20 | 4 |
+| CLAIM 005 | Reduced GABAergic interneurons and glial activation in WWOX-KO | consolidated baseline | DATO | P2 — GABAergic vulnerability; P6 — neuro | NOT_ANNOTATED | 20 | 6 |
 | CLAIM 006 | P47T model shows progressive hippocampal astrogliosis; microglial progression shown for morpholo | consolidated baseline | DATO + INFERENZA prudente | P6 — neuroinflammation / glia | NOT_ANNOTATED | 0 | 2 |
 | CLAIM 007 | P47T abolishes or near-abolishes WWOX recovery by two PPPY peptides in vitro | consolidated baseline | DATO | P3 — MYC/Wnt / interaction logic | NOT_ANNOTATED | 1 | 4 |
 | CLAIM 008 | WOREE and SCAR12 form a genotype-phenotype spectrum | consolidated baseline | DATO | Clinical spectrum / genotype-phenotype | NOT_ANNOTATED | 0 | 3 |
@@ -295,17 +295,17 @@ place to look, not a set of missing edges.
 | CLAIM 001 ↔ CLAIM 009 | PAPER 017 |
 | CLAIM 001 ↔ CLAIM 013 | PAPER 017 |
 | CLAIM 002 ↔ CLAIM 004 | PAPER 082, PAPER 083 |
+| CLAIM 002 ↔ CLAIM 005 | PAPER 039 |
 | CLAIM 002 ↔ CLAIM 021 | PAPER 031 |
 | CLAIM 002 ↔ CLAIM 030 | PAPER 039 |
 | CLAIM 002 ↔ CLAIM 032 | PAPER 039 |
+| CLAIM 003 ↔ CLAIM 005 | PAPER 004 |
 | CLAIM 003 ↔ CLAIM 006 | PAPER 126 |
 | CLAIM 003 ↔ CLAIM 030 | PAPER 126 |
 | CLAIM 003 ↔ CLAIM 037 | PAPER 126 |
-| CLAIM 005 ↔ CLAIM 038 | PAPER 057, PAPER 058 |
-| CLAIM 006 ↔ CLAIM 007 | PAPER 007 |
-| CLAIM 006 ↔ CLAIM 030 | PAPER 126 |
+| CLAIM 005 ↔ CLAIM 030 | PAPER 039 |
 
-Showing 12 of 38. The complete list is in the export.
+Showing 12 of 43. The complete list is in the export.
 
 ## 5 · Candidate edges — propositions already written, awaiting review
 
@@ -373,6 +373,6 @@ carried no connective from the lexicon.
 ## Provenance
 
 Derived from 235 input files; digest
-`2f712d4458398132`. Sources: the claim, paper and
+`37d8ee21921b0b76`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 
