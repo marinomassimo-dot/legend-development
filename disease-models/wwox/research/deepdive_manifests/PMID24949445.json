@@ -7,7 +7,8 @@
   "fulltext_dossiers/PMID24949445.md",
   "CC-20261002-DOSE-GAIN-DISMISSAL-01",
   "CC-20261002-INTAKE-A-REGISTRY-01",
-  "disease-models/wwox/research/intake_wave_20261002_A.md"
+  "disease-models/wwox/research/intake_wave_20261002_A.md",
+  "disease-models/wwox/research/intake_wave_20261004w13_A.md"
  ],
  "skills_considered": [
   {
@@ -170,6 +171,14 @@
     "surface": "body",
     "artifact": "files/fulltext/PMID24949445_Szymanska2014_PMC.xml",
     "anchor": "Discussion, paragraph on CMIP",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Wave-13 re-read (cell-wise): the interval coordinates on which DIS-022 rests are a Table 4 cell, and the table itself names the assembly they are on (NCBI36/hg18), so the reader's NCBI36-to-GRCh37 mapping starts from a printed table value, not from a flattening artefact.",
+    "snippet": "All genomic coordinates are based on the NCBI36/hg18 reference genome.",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID24949445_Szymanska2014_PMC.xml",
+    "anchor": "Table 4, caption",
     "panel_text_relation": "text_only"
    }
   ]
