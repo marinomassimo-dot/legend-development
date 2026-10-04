@@ -96,3 +96,15 @@ read at native resolution, not a string match.
 - [PMID 42770556, artefact `files/fulltext/PMID42770556_Lima2026_PMC.xml`] (The knockdown reduced Sfpq by about half. | SFPQ knockdown caused around 50% reduction in Sfpq expression in CNCCs | Figure 7A legend)
 - [PMID 42770556, artefact `files/fulltext/PMID42770556_Lima2026_PMC.xml`] (The human-disease sentence is the one that carries the citation under challenge. | In human patients, pathogenic variants of WWOX with large deletions within the long introns have been associated with epileptic encephalopathy syndrome manifesting shared facial phenotype | Discussion)
 - [PMID 42770556, artefact `files/fulltext/PMID42770556_Lima2026_PMC.xml`] (IR-elevated genes are long: median about 100 kb against about 10 kb in controls. | the genes with increased IR in Sfpq -depleted CNCCs have a median length of ~100 kb | Results, long-gene section)
+
+## BATCH DISPOSITION — `BATCH_20261004_003` (2026-10-04, ACTOR_ID `scientist`, Scientist M), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** `PROPAGATED` (MINOR, WM_v7.15 → WM_v7.16).
+
+**Surfaces written:** research_lines_current.md
+
+One new research line, **`RL-C-20261004w9c3`**. The record states the finding at the strength the source carries and no further: the intron-retention rise for *Wwox* **is** marked, the abundance fall is **not**, the retained fraction is about one percent, no *Wwox*-specific experiment exists, and the Discussion's human-disease sentence rests on a citation whose full text contains **zero** occurrences of WWOX, *epileptic* or *encephalopathy*. The Results/Discussion inconsistency on which intron is retained is **recorded, not reconciled**, with the standing rule restated: an intron number the source does not print is a **derivation** and must carry `INFERENZA`. ⚠️ The paper has **no dossier** — the write was halted by a model safety classifier — and `PAPER 243`'s `Evidence depth` field says so rather than naming a file that does not exist. **Blind locator audit:** not run (research-layer record, no claim or baseline touched); sampled by the integrator against the manifest only, and named here so the asymmetry is visible.
+
+**Not medical advice.**

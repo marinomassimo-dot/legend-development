@@ -74,3 +74,15 @@ Format: `(proposition | verbatim quote | anchor)`.
 - [PMID 35333110, same artefact] (Dog arm without immunosuppression | The dogs did not receive any immune suppression or anti-inflammatory regimen. | Results, canine model, para 2)
 - [PMID 35333110, same artefact] (Dog less sensitive than NHP | suggests that dog is less sensitive than NHP | Discussion, DRG paragraph)
 - [PMID 35333110, same artefact] (Severity scale 0-5 | (0 = normal, 1 = minimal, 2 = mild, 3 = moderate, 4 = marked, and 5 = severe) | Figure 5 legend, panel C)
+
+## BATCH DISPOSITION — `BATCH_20261004_003` (2026-10-04, ACTOR_ID `scientist`, Scientist M), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** `PROPAGATED` (MINOR, WM_v7.15 → WM_v7.16).
+
+**Surfaces written:** research_lines_current.md
+
+One new research line, **`RL-C-20261004w9b`**, carrying § 1–§ 3 and the transfer limits. Research lines on this surface are addressable **by heading, not by id** — `--id` returns `ANCHOR_MISSING` — so the append chain was anchored on heading text. **Blind locator audit:** not run on this candidate (its two artefacts were the ones absent from disk at audit dispatch time, and its propositions are descriptive increments to an open research line rather than claim- or baseline-touching); the attribution finding was instead **verified directly on the restored JATS front matter** at integration, which is the stronger check for an identity question. Sampled rather than audited, and named here so the asymmetry is visible.
+
+**Not medical advice.**
