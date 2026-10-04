@@ -118,8 +118,9 @@
           "evidence": "main b066e4f; ledger 375"
         },
         {
-          "step": "BATCH_J: wave 6 + Repudi candidates (also CC-20261004-MIRROR-11..13), Mirror, battery on exact SHA, push",
-          "status": "IN_PROGRESS"
+          "step": "BATCH_J wave 6 + Repudi",
+          "status": "DONE",
+          "evidence": "BATCH_20261003_005 70513cd; pushed"
         }
       ]
     },
@@ -129,6 +130,24 @@
         {
           "step": "Operator rule of 2026-10-03: whenever a literature batch completes, the Orchestrator proposes and dispatches the next literature wave on its own, choosing the logic by the scientific priorities that emerge (select with a read-only selector agent; same three tests: abstract substantive, lawful body, a question it could change; breadth over repetition). Emerging priority order: (1) allele-class function actually MEASURED (RNA/protein for splice, missense, deletion alleles) and carrier/heterozygote phenotypes (CLAIM 032/045 are thin); (2) restoration spec: WWOX pharmacodynamic assay first, window by endpoint class, immune cost for predicted-null recipients, neonatal DRG/tolerisation; (3) myelin cell-autonomy beyond the thin O-KO negative; (4) patient-overlap integrity (count once); (5) reading debts named by dossiers (Bouteille 2009, Celebi 2020, Serin 2018, Tabarki 2015, Hordeaux 2019/2020, Finnis 2005, Ko 2018) when lawful text appears; (6) periodic fresh-literature scan (WWOX/WOREE/SCAR12/EIEE28 by date). The neuro-WWOX pool is nearly exhausted: when a wave would have fewer than 12 qualifying studies, say so and shift weight to transferable lessons and debts rather than pad.",
           "status": "TODO"
+        }
+      ]
+    },
+    "OBJ_WAVE7_8_9": {
+      "order": 9,
+      "steps": [
+        {
+          "step": "Waves 7, 8, 9 integrated; BATCH_20261004_001 (WM_v7.14), _002 (WM_v7.15); Mirror reviews of _001; receipts 427",
+          "status": "DONE",
+          "evidence": "main a405efc pushed to development (battery 136 targets 0 red)"
+        },
+        {
+          "step": "BATCH_M: wave 9 + MIRROR-21..24 (Scientist M in flight)",
+          "status": "IN_PROGRESS"
+        },
+        {
+          "step": "Wave 10 readers: PMID 21476439 enzymology (X) and PMID 42397075 manifest repair (Y) in flight; then re-author CC-20260826-CLAIM003-01; route D6 of GSK3B to Mirror",
+          "status": "IN_PROGRESS"
         }
       ]
     }
