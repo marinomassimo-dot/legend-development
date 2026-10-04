@@ -85,3 +85,16 @@ a re-read (rule 35).
 3. p27 mRNA does not differ | We determined comparable p27Kip1 mRNA levels among all groups of MEFs | PMID 37897534, Results, same artefact
 4. The knockdown arm is in human HEK293T cells | Fig. S3 WWOX-knockdown decreases senescence induction in HEK293T cells. | PMID 37897534, Supplementary Figure S3 legend, `files/fulltext/PMID37897534_assets/18_2023_4950_MOESM1_ESM_pdftotext.txt`
 5. The knockdown arm also covers primary human skin fibroblasts | Fig. S4 WWOX-knockdown decreases senescence induction in human skin | PMID 37897534, Supplementary Figure S4 legend, same artefact
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261004_007` · 2026-10-04 · ACTOR_ID `scientist` (Scientist Q, batch integrator)
+**Working model:** WM_v7.19 -> WM_v7.20 (MINOR)
+**Class re-judged (§7):** MINOR
+**Blind locator audit (BEFORE propagation, auditor had not seen this candidate):** 5 triples — 5 SUPPORTED
+**What landed, and what the audit changed:** Landed with the audit's scope facts: no secretory phenotype is assayed anywhere; no senescence panel prints a numeric n; the main comparison baseline is the HETEROZYGOTE, not wild type; and the p27 null result is mRNA-only, the protein being reduced in the late-passage null, so dropping that qualifier would reverse the paper. One source defect carried: the Discussion and the supplementary figure disagree about p21-promoter methylation significance.
+**Status / Type / Summary:** unchanged by this candidate.
+**Not medical advice.** Class level only; no individual-level record, no geography and no parent-of-origin detail is carried.

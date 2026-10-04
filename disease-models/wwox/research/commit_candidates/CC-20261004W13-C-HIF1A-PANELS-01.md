@@ -80,3 +80,16 @@ None owed (`PAPER 023` exists).
 3. Nuclear HIF1α is not changed by WWOX loss | We didn’t observed WWOX influence on HIF1α protein in nuclear fraction. | PMID 35328751, Results 2.6.1, same artefact
 4. The text names the unchanged activity as PDK although the assay is pyruvate dehydrogenase | while the activities of pyruvate dehydrogenase kinase (PDK) and citrate synthase (CS) were not changed | PMID 35328751, Results, enzyme-activity section, same artefact
 5. The supplement is the overexpression arm | Figure S4: WWOX and HIF1α western blot analysis of cytoplasmic (a) and nuclear (b) fractions of WT | PMID 35328751, Supplementary figures captions, `files/fulltext/PMID35328751_assets/s001/Supplementary_figures_captions_pdftotext.txt`
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261004_007` · 2026-10-04 · ACTOR_ID `scientist` (Scientist Q, batch integrator)
+**Working model:** WM_v7.19 -> WM_v7.20 (MINOR)
+**Class re-judged (§7):** MINOR
+**Blind locator audit (BEFORE propagation, auditor had not seen this candidate):** 5 triples — 5 SUPPORTED, plus three lettered checks
+**What landed, and what the audit changed:** Bounds added at source: one fibroblast line in engineered WWOX dosage with no patient genotype and no point variant; NO n stated anywhere in the paper, SEM-only dispersion, one-way ANOVA across a 2x2 design, so no interaction is tested; the Results and the Discussion disagree about direction and nuclear translocation, with no panel supporting the Discussion; and the fractionation timing is 48 h in the legend against 6 h in the Methods.
+**Status / Type / Summary:** unchanged by this candidate.
+**Not medical advice.** Class level only; no individual-level record, no geography and no parent-of-origin detail is carried.

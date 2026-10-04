@@ -318,6 +318,6 @@ Re-measured 2026-10-04 with `evidence_presence.py --disease wwox --pmid 42397075
 
 **Why it is still deferred, in one line:** item A **suspends two `consolidated baseline` claims**, which needs a receipted reading of that manuscript plus a blind locator audit against it, and **no reading has been performed** — the artefact is present and unread. That is a reading task with its own budget, not a line in a propagation, and this batch did not pretend otherwise.
 
-**Review trigger: 2026-10-06**, unchanged. **This candidate is named in no scope of this batch**, deliberately, so `growth_anchors.py` keeps counting it as pending.
+**Review trigger: 2026-10-11** (moved from 2026-10-06 by `BATCH_20261004_007`, 2026-10-04, after re-measuring the blocker: `evidence_presence.py` still reports 16 of 35 artefacts of that PMID absent with 0 digest mismatch, and a SHA-256 search over every worktree and the shared `files/` tree on this host recovered **none** of them — so the blocker is unchanged, not merely unexamined). **This candidate is named in no scope of this batch**, deliberately, so `growth_anchors.py` keeps counting it as pending.
 
 **Not medical advice.**

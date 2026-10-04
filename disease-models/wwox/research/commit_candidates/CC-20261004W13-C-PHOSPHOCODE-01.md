@@ -77,3 +77,16 @@ None owed (`PAPER 150`, `LIT-0033` and `CORPUS-STUB-006` exist).
 2. The review ties Tyr33 phosphorylation to apoptosis under stress | Under stress conditions, WWOX is phosphorylated at Tyr33 to induce apoptosis. | PMID 30158849, section on Ser14, same artefact
 3. The review's WWOX–proteasome statement is about chaperone function, not a residue | WWOX probably functions as a protein chaperone to prevent protein misfolding and degradation by the ubiquitin/proteasome system. | PMID 30158849, same artefact
 4. The review's final residue-specific section concerns Tyr33 | A pTyr33-WWOX Peptide as an Agent for Blocking Neuronal Injury and Death | PMID 30158849, section heading, same artefact
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261004_007` · 2026-10-04 · ACTOR_ID `scientist` (Scientist Q, batch integrator)
+**Working model:** WM_v7.19 -> WM_v7.20 (MINOR)
+**Class re-judged (§7):** MINOR
+**Blind locator audit (BEFORE propagation, auditor had not seen this candidate):** 4 triples — 4 SUPPORTED
+**What landed, and what the audit changed:** Landed with three bounds the audit measured: the paper is a REVIEW with no Methods that measures and mutates nothing; it names only two WWOX residues and maps no residue to a functional outcome with a statistic; and its deposited supplementary table does not match its own caption, holding a brain-atlas expression sheet instead.
+**Status / Type / Summary:** unchanged by this candidate.
+**Not medical advice.** Class level only; no individual-level record, no geography and no parent-of-origin detail is carried.

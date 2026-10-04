@@ -30,3 +30,16 @@ Receipt: `FTR-20261004-42136830-02` (prepared, not recorded) - manifest PASS (26
 - (Four immunosuppressed TSHA-101 animals are excluded | Four additional animals, treated with TSHA-101 along with immunosuppressants, are not included in this analysis. | Table 2 footnote b, `files/fulltext/PMID42136830_Haque2026_PMC.xml`)
 - (28 macaques were assessed by qPCR | `[panel attestation]` Tissue samples from 28 macaques were taken from the brain and spinal cord and assessed via qPCR | `files/supplement/PMID42136830/fmed-13-1819594-gr0001.jpg`)
 - (Day 90 and 180 points are means over six brain slices | The Day 90 and 180 data points each correspond to the mean (SD) vg/DG value for six brain slices. | Figure 5 legend, `files/fulltext/PMID42136830_Haque2026_PMC.xml`)
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261004_007` · 2026-10-04 · ACTOR_ID `scientist` (Scientist Q, batch integrator)
+**Working model:** WM_v7.19 -> WM_v7.20 (MINOR)
+**Class re-judged (§7):** MINOR (`CLAIM 047`, consolidated baseline — evidence-boundary text only)
+**Blind locator audit (BEFORE propagation, auditor had not seen this candidate):** 6 triples — 6 SUPPORTED (two with flagged truncations)
+**What landed, and what the audit changed:** The no-expression bound SURVIVES every surface: no transgene or WWOX expression measurement of any kind exists, and the paper names WWOX nowhere. Three bounds added by the audit: the *«no immunosuppression»* sentence scopes to three of the four vector programmes; the denominators reconcile at 51 dosed, 47 treated, 28 analysed, 20 vehicle; and the time trend is confounded by construct AND by region set (six regions in four animals at the first timepoint against two regions in three animals later).
+**Status / Type / Summary:** unchanged by this candidate.
+**Not medical advice.** Class level only; no individual-level record, no geography and no parent-of-origin detail is carried.

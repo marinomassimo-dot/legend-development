@@ -39,3 +39,16 @@ Receipt: `FTR-20261004-41257285-02` (prepared, not recorded) - manifest PASS (16
 - (Liver promoterless 286 up and 573 down | `[panel attestation]` Figure 3 panel E Promoterless: Down 573, Up 286 | `files/supplement/PMID41257285/gr3.jpg`)
 - (Skeletal muscle promoterless 305 up and 143 down | `[panel attestation]` Figure S2 panel E Promoterless: Down 143, Up 305 | `files/supplement/PMID41257285/mmc1.pdf`)
 - (DRG promoterless 78 up and 85 down | `[panel attestation]` Figure 2 panel E Promoterless: Down 85, Up 78 | `files/supplement/PMID41257285/gr2.jpg`)
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261004_007` · 2026-10-04 · ACTOR_ID `scientist` (Scientist Q, batch integrator)
+**Working model:** WM_v7.19 -> WM_v7.20 (MINOR)
+**Class re-judged (§7):** MINOR
+**Blind locator audit (BEFORE propagation, auditor had not seen this candidate):** 7 triples — 7 SUPPORTED, plus four lettered checks
+**What landed, and what the audit changed:** One major qualification folded in: the abstract's *«across all tissues … minimal»* does not hold on the paper's own panels — the promoterless control gives MORE differentially expressed genes than the dose-matched active vector in skeletal muscle, and more than the empty capsid in spleen and liver. The exclusivity sentence is cited to two REVIEWS, not to this study's data, and the control comparison exists only inside the second study.
+**Status / Type / Summary:** unchanged by this candidate.
+**Not medical advice.** Class level only; no individual-level record, no geography and no parent-of-origin detail is carried.

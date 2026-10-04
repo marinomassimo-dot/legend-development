@@ -87,3 +87,16 @@ None owed; this is a re-read of a PMID already landed.
 2. Valproate raises a WWOX probe set in the neural-induction system as well | UKN1   VPA (5880)         probe=223868_s_at  fold=1.6833199999999999 p=8.5455099999999994E-5  [BC2346] | Supplementary Table 3, UKN1 VPA block, row 2346, same artefact
 3. The concentration-series sheet carries probe ids and symbols but no fold change and no p-value | SHEET=Suppl. Table 7 | ROW=3 | A=350 (µM) | B=450 (µM) | C=550 (µM) | D=800 (µM) | E=1000 (µM) | F=Symbol | Supplementary Table 7, header row, `files/fulltext/PMID27188386_Shinde2016_supplement/204_2016_1741_MOESM2_ESM_xlsxdump.txt`
 4. The sheet's threshold and system are declared in its own title | Supplementary Table 7 :  The significantly deregulated probe setsts by  various concentrations of VPA in UKN1 test system (Fold change ≥ ±2, FDR adjusted p Value <0.05) | Supplementary Table 7, title cell, same artefact
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261004_007` · 2026-10-04 · ACTOR_ID `scientist` (Scientist Q, batch integrator)
+**Working model:** WM_v7.19 -> WM_v7.20 (MINOR)
+**Class re-judged (§7):** MINOR
+**Blind locator audit (BEFORE propagation, auditor had not seen this candidate):** 4 triples — 4 SUPPORTED, re-measured cell-wise with independent parsers
+**What landed, and what the audit changed:** Five qualifications landed. The two systems raise DIFFERENT probe sets, neither appearing in the other's valproate block; a third probe up in one block carries no symbol at all in the workbook; the FDR label comes from the sheet title, not the column header; the concentration-series sheet carries symbols only for the top dose, which the paper itself calls cytotoxic; and NO surface of either paper reports valproate lowering a probe set of this gene. The four artefacts this candidate recorded as absent were recovered by SHA-256 from a peer worktree and restored digest-equal.
+**Status / Type / Summary:** unchanged by this candidate.
+**Not medical advice.** Class level only; no individual-level record, no geography and no parent-of-origin detail is carried.
