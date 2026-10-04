@@ -313,3 +313,60 @@ Two additions, both strengthening the standing rejection rather than weakening i
 
 Records: **DIS-036** (`CC-20261004W12-C-CNV-CONTEXT-01`, MINOR); **CLAIM 032** checked and left
 unchanged — its figures are confirmed digit for digit.
+
+---
+
+## 7 · The assigned question, answered
+
+*What do the owed panels and supplements add to or limit in the mechanism layer — Wnt direction,
+oxidoreductase activity, and the glial/interneuron baseline?*
+
+**Wnt direction: this is where the wave moves the model.** The direction now has a human, organoid,
+**target-gene** measurement behind it — four β-catenin/TCF targets up in the WWOX-KO cerebral
+organoid tables (NKD1 +1.23, TCF7L2 +1.04, LEF1 +1.00, AXIN2 +0.79, with CTNNB1 +0.56) — where the
+research record said no neural, organoid or patient datum on canonical Wnt activity existed. Its
+limits are equally measured: transcript only, no reporter, no β-catenin fractionation, 2 WT vs 4 KO,
+nominal-P lists, constitutive null. And the one counter-datum in the corpus is now read at panel
+level: in HEK293T, maximal nuclear DVL2 coincides with the **lowest** canonical response — by a
+sterol-driven, PDZ- and FoxK2-dependent route that is not WWOX silencing, and on a panel that draws
+no statistic. So: **direction supported in the organoid; the mechanism step DVL2-nuclear → canonical
+activation still unmeasured.**
+
+**Oxidoreductase activity: an earned null, and it is complete.** Neither paper that could have
+carried it does. The SDR-missense paper has no enzymatic assay of any kind (`oxidoreductase` once,
+in the gene's name; `SDR`, `catalytic`, `dehydrogenase` zero). What it measures is abundance and
+decay rate — and the re-read shows its "clean" allele is clean about **decay rate** only, since the
+lines are matched on neither transcript nor steady-state protein. The diagnostic question for a
+destabilising SDR allele therefore stays where DL-BIO-001 put it — *is the protein present at normal
+abundance, or degraded despite normal mRNA?* — and **not one datum in this corpus measures catalysis
+for any WWOX allele.**
+
+**The glial/interneuron baseline: narrowed in one place, extended in another, and untestable in a
+third.** Narrowed: the organoid astrogenesis finding is carried by immunofluorescence and immunoblot
+alone — GFAP and S100B appear in **neither** of the paper's own DE lists (zero rows in 2,267), while
+AQP4 (+2.70), SOX9 (+0.51) and VIM (+0.82) rise and ALDH1L1 (−0.56) falls, and AQP4 is never
+mentioned in the article. Extended: **NPY collapses in the human WWOX-KO organoid** (−6.24, padj
+4.6e-15, the strongest signal of a 50-marker panel, unreported by the authors), in the same
+direction as the murine NPY reduction a baseline claim records — two species, one neuropeptide.
+Untestable: microglial markers are absent as a class (the platform has none), so the murine IBA1
+axis has no organoid counterpart; and in mouse skin the **heterozygote is a measured null** on
+apoptosis while the homozygote is raised.
+
+### What would change the model if true, and what would falsify it
+
+- **Would change it:** a TCF/LEF reporter or nuclear β-catenin quantification in WWOX-null *neural*
+  cells confirming activation — that would move DL-MOL-003 from IPOTESI toward a direction with a
+  mechanism, and it is a cheap experiment. Equally: an NPY measurement in a second human WWOX-loss
+  system.
+- **Would falsify what this wave carried:** a GFAP or S100B row in either organoid DE list; a
+  single-cell re-analysis attributing the Wnt-target rise or the astroglial markers to composition
+  rather than to cell-intrinsic change; an NPY row absent or positive on the same bytes; a
+  densitometry of the SDR paper's Figure 2A showing P282A at wild-type abundance in both lines.
+
+### Genotype caution, restated because every datum above needs it
+
+Every measurement in this wave comes from a **constitutive null** (organoid KO, mouse KO) or from
+**engineered overexpression in cancer lines**. None models a human missense or splice allele.
+P47T ≠ Q230P ≠ G372R ≠ A141T ≠ P252A; an acceptor allele is not a donor allele; a heterozygote is
+neither a demonstrated negative nor a positive for haploinsufficiency. Nothing here is medical
+advice.
