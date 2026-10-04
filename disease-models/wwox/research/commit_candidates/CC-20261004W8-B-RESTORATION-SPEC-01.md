@@ -168,3 +168,17 @@ so the substitution is made by the integrator at renumbering time.
 (Every mutated capsid including the new one put significantly fewer vector genomes into the brain than the parent | In the brain, all mutated capsids resulted in significantly lower vector genome copies as compared to AAV9, though relative expression levels were consistent amongst all capsids investigated. | files/fulltext/PMID41744777_Nabakowski2026_PMC.xml, Discussion, fifth paragraph)
 
 (Whole-animal transgene signal from the new capsid is about two orders of magnitude below the parent at the same dose | AAV9 was placed in the high group and reached a peak AR of 7.3 × 107, AAV9-16 and AAV9-HR were in the medium group and reached a peak AR of 6.6 × 106 and 3.5 × 106, respectively, and AAV9-DM was in the low group and reached a peak AR of 5.8 × 105 (Figure 2). | files/fulltext/PMID41744777_Nabakowski2026_PMC.xml, Results, '3.3. AAV9-DM Capsid Results in Liver De-Targeting and Durable Transgene Expression')
+
+## BATCH DISPOSITION — `BATCH_20261004_002` (2026-10-04, ACTOR_ID `scientist`, Scientist L), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** `PROPAGATED` (MINOR).
+**Surfaces written:** claim_registry_current.md · working_model_current.md
+
+Landed as **`CLAIM 047`**, one record with four bounds, plus its BLOCK 2 mirror row. `Status: open` corrected to `in observation` for the same reason as `CLAIM 046`.
+**Prior art is cross-referenced and deliberately not restated**, as the dispatch required: the record names `RL-C-20261003w3`, `RC-C-20261003w3` and `DIS-033` as holding the six-axis parameterisation and the unmeasured developmental window, and states that it adds only what that set did not contain — the head-to-head promoter comparison, the capsid's manufacturing and CNS costs, and the first primate route numbers — plus the cross-cutting finding that cell type and route are **not independent parameters**. No sentence of any prior record was edited.
+⚠️ **Four integrator amendments from the blind audit, three of which weaken a bound.** (1) The hepatic-protein ranking is scoped by the source to *«the four top-performing promoters: CAG, p546, gfa1405, and CNP»* — **not to all ten tested** — and two of those four are themselves cell-restricted, so *«the most of any promoter tested»* is withdrawn. (2) The ICV re-ranking is confined to **hippocampus and hypothalamus**; in cortex the mini-promoter was *«equivalent to»* two of the three comparators and in cerebellum equivalent to the third, so the candidate's four-region wording overstated it. (3) *«Comparable biodistribution»* in the canine route comparison is qualified by a **~10-fold** cord difference. (4) The colocalisation percentages are **S100B**, not GFAP, cover 5 of 7 promoters and are restricted to three regions.
+**The arithmetic screen was run over every ratio this claim states**, and each landed figure now prints the two numbers it came from: 154.0 / 474.8 = **0.324**; 41 / 42 = **0.98**; 0.8 / 0.16 = **5.0**; 3.58 × 10¹³ / 4.5 × 10¹² = **7.96**; 7.3 × 10⁷ / 5.8 × 10⁵ = **126**; and the sublinear scaling recomputes to **2.60×** and **2.16×** against the paper's stated *«~2.5-fold»*, which is the mid-point of the two.
+
+**Not medical advice.**

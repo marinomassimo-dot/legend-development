@@ -138,3 +138,16 @@ identity of a record to be created, against the artefact on disk.)
 (PMID 42136830 is a 2026 report of rAAV9 biodistribution in nonhuman primate brain and spinal cord after lumbar intrathecal infusion | rAAV9 vector biodistribution in nonhuman primate brain and spinal cord following lumbar intrathecal infusion | files/fulltext/PMID42136830_Haque2026_PMC.xml, front matter, article-title)
 
 (PMID 41744777 is a 2026 report of a rationally designed AAV9 capsid variant with minimal liver tropism | A Rationally Designed AAV9-DM Capsid with Minimal Liver Tropism | files/fulltext/PMID41744777_Nabakowski2026_PMC.xml, front matter, article-title)
+
+## BATCH DISPOSITION — `BATCH_20261004_002` (2026-10-04, ACTOR_ID `scientist`, Scientist L), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** `PROPAGATED` (MINOR).
+**Surfaces written:** paper_registry_current.md · literature_tracking_log_current.md
+
+Renumbered from the declared `PAPER 201`–`206` / `LIT-0494`–`0499`, which `BATCH_20261004_001` had already taken, to **`PAPER 223`–`228`** and **`LIT-0515`–`0520`**, applied after group A so both registries stay contiguous.
+🔴 **The candidate specified these six records in PROSE and carried no op JSON, so the integrator authored them — and the identity metadata in that prose was wrong almost everywhere.** Measured against each artefact's JATS front matter: **every one of the six full titles** differed from the candidate's, **every author list** was wrong or placeholder, two journal issues were wrong (`J Cell Physiol` 240(9) not 240(10); `BMC Vet Res` 16:415 not 16(1):444), and **three of six PMCIDs** were absent or wrong (PMC7603737 not PMC7604929). All identity now comes from the artefact; the `Role:` verdict sentences are the candidate's own, carried as written except where the audit narrowed them. This is the same defect class `BATCH_20261004_001` met with two prose specifications, and it is now twice in a row: **a prose spec's bibliography must be treated as a draft, never as identity.**
+`Claim links` were set to the two new claims where they are owed (`PAPER 223` → `CLAIM 046`; `PAPER 225`–`228` → `CLAIM 047`) rather than left at `none`.
+
+**Not medical advice.**

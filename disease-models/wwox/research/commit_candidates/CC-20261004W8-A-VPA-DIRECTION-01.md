@@ -36,3 +36,15 @@ The lead is registered with its debt and its falsifier, not as evidence: a curat
 (the deposited table records vorinostat as decreasing WWOX expression in human cells | A=Vorinostat | B=D000077337 | C=WWOX | D=Homo sapiens | E=Decreases expression | PMID 41254692, Additional file 1 Table S7; files/supplements/PMID41254692/MOESM1_TableS7_rows.txt)
 (the deposited table records valproic acid as increasing THBS2 expression | A=Valproic Acid | B=D014635 | C=THBS2 | D=Homo sapiens | E=Increases expression | PMID 41254692, Additional file 1 Table S7; files/supplements/PMID41254692/MOESM1_TableS7_rows.txt)
 (the protein-level WWOX association does not survive multiple-testing correction | but this association did not reach statistical significance after FDR correction (FDR-corrected P = 0.160) | PMID 41254692, Results, pQTL-MR; files/fulltext/PMID41254692_Qin2025_PMC.xml)
+
+## BATCH DISPOSITION — `BATCH_20261004_002` (2026-10-04, ACTOR_ID `scientist`, Scientist L), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** `PROPAGATED` (MINOR).
+**Surfaces written:** discovery_ledger_current.md
+
+Landed as **`DL-REPO-003`**. The candidate's provisional id was checked rather than replaced: `registry_records.py catalog --source discovery_ledger_current` shows a live `DL-REPO-` family with maximum **002**, so `DL-REPO-003` **is** the ledger's own next id in the right family and is kept.
+🔴 **Recorded as an unread debt with a falsifier, never as evidence about valproate**, exactly as the candidate asked. Two independent auditors verified the inversion cell-wise on the deposited table and found **exactly five WWOX rows, all `Decreases expression`, with no `Increases expression` row for WWOX anywhere in the sheet**, against a Results sentence naming those same five compounds as *«potentially increasing»* it. The record carries the five unread reference PMIDs, the falsifying experiment, and an explicit **no clinical reading of any kind and no entry in the therapeutic tracker** until they are read.
+
+**Not medical advice.**

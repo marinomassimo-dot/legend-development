@@ -124,3 +124,15 @@ Each record's `Role` is one short sentence and points to the dossier; the substa
 ### LOCATOR TRIPLES FOR BLIND AUDIT
 (the WWOX case of PMID 37946251 is a previously reported patient | Reported as Patient 11 (Table S1) in case series in Piard et al [97]. | PMID 37946251, Table 1 row 009Sev001 (image); files/supplements/PMID37946251/13073_2023_1240_Tab1_HTML.jpg)
 (the PMID 41835067 WWOX genotype is homozygous with both parents carriers | Hom (maternal paternal) P (PP3, PM3, PM2, PP5) | PMID 41835067, Table 2 row CP_P14.1; files/fulltext/PMID41835067_Yigit2026_PMC.xml)
+
+## BATCH DISPOSITION — `BATCH_20261004_002` (2026-10-04, ACTOR_ID `scientist`, Scientist L), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** `PROPAGATED` (MINOR, WM_v7.14 → WM_v7.15).
+**Surfaces written:** paper_registry_current.md · literature_tracking_log_current.md
+
+`PAPER 217`–`222` created with `LIT-0509`–`0514`; `CORPUS-STUB-101` promoted to `PAPER 222`. **The provisional numbers were the applied ones** — `registry_records.py catalog` at `761b36909fa4` confirmed `PAPER 216` / `LIT-0508` as the ceiling, so group A was applied first in event order and kept its declared block.
+Four integrator changes. (1) **The literal `partial full text` was inserted beside every `partial_fulltext_read`**, because `coverage_report.PARTIAL_MARKERS` does not recognise the token on its own; all six receipts were measured as partial with `fulltext_receipts.py status --pmid`. (2) **The six `LIT` rows were normalised to the surface's own field names and vocabulary**: `Short title` (489 of 489 live records; `Title`, which the candidate used, occurs nowhere), `PAPER link` rather than `Paper link`, a **bare** `Status: processed` with its qualifiers moved to a separate `Status note`, and an `Evidence depth` field. (3) 🔴 **The promotion was written on BOTH sides.** `CORPUS-STUB-101` has a phase-2 placeholder twin, `LIT-0122`, carrying the same PMID and `Status: discovered`; the candidate declared only that this PMID *«needs creation»* of a `LIT` record. Promoting the stub implies retiring the twin, so `LIT-0122` is retired to `superseded`, pointed at `LIT-0514` / `PAPER 222`, and marked *do not count as a separate paper and do not cite as unread*. **Nothing was deleted.** This is the rule `BATCH_20261004_001` had to discover by post-hoc census, applied here at authoring time. (4) **`Claim links: CLAIM 033`** written into `PAPER 217`, `218` and `219`, the reciprocal entries owed because `CLAIM 033`'s new reserve note names those PMIDs.
+
+**Not medical advice.**

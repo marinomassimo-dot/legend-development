@@ -66,3 +66,18 @@ Format: `(proposition | verbatim quote | anchor)`. Each artefact is on disk and 
 - [PMID 35229008, artefact `files/fulltext/PMID35229008_Buss2022_PMC.xml`] (MRI was done only in the 1.1e14 hCLN2 group and controls. | the only AAV9.hCLN2 group evaluated | Results, MRI)
 - [PMID 35229008, artefact `files/fulltext/PMID35229008_Buss2022_PMC.xml`] (The authors conclude DRG toxicity after intrathecal AAV9 is primarily mediated by transgene overexpression, on this study alongside other published data. | supports a hypothesis that the DRG toxicity in NHPs following intrathecal administration of rAAV9 is primarily mediated by transgene overexpression | Discussion, final paragraph)
 - [PMID 35229008, artefact `files/fulltext/PMID35229008_Buss2022_PMC.xml`] (The authors describe the Null genome as lacking a functional promoter and producing neither mRNA nor protein. | which lacked a functional promoter and does not produce mRNA or protein | Discussion, para 3)
+
+## BATCH DISPOSITION — `BATCH_20261004_002` (2026-10-04, ACTOR_ID `scientist`, Scientist L), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** `PROPAGATED` (MINOR).
+**Surfaces written:** research_lines_current.md · discovery_ledger_current.md
+
+Landed as **`RL-C-20261004w8c2`**, plus **one corroboration line inside `DL-METH-118`** and **one §7.2 in-place correction of `RL-C-20261004w7c1` (b)** — rather than a second window record, because the proposition family already had a home.
+🔴 **This is the batch's sharpest result.** `RL-C-20261004w7c1` (b) stated, as a fact about the corpus, *«no source held measures it for the DRG, and the held promoterless negative is hepatic»*. `PAPER 232` **is** that design, for the DRG, in primates, with vector-DNA parity. A fact about a past act may be corrected in place under § 7.2, so it is, **with the superseded wording quoted verbatim inside the corrected bullet**; the half that survives is kept explicitly (the design still does not separate immune from expression cause, because no immune read-out beyond antibodies was taken and expression was never measured in DRG neurons), and **no stated conclusion was overwritten**.
+⚠️ **A CONTRADICTED blind-audit verdict, repaired at source.** The candidate's Figure 2 attestation said cervical and thoracic DRG degeneration occurred **only** at 1.1 × 10¹⁴ GC. An auditor measured the panel: in the **cervical** DRG a 3.1 × 10¹³ group has one animal at severity 1, group bar about 0.25. **The universal quantifier is withdrawn** and the landed record states which segments are high-dose-only and which are not.
+⚠️ **A second attestation failed and was repaired by re-sourcing.** The intraepidermal fibre-density figure attestation was wrong in two particulars (the high-dose group's pre-dose values, and a low-dose group's week-4 minimum), and the grey band is the **pre-treatment range of all samples**, not a control band. The finding itself is carried by the Results sentences, which the record now cites instead of the panel — the same repair `BATCH_20261003_005` and `BATCH_20261004_001` each made once.
+⚠️ Two further narrowings: the authors' conclusion is *«supports a hypothesis that»* and their route is **cisterna magna** while the sentence generalises to *«intrathecal»*; and the nerve-conduction assessment *«focused on sensory»*, with motor on one pathway. The record also carries, rather than hides, that the Null arm shows increased cellularity in two of four animals against one of four vehicle animals — an internal tension in the source.
+
+**Not medical advice.**

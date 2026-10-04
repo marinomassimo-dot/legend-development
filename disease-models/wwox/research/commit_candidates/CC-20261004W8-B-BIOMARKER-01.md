@@ -108,3 +108,16 @@ immunohistochemistry" as an available endpoint.
 (The uncropped blots show more than one immunoreactive species in tumour lysate, with the reported band selected by an arrow | [figure attestation — pixels cannot be quote-matched] Supplementary Figure S1, 'Figure 1D' membrane: lane 3 carries two distinct bands, one at the arrow and one clearly below it; lane 5 carries two bands, both below the arrow; lane 4 carries a band above the 50 kDa marker that the arrow does not indicate. | files/supplement/PMID33129329/12917_2020_2638_MOESM1_ESM.pdf, Supplementary Figure S1 panel labelled 'Figure 1D', rendered at 300 dpi)
 
 (The target band and the loading control are four kilodaltons apart on the same stripped and reprobed membrane | Western blotting for WWOX (~ 47 kDa, upper panel) and β-actin (43 kDa, lower panel) was performed. | files/fulltext/PMID33129329_Makii2020_PMC.xml, Supplementary Information, Additional file 1 caption)
+
+## BATCH DISPOSITION — `BATCH_20261004_002` (2026-10-04, ACTOR_ID `scientist`, Scientist L), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** `PROPAGATED` (MINOR).
+**Surfaces written:** claim_registry_current.md · working_model_current.md
+
+Landed as **`CLAIM 046`**, with the §13 classification the dispatch required and verified against `LEGEND_CORE` §13 before writing: the three read-outs are **Tier 1 modalities** (direct gene readout — protein, mRNA, enzymatic activity), **not a validated biomarker** (no sensitivity or specificity in any disease population) and **not an endpoint** (nothing distal or clinical), so the record belongs in the claim registry and **not** in `biomarker_candidates_current.md` — which also means Phase 4.5's three ABORT conditions are not engaged. A BLOCK 2 mirror row was added; LINT had reported `CLAIM_MISSING_FROM_MIRROR` as `BLOCK_BATCH_COMMIT` until it was.
+🔴 **Two integrator repairs.** (1) The candidate proposed `Status: open`. **`open` is not a claim state**: `LEGEND_CORE` §10 fixes the vocabulary and says *never invent states*. Landed as `in observation`, which is what the candidate's own prose (*«a floor, not a ceiling»*) describes, and the record says so in its provenance line. (2) ⚠️ **A CONTRADICTED blind-audit verdict, repaired at source.** The candidate stated that the cross-species antiserum rested on a homology argument *«rather than a validation»*. That is **false**: the paper states a canine positive tissue control (*«Normal canine testes tissue»*) and an isotype-matched negative control. The landed claim asserts the narrower truth — **no peptide-block, knockdown or orthogonal-detection validation in that species is reported**, and the only negative control for the *tissue* read-out is a reagent control, never a genetic one, although the paper owns knockdown lines and uses them elsewhere.
+⚠️ Two further narrowings landed: *«the study declares itself unpowered»* became what the source says — *«no power calculation was made»* for a pilot study, which is **not** a declaration of being underpowered — and the blot bound now records that **two of five tumour lanes show no band at the arrow at all**, which an auditor measured on the rendered page.
+
+**Not medical advice.**

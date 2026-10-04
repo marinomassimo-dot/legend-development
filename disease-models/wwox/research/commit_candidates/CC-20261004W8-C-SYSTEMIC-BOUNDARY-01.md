@@ -88,3 +88,16 @@ Format: `(proposition | verbatim quote | anchor)`. Each artefact is on disk and 
 - [PMID 41438872, artefact `files/figures/PMID41438872/gr5.jpg`] (Figure 5B: liver vector genomes about 100 to 250 copies per diploid genome in both capsid groups against below 2 in heart, kidney and muscle; log axis. | [figure attestation — pixels cannot be quote-matched] Fig 5B log-axis bars, enlarged crop: liver PHP.eB and AAV9 bars at about 1e2 to 2.5e2 copies per diploid genome; heart about 1 to 2; kidney about 0.5; muscle about 0.3 to 0.4. | Figure 5, panel B)
 - [PMID 41438872, artefact `files/fulltext/PMID41438872_Fortuna2025_PMC.xml`] (Serum liver enzymes and other clinical chemistry were not assessed. | as clinical chemistry parameters (e.g., serum liver enzymes) were not assessed in this study | Discussion, Potential limitations and challenges)
 - [PMID 41438872, artefact `files/fulltext/PMID41438872_Fortuna2025_PMC.xml`] (The authors note PHP.eB's rodent advantage is attributed to LY6A binding, absent in primates. | binding to the LY6A receptor, which is absent in NHPs | Discussion, Key findings, para 2)
+
+## BATCH DISPOSITION — `BATCH_20261004_002` (2026-10-04, ACTOR_ID `scientist`, Scientist L), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** `PROPAGATED` (MINOR).
+**Surfaces written:** research_lines_current.md
+
+Landed as **`RL-C-20261004w8c3`**. It supplies the **primary** behind the liver-UPR commentary `RL-C-20261004w7c1` (c) relayed, and records that the commentary's *«strongly suggests»* is **stronger than the primary**, which is correlational with no expression-null and no dose-matched control arm and whose statistical unit is the lobe. One relayed statement — *dose-related DRG toxicity is lower when transcriptional activity is lower* — has **no primary behind it in this source at all**, and the record says so, pointing at `RL-C-20261004w8c2` as its nearest support.
+**The human case is carried at class level**, as the candidate declared: a dose, a measured complement value, a biodistribution contrast and the authors' own statement that sirolimus did not mitigate the early response. No individual-level linkage is introduced; `public_release_gate.py` was run on the landed tree.
+⚠️ **Three integrator amendments from the blind audit.** (1) The sirolimus statement is scoped by the authors **to that one patient**. (2) Their hedge is *«remain difficult to disentangle»*, not *«cannot»*. (3) The pre-existing inflammatory state rests on a **retrospective** multiplex analysis in one patient. The liver-against-CNS contrast landed with both printed numbers (**7,704** against **14** vg/dg) and the authors' own *«16- to 550-fold»* range, because the two underlying values behind that range exist only in the figure.
+
+**Not medical advice.**
