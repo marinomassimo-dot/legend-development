@@ -21,15 +21,15 @@ the whole known corpus, not the part already processed.
 
 | Depth | Records | Share | What it means |
 |---|---:|---:|---|
-| **Full text depth** | 141 | 24% | complete receipt or legacy registry declaration; trace split below |
+| **Full text depth** | 141 | 23% | complete receipt or legacy registry declaration; trace split below |
 | Partial full text | 124 | 21% | some sections read; explicitly declared incomplete |
 | Abstract / screened | 6 | 1% | classified from metadata and abstract; no full text read |
-| Catalogued only | 320 | 53% | known, deduplicated, never analytically processed — **the debt** |
-| Filtered / superseded | 9 | 2% | explicitly set aside, with the reason preserved |
+| Catalogued only | 321 | 53% | known, deduplicated, never analytically processed — **the debt** |
+| Filtered / superseded | 9 | 1% | explicitly set aside, with the reason preserved |
 
-- **233** promoted `PAPER` records · **367** `CORPUS` placeholders
+- **234** promoted `PAPER` records · **367** `CORPUS` placeholders
 - **519** lifecycle entries in the literature tracking log
-- **519** unique PMIDs known across the registries
+- **520** unique PMIDs known across the registries
 
 ## Receipt trace
 
