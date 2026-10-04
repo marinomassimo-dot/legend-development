@@ -291,3 +291,17 @@ Unchanged: repointing `CLAIM 002`'s `Source` to `PAPER 094` needs a surface of P
 Re-measured 2026-10-03: no artefact of PMID 42397075 exists in the root `files/fulltext/`, so repointing `CLAIM 002`'s `Source` (a consolidated baseline) still has no surface for its blind audit. **Unblock:** unchanged — a lawful surface of PMID 42397075 read to a receipt.
 
 **Not medical advice.**
+
+## BATCH DISPOSITION — `BATCH_20261004_002` (2026-10-04, ACTOR_ID `scientist`, Scientist L), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** DEFERRED — **blocker changed from «artefact absent» to «artefact acquired, unread».**
+
+Re-measured 2026-10-04 with `evidence_presence.py --disease wwox --pmid 42397075 --search /home/desktop/legend-development/files`: **22 of 22 declared artefacts absent, 0 recoverable by SHA-256** — so the dispatch's requirement to search before deferring on absence was met, and the absence was real.
+
+🔵 **It is no longer absent.** This batch acquired the paper at zero external spend and with no author contact: `files/fulltext/PMID42397075_Steinberg2026_OUP-AM.pdf`, 36 pages, sha256 `9775f766f68929e05665aa572196f4889083b501dc7f6792f1b9243e7dc0fd4b`, CC BY-NC 4.0, text extractable (~12,800 words with Introduction, Methods, Results, Discussion). Two facts about it matter for whoever reads it next. **(1) The declared manifest path names the wrong author.** It expects `PMID42397075_Aqeilan2026.pdf`; the first author is **Daniel J. Steinberg** and Aqeilan is last and corresponding, so a manifest repair is owed alongside the reading. **(2) It is an OUP Accepted Manuscript**, watermarked: the watermark letters appear as stray tokens in extracted text, so verbatim quotation needs care, and its six figures are ~220 ppi rasters, so figure values are pixel reads. The **supplementary methods were NOT acquired** (HTTP 403), and the main-text methods are only ~340 words, the paper itself saying the detail *«is provided in the Supplementary material»*.
+
+**Why still DEFERRED.** Item A **suspends two `consolidated baseline` claims**. That is the highest-consequence act in the queue, it requires a blind locator audit against a surface nobody has yet read, and the surface is a lossy watermarked manuscript whose methods are missing. Propagating it on an unread artefact would be exactly the failure the blind-audit discipline exists to prevent. **Review trigger: 2026-10-06**, as a reading task with the audit budgeted; the acquisition that blocked it for seven batches is done.
+
+**Not medical advice.**

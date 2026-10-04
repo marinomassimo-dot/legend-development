@@ -55,3 +55,15 @@
 (the western panel shows a strongly reduced band with a faint residual band and no quantification | Control Proband WWOX 46 kDa Actin 43 kDa | PMID 36926521, Supplementary Figure S5G; files/supplements/PMID36926521/Image5.TIFF)
 (the in-frame exons 6-8 deletion is classified with a null criterion | G=inframe_deletion | H=CH | I=het | L=PMID: 30356099 | M=PVS1, PM2, PM3 | PMID 37946251, Additional file 3 Table S7; files/supplements/PMID37946251/MOESM3_009Sev001_rows.txt)
 (the intron-5 acceptor allele is classified by rule with no RNA assay | R=- | S=- | T=25.1 | U= | V=Pathogenic | W=PVS1, PM2, PM3, PP3 | PMID 40858643, Supplementary Data 1; files/supplements/PMID40858643/MOESM2_Pt2317_rows.txt)
+
+## BATCH DISPOSITION — `BATCH_20261004_002` (2026-10-04, ACTOR_ID `scientist`, Scientist L), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** `PROPAGATED` (MINOR).
+**Surfaces written:** claim_registry_current.md · discovery_ledger_current.md
+
+`CLAIM 033` reserve (1) and `DL-BIO-002`. **`CLAIM 033`'s live `Status` was read before the edit and is `in observation`**, so no `consolidated baseline` was touched. The note says what the candidate asked it to say and no more: the one measurement in patient material is **qualitative, not quantified and not allele-resolved**, and **no transfer to the reference genotype's alleles** is made.
+⚠️ **Three integrator amendments from the blind audit, each narrowing a landed sentence.** (1) `p.(Thr12Arg)` is **not** supported by population absence and in-silico scores *alone* — segregation establishes the phase in trans and the western speaks to the allele pair; what is true is that **no assay interrogates that allele individually**, and that is what landed. (2) 🔴 The skipped splice product is present in **an unaffected first-degree relative of the proband as well as in the proband**, which makes it a qualitative junction read-out and **not** a severity marker; this travels in both records. The source names the relationship and this repository does not repeat it: `public_release_gate.py` flagged the verbatim quotation as `PARENT_OF_ORIGIN_REFERENCE_GENOTYPE`, correctly — quoting an auditor's finding does not exempt the quotation from the public edition's privacy design, and the inference survives the removal intact. (3) 🔴 `c.517-1G>A` is labelled an **intron-5** acceptor allele **nowhere in its source**: the supplementary row types it *«Exonic or near-exon variant»* and prints no intron number, so the intron-5 label is this repository's derivation from the WWOX exon map, now marked `INFERENZA` and quoted for nothing. **This is the second consecutive batch to find an unsourced intron number**, and the pattern belongs in the candidate template. The source also says *«An PCR analysis»* and never *«RT-PCR»*; the landed text no longer says RT-PCR without noting it is our term.
+
+**Not medical advice.**

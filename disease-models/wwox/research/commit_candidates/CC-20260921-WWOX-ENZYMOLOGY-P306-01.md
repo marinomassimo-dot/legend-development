@@ -369,3 +369,17 @@ Unchanged: no artefact and no receipt for PMID 21476439. OpenAlex lists it as hy
 Re-measured 2026-10-03: no artefact for PMID 21476439 exists under the root `files/fulltext/`; every quantity `§4(c)` would write is abstract-depth. **Unblock:** unchanged — one manual download of the publisher PDF, then a receipt and verbatim locators.
 
 **Not medical advice.**
+
+## BATCH DISPOSITION — `BATCH_20261004_002` (2026-10-04, ACTOR_ID `scientist`, Scientist L), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** DEFERRED — **blocker changed from «artefact absent» to «artefact acquired, unread».**
+
+Re-measured 2026-10-04: no artefact for PMID 21476439 existed under the root `files/fulltext/`, and the PMID carries no deep-dive manifest, so every quantity §4(c) would write was abstract-depth.
+
+🔵 **It is no longer absent.** Acquired this batch at zero spend: the paper is **Sałuda-Gorgul A, Seta K, Nowakowska M, Bednarek AK, *«WWOX oxidoreductase — substrate and enzymatic characterization»*, Z Naturforsch C J Biosci 2011;66(1-2):73-82**, DOI `10.1515/znc-2011-1-210` (PubMed records no DOI for it, which is part of why it stayed unfound). File: `files/fulltext/PMID21476439_SaludaGorgul2011_DeGruyter.pdf`, 10 pages, sha256 `f3a43c1174c023cf9a00f45397aeb82043bbe8a37adc12c0d71f826fbbeb4505`, **the typeset version of record** with extractable text (~5,400 words, Introduction / Experimental / Results / Discussion) — not a cover page or stub.
+
+**Why still DEFERRED.** §4(c) would write **enzymology quantities** — substrate identity and kinetic parameters — into the model. Those are precisely the numbers the arithmetic screen and a blind locator audit exist to check, and they cannot be written from an unread PDF acquired minutes earlier. The reading is now **possible and cheap** (ten typeset pages, clean text layer), which it has not been for seven batches. **Review trigger: 2026-10-06**, as a reading task.
+
+**Not medical advice.**

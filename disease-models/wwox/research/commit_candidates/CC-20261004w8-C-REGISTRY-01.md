@@ -44,3 +44,16 @@ The two 2018 primaries were named as "not read here" behind the wave-7 rebound r
 No scientific proposition is changed by this candidate; identity facts only.
 
 - [PMID 42137263, artefact `files/fulltext/PMID42137263_Moeini2026_PMC.xml`] (The data are a secondary analysis of earlier liver RNA-seq. | These RNA-seq data were originally used only for SMN1 transgene expression analysis | Materials and methods, para 1)
+
+## BATCH DISPOSITION — `BATCH_20261004_002` (2026-10-04, ACTOR_ID `scientist`, Scientist L), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** `PROPAGATED` (MINOR).
+**Surfaces written:** paper_registry_current.md · literature_tracking_log_current.md
+
+Renumbered from the deliberately disjoint provisional block `PAPER 281`–`286` / `LIT-0581`–`0586` into **`PAPER 229`–`234`** and **`LIT-0521`–`0526`**, applied after group B so the run `PAPER 217`→`234` and `LIT-0509`→`0526` is unbroken.
+The candidate specified the twelve records in a prose table, so the integrator authored them; **unlike group B, this candidate's titles and identifiers matched the artefacts** — its author had taken them from the front matter — and the author lists were completed from the JATS.
+🔴 **One vocabulary repair:** the candidate wrote `Status: read — partial` for all six `LIT` rows. That is **not a value** in the literature log's own `Status` vocabulary (ten live values, all bare). Each row landed with a bare `Status: processed`, the depth on its own `Evidence depth` line as `partial_fulltext_read` (**partial full text**), and the qualifiers on a `Status note` line.
+
+**Not medical advice.**

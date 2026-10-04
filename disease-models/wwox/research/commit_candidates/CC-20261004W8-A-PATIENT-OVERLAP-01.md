@@ -38,3 +38,15 @@
 (the CP-cohort child is female from a consanguineous family | CP_P14.1 F 1,2 Yes Short neck, hypertelorism, scoliosis, global developmental delay, hypotonia, seizures and spasticity | PMID 41835067, Table 1; files/fulltext/PMID41835067_Yigit2026_PMC.xml)
 (the CP-cohort child is homozygous for p.Leu239Arg | Hom (maternal paternal) P (PP3, PM3, PM2, PP5) | PMID 41835067, Table 2; files/fulltext/PMID41835067_Yigit2026_PMC.xml)
 (seizure onset in the CP-cohort child is neonatal | Tonic-clonic seizures began at two weeks of age , and anti- seizure medication was initiated . | PMID 41835067, Supplementary file 1; files/supplements/PMID41835067/Supplementary_file_1.docx)
+
+## BATCH DISPOSITION — `BATCH_20261004_002` (2026-10-04, ACTOR_ID `scientist`, Scientist L), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** `PROPAGATED` (MINOR).
+**Surfaces written:** paper_registry_current.md
+
+`PAPER 117` and `PAPER 013` annotated; **every `INFERENZA` label kept**. The Pagnamenta identity is landed as a `DATO`, because the later authors state it themselves (*«Reported as Patient 11 (Table S1) in case series in Piard et al»*, verified by two independent auditors on the rotated table image), and the record adds that `PAPER 174` already uses Piard 11 among its six genotypes, so **one patient is reachable by three routes and must be counted once across all three**. The L239R identity stays `INFERENZA` and the count stays the range **2-4 children in 1-3 families**.
+⚠️ **One integrator amendment from the blind audit:** the candidate wrote *«neonatal-onset seizures»*. The source's own words are *«Tonic-clonic seizures began at two weeks of age»*, and it adds *«There was no need for postnatal intensive care»* — so «neonatal onset» is the reader's label and the landed text uses the source's.
+
+**Not medical advice.**

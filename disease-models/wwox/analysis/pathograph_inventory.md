@@ -26,18 +26,18 @@ annotations is reported below whatever it happens to be.
 
 | Measure | Count |
 |---|---|
-| Claim nodes | 45 |
-| Claim→claim wikilink occurrences | 99 |
-| …distinct directed links | 71 |
-| …undirected edges they collapse into | 45 |
+| Claim nodes | 47 |
+| Claim→claim wikilink occurrences | 102 |
+| …distinct directed links | 73 |
+| …undirected edges they collapse into | 46 |
 | Edges carrying a declared relation type | 0 |
 | Nodes carrying a biological scale | 0 |
 | Deep-dive manifests read | 254 |
-| …of which bound to at least one claim | 87 |
-| Propositions scanned | 3979 |
+| …of which bound to at least one claim | 95 |
+| Propositions scanned | 3983 |
 | …carrying a relational connective | 782 |
 | …locator-backed candidates | 742 |
-| …locator-backed and bound to a claim | 319 |
+| …locator-backed and bound to a claim | 327 |
 
 The scanned population is three declared surfaces and no others: every claim
 `Title`, every row of the working model's BLOCK 2 mirror, and every
@@ -82,7 +82,7 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 | CLAIM 030 | In WWOX the severity tracks residual protein FUNCTION, not protein abundance | in observation | DATO (serie allelica su cellule di pazie | genotype / protein function / proteostas | NOT_ANNOTATED | 10 | 8 |
 | CLAIM 031 | WWOX-DEE is a developmental AND epileptic encephalopathy: seizure control does not rescue develo | in observation | DATO (osservazione clinica) + INFERENZA  | clinical course / therapeutic strategy | NOT_ANNOTATED | 8 | 3 |
 | CLAIM 032 | Una copia di WWOX conserva alcuni endpoint osservati, ma non definisce una soglia terapeutica de | in observation | DATO (endpoint specifici in topo, ratto  | P7 — gene therapy readiness / dose-thres | NOT_ANNOTATED | 10 | 23 |
-| CLAIM 033 | Biallelic null WWOX carries higher mortality than genotypes with at least one missense — but the | in observation | DATO (statistica di coorte) + IPOTESI (l | genotype-phenotype / prognosis | NOT_ANNOTATED | 13 | 4 |
+| CLAIM 033 | Biallelic null WWOX carries higher mortality than genotypes with at least one missense — but the | in observation | DATO (statistica di coorte) + IPOTESI (l | genotype-phenotype / prognosis | NOT_ANNOTATED | 13 | 7 |
 | CLAIM 034 | In a post-mitotic excitable neuron under metabolic stress, WWOX up-regulation is pro-oxidant — r | in observation | DATO (sistema fotorecettoriale) + ESPANS | P5 — metabolism / redox · secondario P1  | NOT_ANNOTATED | 6 | 3 |
 | CLAIM 035 | WWOX is a direct, residue-mapped inhibitor of GSK3β through an Axin-like docking motif in the SD | in observation | DATO (biochimica, cinque saggi ortogonal | P1 neurosviluppo / GSK3β–Tau–microtubuli | NOT_ANNOTATED | 6 | 1 |
 | CLAIM 036 | A systemic constitutive Wwox-null mouse at P18 is metabolically decompensated, so any brain phen | in observation | DATO (le misure) + INFERENZA (la portata | P5 — metabolismo / rene; confondente tra | NOT_ANNOTATED | 7 | 4 |
@@ -95,6 +95,8 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 | CLAIM 043 | The WWOX → TRAPPC6AΔ/TIAF1 → caspase → tau/Aβ cascade has no link measured in a neuron carrying  | in observation | DATO (what each cited link measures, rea | P4 — proteostasis / aggregation cascade | NOT_ANNOTATED | 3 | 5 |
 | CLAIM 044 | The direction of WWOX activity in stressed neurons is unresolved: one in-vivo record makes activ | in observation | DATO (the injury time course and its bou | P3 — neuronal injury and WWOX directiona | NOT_ANNOTATED | 2 | 2 |
 | CLAIM 045 | One WWOX allele is not electrophysiologically silent in the murine neocortex, and no endpoint be | in observation | DATO (la proporzione) + INFERENZA (la le | P2 — eccitabilità / rete neocorticale | NOT_ANNOTATED | 1 | 2 |
+| CLAIM 046 | The three direct WWOX read-outs a published protocol demonstrates are Tier 1 modalities and none | in observation | DATO (le proprietà di misura) + INFERENZ | P9 — measurement / assay specification | NOT_ANNOTATED | 3 | 1 |
+| CLAIM 047 | A CNS AAV restoration cassette can be partly but not fully specified in advance: four bounds mea | in observation | DATO (ogni numero misurato) + INFERENZA  | P7 — gene-therapy design / restoration s | NOT_ANNOTATED | 3 | 4 |
 
 ## 2 · Edges declared by the registry
 
@@ -145,6 +147,7 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 | CLAIM 037 <-> CLAIM 039 | yes | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 059 |
 | CLAIM 037 <-> CLAIM 040 | yes | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
 | CLAIM 043 <-> CLAIM 044 | yes | Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | PAPER 141 |
+| CLAIM 046 <-> CLAIM 047 | yes | Clinical meaning, Wikilinks | UNTYPED | NO_DECLARED_RELATION_ANNOTATION | — |
 
 Every edge carrying `NO_DECLARED_RELATION_ANNOTATION` is an edge that exists
 and has never been given a direction of causation, an intermediate, or an
@@ -164,7 +167,7 @@ reported as `RELATION_TYPE_UNRECOGNISED` and is never coerced into a type.
 
 ## 3 · Where the causal content actually sits
 
-21 of 45 claim titles state a
+21 of 47 claim titles state a
 relation, and every declared edge states none. The causal content of this
 model is largely **inside its nodes**: *"Neuronal WWOX deletion induces
 non-cell-autonomous hypomyelination"* is a cause, a relation and an effect
@@ -356,7 +359,7 @@ its sentence is a reading, and this tool does not perform readings.
 | CLAIM 016 | claim_title | `contribute to` | GSK3β hyperactivation may contribute to seizure susceptibility in WWOX deficiency |
 | CLAIM 018 | claim_title | `causes` | The exon 6 splice-site variant c.517-2A>G is pathogenic and causes exon 6 skipping in humans |
 
-Showing 12 of 359 bound candidates; the
+Showing 12 of 367 bound candidates; the
 complete set, with evidence and provenance, is in the export. The worklist
 in cost order — what needs an annotation, what needs a type, what needs a
 decomposition, what needs a reading — is printed by:
@@ -373,6 +376,6 @@ carried no connective from the lexicon.
 ## Provenance
 
 Derived from 257 input files; digest
-`bac5364934eb5657`. Sources: the claim, paper and
+`6e2ab115d74936f0`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 

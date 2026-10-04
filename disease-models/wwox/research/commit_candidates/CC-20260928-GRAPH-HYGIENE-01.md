@@ -186,3 +186,17 @@ empty § 6 after 2026-10-05 is the finding.)*
 Still a stub with no op list (its § 5 names what turns it into a proposal) and its own review date is 2026-10-05. Content untouched.
 
 **Not medical advice.**
+
+## BATCH DISPOSITION — `BATCH_20261004_002` (2026-10-04, ACTOR_ID `scientist`, Scientist L), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** `NOT INTEGRATED`.
+
+**Reason: it is a stub and carries no operation, so there is nothing a BATCH_COMMIT can propagate.** Its own header says `STUB — SCOPED, NOT PROPOSED`, and its § 5 states what would turn it into a proposal. Re-measured 2026-10-04: still no `old`/`new` op list. A batch cannot propagate an empty op set, so every further deferral of this file is a deferral of **authoring work that has not been done**, recorded as though it were a pending propagation. It has been carried that way for seven batches.
+
+**What this disposition does and does not mean.** It is **not a deletion and not a rejection of the idea**: the file stays, its content stays readable, and the claim→claim graph hygiene it scopes remains a legitimate Scientist surface. What it records is that **this candidate** will not be propagated, because a stub is not a proposal — if the work is wanted, it is a **new candidate with an op list**, authored against the registry as it stands now rather than as it stood on 2026-09-28. Its own review date was 2026-10-05, one day after this batch, and neither of its two triggers has fired.
+
+**Why this disposition is taken now rather than deferred an eighth time.** `growth_anchors.py` derives the backlog from candidates on disk that no disposition and no scope closes, and the threshold that fires the next `BATCH_COMMIT` is **5**. A permanently pending stub is a counter held at its trigger for a reason that has nothing to do with scientific debt, which makes the signal unreadable for everything else — the problem `BATCH_20261004_001` set out in its own report and proposed closing. This closes the one member of the residue that can be closed **on the merits**, with no judgement reserved to another actor and no artefact outstanding.
+
+**Not medical advice.**
