@@ -242,3 +242,74 @@ WWOX–DVL axis, not a measurement of it.
 
 Record affected: **DL-BIO-001**, `CC-20261004W12-C-SDR-ABUNDANCE-01` (MINOR). Genotype caution:
 P252A ≠ Q230P, and an SDR-region missense is not an acceptor-site allele.
+
+## 4 · PMID 33195192 — Chou 2020, Wwox-deficient mouse skin (held: 1 receipt, partial)
+
+Owed: figures and supplement, both `not_read` and both absent from disk — the manifest declared the
+article XML alone. The whole package (eight figure images, the supplementary legend PDF, ten
+supplementary images) was acquired free from the Europe PMC archive for PMC7652735.
+
+**Answer to this wave's question: the raised-WWOX caution is only cited here.** `transfect` occurs
+zero times; both occurrences of `overexpress` sit inside citations; the single `ectopic` is
+"ectopic p53" in a citation. Every measurement in the paper is a loss-of-Wwox measurement. The
+landed record already words it that way, so this reading **confirms it and changes nothing**.
+
+New from the owed supplement, all of it absent from the legends:
+
+- Three exact P-values printed on panels — transepidermal water loss **P = 0.3894** (Fig S1A,
+  n = 8/9/5), follicle number at E16.5 **P = 0.56** and follicle length at E18.5 **P = 0.62**
+  (Fig S6A/B). The barrier is not measurably impaired even in the homozygous null, and follicle
+  development to E18.5 is unaffected: three earned nulls, each with its number.
+- A **measured heterozygote null**: epidermal TUNEL-positive cells ≈ 0.8 % (`+/+`), ≈ 0.85 % (`+/−`),
+  ≈ 1.8 % (`−/−`), n = 5, with brackets drawn only against `−/−` (`*` from each) and **none between
+  `+/+` and `+/−`**, which under the legend's all-pairwise Tukey means tested and not significant.
+
+Limits: mouse skin, constitutive knockout, one postnatal day, n = 5 — weak evidence of absence, and
+no transfer to a human heterozygote, to brain, or to any missense or splice allele. **No candidate:
+nothing changes.**
+
+## 5 · PMID 37781246 — Kałuzińska-Kołat 2023, four GBM lines (held: 1 receipt, partial)
+
+Owed: figures and supplement, both absent; the package (five figure images, five supplementary
+TIFFs, seven workbooks) was acquired free from the Europe PMC archive for PMC10540236.
+
+**Answer: the proliferation phenotype cannot be panel-supported here, because the paper performs no
+proliferation, viability or colony assay at all** — `MTT` 0, `BrdU` 0, `transfect` 0, and all three
+occurrences of `viabilit` are narrative sentences about the group's preceding study. The work is
+transcriptomic and network-analytic throughout. The landed record already attributes the phenotype
+to the preceding paper: **confirmed**.
+
+New: the supplement shows the transduction worked in **all four** lines (`WWOX` is in the
+*«Upregulated in all cell lines»* set of Supp Table 5 and in all four cell-line columns of Supp
+Table 3), so the one-of-four phenotype is not a failure of overexpression elsewhere — **but the
+magnitude achieved per line is published only as node colour in Figure 3A, with no numeral anywhere
+and no per-line column in any of the seven workbooks.** The question that would separate
+line-specific biology from a dose difference is unanswerable from what is deposited.
+
+Record affected: **CLAIM 011** (status `flagged for review`, not a baseline) —
+`CC-20261004W12-C-GBM-DOSE-UNPRINTED-01` (MINOR).
+
+## 6 · PMID 41345172 — common WWOX intronic deletion (held: 2 receipts, partial, wave-9 re-read)
+
+Owed: supplement still `captions_only`; three of fifteen supplementary files were held. The other
+twelve workbooks were acquired free from the Europe PMC archive for PMC12753814, and the three held
+files returned **byte-equal**.
+
+**Answer: the 1447-homozygote annotation survives.** Supplementary Figure 19 had been read at
+70 dpi; re-rendered at **400 dpi** the row reads `DEL_16_156229`, 78371638–78384898, 13.3 kb, allele
+count **7355**, allele number **21694**, AF **3.39e-1**, homozygotes **1447**; 7355/21694 = 0.33903.
+Nothing to retire.
+
+Two additions, both strengthening the standing rejection rather than weakening it:
+
+- The row is the first of **fourteen** gnomAD structural variants inside WWOX, and three more in the
+  same highlighted block are common too — `DEL_16_156234` (AF 0.318, **220** homozygotes),
+  `INS_16_101038` (AF 0.186, 122), `INS_16_101054` (AF 0.101, **327**). WWOX carries several common
+  intronic SVs; this one is the most frequent, not a singular event.
+- **Supplementary Table 1, the authors' own rank-1 table, contains no WWOX-interval result.** 139
+  packed result cells across every cohort, method and phenotype; the only chromosome-16 cell is
+  `16:75296761; BCAR1`. For SANAD drug response the rank-1 cells (1.46e-5 and 1.7e-5) are both
+  stronger than the deletion's best drug-response p of 1.68e-4.
+
+Records: **DIS-036** (`CC-20261004W12-C-CNV-CONTEXT-01`, MINOR); **CLAIM 032** checked and left
+unchanged — its figures are confirmed digit for digit.
