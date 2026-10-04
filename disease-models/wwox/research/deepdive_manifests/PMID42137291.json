@@ -1,0 +1,241 @@
+{
+ "schema_version": 2,
+ "pmid": "42137291",
+ "doi": "10.1016/j.omta.2026.201707",
+ "receipt": "FTR-20261004-42137291-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID42137291.md",
+  "disease-models/wwox/research/intake_wave_20261004w7_C2.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W7-C2-REGISTRY-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W7-C2-DRG-GENOME-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W7-C2-DOSE-ROUTE-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery ledger edit; any lead is proposed through a commit candidate."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "The paper is off-gene; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for the reference genotype class."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; triples are published in the candidate."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "Not assessed: the paper never mentions WWOX. Sponsor-authored (employees and stockholders of the developer, with patent applications on the construct, per the declaration of interests)."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX in the article text (case-insensitive count over the JATS body)",
+    "count": 0,
+    "source": "local XML count 2026-10-04"
+   }
+  ],
+  "note": "Off-gene paper read for the IND-style package shape: dose scaling, DRG evaluation and immune readouts of a CSF-route AAV9."
+ },
+ "multihop": {
+  "references_enumerated": 84,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "WWOX does not occur in the article; no reference is gene-direct."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42137291",
+  "hits": 0,
+  "note": "No registry record names this paper before this reading."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-04 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn, CommentIn or UpdateIn link; publication types Journal Article.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 84,
+   "references_screened": 71,
+   "references_with_doi": 71,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 24,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 13
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42137291_Thomsen2026_PMC.xml",
+   "sha256": "73f46c3b4b037ea130a602fcf78e379ba0bf2c5c687d9d668eb56b1bb9f2ce98",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13148950/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "73f46c3b4b037ea130a602fcf78e379ba0bf2c5c687d9d668eb56b1bb9f2ce98"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST fullTextXML for the PMC id returned HTTP 200 with a full JATS body on 2026-10-04; the artefact declared above is that response, so every body and table quote can be re-verified externally.",
+  "entries": [
+   {
+    "proposition": "DRG evaluation in mice rests on a careful analysis of high-dose sections reported as normal histopathology.",
+    "snippet": "a careful analysis of DRG tissue sections from mice in the high-dose group revealed healthy cells and normal histopathology",
+    "anchor": "Results, Assessment of INS1201 toxicity, mouse paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137291_Thomsen2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The DRG histology figure is one image from one animal at the highest dose.",
+    "snippet": "(image is from animal administered highest dose, 8.0E+11 vg)",
+    "anchor": "Figure 8 legend, panel E",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137291_Thomsen2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DRG held many vector genomes but no transgene mRNA, because the promoter is muscle-derived.",
+    "snippet": "although high numbers of vector genomes were identified in the DRG, there was an absence of INS1201 mRNA expression",
+    "anchor": "Results, Biodistribution of INS1201 in WT mice and NHPs",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137291_Thomsen2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The NOAELs equal the highest doses tested, set by feasible dose, not by an observed toxic threshold.",
+    "snippet": "The NOAELs for these studies were 8.0E+11 vg/animal in mice and 3.05E+14 vg/animal in NHPs, both of which were the highest tested doses",
+    "anchor": "Discussion, safety paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137291_Thomsen2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The mouse top dose was limited by maximum ICV volume and titer.",
+    "snippet": "was based on the limitation of maximum volume for ICV injections in mice and viral titer concentration",
+    "anchor": "Results, Assessment of INS1201 toxicity, mouse paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137291_Thomsen2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "NHP GLP study: single lumbar IT dose, three animals per dose and three vehicle animals, 3-month necropsy.",
+    "snippet": "by lumbar IT injection (n = 3 per group); vehicle control NHPs (n = 3) were also included",
+    "anchor": "Methods, Nonhuman primates",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137291_Thomsen2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Anti-AAV9 antibody titre above 1:50 was an exclusion criterion for NHPs.",
+    "snippet": "Animals with AAV9 antibody titer levels above 1:50 dilution were excluded from the study.",
+    "anchor": "Methods, Nonhuman primates",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137291_Thomsen2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "All NHPs treated with INS1201 developed anti-AAV9 antibodies by day 28.",
+    "snippet": "Anti-AAV9 antibodies were detected in all animals treated with INS1201 on days 28 and 92/93.",
+    "anchor": "Results, Assessment of INS1201 toxicity, NHP paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137291_Thomsen2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Transient transaminase and platelet changes occurred in individual NHPs without microscopic correlates.",
+    "snippet": "Non-adverse, transient, INS1201-related effects were noted in individual animals on clinical pathology parameters, including changes in platelet count, aspartate transaminase, and/or alanine transaminase",
+    "anchor": "Results, Assessment of INS1201 toxicity, NHP paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137291_Thomsen2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Minimal focal mononuclear infiltrates along the injection path were judged non-adverse in mice.",
+    "snippet": "non-adverse, focal, and minimal mononuclear cell infiltrates in the brain were noted in some individual animals treated with INS1201, without a dose-response relationship",
+    "anchor": "Results, Assessment of INS1201 toxicity, mouse paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137291_Thomsen2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Mouse-to-NHP dose equivalence was set by CSF volume, a 250-fold scale-up.",
+    "snippet": "scale up from mice with estimated CSF volume of 0.04 mL to juvenile NHP with estimated CSF volume of 10 mL",
+    "anchor": "Results, Biodistribution of INS1201 in WT mice and NHPs",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137291_Thomsen2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Efficacy plateaued across doses; the authors attribute it to the treatment age at which damage had already occurred.",
+    "snippet": "further increases in dose might not be expected to provide additional added benefit when dosed at this time point",
+    "anchor": "Discussion, dose-response paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137291_Thomsen2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Toxicology studies were single-dose, in juvenile male animals.",
+    "snippet": "The toxicity of INS1201 was assessed in single-dose, GLP-compliant toxicology studies in juvenile (p28) male WT mice and NHPs",
+    "anchor": "Discussion, safety paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137291_Thomsen2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Transgene RNA was found in muscle; non-muscle tissue negative except two of three midbrain samples.",
+    "snippet": "with the exception of two out of three midbrain samples from NHPs in the high-dose group",
+    "anchor": "Results, Biodistribution of INS1201 in WT mice and NHPs",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137291_Thomsen2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}
