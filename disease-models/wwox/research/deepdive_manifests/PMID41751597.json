@@ -74,7 +74,7 @@
   "gene_direct_refs_in_source": [],
   "resolved": [],
   "queued": [],
-  "note": "All 62 references enumerated; none concerns WWOX. Two (a DRG pathology paper and a microRNA de-targeting paper, both macaque) are cited for the DRG-toxicity statement and are held elsewhere as sources of the DRG-attribution records; they are not hops of this reading."
+  "note": "All 62 references enumerated; none concerns WWOX. Four references (a DRG pathology paper and a microRNA de-targeting paper among them) are cited for the DRG-toxicity statement; they are not WWOX sources and were not opened by this reading."
  },
  "corpus_crossquery": {
   "query": "registry_records.py get --pmid 41751597 (done after the first pass was written)",
@@ -368,6 +368,54 @@
     "proposition": "Table A3, liver at day 28 versus day 1, intravenous: mean 2.012641 at day 28 and 0.068126 at day 1 (different doses: 5 and 2.5 x 10^11 vg).",
     "snippet": "IV (5 × 1011 vg) 11 2.012641 0.404079",
     "anchor": "Table A3, Liver, P28",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID41751597_Rioux2026_PMC.derived.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table A3, cerebrum, intracerebroventricular lower dose: day 1 mean 0.293985 versus day 28 mean 0.396319 vector genomes per diploid genome (n 10 each); no fall with age by qPCR in whole cerebrum for this route.",
+    "snippet": "Cerebrum P1 ICV (2.5 × 1011 vg) 10 0.293985 0.069654",
+    "anchor": "Table A3, Cerebrum, P1",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID41751597_Rioux2026_PMC.derived.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table A3, cerebrum, ICV, day 28 (same dose as day 1).",
+    "snippet": "Cerebrum P28 ICV (2.5 × 1011 vg) 10 0.396319 0.295485",
+    "anchor": "Table A3, Cerebrum, P28",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID41751597_Rioux2026_PMC.derived.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table A3, cerebrum, intravenous: day 1 (lower dose) 0.002756 versus day 28 (higher dose) 0.004638; no fall with age.",
+    "snippet": "Cerebrum P28 IV (5 × 1011 vg) 11 0.004638 0.001302",
+    "anchor": "Table A3, Cerebrum, P28",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID41751597_Rioux2026_PMC.derived.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table A3, cerebrum, intravenous, day 1.",
+    "snippet": "Cerebrum P1 IV (2.5 × 1011 vg) 10 0.002756 0.000864",
+    "anchor": "Table A3, Cerebrum, P1",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID41751597_Rioux2026_PMC.derived.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table A1 body weight by age (female then male): about 1.4 g at day 1, 2.7 g at day 5, 6.0 g at day 10, 13.5-13.9 g at day 28.",
+    "snippet": "Body Weight mean (g) 1.36 2.76 5.95 13.47 17.07 1.46 2.64 6.02 13.92 22.13",
+    "anchor": "Table A1, Body Weight row",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID41751597_Rioux2026_PMC.derived.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table A2: one euthanised animal (day 5, intrathecal, higher dose) had mild multifocal myocarditis of the right ventricular wall.",
+    "snippet": "Heart Right ventricular walls contained mild multifocal myocarditis",
+    "anchor": "Table A2, first animal",
     "surface": "table",
     "artifact": "files/fulltext/PMID41751597_Rioux2026_PMC.derived.txt",
     "panel_text_relation": "text_only"
