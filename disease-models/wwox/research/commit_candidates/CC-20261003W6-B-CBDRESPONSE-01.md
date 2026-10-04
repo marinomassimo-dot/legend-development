@@ -43,3 +43,16 @@ Receipt `FTR-20261003-40126049-01` appended before propagation.
 (two- or three-patient rows may reflect chance rather than genotype | in smaller subgroups with only two or three patients, the observed response rates may be influenced by chance or individual patient characteristics rather than the underlying genetic cause | PMID 40126049, Discussion, limitations paragraph; files/fulltext/PMID40126049_CerulliIrelli2025_PMC.xml)
 (Table 2 reports fractions, not percentages, for groups of five or fewer | Percentages have been reported only for groups with more than five patients. | PMID 40126049, Table 2 footnote; files/fulltext/PMID40126049_CerulliIrelli2025_PMC.xml)
 (the seizure-worsening patients are listed by gene | showing seizure worsening, this occurred in three patients harboring TSC2 pathogenic variants, | PMID 40126049, Appendix S1, Supplementary results para 1; files/fulltext/PMID40126049_CerulliIrelli2025_supplement/EPI-66-2253-s001.pdftotext-layout.txt)
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261003_005` · 2026-10-03 · ACTOR_ID `scientist` (Scientist J, batch integrator), under the operator's standing authorisation *«procedi sempre»*
+**Operations applied:** 1
+**Change class as judged by the batch:** MINOR (§7) — every target's live `Status` was read from the registry before judging.
+
+`DL-MECH-030` gains the cannabidiol-response note verbatim. It reads as an unlinked three-patient aggregate that must not be pooled with this cohort's four continuers and is **not** a genotype-specific efficacy result — the reading the dispatch required it not to invite. The `HYP-20260709-01` mirror the candidate offered was **not** written: that record is a nested `###` sub-block the editor cannot address by id, and `DL-MECH-030` already links it.
+
+**Nothing above this line was rewritten.**

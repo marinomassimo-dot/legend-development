@@ -99,3 +99,16 @@ appends after whatever that leaves.
 3. The electron-microscopy quantification rests on three animals per genotype | Graphs represent the myelinated axons (S-Control, n = 2500 and S-KO, n = 1200) in corpus callosum | PMID 33914858, Figure 5 legend panel B, journal page 3071, same PDF, page 11 rendered at 110 dpi
 4. The running text states the fold changes the panel does not support | significantly a greater number (6-fold) of unmyelinated axons in optic nerves of S-KO | PMID 33914858, Results, journal page 3069, same PDF, page 9 rendered at 110 dpi
 5. The cell counts come from three sections of three mice per genotype | from three independent sections of S-Control (n = 3) and S-KO mice (n = 3) | PMID 33914858, Figure 4 legend panel G, journal page 3070, same PDF, page 10 rendered at 110 dpi
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261003_005` · 2026-10-03 · ACTOR_ID `scientist` (Scientist J, batch integrator), under the operator's standing authorisation *«procedi sempre»*
+**Operations applied:** 2
+**Change class as judged by the batch:** MINOR (§7) — every target's live `Status` was read from the registry before judging.
+
+`PAPER 004` gains the operator-supplied artefact with both digests, the rejection of its derived text layer as a citation surface, the two findings the artefact withdraws, the measurement bound and the unresolved File010.mp4 digest discrepancy; `FT-044`'s suspension is closed with the historic line preserved and `partial full text` added beside `partial_fulltext_read`. 🔴 **One blind-audit NOT_SUPPORTED verdict was repaired by re-sourcing, not by dropping the claim:** the quote offered for *n = 3 animals per genotype* is Figure 5(B)'s legend, whose n = 2500 and n = 1200 are **axons counted, not animals**. The three-animals figure is in the same legend's parts (A) and (C) and in Figure 4(G), so the record now names those and states explicitly that 5(B)'s numbers are axon counts — which strengthens the candidate's own point about the unit of analysis. A second amendment keeps the printed tilde: the text says *∼6-fold*, a declared approximation, so what is recorded is that the approximation rounds in one direction only, not that the authors asserted a point value.
+
+**Nothing above this line was rewritten.**

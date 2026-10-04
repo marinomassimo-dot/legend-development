@@ -115,6 +115,7 @@ The canonical P1–P7 codes follow the WWOX working model and claim registry. **
 **Quantità, dalla pagina stampata (2026-10-03, `CC-20261003W4-B-REGISTRY-01`), che la nota qui sotto rimandava a un PDF mai ottenuto:** assoni mielinizzati per campo nel corpo calloso a P17, S-Control 180 ± 40 contro S-KO 55 ± 35 — circa **3.3 volte**, non le «3.5–4 volte» a cui il testo corrente del lavoro arrotonda; assoni non mielinizzati nel nervo ottico 55 ± 20 contro 270 ± 60; g-ratio significativamente più alto in entrambi i tratti; oligodendrociti maturi CC1-positivi ridotti di **due volte** con OPC significativamente più numerosi; **nessuna morte oligodendrocitaria** significativa (CC1 + caspasi 3 clivata). Limite di potenza su ogni numero di spessore: l'analisi del g-ratio è potenziata a livello di assone, circa 600 assoni, 100 per topo, **n = 3 per genotipo**.
 🔴 **Debito di artefatto, dichiarato 2026-10-03:** l'HTML dell'editore che la ricevuta `FTR-20260923-33914858-01` dichiara come propria superficie di testo autorevole — `files/fulltext/PMID33914858_Repudi2021_OUP.html`, sha256 `3baf27af9f906a8bfa013924a90a0eca7713b25463d6f039fddef0242caac902` — **non è presente in questo checkout**, né lo sono i cinque supplementi che quella ricevuta nomina; cercati per nome su tutta la macchina e per SHA-256 su 504 file candidati. I locator di quella lettura sono quindi **non auditabili** finché l'artefatto non rientra. La ri-acquisizione è stata ritentata il 2026-10-03 e fallisce su ogni rotta libera: OUP risponde HTTP 403 dietro Cloudflare su tre URL, non esiste PMCID, Unpaywall e OpenAlex nominano solo quella posizione bronze con `has_repository_copy: false`, e l'indice CDX di Wayback non ha alcuna cattura. Cosa sbloccherebbe: una copia dell'operatore dello stesso HTML, o un prestito interbibliotecario. 🟢 **Parzialmente sbloccato lo stesso giorno (2026-10-03, `BATCH_20261003_003`):** l'operatore ha fornito il **PDF dell'articolo** (`files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.pdf`, sha256 `113522bb09b42a2dc0252bc1d7b112b66e3a68323ab1348c042f0ac8c8e8fa4c`, 17 pagine) con un layer di testo derivato (`PMID33914858_Repudi2021_Brain_operator_supplied.txt`, sha256 `665f777280b0476f6e5cb69997027c1b0ae0052e738a2b68fce0335ef40e7124`, `pdftotext -layout -nopgbrk`; lettere greche e segno meno sono lossy in quel layer). **I cinque supplementi e l'HTML dell'editore restano assenti**, quindi questa nota non discharge il debito: nessun locator di `FTR-20260923-33914858-01` è stato ri-ancorato qui e né il manifest né la ricevuta sono stati toccati da questo batch. Compito di lettura proposto: una nuova ricevuta con `reread_reason: inadequate_prior_coverage` su questa superficie, supplementi dichiarati non disponibili.
 **Note:** justifies MRI + DTI logic. Identifier normalizzato + abstract/key-findings verificati via PubMed 2026-07-05 (CC-2026-07-05-002). Full-text PDF OA-ma-bot-blocked (Oxford advance-access) → handoff `files/fulltext/PMID33914858_Repudi2021.handoff.md` per recupero manuale; arricchimento quantitativo del claim rimandato al PDF. Reperto cross-pathway (abstract): organoidi cerebrali umani WWOX-KO mostrano iperattivazione + ipomielinizzazione → cross-link [[claim_registry_current#CLAIM 002]]. ⚠️ Duplicato corpus **CORPUS-STUB-087** (stesso DOI) → mergiare in un prossimo BATCH_COMMIT.
+**Artefatto e misura, aggiornati il 2026-10-03 (`CC-20261003R-ARTEFACT-DEBT-01`, ricevuta `FTR-20261003-33914858-03`):** l'operatore ha fornito il **PDF tipografico dell'articolo** (17 pagine, sha256 `113522bb09b42a2dc0252bc1d7b112b66e3a68323ab1348c042f0ac8c8e8fa4c`) e l'**archivio supplementare completo** (sha256 `cfb264e45a6d6e2d7082853de293431594c8235cf087fbecbd0b3fcf1956c276`: metodi e nove figure supplementari, due video, tre fogli di calcolo). Il debito sull'HTML dell'editore è **superato, non saldato** — quell'artefatto resta assente, e nulla di canonico vi poggia più. Il layer di testo derivato dal nuovo PDF è **rifiutato** come superficie di citazione (screen del validatore: 24 controlli C0, più le sostituzioni stampabili note di questa rivista), quindi ogni locator dell'articolo è `rendered_text` o `figure` su pagina resa; il testo del supplemento è invece **pulito** allo stesso screen. 🔴 **Due reperti precedenti sono ritirati da questo artefatto:** la legenda della Supplementary Fig. 3, che `FTR-20260923-33914858-01` dichiarava **mancante** da File009, è **presente** nello stesso file con lo stesso sha256 (1125 burst, 149 / 834 / 142 in tre esempi S-KO, 100–200 s) — l'assenza era dell'estrazione, non del documento; e un **data-availability statement esiste** («available from the corresponding author upon reasonable request»), pur senza alcun accession, il che conferma la sostanza del reperto precedente e ne corregge la formulazione. 🔴 **Vincolo di misura su ogni quantità di mielina di questo lavoro:** tutte vengono da **n = 3 animali per genotipo** (legenda della Figura 5, pannelli (A) e (C), e legenda della Figura 4(G)), mentre ciascun pannello riporta 13–15 punti e gli asterischi sono calcolati **sui campi visivi**, non sugli animali; ⚠️ **Integrator amendment, `BATCH_20261003_005`, from the blind audit:** i numeri *n* = 2500 e *n* = 1200 della legenda della Figura 5(B) sono **assoni contati**, non animali, e non vanno citati come numerosità animale — il n = 3 per genotipo sta nelle parti (A) e (C) della stessa legenda; e i fold change del testo corrente sono gonfiati in una sola direzione — «~3.5–4 volte» misura 3.3 volte sulle medie degli autori stessi, «~6 volte» misura 4.9 volte sulle loro medie e circa 4.2 volte sul pannello a 600 dpi. ⚠️ **Integrator amendment, `BATCH_20261003_005`, from the blind audit:** il testo stampato porta la **tilde** (*«∼6-fold»*), quindi è un'approssimazione dichiarata e non una cifra esatta: ciò che si registra qui è che l'approssimazione è arrotondata **in una sola direzione**, non che gli autori abbiano affermato un valore puntuale. ⚠️ Discrepanza di digest registrata e non risolta: `FTR-20260923-33914858-01` nomina File010.mp4 con sha256 `2ef48d089be350fb3bef68799c443305b9ca9124ea318066f6a2fad8607ecb3c`, l'archivio attuale con `87ec870a96251af9ee3211d4b7b0599360d1a035c2e1cbd41ca46ced6adf52bd`; l'artefatto precedente è assente e i due non sono confrontabili.
 **Wikilinks:** [[claim_registry_current#CLAIM 003]]
 
 ---
@@ -1068,10 +1069,10 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Corpus paper no:** 33
 **Full title:** Association between WWOX/MAF variants and dementia-related neuropathologic endophenotypes
 **Identifier:** PMID 34852950 / DOI 10.1016/j.neurobiolaging.2021.10.011
-**Status:** not_processed
+**Status:** promoted — see [[paper_registry_current#PAPER 196]]
 **Registry role:** corpus placeholder only
 **Claim links:** none
-**Next action:** screening / triage required
+**Next action:** none — upgraded to [[paper_registry_current#PAPER 196]] by `CC-20261003W6-A-REGISTRY-01` (receipt `FTR-20261003-34852950-01`); this placeholder is kept as history
 **Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record.
 
 ## CORPUS-STUB-034
@@ -9250,3 +9251,381 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Role:** 🔴 **Earned null for the gene.** The selection record called this "deliberately the weakest member" of its group and advised dropping it first; **that judgement is reversed here** - it is the only source carrying the human evidence base. Carries: the regulatory hold placed on a human paediatric intrathecal programme because of primate DRG findings; the human DRG outcome (sensory, mild, improved with symptomatic treatment where it appeared, and absent on MRI and nerve conduction at the highest human doses); and the pattern of **triple immunosuppression where the recipient is predicted null for the transgene product** versus a steroid alone where endogenous protein is present. ⚠️ **One paragraph's four hepatotoxicity percentages are internally incoherent as printed** - it compares one route to itself and gives a sham-control rate exceeding the treated rate - and none may be carried; the same paragraph calls a study single-arm while listing its sham groups. ⚠️ Its attribution of DRG toxicity to supraphysiological expression level is in tension with [[paper_registry_current#PAPER 179]]'s tissue-level data. Every datum is secondary; none of the cited primaries was read.
 **LIT link:** [[literature_tracking_log_current#LIT-0470]]
 **Note:** class-level record. Not medical advice.
+
+## PAPER 183
+**Short title:** Hudry 2023 Mol Ther — liver injury in cynomolgus monkeys after intravenous and intrathecal scAAV9; the hepatic arm of the CSF-route dose question
+**Full title:** Liver injury in cynomolgus monkeys following intravenous and intrathecal scAAV9 gene therapy delivery
+**Authors:** Hudry E, Aihara F, Meseck E, Mansfield K, McElroy C, Chand D, Tukov FF, Penraat K
+**Year:** 2023
+**Source type:** primary research — nonclinical safety/toxicology (NHP, mouse-free)
+**Journal/source:** *Mol Ther* 2023;31(10):2999-3014
+**Identifier:** PMID 37515322 / PMCID PMC10556189 / DOI 10.1016/j.ymthe.2023.07.020
+**Status:** processed
+**Record provenance:** created by `CC-20261003W6-C-REGISTRY-01` (intake wave 6 2026-10-03, Scientist C); renumbered from the candidate's provisional id by `BATCH_20261003_005`
+**Evidence depth:** `partial_fulltext_read` (partial full text) — receipt `FTR-20261003-37515322-01`; manifest `deepdive_manifests/PMID37515322.json` (VERDICT PASS); dossier `research/fulltext_dossiers/PMID37515322.md`. Figure panels were not inspected; the depth label is read off the receipt and is not upgraded here.
+**Primary pathway:** gene-therapy safety (P7) · hepatic endpoint · route
+**Model/species:** cynomolgus macaque (NHP)
+**Genotype/model:** none — cargoes SMN1 and reporter constructs; no WWOX construct
+**Transferability:** T3 — transferable as a design fact about route, cassette and immunosuppression; no dose transfers to a WWOX cassette
+**clinical relevance:** MODERATE strategic / NOT clinically validated
+**Claim links:** none
+**Role:** **WWOX content: none — the string WWOX occurs zero times.** Why held: the empty-capsid and promoterless arms that show the organ injury requires a transcriptionally productive genome; three immunosuppressive regimens (prednisolone IV, prednisolone IT, rituximab + everolimus IT) that did **not** prevent the transaminase rise or the microscopic findings; route sets hepatic magnitude and timing (liver 721 vg/dg after IV versus 19 vg/dg after IT; injury at day 3-4 versus about 2 weeks). 🔴 It is the primary behind **reference 10 of PMID 41257285**: the **hepatic** half of the carried sentence 'Hepatic and DRG toxicities were only detected after administration of full AAV9 viral particles' is sourced here; the **DRG** half is **not** — 'DRG' occurs once in this paper, in a biodistribution abbreviation list, and no dorsal-root-ganglion histopathology is reported for any arm (`BATCH_20261003_005`, `CC-20261003W6-C-DRG-ATTRIBUTION-01` §3a).
+**LIT link:** [[literature_tracking_log_current#LIT-0476]]
+**Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.
+
+## PAPER 184
+**Short title:** Amaral 2026 Mol Ther Adv — intra-CNS AAV9 delivery: species and route differences in safety and transgene expression
+**Full title:** Intra-CNS AAV9-delivery yields species and route of administration differences in safety and transgene expression
+**Authors:** Amaral AC, Grubor B, Gianni D, Koetzner L, Abraham N, Bourque S, Brown D, Chen Y, Chicoine KE, Clarner P, De Giovanni PJ, Hamann S, Kirkland M, Mendes OR, Michael M, Nadella MVP, Nambiar K, Sebalusky J, Zeng W, Xu S, Trapa P, Plowey ED, Tien E, Fikes J, Walsh DM, Hirst WD, Suh J, Glajch KE
+**Year:** 2026
+**Source type:** primary research — nonclinical biodistribution and safety (mouse + NHP)
+**Journal/source:** *Mol Ther Adv* 2026;34(3):201779
+**Identifier:** PMID 42422766 / PMCID PMC13343144 / DOI 10.1016/j.omta.2026.201779
+**Status:** processed
+**Record provenance:** created by `CC-20261003W6-C-REGISTRY-01` (intake wave 6 2026-10-03, Scientist C); renumbered from the candidate's provisional id by `BATCH_20261003_005`
+**Evidence depth:** `partial_fulltext_read` (partial full text) — receipt `FTR-20261003-42422766-01`; manifest `deepdive_manifests/PMID42422766.json` (VERDICT PASS); dossier `research/fulltext_dossiers/PMID42422766.md`. Figure panels were not inspected; the depth label is read off the receipt and is not upgraded here.
+**Primary pathway:** gene-therapy safety (P7) · route · CNS biodistribution
+**Model/species:** mouse (P0 ICV) + cynomolgus macaque
+**Genotype/model:** none — cargo GBA1; no WWOX construct
+**Transferability:** T3 — the route-versus-harm contrast transfers as a design fact; the magnitudes are capsid-, cargo- and species-specific
+**clinical relevance:** MODERATE strategic / NOT clinically validated
+**Claim links:** none
+**Role:** **WWOX content: none (zero occurrences).** Why held: the one source in this corpus that holds the cargo fixed and varies the **route** — intracisterna magna gave cord and dorsal-root-ganglion transgene expression with adverse microscopic findings **at every dose level** and no significant brain GCase change, while intraparenchymal dosing gave brain expression, **no AAV-related DRG toxicity**, and adverse **brain** findings with early euthanasia of a whole dose group. 🔴 Its animals received **neither** an antibody pre-screen **nor** immunosuppression, stated by the authors; and its only statement in favour of immunosuppression says it *«can greatly reduce but not eliminate»* the findings and cites the authors' own unpublished data, not a measurement in this paper. The early-postnatal arm confounds age with species by the authors' own admission.
+**LIT link:** [[literature_tracking_log_current#LIT-0477]]
+**Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.
+
+## PAPER 185
+**Short title:** Okai 2025 Mol Ther Methods Clin Dev — AAV1/AAV5/AAV9/AAVDJ biodistribution after intra-cisterna magna delivery in NHP
+**Full title:** Biodistribution of AAV1, AAV5, AAV9, and AAVDJ serotypes after intra-cisterna magna delivery in non-human primates
+**Authors:** Okai T, Sato S, Yasuno H, Nakayama M, Yamamoto S, Sjöqvist S, Otake K, Nakashima M, Deshpande M, Galbreath E, Oak JH, Miyamoto S, Proetzel G
+**Year:** 2025
+**Source type:** primary research — nonclinical biodistribution and tolerability (NHP)
+**Journal/source:** *Mol Ther Methods Clin Dev* 2025;33(4):101593
+**Identifier:** PMID 41078870 / PMCID PMC12509745 / DOI 10.1016/j.omtm.2025.101593
+**Status:** processed
+**Record provenance:** created by `CC-20261003W6-C-REGISTRY-01` (intake wave 6 2026-10-03, Scientist C); renumbered from the candidate's provisional id by `BATCH_20261003_005`
+**Evidence depth:** `partial_fulltext_read` (partial full text) — receipt `FTR-20261003-41078870-01`; manifest `deepdive_manifests/PMID41078870.json` (VERDICT PASS); dossier `research/fulltext_dossiers/PMID41078870.md`. Figure panels were not inspected; the depth label is read off the receipt and is not upgraded here.
+**Primary pathway:** gene-therapy safety (P7) · capsid choice · CNS biodistribution
+**Model/species:** cynomolgus macaque, male only
+**Genotype/model:** none — cargo GBA1; no WWOX construct
+**Transferability:** T3 — 'capsid is not a lever on this route' transfers as a design fact; the deep-brain ceiling is route-specific
+**clinical relevance:** MODERATE strategic / NOT clinically validated
+**Claim links:** none
+**Role:** **WWOX content: none (zero occurrences).** Why held: four capsids held against one fixed CSF route and one dose — no significant biodistribution difference, the authors decline to rank them, and no capsid reached deep brain above one copy per cell. 🔴 **And the worked example of a tolerability statement made under a regimen stated only in Methods:** every animal in both of its studies was under **weekly systemic methylprednisolone**, which appears in one Methods sentence and is restated nowhere, while the abstract, results and discussion say the procedure 'was well tolerated with no significant toxicity'. Sensory-ganglion degeneration occurred in 1 of 11 dosed animals despite sacral-DRG transgene positivity of 31-80 % of neurons, and the study contains **no unmedicated arm**, so this is not a controlled test of immunosuppression.
+**LIT link:** [[literature_tracking_log_current#LIT-0478]]
+**Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.
+
+## PAPER 186
+**Short title:** DuBreuil 2025 Mol Ther Adv — a secretable frataxin: lowering vector burden instead of tolerating it
+**Full title:** Development of a secretable frataxin for enhanced efficacy in treating Friedreich's Ataxia
+**Authors:** DuBreuil DM, Fleming M, Parikh Y, Woo M, Bu J, Ayloo S, Langohr IM, Bangari DS, Mueller C, Ramachandran S
+**Year:** 2025
+**Source type:** primary research — vector and cargo engineering with NHP and mouse arms
+**Journal/source:** *Mol Ther Adv* 2025;34(1):201661
+**Identifier:** PMID 42157962 / PMCID PMC13182795 / DOI 10.1016/j.omta.2025.201661
+**Status:** processed
+**Record provenance:** created by `CC-20261003W6-C-REGISTRY-01` (intake wave 6 2026-10-03, Scientist C); renumbered from the candidate's provisional id by `BATCH_20261003_005`
+**Evidence depth:** `partial_fulltext_read` (partial full text) — receipt `FTR-20261003-42157962-01`; manifest `deepdive_manifests/PMID42157962.json` (VERDICT PASS); dossier `research/fulltext_dossiers/PMID42157962.md`. Figure panels were not inspected; the depth label is read off the receipt and is not upgraded here.
+**Primary pathway:** gene-therapy design (P7) · cargo engineering · dose window
+**Model/species:** mouse + cynomolgus macaque
+**Genotype/model:** none — cargo frataxin (FXN); no WWOX construct
+**Transferability:** T2 for the **units** (fold-of-endogenous), T3 for the numbers; WWOX protein is intracellular and the secretion strategy does not transfer to it without evidence
+**clinical relevance:** HIGH strategic / NOT clinically validated
+**Claim links:** none
+**Role:** **WWOX content: none (zero occurrences).** Why held: the one design in this corpus that lowers vector burden rather than tolerating it, and the only source that gives an **upper** bound on transgene product as a fold-of-endogenous figure. Route comparison with the same capsid: intravenous gave 62× less dorsal-root-ganglion and 25× less cerebellar-dentate transduction than intracisterna magna, and 10× more heart. 🔴 Even at lowered vector burden, minimal-to-mild DRG degeneration remained while brain and cord were spared. 🔴 The cross-correction logic rests on a **secreted** protein; WWOX is intracellular, so neither the mechanism nor the dose window carries over to a WWOX cassette.
+**LIT link:** [[literature_tracking_log_current#LIT-0479]]
+**Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.
+
+## PAPER 187
+**Short title:** Chen 2023 J Clin Invest — intrathecal AAV9/AP4M1 for SPG50: the recessive-null IND-directed architecture closest to a WWOX programme
+**Full title:** Intrathecal AAV9/AP4M1 gene therapy for hereditary spastic paraplegia 50 shows safety and efficacy in preclinical studies
+**Authors:** Chen X, Dong T, Hu Y, De Pace R, Mattera R, Eberhardt K, Ziegler M, Pirovolakis T, Sahin M, Bonifacino JS, Ebrahimi-Fakhari D, Gray SJ
+**Year:** 2023
+**Source type:** primary research — complete IND-enabling package (patient fibroblasts, KO mouse, rat and NHP toxicology)
+**Journal/source:** *J Clin Invest* 2023;133(10):e164575
+**Identifier:** PMID 36951961 / PMCID PMC10178841 / DOI 10.1172/JCI164575
+**Status:** processed
+**Record provenance:** created by `CC-20261003W6-C-REGISTRY-01` (intake wave 6 2026-10-03, Scientist C); renumbered from the candidate's provisional id by `BATCH_20261003_005`
+**Evidence depth:** `partial_fulltext_read` (partial full text) — receipt `FTR-20261003-36951961-01`; manifest `deepdive_manifests/PMID36951961.json` (VERDICT PASS); dossier `research/fulltext_dossiers/PMID36951961.md`. Figure panels were not inspected; the depth label is read off the receipt and is not upgraded here.
+**Primary pathway:** gene-therapy design and safety (P7) · dose · immune interface
+**Model/species:** human fibroblasts, mouse, rat, cynomolgus macaque
+**Genotype/model:** none for WWOX — cargo AP4M1, a biallelic loss-of-function CNS disease
+**Transferability:** T2 for the **architecture** (recessive null, intrathecal, age-dependent benefit), T3 for every dose figure
+**clinical relevance:** HIGH strategic / NOT clinically validated
+**Claim links:** none
+**Role:** **WWOX content: none (zero occurrences).** Why held: the recessive-loss-of-function, intrathecal, IND-directed design closest in shape to a WWOX programme, and **the only graded per-animal lumbar-DRG incidence table in this corpus**. Under one constant regimen — i.v. methylprednisolone from day 1 to termination plus rapamycin from twelve days before dosing — the lumbar-DRG mononuclear infiltrate was present in **every** dosed animal at **both** dose levels while neuronal degeneration was 100 % at 1.68 × 10^14 vg/animal and 0 % at 8.40 × 10^13; the T-cell ELISpot was null under that regimen. 🔴 Early intervention and higher dose both helped in the mouse, so age and dose are not separable in the efficacy arm. 🔴 n = 2 per cohort in the NHP arm and no unmedicated arm.
+**LIT link:** [[literature_tracking_log_current#LIT-0480]]
+**Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.
+
+## PAPER 188
+**Short title:** Ma 2025 Mol Med — AAV9-coSMN1 for spinal muscular atrophy: the group's only DRG-negative primate study, and its weakest reporting
+**Full title:** Preclinical evaluation of AAV9-coSMN1 gene therapy for spinal muscular atrophy: efficacy and safety in mouse models and non-human primates
+**Authors:** Ma W, Wu Z, Zhao T, Xia Y, Qin J, Tian X, Li X, He J, Zhang Y, Zhang L, Li L, Dong Z, Feng Z, Dong X, Sheng W, Wu X
+**Year:** 2025
+**Source type:** primary research — nonclinical efficacy and safety (mouse + NHP)
+**Journal/source:** *Mol Med* 2025;31(1):158
+**Identifier:** PMID 40301740 / PMCID PMC12042585 / DOI 10.1186/s10020-025-01207-4
+**Status:** processed
+**Record provenance:** created by `CC-20261003W6-C-REGISTRY-01` (intake wave 6 2026-10-03, Scientist C); renumbered from the candidate's provisional id by `BATCH_20261003_005`
+**Evidence depth:** `partial_fulltext_read` (partial full text) — receipt `FTR-20261003-40301740-01`; manifest `deepdive_manifests/PMID40301740.json` (VERDICT PASS); dossier `research/fulltext_dossiers/PMID40301740.md`. Figure panels were not inspected; the depth label is read off the receipt and is not upgraded here.
+**Primary pathway:** gene-therapy safety (P7) · dose saturation
+**Model/species:** mouse + cynomolgus macaque
+**Genotype/model:** none — cargo codon-optimised SMN1; no WWOX construct
+**Transferability:** T3 — a counterexample whose reporting depth does not support a strong negative
+**clinical relevance:** LOW-MODERATE strategic / NOT clinically validated
+**Claim links:** none
+**Role:** **WWOX content: none (zero occurrences).** Why held: the one primate intrathecal study in this group that reports **no** dorsal-root-ganglion pathology, at 4.67 × 10^13 vg/animal, and the one whose efficacy saturated below the highest dose tested. 🔴 Recorded as a **live but weak** counterexample, not a refutation: its own Figure 7 legend (*«Representative pictures showing minor detectable sign of toxicity»*) disagrees with its Results text, Tables 1-2 carry no body in the JATS and were not fetched, and the paper is **silent about immunosuppression** — an absence that is itself a finding here.
+**LIT link:** [[literature_tracking_log_current#LIT-0481]]
+**Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.
+
+## PAPER 189
+**Short title:** Cerulli Irelli 2025 Epilepsia — purified cannabidiol in 266 monogenic epilepsies; one Table 2 row of three WWOX patients (response at last follow-up)
+**Full title:** Expanding the therapeutic role of highly purified cannabidiol in monogenic epilepsies: A multicenter real-world study
+**Authors:** Cerulli Irelli E, Mazzeo A, Caraballo RH, et al.; Orsini A, Coppola A
+**Year:** 2025
+**Source type:** primary research — retrospective multicentre real-world cohort
+**Journal/source:** *Epilepsia* 2025;66:2253-2267
+**Identifier:** PMID 40126049 / PMCID PMC12291005 / DOI 10.1111/epi.18378
+**Status:** processed
+**Record provenance:** created by `CC-20261003W6-B-REGISTRY-01` (intake wave 6 2026-10-03, Scientist B). Provisional number: the integrator renumbers if taken and updates the `LIT link`.
+**Evidence depth:** `partial_fulltext_read` (partial full text) — receipt `FTR-20261003-40126049-01`; manifest `deepdive_manifests/PMID40126049.json`; dossier `research/fulltext_dossiers/PMID40126049.md`
+**Primary pathway:** drug response (cannabidiol) · denominator
+**Model/species:** human
+**Genotype/model:** three WWOX patients, alleles not printed
+**Transferability:** T3 — n = 3, adjunctive, uncontrolled; no allele class
+**clinical relevance:** LOW-MODERATE — the only genotype-stratified CBD response row naming WWOX
+**Claim links:** none (see `CC-20261003W6-B-CBDRESPONSE-01`, DL-MECH-030)
+**Role:** Table 2 row WWOX (3 pts): mean seizure reduction 41.7 % (SD 38.2), ≥50 % responders 2/3, CGI-I improved 2/3, at last follow-up (minimum 3 months) on >99 % purified CBD added to a median of three ASMs. 🔴 No allele, age, syndrome, dose or follow-up length for these three; the authors warn that rows of two or three may reflect chance; overlap with held WWOX cases undetermined (INFERENZA); count once as an unlinked aggregate. Not medical advice.
+**LIT link:** [[literature_tracking_log_current#LIT-0482]]
+**Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.
+
+## PAPER 190
+**Short title:** Innes 2025 Dev Med Child Neurol — IESS aetiopathogenesis and ACTH/corticosteroid mechanisms (scoping review); WWOX in two re-tabulated cohort rows
+**Full title:** Aetiopathogenesis of infantile epileptic spasms syndrome and mechanisms of action of adrenocorticotrophin hormone/corticosteroids in children: A scoping review
+**Authors:** Innes EA, Han VX, Patel S, Farrar MA, Gill D, Mohammad SS, Dale RC
+**Year:** 2025
+**Source type:** secondary — scoping review
+**Journal/source:** *Dev Med Child Neurol* 2025;67:1004-1025
+**Identifier:** PMID 40019827 / PMCID PMC12237231 / DOI 10.1111/dmcn.16273
+**Status:** processed
+**Record provenance:** created by `CC-20261003W6-B-REGISTRY-01` (intake wave 6 2026-10-03, Scientist B). Provisional number: the integrator renumbers if taken and updates the `LIT link`.
+**Evidence depth:** `partial_fulltext_read` (partial full text) — receipt `FTR-20261003-40019827-01`; manifest `deepdive_manifests/PMID40019827.json`; dossier `research/fulltext_dossiers/PMID40019827.md`
+**Primary pathway:** denominator (IESS genetics) · ACTH mechanism
+**Model/species:** human
+**Genotype/model:** none of its own; re-tabulates WWOX (4) from PMID 37583270 and WWOX (1) from PMID 29455050
+**Transferability:** none for WWOX — re-tabulation only
+**clinical relevance:** LOW
+**Claim links:** none
+**Role:** Two WWOX counts from two independent cohorts (4 + 1); no WWOX response; ACTH effect placed at a regulatory, not gene-specific, level. 🔴 The four are already held via PMID 37583270; the single patient's primary (PMID 29455050) is unread. Adds no new patient.
+**LIT link:** [[literature_tracking_log_current#LIT-0483]]
+**Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.
+
+## PAPER 191
+**Short title:** Zhu 2025 Front Pediatr — etiology of 361 IESS patients; one WWOX patient, no allele or response
+**Full title:** Infantile epileptic spasms syndrome: an etiologic study of 361 patients with infantile epileptic spasms syndrome
+**Authors:** Zhu L, Xia Y, Ding H, Zhang T, Li J, Li B
+**Year:** 2025
+**Source type:** primary research — retrospective two-hospital series
+**Journal/source:** *Front Pediatr* 2025;12:1522079
+**Identifier:** PMID 39850204 / PMCID PMC11754263 / DOI 10.3389/fped.2024.1522079
+**Status:** processed
+**Record provenance:** created by `CC-20261003W6-B-REGISTRY-01` (intake wave 6 2026-10-03, Scientist B). Provisional number: the integrator renumbers if taken and updates the `LIT link`.
+**Evidence depth:** `partial_fulltext_read` (partial full text) — receipt `FTR-20261003-39850204-01`; manifest `deepdive_manifests/PMID39850204.json`; dossier `research/fulltext_dossiers/PMID39850204.md`
+**Primary pathway:** denominator (IESS)
+**Model/species:** human
+**Genotype/model:** one WWOX patient in the Genetic (37) group; alleles not printed
+**Transferability:** denominator only
+**clinical relevance:** LOW
+**Claim links:** none
+**Role:** 1 WWOX patient among 361 IESS (58 of the 165 'unknown' never genetically tested); authors' 'enzyme synthesis-related' grouping of WWOX is an unassayed construct. 🔴 Etiology only — no WWOX treatment or response.
+**LIT link:** [[literature_tracking_log_current#LIT-0484]]
+**Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.
+
+## PAPER 192
+**Short title:** Snyder 2024 Genes — IESS genetics and precision-medicine opportunities (narrative review); WWOX one uncited autosomal-recessive list entry
+**Full title:** Genetic Advancements in Infantile Epileptic Spasms Syndrome and Opportunities for Precision Medicine
+**Authors:** Snyder HE, Jain P, RamachandranNair R, Jones KC, Whitney R
+**Year:** 2024
+**Source type:** secondary — narrative review
+**Journal/source:** *Genes (Basel)* 2024;15(3):266
+**Identifier:** PMID 38540325 / PMCID PMC10970414 / DOI 10.3390/genes15030266
+**Status:** processed
+**Record provenance:** created by `CC-20261003W6-B-REGISTRY-01` (intake wave 6 2026-10-03, Scientist B). Provisional number: the integrator renumbers if taken and updates the `LIT link`.
+**Evidence depth:** `partial_fulltext_read` (partial full text) — receipt `FTR-20261003-38540325-01`; manifest `deepdive_manifests/PMID38540325.json`; dossier `research/fulltext_dossiers/PMID38540325.md`
+**Primary pathway:** denominator (IESS genetics) · precision medicine
+**Model/species:** human
+**Genotype/model:** none
+**Transferability:** none
+**clinical relevance:** LOW
+**Claim links:** none
+**Role:** WWOX listed (no citation) among autosomal-recessive IESS genes; the precision-medicine section names no WWOX or recessive-LoF strategy. 🔴 Gene-list membership only.
+**LIT link:** [[literature_tracking_log_current#LIT-0485]]
+**Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.
+
+## PAPER 193
+**Short title:** Yuan 2025 Acta Epileptol — genetic DEE with movement disorders; WWOX top-ten gene, pooled 18-patient row (dystonia 15/18)
+**Full title:** Advances in genetic developmental and epileptic encephalopathies with movement disorders
+**Authors:** Yuan M, Wang X, Yang Z, Luo H, Gan J, Luo R
+**Year:** 2025
+**Source type:** secondary — narrative review with bibliometric step
+**Journal/source:** *Acta Epileptol* 2025;7(1):9
+**Identifier:** PMID 40217411 / PMCID PMC11960234 / DOI 10.1186/s42494-024-00194-z
+**Status:** processed
+**Record provenance:** created by `CC-20261003W6-B-REGISTRY-01` (intake wave 6 2026-10-03, Scientist B). Provisional number: the integrator renumbers if taken and updates the `LIT link`.
+**Evidence depth:** `partial_fulltext_read` (partial full text) — receipt `FTR-20261003-40217411-01`; manifest `deepdive_manifests/PMID40217411.json`; dossier `research/fulltext_dossiers/PMID40217411.md`
+**Primary pathway:** movement phenotype
+**Model/species:** human
+**Genotype/model:** 18 pooled WWOX patients from unnamed primaries
+**Transferability:** none for counting — primaries not named
+**clinical relevance:** LOW
+**Claim links:** none (see `CC-20261003W6-B-MOVEMENT-01`)
+**Role:** Table 2 WWOX: dystonia 15/18, hypokinesia 5/18, ataxia 2/18, myoclonus 1/18, tremor 1/18, chorea 0, stereotypies 0. Table 1 (OMIM) lists WWOX under dystonia, myoclonus, ataxia, tremor, hypokinesia — not chorea. The 2021 'neonatal hypokinesia only with WWOX' framing is not repeated. 🔴 The 18 cannot be de-duplicated against held cases; text-table mismatches for other genes (CACNA1A).
+**LIT link:** [[literature_tracking_log_current#LIT-0486]]
+**Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.
+
+## PAPER 194
+**Short title:** Mohammad 2026 Mov Disord Clin Pract — movement disorders in DEE (non-systematic review); four WWOX rows, all citing one cohort
+**Full title:** Movement Disorders in Developmental and Epileptic Encephalopathies
+**Authors:** Mohammad S, Ebrahimi-Fakhari D, Morales-Briceno H
+**Year:** 2026
+**Source type:** secondary — non-systematic structured review
+**Journal/source:** *Mov Disord Clin Pract* 2026
+**Identifier:** PMID 42068099 / PMCID PMC13339248 / DOI 10.1002/mdc3.70641
+**Status:** processed
+**Record provenance:** created by `CC-20261003W6-B-REGISTRY-01` (intake wave 6 2026-10-03, Scientist B). Provisional number: the integrator renumbers if taken and updates the `LIT link`.
+**Evidence depth:** `partial_fulltext_read` (partial full text) — receipt `FTR-20261003-42068099-01`; manifest `deepdive_manifests/PMID42068099.json`; dossier `research/fulltext_dossiers/PMID42068099.md`
+**Primary pathway:** movement phenotype · neuroimaging
+**Model/species:** human
+**Genotype/model:** none of its own
+**Transferability:** none — re-description
+**clinical relevance:** LOW
+**Claim links:** none (see `CC-20261003W6-B-MOVEMENT-01`)
+**Role:** WWOX in four Table 2 rows (IESS, excessive startle/hyperekplexia, corpus callosum abnormalities, white matter changes), every one citing PMID 36779245. 🔴 One cohort re-described four times; not corroboration; inherits the PUBLICATION_INTEGRITY_HOLD of PMID 36779245.
+**LIT link:** [[literature_tracking_log_current#LIT-0487]]
+**Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.
+
+## PAPER 195
+**Short title:** Reinehr 2022 Biomolecules — rat autoimmune glaucoma; retinal Wwox mRNA lower (microarray probe fails FDR; qPCR 0.24-fold, n 3-4)
+**Full title:** Heat Shock Protein Upregulation Supplemental to Complex mRNA Alterations in Autoimmune Glaucoma
+**Authors:** Reinehr S, Safaei A, Grotegut P, et al.; Joachim SC
+**Year:** 2022
+**Source type:** primary research — experimental animal model (rat)
+**Journal/source:** *Biomolecules* 2022;12(10):1538
+**Identifier:** PMID 36291747 / PMCID PMC9599116 / DOI 10.3390/biom12101538
+**Status:** processed
+**Record provenance:** created by `CC-20261003W6-A-REGISTRY-01` (intake wave 6 2026-10-03, Scientist A). Provisional number: the integrator renumbers if taken and updates the `LIT link`.
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261003-36291747-01`; manifest `deepdive_manifests/PMID36291747.json`; dossier `research/fulltext_dossiers/PMID36291747.md`
+**Primary pathway:** CNS injury expression (retina) — off-genotype
+**Model/species:** rat (Lewis), immune-mediated retinal ganglion cell loss
+**Genotype/model:** no WWOX genotype; acquired injury model
+**Transferability:** T4 — expression change in an acquired injury; no transfer to a loss-of-function genotype class
+**clinical relevance:** LOW
+**Claim links:** none
+**Role:** The only in-vivo record in LEGEND of Wwox expression falling in a non-genetic CNS injury. 🔴 The microarray 'fold change 0.864' is a ratio of log-scale means (linear about 0.47) and fails FDR (0.187); whole-retina qPCR 0.24-fold, p 0.002, n 3-4; mRNA only; the authors' 'regulatory role in the retina' is speculation.
+**LIT link:** [[literature_tracking_log_current#LIT-0488]]
+**Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.
+
+## PAPER 196
+**Short title:** Dugan 2022 Neurobiol Aging — WWOX/MAF locus variants and autopsy endophenotypes (LATE-NC, HS, arteriolosclerosis)
+**Full title:** Association between WWOX/MAF variants and dementia-related neuropathologic endophenotypes
+**Authors:** Dugan AJ, Nelson PT, Katsumata Y, et al.; Fardo DW
+**Year:** 2022
+**Source type:** primary research — locus-restricted genetic association meta-analysis (two autopsy cohorts)
+**Journal/source:** *Neurobiol Aging* 2022;111:95-106
+**Identifier:** PMID 34852950 / PMCID PMC8761217 / DOI 10.1016/j.neurobiolaging.2021.10.011
+**Status:** processed
+**Record provenance:** created by `CC-20261003W6-A-REGISTRY-01` (intake wave 6 2026-10-03, Scientist A). Provisional number: the integrator renumbers if taken and updates the `LIT link`.
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261003-34852950-01`; manifest `deepdive_manifests/PMID34852950.json`; dossier `research/fulltext_dossiers/PMID34852950.md`
+**Primary pathway:** adult neurodegeneration genetics — off-genotype
+**Model/species:** human, adult autopsy cohorts (European ancestry)
+**Genotype/model:** common non-coding variants; no loss-of-function allele
+**Transferability:** none to WWOX-DEE
+**clinical relevance:** LOW
+**Claim links:** none
+**Role:** Locus-wide (not genome-wide) associations with LATE-NC, hippocampal sclerosis and arteriolosclerosis. 🔴 The LATE-NC and arteriolosclerosis variants' only brain eQTL link is to MAF, not WWOX; the deposited Supplemental Table 6 (basis of 'independent of ADNC') repeats identical values across the NACC, ROSMAP and meta columns. Promotes [[paper_registry_current#CORPUS-STUB-033]].
+**LIT link:** [[literature_tracking_log_current#LIT-0059]]
+**Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.
+
+## PAPER 197
+**Short title:** Kang 2026 npj Parkinsons Dis — multi-locus burden and dementia in PD; WWOX SNP rs8050111 one of five loci
+**Full title:** Multi-locus genetic dosage shapes cognitive disease progression in Parkinson's patients: 15-year meta-analysis of 24 cohorts
+**Authors:** Kang X, Lin Z, et al.; Scherzer CR
+**Year:** 2026
+**Source type:** primary research — multi-cohort longitudinal survival meta-analysis
+**Journal/source:** *NPJ Parkinsons Dis* 2026;12
+**Identifier:** PMID 42135313 / PMCID PMC13424109 / DOI 10.1038/s41531-026-01367-y
+**Status:** processed
+**Record provenance:** created by `CC-20261003W6-A-REGISTRY-01` (intake wave 6 2026-10-03, Scientist A). Provisional number: the integrator renumbers if taken and updates the `LIT link`.
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261003-42135313-01`; manifest `deepdive_manifests/PMID42135313.json`; dossier `research/fulltext_dossiers/PMID42135313.md`
+**Primary pathway:** adult neurodegeneration genetics — off-genotype
+**Model/species:** human, adult Parkinson's disease cohorts
+**Genotype/model:** one common SNP (rs8050111), carrier vs non-carrier
+**Transferability:** none to WWOX-DEE
+**clinical relevance:** LOW
+**Claim links:** none
+**Role:** 🔴 The 'dose' is the number of loci carried, not WWOX allele dose. WWOX HR 1.56 overall but 1.16 (n.s.) in biomarker cohorts; design-subgroup heterogeneity significant in the supplement (p 0.02) and not reported in the main text; null MMSE slope; not independent of the 2021 discovery study (PMID 33958783).
+**LIT link:** [[literature_tracking_log_current#LIT-0489]]
+**Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.
+
+## PAPER 198
+**Short title:** Pascual 2025 Biochem J — review: excess Wnt in neurological disease; one WWOX table row
+**Full title:** Excess Wnt in neurological disease
+**Authors:** Pascual DM, Jebreili Rizi D, Kaur H, Marcogliese PC
+**Year:** 2025
+**Source type:** review
+**Journal/source:** *Biochem J* 2025;482(10):601-618
+**Identifier:** PMID 40377402 / PMCID PMC12203940 / DOI 10.1042/BCJ20240265
+**Status:** processed
+**Record provenance:** created by `CC-20261003W6-A-REGISTRY-01` (intake wave 6 2026-10-03, Scientist A). Provisional number: the integrator renumbers if taken and updates the `LIT link`.
+**Evidence depth:** `partial_fulltext_read` (partial full text) — receipt `FTR-20261003-40377402-01` (all read; partial because its single WWOX source, PMID 19465938 / `FT-180`, is unread); manifest `deepdive_manifests/PMID40377402.json`; dossier `research/fulltext_dossiers/PMID40377402.md`
+**Primary pathway:** P3 — Wnt/DVL (background)
+**Model/species:** review
+**Genotype/model:** DEE28 named; no allele class
+**Transferability:** none — citation of a cancer-cell primary
+**clinical relevance:** LOW
+**Claim links:** none
+**Role:** Table 1 row: WWOX, DEE28, 'preventing the nuclear import of the Dvl proteins', citing Bouteille 2009 only; the text never discusses WWOX. Adds no evidence independent of that primary (see `CC-20261003W6-A-WNT-01`).
+**LIT link:** [[literature_tracking_log_current#LIT-0490]]
+**Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.
+
+## PAPER 199
+**Short title:** Sengupta 2025 iScience — sterols regulate DVL2 membrane/nuclear localisation; nuclear DVL2 with inhibited TCF/LEF signalling
+**Full title:** Dishevelled localization and function are differentially regulated by structurally distinct sterols
+**Authors:** Sengupta S, Yaeger JDW, Schultz MM, May DG, Roux KJ, Francis KR
+**Year:** 2025
+**Source type:** primary research — cell, iPSC-derived NSC and mouse
+**Journal/source:** *iScience* 2025;28(6):112704
+**Identifier:** PMID 40524961 / PMCID PMC12167792 / DOI 10.1016/j.isci.2025.112704
+**Status:** processed
+**Record provenance:** created by `CC-20261003W6-A-REGISTRY-01` (intake wave 6 2026-10-03, Scientist A). Provisional number: the integrator renumbers if taken and updates the `LIT link`.
+**Evidence depth:** `partial_fulltext_read` (partial full text) — receipt `FTR-20261003-40524961-01` (Figures 1-6 legends only; its single WWOX source, PMID 32368285, unread); manifest `deepdive_manifests/PMID40524961.json`; dossier `research/fulltext_dossiers/PMID40524961.md`
+**Primary pathway:** P3 — Wnt/DVL (background; inference check)
+**Model/species:** HEK293T; human iPSC-derived NSC; Dhcr7 mutant mouse cortex
+**Genotype/model:** no WWOX manipulation
+**Transferability:** none for WWOX data; bears on the inference step of DL-MOL-003
+**clinical relevance:** LOW
+**Claim links:** none
+**Role:** One WWOX sentence citing Celebi 2020. Its own data show DVL2 moving to the nucleus while a TCF/LEF reporter is inhibited (Fig S6E): nuclear DVL2 and canonical Wnt hyperactivation come apart in this system (see `CC-20261003W6-A-WNT-01`). WWOX absent from its TurboID dataset (detection, not interaction, evidence).
+**LIT link:** [[literature_tracking_log_current#LIT-0491]]
+**Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.
+
+## PAPER 200
+**Short title:** Hsu 2025 IJMS — review: hyaluronan in cancer and neural disease; HYAL-2/WWOX/SMAD4 and C1q-WWOX restated
+**Full title:** Hyaluronan: An Architect and Integrator for Cancer and Neural Diseases
+**Authors:** Hsu CY, Nguyen-Tran HH, Chen YA, et al.; Chang NS
+**Year:** 2025
+**Source type:** review
+**Journal/source:** *Int J Mol Sci* 2025;26(11):5132
+**Identifier:** PMID 40507943 / PMCID PMC12155404 / DOI 10.3390/ijms26115132
+**Status:** processed
+**Record provenance:** created by `CC-20261003W6-A-REGISTRY-01` (intake wave 6 2026-10-03, Scientist A). Provisional number: the integrator renumbers if taken and updates the `LIT link`.
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261003-40507943-01`; manifest `deepdive_manifests/PMID40507943.json`; dossier `research/fulltext_dossiers/PMID40507943.md`
+**Primary pathway:** ECM / HYAL-2 / SMAD4 (background)
+**Model/species:** review of DU145 prostate-cancer cell work
+**Genotype/model:** over-expression paradigm; no loss-of-function genotype
+**Transferability:** none to WWOX-DEE
+**clinical relevance:** LOW
+**Claim links:** CLAIM 027 (evidence boundary added by `CC-20261003W6-A-HYAL2-01`; this record is the review that adds no CNS evidence to that axis)
+**Role:** All WWOX data re-presented are DU145 over-expression experiments from the authors' laboratory; the nervous-system section never mentions WWOX; the Alzheimer-risk sentence cites five non-Alzheimer papers; a patent is listed beside a no-conflict declaration (see `CC-20261003W6-A-HYAL2-01`).
+**LIT link:** [[literature_tracking_log_current#LIT-0492]]
+**Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.
