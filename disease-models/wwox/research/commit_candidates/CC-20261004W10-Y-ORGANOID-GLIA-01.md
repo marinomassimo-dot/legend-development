@@ -110,3 +110,23 @@ paper does not report one" rather than "the data contain none".
 4. (In that panel the oligodendrocyte term is positively enriched while two lipid-synthesis pathways are negatively enriched in the same contrast | `[figure attestation] Figure 6E, 'pathway enrichment', WOREE^WWOX+ versus WOREE: positive bars OXPHOS Electron transport chain, hippo signaling, 'oligodendrocyte specification & myelin', oxidative stress; negative bars PPAR-alpha pathway, synaptic vesicle pathway, cholesterol production inhibition, glycerophospholipid biosynthesis` | `files/fulltext/PMID42397075_Steinberg2026_assets/figs/fig_p36_1430x1754.jpeg`, Figure 6 panel E)
 5. (In the external human fetal reference the paper uses, WWOX is highest in radial glia and lowest in the oligodendrocyte and microglial populations | `[figure attestation] Figure 3B, 'WWOX cell type expression', post-conceptional week 16 human fetal single-cell data: RG median near 0.57, IP near 0.48, ExN and InN near 0.20, Other near 0.14, Oli near 0.10, Mic near 0.07` | `files/fulltext/PMID42397075_Steinberg2026_assets/figs/fig_p34_1430x1589.png`, Figure 3 panel B)
 6. (The knockout's neuronal and radial-glia cell-fraction changes, measured against the panel's own axis ticks | `[figure attestation] Figure 2F, 'RGs and Neu cell fraction changes': WWOX-KO RGs block 0 to +0.98 and Neu block -2.36 to 0; SCAR12 RGs block -0.25 to 0 and Neu block 0 to +0.18; WOREE RGs block 0 to +0.07 and Neu block -0.04 to -0.01` | `files/fulltext/PMID42397075_Steinberg2026_assets/fig2F_600dpi.png`, Figure 2 panel F)
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261004_004` (2026-10-04, ACTOR_ID `scientist`, Scientist N), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** PROPAGATED — **all four ops landed; one figure reading corrected by the audit.**
+
+**Class, re-judged: MINOR, and the judgement is the one the dispatch asked for.** Both `CLAIM 003` and `CLAIM 005` are `consolidated baseline`. This candidate writes an **earned null** into each: it adds evidence-boundary text, narrows nothing, withdraws no measurement, moves no `Status`, `Type`, `Summary`, `Transferability` or `Source`, and leaves the cell-autonomy question exactly as open as it was. An earned null that adds a boundary without narrowing is MINOR; **the blind audit was still mandatory and was run**, because the records touched are baseline.
+
+**Blind locator audit (separate sub-agent, 6 triples, figure panels read on rendered images):** **6/6 SUPPORTED**, 0 NOT_SUPPORTED, 0 UNVERIFIABLE. The auditor independently reproduced the token census (`OLIG`, `SOX10`, `PDGFRA`, `MBP`, `GFAP`, `AQP4`, `S100B`, `OPC`: zero each; `astrocyt` and `microglia` once each and **only in the reference list**), the five cluster labels, the printed n = 18 007 and the per-condition counts, the absence of any myelin, g-ratio, axon-count or OPC measurement, and the deposited accession.
+
+🔵 **One correction at source, and it makes the null cleaner rather than weaker.** Fig. 3B's lineage values were re-measured as **`Oli` ≈ 0.08 and `Mic` ≈ 0.08 — tied**, not 0.10 and 0.07. Every landed sentence now says *lowest, and tied*, and the earlier ordering is withdrawn where it appeared. The panel-extent figures of Fig. 2F were likewise re-measured (`RGs` +0.99, `Neu` −2.38 for the knockout), which is why `PAPER 094`'s corrected numbers are stated as **−2.4 and +1.0 on two independent measurements** rather than on one.
+
+**Ops as landed.** Op 1 → `CLAIM 003` `Evidence boundary` (record-scoped, Italian, with the falsification route and the `ArrayExpress` accession). Op 2 → `CLAIM 005` `Evidence boundary` (record-scoped, with an explicit `PREMISE: DATO` tag, which answers Mirror note F8's concern for this append without touching the record's older style). Op 3 → `PAPER 094`'s cell-fraction figures. Op 4 → `PAPER 094`'s `Note`, as a third declared boundary.
+
+🔵 **The candidate's own DEFAULTS_TAKEN is upheld and worth repeating:** the premise that a wave-8 reviewer had found organoid evidence for oligodendroglia in this paper **could not be confirmed**, and the candidate reported that rather than acting on it. Nothing in this batch rests on it.
+
+**Not medical advice.**

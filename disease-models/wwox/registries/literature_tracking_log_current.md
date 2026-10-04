@@ -5987,7 +5987,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Note:** Title: Deletion of the WWOX gene and frequent loss of its protein expression in human osteosarcoma
 
 ## LIT-0225
-**Short title:** Identification of a novel splice-site WWOX variant with paternal uniparental...
+**Short title:** Identification of a novel splice-site WWOX variant with uniparental [the side of origin was removed 2026-10-04 by `BATCH_20261004_004` for the public-edition privacy design, on a finding of intake wave 11; the superseded wording is deliberately NOT quoted — the published title's own wording stays only in the paper registry's `Full title` field, which is bibliography]
 **Authors:** Nishino et al.
 **Year:** 2024
 **Source type:** Case Reports
@@ -6018,7 +6018,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Current status:** screened — B
 **Next action:** full-text retrieval; depth pass if model-shifting
 **Flags:** FASE 1 batch entry / no deep-dive yet
-**Note:** Title: Identification of a novel splice-site WWOX variant with paternal uniparental isodisomy in a patient with infantile epileptic encephalopathy
+**Note:** Title: the article's published title is quoted in the paper registry's [[paper_registry_current#CORPUS P225]] `Full title` field and is not duplicated here, because it names a side of origin [the side of origin was removed 2026-10-04 by `BATCH_20261004_004` for the public-edition privacy design, on a finding of intake wave 11; the superseded wording is deliberately NOT quoted — the published title's own wording stays only in the paper registry's `Full title` field, which is bibliography]
 
 ## LIT-0226
 **Short title:** A WWOX-binding molecule, transmembrane protein 207, is related to the invasiv...
@@ -8736,7 +8736,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Identifier:** PMID 21476439 / DOI 10.1515/znc-2011-1-210
 **Date discovered:** 2026-04-18
 **Date screened:** 2026-04-18
-**Date processed:** triage only
+**Date processed:** 2026-10-04
 **Date last touched:** 2026-04-18
 **Discovery window:** FASE 1 triage 221–400
 **Discovery source:** 400_paper.txt batch corpus
@@ -8753,11 +8753,11 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Directness to the reference genotype:** unassigned in triage
 **Over-inference risk:** standard triage — not evaluated
 **clinical relevance:** HIGH
-**Claim links:** none — triage only
+**Claim links:** none — read in full, supports no canonical claim. PAPER link: [[paper_registry_current#PAPER 244]].
 **Working Model impact:** none yet
 **Report mentions:** FASE 1 triage 221–400
-**Current status:** queued for deep-dive — A; unacquired, not unread
-**Next action:** record as UNACQUIRED, not unread — hybrid-OA publisher PDF exists at DOI 10.1515/znc-2011-1-210 and is blocked only by an automated-traffic challenge; one human fetch closes it (FT-130 / packet A11). Do not re-run automated acquisition.
+**Current status:** READ IN FULL 2026-10-04 — version-of-record PDF held, receipt `FTR-20261004-21476439-01`, manifest PASS 0 gaps, blind locator audit over 17 triples; registered as [[paper_registry_current#PAPER 244]]
+**Next action:** none for acquisition — acquired and read 2026-10-04. The open reading debt moves to its references: PMID 10786676 (the WWOX discovery paper, carried in the Introduction's SDR interpretation; ⚠️ note that the sentence giving the `GANSGIG` and `YNRSK` motif coordinates carries **no citation of its own** — the discovery-paper citation governs a different, adjacent statement, measured by blind audit 2026-10-04 — so this is a debt on the interpretation, not on a cited coordinate), PMID 11896615 and PMID 12829805. See the manifest's multihop block.
 **Flags:** FASE 1 batch entry / no deep-dive yet
 **Note:** Title: WWOX oxidoreductase--substrate and enzymatic characterization
 
@@ -14178,7 +14178,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Authors:** Zhao X, Rigobello R, Driver M, et al.; Xia F, Eng CM
 **Year:** 2026
 **Source type:** primary research — retrospective clinical-laboratory series with a validated RNA assay
-**Journal/source:** *NPJ Genom Med* 2026;11
+**Journal/source:** *NPJ Genom Med* 2026;11:52 [article number added 2026-10-04 by `BATCH_20261004_004` from the JATS front matter's `elocation-id`, Mirror note F7]
 **Identifier type:** PMID / DOI / PMCID
 **Identifier value:** PMID 42248868 / DOI 10.1038/s41525-026-00571-2 / PMC13562735
 **Date discovered:** 2026-10-04 (Orchestrator selection record, intake wave 7, group B)
@@ -14588,7 +14588,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 
 ## LIT-0520
 **Short title:** Nabakowski 2026 Cells — liver de-targeting ~127-fold, at eight-fold worse packaging and fewer brain vector genomes
-**Authors:** Nabakowski ZC, Jaramillo IC, Tanachaiwiwat P, Keeler GD, Chen S-H
+**Authors:** Nabakowski ZC, Jaramillo IC, Tanachaiwiwat P, Keeler GD [corrected 2026-10-04 by `CC-20261004-MIRROR-31`, replacing *«Nabakowski ZC, Jaramillo IC, Tanachaiwiwat P, Keeler GD, Chen S-H»*: the fifth name is the journal's Academic Editor, not an author]
 **Year:** 2026
 **Source type:** primary research — capsid engineering
 **Journal/source:** *Cells* 2026;15(4):334
@@ -15011,7 +15011,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 
 ---
 ## LIT-0538
-**Short title:** Ruhela 2026 Research Square (PREPRINT — NOT PEER REVIEWED) — a GWAS integrating maternal and child genotypes for fetal alcohol spectrum disorders; the WWOX result is an unreplicated common-variant modifier association
+**Short title:** Ruhela 2026 Research Square (PREPRINT — NOT PEER REVIEWED) — a GWAS integrating parental and child genotypes for fetal alcohol spectrum disorders; the WWOX result is an unreplicated common-variant modifier association [design descriptor generalised 2026-10-04 by `BATCH_20261004_004`: the side named here is not carried in this edition]
 **Authors:** Ruhela V, Lesseur C, Cilleros-Portet A, Jacobson SW, Jacobson JL, Meintjes EM, Dodge NC, Akkaya-Hocagil T, Hoyme HE, Cheng H, Chen J, Hao K, Deyssenroth MA, Tosto G, Carter RC
 **Year:** 2026
 **Source type:** preprint — NOT PEER REVIEWED

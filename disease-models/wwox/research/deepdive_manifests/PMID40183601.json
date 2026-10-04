@@ -198,19 +198,21 @@
       },
       {
         "proposition": "The four WWOX individuals carry three distinct biallelic genotypes, all homozygous with both parents as carriers, all with infantile epileptic spasms syndrome: a nonsense allele, a missense allele in two individuals of the same family, and the deep intronic allele.",
-        "snippet": "Hom\tWWOX\tc.107+119C>G\tNM_016373\tMaternal, Paternal",
+        "snippet": "external\t30.5\t134\t333\tabsent\tabsent\tfocal HP:0007359\tno\tglobal developmental delay HP:0001263, spasticity HP:0001257 HP:0001257, hypotonia HP:0001252\talive\tIESS",
         "anchor": "Supplementary Table S9 (solved individuals), WWOX rows",
         "surface": "supplement",
         "artifact": "files/fulltext/PMID40183601_Henry2025_supp_tableS9.txt",
-        "panel_text_relation": "text_only"
+        "panel_text_relation": "text_only",
+        "locator_revision": "LOCATOR REVISION 2026-10-04, BATCH_20261004_004 (privacy, public-edition design): the snippet first captured here quoted a cell naming a parental side inside a row that also carries a variant, which is individual-linking wording this edition does not carry. It is deliberately NOT reproduced, here or anywhere else. This snippet is a DIFFERENT verbatim span of the SAME row of the same supplementary table, captured parental-free and unique in the artefact; the proposition it anchors is unchanged, and the reading it attests is unchanged. Reported by Scientist B of intake wave 11; the rule applied is the one BATCH_20261004_002 earned: a verbatim quotation is not exempt from the privacy design."
       },
       {
         "proposition": "The deep intronic WWOX case was alive at review, while the two individuals sharing the homozygous missense genotype were recorded as deceased.",
-        "snippet": "Hom\tWWOX\tc.965A>G, p.(His322Arg)\tNM_016373\tMaternal",
+        "snippet": "30.5\t790\t253\tpresent\tpresent\tfocal HP:0007359\tyes\tglobal developmental delay HP:0001263, hypotonia HP:0001252\tdeceased\tIESS\tHom\tWWOX\tc.965A>G, p.(His322Arg)",
         "anchor": "Supplementary Table S9 (solved individuals), WWOX rows with mortality column",
         "surface": "supplement",
         "artifact": "files/fulltext/PMID40183601_Henry2025_supp_tableS9.txt",
-        "panel_text_relation": "text_only"
+        "panel_text_relation": "text_only",
+        "locator_revision": "LOCATOR REVISION 2026-10-04, BATCH_20261004_004 (privacy, public-edition design): the snippet first captured here quoted a cell naming a parental side inside a row that also carries a variant, which is individual-linking wording this edition does not carry. It is deliberately NOT reproduced, here or anywhere else. This snippet is a DIFFERENT verbatim span of the SAME row of the same supplementary table, captured parental-free and unique in the artefact; the proposition it anchors is unchanged, and the reading it attests is unchanged. Reported by Scientist B of intake wave 11; the rule applied is the one BATCH_20261004_002 earned: a verbatim quotation is not exempt from the privacy design."
       },
       {
         "proposition": "Autosomal recessive homozygous inheritance accounts for 32 of 281 etiologies in this cohort, the band WWOX belongs to.",
@@ -224,5 +226,19 @@
     "source_fulltext_indexed": true,
     "source_fulltext_indexed_evidence": "Europe PMC REST fullTextXML returned HTTP 200 with a full JATS body on 2026-10-04; the declared article_text is that response.",
     "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
-  }
+  },
+  "locator_revisions": [
+    {
+      "date": "2026-10-04",
+      "batch": "BATCH_20261004_004",
+      "entries_revised": [
+        4,
+        5
+      ],
+      "reason": "privacy — a quoted cell named a parental side in a row carrying a variant",
+      "method": "a different verbatim span of the same row, parental-free and unique in the artefact",
+      "superseded_wording_reproduced": false,
+      "note": "LOCATOR REVISION 2026-10-04, BATCH_20261004_004 (privacy, public-edition design): the snippet first captured here quoted a cell naming a parental side inside a row that also carries a variant, which is individual-linking wording this edition does not carry. It is deliberately NOT reproduced, here or anywhere else. This snippet is a DIFFERENT verbatim span of the SAME row of the same supplementary table, captured parental-free and unique in the artefact; the proposition it anchors is unchanged, and the reading it attests is unchanged. Reported by Scientist B of intake wave 11; the rule applied is the one BATCH_20261004_002 earned: a verbatim quotation is not exempt from the privacy design."
+    }
+  ]
 }

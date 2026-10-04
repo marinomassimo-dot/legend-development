@@ -27,7 +27,7 @@ annotations is reported below whatever it happens to be.
 | Measure | Count |
 |---|---|
 | Claim nodes | 47 |
-| Claim→claim wikilink occurrences | 102 |
+| Claim→claim wikilink occurrences | 104 |
 | …distinct directed links | 73 |
 | …undirected edges they collapse into | 46 |
 | Edges carrying a declared relation type | 0 |
@@ -65,7 +65,7 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 | CLAIM 013 | In WWOX-DEE, genotipi biallelici null/null associati a maggiore rischio di crisi, ipertonia e co | in observation | DATO con limiti metodologici dichiarati | Clinical spectrum / genotype-phenotype / | NOT_ANNOTATED | 0 | 2 |
 | CLAIM 014 | WWOX loss perturbs prenatal cortical development, neuronal migration and cortical maturation acr | consolidated baseline | DATO | P3 — neurodevelopment / migration / cort | NOT_ANNOTATED | 0 | 3 |
 | CLAIM 015 | Part of WWOX-related epileptic encephalopathy likely arises on a structurally misassembled prena | consolidated baseline | INFERENZA strongly supported | P3 / P1 / P4 | NOT_ANNOTATED | 0 | 3 |
-| CLAIM 016 | GSK3β hyperactivation may contribute to seizure susceptibility in WWOX deficiency | in observation | DATO densitometrico NOT_TESTED (murino)  | emerging node — GSK3β / seizure suscepti | NOT_ANNOTATED | 14 | 2 |
+| CLAIM 016 | GSK3β hyperactivation may contribute to seizure susceptibility in WWOX deficiency | in observation | DATO densitometrico NOT_TESTED (murino)  | emerging node — GSK3β / seizure suscepti | NOT_ANNOTATED | 16 | 2 |
 | CLAIM 017 | WWOX-related human disease spans a spectrum from severe WOREE/WWOX-DEE to milder SCAR12-like phe | consolidated baseline | DATO | human spectrum / genotype-phenotype | NOT_ANNOTATED | 1 | 0 |
 | CLAIM 018 | The exon 6 splice-site variant c.517-2A>G is pathogenic and causes exon 6 skipping in humans | consolidated baseline | DATO | genotype / splicing / pathogenicity | NOT_ANNOTATED | 0 | 2 |
 | CLAIM 019 | Q230P is pathogenic in severe human compound context and must not be treated as a benign or weak | consolidated baseline | DATO (endpoint funzionale: mRNA normale  | genotype / compound-context interpretati | NOT_ANNOTATED | 8 | 4 |
@@ -84,7 +84,7 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 | CLAIM 032 | Una copia di WWOX conserva alcuni endpoint osservati, ma non definisce una soglia terapeutica de | in observation | DATO (endpoint specifici in topo, ratto  | P7 — gene therapy readiness / dose-thres | NOT_ANNOTATED | 10 | 23 |
 | CLAIM 033 | Biallelic null WWOX carries higher mortality than genotypes with at least one missense — but the | in observation | DATO (statistica di coorte) + IPOTESI (l | genotype-phenotype / prognosis | NOT_ANNOTATED | 13 | 7 |
 | CLAIM 034 | In a post-mitotic excitable neuron under metabolic stress, WWOX up-regulation is pro-oxidant — r | in observation | DATO (sistema fotorecettoriale) + ESPANS | P5 — metabolism / redox · secondario P1  | NOT_ANNOTATED | 6 | 3 |
-| CLAIM 035 | WWOX is a direct, residue-mapped inhibitor of GSK3β through an Axin-like docking motif in the SD | in observation | DATO (biochimica, cinque saggi ortogonal | P1 neurosviluppo / GSK3β–Tau–microtubuli | NOT_ANNOTATED | 6 | 1 |
+| CLAIM 035 | WWOX is a direct, residue-mapped inhibitor of GSK3β through an Axin-like docking motif in the SD | in observation | DATO (biochimica, cinque saggi ortogonal | P1 neurosviluppo / GSK3β–Tau–microtubuli | NOT_ANNOTATED | 8 | 1 |
 | CLAIM 036 | A systemic constitutive Wwox-null mouse at P18 is metabolically decompensated, so any brain phen | in observation | DATO (le misure) + INFERENZA (la portata | P5 — metabolismo / rene; confondente tra | NOT_ANNOTATED | 7 | 4 |
 | CLAIM 037 | Seizure-related phenotypes in WWOX rodent models are documented in the rat `lde/lde` (audiogenic | in observation | DATO | P2 — eccitabilità / epilettogenesi | NOT_ANNOTATED | 19 | 5 |
 | CLAIM 038 | Elevated BUN recurs across Wwox rodent models — and creatinine is elevated in the rat, the only  | in observation | DATO (le misure) + IPOTESI (entrambe le  | P5 — metabolismo / rene | NOT_ANNOTATED | 7 | 3 |
@@ -376,6 +376,6 @@ carried no connective from the lexicon.
 ## Provenance
 
 Derived from 267 input files; digest
-`c8860b99d4e30df8`. Sources: the claim, paper and
+`a0c275bdbc3110ba`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 

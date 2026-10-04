@@ -207,3 +207,28 @@ Artefacts on disk, verified by sha256 in `deepdive_manifests/PMID21476439.json`:
 (With NADP+ the substrate-free WWOX trace exceeds the entire empty-vector-plus-substrate control in every panel | `[figure attestation — pixels cannot be quote-matched] Page 79, Figure 3B, NADP+, y-axis 0 to 1. End-point values at 30 min, filled square NUS-WWOX with substrate / open square NUS with substrate / filled diamond NUS-WWOX no substrate / open diamond NUS no substrate: 5alpha-DHP-allo 0.90 still rising / 0.145 / 0.29 / 0; progesterone 0.57 / 0.11 / 0.29 / 0; 5alpha-A 0.56 / 0.065 / 0.29 / 0; 4-A 0.55 / 0.08 / 0.29 / 0; 17beta-E 0.51 / 0.155 / 0.29 / 0; estrone 0.49 / 0.14 / 0.29 / 0; testosterone 0.52 / 0.07 / 0.29 / 0.` | Figure 3B, all seven panels, page 79)
 
 (Table II has no Vmax column, and its row order is 5-alpha-A, 4-A, 17-beta-E, estrone, 5-alpha-DHP-allo, progesterone, testosterone | `[figure attestation — pixels cannot be quote-matched] Page 80, Table II upright. Columns: Substrate, then NAD+ (Km 10^-5 M, C.I. for 95%, p<0.05) and NADP+ (same three). Rows: 5alpha-A 5.864 / 4.42-8.72 / 0.0011 and 2.620 / 2.36-2.94 / 0.0000; 4-A 3.632 / 2.79-5.20 / 0.0006 and 3.703 / 2.81-5.43 / 0.0003; 17beta-E 3.123 / 2.62-3.87 / 0.0002 and 3.359 / 1.96-13.79 / 0.0091; estrone 1.523 / 1.11-2.42 / 0.0009 and 1.998 / 1.47-3.13 / 0.0007; 5alpha-DHP-allo 3.985 / 2.80-6.93 / 0.0016 and 4.702 / 3.24-8.56 / 0.0017; progesterone 4.219 / 2.82-8.34 / 0.0023 and 3.021 / 2.48-3.92 / 0.0001; testosterone 4.161 / 3.13-6.19 / 0.0010 and 14.551 / 8.40-54.47 / 0.0025. No Vmax column appears.` | Table II, page 80, rendered upright)
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261004_004` (2026-10-04, ACTOR_ID `scientist`, Scientist N), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** PROPAGATED — **all five ops landed, two of them amended at source by a blind locator audit.**
+
+**Class, re-judged:** **MINOR**. No claim was created, none reversed, and no `consolidated baseline` claim was touched by this candidate. What changed is prose in two queue entries, the depth and scoping of one corpus/LIT pair, and the adjudication of a residue candidate.
+
+**Blind locator audit, dispatched before propagation to two sub-agents that had seen no candidate (17 + 5 triples over the same artefact set, the rotated Table II and all figure panels read on rendered pages):** 15 SUPPORTED, **2 NOT_SUPPORTED_AS_LABELLED**, 0 UNVERIFIABLE, 0 artefact absent (step 0 of the batch confirmed 7/7 artefacts of this PMID present and digest-matching).
+
+🔴 **The two adverse verdicts, and how each was repaired rather than deferred.**
+
+1. **The construct is not printed as *full-length*.** The paper writes *«The WWOX cDNA **fragment** restricted by BamHI and EcoRI enzymes was subcloned…»*, gives no insert boundaries, and describes no domain-only construct. Every landed sentence that said *full-length* now says **cDNA fragment**, and labels *full-length* a DERIVATION (`PREMISE: INFERENZA`). The `FT-147` correction survives at a narrower strength: this paper does not show the SDR domain expressed on its own, and it was the sole basis for the retraction.
+2. **The motif coordinates are not cited to the discovery paper.** The sentence giving `GANSGIG` (131–137) and `YNRSK` (293–297) carries **no citation of its own**; the discovery-paper citation sits two sentences later on a different statement. `PAPER 244`'s `Independence` field, `FT-130` item 7 and `LIT-0306`'s next action all say so, and the reading debt on PMID 10786676 is re-scoped to the generic SDR interpretation.
+
+Three further fidelity notes from the audit were folded in as printed hedges: the replication statement is *«at least two or three»*; the reduction negative adds that activity was *similar* in both extracts; and purification is specified as *«to near-homogeneity»*, with the assay run on the **soluble fraction** of the crude extract. The audit independently reproduced every Table II value, the absence of a Vmax column, the 13-of-14 Km-below-lowest-concentration arithmetic (exception: testosterone with NADP⁺) and the figure attestations; one estrone figure was corrected from *«about a quarter»* to ≈19 %, and a legend/marker mismatch in Figure 3B is recorded as a surface caveat rather than a finding.
+
+**Ops as landed.** OP 1 → `FT-130` (append, with a new item 7 carrying both withdrawals). OP 2 → `FT-147` (append, restated at the narrower strength). OP 3 → `CORPUS P306` `Status`, `Role`, `Note` (record-scoped). OP 4 → `LIT-0306` `Current status`, `Date processed`, `Next action` (record-scoped). OP 5 → the disposition on `CC-20260921-WWOX-ENZYMOLOGY-P306-01`, written with the heading its executor note reserved.
+
+🔵 **`TX-003` was not edited, and that is a decision, not an omission.** §4(c) is adjudicated in the residue candidate's disposition; the score does not move, the three qualifications that would have to travel with the obstacle wording are recorded in `PAPER 244` and `CORPUS P306` instead, and the therapeutic file is untouched by this batch.
+
+**Not medical advice.**

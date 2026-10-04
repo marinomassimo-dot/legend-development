@@ -383,3 +383,23 @@ Re-measured 2026-10-04: no artefact for PMID 21476439 existed under the root `fi
 **Why still DEFERRED.** §4(c) would write **enzymology quantities** — substrate identity and kinetic parameters — into the model. Those are precisely the numbers the arithmetic screen and a blind locator audit exist to check, and they cannot be written from an unread PDF acquired minutes earlier. The reading is now **possible and cheap** (ten typeset pages, clean text layer), which it has not been for seven batches. **Review trigger: 2026-10-06**, as a reading task.
 
 **Not medical advice.**
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261004_004` — intake wave 10 (2026-10-04, ACTOR_ID `scientist`, Scientist N), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*. Written from OP 5 of `CC-20261004W10-X-ENZYMOLOGY-01`, whose executor note held this heading back so that `growth_anchors.py` would not read a quoted block as a disposition.
+
+**Verdict: PROPAGATED — the paper is READ; HALF ONE and HALF TWO both survive, one paragraph does not, and one of this candidate's own premises is withdrawn.**
+
+**HALF ONE** (treat the 2011 result as a real historical biochemical result) — **upheld**. It is a real primary with a real substrate panel, a real cofactor dependence and real apparent Km values. **HALF TWO** (it is not a validated functional assay for disease alleles) — **upheld in every particular**: crude extract, wild-type protein only, no disease allele, no catalytically-dead control, no folded-monomer normalisation, no physiological substrate assigned. The reading adds that there is also **no Vmax, no product identification, no molecular-weight marker and no immunodetection**, and that Table II's Km is a *difference* between two extracts. All six caveats of §2/§2bis are confirmed by the source.
+
+🔴 **The one paragraph that does not survive is §2bis's *«live contradiction»*.** It states that a 2015 review proposing a reversible retinal oxidoreductase and this 2011 primary *«disagree on reversibility»*. **They do not disagree.** This paper never tested all-trans-retinal: its no-reduction sentence covers the **same seven steroids** with NADH/NADPH, is reported as *«results not shown»* — no panel, no table, no number — and adds that the reduction activities were *similar* in both extracts. A negative on seven steroids says nothing about a different substrate. The corrected statement: **the two proposals concern different substrates, have never been tested against each other, and there is no contradiction on the record — only an untested question.** The sentence *«no experiment has ever been run that could tell them apart»* is the part that stands.
+
+🔴 **And one premise shared by this candidate and its successor is withdrawn by a blind audit (2026-10-04, two independent sub-agents):** the paper does **not** print *full-length* for the construct. It writes *«the WWOX cDNA **fragment** restricted by BamHI and EcoRI»*, gives no insert boundaries, and describes no domain-only construct — so *full-length* is a DERIVATION (`PREMISE: INFERENZA`), and the correct statement is that **the SDR domain is not shown by this paper to have been expressed on its own**. Separately, the sentence giving the `GANSGIG`/`YNRSK` coordinates carries **no citation of its own**, so those annotations are this paper's own uncited sequence analysis rather than data imported from the discovery paper.
+
+**§4(c) (the `TX-003` obstacle line) is adjudicated here and deliberately NOT written into the therapeutic file.** The proposed wording is supported only with three qualifications that must travel with it: (i) *measured* means measured on the soluble fraction of a crude lysate containing a WWOX fusion, never on resolved WWOX, and no construct ties the activity to the SDR active site; (ii) the Km values are apparent, are differences between two extracts, and 13 of 14 were extrapolated from above saturation; (iii) *«oxidation only»* is a results-not-shown negative over seven steroids. **`TX-003`'s score does not move** — a wild-type in-vitro activity with no allele arm changes the description of the blocker, not the probability of the strategy — and the integrator's decision is that the three qualifications live in `PAPER 244` and `CORPUS P306`, where a reader meets them with the datum, rather than as a one-line obstacle note in the therapeutic record.
+
+**Where the substance landed:** `PAPER 244` (new, promoted from `CORPUS P306`), `CORPUS P306`, `LIT-0306`, `FT-130` and `FT-147`.
+
+**Not medical advice.**
