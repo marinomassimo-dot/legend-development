@@ -312,5 +312,18 @@
         "found_or_sought": "sought — FIND-X enumeration"
       }
     ]
-  }
+  },
+  "reading_history": [
+    {
+      "receipt": "FTR-20261004-37897534-02",
+      "reader": "scientist (Scientist C), intake wave 13 2026-10-04",
+      "context_policy": "QUESTION_DRIVEN",
+      "what_changed": "Declared seven figure JPEGs, the supplementary PDF and its derived text; appended five entries (Figures 1d and 2 as panels, the p27 mRNA null, the knockdown arm, the FIND-X enumeration). Figure 6 inspection halted by a model safety classifier and recorded as not read. No earlier entry altered; the manifest receipt field stays on the producing reading.",
+      "outputs": [
+        "disease-models/wwox/research/fulltext_dossiers/PMID37897534.md",
+        "disease-models/wwox/research/intake_wave_20261004w13_C.md",
+        "disease-models/wwox/research/commit_candidates/CC-20261004W13-C-SENESCENCE-PANELS-01.md"
+      ]
+    }
+  ]
 }
