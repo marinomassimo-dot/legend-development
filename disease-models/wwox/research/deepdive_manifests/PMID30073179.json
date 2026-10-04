@@ -1,0 +1,265 @@
+{
+ "schema_version": 2,
+ "pmid": "30073179",
+ "doi": "10.1016/j.omtm.2018.06.003",
+ "receipt": "FTR-20261004-30073179-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID30073179.md",
+  "disease-models/wwox/research/intake_wave_20261004w8_C.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is a research surface another batch owns; no lead is written there from this reading."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "The source is a toxicology or case record in a non-WWOX programme; it supplies no lever for the reference genotype class and forging from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No small molecule is screened; the paper concerns vector-related toxicity and the question here is evidence status, not a molecule."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes are proposed as commit candidates for a later BATCH_COMMIT."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Triples are published in the candidates for an auditor to run."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "mixed",
+  "is_primary_group_for_disease": false,
+  "weighting": "Not assessed in this reading: a non-WWOX paper read for a transferable question about AAV toxicity; no author-group credibility judgement is carried."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND AAV",
+    "count": 2,
+    "source": "PubMed ESearch 2026-10-04"
+   },
+   {
+    "query": "WWOX AND (dorsal root ganglion OR ganglionopathy)",
+    "count": 2,
+    "source": "PubMed ESearch 2026-10-04"
+   }
+  ],
+  "note": "Not assessed; off-WWOX source. WWOX occurs zero times in the JATS file (case-insensitive count 0)."
+ },
+ "multihop": {
+  "references_enumerated": 27,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "27 references enumerated in the JATS; none is WWOX-direct (the paper never names WWOX)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 30073179 at packet time",
+  "hits": 0,
+  "note": "Packet reported no registry presence at the start of the reading; cited by a commentary read in an earlier wave."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-04 by PubMed EFetch: Journal Article only; no RetractionIn, ErratumIn, ExpressionOfConcernIn or UpdateIn link.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "UNSCREENABLE_NO_SNAPSHOT",
+   "reference_source": "jats",
+   "references_declared": 27,
+   "references_screened": 0,
+   "references_with_doi": 0,
+   "schema": "retraction_check.dependencies/1",
+   "screened": false,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 24,
+    "rows": 0,
+    "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block (failed closed 2026-10-04: snapshot retractionwatch_20260910.csv absent under files/retraction_watch/; nothing reported clean)",
+   "unscreenable": {
+    "UNSCREENABLE_NO_SNAPSHOT": 27
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID30073179_Hordeaux2018a_PMC.xml",
+   "sha256": "fc0fabf41cafd50a27ccbc210d0f01b9e1741a783fefcabfe61c164be213e96d",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6070681/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "result_sha256": "fc0fabf41cafd50a27ccbc210d0f01b9e1741a783fefcabfe61c164be213e96d"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID30073179_Hordeaux2018a_supplement/mmc1.pdf",
+   "sha256": "c05f4df5e089f15a961e1dcd13110522edb4674e25b1c3cb5d5c00e16fe0fda9",
+   "kind": "supplement_binary",
+   "note": "Supplementary Tables S1-S7 (PDF).",
+   "acquisition_recipe": {
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6070681/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "result_sha256": "c05f4df5e089f15a961e1dcd13110522edb4674e25b1c3cb5d5c00e16fe0fda9"
+   }
+  },
+  {
+   "path": "files/figures/PMID30073179/gr3.jpg",
+   "sha256": "4f3fb7d9053bbc8fc3ad78232ba46c1ea0ff160a7e456c253d98e162f3856e47",
+   "kind": "figure",
+   "note": "Figure 3 (histopathology and cumulative scores), inspected at native resolution.",
+   "acquisition_recipe": {
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6070681/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "result_sha256": "4f3fb7d9053bbc8fc3ad78232ba46c1ea0ff160a7e456c253d98e162f3856e47"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC search EXT_ID:30073179 AND SRC:MED on 2026-10-04: inEPMC=Y, isOpenAccess=Y, PMC6070681",
+  "entries": [
+   {
+    "proposition": "The immunosuppressed arm is three high-dose animals given mycophenolate mofetil plus rapamycin, within the 90-day cohort.",
+    "snippet": "Three HD subjects from the 90-day cohort also received immunosuppression (IS) consisting of mycophenolate mofetil (MMF) and rapamycin",
+    "anchor": "Results, Study Design",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30073179_Hordeaux2018a_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "MMF was withdrawn on day 60 (earlier in one animal), rapamycin continued; the regimen began three weeks before dosing.",
+    "snippet": "Rapamycin was used for the entirety of the study, whereas MMF was stopped on study day 60.",
+    "anchor": "Materials and Methods, Immunosuppression",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30073179_Hordeaux2018a_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The immunosuppression regimen itself caused diarrhoea, anorexia, weight loss and anaemia, starting before vector dosing.",
+    "snippet": "The IS regimen administered to three animals caused adverse effects of decreased appetite, diarrhea, and weight loss that all started prior to test article administration.",
+    "anchor": "Results, In-Life Safety Parameters, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30073179_Hordeaux2018a_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Sensory-neuron cell-body degeneration with mononuclear infiltrate was seen in at least one DRG of every animal sampled except one immunosuppressed animal.",
+    "snippet": "in at least one DRG and trigeminal nerve ganglia of all animals except one HD IS animal",
+    "anchor": "Results, Histopathology, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30073179_Hordeaux2018a_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The text says incidence and severity trended lower with immunosuppression.",
+    "snippet": "Overall, the incidence and severity of the DRG degeneration and axonopathy trended toward lower scores in the HD IS animals (Figure 3G).",
+    "anchor": "Results, Histopathology, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30073179_Hordeaux2018a_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 3G: DRG cumulative score is about 2.7 (high dose), about 2.0 (high dose with immunosuppression) and about 2.3 (low dose), with overlapping error bars at three animals per group; axonopathy score is about 5.0 and 4.7 (high dose, day 90 and 180), about 2.4 (with immunosuppression) and about 4.4 (low dose), vehicle and day-14 zero.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 3G bar charts, read at native resolution: DRG cumulative score bars Vehicle 0, HD D90 about 2.7, HD+IS D90 about 2.0, LD D90 about 2.3; axonopathy cumulative score Vehicle 0, HD D14 0, HD D90 about 5, HD D180 about 4.7, HD+IS D90 about 2.4, LD D90 about 4.4; error bars (SD) overlap in the DRG panel; individual animals plotted as symbols.",
+    "anchor": "Figure 3, panel G",
+    "surface": "figure",
+    "artifact": "files/figures/PMID30073179/gr3.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[4]",
+    "qualifies_needle": "trended toward lower scores"
+   },
+   {
+    "proposition": "The authors state the DRG and axonopathy findings and the transgene-directed lymphocyte clustering were present in animals whose T-cell responses were pharmacologically suppressed.",
+    "snippet": "However, these findings were still present in animals with pharmacologically suppressed T cell responses.",
+    "anchor": "Discussion, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30073179_Hordeaux2018a_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors say immunosuppression may help but no definitive conclusion can be drawn because of cohort size.",
+    "snippet": "it is hard to draw any definitive conclusions due to study limitations, such as cohort size",
+    "anchor": "Discussion, para 6",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30073179_Hordeaux2018a_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The low dose, tenfold lower, produced DRG lesions comparable to the high dose; the authors report vector genomes at the high dose about tenfold higher than low.",
+    "snippet": "found that levels in the HD group were approximately 10 times higher than the LD group",
+    "anchor": "Results, Vector Biodistribution",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30073179_Hordeaux2018a_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Day-14 vector-treated animals had no histological lesion; lesions appeared by day 90.",
+    "snippet": "no histological lesions in vehicle-treated or day 14 vector-treated animals",
+    "anchor": "Discussion, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30073179_Hordeaux2018a_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors suggest immune responses may worsen rather than cause an initial injury, citing overexpression toxicity with a strong promoter.",
+    "snippet": "Perhaps immune responses are not causative but worsen an initial injury",
+    "anchor": "Discussion, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30073179_Hordeaux2018a_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors report no clinical consequence of the sensory lesions and no rodent precedent.",
+    "snippet": "To the best of our knowledge, no published reports exist of similar DRG toxicity in mice or rats dosed intrathecally with various AAV vectors.",
+    "anchor": "Discussion, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30073179_Hordeaux2018a_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The IS animals alone showed a day-60 anaemia and a minimal ALT rise in one animal that resolved; no transaminase change was found in non-IS animals.",
+    "snippet": "we did not find any significant abnormalities in the CBC, blood chemistry (including transaminases), or coagulation parameters",
+    "anchor": "Results, Pathology, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30073179_Hordeaux2018a_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}
