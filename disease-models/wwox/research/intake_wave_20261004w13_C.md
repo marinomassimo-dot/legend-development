@@ -72,3 +72,20 @@ enumerated and searched, and the surfaces that were unavailable are named.
   The rejection holds; the dry run was executed.
 * **Transfer limit:** bulk glioma transcriptomes. A transcript correlation across tumours says nothing
   about WWOX function in any genotype class.
+
+## 4 · PMID 30158849 — Liu 2018, WWOX phosphorylation review
+
+* **Verdict:** INGEST (re-read, panels and deposited spreadsheet). Receipt `sciC_30158849_1.json` →
+  `FTR-20261004-30158849-03`, `partial_fulltext_read`.
+* **FIND-X, negative:** PAPER 150's "pT12 is ABSENT from this 2018 review" **survives** on every
+  surface: body, Table 1 cells, Figures 1–5 as images, and the full spreadsheet dump. Figure 3's red
+  "T212" is a tau site.
+* **FIND-X, positive (a failure):** PAPER 150's "pY287 to proteasomal turnover" has **no source in this
+  review**. Its only WWOX residues are Ser14 and Tyr33.
+* **New:** the deposited "Table S1" holds brain-structure z-scores (the Figure 2A data), not the
+  ER/WWOX comparison its caption names. Figure 2F holds the review's only quantified phospho-measure:
+  pY33-WWOX staining density in AD versus control tissue.
+* **Candidate:** `CC-20261004W13-C-PHOSPHOCODE-01` — **MINOR**, PAPER 150 `Role` phrase. Dry run
+  executed.
+* **Transfer limit:** a review. Every residue statement it makes is carried from cited work, mostly
+  the authoring group's; it says nothing about any missense allele class.
