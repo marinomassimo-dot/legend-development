@@ -43,7 +43,7 @@ edition: public
 ## 2. DISEASE-MODEL (WORKING-MODEL) VERSION
 
 ```yaml
-working_model_version: WM_v7.13
+working_model_version: WM_v7.14
 working_model_file: disease-models/wwox/registries/working_model_current.md
 narrative_view: disease-models/wwox/disease_model.md
 notes: "Canonical disease-level working model derived from public literature; disease_model.md is its narrative reader-facing view. The private individual-level record is not part of this edition."
@@ -106,12 +106,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20261003_005
-last_batch_commit_date: 2026-10-03
+last_batch_commit_id: BATCH_20261004_001
+last_batch_commit_date: 2026-10-04
 last_batch_commit_type: MANUAL
-commit_candidates_propagated: 16
-target_wm_version: WM_v7.13
-trigger: MANUAL (operator-dispatched integration of intake wave 6 and the Repudi 2021 re-reading; the backlog threshold of 5 was also met, and three ORPHAN_COMPLETE_READ blocks standing on main were closed as the batch's first act)
+commit_candidates_propagated: 15
+target_wm_version: WM_v7.14
+trigger: MANUAL (operator-dispatched integration of intake wave 7, groups A/B/C1/C2; the backlog threshold of 5 was also met, and seven ORPHAN_COMPLETE_READ blocks standing on main were closed as the batch's first effect)
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -125,8 +125,8 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20261003_BATCH_20261003_005
-last_lint_date: 2026-10-03
+last_lint_id: LINT_20261004_BATCH_20261004_001
+last_lint_date: 2026-10-04
 last_lint_result: WARN
 ```
 
@@ -212,8 +212,8 @@ to make a suite green — the only way to move it is to have made the change you
 
 ```yaml
 growth_anchor_ledger: framework/state/growth_anchors.jsonl
-growth_anchor_events: 42
-growth_anchor_head: 3ad415045c49004b221158accd98651d27e5374efb232826df9947c885af4e55
+growth_anchor_events: 43
+growth_anchor_head: 745ddf446f42d4eb5dd5e04fab2a6bd14c7ffaaf2f55d88bee301355ebfb8008
 ```
 
 ```bash
@@ -261,7 +261,7 @@ baseline below must equal the live count, never preserve historical padding.
 
 ```yaml
 unread_premise_baseline: 0
-unread_premise_measured_on: 2026-10-03
+unread_premise_measured_on: 2026-10-04
 ```
 
 **It is a ratchet, not a wall.** Blocking on the whole legacy backlog would only teach sessions

@@ -52,3 +52,15 @@ Also from this wave, predicted only: PMID 36937954's canonical acceptor `c.606-1
 (a splice event required at least a 20 % net abnormal-junction change | The minimum net change in proportion of abnormal junction reads between the case and control was 20% in order to be considered a significant splicing event. | PMID 42248868, Methods; files/fulltext/PMID42248868_Zhao2026_PMC.xml)
 (the assay reads neither expression nor NMD and no functional validation was done | The assay does not provide insights into gene expression levels or the impact of NMD due to test limitations | PMID 42248868, Discussion; files/fulltext/PMID42248868_Zhao2026_PMC.xml)
 (low-expressed genes are less informative; genes above 0.5 TPM were reliable | Genes in this cohort with TPM values greater than 0.5 TPM were able to be reliably studied. | PMID 42248868, Discussion; files/fulltext/PMID42248868_Zhao2026_PMC.xml)
+
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** `PROPAGATED` by `BATCH_20261004_001` (2026-10-04, MINOR, WM_v7.13 → WM_v7.14; ACTOR_ID `scientist`, Scientist K, batch integrator).
+**Surfaces written:** claim_registry_current.md · discovery_ledger_current.md
+
+One `replace-within` on `CLAIM 033` (live `Status`: `in observation`) and one on `DL-BIO-002` (discovery ledger, non-canonical). Wikilink renumbered `PAPER 206` → `PAPER 210`; `PAPER 210` gained the reciprocal `Claim links: CLAIM 033`.
+🔴 **The landed text says, in terms, that the finding says NOTHING about the reference genotype's acceptor allele** — not its splice outcome, not its frame, not its protein — which is what the dispatch required of this candidate. What it shows is that a WWOX junction is measurable in blood RNA at a ≥ 20 % net abnormal-junction threshold.
+**Two integrator amendments, both from the blind audit, and both found independently by two auditors.** (1) The source **numbers no intron and no exon**: WWOX occurs in it exactly twice, both inside one Table 2 row, and placing `c.1056+5` in **intron 8** is this repository's derivation from the WWOX exon map held in `analysis/splice_allele_rna_evidence_20260922.md`. Both records now label it `INFERENZA` and quote nothing for it. (2) The absence of functional validation is scoped by the source **to the reclassified variants** — *«Functional validation studies were also not performed for the reclassified variants»* — not a blanket absence. A third amendment scopes the TPM statement: *«genes … greater than 0.5 TPM were able to be reliably studied»* is stated **for that cohort**, the source gives **TPM < 0.1** as the poorly-informative band, and says in terms that *«there is not a defined criteria for the minimum TPM needed for analysis»*.

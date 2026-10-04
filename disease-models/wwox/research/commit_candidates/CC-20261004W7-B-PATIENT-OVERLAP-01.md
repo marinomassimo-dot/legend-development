@@ -45,3 +45,15 @@
 (the Tunisian WWOX-including event is a heterozygous de novo deletion | Arr16q(74,718,513 87,891,103)x1 L L WWOX ANKRD11 ZNF778 CDH15 CDH13 De novo P | PMID 42807679, Table 3 row P8; files/fulltext/PMID42807679_Khadija2026_PMC.xml)
 (two Turkish case rows are homozygous p.Arg264* | 51 M WWOX Nonsense c.790C>T p.Arg264* Hom Reported ClinVar ID:241105 PVS1, PM3, PM2 P Neonatal GES | PMID 42394473, Table 2 row 51; files/fulltext/PMID42394473_Karaer2026_PMC.xml)
 (the paper does not state whether the two WWOX patients are related | Two patients with WWOX p.Arg264* (Cases 29, 51) exhibited generalized epileptic spasms, developmental regression, and abnormal MRI | PMID 42394473, Discussion; files/fulltext/PMID42394473_Karaer2026_PMC.xml)
+
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** `PROPAGATED` by `BATCH_20261004_001` (2026-10-04, MINOR, WM_v7.13 → WM_v7.14; ACTOR_ID `scientist`, Scientist K, batch integrator).
+**Surfaces written:** paper_registry_current.md
+
+Two `replace-within` ops, on `PAPER 171` (Al Baradie 2022) and `PAPER 143` (Nagarajan 2023); both `old` strings measured **exactly one** occurrence inside their live records. Wikilinks renumbered with the registry candidate: `PAPER 201` → `205`, `PAPER 202` → `206`.
+🔴 **Every overlap judgement keeps its `INFERENZA` label, as the dispatch required, and none is resolved.** The Nagarajan `p.Arg264*` homozygote **may** be Piard patient 14 — allele and country shared, nothing printed in either source excluding identity — so the landed count is *at most three and possibly two*. The `c.606-1G>A` homozygote of PMID 36937954 is **unlinked and undetermined** against Al Baradie family 3, Tabarki 2015 and PMID 26345274, and is counted **once as unlinked**. Tabarki 2015 remains **unread**, and the record says so rather than treating it as a resolver. PMID 42807679 is a heterozygous contiguous 16q deletion and cannot bear on the Tabarki overlap at all.
+One integrator amendment from the blind audit: the Alotibi window is the **diagnosis** window (2015–2018), not a testing window. An auditor also verified, by reading every occurrence of WWOX, *consanguin\**, *sibling* and *famil\** in the Karaer artefact, that it states **nothing** about whether its two `p.Arg264*` cases are related, while naming siblings explicitly where it has them — an informative silence, and the reason those two are counted as a separate population rather than merged.
