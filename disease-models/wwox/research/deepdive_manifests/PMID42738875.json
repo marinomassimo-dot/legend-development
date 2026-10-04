@@ -1,0 +1,267 @@
+{
+  "schema_version": 2,
+  "pmid": "42738875",
+  "doi": "10.3390/cells15171581",
+  "receipt": "FTR-20261004-42738875-01",
+  "context_policy": "SOURCE_FIRST",
+  "landing": [
+    "disease-models/wwox/research/fulltext_dossiers/PMID42738875.md",
+    "disease-models/wwox/research/intake_wave_20261004w9_C.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261004W9-C-EV-BIOMARKER-01.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261004W9-C-REGISTRY-01.md"
+  ],
+  "skills_considered": [
+    {
+      "skill": "find-fulltext",
+      "used": true
+    },
+    {
+      "skill": "legend-study-intake-triage",
+      "used": true
+    },
+    {
+      "skill": "legend-deepdive",
+      "used": true
+    },
+    {
+      "skill": "legend-discovery",
+      "used": false,
+      "reason": "The discovery ledger is owned by other batches; what this reading supports is proposed as commit candidates and in the intake note."
+    },
+    {
+      "skill": "legend-hypothesis-forge",
+      "used": false,
+      "reason": "One reading supplies at most a lever to state with its limits; forging a portfolio from it would manufacture leads."
+    },
+    {
+      "skill": "legend-safety-triage",
+      "used": false,
+      "reason": "No compound is proposed by this source."
+    },
+    {
+      "skill": "legend-commit",
+      "used": false,
+      "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+    },
+    {
+      "skill": "legend-locator-audit",
+      "used": false,
+      "reason": "The triples are published in the candidates for a blind auditor; the reader cannot audit their own locators."
+    }
+  ],
+  "group_assessment": {
+    "total_publications": 1,
+    "publications_on_gene": 0,
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": false,
+    "weighting": "Neuro-HIV biomarker group working on plasma neuronal-enriched extracellular vesicles; no WWOX publication. WWOX enters only as one analyte of a 41-plex neurodegeneration panel."
+  },
+  "field_density": {
+    "queries": [
+      {
+        "query": "WWOX AND (exosome* OR \"extracellular vesicle*\")",
+        "count": 6,
+        "source": "PubMed ESearch rettype=count 2026-10-04"
+      },
+      {
+        "query": "WWOX AND (plasma OR serum) AND protein",
+        "count": 22,
+        "source": "PubMed ESearch rettype=count 2026-10-04"
+      }
+    ],
+    "note": "Six PubMed records pair WWOX with extracellular vesicles; this one measures WWOX protein in L1CAM-captured plasma EVs in a human cohort."
+  },
+  "multihop": {
+    "references_enumerated": 61,
+    "gene_direct_refs_in_source": [
+      "15126504",
+      "22193544"
+    ],
+    "resolved": [
+      {
+        "pmid": "22193544",
+        "how": "Wang 2012 (WWOX and GSK-3beta) is already held with complete_fulltext_read receipts in the ledger; no hop owed."
+      }
+    ],
+    "queued": [
+      {
+        "queue": "CC-20261004W9-C-REGISTRY-01",
+        "why": "PMID 15126504 (Sze 2004, WWOX down-regulation and tau phosphorylation) carries no receipt. It is cited here only as background for the authors' redox/tau reasoning, and a prior triage recorded it as abstract-only; this reading rests on nothing it states."
+      }
+    ],
+    "note": "61 references enumerated; two are WWOX-direct and both are cited only in the Discussion's mechanistic speculation, not in support of any measurement reported here."
+  },
+  "corpus_crossquery": {
+    "query": "registry_records.py get --pmid 42738875; fulltext_receipts.py status --pmid 42738875 (run AFTER the first pass)",
+    "hits": 0,
+    "note": "No PAPER/LIT identity record and no receipt before this reading."
+  },
+  "retraction_check": {
+    "checked": true,
+    "result": "Checked 2026-10-04 via PubMed ESummary: publication types ['Journal Article']; no retraction, expression of concern or correction listed for PMID 42738875.",
+    "dependencies": {
+      "flagged": [],
+      "noted": [],
+      "paper_verdict": "SCREENED_CLEAN",
+      "reference_source": "network",
+      "references_declared": 61,
+      "references_screened": 61,
+      "references_with_doi": 61,
+      "schema": "retraction_check.dependencies/1",
+      "screened": true,
+      "snapshot": {
+        "date": "2026-09-10",
+        "days_since_fetch": 24,
+        "rows": 72476,
+        "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+      },
+      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+      "unscreenable": {}
+    }
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID42738875_Tang2026_PMC.xml",
+      "sha256": "bb16f222d2a6a9bd0a64c8c33111b960c23d74eec765e4711f2849f165f5e701",
+      "kind": "article_text",
+      "note": "Europe PMC fullTextXML (281 168 B): body, methods, seven figures plus appendix figures, Table A1 cell-wise, abbreviations, references.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13565498/fullTextXML",
+        "http_method": "GET",
+        "tier": "Europe PMC REST fullTextXML",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "bb16f222d2a6a9bd0a64c8c33111b960c23d74eec765e4711f2849f165f5e701"
+      }
+    },
+    {
+      "path": "files/figures/PMID42738875/cells-15-01581-g005b.webp",
+      "sha256": "8f5fc396f9498f4f22279a2d4d60d5b47a7e164f51f0496c8d1a46c01f23b49a",
+      "kind": "figure",
+      "note": "Figure 5B (1600x1041), inspected as an image at native resolution; carries the WWOX panels.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13565498.1/cells-15-01581-g005b.webp",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "8f5fc396f9498f4f22279a2d4d60d5b47a7e164f51f0496c8d1a46c01f23b49a"
+      }
+    },
+    {
+      "path": "files/figures/PMID42738875/cells-15-01581-g005a.webp",
+      "sha256": "8b7fac2452a7cbb8a8f92a4be2f955948be03bdb92dff127e8d517dd52295b49",
+      "kind": "figure",
+      "note": "Figure 5A (1600x1121), inspected as an image at native resolution; the other analytes of the same panel.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13565498.1/cells-15-01581-g005a.webp",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "8b7fac2452a7cbb8a8f92a4be2f955948be03bdb92dff127e8d517dd52295b49"
+      }
+    }
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "entries": [
+      {
+        "proposition": "WWOX protein was measured in L1CAM-captured, neuronal-enriched plasma extracellular vesicles as one analyte of an Olink Target 48 Neurodegeneration 41-plex, reported as relative NPX on a log2 scale, not absolute concentration.",
+        "snippet": "Results were reported as normalized protein expression (NPX) values. NPX is Olink’s relative quantification unit, expressed on a log2 scale. NPX measures relative change.",
+        "anchor": "Methods 2.7, Proximity Extension Assay (Olink)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42738875_Tang2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Neuronal enrichment is an immunocapture operation on L1CAM, not a demonstration of neuronal origin.",
+        "snippet": "The second step entails purifying nEV using L1CAM antibodies for selective affinity capture.",
+        "anchor": "Methods 2.2, nEV Isolation",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42738875_Tang2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The Olink assay was run in singlet, unlike the duplicate Luminex and electrochemiluminescent assays.",
+        "snippet": "Proximity extension assays were performed on the nEV lysates in singlet per manufacturer’s instructions",
+        "anchor": "Methods 2.7, Proximity Extension Assay (Olink)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42738875_Tang2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "WWOX was treated as normally distributed and analysed by one-way ANOVA with Tukey correction.",
+        "snippet": "For data that are normally distributed (EIFAK2, NPTX2, WWOX), horizontal bars represent group means and 95% confidence intervals as determined by ordinary one-way ANOVA followed by Tukey tests to correct for multiple comparisons.",
+        "anchor": "Figure 5 legend",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID42738875_Tang2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The paper states WWOX was higher in men than in women within the same cognition group.",
+        "snippet": "and WWOX (WW domain-containing oxidoreductase) were higher in men than in women for the same cognition group",
+        "anchor": "Results 3.4, Discriminating Between Sex and Between PWH Cognition Groups",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42738875_Tang2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "PANEL READING. In Figure 5B the WWOX panel with the sexes combined carries NO significance bracket across the four cognition groups, and in the sex-split panel exactly ONE bracket is drawn, between two male groups. The whole WWOX result is a single marked comparison within one sex, on an NPX axis running about -1.0 to 1.0 with group means between about -0.25 and 0.0.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5B, WWOX panels: upper panel (HIV-, NPN, ANI, MND combined) shows no significance bracket; lower panel (M then F, four groups each) shows one bracket with a single asterisk spanning two male groups, with the later male group mean lower; all means lie between about -0.25 and 0.0 NPX.",
+        "anchor": "Figure 5B, WWOX panels",
+        "surface": "figure",
+        "artifact": "files/figures/PMID42738875/cells-15-01581-g005b.webp",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[4]",
+        "qualifies_needle": "higher in men than in women for the same cognition group",
+        "experimental_context": {
+          "system": "human",
+          "genotype": "not genotyped",
+          "treatment": "none - observational cross-sectional cohort",
+          "timepoint": "single timepoint",
+          "comparator": "cognition group and sex",
+          "endpoint": "Olink NPX in L1CAM-captured plasma EVs"
+        }
+      },
+      {
+        "proposition": "In men, WWOX is one of five nEV proteins differing between the three HIV cognition groups, and the authors read it as a redox protein acting with GLRX on tau.",
+        "snippet": "In men, we found the proteins that are differentially expressed between the three HIV cognition groups were NCAM-1, tTau, GLRX, NPTX2, and WWOX.",
+        "anchor": "Discussion",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42738875_Tang2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "WWOX entered a two-predictor logistic model with NCAM-1 in men; the published odds ratios for WWOX carry confidence intervals spanning or nearly spanning 1 in two of three comparisons.",
+        "snippet": "Multiple logistic regression using main effects model for NCAM-1 plus one other protein to discriminate between cognition groups in males.",
+        "anchor": "Table A1 caption and its block 'Discrimination Between Groups (NCAM-1 and WWOX)'",
+        "surface": "table",
+        "artifact": "files/fulltext/PMID42738875_Tang2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The authors call the study exploratory and hypothesis-generating, not confirmatory for any single marker.",
+        "snippet": "this exploratory study was not designed to provide confirmatory evidence for any single biomarker",
+        "anchor": "Discussion, limitations",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42738875_Tang2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The cohort is people with HIV and seronegative controls, with co-morbidities excluded; no WWOX genotype is involved anywhere.",
+        "snippet": "A total of 140 age-matched plasma samples were selected from the MACS/WIHS Combined Cohort Study (MWCCS). Participant recruitment, characteristics, and NP testing information have been published previously",
+        "anchor": "Methods 2.1, Study Participants and Plasma Collection",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42738875_Tang2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      }
+    ],
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC REST fullTextXML returned HTTP 200 with a full JATS body on 2026-10-04; the declared article_text is that response.",
+    "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+  }
+}
