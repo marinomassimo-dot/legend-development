@@ -172,6 +172,99 @@
     "acquired_on": "2026-10-02",
     "result_sha256": "358e2e0f5b9fdeb3688b9b814dd60e2e77d3e50b214412f92e5f1a959ad4129f"
    }
+  },
+  {
+   "path": "files/fulltext/PMID31543760_assets/Data_Sheet_2.PDF",
+   "sha256": "27296fbe006feb5877ddc517b59f3f58a685b9cc5185a3b296f1b60a0ecdbfe3",
+   "kind": "supplement_binary",
+   "note": "Supplementary Figure S3 (one-page vector PDF, cairo): high-resolution protein-protein interaction network behind Figure 9; node labels are a text layer.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6730490/supplementaryFiles?includeInlineImage=true",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip, includeInlineImage)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "27296fbe006feb5877ddc517b59f3f58a685b9cc5185a3b296f1b60a0ecdbfe3"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID31543760_assets/Data_Sheet_3.pdf",
+   "sha256": "b7a31a6269b5039e609af9848ce6562cc8f679c21c36e0f96e2f618565ad73d4",
+   "kind": "supplement_binary",
+   "note": "Supplementary Figure S4 (one-page PDF, cairo) behind Figure 10A. It carries NO text layer (pdftotext returns zero tokens); node labels are drawn, and a 400 dpi crop did not render within 120 s. Inspected at 60 dpi only: node labels not legible at that resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6730490/supplementaryFiles?includeInlineImage=true",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip, includeInlineImage)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "b7a31a6269b5039e609af9848ce6562cc8f679c21c36e0f96e2f618565ad73d4"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID31543760_assets/Data_Sheet_4.PDF",
+   "sha256": "c0388f2c6a105f80d44ae9c1d2f194ef0e7d205ea03f2df5dc83b634380b3644",
+   "kind": "supplement_binary",
+   "note": "Supplementary Figure S5 (one-page vector PDF, cairo) behind Figure 10B; node labels are a text layer; node colour encodes log2 fold change, no numeric value is printed.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6730490/supplementaryFiles?includeInlineImage=true",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip, includeInlineImage)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "c0388f2c6a105f80d44ae9c1d2f194ef0e7d205ea03f2df5dc83b634380b3644"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID31543760_assets/Data_Sheet_1_pdftotext.txt",
+   "sha256": "25de40844461b66dddd311adec29e398beed91e18115971211d6b6fead526ee4",
+   "kind": "supplement_text",
+   "note": "Derived text layer of Data_Sheet_1.pdf (Supplementary Figures 1-2 captions, Supplementary Tables 1-3). Lossy: layout mode keeps column order per line; wrapped gene-set names continue on the next line; images are not represented.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID31543760_assets/Data_Sheet_1.pdf",
+    "extractor": {
+     "name": "pdftotext (poppler)",
+     "version": "24.02.0",
+     "call": "pdftotext -layout -nopgbrk Data_Sheet_1.pdf Data_Sheet_1_pdftotext.txt",
+     "join": "\n"
+    },
+    "acquired_on": "2026-10-04"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID31543760_assets/Data_Sheet_2_pdftotext.txt",
+   "sha256": "ea68b43cdf3b18aef8baa46e1cc3426c250c00de44592e53b3cde85a63d58497",
+   "kind": "supplement_text",
+   "note": "Derived text layer of Data_Sheet_2.PDF: node labels in content-stream order plus the caption. Lossy: no positions, no edges, no colours.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID31543760_assets/Data_Sheet_2.PDF",
+    "extractor": {
+     "name": "pdftotext (poppler)",
+     "version": "24.02.0",
+     "call": "pdftotext -raw -nopgbrk Data_Sheet_2.PDF Data_Sheet_2_pdftotext.txt",
+     "join": "\n"
+    },
+    "acquired_on": "2026-10-04"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID31543760_assets/Data_Sheet_4_pdftotext.txt",
+   "sha256": "219dd3699edfdc35dcbfca04616c72d02e79100c0d59f484025625994097b0f9",
+   "kind": "supplement_text",
+   "note": "Derived text layer of Data_Sheet_4.PDF: node labels in content-stream order plus the caption. Lossy: no positions, no edges, no colours (the only carrier of the fold-change sign).",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID31543760_assets/Data_Sheet_4.PDF",
+    "extractor": {
+     "name": "pdftotext (poppler)",
+     "version": "24.02.0",
+     "call": "pdftotext -raw -nopgbrk Data_Sheet_4.PDF Data_Sheet_4_pdftotext.txt",
+     "join": "\n"
+    },
+    "acquired_on": "2026-10-04"
+   }
   }
  ],
  "verbatim_locators": {
@@ -312,6 +405,69 @@
     "found_or_sought": "found",
     "contradicts": "entries[0]",
     "contradicts_needle": "remained as isolated, single cells that did not proliferate nor differentiate"
+   },
+   {
+    "proposition": "Supplementary Table 3 lists 108 gene-set rows for the silenced line, counted row by row (every row beginning GO_ and ending in size, enrichment score and FDR q-value), while the body states 109 for hNPC/shWWOX (entries[7]). Supplementary Table 2 lists 44 rows, matching the body's 44. The one-row difference is not explained on any surface; it is small and changes no conclusion, but the number to carry for the silenced line is the body's 109 as stated and 108 as tabulated.",
+    "snippet": "Supplementary Table 3 GSEA report. Enrichment in phenotype hNPC_WWOX_del.",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID31543760_assets/Data_Sheet_1_pdftotext.txt",
+    "anchor": "Data_Sheet_1.pdf, Supplementary Table 3 (pages 7-10); rows counted with a regular expression over the derived text and the count checked for rows whose numbers fall on a separate line (none)",
+    "found_or_sought": "sought — counted the table to test the body's figure, as the wave's FIND-X rule asks of every number carried",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The supplement holds exactly two figures with images in Data_Sheet_1 (S1 blot, S2 immunocytochemistry), three tables (S1 PCA contributions, S2 and S3 GSEA reports) and three separately deposited network figures (S3-S5). None of these surfaces prints a WWOX knockdown percentage, a densitometry ratio or a WWOX transcript fold change: Supplementary Table 1 holds PCA contributions for 35 oxidative-stress genes (no WWOX row, no direction), Tables 2-3 hold gene-set statistics, and S3/S5 hold node labels with no WWOX node.",
+    "snippet": "Supplementary Figures 3-5 available as separate pdf files, for the reason of maintaining high",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID31543760_assets/Data_Sheet_1_pdftotext.txt",
+    "anchor": "Data_Sheet_1.pdf page 2; surfaces enumerated: Data_Sheet_1 pages 1-10, Data_Sheet_2 (S3), Data_Sheet_3 (S4, raster labels not legible), Data_Sheet_4 (S5)",
+    "found_or_sought": "sought — FIND-X enumeration of every supplementary surface for a knockdown quantity",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Figure S3 (the high-resolution Figure 9 network) carries 195 gene-symbol tokens in its text layer against the 198 nodes the body states; WWOX is not among them, and the figure prints no numeric value. 193 of its 195 symbols recur in S5 (the remaining difference is TUBG1 and TUBGCP3 merged into one token in S5).",
+    "snippet": "Supplementary Figure S3. Protein-protein interaction",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID31543760_assets/Data_Sheet_2_pdftotext.txt",
+    "anchor": "Data_Sheet_2.PDF, caption at the foot of the page; symbol count by regular expression over the raw text layer",
+    "found_or_sought": "sought — searched the node set for WWOX and for any printed quantity",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Figure S5 encodes the neuron-stage log2 fold change by node colour only (magenta up, turquoise down); no fold-change value is printed for any gene, and WWOX is not a node.",
+    "snippet": "expressed genes involved in neuron migration. Log2 fold change of gene expression",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID31543760_assets/Data_Sheet_4_pdftotext.txt",
+    "anchor": "Data_Sheet_4.PDF, caption at the foot of the page",
+    "found_or_sought": "sought — searched for any printed number and for a WWOX node",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Figure S4 (hNPC-stage network, Figure 10A at high resolution) was opened as a rendered image at 60 dpi: a protein-protein network of roughly two hundred nodes coloured magenta and turquoise, with the caption naming the log2 fold change of hNPC/shWWOX versus hNPC/shScrambled. The file has no text layer and its node labels were not legible at the resolution rendered, so whether WWOX is a node in S4 was NOT determined; the figure prints no numeric axis or value.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Figure S4, one page, a magenta/turquoise protein-protein interaction network with a four-line caption at lower left; node labels illegible at 60 dpi; no axis, no numeric value.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID31543760_assets/Data_Sheet_3.pdf",
+    "anchor": "Data_Sheet_3.pdf rendered with pdftoppm at 60 dpi; a 400 dpi crop timed out",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "sought — opened to check for a printed quantity; labels not resolved"
+   },
+   {
+    "proposition": "The methods declare a densitometric quantification of the silencing blot, but its output is printed on no surface: not in the body, the eleven figures, Supplementary Figure 1 (a three-lane blot with no number), or Supplementary Tables 1-3. The declared method has no reported result.",
+    "snippet": "The ImageJ software was used for densitometric analysis of protein amount, adjusted to GAPDH as a reference protein",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31543760_Kosla2019_EPMC.xml",
+    "anchor": "Materials and Methods, 'Western Blot'",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought — FIND-X: body, 11 figure captions, Data_Sheet_1 pages 1-10, Data_Sheets 2 and 4 text layers searched; Data_Sheet_3 labels not legible"
+   },
+   {
+    "proposition": "The paper's migration statement is an inference from gene-set enrichment and protein-network membership. Across body, eleven figure captions, the supplementary figures and tables, there is no cell-movement assay (no transwell, wound, scratch, Boyden or time-lapse term in the body; the figures are expression, redox, adhesion, zymography, 3-D and 2-D culture images, GSEA plots, networks and a PCA). Neuronal migration and cortical layering are not measured in this paper.",
+    "snippet": "our findings suggest that the WWOX protein might be an important regulator of neuronal migration and synaptogenesis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31543760_Kosla2019_EPMC.xml",
+    "anchor": "Discussion",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought — FIND-X for a migration measurement across every surface"
    }
   ]
  },
@@ -325,6 +481,17 @@
     "disease-models/wwox/research/fulltext_dossiers/PMID31543760.md",
     "disease-models/wwox/research/intake_wave_20261003_C.md",
     "disease-models/wwox/research/commit_candidates/CC-20261003-C-RESCUE-READOUT-01.md"
+   ]
+  },
+  {
+   "receipt": "FTR-20261004-31543760-04",
+   "reader": "scientist (Scientist C), intake wave 13 2026-10-04",
+   "context_policy": "QUESTION_DRIVEN",
+   "what_changed": "Declared Data_Sheets 2-4 (Supplementary Figures S3-S5) and derived text layers of Data_Sheets 1, 2 and 4; appended seven entries. Supplementary Table 3 holds 108 gene-set rows against the body's 109; the knockdown-depth negative survives on every surface searched (Data_Sheet_3 labels not legible); no surface carries a migration, layering, glial or prenatal measurement. No earlier entry altered; the manifest receipt field stays on the producing reading.",
+   "outputs": [
+    "disease-models/wwox/research/fulltext_dossiers/PMID31543760.md",
+    "disease-models/wwox/research/intake_wave_20261004w13_C.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261004W13-C-CLAIM014-SCOPE-01.md"
    ]
   }
  ]

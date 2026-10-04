@@ -104,6 +104,273 @@
         "derived": false,
         "result_sha256": "b0c61db6eb2d485d711ec7d87b534e74ac5f7814321e33d433acf4494489a47b"
       }
+    },
+    {
+      "path": "files/figures/PMID34204789/cancers-13-02955-g001.jpg",
+      "sha256": "9e75eff58b4281a66f4ee698a57b9990d1b20a905ee45a06c6dddadf7647ba17",
+      "kind": "figure",
+      "note": "Figure 1, acquired and fingerprinted in wave 13; caption read, not inspected as an image.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8231639.1/cancers-13-02955-g001.jpg",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "9e75eff58b4281a66f4ee698a57b9990d1b20a905ee45a06c6dddadf7647ba17"
+      }
+    },
+    {
+      "path": "files/figures/PMID34204789/cancers-13-02955-g002.jpg",
+      "sha256": "1a48e0ea29ba27e06b01d1a8f1e00911436e03091e5be1f60a9e88a8ea5c6720",
+      "kind": "figure",
+      "note": "Figure 2, acquired and fingerprinted in wave 13; caption read, not inspected as an image.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8231639.1/cancers-13-02955-g002.jpg",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "1a48e0ea29ba27e06b01d1a8f1e00911436e03091e5be1f60a9e88a8ea5c6720"
+      }
+    },
+    {
+      "path": "files/figures/PMID34204789/cancers-13-02955-g003.jpg",
+      "sha256": "aae39bbb10a25de9ab302ca88cc748750631aa41be761e645fa7db75a4eeef60",
+      "kind": "figure",
+      "note": "Figure 3, acquired and fingerprinted in wave 13; caption read, not inspected as an image.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8231639.1/cancers-13-02955-g003.jpg",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "aae39bbb10a25de9ab302ca88cc748750631aa41be761e645fa7db75a4eeef60"
+      }
+    },
+    {
+      "path": "files/figures/PMID34204789/cancers-13-02955-g004.jpg",
+      "sha256": "5ebfb6312614d91385da2140937130d9c4a9f9f3bb26ae7971c6d4922f0c7906",
+      "kind": "figure",
+      "note": "Figure 4, acquired and fingerprinted in wave 13; caption read, not inspected as an image.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8231639.1/cancers-13-02955-g004.jpg",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "5ebfb6312614d91385da2140937130d9c4a9f9f3bb26ae7971c6d4922f0c7906"
+      }
+    },
+    {
+      "path": "files/figures/PMID34204789/cancers-13-02955-g005.jpg",
+      "sha256": "c9f2e7df63fc4b7e3cb039e9d1e8788c2f7051e4c0650063bd28dacc6f728419",
+      "kind": "figure",
+      "note": "Figure 5, acquired and fingerprinted in wave 13; caption read, not inspected as an image.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8231639.1/cancers-13-02955-g005.jpg",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "c9f2e7df63fc4b7e3cb039e9d1e8788c2f7051e4c0650063bd28dacc6f728419"
+      }
+    },
+    {
+      "path": "files/figures/PMID34204789/cancers-13-02955-g006.jpg",
+      "sha256": "4b0b1d4636d4fd459d94d2fc4d6437884a8e1bee5f8e45d17876ee542ca40ffe",
+      "kind": "figure",
+      "note": "Figure 6, acquired and fingerprinted in wave 13; caption read, not inspected as an image.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8231639.1/cancers-13-02955-g006.jpg",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "4b0b1d4636d4fd459d94d2fc4d6437884a8e1bee5f8e45d17876ee542ca40ffe"
+      }
+    },
+    {
+      "path": "files/figures/PMID34204789/cancers-13-02955-g007.jpg",
+      "sha256": "76709ec09e8b19f158566bfd7ba9aa882728fb254ada3a45c907c0d82297c7fc",
+      "kind": "figure",
+      "note": "Figure 7, acquired and fingerprinted in wave 13; caption read, not inspected as an image.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8231639.1/cancers-13-02955-g007.jpg",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "76709ec09e8b19f158566bfd7ba9aa882728fb254ada3a45c907c0d82297c7fc"
+      }
+    },
+    {
+      "path": "files/figures/PMID34204789/cancers-13-02955-g008.jpg",
+      "sha256": "442cebcf3bf38f2302c6c0ec1807753372bfad33e1450df846d99be55c12534e",
+      "kind": "figure",
+      "note": "Figure 8, inspected as an image in wave 13.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8231639.1/cancers-13-02955-g008.jpg",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "442cebcf3bf38f2302c6c0ec1807753372bfad33e1450df846d99be55c12534e"
+      }
+    },
+    {
+      "path": "files/figures/PMID34204789/cancers-13-02955-g009.jpg",
+      "sha256": "fa26f9a2218c72f8efa92fc1dd821071b0cb1956273855c121c83a2492d8ca0e",
+      "kind": "figure",
+      "note": "Figure 9, inspected as an image in wave 13.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8231639.1/cancers-13-02955-g009.jpg",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "fa26f9a2218c72f8efa92fc1dd821071b0cb1956273855c121c83a2492d8ca0e"
+      }
+    },
+    {
+      "path": "files/figures/PMID34204789/cancers-13-02955-g010.jpg",
+      "sha256": "51b61d0a13793b42e74e1c247d30e13c8a8785b7cbfb297e127a639e271e357b",
+      "kind": "figure",
+      "note": "Figure 10, acquired and fingerprinted in wave 13; caption read, not inspected as an image.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8231639.1/cancers-13-02955-g010.jpg",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "51b61d0a13793b42e74e1c247d30e13c8a8785b7cbfb297e127a639e271e357b"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID34204789_assets/cancers-13-02955-s001.zip",
+      "sha256": "ed98e39d04d5bd898eca36078538c6b8f0bd5b4b6c450f07d7d9eb1918601c60",
+      "kind": "supplement_binary",
+      "note": "MDPI supplementary ZIP: Figure S1.tiff, Figure S2.tiff, Table S1.pdf, Supplementary_File_S1.xlsx, Supplementary_File_S2.xlsx.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8231639.1/cancers-13-02955-s001.zip",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "ed98e39d04d5bd898eca36078538c6b8f0bd5b4b6c450f07d7d9eb1918601c60"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID34204789_assets/s001/Table S1.pdf",
+      "sha256": "e17b236fd851dd8d7cd7b138d4a71aa31722600d3b518c775db61b3db7c771fd",
+      "kind": "supplement_binary",
+      "note": "Table S1, a literature summary of the top genes' roles in glioma and cytoskeleton; extracted from the ZIP.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID34204789_assets/cancers-13-02955-s001.zip",
+        "extractor": {
+          "name": "python3 zipfile.extractall",
+          "version": "stdlib",
+          "call": "zipfile.ZipFile(zip).extractall('s001')",
+          "join": ""
+        },
+        "acquired_on": "2026-10-04"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID34204789_assets/s001/Table_S1_pdftotext.txt",
+      "sha256": "dca778c0d914a92d755b2ab5964c752c631aa3325e4a4542ab7f27912aaf16da",
+      "kind": "supplement_text",
+      "note": "Derived text layer of Table S1.pdf. Lossy: multi-line cells interleave across columns.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID34204789_assets/s001/Table S1.pdf",
+        "extractor": {
+          "name": "pdftotext (poppler)",
+          "version": "24.02.0",
+          "call": "pdftotext -layout -nopgbrk 'Table S1.pdf' Table_S1_pdftotext.txt",
+          "join": "\n"
+        },
+        "acquired_on": "2026-10-04"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID34204789_assets/s001/Supplementary_File_S1.xlsx",
+      "sha256": "1780befceee1f19874c89d93bdb00d899f94cbf7359965d48e90528e37113f7c",
+      "kind": "supplement_binary",
+      "note": "Supplementary File S1: gene sets from the enrichment analysis (gene-symbol lists per MSigDB collection, one column per set). Read cell-wise for WWOX, PLEK2, RRM2, GCSH: membership only, no values.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID34204789_assets/cancers-13-02955-s001.zip",
+        "extractor": {
+          "name": "python3 zipfile.extractall",
+          "version": "stdlib",
+          "call": "zipfile.ZipFile(zip).extractall('s001')",
+          "join": ""
+        },
+        "acquired_on": "2026-10-04"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID34204789_assets/s001/Supplementary_File_S2.xlsx",
+      "sha256": "663ad1e30a775cc4712abfa04c1f6220995150fc9c3340c81bbb28500ec5f951",
+      "kind": "supplement_binary",
+      "note": "Supplementary File S2: Monocle3 module membership (gene symbols in seven module columns). Read cell-wise: WWOX, PLEK2, RRM2 and GCSH all sit in module 1; membership only, no values.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID34204789_assets/cancers-13-02955-s001.zip",
+        "extractor": {
+          "name": "python3 zipfile.extractall",
+          "version": "stdlib",
+          "call": "zipfile.ZipFile(zip).extractall('s001')",
+          "join": ""
+        },
+        "acquired_on": "2026-10-04"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID34204789_assets/s001/Figure S1.tiff",
+      "sha256": "32e1e3a916c30df1acdb821c50e2795d1a5dc1ccdee46e6a2d65cef1d75687e3",
+      "kind": "supplement_binary",
+      "note": "Figure S1 (residual global profiling by clinical feature). Caption read; the TIFF was not rendered (no imaging library on this host).",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID34204789_assets/cancers-13-02955-s001.zip",
+        "extractor": {
+          "name": "python3 zipfile.extractall",
+          "version": "stdlib",
+          "call": "zipfile.ZipFile(zip).extractall('s001')",
+          "join": ""
+        },
+        "acquired_on": "2026-10-04"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID34204789_assets/s001/Figure S2.tiff",
+      "sha256": "4a4885a89914d9ea7afc46c6598d45331850ac620aca0ff34414248123903b8c",
+      "kind": "supplement_binary",
+      "note": "Figure S2 (UMAP expression of the remaining nine genes). Caption read; the TIFF was not rendered.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID34204789_assets/cancers-13-02955-s001.zip",
+        "extractor": {
+          "name": "python3 zipfile.extractall",
+          "version": "stdlib",
+          "call": "zipfile.ZipFile(zip).extractall('s001')",
+          "join": ""
+        },
+        "acquired_on": "2026-10-04"
+      }
     }
   ],
   "verbatim_locators": {
@@ -144,7 +411,56 @@
         "artifact": "files/fulltext/PMID34204789_Kaluzinska2021_PMC.xml",
         "anchor": "Conclusions, penultimate sentence",
         "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The triad was chosen on four criteria at once, not ranked by correlation with WWOX. Table 3 (read cell-wise) gives GCSH R = 0.43, PLEK2 R = −0.44 and RRM2 R = −0.42 against WWOX, while three other top genes correlate more strongly: RNF141 R = 0.58, COL3A1 R = −0.51 and RXRG R = 0.45. The triad's correlations are mid-ranked, not the strongest.",
+        "snippet": "The selection of three the most relevant genes was based on their predictive value (AUC), effect on survival (DFS), correlation with WWOX, and transparency of expression difference across UMAP dimensions.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID34204789_Kaluzinska2021_PMC.xml",
+        "anchor": "Results, section on PLEK2, RRM2 and GCSH; Table 3 read cell by cell from the table markup",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — tested DIS-026's 'ranked by Spearman correlation with WWOX transcript abundance'"
+      },
+      {
+        "proposition": "Figure 8's 'spatial expression' is a UMAP embedding of bulk tumour samples coloured by log10 expression, not tissue-spatial data and not protein: each dot is a sample.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 8, four UMAP scatter panels (WWOX, PLEK2, GCSH, RRM2), axes UMAP 1 and UMAP 2, colour bar log10(Expression).",
+        "surface": "figure",
+        "artifact": "files/figures/PMID34204789/cancers-13-02955-g008.jpg",
+        "anchor": "Figure 8, all four panels; native JPEG",
+        "panel_text_relation": "panel_only",
+        "found_or_sought": "sought — checked whether 'spatial expression' was a tissue or protein measurement"
+      },
+      {
+        "proposition": "Figure 9 correlates the three genes with each other (PLEK2 vs RRM2 R = 0.62; PLEK2 vs GCSH R = −0.32; GCSH vs RRM2 R = −0.23) and shows confounder-adjusted survival; none of its six panels involves WWOX.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 9 A-C, scatter plots of log2 TPM with R and p printed; D-F, confounder-adjusted survival curves with HR(high) 1.54 (RRM2), 1.76 (PLEK2), 0.65 (GCSH).",
+        "surface": "figure",
+        "artifact": "files/figures/PMID34204789/cancers-13-02955-g009.jpg",
+        "anchor": "Figure 9, all six panels; native JPEG",
+        "panel_text_relation": "panel_only",
+        "found_or_sought": "sought — looked for a WWOX-dependence test in the triad's own figure"
+      },
+      {
+        "proposition": "FIND-X: there is no perturbation and no protein measurement on any surface read. Searched: the body by term (siRNA, shRNA, knockdown, silencing, overexpress, transfect, rescue, western, immunohistochemistry, Protein Atlas, protein level, CRISPR — the only hits are in background prose and the reference list); all ten figure captions, with Figures 8 and 9 as images; Tables 1-3 cell-wise; Table S1 (a literature table that never names WWOX); Supplementary Files S1 and S2 (gene-membership lists). Not rendered: the Figure S1 and S2 TIFFs (captions read).",
+        "snippet": "Table S1. Role of the top genes in glioma and cytoskeleton",
+        "surface": "supplement",
+        "artifact": "files/fulltext/PMID34204789_assets/s001/Table_S1_pdftotext.txt",
+        "anchor": "Table S1, title line; FIND-X enumeration over every surface",
+        "found_or_sought": "sought — FIND-X for a dependence test, which would reopen DIS-026",
+        "panel_text_relation": "text_only"
       }
     ]
-  }
+  },
+  "reading_history": [
+    {
+      "receipt": "FTR-20261004-34204789-02",
+      "reader": "scientist (Scientist C), intake wave 13 2026-10-04",
+      "context_policy": "QUESTION_DRIVEN",
+      "what_changed": "Declared ten figure JPEGs, the supplementary ZIP and its members (Table S1 with a derived text layer, Files S1-S2, Figure S1-S2 TIFFs); appended four entries (triad selection criteria with Table 3 read cell-wise, Figures 8 and 9 as panels, the FIND-X enumeration). DIS-026's negative survives. No earlier entry altered; the manifest receipt field stays on the producing reading.",
+      "outputs": [
+        "disease-models/wwox/research/fulltext_dossiers/PMID34204789.md",
+        "disease-models/wwox/research/intake_wave_20261004w13_C.md",
+        "disease-models/wwox/research/commit_candidates/CC-20261004W13-C-TRIAD-SELECTION-01.md"
+      ]
+    }
+  ]
 }

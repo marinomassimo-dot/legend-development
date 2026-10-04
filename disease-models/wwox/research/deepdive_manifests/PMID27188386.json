@@ -166,6 +166,23 @@
     "result_sha256": "d33c983b61eb2e27d6d6898f3a18bd62f16cdeef6c9194a93a2d47e2f95e8816"
    },
    "sha256": "d33c983b61eb2e27d6d6898f3a18bd62f16cdeef6c9194a93a2d47e2f95e8816"
+  },
+  {
+   "path": "files/fulltext/PMID27188386_Shinde2016_supplement/wwox_probe_blockmap.txt",
+   "sha256": "da4ec755209d8b65a91dfbd86cc3ac1fd9b84c0c12f5b007dcb18d47ab31d65e",
+   "kind": "supplement_text",
+   "note": "Systematic column-block map of Supplementary Table 3: every cell equal to one of the five WWOX Affymetrix probe set ids, joined to its compound block (row 4), its test system (row 2) and the fold-change and p-value cells immediately to its right. Seven hits, exhaustive over the sheet. The extractor copy is stored beside it.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID27188386_Shinde2016_supplement/204_2016_1741_MOESM2_ESM.xlsx",
+    "extractor": {
+     "name": "wwox_probe_blockmap_extractor.py (stdlib zipfile + ElementTree; copy stored beside the output)",
+     "version": "copy stored beside the output",
+     "call": "python3 wwox_probe_blockmap_extractor.py > wwox_probe_blockmap.txt",
+     "join": "\n"
+    },
+    "acquired_on": "2026-10-04"
+   }
   }
  ],
  "verbatim_locators": {
@@ -258,9 +275,31 @@
     "surface": "supplement",
     "artifact": "files/fulltext/PMID27188386_Shinde2016_supplement/204_2016_1741_MOESM2_ESM_xlsxdump.txt",
     "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Exhaustive scan of Supplementary Table 3 for the five WWOX probe set ids: seven hits, every one POSITIVE. In the VPA blocks, 219077_s_at is up 2.13-fold in UKK (p = 5.4e-16) and 223868_s_at is up 1.68-fold in UKN1 (p = 8.5e-5). The other five hits are other HDAC inhibitors: Entinostat (1.74 and 1.56 in UKK, 1.51 and 1.51 in UKN1) and SAHA (1.53 in UKK). No WWOX probe set appears with a negative fold change in any compound block of this sheet, and none appears in a mercurial block.",
+    "snippet": "UKK    VPA (3316)         probe=219077_s_at  fold=2.1265200000000002 p=5.3745300000000004E-16  [S553]",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID27188386_Shinde2016_supplement/wwox_probe_blockmap.txt",
+    "anchor": "Supplementary Table 3, column block S-U (UKK VPA), row 553; derived by mapping every probe-id cell to its compound header",
+    "found_or_sought": "sought — FIND-X: the direction of the valproate effect on WWOX, re-measured on the restored bytes",
+    "panel_text_relation": "text_only"
    }
   ],
   "source_fulltext_indexed": true,
   "source_fulltext_indexed_evidence": "Europe PMC REST PMC5306084/fullTextXML returned HTTP 200 with a full JATS body on 2026-10-04; the artefact declared is that response."
- }
+ },
+ "reading_history": [
+  {
+   "receipt": "FTR-20261004-27188386-02",
+   "reader": "scientist (Scientist C), intake wave 13 2026-10-04",
+   "context_policy": "QUESTION_DRIVEN",
+   "what_changed": "The three absent supplementary artefacts were restored by exact SHA-256 match from a peer worktree (evidence_presence.py --search/--restore); this manifest's artefacts are now 5/5 present and matching. Added an exhaustive WWOX probe-set block map of Supplementary Table 3 as a declared supplement_text with its extractor, and two entries: seven hits all positive (VPA +2.13 in UKK, +1.68 in UKN1), and the fact that Supplementary Table 7 carries no sign. No earlier entry altered; the manifest receipt field stays on the producing reading.",
+   "outputs": [
+    "disease-models/wwox/research/fulltext_dossiers/PMID27188386.md",
+    "disease-models/wwox/research/intake_wave_20261004w13_C.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261004W13-C-VPA-SURFACE-01.md"
+   ]
+  }
+ ]
 }
