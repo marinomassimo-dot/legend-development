@@ -370,3 +370,67 @@ Every measurement in this wave comes from a **constitutive null** (organoid KO, 
 P47T ≠ Q230P ≠ G372R ≠ A141T ≠ P252A; an acceptor allele is not a donor allele; a heterozygote is
 neither a demonstrated negative nor a positive for haploinsufficiency. Nothing here is medical
 advice.
+
+---
+
+## 8 · Receipts, candidates, and what the integrator must do
+
+**Receipts prepared, not recorded** (one per paper, in
+`scratchpad/receipts_pending_w12/`, each also copied to
+`~/legend-receipts-backup-20261004/receipts_pending_w12/`). All six were dry-recorded **in event
+order** onto throwaway copies of the ledger and of the state manifest taken at current `main`; all
+six were accepted, the copy growing from 440 to 446 lines, and the real ledger and manifest were
+never touched.
+
+| file | event id | prior receipt | depth |
+|---|---|---|---|
+| `sciC_34268881_1.json` | `FTR-20261004-34268881-07` | `FTR-20261003-34268881-06` | partial |
+| `sciC_40524961_1.json` | `FTR-20261004-40524961-02` | `FTR-20261003-40524961-01` | partial |
+| `sciC_41124647_1.json` | `FTR-20261004-41124647-03` | `FTR-20261003-41124647-02` | partial |
+| `sciC_33195192_1.json` | `FTR-20261004-33195192-02` | `FTR-20261002-33195192-01` | partial |
+| `sciC_37781246_1.json` | `FTR-20261004-37781246-02` | `FTR-20261002-37781246-01` | partial |
+| `sciC_41345172_1.json` | `FTR-20261004-41345172-03` | `FTR-20261004-41345172-02` | partial |
+
+Every receipt carries `reread_reason: inadequate_prior_coverage`. Each manifest's `receipt` field was
+**left on the reading that produced it**; the new event ids appear only in `reading_history`, so
+`test_manifest_receipt_provenance` stays green (verified: 13 tests OK).
+
+**Candidates** — all five target research-layer or non-baseline records except the first:
+
+| id | target | class |
+|---|---|---|
+| `CC-20261004W12-C-STEINBERG-ASTRO-01` | CLAIM 002 + CLAIM 005 (both `consolidated baseline`) | **MAJOR** |
+| `CC-20261004W12-C-WNT-DIRECTION-01` | DL-MOL-003 (two ops) | MINOR |
+| `CC-20261004W12-C-SDR-ABUNDANCE-01` | DL-BIO-001 | MINOR |
+| `CC-20261004W12-C-GBM-DOSE-UNPRINTED-01` | CLAIM 011 (`flagged for review`) | MINOR |
+| `CC-20261004W12-C-CNV-CONTEXT-01` | DIS-036 | MINOR |
+
+**No registry records are owed.** This is a re-read wave: all six PMIDs are already registered
+(34268881 = PAPER 039 / LIT-0365; 41345172 = PAPER 209 / LIT-0501; the other four verified through
+`paper_packet.py`). No `CC-…-REGISTRY-01` is therefore produced, and none should be expected.
+
+## 9 · Acquisition, and one halt
+
+Four of the six papers owed surfaces that **were not on disk at all**. Every one was closed free and
+lawfully through the **Europe PMC `supplementaryFiles` archive** (`…/rest/PMC<id>/supplementaryFiles`),
+which returned the complete figure and supplement package in each case; the direct
+`europepmc.org/articles/<pmcid>/bin/<file>` and `ncbi.nlm.nih.gov/pmc/articles/<pmcid>/bin/<file>`
+image paths both returned HTML and were discarded. No spend, no author contact. In all three cases
+where a file was already held, the archive returned it **byte-equal**, which is what licensed
+trusting the rest of each package.
+
+🔴 **One halt, recorded as the brief requires.** A model safety classifier stopped the first pass
+over the **peer-review file** of PMID 34268881 (`EMMM-13-e13610-s007.pdf`, on disk). The passage was
+not re-attempted in other words, nothing in this wave rests on it, and it is marked `not_read` for
+this reading. It is **not an outstanding debt**: an earlier reading already covered that file, and
+its content is in the paper's dossier. A second, shorter halt interrupted one long file write; the
+file was re-written in small pieces, which is the brief's own mitigation.
+
+## 10 · What the brief got wrong
+
+One premise of the selection row for PMID 34268881: it names **CLAIM 005** as the
+`consolidated baseline` claim that paper gates. CLAIM 005's own measurements are murine (PV, NPY and
+IBA1/GFAP in a systemic Wwox-KO), its `Source` is that mouse paper, and PMID 34268881 enters it only
+as one `Unclear` row of a seizure-onset-versus-astrocyte table. The baseline claim this paper
+actually founds is **CLAIM 002**. Both were read before the candidates were classed, and the MAJOR
+candidate targets both records for different reasons.
