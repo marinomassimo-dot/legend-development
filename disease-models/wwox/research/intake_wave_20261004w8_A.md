@@ -63,3 +63,31 @@ response is byte-identical (SHA-256) to the copy the Orchestrator had staged, an
   (Q230P missense; splice-site alleles). `p.(Thr12Arg)` is an exon-1 missense near the N-terminus; the SV is
   an exon-5 inversion with flanking intronic deletions. **No transfer.**
 - References: 74; **zero** WWOX gene-direct references (earned null for multihop).
+
+## A2 · PMID 37946251 (Pagnamenta 2023) — first pass (written before any registry comparison)
+
+- 122-family clinical WGS cohort (300 genomes). WWOX is one of seven structural-variant cases (Table 1, a JPEG
+  table; read as an image and cell-wise from Additional file 3 Table S7).
+- Genotype class: **in-frame 219 kb deletion of exons 6–8** (`chr16:g.78291861_78511176del`, GRCh38) *in trans*
+  with **`c.705dup p.(His236fs)`** (exon 7). The frameshift lies inside the deleted interval, and Table S7 calls it
+  `hom` — a hemizygous call over the deletion, which is what places the two on different chromosomes; Table S7
+  lists one sequenced sample for the case.
+- Phenotype band: "Severe Epileptic Encephalopathy" only; no narrative.
+- **Measured:** DNA only — the deletion was validated by "PCR and Sanger sequencing" (Table 1).
+- **Predicted / annotated only:** "in-frame", "loss of 180 amino acids including the mitochondrial targeting
+  sequence" — derived from coordinates; ACMG codes `PVS1, PM2, PM3` applied to both alleles, including PVS1 to an
+  in-frame deletion. **No RNA, no protein, no patient cells.**
+- **Patient counted once — the paper says so itself:** Table 1 "Reference to Case": "Reported as Patient 11
+  (Table S1) in case series in Piard et al [97]" (ref 97 = Piard 2019, PMID 30356099). The held Piard 2019
+  Supplementary Table 1 (`41436_2018_339_MOESM1_ESM.xlsx`, read cell-wise) gives Patient 11 as
+  `c.[517_1056del];[705dupG]`, `p.[His173_Met352del];[His236Alafs*34]`, under a row header that reads "Mutation at
+  the protein level (not based on experimental evidence)". **Same patient, same genotype: this is not an
+  independent observation.**
+- The selection note's premise "a structural allele class the registry does not hold" is therefore not a new
+  allele class for LEGEND's corpus: the exon 6–8 in-frame deletion appears in at least four Piard 2019 patients
+  (three deletions, one duplication of `c.517_1056`). Whether the *registry* names it is a separate question
+  (theme queries `517_1056`, `His173_Met352`, `705dup`: no record).
+- "Missed by prior array standard of care" is not what the WWOX row says: its reason is "Gene not incorporated
+  into validated panel test at the time of referral. Deletion should be detectable by array."
+- Class transfer: an in-frame multi-exon deletion and a frameshift; neither is the reference genotype's class.
+  **No transfer.**
