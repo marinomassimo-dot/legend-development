@@ -1,234 +1,466 @@
 {
- "schema_version": 2,
- "pmid": "42136830",
- "doi": "10.3389/fmed.2026.1819594",
- "receipt": "FTR-20261004-42136830-01",
- "landing": [
-  "FTR-20261004-42136830-01",
-  "disease-models/wwox/research/fulltext_dossiers/PMID42136830.md",
-  "disease-models/wwox/research/intake_wave_20261004w8_B.md"
- ],
- "skills_considered": [
-  {
-   "skill": "legend-deepdive",
-   "used": false,
-   "reason": "Run inline. An off-gene route record read only for the transferable question."
-  },
-  {
-   "skill": "find-fulltext",
-   "used": false,
-   "reason": "Europe PMC fullTextXML returned the body on the first request (HTTP 200, 100288 bytes)."
-  },
-  {
-   "skill": "legend-study-intake-triage",
-   "used": false,
-   "reason": "paper_packet.py reported no manifest, no receipt and no registry identity: a first reading."
-  },
-  {
-   "skill": "legend-safety-triage",
-   "used": false,
-   "reason": "Not applicable: this is a vector-genome biodistribution report with no compound and, as the dossier records, no toxicity arm at all."
-  }
- ],
- "group_assessment": {
-  "performed": true,
-  "total_publications": 350,
-  "publications_on_gene": 0,
-  "counts_measured": "PubMed esearch 2026-10-04: 'Gray SJ[au]' 350; 'Gray SJ[au] AND WWOX' 0. Gray SJ is the senior academic author and the only author whose surname-initial form is specific enough to count; the last author's surname-initial form returned 634 records, an ambiguous-name result that is NOT reported as this group's output.",
-  "research_type": "mixed",
-  "is_primary_group_for_disease": false,
-  "is_primary_group_for_gene": false,
-  "weighting": "An industry dataset. Eight of the authors are employees or contractors of the sponsor and one declares consulting income and inventor royalties from it; the four vectors analysed are that sponsor's clinical candidates and the paper closes by citing early results from the sponsor's own first-in-human trials. This is a declared commercial interest in the conclusion that the lumbar intrathecal route works. The measurements are nonetheless real animal measurements and are weighted as such; the framing is read with the interest in view, which is also why the authors' own stated limitations are given primacy below."
- },
- "field_density": {
-  "wwox_directed": false,
-  "queries": [
-   {
-    "query": "occurrences of WWOX or Wwox in the persisted JATS body",
-    "route": "local count over files/fulltext/PMID42136830_Haque2026_PMC.xml",
-    "count": 0
-   }
+  "schema_version": 2,
+  "pmid": "42136830",
+  "doi": "10.3389/fmed.2026.1819594",
+  "receipt": "FTR-20261004-42136830-01",
+  "landing": [
+    "FTR-20261004-42136830-01",
+    "disease-models/wwox/research/fulltext_dossiers/PMID42136830.md",
+    "disease-models/wwox/research/intake_wave_20261004w8_B.md"
   ],
-  "note": "Zero. An earned null for the gene. Read only for the route question, with the transfer limit stated on every datum."
- },
- "multihop": {
-  "performed": true,
-  "references_enumerated": 26,
-  "gene_direct_refs_in_source": [],
-  "enumeration_method": "All 26 references parsed from the persisted JATS and tested for the strings WWOX and Wwox: none matched.",
-  "resolved": [],
-  "queued": [],
-  "note": "No gene-direct reference exists, so there is no hop to follow and nothing is queued. No gap."
- },
- "corpus_crossquery": {
-  "performed": true,
-  "query": "Does the shared root files/ tree already hold any artefact for PMID 42136830?",
-  "hits": 0,
-  "finding": "No. paper_packet.py reported 0 artefacts before acquisition."
- },
- "retraction_check": {
-  "performed": true,
-  "at": "2026-10-04",
-  "route": "PubMed esummary for 42136830",
-  "result": "pubtype ['Journal Article']; the CommentsCorrections reference list is empty. No retraction, no expression of concern, no erratum.",
-  "hold": false,
-  "dependencies": {
-   "flagged": [],
-   "noted": [],
-   "paper_verdict": "SCREENED_CLEAN",
-   "reference_source": "network",
-   "references_declared": 26,
-   "references_screened": 24,
-   "references_with_doi": 24,
-   "schema": "retraction_check.dependencies/1",
-   "screened": true,
-   "snapshot": {
-    "date": "2026-09-10",
-    "days_since_fetch": 24,
-    "rows": 72476,
-    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
-   },
-   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
-   "unscreenable": {
-    "UNSCREENABLE_NO_DOI": 2
-   },
-   "citing_relation": "No dependency was flagged, so no citing_relation is owed. The references with no DOI support no statement this reading carries."
+  "skills_considered": [
+    {
+      "skill": "legend-deepdive",
+      "used": false,
+      "reason": "Run inline. An off-gene route record read only for the transferable question."
+    },
+    {
+      "skill": "find-fulltext",
+      "used": false,
+      "reason": "Europe PMC fullTextXML returned the body on the first request (HTTP 200, 100288 bytes)."
+    },
+    {
+      "skill": "legend-study-intake-triage",
+      "used": false,
+      "reason": "paper_packet.py reported no manifest, no receipt and no registry identity: a first reading."
+    },
+    {
+      "skill": "legend-safety-triage",
+      "used": false,
+      "reason": "Not applicable: this is a vector-genome biodistribution report with no compound and, as the dossier records, no toxicity arm at all."
+    }
+  ],
+  "group_assessment": {
+    "performed": true,
+    "total_publications": 350,
+    "publications_on_gene": 0,
+    "counts_measured": "PubMed esearch 2026-10-04: 'Gray SJ[au]' 350; 'Gray SJ[au] AND WWOX' 0. Gray SJ is the senior academic author and the only author whose surname-initial form is specific enough to count; the last author's surname-initial form returned 634 records, an ambiguous-name result that is NOT reported as this group's output.",
+    "research_type": "mixed",
+    "is_primary_group_for_disease": false,
+    "is_primary_group_for_gene": false,
+    "weighting": "An industry dataset. Eight of the authors are employees or contractors of the sponsor and one declares consulting income and inventor royalties from it; the four vectors analysed are that sponsor's clinical candidates and the paper closes by citing early results from the sponsor's own first-in-human trials. This is a declared commercial interest in the conclusion that the lumbar intrathecal route works. The measurements are nonetheless real animal measurements and are weighted as such; the framing is read with the interest in view, which is also why the authors' own stated limitations are given primacy below."
+  },
+  "field_density": {
+    "wwox_directed": false,
+    "queries": [
+      {
+        "query": "occurrences of WWOX or Wwox in the persisted JATS body",
+        "route": "local count over files/fulltext/PMID42136830_Haque2026_PMC.xml",
+        "count": 0
+      }
+    ],
+    "note": "Zero. An earned null for the gene. Read only for the route question, with the transfer limit stated on every datum."
+  },
+  "multihop": {
+    "performed": true,
+    "references_enumerated": 26,
+    "gene_direct_refs_in_source": [],
+    "enumeration_method": "All 26 references parsed from the persisted JATS and tested for the strings WWOX and Wwox: none matched.",
+    "resolved": [],
+    "queued": [],
+    "note": "No gene-direct reference exists, so there is no hop to follow and nothing is queued. No gap."
+  },
+  "corpus_crossquery": {
+    "performed": true,
+    "query": "Does the shared root files/ tree already hold any artefact for PMID 42136830?",
+    "hits": 0,
+    "finding": "No. paper_packet.py reported 0 artefacts before acquisition."
+  },
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-10-04",
+    "route": "PubMed esummary for 42136830",
+    "result": "pubtype ['Journal Article']; the CommentsCorrections reference list is empty. No retraction, no expression of concern, no erratum.",
+    "hold": false,
+    "dependencies": {
+      "flagged": [],
+      "noted": [],
+      "paper_verdict": "SCREENED_CLEAN",
+      "reference_source": "network",
+      "references_declared": 26,
+      "references_screened": 24,
+      "references_with_doi": 24,
+      "schema": "retraction_check.dependencies/1",
+      "screened": true,
+      "snapshot": {
+        "date": "2026-09-10",
+        "days_since_fetch": 24,
+        "rows": 72476,
+        "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+      },
+      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+      "unscreenable": {
+        "UNSCREENABLE_NO_DOI": 2
+      },
+      "citing_relation": "No dependency was flagged, so no citing_relation is owed. The references with no DOI support no statement this reading carries."
+    }
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID42136830_Haque2026_PMC.xml",
+      "sha256": "1fbaa5067ff121b480fd7dbba15c2627870b33bd8b1bf0a7bc481ff5423337c4",
+      "kind": "article_text",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13167494/fullTextXML",
+        "http_method": "GET",
+        "tier": "europepmc_rest_fulltextxml",
+        "user_agent_policy": "identified",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "1fbaa5067ff121b480fd7dbba15c2627870b33bd8b1bf0a7bc481ff5423337c4"
+      }
+    },
+    {
+      "path": "files/supplement/PMID42136830/fmed-13-1819594-g001.jpg",
+      "sha256": "7d2768216a7485338bffc1f78bb3583a6a33368ca324b9c949b3c07ba8a1b421",
+      "kind": "figure",
+      "note": "Figure 1 (four qPCR panels A-D, TSHA-101/102/105/120) - publisher full-size JPEG, inspected as rendered pixels.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.frontiersin.org/files/Articles/1819594/fmed-13-1819594-HTML/image_m/fmed-13-1819594-g001.jpg",
+        "http_method": "GET",
+        "tier": "publisher_static_or_pmc_cdn",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "7d2768216a7485338bffc1f78bb3583a6a33368ca324b9c949b3c07ba8a1b421",
+        "http_status": 200,
+        "bytes": 398002
+      }
+    },
+    {
+      "path": "files/supplement/PMID42136830/fmed-13-1819594-g002.jpg",
+      "sha256": "cf1be09a3fe2280cae9fd8da6cae5c7ff54130ecbe8dcb099f7d58eb94292f78",
+      "kind": "figure",
+      "note": "Figure 2 (TSHA-102 ICM, day 90) - publisher full-size JPEG, inspected as rendered pixels.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.frontiersin.org/files/Articles/1819594/fmed-13-1819594-HTML/image_m/fmed-13-1819594-g002.jpg",
+        "http_method": "GET",
+        "tier": "publisher_static_or_pmc_cdn",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "cf1be09a3fe2280cae9fd8da6cae5c7ff54130ecbe8dcb099f7d58eb94292f78",
+        "http_status": 200,
+        "bytes": 100707
+      }
+    },
+    {
+      "path": "files/supplement/PMID42136830/fmed-13-1819594-g003.jpg",
+      "sha256": "4a4a59a520bef50790fbbf965b0a1e66040762524de69de662f26fc4754f0085",
+      "kind": "figure",
+      "note": "Figure 3 (TSHA-105 IT vs TSHA-102 ICM, day 90) - publisher full-size JPEG, inspected as rendered pixels.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.frontiersin.org/files/Articles/1819594/fmed-13-1819594-HTML/image_m/fmed-13-1819594-g003.jpg",
+        "http_method": "GET",
+        "tier": "publisher_static_or_pmc_cdn",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "4a4a59a520bef50790fbbf965b0a1e66040762524de69de662f26fc4754f0085",
+        "http_status": 200,
+        "bytes": 120564
+      }
+    },
+    {
+      "path": "files/supplement/PMID42136830/fmed-13-1819594-g004.jpg",
+      "sha256": "0a4028d9f9145161c7d8287f4b58e69a6aab112ee4072f0c8e21bcec5cd2d87e",
+      "kind": "figure",
+      "note": "Figure 4 (mean brain vg/DG versus dose) - publisher full-size JPEG, inspected as rendered pixels.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.frontiersin.org/files/Articles/1819594/fmed-13-1819594-HTML/image_m/fmed-13-1819594-g004.jpg",
+        "http_method": "GET",
+        "tier": "publisher_static_or_pmc_cdn",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "0a4028d9f9145161c7d8287f4b58e69a6aab112ee4072f0c8e21bcec5cd2d87e",
+        "http_status": 200,
+        "bytes": 67131
+      }
+    },
+    {
+      "path": "files/supplement/PMID42136830/fmed-13-1819594-g005.jpg",
+      "sha256": "e62dcc708a28f8e9b9cbe81d1fbb7a2ddd994f99b01bc673fdbf24b681365d63",
+      "kind": "figure",
+      "note": "Figure 5 (mean brain vg/DG versus necropsy day) - publisher full-size JPEG, inspected as rendered pixels.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.frontiersin.org/files/Articles/1819594/fmed-13-1819594-HTML/image_m/fmed-13-1819594-g005.jpg",
+        "http_method": "GET",
+        "tier": "publisher_static_or_pmc_cdn",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "e62dcc708a28f8e9b9cbe81d1fbb7a2ddd994f99b01bc673fdbf24b681365d63",
+        "http_status": 200,
+        "bytes": 53486
+      }
+    },
+    {
+      "path": "files/supplement/PMID42136830/fmed-13-1819594-gr0001.jpg",
+      "sha256": "8c3ca3f4463184c68248d2e7e9dd01586d2e70e0144b95b6a757eb34b0f5b715",
+      "kind": "figure",
+      "note": "Graphical abstract raster, inspected as rendered pixels.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.frontiersin.org/files/Articles/1819594/fmed-13-1819594-HTML/image_m/fmed-13-1819594-gr0001.jpg",
+        "http_method": "GET",
+        "tier": "publisher_static_or_pmc_cdn",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "8c3ca3f4463184c68248d2e7e9dd01586d2e70e0144b95b6a757eb34b0f5b715",
+        "http_status": 200,
+        "bytes": 282756
+      }
+    },
+    {
+      "path": "files/supplement/PMID42136830/Image_1.TIF",
+      "sha256": "e085c06aa80d33a7119bf271f750ec244fef1dbf92ad1763635b0157259e10be",
+      "kind": "figure",
+      "note": "Supplementary Figure S1 (the only supplement the JATS lists): TIFF from the Europe PMC supplementaryFiles zip, 898x523; a two-panel ICM versus IT route schematic (rendered through ImageMagick for viewing).",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13167494/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "e085c06aa80d33a7119bf271f750ec244fef1dbf92ad1763635b0157259e10be",
+        "http_status": 200,
+        "bytes": 17760
+      }
+    },
+    {
+      "path": "files/supplement/PMID42136830/DataSheet_1_frontiers_endpoint.pdf",
+      "sha256": "8cca377fc9324fb02e2c26e863285c00e4c58c6569fa38f0db1bde2ebbc8b588",
+      "kind": "supplement_binary",
+      "note": "Five-page PDF of per-tissue vector-genome means, SD and animal numbers behind Figures 1-5, served by the publisher file endpoint under the name data-sheet_1; NOT listed in the PMC JATS (which lists only Supplementary Figure S1). Text layer read with pdftotext -layout.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.frontiersin.org/api/v4/articles/1819594/file/Image_1.TIF/1819594_data-sheet_1/1",
+        "http_method": "GET",
+        "tier": "publisher_file_endpoint",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "8cca377fc9324fb02e2c26e863285c00e4c58c6569fa38f0db1bde2ebbc8b588",
+        "http_status": 200,
+        "bytes": 75103
+      }
+    }
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC JATS body held locally and fingerprinted; the four in-text tables were flattened cell-wise (td and tr boundaries preserved). A provenance caution recorded during the read and carried into the dossier: the descriptive paragraphs that follow each figure caption in this JATS are publisher-generated alternative text produced with artificial intelligence, as the article's own Generative AI statement declares, so they are NOT author-attested and no number was taken from them.",
+    "abstract_anchoring_waived": "No locator is abstract-anchored. Every entry is a Methods specification, a Results number or an authors' stated limitation.",
+    "entries": [
+      {
+        "proposition": "The scale and the design: a retrospective pooling of separately conducted studies, not one controlled experiment.",
+        "snippet": "Five NHP studies included 71 cynomolgus macaques, of which 47 animals were treated with a single dose of TSHA-101, -102, -105, or -120 at varying doses (Table 1). Of these rAAV9-treated animals, 28 were analyzed for vector biodistribution (Table 2), along with 20 control animals treated with vehicle alone.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42136830_Haque2026_PMC.xml",
+        "anchor": "Results, opening paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "A control-sample contamination event is disclosed in the same sentence that asserts control cleanliness.",
+        "snippet": "None of the studies had control animals with quantifiable levels of rAAV9 vector genome, with the exception of the TSHA-120 study, in which some negative control samples showed low-level contamination.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42136830_Haque2026_PMC.xml",
+        "anchor": "Results, opening paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The headline number for the route: about one to four vector genomes per diploid genome in primate brain, and only at the higher doses.",
+        "snippet": "Mean level of rAAV9 DNA in the brain corresponded to 1 to 4 vg/DG at all doses ≥ 5.8 × 1013 vg/animal (HED: 5.0 × 1014 vg), with an apparent dose-dependence seen both in the Day 90 brain samples and the Day ≥180 brain samples (Figure 4).",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42136830_Haque2026_PMC.xml",
+        "anchor": "Results, 'Dose-dependence and temporal effects on rAAV9 levels in the brain'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Spinal cord receives roughly an order of magnitude more vector than brain by this route — the gradient a lumbar injection predicts.",
+        "snippet": "Biodistribution was also consistent across spinal cord samples, albeit at a higher level of ~8 × 105 vg/μg (5 vg/DG) (Figure 1A).",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42136830_Haque2026_PMC.xml",
+        "anchor": "Results, 'TSHA-101 CNS biodistribution at 30 days post-lumbar IT administration'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Cerebellum is the lowest brain region measured, by roughly five-fold against prefrontal cortex — a region-dependence that matters wherever a phenotype is cerebellar.",
+        "snippet": "Biodistribution was consistent across brain regions mean values ranging from ~2.5 × 104 vg/μg (0.16 vg/DG) in the cerebellum to ~1.3 × 105 vg/μg (0.8 vg/DG) in the prefrontal lobe.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42136830_Haque2026_PMC.xml",
+        "anchor": "Results, 'TSHA-101 CNS biodistribution at 30 days post-lumbar IT administration'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Dose scaling is sublinear: four times the input produced about two and a half times the brain vector genome level.",
+        "snippet": "the four-fold increase in input dose with TSHA-105 was associated with a ~2.5-fold increase in vector genome levels detected in brain tissues; this difference was seen at both necropsy time points",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42136830_Haque2026_PMC.xml",
+        "anchor": "Results, 'TSHA-105 at 90 and 180 days post-lumbar IT administration'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "At the low end there is no dose-response at all, over a 3.9-fold range, and the authors cannot explain it.",
+        "snippet": "at the lowest dose range studied (3 × 1012 to 1.2 × 1013 vg/animal for TSHA-120; a 3.9-fold input dose range), no consistent trend was observed in TSHA-120 DNA levels in the brain or spinal cord. In contrast with IT and ICM treatment at higher rAAV9 doses, the lack of dose-dependence in this study has not been explained but may reflect limited assay sensitivity.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42136830_Haque2026_PMC.xml",
+        "anchor": "Discussion, third paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Brain vector genome levels rose rather than decayed between one and six months, which is a statement about assay kinetics as much as about persistence.",
+        "snippet": "At a single lumbar IT dose level (5.8 × 1013 vg/animal; HED: 5.0 × 1014 vg), mean brain rAAV9 DNA appeared to increase linearly between Day 30 and Day 180 post-dosing (Figure 5).",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42136830_Haque2026_PMC.xml",
+        "anchor": "Results, 'Dose-dependence and temporal effects on rAAV9 levels in the brain'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THE HARD LIMIT THE WHOLE PAPER MUST BE READ UNDER: nothing here is expression, and the authors say so.",
+        "snippet": "Analysis was restricted to vector biodistribution, rather than gene or protein expression, because the vectors all differed in their promoter and other regulatory sequences, precluding any comparison across experiments.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42136830_Haque2026_PMC.xml",
+        "anchor": "Discussion, 'Strengths and limitations'",
+        "panel_text_relation": "text_confirmed_by_panel"
+      },
+      {
+        "proposition": "The authors forbid the inference a reader most wants to make: vector genomes per diploid genome is not a transduced-cell fraction, and the DNA may be neither intact nor nuclear.",
+        "snippet": "mean vg/DG must not be understood as an estimate of the proportion of transduced cells. Among other concerns, neuronal and non-neuronal cell-type differences may affect the efficiency of rAAV9 uptake, and rAAV9 DNA detection offers no assurance that the vector genome is fully intact or that it has been internalized into the cell and cell nucleus.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42136830_Haque2026_PMC.xml",
+        "anchor": "Discussion, 'Strengths and limitations'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The authors state the precision limit created by pooling separate protocols.",
+        "snippet": "The fact that these studies were conducted separately, according to different protocols, limits the precision of any quantitative claims that can be made for rAAV9 biodistribution from this data set",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42136830_Haque2026_PMC.xml",
+        "anchor": "Discussion, 'Strengths and limitations'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "A route-specific safety signal from another species, reported inside this paper: a cerebrospinal-fluid route that distributes similarly produced fatal transgene-directed immune encephalitis while a neighbouring route did not.",
+        "snippet": "the authors noted a stark difference between the ICM and ICV approaches with regard to safety; ICV-dosed dogs experienced a strong (and, in one case, fatal) encephalitis, apparently driven by T cells specific to the transgene product, but no such response was seen in ICM-treated animals. The relevance of the canine safety and biodistribution data to NHP and human GT is not certain.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42136830_Haque2026_PMC.xml",
+        "anchor": "Discussion, 'Strengths and limitations'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The practical argument for this route, which is the only clinical-deliverability claim the paper makes.",
+        "snippet": "Uniquely, it offers the possibility of outpatient treatment with no specialized surgical equipment. However, some studies have suggested the lumbar IT route leads to limited transduction of brain tissues (5, 14).",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42136830_Haque2026_PMC.xml",
+        "anchor": "Discussion, second paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Genome structure matters more than route for how much protein a given vector dose yields — an order of magnitude, stated by these authors from prior work and uncontrolled in this dataset.",
+        "snippet": "Use of scAAV9 vectors avoids the need for this rate-limiting step and is associated with greatly increased transduction efficiency— at least a 10-fold improvement in brain cell transduction and a corresponding increase in transgene expression, relative to ssAAV9 vectors (12, 13).",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42136830_Haque2026_PMC.xml",
+        "anchor": "Discussion, first paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The Methods state the regimen: no immunosuppression was used in the analysed animals, and four additional TSHA-101 animals treated with immunosuppressants are excluded from the analysis (Table 2 footnote b).",
+        "snippet": "No immunosuppression was used.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42136830_Haque2026_PMC.xml",
+        "anchor": "Materials and methods, dosing paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Table 2 footnote b: four additional TSHA-101 animals given immunosuppressants are not part of the analysis; their data are not shown anywhere in the paper.",
+        "snippet": "Four additional animals, treated with TSHA-101 along with immunosuppressants, are not included in this analysis.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42136830_Haque2026_PMC.xml",
+        "anchor": "Table 2, footnote b",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Pre-treatment AAV9 neutralising-antibody screen: animals with detectable titres (e.g. >= 1:10) were preferentially assigned to diluent-only treatment.",
+        "snippet": "Animals with detectable nAbs (e.g., titers ≥1:10) were preferentially chosen for diluent-only treatment",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42136830_Haque2026_PMC.xml",
+        "anchor": "Materials and methods, first paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "For TSHA-102 the authors say RNA expression was not evaluated because the transgene carries a microRNA-responsive element expected to repress expression in wild-type brain.",
+        "snippet": "Hence, RNA expression was not evaluated in this report.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42136830_Haque2026_PMC.xml",
+        "anchor": "Discussion, Strengths and limitations",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Figure 1 carries four qPCR panels; every y-axis is vg/ug DNA (left) and vg/DG (right); no RNA, protein, histology, clinical-pathology or safety axis exists on the figure; panel D legend prints a typographical \"Lose Dose\".",
+        "snippet": "[panel attestation - Fig. 1 raster inspected] Panels A-D: TSHA-101 5.8x10^13 day 30; TSHA-102 5.8x10^13 day 90 and 180 (frontal, parietal, three cord levels); TSHA-105 2.3x10^14 day 90 and 180; TSHA-120 3.0x10^12 and 1.16x10^13 at 52 weeks (15 brain blocks 1A-5C, three cord levels). All axes vg/ug DNA and vg/DG.",
+        "surface": "figure",
+        "artifact": "files/supplement/PMID42136830/fmed-13-1819594-g001.jpg",
+        "anchor": "Figure 1 panels A-D",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "Figures 2 and 3 are qPCR bar graphs (vg/ug DNA and vg/DG) of TSHA-102 ICM and TSHA-105 IT at 2.3x10^14 vg/animal on day 90; neither carries an expression axis.",
+        "snippet": "[panel attestation - Fig. 3 raster inspected] Black bars IT TSHA-105 and grey bars ICM TSHA-102, brain regions and cord levels, dashed reference lines; cerebellum lowest brain region in the IT arm; axes vg/ug DNA and vg/DG only.",
+        "surface": "figure",
+        "artifact": "files/supplement/PMID42136830/fmed-13-1819594-g003.jpg",
+        "anchor": "Figure 3",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "Figure 4 plots mean brain vg/DG against dose at day 90 and >= day 180; the high-dose error bar reaches the axis floor at day 90 and the y-axis is vector genome only.",
+        "snippet": "[panel attestation - Fig. 4 raster inspected] Mean brain rAAV9 DNA (vg/DG) 0 to 6 on y; dose 10^12 to 10^15 vg/animal on x; day-90 triangle near 2 at 2.3x10^14 with a bar spanning roughly 0 to 4.5 reading; day-180 circle near 3.5.",
+        "surface": "figure",
+        "artifact": "files/supplement/PMID42136830/fmed-13-1819594-g004.jpg",
+        "anchor": "Figure 4",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "Figure 5 draws one straight line through three points whose vector differs by point: day 30 is TSHA-101 (single-stranded), days 90 and 180 can only be the bold-marked TSHA-102 animals of Table 2 (an inference: the legend names no construct for them); the SD at days 90 and 180 is over six tissue samples, not animals.",
+        "snippet": "[panel attestation - Fig. 5 raster inspected] Three filled points (about day 30, 90, 180) at about 0.5, 0.9 and 1.9 vg/DG with a fitted line; x-axis necropsy days; legend: Day 90 and 180 points each the mean (SD) for six brain slices; Day 30 from 24 samples of four TSHA-101 animals.",
+        "surface": "figure",
+        "artifact": "files/supplement/PMID42136830/fmed-13-1819594-g005.jpg",
+        "anchor": "Figure 5 and legend",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "The graphical abstract states that tissue samples from 28 macaques were assessed by qPCR, whereas the opening Results sentence counts 47 treated animals; the two reconcile only through Table 2 bold-face (qPCR animals 4 + 6 + 3 + 7 + 8 = 28 of 47).",
+        "snippet": "[panel attestation - graphical abstract inspected] Right panel heading: Tissue samples from 28 macaques were taken from the brain and spinal cord and assessed via qPCR for vector biodistribution; left panel: rAAV9 vectors administered into 47 cynomolgus macaques via ICM or lumbar IT delivery.",
+        "surface": "figure",
+        "artifact": "files/supplement/PMID42136830/fmed-13-1819594-gr0001.jpg",
+        "anchor": "Graphical abstract",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "Table 2 marks the qPCR-examined animals only by bold type, which the JATS text layer drops: bold cells are TSHA-101 2M 2F; TSHA-102 IT 5.8x10^13 3F+3F; TSHA-102 ICM 3F; TSHA-105 2.3x10^14 2M2F+2M1F; TSHA-120 both doses 2M2F each; unbold are TSHA-102 IT 2.9x10^13 and 2.3x10^14 and TSHA-105 5.8x10^13.",
+        "snippet": "[table attestation - read cell-wise from the table markup, <bold> elements kept] bold: 2M, 2F | 3F, 3F | 3F | 2M, 2F, 2M, 1F | 2M, 2F, 2M, 2F; sum 4+6+3+7+8 = 28; unbold cells sum 6+6+7 = 19; 28+19 = 47 treated.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID42136830_Haque2026_PMC.xml",
+        "anchor": "Table 2, bold markup",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "The deposited data sheet lists per-tissue vg/ug DNA, SD and animal number for the same tissues as Figures 1-5 and carries nothing else (no RNA, protein, pathology, clinical chemistry).",
+        "snippet": "[spreadsheet-style attestation - five-page PDF text layer read] Blocks: 5.8E13 day 30 (n=4); 5.8E13 day 90 and 180 (n=3 each); 2.3E14 day 90; 2.3E14 day 90 and 180; 3E12 and 1.2E13 at 52 weeks (n=4). Columns: vg copies/ug DNA, SD, # animal no.",
+        "surface": "figure",
+        "artifact": "files/supplement/PMID42136830/DataSheet_1_frontiers_endpoint.pdf",
+        "anchor": "Data sheet, pages 1-5",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "The only supplement the JATS lists, Supplementary Figure S1, is a two-panel ICM versus IT route schematic with no data.",
+        "snippet": "[panel attestation - TIFF rendered] Two rounded boxes titled ICM Delivery and IT Delivery, a brain-and-syringe icon and a spine-and-syringe icon.",
+        "surface": "figure",
+        "artifact": "files/supplement/PMID42136830/Image_1.TIF",
+        "anchor": "Supplementary Figure S1",
+        "panel_text_relation": "panel_only"
+      }
+    ]
   }
- },
- "source_artifacts": [
-  {
-   "path": "files/fulltext/PMID42136830_Haque2026_PMC.xml",
-   "sha256": "1fbaa5067ff121b480fd7dbba15c2627870b33bd8b1bf0a7bc481ff5423337c4",
-   "kind": "article_text",
-   "acquisition_recipe": {
-    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13167494/fullTextXML",
-    "http_method": "GET",
-    "tier": "europepmc_rest_fulltextxml",
-    "user_agent_policy": "identified",
-    "acquired_on": "2026-10-04",
-    "derived": false,
-    "result_sha256": "1fbaa5067ff121b480fd7dbba15c2627870b33bd8b1bf0a7bc481ff5423337c4"
-   }
-  }
- ],
- "verbatim_locators": {
-  "waived": false,
-  "source_fulltext_indexed": true,
-  "source_fulltext_indexed_evidence": "Europe PMC JATS body held locally and fingerprinted; the four in-text tables were flattened cell-wise (td and tr boundaries preserved). A provenance caution recorded during the read and carried into the dossier: the descriptive paragraphs that follow each figure caption in this JATS are publisher-generated alternative text produced with artificial intelligence, as the article's own Generative AI statement declares, so they are NOT author-attested and no number was taken from them.",
-  "abstract_anchoring_waived": "No locator is abstract-anchored. Every entry is a Methods specification, a Results number or an authors' stated limitation.",
-  "entries": [
-   {
-    "proposition": "The scale and the design: a retrospective pooling of separately conducted studies, not one controlled experiment.",
-    "snippet": "Five NHP studies included 71 cynomolgus macaques, of which 47 animals were treated with a single dose of TSHA-101, -102, -105, or -120 at varying doses (Table 1). Of these rAAV9-treated animals, 28 were analyzed for vector biodistribution (Table 2), along with 20 control animals treated with vehicle alone.",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID42136830_Haque2026_PMC.xml",
-    "anchor": "Results, opening paragraph",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "A control-sample contamination event is disclosed in the same sentence that asserts control cleanliness.",
-    "snippet": "None of the studies had control animals with quantifiable levels of rAAV9 vector genome, with the exception of the TSHA-120 study, in which some negative control samples showed low-level contamination.",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID42136830_Haque2026_PMC.xml",
-    "anchor": "Results, opening paragraph",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "The headline number for the route: about one to four vector genomes per diploid genome in primate brain, and only at the higher doses.",
-    "snippet": "Mean level of rAAV9 DNA in the brain corresponded to 1 to 4 vg/DG at all doses ≥ 5.8 × 1013 vg/animal (HED: 5.0 × 1014 vg), with an apparent dose-dependence seen both in the Day 90 brain samples and the Day ≥180 brain samples (Figure 4).",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID42136830_Haque2026_PMC.xml",
-    "anchor": "Results, 'Dose-dependence and temporal effects on rAAV9 levels in the brain'",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "Spinal cord receives roughly an order of magnitude more vector than brain by this route — the gradient a lumbar injection predicts.",
-    "snippet": "Biodistribution was also consistent across spinal cord samples, albeit at a higher level of ~8 × 105 vg/μg (5 vg/DG) (Figure 1A).",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID42136830_Haque2026_PMC.xml",
-    "anchor": "Results, 'TSHA-101 CNS biodistribution at 30 days post-lumbar IT administration'",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "Cerebellum is the lowest brain region measured, by roughly five-fold against prefrontal cortex — a region-dependence that matters wherever a phenotype is cerebellar.",
-    "snippet": "Biodistribution was consistent across brain regions mean values ranging from ~2.5 × 104 vg/μg (0.16 vg/DG) in the cerebellum to ~1.3 × 105 vg/μg (0.8 vg/DG) in the prefrontal lobe.",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID42136830_Haque2026_PMC.xml",
-    "anchor": "Results, 'TSHA-101 CNS biodistribution at 30 days post-lumbar IT administration'",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "Dose scaling is sublinear: four times the input produced about two and a half times the brain vector genome level.",
-    "snippet": "the four-fold increase in input dose with TSHA-105 was associated with a ~2.5-fold increase in vector genome levels detected in brain tissues; this difference was seen at both necropsy time points",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID42136830_Haque2026_PMC.xml",
-    "anchor": "Results, 'TSHA-105 at 90 and 180 days post-lumbar IT administration'",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "At the low end there is no dose-response at all, over a 3.9-fold range, and the authors cannot explain it.",
-    "snippet": "at the lowest dose range studied (3 × 1012 to 1.2 × 1013 vg/animal for TSHA-120; a 3.9-fold input dose range), no consistent trend was observed in TSHA-120 DNA levels in the brain or spinal cord. In contrast with IT and ICM treatment at higher rAAV9 doses, the lack of dose-dependence in this study has not been explained but may reflect limited assay sensitivity.",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID42136830_Haque2026_PMC.xml",
-    "anchor": "Discussion, third paragraph",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "Brain vector genome levels rose rather than decayed between one and six months, which is a statement about assay kinetics as much as about persistence.",
-    "snippet": "At a single lumbar IT dose level (5.8 × 1013 vg/animal; HED: 5.0 × 1014 vg), mean brain rAAV9 DNA appeared to increase linearly between Day 30 and Day 180 post-dosing (Figure 5).",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID42136830_Haque2026_PMC.xml",
-    "anchor": "Results, 'Dose-dependence and temporal effects on rAAV9 levels in the brain'",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "THE HARD LIMIT THE WHOLE PAPER MUST BE READ UNDER: nothing here is expression, and the authors say so.",
-    "snippet": "Analysis was restricted to vector biodistribution, rather than gene or protein expression, because the vectors all differed in their promoter and other regulatory sequences, precluding any comparison across experiments.",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID42136830_Haque2026_PMC.xml",
-    "anchor": "Discussion, 'Strengths and limitations'",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "The authors forbid the inference a reader most wants to make: vector genomes per diploid genome is not a transduced-cell fraction, and the DNA may be neither intact nor nuclear.",
-    "snippet": "mean vg/DG must not be understood as an estimate of the proportion of transduced cells. Among other concerns, neuronal and non-neuronal cell-type differences may affect the efficiency of rAAV9 uptake, and rAAV9 DNA detection offers no assurance that the vector genome is fully intact or that it has been internalized into the cell and cell nucleus.",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID42136830_Haque2026_PMC.xml",
-    "anchor": "Discussion, 'Strengths and limitations'",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "The authors state the precision limit created by pooling separate protocols.",
-    "snippet": "The fact that these studies were conducted separately, according to different protocols, limits the precision of any quantitative claims that can be made for rAAV9 biodistribution from this data set",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID42136830_Haque2026_PMC.xml",
-    "anchor": "Discussion, 'Strengths and limitations'",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "A route-specific safety signal from another species, reported inside this paper: a cerebrospinal-fluid route that distributes similarly produced fatal transgene-directed immune encephalitis while a neighbouring route did not.",
-    "snippet": "the authors noted a stark difference between the ICM and ICV approaches with regard to safety; ICV-dosed dogs experienced a strong (and, in one case, fatal) encephalitis, apparently driven by T cells specific to the transgene product, but no such response was seen in ICM-treated animals. The relevance of the canine safety and biodistribution data to NHP and human GT is not certain.",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID42136830_Haque2026_PMC.xml",
-    "anchor": "Discussion, 'Strengths and limitations'",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "The practical argument for this route, which is the only clinical-deliverability claim the paper makes.",
-    "snippet": "Uniquely, it offers the possibility of outpatient treatment with no specialized surgical equipment. However, some studies have suggested the lumbar IT route leads to limited transduction of brain tissues (5, 14).",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID42136830_Haque2026_PMC.xml",
-    "anchor": "Discussion, second paragraph",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "Genome structure matters more than route for how much protein a given vector dose yields — an order of magnitude, stated by these authors from prior work and uncontrolled in this dataset.",
-    "snippet": "Use of scAAV9 vectors avoids the need for this rate-limiting step and is associated with greatly increased transduction efficiency— at least a 10-fold improvement in brain cell transduction and a corresponding increase in transgene expression, relative to ssAAV9 vectors (12, 13).",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID42136830_Haque2026_PMC.xml",
-    "anchor": "Discussion, first paragraph",
-    "panel_text_relation": "text_only"
-   }
-  ]
- }
 }

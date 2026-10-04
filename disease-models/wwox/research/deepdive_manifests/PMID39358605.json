@@ -1,240 +1,785 @@
 {
- "schema_version": 2,
- "pmid": "39358605",
- "doi": "10.1038/s44321-024-00148-5",
- "receipt": "FTR-20261003-39358605-01",
- "context_policy": "SOURCE_FIRST",
- "landing": [
-  "disease-models/wwox/research/fulltext_dossiers/PMID39358605.md",
-  "disease-models/wwox/research/intake_wave_20261003w5_A.md",
-  "disease-models/wwox/research/commit_candidates/CC-20261003W5-A-REGISTRY-01.md",
-  "disease-models/wwox/research/commit_candidates/CC-20261003W5-A-CARGO-CASSETTE-01.md",
-  "disease-models/wwox/research/commit_candidates/CC-20261003W5-A-TRANSGENE-IMMUNITY-01.md",
-  "disease-models/wwox/research/commit_candidates/CC-20261003W5-A-WINDOW-STATUS-01.md",
-  "disease-models/wwox/research/commit_candidates/CC-20261003W5-A-DOSE-TWO-SIDED-01.md"
- ],
- "skills_considered": [
-  {
-   "skill": "find-fulltext",
-   "used": true
-  },
-  {
-   "skill": "legend-study-intake-triage",
-   "used": true
-  },
-  {
-   "skill": "legend-deepdive",
-   "used": true
-  },
-  {
-   "skill": "legend-discovery",
-   "used": false,
-   "reason": "The discovery ledger is a research surface owned by other batches; every transferable lesson here is proposed as a commit candidate instead of written into the ledger."
-  },
-  {
-   "skill": "legend-hypothesis-forge",
-   "used": false,
-   "reason": "A gene-replacement lesson from another gene is not a WWOX therapeutic hypothesis; forging one would convert a stated transfer limit into a lead."
-  },
-  {
-   "skill": "legend-safety-triage",
-   "used": false,
-   "reason": "No small molecule with a SMILES is proposed, so the BLOCK-1 ADMET gate has nothing to triage."
-  },
-  {
-   "skill": "legend-commit",
-   "used": false,
-   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
-  },
-  {
-   "skill": "legend-locator-audit",
-   "used": false,
-   "reason": "The triples are published for a blind auditor; a reader cannot audit their own locators."
-  }
- ],
- "group_assessment": {
-  "total_publications": 0,
-  "publications_on_gene": 0,
-  "research_type": "experimental_lab",
-  "is_primary_group_for_disease": false,
-  "weighting": "No author-level PubMed census was run for this reading: the paper is about another gene entirely and contributes only transferable method, so group standing on WWOX is not the weighting that matters. What was recorded instead is declared competing interest, read from the paper itself and carried in the dossier.",
-  "external_provenance": {
-   "source": "not applicable — no external author census performed",
-   "date": "2026-10-03"
-  }
- },
- "field_density": {
-  "queries": [
-   {
-    "query": "WWOX AND gene replacement",
-    "count": 2,
-    "source": "PubMed ESearch rettype=count 2026-10-03"
-   },
-   {
-    "query": "WWOX AND biodistribution",
-    "count": 0,
-    "source": "PubMed ESearch rettype=count 2026-10-03"
-   },
-   {
-    "query": "WWOX AND dorsal root ganglia",
-    "count": 2,
-    "source": "PubMed ESearch rettype=count 2026-10-03"
-   }
-  ]
- },
- "multihop": {
-  "references_enumerated": 0,
-  "gene_direct_refs_in_source": [],
-  "resolved": [],
-  "queued": [],
-  "note": "Reference lists were not enumerated in this pass and no multi-hop expansion was performed; the coverage key 'references' is declared not_read for that reason."
- },
- "corpus_crossquery": {
-  "query": "paper_packet.py packet --pmid 39358605 (run BEFORE the first pass, technical state only)",
-  "hits": 0,
-  "note": "NO RECORD MATCHED on any registry surface (paper_packet.py packet --pmid, 2026-10-03): first reading, no prior receipt. The paper does not mention WWOX."
- },
- "retraction_check": {
-  "checked": true,
-  "result": "Checked 2026-10-03 via NCBI E-utilities efetch (db=pubmed, retmode=xml): the publication types carry no retraction, expression of concern or correction notice, and no CommentsCorrections element of any RefType is present for this PMID.",
-  "dependencies": {
-   "flagged": [],
-   "noted": [],
-   "paper_verdict": "SCREENED_CLEAN",
-   "reference_source": "network",
-   "references_declared": 55,
-   "references_screened": 53,
-   "references_with_doi": 53,
-   "schema": "retraction_check.dependencies/1",
-   "screened": true,
-   "snapshot": {
-    "date": "2026-09-10",
-    "days_since_fetch": 23,
-    "rows": 72476,
-    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
-   },
-   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
-   "unscreenable": {
-    "UNSCREENABLE_NO_DOI": 2
-   }
-  }
- },
- "source_artifacts": [
-  {
-   "path": "files/fulltext/PMID39358605_Wiseman2024_PMC.xml",
-   "sha256": "cf51af29dfde9af66b196419d5a541f3b1acd56f24d83dd3cf13168c895a3eb5",
-   "kind": "article_text",
-   "acquisition_recipe": {
-    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11554807/fullTextXML",
-    "http_method": "GET",
-    "tier": "Europe PMC REST fullTextXML",
-    "user_agent_policy": "identified",
-    "acquired_on": "2026-10-03",
-    "result_sha256": "cf51af29dfde9af66b196419d5a541f3b1acd56f24d83dd3cf13168c895a3eb5"
-   }
-  }
- ],
- "verbatim_locators": {
-  "waived": false,
-  "entries": [
-   {
-    "proposition": "Partial restoration of the complex was enough to correct the cargo phenotype in cells.",
-    "snippet": "restoration of AP4B1 protein levels via gene replacement approaches was sufficient to restore the AP-4 complex",
-    "anchor": "Results, in vitro",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID39358605_Wiseman2024_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "The immunogenicity study was run in wild-type animals, which already express the orthologue.",
-    "snippet": "Safety studies in WT mice included study 1: ELISpot reactivity",
-    "anchor": "Results, non-GLP safety",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID39358605_Wiseman2024_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "Those animals were dosed in the first days of life, when tolerance is most readily induced.",
-    "snippet": "Wild-type mice C57BL/6 (P1-3) were administered control vector",
-    "anchor": "Methods, ELISpot safety study",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID39358605_Wiseman2024_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "The only immune assay measures T-cell interferon release; no antibody assay is reported.",
-    "snippet": "This assay detects INF-γ secretion from activated T cells in response to a stimulant",
-    "anchor": "Results, non-GLP safety",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID39358605_Wiseman2024_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "Structural endpoints were rescued only by neonatal treatment while motor endpoints were rescued at both ages.",
-    "snippet": "In contrast to treatment of neonates, treatment in adults did not show any significant improvement",
-    "anchor": "Results, adult dose-response",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID39358605_Wiseman2024_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "Adult treatment still rescued motor function despite leaving the anatomy unchanged.",
-    "snippet": "significant functional recovery of motor phenotypes was observed",
-    "anchor": "Discussion, window paragraph",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID39358605_Wiseman2024_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "The human dose was derived by scaling to cerebrospinal-fluid volume on regulatory advice.",
-    "snippet": "FDA guidance to us was to scale up human dosing by cerebrospinal fluid (CSF) volume",
-    "anchor": "Discussion, clinical dose",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID39358605_Wiseman2024_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "A specific human dose is proposed for a four-year-old from the primate high dose.",
-    "snippet": "corresponds to a human dose of 4",
-    "anchor": "Discussion, clinical dose",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID39358605_Wiseman2024_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "Treatment-related microscopic nerve and spinal-cord findings were dose- and time-dependent.",
-    "snippet": "These treatment-related microscopic findings displayed a dose and time dependence in the severity and incidence of histopathological findings",
-    "anchor": "Results, NHP toxicology",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID39358605_Wiseman2024_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "A strong ubiquitous promoter cannot always be used because of the packaging limit.",
-    "snippet": "this promoter combined with larger transgene lengths often exceeds the limits of AAV9 packaging capacity",
-    "anchor": "Discussion, promoter paragraph",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID39358605_Wiseman2024_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "One animal that received the therapeutic vector died unexplained during the one-year study.",
-    "snippet": "There was one unexplained death at 80 days post-treatment",
-    "anchor": "Results, long-term safety",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID39358605_Wiseman2024_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "A treatment-associated white-cell rise occurred in the therapeutic arm and resolved by one year.",
-    "snippet": "Elevation in white blood cell count (WBC) was observed in the ICM cohort treated with AAV9/CBh-hAP4B1",
-    "anchor": "Results, long-term safety",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID39358605_Wiseman2024_PMC.xml",
-    "panel_text_relation": "text_only"
-   }
+  "schema_version": 2,
+  "pmid": "39358605",
+  "doi": "10.1038/s44321-024-00148-5",
+  "receipt": "FTR-20261003-39358605-01",
+  "context_policy": "SOURCE_FIRST",
+  "landing": [
+    "disease-models/wwox/research/fulltext_dossiers/PMID39358605.md",
+    "disease-models/wwox/research/intake_wave_20261003w5_A.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261003W5-A-REGISTRY-01.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261003W5-A-CARGO-CASSETTE-01.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261003W5-A-TRANSGENE-IMMUNITY-01.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261003W5-A-WINDOW-STATUS-01.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261003W5-A-DOSE-TWO-SIDED-01.md"
   ],
-  "source_fulltext_indexed": true,
-  "source_fulltext_indexed_evidence": "Europe PMC REST fullTextXML returned HTTP 200 with a full JATS body for PMC11554807 on 2026-10-03; the declared article artefact is that response, byte for byte."
- }
+  "skills_considered": [
+    {
+      "skill": "find-fulltext",
+      "used": true
+    },
+    {
+      "skill": "legend-study-intake-triage",
+      "used": true
+    },
+    {
+      "skill": "legend-deepdive",
+      "used": true
+    },
+    {
+      "skill": "legend-discovery",
+      "used": false,
+      "reason": "The discovery ledger is a research surface owned by other batches; every transferable lesson here is proposed as a commit candidate instead of written into the ledger."
+    },
+    {
+      "skill": "legend-hypothesis-forge",
+      "used": false,
+      "reason": "A gene-replacement lesson from another gene is not a WWOX therapeutic hypothesis; forging one would convert a stated transfer limit into a lead."
+    },
+    {
+      "skill": "legend-safety-triage",
+      "used": false,
+      "reason": "No small molecule with a SMILES is proposed, so the BLOCK-1 ADMET gate has nothing to triage."
+    },
+    {
+      "skill": "legend-commit",
+      "used": false,
+      "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+    },
+    {
+      "skill": "legend-locator-audit",
+      "used": false,
+      "reason": "The triples are published for a blind auditor; a reader cannot audit their own locators."
+    }
+  ],
+  "group_assessment": {
+    "total_publications": 0,
+    "publications_on_gene": 0,
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": false,
+    "weighting": "No author-level PubMed census was run for this reading: the paper is about another gene entirely and contributes only transferable method, so group standing on WWOX is not the weighting that matters. What was recorded instead is declared competing interest, read from the paper itself and carried in the dossier.",
+    "external_provenance": {
+      "source": "not applicable — no external author census performed",
+      "date": "2026-10-03"
+    }
+  },
+  "field_density": {
+    "queries": [
+      {
+        "query": "WWOX AND gene replacement",
+        "count": 2,
+        "source": "PubMed ESearch rettype=count 2026-10-03"
+      },
+      {
+        "query": "WWOX AND biodistribution",
+        "count": 0,
+        "source": "PubMed ESearch rettype=count 2026-10-03"
+      },
+      {
+        "query": "WWOX AND dorsal root ganglia",
+        "count": 2,
+        "source": "PubMed ESearch rettype=count 2026-10-03"
+      }
+    ]
+  },
+  "multihop": {
+    "references_enumerated": 0,
+    "gene_direct_refs_in_source": [],
+    "resolved": [],
+    "queued": [],
+    "note": "Reference lists were not enumerated in this pass and no multi-hop expansion was performed; the coverage key 'references' is declared not_read for that reason."
+  },
+  "corpus_crossquery": {
+    "query": "paper_packet.py packet --pmid 39358605 (run BEFORE the first pass, technical state only)",
+    "hits": 0,
+    "note": "NO RECORD MATCHED on any registry surface (paper_packet.py packet --pmid, 2026-10-03): first reading, no prior receipt. The paper does not mention WWOX."
+  },
+  "retraction_check": {
+    "checked": true,
+    "result": "Checked 2026-10-03 via NCBI E-utilities efetch (db=pubmed, retmode=xml): the publication types carry no retraction, expression of concern or correction notice, and no CommentsCorrections element of any RefType is present for this PMID.",
+    "dependencies": {
+      "flagged": [],
+      "noted": [],
+      "paper_verdict": "SCREENED_CLEAN",
+      "reference_source": "network",
+      "references_declared": 55,
+      "references_screened": 53,
+      "references_with_doi": 53,
+      "schema": "retraction_check.dependencies/1",
+      "screened": true,
+      "snapshot": {
+        "date": "2026-09-10",
+        "days_since_fetch": 23,
+        "rows": 72476,
+        "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+      },
+      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+      "unscreenable": {
+        "UNSCREENABLE_NO_DOI": 2
+      }
+    }
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID39358605_Wiseman2024_PMC.xml",
+      "sha256": "cf51af29dfde9af66b196419d5a541f3b1acd56f24d83dd3cf13168c895a3eb5",
+      "kind": "article_text",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11554807/fullTextXML",
+        "http_method": "GET",
+        "tier": "Europe PMC REST fullTextXML",
+        "user_agent_policy": "identified",
+        "acquired_on": "2026-10-03",
+        "result_sha256": "cf51af29dfde9af66b196419d5a541f3b1acd56f24d83dd3cf13168c895a3eb5"
+      }
+    },
+    {
+      "path": "files/supplement/PMID39358605/44321_2024_148_Fig1_HTML.jpg",
+      "sha256": "bafb45584b87791c93854f4a4c3d42e17abb5c8da1f824bf33e47823e23f9645",
+      "kind": "figure",
+      "note": "Figure 1; member of the Europe PMC supplementaryFiles archive extracted unchanged; inspected as rendered pixels in wave 13.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11554807/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "bafb45584b87791c93854f4a4c3d42e17abb5c8da1f824bf33e47823e23f9645",
+        "http_status": 200,
+        "bytes": 197605
+      }
+    },
+    {
+      "path": "files/supplement/PMID39358605/44321_2024_148_Fig2_HTML.jpg",
+      "sha256": "dadf50dff7b825df6d3277402ef6f68059b1f9bead9861f592db610eed8dfa3f",
+      "kind": "figure",
+      "note": "Figure 2; member of the Europe PMC supplementaryFiles archive extracted unchanged; inspected as rendered pixels in wave 13.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11554807/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "dadf50dff7b825df6d3277402ef6f68059b1f9bead9861f592db610eed8dfa3f",
+        "http_status": 200,
+        "bytes": 89871
+      }
+    },
+    {
+      "path": "files/supplement/PMID39358605/44321_2024_148_Fig4_HTML.jpg",
+      "sha256": "ae9758732e9ed4b8a212e68d8b709c598381b6388c056567bbadfabc5b3b9e3a",
+      "kind": "figure",
+      "note": "Figure 3 (file Fig3 is a byte-identical duplicate carrying the label Figure EV1); member of the Europe PMC supplementaryFiles archive extracted unchanged; inspected as rendered pixels in wave 13.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11554807/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "ae9758732e9ed4b8a212e68d8b709c598381b6388c056567bbadfabc5b3b9e3a",
+        "http_status": 200,
+        "bytes": 171130
+      }
+    },
+    {
+      "path": "files/supplement/PMID39358605/44321_2024_148_Fig5_HTML.jpg",
+      "sha256": "fa7716dd788953d0ebab06be5b115b8cfc436a120b7912ab10efb27486057110",
+      "kind": "figure",
+      "note": "Figure 4; member of the Europe PMC supplementaryFiles archive extracted unchanged; inspected as rendered pixels in wave 13.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11554807/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "fa7716dd788953d0ebab06be5b115b8cfc436a120b7912ab10efb27486057110",
+        "http_status": 200,
+        "bytes": 50994
+      }
+    },
+    {
+      "path": "files/supplement/PMID39358605/44321_2024_148_Fig6_HTML.jpg",
+      "sha256": "bc9a063b8d60920f5feaa8c7e94ca4657740b5ec589170734a92f18e7b4fd6ad",
+      "kind": "figure",
+      "note": "Figure 5; member of the Europe PMC supplementaryFiles archive extracted unchanged; inspected as rendered pixels in wave 13.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11554807/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "bc9a063b8d60920f5feaa8c7e94ca4657740b5ec589170734a92f18e7b4fd6ad",
+        "http_status": 200,
+        "bytes": 187446
+      }
+    },
+    {
+      "path": "files/supplement/PMID39358605/44321_2024_148_Fig8_HTML.jpg",
+      "sha256": "de8580074bcf3ae9e2da10faf70a5a0d2a7712ad8125fba01a58d3ddba2bd50f",
+      "kind": "figure",
+      "note": "Figure 6; member of the Europe PMC supplementaryFiles archive extracted unchanged; inspected as rendered pixels in wave 13.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11554807/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "de8580074bcf3ae9e2da10faf70a5a0d2a7712ad8125fba01a58d3ddba2bd50f",
+        "http_status": 200,
+        "bytes": 233146
+      }
+    },
+    {
+      "path": "files/supplement/PMID39358605/44321_2024_148_Fig10_HTML.jpg",
+      "sha256": "e867253ea8784f81ca83a1e4b381b687c5de566ad22cdf40ecc5bd994e78a932",
+      "kind": "figure",
+      "note": "Figure EV4; member of the Europe PMC supplementaryFiles archive extracted unchanged; inspected as rendered pixels in wave 13.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11554807/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "e867253ea8784f81ca83a1e4b381b687c5de566ad22cdf40ecc5bd994e78a932",
+        "http_status": 200,
+        "bytes": 356596
+      }
+    },
+    {
+      "path": "files/supplement/PMID39358605/44321_2024_148_Fig11_HTML.jpg",
+      "sha256": "7cf64afd9508edb57c69ba351527006f7e84ca4389edd70830e7c7c3c7151046",
+      "kind": "figure",
+      "note": "Figure 7 (file Fig7 is a byte-identical duplicate carrying the label Figure EV2); member of the Europe PMC supplementaryFiles archive extracted unchanged; inspected as rendered pixels in wave 13.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11554807/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "7cf64afd9508edb57c69ba351527006f7e84ca4389edd70830e7c7c3c7151046",
+        "http_status": 200,
+        "bytes": 118167
+      }
+    },
+    {
+      "path": "files/supplement/PMID39358605/44321_2024_148_Fig12_HTML.jpg",
+      "sha256": "8348d226e016b54b9a38e58ce1473a466c1103bebb3555b180a817e7a8aecb1e",
+      "kind": "figure",
+      "note": "Figure EV5; member of the Europe PMC supplementaryFiles archive extracted unchanged; inspected as rendered pixels in wave 13.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11554807/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "8348d226e016b54b9a38e58ce1473a466c1103bebb3555b180a817e7a8aecb1e",
+        "http_status": 200,
+        "bytes": 173931
+      }
+    },
+    {
+      "path": "files/supplement/PMID39358605/44321_2024_148_Fig13_HTML.jpg",
+      "sha256": "5add3fef881a288566786e7b28faec55300332c4e01a841d6a588d146a7d5033",
+      "kind": "figure",
+      "note": "Figure 8; member of the Europe PMC supplementaryFiles archive extracted unchanged; inspected as rendered pixels in wave 13.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11554807/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "5add3fef881a288566786e7b28faec55300332c4e01a841d6a588d146a7d5033",
+        "http_status": 200,
+        "bytes": 213075
+      }
+    },
+    {
+      "path": "files/supplement/PMID39358605/44321_2024_148_Fig14_HTML.jpg",
+      "sha256": "69161a986ce3ad3f424175748d41b5d4df6d17f3342ea03303d1415389827d0c",
+      "kind": "figure",
+      "note": "Figure 9 (file Fig9 is a byte-identical duplicate carrying the label Figure EV3); member of the Europe PMC supplementaryFiles archive extracted unchanged; inspected as rendered pixels in wave 13.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11554807/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "69161a986ce3ad3f424175748d41b5d4df6d17f3342ea03303d1415389827d0c",
+        "http_status": 200,
+        "bytes": 82348
+      }
+    },
+    {
+      "path": "files/supplement/PMID39358605/44321_2024_148_MOESM1_ESM.pdf",
+      "sha256": "4f1daa03c751fb70485e836ee081571386a92a01dc90418fe603c9b78746a25e",
+      "kind": "supplement_binary",
+      "note": "Appendix (52 pages): supplementary figures, Appendix Table S1 (long-term WT mouse safety) and the cynomolgus GLP study summary tables (pages 23-35). The PDF reports a reconstructed cross-reference table on text extraction; the text layer was checked against rendered pages 24, 33 and 35.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11554807/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "4f1daa03c751fb70485e836ee081571386a92a01dc90418fe603c9b78746a25e",
+        "http_status": 200,
+        "bytes": 1257640
+      }
+    },
+    {
+      "path": "files/supplement/PMID39358605/44321_2024_148_MOESM1_ESM.txt",
+      "sha256": "4310c32908a1e54eac0e8533843056601d45b7f3293606be9c344d2102389bb5",
+      "kind": "supplement_text",
+      "note": "DERIVED text layer of the Appendix (layout, no page breaks).",
+      "acquisition_recipe": {
+        "resolved_url": "local derivation",
+        "http_method": "NONE",
+        "tier": "local derivation",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": true,
+        "derived_from": "files/supplement/PMID39358605/44321_2024_148_MOESM1_ESM.pdf",
+        "result_sha256": "4310c32908a1e54eac0e8533843056601d45b7f3293606be9c344d2102389bb5",
+        "extractor": {
+          "name": "pdftotext (poppler)",
+          "version": "24.02.0",
+          "call": "pdftotext -layout 44321_2024_148_MOESM1_ESM.pdf 44321_2024_148_MOESM1_ESM.txt"
+        }
+      }
+    },
+    {
+      "path": "files/supplement/PMID39358605/44321_2024_148_MOESM2_ESM.pdf",
+      "sha256": "3edc37d0c6c7e8bf254f152841e0a9eceb6b2456bd0d4364b0c8f1b173861b31",
+      "kind": "supplement_binary",
+      "note": "Peer review file (22 pages): reviewer comments and author replies; text layer searched for the negative-term set and the dose-derivation table only.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11554807/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "3edc37d0c6c7e8bf254f152841e0a9eceb6b2456bd0d4364b0c8f1b173861b31",
+        "http_status": 200,
+        "bytes": 863012
+      }
+    },
+    {
+      "path": "files/supplement/PMID39358605/44321_2024_148_MOESM12_ESM.pdf",
+      "sha256": "7cdac81553016e23b950943b9a1476f81cc8c104c9a4db6d7e826a97f9d09de5",
+      "kind": "supplement_binary",
+      "note": "Expanded View Figures PDF (7 pages) carrying the real images of Figures EV1-EV5; pages 1-4 and 7 inspected as rendered pages (EV4 inspected from the PMC image).",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11554807/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "7cdac81553016e23b950943b9a1476f81cc8c104c9a4db6d7e826a97f9d09de5",
+        "http_status": 200,
+        "bytes": 7615675
+      }
+    },
+    {
+      "path": "files/supplement/PMID39358605/44321_2024_148_MOESM12_ESM.txt",
+      "sha256": "bcd344224d7ffcd11423150d580df9567498ef294bac8057587beee196fde2f5",
+      "kind": "supplement_text",
+      "note": "DERIVED text layer of the Expanded View Figures PDF (legends).",
+      "acquisition_recipe": {
+        "resolved_url": "local derivation",
+        "http_method": "NONE",
+        "tier": "local derivation",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": true,
+        "derived_from": "files/supplement/PMID39358605/44321_2024_148_MOESM12_ESM.pdf",
+        "result_sha256": "bcd344224d7ffcd11423150d580df9567498ef294bac8057587beee196fde2f5",
+        "extractor": {
+          "name": "pdftotext (poppler)",
+          "version": "24.02.0",
+          "call": "pdftotext -layout 44321_2024_148_MOESM12_ESM.pdf 44321_2024_148_MOESM12_ESM.txt"
+        }
+      }
+    },
+    {
+      "path": "files/supplement/PMID39358605/44321_2024_148_MOESM3_ESM.zip",
+      "sha256": "13d199ff5d9fdcb38afe523837fc04a2b28f94e2dd4be64a9787a89114f90d17",
+      "kind": "supplement_binary",
+      "note": "Source data Figure 1 (images); archive member names listed, workbooks not opened in wave 13 (the file names carry no antibody, ELISA, ELISpot or titre term; there is no archive for any Expanded View figure).",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11554807/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "13d199ff5d9fdcb38afe523837fc04a2b28f94e2dd4be64a9787a89114f90d17",
+        "http_status": 200,
+        "bytes": 24284276
+      }
+    },
+    {
+      "path": "files/supplement/PMID39358605/44321_2024_148_MOESM4_ESM.zip",
+      "sha256": "c78ee7fb2b3cf24e9d8aca909b69efaaf3f83d37f710f1ea883da974408cd2c4",
+      "kind": "supplement_binary",
+      "note": "Source data Figure 2 (nested archives and workbooks); archive member names listed, workbooks not opened in wave 13 (the file names carry no antibody, ELISA, ELISpot or titre term; there is no archive for any Expanded View figure).",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11554807/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "c78ee7fb2b3cf24e9d8aca909b69efaaf3f83d37f710f1ea883da974408cd2c4",
+        "http_status": 200,
+        "bytes": 7346017
+      }
+    },
+    {
+      "path": "files/supplement/PMID39358605/44321_2024_148_MOESM5_ESM.zip",
+      "sha256": "2fc84449602158946ae326c8a0e2c72bfae4b498e3db96653d405a73beaa5a5e",
+      "kind": "supplement_binary",
+      "note": "Source data Figure 3 (workbooks and images, 44 files); archive member names listed, workbooks not opened in wave 13 (the file names carry no antibody, ELISA, ELISpot or titre term; there is no archive for any Expanded View figure).",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11554807/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "2fc84449602158946ae326c8a0e2c72bfae4b498e3db96653d405a73beaa5a5e",
+        "http_status": 200,
+        "bytes": 1904548
+      }
+    },
+    {
+      "path": "files/supplement/PMID39358605/44321_2024_148_MOESM6_ESM.zip",
+      "sha256": "87785b69aa1350e56fb1e0581f54ee97b9728b38f652df18c8cc96682a5714b8",
+      "kind": "supplement_binary",
+      "note": "Source data Figure 4 (clasping and rotarod workbooks); archive member names listed, workbooks not opened in wave 13 (the file names carry no antibody, ELISA, ELISpot or titre term; there is no archive for any Expanded View figure).",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11554807/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "87785b69aa1350e56fb1e0581f54ee97b9728b38f652df18c8cc96682a5714b8",
+        "http_status": 200,
+        "bytes": 28984
+      }
+    },
+    {
+      "path": "files/supplement/PMID39358605/44321_2024_148_MOESM7_ESM.zip",
+      "sha256": "3580df6b458cd51aebd0951e7bc967de63d56570b499abc90d5f2b69e4951941",
+      "kind": "supplement_binary",
+      "note": "Source data Figure 5 (190 files, mostly workbooks and images); archive member names listed, workbooks not opened in wave 13 (the file names carry no antibody, ELISA, ELISpot or titre term; there is no archive for any Expanded View figure).",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11554807/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "3580df6b458cd51aebd0951e7bc967de63d56570b499abc90d5f2b69e4951941",
+        "http_status": 200,
+        "bytes": 38954965
+      }
+    },
+    {
+      "path": "files/supplement/PMID39358605/44321_2024_148_MOESM8_ESM.zip",
+      "sha256": "fc3e26bec8ae3318157009a40094fb66437d6e0e5b6a416249ab0ff77741d36e",
+      "kind": "supplement_binary",
+      "note": "Source data Figure 6 (106 files); archive member names listed, workbooks not opened in wave 13 (the file names carry no antibody, ELISA, ELISpot or titre term; there is no archive for any Expanded View figure).",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11554807/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "fc3e26bec8ae3318157009a40094fb66437d6e0e5b6a416249ab0ff77741d36e",
+        "http_status": 200,
+        "bytes": 7054481
+      }
+    },
+    {
+      "path": "files/supplement/PMID39358605/44321_2024_148_MOESM9_ESM.zip",
+      "sha256": "b74e5a10523c30af4294f0aca37f6f67faddf0ec65d0f8dfe1625c956e229c37",
+      "kind": "supplement_binary",
+      "note": "Source data Figure 7; archive member names listed, workbooks not opened in wave 13 (the file names carry no antibody, ELISA, ELISpot or titre term; there is no archive for any Expanded View figure).",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11554807/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "b74e5a10523c30af4294f0aca37f6f67faddf0ec65d0f8dfe1625c956e229c37",
+        "http_status": 200,
+        "bytes": 3364623
+      }
+    },
+    {
+      "path": "files/supplement/PMID39358605/44321_2024_148_MOESM10_ESM.zip",
+      "sha256": "293b27dde222633eb1527c285f636058d8fca745c9da789ecf77baef750734c4",
+      "kind": "supplement_binary",
+      "note": "Source data Figure 8 (serum chemistry, liver tissue analysis, RT-PCR workbooks); archive member names listed, workbooks not opened in wave 13 (the file names carry no antibody, ELISA, ELISpot or titre term; there is no archive for any Expanded View figure).",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11554807/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "293b27dde222633eb1527c285f636058d8fca745c9da789ecf77baef750734c4",
+        "http_status": 200,
+        "bytes": 486361
+      }
+    },
+    {
+      "path": "files/supplement/PMID39358605/44321_2024_148_MOESM11_ESM.zip",
+      "sha256": "080817984c70bda3dd7e9ae1bfe47e661dafd97636ceca88d89c77c53a00ffea",
+      "kind": "supplement_binary",
+      "note": "Source data Figure 9 (viral distribution, transgene, nerve conductance workbooks); archive member names listed, workbooks not opened in wave 13 (the file names carry no antibody, ELISA, ELISpot or titre term; there is no archive for any Expanded View figure).",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11554807/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "080817984c70bda3dd7e9ae1bfe47e661dafd97636ceca88d89c77c53a00ffea",
+        "http_status": 200,
+        "bytes": 33276
+      }
+    }
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "entries": [
+      {
+        "proposition": "Partial restoration of the complex was enough to correct the cargo phenotype in cells.",
+        "snippet": "restoration of AP4B1 protein levels via gene replacement approaches was sufficient to restore the AP-4 complex",
+        "anchor": "Results, in vitro",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39358605_Wiseman2024_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The immunogenicity study was run in wild-type animals, which already express the orthologue.",
+        "snippet": "Safety studies in WT mice included study 1: ELISpot reactivity",
+        "anchor": "Results, non-GLP safety",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39358605_Wiseman2024_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Those animals were dosed in the first days of life, when tolerance is most readily induced.",
+        "snippet": "Wild-type mice C57BL/6 (P1-3) were administered control vector",
+        "anchor": "Methods, ELISpot safety study",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39358605_Wiseman2024_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The only immune assay measures T-cell interferon release; no antibody assay is reported.",
+        "snippet": "This assay detects INF-γ secretion from activated T cells in response to a stimulant",
+        "anchor": "Results, non-GLP safety",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39358605_Wiseman2024_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Structural endpoints were rescued only by neonatal treatment while motor endpoints were rescued at both ages.",
+        "snippet": "In contrast to treatment of neonates, treatment in adults did not show any significant improvement",
+        "anchor": "Results, adult dose-response",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39358605_Wiseman2024_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Adult treatment still rescued motor function despite leaving the anatomy unchanged.",
+        "snippet": "significant functional recovery of motor phenotypes was observed",
+        "anchor": "Discussion, window paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39358605_Wiseman2024_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The human dose was derived by scaling to cerebrospinal-fluid volume on regulatory advice.",
+        "snippet": "FDA guidance to us was to scale up human dosing by cerebrospinal fluid (CSF) volume",
+        "anchor": "Discussion, clinical dose",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39358605_Wiseman2024_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "A specific human dose is proposed for a four-year-old from the primate high dose.",
+        "snippet": "corresponds to a human dose of 4",
+        "anchor": "Discussion, clinical dose",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39358605_Wiseman2024_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Treatment-related microscopic nerve and spinal-cord findings were dose- and time-dependent.",
+        "snippet": "These treatment-related microscopic findings displayed a dose and time dependence in the severity and incidence of histopathological findings",
+        "anchor": "Results, NHP toxicology",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39358605_Wiseman2024_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "A strong ubiquitous promoter cannot always be used because of the packaging limit.",
+        "snippet": "this promoter combined with larger transgene lengths often exceeds the limits of AAV9 packaging capacity",
+        "anchor": "Discussion, promoter paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39358605_Wiseman2024_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "One animal that received the therapeutic vector died unexplained during the one-year study.",
+        "snippet": "There was one unexplained death at 80 days post-treatment",
+        "anchor": "Results, long-term safety",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39358605_Wiseman2024_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "A treatment-associated white-cell rise occurred in the therapeutic arm and resolved by one year.",
+        "snippet": "Elevation in white blood cell count (WBC) was observed in the ICM cohort treated with AAV9/CBh-hAP4B1",
+        "anchor": "Results, long-term safety",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39358605_Wiseman2024_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The Methods describe the ELISpot as run on splenocytes with n = 4, while the Figure EV5 legend gives n = 3 per group.",
+        "snippet": "Mice were sacrificed at 3 months and splenocytes were extracted, dissociated and ran through an ELISpot immunoassay against the hAP4B1 transgene peptides (n = 4).",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39358605_Wiseman2024_PMC.xml",
+        "anchor": "Methods, ELISpot safety study in WT BL/6J mice",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The Figure EV5 title says no B cell response while the assay is an interferon-gamma ELISpot that the Results describe as detecting T cell secretion.",
+        "snippet": "AAV9/hAP4B1 treatment generated no B cell response to the hAP4B1 peptides",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39358605_Wiseman2024_PMC.xml",
+        "anchor": "Figure EV5 title",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The NHP conclusion calls the immune responses to AAV9 minor and well established; the Results give no antibody, cellular or antigen-specific figure for it.",
+        "snippet": "minor and well-established immune responses to AAV9",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39358605_Wiseman2024_PMC.xml",
+        "anchor": "Results, NHP safety, conclusion",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The Appendix schedule of events for the cynomolgus study lists an immune response assessment, cellular and humoral, at five timepoints.",
+        "snippet": "Immune response\n                                          X                                    X     X          X      X\nCellular and Humoral)",
+        "surface": "supplement",
+        "artifact": "files/supplement/PMID39358605/44321_2024_148_MOESM1_ESM.txt",
+        "anchor": "Appendix, Schedule of events (page 24)",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "The Appendix list of results names a humoral immune response table and no cellular immune response table.",
+        "snippet": "Humoral immune response                                                                          33",
+        "surface": "supplement",
+        "artifact": "files/supplement/PMID39358605/44321_2024_148_MOESM1_ESM.txt",
+        "anchor": "Appendix, List of results (page 23)",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "A per-animal antibody-titre table exists for the cynomolgus study (13 animals: 4 vehicle, 3 low dose, 6 high dose; pre-dose, day 7, day 29, day 113); every treated animal reads >= 3540 by day 7 and the assay upper value is >6250; the antigen is not named.",
+        "snippet": "Humoral immune response\n                                                                                                Antibody titer",
+        "surface": "supplement",
+        "artifact": "files/supplement/PMID39358605/44321_2024_148_MOESM1_ESM.txt",
+        "anchor": "Appendix, Humoral immune response (pages 33-34)",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "The low-dose row of the antibody table: pre 180, day 7 above 6250, day 29 5131, day 113 above 6250.",
+        "snippet": "F                      220013005                    180                 >6250                5131              >6250",
+        "surface": "supplement",
+        "artifact": "files/supplement/PMID39358605/44321_2024_148_MOESM1_ESM.txt",
+        "anchor": "Appendix, antibody titre table",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "Vehicle animals carry non-zero titres that stay flat over time (141, 86, 98, 86 for one), so the antigen is not treatment-induced in those animals.",
+        "snippet": "F                      220013003                    141                   86                  98                 86",
+        "surface": "supplement",
+        "artifact": "files/supplement/PMID39358605/44321_2024_148_MOESM1_ESM.txt",
+        "anchor": "Appendix, antibody titre table, cohort 1 vehicle",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "The Appendix CNS histopathology incidence table lists DRG findings (neuron degeneration or necrosis, increased satellite glial cell cellularity, mononuclear infiltrate, neuron vacuolation) by dose group and severity; the DRG findings sit in the high-dose columns.",
+        "snippet": "Satellite glial cell, increased",
+        "surface": "supplement",
+        "artifact": "files/supplement/PMID39358605/44321_2024_148_MOESM1_ESM.txt",
+        "anchor": "Appendix, CNS histopathology (page 35)",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "The Appendix nerve-conductance tables carry group means with a footnote that entries without a standard error are cohorts of two animals.",
+        "snippet": "Entries with no standard error represent cohorts with only 2 animals",
+        "surface": "supplement",
+        "artifact": "files/supplement/PMID39358605/44321_2024_148_MOESM1_ESM.txt",
+        "anchor": "Appendix, Nerve conductance (page 33)",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "Figure EV5 (ELISpot in wild-type mice): panel A three membranes (DMSO, hAP4B1 peptides, ConA); panel B spot-forming units near zero for negative control and peptides in all four arms, ConA about 60 per well; three points per arm; panel C hAP4B1 mRNA in brain, liver, spinal cord; no antibody, cytokine-panel or KO-cohort panel.",
+        "snippet": "[panel attestation - EV5 image and page 7 of the Expanded View PDF inspected] A membranes; B scatter with ns brackets, n = 3; C bars liver/brain/spinal cord.",
+        "surface": "figure",
+        "artifact": "files/supplement/PMID39358605/44321_2024_148_Fig12_HTML.jpg",
+        "anchor": "Figure EV5 panels A-C",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "Figure 8 (long-term WT mouse safety): 28-day WBC and lymphocyte counts are raised for CBh-hAP4B1 (** brackets) and not at one year; liver histopathology at one year plots inflammation scores up to 3 in the untreated arm, higher than in any treated arm; no immune assay panel.",
+        "snippet": "[panel attestation - Fig. 8 raster inspected] A serum chemistry WBC, monocytes, lymphocytes at 28 days and 1 year with ** on CBh-hAP4B1 at 28 days; B liver inflammation, fibrosis, steatosis, necrosis scores per arm; C hAP4B1 expression normalised to endogenous mouse level.",
+        "surface": "figure",
+        "artifact": "files/supplement/PMID39358605/44321_2024_148_Fig13_HTML.jpg",
+        "anchor": "Figure 8 panels A-C",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "Figure 9 (cynomolgus): panels A-C are viral biodistribution, hAP4B1 mRNA distribution and nerve conductance (sciatic and median velocity and amplitude) for PBS, low and high dose; there is no histology, DRG-score, antibody or cellular-immunity panel on the figure although its title names minimal-mild changes in DRG, spinal cord and sciatic nerve; the figure labels the doses 1.35E13 and 7.5E13 vg per animal.",
+        "snippet": "[panel attestation - Fig. 9 raster inspected] A log vg per ug DNA by tissue incl. sciatic nerve; B log mRNA copies per ug RNA; C four line plots over days 0-106.",
+        "surface": "figure",
+        "artifact": "files/supplement/PMID39358605/44321_2024_148_Fig14_HTML.jpg",
+        "anchor": "Figure 9 panels A-C",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "Figure EV1 to EV3 images in the PMC package are byte-identical copies of Figures 3, 7 and 9 (file Fig3 = Fig4, Fig7 = Fig11, Fig9 = Fig14); the real EV images are the pages of the Expanded View PDF. The efficacy cohorts in Figures 3 to 7 and EV2 to EV4 carry no antibody, ELISpot, cytokine or leucocyte panel.",
+        "snippet": "[panel attestation - Figs. 1, 2, 3, 4, 5, 6, 7 and EV1-EV5 inspected] Figures 3-7 knockout-mouse expression, motor, anatomical, NfL, ATG9A and potency data; none carries an immune readout.",
+        "surface": "figure",
+        "artifact": "files/supplement/PMID39358605/44321_2024_148_Fig5_HTML.jpg",
+        "anchor": "Figures 1-7 and EV1-EV5 (grouped; Fig. 4 raster named as the anchor artefact)",
+        "panel_text_relation": "panel_only"
+      }
+    ],
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC REST fullTextXML returned HTTP 200 with a full JATS body for PMC11554807 on 2026-10-03; the declared article artefact is that response, byte for byte."
+  }
 }
