@@ -16,9 +16,11 @@ depends_on: CC-20261004W8-B-REGISTRY-01   # for the PAPER ids these claims cite
 
 ## Relation to `CC-20261003W3-C-RESTORATION-SPEC-01`
 
-That wave-3 candidate is still open on disk and asks the same question from a different set of
-sources (five DEE gene-therapy papers, none mentioning WWOX). **The two are complementary, not
-competing, and should be propagated together or not at all:**
+That wave-3 candidate asks the same question from a different set of sources (five DEE gene-therapy
+papers, none mentioning WWOX). **It is already PROPAGATED**, by `BATCH_20261003_004`, into the
+research layer rather than the claim registry: its three described records became `RL-C-20261003w3`
+and `RC-C-20261003w3`, and its dismissal op was merged into `DIS-033`. It is therefore not a
+competing candidate but **prior art this one must not restate**, and the two are complementary:
 
 - It parameterises the problem as six axes — dose, cell type, route, window, off-target organ risk,
   pharmacodynamic assay — and finds route and off-target risk well measured, dose measured only as
