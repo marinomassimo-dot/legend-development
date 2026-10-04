@@ -1,0 +1,247 @@
+{
+ "schema_version": 2,
+ "pmid": "42807309",
+ "doi": "10.5847/wjem.j.1920-8642.2026.090",
+ "receipt": "FTR-20261004-42807309-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID42807309.md",
+  "disease-models/wwox/research/intake_wave_20261004w11_C.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W11-C-REGISTRY-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Discovery ledger is owned by another batch; no lead emerged from this reading."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "Nothing here supplies a lever for the reference genotype class; forging from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged; the paper tests no compound for BLOCK-1."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes go through commit candidates."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; triples are published in the candidates."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "computational",
+  "is_primary_group_for_disease": false,
+  "weighting": "Summary-statistics GWAS meta-analysis and cross-trait analysis (CPASSOC, MAGMA, MR); no wet-lab work. WWOX is named zero times."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND pancreatitis",
+    "count": 14,
+    "source": "PubMed ESearch 2026-10-04"
+   },
+   {
+    "query": "WWOX AND adiposity",
+    "count": 5,
+    "source": "PubMed ESearch 2026-10-04"
+   },
+   {
+    "query": "CTRB1 AND pancreatitis",
+    "count": 60,
+    "source": "PubMed ESearch 2026-10-04"
+   }
+  ],
+  "note": "Counts are PubMed all-fields term mappings and are not curated; this paper is not shown to be among the WWOX records."
+ },
+ "multihop": {
+  "references_enumerated": 0,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list not individually enumerated; WWOX is named zero times in the text and the figure, so no gene-direct hop exists."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42807309; paper_packet.py packet --pmid 42807309",
+  "hits": 0,
+  "note": "No registry record or prior receipt for this PMID."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-04 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn or CommentIn link; publication type Journal Article.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "UNSCREENABLE_NO_REFERENCE_LIST",
+   "reference_source": "network",
+   "references_declared": 0,
+   "references_screened": 0,
+   "references_with_doi": 0,
+   "schema": "retraction_check.dependencies/1",
+   "screened": false,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 22,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42807309_16q231_pancreatitis_2026.pdf",
+   "sha256": "60eaa9904227cccb59cb2b3d8041d69f7c0bcb278abfa6d71ddf8b00983786bc",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "http://wjem.com.cn/EN/article/downloadArticleFile.do?attachType=PDF&id=1210",
+    "http_method": "GET",
+    "tier": "publisher bronze open-access PDF (the www host refused connection; the bare host named by the DOI redirect served it)",
+    "user_agent_policy": "browser_like",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "60eaa9904227cccb59cb2b3d8041d69f7c0bcb278abfa6d71ddf8b00983786bc"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID42807309_16q231_pancreatitis_2026.txt",
+   "sha256": "d394d629c69569076688e684ad987bf6cc0bc6ceeb5ad11221b410a428817f1a",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID42807309_16q231_pancreatitis_2026.pdf",
+    "extractor": {
+     "name": "pdftotext (poppler)",
+     "version": "24.02.0",
+     "call": "pdftotext -nopgbrk <pdf> <txt> (reading-order mode; lossy: ligatures, multiplication signs, superscripts, figure labels)"
+    },
+    "acquired_on": "2026-10-04",
+    "result_sha256": "d394d629c69569076688e684ad987bf6cc0bc6ceeb5ad11221b410a428817f1a"
+   }
+  },
+  {
+   "path": "files/figures/PMID42807309/page-5.png",
+   "sha256": "fcd347cbcea76832ad763c9c0b0505c013e008636dd3b06c024afd711187ac6d",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID42807309_16q231_pancreatitis_2026.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -f 5 -l 5 -r 110 -png <pdf> files/figures/PMID42807309/page"
+    },
+    "acquired_on": "2026-10-04",
+    "result_sha256": "fcd347cbcea76832ad763c9c0b0505c013e008636dd3b06c024afd711187ac6d"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "16q23.1 is named as a recurrent pleiotropic region in the abstract.",
+    "snippet": "recurrent signals at 2p21, 5q32, 7q34, and 16q23.1",
+    "anchor": "Abstract, Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42807309_16q231_pancreatitis_2026.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "16q23.1 recurred across all four acute-pancreatitis/fat pairs.",
+    "snippet": "The 2p21, 2q37.3, 5q32, 9q34.2, and 16q23.1 regions recurred",
+    "anchor": "Results, cross-trait pleiotropic architecture",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42807309_16q231_pancreatitis_2026.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors attribute the 16q23.1 locus to CTRB1/CTRB2.",
+    "snippet": "The 16q23.1 CTRB1/CTRB2 locus regulates trypsinogen and trypsin degradation",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42807309_16q231_pancreatitis_2026.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "CTRB1 is among genes detected across all four pairs by MAGMA.",
+    "snippet": "CTRB1, DPYD, PPP1R13B, PRSS1, SPINK1, TM4SF4, TRAF3, and ZFYVE21 were detected across all four pairs",
+    "anchor": "Results, shared pleiotropic genes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42807309_16q231_pancreatitis_2026.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Gene mapping used GRCh37/hg19 annotation and plus-minus 10 kb windows.",
+    "snippet": "1000 Genomes Phase 3 European LD and GENCODE GRCh37/ hg19 annotations",
+    "anchor": "Methods, MAGMA",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42807309_16q231_pancreatitis_2026.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state window mapping may assign variants to several neighbouring genes.",
+    "snippet": "may assign variants to multiple neighboring genes, introducing redundancy",
+    "anchor": "Discussion, limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42807309_16q231_pancreatitis_2026.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Three loci reached strong colocalization (PP.H4 of at least 0.80); the text does not name them.",
+    "snippet": "Bayesian colocalization analysis identified three loci with strong shared causal evidence",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42807309_16q231_pancreatitis_2026.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig. 3 legend: colocalised loci orange, MAGMA genes blue. Rendered panel shows 16q23.1 with BCAR1, CTRB1, CTRB2 labels and no WWOX label; an orange 16q23.1 node on the intrapancreatic-fat branch.",
+    "snippet": "Colocalized loci are marked in orange, and MAGMA-prioritized genes are shown in blue",
+    "anchor": "Fig. 3 legend",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID42807309_16q231_pancreatitis_2026.txt",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "The authors frame results as shared architecture, not causality.",
+    "snippet": "the findings should be interpreted as shared genetic architecture rather than definitive causality",
+    "anchor": "Discussion, limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42807309_16q231_pancreatitis_2026.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Functional validation (eQTL, single-cell, spatial) is listed as outstanding.",
+    "snippet": "Functional validation using expression quantitative trait locus (eQTL), single-cell, spatial transcriptomic",
+    "anchor": "Discussion, limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42807309_16q231_pancreatitis_2026.txt",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "The publisher PDF returned HTTP 200 (394,603 bytes) on 2026-10-04; the derived text layer is declared with its extractor and version."
+ }
+}
