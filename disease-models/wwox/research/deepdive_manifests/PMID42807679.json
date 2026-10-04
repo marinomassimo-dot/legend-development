@@ -68,11 +68,11 @@
   "note": "27 PubMed records; this one adds a heterozygous contiguous deletion carrier, not an allele-class observation."
  },
  "multihop": {
-  "references_enumerated": 0,
+  "references_enumerated": 30,
   "gene_direct_refs_in_source": [],
   "resolved": [],
   "queued": [],
-  "note": "References use author-year citation in the deposited XML; none of the cited titles concerns WWOX (WWOX occurs twice in the XML, both in Table 3)."
+  "note": "30 references enumerated (author-year citation style); none concerns WWOX (WWOX occurs twice in the XML, both in Table 3)."
  },
  "corpus_crossquery": {
   "query": "registry_records.py get --pmid 42807679 (run AFTER the first pass); allele-term theme searches for the comparison",
