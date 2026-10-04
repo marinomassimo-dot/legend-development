@@ -45,3 +45,19 @@ Owed: figures `captions_only`, supplement `not_read`. Read now: Figures 1-9 and 
 - **PAPER 167 and RL-GT-002 "no antibody assay anywhere" - FAILS as worded.** The Appendix holds a per-animal antibody-titre table (13 wild-type cynomolgus; every treated animal at least 3,540 by day 7; flat non-zero vehicle values; antigen not named, the text saying AAV9), and a cellular immune assessment is scheduled with no result listed. **"Tested only in wild-type animals" survives** on every surface: the knockout cohorts carry no immune panel. RL-GT-002's thesis is unchanged (no transgene-specific antibody assay, no protein-naive host). Candidate `CC-20261004W13-B-WISEMAN-ANTIBODY-01` (MINOR, with the MAJOR contingency stated there).
 - Additional internal inconsistencies: ELISpot n = 4 (Methods) vs n = 3 per group (EV5 legend); the EV5 title says "no B cell response" for a T-cell assay; Figure 9's title names DRG changes but the figure has no histology panel (the DRG findings are in an Appendix incidence table); the NHP dose is printed three ways.
 - Owed after this: the workbooks inside the source-data archives (route: the same Europe PMC supplementaryFiles archive, already persisted); ELISpot raw counts have no deposit.
+
+## What remains owed and why (per paper; last consolidation wave)
+| PMID | Surface still owed | Record waiting | Route to acquire |
+|---|---|---|---|
+| 40301740 | Figures 1-6 panels (not touched); publisher PDF; references | none (no landed record rests on them) | the panels are in the PMC JATS image paths already named in the manifest; fetch from the PMC CDN blob path |
+| 42136830 | publisher PDF article; references | none | PMC reader or publisher PDF (Frontiers, open access) |
+| 41966056 | Video S1 (a recording of the subject, deliberately not opened or kept); graphical abstract; Document S3 beyond a term search | none | the Europe PMC supplementaryFiles archive (already fetched; the video was not extracted) |
+| 41751597 | references; publisher PDF | none | publisher PDF (MDPI, open access) |
+| 41257285 | Tables S2-S12 row by row; Figures S5-S6 pixels; reference 11 (PMID 36700120, the NfL primary behind the cited sentence) | PAPER 179 (the cited-not-measured chain would close only by reading reference 11) | supplements already persisted under `files/supplement/PMID41257285/`; reference 11 via PMC (open access) |
+| 39358605 | workbooks inside the nine source-data archives (not opened); ELISpot raw counts have no deposit; references | PAPER 167 and RL-GT-002 (the antibody table's antigen is not named; only the authors could say) | archives already persisted under `files/supplement/PMID39358605/`; the antigen question has no lawful free route beyond the paper itself (author contact is reserved under section 21d) |
+
+## DEFAULTS_TAKEN
+- Receipts dated at preparation time (`date -u` minute), `analysis_at` five minutes earlier; dry-checked in order on throwaway ledger and manifest copies.
+- Five waived manifest blocks (41966056, 41257285) were completed rather than left waived so the manifests pass `--require-current-schema`.
+- Video S1 was not opened or kept (patient recording); individual-level values in Tables S1-S3 of 41966056 are not carried.
+- No registry candidate for new PAPER records: all six PMIDs are already registered (wave 13 is a re-read wave).
