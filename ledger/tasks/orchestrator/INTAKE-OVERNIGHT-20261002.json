@@ -30,9 +30,8 @@
         },
         {
           "step": "Fresh-clone battery on the exact SHA, gate, LINT, receipts verify, safe_push to development",
-          "status": "BLOCKED",
-          "blocker": "neuro-WWOX new-literature pool exhausted and the decisive targets are paywalled or absent (356 declared artefacts absent; PMIDs 10786676, 11719429, 28001369, 38407561, 40875931, 30202070 and the Steinberg 2026 supplement have no lawful free route); consolidation waves 12–13 done",
-          "unblock": "operator supplies the PDFs (as for Repudi 2021), or a new WWOX/WOREE/SCAR12/EIEE28 paper appears; then run the standing wave-proposal rule"
+          "status": "DONE",
+          "evidence": "repeated every wave; last: main a4f1623e battery 136 targets 0 red, safe_push PUBLISHED verified=ls-remote"
         }
       ]
     },
