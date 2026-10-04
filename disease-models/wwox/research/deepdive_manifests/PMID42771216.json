@@ -1,0 +1,199 @@
+{
+  "schema_version": 2,
+  "pmid": "42771216",
+  "doi": "10.1007/s11060-026-05807-w",
+  "receipt": "FTR-20261004-42771216-01",
+  "context_policy": "SOURCE_FIRST",
+  "landing": [
+    "disease-models/wwox/research/fulltext_dossiers/PMID42771216.md",
+    "disease-models/wwox/research/intake_wave_20261004w9_C.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261004W9-C-REGISTRY-01.md"
+  ],
+  "skills_considered": [
+    {
+      "skill": "find-fulltext",
+      "used": true
+    },
+    {
+      "skill": "legend-study-intake-triage",
+      "used": true
+    },
+    {
+      "skill": "legend-deepdive",
+      "used": true
+    },
+    {
+      "skill": "legend-discovery",
+      "used": false,
+      "reason": "The discovery ledger is owned by other batches; what this reading supports is proposed as commit candidates and in the intake note."
+    },
+    {
+      "skill": "legend-hypothesis-forge",
+      "used": false,
+      "reason": "One reading supplies at most a lever to state with its limits; forging a portfolio from it would manufacture leads."
+    },
+    {
+      "skill": "legend-safety-triage",
+      "used": false,
+      "reason": "No compound is proposed by this source."
+    },
+    {
+      "skill": "legend-commit",
+      "used": false,
+      "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+    },
+    {
+      "skill": "legend-locator-audit",
+      "used": false,
+      "reason": "The triples are published in the candidates for a blind auditor; the reader cannot audit their own locators."
+    }
+  ],
+  "group_assessment": {
+    "total_publications": 1,
+    "publications_on_gene": 0,
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": false,
+    "weighting": "Neuro-oncology vector group comparing two human ex vivo substrates for AAV delivery; no WWOX publication and WWOX occurs zero times in this source."
+  },
+  "field_density": {
+    "queries": [
+      {
+        "query": "AAV AND \"slice culture\" AND brain",
+        "count": 6,
+        "source": "PubMed ESearch rettype=count 2026-10-04"
+      },
+      {
+        "query": "AAV6 AND glioblastoma",
+        "count": 4,
+        "source": "PubMed ESearch rettype=count 2026-10-04"
+      }
+    ],
+    "note": "A small literature; this record is read only for the transferable platform question, not for WWOX content."
+  },
+  "multihop": {
+    "references_enumerated": 44,
+    "gene_direct_refs_in_source": [],
+    "resolved": [],
+    "queued": [],
+    "note": "44 references enumerated; WWOX occurs zero times in the source, so no gene-direct reference exists and no hop is owed."
+  },
+  "corpus_crossquery": {
+    "query": "registry_records.py get --pmid 42771216; fulltext_receipts.py status --pmid 42771216 (run AFTER the first pass)",
+    "hits": 0,
+    "note": "No registry record and no receipt before this reading."
+  },
+  "retraction_check": {
+    "checked": true,
+    "result": "Checked 2026-10-04 via PubMed ESummary: publication types ['Journal Article']; no retraction, expression of concern or correction listed for PMID 42771216.",
+    "dependencies": {
+      "flagged": [],
+      "noted": [],
+      "paper_verdict": "SCREENED_CLEAN",
+      "reference_source": "network",
+      "references_declared": 44,
+      "references_screened": 43,
+      "references_with_doi": 43,
+      "schema": "retraction_check.dependencies/1",
+      "screened": true,
+      "snapshot": {
+        "date": "2026-09-10",
+        "days_since_fetch": 24,
+        "rows": 72476,
+        "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+      },
+      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+      "unscreenable": {
+        "UNSCREENABLE_NO_DOI": 1
+      }
+    }
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID42771216_Kohler2026_PMC.xml",
+      "sha256": "99241ff474e7df4eb28413ad29ca09a823550f8908fd0e0edff148458b057064",
+      "kind": "article_text",
+      "note": "Europe PMC fullTextXML (117 394 B): body, methods, four figure legends, discussion with an explicit limitations paragraph, references.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13597561/fullTextXML",
+        "http_method": "GET",
+        "tier": "Europe PMC REST fullTextXML",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "99241ff474e7df4eb28413ad29ca09a823550f8908fd0e0edff148458b057064"
+      }
+    }
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "entries": [
+      {
+        "proposition": "WWOX appears zero times in this source: an earned null for the gene. The paper is read only for the transferable question of which human ex vivo substrate judges AAV delivery.",
+        "snippet": "PDNS provide a comparatively controlled patient-derived system for vector screening and investigation of tumor-cell-state-dependent effects, whereas PDTCs preserve patient-specific tissue architecture and microenvironmental features that influence vector distribution and cellular responses.",
+        "anchor": "Discussion, concluding paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42771216_Kohler2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Vector dose could not be titrated in the tissue slice model because tissue was limited, so the two substrates were never compared at a matched dose.",
+        "snippet": "Because tissue availability was limited, vector titration could not be performed in PDTCs, and the number of vector particles applied was estimated based on the cellular content of the tissue.",
+        "anchor": "Results, Patient-derived tissue culture",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42771216_Kohler2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Transduction of the slice cultures varied so much between specimens that some experiments showed none at all.",
+        "snippet": "In some experiments, no successful transduction could be detected under any condition.",
+        "anchor": "Results, Patient-derived tissue culture",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42771216_Kohler2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The vectors are self-complementary GFP constructs, so expression appears early and the readout is not a single-stranded cassette's kinetics.",
+        "snippet": "Self-complementary vector constructs were used, in which the vector genome folds back on itself and hybridizes intramolecularly, resulting in double-stranded DNA and enabling early transgene expression approximately 4 h after gene transfer.",
+        "anchor": "Methods, AAV transduction",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42771216_Kohler2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Expression in the spheroid model declined over two weeks under one culture condition, so a short endpoint can overstate durability.",
+        "snippet": "In EGF-containing medium, AAV6 initially produced higher GFP expression but showed a progressive decline from 0.171 at day 2 to 0.029 at day 14.",
+        "anchor": "Results, AAV transduction",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42771216_Kohler2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Vector genome abundance and fluorescence measure different steps, and the authors say neither resolves the sequence from entry to expression.",
+        "snippet": "Vector genome measurements do not distinguish cellular entry, intracellular trafficking, genome persistence, or genome processing, whereas GFP fluorescence additionally depends on transcription and translation.",
+        "anchor": "Discussion, limitations",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42771216_Kohler2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The slice model cannot answer systemic immune or long-term questions, which bounds any restoration-spec use of it.",
+        "snippet": "they remain ex vivo models that cannot fully reproduce systemic immune responses, vascular dynamics, or long-term tumor evolution",
+        "anchor": "Discussion, limitations",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42771216_Kohler2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Non-tumour adjacent tissue was transduced too, but only at the level of single uncharacterised cells.",
+        "snippet": "Both tissues showed transduction of single cells, although these cells were not further characterized",
+        "anchor": "Results, Patient-derived tissue culture",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42771216_Kohler2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      }
+    ],
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC REST fullTextXML returned HTTP 200 with a full JATS body on 2026-10-04; the declared article_text is that response.",
+    "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+  }
+}
