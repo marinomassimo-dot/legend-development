@@ -109,7 +109,7 @@ Commit candidates must declare their intended `target_wm_version`.
 last_batch_commit_id: BATCH_20261003_005
 last_batch_commit_date: 2026-10-03
 last_batch_commit_type: MANUAL
-commit_candidates_propagated: 13
+commit_candidates_propagated: 16
 target_wm_version: WM_v7.13
 trigger: MANUAL (operator-dispatched integration of intake wave 6 and the Repudi 2021 re-reading; the backlog threshold of 5 was also met, and three ORPHAN_COMPLETE_READ blocks standing on main were closed as the batch's first act)
 ```
