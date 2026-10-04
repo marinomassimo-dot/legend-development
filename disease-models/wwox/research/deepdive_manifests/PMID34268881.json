@@ -490,6 +490,82 @@
     "found_or_sought": "found",
     "qualifies": "entries[26]",
     "qualifies_needle": "Exact P‐values and the specific tests used"
+   },
+   {
+    "proposition": "In this paper's own deposited differential-expression tables, canonical Wnt/beta-catenin target genes are up in WWOX-KO cerebral organoids, which fixes the direction of the Wnt change in a human organoid system rather than inferring it.",
+    "snippet": "[spreadsheet attestation — read cell-wise from the workbook XML] Table EV1 (upregulated list) carries NKD1 padj 4.56E-4 log2FoldChange 1.23; AXIN2 padj 1.26E-2 log2FoldChange 0.79; LEF1 padj 1.22E-2 log2FoldChange 1.00; TCF7L2 padj 5.59E-4 log2FoldChange 1.04; CTNNB1 padj 1.58E-2 log2FoldChange 0.56; WNT8B padj 3.06E-3 log2FoldChange 3.17.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID34268881_assets/EMMM-13-e13610-s006.xlsx",
+    "anchor": "Table EV1, rows matched by exact gene symbol in the 'symbol' column; read cell-wise from xl/worksheets/sheet1.xml",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "Only two Wnt-pathway genes are in the downregulated list, and neither is a beta-catenin transcriptional target.",
+    "snippet": "[spreadsheet attestation — read cell-wise from the workbook XML] Table EV2 (downregulated list) carries FZD2 padj 3.36E-2 log2FoldChange -0.51 and WNT5B padj 1.49E-2 log2FoldChange -0.41, and no other Wnt-pathway symbol.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID34268881_assets/EMMM-13-e13610-s005.xlsx",
+    "anchor": "Table EV2, rows matched by exact gene symbol in the 'symbol' column; read cell-wise from xl/worksheets/sheet1.xml",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The astrocytic increase this paper reports is carried by immunofluorescence and immunoblot and not by its own transcriptome: the two markers it quantifies are absent from both differential-expression lists.",
+    "snippet": "[spreadsheet attestation — read cell-wise from the workbook XML] An exact-symbol match over the 'symbol' column of both lists (1,246 + 1,021 = 2,267 rows) returns zero rows for GFAP and zero rows for S100B, while AQP4 appears in Table EV1 with padj 5.69E-2 and log2FoldChange 2.70, SOX9 with padj 3.75E-2 and log2FoldChange 0.51, VIM with padj 4.15E-5 and log2FoldChange 0.82, and ALDH1L1 appears in Table EV2 with padj 6.74E-2 and log2FoldChange -0.56.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID34268881_assets/EMMM-13-e13610-s006.xlsx",
+    "anchor": "Tables EV1 and EV2, exact-symbol match over both 'symbol' columns; read cell-wise from xl/worksheets/sheet1.xml",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "qualifies": "entries[25]",
+    "qualifies_needle": "astrocytic levels"
+   },
+   {
+    "proposition": "NPY transcript is strongly reduced in human WWOX-KO cerebral organoids, and the article body never mentions it.",
+    "snippet": "[spreadsheet attestation — read cell-wise from the workbook XML] Table EV2 carries NPY with padj 4.62E-15 and log2FoldChange -6.24, the lowest adjusted P value of the 50-symbol glial, GABAergic and oligodendroglial panel matched against the two lists; the string NPY occurs zero times in the article JATS body.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID34268881_assets/EMMM-13-e13610-s005.xlsx",
+    "anchor": "Table EV2, row matched by exact gene symbol NPY; read cell-wise from xl/worksheets/sheet1.xml",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The microglial axis cannot be tested in this platform at all, and the oligodendroglial one is carried by two markers without a lineage.",
+    "snippet": "[spreadsheet attestation — read cell-wise from the workbook XML] Exact-symbol match over both lists returns zero rows for AIF1, P2RY12, CX3CR1, TMEM119, ITGAM, PTPRC, CSF1R and TREM2, and zero rows for OLIG1, OLIG2, SOX10, PLP1 and CSPG4, while PDGFRA appears in Table EV1 with padj 6.55E-3 and log2FoldChange 3.02 and MBP with padj 4.46E-2 and log2FoldChange 1.41.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID34268881_assets/EMMM-13-e13610-s006.xlsx",
+    "anchor": "Tables EV1 and EV2, exact-symbol match over both 'symbol' columns; read cell-wise from xl/worksheets/sheet1.xml",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The landed GABAergic marker pattern for this paper is confirmed at RNA-seq level, and GAD2 is not in the differential-expression tables.",
+    "snippet": "[spreadsheet attestation — read cell-wise from the workbook XML] Table EV1 carries GAD1 padj 1.22E-2 log2FoldChange 3.57 and SLC32A1 padj 4.33E-2 log2FoldChange 3.28; Table EV2 carries GABRB2 padj 3.36E-4 log2FoldChange -1.78 and GABRB3 padj 2.44E-3 log2FoldChange -0.92; exact-symbol match returns zero rows for GAD2, SLC17A7 and SLC17A6.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID34268881_assets/EMMM-13-e13610-s006.xlsx",
+    "anchor": "Tables EV1 and EV2, exact-symbol match over both 'symbol' columns; read cell-wise from xl/worksheets/sheet1.xml",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The two Expanded-View lists are nominal-P sets, not FDR sets, and the exact counts are now measured rather than described.",
+    "snippet": "[spreadsheet attestation — read cell-wise from the workbook XML] Over the 1,246 rows of Table EV1 and the 1,021 rows of Table EV2 the 'pvalue' column maxima are both 0.00999 while the 'padj' column maxima are both 0.0684; rows with padj above 0.01 number 728 and 704, rows with padj above 0.05 number 175 and 195, and the minimum absolute log2FoldChange is 0.260 in each list against a stated fold-change cut of 1.2 whose log2 is 0.2630.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID34268881_assets/EMMM-13-e13610-s006.xlsx",
+    "anchor": "Tables EV1 and EV2, 'pvalue', 'padj' and 'log2FoldChange' columns, all rows; read cell-wise from xl/worksheets/sheet1.xml",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "qualifies_needle": "giving a total of six samples used for further analysis",
+    "qualifies": "entries[2]"
+   },
+   {
+    "proposition": "The absence of WWOX from both deposited lists is re-established by exact count on the same bytes.",
+    "snippet": "[spreadsheet attestation — read cell-wise from the workbook XML] An exact-symbol match for WWOX over the 'symbol' column of both lists, 2,267 rows in total, returns zero rows.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID34268881_assets/EMMM-13-e13610-s006.xlsx",
+    "anchor": "Tables EV1 and EV2, 'symbol' column, all rows; read cell-wise from xl/worksheets/sheet1.xml",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found"
    }
   ]
  },
@@ -503,6 +579,19 @@
     "disease-models/wwox/research/fulltext_dossiers/PMID34268881.md",
     "disease-models/wwox/research/intake_wave_20261003_C.md",
     "disease-models/wwox/research/commit_candidates/CC-20261003-C-STEINBERG-PANELS-01.md"
+   ]
+  },
+  {
+   "receipt": "FTR-20261004-34268881-07",
+   "reader": "scientist (Scientist C), intake wave 12 2026-10-04 (RE-READ)",
+   "context_policy": "SOURCE_FIRST",
+   "what_changed": "Appended entries 32-39: eight table attestations from the two Expanded-View differential-expression workbooks, read cell-wise from the sheet XML for the first time (Wnt-pathway direction with per-row padj and log2FoldChange; the astro, microglial, oligodendroglial and GABAergic marker panel; the unreported NPY reduction; the nominal-P character of both lists and the absence of WWOX, both re-established by exact count). No existing entry was altered, and no figure panel was read by this reading.",
+   "outputs": [
+    "disease-models/wwox/research/fulltext_dossiers/PMID34268881.md",
+    "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
+    "disease-models/wwox/research/intake_wave_20261004w12_C.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261004W12-C-STEINBERG-ASTRO-01.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261004W12-C-WNT-DIRECTION-01.md"
    ]
   }
  ]
