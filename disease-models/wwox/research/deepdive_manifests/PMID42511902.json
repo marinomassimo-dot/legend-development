@@ -1,214 +1,290 @@
 {
- "schema_version": 2,
- "pmid": "42511902",
- "doi": "10.3390/biomedicines14071426",
- "receipt": "FTR-20261004-42511902-01",
- "context_policy": "SOURCE_FIRST",
- "landing": [
-  "disease-models/wwox/research/fulltext_dossiers/PMID42511902.md",
-  "disease-models/wwox/research/intake_wave_20261004w7_C2.md",
-  "disease-models/wwox/research/commit_candidates/CC-20261004W7-C2-REGISTRY-01.md",
-  "disease-models/wwox/research/commit_candidates/CC-20261004W7-C2-DOSE-ROUTE-01.md"
- ],
- "skills_considered": [
-  {
-   "skill": "find-fulltext",
-   "used": true
-  },
-  {
-   "skill": "legend-study-intake-triage",
-   "used": true
-  },
-  {
-   "skill": "legend-deepdive",
-   "used": true
-  },
-  {
-   "skill": "legend-discovery",
-   "used": false,
-   "reason": "No discovery ledger edit; any lead is proposed through a commit candidate."
-  },
-  {
-   "skill": "legend-hypothesis-forge",
-   "used": false,
-   "reason": "The paper is off-gene; forging hypotheses from it would manufacture a lead."
-  },
-  {
-   "skill": "legend-safety-triage",
-   "used": false,
-   "reason": "No compound is proposed for the reference genotype class."
-  },
-  {
-   "skill": "legend-commit",
-   "used": false,
-   "reason": "Scientists do not touch the four current files."
-  },
-  {
-   "skill": "legend-locator-audit",
-   "used": false,
-   "reason": "No proposed change narrows or reverses a consolidated baseline claim; triples are published in the candidate."
-  }
- ],
- "group_assessment": {
-  "total_publications": 0,
-  "publications_on_gene": 0,
-  "research_type": "experimental_lab",
-  "is_primary_group_for_disease": false,
-  "weighting": "Not assessed: the paper never mentions WWOX; group credibility for the reference genotype is not relevant to a vector-tropism comparison in wild-type mice."
- },
- "field_density": {
-  "queries": [
-   {
-    "query": "WWOX in the article text (case-insensitive count over the JATS body)",
-    "count": 0,
-    "source": "local XML count 2026-10-04"
-   }
+  "schema_version": 2,
+  "pmid": "42511902",
+  "doi": "10.3390/biomedicines14071426",
+  "receipt": "FTR-20261004-42511902-01",
+  "context_policy": "SOURCE_FIRST",
+  "landing": [
+    "disease-models/wwox/research/fulltext_dossiers/PMID42511902.md",
+    "disease-models/wwox/research/intake_wave_20261004w7_C2.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261004W7-C2-REGISTRY-01.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261004W7-C2-DOSE-ROUTE-01.md"
   ],
-  "note": "Not run; off-gene paper read only for the transferable capsid / age / route question."
- },
- "multihop": {
-  "references_enumerated": 36,
-  "gene_direct_refs_in_source": [],
-  "resolved": [],
-  "queued": [],
-  "note": "The word WWOX does not occur in the article; no reference is gene-direct, so there is no hop to queue."
- },
- "corpus_crossquery": {
-  "query": "registry_records.py get --pmid 42511902",
-  "hits": 0,
-  "note": "No registry record names this paper before this reading."
- },
- "retraction_check": {
-  "checked": true,
-  "result": "Checked 2026-10-04 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn, CommentIn or UpdateIn link; publication types Journal Article.",
-  "dependencies": {
-   "flagged": [],
-   "noted": [],
-   "paper_verdict": "SCREENED_CLEAN",
-   "reference_source": "network",
-   "references_declared": 36,
-   "references_screened": 36,
-   "references_with_doi": 36,
-   "schema": "retraction_check.dependencies/1",
-   "screened": true,
-   "snapshot": {
-    "date": "2026-09-10",
-    "days_since_fetch": 24,
-    "rows": 72476,
-    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
-   },
-   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
-   "unscreenable": {}
+  "skills_considered": [
+    {
+      "skill": "find-fulltext",
+      "used": true
+    },
+    {
+      "skill": "legend-study-intake-triage",
+      "used": true
+    },
+    {
+      "skill": "legend-deepdive",
+      "used": true
+    },
+    {
+      "skill": "legend-discovery",
+      "used": false,
+      "reason": "No discovery ledger edit; any lead is proposed through a commit candidate."
+    },
+    {
+      "skill": "legend-hypothesis-forge",
+      "used": false,
+      "reason": "The paper is off-gene; forging hypotheses from it would manufacture a lead."
+    },
+    {
+      "skill": "legend-safety-triage",
+      "used": false,
+      "reason": "No compound is proposed for the reference genotype class."
+    },
+    {
+      "skill": "legend-commit",
+      "used": false,
+      "reason": "Scientists do not touch the four current files."
+    },
+    {
+      "skill": "legend-locator-audit",
+      "used": false,
+      "reason": "No proposed change narrows or reverses a consolidated baseline claim; triples are published in the candidate."
+    }
+  ],
+  "group_assessment": {
+    "total_publications": 0,
+    "publications_on_gene": 0,
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": false,
+    "weighting": "Not assessed: the paper never mentions WWOX; group credibility for the reference genotype is not relevant to a vector-tropism comparison in wild-type mice."
+  },
+  "field_density": {
+    "queries": [
+      {
+        "query": "WWOX in the article text (case-insensitive count over the JATS body)",
+        "count": 0,
+        "source": "local XML count 2026-10-04"
+      }
+    ],
+    "note": "Not run; off-gene paper read only for the transferable capsid / age / route question."
+  },
+  "multihop": {
+    "references_enumerated": 36,
+    "gene_direct_refs_in_source": [],
+    "resolved": [],
+    "queued": [],
+    "note": "The word WWOX does not occur in the article; no reference is gene-direct, so there is no hop to queue."
+  },
+  "corpus_crossquery": {
+    "query": "registry_records.py get --pmid 42511902",
+    "hits": 0,
+    "note": "No registry record names this paper before this reading."
+  },
+  "retraction_check": {
+    "checked": true,
+    "result": "Checked 2026-10-04 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn, CommentIn or UpdateIn link; publication types Journal Article.",
+    "dependencies": {
+      "flagged": [],
+      "noted": [],
+      "paper_verdict": "SCREENED_CLEAN",
+      "reference_source": "network",
+      "references_declared": 36,
+      "references_screened": 36,
+      "references_with_doi": 36,
+      "schema": "retraction_check.dependencies/1",
+      "screened": true,
+      "snapshot": {
+        "date": "2026-09-10",
+        "days_since_fetch": 24,
+        "rows": 72476,
+        "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+      },
+      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+      "unscreenable": {}
+    }
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID42511902_Gao2026_PMC.xml",
+      "sha256": "1741e351fe392ef62ae74eefbbbb6a15132dab9ce00084d7d1bb6115fd36177d",
+      "kind": "article_text",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13405926/fullTextXML",
+        "http_method": "GET",
+        "tier": "Europe PMC REST fullTextXML",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "result_sha256": "1741e351fe392ef62ae74eefbbbb6a15132dab9ce00084d7d1bb6115fd36177d"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID42511902_Gao2026_figures/PMC13405926_supplementaryFiles.zip",
+      "sha256": "66d66cb2daf0ba26668816a963477e6e38ca2884bd31fa81a1ed5c5adcfcad1f",
+      "kind": "supplement_binary",
+      "note": "Container of the figure images; members extracted unchanged beside it. The article declares no supplement.",
+      "acquisition_recipe": {
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13405926/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "Europe PMC REST supplementaryFiles (zip as served; carries only the seven figure images, no supplement document)",
+        "result_sha256": "66d66cb2daf0ba26668816a963477e6e38ca2884bd31fa81a1ed5c5adcfcad1f"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID42511902_Gao2026_figures/biomedicines-14-01426-g005.jpg",
+      "sha256": "a03287fe6d243f3fb32946282e8105b357335e0fdcdcca03b4a67e16ac52571c",
+      "kind": "figure",
+      "note": "Figure 5: DRG eGFP images (A) and mean DRG eGFP intensity by capsid (B); inspected, bar positions measured against the printed ticks.",
+      "acquisition_recipe": {
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13405926/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+        "result_sha256": "a03287fe6d243f3fb32946282e8105b357335e0fdcdcca03b4a67e16ac52571c"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID42511902_Gao2026_figures/biomedicines-14-01426-g007.jpg",
+      "sha256": "143f7d849c7b9b7976301579badceb9f1c6ae12db63957f490db4a5aaeb39f69",
+      "kind": "figure",
+      "note": "Figure 7: serum ALT, AST, ALP-2c and total protein, four capsids against uninjected wild type; inspected.",
+      "acquisition_recipe": {
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13405926/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+        "result_sha256": "143f7d849c7b9b7976301579badceb9f1c6ae12db63957f490db4a5aaeb39f69"
+      }
+    }
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC REST fullTextXML for the PMC id returned HTTP 200 with a full JATS body on 2026-10-04; the artefact declared above is that response, so every body and table quote can be re-verified externally.",
+    "entries": [
+      {
+        "proposition": "All four capsids carried CMV-driven eGFP, not a therapeutic cargo.",
+        "snippet": "Each vector contained a genome expressing enhanced green fluorescent protein (eGFP) controlled by the cytomegalovirus (CMV) promoter",
+        "anchor": "Methods 2.1",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42511902_Gao2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Injection was intravenous (temporal vein) at postnatal day 2 and animals were analysed at P30.",
+        "snippet": "The mice were sacrificed on P30, after which analyses were performed.",
+        "anchor": "Results 3.1, para 1",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42511902_Gao2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The authors convert the per-pup dose to about 5 x 10^12 vg/kg for a roughly 2 g pup.",
+        "snippet": "For a P2 pup (~2.0 g body weight), this corresponds to approximately",
+        "anchor": "Results 3.1, para 1",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42511902_Gao2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "DRG transduction by rAAV2-retro and PHP.eB was minimal, 4- to 6-fold lower than AAV9 and MacpnS1, by eGFP fluorescence intensity.",
+        "snippet": "approximately 4- to 6-fold lower than those of AAV9 and AAV-MacpnS1",
+        "anchor": "Results 3.3",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42511902_Gao2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Liver stress markers were measured once, at 28 days; only MacpnS1 raised ALT and AST significantly.",
+        "snippet": "Only the AAV-MacpnS1 group registered significant increases in both",
+        "anchor": "Results 3.5",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42511902_Gao2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The authors state that serum enzyme elevation does not establish hepatotoxicity.",
+        "snippet": "An increase in serum transaminase alone does not definitively establish hepatotoxicity",
+        "anchor": "Results 3.5",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42511902_Gao2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Only one biochemical time point; no liver genome copies or histopathology.",
+        "snippet": "The biochemical analysis for this research was performed for a single time point only",
+        "anchor": "Discussion, limitations paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42511902_Gao2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "No immune endpoints (cytokines, anti-AAV antibodies, complement) were measured.",
+        "snippet": "without evaluation of broader immune responses, including cytokine profiles, anti-AAV antibody production, or complement activation",
+        "anchor": "Discussion, limitations paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42511902_Gao2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The neonatal blood-brain barrier at P2 is stated to be more permissive; findings are not to be extrapolated to adult CNS.",
+        "snippet": "our findings should not be directly extrapolated to adult CNS applications",
+        "anchor": "Discussion, last paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42511902_Gao2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "PHP.eB depends on Ly6a and is strain-specific; Ly6a and Ly6c1 are absent in primates.",
+        "snippet": "Ly6a and Ly6c1 are absent in primates",
+        "anchor": "Discussion, PHP.eB paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42511902_Gao2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The Discussion calls the MacpnS1 enzyme rise acute liver injury, stronger than the Results wording.",
+        "snippet": "ALT, AST, and ALP-2c levels increased significantly, indicating acute liver injury",
+        "anchor": "Discussion, MacpnS1 paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42511902_Gao2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The Methods give the dose as an absolute 1 x 10^10 vg per pup and the dilution recipe (20 microlitres saline plus about 2 microlitres of stock), then state that the entire mixture of about 22 microlitres was injected, so the 2 microlitre figure in the earlier Methods sentence is the stock volume and not the injected volume.",
+        "snippet": "The full ~22 µL mixture was aspirated into a 1 mL insulin syringe fitted with a 29-gauge needle for injection.",
+        "anchor": "Methods 2.2, virus injection",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42511902_Gao2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The Methods give the group size only as at least four biological replicates per group; the legends give 4 (cell counts), 5 (heat map and neuronal fraction), 6 (motor-neuron fraction, DRG and liver intensity) and 8 (serum chemistry).",
+        "snippet": "At least four biological replicates (individual mice) were carried out per group",
+        "anchor": "Methods, quantification and statistics (the only place the Methods state the group size; the legends give 4, 5, 6 and 8)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42511902_Gao2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Figure 5B measured against its printed ticks: the AAV9 and AAV-MacpnS1 bars sit near 7 x 10^7 and 6 x 10^7 arbitrary units, the rAAV2-retro bar near 0.4 to 0.9 x 10^7 and the AAV-PHP.eB bar near 0.1 to 0.3 x 10^7, that is about 8-fold to 18-fold lower for rAAV2-retro and more than 25-fold lower for AAV-PHP.eB than AAV9, against the text's 4- to 6-fold.",
+        "snippet": "Quantification of the mean fluorescence intensity of eGFP (per pixel) in DRG neurons",
+        "anchor": "Figure 5B (DRG mean eGFP intensity), bar tops read by pixel position against the printed 2 x 10^7 tick spacing (28.4 px per 10^7); dots and SEM marks overlay the bar tops so the values are approximate",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID42511902_Gao2026_figures/biomedicines-14-01426-g005.jpg",
+        "panel_text_relation": "text_contradicted_by_panel",
+        "contradicts": "entries[3]",
+        "contradicts_needle": "approximately 4- to 6-fold lower"
+      },
+      {
+        "proposition": "Figure 7 shows ALP-2c about 2.5 to 3 times the uninjected wild-type level in all four injected groups (about 250, 275, 300 and 310 U/L against about 100), while ALT and AST differ from wild type only in the AAV-MacpnS1 group; the control is uninjected wild type, with no vehicle-injected or eGFP-only arm.",
+        "snippet": "Wild-type (WT) mice without injections served as controls.",
+        "anchor": "Figure 7 legend and panels A to D (read from the panels; no numeric labels)",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID42511902_Gao2026_figures/biomedicines-14-01426-g007.jpg",
+        "panel_text_relation": "panel_only"
+      }
+    ]
   }
- },
- "source_artifacts": [
-  {
-   "path": "files/fulltext/PMID42511902_Gao2026_PMC.xml",
-   "sha256": "1741e351fe392ef62ae74eefbbbb6a15132dab9ce00084d7d1bb6115fd36177d",
-   "kind": "article_text",
-   "acquisition_recipe": {
-    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13405926/fullTextXML",
-    "http_method": "GET",
-    "tier": "Europe PMC REST fullTextXML",
-    "user_agent_policy": "none",
-    "acquired_on": "2026-10-04",
-    "result_sha256": "1741e351fe392ef62ae74eefbbbb6a15132dab9ce00084d7d1bb6115fd36177d"
-   }
-  }
- ],
- "verbatim_locators": {
-  "waived": false,
-  "source_fulltext_indexed": true,
-  "source_fulltext_indexed_evidence": "Europe PMC REST fullTextXML for the PMC id returned HTTP 200 with a full JATS body on 2026-10-04; the artefact declared above is that response, so every body and table quote can be re-verified externally.",
-  "entries": [
-   {
-    "proposition": "All four capsids carried CMV-driven eGFP, not a therapeutic cargo.",
-    "snippet": "Each vector contained a genome expressing enhanced green fluorescent protein (eGFP) controlled by the cytomegalovirus (CMV) promoter",
-    "anchor": "Methods 2.1",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID42511902_Gao2026_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "Injection was intravenous (temporal vein) at postnatal day 2 and animals were analysed at P30.",
-    "snippet": "The mice were sacrificed on P30, after which analyses were performed.",
-    "anchor": "Results 3.1, para 1",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID42511902_Gao2026_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "The authors convert the per-pup dose to about 5 x 10^12 vg/kg for a roughly 2 g pup.",
-    "snippet": "For a P2 pup (~2.0 g body weight), this corresponds to approximately",
-    "anchor": "Results 3.1, para 1",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID42511902_Gao2026_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "DRG transduction by rAAV2-retro and PHP.eB was minimal, 4- to 6-fold lower than AAV9 and MacpnS1, by eGFP fluorescence intensity.",
-    "snippet": "approximately 4- to 6-fold lower than those of AAV9 and AAV-MacpnS1",
-    "anchor": "Results 3.3",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID42511902_Gao2026_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "Liver stress markers were measured once, at 28 days; only MacpnS1 raised ALT and AST significantly.",
-    "snippet": "Only the AAV-MacpnS1 group registered significant increases in both",
-    "anchor": "Results 3.5",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID42511902_Gao2026_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "The authors state that serum enzyme elevation does not establish hepatotoxicity.",
-    "snippet": "An increase in serum transaminase alone does not definitively establish hepatotoxicity",
-    "anchor": "Results 3.5",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID42511902_Gao2026_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "Only one biochemical time point; no liver genome copies or histopathology.",
-    "snippet": "The biochemical analysis for this research was performed for a single time point only",
-    "anchor": "Discussion, limitations paragraph",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID42511902_Gao2026_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "No immune endpoints (cytokines, anti-AAV antibodies, complement) were measured.",
-    "snippet": "without evaluation of broader immune responses, including cytokine profiles, anti-AAV antibody production, or complement activation",
-    "anchor": "Discussion, limitations paragraph",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID42511902_Gao2026_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "The neonatal blood-brain barrier at P2 is stated to be more permissive; findings are not to be extrapolated to adult CNS.",
-    "snippet": "our findings should not be directly extrapolated to adult CNS applications",
-    "anchor": "Discussion, last paragraph",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID42511902_Gao2026_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "PHP.eB depends on Ly6a and is strain-specific; Ly6a and Ly6c1 are absent in primates.",
-    "snippet": "Ly6a and Ly6c1 are absent in primates",
-    "anchor": "Discussion, PHP.eB paragraph",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID42511902_Gao2026_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "The Discussion calls the MacpnS1 enzyme rise acute liver injury, stronger than the Results wording.",
-    "snippet": "ALT, AST, and ALP-2c levels increased significantly, indicating acute liver injury",
-    "anchor": "Discussion, MacpnS1 paragraph",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID42511902_Gao2026_PMC.xml",
-    "panel_text_relation": "text_only"
-   }
-  ]
- }
 }

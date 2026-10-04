@@ -21,6 +21,155 @@
         "http_status": 200,
         "bytes": 184534
       }
+    },
+    {
+      "path": "files/fulltext/PMID41078870_Okai2025_supplement/PMC12509745_supplementaryFiles.zip",
+      "sha256": "38f0b59083786440bda321748f6c28727b9fcccc24018fb0106dcc7854f66b46",
+      "kind": "supplement_binary",
+      "note": "Container of the supplement members and figure images; members extracted unchanged beside it.",
+      "acquisition_recipe": {
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12509745/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "Europe PMC REST supplementaryFiles (zip as served)",
+        "result_sha256": "38f0b59083786440bda321748f6c28727b9fcccc24018fb0106dcc7854f66b46"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID41078870_Okai2025_supplement/mmc1.pdf",
+      "sha256": "489919df63a9f2e4d7a4ed55784de84c629339b0444873aeb79cbc735d844af9",
+      "kind": "supplement_binary",
+      "note": "Document S1: Figures S1-S8, Tables S1-S6 and S9 (17 pages). Table S4 page rendered and compared with the text layer.",
+      "acquisition_recipe": {
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12509745/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+        "result_sha256": "489919df63a9f2e4d7a4ed55784de84c629339b0444873aeb79cbc735d844af9"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID41078870_Okai2025_supplement/mmc2.xlsx",
+      "sha256": "c1ed03ef418ffbf7f63e7c9e86003e070ea3d8256426982a9c2b3b465d7c3564",
+      "kind": "supplement_binary",
+      "note": "Table S7, clinical chemistry, study 1.",
+      "acquisition_recipe": {
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12509745/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+        "result_sha256": "c1ed03ef418ffbf7f63e7c9e86003e070ea3d8256426982a9c2b3b465d7c3564"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID41078870_Okai2025_supplement/mmc3.xlsx",
+      "sha256": "0923146bf5fb76bdfb06b64753070269b6a5601f0f6b7125fa2d6f30a71dc7e4",
+      "kind": "supplement_binary",
+      "note": "Table S8, clinical signs, study 2.",
+      "acquisition_recipe": {
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12509745/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+        "result_sha256": "0923146bf5fb76bdfb06b64753070269b6a5601f0f6b7125fa2d6f30a71dc7e4"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID41078870_Okai2025_supplement/mmc4.xlsx",
+      "sha256": "77695f300b69ff02334f2f2077979023fce74c03783e87859403b2885dc16e82",
+      "kind": "supplement_binary",
+      "note": "Table S10, haematology and coagulation, study 2.",
+      "acquisition_recipe": {
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12509745/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+        "result_sha256": "77695f300b69ff02334f2f2077979023fce74c03783e87859403b2885dc16e82"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID41078870_Okai2025_supplement/mmc5.xlsx",
+      "sha256": "35fe90b55bbd9955f921cecbed514f159be7ec697e6ea86ce688ab33ee3654f9",
+      "kind": "supplement_binary",
+      "note": "Table S11, clinical chemistry, study 2.",
+      "acquisition_recipe": {
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12509745/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+        "result_sha256": "35fe90b55bbd9955f921cecbed514f159be7ec697e6ea86ce688ab33ee3654f9"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID41078870_Okai2025_supplement/mmc3_cellwise.txt",
+      "sha256": "a6f4356a87bdd83a0d7035e9fd72b92449d326b3c08172b89767df10ec2b8628",
+      "kind": "supplement_text",
+      "note": "Cell-wise text of Table S8.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID41078870_Okai2025_supplement/mmc3.xlsx",
+        "extractor": {
+          "name": "local cell-wise workbook dump (Python zipfile and re over sheet XML and sharedStrings)",
+          "version": "scratchpad script xl2txt.py, Python 3.12",
+          "call": "one output line per sheet row, cells in column order separated by a vertical bar, shared strings resolved, empty cells dropped"
+        },
+        "acquired_on": "2026-10-04",
+        "result_sha256": "a6f4356a87bdd83a0d7035e9fd72b92449d326b3c08172b89767df10ec2b8628"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID41078870_Okai2025_supplement/mmc5_cellwise.txt",
+      "sha256": "62c4041f926e5395cf1316d514a972f185716b93d59923624bcd2ca8cc0e99e3",
+      "kind": "supplement_text",
+      "note": "Cell-wise text of Table S11 (AST, ALT, ALP, CK and further analytes by animal and day).",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID41078870_Okai2025_supplement/mmc5.xlsx",
+        "extractor": {
+          "name": "local cell-wise workbook dump (Python zipfile and re over sheet XML and sharedStrings)",
+          "version": "scratchpad script xl2txt.py, Python 3.12",
+          "call": "one output line per sheet row, cells in column order separated by a vertical bar, shared strings resolved, empty cells dropped"
+        },
+        "acquired_on": "2026-10-04",
+        "result_sha256": "62c4041f926e5395cf1316d514a972f185716b93d59923624bcd2ca8cc0e99e3"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID41078870_Okai2025_supplement/s4tab-13.png",
+      "sha256": "7f43296ea9f46ed46382de1b8d443d8746aa886eb3c8c7523bd521b27ad24297",
+      "kind": "figure",
+      "note": "Rendered page 13 carrying Table S4 (time-course NAb assay, study 2); the cell values were compared with the text layer.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID41078870_Okai2025_supplement/mmc1.pdf",
+        "extractor": {
+          "name": "pdftoppm (poppler-utils)",
+          "version": "24.02.0",
+          "call": "pdftoppm -f 13 -l 13 -r 80 -png mmc1.pdf s4tab"
+        },
+        "acquired_on": "2026-10-04",
+        "result_sha256": "7f43296ea9f46ed46382de1b8d443d8746aa886eb3c8c7523bd521b27ad24297"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID41078870_Okai2025_supplement/gr5.jpg",
+      "sha256": "22935f202362beffa360d8d5ede3695fedecf25ab932ddead51c4ddc150c9a0f",
+      "kind": "figure",
+      "note": "Figure 5: DRG haematoxylin-eosin and HA immunohistochemistry panels, study 2; inspected.",
+      "acquisition_recipe": {
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12509745/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+        "result_sha256": "22935f202362beffa360d8d5ede3695fedecf25ab932ddead51c4ddc150c9a0f"
+      }
     }
   ],
   "landing": [
@@ -162,6 +311,48 @@
         "artifact": "files/fulltext/PMID41078870_Okai2025_PMC.xml",
         "anchor": "Results, 'Immunohistochemistry', final sentence before Table 2",
         "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Two of the three AAV5 recipients moved across the NAb threshold on the pre-dose day (disclosed in the main text).",
+        "snippet": "we observed a modest NAb signal increase in two of three animals in the AAV5 group",
+        "artifact": "files/fulltext/PMID41078870_Okai2025_PMC.xml",
+        "anchor": "Results, NAb monitoring paragraph for study 2",
+        "surface": "body",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "DRG sections were examined in detail only in the three-month study, so the DRG denominator is the nine dosed animals of study 2 and not all dosed animals of both studies.",
+        "snippet": "sections were examined in detail in the three-month study",
+        "artifact": "files/fulltext/PMID41078870_Okai2025_PMC.xml",
+        "anchor": "Results, Toxicity endpoints",
+        "surface": "body",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The methylprednisolone dose for study 1 is printed as 20 mg/kg together with a 40 mg/mL, 1 mL/body preparation (a per-body quantity), so the per-weight and per-body statements do not agree on their face.",
+        "snippet": "and at 20 mg/kg (40 mg/mL, 1 mL/body) from day 3 to day 24 in study 1",
+        "artifact": "files/fulltext/PMID41078870_Okai2025_PMC.xml",
+        "anchor": "Methods, ICM AAV administration and CSF collection (immunosuppression sentence)",
+        "surface": "body",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "In the panel for the AAV5 animal with the DRG finding, the arrowed neuron in the HA immunostain is strongly positive; the legend does not say what the arrow in that panel marks.",
+        "snippet": "Positive IHC signals are visualized as brown staining",
+        "artifact": "files/fulltext/PMID41078870_Okai2025_PMC.xml",
+        "anchor": "Figure 5 legend",
+        "surface": "body",
+        "panel_text_relation": "panel_only",
+        "panel": "Figure 5, panel D (files/fulltext/PMID41078870_Okai2025_supplement/gr5.jpg)"
+      },
+      {
+        "proposition": "On the rendered Table S4 page the AAV5 recipients 6 and 8 carry pre-dose signal ratios of 44 and 48.4 judged positive and animal 7 carries 77.9 judged negative; all nine dosed animals are positive for their own capsid on days 57 and 90; vehicle animal 1 is negative for all three capsids on day 90.",
+        "snippet": "Screening for NAbs was conducted to select NAb-negative animals and the presence of NAbs was monitored throughout the study",
+        "artifact": "files/fulltext/PMID41078870_Okai2025_PMC.xml",
+        "anchor": "Results, NAb monitoring paragraph for study 2 (Table S4 read from the rendered page, not from the text layer, which this manifest does not quote because its text layer substitutes a digit for the multiplication sign)",
+        "surface": "body",
+        "panel_text_relation": "panel_only",
+        "panel": "Document S1 Table S4 (files/fulltext/PMID41078870_Okai2025_supplement/s4tab-13.png)"
       }
     ]
   }

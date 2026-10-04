@@ -21,6 +21,65 @@
         "http_status": 200,
         "bytes": 134828
       }
+    },
+    {
+      "path": "files/fulltext/PMID37515322_Hudry2023_supplement/PMC10556189_supplementaryFiles.zip",
+      "sha256": "a5c5feab3a5e91e48d84e876f73f928193b488f82333e029e0369cf264fbd6a2",
+      "kind": "supplement_binary",
+      "note": "Container of the supplement members and figure images; members extracted unchanged beside it.",
+      "acquisition_recipe": {
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10556189/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "Europe PMC REST supplementaryFiles (zip as served)",
+        "result_sha256": "a5c5feab3a5e91e48d84e876f73f928193b488f82333e029e0369cf264fbd6a2"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID37515322_Hudry2023_supplement/mmc1.pdf",
+      "sha256": "3a4a15e99fd08cf2fe08a0d4abc9ccb87ab71fae08486fdade788da36e300809",
+      "kind": "supplement_binary",
+      "note": "Supplemental information: Figures S1-S8 and Tables S1-S8 (23 pages).",
+      "acquisition_recipe": {
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10556189/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+        "result_sha256": "3a4a15e99fd08cf2fe08a0d4abc9ccb87ab71fae08486fdade788da36e300809"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID37515322_Hudry2023_supplement/mmc1.txt",
+      "sha256": "f8bfbe357e501e0b870d39ba14e1677e2fb3cf0de218433b719b2fe8837d7e4d",
+      "kind": "supplement_text",
+      "note": "Derived text layer of the supplemental information; locators match this text.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID37515322_Hudry2023_supplement/mmc1.pdf",
+        "extractor": {
+          "name": "pdftotext (poppler-utils)",
+          "version": "24.02.0",
+          "call": "pdftotext -layout -nopgbrk mmc1.pdf mmc1.txt"
+        },
+        "acquired_on": "2026-10-04",
+        "result_sha256": "f8bfbe357e501e0b870d39ba14e1677e2fb3cf0de218433b719b2fe8837d7e4d"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID37515322_Hudry2023_supplement/gr1.jpg",
+      "sha256": "1f980dbaa616b118e1910dcb7bd1045fad5af211ea49236d798962dc1c277131",
+      "kind": "figure",
+      "note": "Figure 1: vector-genome biodistribution by tissue (A) and liver by study (B); inspected.",
+      "acquisition_recipe": {
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10556189/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+        "result_sha256": "1f980dbaa616b118e1910dcb7bd1045fad5af211ea49236d798962dc1c277131"
+      }
     }
   ],
   "landing": [
@@ -161,6 +220,47 @@
         "surface": "body",
         "artifact": "files/fulltext/PMID37515322_Hudry2023_PMC.xml",
         "anchor": "Results, 'Acute toxicity and lethality after IV administration of scAAV9-CBA-ASPA'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The only occurrence of the abbreviation DRG in the article body is in the abbreviation list of the Figure 1 legend, where it names a biodistribution tissue; no dorsal-root-ganglion histopathology is reported.",
+        "snippet": "DRG, dorsal root ganglia; IT, intrathecal; IV, intravenous; SC, spinal cord; Vg, vector genome",
+        "artifact": "files/fulltext/PMID37515322_Hudry2023_PMC.xml",
+        "anchor": "Figure 1 legend, abbreviation list",
+        "surface": "body",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Figure 1A plots lumbar dorsal-root-ganglion vector-genome copies per diploid genome (vg/dg) for both IV and IT animals alongside liver, heart, muscle, kidney, lung, lumbar cord and cerebral cortex; the lumbar DRG points cluster near 1 to 20 vg/dg on a log axis with no numeric label (read from the panel); this is exposure, not a lesion.",
+        "snippet": "Vg biodistribution across key tissues",
+        "artifact": "files/fulltext/PMID37515322_Hudry2023_PMC.xml",
+        "anchor": "Figure 1 legend, panel A",
+        "surface": "body",
+        "panel_text_relation": "panel_only",
+        "panel": "Figure 1A (files/fulltext/PMID37515322_Hudry2023_supplement/gr1.jpg)"
+      },
+      {
+        "proposition": "The Methods describe histopathology generically (paraffin-embedded tissues, H&E, board-certified pathologists) without listing which tissues were examined, so whether DRG was sectioned is not stated.",
+        "snippet": "Paraffin-embedded tissues were processed, sectioned, and stained with H&E",
+        "artifact": "files/fulltext/PMID37515322_Hudry2023_PMC.xml",
+        "anchor": "Materials and methods, Light microscopy evaluation (histopathology)",
+        "surface": "body",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "In study A the vehicle group's day-1 anti-AAV9 antibody titres ranged from below the limit (under 20) to 10,240, so antibody-positive animals were on study; the text does not describe an exclusion by pre-dose titre.",
+        "snippet": "Group 1: Control <20 to 10,240 <20 to 20,480 <20",
+        "artifact": "files/fulltext/PMID37515322_Hudry2023_supplement/mmc1.txt",
+        "anchor": "Supplement, Table S3 (study A), row Group 1",
+        "surface": "supplement",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Study D vehicle animals had day-1 anti-AAV9 titres of 40, 160, 2560 and 640 before any dosing.",
+        "snippet": "Study Day P0001 P0002 P0003 P0004 1 40 160 2560 640",
+        "artifact": "files/fulltext/PMID37515322_Hudry2023_supplement/mmc1.txt",
+        "anchor": "Supplement, Table S6 (study D), vehicle group, day 1",
+        "surface": "supplement",
         "panel_text_relation": "text_only"
       }
     ]
