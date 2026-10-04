@@ -20,6 +20,37 @@ context_policy: SOURCE_FIRST
 | `test_link_targets.py` | FAILED on 5 wikilinks of mine → fixed → **OK** |
 | `test_section_references.py`, `test_fresh_clone_reader_journey.py`, `test_tool_routing.py` | **OK** |
 | `session_self_eval.py` | FAIL, for the same 7 pre-existing orphans |
+| `scripts/run_release_regressions.py` | **REGRESSION VERDICT: FAIL** — exactly 2 of 87 suites red, both diagnosed below; the other 85 exit 0 |
+
+## The two red suites, each diagnosed to its cause
+
+**`test_session_self_eval.py` — red on `main` as well; not this session's.** Run in the root
+checkout on `main`: `MAIN_EXIT=1`, `AssertionError: 0 != 1 : receipts: 391 |
+complete_fulltext_events: 154 | active_complete_reads: 141 | unread_premises: 0/0`. It fails on the
+same 7 pre-existing `ORPHAN_COMPLETE_READ`. This branch did not turn it red.
+
+**`test_manifest_receipt_provenance.py` — green on `main`, red here, and the transient is
+demonstrated to self-close.** On `main`: exit 0, "15 non-conforming (ceiling 15)". On this branch:
+exit 1, `AssertionError: 15 != 21`, and the six added are named — `PMID33129329`, `PMID40952239`,
+`PMID41036104`, `PMID41744777`, `PMID42136830`, `PMID42137269`, every one `UNKNOWN_EVENT`, i.e.
+"the declared receipt is not in the ledger". That is brief correction 3's transient exactly: the
+manifests declare receipts the integrator has not yet appended.
+
+Re-running the module's own `assess()` over all manifests twice — against the live ledger, and
+against the live ledger with this wave's six prepared receipts appended, writing nothing:
+
+```
+live events 391; appending 6 prepared receipts
+BASELINE_DEFECTS declared in the module: 15
+non-conforming with the live ledger      : 21
+non-conforming with the six appended     : 15
+closed by appending : PMID33129329, PMID40952239, PMID41036104, PMID41744777, PMID42136830, PMID42137269
+newly opened        : []
+```
+
+Defects return to the ceiling, the six closed are precisely this session's, and **nothing new
+opens**. The ceiling was never raised and is not proposed to be. On that measurement, and only that
+measurement, this branch lands.
 
 ### The LINT block is not this session's
 
