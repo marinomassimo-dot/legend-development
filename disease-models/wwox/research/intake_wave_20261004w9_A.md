@@ -43,3 +43,18 @@ CSF mL is 1.525 times the mouse top dose per mL (381 times in total vg). A scrip
 Table S5 was abandoned (parser error), so none is claimed. Records: `DL-MECH-114` narrowed (wording),
 `DL-METH-117` gap closed, `PAPER 216` / `LIT-0508` status lines narrowed; `DIS-031`, `DL-METH-120`
 unaffected. WWOX content none.
+
+## 3 · PMID 42395553 (Petrozziello 2026, bioRxiv preprint, NOT peer reviewed) — receipt `FTR-20261004-42395553-02`, candidate `CC-20261004W9-A-PETROZZIELLO-PANELS-01`
+
+Owed: figure panels and supplement. Used the declared PDF (sha256 90078770d759...b746 re-measured, equal;
+no fresh download). The PDF embeds the three supplementary figures. Viewed: Figures 3, 4, 5, 7, Supp Fig 2.
+
+Fig 4B: toxicity in both cortical-neuron lines (hand ratios 0.71 and 0.64 of vehicle), genotype main effect
+p = 0.0192 and interaction p = 0.5804 (both recomputed). Fig 5B: the applied-protein gamma-H2AX rise is
+~10 percent while Supp Fig 2 shows viability ~0.32 of vehicle at the same concentration and time, so
+damage and cytotoxicity are not separable. Fig 7: the "not instability" half is one overexpression-only
+RPE-1 CAG115 reporter (six clones per arm, 42 days); Fig 3B correlates WWOX with the inherited repeat
+length, not somatic instability. Printed p for Fig 7C (F(2,11) = 18.07, p = 0.003) recomputes to 0.00033.
+Records: `CLAIM 011` PREMISE_TAG and the working model's dose-ceiling paragraph carry "no between-genotype
+comparison is reported" / "Figure 4B is unread" — narrowed (a genotype main effect is reported; panel read);
+their conclusion holds. `DIS-028` holds, with magnitudes added. Status unchanged: preprint, partial read.
