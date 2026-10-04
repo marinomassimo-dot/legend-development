@@ -12,6 +12,7 @@ Receipts: `FTR-20261004-42511902-01`, `FTR-20261004-42137291-01` (prepared, not 
 - **Adds** to the restoration-spec route row: neonatal IV with four capsids; DRG transduction by reporter intensity high with AAV9 and MacpnS1, 4- to 6-fold lower with rAAV2-retro and PHP.eB; serum ALT and AST raised only with MacpnS1 at one time point.
 - **Bounds** both: single dose, single age, single harvest in 42511902; sponsor package with a muscle promoter in 42137291; no immunosuppression and no immune endpoint beyond anti-AAV9 antibody presence (42137291) or none (42511902).
 - **Leaves untouched** the window record (`CC-20261003W5-A-WINDOW-STATUS-01`): neither paper has an age contrast.
+- **Adds** that the same package's planned human fixed starting doses (5.0E+14 and 1.0E+15 vg) exceed its highest NHP per-animal total (3.05E+14 vg): a per-animal-total comparison and a CSF-volume comparison give different margins (the printed margin calculation is not in the body; Table S3 unread).
 - **Carried-number integrity:** 42511902 states a 2 uL injection volume and describes a ~22 uL mixture, and n "at least four" against n = 6 and n = 8 in legends; carry its numbers with these.
 
 ## 2 · Op — discovery_ledger_current.md
@@ -49,4 +50,5 @@ two-fold per kilogram within a single paper.
 - (No immune endpoints measured | without evaluation of broader immune responses, including cytokine profiles, anti-AAV antibody production, or complement activation | Discussion, limitations, `files/fulltext/PMID42511902_Gao2026_PMC.xml`)
 - (Mouse-to-NHP CSF-volume scale-up | scale up from mice with estimated CSF volume of 0.04 mL to juvenile NHP with estimated CSF volume of 10 mL | Results, Biodistribution, `files/fulltext/PMID42137291_Thomsen2026_PMC.xml`)
 - (GLP NHP animal size | male juvenile (7–12 months of age, with an average body weight of 1–2 kg) cynomolgus macaque NHPs | Methods, Nonhuman primates, `files/fulltext/PMID42137291_Thomsen2026_PMC.xml`)
+- (Planned human fixed starting doses | fixed starting doses of INS1201 (5.0E+14 vg and 1.0E+15 vg) | Introduction, last paragraph, `files/fulltext/PMID42137291_Thomsen2026_PMC.xml`)
 - (Dose plateau attributed to treatment age | further increases in dose might not be expected to provide additional added benefit when dosed at this time point | Discussion, `files/fulltext/PMID42137291_Thomsen2026_PMC.xml`)

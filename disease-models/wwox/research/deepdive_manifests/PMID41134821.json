@@ -6,7 +6,9 @@
  "context_policy": "SOURCE_FIRST",
  "landing": [
   "disease-models/wwox/research/fulltext_dossiers/PMID41134821.md",
-  "disease-models/wwox/research/intake_wave_20261004w7_C2.md"
+  "disease-models/wwox/research/intake_wave_20261004w7_C2.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W7-C2-REGISTRY-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W7-C2-DRG-IMAGING-01.md"
  ],
  "skills_considered": [
   {
