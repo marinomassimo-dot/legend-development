@@ -60,6 +60,6 @@ response is byte-identical (SHA-256) to the copy the Orchestrator had staged, an
   control while panel G shows actin. Neither changes the qualitative reading, both weaken the blot as a
   quantified dose.
 - Class transfer: neither allele is in the class of any reference-genotype allele named in the brief
-  (Q230P missense in the WW2/linker region; splice-site alleles). `p.(Thr12Arg)` is an N-terminal exon-1
-  missense, upstream of WW1; the SV is an exon-5 inversion. **No transfer.**
+  (Q230P missense; splice-site alleles). `p.(Thr12Arg)` is an exon-1 missense near the N-terminus; the SV is
+  an exon-5 inversion with flanking intronic deletions. **No transfer.**
 - References: 74; **zero** WWOX gene-direct references (earned null for multihop).
