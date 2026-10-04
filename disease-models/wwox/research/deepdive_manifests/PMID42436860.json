@@ -1,0 +1,268 @@
+{
+ "schema_version": 2,
+ "pmid": "42436860",
+ "doi": "10.1016/j.omta.2026.201794",
+ "receipt": "FTR-20261004-42436860-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID42436860.md",
+  "disease-models/wwox/research/intake_wave_20261004w11_C.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W11-C-REGISTRY-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Discovery ledger is owned by another batch; no lead emerged from this reading."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "Nothing here supplies a lever for the reference genotype class; forging from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged; the paper tests no compound for BLOCK-1."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes go through commit candidates."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; triples are published in the candidates."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "Not assessed beyond front matter. Preclinical peripheral-sensory-neuron AAV analgesia work (rat, human sensory neurons in culture). WWOX is named zero times."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND dorsal root ganglion",
+    "count": 2,
+    "source": "PubMed ESearch 2026-10-04"
+   },
+   {
+    "query": "sodium channel AND AAV AND sciatic nerve",
+    "count": 1,
+    "source": "PubMed ESearch 2026-10-04"
+   }
+  ],
+  "note": "Not a WWOX paper; counts show the WWOX-DRG intersection in PubMed is not empty (2) but this paper is not part of it."
+ },
+ "multihop": {
+  "references_enumerated": 71,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "71 references enumerated by count from the JATS list; none concerns WWOX (gene named zero times), so no gene-direct hop exists."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42436860; paper_packet.py packet --pmid 42436860",
+  "hits": 0,
+  "note": "No registry record or prior receipt for this PMID."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-04 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn or CommentIn link; publication type Journal Article.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "UNSCREENABLE_NO_REFERENCE_LIST",
+   "reference_source": "network",
+   "references_declared": 0,
+   "references_screened": 0,
+   "references_with_doi": 0,
+   "schema": "retraction_check.dependencies/1",
+   "screened": false,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 22,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42436860_NaViPA1_2026_PMC.xml",
+   "sha256": "100c4ed627153570b21466124eefb4c5f27aaaf97d24e47e56c31a2cceb49916",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13355166/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "100c4ed627153570b21466124eefb4c5f27aaaf97d24e47e56c31a2cceb49916"
+   }
+  },
+  {
+   "path": "files/figures/PMID42436860/gr5.jpg",
+   "sha256": "21ade5fa43d3029c1b34f27e3bdf53d4c96c06ed584da6b77c0ac8e58f31dafa",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/c7b8/13355166/e9bdc8c8e13d/gr5.jpg",
+    "http_method": "GET",
+    "tier": "PMC CDN blob URL named by the article page",
+    "user_agent_policy": "browser_like",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "21ade5fa43d3029c1b34f27e3bdf53d4c96c06ed584da6b77c0ac8e58f31dafa"
+   }
+  },
+  {
+   "path": "files/figures/PMID42436860/gr6.jpg",
+   "sha256": "a28ce0df12d04754f68b9ab37efaa6655c19c3492696572828e7919d81a4278d",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/c7b8/13355166/045972cc9851/gr6.jpg",
+    "http_method": "GET",
+    "tier": "PMC CDN blob URL named by the article page",
+    "user_agent_policy": "browser_like",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "a28ce0df12d04754f68b9ab37efaa6655c19c3492696572828e7919d81a4278d"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Dose: 4e11 GC in 20 microlitres per rat, into the sciatic nerve subepineural space.",
+    "snippet": "GC (20 μL) containing 0.1% Fast Green",
+    "anchor": "Methods, AAV sciatic nerve injection",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42436860_NaViPA1_2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Dose chosen from a pilot of two rats per dose, assayed only for transgene copy number at 3 weeks; data not shown.",
+    "snippet": "in the pilot study, for which we found less efficacy of transgene expression at a lower dose",
+    "anchor": "Methods, AAV sciatic nerve injection",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42436860_NaViPA1_2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The pilot found less transgene at the lower doses.",
+    "snippet": "1 × 1011 GC/5 μL, 2 × 1011 GC/10 μL, and 4 × 1011 GC/20 μL of AAV6.2FF-CoNaViPA (two rats for each dose)",
+    "anchor": "Methods, AAV sciatic nerve injection",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42436860_NaViPA1_2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Off-target organs and fluids: genome signal below the 500-copy cutoff.",
+    "snippet": "There were weak qPCR signals of the AAV genome below the cutoff of 500 copies in the liver, kidney, heart, blood, and biofluids",
+    "anchor": "Results, qPCR biodistribution",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42436860_NaViPA1_2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig. 5 legend places the injection in the DRG, whereas Methods and Results say sciatic nerve.",
+    "snippet": "harvested 3 months after AAV6.2FF-CoNaViPA1 injection into RL4 and RL5 DRG, ipsilateral to TNI",
+    "anchor": "Fig. 5 legend",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID42436860_NaViPA1_2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Histology read at 12-14 weeks: no microscopic pathology versus naive.",
+    "snippet": "no observable microscopic pathology compared to tissues from naive animals",
+    "anchor": "Results, pathology",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42436860_NaViPA1_2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Mild satellite-glia and microglia proliferation is reported in treated TNI DRG versus naive (the compared group is naive, not TNI plus control vector, in this passage).",
+    "snippet": "mild proliferation of GFAP-positive satellite glial cells and Iba1-positive microglia",
+    "anchor": "Results, pathology",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42436860_NaViPA1_2026_PMC.xml",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "No T-cell marker positive cells at 3 months.",
+    "snippet": "We did not observe any positive cells labeled with CD6, a pan-T cell marker",
+    "anchor": "Results, pathology",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42436860_NaViPA1_2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Capsid-specific humoral immunity was not examined.",
+    "snippet": "Although the AAV capsid-specific humoral immunity was not examined in this study",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42436860_NaViPA1_2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state the reduced-immunogenicity reading of persistent genome is untested.",
+    "snippet": "this speculation needs to be tested experimentally in future investigations",
+    "anchor": "Discussion, limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42436860_NaViPA1_2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Retrograde transport to spinal motor neurons by intrasciatic delivery is acknowledged.",
+    "snippet": "intrasciatic delivery of AAV can be retrogradely transported to spinal cord motor neurons",
+    "anchor": "Discussion, limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42436860_NaViPA1_2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Marginal genome signal in liver, kidney, heart and biofluids in several animals is acknowledged.",
+    "snippet": "the AAV genome was detected at marginal levels in the liver, kidney, heart, and biofluids",
+    "anchor": "Discussion, limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42436860_NaViPA1_2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Methods list adult male rats only, while Results report female rats.",
+    "snippet": "Adult male Sprague-Dawley (SD) rats weighing 100–125 g",
+    "anchor": "Methods, Animals",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42436860_NaViPA1_2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Human sensory-neuron electrophysiology used lentiviral, not AAV, delivery.",
+    "snippet": "We first produced a high-titer lentiviral vector (LV)-encoded CoNaViPA1 or CoNP",
+    "anchor": "Results, human DRG neurons",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42436860_NaViPA1_2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC13355166/fullTextXML returned a full JATS body on 2026-10-04; the artefact declared is that response."
+ }
+}
