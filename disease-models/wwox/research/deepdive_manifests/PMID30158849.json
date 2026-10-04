@@ -502,5 +502,18 @@
       "FTR-20260811-30158849-01",
       "full_text_queue_current.md#FT-002"
     ]
-  }
+  },
+  "reading_history": [
+    {
+      "receipt": "FTR-20261004-30158849-03",
+      "reader": "scientist (Scientist C), intake wave 13 2026-10-04",
+      "context_policy": "QUESTION_DRIVEN",
+      "what_changed": "Declared a full cell-wise dump of Table_1.XLSX; inspected Figures 1-5 as images; appended four entries. The pT12 negative survives on every surface; the PAPER 150 phrase 'pY287 to proteasomal turnover' has no source in this review; the deposited 'Table S1' holds brain-structure z-scores, not the ER/WWOX comparison its caption names. No earlier entry altered; the manifest receipt field stays on the producing reading.",
+      "outputs": [
+        "disease-models/wwox/research/fulltext_dossiers/PMID30158849.md",
+        "disease-models/wwox/research/intake_wave_20261004w13_C.md",
+        "disease-models/wwox/research/commit_candidates/CC-20261004W13-C-PHOSPHOCODE-01.md"
+      ]
+    }
+  ]
 }
