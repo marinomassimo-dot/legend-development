@@ -2655,7 +2655,7 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration.
 
 ## CORPUS P225
-**Short title:** Identification of a novel splice-site WWOX variant with paternal uniparental...
+**Short title:** Identification of a novel splice-site WWOX variant with uniparental [the side of origin was removed 2026-10-04 by `BATCH_20261004_004` for the public-edition privacy design, on a finding of intake wave 11; the superseded wording is deliberately NOT quoted — the published title's own wording stays only in the paper registry's `Full title` field, which is bibliography]
 **Full title:** Identification of a novel splice-site WWOX variant with paternal uniparental isodisomy in a patient with infantile epileptic encephalopathy
 **Authors:** Nishino et al.
 **Year:** 2024
@@ -9852,7 +9852,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Model/species:** human
 **Genotype/model:** one case, WWOX `c.1056+5G>C` (a donor +5 allele; placing it in **intron 8** is this repository's derivation from the WWOX exon map — `INFERENZA`, the source numbers no intron and no exon), autosomal recessive; zygosity and second allele not printed
 **Transferability:** T1 for feasibility of measuring WWOX splicing in blood RNA; T3 for the reference genotype's acceptor allele (different position)
-**clinical relevance:** MODERATE — a measured WWOX splice outcome in the same intron as the reference genotype's splice allele
+**clinical relevance:** MODERATE — a measured WWOX splice outcome which, **under this repository's exon-map derivation** (`INFERENZA`, see `Genotype/model`: the source numbers no intron), falls in the same intron as the reference genotype's splice allele; the adjacency is derived, not printed anywhere
 **Claim links:** CLAIM 033 (evidence boundary added by `CC-20261004W7-B-SPLICE-MEASURED-01`; the measured blood-RNA splice outcome)
 **Role:** EDTA-blood amplicon RNA-seq, net abnormal-junction threshold 20 %; Case 5 reclassified VUS → LP, RNA consequence 'partial exon deletion', positive, ID/DD. 🔴 No junction, read fraction, frame, NMD or protein reported; the assay reads neither expression nor NMD.
 **LIT link:** [[literature_tracking_log_current#LIT-0502]]
@@ -10218,7 +10218,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 ## PAPER 228
 **Short title:** Nabakowski 2026 Cells — liver de-targeting ~127-fold, at eight-fold worse packaging and fewer brain vector genomes
 **Full title:** A Rationally Designed AAV9-DM Capsid with Minimal Liver Tropism
-**Authors:** Nabakowski ZC, Jaramillo IC, Tanachaiwiwat P, Keeler GD, Chen S-H
+**Authors:** Nabakowski ZC, Jaramillo IC, Tanachaiwiwat P, Keeler GD [corrected 2026-10-04 by `CC-20261004-MIRROR-31`, replacing *«Nabakowski ZC, Jaramillo IC, Tanachaiwiwat P, Keeler GD, Chen S-H»*: Chen S-H is the journal's Academic Editor in the JATS `editor` contrib-group, not an author — the same defect `CC-20261004-MIRROR-22` repaired in `PAPER 214`]
 **Year:** 2026
 **Source type:** primary research — capsid engineering
 **Journal/source:** *Cells* 2026;15(4):334

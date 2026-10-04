@@ -5987,7 +5987,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Note:** Title: Deletion of the WWOX gene and frequent loss of its protein expression in human osteosarcoma
 
 ## LIT-0225
-**Short title:** Identification of a novel splice-site WWOX variant with paternal uniparental...
+**Short title:** Identification of a novel splice-site WWOX variant with uniparental [the side of origin was removed 2026-10-04 by `BATCH_20261004_004` for the public-edition privacy design, on a finding of intake wave 11; the superseded wording is deliberately NOT quoted — the published title's own wording stays only in the paper registry's `Full title` field, which is bibliography]
 **Authors:** Nishino et al.
 **Year:** 2024
 **Source type:** Case Reports
@@ -6018,7 +6018,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Current status:** screened — B
 **Next action:** full-text retrieval; depth pass if model-shifting
 **Flags:** FASE 1 batch entry / no deep-dive yet
-**Note:** Title: Identification of a novel splice-site WWOX variant with paternal uniparental isodisomy in a patient with infantile epileptic encephalopathy
+**Note:** Title: the article's published title is quoted in the paper registry's [[paper_registry_current#CORPUS P225]] `Full title` field and is not duplicated here, because it names a side of origin [the side of origin was removed 2026-10-04 by `BATCH_20261004_004` for the public-edition privacy design, on a finding of intake wave 11; the superseded wording is deliberately NOT quoted — the published title's own wording stays only in the paper registry's `Full title` field, which is bibliography]
 
 ## LIT-0226
 **Short title:** A WWOX-binding molecule, transmembrane protein 207, is related to the invasiv...
@@ -14588,7 +14588,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 
 ## LIT-0520
 **Short title:** Nabakowski 2026 Cells — liver de-targeting ~127-fold, at eight-fold worse packaging and fewer brain vector genomes
-**Authors:** Nabakowski ZC, Jaramillo IC, Tanachaiwiwat P, Keeler GD, Chen S-H
+**Authors:** Nabakowski ZC, Jaramillo IC, Tanachaiwiwat P, Keeler GD [corrected 2026-10-04 by `CC-20261004-MIRROR-31`, replacing *«Nabakowski ZC, Jaramillo IC, Tanachaiwiwat P, Keeler GD, Chen S-H»*: the fifth name is the journal's Academic Editor, not an author]
 **Year:** 2026
 **Source type:** primary research — capsid engineering
 **Journal/source:** *Cells* 2026;15(4):334
@@ -15011,7 +15011,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 
 ---
 ## LIT-0538
-**Short title:** Ruhela 2026 Research Square (PREPRINT — NOT PEER REVIEWED) — a GWAS integrating maternal and child genotypes for fetal alcohol spectrum disorders; the WWOX result is an unreplicated common-variant modifier association
+**Short title:** Ruhela 2026 Research Square (PREPRINT — NOT PEER REVIEWED) — a GWAS integrating parental and child genotypes for fetal alcohol spectrum disorders; the WWOX result is an unreplicated common-variant modifier association [design descriptor generalised 2026-10-04 by `BATCH_20261004_004`: the side named here is not carried in this edition]
 **Authors:** Ruhela V, Lesseur C, Cilleros-Portet A, Jacobson SW, Jacobson JL, Meintjes EM, Dodge NC, Akkaya-Hocagil T, Hoyme HE, Cheng H, Chen J, Hao K, Deyssenroth MA, Tosto G, Carter RC
 **Year:** 2026
 **Source type:** preprint — NOT PEER REVIEWED
