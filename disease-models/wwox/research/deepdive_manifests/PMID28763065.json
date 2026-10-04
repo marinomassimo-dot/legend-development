@@ -8,7 +8,8 @@
   "disease-models/wwox/research/fulltext_dossiers/PMID28763065.md",
   "disease-models/wwox/research/intake_wave_20261002_B.md",
   "disease-models/wwox/research/commit_candidates/CC-20261002-B-NONLINEAGE-01.md",
-  "disease-models/wwox/research/commit_candidates/CC-20261002-B-INTRON8-01.md"
+  "disease-models/wwox/research/commit_candidates/CC-20261002-B-INTRON8-01.md",
+  "disease-models/wwox/research/intake_wave_20261004w13_A.md"
  ],
  "skills_considered": [
   {
@@ -170,6 +171,83 @@
    "acquisition_recipe": {
     "no_recipe": "Member tp2017159f4.jpg extracted unchanged by Python zipfile from the Europe PMC REST supplementaryFiles bundle for PMC5611727 (fetched 2026-10-02; bundle not retained)."
    }
+  },
+  {
+   "path": "files/fulltext/PMID28763065_Xia2017_supplement/tp2017159x2.pdf",
+   "sha256": "1641aae51d439db12464999cc7594b5669adf785b9b715b2c6de9d76598f82c7",
+   "kind": "supplement_binary",
+   "note": "Supplementary Table 5 (bioinformatics integration), 5 pages; md5 equals the JATS suppdata-md5 d66d530e272fcead8b90bc5a05b2b644. Member of the Europe PMC supplementaryFiles archive for PMC5611727 (archive sha256 bcb0ddfba7588b6a4a9a04d6dad123c6d5bc02e7288ed5aa9063539c91bc4213, 31,207,478 bytes, fetched 2026-10-04); its docx and figure members are byte-identical to the artefacts declared above. Read through its pdftotext -layout text layer (tp2017159x2_pdftotext.txt, sha256 074e844fa848f7db006de9542cd00ce72cc6123ae69e066c43846bb975c01357, kept on disk beside it); no locator rests on it, and that layer is not declared because the manifest-wide font screen refuses any derived .txt beside the two CMap-less appendix PDFs.",
+   "acquisition_recipe": {
+    "no_recipe": "extracted with Python zipfile from the Europe PMC supplementaryFiles archive GET https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5611727/supplementaryFiles (2026-10-04, HTTP 200, 31,207,478 bytes, archive sha256 bcb0ddfba7588b6a4a9a04d6dad123c6d5bc02e7288ed5aa9063539c91bc4213); the archive itself was not persisted"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID28763065_Xia2017_supplement/tp2017159x3.pdf",
+   "sha256": "32cbab37279231a59e8a523c72f2e0c5fe9af0c3afd6c93fdacb62aef7f8403b",
+   "kind": "supplement_binary",
+   "note": "Supplementary Appendix 2 (developmental gene-level expression plot book, 23 pages, one page per gene; WWOX on page 4); md5 equals the JATS suppdata-md5 77a3466aecd020b2cf883b9ed34a8a65. Same Europe PMC archive as tp2017159x2.pdf. Its fonts carry no ToUnicode CMap, so no text layer of it is declared; it is read only as rendered pages.",
+   "acquisition_recipe": {
+    "no_recipe": "extracted with Python zipfile from the Europe PMC supplementaryFiles archive whose route and digest the tp2017159x2.pdf entry records"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID28763065_Xia2017_supplement/tp2017159x4.pdf",
+   "sha256": "b54242f810b63ccf5aad8738a0b00e80573aa1cac53205b0d74b6d67200ab480",
+   "kind": "supplement_binary",
+   "note": "Supplementary Appendix 3 (exon-level expression plot book, 510 pages; WWOX exon panels on pages 5, 39, ... 481, one per brain region); md5 equals the JATS suppdata-md5 d879cfffb0937c3edc140401df1a96c0. Same Europe PMC archive as tp2017159x2.pdf. Its fonts carry no ToUnicode CMap, so no text layer of it is declared; it is read only as rendered pages.",
+   "acquisition_recipe": {
+    "no_recipe": "extracted with Python zipfile from the Europe PMC supplementaryFiles archive whose route and digest the tp2017159x2.pdf entry records"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID28763065_Xia2017_supplement/tp2017159x1_image6.tif",
+   "sha256": "ba01984da0ee63bd14edacbdb4ab707b8da563fe47287caec8382df087d889ad",
+   "kind": "figure",
+   "note": "Supplementary Figure 4 (LocusZoom plots for WM, six loci; rs10514437 is the top-left panel), DOCX member word/media/image6.tif extracted byte for byte; anchored in the Figure 4 caption paragraph; inspected rendered to 1300 px.",
+   "acquisition_recipe": {
+    "no_recipe": "extracted from the declared Supplementary Information DOCX with Python zipfile; the DOCX carries the route"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID28763065_Xia2017_supplement/tp2017159x1_image10.tiff",
+   "sha256": "3ab8881358181ed4280b4e5989d65dbdcfdf16c5b4664422883e0932d46c591b",
+   "kind": "figure",
+   "note": "Supplementary Figure 7 (genotype cluster plot titled snp_rs10514437), DOCX member word/media/image10.tiff extracted byte for byte; inspected at native size.",
+   "acquisition_recipe": {
+    "no_recipe": "extracted from the declared Supplementary Information DOCX with Python zipfile; the DOCX carries the route"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID28763065_Xia2017_supplement/tp2017159x3_page004_r110.png",
+   "sha256": "14658d5776b6225994a77aca1e5ad48df674fc42ae2837b3816d22589e8316ec",
+   "kind": "figure",
+   "note": "Appendix 2 page 4 (WWOX, 16 region panels) rendered for inspection.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID28763065_Xia2017_supplement/tp2017159x3.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -f 4 -l 4 -r 110 -png <pdf> <prefix>"
+    },
+    "acquired_on": "2026-10-04"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID28763065_Xia2017_supplement/tp2017159x4_page005_r110.png",
+   "sha256": "dbe7d620aed92c54c731b4d116ad920733428a9e37d3312134ee2da83ffd49f0",
+   "kind": "figure",
+   "note": "Appendix 3 page 5 (WWOX exon-level panels, amygdaloid complex) rendered for inspection.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID28763065_Xia2017_supplement/tp2017159x4.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -f 5 -l 5 -r 110 -png <pdf> <prefix>"
+    },
+    "acquired_on": "2026-10-04"
+   }
   }
  ],
  "verbatim_locators": {
@@ -246,6 +324,64 @@
     "surface": "supplement",
     "artifact": "files/fulltext/PMID28763065_Xia2017_supplement/tp2017159x1.docx",
     "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The permutation test gives an empirical p of 8e-8 for rs10514437 with WM (8 exceedances in 10^8 permutations; the derived text drops the superscript and prints 108), which is above the study's 1.25e-8 threshold and about five times the analytic 1.56e-8.",
+    "snippet": "yielding an empirical p-value of 8 x 10-8 for the rs10514437 association with WM",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID28763065_Xia2017_supplement/tp2017159x1.docx",
+    "anchor": "Supplementary Methods, Permutation Test for Significant SNPs",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The supplement numbers the rs10514437 cluster plot Supplementary Figure 7, while the main Table 1 footnote sends the reader to Supplementary Figure 2 (which the supplement uses for Q-Q plots).",
+    "snippet": "SNP Cluster Plot for rs10514437. Scatter plot based on A (A) and B (G) allele intensities.",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID28763065_Xia2017_supplement/tp2017159x1.docx",
+    "anchor": "Supplementary Information, figure legends, Supplementary Figure 7",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Main Table 1 footnote: the only genotyped (non-imputed) top SNP is rs10514437, and the cluster plot is cited as Supplementary Figure 2.",
+    "snippet": "see Supplementary Figure 2 for a genotyping cluster plot of rs10514437",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID28763065_Xia2017_PMC.xml",
+    "anchor": "Table 1 footnote",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Figure 4, WM panel for rs10514437, inspected: the index SNP stands alone at -log10 p about 7.8 at about 78.49 Mb (hg19, the plot's axis), inside the WWOX gene track; no other SNP in the window rises above about 3, and the few at about 3 (r2 0.4-0.6) sit near 78.51 Mb. The signal has no LD-supported regional architecture: one genotyped low-frequency SNP. The panel bears on the Results sentence calling it intronic in WWOX and agrees with it.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Figure 4 top-left panel: purple diamond labelled rs10514437 near y = 7.8 above x about 78.49 on 'Position on chr16 (Mb)' (78.2-78.8 ticks); WWOX gene arrow spans the track; remaining points dark blue (r2 < 0.2) below about 3, two green points near 3 at about 78.51.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID28763065_Xia2017_supplement/tp2017159x1_image6.tif",
+    "anchor": "Supplementary Figure 4, top-left panel (WM, chr16)",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[0]",
+    "qualifies_needle": "An intronic SNP in WWOX (rs10514437)"
+   },
+   {
+    "proposition": "Supplementary Figure 7 inspected: three called genotype clusters with ellipses; a large BB cluster (B = G, the common allele), an AB cluster of about 49 markers by a connected-component count of the blue fill (overlapping markers can merge, so a lower bound), no AA marker, two no-calls. The WM association rests on heterozygous carriers of the minor allele; no minor homozygote was observed.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Figure 7, title snp_rs10514437_0w_f: red triangles (BB) dense at log ratio about -2.7; blue squares (AB) at about -0.4; empty green AA ellipse at about 1.7; two grey NoCall markers between BB and AB.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID28763065_Xia2017_supplement/tp2017159x1_image10.tiff",
+    "anchor": "Supplementary Figure 7 (cluster plot)",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Appendix 2 page 4 inspected: in 15 of the 16 WWOX region panels the postnatal points sit above the prenatal ones (titles give uncorrected P from 0 to 0.0086); hippocampus is the exception (P 0.1055). None of the panels is stratified by genotype.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Appendix 2 page 4: sixteen scatter panels titled WWOX with region names; x 'age (days when <0, years when >0)', y 'Normalized expression level'; postnatal clouds higher in all but the hippocampus panel.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID28763065_Xia2017_supplement/tp2017159x3_page004_r110.png",
+    "anchor": "Supplementary Appendix 2, page 4",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "Appendix 3 page 5 inspected: of the eleven WWOX exonic segments plotted for the amygdaloid complex, the two non-canonical ones (78,312,499-78,312,593 and the intron-8 segment 78,790,836-78,790,912) sit at about zero expression in nearly every sample; the canonical exons are expressed.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Appendix 3 page 5: panels WWOX_78312499_78312593 and WWOX_78790836_78790912 show y values at 0 for almost all points (y-axis maxima about 0.9 and 1.8), while e.g. WWOX_79245504_79246031 spans about 2-12.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID28763065_Xia2017_supplement/tp2017159x4_page005_r110.png",
+    "anchor": "Supplementary Appendix 3, page 5 (amygdaloid complex)",
+    "panel_text_relation": "panel_only"
    }
   ],
   "source_fulltext_indexed": true,
