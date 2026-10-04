@@ -25,7 +25,7 @@ Receipt: `FTR-20261004-41257285-02` (prepared, not recorded) - manifest PASS (16
 
 ### Op 3 - `replace-within`
 - `old` (verbatim, measured unique in the file): `not with empty capsids and not with a promoterless genome at comparable capsid dose.**`
-- `new`: `not with empty capsids and not with a promoterless genome at comparable capsid dose** - an attribution the paper cites to two reviews (references 8 and 14) and does not measure; its own RNA-seq counts (raw P, four females per arm) show promoterless DEG counts of 78 up and 85 down in DRG but 286 up and 573 down in liver and 305 up and 143 down in skeletal muscle, against 504 and 539, and 272 and 127, for the full vector in study B, so its abstract's "minimal" impact holds for empty capsid and DRG and is qualified for promoterless in liver and muscle.**`
+- `new`: `not with empty capsids and not with a promoterless genome at comparable capsid dose** - an attribution the paper cites to two reviews (references 8 and 14) and does not measure; its own RNA-seq counts (raw P, four females per arm) show promoterless DEG counts of 78 up and 85 down in DRG but 286 up and 573 down in liver and 305 up and 143 down in skeletal muscle, against 504 and 539, and 272 and 127, for the full vector in study B, so its abstract's "minimal" impact holds for empty capsid and DRG and is qualified for promoterless in liver and muscle.`
 
 ## 4 - Defaults taken
 - No edit to the sentence on interferon/JAK-STAT or on the tension with PAPER 182; not re-tested.
