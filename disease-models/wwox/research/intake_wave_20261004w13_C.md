@@ -109,3 +109,41 @@ enumerated and searched, and the surfaces that were unavailable are named.
   panel reading). Dry runs executed.
 * **Transfer limit:** one immortalised human skin fibroblast line with a polyclonal partial
   depletion. It is not neural and models no allele class.
+
+## 6 · PMID 27188386 — Shinde 2017, transcriptome-based DNT test (valproate)
+
+* **Verdict:** INGEST (re-read of the supplement). Receipt `sciC_27188386_1.json` →
+  `FTR-20261004-27188386-02`, `partial_fulltext_read`.
+* **The artefact question (brief item 47), answered:** the three "ABSENT, not SHA-recoverable" files
+  **were recoverable**. `evidence_presence.py --search` over the sibling worktrees found all three as
+  exact SHA-256 matches in `agent-ad7fd468d55287609`, and `--restore` put them back. The tool now
+  reports **5/5 present and matching**. **Nothing is missing and no route is owed.** The earlier
+  `recoverable: 0` was a search that did not cover the worktrees — that is the finding.
+* **The direction, measured on those bytes:** Supplementary Table 3, mapped block by block, has seven
+  WWOX probe-set hits and **every one is positive**. VPA: +2.13 in UKK (p = 5.4e-16) and +1.68 in UKN1
+  (p = 8.5e-5). Entinostat four rows (+1.51 to +1.74), SAHA +1.53. **No negative row in any compound
+  block.** Supplementary Table 7 carries no fold change and no p-value, so it carries no sign.
+* **Candidate:** `CC-20261004W13-C-VPA-SURFACE-01` — **MINOR**, discharging DL-REPO-003's surface debt
+  for this PMID. Dry run executed.
+* **Transfer limit, exact:** hESC-derived UKK (embryoid body, day 14) and UKN1 (neural induction,
+  day 6) test systems, valproate 0.35–1 mM, transcript only by probe set. No protein, no mature neuron,
+  no WWOX allele, no patient. The two VPA rows are two probe sets in two systems — two observations,
+  not a replication. **Nothing here is a statement about valproate in a person.**
+
+---
+
+## What remains owed, per paper
+
+| Paper | Surface still owed | Record waiting on it | Route |
+|---|---|---|---|
+| 31543760 | Data_Sheet_3 (Supp Fig S4) node labels | nothing — S4 is a PPI network; no record depends on it | an OCR or imaging library on the host, or a slower high-dpi render |
+| 37897534 | **Figure 6** (classifier halt); Figs 3, 4, 5, 7 as images | DIS-029's microsatellite and NAC statements are unverified on the panel | another actor, or a session whose model is not halted |
+| 34204789 | Figure S1 and S2 TIFFs | nothing — captions say transcript-level profiling | an imaging library on the host |
+| 30158849 | nothing material; references not re-read | — | — |
+| 35328751 | supplementary TIFFs S1–S6; ten main figures as images | nothing — the supplement is the overexpression arm | an imaging library on the host |
+| 27188386 | the supplementary pptx (on disk, unread); **PMID 28001369**, the fifth DL-REPO-003 primary | DL-REPO-003's open question: whether any primary carries a decrease | 28001369 is paywalled — the operator could supply it; no free route found by earlier waves |
+
+**The wave's cross-cutting owed item is not a surface at all:** `evidence_presence.py --search` is only
+as good as the directories it is given. Wave 12 recorded three Shinde files as unrecoverable after
+searching `files/`; they were in a peer worktree. Any "artefact absent" verdict taken before this wave
+should be re-tested against `.claude/worktrees/` before an acquisition route is paid for in effort.
