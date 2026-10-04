@@ -54,7 +54,7 @@
   "publications_on_gene": 0,
   "research_type": "mixed",
   "is_primary_group_for_disease": false,
-  "weighting": "PubMed counts 2026-10-04: senior author Leist M[au] 430 records, 0 intersecting WWOX. A developmental-toxicology group; the paper is a transcriptome-platform paper, not a WWOX paper."
+  "weighting": "PubMed counts 2026-10-04: last authors include Leist M (430 records for Leist M[au]), 0 intersecting WWOX. A developmental-toxicology group; the paper is a transcriptome-platform paper, not a WWOX paper."
  },
  "field_density": {
   "queries": [

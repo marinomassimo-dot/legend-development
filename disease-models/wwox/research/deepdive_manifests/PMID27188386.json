@@ -1,0 +1,266 @@
+{
+ "schema_version": 2,
+ "pmid": "27188386",
+ "doi": "10.1007/s00204-016-1741-8",
+ "receipt": "FTR-20261004-27188386-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID27188386.md",
+  "disease-models/wwox/research/intake_wave_20261004w9_B.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W9-B-VPA-DIRECTION-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W9-B-REGISTRY-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is a research surface another batch owns; any lead this reading touches is proposed through a commit candidate instead of an edit."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever for the reference genotype class is supplied by this source; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No candidate molecule is proposed for the reference genotype class; the compounds in the source are tested in cells or animals for other purposes."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes are proposed as commit candidates for a later BATCH_COMMIT."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The triples are published in the candidates for an auditor to run; no consolidated baseline claim is narrowed here."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 430,
+  "publications_on_gene": 0,
+  "research_type": "mixed",
+  "is_primary_group_for_disease": false,
+  "weighting": "PubMed counts 2026-10-04: senior author Leist M[au] 430 records, 0 intersecting WWOX; this paper's affiliations are Cologne (neurophysiology/CMMC) and Konstanz (Leist). Same hESC platform as PMID 23179753."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "valproic acid AND WWOX",
+    "count": 2,
+    "source": "PubMed ESearch 2026-10-04"
+   },
+   {
+    "query": "valproic acid AND embryonic stem cells AND neural AND transcriptome",
+    "count": 24,
+    "source": "PubMed ESearch 2026-10-04"
+   }
+  ],
+  "note": "The WWOX datum lives only in supplementary probe-set tables."
+ },
+ "multihop": {
+  "references_enumerated": 90,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "All 90 references enumerated from the JATS reference list; none names WWOX or FRA16D."
+ },
+ "corpus_crossquery": {
+  "query": "Does any registry record name this paper? (registry_records.py get --pmid 27188386)",
+  "hits": 0,
+  "note": "No registry record exists; the only repository statement resting on it is the CTD valproate row of PMID 41254692 Table S7."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-04 by PubMed EFetch for PMID 27188386: no RetractionIn, ErratumIn, ExpressionOfConcernIn or UpdateIn link.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 90,
+   "references_screened": 80,
+   "references_with_doi": 80,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 24,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 10
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID27188386_Shinde2016_PMC.xml",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5306084/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "8741f660bdbe352633f0b0e70f06cb25e768e5000328a282c27969fb6e866822"
+   },
+   "sha256": "8741f660bdbe352633f0b0e70f06cb25e768e5000328a282c27969fb6e866822"
+  },
+  {
+   "path": "files/fulltext/PMID27188386_Shinde2016_supplement/204_2016_1741_MOESM2_ESM.xlsx",
+   "kind": "supplement_binary",
+   "note": "MOESM2 (Supplementary Tables 1-10, xlsx, 5.5 MB). Table 3 lists deregulated probe sets per compound and test system with signed fold change (ratio 1.5 or more, FDR below 0.05); Table 7 lists VPA-deregulated probe sets by concentration in UKN1; Table 1 the developmental probe sets of untreated cells.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/5306084/bin/204_2016_1741_MOESM2_ESM.xlsx",
+    "http_method": "GET",
+    "tier": "PMC instance bin via pmc_pow_fetch.fetch (proof-of-work page solved)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "df40e016dc68f1ba17ce3e24fee5751ac89e7c2dfd540f90bddabaf8299b9ac9"
+   },
+   "sha256": "df40e016dc68f1ba17ce3e24fee5751ac89e7c2dfd540f90bddabaf8299b9ac9"
+  },
+  {
+   "path": "files/fulltext/PMID27188386_Shinde2016_supplement/204_2016_1741_MOESM2_ESM_xlsxdump.txt",
+   "kind": "supplement_text",
+   "note": "Selective cell dump: first 5 rows of each sheet, the sheet map, and every row naming WWOX, one of the five WWOX Affymetrix probe set ids, or the PAX6 probe set 205646_s_at (a direction sentinel). Cells carry their spreadsheet column letters. Not a full dump.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID27188386_Shinde2016_supplement/204_2016_1741_MOESM2_ESM.xlsx",
+    "extractor": {
+     "name": "xlsxdumpB.py (stdlib; copy stored beside the output)",
+     "version": "copy stored beside the output; stdlib zipfile+ElementTree (xlsx) or xlrd (xls)",
+     "call": "python3 xlsxdumpB.py <xlsx> 5 '<WWOX | five WWOX probe ids | PAX6 probe id | sheet map>' > <txt>",
+     "join": "\n"
+    },
+    "acquired_on": "2026-10-04"
+   },
+   "sha256": "aa6a47494ff0327e04977164a94f5bd7df4f8dc6a8093e07f482d7026055e7a1"
+  },
+  {
+   "path": "files/fulltext/PMID27188386_Shinde2016_supplement/204_2016_1741_MOESM1_ESM.pptx",
+   "kind": "supplement_binary",
+   "note": "MOESM1 (supplementary slides, pptx). Not read.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/5306084/bin/204_2016_1741_MOESM1_ESM.pptx",
+    "http_method": "GET",
+    "tier": "PMC instance bin via pmc_pow_fetch.fetch (proof-of-work page solved)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "d33c983b61eb2e27d6d6898f3a18bd62f16cdeef6c9194a93a2d47e2f95e8816"
+   },
+   "sha256": "d33c983b61eb2e27d6d6898f3a18bd62f16cdeef6c9194a93a2d47e2f95e8816"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "UKK exposure: EBs were kept with the chemical or vehicle from day 0, medium replenished with chemical until day 14.",
+    "snippet": "The medium was replenished every alternate day until day 14 of differentiation.",
+    "anchor": "Materials and methods, UKK embryoid-body differentiation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27188386_Shinde2016_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "UKN1 exposure: DoD 0 to DoD 6 in the neural-induction system; the viability series spans non-cytotoxic to cytotoxic.",
+    "snippet": "In the UKN1 test system, the cells were treated from DoD 0 to DoD 6.",
+    "anchor": "Materials and methods, cytotoxicity",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27188386_Shinde2016_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The valproate concentration series in UKN1 reached 800 and 1000 uM, where more than half of developmental genes are compromised.",
+    "snippet": "at the highest tested concentrations of 800 and 1000 µM",
+    "anchor": "Discussion, developmental potency paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27188386_Shinde2016_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Table 7 is a list of probe sets deregulated by VPA at 350-1000 uM in UKN1 with fold change at least 2 in absolute value and FDR below 0.05: it carries probe-set ids and a symbol, no fold change and no direction.",
+    "snippet": "SHEET=Suppl. Table 7 | ROW=1 | A=Supplementary Table 7 :  The significantly deregulated probe setsts by  various concentrations of VPA in UKN1 test system (Fold change ≥ ±2, FDR adjusted p Value <0.05)",
+    "anchor": "Supplementary Table 7, row 1",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID27188386_Shinde2016_supplement/204_2016_1741_MOESM2_ESM_xlsxdump.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 7 column header: five concentration columns then a symbol column.",
+    "snippet": "SHEET=Suppl. Table 7 | ROW=3 | A=350 (µM) | B=450 (µM) | C=550 (µM) | D=800 (µM) | E=1000 (µM) | F=Symbol",
+    "anchor": "Supplementary Table 7, row 3",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID27188386_Shinde2016_supplement/204_2016_1741_MOESM2_ESM_xlsxdump.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 7 holds WWOX probe set 219077_s_at in the 1000 uM column (column E), with the symbol WWOX in the symbol column; column D of the same row holds a different probe set (219106_s_at). Direction is not given.",
+    "snippet": "SHEET=Suppl. Table 7 | ROW=2661 | D=219106_s_at | E=219077_s_at | F=WWOX",
+    "anchor": "Supplementary Table 7, row 2661",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID27188386_Shinde2016_supplement/204_2016_1741_MOESM2_ESM_xlsxdump.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 3, UKK, VPA at its maximum non-cytotoxic concentration: WWOX probe set 219077_s_at, signed fold change +2.127 (up), p 5.4e-16.",
+    "snippet": "SHEET=Suppl. Table 3 | ROW=553 | J=215013_s_at | K=1.51179 | L=2.5228400000000002E-3 | S=219077_s_at | T=2.1265200000000002 | U=5.3745300000000004E-16",
+    "anchor": "Supplementary Table 3, row 553, columns S-U (UKK VPA block)",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID27188386_Shinde2016_supplement/204_2016_1741_MOESM2_ESM_xlsxdump.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 3, UKN1, VPA: WWOX probe set 223868_s_at, signed fold change +1.683 (up), p 8.5e-5 (same value as in the sibling classifier paper's UKN1 table, 1.68).",
+    "snippet": "SHEET=Suppl. Table 3 | ROW=2346 | S=212689_s_at | T=-1.61206 | U=4.7985799999999997E-5 | Y=201708_s_at | Z=-2.25108 | AA=4.1090000000000004E-12 | AW=215506_s_at | AX=1.55159 | AY=3.9271500000000002E-4 | BC=223868_s_at | BD=1.6833199999999999 | BE=8.5455099999999994E-5",
+    "anchor": "Supplementary Table 3, row 2346, columns BC-BE (UKN1 VPA block)",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID27188386_Shinde2016_supplement/204_2016_1741_MOESM2_ESM_xlsxdump.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Sentinel: in the same Table 3 the PAX6 probe set 205646_s_at has signed fold change -10.56 in UKN1 VPA, so the sign is real (negative = down).",
+    "snippet": "SHEET=Suppl. Table 3 | ROW=5866 | BC=205646_s_at | BD=-10.5619 | BE=2.3600900000000001E-15",
+    "anchor": "Supplementary Table 3, row 5866, columns BC-BE (UKN1 VPA block)",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID27188386_Shinde2016_supplement/204_2016_1741_MOESM2_ESM_xlsxdump.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 1 (untreated cells): WWOX probe set 221147_x_at is a developmental probe set in UKN1, fold change +2.408 between day 0 and day 6 (PAX6 is +39.4 in the same table, so positive means higher on day 6).",
+    "snippet": "SHEET=Suppl.Table 1 | ROW=3271 | A=221147_x_at | B=WWOX | C=2.4081800000000002 | D=5.2664699999999998E-15 | E=236389_x_at | F=--- | G=2.2463600000000001 | H=4.5926099999999996E-21 | K=202561_at",
+    "anchor": "Supplementary Table 1, row 3271, columns A-D (UKN1 block)",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID27188386_Shinde2016_supplement/204_2016_1741_MOESM2_ESM_xlsxdump.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 1 header fixes the columns: UKN1 day 0 versus day 6 in A-D, UKK day 0 versus day 14 in E-H.",
+    "snippet": "SHEET=Suppl.Table 1 | ROW=2 | A=PS id | B=Gene symbol | C=Fold-Change  Day 0 vs  day  6 UKN1_Control | D=p-value | E=PS id | F=Gene symbol | G=Fold-Change  Day 0 vs  day 14 UKK_Control | H=p-value",
+    "anchor": "Supplementary Table 1, row 2",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID27188386_Shinde2016_supplement/204_2016_1741_MOESM2_ESM_xlsxdump.txt",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC5306084/fullTextXML returned HTTP 200 with a full JATS body on 2026-10-04; the artefact declared is that response."
+ }
+}
