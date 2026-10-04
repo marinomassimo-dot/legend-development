@@ -1,232 +1,445 @@
 {
- "schema_version": 2,
- "pmid": "41712282",
- "doi": "10.1172/JCI197503",
- "receipt": "FTR-20261003-41712282-01",
- "context_policy": "SOURCE_FIRST",
- "landing": [
-  "disease-models/wwox/research/fulltext_dossiers/PMID41712282.md",
-  "disease-models/wwox/research/intake_wave_20261003w5_A.md",
-  "disease-models/wwox/research/commit_candidates/CC-20261003W5-A-REGISTRY-01.md",
-  "disease-models/wwox/research/commit_candidates/CC-20261003W5-A-CARGO-CASSETTE-01.md",
-  "disease-models/wwox/research/commit_candidates/CC-20261003W5-A-TRANSGENE-IMMUNITY-01.md",
-  "disease-models/wwox/research/commit_candidates/CC-20261003W5-A-WINDOW-STATUS-01.md",
-  "disease-models/wwox/research/commit_candidates/CC-20261003W5-A-DOSE-TWO-SIDED-01.md"
- ],
- "skills_considered": [
-  {
-   "skill": "find-fulltext",
-   "used": true
-  },
-  {
-   "skill": "legend-study-intake-triage",
-   "used": true
-  },
-  {
-   "skill": "legend-deepdive",
-   "used": true
-  },
-  {
-   "skill": "legend-discovery",
-   "used": false,
-   "reason": "The discovery ledger is a research surface owned by other batches; every transferable lesson here is proposed as a commit candidate instead of written into the ledger."
-  },
-  {
-   "skill": "legend-hypothesis-forge",
-   "used": false,
-   "reason": "A gene-replacement lesson from another gene is not a WWOX therapeutic hypothesis; forging one would convert a stated transfer limit into a lead."
-  },
-  {
-   "skill": "legend-safety-triage",
-   "used": false,
-   "reason": "No small molecule with a SMILES is proposed, so the BLOCK-1 ADMET gate has nothing to triage."
-  },
-  {
-   "skill": "legend-commit",
-   "used": false,
-   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
-  },
-  {
-   "skill": "legend-locator-audit",
-   "used": false,
-   "reason": "The triples are published for a blind auditor; a reader cannot audit their own locators."
-  }
- ],
- "group_assessment": {
-  "total_publications": 0,
-  "publications_on_gene": 0,
-  "research_type": "experimental_lab",
-  "is_primary_group_for_disease": false,
-  "weighting": "No author-level PubMed census was run for this reading: the paper is about another gene entirely and contributes only transferable method, so group standing on WWOX is not the weighting that matters. What was recorded instead is declared competing interest, read from the paper itself and carried in the dossier.",
-  "external_provenance": {
-   "source": "not applicable — no external author census performed",
-   "date": "2026-10-03"
-  }
- },
- "field_density": {
-  "queries": [
-   {
-    "query": "WWOX AND AAV",
-    "count": 2,
-    "source": "PubMed ESearch rettype=count 2026-10-03"
-   },
-   {
-    "query": "WWOX AND self-complementary",
-    "count": 0,
-    "source": "PubMed ESearch rettype=count 2026-10-03"
-   },
-   {
-    "query": "WWOX AND biodistribution",
-    "count": 0,
-    "source": "PubMed ESearch rettype=count 2026-10-03"
-   }
-  ]
- },
- "multihop": {
-  "references_enumerated": 0,
-  "gene_direct_refs_in_source": [],
-  "resolved": [],
-  "queued": [],
-  "note": "Reference lists were not enumerated in this pass and no multi-hop expansion was performed; the coverage key 'references' is declared not_read for that reason."
- },
- "corpus_crossquery": {
-  "query": "paper_packet.py packet --pmid 41712282 (run BEFORE the first pass, technical state only)",
-  "hits": 0,
-  "note": "NO RECORD MATCHED on any registry surface (paper_packet.py packet --pmid, 2026-10-03): first reading, no prior receipt. The paper does not mention WWOX."
- },
- "retraction_check": {
-  "checked": true,
-  "result": "Checked 2026-10-03 via NCBI E-utilities efetch (db=pubmed, retmode=xml): the publication types carry no retraction, expression of concern or correction notice, and no CommentsCorrections element of any RefType is present for this PMID.",
-  "dependencies": {
-   "flagged": [],
-   "noted": [],
-   "paper_verdict": "SCREENED_CLEAN",
-   "reference_source": "network",
-   "references_declared": 48,
-   "references_screened": 46,
-   "references_with_doi": 46,
-   "schema": "retraction_check.dependencies/1",
-   "screened": true,
-   "snapshot": {
-    "date": "2026-09-10",
-    "days_since_fetch": 23,
-    "rows": 72476,
-    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
-   },
-   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
-   "unscreenable": {
-    "UNSCREENABLE_NO_DOI": 2
-   }
-  }
- },
- "source_artifacts": [
-  {
-   "path": "files/fulltext/PMID41712282_Bailey2026_PMC.xml",
-   "sha256": "90f1ceff3115de2c02f2a985cf1e202f4bcedb1896f3529a646d554137bc39f6",
-   "kind": "article_text",
-   "acquisition_recipe": {
-    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13078891/fullTextXML",
-    "http_method": "GET",
-    "tier": "Europe PMC REST fullTextXML",
-    "user_agent_policy": "identified",
-    "acquired_on": "2026-10-03",
-    "result_sha256": "90f1ceff3115de2c02f2a985cf1e202f4bcedb1896f3529a646d554137bc39f6"
-   }
-  }
- ],
- "verbatim_locators": {
-  "waived": false,
-  "entries": [
-   {
-    "proposition": "A minimal promoter is what allows self-complementary packaging of this coding sequence.",
-    "snippet": "use of the short UsP allows self-complementary packaging of the 1.7 kb SLC13A5 coding sequence",
-    "anchor": "Results, vector design",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID41712282_Bailey2026_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "Self-complementary packaging is claimed to reach far more cells than single-stranded.",
-    "snippet": "predicted to stably transduce at least 10-fold more cells than single-stranded AAV",
-    "anchor": "Results, vector design",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID41712282_Bailey2026_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "The metabolic endpoint is dose-graded and the high dose drives it below the wild-type level.",
-    "snippet": "high dose–treated mice were decreased to 65%",
-    "anchor": "Results, functional NaCT",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID41712282_Bailey2026_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "The seizure endpoint does not share that dose-response: the low dose did as well as the high dose.",
-    "snippet": "low-dose AAV9/SLC13A5 administered at P10 provided similar benefit as high dose",
-    "anchor": "Discussion, dose paragraph",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID41712282_Bailey2026_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "The authors name a published developmental harm from overexpressing the same gene.",
-    "snippet": "was reported to cause autistic-like and jumping behaviors, and altered white matter integrity and synaptic plasticity",
-    "anchor": "Discussion, dose paragraph",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID41712282_Bailey2026_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "Delivery at the same dose and route fell by about an order of magnitude when the age of dosing rose.",
-    "snippet": "IT delivery of AAV9 in KO mice at P10 resulted in markedly higher brain transduction",
-    "anchor": "Results, biodistribution",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID41712282_Bailey2026_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "Changing the adult route recovered part of the lost brain exposure.",
-    "snippet": "ICM delivery resulted in greater brain expression as compared with IT injection",
-    "anchor": "Discussion, route paragraph",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID41712282_Bailey2026_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "Long-term consequences of excess expression were not assessed in this study.",
-    "snippet": "adverse effects related to prolonged or excessive NaCT expression were not evaluated in the present study",
-    "anchor": "Discussion, safety paragraph",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID41712282_Bailey2026_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "The chemoconvulsant challenge is not a model of the disease mechanism.",
-    "snippet": "PTZ does not model the primary metabolic defect underlying SLC13A5 citrate transporter disorder",
-    "anchor": "Discussion, PTZ paragraph",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID41712282_Bailey2026_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "The knockout genotype is not the patient genotype, because most patient variants are missense.",
-    "snippet": "most pathogenic variants identified in individuals affected with SLC13A5 citrate transporter disorder are missense mutations that produce partially functional or misfolded proteins",
-    "anchor": "Discussion, model paragraph",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID41712282_Bailey2026_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "The antibody does not detect the endogenous mouse protein, so there is no wild-type reference for expression level.",
-    "snippet": "the NaCT antibody does not recognize endogenous mouse NaCT protein",
-    "anchor": "Results, functional NaCT",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID41712282_Bailey2026_PMC.xml",
-    "panel_text_relation": "text_only"
-   }
+  "schema_version": 2,
+  "pmid": "41712282",
+  "doi": "10.1172/JCI197503",
+  "receipt": "FTR-20261003-41712282-01",
+  "context_policy": "SOURCE_FIRST",
+  "landing": [
+    "disease-models/wwox/research/fulltext_dossiers/PMID41712282.md",
+    "disease-models/wwox/research/intake_wave_20261003w5_A.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261003W5-A-REGISTRY-01.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261003W5-A-CARGO-CASSETTE-01.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261003W5-A-TRANSGENE-IMMUNITY-01.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261003W5-A-WINDOW-STATUS-01.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261003W5-A-DOSE-TWO-SIDED-01.md"
   ],
-  "source_fulltext_indexed": true,
-  "source_fulltext_indexed_evidence": "Europe PMC REST fullTextXML returned HTTP 200 with a full JATS body for PMC13078891 on 2026-10-03; the declared article artefact is that response, byte for byte."
- }
+  "skills_considered": [
+    {
+      "skill": "find-fulltext",
+      "used": true
+    },
+    {
+      "skill": "legend-study-intake-triage",
+      "used": true
+    },
+    {
+      "skill": "legend-deepdive",
+      "used": true
+    },
+    {
+      "skill": "legend-discovery",
+      "used": false,
+      "reason": "The discovery ledger is a research surface owned by other batches; every transferable lesson here is proposed as a commit candidate instead of written into the ledger."
+    },
+    {
+      "skill": "legend-hypothesis-forge",
+      "used": false,
+      "reason": "A gene-replacement lesson from another gene is not a WWOX therapeutic hypothesis; forging one would convert a stated transfer limit into a lead."
+    },
+    {
+      "skill": "legend-safety-triage",
+      "used": false,
+      "reason": "No small molecule with a SMILES is proposed, so the BLOCK-1 ADMET gate has nothing to triage."
+    },
+    {
+      "skill": "legend-commit",
+      "used": false,
+      "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+    },
+    {
+      "skill": "legend-locator-audit",
+      "used": false,
+      "reason": "The triples are published for a blind auditor; a reader cannot audit their own locators."
+    }
+  ],
+  "group_assessment": {
+    "total_publications": 0,
+    "publications_on_gene": 0,
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": false,
+    "weighting": "No author-level PubMed census was run for this reading: the paper is about another gene entirely and contributes only transferable method, so group standing on WWOX is not the weighting that matters. What was recorded instead is declared competing interest, read from the paper itself and carried in the dossier.",
+    "external_provenance": {
+      "source": "not applicable — no external author census performed",
+      "date": "2026-10-03"
+    }
+  },
+  "field_density": {
+    "queries": [
+      {
+        "query": "WWOX AND AAV",
+        "count": 2,
+        "source": "PubMed ESearch rettype=count 2026-10-03"
+      },
+      {
+        "query": "WWOX AND self-complementary",
+        "count": 0,
+        "source": "PubMed ESearch rettype=count 2026-10-03"
+      },
+      {
+        "query": "WWOX AND biodistribution",
+        "count": 0,
+        "source": "PubMed ESearch rettype=count 2026-10-03"
+      }
+    ]
+  },
+  "multihop": {
+    "references_enumerated": 0,
+    "gene_direct_refs_in_source": [],
+    "resolved": [],
+    "queued": [],
+    "note": "Reference lists were not enumerated in this pass and no multi-hop expansion was performed; the coverage key 'references' is declared not_read for that reason."
+  },
+  "corpus_crossquery": {
+    "query": "paper_packet.py packet --pmid 41712282 (run BEFORE the first pass, technical state only)",
+    "hits": 0,
+    "note": "NO RECORD MATCHED on any registry surface (paper_packet.py packet --pmid, 2026-10-03): first reading, no prior receipt. The paper does not mention WWOX."
+  },
+  "retraction_check": {
+    "checked": true,
+    "result": "Checked 2026-10-03 via NCBI E-utilities efetch (db=pubmed, retmode=xml): the publication types carry no retraction, expression of concern or correction notice, and no CommentsCorrections element of any RefType is present for this PMID.",
+    "dependencies": {
+      "flagged": [],
+      "noted": [],
+      "paper_verdict": "SCREENED_CLEAN",
+      "reference_source": "network",
+      "references_declared": 48,
+      "references_screened": 46,
+      "references_with_doi": 46,
+      "schema": "retraction_check.dependencies/1",
+      "screened": true,
+      "snapshot": {
+        "date": "2026-09-10",
+        "days_since_fetch": 23,
+        "rows": 72476,
+        "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+      },
+      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+      "unscreenable": {
+        "UNSCREENABLE_NO_DOI": 2
+      }
+    }
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID41712282_Bailey2026_PMC.xml",
+      "sha256": "90f1ceff3115de2c02f2a985cf1e202f4bcedb1896f3529a646d554137bc39f6",
+      "kind": "article_text",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13078891/fullTextXML",
+        "http_method": "GET",
+        "tier": "Europe PMC REST fullTextXML",
+        "user_agent_policy": "identified",
+        "acquired_on": "2026-10-03",
+        "result_sha256": "90f1ceff3115de2c02f2a985cf1e202f4bcedb1896f3529a646d554137bc39f6"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID41712282_Bailey2026_supplement/PMC13078891_supplementaryFiles.zip",
+      "sha256": "34e7f6773b5a3dd7b2937587ceb986b77c63e5d500bb72d54175cfb59bb0056b",
+      "kind": "supplement_binary",
+      "note": "Container of the supplement members and figure images; members extracted unchanged beside it.",
+      "acquisition_recipe": {
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13078891/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "Europe PMC REST supplementaryFiles (zip as served)",
+        "result_sha256": "34e7f6773b5a3dd7b2937587ceb986b77c63e5d500bb72d54175cfb59bb0056b"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID41712282_Bailey2026_supplement/jci-136-197503-s303.pdf",
+      "sha256": "dd46fae84b769e1bb2f2a8a14552ea27beb29fabc54a85aba0e5c20ce0aa1e78",
+      "kind": "supplement_binary",
+      "note": "Supplemental data: Supplemental Figures 1-8 and Supplemental Table 1 (12 pages).",
+      "acquisition_recipe": {
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13078891/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+        "result_sha256": "dd46fae84b769e1bb2f2a8a14552ea27beb29fabc54a85aba0e5c20ce0aa1e78"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID41712282_Bailey2026_supplement/s303.txt",
+      "sha256": "c836cf92578cdef20079094cc6a8a3d2184e3d724d7090343124390cd865cb27",
+      "kind": "supplement_text",
+      "note": "Derived text layer of the supplemental PDF.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID41712282_Bailey2026_supplement/jci-136-197503-s303.pdf",
+        "extractor": {
+          "name": "pdftotext (poppler-utils)",
+          "version": "24.02.0",
+          "call": "pdftotext -layout -nopgbrk jci-136-197503-s303.pdf s303.txt"
+        },
+        "acquired_on": "2026-10-04",
+        "result_sha256": "c836cf92578cdef20079094cc6a8a3d2184e3d724d7090343124390cd865cb27"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID41712282_Bailey2026_supplement/jci-136-197503-s304.xlsx",
+      "sha256": "d1e42adbc63cc76da394c5a023c980499d457b7e566f90dc1504a63f0e41bb6c",
+      "kind": "supplement_binary",
+      "note": "Supporting data values: one sheet per figure panel, per-animal values for Figures 1-8 and Supplemental Figures 1-7.",
+      "acquisition_recipe": {
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13078891/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+        "result_sha256": "d1e42adbc63cc76da394c5a023c980499d457b7e566f90dc1504a63f0e41bb6c"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID41712282_Bailey2026_supplement/s304_cellwise.txt",
+      "sha256": "07ce23bfc53052c27b93d74616151aca5d726c2558fb977e9da1b0f5fc05032a",
+      "kind": "supplement_text",
+      "note": "Cell-wise text of the supporting data values workbook; every sheet.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID41712282_Bailey2026_supplement/jci-136-197503-s304.xlsx",
+        "extractor": {
+          "name": "local cell-wise workbook dump (Python zipfile and re over sheet XML and sharedStrings)",
+          "version": "scratchpad script xl2txt.py, Python 3.12",
+          "call": "one output line per sheet row, cells in column order separated by a vertical bar, shared strings resolved, empty cells dropped, sheets introduced by a line starting with two number signs"
+        },
+        "acquired_on": "2026-10-04",
+        "result_sha256": "07ce23bfc53052c27b93d74616151aca5d726c2558fb977e9da1b0f5fc05032a"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID41712282_Bailey2026_supplement/jci-136-197503-g302.jpg",
+      "sha256": "9ee3242f331ee209f1778a9384f171371c2208c241b6c642adeb4f33a3d21918",
+      "kind": "figure",
+      "note": "Figure 8: vector copies per mouse genome, P10 cohorts (A) and 3-month cohorts (B); inspected.",
+      "acquisition_recipe": {
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13078891/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+        "result_sha256": "9ee3242f331ee209f1778a9384f171371c2208c241b6c642adeb4f33a3d21918"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID41712282_Bailey2026_supplement/sfig-03.png",
+      "sha256": "ba48756eaec12a95966915ae7ecd819fca3a6f066d8ff945f3080e5ffe9b9552",
+      "kind": "figure",
+      "note": "Rendered page 3: Supplemental Figure 3, urinary citrate and clinical chemistry; groups plotted are vehicle wild type, vehicle knockout and low dose.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID41712282_Bailey2026_supplement/jci-136-197503-s303.pdf",
+        "extractor": {
+          "name": "pdftoppm (poppler-utils)",
+          "version": "24.02.0",
+          "call": "pdftoppm -f 2 -l 4 -r 55 -png jci-136-197503-s303.pdf sfig"
+        },
+        "acquired_on": "2026-10-04",
+        "result_sha256": "ba48756eaec12a95966915ae7ecd819fca3a6f066d8ff945f3080e5ffe9b9552"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID41712282_Bailey2026_supplement/sf8p-11.png",
+      "sha256": "96c55bb159dd7346e0b130f8bc27e6ee3037c8b98e623e0149a3ba6709085b25",
+      "kind": "figure",
+      "note": "Rendered page 11: the electron-microscopy page of the second lot certificate (92 percent full).",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID41712282_Bailey2026_supplement/jci-136-197503-s303.pdf",
+        "extractor": {
+          "name": "pdftoppm (poppler-utils)",
+          "version": "24.02.0",
+          "call": "pdftoppm -f 11 -l 11 -r 70 -png jci-136-197503-s303.pdf sf8p"
+        },
+        "acquired_on": "2026-10-04",
+        "result_sha256": "96c55bb159dd7346e0b130f8bc27e6ee3037c8b98e623e0149a3ba6709085b25"
+      }
+    }
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "entries": [
+      {
+        "proposition": "A minimal promoter is what allows self-complementary packaging of this coding sequence.",
+        "snippet": "use of the short UsP allows self-complementary packaging of the 1.7 kb SLC13A5 coding sequence",
+        "anchor": "Results, vector design",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41712282_Bailey2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Self-complementary packaging is claimed to reach far more cells than single-stranded.",
+        "snippet": "predicted to stably transduce at least 10-fold more cells than single-stranded AAV",
+        "anchor": "Results, vector design",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41712282_Bailey2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The metabolic endpoint is dose-graded and the high dose drives it below the wild-type level.",
+        "snippet": "high dose–treated mice were decreased to 65%",
+        "anchor": "Results, functional NaCT",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41712282_Bailey2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The seizure endpoint does not share that dose-response: the low dose did as well as the high dose.",
+        "snippet": "low-dose AAV9/SLC13A5 administered at P10 provided similar benefit as high dose",
+        "anchor": "Discussion, dose paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41712282_Bailey2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The authors name a published developmental harm from overexpressing the same gene.",
+        "snippet": "was reported to cause autistic-like and jumping behaviors, and altered white matter integrity and synaptic plasticity",
+        "anchor": "Discussion, dose paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41712282_Bailey2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Delivery at the same dose and route fell by about an order of magnitude when the age of dosing rose.",
+        "snippet": "IT delivery of AAV9 in KO mice at P10 resulted in markedly higher brain transduction",
+        "anchor": "Results, biodistribution",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41712282_Bailey2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Changing the adult route recovered part of the lost brain exposure.",
+        "snippet": "ICM delivery resulted in greater brain expression as compared with IT injection",
+        "anchor": "Discussion, route paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41712282_Bailey2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Long-term consequences of excess expression were not assessed in this study.",
+        "snippet": "adverse effects related to prolonged or excessive NaCT expression were not evaluated in the present study",
+        "anchor": "Discussion, safety paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41712282_Bailey2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The chemoconvulsant challenge is not a model of the disease mechanism.",
+        "snippet": "PTZ does not model the primary metabolic defect underlying SLC13A5 citrate transporter disorder",
+        "anchor": "Discussion, PTZ paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41712282_Bailey2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The knockout genotype is not the patient genotype, because most patient variants are missense.",
+        "snippet": "most pathogenic variants identified in individuals affected with SLC13A5 citrate transporter disorder are missense mutations that produce partially functional or misfolded proteins",
+        "anchor": "Discussion, model paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41712282_Bailey2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The antibody does not detect the endogenous mouse protein, so there is no wild-type reference for expression level.",
+        "snippet": "the NaCT antibody does not recognize endogenous mouse NaCT protein",
+        "anchor": "Results, functional NaCT",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41712282_Bailey2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Figure 8 states one test per panel (Student's unpaired t test) and group sizes of 15, 14, 5 and 4; no test compares the P10 and the 3-month cohorts.",
+        "snippet": "n = 15 KO+LD, 14 KO+HD, 5 KO+ICM, 4 KO+IT",
+        "anchor": "Figure 8 legend",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41712282_Bailey2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Per-animal cerebellar vector values in the four IT-treated 3-month animals (one of the cell rows; the four values average 1162 and their SEM is 742, reproducing 1.2 x 10^3 +/- 7.4 x 10^2).",
+        "snippet": "KO+IT | F | 6380 | 1975 | BLOD | 403",
+        "anchor": "Supporting data values, sheet Fig 8B",
+        "surface": "supplement",
+        "artifact": "files/fulltext/PMID41712282_Bailey2026_supplement/s304_cellwise.txt",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "One P10 high-dose row of Figure 8A (cerebellum 1271, below the adult IT maximum of 3362); across the 14 high-dose rows the cerebellum values average 15694 with SEM 3070, reproducing 15.7 x 10^3 +/- 3.1 x 10^3, and three of the 14 are below 3362.",
+        "snippet": "KO+HD | F | 5971 | 5955 | 3016 | 1271",
+        "anchor": "Supporting data values, sheet Fig 8A",
+        "surface": "supplement",
+        "artifact": "files/fulltext/PMID41712282_Bailey2026_supplement/s304_cellwise.txt",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The Figure 8B ICM liver mean in the text (1.5 x 10^4 +/- 5.2 x 10^3) is reproduced only after leaving out this animal's liver value of 76270 (n = 4); with it, the five liver values average 26949 with SEM 12962; the legend states n = 5 and no exclusion rule appears.",
+        "snippet": "KO+ICM | M | 76270 | 6847 | 4354 | 30961",
+        "anchor": "Supporting data values, sheet Fig 8B",
+        "surface": "supplement",
+        "artifact": "files/fulltext/PMID41712282_Bailey2026_supplement/s304_cellwise.txt",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Figure 8A: the brain-stem value 2180689 carries an asterisk in the data sheet; the plotted high-dose brain-stem mean (about 2.8 x 10^4) is reproduced only if the starred values are left out; no legend or Methods sentence states the rule.",
+        "snippet": "KO+HD | M | 100179 | 14717 | 2180689* | 28093",
+        "anchor": "Supporting data values, sheet Fig 8A",
+        "surface": "supplement",
+        "artifact": "files/fulltext/PMID41712282_Bailey2026_supplement/s304_cellwise.txt",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Plasma citrate relative to wild type in the 10 high-dose knockout animals (one row shown): the group mean is 64.9 with SEM 8.0 (text 65 +/- 8.0), with two animals at about 28 and 32 percent; the low-dose mean is 87.1 with SEM 7.6; knockout vehicle 121.5.",
+        "snippet": "KO+HD | F | 31.727489828845574",
+        "anchor": "Supporting data values, sheet Fig 2B-C",
+        "surface": "supplement",
+        "artifact": "files/fulltext/PMID41712282_Bailey2026_supplement/s304_cellwise.txt",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Supplemental Figure 3 (urinary citrate and clinical chemistry) treated wild type and knockout littermates with vehicle or the low dose only; the high dose is not among the groups, although the Results say the chemistry stayed in range across all groups.",
+        "snippet": "WT and KO Slc13a5 littermates were treated with vehicle or 2e11 vg (LD)",
+        "anchor": "Supplemental data, Supplemental Figure 3 legend",
+        "surface": "supplement",
+        "artifact": "files/fulltext/PMID41712282_Bailey2026_supplement/s303.txt",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Supplemental Table 1 lists the analysis cohorts: the P10 high-dose arm has EEG, PTZ and biodistribution cohorts only (14 in biodistribution) and no urine or chemistry cohort; the adult IT arm has 4 animals (3 female, 1 male) in biodistribution; adult cohorts have no chemistry, urine or CSF analyses.",
+        "snippet": "KO + IT 6 (4F/2M) 6 (4F/2M) 4 (3F/1M)",
+        "anchor": "Supplemental data, Supplemental Table 1",
+        "surface": "supplement",
+        "artifact": "files/fulltext/PMID41712282_Bailey2026_supplement/s303.txt",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The Results give 2 of 8 vehicle wild-type mice dying in the adult challenge, while Supplemental Table 1 lists 7 wild-type vehicle animals in the adult PTZ cohort and the Methods exclude 4 of 11 wild-type vehicle mice that died on the first injection; 2/7 would be 29 percent.",
+        "snippet": "early lethality in 2/8 WT+Vehicle mice (25%)",
+        "anchor": "Results, adult seizure susceptibility paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41712282_Bailey2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Figure 8's panels give the vector measure in vg per mouse genome on the axis and in the Results text for 8B, while the Results sentence introducing Figure 8A says vg per microgram host genomic DNA.",
+        "snippet": "Copies of AAV9/SLC13A5 per host genome in the liver, frontal cortex, brain stem, and cerebellum",
+        "anchor": "Figure 8 legend (axis label SLC13A5opt vg/mouse genome read from the panel)",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID41712282_Bailey2026_supplement/jci-136-197503-g302.jpg",
+        "panel_text_relation": "panel_only",
+        "panel": "Figure 8A and 8B y-axis labels"
+      },
+      {
+        "proposition": "Supplemental Figure 8 reproduces certificates for two lots (LAV55-conc, 1.55E+14 vg/mL, 90 percent full; LAV131, 1.38E+14 vg/mL, 92 percent full) while the Methods say three lots were used and that the figure carries the certificate for each lot.",
+        "snippet": "Quality Control Summary Lot # LAV131 Name SLC13A5",
+        "anchor": "Supplemental data, Supplemental Figure 8",
+        "surface": "supplement",
+        "artifact": "files/fulltext/PMID41712282_Bailey2026_supplement/s303.txt",
+        "panel_text_relation": "text_only"
+      }
+    ],
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC REST fullTextXML returned HTTP 200 with a full JATS body for PMC13078891 on 2026-10-03; the declared article artefact is that response, byte for byte."
+  }
 }
