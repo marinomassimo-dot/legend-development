@@ -1,4 +1,4 @@
-# CC-20261004w8-B-RESTORATION-SPEC-01 — promoter, capsid and route bounds for a CNS restoration cassette
+# CC-20261004W8-B-RESTORATION-SPEC-01 — promoter, capsid and route bounds for a CNS restoration cassette
 
 ```yaml
 context_policy: SOURCE_FIRST
@@ -7,12 +7,32 @@ branch: task/sci-B-20261004w8
 change_class: MINOR
 targets:
   - disease-models/wwox/registries/claim_registry_current.md
-depends_on: CC-20261004w8-B-REGISTRY-01   # for the PAPER ids these claims cite
+depends_on: CC-20261004W8-B-REGISTRY-01   # for the PAPER ids these claims cite
 ```
 
 > **Not medical advice.** Public edition: class level only. **Every source behind this candidate
 > mentions WWOX zero times.** Nothing here is a statement about WWOX biology; each item is a
 > vector-engineering bound with its transfer limit stated.
+
+## Relation to `CC-20261003W3-C-RESTORATION-SPEC-01`
+
+That wave-3 candidate is still open on disk and asks the same question from a different set of
+sources (five DEE gene-therapy papers, none mentioning WWOX). **The two are complementary, not
+competing, and should be propagated together or not at all:**
+
+- It parameterises the problem as six axes — dose, cell type, route, window, off-target organ risk,
+  pharmacodynamic assay — and finds route and off-target risk well measured, dose measured only as
+  vector genomes, and **the window not measured at all**.
+- This candidate adds what that set did not contain: a **head-to-head promoter comparison** with
+  measured cell-type specificity, a **capsid** with its manufacturing and CNS costs, and the **first
+  primate route numbers** in the Group B material. It also supplies the finding that **promoter
+  ranking inverts between two CSF routes**, which cuts across that candidate's separate "cell type"
+  and "route" axes: they are not independent parameters.
+- The wave-3 candidate records that no WWOX-specific pharmacodynamic assay exists. This wave's
+  `CC-20261004W8-B-BIOMARKER-01` supplies the measurement-side record it was missing: the three
+  direct WWOX read-outs that do exist, their §13 class, and their measured ceilings.
+
+Neither candidate contradicts the other on any datum.
 
 ## Why MINOR, and what it bears on
 
@@ -95,14 +115,14 @@ than four papers it has not read.
 >
 > **Paper links.** `[[paper_registry_current#PAPER 153]]`, `[[paper_registry_current#PAPER 154]]`,
 > `[[paper_registry_current#PAPER 155]]`, `[[paper_registry_current#PAPER 156]]` (provisional; see
-> `CC-20261004w8-B-REGISTRY-01`).
+> `CC-20261004W8-B-REGISTRY-01`).
 >
 > **Note.** Class-level record; no individual-level detail. Not medical advice.
 
 ## Consequential edits
 
 If this lands, the `Claim links:` field of `PAPER 153`–`PAPER 156` changes from `none` to the id this
-record receives. Those four records are created by `CC-20261004w8-B-REGISTRY-01` in this same wave,
+record receives. Those four records are created by `CC-20261004W8-B-REGISTRY-01` in this same wave,
 so the substitution is made by the integrator at renumbering time.
 
 ## Change class

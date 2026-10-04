@@ -1,4 +1,4 @@
-# CC-20261004w8-B-REGISTRY-01 — registry landing for the six Group B papers of intake wave 8
+# CC-20261004W8-B-REGISTRY-01 — registry landing for the six Group B papers of intake wave 8
 
 ```yaml
 context_policy: SOURCE_FIRST
@@ -60,12 +60,12 @@ Field values that must not be guessed by the integrator:
 
 **`Claim links:` is `none` for all six**, and that is deliberate: no claim in
 `claim_registry_current` rests on any of them yet. The two non-registry candidates of this wave
-(`CC-20261004w8-B-BIOMARKER-01`, `CC-20261004w8-B-RESTORATION-SPEC-01`) propose the records that
+(`CC-20261004W8-B-BIOMARKER-01`, `CC-20261004W8-B-RESTORATION-SPEC-01`) propose the records that
 would create those links; if either lands, its own op list adds the back-link here.
 
 **`Record provenance:` text for each of the six**, verbatim, with only the id substituted:
 
-> created by `CC-20261004w8-B-REGISTRY-01` (intake wave 8 2026-10-04, Scientist B). Provisional
+> created by `CC-20261004W8-B-REGISTRY-01` (intake wave 8 2026-10-04, Scientist B). Provisional
 > number, measured with `registry_records.py catalog` at commit `e53126e3df32` (highest `PAPER 150`,
 > highest `LIT-0443`); Scientists A and C of the same wave are landing registry candidates in
 > parallel, so the integrator renumbers in event order and updates the anchors.

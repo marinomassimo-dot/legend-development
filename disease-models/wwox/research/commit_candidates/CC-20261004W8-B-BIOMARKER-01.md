@@ -1,4 +1,4 @@
-# CC-20261004w8-B-BIOMARKER-01 — the three direct WWOX read-outs, their §13 class, and their measured ceilings
+# CC-20261004W8-B-BIOMARKER-01 — the three direct WWOX read-outs, their §13 class, and their measured ceilings
 
 ```yaml
 context_policy: SOURCE_FIRST
@@ -7,7 +7,7 @@ branch: task/sci-B-20261004w8
 change_class: MINOR
 targets:
   - disease-models/wwox/registries/claim_registry_current.md
-depends_on: CC-20261004w8-B-REGISTRY-01   # for the PAPER id this claim cites
+depends_on: CC-20261004W8-B-REGISTRY-01   # for the PAPER id this claim cites
 ```
 
 > **Not medical advice.** Public edition: class level only.
@@ -65,7 +65,7 @@ sit. **No `old` text is replaced**, so no `old`/`new` pair is given; this is a p
 > disease population — which would move the modality from Tier 1 *class* to Tier 1 *validated*.
 >
 > **Paper link.** `[[paper_registry_current#PAPER 151]]` (provisional; see
-> `CC-20261004w8-B-REGISTRY-01`).
+> `CC-20261004W8-B-REGISTRY-01`).
 >
 > **Note.** Class-level record; no individual-level detail. Not medical advice.
 

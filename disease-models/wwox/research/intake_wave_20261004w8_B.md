@@ -162,11 +162,11 @@ candidate is therefore also MINOR, and says so with its reasoning.
 
 ## Candidates produced
 
-- `CC-20261004w8-B-REGISTRY-01` — registry landing for all six PMIDs (PAPER + LIT), numbers
+- `CC-20261004W8-B-REGISTRY-01` — registry landing for all six PMIDs (PAPER + LIT), numbers
   provisional.
-- `CC-20261004w8-B-BIOMARKER-01` — the §13 classification of the three direct WWOX read-outs and
+- `CC-20261004W8-B-BIOMARKER-01` — the §13 classification of the three direct WWOX read-outs and
   their measured ceilings.
-- `CC-20261004w8-B-RESTORATION-SPEC-01` — the promoter / capsid / route bounds, each with its
+- `CC-20261004W8-B-RESTORATION-SPEC-01` — the promoter / capsid / route bounds, each with its
   transfer limit.
 
 ## Artefacts
