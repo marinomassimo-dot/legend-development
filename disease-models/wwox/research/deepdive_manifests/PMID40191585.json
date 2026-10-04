@@ -7,7 +7,9 @@
   "fulltext_dossiers/PMID40191585.md",
   "CC-20261002-HETEROZYGOTE-CARRIERS-01",
   "CC-20261002-INTAKE-A-REGISTRY-01",
-  "disease-models/wwox/research/intake_wave_20261002_A.md"
+  "disease-models/wwox/research/intake_wave_20261002_A.md",
+  "disease-models/wwox/research/intake_wave_20261004w12_A.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W12-A-CARRIERS-01.md"
  ],
  "skills_considered": [
   {
@@ -201,6 +203,27 @@
     },
     "acquired_on": "2026-10-02"
    }
+  },
+  {
+   "path": "files/figures/PMID40191585/supplement_p15-24_60dpi_FigS1-S11_sheet.png",
+   "sha256": "bb217086868a28ff67332677a5de5295032877adea5c59688714d308388930ec",
+   "kind": "figure",
+   "note": "Wave 12 re-read (2026-10-04): supplement pages 15-24 rendered at 60 dpi with pdftoppm and tiled 5x2 with ImageMagick montage. OVERVIEW RESOLUTION: identifies each figure's subject; panel values were not read.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdftoppm_render_montage",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": true,
+    "result_sha256": "bb217086868a28ff67332677a5de5295032877adea5c59688714d308388930ec",
+    "derived_from": "files/fulltext/PMID40191585_assets/lqaf033_supplemental_file.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler) + ImageMagick montage",
+     "version": "poppler 24.02.0",
+     "call": "pdftoppm -r 60 -f 15 -l 24 -png lqaf033_supplemental_file.pdf p; montage p-*.png -tile 5x2 -geometry +4+4 sheet_S1-S11.png"
+    }
+   }
   }
  ],
  "verbatim_locators": {
@@ -288,6 +311,22 @@
     "artifact": "files/fulltext/PMID40191585_assets/suppfigS12_p25_embedded.png",
     "anchor": "Supplementary Figure 12",
     "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "The 171 UKBB carriers of Supplementary Figure 11 are SCN1B carriers, not WWOX carriers; the WWOX count is the 172 of Figure 12.",
+    "snippet": "disease haplotypes, two Epi25 samples and the 171 UKBB samples known to carry the",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID40191585_assets/lqaf033_supplemental_file_pymupdf.txt",
+    "anchor": "Supplementary Figure 11 legend",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Figures 1-11 are method, simulation and SCN1B figures; none carries a WWOX carrier phenotype, zygosity or endpoint.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Supplement pages 15-24 at overview resolution: S1 HMM state diagram; S2 IBD simulation schematic; S3 Markov-chain stopping traces; S4-S5 Wilcoxon box plots by simulated sharing length; S6-S7 FH score panels for CANVAS, GEFS+, FAME1, FAME2; S8 Q-Q plots; S9 AUPRC by simulated locus (no WWOX label); S10 sensitivity lines; S11 shared-haplotype bars around the SCN1B variant.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40191585/supplement_p15-24_60dpi_FigS1-S11_sheet.png",
+    "anchor": "Supplementary Figures 1-11, pages 15-24 overview",
+    "panel_text_relation": "panel_only"
    }
   ]
  }

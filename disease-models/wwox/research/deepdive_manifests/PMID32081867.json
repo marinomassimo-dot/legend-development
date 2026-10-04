@@ -7,7 +7,9 @@
   "fulltext_dossiers/PMID32081867.md",
   "CC-20261002-HETEROZYGOTE-CARRIERS-01",
   "CC-20261002-INTAKE-A-REGISTRY-01",
-  "disease-models/wwox/research/intake_wave_20261002_A.md"
+  "disease-models/wwox/research/intake_wave_20261002_A.md",
+  "disease-models/wwox/research/intake_wave_20261004w12_A.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W12-A-CARRIERS-01.md"
  ],
  "skills_considered": [
   {
@@ -166,6 +168,48 @@
    "acquisition_recipe": {
     "no_recipe": "extracted from the declared supplementaryFiles archive with Python zipfile; the archive itself carries the route"
    }
+  },
+  {
+   "path": "files/figures/PMID32081867/MOESM1_FigS1_panels01-15_sheet.png",
+   "sha256": "f72e3db73546f9c38c27fbd075e15f05a75fc0bc5bc44cddaacd5c6a1bafb8d7",
+   "kind": "figure",
+   "note": "Wave 12 re-read (2026-10-04): contact sheet of Supplementary Figure S1 panels 1-15, the embedded PNGs of MOESM1 extracted in document order (word/document.xml r:embed order) and tiled at 600 px width each with ImageMagick montage. Reduced resolution: region labels and chromosome ideograms are legible; probe-level values were not read.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_docx_media_montage",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": true,
+    "result_sha256": "f72e3db73546f9c38c27fbd075e15f05a75fc0bc5bc44cddaacd5c6a1bafb8d7",
+    "derived_from": "files/fulltext/PMID32081867_assets/41598_2020_59922_MOESM1_ESM.docx",
+    "extractor": {
+     "name": "python zipfile + ImageMagick montage",
+     "version": "ImageMagick 6",
+     "call": "montage <images 1-15 in r:embed order> -tile 3x5 -geometry 600x+4+4 sheet1.png"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID32081867/MOESM1_FigS1_panels16-30_sheet.png",
+   "sha256": "b351e5f277e0432e64aadac76b6f78b7dcee77f7033bb317aa5c6acbfc51892f",
+   "kind": "figure",
+   "note": "Wave 12 re-read (2026-10-04): contact sheet of Supplementary Figure S1 panels 16-30, same derivation as panels 1-15.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_docx_media_montage",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": true,
+    "result_sha256": "b351e5f277e0432e64aadac76b6f78b7dcee77f7033bb317aa5c6acbfc51892f",
+    "derived_from": "files/fulltext/PMID32081867_assets/41598_2020_59922_MOESM1_ESM.docx",
+    "extractor": {
+     "name": "python zipfile + ImageMagick montage",
+     "version": "ImageMagick 6",
+     "call": "montage <images 16-30 in r:embed order> -tile 3x5 -geometry 600x+4+4 sheet2.png"
+    }
+   }
   }
  ],
  "verbatim_locators": {
@@ -229,6 +273,38 @@
     "artifact": "files/fulltext/PMID32081867_assets/41598_2020_59922_Fig3_HTML.jpg",
     "anchor": "Figure 3, panel d",
     "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "The qPCR-validated set is a selected subset of 31 CNVs in three categories, with parents tested; controls are not named among them.",
+    "snippet": "These included three categories: (i) 5 putative genic de novo CNVs, (ii) 11 CNVs deemed relevant",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID32081867_assets/41598_2020_59922_MOESM1_ESM.docx",
+    "anchor": "Supplementary Methods, Validation of CNV calls",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "None of the 30 Supplementary Figure S1 panels covers chromosome 16q23 or WWOX: every panel is an ASD-proband CNV with parental traces, on chromosomes 1, 2, 4-10, 13-17, 19, 22 and X; the 16 panels sit at 16p13.11 and 16p13.3.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Supplementary Figure S1, all 30 embedded panels in document order: region titles 1p36.32 del, 1p36.33 del, 1q21.3 del, 2q31.2 dup, 2q32.1 dup, 2q37.1 dup, 4q22.2 dup, 5p13.2 dup, 6q15 dup, 6q26 del, 7p22.2 del, 7q35 del, 8q22.2 del, 9q33.3 dup, 9q34.12 del, 10q21.3 del, 13q34 del, 14q21.2 dup, 15q11.2 dup, 16p13.11 dup, 16p13.3 del x3, 17q12 dup, 17q21.31 del, 19p13.2 dup x2, 19p13.3 dup, 22q13.33 del, Xp22.12 dup; every legend names an AB proband.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID32081867/MOESM1_FigS1_panels16-30_sheet.png",
+    "anchor": "Supplementary Figure S1 panels 16-30 (with panels 1-15 on the companion sheet)",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The rare-CNV sheet named Table S3 carries the internal title 'Table S2' and lists 128 cases and 363 controls; read cell-wise over 897 rows, exactly two rows overlap the WWOX interval chr16:78,133,309-79,246,564 (hg19): one ASD case and one control.",
+    "snippet": "Table S2. List of rare CNVs (<1% frequency) identified in 128 ASD cases and 363 controls",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID32081867_assets/41598_2020_59922_MOESM2_ESM_xlsxdump.txt",
+    "anchor": "sheet 'Table S3', row 1 title, plus a cell-wise interval scan of all rows",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The control carrying the WWOX-interval loss has no inheritance cell and no phenotype column of any kind in the table.",
+    "snippet": "A294=10025 | B294=Male | C294=16 | D294=78386295 | E294=78466632 | F294=Loss | G294=WWOX",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID32081867_assets/41598_2020_59922_MOESM2_ESM_xlsxdump.txt",
+    "anchor": "sheet 'Table S3', control row 294",
+    "panel_text_relation": "text_only"
    }
   ]
  }
