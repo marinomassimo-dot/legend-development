@@ -1,0 +1,222 @@
+{
+ "schema_version": 2,
+ "pmid": "42248868",
+ "doi": "10.1038/s41525-026-00571-2",
+ "receipt": "FTR-20261004-42248868-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID42248868.md",
+  "disease-models/wwox/research/intake_wave_20261004w7_B.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W7-B-REGISTRY-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W7-B-SPLICE-MEASURED-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is owned by other batches; what this reading supports is proposed as commit candidates and in the intake note."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A diagnostic cohort or method record supplies no new therapeutic lever; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The triples are published in the candidates for a blind auditor; the reader cannot audit their own locators."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "mixed",
+  "is_primary_group_for_disease": false,
+  "weighting": "Accredited clinical laboratory, consecutive cases; one WWOX row with a measured RNA outcome and no case detail. Credible as a measurement of feasibility and of one event class."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (splice OR splicing) AND RNA",
+    "count": 7,
+    "source": "PubMed ESearch rettype=count 2026-10-04"
+   }
+  ],
+  "note": "7 PubMed records; this one adds a measured blood-RNA consequence of an intron-8 donor allele."
+ },
+ "multihop": {
+  "references_enumerated": 31,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "31 references enumerated; none is a WWOX source."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42248868 (run AFTER the first pass); allele-term theme searches for the comparison",
+  "hits": 0,
+  "note": "No PAPER/LIT identity record and no receipt before this reading. The held splice analysis lists three measured WWOX splice transcripts (M-1..M-3); this is a fourth."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 31,
+   "references_screened": 24,
+   "references_with_doi": 24,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 24,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 7
+   }
+  },
+  "result": "Checked 2026-10-04 via PubMed metadata (get_article_metadata): publication types ['Journal Article']; no retraction, expression of concern or correction listed for PMID 42248868."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42248868_Zhao2026_PMC.xml",
+   "sha256": "d8b065585ba478e569e64a80ce79e6b1fb1c3d97fa6f4d723c60585c586d7def",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML; body with inline Tables 1-3 and figure legends, 31 references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13562735/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": false,
+    "result_sha256": "d8b065585ba478e569e64a80ce79e6b1fb1c3d97fa6f4d723c60585c586d7def"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID42248868_Zhao2026_supplement/41525_2026_571_MOESM1_ESM.pdf",
+   "sha256": "8dab35579c1603a188eb8d9aeb66476d50e48b679f3d1807cfeeaf10eed3848f",
+   "kind": "supplement_binary",
+   "note": "Supplementary Table 1: list of all 139 eligible variants (gene and variant only).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13562735/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID42248868/MOESM1_p-4.png",
+   "sha256": "d415c0c7dca05b10de49f0e0f2ea5ca5999e5ab5234d10288a79c09ff1235a04",
+   "kind": "figure",
+   "note": "Rendered page 4 of the supplement. The PDF fonts carry no ToUnicode CMap, so its text layer is not trusted; the WWOX row is read from this rendered page.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local derivation",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": true,
+    "derived_from": "files/fulltext/PMID42248868_Zhao2026_supplement/41525_2026_571_MOESM1_ESM.pdf",
+    "result_sha256": "d415c0c7dca05b10de49f0e0f2ea5ca5999e5ab5234d10288a79c09ff1235a04",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 110 -png -f 4 -l 4 41525_2026_571_MOESM1_ESM.pdf MOESM1_p"
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Case 5: WWOX c.1056+5G>C, autosomal recessive, reclassified VUS to LP after RNA-seq showing partial exon deletion; positive for WWOX-related disorders with ID/DD.",
+    "snippet": "Case 5 WWOXc.1056+5G>C AR VUS → LP partial exon deletion Positive WWOX-Related Disorders Y Y",
+    "anchor": "Table 2, Case 5 (cells space-joined)",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID42248868_Zhao2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "RNA came from EDTA peripheral blood.",
+    "snippet": "Total RNA was extracted from peripheral blood in an EDTA tube using standard protocols.",
+    "anchor": "Methods, Targeted reflex RNA-seq",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42248868_Zhao2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A splice event required a net abnormal-junction change of at least 20% versus controls.",
+    "snippet": "The minimum net change in proportion of abnormal junction reads between the case and control was 20% in order to be considered a significant splicing event.",
+    "anchor": "Methods, Variant assessment",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42248868_Zhao2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The assay reads neither expression level nor NMD, and no functional validation was done.",
+    "snippet": "The assay does not provide insights into gene expression levels or the impact of NMD due to test limitations, which could further refine the functional interpretation of splicing variants. Functional validation studies were also not performed for the reclassified variants.",
+    "anchor": "Discussion, limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42248868_Zhao2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Low-expressed genes are more likely uninformative; genes above 0.5 TPM were reliably studied.",
+    "snippet": "Targeted RNA-seq analysis for genes with low expression level in blood (TPM < 0.1) is more likely to have inconclusive or uninformative results, but there is not a defined criteria for the minimum TPM needed for analysis. Genes in this cohort with TPM values greater than 0.5 TPM were able to be reliably studied.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42248868_Zhao2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Six completed homozygous cases were all reclassified; the paper does not say which.",
+    "snippet": "All six completed cases with homozygous eligible variants were reclassified from VUS to LP, establishing a diagnosis of an autosomal recessive condition for each case.",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42248868_Zhao2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Table 1 lists the WWOX variant among the eligible variants.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Rendered supplement page 4: row 138 WWOX c.1056+5G>C, between WDR37 (137) and ZFX (139).",
+    "anchor": "Supplementary Table 1 (page 4), rendered at 110 dpi",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42248868/MOESM1_p-4.png",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST fullTextXML returned HTTP 200 with a full JATS body on 2026-10-04; the declared article_text artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+ }
+}
