@@ -48,3 +48,16 @@ DRG safety of a neuronal WWOX cassette, whose DRG exposure and expression are th
 - (The DRG histology figure is one image from one animal | (image is from animal administered highest dose, 8.0E+11 vg) | Figure 8 legend panel E, `files/fulltext/PMID42137291_Thomsen2026_PMC.xml`)
 - (NHP transgene RNA was not found in spinal cord or DRG | INS1201 mRNA expression was not detected within any region of the spinal cord or DRG or injection site in NHPs dosed with INS1201 or vehicle | Figure 8 legend panel C, `files/fulltext/PMID42137291_Thomsen2026_PMC.xml`)
 - (NHP GLP design: three animals per dose, three vehicle | by lumbar IT injection (n = 3 per group); vehicle control NHPs (n = 3) were also included | Methods, Nonhuman primates, `files/fulltext/PMID42137291_Thomsen2026_PMC.xml`)
+
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** `PROPAGATED` by `BATCH_20261004_001` (2026-10-04, MINOR, WM_v7.13 → WM_v7.14; ACTOR_ID `scientist`, Scientist K, batch integrator).
+**Surfaces written:** discovery_ledger_current.md
+
+Created as **`DL-MECH-114`** in the discovery ledger; the candidate's op named a provisional `DL-MECH-xxx` and the integrator assigned the next free number (`DL-MECH-113` was the ceiling).
+**Deduplication pass, as the dispatch required.** Measured against the landed `DIS-031`, `DL-METH-118`, `DL-METH-120`, `RL-C-20261003w4a` and `RL-C-20261003w6`, and against the wave-5 `DRG-ATTRIBUTION` candidate: **additive**. It is a second design in which the DRG received vector genomes and **no transgene RNA** — here by **promoter restriction** rather than promoter scrambling — and the record names the three records it does **not** supersede, because the mononuclear-infiltrate pattern is untested here until the supplement is read and no immunosuppressed arm exists.
+The lead is written so it cannot be read as a demonstration: *«compatible with, and does not demonstrate»*. **Reading debt is declared on the record itself** — Table S5 and Figure S7 carry the DRG-specific macaque grading and were never fetched — rather than left implicit, which is what keeps the unread-premise check honest.
+One integrator amendment from the blind audit: the efficacy plateau is offered by the authors as something that *«could be due to»* treatment age at p27–35, hedged three times in the source, and is recorded as a suggestion rather than an attribution.

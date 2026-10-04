@@ -48,3 +48,16 @@ larger-group repeatability analysis with a narrower band.
 - (Fabry DRG about 25 percent larger at 24 weeks | the DRG size in the Fabry mice was ~ 25% larger and statistically different than the DRG size in the wild type mice | Results, DRG enlargement paragraph 3, `files/fulltext/PMID41134821_Zhao2025_PMC.xml`)
 - (No difference between AAVGLA-treated Fabry and wild type | There were no statistically significant differences at all the time points between the gene therapy group and the wildtype group. | Results, DRG enlargement paragraph 4, `files/fulltext/PMID41134821_Zhao2025_PMC.xml`)
 - (Results state fifteen Fabry mice | a total of fifteen Fabry mice that were separated into 3 groups | Results, DRG enlargement paragraph 1, `files/fulltext/PMID41134821_Zhao2025_PMC.xml`)
+
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** `PROPAGATED` by `BATCH_20261004_001` (2026-10-04, MINOR, WM_v7.13 → WM_v7.14; ACTOR_ID `scientist`, Scientist K, batch integrator).
+**Surfaces written:** discovery_ledger_current.md
+
+Created as **`DL-METH-121`** in the discovery ledger (`DL-METH-120` was the ceiling).
+**Arithmetic screen, recomputed from the two numbers the record names:** 0.35 / 0.28 = 1.25, so *«roughly 25 per cent»* holds; and the repeatability band −0.060 to 0.066 mm² against the Table 2 grand mean of **0.257 mm²** is about a quarter of that mean as a half-width, and about the same size as the 0.07 mm² group-level disease effect. The integrator **cell-checked the grand mean in the source** rather than carrying it: Table 2's mean row reads 0.258 (test), 0.255 (retest), 0.257 (mean of means), over **five mice and ten L4 DRGs**, and the per-DRG relative differences run −15.4 % to +19.4 %.
+**Two integrator amendments from the blind audit, both of which make the lead more exact rather than weaker.** (1) The source itself notes that its Bland–Altman plot shows *«a trend of increasing variability with larger CSA values»*. (2) The DRG-versus-cord contrast failure is confined by the authors **to their own T2-weighted acquisition** — they state published T2 values for the two tissues *«are distinct»* and call their own failure *«not immediately apparent»* — so the landed record says it is a limitation of that acquisition and **not** an intrinsic property, which is what the candidate's flat wording would have implied.
+The candidate's correction of the wave-7 selection note is carried in the record: this paper conflates benefit and injury in no number, because it measures only the storage direction.
