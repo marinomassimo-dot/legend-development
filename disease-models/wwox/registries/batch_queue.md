@@ -817,7 +817,7 @@ for an entirely unprocessed record.
 | [40875931](https://pubmed.ncbi.nlm.nih.gov/40875931/) | 2025 | — | full text | PAPER 014 | WWOX-Related Developmental and Epileptic Encephalopathy: Expanding the Clinical Spectrum and Deciphering the Genotype-Phenotype. |
 | [35792847](https://pubmed.ncbi.nlm.nih.gov/35792847/) | 2022 | — | full text | PAPER 171 | Epilepsy in patients with WWOX-related epileptic encephalopathy (WOREE) syndrome. |
 | [33300063](https://pubmed.ncbi.nlm.nih.gov/33300063/) | 2021 | — | full text | PAPER 152 | WWOX promotes apoptosis and inhibits autophagy in paclitaxel‑treated ovarian carcinoma cells. |
-| [29808465](https://pubmed.ncbi.nlm.nih.gov/29808465/) | 2018 | — | full text | receipt FTR-20261004-29808465-03 | A novel missense variant in the SDR domain of the WWOX gene leads to complete loss of WWOX protein with early-onset epileptic encephalopathy and severe developmental delay. |
+| [29808465](https://pubmed.ncbi.nlm.nih.gov/29808465/) | 2018 | — | full text | PAPER 041 | A novel missense variant in the SDR domain of the WWOX gene leads to complete loss of WWOX protein with early-onset epileptic encephalopathy and severe developmental delay. |
 | [30361190](https://pubmed.ncbi.nlm.nih.gov/30361190/) | 2018 | — | full text | PAPER 045 | West syndrome, developmental and epileptic encephalopathy, and severe CNS disorder associated with WWOX mutations. |
 | [28721938](https://pubmed.ncbi.nlm.nih.gov/28721938/) | 2017 | — | full text | PAPER 151 | Practical clues for diagnosing WWOX encephalopathy. |
 | [21476439](https://pubmed.ncbi.nlm.nih.gov/21476439/) | 2011 | — | full text | PAPER 244 | WWOX oxidoreductase--substrate and enzymatic characterization. |

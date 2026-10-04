@@ -11370,8 +11370,8 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Identifier:** PMID 29808465 / DOI 10.1007/s10048-018-0549-5
 **Date discovered:** 2026-04-18
 **Date screened:** 2026-04-18
-**Date processed:** triage only
-**Date last touched:** 2026-04-18
+**Date processed:** 2026-10-04 (`BATCH_20261004_006`)
+**Date last touched:** 2026-10-04
 **Discovery window:** FASE 1 triage 221–400
 **Discovery source:** 400_paper.txt batch corpus
 **Discovery query:** corpus paper 383
@@ -11379,7 +11379,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Quality status:** peer-reviewed (PubMed listing)
 **Filter decision:** in — priority
 **Tier:** A
-**Status:** screened
+**Status:** processed
 **Primary pathway:** clinical spectrum / WWOX-DEE
 **Genotype/model tag:** unassigned in triage
 **Species:** human
@@ -11387,11 +11387,12 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Directness to the reference genotype:** unassigned in triage
 **Over-inference risk:** standard triage — not evaluated
 **clinical relevance:** HIGH
-**Claim links:** none — triage only
+**Claim links:** 019 — the Q230P transcript and protein readings this paper carries (reciprocal with [[paper_registry_current#PAPER 041]], whose Claim links already name 019)
 **Working Model impact:** none yet
 **Report mentions:** FASE 1 triage 221–400
-**Current status:** screened — A
-**Next action:** full-text retrieval + deep-dive in next session
+**Current status:** processed — A
+**Status note:** `complete_fulltext_read` — body under `FTR-20260923-29808465-02`, figures re-read as images in intake wave 12 under `FTR-20261004-29808465-03`; the record's twin is [[paper_registry_current#PAPER 041]], corrected in `BATCH_20261004_006` (the two patients are cousins, not sisters)
+**Next action:** none — read and registered
 **Flags:** FASE 1 batch entry / no deep-dive yet
 **Note:** Title: A novel missense variant in the SDR domain of the WWOX gene leads to complete loss of WWOX protein with early-onset epileptic encephalopathy and severe developmental delay
 

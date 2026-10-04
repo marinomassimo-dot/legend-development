@@ -11,7 +11,7 @@
 > A photograph, not an invariant. `files/fulltext/` is gitignored and grows between sessions, so these numbers describe the corpus on the census date and nothing re-checks them afterwards — compare the listing digest below against your own copy before trusting a row. This page blocks nothing and has no threshold: it exists so that rule 5d's *"record the absence"* is a fact in the state instead of a rediscovery made three papers into a reading.
 
 **Census date:** 2026-10-04  
-**Corpus:** `fulltext` — 455 entries, 227 papers, listing digest `ad621fe48761d0e5`  
+**Corpus:** `fulltext` — 463 entries, 227 papers, listing digest `ef9a7a4ab52ef01e`  
 **Sentinel:** `deepdive_manifest._refuse_suspect_surface`, PDF text via PyMuPDF 1.28.2
 
 ### Totals
@@ -113,7 +113,7 @@ Sentinel over the surface each paper would actually be read from — the structu
 | PMID 34034642 | FT-056 | `absent` | — | — |
 | PMID 17823927 | FT-057 | `structured` | `clean` | PMID17823927_LudesMeyers2007.html, PMID17823927_LudesMeyers2007.pdf |
 | PMID 25411445 | FT-057 | `absent` | — | — |
-| PMID 29808465 | FT-057, FT-122, FT-154 | `pdf_only` | `clean` | PMID29808465_Johannsen2018.pdf |
+| PMID 29808465 | FT-057, FT-122, FT-154 | `pdf_only` | `clean` | PMID29808465_Johannsen2018.pdf, PMID29808465_Johannsen2018.txt |
 | PMID 30158849 | FT-057 | `structured` | `clean` | PMID30158849_Liu2018_PMC.xml |
 | PMID 30356099 | FT-057 | `structured` | `clean` | PMID30356099_Piard2019_EPMC.xml, PMID30356099_Piard2019_PMC_2026-09-27.xml |
 | PMID 34268881 | FT-059 | `structured` | `clean` | PMID34268881_Steinberg2021.pdf, PMID34268881_Steinberg2021_PMC.xml |
