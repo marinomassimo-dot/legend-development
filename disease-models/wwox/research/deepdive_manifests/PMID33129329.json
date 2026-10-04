@@ -1,0 +1,464 @@
+{
+ "schema_version": 2,
+ "pmid": "33129329",
+ "doi": "10.1186/s12917-020-02638-3",
+ "receipt": "FTR-20261004-33129329-01",
+ "landing": [
+  "FTR-20261004-33129329-01",
+  "disease-models/wwox/research/fulltext_dossiers/PMID33129329.md",
+  "disease-models/wwox/research/intake_wave_20261004w8_B.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline. The reading is an assay audit: antibody, matrix, normaliser, dynamic range and inter-rater reliability had to be read from Methods, figure panels and the uncropped-blot supplement in one pass."
+  },
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Europe PMC fullTextXML returned the body on the first request (HTTP 200, 123225 bytes); the supplementaryFiles endpoint returned the figure rasters and the uncropped-blot PDF in one archive. No cascade was needed."
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "paper_packet.py packet --pmid 33129329 reported no manifest, no receipts, no registry identity: a first reading with nothing to deduplicate against."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED. Two text-versus-panel weakenings (Fig. 1a group-level separation with individual overlap; Fig. 2a protein-level overexpression far more modest in the uncropped blot than the text implies) are the kind of finding the blind audit exists for."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "Not applicable. This paper supplies no therapeutic lever; it supplies an assay specification and its ceilings."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 25,
+  "publications_on_gene": 1,
+  "counts_measured": "PubMed esearch 2026-10-04: 'Fenger JM[au]' 25; 'Fenger JM[au] AND WWOX' 1.",
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "A comparative-oncology laboratory, not a WWOX laboratory: this is the group's single WWOX publication. The gene-specific reagent is not theirs either — the immunohistochemistry antiserum is acknowledged as a gift from a WWOX laboratory, and the immunoblot antibody is a catalogue polyclonal. The measurements are therefore read here as an assay demonstration by a competent but non-specialist group, which is exactly the position a clinical laboratory adopting the assay would be in."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "occurrences of the string WWOX in the persisted JATS body",
+    "route": "local count over files/fulltext/PMID33129329_Makii2020_PMC.xml",
+    "count": 257
+   }
+  ],
+  "note": "Maximum density for an assay question: the paper's entire method is the measurement of WWOX. The density is not evidence about the gene's biology in a nervous system — the matrix is canine skin tumour and canine/murine mast cell lines throughout."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 60,
+  "gene_direct_refs_in_source": [
+   "19708029",
+   "15064722",
+   "20146584",
+   "22201747",
+   "17360458",
+   "17458891",
+   "11719429",
+   "10786676",
+   "19896763",
+   "20530675",
+   "15674328",
+   "25891642",
+   "15073125",
+   "19188760",
+   "30211123",
+   "15070730",
+   "15548692",
+   "16061658",
+   "30154439",
+   "21075834",
+   "27308504",
+   "25245215",
+   "24550385",
+   "25681467",
+   "24510053",
+   "16941225",
+   "17200365",
+   "25331887",
+   "19458077",
+   "27869163",
+   "15073846"
+  ],
+  "enumeration_method": "All 60 references in the persisted JATS carry a PMID. Gene-directedness was classified by the reference article-title containing WWOX / Wwox / 'WW domain': 31 of 60. Each of the 31 was tested against the PMID index of the receipt ledger.",
+  "resolved": [
+   "15064722",
+   "20146584",
+   "17360458",
+   "20530675",
+   "15070730",
+   "16061658",
+   "21075834",
+   "27308504",
+   "25245215",
+   "24550385",
+   "24510053",
+   "16941225",
+   "25331887",
+   "27869163"
+  ],
+  "queued": [
+   {
+    "scope": "17 gene-direct references with no receipted reading",
+    "queue": "full_text_queue_current",
+    "pmids": [
+     "19708029",
+     "22201747",
+     "17458891",
+     "11719429",
+     "10786676",
+     "19896763",
+     "15674328",
+     "25891642",
+     "15073125",
+     "19188760",
+     "30211123",
+     "15548692",
+     "30154439",
+     "25681467",
+     "17200365",
+     "19458077",
+     "15073846"
+    ],
+    "why": "They are the gene-direct bibliography of an assay paper, not of this wave's question. Two of them bear directly on the restoration-spec theme and are named as the priority tail: 16941225 (WWOX protein expression in normal human tissues — already resolved, and the reference that fixes what a normal-tissue baseline looks like) is read; 10786676 and 11719429 are the founding characterisations that would fix the expected molecular weight and isoform set the antibody should see. Deferred deliberately, not overlooked."
+   }
+  ],
+  "note": "14 of 31 gene-direct references already carry a receipted reading in this corpus. No hop was followed in this session: the question was what THIS paper measures and how well, and following hops would have answered a different question."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does the shared root files/ tree already hold any artefact for PMID 33129329, given that files/ is gitignored and visible only in the root checkout?",
+  "hits": 0,
+  "finding": "No. paper_packet.py reported 0 artefacts present, 0 declared-and-absent and 0 on disk and undeclared before acquisition. All eight artefacts declared below were fetched and persisted into the root files/ tree by this reading."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-04",
+  "route": "PubMed esummary for 33129329",
+  "result": "pubtype ['Journal Article']; the CommentsCorrections reference list is empty. No retraction, no expression of concern, no erratum.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 60,
+   "references_screened": 53,
+   "references_with_doi": 53,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 24,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 7
+   },
+   "citing_relation": "No dependency was flagged, so no citing_relation is owed. The 7 unscreenable references carry no DOI in the persisted JATS; none of them supports a statement this reading carries."
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID33129329_Makii2020_PMC.xml",
+   "sha256": "7fee677f182d10adb5cc467cc06de5be4b8e00af9ec43e738c4a6e5e867f0f2c",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7603737/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_rest_fulltextxml",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-04",
+    "derived": false,
+    "result_sha256": "7fee677f182d10adb5cc467cc06de5be4b8e00af9ec43e738c4a6e5e867f0f2c"
+   }
+  },
+  {
+   "path": "files/supplement/PMID33129329/12917_2020_2638_MOESM1_ESM.pdf",
+   "sha256": "6713a860929cb725ff5a9ce3e785cde29e0f9450c28e729d84429f3596652a2b",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7603737/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "europepmc_rest_supplementaryfiles_zip",
+    "user_agent_policy": "browser_like",
+    "acquired_on": "2026-10-04",
+    "derived": false,
+    "result_sha256": "6713a860929cb725ff5a9ce3e785cde29e0f9450c28e729d84429f3596652a2b",
+    "note": "One HTTP 200 zip of 3673996 bytes carried the uncropped-blot PDF and all six figure rasters; this member was extracted with the python standard-library zipfile and persisted verbatim, with no re-encoding."
+   }
+  },
+  {
+   "path": "files/figures/PMID33129329/12917_2020_2638_Fig1_HTML.jpg",
+   "sha256": "8acd1162131809602d8480de5e1917fe9467286d85948ac31d0770f503026d0e",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7603737/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "europepmc_rest_supplementaryfiles_zip",
+    "user_agent_policy": "browser_like",
+    "acquired_on": "2026-10-04",
+    "derived": false,
+    "result_sha256": "8acd1162131809602d8480de5e1917fe9467286d85948ac31d0770f503026d0e",
+    "note": "One HTTP 200 zip of 3673996 bytes carried the uncropped-blot PDF and all six figure rasters; this member was extracted with the python standard-library zipfile and persisted verbatim, with no re-encoding."
+   }
+  },
+  {
+   "path": "files/figures/PMID33129329/12917_2020_2638_Fig2_HTML.jpg",
+   "sha256": "7640385ea49fb151553761719b65404109a2a7b7483862660f6e98cfb5b004e7",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7603737/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "europepmc_rest_supplementaryfiles_zip",
+    "user_agent_policy": "browser_like",
+    "acquired_on": "2026-10-04",
+    "derived": false,
+    "result_sha256": "7640385ea49fb151553761719b65404109a2a7b7483862660f6e98cfb5b004e7",
+    "note": "One HTTP 200 zip of 3673996 bytes carried the uncropped-blot PDF and all six figure rasters; this member was extracted with the python standard-library zipfile and persisted verbatim, with no re-encoding."
+   }
+  },
+  {
+   "path": "files/figures/PMID33129329/12917_2020_2638_Fig3_HTML.jpg",
+   "sha256": "e0f35bfd95ac0ae855e45e2cb1db8e6310a8080d0d5a1e3a344161352d0e298d",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7603737/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "europepmc_rest_supplementaryfiles_zip",
+    "user_agent_policy": "browser_like",
+    "acquired_on": "2026-10-04",
+    "derived": false,
+    "result_sha256": "e0f35bfd95ac0ae855e45e2cb1db8e6310a8080d0d5a1e3a344161352d0e298d",
+    "note": "One HTTP 200 zip of 3673996 bytes carried the uncropped-blot PDF and all six figure rasters; this member was extracted with the python standard-library zipfile and persisted verbatim, with no re-encoding."
+   }
+  },
+  {
+   "path": "files/figures/PMID33129329/12917_2020_2638_Fig4_HTML.jpg",
+   "sha256": "3e92c2af4e1649c769ba42cef15484a2e345749b056521c24f7765ea081a946a",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7603737/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "europepmc_rest_supplementaryfiles_zip",
+    "user_agent_policy": "browser_like",
+    "acquired_on": "2026-10-04",
+    "derived": false,
+    "result_sha256": "3e92c2af4e1649c769ba42cef15484a2e345749b056521c24f7765ea081a946a",
+    "note": "One HTTP 200 zip of 3673996 bytes carried the uncropped-blot PDF and all six figure rasters; this member was extracted with the python standard-library zipfile and persisted verbatim, with no re-encoding."
+   }
+  },
+  {
+   "path": "files/figures/PMID33129329/12917_2020_2638_Fig5_HTML.jpg",
+   "sha256": "e377556ddc773a33453d43a1129a6c6027fd95aef2a2fea5cc2c537778f02f7c",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7603737/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "europepmc_rest_supplementaryfiles_zip",
+    "user_agent_policy": "browser_like",
+    "acquired_on": "2026-10-04",
+    "derived": false,
+    "result_sha256": "e377556ddc773a33453d43a1129a6c6027fd95aef2a2fea5cc2c537778f02f7c",
+    "note": "One HTTP 200 zip of 3673996 bytes carried the uncropped-blot PDF and all six figure rasters; this member was extracted with the python standard-library zipfile and persisted verbatim, with no re-encoding."
+   }
+  },
+  {
+   "path": "files/figures/PMID33129329/12917_2020_2638_Fig6_HTML.jpg",
+   "sha256": "712d717158908447ac92a2a6f554ce0d1d6656cc41c221460961175404942b44",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7603737/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "europepmc_rest_supplementaryfiles_zip",
+    "user_agent_policy": "browser_like",
+    "acquired_on": "2026-10-04",
+    "derived": false,
+    "result_sha256": "712d717158908447ac92a2a6f554ce0d1d6656cc41c221460961175404942b44",
+    "note": "One HTTP 200 zip of 3673996 bytes carried the uncropped-blot PDF and all six figure rasters; this member was extracted with the python standard-library zipfile and persisted verbatim, with no re-encoding."
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC JATS body held locally and fingerprinted; the publisher's six figure rasters and the uncropped-blot supplement retrieved from the Europe PMC supplementaryFiles archive and fingerprinted. The supplement PDF's MD5 as served matches the MD5 the JATS itself declares for MOESM1, so the file is the one the article points at. Figure panels were read as pixels from the fingerprinted rasters and from the supplement rendered at 300 dpi; the supplement is a single page.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored. Every entry below is a Methods specification, a panel reading, or a limitation the authors state in their own Discussion.",
+  "entries": [
+   {
+    "proposition": "The immunohistochemistry reagent is an antiserum raised against a human/murine epitope and used across a species barrier, with the homology argument given in place of a canine validation.",
+    "snippet": "This antiserum detects endogenous and recombinant human and murine WWOX amino acid residues 12–94 containing both of the WW domains. Human and canine WWOX exhibit 94.4% similarity at the protein level and the region corresponding to WWOX amino acids 12–94 shares 96% sequence homology",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33129329_Makii2020_PMC.xml",
+    "anchor": "Methods, 'Tumor microarray construction and immunohistochemistry'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The immunohistochemistry controls are a positive tissue and an isotype-matched irrelevant antibody — there is no genetic negative control (no knockout, no knockdown tissue) anywhere in the immunohistochemistry arm.",
+    "snippet": "Normal canine testes tissue served as a positive control. Negative controls consisted of irrelevant isotype matched antibody at matched dilutions.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33129329_Makii2020_PMC.xml",
+    "anchor": "Methods, 'Tumor microarray construction and immunohistochemistry'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The immunohistochemistry read-out is an ordinal human score, not a measurement: two bounded scales, subjectively assigned, then averaged between two readers.",
+    "snippet": "Overall WWOX signal intensity of normal and malignant mast cells was subjectively scored from 0 to 3 (0 = none to weak, 1 = mild, 2 = moderate, 3 = strong) by two boarded veterinary pathologists",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33129329_Makii2020_PMC.xml",
+    "anchor": "Methods, 'Tumor microarray construction and immunohistochemistry'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors measured the reliability of their own immunohistochemistry read-out and report it as fair — the single most important number in the paper for anyone proposing this assay as a pharmacodynamic read-out.",
+    "snippet": "There was fair interrater agreement for both staining intensity and percent of cells stained (K = 0.264 and 0.273, respectively).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33129329_Makii2020_PMC.xml",
+    "anchor": "Results, 'Immunohistochemical expression of WWOX in primary canine MCT samples'",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "The immunoblot arm uses a DIFFERENT antibody from the immunohistochemistry arm — a catalogue polyclonal — and quantifies by densitometry normalised to a loading control, on a membrane that is stripped and reprobed.",
+    "snippet": "incubated overnight with polyclonal rabbit anti-WWOX antibody (Cat #PA5–17237, Invitrogen ThermoFisher Scientific)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33129329_Makii2020_PMC.xml",
+    "anchor": "Methods, 'Immunoblotting'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The quantification is relative densitometry against a loading control that migrates 4 kDa from the target, with no standard curve, no recombinant calibrator and no stated limit of detection.",
+    "snippet": "Band intensities were calculated using ImageJ software (NIH, Bethesda, MD, USA) and relative intensity of WWOX was determined by dividing by β-actin.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33129329_Makii2020_PMC.xml",
+    "anchor": "Methods, 'Immunoblotting'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The transcript read-out is a relative comparative-Ct assay normalised to a ribosomal housekeeper, with SYBR chemistry and no absolute standard — so it reports fold-change within a run, never a concentration.",
+    "snippet": "Canine WWOX and 18S were detected using Fast SYBR Green PCR master mix according to the manufacturer’s instructions. Data normalization was performed relative to 18S internal control.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33129329_Makii2020_PMC.xml",
+    "anchor": "Methods, 'RNA isolation, cDNA synthesis, and qRT- PCR'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The study declares itself a pilot with no power calculation — the authors' own statement that the design was not sized to detect anything.",
+    "snippet": "This was a pilot study with the intent to characterize the expression of WWOX in primary canine MCTs and malignant cell lines, so no power calculation was made.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33129329_Makii2020_PMC.xml",
+    "anchor": "Methods, 'Tumor microarray construction and immunohistochemistry'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The transcript panel shows group-level separation with individual-level overlap: the two normal mast-cell preparations are not the two highest bars, and three tumour samples equal or exceed the higher of them. Read from the fingerprinted raster, not from a text layer.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Panel 1a, y-axis 'Relative Expression (2^-ΔΔCT)' 0.000–0.004 linear. Two cBMCMC bars at approximately 0.0018 (error bar reaching about 0.0031) and 0.0007. Roughly twenty Primary Canine MCT bars: two reach approximately 0.0026 and approximately 0.0028, one approximately 0.0011; the remainder sit at or below approximately 0.0006, most near 0.0002. No significance asterisk is drawn on the panel.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID33129329/12917_2020_2638_Fig1_HTML.jpg",
+    "anchor": "Figure 1, panel a, read at 300 percent upscale from the publisher raster",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The sentence the panel bounds: the transcript claim is a group comparison, and the paper never claims and never shows single-sample discrimination.",
+    "snippet": "As shown in Fig. 1a, normal canine BMCMCs exhibited significantly higher levels of WWOX transcript compared to primary canine MCTs.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33129329_Makii2020_PMC.xml",
+    "anchor": "Results, 'WWOX expression is frequently decreased in primary canine MCT tissues and malignant mast cell lines'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The second transcript panel is drawn on a broken axis, so the visual gap between the normal preparation and the high-expressing tumour line overstates a ratio that is roughly seventeen-fold.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Panel 1b carries a discontinuous y-axis: a lower segment 0.00000–0.00010 and an upper segment 0.001–0.002. cBMCMC plots in the upper segment at approximately 0.0017; BR plots at approximately zero; C2 plots at approximately 0.00010 in the lower segment. No error bars and no significance marks are drawn.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID33129329/12917_2020_2638_Fig1_HTML.jpg",
+    "anchor": "Figure 1, panel b",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The immunohistochemistry percent-positivity score separates the two tumour grades completely in this cohort, while the intensity score does not — and the metric that separates is the one with the weaker inter-rater agreement.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Panel 6a 'Stain Intensity', y-axis 0–3: low-grade points span 1 to 2 with a mean near 1.75; high-grade points span 0 to 1 with a mean near 0.5 — the two groups share the value 1. Panel 6b '% Cells Stained', y-axis 0–4: low-grade points sit at 4 with one at 3; high-grade points span 1 to 2.5 — the two groups do not overlap. Both panels carry four asterisks.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID33129329/12917_2020_2638_Fig6_HTML.jpg",
+    "anchor": "Figure 6, panels a and b",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The uncropped immunoblot shows that the protein-level validation of lentiviral WWOX restoration is modest: the empty-vector lane and the WWOX lane carry bands of comparable intensity, and two further unlabelled lanes on the same membrane carry bands of similar intensity to both.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Supplementary Figure S1, 'Figure 2A' membrane: four lanes carry a band between the 50 kDa and 43 kDa markers; only the rightmost two are labelled 1 and 2. Lane 2 is modestly darker than lane 1; the two unlabelled lanes to their left are comparable to lane 1.",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID33129329/12917_2020_2638_MOESM1_ESM.pdf",
+    "anchor": "Supplementary Figure S1, panel labelled 'Figure 2A', rendered at 300 dpi",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The uncropped tumour-lysate immunoblot shows multiple immunoreactive species in canine tumour lysate, with the reported band selected by an arrow; the cropped main-text figure does not show them.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Supplementary Figure S1, 'Figure 1D' membrane: lane 3 carries two distinct bands, one at the arrow and one clearly below it; lane 5 carries two bands, both below the arrow; lane 4 carries a band above the 50 kDa marker that the arrow does not indicate.",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID33129329/12917_2020_2638_MOESM1_ESM.pdf",
+    "anchor": "Supplementary Figure S1, panel labelled 'Figure 1D', rendered at 300 dpi",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The supplement itself states the two bands the method resolves, and they are 4 kDa apart on the same stripped-and-reprobed membrane.",
+    "snippet": "Western blotting for WWOX (~ 47 kDa, upper panel) and β-actin (43 kDa, lower panel) was performed.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33129329_Makii2020_PMC.xml",
+    "anchor": "Supplementary Information, Additional file 1 caption",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "The functional arm is an earned negative: restoring or removing WWOX changed neither proliferation nor viability in either cell line.",
+    "snippet": "enforced expression of WWOX or shRNA-mediated WWOX knockdown had no significant effect on mast cell proliferation and viability in the cell lines evaluated (Fig. 3a, b)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33129329_Makii2020_PMC.xml",
+    "anchor": "Results, 'WWOX does not influence cell proliferation and viability in malignant canine mast cell lines'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The only positive functional result is a single dose point of a radiation survival curve, and the adjacent dose point did not reach significance.",
+    "snippet": "genetic knockdown of WWOX significantly increased clonogenic survival of C2 mast cells at higher radiation doses (6 Gy p = 0.0416, Fig. 4). C2 mast cells expressing WWOX shRNAs showed a trend towards increased clonogenic survival at doses of 4 Gy, but this difference did not reach statistical significance (p = 0.1200)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33129329_Makii2020_PMC.xml",
+    "anchor": "Results, 'WWOX-deficient C2 mast cells exhibit increased clonogenic survival of ionizing radiation-induced double strand breaks'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors themselves state the cohort cannot support a conclusion about expression in the high-risk class.",
+    "snippet": "The limited number of primary MCTs evaluated in the current study precludes us from drawing conclusions about the expression of WWOX in high-risk MCTs.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33129329_Makii2020_PMC.xml",
+    "anchor": "Discussion, second paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The paper's own explanation for why its functional result does not match the human literature is that WWOX's phenotypic consequence is cell-context dependent — which is simultaneously the transfer limit on every datum in it.",
+    "snippet": "the phenotypic consequences of altered WWOX expression on cell behavior may be largely influenced by the contextual nature of WWOX and the expression of putative binding partners in distinct cell types/tissues",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33129329_Makii2020_PMC.xml",
+    "anchor": "Discussion, third paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "An internal inconsistency in the paper's own seeding density: the figure caption and the Methods disagree by one order of magnitude for the same experiment.",
+    "snippet": "BR and C2 cells (5 × 104 cell/well) were seeded in 96-well plates and cell viability was assessed at 0, 24, 48, 72, or 96 h using the MTT assay.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33129329_Makii2020_PMC.xml",
+    "anchor": "Figure 3 caption — compare Methods, 'Assessment of cell viability and cell proliferation', which states 5 × 103 for the same seeding",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}
