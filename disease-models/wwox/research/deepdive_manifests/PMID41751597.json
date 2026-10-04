@@ -1,0 +1,377 @@
+{
+ "schema_version": 2,
+ "pmid": "41751597",
+ "doi": "10.3390/genes17020213",
+ "receipt": "FTR-20261004-41751597-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID41751597.md",
+  "disease-models/wwox/research/intake_wave_20261004w7_C1.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No WWOX content; the one lead (age and dose-per-weight as the two things a neonatal protocol must fix) is carried in a candidate rather than a discovery-ledger edit."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A mouse biodistribution resource with a reporter; it supplies no lever specific to a WWOX cassette."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is tested."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes go through candidates."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "A candidate from this reading narrows no consolidated baseline claim; triples are published for an auditor."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 48,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "PubMed counts 2026-10-04: Gray SJ[au] AND AAV9 48 records, 0 intersecting WWOX. A vector-delivery laboratory using a reporter vector in wild-type mice; the paper is a biodistribution resource, with no disease model and no WWOX content."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "AAV9 AND neonatal AND (intrathecal OR intracerebroventricular) AND biodistribution",
+    "count": 3,
+    "source": "PubMed ESearch 2026-10-04"
+   },
+   {
+    "query": "WWOX AND AAV",
+    "count": 2,
+    "source": "PubMed ESearch 2026-10-04"
+   }
+  ],
+  "note": "WWOX appears zero times in the body (grep of the persisted JATS). Earned null for the gene."
+ },
+ "multihop": {
+  "references_enumerated": 62,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "All 62 references enumerated; none concerns WWOX. Two (a DRG pathology paper and a microRNA de-targeting paper, both macaque) are cited for the DRG-toxicity statement and are held elsewhere as sources of the DRG-attribution records; they are not hops of this reading."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 41751597 (done after the first pass was written)",
+  "hits": 0,
+  "note": "Filled in the comparison step of the note."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-04 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn, CommentIn or UpdateIn link; publication type Journal Article.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 62,
+   "references_screened": 51,
+   "references_with_doi": 51,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 24,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 11
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41751597_Rioux2026_PMC.xml",
+   "sha256": "5936d8ddaa7039e489734c374a4bc407db9c4007af19359b8263d85698779ebc",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12940312/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "5936d8ddaa7039e489734c374a4bc407db9c4007af19359b8263d85698779ebc"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID41751597_Rioux2026_PMC.derived.txt",
+   "sha256": "c442ba6f303c4858ac53bb322353aeeb2972ef857265982a6d31a6a23470d037",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "no_recipe": "Derived text layer of the declared JATS (script derive_txt.py kept in the session scratchpad, not versioned): title, abstract, section headings, body paragraphs, table captions with one line per row (cells joined by a single space), table footnotes and figure legends, whitespace collapsed. Lossy: markup, references and superscript structure are dropped (superscript exponents print inline, so 10^11 reads 1011). One deliberate substitution: the single glyph U+00BC in the phrase a quarter turn of a tail (Methods 2.7) is written 1/4, because the manifest validator refuses any surface containing that glyph between alphanumerics as a probable Elsevier/LiveCycle substitution for an equals sign, which this MDPI JATS is not; the sentence makes the reading unambiguous."
+   }
+  },
+  {
+   "path": "files/fulltext/PMID41751597_Rioux2026_figures/genes-17-00213-g001.jpg",
+   "sha256": "f7b6469d182f6a43e12aa509befe94f3d9e5479fc6914193ff18e38cab3b4d5c",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12940312/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC supplementaryFiles archive, member genes-17-00213-g001.jpg extracted unchanged (PMC reader pages answer a reCAPTCHA)",
+    "user_agent_policy": "browser_like",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "f7b6469d182f6a43e12aa509befe94f3d9e5479fc6914193ff18e38cab3b4d5c"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID41751597_Rioux2026_figures/genes-17-00213-g002.jpg",
+   "sha256": "7de87a4b464849d69c1c228179a0bd9f134aeb779706e01f9bf5344b5ae2da22",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12940312/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC supplementaryFiles archive, member genes-17-00213-g002.jpg extracted unchanged (PMC reader pages answer a reCAPTCHA)",
+    "user_agent_policy": "browser_like",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "7de87a4b464849d69c1c228179a0bd9f134aeb779706e01f9bf5344b5ae2da22"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID41751597_Rioux2026_figures/genes-17-00213-g003.jpg",
+   "sha256": "f7c22f3fbf7582d48ab7944843f9368f13ee8ff90949c9447acdc695f7b52c35",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12940312/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC supplementaryFiles archive, member genes-17-00213-g003.jpg extracted unchanged (PMC reader pages answer a reCAPTCHA)",
+    "user_agent_policy": "browser_like",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "f7c22f3fbf7582d48ab7944843f9368f13ee8ff90949c9447acdc695f7b52c35"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID41751597_Rioux2026_figures/genes-17-00213-g0A6.jpg",
+   "sha256": "bef6d6664f7076754f8d1d7e5521abf33342498f6772957c820be5ffe92a5fa6",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12940312/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC supplementaryFiles archive, member genes-17-00213-g0A6.jpg extracted unchanged (PMC reader pages answer a reCAPTCHA)",
+    "user_agent_policy": "browser_like",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "bef6d6664f7076754f8d1d7e5521abf33342498f6772957c820be5ffe92a5fa6"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST search (EXT_ID, SRC:MED) returned the PMCID and fullTextXML returned a JATS body on 2026-10-04; every locator is matched against the persisted JATS.",
+  "abstract_anchoring_waived": "No locator draws on an abstract; every entry is matched against the body or a table of the declared JATS artifact.",
+  "note": "Coverage of this pass: abstract, introduction, all methods subsections, all results subsections, discussion, Tables 1 and A1-A3 (A2 and A3 read cell-wise from the JATS), all figure legends, and Figures 1, 2, 3 and A6 inspected as images (Figures 4-6, A1-A5 and A7-A11 were not inspected as images: captions only). No limitations section exists; the authors' caveats sit in the Discussion. The data are stated to be available on request; no supplement beyond the appendix figures and tables inside the article was found.",
+  "entries": [
+   {
+    "proposition": "Total vector genomes were fixed per injection and not scaled to age or body weight, so dose per body weight was higher in the youngest animals.",
+    "snippet": "Doses were not adjusted to age or body weight",
+    "anchor": "Methods 2.3 Study Design",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41751597_Rioux2026_PMC.derived.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Younger animals received the larger dose per body weight; the authors state it.",
+    "snippet": "Younger mice, at P1 and P5 treatment, received a higher vector dose per body weight compared to older mice because the doses were fixed and not adjusted for weight or tissue size.",
+    "anchor": "Results 3.1, Summary",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41751597_Rioux2026_PMC.derived.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Day-1 lumbar intrathecal injection of the GFP vector at the lower dose: 47 percent mortality, mean age at termination 10 days.",
+    "snippet": "AAV9/GFP injected via the IT route caused a 47% mortality rate with an average age at termination of 10 days.",
+    "anchor": "Results 3.1, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41751597_Rioux2026_PMC.derived.txt",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "Day-1 combined intrathecal plus intracerebroventricular injection: 39 percent mortality, mean age at termination 18 days.",
+    "snippet": "The IT & ICV route caused a 39% mortality rate with an average age at termination of 18 days.",
+    "anchor": "Results 3.1, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41751597_Rioux2026_PMC.derived.txt",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "At day 1, no deaths after intracerebroventricular or intravenous vector and none after vehicle by any route.",
+    "snippet": "No deaths were recorded from ICV or IV administration of AAV9/GFP, nor were any deaths recorded from a vehicle injection administered by either of the four administration routes.",
+    "anchor": "Results 3.1, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41751597_Rioux2026_PMC.derived.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Day-5 lumbar intrathecal injection: mortality 70 percent at the higher dose and 17 percent at the lower dose.",
+    "snippet": "IT administration of AAV9/GFP at 5 × 1011 vg caused a 70% mortality rate and at 2.5 × 1011 vg caused a 17% mortality rate",
+    "anchor": "Results 3.1, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41751597_Rioux2026_PMC.derived.txt",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "At day 5 no deaths after intravenous vector at either dose.",
+    "snippet": "No deaths were recorded from IV administration of AAV9/GFP at either dose.",
+    "anchor": "Results 3.1, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41751597_Rioux2026_PMC.derived.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Survival did not differ among groups injected at day 10 or day 28, and weights did not differ.",
+    "snippet": "No significant differences in survival among P10 or P28 injection treatment groups were observed. Additionally, no significant differences in weight were observed for any group.",
+    "anchor": "Results 3.1, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41751597_Rioux2026_PMC.derived.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Every euthanised animal reviewed had spinal cord abnormality and none had abnormality in the dorsal root ganglion.",
+    "snippet": "All terminated mice reviewed displayed some degree of abnormality in the spinal cord, but notably no abnormality in the dorsal root ganglion.",
+    "anchor": "Results 3.1, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41751597_Rioux2026_PMC.derived.txt",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "Table A2: in a euthanised animal with diffuse cervical spinal cord degeneration the dorsal root ganglion is reported normal.",
+    "snippet": "Dorsal Root Ganglion Normal Cervical Spinal Cord Diffuse degeneration-vacuolation of the dorsal tracts",
+    "anchor": "Table A2, first animal with cervical findings",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID41751597_Rioux2026_PMC.derived.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors attribute the deaths to localised GFP over-expression, state that GFP can be toxic and potentially immunogenic, and did not test it with a null or promoterless control.",
+    "snippet": "The deaths observed in mice dosed P1 and P5 was most likely due to localized GFP overexpression toxicity.",
+    "anchor": "Discussion, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41751597_Rioux2026_PMC.derived.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The attribution is an inference from timing (peak of self-complementary expression) and from other transgenes at similar doses being tolerated in other studies.",
+    "snippet": "Similar doses of other transgenes delivered with AAV9 have been well tolerated in other studies at these young ages",
+    "anchor": "Discussion, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41751597_Rioux2026_PMC.derived.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The dorsal root ganglion is transduced by every route and age on GFP immunohistochemistry; the authors say it is unclear whether route or age changes its amount.",
+    "snippet": "it remains unclear if route of administration or treatment age effects the amount of transgene expression in this region.",
+    "anchor": "Results 3.3, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41751597_Rioux2026_PMC.derived.txt",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "The authors say mice may be less prone to dorsal root ganglion toxicity than rats or primates.",
+    "snippet": "it has been shown that mice may be less prone to this specific toxicity than rats or non-human primates",
+    "anchor": "Results 3.3, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41751597_Rioux2026_PMC.derived.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Direct cerebrospinal fluid routes transduce peripheral tissue to a similar extent as the intravenous route.",
+    "snippet": "IT, ICV, and IT & ICV routes of administration transduce peripheral tissue to a similar extent as IV administration.",
+    "anchor": "Results 3.4, Summary",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41751597_Rioux2026_PMC.derived.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Liver transduction rose with age at injection, highest at day 28, more than it varied with route.",
+    "snippet": "Liver transduction was most affected by age rather than route of administration, where P28-treated animals showed the highest GFP expression levels",
+    "anchor": "Results 3.4, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41751597_Rioux2026_PMC.derived.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Brain and spinal cord expression appeared higher after injection at younger ages regardless of route.",
+    "snippet": "regardless of route of administration, GFP expression in younger mice appeared to be higher than in older mice.",
+    "anchor": "Results 3.2, Summary",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41751597_Rioux2026_PMC.derived.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors say no significant dose effect was detected and that the study may be underpowered rather than saturated.",
+    "snippet": "No significant dose effects on biodistribution were detected, which might be a reflection of the study being underpowered to see these differences rather than a saturation effect at the lower dose.",
+    "anchor": "Discussion, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41751597_Rioux2026_PMC.derived.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors give a mouse-to-human dose approximation for the lower dose, citing another source.",
+    "snippet": "a 2.5 × 1011 vg mouse dose approximates to a 1.00 × 1015 vg human dose",
+    "anchor": "Discussion, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41751597_Rioux2026_PMC.derived.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Authors' advice: day-1 injection overestimates the transduction a postnatal human would reach and so underestimates a minimally effective dose.",
+    "snippet": "since it overestimates the transduction efficiency that could be expected in a postnatal human, and thus underestimates a minimally effective dose.",
+    "anchor": "Discussion, last para",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41751597_Rioux2026_PMC.derived.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 1 footnote: the day-5 higher-dose lumbar intrathecal group was not fully enrolled because of mortality.",
+    "snippet": "Not fully enrolled due to a high mortality rate.",
+    "anchor": "Table 1 footnote",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID41751597_Rioux2026_PMC.derived.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table A3, cerebrum at day 5, lower dose: combined route mean 0.956908 vector genomes per diploid genome versus intravenous 0.001862 (n 10 each).",
+    "snippet": "IT & ICV (2.5 × 1011 vg) 10 0.956908 0.241648",
+    "anchor": "Table A3, Cerebrum, P5",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID41751597_Rioux2026_PMC.derived.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table A3, liver at day 28 versus day 1, intravenous: mean 2.012641 at day 28 and 0.068126 at day 1 (different doses: 5 and 2.5 x 10^11 vg).",
+    "snippet": "IV (5 × 1011 vg) 11 2.012641 0.404079",
+    "anchor": "Table A3, Liver, P28",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID41751597_Rioux2026_PMC.derived.txt",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}
