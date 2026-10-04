@@ -91,3 +91,29 @@ response is byte-identical (SHA-256) to the copy the Orchestrator had staged, an
   into validated panel test at the time of referral. Deletion should be detectable by array."
 - Class transfer: an in-frame multi-exon deletion and a frameshift; neither is the reference genotype's class.
   **No transfer.**
+
+## A3 · PMID 40858643 (Hamanaka 2025) — first pass (written before any registry comparison)
+
+- 260 exome-negative ID/DD families, short-read genome sequencing; WWOX is one row of Table 2 and one row in each
+  of Supplementary Data 1 (small variants) and 2 (SVs). The main text never discusses it.
+- Genotype class: **`c.517-1G>A`** (canonical acceptor of intron 5, i.e. the exon-6 acceptor; genome
+  `chr16:78386859G>A`) **in trans with a single-exon CNV, `Chr16:g.78140467_78313935delinsCA`, "WWOX exon 5"**
+  (~173 kb). Phase from trio inheritance (one allele from each parent; this edition does not carry which).
+- Both alleles classified Pathogenic: `PVS1, PM2, PM3, PP3` (splice) and `PVS1, PM2, PM3` (CNV).
+- **Measured:** DNA only (GS; the exon-5 deletion is supported by five SV callers). **No RNA** for WWOX — the
+  paper's RNA-seq was run only on lymphoblastoid lines of selected non-WWOX cases. **No protein.**
+- **Predicted:** the splice consequence of `c.517-1G>A` (CADD 25.1; PVS1 by rule). Neither exon 6 skipping nor
+  cryptic-acceptor use is shown; the exon-5 deletion's frame consequence is not stated.
+- Phenotype band (HPO, Supplementary Data 1/2): epilepsy with tonic seizures, exaggerated startle, rigidity,
+  hypokinesia, joint contractures, feeding difficulties and recurrent aspiration pneumonia, intellectual
+  disability, cerebral white-matter hyperintensity and atrophy, abnormal thalamic signal and size, cerebellar
+  dysplasia. Clinical category "Unclassified DD/ID syndrome – Epilepsy".
+- Selection-note premises tested: the "reverse-phenotyping flag ('Unclassified (Epilepsy)' → solved)" is **not
+  in the paper** — "Unclassified (Epilepsy)" is only the referral category column; no reverse phenotyping is
+  described. The splice allele is ES-detectable ("Yes"), the CNV is not.
+- Same-site note: `c.517-1G>A` alters the same intron-5 acceptor dinucleotide as `c.517-2A>G` (the allele of the
+  patient-derived organoid line of PMID 34268881). A same-site allele is still a different allele: nothing
+  measured for one is transferred to the other here.
+- Class transfer: an intron-5 acceptor allele and a single-exon deletion. Not the reference genotype's class (the
+  reference splice allele named in LEGEND's ASO skill is an intron-8 acceptor). **No transfer.**
+- References: 36; no WWOX gene-direct reference.
