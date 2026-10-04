@@ -78,3 +78,27 @@ its gene content is a table cell, not a figure; and the paper has no imaging fig
 phenotype is a table cell, not a panel. Figure 3B marks one chromosome 16 long-arm pathogenic CNV. Arithmetic:
 10/54, 16/54, 4/107 and the derived 13.17 Mb interval all agree. `CLAIM 032` unaffected (the deletion is a
 contiguous-gene carrier, not a dosage datum); `PAPER 208` clarified. The supplement is a STROBE checklist.
+
+## 6 · PMID 35460704 (Dong 2022) — receipt `FTR-20261004-35460704-02`, candidate `CC-20261004W9-A-DONG-PANELS-01`
+
+Owed: figure panels (the supplement table was read in the first reading and re-read for the WWOX rows).
+Figure 1: the WWOX bar reads 4, entirely missense, agreeing with the text and the three distinct missense
+alleles; its header ("144 occurrences in 101 patients") does not match the text's 110 participants (a cohort-total
+discrepancy, WWOX count unaffected). Figure 3: WWOX is in neither significant-gene table and no WWOX statistic is
+printed. No neurological endpoint and no per-carrier lipid value exist (low HDL-C is the selection), so
+`CLAIM 045`'s "nobody looked" premise is strengthened, not resolved. The Benign p.Arg120Trp row's ClinVar disease
+column lists WWOX-related condition names beside the Benign classification (clarification op). Arithmetic: group
+sizes 80+23+77+24 = 204 and the printed percentages recompute. `CLAIM 045` holds; `PAPER 156` narrowed.
+
+## 7 · Answer, limits, and what did not happen
+
+- **Where the briefed premise failed:** two of the six selection rows were false on the bytes (Thomsen: no DRG grading
+  exists in Table S5 or Figure S7; Khadija: the deletion is in no figure and the paper has no imaging figure). One
+  registry note was stale (`FT-193` says Grubor was "not acquired, not read"; it has a partial receipt and is now
+  re-read). One selection note was right but incomplete (De: nominal, and fails a within-gene Bonferroni).
+- **Candidates, no registry candidate:** per wave-9 correction 35 no new `PAPER`/`LIT` landing is owed for these
+  six already-registered PMIDs; no `CC-...-REGISTRY-01` is written.
+- **Not landed:** the branch carries manifests whose new receipts are not yet in the ledger; it is left committed and
+  unlanded for the Orchestrator to integrate (receipts in `scratchpad/receipts_pending_w9/sciA_<pmid>_1.json`).
+- **Not read:** see each dossier's "Still not read"; Khadija Figure 2 (patient photographs) was deliberately not opened.
+- **Safety classifier:** no passage was halted in this run.
