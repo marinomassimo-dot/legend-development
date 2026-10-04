@@ -8052,7 +8052,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Identifier:** PMID 32081867 / PMCID PMC7035424 / DOI 10.1038/s41598-020-59922-3
 **Status:** processed
 **Record provenance:** created by `CC-20261002-INTAKE-A-REGISTRY-01` (intake wave 2026-10-02, Scientist A). Provisional number: if `PAPER 124` is taken when this batch runs, the integrator renumbers and updates the `LIT link`.
-**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261002-32081867-01`; manifest `deepdive_manifests/PMID32081867.json`; dossier `research/fulltext_dossiers/PMID32081867.md`
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261004-32081867-02` (intake wave 12, `CC-20261004W12-A-CARRIERS-01`: the owed supplement surfaces were read, the Supplementary Methods in full, the 30 validation panels as images and the rare-CNV table cell-wise), superseding `partial_fulltext_read` under receipt `FTR-20261002-32081867-01`; manifest `deepdive_manifests/PMID32081867.json`; dossier `research/fulltext_dossiers/PMID32081867.md`. Registered by `BATCH_20261004_006`, which found the completing receipt on `main` and this field still declaring the earlier depth.
 **Primary pathway:** gene dose / heterozygous carriers
 **Model/species:** human
 **Genotype/model:** case: heterozygous loss inside canonical intron 5 (shorter isoforms' last exon); control: heterozygous loss spanning canonical exons 6–7 and most of 8 (reader's mapping, unvalidated)
@@ -10120,7 +10120,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Identifier:** PMID 33129329 / PMCID PMC7603737 / DOI 10.1186/s12917-020-02638-3
 **Status:** processed
 **Record provenance:** created by `CC-20261004W8-B-REGISTRY-01` (intake wave 8 2026-10-04, Scientist B); the candidate specified the record in prose and the integrator authored it. The candidate's provisional `PAPER 201`-`206` / `LIT-0494`-`0499` were already taken by `BATCH_20261004_001`; re-measured at `761b36909fa4` and renumbered in event order.
-**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261004-33129329-01`; manifest `deepdive_manifests/PMID33129329.json`; dossier `research/fulltext_dossiers/PMID33129329.md`
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261004-33129329-02` (intake wave 12, `CC-20261004W12-A-ASSAY-01`: every figure panel read as pixels, plus the uncropped-blot supplement), superseding `partial_fulltext_read` (**partial full text**) under receipt `FTR-20261004-33129329-01`; manifest `deepdive_manifests/PMID33129329.json`; dossier `research/fulltext_dossiers/PMID33129329.md`. Registered by `BATCH_20261004_006`, which found the completing receipt on `main` and this field still declaring the earlier depth.
 **Primary pathway:** P9 — measurement / assay specification
 **Model/species:** canine cutaneous mast cell tumour tissue; canine and murine mast cell lines
 **Genotype/model:** no WWOX allele; wild-type canine and murine WWOX
