@@ -1,0 +1,301 @@
+{
+ "schema_version": 2,
+ "pmid": "41438872",
+ "doi": "10.1016/j.omtm.2025.101636",
+ "receipt": "FTR-20261004-41438872-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID41438872.md",
+  "disease-models/wwox/research/intake_wave_20261004w8_C.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is a research surface another batch owns; no lead is written there from this reading."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "The source is a toxicology or case record in a non-WWOX programme; it supplies no lever for the reference genotype class and forging from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No small molecule is screened; the paper concerns vector-related toxicity and the question here is evidence status, not a molecule."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes are proposed as commit candidates for a later BATCH_COMMIT."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Triples are published in the candidates for an auditor to run."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "mixed",
+  "is_primary_group_for_disease": false,
+  "weighting": "Not assessed in this reading: a non-WWOX paper read for a transferable question about AAV toxicity; no author-group credibility judgement is carried."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND AAV",
+    "count": 2,
+    "source": "PubMed ESearch 2026-10-04"
+   },
+   {
+    "query": "WWOX AND (dorsal root ganglion OR ganglionopathy)",
+    "count": 2,
+    "source": "PubMed ESearch 2026-10-04"
+   }
+  ],
+  "note": "Not assessed; off-WWOX source. WWOX occurs zero times in the JATS file (case-insensitive count 0); DRG and dorsal root are also not mentioned."
+ },
+ "multihop": {
+  "references_enumerated": 35,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "35 references enumerated in the JATS; none is WWOX-direct (the paper never names WWOX)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 41438872 at packet time",
+  "hits": 0,
+  "note": "Packet reported no registry presence at the start of the reading."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-04 by PubMed EFetch: Journal Article only; no RetractionIn, ErratumIn, ExpressionOfConcernIn or UpdateIn link.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "UNSCREENABLE_NO_SNAPSHOT",
+   "reference_source": "jats",
+   "references_declared": 35,
+   "references_screened": 0,
+   "references_with_doi": 0,
+   "schema": "retraction_check.dependencies/1",
+   "screened": false,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 24,
+    "rows": 0,
+    "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block (failed closed 2026-10-04: snapshot retractionwatch_20260910.csv absent under files/retraction_watch/; nothing reported clean)",
+   "unscreenable": {
+    "UNSCREENABLE_NO_SNAPSHOT": 35
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41438872_Fortuna2025_PMC.xml",
+   "sha256": "e5ed0af91d86bf5851125fb9cb6f4c937a2507a5a4d42a2e7d1b3a6da95c5014",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12721033/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "result_sha256": "e5ed0af91d86bf5851125fb9cb6f4c937a2507a5a4d42a2e7d1b3a6da95c5014"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID41438872_Fortuna2025_supplement/mmc1.pdf",
+   "sha256": "625c6ba08357976ac98fc8beaeb06545b7c50e77a73a7a354cd09a9b1863c84d",
+   "kind": "supplement_binary",
+   "note": "Supplementary Figure S1 and related material (PDF); opened, not analysed.",
+   "acquisition_recipe": {
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12721033/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "result_sha256": "625c6ba08357976ac98fc8beaeb06545b7c50e77a73a7a354cd09a9b1863c84d"
+   }
+  },
+  {
+   "path": "files/figures/PMID41438872/gr4.jpg",
+   "sha256": "8bead041cbee3f46b842e0dcdaece12b1fff6d7317eefbafa7ed74e86f19d25d",
+   "kind": "figure",
+   "note": "Figure 4 (cortical and spinal neuronal labelling quantification), inspected at native resolution.",
+   "acquisition_recipe": {
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12721033/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "result_sha256": "8bead041cbee3f46b842e0dcdaece12b1fff6d7317eefbafa7ed74e86f19d25d"
+   }
+  },
+  {
+   "path": "files/figures/PMID41438872/gr5.jpg",
+   "sha256": "b3156316bd15dff4adc86110eebb547772c47ec8d2edcc152f64061ac9557d02",
+   "kind": "figure",
+   "note": "Figure 5 (ddPCR vector genomes in brain regions and peripheral organs), inspected at native resolution and an enlarged crop of panel B.",
+   "acquisition_recipe": {
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12721033/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "result_sha256": "b3156316bd15dff4adc86110eebb547772c47ec8d2edcc152f64061ac9557d02"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC search EXT_ID:41438872 AND SRC:MED on 2026-10-04: inEPMC=Y, isOpenAccess=Y, PMC12721033",
+  "entries": [
+   {
+    "proposition": "Three animals per capsid and a single saline control, all juvenile male pigtail macaques.",
+    "snippet": "three received AAV9 injection (3.05",
+    "anchor": "Materials and methods, NHPs",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41438872_Fortuna2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Dose was 4e13 vg/kg, unilateral intracerebroventricular, with equal per-kilogram dosing across animals of different body weight.",
+    "snippet": "Virus-injected animals received a dose of",
+    "anchor": "Materials and methods, NHPs",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41438872_Fortuna2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The reporter cassette was nuclear-localised FLAG-histone 2B under the human synapsin 1 promoter, the same for both capsids.",
+    "snippet": "tagged histone 2B under the control of the human synapsin 1 promoter",
+    "anchor": "Materials and methods, Viral vectors",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41438872_Fortuna2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Necropsy and pathological evaluation found no vector-related macroscopic or microscopic findings.",
+    "snippet": "Necropsy and pathological evaluation revealed no vector-related macroscopic or microscopic findings, indicating no treatment-related adverse effects.",
+    "anchor": "Results, first paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41438872_Fortuna2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Cortical neuronal labelling median 11.1 percent for PHP.eB against 2.2 percent for AAV9, counted over regions of interest, not animals.",
+    "snippet": "median PHP.eB value of 11.1% (6.56",
+    "anchor": "Results, AAV-PHP.eB yields higher neuronal transduction, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41438872_Fortuna2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The statistical unit is the region of interest: 336 and 343 regions from three animals per capsid.",
+    "snippet": "Overall, 336 regions of interest (ROIs)",
+    "anchor": "Results, AAV-PHP.eB yields higher neuronal transduction, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41438872_Fortuna2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 4: cortical FLAG/NeuN percentages by region and capsid and spinal percentages by level; the PHP.eB boxes sit above the AAV9 boxes in every cortical region and spinal level, with wide ranges.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 4A-C and F-G box plots, read at native resolution: PHP.eB median about 9 to 12 percent per cortical region against about 2 to 4 percent for AAV9; spinal PHP.eB about 16 percent against about 10 percent; each dot is a region of interest.",
+    "anchor": "Figure 4, panels A-C, F, G",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41438872/gr4.jpg",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "Spinal neuronal transduction was about 1.5-fold higher with PHP.eB.",
+    "snippet": "higher neuronal transduction in the spinal cord compared to AAV9",
+    "anchor": "Results, AAV-PHP.eB yields higher neuronal transduction, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41438872_Fortuna2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Liver carried by far the highest vector genome load of any organ sampled after ICV, with no capsid difference.",
+    "snippet": "and notably high in the liver (PHP.eB: 202.2",
+    "anchor": "Results, Significant portion of the virus leaks, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41438872_Fortuna2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 5B: liver vector genomes about 100 to 250 copies per diploid genome in both capsid groups against below 2 in heart, kidney and muscle; log axis.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 5B log-axis bars, enlarged crop: liver PHP.eB and AAV9 bars at about 1e2 to 2.5e2 copies per diploid genome; heart about 1 to 2; kidney about 0.5; muscle about 0.3 to 0.4.",
+    "anchor": "Figure 5, panel B",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41438872/gr5.jpg",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "The authors state that body-weight differences between the cohorts may bias the comparison against AAV9.",
+    "snippet": "differences in cohort body weight may have introduced bias, potentially underestimating AAV9 transduction efficiency",
+    "anchor": "Discussion, Potential limitations and challenges",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41438872_Fortuna2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Serum liver enzymes and other clinical chemistry were not assessed.",
+    "snippet": "as clinical chemistry parameters (e.g., serum liver enzymes) were not assessed in this study",
+    "anchor": "Discussion, Potential limitations and challenges",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41438872_Fortuna2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors note PHP.eB's rodent advantage is attributed to LY6A binding, absent in primates.",
+    "snippet": "binding to the LY6A receptor, which is absent in NHPs",
+    "anchor": "Discussion, Key findings, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41438872_Fortuna2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "No microglial activation was seen near transduced-neuron clusters.",
+    "snippet": "no signs of microglial activation were observed near these clusters",
+    "anchor": "Results, Unilateral i.c.v. delivery, para 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41438872_Fortuna2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Subcortical structures such as putamen and thalamus were poorly transduced by both capsids.",
+    "snippet": "deeper, subcortical structures such as putamen and thalamus",
+    "anchor": "Results, Unilateral i.c.v. delivery, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41438872_Fortuna2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors list epileptic encephalopathies among disorders that could benefit from broad cortical delivery, without any experiment in one.",
+    "snippet": "Rett syndrome, or epileptic encephalopathies, where effective gene delivery",
+    "anchor": "Discussion, Implications for CNS gene therapy",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41438872_Fortuna2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}
