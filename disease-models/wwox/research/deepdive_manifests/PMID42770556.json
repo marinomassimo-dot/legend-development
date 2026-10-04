@@ -5,9 +5,7 @@
   "receipt": "FTR-20261004-42770556-01",
   "context_policy": "SOURCE_FIRST",
   "landing": [
-    "disease-models/wwox/research/fulltext_dossiers/PMID42770556.md",
     "disease-models/wwox/research/intake_wave_20261004w9_C.md",
-    "disease-models/wwox/research/commit_candidates/CC-20261004W9-C-TRANS-REGULATOR-01.md",
     "disease-models/wwox/research/commit_candidates/CC-20261004W9-C-REGISTRY-01.md"
   ],
   "skills_considered": [
