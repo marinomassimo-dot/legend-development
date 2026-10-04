@@ -57,3 +57,18 @@ enumerated and searched, and the surfaces that were unavailable are named.
   qualified; DIS-029's premise "All four respond" is corrected. Both dry runs were executed.
 * **Transfer limit:** a constitutive mouse null in embryonic fibroblasts after 20–30 serial passages.
   It is not neural, not in vivo, and models no missense allele.
+
+## 3 · PMID 34204789 — Kałuzińska 2021, PLEK2/RRM2/GCSH in glioma
+
+* **Verdict:** INGEST (re-read, panels, tables and supplement). Receipt `sciC_34204789_1.json` →
+  `FTR-20261004-34204789-02`, `partial_fulltext_read`.
+* **Acquired:** ten figures and the supplementary ZIP (CC BY).
+* **FIND-X:** DIS-026's negative — no perturbation and no protein measurement — **survives** on every
+  surface. The supplementary TIFFs were not rendered; their captions are transcript-level. Figure 8's
+  "spatial expression" is a UMAP of bulk samples.
+* **New:** the triad was *selected* on four criteria, and its correlations with WWOX (|R| 0.42–0.44)
+  are mid-ranked. RNF141, COL3A1 and RXRG correlate more strongly.
+* **Candidate:** `CC-20261004W13-C-TRIAD-SELECTION-01` — **MINOR** wording correction to DIS-026.
+  The rejection holds; the dry run was executed.
+* **Transfer limit:** bulk glioma transcriptomes. A transcript correlation across tumours says nothing
+  about WWOX function in any genotype class.
