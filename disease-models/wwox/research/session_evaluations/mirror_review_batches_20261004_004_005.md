@@ -54,9 +54,10 @@ page 80, and Figure 2F of PMID 42397075 on the 600-dpi panel asset, with the axi
   bar is **−2.40** (366 px) and the `RGs` bar **+1.00** (153 px): the correction from −2.6 to −2.4
   and the +1.0 radial-glia figure are both right, and the old value was wrong.
 - **The privacy repairs are complete and measurable without reproducing a single string.** Across
-  every file the two batches touched, added lines contain **zero** maternal-side and **zero**
-  paternal-side words (the one `parent-of-origin` occurrence per batch is a policy sentence in the
-  report); batch 004 *removed* such wording from the claim registry, the literature log, the paper
+  every file the two batches touched, added lines contain **zero** occurrences of either
+  transmitting-side term of the gate's own vocabulary (the one `parent-of-origin` occurrence per
+  batch is a policy sentence in the report); batch 004 *removed* such wording from the claim
+  registry, the literature log, the paper
   registry, one candidate and one manifest. `public_release_gate.py`: **PASS, 0 BLOCK**, and no
   `[REVIEW]` line names any record either batch authored.
 - **Depth discipline is exact across 11 new records.** `fulltext_receipts.py status --pmid` returns
@@ -99,7 +100,7 @@ page 80, and Figure 2F of PMID 42397075 on the 600-dpi panel asset, with the axi
 | A2 | PMID 21476439 records (`PAPER 244`, `LIT-0306`, `CORPUS P306`, `FT-130`, `FT-147`): *cDNA fragment* vs *full-length*; motif attribution; `TX-003` | **CONFIRMED** — the source's own *fragment* wording carried; *full-length* appears only as the withdrawn derivation; motif attribution withdrawn in both records; `TX-003` untouched · 🔸 **F2** `LIT-0306`'s triage fields |
 | A3 | The 14-Km arithmetic and the Mann-Whitney floor, recomputed from Table II on the rendered rotated page 80 | **CONFIRMED** — 13/14 below the lowest [S], exception testosterone/NADP⁺; all 14 p values unattainable at n = 2–3 |
 | A4 | PMID 42397075 records: cell fraction −2.6 → **−2.4**, `RG` **+1.0**, the earned glial null, artefact-digest instability, `CLAIM 002/003/005` boundary-text-only | **CONFIRMED** — both panel values recomputed from axis geometry; the three claim records gained appended boundary text and nothing else · NOTE **F3** |
-| A5 | Privacy repairs: no parent-of-origin pairing in the records, manifests and candidates either batch touched | **CONFIRMED by script, no string reproduced** — 0 maternal-side and 0 paternal-side words in added lines of either batch; removals where the repairs said |
+| A5 | Privacy repairs: no parent-of-origin pairing in the records, manifests and candidates either batch touched | **CONFIRMED by script, no string reproduced** — zero occurrences of either transmitting-side term of the gate's vocabulary in added lines of either batch; removals where the repairs said |
 | B1 | `CLAIM 003` re-authored statement vs the Repudi artefacts on rendered pages (PDF + supplement File009) | **CONFIRMED on substance** — quantitative-vs-qualitative split, MBP P17, clasping P18, survival n/P, zero challenge experiments · 🔴 **F1** the page number |
 | B2 | The isodisomy rule in the working model: any parental-side wording? | **CONFIRMED — none.** Class-level throughout |
 | B3 | `PAPER 245/246`, `CORPUS-STUB-181`–`189`, `LIT-0539`–`0548`: identity vs JATS front matter; depth labels vs `fulltext_receipts.py status --pmid` | **CONFIRMED 11/11 on depth** (3 complete, 8 partial, every partial carrying *partial full text*) **and on the four identities I re-measured from front matter** |
