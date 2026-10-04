@@ -30,7 +30,7 @@ All from the persisted JATS of PMID 41751597, tables read cell-wise (`<tr>`/`<td
 
 ## 3 · What this adds, bounds or leaves untouched
 
-- **Adds** to `CC-20261003W5-C-DOSE-SCALAR-01`: a fourth worked case of the fixed-total-vg scalar, and the first in the repository with both an age series and the organ weights needed to convert it (Table A1 itself is in the source).
+- **Adds** to `CC-20261003W5-C-DOSE-SCALAR-01`: a fourth worked case of the fixed-total-vg scalar, with an age series and the organ weights needed to convert it printed in the source itself (Table A1); whether another held source has both was not checked.
 - **Corroborates** `CC-20261003W5-A-WINDOW-STATUS-01`: no source yet matches expression across ages and finds efficacy falling with age; this one is a biodistribution study, has no efficacy endpoint, and is not a window result in either direction. The revival trigger stated there has not fired.
 - **Bounds** the authors' advice that "day 1 injection overestimates the transduction a postnatal human would reach and underestimates the minimally effective dose": the sentence rests on a design in which day-1 animals received a larger dose per tissue, so over-estimation of transduction at day 1 may be an effect of dose per gram and not of age.
 - **Leaves untouched** every wave-3 to wave-5 statement about neonatal tolerisation: this study has no immune endpoint and no immunosuppression arm.
