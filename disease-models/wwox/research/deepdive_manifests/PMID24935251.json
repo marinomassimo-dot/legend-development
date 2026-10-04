@@ -1,0 +1,309 @@
+{
+ "schema_version": 2,
+ "pmid": "24935251",
+ "doi": "10.1007/s00204-014-1279-6",
+ "receipt": "FTR-20261004-24935251-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID24935251.md",
+  "disease-models/wwox/research/intake_wave_20261004w9_B.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W9-B-VPA-DIRECTION-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W9-B-REGISTRY-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is a research surface another batch owns; any lead this reading touches is proposed through a commit candidate instead of an edit."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever for the reference genotype class is supplied by this source; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No candidate molecule is proposed for the reference genotype class; the compounds in the source are tested in cells or animals for other purposes."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes are proposed as commit candidates for a later BATCH_COMMIT."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The triples are published in the candidates for an auditor to run; no consolidated baseline claim is narrowed here."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 430,
+  "publications_on_gene": 0,
+  "research_type": "mixed",
+  "is_primary_group_for_disease": false,
+  "weighting": "PubMed counts 2026-10-04: senior author Leist M[au] 430 records, 0 intersecting WWOX. Same group as PMID 23179753."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "valproic acid AND WWOX",
+    "count": 2,
+    "source": "PubMed ESearch 2026-10-04"
+   },
+   {
+    "query": "valproic acid AND embryonic stem cells AND neural AND transcriptome",
+    "count": 24,
+    "source": "PubMed ESearch 2026-10-04"
+   }
+  ],
+  "note": "The WWOX datum lives only in supplementary probe-set tables."
+ },
+ "multihop": {
+  "references_enumerated": 74,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "All 74 references enumerated from the JATS reference list; none names WWOX or FRA16D."
+ },
+ "corpus_crossquery": {
+  "query": "Does any registry record name this paper? (registry_records.py get --pmid 24935251)",
+  "hits": 0,
+  "note": "No registry record exists; the only repository statement resting on it is the CTD valproate row of PMID 41254692 Table S7 (wave-8 candidate CC-20261004W8-A-VPA-DIRECTION-01)."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-04 by PubMed EFetch for PMID 24935251: no RetractionIn, ErratumIn, ExpressionOfConcernIn or UpdateIn link.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 74,
+   "references_screened": 64,
+   "references_with_doi": 64,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 24,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 10
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID24935251_Balmer2014_PMC.xml",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4067541/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "43cbb56ff5dc31a01b100fe9c10bfaf2c9b3844ff3cb1452d3a8385781fcce3e"
+   },
+   "sha256": "43cbb56ff5dc31a01b100fe9c10bfaf2c9b3844ff3cb1452d3a8385781fcce3e"
+  },
+  {
+   "path": "files/fulltext/PMID24935251_Balmer2014_supplement/204_2014_1279_MOESM2_ESM.xlsx",
+   "kind": "supplement_binary",
+   "note": "MOESM2 (Supplementary Table S1: developmentally regulated probe sets of untreated hESC-to-neural-precursor differentiation at 6 h, day 4, day 6).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/4067541/bin/204_2014_1279_MOESM2_ESM.xlsx",
+    "http_method": "GET",
+    "tier": "PMC instance bin via pmc_pow_fetch.fetch (proof-of-work page solved)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "73f0e11eb8cc4811e0fdccd6de736ec2383a3206f238755a096cc6ce193dde0c"
+   },
+   "sha256": "73f0e11eb8cc4811e0fdccd6de736ec2383a3206f238755a096cc6ce193dde0c"
+  },
+  {
+   "path": "files/fulltext/PMID24935251_Balmer2014_supplement/204_2014_1279_MOESM2_ESM_xlsxdump.txt",
+   "kind": "supplement_text",
+   "note": "Selective cell dump: first 3 rows of each sheet and every row naming WWOX. Not a full dump.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID24935251_Balmer2014_supplement/204_2014_1279_MOESM2_ESM.xlsx",
+    "extractor": {
+     "name": "xlsxdumpB.py (stdlib; copy stored beside the output)",
+     "version": "copy stored beside the output; stdlib zipfile+ElementTree (xlsx) or xlrd (xls)",
+     "call": "python3 xlsxdumpB.py <xlsx> 3 '(^|[^A-Za-z0-9])WWOX([^A-Za-z0-9]|$)' > <txt>",
+     "join": "\n"
+    },
+    "acquired_on": "2026-10-04"
+   },
+   "sha256": "a7373413a84215c8993fd964f350b980c67708b2a54ded31c173b40a4e4f51c1"
+  },
+  {
+   "path": "files/fulltext/PMID24935251_Balmer2014_supplement/204_2014_1279_MOESM3_ESM.xlsx",
+   "kind": "supplement_binary",
+   "note": "MOESM3 (Supplementary Table S2: probe sets regulated by TSA 10 nM or VPA 600 uM for 6 h, 4 d, 6 d and pulses).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/4067541/bin/204_2014_1279_MOESM3_ESM.xlsx",
+    "http_method": "GET",
+    "tier": "PMC instance bin via pmc_pow_fetch.fetch (proof-of-work page solved)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "8d50ab16c99145575f50b4d5062e41e793846e89dc20ad65bec6e78b2fcfe8e6"
+   },
+   "sha256": "8d50ab16c99145575f50b4d5062e41e793846e89dc20ad65bec6e78b2fcfe8e6"
+  },
+  {
+   "path": "files/fulltext/PMID24935251_Balmer2014_supplement/204_2014_1279_MOESM3_ESM_xlsxdump.txt",
+   "kind": "supplement_text",
+   "note": "Selective cell dump: first 3 rows of each sheet and every row naming WWOX. Not a full dump.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID24935251_Balmer2014_supplement/204_2014_1279_MOESM3_ESM.xlsx",
+    "extractor": {
+     "name": "xlsxdumpB.py (stdlib; copy stored beside the output)",
+     "version": "copy stored beside the output; stdlib zipfile+ElementTree (xlsx) or xlrd (xls)",
+     "call": "python3 xlsxdumpB.py <xlsx> 3 '(^|[^A-Za-z0-9])WWOX([^A-Za-z0-9]|$)' > <txt>",
+     "join": "\n"
+    },
+    "acquired_on": "2026-10-04"
+   },
+   "sha256": "3eb423db5bded781a0d0c03fb9a5b6805a0e258ed9f58b829df772735ac9e392"
+  },
+  {
+   "path": "files/fulltext/PMID24935251_Balmer2014_supplement/204_2014_1279_MOESM4_ESM.xlsx",
+   "kind": "supplement_binary",
+   "note": "MOESM4 (Supplementary Table S3: overrepresented GO terms). Scanned by script for WWOX: 0 hits.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/4067541/bin/204_2014_1279_MOESM4_ESM.xlsx",
+    "http_method": "GET",
+    "tier": "PMC instance bin via pmc_pow_fetch.fetch (proof-of-work page solved)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "a79bb2802b63c8afd2eddbde3490a1ec5163a572501ff4901460991d64a5f4ad"
+   },
+   "sha256": "a79bb2802b63c8afd2eddbde3490a1ec5163a572501ff4901460991d64a5f4ad"
+  },
+  {
+   "path": "files/fulltext/PMID24935251_Balmer2014_supplement/204_2014_1279_MOESM5_ESM.xlsx",
+   "kind": "supplement_binary",
+   "note": "MOESM5 (overlap lists). Scanned by script for WWOX: 0 hits.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/4067541/bin/204_2014_1279_MOESM5_ESM.xlsx",
+    "http_method": "GET",
+    "tier": "PMC instance bin via pmc_pow_fetch.fetch (proof-of-work page solved)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "dc421bec194951e8e9a8a91edd5277a15d596da235daea9d61592718cb77b5b1"
+   },
+   "sha256": "dc421bec194951e8e9a8a91edd5277a15d596da235daea9d61592718cb77b5b1"
+  },
+  {
+   "path": "files/fulltext/PMID24935251_Balmer2014_supplement/204_2014_1279_MOESM1_ESM.pdf",
+   "kind": "supplement_binary",
+   "note": "MOESM1 (supplementary figures and methods, PDF). Not read page by page.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/4067541/bin/204_2014_1279_MOESM1_ESM.pdf",
+    "http_method": "GET",
+    "tier": "PMC instance bin via pmc_pow_fetch.fetch (proof-of-work page solved)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "9355dfbaae57e0fa40741cb1145f6f9be4722d2c61c1ebe4456cd0f0f4463fc1"
+   },
+   "sha256": "9355dfbaae57e0fa40741cb1145f6f9be4722d2c61c1ebe4456cd0f0f4463fc1"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Cells were hESC (H9) differentiated to neural precursor cells; VPA was used at 600 uM and TSA at 10 nM unless stated.",
+    "snippet": "treatment with valproic acid (VPA) was done with a concentration of 600 µM",
+    "anchor": "Materials and methods, drug treatment",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24935251_Balmer2014_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "VPA exposure for 6 h, 4 d or 6 d produced probe-set lists of increasing size (2,760 for VPA at 4 d); early responses reversed after washout.",
+    "snippet": "Treatment for 4 days (T4d) resulted in similar numbers of up-/down-regulated PS (total: 1,342 PS for TSA, 2,760 PS for VPA).",
+    "anchor": "Results, Transcriptome changes triggered by exposure to HDACi for various time periods, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24935251_Balmer2014_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The paper's own conclusion: after prolonged exposure the transcriptome mainly reflects an altered developmental stage, not the drug mode of action (and early responses are reversible).",
+    "snippet": "All these early regulations were reversed after a 6-day washout period (EP).",
+    "anchor": "Results, Transcriptome changes triggered by exposure to HDACi for various time periods, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24935251_Balmer2014_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Treated-versus-control lists use BH-adjusted p below 0.05 with fold change above 1.5 or below 2/3, relative to untreated controls lysed the same day.",
+    "snippet": "T4d to C4d and T6d, early pulse (EP), medium pulse (MP), and late pulse (LP) to C6d",
+    "anchor": "Materials and methods, statistics",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24935251_Balmer2014_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The developmental (untreated) baseline lists use a stricter threshold than the treatment lists.",
+    "snippet": "(p value <0.01, fold change (FC) > 1.5 or FC < 0.67)",
+    "anchor": "Results, Transcriptome changes triggered by exposure to HDACi for various time periods, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24935251_Balmer2014_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The VPA 4-day list (600 uM) names WWOX with fold change 1.574 (up), p 0.00249, adjusted p 0.042 (probe 219077_s_at); it is the only WWOX row in any treated list of MOESM3.",
+    "snippet": "SHEET=T4d VPA | ROW=1384 | A=219077_s_at | B=WWOX | C=1.5743166458443683 | D=2.49E-3 | E=4.2000000000000003E-2",
+    "anchor": "Supplementary Table S2, sheet T4d VPA, row 1384",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID24935251_Balmer2014_supplement/204_2014_1279_MOESM3_ESM_xlsxdump.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The header of the same sheet fixes the condition as 600 uM VPA, 4-day exposure.",
+    "snippet": "SHEET=T4d VPA | ROW=1 | A=Supplementary Table S2 | B=T4d | E=600 µM VPA",
+    "anchor": "Supplementary Table S2, sheet T4d VPA, row 1",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID24935251_Balmer2014_supplement/204_2014_1279_MOESM3_ESM_xlsxdump.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The only other WWOX row in the file set is in the UNTREATED developmental table: fold change 0.59 at 6 h versus hESC, a developmental change not a drug effect.",
+    "snippet": "SHEET=6h | ROW=1354 | A=210695_s_at | B=WWOX | C=0.59 | D=1.8000000000000001E-4 | E=7.0200000000000002E-3",
+    "anchor": "Supplementary Table S1, sheet 6h, row 1354",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID24935251_Balmer2014_supplement/204_2014_1279_MOESM2_ESM_xlsxdump.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "That sheet compares differentiating cells with hESC and carries no drug.",
+    "snippet": "hESC were differentiated towards NEP and samples were taken after 6h, 4d and 6d of differentiation. Differentially expressed PS were determined compared to hESC.",
+    "anchor": "Supplementary Table S1, sheet 6h, row 2",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID24935251_Balmer2014_supplement/204_2014_1279_MOESM2_ESM_xlsxdump.txt",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC4067541/fullTextXML returned HTTP 200 with a full JATS body on 2026-10-04; the artefact declared is that response."
+ }
+}
