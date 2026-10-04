@@ -137,17 +137,27 @@
       "order": 9,
       "steps": [
         {
-          "step": "Waves 7, 8, 9 integrated; BATCH_20261004_001 (WM_v7.14), _002 (WM_v7.15); Mirror reviews of _001; receipts 427",
+          "step": "Waves 7–11 integrated; batches 20261004_001…_005 (WM_v7.14…v7.18); Mirror reviews through _003; GSK3B D6 decided by Mirror and landed; CLAIM003-01 re-authored and landed",
           "status": "DONE",
-          "evidence": "main a405efc pushed to development (battery 136 targets 0 red)"
+          "evidence": "main a1536ad9 pushed to development (battery 136 targets 0 red)"
+        }
+      ]
+    },
+    "OBJ_WAVE12_CONSOLIDATION": {
+      "order": 10,
+      "steps": [
+        {
+          "step": "Wave 12 (18 re-reads: A, B, C) integrated; receipts 458 (main d88119b2)",
+          "status": "DONE",
+          "evidence": "main d88119b2"
         },
         {
-          "step": "BATCH_M: wave 9 + MIRROR-21..24 (Scientist M in flight)",
+          "step": "BATCH_P: wave 12 candidates incl. two MAJORs (CLAIM 019, CLAIM 002/005) with blind audit; Mirror review of batches _004/_005 (both in flight)",
           "status": "IN_PROGRESS"
         },
         {
-          "step": "Wave 10 readers: PMID 21476439 enzymology (X) and PMID 42397075 manifest repair (Y) in flight; then re-author CC-20260826-CLAIM003-01; route D6 of GSK3B to Mirror",
-          "status": "IN_PROGRESS"
+          "step": "Wave 13 (second consolidation wave) selection and dispatch, then pause and report to the operator with the list of paywalled papers they could supply",
+          "status": "TODO"
         }
       ]
     }
