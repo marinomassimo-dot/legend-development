@@ -1,0 +1,229 @@
+{
+ "schema_version": 2,
+ "pmid": "36937954",
+ "doi": "10.3389/fped.2023.1133789",
+ "receipt": "FTR-20261004-36937954-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID36937954.md",
+  "disease-models/wwox/research/intake_wave_20261004w7_B.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W7-B-REGISTRY-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W7-B-PATIENT-OVERLAP-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W7-B-SPLICE-MEASURED-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is owned by other batches; what this reading supports is proposed as commit candidates and in the intake note."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A diagnostic cohort or method record supplies no new therapeutic lever; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The triples are published in the candidates for a blind auditor; the reader cannot audit their own locators."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "Laboratory-record review; WWOX is two variant rows without per-patient phenotype. Credible as an allele-presence source; useless for course or outcome."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (copy number OR deletion) AND (epilepsy OR neurodevelopmental)",
+    "count": 27,
+    "source": "PubMed ESearch rettype=count 2026-10-04"
+   }
+  ],
+  "note": "27 PubMed records; this source adds one more homozygote of the recurrent c.606-1G>A acceptor allele and one c.33del homozygote."
+ },
+ "multihop": {
+  "references_enumerated": 31,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "31 references enumerated; none is a WWOX source."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 36937954 (run AFTER the first pass); allele-term theme searches for the comparison",
+  "hits": 0,
+  "note": "No PAPER/LIT identity record and no receipt before this reading. Held c.606-1G>A homozygotes: PAPER 045, PAPER 171, Tabarki 2015 (unread), PMID 26345274 (unread); overlap undetermined."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 31,
+   "references_screened": 24,
+   "references_with_doi": 24,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 24,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 7
+   }
+  },
+  "result": "Checked 2026-10-04 via PubMed metadata (get_article_metadata): publication types ['Journal Article']; no retraction, expression of concern or correction listed for PMID 36937954."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID36937954_Alotibi2023_PMC.xml",
+   "sha256": "05c397101db0a502e7f440a388d85fd6fd1914b93a3764ecfb63f5d1050e437c",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML; body, Tables 1-3 (cell-wise), three figure legends, 31 references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10014736/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": false,
+    "result_sha256": "05c397101db0a502e7f440a388d85fd6fd1914b93a3764ecfb63f5d1050e437c"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID36937954_Alotibi2023_supplement/Datasheet1.pdf",
+   "sha256": "f481e6eaad994512a08c01e12821bd413c892b8a49ba1aea37ca2189bbff825c",
+   "kind": "supplement_binary",
+   "note": "Datasheet1 (supplementary Table 4: location, rs number, SIFT, GERP, CADD, gnomAD AF per SNV).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10014736/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID36937954/Datasheet1_p-1.png",
+   "sha256": "2e4fc41ae1eb57c45c6e6a494a11e0e90195aeace35eacfdf7b410299293a9cd",
+   "kind": "figure",
+   "note": "Rendered page 1 of Datasheet1.pdf. The PDF fonts carry no ToUnicode CMap, so its text layer is not trusted; the WWOX row is read from this rendered page.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local derivation",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": true,
+    "derived_from": "files/fulltext/PMID36937954_Alotibi2023_supplement/Datasheet1.pdf",
+    "result_sha256": "2e4fc41ae1eb57c45c6e6a494a11e0e90195aeace35eacfdf7b410299293a9cd",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 110 -png -f 1 -l 1 Datasheet1.pdf Datasheet1_p"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID36937954/fped-11-1133789-g002.jpg",
+   "sha256": "e9833769cd7b699999678351c7d4cdf5b08f75386bfb6d830e0e1852cf781a79",
+   "kind": "figure",
+   "note": "Figure 2 (NDD categories), from the Europe PMC supplementaryFiles zip; inspected.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10014736/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": false
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "A homozygous canonical splice-acceptor WWOX allele c.606-1G>A is reported as pathogenic.",
+    "snippet": "WWOX (NM_016373.4):c.606-1G > A Homozygous Pathogenic",
+    "anchor": "Table 2, WWOX row 1",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID36937954_Alotibi2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A homozygous WWOX frameshift c.33del is reported as likely pathogenic.",
+    "snippet": "WWOX(NM_016373.4):c.33del (p.Asp11GlufsTer69) Homozygous Likely pathogenic",
+    "anchor": "Table 2, WWOX row 2",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID36937954_Alotibi2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The running text names WWOX only as a developmental-delay gene.",
+    "snippet": "Several genes and SNVs were involved in development delays, such as VPS13B, RNASEH2A, and WWOX (Table 2).",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36937954_Alotibi2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The splice-acceptor allele carries only in-silico scores (GERP, CADD) and an rs number.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Rendered Datasheet1 page 1, Table 4 row: WWOX(NM_016373.4):c.606-1G>A | 16:78458766 | rs730882215 | SIFT NA | GERP 5.3499 | CADD 34 | AF (gnomAD) NA | DDD NA.",
+    "anchor": "Supplementary Table 4 (Datasheet1 page 1), rendered at 110 dpi",
+    "surface": "figure",
+    "artifact": "files/figures/PMID36937954/Datasheet1_p-1.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The text reports epilepsy in 5% of the cohort.",
+    "snippet": "while 5% of patients were affected by epilepsy, 4% by intellectual disability, and 1% had a learning disorder (Figure 2).",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36937954_Alotibi2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The NDD panel carries a 'Seizure' category the running text does not mention.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 2 bars: Developmental delay ~60%, Seizure ~25%, Epilepsy ~5%, Poor intellectual function ~4%, Intellectual disability ~4%, Learning disorders ~1% (bar heights read by eye; no values printed).",
+    "anchor": "Figure 2, read at 900 px",
+    "surface": "figure",
+    "artifact": "files/figures/PMID36937954/fped-11-1133789-g002.jpg",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST fullTextXML returned HTTP 200 with a full JATS body on 2026-10-04; the declared article_text artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+ }
+}

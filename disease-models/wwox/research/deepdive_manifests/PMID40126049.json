@@ -1,0 +1,287 @@
+{
+ "schema_version": 2,
+ "pmid": "40126049",
+ "doi": "10.1111/epi.18378",
+ "receipt": "FTR-20261003-40126049-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID40126049.md",
+  "disease-models/wwox/research/intake_wave_20261003w6_B.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W6-B-REGISTRY-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W6-B-CBDRESPONSE-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is owned by other batches; what this reading supports is proposed as commit candidates and in the intake note."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "An aggregation or real-world cohort supplies no new therapeutic lever for the reference genotype class; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is newly proposed; cannabidiol is an approved antiseizure medicine and nothing here is sent to BLOCK-1 triage."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The triples are published in the candidates for a blind auditor; the reader cannot audit their own locators."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "A 27-centre real-world collaboration (mostly ERN EpiCARE centres) on highly purified cannabidiol in 266 monogenic epilepsies; WWOX is one Table 2 row of three patients. Credible as a pooled retrospective effectiveness record; per-gene rows of n = 2-3 are flagged by the authors themselves as chance-prone. Not a per-author sweep."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND cannabidiol",
+    "count": 0,
+    "source": "PubMed ESearch rettype=count 2026-10-03"
+   }
+  ],
+  "note": "Zero PubMed records: this paper is invisible to a WWOX-cannabidiol query because WWOX appears only in Table 2. The held corpus carries two prior CBD mentions for WWOX (a 4/4 continuation in a held cohort; 'CBD oil' listed as ineffective in one held case)."
+ },
+ "multihop": {
+  "references_enumerated": 35,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "35 references enumerated by count; no cited reference is a WWOX source (the paper names WWOX only in Table 2)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 40126049 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "No PAPER/LIT identity record and no receipt for this PMID before this reading (paper_packet.py packet: identity none, receipts 0)."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 35,
+   "references_screened": 34,
+   "references_with_doi": 34,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  },
+  "result": "Checked 2026-10-03 via PubMed metadata (get_article_metadata): publication types ['Journal Article', 'Multicenter Study']; no retraction, expression of concern or correction listed for PMID 40126049."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID40126049_CerulliIrelli2025_PMC.xml",
+   "sha256": "4f9434222213ea63e33d4c953cd914213084b4ce260214f79cd8aa25fd6e1438",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12291005/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "result_sha256": "4f9434222213ea63e33d4c953cd914213084b4ce260214f79cd8aa25fd6e1438"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID40126049_CerulliIrelli2025_supplement/EPMC_supplementaryFiles_PMC12291005.zip",
+   "sha256": "1eacc425d012e89b003dc66f6a61280585671fa06e0e90986393c91ba2574645",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12291005/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "result_sha256": "1eacc425d012e89b003dc66f6a61280585671fa06e0e90986393c91ba2574645"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID40126049_CerulliIrelli2025_supplement/EPI-66-2253-s001.pdf",
+   "sha256": "324b37e3c39b179c5e4d1b60c3ee34f49a992a1fca6517f4a55d416e22dcd8db",
+   "kind": "supplement_binary",
+   "note": "Appendix S1 (Supplementary results, Table S1, Table S2, Figure S1-S2 legends), extracted unchanged by Python zipfile from the persisted bundle.",
+   "acquisition_recipe": {
+    "no_recipe": "Extracted unchanged by Python zipfile from the persisted Europe PMC supplementaryFiles bundle declared in this manifest (fetched 2026-10-03)."
+   }
+  },
+  {
+   "path": "files/fulltext/PMID40126049_CerulliIrelli2025_supplement/EPI-66-2253-s001.pdftotext-layout.txt",
+   "sha256": "fd7959ffaaa18277a728597aad0758fbb1277fa17d672250268ab29df7a6c84c",
+   "kind": "supplement_text",
+   "note": "Text layer of Appendix S1; layout mode; lossy for the two supplementary figure images, which carry no text layer.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID40126049_CerulliIrelli2025_supplement/EPI-66-2253-s001.pdf",
+    "extractor": {
+     "name": "pdftotext",
+     "version": "24.02.0",
+     "call": "pdftotext -layout -nopgbrk"
+    },
+    "acquired_on": "2026-10-03"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Inclusion required a P/LP monogenic variant and at least 3 months of follow-up on CBD.",
+    "snippet": "a minimum follow‐up period of 3 months after initiating CBD",
+    "anchor": "Methods, Study participants",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40126049_CerulliIrelli2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Only >99% highly purified CBD was eligible.",
+    "snippet": "who were prescribed >99% highly purified CBD",
+    "anchor": "Methods, Study participants",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40126049_CerulliIrelli2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Baseline is the monthly seizure frequency over the 3 months before CBD.",
+    "snippet": "baseline seizure frequency (monthly seizure frequency during the 3 months prior to starting CBD)",
+    "anchor": "Methods, Study participants",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40126049_CerulliIrelli2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Seizure counts came from diaries and clinical records.",
+    "snippet": "Data on seizure frequency, adverse events, and drug discontinuation were obtained from patient seizure diaries and clinical records.",
+    "anchor": "Methods, Outcome measures",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40126049_CerulliIrelli2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Effectiveness is measured at the last follow-up visit against baseline.",
+    "snippet": "Effectiveness outcomes included mean seizure reduction, ≥50% seizure reduction, and seizure freedom at the last follow‐up visit relative to the baseline observation period.",
+    "anchor": "Methods, Outcome measures",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40126049_CerulliIrelli2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "CGI-I was assigned retrospectively from records.",
+    "snippet": "The Clinical Global Impression (CGI) scale was used retrospectively from patient records and clinical evaluations",
+    "anchor": "Methods, Outcome measures",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40126049_CerulliIrelli2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "CBD was added to a median of three concurrent ASMs.",
+    "snippet": "patients were taking a median of 3 ASMs (IQR = 2–4)",
+    "anchor": "Results, ASM data and response to treatment",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40126049_CerulliIrelli2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 2 covers genes with at least two treated patients.",
+    "snippet": "Response to treatment according to gene etiology (including genes with ≥2 pts treated with CBD).",
+    "anchor": "Table 2, caption",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40126049_CerulliIrelli2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "WWOX row: 3 patients, mean seizure reduction 41.7% (SD 38.2), 50% responders 2/3, CGI improvement 2/3.",
+    "snippet": "WWOX (3 pts) 41.7 (38.2) 2/3 2/3",
+    "anchor": "Table 2, row WWOX (all four cells)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40126049_CerulliIrelli2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 2 gives fractions, not percentages, for rows of five or fewer.",
+    "snippet": "Percentages have been reported only for groups with more than five patients.",
+    "anchor": "Table 2, footnote",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40126049_CerulliIrelli2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors warn that two- or three-patient rows may reflect chance rather than genotype.",
+    "snippet": "in smaller subgroups with only two or three patients, the observed response rates may be influenced by chance or individual patient characteristics rather than the underlying genetic cause",
+    "anchor": "Discussion, limitations paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40126049_CerulliIrelli2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The design is retrospective with recall bias and heterogeneous collection.",
+    "snippet": "its retrospective design inherently introduces potential recall bias and heterogeneity in data collection across multiple centers",
+    "anchor": "Discussion, limitations paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40126049_CerulliIrelli2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Responder status and CGI-I improvement agree only moderately.",
+    "snippet": "a moderate agreement was found",
+    "anchor": "Results, ASM data and response to treatment",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40126049_CerulliIrelli2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The 15 seizure-worsening patients are listed by gene and the list does not include WWOX.",
+    "snippet": "showing seizure worsening, this occurred in three patients harboring TSC2 pathogenic variants,",
+    "anchor": "Appendix S1, Supplementary results, para 1",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID40126049_CerulliIrelli2025_supplement/EPI-66-2253-s001.pdftotext-layout.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The 19 CGI-I-worsened patients are listed by gene and the list does not include WWOX.",
+    "snippet": "including eight patients harboring pathogenic SCN1A variants, three TSC2, and one each MECP2,",
+    "anchor": "Appendix S1, Supplementary results, para 2",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID40126049_CerulliIrelli2025_supplement/EPI-66-2253-s001.pdftotext-layout.txt",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC12291005/fullTextXML returned HTTP 200 with a full JATS body on 2026-10-03; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure legend or the supplement."
+ }
+}

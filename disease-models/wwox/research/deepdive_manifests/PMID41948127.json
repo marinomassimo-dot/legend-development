@@ -1,0 +1,164 @@
+{
+ "schema_version": 2,
+ "pmid": "41948127",
+ "doi": "10.1016/j.omtn.2026.102881",
+ "receipt": "FTR-20261003-41948127-01",
+ "landing": [
+  "disease-models/wwox/research/intake_wave_20261003w5_C.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "PMC JATS acquired directly by E-utilities efetch; the cascade was not needed because the record is open access with a body."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "No deep dive was run. This is an intake first reading of a paper with no WWOX content; it produces a dossier and locators, not canonical claims."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Triples are handed to the audit through the commit candidates' LOCATOR TRIPLES FOR BLIND AUDIT sections, not run here: producer must not be verifier."
+  }
+ ],
+ "group_assessment": {
+  "waived": "Waived by name. This is a wave-5 intake first reading under SOURCE_FIRST: the paper carries no WWOX content (zero occurrences) and is read only as transferable delivery-safety evidence. No canonical claim is promoted by this pass, so the deep-dive steps that exist to rate a claim are not run; the pass's scope is recorded in the accompanying receipt and in the dossier's 'what I did not read' section."
+ },
+ "field_density": {
+  "waived": "Waived by name. This is a wave-5 intake first reading under SOURCE_FIRST: the paper carries no WWOX content (zero occurrences) and is read only as transferable delivery-safety evidence. No canonical claim is promoted by this pass, so the deep-dive steps that exist to rate a claim are not run; the pass's scope is recorded in the accompanying receipt and in the dossier's 'what I did not read' section."
+ },
+ "multihop": {
+  "waived": "Waived by name. This is a wave-5 intake first reading under SOURCE_FIRST: the paper carries no WWOX content (zero occurrences) and is read only as transferable delivery-safety evidence. No canonical claim is promoted by this pass, so the deep-dive steps that exist to rate a claim are not run; the pass's scope is recorded in the accompanying receipt and in the dossier's 'what I did not read' section."
+ },
+ "corpus_crossquery": {
+  "waived": "Waived by name. This is a wave-5 intake first reading under SOURCE_FIRST: the paper carries no WWOX content (zero occurrences) and is read only as transferable delivery-safety evidence. No canonical claim is promoted by this pass, so the deep-dive steps that exist to rate a claim are not run; the pass's scope is recorded in the accompanying receipt and in the dossier's 'what I did not read' section."
+ },
+ "retraction_check": {
+  "waived": "Waived by name. PubMed article-type and comments-corrections screening was not run as a network call in this pass; the acquired PMC record carries no retraction, correction or expression-of-concern notice in its front matter. All six records are 2025-2026 publications. This is declared as a gap, not as a clean result."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41948127_Stavrou2026_PMC.xml",
+   "sha256": "97cb20ba89331fbbed6256c401b3f828a58a26c7e7f685f769da135ca026003b",
+   "kind": "article_text",
+   "note": "PMC JATS XML re-acquired by E-utilities efetch on 2026-10-03 by this reader for the wave-5 intake first reading; body present.",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=13051718&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "97cb20ba89331fbbed6256c401b3f828a58a26c7e7f685f769da135ca026003b"
+   }
+  },
+  {
+   "path": "files/figure_renders/sciC_w5/PMID41948127_fig5.jpg",
+   "sha256": "b9ddaacc19869f4368871e24048397b47766eea71c69fd3badbd4ad96a89146c",
+   "kind": "figure",
+   "note": "Figure 5 rendered and read at panel level, including an 800 percent magnified crop of the panel A dose row labels to adjudicate the low-dose discrepancy against the running text.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/13051718/bin/gr5.jpg",
+    "http_method": "GET",
+    "tier": "pmc_instance_binary",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "b9ddaacc19869f4368871e24048397b47766eea71c69fd3badbd4ad96a89146c"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "JATS from E-utilities efetch db=pmc. Body separated from front matter by the reader's own extraction; every locator is matched against the normalised body text of the declared artefact.",
+  "abstract_anchoring_waived": "No locator draws on the abstract; every entry is matched against the body.",
+  "note": "Coverage: abstract, introduction, all Results subsections, Discussion and the Materials and methods subsections for the NHP arm and the murine toxicology read from the JATS running text. FIGURE 5 WAS RENDERED AND READ AT PANEL LEVEL (declared artefact files/figure_renders/sciC_w5/PMID41948127_fig5.jpg): its panel A row labels print a low-dose value differing from the running text, its scale bars print micrometres where the caption prints millimetres, and its panel C carries the serial NCV and CMAP series. Figures 1-4, 6 and 7 read as captions only. TABLE 1 NOT READ. Supplementary Document S1, Figure S18 (mouse toxicology report), FIGURE S23 (the contract laboratory's NHP pathology report, which is the primary document behind every safety statement receipted here), and Figure S27 were NOT fetched. Entries marked panel_read are supported by the rendered panel in addition to the quoted sentence.",
+  "entries": [
+   {
+    "proposition": "THE BODY TEXT AND THE FIGURE CAPTION OF THIS PAPER DISAGREE ABOUT WHETHER DORSAL ROOT GANGLION LESIONS OCCURRED: THE BODY REPORTS THEM IN A SUBSTANTIAL MINORITY OF ANIMALS WHILE THE CAPTION OF THE FIGURE BUILT ON THE SAME MATERIAL DENIES SIGNIFICANT ABNORMALITY. THE PANEL WAS RENDERED AND SUPPORTS THE BODY.",
+    "snippet": "Forty percent of animals showed subclinical, minimal-to-mild lesions in the dorsal root ganglia, which were also found in two saline-treated animals, suggesting these were unrelated to test article.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41948127_Stavrou2026_PMC.xml",
+    "anchor": "Results, 'IT of AAV9.U6.miR871 shows a strong safety profile in NHPs'",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "THE FIGURE CAPTION, READ ALONE, DENIES THE FINDING ITS OWN BODY TEXT REPORTS: THE WORD 'REPRESENTATIVE' CARRIES THE WHOLE DISCREPANCY, AND A READER WHO TOOK THE CAPTION WOULD RECORD A CLEAN NEGATIVE WHERE THE PAPER REPORTS LESIONS IN A SUBSTANTIAL MINORITY OF ANIMALS.",
+    "snippet": "(A) H&E staining of representative dorsal root ganglia (DRG) from miR871-treated animals show no significant histological abnormalities compared to control.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41948127_Stavrou2026_PMC.xml",
+    "anchor": "Figure 5 caption, panel A",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "contradicts": "entries[0]",
+    "contradicts_needle": "Forty percent of animals showed subclinical, minimal-to-mild lesions in the dorsal root ganglia"
+   },
+   {
+    "proposition": "THE SAME LESION OCCURRED IN CONCURRENT VEHICLE-DOSED ANIMALS, SO A DORSAL ROOT GANGLION FINDING REPORTED WITHOUT A CONCURRENT CONTROL INCIDENCE CANNOT BE ATTRIBUTED TO THE VECTOR.",
+    "snippet": "In monkeys, some vector-treated animals showed subclinical minimal-to-mild DRG inflammation, as did saline-treated animals, suggesting the lesions were unrelated to the AAV9.U6.miR871 product.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41948127_Stavrou2026_PMC.xml",
+    "anchor": "Discussion, DRG paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A TWO-FOLD DOSE STEP REVERSED THE DIRECTION OF THE INFLAMMATORY EFFECT IN THE DISEASED RODENT MODEL, WHICH IS THE ONLY EXPLICIT TOXICITY THRESHOLD IN THIS WAVE AND IS MURINE.",
+    "snippet": "In contrast, administration of 1E12 vg/animal increased inflammation, with animals showing increased CD3+ (T cell marker) and CD68+ cells in the sciatic nerves, as well as elevated CD3+ and CD20+ (B cell marker) cells counts in the liver.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41948127_Stavrou2026_PMC.xml",
+    "anchor": "Results, 'Pre-clinical safety and toxicology studies in CMT1A mice'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FUNCTIONAL, SERIAL, NON-TERMINAL MEASURES OF THE TISSUE AT ISSUE WERE PERFORMED AND ARE PERFORMABLE IN A PATIENT, WHICH IS THE DIRECT ANSWER TO WHETHER THIS TOXICITY CAN BE MEASURED OTHER THAN AT NECROPSY.",
+    "snippet": "Electrophysiological analyses, including nerve conduction velocity (NCV, left) and compound muscle action potential (CMAP, right), were analyzed at baseline and again at 6 and 12 weeks post-treatment.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41948127_Stavrou2026_PMC.xml",
+    "anchor": "Figure 5 caption, panel C",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "THE SAME DOSE IS PRINTED AS TWO DIFFERENT VALUES IN THE RUNNING TEXT AND IN THE FIGURE PANEL, SO NO QUANTITY FROM THIS PAPER MAY BE CARRIED WITHOUT CHECKING IT AGAINST A PANEL.",
+    "snippet": "To perform this experiment, 20 wild-type monkeys (10 males, 10 females) were randomly assigned to one of three dose groups (control, formulation buffer, N = 4; low-dose [6E13 total vg] and high-dose [1.2E14 total vg] AAV9.U6.miR871) (N = 8 animals per group).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41948127_Stavrou2026_PMC.xml",
+    "anchor": "Results, 'Intrathecal delivery of AAV9.U6.miR871 to non-human primates'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE INFUSION VOLUME IS ALSO PRINTED AS TWO DIFFERENT VALUES BETWEEN RESULTS AND METHODS, AND VOLUME RELATIVE TO CSF VOLUME IS THE QUANTITY THAT GOVERNS DELIVERED DOSE AT TARGET.",
+    "snippet": "Animals were mildly sedated with 10 mg/mL acepromazine, and test article was administered to each animal as a 3-mL single-dose intrathecal slow infusion over approximately 6 h via a pre-study implanted catheter.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41948127_Stavrou2026_PMC.xml",
+    "anchor": "Materials and methods, 'NHP study design'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE DOSE WAS SCALED BETWEEN SPECIES BY CSF VOLUME, WHICH IS A THIRD AND MUTUALLY NON-CONVERTIBLE SCALAR ALONGSIDE PER-GRAM-BRAIN-MASS AND FIXED TOTAL VECTOR GENOMES.",
+    "snippet": "We chose low and high doses in NHPs based on the minimally effective dose (MED) and fully efficacious doses (FED) identified in CMT1A mice (2E11 total vg and 5E11 total vg, respectively) and scaled 371-fold for the increased CSF volume in monkeys compared to mice (Figures 2 and 3; Table S3).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41948127_Stavrou2026_PMC.xml",
+    "anchor": "Results, 'Intrathecal delivery of AAV9.U6.miR871 to non-human primates'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE AUTHORS' SAFETY CONCLUSION IS SCOPED TO THEIR OWN CARGO AND DOSE RANGE AND IS NOT A STATEMENT ABOUT THE CAPSID OR THE ROUTE IN GENERAL.",
+    "snippet": "We therefore conclude that at doses representing the FED and below, AAV9.U6.miR871 causes no DRG toxicity and, extrapolating mouse data, could instead reduce CMT1A-related inflammation should it exist in humans with CMT1A.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41948127_Stavrou2026_PMC.xml",
+    "anchor": "Discussion, DRG paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE INFUSION WAS DELIBERATELY SLOW TO AVOID RAISING INTRACRANIAL PRESSURE, A PROCEDURAL CONSTRAINT THAT TRANSFERS INDEPENDENTLY OF THE CARGO.",
+    "snippet": "Vector or formulation buffers were administered via catheter, implanted pre-study, as a single 4-mL intrathecal infusion over a 6-h period to avoid increasing intracranial pressure.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41948127_Stavrou2026_PMC.xml",
+    "anchor": "Results, 'Intrathecal delivery of AAV9.U6.miR871 to non-human primates'",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}

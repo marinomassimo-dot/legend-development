@@ -1,0 +1,289 @@
+{
+ "schema_version": 2,
+ "pmid": "34852950",
+ "doi": "10.1016/j.neurobiolaging.2021.10.011",
+ "receipt": "FTR-20261003-34852950-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID34852950.md",
+  "disease-models/wwox/research/intake_wave_20261003w6_A.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W6-A-REGISTRY-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is not the reader's to write; its one consequence from this wave is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "None of the six sources supplies a measured lever for the reference genotype class; forging hypotheses here would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is tested against a WWOX readout in this source; nothing to send to BLOCK-1 triage."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The triples are published in the candidates for a blind auditor; the reader cannot audit their own locators."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 1,
+  "research_type": "computational",
+  "is_primary_group_for_disease": false,
+  "weighting": "A biostatistics and neuropathology group running a locus-restricted association meta-analysis on two autopsy cohorts; credible for the statistics it reports; no wet-lab WWOX work. Not a per-author sweep: weighting rests on the paper's own design."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "registry_records.py --theme LATE-NC (LEGEND)",
+    "count": 1,
+    "source": "LEGEND registries 2026-10-03"
+   }
+  ],
+  "note": "The only other LATE-NC record is FT-169 (PMID 42266427, abstract depth, already marked as carrying nothing to WWOX-DEE)."
+ },
+ "multihop": {
+  "references_enumerated": 49,
+  "gene_direct_refs_in_source": [
+   "25537520",
+   "31543760",
+   "15126504",
+   "23277037",
+   "24770881",
+   "30820047"
+  ],
+  "resolved": [
+   {
+    "pmid": "25537520",
+    "how": "Ref 8 (Chang 2014 review) has a receipted reading in LEGEND (FTR-20261002-25537520-01); cited here only for the AD hypothesis."
+   },
+   {
+    "pmid": "31543760",
+    "how": "Ref 24 (Kosla 2019) has receipted readings in LEGEND (FTR-20261003-31543760-03); cited here only for WWOX roles in CNS development."
+   }
+  ],
+  "queued": [
+   {
+    "queue": "CC-20261003W6-A-REGISTRY-01",
+    "why": "Ref 26 (Kunkle 2019, PMID 30820047; its LEGEND queue entry FT-164 does not name this paper), ref 44 (Sze 2004, PMID 15126504), ref 45 (Teng 2013, PMID 23277037) and ref 36 (Nelson 2014 HS GWAS, PMID 24770881) are background to the AD/HS hypothesis; no conclusion of this reading rests on them. This reading adds that Kunkle's lead WWOX/MAF variant failed QC in both cohorts here. Landings are suggested in the candidate; no FT identifier is minted by the reader."
+   }
+  ],
+  "disposition": "Six gene-direct references; two resolved by existing receipted readings, four queued with a reason; none is load-bearing for the locators."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 34852950 (record ids only before the first pass; contents after it)",
+  "hits": 2,
+  "note": "CORPUS-STUB-033 and LIT-0059 are identity placeholders; LIT-0059 carries Year unknown, Authors not extracted and clinical relevance HIGH; corrections proposed in CC-20261003W6-A-REGISTRY-01."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-03 via PubMed metadata (get_article_metadata): publication types ['Journal Article', 'Research Support, N.I.H., Extramural', 'Research Support, Non-U.S. Gov't']; no retraction, expression of concern or correction listed for PMID 34852950.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 49,
+   "references_screened": 39,
+   "references_with_doi": 39,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --doi 10.1016/j.neurobiolaging.2021.10.011 --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 10
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID34852950_Dugan2022_PMC.xml",
+   "sha256": "e63b1c5382df429e4ee83cb7f940452fa9e3aba48720a24926ada009a98433a9",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=8761217&rettype=xml",
+    "http_method": "GET",
+    "tier": "NCBI E-utilities efetch db=pmc (Europe PMC fullTextXML returned 500)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "result_sha256": "e63b1c5382df429e4ee83cb7f940452fa9e3aba48720a24926ada009a98433a9"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID34852950_Dugan2022_supplement/nihms-1752831-f0001.jpg",
+   "sha256": "677eee8c9c68172fe431192fbe8caa94c0d07059966acd8f56700409a56ff291",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/c3f7/8761217/ef9c521dfe2d/nihms-1752831-f0001.jpg",
+    "http_method": "GET",
+    "tier": "PMC CDN figure blob via pmc_pow_fetch",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-03",
+    "result_sha256": "677eee8c9c68172fe431192fbe8caa94c0d07059966acd8f56700409a56ff291"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID34852950_Dugan2022_supplement/nihms-1752831-f0002.jpg",
+   "sha256": "0de50eed9123afa3ab1307d7a8b87039ecc0af7075dd0a771ecc231518bd59e1",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/c3f7/8761217/3172137c46c5/nihms-1752831-f0002.jpg",
+    "http_method": "GET",
+    "tier": "PMC CDN figure blob via pmc_pow_fetch",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-03",
+    "result_sha256": "0de50eed9123afa3ab1307d7a8b87039ecc0af7075dd0a771ecc231518bd59e1"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID34852950_Dugan2022_supplement/NIHMS1752831-supplement-1.pdf",
+   "sha256": "f5f7b0a766852a92b1231162fda6f741a8496581c592fe22e0963bfecae3868b",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/8761217/bin/NIHMS1752831-supplement-1.pdf",
+    "http_method": "GET",
+    "tier": "PMC instance bin via pmc_pow_fetch",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-03",
+    "result_sha256": "f5f7b0a766852a92b1231162fda6f741a8496581c592fe22e0963bfecae3868b"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID34852950_Dugan2022_supplement/NIHMS1752831-supplement-2.xlsx",
+   "sha256": "fd8068220114812bb38aa86c42659003fec0d92441e51df26bb9abe2be825671",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/8761217/bin/NIHMS1752831-supplement-2.xlsx",
+    "http_method": "GET",
+    "tier": "PMC instance bin via pmc_pow_fetch",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-03",
+    "result_sha256": "fd8068220114812bb38aa86c42659003fec0d92441e51df26bb9abe2be825671"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The tested region runs from the start of WWOX to the end of MAF plus 250 kb flanks, because the two clinical-AD lead variants lie between the genes.",
+    "snippet": "were in the intergenic region between the WWOX and MAF genes, we defined the WWOX/MAF locus to be from 78,133,309 to 79,634,622 +/− 250kb of flanking.",
+    "anchor": "Methods, Variant-Level Associations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34852950_Dugan2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Significance was a locus-wide Bonferroni threshold over effective tests (3.67e-5), not genome-wide.",
+    "snippet": "The larger of these two estimates was used to compute the Bonferroni-corrected threshold for the WWOX/MAF locus +/− 250kb of 3.67×10−5 (0.05/1,364).",
+    "anchor": "Results, Variant Prioritization",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34852950_Dugan2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Two LATE-NC variants passed the locus-wide threshold in the meta-analysis under an additive model, with odds ratios about 1.4.",
+    "snippet": "Two of these variants, rs6564590 and rs7404901, were associated with LATE-NC assuming an additive MOI (OR=1.43, 95% CI: (1.22, 1.68), p=1.07×10−5 and OR=1.44, 95% CI: (1.22, 1.69), p=1.56×10−5, respectively)",
+    "anchor": "Results, Variant Prioritization",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34852950_Dugan2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "No prioritised variant was an eQTL or sQTL for any nearby gene in GTEx.",
+    "snippet": "None of the prioritized meta-analytic variants were found to be associated with eQTLs or sQTLs for WWOX, MAF, or any other proximal genes in GTEx.",
+    "anchor": "Results, Downstream Analyses",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34852950_Dugan2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In BRAINEAC the two LATE-NC variants were nominal eQTLs for MAF, not for WWOX.",
+    "snippet": "Both of the LATE-NC variants, rs6564590 and rs7404901, had nominally significant eQTL associations with MAF (brain tissue-wide p=0.040 and p=0.012, respectively)",
+    "anchor": "Results, Downstream Analyses",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34852950_Dugan2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Only the two hippocampal-sclerosis variants were nominal eQTLs for WWOX in BRAINEAC.",
+    "snippet": "The two HS variants, rs9925100 and rs9930659, had nominally significant eQTL associations for WWOX (both brain tissue-wide p-values < 3.9×10−3)",
+    "anchor": "Results, Downstream Analyses",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34852950_Dugan2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Independence from AD neuropathologic change is asserted on the basis of Supplemental Table 6.",
+    "snippet": "These findings suggest that the associations of the prioritized variants are independent of ADNC. See Supplemental Table 6 for the complete results.",
+    "anchor": "Results, Sensitivity Analyses (Adjusting for ADNC)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34852950_Dugan2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The text gives 3,749 NACC participants with at least one endophenotype, fewer than Table 1's NACC denominators for tangles (3,760) and plaques (3,764).",
+    "snippet": "In the NACC data set, n=3,749 individuals had available data for at least one of the endophenotypes along with GWAS data.",
+    "anchor": "Results, first paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34852950_Dugan2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 1 prints the ROSMAP moderate/severe arteriolosclerosis age at death as 84.3 (8.0), the same as the NACC cell beside it, while every other ROSMAP age lies between 88.8 and 92.4.",
+    "snippet": "Moderate/Severe 1279 (42.6) 84.3 (8.0) 682 (53.3) 377 (27.1) 84.3 (8.0) 278 (73.7)",
+    "anchor": "Table 1, Brain Arteriolosclerosis block (re-extracted cell-wise)",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID34852950_Dugan2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors call the findings suggestive and in need of corroboration.",
+    "snippet": "These suggestive findings extend prior research in the field that linked the WWOX/MAF locus with neurodegenerative phenotypes.",
+    "anchor": "Discussion, limitations paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34852950_Dugan2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In Figure 2 the HS lead variant and the LATE-NC lead variant plot under the WWOX gene track; the arteriolosclerosis lead plots between WWOX and MAF.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 2A: rs9925100 at about 79.15 Mb, under the WWOX arrow; 2B: rs6564590 at about 78.85 Mb, under the WWOX arrow; 2C: rs4435266 at about 79.5 Mb, right of the WWOX arrow and left of MAF; threshold line at 4.44.",
+    "anchor": "Figure 2A-C",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID34852950_Dugan2022_supplement/nihms-1752831-f0002.jpg",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC8761217/fullTextXML returned HTTP 500 on 2026-10-03; NCBI efetch db=pmc id=8761217 returned the full JATS author manuscript with all three tables; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure legend, a figure or a supplement."
+ }
+}

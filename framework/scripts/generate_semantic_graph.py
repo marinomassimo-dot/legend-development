@@ -505,13 +505,28 @@ Canonical source: the biomarker-candidate file supplied with `--biomarkers`.
                 for pathway in pathways
                 if pathway in pathway_names
             )
+            # The registry links inside a research line's own fields are rewritten exactly as the
+            # paper and claim notes' are (above). Until BATCH_20261003_004 they were not, and the
+            # omission was invisible only because no landed research line carried a registry
+            # wikilink in one of the rendered fields: the first one that did — `RL-GT-002`'s
+            # `Evidence base` — left eight links pointing at `paper_registry_current`, which no
+            # vault note carries, and `unresolved_generated_wikilinks` failed the generator.
+            table = rewrite_registry_links(
+                render_field_table(
+                    ['Status', 'Primary pathway', 'Evidence base', 'Disease relevance',
+                     'Reason active', 'Next action'],
+                    block,
+                ),
+                paper_names,
+                claim_names,
+            )
             write_note(
                 output / "research_lines" / f"{name}.md",
                 f"""# {name}
 
 > Generated non-canonical research-line node.
 
-{render_field_table(['Status', 'Primary pathway', 'Evidence base', 'Disease relevance', 'Reason active', 'Next action'], block)}
+{table}
 ## Pathways
 
 {links or '- No P1-P7 pathway detected'}
