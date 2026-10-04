@@ -1,0 +1,235 @@
+{
+ "schema_version": 2,
+ "pmid": "42137263",
+ "doi": "10.1016/j.omta.2026.201682",
+ "receipt": "FTR-20261004-42137263-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID42137263.md",
+  "disease-models/wwox/research/intake_wave_20261004w8_C.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is a research surface another batch owns; no lead is written there from this reading."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "The source is a toxicology or case record in a non-WWOX programme; it supplies no lever for the reference genotype class and forging from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No small molecule is screened; the paper concerns vector-related toxicity and the question here is evidence status, not a molecule."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes are proposed as commit candidates for a later BATCH_COMMIT."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Triples are published in the candidates for an auditor to run."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "computational",
+  "is_primary_group_for_disease": false,
+  "weighting": "Not assessed in this reading: a non-WWOX paper read for a transferable question about vector toxicity; no author-group credibility judgement is carried."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND AAV",
+    "count": 2,
+    "source": "PubMed ESearch 2026-10-04"
+   },
+   {
+    "query": "WWOX AND hepatotoxicity",
+    "count": 0,
+    "source": "PubMed ESearch 2026-10-04"
+   }
+  ],
+  "note": "Not assessed; off-WWOX source. WWOX occurs zero times in the JATS file (case-insensitive count 0)."
+ },
+ "multihop": {
+  "references_enumerated": 31,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "31 references enumerated in the JATS; none is WWOX-direct (the paper never names WWOX). No gene-direct hop exists to resolve or queue."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42137263 at packet time",
+  "hits": 0,
+  "note": "Packet reported no registry presence at the start of the reading; the paper is cited by commentaries read in an earlier wave."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-04 by PubMed EFetch: publication type Journal Article only; no RetractionIn, ErratumIn, ExpressionOfConcernIn or UpdateIn link.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "UNSCREENABLE_NO_SNAPSHOT",
+   "reference_source": "jats",
+   "references_declared": 31,
+   "references_screened": 0,
+   "references_with_doi": 0,
+   "schema": "retraction_check.dependencies/1",
+   "screened": false,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 24,
+    "rows": 0,
+    "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block (failed closed 2026-10-04: snapshot retractionwatch_20260910.csv absent under files/retraction_watch/; nothing reported clean)",
+   "unscreenable": {
+    "UNSCREENABLE_NO_SNAPSHOT": 31
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42137263_Wang2026_PMC.xml",
+   "sha256": "984ca4b78ebb30138e913d88c9a14bb8e8588b2e80bb112d8f66aa95691b84ff",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13148890/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "984ca4b78ebb30138e913d88c9a14bb8e8588b2e80bb112d8f66aa95691b84ff"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC search EXT_ID:42137263 AND SRC:MED on 2026-10-04: inEPMC=Y, isOpenAccess=Y, PMC13148890",
+  "entries": [
+   {
+    "proposition": "The data are a secondary transcriptomic analysis of liver RNA-seq generated in an earlier toxicology study, not a new dosing experiment.",
+    "snippet": "These RNA-seq data were originally used only for SMN1 transgene expression analysis",
+    "anchor": "Materials and methods, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137263_Wang2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The vector was an AAV9-PHP.B capsid carrying CBh-SMN1, given intravenously, in cynomolgus monkeys and rats.",
+    "snippet": "of AAV9PHP.B-CBh-SMN1 (AAV-SMN1) intravenously",
+    "anchor": "Materials and methods, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137263_Wang2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Group size in the monkey dataset was two per sex per dose, one male fewer at the mid dose.",
+    "snippet": "The cynomolgus dataset included 2 males and 2 females per dose, except for the male mid-dose group, which included only one animal.",
+    "anchor": "Materials and methods, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137263_Wang2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fold changes and p values treat the four liver lobes of one animal as biological replicates.",
+    "snippet": "Fold changes and p values were calculated considering the 4 lobes from each animal as biological replicates.",
+    "anchor": "Figure 1 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137263_Wang2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Unfolded-protein-response activation was found only at doses of 5e13 vg/kg and above, while DNA-damage/p53 and innate signatures were also present at the low dose and in rats.",
+    "snippet": "UPR activation was observed only in animals receiving doses",
+    "anchor": "Discussion, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137263_Wang2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The DNA-damage/p53 signature was already present at the lowest dose.",
+    "snippet": "Livers from low-dose-treated NHPs also exhibited activation of the DNA damage response and the p53 signaling pathway.",
+    "anchor": "Results, first subsection, para 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137263_Wang2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Transgene expression level correlated positively with the pro-apoptotic PERK effector DDIT3 and negatively with CES1.",
+    "snippet": "SMN1 expression levels and vector dose (vg/animal) positively correlated with the pro-apoptotic PERK effector DDIT3 (CHOP)",
+    "anchor": "Results, second subsection, para 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137263_Wang2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The earlier study reported only mild immune-cell infiltration at the acute time point, from which the authors infer a vector-specific T-cell response is unlikely.",
+    "snippet": "histological analysis revealed only mild immune cell infiltration, suggesting that a vector-specific, T cell-mediated response is unlikely",
+    "anchor": "Introduction, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137263_Wang2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The ATF6 and IRE1-XBP1 branches were not seen, and the data for that statement are not shown.",
+    "snippet": "However, no activation of the ATF6 pathway or of the IRE1α-XBP1 pathway was detected (data not shown).",
+    "anchor": "Results, second subsection, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137263_Wang2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors give the rat result an expression-level explanation: about tenfold lower transgene expression in rat liver.",
+    "snippet": "The absence of UPR activation in rats receiving high vector doses can be explained by the approximately 10-fold lower levels of transgene expression",
+    "anchor": "Discussion, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137263_Wang2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors say the dataset is mechanistic and not a temporal model of the clinical scenario.",
+    "snippet": "these data should be interpreted as mechanistic insights rather than a direct temporal model of the clinical scenario",
+    "anchor": "Discussion, para 7",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137263_Wang2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state the contribution of each pathway is not resolved.",
+    "snippet": "Additional mechanistic studies are needed to identify the role of each pathway and the exact factors involved in their activation.",
+    "anchor": "Discussion, para 9",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137263_Wang2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors cite empty-capsid and promoterless-vector monkey data from another group as support that genome plus transgene expression are needed; it is not tested in this paper.",
+    "snippet": "no liver damage occurred in animals receiving empty capsids",
+    "anchor": "Discussion, para 6",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137263_Wang2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}
