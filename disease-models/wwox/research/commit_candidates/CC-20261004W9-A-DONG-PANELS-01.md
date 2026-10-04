@@ -74,3 +74,15 @@ Receipt `FTR-20261004-35460704-02`.
 - (Cohort total in the text | There were 110 participants who had at least one potentially damaging HDL candidate gene variant, 31 of whom had 2 and 10 had 3 each. | PMID 35460704, Results, damaging variants in HDL candidate genes)
 - (No copy-number event in the candidate genes | No CNVs were found among our list of 104 HDL candidate genes | PMID 35460704, Results, CNV analysis)
 - (The only CNS sentence is conditional | A critical structural or functional role for the WWOX gene in the CNS would account for the observation that mutations at that locus are associated with neurodevelopmental and neurodegenerative disorders | PMID 35460704, Discussion)
+
+## BATCH DISPOSITION — `BATCH_20261004_003` (2026-10-04, ACTOR_ID `scientist`, Scientist M), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** `PROPAGATED` (MINOR, WM_v7.15 → WM_v7.16).
+
+**Surfaces written:** claim_registry_current.md · paper_registry_current.md
+
+All three ops applied; the second `PAPER 156` op was **amended at source after the blind audit**. The candidate wrote that the Figure 1 header *«144 occurrences in 101 patients»* disagrees with *«i 110 partecipanti del testo»*. 🔴 **110 is the number of carriers, not the cohort total: the cohort is 204**, printed in the abstract, the methods and the results. The landed text names both figures and says which is which, and records that the paper's *«No CNVs were found»* is scoped to its 104 candidate genes and to a method its own authors call often insensitive. **Blind locator audit: 6 triples, 5 SUPPORTED and 1 NOT_SUPPORTED_AS_LABELLED — the cohort-total mislabel, repaired here — 0 UNVERIFIABLE.** `CLAIM 045`'s live `Status` was read before the edit (**`in observation`**): the landed note adds what the ClinVar column actually lists and changes no conclusion.
+
+**Not medical advice.**

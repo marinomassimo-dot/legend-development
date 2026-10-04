@@ -75,3 +75,15 @@ scientific current files they go through `BATCH_COMMIT` only.
 - (Instability null | WWOX overexpression did not alter the rate of CAG repeat instability at any time point | PMID 42395553, Results, instability paragraph)
 - (Instability analysis statistic | Days in vitro showed a significant effect (p<2×10⁻¹⁶), whereas WWOX overexpression had no effect (p=0.877) | PMID 42395553, Figure 7 legend, panel D)
 - (Printed ANOVA for Fig 7C | One-way ANOVA revealed a significant effect of treatment on g-H2AX levels [F(2,11)=18.07; p=0.003] | PMID 42395553, Figure 7 legend, panel C)
+
+## BATCH DISPOSITION — `BATCH_20261004_003` (2026-10-04, ACTOR_ID `scientist`, Scientist M), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** `PROPAGATED` (MINOR, WM_v7.15 → WM_v7.16).
+
+**Surfaces written:** claim_registry_current.md · working_model_current.md · dismissal_ledger_current.md
+
+All three ops applied; two of them touch two of the four scientific current files, which is why this candidate could only land through `BATCH_COMMIT`. `CLAIM 011`'s live `Status` was read before the edit and is **`flagged for review`**, not a consolidated baseline, so this is a MINOR narrowing and not a baseline reversal — a blind locator audit was nevertheless run because the candidate touches a claim and the working model. **Blind locator audit: 6 triples, 6/6 SUPPORTED, 0 NOT_SUPPORTED, 0 UNVERIFIABLE.** Two audit observations were folded into the landed text: the preprint status is restated inside the PREMISE_TAG and inside the `DIS-028` increment (*bioRxiv, not peer reviewed*, so it raises no status), and the dominant printed **treatment** main effect is named beside the genotype effect so the narrowing cannot be read as a disease-specificity finding. The audit also noted that the candidate's prose gloss *«inherited»* repeat length is not the source's word; that gloss is in the candidate's § 1 only and reaches no landed record.
+
+**Not medical advice.**

@@ -47,3 +47,15 @@ one correction this wave proposes to an existing surface is in
 
 Not applicable: this candidate proposes identity records and asserts no scientific proposition. The
 propositions behind each record are in the three sibling candidates of this wave.
+
+## BATCH DISPOSITION — `BATCH_20261004_003` (2026-10-04, ACTOR_ID `scientist`, Scientist M), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** `PROPAGATED` (MINOR, WM_v7.15 → WM_v7.16).
+
+**Surfaces written:** paper_registry_current.md · literature_tracking_log_current.md
+
+Three `PAPER` records, one `CORPUS-STUB`, and six `LIT` records. 🔴 **Renumbered:** the declared `PAPER 217`–`219` collided with group B's block and with landed records, and the declared `LIT-0509` was already taken by the previous batch; re-measured at `a405efc30550` and landed as **`PAPER 241`–`243`**, **`CORPUS-STUB-180`** (the declared stub number **held**, the ceiling being 179) and **`LIT-0533`–`0538`**. The two preprints are keyed by **DOI and PPR id**, labelled *PREPRINT — NOT PEER REVIEWED*, and given **no PAPER record by design**. `CORPUS-STUB-180` is written as an **earned null** and says so: WWOX occurs zero times in a paper that was genuinely read for a transferable-method question. Identity for all six came from the artefacts' JATS front matter, and **editors are excluded from every Authors field** — one paper had an Academic Editor and another two editor contribs. The integrator added a measured discrepancy the candidate could not have seen: the Research Square preprint's **cover page and manuscript byline print different first authors**, and the manuscript byline is the one used. § 3's prohibitions were honoured: no individual-level description, no claim that the deep intronic consequence is quantified, no elevation of either preprint.
+
+**Not medical advice.**

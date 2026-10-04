@@ -57,3 +57,15 @@ is **not edited**. Provisional anchors. `context_policy: QUESTION_DRIVEN`. **Not
 - (The paper's own region and frequencies | We chose the WWOX intronic deletions as reported by the gnomAD database in the region chr16:78,371,638-78,385,000 (GRCh37/hg19) which has a deletion and a multi-CNV with allele frequency of 34% to 54% respectively | PMID 41345172, Methods, CNV pipeline fine-tuning)
 - (Drug response is a binary remission | Time to 12 month remission; 1= achieved 12 month remission; 0=did not achieve 12 month remission | PMID 41345172, Supplementary Table 13, drug_response row)
 - (Table 4 is the WWOX association table for drug response | Association results for the drug-response phenotype in SANAD for CNV genotypes and LRR using univariate and multivariate models | PMID 41345172, Supplementary Table 4, sheet SANAD caption)
+
+## BATCH DISPOSITION — `BATCH_20261004_003` (2026-10-04, ACTOR_ID `scientist`, Scientist M), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** `PROPAGATED` (MINOR, WM_v7.15 → WM_v7.16).
+
+**Surfaces written:** paper_registry_current.md
+
+Both ops applied as declared, on `PAPER 209`. `CLAIM 032` is **not edited**: its boundary statement (*a common intronic polymorphism, not a dosage datum*) is confirmed by the measurement rather than narrowed by it, and the candidate asked for no edit there. Sampled, not audited blind: the ops add arithmetic and coordinate provenance to an existing record and assert no new proposition.
+
+**Not medical advice.**

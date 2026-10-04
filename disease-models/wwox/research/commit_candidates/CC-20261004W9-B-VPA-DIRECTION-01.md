@@ -56,3 +56,15 @@ Four of the five primaries behind the valproate row of PMID 41254692 Table S7 ar
 (the PAX6 sentinel is negative in the same signed table | BC=205646_s_at | BD=-10.5619 | BE=2.3600900000000001E-15 | PMID 27188386, Supplementary Table 3 row 5866 columns BC-BE; same artefact)
 (Table 7 lists the WWOX probe set at 1000 uM valproate without direction | SHEET=Suppl. Table 7 | ROW=2661 | D=219106_s_at | E=219077_s_at | F=WWOX | PMID 27188386, Supplementary Table 7 row 2661; same artefact)
 (the wave-8 export row lists all five references for valproate and WWOX with 'Decreases expression' | A=Valproic Acid | B=D014635 | C=WWOX | D=Homo sapiens | E=Decreases expression | F=23179753|24935251|26272509|27188386|28001369 | PMID 41254692, Additional file 1 Table S7; files/supplements/PMID41254692/MOESM1_TableS7_rows.txt)
+
+## BATCH DISPOSITION — `BATCH_20261004_003` (2026-10-04, ACTOR_ID `scientist`, Scientist M), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** `PROPAGATED` (MINOR, WM_v7.15 → WM_v7.16).
+
+**Surfaces written:** discovery_ledger_current.md
+
+Both ops applied on `DL-REPO-003`, the record `BATCH_20261004_002` landed. The first `old` string was **`OLD_ABSENT`** and was re-measured on current `main`: the landed next-action line emphasises differently from the wave-8 candidate's draft. One wording change at integration: *«for a patient with two loss-of-function alleles»* became *«where both alleles are loss-of-function»*, which is the same point at class level in a public edition. 🔴 **The direction debt is recorded as NOT settled:** four of five primaries show WWOX **up**, the curated *«Decreases expression»* row is contradicted by every primary that could be read, the four share measurements and are not four replications, and the fifth primary is paywalled and unread. **No clinical reading of any kind**, and no therapeutic-tracker entry. Author outreach for the fifth paper is **reserved to the operator** and was not undertaken.
+
+**Not medical advice.**

@@ -52,3 +52,15 @@ Op: `insert-after` chained from the current final `LIT` record, `LIT-0509` to `L
 ## Reading-debt discharge
 
 Four of the five primaries behind the valproate row of PMID 41254692 Table S7 are now read; the fifth (PMID 28001369) remains unread and paywalled. The two gene-therapy papers are references of the DRG reference chain around PMID 42137271 and discharge no registry statement by themselves (no held statement names them).
+
+## BATCH DISPOSITION — `BATCH_20261004_003` (2026-10-04, ACTOR_ID `scientist`, Scientist M), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** `PROPAGATED` (MINOR, WM_v7.15 → WM_v7.16).
+
+**Surfaces written:** paper_registry_current.md · literature_tracking_log_current.md
+
+Six `PAPER` and six `LIT` records created. 🔴 **Renumbered:** the declared `PAPER 217`–`222` / `LIT-0509`–`0514` were already taken by `BATCH_20261004_002`; re-measured with `registry_records.py catalog` at `a405efc30550` (`PAPER` max **234**, `LIT` max **0526**) and landed as **`PAPER 235`–`240`** with **`LIT-0527`–`0532`**. 🔴 **The six artefacts were absent from `files/fulltext/`** when identity was to be measured; `evidence_presence.py --search` matched all six main JATS files by **exact SHA-256** in this session's scratchpad and `--restore` put them in place, at zero spend — so no identity field was taken from the candidate's prose table. Every title, author list, journal, volume, issue, page range, DOI, PMID and PMCID was then read from the JATS front matter; **no editor contrib appears in any Authors field**. The candidate's label *«Hordeaux 2020»* for PMID 32355866 is confirmed **wrong** — first author **Bey**, Hordeaux author 7 of 22 — and the correction is carried by `PAPER 239`'s own title and Role. The literal `partial full text` accompanies every `partial_fulltext_read`. The supplements of all six remain absent from disk; only the main articles were restored, and no record claims more than the receipts do.
+
+**Not medical advice.**
