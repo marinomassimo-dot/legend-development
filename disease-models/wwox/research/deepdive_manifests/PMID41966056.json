@@ -1,115 +1,389 @@
 {
- "schema_version": 2,
- "pmid": "41966056",
- "doi": "10.1016/j.ymthe.2026.04.016",
- "receipt": "FTR-20261003-41966056-01",
- "landing": [
-  "disease-models/wwox/research/intake_wave_20261003w5_C.md"
- ],
- "skills_considered": [
-  {
-   "skill": "find-fulltext",
-   "used": true,
-   "reason": "PMC JATS acquired directly by E-utilities efetch; the cascade was not needed because the record is open access with a body."
+  "schema_version": 2,
+  "pmid": "41966056",
+  "doi": "10.1016/j.ymthe.2026.04.016",
+  "receipt": "FTR-20261003-41966056-01",
+  "landing": [
+    "disease-models/wwox/research/intake_wave_20261003w5_C.md"
+  ],
+  "skills_considered": [
+    {
+      "skill": "find-fulltext",
+      "used": true,
+      "reason": "PMC JATS acquired directly by E-utilities efetch; the cascade was not needed because the record is open access with a body."
+    },
+    {
+      "skill": "legend-deepdive",
+      "used": false,
+      "reason": "No deep dive was run. This is an intake first reading of a paper with no WWOX content; it produces a dossier and locators, not canonical claims."
+    },
+    {
+      "skill": "legend-locator-audit",
+      "used": false,
+      "reason": "Triples are handed to the audit through the commit candidates' LOCATOR TRIPLES FOR BLIND AUDIT sections, not run here: producer must not be verifier."
+    }
+  ],
+  "group_assessment": {
+    "performed": true,
+    "total_publications": 1104,
+    "publications_on_gene": 0,
+    "counts_measured": "PubMed esearch 2026-10-04: 'Wang RY[au]' 1104; 'Wang RY[au] AND WWOX' 0; 'Wang RY[au] AND mucopolysaccharidosis' 25. A surname-initial query over a common name: an upper bound on one person's output and NOT a group identity.",
+    "research_type": "descriptive_clinical",
+    "is_primary_group_for_disease": false,
+    "is_primary_group_for_gene": false,
+    "weighting": "A single-subject investigator-sponsored report (PubMed type Case Reports) of an intra-cisterna-magna AAV9 IDUA programme under a four-drug immunosuppression protocol. It carries a regimen and a schedule of assessments that the protocol supplement prints; it carries no nerve conduction study, no ganglion imaging and no tissue. It can bear on 'was a sensory-ganglion endpoint measured under immunosuppression' and on nothing about WWOX.",
+    "note": "Research-group knowledge base is excluded from the public edition; this rests on measured PubMed counts only."
   },
-  {
-   "skill": "legend-deepdive",
-   "used": false,
-   "reason": "No deep dive was run. This is an intake first reading of a paper with no WWOX content; it produces a dossier and locators, not canonical claims."
+  "field_density": {
+    "wwox_directed": false,
+    "wwox_hits_in_source": 0,
+    "queries": [
+      {
+        "query": "count of the string WWOX (case-insensitive) over the whole JATS text of the declared artifact",
+        "route": "python3 re over files/fulltext/PMID41966056_Wang2026_PMC.xml, 2026-10-04",
+        "count": 0
+      },
+      {
+        "query": "Wang RY[au] AND WWOX",
+        "route": "PubMed esearch 2026-10-04",
+        "count": 0
+      }
+    ],
+    "measured_by": "count of the string WWOX over the JATS text, 2026-10-04",
+    "note": "Zero: an earned null for the gene. The source is read only for the transferable question (sensory-ganglion and integration-tumour negatives under immunosuppression in a CSF-route AAV9 programme); transfer limit stated in the dossier."
   },
-  {
-   "skill": "legend-locator-audit",
-   "used": false,
-   "reason": "Triples are handed to the audit through the commit candidates' LOCATOR TRIPLES FOR BLIND AUDIT sections, not run here: producer must not be verifier."
+  "multihop": {
+    "performed": false,
+    "references_enumerated": 20,
+    "pmid_bearing_references": 18,
+    "gene_direct_refs_in_source": [],
+    "enumeration_method": "All <ref> elements counted (20) and pub-id[pub-id-type=pmid] values counted (18) from the declared JATS artifact.",
+    "resolved": [],
+    "queued": [],
+    "gap_declared": "Off-WWOX source: the gene appears zero times, so no reference is gene-direct and the gene-direct hop set is empty by measurement. None of the 18 PMID-bearing references is individually resolved or queued, because the two references this re-read depends on (the primate neuropathology report cited for the DRG sentence and the integration-tumour report) are the papers' own cited sources, not read in this wave."
+  },
+  "corpus_crossquery": {
+    "performed": true,
+    "query": "Does this corpus already hold an artifact and a receipt for this PMID?",
+    "hits": 1,
+    "finding": "paper_packet.py packet --pmid 41966056 at commit b07016a0 (wave 13): manifest present, article text present, one earlier receipt (partial_fulltext_read); the supplements were the owed surface and are acquired in this wave."
+  },
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-10-04",
+    "route": "NCBI ESummary db=pubmed for 41966056",
+    "result": "PubMed publication types Journal Article and Case Reports; no retraction, expression of concern or erratum listed.",
+    "hold": false,
+    "dependencies": {
+      "flagged": [],
+      "noted": [],
+      "paper_verdict": "SCREENED_CLEAN",
+      "reference_source": "cache",
+      "references_declared": 20,
+      "references_screened": 18,
+      "references_with_doi": 18,
+      "schema": "retraction_check.dependencies/1",
+      "screened": true,
+      "snapshot": {
+        "date": "2026-09-10",
+        "days_since_fetch": 24,
+        "rows": 72476,
+        "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+      },
+      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+      "unscreenable": {
+        "UNSCREENABLE_NO_DOI": 2
+      }
+    }
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID41966056_Wang2026_PMC.xml",
+      "sha256": "d742797b9570be3b99d8d2279763e11f7f1f369135a6dd7ee96d50392ce22ed8",
+      "kind": "article_text",
+      "note": "PMC JATS XML re-acquired by E-utilities efetch on 2026-10-03 by this reader for the wave-5 intake first reading; body present.",
+      "acquisition_recipe": {
+        "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=13239742&retmode=xml",
+        "http_method": "GET",
+        "tier": "ncbi_efetch_pmc_xml",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-03",
+        "derived": false,
+        "result_sha256": "d742797b9570be3b99d8d2279763e11f7f1f369135a6dd7ee96d50392ce22ed8"
+      }
+    },
+    {
+      "path": "files/supplement/PMID41966056/mmc1.pdf",
+      "sha256": "63eb445e411eb79bb23feb90d53056c6522b83154f500bb08b181a221b4f13dd",
+      "kind": "supplement_binary",
+      "note": "Document S1: supplemental protocol (8 pages), member of the Europe PMC supplementaryFiles zip, extracted unchanged.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13239742/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "63eb445e411eb79bb23feb90d53056c6522b83154f500bb08b181a221b4f13dd",
+        "http_status": 200,
+        "bytes": 204317
+      }
+    },
+    {
+      "path": "files/supplement/PMID41966056/mmc2.pdf",
+      "sha256": "89516aeea7eb6467a895a72978a1dced61728a9d2f7a428e87f16e66806b898c",
+      "kind": "supplement_binary",
+      "note": "Document S2: Tables S1-S3 (5 pages: characteristics, liver/spleen measurements, adverse-event listing), extracted unchanged. Individual-level values in it are not carried into any LEGEND file.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13239742/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "89516aeea7eb6467a895a72978a1dced61728a9d2f7a428e87f16e66806b898c",
+        "http_status": 200,
+        "bytes": 341674
+      }
+    },
+    {
+      "path": "files/supplement/PMID41966056/mmc4.pdf",
+      "sha256": "03a1430948d4cdf6d10b0b2ff4f065bda5c9db4d9986cfbc25cc1800c0bd9ae5",
+      "kind": "supplement_binary",
+      "note": "Document S3: article plus supplemental information (15 pages), extracted unchanged; duplicates the article and the protocol; its Discussion text was grep-checked against the JATS only.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13239742/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "03a1430948d4cdf6d10b0b2ff4f065bda5c9db4d9986cfbc25cc1800c0bd9ae5",
+        "http_status": 200,
+        "bytes": 2316922
+      }
+    },
+    {
+      "path": "files/supplement/PMID41966056/gr1.webp",
+      "sha256": "ed08e39edfe3d13421ffb7673d593c66a3207823e366b3b48e6495fc8799d0a8",
+      "kind": "figure",
+      "note": "Figure 1 raster (WebP, four panels A-D: CSF IDUA, CSF heparan sulfate, urine GAGs), converted to PNG for viewing.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13239742/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "ed08e39edfe3d13421ffb7673d593c66a3207823e366b3b48e6495fc8799d0a8",
+        "http_status": 200,
+        "bytes": 93856
+      }
+    },
+    {
+      "path": "files/supplement/PMID41966056/gr2.webp",
+      "sha256": "03b66f3d1618592faaa39eb4ff6bb9437d13861880dee6c30fa2d139b8b3580e",
+      "kind": "figure",
+      "note": "Figure 2 raster (WebP, plasma and CSF anti-IDUA antibody titres), converted to PNG for viewing.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13239742/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "03b66f3d1618592faaa39eb4ff6bb9437d13861880dee6c30fa2d139b8b3580e",
+        "http_status": 200,
+        "bytes": 38090
+      }
+    },
+    {
+      "path": "files/supplement/PMID41966056/gr3.webp",
+      "sha256": "1d0f483c0fe4ea322092c9b62814cedb8d5425c0dd96c4a1e2dbb59461f8afe4",
+      "kind": "figure",
+      "note": "Figure 3 raster (WebP, neurodevelopmental age-equivalent scores), converted to PNG for viewing.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13239742/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "1d0f483c0fe4ea322092c9b62814cedb8d5425c0dd96c4a1e2dbb59461f8afe4",
+        "http_status": 200,
+        "bytes": 61376
+      }
+    },
+    {
+      "path": "files/supplement/PMID41966056/mmc1.txt",
+      "sha256": "7ecae4a6d2455f96c0321f06990cd872e79f216c5c16265587c8662179991aa5",
+      "kind": "supplement_text",
+      "note": "DERIVED text layer of the protocol (layout).",
+      "acquisition_recipe": {
+        "resolved_url": "local derivation",
+        "http_method": "NONE",
+        "tier": "local derivation",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": true,
+        "derived_from": "files/supplement/PMID41966056/mmc1.pdf",
+        "result_sha256": "7ecae4a6d2455f96c0321f06990cd872e79f216c5c16265587c8662179991aa5",
+        "extractor": {
+          "name": "pdftotext (poppler)",
+          "version": "24.02.0",
+          "call": "pdftotext -layout -nopgbrk mmc1.pdf mmc1.txt"
+        }
+      }
+    },
+    {
+      "path": "files/supplement/PMID41966056/mmc2.txt",
+      "sha256": "47d73a740fc6ff4fc301896526f7b677ca08b5478a928661050bf4318085db41",
+      "kind": "supplement_text",
+      "note": "DERIVED text layer of Tables S1-S3 (layout). Individual-level values are not carried into LEGEND files.",
+      "acquisition_recipe": {
+        "resolved_url": "local derivation",
+        "http_method": "NONE",
+        "tier": "local derivation",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": true,
+        "derived_from": "files/supplement/PMID41966056/mmc2.pdf",
+        "result_sha256": "47d73a740fc6ff4fc301896526f7b677ca08b5478a928661050bf4318085db41",
+        "extractor": {
+          "name": "pdftotext (poppler)",
+          "version": "24.02.0",
+          "call": "pdftotext -layout -nopgbrk mmc2.pdf mmc2.txt"
+        }
+      }
+    }
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "JATS from E-utilities efetch db=pmc. Body separated from front matter by the reader's own extraction; every locator is matched against the normalised body text of the declared artefact.",
+    "abstract_anchoring_waived": "No locator draws on the abstract; every entry is matched against the body.",
+    "note": "Coverage: abstract, introduction, Results (clinical history, clinical outcomes, adverse events, biochemical outcomes, serologies, neurodevelopmental outcomes), Discussion and Materials and methods read from the JATS running text. Figure panels were NOT rendered: the numbers carried are stated in running text and quoted from there, and the one figure-derived locator is explicitly marked caption_only. Supplementary Video S1 and Documents S1-S3 (protocol, Tables S1-S3) were not fetched, so the 23-event adverse-event listing is receipted only as the running text's summary of Table S3.",
+    "entries": [
+      {
+        "proposition": "THE HUMAN INTRACISTERNAL DOSE LITERAL IS PRINTED WITH AN IMPOSSIBLE SIGN AND MUST NOT BE CARRIED AS PRINTED: a negative exponent of vector genome copies per gram of brain mass would denote a fraction of one genome copy. The paper's own paired figures recover the intended magnitudes by division; the printed form has lost the superscripts in both abstract and body.",
+        "snippet": "Following successful computed tomography (CT)-guided access to the cisterna magna with a 25-gauge neonatal spinal needle, 1E−10 vector genome copies/g brain mass (1.265E−13 genome copies) of RGX-111 in 5 mL of Elliotts B artificial CSF was injected over 5 min without adverse effects.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41966056_Wang2026_PMC.xml",
+        "anchor": "Results, 'Clinical outcomes', dosing paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "DORSAL ROOT GANGLION TOXICITY WAS NOT MEASURED IN THIS HUMAN RECIPIENT: the authors state plainly that no nerve conduction studies were performed, and rest the inference on absence of reported paraesthesia and on deep tendon reflexes in a child dosed in the second year of life.",
+        "snippet": "Although no formal nerve conduction studies were performed, due to the protocol being a treatment investigational new drug (IND), the subject did not complain of paresthesias and did not demonstrate abnormal deep tendon reflexes, suggesting there was no clinically significant dorsal root ganglion (DRG) toxicity.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41966056_Wang2026_PMC.xml",
+        "anchor": "Discussion, DRG paragraph",
+        "panel_text_relation": "text_confirmed_by_panel"
+      },
+      {
+        "proposition": "THE ADVERSE EVENT BURDEN OF THIS PROCEDURE IS ATTRIBUTED BY THE INVESTIGATORS MAINLY TO THE IMMUNOSUPPRESSION RATHER THAN TO THE VECTOR.",
+        "snippet": "In total, 23 adverse events have been recorded to date (see Table S3); 17 occurred in the first year following dosing, and 16 of those were assessed to be possibly related to immunosuppression.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41966056_Wang2026_PMC.xml",
+        "anchor": "Results, 'Adverse events'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "TRANSGENE PRODUCT IN CSF DECLINED AFTER IMMUNOSUPPRESSION WAS WEANED, SO DURABILITY AND NOT ONLY TOXICITY HAS A MODIFIABLE IMMUNE COMPONENT ON THIS ROUTE.",
+        "snippet": "(A) CSF IDUA enzyme levels measured over 290 weeks suggest rapid-onset IDUA transgene expression (week 8), which peaked at 35 weeks and subsequently declined after weaning of immunosuppression began (blue arrow).",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41966056_Wang2026_PMC.xml",
+        "anchor": "Figure 1 caption, panel A",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THE CSF AND PLASMA ANTIBODY COMPARTMENTS ARE NOT EQUILIBRATED AFTER A DIRECT CNS DOSE.",
+        "snippet": "Note that despite direct CNS dosing of RGX-111, the ratio of plasma to CSF anti-IDUA titers obtained at the same time ranged from 320:1 to 1,280:1.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41966056_Wang2026_PMC.xml",
+        "anchor": "Results, 'Body fluid anti-IDUA serologies'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "A TUMOUR WITH VECTOR GENOME INTEGRATION AFTER THE SAME ROUTE AND VECTOR IN A DIFFERENT CHILD IS CARRIED BY THIS PAPER AS A CITATION, NOT AS ITS OWN FINDING; IT IS AN OPEN READING DEBT.",
+        "snippet": "Finally, given the recent identification of an intraventricular CNS tumor demonstrating vector genome integration in a 5-year-old severe MPS I patient who had received ICM RGX-111 in the phase 1/2 open-label study (NCT03580083) at age 1 year,10 the absence of brain or spine neoplasms in our child more than 5.5 years post RGX-111 is important to note.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41966056_Wang2026_PMC.xml",
+        "anchor": "Discussion, neoplasm paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The supplemental protocol schedules physical and neurologic examination (immediately after dosing, day 1, then 8, 24, 56, 78, 104 weeks) and brain MRI at 56 and 104 weeks; it names no nerve conduction study, no spine or ganglion imaging and no tissue sampling.",
+        "snippet": "Physical and neurologic examination will occur immediately following, and one day after RGX-111 dosing.",
+        "surface": "supplement",
+        "artifact": "files/supplement/PMID41966056/mmc1.txt",
+        "anchor": "Protocol, Description of Clinical Procedures",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "Brain MRI is scheduled at 56 and 104 weeks only in the protocol; the article reports annual brain MRI and says annual brain and spine MRI surveillance continues.",
+        "snippet": "Brain magnetic resonance imaging will be performed at 56 and 104 weeks post-RGX-111 dosing.",
+        "surface": "supplement",
+        "artifact": "files/supplement/PMID41966056/mmc1.txt",
+        "anchor": "Protocol, Clinical Procedures",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "The protocol lists four adjunctive immunosuppressive drugs: a single intravenous methylprednisolone dose, oral prednisone tapered to week 12, tacrolimus to week 32 and sirolimus for 48 weeks.",
+        "snippet": "Sirolimus, 1 mg/m2 every 4 hours x 3 doses, 2 days prior to RGX-111 administration",
+        "surface": "supplement",
+        "artifact": "files/supplement/PMID41966056/mmc1.txt",
+        "anchor": "Protocol, adjunctive immunosuppression",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "Tacrolimus is dosed from the day after vector administration with titration, and sirolimus starts two days before.",
+        "snippet": "Tacrolimus, 0.05 mg/kg/dose orally, twice daily starting day following RGX-111 administration",
+        "surface": "supplement",
+        "artifact": "files/supplement/PMID41966056/mmc1.txt",
+        "anchor": "Protocol, immunosuppression section",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "Tacrolimus is discontinued by week 32 and only sirolimus levels are drawn at 32 and 40 weeks.",
+        "snippet": "Since tacrolimus will be discontinued by week 32, only sirolimus levels will\nbe obtained at 32 and 40 weeks",
+        "surface": "supplement",
+        "artifact": "files/supplement/PMID41966056/mmc1.txt",
+        "anchor": "Protocol, Laboratory Tests",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "Table S3 lists the 23 adverse events with causality columns including relation to immunosuppression; none of its listed terms is a sensory, neurologic or spinal term (a term search for neuro*, gait, weak*, tremor, seizure, headache, ataxi*, paresis, reflex, hypotonia, spinal, lumbar, nerve returned 0; the sensory/pain search returned one musculoskeletal knee-pain row).",
+        "snippet": "Table S3. Listing of adverse events with complete details including causality assessments and outcome.",
+        "surface": "supplement",
+        "artifact": "files/supplement/PMID41966056/mmc2.txt",
+        "anchor": "Table S3, title and rows",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "Figure 2 shows plasma anti-IDUA antibody titre falling on immunosuppression then surging to its highest point between roughly one and two years after withdrawal, then returning to low levels; CSF titre dips then returns to its baseline value before falling.",
+        "snippet": "[panel attestation - Fig. 2 raster inspected] Panel A plasma: baseline high, down during immunosuppression, rise after the blue arrow to the top of the axis near 102,400 around weeks 85-105, back to low values by about week 180. Panel B CSF: 80 at baseline, 40, 40, back to 80 at about week 60, then 10 and 20 at about weeks 225 and 275.",
+        "surface": "figure",
+        "artifact": "files/supplement/PMID41966056/gr2.webp",
+        "anchor": "Figure 2 panels A and B",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "Figure 1 shows single-subject CSF IDUA (peak then decline, ending below the control scatter), CSF heparan sulfate (fall then plateau above the control distribution) and urine GAGs; every panel is a biochemical readout and none is a sensory, electrophysiological or imaging readout.",
+        "snippet": "[panel attestation - Fig. 1 raster inspected] A CSF IDUA vs 17 control samples; B CSF HS vs control box; C total urinary GAG with an age-stepped reference line; D urinary HS and DS with reference lines; n = 1 subject; blue arrow marks the start of immunosuppression withdrawal.",
+        "surface": "figure",
+        "artifact": "files/supplement/PMID41966056/gr1.webp",
+        "anchor": "Figure 1 panels A-D",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "Figure 3 plots age-equivalent scores for cognition, expressive communication and fine motor against chronologic age; no sensory or nerve readout.",
+        "snippet": "[panel attestation - Fig. 3 raster inspected] Three panels of age-equivalent months versus chronologic months with shaded bands around identity; a second dataset (orange) appears in the cognitive panel only.",
+        "surface": "figure",
+        "artifact": "files/supplement/PMID41966056/gr3.webp",
+        "anchor": "Figure 3 panels A-C",
+        "panel_text_relation": "panel_only"
+      }
+    ]
   }
- ],
- "group_assessment": {
-  "waived": "Waived by name. This is a wave-5 intake first reading under SOURCE_FIRST: the paper carries no WWOX content (zero occurrences) and is read only as transferable delivery-safety evidence. No canonical claim is promoted by this pass, so the deep-dive steps that exist to rate a claim are not run; the pass's scope is recorded in the accompanying receipt and in the dossier's 'what I did not read' section."
- },
- "field_density": {
-  "waived": "Waived by name. This is a wave-5 intake first reading under SOURCE_FIRST: the paper carries no WWOX content (zero occurrences) and is read only as transferable delivery-safety evidence. No canonical claim is promoted by this pass, so the deep-dive steps that exist to rate a claim are not run; the pass's scope is recorded in the accompanying receipt and in the dossier's 'what I did not read' section."
- },
- "multihop": {
-  "waived": "Waived by name. This is a wave-5 intake first reading under SOURCE_FIRST: the paper carries no WWOX content (zero occurrences) and is read only as transferable delivery-safety evidence. No canonical claim is promoted by this pass, so the deep-dive steps that exist to rate a claim are not run; the pass's scope is recorded in the accompanying receipt and in the dossier's 'what I did not read' section."
- },
- "corpus_crossquery": {
-  "waived": "Waived by name. This is a wave-5 intake first reading under SOURCE_FIRST: the paper carries no WWOX content (zero occurrences) and is read only as transferable delivery-safety evidence. No canonical claim is promoted by this pass, so the deep-dive steps that exist to rate a claim are not run; the pass's scope is recorded in the accompanying receipt and in the dossier's 'what I did not read' section."
- },
- "retraction_check": {
-  "waived": "Waived by name. PubMed article-type and comments-corrections screening was not run as a network call in this pass; the acquired PMC record carries no retraction, correction or expression-of-concern notice in its front matter. All six records are 2025-2026 publications. This is declared as a gap, not as a clean result."
- },
- "source_artifacts": [
-  {
-   "path": "files/fulltext/PMID41966056_Wang2026_PMC.xml",
-   "sha256": "d742797b9570be3b99d8d2279763e11f7f1f369135a6dd7ee96d50392ce22ed8",
-   "kind": "article_text",
-   "note": "PMC JATS XML re-acquired by E-utilities efetch on 2026-10-03 by this reader for the wave-5 intake first reading; body present.",
-   "acquisition_recipe": {
-    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=13239742&retmode=xml",
-    "http_method": "GET",
-    "tier": "ncbi_efetch_pmc_xml",
-    "user_agent_policy": "none",
-    "acquired_on": "2026-10-03",
-    "derived": false,
-    "result_sha256": "d742797b9570be3b99d8d2279763e11f7f1f369135a6dd7ee96d50392ce22ed8"
-   }
-  }
- ],
- "verbatim_locators": {
-  "waived": false,
-  "source_fulltext_indexed": true,
-  "source_fulltext_indexed_evidence": "JATS from E-utilities efetch db=pmc. Body separated from front matter by the reader's own extraction; every locator is matched against the normalised body text of the declared artefact.",
-  "abstract_anchoring_waived": "No locator draws on the abstract; every entry is matched against the body.",
-  "note": "Coverage: abstract, introduction, Results (clinical history, clinical outcomes, adverse events, biochemical outcomes, serologies, neurodevelopmental outcomes), Discussion and Materials and methods read from the JATS running text. Figure panels were NOT rendered: the numbers carried are stated in running text and quoted from there, and the one figure-derived locator is explicitly marked caption_only. Supplementary Video S1 and Documents S1-S3 (protocol, Tables S1-S3) were not fetched, so the 23-event adverse-event listing is receipted only as the running text's summary of Table S3.",
-  "entries": [
-   {
-    "proposition": "THE HUMAN INTRACISTERNAL DOSE LITERAL IS PRINTED WITH AN IMPOSSIBLE SIGN AND MUST NOT BE CARRIED AS PRINTED: a negative exponent of vector genome copies per gram of brain mass would denote a fraction of one genome copy. The paper's own paired figures recover the intended magnitudes by division; the printed form has lost the superscripts in both abstract and body.",
-    "snippet": "Following successful computed tomography (CT)-guided access to the cisterna magna with a 25-gauge neonatal spinal needle, 1E\u221210 vector genome copies/g brain mass (1.265E\u221213 genome copies) of RGX-111 in 5 mL of Elliotts B artificial CSF was injected over 5 min without adverse effects.",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID41966056_Wang2026_PMC.xml",
-    "anchor": "Results, 'Clinical outcomes', dosing paragraph",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "DORSAL ROOT GANGLION TOXICITY WAS NOT MEASURED IN THIS HUMAN RECIPIENT: the authors state plainly that no nerve conduction studies were performed, and rest the inference on absence of reported paraesthesia and on deep tendon reflexes in a child dosed in the second year of life.",
-    "snippet": "Although no formal nerve conduction studies were performed, due to the protocol being a treatment investigational new drug (IND), the subject did not complain of paresthesias and did not demonstrate abnormal deep tendon reflexes, suggesting there was no clinically significant dorsal root ganglion (DRG) toxicity.",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID41966056_Wang2026_PMC.xml",
-    "anchor": "Discussion, DRG paragraph",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "THE ADVERSE EVENT BURDEN OF THIS PROCEDURE IS ATTRIBUTED BY THE INVESTIGATORS MAINLY TO THE IMMUNOSUPPRESSION RATHER THAN TO THE VECTOR.",
-    "snippet": "In total, 23 adverse events have been recorded to date (see Table S3); 17 occurred in the first year following dosing, and 16 of those were assessed to be possibly related to immunosuppression.",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID41966056_Wang2026_PMC.xml",
-    "anchor": "Results, 'Adverse events'",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "TRANSGENE PRODUCT IN CSF DECLINED AFTER IMMUNOSUPPRESSION WAS WEANED, SO DURABILITY AND NOT ONLY TOXICITY HAS A MODIFIABLE IMMUNE COMPONENT ON THIS ROUTE.",
-    "snippet": "(A) CSF IDUA enzyme levels measured over 290 weeks suggest rapid-onset IDUA transgene expression (week 8), which peaked at 35 weeks and subsequently declined after weaning of immunosuppression began (blue arrow).",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID41966056_Wang2026_PMC.xml",
-    "anchor": "Figure 1 caption, panel A",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "THE CSF AND PLASMA ANTIBODY COMPARTMENTS ARE NOT EQUILIBRATED AFTER A DIRECT CNS DOSE.",
-    "snippet": "Note that despite direct CNS dosing of RGX-111, the ratio of plasma to CSF anti-IDUA titers obtained at the same time ranged from 320:1 to 1,280:1.",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID41966056_Wang2026_PMC.xml",
-    "anchor": "Results, 'Body fluid anti-IDUA serologies'",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "A TUMOUR WITH VECTOR GENOME INTEGRATION AFTER THE SAME ROUTE AND VECTOR IN A DIFFERENT CHILD IS CARRIED BY THIS PAPER AS A CITATION, NOT AS ITS OWN FINDING; IT IS AN OPEN READING DEBT.",
-    "snippet": "Finally, given the recent identification of an intraventricular CNS tumor demonstrating vector genome integration in a 5-year-old severe MPS I patient who had received ICM RGX-111 in the phase 1/2 open-label study (NCT03580083) at age 1 year,10 the absence of brain or spine neoplasms in our child more than 5.5 years post RGX-111 is important to note.",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID41966056_Wang2026_PMC.xml",
-    "anchor": "Discussion, neoplasm paragraph",
-    "panel_text_relation": "text_only"
-   }
-  ]
- }
 }
