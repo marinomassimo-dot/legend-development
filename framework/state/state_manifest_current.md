@@ -212,8 +212,8 @@ to make a suite green — the only way to move it is to have made the change you
 
 ```yaml
 growth_anchor_ledger: framework/state/growth_anchors.jsonl
-growth_anchor_events: 43
-growth_anchor_head: 745ddf446f42d4eb5dd5e04fab2a6bd14c7ffaaf2f55d88bee301355ebfb8008
+growth_anchor_events: 44
+growth_anchor_head: c58b4d1ac9234c827c8341a95f7a8a2a297e91db6520cd43907ab8aaf89ee380
 ```
 
 ```bash
