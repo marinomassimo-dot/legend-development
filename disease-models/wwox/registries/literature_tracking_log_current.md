@@ -4550,11 +4550,12 @@ Serves to:
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 32368285 / DOI 10.7150/jca.40840
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-10-04 — read at full text in intake wave 7 and recorded at [[literature_tracking_log_current#LIT-0494]]
+**Status note:** superseded — duplicate identity. This row is the phase-2 corpus-alignment **placeholder** twin of [[paper_registry_current#CORPUS-STUB-132]] for PMID 32368285, and the reading landed at [[literature_tracking_log_current#LIT-0494]] with [[paper_registry_current#PAPER 201]] (`BATCH_20261004_001`, 2026-10-04). 🔴 **Count this PMID once, at `LIT-0494`.** `CC-20261004W7-A-REGISTRY-01` stated that the PMID had no LIT record; it had this one, and the integrator's post-propagation identity census found the duplicate. Retired rather than deleted, and pointed at its replacement, exactly as the corpus stub is
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 132
-**Status:** discovered
+**Status:** superseded
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -4562,8 +4563,8 @@ Serves to:
 **Claim links:** none
 **Working Model impact:** none yet
 **Report mentions:** corpus alignment
-**Next action:** screening and tier assignment
-**Flags:** corpus placeholder / not yet screened
+**Next action:** none — superseded by [[literature_tracking_log_current#LIT-0494]]
+**Flags:** corpus placeholder / **superseded by `LIT-0494`** — do not count as a separate paper and do not cite as unread
 **Note:** Title: Silencing of Wwox Increases Nuclear Import of Dvl proteins in Head and Neck Cancer
 
 ---
@@ -14027,7 +14028,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Year:** 2020
 **Source type:** primary research — human cell lines and tumour tissue
 **Status:** processed
-**Status note:** `partial_fulltext_read` (**partial full text**), receipt `FTR-20261004-32368285-01`; record created by `CC-20261004W7-A-REGISTRY-01`
+**Status note:** supersedes [[literature_tracking_log_current#LIT-0151]], the phase-2 corpus-alignment placeholder twin for this PMID, retired by `BATCH_20261004_001`; `partial_fulltext_read` (**partial full text**), receipt `FTR-20261004-32368285-01`; record created by `CC-20261004W7-A-REGISTRY-01`
 **Evidence depth:** `partial_fulltext_read` (**partial full text**) — manifest `deepdive_manifests/PMID32368285.json`; registry landing [[paper_registry_current#PAPER 201]]
 **clinical relevance:** LOW
 **Why tracked:** the one open-access primary of the three behind LEGEND's WWOX-Dvl direction; read in intake wave 7.
