@@ -6,7 +6,8 @@
  "receipt": "FTR-20260811-39952983-01",
  "landing": [
   "FTR-20260811-39952983-01",
-  "full_text_queue_current.md#FT-017"
+  "full_text_queue_current.md#FT-017",
+  "disease-models/wwox/research/intake_wave_20261004w13_A.md"
  ],
  "landing_note": "Kim et al. 2025, Scientific Reports — a Korean two-cohort GWAS on self-aware sleep duration (n = 8,840) with a Drosophila Wwox loss-of-function follow-up. Newest-first. SLEEP IS A DECLARED AXIS OF THE PROBAND PRIORITY MATRIX, and this is the only paper in the corpus that measures it directly against WWOX.",
  "skills_considered": [
@@ -114,6 +115,41 @@
    "path": "files/figures/PMID39952983/41598_2024_81158_MOESM1_ESM.docx",
    "sha256": "ab192d9420e9833308d6e295758809660f43775dee601df55cd02df641d17f1c",
    "kind": "supplement_text"
+  },
+  {
+   "path": "files/figures/PMID39952983/41598_2024_81158_MOESM1_ESM_docxdump.txt",
+   "sha256": "1956e27d958312ae49a6155af6f2d219a0f2a34ea48f4d472c385910069be0ee",
+   "kind": "supplement_text",
+   "note": "Wave-13 derived text layer of the supplementary DOCX: paragraphs in body order, both tables cell by cell, embedded media listed with sha256. Lossless for text and table cells; images are not rendered into it (they are declared separately).",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID39952983/41598_2024_81158_MOESM1_ESM.docx",
+    "extractor": {
+     "name": "docxdump_extractor.py (stdlib zipfile + ElementTree; copy stored beside the output)",
+     "version": "sha256 947e7af748d737da3f505364d2ad186c6d41e720423b6a93585297885beb5781",
+     "call": "python3 docxdump_extractor.py <docx> > <txt>; 'P: ' per paragraph, '=== TABLE n' then one 'rNN: ' line per row with cells joined by ' || ', gridSpan as {cs=n}",
+     "join": "\n"
+    },
+    "acquired_on": "2026-10-04"
+   }
+  },
+  {
+   "path": "files/figures/PMID39952983/41598_2024_81158_MOESM1_ESM_image1.png",
+   "sha256": "5eec0ca4f9db52f583512f9dd274cffc27e0e47125356678494832ec8b0ec746",
+   "kind": "figure",
+   "note": "Supplementary Fig. 1 (Manhattan plot), the DOCX member word/media/image1.png extracted byte for byte; inspected at native size (757x729) and its axis geometry measured with a stdlib PNG decoder.",
+   "acquisition_recipe": {
+    "no_recipe": "extracted from the declared supplementary DOCX with Python zipfile; the DOCX carries the route"
+   }
+  },
+  {
+   "path": "files/figures/PMID39952983/41598_2024_81158_MOESM1_ESM_image2.png",
+   "sha256": "0c9336f38dc5cccc681d6c330783a31f3cdf62c4066a53546837564c5b7d0932",
+   "kind": "figure",
+   "note": "Supplementary Fig. 2 (Q-Q plot), the DOCX member word/media/image2.png extracted byte for byte; inspected at native size (1020x1012) and its axis geometry measured with a stdlib PNG decoder.",
+   "acquisition_recipe": {
+    "no_recipe": "extracted from the declared supplementary DOCX with Python zipfile; the DOCX carries the route"
+   }
   }
  ],
  "verbatim_locators": {
@@ -247,6 +283,66 @@
     "found_or_sought": "found",
     "qualifies": "entries[12]",
     "qualifies_needle": "Wwox mRNA levels in Wwox"
+   },
+   {
+    "proposition": "The Results give the total-set association of rs16948804 with self-aware sleep duration as p = 1.11e-7 and cite Fig. 1, Table 2 and Supplementary Fig. 1 for it.",
+    "snippet": "total set: beta = -0.125, p = 1.11 × 10− 7) (Fig. 1, Tables 2 and Supplementary Fig. 1)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39952983_Kim2025_EPMC.xml",
+    "anchor": "Results, Associations of SNVs with sleep parameters in human GWAS, paragraph 1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors use the genomic inflation factor of Supplementary Fig. 2 as their argument against stratification-driven false positives.",
+    "snippet": "The small genomic control inflation factor (λ) of 1.0051 indicated a low possibility of false positive associations from population stratification",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39952983_Kim2025_EPMC.xml",
+    "anchor": "Results, Associations of SNVs with sleep parameters in human GWAS, paragraph 1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The imputed SNV count the multiple-testing denominator would be measured against.",
+    "snippet": "The final number of SNVs after imputation was 6.42 million for the Ansan and Ansung cohorts.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39952983_Kim2025_EPMC.xml",
+    "anchor": "Methods, genotyping and imputation paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Fig. 1's caption names a covariate set (age, sex, occupation) different from Table 2's footnote (age, sex, area, occupation, PC1-PC10) and from Supplementary Table 1's footnote (age, sex, area, occupation).",
+    "snippet": "Y axis shows log10 P values from linear regression analysis adjusted for age, sex, and occupation based on the additive model.",
+    "surface": "supplement",
+    "artifact": "files/figures/PMID39952983/41598_2024_81158_MOESM1_ESM_docxdump.txt",
+    "anchor": "Supplementary Materials Index, Supplementary Fig. 1 caption",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Table 1, read cell-wise: rs16948804 total beta -0.125 (SE 0.024), p 1.11e-7, pFDR 0.0182, pBONF 0.0197 (pBONF/p = 1.77e5 by reader's arithmetic, not the 6.42 million imputed SNVs).",
+    "snippet": "r02: rs16948804 || 16q23.1-q23.2 || G/C || -0.125 (0.024) || 1.11×10-7 || 0.0182 || 0.0197",
+    "surface": "supplement",
+    "artifact": "files/figures/PMID39952983/41598_2024_81158_MOESM1_ESM_docxdump.txt",
+    "anchor": "Supplementary Table 1, row rs16948804",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Fig. 1 inspected and measured: the highest point of the whole Manhattan plot is a chromosome-16 marker at -log10(p) of about 5.5 (p about 3e-6); no marker on any chromosome reaches the 6.95 that p = 1.11e-7 would plot at, so the panel the Results cite does not display the reported total-set value (its caption names a different covariate set).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Fig. 1: y-axis ticks 6, 5, 4, 3, 2, 1 at pixel rows 39, 138, 238, 337, 437, 536 (about 99.5 px per unit); topmost marker is brown (the chromosome-16 colour, between the 15 and 17 labels) centred near row 88, i.e. about 5.5; next chromosome-16 marker near 5.1; the blue threshold line at 5.0.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39952983/41598_2024_81158_MOESM1_ESM_image1.png",
+    "anchor": "Supplementary Fig. 1 (Manhattan plot)",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[14]",
+    "qualifies_needle": "p = 1.11"
+   },
+   {
+    "proposition": "Supplementary Fig. 2 inspected and measured: the largest observed -log10(p) is about 5.5 at an expected value of about 5.85 (about 7e5 plotted tests by reader's inference, not 6.42 million), so the lambda of 1.0051 belongs to an analysis whose top value is not the Table 2 value; the panel qualifies the stratification reassurance rather than contradicting lambda.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Fig. 2: y-axis ticks 4, 3, 1, 0 at pixel rows 321, 464, 749, 892 (about 143 px per unit, so 5 at about row 178); topmost black point near row 106, i.e. about 5.5, at x about 5.85; the points lie on the identity line to about 3.6 and above it from about 3.7 to 5.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39952983/41598_2024_81158_MOESM1_ESM_image2.png",
+    "anchor": "Supplementary Fig. 2 (Q-Q plot)",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[15]",
+    "qualifies_needle": "1.0051"
    }
   ]
  },

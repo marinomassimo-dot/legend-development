@@ -4,7 +4,8 @@
   "doi": "10.1016/j.molcel.2007.06.012",
   "receipt": "FTR-20261002-17679088-01",
   "landing": [
-    "intake_wave_20261002_C"
+    "intake_wave_20261002_C",
+    "disease-models/wwox/research/intake_wave_20261004w13_A.md"
   ],
   "skills_considered": [
     {
@@ -103,6 +104,53 @@
         "derived": false,
         "result_sha256": "43aedafd764c7e31199f05f085831e9eb1678c6aa3cec93856fffb0dfa62cfda"
       }
+    },
+    {
+      "path": "files/fulltext/PMID17679088_assets/nihms28262f2.jpg",
+      "sha256": "e160050bd6fe432dd797e7105a58714cb7a7a4d3ca281b9d4edcfa8fae899d78",
+      "kind": "figure",
+      "note": "Figure 2 of the author manuscript (800x893). Panel B is the FlexStab trace over FRA16D with the WWOX/FOR exon track beneath it, which is the panel that locates the assayed Flex regions relative to the gene.",
+      "acquisition_recipe": {
+        "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/7fd8/2144737/2cb79b3e18e1/nihms28262f2.jpg",
+        "http_method": "GET",
+        "tier": "pmc_cdn_blob_from_reader_html",
+        "user_agent_policy": "browser_like",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "e160050bd6fe432dd797e7105a58714cb7a7a4d3ca281b9d4edcfa8fae899d78"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID17679088_assets/NIHMS28262-supplement-01.pdf",
+      "sha256": "3764618cbac8fad0a5e96b0cbe252b7ba3dbc79d120fb014aeb26866450ab7b5",
+      "kind": "supplement_binary",
+      "note": "The article's single deposited supplement (9 pages): Supplemental Results, Supplemental Figures S1-S2 with legends, Supplemental Experimental Procedures, strain and plasmid construction. Fonts pass the ToUnicode screen (0 UNTRUSTWORTHY, 0 SUSPECT).",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/2144737/bin/NIHMS28262-supplement-01.pdf",
+        "http_method": "GET",
+        "tier": "pmc_pow_fetch",
+        "user_agent_policy": "identified",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "3764618cbac8fad0a5e96b0cbe252b7ba3dbc79d120fb014aeb26866450ab7b5"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID17679088_assets/NIHMS28262-supplement-01_pdftotext.txt",
+      "sha256": "41324b64d3d3941778c7264be9f6c36ad2d46bdd8d85c3eecd1642dbb65fe6a5",
+      "kind": "supplement_text",
+      "note": "Derived text layer of the supplement, read in full (351 lines); the source PDF's fonts carry a ToUnicode CMap, so the layer is trusted for the Latin text it quotes.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID17679088_assets/NIHMS28262-supplement-01.pdf",
+        "extractor": {
+          "name": "pdftotext (poppler)",
+          "version": "24.02.0",
+          "call": "pdftotext -layout -nopgbrk <pdf> <txt>",
+          "join": "\n"
+        },
+        "acquired_on": "2026-10-04"
+      }
     }
   ],
   "verbatim_locators": {
@@ -150,6 +198,30 @@
         "surface": "body",
         "artifact": "files/fulltext/PMID17679088_Zhang2007_PMC.html",
         "anchor": "Discussion, same subsection, sentence following the polymorphism sentence",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The Figure 2 legend states that the panel carries the WWOX/FOR exon track beneath the FRA16D flexibility trace, and that the assayed regions are drawn on the same axis. The gene-relative position of Flex1 is therefore published in the figure, not in the running text.",
+        "snippet": "Below it, the exons of the WWOX/FOR gene are represented by grey boxes.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID17679088_Zhang2007_PMC.html",
+        "anchor": "Figure 2 legend, panel B",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Figure 2B inspected: the exon track beneath the FlexStab trace carries two labelled grey boxes, 'WWOX exon 8' at the left end of the plotted FRA16D interval and 'WWOX exon 9' at the right end, and the black box marked Flex1 sits between them, as do the black boxes marked Flex4, Control and Flex5-p. The figure therefore places all four assayed regions, Flex1 included, between WWOX exons 8 and 9 (i.e. in intron 8), which the running text never states.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2 panel B: FlexStab score plotted against bases 0-300000 with a 'FRA16D' span bar; beneath it a track whose left and right grey boxes are labelled 'WWOX exon 8' and 'WWOX exon 9', with black boxes labelled Flex4, Control, Flex1 and Flex5-p in between, Flex1 near the middle under flexibility peak 2.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID17679088_assets/nihms28262f2.jpg",
+        "anchor": "Figure 2, panel B (exon track)",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "The supplement's Supplemental Experimental Procedures give the cloned Flex fragments by size and restriction site only; no WWOX exon, intron or genomic coordinate is named anywhere in the supplement, and 'WWOX' occurs in it once.",
+        "snippet": "The Flex4, Flex5-p, Flex1, and the FRA16D 1320 bp control sequences were amplified by PCR",
+        "surface": "supplement",
+        "artifact": "files/fulltext/PMID17679088_assets/NIHMS28262-supplement-01_pdftotext.txt",
+        "anchor": "Supplemental Experimental Procedures, plasmid construction",
         "panel_text_relation": "text_only"
       }
     ]

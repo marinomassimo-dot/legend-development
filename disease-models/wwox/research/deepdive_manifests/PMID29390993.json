@@ -7,7 +7,8 @@
   "fulltext_dossiers/PMID29390993.md",
   "CC-20261002-HETEROZYGOTE-CARRIERS-01",
   "CC-20261002-INTAKE-A-REGISTRY-01",
-  "disease-models/wwox/research/intake_wave_20261002_A.md"
+  "disease-models/wwox/research/intake_wave_20261002_A.md",
+  "disease-models/wwox/research/intake_wave_20261004w13_A.md"
  ],
  "skills_considered": [
   {
@@ -217,6 +218,14 @@
     "artifact": "files/fulltext/PMID29390993_assets/12920_2018_320_Fig1_HTML.jpg",
     "anchor": "Figure 1",
     "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "Wave-13 re-read (cell-wise): the authors themselves state that the WWOX patient's two alleles are in trans, one SNV and one exon-level copy-number change; the Table 1 cell values (nucleotide change, zygosity, ACMG class and components, origin column) extracted cell by cell from the td markup equal the flattened-text locators above, so the carrier observation rests on table cells, not on a flattening artefact.",
+    "snippet": "were compound heterozygous for one SNV and one exon-level deletion/duplication",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29390993_Rim2018_PMC.xml",
+    "anchor": "Results, paragraph introducing Table 1 and Fig. 2a",
+    "panel_text_relation": "text_only"
    }
   ]
  }
