@@ -11,7 +11,7 @@
 > A photograph, not an invariant. `files/fulltext/` is gitignored and grows between sessions, so these numbers describe the corpus on the census date and nothing re-checks them afterwards — compare the listing digest below against your own copy before trusting a row. This page blocks nothing and has no threshold: it exists so that rule 5d's *"record the absence"* is a fact in the state instead of a rediscovery made three papers into a reading.
 
 **Census date:** 2026-10-04  
-**Corpus:** `fulltext` — 463 entries, 227 papers, listing digest `ef9a7a4ab52ef01e`  
+**Corpus:** `fulltext` — 469 entries, 227 papers, listing digest `ef9a7a4ab52ef01e`  
 **Sentinel:** `deepdive_manifest._refuse_suspect_surface`, PDF text via PyMuPDF 1.28.2
 
 ### Totals
