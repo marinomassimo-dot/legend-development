@@ -1,123 +1,644 @@
 {
- "schema_version": 2,
- "pmid": "41257285",
- "doi": "10.1016/j.omtm.2025.101617",
- "receipt": "FTR-20261003-41257285-01",
- "landing": [
-  "disease-models/wwox/research/intake_wave_20261003w5_C.md"
- ],
- "skills_considered": [
-  {
-   "skill": "find-fulltext",
-   "used": true,
-   "reason": "PMC JATS acquired directly by E-utilities efetch; the cascade was not needed because the record is open access with a body."
+  "schema_version": 2,
+  "pmid": "41257285",
+  "doi": "10.1016/j.omtm.2025.101617",
+  "receipt": "FTR-20261003-41257285-01",
+  "landing": [
+    "disease-models/wwox/research/intake_wave_20261003w5_C.md"
+  ],
+  "skills_considered": [
+    {
+      "skill": "find-fulltext",
+      "used": true,
+      "reason": "PMC JATS acquired directly by E-utilities efetch; the cascade was not needed because the record is open access with a body."
+    },
+    {
+      "skill": "legend-deepdive",
+      "used": false,
+      "reason": "No deep dive was run. This is an intake first reading of a paper with no WWOX content; it produces a dossier and locators, not canonical claims."
+    },
+    {
+      "skill": "legend-locator-audit",
+      "used": false,
+      "reason": "Triples are handed to the audit through the commit candidates' LOCATOR TRIPLES FOR BLIND AUDIT sections, not run here: producer must not be verifier."
+    }
+  ],
+  "group_assessment": {
+    "performed": true,
+    "total_publications": 57,
+    "publications_on_gene": 0,
+    "counts_measured": "PubMed esearch 2026-10-04: 'Hudry E[au]' 57; 'Hudry E[au] AND WWOX' 0; 'Hudry E[au] AND AAV9' 15. A surname-initial query for the corresponding author: an upper bound on one person's output and NOT a group identity.",
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": false,
+    "is_primary_group_for_gene": false,
+    "weighting": "An industry toxicology group re-analysing RNA-seq from two non-GLP four-week cynomolgus intrathecal AAV9 studies; the in-life, clinical-chemistry, NfL and histopathology data are cited to the group's earlier papers, not shown. It can bear on a transcriptional-response question and on nothing about WWOX.",
+    "note": "Research-group knowledge base is excluded from the public edition; this rests on measured PubMed counts only."
   },
-  {
-   "skill": "legend-deepdive",
-   "used": false,
-   "reason": "No deep dive was run. This is an intake first reading of a paper with no WWOX content; it produces a dossier and locators, not canonical claims."
+  "field_density": {
+    "wwox_directed": false,
+    "wwox_hits_in_source": 0,
+    "queries": [
+      {
+        "query": "count of the string WWOX (case-insensitive) over the whole JATS text of the declared artifact",
+        "route": "python3 re over files/fulltext/PMID41257285_Aihara2025_PMC.xml, 2026-10-04",
+        "count": 0
+      },
+      {
+        "query": "Hudry E[au] AND WWOX",
+        "route": "PubMed esearch 2026-10-04",
+        "count": 0
+      }
+    ],
+    "measured_by": "count of the string WWOX over the JATS text, 2026-10-04",
+    "note": "Zero: an earned null for the gene. Read only for the transferable question (what is measured here versus cited for DRG and liver toxicity after intrathecal AAV9 in macaque); transfer limit stated in the dossier."
   },
-  {
-   "skill": "legend-locator-audit",
-   "used": false,
-   "reason": "Triples are handed to the audit through the commit candidates' LOCATOR TRIPLES FOR BLIND AUDIT sections, not run here: producer must not be verifier."
+  "multihop": {
+    "performed": false,
+    "references_enumerated": 36,
+    "pmid_bearing_references": 35,
+    "gene_direct_refs_in_source": [],
+    "enumeration_method": "All <ref> elements counted (36) and pub-id[pub-id-type=pmid] values counted (35) from the declared JATS artifact.",
+    "resolved": [],
+    "queued": [],
+    "gap_declared": "Off-WWOX source: the gene appears zero times, so no reference is gene-direct and the gene-direct hop set is empty by measurement. Reference 10 (the group's liver-injury paper, PMID 37515322) already carries its own receipted readings; reference 11 (the NfL and DRG-injury paper, PMID 36700120) is the primary behind the NfL sentence and is not read in this wave; the other references are not individually queued."
+  },
+  "corpus_crossquery": {
+    "performed": true,
+    "query": "Does this corpus already hold an artifact and a receipt for this PMID, and for its reference 10?",
+    "hits": 2,
+    "finding": "paper_packet.py packet --pmid 41257285 at commit b07016a0 (wave 13): manifest, article text and one earlier receipt (partial_fulltext_read) present; supplements were the owed surface and are acquired in this wave; reference 10 (PMID 37515322) is held with receipts."
+  },
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-10-04",
+    "route": "NCBI ESummary db=pubmed for 41257285",
+    "result": "PubMed publication type Journal Article; no retraction, expression of concern or erratum listed.",
+    "hold": false,
+    "dependencies": {
+      "flagged": [],
+      "noted": [],
+      "paper_verdict": "SCREENED_CLEAN",
+      "reference_source": "cache",
+      "references_declared": 35,
+      "references_screened": 32,
+      "references_with_doi": 32,
+      "schema": "retraction_check.dependencies/1",
+      "screened": true,
+      "snapshot": {
+        "date": "2026-09-10",
+        "days_since_fetch": 24,
+        "rows": 72476,
+        "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+      },
+      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+      "unscreenable": {
+        "UNSCREENABLE_NO_DOI": 3
+      }
+    }
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID41257285_Aihara2025_PMC.xml",
+      "sha256": "58bd405d9110043e3ef98f9d1ca462aa1b7e7e7db4b1f08dbc63c80a705fd8ec",
+      "kind": "article_text",
+      "note": "PMC JATS XML re-acquired by E-utilities efetch on 2026-10-03 by this reader for the wave-5 intake first reading; body present.",
+      "acquisition_recipe": {
+        "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=12621450&retmode=xml",
+        "http_method": "GET",
+        "tier": "ncbi_efetch_pmc_xml",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-03",
+        "derived": false,
+        "result_sha256": "58bd405d9110043e3ef98f9d1ca462aa1b7e7e7db4b1f08dbc63c80a705fd8ec"
+      }
+    },
+    {
+      "path": "files/supplement/PMID41257285/gr1.jpg",
+      "sha256": "c3f4c56fbf2c858c5a6a7ab1f60ec7efee4ffb9a25a43b599a53033b567d2811",
+      "kind": "figure",
+      "note": "Figure 1 (density plots of upregulated genes; area-under-curve bars); member of the Europe PMC supplementaryFiles archive extracted unchanged; inspected as rendered pixels in wave 13.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12621450/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "c3f4c56fbf2c858c5a6a7ab1f60ec7efee4ffb9a25a43b599a53033b567d2811",
+        "http_status": 200,
+        "bytes": 192548
+      }
+    },
+    {
+      "path": "files/supplement/PMID41257285/gr2.jpg",
+      "sha256": "08c51ad1d6d34d98cc7b872681e3b0e207f5348b0f2d5a21ebf3d82cd7accf5d",
+      "kind": "figure",
+      "note": "Figure 2 (DRG volcano plots, studies A and B); member of the Europe PMC supplementaryFiles archive extracted unchanged; inspected as rendered pixels in wave 13.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12621450/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "08c51ad1d6d34d98cc7b872681e3b0e207f5348b0f2d5a21ebf3d82cd7accf5d",
+        "http_status": 200,
+        "bytes": 236961
+      }
+    },
+    {
+      "path": "files/supplement/PMID41257285/gr3.jpg",
+      "sha256": "0f14cd43702ddee6f924fa606d4c6bb86cd420d91933e0155a2a33a79dfbf905",
+      "kind": "figure",
+      "note": "Figure 3 (liver volcano plots); member of the Europe PMC supplementaryFiles archive extracted unchanged; inspected as rendered pixels in wave 13.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12621450/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "0f14cd43702ddee6f924fa606d4c6bb86cd420d91933e0155a2a33a79dfbf905",
+        "http_status": 200,
+        "bytes": 306120
+      }
+    },
+    {
+      "path": "files/supplement/PMID41257285/gr4.jpg",
+      "sha256": "060ded0be66e9ab3fa16b69285391b6333c93bc0d009147fcea5d35cc23c8b52",
+      "kind": "figure",
+      "note": "Figure 4 (heart volcano plots); member of the Europe PMC supplementaryFiles archive extracted unchanged; inspected as rendered pixels in wave 13.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12621450/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "060ded0be66e9ab3fa16b69285391b6333c93bc0d009147fcea5d35cc23c8b52",
+        "http_status": 200,
+        "bytes": 296822
+      }
+    },
+    {
+      "path": "files/supplement/PMID41257285/gr5.jpg",
+      "sha256": "44f38d1bb2a9d874e3b06e88119ce7e192a6cd75271adcee34c010d69ed75acf",
+      "kind": "figure",
+      "note": "Figure 5 (DRG pathway heatmaps); member of the Europe PMC supplementaryFiles archive extracted unchanged; inspected as rendered pixels in wave 13.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12621450/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "44f38d1bb2a9d874e3b06e88119ce7e192a6cd75271adcee34c010d69ed75acf",
+        "http_status": 200,
+        "bytes": 497457
+      }
+    },
+    {
+      "path": "files/supplement/PMID41257285/gr6.jpg",
+      "sha256": "655a6e3307a04c4b1d80d45b858431ce0f3088372b20d915f946ab13e2c72f26",
+      "kind": "figure",
+      "note": "Figure 6 (liver pathway heatmaps); member of the Europe PMC supplementaryFiles archive extracted unchanged; inspected as rendered pixels in wave 13.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12621450/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "655a6e3307a04c4b1d80d45b858431ce0f3088372b20d915f946ab13e2c72f26",
+        "http_status": 200,
+        "bytes": 232057
+      }
+    },
+    {
+      "path": "files/supplement/PMID41257285/gr7.jpg",
+      "sha256": "7f8f778575b7a83ce36a7db5da9e1ecb95282a19b2da3d2d1bcd81f19021bfa2",
+      "kind": "figure",
+      "note": "Figure 7 (top-25 upregulated gene heatmaps by tissue); member of the Europe PMC supplementaryFiles archive extracted unchanged; inspected as rendered pixels in wave 13.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12621450/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "7f8f778575b7a83ce36a7db5da9e1ecb95282a19b2da3d2d1bcd81f19021bfa2",
+        "http_status": 200,
+        "bytes": 513374
+      }
+    },
+    {
+      "path": "files/supplement/PMID41257285/gr8.jpg",
+      "sha256": "bbf83465ece7ed4fce631268b5f00c7fbffd498e6604fe9f014d806b8b06c708",
+      "kind": "figure",
+      "note": "Figure 8 (shared-gene Venn diagrams); member of the Europe PMC supplementaryFiles archive extracted unchanged; inspected as rendered pixels in wave 13.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12621450/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "bbf83465ece7ed4fce631268b5f00c7fbffd498e6604fe9f014d806b8b06c708",
+        "http_status": 200,
+        "bytes": 319840
+      }
+    },
+    {
+      "path": "files/supplement/PMID41257285/fx1.jpg",
+      "sha256": "f8279773819fa27df70357c66a6c27880adceb46f92d99d795332e4f7ccbd5da",
+      "kind": "figure",
+      "note": "Graphical abstract; member of the Europe PMC supplementaryFiles archive extracted unchanged; inspected as rendered pixels in wave 13.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12621450/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "f8279773819fa27df70357c66a6c27880adceb46f92d99d795332e4f7ccbd5da",
+        "http_status": 200,
+        "bytes": 263348
+      }
+    },
+    {
+      "path": "files/supplement/PMID41257285/mmc1.pdf",
+      "sha256": "89eacc1deb1e9ef453effe717578661e1f056be6d492fb834e2948189f67cf39",
+      "kind": "supplement_binary",
+      "note": "Document S1: Figures S1-S6 (8 pages); pages rendered at 70 dpi; S1 inspected, S2, S3, S4 inspected, S5 and S6 captions only. Member of the Europe PMC supplementaryFiles archive extracted unchanged.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12621450/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "89eacc1deb1e9ef453effe717578661e1f056be6d492fb834e2948189f67cf39",
+        "http_status": 200,
+        "bytes": 2248719
+      }
+    },
+    {
+      "path": "files/supplement/PMID41257285/mmc2.xlsx",
+      "sha256": "c5d0e1a2dbeae2e1bf7db24e10fadd4946b0a46c0b1822d386ed642e77f6617c",
+      "kind": "table",
+      "note": "Table S1 Study design workbook, 12 data rows, read cell-wise from the sheet XML. Member of the Europe PMC supplementaryFiles archive extracted unchanged.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12621450/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "c5d0e1a2dbeae2e1bf7db24e10fadd4946b0a46c0b1822d386ed642e77f6617c",
+        "http_status": 200,
+        "bytes": 12352
+      }
+    },
+    {
+      "path": "files/supplement/PMID41257285/mmc8.xlsx",
+      "sha256": "5360a75dc1cfc14487a3a44c1f017a50d7db4ba33f6b64b5c6fe6228df361ba6",
+      "kind": "table",
+      "note": "Table S7 DESeq2 results in DRG (13,583 gene rows x logFC and raw P for five contrasts); header read, five gene rows looked up cell-wise (NEFL, ATF3, CXCL10, CDKN1A, STMN2); not read row by row. Member of the Europe PMC supplementaryFiles archive extracted unchanged.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12621450/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "5360a75dc1cfc14487a3a44c1f017a50d7db4ba33f6b64b5c6fe6228df361ba6",
+        "http_status": 200,
+        "bytes": 2268159
+      }
+    },
+    {
+      "path": "files/supplement/PMID41257285/mmc14.pdf",
+      "sha256": "556a094fcdc93099a8b76c03bf528d3b95a7ccd4179adaf553b074ec2e5bc179",
+      "kind": "supplement_binary",
+      "note": "Document S2: article plus supplemental information (16 MB PDF); text layer searched for the negative-term set only. Member of the Europe PMC supplementaryFiles archive extracted unchanged.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12621450/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "556a094fcdc93099a8b76c03bf528d3b95a7ccd4179adaf553b074ec2e5bc179",
+        "http_status": 200,
+        "bytes": 16479155
+      }
+    },
+    {
+      "path": "files/supplement/PMID41257285/mmc3.xlsx",
+      "sha256": "4a999f06f8d269b7cebc9803f4a019ad20cc2e529bb5b4ab7593d285e7003dff",
+      "kind": "table",
+      "note": "Table S2 KEGG pathway results (workbook); string table searched for the negative-term set only, not read row by row. Member of the Europe PMC supplementaryFiles archive extracted unchanged.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12621450/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "4a999f06f8d269b7cebc9803f4a019ad20cc2e529bb5b4ab7593d285e7003dff",
+        "http_status": 200,
+        "bytes": 51437
+      }
+    },
+    {
+      "path": "files/supplement/PMID41257285/mmc4.xlsx",
+      "sha256": "2dddb2462b9f5efff22bf47ea2168d4c69636f3fcae00d4c2ed6efcb4c3b4467",
+      "kind": "table",
+      "note": "Table S3 KEGG pathway results (workbook); string table searched for the negative-term set only, not read row by row. Member of the Europe PMC supplementaryFiles archive extracted unchanged.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12621450/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "2dddb2462b9f5efff22bf47ea2168d4c69636f3fcae00d4c2ed6efcb4c3b4467",
+        "http_status": 200,
+        "bytes": 47733
+      }
+    },
+    {
+      "path": "files/supplement/PMID41257285/mmc5.xlsx",
+      "sha256": "466ac17b03db2736eb27d3c42497d4546a1201f9934f6e60e30d5e3137ace513",
+      "kind": "table",
+      "note": "Table S4 KEGG pathway results (workbook); string table searched for the negative-term set only, not read row by row. Member of the Europe PMC supplementaryFiles archive extracted unchanged.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12621450/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "466ac17b03db2736eb27d3c42497d4546a1201f9934f6e60e30d5e3137ace513",
+        "http_status": 200,
+        "bytes": 43704
+      }
+    },
+    {
+      "path": "files/supplement/PMID41257285/mmc6.xlsx",
+      "sha256": "b97072de650da61cc84cdb82dda1ea8344d4a108797a22e5c84398c5d02bdec0",
+      "kind": "table",
+      "note": "Table S5 KEGG pathway results (workbook); string table searched for the negative-term set only, not read row by row. Member of the Europe PMC supplementaryFiles archive extracted unchanged.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12621450/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "b97072de650da61cc84cdb82dda1ea8344d4a108797a22e5c84398c5d02bdec0",
+        "http_status": 200,
+        "bytes": 34708
+      }
+    },
+    {
+      "path": "files/supplement/PMID41257285/mmc7.xlsx",
+      "sha256": "92ce482290e050695bb8a6f840aa5682b2789b2a467039edaac4c36510f85c11",
+      "kind": "table",
+      "note": "Table S6 KEGG pathway results (workbook); string table searched for the negative-term set only, not read row by row. Member of the Europe PMC supplementaryFiles archive extracted unchanged.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12621450/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "92ce482290e050695bb8a6f840aa5682b2789b2a467039edaac4c36510f85c11",
+        "http_status": 200,
+        "bytes": 34336
+      }
+    },
+    {
+      "path": "files/supplement/PMID41257285/mmc9.xlsx",
+      "sha256": "105ed0647c5407e10f124754eadbdb990fb5a842e27f9eb69bba444667f73de7",
+      "kind": "table",
+      "note": "Table S8 DESeq2 results (workbook); string table searched for the negative-term set only, not read row by row. Member of the Europe PMC supplementaryFiles archive extracted unchanged.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12621450/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "105ed0647c5407e10f124754eadbdb990fb5a842e27f9eb69bba444667f73de7",
+        "http_status": 200,
+        "bytes": 2065785
+      }
+    },
+    {
+      "path": "files/supplement/PMID41257285/mmc10.xlsx",
+      "sha256": "1583eeff8a7b0db95a05523d0d8917ed08f44a538aece3b3c733986364363e4b",
+      "kind": "table",
+      "note": "Table S9 DESeq2 results (workbook); string table searched for the negative-term set only, not read row by row. Member of the Europe PMC supplementaryFiles archive extracted unchanged.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12621450/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "1583eeff8a7b0db95a05523d0d8917ed08f44a538aece3b3c733986364363e4b",
+        "http_status": 200,
+        "bytes": 2035378
+      }
+    },
+    {
+      "path": "files/supplement/PMID41257285/mmc11.xlsx",
+      "sha256": "5fbb42c3b44c28f0b6d8aa72230134b68582b78e92addcd403628d4af42cf843",
+      "kind": "table",
+      "note": "Table S10 DESeq2 results (workbook); string table searched for the negative-term set only, not read row by row. Member of the Europe PMC supplementaryFiles archive extracted unchanged.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12621450/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "5fbb42c3b44c28f0b6d8aa72230134b68582b78e92addcd403628d4af42cf843",
+        "http_status": 200,
+        "bytes": 1957680
+      }
+    },
+    {
+      "path": "files/supplement/PMID41257285/mmc12.xlsx",
+      "sha256": "f36edf30d5027ec6a0ce0821738430f7d4bb0ac924d74ee8b5c148c7628a54a8",
+      "kind": "table",
+      "note": "Table S11 DESeq2 results (workbook); string table searched for the negative-term set only, not read row by row. Member of the Europe PMC supplementaryFiles archive extracted unchanged.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12621450/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "f36edf30d5027ec6a0ce0821738430f7d4bb0ac924d74ee8b5c148c7628a54a8",
+        "http_status": 200,
+        "bytes": 2190724
+      }
+    },
+    {
+      "path": "files/supplement/PMID41257285/mmc13.xlsx",
+      "sha256": "ef3afb36132e28b1a4e4c8101e448c9b462c2af4f9f938ba906bf056a6c83767",
+      "kind": "table",
+      "note": "Table S12 shared-gene lists (workbook); string table searched for the negative-term set only, not read row by row. Member of the Europe PMC supplementaryFiles archive extracted unchanged.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12621450/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "europepmc_supplementaryFiles",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "ef3afb36132e28b1a4e4c8101e448c9b462c2af4f9f938ba906bf056a6c83767",
+        "http_status": 200,
+        "bytes": 22777
+      }
+    }
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "JATS from E-utilities efetch db=pmc. Body separated from front matter by the reader's own extraction; every locator is matched against the normalised body text of the declared artefact.",
+    "abstract_anchoring_waived": "No locator draws on the abstract; every entry is matched against the body.",
+    "note": "Coverage: abstract, introduction, all Results subsections, Discussion and all Materials and methods subsections read from the JATS running text. Figures 1-8 read as captions only and no number in the dossier is drawn from a panel. Supplementary Figures S1-S6 and Tables S1-S12 were NOT fetched; Figure S1A/B/C carries the biodistribution and transgene expression data on which the dissociation locator rests, so that locator is receipted on the authors' running-text description of their own figure. Reference 10, the primary behind every in-life and histopathology statement quoted here, is an open reading debt.",
+    "entries": [
+      {
+        "proposition": "CAPSID EXPOSURE ALONE IS NOT SUFFICIENT FOR THE ORGAN TOXICITY OF CONCERN: AT A COMPARABLE CAPSID DOSE, NEITHER EMPTY CAPSID NOR A GENOME WITHOUT A WORKING PROMOTER PRODUCED LIVER OR DORSAL ROOT GANGLION TOXICITY. THIS IS THE CLEANEST SEPARATION OF DOSE-DRIVEN FROM EXPRESSION-DRIVEN INJURY IN THE WAVE.",
+        "snippet": "Hepatic and DRG toxicities were only detected after administration of full AAV9 viral particles, but not empty capsids or Promoterless test articles.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41257285_Aihara2025_PMC.xml",
+        "anchor": "Results, 'In-life summary and organ toxicities'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "A BLOOD-MEASURABLE MARKER TRACKED THE DORSAL ROOT GANGLION LESION, BUT IT IS REPORTED HERE AS A RESTATEMENT OF THE AUTHORS' PRIOR STUDY AND IS NOT MEASURED IN THIS PAPER.",
+        "snippet": "Single-cell necrosis and neuroinflammatory changes were also observed in DRGs, which correlated with elevated levels of NfL that peaked on day 28.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41257285_Aihara2025_PMC.xml",
+        "anchor": "Results, 'In-life summary and organ toxicities'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THE MAGNITUDE OF TRANSGENE EXPRESSION DOES NOT PREDICT WHICH TISSUE IS INJURED, WHICH IS IN TENSION WITH ATTRIBUTING DORSAL ROOT GANGLION TOXICITY TO SUPRAPHYSIOLOGICAL EXPRESSION LEVEL.",
+        "snippet": "This discrepancy between vector genome biodistribution and transgene transcript level suggests that while both the capsid and an active payload are necessary to cause tissue pathology (liver and DRGs), the amount of transgene product itself is not directly predictive of the observed toxicities (even when expressing a foreign protein such as GFP).",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41257285_Aihara2025_PMC.xml",
+        "anchor": "Results, 'In-life summary and organ toxicities', closing sentence",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THE MODIFIABLE IMMUNE AXIS IDENTIFIED HERE SIGNALS THROUGH JAK/STAT RATHER THAN NF-KAPPA-B, WHICH THE AUTHORS OFFER AS A REASON GLUCOCORTICOIDS MAY BE INSUFFICIENT PROPHYLAXIS.",
+        "snippet": "This could provide some explanation as to why glucocorticoids are not always as potent as expected in preventing AAV-driven toxicity.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41257285_Aihara2025_PMC.xml",
+        "anchor": "Discussion, interferon pathway paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THE ANIMALS RECEIVED NO IMMUNOSUPPRESSION, SO THE CLAIM THAT THE IMMUNE COMPONENT IS MODIFIABLE IS INFERENCE AND NOT MEASUREMENT IN THIS STUDY.",
+        "snippet": "However, it is important to note that unlike patients who receive glucocorticoids, which are potent nuclear factor (NF)-κB inhibitors, no immunosuppressive regimen was provided to animals included in studies A or B.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41257285_Aihara2025_PMC.xml",
+        "anchor": "Discussion, immunosuppression paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THE RESPONSE IS STILL PRESENT FOUR WEEKS AFTER A SINGLE DOSE, SO THE RELEVANT SAFETY WINDOW IS NOT CONFINED TO THE PERI-PROCEDURAL PERIOD.",
+        "snippet": "In summary, our work revealed a low-grade but long-lasting immunological response in known organs primarily targeted by AAV9.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41257285_Aihara2025_PMC.xml",
+        "anchor": "Discussion, summary paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THE COHORT IS FEMALE-ONLY AND WAS PRE-SELECTED FOR THE LOWEST ANTI-CAPSID TITRES, WHICH IS THE EXACT COMPLEMENT OF THE SEROPOSITIVE-STRATIFIED STUDY IN THIS WAVE AND FORBIDS POOLING THE TWO.",
+        "snippet": "Animals with the lowest titers were included in the study.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41257285_Aihara2025_PMC.xml",
+        "anchor": "Materials and methods, 'Animals'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Methods give the animal age at dosing as 12 to 50 months, while Table S1 gives 27-33 months (study A) and 12-17 months (study B).",
+        "snippet": "The animals were between 12 and 50 months old at dosing.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41257285_Aihara2025_PMC.xml",
+        "anchor": "Materials and methods, Animals",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The Methods count 28 AAV-dosed animals as dosed intrathecally, whereas Table S1 lists 8 of the 28 (study A low and high ICM groups) as intracisternal.",
+        "snippet": "28 NHPs were dosed IT with AAV9 viral vectors",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41257285_Aihara2025_PMC.xml",
+        "anchor": "Materials and methods, Animals",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The Results sentence on in-life tolerability points to Methods and Table S1 and carries a citation to the authors earlier report; Table S1 holds design only.",
+        "snippet": "was generally tolerated with minimal clinical signs observed",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41257285_Aihara2025_PMC.xml",
+        "anchor": "Results, In-life summary and organ toxicities",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The no-change statement for heart, skeletal muscle and spleen is unreferenced in the sentence that carries it.",
+        "snippet": "No remarkable changes were detected in the heart, skeletal muscle, and spleen",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41257285_Aihara2025_PMC.xml",
+        "anchor": "Results, In-life summary and organ toxicities",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Table S1 (the design table) gives, per group: test article, route, dose, age at injection, study duration, number of animals and sex: study A, 6 groups of 4 females (IT and ICM; 1.0 and 3.0 x 10^13 vg/animal), 27-33 months, 4 weeks; study B, 4 groups of 4 females (vehicle, empty capsid, full, promoterless; 2.73 x 10^13 capsids/animal), 12-17 months, 4 weeks. The 12 in the selection title is an age, the duration is 4 weeks; it has no clinical-sign, clinical-chemistry, NfL or histology column.",
+        "snippet": "[spreadsheet attestation - read cell-wise from the workbook XML] Header: Study | Group | Test article | Route of Administration | Dose | Targeted Concentration | Age at Injection | Study Duration | # of Animals | Sex. Rows: A Control-IT, Control-ICM, Low-IT, High-IT, Low-ICM, High-ICM (27-33 months, 4 Weeks, 4, F); B Control-IT, Empty Viral Particles, Full (scAAV9-CB-GFP), Promotor-less Vector/Inert (12-17 months, 4 Weeks, 4, F).",
+        "surface": "figure",
+        "artifact": "files/supplement/PMID41257285/mmc2.xlsx",
+        "anchor": "Table S1, all rows",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "Table S7 (DRG DESeq2) gives per-gene log fold change and raw P value for five contrasts; NEFL (the neurofilament-light gene) reads -0.473 (P 0.001) in study A high dose and -0.159 (P 0.301) in study B high dose, ATF3 reads +1.048 (P 0.001) in A high dose and +0.086 (P 0.708) in B high dose, and CXCL10 +3.806 and +3.783 (P < 0.001) in both; these are DRG transcript values, not cerebrospinal-fluid or blood NfL protein, and the P column is not adjusted.",
+        "snippet": "[spreadsheet attestation - Table S7 looked up cell-wise by gene symbol] NEFL: logFC A-high -0.473, P 0.001; A-low -0.261, P 0.057; B-EVP -0.127, P 0.384; B-promoterless 0.163, P 0.283; B-high -0.159, P 0.301. ATF3: A-high 1.048, P 0.001; A-low 0.567, P 0.001; B-EVP -0.060; B-promoterless -0.145; B-high 0.086, P 0.708. CXCL10: A-high 3.806; A-low 3.839; B-EVP 0.834, P 0.091; B-promoterless 0.145; B-high 3.783 (P values < 0.001 for the three AAV arms with CXCL10). Column header names the contrast as Vehicle_vs_arm; sign convention taken from CXCL10 being the most upregulated gene in the text.",
+        "surface": "figure",
+        "artifact": "files/supplement/PMID41257285/mmc8.xlsx",
+        "anchor": "Table S7, rows NEFL, ATF3, CXCL10, CDKN1A, STMN2",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "Figure 2 gives differentially expressed gene counts in DRG: study A high 374 up and 29 down, low 341 up and 16 down; study B high 383 up and 50 down, empty particles 25 up and 22 down, promoterless 78 up and 85 down; the y-axis is raw -log10 P.",
+        "snippet": "[panel attestation - Fig. 2 raster inspected] Panels A-E volcano plots with Up and Down counts at |log2FC| > 1; horizontal red line at P 0.05 on an unadjusted P axis.",
+        "surface": "figure",
+        "artifact": "files/supplement/PMID41257285/gr2.jpg",
+        "anchor": "Figure 2 panels A-E",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "Supplementary Figure S1 plots vector-genome biodistribution by ddPCR (liver and lumbar DRG highest, about 10 to 100 and 1 to 10 vg/dg) and GFP transcript counts per million (highest in skeletal muscle and heart, lower in DRG and liver); it carries no histology, clinical-chemistry or NfL panel.",
+        "snippet": "[panel attestation - Fig. S1 page rendered at 70 dpi] Panel A tissues liver, heart, skeletal muscle, kidney, spleen, brain (cortex), DRG lumbar vs vg/dg; panels B and C CPM by tissue and arm for studies A and B.",
+        "surface": "figure",
+        "artifact": "files/supplement/PMID41257285/mmc1.pdf",
+        "anchor": "Figure S1 (Document S1, page 2)",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "Figures 1, 3-8 and S2-S4 are volcano plots, density plots, pathway and top-25 gene heatmaps and Venn diagrams of RNA-seq results; none is a histology, clinical-chemistry, in-life or NfL panel; Figure S4 labels its columns 139 High Dose, 139 Low Dose, 140 Low Dose, Empty Viral Particles, Promoterless, unlike the study A and study B labels used elsewhere.",
+        "snippet": "[panel attestation - Figs. 1, 3, 4, 5, 6, 7, 8 and S2, S3, S4 inspected; S5 and S6 captions only]",
+        "surface": "figure",
+        "artifact": "files/supplement/PMID41257285/gr7.jpg",
+        "anchor": "Figures 1, 3-8, S2-S4 (grouped; Fig. 7 raster named as the anchor artefact)",
+        "panel_text_relation": "panel_only"
+      }
+    ]
   }
- ],
- "group_assessment": {
-  "waived": "Waived by name. This is a wave-5 intake first reading under SOURCE_FIRST: the paper carries no WWOX content (zero occurrences) and is read only as transferable delivery-safety evidence. No canonical claim is promoted by this pass, so the deep-dive steps that exist to rate a claim are not run; the pass's scope is recorded in the accompanying receipt and in the dossier's 'what I did not read' section."
- },
- "field_density": {
-  "waived": "Waived by name. This is a wave-5 intake first reading under SOURCE_FIRST: the paper carries no WWOX content (zero occurrences) and is read only as transferable delivery-safety evidence. No canonical claim is promoted by this pass, so the deep-dive steps that exist to rate a claim are not run; the pass's scope is recorded in the accompanying receipt and in the dossier's 'what I did not read' section."
- },
- "multihop": {
-  "waived": "Waived by name. This is a wave-5 intake first reading under SOURCE_FIRST: the paper carries no WWOX content (zero occurrences) and is read only as transferable delivery-safety evidence. No canonical claim is promoted by this pass, so the deep-dive steps that exist to rate a claim are not run; the pass's scope is recorded in the accompanying receipt and in the dossier's 'what I did not read' section."
- },
- "corpus_crossquery": {
-  "waived": "Waived by name. This is a wave-5 intake first reading under SOURCE_FIRST: the paper carries no WWOX content (zero occurrences) and is read only as transferable delivery-safety evidence. No canonical claim is promoted by this pass, so the deep-dive steps that exist to rate a claim are not run; the pass's scope is recorded in the accompanying receipt and in the dossier's 'what I did not read' section."
- },
- "retraction_check": {
-  "waived": "Waived by name. PubMed article-type and comments-corrections screening was not run as a network call in this pass; the acquired PMC record carries no retraction, correction or expression-of-concern notice in its front matter. All six records are 2025-2026 publications. This is declared as a gap, not as a clean result."
- },
- "source_artifacts": [
-  {
-   "path": "files/fulltext/PMID41257285_Aihara2025_PMC.xml",
-   "sha256": "58bd405d9110043e3ef98f9d1ca462aa1b7e7e7db4b1f08dbc63c80a705fd8ec",
-   "kind": "article_text",
-   "note": "PMC JATS XML re-acquired by E-utilities efetch on 2026-10-03 by this reader for the wave-5 intake first reading; body present.",
-   "acquisition_recipe": {
-    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=12621450&retmode=xml",
-    "http_method": "GET",
-    "tier": "ncbi_efetch_pmc_xml",
-    "user_agent_policy": "none",
-    "acquired_on": "2026-10-03",
-    "derived": false,
-    "result_sha256": "58bd405d9110043e3ef98f9d1ca462aa1b7e7e7db4b1f08dbc63c80a705fd8ec"
-   }
-  }
- ],
- "verbatim_locators": {
-  "waived": false,
-  "source_fulltext_indexed": true,
-  "source_fulltext_indexed_evidence": "JATS from E-utilities efetch db=pmc. Body separated from front matter by the reader's own extraction; every locator is matched against the normalised body text of the declared artefact.",
-  "abstract_anchoring_waived": "No locator draws on the abstract; every entry is matched against the body.",
-  "note": "Coverage: abstract, introduction, all Results subsections, Discussion and all Materials and methods subsections read from the JATS running text. Figures 1-8 read as captions only and no number in the dossier is drawn from a panel. Supplementary Figures S1-S6 and Tables S1-S12 were NOT fetched; Figure S1A/B/C carries the biodistribution and transgene expression data on which the dissociation locator rests, so that locator is receipted on the authors' running-text description of their own figure. Reference 10, the primary behind every in-life and histopathology statement quoted here, is an open reading debt.",
-  "entries": [
-   {
-    "proposition": "CAPSID EXPOSURE ALONE IS NOT SUFFICIENT FOR THE ORGAN TOXICITY OF CONCERN: AT A COMPARABLE CAPSID DOSE, NEITHER EMPTY CAPSID NOR A GENOME WITHOUT A WORKING PROMOTER PRODUCED LIVER OR DORSAL ROOT GANGLION TOXICITY. THIS IS THE CLEANEST SEPARATION OF DOSE-DRIVEN FROM EXPRESSION-DRIVEN INJURY IN THE WAVE.",
-    "snippet": "Hepatic and DRG toxicities were only detected after administration of full AAV9 viral particles, but not empty capsids or Promoterless test articles.",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID41257285_Aihara2025_PMC.xml",
-    "anchor": "Results, 'In-life summary and organ toxicities'",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "A BLOOD-MEASURABLE MARKER TRACKED THE DORSAL ROOT GANGLION LESION, BUT IT IS REPORTED HERE AS A RESTATEMENT OF THE AUTHORS' PRIOR STUDY AND IS NOT MEASURED IN THIS PAPER.",
-    "snippet": "Single-cell necrosis and neuroinflammatory changes were also observed in DRGs, which correlated with elevated levels of NfL that peaked on day 28.",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID41257285_Aihara2025_PMC.xml",
-    "anchor": "Results, 'In-life summary and organ toxicities'",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "THE MAGNITUDE OF TRANSGENE EXPRESSION DOES NOT PREDICT WHICH TISSUE IS INJURED, WHICH IS IN TENSION WITH ATTRIBUTING DORSAL ROOT GANGLION TOXICITY TO SUPRAPHYSIOLOGICAL EXPRESSION LEVEL.",
-    "snippet": "This discrepancy between vector genome biodistribution and transgene transcript level suggests that while both the capsid and an active payload are necessary to cause tissue pathology (liver and DRGs), the amount of transgene product itself is not directly predictive of the observed toxicities (even when expressing a foreign protein such as GFP).",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID41257285_Aihara2025_PMC.xml",
-    "anchor": "Results, 'In-life summary and organ toxicities', closing sentence",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "THE MODIFIABLE IMMUNE AXIS IDENTIFIED HERE SIGNALS THROUGH JAK/STAT RATHER THAN NF-KAPPA-B, WHICH THE AUTHORS OFFER AS A REASON GLUCOCORTICOIDS MAY BE INSUFFICIENT PROPHYLAXIS.",
-    "snippet": "This could provide some explanation as to why glucocorticoids are not always as potent as expected in preventing AAV-driven toxicity.",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID41257285_Aihara2025_PMC.xml",
-    "anchor": "Discussion, interferon pathway paragraph",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "THE ANIMALS RECEIVED NO IMMUNOSUPPRESSION, SO THE CLAIM THAT THE IMMUNE COMPONENT IS MODIFIABLE IS INFERENCE AND NOT MEASUREMENT IN THIS STUDY.",
-    "snippet": "However, it is important to note that unlike patients who receive glucocorticoids, which are potent nuclear factor (NF)-\u03baB inhibitors, no immunosuppressive regimen was provided to animals included in studies A or B.",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID41257285_Aihara2025_PMC.xml",
-    "anchor": "Discussion, immunosuppression paragraph",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "THE RESPONSE IS STILL PRESENT FOUR WEEKS AFTER A SINGLE DOSE, SO THE RELEVANT SAFETY WINDOW IS NOT CONFINED TO THE PERI-PROCEDURAL PERIOD.",
-    "snippet": "In summary, our work revealed a low-grade but long-lasting immunological response in known organs primarily targeted by AAV9.",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID41257285_Aihara2025_PMC.xml",
-    "anchor": "Discussion, summary paragraph",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "THE COHORT IS FEMALE-ONLY AND WAS PRE-SELECTED FOR THE LOWEST ANTI-CAPSID TITRES, WHICH IS THE EXACT COMPLEMENT OF THE SEROPOSITIVE-STRATIFIED STUDY IN THIS WAVE AND FORBIDS POOLING THE TWO.",
-    "snippet": "Animals with the lowest titers were included in the study.",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID41257285_Aihara2025_PMC.xml",
-    "anchor": "Materials and methods, 'Animals'",
-    "panel_text_relation": "text_only"
-   }
-  ]
- }
 }
