@@ -1,0 +1,271 @@
+{
+ "schema_version": 2,
+ "pmid": "42198847",
+ "doi": "10.1016/j.ymthe.2026.05.016",
+ "receipt": "FTR-20261004-42198847-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID42198847.md",
+  "disease-models/wwox/research/intake_wave_20261004w8_C.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is a research surface another batch owns; no lead is written there from this reading."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "The source is a toxicology or case record in a non-WWOX programme; it supplies no lever for the reference genotype class and forging from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No small molecule is screened; the paper concerns vector-related toxicity and the question here is evidence status, not a molecule."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes are proposed as commit candidates for a later BATCH_COMMIT."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Triples are published in the candidates for an auditor to run."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "mixed",
+  "is_primary_group_for_disease": false,
+  "weighting": "Not assessed in this reading: a non-WWOX paper read for a transferable question about AAV toxicity; no author-group credibility judgement is carried."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND AAV",
+    "count": 2,
+    "source": "PubMed ESearch 2026-10-04"
+   },
+   {
+    "query": "WWOX AND (dorsal root ganglion OR ganglionopathy)",
+    "count": 2,
+    "source": "PubMed ESearch 2026-10-04"
+   }
+  ],
+  "note": "Not assessed; off-WWOX source. WWOX occurs zero times in the JATS file (case-insensitive count 0)."
+ },
+ "multihop": {
+  "references_enumerated": 15,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "15 references enumerated in the JATS; none is WWOX-direct (the paper never names WWOX)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42198847 at packet time",
+  "hits": 0,
+  "note": "Packet reported no registry presence at the start of the reading."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-04 by PubMed EFetch: Journal Article and Case Reports; no RetractionIn, ErratumIn, ExpressionOfConcernIn or UpdateIn link.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "UNSCREENABLE_NO_SNAPSHOT",
+   "reference_source": "jats",
+   "references_declared": 15,
+   "references_screened": 0,
+   "references_with_doi": 0,
+   "schema": "retraction_check.dependencies/1",
+   "screened": false,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 24,
+    "rows": 0,
+    "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block (failed closed 2026-10-04: snapshot retractionwatch_20260910.csv absent under files/retraction_watch/; nothing reported clean)",
+   "unscreenable": {
+    "UNSCREENABLE_NO_SNAPSHOT": 15
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42198847_BoespflugTanguy2026_PMC.xml",
+   "sha256": "dc5253b8723b11a06ff9bc29d77e520ea255cb042bd70e4e93f781d149daa8ef",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13464153/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "result_sha256": "dc5253b8723b11a06ff9bc29d77e520ea255cb042bd70e4e93f781d149daa8ef"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID42198847_BoespflugTanguy2026_supplement/mmc1.pdf",
+   "sha256": "2a0e6819f53bd78c269b8737ce225fa47383a362ad4e1236126b6a707e16e76a",
+   "kind": "supplement_binary",
+   "note": "Supplementary file 1 (PDF); opened, not analysed.",
+   "acquisition_recipe": {
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13464153/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "result_sha256": "2a0e6819f53bd78c269b8737ce225fa47383a362ad4e1236126b6a707e16e76a"
+   }
+  },
+  {
+   "path": "files/figures/PMID42198847/gr3.webp",
+   "sha256": "24898f91f2f08db9f3d5615050febee8c14c2db276337e0f958bc10ccdf08986",
+   "kind": "figure",
+   "note": "Figure 3 (postmortem histology, vector copy number by tissue, acid ceramidase immunoblots), inspected at native resolution.",
+   "acquisition_recipe": {
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13464153/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "result_sha256": "24898f91f2f08db9f3d5615050febee8c14c2db276337e0f958bc10ccdf08986"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC search EXT_ID:42198847 AND SRC:MED on 2026-10-04: inEPMC=Y, isOpenAccess=Y, PMC13464153",
+  "entries": [
+   {
+    "proposition": "This is described as the first reported gene-therapy use in this disorder, under compassionate use.",
+    "snippet": "This case represents the first reported use of gene therapy in a patient with SMA-PME",
+    "anchor": "Introduction, para 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42198847_BoespflugTanguy2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Prophylactic immunosuppression was prednisolone plus sirolimus.",
+    "snippet": "Prophylactic immunosuppressive therapy included prednisolone and sirolimus (Figure 1A).",
+    "anchor": "Patient details and clinical findings, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42198847_BoespflugTanguy2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Anti-AAV9 neutralising antibodies were absent at screening, but a low total IgG titre to the capsid was found retrospectively before dosing.",
+    "snippet": "whereas total low IgG antibodies were detected prior to vector injection",
+    "anchor": "Patient details and clinical findings, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42198847_BoespflugTanguy2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Several cytokines were elevated before dosing, read by the authors as a pre-existing inflammatory state.",
+    "snippet": "These findings indicate a pre-existing inflammatory state prior to dosing.",
+    "anchor": "Laboratory and postmortem studies, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42198847_BoespflugTanguy2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Postmortem examination: acute circulatory failure as cause of death, no overt myocarditis or thrombotic microangiopathy.",
+    "snippet": "Postmortem analysis identified acute circulatory failure as the cause of death, with no overt signs of myocarditis",
+    "anchor": "Laboratory and postmortem studies, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42198847_BoespflugTanguy2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Vector copy number in CNS was 16- to 550-fold lower than liver.",
+    "snippet": "showing a 16- to 550-fold decrease compared to the liver",
+    "anchor": "Vector distribution and transgene expression",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42198847_BoespflugTanguy2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 3B: vector copies per diploid genome about 7700 in liver, 2450 in spleen, 850 in lung, 810 in kidney, against 14 in cerebellum, 128 in cortex and 493 in thoracic cord.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 3B bar chart read at native resolution: liver 7704, spleen 2448, lung 847, kidney 806, adrenal 466, left ventricle 374, cortex 128, cerebellum 14, thoracic spinal cord 493, lumbar dorsal root 460 vg per diploid genome.",
+    "anchor": "Figure 3, panel B",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42198847/gr3.webp",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "Acid ceramidase protein in CNS regions stayed below endogenous control levels at day 8 while peripheral tissues were higher.",
+    "snippet": "whereas they remained below endogenous levels in various regions of the CNS 8 days after vector injection",
+    "anchor": "Vector distribution and transgene expression",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42198847_BoespflugTanguy2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors propose an early innate-immune, complement-mediated endothelial injury leading to capillary leak, shock and multi-organ failure.",
+    "snippet": "We propose a mechanism driven by the early innate immune response",
+    "anchor": "Discussion, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42198847_BoespflugTanguy2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state there were no features of thrombotic microangiopathy or atypical haemolytic uraemic syndrome, unlike earlier high-dose AAV9 reports.",
+    "snippet": "no features of TMA or aHUS were observed, suggesting a distinct pathophysiological profile",
+    "anchor": "Discussion, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42198847_BoespflugTanguy2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors list multiple contributing factors and do not isolate one.",
+    "snippet": "Multiple factors likely contributed to this fatal outcome, including pre-existing inflammation, high vector dose, AAV serotype, intravenous delivery",
+    "anchor": "Discussion, para 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42198847_BoespflugTanguy2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors say sirolimus did not appear to mitigate the early immune response, consistent with its mainly adaptive-immunity action.",
+    "snippet": "Importantly, sirolimus did not appear to mitigate early immune response in this patient",
+    "anchor": "Discussion, para 6",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42198847_BoespflugTanguy2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors say the contribution of disease-related inflammation and recent bronchial congestion cannot be disentangled.",
+    "snippet": "Although the respective contributions of SMA-PME-related inflammation and recent bronchial congestion without documented infection remain difficult to disentangle",
+    "anchor": "Discussion, para 6",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42198847_BoespflugTanguy2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Eculizumab was given on day 5 to prevent complement-driven platelet consumption, after the first signs; the authors note delayed initiation after cytokine-storm onset may reduce efficacy.",
+    "snippet": "prompting a dose of eculizumab",
+    "anchor": "Patient details and clinical findings, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42198847_BoespflugTanguy2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}
