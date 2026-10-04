@@ -43,7 +43,7 @@ edition: public
 ## 2. DISEASE-MODEL (WORKING-MODEL) VERSION
 
 ```yaml
-working_model_version: WM_v7.16
+working_model_version: WM_v7.17
 working_model_file: disease-models/wwox/registries/working_model_current.md
 narrative_view: disease-models/wwox/disease_model.md
 notes: "Canonical disease-level working model derived from public literature; disease_model.md is its narrative reader-facing view. The private individual-level record is not part of this edition."
@@ -106,12 +106,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20261004_003
+last_batch_commit_id: BATCH_20261004_004
 last_batch_commit_date: 2026-10-04
 last_batch_commit_type: MANUAL
-commit_candidates_propagated: 17
-target_wm_version: WM_v7.16
-trigger: MANUAL (operator-dispatched integration of intake wave 9, groups A/B/C, together with the four mirror repairs of BATCH_20261004_001; the backlog threshold of 5 was also met. Two reading debts were closed by measurement rather than by acquisition, one of them retiring as not printed; the valproate direction debt is explicitly NOT settled and its fifth primary remains paywalled and unread. The six group-B artefacts were absent from files/fulltext and were restored by exact SHA-256 match from this session's scratchpad at zero spend before any bibliographic identity was measured)
+commit_candidates_propagated: 6
+target_wm_version: WM_v7.17
+trigger: MANUAL (operator-dispatched integration of intake wave 10, groups X and Y, with the residue enzymology candidate adjudicated and consumed; the backlog threshold of 5 was also met. The wave's first duty was a registry debt: PMID 21476439 had been read in full with its receipt on main and carried by no registry record, leaving test_batch_queue.py red on main with READ_NOT_REGISTERED; CORPUS P306 is now promoted to PAPER 244 and that suite closes. No claim was created, none reversed and no consolidated baseline claim narrowed: CLAIM 002, CLAIM 003 and CLAIM 005 gain evidence-boundary text only, including a measured earned null. Five independent blind locator audits ran before the propagation over 37 triples; four mis-labelled propositions and one unverifiable causal clause were repaired at source before landing. The six group-B artefacts were absent from files/fulltext and were restored by exact SHA-256 match from this session's scratchpad at zero spend before any bibliographic identity was measured)
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -125,7 +125,7 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20261004_BATCH_20261004_003
+last_lint_id: LINT_20261004_BATCH_20261004_004
 last_lint_date: 2026-10-04
 last_lint_result: WARN
 ```
