@@ -223,7 +223,7 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The authors cite empty-capsid and promoterless-vector monkey data from another group as support that genome plus transgene expression are needed; it is not tested in this paper.",
+    "proposition": "The authors cite monkey data from another group in which empty capsids caused no liver damage; this is not tested in this paper.",
     "snippet": "no liver damage occurred in animals receiving empty capsids",
     "anchor": "Discussion, para 6",
     "surface": "body",

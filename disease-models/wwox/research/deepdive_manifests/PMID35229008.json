@@ -185,7 +185,7 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The in-vitro check of the Null vector in human neurons found an average of 25 RPE65-mapping reads per sample, called negligible by the authors.",
+    "proposition": "In human neurons in vitro the Null vector gave an average of 25 RPE65-mapping reads per sample.",
     "snippet": "an average of 25 reads mapping to human RPE65 was detected per sample",
     "anchor": "Materials and methods, Test article, para 3",
     "surface": "body",
@@ -209,7 +209,7 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The results section records slightly more increased cellularity in lumbosacral DRG with the Null vector (two of four) than with vehicle (one of four) and minimal-to-mild sciatic degeneration, in different animals.",
+    "proposition": "The results section records increased cellularity in lumbosacral DRG in two of four Null-vector animals against one of four vehicle animals.",
     "snippet": "a higher incidence of increased cellularity (two of four animals) in the DRG (LS only)",
     "anchor": "Results, Histopathology, para 1",
     "surface": "body",
@@ -289,7 +289,7 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The authors say the lesions are sub-clinical and that long-term NHP studies suggest they resolve; longer duration was not tested here.",
+    "proposition": "The authors say it is unclear whether a longer study would have shown more intraepidermal fibre loss.",
     "snippet": "It is unclear whether or not these changes would have been more apparent in a study of a longer duration.",
     "anchor": "Discussion, para 8",
     "surface": "body",
@@ -297,7 +297,7 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The authors say the Null genome lacked a functional promoter, unlike a CAG-promoter no-protein control that did cause cord degeneration after parenchymal injection in an earlier study.",
+    "proposition": "The authors describe the Null genome as lacking a functional promoter and producing neither mRNA nor protein.",
     "snippet": "which lacked a functional promoter and does not produce mRNA or protein",
     "anchor": "Discussion, para 3",
     "surface": "body",

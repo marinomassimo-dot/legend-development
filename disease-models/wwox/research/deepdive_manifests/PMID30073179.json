@@ -221,7 +221,7 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The low dose, tenfold lower, produced DRG lesions comparable to the high dose; the authors report vector genomes at the high dose about tenfold higher than low.",
+    "proposition": "Vector genome levels in the high-dose group were about tenfold higher than in the low-dose group.",
     "snippet": "found that levels in the HD group were approximately 10 times higher than the LD group",
     "anchor": "Results, Vector Biodistribution",
     "surface": "body",
@@ -229,7 +229,7 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Day-14 vector-treated animals had no histological lesion; lesions appeared by day 90.",
+    "proposition": "The authors state no histological lesions were seen in vehicle-treated or day-14 vector-treated animals.",
     "snippet": "no histological lesions in vehicle-treated or day 14 vector-treated animals",
     "anchor": "Discussion, para 1",
     "surface": "body",

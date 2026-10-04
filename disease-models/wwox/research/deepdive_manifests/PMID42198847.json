@@ -259,7 +259,7 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Eculizumab was given on day 5 to prevent complement-driven platelet consumption, after the first signs; the authors note delayed initiation after cytokine-storm onset may reduce efficacy.",
+    "proposition": "Eculizumab was given on day 5 to prevent complement-driven platelet consumption.",
     "snippet": "prompting a dose of eculizumab",
     "anchor": "Patient details and clinical findings, para 3",
     "surface": "body",
