@@ -336,6 +336,47 @@
         },
         "acquired_on": "2026-10-04"
       }
+    },
+    {
+      "path": "files/fulltext/PPR960425_Steinberg2025_bioRxiv-v2.full.pdf",
+      "sha256": "214a74ffaac665cd11acb7b4036eb8457bf1f6e97bf8d99f34fd8d042ae21268",
+      "kind": "article_binary",
+      "acquisition_recipe": {
+        "derived": false,
+        "resolved_url": "https://www.biorxiv.org/content/10.1101/2024.12.22.630016v2.full.pdf",
+        "http_method": "GET",
+        "tier": "preprint server (bioRxiv), full PDF",
+        "user_agent_policy": "browser_like",
+        "acquired_on": "2026-10-04"
+      }
+    },
+    {
+      "path": "files/fulltext/PPR960425_Steinberg2025_bioRxiv-v2.full_layout.txt",
+      "sha256": "1aeccc009bf7f1e79d43b817abdfa5ab3a669f9fc1164b394111ef93ad3d9a4d",
+      "kind": "article_text",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PPR960425_Steinberg2025_bioRxiv-v2.full.pdf",
+        "extractor": {
+          "name": "poppler pdftotext",
+          "version": "24.02.0",
+          "call": "pdftotext -layout -nopgbrk <pdf> <txt>"
+        },
+        "acquired_on": "2026-10-04"
+      }
+    },
+    {
+      "path": "files/fulltext/PPR960425_Steinberg2025_bioRxiv-v2_EVfigures.pdf",
+      "sha256": "5e7f3709072cb781d1d8e5f4bf0b46fce8aa31f3bb5d10f9f13925a23319b4e6",
+      "kind": "article_binary",
+      "acquisition_recipe": {
+        "derived": false,
+        "resolved_url": "https://www.biorxiv.org/content/biorxiv/early/2025/09/25/2024.12.22.630016/DC1/embed/media-1.pdf",
+        "http_method": "GET",
+        "tier": "preprint server (bioRxiv), supplementary media",
+        "user_agent_policy": "browser_like",
+        "acquired_on": "2026-10-04"
+      }
     }
   ],
   "verbatim_locators": {
@@ -859,10 +900,47 @@
       },
       {
         "route": "bioRxiv preprint full PDF",
-        "result": "HTTP 429 rate limiting across repeated attempts with back-off; not obtained within this session"
+        "result": "OBTAINED on the eighth attempt (HTTP 429 on the first seven, ~100 s apart). 63 pages, v2 posted 2025-09-25. It carries the FULL Materials and Methods INLINE, which the published version relegates to the unobtainable supplement. This is a lawful, free, PARTIAL substitute for the missing methods — and it is a PREPRINT, not peer reviewed, so it may differ from what the published supplement says."
       }
     ],
     "excluded_by_policy": "No payment, no interlibrary loan, no author contact (brief, task 3).",
-    "verdict": "UNOBTAINED. The published supplementary methods and the supplementary figures volume are not available by any lawful free route reachable from this host today; the publisher's own page is the only route and it is behind a bot interstitial."
+    "verdict": "PARTIALLY UNBLOCKED. The published Supplementary material of Brain awag239 remains UNOBTAINED by any lawful free route reachable from this host. The preprint's inline Materials and Methods is a free partial substitute for everything except the A51 / MYC-inhibition experiment, which did not exist at the preprint stage.",
+    "partial_substitute": {
+      "artifact": "files/fulltext/PPR960425_Steinberg2025_bioRxiv-v2.full.pdf",
+      "sha256": "214a74ffaac665cd11acb7b4036eb8457bf1f6e97bf8d99f34fd8d042ae21268",
+      "what_it_covers": "Materials and Methods in full: cell culture and maintenance, transfection and gene editing, cerebral organoid generation and culture, and the statistics section — whose sentence 'No randomization or blinding was applied in this study' is present in the preprint as well as in the published article.",
+      "what_it_does_NOT_cover": "🔴 THE A51 / MYC-INHIBITION EXPERIMENT IS ABSENT FROM THE PREPRINT ENTIRELY. Measured by token count over both derived texts: 'A51' 0 in the preprint versus 3 in the published article; 'MYC inhibition' 0 versus 5; 'multi-kinase' 0 versus 1. That experiment was added in revision, so the preprint's methods CANNOT supply its dose or schedule. The 125 nM, weeks 8-15 figures recorded by the reading of 2026-08-10 came from the published supplement File009, which no longer exists in any checkout and is not re-derivable from any free source reachable today.",
+      "consequence_for_landed_records": "The discovery-ledger lead DL-THER-081 and the Supplementary Fig. 7F-G readings rest on bytes that are gone and cannot be re-acquired from the preprint. They are not withdrawn — they are persisted locators of a reading that happened — but they cannot be re-audited until the published supplement is obtained.",
+      "version_deltas_measured": {
+        "method": "token counts over the two derived texts, 2026-10-04",
+        "counts": {
+          "A51": {
+            "preprint": 0,
+            "published": 3
+          },
+          "MYC inhibition": {
+            "preprint": 0,
+            "published": 5
+          },
+          "multi-kinase": {
+            "preprint": 0,
+            "published": 1
+          },
+          "Wnt": {
+            "preprint": 24,
+            "published": 21
+          },
+          "oligodendrocyte": {
+            "preprint": 2,
+            "published": 1
+          },
+          "myelin": {
+            "preprint": 5,
+            "published": 3
+          }
+        },
+        "note": "The preprint is NOT the published paper and must never be read as a proxy for it beyond the methods it shares. Its title and author list also differ."
+      }
+    }
   }
 }
