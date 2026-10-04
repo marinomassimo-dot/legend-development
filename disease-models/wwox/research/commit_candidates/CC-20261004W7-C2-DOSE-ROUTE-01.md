@@ -52,3 +52,15 @@ two-fold per kilogram within a single paper.
 - (GLP NHP animal size | male juvenile (7–12 months of age, with an average body weight of 1–2 kg) cynomolgus macaque NHPs | Methods, Nonhuman primates, `files/fulltext/PMID42137291_Thomsen2026_PMC.xml`)
 - (Planned human fixed starting doses | fixed starting doses of INS1201 (5.0E+14 vg and 1.0E+15 vg) | Introduction, last paragraph, `files/fulltext/PMID42137291_Thomsen2026_PMC.xml`)
 - (Dose plateau attributed to treatment age | further increases in dose might not be expected to provide additional added benefit when dosed at this time point | Discussion, `files/fulltext/PMID42137291_Thomsen2026_PMC.xml`)
+
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** `PROPAGATED — MERGED into DL-METH-117` by `BATCH_20261004_001` (2026-10-04, MINOR, WM_v7.13 → WM_v7.14; ACTOR_ID `scientist`, Scientist K, batch integrator).
+**Surfaces written:** discovery_ledger_current.md
+
+**Merged rather than written as a second record**, and the verdict reads `PROPAGATED — MERGED into DL-METH-117` because `MERGED` alone is not in `growth_anchors`' closing vocabulary and would leave this candidate counted as open — the tooling fact `BATCH_20261003_004` recorded and `BATCH_20261003_005` applied.
+**Why merged.** The dispatch asked for a deduplication pass against the landed dose-scalar records. `DL-METH-117` already *is* the dose-scalar lead: it enumerates fixed total vg, per gram of brain and per CSF volume, and its reasoning chain already names a programme that scales by CSF volume. A second record asserting that *dose is also quoted per kilogram and by CSF-volume scale-up* would let a reader cite the same lesson twice. The candidate's genuine increments were therefore added **inside** `DL-METH-117` as its wave-7 arm: the **per-kilogram** scalar as a fourth kind, the stated 250× CSF factor, and the observation the landed record did not hold — that a per-animal macaque total is about a **two-fold** different per-kilogram dose inside a single paper, because that paper's animals span 1–2 kg and 2–4 kg. `DL-METH-117`'s operational consequence was extended accordingly: carry dose with its scalar **and** the animal weight or CSF volume in the same field.
+**Both recomputable figures were re-derived and are exact:** 1 × 10¹⁰ vg ÷ 0.002 kg = 5.0 × 10¹² vg/kg, and 10 mL / 0.04 mL = 250. The planned human starting doses exceeding the highest macaque per-animal total is carried with the fact that the printed margin calculation is absent and Table S3 unread.

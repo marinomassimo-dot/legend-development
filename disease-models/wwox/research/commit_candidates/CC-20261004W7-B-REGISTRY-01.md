@@ -111,3 +111,15 @@ The six receipts `FTR-20261004-<pmid>-01` (prepared in `receipts_pending_w7/sciB
 (the WWOX-including 16q deletion is heterozygous and de novo | Arr16q(74,718,513 87,891,103)x1 L L WWOX ANKRD11 ZNF778 CDH15 CDH13 De novo P | PMID 42807679, Table 3 row P8; files/fulltext/PMID42807679_Khadija2026_PMC.xml)
 (the WWOX CNV association is restricted to drug response in SANAD | This CNV was found to be exclusively associated with the drug-response phenotype in SANAD. | PMID 41345172, Results; files/fulltext/PMID41345172_De2025_PMC.xml)
 (a WWOX intron-8 donor variant was reclassified after RNA-seq showed partial exon deletion | Case 5 WWOXc.1056+5G>C AR VUS → LP partial exon deletion Positive WWOX-Related Disorders Y Y | PMID 42248868, Table 2; files/fulltext/PMID42248868_Zhao2026_PMC.xml)
+
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** `PROPAGATED` by `BATCH_20261004_001` (2026-10-04, MINOR, WM_v7.13 → WM_v7.14; ACTOR_ID `scientist`, Scientist K, batch integrator).
+**Surfaces written:** paper_registry_current.md · literature_tracking_log_current.md
+
+`PAPER 205`–`210` created with `LIT-0497`–`0502`. **Renumbered:** the candidate declared `PAPER 201`–`206` and `LIT-0494`–`0499`, every one of which group A took, so all six pairs moved by four and three respectively. The `insert-after` anchors were recomputed to chain from `PAPER 204` / `LIT-0496`, and the remap was applied as one simultaneous longest-token-first substitution so a renumbered id could not be re-read by a later rule; a stale-id guard then asserted that **no pre-remap identifier survived in any op** (`stale_ids: NONE`). The `LIT link` wikilinks inside the paper records and the `PAPER link` wikilinks inside the log records moved with their targets, as did the `PAPER 20x` references in this candidate's three dependents.
+Three integrator changes: the literal `partial full text` beside every `partial_fulltext_read`; the reciprocal `Claim links` entries on `PAPER 208`, `209` (`CLAIM 032`) and `PAPER 210` (`CLAIM 033`); and, from the blind audit, the Alotibi cohort sentence re-scoped — the source dates the **diagnosis** 2015–2018, not the testing, and names a single site.
+B's records needed no `Status` repair: they already carried a bare `processed` with the qualifier on a `Status note` line, which is the trap the two previous batches met.
