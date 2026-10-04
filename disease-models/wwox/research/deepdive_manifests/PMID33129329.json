@@ -6,7 +6,9 @@
  "landing": [
   "FTR-20261004-33129329-01",
   "disease-models/wwox/research/fulltext_dossiers/PMID33129329.md",
-  "disease-models/wwox/research/intake_wave_20261004w8_B.md"
+  "disease-models/wwox/research/intake_wave_20261004w8_B.md",
+  "disease-models/wwox/research/intake_wave_20261004w12_A.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W12-A-ASSAY-01.md"
  ],
  "skills_considered": [
   {
@@ -458,6 +460,46 @@
     "artifact": "files/fulltext/PMID33129329_Makii2020_PMC.xml",
     "anchor": "Figure 3 caption — compare Methods, 'Assessment of cell viability and cell proliferation', which states 5 × 103 for the same seeding",
     "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The protein read-out in the gain/loss arm is a single representative blot quantified as one band ratio per lane, with no calibrator, standard curve or linear-range check; the overexpression ratio rises about 2.3-fold (0.11 to 0.25) while the transcript bar rises about 11-fold with an SD bar reaching about 18.7, and the knockdown ratios fall to 0.21 and 0.30 from 0.58.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig. 2a: bar 'Relative Fold Expression (Normalized to 18S)', BR EV about 1, BR WWOX about 11 with error bar to about 18.7, three asterisks; blot BR EV / WWOX with printed 'WWOX:β-actin 0.11 0.25'. Fig. 2b: C2 scramble 1.0 (error bar to about 1.78), shWWOX 554 about 0.35, 1304 about 0.33, one asterisk each; blot Scr / 554 / 1304 with printed 'WWOX:β-actin 0.58 0.21 0.30'. No standard curve, calibrator or detection-limit mark on either panel.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID33129329/12917_2020_2638_Fig2_HTML.jpg",
+    "anchor": "Figure 2, panels a and b",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The proliferation panels show overlapping growth curves with wide SD at 72-96 h, consistent with the stated earned negative.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig. 3a BR EV and BR WWOX curves overlap from 0 to 96 h, reaching about 7-fold with SD bars from about 3 to about 11; Fig. 3b C2 scramble, shWWOX 554 and 1304 overlap, reaching about 4-4.6-fold at 96 h with SD bars from about 2.4 to about 6.7. No significance marks.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID33129329/12917_2020_2638_Fig3_HTML.jpg",
+    "anchor": "Figure 3, panels a and b",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "The clonogenic panel is one panel on a log axis with a single asterisk at 6 Gy; the caption's title names cell viability but no viability panel is drawn.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig. 4: y-axis 'Surviving Fraction' log 0.001-1, x-axis 0-6 Gy; at 6 Gy C2 scramble about 0.016, shWWOX 554 about 0.06, shWWOX 1304 about 0.08; one asterisk above 6 Gy only; no panel letter and no second panel.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID33129329/12917_2020_2638_Fig4_HTML.jpg",
+    "anchor": "Figure 4",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "The four example images that anchor the ordinal intensity scale differ in staining pattern as well as intensity: the 'strong' example is predominantly nuclear in a subset of cells, while the 'mild' and 'moderate' examples are diffuse; the 'no stain' example carries stromal and vascular signal. The scale is anchored by exemplars, not by a calibrator (reader's panel reading, INFERENZA on pattern).",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig. 5: A 'no' — tumour cells blue, brown signal in vessel walls and stroma; B 'mild' — diffuse light-to-moderate brown with nuclear accentuation; C 'moderate' — diffuse dense brown across the field; D 'strong' — dark brown nuclei in a subset of cells with largely unstained cytoplasm and stroma. Scale bar present, value not legible at this resolution.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID33129329/12917_2020_2638_Fig5_HTML.jpg",
+    "anchor": "Figure 5, panels a-d",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The cell-line and tumour-lysate blots in Figure 1 are shown without densitometry; mouse lanes carry only a faint band.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig. 1c BR and C2 with and without rcSCF; Fig. 1d five canine MCT lysates, bands in 1-3 and none visible in 4-5; Fig. 1e canine BR faint, C2 strong, mouse C57 and P815 faint. No ratios printed on any of these blots.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID33129329/12917_2020_2638_Fig1_HTML.jpg",
+    "anchor": "Figure 1, panels c-e",
+    "panel_text_relation": "panel_only"
    }
   ]
  }

@@ -8,7 +8,8 @@
   "disease-models/wwox/research/fulltext_dossiers/PMID36926521.md",
   "disease-models/wwox/research/intake_wave_20261004w8_A.md",
   "disease-models/wwox/research/commit_candidates/CC-20261004W8-A-MEASURED-01.md",
-  "disease-models/wwox/research/commit_candidates/CC-20261004W8-A-REGISTRY-01.md"
+  "disease-models/wwox/research/commit_candidates/CC-20261004W8-A-REGISTRY-01.md",
+  "disease-models/wwox/research/intake_wave_20261004w12_A.md"
  ],
  "skills_considered": [
   {
@@ -184,6 +185,27 @@
     },
     "result_sha256": "5af4acb24cc1629ef3eca709ff83779918dbd2dd2e71f8ae10ac4e9f5f31426a"
    }
+  },
+  {
+   "path": "files/figures/PMID36926521/fcell-11-1021920-g005.jpg",
+   "sha256": "a4a8e360c292d41eab7831bbde3cf64e1aa47aaab9af0dcb2eb9868745cb2154",
+   "kind": "figure",
+   "note": "Wave 12 re-read (2026-10-04): Figure 5 (decision tree) extracted byte-for-byte from the declared Europe PMC supplementaryFiles container files/supplements/PMID36926521/s.zip (member fcell-11-1021920-g005.jpg, 650x679). Figures 2-4 and Supplementary Figure S2 contain patient photographs and were deliberately not opened.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_zip_member_extraction",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": true,
+    "result_sha256": "a4a8e360c292d41eab7831bbde3cf64e1aa47aaab9af0dcb2eb9868745cb2154",
+    "derived_from": "files/supplements/PMID36926521/s.zip",
+    "extractor": {
+     "name": "python zipfile",
+     "version": "stdlib",
+     "call": "zipfile.ZipFile('s.zip').read('fcell-11-1021920-g005.jpg')"
+    }
+   }
   }
  ],
  "verbatim_locators": {
@@ -308,6 +330,14 @@
     "surface": "supplement",
     "artifact": "files/supplements/PMID36926521/DataSheet2.docx",
     "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors' suggested strategy routes a missense VUS to RNA-seq after short-read genome sequencing; it is a proposed decision tree, not a measurement, and the WWOX exon-1 missense of this paper received no allele-specific RNA or protein assay.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 5: 'Reanalysis of first-line molecular data' -> 'SrGS' -> 'VUS' or 'Negative'; VUS -> 'Structural variant' (<5000 bp -> lrGS; >5000 bp -> OGm) or 'Splice / Missense / Synonymous / Non-coding Variant' -> 'RNA-seq'; Negative -> RNA-seq; RNA-seq -> 'Diagnosis' or 'Additional explorations'; dashed arrow from RNA-seq back to Structural variant.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID36926521/fcell-11-1021920-g005.jpg",
+    "anchor": "Figure 5",
+    "panel_text_relation": "text_confirmed_by_panel"
    }
   ]
  }
