@@ -145,3 +145,33 @@ response is byte-identical (SHA-256) to the copy the Orchestrator had staged, an
   EIDEE). INFERENZA, counted once. Read sources now hold 2–4 homozygous L239R children in 1–3 families, never
   summed as independent. The supplement's narrative adds neonatal onset and inability to sit, which the main
   tables do not carry.
+
+## A5 · PMID 41477840 (Stamouli 2026) — first pass (written before any registry comparison)
+
+- Off-axis for alleles: a human glial-progenitor (hGPC, stem-cell-derived) to parvalbumin (PV) interneuron
+  reprogramming study in 3D spheroids (lentiviral transcription-factor cocktail), read out by snRNA-seq over days
+  0–21, RNA velocity/latent time and diffusion pseudotime. **No WWOX perturbation, no WWOX protein, no allele.**
+- **Measured:** WWOX transcript in snRNA-seq. (i) Table S5: WWOX is a top-25 DEG of neuronal cluster 16 (log fold
+  change 1.84, adjusted p 5.71E-48). (ii) Fig. 6F heatmap (PV trajectory, latent time): WWOX expression is present
+  in the early glial segment and higher in the later neuronal and PV segments. (iii) **Fig. 6H panel, read:**
+  average WWOX expression ≈1.3 (day 1) → ≈1.6 (day 3) → ≈2.15 (day 7) → ≈2.5 (day 13) → ≈1.2 (day 21): roughly a
+  two-fold rise to a day-13 peak, **then back to the day-1 level by day 21** (approximate values read from the
+  plot; units as plotted; the cells averaged are not stated in the legend).
+- The paper describes the same gene three ways: "gradually up-regulated" (Results, 6F), "robust up-regulation …
+  as early as day 7" (Results, 6H) and "transient up-regulation of neuronal migration genes such as PLEKHG1 and
+  WWOX" (Discussion). The panel supports "transient" with a day-13 peak; "robust … as early as day 7" is a ≈1.7×
+  change on the plot.
+- The "neuronal migration" label is the heatmap's grouping, and the Discussion's reason is speculative
+  ("possibly reflecting a more accessible chromatin around these genes and the migratory nature of hGPCs").
+- WWOX is **expressed in the starting human glial progenitors** (day-1 average ≈1.3, and the glial segment of 6F
+  is not blank). That is a transcript observation in an artificial in-vitro glial progenitor population, not a
+  statement about oligodendrocyte-lineage function.
+- Discussion citations about WWOX: "highly expressed in basket PV cells (71)", ablation reduces hippocampal PV
+  interneurons (72), impairs differentiation and migration (73). Checked after the first pass against the held
+  artefacts (see below).
+- Selection-note premises tested: "a human, cell-type-resolved, time-resolved **dose curve**" overstates — it is
+  an average-expression time course in a reprogramming culture, with no dose and no requirement test; "names
+  migration, not metabolism" is a heatmap label plus a speculative sentence.
+- Class transfer: no allele, no genotype. **Nothing transfers to any WWOX genotype**; reprogramming is not
+  development (the authors' own limitations: no glutamatergic input, limited mature cells, RNA velocity applied
+  to nuclei).
