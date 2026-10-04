@@ -113,15 +113,15 @@ than four papers it has not read.
 > showing that the astrocyte-restricted promoter's hepatic protein is **not** the highest — bound (1)
 > rests on the authors' Results sentences describing that figure, not on the panel.
 >
-> **Paper links.** `[[paper_registry_current#PAPER 153]]`, `[[paper_registry_current#PAPER 154]]`,
-> `[[paper_registry_current#PAPER 155]]`, `[[paper_registry_current#PAPER 156]]` (provisional; see
+> **Paper links.** `[[paper_registry_current#PAPER 203]]`, `[[paper_registry_current#PAPER 204]]`,
+> `[[paper_registry_current#PAPER 205]]`, `[[paper_registry_current#PAPER 206]]` (provisional; see
 > `CC-20261004W8-B-REGISTRY-01`).
 >
 > **Note.** Class-level record; no individual-level detail. Not medical advice.
 
 ## Consequential edits
 
-If this lands, the `Claim links:` field of `PAPER 153`–`PAPER 156` changes from `none` to the id this
+If this lands, the `Claim links:` field of `PAPER 203`–`PAPER 206` changes from `none` to the id this
 record receives. Those four records are created by `CC-20261004W8-B-REGISTRY-01` in this same wave,
 so the substitution is made by the integrator at renumbering time.
 

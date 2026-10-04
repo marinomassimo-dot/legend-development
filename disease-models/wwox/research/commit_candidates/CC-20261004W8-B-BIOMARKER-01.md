@@ -64,14 +64,14 @@ sit. **No `old` text is replaced**, so no `old`/`new` pair is given; this is a p
 > **What would falsify it.** A source showing sensitivity and specificity for a WWOX read-out in a
 > disease population — which would move the modality from Tier 1 *class* to Tier 1 *validated*.
 >
-> **Paper link.** `[[paper_registry_current#PAPER 151]]` (provisional; see
+> **Paper link.** `[[paper_registry_current#PAPER 201]]` (provisional; see
 > `CC-20261004W8-B-REGISTRY-01`).
 >
 > **Note.** Class-level record; no individual-level detail. Not medical advice.
 
 ## Consequential edit to the paper record
 
-If this lands, `PAPER 151`'s `Claim links:` field changes from `none` to the id this record receives.
+If this lands, `PAPER 201`'s `Claim links:` field changes from `none` to the id this record receives.
 That is the only existing text this candidate touches, and it cannot be written as an `old`/`new`
 pair until both numbers are assigned — the integrator makes the substitution when it renumbers.
 
