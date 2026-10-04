@@ -168,3 +168,16 @@ remains **untested**: no source read in this wave administered a calcineurin inh
 - (One primate intrathecal study reports no sensory-ganglion pathology at all | Hematoxylin and eosin (H&E) staining revealed no signs of inflammatory cell infiltration or neuronal necrosis in the treated monkeys | PMID 40301740, Results, intrathecal cynomolgus section)
 - (That paper's own figure legend states something weaker than its running text | Representative pictures showing minor detectable sign of toxicity | PMID 40301740, Figure 7 legend)
 - (More vector bought no further efficacy above a saturating dose | increasing the dose to 1.6E+14 vg/kg did not result in additional therapeutic benefit compared to the 8.0E+13 vg/kg group | PMID 40301740, Results, dose-dependent rescue section)
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261003_005` · 2026-10-03 · ACTOR_ID `scientist` (Scientist J, batch integrator), under the operator's standing authorisation *«procedi sempre»*
+**Operations applied:** 5
+**Change class as judged by the batch:** MINOR (§7) — every target's live `Status` was read from the registry before judging.
+
+`RL-C-20261003w6` created (its §5 table carried as prose, with the animal-only caveat, the never-measured neonatal tolerisation and the §6 falsifiers); `DL-THER-116` created, **renumbered** from the provisional `DL-THER-117` (116 was the next free). §3's bounds were applied to the **landed** records, as the candidate's verification item 3 required: `RL-C-20261003w3`'s off-target-organ row and `RL-C-20261003w4a`'s transfer limit are both narrowed from *AAV class effect* to *CSF-route class effect*. §3a's correction was applied inside `DL-METH-118`: the hepatic half of the sentence wave 5 carried from PMID 41257285 is sourced in its reference 10 (PMID 37515322), the DRG half is not, and that paper now carries an explicit do-not-cite marker for any dorsal-root-ganglion finding. Five blind-audit narrowings travel inside the records: the fold-of-endogenous ceiling is literature-cited and FXN-specific, the deep-brain negative is transgene-product staining rather than capsid arrival, the brain negative in PMID 42422766 is an enzyme-activity endpoint, the adverse findings are a group present at all dose levels rather than each tissue at each dose, and the miRNA-binding-site experiment is a cited third-party follow-up report.
+
+**Nothing above this line was rewritten.**

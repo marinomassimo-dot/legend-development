@@ -92,3 +92,16 @@ whichever propagates second must re-measure it against the text the first one le
 4. The in-vitro arm uses dorsal root ganglion neurons from the constitutive null | we performed a co-culture assay of wild-type OPCs with DRG neurons isolated either from wild-type or Wwox-null mice | PMID 33914858, Results, journal page 3071, same PDF, page 11 rendered at 110 dpi
 5. The co-culture n is four per condition from two experiments | Results are shown in a box plot from two independent experiments (WT-DRGs + WT-OPCs, n = 4; KO- | PMID 33914858, Figure 6 legend panel D, journal page 3072, same PDF, page 12 rendered at 110 dpi
 6. WWOX is stated to be intact in the oligodendrocytes of the neuronal conditional, which is what makes the phenotype non-cell-autonomous by construction | levels of WWOX are maintained in oligodendrocytes (stained with CC1) in S-KO compared to S- | PMID 33914858, Supplementary Figure Legends, Supplementary Fig 1(D), File009 text layer
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261003_005` · 2026-10-03 · ACTOR_ID `scientist` (Scientist J, batch integrator), under the operator's standing authorisation *«procedi sempre»*
+**Operations applied:** 1
+**Change class as judged by the batch:** MINOR (§7) — every target's live `Status` was read from the registry before judging.
+
+`CLAIM 003` (**`consolidated baseline`**) gains the bound on how strong the oligodendroglial negative that licenses *non-cell-autonomous* actually is. **Judged MINOR** — no status, type, summary, transferability or source changes and nothing is reversed — and the blind locator audit the candidate declared OWED was **run before propagation**: 18 Repudi triples against the operator-supplied PDF rendered page by page at 110–220 dpi (the derived text layer is a rejected surface), 18 QUOTE_FOUND, 0 UNVERIFIABLE_SURFACE. 🔴 **Re-anchored.** The candidate's `old` is the sentence the already-landed `CC-20261003W4-B-MYELIN-CELLAUT-01` note *follows*, so appending there would have spliced this note inside that one; the op was re-anchored on the paragraph's last sentence so the two notes read in the order they were written. Three audit amendments travel inside the claim: the n = 11 / n = 10 / P = 1.0 survival figures belong to Figure 1 panels K and L (the astrocyte arm is G-Control n = 8 / G-KO n = 9), the MBP comparison is Supplementary Fig. 8 panels (A) and (B) with no quantification in the legend, and the CC1-positive sentence is about P17 corpus callosum — the step from it to *non-cell-autonomous* is this repository's inference, not the source's.
+
+**Nothing above this line was rewritten.**

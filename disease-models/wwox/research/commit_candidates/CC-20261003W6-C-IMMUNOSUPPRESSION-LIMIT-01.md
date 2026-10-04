@@ -108,3 +108,16 @@ read against the Methods that produced it, and a corticosteroid regimen is part 
 - (The field's strongest claim for immunosuppression says reduce, not eliminate, and is a citation to unpublished data | data from our group suggest that immunosuppression can greatly reduce but not eliminate the severity and/or incidence of DRG, spinal cord, and other adverse histopathology findings | PMID 42422766, Discussion, comparison-with-PR001 paragraph)
 - (The study whose safety statement omits its own regimen states that regimen only in Methods | For immunosuppression, methylprednisolone acetate (Depo-medrol, Pfizer, 20 mg/mL or 40 mg/mL) was administered intramuscularly to the femoral or gluteal muscle weekly | PMID 41078870, Materials and methods, ICM administration and CSF collection)
 - (And under it the ganglion pathology was almost absent despite uniformly high transgene positivity | Neuronal degeneration and necrosis with the presence of mononuclear cell infiltrate was detected only in a sacral DRG of one animal of the AAV5-treated group | PMID 41078870, Results, Toxicity endpoints)
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED — MERGED into DIS-031
+**Batch:** `BATCH_20261003_005` · 2026-10-03 · ACTOR_ID `scientist` (Scientist J, batch integrator), under the operator's standing authorisation *«procedi sempre»*
+**Operations applied:** 2
+**Change class as judged by the batch:** MINOR (§7) — every target's live `Status` was read from the registry before judging.
+
+**Deduplication verdict: same proposition family, disjoint sources, so one record and not two.** `DIS-031` already rejects *«AAV DRG toxicity is immune-mediated and can be prevented prophylactically»* on PMIDs 41404412 / 35331006 / 36700120; this candidate rejects the preventability side on PMIDs 36951961 / 37515322 / 41078870 / 42422766. Following the `DIS-033` precedent of `BATCH_20261003_004`, the negative was **merged into `DIS-031`** as its wave-6 arm, carrying all five premises and a second revival trigger, rather than written as `DIS-035`. Its discovery-ledger lead landed separately as `DL-METH-120`, **renumbered** from the provisional `DL-METH-118`, which `BATCH_20261003_004` had taken for a different proposition. 🔴 **Two blind-audit CONTRADICTED verdicts corrected premise 4:** the field's *«can greatly reduce but not eliminate»* sentence does **not** cite unpublished data — its reference 42 is a published article (Grubor 2025, doi 10.1016/j.omtm.2025.101643) — and it is not that paper's only immunosuppression statement. Only *reduce rather than eliminate* survives from that premise; the published source is now `FT-193`, HIGH priority. Premise 1's «abolished the measurable T-cell response» was also narrowed: the source says no response was *detectable* under the regimen and has no unsuppressed comparator arm.
+
+**Nothing above this line was rewritten.**

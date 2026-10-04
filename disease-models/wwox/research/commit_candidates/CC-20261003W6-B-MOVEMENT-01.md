@@ -41,3 +41,16 @@ Apply after `CC-20261003W6-B-CBDRESPONSE-01` or before — the two ops touch dif
 (WWOX pooled row: dystonia 15/18, hypokinesia 5/18, chorea 0 | WWOX 0 15/18 0 2/18 1/18 1/18 5/18 | PMID 40217411, Table 2 row WWOX; files/fulltext/PMID40217411_Yuan2025_PMC.xml)
 (hypokinesia genes come from OMIM, six named in text | A review of the OMIM database revealed that mutations in several genes are associated with hypokinesia, include ATP1A3, PIGP, SCN2A, SCN8A, TBC1D24, and WWOX | PMID 40217411, Hypokinesia section; files/fulltext/PMID40217411_Yuan2025_PMC.xml)
 (Table 2 includes only articles giving types with proportions | Only articles that provided specific descriptions of movement disorder types and their corresponding proportions were included in the statistical table (Table 2). | PMID 40217411, Characteristics of movement disorders; files/fulltext/PMID40217411_Yuan2025_PMC.xml)
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261003_005` · 2026-10-03 · ACTOR_ID `scientist` (Scientist J, batch integrator), under the operator's standing authorisation *«procedi sempre»*
+**Operations applied:** 1
+**Change class as judged by the batch:** MINOR (§7) — every target's live `Status` was read from the registry before judging.
+
+`DL-MECH-030` gains the de-duplication note verbatim, at a different sentence from the cannabidiol op; both applied in one atomic op list.
+
+**Nothing above this line was rewritten.**
