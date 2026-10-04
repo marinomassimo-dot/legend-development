@@ -73,3 +73,25 @@ the same route.
   addendum says, on `READ_NOT_REGISTERED=['21476439']`, a wave-10 receipt.
 
 ---
+
+## Verdicts by area (the authors' own focus lists)
+
+| # | Area | Verdict |
+|---|---|---|
+| B1 | `CLAIM 046` / `CLAIM 047`: classification, premises, negatives, `BLOCK 2` mirror rows, reciprocal `PAPER` links | **CONFIRMED** — both `in observation`, `Type` and `PREMISE_TAG` present (incl. a declared `DEFAULT_FROM_TEXTBOOK` on reporter-predicts-therapeutic), rows 046/047 present in `BLOCK 2`, `PAPER 223/225/226/227/228` all declare their claim · 🔸 **F6** one ratio in `047` |
+| B2 | 18 records `PAPER 217`–`234` / `LIT-0509`–`0526` vs JATS front matter | **CONFIRMED 17/18** on PMID, PMCID, DOI, journal, volume, issue, pages/elocation, author order · 🔸 **F1** `PAPER 228` / `LIT-0520` |
+| B3 | Depth labels vs `fulltext_receipts.py status --pmid`; `partial full text`; no overstated depth | **CONFIRMED 18/18 + 30/30**; zero depth overstatements in either registry |
+| B4 | `DL-REPO-003` as an unread debt with a falsifier, and its wave-9 amendment | **CONFIRMED** — the debt is stated, not settled; the UP direction, the shared measurements and the paywalled fifth primary are all in the record · 🔸 **F4** the supplement bytes are absent |
+| B5 | The measured-vs-predicted table and `CLAIM 033` riserva (1) — is anything about PMID 36926521 overstated? | **CONFIRMED — nothing overstated.** The record says *one* blot, one control, no quantification, *«it measures the genotype»*, exon-5 skipping with *«no skipped fraction, no frame statement, no NMD test»*, the source's own *«PCR»* (never «RT-PCR»), and `PREMISE: DATO (one blot and one PCR, both qualitative)` · 🔸 **F2** one clause of the privacy repair |
+| B6 | Residue dispositions | **CONFIRMED** — `GRAPH-HYGIENE` `NOT INTEGRATED` appended **append-only** with its reason; four `DEFERRED` with 2026-10-06/08 triggers; `growth_anchors` now names **9** (the 4 residue + 5 wave-10) and no longer counts the closed stub |
+| C1 | 17 propagated candidates: ≥12 carried quantitative statements re-measured against artefacts, ratios recomputed | **CONFIRMED 15/15 checked** (Grubor ×3, Thomsen S3, Petrozziello ×3, valproate ×2, De ×4, Henry ×2, Tang, Dong ×2, Lima, Khadija arithmetic) — see STEELMAN; two figure-only values (gnomAD 7355/21694 = 0.3390; the 1.10× γ-H2AX) I could recompute but not re-read, and both are labelled panel readings |
+| C2 | Repaired records `PAPER 156/208/209/162/216/202/214/210`, `DIS-031`, `DIS-028`, `FT-193`, `FT-194` | **CONFIRMED** — all four Mirror repairs applied, two of them generalised; `PAPER 156` now names 110 carriers **and** the 204 cohort and scopes *«No CNVs»* to 104 genes · 🔸 **F3** `PAPER 210`'s second field · 🔸 **F5** `CLAIM 011`'s missing marker |
+| C3 | The *«WWOX n = 2…»* style counts | **CONFIRMED** — Dong prints `WWOX (n = 4)` and `PAPER 156` resolves it into **three distinct heterozygous missense alleles in 1 + 2 + 1 participants**, with the `ClinVar Benign` column read as a condition list and the 7.5 × 10⁻³ / 0.001 ratio (7.5×) correct after the earlier `MIRROR-12` fix |
+| D | `c.107+119C>G`: qualitative-only, read fraction/frame/NMD/protein/tissue unmeasured, preprint = one unillustrated sentence, never promoted, zygosity differs | **CONFIRMED at all four sites** — `PAPER 241`, `RL-C-20261004w9c1`, `FT-194`, `LIT-0537`; the allele string occurs **5 times in the landed state and nowhere without its caveat**; `CLAIM 032`/`CLAIM 033` do not carry it; the working model's one mention says *«measured qualitatively only»*. **No transfer**: the binding transfer-limit paragraph names acceptor, canonical ±1/±2 and missense classes explicitly |
+| E | Patient-overlap labels (`INFERENZA`) and no patient counted twice | **CONFIRMED** — see STEELMAN |
+| F | Per-line sha256 prohibition spans for `CLAIM 011/032/045/046/047` | **CONFIRMED** — 0 removed; `032` byte-identical (8→8); `046`/`047` 0→2 each; the two edited lines are the declared narrowings · 🔸 **F5** one of them lacks its § 7.2 marker |
+| G | `public_release_gate.py` over the whole tree; parent-of-origin wording in the new records | **PASS, 0 BLOCK**, 12 `[REVIEW]`, of which 3 are wave-8/9 candidates and manifests. The four current registries carry **one** parental-side phrase in total · 🔸 **F2** · NOTE **F7** |
+| H | Overstatement vocabulary in added lines | **CONFIRMED** — every *«first»* / *«only»* is scoped to *«the model holds»* or *«the read literature»* (an in-repo, falsifiable statement), and `PAPER 202`'s unmeasured *«first»* is gone: it now reads *«no priority is claimed: no search for an earlier such table was run»* |
+| I | Gates at the landed state | **CONFIRMED** — LINT exit **0**, **0 BLOCK**, 13 `WARN_BUT_PROCEED`, none naming a wave-8/9 record; `fulltext_receipts verify` **OK, 429 chained**, tail anchored; `growth_anchors check` **PASS** (claims 47 · papers 233 · corpus 367 · literature 519 · registry_only 4 · unread_premises 0); release gate exit **0** |
+
+---
