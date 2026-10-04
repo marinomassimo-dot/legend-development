@@ -8736,28 +8736,28 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Date discovered:** 2026-04-18
 **Date screened:** 2026-04-18
 **Date processed:** 2026-10-04
-**Date last touched:** 2026-04-18
+**Date last touched:** 2026-10-04
 **Discovery window:** FASE 1 triage 221–400
 **Discovery source:** 400_paper.txt batch corpus
 **Discovery query:** corpus paper 306
 **Priority:** low / background
 **Quality status:** peer-reviewed (PubMed listing)
-**Filter decision:** deep-dive — full text required
+**Filter decision:** deep-dive — performed 2026-10-04; the full text was acquired and read (receipt `FTR-20261004-21476439-01`)
 **Tier:** A
-**Status:** screened
+**Status:** processed [2026-10-04, `CC-20261004-MIRROR-42`: the record declared READ IN FULL and a landing in [[paper_registry_current#PAPER 244]] while this field still read *«screened»*]
 **Primary pathway:** P5 — metabolism / mitochondria / redox
 **Genotype/model tag:** unassigned in triage
 **Species:** not assessed in triage
 **Transferability:** unassigned in triage
 **Directness to the reference genotype:** unassigned in triage
-**Over-inference risk:** standard triage — not evaluated
+**Over-inference risk:** HIGH — evaluated 2026-10-04 on the reading; see [[paper_registry_current#PAPER 244]], whose field carries the reason (an activity report on a crude lysate, most likely to be mis-carried as *«WWOX enzymology is characterised»*)
 **clinical relevance:** HIGH
 **Claim links:** none — read in full, supports no canonical claim. PAPER link: [[paper_registry_current#PAPER 244]].
-**Working Model impact:** none yet
+**Working Model impact:** none — the reading supports no canonical claim and created none; `WM_v7.17` records it as a registry landing only
 **Report mentions:** FASE 1 triage 221–400
 **Current status:** READ IN FULL 2026-10-04 — version-of-record PDF held, receipt `FTR-20261004-21476439-01`, manifest PASS 0 gaps, blind locator audit over 17 triples; registered as [[paper_registry_current#PAPER 244]]
 **Next action:** none for acquisition — acquired and read 2026-10-04. The open reading debt moves to its references: PMID 10786676 (the WWOX discovery paper, carried in the Introduction's SDR interpretation; ⚠️ note that the sentence giving the `GANSGIG` and `YNRSK` motif coordinates carries **no citation of its own** — the discovery-paper citation governs a different, adjacent statement, measured by blind audit 2026-10-04 — so this is a debt on the interpretation, not on a cited coordinate), PMID 11896615 and PMID 12829805. See the manifest's multihop block.
-**Flags:** FASE 1 batch entry / no deep-dive yet
+**Flags:** FASE 1 batch entry / deep-dive performed 2026-10-04 (`BATCH_20261004_004`)
 **Note:** Title: WWOX oxidoreductase--substrate and enzymatic characterization
 
 ## LIT-0307
@@ -12804,7 +12804,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Claim links:** none
 **Working Model impact:** none — `DL-MECH-013` is qualified by `CC-20261003-C-SLEEP-SUGGESTIVE-01`, no block is redefined
 **Report mentions:** `research/intake_wave_20261003_C.md` · `CC-20261003-C-SLEEP-SUGGESTIVE-01`
-**Next action:** none owed; Supplementary Figures 1-2 remain unviewed and are not blocking
+**Next action:** none owed. 🔵 Supplementary Figures 1-2 were read as images in intake wave 13 (`CC-20261004W13-A-SLEEP-01`) and were **not** inert: the Manhattan plot the Results cite for the total-set p of 1.11e-7 has a genome-wide maximum of about 5.5 on its own axis and a caption naming a different covariate set, and the Q-Q plot's top observed value implies roughly 3.4e5 plotted tests (N re-derived independently at about 3.39e5 from the four top ranks under the (i-0.5)/N convention, the top observed value being 5.51 at an expected 5.83; the earlier 7e5 figure came from a cruder convention and is corrected here) rather than the 6.42 million imputed SNVs. The Bonferroni family of about 1.8e5 already recorded here is confirmed by arithmetic on the supplement's own cells (0.0197/1.11e-7 and 0.0364/2.05e-7) 🔵 Blind locator audit, 2026-10-04 (`BATCH_20261004_007`): the 6.42 million figure is the Methods-stated post-imputation SNV count and is **never tied by the source** to the Bonferroni family; the paper's surfaces carry **four** mutually inconsistent covariate statements, not two; and the panel's genome-wide maximum of 5.51 sits 1.44 log units below where the cited value would plot.
 **Flags:** read — partial; human arm below conventional genome-wide significance **by the authors' own statement**
 **Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261003-39952983-02`; manifest `deepdive_manifests/PMID39952983.json` (14 verbatim locators, PASS with artefact verification); dossier `research/fulltext_dossiers/PMID39952983.md`
 **Registry record:** [[paper_registry_current#PAPER 135]]
