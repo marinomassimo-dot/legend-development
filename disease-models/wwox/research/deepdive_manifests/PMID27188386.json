@@ -287,5 +287,18 @@
   ],
   "source_fulltext_indexed": true,
   "source_fulltext_indexed_evidence": "Europe PMC REST PMC5306084/fullTextXML returned HTTP 200 with a full JATS body on 2026-10-04; the artefact declared is that response."
- }
+ },
+ "reading_history": [
+  {
+   "receipt": "FTR-20261004-27188386-02",
+   "reader": "scientist (Scientist C), intake wave 13 2026-10-04",
+   "context_policy": "QUESTION_DRIVEN",
+   "what_changed": "The three absent supplementary artefacts were restored by exact SHA-256 match from a peer worktree (evidence_presence.py --search/--restore); this manifest's artefacts are now 5/5 present and matching. Added an exhaustive WWOX probe-set block map of Supplementary Table 3 as a declared supplement_text with its extractor, and two entries: seven hits all positive (VPA +2.13 in UKK, +1.68 in UKN1), and the fact that Supplementary Table 7 carries no sign. No earlier entry altered; the manifest receipt field stays on the producing reading.",
+   "outputs": [
+    "disease-models/wwox/research/fulltext_dossiers/PMID27188386.md",
+    "disease-models/wwox/research/intake_wave_20261004w13_C.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261004W13-C-VPA-SURFACE-01.md"
+   ]
+  }
+ ]
 }
