@@ -64,7 +64,7 @@ sit. **No `old` text is replaced**, so no `old`/`new` pair is given; this is a p
 > **What would falsify it.** A source showing sensitivity and specificity for a WWOX read-out in a
 > disease population — which would move the modality from Tier 1 *class* to Tier 1 *validated*.
 >
-> **Paper link.** `[[paper_registry_current#PAPER 201]]` (provisional; see
+> **Paper link.** `paper_registry_current#PAPER 201` (rendered as plain text, not as wikilinks: these records do not exist yet, so a wikilink would be a broken target. Provisional; see
 > `CC-20261004W8-B-REGISTRY-01`).
 >
 > **Note.** Class-level record; no individual-level detail. Not medical advice.

@@ -113,8 +113,8 @@ than four papers it has not read.
 > showing that the astrocyte-restricted promoter's hepatic protein is **not** the highest — bound (1)
 > rests on the authors' Results sentences describing that figure, not on the panel.
 >
-> **Paper links.** `[[paper_registry_current#PAPER 203]]`, `[[paper_registry_current#PAPER 204]]`,
-> `[[paper_registry_current#PAPER 205]]`, `[[paper_registry_current#PAPER 206]]` (provisional; see
+> **Paper links.** `paper_registry_current#PAPER 203`, `paper_registry_current#PAPER 204`,
+> `paper_registry_current#PAPER 205`, `paper_registry_current#PAPER 206` (rendered as plain text, not as wikilinks: these records do not exist yet, so a wikilink would be a broken target. Provisional; see
 > `CC-20261004W8-B-REGISTRY-01`).
 >
 > **Note.** Class-level record; no individual-level detail. Not medical advice.
