@@ -15172,8 +15172,8 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Date discovered:** 2026-10-04 (intake wave 11 selection record, group B)
 **Date processed:** not processed — **no reading was performed**
 **Discovery source:** intake wave 11 selection record, group B (2026-10-04)
-**Status:** not_processed
-**Status note:** record created by `CC-20261004W11-B-REGISTRY-01` (intake wave 11, group B) and authored by the batch integrator from the artefact's own front matter; 🔴 **no reading was performed and no receipt is owed.** One supplementary table row was inspected so that an allele's earlier report is addressable; the article is unread and this record must never be read as a reading
+**Status:** screened
+**Status note:** record created by `CC-20261004W11-B-REGISTRY-01` (intake wave 11, group B) and authored by the batch integrator from the artefact's own front matter; `Status: screened` is this log's vocabulary for *«quickly reviewed but not yet filtered»*, and it is the honest value: 🔴 **no reading was performed and no receipt is owed.** One supplementary table row was inspected so that an allele's earlier report is addressable; the article is unread and this record must never be read as a reading
 **Primary pathway:** P1 — allele census (one row only)
 **Transferability:** T5 — gene, inheritance, transcript and allele columns only; no phenotype
 **clinical relevance:** BACKGROUND — class level only
