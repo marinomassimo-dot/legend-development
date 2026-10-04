@@ -18,3 +18,10 @@ Owed: figures `captions_only`. Read now: Figures 1-5, graphical abstract, Table 
 - **New measured detail:** "No immunosuppression was used" in the analysed animals, four immunosuppressed TSHA-101 animals excluded (footnote b); 28 of 47 treated animals analysed (Table 2 bold); Figure 5's time line mixes constructs and uses sample-level SD; pre-screen preferential, not a filter. These sharpen CLAIM 047's bound (candidate `CC-20261004W13-B-HAQUE-EXPRESSION-01`, MINOR).
 - No tolerability or DRG endpoint exists in the paper; the paper cannot bear on DIS-031.
 - Owed after this: the publisher PDF article (not needed by any landed record).
+
+## PMID 41966056 (Wang 2026, intracisternal AAV9-IDUA, one subject, MPS I) - WWOX zero (earned null)
+Owed: figures `captions_only`, supplement `captions_only`. Read now: Figures 1-3 (pixels), protocol (S1) and Tables S1-S3 (S2) as text; Video S1 and graphical abstract deliberately not opened. The five previously waived manifest blocks were filled (the manifest could not pass the current schema before); 15 locators, PASS.
+- **PAPER 177 "DRG toxicity was not measured" - survives** (no NCS, no ganglion imaging, no tissue in any prose surface or in the protocol's schedule) but is narrower in the registry's own words: the authors' inference has two clinical legs (no paraesthesia complaint, no abnormal deep-tendon reflexes) plus a cited primate neuropathology report. **Integration tumour "cited, not measured" - holds**; this child has an authors' statement of no neoplasm on annual brain MRI (no image) and an unsupported spine extension.
+- Immune: Figure 2 shows plasma anti-IDUA titre surging after immunosuppression withdrawal; no ganglion-level immune readout, so the Group B question (immune-mediated and preventable) is untouched. Candidate `CC-20261004W13-B-WANG-DRG-01` (MINOR).
+- Not re-derived: 16 of 17 first-year AEs attributed to immunosuppression.
+- Owed after this: Video S1 and graphical abstract (no landed record rests on them).
