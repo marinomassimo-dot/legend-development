@@ -30,7 +30,9 @@
         },
         {
           "step": "Fresh-clone battery on the exact SHA, gate, LINT, receipts verify, safe_push to development",
-          "status": "TODO"
+          "status": "BLOCKED",
+          "blocker": "neuro-WWOX new-literature pool exhausted and the decisive targets are paywalled or absent (356 declared artefacts absent; PMIDs 10786676, 11719429, 28001369, 38407561, 40875931, 30202070 and the Steinberg 2026 supplement have no lawful free route); consolidation waves 12–13 done",
+          "unblock": "operator supplies the PDFs (as for Repudi 2021), or a new WWOX/WOREE/SCAR12/EIEE28 paper appears; then run the standing wave-proposal rule"
         }
       ]
     },
@@ -129,7 +131,9 @@
       "steps": [
         {
           "step": "Operator rule of 2026-10-03: whenever a literature batch completes, the Orchestrator proposes and dispatches the next literature wave on its own, choosing the logic by the scientific priorities that emerge (select with a read-only selector agent; same three tests: abstract substantive, lawful body, a question it could change; breadth over repetition). Emerging priority order: (1) allele-class function actually MEASURED (RNA/protein for splice, missense, deletion alleles) and carrier/heterozygote phenotypes (CLAIM 032/045 are thin); (2) restoration spec: WWOX pharmacodynamic assay first, window by endpoint class, immune cost for predicted-null recipients, neonatal DRG/tolerisation; (3) myelin cell-autonomy beyond the thin O-KO negative; (4) patient-overlap integrity (count once); (5) reading debts named by dossiers (Bouteille 2009, Celebi 2020, Serin 2018, Tabarki 2015, Hordeaux 2019/2020, Finnis 2005, Ko 2018) when lawful text appears; (6) periodic fresh-literature scan (WWOX/WOREE/SCAR12/EIEE28 by date). The neuro-WWOX pool is nearly exhausted: when a wave would have fewer than 12 qualifying studies, say so and shift weight to transferable lessons and debts rather than pad.",
-          "status": "TODO"
+          "status": "BLOCKED",
+          "blocker": "neuro-WWOX new-literature pool exhausted and the decisive targets are paywalled or absent (356 declared artefacts absent; PMIDs 10786676, 11719429, 28001369, 38407561, 40875931, 30202070 and the Steinberg 2026 supplement have no lawful free route); consolidation waves 12–13 done",
+          "unblock": "operator supplies the PDFs (as for Repudi 2021), or a new WWOX/WOREE/SCAR12/EIEE28 paper appears; then run the standing wave-proposal rule"
         }
       ]
     },
@@ -147,17 +151,14 @@
       "order": 10,
       "steps": [
         {
-          "step": "Wave 12 (18 re-reads: A, B, C) integrated; receipts 458 (main d88119b2)",
+          "step": "Waves 12 and 13 (35 re-reads) integrated; BATCH_20261004_006 (WM_v7.19) and _007 (WM_v7.20); Mirror reviews through _005",
           "status": "DONE",
-          "evidence": "main d88119b2"
+          "evidence": "main a4f1623e pushed to development (battery 136 targets 0 red)"
         },
         {
-          "step": "BATCH_P: wave 12 candidates incl. two MAJORs (CLAIM 019, CLAIM 002/005) with blind audit; Mirror review of batches _004/_005 (both in flight)",
-          "status": "IN_PROGRESS"
-        },
-        {
-          "step": "Wave 13 (second consolidation wave) selection and dispatch, then pause and report to the operator with the list of paywalled papers they could supply",
-          "status": "TODO"
+          "step": "Pause: neuro-WWOX pool exhausted; remaining targets are paywalled/absent (356 absent artefacts); report to the operator with the list of PDFs they could supply",
+          "status": "DONE",
+          "evidence": "final report in chat 2026-10-05"
         }
       ]
     }
