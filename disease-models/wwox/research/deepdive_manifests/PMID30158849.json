@@ -289,7 +289,8 @@
         "surface": "supplement",
         "artifact": "files/figures/PMID30158849/Table_1_xlsxdump.txt",
         "anchor": "Table_1.XLSX, sheet 1 row 2 (header); both sheets dumped in full",
-        "found_or_sought": "sought — the prior reading declared the file but did not read its cells"
+        "found_or_sought": "sought — the prior reading declared the file but did not read its cells",
+        "panel_text_relation": "text_only"
       },
       {
         "proposition": "Figure 3's residue labels are all tau sites: T153, T175, T181, S199, S202, T205, T212 and S214 (the last two in red), T217, T231, S235, S262, S396, S404, S422. No WWOX residue is labelled. The 'T212' in this figure is tau, not WWOX.",

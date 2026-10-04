@@ -301,7 +301,8 @@
         "surface": "supplement",
         "artifact": "files/fulltext/PMID37897534_assets/18_2023_4950_MOESM1_ESM_pdftotext.txt",
         "anchor": "Supplementary file 1, Figure S3 legend",
-        "found_or_sought": "sought — tests DIS-029's 'knockout plus knockdown'"
+        "found_or_sought": "sought — tests DIS-029's 'knockout plus knockdown'",
+        "panel_text_relation": "text_only"
       },
       {
         "proposition": "FIND-X: no surface read carries a WWOX re-expression (rescue) arm in the null fibroblasts, a gamma-H2AX measurement other than Figure 1d, or an in vivo arm. Surfaces searched: body (by term: re-express, reconstitut, overexpress, ectopic WWOX, in vivo), all seven figure captions, Figures 1-2 as images, and the supplement's Table 1 and Figures S1-S9 legends. Not inspected as images: Figures 3, 4, 5 and 7; Figure 6 halted (not read).",
@@ -309,7 +310,8 @@
         "surface": "supplement",
         "artifact": "files/fulltext/PMID37897534_assets/18_2023_4950_MOESM1_ESM_pdftotext.txt",
         "anchor": "Supplementary file 1, Figure S2 legend (the supplement's only genome-instability figure besides the main-text panels)",
-        "found_or_sought": "sought — FIND-X enumeration"
+        "found_or_sought": "sought — FIND-X enumeration",
+        "panel_text_relation": "text_only"
       }
     ]
   },

@@ -445,7 +445,8 @@
         "surface": "supplement",
         "artifact": "files/fulltext/PMID34204789_assets/s001/Table_S1_pdftotext.txt",
         "anchor": "Table S1, title line; FIND-X enumeration over every surface",
-        "found_or_sought": "sought — FIND-X for a dependence test, which would reopen DIS-026"
+        "found_or_sought": "sought — FIND-X for a dependence test, which would reopen DIS-026",
+        "panel_text_relation": "text_only"
       }
     ]
   },

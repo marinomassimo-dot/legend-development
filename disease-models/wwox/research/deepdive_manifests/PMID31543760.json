@@ -412,7 +412,8 @@
     "surface": "supplement",
     "artifact": "files/fulltext/PMID31543760_assets/Data_Sheet_1_pdftotext.txt",
     "anchor": "Data_Sheet_1.pdf, Supplementary Table 3 (pages 7-10); rows counted with a regular expression over the derived text and the count checked for rows whose numbers fall on a separate line (none)",
-    "found_or_sought": "sought — counted the table to test the body's figure, as the wave's FIND-X rule asks of every number carried"
+    "found_or_sought": "sought — counted the table to test the body's figure, as the wave's FIND-X rule asks of every number carried",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "The supplement holds exactly two figures with images in Data_Sheet_1 (S1 blot, S2 immunocytochemistry), three tables (S1 PCA contributions, S2 and S3 GSEA reports) and three separately deposited network figures (S3-S5). None of these surfaces prints a WWOX knockdown percentage, a densitometry ratio or a WWOX transcript fold change: Supplementary Table 1 holds PCA contributions for 35 oxidative-stress genes (no WWOX row, no direction), Tables 2-3 hold gene-set statistics, and S3/S5 hold node labels with no WWOX node.",
@@ -420,7 +421,8 @@
     "surface": "supplement",
     "artifact": "files/fulltext/PMID31543760_assets/Data_Sheet_1_pdftotext.txt",
     "anchor": "Data_Sheet_1.pdf page 2; surfaces enumerated: Data_Sheet_1 pages 1-10, Data_Sheet_2 (S3), Data_Sheet_3 (S4, raster labels not legible), Data_Sheet_4 (S5)",
-    "found_or_sought": "sought — FIND-X enumeration of every supplementary surface for a knockdown quantity"
+    "found_or_sought": "sought — FIND-X enumeration of every supplementary surface for a knockdown quantity",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "Supplementary Figure S3 (the high-resolution Figure 9 network) carries 195 gene-symbol tokens in its text layer against the 198 nodes the body states; WWOX is not among them, and the figure prints no numeric value. 193 of its 195 symbols recur in S5 (the remaining difference is TUBG1 and TUBGCP3 merged into one token in S5).",
@@ -428,7 +430,8 @@
     "surface": "supplement",
     "artifact": "files/fulltext/PMID31543760_assets/Data_Sheet_2_pdftotext.txt",
     "anchor": "Data_Sheet_2.PDF, caption at the foot of the page; symbol count by regular expression over the raw text layer",
-    "found_or_sought": "sought — searched the node set for WWOX and for any printed quantity"
+    "found_or_sought": "sought — searched the node set for WWOX and for any printed quantity",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "Supplementary Figure S5 encodes the neuron-stage log2 fold change by node colour only (magenta up, turquoise down); no fold-change value is printed for any gene, and WWOX is not a node.",
@@ -436,7 +439,8 @@
     "surface": "supplement",
     "artifact": "files/fulltext/PMID31543760_assets/Data_Sheet_4_pdftotext.txt",
     "anchor": "Data_Sheet_4.PDF, caption at the foot of the page",
-    "found_or_sought": "sought — searched for any printed number and for a WWOX node"
+    "found_or_sought": "sought — searched for any printed number and for a WWOX node",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "Supplementary Figure S4 (hNPC-stage network, Figure 10A at high resolution) was opened as a rendered image at 60 dpi: a protein-protein network of roughly two hundred nodes coloured magenta and turquoise, with the caption naming the log2 fold change of hNPC/shWWOX versus hNPC/shScrambled. The file has no text layer and its node labels were not legible at the resolution rendered, so whether WWOX is a node in S4 was NOT determined; the figure prints no numeric axis or value.",

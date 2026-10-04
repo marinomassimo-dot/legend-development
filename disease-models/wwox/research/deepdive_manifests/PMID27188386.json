@@ -282,7 +282,8 @@
     "surface": "supplement",
     "artifact": "files/fulltext/PMID27188386_Shinde2016_supplement/wwox_probe_blockmap.txt",
     "anchor": "Supplementary Table 3, column block S-U (UKK VPA), row 553; derived by mapping every probe-id cell to its compound header",
-    "found_or_sought": "sought — FIND-X: the direction of the valproate effect on WWOX, re-measured on the restored bytes"
+    "found_or_sought": "sought — FIND-X: the direction of the valproate effect on WWOX, re-measured on the restored bytes",
+    "panel_text_relation": "text_only"
    }
   ],
   "source_fulltext_indexed": true,

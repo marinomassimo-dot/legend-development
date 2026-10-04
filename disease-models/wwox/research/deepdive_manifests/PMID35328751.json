@@ -504,7 +504,8 @@
     "surface": "supplement",
     "artifact": "files/fulltext/PMID35328751_assets/s001/Supplementary_figures_captions_pdftotext.txt",
     "anchor": "Supplementary figures captions, Figure S4",
-    "found_or_sought": "sought — FIND-X over the supplement"
+    "found_or_sought": "sought — FIND-X over the supplement",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "Figure 6a (cytoplasmic fraction, hand readings of fold change): knockout HIF1α about 0.55 versus 1.0 (normoxia normoglycemia) and about 1.25 versus 2.05 (hypoxia normoglycemia) — the two decreases the text reports — about equal in normoxia hyperglycemia (about 0.9 versus 0.9), and higher in hypoxia hyperglycemia (about 2.45 versus 2.1). Nuclear panel 6b has wide error bars; the HIF1α bands are faint. The decrease is condition-specific, not general.",
