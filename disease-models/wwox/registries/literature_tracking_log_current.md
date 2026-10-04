@@ -8744,7 +8744,8 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Quality status:** peer-reviewed (PubMed listing)
 **Filter decision:** deep-dive — performed 2026-10-04; the full text was acquired and read (receipt `FTR-20261004-21476439-01`)
 **Tier:** A
-**Status:** processed [2026-10-04, `CC-20261004-MIRROR-42`: the record declared READ IN FULL and a landing in [[paper_registry_current#PAPER 244]] while this field still read *«screened»*]
+**Status:** processed
+**Status note:** 2026-10-04, `CC-20261004-MIRROR-42` (`BATCH_20261004_007`): moved from *«screened»*, which this field still read while the record itself declared READ IN FULL and a landing in [[paper_registry_current#PAPER 244]]; the value is written bare because the log's own `Status vocabulary` table is closed and an annotated value is `NOT_IN_VOCABULARY`.
 **Primary pathway:** P5 — metabolism / mitochondria / redox
 **Genotype/model tag:** unassigned in triage
 **Species:** not assessed in triage
