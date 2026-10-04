@@ -1,0 +1,337 @@
+{
+ "schema_version": 2,
+ "pmid": "41477840",
+ "doi": "10.1126/sciadv.adv0588",
+ "receipt": "FTR-20261004-41477840-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID41477840.md",
+  "disease-models/wwox/research/intake_wave_20261004w8_A.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W8-A-REGISTRY-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "A transcript time course with no perturbation; carried as one expression datum with its limits, not mined further."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No intervention on WWOX is tested."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is tested."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "A reader cannot audit their own locators."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "weighting": "A cell-reprogramming group (human glia-to-interneuron conversion). Credible on the reprogramming system; WWOX is incidental to the thesis and its WWOX citations are second-hand."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "registry_records.py get --pmid 41477840 (LEGEND)",
+    "count": 0,
+    "source": "LEGEND registries 2026-10-04"
+   },
+   {
+    "query": "fulltext_receipts.py status --pmid 41477840",
+    "count": 0,
+    "source": "receipt ledger 2026-10-04"
+   }
+  ],
+  "note": "LEGEND holds no record of this paper. It holds all three WWOX references the Discussion cites."
+ },
+ "multihop": {
+  "references_enumerated": 84,
+  "gene_direct_refs_in_source": [
+   "33255508",
+   "30290271",
+   "32581702"
+  ],
+  "resolved": [
+   {
+    "pmid": "33255508",
+    "how": "Aldaz & Hussain 2020 is held (files/fulltext/PMID33255508_Aldaz2020.xml) with receipted readings; its expression paragraph was opened here to check the 'basket PV cells' citation."
+   },
+   {
+    "pmid": "30290271",
+    "how": "Hussain 2019 is held with a complete receipted reading; its manifest carries the PV+ stereology locators that support the cited reduction (constitutive null mouse, two weeks)."
+   },
+   {
+    "pmid": "32581702",
+    "how": "Iacomino 2020 (Front Neurosci) is held as PAPER 020 with a complete receipted reading; this paper cites it with a wrong year and volume ('9, 206 (2019)')."
+   }
+  ],
+  "queued": [],
+  "disposition": "84 references enumerated; three WWOX gene-direct references (identified by title; the ref elements carry no PMIDs), all resolved against held readings."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 41477840; --theme parvalbumin, Iacomino after the first pass; fulltext_receipts.py status for the three cited WWOX references",
+  "hits": 0,
+  "note": "No record names this paper; the 'parvalbumin' theme hits only full-text-queue comparator entries."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-04 via PubMed metadata (get_article_metadata): publication types ['Journal Article']; no retraction, expression of concern or correction listed for PMID 41477840.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 84,
+   "references_screened": 81,
+   "references_with_doi": 81,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 24,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41477840_Stamouli2026_PMC.xml",
+   "sha256": "ea7d15c444376f938fb8f991207e46a41c018da6271bc5af65433648b0e1dc13",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12757047/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": false,
+    "result_sha256": "ea7d15c444376f938fb8f991207e46a41c018da6271bc5af65433648b0e1dc13"
+   }
+  },
+  {
+   "path": "files/supplements/PMID41477840/s.zip",
+   "sha256": "d84063530840010c4c8035761d6d22a3d9fe7b00519af77d7fb2b46f2e3cfc07",
+   "kind": "supplement_binary",
+   "note": "Europe PMC supplementaryFiles container for PMC12757047, kept unchanged; the members cited below were extracted from it byte-for-byte.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12757047/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": false,
+    "result_sha256": "d84063530840010c4c8035761d6d22a3d9fe7b00519af77d7fb2b46f2e3cfc07"
+   }
+  },
+  {
+   "path": "files/supplements/PMID41477840/sciadv.adv0588-f6.jpg",
+   "sha256": "d1b975e9ad750ca0d222e9863e7390a19852d7607043a74d5d8014aae178f185",
+   "kind": "figure",
+   "note": "Figure 6 as published (JPEG, 730x1018); panels F and H cropped and read.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12757047/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip, member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": true,
+    "derived_from": "files/supplements/PMID41477840/s.zip",
+    "extractor": {
+     "name": "python3 -m zipfile",
+     "version": "Python 3.12",
+     "call": "zipfile -e, member written byte-for-byte"
+    },
+    "result_sha256": "d1b975e9ad750ca0d222e9863e7390a19852d7607043a74d5d8014aae178f185"
+   }
+  },
+  {
+   "path": "files/supplements/PMID41477840/sciadv.adv0588_sm.pdf",
+   "sha256": "5871ed640d6bdd14b8c3de827ae48ad080901f2205572813e48c2be5c6a7aaf1",
+   "kind": "supplement_binary",
+   "note": "Supplementary PDF: Figs. S1-S7, Tables S1-S8.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12757047/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip, member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": true,
+    "derived_from": "files/supplements/PMID41477840/s.zip",
+    "extractor": {
+     "name": "python3 -m zipfile",
+     "version": "Python 3.12",
+     "call": "zipfile -e, member written byte-for-byte"
+    },
+    "result_sha256": "5871ed640d6bdd14b8c3de827ae48ad080901f2205572813e48c2be5c6a7aaf1"
+   }
+  },
+  {
+   "path": "files/supplements/PMID41477840/sciadv.adv0588_sm.txt",
+   "sha256": "8af02bc811a6d10f574ff1ecfb1b859898c79ef8042cf8313fee36ed534f8d13",
+   "kind": "supplement_text",
+   "note": "pdftotext -layout -nopgbrk text layer of the supplementary PDF (lossy for figure content; tables kept in layout). Searched for WWOX (one hit, Table S5).",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID41477840/sciadv.adv0588_sm.pdf",
+    "acquired_on": "2026-10-04",
+    "extractor": {
+     "name": "pdftotext",
+     "version": "24.02.0",
+     "call": "pdftotext -layout -nopgbrk sciadv.adv0588_sm.pdf"
+    },
+    "result_sha256": "8af02bc811a6d10f574ff1ecfb1b859898c79ef8042cf8313fee36ed534f8d13"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID33255508_Aldaz2020.xml",
+   "sha256": "92f0f3bc8af67a19a88c210f918c7341244853237567647cfc4246aa06a0c0a7",
+   "kind": "article_text",
+   "note": "Held artefact of the cited review PMID 33255508, opened only to check one citation.",
+   "acquisition_recipe": {
+    "no_recipe": "Acquired by an earlier reading of PMID 33255508 (its own manifest declares the route); this manifest only re-uses the held bytes to check one citation and did not re-acquire them."
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC12757047/fullTextXML on 2026-10-04 returned HTTP 200 with a <body>; Figure 6 and the supplementary PDF came from the Europe PMC supplementaryFiles container.",
+  "entries": [
+   {
+    "proposition": "Results (Fig. 6F) describe WWOX as gradually up-regulated along the PV trajectory, alongside gephyrin and NLGN1.",
+    "snippet": "Moreover, the gene WW Domain Containing Oxidoreductase (WWOX) was gradually up-regulated (Fig. 6F), as were postsynaptic proteins gephyrin (GPHN) and NLGN1.",
+    "anchor": "Results, lineage trajectory section, Fig. 6F paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41477840_Stamouli2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human stem-cell-derived glial progenitor cells reprogrammed in 3D spheroids, snRNA-seq",
+     "genotype": "wild-type WWOX; lentiviral ADLSF transcription-factor cocktail",
+     "timepoint": "days 0-21 of reprogramming",
+     "endpoint": "WWOX average transcript expression"
+    }
+   },
+   {
+    "proposition": "Results (Fig. 6H) describe a robust WWOX up-regulation as early as day 7.",
+    "snippet": "There was a robust up-regulation of WWOX, RORA, and RBFOX3 as early as day 7",
+    "anchor": "Results, lineage trajectory section, Fig. 6H paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41477840_Stamouli2026_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human stem-cell-derived glial progenitor cells reprogrammed in 3D spheroids, snRNA-seq",
+     "genotype": "wild-type WWOX; lentiviral ADLSF transcription-factor cocktail",
+     "timepoint": "days 0-21 of reprogramming",
+     "endpoint": "WWOX average transcript expression"
+    }
+   },
+   {
+    "proposition": "Fig. 6H panel read: average WWOX expression rises from about 1.3 (day 1) to about 2.15 (day 7) and about 2.5 (day 13), then falls to about 1.2 at day 21 — a transient, roughly two-fold peak, not a sustained rise; the cells averaged are not named in the legend.",
+    "snippet": "(H) Average expression of specific genes at different time points of reprogramming.",
+    "anchor": "Figure 6H (sciadv.adv0588-f6.jpg, 730x1018; WWOX sub-panel cropped and read at 250%)",
+    "surface": "figure",
+    "artifact": [
+     "files/supplements/PMID41477840/sciadv.adv0588-f6.jpg"
+    ],
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[1]",
+    "qualifies_needle": "robust up-regulation of WWOX, RORA, and RBFOX3",
+    "experimental_context": {
+     "system": "human stem-cell-derived glial progenitor cells reprogrammed in 3D spheroids, snRNA-seq",
+     "genotype": "wild-type WWOX; lentiviral ADLSF transcription-factor cocktail",
+     "timepoint": "days 0-21 of reprogramming",
+     "endpoint": "WWOX average transcript expression"
+    }
+   },
+   {
+    "proposition": "The Discussion itself calls the WWOX change transient and ties the migration label to a speculative chromatin explanation.",
+    "snippet": "we observed transient up-regulation of neuronal migration genes such as PLEKHG1 and WWOX, possibly reflecting a more accessible chromatin around these genes and the migratory nature of hGPCs",
+    "anchor": "Discussion, paragraph on PV-fate genes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41477840_Stamouli2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fig. 6F panel read: the WWOX row is not blank in the early glial segment of the PV trajectory and is higher in the later neuronal and PV segments, so WWOX transcript is present in the starting human glial progenitors.",
+    "snippet": "(F) Heatmap visualizing important genes of the PV trajectory.",
+    "anchor": "Figure 6F (sciadv.adv0588-f6.jpg, heatmap rows cropped and read at 200%)",
+    "surface": "figure",
+    "artifact": [
+     "files/supplements/PMID41477840/sciadv.adv0588-f6.jpg"
+    ],
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[0]",
+    "qualifies_needle": "was gradually up-regulated (Fig. 6F)",
+    "experimental_context": {
+     "system": "human stem-cell-derived glial progenitor cells reprogrammed in 3D spheroids, snRNA-seq",
+     "genotype": "wild-type WWOX; lentiviral ADLSF transcription-factor cocktail",
+     "timepoint": "days 0-21 of reprogramming",
+     "endpoint": "WWOX average transcript expression"
+    }
+   },
+   {
+    "proposition": "Table S5: WWOX is a top-25 differentially expressed gene of neuronal cluster 16 (log fold change 1.84).",
+    "snippet": "WWOX          WW Domain Containing                   1,06E-50     5,71E-48     1,84 16",
+    "anchor": "Supplementary Table S5, WWOX row (pdftotext -layout text of the supplementary PDF)",
+    "surface": "supplement",
+    "artifact": "files/supplements/PMID41477840/sciadv.adv0588_sm.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Discussion says WWOX protein is highly expressed in basket PV cells, citing a review; the cited review (held) speaks of mouse single-cell RNA-seq transcript levels in cerebellar GABAergic basket cells and does not mention PV — the citation upgrades transcript to protein and adds PV.",
+    "snippet": "This protein is highly expressed in basket PV cells (71)",
+    "anchor": "Discussion, paragraph on PV-fate genes, ref. 71",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41477840_Stamouli2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The cited review's own sentence: mouse scRNA-seq places the highest Wwox transcript levels in cerebellar GABAergic basket cells and granular cells.",
+    "snippet": "From exploring scRNA-Seq mouse datasets, GABAergic basket cells and granular cells appear as the subtypes with highest expression levels.",
+    "anchor": "PMID 33255508 (Aldaz & Hussain 2020), section on WWOX expression in the CNS, summary paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33255508_Aldaz2020.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors' limitations: the 3D culture lacks key inputs such as glutamatergic ones, and RNA velocity was applied to single-nucleus data.",
+    "snippet": "it does not fully replicate the human brain environment as key inputs (i.e., glutamatergic), are absent",
+    "anchor": "Discussion, Limitations of the study",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41477840_Stamouli2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}
