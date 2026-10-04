@@ -1,0 +1,228 @@
+{
+  "schema_version": 2,
+  "pmid": "40183601",
+  "doi": "10.1111/epi.18403",
+  "receipt": "FTR-20261004-40183601-01",
+  "context_policy": "SOURCE_FIRST",
+  "landing": [
+    "disease-models/wwox/research/fulltext_dossiers/PMID40183601.md",
+    "disease-models/wwox/research/intake_wave_20261004w9_C.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261004W9-C-DEEPINTRONIC-01.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261004W9-C-REGISTRY-01.md"
+  ],
+  "skills_considered": [
+    {
+      "skill": "find-fulltext",
+      "used": true
+    },
+    {
+      "skill": "legend-study-intake-triage",
+      "used": true
+    },
+    {
+      "skill": "legend-deepdive",
+      "used": true
+    },
+    {
+      "skill": "legend-discovery",
+      "used": false,
+      "reason": "The discovery ledger is owned by other batches; what this reading supports is proposed as commit candidates and in the intake note."
+    },
+    {
+      "skill": "legend-hypothesis-forge",
+      "used": false,
+      "reason": "One reading supplies at most a lever to state with its limits; forging a portfolio from it would manufacture leads."
+    },
+    {
+      "skill": "legend-safety-triage",
+      "used": false,
+      "reason": "No compound is proposed by this source."
+    },
+    {
+      "skill": "legend-commit",
+      "used": false,
+      "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+    },
+    {
+      "skill": "legend-locator-audit",
+      "used": false,
+      "reason": "The triples are published in the candidates for a blind auditor; the reader cannot audit their own locators."
+    }
+  ],
+  "group_assessment": {
+    "total_publications": 1,
+    "publications_on_gene": 0,
+    "research_type": "descriptive_clinical",
+    "is_primary_group_for_disease": false,
+    "weighting": "Academic clinical-genomics centre reporting consecutive paediatric epilepsy diagnostics; no WWOX-focused publication, but the cohort carries four WWOX-diagnosed individuals and one cDNA-level splice result."
+  },
+  "field_density": {
+    "queries": [
+      {
+        "query": "WWOX AND cohort AND epilepsy",
+        "count": 10,
+        "source": "PubMed ESearch rettype=count 2026-10-04"
+      },
+      {
+        "query": "WWOX AND \"deep intronic\"",
+        "count": 0,
+        "source": "PubMed ESearch rettype=count 2026-10-04"
+      }
+    ],
+    "note": "No PubMed record pairs WWOX with the phrase 'deep intronic'; this cohort reports a homozygous deep intronic WWOX variant with a cDNA consequence."
+  },
+  "multihop": {
+    "references_enumerated": 50,
+    "gene_direct_refs_in_source": [],
+    "resolved": [],
+    "queued": [],
+    "note": "50 references enumerated; none is WWOX-direct. The WWOX content is this cohort's own diagnostic data (main text plus Supplementary Table S9), not a citation, so no hop is owed."
+  },
+  "corpus_crossquery": {
+    "query": "registry_records.py get --pmid 40183601; fulltext_receipts.py status --pmid 40183601; allele strings c.107+119C>G, c.965A>G, c.183C>A against the held ClinVar snapshots",
+    "hits": 0,
+    "note": "No registry record and no receipt before this reading. Of the three alleles, c.183C>A and c.965A>G are in the held ClinVar snapshot (pathogenic/likely pathogenic and uncertain significance respectively) and c.107+119C>G is absent from it."
+  },
+  "retraction_check": {
+    "checked": true,
+    "result": "Checked 2026-10-04 via PubMed ESummary: publication types ['Journal Article']; no retraction, expression of concern or correction listed for PMID 40183601.",
+    "dependencies": {
+      "flagged": [],
+      "noted": [],
+      "paper_verdict": "SCREENED_CLEAN",
+      "reference_source": "network",
+      "references_declared": 50,
+      "references_screened": 46,
+      "references_with_doi": 46,
+      "schema": "retraction_check.dependencies/1",
+      "screened": true,
+      "snapshot": {
+        "date": "2026-09-10",
+        "days_since_fetch": 24,
+        "rows": 72476,
+        "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+      },
+      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+      "unscreenable": {
+        "UNSCREENABLE_NO_DOI": 4
+      }
+    }
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID40183601_Henry2025_PMC.xml",
+      "sha256": "3d4652df8a8d068c17525672233a0668aefb57af6ec256dbb93504621c2a225c",
+      "kind": "article_text",
+      "note": "Europe PMC fullTextXML (135 597 B): body, Table 1, four figure legends, supplementary listing, references.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12371643/fullTextXML",
+        "http_method": "GET",
+        "tier": "Europe PMC REST fullTextXML",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "3d4652df8a8d068c17525672233a0668aefb57af6ec256dbb93504621c2a225c"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID40183601_Henry2025_supp_tableS9.xlsx",
+      "sha256": "4dcd85cf5a6d8254ff0c30ea1a210ad59c8f2b5baaf48e80076d758ffc8bf457",
+      "kind": "supplement_binary",
+      "note": "Supplementary table of diagnostic variants and phenotypes in solved individuals (280 rows), parsed cell-wise; carries the four WWOX rows.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12371643.1/EPI-66-2966-s001.xlsx",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "4dcd85cf5a6d8254ff0c30ea1a210ad59c8f2b5baaf48e80076d758ffc8bf457"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID40183601_Henry2025_supp_tableS9.txt",
+      "sha256": "2a33fda96b04edbf9d35bcb379a0d65d9d28be564662cdc2ee37308fae64c0f3",
+      "kind": "supplement_text",
+      "note": "Tab-separated text layer derived cell-wise from the supplement workbook by a local parser (zipfile plus sharedStrings and sheet XML); lossless for cell values, loses formatting and merged-cell structure. Locators from the supplement quote this derived text.",
+      "acquisition_recipe": {
+        "resolved_url": "local derivation from PMID40183601_Henry2025_supp_tableS9.xlsx",
+        "http_method": "GET",
+        "tier": "local_xlsx_cellwise_parser",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": true,
+        "result_sha256": "2a33fda96b04edbf9d35bcb379a0d65d9d28be564662cdc2ee37308fae64c0f3",
+        "derived_from": "files/fulltext/PMID40183601_Henry2025_supp_tableS9.xlsx",
+        "extractor": {
+          "name": "local xlsx cell-wise parser (python zipfile plus sharedStrings and sheet XML)",
+          "version": "wave9-scientistC",
+          "call": "dump every sheet of PMID40183601_Henry2025_supp_tableS9.xlsx to tab-separated text, one line per row, cells joined by a tab"
+        }
+      }
+    }
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "entries": [
+      {
+        "proposition": "A homozygous WWOX c.107+119C>G deep intronic variant was shown by cDNA analysis to cause inclusion of the first intron in NM_016373, producing a premature stop codon.",
+        "snippet": "A homozygous WWOX c.107 + 119C>G variant was shown to lead to the inclusion of the first intron in transcript NM_016373 , leading to a premature stop codon after cDNA analysis.",
+        "anchor": "Results, Diagnostic variants (deep intronic variants paragraph)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID40183601_Henry2025_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "WWOX accounts for four of the fifty-one solved individuals with infantile epileptic spasms syndrome in this cohort, behind STXBP1 (6) and level with CDKL5 (4).",
+        "snippet": "Infantile epileptic spasms syndrome 51/132 (38.6%) STXBP1 (6), CDKL5 (4), WWOX (4)",
+        "anchor": "Table 1, Infantile epileptic spasms syndrome row",
+        "surface": "table",
+        "artifact": "files/fulltext/PMID40183601_Henry2025_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The denominator: 733 families with paediatric epilepsy received clinical genome or exome sequencing, and 278 of 733 (37.9%) received a molecular diagnosis.",
+        "snippet": "A genetic diagnosis was identified in 278 of 733 individuals (37.9%;",
+        "anchor": "Results, Diagnostic variants",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID40183601_Henry2025_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Cohort-level mortality at review was 9.3%, the comparator any WWOX mortality figure needs.",
+        "snippet": "Sixty‐eight individuals were deceased (9.3%) at the time of review.",
+        "anchor": "Results, cohort phenotypic traits",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID40183601_Henry2025_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The four WWOX individuals carry three distinct biallelic genotypes, all homozygous with both parents as carriers, all with infantile epileptic spasms syndrome: a nonsense allele, a missense allele in two individuals of the same family, and the deep intronic allele.",
+        "snippet": "Hom\tWWOX\tc.107+119C>G\tNM_016373\tMaternal, Paternal",
+        "anchor": "Supplementary Table S9 (solved individuals), WWOX rows",
+        "surface": "supplement",
+        "artifact": "files/fulltext/PMID40183601_Henry2025_supp_tableS9.txt",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The deep intronic WWOX case was alive at review, while the two individuals sharing the homozygous missense genotype were recorded as deceased.",
+        "snippet": "Hom\tWWOX\tc.965A>G, p.(His322Arg)\tNM_016373\tMaternal",
+        "anchor": "Supplementary Table S9 (solved individuals), WWOX rows with mortality column",
+        "surface": "supplement",
+        "artifact": "files/fulltext/PMID40183601_Henry2025_supp_tableS9.txt",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Autosomal recessive homozygous inheritance accounts for 32 of 281 etiologies in this cohort, the band WWOX belongs to.",
+        "snippet": "followed by AD inherited (41/281, 14.6%) and autosomal recessive homozygous (32/281, 11.4%)",
+        "anchor": "Results, Diagnostic variants",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID40183601_Henry2025_PMC.xml",
+        "panel_text_relation": "text_only"
+      }
+    ],
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC REST fullTextXML returned HTTP 200 with a full JATS body on 2026-10-04; the declared article_text is that response.",
+    "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+  }
+}
