@@ -74,3 +74,16 @@ Format: `(proposition | verbatim quote | anchor)`. Each artefact is on disk and 
 - [PMID 41751597, artefact `files/fulltext/PMID41751597_Rioux2026_PMC.derived.txt`] (Table A3, cerebrum, intravenous: day 1 (lower dose) 0.002756 versus day 28 (higher dose) 0.004638; no fall with age. | Cerebrum P28 IV (5 × 1011 vg) 11 0.004638 0.001302 | Table A3, Cerebrum, P28)
 - [PMID 41751597, artefact `files/fulltext/PMID41751597_Rioux2026_PMC.derived.txt`] (Table A3, cerebrum, intravenous, day 1. | Cerebrum P1 IV (2.5 × 1011 vg) 10 0.002756 0.000864 | Table A3, Cerebrum, P1)
 - [PMID 41751597, artefact `files/fulltext/PMID41751597_Rioux2026_PMC.derived.txt`] (Table A1 body weight by age (female then male): about 1.4 g at day 1, 2.7 g at day 5, 6.0 g at day 10, 13.5-13.9 g at day 28. | Body Weight mean (g) 1.36 2.76 5.95 13.47 17.07 1.46 2.64 6.02 13.92 22.13 | Table A1, Body Weight row)
+
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** `PROPAGATED` by `BATCH_20261004_001` (2026-10-04, MINOR, WM_v7.13 → WM_v7.14; ACTOR_ID `scientist`, Scientist K, batch integrator).
+**Surfaces written:** research_lines_current.md · dismissal_ledger_current.md
+
+Created as **`RL-C-20261004w7c2`**, plus **one corroboration line inside `DIS-033`** rather than a second window record.
+**Deduplication pass against the landed dose-scalar and window records.** Against `DL-METH-117` (*a dose carried without its scalar is not a dose*) and `DIS-033` (*the window cannot be bounded from the 2024–2026 gene-therapy literature*): **a distinct proposition**, so a new record, not a merge — `DL-METH-117` says the scalars are mutually non-convertible, while this says that in one fixed-total-vg design **age and dose per tissue cannot be separated at all**. It corroborates `DIS-033` without widening it, which is why the corroboration is one line inside that record and the detail is carried here.
+**The whole arithmetic of § 2 was recomputed from the two numbers each row names, and every figure holds:** body-weight ratio 13.695 / 1.41 = 9.7 (*«about tenfold»*), brain 0.444 / 0.087 = 5.1 (*«about fivefold»*), and all six derived per-gram figures (2.5 × 10¹¹ ÷ 1.41 = 1.77 × 10¹¹; ÷ 13.70 = 1.82 × 10¹⁰; ÷ 0.087 / 0.183 / 0.336 / 0.444 = 2.87 × 10¹² / 1.37 × 10¹² / 7.44 × 10¹¹ / 5.63 × 10¹¹; 5 × 10¹¹ ÷ 0.444 = 1.13 × 10¹²).
+🔴 **But the blind audit inverted one of its conclusions, and that is the amendment worth reading.** The candidate said the *«younger is higher»* sentence is **not reproduced** in the whole-cerebrum vector-genome counts. On raw means that is true; **per vector genome administered it is false in the IV arm** — the day-28 animals received **twice** the dose, so 0.004638 / 0.002756 = 1.68× at 2× dose is about **16 % BELOW** day 1, and the paper's own within-day-5 IV dose step (1.67×) supports reading that range as roughly linear. And the ICV comparison supports **neither** direction: the day-28 SEM is 0.295 against a mean of 0.396, about **75 %** of it, with no test reported. The landed record carries the narrower statement that survives both facts. A third amendment: the per-body-weight consequence is the **reader's** arithmetic — the authors state only that growth data were taken *«to estimate how vector load may scale with growth»*.

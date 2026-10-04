@@ -52,3 +52,15 @@
 (the strongest meta-analysis p lies at a different position | in the LRR based meta-analysis the meta-P value was 4.65x10-22 at chr16:79,043,240 | PMID 41345172, Results; files/fulltext/PMID41345172_De2025_PMC.xml)
 (the authors ask for validation because of the fragile site | Since WWOX has a well-known fragile site (FRA16D27) further experimental validation is required to confirm these findings. | PMID 41345172, Results; files/fulltext/PMID41345172_De2025_PMC.xml)
 (the deletion's best drug-response p in SANAD is nominal | SANAD_LRR_univariate chr16 78383363 drug_response -0.51500000000000001 0.17799999999999999 1.6799999999999999E-4 | PMID 41345172, Supplementary Table 4 sheet SANAD; files/fulltext/PMID41345172_De2025_supplement/41598_2025_28338_MOESM4_ESM_cells.txt)
+
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** `PROPAGATED` by `BATCH_20261004_001` (2026-10-04, MINOR, WM_v7.13 → WM_v7.14; ACTOR_ID `scientist`, Scientist K, batch integrator).
+**Surfaces written:** claim_registry_current.md · dismissal_ledger_current.md
+
+One `replace-within` on `CLAIM 032` (live `Status`: `in observation`) and one new dismissal, **renumbered `DIS-035` → `DIS-036`** because group A's candidate took `DIS-035` in event order. Wikilinks renumbered `PAPER 204` → `208`, `PAPER 205` → `209`; both papers gained the reciprocal `Claim links: CLAIM 032`.
+🔴 **Genotype caution travels in both records, as the dispatch required.** A de novo heterozygous ~13 Mb 16q23q24 deletion spanning dozens of genes including ANKRD11 is a **contiguous-gene** observation, not a WWOX-DEE allele-class observation and not a haploinsufficiency datum; a common intronic deletion at AF 0.339–0.47 that removes no exon is not a WOREE or SCAR12 allele observation and says nothing about losing one functional copy; and a heterozygote is neither a demonstrated negative nor a positive for haploinsufficiency.
+**One integrator amendment from the blind audit makes the rejection stronger.** The genome-wide-strength meta-p of 4.65 × 10⁻²² is not merely ~660 kb away (re-derived: 79,043,240 − 78,385,000 = 658,240) — **it is for a different phenotype**, *«time to first seizure»*, while the deletion's own nominal association is with drug response. An auditor also measured that 1.68 × 10⁻⁴ is the **minimum** drug-response p anywhere in the SANAD sheet, about 3.4 orders of magnitude short of 5 × 10⁻⁸. A second amendment records that the source's Table 3 states **no size** for the 16q deletion (its `CNV (G/L)` and `Size` cells both read `L`), so the ~13 Mb figure is derived from the printed interval rather than quoted.

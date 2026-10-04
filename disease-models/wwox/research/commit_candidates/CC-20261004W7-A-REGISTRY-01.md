@@ -133,3 +133,15 @@ Both `old` strings were read from the landed record with `registry_records.py ge
 - (The review states its own inclusion rule and reports no new measurement | `Research papers were included on the basis that astrocyte function was investigated in models carrying known pathogenic variants.` | PMID42558002 Introduction, `files/fulltext/PMID42558002_Lange2026_PMC.xml`)
 - (The oligodendroglia panel is twelve lines, four per ancestry | `We generated a total of 12 iPSC lines (four AF, four AI, and four EU) in this study` | PMID40937943 Results, `files/fulltext/PMID40937943_Ramirez2025_PMC.xml`)
 - (The WWOX locus is one imputed common variant with its hazard ratio and three p values | `16 78.28 rs8050111 G 0.066 2.12 1.63–2.75 1.08 × 10−6 0.01 2.37 × 10−8 WWOX` | PMID33958783 Table 1, `files/fulltext/PMID33958783_Liu2021_PMC.xml`)
+
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** `PROPAGATED` by `BATCH_20261004_001` (2026-10-04, MINOR, WM_v7.13 → WM_v7.14; ACTOR_ID `scientist`, Scientist K, batch integrator).
+**Surfaces written:** paper_registry_current.md · literature_tracking_log_current.md
+
+`PAPER 201`–`204` created with `LIT-0494`–`0496`; `CORPUS-STUB-132` promoted to `PAPER 201`; `LIT-0493` (PMID 33958783) moved `discovered` → `processed`. **The provisional numbers were the applied ones** — A declared `PAPER 201`–`204` and `LIT-0494`–`0496` and `registry_records.py catalog` on `main` `520c726` confirmed `PAPER 200` / `LIT-0493` as the ceiling, so A was applied first in event order and kept its numbers.
+Four integrator changes. (1) **Two stale cross-links repaired:** the candidate's `PAPER 184` and `PAPER 186`/`PAPER 185` in the `ASTROCYTE`/`NEURONSPEC` texts were wave-6-era numbers — `PAPER 184` is PMID 42422766 — and became `PAPER 202`, `204` and `203`. (2) **The literal `partial full text` was inserted beside every `partial_fulltext_read`**, because `coverage_report.PARTIAL_MARKERS` does not recognise the token on its own. (3) **The three new `LIT` rows' compound `Status` lines were split** into a bare `processed` plus a `Status note`, and given an `Evidence depth` field and the surface's own field names (`Short title`, `PAPER link`): `Title`/`Paper link` occur nowhere else in that log, and `Short title` is 475 of 475. (4) **`PAPER 202` gained `Claim links: CLAIM 005`**, the reciprocal entry owed because `CLAIM 005`'s new evidence boundary names PMID 42558002.
+One deliberate omission, carried from `BATCH_20261003_005`'s decision on `LIT-0110`: **`LIT-0493` restates no depth marker**, because a registry depth declaration counts as a reading in `coverage_report.py` and `PAPER 204` already declares this PMID's depth. The row says so in its own `Status note`.
