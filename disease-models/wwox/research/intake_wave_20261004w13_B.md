@@ -11,3 +11,10 @@ Owed: figures and tables `captions_only`, supplement `not_read`. Read now: Figur
 - Additional file 1 has no DRG or nerve row (tissue list in the manifest).
 - Transfer limit: SMA/SMN1 construct, one NHP dose (4.67E13 vg/animal), no WWOX datum.
 - Owed after this: figures 1-6 panels (not touched; no landed record rests on them), reference content.
+
+## PMID 42136830 (Haque 2026, lumbar intrathecal rAAV9 biodistribution, macaque) - WWOX zero (earned null)
+Owed: figures `captions_only`. Read now: Figures 1-5, graphical abstract, Table 2 (bold markup), Supplementary Figure S1, an unlisted raw-data PDF. Manifest 26 locators (PASS); dossier part 2.
+- **CLAIM 047 / PAPER 227 ("no expression anywhere") - survives.** Every axis in every panel is vector genome; the authors give the reason (and, for TSHA-102, that RNA would be silenced by design in wild-type brain). No expression panel exists, so CLAIM 047 does not move off T5 for expression.
+- **New measured detail:** "No immunosuppression was used" in the analysed animals, four immunosuppressed TSHA-101 animals excluded (footnote b); 28 of 47 treated animals analysed (Table 2 bold); Figure 5's time line mixes constructs and uses sample-level SD; pre-screen preferential, not a filter. These sharpen CLAIM 047's bound (candidate `CC-20261004W13-B-HAQUE-EXPRESSION-01`, MINOR).
+- No tolerability or DRG endpoint exists in the paper; the paper cannot bear on DIS-031.
+- Owed after this: the publisher PDF article (not needed by any landed record).
