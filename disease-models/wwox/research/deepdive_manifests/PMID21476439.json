@@ -1,0 +1,495 @@
+{
+  "schema_version": 2,
+  "pmid": "21476439",
+  "doi": null,
+  "receipt": "FTR-20261004-21476439-01",
+  "context_policy": "SOURCE_FIRST",
+  "landing": [
+    "disease-models/wwox/research/fulltext_dossiers/PMID21476439.md",
+    "disease-models/wwox/research/intake_wave_20261004w10_X.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261004W10-X-ENZYMOLOGY-01.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261004W10-X-REGISTRY-01.md"
+  ],
+  "skills_considered": [
+    {
+      "skill": "find-fulltext",
+      "used": false,
+      "reason": "The version-of-record PDF was already acquired into the root corpus before this reading began; no acquisition cascade was needed."
+    },
+    {
+      "skill": "legend-study-intake-triage",
+      "used": true
+    },
+    {
+      "skill": "legend-deepdive",
+      "used": true
+    },
+    {
+      "skill": "legend-discovery",
+      "used": false,
+      "reason": "The discovery ledger is owned by other batches; what this reading supports is proposed as commit candidates and in the intake note."
+    },
+    {
+      "skill": "legend-hypothesis-forge",
+      "used": false,
+      "reason": "A wild-type in-vitro activity with no allele arm supplies no new therapeutic lever; forging hypotheses from it would manufacture a lead."
+    },
+    {
+      "skill": "legend-safety-triage",
+      "used": false,
+      "reason": "No compound is proposed by this source."
+    },
+    {
+      "skill": "legend-commit",
+      "used": false,
+      "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+    },
+    {
+      "skill": "legend-locator-audit",
+      "used": false,
+      "reason": "The triples are published in the candidates for a blind auditor; the reader cannot audit their own locators."
+    }
+  ],
+  "group_assessment": {
+    "total_publications": 1,
+    "publications_on_gene": 1,
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": false,
+    "weighting": "Medical University of Lodz. Two departments appear on the article: Analytical Chemistry (first author) and Molecular Cancerogenesis (corresponding author A. K. Bednarek and two co-authors). NOT independent of the gene's discovery: Bednarek is first author of the WWOX discovery paper (PMID 10786676) and of PMID 11719429, the WWOX cDNA used here came from his own collection, and both sequence motifs the paper relies on are cited to his 2000 paper. This is a follow-up by a discovery author in his own laboratory, not external replication. No orthogonal laboratory has replicated this enzymology in anything the paper cites."
+  },
+  "field_density": {
+    "queries": [
+      {
+        "query": "WWOX enzymatic / oxidoreductase activity measured on protein",
+        "count": 1,
+        "source": "the corpus read here as of 2026-10-04; registry_records.py get --pmid 21476439 returns this paper alone as an enzymology identity record"
+      }
+    ],
+    "note": "This is the single enzymology primary identified in LEGEND's corpus. That is a statement about this corpus, not about the literature."
+  },
+  "multihop": {
+    "references_enumerated": 28,
+    "gene_direct_refs_in_source": [
+      "10786676",
+      "11719429",
+      "18974271",
+      "15580310",
+      "15692750",
+      "15982416",
+      "11896615",
+      "15070730",
+      "11572989",
+      "16288044",
+      "12829805",
+      "16061658"
+    ],
+    "resolved": [
+      {
+        "pmid": "18974271",
+        "reason": "Aqeilan 2009 Endocrinology (WWOX KO steroidogenesis) — receipted reading already in the ledger."
+      },
+      {
+        "pmid": "15692750",
+        "reason": "Nunez 2005a Breast Cancer Res Treat — receipted reading already in the ledger."
+      },
+      {
+        "pmid": "15982416",
+        "reason": "Nunez 2005b BMC Cancer — receipted reading already in the ledger."
+      },
+      {
+        "pmid": "15070730",
+        "reason": "Aqeilan 2004b PNAS (WWOX-p73) — receipted reading already in the ledger."
+      },
+      {
+        "pmid": "11572989",
+        "reason": "Paige 2001 PNAS — receipted reading already in the ledger."
+      },
+      {
+        "pmid": "16061658",
+        "reason": "Aqeilan 2005 Cancer Res (WWOX/YAP/ErbB-4) — receipted reading already in the ledger."
+      }
+    ],
+    "queued": [
+      {
+        "pmid": "10786676",
+        "reason": "Bednarek 2000 Cancer Res, the WWOX discovery paper. It is the sole source of the two sequence motifs this paper's interpretation rests on (GANSGIG 131-137, YNRSK 293-297) and of the expression pattern used to argue physiological relevance. No receipt in the ledger. Highest-value hop from this reading."
+      },
+      {
+        "pmid": "11719429",
+        "reason": "Bednarek 2001 Cancer Res; cited for Golgi localisation requiring an intact SDR domain, a structure-function statement this reading cannot check. No receipt."
+      },
+      {
+        "pmid": "15580310",
+        "reason": "Chang 2005 Oncogene; cited as the 17-beta-estradiol activation result the authors call their results consistent with. Already carried as abstract-only in FT-113. No receipt."
+      },
+      {
+        "pmid": "11896615",
+        "reason": "Driouch 2002 Oncogene; cited for tumour transcripts lacking the substrate-binding part of the SDR domain, which is the paper's bridge from enzymology to carcinogenesis. No receipt."
+      },
+      {
+        "pmid": "16288044",
+        "reason": "Mahajan 2005 Cancer Res; Ack1 phosphorylation of WWOX at Tyr33 and Tyr287. Background only for this reading. No receipt."
+      },
+      {
+        "pmid": "12829805",
+        "reason": "Marijanovic 2003 Mol Endocrinol; one of the two clustering analyses placing WWOX with 17-beta-HSD3, the only basis for the regiochemistry this paper never measured. No receipt."
+      }
+    ],
+    "note": "28 references, counted from the year markers in the printed two-column list, which runs alphabetically from Aqeilan to Pluciennik. The list prints no DOIs and no PMIDs; the twelve gene-direct references above were resolved to PMIDs with PubMed lookup_article_by_citation on journal, year, volume, first page and first author. The remaining sixteen are method or non-WWOX citations (Bradford 1976, Duax and Ghosh 1997, Jornvall 1995, Kallberg 2002a and 2002b, and WWOX-adjacent cancer-epidemiology items), not gene-direct mechanism sources for the question read here. Queued hops name no queue entry: minting an address here would attach this reading's debt to an entry about a different paper."
+  },
+  "corpus_crossquery": {
+    "query": "registry_records.py get --pmid 21476439 (run AFTER the first pass was written); then the residue candidate CC-20260921-WWOX-ENZYMOLOGY-P306-01",
+    "hits": 5,
+    "note": "CORPUS P306, LIT-0306 (identity) and FT-113, FT-130, FT-147 (mentions). Four landed statements are confirmed by the primary, four need correction; see CC-20261004W10-X-ENZYMOLOGY-01."
+  },
+  "retraction_check": {
+    "checked": true,
+    "dependencies": {
+      "flagged": [],
+      "noted": [],
+      "paper_verdict": "UNSCREENABLE_NO_DOI",
+      "reference_source": "printed reference list",
+      "references_declared": 28,
+      "references_screened": 0,
+      "references_with_doi": 0,
+      "schema": "retraction_check.dependencies/1",
+      "unscreenable": {
+        "UNSCREENABLE_NO_DOI": 28
+      },
+      "snapshot": {
+        "date": "2026-09-10",
+        "rows": 72476,
+        "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+      },
+      "note": "The 2011 printed reference list carries no DOIs and no PMIDs, so the Crossref-keyed screen has nothing to key on: all 28 entries are UNSCREENABLE_NO_DOI. All 28 were nevertheless read by hand against title, journal and year; all are ordinary primary papers or reviews in mainstream journals and none is known to this reader as retracted or under an expression of concern. Self-citation is heavy: the corresponding author is an author on at least three.",
+      "screened": false
+    },
+    "result": "Checked 2026-10-04 via PubMed get_article_metadata: publication types ['Journal Article']; no retraction, expression of concern or correction listed for PMID 21476439."
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID21476439_SaludaGorgul2011_DeGruyter.txt",
+      "sha256": "084e08b0785b97ccae7e75dfedcfe95342d5617ba0488d822f3038e0f917aa01",
+      "kind": "article_text",
+      "note": "Text layer derived from the version-of-record PDF with `pdftotext -layout -nopgbrk` (poppler 24.02.0). LOSSY for Table II, which is typeset rotated 90 degrees on page 80: the flattened text interleaves its columns and its row order is not recoverable there. Table II was therefore read from the rendered page image declared below. Ligatures are preserved as single codepoints (U+FB01), so quotes must carry them.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.degruyterbrill.com/document/doi/10.1515/znc-2011-1-210/pdf",
+        "http_method": "none",
+        "tier": "local derivation",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": true,
+        "extractor": {
+          "name": "pdftotext",
+          "version": "poppler 24.02.0",
+          "call": "pdftotext -layout -nopgbrk <pdf> <txt>"
+        },
+        "result_sha256": "084e08b0785b97ccae7e75dfedcfe95342d5617ba0488d822f3038e0f917aa01",
+        "derived_from": "files/fulltext/PMID21476439_SaludaGorgul2011_DeGruyter.pdf"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID21476439_SaludaGorgul2011_DeGruyter.pdf",
+      "sha256": "f3a43c1174c023cf9a00f45397aeb82043bbe8a37adc12c0d71f826fbbeb4505",
+      "kind": "article_binary",
+      "note": "Version of record, 10 typeset pages, PDF 1.4, producer iTextSharp 5.1.3, clean embedded text layer. Pages 73-82 of Z Naturforsch 66 c (2011). The article carries no DOI on its own front matter.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.degruyterbrill.com/document/doi/10.1515/znc-2011-1-210/pdf",
+        "http_method": "GET",
+        "tier": "publisher open access, manual fetch",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "f3a43c1174c023cf9a00f45397aeb82043bbe8a37adc12c0d71f826fbbeb4505"
+      }
+    },
+    {
+      "path": "files/figures/PMID21476439/page03_fig1_gels.png",
+      "sha256": "7212556c8e01a6ceaea8308c0cd02cb0b0b08d659ed32b208752983e11d9675c",
+      "kind": "figure",
+      "note": "Page 75 rendered at 160 dpi; Figure 1, both SDS-PAGE panels, inspected enlarged.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.degruyterbrill.com/document/doi/10.1515/znc-2011-1-210/pdf",
+        "http_method": "none",
+        "tier": "local render",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": true,
+        "extractor": {
+          "name": "pdftoppm",
+          "version": "poppler 24.02.0",
+          "call": "pdftoppm -f 3 -l 3 -r 160 -png <pdf> <out>"
+        },
+        "derived_from": "files/fulltext/PMID21476439_SaludaGorgul2011_DeGruyter.pdf"
+      }
+    },
+    {
+      "path": "files/figures/PMID21476439/page04_fig2_indanol.png",
+      "sha256": "1f3b893cf54665a59e675bf26a0f79e011b852a924eeeb0b2bd0eba904662455",
+      "kind": "figure",
+      "note": "Page 76 rendered at 160 dpi; Figure 2, panels A and B (S-indan-1-ol with NAD+).",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.degruyterbrill.com/document/doi/10.1515/znc-2011-1-210/pdf",
+        "http_method": "none",
+        "tier": "local render",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": true,
+        "extractor": {
+          "name": "pdftoppm",
+          "version": "poppler 24.02.0",
+          "call": "pdftoppm -f 4 -l 4 -r 160 -png <pdf> <out>"
+        },
+        "derived_from": "files/fulltext/PMID21476439_SaludaGorgul2011_DeGruyter.pdf"
+      }
+    },
+    {
+      "path": "files/figures/PMID21476439/page06_fig3A_NAD.png",
+      "sha256": "1928bce6c542469a1d88282c16df159463fb630c4643728bbfacd30ab14eea28",
+      "kind": "figure",
+      "note": "Page 78 rendered at 160 dpi; Figure 3A, all seven steroid panels with NAD+, plus the in-figure trace legend.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.degruyterbrill.com/document/doi/10.1515/znc-2011-1-210/pdf",
+        "http_method": "none",
+        "tier": "local render",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": true,
+        "extractor": {
+          "name": "pdftoppm",
+          "version": "poppler 24.02.0",
+          "call": "pdftoppm -f 6 -l 6 -r 160 -png <pdf> <out>"
+        },
+        "derived_from": "files/fulltext/PMID21476439_SaludaGorgul2011_DeGruyter.pdf"
+      }
+    },
+    {
+      "path": "files/figures/PMID21476439/page07_fig3B_NADP.png",
+      "sha256": "eda028375f5d097e6e95906608ce318ba6b2bf2fd52914e32b6217a28d62c7a8",
+      "kind": "figure",
+      "note": "Page 79 rendered at 160 dpi; Figure 3B, all seven steroid panels with NADP+, plus the in-figure trace legend.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.degruyterbrill.com/document/doi/10.1515/znc-2011-1-210/pdf",
+        "http_method": "none",
+        "tier": "local render",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": true,
+        "extractor": {
+          "name": "pdftoppm",
+          "version": "poppler 24.02.0",
+          "call": "pdftoppm -f 7 -l 7 -r 160 -png <pdf> <out>"
+        },
+        "derived_from": "files/fulltext/PMID21476439_SaludaGorgul2011_DeGruyter.pdf"
+      }
+    },
+    {
+      "path": "files/figures/PMID21476439/page08_tableII_rotated.png",
+      "sha256": "843786c88745857e39cc78b2b885664018f83b71950e0776fc5c85a7262808fc",
+      "kind": "figure",
+      "note": "Page 80 rendered at 160 dpi and rotated 180 degrees from a -90 rotation, so that Table II reads upright. This is the surface Table II was read from, cell-wise; the derived text layer cannot carry its row order.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.degruyterbrill.com/document/doi/10.1515/znc-2011-1-210/pdf",
+        "http_method": "none",
+        "tier": "local render",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": true,
+        "extractor": {
+          "name": "pdftoppm",
+          "version": "poppler 24.02.0",
+          "call": "pdftoppm -f 8 -l 8 -r 160 -png <pdf> <out> ; convert <png> -rotate -90 <png> ; convert <png> -rotate 180 <png>"
+        },
+        "derived_from": "files/fulltext/PMID21476439_SaludaGorgul2011_DeGruyter.pdf"
+      }
+    }
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "entries": [
+      {
+        "proposition": "The article's own front matter gives the citation as Z. Naturforsch. 66 c, 73-82 (2011), received May 12 / September 14, 2010, and prints no DOI.",
+        "snippet": "Z. Naturforsch. 66 c, 73 – 82 (2011); received May 12/September 14, 2010",
+        "anchor": "front matter, citation line",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID21476439_SaludaGorgul2011_DeGruyter.txt",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The construct expressed is the full-length WWOX cDNA subcloned as a BamHI/EcoRI fragment; no SDR-domain-only construct was made.",
+        "snippet": "BamHI and EcoRI enzymes was subcloned from",
+        "anchor": "Experimental, Expression and soluble fraction with WWOX fusion protein",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID21476439_SaludaGorgul2011_DeGruyter.txt",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Every kinetic measurement was made on an unfractionated bacterial crude extract because purification abolished the activity.",
+        "snippet": "oxidoreductase activity was lost in",
+        "anchor": "Results, NUS-WWOX and GST-WWOX fusion proteins extraction",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID21476439_SaludaGorgul2011_DeGruyter.txt",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The Methods promise Vmax from Lineweaver-Burk fitting, but no Vmax value is reported anywhere in the paper.",
+        "snippet": "ics method, and Lineweaver-Burk analysis was",
+        "anchor": "Experimental, Enzyme assays",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID21476439_SaludaGorgul2011_DeGruyter.txt",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The stated replication is two or three demonstrations.",
+        "snippet": "means of at least two or three demonstrations.",
+        "anchor": "Experimental, Enzyme assays",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID21476439_SaludaGorgul2011_DeGruyter.txt",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The absence of reduction activity with NADH and NADPH is reported without any panel, table or number.",
+        "snippet": "(results not shown), which indicates that the",
+        "anchor": "Results, reduction activities paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID21476439_SaludaGorgul2011_DeGruyter.txt",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The authors describe 0.24 micromol/ml steroid as sufficient or excessive for the 30-minute NAD+ reactions.",
+        "snippet": "at 0.24 μmol/ml was sufﬁcient or even excessive",
+        "anchor": "Results, Dehydrogenase activity of SDR domain in the WWOX protein",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID21476439_SaludaGorgul2011_DeGruyter.txt",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The lowest reported Km is for estrone and the highest for testosterone with NADP+.",
+        "snippet": "(5.864 · 10–5 M) and testosterone (14.551 · 10–5 M)",
+        "anchor": "Results, closing paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID21476439_SaludaGorgul2011_DeGruyter.txt",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Table II's own footnote states that the reported Km values are a difference between two extracts, not the Km of a resolved enzyme.",
+        "snippet": "Km values are the difference between NUS-WWOX and NUS.",
+        "anchor": "Table II footnote",
+        "surface": "table",
+        "artifact": "files/fulltext/PMID21476439_SaludaGorgul2011_DeGruyter.txt",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Table I records the substrate concentration ranges used for the kinetics; the lowest 5-alpha-androstane-3,17-dione concentration with NAD+ was 0.075 micromol/ml.",
+        "snippet": "5α-Androstane-3,17-dione (5α-A)",
+        "anchor": "Table I, 5alpha-androstane-3,17-dione row, NAD+ column",
+        "surface": "table",
+        "artifact": "files/fulltext/PMID21476439_SaludaGorgul2011_DeGruyter.txt",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The two sequence motifs on which the paper's SDR interpretation rests are taken from the group's own earlier paper, not measured here.",
+        "snippet": "GANSGIG at position 131 – 137 and the poten-",
+        "anchor": "Introduction",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID21476439_SaludaGorgul2011_DeGruyter.txt",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "TEXT: Figure 2's curves are from one of two experiments, each with a separate isolation.",
+        "snippet": "The curves shown are from one of two experiments, each",
+        "anchor": "Figure 2 caption",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID21476439_SaludaGorgul2011_DeGruyter.txt",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "PANEL READING, Figure 1. Neither SDS-PAGE panel carries a molecular-weight ladder lane or any size annotation, and the paper contains no Western blot, antibody or mass-spectrometric confirmation. The assignment of the induced band to a WWOX fusion rests on expected migration alone.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Page 75, Figure 1. Panel A: three lanes numbered 1, 2, 3, no marker lane, no kDa labels; lane 1 carries an intense mid-gel band that is absent from lane 3, where a new slower-migrating band appears near the top. Panel B: four lanes numbered 1, 2, 3, 4, no marker lane, no kDa labels; lane 1 carries an intense low band, lane 3 a prominent higher band plus a strong mid band, lanes 2 and 4 neither.",
+        "anchor": "Figure 1, panels A and B, page 75",
+        "surface": "figure",
+        "artifact": "files/figures/PMID21476439/page03_fig1_gels.png",
+        "panel_text_relation": "panel_only",
+        "experimental_context": {
+          "system": "E. coli soluble lysate fractions",
+          "genotype": "wild-type human WWOX as NusA and GST fusions; empty-vector controls",
+          "treatment": "IPTG induction, 0.2 mM (NusA system) or 0.7 mM (GST system)",
+          "timepoint": "overnight at 16-18 C",
+          "comparator": "uninduced and empty-vector lanes",
+          "endpoint": "Coomassie-stained SDS-PAGE"
+        }
+      },
+      {
+        "proposition": "PANEL READING, Figure 2. The empty-vector NusA control is not a blank: it reaches about 0.43 at 340 nm by 30 minutes against about 0.95 for NUS-WWOX, so roughly 45 per cent of the signal is host activity. The GST system behaves differently in absolute terms (about 0.07 control against about 0.47 GST-WWOX), so the two expression systems do not agree in magnitude on the same substrate. Neither panel carries error bars.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Page 76, Figure 2. Panel A y-axis 0 to 1, NUS-WWOX filled markers plateau near 0.95 by 20 min, NUS open markers rise steadily to about 0.43 at 30 min. Panel B y-axis 0 to 1, GST-WWOX filled markers plateau near 0.47 by 15 min, GST open markers reach about 0.07 at 30 min. No error bars on any point of either panel.",
+        "anchor": "Figure 2, panels A and B, page 76",
+        "surface": "figure",
+        "artifact": "files/figures/PMID21476439/page04_fig2_indanol.png",
+        "panel_text_relation": "panel_only",
+        "experimental_context": {
+          "system": "E. coli soluble crude extract, 400 micrograms protein per 1 ml",
+          "genotype": "wild-type human WWOX fusion versus matched empty-vector extract",
+          "treatment": "S-indan-1-ol with NAD+, concentration not stated",
+          "timepoint": "0 to 30 minutes, 5-minute intervals, 25 C",
+          "comparator": "NUS alone and GST alone",
+          "endpoint": "absorbance at 340 nm"
+        }
+      },
+      {
+        "proposition": "PANEL READING, Figure 3A. Each panel plots four traces defined by an in-figure legend. The NUS-WWOX extract without any steroid still reaches about 0.22 to 0.24 at 340 nm, so a quarter of the signal is substrate-independent. For estrone the empty-vector-plus-substrate trace reaches about 0.80 against about 1.24 for NUS-WWOX, a ratio of 1.55 and the largest host background of all seven substrates, although the Results text places estrone in the group it calls 3- to 6-fold lower than NUS-WWOX. No panel carries error bars.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Page 78, Figure 3A, NAD+. In-figure legend: open triangle NUS NO SUBSTRATE, filled triangle NUS-WWOX NO SUBSTRATE, open circle NUS WITH SUBSTRATE, filled circle NUS-WWOX WITH SUBSTRATE. End-point values at 30 min, filled circle / open circle / filled triangle / open triangle: 5alpha-DHP-allo 1.18 / 0.48 / 0.22 / 0; progesterone 1.11 / 0.28 / 0.23 / 0; 5alpha-A 0.80 / 0.30 / 0.23 / 0; 4-A 1.33 / 0.39 / 0.22 / 0; 17beta-E 1.03 / 0.22 / 0.24 / 0; estrone 1.24 / 0.80 / 0.24 / 0; testosterone 1.34 / 0.69 / 0.23 / 0.",
+        "anchor": "Figure 3A, all seven panels and the trace legend, page 78",
+        "surface": "figure",
+        "artifact": "files/figures/PMID21476439/page06_fig3A_NAD.png",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[6]",
+        "qualifies_needle": "sufﬁcient or even excessive",
+        "experimental_context": {
+          "system": "E. coli soluble crude extract, 400 micrograms protein per 1 ml",
+          "genotype": "wild-type human WWOX NusA fusion versus matched empty-vector extract",
+          "treatment": "0.24 micromol steroid and 0.75 micromol NAD+ per ml",
+          "timepoint": "0 to 30 minutes, 5-minute intervals, 25 C",
+          "comparator": "NUS alone with substrate; both extracts without substrate",
+          "endpoint": "absorbance at 340 nm"
+        }
+      },
+      {
+        "proposition": "PANEL READING, Figure 3B. With NADP+ the substrate-free NUS-WWOX trace plateaus near 0.29 in every one of the seven panels and is larger than the entire empty-vector-plus-substrate trace in all of them, and the 5-alpha-dihydroprogesterone-allo curve has not plateaued at 30 minutes.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Page 79, Figure 3B, NADP+, y-axis 0 to 1. End-point values at 30 min, filled square NUS-WWOX with substrate / open square NUS with substrate / filled diamond NUS-WWOX no substrate / open diamond NUS no substrate: 5alpha-DHP-allo 0.90 still rising / 0.145 / 0.29 / 0; progesterone 0.57 / 0.11 / 0.29 / 0; 5alpha-A 0.56 / 0.065 / 0.29 / 0; 4-A 0.55 / 0.08 / 0.29 / 0; 17beta-E 0.51 / 0.155 / 0.29 / 0; estrone 0.49 / 0.14 / 0.29 / 0; testosterone 0.52 / 0.07 / 0.29 / 0.",
+        "anchor": "Figure 3B, all seven panels, page 79",
+        "surface": "figure",
+        "artifact": "files/figures/PMID21476439/page07_fig3B_NADP.png",
+        "panel_text_relation": "panel_only",
+        "experimental_context": {
+          "system": "E. coli soluble crude extract, 400 micrograms protein per 1 ml",
+          "genotype": "wild-type human WWOX NusA fusion versus matched empty-vector extract",
+          "treatment": "0.24 micromol steroid and 0.75 micromol NADP+ per ml",
+          "timepoint": "0 to 30 minutes, 5-minute intervals, 25 C",
+          "comparator": "NUS alone with substrate; both extracts without substrate",
+          "endpoint": "absorbance at 340 nm"
+        }
+      },
+      {
+        "proposition": "PANEL READING, Table II as rendered. The printed row order is 5alpha-A, 4-A, 17beta-E, estrone, 5alpha-DHP-allo, progesterone, testosterone; there is no Vmax column; and thirteen of the fourteen reported Km values lie below the lowest substrate concentration Table I says was used.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Page 80, Table II upright. Columns: Substrate, then NAD+ (Km 10^-5 M, C.I. for 95%, p<0.05) and NADP+ (same three). Rows: 5alpha-A 5.864 / 4.42-8.72 / 0.0011 and 2.620 / 2.36-2.94 / 0.0000; 4-A 3.632 / 2.79-5.20 / 0.0006 and 3.703 / 2.81-5.43 / 0.0003; 17beta-E 3.123 / 2.62-3.87 / 0.0002 and 3.359 / 1.96-13.79 / 0.0091; estrone 1.523 / 1.11-2.42 / 0.0009 and 1.998 / 1.47-3.13 / 0.0007; 5alpha-DHP-allo 3.985 / 2.80-6.93 / 0.0016 and 4.702 / 3.24-8.56 / 0.0017; progesterone 4.219 / 2.82-8.34 / 0.0023 and 3.021 / 2.48-3.92 / 0.0001; testosterone 4.161 / 3.13-6.19 / 0.0010 and 14.551 / 8.40-54.47 / 0.0025. No Vmax column appears.",
+        "anchor": "Table II, page 80, rendered upright",
+        "surface": "figure",
+        "artifact": "files/figures/PMID21476439/page08_tableII_rotated.png",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[8]",
+        "qualifies_needle": "Km values are the difference",
+        "experimental_context": {
+          "system": "E. coli soluble crude extract",
+          "genotype": "wild-type human WWOX NusA fusion minus matched empty-vector extract",
+          "treatment": "seven steroids at the Table I concentration ranges, with NAD+ or NADP+",
+          "timepoint": "30-minute progress curves, Lineweaver-Burk fitting",
+          "comparator": "plain NUS extract",
+          "endpoint": "apparent Km, 10^-5 M"
+        }
+      }
+    ],
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "The declared article_binary is the version-of-record PDF held locally; the declared article_text is its own text layer, derived locally with pdftotext and fingerprinted. No remote index was consulted for the body.",
+    "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table caption, a rendered table or a rendered figure panel."
+  }
+}
