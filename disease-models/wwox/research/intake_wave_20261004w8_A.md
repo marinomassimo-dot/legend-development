@@ -8,7 +8,7 @@ context_policy: SOURCE_FIRST
   does each measurement cover? No transfer across alleles (P47T ≠ Q230P ≠ G372R ≠ A141T ≠ P252A; an
   acceptor allele is not a donor allele; a structural allele is not a splice allele).
 - **Public edition:** patients are described at class level only (allele class × zygosity × phenotype band).
-  Parent-of-origin, geography and case identifiers are not carried, even where the source prints them.
+  Inheritance side, geography and case identifiers are not carried, even where a source prints them.
 - Nothing here is medical advice.
 
 ## Identity and dedup (measured 2026-10-04, before any reading)
