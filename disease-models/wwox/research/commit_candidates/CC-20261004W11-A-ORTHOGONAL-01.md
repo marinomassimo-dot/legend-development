@@ -75,3 +75,17 @@ A mechanistic step of the paper's own model rests on unpublished data. | We foun
 The authors close by calling their interpretation a hypothesis still to be validated. | Further analysis have to be perform to validate these hypotheses. | Discussion, final sentence — files/fulltext/PMID37248434_Taouis2023_PMC.xml
 
 The imaging experiment behind the foci conclusion was done once on 50 cells per condition. | 50 cells were counted in each condition, the experiment was done once | Figure 3 legend, panel B — files/fulltext/PMID37248434_Taouis2023_PMC.xml
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261004_005` (2026-10-04, ACTOR_ID `scientist`, Scientist O), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** PROPAGATED
+
+Class re-judged **MINOR** (a research-layer lead; no claim created or narrowed). Landed as **`DL-MECH-115`** in `discovery_ledger_current.md`, with the source's registry landing as **`PAPER 245`** (the promotion of `CORPUS-STUB-041`; the candidate's provisional `PAPER 235` was taken, and the number was re-measured with `registry_records.py catalog` at `2d2077f47e83`). **Blind locator audit before propagation: 11 triples, 11 QUOTE_FOUND, 11 SUPPORTED, 0 UNVERIFIABLE**, by an auditor that had seen no candidate. Two amendments folded in at source: the fragment mapping is recorded as **co-immunoprecipitation in cells, not purified protein** (Fig. 1D-E), and the hypotheses the paper's closing sentence leaves to be validated are about **aneuploidy**, not about the binding. The auditor also measured, independently, that the paper contains **zero** enzymatic or oxidoreductase measurements of WWOX and **zero** affinity, stoichiometry or purified-protein experiments — which is what makes the lead's own transfer limit a measurement rather than a caution.
+
+🔵 **One classifier interruption, reported as it happened:** this audit's first run was cut off mid-hand-back by a safety classifier after two verdicts. It was **re-dispatched unchanged on a different model**, as the runtime error message itself advises; nothing was reworded and no verdict was reconstructed from the truncated report.
+
+**Not medical advice.**

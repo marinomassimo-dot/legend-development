@@ -51,3 +51,24 @@ Artefact `files/fulltext/PMID42436860_NaViPA1_2026_PMC.xml` unless stated.
 - (Methods list male rats only. | Adult male Sprague-Dawley (SD) rats weighing 100–125 g | Methods, Animals)
 - (Human sensory-neuron work used a lentiviral vector. | We first produced a high-titer lentiviral vector (LV)-encoded CoNaViPA1 or CoNP | Results, human DRG neurons)
 - [PMID 42812991, artefact `files/fulltext/PMID42812991_AAV_AD_review_2026.txt`] (The review reports DRG pathology across several CNS-directed AAV programmes. | sensory-neuron pathology in dorsal root ganglia has emerged across several CNS-directed AAV programmes | 5.2)
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261004_005` (2026-10-04, ACTOR_ID `scientist`, Scientist O), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** PROPAGATED
+
+Class **MINOR** (one new research-line record). Landed as **`RL-C-20261004w11c2`**; the registry landings are **`CORPUS-STUB-187`** / **`LIT-0546`** (primary) and **`CORPUS-STUB-188`** / **`LIT-0547`** (the secondary review), both stubs for the same zero-WWOX reason as its sibling.
+
+**Blind locator audit: 9 triples, 8 SUPPORTED, 1 NOT_SUPPORTED_AS_LABELLED — and three of the candidate's own number checks measured DIFFERENT from its draft.** All four were repaired before landing, and they are the batch's clearest case of a self-check that was not strict enough:
+
+1. 🔴 *«Methods list male rats only»* is **false of the Methods as a whole** — the Animals subsection says male, while another Methods subsection reports *«for both male and female rats»* and a third says tissues *«were harvested (two females)»*. The inconsistency is **internal to the Methods**, not Methods-versus-Results as the candidate framed it.
+2. The route disagreement is **wider than figure legends**: DRG delivery is written in two figure legends, a Results section title, a further legend **and one Methods subsection**, against sciatic nerve in Methods and Results.
+3. The control-vector comparison (ATF3, CD6/CD8, caspase-3) **is narrated in the main-text Results**; only its **images** are supplementary and unread. The candidate said the comparison itself was *«in Fig. S2, not read»*.
+4. The *«no observable microscopic pathology»* statement is **H&E only**, and the source itself reports the glial increase as **injury-versus-naive** — which strengthens the candidate's attribution limit while correcting its grounds.
+
+The review's DRG sentence is kept as a **pointer carried by two citations**, never as evidence; the two primaries it names were **not read** and are queue candidates.
+
+**Not medical advice.**

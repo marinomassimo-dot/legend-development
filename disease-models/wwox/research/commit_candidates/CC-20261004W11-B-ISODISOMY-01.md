@@ -52,3 +52,19 @@ second, cryptic allele is sought. It changes nothing about the allele's function
 - [PMID 40943441, artefact `files/fulltext/PMID40943441_Panchenko2025_PMC.xml`] (Isodisomy makes chromosome-16 loci identical so a recessive allele can be unmasked. | associated phenotypes may be due to unmasked mutations in recessive disease-related genes like GPT2 | Discussion, second paragraph)
 - [PMID 40943441, artefact `files/fulltext/PMID40943441_Panchenko2025_PMC.xml`] (Isodisomy usually arises by monosomy rescue. | Another pathomechanism of UPD (16) is monosomy 16 rescue, where most cases are isodisomic (UPiD) | Discussion, first paragraph)
 - [PMID 40943441, artefact `files/fulltext/PMID40943441_Panchenko2025_PMC.xml`] (The index patient carries no unmasked pathogenic recessive variant on chromosome 16. | No unmasked pathogenic recessive genetic variants on chromosome 16 were detected | Results 2.2.4)
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261004_005` (2026-10-04, ACTOR_ID `scientist`, Scientist O), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** PROPAGATED
+
+Class re-judged **MINOR but baseline-touching** — it writes a method rule into `working_model_current.md` — so the blind locator audit was **mandatory** and ran before the propagation.
+
+**Audit: 4 triples, 3 SUPPORTED, 1 NOT_SUPPORTED_AS_LABELLED.** The adverse verdict is a **direction error** and it was removed before landing: the candidate's triple said *«isodisomy usually arises by monosomy rescue»*, while the source says most **monosomy-rescue** cases are isodisomic — and, in the same paragraph, that **most chromosome-16 uniparental disomy arises by trisomy rescue and is heterodisomic**. The landed rule makes no frequency claim at all, and the retired direction is recorded as a prohibition on `CORPUS-STUB-184`. The auditor also confirmed what the rule rests on: *«As a consequence of UPiD, homologous loci mapping to chromosome 16 are identical»*, and that the index patient is **not** a WWOX case.
+
+🔵 **Privacy handling, stated because the subject matter invites a failure here.** The route cannot be described without a notion of parental origin, and the landed rule describes it **at class level only**: no side of origin appears in the bullet, in the stub, in the literature record or in this disposition, and the one WWOX-direct reference's published title — which names a side — is cited by identifier and **not reproduced**. `public_release_gate.py` was re-run after this op: **PASS, 0 BLOCK**.
+
+**Not medical advice.**
