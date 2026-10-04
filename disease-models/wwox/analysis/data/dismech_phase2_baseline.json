@@ -1,6 +1,6 @@
 {
-  "frozen_at": "2026-09-28T21:54:52Z",
-  "git_head_at_freeze": "e59067f3ca0aedde5b172fb91e1e803071e76e2b",
+  "frozen_at": "2026-10-04T22:41:23Z",
+  "git_head_at_freeze": "64b33e71fd46b49bd37c5d69a550fa7f95293ce2",
   "git_verification_policy": "baseline bytes must match HEAD; every declared input and output must match git_head_at_freeze:path via git cat-file; freeze commit must be an ancestor of HEAD",
   "inputs": {
     "authored_assertions": {
@@ -22,16 +22,16 @@
     "claim_registry": {
       "path": "disease-models/wwox/registries/claim_registry_current.md",
       "scope_block_sha256": {
-        "CLAIM 016": "07d3adf170de68b32018dc2236732a6f379124b6908a8c97bda9153f3d72646e",
+        "CLAIM 016": "f93fa9f6ce09861438b2c3fed581a9279ec5f288aca936ce5d4d0078795b9a2e",
         "CLAIM 024": "b720170fc2e4f0c150c5b72d75ac271aad8ebb7120d8d30054b125ba4e17afc7",
-        "CLAIM 035": "0582d392272d5abe68f3578d87aa7d2372a0e8f26f7ffd264fdc5b88e3b4201e"
+        "CLAIM 035": "6504c5cf76c09461f21dea80b8602d8cc02c94dee987016a07c30c070c23dc35"
       },
       "scope_blocks": [
         "CLAIM 016",
         "CLAIM 024",
         "CLAIM 035"
       ],
-      "scope_sha256": "559afb6335ad256604496e22e116a1580a58b35d800bf03d80eea958de746ee7",
+      "scope_sha256": "46c486836fb42cf9589e7917cd99561ee78a071abd6cb4aa3c01c24408c167f8",
       "verification_policy": "sealed_scope"
     },
     "derivation_script": {
@@ -115,16 +115,22 @@
     "records": 49,
     "sha256": "5395422fc64d76ac41f5cc0bd694ce1f8da385b8d60cf9391a3bfc5904da1c9f"
   },
-  "revision": "rev.19 (BATCH_20260928_007, 2026-09-28): the backlog batch edited CLAIM 016's Meccanismo aggiunto so that total GSK3B invariance in the Wang system is NOT_ASSERTED rather than stated (CC-20260826-GSK3B-S9-AXIS-01 D13, first site). The drifted block is THIS batch's own edit, declared in the WM_v7.6 changelog row, and is the only block named with --absorb; rev.19 is the first label strictly above rev.18.",
+  "revision": "rev.20 (BATCH_20261004_007, 2026-10-04): absorbing the CLAIM 016 and CLAIM 035 sealed-scope drift left standing by BATCH_20261004_004's D6 reciprocal Ser9 boundary appends, after measuring that the drift is exactly those two declared appends (one added line each, 1633 and 1593 bytes) and that CLAIM 024 is byte-identical",
   "revision_history": [
     {
       "frozen_at": "2026-09-28T03:13:48Z",
       "git_head_at_freeze": "da8b08b57bf6106512041234c3f8946790c35717",
       "revision": "rev.18 (BATCH_20260928_001, 2026-09-28): the Mirror ex-post repair batch edited CLAIM 016's Impact-on-Working-Model line (the abundance datum withdrawn outright rather than a level conceded, CC-20260928-MIRROR003-REPAIRS-01 M4) and PAPER 056's Note (two unbalanced emphasis markers removed, no word of prose changed, CC-20260928-MIRROR004-REPAIRS-01 F3). Both drifted blocks are THIS batch's own edits, each declared in the WM_v7.1 changelog row and in the batch scope, and each named explicitly with --absorb; no pre-existing drift belonging to another batch is absorbed. LABEL CHOSEN DELIBERATELY: the label is not monotone and Harness Engineering holds an open hand-off about it (rev.7 -> 12 -> 7 -> 12 -> 7 -> 8 -> 9 -> 15 -> 16 -> 16 -> 17 -> 13 -> 14, re-derived from git here). The highest label ever used is rev.17 (497f4ee, 2026-08-07), so rev.18 is the first label strictly above every previous one: it makes the current baseline the highest-labelled seal, which is the property a reader assumes, instead of re-using rev.15 and duplicating an existing label while still sitting below 16 and 17.",
       "revision_ordinal": 18
+    },
+    {
+      "frozen_at": "2026-09-28T21:54:52Z",
+      "git_head_at_freeze": "e59067f3ca0aedde5b172fb91e1e803071e76e2b",
+      "revision": "rev.19 (BATCH_20260928_007, 2026-09-28): the backlog batch edited CLAIM 016's Meccanismo aggiunto so that total GSK3B invariance in the Wang system is NOT_ASSERTED rather than stated (CC-20260826-GSK3B-S9-AXIS-01 D13, first site). The drifted block is THIS batch's own edit, declared in the WM_v7.6 changelog row, and is the only block named with --absorb; rev.19 is the first label strictly above rev.18.",
+      "revision_ordinal": 19
     }
   ],
-  "revision_ordinal": 19,
+  "revision_ordinal": 20,
   "window": {
     "before_phase5_pr": "Run assert_exportable(). It supersedes the manual re-verification this field used to describe: it reports per-block drift and refuses to export over anything unacknowledged. The risk it protects against is unchanged \u2014 shipping a contribution derived from superseded claims.",
     "closed_on": "2026-08-06",

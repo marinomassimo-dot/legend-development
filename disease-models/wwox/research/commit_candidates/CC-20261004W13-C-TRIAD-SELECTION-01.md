@@ -72,3 +72,16 @@ None owed: this is a re-read of a PMID already landed (rule 35).
 2. The correlation method is Spearman's rank coefficient computed in a web platform | was used to correlate the top genes with WWOX using Spearman’s rank correlation coefficient. | PMID 34204789, Methods 5.8, same artefact
 3. The directions of the triad's correlations with WWOX differ | each of the three genes significantly correlated with WWOX (GCSH positively, PLEK2 and RRM2 negatively) as shown in Table 3. | PMID 34204789, Results, same artefact
 4. The authors themselves leave the biomarker use unconfirmed | usefulness of PLEK2, RRM2, and GCSH as diagnostic or predictive biomarkers is yet to be confirmed | PMID 34204789, Discussion/Conclusions, same artefact
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261004_007` · 2026-10-04 · ACTOR_ID `scientist` (Scientist Q, batch integrator)
+**Working model:** WM_v7.19 -> WM_v7.20 (MINOR)
+**Class re-judged (§7):** MINOR
+**Blind locator audit (BEFORE propagation, auditor had not seen this candidate):** 4 triples — 3 SUPPORTED, 1 NOT_SUPPORTED_AS_LABELLED
+**What landed, and what the audit changed:** The adverse verdict: the authors' *«yet to be confirmed»* caveat covers diagnostic and predictive use only, while they assert prognostic and therapeutic status in the same sections — landed in the corrected form. The audit also reconstructed the full denominator chain and named the four steps that are judgement-based or unstated, including that three non-selected genes correlate more strongly with WWOX than any member of the final three.
+**Status / Type / Summary:** unchanged by this candidate.
+**Not medical advice.** Class level only; no individual-level record, no geography and no parent-of-origin detail is carried.

@@ -35,3 +35,16 @@ Receipt: `FTR-20261004-40301740-02` (prepared, not recorded) - manifest PASS - d
 - (Seven of eight treated are anti-SMN positive at day 28 | `[spreadsheet attestation]` Anti-SMN Ab titer, Test group, D28 row: +(1:800) +(1:1600) +(1:800) +(1:6400) +(1:200) - +(1:100) +(1:1600) | `files/supplement/PMID40301740/10020_2025_1207_MOESM2_ESM.xlsx`)
 - (Figure 7 legend states a minor sign of toxicity | Representative pictures showing minor detectable sign of toxicity | Figure 7 legend, `files/fulltext/PMID40301740_Ma2025_PMC.xml`)
 - (Panel A has no control H&E field and no scale bar | `[panel attestation]` Figure 7 panel A shows two fields labelled Cervical and Lumbar | `files/supplement/PMID40301740/10020_2025_1207_Fig7_HTML.png`)
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261004_007` · 2026-10-04 · ACTOR_ID `scientist` (Scientist Q, batch integrator)
+**Working model:** WM_v7.19 -> WM_v7.20 (MINOR)
+**Class re-judged (§7):** MINOR
+**Blind locator audit (BEFORE propagation, auditor had not seen this candidate):** 6 triples — 5 SUPPORTED, 1 NOT_SUPPORTED_AS_LABELLED
+**What landed, and what the audit changed:** The adverse verdict: the pre-dose eligibility clause is NOT a described screen — no assay, no unit, no cut-off method and no per-animal pre-dose value exists on any of the seven surfaces, and the antibody table begins at day 14. Three further measurements landed: the titres RISE where the body says stable, only 6 of 12 animals carry the late timepoints, and the histology figure's legend contradicts itself inside one caption while the panel cannot adjudicate it.
+**Status / Type / Summary:** unchanged by this candidate.
+**Not medical advice.** Class level only; no individual-level record, no geography and no parent-of-origin detail is carried.

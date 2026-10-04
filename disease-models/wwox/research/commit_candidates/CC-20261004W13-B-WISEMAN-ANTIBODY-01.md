@@ -33,3 +33,16 @@ Quantifiers: "no antibody assay **anywhere**"; "**only** wild-type". Surfaces se
 - (The low-dose row | F 220013005 180 >6250 5131 >6250 | Appendix antibody-titre table, `files/supplement/PMID39358605/44321_2024_148_MOESM1_ESM.txt`)
 - (A vehicle animal has flat non-zero titres | F 220013003 141 86 98 86 | Appendix antibody-titre table, `files/supplement/PMID39358605/44321_2024_148_MOESM1_ESM.txt`)
 - (A cellular and humoral immune response is scheduled | Immune response X X X X X Cellular and Humoral) | Appendix schedule of events, `files/supplement/PMID39358605/44321_2024_148_MOESM1_ESM.txt`)
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261004_007` · 2026-10-04 · ACTOR_ID `scientist` (Scientist Q, batch integrator)
+**Working model:** WM_v7.19 -> WM_v7.20 (MINOR)
+**Class re-judged (§7):** **MAJOR contingency, judged MAJOR as a candidate and landed as evidence-boundary text only** (`PAPER 167`, `RL-GT-002`)
+**Blind locator audit (BEFORE propagation, auditor had not seen this candidate):** 7 triples — 7 SUPPORTED, over 29 enumerated surfaces
+**What landed, and what the audit changed:** The contingency is CONFIRMED: *«no antibody assay anywhere»* is FALSE as worded — an appendix table of per-animal antibody titres covering 13 wild-type primates at four timepoints exists, naming no antigen, no platform and no units, and never cited in the main text. *«Tested only in wild-type animals»* is TRUE and the source names both animal sets as wild-type. Added: the schedule of events promises a CELLULAR primate read-out at five timepoints that is reported nowhere. No `Status`, `Type` or `Summary` moved.
+**Status / Type / Summary:** unchanged by this candidate.
+**Not medical advice.** Class level only; no individual-level record, no geography and no parent-of-origin detail is carried.
