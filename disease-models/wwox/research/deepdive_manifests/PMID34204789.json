@@ -448,5 +448,18 @@
         "found_or_sought": "sought — FIND-X for a dependence test, which would reopen DIS-026"
       }
     ]
-  }
+  },
+  "reading_history": [
+    {
+      "receipt": "FTR-20261004-34204789-02",
+      "reader": "scientist (Scientist C), intake wave 13 2026-10-04",
+      "context_policy": "QUESTION_DRIVEN",
+      "what_changed": "Declared ten figure JPEGs, the supplementary ZIP and its members (Table S1 with a derived text layer, Files S1-S2, Figure S1-S2 TIFFs); appended four entries (triad selection criteria with Table 3 read cell-wise, Figures 8 and 9 as panels, the FIND-X enumeration). DIS-026's negative survives. No earlier entry altered; the manifest receipt field stays on the producing reading.",
+      "outputs": [
+        "disease-models/wwox/research/fulltext_dossiers/PMID34204789.md",
+        "disease-models/wwox/research/intake_wave_20261004w13_C.md",
+        "disease-models/wwox/research/commit_candidates/CC-20261004W13-C-TRIAD-SELECTION-01.md"
+      ]
+    }
+  ]
 }
