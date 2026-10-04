@@ -104,6 +104,143 @@
         "derived": false,
         "result_sha256": "e75eb12decfb3dddafda9b469101e416bd5130734dc8d86dfdf0d8b8cc273946"
       }
+    },
+    {
+      "path": "files/figures/PMID37897534/18_2023_4950_Fig1_HTML.jpg",
+      "sha256": "c286d05246696d0abead714050848e3904d08552d4883c0c94bfabfe420722b3",
+      "kind": "figure",
+      "note": "Figure 1, inspected as an image (panels b-e).",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10613160.1/18_2023_4950_Fig1_HTML.jpg",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "c286d05246696d0abead714050848e3904d08552d4883c0c94bfabfe420722b3"
+      }
+    },
+    {
+      "path": "files/figures/PMID37897534/18_2023_4950_Fig2_HTML.jpg",
+      "sha256": "54f2470432355eac9114af1bdf402ac18d929cd2db33a88bc7720de91ccb5540",
+      "kind": "figure",
+      "note": "Figure 2, inspected as an image (panels a-e).",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10613160.1/18_2023_4950_Fig2_HTML.jpg",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "54f2470432355eac9114af1bdf402ac18d929cd2db33a88bc7720de91ccb5540"
+      }
+    },
+    {
+      "path": "files/figures/PMID37897534/18_2023_4950_Fig3_HTML.jpg",
+      "sha256": "7c9f837d925aeae70592aa64c1a5e47d1871dd261370e0ea99bef005dac0b6c3",
+      "kind": "figure",
+      "note": "Figure 3, acquired and fingerprinted; not inspected in wave 13.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10613160.1/18_2023_4950_Fig3_HTML.jpg",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "7c9f837d925aeae70592aa64c1a5e47d1871dd261370e0ea99bef005dac0b6c3"
+      }
+    },
+    {
+      "path": "files/figures/PMID37897534/18_2023_4950_Fig4_HTML.jpg",
+      "sha256": "061c9a127903f9c583a071ff0352b37f7a6594146fc6747ad0c2df07a59f8a04",
+      "kind": "figure",
+      "note": "Figure 4, acquired and fingerprinted; not inspected in wave 13.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10613160.1/18_2023_4950_Fig4_HTML.jpg",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "061c9a127903f9c583a071ff0352b37f7a6594146fc6747ad0c2df07a59f8a04"
+      }
+    },
+    {
+      "path": "files/figures/PMID37897534/18_2023_4950_Fig5_HTML.jpg",
+      "sha256": "01afe39ccfee0c5e256e9d86a6acc15eb742d782a0edbca1ca004ecd9e18d378",
+      "kind": "figure",
+      "note": "Figure 5, acquired and fingerprinted; not inspected in wave 13.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10613160.1/18_2023_4950_Fig5_HTML.jpg",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "01afe39ccfee0c5e256e9d86a6acc15eb742d782a0edbca1ca004ecd9e18d378"
+      }
+    },
+    {
+      "path": "files/figures/PMID37897534/18_2023_4950_Fig6_HTML.jpg",
+      "sha256": "dc6f6f67de1672decbed38cab896c91936738d0d3982f1e4374b1bbed74b66e9",
+      "kind": "figure",
+      "note": "Figure 6, acquired and fingerprinted. Its inspection was halted by a model safety classifier in wave 13 and is recorded as NOT READ.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10613160.1/18_2023_4950_Fig6_HTML.jpg",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "dc6f6f67de1672decbed38cab896c91936738d0d3982f1e4374b1bbed74b66e9"
+      }
+    },
+    {
+      "path": "files/figures/PMID37897534/18_2023_4950_Fig7_HTML.jpg",
+      "sha256": "bc4fc763f97b6e00afc890d7829cfb9f1b8b38966ceeaa830932eabb2db3b9a9",
+      "kind": "figure",
+      "note": "Figure 7 (schematic model), acquired and fingerprinted; not inspected in wave 13.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10613160.1/18_2023_4950_Fig7_HTML.jpg",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "bc4fc763f97b6e00afc890d7829cfb9f1b8b38966ceeaa830932eabb2db3b9a9"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID37897534_assets/18_2023_4950_MOESM1_ESM.pdf",
+      "sha256": "89653dae975c423398eca32c001b9ba15608e10952890465a89365503a28e118",
+      "kind": "supplement_binary",
+      "note": "Supplementary file 1 (16-page PDF, 3,595,540 bytes as the JATS declares): Supplementary Table 1 (primers and shRNA) and Supplementary Figures S1-S9.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC10613160.1/18_2023_4950_MOESM1_ESM.pdf",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "89653dae975c423398eca32c001b9ba15608e10952890465a89365503a28e118"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID37897534_assets/18_2023_4950_MOESM1_ESM_pdftotext.txt",
+      "sha256": "863169e66a8ce3cbc2675bcff6251f865b1facc6b2225deaf1bb49d21ae00ec6",
+      "kind": "supplement_text",
+      "note": "Derived text layer of the supplementary PDF. Lossy: panel graphics are not represented, axis labels are scattered, and flow-cytometry percentages are printed without their quadrant positions.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID37897534_assets/18_2023_4950_MOESM1_ESM.pdf",
+        "extractor": {
+          "name": "pdftotext (poppler)",
+          "version": "24.02.0",
+          "call": "pdftotext -layout -nopgbrk 18_2023_4950_MOESM1_ESM.pdf 18_2023_4950_MOESM1_ESM_pdftotext.txt",
+          "join": "\n"
+        },
+        "acquired_on": "2026-10-04"
+      }
     }
   ],
   "verbatim_locators": {
@@ -128,6 +265,51 @@
         "artifact": "files/fulltext/PMID37897534_Cheng2023_PMC.xml",
         "anchor": "Results, 'ROS suppression by antioxidant treatment leads to senescence induction in late-passage Wwox -/- MEFs'",
         "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Figure 1d quantifies gamma-H2AX-positive cells against the heterozygote, not wild type. Hand-read bar heights: early passage about 4.5 % (het) versus about 7.5 % (null), marked N.S.; late passage (passages 20-30) about 20.5 % versus about 35.5 %, marked ***. The loss-side rise is therefore conditional on long serial culture: it is not significant at early passage, and passage alone raises the heterozygote about 4.6-fold (20.5/4.5) while genotype at late passage adds about 1.7-fold (35.5/20.5).",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1d, right panel: bar chart '% of γH2AX-positive cells', black bars Wwox+/-, white bars Wwox-/-, Early N.S. at roughly 4.5 versus 7.5, Late *** at roughly 20.5 versus 35.5; y-axis 0-40.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID37897534/18_2023_4950_Fig1_HTML.jpg",
+        "anchor": "Figure 1d, quantification panel; native JPEG from the PMC OA bucket",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[0]",
+        "qualifies_needle": "was highly expressed in late-passage Wwox −/− MEFs",
+        "found_or_sought": "sought — opened to test whether the loss-side gamma-H2AX rise behind DIS-028 is quantified and against which comparator"
+      },
+      {
+        "proposition": "Figure 2 shows that the senescence markers move only at late passage and not all in one direction. SA-beta-gal-positive cells: early about 11 % versus 10 % (N.S.); late about 41 % (het) versus 12 % (null), ***. Relative mRNA at late passage: p16 and p21 fall in the null (p21 to near zero); Arf (about 8.8-fold) and p18 rise; p27 mRNA is N.S. at both passages. Every comparison is heterozygote versus null.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2b-d: SA-β-gal bar chart Early N.S., Late *** with the null lower; qPCR panels Arf, p15, p16, p18, p19, p21, p27, p57 in Wwox+/- versus Wwox-/- at Early and Late; p27 N.S. at both.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID37897534/18_2023_4950_Fig2_HTML.jpg",
+        "anchor": "Figure 2b (right), 2c, 2d; native JPEG",
+        "panel_text_relation": "panel_only",
+        "found_or_sought": "sought — opened to test DIS-029's 'all four respond to WWOX loss'"
+      },
+      {
+        "proposition": "The paper's p27 mRNA statement is a null: the p27 change is at protein level only (attributed to proteasomal degradation in Supplementary Figure 6).",
+        "snippet": "We determined comparable p27Kip1 mRNA levels among all groups of MEFs",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID37897534_Cheng2023_PMC.xml",
+        "anchor": "Results, senescence-escape section",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found"
+      },
+      {
+        "proposition": "The knockdown arm is real and is in human cells: lentiviral shWWOX against an shLuc control in HEK293T (Supplementary Figure S3) and primary human skin fibroblasts (Supplementary Figure S4), each verified by western blot (no densitometry printed).",
+        "snippet": "Fig. S3 WWOX-knockdown decreases senescence induction in HEK293T cells.",
+        "surface": "supplement",
+        "artifact": "files/fulltext/PMID37897534_assets/18_2023_4950_MOESM1_ESM_pdftotext.txt",
+        "anchor": "Supplementary file 1, Figure S3 legend",
+        "found_or_sought": "sought — tests DIS-029's 'knockout plus knockdown'"
+      },
+      {
+        "proposition": "FIND-X: no surface read carries a WWOX re-expression (rescue) arm in the null fibroblasts, a gamma-H2AX measurement other than Figure 1d, or an in vivo arm. Surfaces searched: body (by term: re-express, reconstitut, overexpress, ectopic WWOX, in vivo), all seven figure captions, Figures 1-2 as images, and the supplement's Table 1 and Figures S1-S9 legends. Not inspected as images: Figures 3, 4, 5 and 7; Figure 6 halted (not read).",
+        "snippet": "Fig. S2 Increased DNA instability in late-passage Wwox-/- MEFs.",
+        "surface": "supplement",
+        "artifact": "files/fulltext/PMID37897534_assets/18_2023_4950_MOESM1_ESM_pdftotext.txt",
+        "anchor": "Supplementary file 1, Figure S2 legend (the supplement's only genome-instability figure besides the main-text panels)",
+        "found_or_sought": "sought — FIND-X enumeration"
       }
     ]
   }
