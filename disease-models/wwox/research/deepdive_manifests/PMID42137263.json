@@ -108,7 +108,7 @@
  },
  "source_artifacts": [
   {
-   "path": "files/fulltext/PMID42137263_Wang2026_PMC.xml",
+   "path": "files/fulltext/PMID42137263_Moeini2026_PMC.xml",
    "sha256": "984ca4b78ebb30138e913d88c9a14bb8e8588b2e80bb112d8f66aa95691b84ff",
    "kind": "article_text",
    "acquisition_recipe": {
@@ -131,7 +131,7 @@
     "snippet": "These RNA-seq data were originally used only for SMN1 transgene expression analysis",
     "anchor": "Materials and methods, para 1",
     "surface": "body",
-    "artifact": "files/fulltext/PMID42137263_Wang2026_PMC.xml",
+    "artifact": "files/fulltext/PMID42137263_Moeini2026_PMC.xml",
     "panel_text_relation": "text_only"
    },
    {
@@ -139,7 +139,7 @@
     "snippet": "of AAV9PHP.B-CBh-SMN1 (AAV-SMN1) intravenously",
     "anchor": "Materials and methods, para 1",
     "surface": "body",
-    "artifact": "files/fulltext/PMID42137263_Wang2026_PMC.xml",
+    "artifact": "files/fulltext/PMID42137263_Moeini2026_PMC.xml",
     "panel_text_relation": "text_only"
    },
    {
@@ -147,7 +147,7 @@
     "snippet": "The cynomolgus dataset included 2 males and 2 females per dose, except for the male mid-dose group, which included only one animal.",
     "anchor": "Materials and methods, para 1",
     "surface": "body",
-    "artifact": "files/fulltext/PMID42137263_Wang2026_PMC.xml",
+    "artifact": "files/fulltext/PMID42137263_Moeini2026_PMC.xml",
     "panel_text_relation": "text_only"
    },
    {
@@ -155,7 +155,7 @@
     "snippet": "Fold changes and p values were calculated considering the 4 lobes from each animal as biological replicates.",
     "anchor": "Figure 1 legend",
     "surface": "body",
-    "artifact": "files/fulltext/PMID42137263_Wang2026_PMC.xml",
+    "artifact": "files/fulltext/PMID42137263_Moeini2026_PMC.xml",
     "panel_text_relation": "text_only"
    },
    {
@@ -163,7 +163,7 @@
     "snippet": "UPR activation was observed only in animals receiving doses",
     "anchor": "Discussion, para 2",
     "surface": "body",
-    "artifact": "files/fulltext/PMID42137263_Wang2026_PMC.xml",
+    "artifact": "files/fulltext/PMID42137263_Moeini2026_PMC.xml",
     "panel_text_relation": "text_only"
    },
    {
@@ -171,7 +171,7 @@
     "snippet": "Livers from low-dose-treated NHPs also exhibited activation of the DNA damage response and the p53 signaling pathway.",
     "anchor": "Results, first subsection, para 4",
     "surface": "body",
-    "artifact": "files/fulltext/PMID42137263_Wang2026_PMC.xml",
+    "artifact": "files/fulltext/PMID42137263_Moeini2026_PMC.xml",
     "panel_text_relation": "text_only"
    },
    {
@@ -179,7 +179,7 @@
     "snippet": "SMN1 expression levels and vector dose (vg/animal) positively correlated with the pro-apoptotic PERK effector DDIT3 (CHOP)",
     "anchor": "Results, second subsection, para 4",
     "surface": "body",
-    "artifact": "files/fulltext/PMID42137263_Wang2026_PMC.xml",
+    "artifact": "files/fulltext/PMID42137263_Moeini2026_PMC.xml",
     "panel_text_relation": "text_only"
    },
    {
@@ -187,7 +187,7 @@
     "snippet": "histological analysis revealed only mild immune cell infiltration, suggesting that a vector-specific, T cell-mediated response is unlikely",
     "anchor": "Introduction, para 3",
     "surface": "body",
-    "artifact": "files/fulltext/PMID42137263_Wang2026_PMC.xml",
+    "artifact": "files/fulltext/PMID42137263_Moeini2026_PMC.xml",
     "panel_text_relation": "text_only"
    },
    {
@@ -195,7 +195,7 @@
     "snippet": "However, no activation of the ATF6 pathway or of the IRE1α-XBP1 pathway was detected (data not shown).",
     "anchor": "Results, second subsection, para 2",
     "surface": "body",
-    "artifact": "files/fulltext/PMID42137263_Wang2026_PMC.xml",
+    "artifact": "files/fulltext/PMID42137263_Moeini2026_PMC.xml",
     "panel_text_relation": "text_only"
    },
    {
@@ -203,7 +203,7 @@
     "snippet": "The absence of UPR activation in rats receiving high vector doses can be explained by the approximately 10-fold lower levels of transgene expression",
     "anchor": "Discussion, para 2",
     "surface": "body",
-    "artifact": "files/fulltext/PMID42137263_Wang2026_PMC.xml",
+    "artifact": "files/fulltext/PMID42137263_Moeini2026_PMC.xml",
     "panel_text_relation": "text_only"
    },
    {
@@ -211,7 +211,7 @@
     "snippet": "these data should be interpreted as mechanistic insights rather than a direct temporal model of the clinical scenario",
     "anchor": "Discussion, para 7",
     "surface": "body",
-    "artifact": "files/fulltext/PMID42137263_Wang2026_PMC.xml",
+    "artifact": "files/fulltext/PMID42137263_Moeini2026_PMC.xml",
     "panel_text_relation": "text_only"
    },
    {
@@ -219,7 +219,7 @@
     "snippet": "Additional mechanistic studies are needed to identify the role of each pathway and the exact factors involved in their activation.",
     "anchor": "Discussion, para 9",
     "surface": "body",
-    "artifact": "files/fulltext/PMID42137263_Wang2026_PMC.xml",
+    "artifact": "files/fulltext/PMID42137263_Moeini2026_PMC.xml",
     "panel_text_relation": "text_only"
    },
    {
@@ -227,7 +227,7 @@
     "snippet": "no liver damage occurred in animals receiving empty capsids",
     "anchor": "Discussion, para 6",
     "surface": "body",
-    "artifact": "files/fulltext/PMID42137263_Wang2026_PMC.xml",
+    "artifact": "files/fulltext/PMID42137263_Moeini2026_PMC.xml",
     "panel_text_relation": "text_only"
    }
   ]

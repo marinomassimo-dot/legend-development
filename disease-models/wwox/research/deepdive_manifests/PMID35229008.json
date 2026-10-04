@@ -1,0 +1,309 @@
+{
+ "schema_version": 2,
+ "pmid": "35229008",
+ "doi": "10.1016/j.omtm.2022.01.013",
+ "receipt": "FTR-20261004-35229008-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID35229008.md",
+  "disease-models/wwox/research/intake_wave_20261004w8_C.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is a research surface another batch owns; no lead is written there from this reading."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "The source is a toxicology or case record in a non-WWOX programme; it supplies no lever for the reference genotype class and forging from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No small molecule is screened; the paper concerns vector-related toxicity and the question here is evidence status, not a molecule."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes are proposed as commit candidates for a later BATCH_COMMIT."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Triples are published in the candidates for an auditor to run."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "mixed",
+  "is_primary_group_for_disease": false,
+  "weighting": "Not assessed in this reading: a non-WWOX paper read for a transferable question about AAV toxicity; no author-group credibility judgement is carried."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND AAV",
+    "count": 2,
+    "source": "PubMed ESearch 2026-10-04"
+   },
+   {
+    "query": "WWOX AND (dorsal root ganglion OR ganglionopathy)",
+    "count": 2,
+    "source": "PubMed ESearch 2026-10-04"
+   }
+  ],
+  "note": "Not assessed; off-WWOX source. WWOX occurs zero times in the JATS file (case-insensitive count 0)."
+ },
+ "multihop": {
+  "references_enumerated": 30,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "References enumerated in the JATS; none is WWOX-direct (the paper never names WWOX)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 35229008 at packet time",
+  "hits": 0,
+  "note": "Packet reported no registry presence at the start of the reading."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-04 by PubMed EFetch: Journal Article only; no RetractionIn, ErratumIn, ExpressionOfConcernIn or UpdateIn link.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "UNSCREENABLE_NO_SNAPSHOT",
+   "reference_source": "jats",
+   "references_declared": 30,
+   "references_screened": 0,
+   "references_with_doi": 0,
+   "schema": "retraction_check.dependencies/1",
+   "screened": false,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 24,
+    "rows": 0,
+    "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block (failed closed 2026-10-04: snapshot retractionwatch_20260910.csv absent under files/retraction_watch/; nothing reported clean)",
+   "unscreenable": {
+    "UNSCREENABLE_NO_SNAPSHOT": 30
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID35229008_Buss2022_PMC.xml",
+   "sha256": "69caee35c1c2eaf78d50634ed515743ca778258e42cf40c867203322539f71a3",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8851102/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "result_sha256": "69caee35c1c2eaf78d50634ed515743ca778258e42cf40c867203322539f71a3"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID35229008_Buss2022_supplement/mmc1.pdf",
+   "sha256": "d05f3cb1e56ed103aa0c4d0326cb7c71ab86d7d9f5cf7a6f7d18ac3d10d20f9f",
+   "kind": "supplement_binary",
+   "note": "Supplementary Tables S1-S25 and Figures S1-S9 (PDF); opened, not analysed cell by cell.",
+   "acquisition_recipe": {
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8851102/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "result_sha256": "d05f3cb1e56ed103aa0c4d0326cb7c71ab86d7d9f5cf7a6f7d18ac3d10d20f9f"
+   }
+  },
+  {
+   "path": "files/figures/PMID35229008/gr2.jpg",
+   "sha256": "f09679b29f72f951bbd48d0609333fc8da74625533b29f240b35f167ce6cad05",
+   "kind": "figure",
+   "note": "Figure 2 (cumulative DRG, nerve-root and spinal-cord scores by region and group), inspected at native resolution.",
+   "acquisition_recipe": {
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8851102/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "result_sha256": "f09679b29f72f951bbd48d0609333fc8da74625533b29f240b35f167ce6cad05"
+   }
+  },
+  {
+   "path": "files/figures/PMID35229008/gr4.jpg",
+   "sha256": "ef37c131fae3ee8efeafab3fdd68a4844ac1cddde45170249eeb26ab26db1dd4",
+   "kind": "figure",
+   "note": "Figure 4 (intraepidermal nerve fibre density, pre-dose and week 4), inspected at native resolution.",
+   "acquisition_recipe": {
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8851102/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "result_sha256": "ef37c131fae3ee8efeafab3fdd68a4844ac1cddde45170249eeb26ab26db1dd4"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC search EXT_ID:35229008 AND SRC:MED on 2026-10-04: inEPMC=Y, isOpenAccess=Y, PMC8851102",
+  "entries": [
+   {
+    "proposition": "Group size was two animals per sex per group, cynomolgus monkeys, single cisterna magna dose.",
+    "snippet": "Groups of cynomolgus monkeys (2/sex/group)",
+    "anchor": "Results, In-life assessment",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35229008_Buss2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The control vector was designed to transduce as efficiently as the expressing vector without producing mRNA from either strand.",
+    "snippet": "This was designed to transduce cells as efficiently as AAV9.hCLN2 without producing mRNA from either DNA strand of the vector genome",
+    "anchor": "Discussion, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35229008_Buss2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The in-vitro check of the Null vector in human neurons found an average of 25 RPE65-mapping reads per sample, called negligible by the authors.",
+    "snippet": "an average of 25 reads mapping to human RPE65 was detected per sample",
+    "anchor": "Materials and methods, Test article, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35229008_Buss2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Null vector DNA in brain, cord and DRG was at levels similar to or greater than with the expressing vector.",
+    "snippet": "at similar or greater levels than those seen with AAV9.hCLN2-treated cynomolgus monkeys",
+    "anchor": "Results, Biodistribution, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35229008_Buss2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors report no DRG toxicity or other treatment-related finding with the Null vector.",
+    "snippet": "there was no evidence of DRG toxicity or any other treatment-related findings in these AAV9.Null-treated animals",
+    "anchor": "Discussion, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35229008_Buss2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The results section records slightly more increased cellularity in lumbosacral DRG with the Null vector (two of four) than with vehicle (one of four) and minimal-to-mild sciatic degeneration, in different animals.",
+    "snippet": "a higher incidence of increased cellularity (two of four animals) in the DRG (LS only)",
+    "anchor": "Results, Histopathology, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35229008_Buss2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2: lumbosacral DRG neuronal degeneration scores about 1 to 2 in all expressing-vector groups and zero for the Null group in every region; cervical and thoracic DRG degeneration only at the 1.1e14 dose; lumbosacral nerve-root degeneration about 3 to 4 in expressing groups.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 2 rows cervical, thoracic, lumbar, lumbosacral by columns DRG neuronal degeneration, spinal nerve root degeneration, spinal cord dorsal-tract degeneration: AAV9.Null (open circles) scores 0 in every panel; expressing-vector groups score about 1 to 2 for lumbosacral DRG; the 1.1e14 group (diamonds) alone scores above 0 in cervical, thoracic and lumbar DRG; lumbosacral nerve-root scores about 3 to 4.",
+    "anchor": "Figure 2, DRG and nerve-root columns",
+    "surface": "figure",
+    "artifact": "files/figures/PMID35229008/gr2.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Three purification routes with 74, 86 and 96 percent full capsids all gave the lesion; the authors conclude purification and empty-capsid fraction are not major determinants.",
+    "snippet": "indicating that the purification process and relative amount of empty capsid are not major determinants of the DRG toxicity",
+    "anchor": "Discussion, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35229008_Buss2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "No effect on sensory or motor nerve conduction in animals with histological change.",
+    "snippet": "no effects were seen in the neuro-electrophysiological endpoints",
+    "anchor": "Results, Peripheral nerve conduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35229008_Buss2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Intraepidermal nerve fibre density fell below the control range in some animals with no dose relationship.",
+    "snippet": "Thus, the reduction in nerve fiber density was considered to be likely test-article-related in some animals but showed no relationship to dose.",
+    "anchor": "Results, Intraepidermal nerve fiber density",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35229008_Buss2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 4: in the low-dose groups some animals fall from the pre-dose range to about 25 to 30 fibres per mm; the 1.1e14 group shows no fall; group means overlap the control band.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 4 scatter, pre-dose versus week 4 per group: AEX 3.1e13, CEX 3.1e13 and UC 3.1e13 groups show some week-4 values near 25 to 45 fibres per mm; the 1.1e14 AEX group is about 40 to 50 at both times; Null and control near unchanged; grey band is the pre-treatment range.",
+    "anchor": "Figure 4",
+    "surface": "figure",
+    "artifact": "files/figures/PMID35229008/gr4.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "MRI was done only in the 1.1e14 hCLN2 group and controls.",
+    "snippet": "the only AAV9.hCLN2 group evaluated",
+    "anchor": "Results, MRI",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35229008_Buss2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors conclude DRG toxicity after intrathecal AAV9 is primarily mediated by transgene overexpression, on this study alongside other published data.",
+    "snippet": "supports a hypothesis that the DRG toxicity in NHPs following intrathecal administration of rAAV9 is primarily mediated by transgene overexpression",
+    "anchor": "Discussion, final paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35229008_Buss2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors write that in earlier NHP studies immune suppression ablated T-cell responses but not DRG pathology.",
+    "snippet": "immune suppression ablated T cell responses, but not DRG pathology",
+    "anchor": "Discussion, para 9",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35229008_Buss2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The brain findings unique to this transgene are attributed possibly to an immune response to human TPP1.",
+    "snippet": "the findings in the brain were possibly an immune-mediated response to the human TPP1",
+    "anchor": "Discussion, para 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35229008_Buss2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors say the lesions are sub-clinical and that long-term NHP studies suggest they resolve; longer duration was not tested here.",
+    "snippet": "It is unclear whether or not these changes would have been more apparent in a study of a longer duration.",
+    "anchor": "Discussion, para 8",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35229008_Buss2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors say the Null genome lacked a functional promoter, unlike a CAG-promoter no-protein control that did cause cord degeneration after parenchymal injection in an earlier study.",
+    "snippet": "which lacked a functional promoter and does not produce mRNA or protein",
+    "anchor": "Discussion, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35229008_Buss2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}
