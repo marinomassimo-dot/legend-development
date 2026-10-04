@@ -207,3 +207,55 @@ response is byte-identical (SHA-256) to the copy the Orchestrator had staged, an
   causally" — it is a common-variant expression-to-lymphoma-risk MR in blood; it estimates nothing about raising
   WWOX in brain, and the transfer to a biallelic loss-of-function disease is nil.
 - Class transfer: **no allele, no neural tissue, no measurement.** Nothing transfers to any WWOX-DEE genotype.
+
+## The wave's question, answered
+
+**What was measured, per allele, and in what matrix** — and what was only predicted. Full table in
+`commit_candidates/CC-20261004W8-A-MEASURED-01.md`. In one line: of the six papers, **one** measured anything
+about a WWOX allele in patient material (PMID 36926521: RNA in blood, protein in a fibroblast line, both
+qualitative), **three** classify alleles by rule alone (PMID 37946251, 40858643, 41835067), and **two** carry no
+allele at all (PMID 41477840 transcript time course in wild-type reprogramming cells; PMID 41254692 common-variant
+expression proxies).
+
+**Limits of that answer.** The one measured genotype is a compound heterozygote, so the blot cannot apportion
+the protein reduction between its two alleles, and the gel is unquantified; the RNA assay is in blood, which the
+authors themselves call a possibly inadequate surrogate for a CNS gene. No allele in this wave is in the
+reference genotype's class, so none of it transfers.
+
+**What would change the model if true, and what would falsify it.**
+- If the exon-5-skipped transcript were quantified and shown to be a minority species with residual full-length
+  protein, the "in-frame or not" reading of structural WWOX alleles would need the same measured/predicted split
+  LEGEND already applies to splice alleles. Falsifier: a quantified RT-PCR or RNA-seq junction read on the same
+  allele showing near-complete skipping with no protein.
+- If the valproate→WWOX-expression direction in the CTD rows (`CC-20261004W8-A-VPA-DIRECTION-01`) held in a human
+  neural cell, it would matter for a disease of WWOX loss. Falsifier: reading the five cited primaries and finding
+  the effect is cell-type- or dose-specific, absent, or in the other direction.
+- If PMID 41835067's child were shown (by author confirmation) to be a distinct patient from `PAPER 013` case 50,
+  the L239R carrier count rises; if shown to be the same child, it falls back. Either way the rule stands.
+
+## What the brief/selection record got wrong (correction 6 applied)
+1. **A2** — "a structural allele class the registry does not hold" and "missed by prior array standard of care":
+   the patient is Piard 2019 Patient 11 (the paper says so), the allele class appears in at least four Piard
+   patients, and the row's own reason is that the gene was not on the validated panel.
+2. **A3** — "a reverse-phenotyping flag ('Unclassified (Epilepsy)' → solved)": no reverse phenotyping is described;
+   "Unclassified (Epilepsy)" is the referral-category column.
+3. **A4** — "zygosity and the second allele are not visible in the retrieved body": Table 2 prints "Hom" with
+   segregation from both parents; and the supplement carries a clinical narrative with neonatal seizure onset.
+4. **A5** — "a human, cell-type-resolved, time-resolved dose curve": it is an average-expression time course in a
+   reprogramming culture with no dose and no perturbation; the panel shows a transient peak, not a rise.
+5. **A6** — "a WWOX dose–outcome relation estimated causally": a common-variant blood-expression MR in a lymphoma;
+   and the paper's drug-direction sentence is inverted relative to its own deposited table.
+
+## DEFAULTS_TAKEN
+- Receipt `evidence_depth` is `partial_fulltext_read` for all six: in each case some figure panels or supplementary
+  material were not inspected, and the ledger refuses `complete_fulltext_read` over `captions_only`.
+- Provisional registry numbers start at `PAPER 207` / `LIT-0500` because open wave-7 candidates already claim
+  201–206 / 0494–0499.
+- Where a supplementary table is published only as a workbook, a derived cell-wise text surface was persisted
+  beside the binary so the locators are machine-verifiable.
+
+## STOP_LOG
+- One response was halted by a safety classifier while a long single-file write of the registry candidate was in
+  flight (brief items 13, 21, 28, 33). The partial scratch file was deleted, the candidate was rebuilt from a short
+  data file plus a small generator, and no repository file was left half-written. Nothing was re-attempted in other
+  words. No scientific content was lost: the same records were produced by the alternative route.
