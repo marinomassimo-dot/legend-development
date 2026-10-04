@@ -73,3 +73,15 @@ Members of this family are multifunctional, so naming one substrate does not def
 Attributing a conversion to one family member requires identifying the responsible residues and mutating them, by the authors' own statement. | would first require the identification of the specific amino acid residues responsible for the conversion of androstenedione to testosterone | Discussion, paragraph on HSD17B7, future work — files/fulltext/PMID40336300_Lawrence2025_PMC.xml
 
 Mouse and human orthologues differ in this redundancy, so a mouse enzymology result does not transfer unexamined. | human orthologs have lost this plasticity | Discussion, final paragraph — files/fulltext/PMID40336300_Lawrence2025_PMC.xml
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261004_005` (2026-10-04, ACTOR_ID `scientist`, Scientist O), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** PROPAGATED
+
+Class re-judged **MINOR** (it qualifies an open, non-canonical lead and touches no `consolidated baseline` claim). Landed as a dated append inside **`DL-BIO-001`**, anchored on the record's own measured span (`record_scoped_edit.py blocks` was run before the op was written — the upgrade the previous batch earned); the source's landing is **`CORPUS-STUB-182`** / **`LIT-0541`**. **Blind locator audit: 7 triples, 7/7 SUPPORTED.** Three qualifications were added at source from the auditor's SOURCE_SAYS notes: the HSD17B7 overturn is **species-restricted and cell-based** (mouse, not human, in transfected HEK-293T cells); the family's multifunctionality is **cited from prior literature**, not measured in this paper; and the closing *«human orthologs have lost this plasticity»* is explicitly **hypothesis-level**. The auditor also measured that the residue effect **is** proven causally by substitution, in cells and in a mouse line, and that the paper reports **no kinetic constant of any kind**. `WWOX` occurs **zero times** in the source, independently confirmed — the null is earned, not assumed.
+
+**Not medical advice.**

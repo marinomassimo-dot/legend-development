@@ -10,27 +10,27 @@
 >
 > A photograph, not an invariant. `files/fulltext/` is gitignored and grows between sessions, so these numbers describe the corpus on the census date and nothing re-checks them afterwards — compare the listing digest below against your own copy before trusting a row. This page blocks nothing and has no threshold: it exists so that rule 5d's *"record the absence"* is a fact in the state instead of a rediscovery made three papers into a reading.
 
-**Census date:** 2026-10-03  
-**Corpus:** `fulltext` — 250 entries, 119 papers, listing digest `3550a18deed3ac62`  
+**Census date:** 2026-10-04  
+**Corpus:** `fulltext` — 455 entries, 227 papers, listing digest `ad621fe48761d0e5`  
 **Sentinel:** `deepdive_manifest._refuse_suspect_surface`, PDF text via PyMuPDF 1.28.2
 
 ### Totals
 
 | Surface | Papers | What it means |
 |---|---:|---|
-| `structured` | 107 | publisher XML/HTML present — read this one (rule 5d) |
-| `pdf_only` | 11 | no structured surface locally — acquire XML/HTML before reading |
-| `absent` | 198 | queued, nothing local at all — retrieve first |
+| `structured` | 207 | publisher XML/HTML present — read this one (rule 5d) |
+| `pdf_only` | 19 | no structured surface locally — acquire XML/HTML before reading |
+| `absent` | 192 | queued, nothing local at all — retrieve first |
 
 Sentinel over the surface each paper would actually be read from — the structured file where one exists, the PDF otherwise. Structured markup is screened too, because a suffix is not a surface; see the note below:
 
 | Verdict | Papers | What it means |
 |---|---:|---|
-| `SUSPECT` | 5 | the text carries a known corruption signature — do not quote it; adjudicate against the rendered page, or re-acquire the paper structured |
-| `clean` | 113 | no known signature found — this is not a verification |
+| `SUSPECT` | 8 | the text carries a known corruption signature — do not quote it; adjudicate against the rendered page, or re-acquire the paper structured |
+| `clean` | 218 | no known signature found — this is not a verification |
 | `not_screened` | 0 | no deterministic extractor available, or extraction failed |
 
-🔴 **5 of the 11 PDF-only papers cannot be read from their text layer at all**, and all of them should be acquired as XML/HTML rather than read from the PDF. A `clean` PDF is still a PDF: `deepdive_manifest` refuses it as a text surface, and a locator drawn from one has to be anchored to the page.
+🔴 **7 of the 19 PDF-only papers cannot be read from their text layer at all**, and all of them should be acquired as XML/HTML rather than read from the PDF. A `clean` PDF is still a PDF: `deepdive_manifest` refuses it as a text surface, and a locator drawn from one has to be anchored to the page.
 
 ### Per paper
 
@@ -43,7 +43,7 @@ Sentinel over the surface each paper would actually be read from — the structu
 | PMID 31543760 | FT-005 | `structured` | `clean` | PMID31543760_Kosla2019_EPMC.xml, PMID31543760_Kosla2019_PMC.xml |
 | PMID 26390919 | FT-006 | `absent` | — | — |
 | PMID 30290271 | FT-008 | `absent` | — | — |
-| PMID 42397075 | FT-010 | `absent` | — | — |
+| PMID 42397075 | FT-010 | `pdf_only` | `clean` | PMID42397075_Steinberg2026_OUP-AM.pdf, PMID42397075_Steinberg2026_OUP-AM_fitz.txt, PMID42397075_Steinberg2026_OUP-AM_layout.txt |
 | PMID 38182577 | FT-011, FT-050 | `absent` | — | — |
 | PMID 42082822 | FT-013 | `absent` | — | — |
 | PMID 41984841 | FT-014 | `absent` | — | — |
@@ -82,7 +82,7 @@ Sentinel over the surface each paper would actually be read from — the structu
 | PMID 17803050 | FT-041 | `absent` | — | — |
 | PMID 19500159 | FT-042 | `absent` | — | — |
 | PMID 19936220 | FT-043 | `absent` | — | — |
-| PMID 33914858 | FT-044 | `pdf_only` | `clean` | PMID33914858_Repudi2021_OUP_browserprint.pdf |
+| PMID 33914858 | FT-044 | `pdf_only` | `SUSPECT` — PMID33914858_Repudi2021_Brain_operator_supplied.pdf: contains the C0 control U+0002 | PMID33914858_Repudi2021_Brain_operator_supplied.pdf, PMID33914858_Repudi2021_Brain_operator_supplied.txt, PMID33914858_Repudi2021_OUP_browserprint.pdf, PMID33914858_Repudi2021_OUP_browserprint_pdftotext.txt |
 | PMID 42128308 | FT-045 | `absent` | — | — |
 | PMID 15070730 | FT-046, FT-064 | `structured` | `clean` | PMID15070730_Aqeilan2004.pdf, PMID15070730_Aqeilan2004_PMC_2026-09-09.html |
 | PMID 18974271 | FT-046 | `absent` | — | — |
@@ -167,7 +167,7 @@ Sentinel over the surface each paper would actually be read from — the structu
 | PMID 18371080 | FT-109 | `absent` | — | — |
 | PMID 38902482 | FT-110 | `absent` | — | — |
 | PMID 42721537 | FT-110 | `absent` | — | — |
-| PMID 35328751 | FT-111 | `absent` | — | — |
+| PMID 35328751 | FT-111 | `structured` | `clean` | PMID35328751_Baryla2022_PMC.xml |
 | PMID 14555208 | FT-113 | `absent` | — | — |
 | PMID 15580310 | FT-113 | `absent` | — | — |
 | PMID 16380372 | FT-113 | `absent` | — | — |
@@ -183,7 +183,7 @@ Sentinel over the surface each paper would actually be read from — the structu
 | PMID 31704158 | FT-118 | `absent` | — | — |
 | PMID 30949922 | FT-119 | `absent` | — | — |
 | PMID 26070663 | FT-120 | `absent` | — | — |
-| PMID 28721938 | FT-121 | `absent` | — | — |
+| PMID 28721938 | FT-121 | `pdf_only` | `clean` | PMID28721938_TartaArsene2017_JLE.pdf, PMID28721938_TartaArsene2017_JLE.txt |
 | PMID 30783266 | FT-121 | `absent` | — | — |
 | PMID 39140066 | FT-123 | `absent` | — | — |
 | PMID 40665325 | FT-123 | `absent` | — | — |
@@ -199,7 +199,7 @@ Sentinel over the surface each paper would actually be read from — the structu
 | PMID 24891511 | FT-129 | `structured` | `clean` | PMID24891511_Nakasone2014_PMC_2026-09-26.html, PMID24891511_Nakasone2014_PMC_2026-09-26.txt |
 | PMID 26780369 | FT-129 | `absent` | — | — |
 | PMID 30202070 | FT-129 | `absent` | — | — |
-| PMID 21476439 | FT-130, FT-147 | `absent` | — | — |
+| PMID 21476439 | FT-130, FT-147 | `pdf_only` | `clean` | PMID21476439_SaludaGorgul2011_DeGruyter.pdf, PMID21476439_SaludaGorgul2011_DeGruyter.txt |
 | PMID 28097321 | FT-131 | `absent` | — | — |
 | PMID 23583307 | FT-132 | `structured` | `clean` | PMID23583307_Semple2013_PMC.xml |
 | PMID 38122823 | FT-133 | `structured` | `clean` | PMID38122823_Nascimento2023_PMC.xml |
@@ -211,8 +211,8 @@ Sentinel over the surface each paper would actually be read from — the structu
 | PMID 41957021 | FT-138 | `absent` | — | — |
 | PMID 17019711 | FT-139 | `absent` | — | — |
 | PMID 17200365 | FT-139 | `absent` | — | — |
-| PMID 31618474 | FT-140 | `absent` | — | — |
-| PMID 32214227 | FT-140 | `absent` | — | — |
+| PMID 31618474 | FT-140 | `structured` | `clean` | PMID31618474_Burgess2019_PMC_efetch.xml |
+| PMID 32214227 | FT-140 | `structured` | `clean` | PMID32214227_Hengel2020_PMC.xml |
 | PMID 40463067 | FT-141 | `absent` | — | — |
 | PMID 42425971 | FT-141 | `absent` | — | — |
 | PMID 28763065 | FT-142 | `structured` | `clean` | PMID28763065_Xia2017_PMC.xml |
@@ -287,6 +287,9 @@ Sentinel over the surface each paper would actually be read from — the structu
 | PMID 10910080 | FT-191 | `absent` | — | — |
 | PMID 7644498 | FT-192 | `absent` | — | — |
 | PMID 11042109 | FT-192 | `absent` | — | — |
+| PMID 41404412 | FT-193 | `structured` | `clean` | PMID41404412_Grubor2025_PMC.xml |
+| PMID 42422766 | FT-193 | `structured` | `clean` | PMID42422766_Amaral2026_PMC.xml |
+| PMID 40183601 | FT-194 | `structured` | `clean` | PMID40183601_Henry2025_EPI-66-2966-s002.txt, PMID40183601_Henry2025_EPI-66-2966-s003.txt, PMID40183601_Henry2025_PMC.xml, PMID40183601_Henry2025_supp_tableS9.txt |
 | PMID 15064722 | — | `structured` | `clean` | PMID15064722_LudesMeyers2004.pdf, PMID15064722_LudesMeyers2004.txt, PMID15064722_LudesMeyers2004_PMCreader.html, PMID15064722_LudesMeyers2004_PMCreader.txt, PMID15064722_LudesMeyers2004_efetch.xml |
 | PMID 15266310 | — | `structured` | `clean` | PMID15266310_Park2004.pdf, PMID15266310_Park2004.xml |
 | PMID 15870886 | — | `structured` | `clean` | PMID15870886_Gourley2005.html, PMID15870886_Gourley2005.pdf, PMID15870886_Gourley2005_PMC_2026-09-27.xml |
@@ -300,58 +303,157 @@ Sentinel over the surface each paper would actually be read from — the structu
 | PMID 21212468 | — | `structured` | `clean` | PMID21212468_Dudekula2010_PMC.xml |
 | PMID 21368882 | — | `structured` | `clean` | PMID21368882_Lee2010_PMC.xml |
 | PMID 21964341 | — | `structured` | `clean` | PMID21964341_Sanai2011_PMC.xml |
+| PMID 23179753 | — | `structured` | `clean` | PMID23179753_Krug2013_PMC.xml |
 | PMID 24008736 | — | `structured` | `clean` | PMID24008736_Tsai2013_PMC.xml |
 | PMID 24330518 | — | `structured` | `clean` | PMID24330518_Ferguson2013.pdf, PMID24330518_Ferguson2013.xml |
 | PMID 24456803 | — | `structured` | `clean` | PMID24456803_AbdelSalam2014_PMC.xml |
 | PMID 24510053 | — | `pdf_only` | `SUSPECT` — PMID24510053_Gardenswartz2014.pdf: contains the C0 control U+0002 | PMID24510053_Gardenswartz2014.pdf, PMID24510053_Gardenswartz2014.txt |
+| PMID 24520212 | — | `structured` | `clean` | PMID24520212_Li2014_PMC.xml |
 | PMID 24932569 | — | `structured` | `clean` | PMID24932569_Aldaz2014.pdf, PMID24932569_Aldaz2014_efetch.xml |
+| PMID 24935251 | — | `structured` | `clean` | PMID24935251_Balmer2014_PMC.xml |
 | PMID 24949445 | — | `structured` | `clean` | PMID24949445_Szymanska2014_PMC.xml |
 | PMID 25024751 | — | `structured` | `clean` | PMID25024751_Stewart2014.pdf, PMID25024751_Stewart2014.xml |
 | PMID 25537520 | — | `structured` | `clean` | PMID25537520_Chang2014_PMC.xml |
 | PMID 25649963 | — | `structured` | `clean` | PMID25649963_Tsuruwaka2015_PMC.xml |
+| PMID 26272509 | — | `structured` | `clean` | PMID26272509_Rempel2015_PMC.xml |
 | PMID 26302329 | — | `structured` | `clean` | PMID26302329_OKeefe2015_PMC.xml |
 | PMID 26499798 | — | `structured` | `clean` | PMID26499798_AbuRemaileh2015.pdf, PMID26499798_AbuRemaileh2015_PMC.html |
+| PMID 27188386 | — | `structured` | `clean` | PMID27188386_Shinde2016_PMC.xml |
 | PMID 27495153 | — | `structured` | `clean` | PMID27495153_Elsaadany2016_PMC.xml |
 | PMID 27551439 | — | `structured` | `clean` | PMID27551439_Chang2015_PMC.xml |
 | PMID 28373548 | — | `pdf_only` | `SUSPECT` — contains the C0 control U+0002 | PMID28373548_EoC_PNAS2017.pdf |
 | PMID 28749468 | — | `structured` | `clean` | PMID28749468_Janczar2017_PMC.xml |
 | PMID 29390993 | — | `structured` | `clean` | PMID29390993_Rim2018_PMC.xml |
+| PMID 30073178 | — | `structured` | `clean` | PMID30073178_Hordeaux2018b_PMC.xml |
+| PMID 30073179 | — | `structured` | `clean` | PMID30073179_Hordeaux2018a_PMC.xml |
 | PMID 30285739 | — | `structured` | `clean` | PMID30285739_Bonin2018.pdf, PMID30285739_Bonin2018.xml |
+| PMID 30361190 | — | `pdf_only` | `SUSPECT` — PMID30361190_Shaukat2018_JLE.pdf: contains the digit '3' where the page prints U+00D7 '×' in scientific notation (Elsevier/LiveCycle text layer) ('0\n3\n10') | PMID30361190_Shaukat2018_JLE.pdf, PMID30361190_Shaukat2018_JLE.txt |
 | PMID 30362252 | — | `structured` | `clean` | PMID30362252_Davids2019_PMC_2026-09-27.xml |
 | PMID 30470736 | — | `structured` | `clean` | PMID30470736_AbuRemaileh2018_correction_PMC.xml |
 | PMID 30746283 | — | `structured` | `clean` | PMID30746283_Ehaideb2018_PMC.xml |
 | PMID 31275852 | — | `structured` | `clean` | PMID31275852_McBride2019.pdf, PMID31275852_McBride2019.xml |
 | PMID 31315632 | — | `structured` | `clean` | PMID31315632_Chou2019_PMC.xml |
+| PMID 31353122 | — | `pdf_only` | `clean` | PMID31353122_Mori2019_IR.pdf, PMID31353122_Mori2019_IR.txt |
 | PMID 32081867 | — | `structured` | `clean` | PMID32081867_Bacchelli2020_PMC.xml |
+| PMID 32355866 | — | `structured` | `clean` | PMID32355866_Bey2020_PMC.xml |
+| PMID 32368285 | — | `structured` | `clean` | PMID32368285_Celebi2020_PMC.xml, PMID32368285_Celebi2020_publisher.pdf |
+| PMID 32389029 | — | `structured` | `clean` | PMID32389029_Kosla2020_PMC.xml |
 | PMID 33058734 | — | `pdf_only` | `SUSPECT` — uses statistical language (6 mentions) and contains none of < > ≤ ≥ ± × − | PMID33058734_Zeng2021.pdf |
+| PMID 33129329 | — | `structured` | `clean` | PMID33129329_Makii2020_PMC.xml |
 | PMID 33195192 | — | `structured` | `clean` | PMID33195192_Chou2020_PMC.xml |
 | PMID 33255508 | — | `structured` | `clean` | PMID33255508_Aldaz2020.xml |
+| PMID 33300063 | — | `pdf_only` | `clean` | PMID33300063_Zhao2020_Spandidos.pdf, PMID33300063_Zhao2020_Spandidos.txt, PMID33300063_Zhao2020_Spandidos_suppl.pdf |
+| PMID 33612478 | — | `structured` | `clean` | PMID33612478_Liu2021_PMC.xml |
+| PMID 33726816 | — | `structured` | `clean` | PMID33726816_Stranneheim2021_13073_2021_855_MOESM3_ESM.txt, PMID33726816_Stranneheim2021_PMC.xml |
 | PMID 33916893 | — | `structured` | `clean` | PMID33916893_Aqeilan2021_PMC.xml |
+| PMID 33919646 | — | `structured` | `clean` | PMID33919646_Spagnoli2021_PMC.xml |
+| PMID 33958783 | — | `structured` | `clean` | PMID33958783_Liu2021_PMC.xml |
 | PMID 34204789 | — | `structured` | `clean` | PMID34204789_Kaluzinska2021_PMC.xml |
 | PMID 34359949 | — | `structured` | `clean` | PMID34359949_Hsu2021_PMC.xml |
+| PMID 34852950 | — | `structured` | `clean` | PMID34852950_Dugan2022_PMC.xml |
+| PMID 35229008 | — | `structured` | `clean` | PMID35229008_Buss2022_PMC.xml |
+| PMID 35331006 | — | `structured` | `clean` | PMID35331006_Tukov2022_PMC.xml |
+| PMID 35333110 | — | `structured` | `clean` | PMID35333110_Hordeaux2022_PMC.xml |
+| PMID 35460704 | — | `structured` | `clean` | PMID35460704_Dong2022_PMC.xml |
 | PMID 35712340 | — | `structured` | `clean` | PMID35712340_Sukkar2022_PMC.xml |
+| PMID 35715422 | — | `structured` | `clean` | PMID35715422_Yang2022_PMC.xml |
+| PMID 35792847 | — | `structured` | `clean` | PMID35792847_AlBaradie2022_JLE.pdf, PMID35792847_AlBaradie2022_JLE_abstract.html, PMID35792847_AlBaradie2022_JLE_fulltext.html |
+| PMID 36271927 | — | `structured` | `clean` | PMID36271927_Baryla2022_PMC.xml |
+| PMID 36291747 | — | `structured` | `clean` | PMID36291747_Reinehr2022_PMC.xml |
 | PMID 36498839 | — | `structured` | `clean` | PMID36498839_Lin2022_PMC.xml |
+| PMID 36700120 | — | `structured` | `clean` | PMID36700120_Johnson2022_PMC.xml |
+| PMID 36926521 | — | `structured` | `clean` | PMID36926521_Colin2023_PMC.xml |
+| PMID 36937954 | — | `structured` | `clean` | PMID36937954_Alotibi2023_PMC.xml |
+| PMID 36951961 | — | `structured` | `clean` | PMID36951961_Chen2023_PMC.xml |
 | PMID 37095367 | — | `structured` | `clean` | PMID37095367_Bayanova2023_PMC.xml |
+| PMID 37248434 | — | `structured` | `clean` | PMID37248434_Taouis2023_PMC.xml |
 | PMID 37501399 | — | `structured` | `clean` | PMID37501399_Yang2023_PMC.xml |
+| PMID 37515322 | — | `structured` | `clean` | PMID37515322_Hudry2023_PMC.xml |
 | PMID 37781246 | — | `structured` | `clean` | PMID37781246_KaluzinskaKolat2023_PMC.xml |
 | PMID 37897534 | — | `structured` | `clean` | PMID37897534_Cheng2023_PMC.xml |
+| PMID 37946251 | — | `structured` | `clean` | PMID37946251_Pagnamenta2023_PMC.xml |
 | PMID 37974179 | — | `structured` | `clean` | PMID37974179_Dong2023_PMC.xml |
 | PMID 38161429 | — | `structured` | `clean` | PMID38161429_Battaglia2023_PMC_2026-09-27.xml |
 | PMID 38355659 | — | `structured` | `clean` | PMID38355659_Akkawi2024_correction.pdf, PMID38355659_Akkawi2024_correction_PMC.xml |
+| PMID 38540325 | — | `structured` | `clean` | PMID38540325_Snyder2024_PMC.xml |
 | PMID 38542478 | — | `structured` | `clean` | PMID38542478_Chen2024_PMC.xml |
 | PMID 38563965 | — | `structured` | `clean` | PMID38563965_Zeng2024_PMC.html |
+| PMID 38719828 | — | `structured` | `clean` | PMID38719828_MartinezLumbreras2024_PMC.xml |
 | PMID 39101447 | — | `structured` | `clean` | PMID39101447_You2024_PMC.xml |
+| PMID 39358605 | — | `structured` | `clean` | PMID39358605_Wiseman2024_PMC.xml |
 | PMID 39847501 | — | `structured` | `clean` | PMID39847501_Chen2025_PMC.xml |
+| PMID 39850204 | — | `structured` | `clean` | PMID39850204_Zhu2025_PMC.xml |
+| PMID 40019827 | — | `structured` | `clean` | PMID40019827_Innes2025_PMC.xml |
+| PMID 40083435 | — | `structured` | `clean` | PMID40083435_Kava2025_PMC.xml, PMID40083435_Kava2025_Table1.txt |
+| PMID 40126049 | — | `structured` | `clean` | PMID40126049_CerulliIrelli2025_PMC.xml |
 | PMID 40191585 | — | `structured` | `clean` | PMID40191585_Robertson2025_PMC.xml |
+| PMID 40217411 | — | `structured` | `clean` | PMID40217411_Yuan2025_PMC.xml |
 | PMID 40263630 | — | `structured` | `clean` | PMID40263630_Wagner2025_PMC.xml |
+| PMID 40301740 | — | `structured` | `clean` | PMID40301740_Ma2025_PMC.xml |
+| PMID 40336300 | — | `structured` | `clean` | PMID40336300_Lawrence2025_PMC.xml |
 | PMID 40349107 | — | `structured` | `clean` | PMID40349107_Aeran2025_PMC.xml |
+| PMID 40377402 | — | `structured` | `clean` | PMID40377402_Pascual2025_PMC.xml |
+| PMID 40429983 | — | `structured` | `clean` | PMID40429983_Sabau2025_PMC.xml |
+| PMID 40507943 | — | `structured` | `clean` | PMID40507943_Hsu2025_PMC.xml |
+| PMID 40524961 | — | `structured` | `clean` | PMID40524961_Sengupta2025_PMC.xml |
+| PMID 40809677 | — | `structured` | `clean` | PMID40809677_DubaKiss2025_PMC.xml |
+| PMID 40858643 | — | `structured` | `clean` | PMID40858643_Hamanaka2025_PMC.xml |
+| PMID 40884527 | — | `structured` | `clean` | PMID40884527_Beretti2025_AppendixS1.pdf, PMID40884527_Beretti2025_PMC.xml |
+| PMID 40937943 | — | `structured` | `clean` | PMID40937943_Ramirez2025_PMC.xml |
+| PMID 40943441 | — | `structured` | `clean` | PMID40943441_Panchenko2025_PMC.xml |
+| PMID 40952239 | — | `structured` | `clean` | PMID40952239_Carpanese2025_PMC.xml |
+| PMID 40988338 | — | `structured` | `clean` | PMID40988338_Quinlan2025_PMC.xml, PMID40988338_Quinlan2025_PMC_supp_mmc1.pdf, PMID40988338_Quinlan2025_PMC_supp_mmc1.txt |
+| PMID 41036104 | — | `structured` | `clean` | PMID41036104_Chornyy2025_PMC.xml |
+| PMID 41078870 | — | `structured` | `clean` | PMID41078870_Okai2025_PMC.xml |
 | PMID 41090157 | — | `structured` | `clean` | PMID41090157_Hussain2025.pdf, PMID41090157_Hussain2025.xml |
 | PMID 41124647 | — | `structured` | `clean` | PMID41124647_Zhang2025_PMC.xml |
+| PMID 41134821 | — | `structured` | `clean` | PMID41134821_Zhao2025_PMC.xml |
+| PMID 41210171 | — | `structured` | `clean` | PMID41210171_Vono2025_PMC.xml |
+| PMID 41254692 | — | `structured` | `clean` | PMID41254692_Qin2025_PMC.xml |
+| PMID 41257285 | — | `structured` | `clean` | PMID41257285_Aihara2025_PMC.xml |
+| PMID 41314141 | — | `structured` | `clean` | PMID41314141_Greenberg2026_PMC.xml |
+| PMID 41345172 | — | `structured` | `clean` | PMID41345172_De2025_PMC.xml |
+| PMID 41438872 | — | `structured` | `clean` | PMID41438872_Fortuna2025_PMC.xml |
+| PMID 41477840 | — | `structured` | `clean` | PMID41477840_Stamouli2026_PMC.xml |
 | PMID 41562193 | — | `structured` | `clean` | PMID41562193_Druck2026_EuropePMC_render.pdf, PMID41562193_Druck2026_PMC.xml |
 | PMID 41677633 | — | `structured` | `clean` | PMID41677633_Su2026_PMC.xml |
+| PMID 41712149 | — | `structured` | `clean` | PMID41712149_Balestrini2026_PMC.xml |
+| PMID 41712282 | — | `structured` | `clean` | PMID41712282_Bailey2026_PMC.xml |
+| PMID 41744777 | — | `structured` | `clean` | PMID41744777_Nabakowski2026_PMC.xml |
+| PMID 41751597 | — | `structured` | `SUSPECT` — contains '¼' where the page prints '=' (Elsevier/LiveCycle text layer) ('d ¼ t') | PMID41751597_Rioux2026_PMC.derived.txt, PMID41751597_Rioux2026_PMC.xml |
+| PMID 41835067 | — | `structured` | `clean` | PMID41835067_Yigit2026_PMC.xml |
+| PMID 41948127 | — | `structured` | `clean` | PMID41948127_Stavrou2026_PMC.xml |
+| PMID 41966056 | — | `structured` | `clean` | PMID41966056_Wang2026_PMC.xml |
+| PMID 41992613 | — | `structured` | `clean` | PMID41992613_Song2026_PMC.xml |
+| PMID 42068099 | — | `structured` | `clean` | PMID42068099_Mohammad2026_PMC.xml |
+| PMID 42134074 | — | `structured` | `clean` | PMID42134074_Kagiava2026_PMC.xml |
+| PMID 42135313 | — | `structured` | `clean` | PMID42135313_Kang2026_PMC.xml |
+| PMID 42136830 | — | `structured` | `clean` | PMID42136830_Haque2026_PMC.xml |
+| PMID 42137263 | — | `structured` | `clean` | PMID42137263_Moeini2026_PMC.xml |
+| PMID 42137269 | — | `structured` | `clean` | PMID42137269_Chauhan2026_PMC.xml |
+| PMID 42137271 | — | `structured` | `clean` | PMID42137271_Hordeaux2026_PMC.xml |
+| PMID 42137291 | — | `structured` | `clean` | PMID42137291_Thomsen2026_PMC.xml |
+| PMID 42157962 | — | `structured` | `clean` | PMID42157962_DuBreuil2026_PMC.xml |
+| PMID 42170349 | — | `structured` | `clean` | PMID42170349_Flotte2026_PMC.xml |
 | PMID 42181696 | — | `structured` | `clean` | PMID42181696_Diaz2026_PMC.xml |
 | PMID 42193054 | — | `structured` | `clean` | PMID42193054_Sapuppo2026_PMC.xml |
+| PMID 42198847 | — | `structured` | `clean` | PMID42198847_BoespflugTanguy2026_PMC.xml |
+| PMID 42205472 | — | `structured` | `clean` | PMID42205472_Engelhard2026_PMC.xml |
+| PMID 42248868 | — | `structured` | `clean` | PMID42248868_Zhao2026_PMC.xml |
+| PMID 42349402 | — | `structured` | `clean` | PMID42349402_Fukai2026_PMC.xml |
+| PMID 42394473 | — | `structured` | `clean` | PMID42394473_Karaer2026_PMC.xml |
+| PMID 42436860 | — | `structured` | `clean` | PMID42436860_NaViPA1_2026_PMC.xml |
+| PMID 42458834 | — | `structured` | `clean` | PMID42458834_Boitnott2026_PMC.xml |
+| PMID 42511902 | — | `structured` | `clean` | PMID42511902_Gao2026_PMC.xml |
 | PMID 42521212 | — | `structured` | `clean` | PMID42521212_Saravanan2026_PMC.xml |
+| PMID 42538560 | — | `structured` | `clean` | PMID42538560_ICVchoroid2026_PMC.xml |
+| PMID 42558002 | — | `structured` | `clean` | PMID42558002_Lange2026_PMC.xml |
+| PMID 42738875 | — | `structured` | `clean` | PMID42738875_Tang2026_PMC.xml |
+| PMID 42770556 | — | `structured` | `clean` | PMID42770556_Lima2026_PMC.xml |
+| PMID 42771216 | — | `structured` | `clean` | PMID42771216_Kohler2026_PMC.xml |
+| PMID 42807309 | — | `pdf_only` | `clean` | PMID42807309_16q231_pancreatitis_2026.pdf, PMID42807309_16q231_pancreatitis_2026.txt |
+| PMID 42807679 | — | `structured` | `clean` | PMID42807679_Khadija2026_PMC.xml |
+| PMID 42812991 | — | `pdf_only` | `clean` | PMID42812991_AAV_AD_review_2026.pdf, PMID42812991_AAV_AD_review_2026.txt |
 
 ### Loss ledger — queue entries this census cannot join to a local surface
 
@@ -369,7 +471,7 @@ Not all of these are defects. An entry resolved by DOI alone says exactly what i
 | FT-126 | `not_an_article` | NOT_AN_ARTICLE — this entry records instrument behaviour, not a source. |
 | FT-127 | `not_an_article` | NOT_AN_ARTICLE — this entry records an adjudication and two artefact-integrity facts. |
 
-**Accounting.** Rows: 119 corpus papers + 251 queued papers − 54 in both = **316** emitted. ✓ Entries: 182 resolved + 9 unjoined = **191** queue entries. ✓
+**Accounting.** Rows: 227 corpus papers + 254 queued papers − 63 in both = **418** emitted. ✓ Entries: 184 resolved + 9 unjoined = **193** queue entries. ✓
 
 *Not medical advice. This page describes file formats, not findings.*
 

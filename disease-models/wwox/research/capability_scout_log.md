@@ -871,3 +871,43 @@ wave identified is not a tool at all but a **document**: PMID 42134074's referen
 multi-capsid primate study that triggered the regulatory hold which stopped a human paediatric
 intrathecal programme. Every DRG-safety conclusion in this evidence base routes through a study
 LEGEND has not read.
+
+---
+
+## 2026-10-04 — `BATCH_20261004_005` (ACTOR_ID `scientist`, Scientist O, batch integrator)
+
+**CHANGE = NONE, and the reason is that the gate already existed and fired.**
+
+🟡 **The gap this batch actually hit** is a cross-registry one: the paper registry and the literature
+tracking log have nearly identical field names and **different Status vocabularies**, so a value copied
+from one into the other (`not_processed`, which is a legitimate paper-registry stub value) is
+`NOT_IN_VOCABULARY` in the log. I wrote exactly that into `LIT-0544`. It cost one cycle and nothing
+reached `main`, because **`legend_lint.py` names the defect, the record and the vocabulary table in one
+line** — `INVALID_LIT_STATUS: LIT-0544 … is NOT_IN_VOCABULARY against the log's Status vocabulary table
+and is not grandfathered`. A gate that catches a mistake at the moment it is made, and says which table
+to read, is not a capability gap; proposing a new tool here would add a second mouth for the same
+sentence. The durable fix is procedural and is recorded in the batch report's self-evaluation:
+**`registry_records.py fields` before writing a record kind this session has not written**, and never
+carry a field value across registries because the field name matches.
+
+🔵 **What did not need building, measured rather than assumed.** This batch's four heaviest needs were all
+already served: `evidence_presence.py` settled thirteen PMIDs' artefact presence before any audit was
+dispatched (0 absent in scope, so the SHA-256 search was not needed); `record_scoped_edit.py blocks`
+measured every append anchor and produced **zero** refusals across 23 ops on six files; `registry_records.py
+catalog`/`index` caught **nine** collided provisional identifiers and one stale «no landing exists» premise;
+and the nine blind locator audits needed no new tooling, only sub-agents, the artefacts and `pdftoppm`.
+
+🟢 **One external observation worth recording for whoever reads next.** The one red release suite the
+previous batch named — `test_manifest_receipt_provenance.py`, 18 non-conforming against a ceiling of 15 —
+is **green on this tree at 15 of 15**. The repair happened on `main` between batches, the ratchet was not
+loosened, and the previous batch's instruction (*re-measure, never raise the ceiling*) is what made that
+visible rather than argued.
+
+**Cost / API / privacy risk:** none. Everything in this batch was local and stdlib-only; no external
+retrieval, no spend, no new dependency. Two reserved acquisition routes were named and not attempted
+(author outreach for the PMID 42397075 supplement; the paywalled PMID 38407561 and PMID 10786676).
+
+**Next surgical micro-step:** again not a script. `DL-MECH-116` now carries, as a written protocol, the
+assay specification that would turn *«nobody outside three laboratories has measured a WWOX activity»* from
+a measured null into a testable experiment — purified WW2-SDR, a named substrate and cofactor, a YxxxK
+catalytic-dead control, a titration. The missing item is the experiment, not the tool.

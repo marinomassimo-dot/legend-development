@@ -1139,10 +1139,10 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Corpus paper no:** 41
 **Full title:** WWOX binds MERIT40 and modulates its function in homologous recombination, implications in breast cancer
 **Identifier:** PMID 37248434 / DOI 10.1038/s41417-023-00626-x
-**Status:** not_processed
+**Status:** read — superseded by the full record [[paper_registry_current#PAPER 245]] (promotion by `BATCH_20261004_005`, receipt `FTR-20261004-37248434-01`); this placeholder is kept as history
 **Registry role:** corpus placeholder only
 **Claim links:** none
-**Next action:** screening / triage required
+**Next action:** none — the full text was read on 2026-10-04 and the record it earned is [[paper_registry_current#PAPER 245]]; see `deepdive_manifests/PMID37248434.json`
 **Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record.
 
 ## CORPUS-STUB-042
@@ -10064,7 +10064,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Transferability:** T3 — `p.Leu239Arg` is not Q230P and nothing functional was measured
 **clinical relevance:** LOW
 **Claim links:** none
-**Role:** **Count once (INFERENZA).** One homozygous `p.Leu239Arg` female child of a consanguineous family, seizures from two weeks of age, reached through a cerebral-palsy referral stream; **identity with [[paper_registry_current#PAPER 013]] case 50 is not excluded** — neither source prints enough (syndrome, EEG, onset detail, family structure) to confirm or exclude it, and the standing counting rule applies. See `CC-20261004W8-A-PATIENT-OVERLAP-01`.
+**Role:** **Count once (INFERENZA).** One homozygous `p.Leu239Arg` female child of a consanguineous family, seizures from two weeks of age, reached through a cerebral-palsy referral stream; **identity with [[paper_registry_current#PAPER 013]] case 50 is not excluded** — neither source prints enough (syndrome, EEG, onset detail, family structure) to confirm or exclude it, and the standing counting rule applies. See `CC-20261004W8-A-PATIENT-OVERLAP-01`. **A fourth source, and probably not a fourth child (2026-10-04, `CC-20261004W11-B-L239R-01`, `BATCH_20261004_005`).** PMID 40083435 ([[paper_registry_current#PAPER 246]]) lists a homozygous `p.Leu239Arg` female from the **same university**, with a **shared author** and an overlapping recruitment window; first seizure is printed as 0.33 years there against two weeks here, and the feature lists do not overlap. **INFERENZA: identity with this child is plausible and not excluded**, so it is not summed. Counting every source once, the possible total is **2-5 children in 1-4 families** (derived; the upper bound only if that child is distinct from this one and from [[paper_registry_current#PAPER 013]] case 50).
 **LIT link:** [[literature_tracking_log_current#LIT-0512]]
 **Note:** class-level record; no individual-level detail is carried in this public edition. Not medical advice.
 
@@ -10506,7 +10506,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261004-40183601-01`; manifest `deepdive_manifests/PMID40183601.json`; dossier `research/fulltext_dossiers/PMID40183601.md`
 **Primary pathway:** P1 — allele consequence; splice mechanism
 **Model/species:** human — a paediatric epilepsy cohort (733 individuals from 710 families by the body; the abstract says «733 families»)
-**Genotype/model:** WWOX, four diagnosed individuals, class level; one of the four is the deep intronic allele `NM_016373.4:c.107+119C>G`, homozygous
+**Genotype/model:** WWOX, four diagnosed individuals, class level; one of the four is the deep intronic allele `NM_016373.4:c.107+119C>G`, homozygous. **A second of the four alleles is now recorded (2026-10-04, `CC-20261004W11-B-H322R-01`, `BATCH_20261004_005`):** `NM_016373.4:c.965A>G p.(His322Arg)`, **homozygous in two individuals** of the solved-cases supplement, both with infantile epileptic spasms syndrome, focal seizures, abnormal MRI, global developmental delay and hypotonia, both deceased. The authors counted the allele as **diagnostic** — the variant-of-uncertain-significance carriers were kept unsolved in a separate supplement that has **no WWOX row** — while ClinVar `VCV000241108` gives **uncertain significance** (three submitters, no conflicts, last evaluated 2024-10-18). **Nothing is measured:** the call rests on homozygosity in two affected relatives and clinical fit. ⚠️ **That the two are one family is an INFERENZA, not a printed fact:** the supplement has no family-identifier column and says «same family» nowhere; what it prints is the same referring site, the same referral and solved ages, consanguinity marked present for both, and an inheritance cell this edition does not reproduce. Its earlier report is the one WWOX row of PMID 33726816's Supplementary Table S7 ([[paper_registry_current#CORPUS-STUB-185]], reference 11 of this paper), gene and variant only — **same family by INFERENZA, counted once, under this record.** A blind locator audit (2026-10-04, 5 triples, 5/5 SUPPORTED) also measured that this paper's solved-cases supplement carries **four** WWOX rows and that supplement's internal numbering calls it «Supplementary table 11»
 **Transferability:** T2 for the allele's **qualitative** RNA consequence; **T5 for anything quantitative** — no read fraction, frame position, NMD, protein or tissue is printed
 **clinical relevance:** BACKGROUND — class-level allele mechanics. Not medical advice.
 **Claim links:** none — no canonical claim is created or narrowed by this record
@@ -10585,3 +10585,211 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Note:** See `CC-20261004W10-X-ENZYMOLOGY-01` for the four landed statements this reading confirms and the four it corrects. Class-level record; no individual-level detail is carried in this public edition. Not medical advice.
 
 ---
+
+---
+
+## PAPER 245
+**Short title:** Taouis 2023 Cancer Gene Ther — an independent laboratory maps a WWOX–MERIT40 protein interaction to the WW2-SDR region; no enzymology, no affinity
+**Full title:** WWOX binds MERIT40 and modulates its function in homologous recombination, implications in breast cancer
+**Authors:** Taouis K, Vacher S, Guirouilh-Barbat J, Camonis J, Formstecher E, Popova T, Hamy AS, Petitalot A, Lidereau R, Caputo SM, Zinn-Justin S, Bieche I, Driouch K, Lallemand F
+**Year:** 2023
+**Source type:** primary research — molecular / cell biology, with a tumour-series expression arm
+**Journal/source:** *Cancer Gene Therapy* 2023;30(8):1144
+**Identifier:** PMID 37248434 / PMCID PMC10425285 / DOI 10.1038/s41417-023-00626-x
+**Status:** processed
+**Record provenance:** created by `CC-20261004W11-A-REGISTRY-01` (intake wave 11 2026-10-04, Scientist A); identity authored by the batch integrator from the artefact's own JATS front matter at `2d2077f47e83`, and the candidate's provisional number re-measured with `registry_records.py catalog` (`PAPER` max was 244, `CORPUS-STUB` max 180, `LIT` max 0538). It is the promotion of the placeholder `CORPUS-STUB-041`, which is kept as history and cross-linked both ways.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261004-37248434-01`; manifest `deepdive_manifests/PMID37248434.json`; dossier `research/fulltext_dossiers/PMID37248434.md`; artefact `files/fulltext/PMID37248434_Taouis2023_PMC.xml` (sha256 `6698dd632a1b1abcb610567997439be82e13fa2afddcb4afdcf96dd29a06a447`)
+**Primary pathway:** P3 — WWOX protein interactions / domain function
+**Model/species:** human cell lines (HEK293, MCF7), yeast two-hybrid, plus a tumour series read for expression only
+**Genotype/model:** no WWOX disease allele. The constructs are wild-type WWOX, the natural isoform WWOXv2 (NP_570607: WW1, WW2 and a truncated SDR), the WW1 ligand-binding mutant Y33R, and the fragments WW1-WW2 and WW2-SDR. **No catalytic-site mutant exists in this paper**
+**Transferability:** T3 — a binding determinant measured on fragments in cells; nothing transfers to P47T, Q230P, G372R, A141T or P252A, and nothing transfers to catalysis
+**clinical relevance:** BACKGROUND — domain-level mechanism. Not medical advice.
+**Claim links:** none — no canonical claim is created or narrowed by this record
+**Role:** 🔵 **The first WWOX binding measurement in the read corpus from a laboratory outside the Bednarek / Aqeilan / Chang-Aldaz chain, and it is a protein partner rather than a substrate.** A WWOX–MERIT40 interaction is shown in three formats (yeast two-hybrid, co-immunoprecipitation of tagged constructs in HEK293, endogenous co-IP from MCF7 extract with the group's own antibody); binding survives the WW1 ligand mutant Y33R, is lost with a WW1-WW2 fragment and retained with a WW2-SDR fragment, and the authors *suggest* the determinant lies in the N-terminal part of the SDR domain. ⚠️ **What it is not:** the fragment mapping is **co-IP in cells, not purified protein** (Fig. 1D-E); directness rests on the two-hybrid format plus a personal communication; and the paper contains **no enzymatic or oxidoreductase measurement of WWOX whatsoever** — no substrate, no cofactor, no NAD(P)H, no catalytically dead control — and **no affinity constant, stoichiometry or purified-protein binding experiment** (blind audit, 2026-10-04: zero hits for each, 11 triples, 11/11 SUPPORTED). So it raises the SDR region's standing as a **binding surface** and adds nothing to its standing as a **catalytic** one. Two internal limits travel with it: the homologous-recombination direction is contested in the source's own words (*«The effect of WWOX on HR seems therefore to depend on the cell type.»*, against Aqeilan's osteosarcoma result), and one mechanistic step of the authors' model is *«unpublished data»*; the nuclear-foci experiment counted 50 cells per condition and was done once. See `DL-MECH-115`.
+**LIT link:** [[literature_tracking_log_current#LIT-0065]]
+**Note:** class-level record; the tumour series is described at class level only and no cohort member is described. Not medical advice.
+
+---
+
+## PAPER 246
+**Short title:** Kava 2025 Front Pediatr — NGS in 90 children with epilepsy and/or developmental delay; one child homozygous for WWOX p.Leu239Arg, nothing measured
+**Full title:** Evaluation of the etiology of epilepsy and/or developmental delay in children via next-generation sequencing: a single-center experience
+**Authors:** Kava H, Akgun-Dogan O, Yesilyurt A, Alanay Y, Isik U
+**Year:** 2025
+**Source type:** primary research — retrospective single-centre diagnostic cohort (90 children, 0-18 years)
+**Journal/source:** *Front Pediatr* 2025;13:1471965
+**Identifier:** PMID 40083435 / PMCID PMC11904636 / DOI 10.3389/fped.2025.1471965
+**Status:** processed
+**Record provenance:** created by `CC-20261004W11-B-REGISTRY-01` (intake wave 11 2026-10-04, Scientist B); identity authored by the batch integrator from the artefact's own JATS front matter at `2d2077f47e83`, and the candidate's provisional number re-measured with `registry_records.py catalog` (`PAPER` max was 244, `CORPUS-STUB` max 180, `LIT` max 0538). The candidate proposed `PAPER 235`, which had been taken by an earlier batch.
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261004-40083435-01`; manifest `deepdive_manifests/PMID40083435.json`; dossier `research/fulltext_dossiers/PMID40083435.md`; artefacts `files/fulltext/PMID40083435_Kava2025_PMC.xml` (sha256 `77225d527c3e0cdba9a0407833d393116793752493fd60ea71fdf06848f55827`) and `files/fulltext/PMID40083435_Kava2025_Table1.txt`
+**Primary pathway:** P1 — allele consequence / genotype census
+**Model/species:** human — DNA only
+**Genotype/model:** homozygous `NM_016373.4:c.716T>G p.(Leu239Arg)` (M/M) in one female, tested by WES plus CMA; called likely pathogenic by the authors, whose table footnote dates every classification to *«by June 2024»*; ClinVar `VCV000871669` carries conflicting classifications. **Nothing functional is measured** — no RNA, protein, stability or activity, and the paper's only statement about functional work is that findings *«should be complemented with functional tests»*
+**Transferability:** T3 — `p.Leu239Arg` is not Q230P, P47T, G372R, A141T or P252A; no datum transfers
+**clinical relevance:** LOW
+**Claim links:** none
+**Role:** **Count once (INFERENZA).** A fourth source for homozygous `p.Leu239Arg`, and probably not a fourth child. Printed, in Table 5 and Supplementary Table S1 row P31: female, epilepsy with global developmental delay, first seizure at 0.33 years, dysmorphism, hypotonia, achalasia, optic atrophy, normal MRI, and an EEG coded `FED` — ⚠️ the legend defines `FEA` as *focal epileptic discharge* and never defines `FED`, so reading it as focal is a **DERIVATION (INFERENZA)**, not a printed fact (blind audit, 2026-10-04, 4 triples, 4/4 SUPPORTED). Against independence of this child from the [[paper_registry_current#PAPER 220]] child: same university, a **shared author**, overlapping recruitment, same allele, same sex. For independence: onset as printed (0.33 years vs two weeks) and non-overlapping feature lists. The row notes that the parents come from the same region; **carrier testing of this child's parents is not stated** (trio sequencing was done in four families of the ninety), so «consanguineous» is the row's implication rather than its word. **Not summed as independent:** counting all four sources once each, the possible total is **2-5 children in 1-4 families** (derived here; the upper bound only if this child is distinct from both `PAPER 220` and `PAPER 013` case 50), and identity with `PAPER 013` case 50 is unsupported — another centre, onset 11 months, hypsarrhythmia rather than focal discharges. See `CC-20261004W11-B-L239R-01`.
+**LIT link:** [[literature_tracking_log_current#LIT-0539]]
+**Note:** class-level record; no individual-level detail, no geography and no parental side of origin is carried in this public edition. Not medical advice.
+
+---
+
+## CORPUS-STUB-181
+**Corpus paper no:** 181
+**Full title:** Intramolecular autoinhibition regulates the selectivity of PRPF40A tandem WW domains for proline-rich motifs
+**Authors:** Martinez-Lumbreras S, Trager LK, Mulorz MM, Payr M, Dikaya V, Hipp C, Konig J, Sattler M
+**Year:** 2024
+**Journal/source:** *Nature Communications* 2024;15:3888
+**Identifier:** PMID 38719828 / PMCID PMC11079029 / DOI 10.1038/s41467-024-48004-x
+**Status:** processed
+**Record provenance:** created by `CC-20261004W11-A-REGISTRY-01` (intake wave 11 2026-10-04, Scientist A); identity authored by the batch integrator from the artefact's own front matter at `2d2077f47e83`; numbers re-measured with `registry_records.py catalog` (`CORPUS-STUB` max was 180, `LIT` max 0538), because the candidate's provisional `CORPUS-STUB-180`/`181` and `LIT-0527`/`0528` were already taken.
+**Registry role:** 🔵 **corpus placeholder and a method donor, not WWOX evidence.** WWOX occurs **twice** in the artefact — once in a Discussion sentence attributing an intra-tandem chaperoning role to WWOX's WW pair, and once as the title of the reference it cites (PMID 22634283) — and the paper performs **no WWOX experiment of any kind** (blind audit, 2026-10-04: 9 triples, 7 SUPPORTED, 2 NOT_SUPPORTED_AS_LABELLED and repaired at source; zero WWOX affinity, Kd, stoichiometry or experiment; `SDR`, `short-chain` and `dehydrogenase` occur zero times). A stub is the honest landing. What was taken from it is assay design only, in `DL-MECH-116`.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261004-38719828-01`; manifest `deepdive_manifests/PMID38719828.json`; dossier `research/fulltext_dossiers/PMID38719828.md`; artefact `files/fulltext/PMID38719828_MartinezLumbreras2024_PMC.xml` (sha256 `3b2b892fdd6760f7a4d9009d359fe61ee4e828683021aeb8582cdcbe4f5cbd12`)
+**Claim links:** none
+**Next action:** none — read, registered, and its transferable content recorded as a method-only lead. ⚠️ **WWOX is NOT in the authors' own list of WW-tandem proteins that may be autoinhibited**, so «WWOX is autoinhibited» must not be written from this source.
+**LIT link:** [[literature_tracking_log_current#LIT-0540]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## CORPUS-STUB-182
+**Corpus paper no:** 182
+**Full title:** Functional Analysis of HSD17B3-Deficient Male Mice Reveals Roles for HSD17B7 and HSD17B12 in Testosterone Biosynthesis
+**Authors:** Lawrence BM, O'Donnell L, Gannon AL, Skerrett-Byrne DA, Parameswaran S, Abbott I, Smith S, Handelsman DJ, Rebourcet D, Smith LB
+**Year:** 2025
+**Journal/source:** *Endocrinology* 2025;166(6):bqaf078
+**Identifier:** PMID 40336300 / PMCID PMC12059215 / DOI 10.1210/endocr/bqaf078
+**Status:** processed
+**Record provenance:** created by `CC-20261004W11-A-REGISTRY-01` (intake wave 11 2026-10-04, Scientist A); identity authored by the batch integrator from the artefact's own front matter at `2d2077f47e83`; numbers re-measured with `registry_records.py catalog` (`CORPUS-STUB` max was 180, `LIT` max 0538), because the candidate's provisional `CORPUS-STUB-180`/`181` and `LIT-0527`/`0528` were already taken.
+**Registry role:** 🔴 **an EARNED NULL for the gene, not an unscreened placeholder.** `WWOX` occurs **zero times** in the whole artefact, lists and references included (blind audit, 2026-10-04, 7 triples, 7/7 SUPPORTED). It was read for one transferable question — what a 17-beta-hydroxysteroid-dehydrogenase family assignment is worth as evidence about substrate — and the answer it gives bounds a WWOX **method**, never a WWOX number: see the dated qualification appended to `DL-BIO-001`.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261004-40336300-01`; manifest `deepdive_manifests/PMID40336300.json`; dossier `research/fulltext_dossiers/PMID40336300.md`; artefact `files/fulltext/PMID40336300_Lawrence2025_PMC.xml` (sha256 `95ed1ce9ff724a03db5d822d42e4a49d44b2927851f5403d899b5facc0c08a1c`)
+**Claim links:** none
+**Next action:** none. The paper reports **no kinetic constant** (no Km, kcat, Kd or Vmax: zero hits), so nothing quantitative is owed from it.
+**LIT link:** [[literature_tracking_log_current#LIT-0541]]
+**Note:** class-level record. Not medical advice.
+
+---
+
+## CORPUS-STUB-183
+**Corpus paper no:** 183
+**Full title:** Long-term outcomes of a cohort of patients with pharmacoresistant neonatal epilepsy and negative brain MRI
+**Authors:** Beretti T, Rozalen W, Villard L, Riccardi F, Daquin G, Lepine A, Villeneuve N, Milh M, Desnous B
+**Year:** 2025
+**Journal/source:** *Epilepsia Open* 2025;10(5):1605
+**Identifier:** PMID 40884527 / DOI 10.1002/epi4.70126
+**Status:** processed — read in full (`FTR-20261004-40884527-01`, `complete_fulltext_read`)
+**Record provenance:** created by `CC-20261004W11-B-REGISTRY-01` (intake wave 11 2026-10-04, Scientist B); identity authored by the batch integrator from the artefact's own front matter at `2d2077f47e83`; numbers re-measured with `registry_records.py catalog` (`CORPUS-STUB` max was 180, `LIT` max 0538), because the candidate's provisional `CORPUS-STUB-180`/`181` and `LIT-0527`/`0528` were already taken.
+**Registry role:** 🔵 **corpus placeholder: a denominator, not a case record.** WWOX appears only as a gene count of **two** patients (of 56 in the cohort; 2 of 35 solved) in a figure legend, with **no genotype, sex, onset or outcome printed for either**, so neither can be counted as a case and neither can be added to any allele census. **INFERENZA:** overlap with the two WWOX patients of PMID 30356099 is plausible and untestable on what this paper prints — same reporting network, same phenotype class — so no count is derived from it.
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261004-40884527-01`; manifest `deepdive_manifests/PMID40884527.json`; dossier `research/fulltext_dossiers/PMID40884527.md`; artefact `files/fulltext/PMID40884527_Beretti2025_PMC.xml`
+**Claim links:** none
+**Next action:** none; the overlap question is closed as untestable on the printed content, not deferred.
+**LIT link:** [[literature_tracking_log_current#LIT-0542]]
+**Note:** class-level record; no individual-level detail is carried. Not medical advice.
+
+---
+
+## CORPUS-STUB-184
+**Corpus paper no:** 184
+**Full title:** Clinical and Molecular Presentation of a Patient with Uniparental Isodisomy of Chromosome 16 (one word of the published title omitted here under the public-edition privacy rule; the full title is in the publisher's record)
+**Authors:** Panchenko E, Semenova N, Sereda O, Guseva D, Markova Z, Shilova N, Simonova O, Smirnov A, Pustoshilov D, Khalilova A, Udalova V, Kanivets I, Zaletaev D, Strelnikov V, Kutsev S
+**Year:** 2025
+**Journal/source:** *International Journal of Molecular Sciences* 2025;26(17):8521
+**Identifier:** PMID 40943441 / PMCID PMC12429381 / DOI 10.3390/ijms26178521
+**Status:** processed — read (`FTR-20261004-40943441-01`, `partial_fulltext_read`, **partial full text**)
+**Record provenance:** created by `CC-20261004W11-B-REGISTRY-01` (intake wave 11 2026-10-04, Scientist B); identity authored by the batch integrator from the artefact's own front matter at `2d2077f47e83`; numbers re-measured with `registry_records.py catalog` (`CORPUS-STUB` max was 180, `LIT` max 0538), because the candidate's provisional `CORPUS-STUB-180`/`181` and `LIT-0527`/`0528` were already taken.
+**Registry role:** 🔵 **corpus placeholder; the index patient is not a WWOX case.** `WWOX` occurs three times (Introduction, Discussion, and one reference title), always as a cited example of a recessive gene whose disease can be unmasked by chromosome-16 uniparental disomy. The index patient has whole-chromosome-16 isodisomy and **no unmasked pathogenic recessive variant on chromosome 16** — the pathogenic variants found were heterozygous and on other autosomes. What the corpus takes from it is a class-level route statement, landed as a genotype-interpretation rule in the working model.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261004-40943441-01`; manifest `deepdive_manifests/PMID40943441.json`; dossier `research/fulltext_dossiers/PMID40943441.md`; artefact `files/fulltext/PMID40943441_Panchenko2025_PMC.xml`
+**Claim links:** none
+**Next action:** its one WWOX-direct citation is PMID 38407561 (*Am J Med Genet A* 2024;194:e63575, DOI 10.1002/ajmg.a.63575), a splice-site WWOX allele with isodisomy, **unread and paywalled** — it stays `FT-135` debt. ⚠️ **Not to be written from this source:** that isodisomy *usually* arises by monosomy rescue. The blind audit (2026-10-04, 4 triples, 3 SUPPORTED, 1 NOT_SUPPORTED_AS_LABELLED) found the direction reversed — the source says most **monosomy-rescue** cases are isodisomic, and separately that **most UPD(16) arises by trisomy rescue and is heterodisomic**.
+**LIT link:** [[literature_tracking_log_current#LIT-0543]]
+**Note:** class-level record; no parental side of origin is carried in this edition, in any field this repository authors. Not medical advice.
+
+---
+
+## CORPUS-STUB-185
+**Corpus paper no:** 185
+**Full title:** Integration of whole genome sequencing into a healthcare setting: high diagnostic rates across multiple clinical entities in 3219 rare disease patients
+**Authors:** Stranneheim H, Lagerstedt-Robinson K, Magnusson M, Kvarnung M, Nilsson D, Lesko N, et al.; Wedell A
+**Year:** 2021
+**Journal/source:** *Genome Medicine* 2021;13:40
+**Identifier:** PMID 33726816 / PMCID PMC7968334 / DOI 10.1186/s13073-021-00855-5
+**Status:** not_processed
+**Record provenance:** created by `CC-20261004W11-B-REGISTRY-01` (intake wave 11 2026-10-04, Scientist B); identity authored by the batch integrator from the artefact's own front matter at `2d2077f47e83`; numbers re-measured with `registry_records.py catalog` (`CORPUS-STUB` max was 180, `LIT` max 0538), because the candidate's provisional `CORPUS-STUB-180`/`181` and `LIT-0527`/`0528` were already taken. It is created so that an allele's earlier report is addressable, not because a reading was performed.
+**Registry role:** corpus placeholder for the **earlier publication of a subset** of the PMID 40183601 cohort ([[paper_registry_current#PAPER 241]]), whose Methods say that subset was published *«without detailed phenotypic analyses»* in that broader study. Its Supplementary Table S7 carries **exactly one WWOX row** — gene, inheritance *«AR homozygous»*, transcript `NM_016373` and the allele `c.965A>G, p.(His322Arg)` printed in both allele columns — and **no phenotype of any kind**. **INFERENZA: the same family as the PMID 40183601 rows; counted once, under `PAPER 241`.**
+**Evidence depth:** none — **no reading was performed and no receipt is owed.** One supplementary table row was inspected in the artefact `files/fulltext/PMID33726816_Stranneheim2021_13073_2021_855_MOESM3_ESM.txt` (cell-wise text of `..._MOESM3_ESM.xlsx`, sha256 `0c77c6f3458abd167a57cd71011c396c119e304754736432b74432503f259b0b`); the article itself is **unread**, and this record must never be read as a reading
+**Claim links:** none
+**Next action:** read only if a question needs the cohort's method or its denominator; the allele question it answers is answered.
+**LIT link:** [[literature_tracking_log_current#LIT-0544]]
+**Note:** class-level record; no individual-level detail is carried. Not medical advice.
+
+---
+
+## CORPUS-STUB-186
+**Corpus paper no:** 186
+**Full title:** Distribution of transgene in the rodent choroid plexus after intracerebroventricular injection of adeno-associated virus
+**Authors:** Pooley JR, Bienemann AS, Young A, Hollings O, Wu J, Mayo E, Chu CJ, Singleton WGB
+**Year:** 2026
+**Journal/source:** *Fluids and Barriers of the CNS* 2026;23:93
+**Identifier:** PMID 42538560 / PMCID PMC13428447 / DOI 10.1186/s12987-026-00831-4
+**Status:** processed — read (`FTR-20261004-42538560-01`, `partial_fulltext_read`, **partial full text**)
+**Record provenance:** created by `CC-20261004W11-C-REGISTRY-01` (intake wave 11 2026-10-04, Scientist C); identity authored by the batch integrator from the artefact's own front matter at `2d2077f47e83`. 🔵 **Landed as a corpus stub, not as the `PAPER` record the candidate proposed:** WWOX occurs zero times in it, and the standard this repository set one batch earlier (`CORPUS-STUB-180`, same group, same wave-9 candidate shape) is that a zero-WWOX reading lands as a stub carrying its earned null. The candidate's provisional `PAPER 244`-`247` / `LIT-0539`-`0542` are therefore not used for the PAPER side.
+**Registry role:** 🔵 **an EARNED NULL for the gene plus a route-level distribution datum.** `WWOX` occurs **zero times** (blind audit, 2026-10-04: 8 triples, 8/8 SUPPORTED, every number check MATCHES, figures read as rendered panels). What it contributes is a CSF-route distribution gradient recorded in `RL-C-20261004w11c1`, and it fixes **no** WWOX route: no source held by this model fixes one.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261004-42538560-01`; manifest `deepdive_manifests/PMID42538560.json`; dossier `research/fulltext_dossiers/PMID42538560.md`; artefact `files/fulltext/PMID42538560_ICVchoroid2026_PMC.xml`, figures `files/figures/PMID42538560/Fig5.png` and `Fig6.png`
+**Claim links:** none — it bounds nothing in `CLAIM 047` and is cross-referenced from the research line only
+**Next action:** none.
+**LIT link:** [[literature_tracking_log_current#LIT-0545]]
+**Note:** class-level record; mouse in vivo with rat and pig explant tropism only. Not medical advice.
+
+---
+
+## CORPUS-STUB-187
+**Corpus paper no:** 187
+**Full title:** Initial efforts of translational development of AAV-encoded NaViPA1 for peripherally targeted analgesia in neuropathic pain
+**Authors:** Itson-Zoske B, Shin SM, Hong SK, Cai Y, Fan F, Yu H
+**Year:** 2026
+**Journal/source:** *Molecular Therapy Advances* 2026;34(3):201794
+**Identifier:** PMID 42436860 / PMCID PMC13355166 / DOI 10.1016/j.omta.2026.201794
+**Status:** processed — read (`FTR-20261004-42436860-01`, `partial_fulltext_read`, **partial full text**)
+**Record provenance:** created by `CC-20261004W11-C-REGISTRY-01` (intake wave 11 2026-10-04, Scientist C); identity authored by the batch integrator from the artefact's own front matter at `2d2077f47e83`. 🔵 **Landed as a corpus stub, not as the `PAPER` record the candidate proposed:** WWOX occurs zero times in it, and the standard this repository set one batch earlier (`CORPUS-STUB-180`, same group, same wave-9 candidate shape) is that a zero-WWOX reading lands as a stub carrying its earned null. The candidate's provisional `PAPER 244`-`247` / `LIT-0539`-`0542` are therefore not used for the PAPER side.
+**Registry role:** 🔵 **an EARNED NULL for the gene, and a corrected selection premise.** `WWOX` occurs **zero times**. ⚠️ **It is not a CNS cassette:** delivery is peripheral (sciatic nerve and dorsal-root ganglion), so nothing in it transfers to a CNS restoration specification. Its transferable content — a dose chosen by vector copy number in two rats per dose, and a safety read-out whose imaged comparison is against naive rather than control-vector animals — is recorded in `RL-C-20261004w11c2`.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261004-42436860-01`; manifest `deepdive_manifests/PMID42436860.json`; dossier `research/fulltext_dossiers/PMID42436860.md`; artefact `files/fulltext/PMID42436860_NaViPA1_2026_PMC.xml`
+**Claim links:** none
+**Next action:** none. ⚠️ Two internal inconsistencies of the source are recorded with the research line rather than smoothed: the route is written as sciatic-nerve injection in Methods and Results and as DRG delivery in two figure legends, a results-section title, a further figure legend and one Methods subsection; and the Animals subsection says adult **male** rats while two other Methods subsections and a Results section report **female** animals — so the disagreement is internal to the Methods, not Methods-versus-Results.
+**LIT link:** [[literature_tracking_log_current#LIT-0546]]
+**Note:** class-level record; rat, single laboratory, 3-month horizon. Not medical advice.
+
+---
+
+## CORPUS-STUB-188
+**Corpus paper no:** 188
+**Full title:** AAV-mediated gene therapy for Alzheimer's disease: neuroprotective mechanisms and translational challenges
+**Authors:** Yu Z, Li Y, Zhang Z, Yin R
+**Year:** 2026
+**Journal/source:** *Frontiers in Aging Neuroscience* 2026;18:1901875
+**Identifier:** PMID 42812991 / DOI 10.3389/fnagi.2026.1901875
+**Status:** processed — read (`FTR-20261004-42812991-01`, `partial_fulltext_read`, **partial full text**)
+**Record provenance:** created by `CC-20261004W11-C-REGISTRY-01` (intake wave 11 2026-10-04, Scientist C); identity authored by the batch integrator from the artefact's own front matter at `2d2077f47e83`. 🔵 **Landed as a corpus stub, not as the `PAPER` record the candidate proposed:** WWOX occurs zero times in it, and the standard this repository set one batch earlier (`CORPUS-STUB-180`, same group, same wave-9 candidate shape) is that a zero-WWOX reading lands as a stub carrying its earned null. The candidate's provisional `PAPER 244`-`247` / `LIT-0539`-`0542` are therefore not used for the PAPER side. ⚠️ The Academic Editor and the two reviewers printed on the artefact's first page are **not authors** and are not listed here — the third instance of that class in this registry.
+**Registry role:** corpus placeholder — a **secondary source** (narrative review) with `WWOX` occurring **zero times**. It is held only as a pointer: two primaries it cites, a non-human-primate dorsal-root-ganglion detargeting study and an intracranial B-cell re-dosing study, are reading-queue candidates and **were not read**; a review sentence is never evidence here.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261004-42812991-01`; manifest `deepdive_manifests/PMID42812991.json`; dossier `research/fulltext_dossiers/PMID42812991.md`; artefact `files/fulltext/PMID42812991_AAV_AD_review_2026.pdf` with extracted text `..._2026.txt`
+**Claim links:** none
+**Next action:** acquire the two cited primaries if the DRG-exposure question is reopened; the review itself owes nothing further.
+**LIT link:** [[literature_tracking_log_current#LIT-0547]]
+**Note:** class-level record; secondary source. Not medical advice.
+
+---
+
+## CORPUS-STUB-189
+**Corpus paper no:** 189
+**Full title:** Multilevel genome-wide analysis reveals shared genetic architecture between acute pancreatitis and body fat distribution
+**Authors:** Tan Z, Rong Z, Han X, Wang T, Long H, Li X, Yu F, Zhou W
+**Year:** 2026
+**Journal/source:** *World Journal of Emergency Medicine* 2026;17(5):470-476
+**Identifier:** PMID 42807309 / DOI 10.5847/wjem.j.1920-8642.2026.090
+**Status:** processed — read (`FTR-20261004-42807309-01`, `partial_fulltext_read`, **partial full text**)
+**Record provenance:** created by `CC-20261004W11-C-REGISTRY-01` (intake wave 11 2026-10-04, Scientist C); identity authored by the batch integrator from the artefact's own front matter at `2d2077f47e83`. 🔵 **Landed as a corpus stub, not as the `PAPER` record the candidate proposed:** WWOX occurs zero times in it, and the standard this repository set one batch earlier (`CORPUS-STUB-180`, same group, same wave-9 candidate shape) is that a zero-WWOX reading lands as a stub carrying its earned null. The candidate's provisional `PAPER 244`-`247` / `LIT-0539`-`0542` are therefore not used for the PAPER side.
+**Registry role:** 🔴 **an EARNED NULL that also retires a selection label.** `WWOX` occurs **zero times**. The 16q23.1 pleiotropy signal this paper reports is attributed **by its own authors** to `CTRB1`/`CTRB2` (with `BCAR1`), **not** to WWOX, and the data are common-variant, European-ancestry summary statistics — so «a recurrent pleiotropic signal at the WWOX locus» is **not** supported by this source and must not be written from it.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261004-42807309-01`; manifest `deepdive_manifests/PMID42807309.json`; dossier `research/fulltext_dossiers/PMID42807309.md`; artefact `files/fulltext/PMID42807309_16q231_pancreatitis_2026.pdf` with extracted text `..._2026.txt`
+**Claim links:** none
+**Next action:** none.
+**LIT link:** [[literature_tracking_log_current#LIT-0548]]
+**Note:** class-level record; summary-statistics study, no individual-level data. Not medical advice.
