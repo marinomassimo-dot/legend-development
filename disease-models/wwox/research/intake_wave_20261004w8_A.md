@@ -136,7 +136,7 @@ response is byte-identical (SHA-256) to the copy the Orchestrator had staged, an
   enzymatic, localisation or patient-cell assay.
 - Referral path: a CP-labelled stream. The Discussion endorses keeping the CP diagnosis when the phenotype fulfils
   the consensus definition, rather than reclassifying as a mimic.
-- Class transfer: a homozygous SDR-region missense (residue 239) is not Q230P and is not a splice allele. **No
+- Class transfer: a homozygous missense at residue 239 is not Q230P and is not a splice allele. **No
   transfer**, not even "missense ≈ missense".
 - References: 49; no WWOX gene-direct reference.
 - **After first pass — L239R counting (compared against `CC-20261003W3-A-L239R-01`, `CC-20261003W5-B-PATIENT-OVERLAP-01`
