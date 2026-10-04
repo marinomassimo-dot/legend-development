@@ -42,8 +42,8 @@
   },
   "corpus_crossquery": {
     "query": "registry_records.py get --pmid 40083435; fulltext_receipts.py status --pmid 40083435; git grep for c.716T>G / Leu239Arg / L239R / ClinVar 871669 outside the two large registries",
-    "hits": 3,
-    "note": "No record and no receipt for this paper. The allele is held: ClinVar snapshot row VCV000871669 (conflicting classifications), the analysis note on PMID 41153369 (homozygous p.L239R in two siblings of a consanguineous family in a Turkish DEE cohort; hypsarrhythmia), and a mention in PMID 42092735. Overlap test in the dossier: no printed field links this case to the held sibling pair (INFERENZA)."
+    "hits": 4,
+    "note": "No record and no receipt for this paper. The allele is held: ClinVar snapshot row VCV000871669 (conflicting classifications); PAPER 013 (PMID 41153369, two siblings at another centre); PAPER 145 (PMID 42092735); and PAPER 220 (PMID 41835067), a homozygous p.Leu239Arg female from the same university with a shared author and an overlapping recruitment window, found by a Europe PMC full-text search for the protein change. Overlap test in the dossier: identity with the PAPER 220 child plausible and not excluded (INFERENZA); not summed."
   },
   "retraction_check": {
     "checked": true,
