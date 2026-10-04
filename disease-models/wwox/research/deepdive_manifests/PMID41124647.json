@@ -135,6 +135,26 @@
    "acquisition_recipe": {
     "no_recipe": "Member extracted unchanged by Python zipfile from the Europe PMC REST supplementaryFiles bundle for this article (HTTP 200, application/zip, fetched 2026-10-03); the bundle itself is not persisted because Europe PMC rebuilds it non-deterministically and its digest is therefore not stable."
    }
+  },
+  {
+   "path": "files/fulltext/PMID41124647_Zhang2025_supplement/ADVS-13-e07602-g007.jpg",
+   "sha256": "a7583e6a74dbcf42852789e58729d4eb297dd9ca590cd7dd6878b813d2c168be",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID41124647_Zhang2025_supplement/ADVS-13-e07602-g005.jpg",
+   "sha256": "4ba794dc1701278293216785c05e650f4746c844c0dc6d5bf01d478d37992835",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID41124647_Zhang2025_supplement/ADVS-13-e07602-s003.xlsx",
+   "sha256": "d41da474dc6f618d0693b78bb2992daa3e29dc79cd0384837a8f003056db00ca",
+   "kind": "table"
+  },
+  {
+   "path": "files/fulltext/PMID41124647_Zhang2025_supplement/ADVS-13-e07602-s002.xlsx",
+   "sha256": "e7711a554464c345da79eb3befc7c03123683cc3b9cf1e07ca3b4176deb1f8e5",
+   "kind": "table"
   }
  ],
  "verbatim_locators": {
@@ -195,9 +215,74 @@
     "surface": "figure",
     "artifact": "files/fulltext/PMID41124647_Zhang2025_supplement/ADVS-13-e07602-s001.docx",
     "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "This paper contains no enzymatic assay of any kind: the oxidoreductase function of the SDR fold is never measured, for either allele.",
+    "snippet": "The gene encoding WWOX (WW domain‐containing oxidoreductase), spanning chromosome region 16q23.1‐16q23.2 and crossing 1.1 million base pairs, ranks among the largest genes in the human genome.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41124647_Zhang2025_PMC.xml",
+    "anchor": "Introduction, opening sentence - the only occurrence of the word oxidoreductase in the article; SDR, enzyme, enzymatic, catalytic, dehydrogenase and short-chain occur zero times",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought"
+   },
+   {
+    "proposition": "The four compared lines are not expression-matched: the P252A band is faint in both cell lines and the P282A band is visibly weaker than wild type in BCPAP, with an even GAPDH row.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2A shows two Flag-WWOX blots over a GAPDH loading row. In CAL-62 the Flag-WWOX band is strong for WWOX-WT, faint for WWOX-P252A and strong for WWOX-P282A; in BCPAP the WWOX-WT band is the strongest of the blot, WWOX-P252A is very faint and WWOX-P282A is visibly weaker than WWOX-WT, while the four GAPDH bands are even in both blots. The paper publishes no densitometry for this blot.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID41124647_Zhang2025_supplement/ADVS-13-e07602-g007.jpg",
+    "anchor": "Figure 2, panel A; native JPEG inspected, and the panel re-cropped and magnified twofold",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[2]",
+    "qualifies_needle": "low abundance",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The three transgenic lines are not transcript-matched either, and the cycloheximide chase measures decay rate rather than steady-state abundance per transcript.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4A plots relative WWOX mRNA expression in CAL-62 at approximately 0 for the empty vector, 72 for WWOX-WT, 78 for WWOX-P252A and 108 for WWOX-P282A, each marked **** against the vector. Figure 4B plots relative WWOX protein level over a ten-hour cycloheximide chase: WWOX-P252A falls to about 0.3 of its own time zero and is marked *, **, ***, ** and * at 2, 4, 6, 8 and 10 hours, while WWOX-P282A tracks WWOX-WT and is marked ns at every timepoint.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID41124647_Zhang2025_supplement/ADVS-13-e07602-g005.jpg",
+    "anchor": "Figure 4, panels A and B; native JPEG inspected and the top third re-cropped and magnified",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[1]",
+    "qualifies_needle": "chaperone",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The interactome supplement behind the POLE4 argument is a presence-only list with no replicate, no fold change and no statistic.",
+    "snippet": "[spreadsheet attestation - read cell-wise from the workbook XML] Sheet 'list' of Supplementary Table 6 holds 261 protein rows under the columns Uniprot_ID, Gene_name, Description, CAL-62_WT_IgG, CAL-62_WT_Anti-Flag, CAL-62_pCMV-3Tag_IgG and CAL-62_pCMV-3Tag_Anti-Flag. Every one of the 261 rows carries the string 'Lost Detection' in all three control columns and a single numeric intensity in CAL-62_WT_Anti-Flag; no column holds a fold change, a p value or an FDR, and WWOX itself is not a row. POLE4 is rank 52 of 261 by intensity at 1937463.375.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID41124647_Zhang2025_supplement/ADVS-13-e07602-s003.xlsx",
+    "anchor": "Supplementary Table 6, sheet 'list', all 261 data rows; read cell-wise from the workbook XML",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[4]",
+    "qualifies_needle": "remains to be elucidated",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "A WWOX pull-down in this thyroid carcinoma line recovers DVL2, which touches the WWOX-Dishevelled axis without measuring it.",
+    "snippet": "[spreadsheet attestation - read cell-wise from the workbook XML] Supplementary Table 6 row O14641 DVL2 'Segment polarity protein dishevelled homolog DVL-2' carries 'Lost Detection' in CAL-62_WT_IgG, CAL-62_pCMV-3Tag_IgG and CAL-62_pCMV-3Tag_Anti-Flag and the intensity 375599.84375 in CAL-62_WT_Anti-Flag, which is rank 190 of the 261 rows. HSPA8, LAMP2, POLE3, POLD2 and TP53 are absent from the list.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID41124647_Zhang2025_supplement/ADVS-13-e07602-s003.xlsx",
+    "anchor": "Supplementary Table 6, sheet 'list', row DVL2; read cell-wise from the workbook XML",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found"
    }
   ],
   "source_fulltext_indexed": true,
   "source_fulltext_indexed_evidence": "Europe PMC REST fullTextXML returned HTTP 200 with a full JATS body on 2026-10-03; the declared article artefact is that response, byte for byte."
- }
+ },
+ "reading_history": [
+  {
+   "receipt": "FTR-20261004-41124647-03",
+   "reader": "scientist (Scientist C), intake wave 12 2026-10-04 (RE-READ)",
+   "context_policy": "SOURCE_FIRST",
+   "what_changed": "Declared four artefacts acquired free from the Europe PMC supplementaryFiles archive for PMC12767083 (two main-figure JPEGs and the two supplementary workbooks; the already-declared -s001.docx returned byte-equal, which is the integrity check for the package) and appended entries 8-12: the enzymatic-assay census, Figure 2A and Figure 4A/4B read as panels, and the interactome supplement read cell-wise for the first time. No existing entry was altered.",
+   "outputs": [
+    "disease-models/wwox/research/fulltext_dossiers/PMID41124647.md",
+    "disease-models/wwox/research/deepdive_manifests/PMID41124647.json",
+    "disease-models/wwox/research/intake_wave_20261004w12_C.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261004W12-C-SDR-ABUNDANCE-01.md"
+   ]
+  }
+ ]
 }
