@@ -1,0 +1,314 @@
+{
+ "schema_version": 2,
+ "pmid": "36926521",
+ "doi": "10.3389/fcell.2023.1021920",
+ "receipt": "FTR-20261004-36926521-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID36926521.md",
+  "disease-models/wwox/research/intake_wave_20261004w8_A.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W8-A-MEASURED-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W8-A-REGISTRY-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "One patient-cell measurement of a non-reference allele pair; it is carried as an allele-class datum, not mined for leads."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No intervention or rescue is tested."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is tested."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "A reader cannot audit their own locators."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "mixed",
+  "is_primary_group_for_disease": false,
+  "weighting": "A national rare-disease diagnostic network (multi-omics second-tier testing). Credible on variant detection; the WWOX protein and RNA assays are single-patient diagnostic confirmations, not a functional study of either allele."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "registry_records.py get --pmid 36926521 (LEGEND)",
+    "count": 0,
+    "source": "LEGEND registries 2026-10-04"
+   },
+   {
+    "query": "fulltext_receipts.py status --pmid 36926521",
+    "count": 0,
+    "source": "receipt ledger 2026-10-04"
+   },
+   {
+    "query": "registry_records.py get --theme Thr12Arg / T12R (after first pass)",
+    "count": 0,
+    "source": "LEGEND registries 2026-10-04"
+   }
+  ],
+  "note": "LEGEND holds no record of this paper and none of the exon-1 missense allele."
+ },
+ "multihop": {
+  "references_enumerated": 74,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "disposition": "74 references enumerated from the JATS ref-list; none is a WWOX gene-direct reference (earned null)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 36926521; --theme Thr12Arg, T12R, 'exon 5 skipping' after the first pass",
+  "hits": 0,
+  "note": "No registry record names this paper or the exon-1 missense; the 'exon 5 skipping' theme hits records about other papers and other alleles."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-04 via PubMed metadata (get_article_metadata): publication types ['Journal Article']; no retraction, expression of concern or correction listed for PMID 36926521.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 74,
+   "references_screened": 73,
+   "references_with_doi": 73,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 24,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID36926521_Colin2023_PMC.xml",
+   "sha256": "cdc8c9b0363a2ec5b74ec705bf7a4b6c1b04785260c2d22676369bd6027e8e0c",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10011630/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": false,
+    "result_sha256": "cdc8c9b0363a2ec5b74ec705bf7a4b6c1b04785260c2d22676369bd6027e8e0c"
+   }
+  },
+  {
+   "path": "files/supplements/PMID36926521/s.zip",
+   "sha256": "fcbfbdd29b31f153f72c64ea4a7c69cc87bede97a9eabe44b43513688c5f1bd2",
+   "kind": "supplement_binary",
+   "note": "Europe PMC supplementaryFiles container for PMC10011630, kept unchanged; the members cited below were extracted from it byte-for-byte.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10011630/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": false,
+    "result_sha256": "fcbfbdd29b31f153f72c64ea4a7c69cc87bede97a9eabe44b43513688c5f1bd2"
+   }
+  },
+  {
+   "path": "files/supplements/PMID36926521/Image5.TIFF",
+   "sha256": "2ec24b9ad69019a55ff34b43965ed3d6651dd776782ecaab7d65f6a441b1e706",
+   "kind": "figure",
+   "note": "Supplementary Figure S5 (Individual 11, WWOX), panels A-G; panels E (RT-PCR gel), F (sashimi) and G (western) inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10011630/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip, member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": true,
+    "derived_from": "files/supplements/PMID36926521/s.zip",
+    "extractor": {
+     "name": "python3 -m zipfile",
+     "version": "Python 3.12",
+     "call": "zipfile -e, member written byte-for-byte"
+    },
+    "result_sha256": "2ec24b9ad69019a55ff34b43965ed3d6651dd776782ecaab7d65f6a441b1e706"
+   }
+  },
+  {
+   "path": "files/supplements/PMID36926521/DataSheet2.docx",
+   "sha256": "5af4acb24cc1629ef3eca709ff83779918dbd2dd2e71f8ae10ac4e9f5f31426a",
+   "kind": "supplement_text",
+   "note": "Supplementary Data: clinical descriptions of all individuals; the WWOX individual's paragraph read in full.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10011630/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip, member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": true,
+    "derived_from": "files/supplements/PMID36926521/s.zip",
+    "extractor": {
+     "name": "python3 -m zipfile",
+     "version": "Python 3.12",
+     "call": "zipfile -e, member written byte-for-byte"
+    },
+    "result_sha256": "5af4acb24cc1629ef3eca709ff83779918dbd2dd2e71f8ae10ac4e9f5f31426a"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC10011630/fullTextXML on 2026-10-04 returned HTTP 200 with a <body>; the WWOX locators are anchored in Results 3.2.2, the Discussion, the deposited Supplementary Figure S5 and the deposited clinical supplement.",
+  "entries": [
+   {
+    "proposition": "The exon-1 missense allele's pathogenicity rests on absence from gnomAD and in-silico scores only; no RNA, protein or functional assay of this allele alone is reported.",
+    "snippet": "which was absent in gnomAD with in silico prediction scores in favor of its pathogenicity",
+    "anchor": "Results 3.2.2 Individual 11# WWOX",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36926521_Colin2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The second allele is a complex structural variant: two intronic deletions (introns 4 and 5) with an inversion of exon 5.",
+    "snippet": "GS identified the second event, which consisted of a complex rearrangement with two intronic deletions (introns 4 and 5) associated with an inversion of exon 5",
+    "anchor": "Results 3.2.2 Individual 11# WWOX",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36926521_Colin2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "RNA consequence was measured in blood by RT-PCR across exons 4-6: a 186 bp product appears beside the expected 293 bp product.",
+    "snippet": "using primers encompassing exons 4 through 6, obtained from blood, revealed the presence of a shorter amplicon isoform (186 bp) in addition to the expected 293 bp band",
+    "anchor": "Results 3.2.2 Individual 11# WWOX",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36926521_Colin2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human patient blood (PAXgene), RT-PCR exons 4-6 plus amplicon sequencing",
+     "genotype": "compound heterozygous exon-1 missense + exon-5 inversion structural variant",
+     "comparator": "heterozygous parents (one per allele)",
+     "endpoint": "exon 4-6 RT-PCR product sizes (293 bp expected, 186 bp exon-5-skipped)"
+    }
+   },
+   {
+    "proposition": "Amplicon sequencing attributes the 186 bp product to exon 5 skipping caused by the structural variant, i.e. the measured RNA consequence belongs to the SV allele, not to the missense allele.",
+    "snippet": "Amplicon-sequencing analysis of the 186 bp gel-purified PCR product demonstrated that the structural variant caused exon 5 skipping",
+    "anchor": "Results 3.2.2 Individual 11# WWOX",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36926521_Colin2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human patient blood (PAXgene), RT-PCR exons 4-6 plus amplicon sequencing",
+     "genotype": "compound heterozygous exon-1 missense + exon-5 inversion structural variant",
+     "comparator": "heterozygous parents (one per allele)",
+     "endpoint": "exon 4-6 RT-PCR product sizes (293 bp expected, 186 bp exon-5-skipped)"
+    }
+   },
+   {
+    "proposition": "Supplementary Figure S5E panel: in the proband lane the 293 bp normally spliced product is the strong band and the 186 bp skipped product is faint; the gel is not quantified, so the skipped fraction is not measured and normally spliced exon 4-6 transcript remains abundant in blood.",
+    "snippet": "WWOX exons 4-6 RT-PCR Proband Father Mother 293bp 186bp",
+    "anchor": "Supplementary Figure S5E (Image5.TIFF, 794x1123, inspected at native resolution), proband lane",
+    "surface": "figure",
+    "artifact": [
+     "files/supplements/PMID36926521/Image5.TIFF"
+    ],
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[2]",
+    "qualifies_needle": "shorter amplicon isoform (186 bp)",
+    "experimental_context": {
+     "system": "human patient blood (PAXgene), RT-PCR exons 4-6 plus amplicon sequencing",
+     "genotype": "compound heterozygous exon-1 missense + exon-5 inversion structural variant",
+     "comparator": "heterozygous parents (one per allele)",
+     "endpoint": "exon 4-6 RT-PCR product sizes (293 bp expected, 186 bp exon-5-skipped)"
+    }
+   },
+   {
+    "proposition": "Protein was measured in a patient fibroblast line against one healthy sample; the authors read it as WWOX loss and attribute it to both variants together, so the blot measures the genotype, not either allele.",
+    "snippet": "Western blotting revealed WWOX loss in a fibroblast cell line obtained from a skin biopsy of Individual 11 compared with a sample from a healthy individual, confirming the pathogenic effect of the two identified variants",
+    "anchor": "Results 3.2.2 Individual 11# WWOX",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36926521_Colin2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human patient skin fibroblast line, whole-cell lysate immunoblot",
+     "genotype": "compound heterozygous exon-1 missense + exon-5 inversion structural variant",
+     "comparator": "one healthy-individual fibroblast sample",
+     "endpoint": "WWOX 46 kDa band (Atlas HPA023822), actin loading control"
+    }
+   },
+   {
+    "proposition": "Supplementary Figure S5G panel: one control lane and one proband lane; the proband's 46 kDa WWOX band is strongly reduced but a faint band remains visible; no quantification, replicate or second control is shown, so 'loss' is a qualitative reduction, not a measured residual dose.",
+    "snippet": "Control Proband WWOX 46 kDa Actin 43 kDa",
+    "anchor": "Supplementary Figure S5G (Image5.TIFF, 794x1123, inspected at native resolution)",
+    "surface": "figure",
+    "artifact": [
+     "files/supplements/PMID36926521/Image5.TIFF"
+    ],
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[5]",
+    "qualifies_needle": "confirming the pathogenic effect of the two identified variants",
+    "experimental_context": {
+     "system": "human patient skin fibroblast line, whole-cell lysate immunoblot",
+     "genotype": "compound heterozygous exon-1 missense + exon-5 inversion structural variant",
+     "comparator": "one healthy-individual fibroblast sample",
+     "endpoint": "WWOX 46 kDa band (Atlas HPA023822), actin loading control"
+    }
+   },
+   {
+    "proposition": "The authors themselves state that blood and fibroblasts may be inadequate to model genes expressed mainly in the central nervous system.",
+    "snippet": "Clinically accessible tissues such as blood samples, skin and muscle biopsies, as well as cell cultures (e.g., Epstein–Barr-transformed lymphocytes, fibroblast cell lines) are sometimes inadequate to model genes prevalently expressed in the central nervous system",
+    "anchor": "Discussion, paragraph 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36926521_Colin2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Phenotype band (class level): infantile seizure onset progressing to epileptic encephalopathy with severe global developmental delay.",
+    "snippet": "at the age of three months was associated with severe global developmental delay and progressed to epileptic encephalopathy.",
+    "anchor": "Supplementary Data (DataSheet2.docx), clinical description of Individual 11",
+    "surface": "supplement",
+    "artifact": "files/supplements/PMID36926521/DataSheet2.docx",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Phenotype band (class level): progressive cerebral atrophy on MRI.",
+    "snippet": "Brain magnetic resonance showed progressive cerebral atrophy.",
+    "anchor": "Supplementary Data (DataSheet2.docx), clinical description of Individual 11",
+    "surface": "supplement",
+    "artifact": "files/supplements/PMID36926521/DataSheet2.docx",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}
