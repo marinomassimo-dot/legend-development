@@ -175,3 +175,35 @@ response is byte-identical (SHA-256) to the copy the Orchestrator had staged, an
 - Class transfer: no allele, no genotype. **Nothing transfers to any WWOX genotype**; reprogramming is not
   development (the authors' own limitations: no glutamatergic input, limited mature cells, RNA velocity applied
   to nuclei).
+
+## A6 · PMID 41254692 (Qin 2025) — first pass (written before any registry comparison)
+
+- Off-axis disease (mature T/NK-cell lymphoma, FinnGen R12: 440 cases, 378 749 controls). A purely
+  computational paper: drug-target MR on whole-blood cis-eQTL (eQTLGen) and plasma cis-pQTL (deCODE, UKB-PPP),
+  Bayesian colocalisation, SMR/HEIDI with blood mQTL (GoDMC), bulk microarray expression and CIBERSORT, a
+  phenome-wide MR, CTD drug prediction and AutoDock Vina docking. **No wet-lab experiment of any kind.**
+- **WWOX, what is estimated:** genetically predicted higher blood WWOX expression is associated with lower
+  lymphoma risk — eQTL-MR OR 0.533 (0.388–0.734), FDR 0.019, 29 SNPs, PPH4 0.619 (Table 1); SMR β −1.082,
+  P 0.0023, HEIDI 0.268 (Table 3). Protein level (deCODE pQTL): OR 0.117 (0.024–0.559), P 7.2E-03, **FDR 0.160 —
+  not significant**, 3 SNPs; **no UKB-PPP replication possible (WWOX absent)**. Three CpG sites with nominal
+  mQTL→lymphoma P 0.017–0.038 (no multiple-testing correction stated); for cg10001715 the mQTL→eQTL HEIDI P is
+  1.92E-07, i.e. it fails the authors' own HEIDI criterion, and the text duly restricts the expression-suppression
+  sentence to the other two CpGs.
+- Bulk microarray (GSE19067): WWOX lower in lymphoma than normal (Wilcoxon). Correlational immune/GSEA claims.
+- **Phenome-wide MR (853 phenotypes, deCODE pQTL, 3 SNPs):** no FDR-significant association (Table S4: lowest FDR
+  ≈0.13). The text then reads this as "WWOX inhibition may not lead to widespread adverse effects" — the wrong
+  direction for a protective target and an absence-of-evidence result without replication.
+- **Direction inversion, text vs. the paper's own supplement (cell-wise, Table S7):** the Results say the
+  compounds "potentially increasing WWOX expression include Vorinostat, Valproic Acid, Sunitinib, Jinfukang, and
+  Arsenic Trioxide" and those "potentially reducing THBS2" include Vorinostat, Valproic Acid, JQ1, Ifosfamide,
+  GSK1210151A and Calcitriol. **Table S7 (the CTD export the text rests on) lists every one of the WWOX rows as
+  "Decreases expression" and every THBS2 row as "Increases expression".** The drug-prediction conclusion is
+  inverted relative to its own data. Valproic acid's WWOX row cites five CTD reference PMIDs (23179753, 24935251,
+  26272509, 27188386, 28001369), none held by LEGEND and none read here.
+- Docking: binding energies −5.7 (vorinostat), −4.2 (valproate), −6.5 (sunitinib) kcal/mol against "WWOX
+  protein", contacts at residues numbered ARG-7, ALA-9, GLY-10, ASP-11, GLN-18; the PDB entry used is not named
+  in the text. Docking is a computation, not binding; −4.2 kcal/mol is weak.
+- Selection-note premise tested: "the only unread record in which a WWOX dose–outcome relation is estimated
+  causally" — it is a common-variant expression-to-lymphoma-risk MR in blood; it estimates nothing about raising
+  WWOX in brain, and the transfer to a biallelic loss-of-function disease is nil.
+- Class transfer: **no allele, no neural tissue, no measurement.** Nothing transfers to any WWOX-DEE genotype.
