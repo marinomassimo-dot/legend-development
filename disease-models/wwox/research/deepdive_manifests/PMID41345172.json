@@ -1,356 +1,414 @@
 {
-  "schema_version": 2,
-  "pmid": "41345172",
-  "doi": "10.1038/s41598-025-28338-2",
-  "receipt": "FTR-20261004-41345172-01",
-  "context_policy": "SOURCE_FIRST",
-  "landing": [
-    "disease-models/wwox/research/fulltext_dossiers/PMID41345172.md",
-    "disease-models/wwox/research/intake_wave_20261004w7_B.md",
-    "disease-models/wwox/research/commit_candidates/CC-20261004W7-B-REGISTRY-01.md",
-    "disease-models/wwox/research/commit_candidates/CC-20261004W7-B-CNV-CARRIER-01.md"
-  ],
-  "skills_considered": [
-    {
-      "skill": "find-fulltext",
-      "used": true
-    },
-    {
-      "skill": "legend-study-intake-triage",
-      "used": true
-    },
-    {
-      "skill": "legend-deepdive",
-      "used": true
-    },
-    {
-      "skill": "legend-discovery",
-      "used": false,
-      "reason": "The discovery ledger is owned by other batches; what this reading supports is proposed as commit candidates and in the intake note."
-    },
-    {
-      "skill": "legend-hypothesis-forge",
-      "used": false,
-      "reason": "A diagnostic cohort or method record supplies no new therapeutic lever; forging hypotheses from it would manufacture a lead."
-    },
-    {
-      "skill": "legend-safety-triage",
-      "used": false,
-      "reason": "No compound is proposed by this source."
-    },
-    {
-      "skill": "legend-commit",
-      "used": false,
-      "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
-    },
-    {
-      "skill": "legend-locator-audit",
-      "used": false,
-      "reason": "The triples are published in the candidates for a blind auditor; the reader cannot audit their own locators."
-    }
-  ],
-  "group_assessment": {
-    "total_publications": 1,
-    "publications_on_gene": 0,
-    "research_type": "computational",
-    "is_primary_group_for_disease": false,
-    "weighting": "Bead-chip CNV association in epilepsy cohorts; WWOX enters as a common fragile-site polymorphism. No WWOX-DEE patient or allele class."
+ "schema_version": 2,
+ "pmid": "41345172",
+ "doi": "10.1038/s41598-025-28338-2",
+ "receipt": "FTR-20261004-41345172-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID41345172.md",
+  "disease-models/wwox/research/intake_wave_20261004w7_B.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W7-B-REGISTRY-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W7-B-CNV-CARRIER-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
   },
-  "field_density": {
-    "queries": [
-      {
-        "query": "WWOX AND (copy number OR deletion) AND (epilepsy OR neurodevelopmental)",
-        "count": 27,
-        "source": "PubMed ESearch rettype=count 2026-10-04"
-      }
-    ],
-    "note": "27 PubMed records; this one concerns a common intronic deletion, not a disease allele."
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
   },
-  "multihop": {
-    "references_enumerated": 69,
-    "gene_direct_refs_in_source": [
-      "33916893",
-      "19500159",
-      "33914858",
-      "10786676"
-    ],
-    "resolved": [
-      "33916893",
-      "19500159"
-    ],
-    "queued": [
-      "33914858",
-      "10786676"
-    ],
-    "note": "69 references enumerated. Refs 24 (PMID 33916893) and 25 (PMID 19500159) have standing complete readings. Queued, with reason: ref 26 (Repudi 2021, PMID 33914858, PAPER 004; the reference prints no PMID) and ref 27 (Bednarek 2000, PMID 10786676) have no complete receipt; this paper cites them only for 'candidate gene' and 'fragile site', so their reading changes nothing here."
+  {
+   "skill": "legend-deepdive",
+   "used": true
   },
-  "corpus_crossquery": {
-    "query": "registry_records.py get --pmid 41345172 (run AFTER the first pass); allele-term theme searches for the comparison",
-    "hits": 0,
-    "note": "No PAPER/LIT identity record and no receipt before this reading. Pattern held in DIS-022 and PAPER 124 (a CNV near WWOX read as a dose datum)."
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is owned by other batches; what this reading supports is proposed as commit candidates and in the intake note."
   },
-  "retraction_check": {
-    "checked": true,
-    "dependencies": {
-      "flagged": [],
-      "noted": [],
-      "paper_verdict": "SCREENED_CLEAN",
-      "reference_source": "network",
-      "references_declared": 69,
-      "references_screened": 62,
-      "references_with_doi": 62,
-      "schema": "retraction_check.dependencies/1",
-      "screened": true,
-      "snapshot": {
-        "date": "2026-09-10",
-        "days_since_fetch": 24,
-        "rows": 72476,
-        "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
-      },
-      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
-      "unscreenable": {
-        "UNSCREENABLE_NO_DOI": 7
-      }
-    },
-    "result": "Checked 2026-10-04 via PubMed metadata (get_article_metadata): publication types ['Journal Article']; no retraction, expression of concern or correction listed for PMID 41345172."
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A diagnostic cohort or method record supplies no new therapeutic lever; forging hypotheses from it would manufacture a lead."
   },
-  "source_artifacts": [
-    {
-      "path": "files/fulltext/PMID41345172_De2025_PMC.xml",
-      "sha256": "789b3c68daba46d3cc0db3f15750d802f533d6504b0f76d4d924404394c81690",
-      "kind": "article_text",
-      "note": "Europe PMC fullTextXML; body with inline figure legends, 69 references.",
-      "acquisition_recipe": {
-        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12753814/fullTextXML",
-        "http_method": "GET",
-        "tier": "Europe PMC REST fullTextXML",
-        "user_agent_policy": "none",
-        "acquired_on": "2026-10-04",
-        "derived": false,
-        "result_sha256": "789b3c68daba46d3cc0db3f15750d802f533d6504b0f76d4d924404394c81690"
-      }
-    },
-    {
-      "path": "files/fulltext/PMID41345172_De2025_supplement/41598_2025_28338_MOESM4_ESM.xlsx",
-      "sha256": "b8ea73249dd9ecb5583310f01d63fc51f3f0a1f8d5ac05ba143ac20948127f85",
-      "kind": "table",
-      "note": "Supplementary Table 4 (WWOX association results; sheets SANAD, Meta analysis, Australian cohort).",
-      "acquisition_recipe": {
-        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12753814/supplementaryFiles",
-        "http_method": "GET",
-        "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
-        "user_agent_policy": "none",
-        "acquired_on": "2026-10-04",
-        "derived": false
-      }
-    },
-    {
-      "path": "files/fulltext/PMID41345172_De2025_supplement/41598_2025_28338_MOESM4_ESM_cells.txt",
-      "sha256": "76dd5fa88c061052da096c12c1e445d158d14cecc5fc30f0cc2a4326789052cd",
-      "kind": "supplement_text",
-      "note": "DERIVED cell-wise TSV; numbers carried as stored (float repr), lossless for cell text.",
-      "acquisition_recipe": {
-        "resolved_url": "local derivation",
-        "http_method": "NONE",
-        "tier": "local derivation",
-        "user_agent_policy": "none",
-        "acquired_on": "2026-10-04",
-        "derived": true,
-        "derived_from": "files/fulltext/PMID41345172_De2025_supplement/41598_2025_28338_MOESM4_ESM.xlsx",
-        "result_sha256": "76dd5fa88c061052da096c12c1e445d158d14cecc5fc30f0cc2a4326789052cd",
-        "extractor": {
-          "name": "w7B_xlsx2tsv.py (stdlib zipfile + ElementTree, cell-wise)",
-          "version": "scratchpad 2026-10-04",
-          "call": "python3 w7B_xlsx2tsv.py 41598_2025_28338_MOESM4_ESM.xlsx"
-        }
-      }
-    },
-    {
-      "path": "files/fulltext/PMID41345172_De2025_supplement/41598_2025_28338_MOESM15_ESM.pdf",
-      "sha256": "2b7f1229a893a82078deff5aac44f8d96620f066b0b70e86fd8c937f6b91085c",
-      "kind": "supplement_binary",
-      "note": "Supplementary figures PDF, 24 pages; pages 3, 17 and 21 rendered at 70 dpi and inspected.",
-      "acquisition_recipe": {
-        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12753814/supplementaryFiles",
-        "http_method": "GET",
-        "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
-        "user_agent_policy": "none",
-        "acquired_on": "2026-10-04",
-        "derived": false
-      }
-    },
-    {
-      "path": "files/fulltext/PMID41345172_De2025_supplement/41598_2025_28338_MOESM15_ESM.txt",
-      "sha256": "1f14cd3defd3dc515f5f31eaf945c41ea69cabfdb1afb67967ff00e27d072f1e",
-      "kind": "supplement_text",
-      "note": "DERIVED text layer (layout, page breaks kept); captions only are reliable; panel text is chart labels.",
-      "acquisition_recipe": {
-        "resolved_url": "local derivation",
-        "http_method": "NONE",
-        "tier": "local derivation",
-        "user_agent_policy": "none",
-        "acquired_on": "2026-10-04",
-        "derived": true,
-        "derived_from": "files/fulltext/PMID41345172_De2025_supplement/41598_2025_28338_MOESM15_ESM.pdf",
-        "result_sha256": "1f14cd3defd3dc515f5f31eaf945c41ea69cabfdb1afb67967ff00e27d072f1e",
-        "extractor": {
-          "name": "pdftotext (poppler)",
-          "version": "24.02.0",
-          "call": "pdftotext -layout MOESM15_ESM.pdf MOESM15_ESM.txt"
-        }
-      }
-    },
-    {
-      "path": "files/fulltext/PMID41345172_De2025_supplement/41598_2025_28338_MOESM13_ESM.xlsx",
-      "sha256": "5b092057efd0c7e592efe08b40b455a7ade76e40fc421fb6d82379097399e45c",
-      "kind": "table",
-      "note": "Supplementary Table 13 (epilepsy phenotype descriptions), wave 9 re-read.",
-      "acquisition_recipe": {
-        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12753814/supplementaryFiles",
-        "http_method": "GET",
-        "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
-        "user_agent_policy": "identified",
-        "acquired_on": "2026-10-04",
-        "derived": false,
-        "result_sha256": "5b092057efd0c7e592efe08b40b455a7ade76e40fc421fb6d82379097399e45c"
-      }
-    },
-    {
-      "path": "files/fulltext/PMID41345172_De2025_supplement/41598_2025_28338_MOESM13_ESM_cells.txt",
-      "sha256": "25cf669be46a0243697a3587b41f17956efadf24879ef2171f6d492e919845a3",
-      "kind": "supplement_text",
-      "note": "DERIVED cell-wise TSV of the workbook above (stdlib zipfile + ElementTree).",
-      "acquisition_recipe": {
-        "derived": true,
-        "derived_from": "files/fulltext/PMID41345172_De2025_supplement/41598_2025_28338_MOESM13_ESM.xlsx",
-        "extractor": {
-          "name": "x2t.py (stdlib zipfile + ElementTree, cell-wise)",
-          "version": "scratchpad 2026-10-04",
-          "call": "python3 x2t.py 41598_2025_28338_MOESM13_ESM.xlsx"
-        },
-        "acquired_on": "2026-10-04",
-        "result_sha256": "25cf669be46a0243697a3587b41f17956efadf24879ef2171f6d492e919845a3"
-      }
-    }
-  ],
-  "verbatim_locators": {
-    "waived": false,
-    "entries": [
-      {
-        "proposition": "The authors call the WWOX CNV the most distinct common CNV-phenotype signal, MAF 47% with 48 contiguous probes.",
-        "snippet": "the most distinct common CNV-phenotype signal with the highest number of contiguous probes and significant P values was found within the WWOX gene (MAF=47%, 48 contiguous probes for CNV genotypes and 66 contiguous probes in the LRR analysis",
-        "anchor": "Results, CNV analysis in epilepsy cohorts",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID41345172_De2025_PMC.xml",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "The CNV association is restricted to the SANAD drug-response phenotype.",
-        "snippet": "This CNV was found to be exclusively associated with the drug-response phenotype in SANAD.",
-        "anchor": "Results, CNV analysis in epilepsy cohorts",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID41345172_De2025_PMC.xml",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "The genome-wide-strength meta-p sits at chr16:79,043,240, not inside the common deletion.",
-        "snippet": "in the LRR based meta-analysis the meta-P value was 4.65x10-22 at chr16:79,043,240",
-        "anchor": "Results, CNV analysis in epilepsy cohorts",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID41345172_De2025_PMC.xml",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "The authors flag the fragile site and ask for validation.",
-        "snippet": "Since WWOX has a well-known fragile site (FRA16D27) further experimental validation is required to confirm these findings.",
-        "anchor": "Results, CNV analysis in epilepsy cohorts",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID41345172_De2025_PMC.xml",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "The common intronic deletion spans chr16:78,373,644-78,384,121 at 47% allele frequency in SANAD.",
-        "snippet": "In SANAD we re-discovered this intronic CNV in WWOX as common deletions with an allele frequency of 47% spanning the region chr16: 78,373,644 - 78,384,121.",
-        "anchor": "Methods, CNV detection",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID41345172_De2025_PMC.xml",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "An imprecise, uncited disease sentence restricts WOREE to missense alleles.",
-        "snippet": "Missense mutations in exons of WWOX have been reported to be associated with highly pathogenic WOREE syndrome in epilepsy, which usually occurs in young children and has a very poor prognosis.",
-        "anchor": "Methods, CNV detection",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID41345172_De2025_PMC.xml",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "The methylation cohorts are cancer cohorts.",
-        "snippet": "Soft Tissue cancer- Ewing sarcoma France (BOCA-FR) (n=107), Chronic Lymphocytic Leukemia Spain (CLLE-ES) (n=551)",
-        "anchor": "Methods, Cancer studies",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID41345172_De2025_PMC.xml",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "In SANAD the best drug-response p for the common deletion interval is 1.68e-4 (LRR univariate).",
-        "snippet": "SANAD_LRR_univariate chr16 78383363 drug_response -0.51500000000000001 0.17799999999999999 1.6799999999999999E-4",
-        "anchor": "Supplementary Table 4, sheet SANAD",
-        "surface": "supplement",
-        "artifact": "files/fulltext/PMID41345172_De2025_supplement/41598_2025_28338_MOESM4_ESM_cells.txt",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "The common intronic deletion is carried homozygously by 1447 gnomAD individuals.",
-        "snippet": "[figure attestation — pixels cannot be quote-matched] Supp Fig 19 (gnomAD SV table, GRCh37): DEL_16_156229 intronic deletion 78371638-78384898, 13.3 kb, allele frequency 3.39e-1, number of homozygotes 1447.",
-        "anchor": "Supplementary Figure 19 (PDF page 21), rendered at 70 dpi",
-        "surface": "figure",
-        "artifact": "files/fulltext/PMID41345172_De2025_supplement/41598_2025_28338_MOESM15_ESM.pdf",
-        "panel_text_relation": "panel_only"
-      },
-      {
-        "proposition": "THE 'DRUG RESPONSE' PHENOTYPE IS A BINARY: achievement of 12-month remission (1) or not (0), in the SANAD and Australian cohorts.",
-        "snippet": "Time to 12 month remission; 1= achieved 12 month remission; 0=did not achieve 12 month remission",
-        "surface": "supplement",
-        "anchor": "Supplementary Table 13, drug_response row",
-        "artifact": "files/fulltext/PMID41345172_De2025_supplement/41598_2025_28338_MOESM13_ESM_cells.txt",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "THE STATED CORRECTION ADJUSTS FOR THE CORRELATION STRUCTURE OF THE PHENOTYPE MATRIX (an effective number of phenotype tests M); the value of M and the number of variant-level tests are not printed.",
-        "snippet": "we used a modified Šidák method for calculating the net effective number of tests (M) based on the degree of correlation structure in the phenotype matrix",
-        "surface": "body",
-        "anchor": "Methods, multiple-testing correction",
-        "artifact": "files/fulltext/PMID41345172_De2025_PMC.xml",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "SUPPLEMENTARY TABLE 4 IS A WWOX-WIDE TABLE, NOT A SINGLE-LOCUS RESULT. Computed on the cell-wise TSV (script on scratchpad): 16,980 data rows of which 14,283 unique; SANAD drug_response 2,008 rows over 559 distinct WWOX probe locations and 1,609 distinct (mode, location) pairs; best drug-response p 1.68e-4 (LRR univariate, chr16:78383363, inside the common deletion), against a Bonferroni threshold of about 8.9e-5 over 559 locations (about 3.1e-5 over 1,609 pairs); best genotype-based drug-response p 4.92e-3 (univariate). So the association is nominal within the gene before any genome-wide correction.",
-        "snippet": "Supplementary Table 4. Association results for the WWOX gene. Association results for the drug-response phenotype in SANAD for CNV genotypes and LRR using univariate and multivariate models.",
-        "surface": "supplement",
-        "anchor": "Supplementary Table 4, sheet SANAD caption",
-        "artifact": "files/fulltext/PMID41345172_De2025_supplement/41598_2025_28338_MOESM4_ESM_cells.txt",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "PANEL READING, Supplementary Figure 19 (gnomAD v2 SV browser, GRCh37). The row DEL_16_156229, intronic deletion, 78371638-78384898 (13.3 kb), allele count 7355, allele number 21694, allele frequency 3.39e-1, 1447 homozygotes. Recomputed 7355 / 21694 = 0.3390. The block lies inside WWOX with no coding exon in the highlighted window; the paper's own SANAD interval is 78373644-78384121, contained in it.",
-        "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary figure 19 page: table row DEL_16_156229, consequence intronic, class deletion, position 78371638 - 78384898, size 13.3 kb, allele count 7355, allele number 21694, allele frequency 3.39e-1, number of homozygotes 1447; row MCNV_16_842 overlap 78371850 - 78385000, 5911 of 10847, 5.45e-1.",
-        "surface": "figure",
-        "anchor": "Supplementary figure 19",
-        "artifact": "files/fulltext/PMID41345172_De2025_supplement/41598_2025_28338_MOESM15_ESM.pdf",
-        "panel_text_relation": "panel_only",
-        "experimental_context": {
-          "system": "human population database (gnomAD structural variants)",
-          "genotype": "population",
-          "treatment": "none",
-          "timepoint": "n/a",
-          "comparator": "n/a",
-          "endpoint": "allele frequency and homozygote count of the WWOX intronic deletion"
-        }
-      }
-    ],
-    "source_fulltext_indexed": true,
-    "source_fulltext_indexed_evidence": "Europe PMC REST fullTextXML returned HTTP 200 with a full JATS body on 2026-10-04; the declared article_text artefact is that response, byte for byte.",
-    "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The triples are published in the candidates for a blind auditor; the reader cannot audit their own locators."
   }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "computational",
+  "is_primary_group_for_disease": false,
+  "weighting": "Bead-chip CNV association in epilepsy cohorts; WWOX enters as a common fragile-site polymorphism. No WWOX-DEE patient or allele class."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (copy number OR deletion) AND (epilepsy OR neurodevelopmental)",
+    "count": 27,
+    "source": "PubMed ESearch rettype=count 2026-10-04"
+   }
+  ],
+  "note": "27 PubMed records; this one concerns a common intronic deletion, not a disease allele."
+ },
+ "multihop": {
+  "references_enumerated": 69,
+  "gene_direct_refs_in_source": [
+   "33916893",
+   "19500159",
+   "33914858",
+   "10786676"
+  ],
+  "resolved": [
+   "33916893",
+   "19500159"
+  ],
+  "queued": [
+   "33914858",
+   "10786676"
+  ],
+  "note": "69 references enumerated. Refs 24 (PMID 33916893) and 25 (PMID 19500159) have standing complete readings. Queued, with reason: ref 26 (Repudi 2021, PMID 33914858, PAPER 004; the reference prints no PMID) and ref 27 (Bednarek 2000, PMID 10786676) have no complete receipt; this paper cites them only for 'candidate gene' and 'fragile site', so their reading changes nothing here."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 41345172 (run AFTER the first pass); allele-term theme searches for the comparison",
+  "hits": 0,
+  "note": "No PAPER/LIT identity record and no receipt before this reading. Pattern held in DIS-022 and PAPER 124 (a CNV near WWOX read as a dose datum)."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 69,
+   "references_screened": 62,
+   "references_with_doi": 62,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 24,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 7
+   }
+  },
+  "result": "Checked 2026-10-04 via PubMed metadata (get_article_metadata): publication types ['Journal Article']; no retraction, expression of concern or correction listed for PMID 41345172."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41345172_De2025_PMC.xml",
+   "sha256": "789b3c68daba46d3cc0db3f15750d802f533d6504b0f76d4d924404394c81690",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML; body with inline figure legends, 69 references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12753814/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": false,
+    "result_sha256": "789b3c68daba46d3cc0db3f15750d802f533d6504b0f76d4d924404394c81690"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID41345172_De2025_supplement/41598_2025_28338_MOESM4_ESM.xlsx",
+   "sha256": "b8ea73249dd9ecb5583310f01d63fc51f3f0a1f8d5ac05ba143ac20948127f85",
+   "kind": "table",
+   "note": "Supplementary Table 4 (WWOX association results; sheets SANAD, Meta analysis, Australian cohort).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12753814/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/fulltext/PMID41345172_De2025_supplement/41598_2025_28338_MOESM4_ESM_cells.txt",
+   "sha256": "76dd5fa88c061052da096c12c1e445d158d14cecc5fc30f0cc2a4326789052cd",
+   "kind": "supplement_text",
+   "note": "DERIVED cell-wise TSV; numbers carried as stored (float repr), lossless for cell text.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local derivation",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": true,
+    "derived_from": "files/fulltext/PMID41345172_De2025_supplement/41598_2025_28338_MOESM4_ESM.xlsx",
+    "result_sha256": "76dd5fa88c061052da096c12c1e445d158d14cecc5fc30f0cc2a4326789052cd",
+    "extractor": {
+     "name": "w7B_xlsx2tsv.py (stdlib zipfile + ElementTree, cell-wise)",
+     "version": "scratchpad 2026-10-04",
+     "call": "python3 w7B_xlsx2tsv.py 41598_2025_28338_MOESM4_ESM.xlsx"
+    }
+   }
+  },
+  {
+   "path": "files/fulltext/PMID41345172_De2025_supplement/41598_2025_28338_MOESM15_ESM.pdf",
+   "sha256": "2b7f1229a893a82078deff5aac44f8d96620f066b0b70e86fd8c937f6b91085c",
+   "kind": "supplement_binary",
+   "note": "Supplementary figures PDF, 24 pages; pages 3, 17 and 21 rendered at 70 dpi and inspected.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12753814/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/fulltext/PMID41345172_De2025_supplement/41598_2025_28338_MOESM15_ESM.txt",
+   "sha256": "1f14cd3defd3dc515f5f31eaf945c41ea69cabfdb1afb67967ff00e27d072f1e",
+   "kind": "supplement_text",
+   "note": "DERIVED text layer (layout, page breaks kept); captions only are reliable; panel text is chart labels.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local derivation",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": true,
+    "derived_from": "files/fulltext/PMID41345172_De2025_supplement/41598_2025_28338_MOESM15_ESM.pdf",
+    "result_sha256": "1f14cd3defd3dc515f5f31eaf945c41ea69cabfdb1afb67967ff00e27d072f1e",
+    "extractor": {
+     "name": "pdftotext (poppler)",
+     "version": "24.02.0",
+     "call": "pdftotext -layout MOESM15_ESM.pdf MOESM15_ESM.txt"
+    }
+   }
+  },
+  {
+   "path": "files/fulltext/PMID41345172_De2025_supplement/41598_2025_28338_MOESM13_ESM.xlsx",
+   "sha256": "5b092057efd0c7e592efe08b40b455a7ade76e40fc421fb6d82379097399e45c",
+   "kind": "table",
+   "note": "Supplementary Table 13 (epilepsy phenotype descriptions), wave 9 re-read.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12753814/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-04",
+    "derived": false,
+    "result_sha256": "5b092057efd0c7e592efe08b40b455a7ade76e40fc421fb6d82379097399e45c"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID41345172_De2025_supplement/41598_2025_28338_MOESM13_ESM_cells.txt",
+   "sha256": "25cf669be46a0243697a3587b41f17956efadf24879ef2171f6d492e919845a3",
+   "kind": "supplement_text",
+   "note": "DERIVED cell-wise TSV of the workbook above (stdlib zipfile + ElementTree).",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID41345172_De2025_supplement/41598_2025_28338_MOESM13_ESM.xlsx",
+    "extractor": {
+     "name": "x2t.py (stdlib zipfile + ElementTree, cell-wise)",
+     "version": "scratchpad 2026-10-04",
+     "call": "python3 x2t.py 41598_2025_28338_MOESM13_ESM.xlsx"
+    },
+    "acquired_on": "2026-10-04",
+    "result_sha256": "25cf669be46a0243697a3587b41f17956efadf24879ef2171f6d492e919845a3"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID41345172_De2025_supplement/41598_2025_28338_MOESM1_ESM.xlsx",
+   "sha256": "78d6f924a95cd30343cf1964c1cb3fb323561a228a4993955e12fd40a7178e91",
+   "kind": "table"
+  },
+  {
+   "path": "files/fulltext/PMID41345172_De2025_supplement/41598_2025_28338_MOESM12_ESM.xlsx",
+   "sha256": "8f8696918cfec0675acb6c89276203628f60a58e3bb335e8186d7ced3577cce0",
+   "kind": "table"
+  },
+  {
+   "path": "files/fulltext/PMID41345172_De2025_supplement/41598_2025_28338_MOESM8_ESM.xlsx",
+   "sha256": "93063b0ac184db4667bdbeab7cfbec2f6fd747c01445e7e118f02021d3adaa99",
+   "kind": "table"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The authors call the WWOX CNV the most distinct common CNV-phenotype signal, MAF 47% with 48 contiguous probes.",
+    "snippet": "the most distinct common CNV-phenotype signal with the highest number of contiguous probes and significant P values was found within the WWOX gene (MAF=47%, 48 contiguous probes for CNV genotypes and 66 contiguous probes in the LRR analysis",
+    "anchor": "Results, CNV analysis in epilepsy cohorts",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41345172_De2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The CNV association is restricted to the SANAD drug-response phenotype.",
+    "snippet": "This CNV was found to be exclusively associated with the drug-response phenotype in SANAD.",
+    "anchor": "Results, CNV analysis in epilepsy cohorts",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41345172_De2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The genome-wide-strength meta-p sits at chr16:79,043,240, not inside the common deletion.",
+    "snippet": "in the LRR based meta-analysis the meta-P value was 4.65x10-22 at chr16:79,043,240",
+    "anchor": "Results, CNV analysis in epilepsy cohorts",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41345172_De2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors flag the fragile site and ask for validation.",
+    "snippet": "Since WWOX has a well-known fragile site (FRA16D27) further experimental validation is required to confirm these findings.",
+    "anchor": "Results, CNV analysis in epilepsy cohorts",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41345172_De2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The common intronic deletion spans chr16:78,373,644-78,384,121 at 47% allele frequency in SANAD.",
+    "snippet": "In SANAD we re-discovered this intronic CNV in WWOX as common deletions with an allele frequency of 47% spanning the region chr16: 78,373,644 - 78,384,121.",
+    "anchor": "Methods, CNV detection",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41345172_De2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "An imprecise, uncited disease sentence restricts WOREE to missense alleles.",
+    "snippet": "Missense mutations in exons of WWOX have been reported to be associated with highly pathogenic WOREE syndrome in epilepsy, which usually occurs in young children and has a very poor prognosis.",
+    "anchor": "Methods, CNV detection",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41345172_De2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The methylation cohorts are cancer cohorts.",
+    "snippet": "Soft Tissue cancer- Ewing sarcoma France (BOCA-FR) (n=107), Chronic Lymphocytic Leukemia Spain (CLLE-ES) (n=551)",
+    "anchor": "Methods, Cancer studies",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41345172_De2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In SANAD the best drug-response p for the common deletion interval is 1.68e-4 (LRR univariate).",
+    "snippet": "SANAD_LRR_univariate chr16 78383363 drug_response -0.51500000000000001 0.17799999999999999 1.6799999999999999E-4",
+    "anchor": "Supplementary Table 4, sheet SANAD",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID41345172_De2025_supplement/41598_2025_28338_MOESM4_ESM_cells.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The common intronic deletion is carried homozygously by 1447 gnomAD individuals.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Supp Fig 19 (gnomAD SV table, GRCh37): DEL_16_156229 intronic deletion 78371638-78384898, 13.3 kb, allele frequency 3.39e-1, number of homozygotes 1447.",
+    "anchor": "Supplementary Figure 19 (PDF page 21), rendered at 70 dpi",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID41345172_De2025_supplement/41598_2025_28338_MOESM15_ESM.pdf",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "THE 'DRUG RESPONSE' PHENOTYPE IS A BINARY: achievement of 12-month remission (1) or not (0), in the SANAD and Australian cohorts.",
+    "snippet": "Time to 12 month remission; 1= achieved 12 month remission; 0=did not achieve 12 month remission",
+    "surface": "supplement",
+    "anchor": "Supplementary Table 13, drug_response row",
+    "artifact": "files/fulltext/PMID41345172_De2025_supplement/41598_2025_28338_MOESM13_ESM_cells.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE STATED CORRECTION ADJUSTS FOR THE CORRELATION STRUCTURE OF THE PHENOTYPE MATRIX (an effective number of phenotype tests M); the value of M and the number of variant-level tests are not printed.",
+    "snippet": "we used a modified Šidák method for calculating the net effective number of tests (M) based on the degree of correlation structure in the phenotype matrix",
+    "surface": "body",
+    "anchor": "Methods, multiple-testing correction",
+    "artifact": "files/fulltext/PMID41345172_De2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "SUPPLEMENTARY TABLE 4 IS A WWOX-WIDE TABLE, NOT A SINGLE-LOCUS RESULT. Computed on the cell-wise TSV (script on scratchpad): 16,980 data rows of which 14,283 unique; SANAD drug_response 2,008 rows over 559 distinct WWOX probe locations and 1,609 distinct (mode, location) pairs; best drug-response p 1.68e-4 (LRR univariate, chr16:78383363, inside the common deletion), against a Bonferroni threshold of about 8.9e-5 over 559 locations (about 3.1e-5 over 1,609 pairs); best genotype-based drug-response p 4.92e-3 (univariate). So the association is nominal within the gene before any genome-wide correction.",
+    "snippet": "Supplementary Table 4. Association results for the WWOX gene. Association results for the drug-response phenotype in SANAD for CNV genotypes and LRR using univariate and multivariate models.",
+    "surface": "supplement",
+    "anchor": "Supplementary Table 4, sheet SANAD caption",
+    "artifact": "files/fulltext/PMID41345172_De2025_supplement/41598_2025_28338_MOESM4_ESM_cells.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PANEL READING, Supplementary Figure 19 (gnomAD v2 SV browser, GRCh37). The row DEL_16_156229, intronic deletion, 78371638-78384898 (13.3 kb), allele count 7355, allele number 21694, allele frequency 3.39e-1, 1447 homozygotes. Recomputed 7355 / 21694 = 0.3390. The block lies inside WWOX with no coding exon in the highlighted window; the paper's own SANAD interval is 78373644-78384121, contained in it.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary figure 19 page: table row DEL_16_156229, consequence intronic, class deletion, position 78371638 - 78384898, size 13.3 kb, allele count 7355, allele number 21694, allele frequency 3.39e-1, number of homozygotes 1447; row MCNV_16_842 overlap 78371850 - 78385000, 5911 of 10847, 5.45e-1.",
+    "surface": "figure",
+    "anchor": "Supplementary figure 19",
+    "artifact": "files/fulltext/PMID41345172_De2025_supplement/41598_2025_28338_MOESM15_ESM.pdf",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human population database (gnomAD structural variants)",
+     "genotype": "population",
+     "treatment": "none",
+     "timepoint": "n/a",
+     "comparator": "n/a",
+     "endpoint": "allele frequency and homozygote count of the WWOX intronic deletion"
+    }
+   },
+   {
+    "proposition": "The 1447-homozygote annotation survives a 400 dpi re-render of the same page, digit for digit.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary figure 19, page 21 rendered at 400 dpi: row DEL_16_156229, intronic, deletion, position 78371638 - 78384898, size 13.3 kb, allele count 7355, allele number 21694, allele frequency 3.39e-1, number of homozygotes 1447.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID41345172_De2025_supplement/41598_2025_28338_MOESM15_ESM.pdf",
+    "anchor": "Supplementary figure 19 (PDF page 21), re-rendered at 400 dpi with pdftoppm",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "WWOX carries several common intronic structural variants in the same gnomAD table, so the deletion used in this paper is the most frequent of them rather than a singular event.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary figure 19 at 400 dpi lists fourteen structural-variant rows inside WWOX; immediately after DEL_16_156229 the highlighted block continues with DEL_16_156234, intronic deletion 78394517 - 78394606, 89 bp, 6867 of 21572, 3.18e-1, 220 homozygotes; INS_16_101038, intronic insertion at 78692826, 321 bp, 4033 of 21640, 1.86e-1, 122 homozygotes; INS_16_101054, intronic insertion at 79190720, 321 bp, 2167 of 21506, 1.01e-1, 327 homozygotes.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID41345172_De2025_supplement/41598_2025_28338_MOESM15_ESM.pdf",
+    "anchor": "Supplementary figure 19 (PDF page 21), table rows 2 to 4 of the highlighted block, re-rendered at 400 dpi",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The authors' own table of rank-1 results across every cohort, method and phenotype contains no WWOX-interval coordinate.",
+    "snippet": "[spreadsheet attestation - read cell-wise from the workbook XML] Supplementary Table 1 holds 139 packed result cells of the form 'p; chromosome:position; gene; MAF'. No cell carries a position on chromosome 16 between 78 and 80 Mb; the only chromosome-16 cell is '2.91e-09; 16:75296761; BCAR1'. For SANAD drug_response the rank-1 cells are '0.0000146; 14:19785775' (genotype univariate) and '1.7e-05; 8:140765991; TRAPPC9' (log-r ratio univariate).",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID41345172_De2025_supplement/41598_2025_28338_MOESM1_ESM.xlsx",
+    "anchor": "Supplementary Table 1, all result cells; read cell-wise from the workbook XML",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[0]",
+    "qualifies_needle": "the most distinct common CNV-phenotype s",
+    "found_or_sought": "sought"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST fullTextXML returned HTTP 200 with a full JATS body on 2026-10-04; the declared article_text artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+ },
+ "reading_history": [
+  {
+   "receipt": "FTR-20261004-41345172-03",
+   "reader": "scientist (Scientist C), intake wave 12 2026-10-04 (RE-READ)",
+   "context_policy": "SOURCE_FIRST",
+   "what_changed": "Acquired the twelve missing supplementary workbooks and the main-figure images from the Europe PMC supplementaryFiles archive for PMC12753814 (the three held files returned byte-equal), declared the three workbooks that carry WWOX-relevant content with full sha256, and appended entries 14-16: Supplementary Figure 19 re-rendered at 400 dpi (the 1447 annotation confirmed; three further common intronic WWOX structural variants recorded) and Supplementary Table 1 read cell-wise. No existing entry was altered.",
+   "outputs": [
+    "disease-models/wwox/research/fulltext_dossiers/PMID41345172.md",
+    "disease-models/wwox/research/deepdive_manifests/PMID41345172.json",
+    "disease-models/wwox/research/intake_wave_20261004w12_C.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261004W12-C-CNV-CONTEXT-01.md"
+   ]
+  }
+ ]
 }

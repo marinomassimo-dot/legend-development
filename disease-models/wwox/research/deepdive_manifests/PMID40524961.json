@@ -178,6 +178,16 @@
     "acquired_on": "2026-10-03",
     "result_sha256": "293e9e619653649d529afeef4876aea87e9c041a190d0d6c805bb29eda4d2504"
    }
+  },
+  {
+   "path": "files/fulltext/PMID40524961_Sengupta2025_supplement/gr5.jpg",
+   "sha256": "2c96fb5db9bfee0d46cf5e5b13ffea2b1f5b955a31baa4dbe656a49005b24fe8",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID40524961_Sengupta2025_supplement/gr6.jpg",
+   "sha256": "f1a1ae94b080c83cf87e32d5568719600f95851fc9e51d7216eb8f36ec335162",
+   "kind": "figure"
   }
  ],
  "verbatim_locators": {
@@ -254,10 +264,71 @@
     "surface": "figure",
     "artifact": "files/fulltext/PMID40524961_Sengupta2025_supplement/gr8.jpg",
     "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Nuclear DVL2 accumulation in this system is produced by inhibiting cholesterol synthesis, with membrane and cytosolic DVL2 falling in the same panel.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5E plots normalized DVL2 in three fractions: nuclear DVL2 rises above the LPDS bar with AY9944 (**) and U18666A (****), membrane DVL2 falls under AY9944, Atorvastatin, Simvastatin and U18666A (**, *, *, **) and cytosolic DVL2 falls under Simvastatin (*). Figure 5H plots nuclear/total GFP intensity rising under LPDS+AY9944 (****).",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID40524961_Sengupta2025_supplement/gr5.jpg",
+    "anchor": "Figure 5, panels E and H; native JPEG inspected",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The nuclear import route measured here is sterol-sensitive, PDZ-domain dependent and FoxK2 dependent, and a PDZ inhibitor abolishes it.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6B plots relative FoxK2 co-immunoprecipitated with DVL2 rising in the nuclear fraction under LPDS+AY9944 (**) and falling in the cytosolic fraction (**). Figure 6E and 6F show that adding NSC668036 to LPDS+AY9944 returns both the GFP intensity per unit nuclear area and the nuclear/total GFP intensity to the untreated range (**** against LPDS+AY9944 in both panels). Figure 6C marks cholesterol-binding, FoxK2-binding and NSC668036-binding residues on overlapping faces of the same PDZ domain.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID40524961_Sengupta2025_supplement/gr6.jpg",
+    "anchor": "Figure 6, panels B, C, E and F; native JPEG inspected",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The condition that maximises nuclear DVL2 carries the lowest canonical TCF/LEF response, and the panel reports no statistical test at all.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure S6E plots TCF/LEF fold induction with and without Wnt-conditioned medium. With conditioned medium the bars read approximately 125 (FBS), 67 (LPDS), 55 (LPDS+vehicle), 12 (LPDS+AY9944), 17 (LPDS+Simvastatin) and 21 (LPDS+U18666A); every bar without conditioned medium sits at approximately 5 to 7. No significance marker is drawn anywhere in the panel.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID40524961_Sengupta2025_supplement/mmc1.pdf",
+    "anchor": "Figure S6, panel E, page 9 of the supplementary PDF rendered at 200 dpi",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[3]",
+    "found_or_sought": "found",
+    "qualifies_needle": "a clear inhibition of canonical Wnt signaling"
+   },
+   {
+    "proposition": "The control that makes the FoxK2 result a trafficking result rather than an expression result rests on two experiments.",
+    "snippet": "Quantification of nuclear and cytosolic fractions demonstrate that FoxK2 expression\ndoes not significantly change following sterol targeted treatments. N = 2 independent\nexperiments.",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID40524961_Sengupta2025_supplement/mmc1.txt",
+    "anchor": "Figure S7 legend, panel B",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "WWOX is named exactly once in the body of this paper, in a Discussion sentence that cites a head-and-neck cancer study, and nowhere else.",
+    "snippet": "It has been shown that silencing of the Wwox tumor suppressor increases nuclear DVL2 in head and neck cancer.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40524961_Sengupta2025_PMC.xml",
+    "anchor": "Discussion, paragraph on DVL2 protein-protein interactions",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
    }
   ],
   "source_fulltext_indexed": true,
   "source_fulltext_indexed_evidence": "Europe PMC REST PMC12167792/fullTextXML returned HTTP 200 with the full body and the key resources table on 2026-10-03; the declared artefact is that response, byte for byte.",
   "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure legend, a figure or a supplement."
- }
+ },
+ "reading_history": [
+  {
+   "receipt": "FTR-20261004-40524961-02",
+   "reader": "scientist (Scientist C), intake wave 12 2026-10-04 (RE-READ)",
+   "context_policy": "SOURCE_FIRST",
+   "what_changed": "Declared two previously undeclared main-figure artefacts with full digests and appended entries 10-14: the owed figure surface read as rendered images (Figures 5 and 6 as native JPEGs, supplementary Figure S6 rendered from page 9 of mmc1.pdf at 200 dpi), plus the Figure S7 small-n control and a re-measured WWOX census. No existing entry was altered.",
+   "outputs": [
+    "disease-models/wwox/research/fulltext_dossiers/PMID40524961.md",
+    "disease-models/wwox/research/deepdive_manifests/PMID40524961.json",
+    "disease-models/wwox/research/intake_wave_20261004w12_C.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261004W12-C-WNT-DIRECTION-01.md"
+   ]
+  }
+ ]
 }

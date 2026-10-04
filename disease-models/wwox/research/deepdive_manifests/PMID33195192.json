@@ -1,161 +1,305 @@
 {
-  "schema_version": 2,
-  "pmid": "33195192",
-  "doi": "10.3389/fcell.2020.558432",
-  "receipt": "FTR-20261002-33195192-01",
-  "landing": [
-    "CC-20261002-WWOX-DOSE-CEILING-01",
-    "CC-20261002-BIOMARKER-REJECTIONS-01",
-    "intake_wave_20261002_C"
-  ],
-  "skills_considered": [
-    {
-      "skill": "find-fulltext",
-      "used": true,
-      "reason": "Invoked by name for PMID 17679088 and PMID 42395553, whose Europe PMC fullTextXML route returned HTTP 500. The cascade resolved both: the 2007 paper via the PMC author-manuscript HTML surface (the publisher forbids XML download and the Cell Press bronze-OA PDF is bot-blocked at 403), the preprint via the bioRxiv .full.pdf endpoint. The four PMC-indexed papers needed no cascade."
-    },
-    {
-      "skill": "legend-deepdive",
-      "used": false,
-      "reason": "Not run. This wave is a first full read of six records none of which is in the registries; the dossier, the locators and the commit candidates were produced directly under the Scientist brief. A legend-deepdive pass would duplicate them."
-    },
-    {
-      "skill": "legend-locator-audit",
-      "used": false,
-      "reason": "Not run here by design: the producer of a reading must not be its verifier. The triples are handed to the blind audit through the commit candidates' LOCATOR TRIPLES FOR BLIND AUDIT sections."
-    }
-  ],
-  "group_assessment": {
-    "performed": true,
-    "total_publications": 103,
-    "publications_on_gene": 30,
-    "counts_measured": "PubMed esearch 2026-10-02: 'Hsu LJ[au]' 103, 'Hsu LJ[au] AND WWOX' 30. The unqualified count is inflated by author-name ambiguity and is not used for weighting.",
-    "research_type": "experimental_lab",
-    "is_primary_group_for_disease": false,
-    "is_primary_group_for_gene": true,
-    "weighting": "Hsu and Chang at National Cheng Kung University — one of the two founding WWOX laboratories, working on their own knockout line. Primary for the gene; the disease studied here is skin homeostasis, not WWOX-DEE. NOT INDEPENDENT of PMID 37897534 in this wave: same senior author, same mouse line.",
-    "note": "Li-Jin Hsu and Nan-Shan Chang, National Cheng Kung University -- one of the two founding WWOX laboratories, and the same senior author as PMID 37897534 in this wave. These two records are NOT independent of each other. The Wwox knockout line is the group's own."
+ "schema_version": 2,
+ "pmid": "33195192",
+ "doi": "10.3389/fcell.2020.558432",
+ "receipt": "FTR-20261002-33195192-01",
+ "landing": [
+  "CC-20261002-WWOX-DOSE-CEILING-01",
+  "CC-20261002-BIOMARKER-REJECTIONS-01",
+  "intake_wave_20261002_C"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Invoked by name for PMID 17679088 and PMID 42395553, whose Europe PMC fullTextXML route returned HTTP 500. The cascade resolved both: the 2007 paper via the PMC author-manuscript HTML surface (the publisher forbids XML download and the Cell Press bronze-OA PDF is bot-blocked at 403), the preprint via the bioRxiv .full.pdf endpoint. The four PMC-indexed papers needed no cascade."
   },
-  "field_density": {
-    "wwox_directed": true,
-    "queries": [
-      {
-        "query": "Hsu LJ[au] AND WWOX",
-        "route": "PubMed esearch 2026-10-02",
-        "count": 30
-      }
-    ],
-    "note": "High WWOX density and high measurement density: knockout mice with a heterozygous arm carried throughout, primary keratinocytes, HaCaT knockdown, histology, TEM, flow cytometry, corneometry and fibre-optic thermometry. 323 WWOX/Wwox mentions in the JATS."
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not run. This wave is a first full read of six records none of which is in the registries; the dossier, the locators and the commit candidates were produced directly under the Scientist brief. A legend-deepdive pass would duplicate them."
   },
-  "multihop": {
-    "performed": false,
-    "references_enumerated": 75,
-    "gene_direct_refs_in_source": [],
-    "enumeration_method": "<ref> elements counted in the JATS: 75. Not classified by gene-directedness.",
-    "resolved": [],
-    "queued": [],
-    "note": "ONE HOP QUEUED BY NAME: Nowakowska et al. 2014 (HT29 colon adenocarcinoma, raised WWOX increasing proliferation). It is the second independent instance of added WWOX doing the opposite of the tumour-suppressor expectation, and it is carried here only as this paper's citation of it."
-  },
-  "corpus_crossquery": {
-    "performed": true,
-    "query": "Is there an existing pharmacodynamic-marker candidate for WWOX, and would pERK qualify under section 13?",
-    "hits": 0,
-    "finding": "No candidate exists, and pERK does not qualify as a disease biomarker: it is a Tier 2-shaped readout by position in the pathway but it reports hundreds of upstream inputs, it was measured here by immunohistochemistry in mouse skin of a constitutive null, and the direction (reduced) is the ordinary consequence of reduced proliferation. Recorded as a rejected candidate with its reason."
-  },
-  "retraction_check": {
-    "performed": true,
-    "at": "2026-10-02",
-    "route": "PubMed esummary / get_article_metadata for 33195192",
-    "result": "No retraction, no expression of concern, no erratum. Article type 'Journal Article'.",
-    "hold": false,
-    "dependencies": {
-      "flagged": [
-        {
-          "citing_relation": "citation only. Fabbri 2005 is cited once, in the Discussion, inside a list of papers supporting the sentence that WWOX overexpression suppresses growth in malignant cells. It supplies no reagent, no method and no data to PMID 33195192, and nothing this reading carries from PMID 33195192 depends on it. ALREADY HELD BY THE MODEL: the same source is PAPER 082, status background_only, Integrity status PUBLICATION_INTEGRITY_HOLD, deliberately linked to no claim; the expression of concern (PMID 28373548) is narrow in scope -- one beta-actin panel in Figure 1B -- and is not a retraction. This screen rediscovered independently what the registry already records, and changes nothing.",
-          "doi": "10.1073/pnas.0505485102",
-          "nature": "Expression of concern",
-          "reason_verbatim": "Concerns/Issues about Data;Duplication of/in Image;Error in Image;Investigation by Company/Institution;Original Data and/or Images not Provided and/or not Available;",
-          "retraction_date": "4/3/2017 0:00",
-          "retraction_pmid": "28373548",
-          "verdict": "FLAGGED_EXPRESSION_OF_CONCERN"
-        }
-      ],
-      "noted": [],
-      "paper_verdict": "FLAGGED_EXPRESSION_OF_CONCERN",
-      "reference_source": "network",
-      "references_declared": 75,
-      "references_screened": 74,
-      "references_with_doi": 74,
-      "schema": "retraction_check.dependencies/1",
-      "screened": true,
-      "snapshot": {
-        "date": "2026-09-10",
-        "days_since_fetch": 22,
-        "rows": 72476,
-        "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
-      },
-      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
-      "unscreenable": {
-        "UNSCREENABLE_NO_DOI": 1
-      }
-    }
-  },
-  "source_artifacts": [
-    {
-      "path": "files/fulltext/PMID33195192_Chou2020_PMC.xml",
-      "sha256": "ef330947352977c26f7be0eb422682c065cd986709e8f5bfa52cc301872b15cd",
-      "kind": "article_text",
-      "note": "Europe PMC JATS for PMC7652735, 168,547 bytes. CC BY 4.0.",
-      "acquisition_recipe": {
-        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7652735/fullTextXML",
-        "http_method": "GET",
-        "tier": "europepmc_fulltextxml",
-        "user_agent_policy": "none",
-        "acquired_on": "2026-10-02",
-        "derived": false,
-        "result_sha256": "ef330947352977c26f7be0eb422682c065cd986709e8f5bfa52cc301872b15cd"
-      }
-    }
-  ],
-  "verbatim_locators": {
-    "waived": false,
-    "source_fulltext_indexed": true,
-    "source_fulltext_indexed_evidence": "Europe PMC JATS, 168,547 bytes; Abstract, Introduction, Materials and Methods, Results, Discussion, Conclusion and all figure legends present in the body. CC BY 4.0.",
-    "abstract_anchoring_waived": "Stated per entry. Where an entry draws on the abstract it says so in its anchor; every entry is matched against the declared artifact as a whole.",
-    "note": "COVERAGE: whole article read, including Materials and Methods, every figure legend with its n and its test, and the Discussion. NOT INSPECTED: Supplementary Figures S1-S10, which are a separate file not fetched -- so the transepidermal water loss (S1), loricrin (S2), cell-cycle (S3), TUNEL (S4), fur length (S5), embryonic hair follicles (S6), CD34 (S7), E-cadherin (S8), total ERK1/2 (S9) and dermal collagen (S10) results are carried only by the authors' running text and not by their panels. THE TOTAL-ERK RESULT IS ONE OF THESE: the running text asserts reduced total ERK1/2 and points to Supplementary Figure S9, whose bytes were not read.",
-    "entries": [
-      {
-        "proposition": "THE PHARMACODYNAMIC READOUT THE ASSIGNMENT ASKED ABOUT, WITH ITS EXACT SCOPE: it is pERK AND total ERK, in mouse epidermal keratinocytes of a constitutive whole-body null, by immunohistochemistry.",
-        "snippet": "keratinocytes expressed significantly reduced levels of pERK and total ERK1/2 protein",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID33195192_Chou2020_PMC.xml",
-        "anchor": "Results, 'Wwox Loss Reduces E-Cadherin, ERK, and p63 Expression in Keratinocytes'",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "THE PAPER'S OWN STATEMENT OF CONTEXT-DEPENDENCE, which is the general principle the dose question turns on and which this paper states more plainly than any other source in the batch.",
-        "snippet": "the control of cell growth and apoptosis by WWOX may depend on cell types, such as their tissue origin, differentiation state or differences between normal, benign and malignant cells",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID33195192_Chou2020_PMC.xml",
-        "anchor": "Discussion, paragraph on pleiotropic functions",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "A SECOND, INDEPENDENT INSTANCE OF RAISED WWOX DOING THE OPPOSITE OF THE TUMOUR-SUPPRESSOR EXPECTATION -- reported here as a citation to Nowakowska 2014, NOT measured by these authors. It is carried as a pointer to an unread source, not as a datum.",
-        "snippet": "in low-grade invasive HT29 colon adenocarcinoma cells, increased WWOX expression promotes cell proliferation but inhibits apoptosis",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID33195192_Chou2020_PMC.xml",
-        "anchor": "Discussion, same paragraph, citing Nowakowska et al. 2014",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "AND THE AUTHORS DRAW THE TWO-SIDED CONCLUSION EXPLICITLY. Written in 2020, independently of the 2026 preprint, it is the same proposition: the quantity matters in both directions.",
-        "snippet": "A certain amount of WWOX expression may be necessary for maintaining normal physiological functions in cells.",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID33195192_Chou2020_PMC.xml",
-        "anchor": "Discussion, paragraph on pleiotropic functions, sentence following the cell-type dependence sentence",
-        "panel_text_relation": "text_only"
-      }
-    ]
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not run here by design: the producer of a reading must not be its verifier. The triples are handed to the blind audit through the commit candidates' LOCATOR TRIPLES FOR BLIND AUDIT sections."
   }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 103,
+  "publications_on_gene": 30,
+  "counts_measured": "PubMed esearch 2026-10-02: 'Hsu LJ[au]' 103, 'Hsu LJ[au] AND WWOX' 30. The unqualified count is inflated by author-name ambiguity and is not used for weighting.",
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": true,
+  "weighting": "Hsu and Chang at National Cheng Kung University — one of the two founding WWOX laboratories, working on their own knockout line. Primary for the gene; the disease studied here is skin homeostasis, not WWOX-DEE. NOT INDEPENDENT of PMID 37897534 in this wave: same senior author, same mouse line.",
+  "note": "Li-Jin Hsu and Nan-Shan Chang, National Cheng Kung University -- one of the two founding WWOX laboratories, and the same senior author as PMID 37897534 in this wave. These two records are NOT independent of each other. The Wwox knockout line is the group's own."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "Hsu LJ[au] AND WWOX",
+    "route": "PubMed esearch 2026-10-02",
+    "count": 30
+   }
+  ],
+  "note": "High WWOX density and high measurement density: knockout mice with a heterozygous arm carried throughout, primary keratinocytes, HaCaT knockdown, histology, TEM, flow cytometry, corneometry and fibre-optic thermometry. 323 WWOX/Wwox mentions in the JATS."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 75,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "<ref> elements counted in the JATS: 75. Not classified by gene-directedness.",
+  "resolved": [],
+  "queued": [],
+  "note": "ONE HOP QUEUED BY NAME: Nowakowska et al. 2014 (HT29 colon adenocarcinoma, raised WWOX increasing proliferation). It is the second independent instance of added WWOX doing the opposite of the tumour-suppressor expectation, and it is carried here only as this paper's citation of it."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Is there an existing pharmacodynamic-marker candidate for WWOX, and would pERK qualify under section 13?",
+  "hits": 0,
+  "finding": "No candidate exists, and pERK does not qualify as a disease biomarker: it is a Tier 2-shaped readout by position in the pathway but it reports hundreds of upstream inputs, it was measured here by immunohistochemistry in mouse skin of a constitutive null, and the direction (reduced) is the ordinary consequence of reduced proliferation. Recorded as a rejected candidate with its reason."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-02",
+  "route": "PubMed esummary / get_article_metadata for 33195192",
+  "result": "No retraction, no expression of concern, no erratum. Article type 'Journal Article'.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [
+    {
+     "citing_relation": "citation only. Fabbri 2005 is cited once, in the Discussion, inside a list of papers supporting the sentence that WWOX overexpression suppresses growth in malignant cells. It supplies no reagent, no method and no data to PMID 33195192, and nothing this reading carries from PMID 33195192 depends on it. ALREADY HELD BY THE MODEL: the same source is PAPER 082, status background_only, Integrity status PUBLICATION_INTEGRITY_HOLD, deliberately linked to no claim; the expression of concern (PMID 28373548) is narrow in scope -- one beta-actin panel in Figure 1B -- and is not a retraction. This screen rediscovered independently what the registry already records, and changes nothing.",
+     "doi": "10.1073/pnas.0505485102",
+     "nature": "Expression of concern",
+     "reason_verbatim": "Concerns/Issues about Data;Duplication of/in Image;Error in Image;Investigation by Company/Institution;Original Data and/or Images not Provided and/or not Available;",
+     "retraction_date": "4/3/2017 0:00",
+     "retraction_pmid": "28373548",
+     "verdict": "FLAGGED_EXPRESSION_OF_CONCERN"
+    }
+   ],
+   "noted": [],
+   "paper_verdict": "FLAGGED_EXPRESSION_OF_CONCERN",
+   "reference_source": "network",
+   "references_declared": 75,
+   "references_screened": 74,
+   "references_with_doi": 74,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 22,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID33195192_Chou2020_PMC.xml",
+   "sha256": "ef330947352977c26f7be0eb422682c065cd986709e8f5bfa52cc301872b15cd",
+   "kind": "article_text",
+   "note": "Europe PMC JATS for PMC7652735, 168,547 bytes. CC BY 4.0.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7652735/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-02",
+    "derived": false,
+    "result_sha256": "ef330947352977c26f7be0eb422682c065cd986709e8f5bfa52cc301872b15cd"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID33195192_Chou2020_supplement/Data_Sheet_1.PDF",
+   "sha256": "9100889c1239f3c97c67ade6d7c008de0830bd8a523e48cf1f50edfd3aaa9028",
+   "kind": "supplement_text"
+  },
+  {
+   "path": "files/fulltext/PMID33195192_Chou2020_supplement/Image_1.JPEG",
+   "sha256": "b0a2b518fe5991ebf478272d83bedc065f7786a60d26c863797167b2ca516345",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID33195192_Chou2020_supplement/Image_10.JPEG",
+   "sha256": "82cd113a54f666cef3534a168570ce1c15b0524a3d06f831691d85699e923c68",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID33195192_Chou2020_supplement/Image_2.JPEG",
+   "sha256": "e39cf38a23618d88229c01527bf6460f926faf9c675099042978aeea47ada240",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID33195192_Chou2020_supplement/Image_3.JPEG",
+   "sha256": "3ce525d7809057bb8d578877eb7a029300a00c5289cf8fe94869ffa7216d8bf6",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID33195192_Chou2020_supplement/Image_4.JPEG",
+   "sha256": "6cd27214182cb60f5f4fecfa3c2579f8097bcc3cdcff3e05ec60e664bbf5733d",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID33195192_Chou2020_supplement/Image_5.JPEG",
+   "sha256": "e088ee98fe475de0589a7c6e63b9465afaae627af39a120c864fb432acd50b6f",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID33195192_Chou2020_supplement/Image_6.JPEG",
+   "sha256": "aa1198f921a7994ed7afbbdcbe0787174365900762abb5dba838c6af0ef7c57f",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID33195192_Chou2020_supplement/Image_7.JPEG",
+   "sha256": "e66364c5f3ac17c6ae58255b9b6da73b3fc6243032dd6695ec2bf67c03bb1c38",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID33195192_Chou2020_supplement/Image_8.JPEG",
+   "sha256": "fa0a41288612aa8f451f39c8bf995f2526749c2b646fe85a326fa556d8330bcf",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID33195192_Chou2020_supplement/Image_9.JPEG",
+   "sha256": "dd4ff8d31065345c24e8798ca51c5c1d63722355d1da3c2866b4c2f7026782ae",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID33195192_Chou2020_supplement/fcell-08-558432-g001.jpg",
+   "sha256": "8c83577415b7d2cdf51a64bd0f60c3b5b7c87f68fa80caf341d82184f3e31f78",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID33195192_Chou2020_supplement/fcell-08-558432-g002.jpg",
+   "sha256": "eda5545d76e989e1b825ae3f9104cae4e5ce36c884a72ecc87850265aab254e2",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID33195192_Chou2020_supplement/fcell-08-558432-g003.jpg",
+   "sha256": "11559bb6cdeb37a421d0d2b9f1485c1efb57d7777949d45cef5a81f1f408bb8d",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID33195192_Chou2020_supplement/fcell-08-558432-g004.jpg",
+   "sha256": "3d2222a2efea0875670e0c72b5e4cd293f426ef4d10b8042f55cff230e50987c",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID33195192_Chou2020_supplement/fcell-08-558432-g005.jpg",
+   "sha256": "a52bb91e2a10c30d396ee42ceb22817e16dd83195a771aa4640e96e5d77465b5",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID33195192_Chou2020_supplement/fcell-08-558432-g006.jpg",
+   "sha256": "3864f577dab79bf722affb59560d592cd1bb2586f1b36700c65d17d77bccdd96",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID33195192_Chou2020_supplement/fcell-08-558432-g007.jpg",
+   "sha256": "7719630ce96cbaee5dbdde4081cca779329fcf7c053b4a82dbf986d9b3992f96",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID33195192_Chou2020_supplement/fcell-08-558432-g008.jpg",
+   "sha256": "aaa29dfd924b47092ab45cdbfa24dd15e7a8d2dc0039d867d3c0cee0f59b5a58",
+   "kind": "figure"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC JATS, 168,547 bytes; Abstract, Introduction, Materials and Methods, Results, Discussion, Conclusion and all figure legends present in the body. CC BY 4.0.",
+  "abstract_anchoring_waived": "Stated per entry. Where an entry draws on the abstract it says so in its anchor; every entry is matched against the declared artifact as a whole.",
+  "note": "COVERAGE: whole article read, including Materials and Methods, every figure legend with its n and its test, and the Discussion. NOT INSPECTED: Supplementary Figures S1-S10, which are a separate file not fetched -- so the transepidermal water loss (S1), loricrin (S2), cell-cycle (S3), TUNEL (S4), fur length (S5), embryonic hair follicles (S6), CD34 (S7), E-cadherin (S8), total ERK1/2 (S9) and dermal collagen (S10) results are carried only by the authors' running text and not by their panels. THE TOTAL-ERK RESULT IS ONE OF THESE: the running text asserts reduced total ERK1/2 and points to Supplementary Figure S9, whose bytes were not read.",
+  "entries": [
+   {
+    "proposition": "THE PHARMACODYNAMIC READOUT THE ASSIGNMENT ASKED ABOUT, WITH ITS EXACT SCOPE: it is pERK AND total ERK, in mouse epidermal keratinocytes of a constitutive whole-body null, by immunohistochemistry.",
+    "snippet": "keratinocytes expressed significantly reduced levels of pERK and total ERK1/2 protein",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33195192_Chou2020_PMC.xml",
+    "anchor": "Results, 'Wwox Loss Reduces E-Cadherin, ERK, and p63 Expression in Keratinocytes'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE PAPER'S OWN STATEMENT OF CONTEXT-DEPENDENCE, which is the general principle the dose question turns on and which this paper states more plainly than any other source in the batch.",
+    "snippet": "the control of cell growth and apoptosis by WWOX may depend on cell types, such as their tissue origin, differentiation state or differences between normal, benign and malignant cells",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33195192_Chou2020_PMC.xml",
+    "anchor": "Discussion, paragraph on pleiotropic functions",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A SECOND, INDEPENDENT INSTANCE OF RAISED WWOX DOING THE OPPOSITE OF THE TUMOUR-SUPPRESSOR EXPECTATION -- reported here as a citation to Nowakowska 2014, NOT measured by these authors. It is carried as a pointer to an unread source, not as a datum.",
+    "snippet": "in low-grade invasive HT29 colon adenocarcinoma cells, increased WWOX expression promotes cell proliferation but inhibits apoptosis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33195192_Chou2020_PMC.xml",
+    "anchor": "Discussion, same paragraph, citing Nowakowska et al. 2014",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "AND THE AUTHORS DRAW THE TWO-SIDED CONCLUSION EXPLICITLY. Written in 2020, independently of the 2026 preprint, it is the same proposition: the quantity matters in both directions.",
+    "snippet": "A certain amount of WWOX expression may be necessary for maintaining normal physiological functions in cells.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33195192_Chou2020_PMC.xml",
+    "anchor": "Discussion, paragraph on pleiotropic functions, sentence following the cell-type dependence sentence",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "This paper performs no overexpression experiment of its own: the raised-WWOX proposition it is cited for is a statement about other people's experiments.",
+    "snippet": "In contrast, in low-grade invasive HT29 colon adenocarcinoma cells, increased WWOX expression promotes cell proliferation but inhibits apoptosis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33195192_Chou2020_PMC.xml",
+    "anchor": "Discussion, paragraph on pleiotropic functions - the string transfect occurs zero times in the article and both occurrences of overexpress are inside citations",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought"
+   },
+   {
+    "proposition": "The epidermal barrier is not measurably impaired even in the homozygous null, and the exact P value is printed on the panel and in no legend.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Figure 1A plots transepidermal water loss in g/h m2 at P21 for Wwox+/+, Wwox+/- and Wwox-/- mice with the string P=0.3894 printed above the plot; the group means read approximately 6.2, 5.9 and 4.3 and the point counts are 8, 9 and 5. The figure legend states the test but no P value.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID33195192_Chou2020_supplement/Image_1.JPEG",
+    "anchor": "Supplementary Figure 1, panel A; supplementary image inspected at native resolution",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "Hair-follicle development up to E18.5 is a clean null across all three genotypes, with both exact P values printed on the panels and in no legend.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Figure 6 panel A plots hair-follicle number per mm at E16.5 for Wwox+/+, Wwox+/- and Wwox-/- with the string P=0.56 printed above it, and panel B plots hair-follicle length in micrometres at E18.5 for the same three genotypes with the string P=0.62 printed above it. The legend gives neither value.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID33195192_Chou2020_supplement/Image_6.JPEG",
+    "anchor": "Supplementary Figure 6, panels A and B; supplementary image inspected at native resolution",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The heterozygote is indistinguishable from wild type on the quantified apoptosis endpoint while the homozygous null is raised, and the missing bracket is a tested null under the legend's all-pairwise test.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Figure 4B plots TUNEL-positive epidermal cells as a percentage at P21 for Wwox+/+, Wwox+/- and Wwox-/- at approximately 0.8, 0.85 and 1.8 with five points per group. Significance brackets are drawn for Wwox+/+ versus Wwox-/- marked * and for Wwox+/- versus Wwox-/- marked *, and no bracket is drawn between Wwox+/+ and Wwox+/-. The legend states one-way ANOVA and post hoc Tukey tests with n=5.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID33195192_Chou2020_supplement/Image_4.JPEG",
+    "anchor": "Supplementary Figure 4, panel B; supplementary image inspected at native resolution",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found"
+   }
+  ]
+ },
+ "reading_history": [
+  {
+   "receipt": "FTR-20261004-33195192-02",
+   "reader": "scientist (Scientist C), intake wave 12 2026-10-04 (RE-READ)",
+   "context_policy": "SOURCE_FIRST",
+   "what_changed": "Acquired and declared the entire figure and supplement package from the Europe PMC supplementaryFiles archive for PMC7652735 (eight main-figure JPEGs, the supplementary legend PDF and ten supplementary images, each with full sha256) where the manifest previously declared the article XML alone, and appended entries 5-8: the overexpression census that answers this wave's question, and three supplementary quantification panels carrying exact P values that appear in no legend. No existing entry was altered.",
+   "outputs": [
+    "disease-models/wwox/research/fulltext_dossiers/PMID33195192.md",
+    "disease-models/wwox/research/deepdive_manifests/PMID33195192.json",
+    "disease-models/wwox/research/intake_wave_20261004w12_C.md"
+   ]
+  }
+ ]
 }
