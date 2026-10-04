@@ -518,5 +518,18 @@
     "found_or_sought": "sought — the HIF1α panel behind DL-MECH-020"
    }
   ]
- }
+ },
+ "reading_history": [
+  {
+   "receipt": "FTR-20261004-35328751-03",
+   "reader": "scientist (Scientist C), intake wave 13 2026-10-04",
+   "context_policy": "QUESTION_DRIVEN",
+   "what_changed": "Declared twelve figure JPEGs, the supplementary ZIP (previously unavailable), its captions PDF and derived text; appended five entries and re-pointed none of the prior ones. Figure 5: lactate up in all four conditions, PDH and CS unchanged by WWOX loss, PDH mislabelled as PDK in one Results sentence. Figure 6a: the cytoplasmic HIF1alpha decrease is condition-specific. The manifest receipt field stays on the producing reading.",
+   "outputs": [
+    "disease-models/wwox/research/fulltext_dossiers/PMID35328751.md",
+    "disease-models/wwox/research/intake_wave_20261004w13_C.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261004W13-C-HIF1A-PANELS-01.md"
+   ]
+  }
+ ]
 }
