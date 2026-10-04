@@ -65,3 +65,16 @@ Op for every row: `append` (new record).
 *(None. This candidate asserts no fact about any source: it creates registry presence. The facts it
 summarises are audited through `CC-20261003W6-C-DRG-ATTRIBUTION-01` and
 `CC-20261003W6-C-IMMUNOSUPPRESSION-LIMIT-01`.)*
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261003_005` · 2026-10-03 · ACTOR_ID `scientist` (Scientist J, batch integrator), under the operator's standing authorisation *«procedi sempre»*
+**Operations applied:** 12
+**Change class as judged by the batch:** MINOR (§7) — every target's live `Status` was read from the registry before judging.
+
+Its op specification was **prose**, so the integrator authored the executable ops: `PAPER 183`–`188` and `LIT-0476`–`0481`, carrying the candidate's own figures, transfer limits and off-WWOX measurements. Titles, author lists, journals, volumes and pages came from **PubMed article metadata**, not from invention, and two of the candidate's prose fields were corrected against it: PMID 42422766's title is *Intra-CNS AAV9-delivery yields species and route of administration differences…* (not *AAV9-GBA1 delivery*), and PMID 42157962 is 2025, not 2026. `Status` is the bare vocabulary value `processed` with the qualifier on its own `Status note` line, and `partial full text` travels beside every `partial_fulltext_read`.
+
+**Nothing above this line was rewritten.**

@@ -21,23 +21,23 @@ the whole known corpus, not the part already processed.
 
 | Depth | Records | Share | What it means |
 |---|---:|---:|---|
-| **Full text depth** | 130 | 24% | complete receipt or legacy registry declaration; trace split below |
-| Partial full text | 73 | 14% | some sections read; explicitly declared incomplete |
+| **Full text depth** | 133 | 24% | complete receipt or legacy registry declaration; trace split below |
+| Partial full text | 87 | 16% | some sections read; explicitly declared incomplete |
 | Abstract / screened | 6 | 1% | classified from metadata and abstract; no full text read |
-| Catalogued only | 320 | 59% | known, deduplicated, never analytically processed — **the debt** |
+| Catalogued only | 321 | 58% | known, deduplicated, never analytically processed — **the debt** |
 | Filtered / superseded | 9 | 2% | explicitly set aside, with the reason preserved |
 
-- **172** promoted `PAPER` records · **366** `CORPUS` placeholders
-- **456** lifecycle entries in the literature tracking log
-- **459** unique PMIDs known across the registries
+- **190** promoted `PAPER` records · **366** `CORPUS` placeholders
+- **474** lifecycle entries in the literature tracking log
+- **478** unique PMIDs known across the registries
 
 ## Receipt trace
 
 - Authoritative ledger: `disease-models/wwox/registries/fulltext_read_receipts.jsonl`
 - **375** append-only events: **350** contemporaneous · **22** conservative legacy reconstructions · **1** invalidation(s) · **2** identity correction(s)
-- **126** registry records have a persisted `complete_fulltext_read` receipt
+- **129** registry records have a persisted `complete_fulltext_read` receipt
 - **4** records still rely on a historical registry full-text declaration without a surviving complete coverage receipt
-- **39** receipt event(s) do not yet map to a registry record
+- **22** receipt event(s) do not yet map to a registry record
 
 A full-text marker in the registry is preserved as historical state, but it is not
 retroactively converted into a complete receipt. Only a contemporaneous or adequately
