@@ -43,7 +43,7 @@ edition: public
 ## 2. DISEASE-MODEL (WORKING-MODEL) VERSION
 
 ```yaml
-working_model_version: WM_v7.15
+working_model_version: WM_v7.16
 working_model_file: disease-models/wwox/registries/working_model_current.md
 narrative_view: disease-models/wwox/disease_model.md
 notes: "Canonical disease-level working model derived from public literature; disease_model.md is its narrative reader-facing view. The private individual-level record is not part of this edition."
@@ -106,12 +106,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20261004_002
+last_batch_commit_id: BATCH_20261004_003
 last_batch_commit_date: 2026-10-04
 last_batch_commit_type: MANUAL
-commit_candidates_propagated: 11
-target_wm_version: WM_v7.15
-trigger: MANUAL (operator-dispatched integration of intake wave 8, groups A/B/C; the backlog threshold of 5 was also met. The batch additionally re-measured the five-candidate residue that had held the backlog counter at its trigger for seven batches: two of its three artefact blockers were acquired at zero spend and the third, a Mirror-reserved classification, is named as the one blocker no Scientist session can clear)
+commit_candidates_propagated: 17
+target_wm_version: WM_v7.16
+trigger: MANUAL (operator-dispatched integration of intake wave 9, groups A/B/C, together with the four mirror repairs of BATCH_20261004_001; the backlog threshold of 5 was also met. Two reading debts were closed by measurement rather than by acquisition, one of them retiring as not printed; the valproate direction debt is explicitly NOT settled and its fifth primary remains paywalled and unread. The six group-B artefacts were absent from files/fulltext and were restored by exact SHA-256 match from this session's scratchpad at zero spend before any bibliographic identity was measured)
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -125,7 +125,7 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20261004_BATCH_20261004_002
+last_lint_id: LINT_20261004_BATCH_20261004_003
 last_lint_date: 2026-10-04
 last_lint_result: WARN
 ```
@@ -212,8 +212,8 @@ to make a suite green — the only way to move it is to have made the change you
 
 ```yaml
 growth_anchor_ledger: framework/state/growth_anchors.jsonl
-growth_anchor_events: 44
-growth_anchor_head: c58b4d1ac9234c827c8341a95f7a8a2a297e91db6520cd43907ab8aaf89ee380
+growth_anchor_events: 45
+growth_anchor_head: 5ce196da223d93004a80f74668cdb3ebb30209d42813f8ae9b506c4a39d1a6e6
 ```
 
 ```bash

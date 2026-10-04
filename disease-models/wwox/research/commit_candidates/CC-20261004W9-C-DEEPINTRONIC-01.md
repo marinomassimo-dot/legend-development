@@ -92,3 +92,15 @@ cohort paper were verified by the manifest validator.
 - [PMID 40183601, artefact `files/fulltext/PMID40183601_Henry2025_PMC.xml`] (WWOX accounts for four of the fifty-one solved infantile epileptic spasms cases in this cohort. | Infantile epileptic spasms syndrome 51/132 (38.6%) STXBP1 (6), CDKL5 (4), WWOX (4) | Table 1)
 - [preprint doi 10.64898/2026.01.16.26344264, artefact `files/fulltext/PPR1269651_vanderSanden2026_medRxiv.xml`] (The preprint states the splicing effect was confirmed by RT-PCR, with no data, method or tissue given. | The alternative splicing effect of the variant was later confirmed using RT-PCR. | Results, WWOX section)
 - [preprint doi 10.64898/2026.01.16.26344264, artefact `files/fulltext/PPR1269651_vanderSanden2026_medRxiv.xml`] (In the preprint the donor-strengthening effect is a prediction, not a measurement. | predicted to strengthen a cryptic splice donor site | Results, WWOX section)
+
+## BATCH DISPOSITION — `BATCH_20261004_003` (2026-10-04, ACTOR_ID `scientist`, Scientist M), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** `PROPAGATED` (MINOR, WM_v7.15 → WM_v7.16).
+
+**Surfaces written:** research_lines_current.md · full_text_queue_current.md
+
+One new research line, **`RL-C-20261004w9c1`**, and one new queue record, **`FT-194`** (declared provisional against *«FT-177 is the highest seen»*; re-measured, the ceiling was **FT-193**). **Blind locator audit: 5 triples, 5/5 SUPPORTED, 0 NOT_SUPPORTED, 0 UNVERIFIABLE**, and it confirmed the load-bearing negative: **no quantitative measure of the aberrant transcript is printed in either source**, and no frame-position, NMD, protein or tissue determination either. Two amendments at source. (1) 🔴 *«733 families»* is the **abstract's** figure only; the title, § 2.1 and § 3.1 print **733 individuals from 710 families**, and the landed record uses the body count and names the discrepancy. (2) The candidate's *«Two distinct cases; no overlap found»* was softened to **no overlap established and none excludable from the printed data alone** — the printed genotypes differ, which is all the artefacts support. The word *carrier* is labelled as this repository's inference, since the table's field is *inheritance*; **no parent-of-origin string is reproduced**. The preprint is registered but **never promoted**.
+
+**Not medical advice.**

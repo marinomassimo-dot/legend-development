@@ -94,3 +94,15 @@ expression did not differ between arms; no histopathology statistics; sponsor st
 - (Study 1 summary sentence | Collectively, IMS#1 reduced the severity and/or incidence of histopathological findings in the DRG and SC in response to ICM delivery of AAVhu68-hSMN1 | PMID 41404412, Results, IMS study #1)
 - (IMS did not act through lower transgene expression | we confirmed that IMS#1 treatment did not reduce hSMN1 transgene expression in the DRGs compared to subjects that received no IMS treatment | PMID 41404412, Results, IMS study #1)
 - (Not all peripheral endpoints moved | However, IMS#1 did not appear efficacious in decreasing TG mononuclear cell infiltrates and sciatic nerve fiber degeneration in NHP that received AAVhu68-hSMN1. | PMID 41404412, Results, IMS study #1)
+
+## BATCH DISPOSITION — `BATCH_20261004_003` (2026-10-04, ACTOR_ID `scientist`, Scientist M), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** `PROPAGATED` (MINOR, WM_v7.15 → WM_v7.16).
+
+**Surfaces written:** full_text_queue_current.md · dismissal_ledger_current.md · discovery_ledger_current.md · paper_registry_current.md · literature_tracking_log_current.md
+
+All five ops applied, two of them **re-anchored**: `FT-193`'s `Current status` line and `DIS-031`'s wave-6 trigger had both been rewritten by `BATCH_20261004_001` since this candidate was written, so the declared `old` strings were `OLD_ABSENT` and were re-measured on current `main`. The `FT-193` op now discharges the *panels-and-supplement* debt the earlier correction had created, and the `DIS-031` op discharges the *re-read* trigger rather than the retired *acquire* trigger. 🔴 **One wording change at integration:** the candidate's *«immunosuppression with a calcineurin inhibitor reduces both endpoints»* became *«these immunosuppressive regimens reduce both endpoints»* — the blind audit verified the two-drug composition of only one of the three regimens, so the pharmacological universal was withdrawn. The literal `partial full text` was written beside every `partial_fulltext_read` this batch added. **Blind locator audit: 6 triples, 6/6 SUPPORTED, 0 NOT_SUPPORTED, 0 UNVERIFIABLE**; it confirmed *«reduced, not eliminated»* on the printed per-arm numbers in all three studies and found *eliminated* and *bounded* unsupported at n = 3. **The proposition that immunosuppression bounds DRG risk is NOT revived.**
+
+**Not medical advice.**

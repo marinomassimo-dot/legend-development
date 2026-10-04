@@ -89,3 +89,15 @@ read at native resolution, not a string match.
 - [PMID 42738875, artefact `files/fulltext/PMID42738875_Tang2026_PMC.xml`] (The text states a sex difference for WWOX within cognition group. | and WWOX (WW domain-containing oxidoreductase) were higher in men than in women for the same cognition group | Results 3.4)
 - [PMID 42738875, artefact `files/figures/PMID42738875/cells-15-01581-g005b.webp`] (PANEL: the WWOX panels carry no sexes-combined significance bracket and exactly one bracket in the sex-split panel, between two male groups. | [figure attestation - pixels cannot be quote-matched] Figure 5B, WWOX panels: upper panel shows no significance bracket; lower panel shows one bracket with a single asterisk spanning two male groups; all group means lie between about -0.25 and 0.0 NPX. | Figure 5B, WWOX panels)
 - [PMID 42738875, artefact `files/fulltext/PMID42738875_Tang2026_PMC.xml`] (The authors call the study exploratory and not confirmatory for any single biomarker. | this exploratory study was not designed to provide confirmatory evidence for any single biomarker | Discussion, limitations)
+
+## BATCH DISPOSITION — `BATCH_20261004_003` (2026-10-04, ACTOR_ID `scientist`, Scientist M), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** `PROPAGATED` (MINOR, WM_v7.15 → WM_v7.16).
+
+**Surfaces written:** research_lines_current.md
+
+One new research line, **`RL-C-20261004w9c2`**. `LEGEND_CORE` § 13 was read before classifying: the read-out is **Tier 1 by kind** — WWOX protein itself, in an immunocaptured vesicle fraction — and **not «validated»**, because § 13 forbids the word without direct sensitivity/specificity evidence in the disease population and **no sensitivity and no specificity are printed for WWOX in any population**. It is **not an endpoint**. The record lands in the research layer, **not** in `biomarker_candidates_current.md` and **not** in `clinical_monitoring_endpoints_current.md`: a Tier-1 modality with no validation and no disease-population measurement is a lead, and the five-item specification it would have to satisfy is recorded with it so the gap is legible. **Blind locator audit: 6 triples, 6/6 SUPPORTED, 0 NOT_SUPPORTED, 0 UNVERIFIABLE**, with the figure attestation confirmed on the **rendered** panel. The audit's one defect — an anchor naming subsection 3.4 where the sentence is printed under 3.5 — is in the candidate's triple list and reaches no landed record.
+
+**Not medical advice.**
