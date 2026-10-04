@@ -123,6 +123,235 @@
     "derived": false,
     "result_sha256": "3610388f72848bd63c6084576b9d243589ffb44e0ef9169691b515a09b5b9de8"
    }
+  },
+  {
+   "path": "files/figures/PMID35328751/ijms-23-03326-g001.jpg",
+   "sha256": "f8f0c4d5ccdac2e8e63df88229e0d1b043fa77f7dc38e27bee3e7d5b0cad9d84",
+   "kind": "figure",
+   "note": "Figure 1, acquired and fingerprinted in wave 13; caption read, not inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8955937.1/ijms-23-03326-g001.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": false,
+    "result_sha256": "f8f0c4d5ccdac2e8e63df88229e0d1b043fa77f7dc38e27bee3e7d5b0cad9d84"
+   }
+  },
+  {
+   "path": "files/figures/PMID35328751/ijms-23-03326-g002.jpg",
+   "sha256": "c4b722bf5d60c305837ae2775f0de74c50e1298d664f60d1153e3ea7e2dc24cc",
+   "kind": "figure",
+   "note": "Figure 2, acquired and fingerprinted in wave 13; caption read, not inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8955937.1/ijms-23-03326-g002.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": false,
+    "result_sha256": "c4b722bf5d60c305837ae2775f0de74c50e1298d664f60d1153e3ea7e2dc24cc"
+   }
+  },
+  {
+   "path": "files/figures/PMID35328751/ijms-23-03326-g003.jpg",
+   "sha256": "a59f1ae132e14fe0d451d465ba542543551c6cd5bbab8befc4a0e29bd01a2226",
+   "kind": "figure",
+   "note": "Figure 3, acquired and fingerprinted in wave 13; caption read, not inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8955937.1/ijms-23-03326-g003.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": false,
+    "result_sha256": "a59f1ae132e14fe0d451d465ba542543551c6cd5bbab8befc4a0e29bd01a2226"
+   }
+  },
+  {
+   "path": "files/figures/PMID35328751/ijms-23-03326-g004.jpg",
+   "sha256": "615370f8c1d4f52e23cfc0830d66903a69eeb142a16900f7a6d4bfbb0018a3ac",
+   "kind": "figure",
+   "note": "Figure 4, acquired and fingerprinted in wave 13; caption read, not inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8955937.1/ijms-23-03326-g004.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": false,
+    "result_sha256": "615370f8c1d4f52e23cfc0830d66903a69eeb142a16900f7a6d4bfbb0018a3ac"
+   }
+  },
+  {
+   "path": "files/figures/PMID35328751/ijms-23-03326-g005.jpg",
+   "sha256": "64fccc7d75b70b63d71c6a223c02b2beec15425c03863eae88c5bd7e6e69dc24",
+   "kind": "figure",
+   "note": "Figure 5, inspected as an image in wave 13.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8955937.1/ijms-23-03326-g005.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": false,
+    "result_sha256": "64fccc7d75b70b63d71c6a223c02b2beec15425c03863eae88c5bd7e6e69dc24"
+   }
+  },
+  {
+   "path": "files/figures/PMID35328751/ijms-23-03326-g006.jpg",
+   "sha256": "71b6a4567a94770e10b6b33b0a6c94d8ea143bf85ee89dc43c1ac554ef3b7d51",
+   "kind": "figure",
+   "note": "Figure 6, inspected as an image in wave 13.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8955937.1/ijms-23-03326-g006.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": false,
+    "result_sha256": "71b6a4567a94770e10b6b33b0a6c94d8ea143bf85ee89dc43c1ac554ef3b7d51"
+   }
+  },
+  {
+   "path": "files/figures/PMID35328751/ijms-23-03326-g007.jpg",
+   "sha256": "ed8d1ad6d891deb759be0962549c5f1b7ac60f95bd8e4349a56bc7e3d9ece23d",
+   "kind": "figure",
+   "note": "Figure 7, acquired and fingerprinted in wave 13; caption read, not inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8955937.1/ijms-23-03326-g007.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": false,
+    "result_sha256": "ed8d1ad6d891deb759be0962549c5f1b7ac60f95bd8e4349a56bc7e3d9ece23d"
+   }
+  },
+  {
+   "path": "files/figures/PMID35328751/ijms-23-03326-g008.jpg",
+   "sha256": "4ca5bd2ce823d7dee3c4a9ae52dfa5a27d35961013c7da0e9aca07d3e801711c",
+   "kind": "figure",
+   "note": "Figure 8, acquired and fingerprinted in wave 13; caption read, not inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8955937.1/ijms-23-03326-g008.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": false,
+    "result_sha256": "4ca5bd2ce823d7dee3c4a9ae52dfa5a27d35961013c7da0e9aca07d3e801711c"
+   }
+  },
+  {
+   "path": "files/figures/PMID35328751/ijms-23-03326-g009.jpg",
+   "sha256": "e23b2453b4c09b712a9f2b127a23332f79c707c74dd6627d31ea4ff5326ae20f",
+   "kind": "figure",
+   "note": "Figure 9, acquired and fingerprinted in wave 13; caption read, not inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8955937.1/ijms-23-03326-g009.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": false,
+    "result_sha256": "e23b2453b4c09b712a9f2b127a23332f79c707c74dd6627d31ea4ff5326ae20f"
+   }
+  },
+  {
+   "path": "files/figures/PMID35328751/ijms-23-03326-g010.jpg",
+   "sha256": "e7fc67f6e5c76a8fa912273a1a8c5db970776d3e18cee746a6c11b5af81f5e50",
+   "kind": "figure",
+   "note": "Figure 10, acquired and fingerprinted in wave 13; caption read, not inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8955937.1/ijms-23-03326-g010.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": false,
+    "result_sha256": "e7fc67f6e5c76a8fa912273a1a8c5db970776d3e18cee746a6c11b5af81f5e50"
+   }
+  },
+  {
+   "path": "files/figures/PMID35328751/ijms-23-03326-g011.jpg",
+   "sha256": "cae943a83622904ec7ae5acde2a820448513d12e6c600a348b9ec2307ccea242",
+   "kind": "figure",
+   "note": "Figure 11, acquired and fingerprinted in wave 13; caption read, not inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8955937.1/ijms-23-03326-g011.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": false,
+    "result_sha256": "cae943a83622904ec7ae5acde2a820448513d12e6c600a348b9ec2307ccea242"
+   }
+  },
+  {
+   "path": "files/figures/PMID35328751/ijms-23-03326-g012.jpg",
+   "sha256": "c4174abac3c86473fc817fbed1d144e6e9f8e4711acb81f06986cf41a6f76fe7",
+   "kind": "figure",
+   "note": "Figure 12, acquired and fingerprinted in wave 13; caption read, not inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8955937.1/ijms-23-03326-g012.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": false,
+    "result_sha256": "c4174abac3c86473fc817fbed1d144e6e9f8e4711acb81f06986cf41a6f76fe7"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID35328751_assets/ijms-23-03326-s001.zip",
+   "sha256": "95a53afba5db4eb2c08b77fec06ac49af6adf55c00c11486d45dd60c94e8048f",
+   "kind": "supplement_binary",
+   "note": "MDPI supplementary ZIP: Figures S1-S5, S6A, S6B, S6C (TIFF) and 'Supplementary figures captions.pdf'. Previously recorded as unavailable; acquired in wave 13 from the PMC OA bucket.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8955937.1/ijms-23-03326-s001.zip",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": false,
+    "result_sha256": "95a53afba5db4eb2c08b77fec06ac49af6adf55c00c11486d45dd60c94e8048f"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID35328751_assets/s001/Supplementary figures captions.pdf",
+   "sha256": "8e2cc7eda64662754f81674b7af2ecda73436fbd23c2b07be3fb8087502305f3",
+   "kind": "supplement_binary",
+   "note": "Captions of Figures S1-S6, extracted from the ZIP.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID35328751_assets/ijms-23-03326-s001.zip",
+    "extractor": {
+     "name": "python3 zipfile.extractall",
+     "version": "stdlib",
+     "call": "zipfile.ZipFile(zip).extractall('s001')",
+     "join": ""
+    },
+    "acquired_on": "2026-10-04"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID35328751_assets/s001/Supplementary_figures_captions_pdftotext.txt",
+   "sha256": "12e323e2371ab1f16f4fedddabe44c191cf2c52f7862f3c52b5d0fd58220db0e",
+   "kind": "supplement_text",
+   "note": "Derived text layer of the captions PDF. Lossless for the caption prose as far as checked; layout line breaks kept.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID35328751_assets/s001/Supplementary figures captions.pdf",
+    "extractor": {
+     "name": "pdftotext (poppler)",
+     "version": "24.02.0",
+     "call": "pdftotext -layout -nopgbrk 'Supplementary figures captions.pdf' Supplementary_figures_captions_pdftotext.txt",
+     "join": "\n"
+    },
+    "acquired_on": "2026-10-04"
+   }
   }
  ],
  "verbatim_locators": {
@@ -239,6 +468,54 @@
     "anchor": "Section 5 Conclusions, final sentence",
     "panel_text_relation": "text_only",
     "artifact": "files/fulltext/PMID35328751_Baryla2022_PMC.xml"
+   },
+   {
+    "proposition": "Figure 5 (knockout arm, hand readings): lactate is higher in the knockout in all four oxygen × glucose conditions (brackets **, ***, ***, **). Pyruvate dehydrogenase activity (5b) shows no knockout-versus-control bracket in any condition; its one bracket joins control normoxia normoglycemia to control normoxia hyperglycemia, a glucose effect. Citrate synthase (5e) carries no within-condition knockout bracket, and its y-axis spans only 1.05-1.25 U/mL. The oxidative arm is measured and unchanged by WWOX loss.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5, five bar charts (Hexokinase, Pyruvate dehydrogenase, Lactate dehydrogenase, Lactate, Citrate Synthase), white bars 1BR3N CONTR, black bars 1BR3N WWOX KO, four hypoxia × hyperglycemia conditions each.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID35328751/ijms-23-03326-g005.jpg",
+    "anchor": "Figure 5a-e, native JPEG",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "found_or_sought": "sought — the selection row asked whether the metabolic quantities exist in panels",
+    "contradicts": "entries[8]",
+    "contradicts_needle": "pyruvate dehydrogenase kinase (PDK)"
+   },
+   {
+    "proposition": "One Results sentence calls the Figure 5b activity 'pyruvate dehydrogenase kinase (PDK)'. The figure, its caption and Methods 4.10 all measure pyruvate dehydrogenase. No PDK activity or PDK protein is measured on any surface; PDK appears only as an mRNA (Figure 4, Figure S2).",
+    "snippet": "while the activities of pyruvate dehydrogenase kinase (PDK) and citrate synthase (CS) were not changed",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35328751_Baryla2022_PMC.xml",
+    "anchor": "Results, enzyme-activity section (Figure 5)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found while reconciling the Figure 5b panel title with the text"
+   },
+   {
+    "proposition": "The text reports the cytoplasmic HIF1α decrease in two of the four conditions only (normoxia normoglycemia 2-fold, hypoxia normoglycemia nearly 2-fold), and the same paragraph closes: 'One repetition is shown in the Figure 6.'",
+    "snippet": "the expression of HIF1α protein was significantly decreased in 1BR.3.N WWOX KO in comparison to CONTR in normoxia normoglycemia (2-fold; p < 0.01) and hypoxia normoglycemia (nearly 2-fold; p < 0.001) in cytoplasm fraction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35328751_Baryla2022_PMC.xml",
+    "anchor": "Results 2.6.1",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought — the HIF1α quantities behind DL-MECH-020"
+   },
+   {
+    "proposition": "The supplement (Figures S1-S6) is entirely the overexpression arm: HRE reporter and glucose uptake (S1), qPCR (S2), enzyme activities and lactate (S3), fractionated western blots (S4), glycolytic proteins (S5) and immunocytochemistry (S6). It holds no respiration, ROS, ATP or PDK-protein measurement. The TIFF panels were not rendered; the captions were read.",
+    "snippet": "Figure S4: WWOX and HIF1α western blot analysis of cytoplasmic (a) and nuclear (b) fractions of WT",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID35328751_assets/s001/Supplementary_figures_captions_pdftotext.txt",
+    "anchor": "Supplementary figures captions, Figure S4",
+    "found_or_sought": "sought — FIND-X over the supplement"
+   },
+   {
+    "proposition": "Figure 6a (cytoplasmic fraction, hand readings of fold change): knockout HIF1α about 0.55 versus 1.0 (normoxia normoglycemia) and about 1.25 versus 2.05 (hypoxia normoglycemia) — the two decreases the text reports — about equal in normoxia hyperglycemia (about 0.9 versus 0.9), and higher in hypoxia hyperglycemia (about 2.45 versus 2.1). Nuclear panel 6b has wide error bars; the HIF1α bands are faint. The decrease is condition-specific, not general.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6a-b, western blots of cytoplasmic and nuclear fractions (NN, NH, HN, HH for CONTR and WWOX KO) with bar charts of WWOX, HIF1α and WWOX/HIF1α fold change.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID35328751/ijms-23-03326-g006.jpg",
+    "anchor": "Figure 6a-b, native JPEG",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[9]",
+    "qualifies_needle": "normoxia normoglycemia (2-fold; p < 0.01)",
+    "found_or_sought": "sought — the HIF1α panel behind DL-MECH-020"
    }
   ]
  }
