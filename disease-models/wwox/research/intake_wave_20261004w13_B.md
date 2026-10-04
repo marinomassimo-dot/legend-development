@@ -25,3 +25,9 @@ Owed: figures `captions_only`, supplement `captions_only`. Read now: Figures 1-3
 - Immune: Figure 2 shows plasma anti-IDUA titre surging after immunosuppression withdrawal; no ganglion-level immune readout, so the Group B question (immune-mediated and preventable) is untouched. Candidate `CC-20261004W13-B-WANG-DRG-01` (MINOR).
 - Not re-derived: 16 of 17 first-year AEs attributed to immunosuppression.
 - Owed after this: Video S1 and graphical abstract (no landed record rests on them).
+
+## PMID 41751597 (Rioux 2026, head-to-head AAV9 biodistribution in neonatal mice) - WWOX zero (earned null)
+Owed: figures `captions_only`. Read now: all 17 figures as pixels (13 newly declared), Tables A2 and A3 cell-wise. Manifest 37 locators, 19 artefacts (PASS).
+- **PAPER 213 "DRG histology of the survivors was not reported" - survives all surfaces.** The normal-DRG finding is 8 of 8 euthanised animals (all 5 x 10^11 vg; 7 at P5, 1 at P10; none at P1), a sciatic nerve was collected and has no reported result, and the survivors' ganglion panels are GFP immunohistochemistry only. This bears on DIS-031 only as the unchanged negative it already rests on. Candidate `CC-20261004W13-B-RIOUX-DRG-01` (MINOR).
+- No immunosuppression and no antibody assay are described anywhere, so no immune-mediation statement is possible from this source.
+- Owed after this: reference content (no landed record rests on it).
