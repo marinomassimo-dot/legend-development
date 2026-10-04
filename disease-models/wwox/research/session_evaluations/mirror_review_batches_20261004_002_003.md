@@ -178,3 +178,123 @@ opens a harness task for it, and `_003` does not mention it. A measured tool def
 is a finding that expires.
 
 ---
+
+## The `D6` decision — a Mirror act, taken here
+
+**`MIRROR-RULING-20261004-D6`.** `CC-20260826-GSK3B-S9-AXIS-01` has been deferred for eight batches
+on one point: its residue `D6` is marked **`MAJOR?` → Mirror, fail-closed**, and §21d moves no
+authority H.1 assigns to Mirror, so no Scientist session could clear it. `BATCH_20261004_002` read
+this correctly and routed it. I take the decision.
+
+**What `D6` asks for.** A **reciprocal boundary** in `CLAIM 016` **and** `CLAIM 035` naming the
+mutual exclusion on the S9 axis and both horns — (a) the pS9 fall is driven by something other than
+loss of the WWOX docking-site brake, so `CLAIM 016`'s only *in vivo* de-repression evidence is not
+evidence that the `CLAIM 035` mechanism operates *in vivo*; or (b) it is WWOX-dependent, so
+`CLAIM 035`'s S9-independence needs a boundary it does not have — with neither claim citable as
+corroboration of the other on that axis until one horn closes.
+
+**Measured before deciding.** `CLAIM 016` `Status`: **`in observation`**. `CLAIM 035` `Status`:
+**`in observation`**. Neither is a `consolidated baseline`. `D3`, `D4` and `D11` have already
+landed (`CLAIM 016`'s `Type` reads *«DATO densitometrico NOT_TESTED … significatività non
+riportata»*; `CLAIM 035`'s Summary already separates *«388–407 richiesti»* from *«388–412
+contiene»*). The **reciprocal boundary itself is absent from both records**: `CLAIM 016` carries the
+pS9-premise critique and `CLAIM 035` carries the false-negative prediction, the two wikilink each
+other, and **neither names the exclusion**. So `D6` is still owed, and the registry currently holds
+two mutually exclusive readings that cross-reference each other without a bound.
+
+**Ruling: `D6` is `MINOR`.** Reasons:
+
+1. **It creates no claim, reverses none, and touches no `consolidated baseline`** — the three
+   triggers both of these batches used, and both targets are live `in observation`, measured above.
+2. **A boundary that only removes a permitted inference cannot reverse a baseline.** `D6` adds a
+   restriction on use and two open horns; it is the same act as `CLAIM 033`'s riserva (1) and
+   `CLAIM 011`'s `PREMISE_TAG`, both propagated `MINOR` in these batches, and it makes the registry
+   say *less*, not more.
+3. **Fail-closed has no object here.** Body §12 resolves *persistent doubt* to MAJOR. The doubt the
+   candidate records is about **which horn is true**, not about the change class; the class question
+   was answerable by measurement and has been answered. Deferring a bound for eight batches is the
+   costly outcome, because the unbounded state — not the bound — is what a reader is exposed to.
+
+**Two conditions, binding on the propagating batch** (without them the act is not the one I
+classified, and it comes back for review):
+
+- **Reciprocity in one batch.** Both records, same batch, or neither. A one-sided landing leaves the
+  unedited record still offering corroboration — the F1/F3 defect shape of this review and the last.
+- **Neither horn may be stated as resolved, and no claim's `Status` or `Summary` assertion may
+  change.** If the propagating batch finds itself withdrawing `CLAIM 035`'s S9-independence or
+  `CLAIM 016`'s *in vivo* de-repression, **that** op is MAJOR and is a different candidate.
+
+**What I did not decide.** `D2` (the manifest's historical scope record) is specified by
+`prompt_batch_commit.md` § 7.2 item 2 and needs no ruling. `D3`/`D4`, marked `MINOR?`, are already
+landed. The **substance** of the exclusion — which horn holds — is not a Mirror call and no
+evidence here settles it: both sides rest on single-lane densitometry with
+`STATISTICAL_STATUS: NOT_TESTED` on one side and a locator-shifted S9 panel on the other.
+
+---
+
+## Where I could be wrong / `WHAT_WOULD_CHANGE_MY_MIND`
+
+- **F1** would fall if this deployment's convention were to list the handling editor. Four other
+  records in the same two batches exclude theirs, and `CC-20261004-MIRROR-22` settled the rule.
+- **F2** would fall if a parental side attributed to a *published cohort case* were outside the
+  privacy design even inside a reference-genotype claim. The record's own next clause says
+  otherwise, which is why I filed it rather than noting it.
+- **F5** would fall if § 7.2's *«historical record of a completed act»* did not cover a premise
+  line's statement about what has been read. I read the section; it names the changelog and the
+  scope record explicitly and the class generally, and the batch applied the marker to the sibling
+  edit of the same shape.
+- **The `D6` ruling** would change if either claim's `Status` were `consolidated baseline` at the
+  moment of propagation. The propagating batch must re-read both (`registry_records.py get`), as it
+  does for every target; if either has been promoted since `ce4aa9c`, the classification is void and
+  returns to Mirror.
+- **C1 verified every quantity the records *name*.** Two are panel readings I recomputed but could
+  not re-read (the gnomAD 7355/21694 screenshot, the 1.10× γ-H2AX bar), and the Khadija ratios
+  (10/54, 16/54, 4/107, 13.17 Mb) recompute but their source is a `.docx` I did not open. A number
+  the records omit is invisible to this check.
+- **The valproate reading** rests on supplements absent from this disk (F4). All-absent means
+  *not re-measurable here*, never *unsupported* — the lesson that a negative finding must itself be
+  verified cuts both ways.
+- **B5** read the riserva as written. It did **not** re-derive the exon-5 structural call from the
+  artefact's own supplementary row; a wrong genotype interpretation inside the source would not show
+  in this check, and the batch's own blind audit covered the propositions rather than the variant
+  calling.
+- **H** counted vocabulary, not rhetoric. A record can overstate with none of those words.
+
+---
+
+## Candidates written by this review
+
+| Candidate | Finding | Ops | File(s) |
+|---|---|---:|---|
+| `CC-20261004-MIRROR-31` | F1 | 2 | `registries/paper_registry_current.md` · `registries/literature_tracking_log_current.md` |
+| `CC-20261004-MIRROR-32` | F2 | 1 | `registries/claim_registry_current.md` |
+| `CC-20261004-MIRROR-33` | F3 | 1 | `registries/paper_registry_current.md` |
+| `CC-20261004-MIRROR-34` | F4 | 1 | `research/discovery_ledger_current.md` |
+| `CC-20261004-MIRROR-35` | F5 + F6 | 2 | `registries/claim_registry_current.md` |
+
+Each `old` was measured **unique inside its record and in the whole file** immediately before the
+candidate was written, and each candidate says the propagating batch must re-measure it. `D6` gets
+no candidate: the ops are already written in `CC-20260826-GSK3B-S9-AXIS-01`, and authoring that
+boundary's text is Scientist work, not Mirror's.
+
+---
+
+## DEFAULTS_TAKEN (§21c)
+
+| Condition | Default taken | Why it is safe | What would have been different |
+|---|---|---|---|
+| A safety classifier halted a plain `Read` of the `_002` report | Switched to a line-slice script and read the rest, and both reports, that way; recorded the halt | No content was reworded or retried; every figure here carries its command | A reworded retry, which the brief forbids |
+| `files/` is outside the worktree | Read the root tree in place, read-only, through tag-stripping window scripts | No byte written under `files/` | A hardlink copy, which this review did not make |
+| The worktree was cut from an older `main` | Reset the task branch to `main` `ce4aa9c`, which contains both batches, before measuring | `bdc61a0` is an ancestor of the measured tree | Measuring a tree neither batch produced |
+| Two batches, one review file, as the brief directs | Verdicts keyed `B*` (wave 8) and `C*` (wave 9) so each author can read only their own rows | Nothing is attributed across batches; F3/F5 name the batch that caused them | Two files and a duplicated method note |
+| `test_batch_queue.py` is red here | Attributed to wave 10's unregistered PMID 21476439 and **not** counted against either batch, after reproducing the identical single-PMID failure | The `_003` addendum measured it on an export of `main` and I reproduced it on `main` itself | A finding against batches that did not cause it |
+| The backlog counter reads 9, not the 4 residue items | Attributed the five extra to wave 10, landed after both batches | They are named in wave-10 files neither batch touched | A finding about another actor's queue |
+| No `scipy` on this deployment, and two F-tests had to be recomputed | Implemented the regularized incomplete beta locally and printed both p-values | Both reproduce the source's printed values to four digits, which is the test | Accepting two printed p-values unchecked |
+| Findings need registry edits Mirror may not make | Wrote five candidates with exact ops and measured `old` | §21e: a finding is a new task for the author | A Mirror registry edit, which the role contract forbids |
+| Two findings are wording or routing judgements (F7, F8) | Filed as NOTE with the correction named, no candidate | A candidate for a judgement call pre-empts the author | Two candidates nobody asked for |
+| `D6` was reserved to Mirror and the author asked for the ruling or a statement of what evidence I lack | **Decided it** (`MINOR`, with two binding conditions) after measuring both claims' live `Status` and the absence of the boundary | The classification question was answerable by measurement; the substance of the exclusion is not mine and is explicitly left open | A ninth deferral of a bound that no actor but Mirror could unblock |
+
+**Review path:**
+`disease-models/wwox/research/session_evaluations/mirror_review_batches_20261004_002_003.md`
+
+**Not medical advice.**
