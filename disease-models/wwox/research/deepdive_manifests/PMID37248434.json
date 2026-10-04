@@ -1,0 +1,363 @@
+{
+  "schema_version": 2,
+  "pmid": "37248434",
+  "doi": "10.1038/s41417-023-00626-x",
+  "receipt": "FTR-20261004-37248434-01",
+  "context_policy": "SOURCE_FIRST",
+  "landing": [
+    "disease-models/wwox/research/fulltext_dossiers/PMID37248434.md",
+    "disease-models/wwox/research/intake_wave_20261004w11_A.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261004W11-A-ORTHOGONAL-01.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261004W11-A-REGISTRY-01.md"
+  ],
+  "skills_considered": [
+    {
+      "skill": "legend-study-intake-triage",
+      "used": true
+    },
+    {
+      "skill": "find-fulltext",
+      "used": true
+    },
+    {
+      "skill": "legend-deepdive",
+      "used": true
+    },
+    {
+      "skill": "legend-discovery",
+      "used": false,
+      "reason": "The discovery ledger is owned by other batches; what this reading supports is proposed as commit candidates and in the intake note."
+    },
+    {
+      "skill": "legend-hypothesis-forge",
+      "used": false,
+      "reason": "A single binding paper supplies no therapeutic lever to forge a portfolio from."
+    },
+    {
+      "skill": "legend-safety-triage",
+      "used": false,
+      "reason": "No compound is proposed by this source."
+    },
+    {
+      "skill": "legend-commit",
+      "used": false,
+      "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+    },
+    {
+      "skill": "legend-locator-audit",
+      "used": false,
+      "reason": "The triples are published in the candidate for a blind auditor; the reader cannot audit their own locators."
+    }
+  ],
+  "group_assessment": {
+    "total_publications": 1,
+    "publications_on_gene": 1,
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": false,
+    "weighting": "Institut Curie / INSERM breast-cancer group (Lallemand, Driouch, Bieche) with its own anti-WWOX antibody and its own two-hybrid pipeline run with Hybrigenics. Independent of the Bednarek, Aqeilan and Chang/Aldaz laboratories: none of them appears in the author list or affiliations. Its WWOX work is oncology, not neurodevelopmental."
+  },
+  "field_density": {
+    "queries": [
+      {
+        "query": "WWOX AND MERIT40",
+        "count": 1,
+        "source": "reading-time observation: this source is the only paper that reports the pair"
+      },
+      {
+        "query": "WWOX AND \"homologous recombination\"",
+        "count": 4,
+        "source": "references of this source (Abu-Odeh 2014, Abu-Odeh 2016, Schrock 2017, Park 2022) plus the source itself"
+      }
+    ],
+    "note": "A small, contested literature: the source itself records that one laboratory reports WWOX activating HR and two report it inhibiting HR."
+  },
+  "multihop": {
+    "references_enumerated": 46,
+    "gene_direct_refs_in_source": [
+      "24932569",
+      "19708029",
+      "30211123",
+      "33946771",
+      "25331887",
+      "26675548",
+      "27869163",
+      "34998176",
+      "30285739",
+      "19465938",
+      "24550385",
+      "15070730",
+      "15548692",
+      "16061658"
+    ],
+    "resolved": [
+      "24932569",
+      "25331887",
+      "26675548",
+      "27869163",
+      "30285739",
+      "24550385",
+      "15070730",
+      "16061658"
+    ],
+    "queued": [
+      {
+        "pmid": "19708029",
+        "reason": "Review of WWOX genomics and partners; no receipt held. Not needed for this reading's propositions, which rest on this source's own measurements."
+      },
+      {
+        "pmid": "30211123",
+        "reason": "Review of WWOX in breast cancer; no receipt held. Review, not a primary measurement."
+      },
+      {
+        "pmid": "33946771",
+        "reason": "Review by this source's own authors; no receipt held. Review, not a primary measurement."
+      },
+      {
+        "pmid": "34998176",
+        "reason": "Park 2022, Wwox-Brca1 resection primary; no receipt held. It bears on the HR-direction question, not on the enzymology question this reading answers; queued as a reading debt."
+      },
+      {
+        "pmid": "19465938",
+        "reason": "This group's own earlier Wnt/beta-catenin paper, cited for the antibody and the two-hybrid method; no receipt held. Queued as a method-provenance hop."
+      },
+      {
+        "pmid": "15548692",
+        "reason": "Aqeilan 2004 AP-2gamma; no receipt held. Cited only for the Y33R precedent, which this source states in its own words."
+      }
+    ],
+    "note": "14 of 46 references are gene-direct. Eight already carry a receipt in the ledger and are marked resolved; six are queued with the reason above. No queued hop is load-bearing for any locator below."
+  },
+  "corpus_crossquery": {
+    "query": "registry_records.py get --pmid 37248434; fulltext_receipts.py status --pmid 37248434 (run BEFORE the reading, for dedup only)",
+    "hits": 2,
+    "note": "CORPUS-STUB-041 (paper registry, status not_processed) and LIT-0065 (literature tracking log, 'corpus paper 41') carry the identity; no receipt, no manifest, no prior reading. One mention under DL-MECH-056, which is about a nominal SNP association and not about this paper's content."
+  },
+  "retraction_check": {
+    "checked": true,
+    "result": "Checked 2026-10-04 via PubMed ESummary: publication types ['Journal Article', 'Research Support, Non-U.S. Gov't']; attributes ['Has Abstract']; no retraction, expression of concern or correction notice listed for PMID 37248434.",
+    "dependencies": {
+      "flagged": [],
+      "noted": [],
+      "paper_verdict": "SCREENED_CLEAN",
+      "reference_source": "network",
+      "references_declared": 46,
+      "references_screened": 43,
+      "references_with_doi": 43,
+      "schema": "retraction_check.dependencies/1",
+      "screened": true,
+      "snapshot": {
+        "date": "2026-09-10",
+        "days_since_fetch": 24,
+        "rows": 72476,
+        "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+      },
+      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+      "unscreenable": {
+        "UNSCREENABLE_NO_DOI": 3
+      },
+      "note": "Screened with the 2026-09-10 Retraction Watch snapshot; 3 references carry no DOI and are UNSCREENABLE_NO_DOI."
+    }
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID37248434_Taouis2023_PMC.xml",
+      "sha256": "6698dd632a1b1abcb610567997439be82e13fa2afddcb4afdcf96dd29a06a447",
+      "kind": "article_text",
+      "note": "Europe PMC fullTextXML (122 871 B): abstract, introduction, five results sections, discussion, materials and methods, six figure legends, three tables cell-wise, 46 references.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10425285/fullTextXML",
+        "http_method": "GET",
+        "tier": "Europe PMC REST fullTextXML",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "6698dd632a1b1abcb610567997439be82e13fa2afddcb4afdcf96dd29a06a447"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID37248434_figs/Fig1.png",
+      "sha256": "82253f24b8fd06de095112cbd47b1b6e422b3c1ec2d9d20bd5fca4808849c12d",
+      "kind": "figure",
+      "note": "Figure 1 at publisher resolution (1745x2041). Persisted but NOT inspected by this reader: the response inspecting it was halted by a model safety classifier and, per the wave brief, was not retried. No locator below rests on it.",
+      "acquisition_recipe": {
+        "resolved_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41417-023-00626-x/MediaObjects/41417_2023_626_Fig1_HTML.png",
+        "http_method": "GET",
+        "tier": "publisher media CDN (Springer Nature static)",
+        "user_agent_policy": "browser_like",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "82253f24b8fd06de095112cbd47b1b6e422b3c1ec2d9d20bd5fca4808849c12d"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID37248434_figs/Fig2.png",
+      "sha256": "1a59061eedca4d31ae6541aed56a3f1be97bd49fa83401439063f90ccd98db97",
+      "kind": "figure",
+      "note": "Figure 2 at publisher resolution. Persisted, not inspected (see Fig1 note).",
+      "acquisition_recipe": {
+        "resolved_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41417-023-00626-x/MediaObjects/41417_2023_626_Fig2_HTML.png",
+        "http_method": "GET",
+        "tier": "publisher media CDN (Springer Nature static)",
+        "user_agent_policy": "browser_like",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "1a59061eedca4d31ae6541aed56a3f1be97bd49fa83401439063f90ccd98db97"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID37248434_figs/Fig3.png",
+      "sha256": "de0bbfdd37f2168142bee69a2fd3ab4ca0addcc60ffed1ccda0d634215fc0c1e",
+      "kind": "figure",
+      "note": "Figure 3 at publisher resolution. Persisted, not inspected (see Fig1 note).",
+      "acquisition_recipe": {
+        "resolved_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41417-023-00626-x/MediaObjects/41417_2023_626_Fig3_HTML.png",
+        "http_method": "GET",
+        "tier": "publisher media CDN (Springer Nature static)",
+        "user_agent_policy": "browser_like",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "de0bbfdd37f2168142bee69a2fd3ab4ca0addcc60ffed1ccda0d634215fc0c1e"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID37248434_figs/Fig4.png",
+      "sha256": "991963640b63676d949ce26ba0e5b901e7aab007c9be2fdb5e074cd12bfadc0f",
+      "kind": "figure",
+      "note": "Figure 4 at publisher resolution. Persisted, not inspected (see Fig1 note).",
+      "acquisition_recipe": {
+        "resolved_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41417-023-00626-x/MediaObjects/41417_2023_626_Fig4_HTML.png",
+        "http_method": "GET",
+        "tier": "publisher media CDN (Springer Nature static)",
+        "user_agent_policy": "browser_like",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "991963640b63676d949ce26ba0e5b901e7aab007c9be2fdb5e074cd12bfadc0f"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID37248434_figs/Fig5.png",
+      "sha256": "94d95ac3ba9f3edd7782849cbf7d9467a03b876894b134fc0156308abd7d041c",
+      "kind": "figure",
+      "note": "Figure 5 at publisher resolution. Persisted, not inspected (see Fig1 note).",
+      "acquisition_recipe": {
+        "resolved_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41417-023-00626-x/MediaObjects/41417_2023_626_Fig5_HTML.png",
+        "http_method": "GET",
+        "tier": "publisher media CDN (Springer Nature static)",
+        "user_agent_policy": "browser_like",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "94d95ac3ba9f3edd7782849cbf7d9467a03b876894b134fc0156308abd7d041c"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID37248434_figs/Fig6.png",
+      "sha256": "3c8b8ca7c39adecbe1e2de0a814c2a12de6050ad8bf7569e34f3c7a4289201e0",
+      "kind": "figure",
+      "note": "Figure 6 at publisher resolution. Persisted, not inspected (see Fig1 note).",
+      "acquisition_recipe": {
+        "resolved_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41417-023-00626-x/MediaObjects/41417_2023_626_Fig6_HTML.png",
+        "http_method": "GET",
+        "tier": "publisher media CDN (Springer Nature static)",
+        "user_agent_policy": "browser_like",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "3c8b8ca7c39adecbe1e2de0a814c2a12de6050ad8bf7569e34f3c7a4289201e0"
+      }
+    }
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "entries": [
+      {
+        "proposition": "The two-hybrid bait was not full-length WWOX: it was an isoform carrying the two WW domains and only a truncated SDR, so the screen could not report a full SDR surface.",
+        "snippet": "containing only the WW1 and WW2 domains, and a truncated SDR domain",
+        "anchor": "Results, WWOX interacts with MERIT40, first paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID37248434_Taouis2023_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Directness of the WWOX-MERIT40 interaction is asserted from the two-hybrid format and a personal communication, not from a biochemical experiment with purified protein.",
+        "snippet": "it is very likely that it is a direct interaction",
+        "anchor": "Results, WWOX interacts with MERIT40, first paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID37248434_Taouis2023_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The binding determinant maps away from the WW domains: the WW1-WW2 fragment does not bind MERIT40 while the WW2-SDR fragment does.",
+        "snippet": "the N-terminal region of WWOX containing only the WW1 and WW2 domains did not interact with MERIT40, whereas the region composed of the WW2 and SDR domains did",
+        "anchor": "Results, WWOX interacts with MERIT40, third paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID37248434_Taouis2023_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The authors place the MERIT40-binding determinant in the N-terminal part of the SDR domain, and they state it as a suggestion rather than as a mapped contact.",
+        "snippet": "the domain of WWOX interacting with MERIT40 is located in the N terminal part of the SDR domain",
+        "anchor": "Results, WWOX interacts with MERIT40, closing sentence",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID37248434_Taouis2023_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The only WWOX point mutant used is a WW1 ligand-binding mutant, not a catalytic-site mutant; it is used to exclude PPxY-mediated binding.",
+        "snippet": "a mutant form of WWOX harboring a Y33R point mutation in the WW1 domain inhibiting its ability to interact with the PPXY motifs of different proteins",
+        "anchor": "Results, WWOX interacts with MERIT40, third paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID37248434_Taouis2023_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Abolishing WW1 ligand binding leaves the WWOX-MERIT40 association intact, so this interaction is not a PPxY-WW1 interaction.",
+        "snippet": "this mutation did not affect the WWOX-MERIT40 association",
+        "anchor": "Results, WWOX interacts with MERIT40, third paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID37248434_Taouis2023_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The imaging experiment behind the foci conclusion was performed once, on 50 cells per condition, by the authors' own statement.",
+        "snippet": "50 cells were counted in each condition, the experiment was done once",
+        "anchor": "Figure 3 legend, panel B",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID37248434_Taouis2023_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The paper records that the direction of WWOX's effect on homologous recombination is not settled and appears to depend on the cell type used.",
+        "snippet": "The effect of WWOX on HR seems therefore to depend on the cell type.",
+        "anchor": "Discussion, second paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID37248434_Taouis2023_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "A mechanistic step in the paper's own model is supported only by unpublished data.",
+        "snippet": "We found that WWOX promotes the formation of BRCA1-A (unpublished data).",
+        "anchor": "Discussion, third paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID37248434_Taouis2023_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The authors close by calling their own interpretation a hypothesis still to be validated.",
+        "snippet": "Further analysis have to be perform to validate these hypotheses.",
+        "anchor": "Discussion, final sentence",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID37248434_Taouis2023_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The endogenous interaction was detected with the group's own antibody on a crude breast-cancer cell extract, which is a pull-down and not an affinity measurement.",
+        "snippet": "of total proteins were subjected to direct immunoprecipitation with the anti-WWOX antibody produced by Eurogentec",
+        "anchor": "Materials and methods, Co-immnunoprecipitation and western blot",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID37248434_Taouis2023_PMC.xml",
+        "panel_text_relation": "text_only"
+      }
+    ],
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC REST search EXT_ID:37248434 (resultType=core) on 2026-10-04: inEPMC=Y, isOpenAccess=Y, pmcid PMC10425285; the fullTextXML endpoint returned a 122 871 B body, so the quotes below are externally verifiable."
+  }
+}
