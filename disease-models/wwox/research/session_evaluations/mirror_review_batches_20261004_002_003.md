@@ -95,3 +95,86 @@ the same route.
 | I | Gates at the landed state | **CONFIRMED** — LINT exit **0**, **0 BLOCK**, 13 `WARN_BUT_PROCEED`, none naming a wave-8/9 record; `fulltext_receipts verify` **OK, 429 chained**, tail anchored; `growth_anchors check` **PASS** (claims 47 · papers 233 · corpus 367 · literature 519 · registry_only 4 · unread_premises 0); release gate exit **0** |
 
 ---
+
+## F1 — a journal's Academic Editor is the fifth author of `PAPER 228` / `LIT-0520` (🔸 MINOR, `CC-20261004-MIRROR-31`)
+
+The JATS front matter of PMID 41744777 has **four** authors and puts **Chen Shih-Heng (David)** in
+`contrib-group content-type="editor"`, `role` **Academic Editor**. Both records list him fifth.
+This is precisely the class `CC-20261004-MIRROR-22` repaired in `PAPER 214` one batch earlier.
+`BATCH_20261004_003` generalised the rule — correctly, over **its own** records, excluding three
+editor contribs including this same editor in `PAPER 242` — and never swept the landed wave-8 set.
+A repair that becomes a rule should be run backwards once over the records written the day before.
+
+```bash
+python3 <scratchpad>/editorsweep.py disease-models/wwox/registries/paper_registry_current.md '^PAPER 2[1-4][0-9]\b'
+```
+
+Two hits, one of them a false positive worth naming: `PAPER 214` reports `IN_AUTHORS` because its
+**corrected** field quotes the superseded wording verbatim. That is the same "a quote joins the
+record's grammar" class this reviewer recorded as F6 last time, now biting an automated check
+rather than a reader.
+
+## F2 — one clause of the privacy repair still names a parental side, eleven words before the clause that says it does not (🔸 MINOR, `CC-20261004-MIRROR-32`)
+
+`CLAIM 033`'s riserva (1) reads *«… maternal inheritance establishes phase in trans …»* and then,
+in the same sentence, *«the source names the relationship; this record does not, because a parental
+side does not belong in a statement about the reference genotype»*. `public_release_gate.py` does
+not see it, because its rule needs **both** sides paired; it flags the three *other* surfaces of
+the same reading as `[REVIEW]`. `BATCH_20261004_002` wrote the lesson — *describe the class, do not
+paste the instance* — and this is the one place in the four current registries where a parental
+side survives (measured: **1** occurrence of `maternal|paternal` in all four). The phase statement
+loses nothing: *parental segregation* establishes phase in trans.
+
+## F3 — `PAPER 210`'s second field still asserts the derivation the first one now labels (🔸 MINOR, `CC-20261004-MIRROR-33`)
+
+`CC-20261004-MIRROR-23` was applied exactly as written, to `Genotype/model`. Two lines below,
+`clinical relevance` still reads *«a measured WWOX splice outcome in the same intron as the
+reference genotype's splice allele»* — true only under the exon-map derivation that the field above
+now marks `INFERENZA`, and it is the sentence that makes the record look adjacent to the reference
+genotype. One-field repairs are now the recurring shape of this defect: `PAPER 202` (F1 last
+review), `PAPER 210` twice, `PAPER 228`. **A candidate that repairs a field should name the record,
+not the field.**
+
+## F4 — the one quantitative range whose source bytes are absent is also one of the three that landed unaudited (🔸 MINOR, `CC-20261004-MIRROR-34`)
+
+`DL-REPO-003` states *«ratios 1.33 to 2.13, adjusted p 0.007 to 0.042»* from supplementary probe
+tables. `evidence_presence.py` reports **1/5 present** for PMID 23179753 and **1/4** for PMID
+27188386: only the main JATS articles are on this disk, and a digest search recovered none of the
+`MOESM` tables. The reading is not thereby wrong — the manifests fingerprint the absent files, and
+everything I *could* check in that candidate (WWOX = 0 occurrences ×4, platform, doses) reproduces
+— but the record should say that its numbers are, here and now, declared rather than re-attestable.
+`BATCH_20261004_003` named this candidate as one of three that landed without a blind audit and
+wrote the right upgrade (`--search` as step 0); the surface debt belongs in the record too.
+
+## F5 — a statement about this corpus's reading state was replaced with no superseded wording (🔸 MINOR, `CC-20261004-MIRROR-35` op 2.1)
+
+`CLAIM 011`'s `PREMISE_TAG` lost *«the source reports no 65Q-versus-27Q comparison and Figure 4B is
+unread …»* with no marker. The replacement is **more** accurate, which is why this is a discipline
+finding and not a content one: *«Figure 4B is unread»* is a record of a completed act, § 7.2's own
+object, and item 2 of that section requires the old words to travel in the line. The sibling edit
+to `CLAIM 045` in the same batch carries its marker; so does `PAPER 214`. Measured: of 12 in-place
+line replacements in the paper registry and 2 in the claim registry, **2** carry one.
+
+## F6 — `CLAIM 047` prints a ratio without its two inputs, in a sentence where every other ratio has them (🔸 MINOR, `CC-20261004-MIRROR-35` op 2.2)
+
+The batch's own arithmetic screen classified the ~127-fold liver reduction as *reported, not
+derived* (its two values are figure-only), and `PAPER 228` says so; `CLAIM 047` does not. The claim
+is the surface a reader meets.
+
+## F7 — the gate's three `[REVIEW]` parent-of-origin lines all sit in wave-8/9 authored surfaces (NOTE, no candidate)
+
+`CC-20261004W8-A-PATIENT-OVERLAP-01`, `-A-REGISTRY-01` and `CC-20261004W9-C-DEEPINTRONIC-01` each
+pair a maternal and a paternal side for an individual in a published cohort. The gate returns
+`[REVIEW]`, not `[BLOCK]`, by design — the variants are not the reference genotype's — and the
+landed registries are clean. It is written down because candidates are shipped surfaces too, the
+decision *«read it before publishing»* is the operator's, and this is the second batch whose
+candidate bodies carry the instance while its records carry the class.
+
+## F8 — the paragraph-number defect the `_002` report measured was not routed anywhere (NOTE, no candidate)
+
+Two blind auditors independently found anchors whose **paragraph** number is off by one or two while
+the section is always right, and the report named the upstream counter. Nothing in either batch
+opens a harness task for it, and `_003` does not mention it. A measured tool defect with no owner
+is a finding that expires.
+
+---
