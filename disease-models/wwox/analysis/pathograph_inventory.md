@@ -34,10 +34,10 @@ annotations is reported below whatever it happens to be.
 | Nodes carrying a biological scale | 0 |
 | Deep-dive manifests read | 271 |
 | …of which bound to at least one claim | 95 |
-| Propositions scanned | 4222 |
-| …carrying a relational connective | 803 |
-| …locator-backed candidates | 763 |
-| …locator-backed and bound to a claim | 328 |
+| Propositions scanned | 4251 |
+| …carrying a relational connective | 808 |
+| …locator-backed candidates | 768 |
+| …locator-backed and bound to a claim | 331 |
 
 The scanned population is three declared surfaces and no others: every claim
 `Title`, every row of the working model's BLOCK 2 mirror, and every
@@ -320,15 +320,15 @@ each side is a reading, and every record carries `endpoints_resolved: false`.
 | Source | Candidates |
 |---|---|
 | claim_title | 21 |
-| locator_proposition | 763 |
+| locator_proposition | 768 |
 | working_model_mirror_title | 19 |
 
 | Connective class (lexical) | Candidates |
 |---|---|
-| AMBIGUOUS_LEXICAL_FORM | 522 |
+| AMBIGUOUS_LEXICAL_FORM | 526 |
 | ARROW | 18 |
 | ASSOCIATIVE | 33 |
-| CAUSAL | 165 |
+| CAUSAL | 166 |
 | DEPENDENCY | 65 |
 
 A connective class is a property of the word, not a verdict about the
@@ -359,7 +359,7 @@ its sentence is a reading, and this tool does not perform readings.
 | CLAIM 016 | claim_title | `contribute to` | GSK3β hyperactivation may contribute to seizure susceptibility in WWOX deficiency |
 | CLAIM 018 | claim_title | `causes` | The exon 6 splice-site variant c.517-2A>G is pathogenic and causes exon 6 skipping in humans |
 
-Showing 12 of 368 bound candidates; the
+Showing 12 of 371 bound candidates; the
 complete set, with evidence and provenance, is in the export. The worklist
 in cost order — what needs an annotation, what needs a type, what needs a
 decomposition, what needs a reading — is printed by:
@@ -376,6 +376,6 @@ carried no connective from the lexicon.
 ## Provenance
 
 Derived from 274 input files; digest
-`2786b5f2515edfff`. Sources: the claim, paper and
+`487bd81d55de755a`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 
