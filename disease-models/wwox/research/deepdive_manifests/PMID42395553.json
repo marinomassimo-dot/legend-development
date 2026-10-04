@@ -125,6 +125,91 @@
           "call": "pdftotext -layout -nopgbrk files/fulltext/PMID42395553_Petrozziello2026_bioRxiv.pdf files/fulltext/PMID42395553_Petrozziello2026_bioRxiv.txt"
         }
       }
+    },
+    {
+      "path": "files/figures/PMID42395553/fig3.png",
+      "sha256": "6f2cb9e9874cfa027d4f52a30a12952676a06c9be811b8a5afb8460920b07382",
+      "kind": "figure",
+      "note": "Figure 3 (embedded image 2, PDF page 29) extracted from the declared PDF (sha256 90078770d759d421a77ab5485e1f553575a5c2efd04df3accc076c6ae062b746) with pdfimages -png; viewed in wave 9. Preprint, not peer reviewed.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID42395553_Petrozziello2026_bioRxiv.pdf",
+        "extractor": {
+          "name": "pdfimages (poppler)",
+          "version": "24.02.0",
+          "call": "pdfimages -png files/fulltext/PMID42395553_Petrozziello2026_bioRxiv.pdf img (image index 2)"
+        },
+        "acquired_on": "2026-10-04",
+        "result_sha256": "6f2cb9e9874cfa027d4f52a30a12952676a06c9be811b8a5afb8460920b07382"
+      }
+    },
+    {
+      "path": "files/figures/PMID42395553/fig4.png",
+      "sha256": "6acf7f40ba8526dc0bc2997f5adf20f35b880df10556554a8f9890c33fe598f2",
+      "kind": "figure",
+      "note": "Figure 4 (embedded image 3, PDF page 30) extracted from the declared PDF (sha256 90078770d759d421a77ab5485e1f553575a5c2efd04df3accc076c6ae062b746) with pdfimages -png; viewed in wave 9. Preprint, not peer reviewed.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID42395553_Petrozziello2026_bioRxiv.pdf",
+        "extractor": {
+          "name": "pdfimages (poppler)",
+          "version": "24.02.0",
+          "call": "pdfimages -png files/fulltext/PMID42395553_Petrozziello2026_bioRxiv.pdf img (image index 3)"
+        },
+        "acquired_on": "2026-10-04",
+        "result_sha256": "6acf7f40ba8526dc0bc2997f5adf20f35b880df10556554a8f9890c33fe598f2"
+      }
+    },
+    {
+      "path": "files/figures/PMID42395553/fig5.png",
+      "sha256": "0f30b293322e30cd9b1380e3955eebb5905d0593f47e2c166c9c75d6f3bbe200",
+      "kind": "figure",
+      "note": "Figure 5 (embedded image 4, PDF page 31) extracted from the declared PDF (sha256 90078770d759d421a77ab5485e1f553575a5c2efd04df3accc076c6ae062b746) with pdfimages -png; viewed in wave 9. Preprint, not peer reviewed.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID42395553_Petrozziello2026_bioRxiv.pdf",
+        "extractor": {
+          "name": "pdfimages (poppler)",
+          "version": "24.02.0",
+          "call": "pdfimages -png files/fulltext/PMID42395553_Petrozziello2026_bioRxiv.pdf img (image index 4)"
+        },
+        "acquired_on": "2026-10-04",
+        "result_sha256": "0f30b293322e30cd9b1380e3955eebb5905d0593f47e2c166c9c75d6f3bbe200"
+      }
+    },
+    {
+      "path": "files/figures/PMID42395553/fig7.png",
+      "sha256": "bca6d1e79f3d187923139ec39a031189d42bfce04baa82ebbd81021e415b75fa",
+      "kind": "figure",
+      "note": "Figure 7 (embedded image 6, PDF page 35) extracted from the declared PDF (sha256 90078770d759d421a77ab5485e1f553575a5c2efd04df3accc076c6ae062b746) with pdfimages -png; viewed in wave 9. Preprint, not peer reviewed.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID42395553_Petrozziello2026_bioRxiv.pdf",
+        "extractor": {
+          "name": "pdfimages (poppler)",
+          "version": "24.02.0",
+          "call": "pdfimages -png files/fulltext/PMID42395553_Petrozziello2026_bioRxiv.pdf img (image index 6)"
+        },
+        "acquired_on": "2026-10-04",
+        "result_sha256": "bca6d1e79f3d187923139ec39a031189d42bfce04baa82ebbd81021e415b75fa"
+      }
+    },
+    {
+      "path": "files/figures/PMID42395553/figS2.png",
+      "sha256": "8a7ff8ec90fe3c9310bbc0ea79b3bf3548125a9ef4d6683710a0842dc2835871",
+      "kind": "figure",
+      "note": "Supplementary Figure 2 (embedded image 8, PDF page 38) extracted from the declared PDF (sha256 90078770d759d421a77ab5485e1f553575a5c2efd04df3accc076c6ae062b746) with pdfimages -png; viewed in wave 9. Preprint, not peer reviewed.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID42395553_Petrozziello2026_bioRxiv.pdf",
+        "extractor": {
+          "name": "pdfimages (poppler)",
+          "version": "24.02.0",
+          "call": "pdfimages -png files/fulltext/PMID42395553_Petrozziello2026_bioRxiv.pdf img (image index 8)"
+        },
+        "acquired_on": "2026-10-04",
+        "result_sha256": "8a7ff8ec90fe3c9310bbc0ea79b3bf3548125a9ef4d6683710a0842dc2835871"
+      }
     }
   ],
   "verbatim_locators": {
@@ -205,6 +290,106 @@
         "artifact": "files/fulltext/PMID42395553_Petrozziello2026_bioRxiv.txt",
         "anchor": "Discussion, limitations paragraph",
         "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "TEXT: WWOX levels in HD post-mortem cortex do not correlate with CAG repeat length or age at death (inherited tract length, not somatic instability).",
+        "snippet": "WWOX levels did not correlate with CAG repeat length in PFC (Spearman’s correlation, r=0.05302, p=0.8397)",
+        "surface": "body",
+        "anchor": "Figure 3 legend, panel B",
+        "artifact": "files/fulltext/PMID42395553_Petrozziello2026_bioRxiv.txt",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "PANEL READING, Figure 3. HD cortex WWOX about 1.6 times control (hand reading of group means ~65 vs ~40 percent of GAPDH; n = 18 HD, 13 control). Panel B plots WWOX against the inherited CAG repeat length, which spans only about 40 to 51 repeats in this series, so the null correlation is over a narrow range of germline length and is not a measurement of somatic instability, which is measured only in the RPE-1 reporter of Figure 7.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3A: HD points mostly 30-100 with group line near 65, control points 14-65 with group line near 40; Figure 3B: x axis CAG repeat from 35 to 55 with points between 40 and 51 and a flat fitted line; Figure 3C: age at death 35-78.",
+        "surface": "figure",
+        "anchor": "Figure 3A-C",
+        "artifact": "files/figures/PMID42395553/fig3.png",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[9]",
+        "qualifies_needle": "did not correlate with CAG repeat length",
+        "experimental_context": {
+          "system": "human post-mortem prefrontal cortex",
+          "genotype": "HD vs control",
+          "treatment": "none (observational)",
+          "timepoint": "see anchor",
+          "comparator": "control n=13",
+          "endpoint": "western blot WWOX/GAPDH, Spearman"
+        }
+      },
+      {
+        "proposition": "PANEL READING, Figure 4. Neuron arm: WWOX 65Q about 1.9 times 27Q (hand reading ~147 vs ~79 percent GAPDH, n = 4, one lane pair shown). Viability (MTT absorbance, arbitrary units): 27Q vehicle ~0.112 to ~0.079 with rWWOX (ratio 0.71); 65Q vehicle ~0.104 to ~0.067 (ratio 0.64). Both genotypes lose viability; the genotype difference in the ratio is small and the stated interaction is not significant.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4A bars 27Q about 79 and 65Q about 147 percent of GAPDH; Figure 4B bars: 27Q vehicle ~0.112, 27Q rWWOX ~0.079, 65Q vehicle ~0.104, 65Q rWWOX ~0.067, **** brackets for each genotype.",
+        "surface": "figure",
+        "anchor": "Figure 4A-B",
+        "artifact": "files/figures/PMID42395553/fig4.png",
+        "panel_text_relation": "panel_only",
+        "experimental_context": {
+          "system": "human ESC-derived cortical neurons",
+          "genotype": "65Q HD vs isogenic 27Q",
+          "treatment": "recombinant WWOX 100 ng/mL, 24 h",
+          "timepoint": "see anchor",
+          "comparator": "vehicle per genotype",
+          "endpoint": "MTT viability"
+        }
+      },
+      {
+        "proposition": "TEXT: rWWOX at 100 or 150 ng/mL increased gamma-H2AX compared with vehicle in SH-SY5Y.",
+        "snippet": "treated with either 100 or 150ng/mL of rWWOX compared to vehicle-treated cells",
+        "surface": "body",
+        "anchor": "Results, Elevated WWOX increases g-H2AX levels in SH-SY5Y cells",
+        "artifact": "files/fulltext/PMID42395553_Petrozziello2026_bioRxiv.txt",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "PANEL READING, Figure 5B and 5C. The gamma-H2AX increase is small: vehicle ~30,000, rWWOX 100 ng/mL ~33,000 (1.10 times), 150 ng/mL ~33,300 (1.11 times), camptothecin ~36,500 (1.22 times) intensity units. The SH-SY5Y overexpression (5C) is about 1.9 times NTC. The text's 'significantly increased' is a roughly ten percent change.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5B bars: vehicle ~30000, CPT ~36500, 10 ng/mL ~31500, 100 ng/mL ~33000, 150 ng/mL ~33300; Figure 5C WWOX/GAPDH NTC 1.0, WWOX-OE ~1.9.",
+        "surface": "figure",
+        "anchor": "Figure 5B-C",
+        "artifact": "files/figures/PMID42395553/fig5.png",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[12]",
+        "qualifies_needle": "100 or 150ng/mL of rWWOX",
+        "experimental_context": {
+          "system": "SH-SY5Y neuroblastoma",
+          "genotype": "wild type",
+          "treatment": "rWWOX 10/100/150 ng/mL, 24 h",
+          "timepoint": "see anchor",
+          "comparator": "vehicle",
+          "endpoint": "gamma-H2AX immunofluorescence intensity"
+        }
+      },
+      {
+        "proposition": "PANEL READING, Supplementary Figure 2. In the same line and the same 24 h exposure, MTT viability at 100 ng/mL is ~0.024 against ~0.076 for vehicle (ratio 0.32), and at 48 h at 10 ng/mL ~0.019 against ~0.061 (ratio 0.31). The 100 ng/mL concentration at which gamma-H2AX rises by about ten percent therefore coincides with a large loss of viable signal, so the DNA-damage readout and the cytotoxicity are not separable on these data.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Figure 2 bars (MTT): 24 h 0 ng/mL ~0.076, 1 ~0.067, 10 ~0.070, 100 ~0.024, 500 ~0.008; 48 h 0 ~0.061, 1 ~0.061, 10 ~0.019, 100 ~0.004, 500 ~0.009 with large error bars at 48 h.",
+        "surface": "figure",
+        "anchor": "Supplementary Figure 2",
+        "artifact": "files/figures/PMID42395553/figS2.png",
+        "panel_text_relation": "panel_only",
+        "experimental_context": {
+          "system": "SH-SY5Y neuroblastoma",
+          "genotype": "wild type",
+          "treatment": "rWWOX 1-500 ng/mL, 24 h and 48 h",
+          "timepoint": "see anchor",
+          "comparator": "vehicle",
+          "endpoint": "MTT viability"
+        }
+      },
+      {
+        "proposition": "PANEL READING, Figure 7. The repeat-instability null is a single-model result: RPE-1 cells carrying a CAG115 reporter at a safe-harbour site, six clones per arm, 42 days. 7A: WWOX overexpression about 40 times NTC (IDV/GAPDH ~40 vs ~1). 7C: gamma-H2AX NTC ~38.5, CPT ~54, WWOX-OE ~47.5 million units (1.40 and 1.23 times). 7D: six individual clone traces per arm; final repeat gain ~2.0-4.0 for control and ~2.4-3.1 for WWOX-OE, overlapping. Only overexpression was tested for instability, not loss or knockdown, and not in neurons or in HD cells.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 7D: Control OE open circles six traces rising to about 2.0, 2.2, 2.9, 3.0 (two near 2.9-3.0), 3.65 and 4.05 at day 42; hWWOX OE filled six traces ending about 2.4, 2.5, 3.0, 3.1; the two sets overlap at every time point.",
+        "surface": "figure",
+        "anchor": "Figure 7A-D",
+        "artifact": "files/figures/PMID42395553/fig7.png",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "experimental_context": {
+          "system": "RPE-1 AAVS1-CAG115 reporter cells",
+          "genotype": "wild type background",
+          "treatment": "stable WWOX overexpression, 0-42 days",
+          "timepoint": "see anchor",
+          "comparator": "non-transfected control / control OE",
+          "endpoint": "average repeat gain by capillary fragment analysis"
+        }
       }
     ]
   }
