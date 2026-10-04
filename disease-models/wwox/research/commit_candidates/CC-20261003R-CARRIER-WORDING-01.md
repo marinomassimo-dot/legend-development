@@ -93,3 +93,16 @@ repair to that candidate's `new` string instead.
 3. The slice-level proportions are as the running text states them | In total, 0% S-Control slices showed bursting (0 of n = 11 slices across seven animals), 17% of slices from S-HT animals showed bursting (4 of n = 23 slices across 14 animals) and 86% of slices from S-KO animals showed bursting (36 of n = 42 slices across 24 animals). | PMID 33914858, Results, journal page 3065, same PDF, page 5 rendered at 110 dpi
 4. The figure legend counts the same experiment by animal, which is why its denominators differ | four slices from three S-HT animals showed bursting | PMID 33914858, Figure 2 legend panel B, journal page 3067, same PDF, page 7 rendered at 110 dpi
 5. Where the heterozygote enters a test at all, it is as the comparator of the homozygote | In vivo 12–20 Hz shows elevated power in S-KO as compared with S-HT and 7–15 Hz for S-KO as compared with S-Control | PMID 33914858, Figure 2 legend panel D, journal page 3067, same PDF, page 7 rendered at 110 dpi
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261003_005` · 2026-10-03 · ACTOR_ID `scientist` (Scientist J, batch integrator), under the operator's standing authorisation *«procedi sempre»*
+**Operations applied:** 1
+**Change class as judged by the batch:** MINOR (§7) — every target's live `Status` was read from the registry before judging.
+
+`CLAIM 045` (`in observation`) — the clause *«non è riportato alcun endpoint di mielina, di imaging o comportamentale»* is narrowed to *mielina o imaging*, and the behavioural half is recorded as **asserted and not measured** rather than absent. The candidate's `old` string was re-measured in the live record first: `CLAIM 045` landed with `BATCH_20261003_003`, and the clause is present verbatim and unique. **Trimmed:** the candidate's second repair (the Figure 2 denominators) is largely already in the landed `Bound` line, so only its exact animal-level counts were added — three of fourteen S-HT, twenty of twenty-four S-KO, both verified on the rendered page — with the reconciliation labelled an `INFERENZA`, since neither surface states why the denominators differ. One audit amendment travels inside the claim: the two quoted sentences say nothing about whether a measurement was shown, so the absence of n, test and figure is recorded as an **earned zero** over the whole article and supplement.
+
+**Nothing above this line was rewritten.**

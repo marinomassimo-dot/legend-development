@@ -88,3 +88,16 @@ and renumbers before `--apply`.
 
 1. The paper this candidate lands is the neuronal-deletion study whose own abstract states the myelin and excitability findings | Wwox-mutant mice exhibited reduced maturation of oligodendrocytes, reduced myelinated axons and impaired axonal conductivity | PMID 33914858, Abstract, journal page 3061, `files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.pdf` PDF page 1 rendered at 110 dpi
 2. The paper's reagents and primers live in a supplementary table, which is why the deposited archive had to be opened to audit them | All antibodies and primer sequences used in this study and the related details are provided in Supplementary Table 3. | PMID 33914858, Materials and methods, Immunofluorescence, journal page 3063, same PDF, page 3 rendered at 110 dpi
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261003_005` · 2026-10-03 · ACTOR_ID `scientist` (Scientist J, batch integrator), under the operator's standing authorisation *«procedi sempre»*
+**Operations applied:** 2
+**Change class as judged by the batch:** MINOR (§7) — every target's live `Status` was read from the registry before judging.
+
+`LIT-0110` resolved: `Status` set to the bare vocabulary value `processed`, pathway assigned, and the row kept as a discovery trace pointing at `PAPER 004`. 🔴 **The `CORPUS-STUB-087` retirement op was DROPPED, as the candidate's own ordering note instructed**, because the wave-4 twin `CC-20261003W4-B-REGISTRY-01` already propagated it with `BATCH_20261003_003`. Measured, not assumed: the live stub reads `Status: superseded — identità duplicata` and names that batch's candidate. No second retirement was written and nothing was deleted. **No depth marker was restated on `LIT-0110`** — a deliberate choice, so this row adds no reading to any coverage denominator for a PMID that `PAPER 004` already declares.
+
+**Nothing above this line was rewritten.**

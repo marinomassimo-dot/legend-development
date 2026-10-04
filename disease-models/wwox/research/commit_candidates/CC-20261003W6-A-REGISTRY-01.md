@@ -190,3 +190,16 @@ None of the six papers is the primary behind an existing registry statement. Two
 - (The HYAL-2/WWOX/SMAD4 experiment re-presented in Figure 1 used transfected tagged constructs in DU145 prostate cancer cells. | (A,B) WWOX functional prostate DU145 cells were transfected with three indicated expression plasmids tagged with ECFP, EGFP, or DsRedl and then added native HA. | PMID 40507943, Figure 1 legend, `files/fulltext/PMID40507943_Hsu2025_PMC.xml`)
 - (The authors state that whether the HYAL-2/WWOX/SMAD4 complex is overexpressed in vivo is unknown. | Whether the HYAL-2/WWOX/SMAD4 complex is overexpressed in vivo is unknown. | PMID 40507943, Section 6.6, `files/fulltext/PMID40507943_Hsu2025_PMC.xml`)
 - (The review calls WWOX a risk factor for Alzheimer's disease, citing refs 5, 29, 204, 205 and 206. | WWOX is a known tumor suppressor and is a risk factor for Alzheimer’s disease [5,29,204,205,206]. | PMID 40507943, Section 6.1, `files/fulltext/PMID40507943_Hsu2025_PMC.xml`)
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261003_005` · 2026-10-03 · ACTOR_ID `scientist` (Scientist J, batch integrator), under the operator's standing authorisation *«procedi sempre»*
+**Operations applied:** 22
+**Change class as judged by the batch:** MINOR (§7) — every target's live `Status` was read from the registry before judging.
+
+`PAPER 195`–`200` and `LIT-0488`–`0493` created; `CORPUS-STUB-033` promoted to a pointer at `PAPER 196`; `LIT-0059` corrected in eight fields, clinical relevance HIGH → LOW included. **Renumbered** from the candidate's provisional `PAPER 168`–`173` / `LIT-0454`–`0459`: every one of those was taken by `BATCH_20261003_004`. The `LIT link` wikilinks, the `CORPUS-STUB-033` and `LIT-0059` cross-references and the first `insert-after` anchor (`PAPER 164` → `PAPER 194`, group B's last record) all moved with their targets, and a stale-id guard asserted that no pre-remap identifier survived in any op. `partial full text` was added beside every `partial_fulltext_read` so `coverage_report.py` does not classify those records as `abstract`. Closes the standing `ORPHAN_COMPLETE_READ` blocks on PMIDs 36291747, 40507943 and 42135313.
+
+**Nothing above this line was rewritten.**

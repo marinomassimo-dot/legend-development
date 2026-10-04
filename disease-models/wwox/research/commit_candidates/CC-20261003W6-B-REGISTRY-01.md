@@ -107,3 +107,16 @@ The six receipts `FTR-20261003-<pmid>-01` must be appended before propagation.
 (58 of the unknown-etiology cases were never genetically tested | 165 cases (45.7%, including 58 that were not genetically tested) were classified as unknown | PMID 39850204, Results para 1; files/fulltext/PMID39850204_Zhu2025_PMC.xml)
 (WWOX is placed in an enzyme-synthesis grouping | enzyme synthesis-related: NARS1, MECP2, UBA5, CLU4B, WWOX, RAB3GAP1, and IARS2 | PMID 39850204, Discussion; files/fulltext/PMID39850204_Zhu2025_PMC.xml)
 (WWOX is in the autosomal-recessive gene list | TBC1D24; TBCD; TNK2; UGP2; VRK2; WWOX | PMID 38540325, Table 2; files/fulltext/PMID38540325_Snyder2024_PMC.xml)
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261003_005` · 2026-10-03 · ACTOR_ID `scientist` (Scientist J, batch integrator), under the operator's standing authorisation *«procedi sempre»*
+**Operations applied:** 12
+**Change class as judged by the batch:** MINOR (§7) — every target's live `Status` was read from the registry before judging.
+
+`PAPER 189`–`194` and `LIT-0482`–`0487` created. **Renumbered** from the provisional `PAPER 157`–`162` / `LIT-0450`–`0455`; the candidate's declared ordering was honoured (group C first, then B, then A), so its first anchors became `PAPER 188` and `LIT-0481`, group C's last records. `partial full text` added beside every `partial_fulltext_read`.
+
+**Nothing above this line was rewritten.**
