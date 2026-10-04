@@ -121,8 +121,14 @@ The practical consequence runs the other way from the one recorded here: this pa
 
 ### OP 5 — `disease-models/wwox/research/commit_candidates/CC-20260921-WWOX-ENZYMOLOGY-P306-01.md` · **append** a dated disposition
 
+> ⚠️ **Executor note.** The first line below is written here as `## <DISPOSITION-HEADING>` on
+> purpose. Expand it to the queue's standard batch-disposition h2 heading when appending, reading
+> `— intake wave 10 (2026-10-04, ACTOR_ID scientist, Scientist X), append-only`. It is held back
+> because `growth_anchors.py` parses that literal heading wherever it appears and would read a
+> disposition block quoted inside a candidate as a disposition **of** that candidate.
+
 ```text
-## BATCH DISPOSITION — intake wave 10 (2026-10-04, ACTOR_ID scientist, Scientist X), append-only
+## <DISPOSITION-HEADING> — intake wave 10 (2026-10-04, ACTOR_ID scientist, Scientist X), append-only
 
 **Nothing above this line was rewritten.**
 
