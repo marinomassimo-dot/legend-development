@@ -1,0 +1,239 @@
+{
+ "schema_version": 2,
+ "pmid": "41835067",
+ "doi": "10.3389/fneur.2026.1742186",
+ "receipt": "FTR-20261004-41835067-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID41835067.md",
+  "disease-models/wwox/research/intake_wave_20261004w8_A.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W8-A-PATIENT-OVERLAP-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W8-A-REGISTRY-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "A single re-analysed case with DNA-only evidence; nothing to mine beyond the patient-count record."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No intervention is tested."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is tested."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "A reader cannot audit their own locators."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "A paediatric genetics and CP-referral network re-analysing exome/genome data with deep phenotyping. Credible on re-analysis yield; no functional data for WWOX."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "registry_records.py get --pmid 41835067 (LEGEND)",
+    "count": 0,
+    "source": "LEGEND registries 2026-10-04"
+   },
+   {
+    "query": "fulltext_receipts.py status --pmid 41835067",
+    "count": 0,
+    "source": "receipt ledger 2026-10-04"
+   },
+   {
+    "query": "registry_records.py get --theme L239R (after first pass)",
+    "count": 7,
+    "source": "LEGEND registries 2026-10-04"
+   }
+  ],
+  "note": "LEGEND holds no record of this paper; it holds two other sources of homozygous p.Leu239Arg (PAPER 013, PAPER 145) under a counting caution, and queues Serin 2018 (PMID 30094525)."
+ },
+ "multihop": {
+  "references_enumerated": 49,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "disposition": "49 references enumerated from the JATS ref-list; none is a WWOX gene-direct reference (earned null). The paper cites no prior report of p.Leu239Arg although it applies PP5."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 41835067; --theme L239R after the first pass; CC-20261003W3-A-L239R-01 and CC-20261003W5-B-PATIENT-OVERLAP-01 read for the counting rule",
+  "hits": 7,
+  "note": "The L239R hits are PAPER 013 (two siblings), PAPER 145 (one child, identity with PAPER 013 case 49 not excluded), their LIT/FT records and two ledger entries; none names this paper."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-04 via PubMed metadata (get_article_metadata): publication types ['Journal Article']; no retraction, expression of concern or correction listed for PMID 41835067.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 49,
+   "references_screened": 45,
+   "references_with_doi": 45,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 24,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 4
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41835067_Yigit2026_PMC.xml",
+   "sha256": "73feb677144d9678e7deaf41a918a9aa93912297466b6da2f010a26ef443df62",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12979860/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": false,
+    "result_sha256": "73feb677144d9678e7deaf41a918a9aa93912297466b6da2f010a26ef443df62"
+   }
+  },
+  {
+   "path": "files/supplements/PMID41835067/s.zip",
+   "sha256": "e396ae8ec7ff2fb2b58d005622a8ea3487899dad953129d791c6ec54bd0a4ce8",
+   "kind": "supplement_binary",
+   "note": "Europe PMC supplementaryFiles container for PMC12979860, kept unchanged; the members cited below were extracted from it byte-for-byte.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12979860/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": false,
+    "result_sha256": "e396ae8ec7ff2fb2b58d005622a8ea3487899dad953129d791c6ec54bd0a4ce8"
+   }
+  },
+  {
+   "path": "files/supplements/PMID41835067/Supplementary_file_1.docx",
+   "sha256": "040752c0de81a93ac3000473737ec21a627e9fd947b95eb2b1a6d14bab309c0e",
+   "kind": "supplement_text",
+   "note": "Supplementary file 1: clinical summaries of every case, workflow and enrichment figures; the WWOX case summary read in full.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12979860/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip, member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": true,
+    "derived_from": "files/supplements/PMID41835067/s.zip",
+    "extractor": {
+     "name": "python3 -m zipfile",
+     "version": "Python 3.12",
+     "call": "zipfile -e, member written byte-for-byte"
+    },
+    "result_sha256": "040752c0de81a93ac3000473737ec21a627e9fd947b95eb2b1a6d14bab309c0e"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC12979860/fullTextXML on 2026-10-04 returned HTTP 200 with a <body>; Tables 1 and 2 are JATS tables and the clinical narrative is in the deposited Supplementary file 1.",
+  "entries": [
+   {
+    "proposition": "Table 2 reports the WWOX case as homozygous for c.716T>G p.(Leu239Arg) with segregation from both parents, classified Pathogenic on PP3, PM3, PM2 and PP5 (PP5 = prior reputable report), annotated to both DEE28 and SCAR12; the only measurement is DNA and segregation.",
+    "snippet": "CP_P14.1 WWOX NM_016373.4: c.716 T > G (p. Leu239Arg) – Missense Developmental and epileptic encephalopathy 28 (MIM #616211) Spinocerebellar ataxia, autosomal recessive 12 (MIM #614322) Intrauterine growth retardation Hom",
+    "anchor": "Table 2, row CP_P14.1 (JATS table, read cell-wise)",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID41835067_Yigit2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The ACMG evidence printed for the allele is computational, segregation/recessive and prior-report evidence only.",
+    "snippet": "Hom (maternal paternal) P (PP3, PM3, PM2, PP5)",
+    "anchor": "Table 2, row CP_P14.1, ACMG classification cell",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID41835067_Yigit2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Phenotype band (Table 1): female, consanguineous parents, global developmental delay, hypotonia, seizures, spasticity, scoliosis and minor dysmorphic features.",
+    "snippet": "CP_P14.1 F 1,2 Yes Short neck, hypertelorism, scoliosis, global developmental delay, hypotonia, seizures and spasticity",
+    "anchor": "Table 1, row CP_P14.1 (JATS table, read cell-wise)",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID41835067_Yigit2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The supplementary clinical narrative gives seizure onset in the neonatal period (tonic-clonic seizures from two weeks of age) — a datum the main tables do not carry.",
+    "snippet": "Tonic-clonic seizures began at two weeks of age , and anti- seizure medication was initiated .",
+    "anchor": "Supplementary file 1, clinical summary CP_P14.1",
+    "surface": "supplement",
+    "artifact": "files/supplements/PMID41835067/Supplementary_file_1.docx",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Motor band in the narrative: unable to sit independently, with spasticity and significant kyphoscoliosis.",
+    "snippet": "She is unable to sit independently and presents with spasticity and significant kyphoscoliosis .",
+    "anchor": "Supplementary file 1, clinical summary CP_P14.1",
+    "surface": "supplement",
+    "artifact": "files/supplements/PMID41835067/Supplementary_file_1.docx",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The WWOX patient had a prior negative clinical-exome and microarray result, i.e. the allele was found on re-analysis.",
+    "snippet": "No causal variant was detected in initial CES or microarray analysis . The patient’s brother",
+    "anchor": "Supplementary file 1, clinical summary CP_P14.1",
+    "surface": "supplement",
+    "artifact": "files/supplements/PMID41835067/Supplementary_file_1.docx",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Discussion names WWOX only as an example of the epileptic-encephalopathy subgroup reached by reverse phenotyping; there is no WWOX-specific analysis.",
+    "snippet": "particularly epileptic encephalopathies [e.g., WWOX (MIM: 605131), ATP1A3 (MIM: 619606)]",
+    "anchor": "Discussion, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41835067_Yigit2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors themselves list functional validation of clinically relevant variants as missing, and their phenotype data as retrospective and possibly incomplete.",
+    "snippet": "clinical and phenotypic data were collected retrospectively, and Human Phenotype Ontology (HPO) terms were extracted from hospital-based records",
+    "anchor": "Discussion, limitations paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41835067_Yigit2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}
