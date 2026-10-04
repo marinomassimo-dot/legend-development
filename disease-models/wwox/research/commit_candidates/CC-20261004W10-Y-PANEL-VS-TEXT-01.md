@@ -90,3 +90,23 @@ precise state than "unaudited".
 3. (The abstract states the accumulation as a joint G2/M-and-S statement | `dynamics leading to an accumulation of cells in the G2/M and S phases, overexpression of the ` | `files/fulltext/PMID42397075_Steinberg2026_OUP-AM_fitz.txt`, Abstract)
 4. (The phase panel raises the S and G2M bins while the M bin falls, with no error bars and no significance marks | `[figure attestation] Figure 4C, 'cell cycle phase changes in KO versus WT RG cells', x-axis 'cell proportion log2 FC (KO/WT)': S about +0.77, G2M about +0.50, M about -0.37, G1/G0 about -0.28; panel A declares WWOX-KO n=2396 cells and WT n=2152 cells` | `files/fulltext/PMID42397075_Steinberg2026_assets/figs/fig_p35_1430x749.png`, Figure 4 panels A and C)
 5. (The paper names the A51 compound as a multi-kinase inhibitor, and that experiment exists only in the published version | `this end, we performed a MYC inhibition experiment, using a multi-kinase inhibitor (A51)` | `files/fulltext/PMID42397075_Steinberg2026_OUP-AM_layout.txt`, Results; absent from `files/fulltext/PPR960425_Steinberg2025_bioRxiv-v2.full_layout.txt`, where the token count is zero)
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261004_004` (2026-10-04, ACTOR_ID `scientist`, Scientist N), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** PROPAGATED — **both ops landed. Op 2's provisional target was re-measured and is a different record from the one the candidate named, and one of its two factual premises was wrong.**
+
+**Class, re-judged:** **MINOR**. `PAPER 094` gains panel-versus-text qualifications; no claim's `Status`, `Type`, `Summary`, `Transferability` or `Source` moves and no measurement is withdrawn.
+
+**Blind locator audit (separate sub-agent, 5 triples, Fig. 2F measured at 600 dpi and Fig. 4C on the native raster):** **5/5 SUPPORTED**, 0 UNVERIFIABLE, with two fidelity notes that were folded in.
+
+🔴 **Op 2's target was `DL-THER-081` and that lead no longer carries this content.** The entry was renumbered to **`DL-THER-089`** on 2026-08-10, in a declared merge-collision note in the ledger itself; `DL-THER-081` is a different lead. The candidate marked the op provisional and asked the integrator to measure the old string or drop it — it was measured, the target corrected, and the op applied to `DL-THER-089`, with the renumbering named inside the landed text so the next reader is not sent back to the wrong id.
+
+🔴 **And the op's premise was half wrong, which the audit caught.** The lead's **dose and schedule are printed in the article itself** (*«A51 drug (125 nM), from week 8 to week 15 in vitro»*, with the compound credited in the Acknowledgements), so they are verifiable today on the re-acquired artefact. What is un-re-verifiable is narrower and was landed as such: the **Suppl. Fig. 7F–G panel values**. The preprint finding stands exactly as measured — `A51` 0 against 3, `MYC inhibition` 0 against 5, `multi-kinase` 0 against 1, the experiment added in revision — and the auditor added that none of the preprint's nine `inhibitor` hits is a MYC-inhibition experiment.
+
+🔵 **Two fidelity notes folded into `PAPER 094`'s `Role`.** (a) The paper's running text does qualify itself — *«This result was more pronounced in the WWOX-KO organoids, compared to the WOREE organoids»* — so the landed finding is stated fairly: what panel 2F contradicts is *«SCAR12 similar to WT»*, since **WOREE's radial-glia deviation (+0.05 to +0.08) is the smallest of the three** while **SCAR12's is about −0.25 and of the opposite sign**. (b) The radial-glia bar was verified to be a **colour composite** of the subtypes at 600 dpi, so the composite caveat is kept with the finding, and the ordering is what survives it. Fig. 4C was confirmed to carry **no error bars and no significance marks** by a pixel scan of the panel's gaps and margins.
+
+**Not medical advice.**

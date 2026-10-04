@@ -8736,7 +8736,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Identifier:** PMID 21476439 / DOI 10.1515/znc-2011-1-210
 **Date discovered:** 2026-04-18
 **Date screened:** 2026-04-18
-**Date processed:** triage only
+**Date processed:** 2026-10-04
 **Date last touched:** 2026-04-18
 **Discovery window:** FASE 1 triage 221–400
 **Discovery source:** 400_paper.txt batch corpus
@@ -8753,11 +8753,11 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Directness to the reference genotype:** unassigned in triage
 **Over-inference risk:** standard triage — not evaluated
 **clinical relevance:** HIGH
-**Claim links:** none — triage only
+**Claim links:** none — read in full, supports no canonical claim. PAPER link: [[paper_registry_current#PAPER 244]].
 **Working Model impact:** none yet
 **Report mentions:** FASE 1 triage 221–400
-**Current status:** queued for deep-dive — A; unacquired, not unread
-**Next action:** record as UNACQUIRED, not unread — hybrid-OA publisher PDF exists at DOI 10.1515/znc-2011-1-210 and is blocked only by an automated-traffic challenge; one human fetch closes it (FT-130 / packet A11). Do not re-run automated acquisition.
+**Current status:** READ IN FULL 2026-10-04 — version-of-record PDF held, receipt `FTR-20261004-21476439-01`, manifest PASS 0 gaps, blind locator audit over 17 triples; registered as [[paper_registry_current#PAPER 244]]
+**Next action:** none for acquisition — acquired and read 2026-10-04. The open reading debt moves to its references: PMID 10786676 (the WWOX discovery paper, carried in the Introduction's SDR interpretation; ⚠️ note that the sentence giving the `GANSGIG` and `YNRSK` motif coordinates carries **no citation of its own** — the discovery-paper citation governs a different, adjacent statement, measured by blind audit 2026-10-04 — so this is a debt on the interpretation, not on a cited coordinate), PMID 11896615 and PMID 12829805. See the manifest's multihop block.
 **Flags:** FASE 1 batch entry / no deep-dive yet
 **Note:** Title: WWOX oxidoreductase--substrate and enzymatic characterization
 
@@ -14178,7 +14178,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Authors:** Zhao X, Rigobello R, Driver M, et al.; Xia F, Eng CM
 **Year:** 2026
 **Source type:** primary research — retrospective clinical-laboratory series with a validated RNA assay
-**Journal/source:** *NPJ Genom Med* 2026;11
+**Journal/source:** *NPJ Genom Med* 2026;11:52 [article number added 2026-10-04 by `BATCH_20261004_004` from the JATS front matter's `elocation-id`, Mirror note F7]
 **Identifier type:** PMID / DOI / PMCID
 **Identifier value:** PMID 42248868 / DOI 10.1038/s41525-026-00571-2 / PMC13562735
 **Date discovered:** 2026-10-04 (Orchestrator selection record, intake wave 7, group B)

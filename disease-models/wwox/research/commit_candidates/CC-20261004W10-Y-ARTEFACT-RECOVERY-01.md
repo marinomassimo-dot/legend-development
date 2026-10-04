@@ -79,3 +79,28 @@ unmet**, and the record should say which half moved.
 1. (The acquired artefact is the same document as the one the earlier receipts declare, and the digest difference is a per-page download stamp | `Downloaded from academic.oup.com/brain/advance-article/doi/10.1093/brain/awag239/8724067 by guest on 04 October 2026` | every page of `files/fulltext/PMID42397075_Steinberg2026_OUP-AM.pdf`, 36 occurrences in the derived text `files/fulltext/PMID42397075_Steinberg2026_OUP-AM_fitz.txt`)
 2. (One of the two body-surface qualifications CLAIM 002 names verifies verbatim in the newly acquired artefact | `No randomization or blinding was applied in this study` | `files/fulltext/PMID42397075_Steinberg2026_OUP-AM_fitz.txt`, Statistical analysis)
 3. (The published supplement is where the detailed methods live, which is why the article alone cannot supply them | `A detailed Materials and methods section is provided in the Supplementary material.` | `files/fulltext/PMID42397075_Steinberg2026_OUP-AM_fitz.txt`, Materials and methods, p. 4)
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261004_004` (2026-10-04, ACTOR_ID `scientist`, Scientist N), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** PROPAGATED — **all three ops landed; one clause was weakened by the audit and one over-statement withdrawn.**
+
+**Class, re-judged:** **MINOR, baseline-touching.** `CLAIM 002` is `consolidated baseline`, so the blind audit was mandatory even though the op adds boundary text and narrows nothing: no `Status`, `Type`, `Summary`, `Transferability` or `Source` moved, and the `Source` repointing stays DEFERRED for its original reason.
+
+**Step 0 of this batch, before any audit was dispatched:** `evidence_presence.py` over this PMID reported **19 of 35 artefacts present**, and `--search` over the whole host by SHA-256 recovered **none** of the sixteen absent ones. So *«the supplement is absent»* is a **measurement**, not an assumption — and this is the first batch in which the distinction between *artefact missing* and *audit not needed* was drawn before the audits rather than after.
+
+**Blind locator audit (separate sub-agent, 4 triples):** 4 QUOTE_FOUND, 3 SUPPORTED, **1 clause `UNVERIFIABLE_SURFACE`**, 1 SOURCE_SAYS_MORE.
+
+🔴 **The two repairs made at source before landing.**
+
+1. **The stamp is the observed difference, not a proven cause.** The candidate wrote that the file digest differs *because* the publisher stamps each page. The audit could not verify causation — no second download was available to compare — so every landed sentence now says that the per-page download stamp is **the only difference found**, and that no second download was compared. The identity of the document still rests on content: six figure digests byte-for-byte, fifteen body snippets verbatim.
+2. **The article is not without methods.** *«The article alone cannot supply them»* overstated: the article carries brief *Cell Culture and Maintenance* and *Statistical analysis* subsections, and it is the **detailed** Materials and methods that lives in the supplement. `CLAIM 002` now says exactly that.
+
+**Ops as landed.** Op 1 → `PAPER 094` `Evidence depth` (record-scoped; the sixteen-artefact loss and the SHA-256 sweep recorded). Op 2 → `CLAIM 002`'s unblocking condition (record-scoped). Op 3 → `PAPER 001`'s supersession note (record-scoped).
+
+**The candidate's own DEFAULTS_TAKEN is upheld:** no legacy artefact path was renamed and no manifest entry deleted, so the locator-to-artefact binding of readings already in the hash-chained ledger is untouched.
+
+**Not medical advice.**
