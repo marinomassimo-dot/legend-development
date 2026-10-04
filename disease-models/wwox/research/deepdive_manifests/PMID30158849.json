@@ -284,7 +284,7 @@
         "artifact": "files/fulltext/PMID30158849_Liu2018_PMC.xml"
       },
       {
-        "proposition": "The deposited file labelled 'TABLE S1 Functional comparison between ER and WWOX in neurodegeneration' does not hold that comparison. It holds brain-structure expression z-scores: sheet 1 has 168 structure rows (frontal-lobe gyri onward) under the columns top_level_structure_name, Structure_name, Structure_abbreviation and Z-score; sheet 2 is the subset with |z| of at least 1. These are the data behind Figure 2A. The ER/WWOX comparison its caption names is the in-body Table 1. The file names no residue and no phospho-site.",
+        "proposition": "The deposited file labelled 'TABLE S1 Functional comparison between ER and WWOX in neurodegeneration' does not hold that comparison. It holds brain-structure expression z-scores: sheet 1 has 169 structure rows (frontal-lobe gyri onward) under the columns top_level_structure_name, Structure_name, Structure_abbreviation and Z-score; sheet 2 is the subset with |z| of at least 1. These are the data behind Figure 2A. The ER/WWOX comparison its caption names is the in-body Table 1. The file names no residue and no phospho-site.",
         "snippet": "B2=top_level_structure_name | C2=Structure_name | D2=Structure_ abbreviation | E2=Z-score",
         "surface": "supplement",
         "artifact": "files/figures/PMID30158849/Table_1_xlsxdump.txt",
