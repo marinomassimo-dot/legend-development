@@ -117,3 +117,25 @@ response is byte-identical (SHA-256) to the copy the Orchestrator had staged, an
 - Class transfer: an intron-5 acceptor allele and a single-exon deletion. Not the reference genotype's class (the
   reference splice allele named in LEGEND's ASO skill is an intron-8 acceptor). **No transfer.**
 - References: 36; no WWOX gene-direct reference.
+
+## A4 · PMID 41835067 (Yigit 2026) — first pass (written before any registry or candidate comparison)
+
+- 66 exome/genome-unsolved children with a preliminary clinical diagnosis of cerebral palsy (CP), re-analysed
+  with deep phenotyping; 24 of 66 received a P/LP diagnosis. WWOX is one row of Table 2 (case CP_P14.1) and is
+  named once in the Discussion as an example of the epileptic-encephalopathy subgroup.
+- Genotype class: **homozygous missense `NM_016373.4:c.716T>G p.(Leu239Arg)`** — not compound heterozygous; the
+  selection note's "zygosity and the second allele are not visible in the retrieved body" is wrong: Table 2 prints
+  "Hom" with segregation from both parents (parents' origin columns are not carried here).
+- ACMG: Pathogenic, `PP3, PM3, PM2, PP5` — **PP5 means it is classified partly on a prior reputable report**,
+  i.e. the allele is not new to the literature. gnomAD v4 frequency cell: "–".
+- Disorder column lists both DEE28 (MIM 616211) and SCAR12 (MIM 614322); no adjudication between them.
+- Phenotype band (Table 1): female young child (last examination in the second year of life), consanguineous
+  parents, global developmental delay, hypotonia, seizures, spasticity, scoliosis, short neck, hypertelorism.
+  CP risk factor recorded: intrauterine growth retardation.
+- **Measured:** DNA and segregation only. **Predicted:** consequence of `p.(Leu239Arg)` (PP3). No RNA, protein,
+  enzymatic, localisation or patient-cell assay.
+- Referral path: a CP-labelled stream. The Discussion endorses keeping the CP diagnosis when the phenotype fulfils
+  the consensus definition, rather than reclassifying as a mimic.
+- Class transfer: a homozygous SDR-region missense (residue 239) is not Q230P and is not a splice allele. **No
+  transfer**, not even "missense ≈ missense".
+- References: 49; no WWOX gene-direct reference.
