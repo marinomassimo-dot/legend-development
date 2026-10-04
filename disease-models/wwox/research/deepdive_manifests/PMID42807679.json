@@ -1,206 +1,324 @@
 {
- "schema_version": 2,
- "pmid": "42807679",
- "doi": "10.3389/fgene.2026.1815268",
- "receipt": "FTR-20261004-42807679-01",
- "context_policy": "SOURCE_FIRST",
- "landing": [
-  "disease-models/wwox/research/fulltext_dossiers/PMID42807679.md",
-  "disease-models/wwox/research/intake_wave_20261004w7_B.md",
-  "disease-models/wwox/research/commit_candidates/CC-20261004W7-B-REGISTRY-01.md",
-  "disease-models/wwox/research/commit_candidates/CC-20261004W7-B-PATIENT-OVERLAP-01.md",
-  "disease-models/wwox/research/commit_candidates/CC-20261004W7-B-CNV-CARRIER-01.md"
- ],
- "skills_considered": [
-  {
-   "skill": "find-fulltext",
-   "used": true
-  },
-  {
-   "skill": "legend-study-intake-triage",
-   "used": true
-  },
-  {
-   "skill": "legend-deepdive",
-   "used": true
-  },
-  {
-   "skill": "legend-discovery",
-   "used": false,
-   "reason": "The discovery ledger is owned by other batches; what this reading supports is proposed as commit candidates and in the intake note."
-  },
-  {
-   "skill": "legend-hypothesis-forge",
-   "used": false,
-   "reason": "A diagnostic cohort or method record supplies no new therapeutic lever; forging hypotheses from it would manufacture a lead."
-  },
-  {
-   "skill": "legend-safety-triage",
-   "used": false,
-   "reason": "No compound is proposed by this source."
-  },
-  {
-   "skill": "legend-commit",
-   "used": false,
-   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
-  },
-  {
-   "skill": "legend-locator-audit",
-   "used": false,
-   "reason": "The triples are published in the candidates for a blind auditor; the reader cannot audit their own locators."
-  }
- ],
- "group_assessment": {
-  "total_publications": 1,
-  "publications_on_gene": 0,
-  "research_type": "descriptive_clinical",
-  "is_primary_group_for_disease": false,
-  "weighting": "Referral-centre CCA cohort; WWOX appears only inside a contiguous 16q deletion. Credible cytogenetics; no WWOX-specific evidence."
- },
- "field_density": {
-  "queries": [
-   {
-    "query": "WWOX AND (copy number OR deletion) AND (epilepsy OR neurodevelopmental)",
-    "count": 27,
-    "source": "PubMed ESearch rettype=count 2026-10-04"
-   }
+  "schema_version": 2,
+  "pmid": "42807679",
+  "doi": "10.3389/fgene.2026.1815268",
+  "receipt": "FTR-20261004-42807679-01",
+  "context_policy": "SOURCE_FIRST",
+  "landing": [
+    "disease-models/wwox/research/fulltext_dossiers/PMID42807679.md",
+    "disease-models/wwox/research/intake_wave_20261004w7_B.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261004W7-B-REGISTRY-01.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261004W7-B-PATIENT-OVERLAP-01.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261004W7-B-CNV-CARRIER-01.md"
   ],
-  "note": "27 PubMed records; this one adds a heterozygous contiguous deletion carrier, not an allele-class observation."
- },
- "multihop": {
-  "references_enumerated": 30,
-  "gene_direct_refs_in_source": [],
-  "resolved": [],
-  "queued": [],
-  "note": "30 references enumerated (author-year citation style); none concerns WWOX (WWOX occurs twice in the XML, both in Table 3)."
- },
- "corpus_crossquery": {
-  "query": "registry_records.py get --pmid 42807679 (run AFTER the first pass); allele-term theme searches for the comparison",
-  "hits": 0,
-  "note": "No PAPER/LIT identity record and no receipt before this reading. Bears on CLAIM 032 carrier annotations (cf. PAPER 176); cannot bear on the Tabarki 2015 overlap."
- },
- "retraction_check": {
-  "checked": true,
-  "dependencies": {
-   "flagged": [],
-   "noted": [],
-   "paper_verdict": "SCREENED_CLEAN",
-   "reference_source": "network",
-   "references_declared": 30,
-   "references_screened": 30,
-   "references_with_doi": 30,
-   "schema": "retraction_check.dependencies/1",
-   "screened": true,
-   "snapshot": {
-    "date": "2026-09-10",
-    "days_since_fetch": 24,
-    "rows": 72476,
-    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
-   },
-   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
-   "unscreenable": {}
-  },
-  "result": "Checked 2026-10-04 via PubMed metadata (get_article_metadata): publication types ['Journal Article']; no retraction, expression of concern or correction listed for PMID 42807679."
- },
- "source_artifacts": [
-  {
-   "path": "files/fulltext/PMID42807679_Khadija2026_PMC.xml",
-   "sha256": "e907bc5520981633a38355c42df452f7216f9ac9791a459b9e760a29685736aa",
-   "kind": "article_text",
-   "note": "Europe PMC fullTextXML; body, Tables 1-4 (cell-wise), seven figure legends, references.",
-   "acquisition_recipe": {
-    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13617407/fullTextXML",
-    "http_method": "GET",
-    "tier": "Europe PMC REST fullTextXML",
-    "user_agent_policy": "none",
-    "acquired_on": "2026-10-04",
-    "derived": false,
-    "result_sha256": "e907bc5520981633a38355c42df452f7216f9ac9791a459b9e760a29685736aa"
-   }
-  },
-  {
-   "path": "files/fulltext/PMID42807679_Khadija2026_supplement/Supplementaryfile1.docx",
-   "sha256": "8fee38f22d9fec6e5a4250ed58e6b288af8077533f562c097b88d1cfa6e55c63",
-   "kind": "supplement_text",
-   "note": "STROBE checklist only.",
-   "acquisition_recipe": {
-    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13617407/supplementaryFiles",
-    "http_method": "GET",
-    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
-    "user_agent_policy": "none",
-    "acquired_on": "2026-10-04",
-    "derived": false
-   }
-  },
-  {
-   "path": "files/figures/PMID42807679/fgene-17-1815268-g007.webp",
-   "sha256": "3586dcbd5827357a37c70bcb4a6bf1dd9588b21b922022f93f5a6046d6568fd9",
-   "kind": "figure",
-   "note": "Figure 7 (STRING and GeneMANIA networks), inspected at 1600 px.",
-   "acquisition_recipe": {
-    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13617407/supplementaryFiles",
-    "http_method": "GET",
-    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
-    "user_agent_policy": "none",
-    "acquired_on": "2026-10-04",
-    "derived": false
-   }
-  }
- ],
- "verbatim_locators": {
-  "waived": false,
-  "entries": [
-   {
-    "proposition": "One male infant carries a de novo heterozygous 16q deletion including WWOX, ANKRD11, ZNF778, CDH15 and CDH13, with callosal dysgenesis, hydrocephaly and microcephaly.",
-    "snippet": "| P8 M1 M Dysgenesis of CC HydrocephalyMicrocephaly 46,XY Arr16q(74,718,51387,891,103)x1 L L WWOX ANKRD11 ZNF778 CDH15 CDH13 De novo P SCV007596007 Consistent with 16q23q24 microdeletion syndrome, including corpus callosum dysgenesis",
-    "anchor": "Table 3, row P8",
-    "surface": "table",
-    "artifact": "files/fulltext/PMID42807679_Khadija2026_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "Exome sequencing was limited to six selected patients.",
-    "snippet": "Whole-exome sequencing (WES) was performed in six selected patients whose clinical phenotype remained incompletely explained after chromosomal microarray analysis.",
-    "anchor": "Methods, Whole-exome sequencing",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID42807679_Khadija2026_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "Only four exome-sequenced patients carried variants, listed in Table 1.",
-    "snippet": "TABLE 1 Sequence variants identified by WES in four patients.",
-    "anchor": "Table 1 caption",
-    "surface": "table",
-    "artifact": "files/fulltext/PMID42807679_Khadija2026_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "Array coordinates are on hg18.",
-    "snippet": "Genomic coordinates were reported according to the hg18 human reference genome.",
-    "anchor": "Methods, array CGH",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID42807679_Khadija2026_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "The authors call the network analyses exploratory, not evidence of pathogenicity.",
-    "snippet": "these analyses provide functional context rather than independent evidence of pathogenicity and should therefore be considered exploratory.",
-    "anchor": "Discussion, Biological interpretation",
-    "surface": "body",
-    "artifact": "files/fulltext/PMID42807679_Khadija2026_PMC.xml",
-    "panel_text_relation": "text_only"
-   },
-   {
-    "proposition": "In the STRING panel WWOX is drawn linked to CYFIP1 and AFG3L2.",
-    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 7A STRING network: node WWOX joined by edges to CYFIP1 (one line) and AFG3L2 (multicoloured lines); the WWOX node carries no other edges.",
-    "anchor": "Figure 7, panel A, read at 1600 px",
-    "surface": "figure",
-    "artifact": "files/figures/PMID42807679/fgene-17-1815268-g007.webp",
-    "panel_text_relation": "panel_only"
-   }
+  "skills_considered": [
+    {
+      "skill": "find-fulltext",
+      "used": true
+    },
+    {
+      "skill": "legend-study-intake-triage",
+      "used": true
+    },
+    {
+      "skill": "legend-deepdive",
+      "used": true
+    },
+    {
+      "skill": "legend-discovery",
+      "used": false,
+      "reason": "The discovery ledger is owned by other batches; what this reading supports is proposed as commit candidates and in the intake note."
+    },
+    {
+      "skill": "legend-hypothesis-forge",
+      "used": false,
+      "reason": "A diagnostic cohort or method record supplies no new therapeutic lever; forging hypotheses from it would manufacture a lead."
+    },
+    {
+      "skill": "legend-safety-triage",
+      "used": false,
+      "reason": "No compound is proposed by this source."
+    },
+    {
+      "skill": "legend-commit",
+      "used": false,
+      "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+    },
+    {
+      "skill": "legend-locator-audit",
+      "used": false,
+      "reason": "The triples are published in the candidates for a blind auditor; the reader cannot audit their own locators."
+    }
   ],
-  "source_fulltext_indexed": true,
-  "source_fulltext_indexed_evidence": "Europe PMC REST fullTextXML returned HTTP 200 with a full JATS body on 2026-10-04; the declared article_text artefact is that response, byte for byte.",
-  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
- }
+  "group_assessment": {
+    "total_publications": 1,
+    "publications_on_gene": 0,
+    "research_type": "descriptive_clinical",
+    "is_primary_group_for_disease": false,
+    "weighting": "Referral-centre CCA cohort; WWOX appears only inside a contiguous 16q deletion. Credible cytogenetics; no WWOX-specific evidence."
+  },
+  "field_density": {
+    "queries": [
+      {
+        "query": "WWOX AND (copy number OR deletion) AND (epilepsy OR neurodevelopmental)",
+        "count": 27,
+        "source": "PubMed ESearch rettype=count 2026-10-04"
+      }
+    ],
+    "note": "27 PubMed records; this one adds a heterozygous contiguous deletion carrier, not an allele-class observation."
+  },
+  "multihop": {
+    "references_enumerated": 30,
+    "gene_direct_refs_in_source": [],
+    "resolved": [],
+    "queued": [],
+    "note": "30 references enumerated (author-year citation style); none concerns WWOX (WWOX occurs twice in the XML, both in Table 3)."
+  },
+  "corpus_crossquery": {
+    "query": "registry_records.py get --pmid 42807679 (run AFTER the first pass); allele-term theme searches for the comparison",
+    "hits": 0,
+    "note": "No PAPER/LIT identity record and no receipt before this reading. Bears on CLAIM 032 carrier annotations (cf. PAPER 176); cannot bear on the Tabarki 2015 overlap."
+  },
+  "retraction_check": {
+    "checked": true,
+    "dependencies": {
+      "flagged": [],
+      "noted": [],
+      "paper_verdict": "SCREENED_CLEAN",
+      "reference_source": "network",
+      "references_declared": 30,
+      "references_screened": 30,
+      "references_with_doi": 30,
+      "schema": "retraction_check.dependencies/1",
+      "screened": true,
+      "snapshot": {
+        "date": "2026-09-10",
+        "days_since_fetch": 24,
+        "rows": 72476,
+        "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+      },
+      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+      "unscreenable": {}
+    },
+    "result": "Checked 2026-10-04 via PubMed metadata (get_article_metadata): publication types ['Journal Article']; no retraction, expression of concern or correction listed for PMID 42807679."
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID42807679_Khadija2026_PMC.xml",
+      "sha256": "e907bc5520981633a38355c42df452f7216f9ac9791a459b9e760a29685736aa",
+      "kind": "article_text",
+      "note": "Europe PMC fullTextXML; body, Tables 1-4 (cell-wise), seven figure legends, references.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13617407/fullTextXML",
+        "http_method": "GET",
+        "tier": "Europe PMC REST fullTextXML",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "e907bc5520981633a38355c42df452f7216f9ac9791a459b9e760a29685736aa"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID42807679_Khadija2026_supplement/Supplementaryfile1.docx",
+      "sha256": "8fee38f22d9fec6e5a4250ed58e6b288af8077533f562c097b88d1cfa6e55c63",
+      "kind": "supplement_text",
+      "note": "STROBE checklist only.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13617407/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false
+      }
+    },
+    {
+      "path": "files/figures/PMID42807679/fgene-17-1815268-g007.webp",
+      "sha256": "3586dcbd5827357a37c70bcb4a6bf1dd9588b21b922022f93f5a6046d6568fd9",
+      "kind": "figure",
+      "note": "Figure 7 (STRING and GeneMANIA networks), inspected at 1600 px.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13617407/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false
+      }
+    },
+    {
+      "path": "files/figures/PMID42807679/fgene-17-1815268-g003.webp",
+      "sha256": "39505ed2a1a5e2b78e2e4fd125139788d4e60ee1ad12235018a422addba75ee5",
+      "kind": "figure",
+      "note": "Figure 3 image, viewed in wave 9. Figure 2 (patient photographs) was deliberately not opened.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13617407.1/fgene-17-1815268-g003.webp",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "39505ed2a1a5e2b78e2e4fd125139788d4e60ee1ad12235018a422addba75ee5"
+      }
+    },
+    {
+      "path": "files/figures/PMID42807679/fgene-17-1815268-g004.webp",
+      "sha256": "978e0d77a750f97ed623838193b1706650b1ddfda0bc7d3dbb4699ce34ada846",
+      "kind": "figure",
+      "note": "Figure 4 image, viewed in wave 9. Figure 2 (patient photographs) was deliberately not opened.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13617407.1/fgene-17-1815268-g004.webp",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "978e0d77a750f97ed623838193b1706650b1ddfda0bc7d3dbb4699ce34ada846"
+      }
+    },
+    {
+      "path": "files/figures/PMID42807679/fgene-17-1815268-g005.webp",
+      "sha256": "c90a24aa2b7291e814cbfee6f7735014d03e3022f3448f2b76d4ebbe2fe8c57f",
+      "kind": "figure",
+      "note": "Figure 5 image, viewed in wave 9. Figure 2 (patient photographs) was deliberately not opened.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13617407.1/fgene-17-1815268-g005.webp",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "c90a24aa2b7291e814cbfee6f7735014d03e3022f3448f2b76d4ebbe2fe8c57f"
+      }
+    },
+    {
+      "path": "files/figures/PMID42807679/fgene-17-1815268-g006.webp",
+      "sha256": "31b4bc97617a8d5366bc4a4edad0fad6d3905cf9ee560f210fc1117b406bc2b6",
+      "kind": "figure",
+      "note": "Figure 6 image, viewed in wave 9. Figure 2 (patient photographs) was deliberately not opened.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13617407.1/fgene-17-1815268-g006.webp",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "31b4bc97617a8d5366bc4a4edad0fad6d3905cf9ee560f210fc1117b406bc2b6"
+      }
+    }
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "entries": [
+      {
+        "proposition": "One male infant carries a de novo heterozygous 16q deletion including WWOX, ANKRD11, ZNF778, CDH15 and CDH13, with callosal dysgenesis, hydrocephaly and microcephaly.",
+        "snippet": "| P8 M1 M Dysgenesis of CC HydrocephalyMicrocephaly 46,XY Arr16q(74,718,51387,891,103)x1 L L WWOX ANKRD11 ZNF778 CDH15 CDH13 De novo P SCV007596007 Consistent with 16q23q24 microdeletion syndrome, including corpus callosum dysgenesis",
+        "anchor": "Table 3, row P8",
+        "surface": "table",
+        "artifact": "files/fulltext/PMID42807679_Khadija2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Exome sequencing was limited to six selected patients.",
+        "snippet": "Whole-exome sequencing (WES) was performed in six selected patients whose clinical phenotype remained incompletely explained after chromosomal microarray analysis.",
+        "anchor": "Methods, Whole-exome sequencing",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42807679_Khadija2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Only four exome-sequenced patients carried variants, listed in Table 1.",
+        "snippet": "TABLE 1 Sequence variants identified by WES in four patients.",
+        "anchor": "Table 1 caption",
+        "surface": "table",
+        "artifact": "files/fulltext/PMID42807679_Khadija2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Array coordinates are on hg18.",
+        "snippet": "Genomic coordinates were reported according to the hg18 human reference genome.",
+        "anchor": "Methods, array CGH",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42807679_Khadija2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The authors call the network analyses exploratory, not evidence of pathogenicity.",
+        "snippet": "these analyses provide functional context rather than independent evidence of pathogenicity and should therefore be considered exploratory.",
+        "anchor": "Discussion, Biological interpretation",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42807679_Khadija2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "In the STRING panel WWOX is drawn linked to CYFIP1 and AFG3L2.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 7A STRING network: node WWOX joined by edges to CYFIP1 (one line) and AFG3L2 (multicoloured lines); the WWOX node carries no other edges.",
+        "anchor": "Figure 7, panel A, read at 1600 px",
+        "surface": "figure",
+        "artifact": "files/figures/PMID42807679/fgene-17-1815268-g007.webp",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "TEXT: array-CGH profiles shown in Figure 6 are described as representative; the ten pathogenic or likely pathogenic patients (including P8) are listed in the Results text.",
+        "snippet": "Representative array-CGH profiles are shown in Figure 6",
+        "surface": "body",
+        "anchor": "Results, array-CGH",
+        "artifact": "files/fulltext/PMID42807679_Khadija2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "PANEL READING, Figure 6. The montage carries array-CGH or MLPA panels for P1, P2, P3, P5, P6, P7, P9, P10, P11, P12-P13, P14, P15, P16 and P17 (legend and panel labels agree). There is NO P8 panel: the 16q23q24 deletion that includes WWOX is evidenced in the paper only by its Table 3 row (hg18 interval, inheritance, classification), not by any profile, FISH or karyotype image. The paper calls the montage representative, so the omission is not a contradiction.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6 montage of 14 labelled panels: P1, P2, P3, P5, P6 (two chromosome views), P7, P9, P10 (MLPA table), P11, P12-13, P14, P15 (two views), P16, P17; no panel labelled P8 and no chromosome 16 profile.",
+        "surface": "figure",
+        "anchor": "Figure 6, all panels",
+        "artifact": "files/figures/PMID42807679/fgene-17-1815268-g006.webp",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[6]",
+        "qualifies_needle": "Representative array-CGH profiles",
+        "experimental_context": {
+          "system": "human patients with corpus callosum abnormalities",
+          "genotype": "array-CGH copy-number profiles",
+          "treatment": "none",
+          "timepoint": "n/a",
+          "comparator": "n/a",
+          "endpoint": "array-CGH profile images"
+        }
+      },
+      {
+        "proposition": "PANEL READING, Figures 4 and 5. Karyotype images are P5, P11 and P14 only; FISH images are P1, P2, P3, P4, P6, P11 and P14 only (as the legends state). No image carries P8, so no orthogonal confirmation of the 16q23q24 deletion is shown.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4: three karyotype panels labelled P5, P11, P14; Figure 5: eight FISH metaphase panels labelled P1, P2, P2, P3, P4, P6, P11, P14.",
+        "surface": "figure",
+        "anchor": "Figures 4 and 5",
+        "artifact": "files/figures/PMID42807679/fgene-17-1815268-g005.webp",
+        "panel_text_relation": "panel_only",
+        "experimental_context": {
+          "system": "human patients with corpus callosum abnormalities",
+          "genotype": "karyotype and FISH",
+          "treatment": "none",
+          "timepoint": "n/a",
+          "comparator": "n/a",
+          "endpoint": "cytogenetic confirmation images"
+        }
+      },
+      {
+        "proposition": "PANEL READING, Figure 3B (and arithmetic). The ideogram marks chromosome 16 with one red star on the long arm (pathogenic or likely pathogenic), consistent with P8's classification; it carries no breakpoints or genes. Printed yields recompute: 10 / 54 = 18.5 percent; 16 / 54 = 29.6 percent; 4 / 107 = 3.7 percent karyotype-abnormal; P8 interval 87,891,103 - 74,718,513 = 13,172,590 bp (about 13.2 Mb, derived from the printed hg18 interval; Table 3 prints no size).",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3A boxes: 107 patients with CCA; karyotype n=107, 4 abnormal (3,7%); array CGH n=54, 10 CNV pathogenic/likely pathogenic (18,5%); FISH 7 cases; MLPA; WES n=6, 4 VUS. Figure 3B: red star on the long arm of chromosome 16.",
+        "surface": "figure",
+        "anchor": "Figure 3A-B",
+        "artifact": "files/figures/PMID42807679/fgene-17-1815268-g003.webp",
+        "panel_text_relation": "panel_only",
+        "experimental_context": {
+          "system": "human cohort",
+          "genotype": "n/a",
+          "treatment": "none",
+          "timepoint": "n/a",
+          "comparator": "n/a",
+          "endpoint": "diagnostic workflow and ideogram"
+        }
+      }
+    ],
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC REST fullTextXML returned HTTP 200 with a full JATS body on 2026-10-04; the declared article_text artefact is that response, byte for byte.",
+    "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+  }
 }

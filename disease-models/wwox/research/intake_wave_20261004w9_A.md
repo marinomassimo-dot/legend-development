@@ -58,3 +58,23 @@ length, not somatic instability. Printed p for Fig 7C (F(2,11) = 18.07, p = 0.00
 Records: `CLAIM 011` PREMISE_TAG and the working model's dose-ceiling paragraph carry "no between-genotype
 comparison is reported" / "Figure 4B is unread" — narrowed (a genotype main effect is reported; panel read);
 their conclusion holds. `DIS-028` holds, with magnitudes added. Status unchanged: preprint, partial read.
+
+## 4 · PMID 41345172 (De 2025) — receipt `FTR-20261004-41345172-02`, candidate `CC-20261004W9-A-DE-NOMINAL-01`
+
+Owed: figures and supplement. Table 4 re-analysed in full: SANAD drug-response rows cover 559 distinct WWOX
+probe locations; best drug-response p 1.68e-4 (inside the deletion) against a Bonferroni threshold of 8.9e-5
+over locations, so the association is nominal even within the gene (the paper's correction adjusts for phenotype
+correlation, M not printed); best genotype-based p 4.92e-3; the sheet repeats rows (14,283 of 16,980 unique).
+Table 13: drug response = binary 12-month remission. Supplementary Figure 19 verified on the same bytes: gnomAD
+DEL_16_156229, 78371638-78384898, 7355 / 21694 = 0.3390, 1447 homozygotes (the record's figures confirmed); the
+paper's region joins this and a multi-allelic record. Supplementary Figure 6 (WWOX brain-region heatmaps) carries no
+printed values and no text claim. `CLAIM 032`'s boundary holds and is not edited; `PAPER 209` sharpened.
+
+## 5 · PMID 42807679 (Khadija 2026) — receipt `FTR-20261004-42807679-02`, candidate `CC-20261004W9-A-KHADIJA-PANELS-01`
+
+Owed: figure panels (Figure 2, patient photographs, NOT opened). The selection's premises were wrong twice: the
+16q23q24 deletion appears in no figure (Figure 6 montage has no panel for it, Figures 4 and 5 are other patients), so
+its gene content is a table cell, not a figure; and the paper has no imaging figure at all, so the callosal
+phenotype is a table cell, not a panel. Figure 3B marks one chromosome 16 long-arm pathogenic CNV. Arithmetic:
+10/54, 16/54, 4/107 and the derived 13.17 Mb interval all agree. `CLAIM 032` unaffected (the deletion is a
+contiguous-gene carrier, not a dosage datum); `PAPER 208` clarified. The supplement is a STROBE checklist.
