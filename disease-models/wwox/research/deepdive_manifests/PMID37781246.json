@@ -1,150 +1,285 @@
 {
-  "schema_version": 2,
-  "pmid": "37781246",
-  "doi": "10.3389/fnins.2023.1260409",
-  "receipt": "FTR-20261002-37781246-01",
-  "landing": [
-    "CC-20261002-WWOX-DOSE-CEILING-01",
-    "intake_wave_20261002_C"
-  ],
-  "skills_considered": [
-    {
-      "skill": "find-fulltext",
-      "used": true,
-      "reason": "Invoked by name for PMID 17679088 and PMID 42395553, whose Europe PMC fullTextXML route returned HTTP 500. The cascade resolved both: the 2007 paper via the PMC author-manuscript HTML surface (the publisher forbids XML download and the Cell Press bronze-OA PDF is bot-blocked at 403), the preprint via the bioRxiv .full.pdf endpoint. The four PMC-indexed papers needed no cascade."
-    },
-    {
-      "skill": "legend-deepdive",
-      "used": false,
-      "reason": "Not run. This wave is a first full read of six records none of which is in the registries; the dossier, the locators and the commit candidates were produced directly under the Scientist brief. A legend-deepdive pass would duplicate them."
-    },
-    {
-      "skill": "legend-locator-audit",
-      "used": false,
-      "reason": "Not run here by design: the producer of a reading must not be its verifier. The triples are handed to the blind audit through the commit candidates' LOCATOR TRIPLES FOR BLIND AUDIT sections."
-    }
-  ],
-  "group_assessment": {
-    "performed": true,
-    "total_publications": 80,
-    "publications_on_gene": 38,
-    "counts_measured": "PubMed esearch 2026-10-02: 'Bednarek AK[au]' 80, 'Bednarek AK[au] AND WWOX' 38.",
-    "research_type": "computational",
-    "is_primary_group_for_disease": false,
-    "is_primary_group_for_gene": true,
-    "weighting": "A primary WWOX group for the GENE and not for WWOX-DEE: the Lodz department's WWOX work is cancer genetics, and this paper is bioinformatics over TCGA plus one lentiviral overexpression experiment. NOT INDEPENDENT of PMID 34204789 in this same wave — same department, same senior authors, overlapping first authors — and the two must not be counted as corroborating sources.",
-    "note": "Department of Molecular Carcinogenesis, Medical University of Lodz -- Bednarek's group, a long-standing WWOX cancer-genetics laboratory and the same group as PMID 34204789 in this wave. The two records are NOT independent: same senior authors, same department, overlapping first authors, and this paper is the explicit follow-up of the group's own 2023 in vitro study. They must not be counted as two corroborating sources."
+ "schema_version": 2,
+ "pmid": "37781246",
+ "doi": "10.3389/fnins.2023.1260409",
+ "receipt": "FTR-20261002-37781246-01",
+ "landing": [
+  "CC-20261002-WWOX-DOSE-CEILING-01",
+  "intake_wave_20261002_C"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Invoked by name for PMID 17679088 and PMID 42395553, whose Europe PMC fullTextXML route returned HTTP 500. The cascade resolved both: the 2007 paper via the PMC author-manuscript HTML surface (the publisher forbids XML download and the Cell Press bronze-OA PDF is bot-blocked at 403), the preprint via the bioRxiv .full.pdf endpoint. The four PMC-indexed papers needed no cascade."
   },
-  "field_density": {
-    "wwox_directed": true,
-    "queries": [
-      {
-        "query": "Bednarek AK[au] AND WWOX",
-        "route": "PubMed esearch 2026-10-02",
-        "count": 38
-      }
-    ],
-    "note": "High WWOX density, zero neural-disease density. The only bench work is lentiviral WWOX overexpression plus CAGE-Seq in biological triplicate in four glioblastoma lines."
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not run. This wave is a first full read of six records none of which is in the registries; the dossier, the locators and the commit candidates were produced directly under the Scientist brief. A legend-deepdive pass would duplicate them."
   },
-  "multihop": {
-    "performed": false,
-    "references_enumerated": 164,
-    "gene_direct_refs_in_source": [],
-    "enumeration_method": "<ref> elements counted in the JATS: 164. Not classified by gene-directedness.",
-    "resolved": [],
-    "queued": [],
-    "note": "ONE HOP IS LOAD-BEARING AND IS NOT TAKEN: Kaluzinska-Kolat et al. 2023, the group's own preceding paper, holds the proliferation measurement that this article only cites. Logged in the analysis note as the acquisition that would turn this lead into a datum."
-  },
-  "corpus_crossquery": {
-    "performed": true,
-    "query": "Does the model anywhere allow a context in which added WWOX fails to help?",
-    "hits": 0,
-    "finding": "No. The model's only hedge on gene therapy is that a dose may be too LOW. This paper supplies a context-dependence instance at the cell-line level and the authors refuse its causal reading, so it strengthens the case for recording the question without supplying an answer."
-  },
-  "retraction_check": {
-    "performed": true,
-    "at": "2026-10-02",
-    "route": "PubMed esummary / get_article_metadata for 37781246",
-    "result": "No retraction, no expression of concern, no erratum. Article type 'Journal Article'. The token 'retract' occurs once in the JATS, inside the reference list, not as a notice on this article.",
-    "hold": false,
-    "dependencies": {
-      "flagged": [],
-      "noted": [],
-      "paper_verdict": "SCREENED_CLEAN",
-      "reference_source": "network",
-      "references_declared": 164,
-      "references_screened": 163,
-      "references_with_doi": 163,
-      "schema": "retraction_check.dependencies/1",
-      "screened": true,
-      "snapshot": {
-        "date": "2026-09-10",
-        "days_since_fetch": 22,
-        "rows": 72476,
-        "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
-      },
-      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
-      "unscreenable": {
-        "UNSCREENABLE_NO_DOI": 1
-      }
-    }
-  },
-  "source_artifacts": [
-    {
-      "path": "files/fulltext/PMID37781246_KaluzinskaKolat2023_PMC.xml",
-      "sha256": "ad0fde9050e2eacfb882741e5de0d3c426f005353fd80dba6727e90b9738af07",
-      "kind": "article_text",
-      "note": "Europe PMC JATS for PMC10540236, 274,296 bytes.",
-      "acquisition_recipe": {
-        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10540236/fullTextXML",
-        "http_method": "GET",
-        "tier": "europepmc_fulltextxml",
-        "user_agent_policy": "none",
-        "acquired_on": "2026-10-02",
-        "derived": false,
-        "result_sha256": "ad0fde9050e2eacfb882741e5de0d3c426f005353fd80dba6727e90b9738af07"
-      }
-    }
-  ],
-  "verbatim_locators": {
-    "waived": false,
-    "source_fulltext_indexed": true,
-    "source_fulltext_indexed_evidence": "Europe PMC JATS, 274,296 bytes; abstract, Introduction, Materials and methods, Results and discussion, Study limitations, Conclusion and all figure legends present in the body.",
-    "abstract_anchoring_waived": "Stated per entry. Where an entry draws on the abstract it says so in its anchor; every entry is matched against the declared artifact as a whole.",
-    "note": "COVERAGE: whole article read, including the 'Study limitations' section and every figure legend. NOT INSPECTED: Supplementary Tables S1-S7 and Supplementary Figures S1-S5, which are separate files not fetched -- so the patient-group cut-off values (S2), the TIMER 2.0 estimates (S6) and the CNA table (S7) are carried only by the authors' running text. IMPORTANT PROVENANCE LIMIT recorded in the dossier: the phenotype this paper interprets -- WWOX overexpression increasing proliferation in DBTRG-05MG -- was MEASURED IN THE PRECEDING PAPER (Kaluzinska-Kolat et al. 2023, a different record not read in this wave); this paper measures CAGE-Seq transcriptomes and cites that phenotype.",
-    "entries": [
-      {
-        "proposition": "THE PHENOTYPE THAT MAKES THIS PAPER RELEVANT TO DOSE, AND IT IS CARRIED, NOT MEASURED HERE. Raising WWOX increased proliferation in one of four glioblastoma lines. The sentence is in the past tense and cites the preceding study; this article's own measurements are transcriptomic.",
-        "snippet": "proliferative potential after WWOX overexpression was increased only in DBTRG-05MG",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID37781246_KaluzinskaKolat2023_PMC.xml",
-        "anchor": "Results and discussion, section on the WWOX-related network, paragraph aligning annotations with the former study",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "THE PAPER'S OWN HEADLINE CLAIM, STATED AT PATIENT LEVEL AND HEDGED TO A CO-OCCURRENCE RATHER THAN A CAUSE. High WWOX is not beneficial in every molecular context -- which is the generalisable half -- but the mechanism offered is other genes' profile, not WWOX itself.",
-        "snippet": "high WWOX expression with simultaneously elevated expression of other genes (herein: POLE4 and HSF2BP ) did not bring prognostic benefits and may be related to the more cancer-promoting profile",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID37781246_KaluzinskaKolat2023_PMC.xml",
-        "anchor": "Conclusion, final paragraph",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "THE AUTHORS REFUSE THE CAUSAL READING THEMSELVES. This is the sentence that forbids carrying their result as 'raising WWOX worsened outcome'.",
-        "snippet": "the elaborated resemblance of findings from GBM cell lines using data from GBM patients is imperfect, and it cannot be assumed that POLE4 and HSF2BP levels were elevated in patients with unfavorable outcomes due to the higher levels of WWOX",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID37781246_KaluzinskaKolat2023_PMC.xml",
-        "anchor": "Results and discussion, final paragraph of the patient-stratification section",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "AND THEY STATE THE IN-VITRO-TO-ORGANISM LIMIT IN THEIR OWN WORDS, which is the transfer boundary that applies before any neuronal reading of this paper.",
-        "snippet": "the conclusions drawn from in vitro experiments may not accurately reflect the conditions within an organism",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID37781246_KaluzinskaKolat2023_PMC.xml",
-        "anchor": "Study limitations, first sentence",
-        "panel_text_relation": "text_only"
-      }
-    ]
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not run here by design: the producer of a reading must not be its verifier. The triples are handed to the blind audit through the commit candidates' LOCATOR TRIPLES FOR BLIND AUDIT sections."
   }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 80,
+  "publications_on_gene": 38,
+  "counts_measured": "PubMed esearch 2026-10-02: 'Bednarek AK[au]' 80, 'Bednarek AK[au] AND WWOX' 38.",
+  "research_type": "computational",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": true,
+  "weighting": "A primary WWOX group for the GENE and not for WWOX-DEE: the Lodz department's WWOX work is cancer genetics, and this paper is bioinformatics over TCGA plus one lentiviral overexpression experiment. NOT INDEPENDENT of PMID 34204789 in this same wave — same department, same senior authors, overlapping first authors — and the two must not be counted as corroborating sources.",
+  "note": "Department of Molecular Carcinogenesis, Medical University of Lodz -- Bednarek's group, a long-standing WWOX cancer-genetics laboratory and the same group as PMID 34204789 in this wave. The two records are NOT independent: same senior authors, same department, overlapping first authors, and this paper is the explicit follow-up of the group's own 2023 in vitro study. They must not be counted as two corroborating sources."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "Bednarek AK[au] AND WWOX",
+    "route": "PubMed esearch 2026-10-02",
+    "count": 38
+   }
+  ],
+  "note": "High WWOX density, zero neural-disease density. The only bench work is lentiviral WWOX overexpression plus CAGE-Seq in biological triplicate in four glioblastoma lines."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 164,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "<ref> elements counted in the JATS: 164. Not classified by gene-directedness.",
+  "resolved": [],
+  "queued": [],
+  "note": "ONE HOP IS LOAD-BEARING AND IS NOT TAKEN: Kaluzinska-Kolat et al. 2023, the group's own preceding paper, holds the proliferation measurement that this article only cites. Logged in the analysis note as the acquisition that would turn this lead into a datum."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does the model anywhere allow a context in which added WWOX fails to help?",
+  "hits": 0,
+  "finding": "No. The model's only hedge on gene therapy is that a dose may be too LOW. This paper supplies a context-dependence instance at the cell-line level and the authors refuse its causal reading, so it strengthens the case for recording the question without supplying an answer."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-02",
+  "route": "PubMed esummary / get_article_metadata for 37781246",
+  "result": "No retraction, no expression of concern, no erratum. Article type 'Journal Article'. The token 'retract' occurs once in the JATS, inside the reference list, not as a notice on this article.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 164,
+   "references_screened": 163,
+   "references_with_doi": 163,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 22,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID37781246_KaluzinskaKolat2023_PMC.xml",
+   "sha256": "ad0fde9050e2eacfb882741e5de0d3c426f005353fd80dba6727e90b9738af07",
+   "kind": "article_text",
+   "note": "Europe PMC JATS for PMC10540236, 274,296 bytes.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10540236/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-02",
+    "derived": false,
+    "result_sha256": "ad0fde9050e2eacfb882741e5de0d3c426f005353fd80dba6727e90b9738af07"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID37781246_KK2023_supplement/Image_1.TIF",
+   "sha256": "750a278c16aaa58f9bce82e32edf779bce6d603a3bb25bdd8ec209e347c0b8d6",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID37781246_KK2023_supplement/Image_2.TIF",
+   "sha256": "9b71deda28c8bc755538ac99073c53c6ba65db3c7c7c2c48e8b6bf84676e5556",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID37781246_KK2023_supplement/Image_3.TIF",
+   "sha256": "6dfe28985b56ed1198d6126231a67c0f8ba0bf31ad685154cc415c6df0c54283",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID37781246_KK2023_supplement/Image_4.TIF",
+   "sha256": "ac415b47e8823f581899ccfb06497b578e5d3aaf6dc5d574b2b42bf00a8214a1",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID37781246_KK2023_supplement/Image_5.TIF",
+   "sha256": "271d4f06c343117e36de01294098e7881b51b83df2baa8554086e37f735910f2",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID37781246_KK2023_supplement/Table_1.XLSX",
+   "sha256": "68ab9e4cb1988a928b44bbedc11986ec11aad1ddd37eeda9b900fac7fc12897c",
+   "kind": "table"
+  },
+  {
+   "path": "files/fulltext/PMID37781246_KK2023_supplement/Table_2.XLSX",
+   "sha256": "1cc92b79bcf1c04df070c184f15d9b663b52ebb7332f9e0d2c0835acb8a722d4",
+   "kind": "table"
+  },
+  {
+   "path": "files/fulltext/PMID37781246_KK2023_supplement/Table_3.XLSX",
+   "sha256": "8403562640df576959ba5eb37fbc7710a6d7df33c59aa10e9097699691965186",
+   "kind": "table"
+  },
+  {
+   "path": "files/fulltext/PMID37781246_KK2023_supplement/Table_4.XLSX",
+   "sha256": "dda62653381cd2d057fbc9afb2a31711b57145a08b0ed5216c336727203049fe",
+   "kind": "table"
+  },
+  {
+   "path": "files/fulltext/PMID37781246_KK2023_supplement/Table_5.XLSX",
+   "sha256": "328063c058d85ee5038a0c894ffc728b5c2f16d9cf164b481023c00e0b6e61f8",
+   "kind": "table"
+  },
+  {
+   "path": "files/fulltext/PMID37781246_KK2023_supplement/Table_6.XLSX",
+   "sha256": "0ee14f15f5292a4f91709b090b18e6737125880d5ce2354e7a7a1acf8dac6a5f",
+   "kind": "table"
+  },
+  {
+   "path": "files/fulltext/PMID37781246_KK2023_supplement/Table_7.XLSX",
+   "sha256": "a3e54b3411ba8d6854b8392905c043ca8386390688945a93787537a4f793c28d",
+   "kind": "table"
+  },
+  {
+   "path": "files/fulltext/PMID37781246_KK2023_supplement/fnins-17-1260409-g001.jpg",
+   "sha256": "b6f7f5110ffad61e893261492c135728c80667366d49a7032f3b34eacc6abbc7",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID37781246_KK2023_supplement/fnins-17-1260409-g002.jpg",
+   "sha256": "8464b75f35b4fc53ccfe29e52c6bbc63dfdaa2f0ce253def4f9481b0e25f827b",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID37781246_KK2023_supplement/fnins-17-1260409-g003.jpg",
+   "sha256": "be9cac59a59ce1bf8e3952d437fb1a7ef0dbcfe673d4e948b5ade4a849f2abfb",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID37781246_KK2023_supplement/fnins-17-1260409-g004.jpg",
+   "sha256": "0b0c081b17c092b7bd9b5a9a0f680b0dba0bb983f552798f55061225d98fa57d",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID37781246_KK2023_supplement/fnins-17-1260409-g005.jpg",
+   "sha256": "acc51aae36326c8c13a49aadfb5132b0cc4a76b3aa24a4403bd2dca5bc314369",
+   "kind": "figure"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC JATS, 274,296 bytes; abstract, Introduction, Materials and methods, Results and discussion, Study limitations, Conclusion and all figure legends present in the body.",
+  "abstract_anchoring_waived": "Stated per entry. Where an entry draws on the abstract it says so in its anchor; every entry is matched against the declared artifact as a whole.",
+  "note": "COVERAGE: whole article read, including the 'Study limitations' section and every figure legend. NOT INSPECTED: Supplementary Tables S1-S7 and Supplementary Figures S1-S5, which are separate files not fetched -- so the patient-group cut-off values (S2), the TIMER 2.0 estimates (S6) and the CNA table (S7) are carried only by the authors' running text. IMPORTANT PROVENANCE LIMIT recorded in the dossier: the phenotype this paper interprets -- WWOX overexpression increasing proliferation in DBTRG-05MG -- was MEASURED IN THE PRECEDING PAPER (Kaluzinska-Kolat et al. 2023, a different record not read in this wave); this paper measures CAGE-Seq transcriptomes and cites that phenotype.",
+  "entries": [
+   {
+    "proposition": "THE PHENOTYPE THAT MAKES THIS PAPER RELEVANT TO DOSE, AND IT IS CARRIED, NOT MEASURED HERE. Raising WWOX increased proliferation in one of four glioblastoma lines. The sentence is in the past tense and cites the preceding study; this article's own measurements are transcriptomic.",
+    "snippet": "proliferative potential after WWOX overexpression was increased only in DBTRG-05MG",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37781246_KaluzinskaKolat2023_PMC.xml",
+    "anchor": "Results and discussion, section on the WWOX-related network, paragraph aligning annotations with the former study",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE PAPER'S OWN HEADLINE CLAIM, STATED AT PATIENT LEVEL AND HEDGED TO A CO-OCCURRENCE RATHER THAN A CAUSE. High WWOX is not beneficial in every molecular context -- which is the generalisable half -- but the mechanism offered is other genes' profile, not WWOX itself.",
+    "snippet": "high WWOX expression with simultaneously elevated expression of other genes (herein: POLE4 and HSF2BP ) did not bring prognostic benefits and may be related to the more cancer-promoting profile",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37781246_KaluzinskaKolat2023_PMC.xml",
+    "anchor": "Conclusion, final paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE AUTHORS REFUSE THE CAUSAL READING THEMSELVES. This is the sentence that forbids carrying their result as 'raising WWOX worsened outcome'.",
+    "snippet": "the elaborated resemblance of findings from GBM cell lines using data from GBM patients is imperfect, and it cannot be assumed that POLE4 and HSF2BP levels were elevated in patients with unfavorable outcomes due to the higher levels of WWOX",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37781246_KaluzinskaKolat2023_PMC.xml",
+    "anchor": "Results and discussion, final paragraph of the patient-stratification section",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "AND THEY STATE THE IN-VITRO-TO-ORGANISM LIMIT IN THEIR OWN WORDS, which is the transfer boundary that applies before any neuronal reading of this paper.",
+    "snippet": "the conclusions drawn from in vitro experiments may not accurately reflect the conditions within an organism",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37781246_KaluzinskaKolat2023_PMC.xml",
+    "anchor": "Study limitations, first sentence",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "No proliferation, viability or colony assay is performed in this paper: its own work is transcriptomic and network-analytic throughout.",
+    "snippet": "Our previous research concluded that the anti-GBM activity of WWOX is mainly a consequence of reduced cell viability and invasion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37781246_KaluzinskaKolat2023_PMC.xml",
+    "anchor": "Results and discussion, introductory paragraph on the GBM literature - the strings MTT, BrdU and transfect occur zero times in the article and all three occurrences of viabilit are narrative sentences about the preceding study",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought"
+   },
+   {
+    "proposition": "The one-of-four exception carried from the preceding study is specifically colony growth and formation in one line.",
+    "snippet": "discrepancies related to colony growth and formation were noticed in one of the above GBM cell lines, i.e., DBTRG-05MG",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37781246_KaluzinskaKolat2023_PMC.xml",
+    "anchor": "Results and discussion, introductory paragraph on the GBM literature",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The transduction raised WWOX in all four lines, so the one-of-four phenotype is not a failure of overexpression in the other three.",
+    "snippet": "[spreadsheet attestation - read cell-wise from the workbook XML] In Supplementary Table 5 the sheet headed 'Upregulated in all cell lines' contains a row whose only cell is WWOX; in Supplementary Table 3 the sheet headed 'Genes filtered by variance' carries the four column headers DBTRG-05MG, T98G, U87MG and U251MG and the symbol WWOX appears in each of the four columns.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID37781246_KK2023_supplement/Table_5.XLSX",
+    "anchor": "Supplementary Table 5, sheet 'Up in DBTRG only'/'Up in all cell lines' block, and Supplementary Table 3, sheet 'Cell-line specific'; read cell-wise from the workbook XML",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The magnitude of WWOX raised in each line is published only as a colour and is nowhere printed, so the one-of-four discrepancy cannot be checked against the achieved level.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] In Figure 3A the WWOX node, like every other node of the network, carries its per-cell-line log2 fold change as split colour halves with no numeral printed on or beside it, and no sheet of Supplementary Tables 1 to 7 carries a per-cell-line WWOX expression or log2 fold-change column.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID37781246_KK2023_supplement/fnins-17-1260409-g003.jpg",
+    "anchor": "Figure 3, panel A, WWOX node; native JPEG inspected and the upper-left quadrant magnified",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "sought"
+   }
+  ]
+ },
+ "reading_history": [
+  {
+   "receipt": "FTR-20261004-37781246-02",
+   "reader": "scientist (Scientist C), intake wave 12 2026-10-04 (RE-READ)",
+   "context_policy": "SOURCE_FIRST",
+   "what_changed": "Acquired and declared the full figure and supplement package from the Europe PMC supplementaryFiles archive for PMC10540236 (five main-figure JPEGs, five supplementary TIFFs and seven supplementary workbooks, each with full sha256) where the manifest previously declared the article XML alone, and appended entries 5-8: the assay census that answers this wave's question, the exact wording of the carried one-of-four exception, the supplementary evidence that WWOX was raised in all four lines, and the absence of any printed per-line magnitude. No existing entry was altered.",
+   "outputs": [
+    "disease-models/wwox/research/fulltext_dossiers/PMID37781246.md",
+    "disease-models/wwox/research/deepdive_manifests/PMID37781246.json",
+    "disease-models/wwox/research/intake_wave_20261004w12_C.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261004W12-C-GBM-DOSE-UNPRINTED-01.md"
+   ]
+  }
+ ]
 }
