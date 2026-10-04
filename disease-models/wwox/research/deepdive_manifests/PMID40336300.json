@@ -1,0 +1,192 @@
+{
+  "schema_version": 2,
+  "pmid": "40336300",
+  "doi": "10.1210/endocr/bqaf078",
+  "receipt": "FTR-20261004-40336300-01",
+  "context_policy": "SOURCE_FIRST",
+  "landing": [
+    "disease-models/wwox/research/fulltext_dossiers/PMID40336300.md",
+    "disease-models/wwox/research/intake_wave_20261004w11_A.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261004W11-A-SDRCLUSTER-01.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261004W11-A-REGISTRY-01.md"
+  ],
+  "skills_considered": [
+    {
+      "skill": "legend-study-intake-triage",
+      "used": true
+    },
+    {
+      "skill": "find-fulltext",
+      "used": true
+    },
+    {
+      "skill": "legend-deepdive",
+      "used": true
+    },
+    {
+      "skill": "legend-discovery",
+      "used": false,
+      "reason": "The discovery ledger is owned by other batches; the transferable finding is proposed as a commit candidate."
+    },
+    {
+      "skill": "legend-hypothesis-forge",
+      "used": false,
+      "reason": "This source carries no WWOX datum to forge a therapeutic hypothesis from."
+    },
+    {
+      "skill": "legend-safety-triage",
+      "used": false,
+      "reason": "No compound is proposed by this source."
+    },
+    {
+      "skill": "legend-commit",
+      "used": false,
+      "reason": "Scientists do not touch the four current files."
+    },
+    {
+      "skill": "legend-locator-audit",
+      "used": false,
+      "reason": "The triples are published in the candidate for a blind auditor."
+    }
+  ],
+  "group_assessment": {
+    "total_publications": 1,
+    "publications_on_gene": 0,
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": false,
+    "weighting": "Reproductive-endocrinology group (University of Newcastle NSW and collaborators) with mouse genetics, LC-MS steroid analysis and proteomics. No WWOX publication; WWOX occurs zero times in this source. Read only for the transferable question of what a 17beta-HSD family assignment can and cannot predict about substrate."
+  },
+  "field_density": {
+    "queries": [
+      {
+        "query": "HSD17B family members able to convert androstenedione to testosterone",
+        "count": 5,
+        "source": "this source's own enumeration: HSD17B3, HSD17B1, HSD17B5/AKR1C3, HSD17B12 (mouse), HSD17B7 (mouse, new here)"
+      },
+      {
+        "query": "WWOX in this source",
+        "count": 0,
+        "source": "raw byte count of 'WWOX' and 'Wwox' in the persisted artefact on 2026-10-04"
+      }
+    ],
+    "note": "A well-populated enzymology literature in which species-specific substrate acceptance is an established theme; WWOX is not part of it in this source."
+  },
+  "multihop": {
+    "references_enumerated": 41,
+    "gene_direct_refs_in_source": [],
+    "resolved": [],
+    "queued": [],
+    "note": "41 references enumerated; WWOX occurs zero times in the source, so no gene-direct reference exists and no hop is owed."
+  },
+  "corpus_crossquery": {
+    "query": "registry_records.py get --pmid 40336300; fulltext_receipts.py status --pmid 40336300 (run BEFORE the reading, for dedup only)",
+    "hits": 0,
+    "note": "NO RECORD MATCHED across the seven searched surfaces, and no receipt. This paper is new to the laboratory."
+  },
+  "retraction_check": {
+    "checked": true,
+    "result": "Checked 2026-10-04 via PubMed ESummary: publication types ['Journal Article']; no retraction, expression of concern or correction notice listed for PMID 40336300.",
+    "dependencies": {
+      "flagged": [],
+      "noted": [],
+      "paper_verdict": "SCREENED_CLEAN",
+      "reference_source": "network",
+      "references_declared": 41,
+      "references_screened": 40,
+      "references_with_doi": 40,
+      "schema": "retraction_check.dependencies/1",
+      "screened": true,
+      "snapshot": {
+        "date": "2026-09-10",
+        "days_since_fetch": 24,
+        "rows": 72476,
+        "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+      },
+      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+      "unscreenable": {
+        "UNSCREENABLE_NO_DOI": 1
+      },
+      "note": "Screened with the 2026-09-10 Retraction Watch snapshot; 1 reference carries no DOI and is UNSCREENABLE_NO_DOI."
+    }
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID40336300_Lawrence2025_PMC.xml",
+      "sha256": "95ed1ce9ff724a03db5d822d42e4a49d44b2927851f5403d899b5facc0c08a1c",
+      "kind": "article_text",
+      "note": "Europe PMC fullTextXML (144 051 B): abstract, introduction, full materials and methods, six results sections, discussion, eight figure legends, three tables cell-wise, 41 references. The deposit declares no supplementary-material element.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12059215/fullTextXML",
+        "http_method": "GET",
+        "tier": "Europe PMC REST fullTextXML",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "95ed1ce9ff724a03db5d822d42e4a49d44b2927851f5403d899b5facc0c08a1c"
+      }
+    }
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC REST search EXT_ID:40336300 (resultType=core) on 2026-10-04: inEPMC=Y, isOpenAccess=Y, pmcid PMC12059215; the fullTextXML endpoint returned a 144 051 B body, so the quotes below are externally verifiable.",
+    "entries": [
+      {
+        "proposition": "One residue decides whether a C19 steroid can enter the active site of an otherwise orthologous 17beta-hydroxysteroid dehydrogenase, so family membership does not by itself predict a substrate.",
+        "snippet": "In human and primate HSD17B12, a bulky phenylalanine amino acid at this location prevents the entrance of C19-steroids into the active site of the enzyme",
+        "anchor": "Introduction, sixth paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID40336300_Lawrence2025_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "A published negative result on substrate use by a member of this enzyme family was overturned in this paper.",
+        "snippet": "Two earlier studies concluded that mouse HSD17B7 did not perform this conversion",
+        "anchor": "Discussion, paragraph on HSD17B7",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID40336300_Lawrence2025_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The authors attribute those earlier negatives to assay conditions, so a substrate negative in this enzyme family is condition-dependent rather than settled.",
+        "snippet": "those studies employed reduced concentrations of substrate and shorter incubation times, which may have influenced the observed outcomes",
+        "anchor": "Discussion, paragraph on HSD17B7",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID40336300_Lawrence2025_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Cells carrying no transfected enzyme still convert the substrate, so an activity assay in cells or crude extract has a non-zero endogenous floor that a control must subtract.",
+        "snippet": "Non-transfected cells and eGFP controls produced low levels of testosterone upon addition of androstenedione, suggesting some endogenous hydroxysteroid dehydrogenase activity in HEK-293T cells",
+        "anchor": "Results, Replacement of Leucine With Phenylalanine at Position 234 Inhibits Testosterone Biosynthesis in Mouse HSD17B12",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID40336300_Lawrence2025_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Members of this enzyme family are multifunctional and accept several unrelated substrates, so naming one substrate does not define the enzyme's chemistry.",
+        "snippet": "HSD17B7 is a multifunctional enzyme that can utilize estrone, DHT and zymosterone as substrates",
+        "anchor": "Discussion, paragraph on HSD17B7",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID40336300_Lawrence2025_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The authors state that attributing a conversion to one family member requires first identifying the residues responsible and then mutating them, which is the dead-mutant control as their own prerequisite.",
+        "snippet": "would first require the identification of the specific amino acid residues responsible for the conversion of androstenedione to testosterone",
+        "anchor": "Discussion, paragraph on HSD17B7, future work",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID40336300_Lawrence2025_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The paper's own closing position is that mouse and human orthologues differ in this redundancy, so a mouse enzymology result does not transfer to the human enzyme unexamined.",
+        "snippet": "human orthologs have lost this plasticity",
+        "anchor": "Discussion, final paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID40336300_Lawrence2025_PMC.xml",
+        "panel_text_relation": "text_only"
+      }
+    ]
+  }
+}
