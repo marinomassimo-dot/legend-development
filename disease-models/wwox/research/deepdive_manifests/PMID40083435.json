@@ -1,0 +1,198 @@
+{
+  "schema_version": 2,
+  "pmid": "40083435",
+  "doi": "10.3389/fped.2025.1471965",
+  "receipt": "FTR-20261004-40083435-01",
+  "context_policy": "SOURCE_FIRST",
+  "landing": [
+    "disease-models/wwox/research/fulltext_dossiers/PMID40083435.md",
+    "disease-models/wwox/research/intake_wave_20261004w11_B.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261004W11-B-L239R-01.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261004W11-B-REGISTRY-01.md"
+  ],
+  "skills_considered": [
+    {"skill": "find-fulltext", "used": true},
+    {"skill": "legend-study-intake-triage", "used": true},
+    {"skill": "legend-deepdive", "used": true},
+    {"skill": "legend-discovery", "used": false, "reason": "One homozygous missense case with a table-level phenotype; no biomarker, molecule or repurposing lead is present."},
+    {"skill": "legend-hypothesis-forge", "used": false, "reason": "No therapeutic content bears on WWOX; the case's treatment is not printed."},
+    {"skill": "legend-safety-triage", "used": false, "reason": "No compound is proposed by this source."},
+    {"skill": "legend-commit", "used": false, "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."},
+    {"skill": "legend-locator-audit", "used": false, "reason": "The reader cannot audit their own locators; triples are published in the candidate for a blind auditor."}
+  ],
+  "group_assessment": {
+    "total_publications": 1,
+    "publications_on_gene": 0,
+    "research_type": "descriptive_clinical",
+    "is_primary_group_for_disease": false,
+    "weighting": "Single private-hospital paediatric neurology clinic with an in-house genetics laboratory; retrospective 90-patient exome/genome/microarray series 2019-2021, about half referred from abroad. No WWOX-focused work."
+  },
+  "field_density": {
+    "queries": [
+      {"query": "WWOX AND L239R", "count": 0, "source": "PubMed ESearch rettype=count 2026-10-04"}
+    ],
+    "note": "No PubMed record indexes the protein change; the allele is reachable only through full text and tables."
+  },
+  "multihop": {
+    "references_enumerated": 45,
+    "gene_direct_refs_in_source": [],
+    "resolved": [],
+    "queued": [],
+    "note": "45 references enumerated; none is WWOX-direct. The WWOX content is the cohort's own case (Table 5 row and Supplementary Table S1 row), cited to ClinVar, not to a paper, so no hop is owed."
+  },
+  "corpus_crossquery": {
+    "query": "registry_records.py get --pmid 40083435; fulltext_receipts.py status --pmid 40083435; git grep for c.716T>G / Leu239Arg / L239R / ClinVar 871669 outside the two large registries",
+    "hits": 3,
+    "note": "No record and no receipt for this paper. The allele is held: ClinVar snapshot row VCV000871669 (conflicting classifications), the analysis note on PMID 41153369 (homozygous p.L239R in two siblings of a consanguineous family in a Turkish DEE cohort; hypsarrhythmia), and a mention in PMID 42092735. Overlap test in the dossier: no printed field links this case to the held sibling pair (INFERENZA)."
+  },
+  "retraction_check": {
+    "checked": true,
+    "result": "Checked 2026-10-04 via PubMed ESummary: publication types ['Journal Article']; no retraction, expression of concern or correction listed for PMID 40083435.",
+    "dependencies": {
+      "flagged": [],
+      "noted": [],
+      "paper_verdict": "SCREENED_CLEAN",
+      "reference_source": "network",
+      "references_declared": 45,
+      "references_screened": 43,
+      "references_with_doi": 43,
+      "schema": "retraction_check.dependencies/1",
+      "screened": true,
+      "snapshot": {
+        "date": "2026-09-10",
+        "days_since_fetch": 24,
+        "rows": 72476,
+        "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+      },
+      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+      "unscreenable": {
+        "UNSCREENABLE_NO_DOI": 2
+      }
+    }
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID40083435_Kava2025_PMC.xml",
+      "sha256": "77225d527c3e0cdba9a0407833d393116793752493fd60ea71fdf06848f55827",
+      "kind": "article_text",
+      "note": "Europe PMC fullTextXML (184 107 B): body, Tables 1-6, two figure legends, supplementary listing, 43 references.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11904636/fullTextXML",
+        "http_method": "GET",
+        "tier": "Europe PMC REST fullTextXML",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "77225d527c3e0cdba9a0407833d393116793752493fd60ea71fdf06848f55827"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID40083435_Kava2025_Table1.docx",
+      "sha256": "1b2d46c61685f134824c243b6b081be04b1e6a6e34684f4c03b974c5e7f42cac",
+      "kind": "supplement_binary",
+      "note": "Supplementary Table S1 (clinical, MRI and EEG findings of patients with P/LP/VUS variants), deposited as Table1.docx; parsed cell-wise.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11904636.1/Table1.docx",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "1b2d46c61685f134824c243b6b081be04b1e6a6e34684f4c03b974c5e7f42cac"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID40083435_Kava2025_Table1.txt",
+      "sha256": "b7a7ba7cf2be6d66e54a6b50f5f7fa281ae302bac4ebda4a4f51bc1de02b1714",
+      "kind": "supplement_text",
+      "note": "Text layer derived cell-wise from the supplement document: paragraphs one per line, table rows with cells joined by a tab. Lossless for cell text; loses formatting and merged-cell structure. Supplement locators quote this derived text.",
+      "acquisition_recipe": {
+        "resolved_url": "local derivation from PMID40083435_Kava2025_Table1.docx",
+        "http_method": "GET",
+        "tier": "local_docx_cellwise_parser",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": true,
+        "result_sha256": "b7a7ba7cf2be6d66e54a6b50f5f7fa281ae302bac4ebda4a4f51bc1de02b1714",
+        "derived_from": "files/fulltext/PMID40083435_Kava2025_Table1.docx",
+        "extractor": {
+          "name": "local docx cell-wise parser (python zipfile plus word/document.xml)",
+          "version": "wave11-scientistB",
+          "call": "walk the document body in order; paragraphs as lines; each table row as its cells' text joined by a tab"
+        }
+      }
+    },
+    {
+      "path": "files/fulltext/PMID40083435_Kava2025_fped-13-1471965-g001.jpg",
+      "sha256": "4e70896fab588035aa85dfca2e743050e9728cba6faad5a6222d5566005152fd",
+      "kind": "figure",
+      "note": "Figure 1 (phenotype groups pie chart) as deposited; inspected; no gene-level content.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11904636.1/fped-13-1471965-g001.jpg",
+        "http_method": "GET", "tier": "pmc_oa_opendata_s3", "user_agent_policy": "none",
+        "acquired_on": "2026-10-04", "derived": false,
+        "result_sha256": "4e70896fab588035aa85dfca2e743050e9728cba6faad5a6222d5566005152fd"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID40083435_Kava2025_fped-13-1471965-g002.jpg",
+      "sha256": "0710b8881b7a6d29d6dc366a78f3a5992f15540c787008ea84f4c772009636c3",
+      "kind": "figure",
+      "note": "Figure 2 (diagnostic yield by test) as deposited; inspected; agrees with the Results text; no gene-level content.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11904636.1/fped-13-1471965-g002.jpg",
+        "http_method": "GET", "tier": "pmc_oa_opendata_s3", "user_agent_policy": "none",
+        "acquired_on": "2026-10-04", "derived": false,
+        "result_sha256": "0710b8881b7a6d29d6dc366a78f3a5992f15540c787008ea84f4c772009636c3"
+      }
+    }
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "entries": [
+      {
+        "proposition": "One female patient of the epilepsy-plus-developmental-delay group carries a homozygous WWOX missense allele c.716T>G p.Leu239Arg, classified likely pathogenic by the authors and cited to a ClinVar record, diagnosed as DEE28.",
+        "snippet": "WWOX (NM_016373.4) c.716T>G p.Leu239Arg Hom AR mis LP Clinvar 871669 DEE 28 (#616211)",
+        "anchor": "Table 5 (molecular findings in the diagnosed cohort), row P31, Epilepsy and developmental delay group",
+        "surface": "table",
+        "artifact": "files/fulltext/PMID40083435_Kava2025_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The same patient: first seizure at 0.33 years, epilepsy with global developmental delay in three domains, dysmorphism, hypotonia, achalasia and optic atrophy; focal epileptic discharges on EEG; normal MRI.",
+        "snippet": "0.33\tEpilepsy, GDD (language, motor, cognitive), dysmorphism, hypotonia, achalasia, optic atrophy, perinatal history, parents from the same region\tFED\tN",
+        "anchor": "Supplementary Table S1, row P31",
+        "surface": "supplement",
+        "artifact": "files/fulltext/PMID40083435_Kava2025_Table1.txt",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The authors' classifications are dated: variants were classified as of June 2024.",
+        "snippet": "These genetic variants’ classification detected according to by June 2024.",
+        "anchor": "Table 5 footnote",
+        "surface": "table",
+        "artifact": "files/fulltext/PMID40083435_Kava2025_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Variant classification rested on ACMG criteria, ClinVar, HPO matching and in-silico pathogenicity estimates; no functional assay of any variant is described.",
+        "snippet": "Filtering and prioritization of potentially disease-causing variants were performed based on the inheritance pattern, information in the ClinVar database, Human Phenotype Ontology (HPO) terms associated with the patient's findings, and in silico pathogenicity estimates.",
+        "anchor": "Materials and methods, Whole-exome sequencing",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID40083435_Kava2025_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Denominator: 90 children with unexplained epilepsy and/or developmental delay; exome alone gave P/LP variants in 20 of 58.",
+        "snippet": "Among the 58 patients who had undergone WES, P/LP variants were detected in 20 (34.4%)",
+        "anchor": "Results, Molecular findings; Figure 2 panel",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID40083435_Kava2025_PMC.xml",
+        "panel_text_relation": "text_confirmed_by_panel"
+      }
+    ],
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC REST fullTextXML returned HTTP 200 with a full JATS body on 2026-10-04; the declared article_text is that response.",
+    "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or the supplement."
+  }
+}
