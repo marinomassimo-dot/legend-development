@@ -82,11 +82,11 @@ time; it does not redistribute or license the article text.
 | Status | Records | Share |
 |---|---:|---:|
 | **Not found by identifier** — run the intake gate | 277 | 39% |
-| **Catalogued, never processed** — the reading debt | 136 | 19% |
+| **Catalogued, never processed** — the reading debt | 135 | 19% |
 | Known to the tracking log only | 102 | 14% |
 | Processed from the abstract | 3 | 0% |
 | Partial full text read | 55 | 8% |
-| Full text read | 133 | 19% |
+| Full text read | 134 | 19% |
 
 ⚠️ This second table combines registry state with the authoritative append-only
 `fulltext_read_receipts.jsonl`. Historical registry-only full-text declarations remain
@@ -263,7 +263,6 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [22869583](https://pubmed.ncbi.nlm.nih.gov/22869583/) | 2012 | — | Journal Article; Research Support, Non-U.S. Gov't | catalogued only | Frequent PVT1 rearrangement and novel chimeric genes PVT1-NBEA and PVT1-WWOX occur in multiple myeloma with 8q24 abnormality. |
 | [21332605](https://pubmed.ncbi.nlm.nih.gov/21332605/) | 2011 | — | Journal Article; Research Support, Non-U.S. Gov't | catalogued only | Impact of WWOX alterations on p73, ΔNp73, p53, cell proliferation and DNA ploidy in salivary gland neoplasms. |
 | [21466786](https://pubmed.ncbi.nlm.nih.gov/21466786/) | 2011 | — | Journal Article | catalogued only | Helicobacter pylori infection promotes methylation of WWOX gene in human gastric cancer. |
-| [21476439](https://pubmed.ncbi.nlm.nih.gov/21476439/) | 2011 | — | Journal Article | catalogued only | WWOX oxidoreductase--substrate and enzymatic characterization. |
 | [21520031](https://pubmed.ncbi.nlm.nih.gov/21520031/) | 2011 | — | Journal Article; Research Support, Non-U.S. Gov't | catalogued only | Evidences that the polymorphism Pro-282-Ala within the tumor suppressor gene WWOX is a new risk factor for differentiated thyroid carcinoma. |
 | [19896763](https://pubmed.ncbi.nlm.nih.gov/19896763/) | 2010 | — | Journal Article; Research Support, Non-U.S. Gov't | catalogued only | Deletion of the WWOX gene and frequent loss of its protein expression in human osteosarcoma. |
 | [20060354](https://pubmed.ncbi.nlm.nih.gov/20060354/) | 2010 | — | Journal Article | catalogued only | Study of FHIT and WWOX expression in mucoepidermoid carcinoma and adenoid cystic carcinoma of salivary gland. |
@@ -620,7 +619,7 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [41007296](https://pubmed.ncbi.nlm.nih.gov/41007296/) | 2025 | ✅ | Journal Article | screened | Prognostic Significance of WWOX/HIF1A Ratio in Cancer Subtypes: Insights into Metabolism, ECM, and EMT. |
 | [28151481](https://pubmed.ncbi.nlm.nih.gov/28151481/) | 2017 | ✅ | Journal Article; Retracted Publication | screened | 🛑 RETRACTED — Epigenetic regulation of HGF/Met receptor axis is critical for the outgrowth of bone metastasis from breast carcinoma. |
 
-*(showing all 515 outstanding records)*
+*(showing all 514 outstanding records)*
 
 ## Already processed from this seed
 
@@ -672,6 +671,7 @@ for an entirely unprocessed record.
 | [15870886](https://pubmed.ncbi.nlm.nih.gov/15870886/) | 2005 | ✅ | full text | CORPUS P337 | WWOX mRNA expression profile in epithelial ovarian cancer supports the role of WWOX variant 1 as a tumour suppressor, although the role of variant 4 remains unclear. |
 | [15692750](https://pubmed.ncbi.nlm.nih.gov/15692750/) | 2005 | ✅ | full text | CORPUS P324 | Frequent loss of WWOX expression in breast cancer: correlation with estrogen receptor status. |
 | [15266310](https://pubmed.ncbi.nlm.nih.gov/15266310/) | 2004 | ✅ | full text | CORPUS P244 | Frequent downregulation and loss of WWOX gene expression in human hepatocellular carcinoma. |
+| [21476439](https://pubmed.ncbi.nlm.nih.gov/21476439/) | 2011 | — | full text | receipt FTR-20261004-21476439-01 | WWOX oxidoreductase--substrate and enzymatic characterization. |
 | [30470736](https://pubmed.ncbi.nlm.nih.gov/30470736/) | 2018 | ✅ | full text | receipt FTR-20260909-30470736-01 | ℹ️ CORRECTION NOTICE — Author Correction: WWOX controls hepatic HIF1α to suppress hepatocyte proliferation and neoplasia. |
 | [42395553](https://pubmed.ncbi.nlm.nih.gov/42395553/) | 2026 | ✅ | partial full text | receipt FTR-20261004-42395553-02 | WWOX contributes to DNA damage, but not somatic instability in Huntington's disease. |
 | [42523332](https://pubmed.ncbi.nlm.nih.gov/42523332/) | 2026 | ✅ | partial full text | receipt FTR-20260921-42523332-01 | Golgi CATCHR complexes function as organizing hubs for vesicle tethering and fusion. |
@@ -822,7 +822,7 @@ for an entirely unprocessed record.
 | [30361190](https://pubmed.ncbi.nlm.nih.gov/30361190/) | 2018 | — | full text | PAPER 045 | West syndrome, developmental and epileptic encephalopathy, and severe CNS disorder associated with WWOX mutations. |
 | [28721938](https://pubmed.ncbi.nlm.nih.gov/28721938/) | 2017 | — | full text | PAPER 151 | Practical clues for diagnosing WWOX encephalopathy. |
 
-*(showing all 191 processed records from the seed)*
+*(showing all 192 processed records from the seed)*
 
 ## How to work one
 

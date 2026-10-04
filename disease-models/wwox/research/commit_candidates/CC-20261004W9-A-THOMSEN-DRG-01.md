@@ -99,3 +99,15 @@ this candidate. Receipt `FTR-20261004-42137291-02` recorded before the registry 
 - (NHP histopathology is a general statement | there were no significant INS1201-related effects on mortality, clinical signs, body weight, food consumption, ophthalmology, blood pressure, electrocardiogram, neurologic examination, nerve conduction velocity, physical examination, clinical pathology, blood cell count in the CSF, T cell responses, necropsy, organ weights, or histopathology | PMID 42137291, Results, GLP NHP toxicology paragraph)
 - (The DRG-specific histology shown is mouse, one high-dose animal | image is from animal administered highest dose, 8.0E+11 vg | PMID 42137291, Figure 8 legend, panel E)
 - (No NHP transgene mRNA in cord or DRG | INS1201 mRNA expression was not detected within any region of the spinal cord or DRG or injection site in NHPs dosed with INS1201 or vehicle. | PMID 42137291, Figure 8 legend, panel C)
+
+## BATCH DISPOSITION — `BATCH_20261004_003` (2026-10-04, ACTOR_ID `scientist`, Scientist M), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** `PROPAGATED` (MINOR, WM_v7.15 → WM_v7.16).
+
+**Surfaces written:** discovery_ledger_current.md · paper_registry_current.md · literature_tracking_log_current.md
+
+All six ops applied as declared. **One integrator addition:** the `DL-MECH-114` counter-evidence op also records that the paper's blanket *«no significant … effects … or histopathology»* sentence **names no neural tissue**, and the `PAPER 216` op records that the only DRG histopathology shown anywhere in the paper is **mouse** — both from the blind audit, which verified the absence on the **rendered** table and figure rather than on a text layer. **Blind locator audit: 6 triples, 6/6 SUPPORTED, 0 NOT_SUPPORTED, 0 UNVERIFIABLE.** The debt therefore retires as **not printed**, which is a different outcome from *answered* and is written as such in all four records.
+
+**Not medical advice.**

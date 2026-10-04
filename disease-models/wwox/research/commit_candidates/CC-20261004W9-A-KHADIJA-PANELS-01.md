@@ -45,3 +45,15 @@ Receipt `FTR-20261004-42807679-02`.
 
 - (Profiles shown are described as representative | Representative array-CGH profiles are shown in Figure 6 | PMID 42807679, Results, array-CGH paragraph)
 - (Array-CGH yield | pathogenic or likely pathogenic CNVs were identified in 10 patients, corresponding to a diagnostic yield of 18.5% (10/54) | PMID 42807679, Results, array-CGH paragraph)
+
+## BATCH DISPOSITION — `BATCH_20261004_003` (2026-10-04, ACTOR_ID `scientist`, Scientist M), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** `PROPAGATED` (MINOR, WM_v7.15 → WM_v7.16).
+
+**Surfaces written:** paper_registry_current.md
+
+The single op applied, **amended at source after the blind audit**. The candidate's *«Figure 6 is a representative montage without it»* was replaced by what the artefact prints: the montage is array-CGH **and MLPA**, it is called *representative* **only in the running text and not in its own caption**, its panels include variants of uncertain significance, one panel is not array-CGH at all, and **two of the ten pathogenic or likely pathogenic carriers have no panel**. The landed text also carries the recomputed arithmetic and the fact that the 54 tested are a **selected** subset of the cohort, which the audit supplied. **Blind locator audit: 2 triples, 2/2 SUPPORTED, 0 NOT_SUPPORTED, 0 UNVERIFIABLE** — one with the scope caveat just described. `CLAIM 032` is **not edited**: the panels neither fire nor refute its trigger.
+
+**Not medical advice.**
