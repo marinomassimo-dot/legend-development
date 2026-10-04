@@ -192,3 +192,53 @@ Compared **after** the first pass was written (`registry_records.py get`):
    are already held, so this is not an acquisition debt.
 3. **References (91 items)** — `not_read` as a section; the multihop enumeration in the manifest
    already lists the gene-direct subset, so this is a formal rather than a substantive gap.
+
+---
+
+## 2 · PMID 40524961 — Sengupta 2025, sterols and Dishevelled (held: 1 receipt, partial)
+
+Owed: figures. Read as images: Figures 5 and 6 (native JPEGs, now declared with full digests) and
+supplementary Figure S6 (page 9 of `mmc1.pdf` at 200 dpi).
+
+**WWOX: an earned null for the gene.** `wwox` occurs **twice** in the whole article — one Discussion
+sentence citing a head-and-neck cancer study, and its reference entry. The paper was read only for
+the transferable question, and the transfer limit is absolute: sterol-synthesis inhibition in
+HEK293T and iPSC-derived NSCs, no WWOX perturbation of any kind.
+
+What the panels add: nuclear DVL2 rises under cholesterol-synthesis inhibition (Fig 5E, `**` and
+`****`) while membrane and cytosolic DVL2 fall; the import route is PDZ-domain and FoxK2 dependent
+and is abolished by the PDZ inhibitor (Fig 6B, 6E/6F `****`); and in Fig S6E the condition with the
+most nuclear DVL2 carries the **lowest** canonical response — ≈12 against ≈55 for its own vehicle,
+about 4.6-fold, read off the plot — with **no significance marker drawn anywhere on the panel** and
+no test in the legend.
+
+Record affected: **DL-MOL-003**, Op 2 of `CC-20261004W12-C-WNT-DIRECTION-01` (MINOR). The
+dissociation of nuclear DVL from canonical activation is demonstrated **for that route**, which is
+sterol-driven and not a tumour-suppressor silencing; it is not transferred to WWOX.
+Still owed: `mmc2.xlsx` and `mmc3.xlsx` (interactome tables, undeclared binary supplements).
+
+## 3 · PMID 41124647 — Zhang 2025, two SDR-region missense alleles (held: 2 receipts, partial)
+
+Owed: figures — and only one of seven figure images was on disk. The package was acquired free from
+the Europe PMC supplementaryFiles archive for PMC12767083; the already-declared supplement DOCX came
+back **byte-equal**, which is the integrity check for the rest.
+
+**Answer to this wave's question: no panel quantifies oxidoreductase activity, because there is no
+enzymatic assay anywhere in the paper.** `oxidoreductase` occurs once (expanding the gene's name),
+`SDR`, `enzyme`, `catalytic`, `dehydrogenase` and `short-chain` occur zero times. The measured loss of
+function is phenotypic and post-translational, never catalytic.
+
+Measured on the panels: Figure 2A shows the four compared lines are **not expression-matched** —
+P252A faint in both cell lines, P282A visibly weaker than wild type in BCPAP, on an even GAPDH row,
+with no densitometry published (a crude pixel integration attempted here was discarded as
+unreliable, and no ratio is carried). Figure 4A shows they are **not transcript-matched** either:
+relative transgene mRNA ≈ 72 (WT), 78 (P252A), **108 (P282A)**, so P282A carries ≈1.5× the WT
+transcript; Figure 4B has P282A `ns` against WT at all five chase timepoints.
+
+Supplementary Table 6, read cell-wise for the first time, is a **presence-only** interactome: 261
+rows, `Lost Detection` in all three control columns of every row, no replicate, no fold change, no
+p-value, no WWOX row. POLE4 is rank 52 of 261; **DVL2 is present** at rank 190 — a lead on the
+WWOX–DVL axis, not a measurement of it.
+
+Record affected: **DL-BIO-001**, `CC-20261004W12-C-SDR-ABUNDANCE-01` (MINOR). Genotype caution:
+P252A ≠ Q230P, and an SDR-region missense is not an acceptor-site allele.
