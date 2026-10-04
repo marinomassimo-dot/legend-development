@@ -1,0 +1,272 @@
+{
+ "schema_version": 2,
+ "pmid": "42135313",
+ "doi": "10.1038/s41531-026-01367-y",
+ "receipt": "FTR-20261003-42135313-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID42135313.md",
+  "disease-models/wwox/research/intake_wave_20261003w6_A.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W6-A-REGISTRY-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is not the reader's to write; its one consequence from this wave is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "None of the six sources supplies a measured lever for the reference genotype class; forging hypotheses here would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is tested against a WWOX readout in this source; nothing to send to BLOCK-1 triage."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The triples are published in the candidates for a blind auditor; the reader cannot audit their own locators."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 1,
+  "research_type": "computational",
+  "is_primary_group_for_disease": false,
+  "weighting": "A large multi-cohort Parkinson's progression consortium; credible for survival statistics; no WWOX biology. The WWOX locus comes from the same group's 2021 genome-wide survival study. Not a per-author sweep."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "registry_records.py --theme rs8050111 (LEGEND)",
+    "count": 0,
+    "source": "LEGEND registries 2026-10-03"
+   }
+  ],
+  "note": "LEGEND holds no record of the WWOX PD-progression SNP or of its discovery study (PMID 33958783)."
+ },
+ "multihop": {
+  "references_enumerated": 84,
+  "gene_direct_refs_in_source": [
+   "30158849",
+   "33958783",
+   "30820047"
+  ],
+  "resolved": [
+   {
+    "pmid": "30158849",
+    "how": "Ref 49 (Liu CC 2018 review) has receipted readings in LEGEND (FTR-20261003-30158849-02); it is the paper's only mechanism citation for WWOX and is a review."
+   }
+  ],
+  "queued": [
+   {
+    "queue": "CC-20261003W6-A-REGISTRY-01",
+    "why": "Ref 17 (Liu 2021 genome-wide survival study, PMID 33958783) is the discovery source of rs8050111 and is absent from LEGEND; ref 48 (Kunkle 2019, PMID 30820047) is held only as a queue entry about another reading. Neither is read here; the locus-level conclusions of this reading do not depend on them. Landings are suggested in the candidate."
+   }
+  ],
+  "disposition": "Three gene-direct references; one resolved, two queued with a reason."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42135313 (no record); --theme Parkinson / rs8050111 after the first pass",
+  "hits": 0,
+  "note": "No record names this paper; LEGEND's 'Parkinson' records concern parkinsonism in WWOX-DEE, a different question."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-03 via PubMed metadata (get_article_metadata): publication types ['Journal Article']; no retraction, expression of concern or correction listed for PMID 42135313.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 84,
+   "references_screened": 82,
+   "references_with_doi": 82,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --doi 10.1038/s41531-026-01367-y --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42135313_Kang2026_PMC.xml",
+   "sha256": "4ccdb33114f7fb308e177c4368f3b48ebf251abd4a336297e9d4147b08c9bc8f",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13424109/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "result_sha256": "4ccdb33114f7fb308e177c4368f3b48ebf251abd4a336297e9d4147b08c9bc8f"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID42135313_Kang2026_supplement/41531_2026_1367_Fig1_HTML.jpg",
+   "sha256": "1b1e7821e111abae8b6eb72197c23f3cf022a2a85ae0ca34d00b56d3c3fd19ce",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13424109.1/41531_2026_1367_Fig1_HTML.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets (AWS open data bucket)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "result_sha256": "1b1e7821e111abae8b6eb72197c23f3cf022a2a85ae0ca34d00b56d3c3fd19ce"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID42135313_Kang2026_supplement/41531_2026_1367_MOESM1_ESM.pdf",
+   "sha256": "6c48189532cf9360c1f65cec887cb4629f0957a9da257a02a2cf268a3aec245c",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13424109.1/41531_2026_1367_MOESM1_ESM.pdf",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets (AWS open data bucket)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "result_sha256": "6c48189532cf9360c1f65cec887cb4629f0957a9da257a02a2cf268a3aec245c"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID42135313_Kang2026_supplement/41531_2026_1367_MOESM1_ESM.txt",
+   "sha256": "682146f8ea9decb536fe0d1dd1b17c071ee3566d12a42a25482916cb44c01d8b",
+   "kind": "supplement_text",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID42135313_Kang2026_supplement/41531_2026_1367_MOESM1_ESM.pdf",
+    "extractor": {
+     "name": "pdftotext (poppler)",
+     "version": "24.02.0",
+     "call": "pdftotext -layout -nopgbrk <file.pdf> <file.txt>"
+    },
+    "acquired_on": "2026-10-03",
+    "result_sha256": "682146f8ea9decb536fe0d1dd1b17c071ee3566d12a42a25482916cb44c01d8b"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The WWOX exposure is a single SNP, rs8050111, in the WWOX locus.",
+    "snippet": "and rs8050111 in the WWOX locus9,17.",
+    "anchor": "Methods, Genotype data",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42135313_Kang2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "WWOX was coded as carrier versus non-carrier of the minor allele; the burden model counts loci carried, not WWOX allele dose.",
+    "snippet": "Footnotes:aBased on comparison of carriers versus non-carriers of minor allele for single-nucleotide polymorphisms in RIMS2, TMEM108, and WWOX",
+    "anchor": "Table 2 footnote",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID42135313_Kang2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "662 analysed patients (8.5%) carried the WWOX variant.",
+    "snippet": "17% (1330) of PD patients carried the APOE ε4 haplotype, 8.5% (662) carried the WWOX variant",
+    "anchor": "Results, Sample characteristics",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42135313_Kang2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "For WWOX the random-effects HR is 1.56 overall but 1.16 (0.81-1.66) in biomarker cohorts, 2.30 in population-based and 1.85 (0.69-4.98) in clinical-trial cohorts.",
+    "snippet": "WWOX 1.56 (1.17, 2.07) 21 1.16 (0.81, 1.66) 11 2.30 (1.38, 3.83) 6 1.85 (0.69, 4.98) 4",
+    "anchor": "Table 3, random-effects block (re-extracted cell-wise)",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID42135313_Kang2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The main text reports the WWOX association and cites a supplementary figure for it.",
+    "snippet": "Finally, for WWOX, meta-analysis of 21 cohorts identified a significant association with dementia risk (HR = 1.56, 95% CI: 1.17–2.07; Supplementary Fig.",
+    "anchor": "Results, Associations between individual progression loci",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42135313_Kang2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The WWOX forest plot's own test for subgroup differences by study design is significant (random effects p = 0.02), and its legend is numbered Supplementary Figure 4, not S3.",
+    "snippet": "Test for subgroup differences (random effects): χ2 2= 7.42, df = 2 (p = 0.02) Supplementary Figure 4. Forest plot of associations between rs8050111 in the WWOX locus",
+    "anchor": "Supplement, WWOX forest plot and its legend (vector text layer)",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID42135313_Kang2026_supplement/41531_2026_1367_MOESM1_ESM.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The WWOX association with yearly MMSE decline is null in the pooled random-effects model.",
+    "snippet": "WWOX -0.02 −0.09; 0.04 44.7% -0.24 −0.44; −0.03 9.3% -0.05 −0.11; 0.01",
+    "anchor": "Supplement, MMSE-slope table (biomarker, population-based, clinical-trial columns)",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID42135313_Kang2026_supplement/41531_2026_1367_MOESM1_ESM.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "WWOX was nominated by one prior study, the 2021 genome-wide survival study in 15 cohorts and 3,821 patients.",
+    "snippet": "WWOX 15 3821 2.37 × 10 -8 Yes Cox PH (GWSS) Dementia Liu et al.",
+    "anchor": "Supplement, Supplementary Table 1",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID42135313_Kang2026_supplement/41531_2026_1367_MOESM1_ESM.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fifteen of the 24 cohorts were harmonised in the authors' earlier work, so the WWOX estimate is not independent of its discovery data.",
+    "snippet": "We previously reported data harmonization for 15 of the cohorts here included in refs.",
+    "anchor": "Methods, Cohorts and study participants",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42135313_Kang2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The paper's only mechanism statement for WWOX is one sentence citing a review.",
+    "snippet": "WWOX, an Alzheimer’s disease GWAS locus48, modulates tau phosphorylation49.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42135313_Kang2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1a classifies 2,784 + 1,907 + 449 + 44 = 5,184 patients by number of loci, fewer than the 7,745 analysed.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 1a legend box: Non-carriers (N = 2,784); One progression locus (N = 1,907); Two progression loci (N = 449); Three and more progression loci (N = 44).",
+    "anchor": "Figure 1a",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID42135313_Kang2026_supplement/41531_2026_1367_Fig1_HTML.jpg",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC13424109/fullTextXML returned HTTP 200 with the full body and three tables on 2026-10-03; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure legend, a figure or a supplement."
+ }
+}

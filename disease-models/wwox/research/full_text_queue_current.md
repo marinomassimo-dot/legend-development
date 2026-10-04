@@ -969,7 +969,8 @@ La catena prosegue verso il ratto *lde* (`FT-042`/`FT-041`). Vedi `DL-MECH-073` 
 non-cell-autonoma da delezione neuronale di Wwox — e il sistema non ne ha mai avuto il testo
 fino al 2026-08-07. Nessuna receipt esiste per questo PMID.
 **Come è emerso:** corpus Aqeilan RI, gruppo 1 della sessione di lettura 2026-08-09.
-**Current status:** 🔴 **LETTURA SOSPESA 2026-08-09 — NESSUNA RECEIPT EMESSA.** La sospensione
+**Current status (2026-10-03):** ✅ **LETTO** sull'articolo tipografico e sul supplemento completi forniti dall'operatore — ricevuta `FTR-20261003-33914858-03`, `partial_fulltext_read` (partial full text; video supplementari campionati a fotogrammi, non visionati), manifest `deepdive_manifests/PMID33914858.json` con validatore `MANIFEST STRICT PASS` e 0 lacune, dossier `fulltext_dossiers/PMID33914858.md` parte 2. La sospensione del 2026-08-09 riguardava una superficie testuale non valida: quella diagnosi **regge** anche sul nuovo PDF (il suo layer di testo è rifiutato dallo stesso screen), e la lettura è stata fatta **sulle pagine rese**, non riparando il testo. Lo storico qui sotto è conservato invariato.
+**Current status storico:** 🔴 **LETTURA SOSPESA 2026-08-09 — NESSUNA RECEIPT EMESSA.** La sospensione
 **non** è per budget né per copertura incompleta: è per invalidità della superficie testuale.
 L'estrazione deterministica (PyMuPDF `get_text()`) restituisce dai Methods
 `Results were considered significant when P 5 0.05`, mentre la pagina **stampa** `P < 0.05`
@@ -3919,6 +3920,8 @@ decidere se `-056` e `-139` valgono la lettura o una dismissione motivata con `R
 
 ✅ **`-043` resta non letto e non ha PMCID**; la sua direzione opposta (*WWOX attiva l'autofagia*) rimane non verificabile di prima mano. Ma lo stallo **non è più «un paper contro uno»**: censimento misurato il 2026-10-03 (`esearch`, tool=LEGEND-research) — `WWOX AND autophagy` = 10 record, di cui **8 né Chang NS né Hsu LJ**. Sul lato «sopprime» c'è un secondo laboratorio indipendente (PMID 33300063, carcinoma ovarico, paclitaxel, `CORPUS-STUB-056`); sul lato «attiva» c'è `-043` (PMID 36621327, danno polmonare acuto da LPS, mTOR–ULK1). La differenza fra i due poli non è solo il laboratorio: è lo **stress** (antimetabolita/chemioterapico contro infiammatorio) e il **tessuto** (epitelio tumorale contro epitelio polmonare in danno acuto). Nessuno dei due è neurale, nessuno dei due è un genotipo umano.
 
+✅ **`-056` letto per intero il 2026-10-03** (intake wave 4, Scientist A; ricevuta `FTR-20261003-33300063-01`, PDF bronze-OA dell'editore più Supplementary Figure S1; `CC-20261003W4-A-AUTOPHAGY-01`; lo stub è promosso a `PAPER 152`, numero provvisorio) — **tre dei quattro letti.** È **concordante con `-139` e ha la stessa lacuna**: WWOX su → Beclin-1 e LC3 giù, WWOX giù → su, su blot rappresentativi senza densitometria né statistica; l'unico clamp (clorochina) è sul braccio **paclitaxel**, mai su un braccio WWOX; nessun p62 sui bracci WWOX. **Nuovo rispetto alla forma ristretta:** p-mTOR segue la dose di WWOX in entrambe le direzioni (sovraespressione su, siRNA giù) — una correlazione fosfo misurata, senza epistasi con un inibitore di mTOR, con i totali dei bersagli a valle non misurati e p-p70S6K **appena rilevabile** («barely detected», la parola della fonte; corretto il 2026-10-03 da `BATCH_20261003_003` su audit cieco, da «non rilevato») (la Discussione scrive comunque «mTOR/p70S6K»). L'abstract dice «WWOX ridotto» nella linea resistente; i Results gli danno il WWOX basale più alto. Forma ristretta con un emendamento: *la via mTOR è correlata alla dose di WWOX in un sistema tumorale e non testata causalmente in nessun punto di questo corpus.* Ancora niente di neurale. La domanda posta a `-043` qui sotto vale anche per `-056`, e la risposta per `-056` è **no**.
+
 **Next action aggiornata:** `-043` resta il primo da leggere, e la domanda da portargli è ora precisa — *il suo LC3-II è misurato sotto clamp lisosomiale, e su una manipolazione di WWOX?* Se non lo è, nessuno dei due poli ha mai misurato il flusso sulla variabile giusta, e la contraddizione è fra due marcatori statici, non fra due flussi.
 
 ---
@@ -5198,6 +5201,8 @@ inverte**. È la stessa amputazione di clausola trovata oggi su `CORPUS-STUB-139
 **~3 volte** (§ 2.1). Ogni affermazione che eredita la parola «KO» da questo paper eredita una
 **deplezione parziale**.
 
+**Update 2026-10-03 (intake wave 4, Scientist A, `CC-20261003W4-A-REVIEWS-01`):** for `36271927` the debt is paid — Europe PMC JATS XML carries all 112 references with identifiers and the publisher CDN served Figure 1 (a schematic, inspected); `FTR-20261003-36271927-01`, `complete_fulltext_read`. The arc resolves to refs 26 (PMID 25012504), 14 (PMID 30755385), 15 (PMID 33520443, own group), 74 (PMID 35328751, own group), 84 and 88 (*Drosophila*): the five-strand reconstruction above holds. New: the myelination sentence ('usually shows also reduced myelination') is not supported by its cited Piard aggregate and cites one patient twice. `35328751` is untouched by this update.
+
 **Next action:** **nessuna rilettura automatica.** Il debito si chiude solo con una superficie che
 porti figure e bibliografia (HTML/PDF dell'editore), e serve a una sola domanda precisa: **quali
 primari reggano l'arco HIF1α**. Finché resta aperto, l'arco va citato per quello che la prosa nomina
@@ -5596,6 +5601,8 @@ Consistent with `DL-MECH-022`'s biallelic-null case at **OFC +0.37 SD**. ⚠️ 
 independent source**: `Tarta-Arsene O` is also a co-author on the Piard cohort above, so anyone
 counting these as two independent observations of "microcephaly not mandatory" is double-counting
 one clinician's patients.
+
+**Resolved for `PMID 28721938` (2026-10-03, intake wave 4, Scientist A):** read in full (`FTR-20261003-28721938-01`); the non-independence above is now a source-level match, not only a shared author — the patient is Patient 8 of the Piard cohort (`CC-20261003W4-A-PATIENT-OVERLAP-01`). Registry landing: `PAPER 151` / `LIT-0444` (provisional numbers, `CC-20261003W4-A-REGISTRY-01`).
 
 **Next action for both: a `CORPUS` placeholder, not a read.** Neither needs full text for the use
 made of it here, and neither should acquire the appearance of a reading it has not had.
@@ -6739,6 +6746,7 @@ now asserts reads for these papers, so the reading debt is declared here rather 
    cannot be searched for gene content on that surface.
 ⚠️ `PMID 37095367` is **not** a corrigendum; it is the primary Bayanova WGS report.
 ⚠️ `PMID 31618474` reports a second, **overlap-confounded** occurrence of `p.(Glu17Lys)`.
+🟢 **Resolved 2026-10-03 (intake wave 5, Scientist B, `CC-20261003W5-B-PATIENT-OVERLAP-01`).** `31618474` re-read at source with gene symbols, tables and supplement (`FTR-20261003-31618474-01`): its WWOX patient is **patient 6 of `PMID 36779245`** ([[paper_registry_current#PAPER 018]]), which says so itself — not a Piard patient (Piard's `p.(Glu17Lys)` carrier has `p.(Ser304Phe)` in trans). `32214227` re-read (`FTR-20261003-32214227-01`): Table 1 **does** carry a WWOX row — homozygous `p.(Gly372Arg)`, the published SCAR12 family of [[paper_registry_current#PAPER 042]] — so the FT-116 statement 'zero WWOX variants' was an artefact of the table-less extraction. `35715422` read (`FTR-20261003-35715422-01`): one WWOX carrier with an ATP7A second diagnosis. Registry landings `PAPER 172`/`158`/`160` (provisional, `CC-20261003W5-B-REGISTRY-01`). `37095367` untouched by this wave.
 
 ---
 
@@ -8283,6 +8291,16 @@ raggiungibile da qui.
 
 ---
 
+
+## FT-193 — `doi 10.1016/j.omtm.2025.101643` (Grubor 2025) · the published source behind the field's «immunosuppression can greatly reduce but not eliminate» sentence
+
+**Paper:** DOI 10.1016/j.omtm.2025.101643 — Grubor B. *et al.*, «Inhibition of immune response reduces pathology in dorsal root ganglia and peripheral nerves in cynomolgus macaques following AAV gene therapy», *Mol Ther Methods Clin Dev* 2025;33. No PMID is recorded here; the entry is keyed on the DOI, read off the reference list of PMID 42422766 ([[paper_registry_current#PAPER 184]]).
+**Why it is here:** `CC-20261003W6-C-IMMUNOSUPPRESSION-LIMIT-01` recorded that sentence as citing the authors' **unpublished** data. The blind locator audit of `BATCH_20261003_005` measured the reference and found it is a **published** article with a DOI. It is therefore the single most load-bearing unread paper on whether immunosuppression bounds CSF-route ganglion risk — the exact question `DIS-031` leaves open — and it is the only source named in this corpus that claims to have measured the comparison.
+**Priority:** HIGH — it is the stated evidence for a safety sentence this repository now carries in `DIS-031`, `DL-THER-116` and `RL-C-20261003w6`.
+**Current status:** OPEN — not acquired, not read. **No conclusion is imported from it:** the wave-6 arm of `DIS-031` stands on the four sources that were read, and records that only «reduce rather than eliminate» survives from the sentence this paper backs.
+**Next action:** acquire (`find-fulltext` by DOI) and read with graded per-arm DRG histopathology as the target datum; it is the second revival trigger of `DIS-031`'s wave-6 arm.
+
+---
 ## 🔴 CORRECTION 2026-09-23 — `PMID 29808465` is NOT without a DOI, and this file says both things
 
 **Raised by** Scientist B (`route_recovery_wave2_20260923.md` § 4, contradiction 2). **Verified
