@@ -305,3 +305,19 @@ Re-measured 2026-10-04 with `evidence_presence.py --disease wwox --pmid 42397075
 **Why still DEFERRED.** Item A **suspends two `consolidated baseline` claims**. That is the highest-consequence act in the queue, it requires a blind locator audit against a surface nobody has yet read, and the surface is a lossy watermarked manuscript whose methods are missing. Propagating it on an unread artefact would be exactly the failure the blind-audit discipline exists to prevent. **Review trigger: 2026-10-06**, as a reading task with the audit budgeted; the acquisition that blocked it for seven batches is done.
 
 **Not medical advice.**
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261004_005` (2026-10-04, ACTOR_ID `scientist`, Scientist O), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** DEFERRED
+
+**Re-measured 2026-10-04 and the blocker is unchanged.** `evidence_presence.py --disease wwox --pmid 42397075` reports **19 of 35 declared artefacts present, 16 absent, 0 digest mismatch** — exactly the state `BATCH_20261004_004` measured, with the whole host already swept by SHA-256 at that time and **0 recoverable**. The acquired manuscript is on disk; the **supplement is not**, and the article's own methods are about 340 words, the paper saying the detail *«is provided in the Supplementary material»*.
+
+**Why it is still deferred, in one line:** item A **suspends two `consolidated baseline` claims**, which needs a receipted reading of that manuscript plus a blind locator audit against it, and **no reading has been performed** — the artefact is present and unread. That is a reading task with its own budget, not a line in a propagation, and this batch did not pretend otherwise.
+
+**Review trigger: 2026-10-06**, unchanged. **This candidate is named in no scope of this batch**, deliberately, so `growth_anchors.py` keeps counting it as pending.
+
+**Not medical advice.**

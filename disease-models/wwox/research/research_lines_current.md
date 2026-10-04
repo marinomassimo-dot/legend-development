@@ -587,3 +587,52 @@ Register of active research lines that emerged from LEGEND after the bootstrap o
 **Open question carried at:** `RL-C-20261004w9c1` · `DL-MOL-013`
 
 ---
+
+---
+
+## RL-C-20261004w11c1 — Single-site ICV AAV is graded across the choroid plexus in the mouse (injected lateral > contralateral > fourth > third); dose, transgene, read-out and time are confounded in the only comparison
+
+**Status:** open · **Tag:** **DATO** for the printed percentages and the panel values, **INFERENZA** for the route-level reading · **Source:** PMID 42538560 ([[paper_registry_current#CORPUS-STUB-186]]), receipt `FTR-20261004-42538560-01`, peer reviewed, open access · **Landed by** `BATCH_20261004_005` from `CC-20261004W11-C-CPDIST-01` (intake wave 11, Scientist C) · **WWOX occurrences in the source: zero** (earned null for the gene) · **Blind locator audit 2026-10-04: 8 triples, 8/8 SUPPORTED; every number check MATCHES, figures read as rendered panels.**
+
+**(1) The finding in one sentence.** In adult mouse, one unilateral 10 microlitre injection of an engineered AAV2/ShH10 Y445F vector into the **left** lateral ventricle transduces the choroid-plexus epithelium unevenly — the injected-side lateral ventricle most, the contralateral side less (*«Despite clear transit of AAV between the lateral ventricles through the foramen of Monro»*), and, in the source's own ordering, **fourth-ventricle choroid plexus comparatively more than third**, which was *«very poorly infected, though some green cells could be observed»*.
+
+**(2) Numbers, each with how it was obtained.**
+
+| Quantity | Value | Surface |
+|---|---|---|
+| Lower dose, EGFP, 3 weeks | 3.5e10 genomes in 10 microlitres (3.5e12 per ml, recomputed) | Results; Fig. 3 legend |
+| Higher dose, SaCas9 plus a 1:1 Aqp1 guide mix, 6 weeks | 1.0e11 genomes in the same 10 microlitres (1.0e13 per ml); ratio 2.9 | Results; Fig. 5-6 legends |
+| Indel fraction, injected vs contralateral | panel means about 19.7 and 13.1 per cent, 8 points per group; text *«two thirds»*; injected vs contralateral p = 0.017 | Fig. 5b, rendered panel + text |
+| AQP1 removal, lateral ventricle, injected / contralateral | 59 / 39 per cent at the more rostral level; 78 / 54 per cent at -1.8; 45-49 per cent both sides at -2.1 relative to Bregma | text, confirmed on the panels |
+| Third ventricle | about 37 per cent at -0.98 (**p = 0.001 is a panel value, not printed in the text**); 26 per cent at -1.8, p = 0.168, not significant | text + Fig. 6 panel |
+| Fourth ventricle | 3 per cent, p = 0.885 | text + Fig. 6 panel |
+| Animals | Fig. 6 legend states N = 4 per group and every rendered panel shows four points; Fig. 5 legend states N = 8 while its gel labels seven mice — ⚠️ explained by the caption's own *«Representative examples»*, and Fig. 5b itself plots eight points per group, so this is **not** a contradiction of N |
+
+**(3) What this adds, bounds or leaves untouched.** **Adds** a measurable compartment gradient after a CSF-route injection: *«choroid plexus»* appears in **zero of the 1,539 registry records** measured at selection time, so no held record states it. **Bounds** any reading that the higher dose *«overcame»* the gradient — dose, transgene (EGFP versus SaCas9 plus guides), read-out (native fluorescence versus indel and AQP1 protein) and time (3 versus 6 weeks) all differ between the two experiments, so the dose effect is **not isolated**, and the authors compare the two figures descriptively only. Their own position is that *«whether dose escalation could overcome the bias to the ipsilateral side without inducing toxicity has not yet been examined in detail»*, while noting that **bilateral ICV injection already gives a more even distribution**. **Bounds** the selection's premise that ICV is «the route a WWOX attempt would use»: **no source held by this model fixes a WWOX route.** **Leaves untouched** every immune, window and dorsal-root-ganglion statement — no immune endpoint, no age series, no ganglion read-out.
+
+**(4) Transfer limits.** Adult wild-type mouse, one capsid, reporter and CRISPR payloads, and the target is the choroid-plexus epithelium itself rather than parenchymal neurons; the rat and pig data are explant tropism only. The authors note that scaling *«may produce non-linear relationships with dose and ventricular volume during scaling to human brains»*, and that distribution may shift in disease with CSF dynamics. Nothing transfers to a WWOX cassette, to neuronal transduction, to a human CSF volume or to any WWOX-DEE allele. ⚠️ A coordinate caveat recorded rather than smoothed: the Results sentence locates the two lateral-ventricle levels **relative to the injection site**, and only the following sentence re-frames them to Bregma.
+
+**Revival trigger:** a same-transgene, same-read-out dose series across ventricles, or a large-animal ICV choroid-plexus map.
+**Open question carried at:** `CLAIM 047` (route bound; not edited by this record) · `RL-C-20261004w11c2`
+**Not medical advice.**
+
+---
+
+## RL-C-20261004w11c2 — Peripheral-nerve AAV: a dose chosen by vector copy number at n = 2 per dose, a safety read-out imaged against naive rather than control-vector animals, and route and sex statements that disagree inside the paper
+
+**Status:** open · **Tag:** **DATO** for the printed values, **INFERENZA** for the attribution limit · **Sources:** PMID 42436860 ([[paper_registry_current#CORPUS-STUB-187]]), receipt `FTR-20261004-42436860-01`, primary; PMID 42812991 ([[paper_registry_current#CORPUS-STUB-188]]), receipt `FTR-20261004-42812991-01`, as a secondary pointer only · **Landed by** `BATCH_20261004_005` from `CC-20261004W11-C-PERIPHAAV-01` (intake wave 11, Scientist C) · **WWOX occurrences: zero in both** (earned null for the gene) · **Blind locator audit 2026-10-04: 9 triples, 8 SUPPORTED, 1 NOT_SUPPORTED_AS_LABELLED, and three of the candidate's own checks measured DIFFERENT from its draft — all three repaired in this text before landing.**
+
+**(1) The finding in one sentence.** This is a **peripheral** sensory-neuron programme — sciatic-nerve and dorsal-root-ganglion delivery in a rat nerve-injury pain model, **not a CNS cassette** — whose dose of 4e11 genome copies per rat was selected from a pilot of **two rats per dose** read only as sciatic-nerve vector copy at 3 weeks and *«not shown»*, and whose safety read-out at 12-14 weeks is histology and immunohistochemistry.
+
+**(2) Numbers (recomputed).** Dose 4e11 GC in 20 microlitres = 2e13 GC per ml. Pilot: 1e11/5 microlitres, 2e11/10 microlitres, 4e11/20 microlitres, two rats each, top-to-bottom ratio 4; the pilot's stated reason is *«less efficacy of transgene expression at a lower dose»* — i.e. **chosen by efficacy of expression, not by tolerability**. Sciatic-nerve genome copies at 3 months: plotted mean about 3.4e5; DRG L3-L6, lumbar cord and paw skin about 2e3 to 5e3, i.e. about 0.6 to 1.5 per cent of nerve; liver, kidney, heart, blood and biofluids below the stated cutoff of 500 copies. About eight points are plotted for sciatic nerve against n = 6 in text and legend.
+
+**(3) What this adds, bounds or leaves untouched.** **Corrects a selection premise:** the route is peripheral nerve, so transfer to a CNS restoration specification is route-different. **Adds** to the held dose-scalar series a worked case in which «dose» is a **per-animal figure with no per-kilogram statement**. **Bounds** its *«no observable microscopic pathology compared to tissues from naive animals»*: that comparison is **H&E only** and is treated-injured versus **naive**, so the mild *«proliferation of GFAP-positive satellite glial cells and Iba1-positive microglia»* cannot be attributed to the vector rather than to the nerve injury on those panels — the source itself reports that glial increase as **injury-versus-naive**, *«indicating low-grade DRG neuroinflammation»*. ⚠️ **Repaired here:** the control-vector comparison (ATF3, CD6/CD8, caspase-3) **is narrated in the main-text Results** — only its images are supplementary, and those images were not read; the candidate's draft said the comparison itself was unread. **Untouched:** every immunosuppression-pattern and DRG-attribution record; this paper has no immunosuppression arm and no primate data.
+
+**(4) Two internal inconsistencies, recorded at their measured width.** ⚠️ **Route:** Methods and Results say sciatic nerve (*«injected directly into the subepineural space»*), while **DRG** delivery is written in two figure legends, a Results section title, a further figure legend and one Methods subsection — so the disagreement is **not confined to figure legends**, as the candidate's draft had it. ⚠️ **Sex:** the Animals subsection says *«Adult male Sprague-Dawley (SD) rats weighing 100-125 g»*, while another Methods subsection reports *«for both male and female rats»*, a third says tissues *«were harvested (two females)»*, and a Results section is titled for female animals — so the inconsistency is **internal to the Methods**, not Methods-versus-Results. The candidate's label «Methods list male rats only» is therefore **false of the Methods as a whole** and is not carried.
+
+**(5) Transfer limits.** Rat, AAV6.2FF, peptide payload, peripheral route, 3-month horizon, single laboratory; the human sensory-neuron work used a **lentiviral** vector, not AAV; capsid-specific humoral immunity *«was not examined in this study»*. No transfer to a CNS dose ceiling, to any WWOX cassette or to a human allele.
+
+**Pointer from the secondary source:** two primaries the review cites — a non-human-primate DRG-detargeting study and an intracranial B-cell re-dosing study — are **queue candidates, not hops taken**; the review's own sentence about DRG pathology across CNS-directed programmes is carried by two citations and is not evidence here.
+**Revival trigger:** the supplementary figure showing the control-vector arm for ATF3 and the glial markers.
+**Open question carried at:** `RL-C-20261004w11c1`
+**Not medical advice.**
