@@ -8,7 +8,9 @@
   "disease-models/wwox/research/intake_wave_20261003w5_B.md",
   "disease-models/wwox/research/fulltext_dossiers/PMID31353122.md",
   "disease-models/wwox/research/commit_candidates/CC-20261003W5-B-CNV-CARRIER-01.md",
-  "disease-models/wwox/research/commit_candidates/CC-20261003W5-B-REGISTRY-01.md"
+  "disease-models/wwox/research/commit_candidates/CC-20261003W5-B-REGISTRY-01.md",
+  "disease-models/wwox/research/intake_wave_20261004w12_A.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W12-A-CARRIERS-01.md"
  ],
  "skills_considered": [
   {
@@ -144,6 +146,48 @@
      "call": "pdftotext -layout -nopgbrk files/fulltext/PMID31353122_Mori2019_IR.pdf files/fulltext/PMID31353122_Mori2019_IR.txt"
     }
    }
+  },
+  {
+   "path": "files/figures/PMID31353122/Mori2019_IR_page17_150dpi_Fig2.png",
+   "sha256": "093c7b9addb22437fba1663b5a2092799aaac75b9965d5abfa096fc4ccde2108",
+   "kind": "figure",
+   "note": "Wave 12 re-read (2026-10-04): page 17 of the accepted manuscript rendered at 150 dpi; Figure 2, three EEG panels with an on-page legend. Figure 1 (page 16) is a facial photograph and was deliberately NOT rendered or opened.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdftoppm_render",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": true,
+    "result_sha256": "093c7b9addb22437fba1663b5a2092799aaac75b9965d5abfa096fc4ccde2108",
+    "derived_from": "files/fulltext/PMID31353122_Mori2019_IR.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 150 -f 17 -l 18 -png files/fulltext/PMID31353122_Mori2019_IR.pdf p"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID31353122/Mori2019_IR_page18_150dpi_Fig3.png",
+   "sha256": "9129539aa8f7aa874b9fdbe67ccf131fa38529c3b4f5f30dce5de8daa2992cc9",
+   "kind": "figure",
+   "note": "Wave 12 re-read (2026-10-04): page 18 rendered at 150 dpi; Figure 3, clinical-course timeline (vector drawing).",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdftoppm_render",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": true,
+    "result_sha256": "9129539aa8f7aa874b9fdbe67ccf131fa38529c3b4f5f30dce5de8daa2992cc9",
+    "derived_from": "files/fulltext/PMID31353122_Mori2019_IR.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 150 -f 17 -l 18 -png files/fulltext/PMID31353122_Mori2019_IR.pdf p"
+    }
+   }
   }
  ],
  "verbatim_locators": {
@@ -215,6 +259,38 @@
     "surface": "body",
     "artifact": "files/fulltext/PMID31353122_Mori2019_IR.txt",
     "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The clinical-course figure adds extra-neural events to the phenotype of this deletion carrier: airway malformation requiring tracheostomy, ductus closure by catheter, and gastrostomy; the last appears in the figure only.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 3 timeline 0-5 years: green arrows 'Bilateral vocal cord atresia followed by RS virus infection→tracheostomy' (before 1 y), 'PDA catheter embolization' (between 3 and 4 y), 'Gastrostomy' (after 4 y). Red trapezoid 'Spasms' from onset before 1 y to about 3.5 y. Purple box: no seizure, no abnormal finding in EEG at last follow-up.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID31353122/Mori2019_IR_page18_150dpi_Fig3.png",
+    "anchor": "Figure 3, page 18 render",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Gastrostomy is printed in the figure's text layer and nowhere in the manuscript body.",
+    "snippet": "followed by RS virus Gastrostomy",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31353122_Mori2019_IR.txt",
+    "anchor": "Figure 3 text layer, page 18",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "The on-page Figure 2B legend says the EEG was evolving toward a Lennox-Gastaut pattern before lamotrigine; the legends page omits that sentence.",
+    "snippet": "evolving into the finding of Lennox–",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31353122_Mori2019_IR.txt",
+    "anchor": "Figure 2B on-page legend, page 17",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "The EEG panels show an occasional multifocal pattern before treatment, diffuse polyspike bursts before lamotrigine, and a background without discharges after it; no quantitative EEG measure is given.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 2: A, 19-channel average-reference trace with scattered spikes and slow waves; B, repeated diffuse high-amplitude polyspike and polyspike-wave bursts across all channels; C, low-amplitude background without bursts. Scale bars 100 µV and 1 s on each panel.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID31353122/Mori2019_IR_page17_150dpi_Fig2.png",
+    "anchor": "Figure 2, panels A-C, page 17 render",
+    "panel_text_relation": "text_confirmed_by_panel"
    }
   ]
  }
