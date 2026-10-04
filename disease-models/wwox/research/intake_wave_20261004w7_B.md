@@ -56,5 +56,8 @@ All op lists dry-run exit 0 with `record_scoped_edit.py apply` on main 70513cd; 
 - 41345172: main Figures 1–6 by legend; supplementary figures other than pages 3, 17, 21 by caption; Supplementary Tables other than 4 checked for WWOX strings only; Table 4 meta and Australian sheets summarised by script → `partial_fulltext_read`.
 - Two supplement PDFs (36937954 Datasheet1; 42248868 MOESM1) have fonts without a ToUnicode CMap: their text layers were discarded and the WWOX rows anchored to rendered pages; the `c.33del` row values of Datasheet1 are not carried.
 
+## Gates (on the branch, main 70513cd merged)
+`legend_lint.py .` WARN, no BLOCK · `fulltext_receipts.py verify` OK (375 chained receipts) · `growth_anchors.py check` PASS (backlog 9 incl. these four candidates — expected) · `public_release_gate.py` PASS, 0 BLOCKs (no REVIEW on these files) · `test_section_references.py`, `test_link_targets.py`, `test_fresh_clone_reader_journey.py`, `test_pathograph.py` OK · `candidate_tree_freshness.py` FRESH after regenerating the pathograph · `run_release_regressions.py`: one suite red, `test_manifest_receipt_provenance.py` (the six manifests name receipts not yet in the ledger: 21 defects vs ceiling 15). **Self-close shown:** re-running `manifest_receipt_provenance.assess()` with the six prepared receipts beside the live ledger returns 15 defects = the ceiling, none of them these manifests. The transient closes when the integrator records the six receipts. The ceiling was not touched.
+
 ## Halt record
 No safety-classifier halt occurred in this session.
