@@ -8,7 +8,9 @@
     "disease-models/wwox/research/fulltext_dossiers/PMID40183601.md",
     "disease-models/wwox/research/intake_wave_20261004w9_C.md",
     "disease-models/wwox/research/commit_candidates/CC-20261004W9-C-DEEPINTRONIC-01.md",
-    "disease-models/wwox/research/commit_candidates/CC-20261004W9-C-REGISTRY-01.md"
+    "disease-models/wwox/research/commit_candidates/CC-20261004W9-C-REGISTRY-01.md",
+    "disease-models/wwox/research/intake_wave_20261004w11_B.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261004W11-B-H322R-01.md"
   ],
   "skills_considered": [
     {
@@ -73,10 +75,16 @@
   },
   "multihop": {
     "references_enumerated": 50,
-    "gene_direct_refs_in_source": [],
+    "gene_direct_refs_in_source": ["33726816"],
     "resolved": [],
-    "queued": [],
-    "note": "50 references enumerated; none is WWOX-direct. The WWOX content is this cohort's own diagnostic data (main text plus Supplementary Table S9), not a citation, so no hop is owed."
+    "queued": [
+      {
+        "pmid": "33726816",
+        "queue": "not queued by this actor: the full-text queue is the orchestrator's; the debt is recorded here and in CC-20261004W11-B-H322R-01 so it stays visible",
+        "why": "Re-read 2026-10-04 (wave 11, Scientist B): reference 11, which the Methods name as the earlier publication of a subset of this cohort, carries the homozygous WWOX c.965A>G p.(His322Arg) allele in its Supplementary Table S7 (gene and variant only, no phenotype). It is therefore gene-direct by its supplement, not by its title; the wave-9 note 'none is WWOX-direct' was true of the reference titles and false of their content. Only the Table S7 row was inspected (artefacts held in the root corpus); the paper itself is unread."
+      }
+    ],
+    "note": "50 references enumerated. Wave 9 found none WWOX-direct by title. The wave-11 re-read found one gene-direct by content: reference 11 (PMID 33726816), an earlier publication of a subset of this cohort whose supplement lists the same homozygous missense allele. Queued, not resolved."
   },
   "corpus_crossquery": {
     "query": "registry_records.py get --pmid 40183601; fulltext_receipts.py status --pmid 40183601; allele strings c.107+119C>G, c.965A>G, c.183C>A against the held ClinVar snapshots",
@@ -159,6 +167,114 @@
           "call": "dump every sheet of PMID40183601_Henry2025_supp_tableS9.xlsx to tab-separated text, one line per row, cells joined by a tab"
         }
       }
+    },
+    {
+      "path": "files/fulltext/PMID40183601_Henry2025_EPI-66-2966-g001.jpg",
+      "sha256": "bf0e8e3c28b80a21d2bffb56fe846a8f8dd92f22455621bcb3b943d09c45046b",
+      "kind": "figure",
+      "note": "Wave-11 re-read. The JATS maps this graphic to Figure 4 (HPO-trait heatmaps by gene and gene group); inspected as an image. Genes with n >= 5 only; WWOX (n = 4) is not a column.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12371643.1/EPI-66-2966-g001.jpg",
+        "http_method": "GET", "tier": "pmc_oa_opendata_s3", "user_agent_policy": "none",
+        "acquired_on": "2026-10-04", "derived": false,
+        "result_sha256": "bf0e8e3c28b80a21d2bffb56fe846a8f8dd92f22455621bcb3b943d09c45046b"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID40183601_Henry2025_EPI-66-2966-g002.jpg",
+      "sha256": "031d1d287f1a77362dddf38f20ac01ee2c54bb0c53ef7883434b19e81454d594",
+      "kind": "figure",
+      "note": "Wave-11 re-read. The JATS maps this graphic to Figure 3 (genetic etiologies in solved individuals: A gene frequency, B variant type, C inheritance, D gene group); inspected as an image.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12371643.1/EPI-66-2966-g002.jpg",
+        "http_method": "GET", "tier": "pmc_oa_opendata_s3", "user_agent_policy": "none",
+        "acquired_on": "2026-10-04", "derived": false,
+        "result_sha256": "031d1d287f1a77362dddf38f20ac01ee2c54bb0c53ef7883434b19e81454d594"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID40183601_Henry2025_EPI-66-2966-g003.jpg",
+      "sha256": "f8182210e2b9a249f6e5e3bf4155d1d7ae0296ea341f648202b2f4145907bae2",
+      "kind": "figure",
+      "note": "Wave-11 re-read. The JATS maps this graphic to Figure 2 (cohort HPO traits; syndrome groups); inspected; no gene-level content.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12371643.1/EPI-66-2966-g003.jpg",
+        "http_method": "GET", "tier": "pmc_oa_opendata_s3", "user_agent_policy": "none",
+        "acquired_on": "2026-10-04", "derived": false,
+        "result_sha256": "f8182210e2b9a249f6e5e3bf4155d1d7ae0296ea341f648202b2f4145907bae2"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID40183601_Henry2025_EPI-66-2966-g004.jpg",
+      "sha256": "b7b7d74c6e96942a060e14960b7063bd55f42eebb27a1eda2a349f6ec17f9b69",
+      "kind": "figure",
+      "note": "Wave-11 re-read. The JATS maps this graphic to Figure 1 (clinical WGS workflow); inspected. Step 5B lists mRNA analysis among validation routes, with no tissue named.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12371643.1/EPI-66-2966-g004.jpg",
+        "http_method": "GET", "tier": "pmc_oa_opendata_s3", "user_agent_policy": "none",
+        "acquired_on": "2026-10-04", "derived": false,
+        "result_sha256": "b7b7d74c6e96942a060e14960b7063bd55f42eebb27a1eda2a349f6ec17f9b69"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID40183601_Henry2025_EPI-66-2966-s002.xlsx",
+      "sha256": "6c9319600e36c2e7dbcba3f7a5ffecff42cd415f5400819b31073ea95f0b43ae",
+      "kind": "supplement_binary",
+      "note": "Wave-11 re-read. Table S10 (individuals with VUS; the workbook's own title says 'Supplementary table 12'); parsed cell-wise; no WWOX row.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12371643.1/EPI-66-2966-s002.xlsx",
+        "http_method": "GET", "tier": "pmc_oa_opendata_s3", "user_agent_policy": "none",
+        "acquired_on": "2026-10-04", "derived": false,
+        "result_sha256": "6c9319600e36c2e7dbcba3f7a5ffecff42cd415f5400819b31073ea95f0b43ae"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID40183601_Henry2025_EPI-66-2966-s002.txt",
+      "sha256": "12a4a78b00fa1406ceb2e4cf9db27a23c6cecf9c97ee0efe038e7e2ed79ca4c4",
+      "kind": "supplement_text",
+      "note": "Tab-separated text layer derived cell-wise from Table S10; lossless for cell values, loses formatting.",
+      "acquisition_recipe": {
+        "resolved_url": "local derivation from PMID40183601_Henry2025_EPI-66-2966-s002.xlsx",
+        "http_method": "GET", "tier": "local_xlsx_cellwise_parser", "user_agent_policy": "none",
+        "acquired_on": "2026-10-04", "derived": true,
+        "result_sha256": "12a4a78b00fa1406ceb2e4cf9db27a23c6cecf9c97ee0efe038e7e2ed79ca4c4",
+        "derived_from": "files/fulltext/PMID40183601_Henry2025_EPI-66-2966-s002.xlsx",
+        "extractor": {
+          "name": "local xlsx cell-wise parser (python zipfile plus sharedStrings, workbook rels and sheet XML)",
+          "version": "wave11-scientistB",
+          "call": "dump every sheet to tab-separated text, one line per row, cells placed by column reference and joined by a tab"
+        }
+      }
+    },
+    {
+      "path": "files/fulltext/PMID40183601_Henry2025_EPI-66-2966-s003.docx",
+      "sha256": "8a6bfad2643907e3e39b323f5d81c7e53d2683865ec7d944ab45863aaa3517c2",
+      "kind": "supplement_binary",
+      "note": "Wave-11 re-read. Data S1: Appendices S1-S2, Figures S1-S4 (six EMF and one PNG image, NOT rendered: no EMF renderer on this host) and Tables S1-S8 (read cell-wise).",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12371643.1/EPI-66-2966-s003.docx",
+        "http_method": "GET", "tier": "pmc_oa_opendata_s3", "user_agent_policy": "none",
+        "acquired_on": "2026-10-04", "derived": false,
+        "result_sha256": "8a6bfad2643907e3e39b323f5d81c7e53d2683865ec7d944ab45863aaa3517c2"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID40183601_Henry2025_EPI-66-2966-s003.txt",
+      "sha256": "dbcc0a1270fe453b6abe43c42bbcbc94387280f2ea196987a2e57f89c7283319",
+      "kind": "supplement_text",
+      "note": "Text layer derived from Data S1 in document order: paragraphs one per line, table rows as tab-joined cells; images are not represented.",
+      "acquisition_recipe": {
+        "resolved_url": "local derivation from PMID40183601_Henry2025_EPI-66-2966-s003.docx",
+        "http_method": "GET", "tier": "local_docx_cellwise_parser", "user_agent_policy": "none",
+        "acquired_on": "2026-10-04", "derived": true,
+        "result_sha256": "dbcc0a1270fe453b6abe43c42bbcbc94387280f2ea196987a2e57f89c7283319",
+        "derived_from": "files/fulltext/PMID40183601_Henry2025_EPI-66-2966-s003.docx",
+        "extractor": {
+          "name": "local docx cell-wise parser (python zipfile plus word/document.xml)",
+          "version": "wave11-scientistB",
+          "call": "walk the document body in order; paragraphs as lines; each table row as its cells' text joined by a tab"
+        }
+      }
     }
   ],
   "verbatim_locators": {
@@ -218,6 +334,70 @@
         "proposition": "Autosomal recessive homozygous inheritance accounts for 32 of 281 etiologies in this cohort, the band WWOX belongs to.",
         "snippet": "followed by AD inherited (41/281, 14.6%) and autosomal recessive homozygous (32/281, 11.4%)",
         "anchor": "Results, Diagnostic variants",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID40183601_Henry2025_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Wave-11 re-read: the solved-cases table carries the homozygous WWOX missense allele c.965A>G p.(His322Arg) in two individuals (rows 150 and 151) who share consanguinity and a positive first-degree family history, both with focal seizures, abnormal MRI, global developmental delay and hypotonia, both deceased, both IESS.",
+        "snippet": "focal HP:0007359\tyes\tglobal developmental delay HP:0001263, hypotonia HP:0001252\tdeceased\tIESS\tHom\tWWOX\tc.965A>G, p.(His322Arg)",
+        "anchor": "Supplementary Table S9 (solved individuals), rows id 150 and 151",
+        "surface": "supplement",
+        "artifact": "files/fulltext/PMID40183601_Henry2025_supp_tableS9.txt",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The authors kept VUS-carrying patients unsolved; the His322Arg family sits in the solved table, so the authors counted the allele as diagnostic although the held ClinVar snapshot classifies it as uncertain significance.",
+        "snippet": "These patients were, however, considered unsolved, as these VUS lacked sufficient evidence to upgrade their status according to the American College of Medical Genetics and Genomics guidelines.",
+        "anchor": "Results, Candidate variants",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID40183601_Henry2025_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The VUS table is a separate supplement; read cell-wise it holds no WWOX row.",
+        "snippet": "Supplementary table 12: Variants and phenotypic information in individuals with VUS",
+        "anchor": "Table S10 (deposited as s002.xlsx), title row",
+        "surface": "supplement",
+        "artifact": "files/fulltext/PMID40183601_Henry2025_EPI-66-2966-s002.txt",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Part of this cohort was published earlier, without detailed phenotypes, in a broader study of the same genomic-medicine programme (reference 11, PMID 33726816) — so its WWOX allele cannot be counted twice across the two papers.",
+        "snippet": "A subset of the current cohort was previously published without detailed phenotypic analyses, in a broader study of GMCK‐RD patients.",
+        "anchor": "Materials and Methods, Cohort",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID40183601_Henry2025_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Data S1 Table S3 lists WWOX among the genes with four solved individuals, consistent with Table 1 and Figure 3A.",
+        "snippet": "4\tCHD2, CSNK2B, DEPDC5, NPRL3, WWOX",
+        "anchor": "Data S1, Table S3 (genetic aetiology frequency in solved individuals)",
+        "surface": "supplement",
+        "artifact": "files/fulltext/PMID40183601_Henry2025_EPI-66-2966-s003.txt",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Figure 3A plots WWOX at a frequency of four, as an other/multiple-function-protein gene, agreeing with Table 1.",
+        "snippet": "WWOX diamond marker at frequency 4 on the gene-frequency axis (Other/multiple function proteins)",
+        "anchor": "Figure 3A (graphic EPI-66-2966-g002), gene list between MECP2 and NPRL3",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID40183601_Henry2025_EPI-66-2966-g002.jpg",
+        "panel_text_relation": "text_confirmed_by_panel"
+      },
+      {
+        "proposition": "Figure 3C shows one inheritance slice labelled uniparental disomy (0.4% of etiologies, i.e. one); the panel does not name its gene, and the WWOX rows of Table S9 are not marked as UPD.",
+        "snippet": "AR UPD 0.4% slice beside AR comp het 7.5% and AR homoz 11.4% in the inheritance ring",
+        "anchor": "Figure 3C (graphic EPI-66-2966-g002), recessive sector",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID40183601_Henry2025_EPI-66-2966-g002.jpg",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "The authors state that conclusions for small subcohorts are less reliable — the WWOX group (four individuals, three families) is such a subcohort.",
+        "snippet": "conclusions for the smaller subcohorts may be less reliable",
+        "anchor": "Discussion, limitations paragraph",
         "surface": "body",
         "artifact": "files/fulltext/PMID40183601_Henry2025_PMC.xml",
         "panel_text_relation": "text_only"

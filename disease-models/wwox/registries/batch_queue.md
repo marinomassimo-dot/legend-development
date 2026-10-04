@@ -83,9 +83,9 @@ time; it does not redistribute or license the article text.
 |---|---:|---:|
 | **Not found by identifier** — run the intake gate | 277 | 39% |
 | **Catalogued, never processed** — the reading debt | 135 | 19% |
-| Known to the tracking log only | 102 | 14% |
+| Known to the tracking log only | 101 | 14% |
 | Processed from the abstract | 3 | 0% |
-| Partial full text read | 55 | 8% |
+| Partial full text read | 56 | 8% |
 | Full text read | 134 | 19% |
 
 ⚠️ This second table combines registry state with the authoritative append-only
@@ -298,7 +298,6 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [39473747](https://pubmed.ncbi.nlm.nih.gov/39473747/) | 2024 | ✅ | Journal Article | screened | Loss of WWOX contributes to cisplatin resistance in triple-negative breast cancer cells by modulating miR-182 and miR-214. |
 | [38203337](https://pubmed.ncbi.nlm.nih.gov/38203337/) | 2023 | ✅ | Journal Article | screened | Mechanistic Investigation of WWOX Function in NF-kB-Induced Skin Inflammation in Psoriasis. |
 | [37324196](https://pubmed.ncbi.nlm.nih.gov/37324196/) | 2023 | ✅ | Journal Article | screened | WWOX Polymorphisms as Predictors of the Biochemical Recurrence of Localized Prostate Cancer after Radical Prostatectomy. |
-| [37248434](https://pubmed.ncbi.nlm.nih.gov/37248434/) | 2023 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | screened | WWOX binds MERIT40 and modulates its function in homologous recombination, implications in breast cancer. |
 | [36979157](https://pubmed.ncbi.nlm.nih.gov/36979157/) | 2023 | ✅ | Journal Article | screened | Antineoplastic Nature of WWOX in Glioblastoma Is Mainly a Consequence of Reduced Cell Viability and Invasion. |
 | [36530994](https://pubmed.ncbi.nlm.nih.gov/36530994/) | 2022 | ✅ | Journal Article | screened | WWOX-rs13338697 genotype predicts therapeutic efficacy of ADI-PEG 20 for patients with advanced hepatocellular carcinoma. |
 | [36364214](https://pubmed.ncbi.nlm.nih.gov/36364214/) | 2022 | ✅ | Journal Article | screened | WWOX Modulates ROS-Dependent Senescence in Bladder Cancer. |
@@ -619,7 +618,7 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [41007296](https://pubmed.ncbi.nlm.nih.gov/41007296/) | 2025 | ✅ | Journal Article | screened | Prognostic Significance of WWOX/HIF1A Ratio in Cancer Subtypes: Insights into Metabolism, ECM, and EMT. |
 | [28151481](https://pubmed.ncbi.nlm.nih.gov/28151481/) | 2017 | ✅ | Journal Article; Retracted Publication | screened | 🛑 RETRACTED — Epigenetic regulation of HGF/Met receptor axis is critical for the outgrowth of bone metastasis from breast carcinoma. |
 
-*(showing all 514 outstanding records)*
+*(showing all 513 outstanding records)*
 
 ## Already processed from this seed
 
@@ -635,6 +634,7 @@ for an entirely unprocessed record.
 | [41124647](https://pubmed.ncbi.nlm.nih.gov/41124647/) | 2026 | ✅ | partial full text | receipt FTR-20261003-41124647-02 | Genetic and Functional Evidence Links Germline Biallelic Inactivating Variants in WWOX to Histological Mixed-Type Thyroid Cancer. |
 | [41228229](https://pubmed.ncbi.nlm.nih.gov/41228229/) | 2025 | ✅ | partial full text | receipt FTR-20260921-41228229-01 | The Role of WWOX in Cancer Progression: Mechanisms and Therapeutic Potential. |
 | [37897534](https://pubmed.ncbi.nlm.nih.gov/37897534/) | 2023 | ✅ | partial full text | PAPER 130 | Loss of fragile WWOX gene leads to senescence escape and genome instability. |
+| [37248434](https://pubmed.ncbi.nlm.nih.gov/37248434/) | 2023 | ✅ | partial full text | receipt FTR-20261004-37248434-01 | WWOX binds MERIT40 and modulates its function in homologous recombination, implications in breast cancer. |
 | [34140629](https://pubmed.ncbi.nlm.nih.gov/34140629/) | 2021 | ✅ | partial full text | PAPER 096 | Normal cells repel WWOX-negative or -dysfunctional cancer cells via WWOX cell surface epitope 286-299. |
 | [33612478](https://pubmed.ncbi.nlm.nih.gov/33612478/) | 2021 | ✅ | partial full text | CORPUS-STUB-109 | Associations between TUBB-WWOX SNPs, their haplotypes, gene-gene, and gene-environment interactions and dyslipidemia. |
 | [33195192](https://pubmed.ncbi.nlm.nih.gov/33195192/) | 2020 | ✅ | partial full text | PAPER 129 | Wwox Deficiency Causes Downregulation of Prosurvival ERK Signaling and Abnormal Homeostatic Responses in Mouse Skin. |
@@ -822,7 +822,7 @@ for an entirely unprocessed record.
 | [28721938](https://pubmed.ncbi.nlm.nih.gov/28721938/) | 2017 | — | full text | PAPER 151 | Practical clues for diagnosing WWOX encephalopathy. |
 | [21476439](https://pubmed.ncbi.nlm.nih.gov/21476439/) | 2011 | — | full text | PAPER 244 | WWOX oxidoreductase--substrate and enzymatic characterization. |
 
-*(showing all 192 processed records from the seed)*
+*(showing all 193 processed records from the seed)*
 
 ## How to work one
 
