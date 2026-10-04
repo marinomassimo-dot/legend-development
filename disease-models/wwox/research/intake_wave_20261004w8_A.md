@@ -249,7 +249,7 @@ reference genotype's class, so none of it transfers.
 ## DEFAULTS_TAKEN
 - Receipt `evidence_depth` is `partial_fulltext_read` for all six: in each case some figure panels or supplementary
   material were not inspected, and the ledger refuses `complete_fulltext_read` over `captions_only`.
-- Provisional registry numbers start at `PAPER 207` / `LIT-0500` because open wave-7 candidates already claim
+- Provisional registry numbers start at `PAPER 217` / `LIT-0509` because open wave-7 candidates already claim
   201–206 / 0494–0499.
 - Where a supplementary table is published only as a workbook, a derived cell-wise text surface was persisted
   beside the binary so the locators are machine-verifiable.

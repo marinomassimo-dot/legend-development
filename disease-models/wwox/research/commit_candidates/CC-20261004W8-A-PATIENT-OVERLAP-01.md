@@ -13,21 +13,21 @@
 2. **PMID 41835067's homozygous p.Leu239Arg child may be `PAPER 013` case 50 (INFERENZA).** Both female, both from consanguineous families, recruitment windows compatible; neither source prints enough (syndrome, EEG, onset, family structure) to confirm or exclude. Counted once under the standing rule.
 
 ## Registry records needed
-`PAPER 208`, `PAPER 210` (created by `CC-20261004W8-A-REGISTRY-01`; renumber with it).
+`PAPER 218`, `PAPER 220` (created by `CC-20261004W8-A-REGISTRY-01`; renumber with it).
 
 ## Change class
 **MINOR** — annotations on two paper records; no claim, block or baseline touched.
 
-## Op list — `paper_registry_current.md` (record-scoped; dry run 2026-10-04 with `record_scoped_edit.py apply` (no `--apply`) on this branch: exit 0, 2 op(s), keys ['PAPER 117', 'PAPER 013'])
+## Op list — `paper_registry_current.md` (record-scoped; dry run 2026-10-04 with `record_scoped_edit.py apply` (no `--apply`) on this branch at b57ac61 (main 2de75c1 merged): exit 0, 2 op(s), keys ['PAPER 117', 'PAPER 013'])
 
 ```json
 [
  {"op": "replace-within", "id": "PAPER 117",
   "old": "**Note:** Erratum `PMID 30783266` is linked",
-  "new": "**Patient overlap (2026-10-04, `CC-20261004W8-A-PATIENT-OVERLAP-01`):** Patient 11 (in-frame deletion of exons 6-8 + `c.705dup`) is re-reported as the WWOX case of [[paper_registry_current#PAPER 208]] (PMID 37946251), whose Table 1 names it 'Patient 11 (Table S1) in case series in Piard et al'; same genotype in this paper's Supplementary Table 1. One patient, counted once (DATO: the later authors state the identity).\n**Note:** Erratum `PMID 30783266` is linked"},
+  "new": "**Patient overlap (2026-10-04, `CC-20261004W8-A-PATIENT-OVERLAP-01`):** Patient 11 (in-frame deletion of exons 6-8 + `c.705dup`) is re-reported as the WWOX case of [[paper_registry_current#PAPER 218]] (PMID 37946251), whose Table 1 names it 'Patient 11 (Table S1) in case series in Piard et al'; same genotype in this paper's Supplementary Table 1. One patient, counted once (DATO: the later authors state the identity).\n**Note:** Erratum `PMID 30783266` is linked"},
  {"op": "replace-within", "id": "PAPER 013",
   "old": "never as independent replications without author confirmation (`CC-20261003W3-A-L239R-01`).",
-  "new": "never as independent replications without author confirmation (`CC-20261003W3-A-L239R-01`). 🔴 **Update 2026-10-04 (`CC-20261004W8-A-PATIENT-OVERLAP-01`):** a third source, [[paper_registry_current#PAPER 210]] (PMID 41835067), reports one homozygous p.Leu239Arg female child of a consanguineous family with neonatal-onset seizures, reached through a cerebral-palsy referral stream; identity with case 50 here is not excluded (INFERENZA). Read sources now hold **2-4** homozygous p.Leu239Arg children in **1-3** families (Serin 2018, PMID 30094525, unread and not counted)."}
+  "new": "never as independent replications without author confirmation (`CC-20261003W3-A-L239R-01`). 🔴 **Update 2026-10-04 (`CC-20261004W8-A-PATIENT-OVERLAP-01`):** a third source, [[paper_registry_current#PAPER 220]] (PMID 41835067), reports one homozygous p.Leu239Arg female child of a consanguineous family with neonatal-onset seizures, reached through a cerebral-palsy referral stream; identity with case 50 here is not excluded (INFERENZA). Read sources now hold **2-4** homozygous p.Leu239Arg children in **1-3** families (Serin 2018, PMID 30094525, unread and not counted)."}
 ]
 ```
 

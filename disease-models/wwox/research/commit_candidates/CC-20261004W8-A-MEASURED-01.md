@@ -25,15 +25,15 @@
 **MINOR** — annotation on an `in observation` claim and an append-only lead bullet; no status change, no baseline narrowed.
 
 ## Registry records needed
-`PAPER 207`, `PAPER 208`, `PAPER 209` (created by `CC-20261004W8-A-REGISTRY-01`; renumber with it). If `CC-20261004W7-B-SPLICE-MEASURED-01` propagates first, both anchors below still exist unchanged (that candidate inserts after the same CLAIM 033 sentence and before the same DL-BIO-002 line); order the two paragraphs by event.
+`PAPER 217`, `PAPER 218`, `PAPER 219` (created by `CC-20261004W8-A-REGISTRY-01`; renumber with it). If `CC-20261004W7-B-SPLICE-MEASURED-01` propagates first, both anchors below still exist unchanged (that candidate inserts after the same CLAIM 033 sentence and before the same DL-BIO-002 line); order the two paragraphs by event.
 
-## Op list — `claim_registry_current.md` (record-scoped; dry run 2026-10-04 with `record_scoped_edit.py apply` (no `--apply`) on this branch: exit 0, 1 op(s), keys ['CLAIM 033'])
+## Op list — `claim_registry_current.md` (record-scoped; dry run 2026-10-04 with `record_scoped_edit.py apply` (no `--apply`) on this branch at b57ac61 (main 2de75c1 merged): exit 0, 1 op(s), keys ['CLAIM 033'])
 
 ```json
 [
  {"op": "replace-within", "id": "CLAIM 033",
   "old": "Un esperimento, due risultati. **Non è parere medico.**",
-  "new": "Un esperimento, due risultati. **Non è parere medico.**\n🟠 **Reserve (1), three more syntactic labels checked against measurement (intake wave 8, 2026-10-04, `CC-20261004W8-A-MEASURED-01`).** (a) [[paper_registry_current#PAPER 207]] (PMID 36926521): a formally `null/missense` genotype (exon-1 missense + exon-5 inversion) with a **measured** patient-fibroblast western read by the authors as 'WWOX loss'; the panel shows a strongly reduced band with a faint residual band, one control, no quantification — it measures the genotype and cannot apportion the reduction between the two alleles. (b) [[paper_registry_current#PAPER 208]] (= Piard 2019 Patient 11) and [[paper_registry_current#PAPER 209]]: an in-frame exons 6-8 deletion and an exon-5 deletion are coded PVS1 (null) with **no RNA or protein measured**. A missense allele in trans does not by itself mean detectable protein, and an in-frame deletion coded null is a rule, not a measurement. `PREMISE: DATO (one blot, qualitative) + INFERENZA (classification)`. Nothing here transfers to Q230P or to any splice allele."}
+  "new": "Un esperimento, due risultati. **Non è parere medico.**\n🟠 **Reserve (1), three more syntactic labels checked against measurement (intake wave 8, 2026-10-04, `CC-20261004W8-A-MEASURED-01`).** (a) [[paper_registry_current#PAPER 217]] (PMID 36926521): a formally `null/missense` genotype (exon-1 missense + exon-5 inversion) with a **measured** patient-fibroblast western read by the authors as 'WWOX loss'; the panel shows a strongly reduced band with a faint residual band, one control, no quantification — it measures the genotype and cannot apportion the reduction between the two alleles. (b) [[paper_registry_current#PAPER 218]] (= Piard 2019 Patient 11) and [[paper_registry_current#PAPER 219]]: an in-frame exons 6-8 deletion and an exon-5 deletion are coded PVS1 (null) with **no RNA or protein measured**. A missense allele in trans does not by itself mean detectable protein, and an in-frame deletion coded null is a rule, not a measurement. `PREMISE: DATO (one blot, qualitative) + INFERENZA (classification)`. Nothing here transfers to Q230P or to any splice allele."}
 ]
 ```
 
@@ -43,7 +43,7 @@
 [
  {"op": "replace-within", "id": "DL-BIO-002",
   "old": "- **Razionale di trasferimento**: diretto",
-  "new": "- 🟢 **Append-only, 2026-10-04 (intake wave 8, `CC-20261004W8-A-MEASURED-01`).** **Un secondo saggio RNA WWOX misurato nel sangue:** [[paper_registry_current#PAPER 207]] (PMID 36926521) ha amplificato per RT-PCR la regione esoni 4-6 di WWOX da RNA di sangue PAXgene e, con sequenziamento dell'amplicone, ha mostrato lo skipping dell'esone 5 causato da un allele strutturale (inversione dell'esone 5). Il prodotto normale (293 bp) resta la banda forte e quello mutato (186 bp) è debole, senza quantificazione. **Limiti:** allele strutturale, non di sito accettore; nessuna frazione, nessun NMD, nessun frame dichiarato. Conferma che una giunzione WWOX è leggibile per RT-PCR nel sangue. `PREMISE: DATO + INFERENZA`.\n- **Razionale di trasferimento**: diretto"}
+  "new": "- 🟢 **Append-only, 2026-10-04 (intake wave 8, `CC-20261004W8-A-MEASURED-01`).** **Un secondo saggio RNA WWOX misurato nel sangue:** [[paper_registry_current#PAPER 217]] (PMID 36926521) ha amplificato per RT-PCR la regione esoni 4-6 di WWOX da RNA di sangue PAXgene e, con sequenziamento dell'amplicone, ha mostrato lo skipping dell'esone 5 causato da un allele strutturale (inversione dell'esone 5). Il prodotto normale (293 bp) resta la banda forte e quello mutato (186 bp) è debole, senza quantificazione. **Limiti:** allele strutturale, non di sito accettore; nessuna frazione, nessun NMD, nessun frame dichiarato. Conferma che una giunzione WWOX è leggibile per RT-PCR nel sangue. `PREMISE: DATO + INFERENZA`.\n- **Razionale di trasferimento**: diretto"}
 ]
 ```
 
