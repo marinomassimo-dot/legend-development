@@ -21,6 +21,127 @@
         "http_status": 200,
         "bytes": 167418
       }
+    },
+    {
+      "path": "files/fulltext/PMID42422766_Amaral2026_supplement/PMC13343144_supplementaryFiles.zip",
+      "sha256": "071d0a2e8e9c4242995767512fe36d02c81913283c1c08d5fc345304fe3ec23e",
+      "kind": "supplement_binary",
+      "note": "Container of the supplement members and the figure images; members extracted unchanged beside it.",
+      "acquisition_recipe": {
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13343144/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "Europe PMC REST supplementaryFiles (zip as served)",
+        "result_sha256": "071d0a2e8e9c4242995767512fe36d02c81913283c1c08d5fc345304fe3ec23e"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID42422766_Amaral2026_supplement/mmc1.pdf",
+      "sha256": "5d1b527eba5e033d9796a98855cf6272c3e2267c68e7eef31b89335f3532e501",
+      "kind": "supplement_binary",
+      "note": "Document S1: Figures S1-S9 and Tables S1, S3, S5, S6 (20 pages). Figure S6 page rendered and inspected.",
+      "acquisition_recipe": {
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13343144/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+        "result_sha256": "5d1b527eba5e033d9796a98855cf6272c3e2267c68e7eef31b89335f3532e501"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID42422766_Amaral2026_supplement/mmc1.txt",
+      "sha256": "313975c6d44453cab513c7ccaf8017ace4a9cc8d624545c335ed283a78b5168a",
+      "kind": "supplement_text",
+      "note": "Derived text layer of Document S1; locators match this text, not the PDF.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID42422766_Amaral2026_supplement/mmc1.pdf",
+        "extractor": {
+          "name": "pdftotext (poppler-utils)",
+          "version": "24.02.0",
+          "call": "pdftotext -layout -nopgbrk mmc1.pdf mmc1.txt"
+        },
+        "acquired_on": "2026-10-04",
+        "result_sha256": "313975c6d44453cab513c7ccaf8017ace4a9cc8d624545c335ed283a78b5168a"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID42422766_Amaral2026_supplement/mmc2.xlsx",
+      "sha256": "8f278069baf70f51ab72e7b1232c8bef811a36c47a71926496d04e61cf8cea6b",
+      "kind": "supplement_binary",
+      "note": "Data S1: workbook with sheets Table S2 (ICM histopathology grid) and Table S4 (IPa histopathology grid).",
+      "acquisition_recipe": {
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13343144/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+        "result_sha256": "8f278069baf70f51ab72e7b1232c8bef811a36c47a71926496d04e61cf8cea6b"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID42422766_Amaral2026_supplement/mmc2_cellwise.txt",
+      "sha256": "66b39fc38de55bd0c4bcbc51b4ce660525963f96ebfd72f0b12ec5078e5a68f4",
+      "kind": "supplement_text",
+      "note": "Derived from mmc2.xlsx by iterating sheet rows and cells; locators match this text.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID42422766_Amaral2026_supplement/mmc2.xlsx",
+        "extractor": {
+          "name": "local cell-wise workbook dump (Python zipfile and re over sheet XML and sharedStrings)",
+          "version": "scratchpad script xl.py, Python 3.12",
+          "call": "one output line per sheet row, cells in column order separated by a vertical bar, shared strings resolved, empty cells dropped"
+        },
+        "acquired_on": "2026-10-04",
+        "result_sha256": "66b39fc38de55bd0c4bcbc51b4ce660525963f96ebfd72f0b12ec5078e5a68f4"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID42422766_Amaral2026_supplement/s6-08.png",
+      "sha256": "470604cb75aab4730506ce632fad55c8a8a60b59f9212711ed9b74652ae8a761",
+      "kind": "figure",
+      "note": "Figure S6 bubble plots (per-animal DRG and spinal-cord findings), rendered and inspected.",
+      "acquisition_recipe": {
+        "derived": true,
+        "derived_from": "files/fulltext/PMID42422766_Amaral2026_supplement/mmc1.pdf",
+        "extractor": {
+          "name": "pdftoppm (poppler-utils)",
+          "version": "24.02.0",
+          "call": "pdftoppm -f 8 -l 8 -r 90 -png mmc1.pdf s6"
+        },
+        "acquired_on": "2026-10-04",
+        "result_sha256": "470604cb75aab4730506ce632fad55c8a8a60b59f9212711ed9b74652ae8a761"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID42422766_Amaral2026_supplement/gr4.jpg",
+      "sha256": "a0bfcf067aedd998e42187ed6da0191ffdaf88efb366870d9859b89b8deef8be",
+      "kind": "figure",
+      "note": "Figure 4 heatmap of histopathology by region, ICM and IPa; inspected.",
+      "acquisition_recipe": {
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13343144/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+        "result_sha256": "a0bfcf067aedd998e42187ed6da0191ffdaf88efb366870d9859b89b8deef8be"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID42422766_Amaral2026_supplement/gr5.jpg",
+      "sha256": "00e70c71f03abfb696bf0fd32be19a689ee4e98e56de9834cd16659da6f47712",
+      "kind": "figure",
+      "note": "Figure 5 H&E panels, ICM spinal cord and DRG, IPa thalamus; inspected.",
+      "acquisition_recipe": {
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13343144/supplementaryFiles",
+        "http_method": "GET",
+        "tier": "Europe PMC REST supplementaryFiles (zip member extracted unchanged)",
+        "result_sha256": "00e70c71f03abfb696bf0fd32be19a689ee4e98e56de9834cd16659da6f47712"
+      }
     }
   ],
   "landing": [
@@ -162,6 +283,31 @@
         "artifact": "files/fulltext/PMID42422766_Amaral2026_PMC.xml",
         "anchor": "Results, 'IPa, but not ICM, delivery into NHPs produced enhanced transduction and functional hGCase expression in the brain'",
         "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "In the ICM study sacral DRG neuronal degeneration was absent in both vehicle columns and present in every low-dose animal (columns: male control, low, medium, high, then female control, low, medium, high).",
+        "snippet": "Degeneration, neuronal | (0) | (1) | (2) | (1) | (0) | (2) | (1) | (0)",
+        "artifact": "files/fulltext/PMID42422766_Amaral2026_supplement/mmc2_cellwise.txt",
+        "anchor": "Data S1, sheet Table S2, Dorsal root ganglion, sacral",
+        "surface": "supplement",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The ICM grid has 2 male and 1 female vehicle animals and 1 male and 2 female animals at the low dose (examined counts).",
+        "snippet": "No. Animals Examined | 2 | 1 | 2 | 1 | 1 | 2 | 1 | 2",
+        "artifact": "files/fulltext/PMID42422766_Amaral2026_supplement/mmc2_cellwise.txt",
+        "anchor": "Data S1, sheet Table S2, header rows",
+        "surface": "supplement",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Per-animal reading of the rendered Figure S6: sacral/cervical/thoracic/lumbar DRG neuronal degeneration marks appear in every dosed animal (three per dose level, nine in all) and in none of the three vehicle animals; severity marks are not ordered by dose (largest in the medium group).",
+        "snippet": "DRG neuronal degeneration, DRG mononuclear cell infiltration, spinal cord axonal degeneration",
+        "artifact": "files/fulltext/PMID42422766_Amaral2026_supplement/mmc1.txt",
+        "anchor": "Document S1, Figure S6 legend",
+        "surface": "supplement",
+        "panel_text_relation": "panel_only",
+        "panel": "Figure S6, page 8 of mmc1.pdf rendered at 90 dpi (files/fulltext/PMID42422766_Amaral2026_supplement/s6-08.png)"
       }
     ]
   }
