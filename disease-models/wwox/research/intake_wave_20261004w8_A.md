@@ -139,3 +139,9 @@ response is byte-identical (SHA-256) to the copy the Orchestrator had staged, an
 - Class transfer: a homozygous SDR-region missense (residue 239) is not Q230P and is not a splice allele. **No
   transfer**, not even "missense ≈ missense".
 - References: 49; no WWOX gene-direct reference.
+- **After first pass — L239R counting (compared against `CC-20261003W3-A-L239R-01`, `CC-20261003W5-B-PATIENT-OVERLAP-01`
+  and the registry records `PAPER 013`, `PAPER 145`):** this child (female, consanguineous, neonatal-onset
+  seizures; onset only in Supplementary file 1) is not excluded from being `PAPER 013` case 50 (female, 11 months,
+  EIDEE). INFERENZA, counted once. Read sources now hold 2–4 homozygous L239R children in 1–3 families, never
+  summed as independent. The supplement's narrative adds neonatal onset and inability to sit, which the main
+  tables do not carry.
