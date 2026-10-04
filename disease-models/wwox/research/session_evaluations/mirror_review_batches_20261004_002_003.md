@@ -116,14 +116,18 @@ rather than a reader.
 
 ## F2 — one clause of the privacy repair still names a parental side, eleven words before the clause that says it does not (🔸 MINOR, `CC-20261004-MIRROR-32`)
 
-`CLAIM 033`'s riserva (1) reads *«… maternal inheritance establishes phase in trans …»* and then,
-in the same sentence, *«the source names the relationship; this record does not, because a parental
-side does not belong in a statement about the reference genotype»*. `public_release_gate.py` does
+`CLAIM 033`'s riserva (1) opens one clause by naming **which** parent transmitted an allele, and
+closes the same sentence by stating that the source names the relationship and *«this record does
+not»*, because such a side does not belong in a statement about the reference genotype. **The
+sentence is not reproduced here, and the candidate names only the string it replaces** — the exact
+trap `BATCH_20261004_002` recorded, and the gate blocked this review's first draft on it twice,
+which is the third independent instance of the same pull. `public_release_gate.py` does
 not see it, because its rule needs **both** sides paired; it flags the three *other* surfaces of
 the same reading as `[REVIEW]`. `BATCH_20261004_002` wrote the lesson — *describe the class, do not
-paste the instance* — and this is the one place in the four current registries where a parental
-side survives (measured: **1** occurrence of `maternal|paternal` in all four). The phase statement
-loses nothing: *parental segregation* establishes phase in trans.
+paste the instance* — and this is the one place in the four current registries where such a side
+survives (measured: a case-insensitive sweep for either transmitting-parent term returns **1** hit
+across all four files, and it is this clause). The phase statement loses nothing: *parental
+segregation* establishes phase in trans.
 
 ## F3 — `PAPER 210`'s second field still asserts the derivation the first one now labels (🔸 MINOR, `CC-20261004-MIRROR-33`)
 
@@ -161,11 +165,11 @@ The batch's own arithmetic screen classified the ~127-fold liver reduction as *r
 derived* (its two values are figure-only), and `PAPER 228` says so; `CLAIM 047` does not. The claim
 is the surface a reader meets.
 
-## F7 — the gate's three `[REVIEW]` parent-of-origin lines all sit in wave-8/9 authored surfaces (NOTE, no candidate)
+## F7 — three of the gate's `[REVIEW]` privacy lines sit in wave-8/9 authored surfaces (NOTE, no candidate)
 
 `CC-20261004W8-A-PATIENT-OVERLAP-01`, `-A-REGISTRY-01` and `CC-20261004W9-C-DEEPINTRONIC-01` each
-pair a maternal and a paternal side for an individual in a published cohort. The gate returns
-`[REVIEW]`, not `[BLOCK]`, by design — the variants are not the reference genotype's — and the
+pair both transmitting sides for one individual in a published cohort. The gate returns
+`[REVIEW]`, not `[BLOCK]`, by design — those variants belong to other published genotypes — and the
 landed registries are clean. It is written down because candidates are shipped surfaces too, the
 decision *«read it before publishing»* is the operator's, and this is the second batch whose
 candidate bodies carry the instance while its records carry the class.
