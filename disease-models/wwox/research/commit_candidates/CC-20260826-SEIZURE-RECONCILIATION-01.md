@@ -512,3 +512,11 @@ candidate by its actor-and-batch line, as the census's own §3.2 prescribes, and
 the literal heading `BATCH DISPOSITION`: this file is the counterexample on `main`, and a second
 one is `CC-20260921-TX007-CEILING-AND-DOSE-CONTROL-01`, which the same census correctly reads only
 because its block *does* carry the string.
+
+---
+
+## BATCH DISPOSITION — written 2026-10-03 by `BATCH_20261003_001` (ACTOR_ID `scientist`, Scientist F), append-only
+
+**Verdict:** PROPAGATED
+
+`batch_20260922_seizure_scope` names this candidate as propagated. That scope predates the Phase 7 `## BATCH DISPOSITION` requirement, so the candidate carried no lifecycle record of its own and `growth_anchors.py check` reported it as `SCOPE_CLOSED_NO_DISPOSITION` — closed by a sentence somebody else wrote. This block is the missing attestation and adds nothing to the act it records: the facts are the scope's own, not this batch's.

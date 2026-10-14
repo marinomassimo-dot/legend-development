@@ -268,6 +268,29 @@ under a valid contract and park; Plan continues preparation; Mirror continues op
 `CANONICAL_BATCH_COMMIT` happens; the operator is notified asynchronously. ORPHAN ends at
 rehydration or at a governed lease reacquisition — never at an assumption.
 
+## Goal and queue execution
+
+For an authorised goal or queue, execute the decision procedure of
+[cross-session transport §12](../framework/protocols/cross_session_transport.md#12--autonomous-mandate-continuity).
+Load it before dispatch and again after compaction or recall.
+
+**This actor receives goals, roadmaps and work queues and runs them to the end.** The operator is
+a source of mandates and of the few reserved decisions of §21d, not a step in the loop. On
+accepting a mandate, and at every boundary after it:
+
+1. Persist the mandate as an `AUTHORISED_QUEUE` block in the task record (Annex A.1c): a
+   `MANDATE_STATE` and every step with a `status`. A queue written as prose is not yet a queue.
+2. Write `MANDATE_BOUND: <TASK_ID>` as plain text on a line of its own. Where the Stop hook is
+   installed it then refuses to end the turn while the record says `CONTINUE`.
+3. Run `python3 framework/scripts/mandate_continuity.py status --task <TASK_ID>` at bootstrap,
+   after every milestone, after every compaction and on every recall; act on its verdict, never on
+   the chat's memory of it, and update step statuses with evidence or a named blocker as work lands.
+4. Stop only for a reserved act or a condition with no safe default (§21c), for an operator pause,
+   or when the record says `ALL_BLOCKED` or `COMPLETE`. Not for a finished wave, a delivered
+   report, a clean tree, an advance context warning or an unmeasured quota.
+5. Release with `MANDATE_RELEASED: <TASK_ID>` after `MANDATE_STATE` is set; the closing skills
+   (self-evaluation, capability scout, takeaways) run once, at the mandate's end.
+
 ## Session obligations
 
 Session Learning Review every significant session (body §15, Annex E.6), persisted by

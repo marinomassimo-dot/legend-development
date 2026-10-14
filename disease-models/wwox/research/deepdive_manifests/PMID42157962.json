@@ -1,0 +1,160 @@
+{
+  "schema_version": 2,
+  "pmid": "42157962",
+  "doi": "10.1016/j.omta.2025.201661",
+  "pmcid": "PMC13182795",
+  "receipt": "FTR-20261003-42157962-01",
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID42157962_DuBreuil2026_PMC.xml",
+      "sha256": "f7ca88cabaa0804066a51a6328a2b8dc5697d80515bdf032cc6643565adbaeb4",
+      "kind": "article_text",
+      "note": "The one design in this group that tries to lower vector burden rather than tolerate it: engineered protein secretion, a novel capsid and a tissue-selective promoter. Read for whether lowering burden lowers the sensory-ganglion cost.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13182795/fullTextXML",
+        "http_method": "GET",
+        "tier": "europepmc_fulltextxml",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-03",
+        "derived": false,
+        "result_sha256": "f7ca88cabaa0804066a51a6328a2b8dc5697d80515bdf032cc6643565adbaeb4",
+        "http_status": 200,
+        "bytes": 184095
+      }
+    }
+  ],
+  "landing": [
+    "disease-models/wwox/research/intake_wave_20261003w6_C.md",
+    "disease-models/wwox/research/fulltext_dossiers/PMID42157962.md"
+  ],
+  "skills_considered": [
+    {
+      "skill": "legend-deepdive",
+      "used": false,
+      "reason": "Run by hand as a scientist reading, not through the skill: the brief fixes the dossier structure, the manifest schema and the receipt schema, and the skill would have produced a commit candidate for a paper that names no gene of this disease model."
+    },
+    {
+      "skill": "find-fulltext",
+      "used": true,
+      "reason": "Europe PMC fullTextXML returned a body on the first attempt (HTTP 200, 184095 bytes); the cascade was not needed."
+    },
+    {
+      "skill": "legend-locator-audit",
+      "used": false,
+      "reason": "Triples are handed to the audit through the commit candidate's LOCATOR TRIPLES FOR BLIND AUDIT section: the producer must not be the verifier."
+    }
+  ],
+  "group_assessment": {
+    "performed": true,
+    "total_publications": 93,
+    "publications_on_gene": 0,
+    "counts_measured": "PubMed esearch 2026-10-03: 'DuBreuil D[au]' 93, 'DuBreuil D[au] AND WWOX' 0.",
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": false,
+    "is_primary_group_for_gene": false,
+    "weighting": "A development-stage platform paper. The protein-engineering observations - secretion-competent variants, mature-isoform processing, protein-without-RNA cells - are measurements and carry weight. The platform naming ('Engineered Cross-Correction') and the clinical-relevance thresholds for cardiac repletion are the group's own construction from cited literature, and the authors themselves decline to call cross-correction demonstrated. Weight the histopathology and the fold-of-endogenous ceiling; treat the efficacy framing as a development claim.",
+    "note": "Research-group knowledge base is excluded from the public edition, so this rests on measured PubMed counts, the Methods and the declaration of interests. For common surnames the author query is an upper bound on one person's output and is recorded as such, not as a group identity."
+  },
+  "field_density": {
+    "wwox_directed": false,
+    "wwox_hits_in_source": 0,
+    "queries": [
+      {
+        "query": "count of the literal string WWOX over the whole JATS tree of the declared artifact",
+        "route": "python3 xml.etree itertext over files/fulltext/PMID42157962_DuBreuil2026_PMC.xml, 2026-10-03",
+        "count": 0
+      },
+      {
+        "query": "DuBreuil D[au] AND WWOX",
+        "route": "PubMed esearch 2026-10-03",
+        "count": 0
+      }
+    ],
+    "measured_by": "count of the string WWOX over the whole JATS tree, 2026-10-03",
+    "note": "Zero. This is an earned null for the gene and the source is read only for the transferable AAV-safety question, with the transfer limit stated in the dossier."
+  },
+  "multihop": {
+    "performed": false,
+    "references_enumerated": 71,
+    "pmid_bearing_references": 69,
+    "gene_direct_refs_in_source": [],
+    "enumeration_method": "All <ref> elements counted and all pub-id[pub-id-type=pmid] values parsed from the declared JATS artifact.",
+    "resolved": [],
+    "queued": [],
+    "gap_declared": "Off-WWOX source: the gene appears zero times, so no reference of this paper is gene-direct and the gene-direct hop set is empty by measurement, not by omission. 69 PMID-bearing references enumerated from the JATS; none is resolved and none is individually queued, because the transferable question this paper was read for is answered inside it. The one reference this group repeatedly depends on and cannot read is PMID 32845779 (the multi-capsid primate DRG series), blocked at the publisher on every route the wave tried."
+  },
+  "corpus_crossquery": {
+    "performed": true,
+    "query": "Does this corpus already hold an artifact or a receipt for this PMID, and is the paper already in the registries?",
+    "hits": 0,
+    "finding": "paper_packet.py packet --pmid 42157962 at commit 663970aa07f1: no manifest, no artifacts, depth=none, receipts=0, no acquisition route recorded, and no identity in the registry. First reading in every sense."
+  },
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-10-03",
+    "route": "NCBI ESummary db=pubmed for the six PMIDs of this group",
+    "result": "No retraction, no expression of concern, no erratum.",
+    "hold": false,
+    "dependencies": {
+      "flagged": [],
+      "noted": [],
+      "paper_verdict": "SCREENED_CLEAN",
+      "reference_source": "network",
+      "references_declared": 70,
+      "references_screened": 68,
+      "references_with_doi": 68,
+      "schema": "retraction_check.dependencies/1",
+      "screened": true,
+      "snapshot": {
+        "date": "2026-09-10",
+        "days_since_fetch": 23,
+        "rows": 72476,
+        "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+      },
+      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+      "unscreenable": {
+        "UNSCREENABLE_NO_DOI": 2
+      }
+    }
+  },
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC JATS for PMC13182795, 184095 bytes, sha256 recorded in full above.",
+    "note": "Abstract, Introduction, Results, Discussion and the in-silico and statistical Methods read from the JATS running text. Figure PANELS not inspected (captions only); Tables S1-S10 and Figures S1-S6 not fetched, so the per-animal histopathology severities of Figure 6A are receipted only as the authors' running-text summary. No number carried in the dossier lives in a figure panel.",
+    "entries": [
+      {
+        "proposition": "LOWERING VECTOR BURDEN BY DESIGN DID NOT ABOLISH THE SENSORY-GANGLION FINDING: the ganglia were still affected where brain and cord were not.",
+        "snippet": "Histopathology analysis revealed no evidence of neuronal degeneration in the brain or spinal cord and minimal to mild degeneration in the DRG",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42157962_DuBreuil2026_PMC.xml",
+        "anchor": "Results, 'Evaluation of engineered FXN cross-correction in NHP', extended 12-week study paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THE MECHANISM THE WHOLE DESIGN RESTS ON IS NOT CLAIMED AS PROVEN BY ITS OWN AUTHORS.",
+        "snippet": "Although our current data collectively is suggestive of cross-correction, further confirmatory assays, potentially including in vitro analysis, would strengthen the mechanistic case.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42157962_DuBreuil2026_PMC.xml",
+        "anchor": "Discussion, protein-engineering paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THERE IS A MEASURED UPPER BOUND ON HOW MUCH TRANSGENE PRODUCT IS SAFE, expressed as fold-of-endogenous rather than as vector dose.",
+        "snippet": "levels exceeding 20-fold above normal can impair mitochondrial function",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42157962_DuBreuil2026_PMC.xml",
+        "anchor": "Discussion, over-expression paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "AND SECRETION MATTERED ONLY WHERE TRANSDUCTION WAS LOW, which is the condition a low-burden design creates on purpose.",
+        "snippet": "Treatment with AAV encoding WT-FXN did not increase survival in MckFxn mice",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42157962_DuBreuil2026_PMC.xml",
+        "anchor": "Results, 'Engineered FXN increases therapeutic efficacy of AAV-FXN in mouse', MckFxn paragraph",
+        "panel_text_relation": "text_only"
+      }
+    ]
+  }
+}

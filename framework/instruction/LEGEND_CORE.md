@@ -412,6 +412,17 @@ SAFE_DEFAULTS (seeded from 2026-09-02/03):
     machine. Stop the low-value thread, not the whole machine. Declared 2026-09-23 after a
     run reported TOP FIVE NEED HUMANS as ALL USEFUL SCIENCE NEEDS HUMANS, with the
     counterexample in its own files (`GLOBAL_ESCAPE_SWEEP_20260923.md` §2)
+  - an advance context warning, or a quota that has not been measured, with authorised work
+    remaining → on the Claude Code runtime compaction is automatic and disk state survives it, so
+    checkpoint the task record's step statuses and start the next step; ending the turn "to wait
+    for compaction" or "for the quota reset" is itself a class-3 stop. A limit counts only when
+    the runtime has actually refused to continue, and is then reported in one line. Hindsight
+    default from the Aldaz batch (2026-09-14), where two five-hour sessions ended with under ten
+    percent of their budget used
+  - a mandate whose queue is written as prose → convert it to the Annex A.1c schema
+    (`MANDATE_STATE`, per-step `status`) before the first dispatch and reconcile it with
+    `python3 framework/scripts/mandate_continuity.py status --task <TASK_ID>` at every boundary;
+    the record's verdict, not the chat, decides whether the turn may end
 
 ---
 
@@ -608,4 +619,11 @@ operator's explicit authority boundaries.
 > Distal endpoints inform; proximal biomarkers measure
 > Parallel deep dive yes; parallel commit no
 
-Stay passive. Await input. Never self-authorize.
+Stay active. Keep the loop running without the operator, for hours if needed. Act inside the
+boundaries of §21c–§21e; stop only for an act reserved to the operator.
+
+> Amended 2026-09-29 on the operator's instruction. This line used to read "Stay passive.
+> Await input. Never self-authorize.", which §21c–§21e had already superseded in practice.
+> The unrelated rule that an `URGENT_COMMIT` is proposed by LEGEND and authorized only by the
+> operator (§16 and the skills that cite it) is unchanged.
+> See [`harness_development_principles.md`](../master/harness_development_principles.md), principle 29.

@@ -1,0 +1,234 @@
+{
+ "schema_version": 2,
+ "pmid": "42137269",
+ "doi": "10.1016/j.omta.2026.201681",
+ "receipt": "FTR-20261004-42137269-01",
+ "landing": [
+  "FTR-20261004-42137269-01",
+  "disease-models/wwox/research/fulltext_dossiers/PMID42137269.md",
+  "disease-models/wwox/research/intake_wave_20261004w8_B.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline. An off-gene engineering record read only for the transferable question."
+  },
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Europe PMC fullTextXML returned the body on the first request (HTTP 200, 168571 bytes)."
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "paper_packet.py reported no manifest, no receipt and no registry identity: a first reading."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "OWED. Cassette headroom is a therapeutic-design parameter; forging is separate work and is not claimed as done."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 74,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-04: 'Pacak CA[au]' 74; 'Pacak CA[au] AND WWOX' 0.",
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "An AAV gene-therapy laboratory with no WWOX publication. The promoter was designed for the group's own Cockayne syndrome programme, which is declared in the Discussion; that is a stated development interest in this promoter, and it is a reason to prefer the paper's numbers over its framing."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "occurrences of WWOX or Wwox in the persisted JATS body",
+    "route": "local count over files/fulltext/PMID42137269_Chauhan2026_PMC.xml",
+    "count": 0
+   }
+  ],
+  "note": "Zero. An earned null for the gene. Read only for the cassette-headroom question, with the transfer limit stated on every datum."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 82,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "All 82 references parsed from the persisted JATS (82 ref elements, 82 mixed-citation elements) and tested for the strings WWOX and Wwox: none matched. Note a counting disagreement to be aware of: dependency_integrity.py reports 81 references declared for the same file, so the two counters differ by one; the measured count here is from the ref and mixed-citation element counts in the persisted artefact.",
+  "resolved": [],
+  "queued": [],
+  "note": "No gene-direct reference exists, so there is no hop to follow and nothing is queued. No gap."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does the shared root files/ tree already hold any artefact for PMID 42137269?",
+  "hits": 0,
+  "finding": "No. paper_packet.py reported 0 artefacts before acquisition."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-04",
+  "route": "PubMed esummary for 42137269",
+  "result": "pubtype ['Journal Article']; the CommentsCorrections reference list is empty. No retraction, no expression of concern, no erratum.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 81,
+   "references_screened": 72,
+   "references_with_doi": 72,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 24,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 9
+   },
+   "citing_relation": "No dependency was flagged, so no citing_relation is owed. The references with no DOI support no statement this reading carries."
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42137269_Chauhan2026_PMC.xml",
+   "sha256": "65b29d7f2c259e2976b501a8c8bdffa7f15a4f25027a774d6e748f7ad29a5ee1",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13148911/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_rest_fulltextxml",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-04",
+    "derived": false,
+    "result_sha256": "65b29d7f2c259e2976b501a8c8bdffa7f15a4f25027a774d6e748f7ad29a5ee1"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC JATS body held locally and fingerprinted; the in-text promoter-length table was flattened cell-wise (td and tr boundaries preserved), not as running text, before any length was carried. Supplementary Document S1 (Figures S1-S11 and Table S1) was not retrieved; that gap is declared in the dossier and the receipt.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored. Every entry is a Methods specification, a Results number or an authors' limitation.",
+  "entries": [
+   {
+    "proposition": "THE SELECTION PREMISE IS WRONG ABOUT THE CAPSID. Every in vivo experiment in this paper uses AAV-DJ, not AAV9; the paper therefore says nothing about headroom in an AAV9 genome specifically.",
+    "snippet": "The CP040 mini-promoter was cloned upstream of the eGFP reporter gene in an AAV inverted terminal repeat (ITR) containing vector and packaged into the AAVDJ capsid.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137269_Chauhan2026_PMC.xml",
+    "anchor": "Results, second paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The promoter's length, which is the whole point of the paper.",
+    "snippet": "the mini-promoter sequence was trimmed to maintain essential promoter-binding sites (Figure S1) and reduce the total length to 126 bp",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137269_Chauhan2026_PMC.xml",
+    "anchor": "Results, first paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The headroom arithmetic, stated by the authors for the promoter they compare against.",
+    "snippet": "A limitation to this promoter is its size (∼1,600 bp), which limits its use to only those transgenes that are small enough to fit within the remaining vector space (∼3,400 bp).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137269_Chauhan2026_PMC.xml",
+    "anchor": "Discussion, first paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The same paper assigns a different length to the same promoter name in its own methods table, so a headroom calculation must say which definition it uses.",
+    "snippet": "CB\tChicken β-actin promoter\t583\tKpnI and XhoI",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137269_Chauhan2026_PMC.xml",
+    "anchor": "Table 1, 'The details of promoter constructs used for dual luciferase assay', final row (read cell-wise)",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE ROUTE CHANGES THE RANKING. By the intrathecal route the mini-promoter beat all three established promoters in cortex and cerebellum.",
+    "snippet": "In the cortex and cerebellum, CP040-mediated eGFP expression levels were significantly higher than seen with the CBA, EF1α, and hSYN promoters (Figures 5C and 5E).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137269_Chauhan2026_PMC.xml",
+    "anchor": "Results, paragraph on transcript comparison",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "By the intracerebroventricular route the same promoter in the same capsid at the same dose ranked below the ubiquitous promoters in the same brain regions.",
+    "snippet": "In the ICV administration cohorts, eGFP transcript levels from the CP040 mini-promoter were lower than those obtained from either of the ubiquitous CBA and EF1α promoters and equivalent to the hSYN promoter in the hippocampus and hypothalamus",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137269_Chauhan2026_PMC.xml",
+    "anchor": "Results, same paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The off-target claim: the mini-promoter behaves like a neuron-restricted promoter in liver and kidney, which is the de-targeting argument.",
+    "snippet": "In these organs, CP040 mini-promoter-mediated expression was found to be similar to that of the tissue specific hSYN and significantly less than observed for both the ubiquitous CBA and EF1α promoters (Figures 5F and 5G).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137269_Chauhan2026_PMC.xml",
+    "anchor": "Results, same paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The transduced fraction is low in absolute terms for every promoter tested, which bounds what any of them can deliver: roughly one cell in ten.",
+    "snippet": "eGFP expression was detected in 9.52% ± 5.25% (CBA), 10.00% ± 5.06% (EF1α), 14.52% ± 4.72% (hSYN), and 13.98% ± 4.41% (CP040) of NeuN+ cells (neurons) (Figure 6C).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137269_Chauhan2026_PMC.xml",
+    "anchor": "Results, paragraph on ICV immunofluorescence quantification",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The vector genomes were equal across promoter arms, which is the control the promoter comparison needs and which the companion promoter paper did not have.",
+    "snippet": "As expected, since all four promoters were packaged in the same AAV serotype (AAVDJ) using the same doses, the vgs for each were effectively the same",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137269_Chauhan2026_PMC.xml",
+    "anchor": "Results, paragraph introducing Figure 4",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state the reporter limitation themselves: the promoter has never driven a therapeutic protein.",
+    "snippet": "Also, our study primarily focused on eGFP as a reporter gene. Additional studies using specific transgenes in various disease models will be necessary to assess the promoter’s efficacy in specific therapeutic contexts.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137269_Chauhan2026_PMC.xml",
+    "anchor": "Discussion, limitations paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The durability limitation, stated by the authors against the clinical requirement.",
+    "snippet": "Our longest time point was 9 weeks post-administration, which is shorter than the typical human gene therapy timeline where the goal is to provide therapeutic expression for many years if not the lifetime of the patient.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137269_Chauhan2026_PMC.xml",
+    "anchor": "Discussion, limitations paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The immune question is open by the authors' own statement — relevant because a restoration cassette's immune risk is a wave-8 question.",
+    "snippet": "Finally, potential immune responses to prolonged CP040-driven transgene expression remain to be investigated.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137269_Chauhan2026_PMC.xml",
+    "anchor": "Discussion, limitations paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "There is no dose-response in this paper and the authors say so, deferring it to future work.",
+    "snippet": "Ongoing and future studies in disease models will include multiple AAV doses and time points for i.v. administrations to more fully assess promoter behavior.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137269_Chauhan2026_PMC.xml",
+    "anchor": "Discussion, paragraph on dose selection",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A regulatory property that is independent of strength: the promoter contains no viral sequence, against FDA guidance the authors cite on genotoxicity.",
+    "snippet": "Recent FDA guidance based on long-term follow-up of human subjects in gene therapy trials has recommended the use of non-viral promoters to reduce the potential for genotoxicity.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137269_Chauhan2026_PMC.xml",
+    "anchor": "Discussion, first paragraph",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}

@@ -1,0 +1,160 @@
+{
+ "schema_version": 2,
+ "pmid": "38540325",
+ "doi": "10.3390/genes15030266",
+ "receipt": "FTR-20261003-38540325-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID38540325.md",
+  "disease-models/wwox/research/intake_wave_20261003w6_B.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W6-B-REGISTRY-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is owned by other batches; what this reading supports is proposed as commit candidates and in the intake note."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "An aggregation or real-world cohort supplies no new therapeutic lever for the reference genotype class; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is newly proposed; cannabidiol is an approved antiseizure medicine and nothing here is sent to BLOCK-1 triage."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The triples are published in the candidates for a blind auditor; the reader cannot audit their own locators."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "A narrative review from one paediatric neurology division; WWOX is one uncited entry in an autosomal-recessive gene list. Adds no WWOX patient or response. Not a per-author sweep."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (infantile spasms OR epileptic spasms OR West syndrome)",
+    "count": 25,
+    "source": "PubMed ESearch rettype=count 2026-10-03"
+   }
+  ],
+  "note": "25 PubMed records tie WWOX to spasms; this source adds no per-patient WWOX data."
+ },
+ "multihop": {
+  "references_enumerated": 138,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "138 references enumerated by count. Table 2 carries no per-gene citation, so no WWOX reference can be enumerated; nothing to resolve or queue."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 38540325 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "No PAPER/LIT identity record and no receipt for this PMID before this reading (paper_packet.py packet: identity none, receipts 0)."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 138,
+   "references_screened": 133,
+   "references_with_doi": 133,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 5
+   }
+  },
+  "result": "Checked 2026-10-03 via PubMed metadata (get_article_metadata): publication types ['Journal Article', 'Review']; no retraction, expression of concern or correction listed for PMID 38540325."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID38540325_Snyder2024_PMC.xml",
+   "sha256": "824a0fe0a883bdb60b8c822b824a672137665fc12bec12d7c9a7a3d69fe28553",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10970414/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "result_sha256": "824a0fe0a883bdb60b8c822b824a672137665fc12bec12d7c9a7a3d69fe28553"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Table 2 is a list of examples.",
+    "snippet": "Examples of some of the reported genetic IESS aetiologies.",
+    "anchor": "Table 2, caption",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38540325_Snyder2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "WWOX is listed among autosomal-recessive IESS genes.",
+    "snippet": "TBC1D24; TBCD; TNK2; UGP2; VRK2; WWOX",
+    "anchor": "Table 2, row Autosomal recessive",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38540325_Snyder2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "First-line response ranges are given for ACTH, prednisolone and vigabatrin, unstratified by gene.",
+    "snippet": "36.7 to 87% for ACTH, 11 to 70% for prednisolone, and 11 to 58% for vigabatrin",
+    "anchor": "Section 6.1, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38540325_Snyder2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The precision-medicine examples are metabolic and channel genes, not WWOX.",
+    "snippet": "Pyridoxine and pyridoxyl-phosphate supplementation are examples of treatments used in the context of ALDH7A1 and PNPO pathogenic variants",
+    "anchor": "Section 6.1, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38540325_Snyder2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC10970414/fullTextXML returned HTTP 200 with a full JATS body on 2026-10-03; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure legend or the supplement."
+ }
+}

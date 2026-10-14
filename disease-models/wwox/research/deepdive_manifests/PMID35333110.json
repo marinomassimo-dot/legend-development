@@ -1,0 +1,309 @@
+{
+ "schema_version": 2,
+ "pmid": "35333110",
+ "doi": "10.1089/hum.2021.245",
+ "receipt": "FTR-20261004-35333110-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID35333110.md",
+  "disease-models/wwox/research/intake_wave_20261004w9_B.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W9-B-REGISTRY-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W9-B-HORDEAUX-ATTRIBUTION-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is a research surface another batch owns; any lead this reading touches is proposed through a commit candidate instead of an edit."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever for the reference genotype class is supplied by this source; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No candidate molecule is proposed for the reference genotype class; the compounds in the source are tested in cells or animals for other purposes."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes are proposed as commit candidates for a later BATCH_COMMIT."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The triples are published in the candidates for an auditor to run; no consolidated baseline claim is narrowed here."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 28,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "PubMed counts 2026-10-04: Hordeaux J[au] 28 records, 0 intersecting WWOX; first author Hordeaux, senior author Wilson (University of Pennsylvania Gene Therapy Program); 14 records pair Wilson JM with Hordeaux J. A gene-therapy toxicology group; no WWOX work."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "AAV AND dorsal root ganglia AND toxicity AND nonhuman primate",
+    "count": 22,
+    "source": "PubMed ESearch 2026-10-04"
+   },
+   {
+    "query": "intrathecal AAV AND dorsal root ganglia AND WWOX",
+    "count": 0,
+    "source": "PubMed ESearch 2026-10-04"
+   }
+  ],
+  "note": "No PubMed record joins intrathecal AAV, DRG and WWOX."
+ },
+ "multihop": {
+  "references_enumerated": 71,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "All 71 references enumerated from the JATS reference list; none names WWOX."
+ },
+ "corpus_crossquery": {
+  "query": "Does any registry record name this paper? (registry_records.py get --pmid 35333110)",
+  "hits": 0,
+  "note": "No registry record exists for this PMID."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-04 by PubMed EFetch for PMID 35333110: no RetractionIn, ErratumIn, ExpressionOfConcernIn or UpdateIn link.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 71,
+   "references_screened": 70,
+   "references_with_doi": 70,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 24,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID35333110_Hordeaux2022_PMC.xml",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9142772/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "fc9119a987c7d62e4d8a5b79f6ab073d7d3cc280785b7fdcea7cdf2c161f6f36"
+   },
+   "sha256": "fc9119a987c7d62e4d8a5b79f6ab073d7d3cc280785b7fdcea7cdf2c161f6f36"
+  },
+  {
+   "path": "files/fulltext/PMID35333110_Hordeaux2022_supplement/figs/hum.2021.245_figure5.jpg",
+   "kind": "figure",
+   "note": "Figure 5 (GLP NHP toxicology) inspected as an image at native resolution: panel C (DRG neuronal degeneration and dorsal axonopathy severity scores by dose) and panel D (median-nerve SNAP).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/9142772/bin/hum.2021.245_figure5.jpg",
+    "http_method": "GET",
+    "tier": "PMC instance bin via pmc_pow_fetch.fetch (proof-of-work page solved)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "6ebbae4119135dc509b3ffb0e4150bb7a8331c162eb9975867771b012d5ec26e"
+   },
+   "sha256": "6ebbae4119135dc509b3ffb0e4150bb7a8331c162eb9975867771b012d5ec26e"
+  },
+  {
+   "path": "files/fulltext/PMID35333110_Hordeaux2022_supplement/Supp_DataS1.pdf",
+   "kind": "supplement_binary",
+   "note": "Supplementary Data S1 (dog clinical pathology). Not read.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/9142772/bin/Supp_DataS1.pdf",
+    "http_method": "GET",
+    "tier": "PMC instance bin via pmc_pow_fetch.fetch (proof-of-work page solved)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "a46c7a69a8cab14c02bb0307a0cd346b1be57f47c8bd5df5c9c1b587819df6af"
+   },
+   "sha256": "a46c7a69a8cab14c02bb0307a0cd346b1be57f47c8bd5df5c9c1b587819df6af"
+  },
+  {
+   "path": "files/fulltext/PMID35333110_Hordeaux2022_supplement/Supp_DataS2.pdf",
+   "kind": "supplement_binary",
+   "note": "Supplementary Data S2 (NHP clinical pathology). Not read.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/9142772/bin/Supp_DataS2.pdf",
+    "http_method": "GET",
+    "tier": "PMC instance bin via pmc_pow_fetch.fetch (proof-of-work page solved)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "8670cc60c44acc65bf6f2b92a805be6dd669cf8c822bdf220229a327b49883a7"
+   },
+   "sha256": "8670cc60c44acc65bf6f2b92a805be6dd669cf8c822bdf220229a327b49883a7"
+  },
+  {
+   "path": "files/fulltext/PMID35333110_Hordeaux2022_supplement/Suppl_TableS3.docx",
+   "kind": "supplement_binary",
+   "note": "Supplementary Table S3 (NHP neutralising antibodies). Not read.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/9142772/bin/Suppl_TableS3.docx",
+    "http_method": "GET",
+    "tier": "PMC instance bin via pmc_pow_fetch.fetch (proof-of-work page solved)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "f54daf0129644c81918bdf990cf8f55bbd082e762da84f8ea611d69f8da6895a"
+   },
+   "sha256": "f54daf0129644c81918bdf990cf8f55bbd082e762da84f8ea611d69f8da6895a"
+  },
+  {
+   "path": "files/fulltext/PMID35333110_Hordeaux2022_supplement/Suppl_TableS4.docx",
+   "kind": "supplement_binary",
+   "note": "Supplementary Table S4 (NHP T cell responses). Not read.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/9142772/bin/Suppl_TableS4.docx",
+    "http_method": "GET",
+    "tier": "PMC instance bin via pmc_pow_fetch.fetch (proof-of-work page solved)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "6d865308c213244c810dd98cabfce7e6cc4e2c9ff66da6e3451f80a19857331f"
+   },
+   "sha256": "6d865308c213244c810dd98cabfce7e6cc4e2c9ff66da6e3451f80a19857331f"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "NHP GLP design: single ICM dose in juvenile rhesus macaques, vehicle n=2 and three dose groups of n=6, no immune suppression, half euthanised at 3 and half at 6 months.",
+    "snippet": "without immune-suppression treatment. We euthanized half of the animals at 3 months postdosing and the other half at 6 months postdosing.",
+    "anchor": "Results, ICM AAVhu68.hGALCco is well tolerated in NHPs, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35333110_Hordeaux2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Doses: 4.5E12, 1.5E13 and 4.5E13 genome copies (5.0E10, 1.7E11 and 5.0E11 GC per gram brain).",
+    "snippet": "1.5 × 1013 GC (mid-dose [MD]; 1.7 × 1011 GC/g brain; n = 6)",
+    "anchor": "Results, NHP para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35333110_Hordeaux2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Dog arm: seven dogs, four AAV-treated Krabbe dogs, one ICM dose of 3.0E13 GC in 1 mL, no immune suppression or anti-inflammatory regimen.",
+    "snippet": "The dogs did not receive any immune suppression or anti-inflammatory regimen.",
+    "anchor": "Results, canine model, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35333110_Hordeaux2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DRG finding in NHP: minimal sporadic degeneration of DRG sensory neurons with secondary axonopathy.",
+    "snippet": "Test article administration resulted in minimal sporadic degeneration of primarily DRG sensory neurons, which led to secondary degeneration of associated central and peripheral axons (i.e., axonopathy).",
+    "anchor": "Results, NHP, para 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35333110_Hordeaux2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DRG lesions were absent in some treated animals and minimal when present; axonopathy minimal to mild, with many sections negative.",
+    "snippet": "The DRG lesions were absent in some test article-treated animals and were minimal in severity when present.",
+    "anchor": "Results, NHP, para 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35333110_Hordeaux2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Text: secondary axonopathy minimal to mild when present, many sections with no finding.",
+    "snippet": "Secondary axonopathy associated with DRG lesions was minimal to mild when present, with many sections showing no findings",
+    "anchor": "Results, NHP, para 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35333110_Hordeaux2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Axonopathy was dose dependent, most in the high-dose group.",
+    "snippet": "The secondary dorsal axonopathy was dose dependent, with the HD group showing the most histological findings",
+    "anchor": "Results, NHP, para 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35333110_Hordeaux2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Findings were stable between 90 and 180 days.",
+    "snippet": "The incidence and severity were similar at days 90 and 180, showing a lack of pathology progression",
+    "anchor": "Results, NHP, para 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35333110_Hordeaux2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "One high-dose animal had a large fall in median-nerve sensory action potential, with a grade 3 dorsal column axonopathy.",
+    "snippet": "decreased SNAPs from the left median nerve (amplitude down from 23.2 μV baseline to 6.6 μV) in one HD animal",
+    "anchor": "Results, NHP, para 7",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35333110_Hordeaux2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Severity scale used for the DRG and axonopathy grades.",
+    "snippet": "(0 = normal, 1 = minimal, 2 = mild, 3 = moderate, 4 = marked, and 5 = severe)",
+    "anchor": "Figure 5 legend, panel C",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35333110_Hordeaux2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Dog arm: no treatment-related histopathological findings including DRG.",
+    "snippet": "No test article-related histopathological adverse findings were observed, including in DRG collected from cervical, thoracic, and lumbar regions",
+    "anchor": "Results, canine model, biodistribution paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35333110_Hordeaux2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state DRG risk seems low on their NHP and dog data and note the dog is less sensitive than the NHP.",
+    "snippet": "suggests that dog is less sensitive than NHP",
+    "anchor": "Discussion, DRG paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35333110_Hordeaux2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 5C panel: DRG neuronal degeneration scores never exceed 1 (minimal) at any dose; the dorsal axonopathy panel reaches 3 (moderate) in the high-dose group, which the text sentence 'minimal to mild when present' does not show.",
+    "snippet": "(0 = normal, 1 = minimal, 2 = mild, 3 = moderate, 4 = marked, and 5 = severe)",
+    "anchor": "Figure 5C, both plots, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID35333110_Hordeaux2022_supplement/figs/hum.2021.245_figure5.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[5]",
+    "qualifies_needle": "Secondary axonopathy associated with DRG lesions was minimal to mild when present"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC9142772/fullTextXML returned HTTP 200 with a full JATS body on 2026-10-04; the artefact declared is that response."
+ }
+}

@@ -1,0 +1,262 @@
+{
+ "schema_version": 2,
+ "pmid": "33919646",
+ "doi": "10.3390/ijms22084202",
+ "receipt": "FTR-20261003-33919646-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/intake_wave_20261003w5_B.md",
+  "disease-models/wwox/research/fulltext_dossiers/PMID33919646.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W5-B-HYPOKINESIA-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W5-B-REGISTRY-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is a research surface another batch owns; this wave's question is patient provenance and counting, so findings are proposed through commit candidates instead of ledger edits."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No source in this group tests a therapy against a mechanism; forging hypotheses from single-patient drug histories would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed as a candidate; anti-seizure medication histories in case reports are clinical descriptions, not molecules for BLOCK-1 triage."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes are proposed as commit candidates for a later BATCH_COMMIT."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; the triples are published in the candidates for an auditor to run."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 140,
+  "publications_on_gene": 1,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "PubMed counts 2026-10-03: Spagnoli C[au] 140 records, 1 intersecting WWOX (this review). A child neurology group writing a PRISMA review; every WWOX datum is secondary and comes from one cohort paper."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND movement disorder",
+    "count": 13,
+    "source": "PubMed ESearch 2026-10-03"
+   }
+  ],
+  "note": "Thirteen PubMed records pair WWOX with movement disorder; this review is the one that states a WWOX-specific neonatal hypokinetic phenotype."
+ },
+ "multihop": {
+  "references_enumerated": 74,
+  "gene_direct_refs_in_source": [
+   "30356099"
+  ],
+  "resolved": [
+   "30356099"
+  ],
+  "queued": [],
+  "note": "All 74 references enumerated; the only WWOX reference is ref 46, Piard 2019. Its six genotype lines in Table S1 were matched to Piard Supplemental Table 1 patients 1, 2, 3, 4, 9 and 11, whose 'Movement disorder' and 'Poor spontaneous movements' rows were read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 33919646; --theme hypokine",
+  "hits": 0,
+  "note": "No record names the review. The theme 'hypokine' reaches PAPER 145 and LIT-0442 (the 2026 L239R case report) and PAPER 013."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-03 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn or CommentIn link; publication types Journal Article, Systematic Review.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 74,
+   "references_screened": 71,
+   "references_with_doi": 71,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID33919646_Spagnoli2021_PMC.xml",
+   "sha256": "18f5ada7f67ce831c3899e6111f3345677451b1f83dcfaca8592730e5ba143d8",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML; body, four tables, figure legend, 74 references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8072943/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "18f5ada7f67ce831c3899e6111f3345677451b1f83dcfaca8592730e5ba143d8"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID33919646_Spagnoli2021_supplement/ijms-22-04202-s001.zip",
+   "sha256": "bd869861bd36f88152dabc4221515bfe0c560ddb97ae1fee957423368346388a",
+   "kind": "supplement_binary",
+   "note": "Supplementary zip holding Table S1.pdf. Fetched with the PMC proof-of-work routine; pmc_pow_fetch.py itself refuses application/zip, so the same fetch() was called with that MIME added (reader-side shim, recorded as a capability gap).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/8072943/bin/ijms-22-04202-s001.zip",
+    "http_method": "GET",
+    "tier": "pmc_instance_bin_pow",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "bd869861bd36f88152dabc4221515bfe0c560ddb97ae1fee957423368346388a"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID33919646_Spagnoli2021_supplement/Table_S1.pdf",
+   "sha256": "fb50452934797f65a17bb8d5ca2461f84e6196e63b8754f9b21457c643540363",
+   "kind": "supplement_binary",
+   "note": "Member 'Table S1.pdf' extracted unchanged by Python zipfile; renamed only (space to underscore). Nine landscape pages; page 9 (the WWOX row) rendered at 130 dpi and read.",
+   "acquisition_recipe": {
+    "resolved_url": "local extraction from ijms-22-04202-s001.zip",
+    "http_method": "NONE",
+    "tier": "local_zip_member",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": true,
+    "result_sha256": "fb50452934797f65a17bb8d5ca2461f84e6196e63b8754f9b21457c643540363",
+    "derived_from": "files/fulltext/PMID33919646_Spagnoli2021_supplement/ijms-22-04202-s001.zip",
+    "extractor": {
+     "name": "python zipfile",
+     "version": "stdlib",
+     "call": "zipfile.ZipFile(zip).read('Table S1.pdf')"
+    }
+   }
+  },
+  {
+   "path": "files/fulltext/PMID33919646_Spagnoli2021_supplement/Table_S1.txt",
+   "sha256": "ae435fa049b760bb95ce35a7176e89f5e817f5c340d9ed3967f83fffcf04560a",
+   "kind": "supplement_text",
+   "note": "DERIVED text layer of Table_S1.pdf by pdftotext -layout -nopgbrk; no C0 controls. Cells of the landscape table are split across lines, so locators are single-cell fragments; the WWOX row was confirmed against the rendered page.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_pdftotext_layout_nopgbrk",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": true,
+    "result_sha256": "ae435fa049b760bb95ce35a7176e89f5e817f5c340d9ed3967f83fffcf04560a",
+    "derived_from": "files/fulltext/PMID33919646_Spagnoli2021_supplement/Table_S1.pdf",
+    "extractor": {
+     "name": "pdftotext (poppler)",
+     "version": "24.02.0",
+     "call": "pdftotext -layout -nopgbrk Table_S1.pdf Table_S1.txt"
+    }
+   }
+  },
+  {
+   "path": "files/fulltext/PMID33919646_Spagnoli2021_supplement/ijms-22-04202-g001.jpg",
+   "sha256": "2b3ae9ee622c1aa650efef1078b951dd44c711b693aa859cd81d841f76a7c084",
+   "kind": "figure",
+   "note": "Figure 1 (PRISMA flow chart), inspected.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/8072943/bin/ijms-22-04202-g001.jpg",
+    "http_method": "GET",
+    "tier": "pmc_instance_bin_pow",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "2b3ae9ee622c1aa650efef1078b951dd44c711b693aa859cd81d841f76a7c084"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC 2026-10-03: inEPMC 'Y', PMC8072943, open access; fullTextXML served the body read here.",
+  "entries": [
+   {
+    "proposition": "The review states that an early-onset hypokinetic movement disorder occurs only with WWOX variants, citing one source.",
+    "snippet": "Only in patients with WWOX gene variants there is an associated early onset hypokinetic MD with little or no psychomotor development from birth [46].",
+    "anchor": "Discussion, paragraph 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33919646_Spagnoli2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The WWOX section is built from 5 of 20 cases of a single cited cohort.",
+    "snippet": "WWOX (WW domain-containing oxidoreductase): 5/20 cases had neonatal-onset epilepsy with associated MD.",
+    "anchor": "Results 3.4.1, Enzymes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33919646_Spagnoli2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The hypokinetic description is 'very limited spontaneous movements', attributed to reference 46.",
+    "snippet": "MD is strikingly hypokinetic with very limited spontaneous movements, while upper limbs’ dystonia, myoclonus, startles, paroxysmal involuntary movements, and episodes of boxing/pedaling were also described [46].",
+    "anchor": "Results 3.4.1, Enzymes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33919646_Spagnoli2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The discussion turns the observation into a diagnostic suggestion.",
+    "snippet": "neonatal-onset hypokinetic MD appears exceptional and highly suggestive for WWOX-related disorders.",
+    "anchor": "Discussion, paragraph 6",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33919646_Spagnoli2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors themselves name a recognition bias in favour of hyperkinetic disorders.",
+    "snippet": "However, as hyperkinetic MD might be easier to recognize, a potential bias cannot be completely excluded.",
+    "anchor": "Discussion, paragraph 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33919646_Spagnoli2021_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table S1 counts hypokinesia in five WWOX patients.",
+    "snippet": "clonic: (“WOREE” ed without esia: 5 3mo-3y5mo)",
+    "anchor": "Table S1, WWOX row, second text line; the MD-semiology cell is split by the text layer ('Hypokin' on the first line, 'esia: 5' here) and the rendered page 9 prints 'Hypokinesia: 5'",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID33919646_Spagnoli2021_supplement/Table_S1.txt",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "Table S1 lists the first of the six WWOX genotype lines drawn from the cited cohort.",
+    "snippet": "WWOX EIEE28, R 4 E + MD: AR Compound heterozygous: c.173- Missense: 2",
+    "anchor": "Table S1, WWOX row, first text line (gene, disease, design, evidence level, n, inheritance, first genotype line)",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID33919646_Spagnoli2021_supplement/Table_S1.txt",
+    "panel_text_relation": "text_confirmed_by_panel"
+   }
+  ]
+ }
+}

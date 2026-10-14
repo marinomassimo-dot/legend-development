@@ -186,9 +186,22 @@ class CaseEReachableOnlyByExpansion(unittest.TestCase):
         zero = {r.record_id: why for r, why in at_zero.hits if r.source == "claim_registry_current"}
         one = {r.record_id: why for r, why in at_one.hits if r.source == "claim_registry_current"}
         self.assertTrue(zero, "the fixture needs a claim that links to the paper's record")
+        # What K1 pins is that a claim citing the paper BY ITS RECORD LINK is reached at hop 0 —
+        # the I03 miss. It does not pin that every hop-0 claim arrives that way: a claim whose
+        # `Source` names the bare PMID is reached as a plain `mention`, which is the oldest and
+        # most direct citation of all. Pinning the link-shaped reason for ALL of them made the
+        # case fail the moment a legitimate new claim cited the PMID directly (`CLAIM 045`,
+        # BATCH_20261003_003) without any of the K1 behaviour changing. So: at least one hop-0
+        # claim must arrive by record link, every hop-0 claim must arrive at hop 0, and the
+        # outward-only expansion below still has to cost a hop.
+        self.assertTrue(
+            any(why.startswith("mention (links to paper_registry_current#PAPER")
+                for why in zero.values()),
+            f"K1: a claim citing the paper by record link must be reached at hop 0; got {zero}",
+        )
         for claim, why in zero.items():
-            self.assertTrue(why.startswith("mention (links to paper_registry_current#PAPER"),
-                            (claim, why))
+            self.assertTrue(why.startswith("mention"), (claim, why))
+            self.assertNotIn("(hop 1)", why, (claim, why))
         outward_only = set(one) - set(zero)
         self.assertTrue(outward_only, "one hop must still add claims reached only outward")
         for claim in outward_only:
@@ -735,13 +748,28 @@ class AFieldFilterReportsItsDenominator(unittest.TestCase):
                          & self._independent_claim_scan("Status", "consolidated baseline"))
 
     def test_an_unsatisfiable_filter_returns_nothing_rather_than_ignoring_itself(self) -> None:
-        """Anti-vacuity: a filter that never removes anything is not a filter."""
-        found = rr.select(ROOT, "wwox", theme="myelin",
-                          constraints=[("Status", "in observation")], hops=0,
-                          sources=["claim_registry_current"])
-        self.assertEqual(set(), self._independent_claim_scan("Status", "in observation")
-                         & {"CLAIM 003", "CLAIM 004", "CLAIM 011", "CLAIM 014", "CLAIM 015"},
-                         "the corpus changed; this case needs a new pair")
+        """Anti-vacuity: a filter that never removes anything is not a filter.
+
+        🔴 The pair is DERIVED, not typed. This case used `myelin` + `in observation` against a
+        hand-written list of five claim ids, and `BATCH_20261003_001` falsified it without
+        touching any of the five: `CLAIM 044` is `in observation` and matches the theme because
+        it quotes the string `unmyelin` while recording that a source classifies neurons by
+        diameter alone. The guard fired exactly as written — *the corpus changed; this case needs
+        a new pair* — so the fix is to stop pinning the pair to a list of ids that a later batch
+        can invalidate from the outside. The theme selection and the independent scan now supply
+        both halves, and the only typed constant is the status value, whose emptiness the guard
+        itself checks.
+        """
+        status = "conflicting evidence"
+        theme_only = rr.select(ROOT, "wwox", theme="myelin", hops=0,
+                               sources=["claim_registry_current"])
+        themed = {record.record_id for record, _ in theme_only.hits}
+        self.assertTrue(themed, "the theme selection must not be empty, or nothing is narrowed")
+        self.assertEqual(set(), self._independent_claim_scan("Status", status) & themed,
+                         "the corpus changed: a myelin-themed claim now carries this status, so "
+                         "this case needs a new status value")
+        found = rr.select(ROOT, "wwox", theme="myelin", constraints=[("Status", status)],
+                          hops=0, sources=["claim_registry_current"])
         self.assertEqual([], found.hits)
 
     def test_a_record_asked_for_by_name_is_not_withheld_by_a_filter(self) -> None:

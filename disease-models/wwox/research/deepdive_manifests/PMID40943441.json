@@ -1,0 +1,236 @@
+{
+  "schema_version": 2,
+  "pmid": "40943441",
+  "doi": "10.3390/ijms26178521",
+  "receipt": "FTR-20261004-40943441-01",
+  "context_policy": "SOURCE_FIRST",
+  "landing": [
+    "disease-models/wwox/research/fulltext_dossiers/PMID40943441.md",
+    "disease-models/wwox/research/intake_wave_20261004w11_B.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261004W11-B-ISODISOMY-01.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261004W11-B-REGISTRY-01.md"
+  ],
+  "skills_considered": [
+    {"skill": "find-fulltext", "used": true},
+    {"skill": "legend-study-intake-triage", "used": true},
+    {"skill": "legend-deepdive", "used": true},
+    {"skill": "legend-discovery", "used": false, "reason": "The WWOX content is a mechanism-class citation; the route it names is already held by a complete reading of another paper, so there is no new lead to mine."},
+    {"skill": "legend-hypothesis-forge", "used": false, "reason": "No therapeutic content bears on WWOX."},
+    {"skill": "legend-safety-triage", "used": false, "reason": "No compound is proposed by this source."},
+    {"skill": "legend-commit", "used": false, "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."},
+    {"skill": "legend-locator-audit", "used": false, "reason": "The reader cannot audit their own locators; triples are published in the candidate for a blind auditor."}
+  ],
+  "group_assessment": {
+    "total_publications": 1,
+    "publications_on_gene": 0,
+    "research_type": "descriptive_clinical",
+    "is_primary_group_for_disease": false,
+    "weighting": "National medical-genetics research centre; single case report of whole-chromosome-16 isodisomy studied with microarray, microsatellites, FISH, exome, trio genome and trio nanopore methylation. No WWOX-focused work; WWOX appears only as a cited example of a recessive gene unmasked by chromosome-16 isodisomy."
+  },
+  "field_density": {
+    "queries": [
+      {"query": "WWOX AND \"uniparental disomy\"", "count": 2, "source": "PubMed ESearch rettype=count 2026-10-04"}
+    ],
+    "note": "Two PubMed records pair WWOX with uniparental disomy; this case report is a third paper naming the route, by citation only."
+  },
+  "multihop": {
+    "references_enumerated": 57,
+    "gene_direct_refs_in_source": ["38407561"],
+    "resolved": [],
+    "queued": [
+      {
+        "pmid": "38407561",
+        "queue": "FT-135",
+        "why": "Reference 16, the only WWOX-direct reference: the primary report of a homozygous WWOX canonical-donor allele made homozygous by chromosome-16 isodisomy. No PMCID; Europe PMC search returns no full text; Unpaywall oa_status closed on 2026-10-04. FT-135 already carries this PMID as declared debt; this reading adds a second citing paper to the same address rather than minting a new one."
+      }
+    ],
+    "note": "57 references enumerated from the JATS back matter; one is WWOX-direct (reference 16). It is paywalled with no lawful free route from this host, so the hop is queued, not resolved, and this reading is declared partial for that reason alone."
+  },
+  "corpus_crossquery": {
+    "query": "registry_records.py get --pmid 40943441 and --pmid 38407561; git grep for isodisomy/uniparental outside the two large registries; fulltext_receipts.py status --pmid 39101447",
+    "hits": 3,
+    "note": "No record for this paper. PMID 38407561 is held as a corpus placeholder (paper registry corpus entry, LIT-0225) with no receipt and as FT-135 debt. The isodisomy route itself is already held at research level by a complete reading of PMID 39101447 (canonical-donor allele, homozygous, isodisomy inferred from copy-neutral LOH, minigene exon-2 skipping); the working model carries no sentence about it."
+  },
+  "retraction_check": {
+    "checked": true,
+    "result": "Checked 2026-10-04 via PubMed ESummary: publication types ['Case Reports', 'Journal Article']; no retraction, expression of concern or correction listed for PMID 40943441.",
+    "dependencies": {
+      "flagged": [],
+      "noted": [],
+      "paper_verdict": "SCREENED_CLEAN",
+      "reference_source": "network",
+      "references_declared": 57,
+      "references_screened": 44,
+      "references_with_doi": 44,
+      "schema": "retraction_check.dependencies/1",
+      "screened": true,
+      "snapshot": {
+        "date": "2026-09-10",
+        "days_since_fetch": 24,
+        "rows": 72476,
+        "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+      },
+      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+      "unscreenable": {
+        "UNSCREENABLE_NO_DOI": 13
+      }
+    }
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID40943441_Panchenko2025_PMC.xml",
+      "sha256": "2d642395bd3d14ad7a534996f40015369b80af6334acb792ae4bb05015750eec",
+      "kind": "article_text",
+      "note": "Europe PMC fullTextXML (158 402 B): body, Table 1, eight figure legends, 57 references; no supplementary material is listed.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12429381/fullTextXML",
+        "http_method": "GET",
+        "tier": "Europe PMC REST fullTextXML",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "2d642395bd3d14ad7a534996f40015369b80af6334acb792ae4bb05015750eec"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID40943441_Panchenko2025_ijms-26-08521-g002.jpg",
+      "sha256": "381f53f4a457c8aa84d722b8590a8e2cc79ac43b4262a6746c293f38b29dd7f7",
+      "kind": "figure",
+      "note": "Figure 2 (microarray LOH track, allele difference and B-allele frequency across chromosome 16) as deposited; inspected as an image. Two LOH segments span the short and long arms, interrupted only at the centromere.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12429381.1/ijms-26-08521-g002.jpg",
+        "http_method": "GET", "tier": "pmc_oa_opendata_s3", "user_agent_policy": "none",
+        "acquired_on": "2026-10-04", "derived": false,
+        "result_sha256": "381f53f4a457c8aa84d722b8590a8e2cc79ac43b4262a6746c293f38b29dd7f7"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID40943441_Panchenko2025_ijms-26-08521-g003.jpg",
+      "sha256": "68b625516e945748d789b67f676045da7feda1ff676c7f7a12d461ef7dc24921",
+      "kind": "figure",
+      "note": "Figure 3 (microsatellite electropherograms, one marker, trio) as deposited; inspected; no WWOX content.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12429381.1/ijms-26-08521-g003.jpg",
+        "http_method": "GET", "tier": "pmc_oa_opendata_s3", "user_agent_policy": "none",
+        "acquired_on": "2026-10-04", "derived": false,
+        "result_sha256": "68b625516e945748d789b67f676045da7feda1ff676c7f7a12d461ef7dc24921"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID40943441_Panchenko2025_ijms-26-08521-g004.jpg",
+      "sha256": "769dfb425df5f5a05bd31f57a1bfffbfc18dde6ba6ca993e5ce0d35e62251ae9",
+      "kind": "figure",
+      "note": "Figure 4 (microsatellite electropherograms, second marker) as deposited; inspected; no WWOX content.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12429381.1/ijms-26-08521-g004.jpg",
+        "http_method": "GET", "tier": "pmc_oa_opendata_s3", "user_agent_policy": "none",
+        "acquired_on": "2026-10-04", "derived": false,
+        "result_sha256": "769dfb425df5f5a05bd31f57a1bfffbfc18dde6ba6ca993e5ce0d35e62251ae9"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID40943441_Panchenko2025_ijms-26-08521-g005.jpg",
+      "sha256": "c0ca5b4f47d047d7aa4d42df01b8503aec0df50b713c33823d65e9f8671bbba2",
+      "kind": "figure",
+      "note": "Figure 5 (microsatellite electropherograms, third marker) as deposited; inspected; no WWOX content.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12429381.1/ijms-26-08521-g005.jpg",
+        "http_method": "GET", "tier": "pmc_oa_opendata_s3", "user_agent_policy": "none",
+        "acquired_on": "2026-10-04", "derived": false,
+        "result_sha256": "c0ca5b4f47d047d7aa4d42df01b8503aec0df50b713c33823d65e9f8671bbba2"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID40943441_Panchenko2025_ijms-26-08521-g006.jpg",
+      "sha256": "83e23a94e2ef181fdf8410e23ac474708f70a25638a72b6717cc078ff3f55f2a",
+      "kind": "figure",
+      "note": "Figure 6 (centromere-16 FISH, lymphocytes and fibroblasts) as deposited; inspected; no WWOX content.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12429381.1/ijms-26-08521-g006.jpg",
+        "http_method": "GET", "tier": "pmc_oa_opendata_s3", "user_agent_policy": "none",
+        "acquired_on": "2026-10-04", "derived": false,
+        "result_sha256": "83e23a94e2ef181fdf8410e23ac474708f70a25638a72b6717cc078ff3f55f2a"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID40943441_Panchenko2025_ijms-26-08521-g007.jpg",
+      "sha256": "249f3d12b06bd0a5f4236d48b4fafc0fd4b8869b833363522c8d0b32e0c6a997",
+      "kind": "figure",
+      "note": "Figure 7 (MS-MLPA ratio table, multi-locus imprinting probemix) as deposited; inspected; no chromosome-16 probe and no WWOX content.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12429381.1/ijms-26-08521-g007.jpg",
+        "http_method": "GET", "tier": "pmc_oa_opendata_s3", "user_agent_policy": "none",
+        "acquired_on": "2026-10-04", "derived": false,
+        "result_sha256": "249f3d12b06bd0a5f4236d48b4fafc0fd4b8869b833363522c8d0b32e0c6a997"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID40943441_Panchenko2025_ijms-26-08521-g008.jpg",
+      "sha256": "f6d6059b4fd11c19395628d861b1a6892761a50ba579334a3c48ab515cee4d0e",
+      "kind": "figure",
+      "note": "Figure 8 (nanopore methylation difference across ZNF597, 16p13.3) as deposited; inspected; no WWOX content.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12429381.1/ijms-26-08521-g008.jpg",
+        "http_method": "GET", "tier": "pmc_oa_opendata_s3", "user_agent_policy": "none",
+        "acquired_on": "2026-10-04", "derived": false,
+        "result_sha256": "f6d6059b4fd11c19395628d861b1a6892761a50ba579334a3c48ab515cee4d0e"
+      }
+    }
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "entries": [
+      {
+        "proposition": "The authors list WWOX among recessive genes whose disease has been unmasked by chromosome-16 uniparental disomy, citing one WWOX reference.",
+        "snippet": "GAN [15], and WWOX [16] within the UPD",
+        "anchor": "Introduction, second paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID40943441_Panchenko2025_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Isodisomy makes homologous chromosome-16 loci identical, so a recessive allele can be unmasked; WWOX is named as an example, by citation.",
+        "snippet": "associated phenotypes may be due to unmasked mutations in recessive disease-related genes like GPT2",
+        "anchor": "Discussion, second paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID40943441_Panchenko2025_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The authors name the usual origin of isodisomy as monosomy rescue, as opposed to trisomy rescue for heterodisomy.",
+        "snippet": "Another pathomechanism of UPD (16) is monosomy 16 rescue, where most cases are isodisomic (UPiD)",
+        "anchor": "Discussion, first paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID40943441_Panchenko2025_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "In this index case, exome sequencing found no unmasked pathogenic recessive variant anywhere on chromosome 16, WWOX included: the patient's WWOX is homozygous by isodisomy and carries no reported pathogenic allele.",
+        "snippet": "No unmasked pathogenic recessive genetic variants on chromosome 16 were detected",
+        "anchor": "Results 2.2.4",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID40943441_Panchenko2025_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The copy-neutral LOH spans chromosome 16 end to end, and the microarray panel shows two LOH segments covering both arms.",
+        "snippet": "arr [GRCh37] 16p13.3q24.3 (89561_90163275)",
+        "anchor": "Results 2.2.1, molecular karyotype; Figure 2 panel",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID40943441_Panchenko2025_PMC.xml",
+        "panel_text_relation": "text_confirmed_by_panel"
+      },
+      {
+        "proposition": "Cases whose phenotype is explained by an unmasked recessive allele (the WWOX case among them) were excluded from the authors' phenotype comparison table, so Table 1 carries no WWOX case.",
+        "snippet": "excluding patients with either an effect of mutations of autosomal recessive genes",
+        "anchor": "Discussion, third paragraph (Table 1 inclusion rule)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID40943441_Panchenko2025_PMC.xml",
+        "panel_text_relation": "text_only"
+      }
+    ],
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC REST fullTextXML returned HTTP 200 with a full JATS body on 2026-10-04; the declared article_text is that response.",
+    "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body."
+  }
+}

@@ -1,0 +1,240 @@
+{
+ "schema_version": 2,
+ "pmid": "42137271",
+ "doi": "10.1016/j.omta.2026.201675",
+ "receipt": "FTR-20261004-42137271-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID42137271.md",
+  "disease-models/wwox/research/intake_wave_20261004w7_C1.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "A two-author commentary with no measurement of its own; no lead is generated that a discovery ledger entry would not duplicate from the relayed primary."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "The piece names no lever specific to a WWOX cassette; forging from a commentary would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is tested; the immunosuppressants named are the primary's and are not screened here."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes go through candidates."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "A candidate in this reading narrows no consolidated baseline claim; triples are published for an auditor."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 28,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "weighting": "PubMed counts 2026-10-04: Hordeaux J[au] 28 records, 0 intersecting WWOX (name-ambiguous query, so a floor). Two-author commentary (publication type News) by an AAV-toxicology group; both authors declare employment at gene-therapy companies. No measurement of its own and no WWOX content."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND AAV",
+    "count": 2,
+    "source": "PubMed ESearch 2026-10-04"
+   },
+   {
+    "query": "AAV AND \"dorsal root ganglion\" AND toxicity",
+    "count": 16,
+    "source": "PubMed ESearch 2026-10-04"
+   }
+  ],
+  "note": "WWOX appears zero times in the body (grep of the persisted JATS). Earned null for the gene."
+ },
+ "multihop": {
+  "references_enumerated": 10,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "All 10 references enumerated; none concerns WWOX. The relayed primary (a macaque time-course, ref 4) is not a WWOX source and is not queued as a hop; it is named so a later reader can decide to acquire it."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42137271 (done after the first pass was written)",
+  "hits": 0,
+  "note": "Filled in the comparison step of the note."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-04 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn, CommentIn or UpdateIn link; publication type News.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 10,
+   "references_screened": 10,
+   "references_with_doi": 10,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 24,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42137271_Hordeaux2026_PMC.xml",
+   "sha256": "6e16431e5f99b1ab03e641672d0b86370d2405647b57ad5c520f8fc6b5a4f70c",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13148899/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "6e16431e5f99b1ab03e641672d0b86370d2405647b57ad5c520f8fc6b5a4f70c"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID42137271_Hordeaux2026_figures/gr1.jpg",
+   "sha256": "022976217011ea6b95bdc1e1c434604d5e3eba9be0542d41622a6ec4a1b96b5f",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13148899/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC supplementaryFiles archive, member gr1.jpg extracted unchanged (PMC reader pages answer a reCAPTCHA)",
+    "user_agent_policy": "browser_like",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "022976217011ea6b95bdc1e1c434604d5e3eba9be0542d41622a6ec4a1b96b5f"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST search (EXT_ID, SRC:MED) returned the PMCID and fullTextXML returned a JATS body on 2026-10-04; every locator is matched against the persisted JATS.",
+  "abstract_anchoring_waived": "No locator draws on an abstract; every entry is matched against the body or a table of the declared JATS artifact.",
+  "note": "Coverage: the whole running text (9 665 characters of body), the single figure (a schematic, inspected as an image) and the 10 references were read. There is no abstract, no table and no supplement. The piece reports another group's primary; no panel of data exists in it, so no panel_text_relation beyond text_only applies.",
+  "entries": [
+   {
+    "proposition": "The piece is a commentary on a separate primary (an intra-cisterna-magna time-course in cynomolgus macaques with an AAVhu68 vector carrying a human SMN1 cassette); the numbers it carries are that primary's, relayed.",
+    "snippet": "Grubor et al. performed a comprehensive time-course study in cynomolgus macaques following intra-cisterna magna (ICM) administration of AAVhu68.CB.hSMN1.",
+    "anchor": "Main text, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137271_Hordeaux2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In the primary, strong immunosuppression for the whole study decreased DRG toxicity severity in some animals; it did not abolish it.",
+    "snippet": "Additional investigations employing strong immunosuppression (IS) throughout the study duration decreased the severity of DRG toxicity in some NHPs.",
+    "anchor": "Main text, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137271_Hordeaux2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Prophylactic immunosuppression (a glucocorticoid, a calcineurin inhibitor and an antimetabolite) reduced but did not eliminate DRG toxicity severity or incidence with two protein-coding vectors.",
+    "snippet": "IS reduced but did not eliminate the severity or incidence of DRG toxicity and other histopathology in NHPs compared to a group receiving the same vector without IS.",
+    "anchor": "Main text, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137271_Hordeaux2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DRG severity tracked transgene expression level, which the commentators say is consistent with earlier dose and promoter-strength observations.",
+    "snippet": "They observed that the severity of findings in the DRG was closely correlated with the levels of transgene expression.",
+    "anchor": "Main text, para 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137271_Hordeaux2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Earlier work cited by the commentators: DRG toxicity was prevented in immunocompetent primates by tuning transgene expression down in DRG neurons through untranslated regulatory elements.",
+    "snippet": "DRG toxicity was previously prevented in immunocompetent NHP when the overexpression burden was specifically tuned down in DRG neurons via untranslated regulatory elements.",
+    "anchor": "Main text, para 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137271_Hordeaux2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Withdrawal of a time-limited immunosuppressant was followed by a rebound and a delayed DRG phenotype equal or slightly lower than in non-immunosuppressed animals (commentators' earlier work, relayed).",
+    "snippet": "this rebound led to a delayed AAV-mediated DRG toxicity phenotype equivalent or slightly decreased in comparison to NHPs that did not receive IS",
+    "anchor": "Main text, para 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137271_Hordeaux2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The commentators state that the primary used no tapered immunosuppression and so cannot show whether the reduction is sustained.",
+    "snippet": "it is unclear whether the observed reduction of DRG pathology would be sustained.",
+    "anchor": "Main text, para 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137271_Hordeaux2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "No direct T cell killing of neurons was detected in the primary (as relayed).",
+    "snippet": "the authors did not detect direct T cell killing of neurons.",
+    "anchor": "Main text, para 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137271_Hordeaux2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The commentators say the ordering immune-then-stress versus stress-then-immune is not settled by the primary and name the missing experiment (a promoterless payload).",
+    "snippet": "To unequivocally place the AAV-mediated immune response upstream of cellular stress, evidence of immune responses followed by DRG toxicity in a context involving AAV vectors carrying promoterless payloads would be required, but the authors do not provide this.",
+    "anchor": "Main text, para 7",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137271_Hordeaux2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The commentators argue that clinical experience does not support routine broad immunosuppression for DRG toxicity; the claim of low clinical incidence is theirs and rests on two citations.",
+    "snippet": "The current clinical experience, therefore, does not support the authors’ recommendation to broadly employ IS to reduce AAV-related DRG toxicity",
+    "anchor": "Main text, para 8",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137271_Hordeaux2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Stated conclusion: immune responses play a causal role, but reducing transgene burden in DRG neurons is proposed as the more specific lever.",
+    "snippet": "While immune responses play a causal role in this toxicity, targeting the root cause of high transgene burden in DRG neurons likely represents a more effective and specific solution suitable for the clinic.",
+    "anchor": "Main text, last para",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137271_Hordeaux2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1 (schematic, not data) draws mitigation points: transgene-expression limiting measures act upstream of the innate step; immunosuppression of innate and adaptive immunity act at day 5 and day 15 onward.",
+    "snippet": "Kinetics of AAV-mediated toxicity in DRG",
+    "anchor": "Figure 1 title",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42137271_Hordeaux2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}

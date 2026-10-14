@@ -1,0 +1,228 @@
+{
+ "schema_version": 2,
+ "pmid": "41992613",
+ "doi": "10.1016/j.ymthe.2026.04.027",
+ "pmcid": "PMC13330066",
+ "receipt": "FTR-20261003-41992613-01",
+ "landing": [
+  "FTR-20261003-41992613-01",
+  "disease-models/wwox/research/intake_wave_20261003w4_C.md"
+ ],
+ "landing_note": "Intake wave 4 2026-10-03, Scientist C, group C (theme 5: epilepsy / CNS gene-therapy lessons transferable to a neuron-targeted AAV). The receipt is prepared and NOT appended: the Orchestrator records the wave's receipts in event order. This source contains no WWOX content and lands no canonical claim.",
+ "skills_considered": [
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true,
+   "reason": "paper_packet.py packet and fulltext_receipts.py status were run for each of the six PMIDs before any source was opened. All six returned exit 1 on status and 'manifest: none - this is a first reading', with no PAPER or LIT record and no recorded acquisition route."
+  },
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Europe PMC REST fullTextXML returned HTTP 200 with a body for all six PMCIDs on the first attempt. No paywall was met, no supplement endpoint was called, and nothing was paid for."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline. The six were read as one question (can the risks of a neuron-targeted AAV be bounded in advance, and for each parameter does the source measure it or assume it), and two of the six had to be read against each other sentence by sentence."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED. Triples are handed to the blind audit through the commit candidates' LOCATOR TRIPLES FOR BLIND AUDIT sections; the producer of a reading must not be its verifier."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Not invoked. The group was assigned as a contradiction to characterise and not to decide, so no primitive was needed; enumerate_baseline would have added nothing to a set in which every source states its own limits."
+  }
+ ],
+ "group_assessment": {
+  "research_type": "mixed",
+  "total_publications": 17,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-03 (tool=LEGEND-research): 'Wu Z[au] AND spinal muscular atrophy' 17, 'Wu Z[au] AND WWOX' 0.",
+  "weighting": "A sponsor reporting IND-enabling studies on its own clinical candidate. The OBSERVATION carries weight where it is GLP and adverse to the sponsor's interest: the primate histopathology, the vehicle-group DRG findings, the procedure-driven CSF NfL rise, and the stated admission that the toxic arm received no necropsy. The INTERPRETATION carries little: 'may offer improved efficacy and safety relative to the other candidates' compares the sponsor's own constructs with each other, the benchmark is a reconstruction of a competitor's design rather than the product, and the paper's own thesis of dose precision is undercut by three mutually incompatible vg/kg normalisations of the same rat doses.",
+  "performed": true,
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "note": "None of the six sources in this group mentions WWOX (grep -icE 'wwox|wox1|16q23' over each artefact returns 0, run 2026-10-03). They are platform, dose and toxicology sources read for transferable method, so the group question is not 'is this laboratory authoritative on WWOX' but 'who paid for this measurement and does a second party corroborate it'. Four independent origins are represented: an academic viral-vector core (Gunma University), a sponsor with its own clinical candidate (Exegenesis Bio), an academic gene-therapy laboratory on foundation money (UT Southwestern), and two pharmaceutical sponsors (Biogen; Novartis). PMID 35331006 and PMID 36700120 are BOTH Novartis, share four authors (Tukov, Meseck, Penraat, Chand) and the latter pools data from the Novartis study warehouse, with three study descriptors matching the former's studies (Mauritius-origin non-GLP cohort; two studies using Omnipaque 180 contrast; an intravenous arm at about 1.0e14 vg/kg). They are therefore NOT independent sources and are not counted as mutual corroboration. Research-group knowledge base is excluded from the public edition; this rests on the papers' own author lists, affiliations and declarations of interest."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "grep -icE 'wwox|wox1|16q23|fragile site FRA16D' over the declared artefact",
+    "route": "local artefact scan 2026-10-03",
+    "count": 0
+   },
+   {
+    "query": "WWOX",
+    "route": "PubMed esearch 2026-10-03 (tool=LEGEND-research)",
+    "count": 710
+   },
+   {
+    "query": "WWOX AND (adeno-associated OR AAV)",
+    "route": "PubMed esearch 2026-10-03 (tool=LEGEND-research)",
+    "count": 2
+   },
+   {
+    "query": "WWOX AND dorsal root ganglion",
+    "route": "PubMed esearch 2026-10-03 (tool=LEGEND-research)",
+    "count": 2
+   },
+   {
+    "query": "WWOX AND neurofilament",
+    "route": "PubMed esearch 2026-10-03 (tool=LEGEND-research)",
+    "count": 1
+   },
+   {
+    "query": "AAV AND dorsal root ganglion AND toxicity",
+    "route": "PubMed esearch 2026-10-03 (tool=LEGEND-research)",
+    "count": 35
+   }
+  ],
+  "note": "Zero WWOX density in the source itself, and near-zero in the literature that would connect WWOX to this group's subject matter: against 710 WWOX records, only 2 also mention adeno-associated vectors or AAV, 2 mention dorsal root ganglion and 1 mentions neurofilament, while the AAV DRG-toxicity literature itself holds 35 records. This is an earned null on the gene axis and the expected result: the group was assigned as transferable-method sources, not as WWOX sources. Every statement carried out of this reading is a lesson from another gene or species with its transfer limit stated, never a WWOX datum. The numbers also establish why transfer is unavoidable here: there is no WWOX AAV safety literature to read instead."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 47,
+  "references_with_pmid": 45,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "ref elements counted in the JATS deposit; pub-id[pub-id-type=pmid] counted.",
+  "resolved": [],
+  "queued": [],
+  "dedup_performed": "Not performed: no reference in any of the six names WWOX, so no multi-hop expansion is warranted toward the disease model."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Which existing research-layer records already carry a dorsal-root-ganglion toxicity statement or an AAV CNS dose statement that this group would corroborate, sharpen or contradict? Measured with: git grep -l -i 'dorsal root ganglio' -- disease-models/wwox/research/",
+  "route": "local repository scan at commit 296cd5ba5596, 2026-10-03",
+  "hits": 9,
+  "note": "Compared, AFTER the first pass was written, against the wave-3 candidate CC-20261003W3-C-RESTORATION-SPEC-01 (the six-parameter restoration specification). Three contacts: (1) that candidate records PMID 40349107 using serum NfL as a toxicity biomarker with a threshold of 1,719 pg/mL or greater, and PMID 36700120 supplies the operating characteristics that threshold lacks (n=260, ROC AUC, sensitivity/specificity at five fold-change cut-offs); (2) that candidate states no therapeutic window has been measured for any DEE gene in its set, and PMID 41992613 is the closest thing in this corpus to a two-sided window result yet still does not measure one, which corroborates and sharpens the wave-3 negative rather than overturning it; (3) that candidate carries DRG toxicity as an AAV class effect, and PMIDs 41404412 / 35331006 / 36700120 are the literature in which the mechanism of that class effect is contested."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-03",
+  "route": "PubMed article metadata for the six PMIDs in one call (article_types inspected for a retraction, expression of concern or erratum notice), plus dependency_integrity.py screen --pmid <PMID> --manifest-block for the reference list.",
+  "result": "No retraction, no expression of concern, no erratum on this paper. Article type is 'Journal Article'; PMID 35331006 additionally carries 'Research Support, Non-U.S. Gov't'.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 46,
+   "references_screened": 45,
+   "references_with_doi": 45,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41992613_Song2026_PMC.xml",
+   "sha256": "9788b805bb85b3301ec063db3b29e663d3e800d43c7e6f6800e5cb3ac2ed6cdf",
+   "kind": "article_text",
+   "note": "Europe PMC REST fullTextXML, acquired 2026-10-03 into the root checkout for a first-hand read of this group.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13330066/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_rest_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "9788b805bb85b3301ec063db3b29e663d3e800d43c7e6f6800e5cb3ac2ed6cdf"
+   }
+  },
+  {
+   "path": "files/figures/PMID41992613/gr5.webp",
+   "sha256": "3d76a2287816b99994db4ad8f87eaa0edfbfd617d1e139407784a863c2bc63e7",
+   "kind": "figure",
+   "note": "Figure 5 (1600x2085), inspected as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13330066.1/gr5.webp",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "3d76a2287816b99994db4ad8f87eaa0edfbfd617d1e139407784a863c2bc63e7"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "JATS from the Europe PMC fullTextXML endpoint for PMC13330066, 211046 bytes. Every locator is matched against the body of that artefact by deepdive_manifest.py --verify-artifacts.",
+  "abstract_anchoring_waived": "No locator draws on the abstract alone; every locator is matched against the body of the declared JATS artefact.",
+  "note": "Coverage: abstract, introduction, full Methods/Materials, every Results section, every main table as rendered in the JATS deposit, every main figure LEGEND, Discussion, the authors' own limitations, declarations and the supplementary-material captions. NO figure panel was opened as an image and NO supplementary file was fetched, so the reading is declared partial_fulltext_read, not complete. Figure 5 was additionally fetched from the PMC open-data bucket and inspected as an image at native resolution; it confirms the vehicle-group contribution to the week-4 DRG findings and the day-15 CSF NfL peak in every group. No other panel was opened.",
+  "entries": [
+   {
+    "proposition": "THE TWO-SIDED DOSE CLAIM IS MADE EXPLICITLY, which is why this source is the architecture of the dose question even where it does not settle it.",
+    "snippet": "as both insufficient and excessive expression fail to achieve the desired outcome",
+    "surface": "body",
+    "anchor": "Discussion, paragraph on supraphysiological expression",
+    "artifact": "files/fulltext/PMID41992613_Song2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE UPPER LIMB OF THE WINDOW WAS NOT CHARACTERISED PATHOLOGICALLY: the arm that defines the ceiling received no necropsy and no histopathology.",
+    "snippet": "did not undergo comprehensive necropsy or histopathological evaluation",
+    "surface": "body",
+    "anchor": "Results, codon-optimised variants",
+    "artifact": "files/fulltext/PMID41992613_Song2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state themselves that the therapeutic window is not yet defined by their own data.",
+    "snippet": "would be valuable to define this therapeutic window and substantiate this conclusion",
+    "surface": "body",
+    "anchor": "Results, codon-optimised variants",
+    "artifact": "files/fulltext/PMID41992613_Song2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The mouse DRG safety statement rests on behaviour, because the tissue was never collected.",
+    "snippet": "DRGs were not harvested or analyzed",
+    "surface": "body",
+    "anchor": "Results, route comparison and tissue expression",
+    "artifact": "files/fulltext/PMID41992613_Song2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "NO TOXIC DOSE WAS REACHED IN PRIMATES: the highest dose tested became the no-observed-adverse-effect level, so the primate data bound nothing from above.",
+    "snippet": "the high dose was designated the no-observed-adverse-effect level",
+    "surface": "body",
+    "anchor": "Results, overall safety conclusion",
+    "artifact": "files/fulltext/PMID41992613_Song2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The week-4 primate DRG findings are confounded by the procedure, by the authors' own reading, because vehicle animals showed them too.",
+    "snippet": "suggesting a possible contribution from procedural effects",
+    "surface": "body",
+    "anchor": "Results, histopathology",
+    "artifact": "files/fulltext/PMID41992613_Song2026_PMC.xml",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "A mechanistic element of the design is carried without confirmation, by the sponsor's own account, for programme-speed reasons.",
+    "snippet": "confirmatory experiments were not performed in order to prioritize program progression",
+    "surface": "body",
+    "anchor": "Results, microRNA de-targeting",
+    "artifact": "files/fulltext/PMID41992613_Song2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}

@@ -1,0 +1,341 @@
+{
+ "schema_version": 2,
+ "pmid": "37501399",
+ "doi": "10.24272/j.issn.2095-8137.2022.514",
+ "receipt": "FTR-20261002-37501399-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID37501399.md",
+  "disease-models/wwox/research/intake_wave_20261002_B.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261002-B-NONLINEAGE-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261002-B-INTRON8-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is a research surface another batch owns; the one lead this reading touches (DL-MECH-107) is proposed through a commit candidate instead of an edit."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "Nothing in this paper supplies a therapeutic lever for the reference genotype class; forging hypotheses from a nominal or review-level signal would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "The paper tests no compound, dose or intervention, so there is no molecule for BLOCK-1 triage."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes are proposed as commit candidates for a later BATCH_COMMIT."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; the triples are published in the candidate for an auditor to run."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 758,
+  "publications_on_gene": 1,
+  "research_type": "mixed",
+  "is_primary_group_for_disease": false,
+  "weighting": "PubMed counts 2026-10-02: corresponding author Li WD[au] 758 records, 1 intersecting WWOX (this paper); Li WD[au] AND marmoset 1. A population-genomics and psychiatric-genetics group with marmoset colony access (computational WGS analysis plus Sanger/PCR validation, i.e. mixed). Execution of the sequencing is credible; WWOX is a first encounter for the group, and its WWOX interpretation in the Discussion is drawn from cited mouse and human work, not measured."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND marmoset",
+    "count": 1,
+    "source": "PubMed ESearch 2026-10-02"
+   },
+   {
+    "query": "Callithrix AND epilepsy",
+    "count": 18,
+    "source": "PubMed ESearch 2026-10-02"
+   },
+   {
+    "query": "WWOX AND epilepsy",
+    "count": 67,
+    "source": "PubMed ESearch 2026-10-02"
+   }
+  ],
+  "note": "This is the only WWOX-and-marmoset record in PubMed. No other primate WWOX genetic association exists to replicate or contradict it."
+ },
+ "multihop": {
+  "references_enumerated": 65,
+  "gene_direct_refs_in_source": [
+   "34634460",
+   "34359949",
+   "32581702",
+   "29808465",
+   "33914858"
+  ],
+  "resolved": [
+   "34634460",
+   "34359949",
+   "32581702",
+   "29808465",
+   "33914858"
+  ],
+  "queued": [],
+  "note": "All 65 references enumerated. The five WWOX-direct references (Breton 2021, Hsu 2021, Iacomino 2020, Johannsen 2018, Repudi 2021) are each already identity records in the registries; they enter this paper only in the Discussion as background for the authors' interpretation and supply none of its measurements."
+ },
+ "corpus_crossquery": {
+  "query": "Does any registry record name this paper, a marmoset, or a primate WWOX association? (registry_records.py get --pmid 37501399; --theme marmoset)",
+  "hits": 0,
+  "note": "No record names the paper or a marmoset. The nearest record is DL-MECH-107 (intron-8 regulatory architecture), which this reading bears on only by location; see CC-20261002-B-INTRON8-01."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-02 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn, CommentIn or UpdateIn link; publication types Journal Article.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "UNSCREENABLE_NO_REFERENCE_LIST",
+   "reference_source": "network",
+   "references_declared": 0,
+   "references_screened": 0,
+   "references_with_doi": 0,
+   "schema": "retraction_check.dependencies/1",
+   "screened": false,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 22,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID37501399_Yang2023_PMC.xml",
+   "sha256": "1bd856decdb490e0a8a863e4df12dfad12bc5ecbe15fa7a6eeff5143882a84e3",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10559097/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "1bd856decdb490e0a8a863e4df12dfad12bc5ecbe15fa7a6eeff5143882a84e3"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID37501399_Yang2023_supplement/zr-44-837-S1.zip",
+   "sha256": "19cc6e3f2139f116df57172f8d7d288214f8e304b1365d5689d72f66c037cb96",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/10559097/bin/zr-44-837-S1.zip",
+    "http_method": "GET",
+    "tier": "PMC instance bin via pmc_pow_fetch.fetch (proof-of-work page solved)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "19cc6e3f2139f116df57172f8d7d288214f8e304b1365d5689d72f66c037cb96"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID37501399_Yang2023_supplement/Supplementary_Table_S6.xlsx",
+   "sha256": "2c23666e959adaf224d6b44b3554f357e8747b4722fd132c79536cf32d30634f",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "no_recipe": "Member \"Supplementary Table S6.xlsx\" extracted unchanged by Python zipfile from zr-44-837-S1.zip declared above; renamed only (spaces to underscores)."
+   }
+  },
+  {
+   "path": "files/fulltext/PMID37501399_Yang2023_supplement/Supplementary_Table_S7.xlsx",
+   "sha256": "5dd51d15696e0208040d2db74413e309a068911f7f73f46ea5626648f2984ecd",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "no_recipe": "Member \"Supplementary Table S7.xlsx\" extracted unchanged by Python zipfile from zr-44-837-S1.zip declared above; renamed only (spaces to underscores)."
+   }
+  },
+  {
+   "path": "files/fulltext/PMID37501399_Yang2023_supplement/Supplementary_Table_S9.xlsx",
+   "sha256": "f122fbb37fe20a9be328d9308b49830b3654f9a4462c6fe58c04566e9267ad39",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "no_recipe": "Member \"Supplementary Table S9.xlsx\" extracted unchanged by Python zipfile from zr-44-837-S1.zip declared above; renamed only (spaces to underscores)."
+   }
+  },
+  {
+   "path": "files/fulltext/PMID37501399_Yang2023_supplement/ZR-2022-514-Supplementary_Materials.pdf",
+   "sha256": "61367b77608663ca9f63de912c40177d3aad2df3b7afb50904d2cac88ee469ad",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "no_recipe": "Member \"ZR-2022-514-Supplementary Materials.pdf\" extracted unchanged by Python zipfile from zr-44-837-S1.zip declared above; renamed only."
+   }
+  },
+  {
+   "path": "files/fulltext/PMID37501399_Yang2023_supplement/zr-44-5-837-3.jpg",
+   "sha256": "da59e382deda2ad96bdcbe1ef7fdbaffe1e03f5ddddaffbe9f77dfffea8c012d",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/3c46/10559097/fbe904a34b63/zr-44-5-837-3.jpg",
+    "http_method": "GET",
+    "tier": "PMC CDN blob URL named by the article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "da59e382deda2ad96bdcbe1ef7fdbaffe1e03f5ddddaffbe9f77dfffea8c012d"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID37501399_Yang2023_supplement/zr-44-5-837-1.jpg",
+   "sha256": "92734b12dd11c034ae6d4c1e542b7e704809b519e31785a6703bf8c23c777067",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/3c46/10559097/0e7317cd1705/zr-44-5-837-1.jpg",
+    "http_method": "GET",
+    "tier": "PMC CDN blob URL named by the article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "92734b12dd11c034ae6d4c1e542b7e704809b519e31785a6703bf8c23c777067"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID37501399_Yang2023_supplement/zr-44-5-837-2.jpg",
+   "sha256": "7229df156342f31d8712089e15f8af25ce7e315c186c61cf7fa28e5a2e39085a",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/3c46/10559097/3d6ecc7c3358/zr-44-5-837-2.jpg",
+    "http_method": "GET",
+    "tier": "PMC CDN blob URL named by the article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "7229df156342f31d8712089e15f8af25ce7e315c186c61cf7fa28e5a2e39085a"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID37501399_Yang2023_supplement/zr-44-5-837-4.jpg",
+   "sha256": "a23ef8f78b67c43bdbfa4fc8e8615677a186c53643b67906af46c24e0a28f11b",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/3c46/10559097/ae3aedec2595/zr-44-5-837-4.jpg",
+    "http_method": "GET",
+    "tier": "PMC CDN blob URL named by the article page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "a23ef8f78b67c43bdbfa4fc8e8615677a186c53643b67906af46c24e0a28f11b"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The WWOX signal is a single-nucleotide association from the LAMP pedigree analysis, not a copy-number finding: the sites above threshold were located mainly in WWOX and PTPN21.",
+    "snippet": "The sites that exceeded the threshold were mainly located in two protein-coding genes",
+    "anchor": "Results, Analysis of epileptic marmosets and controls, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37501399_Yang2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The genotype counts in Table 1 are given as control/case.",
+    "snippet": "The numbers indicate the number of each genotype in Control group/Case group",
+    "anchor": "Table 1 footnote",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID37501399_Yang2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Several WWOX SNPs lie on one haplotype; they are not independent signals.",
+    "snippet": "Several SNPs in the WWOX gene were confirmed in the same haplotype",
+    "anchor": "Results, Analysis of epileptic marmosets and controls, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37501399_Yang2023_PMC.xml",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "The deletion enriched in epileptic animals is a KCTD18-like deletion, not a WWOX deletion.",
+    "snippet": "Notably, the KCTD18-like deletion was enriched in epileptic marmosets of the CLEA pedigree",
+    "anchor": "Results, Analysis of epileptic marmosets and controls, para 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37501399_Yang2023_PMC.xml",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "The KCTD18-like deletion association does not survive multiple-testing correction, by the authors’ own statement.",
+    "snippet": "P-value for KCTD18-like was no longer significant after multiple testing correction",
+    "anchor": "Discussion, para 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37501399_Yang2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "No SNP reached genome-wide significance; WWOX is offered as a candidate only.",
+    "snippet": "Although we did not find any signals that reached genome-wide significance",
+    "anchor": "Discussion, para 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37501399_Yang2023_PMC.xml",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "Controls include unaffected siblings, i.e. related animals; the association is a pedigree-based case-control analysis.",
+    "snippet": "Unaffected siblings and unrelated unaffected individuals were treated as controls according to the LAMP manual",
+    "anchor": "Methods, SNV calling, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37501399_Yang2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The case definition is at least one witnessed handling-evoked seizure.",
+    "snippet": "Marmosets that exhibited at least one witnessed seizure induced by handling were classified as epileptic marmosets",
+    "anchor": "Methods, Animals",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37501399_Yang2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The epilepsy type is not established: no ictal EEG was collected.",
+    "snippet": "we were unable to collect ictal EEG data for identifying the specific type of epilepsy",
+    "anchor": "Discussion, limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37501399_Yang2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Sample size is acknowledged by the authors as limiting reliability.",
+    "snippet": "Firstly, the relatively small sample size of available marmosets may limit the reliability of our findings.",
+    "anchor": "Discussion, limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37501399_Yang2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Chimerism was handled by an allele-balance filter, and the authors state their data cannot quantify chimerism.",
+    "snippet": "Variants with an allele balance below 0.25 were excluded to minimize the influence of chimerism.",
+    "anchor": "Methods, SNV calling",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37501399_Yang2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The association set used fingernail samples only, split 11/9 (CLEA) and 6/5 (CAS) control/case.",
+    "snippet": "CLEA: 11 control marmosets/nine epileptic marmosets; CAS: six control marmosets/five epileptic marmosets",
+    "anchor": "Methods, SNV calling, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37501399_Yang2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC10559097/fullTextXML returned HTTP 200 with a full JATS body on 2026-10-02; the artefact declared above is that response, so every body and table quote can be re-verified externally."
+ }
+}

@@ -1,0 +1,208 @@
+{
+ "schema_version": 2,
+ "pmid": "35715422",
+ "doi": "10.1038/s41598-022-13974-9",
+ "receipt": "FTR-20261003-35715422-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/intake_wave_20261003w5_B.md",
+  "disease-models/wwox/research/fulltext_dossiers/PMID35715422.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W5-B-REGISTRY-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is a research surface another batch owns; this wave's question is patient provenance and counting, so findings are proposed through commit candidates instead of ledger edits."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No source in this group tests a therapy against a mechanism; forging hypotheses from single-patient drug histories would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed as a candidate; anti-seizure medication histories in case reports are clinical descriptions, not molecules for BLOCK-1 triage."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes are proposed as commit candidates for a later BATCH_COMMIT."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; the triples are published in the candidates for an auditor to run."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 16,
+  "publications_on_gene": 4,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "PubMed counts 2026-10-03: Yang H[au] AND Wu L[au] AND epilepsy 16; Yang H[au] AND WWOX 4 (name collisions likely). A Chinese paediatric epilepsy service; retrospective two-centre cohort, clinical genetics only."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND migrating focal seizures",
+    "count": 4,
+    "source": "PubMed ESearch 2026-10-03"
+   }
+  ],
+  "note": "Second independent EIMFS cohort naming WWOX; its single WWOX carrier also carries a pathogenic ATP7A variant."
+ },
+ "multihop": {
+  "references_enumerated": 30,
+  "gene_direct_refs_in_source": [
+   "31618474",
+   "24369382",
+   "24456803"
+  ],
+  "resolved": [
+   "31618474",
+   "24369382",
+   "24456803"
+  ],
+  "queued": [],
+  "note": "All 30 references enumerated; the WWOX references are background (Burgess 2019 as the source of the gene list, Mallaret 2014 and Abdel-Salam 2014 for phenotypes) and supply none of this paper's data."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 35715422",
+  "hits": 3,
+  "note": "DL-MECH-059 (a 2026-07 discovery reading of this paper, no receipt), DL-MECH-058 next-search agenda, FT-140. No PAPER or LIT identity record."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-03 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn or CommentIn link.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 30,
+   "references_screened": 29,
+   "references_with_doi": 29,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID35715422_Yang2022_PMC.xml",
+   "sha256": "1f7246194d9bbff580acf9459845e2db7d87606f2a6b511eb20f53dccafb999b",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML; body, five tables, figure legend and 30 references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9205988/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "1f7246194d9bbff580acf9459845e2db7d87606f2a6b511eb20f53dccafb999b"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID35715422_Yang2022_assets/41598_2022_13974_Fig1_HTML.jpg",
+   "sha256": "47ab7864e5c2dcea45fbbb271b3283b437412a1ed5623c9cb232e22b91b68bb7",
+   "kind": "figure",
+   "note": "Figure 1 (EEG of the PRRT2 patient), inspected; carries no WWOX content.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/9205988/bin/41598_2022_13974_Fig1_HTML.jpg",
+    "http_method": "GET",
+    "tier": "pmc_instance_bin_pow",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "47ab7864e5c2dcea45fbbb271b3283b437412a1ed5623c9cb232e22b91b68bb7"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC 2026-10-03: inEPMC 'Y', PMC9205988, open access; fullTextXML served the body read here.",
+  "entries": [
+   {
+    "proposition": "Patient 10 carries two WWOX variants (an initiator-codon change classed LP and H78Y classed VUS) and a pathogenic ATP7A frameshift.",
+    "snippet": "Chr16:78133677T > C Chr16:78148874C > T ChrX:77271345DelG p.M1? p.H78Y p.G865Dfs*5",
+    "anchor": "Table 2, patient 10 row",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID35715422_Yang2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The ACMG calls in Table 2 for patient 10 are LP, VUS and P (WWOX initiator codon, WWOX H78Y, ATP7A frameshift).",
+    "snippet": "rs758588684 – – 0;0.0000323039 0;0 0;0 PD PD PD D D D WES LP VUS P",
+    "anchor": "Table 2, patient 10 row, annotation and classification cells",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID35715422_Yang2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors describe the same patient as clinically compatible with Menkes disease and cannot confirm co-pathogenicity.",
+    "snippet": "This patient also had a significant decrease in blue copper protein, had hair and skin color changes and could have been diagnosed with Menkes disease.",
+    "anchor": "Discussion, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35715422_Yang2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors cannot confirm whether the gene is co-pathogenic.",
+    "snippet": "We could not confirm whether it was a copathogenic gene.",
+    "anchor": "Discussion, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35715422_Yang2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The conclusion that WWOX may be associated with poor prognosis rests on this one patient, who also carries the ATP7A variant.",
+    "snippet": "The genes KCNT1, SCN1A, ALG1, SCN2A, WWOX and ATP7A may be associated with ineffective seizure control and poor prognosis.",
+    "anchor": "Conclusions",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35715422_Yang2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 3 records the WWOX patient's seizure control as ineffective while listing oxcarbazepine as effective.",
+    "snippet": "WWOX** 1 6 month 3.5 month – F(1) 0; 1 0; 0 1(OXC) 0; 0; 1 1; 0; 0; 0",
+    "anchor": "Table 3, WWOX row",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID35715422_Yang2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The ATP7A row of Table 3 is the same patient (double asterisk: one patient has two genetic mutations).",
+    "snippet": "**: one patient has two genetic mutations.",
+    "anchor": "Table 3 footnote",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID35715422_Yang2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}

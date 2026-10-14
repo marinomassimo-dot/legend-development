@@ -969,7 +969,8 @@ La catena prosegue verso il ratto *lde* (`FT-042`/`FT-041`). Vedi `DL-MECH-073` 
 non-cell-autonoma da delezione neuronale di Wwox — e il sistema non ne ha mai avuto il testo
 fino al 2026-08-07. Nessuna receipt esiste per questo PMID.
 **Come è emerso:** corpus Aqeilan RI, gruppo 1 della sessione di lettura 2026-08-09.
-**Current status:** 🔴 **LETTURA SOSPESA 2026-08-09 — NESSUNA RECEIPT EMESSA.** La sospensione
+**Current status (2026-10-03):** ✅ **LETTO** sull'articolo tipografico e sul supplemento completi forniti dall'operatore — ricevuta `FTR-20261003-33914858-03`, `partial_fulltext_read` (partial full text; video supplementari campionati a fotogrammi, non visionati), manifest `deepdive_manifests/PMID33914858.json` con validatore `MANIFEST STRICT PASS` e 0 lacune, dossier `fulltext_dossiers/PMID33914858.md` parte 2. La sospensione del 2026-08-09 riguardava una superficie testuale non valida: quella diagnosi **regge** anche sul nuovo PDF (il suo layer di testo è rifiutato dallo stesso screen), e la lettura è stata fatta **sulle pagine rese**, non riparando il testo. Lo storico qui sotto è conservato invariato.
+**Current status storico:** 🔴 **LETTURA SOSPESA 2026-08-09 — NESSUNA RECEIPT EMESSA.** La sospensione
 **non** è per budget né per copertura incompleta: è per invalidità della superficie testuale.
 L'estrazione deterministica (PyMuPDF `get_text()`) restituisce dai Methods
 `Results were considered significant when P 5 0.05`, mentre la pagina **stampa** `P < 0.05`
@@ -3911,7 +3912,17 @@ usa per un'affermazione sul registro che la lettura non tocca.
 **Next action:** leggere `-043` per primo (open access, ed è quello che il testo del secondo
 passaggio nomina come possibile origine mTORC1-indipendente della direzione autofagica); poi
 decidere se `-056` e `-139` valgono la lettura o una dismissione motivata con `REVIVAL_TRIGGER`.
-**Current status:** ⬜ aperto — debito di lettura dichiarato il 2026-08-26, nessuno dei quattro letto.
+**Current status:** 🟨 **parzialmente chiusa — due dei quattro letti, e la riga precedente (*«nessuno dei quattro letto»*) era già falsa quando il blocco 2026-09-21 sopra la contraddiceva.** Aggiornato 2026-10-03 (`CC-20261003W3-B-SUPPDEPOSIT-01`, intake wave 3, Scientist B).
+
+🔴 **IL BRACCIO LOSS-OF-FUNCTION DI `-139` NON È ISPEZIONABILE: il supplemento depositato sotto l'identificativo di PMID 24008736 è il supplemento di un altro articolo.** Misurato, non dedotto: il file `cddis2013308x1.pdf` (5 pagine, sha256 `dc13d0427a4777bf4e09661df3e6cab669f005edb232adbc5d2cb4bda957004f`) contiene cinque figure di uno studio ematologico non correlato, e **gli stessi byte** arrivano da due rotte indipendenti — il bucket open-data PMC OA S3 e l'endpoint `supplementaryFiles` di Europe PMC. Non è un errore di fetch e non è sistematico: il supplemento di PMID 21368882, preso con la stessa rotta nello stesso passaggio, è quello giusto. Conseguenza per questa voce: la **Supplementary Figure 7** — il pannello LC3-II nei MEF `Wwox+/−` e `Wwox−/−`, cioè l'unico braccio in cui la variabile è un genotipo germinale e non un farmaco, e il braccio che questa voce conta come membro loss-of-function dei quattro — **resta una singola frase di testo corrente senza pannello ispezionabile**. Idem per S4 (Atg12 a 21 kDa), S5 (MG132) e S6 (colocalizzazione e co-IP WWOX–mTOR). Cosa lo sbloccherebbe: il file supplementare dalla pagina dell'editore, oppure una richiesta all'autore corrispondente — nessuna delle due tentata qui (nessuna spesa esterna, nessuna corrispondenza senza l'operatore).
+
+✅ **`-139` riletto per intero il 2026-10-03 con i pannelli** (ricevuta `FTR-20261003-24008736-02`, dossier `research/fulltext_dossiers/PMID24008736.md`): la lettura 2026-09-21, fatta su un'estrazione testuale senza figure, **regge**, e due punti si precisano. (1) Il clamp lisosomiale esiste ed è quantificato — Fig 3c, LC3-II 1,0 / 0,5 (MTX) / 1,6 (E64d+pepstatina A) / 1,0 (MTX + E64d+pepstatina A) a 12 h — ma è applicato **al farmaco**, mai a una manipolazione di WWOX: il passo WWOX→autofagia non è mai misurato come flusso. (2) La perdita di LC3 è instradata al **proteasoma** (MG132 la blocca), che è una rotta diversa da quella lisosomiale che lo stesso laboratorio assegna nel 2026 a Bcl-XL/Mcl-1 nello stesso fondo SCC-15: carico diverso, non lo stesso meccanismo detto due volte.
+
+✅ **`-043` resta non letto e non ha PMCID**; la sua direzione opposta (*WWOX attiva l'autofagia*) rimane non verificabile di prima mano. Ma lo stallo **non è più «un paper contro uno»**: censimento misurato il 2026-10-03 (`esearch`, tool=LEGEND-research) — `WWOX AND autophagy` = 10 record, di cui **8 né Chang NS né Hsu LJ**. Sul lato «sopprime» c'è un secondo laboratorio indipendente (PMID 33300063, carcinoma ovarico, paclitaxel, `CORPUS-STUB-056`); sul lato «attiva» c'è `-043` (PMID 36621327, danno polmonare acuto da LPS, mTOR–ULK1). La differenza fra i due poli non è solo il laboratorio: è lo **stress** (antimetabolita/chemioterapico contro infiammatorio) e il **tessuto** (epitelio tumorale contro epitelio polmonare in danno acuto). Nessuno dei due è neurale, nessuno dei due è un genotipo umano.
+
+✅ **`-056` letto per intero il 2026-10-03** (intake wave 4, Scientist A; ricevuta `FTR-20261003-33300063-01`, PDF bronze-OA dell'editore più Supplementary Figure S1; `CC-20261003W4-A-AUTOPHAGY-01`; lo stub è promosso a `PAPER 152`, numero provvisorio) — **tre dei quattro letti.** È **concordante con `-139` e ha la stessa lacuna**: WWOX su → Beclin-1 e LC3 giù, WWOX giù → su, su blot rappresentativi senza densitometria né statistica; l'unico clamp (clorochina) è sul braccio **paclitaxel**, mai su un braccio WWOX; nessun p62 sui bracci WWOX. **Nuovo rispetto alla forma ristretta:** p-mTOR segue la dose di WWOX in entrambe le direzioni (sovraespressione su, siRNA giù) — una correlazione fosfo misurata, senza epistasi con un inibitore di mTOR, con i totali dei bersagli a valle non misurati e p-p70S6K **appena rilevabile** («barely detected», la parola della fonte; corretto il 2026-10-03 da `BATCH_20261003_003` su audit cieco, da «non rilevato») (la Discussione scrive comunque «mTOR/p70S6K»). L'abstract dice «WWOX ridotto» nella linea resistente; i Results gli danno il WWOX basale più alto. Forma ristretta con un emendamento: *la via mTOR è correlata alla dose di WWOX in un sistema tumorale e non testata causalmente in nessun punto di questo corpus.* Ancora niente di neurale. La domanda posta a `-043` qui sotto vale anche per `-056`, e la risposta per `-056` è **no**.
+
+**Next action aggiornata:** `-043` resta il primo da leggere, e la domanda da portargli è ora precisa — *il suo LC3-II è misurato sotto clamp lisosomiale, e su una manipolazione di WWOX?* Se non lo è, nessuno dei due poli ha mai misurato il flusso sulla variabile giusta, e la contraddizione è fra due marcatori statici, non fra due flussi.
 
 ---
 
@@ -4942,6 +4953,8 @@ quella numerosità non sono visti, la contro-evidenza resta **flag, non reversio
 **Next action:** recuperare i pannelli di §3.5 quando esista una rotta di acquisizione che
 preservi le immagini; nel frattempo **non promuovere la contro-evidenza oltre lo stato di flag**.
 
+🟢 **DISCHARGED 2026-10-03** by `CC-20261003-B-ZFRA-TRANSFER-01` (intake wave 2, Scientist B). The panel was acquired: `mmc1.docx` from the PMC open-access S3 mirror, its `word/media/image1.tiff` extracted and rendered (`files/figure_renders/PMID29067327/supp_fig1.png`, sha256 `a796f685b2e70fa378b0fcb07ba97afbeaad5348bc014f5c0cd39bf42327c755`). 🔴 **The outcome is worse than a flag.** Supplementary Figure 1 carries **no genotype label on any bar**, no n per bar, no error convention and no statistical test; its x-axes read 3, >10, 8, 10 months and contain **no age 12**, while its legend asserts a drop *«greater than 55%»* at ages 10–12. Under either assignment of the two bar pairs to the two genotypes the drops are ≈ 43%/13% and ≈ 52%/33%. The counter-evidence to [[claim_registry_current#CLAIM 032]] therefore **does not survive inspection at all** and is rejected in `DIS-030`, not promoted. The real heterozygote cognitive measurement is in PMID 36498839 (Figure 5A–C), which is a different source and is carried separately.
+
 ---
 
 ## FT-105 — PMID 27569545 · **RETTIFICA DI STATO di `FT-103`: non "non letto" ma bloccato da licenza**
@@ -5187,6 +5200,8 @@ inverte**. È la stessa amputazione di clausola trovata oggi su `CORPUS-STUB-139
 ⚠️ **E non è un «knockout»:** CRISPR/Cas9 + selezione con puromicina, policlonale, mRNA ridotto
 **~3 volte** (§ 2.1). Ogni affermazione che eredita la parola «KO» da questo paper eredita una
 **deplezione parziale**.
+
+**Update 2026-10-03 (intake wave 4, Scientist A, `CC-20261003W4-A-REVIEWS-01`):** for `36271927` the debt is paid — Europe PMC JATS XML carries all 112 references with identifiers and the publisher CDN served Figure 1 (a schematic, inspected); `FTR-20261003-36271927-01`, `complete_fulltext_read`. The arc resolves to refs 26 (PMID 25012504), 14 (PMID 30755385), 15 (PMID 33520443, own group), 74 (PMID 35328751, own group), 84 and 88 (*Drosophila*): the five-strand reconstruction above holds. New: the myelination sentence ('usually shows also reduced myelination') is not supported by its cited Piard aggregate and cites one patient twice. `35328751` is untouched by this update.
 
 **Next action:** **nessuna rilettura automatica.** Il debito si chiude solo con una superficie che
 porti figure e bibliografia (HTML/PDF dell'editore), e serve a una sola domanda precisa: **quali
@@ -5586,6 +5601,8 @@ Consistent with `DL-MECH-022`'s biallelic-null case at **OFC +0.37 SD**. ⚠️ 
 independent source**: `Tarta-Arsene O` is also a co-author on the Piard cohort above, so anyone
 counting these as two independent observations of "microcephaly not mandatory" is double-counting
 one clinician's patients.
+
+**Resolved for `PMID 28721938` (2026-10-03, intake wave 4, Scientist A):** read in full (`FTR-20261003-28721938-01`); the non-independence above is now a source-level match, not only a shared author — the patient is Patient 8 of the Piard cohort (`CC-20261003W4-A-PATIENT-OVERLAP-01`). Registry landing: `PAPER 151` / `LIT-0444` (provisional numbers, `CC-20261003W4-A-REGISTRY-01`).
 
 **Next action for both: a `CORPUS` placeholder, not a read.** Neither needs full text for the use
 made of it here, and neither should acquire the appearance of a reading it has not had.
@@ -6423,6 +6440,18 @@ is not this actor's to initiate. What is recorded is a capability mapping, nothi
    the paper will land, so it is restated here rather than pointed at.
 3. Repair the dangling `FT-112` pointer in that candidate to name **`FT-130`**.
 
+### CORRECTION — 2026-10-04, the paper is read (`BATCH_20261004_004`, from `CC-20261004W10-X-ENZYMOLOGY-01`, intake wave 10)
+
+This entry's own heading and acquisition verdict are superseded and are left standing above, labelled, rather than rewritten. Every statement below was checked by an independent blind locator audit on the same day (17 triples; 15 SUPPORTED, 2 NOT_SUPPORTED_AS_LABELLED, 0 UNVERIFIABLE), and the two adverse verdicts are the subject of items 6 and 7.
+
+1. **"unacquirable, confirmed on two routes" is no longer the state.** The version-of-record PDF was acquired at zero spend and is held as `files/fulltext/PMID21476439_SaludaGorgul2011_DeGruyter.pdf`, sha256 `f3a43c1174c023cf9a00f45397aeb82043bbe8a37adc12c0d71f826fbbeb4505`, ten typeset pages with a clean text layer. Read in full 2026-10-04; manifest `deepdive_manifests/PMID21476439.json` PASSes with 0 gaps. Registered as `PAPER 244`, promoted from `CORPUS P306`; `LIT-0306` updated.
+2. **"no DOI"** was already corrected elsewhere in this repository: a DOI exists as a publisher assignment and resolves to the article. Note additionally that the article's **own front matter prints no DOI at all** — verified on a 300-dpi render of page 1 by the blind audit. The citation line it does print is `Z. Naturforsch. 66 c, 73 – 82 (2011); received May 12/September 14, 2010`, and it prints **no issue number**; the `(1–2)` carried elsewhere is PubMed's.
+3. **The affiliation line here names only the Department of Analytical Chemistry, which misassigns the senior author.** The article carries two departments of the same university: Analytical Chemistry (the first author) and **Molecular Cancerogenesis** (the author for correspondence and two co-authors). The first three authors are marked as having contributed equally. The capability mapping this entry builds should name the second department.
+4. **The oxidation-yes / reduction-no asymmetry is narrower than this entry treats it.** The negative is a single Results sentence marked **"results not shown"**: no panel, no table, no number, no statistic, and it covers **the seven steroid substrates only**. The paper adds that the reduction activities were *similar* for the WWOX-bearing and the empty-vector extract — which is the comparison, but an unillustrated one. It is a weak negative and must not be carried as a hard constraint on assay design.
+5. **It establishes less than "a measurable activity, defined substrates, and a cofactor requirement" implies.** No Vmax, kcat, specific activity or unit of enzyme is reported — although the Methods promise a Vmax from Lineweaver-Burk fitting; no reaction product was identified by any method; Table II's own footnote says the reported Km values are *the difference between NUS-WWOX and NUS*; and the activity is measured in the **soluble fraction of a crude extract**, because it was lost in *any attempt of purification to near-homogeneity* in both expression systems.
+6. **"the only published measurement of WWOX catalysis that exists"** is a claim about the literature this entry cannot make, and is scoped here as `CORPUS P306` was already scoped: *the only one identified in the corpus read here*, `PREMISE: INFERENZA`.
+7. 🔴 **Two statements this correction originally carried were withdrawn by the blind audit before landing, and they are recorded as withdrawn rather than quietly dropped.** (a) The construct is **not** described as *full-length*: the paper writes *"The WWOX cDNA **fragment** restricted by BamHI and EcoRI enzymes was subcloned…"*, gives no insert boundaries, and describes no SDR-domain-only, WW-deleted or active-site-mutant construct — so *full-length* is a DERIVATION (`PREMISE: INFERENZA`), not a printed fact, and *"the SDR domain has dehydrogenase activity"* remains an attribution rather than a measurement on the domain. (b) The sentence giving the `GANSGIG` (131–137) and `YNRSK` (293–297) coordinates carries **no citation of its own**; the WWOX-discovery citation sits two sentences later on a different statement. The motif annotation is presented as this paper's own sequence analysis, so the reading debt on PMID 10786676 rests on the generic SDR interpretation and not on a cited coordinate.
+
 ---
 
 ## FT-131
@@ -6729,6 +6758,7 @@ now asserts reads for these papers, so the reading debt is declared here rather 
    cannot be searched for gene content on that surface.
 ⚠️ `PMID 37095367` is **not** a corrigendum; it is the primary Bayanova WGS report.
 ⚠️ `PMID 31618474` reports a second, **overlap-confounded** occurrence of `p.(Glu17Lys)`.
+🟢 **Resolved 2026-10-03 (intake wave 5, Scientist B, `CC-20261003W5-B-PATIENT-OVERLAP-01`).** `31618474` re-read at source with gene symbols, tables and supplement (`FTR-20261003-31618474-01`): its WWOX patient is **patient 6 of `PMID 36779245`** ([[paper_registry_current#PAPER 018]]), which says so itself — not a Piard patient (Piard's `p.(Glu17Lys)` carrier has `p.(Ser304Phe)` in trans). `32214227` re-read (`FTR-20261003-32214227-01`): Table 1 **does** carry a WWOX row — homozygous `p.(Gly372Arg)`, the published SCAR12 family of [[paper_registry_current#PAPER 042]] — so the FT-116 statement 'zero WWOX variants' was an artefact of the table-less extraction. `35715422` read (`FTR-20261003-35715422-01`): one WWOX carrier with an ATP7A second diagnosis. Registry landings `PAPER 172`/`158`/`160` (provisional, `CC-20261003W5-B-REGISTRY-01`). `37095367` untouched by this wave.
 
 ---
 
@@ -6759,7 +6789,7 @@ a materially new research programme and **the Operator's decision**.
 Bears on the therapeutic-window question, which this branch has open from two directions: the
 **post-diagnosis window** (`D-31` — `P1–P5` is the set of ages tested, **not** a window) and the
 **model-horizon versus therapeutic-window** distinction (`D-36`).
-⚠️ **Neither paper is a WWOX paper.** They are queued as **developmental-timing context**, and must
+⚠️ **Neither paper is a WWOX-function paper — but both report a WWOX-locus association** (narrowed 2026-10-02 from "Neither paper is a WWOX paper.", CC-20261002-B-NONLINEAGE-01): PMID 28763065, rs10514437 (WWOX intron, genotyped, MAF 0.03) with infant white-matter volume, P 1.56e-8 against a study threshold of 1.25e-8, unreplicated, minor allele associated with *more* white matter; PMID 41378749, three imputed WWOX intron-8 SNPs nominally associated with spina bifida (OR about 6.2, p 2.2e-6, suggestive threshold only), absent from the technical replication. Neither is a finding. Both read 2026-10-02 (FTR-20261002-28763065-01, partial; FTR-20261002-41378749-01, complete). They are queued as **developmental-timing context**, and must
 never be cited as WWOX evidence.
 
 ---
@@ -6891,6 +6921,16 @@ monomer fraction is reported anywhere**; the construct boundaries are unread. `p
 and this correction are the same source. `REVIVAL_TRIGGER`: **if this body reports purified enzyme
 with a dead-triad control, purified-protein specific activity becomes the recommended assay** and
 displaces the engagement assay.
+
+### CORRECTION — 2026-10-04, the correction was itself too strong (`BATCH_20261004_004`, from `CC-20261004W10-X-ENZYMOLOGY-01`, intake wave 10)
+
+This entry retracted the sentence *"the SDR domain has never been expressed or purified by anyone"* on the strength of PMID 21476439's abstract. With the paper now read in full, and after an independent blind locator audit of the reading: the construct is a **WWOX cDNA fragment restricted by BamHI and EcoRI**, subcloned into pET 44a(+) (NusA fusion) and into pGEX 2TK (GST fusion). The paper **does not print the insert's boundaries and never uses the word *full-length***, and it describes **no SDR-domain-only construct and no purified protein of any kind** — oxidoreductase activity was lost in *any attempt of purification to near-homogeneity* in both systems, so every measurement is on the soluble fraction of a crude extract.
+
+So the retraction was over-stated, and the correct statement is narrower than either the retracted sentence or its retraction: **WWOX has been heterologously expressed twice, as two different fusions; the SDR domain has not been shown to have been expressed on its own by this paper, and this paper was the sole basis for the retraction.** Whether anyone else has expressed the domain alone is not settled here.
+
+The practical consequence runs the other way from the one recorded here: this paper **does not** lower the cost estimate for a purified-SDR route, because it supplies no construct boundary for the domain, no purification protocol that preserves activity, and no yield. What it does supply is a documented failure mode — activity lost on both glutathione-sepharose and cobalt affinity resin — which is worth more to a protocol designer than the expression precedent was.
+
+**REVIVAL_TRIGGER, adjudicated: it does NOT fire.** The trigger was *"if this body reports purified enzyme with a dead-triad control"*. The body reports neither: no purified enzyme (stated explicitly) and no catalytically-dead mutant of any kind — not of the `YNRSK` substrate motif at 293–297, not of the `GANSGIG` cofactor motif at 131–137. ⚠️ Both motif coordinates are the paper's own uncited sequence analysis (blind audit 2026-10-04), not a datum imported from the discovery paper. A purified-protein specific-activity assay therefore does **not** displace the engagement assay on this evidence.
 
 ---
 
@@ -7313,7 +7353,7 @@ negative in this repository under-counts by an unknown amount.**
 ## FT-159
 **Paper:** PMID 19918364 / PMCID PMC2771921 — Li M-Y, … Chang N-S, *WWOX/WOX1 in dorsal root ganglia
 after sciatic nerve transection*, *PLoS ONE* 2009, [DOI](https://doi.org/10.1371/journal.pone.0007820)
-**Priority:** **LOW** — read at served depth; the debt is formal
+**Priority:** **LOW** — read at served depth; the debt is formal — 🟢 **DISCHARGED 2026-10-03** by `CC-20261003-B-WWOX-DIRECTION-01` (intake wave 2, Scientist B): the JATS deposit, all eight figures and all nine supplementary TIFFs were acquired and a receipt was written (`FTR-20261003-19918364-01`, **`partial_fulltext_read`** — two of the nine supplementary TIFFs were rendered and inspected and the other seven were read as captions, so the receipt's own coverage correction refuses `complete` over `captions_only`; depth corrected by `BATCH_20261003_001`, which found the op declaring `complete_fulltext_read`), with manifest `deepdive_manifests/PMID19918364.json`. The audit's finding is **confirmed at source** — the paper classifies by soma diameter only and `nocicept`, `unmyelin`, `IB4`, `CGRP` and `substance P` occur zero times — and three further bounds were added in [[claim_registry_current#CLAIM 044]]: the directional claim is a HEK-293 reporter assay, the chronic accumulation is equal on the uninjured side, and the headline percentages are bin labels of a categorical heat map.
 **Why:** Cited by [[ataxia_without_cerebellar_lesion_20260922]] to **weaken its own** proprioceptive
 hypothesis. 🟢 Served surface read in full (48,831 chars) 2026-09-22; **no receipt written**.
 🔴 **The citing use is PARTIALLY SUPPORTED and the paper is harder on that hypothesis than the citing
@@ -8273,6 +8313,25 @@ raggiungibile da qui.
 
 ---
 
+
+## FT-193 — `PMID 41404412` (Grubor 2025) · the figure panels and supplement of a HELD paper: the graded per-arm DRG histopathology behind the field's «immunosuppression can greatly reduce but not eliminate» sentence
+
+**Paper:** PMID 41404412 — Grubor B. *et al.*, «Inhibition of immune response reduces pathology in dorsal root ganglia and peripheral nerves in cynomolgus macaques following AAV gene therapy», *Mol Ther Methods Clin Dev* 2025;33(4):101643, DOI 10.1016/j.omtm.2025.101643, PMCID PMC12704302 [corrected 2026-10-04 by `BATCH_20261004_001`, replacing *«No PMID is recorded here; the entry is keyed on the DOI, read off the reference list of PMID 42422766»*]. 🔴 **The PMID exists and the paper is held:** [[paper_registry_current#PAPER 162]] · [[literature_tracking_log_current#LIT-0451]], receipt `FTR-20261003-41404412-01`, read 2026-10-03 in intake wave 4.
+**Why it is here:** `CC-20261003W6-C-IMMUNOSUPPRESSION-LIMIT-01` recorded that sentence as citing the authors' **unpublished** data; the blind locator audit of `BATCH_20261003_005` measured the reference and found a **published** article. That much was right. 🔴 **What was wrong is what this entry then said about it** [corrected 2026-10-04 by `BATCH_20261004_001`, replacing *«It is therefore the single most load-bearing unread paper on whether immunosuppression bounds CSF-route ganglion risk»*]: the paper is **PMID 41404412**, which this repository had already read at `partial_fulltext_read` (**partial full text**) on 2026-10-03 — it is the **first source of `DIS-031` itself** and of `RL-C-20261003w4a`. The entry therefore records a **surface** debt, not an acquisition: figures are `captions_only` with **one of eight panels** opened, and **Tables S1–S5 and Figures S1–S15 were never fetched**, which is exactly where graded per-arm DRG histopathology would be printed.
+**Priority:** HIGH — it remains the stated evidence for a safety sentence this repository carries in `DIS-031`, `DL-THER-116` and `RL-C-20261003w6`, and the artefact is already on disk, so the cost is a panel-and-supplement re-read rather than an acquisition.
+**Current status:** OPEN — **acquired and read in part** [corrected 2026-10-04 by `BATCH_20261004_001`, replacing *«OPEN — not acquired, not read»*]. Artefact `files/fulltext/PMID41404412_Grubor2025_PMC.xml`; `partial_fulltext_read` (**partial full text**), receipt `FTR-20261003-41404412-01`. **Reading PARTIALLY DISCHARGED 2026-10-04 (intake wave 9, `CC-20261004W9-A-GRUBOR-DRG-01`, receipt `FTR-20261004-41404412-02`, still `partial_fulltext_read` / **partial full text**):** main Figures 1-4 and 6-8 were read as images and Document S1 was fetched. The graded per-arm DRG histopathology is in **main Figures 6C, 7C and 8D, not in the supplement**; Supplementary Figures S1-S12, S14 and S15 were read by caption only, and the references remain unread. [replaces *«Reading owed: the figure panels (seven of eight unopened) and the supplement (Tables S1–S5, Figures S1–S15).»*] **No conclusion is imported beyond what the wave-4 reading supports:** the wave-6 arm of `DIS-031` stands on the four sources read there, and records that only «reduce rather than eliminate» survives from the sentence this paper backs.
+**Next action (remaining after wave 9):** **no acquisition is needed** [corrected 2026-10-04 by `BATCH_20261004_001`, replacing *«acquire (`find-fulltext` by DOI) and read»*]. Fetch Tables S1–S5 and Figures S1–S15 from PMC and open the seven unopened main figure panels of the held artefact, with **graded per-arm DRG histopathology against a concurrent unmedicated arm** as the target datum; it is the second revival trigger of `DIS-031`'s wave-6 arm. Record the result as a re-read receipt (`reread_reason: inadequate_prior_coverage`), never by editing the existing one.
+
+---
+## FT-194 — deep intronic WWOX alleles: the aberrant read fraction of `c.107+119C>G`, which neither reporting source shows
+
+**Paper:** PMID 40183601 — Henry OJ *et al.*, «Clinical whole genome sequencing in pediatric epilepsy: Genetic and phenotypic spectrum of 733 individuals», *Epilepsia* 2025;66(8):2966-2979, DOI 10.1111/epi.18403, PMCID PMC12371643 (held and read, `FTR-20261004-40183601-01`), together with the medRxiv preprint DOI `10.64898/2026.01.16.26344264` (`PPR1269651`, **preprint, not peer reviewed**, `FTR-20261004-PPR1269651-01`).
+**Why it is here:** both sources report the same deep intronic allele and **neither prints a quantity**. The cohort paper establishes, by cDNA analysis, that an aberrant transcript exists which retains intron 1 and terminates early; the preprint asserts an RT-PCR confirmation in one unillustrated sentence. Read fraction, residual normal splicing, NMD, protein, tissue and the exact cryptic-donor position are unmeasured in both, so whether the allele is a null or a leaky hypomorph is unanswered. A blind locator audit (2026-10-04) confirmed that no quantitative measure is printed in either artefact.
+**Priority:** MEDIUM — the datum would decide an allele class the model does not otherwise hold, but no held claim rests on it and no acquisition would produce it: the experiment was not published.
+**Current status:** OPEN — both artefacts acquired and read; the owed datum is **not in them**. This is an authors-and-replication debt, not a surface debt.
+**Next action:** asking the reporting groups for the cDNA trace, or an RNA-seq / minigene replication with an NMD-inhibitor arm in a stated tissue, is the only route — neither source shows the experiment. **Author outreach is reserved to the operator and is not undertaken here.** Record any reply or replication as a new receipt, never by editing an existing one. Record created by `CC-20261004W9-C-DEEPINTRONIC-01`, number assigned by `BATCH_20261004_003`.
+
+---
 ## 🔴 CORRECTION 2026-09-23 — `PMID 29808465` is NOT without a DOI, and this file says both things
 
 **Raised by** Scientist B (`route_recovery_wave2_20260923.md` § 4, contradiction 2). **Verified

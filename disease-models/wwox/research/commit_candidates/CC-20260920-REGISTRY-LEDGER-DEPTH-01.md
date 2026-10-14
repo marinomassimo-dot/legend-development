@@ -232,3 +232,11 @@ moves, and that too is a scientific decision, not a threshold.
 Every figure above was re-derived on `main` at `1708af5` on 2026-09-20 with the tools already in the
 repository — `fulltext_receipts.py verify`, `deepdive_manifest.py --pmid`, `batch_queue.build`, and
 the registry read through `registry_records.py`. No file outside this candidate was written.
+
+---
+
+## BATCH DISPOSITION — written 2026-10-03 by `BATCH_20261003_001` (ACTOR_ID `scientist`, Scientist F), append-only
+
+**Verdict:** PROPAGATED
+
+Propagated whole by `batch_20260920_001`, which names it. That scope predates the Phase 7 `## BATCH DISPOSITION` requirement, so this candidate was closed by a mention alone. This block is the missing attestation; the facts are the scope's own.

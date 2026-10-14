@@ -1,0 +1,246 @@
+{
+ "schema_version": 2,
+ "pmid": "25649963",
+ "doi": "10.7717/peerj.727",
+ "receipt": "FTR-20261003-25649963-02",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID25649963.md",
+  "disease-models/wwox/research/intake_wave_20261003_C.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003-C-RESCUE-READOUT-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "A single Europe PMC REST fullTextXML call returned a body on the first try, so the cascade was never needed; the route is recorded in the acquisition recipe instead."
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is a canonical surface a Scientist does not edit; the one lead this reading touches is proposed through a commit candidate."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "This source supplies no therapeutic lever for the reference genotype class; forging hypotheses from a model-only or cancer-only signal would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed by this reading, so there is no molecule for a BLOCK-1 triage."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes are proposed as commit candidates for a later BATCH_COMMIT."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; the triples are published in the candidates for an auditor to run."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 10,
+  "publications_on_gene": 1,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "PubMed ESearch 2026-10-02: Tsuruwaka Y[au] 10 records, 1 intersecting WWOX (this paper). A zebrafish live-imaging group (yellow-cameleon FRET Ca2+ imaging is their declared method, with a self-cited 2007 methods paper). Competent at the imaging; WWOX is a single encounter, and every WWOX statement in the Discussion is drawn from cited mouse, rat and human work rather than measured here."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "wwox AND zebrafish",
+    "count": 2,
+    "source": "PubMed ESearch 2026-10-02"
+   },
+   {
+    "query": "WWOX AND calcium",
+    "count": 11,
+    "source": "PubMed ESearch 2026-10-02"
+   }
+  ],
+  "note": "Two records intersect WWOX and zebrafish; this is the only one carrying a live calcium readout. There is no second vertebrate wwox calcium-imaging study to replicate or contradict it."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 24,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "enumeration_method": "All 24 references enumerated from the JATS deposit. Twelve mention WWOX, and the PeerJ deposit carries no pub-id/pmid element on any of them, so no gene-direct reference can be addressed by PMID from this artefact alone. Declared empty rather than padded with author-year strings that cannot be resolved deterministically."
+ },
+ "corpus_crossquery": {
+  "query": "Does any registry record already name this paper or its calcium finding? registry_records.py get --pmid 25649963",
+  "hits": 4,
+  "note": "CORPUS P318 and LIT-0318 are the identity records; DL-MECH-021 already states both halves of the morphometric result, including that the rescue succeeds with the SDR/ADH domain alone. This reading adds that the calcium endpoint itself is unquantified and unrescued, which DL-MECH-021 does not say."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-02 by PubMed EFetch over all six wave-2 group-C PMIDs in one call: publication types are Journal Article (plus Research Support, Non-U.S. Gov't where applicable) and no CommentsCorrections RefType of any kind is returned, so there is no RetractionIn, ErratumIn, ExpressionOfConcernIn, CommentIn or UpdateIn link.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 24,
+   "references_screened": 22,
+   "references_with_doi": 22,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 22,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID25649963_Tsuruwaka2015_PMC.xml",
+   "sha256": "6988f5167e213d7b6b48372699cd672db740914c388bde38c63a5b2c2b8d8146",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4312067/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "6988f5167e213d7b6b48372699cd672db740914c388bde38c63a5b2c2b8d8146"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID25649963_assets/peerj-03-727-g001.jpg",
+   "sha256": "493dcd7cd8a43f30e2a8a1386a0a4d620ec87066d68501920e1ad9038bd6fbbd",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4312067/supplementaryFiles?includeInlineImage=true",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip, includeInlineImage)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "493dcd7cd8a43f30e2a8a1386a0a4d620ec87066d68501920e1ad9038bd6fbbd"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID25649963_assets/peerj-03-727-g002.jpg",
+   "sha256": "9e3503b093db43b960f0b71937ec6e13bac4041b11ce2c8d901756bc9edf5c4a",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4312067/supplementaryFiles?includeInlineImage=true",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip, includeInlineImage)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "9e3503b093db43b960f0b71937ec6e13bac4041b11ce2c8d901756bc9edf5c4a"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID25649963_assets/peerj-03-727-g003.jpg",
+   "sha256": "425d109649fbc881b95a1a29084df4fa6f9f5a6ac3419a8ef2fc08a77222a686",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4312067/supplementaryFiles?includeInlineImage=true",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip, includeInlineImage)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "425d109649fbc881b95a1a29084df4fa6f9f5a6ac3419a8ef2fc08a77222a686"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID25649963_assets/peerj-03-727-g004.jpg",
+   "sha256": "e315dc45cd8d0de92c0d890bb0643c327290ce637c42ffc94e166c6e57c41262",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4312067/supplementaryFiles?includeInlineImage=true",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip, includeInlineImage)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "e315dc45cd8d0de92c0d890bb0643c327290ce637c42ffc94e166c6e57c41262"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The knockdown is morpholino plus siRNA with stated penetrance, not a mutant allele.",
+    "snippet": "with 56% and 62% penetrance of edema in 48 hpf embryos after injections with MOs and siRNA, respectively",
+    "anchor": "Results, Knockdown and detection of zebrafish wwox, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25649963_Tsuruwaka2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A rescue arm exists, contrary to the assignment's premise, and it uses the ADH/SDR domain only, not full-length wwox.",
+    "snippet": "RNA rescue experiments were performed after preparing wwox mRNA (ADH domain region) by replacing pTAC-2 with the pCS-2 vector",
+    "anchor": "Materials and Methods, Polymerase chain reaction (PCR) and complementary DNA (cDNA) cloning",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25649963_Tsuruwaka2015_PMC.xml",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "The rescue is reported as succeeding for the oedema phenotype with both knockdown reagents.",
+    "snippet": "However, wwox mRNA rescued the phenotype in MO and siRNA injected embryos",
+    "anchor": "Results, Knockdown and detection of zebrafish wwox, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25649963_Tsuruwaka2015_PMC.xml",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "Calcium imaging is performed after the oedema has already formed, so the measurement cannot order cause and consequence.",
+    "snippet": "dynamics after edema formation in embryos that had been simultaneous transfected with yellow cameleon",
+    "anchor": "Results, Analysis of intracellular Ca2+ dynamics after edema formation, para 1 (sentence continues 'dynamics after edema formation in embryos')",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25649963_Tsuruwaka2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors themselves raise a non-cell-autonomous explanation for the phenotype.",
+    "snippet": "Therefore, inhibition of wwox could have pointed a non-cell-autonomous phenotype",
+    "anchor": "Discussion, final paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25649963_Tsuruwaka2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The calcium figure is one representative colour-coded image per condition with no quantification, no n, no statistic and no rescue arm; the morphometric figure beside it carries all three.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4 contains exactly four sub-panels (bright-field and colour-coded ratio image for wild type and for knockdown) and no axis, error bar, sample size or significance marker anywhere; Figure 2E by contrast plots body length and eye size with error bars and drawn significance brackets for WT, control, phenotype and rescue.",
+    "anchor": "Figure 4 (peerj-03-727-g004.jpg) compared with Figure 2E (peerj-03-727-g002.jpg), native JPEGs inspected",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID25649963_assets/peerj-03-727-g004.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[4]",
+    "qualifies_needle": "non-cell-autonomous phenotype",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The eye-size deficit is restored by the rescue mRNA to control level, which is the one endpoint in this paper that behaves like a rescue readout.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2E right plot, eye size in micrometres: wild type about 265, control about 255, phenotype about 205, rescue about 270, with drawn significance brackets marked ** over WT-versus-phenotype and phenotype-versus-rescue.",
+    "anchor": "Figure 2, panel E, right plot; native JPEG inspected",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID25649963_assets/peerj-03-727-g002.jpg",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "The article's full text was served by the Europe PMC REST fullTextXML endpoint with an HTTP 200 and a non-empty <body> element on 2026-10-02, which is what inEPMC/fullTextIdList membership means operationally: every body quote above is externally verifiable by re-fetching that endpoint."
+ }
+}

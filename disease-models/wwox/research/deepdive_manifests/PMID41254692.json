@@ -1,0 +1,310 @@
+{
+ "schema_version": 2,
+ "pmid": "41254692",
+ "doi": "10.1186/s12967-025-07301-9",
+ "receipt": "FTR-20261004-41254692-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID41254692.md",
+  "disease-models/wwox/research/intake_wave_20261004w8_A.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W8-A-VPA-DIRECTION-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W8-A-REGISTRY-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Used in substance: the CTD direction inversion is proposed as a discovery-ledger lead in a commit candidate rather than run through the skill."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "The only lever here is computational and its direction is inverted in the source; nothing to forge until the CTD primaries are read."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound reaches a WWOX readout; valproate's WWOX-expression direction is a reading debt, not a triage input."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "A reader cannot audit their own locators."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "computational",
+  "is_primary_group_for_disease": false,
+  "weighting": "A computational oncology group running public-summary-statistics MR; no wet-lab arm. The text and the supplementary table it rests on disagree on drug direction."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "registry_records.py get --pmid 41254692 (LEGEND)",
+    "count": 1,
+    "source": "LEGEND registries 2026-10-04"
+   },
+   {
+    "query": "fulltext_receipts.py status --pmid 41254692",
+    "count": 0,
+    "source": "receipt ledger 2026-10-04"
+   },
+   {
+    "query": "registry_records.py get --pmid for each of the five CTD valproate reference PMIDs",
+    "count": 0,
+    "source": "LEGEND registries 2026-10-04"
+   }
+  ],
+  "note": "LEGEND holds this paper only as CORPUS-STUB-101 (not_processed). No record carries a valproate-to-WWOX-expression direction."
+ },
+ "multihop": {
+  "references_enumerated": 54,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [
+   {
+    "queue": "CC-20261004W8-A-VPA-DIRECTION-01",
+    "why": "Six WWOX-titled references (refs 32-37) are oncology reviews and cancer-cell studies cited only as background for a tumour-suppressor role; none bears on the measured/predicted allele question, none is read here. The five CTD reference PMIDs behind the valproate row are in the supplement, not the ref-list, and are queued in the candidate."
+   }
+  ],
+  "disposition": "54 references enumerated; WWOX-titled background references carry no PMID in the ref elements and are off-axis oncology; queued with a reason."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 41254692; --theme valpro/vorinostat/HDAC with WWOX after the first pass; --pmid for the five CTD references",
+  "hits": 1,
+  "note": "Only CORPUS-STUB-101 names the paper. Valproate hits concern clinical efficacy in WWOX-DEE, not WWOX expression."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-04 via PubMed metadata (get_article_metadata): publication types ['Journal Article', \"Research Support, Non-U.S. Gov't\"]; no retraction, expression of concern or correction listed for PMID 41254692.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 54,
+   "references_screened": 50,
+   "references_with_doi": 50,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 24,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 4
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41254692_Qin2025_PMC.xml",
+   "sha256": "f2aef589deeb92bdbf3ba2c20ecd7c3e89c504bb4293a20219ca217d6c59292a",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12625014/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": false,
+    "result_sha256": "f2aef589deeb92bdbf3ba2c20ecd7c3e89c504bb4293a20219ca217d6c59292a"
+   }
+  },
+  {
+   "path": "files/supplements/PMID41254692/s.zip",
+   "sha256": "8f1639ea849695b7e337d72ad326d35b18dee2238867a8ac138847f446ede453",
+   "kind": "supplement_binary",
+   "note": "Europe PMC supplementaryFiles container for PMC12625014, kept unchanged; the members cited below were extracted from it byte-for-byte.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12625014/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": false,
+    "result_sha256": "8f1639ea849695b7e337d72ad326d35b18dee2238867a8ac138847f446ede453"
+   }
+  },
+  {
+   "path": "files/supplements/PMID41254692/12967_2025_7301_MOESM1_ESM.xlsx",
+   "sha256": "c817de13b411f83612db7ad2ee467ef75b66763fd69a755f4dc6020dea880c31",
+   "kind": "supplement_binary",
+   "note": "Additional file 1: Tables S1-S7 workbook.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12625014/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip, member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": true,
+    "derived_from": "files/supplements/PMID41254692/s.zip",
+    "extractor": {
+     "name": "python3 -m zipfile",
+     "version": "Python 3.12",
+     "call": "zipfile -e, member written byte-for-byte"
+    },
+    "result_sha256": "c817de13b411f83612db7ad2ee467ef75b66763fd69a755f4dc6020dea880c31"
+   }
+  },
+  {
+   "path": "files/supplements/PMID41254692/12967_2025_7301_Fig7_HTML.jpg",
+   "sha256": "7d8bca7d656d122afbfa6a9c67cdcad5734d915ac86cfbf015172958d473eda1",
+   "kind": "figure",
+   "note": "Figure 7 as published; panel A read.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12625014/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip, member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": true,
+    "derived_from": "files/supplements/PMID41254692/s.zip",
+    "extractor": {
+     "name": "python3 -m zipfile",
+     "version": "Python 3.12",
+     "call": "zipfile -e, member written byte-for-byte"
+    },
+    "result_sha256": "7d8bca7d656d122afbfa6a9c67cdcad5734d915ac86cfbf015172958d473eda1"
+   }
+  },
+  {
+   "path": "files/supplements/PMID41254692/MOESM1_TableS7_rows.txt",
+   "sha256": "9aae8a1fa3813b18e4fab28cad2f74f138378cc202b69cea1e1999b18407cc81",
+   "kind": "supplement_text",
+   "note": "Derived cell-wise text of Table S7 (sheet7) of Additional file 1, every row, with headers.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID41254692/12967_2025_7301_MOESM1_ESM.xlsx",
+    "acquired_on": "2026-10-04",
+    "extractor": {
+     "name": "xlsx_rows.py + derive.py (scratchpad, stdlib zipfile + regex)",
+     "version": "2026-10-04",
+     "call": "all rows of sheet7 (each has a cell equal to WWOX or THBS2); sharedStrings resolved; XML entities unescaped"
+    },
+    "result_sha256": "9aae8a1fa3813b18e4fab28cad2f74f138378cc202b69cea1e1999b18407cc81"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC12625014/fullTextXML on 2026-10-04 returned HTTP 200 with a <body>; Tables 1-3 are JATS tables; Table S7 and Figure 7 came from the Europe PMC supplementaryFiles container.",
+  "entries": [
+   {
+    "proposition": "The WWOX result is a blood cis-eQTL Mendelian-randomisation association with lymphoma risk: OR 0.533 (0.388-0.734), FDR 0.019, 29 SNPs, colocalisation PPH4 0.619 — a common-variant expression proxy, not a measurement of WWOX.",
+    "snippet": "WWOX 29 0.533 (0.388–0.734) 1.13E-04 0.019 0.163 0.677 0.619",
+    "anchor": "Table 1, WWOX row (JATS table, read cell-wise)",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID41254692_Qin2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "At the protein level the WWOX association does not survive FDR correction, and the authors say so.",
+    "snippet": "but this association did not reach statistical significance after FDR correction (FDR-corrected P = 0.160)",
+    "anchor": "Results, pQTL-MR section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41254692_Qin2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "One of the three WWOX CpG sites fails the authors' own HEIDI criterion (P > 0.01 required) for the methylation-to-expression step.",
+    "snippet": "cis-mQTL→cis-eQTL cg10001715 -0.209 1.83E-27 1.92E-07",
+    "anchor": "Table 3, WWOX block (JATS table, read cell-wise)",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID41254692_Qin2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The phenome-wide scan found no significant association for WWOX and could not be replicated; the text reads this null as safety of WWOX 'inhibition', the opposite of the direction the paper proposes for a protective target.",
+    "snippet": "no significant causal associations were observed between WWOX and the 853 phenotypes, indicating that WWOX inhibition may not lead to widespread adverse effects",
+    "anchor": "Results, phenome-wide MR section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41254692_Qin2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Results state that vorinostat, valproic acid, sunitinib, Jinfukang and arsenic trioxide potentially increase WWOX expression.",
+    "snippet": "The compounds potentially increasing WWOX expression include Vorinostat, Valproic Acid, Sunitinib, Jinfukang, and Arsenic Trioxide.",
+    "anchor": "Results, drug screening and docking section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41254692_Qin2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The paper's own CTD export (Table S7) records valproic acid as DECREASING WWOX expression in Homo sapiens, citing five reference PMIDs — the opposite of the Results sentence.",
+    "snippet": "A=Valproic Acid | B=D014635 | C=WWOX | D=Homo sapiens | E=Decreases expression",
+    "anchor": "Additional file 1, Table S7 (sheet7), valproic acid / WWOX row, cell-wise",
+    "surface": "supplement",
+    "artifact": "files/supplements/PMID41254692/MOESM1_TableS7_rows.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table S7 records vorinostat as decreasing WWOX expression and increasing THBS2 expression, again the opposite of the Results text.",
+    "snippet": "A=Vorinostat | B=D000077337 | C=WWOX | D=Homo sapiens | E=Decreases expression",
+    "anchor": "Additional file 1, Table S7 (sheet7), vorinostat / WWOX row, cell-wise",
+    "surface": "supplement",
+    "artifact": "files/supplements/PMID41254692/MOESM1_TableS7_rows.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Every THBS2 row of Table S7 is 'Increases expression', while the Results present the same compounds as reducing THBS2.",
+    "snippet": "A=Valproic Acid | B=D014635 | C=THBS2 | D=Homo sapiens | E=Increases expression",
+    "anchor": "Additional file 1, Table S7 (sheet7), valproic acid / THBS2 row, cell-wise",
+    "surface": "supplement",
+    "artifact": "files/supplements/PMID41254692/MOESM1_TableS7_rows.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Docking energies against 'WWOX protein' are -5.7, -4.2 and -6.5 kcal/mol with contacts at residues numbered 7-18; the PDB entry is not named in the text.",
+    "snippet": "Vorinostat, Valproic Acid, and Sunitinib exhibited binding energies of −5.7, −4.2, and −6.5 kcal/mol with WWOX protein, respectively",
+    "anchor": "Results, drug screening and docking section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41254692_Qin2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 7A panel read: the WWOX receptor drawn is a small domain-sized fragment (a few beta-strands and loops), not a full-length protein; contacts are at residues 7-18 of that model.",
+    "snippet": "Molecular docking of the predicted drugs with WWOX (A) and THBS2 (B) receptor protein",
+    "anchor": "Figure 7A (12967_2025_7301_Fig7_HTML.jpg, inspected at published resolution)",
+    "surface": "figure",
+    "artifact": [
+     "files/supplements/PMID41254692/12967_2025_7301_Fig7_HTML.jpg"
+    ],
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[8]",
+    "qualifies_needle": "binding energies of −5.7, −4.2, and −6.5 kcal/mol with WWOX protein"
+   },
+   {
+    "proposition": "The authors' own limitations: European-ancestry data only, few cases and no independent validation cohort, and possible residual pleiotropy and confounding.",
+    "snippet": "the lack of independent validation cohorts increases the risk of insufficient statistical power and erroneous conclusions",
+    "anchor": "Discussion, limitations paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41254692_Qin2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}

@@ -1,0 +1,224 @@
+{
+ "schema_version": 2,
+ "pmid": "41314141",
+ "doi": "10.1016/j.ebiom.2025.106044",
+ "receipt": "FTR-20261003-41314141-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID41314141.md",
+  "disease-models/wwox/research/intake_wave_20261003w5_A.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W5-A-REGISTRY-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W5-A-CARGO-CASSETTE-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W5-A-TRANSGENE-IMMUNITY-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W5-A-WINDOW-STATUS-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W5-A-DOSE-TWO-SIDED-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is a research surface owned by other batches; every transferable lesson here is proposed as a commit candidate instead of written into the ledger."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A gene-replacement lesson from another gene is not a WWOX therapeutic hypothesis; forging one would convert a stated transfer limit into a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No small molecule with a SMILES is proposed, so the BLOCK-1 ADMET gate has nothing to triage."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The triples are published for a blind auditor; a reader cannot audit their own locators."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "No author-level PubMed census was run for this reading: the paper is about another gene entirely and contributes only transferable method, so group standing on WWOX is not the weighting that matters. What was recorded instead is declared competing interest, read from the paper itself and carried in the dossier.",
+  "external_provenance": {
+   "source": "not applicable — no external author census performed",
+   "date": "2026-10-03"
+  }
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND gene therapy",
+    "count": 75,
+    "source": "PubMed ESearch rettype=count 2026-10-03"
+   },
+   {
+    "query": "WWOX AND intrathecal",
+    "count": 0,
+    "source": "PubMed ESearch rettype=count 2026-10-03"
+   },
+   {
+    "query": "WWOX AND immunosuppression",
+    "count": 7,
+    "source": "PubMed ESearch rettype=count 2026-10-03"
+   }
+  ]
+ },
+ "multihop": {
+  "references_enumerated": 0,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference lists were not enumerated in this pass and no multi-hop expansion was performed; the coverage key 'references' is declared not_read for that reason."
+ },
+ "corpus_crossquery": {
+  "query": "paper_packet.py packet --pmid 41314141 (run BEFORE the first pass, technical state only)",
+  "hits": 0,
+  "note": "NO RECORD MATCHED on any registry surface (paper_packet.py packet --pmid, 2026-10-03): first reading, no prior receipt, no acquisition route recorded. The paper does not mention WWOX."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-03 via NCBI E-utilities efetch (db=pubmed, retmode=xml): the publication types carry no retraction, expression of concern or correction notice, and no CommentsCorrections element of any RefType is present for this PMID.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 30,
+   "references_screened": 26,
+   "references_with_doi": 26,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 4
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41314141_Greenberg2026_PMC.xml",
+   "sha256": "39926f363400a53e03ea5af1adf8aeb167d60ee992970d4c62ee2329379a4886",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12703863/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-03",
+    "result_sha256": "39926f363400a53e03ea5af1adf8aeb167d60ee992970d4c62ee2329379a4886"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The trial reports the highest intrathecal dose used in any gene therapy trial, as a total dose rather than per kilogram.",
+    "snippet": "the highest intrathecal dose utilised in any gene therapy trial to date",
+    "anchor": "Discussion, dose paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41314141_Greenberg2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Most of the particles in the dosed lot carried no genome, so the capsid burden exceeded the vector-genome dose.",
+    "snippet": "42% genome-containing particles",
+    "anchor": "Discussion, dose paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41314141_Greenberg2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Immunosuppression intensity was assigned by whether the patient was predicted to make any of the protein.",
+    "snippet": "would be considered CRIM positive and placed on immune modulation with enteral prednisone and sirolimus",
+    "anchor": "Methods, study design",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41314141_Greenberg2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Patients predicted to make no protein were given a third immunosuppressant.",
+    "snippet": "would be considered CRIM negative and placed on enteral prednisone, sirolimus, and tacrolimus for immune modulation",
+    "anchor": "Methods, study design",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41314141_Greenberg2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors attribute dorsal-root-ganglion toxicity to transgene overexpression and name the weak promoter as a mitigation.",
+    "snippet": "recent studies suggest this is due to transgene overexpression",
+    "anchor": "Discussion, dose paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41314141_Greenberg2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The only immune event occurred in the one patient managed with two rather than three immunosuppressants, after the steroid taper.",
+    "snippet": "experienced a clinically asymptomatic CSF pleocytosis after weaning off corticosteroids at six months post-injection",
+    "anchor": "Discussion, immunosuppression paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41314141_Greenberg2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The trial cannot say whether progression was altered, for want of a matched natural-history cohort.",
+    "snippet": "we cannot comment on whether the rate of progression was altered in the treated cohort",
+    "anchor": "Results, secondary endpoints",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41314141_Greenberg2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "No statistical testing was performed on any outcome.",
+    "snippet": "no formal statistics were performed on this cohort",
+    "anchor": "Methods, statistics",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41314141_Greenberg2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state that intervention timing is expected to dominate efficacy and that patients should be found earlier.",
+    "snippet": "the timing of the intervention is likely to have a very large impact on the treatment efficacy",
+    "anchor": "Discussion, disease modification",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41314141_Greenberg2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The efficacy claim is qualified by the authors themselves.",
+    "snippet": "While overall efficacy signals were limited",
+    "anchor": "Conclusions",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41314141_Greenberg2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST fullTextXML returned HTTP 200 with a full JATS body for PMC12703863 on 2026-10-03; the declared article artefact is that response, byte for byte."
+ }
+}

@@ -1,0 +1,212 @@
+{
+  "schema_version": 2,
+  "pmid": "38719828",
+  "doi": "10.1038/s41467-024-48004-x",
+  "receipt": "FTR-20261004-38719828-01",
+  "context_policy": "SOURCE_FIRST",
+  "landing": [
+    "disease-models/wwox/research/fulltext_dossiers/PMID38719828.md",
+    "disease-models/wwox/research/intake_wave_20261004w11_A.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261004W11-A-ASSAYSPEC-01.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261004W11-A-REGISTRY-01.md"
+  ],
+  "skills_considered": [
+    {
+      "skill": "legend-study-intake-triage",
+      "used": true
+    },
+    {
+      "skill": "find-fulltext",
+      "used": true
+    },
+    {
+      "skill": "legend-deepdive",
+      "used": true
+    },
+    {
+      "skill": "legend-discovery",
+      "used": false,
+      "reason": "The discovery ledger is owned by other batches; the transferable method is proposed as a commit candidate instead."
+    },
+    {
+      "skill": "legend-hypothesis-forge",
+      "used": false,
+      "reason": "This source carries no WWOX datum to forge a therapeutic hypothesis from."
+    },
+    {
+      "skill": "legend-safety-triage",
+      "used": false,
+      "reason": "No compound is proposed by this source."
+    },
+    {
+      "skill": "legend-commit",
+      "used": false,
+      "reason": "Scientists do not touch the four current files."
+    },
+    {
+      "skill": "legend-locator-audit",
+      "used": false,
+      "reason": "The triples are published in the candidate for a blind auditor."
+    }
+  ],
+  "group_assessment": {
+    "total_publications": 1,
+    "publications_on_gene": 0,
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": false,
+    "weighting": "Structural-biology group (Helmholtz Munich / TUM Bavarian NMR Center, Sattler laboratory) with IMB Mainz for the cellular proteomics. No WWOX publication; WWOX occurs three times in this source, all inside one Discussion sentence and its reference. Read as a method donor, not as a WWOX source."
+  },
+  "field_density": {
+    "queries": [
+      {
+        "query": "tandem WW domain ITC Kd structural characterisation",
+        "count": 6,
+        "source": "references of this source: FBP21 (CR63), YAP (CR64), Su(dx) (CR65), yeast Prp40 (CR66), PLEKHA7 (CR67), KIBRA/MAGI (CR54)"
+      },
+      {
+        "query": "WWOX WW domain affinity measured by ITC on purified protein",
+        "count": 1,
+        "source": "reading-time observation: this source cites exactly one such paper for WWOX, PMID 22634283"
+      }
+    ],
+    "note": "The tandem-WW biophysics literature is substantial; the WWOX slice of it is one paper."
+  },
+  "multihop": {
+    "references_enumerated": 103,
+    "gene_direct_refs_in_source": [
+      "22634283"
+    ],
+    "resolved": [
+      "22634283"
+    ],
+    "queued": [],
+    "note": "103 references enumerated. Exactly one is gene-direct: reference 68, McDonald 2012 (DOI 10.1016/j.jmb.2012.05.015, resolved to PMID 22634283 via PubMed ESearch), which this laboratory already holds with a complete_fulltext_read receipt (FTR-20260811-22634283-02). No hop is owed."
+  },
+  "corpus_crossquery": {
+    "query": "registry_records.py get --pmid 38719828; fulltext_receipts.py status --pmid 38719828 (run BEFORE the reading, for dedup only)",
+    "hits": 0,
+    "note": "NO RECORD MATCHED across the seven searched surfaces, and no receipt. This paper is new to the laboratory."
+  },
+  "retraction_check": {
+    "checked": true,
+    "result": "Checked 2026-10-04 via PubMed ESummary: publication types ['Journal Article', 'Research Support, Non-U.S. Gov't']; no retraction, expression of concern or correction notice listed for PMID 38719828.",
+    "dependencies": {
+      "flagged": [],
+      "noted": [],
+      "paper_verdict": "SCREENED_CLEAN",
+      "reference_source": "network",
+      "references_declared": 103,
+      "references_screened": 100,
+      "references_with_doi": 100,
+      "schema": "retraction_check.dependencies/1",
+      "screened": true,
+      "snapshot": {
+        "date": "2026-09-10",
+        "days_since_fetch": 24,
+        "rows": 72476,
+        "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+      },
+      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+      "unscreenable": {
+        "UNSCREENABLE_NO_DOI": 3
+      },
+      "note": "Screened with the 2026-09-10 Retraction Watch snapshot; 3 references carry no DOI and are UNSCREENABLE_NO_DOI."
+    }
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID38719828_MartinezLumbreras2024_PMC.xml",
+      "sha256": "3b2b892fdd6760f7a4d9009d359fe61ee4e828683021aeb8582cdcbe4f5cbd12",
+      "kind": "article_text",
+      "note": "Europe PMC fullTextXML (213 068 B): abstract and web summary, introduction, six results sections, discussion, full methods, six figure legends, Table 1 cell-wise, 103 references. Supplementary files (three PDFs and one xlsx) not fetched.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11079029/fullTextXML",
+        "http_method": "GET",
+        "tier": "Europe PMC REST fullTextXML",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "3b2b892fdd6760f7a4d9009d359fe61ee4e828683021aeb8582cdcbe4f5cbd12"
+      }
+    }
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC REST search EXT_ID:38719828 (resultType=core) on 2026-10-04: inEPMC=Y, isOpenAccess=Y, pmcid PMC11079029; the fullTextXML endpoint returned a 213 068 B body, so the quotes below are externally verifiable.",
+    "entries": [
+      {
+        "proposition": "The only WWOX content in this source is a Discussion citation of an intra-tandem chaperoning interpretation; the paper performs no WWOX experiment.",
+        "snippet": "the presence of one WW domain may have a chaperone activity for the other, promoting its folding, as in the case of WW domains of WWOX",
+        "anchor": "Discussion, Structure of PRPF40A tandem WW domains and proline-rich peptide recognition",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID38719828_MartinezLumbreras2024_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "When the same intra-tandem chaperoning proposal was tested experimentally for this group's own protein, it failed: the second WW domain folds without the first.",
+        "snippet": "However, our data demonstrate that WW2 can be folded independently of WW1",
+        "anchor": "Discussion, Structure of PRPF40A tandem WW domains and proline-rich peptide recognition",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID38719828_MartinezLumbreras2024_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The field baseline this source states for an isolated WW domain binding a proline-rich peptide is hundreds of micromolar, which is the scale against which any WWOX WW affinity must be judged.",
+        "snippet": "The affinity of individual WW domains for proline-rich peptides is normally modest with a dissociation constant typically in the range of hundreds of micromolar",
+        "anchor": "Discussion, Intramolecular autoinhibition proofreads the binding selectivity of WW domains",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID38719828_MartinezLumbreras2024_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "A published tandem-WW structure was shown to be wrong because it was built on a truncated construct, so construct boundaries decide what a domain-pair structure reports.",
+        "snippet": "a previously reported structure of the PRPF40A WW domain tandem",
+        "anchor": "Results, The WW domains of PRPF40A are folded independently and exhibit significant domain mobility",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID38719828_MartinezLumbreras2024_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The correction of that structure required two orthogonal solution techniques to agree, not one.",
+        "snippet": "we have validated our ensemble in contrast to the truncated published model",
+        "anchor": "Discussion, Structure of PRPF40A tandem WW domains and proline-rich peptide recognition",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID38719828_MartinezLumbreras2024_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Affinities were measured on purified protein by isothermal titration calorimetry under stated buffer and temperature conditions, at least in duplicate — the assay format absent from the WWOX enzymology chain.",
+        "snippet": "Experiments were conducted on a MicroCAl PEAQ-ITC (Malvern Instruments, UK) at 25",
+        "anchor": "Methods, Isothermal titration calorimetry (ITC)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID38719828_MartinezLumbreras2024_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "A single peptide out of a systematic panel carried a hundred-fold affinity difference, so a motif called high-affinity by sequence inspection is not one until it is titrated.",
+        "snippet": "except in the case of the highest affinity peptide",
+        "anchor": "Results, PRPF40A recognizes a specific proline-rich motif in the SF1 C-terminal region",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID38719828_MartinezLumbreras2024_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The proposed regulatory mechanism was tested causally: mutating the two motifs restored the affinity the mechanism was said to suppress.",
+        "snippet": "This restored the binding affinity to be comparable to the isolated WW tandem",
+        "anchor": "Results, Intramolecular interactions provide specificity for WW domain peptide recognition",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID38719828_MartinezLumbreras2024_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The authors state their generalisation to other WW-tandem proteins as a hypothesis still to be tested, and WWOX is not among the proteins they list as candidates.",
+        "snippet": "Whether the internal proline-rich sequences that these proteins have, act in a similar way as in PRPF40A still needs further analysis",
+        "anchor": "Discussion, Intramolecular autoinhibition proofreads the binding selectivity of WW domains",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID38719828_MartinezLumbreras2024_PMC.xml",
+        "panel_text_relation": "text_only"
+      }
+    ]
+  }
+}

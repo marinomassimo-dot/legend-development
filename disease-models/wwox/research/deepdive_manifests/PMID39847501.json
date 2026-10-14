@@ -1,0 +1,187 @@
+{
+ "schema_version": 2,
+ "pmid": "39847501",
+ "doi": "10.1172/JCI182584",
+ "receipt": "FTR-20261003-39847501-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID39847501.md",
+  "disease-models/wwox/research/intake_wave_20261003w3_C.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W3-C-REGISTRY-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W3-C-RESTORATION-SPEC-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is a research surface owned by other batches; the corrections this reading supports are proposed as commit candidates rather than edited in place."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A transferable lesson from another gene is not a therapeutic hypothesis for WWOX; forging one here would convert a stated transfer limit into a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No small molecule with a SMILES is proposed as an intervention, so there is nothing for the BLOCK-1 ADMET gate to triage."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate for a later BATCH_COMMIT."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The triples are published in the candidates for a blind auditor; the reader of a paper cannot audit their own locators."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 149,
+  "publications_on_gene": 42,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "PubMed counts 2026-10-03: senior author 'Isom LL[au]' 149, with SCN1B 42. The primary academic group for SCN1B biology; high credibility on this gene and no WWOX work.",
+  "external_provenance": {
+   "source": "NCBI E-utilities esearch rettype=count, terms as stated",
+   "date": "2026-10-03"
+  }
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "(gene therapy OR AAV) AND developmental and epileptic encephalopathy",
+    "count": 1075,
+    "source": "PubMed ESearch 2026-10-03"
+   }
+  ]
+ },
+ "multihop": {
+  "references_enumerated": 65,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "65 references present in the JATS back matter; not read in this pass and no multi-hop expansion performed. The coverage key 'references' is declared not_read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 39847501 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "NO RECORD MATCHED across all six surfaces. A statement about this query over these files, not about the laboratory's knowledge. CC-20261003W3-C-REGISTRY-01 proposes the landing."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-03 via PubMed get_article_metadata: no retraction, expression of concern or correction notice among the publication types for PMID 39847501.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 65,
+   "references_screened": 63,
+   "references_with_doi": 63,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID39847501_Chen2025_PMC.xml",
+   "sha256": "61ab73c4264ebec5b1c1638187f4464007f89379899186eee573a6b8477a7986",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11870736/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-03",
+    "result_sha256": "61ab73c4264ebec5b1c1638187f4464007f89379899186eee573a6b8477a7986"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID39847501_Chen2025_supplement/jci-135-182584-g230.jpg",
+   "sha256": "94186d85a1a52283ae7a3c75aac87b75338b770dec7c9b8ac619e87431540e19",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged by Python zipfile from the Europe PMC REST supplementaryFiles bundle for this article (HTTP 200, application/zip, fetched 2026-10-03); the bundle itself is not persisted because Europe PMC rebuilds it non-deterministically and its digest is therefore not stable."
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The P10 failure is attributed by the authors to transgene level and distribution, not to a closed developmental window.",
+    "snippet": "We attribute this effect to the relatively low level and distribution of the Nav",
+    "anchor": "Discussion, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39847501_Chen2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors' own imaging shows the P10 cohort was underexposed, which is the evidence for that attribution.",
+    "snippet": "Brain expression of Navβ1-myc protein in P10-injected animals was substantially restricted in comparison with P2-injected animals.",
+    "anchor": "Results, cellular and temporal specificity",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39847501_Chen2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Every seizure datum is video-scored behaviour without electrographic confirmation.",
+    "snippet": "Without electrographic evidence, we cannot be confident that these events were indeed seizures.",
+    "anchor": "Results, seizure severity",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39847501_Chen2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Overexpression in wild-type brain changed interneuron excitability even though it produced no seizures.",
+    "snippet": "we observed a leftward, hyperpolarizing, shift in the I-O curve for AAV-Nav",
+    "anchor": "Results, PV+ interneuron excitability",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39847501_Chen2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The mouse age effect is not mapped onto human development by this paper.",
+    "snippet": "it remains to be established whether this phenomenon occurs in human infants",
+    "anchor": "Discussion, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39847501_Chen2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The headline seizure endpoint rests on three mice per arm with no statistical test in the table.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] (the table is published only as an image) Table 1 lists three untreated null mice and three AAV-Nav-beta-1-treated null mice, each scored on P14, P15 and P16, with per-day counts of seizure-like events under and over 10 s; the untreated average is 16.4 and 8.7 events per day and the treated average is 8 and 0; no statistical test, confidence interval or p value appears anywhere in the table.",
+    "anchor": "Table 1",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID39847501_Chen2025_supplement/jci-135-182584-g230.jpg",
+    "panel_text_relation": "text_confirmed_by_panel"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST fullTextXML returned HTTP 200 with a full JATS body on 2026-10-03; the declared article artefact is that response, byte for byte."
+ }
+}

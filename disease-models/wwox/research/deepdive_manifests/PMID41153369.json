@@ -1,0 +1,198 @@
+{
+ "schema_version": 2,
+ "pmid": "41153369",
+ "doi": "10.3390/genes16101152",
+ "receipt": "FTR-20261003-41153369-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID41153369.md",
+  "disease-models/wwox/research/intake_wave_20261003w3_A.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W3-A-L239R-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W3-A-REGISTRY-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is owned by other batches; the corrections this reading supports are proposed as commit candidates and in the intake note."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A clinical genotype-phenotype source supplies no therapeutic lever for the reference genotype class; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is tested with a measured outcome beyond clinical anecdote; nothing to send to BLOCK-1 triage."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The triples are published in the candidates for a blind auditor; the reader cannot audit their own locators."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 1,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "A single-centre medical-genetics and paediatric-neurology group reporting a diagnostic-yield cohort; the WWOX content is two table rows. Credible for genotype and syndrome label; carries no phenotype depth. Not a per-author sweep: weighting rests on the paper's own design."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (L239R OR Leu239Arg)",
+    "count": 1,
+    "source": "PubMed ESearch 2026-10-03"
+   }
+  ],
+  "note": "PubMed indexes one record under the allele name; the three reports of homozygous p.L239R known to this reading (this cohort, PMID 42092735, PMID 30094525) are found by reading, not by search."
+ },
+ "multihop": {
+  "references_enumerated": 54,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "54 references enumerated; refs 27 (Banne 2021) and 34 (Oliver 2023) are the WWOX-direct citations, both held elsewhere in LEGEND; none opened, no claim here depends on them."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 41153369 --hops 1 (run AFTER the first pass)",
+  "hits": 6,
+  "note": "PAPER 013 / LIT-0013 confirmed by Table 1; FT-107 and the 2026-09-21 comparator analysis treat the siblings as an independent no-parkinsonism contrast, which the table cannot bear and which may not be independent of PMID 42092735. See CC-20261003W3-A-L239R-01."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-03 via PubMed metadata (get_article_metadata): publication types ['Journal Article']; no retraction, expression of concern or correction listed for PMID 41153369.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 54,
+   "references_screened": 51,
+   "references_with_doi": 51,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --doi 10.3390/genes16101152 --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41153369_SunnetciAkkoyunlu2025_PMC.xml",
+   "sha256": "b62eb5908448190f44f93222ae3c1fc2a6d40356d3beaf0b1016c16ec84592cf",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12562696/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "result_sha256": "b62eb5908448190f44f93222ae3c1fc2a6d40356d3beaf0b1016c16ec84592cf"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID41153369_SunnetciAkkoyunlu2025_supplement/genes-16-01152-g001.jpg",
+   "sha256": "0872c7ceb0ff1a1e3d3fb79fb03637ef32aaa750e59a3355fc44d3e66475f36c",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/b4a8/12562696/470227e03fc3/genes-16-01152-g001.jpg",
+    "http_method": "GET",
+    "tier": "PMC CDN figure blob",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-03",
+    "result_sha256": "0872c7ceb0ff1a1e3d3fb79fb03637ef32aaa750e59a3355fc44d3e66475f36c"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The two WWOX patients are siblings from a consanguineous family.",
+    "snippet": "A homozygous WWOX gene variant was detected in two siblings (case #49–50) from a consanguineous family.",
+    "anchor": "Results, segregation paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41153369_SunnetciAkkoyunlu2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The WWOX diagnostic count in the panel cohort is two.",
+    "snippet": "PLCB1 (n = 2), WWOX (n = 2), SCN2A (n = 2)",
+    "anchor": "Results, para 2 (gene counts of P/LP variants)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41153369_SunnetciAkkoyunlu2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Case #50 is the sibling with hypsarrhythmia in Table 1, classed EIDEE.",
+    "snippet": "Hypsarrhythmia and multifocal epileptiform anomaly on a disorganized background in EEG",
+    "anchor": "Table 1, WWOX row 2 (case 50, F, 11 months), Clinical Features column",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41153369_SunnetciAkkoyunlu2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Discussion attributes hypsarrhythmia to case #49, contradicting Table 1.",
+    "snippet": "WWOX missense variant (p.L239R) identified in patient (case #49) from a consanguineous family was linked to hypsarrhythmic EEG patterns and multifocal seizures",
+    "anchor": "Discussion, West syndrome paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41153369_SunnetciAkkoyunlu2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The records reviewed span October 2017 to July 2020.",
+    "snippet": "records of children who underwent NGS testing at the Department of Medical Genetics between October 2017 and July 2020 were retrieved",
+    "anchor": "Patients and Methods 2.1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41153369_SunnetciAkkoyunlu2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The allele is the cDNA change c.716T>G, p.L239R, homozygous.",
+    "snippet": "A homozygous missense variant in WWOX (c.716T>G, p.L239R) was identified in an infant presenting with hypsarrhythmia",
+    "anchor": "Discussion, EIDEE paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41153369_SunnetciAkkoyunlu2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1 bar for WWOX equals two patients.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 1 horizontal bar chart: the WWOX bar ends at 2 on the 'Number of patients' axis; SCN1A 8, KCNQ2 4, STXBP1 3.",
+    "anchor": "Figure 1",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID41153369_SunnetciAkkoyunlu2025_supplement/genes-16-01152-g001.jpg",
+    "panel_text_relation": "text_confirmed_by_panel"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC12562696/fullTextXML returned HTTP 200 with a full JATS body, tables included, on 2026-10-03; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure legend or a figure."
+ }
+}

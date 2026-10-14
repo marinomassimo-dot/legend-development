@@ -1,0 +1,234 @@
+{
+ "schema_version": 2,
+ "pmid": "41036104",
+ "doi": "10.1016/j.omtm.2025.101588",
+ "receipt": "FTR-20261004-41036104-01",
+ "landing": [
+  "FTR-20261004-41036104-01",
+  "disease-models/wwox/research/fulltext_dossiers/PMID41036104.md",
+  "disease-models/wwox/research/intake_wave_20261004w8_B.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline. An off-gene engineering record read only for the transferable question, with the transfer limit stated on every datum."
+  },
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Europe PMC fullTextXML returned the body on the first request (HTTP 200, 131246 bytes)."
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "paper_packet.py reported no manifest, no receipt and no registry identity: a first reading."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "OWED. Promoter selection is a therapeutic-design parameter and belongs in the therapeutic tracker; forging is separate work and is not claimed as done."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 37,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-04: 'Bradbury AM[au]' 37; 'Bradbury AM[au] AND WWOX' 0.",
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "A CNS gene-therapy laboratory with no WWOX publication. Its competence is in AAV vector design for leukodystrophy, which is exactly the competence the transferable question needs; its authority says nothing about WWOX and no WWOX statement is drawn from it."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "occurrences of WWOX or Wwox in the persisted JATS body",
+    "route": "local count over files/fulltext/PMID41036104_Chornyy2025_PMC.xml",
+    "count": 0
+   }
+  ],
+  "note": "Zero. This is an earned null for the gene: the paper never mentions WWOX and makes no statement about it. It is read only for the promoter question, and every datum carried from it is labelled with its transfer limit."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 37,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "All 37 references parsed from the persisted JATS and tested for the strings WWOX and Wwox: none matched. The paper's bibliography is AAV vector design, promoter engineering and leukodystrophy.",
+  "resolved": [],
+  "queued": [],
+  "note": "No gene-direct reference exists, so there is no hop to follow and nothing is queued. No gap."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does the shared root files/ tree already hold any artefact for PMID 41036104?",
+  "hits": 0,
+  "finding": "No. paper_packet.py reported 0 artefacts before acquisition. The one artefact declared below was fetched and persisted by this reading."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-04",
+  "route": "PubMed esummary for 41036104",
+  "result": "pubtype ['Journal Article']; the CommentsCorrections reference list is empty. No retraction, no expression of concern, no erratum.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 37,
+   "references_screened": 34,
+   "references_with_doi": 34,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 24,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   },
+   "citing_relation": "No dependency was flagged, so no citing_relation is owed. The references with no DOI support no statement this reading carries."
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41036104_Chornyy2025_PMC.xml",
+   "sha256": "5f92c97751bab4cafe7631970340e8ca672e7d190cf8ae7876b73bb05217c5ec",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12481918/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_rest_fulltextxml",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-04",
+    "derived": false,
+    "result_sha256": "5f92c97751bab4cafe7631970340e8ca672e7d190cf8ae7876b73bb05217c5ec"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC JATS body held locally and fingerprinted; the single in-text table was flattened cell-wise (td and tr boundaries preserved) rather than as running text. Supplementary Document S1 (Figures S1-S4 and Table S1) was not retrieved, and that gap is declared in the dossier and in the receipt coverage.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored. Every entry is a Methods specification, a Results number or a limitation the authors state.",
+  "entries": [
+   {
+    "proposition": "The system is a single intracerebroventricular injection into neonatal mice, which fixes the developmental window of every number in this paper.",
+    "snippet": "C57Bl/6 neonates (P0–P1) were cryo-anesthetized (∼2 min) before the i.c.v. injections.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41036104_Chornyy2025_PMC.xml",
+    "anchor": "Materials and methods, 'Intracerebroventricular injections'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The doses are NOT matched across the promoter arms of a head-to-head promoter comparison: they span 7.0 to 8.5 times ten to the tenth vector genomes per animal, a spread of about 21 percent, and the paper does not adjust for it.",
+    "snippet": "The viral genome (vg) doses for each vector were as follows: 7.50E10 vg per animal for AAV9.GFAP.EGFP, AAV9.gfa1405.EGFP, AAV9.gfaABC(1)D.EGFP, AAV9.P546.EGFP, AAV9. CAG.EGFP, and AAV9.EFS.EGFP; 7.00E10 vg per animal for AAV9.tCAG.EGFP; 8.50E10 vg per animal for AAV9.CNP.EGFP and AAV9.rMBP.EGFP; and 8.00E10 vg per animal for AAV9.MAG.EGFP.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41036104_Chornyy2025_PMC.xml",
+    "anchor": "Materials and methods, 'Intracerebroventricular injections'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The packaging ceiling the whole cassette argument rests on, stated by the authors for their vector.",
+    "snippet": "All constructs were designed to fit within the 4.8 kb packaging capacity of the ssAAV vector.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41036104_Chornyy2025_PMC.xml",
+    "anchor": "Materials and methods, 'Construct design and development'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The headroom the new astrocyte promoter buys, stated as a transgene length rather than as a promoter length.",
+    "snippet": "Through our promoter engineering, we were able to maximize the accommodating transgene length to 2.3 kb, thereby allowing for larger transgenes to be packaged within ssAAV while also maintaining strong neuraxial and astrocyte targeting.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41036104_Chornyy2025_PMC.xml",
+    "anchor": "Results, 'Design and development of novel astrocyte-specific promoter derived from GFAP'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The head-to-head ranking by brain-area coverage, with the neuron-restricted promoter essentially tied with the ubiquitous one.",
+    "snippet": "The CAG promoter demonstrated widespread EGFP protein expression, covering up to 42% of the total brain area",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41036104_Chornyy2025_PMC.xml",
+    "anchor": "Results, 'Comparative fluorescent analysis of EGFP protein expression and distribution in the mouse brain post-ssAAV9 i.c.v. injection'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The neuron-restricted promoter's coverage and intensity, which is the number that decides whether a neuron-restricted cassette loses reach.",
+    "snippet": "while the p546 promoter’s total distribution area was comparable to CAG (41% of the total brain area), the protein expression pattern was distinct, with lower intensity in projections compared to soma-restricted expression",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41036104_Chornyy2025_PMC.xml",
+    "anchor": "Results, same section",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The measured cell-type specificity of each promoter, which is the only quantitative specificity statement in the paper.",
+    "snippet": "For astrocytes, the EGFP signal levels were found to be quite varied: CAG, 36%; p546, 1.9%; GFAP, 44%; gfaABC(1)D, 58%; and gfa1405, 37.7% colocalization with astrocytes. On the other hand, neuronal colocalization presented a different pattern: 27% with CAG, 72% with p546, 13% with GFAP, 19% with gfaABC(1)D, and 11.9% with gfa1405",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41036104_Chornyy2025_PMC.xml",
+    "anchor": "Results, 'Colocalization analysis of EGFP protein expression with cell-specific biomarkers in the brain'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The oligodendrocyte promoter marketed as the broad option is explicitly leaky, and half of the cells it transduces were never identified.",
+    "snippet": "In the CNP group, all EGFP-positive cells had up to 16% of oligodendrocytes and up to 21%–29% of neurons that potentially left ∼50% unidentified cells",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41036104_Chornyy2025_PMC.xml",
+    "anchor": "Results, 'Colocalization analysis of EGFP protein expression with cell-specific biomarkers in the brain'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE FINDING THAT BOUNDS THE CELL-SPECIFIC PROMOTER ARGUMENT: the astrocyte-restricted promoter produced confirmed significant protein in the liver, despite minimal whole-organ fluorescence there.",
+    "snippet": "Although sensitive qPCR analysis revealed robust EGFP mRNA in the liver and only low-level transcripts in the heart (Figure 2B), whole-organ fluorescence showed minimal signal in either tissue (Figure 3); however, western blot quantification confirmed the significant protein expression in the liver (Figure S1).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41036104_Chornyy2025_PMC.xml",
+    "anchor": "Results, 'Examination of promoter-driven EGFP mRNA expression and protein distribution in CNS and peripheral tissues post-ssAAV9 delivery'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Restated by the authors as a ranking: the cell-restricted promoter is the one that put the most protein into the liver.",
+    "snippet": "with CAG driving the most EGFP protein in BA1, BA2, and the heart; CNP driving the most EGFP protein in BA3; and, finally, gfa1405 driving the most EGFP protein in the liver (Figure S1)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41036104_Chornyy2025_PMC.xml",
+    "anchor": "Results, same section",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Discussion's liver reassurance addresses the ubiquitous promoter and not the cell-restricted one that its own Results showed to be the largest hepatic protein source.",
+    "snippet": "In the liver, however, a different pattern emerged: CAG drove modest, but highly variable, transcript levels but only minimal protein accumulation. Such uncoupling is common in hepatocytes and likely reflects post-transcriptional controls that limit translation or accelerate protein turnover.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41036104_Chornyy2025_PMC.xml",
+    "anchor": "Discussion, penultimate paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors disqualify their own fastest read-out as qualitative, which is why the mRNA/fluorescence/blot disagreements are not noise but a method statement.",
+    "snippet": "whole-organ imaging is impacted by several factors, including tissue density, thickness, color, quality of perfusion, etc., and therefore was used in our study solely as a qualitative readout",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41036104_Chornyy2025_PMC.xml",
+    "anchor": "Results, 'Examination of promoter-driven EGFP mRNA expression and protein distribution...'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state the neonatal-only limitation themselves and defer the adult characterisation to future work.",
+    "snippet": "Finally, we acknowledge that sole testing in neonatal animals may not provide a complete picture of promoter activity or expression profiles.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41036104_Chornyy2025_PMC.xml",
+    "anchor": "Discussion, paragraph on astrocyte-specific promoters",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors' own safety framing for why promoter choice matters at all, citing clinical deaths attributed in part to hepatic transgene expression.",
+    "snippet": "In clinical settings, high-dose AAV vector administration has been linked to such complications, as demonstrated by fatalities after administration of Zolgensma for SMA and in a myotubular myopathy trial, where excessive transgene expression in the liver was identified as a contributing factor.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41036104_Chornyy2025_PMC.xml",
+    "anchor": "Discussion, paragraph on ubiquitous promoters",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}

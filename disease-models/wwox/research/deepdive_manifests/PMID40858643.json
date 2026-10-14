@@ -1,0 +1,248 @@
+{
+ "schema_version": 2,
+ "pmid": "40858643",
+ "doi": "10.1038/s41525-025-00521-4",
+ "receipt": "FTR-20261004-40858643-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID40858643.md",
+  "disease-models/wwox/research/intake_wave_20261004w8_A.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W8-A-MEASURED-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W8-A-REGISTRY-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "One table row with no WWOX narrative or assay; nothing to mine beyond the allele-class record."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No intervention is tested."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is tested."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "A reader cannot audit their own locators."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "A large human-genetics diagnostic laboratory (ID/DD genome sequencing). Credible on variant detection and SV resolution; the WWOX case is a classification without functional data."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "registry_records.py get --pmid 40858643 (LEGEND)",
+    "count": 0,
+    "source": "LEGEND registries 2026-10-04"
+   },
+   {
+    "query": "fulltext_receipts.py status --pmid 40858643",
+    "count": 0,
+    "source": "receipt ledger 2026-10-04"
+   },
+   {
+    "query": "registry_records.py get --theme 517-1G / 517-1 / 'exon 5 deletion' (after first pass)",
+    "count": 0,
+    "source": "LEGEND registries 2026-10-04"
+   }
+  ],
+  "note": "LEGEND holds no record of this paper or of c.517-1G>A."
+ },
+ "multihop": {
+  "references_enumerated": 36,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "disposition": "36 references enumerated from the JATS ref-list; none is a WWOX gene-direct reference (earned null)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 40858643; --theme 517-1G, 517-1, Hamanaka, 'exon 5 deletion', Ex5 after the first pass",
+  "hits": 0,
+  "note": "No record names the paper or the allele; 'Ex5' hits an unrelated FRA16D yeast record."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-04 via PubMed metadata (get_article_metadata): publication types ['Journal Article']; no retraction, expression of concern or correction listed for PMID 40858643.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 36,
+   "references_screened": 35,
+   "references_with_doi": 35,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 24,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID40858643_Hamanaka2025_PMC.xml",
+   "sha256": "549be71588ce8624e1dcf657e23b54b2b708223f4870e7cc0cc9368733cf28b8",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12381280/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": false,
+    "result_sha256": "549be71588ce8624e1dcf657e23b54b2b708223f4870e7cc0cc9368733cf28b8"
+   }
+  },
+  {
+   "path": "files/supplements/PMID40858643/s.zip",
+   "sha256": "2b9f16a1f944d7750a9b4ee6ce2653017461af58809c9b0a04d58e5f4f62f6a0",
+   "kind": "supplement_binary",
+   "note": "Europe PMC supplementaryFiles container for PMC12381280, kept unchanged; the members cited below were extracted from it byte-for-byte.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12381280/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": false,
+    "result_sha256": "2b9f16a1f944d7750a9b4ee6ce2653017461af58809c9b0a04d58e5f4f62f6a0"
+   }
+  },
+  {
+   "path": "files/supplements/PMID40858643/41525_2025_521_MOESM2_ESM.xlsx",
+   "sha256": "1dc50d5de2de908a0cd422a561cb65ff3a6de85f8b1751b5a550ff4492b82a3c",
+   "kind": "supplement_binary",
+   "note": "Supplementary Data 1-3 workbook.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12381280/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip, member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": true,
+    "derived_from": "files/supplements/PMID40858643/s.zip",
+    "extractor": {
+     "name": "python3 -m zipfile",
+     "version": "Python 3.12",
+     "call": "zipfile -e, member written byte-for-byte"
+    },
+    "result_sha256": "1dc50d5de2de908a0cd422a561cb65ff3a6de85f8b1751b5a550ff4492b82a3c"
+   }
+  },
+  {
+   "path": "files/supplements/PMID40858643/MOESM2_Pt2317_rows.txt",
+   "sha256": "f8750177131b0bb42c3d5e325e6c5002aff0e4a79f71fe4eb3417d0b59883b6b",
+   "kind": "supplement_text",
+   "note": "Derived cell-wise text of the two rows naming the WWOX case in Supplementary Data 1 and 2, with each sheet's first three rows as header; nothing else of the workbook is represented. Contains an inheritance column this edition does not carry.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplements/PMID40858643/41525_2025_521_MOESM2_ESM.xlsx",
+    "acquired_on": "2026-10-04",
+    "extractor": {
+     "name": "xlsx_rows.py + derive.py (scratchpad, stdlib zipfile + regex)",
+     "version": "2026-10-04",
+     "call": "rows containing 'Pt2317', sharedStrings resolved, XML entities unescaped"
+    },
+    "result_sha256": "f8750177131b0bb42c3d5e325e6c5002aff0e4a79f71fe4eb3417d0b59883b6b"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC12381280/fullTextXML on 2026-10-04 returned HTTP 200 with a <body>; the one WWOX row of Table 2 is in the JATS table, and the allele details live in the Supplementary Data workbook.",
+  "entries": [
+   {
+    "proposition": "Table 2 lists the WWOX case as compound heterozygous for c.517-1G>A and an exon 5 deletion, both Pathogenic; the splice allele is marked ES-detectable and the deletion not. Nothing else in the main text concerns WWOX.",
+    "snippet": "Pt2317 WWOX c.517-1G>A Comp het P Yes Unclassified (Epilepsy) Ex5 DEL P No",
+    "anchor": "Table 2, row Pt2317 (JATS table, read cell-wise)",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID40858643_Hamanaka2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The splice allele is an intron-5 canonical acceptor change (exon 6 acceptor) with no protein consequence given; its pathogenicity rests on rule-based and in-silico evidence (CADD 25.1; PVS1, PM2, PM3, PP3), not on an RNA assay.",
+    "snippet": "G=c.517-1G>A | H=. | I=Compound heterozygous",
+    "anchor": "Supplementary Data 1 (sheet1), row 24, cell-wise",
+    "surface": "supplement",
+    "artifact": "files/supplements/PMID40858643/MOESM2_Pt2317_rows.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The ACMG evidence for the splice allele is PVS1, PM2, PM3 and PP3, with CADD 25.1 and no SIFT/PolyPhen2 value.",
+    "snippet": "R=- | S=- | T=25.1 | U= | V=Pathogenic | W=PVS1, PM2, PM3, PP3",
+    "anchor": "Supplementary Data 1 (sheet1), row 24, cell-wise",
+    "surface": "supplement",
+    "artifact": "files/supplements/PMID40858643/MOESM2_Pt2317_rows.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The second allele is a single-exon CNV, a deletion-insertion spanning WWOX exon 5, called by five SV callers; it is classified PVS1, PM2, PM3 with no RNA or protein measurement.",
+    "snippet": "B=1 exon CNV | C=Chr16:g.78140467_78313935delinsCA | D=WWOX exon 5 (NM_016373)",
+    "anchor": "Supplementary Data 2 (sheet2), row 43, cell-wise",
+    "surface": "supplement",
+    "artifact": "files/supplements/PMID40858643/MOESM2_Pt2317_rows.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Phenotype band, class level (HPO terms): epilepsy with tonic seizures, exaggerated startle, rigidity, hypokinesia, contractures, feeding difficulty with recurrent aspiration pneumonia, intellectual disability, white-matter hyperintensity and atrophy, thalamic signal and size abnormality, cerebellar dysplasia.",
+    "snippet": "HP:0002267 (exaggerated startle response);HP:0002063 (rigidity);HP:0001250 (epilepsy);HP:0008872 (feeding difficulties in infancy);HP:0032792 (tonic seizure)",
+    "anchor": "Supplementary Data 1 (sheet1), row 24, HPO terms cell",
+    "surface": "supplement",
+    "artifact": "files/supplements/PMID40858643/MOESM2_Pt2317_rows.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The paper's RNA-seq was run on lymphoblastoid lines of selected non-WWOX cases (example: the CHASERR deletion case); no WWOX transcript was assayed.",
+    "snippet": "We therefore sought to determine the CHD2 expression level in Pt2190’s LCL in two independent RNA-seq batches.",
+    "anchor": "Results, first section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40858643_Hamanaka2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state that the next step for their novel candidates is functional validation, i.e. the cohort's classifications are not functionally established.",
+    "snippet": "validate promising candidates using functional approaches such as genome editing",
+    "anchor": "Discussion, penultimate paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40858643_Hamanaka2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}

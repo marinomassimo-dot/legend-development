@@ -1,0 +1,333 @@
+{
+ "schema_version": 2,
+ "pmid": "41677633",
+ "doi": "10.3390/cells15030270",
+ "pmcid": "PMC12897155",
+ "receipt": "FTR-20261003-41677633-02",
+ "landing": [
+  "FTR-20261003-41677633-02",
+  "disease-models/wwox/research/intake_wave_20261003w3_B.md"
+ ],
+ "landing_note": "Intake wave 3 2026-10-03, Scientist B, group B (organelle endpoints under WWOX loss or gain). The receipt is prepared and NOT appended: the Orchestrator records the wave's receipts in event order.",
+ "skills_considered": [
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline. The six papers of this group were read as one question (organelle endpoints under WWOX loss or gain), and the figure panels had to be inspected beside the running text of the same open artefact."
+  },
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Europe PMC REST fullTextXML returned a body for all six on the first attempt; figures and supplements came from the PMC OA S3 open-data bucket. No paywall was met and nothing was paid for."
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true,
+   "reason": "paper_packet.py packet and registry_records.py get were run per PMID before any source was opened; two of the six carry a prior partial receipt and one carries a prior manifest."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED. The triples are handed to the blind audit through the commit candidates' LOCATOR TRIPLES FOR BLIND AUDIT section; the producer of a reading must not be its verifier."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Not invoked. The group was assigned as a contradiction to characterise, not to resolve; enumerate_baseline would have added nothing the independence census does not already measure."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": true,
+  "total_publications": 138,
+  "publications_on_gene": 66,
+  "counts_measured": "PubMed esearch 2026-10-03 (tool=LEGEND-research): 'Chang NS[au]' 138, 'Chang NS[au] AND WWOX' 66, 'Hsu LJ[au]' 103, 'Hsu LJ[au] AND WWOX' 30.",
+  "weighting": "Five of the six papers in this group come from one laboratory lineage (Chang N-S / Hsu L-J, National Cheng Kung University). That laboratory originated WWOX and carries the gene's largest single output, so its measurements carry full weight; what it does NOT carry is independence. Two of its subjects are exclusive to it: 'Zfra NOT Chang NS[au]' returns 1 record and that record is an unrelated zebrafish androgen-receptor paper matching the string by accident; 'TIAF1 NOT Chang NS[au]' returns 5 of 20. The autophagy axis is the opposite case and is the reason this group is readable as a contradiction at all: 'WWOX AND autophagy' returns 10 records and 8 of them are from neither Chang NS nor Hsu LJ.",
+  "note": "Research-group knowledge base is excluded from the public edition; this rests on measured PubMed counts and on the papers' own author lists."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "Chang NS[au] AND WWOX",
+    "route": "PubMed esearch 2026-10-03",
+    "count": 66
+   },
+   {
+    "query": "WWOX AND autophagy",
+    "route": "PubMed esearch 2026-10-03",
+    "count": 10
+   },
+   {
+    "query": "WWOX AND autophagy NOT Chang NS[au] NOT Hsu LJ[au]",
+    "route": "PubMed esearch 2026-10-03",
+    "count": 8
+   }
+  ],
+  "note": "Maximum density: WWOX is the subject of the paper and the manipulated variable."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 68,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "68 <ref> elements; the MDPI deposit carries 1 PMID, so identifier-level dereferencing is not possible from the XML.",
+  "resolved": [],
+  "queued": [],
+  "dedup_performed": "Not performed: no PMID list in the deposit."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "What does the corpus already assert about this paper, and does any of it misreport the direction of effect?",
+  "hits": 4,
+  "finding": "CORPUS-STUB-147, LIT-0165 and LIT-EX-005 all claim PMID 41677633 - two literature records for one identity, which registry_records.py itself flags AMBIGUOUS - and DL-MECH-016 carries the lysosomal statement. None of the four records the direction that decides transfer: in this paper WWOX LOSS is protective under serum starvation (higher viability, preserved mitochondrial membrane potential, lower ROS in Wwox-null MEFs). The registry title also drops the final 's' of 'Stress Responses'."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-03",
+  "route": "PubMed efetch CommentsCorrections for the six PMIDs in one call",
+  "result": "No retraction, no expression of concern, no erratum on this paper.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 68,
+   "references_screened": 64,
+   "references_with_doi": 64,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 4
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41677633_Su2026_PMC.xml",
+   "sha256": "5a9b26f202e2176f4f263c330c476515d0ff03105372433baa3660842ed27577",
+   "kind": "article_text",
+   "note": "Europe PMC REST fullTextXML, acquired 2026-10-03 for a first-hand read of this group.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12897155/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_rest_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "5a9b26f202e2176f4f263c330c476515d0ff03105372433baa3660842ed27577"
+   }
+  },
+  {
+   "path": "files/figures/PMID41677633/cells-15-00270-g001.jpg",
+   "sha256": "47d1e87ad04aa6e5fc6adacbd79dff36c6ef00f9e1207e8504fd24360b754a6f",
+   "kind": "figure",
+   "note": "Figure panel inspected as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12897155.1/cells-15-00270-g001.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "47d1e87ad04aa6e5fc6adacbd79dff36c6ef00f9e1207e8504fd24360b754a6f"
+   }
+  },
+  {
+   "path": "files/figures/PMID41677633/cells-15-00270-g004.jpg",
+   "sha256": "ce475f500673b8a14cf603055d8d84551d09bff70be6f9020e206a37c8656615",
+   "kind": "figure",
+   "note": "Figure panel inspected as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12897155.1/cells-15-00270-g004.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "ce475f500673b8a14cf603055d8d84551d09bff70be6f9020e206a37c8656615"
+   }
+  },
+  {
+   "path": "files/figures/PMID41677633/cells-15-00270-g005.jpg",
+   "sha256": "3168ed02e1089a8e832f26c11549ac8edb0fc3f456736ff2c6d3d86d5e027292",
+   "kind": "figure",
+   "note": "Figure panel inspected as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12897155.1/cells-15-00270-g005.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "3168ed02e1089a8e832f26c11549ac8edb0fc3f456736ff2c6d3d86d5e027292"
+   }
+  },
+  {
+   "path": "files/figures/PMID41677633/cells-15-00270-g007.jpg",
+   "sha256": "d30b82d8ae1bb522ae0d870285483c333125044dada606457f383ea01419d8f0",
+   "kind": "figure",
+   "note": "Figure panel inspected as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12897155.1/cells-15-00270-g007.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "d30b82d8ae1bb522ae0d870285483c333125044dada606457f383ea01419d8f0"
+   }
+  },
+  {
+   "path": "files/figures/PMID41677633/cells-15-00270-g008.jpg",
+   "sha256": "7c50a97837e1ebc2f280aade62077c1fc8c9c0e479f65fe460f3a6c93bae2436",
+   "kind": "figure",
+   "note": "Figure panel inspected as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12897155.1/cells-15-00270-g008.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "7c50a97837e1ebc2f280aade62077c1fc8c9c0e479f65fe460f3a6c93bae2436"
+   }
+  },
+  {
+   "path": "files/supplements/PMID41677633/cells-4078288-supplementary.pdf",
+   "sha256": "eabc63d92a279282a8d3924fdf648607e14ee49eaa17016e52d72458c5f9465f",
+   "kind": "supplement_binary",
+   "note": "Supplementary PDF extracted from the deposited zip; Figures S1-S4 read as rendered pages at 110 dpi.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12897155.1/cells-15-00270-s001.zip",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "eabc63d92a279282a8d3924fdf648607e14ee49eaa17016e52d72458c5f9465f"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "JATS from the Europe PMC fullTextXML endpoint for PMC12897155, 153568 bytes. Every body locator is matched against the body of that artefact by deepdive_manifest.py --verify-artifacts.",
+  "abstract_anchoring_waived": "No locator draws on the abstract; every text locator is matched against the body of the declared JATS artefact.",
+  "note": "Coverage: abstract, introduction, Materials and Methods, all Results sections, Discussion, Conclusions, Table 1, all eight figure legends, and the deposited supplement (Figures S1-S4, read as rendered pages at 110 dpi). Figure panels 1, 4, 5, 7, 8 were inspected as images at native resolution; panels 2, 3 and 6 were read from their legends only, so the reading is declared partial.",
+  "entries": [
+   {
+    "proposition": "UNDER SERUM STARVATION THE WWOX-NULL CELL IS THE SURVIVING CELL. This is the direction that transfers, and it is the opposite of the protective reading of WWOX: loss of the gene preserves viability under this stress.",
+    "snippet": "Wwox+/+ MEFs showed a significantly enhanced reduction in cell viability as compared with Wwox−/− MEFs after serum starvation for 72 h",
+    "surface": "body",
+    "anchor": "Results 3.3, viability paragraph",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "primary mouse embryonic fibroblast",
+     "cell_line": "MEF",
+     "genotype": "Wwox+/+ vs Wwox-/- (constitutive null)",
+     "treatment": "serum-free medium",
+     "timepoint": "48/72/96 h",
+     "comparator": "10% serum",
+     "endpoint": "WST-8 viability"
+    },
+    "artifact": "files/fulltext/PMID41677633_Su2026_PMC.xml"
+   },
+   {
+    "proposition": "THE MITOCHONDRIAL ENDPOINT MOVES WITH THE SAME SIGN: WWOX PRESENCE IS WHAT COLLAPSES THE MEMBRANE POTENTIAL. Mitochondrial membrane potential is a candidate rescue readout, and in this system it is WWOX-dependent.",
+    "snippet": "we detected a significant reduction in MMP in Wwox+/+ MEFs after serum starvation in a time-dependent manner",
+    "surface": "body",
+    "anchor": "Results 3.3, rhodamine 123 paragraph",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "primary mouse embryonic fibroblast",
+     "cell_line": "MEF",
+     "genotype": "Wwox+/+ vs Wwox-/-",
+     "treatment": "serum-free medium",
+     "timepoint": "12/24/48 h",
+     "comparator": "serum-containing control",
+     "endpoint": "rhodamine 123 mitochondrial membrane potential"
+    },
+    "artifact": "files/fulltext/PMID41677633_Su2026_PMC.xml"
+   },
+   {
+    "proposition": "THE LYSOSOMAL ROUTE RESTS ON PHARMACOLOGICAL INHIBITORS AND STATIC WESTERNS, NOT ON A FLUX ASSAY. No autophagic-flux measurement (LC3-II turnover, p62) is made anywhere in this paper; the route is inferred from which inhibitor rescues which band.",
+    "snippet": "The presence of E64d and pepstatin A reversed Bcl-XL and Mcl-1 protein downregulation after serum starvation in Wwox+/+ MEFs",
+    "surface": "body",
+    "anchor": "Results 3.5, E64d/pepstatin A paragraph",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "primary mouse embryonic fibroblast",
+     "cell_line": "MEF",
+     "genotype": "Wwox+/+",
+     "treatment": "serum starvation 32 h, E64d 30 uM or pepstatin A 15 uM in the last 4-8 h",
+     "timepoint": "32 h",
+     "comparator": "starved, no inhibitor",
+     "endpoint": "Bcl-XL and Mcl-1 immunoblot"
+    },
+    "artifact": "files/fulltext/PMID41677633_Su2026_PMC.xml"
+   },
+   {
+    "proposition": "ONE OF THE TWO LYSOSOME-ALKALINISING AGENTS DOES NOT RESCUE, AND THE RUNNING TEXT NAMES ONLY THE ONE THAT DOES. In Figure S3B the Mcl-1 loss is rescued by chloroquine (0.37 starved to 0.90 and 0.88) and NOT by ammonium chloride (0.31 and 0.30, i.e. no rescue), while the Results sentence reports chloroquine alone. Incomplete is not false, and a reader taking the sentence alone will over-read the lysosomal attribution.",
+    "snippet": "Figure S3. WWOX enhances Bcl-xL and Mcl-1 protein degradation via a lysosomal",
+    "surface": "figure",
+    "artifact": "files/supplements/PMID41677633/cells-4078288-supplementary.pdf",
+    "anchor": "Supplementary Figure S3, panel B (Mcl-1, NH4Cl 25 mM lanes versus CQ 100 uM lanes), page 4 of the deposited supplement rendered at 110 dpi",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[2]",
+    "qualifies_needle": "E64d and pepstatin A reversed",
+    "experimental_context": {
+     "system": "primary mouse embryonic fibroblast",
+     "cell_line": "MEF",
+     "genotype": "Wwox+/+",
+     "treatment": "serum starvation 32 h, NH4Cl 25 mM or chloroquine 100 uM in the last 4-8 h",
+     "timepoint": "32 h",
+     "comparator": "starved, no inhibitor",
+     "endpoint": "densitometry of Mcl-1 and Bcl-XL immunoblots"
+    }
+   },
+   {
+    "proposition": "WWOX DOES NOT BIND THE CARGO. The mechanism is left open by the authors themselves; nothing here licenses a direct WWOX-Bcl-XL or WWOX-Mcl-1 interaction.",
+    "snippet": "Co-immunoprecipitation experiments revealed that neither Bcl-XL nor Mcl-1 physically interacted with WWOX.",
+    "surface": "body",
+    "anchor": "Results 3.5, final paragraph",
+    "panel_text_relation": "text_only",
+    "artifact": "files/fulltext/PMID41677633_Su2026_PMC.xml"
+   },
+   {
+    "proposition": "THE AUTHORS THEMSELVES NAME THE MISSING CONTROL: no genetic test of the lysosomal/autophagic route was done, so the pathway attribution rests on drugs with known pleiotropy.",
+    "snippet": "Because pharmacological inhibitors may have pleiotropic effects, knockdown of essential genes involved in the autophagy or lysosomal degradation pathway using RNA interference tools needs to be tested for verification.",
+    "surface": "body",
+    "anchor": "Discussion, Mcl-1 degradation paragraph",
+    "panel_text_relation": "text_only",
+    "artifact": "files/fulltext/PMID41677633_Su2026_PMC.xml"
+   },
+   {
+    "proposition": "ROS IS NOT DIFFERENT AT BASELINE; THE DIFFERENCE IS STRESS-INDUCED. The baseline equality is the control that makes the stress-induced difference readable, and it also forbids a claim that WWOX loss raises ROS in unstressed primary fibroblasts.",
+    "snippet": "No differences in the amounts of ROS generation were observed between the freshly isolated Wwox+/+ and Wwox−/− MEFs",
+    "surface": "body",
+    "anchor": "Results 3.6, DCF-DA paragraph",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "primary mouse embryonic fibroblast",
+     "cell_line": "MEF",
+     "genotype": "Wwox+/+ vs Wwox-/-",
+     "treatment": "none (baseline) and serum-free medium",
+     "timepoint": "0 to 48 h",
+     "comparator": "time 0",
+     "endpoint": "DCF-DA flow cytometry"
+    },
+    "artifact": "files/fulltext/PMID41677633_Su2026_PMC.xml"
+   }
+  ]
+ }
+}

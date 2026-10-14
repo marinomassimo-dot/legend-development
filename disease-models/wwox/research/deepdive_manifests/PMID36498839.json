@@ -1,0 +1,241 @@
+{
+  "schema_version": 2,
+  "pmid": "36498839",
+  "doi": "10.3390/ijms232314510",
+  "receipt": "FTR-20261003-36498839-02",
+  "landing": [
+    "FTR-20261003-36498839-02",
+    "disease-models/wwox/research/fulltext_dossiers/PMID36498839.md",
+    "disease-models/wwox/research/intake_wave_20261003_B.md"
+  ],
+  "skills_considered": [
+    {
+      "skill": "legend-deepdive",
+      "used": false,
+      "reason": "Run inline; figure inspection and locator capture had to come from the same open document as the text reading."
+    },
+    {
+      "skill": "find-fulltext",
+      "used": false,
+      "reason": "Europe PMC fullTextXML returned HTTP 200 with a body on the first attempt; figures, PDF and supplements came from the PMC open-access S3 mirror, which needed no cascade."
+    },
+    {
+      "skill": "legend-locator-audit",
+      "used": false,
+      "reason": "OWED. This reading narrows claims that the working model may rest on and carries text-versus-panel contradictions, which is exactly the trigger."
+    }
+  ],
+  "group_assessment": {
+    "performed": true,
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": false,
+    "is_primary_group_for_gene": false,
+    "total_publications": 0,
+    "publications_on_gene": 0,
+    "counts_note": "total_publications and publications_on_gene are 0 because no per-author output count was measured in this pass. A zero here means NOT MEASURED, not zero publications.",
+    "note": "Research-group knowledge base excluded from the public edition; this rests on measured PubMed counts and the paper's own author and reference lists.",
+    "counts_measured": "PubMed esearch 2026-10-02 (tool=LEGEND-research): 'WWOX AND TIAF1' 9 records and 'WWOX AND TIAF1 NOT Chang NS[au]' 0 records; '\"TRAPPC6A\" AND (aggregation OR plaque)' 4 records, all four from this laboratory; 'Zfra' 17 records and 'Zfra NOT Chang NS[au]' 1 record, which is an unrelated zebrafish androgen-receptor paper matching the string by accident; 'WWOX AND \"dorsal root ganglion\"' 1 record, the group's own.",
+    "self_citation_measured": "Of this paper's 64 references 61 carry a PMID; 28 of those have Chang NS as an author, and all three PMID-less references are his (PubMed esummary author lists, 2026-10-02). That is 31 of 64, 48 percent.",
+    "weighting": "Same laboratory as B1, B2 and B4. The paper also declares a patent held by two of its authors on the intervention it evaluates, which is a development interest in the result."
+  },
+  "field_density": {
+    "wwox_directed": true,
+    "queries": [
+      {
+        "query": "WWOX AND TIAF1 NOT Chang NS[au]",
+        "route": "PubMed esearch 2026-10-02",
+        "count": 0
+      },
+      {
+        "query": "\"TRAPPC6A\" AND (aggregation OR plaque)",
+        "route": "PubMed esearch 2026-10-02",
+        "count": 4
+      }
+    ],
+    "note": "Maximum density for the mechanism, zero density outside one laboratory."
+  },
+  "multihop": {
+    "performed": false,
+    "references_enumerated": 64,
+    "gene_direct_refs_in_source": [],
+    "enumeration_method": "64 references parsed from the JATS back matter; 61 carry a PMID and were resolved by PubMed esummary for authorship only.",
+    "resolved": [],
+    "queued": []
+  },
+  "corpus_crossquery": {
+    "performed": true,
+    "query": "Is the Wwox heterozygote memory and aggregation phenotype reported by any other laboratory?",
+    "hits": 0,
+    "finding": "No. Every heterozygote behavioural or aggregation datum in the corpus is this laboratory's."
+  },
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-10-02",
+    "route": "PubMed esummary pubtype for 36498839 and exact DOI/PMID match against files/retraction_watch/retractionwatch_20261002.csv (72870 rows)",
+    "result": "No retraction, no expression of concern, no erratum; no Retraction Watch row.",
+    "hold": false,
+    "dependencies": {
+      "flagged": [],
+      "noted": [],
+      "paper_verdict": "SCREENED_CLEAN",
+      "reference_source": "network",
+      "references_declared": 64,
+      "references_screened": 57,
+      "references_with_doi": 57,
+      "schema": "retraction_check.dependencies/1",
+      "screened": true,
+      "snapshot": {
+        "date": "2026-09-10",
+        "days_since_fetch": 22,
+        "rows": 72476,
+        "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+      },
+      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+      "unscreenable": {
+        "UNSCREENABLE_NO_DOI": 7
+      }
+    }
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID36498839_Lin2022_PMC.xml",
+      "sha256": "e250cd1951de087f2349294c43f5c5ac9a29f47fe3ef7fbacf12bb37482b1c9d",
+      "kind": "article_text",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9739312/fullTextXML",
+        "http_method": "GET",
+        "tier": "europepmc_rest_fulltextxml",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-02",
+        "derived": false,
+        "result_sha256": "e250cd1951de087f2349294c43f5c5ac9a29f47fe3ef7fbacf12bb37482b1c9d"
+      }
+    },
+    {
+      "path": "files/figures/PMID36498839/native/ijms-23-14510-g001.jpg",
+      "sha256": "7274dc5743531b50b23078dfd71d618f220e4be978ff82ce83e689fc1965cf63",
+      "kind": "figure",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9739312.1/ijms-23-14510-g001.jpg",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-02",
+        "derived": false,
+        "result_sha256": "7274dc5743531b50b23078dfd71d618f220e4be978ff82ce83e689fc1965cf63"
+      }
+    },
+    {
+      "path": "files/figures/PMID36498839/native/ijms-23-14510-g005.jpg",
+      "sha256": "89dc6880dcd2e9ed563f85be4d5738ce522cf704d0b6c3bc59c94c40d2ade867",
+      "kind": "figure",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9739312.1/ijms-23-14510-g005.jpg",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-02",
+        "derived": false,
+        "result_sha256": "89dc6880dcd2e9ed563f85be4d5738ce522cf704d0b6c3bc59c94c40d2ade867"
+      }
+    },
+    {
+      "path": "files/figures/PMID36498839/native/ijms-23-14510-g007.jpg",
+      "sha256": "b0402b137c84c19ff3eaa4f062212409ec1be58df46530c0f0bf1ead5ded43f8",
+      "kind": "figure",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9739312.1/ijms-23-14510-g007.jpg",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-02",
+        "derived": false,
+        "result_sha256": "b0402b137c84c19ff3eaa4f062212409ec1be58df46530c0f0bf1ead5ded43f8"
+      }
+    }
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC JATS XML fingerprinted; all seven figure rasters and the supplementary zip retrieved from the PMC open-access S3 mirror. Figures 1, 5 and 7 were inspected as images; the supplementary zip (Figures S1-S5) was downloaded but its contents were NOT opened, so the supplementary coverage of this reading is not_read.",
+    "abstract_anchoring_waived": "No locator is abstract-anchored; each entry bounds a claim the abstract or the Discussion makes.",
+    "entries": [
+      {
+        "proposition": "THE PAPER'S HEADLINE WWOX FINDING IS CONTRADICTED BY ITS OWN PANEL. The text asserts pT12-WWOX aggregates in the heterozygous cortex but not in wild type; Figure 7C's immunointensity bar chart for pT12-WWOX reports p > 0.05.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 7C 'pT12-WWOX': upper bar chart '% changes in immunointensity' Wwox+/+ vs Wwox+/- labelled p > 0.05; lower bar chart '# Plaques' with three visible data points on the Wwox+/- bar at roughly 45, 22 and 1, mean about 22 with an error bar reaching about 45, against a wild-type bar at about 0, labelled ** p < 0.001.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID36498839/native/ijms-23-14510-g007.jpg",
+        "anchor": "Figure 7C, native PMC open-access raster",
+        "panel_text_relation": "text_contradicted_by_panel",
+        "contradicts": "entries[1]",
+        "contradicts_needle": "pT12-WWOX aggregates or plaques were shown in the cortex"
+      },
+      {
+        "proposition": "The sentence the panel contradicts, quoted verbatim.",
+        "snippet": "pT12-WWOX aggregates or plaques were shown in the cortex",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36498839_Lin2022_PMC.xml",
+        "anchor": "Results 2.7, 'Identification of pT12-WWOX as Protein Aggregates in the Cortex of Old Heterozygous Wwox Mice'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Methods and Results disagree on the dosing schedule of the prevention experiment: Methods say three consecutive weekly injections, Results say four.",
+        "snippet": "3-month-old 3xTg mice received Zfra4-10 peptide or PBS via tail vein injections once per week for 3 consecutive weeks",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36498839_Lin2022_PMC.xml",
+        "anchor": "Methods 4.4, 'Animals'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Methods state five animals per group for the restoration experiment (the sentence quoted here opens 'five 10-month-old 3xTg mice'); the Figure 3 legend states ten per group and names the two groups 'sham' and 'control', naming no Zfra group at all. No sentence in the paper reconciles the two numbers. Dose and route are in this same sentence: 2 mM Zfra4-10 in 100 microlitres of PBS by tail vein, weekly.",
+        "snippet": "received four consecutive injections of Zfra4–10 solution (2 mM in PBS, 100 μL each injection)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36498839_Lin2022_PMC.xml",
+        "anchor": "Methods 4.4, 'Animals'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The paper's only WWOX-genotype cell system is mouse embryonic fibroblasts, not neurons, and the aggregation readout is a single blot with a '% increase in expression' row and no replicate count.",
+        "snippet": "The knockout MEF cells exhibited constitutive phosphorylation",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36498839_Lin2022_PMC.xml",
+        "anchor": "Results 2.1",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "FIGURE ATTESTATION qualifying the sentence above. Figure 1A has four lanes (Wwox +/+ and -/-, each +/- TGF-beta1) with a '% increase in expression' row and no error bars and no n; Figure 1B, the NFT panel, has no Wwox+/+ lane at all - it compares +/- with -/- - so the paper's statement that NFT levels are elevated in the knockout has no wild-type comparator in the panel that shows it.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1A: TPC6A/TIAF1/JNK1 blots, lanes Wwox +/+ and -/- x TGF-beta1 -/+, row '% increase in expression' 0, -0.1, 2.7, 7.4 (TPC6A), 0, 2.1, 31, 44 (TIAF1), 0, 1.3, 1, 20 (JNK1). Fig 1B: NFT blot, lanes Wwox +/- and -/- only, with alpha-tubulin loading control.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID36498839/native/ijms-23-14510-g001.jpg",
+        "anchor": "Figure 1, panels A and B, native PMC open-access raster",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[4]",
+        "qualifies_needle": "knockout MEF cells exhibited constitutive phosphorylation"
+      },
+      {
+        "proposition": "The neuronal model for the MPP+ arm is a neuroblastoma cell line, and the dose-response blots are declared as two repeats with no statistics.",
+        "snippet": "Two individual repeats were performed for each experiment",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36498839_Lin2022_PMC.xml",
+        "anchor": "Figure 2 legend",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The paper declares a patent on the intervention it evaluates, held by its senior author and one co-author. That does not make the measurements wrong; it is a development interest that travels with the framing.",
+        "snippet": "Method for treating Alzheimer’s disease",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID36498839_Lin2022_PMC.xml",
+        "anchor": "Section 6, 'Patents'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "FIGURE ATTESTATION. Figure 5B's learning-curve y-axis is labelled '% Exploration time' while the legend and the Results call it escape latency in the Morris water maze; and the Figure 5 legend states n = 5 in one sentence and n = 20 in the next for the same panels.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 5B left panel: y-axis '% Exploration time', x-axis 'Day' 0-5, two curves labelled Wwox+/- and Wwox+/+ with * at day 3 and *** at day 4; right panel '% Time in target quadrant' with 'n = 5' printed on the plot.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID36498839/native/ijms-23-14510-g005.jpg",
+        "anchor": "Figure 5B, native PMC open-access raster",
+        "panel_text_relation": "panel_only"
+      }
+    ]
+  }
+}

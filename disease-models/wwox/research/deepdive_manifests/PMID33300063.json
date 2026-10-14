@@ -1,0 +1,356 @@
+{
+ "schema_version": 2,
+ "pmid": "33300063",
+ "doi": "10.3892/mmr.2020.11754",
+ "receipt": "FTR-20261003-33300063-01",
+ "landing": [
+  "intake_wave_20261003w4_A",
+  "CC-20261003W4-A-REGISTRY-01",
+  "CC-20261003W4-A-AUTOPHAGY-01"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not invoked by name: the artifact route was already located by the selector (Europe PMC JATS, or a publisher bronze-OA PDF located through OpenAlex) and was re-fetched by this reader, digest-identical to the selector's copy."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not run: dossier, locators and candidates were produced directly under the Scientist brief; a second pass would duplicate them."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not run by the reader by design: the producer of a reading is not its verifier. Triples are handed to the blind audit in the commit candidates."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "research_type": "experimental_lab",
+  "output_kind": "primary_cell_line_study",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "total_publications": 1,
+  "publications_on_gene": 1,
+  "counts_measured": "PubMed esearch 2026-10-03: 'Zhang S[au] AND WWOX AND ovarian' 1 (this paper); the surname is too common for a meaningful author total.",
+  "weighting": "A gynaecology department group, unfunded by its own declaration, with no prior WWOX record; blots are representative without densitometry, and WWOX claims rest on overexpression and one siRNA."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "WWOX AND autophagy",
+    "route": "PubMed esearch 2026-10-03",
+    "count": 10
+   }
+  ],
+  "note": "Ten PubMed records join WWOX and autophagy; the direction is disputed among them (FT-074)."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 44,
+  "enumeration_method": "44 numbered references on the reading-order text; Europe PMC and Crossref hold no reference list for this DOI. Gene-direct references identified by title and resolved by PubMed title search; two (Gao 2016 osteosarcoma miR-214-3p; Baryla 2015 'Alteration of WWOX in human cancer') returned no PubMed hit and one (Lo 2015 review) returned several, so those three are named here and not listed.",
+  "gene_direct_refs_in_source": [
+   "24137423",
+   "22213016",
+   "25476151",
+   "20480411",
+   "27550453",
+   "18620777",
+   "14555208",
+   "24008736",
+   "22736928",
+   "33191002",
+   "25612104",
+   "23534718",
+   "25891642",
+   "25659037",
+   "23459853",
+   "26820701",
+   "32132039",
+   "18460020",
+   "30622118"
+  ],
+  "gene_direct_count": 19,
+  "resolved": [
+   {
+    "pmid": "27550453",
+    "how": "Already read in this corpus before this event (receipts FTR-20260810-27550453-01; depth complete_fulltext_read). Followed as a hop by checking what this paper says it reports against that reading where this event's argument depended on it; not re-read here."
+   },
+   {
+    "pmid": "24008736",
+    "how": "Already read in this corpus before this event (receipts FTR-20260921-24008736-01, FTR-20261003-24008736-02; depth partial_fulltext_read). Followed as a hop by checking what this paper says it reports against that reading where this event's argument depended on it; not re-read here."
+   },
+   {
+    "pmid": "18460020",
+    "how": "Already read in this corpus before this event (receipts FTR-20260909-18460020-01; depth complete_fulltext_read). Followed as a hop by checking what this paper says it reports against that reading where this event's argument depended on it; not re-read here."
+   }
+  ],
+  "queued": [
+   {
+    "pmid": "24137423",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "22213016",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "25476151",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "20480411",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "18620777",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "14555208",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "22736928",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "33191002",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "25612104",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "23534718",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "25891642",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "25659037",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "23459853",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "26820701",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "32132039",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   },
+   {
+    "pmid": "30622118",
+    "queue": "not queued by this actor: no full-text reading exists in this corpus; named in the intake note as a follow-up, not as a queue entry",
+    "reason": "Gene-direct reference of this paper with no receipted reading in the corpus; any statement this paper attributes to it is carried at citing-source strength."
+   }
+  ],
+  "note": "Tsai 2013 (PMID 24008736) is the one reference that carries the autophagy direction; its corpus readings are partial only because its deposited supplement belongs to another article (FT-074)."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "What sign does the corpus record for WWOX on autophagy, and on what measurement?",
+  "hits": 2,
+  "finding": "FT-074 and the 2026-09-21 audit: suppressive on steady-state autophagy-protein abundance in 24008736, flux never clamped on a WWOX arm, mTOR route asserted. This paper repeats that pattern: the only lysosomal clamp is on the drug arm."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-03",
+  "route": "PubMed get_article_metadata for 33300063",
+  "result": "No retraction, expression of concern or correction in the PubMed record. Article types: Journal Article.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "UNSCREENABLE_NO_REFERENCE_LIST",
+   "reference_source": "network",
+   "references_declared": 0,
+   "references_screened": 0,
+   "references_with_doi": 0,
+   "schema": "retraction_check.dependencies/1",
+   "screened": false,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID33300063_Zhao2020_Spandidos.pdf",
+   "sha256": "542fd1265a6f32e3ba152d7603ad64a27ac229ab4c29d325d1d327b11d7388b9",
+   "kind": "article_binary",
+   "note": "Publisher bronze-OA PDF, 11 pages, located through OpenAlex; digest identical to the selector's copy. Figures 1-4 inspected as rendered pages (pdftoppm, 110 dpi).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.spandidos-publications.com/10.3892/mmr.2020.11754/download",
+    "http_method": "GET",
+    "tier": "publisher_bronze_oa_pdf",
+    "user_agent_policy": "browser_like",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "542fd1265a6f32e3ba152d7603ad64a27ac229ab4c29d325d1d327b11d7388b9"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID33300063_Zhao2020_Spandidos.txt",
+   "sha256": "a6066b05012f136a7152653485d7b58e30c8f337aa0d576ba10fe37315b8153e",
+   "kind": "article_text",
+   "note": "DERIVED text layer (pdftotext -layout -nopgbrk). Two-column layout; the source uses U+2011 non-breaking hyphens throughout ('p‑mTOR'), which the locators carry exactly.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation from PMID33300063_Zhao2020_Spandidos.pdf",
+    "http_method": "NONE",
+    "tier": "local_pdftotext_layout_nopgbrk",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": true,
+    "result_sha256": "a6066b05012f136a7152653485d7b58e30c8f337aa0d576ba10fe37315b8153e",
+    "derived_from": "files/fulltext/PMID33300063_Zhao2020_Spandidos.pdf",
+    "extractor": {
+     "name": "pdftotext (poppler)",
+     "version": "24.02.0",
+     "call": "pdftotext -layout -nopgbrk files/fulltext/PMID33300063_Zhao2020_Spandidos.pdf files/fulltext/PMID33300063_Zhao2020_Spandidos.txt"
+    }
+   }
+  },
+  {
+   "path": "files/fulltext/PMID33300063_Zhao2020_Spandidos_suppl.pdf",
+   "sha256": "90a1aa67d8c98bf5b406da20654360edde6e2d50a8e0403f0d419c3acc56f5f6",
+   "kind": "supplement_binary",
+   "note": "Supplementary Figure S1 (one page: viability counts of A2780, SKOV3, A2780/T over 0-48 h PTX). No WWOX content. Rendered and inspected.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.spandidos-publications.com/2386/downloadSupplementary",
+    "http_method": "GET",
+    "tier": "publisher_supplement_download",
+    "user_agent_policy": "browser_like",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "90a1aa67d8c98bf5b406da20654360edde6e2d50a8e0403f0d419c3acc56f5f6"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "pdftotext -layout over the 11-page PDF plus a reading-order pass; all sections, four figure legends, 44 references.",
+  "abstract_anchoring_waived": "No separate abstract surface; anchored by text.",
+  "note": "COVERAGE: complete article; Figures 1-4 inspected as rendered pages; Supplementary Figure S1 inspected. NOT POSSIBLE: densitometry, because none is reported; no blot carries a statistic.",
+  "entries": [
+   {
+    "proposition": "The abstract says the resistant line has reduced WWOX.",
+    "snippet": "(A2780/T) were characterized by reduced WWOX expression",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33300063_Zhao2020_Spandidos.txt",
+    "anchor": "Abstract, page 1 left column",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The results say the resistant line has the HIGHEST basal WWOX protein of the three lines.",
+    "snippet": "EOC cell lines and the highest protein expression levels of",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33300063_Zhao2020_Spandidos.txt",
+    "anchor": "Results, 'Anticancer drug-induced WWOX activation', page 4 left column",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Basal WWOX mRNA is also higher in the resistant line.",
+    "snippet": "Compared with in A2780 cells, a higher endogenous level of",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33300063_Zhao2020_Spandidos.txt",
+    "anchor": "Results, page 4 left column",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The only lysosomal clamp (chloroquine) is applied to the drug arm in the sensitive line.",
+    "snippet": "agic flux induced by PTX, A2780 cells were co‐treated with",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33300063_Zhao2020_Spandidos.txt",
+    "anchor": "Results, 'PTX increases autophagic flux', page 4 right column",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "WWOX overexpression lowers Beclin-1 and LC3 on blots, with no clamp and no p62.",
+    "snippet": "expression inhibited autophagy, as evidenced by the notable",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33300063_Zhao2020_Spandidos.txt",
+    "anchor": "Results, 'WWOX inhibits autophagy in EOC cells', page 8 left column; Fig. 4E",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "WWOX knockdown raises Beclin-1 and LC3.",
+    "snippet": "increased in A2780 cells following WWOX‐knockdown, and",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33300063_Zhao2020_Spandidos.txt",
+    "anchor": "Results, page 8 left column; Fig. 4F",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Phospho-p70S6K was barely detected.",
+    "snippet": "p‐p70S6K kinase (at Thr389 and Ser371) was barely detected",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33300063_Zhao2020_Spandidos.txt",
+    "anchor": "Results, 'PTX mediates the mTOR signaling pathway', page 8 left column; Fig. 4A",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PTX raised phospho-4E-BP1 while lowering phospho-mTOR.",
+    "snippet": "and increased the expression levels of p‐4E‐BP‐1 (Thr37/46).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33300063_Zhao2020_Spandidos.txt",
+    "anchor": "Results, page 8 left column; Fig. 4A",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The discussion nevertheless says WWOX activated mTOR/p70S6K signalling.",
+    "snippet": "Beclin‐1. Furthermore, WWOX activated mTOR/p70S6K",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33300063_Zhao2020_Spandidos.txt",
+    "anchor": "Discussion, page 10 left column",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Total levels of the downstream proteins were not measured.",
+    "snippet": "and p‐4E‐BP‐1; total protein expression levels were not",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33300063_Zhao2020_Spandidos.txt",
+    "anchor": "Discussion, page 10 left column",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Phospho-WWOX antibody is a commercial Tyr33 reagent.",
+    "snippet": "anti‐phosphorylated (p)‐Y33‐WWOX (cat. no. ab193624;",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33300063_Zhao2020_Spandidos.txt",
+    "anchor": "Materials and methods, Western blotting, page 2 right column",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}

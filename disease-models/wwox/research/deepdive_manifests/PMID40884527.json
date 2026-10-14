@@ -1,0 +1,226 @@
+{
+  "schema_version": 2,
+  "pmid": "40884527",
+  "doi": "10.1002/epi4.70126",
+  "receipt": "FTR-20261004-40884527-01",
+  "context_policy": "SOURCE_FIRST",
+  "landing": [
+    "disease-models/wwox/research/fulltext_dossiers/PMID40884527.md",
+    "disease-models/wwox/research/intake_wave_20261004w11_B.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261004W11-B-REGISTRY-01.md"
+  ],
+  "skills_considered": [
+    {"skill": "find-fulltext", "used": true},
+    {"skill": "legend-study-intake-triage", "used": true},
+    {"skill": "legend-deepdive", "used": true},
+    {"skill": "legend-discovery", "used": false, "reason": "The WWOX content is a gene count of two in a figure legend; there is no lead to mine and a discovery entry would manufacture one."},
+    {"skill": "legend-hypothesis-forge", "used": false, "reason": "No therapeutic content bears on WWOX."},
+    {"skill": "legend-safety-triage", "used": false, "reason": "No compound is proposed by this source."},
+    {"skill": "legend-commit", "used": false, "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."},
+    {"skill": "legend-locator-audit", "used": false, "reason": "The reader cannot audit their own locators; triples are published in the candidate for a blind auditor."}
+  ],
+  "group_assessment": {
+    "total_publications": 1,
+    "publications_on_gene": 0,
+    "research_type": "descriptive_clinical",
+    "is_primary_group_for_disease": false,
+    "weighting": "Single tertiary paediatric neurology centre, retrospective 20-year neonatal-onset pharmacoresistant epilepsy cohort; two co-authors also co-author a held multi-centre WWOX phenotype series, which makes patient overlap plausible (INFERENZA, see dossier)."
+  },
+  "field_density": {
+    "queries": [
+      {"query": "WWOX AND neonatal", "count": 12, "source": "PubMed ESearch rettype=count 2026-10-04"}
+    ],
+    "note": "Twelve PubMed records pair WWOX with neonatal; this cohort adds a gene count, not a genotype."
+  },
+  "multihop": {
+    "references_enumerated": 27,
+    "gene_direct_refs_in_source": [],
+    "resolved": [],
+    "queued": [],
+    "note": "27 references enumerated from the JATS back matter; none names WWOX. The WWOX content is the cohort's own count (Figure 2 legend and Discussion), not a citation, so no hop is owed."
+  },
+  "corpus_crossquery": {
+    "query": "registry_records.py get --pmid 40884527; fulltext_receipts.py status --pmid 40884527; held WWOX series from the same centre by author affiliation",
+    "hits": 0,
+    "note": "No registry record and no receipt before this reading. The held multi-centre WWOX phenotype series PMID 30356099 lists two co-authors of this cohort and the same city among its affiliations; this cohort prints no WWOX genotype, sex, onset or outcome per gene, so overlap cannot be tested (INFERENZA: overlap plausible, not countable)."
+  },
+  "retraction_check": {
+    "checked": true,
+    "result": "Checked 2026-10-04 via PubMed ESummary: publication types ['Journal Article']; no retraction, expression of concern or correction listed for PMID 40884527.",
+    "dependencies": {
+      "flagged": [],
+      "noted": [],
+      "paper_verdict": "SCREENED_CLEAN",
+      "reference_source": "network",
+      "references_declared": 27,
+      "references_screened": 26,
+      "references_with_doi": 26,
+      "schema": "retraction_check.dependencies/1",
+      "screened": true,
+      "snapshot": {
+        "date": "2026-09-10",
+        "days_since_fetch": 24,
+        "rows": 72476,
+        "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+      },
+      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+      "unscreenable": {
+        "UNSCREENABLE_NO_DOI": 1
+      }
+    }
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID40884527_Beretti2025_PMC.xml",
+      "sha256": "93ca073940fa8a7b9399a0a31a338e8c37fe60af6603b7a2032273613ba7294e",
+      "kind": "article_text",
+      "note": "Europe PMC fullTextXML (98 926 B): body, Tables 1-3, three figure legends, supplementary listing, 27 references.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12514364/fullTextXML",
+        "http_method": "GET",
+        "tier": "Europe PMC REST fullTextXML",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "93ca073940fa8a7b9399a0a31a338e8c37fe60af6603b7a2032273613ba7294e"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID40884527_Beretti2025_EPI4-10-1605-g002.jpg",
+      "sha256": "2e31c690c948ecd7bb035448776b3feb9b0a0fd336164b8b2840bf17fdf41fd3",
+      "kind": "figure",
+      "note": "Figure 2 (genetic causes, ring chart, 709x470) as deposited; inspected as an image. The panel prints four named slices and 'Other anomalies 30%'; WWOX is named only in the legend.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12514364.1/EPI4-10-1605-g002.jpg",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "2e31c690c948ecd7bb035448776b3feb9b0a0fd336164b8b2840bf17fdf41fd3"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID40884527_Beretti2025_EPI4-10-1605-g001.jpg",
+      "sha256": "89a4e7bedf0646f64abdd605342fc70da63679be8abd5cd7e108c8cb02172190",
+      "kind": "figure",
+      "note": "Figure 1 (flowchart) as deposited; inspected as an image. Its enrolment box prints a start year that differs from the Methods text (see dossier).",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12514364.1/EPI4-10-1605-g001.jpg",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "89a4e7bedf0646f64abdd605342fc70da63679be8abd5cd7e108c8cb02172190"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID40884527_Beretti2025_EPI4-10-1605-g003.jpg",
+      "sha256": "fc8e42a6f53a297725c9530b0cb0a9a9fdac9e9d9a8d877a2b991deb83a6984d",
+      "kind": "figure",
+      "note": "Figure 3 (Kaplan-Meier seizure freedom by outcome group) as deposited; inspected as an image; no per-gene stratum.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12514364.1/EPI4-10-1605-g003.jpg",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "fc8e42a6f53a297725c9530b0cb0a9a9fdac9e9d9a8d877a2b991deb83a6984d"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID40884527_Beretti2025_EPI4-10-1605-s001.zip",
+      "sha256": "37f5e7acb8c8890c889d8d36183a8d57e30b9455fe34c53d65dabecf3dd527f3",
+      "kind": "supplement_binary",
+      "note": "Supporting-information container: Appendix S1 (one-page PDF gene list) and a caption document.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12514364.1/EPI4-10-1605-s001.zip",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "37f5e7acb8c8890c889d8d36183a8d57e30b9455fe34c53d65dabecf3dd527f3"
+      }
+    },
+    {
+      "path": "files/fulltext/PMID40884527_Beretti2025_AppendixS1.pdf",
+      "sha256": "03fe60f8adc6ec54a73c6724cc3b745d6b42992be0887c562ea1c15ef8363b54",
+      "kind": "supplement_binary",
+      "note": "Appendix S1 extracted byte-exact from the container: a one-page PDF with no text layer (pdftotext returns 0 bytes), so it was rendered at 110 dpi and read as pixels. It lists the panel genes in a six-column table; WWOX is listed.",
+      "acquisition_recipe": {
+        "resolved_url": "local extraction of epi470126-sup-0001-AppendixS1.pdf from PMID40884527_Beretti2025_EPI4-10-1605-s001.zip",
+        "http_method": "GET",
+        "tier": "local_zip_member_extraction",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": true,
+        "result_sha256": "03fe60f8adc6ec54a73c6724cc3b745d6b42992be0887c562ea1c15ef8363b54",
+        "derived_from": "files/fulltext/PMID40884527_Beretti2025_EPI4-10-1605-s001.zip",
+        "extractor": {
+          "name": "python zipfile member read",
+          "version": "stdlib",
+          "call": "ZipFile(container).read('epi470126-sup-0001-AppendixS1.pdf') written unchanged"
+        }
+      }
+    }
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "entries": [
+      {
+        "proposition": "WWOX accounts for two of the 56 patients of this neonatal-onset pharmacoresistant MRI-negative cohort, listed among the 'other anomalies'; no genotype is printed.",
+        "snippet": "ATP1A3 (n = 2), WWOX (n = 2), CDKL5 (n = 1)",
+        "anchor": "Figure 2 legend (genetic causes among the cohort)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID40884527_Beretti2025_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The authors place WWOX among the rare 'other anomalies' outside the three recurrent genes and report no correlation between having a genetic anomaly and neurodevelopmental outcome; no per-gene outcome is given.",
+        "snippet": "including mutations in genes such as GABRB3, ATP1A3, and WWOX",
+        "anchor": "Discussion, Neurodevelopmental and cognitive outcome",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID40884527_Beretti2025_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "No per-gene outcome analysis: the presence of a genetic anomaly was not correlated with neurodevelopmental outcome.",
+        "snippet": "no clear correlation was observed between the presence of a genetic anomaly and the neurodevelopmental outcome",
+        "anchor": "Discussion, Neurodevelopmental and cognitive outcome",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID40884527_Beretti2025_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Denominator: 35 of the 56 patients had a pathogenic genetic variant.",
+        "snippet": "Pathologic genetic variants were found in 35 (62.5%) of the patients in our cohort",
+        "anchor": "Results, Etiology",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID40884527_Beretti2025_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Cohort mortality was six of 56, all before five years; deaths are not attributed to genes.",
+        "snippet": "Six patients (11%) died during the study period",
+        "anchor": "Results, Follow-up",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID40884527_Beretti2025_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "WWOX is a gene on the diagnostic panel listed in Appendix S1, so the two WWOX diagnoses were reachable by the panel used for all patients.",
+        "snippet": "CHRNB2 GABRG2 KCTD7 PNKP SLC9A6 WWOX",
+        "anchor": "Appendix S1, gene list table, sixth column, second-to-last row (rendered page, no text layer)",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID40884527_Beretti2025_AppendixS1.pdf",
+        "panel_text_relation": "panel_only"
+      }
+    ],
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC REST fullTextXML returned HTTP 200 with a full JATS body on 2026-10-04; the declared article_text is that response.",
+    "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a figure legend or the supplement."
+  }
+}

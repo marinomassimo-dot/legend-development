@@ -1,0 +1,334 @@
+{
+ "schema_version": 2,
+ "pmid": "40524961",
+ "doi": "10.1016/j.isci.2025.112704",
+ "receipt": "FTR-20261003-40524961-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID40524961.md",
+  "disease-models/wwox/research/intake_wave_20261003w6_A.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W6-A-WNT-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W6-A-REGISTRY-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is not the reader's to write; its one consequence from this wave is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "None of the six sources supplies a measured lever for the reference genotype class; forging hypotheses here would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is tested against a WWOX readout in this source; nothing to send to BLOCK-1 triage."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The triples are published in the candidates for a blind auditor; the reader cannot audit their own locators."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "A stem-cell and sterol-disorder laboratory studying Dishevelled membrane association; WWOX appears in one discussion sentence. Credible for DVL2 localisation biology; no WWOX work. Not a per-author sweep."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "registry_records.py --theme Dvl (LEGEND)",
+    "count": 12,
+    "source": "LEGEND registries 2026-10-03"
+   }
+  ],
+  "note": "LEGEND's WWOX-Dvl direction (DL-MOL-003) rests on unread cancer-cell primaries; this paper is the first source met that measures nuclear DVL2 together with a canonical Wnt reporter."
+ },
+ "multihop": {
+  "references_enumerated": 95,
+  "gene_direct_refs_in_source": [
+   "32368285"
+  ],
+  "resolved": [],
+  "queued": [
+   {
+    "queue": "CC-20261003W6-A-WNT-01",
+    "why": "Ref 79 (Celebi 2020, J Cancer, PMID 32368285) is the only WWOX source of the paper; LEGEND holds it only as CORPUS-STUB-132 / LIT-0151 and it is one of the three primaries DL-MOL-003 names. Unread here."
+   }
+  ],
+  "disposition": "One gene-direct reference, unread; partial on multihop."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 40524961 (no record); --theme Dvl and --id DL-MOL-003 after the first pass",
+  "hits": 12,
+  "note": "The TCF/LEF reporter result here bears on the inference step of DL-MOL-003 ('DVL2 in the nucleus, therefore Wnt hyperactivation'); proposed in CC-20261003W6-A-WNT-01."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-03 via PubMed metadata (get_article_metadata): publication types ['Journal Article']; no retraction, expression of concern or correction listed for PMID 40524961.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 95,
+   "references_screened": 94,
+   "references_with_doi": 94,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --doi 10.1016/j.isci.2025.112704 --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID40524961_Sengupta2025_PMC.xml",
+   "sha256": "0df9cb5f37ba9fed928955ce08d29642d21f3344bd96c4b7df7aca29d420a6f4",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12167792/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "result_sha256": "0df9cb5f37ba9fed928955ce08d29642d21f3344bd96c4b7df7aca29d420a6f4"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID40524961_Sengupta2025_supplement/gr7.jpg",
+   "sha256": "ba4ee571d09504ef3e64e1294536e0f4a40869f722f85b7f908ae67dfbfc45cb",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12167792.1/gr7.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets (AWS open data bucket)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "result_sha256": "ba4ee571d09504ef3e64e1294536e0f4a40869f722f85b7f908ae67dfbfc45cb"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID40524961_Sengupta2025_supplement/gr8.jpg",
+   "sha256": "63fdfd9458c926a73e69c588db1340cc94d012cd35ebe4388fc8dcf18a37e510",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12167792.1/gr8.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets (AWS open data bucket)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "result_sha256": "63fdfd9458c926a73e69c588db1340cc94d012cd35ebe4388fc8dcf18a37e510"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID40524961_Sengupta2025_supplement/mmc1.pdf",
+   "sha256": "dc4e32f2d3af9ad18507b1f6f1b5aee4e2c596fb2f73cbe85ea7de08c72e8438",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12167792.1/mmc1.pdf",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets (AWS open data bucket)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "result_sha256": "dc4e32f2d3af9ad18507b1f6f1b5aee4e2c596fb2f73cbe85ea7de08c72e8438"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID40524961_Sengupta2025_supplement/mmc1.txt",
+   "sha256": "293e9e619653649d529afeef4876aea87e9c041a190d0d6c805bb29eda4d2504",
+   "kind": "supplement_text",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID40524961_Sengupta2025_supplement/mmc1.pdf",
+    "extractor": {
+     "name": "pdftotext (poppler)",
+     "version": "24.02.0",
+     "call": "pdftotext -layout -nopgbrk <file.pdf> <file.txt>"
+    },
+    "acquired_on": "2026-10-03",
+    "result_sha256": "293e9e619653649d529afeef4876aea87e9c041a190d0d6c805bb29eda4d2504"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID40524961_Sengupta2025_supplement/gr5.jpg",
+   "sha256": "2c96fb5db9bfee0d46cf5e5b13ffea2b1f5b955a31baa4dbe656a49005b24fe8",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID40524961_Sengupta2025_supplement/gr6.jpg",
+   "sha256": "f1a1ae94b080c83cf87e32d5568719600f95851fc9e51d7216eb8f36ec335162",
+   "kind": "figure"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The paper's only WWOX statement is one discussion sentence citing a head-and-neck cancer study (ref 79).",
+    "snippet": "It has been shown that silencing of the Wwox tumor suppressor increases nuclear DVL2 in head and neck cancer.79",
+    "anchor": "Discussion, paragraph on DVL2 protein-protein interactions",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40524961_Sengupta2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Ref 79 is Celebi 2020 on Wwox silencing and Dvl nuclear import in head and neck cancer (PMID 32368285).",
+    "snippet": "Silencing of Wwox Increases Nuclear Import of Dvl proteins in Head and Neck Cancer.",
+    "anchor": "References, ref 79",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40524961_Sengupta2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Sterol-synthesis inhibition shifted DVL2 from the membrane to the nucleus without changing total DVL2 (HEK293T).",
+    "snippet": "we observed that inhibitor treatments increased nuclear accumulation of DVL2 at the expense of membrane association (Figures 5D and 5E).",
+    "anchor": "Results, DVL2 localisation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40524961_Sengupta2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Under the same conditions that put DVL2 in the nucleus, a TCF/LEF reporter showed canonical Wnt signalling inhibited, which the authors read as nuclear DVL acting independently of beta-catenin.",
+    "snippet": "Our findings show a clear inhibition of canonical Wnt signaling in response to cholesterol inhibited conditions (Figure S6E),30,31 suggesting nuclear DVL is functioning in a β-catenin independent manner.",
+    "anchor": "Results, DVL2 localisation (Figure S6E)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40524961_Sengupta2025_PMC.xml",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "Figure S6E is a TCF/LEF luciferase readout with and without Wnt-conditioned medium across sterol conditions, three biological replicates.",
+    "snippet": "(E) Luciferase expression driven by TCF/LEF transcriptional activity in the presence of standard conditions (FBS), cholesterol depleted (LPDS), AY9944, Simvastatin, or U18666A treated conditions.",
+    "anchor": "Supplement, Figure S6E legend",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID40524961_Sengupta2025_supplement/mmc1.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Nuclear DVL2 was also increased in cerebral cortex of a Smith-Lemli-Opitz mouse model.",
+    "snippet": "Analyses of DVL2 within isolated cerebral cortices showed a significant increase in nuclear DVL2 and reduction in membrane-associated DVL2 in Dhcr7 Δ3-5/T93M mice compared to Dhcr7+/T93M controls (Figures 8E and 8F).",
+    "anchor": "Results, developmental models",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40524961_Sengupta2025_PMC.xml",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "The DVL2-p53 result is one representative co-IP in HEK293T.",
+    "snippet": "(D) Co-IP between endogenous DVL2 and p53 in HEK293T.",
+    "anchor": "Figure 7 legend, panel D",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40524961_Sengupta2025_PMC.xml",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "Figure 7D shows a single unquantified blot in which the 10% input p53 band is itself stronger in the AY9944 lane than in the LPDS lane.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 7D: alpha-DVL2 IP, IgG and 10% input lanes for LPDS and LPDS+AY9944; Tp53 band near 50-75 kDa stronger in the AY9944 IP lane and also stronger in the AY9944 input lane; no quantification or N shown.",
+    "anchor": "Figure 7D",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID40524961_Sengupta2025_supplement/gr7.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Figure 8F plots five points per group although the legend states N = 3 independent experiments.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 8F bar chart (Dhcr7 WT/T93M vs Δ3-5/T93M; WCL, Nuc, Memb, Cyt): five open circles per bar.",
+    "anchor": "Figure 8F",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID40524961_Sengupta2025_supplement/gr8.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Nuclear DVL2 accumulation in this system is produced by inhibiting cholesterol synthesis, with membrane and cytosolic DVL2 falling in the same panel.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5E plots normalized DVL2 in three fractions: nuclear DVL2 rises above the LPDS bar with AY9944 (**) and U18666A (****), membrane DVL2 falls under AY9944, Atorvastatin, Simvastatin and U18666A (**, *, *, **) and cytosolic DVL2 falls under Simvastatin (*). Figure 5H plots nuclear/total GFP intensity rising under LPDS+AY9944 (****).",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID40524961_Sengupta2025_supplement/gr5.jpg",
+    "anchor": "Figure 5, panels E and H; native JPEG inspected",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The nuclear import route measured here is sterol-sensitive, PDZ-domain dependent and FoxK2 dependent, and a PDZ inhibitor abolishes it.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6B plots relative FoxK2 co-immunoprecipitated with DVL2 rising in the nuclear fraction under LPDS+AY9944 (**) and falling in the cytosolic fraction (**). Figure 6E and 6F show that adding NSC668036 to LPDS+AY9944 returns both the GFP intensity per unit nuclear area and the nuclear/total GFP intensity to the untreated range (**** against LPDS+AY9944 in both panels). Figure 6C marks cholesterol-binding, FoxK2-binding and NSC668036-binding residues on overlapping faces of the same PDZ domain.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID40524961_Sengupta2025_supplement/gr6.jpg",
+    "anchor": "Figure 6, panels B, C, E and F; native JPEG inspected",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The condition that maximises nuclear DVL2 carries the lowest canonical TCF/LEF response, and the panel reports no statistical test at all.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure S6E plots TCF/LEF fold induction with and without Wnt-conditioned medium. With conditioned medium the bars read approximately 125 (FBS), 67 (LPDS), 55 (LPDS+vehicle), 12 (LPDS+AY9944), 17 (LPDS+Simvastatin) and 21 (LPDS+U18666A); every bar without conditioned medium sits at approximately 5 to 7. No significance marker is drawn anywhere in the panel.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID40524961_Sengupta2025_supplement/mmc1.pdf",
+    "anchor": "Figure S6, panel E, page 9 of the supplementary PDF rendered at 200 dpi",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[3]",
+    "found_or_sought": "found",
+    "qualifies_needle": "a clear inhibition of canonical Wnt signaling"
+   },
+   {
+    "proposition": "The control that makes the FoxK2 result a trafficking result rather than an expression result rests on two experiments.",
+    "snippet": "Quantification of nuclear and cytosolic fractions demonstrate that FoxK2 expression\ndoes not significantly change following sterol targeted treatments. N = 2 independent\nexperiments.",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID40524961_Sengupta2025_supplement/mmc1.txt",
+    "anchor": "Figure S7 legend, panel B",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "WWOX is named exactly once in the body of this paper, in a Discussion sentence that cites a head-and-neck cancer study, and nowhere else.",
+    "snippet": "It has been shown that silencing of the Wwox tumor suppressor increases nuclear DVL2 in head and neck cancer.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40524961_Sengupta2025_PMC.xml",
+    "anchor": "Discussion, paragraph on DVL2 protein-protein interactions",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC12167792/fullTextXML returned HTTP 200 with the full body and the key resources table on 2026-10-03; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure legend, a figure or a supplement."
+ },
+ "reading_history": [
+  {
+   "receipt": "FTR-20261004-40524961-02",
+   "reader": "scientist (Scientist C), intake wave 12 2026-10-04 (RE-READ)",
+   "context_policy": "SOURCE_FIRST",
+   "what_changed": "Declared two previously undeclared main-figure artefacts with full digests and appended entries 10-14: the owed figure surface read as rendered images (Figures 5 and 6 as native JPEGs, supplementary Figure S6 rendered from page 9 of mmc1.pdf at 200 dpi), plus the Figure S7 small-n control and a re-measured WWOX census. No existing entry was altered.",
+   "outputs": [
+    "disease-models/wwox/research/fulltext_dossiers/PMID40524961.md",
+    "disease-models/wwox/research/deepdive_manifests/PMID40524961.json",
+    "disease-models/wwox/research/intake_wave_20261004w12_C.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261004W12-C-WNT-DIRECTION-01.md"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,161 @@
+{
+ "schema_version": 2,
+ "pmid": "42521212",
+ "doi": "10.1002/acn3.70500",
+ "receipt": "FTR-20261003-42521212-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID42521212.md",
+  "disease-models/wwox/research/intake_wave_20261003w3_C.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W3-C-REGISTRY-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W3-C-RESTORATION-SPEC-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is a research surface owned by other batches; the corrections this reading supports are proposed as commit candidates rather than edited in place."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A transferable lesson from another gene is not a therapeutic hypothesis for WWOX; forging one here would convert a stated transfer limit into a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No small molecule with a SMILES is proposed as an intervention, so there is nothing for the BLOCK-1 ADMET gate to triage."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate for a later BATCH_COMMIT."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The triples are published in the candidates for a blind auditor; the reader of a paper cannot audit their own locators."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 130,
+  "publications_on_gene": 4,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "PubMed counts 2026-10-03: last author 'Dang LT[au]' 130, with SCN1A 4 (the author string is not disambiguated and will overcount). The senior author declares consulting fees and in-kind reagent support from two oligonucleotide companies, and the upregulating ASO used to validate the assay is proprietary.",
+  "external_provenance": {
+   "source": "NCBI E-utilities esearch rettype=count, terms as stated",
+   "date": "2026-10-03"
+  }
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND HiBiT",
+    "count": 0,
+    "source": "PubMed ESearch 2026-10-03"
+   }
+  ]
+ },
+ "multihop": {
+  "references_enumerated": 0,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference lists were not read in this pass and no multi-hop expansion was performed; the coverage key 'references' is declared not_read in the receipt for that reason."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42521212 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "NO RECORD MATCHED across all six surfaces. 'WWOX AND HiBiT' returns 0 PubMed records, so the method has never been applied to this gene in the indexed literature. CC-20261003W3-C-REGISTRY-01 proposes the landing."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-03 via PubMed get_article_metadata: no retraction, expression of concern or correction notice among the publication types for PMID 42521212.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 15,
+   "references_screened": 15,
+   "references_with_doi": 15,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42521212_Saravanan2026_PMC.xml",
+   "sha256": "7b745dec658a5556f4f57dcc60643898888b0008f02e3d4fdcbcad979450af56",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13413088/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-03",
+    "result_sha256": "7b745dec658a5556f4f57dcc60643898888b0008f02e3d4fdcbcad979450af56"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The assay's dynamic range is not quantified and is admitted to need optimisation.",
+    "snippet": "Future studies will optimize conditions to improve dynamic range.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42521212_Saravanan2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Reproducibility across independent platings was not tested.",
+    "snippet": "each HiBiT assay was conducted from a single plating of cells",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42521212_Saravanan2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The uORF lever failed when the authors tried to act on it with ASOs.",
+    "snippet": "failed to increase luciferase activity in transfected cells or in vitro translation systems",
+    "anchor": "Discussion, first para",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42521212_Saravanan2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The reporter line carries a copy-number change that confers a growth advantage.",
+    "snippet": "a 20q11.21 duplication including BCL2L1, which can confer a survival advantage",
+    "anchor": "Results, reporter development",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42521212_Saravanan2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST fullTextXML returned HTTP 200 with a full JATS body on 2026-10-03; the declared article artefact is that response, byte for byte."
+ }
+}

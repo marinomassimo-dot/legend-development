@@ -1,0 +1,238 @@
+{
+ "schema_version": 2,
+ "pmid": "42812991",
+ "doi": "10.3389/fnagi.2026.1901875",
+ "receipt": "FTR-20261004-42812991-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID42812991.md",
+  "disease-models/wwox/research/intake_wave_20261004w11_C.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W11-C-REGISTRY-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W11-C-PERIPHAAV-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Discovery ledger is owned by another batch; no lead emerged from this reading."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "Nothing here supplies a lever for the reference genotype class; forging from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged; the paper tests no compound for BLOCK-1."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes go through commit candidates."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; triples are published in the candidates."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "A narrative literature review by a neurology department; it produces no measurement. WWOX is named zero times."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND Alzheimer",
+    "count": 32,
+    "source": "PubMed ESearch 2026-10-04"
+   }
+  ],
+  "note": "Review of AAV for Alzheimer disease; read only for collected CNS-AAV safety and dosing statements; this review is not among the WWOX-Alzheimer records."
+ },
+ "multihop": {
+  "references_enumerated": 84,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list located in the derived text; 84 is a count of lines opening with an author-initials pattern (approximate, multi-line entries may be under- or over-counted). No reference concerns WWOX (gene named zero times), so no gene-direct hop exists. Cited primaries behind secondary statements (for example the NHP DRG-toxicity primaries) are not hopped here."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42812991; paper_packet.py packet --pmid 42812991",
+  "hits": 0,
+  "note": "No registry record or prior receipt for this PMID."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-04 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn or CommentIn link; publication types Journal Article, Review.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "UNSCREENABLE_NO_REFERENCE_LIST",
+   "reference_source": "network",
+   "references_declared": 0,
+   "references_screened": 0,
+   "references_with_doi": 0,
+   "schema": "retraction_check.dependencies/1",
+   "screened": false,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 22,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42812991_AAV_AD_review_2026.pdf",
+   "sha256": "c1877580a02ba74bd3b823e43da64910a1ef980183e63bef3b6ffffa39a084ad",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.frontiersin.org/journals/aging-neuroscience/articles/10.3389/fnagi.2026.1901875/pdf",
+    "http_method": "GET",
+    "tier": "publisher gold open-access PDF",
+    "user_agent_policy": "browser_like",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "c1877580a02ba74bd3b823e43da64910a1ef980183e63bef3b6ffffa39a084ad"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID42812991_AAV_AD_review_2026.txt",
+   "sha256": "7d6a3087498421a9fe58177e98456289fe4e7a6b1151c2318dd0a296cb405e2f",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID42812991_AAV_AD_review_2026.pdf",
+    "extractor": {
+     "name": "pdftotext (poppler)",
+     "version": "24.02.0",
+     "call": "pdftotext -nopgbrk <pdf> <txt> (reading-order mode, no -layout, because the PDF is two-column; lossy: ligatures, superscripts rendered as a caret, figures and table cell borders lost)"
+    },
+    "acquired_on": "2026-10-04",
+    "result_sha256": "7d6a3087498421a9fe58177e98456289fe4e7a6b1151c2318dd0a296cb405e2f"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The review reports DRG sensory-neuron pathology across several CNS-directed AAV programmes (secondary statement, citing primaries).",
+    "snippet": "sensory-neuron pathology in dorsal root ganglia has emerged across several CNS-directed AAV programmes",
+    "anchor": "5.2 Durability, immunity and product-specific safety",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42812991_AAV_AD_review_2026.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review reports that transgene detargeting from sensory neurons reduced DRG toxicity in non-human primates (secondary, citing a primary).",
+    "snippet": "transgene detargeting from sensory neurons reduced dorsal-rootganglion toxicity in",
+    "anchor": "5.2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42812991_AAV_AD_review_2026.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review reports dose-dependent B-cell recruitment after intracranial exposure that impairs later transduction (secondary).",
+    "snippet": "intracranial AAV exposure can recruit B-cell responses in a dose-dependent manner and impair subsequent transduction",
+    "anchor": "5.2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42812991_AAV_AD_review_2026.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review states that cerebrospinal-fluid delivery broadens distribution but parenchymal penetration may be uneven.",
+    "snippet": "parenchymal penetration may remain uneven",
+    "anchor": "3.2 Delivery route and BBB biology",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42812991_AAV_AD_review_2026.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review reports intracisternal and intraventricular AAVrh.10-APOE2 distribution varied among animals and routes (secondary).",
+    "snippet": "intracisternal and intraventricular AAVrh.10-APOE2 both produced widespread vector and transgene distribution",
+    "anchor": "3.2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42812991_AAV_AD_review_2026.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review reports a mean vector spread of about 1 mm after AAV2-NGF (secondary).",
+    "snippet": "Postmortem analysis of AAV2-NGF showed durable expression but a mean vector spread of only about",
+    "anchor": "5.1 Dose, biodistribution and cross-species predictability",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42812991_AAV_AD_review_2026.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Box 1 lists a single CSF administration at the craniocervical junction with four dose cohorts for one programme (secondary; conference-level).",
+    "snippet": "Single CSF administration at the craniocervical junction",
+    "anchor": "Box 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42812991_AAV_AD_review_2026.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Box 1 states that exact clinical vector dose was not reported for one programme.",
+    "snippet": "exact clinical vector dose NR in the available conference report/registry materials",
+    "anchor": "Box 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42812991_AAV_AD_review_2026.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review states it is a narrative review, not systematic.",
+    "snippet": "It is a narrative review informed by a documented multi-database search",
+    "anchor": "5.5 Limitations of the evidence base",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42812991_AAV_AD_review_2026.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review states no risk-of-bias or certainty assessment was performed.",
+    "snippet": "no formal risk-of-bias or certainty-of-evidence assessment was performed",
+    "anchor": "5.5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42812991_AAV_AD_review_2026.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review states the evidence base is dominated by preclinical studies.",
+    "snippet": "the evidence base remains dominated by preclinical studies",
+    "anchor": "5.5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42812991_AAV_AD_review_2026.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review states that some safety evidence comes from non-AD settings.",
+    "snippet": "derives from non-AD settings and may not fully predict safety or performance",
+    "anchor": "5.5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42812991_AAV_AD_review_2026.txt",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "The publisher PDF returned HTTP 200 on 2026-10-04 (2,996,260 bytes); the derived text layer is declared with its extractor and version."
+ }
+}

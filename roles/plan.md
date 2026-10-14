@@ -81,6 +81,12 @@ another actor's scientific work.
 | Monday | `python3 framework/scripts/branch_hygiene.py` | branches landed or retired; the report's table pasted into the Session Learning Review |
 | Any day | a harness change decided by the operator, the Orchestrator or a Mirror finding | implemented and landed at T0 |
 
+**The compass for every harness change.** Scouting, triage, verdicts and implementation are
+judged against
+[`framework/master/harness_development_principles.md`](../framework/master/harness_development_principles.md)
+(operator instruction, 2026-09-29): need-driven micro-upgrades at T0, no gates, pattern over
+runtime, lower cost, an unattended loop, discovery before rigor.
+
 **Standing reading, not a weekly task.**
 [`governance/design_records/sviluppo_lettori.md`](../governance/design_records/sviluppo_lettori.md)
 is the cumulative Scientist-development ledger: eighteen Tier-1 repository reviews, each mined for

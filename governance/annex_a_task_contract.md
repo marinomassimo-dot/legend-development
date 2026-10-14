@@ -91,6 +91,38 @@ probabilmente è.**
 Misura: `python3 framework/scripts/attribution_census.py --queue`. Baseline al 2026-09-10:
 **0 wave su 11** portano le due chiavi.
 
+### A.1c · AUTHORISED_QUEUE — the mandate as a schema, not prose **[added 2026-09-30]**
+
+A multi-objective mandate (a goal, a roadmap, a work queue) lives in the contract of the task that
+executes it, in a block whose key starts with `AUTHORISED_QUEUE`. No second registry. The block is
+machine-readable: `framework/scripts/mandate_continuity.py` derives from it the continuity verdict
+of `cross_session_transport.md` §12.
+
+```
+AUTHORISED_QUEUE_<date>:
+  MANDATE_STATE: OPEN | COMPLETE | PAUSED | CANCELLED        (absent = OPEN)
+  OBJ_<id>:
+    order: <integer>
+    steps:
+      - step: <text>
+        status: TODO | IN_PROGRESS | DONE | BLOCKED
+        evidence: <durable pointer>       required when DONE
+        blocker: <named impediment>       required when BLOCKED
+        unblock: <what dissolves it>      recommended when BLOCKED
+```
+
+Reading rules, each one where the 2026-09-14 queue closed itself: a bare-string step is
+unreconciled and counts `TODO`; a `BLOCKED` step without a named blocker is not blocked; a `DONE`
+step without an evidence pointer holds the session for the pointer, not for the work
+(`EVIDENCE_PENDING`); an objective with no `steps` list makes the record `MALFORMED`, never empty
+or complete; every `OPEN` block binds and their steps add up; `MANDATE_STATE: COMPLETE` against
+executable, unevidenced or blocked steps is `INCONSISTENT_COMPLETE`; `PAUSED` and `CANCELLED` are
+the operator's and release against any state. The verdict is `CONTINUE` while a step is `TODO` or
+`IN_PROGRESS`, `ALL_BLOCKED` when every remainder is named-blocked (the mandate stays incomplete),
+`COMPLETE_PENDING` when every step is `DONE` with evidence. An actor writes `COMPLETE` only on a
+closed queue; `DEFAULTS_TAKEN` and `STOP_LOG` (A.1b) stay where they are. The complete rules and
+their tests live in `framework/scripts/mandate_continuity.py` and its suite.
+
 ### A.2 · TASK_ACK
 
 `TASK_ID / DIRECTIVE_VERSION / GENERATION / ACCEPTED | REJECTED(motivo → CHALLENGE, Annex F)`. Nessun lavoro senza ACK; ACK assente entro timeout → reinvio (Annex B).

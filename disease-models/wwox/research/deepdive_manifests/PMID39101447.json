@@ -1,0 +1,290 @@
+{
+ "schema_version": 2,
+ "pmid": "39101447",
+ "doi": "10.1002/mgg3.2500",
+ "receipt": "FTR-20261003-39101447-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID39101447.md",
+  "disease-models/wwox/research/intake_wave_20261003_A.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003-A-REGISTRY-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003-A-VIGABATRIN-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is a research surface owned by other batches; the one ledger correction this reading supports is proposed through the intake note rather than edited."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A patient genotype-phenotype report supplies no therapeutic lever for the reference genotype class; forging hypotheses from one case would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is tested as an intervention with a measured outcome beyond clinical anecdote, so there is no molecule to send to BLOCK-1 triage."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate for a later BATCH_COMMIT."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The triples are published in the candidates for a blind auditor; the reader of a paper cannot audit their own locators."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 15,
+  "publications_on_gene": 1,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "PubMed counts 2026-10-02: Li B[au] AND Hebei AND epilepsy 15; with WWOX 1 (this paper). A paediatric neurology group with a commercial minigene service; the clinical observation is credible, the functional claim is limited to a heterologous minigene and the drug-response conclusion rests on one child followed to 13 months.",
+  "external_provenance": {
+   "source": "NCBI E-utilities esearch rettype=count, terms as stated",
+   "date": "2026-10-02"
+  }
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND minigene",
+    "count": 2,
+    "source": "PubMed ESearch 2026-10-02"
+   }
+  ],
+  "note": "One of two WWOX minigene records in PubMed; no WWOX splice allele has been measured in patient RNA with NMD inhibition."
+ },
+ "multihop": {
+  "references_enumerated": 24,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "24 references enumerated. The prior report of the same allele (He 2020, compound heterozygous) is the only reference bearing on this allele; it was not read here and no claim depends on it. Not queued from this reading."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 39101447 (run AFTER the first pass)",
+  "hits": 2,
+  "note": "PAPER 016 / LIT-0016 and CLAIM 001. Registry wording 'proteina troncata da minigene' over-reads the assay (exon skipping measured; truncation translated in silico); CLAIM 001 omits the persisting electrographic seizures. See CC-20261003-A-VIGABATRIN-01."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-02 via PubMed metadata (get_article_metadata): no retraction, expression of concern or correction listed among the publication types for PMID 39101447.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 24,
+   "references_screened": 23,
+   "references_with_doi": 23,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 22,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID39101447_You2024_PMC.xml",
+   "sha256": "d077cc45b50e52dea87555d2c5ce0263aa5e4d97ee5b6032a26d9731426f312e",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11298992/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "d077cc45b50e52dea87555d2c5ce0263aa5e4d97ee5b6032a26d9731426f312e"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID39101447_You2024_supplement/MGG3-12-e2500-g002.jpg",
+   "sha256": "43247e1f08d41738f3b78fe30419cb948e9ed46cf9e712bbe08335b8525187da",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member 'MGG3-12-e2500-g002.jpg' extracted unchanged by Python zipfile from the Europe PMC REST supplementaryFiles bundle for PMC11298992 (HTTP 200, application/zip, fetched 2026-10-02); the bundle itself was not persisted because it also carries patient photographs, which this public edition does not retrieve into files/."
+   }
+  },
+  {
+   "path": "files/fulltext/PMID39101447_You2024_supplement/MGG3-12-e2500-g003.jpg",
+   "sha256": "caeb760fdf63b0525ca8c160670438befc3c1fa010b602da7854b91d42b028c8",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member 'MGG3-12-e2500-g003.jpg' extracted unchanged by Python zipfile from the Europe PMC REST supplementaryFiles bundle for PMC11298992 (HTTP 200, application/zip, fetched 2026-10-02); the bundle itself was not persisted because it also carries patient photographs, which this public edition does not retrieve into files/."
+   }
+  },
+  {
+   "path": "files/fulltext/PMID39101447_You2024_supplement/MGG3-12-e2500-g004.jpg",
+   "sha256": "8381f1b2228fc41227553460d13a6e0cbbee2fd5262e2f1176cd28ff00136540",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member 'MGG3-12-e2500-g004.jpg' extracted unchanged by Python zipfile from the Europe PMC REST supplementaryFiles bundle for PMC11298992 (HTTP 200, application/zip, fetched 2026-10-02); the bundle itself was not persisted because it also carries patient photographs, which this public edition does not retrieve into files/."
+   }
+  },
+  {
+   "path": "files/fulltext/PMID39101447_You2024_supplement/MGG3-12-e2500-g005.jpg",
+   "sha256": "606a36dece0d9d456445533adafc12fac409b858bb0bdcb68a06ba3a95970915",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member 'MGG3-12-e2500-g005.jpg' extracted unchanged by Python zipfile from the Europe PMC REST supplementaryFiles bundle for PMC11298992 (HTTP 200, application/zip, fetched 2026-10-02); the bundle itself was not persisted because it also carries patient photographs, which this public edition does not retrieve into files/."
+   }
+  },
+  {
+   "path": "files/fulltext/PMID39101447_You2024_supplement/MGG3-12-e2500-g006.jpg",
+   "sha256": "486f2e6baeb03328ae5a743410e33e268e0d803e6fb12d33d7080f330b0718af",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member 'MGG3-12-e2500-g006.jpg' extracted unchanged by Python zipfile from the Europe PMC REST supplementaryFiles bundle for PMC11298992 (HTTP 200, application/zip, fetched 2026-10-02); the bundle itself was not persisted because it also carries patient photographs, which this public edition does not retrieve into files/."
+   }
+  },
+  {
+   "path": "files/fulltext/PMID39101447_You2024_supplement/MGG3-12-e2500-g007.jpg",
+   "sha256": "9d03763b42a54f20a8a1f219fd041a51c2ca5bf5dcb628d823a1f08526cae095",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member 'MGG3-12-e2500-g007.jpg' extracted unchanged by Python zipfile from the Europe PMC REST supplementaryFiles bundle for PMC11298992 (HTTP 200, application/zip, fetched 2026-10-02); the bundle itself was not persisted because it also carries patient photographs, which this public edition does not retrieve into files/."
+   }
+  },
+  {
+   "path": "files/fulltext/PMID39101447_You2024_supplement/MGG3-12-e2500-g008.jpg",
+   "sha256": "e8ee27f926a07d660cbe8a0ae6f5d932ab47a62a19b38eb86898daddf5a71f21",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member 'MGG3-12-e2500-g008.jpg' extracted unchanged by Python zipfile from the Europe PMC REST supplementaryFiles bundle for PMC11298992 (HTTP 200, application/zip, fetched 2026-10-02); the bundle itself was not persisted because it also carries patient photographs, which this public edition does not retrieve into files/."
+   }
+  },
+  {
+   "path": "files/fulltext/PMID39101447_You2024_supplement/MGG3-12-e2500-g009.jpg",
+   "sha256": "4f140fcb6e2a1165af6dde40ad045ac89de77520ddf287ec37b3f42e86b35c37",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member 'MGG3-12-e2500-g009.jpg' extracted unchanged by Python zipfile from the Europe PMC REST supplementaryFiles bundle for PMC11298992 (HTTP 200, application/zip, fetched 2026-10-02); the bundle itself was not persisted because it also carries patient photographs, which this public edition does not retrieve into files/."
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The splicing assay is a minigene transfected into HEK293T cells, not patient RNA.",
+    "snippet": "transiently transfected into human embryonic kidney 293T cells (HEK293T)",
+    "anchor": "Methods, Minigene splicing assay",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39101447_You2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "in vitro",
+     "cell_line": "HEK293T",
+     "genotype": "WWOX exon1-3 minigene, WT vs c.172+1G>C",
+     "endpoint": "RT-PCR product size and sequence"
+    }
+   },
+   {
+    "proposition": "The measured consequence is exon 2 skipping in the minigene.",
+    "snippet": "caused a splicing abnormality, which abrogated the intron 2 canonical splice site and led to a loss of exon 2",
+    "anchor": "Results, Gene testing, last para",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39101447_You2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Protein truncation is an in silico translation of the sequenced transcript, not a protein measurement.",
+    "snippet": "Finally, Snapgene software was used to translate nucleotide sequences into protein sequences",
+    "anchor": "Methods, Minigene splicing assay",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39101447_You2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The gel shows one product per lane: WT 426 bp and mutant 361 bp; the 65 bp difference equals exon 2 (NM_016373.4, 65 nt, out-of-frame). No residual full-length product is visible in the mutant lane at the published resolution; nothing is quantified.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 8b: two lanes labelled WT:426bp and MT:361bp, a single band in each; Figure 8c(ii) chromatogram labelled Exon1 | Exon3 junction (Exon2del); Figure 8a construct shows exon1-intron1-exon2-intron2-exon3.",
+    "anchor": "Figure 8, panels a-c",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID39101447_You2024_supplement/MGG3-12-e2500-g002.jpg",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "Homozygosity is attributed to uniparental disomy inferred from copy-neutral loss of heterozygosity on chromosome 16; no marker-based UPD test is reported.",
+    "snippet": "suggesting chromosome 16 parent UPD",
+    "anchor": "Results, Gene testing, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39101447_You2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Electrographic seizures persisted under vigabatrin at 11 months although not noticed at home.",
+    "snippet": "VEEG showed clinical seizures, but these were not noticed at home by her parents",
+    "anchor": "Results, Clinical manifestations, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39101447_You2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The seizure-freedom statement is clinical (no visible seizures) at 13 months, the last follow-up.",
+    "snippet": "when the child was 13 months old, she had no visible seizures",
+    "anchor": "Results, Clinical manifestations, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39101447_You2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors' drug-response conclusion.",
+    "snippet": "suggesting that vigabatrin may be an effective management option",
+    "anchor": "Discussion, para 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39101447_You2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The paper cites Riva et al. with reference number 20, but its reference list has no Riva entry (reference 20 is Shaukat 2018).",
+    "snippet": "Riva et al. (20) reported that WWOX gene variation caused DEE in children",
+    "anchor": "Discussion, para 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39101447_You2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "EEG at 8 months shows spasm and tonic/myoclonic attacks; EEG labelled 5 months shows posterior slow activity; Figure 4, which the text dates to 11 months, is captioned 8 months.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figures 2-4: three multichannel VEEG screen captures with time-locked video insets (Figure 4) and EMG channels; Figure 4 caption reads 'at 8 months old'.",
+    "anchor": "Figures 2-4",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID39101447_You2024_supplement/MGG3-12-e2500-g003.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Ancillary studies: atrial septal defect on echo, delayed right BAEP, reduced peroneal motor/sensory conduction on EMG.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 5 colour Doppler echo; Figure 6 ABR table with right-ear wave V latency longer than left; Figure 7 peroneal MCS and SCS tables.",
+    "anchor": "Figures 5-7",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID39101447_You2024_supplement/MGG3-12-e2500-g004.jpg",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC11298992/fullTextXML returned HTTP 200 with a full JATS body on 2026-10-02; the declared artefact is that response, byte for byte."
+ }
+}

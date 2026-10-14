@@ -43,7 +43,7 @@ edition: public
 ## 2. DISEASE-MODEL (WORKING-MODEL) VERSION
 
 ```yaml
-working_model_version: WM_v7.7
+working_model_version: WM_v7.20
 working_model_file: disease-models/wwox/registries/working_model_current.md
 narrative_view: disease-models/wwox/disease_model.md
 notes: "Canonical disease-level working model derived from public literature; disease_model.md is its narrative reader-facing view. The private individual-level record is not part of this edition."
@@ -106,9 +106,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20260929_001
-last_batch_commit_date: 2026-09-29
+last_batch_commit_id: BATCH_20261004_007
+last_batch_commit_date: 2026-10-04
 last_batch_commit_type: MANUAL
+commit_candidates_propagated: 18
+target_wm_version: WM_v7.20
+trigger: MANUAL (operator-dispatched integration of intake wave 13, groups A, B and C, plus the two Mirror repairs of `BATCH_20261004_004`/`_005`; the backlog threshold of 5 was also met). Nineteen candidates in scope: eighteen propagated, one disposed with no ops because its finding was a measurement of registry state (every PMID of the wave already registered), none merged, none superseded, none deferred from the declared scope. No claim was created, none reversed, and no Status, Type or Summary changed anywhere. Four claims gain evidence-boundary text only - `CLAIM 003`, `CLAIM 014` and `CLAIM 047` (consolidated baseline) and `CLAIM 032`/`CLAIM 009` (in observation) - two of them from candidates that declared a MAJOR contingency whose narrowing an independent blind audit confirmed. This was the first wave run end to end under the FIND-X rule, and it paid: three landed negatives were FALSE AS WORDED and are corrected at source (a dismissal headline claiming an interval "does not contain the gene" when the re-mapped interval overlaps the last 358,151 bp of it; a paper record claiming its source never states which intron a fragile element lies in when the source's own figure draws the exon track around it; a research lead claiming none of three association signals reports expression when one ships two developmental expression plot books), and a fourth negative in a gene-therapy safety record was reversed outright - a per-animal antibody-titre table for 13 wild-type primates at four timepoints exists in that paper's appendix, and only the "wild-type animals only" half of the sentence survives. `CLAIM 014`'s unverified independence pointer is now VERIFIED: the transcriptomic component of its two prenatal legs is the same deposited CAGE series, so those legs are not independent - a scope narrowing of a consolidated baseline, with the limit that it covers the transcriptomic leg only and that one paper's local artefacts are absent from this checkout. No new registry record was owed: every candidate targeted an existing record, so no PAPER, CORPUS, LIT, CLAIM, DIS, FT or DL identifier was created. Sixteen independent blind locator audits ran BEFORE the propagation over 92 triples and 24 lettered checks: 85 SUPPORTED, 7 NOT_SUPPORTED_AS_LABELLED, 0 UNVERIFIABLE, 0 artefacts unreadable - and six adverse verdicts corrected a number, a quantifier set or a direction inside a candidate before it landed. Step 0 measured 229 artefacts over the whole scope, found 9 absent, RECOVERED 4 by SHA-256 from a peer worktree and restored them digest-equal before any auditor was dispatched; the remaining 5 belong to one paper whose bytes exist nowhere on this host, which is recorded rather than worked around. One privacy repair landed: a parent-of-origin descriptor inside a control-carrier sentence of `CLAIM 032` was measured by script, removed by an exact op and declared without being reproduced. The DisMech Phase-2 seal drift refused by the resealer was verified by measurement to be exactly the two declared D6 boundary appends of `BATCH_20261004_004` and nothing else, then absorbed by the tool's own route. `public_release_gate` was re-run after the audit amendments and after the privacy op: PASS, 0 BLOCK.
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -122,8 +125,8 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20260929_BATCH_20260929_001
-last_lint_date: 2026-09-29
+last_lint_id: LINT_20261004_BATCH_20261004_007
+last_lint_date: 2026-10-04
 last_lint_result: WARN
 ```
 
@@ -160,8 +163,8 @@ and a mismatch is `BLOCK_SYSTEM` — reading history you cannot trust is worse t
 
 ```yaml
 fulltext_ledger_path: disease-models/wwox/registries/fulltext_read_receipts.jsonl
-fulltext_ledger_events: 267
-fulltext_ledger_head: 0b2ced187e440f1c2dcb53bc9495cc35ed6ad47d3ca2d044483f3d8d01f5c21a
+fulltext_ledger_events: 475
+fulltext_ledger_head: 7df7e8dd60104d7f5bab5ec07d67e8d11ee9d334adc4f2618de11efa4cd28fea
 ```
 
 Maintained automatically — `fulltext_receipts.py record` re-anchors after every append.
@@ -209,8 +212,8 @@ to make a suite green — the only way to move it is to have made the change you
 
 ```yaml
 growth_anchor_ledger: framework/state/growth_anchors.jsonl
-growth_anchor_events: 34
-growth_anchor_head: 8e8d19c8111426b5f60a5a4d24f6b440a1c653d287a7d9a54ac4675f00cf2536
+growth_anchor_events: 47
+growth_anchor_head: dbf7be11b3644b53d93589483d8dc8d5762bd042ffe39e59e8369d0d28b06a11
 ```
 
 ```bash
@@ -237,8 +240,8 @@ must be backed by a persisted `complete_fulltext_read` receipt, or `LINT_AUTOMAT
 `BLOCK_BATCH_COMMIT`.
 
 ```yaml
-registry_only_fulltext_declarations_baseline: 10
-registry_only_fulltext_declaration_ids: ["PAPER 012", "PAPER 014", "PAPER 016", "PAPER 028", "PAPER 043", "PAPER 044", "PAPER 045", "PAPER 046", "PAPER 049", "PAPER 050"]
+registry_only_fulltext_declarations_baseline: 4
+registry_only_fulltext_declaration_ids: ["PAPER 014", "PAPER 028", "PAPER 044", "PAPER 050"]
 ```
 
 Lowering the baseline is the intended direction of travel: back-fill a record with real
@@ -258,7 +261,7 @@ baseline below must equal the live count, never preserve historical padding.
 
 ```yaml
 unread_premise_baseline: 0
-unread_premise_measured_on: 2026-09-29
+unread_premise_measured_on: 2026-10-04
 ```
 
 **It is a ratchet, not a wall.** Blocking on the whole legacy backlog would only teach sessions

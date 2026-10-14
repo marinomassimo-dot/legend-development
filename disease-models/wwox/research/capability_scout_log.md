@@ -821,3 +821,93 @@ four scientific current files; no external retrieval, no spend, no new dependenc
 **Next surgical micro-step:** not a script. `L4` is still **OWED** — `CC-20260928-A1-RESIDUE-02` is
 written, measured and queued, and `main` carries `CLAIM 026`'s datum with none of its adjudication. The
 capability most missing at this moment is a batch that lands it, not a tool.
+
+## 2026-10-03 · Scientist C · intake wave 5 (group C) — a numeric table read from flattened text is silently wrong, and nothing in the toolchain reads one by cell
+
+**Reusable gap, with the evidence, and it very nearly produced a false published finding.**
+
+🔴 **The repository has no cell-aware reader for a JATS table, and the obvious extraction is wrong
+in a way that looks right.** Reading PMID 42205472's Table 4 — the only cross-species brain and CSF
+volume table in this wave, and the table that would convert any primate dose into a human one — from
+the flattened `itertext()` of the `<table-wrap>` returns `Rat2.2200.1519.5`. Adjacent numeric cells
+concatenate **with no delimiter**, and that string admits several readings. The one I first took made
+the rat's CSF volume exceed the macaque's, and I had drafted a criticism of the source for an
+internally implausible cell before re-extracting the table **by cell boundary** from the XML, which
+gave `2.2 | 20 | 0.15 | 1 | 9.5` and showed the source is correct and self-consistent. **The defect
+was mine.** Nothing would have caught it: the manifest validator checks that a *quoted sentence*
+appears in the artefact, and a table is not a sentence; the locator-audit protocol adjudicates
+`(proposition | quote | anchor)` triples, and a table cell has no quote to adjudicate.
+
+*Interim repair, applied:* a six-line cell-wise reader was written into the session scratchpad and
+used for every table in this wave (PMID 42205472 Tables 4 and 7, PMID 42134074 Table 1, which is the
+index of every human intrathecal programme and whose dose and age columns are load-bearing). The
+correction and the near-miss are recorded in the dossier, in the analysis note §9 and in
+`CC-20261003W5-C-CARRIED-NUMBER-INTEGRITY-01`.
+
+*Not wired, and this is the item worth building:* the reader itself is trivial — iterate `tr`,
+collect `td`/`th`, join with a delimiter — but the **place** for it is `deepdive_manifest.py`, which
+already opens and normalises every declared artefact. If a locator could declare
+`surface: "table"` with a `cell` address rather than a quoted sentence, a table-derived number would
+become checkable by the same command that checks every other locator, and the blind audit would gain
+a triple kind it currently cannot express. That is a harness change and is named for Harness
+Engineering rather than attempted from a reading branch. One occurrence is a repair, not a gate —
+but the occurrence here was a *false criticism of a correct source*, which is the failure mode this
+repository is least able to detect, because nothing contradicts it.
+
+🟡 **Secondary, smaller:** PMC serves figure and supplement binaries at
+`https://pmc.ncbi.nlm.nih.gov/articles/instance/<pmcaid>/bin/<file>` while the documented-looking
+`articles/<PMCID>/bin/<file>` returns **404** for the same asset. `pmc_pow_fetch.py` works perfectly
+once given the right URL and solved the proof-of-work page for one supplement, but the path
+convention is nowhere written down, and panel-level reading is now effectively mandatory (wave 4's
+lesson, and reinforced here: both figures I rendered changed the reading). *Interim repair:* the
+working path is recorded in the analysis note §9 and in this entry. *Candidate micro-step:* one line
+in `framework/scripts/README.md` next to `pmc_pow_fetch.py`.
+
+**Cost / API / privacy risk:** none. Everything above is local and stdlib-only; the only external
+retrieval was free open-access fetching from PMC, with no spend and no new dependency.
+
+**Next surgical micro-step:** not a script from this branch. The highest-value missing item this
+wave identified is not a tool at all but a **document**: PMID 42134074's reference 81, the
+multi-capsid primate study that triggered the regulatory hold which stopped a human paediatric
+intrathecal programme. Every DRG-safety conclusion in this evidence base routes through a study
+LEGEND has not read.
+
+---
+
+## 2026-10-04 — `BATCH_20261004_005` (ACTOR_ID `scientist`, Scientist O, batch integrator)
+
+**CHANGE = NONE, and the reason is that the gate already existed and fired.**
+
+🟡 **The gap this batch actually hit** is a cross-registry one: the paper registry and the literature
+tracking log have nearly identical field names and **different Status vocabularies**, so a value copied
+from one into the other (`not_processed`, which is a legitimate paper-registry stub value) is
+`NOT_IN_VOCABULARY` in the log. I wrote exactly that into `LIT-0544`. It cost one cycle and nothing
+reached `main`, because **`legend_lint.py` names the defect, the record and the vocabulary table in one
+line** — `INVALID_LIT_STATUS: LIT-0544 … is NOT_IN_VOCABULARY against the log's Status vocabulary table
+and is not grandfathered`. A gate that catches a mistake at the moment it is made, and says which table
+to read, is not a capability gap; proposing a new tool here would add a second mouth for the same
+sentence. The durable fix is procedural and is recorded in the batch report's self-evaluation:
+**`registry_records.py fields` before writing a record kind this session has not written**, and never
+carry a field value across registries because the field name matches.
+
+🔵 **What did not need building, measured rather than assumed.** This batch's four heaviest needs were all
+already served: `evidence_presence.py` settled thirteen PMIDs' artefact presence before any audit was
+dispatched (0 absent in scope, so the SHA-256 search was not needed); `record_scoped_edit.py blocks`
+measured every append anchor and produced **zero** refusals across 23 ops on six files; `registry_records.py
+catalog`/`index` caught **nine** collided provisional identifiers and one stale «no landing exists» premise;
+and the nine blind locator audits needed no new tooling, only sub-agents, the artefacts and `pdftoppm`.
+
+🟢 **One external observation worth recording for whoever reads next.** The one red release suite the
+previous batch named — `test_manifest_receipt_provenance.py`, 18 non-conforming against a ceiling of 15 —
+is **green on this tree at 15 of 15**. The repair happened on `main` between batches, the ratchet was not
+loosened, and the previous batch's instruction (*re-measure, never raise the ceiling*) is what made that
+visible rather than argued.
+
+**Cost / API / privacy risk:** none. Everything in this batch was local and stdlib-only; no external
+retrieval, no spend, no new dependency. Two reserved acquisition routes were named and not attempted
+(author outreach for the PMID 42397075 supplement; the paywalled PMID 38407561 and PMID 10786676).
+
+**Next surgical micro-step:** again not a script. `DL-MECH-116` now carries, as a written protocol, the
+assay specification that would turn *«nobody outside three laboratories has measured a WWOX activity»* from
+a measured null into a testable experiment — purified WW2-SDR, a named substrate and cofactor, a YxxxK
+catalytic-dead control, a titration. The missing item is the experiment, not the tool.

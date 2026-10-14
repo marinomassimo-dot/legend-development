@@ -788,10 +788,25 @@ class ScopeMentionClosesACandidate(unittest.TestCase):
                       if item not in ga.DECLARED_MENTION_CLOSURES]
         self.assertEqual(["CC-20260928-QUEUED-01"], undeclared)
 
+    def declare(self, identity: str, verdict: str) -> None:
+        """Install one declaration for the duration of a test.
+
+        The live list is EMPTY since 2026-10-03 — `BATCH_20261003_001` wrote the four remaining
+        candidates' own disposition blocks and retired their entries. These two tests used to
+        assert the live entries, so they measured the corpus rather than the mechanism and would
+        have gone red on exactly the repair they should have welcomed. They now patch a synthetic
+        id, so the two verdicts stay tested whether or not anything is declared.
+        """
+        patched = dict(ga.DECLARED_MENTION_CLOSURES)
+        patched[identity] = (verdict, "synthetic declaration, for this test only")
+        original = ga.DECLARED_MENTION_CLOSURES
+        ga.DECLARED_MENTION_CLOSURES = patched
+        self.addCleanup(setattr, ga, "DECLARED_MENTION_CLOSURES", original)
+
     def test_a_queued_declaration_puts_the_candidate_back_in_the_backlog(self) -> None:
-        """The live defect on `main`: `CC-20260928-GRAPH-HYGIENE-01`, declared `queued`."""
-        declared = "CC-20260928-GRAPH-HYGIENE-01"
-        self.assertEqual("queued", ga.DECLARED_MENTION_CLOSURES[declared][0])
+        """The shape of the live defect `CC-20260928-GRAPH-HYGIENE-01` had, declared `queued`."""
+        declared = "CC-20260928-QUEUED-01"
+        self.declare(declared, "queued")
         self.scope(f"NOT IN SCOPE and still queued: {declared}, a stub with no ops.")
         self.put(declared)
         pending, _unreadable, mention_only = self.survey()
@@ -799,8 +814,8 @@ class ScopeMentionClosesACandidate(unittest.TestCase):
         self.assertEqual([declared], mention_only, "and it is still reported by name")
 
     def test_a_closed_declaration_keeps_the_candidate_closed(self) -> None:
-        declared = "CC-20260920-REGISTRY-LEDGER-DEPTH-01"
-        self.assertEqual("closed", ga.DECLARED_MENTION_CLOSURES[declared][0])
+        declared = "CC-20260928-REAL-01"
+        self.declare(declared, "closed")
         self.scope(f"PROPAGATED {declared} whole.")
         self.put(declared)
         pending, _unreadable, mention_only = self.survey()

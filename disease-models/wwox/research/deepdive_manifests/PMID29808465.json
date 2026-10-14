@@ -1,0 +1,307 @@
+{
+ "schema_version": 2,
+ "pmid": "29808465",
+ "doi": "10.1007/s10048-018-0549-5",
+ "receipt": "FTR-20261004-29808465-03",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID29808465.md",
+  "disease-models/wwox/research/intake_wave_20261004w12_A.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W12-A-Q230P-01.md",
+  "disease-models/wwox/analysis/johannsen2018_fulltext_q230p_revival_20260923.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Re-read wave: the operator-supplied publisher PDF declared by the earlier receipt is on disk with the same digest; no fresh download, by brief item 34."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The owed sections are three figures; the question is whether a consolidated claim's wording rests on them, not lead generation."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapy is tested in this source."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes are proposed as candidates."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The candidate narrows the wording of a consolidated-baseline DATO and is declared MAJOR; triples are published in the candidate for an independent blind auditor, who must not be the reader."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 7,
+  "publications_on_gene": 1,
+  "research_type": "mixed",
+  "is_primary_group_for_disease": false,
+  "weighting": "Seven authors from two university medical centres (front matter). One WWOX patient report with a single-line fibroblast assay; no further WWOX functional work counted here. Publication counts not re-measured in this re-read."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (Gln230Pro OR Q230P OR c.689A>C)",
+    "count": 1,
+    "source": "PubMed ESearch 2026-10-04"
+   }
+  ],
+  "note": "The single hit is PMID 30853297, not this paper: the allele string is absent from this paper's indexed abstract, which names Gln230 only. Allele-level text search underestimates the Q230P literature; cohort papers carry it in tables."
+ },
+ "multihop": {
+  "references_enumerated": 20,
+  "gene_direct_refs_in_source": [
+   "24369382",
+   "24456803",
+   "25403906",
+   "26345274",
+   "25411445"
+  ],
+  "resolved": [
+   "24369382",
+   "24456803"
+  ],
+  "queued": [
+   "25403906",
+   "26345274",
+   "25411445"
+  ],
+  "note": "20 references enumerated off the derived text and confirmed by the dependency screen (references_declared 20). Gene-direct here means a WWOX patient or allele report: refs 6 (Mallaret 2014), 7 (Abdel-Salam 2014), 8 (Ben-Salem 2015), 9 (Tabarki 2015), 10 (Mignot 2015), PMIDs resolved by PubMed citation lookup 2026-10-04. 24369382 and 24456803 hold complete receipts in the ledger (fulltext_receipts.py status). 25403906, 26345274 and 25411445 return no receipt and are queued: none of them is a Q230P source, so none bears on the owed figures. Refs 1-5 and 16 name WWOX but are reviews, expression, or cancer pharmacogenetics, not hop targets for the allele question."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 29808465",
+  "hits": 11,
+  "note": "Records found after the first pass: PAPER 041, CLAIM 019, DL-MECH-029 and full-text-queue blocks. Three of them describe the two patients as sisters; source text and Fig. 2 say cousins."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed metadata 2026-10-04: article types Case Reports, Journal Article; no retraction or concern type returned.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 20,
+   "references_screened": 20,
+   "references_with_doi": 20,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 24,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID29808465_Johannsen2018.pdf",
+   "sha256": "0b2bce6f124ef868b0c12bb3b7eb439399ffb627f28babd424621988a52f8e49",
+   "kind": "article_binary",
+   "note": "Operator-supplied publisher PDF, 6 pages; same digest as the source_fingerprint of FTR-20260923-29808465-02. Re-read 2026-10-04 for the figures only. The bytes were supplied by the operator from the publisher copy behind this DOI; no agent fetched them, so the URL names the publisher record, not an agent download.",
+   "acquisition_recipe": {
+    "resolved_url": "https://doi.org/10.1007/s10048-018-0549-5",
+    "http_method": "GET",
+    "tier": "operator_supplied_publisher_pdf",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-09-23",
+    "derived": false,
+    "result_sha256": "0b2bce6f124ef868b0c12bb3b7eb439399ffb627f28babd424621988a52f8e49"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID29808465_Johannsen2018.txt",
+   "sha256": "d41eda3764b7bcd93a523d0323cccbe8747c2bb572c991c89c192044ea1ac07d",
+   "kind": "article_text",
+   "note": "DERIVED text layer, two-column layout preserved, so sentences that cross a column break are not contiguous; locators quote single-line spans only.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_derivation_from_held_pdf",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": true,
+    "result_sha256": "d41eda3764b7bcd93a523d0323cccbe8747c2bb572c991c89c192044ea1ac07d",
+    "derived_from": "files/fulltext/PMID29808465_Johannsen2018.pdf",
+    "extractor": {
+     "name": "pdftotext",
+     "version": "poppler 24.02.0",
+     "call": "pdftotext -layout -nopgbrk files/fulltext/PMID29808465_Johannsen2018.pdf files/fulltext/PMID29808465_Johannsen2018.txt"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID29808465/Johannsen2018_p4_img23_Fig1.png",
+   "sha256": "91784adf83980e6256cb345131af8399b55117452e1732816ae24bf9f6c8371a",
+   "kind": "figure",
+   "note": "Fig. 1 (brain MRI, three panels) extracted losslessly at native resolution 769x2504. A medical image, not a photograph; inspected for the owed figure section.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_derivation_from_held_pdf",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": true,
+    "result_sha256": "91784adf83980e6256cb345131af8399b55117452e1732816ae24bf9f6c8371a",
+    "derived_from": "files/fulltext/PMID29808465_Johannsen2018.pdf",
+    "extractor": {
+     "name": "pdfimages",
+     "version": "poppler 24.02.0",
+     "call": "pdfimages -f 4 -l 4 -png files/fulltext/PMID29808465_Johannsen2018.pdf fig1"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID29808465/Johannsen2018_p5_img24_Fig3.jpg",
+   "sha256": "92f16c20d134d59b9cae3caab32928e7d46949c32d978240e3bfd311d2259f0e",
+   "kind": "figure",
+   "note": "Fig. 3 (gel, qRT-PCR bars, western) extracted as the embedded JPEG at native resolution 966x2639.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_derivation_from_held_pdf",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": true,
+    "result_sha256": "92f16c20d134d59b9cae3caab32928e7d46949c32d978240e3bfd311d2259f0e",
+    "derived_from": "files/fulltext/PMID29808465_Johannsen2018.pdf",
+    "extractor": {
+     "name": "pdfimages",
+     "version": "poppler 24.02.0",
+     "call": "pdfimages -f 5 -l 5 -j files/fulltext/PMID29808465_Johannsen2018.pdf fig3"
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID29808465/Johannsen2018_page4_200dpi_Fig2.png",
+   "sha256": "ba4aa8d2df9b9fbb34ec7aa9be0888eaa76318839d4f70428dae70a8950b380e",
+   "kind": "figure",
+   "note": "Page 4 rendered at 200 dpi; carries Fig. 2, a vector pedigree with no embedded raster. Individual-level details printed in the pedigree are not transcribed anywhere.",
+   "acquisition_recipe": {
+    "resolved_url": "local derivation",
+    "http_method": "NONE",
+    "tier": "local_derivation_from_held_pdf",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": true,
+    "result_sha256": "ba4aa8d2df9b9fbb34ec7aa9be0888eaa76318839d4f70428dae70a8950b380e",
+    "derived_from": "files/fulltext/PMID29808465_Johannsen2018.pdf",
+    "extractor": {
+     "name": "pdftoppm",
+     "version": "poppler 24.02.0",
+     "call": "pdftoppm -r 200 -f 4 -l 4 -png files/fulltext/PMID29808465_Johannsen2018.pdf p"
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": false,
+  "abstract_anchoring_waived": "The owed section is the figures; abstract anchoring would not test a panel.",
+  "source_fulltext_indexed_evidence": "No PMCID; closed access. Quotes are checkable against the operator-supplied publisher PDF's derived text layer declared above.",
+  "entries": [
+   {
+    "proposition": "The two patients are cousins from two related consanguineous families, not sisters.",
+    "snippet": "Patient 2 is a cousin of patient 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29808465_Johannsen2018.txt",
+    "anchor": "Patient data, patient 2 paragraph",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "The pedigree draws two affected females in two distinct nuclear sibships joined by two consanguineous couples; no genotype is marked on any symbol.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig. 2 pedigree: generations I-VI; two filled circles in generation VI, each with an arrow, each in a different sibship under a different double-line couple; the two generation-V mothers descend from the same generation-IV couple; no +/- or genotype marks on any symbol.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID29808465/Johannsen2018_page4_200dpi_Fig2.png",
+    "anchor": "Figure 2, page 4 render",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "Parental carrier status is asserted without data shown, and no phenotype of the carriers is reported.",
+    "snippet": "of the mutation (data not shown).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29808465_Johannsen2018.txt",
+    "anchor": "Results, Molecular genetics",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The transcript comparison is against three non-fibroblast lines, two cancer lines and HEK293; no control fibroblast is included.",
+    "snippet": "patient-derived fibroblast line in comparison to three different",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29808465_Johannsen2018.txt",
+    "anchor": "Results, WWOX expression on the transcriptional and translational level",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "The qRT-PCR panel shows one bar per line with no error bar, no individual points and no n, and PaTu-8988t sits at 100 percent in both regions; the legend does not name which line was set to 100.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig. 3b: y-axis 'Relative transcript numbers (%)' 0-120. Core region: PaTu-8988t 100, SW620 about 101, HEK293 about 102, patient fibroblast about 102. 3' region: all four bars about 99-100. No error bars, no points, no significance marks.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID29808465/Johannsen2018_p5_img24_Fig3.jpg",
+    "anchor": "Figure 3, panel b",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[3]",
+    "qualifies_needle": "patient-derived fibroblast line in comparison to three different"
+   },
+   {
+    "proposition": "The gel shows only the patient's cDNA amplicons and no-RT controls after 45 cycles; no control-cell cDNA is run on it, so it attests amplicon identity, not quantity.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig. 3a: lane 1 100 bp ladder; lane 2 'cDNA WWOX core region' single band just below 300 bp; lane 3 'cDNA WWOX 3' region' single band at about 200 bp with a faint smear near 300 bp; lane 4 'empty'; lanes 5-6 'RNA WWOX core/3' region' no band.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID29808465/Johannsen2018_p5_img24_Fig3.jpg",
+    "anchor": "Figure 3, panel a",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The western is one membrane at one exposure: WWOX band in PaTu-8988t wild type, SW620 and HEK293; no band in three knockout clones and in the patient fibroblast lane; the patient lane carries the strongest actin band, so absence is not explained by under-loading; no healthy-control fibroblast lane and no size marker are drawn; the second harvest is not shown.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig. 3c: seven lanes labelled PaTu-8988t wildtype, knock-out clones A, B, C, SW620, HEK293, Patient fibroblast. WWOX row: bands in lanes 1, 5, 6 only. Actin row: band in every lane, darkest in the patient lane.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID29808465/Johannsen2018_p5_img24_Fig3.jpg",
+    "anchor": "Figure 3, panel c",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "The protein result is stated for the fibroblast line of one patient, confirmed on a second harvest of the same line.",
+    "snippet": "harvested several days later from the patient fibroblast line",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29808465_Johannsen2018.txt",
+    "anchor": "Results, WWOX expression on the transcriptional and translational level",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The MRI figure supports the structural phenotype in both patients without any quantitative measure; panel b's contrast reads as T1-like although the legend calls it T2-weighted (non-expert reading, INFERENZA).",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig. 1: a sagittal, CSF bright (T2-like); b sagittal, CSF dark and white matter bright (T1-like appearance), thin corpus callosum visible; c coronal, CSF bright, enlarged ventricles and widened sulci. No measurement scale used for any quantity.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID29808465/Johannsen2018_p4_img23_Fig1.png",
+    "anchor": "Figure 1, panels a-c",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[9]",
+    "qualifies_needle": "T2-weighted, sagittal section"
+   },
+   {
+    "proposition": "The MRI legend names T2 weighting for the sagittal panels.",
+    "snippet": "T2-weighted, sagittal section, showing global",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29808465_Johannsen2018.txt",
+    "anchor": "Figure 1 legend",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}

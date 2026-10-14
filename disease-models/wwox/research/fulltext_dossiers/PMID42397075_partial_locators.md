@@ -366,3 +366,246 @@ debt for PMID 42397075 stays open.
 PDFs, above all the detailed Methods and Supplementary Figs. 7F–G (the A51 experiment) and
 10C–F (the claim that RGs are untouched — L4's corroborating evidence currently rests on a
 supplementary figure nobody here has opened).
+
+---
+
+# PART 2 — re-read of 2026-10-04 (intake wave 10, Scientist Y)
+
+`context_policy: SOURCE_FIRST` — the glia question was measured against the source before
+`CLAIM 003` and `CLAIM 005` were opened; the comparison with those records is in the analysis
+note, not here.
+
+**This part is an APPENDIX, not a replacement.** Nothing above is edited. Part 1 and the
+2026-08-10 completion pass were written against an artefact that no longer exists; this part is
+written against a newly acquired one and says exactly where the two agree.
+
+## A. Identity, measured from the front matter
+
+| Field | Measured value | Surface |
+|---|---|---|
+| First author | Steinberg, Daniel J | p. 1 of 36, author line; PubMed esummary |
+| Equal contribution | Steinberg, Zonca and Abdellatif, marked with a dagger | p. 1 author line |
+| Last / corresponding author | Aqeilan, Rami I | p. 2, "Correspondence to" |
+| Second corresponding | Davila-Velderrain, Jose | preprint front matter |
+| Authors | 11 | author line |
+| Journal, DOI | *Brain*; `10.1093/brain/awag239` | p. 1 |
+| Version | advance article, **author-accepted manuscript** — not the typeset version | page banner |
+| Licence | CC BY-NC 4.0 | p. 1 licence block |
+| Article types | Journal Article only — **no retraction, no erratum, no expression of concern** | PubMed, 2026-10-04 |
+
+🔴 **The identity error is in the artefact filenames, and it names the LAST author.** Every legacy
+artefact is `PMID42397075_Aqeilan2026*`. Those paths are kept — earlier receipts declare them, and
+renaming them would break the locator-to-artefact binding of readings already in the hash-chained
+ledger — and the correction is recorded in a new `identity` block in the manifest. New artefacts
+use `PMID42397075_Steinberg2026_OUP-AM*`.
+
+**No second record may exist.** The bioRxiv preprint PPR960425 (`10.1101/2024.12.22.630016`,
+v1 2024-12-25, v2 2025-09-25) is this work at an earlier version: different title, and its author
+string omits the seventh author of the published version. A preprint is **not peer reviewed** and
+never raises a claim's status.
+
+## B. Artefact identity and the comparison the brief asked for
+
+| | legacy (declared by receipts 01-04) | acquired 2026-10-04 |
+|---|---|---|
+| `article_binary` | `files/fulltext/PMID42397075_Aqeilan2026.pdf` | `files/fulltext/PMID42397075_Steinberg2026_OUP-AM.pdf` |
+| sha256 | `b6b44816bb5a029ad6dd3760dbf02ae94c5fcb69f8a9b5721f45c128bbf189a0` | `9775f766f68929e05665aa572196f4889083b501dc7f6792f1b9243e7dc0fd4b` |
+| present on this host | **no** | yes, 36 pp, 3 340 736 bytes |
+
+**Verdict: SAME DOCUMENT, DIFFERENT BYTES.** Measured, not assumed:
+
+1. All **six** embedded figure images extracted from the new PDF reproduce the six figure
+   SHA-256 digests the manifest already declared, **byte for byte**. They were written back to
+   their legacy declared paths, so those six entries are now satisfied by identical bytes.
+2. All **15** body snippets the manifest declares against the legacy derived text occur
+   **verbatim, exactly once each**, in the text derived from the new PDF.
+3. The difference is explained: the new PDF carries a per-page access stamp
+   (`Downloaded from academic.oup.com/... by guest on 04 October 2026`) on **each of its 36 pages**.
+   Its `ModDate` is the download date; its `CreationDate` is 2026-07-03.
+
+🔴 **The reusable fact: this publisher endpoint is not digest-reproducible.** A second download on
+another day yields a third digest for the same article. An artefact acquired here can be
+re-verified by content (figure digests, snippet occurrence) but never by file digest.
+
+**What did NOT come back: 16 artefacts.** A SHA-256 search over `/home/desktop` and
+`/tmp/claude-1000` and a filename search over the whole filesystem found none of them. They are
+the legacy PDF, its derived text, the published supplement `brain-2025-03809-File009.pdf`, and 13
+images rendered from the supplementary figures volume. **Thirteen of the fourteen supplementary
+figure locators recorded on 2026-08-10 therefore quote images that no longer exist anywhere.**
+They are preserved verbatim and are **not** re-attested by this reading.
+
+## C. The supplement: what was tried, and exactly what is missing
+
+| Route | Result |
+|---|---|
+| Oxford Academic article page (the supplementary-data link) | **HTTP 403** — Cloudflare interstitial; no article HTML served, so the link could not even be read |
+| PMC / Europe PMC `supplementaryFiles` | **No deposit.** `pmcid` null, `inPMC` N, `inEPMC` N, `hasSuppl` N, `isOpenAccess` N; the only full-text URL is the DOI, marked *Subscription required*. `pmc_pow_fetch` is **not applicable** — there is no PMC record to solve a proof-of-work page for |
+| bioRxiv preprint supplement (v2, `DC1/embed/media-1.pdf`) | **Obtained — and it is not the published supplement.** 8 pages, titled *Expanded View figures*, captions for Figs. EV1-EV13 under the preprint's own numbering. **No Materials and methods section at all**, and its figure numbering does not map onto Supplementary Fig. 1-10 |
+| bioRxiv preprint full PDF | **HTTP 429** across repeated attempts with back-off; not obtained in this session |
+
+No payment, no interlibrary loan, no author contact.
+
+🔴 **Still missing, exactly:** the published **Supplementary material** of *Brain* `awag239` — above
+all the **detailed Materials and methods**, which the article body relegates there in full
+(*"A detailed Materials and methods section is provided in the Supplementary material."*), and the
+**supplementary figures volume**, cited **42 times** in the body as `Supplementary Fig.`. What
+would unblock it: a non-interstitial fetch of the Oxford Academic supplementary-data endpoint, or
+the operator supplying the file as they did for PMID 33914858.
+
+## D. What bears on the model — measured on panels, with what is measured vs inferred
+
+### D1. Glia, myelin and oligodendroglia — the wave-8 question
+
+**Counted in the body text** (36 pp): `myelin` 3 occurrences, `oligodendro` 2, `astrocyt` 1,
+`microglia` 1 — and of those seven, **four are in the reference list**, one is an introduction
+citation of the mouse literature, and the remaining two are the *same* sentence and its figure.
+`OLIG`, `SOX10`, `PDGFRA`, `MBP`, `GFAP`, `AQP4`, `S100B`, `OPC`: **zero occurrences each**.
+
+🔴 **No glial cell type is annotated in these organoids.** The clustering yields five labels —
+`cRG`, `RG`, `oRG`, `NP`, `Neu` (Fig. 2A, n = 18 007 cells). Glial progenitors are **folded into**
+the mixed RG cluster, and the authors decline to resolve it further:
+
+> of outer RGs (oRGs), cycling RGs (cRGs), and a mixed population of vRGs, neuroectodermal
+
+There is no oligodendrocyte cluster, no astrocyte cluster, no microglial cluster, and no
+myelin-protein, g-ratio or OPC measurement anywhere in the paper. **This is an earned null.**
+
+🔴 **The one oligodendrocyte statement, and what it actually is.** The body says, of AAV9-WWOX
+treated versus untreated WOREE organoids:
+
+> promotion of oligodendrocyte differentiation and myelination, and synaptic function (Fig. 6D
+
+Measured at **panel 6E** (the term is in 6E, not 6D): it is **one bar in a gene-set enrichment
+chart**, `oligodendrocyte specification & myelin`, NES about +1.3, among four positively enriched
+terms (with OXPHOS electron transport chain, hippo signaling, oxidative stress). The comparison is
+`WOREE^WWOX+ versus WOREE` **in neuronal progenitors and neurons** — the caption says so. It is a
+**transcriptional signature read in neurons**, not a measurement of any oligodendrocyte, in a
+model that contains none.
+
+🔴 **And the same panel moves lipid synthesis the other way.** Two of the four *negatively*
+enriched terms are `cholesterol production inhibition` and `glycerophospholipid biosynthesis` —
+the biosynthetic substrate of myelin — in the same contrast, same panel.
+
+⚠️ **The caption does not name the term the body draws from it.** Figure 6E's own caption reads:
+
+> an increase in OXPHOS and oxidative stress terms in WOREE-WWOX compared to WOREE,
+
+and continues with *lipid metabolism* downregulated. The oligodendrocyte/myelin term appears in
+the **panel** and in the **running text**, and **not** in the caption of the panel it belongs to.
+
+🔵 **The only oligodendrocyte-lineage number in the paper is in external public data.** Figure 3B
+plots WWOX expression by cell type in a published post-conceptional-week-16 human fetal single-cell
+dataset (not these organoids): RG highest (median about 0.57), IP about 0.48, ExN/InN about 0.20,
+Other about 0.14, **Oli about 0.10, Mic about 0.07** — the two lowest of seven. **Transfer limit:**
+external data, 16 pcw, i.e. before myelination begins; it is an expression gradient, not a
+requirement test, and it says nothing about an adult or challenged oligodendrocyte.
+
+### D2. Composition — and a sentence the panel does not support
+
+The body states:
+
+> number of total recognized RG cells (RGs) (Fig. 2D-F), while SCAR12 organoids (modeling a
+
+relatively milder disease) exhibited an RG population similar to WT, having just assigned a
+*"prominent increase"* in RGs to WWOX-KO **and WOREE**.
+
+🔴 **Measured against panel 2F's own axis ticks** (ticks located by pixel scan at -3, -2, -1, 0, +1;
+229 px per log2 unit at 900 dpi; bar extents read against them):
+
+| genotype | RGs log2FC | Neu log2FC |
+|---|---|---|
+| WWOX-KO | 0 to **+0.98** | **-2.36** to 0 |
+| SCAR12 | **-0.25** to 0 | 0 to **+0.18** |
+| WOREE | 0 to **+0.07** | -0.04 to -0.01 |
+
+**The ordering is the opposite of the sentence.** WOREE's radial-glia deviation (+0.07) is the
+**smallest** of the three; SCAR12's (-0.25) is roughly **three to four times larger in magnitude**
+and runs the **other way**. "Similar to WT" describes WOREE, not SCAR12. The sentence's central
+contrast between the two patient genotypes is not what the panel it cites plots.
+
+⚠️ **Caveat stated against myself:** the RGs bar is drawn as a colour composite of the RG subtypes,
+so a single scalar read from its extent is the extent of the block, not necessarily one fitted
+log2FC. That caveat applies **equally to all three rows**, which are drawn identically — so the
+*ordering* above is robust even where the absolute value is not.
+
+🔵 **This refines, and does not overturn, the 2026-08-10 reading**, which recorded "-2.6 ... +0.55 ...
+SCAR12 and WOREE both within roughly 0.2". Measured on bytes that exist: Neu -2.36 and RGs +0.98
+for the knockout (a near-doubling of the RG fraction, larger than the earlier figure), WOREE within
+0.07 (tighter than the earlier figure), SCAR12 at -0.25 (slightly outside it). **The qualitative
+finding — the composition phenotype is almost entirely the engineered knockout's — stands and is
+strengthened.** Cell counts recomputed from panel D: 5649 + 3020 + 3422 + 5916 = **18 007**, which
+is the n printed on panel A. ✅
+
+### D3. MYC — shared by the patient lines, unlike composition
+
+Figure 3K, `SOX2+MYC+/SOX2+`, week 16 organoids: WT about 20 %, WWOX-KO about 60 % (`***`),
+SCAR12 about 50 % (`**`), WOREE about 55 % (`****`), each against WT. **All three mutant genotypes
+are raised**, including both patient-derived lines. `n` is **organoids** and is single-digit in
+three arms: WT 7, WWOX-KO 5, SCAR12 8, WOREE 11. Figure 3L, 2D NSCs: WT about 45 %, KO1 about 67 %
+(`**`), KO2 about 75 % (`***`), KO1 vs KO2 `n.s.`; "data collected from two experiments".
+
+🔵 **So the MYC lesion separates from the composition phenotype**: shared across genotypes where the
+cell-fraction change is not. This is the same direction as the 2026-08-10 reading of
+Supplementary Fig. 4, reached here from a main figure that still exists.
+
+### D4. Cell cycle — the abstract's phase sentence, against the phase panel
+
+The abstract:
+
+> dynamics leading to an accumulation of cells in the G2/M and S phases, overexpression of the
+
+Measured at Figure 4C (`cell proportion log2 FC (KO/WT)` in RG cells): **S about +0.77**,
+**G2M about +0.50**, **M about -0.37**, **G1/G0 about -0.28**. The `S` and `G2M` bins rise; the
+separately plotted **`M` bin falls**. Written as "G2/M and S", the abstract merges a bin that rises
+with a phase name whose own bin falls. The panel carries **no error bars and no significance
+marks** — it is a point estimate from the single scRNA-seq experiment (`WWOX-KO n = 2396 cells`,
+`WT n = 2152 cells`, panel A).
+
+### D5. Confirmed on the new bytes
+
+Figure 4J (`Mean MYC promoter binding density`, histogram of 1000 random gene sets peaking about
+1.25, spanning about 0.9-1.8): the grey wild-type marks sit at about 1.85-1.88, **outside** the
+null; the blue knockout marks sit at about 1.10-1.12, **inside** it. The 2026-08-10 finding — the
+panel supports "not significant for the KO", which the caption's single wild-type *P* value does
+not state — **is confirmed on an artefact that still exists.**
+
+## E. What this paper does NOT say
+
+- It does not measure any oligodendrocyte, astrocyte, OPC or microglial cell, in any genotype.
+- It does not measure myelin, myelin protein, g-ratio, axon counts or any myelination outcome.
+- It does not test cell autonomy of anything: there is no cell-type-restricted deletion here.
+- It does not report a WT-versus-treated statistical comparison for the rescue (Part 1, Fig. 6A(ii)).
+- It does not state the significance of the knockout arm of Fig. 4J.
+- It reports **no randomization and no blinding**, and the three experiments the WWOX-MYC thesis
+  rests on (scRNA-seq, MYC inhibition, NSC ChIP-seq) are the three performed **without independent
+  differentiations** (Part 1, from the statistics section).
+- Its detailed Materials and methods are **not in the article**, and are not obtainable today.
+
+## F. Genotypes and the transfer limit
+
+The lines are an engineered isogenic constitutive knockout (`JH WKO`, two clones) and
+patient-derived iPSC lines of two syndrome classes — WOREE and SCAR12 — in **unguided cerebral
+organoids**, week 16. A constitutive knockout models neither human missense allele. SCAR12 and
+WOREE are different allele classes and this paper itself shows them behaving differently; nothing
+measured in one may be carried to the other, and nothing here may be carried to the reference
+genotype's own allele pair. Every datum above is bounded by that.
+
+## G. What I did NOT read in this pass
+
+| Section | State |
+|---|---|
+| abstract, introduction, results, discussion, data availability | read |
+| methods | **not_present in the article** — relegated in full to a supplement that is unobtainable |
+| figures | Figures 2, 3, 4 and 6 read **as rendered images**; Figures 1 and 5 **not opened** in this pass (read on 2026-08-09 / 08-10 against the lost artefact) |
+| tables | not_present |
+| supplementary | **unavailable** — see section C |
+| references | not re-enumerated in this pass (104, enumerated 2026-08-10) |
+
+**Evidence depth of this pass: `partial_fulltext_read`.** `complete_fulltext_read` is refused, and
+the reason is not a formality: the methods are in a supplement nobody can open, and two main
+figures were not opened today.
+
+**Classifier halt, recorded as the brief requires.** One command issued during the glia sweep was
+stopped by a safety classifier while running. The read was not re-attempted in other words; it was
+redone with narrow script slices that print bounded line ranges, which is how every passage in
+section D was then read. No passage was skipped as a result.

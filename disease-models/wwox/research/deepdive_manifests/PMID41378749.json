@@ -1,0 +1,221 @@
+{
+ "schema_version": 2,
+ "pmid": "41378749",
+ "doi": "10.1002/bdr2.70007",
+ "receipt": "FTR-20261002-41378749-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID41378749.md",
+  "disease-models/wwox/research/intake_wave_20261002_B.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261002-B-NONLINEAGE-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261002-B-INTRON8-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is a research surface another batch owns; the one lead this reading touches (DL-MECH-107) is proposed through a commit candidate instead of an edit."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "Nothing in this paper supplies a therapeutic lever for the reference genotype class; forging hypotheses from a nominal or review-level signal would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "The paper tests no compound, dose or intervention, so there is no molecule for BLOCK-1 triage."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes are proposed as commit candidates for a later BATCH_COMMIT."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; the triples are published in the candidate for an auditor to run."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 121,
+  "publications_on_gene": 1,
+  "research_type": "mixed",
+  "is_primary_group_for_disease": false,
+  "weighting": "PubMed counts 2026-10-02: senior author Morton SU[au] 121 records, 1 intersecting WWOX (this paper). A neonatal genetics and environmental-epidemiology collaboration (clinical case-control ascertainment plus GWAS, i.e. mixed descriptive-clinical and computational). Ascertainment of spina bifida is clinical-expert; the WWOX content is a nominal locus plus a literature paragraph."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND \"neural tube\"",
+    "count": 1,
+    "source": "PubMed ESearch 2026-10-02"
+   },
+   {
+    "query": "WWOX AND \"spina bifida\"",
+    "count": 1,
+    "source": "PubMed ESearch 2026-10-02"
+   }
+  ],
+  "note": "This paper is the only WWOX record for neural tube defect or spina bifida in PubMed, so nothing replicates or contradicts it."
+ },
+ "multihop": {
+  "references_enumerated": 25,
+  "gene_direct_refs_in_source": [
+   "15026124",
+   "32581702",
+   "20146584"
+  ],
+  "resolved": [
+   "15026124",
+   "32581702",
+   "20146584"
+  ],
+  "queued": [],
+  "note": "All 25 references enumerated; the XML reference list carries no PMIDs, so the three WWOX-direct ones were resolved by title on PubMed (Chen 2004 WOX1 in developing murine nervous system; Iacomino 2020; Salah 2010). Iacomino and Salah have identity records; Chen 2004 is mentioned only. They support the Discussion paragraph, not the association."
+ },
+ "corpus_crossquery": {
+  "query": "Does any registry record name this paper? (registry_records.py get --pmid 41378749)",
+  "hits": 2,
+  "note": "Mentions in FT-142 (queued as developmental-timing context, \"not a WWOX paper\") and in DL-MECH-060 (a list of genetic positives). This reading narrows FT-142: the paper reports a nominal WWOX intronic locus, which is a WWOX-locus statement though not a WWOX-function one."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-02 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn, CommentIn or UpdateIn link; publication types Journal Article; Research Support, N.I.H., Extramural.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 25,
+   "references_screened": 24,
+   "references_with_doi": 24,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 22,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41378749_MondragonEstrada2025_PMC.xml",
+   "sha256": "480fba55d480d15e36b905f5d24197121a24b114e8714785c6df592ed5772897",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12697008/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "480fba55d480d15e36b905f5d24197121a24b114e8714785c6df592ed5772897"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID41378749_MondragonEstrada2025_supplement/BDR2-117-e70007-s001.docx",
+   "sha256": "29aaf176d12385cf7832e0e36217ac0e2fa6df3dfc6cea610bc3469e8d1fc14e",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "no_recipe": "Member BDR2-117-e70007-s001.docx extracted unchanged by Python zipfile from the Europe PMC REST supplementaryFiles bundle for PMC12697008 (fetched 2026-10-02; bundle not retained)."
+   }
+  },
+  {
+   "path": "files/fulltext/PMID41378749_MondragonEstrada2025_supplement/FigS7_regional_plots_image7.png",
+   "sha256": "5444706974a824b22aca8e38e924dabddc9fca1d1e8a1351f05059ab6a9b84e9",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "word/media/image7.png extracted unchanged by Python zipfile from the supplementary docx declared above; it is the Supplemental Figure 7 regional plot (seventh embedded image in document order)."
+   }
+  },
+  {
+   "path": "files/fulltext/PMID41378749_MondragonEstrada2025_supplement/BDR2-117-e70007-g001.jpg",
+   "sha256": "f8d5561f466e215cc63af0296390bbb864b669abf20c3f937cf1836266a2701c",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member BDR2-117-e70007-g001.jpg extracted unchanged by Python zipfile from the Europe PMC REST supplementaryFiles bundle for PMC12697008 (fetched 2026-10-02; bundle not retained)."
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The WWOX variants are intronic: \"coding region\" in the abstract means the gene body.",
+    "snippet": "Three variants on chromosome 16 were within the 8th intron of WWOX",
+    "anchor": "Results, Association Without Folate",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41378749_MondragonEstrada2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Multiple testing was handled only by a suggestive threshold; no genome-wide threshold was applied.",
+    "snippet": "We addressed multiple comparisons by only considering loci above the suggestive threshold",
+    "anchor": "Methods, Association Studies",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41378749_MondragonEstrada2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The technical replication replicated two loci, CNTN5 and CTNNA2; the WWOX locus is not among them.",
+    "snippet": "Two previously identified nominal loci were replicated using the imputed dosages computed on the Michigan Imputation Server",
+    "anchor": "Results, Technical Replication Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41378749_MondragonEstrada2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors describe the analysis as hypothesis-generating and list small cohort and confounding as limitations.",
+    "snippet": "the potential for unmeasured confounding factors to modify the observed associations",
+    "anchor": "Discussion, limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41378749_MondragonEstrada2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The abstract’s named SNP rs7184417 has its own statistics in Table S2 (OR 6.22, p 3.42E-06, imputation R2 0.78), distinct from rs28688166.",
+    "snippet": "rs7184417 T C 0.20446 6.22376 3.42E-06 0.779877 WWOX",
+    "anchor": "Supplemental Table 2",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID41378749_MondragonEstrada2025_supplement/BDR2-117-e70007-s001.docx",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The lead WWOX SNP is imputed with R2 0.78 and has cohort allele frequency 0.22.",
+    "snippet": "rs28688166 C T 0.223037 6.20425 2.22E-06 0.776826 WWOX",
+    "anchor": "Supplemental Table 2",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID41378749_MondragonEstrada2025_supplement/BDR2-117-e70007-s001.docx",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Cases and controls differ markedly in age at study visit.",
+    "snippet": "Age at study visit (days), mean (SD) 44 (65.1) 175 (90.2)",
+    "anchor": "Table 1",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID41378749_MondragonEstrada2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC12697008/fullTextXML returned HTTP 200 with a full JATS body on 2026-10-02; the artefact declared above is that response, so every body and table quote can be re-verified externally."
+ }
+}

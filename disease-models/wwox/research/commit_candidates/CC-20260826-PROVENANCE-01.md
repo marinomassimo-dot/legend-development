@@ -278,3 +278,46 @@ on the triples above. **Applied outside batch:**
 Unchanged: repointing `CLAIM 002`'s `Source` to `PAPER 094` needs a surface of PMID 42397075 (*Brain* 2026, DOI 10.1093/brain/awag239). Europe PMC reports it not open access (no PMCID); no artefact exists in this deployment, and the manifest's declared artefacts are absent. **Unblock:** the operator supplies the publisher PDF or HTML.
 
 **Not medical advice.**
+
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261003_002` (2026-10-03, ACTOR_ID `scientist`, Scientist G), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** DEFERRED
+
+Re-measured 2026-10-03: no artefact of PMID 42397075 exists in the root `files/fulltext/`, so repointing `CLAIM 002`'s `Source` (a consolidated baseline) still has no surface for its blind audit. **Unblock:** unchanged — a lawful surface of PMID 42397075 read to a receipt.
+
+**Not medical advice.**
+
+## BATCH DISPOSITION — `BATCH_20261004_002` (2026-10-04, ACTOR_ID `scientist`, Scientist L), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** DEFERRED — **blocker changed from «artefact absent» to «artefact acquired, unread».**
+
+Re-measured 2026-10-04 with `evidence_presence.py --disease wwox --pmid 42397075 --search /home/desktop/legend-development/files`: **22 of 22 declared artefacts absent, 0 recoverable by SHA-256** — so the dispatch's requirement to search before deferring on absence was met, and the absence was real.
+
+🔵 **It is no longer absent.** This batch acquired the paper at zero external spend and with no author contact: `files/fulltext/PMID42397075_Steinberg2026_OUP-AM.pdf`, 36 pages, sha256 `9775f766f68929e05665aa572196f4889083b501dc7f6792f1b9243e7dc0fd4b`, CC BY-NC 4.0, text extractable (~12,800 words with Introduction, Methods, Results, Discussion). Two facts about it matter for whoever reads it next. **(1) The declared manifest path names the wrong author.** It expects `PMID42397075_Aqeilan2026.pdf`; the first author is **Daniel J. Steinberg** and Aqeilan is last and corresponding, so a manifest repair is owed alongside the reading. **(2) It is an OUP Accepted Manuscript**, watermarked: the watermark letters appear as stray tokens in extracted text, so verbatim quotation needs care, and its six figures are ~220 ppi rasters, so figure values are pixel reads. The **supplementary methods were NOT acquired** (HTTP 403), and the main-text methods are only ~340 words, the paper itself saying the detail *«is provided in the Supplementary material»*.
+
+**Why still DEFERRED.** Item A **suspends two `consolidated baseline` claims**. That is the highest-consequence act in the queue, it requires a blind locator audit against a surface nobody has yet read, and the surface is a lossy watermarked manuscript whose methods are missing. Propagating it on an unread artefact would be exactly the failure the blind-audit discipline exists to prevent. **Review trigger: 2026-10-06**, as a reading task with the audit budgeted; the acquisition that blocked it for seven batches is done.
+
+**Not medical advice.**
+
+---
+
+## BATCH DISPOSITION — `BATCH_20261004_005` (2026-10-04, ACTOR_ID `scientist`, Scientist O), append-only
+
+**Nothing above this line was rewritten.** Operator standing authorisation, verbatim: *«procedi sempre»*.
+
+**Verdict:** DEFERRED
+
+**Re-measured 2026-10-04 and the blocker is unchanged.** `evidence_presence.py --disease wwox --pmid 42397075` reports **19 of 35 declared artefacts present, 16 absent, 0 digest mismatch** — exactly the state `BATCH_20261004_004` measured, with the whole host already swept by SHA-256 at that time and **0 recoverable**. The acquired manuscript is on disk; the **supplement is not**, and the article's own methods are about 340 words, the paper saying the detail *«is provided in the Supplementary material»*.
+
+**Why it is still deferred, in one line:** item A **suspends two `consolidated baseline` claims**, which needs a receipted reading of that manuscript plus a blind locator audit against it, and **no reading has been performed** — the artefact is present and unread. That is a reading task with its own budget, not a line in a propagation, and this batch did not pretend otherwise.
+
+**Review trigger: 2026-10-11** (moved from 2026-10-06 by `BATCH_20261004_007`, 2026-10-04, after re-measuring the blocker: `evidence_presence.py` still reports 16 of 35 artefacts of that PMID absent with 0 digest mismatch, and a SHA-256 search over every worktree and the shared `files/` tree on this host recovered **none** of them — so the blocker is unchanged, not merely unexamined). **This candidate is named in no scope of this batch**, deliberately, so `growth_anchors.py` keeps counting it as pending.
+
+**Not medical advice.**

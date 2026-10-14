@@ -1,0 +1,310 @@
+{
+ "schema_version": 2,
+ "pmid": "26272509",
+ "doi": "10.1007/s00204-015-1573-y",
+ "receipt": "FTR-20261004-26272509-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID26272509.md",
+  "disease-models/wwox/research/intake_wave_20261004w9_B.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W9-B-VPA-DIRECTION-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W9-B-REGISTRY-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is a research surface another batch owns; any lead this reading touches is proposed through a commit candidate instead of an edit."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever for the reference genotype class is supplied by this source; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No candidate molecule is proposed for the reference genotype class; the compounds in the source are tested in cells or animals for other purposes."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes are proposed as commit candidates for a later BATCH_COMMIT."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The triples are published in the candidates for an auditor to run; no consolidated baseline claim is narrowed here."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 430,
+  "publications_on_gene": 0,
+  "research_type": "mixed",
+  "is_primary_group_for_disease": false,
+  "weighting": "PubMed counts 2026-10-04: senior author Leist M[au] 430 records, 0 intersecting WWOX. Same group as PMID 23179753."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "valproic acid AND WWOX",
+    "count": 2,
+    "source": "PubMed ESearch 2026-10-04"
+   },
+   {
+    "query": "valproic acid AND embryonic stem cells AND neural AND transcriptome",
+    "count": 24,
+    "source": "PubMed ESearch 2026-10-04"
+   }
+  ],
+  "note": "The WWOX datum lives only in a genome-wide supplementary table."
+ },
+ "multihop": {
+  "references_enumerated": 69,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "All 69 references enumerated from the JATS reference list; none names WWOX or FRA16D."
+ },
+ "corpus_crossquery": {
+  "query": "Does any registry record name this paper? (registry_records.py get --pmid 26272509)",
+  "hits": 0,
+  "note": "No registry record exists; the only repository statement resting on it is the CTD valproate row of PMID 41254692 Table S7."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-04 by PubMed EFetch for PMID 26272509: no RetractionIn, ErratumIn, ExpressionOfConcernIn or UpdateIn link.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 69,
+   "references_screened": 62,
+   "references_with_doi": 62,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 24,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 7
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID26272509_Rempel2015_PMC.xml",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4551554/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "3368affd5d32b40b428440331f8f009ff1aef60cd32eba82ce9af81f0bb2d5fd"
+   },
+   "sha256": "3368affd5d32b40b428440331f8f009ff1aef60cd32eba82ce9af81f0bb2d5fd"
+  },
+  {
+   "path": "files/fulltext/PMID26272509_Rempel2015_supplement/204_2015_1573_MOESM2_ESM.xlsx",
+   "kind": "supplement_binary",
+   "note": "MOESM2 (Supplemental Table S1, 39 MB): genome-wide array results (54,675 probe sets per sheet, columns Affy_ID, Symbol, Name, FC, p.value, adj.p.value) for 12 test compounds and 2 solvents in the UKN1 neural-induction system. Verified through the derived selective dump.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/4551554/bin/204_2015_1573_MOESM2_ESM.xlsx",
+    "http_method": "GET",
+    "tier": "PMC instance bin via pmc_pow_fetch.fetch (proof-of-work page solved)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "6e015504e11c2412ec327a4d4a4e899c517eddadc58af5214df7fe71d5abbb55"
+   },
+   "sha256": "6e015504e11c2412ec327a4d4a4e899c517eddadc58af5214df7fe71d5abbb55"
+  },
+  {
+   "path": "files/fulltext/PMID26272509_Rempel2015_supplement/204_2015_1573_MOESM2_ESM_xlsxdump.txt",
+   "kind": "supplement_text",
+   "note": "Selective cell dump: header row of each sheet, the table-of-content rows defining fold change and cut-off, and every row naming WWOX, PAX6 or OTX2 (PAX6 and OTX2 as direction sentinels: neuroectoderm markers the paper says VPA lowers). Not a full dump.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID26272509_Rempel2015_supplement/204_2015_1573_MOESM2_ESM.xlsx",
+    "extractor": {
+     "name": "xlsxdumpB.py (stdlib; copy stored beside the output)",
+     "version": "copy stored beside the output; stdlib zipfile+ElementTree (xlsx) or xlrd (xls)",
+     "call": "python3 xlsxdumpB.py <xlsx> 1 '<WWOX|PAX6|OTX2 rows | fold-change definition | sheet map>' > <txt>",
+     "join": "\n"
+    },
+    "acquired_on": "2026-10-04"
+   },
+   "sha256": "bfce89c3515baa66e1417a0f340694ef0c7cd011273e8d474b16e180d1f1893f"
+  },
+  {
+   "path": "files/fulltext/PMID26272509_Rempel2015_supplement/204_2015_1573_MOESM3_ESM.xlsx",
+   "kind": "supplement_binary",
+   "note": "MOESM3 (Supplemental Table S2): HDACi consensus genes (regulated by at least 4 of 6 HDACi), GO and TFBS lists. Scanned by script for WWOX (one hit, in the GO annotated-background column, not in any significant or consensus list); no derived text surface declared.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/4551554/bin/204_2015_1573_MOESM3_ESM.xlsx",
+    "http_method": "GET",
+    "tier": "PMC instance bin via pmc_pow_fetch.fetch (proof-of-work page solved)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "9fcb8af25bfb24224f07c2a7cdfb245e915423837cf7e139b15bb321a7f033d2"
+   },
+   "sha256": "9fcb8af25bfb24224f07c2a7cdfb245e915423837cf7e139b15bb321a7f033d2"
+  },
+  {
+   "path": "files/fulltext/PMID26272509_Rempel2015_supplement/204_2015_1573_MOESM1_ESM.pdf",
+   "kind": "supplement_binary",
+   "note": "MOESM1 (supplementary figures, PDF). Not read page by page.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/4551554/bin/204_2015_1573_MOESM1_ESM.pdf",
+    "http_method": "GET",
+    "tier": "PMC instance bin via pmc_pow_fetch.fetch (proof-of-work page solved)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "9c03b0fb4db324b5dfdc099f27136629134c73cd4b2deae8bd67b21637c91523"
+   },
+   "sha256": "9c03b0fb4db324b5dfdc099f27136629134c73cd4b2deae8bd67b21637c91523"
+  },
+  {
+   "path": "files/fulltext/PMID26272509_Rempel2015_supplement/figs/204_2015_1573_Fig1_HTML.jpg",
+   "kind": "figure",
+   "note": "Figure 1 inspected as an image: UKN1 exposure bar (day of differentiation 0 to 6) and panel A, the benchmark concentration table (VPA 600000 nM).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/4551554/bin/204_2015_1573_Fig1_HTML.jpg",
+    "http_method": "GET",
+    "tier": "PMC instance bin via pmc_pow_fetch.fetch (proof-of-work page solved)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "0f526fb9195295feebc1be39f2a1558f88a986489c4ae7a8c6e7ff097eb988bb"
+   },
+   "sha256": "0f526fb9195295feebc1be39f2a1558f88a986489c4ae7a8c6e7ff097eb988bb"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The neural-induction system uses H9 hESC differentiated by dual SMAD inhibition.",
+    "snippet": "Differentiation of the H9 cells towards NEP was based on dual SMAD inhibition",
+    "anchor": "Materials and methods, cell culture",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26272509_Rempel2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The transcriptome concentration is the highest non-cytotoxic concentration (EC10 of cytotoxicity), not a clinical exposure.",
+    "snippet": "The highest non-cytotoxic concentration [corresponding to EC10(cytotoxicity)] of all test compounds was determined in a viability assay.",
+    "anchor": "Figure 1 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26272509_Rempel2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors' VPA concentration-response series used eight concentrations from 25 to 1000 uM, with the classifier calling VPA an HDACi from 350 uM upward.",
+    "snippet": "The eight concentrations ranged from 25 to 1000 µM",
+    "anchor": "Results, validation with legacy data",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26272509_Rempel2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The supplement defines the cut-off as p 0.05 with fold change 1.5.",
+    "snippet": "SHEET=Table of Content-sheet 1 | ROW=17 | C=Cut off: p 0.05_ fold change 1.5",
+    "anchor": "Supplemental Table S1, table of content, row 17",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID26272509_Rempel2015_supplement/204_2015_1573_MOESM2_ESM_xlsxdump.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The supplement's own fold-change line is internally ambiguous ('>1 down regulated; >1 up regulated'); direction is therefore settled by sentinels, not by that line.",
+    "snippet": "SHEET=Table of Content-sheet 1 | ROW=13 | C=FC | D=the corresponding fold changes of the probe set (>1 down regulated; >1 up regulated)",
+    "anchor": "Supplemental Table S1, table of content, row 13",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID26272509_Rempel2015_supplement/204_2015_1573_MOESM2_ESM_xlsxdump.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Sentinel 1: in the VPA sheet PAX6 has fold change 0.09, which the paper's text treats as down-regulation of neuroectoderm markers (so a ratio below 1 is down).",
+    "snippet": "SHEET=VPA-sheet 15 | ROW=15095 | A=15094 | B=205646_s_at | C=PAX6 | D=paired box 6 | E=0.09 | F=0 | G=0",
+    "anchor": "Supplemental Table S1, sheet VPA, row 15095",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID26272509_Rempel2015_supplement/204_2015_1573_MOESM2_ESM_xlsxdump.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Sentinel 2: OTX2 in the VPA sheet.",
+    "snippet": "SHEET=VPA-sheet 15 | ROW=40987 | A=40986 | B=231731_at | C=OTX2 | D=orthodenticle homeobox 2 | E=0.12 | F=0 | G=0",
+    "anchor": "Supplemental Table S1, sheet VPA, row 40987",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID26272509_Rempel2015_supplement/204_2015_1573_MOESM2_ESM_xlsxdump.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "VPA (600 uM, 6 days, UKN1): WWOX probe 219077_s_at ratio 1.43, adj p 0.011 (up).",
+    "snippet": "SHEET=VPA-sheet 15 | ROW=28363 | A=28362 | B=219077_s_at | C=WWOX | D=WW domain containing oxidoreductase | E=1.43 | F=1E-3 | G=1.0999999999999999E-2",
+    "anchor": "Supplemental Table S1, sheet VPA, row 28363",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID26272509_Rempel2015_supplement/204_2015_1573_MOESM2_ESM_xlsxdump.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "VPA: probe 223747_x_at ratio 1.33, adj p 0.027 (up).",
+    "snippet": "SHEET=VPA-sheet 15 | ROW=33025 | A=33024 | B=223747_x_at | C=WWOX | D=WW domain containing oxidoreductase | E=1.33 | F=4.0000000000000001E-3 | G=2.7000000000000003E-2",
+    "anchor": "Supplemental Table S1, sheet VPA, row 33025",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID26272509_Rempel2015_supplement/204_2015_1573_MOESM2_ESM_xlsxdump.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "VPA: probe 223868_s_at ratio 1.68, adj p 0.007 (up).",
+    "snippet": "SHEET=VPA-sheet 15 | ROW=33146 | A=33145 | B=223868_s_at | C=WWOX | D=WW domain containing oxidoreductase | E=1.6800000000000002 | F=1E-3 | G=7.0000000000000001E-3",
+    "anchor": "Supplemental Table S1, sheet VPA, row 33146",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID26272509_Rempel2015_supplement/204_2015_1573_MOESM2_ESM_xlsxdump.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "VPA: probe 210695_s_at is not significant (ratio 1.19, adj p 0.32).",
+    "snippet": "SHEET=VPA-sheet 15 | ROW=20081 | A=20080 | B=210695_s_at | C=WWOX | D=WW domain containing oxidoreductase | E=1.19 | F=0.14500000000000002 | G=0.32100000000000001",
+    "anchor": "Supplemental Table S1, sheet VPA, row 20081",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID26272509_Rempel2015_supplement/204_2015_1573_MOESM2_ESM_xlsxdump.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Entinostat (a class I HDAC inhibitor): probe 223868_s_at ratio 1.51, adj p 0.016 (up).",
+    "snippet": "SHEET=Entinostat-sheet 4 | ROW=33146 | A=33145 | B=223868_s_at | C=WWOX | D=WW domain containing oxidoreductase | E=1.51 | F=1E-3 | G=1.6E-2",
+    "anchor": "Supplemental Table S1, sheet Entinostat, row 33146",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID26272509_Rempel2015_supplement/204_2015_1573_MOESM2_ESM_xlsxdump.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "TSA (10 nM): the same probe set 223747_x_at that VPA raises is LOWERED (ratio 0.79, adj p 0.018), so the direction is not uniform across HDAC inhibitors or probe sets.",
+    "snippet": "SHEET=TSA-sheet 14 | ROW=33025 | A=33024 | B=223747_x_at | C=WWOX | D=WW domain containing oxidoreductase | E=0.79 | F=3.0000000000000001E-3 | G=1.7999999999999999E-2",
+    "anchor": "Supplemental Table S1, sheet TSA, row 33025",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID26272509_Rempel2015_supplement/204_2015_1573_MOESM2_ESM_xlsxdump.txt",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC4551554/fullTextXML returned HTTP 200 with a full JATS body on 2026-10-04; the artefact declared is that response."
+ }
+}

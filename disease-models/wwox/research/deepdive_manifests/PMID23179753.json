@@ -1,0 +1,309 @@
+{
+ "schema_version": 2,
+ "pmid": "23179753",
+ "doi": "10.1007/s00204-012-0967-3",
+ "receipt": "FTR-20261004-23179753-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID23179753.md",
+  "disease-models/wwox/research/intake_wave_20261004w9_B.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W9-B-VPA-DIRECTION-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W9-B-REGISTRY-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is a research surface another batch owns; any lead this reading touches is proposed through a commit candidate instead of an edit."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever for the reference genotype class is supplied by this source; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No candidate molecule is proposed for the reference genotype class; the compounds in the source are tested in cells or animals for other purposes."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes are proposed as commit candidates for a later BATCH_COMMIT."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The triples are published in the candidates for an auditor to run; no consolidated baseline claim is narrowed here."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 430,
+  "publications_on_gene": 0,
+  "research_type": "mixed",
+  "is_primary_group_for_disease": false,
+  "weighting": "PubMed counts 2026-10-04: last authors include Leist M (430 records for Leist M[au]), 0 intersecting WWOX. A developmental-toxicology group; the paper is a transcriptome-platform paper, not a WWOX paper."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "valproic acid AND WWOX",
+    "count": 2,
+    "source": "PubMed ESearch 2026-10-04"
+   },
+   {
+    "query": "valproic acid AND WWOX AND expression",
+    "count": 1,
+    "source": "PubMed ESearch 2026-10-04"
+   },
+   {
+    "query": "valproic acid AND embryonic stem cells AND neural AND transcriptome",
+    "count": 24,
+    "source": "PubMed ESearch 2026-10-04"
+   }
+  ],
+  "note": "Almost no literature joins valproate and WWOX in PubMed; the WWOX datum in this paper lives only in a supplementary gene list, not in any sentence."
+ },
+ "multihop": {
+  "references_enumerated": 69,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "All 69 references enumerated from the JATS reference list; none names WWOX or FRA16D. The sibling platform papers (PMID 24935251, 26272509, 27188386) are read in the same wave."
+ },
+ "corpus_crossquery": {
+  "query": "Does any registry record name this paper or the hESC valproate platform? (registry_records.py get --pmid 23179753)",
+  "hits": 0,
+  "note": "No registry record exists for this PMID; the only repository statement resting on it is the CTD valproate row of PMID 41254692 Table S7 (wave-8 candidate CC-20261004W8-A-VPA-DIRECTION-01)."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-04 by PubMed EFetch for PMID 23179753: no RetractionIn, ErratumIn, ExpressionOfConcernIn or UpdateIn link. One CommentIn link (an editorial in the same journal, a comment not a correction).",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 69,
+   "references_screened": 66,
+   "references_with_doi": 66,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 24,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID23179753_Krug2013_PMC.xml",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3535399/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "233c1475ee973ad2f0e5ca644a947153a7f08ed61d0869a619c0daeef60a1883"
+   },
+   "sha256": "233c1475ee973ad2f0e5ca644a947153a7f08ed61d0869a619c0daeef60a1883"
+  },
+  {
+   "path": "files/fulltext/PMID23179753_Krug2013_supplement/204_2012_967_MOESM2_ESM.xls",
+   "kind": "supplement_binary",
+   "note": "Electronic supplementary material 2 (MOESM2): Supplementary Tables S1 (probe-set lists, sheets 2-11) and S2 (TFBS, sheet 12). Legacy .xls container; verified through the derived selective dump.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/3535399/bin/204_2012_967_MOESM2_ESM.xls",
+    "http_method": "GET",
+    "tier": "PMC instance bin via pmc_pow_fetch.fetch (proof-of-work page solved)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "f989fac5f2e0b35c9d6c272611fc770a85b81ff61b37307ca1a99f44ed8ddd58"
+   },
+   "sha256": "f989fac5f2e0b35c9d6c272611fc770a85b81ff61b37307ca1a99f44ed8ddd58"
+  },
+  {
+   "path": "files/fulltext/PMID23179753_Krug2013_supplement/204_2012_967_MOESM2_ESM_xlsdump.txt",
+   "kind": "supplement_text",
+   "note": "Selective cell dump (xlrd): first 4 rows of each of the 12 sheets, the table-of-content rows that define the fold-change convention and the sheet map, and EVERY row whose text is the gene symbol WWOX. Not a full dump; the gene lists were not read in full.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID23179753_Krug2013_supplement/204_2012_967_MOESM2_ESM.xls",
+    "extractor": {
+     "name": "xlsdumpB.py (xlrd; copy stored beside the output)",
+     "version": "copy stored beside the output; stdlib zipfile+ElementTree (xlsx) or xlrd (xls)",
+     "call": "python3 xlsdumpB.py <xls> 4 '<WWOX|fold-change-definition|sheet-map pattern>' > <txt>",
+     "join": "\n"
+    },
+    "acquired_on": "2026-10-04"
+   },
+   "sha256": "7f1eec9edefbd6653505610473b76adff2249b1c2033fadfe1fcd4d3405b05ef"
+  },
+  {
+   "path": "files/fulltext/PMID23179753_Krug2013_supplement/204_2012_967_MOESM1_ESM.pdf",
+   "kind": "supplement_binary",
+   "note": "Electronic supplementary material 1 (supplementary figures and text, PDF). Scanned by pdftotext for WWOX (0 hits); not read page by page.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/3535399/bin/204_2012_967_MOESM1_ESM.pdf",
+    "http_method": "GET",
+    "tier": "PMC instance bin via pmc_pow_fetch.fetch (proof-of-work page solved)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "3b764300fdb72843cb67b4dd01ba219d309e09cf472eb9bfc65a1ee0c26c668d"
+   },
+   "sha256": "3b764300fdb72843cb67b4dd01ba219d309e09cf472eb9bfc65a1ee0c26c668d"
+  },
+  {
+   "path": "files/fulltext/PMID23179753_Krug2013_supplement/figs/Fig1.jpg",
+   "kind": "figure",
+   "note": "Figure 1 (treatment-protocol overview) inspected as an image: exposure bars per test system.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/3535399/bin/204_2012_967_Fig1_HTML.jpg",
+    "http_method": "GET",
+    "tier": "PMC instance bin via pmc_pow_fetch.fetch (proof-of-work page solved)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "2239ea2d7ebc2af92deb054fac3ec85cc338272681d39fec7a33b96b841fcff7"
+   },
+   "sha256": "2239ea2d7ebc2af92deb054fac3ec85cc338272681d39fec7a33b96b841fcff7"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The paper states the transcriptional response to MeHg is very limited, while VPA tables are large (thousands of probe sets).",
+    "snippet": "the transcriptional response of differentiating hESC to MeHg is indeed very limited",
+    "anchor": "Results and discussion, para on numbers of regulated PS",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID23179753_Krug2013_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In the UKK system exposure runs across a 14-day embryoid-body differentiation (all germ layers).",
+    "snippet": "the EBs were maintained for 14 days on a horizontal shaker with or without drug treatment",
+    "anchor": "Methods, UKK",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID23179753_Krug2013_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In the UKN1 system, neural induction by dual SMAD inhibition, the chemical was present from day of differentiation 0 for 6 days.",
+    "snippet": "the cells were differentiated in the presence or absence of the chemicals from DoD 0 for 6 days",
+    "anchor": "Methods, UKN1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID23179753_Krug2013_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The JRC system is an embryoid-body-derived early neuroepithelial (rosette) culture kept for up to 10 days.",
+    "snippet": "Cultures were kept for up to 10 days with medium changes every third day.",
+    "anchor": "Methods, JRC",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID23179753_Krug2013_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The test concentration is the benchmark concentration, defined by a 10 percent viability loss, not a therapeutic exposure.",
+    "snippet": "the highest concentration that reduced overall cell viability by not more than 10 %",
+    "anchor": "Results and discussion, para on BMC determination",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID23179753_Krug2013_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The 2012 paper's own caution: significance depends on FDR correction; before correction 2524 up-regulated PS at 500 uM VPA in UKK, after correction four.",
+    "snippet": "the number of 2524 PS that appeared to be significantly up-regulated before FDR correction dropped down to four really significant PS after FDR correction",
+    "anchor": "Results and discussion, Fig. 3/4 paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID23179753_Krug2013_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Concentrations the authors call human-relevant for VPA are 500-1000 uM; the assay BMC sits in the millimolar range.",
+    "snippet": "500–1,000 μM VPA have been reported",
+    "anchor": "Results and discussion, IVIVE paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID23179753_Krug2013_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The supplement defines fold change as ratio: below 1 is down, above 1 is up.",
+    "snippet": "the corresponding fold changes of the PS (<1 = down-regulated; >1 = up-regulated)",
+    "anchor": "Supplementary Table S1 legend (sheet 1 table of content)",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID23179753_Krug2013_supplement/204_2012_967_MOESM2_ESM_xlsdump.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "WWOX probe sets in the JRC 1.21 mM VPA list: two rows, both up (ratio 1.96 and 1.85), FDR-adjusted p 0.00229 and 0.027.",
+    "snippet": "SHEET=Suppl. Table 1 - Sheet 5 | ROW=2480 | A=WWOX | B=1.96 | C=9.05e-06 | D=0.00229",
+    "anchor": "Supplementary Table S1, sheet 5 (JRC, 1.21 mM VPA), row 2480",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID23179753_Krug2013_supplement/204_2012_967_MOESM2_ESM_xlsdump.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Second WWOX probe set, same list.",
+    "snippet": "SHEET=Suppl. Table 1 - Sheet 5 | ROW=6508 | A=WWOX | B=1.85 | C=0.000279 | D=0.027",
+    "anchor": "Supplementary Table S1, sheet 5 (JRC, 1.21 mM VPA), row 6508",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID23179753_Krug2013_supplement/204_2012_967_MOESM2_ESM_xlsdump.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "WWOX in the JRC 1.05 mM VPA list: up, 2.01, FDR-adjusted p 0.0372.",
+    "snippet": "SHEET=Suppl. Table 1 - Sheet 6 | ROW=5089 | A=WWOX | B=2.01 | C=0.000302 | D=0.0372",
+    "anchor": "Supplementary Table S1, sheet 6 (JRC, 1.05 mM VPA), row 5089",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID23179753_Krug2013_supplement/204_2012_967_MOESM2_ESM_xlsdump.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "WWOX in the UKK 2 mM VPA list (14-day embryoid bodies): up, 2.12, FDR-adjusted p 0.00339.",
+    "snippet": "SHEET=Suppl. Table 1 - Sheet 7 | ROW=860 | A=WWOX | B=2.12 | C=4.64e-06 | D=0.00339",
+    "anchor": "Supplementary Table S1, sheet 7 (UKK, 2 mM VPA), row 860",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID23179753_Krug2013_supplement/204_2012_967_MOESM2_ESM_xlsdump.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Second WWOX probe set in the UKK 2 mM list: up, 1.47, FDR-adjusted p 0.0227.",
+    "snippet": "SHEET=Suppl. Table 1 - Sheet 7 | ROW=2611 | A=WWOX | B=1.47 | C=9.41e-05 | D=0.0227",
+    "anchor": "Supplementary Table S1, sheet 7 (UKK, 2 mM VPA), row 2611",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID23179753_Krug2013_supplement/204_2012_967_MOESM2_ESM_xlsdump.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The 0.5 mM UKK list holds 4 probe sets and the 0.6 mM UKN1 list 3697; WWOX is in neither (negative, by scripted search of every row).",
+    "snippet": "SHEET=Suppl. Table 1 - Sheet 8 | ROW=2 | A=Probe sets / Gene names | B=Fold change | C=p Value | D=adjusted p Value",
+    "anchor": "Supplementary Table S1, sheet 8 (UKK, 0.5 mM VPA), header row",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID23179753_Krug2013_supplement/204_2012_967_MOESM2_ESM_xlsdump.txt",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC3535399/fullTextXML returned HTTP 200 with a full JATS body on 2026-10-04; the artefact declared is that response, so every body quote can be re-verified externally."
+ }
+}

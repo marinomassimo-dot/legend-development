@@ -1,0 +1,210 @@
+{
+ "schema_version": 2,
+ "pmid": "41744777",
+ "doi": "10.3390/cells15040334",
+ "receipt": "FTR-20261004-41744777-01",
+ "landing": [
+  "FTR-20261004-41744777-01",
+  "disease-models/wwox/research/fulltext_dossiers/PMID41744777.md",
+  "disease-models/wwox/research/intake_wave_20261004w8_B.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline. An off-gene capsid-engineering record read only for the transferable question."
+  },
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Europe PMC fullTextXML returned the body on the first request (HTTP 200, 113315 bytes)."
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "paper_packet.py reported no manifest, no receipt and no registry identity: a first reading."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "Not applicable: no compound. The paper's safety argument is entirely inferential and, as the dossier records, it contains no toxicity, histopathology or immunology measurement of any kind."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 17,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-04: 'Keeler GD[au]' 17; 'Keeler GD[au] AND WWOX' 0.",
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "An AAV capsid-engineering laboratory with no WWOX publication. The capsids it compares against are its own prior designs, which is a stated interest in the combined capsid being the better one; that is a reason to prefer the paper's own numbers over its summary sentences, and the two disagree in the brain."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "occurrences of WWOX or Wwox in the persisted JATS body",
+    "route": "local count over files/fulltext/PMID41744777_Nabakowski2026_PMC.xml",
+    "count": 0
+   }
+  ],
+  "note": "Zero. An earned null for the gene. Read only for the dose-ceiling question, with the transfer limit stated on every datum."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 61,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "All 61 references parsed from the persisted JATS and tested for the strings WWOX and Wwox: none matched.",
+  "resolved": [],
+  "queued": [],
+  "note": "No gene-direct reference exists, so there is no hop to follow and nothing is queued. No gap."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does the shared root files/ tree already hold any artefact for PMID 41744777?",
+  "hits": 0,
+  "finding": "No. paper_packet.py reported 0 artefacts before acquisition."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-04",
+  "route": "PubMed esummary for 41744777",
+  "result": "pubtype ['Journal Article']; the CommentsCorrections reference list is empty. No retraction, no expression of concern, no erratum.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 61,
+   "references_screened": 49,
+   "references_with_doi": 49,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 24,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 12
+   },
+   "citing_relation": "No dependency was flagged, so no citing_relation is owed. The references with no DOI support no statement this reading carries."
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41744777_Nabakowski2026_PMC.xml",
+   "sha256": "c991cfba3560b97b8345e978eff53f7ba3757a3bc1aba103d79df00afdbe30e1",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12938943/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_rest_fulltextxml",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-04",
+    "derived": false,
+    "result_sha256": "c991cfba3560b97b8345e978eff53f7ba3757a3bc1aba103d79df00afdbe30e1"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC JATS body held locally and fingerprinted; the single in-text table was flattened cell-wise (td and tr boundaries preserved). The article declares no separate supplementary file in its JATS.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored. Every entry is a Methods specification, a Results number, or a summary sentence quoted so that the Results can be set against it.",
+  "entries": [
+   {
+    "proposition": "The design: five point mutations combined from two previously published liver-de-targeted capsids.",
+    "snippet": "To create the AAV9-DM capsid, we combined the 501, 505, 706, 527, and 533 mutations in one AAV9 capsid (Figure 1A).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41744777_Nabakowski2026_PMC.xml",
+    "anchor": "Results, '3.1. Rational Design of AAV9-DM'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE COST THE TITLE DOES NOT CARRY: the new capsid packages roughly eight-fold worse than its parent, which works directly against the dose-ceiling argument it is proposed for.",
+    "snippet": "AAV9 yields were in line with the general field consensus at 3.58 × 1013 vector genomes (vgs) (Figure 1B). We found both AAV9-16 and AAV9-HR to result in slightly lower yields than AAV9 at ~2.0 × 1013 vgs (Figure 1B). However, the reduction in packaging efficiency was more pronounced in the AAV9-DM, which yielded 4.5 × 1012 vgs (Figure 1B).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41744777_Nabakowski2026_PMC.xml",
+    "anchor": "Results, '3.2. Packaging Efficiencies'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The liver result, which is the paper's strongest and best-supported claim.",
+    "snippet": "AAV9-DM resulted in a ~127 fold reduction in vector genome copies as compared to AAV9, which is the most significant reduction in any variant tested (Figure 4A).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41744777_Nabakowski2026_PMC.xml",
+    "anchor": "Results, '3.4. Evaluation of Vector Genome Biodistribution in Different Tissues'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE CNS CLAIM IS WEAKER THAN THE SUMMARY STATES, BY THE PAPER'S OWN DATA: every mutant, including the new one, put significantly fewer vector genomes into the brain than the parent capsid.",
+    "snippet": "In the brain, all mutated capsids resulted in significantly lower vector genome copies as compared to AAV9, though relative expression levels were consistent amongst all capsids investigated.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41744777_Nabakowski2026_PMC.xml",
+    "anchor": "Discussion, fifth paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The summary sentence that the brain data above has to be read against.",
+    "snippet": "we have developed a new AAV9-DM capsid that possesses reduced liver tropism and reduced heart tropism, while minimally affecting CNS tropism as compared to AAV9",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41744777_Nabakowski2026_PMC.xml",
+    "anchor": "Discussion, final paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The expression equivalence in CNS rests on a per-tissue relative ratio, and the whole-animal output fell by about two orders of magnitude.",
+    "snippet": "AAV9 was placed in the high group and reached a peak AR of 7.3 × 107, AAV9-16 and AAV9-HR were in the medium group and reached a peak AR of 6.6 × 106 and 3.5 × 106, respectively, and AAV9-DM was in the low group and reached a peak AR of 5.8 × 105 (Figure 2).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41744777_Nabakowski2026_PMC.xml",
+    "anchor": "Results, '3.3. AAV9-DM Capsid Results in Liver De-Targeting and Durable Transgene Expression'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Vector genome copies and transgene expression disagreed in three of five tissues, and the authors propose the capsid itself modulates transcription — so neither read-out alone predicts the other.",
+    "snippet": "While the gene expression ratios are largely in line with vector genome copy data, some discrepancies occurred. In particular, AAV9-HR had higher relative gene expression ratios in the heart and GA from reduced genome copies.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41744777_Nabakowski2026_PMC.xml",
+    "anchor": "Results, '3.5. Evaluation of Fluc Relative Gene Expression Levels in Extrahepatic Tissues'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The paper's own statement of why the dose ceiling is the problem worth solving, with the clinical deaths it cites.",
+    "snippet": "We believe that for AAV therapies to continue to move forward, the trend of administering high-vector doses must be abandoned in favor of developing efficient AAV vectors that are effective at lower, safer doses.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41744777_Nabakowski2026_PMC.xml",
+    "anchor": "Discussion, first paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The whole experiment is a single dose by one systemic route in one mouse strain with a luciferase reporter — which is the transfer limit on everything above.",
+    "snippet": "1 × 1011 vgs/animal of AAV9, AAV9-16, AAV9-HR, or AAV9-DM capsids containing a Fluc transgene were injected into C57BL6/J mice via the tail vein.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41744777_Nabakowski2026_PMC.xml",
+    "anchor": "Results, '3.3. AAV9-DM Capsid Results in Liver De-Targeting and Durable Transgene Expression'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Transgene expression from the new capsid was not stable over the nine weeks observed, declining significantly from the week-3 reference.",
+    "snippet": "the AAV9-DM mutant resulted in significantly reduced transgene expression levels at 6 and 9 weeks as compared to week 3, though no differences were seen at other timepoints (Figure 3B)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41744777_Nabakowski2026_PMC.xml",
+    "anchor": "Results, '3.3. AAV9-DM Capsid Results in Liver De-Targeting and Durable Transgene Expression'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The precedent capsid the design builds on is reported to keep CNS transduction — a prior claim, not a measurement made here.",
+    "snippet": "Importantly, AAV9-HR results in CNS transduction and expression rates similar to what is achieved by AAV9 [20].",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41744777_Nabakowski2026_PMC.xml",
+    "anchor": "Discussion, third paragraph",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}

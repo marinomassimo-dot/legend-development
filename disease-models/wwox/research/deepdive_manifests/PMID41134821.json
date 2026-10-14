@@ -1,0 +1,216 @@
+{
+ "schema_version": 2,
+ "pmid": "41134821",
+ "doi": "10.1371/journal.pone.0334840",
+ "receipt": "FTR-20261004-41134821-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID41134821.md",
+  "disease-models/wwox/research/intake_wave_20261004w7_C2.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W7-C2-REGISTRY-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W7-C2-DRG-IMAGING-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery ledger edit; any lead is proposed through a commit candidate."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "The paper is off-gene; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for the reference genotype class."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; triples are published in the candidate."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "Not assessed: the paper never mentions WWOX; the group is an industry imaging and gene-therapy team (many authors are employees of the sponsor, per the competing-interests statement) working on Fabry disease."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX in the article text (case-insensitive count over the JATS body)",
+    "count": 0,
+    "source": "local XML count 2026-10-04"
+   }
+  ],
+  "note": "Off-gene paper read only for the DRG-imaging endpoint question."
+ },
+ "multihop": {
+  "references_enumerated": 55,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "WWOX does not occur in the article; no reference is gene-direct."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 41134821",
+  "hits": 0,
+  "note": "No registry record names this paper before this reading."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-04 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn, CommentIn or UpdateIn link; publication types Journal Article.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 55,
+   "references_screened": 51,
+   "references_with_doi": 51,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 24,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 4
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41134821_Zhao2025_PMC.xml",
+   "sha256": "b5e115256c97f824f6d845b5ac467f35470ffe46505353361c34b44e37b29b9c",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12551818/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "b5e115256c97f824f6d845b5ac467f35470ffe46505353361c34b44e37b29b9c"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST fullTextXML for the PMC id returned HTTP 200 with a full JATS body on 2026-10-04; the artefact declared above is that response, so every body and table quote can be re-verified externally.",
+  "entries": [
+   {
+    "proposition": "The DRG measure is a cross-sectional area from a maximum-intensity projection, a surrogate for volume.",
+    "snippet": "we used the cross-sectional area (CSA) derived from maximum intensity projection (MIP) images in the axial direction as a surrogate for dorsal root ganglion (DRG) volume",
+    "anchor": "Discussion, Limitations paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41134821_Zhao2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "No clear contrast between DRG and spinal cord was seen, so delineation used adjacent cord images.",
+    "snippet": "we used the adjacent spinal cord images for DRG delineation, as no clear contrast between the DRG and spinal cord was observed",
+    "anchor": "Discussion, Limitations paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41134821_Zhao2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Nerve roots, vessels and CSF may contribute to the segmented high-intensity region.",
+    "snippet": "the high-intensity regions may include contributions from nerve roots, blood vessels, or partial volumes of CSF",
+    "anchor": "Discussion, Limitations paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41134821_Zhao2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Test-retest: ICC 0.9, limits of agreement -0.060 to 0.066 mm2, in five wild-type mice (ten L4 DRGs).",
+    "snippet": "Excellent repeatability and reliability were achieved with the limits of agreement from",
+    "anchor": "Results, test-retest paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41134821_Zhao2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The vector was AAV9 given intravenously at 6.25e12 vg/kg to 8-week-old Fabry mice, with an AAV9-null control.",
+    "snippet": "The test and control articles were intravenously injected at",
+    "anchor": "Methods, Study design and vector administration",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41134821_Zhao2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The group sizes in Table 1 give three untreated Fabry mice, five AAVnull and five AAVGLA (thirteen), while Results says fifteen Fabry mice.",
+    "snippet": "a total of fifteen Fabry mice that were separated into 3 groups",
+    "anchor": "Results, DRG enlargement paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41134821_Zhao2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Untreated Fabry and AAVnull groups were pooled because they did not differ; DRG about 25% larger than wild type at 24 weeks (0.35 vs 0.28 mm2).",
+    "snippet": "the DRG size in the Fabry mice was ~ 25% larger and statistically different than the DRG size in the wild type mice",
+    "anchor": "Results, DRG enlargement paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41134821_Zhao2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "No significant DRG difference between AAVGLA-treated Fabry mice and wild type at any time point; smaller than untreated Fabry from 16 weeks.",
+    "snippet": "There were no statistically significant differences at all the time points between the gene therapy group and the wildtype group.",
+    "anchor": "Results, DRG enlargement paragraph 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41134821_Zhao2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The AAV effect is read as normalisation of storage pathology; histology is representative images and LAMP1 positivity.",
+    "snippet": "treated with AAVGLA had marked reduction in LAMP1 staining",
+    "anchor": "Results, lysosomal burden paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41134821_Zhao2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Functional testing used a different set of animals from the MRI animals.",
+    "snippet": "A different set of animals from the one utilized for the MRI evaluations was used for the functional testing",
+    "anchor": "Methods, Functional testing of peripheral nerves",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41134821_Zhao2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Discussion extends the method to other DRG-affected diseases as a claim, not a measurement.",
+    "snippet": "which can be used in animal models with DRG manifestations, including Fabry disease, Sjögren disease, Friedreich’s Ataxia and other sensory neuropathies",
+    "anchor": "Discussion, Summary of findings",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41134821_Zhao2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}

@@ -1,0 +1,285 @@
+{
+ "schema_version": 2,
+ "pmid": "42458834",
+ "doi": "10.1016/j.ymthe.2026.07.032",
+ "pmcid": "PMC13555558",
+ "receipt": "FTR-20261003-42458834-01",
+ "landing": [
+  "FTR-20261003-42458834-01",
+  "disease-models/wwox/research/intake_wave_20261003w4_C.md"
+ ],
+ "landing_note": "Intake wave 4 2026-10-03, Scientist C, group C (theme 5: epilepsy / CNS gene-therapy lessons transferable to a neuron-targeted AAV). The receipt is prepared and NOT appended: the Orchestrator records the wave's receipts in event order. This source contains no WWOX content and lands no canonical claim.",
+ "skills_considered": [
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true,
+   "reason": "paper_packet.py packet and fulltext_receipts.py status were run for each of the six PMIDs before any source was opened. All six returned exit 1 on status and 'manifest: none - this is a first reading', with no PAPER or LIT record and no recorded acquisition route."
+  },
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Europe PMC REST fullTextXML returned HTTP 200 with a body for all six PMCIDs on the first attempt. No paywall was met, no supplement endpoint was called, and nothing was paid for."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline. The six were read as one question (can the risks of a neuron-targeted AAV be bounded in advance, and for each parameter does the source measure it or assume it), and two of the six had to be read against each other sentence by sentence."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED. Triples are handed to the blind audit through the commit candidates' LOCATOR TRIPLES FOR BLIND AUDIT sections; the producer of a reading must not be its verifier."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Not invoked. The group was assigned as a contradiction to characterise and not to decide, so no primitive was needed; enumerate_baseline would have added nothing to a set in which every source states its own limits."
+  }
+ ],
+ "group_assessment": {
+  "research_type": "experimental_lab",
+  "total_publications": 70,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-03 (tool=LEGEND-research): 'Gray SJ[au] AND adeno-associated' 70, 'Gray SJ[au] AND WWOX' 0.",
+  "weighting": "An academic AAV gene-therapy laboratory with large AAV output, publishing a hard negative about its own therapeutic approach on disease-foundation money. The OBSERVATION carries full weight and is the strongest kind available: a sponsor-adverse negative with a promoter-matched control vector carrying a different transgene that did not reproduce the effect. The INTERPRETATION is explicitly provisional by the authors' own statement that the mechanism is not addressed. What this reading must NOT take at face value is the summary 'the brain was overall unaffected', which is true of morphology and not of the brain transcriptome the same paper reports.",
+  "performed": true,
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "note": "None of the six sources in this group mentions WWOX (grep -icE 'wwox|wox1|16q23' over each artefact returns 0, run 2026-10-03). They are platform, dose and toxicology sources read for transferable method, so the group question is not 'is this laboratory authoritative on WWOX' but 'who paid for this measurement and does a second party corroborate it'. Four independent origins are represented: an academic viral-vector core (Gunma University), a sponsor with its own clinical candidate (Exegenesis Bio), an academic gene-therapy laboratory on foundation money (UT Southwestern), and two pharmaceutical sponsors (Biogen; Novartis). PMID 35331006 and PMID 36700120 are BOTH Novartis, share four authors (Tukov, Meseck, Penraat, Chand) and the latter pools data from the Novartis study warehouse, with three study descriptors matching the former's studies (Mauritius-origin non-GLP cohort; two studies using Omnipaque 180 contrast; an intravenous arm at about 1.0e14 vg/kg). They are therefore NOT independent sources and are not counted as mutual corroboration. Research-group knowledge base is excluded from the public edition; this rests on the papers' own author lists, affiliations and declarations of interest."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "grep -icE 'wwox|wox1|16q23|fragile site FRA16D' over the declared artefact",
+    "route": "local artefact scan 2026-10-03",
+    "count": 0
+   },
+   {
+    "query": "WWOX",
+    "route": "PubMed esearch 2026-10-03 (tool=LEGEND-research)",
+    "count": 710
+   },
+   {
+    "query": "WWOX AND (adeno-associated OR AAV)",
+    "route": "PubMed esearch 2026-10-03 (tool=LEGEND-research)",
+    "count": 2
+   },
+   {
+    "query": "WWOX AND dorsal root ganglion",
+    "route": "PubMed esearch 2026-10-03 (tool=LEGEND-research)",
+    "count": 2
+   },
+   {
+    "query": "WWOX AND neurofilament",
+    "route": "PubMed esearch 2026-10-03 (tool=LEGEND-research)",
+    "count": 1
+   },
+   {
+    "query": "AAV AND dorsal root ganglion AND toxicity",
+    "route": "PubMed esearch 2026-10-03 (tool=LEGEND-research)",
+    "count": 35
+   }
+  ],
+  "note": "Zero WWOX density in the source itself, and near-zero in the literature that would connect WWOX to this group's subject matter: against 710 WWOX records, only 2 also mention adeno-associated vectors or AAV, 2 mention dorsal root ganglion and 1 mentions neurofilament, while the AAV DRG-toxicity literature itself holds 35 records. This is an earned null on the gene axis and the expected result: the group was assigned as transferable-method sources, not as WWOX sources. Every statement carried out of this reading is a lesson from another gene or species with its transfer limit stated, never a WWOX datum. The numbers also establish why transfer is unavoidable here: there is no WWOX AAV safety literature to read instead."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 34,
+  "references_with_pmid": 33,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "ref elements counted in the JATS deposit; pub-id[pub-id-type=pmid] counted.",
+  "resolved": [],
+  "queued": [],
+  "dedup_performed": "Not performed: no reference in any of the six names WWOX, so no multi-hop expansion is warranted toward the disease model."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Which existing research-layer records already carry a dorsal-root-ganglion toxicity statement or an AAV CNS dose statement that this group would corroborate, sharpen or contradict? Measured with: git grep -l -i 'dorsal root ganglio' -- disease-models/wwox/research/",
+  "route": "local repository scan at commit 296cd5ba5596, 2026-10-03",
+  "hits": 9,
+  "note": "Compared, AFTER the first pass was written, against the wave-3 candidate CC-20261003W3-C-RESTORATION-SPEC-01 (the six-parameter restoration specification). Three contacts: (1) that candidate records PMID 40349107 using serum NfL as a toxicity biomarker with a threshold of 1,719 pg/mL or greater, and PMID 36700120 supplies the operating characteristics that threshold lacks (n=260, ROC AUC, sensitivity/specificity at five fold-change cut-offs); (2) that candidate states no therapeutic window has been measured for any DEE gene in its set, and PMID 41992613 is the closest thing in this corpus to a two-sided window result yet still does not measure one, which corroborates and sharpens the wave-3 negative rather than overturning it; (3) that candidate carries DRG toxicity as an AAV class effect, and PMIDs 41404412 / 35331006 / 36700120 are the literature in which the mechanism of that class effect is contested."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-03",
+  "route": "PubMed article metadata for the six PMIDs in one call (article_types inspected for a retraction, expression of concern or erratum notice), plus dependency_integrity.py screen --pmid <PMID> --manifest-block for the reference list.",
+  "result": "No retraction, no expression of concern, no erratum on this paper. Article type is 'Journal Article'; PMID 35331006 additionally carries 'Research Support, Non-U.S. Gov't'.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 34,
+   "references_screened": 30,
+   "references_with_doi": 30,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 4
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42458834_Boitnott2026_PMC.xml",
+   "sha256": "38121405e364e7e1ef81bae4088f31ea8d396512d3a001fbf7f7763d5e1da69f",
+   "kind": "article_text",
+   "note": "Europe PMC REST fullTextXML, acquired 2026-10-03 into the root checkout for a first-hand read of this group.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13555558/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_rest_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "38121405e364e7e1ef81bae4088f31ea8d396512d3a001fbf7f7763d5e1da69f"
+   }
+  },
+  {
+   "path": "files/figures/PMID42458834/gr2.webp",
+   "sha256": "b1f8a01ab09a890c3627bea0d58f3f76741548d9eed8ae2b3238a37991ecfcf9",
+   "kind": "figure",
+   "note": "Figure 2 (1600x1953), inspected as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13555558.1/gr2.webp",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "b1f8a01ab09a890c3627bea0d58f3f76741548d9eed8ae2b3238a37991ecfcf9"
+   }
+  },
+  {
+   "path": "files/figures/PMID42458834/gr3.webp",
+   "sha256": "69fafa9068820c3637d8343e1223fbe1e097a69d8a2d6ac03b3b3eaea57a5671",
+   "kind": "figure",
+   "note": "Figure 3 (1600x1713), inspected as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13555558.1/gr3.webp",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "derived": false,
+    "result_sha256": "69fafa9068820c3637d8343e1223fbe1e097a69d8a2d6ac03b3b3eaea57a5671"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "JATS from the Europe PMC fullTextXML endpoint for PMC13555558, 92739 bytes. Every locator is matched against the body of that artefact by deepdive_manifest.py --verify-artifacts.",
+  "abstract_anchoring_waived": "No locator draws on the abstract alone; every locator is matched against the body of the declared JATS artefact.",
+  "note": "Coverage: abstract, introduction, full Methods/Materials, every Results section, every main table as rendered in the JATS deposit, every main figure LEGEND, Discussion, the authors' own limitations, declarations and the supplementary-material captions. NO figure panel was opened as an image and NO supplementary file was fetched, so the reading is declared partial_fulltext_read, not complete. Figures 2 and 3 were additionally fetched from the PMC open-data bucket and inspected as images at native resolution. Figure 2 SUPPLIES THE GROUP SIZES, which appear nowhere in the running text or in the captions as deposited, and Figure 3 qualifies the brain chemokine statement. No other panel was opened.",
+  "entries": [
+   {
+    "proposition": "DEATH CAME WITHIN A WEEK OF A CSF INJECTION, which is the timescale lesson: transgene toxicity need not be slow.",
+    "snippet": "died abruptly by P8, 1 week post injection",
+    "surface": "body",
+    "anchor": "Results, rapid death due to myocardial degeneration",
+    "artifact": "files/fulltext/PMID42458834_Boitnott2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE LETHAL MOUSE DOSE, SCALED BY BRAIN MASS, IS A DOSE ALREADY IN CLINICAL USE. This is the sentence that makes the finding transferable at all.",
+    "snippet": "if extrapolated by neonatal brain mass",
+    "surface": "body",
+    "anchor": "Materials and methods, viral vector injections",
+    "artifact": "files/fulltext/PMID42458834_Boitnott2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The brain was spared morphologically, which is the paper's headline, and the same brain carried a large chemokine induction, which is not.",
+    "snippet": "Notably lipid droplets were not detected in the brain or kidney",
+    "surface": "body",
+    "anchor": "Results, lipid accumulation and hepatic toxicity",
+    "artifact": "files/fulltext/PMID42458834_Boitnott2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The brain is not transcriptionally unaffected: the authors report and cannot explain a brain chemokine rise.",
+    "snippet": "Cxcl10 mRNA levels were also increased in the brain",
+    "surface": "body",
+    "anchor": "Results, type I interferon signalling",
+    "artifact": "files/fulltext/PMID42458834_Boitnott2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The mechanism is declared unproven by the authors in the same paragraph in which they propose it.",
+    "snippet": "While not mechanistically addressed in this paper",
+    "surface": "body",
+    "anchor": "Discussion, paragraph 2",
+    "artifact": "files/fulltext/PMID42458834_Boitnott2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The operational conclusion the authors themselves draw is about promoter strength, not about this gene.",
+    "snippet": "we raise caution to the use of strong promoters like CBA",
+    "surface": "body",
+    "anchor": "Discussion, final paragraph",
+    "artifact": "files/fulltext/PMID42458834_Boitnott2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The apparent age effect is attributed by the authors to dose per body weight rather than to a developmental window.",
+    "snippet": "it is more likely a factor of a higher dose per body weight at the younger age",
+    "surface": "body",
+    "anchor": "Results, rapid death due to myocardial degeneration",
+    "artifact": "files/fulltext/PMID42458834_Boitnott2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Bulk tissue measurement understates per-cell exposure, by the authors' own caveat.",
+    "snippet": "represent average expression across bulk tissue",
+    "surface": "body",
+    "anchor": "Results, rapid death due to myocardial degeneration",
+    "artifact": "files/fulltext/PMID42458834_Boitnott2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PANEL READING, AND IT SUPPLIES WHAT THE TEXT OMITS: the group sizes appear only inside the plotted legends, never in the running text or in the caption as deposited. Serum chemistry is n = 6 per sex per group; the qPCR panels are n = 3 per group, with one wild-type vehicle group at n = 6. A reading that used only the body text would have reported this paper as giving no n at all.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2A plot legend: female Vehicle (n = 6), female AAV9/CBA-DDX3X 2.6e11 vg (n = 6), male Vehicle (n = 6), male AAV9/CBA-DDX3X 2.6e11 vg (n = 6). Figure 2D/2E plot legend: female Ddx3x+/- Vehicle (n = 3), male WT Vehicle (n = 3), female WT Vehicle (n = 6), female WT AAV9/CBh-GLDC 2.0e11 vg (n = 3), female WT AAV9/CBA-DDX3X 2.6e11 vg (n = 3), male WT AAV9/CBA-DDX3X 2.6e11 vg (n = 3).",
+    "surface": "figure",
+    "anchor": "Figure 2A and Figure 2D/2E plot legends",
+    "artifact": "files/figures/PMID42458834/gr2.webp",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "mouse",
+     "genotype": "wild-type C57BL/6J",
+     "treatment": "AAV9/CBA-DDX3X 2.6e11 vg i.c.v. at P1",
+     "timepoint": "P6",
+     "comparator": "vehicle and a control vector",
+     "endpoint": "serum chemistry and RT-qPCR"
+    }
+   },
+   {
+    "proposition": "PANEL READING. Figure 3D separates what the sentence merges: the brain chemokine rise is a SINGLE timepoint at the margin of significance, while the heart and liver effects are orders of magnitude larger and far more significant. The text reports the brain number without that asymmetry.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3D, Cxcl10: the brain facet carries one bracket, p = 0.044, on the P5 bar, with three animal points; the heart facet carries p = 0.002 and p < 0.001 on bars reaching roughly 50- to 200-fold, and the liver facet p < 0.001. In Figure 3B (Ifnb1) and 3C (Ddx58) the brain facet carries no significance bracket at all.",
+    "surface": "figure",
+    "anchor": "Figure 3B, 3C and 3D, brain facets",
+    "artifact": "files/figures/PMID42458834/gr3.webp",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[3]",
+    "qualifies_needle": "mRNA levels were also increased in the brain",
+    "experimental_context": {
+     "system": "mouse",
+     "genotype": "wild-type C57BL/6J",
+     "treatment": "AAV9/CBA-DDX3X 2.6e11 vg i.c.v. at P1",
+     "timepoint": "P5 and P6",
+     "comparator": "female wild-type vehicle",
+     "endpoint": "RT-qPCR fold change"
+    }
+   }
+  ]
+ }
+}

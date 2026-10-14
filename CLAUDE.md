@@ -51,6 +51,7 @@ Three facts bind before you have finished reading anything else:
 | Claim classification, premises and negatives, revival triggers | [`framework/instruction/epistemic_discipline.md`](framework/instruction/epistemic_discipline.md) |
 | Parity of sources; what counts as having read something (rules 1–8, 5b–5e) | [`framework/master/gold_is_in_the_details.md`](framework/master/gold_is_in_the_details.md) |
 | Designing for a system that never stops growing | [`framework/master/designed_for_growth.md`](framework/master/designed_for_growth.md) |
+| How the harness is allowed to change: agility, no gates, need-driven micro-upgrades, discovery before rigor | [`framework/master/harness_development_principles.md`](framework/master/harness_development_principles.md) |
 | `FULLTEXT_READ_RECEIPT` on every full-text route; `verbatim_locators` and persistence | [`framework/protocols/fulltext_read_receipt.md`](framework/protocols/fulltext_read_receipt.md) |
 | `pubmed_corpus_harvest` produces a census, not evidence; an abstract is not a read | [`framework/master/gold_is_in_the_details.md`](framework/master/gold_is_in_the_details.md) and [`framework/scripts/pubmed_corpus_harvest.py`](framework/scripts/pubmed_corpus_harvest.py) |
 | The state-control exception and append-only carve-out | [`framework/state/state_manifest_current.md`](framework/state/state_manifest_current.md) |
@@ -58,6 +59,7 @@ Three facts bind before you have finished reading anything else:
 | Batch commit, LINT, ingest, parallelism and worktree isolation, wikilinks, file generation, read receipts | [`framework/protocols/`](framework/protocols/) → [`index.md`](framework/protocols/index.md) |
 | **Which tool answers the question you actually have** — and why you never grep the two large registries | [`framework/scripts/README.md`](framework/scripts/README.md) |
 | Waiting for a job you started — a battery, a build, a clone — by PID, `PID:START` or a completion file, **never by process name** (`pgrep -f` matches the waiter itself) | [`framework/scripts/process_wait.py`](framework/scripts/process_wait.py) |
+| Running an assigned mandate (goal, roadmap, queue) to its end without the operator; may this turn end? | [cross-session transport §12](framework/protocols/cross_session_transport.md#12--autonomous-mandate-continuity) · `python3 framework/scripts/mandate_continuity.py status --task <TASK_ID>` |
 | Layers, modes, core invariants | [`ARCHITECTURE.md`](ARCHITECTURE.md) |
 | How to actually run a session; session types | [`framework/manuals/operator_manual.md`](framework/manuals/operator_manual.md) |
 | What the system can do, with maturity status | [`SKILLS.md`](SKILLS.md) · [`CAPABILITIES.md`](CAPABILITIES.md) · [`FAQ.md`](FAQ.md) |

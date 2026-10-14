@@ -1,0 +1,155 @@
+{
+  "schema_version": 2,
+  "pmid": "34359949",
+  "doi": "10.3390/cells10071781",
+  "receipt": "FTR-20261003-34359949-02",
+  "landing": [
+    "FTR-20261003-34359949-02",
+    "disease-models/wwox/research/fulltext_dossiers/PMID34359949.md",
+    "disease-models/wwox/research/intake_wave_20261003_B.md"
+  ],
+  "skills_considered": [
+    {
+      "skill": "legend-deepdive",
+      "used": false,
+      "reason": "Run inline; figure inspection and locator capture had to come from the same open document as the text reading."
+    },
+    {
+      "skill": "find-fulltext",
+      "used": false,
+      "reason": "Europe PMC fullTextXML returned HTTP 200 with a body on the first attempt; figures, PDF and supplements came from the PMC open-access S3 mirror, which needed no cascade."
+    },
+    {
+      "skill": "legend-locator-audit",
+      "used": false,
+      "reason": "OWED. This reading narrows claims that the working model may rest on and carries text-versus-panel contradictions, which is exactly the trigger."
+    }
+  ],
+  "group_assessment": {
+    "performed": true,
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": false,
+    "is_primary_group_for_gene": false,
+    "total_publications": 0,
+    "publications_on_gene": 0,
+    "counts_note": "total_publications and publications_on_gene are 0 because no per-author output count was measured in this pass. A zero here means NOT MEASURED, not zero publications.",
+    "note": "Research-group knowledge base excluded from the public edition; this rests on measured PubMed counts and the paper's own author and reference lists.",
+    "counts_measured": "PubMed esearch 2026-10-02 (tool=LEGEND-research): 'WWOX AND TIAF1' 9 records and 'WWOX AND TIAF1 NOT Chang NS[au]' 0 records; '\"TRAPPC6A\" AND (aggregation OR plaque)' 4 records, all four from this laboratory; 'Zfra' 17 records and 'Zfra NOT Chang NS[au]' 1 record, which is an unrelated zebrafish androgen-receptor paper matching the string by accident; 'WWOX AND \"dorsal root ganglion\"' 1 record, the group's own.",
+    "self_citation_measured": "Of this review's 98 references 93 carry a PMID; 40 of those have Chang NS as an author and 41 have Chang NS or Sze CI, and all five PMID-less references are the group's own. That is 46 of 98, 47 percent.",
+    "weighting": "A narrative review by the originating laboratory. It carries no cohort and no experiment of its own, so nothing may inherit DATO status from it; it is useful here only as the place where the group's claims are stated most compactly and can be traced to their primaries."
+  },
+  "field_density": {
+    "wwox_directed": true,
+    "queries": [
+      {
+        "query": "WWOX AND TIAF1 NOT Chang NS[au]",
+        "route": "PubMed esearch 2026-10-02",
+        "count": 0
+      },
+      {
+        "query": "\"TRAPPC6A\" AND (aggregation OR plaque)",
+        "route": "PubMed esearch 2026-10-02",
+        "count": 4
+      }
+    ],
+    "note": "Maximum density for the mechanism, zero density outside one laboratory."
+  },
+  "multihop": {
+    "performed": false,
+    "references_enumerated": 98,
+    "gene_direct_refs_in_source": [],
+    "enumeration_method": "98 references parsed from the JATS back matter; 93 carry a PMID and were resolved by PubMed esummary for authorship only.",
+    "resolved": [],
+    "queued": []
+  },
+  "corpus_crossquery": {
+    "performed": true,
+    "query": "Which primary does the SDR-domain / tau / GSK-3beta mechanism rest on?",
+    "hits": 2,
+    "finding": "References 41 and 49: Sze 2004 J Biol Chem (WOX1 downregulation induces tau phosphorylation in vitro) and Wang 2012 Cell Death Differ (WWOX promotes neuronal differentiation via negative regulation of GSK-3beta). Chang NS is an author of both. There is no third, independent primary for the SDR-tau binding statement."
+  },
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-10-02",
+    "route": "PubMed esummary pubtype for 34359949 and exact DOI/PMID match against files/retraction_watch/retractionwatch_20261002.csv (72870 rows)",
+    "result": "No retraction, no expression of concern, no erratum; no Retraction Watch row.",
+    "hold": false,
+    "dependencies": {
+      "flagged": [],
+      "noted": [],
+      "paper_verdict": "SCREENED_CLEAN",
+      "reference_source": "network",
+      "references_declared": 98,
+      "references_screened": 87,
+      "references_with_doi": 87,
+      "schema": "retraction_check.dependencies/1",
+      "screened": true,
+      "snapshot": {
+        "date": "2026-09-10",
+        "days_since_fetch": 22,
+        "rows": 72476,
+        "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+      },
+      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+      "unscreenable": {
+        "UNSCREENABLE_NO_DOI": 11
+      }
+    }
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID34359949_Hsu2021_PMC.xml",
+      "sha256": "9a5985d0ce548f3f59117c74cc42bd908c1f1ba053ece8df2d51fe781d1beaec",
+      "kind": "article_text",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8304785/fullTextXML",
+        "http_method": "GET",
+        "tier": "europepmc_rest_fulltextxml",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-02",
+        "derived": false,
+        "result_sha256": "9a5985d0ce548f3f59117c74cc42bd908c1f1ba053ece8df2d51fe781d1beaec"
+      }
+    }
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC JATS XML fingerprinted and read end to end, including Table 1 and all three figure legends. The three figure rasters were retrieved from the PMC open-access S3 mirror but are schematic diagrams carrying no data; they were not needed for any locator and are not fingerprinted here. The review has no supplementary material.",
+    "abstract_anchoring_waived": "No locator is abstract-anchored; each entry marks a sentence that is a restatement rather than a measurement.",
+    "entries": [
+      {
+        "proposition": "THE REVIEW'S CENTRAL MECHANISM SENTENCE - 'WWOX binds Tau via its C-terminal SDR domain' - OCCURS ONLY IN ITS ABSTRACT. Measured over the fingerprinted artefact: that phrase occurs once, inside <abstract>, and zero times in the body; the body never states a direct WWOX-tau binding through the SDR domain at all. What the body states is the GSK-3beta version quoted here, attributed to references 41 and 49, both of which have Chang NS as an author. For an SDR-destabilising allele class this matters: the direct-binding form of the claim is a review abstract's sentence.",
+        "snippet": "SDR domain binds and blocks GSK-3β-mediated tau hyperphosphorylation and thereby promotes neuronal differentiation",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID34359949_Hsu2021_PMC.xml",
+        "anchor": "Section 6.1, 'WWOX-Interacting Partners for AD', third binding mode",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The review's own directional split - pY33-WWOX protective, pS14-WWOX pathogenic - is stated as a conclusion whose mechanism the authors declare unknown in the same paragraph. It is carried here as a restatement, not as a measurement.",
+        "snippet": "Overall, pY33-WWOX prevents neurodegeneration. In stark contrast, pS14-WWOX enhances the progression of neurodegeneration. The underlying signaling pathways that lead to divergent outcomes remain to be established",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID34359949_Hsu2021_PMC.xml",
+        "anchor": "Section 7.3, 'pS14-WWOX Promotes AD Progression'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THE DEVELOPMENTAL-TIMING CLAIM IS A CEILING, NOT A LATENCY. Fifteen days is close to the Wwox-null mouse's entire lifespan - the same laboratory reports survival of about a month - so the statement bounds the observation window rather than measuring how fast aggregation occurs. It is also juvenile, not embryonic: the cascade has no embryonic datum at any node.",
+        "snippet": "it only takes less than 15 days after birth to let the brain proteins polymerize and aggregate in a cascade-like manner",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID34359949_Hsu2021_PMC.xml",
+        "anchor": "Section 7.2, 'WWOX Downregulation and Induction of Protein Aggregation Cascade'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The 'stronger binding is better' principle, which the review carries into a therapeutic recommendation, is stated as a heuristic transferred from cancer suppression. It is a stated analogy, not a measurement in neurons.",
+        "snippet": "the stronger the binding strength between WWOX and its partner proteins, the better the extent of cancer suppression",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID34359949_Hsu2021_PMC.xml",
+        "anchor": "Section 10.3, 'Manipulating the Binding Strength between WWOX and Binding Partner Proteins to Limit Disease Progression'",
+        "panel_text_relation": "text_only"
+      }
+    ]
+  }
+}

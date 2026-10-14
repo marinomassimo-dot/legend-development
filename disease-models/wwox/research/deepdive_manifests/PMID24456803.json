@@ -1,0 +1,234 @@
+{
+ "schema_version": 2,
+ "pmid": "24456803",
+ "doi": "10.1186/1750-1172-9-12",
+ "receipt": "FTR-20261003-24456803-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID24456803.md",
+  "disease-models/wwox/research/intake_wave_20261003_A.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003-A-REGISTRY-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003-A-ARG54-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is a research surface owned by other batches; the one ledger correction this reading supports is proposed through the intake note rather than edited."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A patient genotype-phenotype report supplies no therapeutic lever for the reference genotype class; forging hypotheses from one case would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is tested as an intervention with a measured outcome beyond clinical anecdote, so there is no molecule to send to BLOCK-1 triage."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate for a later BATCH_COMMIT."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The triples are published in the candidates for a blind auditor; the reader of a paper cannot audit their own locators."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 113,
+  "publications_on_gene": 1,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "PubMed counts 2026-10-02: Bolz HJ[au] 113, Bolz HJ[au] AND WWOX 1 (this paper). A clinical/molecular genetics group (retinal and syndromic genetics) reporting one consanguineous family. The sequencing observation is credible; the human-rat convergence and the carrier tumour statements are interpretation over one family.",
+  "external_provenance": {
+   "source": "NCBI E-utilities esearch rettype=count, terms as stated",
+   "date": "2026-10-02"
+  }
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (WOREE OR epileptic encephalopathy)",
+    "count": 72,
+    "source": "PubMed ESearch 2026-10-02"
+   }
+  ],
+  "note": "The first homozygous truncating WWOX human report among the field's ~72 encephalopathy records."
+ },
+ "multihop": {
+  "references_enumerated": 22,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "22 references enumerated from the JATS back matter. The WWOX-direct ones are the rat lde paper and mouse knockout papers, cited as background for Table 1; none supplies a human measurement this reading depends on, so none is queued from here. PMIDs not transcribed because the citations are not needed to evaluate any locator."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 24456803 (run AFTER the first pass)",
+  "hits": 3,
+  "note": "PAPER 043, CORPUS P359, LIT-0359. PAPER 043 carries c.160G>T, a sister death without the never-genotyped qualifier, a 'mitochondrial ... muscle biopsy' metabolic screen the paper does not report, and 'not oncologically at risk' carriers against the authors' own caveat. See CC-20261003-A-ARG54-01."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-02 via PubMed metadata (get_article_metadata): no retraction, expression of concern or correction listed among the publication types for PMID 24456803.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 22,
+   "references_screened": 22,
+   "references_with_doi": 22,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 22,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID24456803_AbdelSalam2014_PMC.xml",
+   "sha256": "2adc28364cef73585dbeee8679781fd93fb3441bce95a4c0bcca7acc154a3a55",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3918143/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "2adc28364cef73585dbeee8679781fd93fb3441bce95a4c0bcca7acc154a3a55"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID24456803_AbdelSalam2014_supplement/1750-1172-9-12-S1.pptx",
+   "sha256": "0ab05d83cd9321442860fc6dd8d5f1b6a7d333f5e440769b6c7f00cb1efb4848",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "no_recipe": "Member '1750-1172-9-12-S1.pptx' extracted unchanged by Python zipfile from the Europe PMC REST supplementaryFiles bundle for PMC3918143 (HTTP 200, application/zip, fetched 2026-10-02); the bundle itself was not persisted because it also carries patient photographs, which this public edition does not retrieve into files/."
+   }
+  },
+  {
+   "path": "files/fulltext/PMID24456803_AbdelSalam2014_supplement/1750-1172-9-12-2.jpg",
+   "sha256": "fc3398d07890a068897e9f7f8a43bc631e26f0a428d38b9922dbf4e15f0e8a74",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member '1750-1172-9-12-2.jpg' extracted unchanged by Python zipfile from the Europe PMC REST supplementaryFiles bundle for PMC3918143 (HTTP 200, application/zip, fetched 2026-10-02); the bundle itself was not persisted because it also carries patient photographs, which this public edition does not retrieve into files/."
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The body gives the nonsense allele as c.160G > T; on NM_016373.4 position c.160 is C (codon 54 = CGA), so G>T is inconsistent with an arginine codon.",
+    "snippet": "affects codon 54 for arginine (c.160G > T; p.Arg54*)",
+    "anchor": "Results, para 3 (WES filtering)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24456803_AbdelSalam2014_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors' own deposited Additional file 1 (IGV slide) labels the same variant c.160C>T, contradicting the body's c.160G>T.",
+    "snippet": "WWOX, exon 2c.160C>T (p.Arg54*)",
+    "anchor": "Additional file 1 (Figure S1), slide text",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID24456803_AbdelSalam2014_supplement/1750-1172-9-12-S1.pptx",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Genotype evidence covers one affected individual; a second, presumed-affected family member was not examined or tested by the authors.",
+    "snippet": "Patient II:1 died several years ago and has not been seen by the authors",
+    "anchor": "Results, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24456803_AbdelSalam2014_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Seizures in the genotyped child responded partially to two drugs; the paper does not report drug resistance to all agents.",
+    "snippet": "Seizures partially responded to valproate and lamotrigine.",
+    "anchor": "Results, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24456803_AbdelSalam2014_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Survival endpoint of the genotyped homozygote.",
+    "snippet": "II:4 died at the age of 16 months because of status epilepticus.",
+    "anchor": "Results, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24456803_AbdelSalam2014_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The metabolic screen is blood/urine chemistry; no muscle biopsy or mitochondrial study is named in the list.",
+    "snippet": "Normal results were found in metabolic screening including liver and renal function tests",
+    "anchor": "Results, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24456803_AbdelSalam2014_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The no-tumour statement for carriers is an observation to date, not a negative for carrier risk.",
+    "snippet": "No tumors have developed so far in the heterozygous carriers in our family",
+    "anchor": "Discussion, para 6",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24456803_AbdelSalam2014_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors themselves consider an increased lifetime cancer risk in carriers conceivable.",
+    "snippet": "However, an increased cumulative lifetime risk, especially if exposed to carcinogenic agents, seems conceivable",
+    "anchor": "Discussion, para 6",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24456803_AbdelSalam2014_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Causality rests on homozygosity by descent; the authors state they cannot exclude a compound heterozygous cause elsewhere.",
+    "snippet": "we can not exclude disease-causing compound heterozygosity in a gene outside the HBD regions",
+    "anchor": "Conclusions",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24456803_AbdelSalam2014_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The protein-null statement in Table 1 is about the rat allele, carried from the rat literature; no human protein or RNA assay is reported.",
+    "snippet": "functional null, no protein produced",
+    "anchor": "Table 1, rat row",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID24456803_AbdelSalam2014_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "MRI findings in the genotyped child are cortical/hippocampal/callosal; the cerebellum is not annotated.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 2 A-C: coronal FLAIR with thin cortex and hippocampal dysplasia arrows; sagittal T1 with hypoplastic corpus callosum; axial T2 with temporal hypotrophy and widened subarachnoid space. No cerebellar annotation.",
+    "anchor": "Figure 2, panels A-C",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID24456803_AbdelSalam2014_supplement/1750-1172-9-12-2.jpg",
+    "panel_text_relation": "text_confirmed_by_panel"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC3918143/fullTextXML returned HTTP 200 with a full JATS body on 2026-10-02; the declared artefact is that response, byte for byte."
+ }
+}

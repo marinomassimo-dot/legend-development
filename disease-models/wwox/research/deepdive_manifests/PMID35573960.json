@@ -1,0 +1,256 @@
+{
+ "schema_version": 2,
+ "pmid": "35573960",
+ "doi": "10.3389/fped.2022.847549",
+ "receipt": "FTR-20261003-35573960-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID35573960.md",
+  "disease-models/wwox/research/intake_wave_20261003_A.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003-A-REGISTRY-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003-A-VIGABATRIN-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is a research surface owned by other batches; the one ledger correction this reading supports is proposed through the intake note rather than edited."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A patient genotype-phenotype report supplies no therapeutic lever for the reference genotype class; forging hypotheses from one case would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is tested as an intervention with a measured outcome beyond clinical anecdote, so there is no molecule to send to BLOCK-1 triage."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate for a later BATCH_COMMIT."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The triples are published in the candidates for a blind auditor; the reader of a paper cannot audit their own locators."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 608,
+  "publications_on_gene": 2,
+  "research_type": "mixed",
+  "is_primary_group_for_disease": false,
+  "weighting": "PubMed counts 2026-10-02: Zara F[au] 608, Zara F[au] AND WWOX 2. An epilepsy-genetics group (clinical plus molecular: exome, fibroblast RT-PCR, qPCR, array-CGH) with a prior WWOX mouse/organoid paper. The molecular resolution is strong; the 'phenotypic-driven' diagnostic claim is a single-case narrative.",
+  "external_provenance": {
+   "source": "NCBI E-utilities esearch rettype=count, terms as stated",
+   "date": "2026-10-02"
+  }
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (WOREE OR epileptic encephalopathy)",
+    "count": 72,
+    "source": "PubMed ESearch 2026-10-02"
+   }
+  ]
+ },
+ "multihop": {
+  "references_enumerated": 16,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "16 references enumerated; WWOX references are background reviews and the Piard/Mignot/Mallaret series. Tarta-Arsene 2017 appears only in Supplementary Table 1; not read here (see the possible double-publication note in the dossier)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 35573960 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "No PAPER or LIT identity record exists; the paper is reached only through discovery-ledger mentions (DL-MOL-007, DL-MECH-022, DL-MECH-053) and FT-032/FT-110. DL-MOL-007 lists phenobarbital and nitrazepam as ineffective, which the source reports as adverse-event withdrawals. See CC-20261003-A-REGISTRY-01."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-02 via PubMed metadata (get_article_metadata): no retraction, expression of concern or correction listed among the publication types for PMID 35573960.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 16,
+   "references_screened": 15,
+   "references_with_doi": 15,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 22,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID35573960_Riva2022_PMC.xml",
+   "sha256": "e74bfe47c66e4ed906d4c61be665cc28e66717dc2dd98868a39094fba51c4ddc",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9100683/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "e74bfe47c66e4ed906d4c61be665cc28e66717dc2dd98868a39094fba51c4ddc"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID35573960_Riva2022_supplement/Table_1.docx",
+   "sha256": "f5189fd470940378ba11fb14226dd398bd02080741a35beda1a1a4f557aeab68",
+   "kind": "supplement_text",
+   "acquisition_recipe": {
+    "no_recipe": "Member 'Table_1.docx' extracted unchanged by Python zipfile from the Europe PMC REST supplementaryFiles bundle for PMC9100683 (HTTP 200, application/zip, fetched 2026-10-02); the bundle itself was not persisted because it also carries patient photographs, which this public edition does not retrieve into files/."
+   }
+  },
+  {
+   "path": "files/fulltext/PMID35573960_Riva2022_supplement/fped-10-847549-g002.jpg",
+   "sha256": "eab9e8cae940a25a1afcce1755536d733b2778e67a39e789a64ae7f8dd0800f4",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member 'fped-10-847549-g002.jpg' extracted unchanged by Python zipfile from the Europe PMC REST supplementaryFiles bundle for PMC9100683 (HTTP 200, application/zip, fetched 2026-10-02); the bundle itself was not persisted because it also carries patient photographs, which this public edition does not retrieve into files/."
+   }
+  },
+  {
+   "path": "files/fulltext/PMID35573960_Riva2022_supplement/fped-10-847549-g003.jpg",
+   "sha256": "03be61ff8437999c62f43f9401388e8f8a189f784e5f8ee7b19a9ddf741fd926",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member 'fped-10-847549-g003.jpg' extracted unchanged by Python zipfile from the Europe PMC REST supplementaryFiles bundle for PMC9100683 (HTTP 200, application/zip, fetched 2026-10-02); the bundle itself was not persisted because it also carries patient photographs, which this public edition does not retrieve into files/."
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Exome CNV analysis missed the single-exon deletion.",
+    "snippet": "No other potentially pathogenic variants were identified in the exome. CNVs analysis was also unremarkable.",
+    "anchor": "Results, Mutation Identification and Confirmation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35573960_Riva2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The exon 6 deletion's transcript consequence was measured in patient fibroblast RNA.",
+    "snippet": "The RT-PCR derived from fibroblast extracts of patient and unaffected parents and age-matched neurotypical control",
+    "anchor": "Methods, Agarose Gel Electrophoresis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35573960_Riva2022_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human primary fibroblasts",
+     "genotype": "p.Arg264* / exon 6 deletion; carrier parents; control",
+     "endpoint": "RT-PCR exon4F-exon7R product and Sanger junction"
+    }
+   },
+   {
+    "proposition": "Measured junction: exon 5 fused to exon 7 (RT-PCR product sequenced).",
+    "snippet": "fusing exon 5 and 7 of WWOX (Figures 1C,D)",
+    "anchor": "Results, Mutation Identification and Confirmation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35573960_Riva2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Drugs reported ineffective.",
+    "snippet": "Several anti-seizure medications (ASM) were ineffective (i.e., valproate, vigabatrin, clonazepam, clobazam, levetiracetam, rufinamide, and CBD oil)",
+    "anchor": "Results, Clinical Features",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35573960_Riva2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Phenobarbital and nitrazepam are reported for adverse events, not as ineffective.",
+    "snippet": "or determined adverse events such as extreme drowsiness or increased secretions (i.e., phenobarbital, nitrazepam)",
+    "anchor": "Results, Clinical Features",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35573960_Riva2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Vigabatrin, listed as ineffective, remains among the current medications.",
+    "snippet": "Current ASMs include vigabatrin",
+    "anchor": "Results, Clinical Features",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35573960_Riva2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The earliest-onset claim; day-1 onset had already been reported in the Piard 2019 series.",
+    "snippet": "Interestingly, our patient had the earliest epilepsy onset, presenting on the first day of life",
+    "anchor": "Discussion, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35573960_Riva2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Early imaging includes a small inferior vermis.",
+    "snippet": "frontal bilateral periventricular cysts, enlargement of cerebral subarachnoid spaces, especially in the frontal-temporal regions, and a small inferior vermis",
+    "anchor": "Results, Clinical Features",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35573960_Riva2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The late leukoencephalopathy pattern is offered as a question, not a diagnostic sign.",
+    "snippet": "more studies are needed to verify if this periventricular leukomalacia-like pattern is a typical feature of the disease",
+    "anchor": "Discussion, para 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35573960_Riva2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "MRI at 4 months: periventricular cysts, delayed myelination, thin corpus callosum, inferior vermis hypoplasia; MRS lactate peak.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 2 A-G: axial/coronal T2 with arrows at frontal periventricular cysts; sagittal T1 thick arrow (corpus callosum) and arrowhead (inferior vermis); spectrum with lactate doublet arrow.",
+    "anchor": "Figure 2",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID35573960_Riva2022_supplement/fped-10-847549-g002.jpg",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "MRI at 2 years 4 months: posterior periventricular white-matter loss and signal change, squared ventricles, pons and dentate T2/FLAIR hyperintensity, inferior vermis hypoplasia; reduced NAA, no lactate.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 3 A-M: T2/FLAIR series with empty arrows at posterior periventricular white matter, arrows at pons, arrowheads at dentate nuclei; sagittal T1 arrowhead at inferior vermis; spectrum without lactate.",
+    "anchor": "Figure 3",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID35573960_Riva2022_supplement/fped-10-847549-g003.jpg",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "The authors' literature table carries Tarta-Arsene 2017 as a separate one-patient column with this genotype, beside the Piard 2019 column.",
+    "snippet": "CH: intron 2 + frameshift exon 8",
+    "anchor": "Supplementary Table 1, Mutations row, Tarta-Arsene 2017 column",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID35573960_Riva2022_supplement/Table_1.docx",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC9100683/fullTextXML returned HTTP 200 with a full JATS body on 2026-10-02; the declared artefact is that response, byte for byte."
+ }
+}

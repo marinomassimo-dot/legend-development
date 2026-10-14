@@ -1,0 +1,165 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+  "_note": "Operator directive of 2026-10-02: keep the literature going for about ten hours while the operator is away; when a batch finishes, propose and dispatch the next one; keep the Scientists busy. Standing authorisations (procedi sempre; improve anything) and the section 21d reserved list still bind.",
+  "TASK_ID": "INTAKE-OVERNIGHT-20261002",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "OWNER": "orchestrator",
+  "ACTOR_ID": "orchestrator",
+  "PRIORITY": "HIGH",
+  "OBJECTIVE": "Run successive intake waves of three Scientists each: select studies from the queue by abstract plus a real full-text body check, dispatch, integrate receipts in a worktree, BATCH_COMMIT, Mirror review, battery, push to development.",
+  "AUTHORISED_QUEUE_20261002": {
+    "MANDATE_STATE": "OPEN",
+    "OBJ_WAVE1": {
+      "order": 1,
+      "steps": [
+        {
+          "step": "Scientists A and B returned; receipts recorded and branches landed on main",
+          "status": "DONE",
+          "evidence": "main e5a680a (task integ-intake-20261002); ledger 278 OK"
+        },
+        {
+          "step": "Scientist C returns; record its receipts and land its branch",
+          "status": "DONE",
+          "evidence": "main 87ed1e7; ledger 284 events; C receipts re-issued as partial_fulltext_read by C"
+        },
+        {
+          "step": "BATCH_COMMIT of wave 1 candidates; Mirror ex-post review",
+          "status": "DONE",
+          "evidence": "BATCH_20261002_001 main ba5682f; Mirror review main c5257f5 (candidates CC-20261003-MIRROR-01..03 pending propagation)"
+        },
+        {
+          "step": "Fresh-clone battery on the exact SHA, gate, LINT, receipts verify, safe_push to development",
+          "status": "DONE",
+          "evidence": "repeated every wave; last: main a4f1623e battery 136 targets 0 red, safe_push PUBLISHED verified=ls-remote"
+        }
+      ]
+    },
+    "OBJ_WAVE2": {
+      "order": 2,
+      "steps": [
+        {
+          "step": "Select the next 15 to 18 studies (queue, Europe PMC body check, dedup against registries and analysis triage), write the selection record under research/",
+          "status": "DONE",
+          "evidence": "scratchpad wave2_selection.md (18 studies, 3 groups of 6)"
+        },
+        {
+          "step": "Dispatch three Scientists on it (brief updated with the lessons of wave 1: bare source_locator, receipts recorded in an integration worktree, no landing before receipts)",
+          "status": "DONE",
+          "evidence": "wave 2 Scientists A, B, C dispatched; brief scratchpad scientist_brief_20261003_w2.md"
+        },
+        {
+          "step": "Wave 2 integrated, BATCH_20261003_001 (WM_v7.9), Mirror review done",
+          "status": "DONE",
+          "evidence": "main 31da5fa; Mirror review 58bd066"
+        }
+      ]
+    },
+    "OBJ_WAVE3": {
+      "order": 3,
+      "steps": [
+        {
+          "step": "Select the third wave",
+          "status": "DONE",
+          "evidence": "scratchpad wave3_selection.md"
+        },
+        {
+          "step": "Dispatch wave 3 Scientists A, B, C",
+          "status": "DONE",
+          "evidence": "three agents dispatched; brief scientist_brief_20261003_w3.md"
+        },
+        {
+          "step": "Wave 3 integrated, BATCH_20261003_002 (WM_v7.10)",
+          "status": "DONE",
+          "evidence": "main 663970a"
+        }
+      ]
+    },
+    "OBJ_PUSH": {
+      "order": 4,
+      "steps": [
+        {
+          "step": "Battery on exact SHA 663970a (136 targets, 0 red), gate, push to development",
+          "status": "DONE",
+          "evidence": "safe_push PUBLISHED sha=663970a verified=ls-remote"
+        }
+      ]
+    },
+    "OBJ_WAVE4": {
+      "order": 5,
+      "steps": [
+        {
+          "step": "Wave 4 (18 studies, scratchpad wave4_selection.md): Scientists A, B, C resumed after rate limit; integrate returns (receipts in event order via integration worktree)",
+          "status": "DONE",
+          "evidence": "wave 4 receipts recorded (main f110c76); BATCH_20261003_003"
+        },
+        {
+          "step": "BATCH_H wave 4",
+          "status": "DONE",
+          "evidence": "BATCH_20261003_003 c0d4cc5; Mirror review f364603"
+        }
+      ]
+    },
+    "OBJ_WAVE5": {
+      "order": 6,
+      "steps": [
+        {
+          "step": "Wave 5 integrated",
+          "status": "DONE",
+          "evidence": "BATCH_20261003_004 e6df539"
+        }
+      ]
+    },
+    "OBJ_WAVE6": {
+      "order": 7,
+      "steps": [
+        {
+          "step": "Wave 6 (A,B,C) + Repudi 2021 re-reading: receipts recorded",
+          "status": "DONE",
+          "evidence": "main b066e4f; ledger 375"
+        },
+        {
+          "step": "BATCH_J wave 6 + Repudi",
+          "status": "DONE",
+          "evidence": "BATCH_20261003_005 70513cd; pushed"
+        }
+      ]
+    },
+    "OBJ_STANDING_NEXT_WAVES": {
+      "order": 8,
+      "steps": [
+        {
+          "step": "Operator rule of 2026-10-03: whenever a literature batch completes, the Orchestrator proposes and dispatches the next literature wave on its own, choosing the logic by the scientific priorities that emerge (select with a read-only selector agent; same three tests: abstract substantive, lawful body, a question it could change; breadth over repetition). Emerging priority order: (1) allele-class function actually MEASURED (RNA/protein for splice, missense, deletion alleles) and carrier/heterozygote phenotypes (CLAIM 032/045 are thin); (2) restoration spec: WWOX pharmacodynamic assay first, window by endpoint class, immune cost for predicted-null recipients, neonatal DRG/tolerisation; (3) myelin cell-autonomy beyond the thin O-KO negative; (4) patient-overlap integrity (count once); (5) reading debts named by dossiers (Bouteille 2009, Celebi 2020, Serin 2018, Tabarki 2015, Hordeaux 2019/2020, Finnis 2005, Ko 2018) when lawful text appears; (6) periodic fresh-literature scan (WWOX/WOREE/SCAR12/EIEE28 by date). The neuro-WWOX pool is nearly exhausted: when a wave would have fewer than 12 qualifying studies, say so and shift weight to transferable lessons and debts rather than pad.",
+          "status": "BLOCKED",
+          "blocker": "neuro-WWOX new-literature pool exhausted and the decisive targets are paywalled or absent (356 declared artefacts absent; PMIDs 10786676, 11719429, 28001369, 38407561, 40875931, 30202070 and the Steinberg 2026 supplement have no lawful free route); consolidation waves 12–13 done",
+          "unblock": "operator supplies the PDFs (as for Repudi 2021), or a new WWOX/WOREE/SCAR12/EIEE28 paper appears; then run the standing wave-proposal rule"
+        }
+      ]
+    },
+    "OBJ_WAVE7_8_9": {
+      "order": 9,
+      "steps": [
+        {
+          "step": "Waves 7–11 integrated; batches 20261004_001…_005 (WM_v7.14…v7.18); Mirror reviews through _003; GSK3B D6 decided by Mirror and landed; CLAIM003-01 re-authored and landed",
+          "status": "DONE",
+          "evidence": "main a1536ad9 pushed to development (battery 136 targets 0 red)"
+        }
+      ]
+    },
+    "OBJ_WAVE12_CONSOLIDATION": {
+      "order": 10,
+      "steps": [
+        {
+          "step": "Waves 12 and 13 (35 re-reads) integrated; BATCH_20261004_006 (WM_v7.19) and _007 (WM_v7.20); Mirror reviews through _005",
+          "status": "DONE",
+          "evidence": "main a4f1623e pushed to development (battery 136 targets 0 red)"
+        },
+        {
+          "step": "Pause: neuro-WWOX pool exhausted; remaining targets are paywalled/absent (356 absent artefacts); report to the operator with the list of PDFs they could supply",
+          "status": "DONE",
+          "evidence": "final report in chat 2026-10-05"
+        }
+      ]
+    }
+  }
+}

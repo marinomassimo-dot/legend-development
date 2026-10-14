@@ -1,0 +1,253 @@
+{
+  "schema_version": 2,
+  "pmid": "27551439",
+  "doi": "10.1038/cddiscovery.2015.3",
+  "receipt": "FTR-20261003-27551439-02",
+  "landing": [
+    "FTR-20261003-27551439-02",
+    "disease-models/wwox/research/fulltext_dossiers/PMID27551439.md",
+    "disease-models/wwox/research/intake_wave_20261003_B.md"
+  ],
+  "skills_considered": [
+    {
+      "skill": "legend-deepdive",
+      "used": false,
+      "reason": "Run inline. Figure inspection and locator capture had to come from the same open document as the text reading."
+    },
+    {
+      "skill": "find-fulltext",
+      "used": false,
+      "reason": "Europe PMC fullTextXML returned HTTP 200 with a body on the first attempt; figures, PDF and the supplementary .doc came from the PMC open-access S3 mirror."
+    },
+    {
+      "skill": "legend-locator-audit",
+      "used": false,
+      "reason": "OWED. Two internal contradictions in this paper are load-bearing for the cascade ordering claim and deserve a blind adversarial pass before any claim edit rests on them."
+    }
+  ],
+  "group_assessment": {
+    "performed": true,
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": false,
+    "is_primary_group_for_gene": false,
+    "counts_measured": "PubMed esearch 2026-10-02 (tool=LEGEND-research): 'WWOX AND TIAF1' 9 records, 'WWOX AND TIAF1 NOT Chang NS[au]' 0 records; '\"TRAPPC6A\" AND (aggregation OR plaque)' 4 records, all four from this laboratory (PMIDs 25650666, 27551439, 29067327, 36498839); 'Zfra' 17 records, 'Zfra NOT Chang NS[au]' 1 record which is an unrelated zebrafish androgen-receptor paper matching the string by accident (PMID 17698417).",
+    "self_citation_measured": "Of this paper's 46 references, all 46 carry a PMID; 24 have Chang NS as an author and 25 have Chang NS or Sze CI (PubMed esummary author lists, 2026-10-02). That is 54 percent of the bibliography.",
+    "weighting": "This is the originating and, on the measurement above, the only laboratory publishing on the TRAPPC6A-delta/TIAF1 node. Its measurements are not thereby wrong; they are unreplicated, which is a property of the evidence and must travel with every datum carried from it.",
+    "note": "Research-group knowledge base excluded from the public edition; this rests on measured PubMed counts and the paper's own author and reference lists.",
+    "total_publications": 0,
+    "publications_on_gene": 0,
+    "counts_note": "total_publications and publications_on_gene are 0 because no per-author output count was measured in this pass. What was measured is the mechanism's independence (counts_measured) and this paper's self-citation share (self_citation_measured). A zero here means NOT MEASURED, not zero publications."
+  },
+  "field_density": {
+    "wwox_directed": true,
+    "queries": [
+      {
+        "query": "WWOX AND TIAF1",
+        "route": "PubMed esearch 2026-10-02",
+        "count": 9
+      },
+      {
+        "query": "WWOX AND TIAF1 NOT Chang NS[au]",
+        "route": "PubMed esearch 2026-10-02",
+        "count": 0
+      }
+    ],
+    "note": "Maximum density for the mechanism, zero density outside one laboratory."
+  },
+  "multihop": {
+    "performed": false,
+    "references_enumerated": 46,
+    "enumeration_method": "All 46 reference PMIDs parsed from the JATS back matter and resolved by PubMed esummary for authorship only. Topic classification deliberately deferred: that is triage work.",
+    "resolved": [],
+    "queued": [],
+    "gene_direct_refs_in_source": []
+  },
+  "corpus_crossquery": {
+    "performed": true,
+    "query": "Is any link of the TRAPPC6A-delta cascade measured by a laboratory other than this one?",
+    "hits": 0,
+    "finding": "No. The four papers that pair TRAPPC6A with aggregation or plaque are B1, B2, B3 and B4 of this group, and the WWOX-TIAF1 pair has no record without Chang NS as an author."
+  },
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-10-02",
+    "route": "PubMed esummary pubtype for 27551439 and exact DOI/PMID match against files/retraction_watch/retractionwatch_20261002.csv (72870 rows)",
+    "result": "pubtype ['Journal Article']. No retraction, no expression of concern, no erratum; no Retraction Watch row.",
+    "hold": false,
+    "dependencies": {
+      "flagged": [],
+      "noted": [],
+      "paper_verdict": "SCREENED_CLEAN",
+      "reference_source": "cache",
+      "references_declared": 46,
+      "references_screened": 43,
+      "references_with_doi": 43,
+      "schema": "retraction_check.dependencies/1",
+      "screened": true,
+      "snapshot": {
+        "date": "2026-09-10",
+        "days_since_fetch": 22,
+        "rows": 72476,
+        "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+      },
+      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+      "unscreenable": {
+        "UNSCREENABLE_NO_DOI": 3
+      }
+    }
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID27551439_Chang2015_PMC.xml",
+      "sha256": "61522f75014460b602cc2f1098d5921fef8bab36caa4314748904c757aea61b8",
+      "kind": "article_text",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4981022/fullTextXML",
+        "http_method": "GET",
+        "tier": "europepmc_rest_fulltextxml",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-02",
+        "derived": false,
+        "result_sha256": "61522f75014460b602cc2f1098d5921fef8bab36caa4314748904c757aea61b8"
+      }
+    },
+    {
+      "path": "files/figures/PMID27551439/native/cddiscovery20153-f2.jpg",
+      "sha256": "18cf9488929803dc116412eaa0377a05c7c4ca96b27af7a857fa73bf7409fa49",
+      "kind": "figure",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4981022.1/cddiscovery20153-f2.jpg",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-02",
+        "derived": false,
+        "result_sha256": "18cf9488929803dc116412eaa0377a05c7c4ca96b27af7a857fa73bf7409fa49"
+      }
+    },
+    {
+      "path": "files/figures/PMID27551439/native/cddiscovery20153-f3.jpg",
+      "sha256": "79528567a159db41d8df059d9b6ccf7444e860d67d8b51833809191f1974bb76",
+      "kind": "figure",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4981022.1/cddiscovery20153-f3.jpg",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-02",
+        "derived": false,
+        "result_sha256": "79528567a159db41d8df059d9b6ccf7444e860d67d8b51833809191f1974bb76"
+      }
+    },
+    {
+      "path": "files/figures/PMID27551439/native/cddiscovery20153-f7.jpg",
+      "sha256": "09dca7dbe736e467e60d3c89005c0c27d5b69b6e81e8d759d832feb425a878e4",
+      "kind": "figure",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4981022.1/cddiscovery20153-f7.jpg",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-02",
+        "derived": false,
+        "result_sha256": "09dca7dbe736e467e60d3c89005c0c27d5b69b6e81e8d759d832feb425a878e4"
+      }
+    },
+    {
+      "path": "files/supplements/PMID27551439/cddiscovery20153-s1.doc",
+      "sha256": "d47988dad3c8ae964b1b33a190f420ff820a50989958b83b5d196083f6385b11",
+      "kind": "article_binary",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4981022.1/cddiscovery20153-s1.doc",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-02",
+        "derived": false,
+        "result_sha256": "d47988dad3c8ae964b1b33a190f420ff820a50989958b83b5d196083f6385b11"
+      }
+    }
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC JATS XML held locally and fingerprinted; all seven figure images and the supplementary .doc retrieved from the PMC open-access S3 mirror (pmc-oa-opendata) at the sizes the mirror declares, byte-length checked against the mirror listing; the two supplementary figure images were carved from the .doc OLE Data stream by PNG chunk-walking and inspected as rasters. The fifteen supplementary movies were NOT decoded: no video decoder is installed in this environment.",
+    "abstract_anchoring_waived": "No locator is abstract-anchored. Every entry below is a bound on the cascade-ordering claim, a panel reading, or an internal inconsistency between the paper's own Results and Discussion.",
+    "entries": [
+      {
+        "proposition": "The cell-death readout on which the whole TPC6A-delta apoptosis link rests is transient overexpression, in two non-neuronal lines plus one neuroblastoma line, and the wild-type and the delta isoform are equally potent — so the delta isoform's special status is not supported by this assay.",
+        "snippet": "Transiently overexpressed TPC6A and TPC6A",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID27551439_Chang2015_PMC.xml",
+        "anchor": "Results, 'Transiently overexpressed TPC6AΔ induces apoptosis and counteracts the function of WWOX in activating promoter governed by NF-κB'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The one endogenous, non-overexpression demonstration of a WWOX/TPC6A physical interaction in this paper is a reciprocal co-immunoprecipitation in an embryonic kidney fibroblast line, not in neurons.",
+        "snippet": "Embryonic kidney fibroblast HEK293 cells",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID27551439_Chang2015_PMC.xml",
+        "anchor": "Results, 'TPC6A physically binds to the C-terminal D3 tail of WWOX'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The Results state that the Y112F mutant aggregates less.",
+        "snippet": "the S35G mutant failed to undergo aggregation, and the Y112F mutant had a reduced aggregation",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID27551439_Chang2015_PMC.xml",
+        "anchor": "Results, 'WWOX prevents TPC6AΔ aggregation'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THE DISCUSSION OF THE SAME PAPER STATES THE OPPOSITE OF THE SENTENCE ABOVE. Figure 5a adjudicates: the Y112F bar carries p = 0.040 for medium versus TGF-beta1, i.e. it still responds, and the S35G bar carries p = 0.002, i.e. the mutant the Results call non-aggregating is the one with the most significant TGF-beta1-induced increase.",
+        "snippet": "alteration of Tyr112 to Phe does not reduce TPC6A",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID27551439_Chang2015_PMC.xml",
+        "anchor": "Discussion, paragraph on predicted phosphorylation sites",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "A third residue inconsistency: the Discussion names Tyr216 for the step the Results and the Figure 5i scheme name Tyr112. The protein is 173 aa (wild type) / 159 aa (delta) per the companion paper's alignment, so Tyr216 does not exist in it.",
+        "snippet": "phosphorylation of Ser35 and Tyr216 is needed for TPC6A to relocate to the nucleolus and mitochondria",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID27551439_Chang2015_PMC.xml",
+        "anchor": "Discussion, first paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "FIGURE ATTESTATION. Figure 5a is the panel that adjudicates the Y112F/S35G contradiction; it reports p = 0.844 (TPC6AΔ), p = 0.040 (Y112F) and p = 0.002 (S35G) for medium versus TGF-beta1, with no n on the panel and the axis labelled 'Number of cells with protein aggregation'. Read from a fingerprinted raster, not from a text layer. (The figure file fingerprinted here is Figure 3; Figure 5 is the file cddiscovery20153-f5.jpg in the same directory and is declared in the dossier.)",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 3c/3d: HEK293 co-IP, two lanes plus Pre-IP, IgH heavy-chain band dominating both blots; Fig 3e/3f: FRETc 16 (c/y) vs 23 (WWOX), 12 (WW), 28 (SDR/D3), 30 (D3), ten cells per set.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID27551439/native/cddiscovery20153-f3.jpg",
+        "anchor": "Figure 3, panels c-f, native PMC open-access raster",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "The only in-vivo WWOX-genotype datum in this paper is immunostaining of Wwox-/- mouse cortex, reported as a presence without a wild-type comparator in the text.",
+        "snippet": "By fluorescent immunostaining, we showed the presence of TPC6A plaques with Ser35 phosphorylation",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID27551439_Chang2015_PMC.xml",
+        "anchor": "Results, 'TPC6A plaques interact with TIAF1 aggregates in vivo'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Two load-bearing mechanistic steps of the Discussion are attributed to unpublished data of the same laboratory, so they cannot be checked from any source.",
+        "snippet": ", unpublished). By filter retardation assay",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID27551439_Chang2015_PMC.xml",
+        "anchor": "Discussion, paragraph on TGF-beta/Hyal-2/WWOX/Smad4 signalling",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "FIGURE ATTESTATION qualifying the sentence above. In Figure 7 the comparator for panels a-c is the SAME Wwox-/- cortex with the antibodies peptide-blocked (panel b, FRETc 5 +/- 3 against 75 +/- 9 in panel a), and panel d's control is likewise 'p-TPC6A (peptide blocking)' on knockout tissue. A peptide block tests antibody specificity; it does not test genotype dependence, so no panel of this figure compares knockout with wild-type brain.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 7a 'Wwox-/- brain cortex' FRETc = 75+/-9; Fig 7b same tissue, 'Antibodies blocked with peptides', FRETc = 5+/-3; Fig 7c pS35-TPC6A/TIAF1 FRETc = 105+/-7; Fig 7d 'Wwox-/- mouse brain' p-TPC6A at 40x/100x/400x over 'p-TPC6A (peptide blocking)'. No Wwox+/+ panel appears anywhere in the figure.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID27551439/native/cddiscovery20153-f7.jpg",
+        "anchor": "Figure 7, panels a-d, native PMC open-access raster",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[6]",
+        "qualifies_needle": "immunostaining, we showed the presence of TPC6A plaques"
+      }
+    ]
+  }
+}

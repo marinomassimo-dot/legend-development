@@ -1,0 +1,211 @@
+{
+ "schema_version": 2,
+ "pmid": "25537520",
+ "doi": "10.18632/oncotarget.2961",
+ "receipt": "FTR-20261002-25537520-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID25537520.md",
+  "disease-models/wwox/research/intake_wave_20261002_B.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261002-B-NONLINEAGE-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is a research surface another batch owns; the one lead this reading touches (DL-MECH-107) is proposed through a commit candidate instead of an edit."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "Nothing in this paper supplies a therapeutic lever for the reference genotype class; forging hypotheses from a nominal or review-level signal would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "The paper tests no compound, dose or intervention, so there is no molecule for BLOCK-1 triage."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes are proposed as commit candidates for a later BATCH_COMMIT."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; the triples are published in the candidate for an auditor to run."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 138,
+  "publications_on_gene": 66,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "PubMed counts 2026-10-02: Chang NS[au] 138 records, 66 intersecting WWOX. A primary WWOX cell-biology laboratory (not a WWOX-DEE clinical group). In this review 18 of 54 references carry Chang NS as author; every neurodegeneration, tau, TIAF1 and in-vivo transcription-factor statement rests on those or on reviews, while the epilepsy and developmental statements rest on three independent primaries. Group experience weights its own biochemistry, not its synthesis."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND neurodegeneration",
+    "count": 36,
+    "source": "PubMed ESearch 2026-10-02"
+   },
+   {
+    "query": "WWOX AND neurodegeneration NOT Chang NS[au]",
+    "count": 15,
+    "source": "PubMed ESearch 2026-10-02"
+   },
+   {
+    "query": "WWOX AND TIAF1 NOT Chang NS[au]",
+    "count": 0,
+    "source": "PubMed ESearch 2026-10-02"
+   }
+  ],
+  "note": "Every WWOX-and-TIAF1 record in PubMed (9) carries Chang NS: the TIAF1 axis has no independent replication."
+ },
+ "multihop": {
+  "references_enumerated": 54,
+  "gene_direct_refs_in_source": [
+   "24369382",
+   "24456803",
+   "19500159",
+   "15126504",
+   "22193544",
+   "19918364",
+   "21368882",
+   "21075834"
+  ],
+  "resolved": [
+   "24369382",
+   "24456803",
+   "19500159",
+   "15126504",
+   "22193544",
+   "19918364",
+   "21368882",
+   "21075834"
+  ],
+  "queued": [],
+  "note": "All 54 references enumerated; the XML carries no PMIDs, so the load-bearing neurological ones were resolved by title on PubMed. Independent primaries behind the epilepsy and development sentences: refs 26 (Mallaret 2014), 27 (Abdel-Salam 2014), 48 (Suzuki 2009), each an identity record in the registries. Same-group primaries behind the neurodegeneration sentences: refs 16 (Sze 2004, mention only), 17 (Wang 2012, PAPER 056), 31 (Li 2009 sciatic injury, mention only), 40 (Lee 2010 TIAF1, no record). Ref 49 (O’Keefe 2011, Drosophila) is an identity record."
+ },
+ "corpus_crossquery": {
+  "query": "Is any statement of this review carried in the registries as if independently established? (registry_records.py get --pmid 25537520 --hops 1; --theme TIAF1, sciatic, Zfra, TRAPPC6A, Alzheimer over the claim registry)",
+  "hits": 2,
+  "note": "The paper is CORPUS P263 / LIT-0263, triage placeholders with no claim links. No claim carries a Chang-lineage TIAF1, sciatic-injury or neurodegeneration statement. Its epilepsy and developmental sentences are already held from their primaries (PAPER 042, PAPER 043, PAPER 058). PAPER 056 cites this paper only through a lineage note. Triage metadata (pathway P6 DDR, species rat) is wrong and is corrected in CC-20261002-B-NONLINEAGE-01."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-02 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn, CommentIn or UpdateIn link; publication types Journal Article; Research Support, Non-U.S. Gov't; Review.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 54,
+   "references_screened": 48,
+   "references_with_doi": 48,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 22,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 6
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID25537520_Chang2014_PMC.xml",
+   "sha256": "9d3a2daae0e82d26fd6083e6c5e9bfa654dcd8f25d0b481bec7ce6cef35340c0",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4322972/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "9d3a2daae0e82d26fd6083e6c5e9bfa654dcd8f25d0b481bec7ce6cef35340c0"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "In the body, the review states that in-vivo regulation of transcription factors in neuronal survival or death is not established.",
+    "snippet": "Whether WWOX regulates the function of transcription factors in neuronal survival or death in vivo remains to be established.",
+    "anchor": "WWOX in neuronal death signaling, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25537520_Chang2014_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Conclusion asserts the opposite of the body: substantial in-vivo evidence for transcription-factor control.",
+    "snippet": "In conclusion, substantial evidence has shown that WWOX participates in the control of the function of transcription factors in vivo.",
+    "anchor": "Conclusion and perspectives",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25537520_Chang2014_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The WWOX-TIAF1 interaction is supported in this review by unpublished data from the same group.",
+    "snippet": "WWOX is able to interact with TIAF1 (Chang et al., unpublished)",
+    "anchor": "WWOX in neurological disease pathology, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25537520_Chang2014_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The neurodegeneration-inhibitor statement rests on the authors’ own prior work.",
+    "snippet": "We have shown that WWOX is an inhibitor of neurodegeneration, because of its interaction with tau",
+    "anchor": "Introduction, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25537520_Chang2014_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "WWOX functional deficiency in Drosophila produced no neural disease phenotype.",
+    "snippet": "functional deficiency of WWOX in Drosophila fails to generate the disease phenotypes in the neural system",
+    "anchor": "WWOX in metabolic syndrome and neural development, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25537520_Chang2014_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review’s developmental conclusion is drawn from the human family, the nonsense case and the lde rat.",
+    "snippet": "Overall, these reports clearly indicate that germline loss-of-function of WWOX leads to developmental deficiency in the neural system.",
+    "anchor": "WWOX in metabolic syndrome and neural development, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25537520_Chang2014_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The statement that WWOX downregulation in AD causes neuronal damage is supported only by reviews (refs 1, 2, 4).",
+    "snippet": "and that downregulation of WWOX in AD causes neuronal damage",
+    "anchor": "WWOX in metabolic syndrome and neural development, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25537520_Chang2014_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC4322972/fullTextXML returned HTTP 200 with a full JATS body on 2026-10-02; the artefact declared above is that response, so every body and table quote can be re-verified externally."
+ }
+}

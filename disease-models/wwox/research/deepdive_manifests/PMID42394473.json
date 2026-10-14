@@ -1,0 +1,229 @@
+{
+ "schema_version": 2,
+ "pmid": "42394473",
+ "doi": "10.1002/epd2.70277",
+ "receipt": "FTR-20261004-42394473-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID42394473.md",
+  "disease-models/wwox/research/intake_wave_20261004w7_B.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W7-B-REGISTRY-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W7-B-PATIENT-OVERLAP-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is owned by other batches; what this reading supports is proposed as commit candidates and in the intake note."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A diagnostic cohort or method record supplies no new therapeutic lever; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The triples are published in the candidates for a blind auditor; the reader cannot audit their own locators."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "Single-centre retrospective exome cohort; WWOX is two table rows and two sentences. Credible as a counting source for a recurrent nonsense allele; phenotype is table-level only."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND epilepsy AND (exome OR cohort)",
+    "count": 33,
+    "source": "PubMed ESearch rettype=count 2026-10-04"
+   }
+  ],
+  "note": "33 PubMed records; this one adds two homozygous p.Arg264* patients from a population with no held p.Arg264* patient."
+ },
+ "multihop": {
+  "references_enumerated": 32,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "32 references enumerated; none is a WWOX source. The 'classic for WWOX-associated DEE' sentence cites ref 28, a population-incidence cohort (Symonds 2019)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42394473 (run AFTER the first pass); allele-term theme searches for the comparison",
+  "hits": 0,
+  "note": "No PAPER/LIT identity record and no receipt before this reading. Allele comparison: held homozygous p.Arg264* patients are Indian (PAPER 117 patients 13-14; PAPER 143); no overlap."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 32,
+   "references_screened": 32,
+   "references_with_doi": 32,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 24,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  },
+  "result": "Checked 2026-10-04 via PubMed metadata (get_article_metadata): publication types ['Journal Article']; no retraction, expression of concern or correction listed for PMID 42394473."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42394473_Karaer2026_PMC.xml",
+   "sha256": "5ac00fbc408488b2fcccde199d54b7d514f8d54a4d45ed2a70aa727af7ddbbb6",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML; body, Tables 1-2 (cell-wise), three figure legends, 32 references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13499239/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": false,
+    "result_sha256": "5ac00fbc408488b2fcccde199d54b7d514f8d54a4d45ed2a70aa727af7ddbbb6"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID42394473_Karaer2026_supplement/EPD2-28-1252-s001.docx",
+   "sha256": "b6fe061924ec6358536b09c48183f1a5718d0dede51079a1070263e85d8c963a",
+   "kind": "supplement_text",
+   "note": "Appendix S1: answers to the three self-test questions only; no case data.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13499239/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID42394473/EPD2-28-1252-g002.webp",
+   "sha256": "f2a203313d262cf455a759fb71b7b647d69f9c3db280c5ad953b7f57ca3c30be",
+   "kind": "figure",
+   "note": "Figure 2 (variant types, inheritance, pathway grouping), from the Europe PMC supplementaryFiles zip; inspected at 1064 px.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13499239/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "derived": false
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "WWOX is one of the three commonest autosomal-recessive genes in the cohort, with two diagnosed patients.",
+    "snippet": "In the AR inheritance model, AP4M1 (n = 3), TBC1D23 (n = 2), and WWOX (n = 2) were the most frequently encountered genes.",
+    "anchor": "Results, Genetic findings and variant spectrum",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42394473_Karaer2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Case row 29: female, homozygous WWOX c.790C>T p.Arg264*, pathogenic, infantile onset, generalized epileptic spasms, RTM mark R.",
+    "snippet": "| 29 F WWOX Nonsense c.790C>T p.Arg264* Hom Reported ClinVar ID:241105 PVS1, PM3, PM2 P Infantile GES R",
+    "anchor": "Table 2, case row 29",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID42394473_Karaer2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Case row 51: male, homozygous WWOX c.790C>T p.Arg264*, pathogenic, neonatal onset, generalized epileptic spasms, RTM cell empty.",
+    "snippet": "| 51 M WWOX Nonsense c.790C>T p.Arg264* Hom Reported ClinVar ID:241105 PVS1, PM3, PM2 P Neonatal GES |",
+    "anchor": "Table 2, case row 51",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID42394473_Karaer2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Regression and abnormal MRI for the two WWOX patients are asserted in the Discussion only.",
+    "snippet": "Two patients with WWOX p.Arg264* (Cases 29, 51) exhibited generalized epileptic spasms, developmental regression, and abnormal MRI",
+    "anchor": "Discussion, Genotype-phenotype correlations and DEE spectrum",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42394473_Karaer2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Table 2 footnote defines R as the 12 patients whose diagnosis informed therapy.",
+    "snippet": "Cases marked with ‘R’ include the 12 patients in whom genetic diagnosis directly informed therapeutic decisions",
+    "anchor": "Table 2 footnote",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID42394473_Karaer2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Section 3.5 names the 12 therapy-informed patients as SCN1A, SLC2A1 and MECP2 carriers and redefines R as drug resistance.",
+    "snippet": "In 12 of 89 diagnosed patients (13.5%), genetic results directly informed therapeutic decisions: (1) SCN1A‐positive cases (n = 9) avoided sodium channel blockers (e.g., carbamazepine, lamotrigine) to reduce seizure exacerbation risk; (2) SLC2A1 variants (n = 2) prompted ketogenic diet trials with subsequent seizure reduction; (3) MECP2 diagnosis (n = 1) enabled Rett syndrome‐specific surveillance including scoliosis monitoring and cardiac screening. Of these 12 patients, 6 were drug‐resistant (indicated with ‘R’ in Table 2)",
+    "anchor": "Results, Clinical utility of genetic diagnosis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42394473_Karaer2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 2 is a partial listing whose stated totals differ from the text.",
+    "snippet": "Full table includes all 98 P/LP and 47 clinically relevant VUS cases; only representative entries shown.",
+    "anchor": "Table 2 footnote",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID42394473_Karaer2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "No functional validation was performed.",
+    "snippet": "Functional validation (e.g., electrophysiology for SCN1A variants) was not performed.",
+    "anchor": "Discussion, Limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42394473_Karaer2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors place WWOX in a structural / cytoskeleton / axonal transport / adhesion / myelin pathway segment, an authorial grouping without assay.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 2C pie segment 'Structural, cytoskeleton, axonal transport, adhesion & myelin 12%' lists PCDH19, TBCD, DYNC1H1, WWOX, KIF1A, CKAP2L, MICAL1, MPZ.",
+    "anchor": "Figure 2, panel C, read at 1064 px",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42394473/EPD2-28-1252-g002.webp",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST fullTextXML returned HTTP 200 with a full JATS body on 2026-10-04; the declared article_text artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+ }
+}

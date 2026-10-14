@@ -1,0 +1,225 @@
+{
+ "schema_version": 2,
+ "pmid": "42193054",
+ "doi": "10.3390/cimb48050449",
+ "receipt": "FTR-20261003-42193054-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID42193054.md",
+  "disease-models/wwox/research/intake_wave_20261003_A.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003-A-REGISTRY-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003-A-SAPUPPO-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is a research surface owned by other batches; the one ledger correction this reading supports is proposed through the intake note rather than edited."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A patient genotype-phenotype report supplies no therapeutic lever for the reference genotype class; forging hypotheses from one case would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is tested as an intervention with a measured outcome beyond clinical anecdote, so there is no molecule to send to BLOCK-1 triage."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate for a later BATCH_COMMIT."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The triples are published in the candidates for a blind auditor; the reader of a paper cannot audit their own locators."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 319,
+  "publications_on_gene": 1,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "PubMed counts 2026-10-02: Falsaperla R[au] 319, with WWOX 1. A neonatal/paediatric neurology group; genetics outsourced to a commercial exome. The index observation (one infant) stands; the literature table and review are not reliable as counts.",
+  "external_provenance": {
+   "source": "NCBI E-utilities esearch rettype=count, terms as stated",
+   "date": "2026-10-02"
+  }
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (WOREE OR epileptic encephalopathy)",
+    "count": 72,
+    "source": "PubMed ESearch 2026-10-02"
+   }
+  ]
+ },
+ "multihop": {
+  "references_enumerated": 15,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "15 references. Every Table 1 row traces to Piard 2019 (ref 7, eight rows) or Dong 2023 (ref 15, cited as 11); both read in this wave and the rows checked against them."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42193054 (run AFTER the first pass)",
+  "hits": 3,
+  "note": "PAPER 012, LIT-0012, CLAIM 012. PAPER 012 already records the PRISMA arithmetic and the phase gap; CLAIM 012 calls the case 'null/null funzionale, probabilmente' without the phase caveat. See CC-20261003-A-SAPUPPO-01."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-02 via PubMed metadata (get_article_metadata): no retraction, expression of concern or correction listed among the publication types for PMID 42193054.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 15,
+   "references_screened": 15,
+   "references_with_doi": 15,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 22,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42193054_Sapuppo2026_PMC.xml",
+   "sha256": "c2538a20ebb3ac13f6058daed33d32318f05911ac5df9b3fb466233a65bd6160",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13205014/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-02",
+    "result_sha256": "c2538a20ebb3ac13f6058daed33d32318f05911ac5df9b3fb466233a65bd6160"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID42193054_Sapuppo2026_supplement/cimb-48-00449-g001.jpg",
+   "sha256": "d9a9ec9838794a213389e3b743696d32700459da4a38d8413b2c2ba62741846e",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member 'cimb-48-00449-g001.jpg' extracted unchanged by Python zipfile from the Europe PMC REST supplementaryFiles bundle for PMC13205014 (HTTP 200, application/zip, fetched 2026-10-02); the bundle itself was not persisted because it also carries patient photographs, which this public edition does not retrieve into files/."
+   }
+  },
+  {
+   "path": "files/fulltext/PMID42193054_Sapuppo2026_supplement/cimb-48-00449-g002.jpg",
+   "sha256": "8fa0b2644db8fd1c5831c68392498ebcb6bc3d33067c7bfcf07ecc791f6c0a13",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member 'cimb-48-00449-g002.jpg' extracted unchanged by Python zipfile from the Europe PMC REST supplementaryFiles bundle for PMC13205014 (HTTP 200, application/zip, fetched 2026-10-02); the bundle itself was not persisted because it also carries patient photographs, which this public edition does not retrieve into files/."
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Parental testing was not performed, so phase (cis or trans) is unknown.",
+    "snippet": "Analysis of asymptomatic parental samples would have been required for the inheritance pattern determination of variants, but was not performed.",
+    "anchor": "Results, 3.2 Mutational Analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42193054_Sapuppo2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors decline causal attribution.",
+    "snippet": "a causal attribution of the observed clinical features to the identified variants cannot be established",
+    "anchor": "Discussion, last para",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42193054_Sapuppo2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Literature-review arithmetic is internally impossible (30 full texts assessed, 70 excluded, 20 included).",
+    "snippet": "Full-text assessment was conducted for 30 studies, of which 70 were excluded due to insufficient clinical or genetic detail.",
+    "anchor": "Methods, 2.3 Literature Review",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42193054_Sapuppo2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 1 labels exons 6-7 deletions c.517_791del as in-frame; 275 nt is out-of-frame and Piard gives p.His173Ilefs*5.",
+    "snippet": "c.517_791del (in frame deletion)",
+    "anchor": "Table 1, rows from ref [7]",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID42193054_Sapuppo2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Chinese row of Table 1 transcribes the Dong 2023 patient but is attributed to reference [11] (Mignot).",
+    "snippet": "seizures characterized by clenched teeth, cyanosis around the lips and tetanic twitch of the limbs",
+    "anchor": "Table 1, row cited [11]",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID42193054_Sapuppo2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The index CNV, with hg19 coordinates that place exon 6 and exon 7 inside it.",
+    "snippet": "The 38 kb CNV deletion c.(516+1_517-1)_(791+1_792-1)del (chr16:78420649",
+    "anchor": "Figure 2 caption",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42193054_Sapuppo2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The paper repeats the c.160G>T nomenclature for p.Arg54*.",
+    "snippet": "a homozygous nonsense pathogenic variant c.160G>T",
+    "anchor": "Discussion, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42193054_Sapuppo2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A survival generalisation not supported by the series the paper itself tabulates.",
+    "snippet": "most affected individuals die within the first year of life",
+    "anchor": "Introduction, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42193054_Sapuppo2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Brain MRI at 10 days: myelination incomplete and normal for age; no other abnormality shown.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 1 A sagittal T2 and B axial T2 neonatal images without focal lesion annotation.",
+    "anchor": "Figure 1",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID42193054_Sapuppo2026_supplement/cimb-48-00449-g001.jpg",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "The schematic draws the CNV over exons 6-7 and the frameshift in exon 8 and asserts NMD and truncation as a combined effect; neither is measured.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 2: blue box over exons 6-7 labelled 'CNV deletion (ex6-7)' with the note 'Loss of internal region, frameshift, ORF disruption'; yellow mark in exon 8 'c.1043del (p.Phe348Serfs*57)'; arrows to 'Truncated nonfunctional protein' and 'Nonsense-mediated mRNA decay (NMD)'.",
+    "anchor": "Figure 2",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID42193054_Sapuppo2026_supplement/cimb-48-00449-g002.jpg",
+    "panel_text_relation": "text_confirmed_by_panel"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC13205014/fullTextXML returned HTTP 200 with a full JATS body on 2026-10-02; the declared artefact is that response, byte for byte."
+ }
+}

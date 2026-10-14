@@ -1,0 +1,231 @@
+{
+  "schema_version": 2,
+  "pmid": "42770556",
+  "doi": "10.7554/eLife.101386",
+  "receipt": "FTR-20261004-42770556-01",
+  "context_policy": "SOURCE_FIRST",
+  "landing": [
+    "disease-models/wwox/research/intake_wave_20261004w9_C.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261004W9-C-REGISTRY-01.md"
+  ],
+  "skills_considered": [
+    {
+      "skill": "find-fulltext",
+      "used": true
+    },
+    {
+      "skill": "legend-study-intake-triage",
+      "used": true
+    },
+    {
+      "skill": "legend-deepdive",
+      "used": true
+    },
+    {
+      "skill": "legend-discovery",
+      "used": false,
+      "reason": "The discovery ledger is owned by other batches; what this reading supports is proposed as commit candidates and in the intake note."
+    },
+    {
+      "skill": "legend-hypothesis-forge",
+      "used": false,
+      "reason": "One reading supplies at most a lever to state with its limits; forging a portfolio from it would manufacture leads."
+    },
+    {
+      "skill": "legend-safety-triage",
+      "used": false,
+      "reason": "No compound is proposed by this source."
+    },
+    {
+      "skill": "legend-commit",
+      "used": false,
+      "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+    },
+    {
+      "skill": "legend-locator-audit",
+      "used": false,
+      "reason": "The triples are published in the candidates for a blind auditor; the reader cannot audit their own locators."
+    }
+  ],
+  "group_assessment": {
+    "total_publications": 1,
+    "publications_on_gene": 0,
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": false,
+    "weighting": "Craniofacial developmental-biology group (PRMT1 in neural crest); eLife reviewed preprint, version of record. No WWOX publication; WWOX is one of many long genes in a genome-wide intron-retention screen."
+  },
+  "field_density": {
+    "queries": [
+      {
+        "query": "WWOX AND \"intron retention\"",
+        "count": 0,
+        "source": "PubMed ESearch rettype=count 2026-10-04"
+      },
+      {
+        "query": "WWOX AND (SFPQ OR PRMT1)",
+        "count": 1,
+        "source": "PubMed ESearch rettype=count 2026-10-04"
+      }
+    ],
+    "note": "No PubMed record pairs WWOX with intron retention; one pairs it with SFPQ or PRMT1. A trans-acting splicing regulator of Wwox has no prior literature on PubMed by these queries."
+  },
+  "multihop": {
+    "references_enumerated": 96,
+    "gene_direct_refs_in_source": [],
+    "resolved": [],
+    "queued": [],
+    "note": "96 references declared (95 ref elements parsed); none concerns WWOX. The Discussion's statement on human WWOX epileptic encephalopathy cites Dvinge and Bradley 2015 (Genome Medicine, PMC4480902), a pan-cancer intron-retention paper whose Europe PMC full text (133 557 B) contains zero occurrences of WWOX, epileptic or encephalopathy: the citation does not support the sentence. No WWOX hop is owed."
+  },
+  "corpus_crossquery": {
+    "query": "registry_records.py get --pmid 42770556 and --pmid 41292806 (the bioRxiv version this paper updates); fulltext_receipts.py status for both",
+    "hits": 0,
+    "note": "No registry record and no receipt for either PMID before this reading."
+  },
+  "retraction_check": {
+    "checked": true,
+    "result": "Checked 2026-10-04 via PubMed ESummary: publication types ['Journal Article']; CommentsCorrections lists only 'Update of' the bioRxiv preprint (PMID 41292806); no retraction, expression of concern or correction.",
+    "dependencies": {
+      "flagged": [],
+      "noted": [],
+      "paper_verdict": "SCREENED_CLEAN",
+      "reference_source": "network",
+      "references_declared": 96,
+      "references_screened": 92,
+      "references_with_doi": 92,
+      "schema": "retraction_check.dependencies/1",
+      "screened": true,
+      "snapshot": {
+        "date": "2026-09-10",
+        "days_since_fetch": 24,
+        "rows": 72476,
+        "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+      },
+      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+      "unscreenable": {
+        "UNSCREENABLE_NO_DOI": 4
+      }
+    }
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID42770556_Lima2026_PMC.xml",
+      "sha256": "b0d7d5c89fa7733f3c151e24f2c1ecc049fd6782789282ac2a8d6214b7c397b8",
+      "kind": "article_text",
+      "note": "Europe PMC fullTextXML (333 486 B): body, 10 figure legends, 19 supplementary-file captions, methods, references.",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13597084/fullTextXML",
+        "http_method": "GET",
+        "tier": "Europe PMC REST fullTextXML",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "b0d7d5c89fa7733f3c151e24f2c1ecc049fd6782789282ac2a8d6214b7c397b8"
+      }
+    },
+    {
+      "path": "files/figures/PMID42770556/elife-101386-fig8.webp",
+      "sha256": "5c77a087d28e9708b2eef52bdacbfc16142351bdc307421dfd43072be7eda0c7",
+      "kind": "figure",
+      "note": "Figure 8 (1366x2049), inspected as an image at native resolution and with a 2x crop of the Wwox row; identical dimensions to the eLife CDN v1 JPEG.",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13597084.1/elife-101386-fig8.webp",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "5c77a087d28e9708b2eef52bdacbfc16142351bdc307421dfd43072be7eda0c7"
+      }
+    }
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "entries": [
+      {
+        "proposition": "Wwox is named as a 913 kb mouse gene whose retained intron is 639 kb, as an example of long SFPQ-regulated genes.",
+        "snippet": "Of note, Wnt pathway gene Wwox and matrix genes St6galnac3 are 913 and 526 kb in length, and their retained introns are 639 and 215 kb in length, respectively",
+        "anchor": "Results, Disturbance of SFPQ activity impaired splicing of long genes and long introns",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42770556_Lima2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The Discussion states that Wwox showed increased retention of introns 3 and 4 and decreased expression on Prmt1 or Sfpq deficiency.",
+        "snippet": "the long gene Wwox exhibited increased retention of long introns (introns 3 and 4) and decreased expression upon Prmt1 or Sfpq deficiency",
+        "anchor": "Discussion, paragraph on congenital defects",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42770556_Lima2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Wwox is listed among genes with decreased expression in Prmt1 CKO neural crest cells; no figure panel displays Wwox for the Prmt1 CKO arm.",
+        "snippet": "were also identified among genes with decreased expression in",
+        "anchor": "Results, SFPQ, EWSR1, TAF15, and TRA2B regulate distinct transcriptional and splicing events",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42770556_Lima2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Figure 8 caption: SFPQ depletion elevated intron retention and decreased mRNA abundance of the Wnt-signaling genes shown, with significance marked at p < 0.01.",
+        "snippet": "SFPQ depletion in CNCCs elevated intron retention and decreased mRNA abundance of Wnt signaling components",
+        "anchor": "Figure 8 legend",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID42770556_Lima2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "PANEL READING. In Figure 8A the Wwox row carries significance stars on the intron-retention bars for both siRNAs (about 0.8% of mRNAs in control versus about 1.2 to 1.4% after knockdown) but NO star on either TPM bar; Wwox TPM is near the axis (a few TPM on a 0-400 scale). The caption's 'decreased mRNA abundance' is not marked significant for Wwox, and the intron-retaining fraction is a small minority of Wwox mRNA.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 8A, Wwox row: right-hand intron-retention bars for siSFPQ#1 and siSFPQ#2 each carry an asterisk and reach roughly 1.2-1.4% against roughly 0.8% for siControl on a 0-10% axis; left-hand TPM bars carry no asterisk and lie within a few TPM of zero on a 0-400 TPM axis.",
+        "anchor": "Figure 8A, Wwox row",
+        "surface": "figure",
+        "artifact": "files/figures/PMID42770556/elife-101386-fig8.webp",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[1]",
+        "qualifies_needle": "decreased expression upon Prmt1 or Sfpq deficiency",
+        "experimental_context": {
+          "system": "primary culture",
+          "genotype": "wild-type mouse CNCCs, siRNA knockdown",
+          "treatment": "siSFPQ#1 or siSFPQ#2, 40 nM, 48 h",
+          "timepoint": "48 h",
+          "comparator": "siControl",
+          "endpoint": "poly(A) RNA-seq TPM and percentage of intron-retaining mRNAs"
+        }
+      },
+      {
+        "proposition": "The knockdown reduced Sfpq to about half, in three sequenced sets per arm.",
+        "snippet": "SFPQ knockdown caused around 50% reduction in Sfpq expression in CNCCs",
+        "anchor": "Figure 7A legend",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID42770556_Lima2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Sequencing design: five sets of control or Prmt1 CKO neural crest cells and three sets of siControl or siSFPQ cells, 40 million reads, 150 bp paired-end.",
+        "snippet": "three sets of isolated CNCCs transfected with siControl or siSFPQs were sequenced at 40 million reads sequencing depth and 150 bp paired-end sequencing",
+        "anchor": "Methods, mRNA isolation and sequencing",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42770556_Lima2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The authors link the Wwox observation to human WWOX epileptic encephalopathy with large intronic deletions, citing a pan-cancer intron-retention paper that does not mention WWOX.",
+        "snippet": "In human patients, pathogenic variants of WWOX with large deletions within the long introns have been associated with epileptic encephalopathy syndrome manifesting shared facial phenotype",
+        "anchor": "Discussion, paragraph on congenital defects",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42770556_Lima2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Shared feature of SFPQ-regulated genes: long genes with long introns; the IR-elevated genes have a median length of about 100 kb versus about 10 kb in controls.",
+        "snippet": "the genes with increased IR in Sfpq -depleted CNCCs have a median length of ~100 kb",
+        "anchor": "Results, Disturbance of SFPQ activity impaired splicing of long genes and long introns",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42770556_Lima2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      }
+    ],
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC REST fullTextXML returned HTTP 200 with a full JATS body on 2026-10-04; the declared article_text is that response.",
+    "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+  }
+}

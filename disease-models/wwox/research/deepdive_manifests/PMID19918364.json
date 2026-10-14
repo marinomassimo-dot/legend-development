@@ -1,0 +1,307 @@
+{
+  "schema_version": 2,
+  "pmid": "19918364",
+  "doi": "10.1371/journal.pone.0007820",
+  "receipt": "FTR-20261003-19918364-01",
+  "landing": [
+    "FTR-20261003-19918364-01",
+    "disease-models/wwox/research/fulltext_dossiers/PMID19918364.md",
+    "disease-models/wwox/research/intake_wave_20261003_B.md"
+  ],
+  "skills_considered": [
+    {
+      "skill": "legend-deepdive",
+      "used": false,
+      "reason": "Run inline; figure inspection and locator capture had to come from the same open document as the text reading."
+    },
+    {
+      "skill": "find-fulltext",
+      "used": false,
+      "reason": "Europe PMC fullTextXML returned HTTP 200 with a body on the first attempt; figures, PDF and supplements came from the PMC open-access S3 mirror, which needed no cascade."
+    },
+    {
+      "skill": "legend-locator-audit",
+      "used": false,
+      "reason": "OWED. This reading narrows claims that the working model may rest on and carries text-versus-panel contradictions, which is exactly the trigger."
+    }
+  ],
+  "group_assessment": {
+    "performed": true,
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": false,
+    "is_primary_group_for_gene": false,
+    "total_publications": 0,
+    "publications_on_gene": 0,
+    "counts_note": "total_publications and publications_on_gene are 0 because no per-author output count was measured in this pass. A zero here means NOT MEASURED, not zero publications.",
+    "note": "Research-group knowledge base excluded from the public edition; this rests on measured PubMed counts and the paper's own author and reference lists.",
+    "counts_measured": "PubMed esearch 2026-10-02 (tool=LEGEND-research): 'WWOX AND TIAF1' 9 records and 'WWOX AND TIAF1 NOT Chang NS[au]' 0 records; '\"TRAPPC6A\" AND (aggregation OR plaque)' 4 records, all four from this laboratory; 'Zfra' 17 records and 'Zfra NOT Chang NS[au]' 1 record, which is an unrelated zebrafish androgen-receptor paper matching the string by accident; 'WWOX AND \"dorsal root ganglion\"' 1 record, the group's own.",
+    "self_citation_measured": "Of this paper's 53 references all 53 carry a PMID and 11 have Chang NS as an author (21 percent) - the least self-referential paper in group B.",
+    "weighting": "Same laboratory, earlier and broader bibliography. The directional claim it makes - WWOX activation as pro-death in injured neurons - cuts against the protective framing of the 2015-2022 papers, which makes it the most informative record in the group and the one with no independent replication at all."
+  },
+  "field_density": {
+    "wwox_directed": true,
+    "queries": [
+      {
+        "query": "WWOX AND TIAF1 NOT Chang NS[au]",
+        "route": "PubMed esearch 2026-10-02",
+        "count": 0
+      },
+      {
+        "query": "\"TRAPPC6A\" AND (aggregation OR plaque)",
+        "route": "PubMed esearch 2026-10-02",
+        "count": 4
+      }
+    ],
+    "note": "Maximum density for the mechanism, zero density outside one laboratory."
+  },
+  "multihop": {
+    "performed": false,
+    "references_enumerated": 53,
+    "gene_direct_refs_in_source": [],
+    "enumeration_method": "53 reference PMIDs parsed from the JATS back matter and resolved by PubMed esummary for authorship only.",
+    "resolved": [],
+    "queued": []
+  },
+  "corpus_crossquery": {
+    "performed": true,
+    "query": "Has any other laboratory examined WWOX in dorsal root ganglion or peripheral nerve injury?",
+    "hits": 0,
+    "finding": "PubMed esearch 'WWOX AND \"dorsal root ganglion\"' returns exactly one record: this one."
+  },
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-10-02",
+    "route": "PubMed esummary pubtype for 19918364 and exact DOI/PMID match against files/retraction_watch/retractionwatch_20261002.csv (72870 rows)",
+    "result": "No retraction, no expression of concern and no erratum on this article; no Retraction Watch row for its DOI or PMID. ONE DEPENDENCY IS FLAGGED: reference 52, the 2005 PNAS report of WWOX gene restoration in lung cancer, carries a 2017 editorial expression of concern (PMID 28373548), and is cited here for background only.",
+    "hold": false,
+    "dependencies": {
+      "flagged": [
+        {
+          "citing_relation": "citation only, background. Reference 52 is cited once, in a Discussion sentence listing prior reports that ectopic WWOX kills cancer cells (\"Similar observations were shown in lung cancer A549 and H460 cells\"). No reagent, cell line, method, construct or datum of this paper comes from it, and no result of this paper changes if that reference is withdrawn. The JATS deposit carries the expression-of-concern pointer on that reference element itself, which is how it was found; the citing article is not itself flagged.",
+          "doi": "10.1073/pnas.0505485102",
+          "nature": "Expression of concern",
+          "reason_verbatim": "Concerns/Issues about Data;Duplication of/in Image;Error in Image;Investigation by Company/Institution;Original Data and/or Images not Provided and/or not Available;",
+          "retraction_date": "4/3/2017 0:00",
+          "retraction_pmid": "28373548",
+          "verdict": "FLAGGED_EXPRESSION_OF_CONCERN"
+        }
+      ],
+      "noted": [],
+      "paper_verdict": "FLAGGED_EXPRESSION_OF_CONCERN",
+      "reference_source": "network",
+      "references_declared": 53,
+      "references_screened": 52,
+      "references_with_doi": 52,
+      "schema": "retraction_check.dependencies/1",
+      "screened": true,
+      "snapshot": {
+        "date": "2026-09-10",
+        "days_since_fetch": 22,
+        "rows": 72476,
+        "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+      },
+      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+      "unscreenable": {
+        "UNSCREENABLE_NO_DOI": 1
+      }
+    }
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID19918364_Li2009_PMC.xml",
+      "sha256": "a4a30c59780468a0074e02ac5890da5ead6f69deaad57b183431dfa667955425",
+      "kind": "article_text",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2771921/fullTextXML",
+        "http_method": "GET",
+        "tier": "europepmc_rest_fulltextxml",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-02",
+        "derived": false,
+        "result_sha256": "a4a30c59780468a0074e02ac5890da5ead6f69deaad57b183431dfa667955425"
+      }
+    },
+    {
+      "path": "files/figures/PMID19918364/native/pone.0007820.g004.jpg",
+      "sha256": "bc3a4d788e2079077608df1d6d87257e466a08e0bceb2312dfe552be3f8f9e72",
+      "kind": "figure",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC2771921.1/pone.0007820.g004.jpg",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-02",
+        "derived": false,
+        "result_sha256": "bc3a4d788e2079077608df1d6d87257e466a08e0bceb2312dfe552be3f8f9e72"
+      }
+    },
+    {
+      "path": "files/figures/PMID19918364/native/pone.0007820.g005.jpg",
+      "sha256": "efa2d7b65f9f2716c28b5081b65801fd95c48ecd1e425b7af5bde931947522cd",
+      "kind": "figure",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC2771921.1/pone.0007820.g005.jpg",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-02",
+        "derived": false,
+        "result_sha256": "efa2d7b65f9f2716c28b5081b65801fd95c48ecd1e425b7af5bde931947522cd"
+      }
+    },
+    {
+      "path": "files/figure_renders/PMID19918364/pone.0007820.s003.png",
+      "sha256": "1147f002a73bc5d34896374286afefe1ab8c3c662050979c6789aeb96ed94665",
+      "kind": "figure",
+      "acquisition_recipe": {
+        "resolved_url": "derived: pymupdf page render of pone.0007820.s003.tif at 600 dpi (1771x913 px) = Supplementary Figure S3",
+        "http_method": "GET",
+        "tier": "local_tiff_render",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-02",
+        "derived": true,
+        "result_sha256": "1147f002a73bc5d34896374286afefe1ab8c3c662050979c6789aeb96ed94665",
+        "derived_from": "files/supplements/PMID19918364/pone.0007820.s003.tif",
+        "extractor": {
+          "name": "pymupdf",
+          "version": "1.28.2",
+          "call": "pymupdf.open(<tif>)[0].get_pixmap(dpi=600).save(<png>)"
+        }
+      }
+    },
+    {
+      "path": "files/supplements/PMID19918364/pone.0007820.s003.tif",
+      "sha256": "e1d9d9b16b18db993c0e42edd9f7222c871012e1d50c4fcdfcda2178d72ac1e5",
+      "kind": "article_binary",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC2771921.1/pone.0007820.s003.tif",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-02",
+        "derived": false,
+        "result_sha256": "e1d9d9b16b18db993c0e42edd9f7222c871012e1d50c4fcdfcda2178d72ac1e5"
+      }
+    },
+    {
+      "path": "files/supplements/PMID19918364/pone.0007820.s001.tif",
+      "sha256": "659e043c4584a7cfe55e7ea4d34865225e87d7c7179a910c21993d7bbf83c39b",
+      "kind": "article_binary",
+      "acquisition_recipe": {
+        "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC2771921.1/pone.0007820.s001.tif",
+        "http_method": "GET",
+        "tier": "pmc_oa_opendata_s3",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-02",
+        "derived": false,
+        "result_sha256": "659e043c4584a7cfe55e7ea4d34865225e87d7c7179a910c21993d7bbf83c39b"
+      }
+    },
+    {
+      "path": "files/figure_renders/PMID19918364/pone.0007820.s001.png",
+      "sha256": "03c1925d7e64730bac0469d430d3a7e23d635660180b43f74fc73a506367b483",
+      "kind": "figure",
+      "acquisition_recipe": {
+        "resolved_url": "derived: pymupdf page render of pone.0007820.s001.tif at 400 dpi (1334x658 px) = Supplementary Figure S1",
+        "http_method": "GET",
+        "tier": "local_tiff_render",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-02",
+        "derived": true,
+        "result_sha256": "03c1925d7e64730bac0469d430d3a7e23d635660180b43f74fc73a506367b483",
+        "derived_from": "files/supplements/PMID19918364/pone.0007820.s001.tif",
+        "extractor": {
+          "name": "pymupdf",
+          "version": "1.28.2",
+          "call": "pymupdf.open(<tif>)[0].get_pixmap(dpi=400).save(<png>)"
+        }
+      }
+    }
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC JATS XML fingerprinted; all eight figure rasters and all nine supplementary TIFF files retrieved from the PMC open-access S3 mirror. All eight main figures were inspected as images at native resolution. Two supplementary TIFFs were rendered with pymupdf and inspected - S3 (the lateralisation numbers) and S1 (morphology and TUNEL); the remaining seven were retrieved and their legends read, so supplementary coverage is captions_only and the reading is recorded as partial_fulltext_read.",
+    "abstract_anchoring_waived": "No locator is abstract-anchored. Each entry bounds the directional WWOX claim or the attribution of it to injury.",
+    "entries": [
+      {
+        "proposition": "THE PAPER'S OWN SIZE DEFINITION IS PURELY MORPHOMETRIC. 'Small' means under 20 micrometres in diameter and nothing else; the words 'nociceptive', 'unmyelinated', 'IB4', 'CGRP' and 'substance P' do not occur in the artefact. Any reading of this paper as a statement about nociceptors is imported convention, not the authors'.",
+        "snippet": "accumulated in the nuclei of small neurons (&lt;20",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID19918364_Li2009_PMC.xml",
+        "anchor": "Results, 'Axotomy Induces Protein Expression and Activation of WOX1 in DRG Neurons'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THE HEADLINE CO-ACTIVATION IS NOT LATERALISED. The paper's own sentence places it in the uninjured side as well as the injured one, which removes axotomy as the sufficient cause of the chronic phase it names in the title.",
+        "snippet": "dramatic co-activation of WOX1 (&gt;65% of cells), CREB",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID19918364_Li2009_PMC.xml",
+        "anchor": "Results, 'Dramatic Co-Activation of WOX1 with Transcription Factor CREB and NF-kB in Small Neurons at Month 2 Post-Injury Correlates with Initiation of Neuronal Death'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "FIGURE ATTESTATION quantifying the sentence above. Supplementary Figure S3 gives the numbers: at month 2 the contralateral uninjured side reaches about 72 percent of small neurons with nuclear p-WOX1 against about 71 percent ipsilateral, and sham animals already sit at 37 percent contralateral and 31 percent ipsilateral. The chronic 'axotomy-induced' accumulation is therefore indistinguishable between the operated and the unoperated ganglion.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Fig. S3, two bar charts 'Contralateral' and 'Ipsilateral', y-axis '% Neurons with nuclear p-WOX1', x-axis Sham, 6 h, 1 d, 7 d, 2 m, black = small neurons and white = medium-large. Contralateral small: ~37, ~36, ~30, ~43, ~72. Ipsilateral small: ~31, ~50, ~41, ~63, ~71.",
+        "surface": "figure",
+        "artifact": "files/figure_renders/PMID19918364/pone.0007820.s003.png",
+        "anchor": "Supplementary Figure S3, rendered from the deposited TIFF at 600 dpi",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[1]",
+        "qualifies_needle": "dramatic co-activation of WOX1"
+      },
+      {
+        "proposition": "FIGURE ATTESTATION. Figure 4, the panel that carries the whole chronic time-course, is a categorical heat map with five ordinal bins and no n, no error and no test anywhere on it. The percentages the Results quote are bin labels from this legend, not measured values with intervals.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 4 is a table-like grid, rows p-WOX1 / c-Jun / p-JNK / ATF3 / p-CREB / NF-kB / Smad4 x Contra and Ipsi x small and med/large, columns 0.5 h, 6 h, 1 d, 3-7 d, 2 m, cells coloured by a five-step key: none 0%, very low <20%, low 20-40%, moderate 40-65%, high >65%; two p-CREB cells marked n.d.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID19918364/native/pone.0007820.g004.jpg",
+        "anchor": "Figure 4, native PMC open-access raster",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "THE DIRECTIONAL CLAIM IS A CELL-LINE REPORTER RESULT, NOT A NEURONAL MEASUREMENT. The promoter assays that supply 'WOX1 inhibits CREB and enhances NF-kB' were run by transient overexpression in a human embryonic kidney line with Gal4-fusion reporters.",
+        "snippet": "EGFP-WOX1 was transiently overexpressed",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID19918364_Li2009_PMC.xml",
+        "anchor": "Figure 5 legend, panels B-D",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "FIGURE ATTESTATION qualifying the sentence above. Figure 5 shows the Gal4 schematic and the reporter bars; no panel of it contains a neuron. The in-neuron work in this paper is binding (FRET in primary DRG cultures, immuno-EM in tissue), never transcriptional output.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 5A Gal4 response-element schematic; 5B 'Control' Gal4-CMV; 5C 'Activated by WOX1' c-Jun and Elk-1; 5D 'Inhibited by WOX1' CREB, CRE, AP-1 as vector-versus-WOX1 pairs; 5E WWOX domain map with fold-activation 4.69 (WOX1), 7.90 (WW domains), 0.02 (SDR), 0.00 (ECFP).",
+        "surface": "figure",
+        "artifact": "files/figures/PMID19918364/native/pone.0007820.g005.jpg",
+        "anchor": "Figure 5, native PMC open-access raster",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[4]",
+        "qualifies_needle": "EGFP-WOX1 was transiently overexpressed"
+      },
+      {
+        "proposition": "The death the title calls a 'delayed loss' is under 5 percent of neurons at the two-month endpoint, and the larger figure the Discussion leans on is another laboratory's, measured at 32 weeks.",
+        "snippet": "Approximately less than 5% neuronal death was observed post axotomy",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID19918364_Li2009_PMC.xml",
+        "anchor": "Results, 'Rapid Upregulation of Wwox Gene Expression in DRG Neurons upon Sciatic Nerve Transection'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Two mechanistic steps of the Discussion - the WOX1/IkBalpha interaction and the nuclear NF-kB consequence - are attributed to unpublished data of the same laboratory and cannot be checked from any source.",
+        "snippet": ", unpublished). This binding may result in accumulation of",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID19918364_Li2009_PMC.xml",
+        "anchor": "Discussion, paragraph on NF-kB transcriptional activation",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "FIGURE ATTESTATION qualifying the death figure. Supplementary Figure S1's TUNEL panel at 60 days is qualitative: two arrowed cells in one ipsilateral field, an inset, and no counting panel anywhere in the figure. The paper's 'less than 5%' is therefore a text assertion with no counted panel behind it, and the Nissl series shows the morphological changes it describes without quantification either.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Fig. S1: Nissl stain columns at 30 mins, 3 days and 60 days for contralateral (a, c, e) and ipsilateral (b, d, f) DRG, with arrows and arrowheads on eccentric nuclei and vacuoles at 3 days; TUNEL stain column at 60 days, panels g (contralateral, no labelled cell) and h (ipsilateral, two arrowed cells) with inset i. No bar chart, no count, no statistic appears in the figure.",
+        "surface": "figure",
+        "artifact": "files/figure_renders/PMID19918364/pone.0007820.s001.png",
+        "anchor": "Supplementary Figure S1, rendered from the deposited TIFF at 400 dpi",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[6]",
+        "qualifies_needle": "Approximately less than 5% neuronal death was observed post axotomy"
+      }
+    ]
+  }
+}

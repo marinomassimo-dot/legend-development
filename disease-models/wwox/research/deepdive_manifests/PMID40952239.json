@@ -1,0 +1,256 @@
+{
+ "schema_version": 2,
+ "pmid": "40952239",
+ "doi": "10.1002/jcp.70092",
+ "receipt": "FTR-20261004-40952239-01",
+ "landing": [
+  "FTR-20261004-40952239-01",
+  "disease-models/wwox/research/fulltext_dossiers/PMID40952239.md",
+  "disease-models/wwox/research/intake_wave_20261004w8_B.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline. The whole WWOX content of this paper is one row of a supplementary spreadsheet and two sentences of Discussion; the reading had to be a provenance audit of that row, not a claim extraction."
+  },
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Europe PMC fullTextXML returned the body on the first request (HTTP 200, 236755 bytes) and supplementaryFiles returned both supplements in one archive."
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "paper_packet.py reported no manifest, no receipt and no registry identity: a first reading."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED but low value here: the propositions are about what the paper does NOT contain, and each is verifiable by a count over the declared artefacts."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 50,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-04: 'Checchetto V[au]' 50; 'Checchetto V[au] AND WWOX' 0.",
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "An ion-channel laboratory with zero WWOX publications. WWOX is not a subject of this paper; it is one name among 283 in a proteomic output, annotated in a supplementary table and mentioned twice in the Discussion. The group's competence is in channel biology and the proteomics was done at a core facility; neither bears on WWOX specifically."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "occurrences of the string WWOX in the persisted JATS body",
+    "route": "local count over files/fulltext/PMID40952239_Carpanese2025_PMC.xml",
+    "count": 5
+   },
+   {
+    "query": "occurrences of the gene symbol in the supplementary protein table",
+    "route": "local parse of the sharedStrings of files/supplement/PMID40952239/JCP-240-0-s001.xlsx",
+    "count": 1
+   }
+  ],
+  "note": "Minimum density. Five occurrences: one Discussion sentence listing WWOX among altered tumour suppressors, one Discussion sentence about pancreatic cancer, and the bibliography entry behind it. The gene symbol occurs exactly once in the data, as the row 'Wwox' in the supplementary list of 283 identified proteins."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 109,
+  "gene_direct_refs_in_source": [
+   "36572673"
+  ],
+  "enumeration_method": "All 109 references parsed from the persisted JATS; 110 PMID tokens are present (one reference carries two). Gene-directedness was classified by the reference text containing WWOX or Wwox: exactly one.",
+  "resolved": [
+   "36572673"
+  ],
+  "queued": [],
+  "note": "The single gene-direct reference already carries a receipted reading in this corpus, so the hop is closed and nothing is queued. No gap."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does the shared root files/ tree already hold any artefact for PMID 40952239?",
+  "hits": 0,
+  "finding": "No. paper_packet.py reported 0 artefacts before acquisition. The three artefacts declared below were fetched and persisted by this reading."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-04",
+  "route": "PubMed esummary for 40952239",
+  "result": "pubtype ['Journal Article', \"Research Support, Non-U.S. Gov't\"]; the CommentsCorrections reference list is empty. No retraction, no expression of concern, no erratum.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 109,
+   "references_screened": 107,
+   "references_with_doi": 107,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 24,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   },
+   "citing_relation": "No dependency was flagged, so no citing_relation is owed. The references with no DOI support no statement this reading carries."
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID40952239_Carpanese2025_PMC.xml",
+   "sha256": "ceee726d1e0369d9139fcd60c6b4d250964131bd5d870074d3bda45857266060",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12435150/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_rest_fulltextxml",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-04",
+    "derived": false,
+    "result_sha256": "ceee726d1e0369d9139fcd60c6b4d250964131bd5d870074d3bda45857266060"
+   }
+  },
+  {
+   "path": "files/supplement/PMID40952239/JCP-240-0-s001.xlsx",
+   "sha256": "e60b4249affd511ee8e77de13b4fe976dcf819c670424997e9e76f239a3a76f2",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12435150/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "europepmc_rest_supplementaryfiles_zip",
+    "user_agent_policy": "browser_like",
+    "acquired_on": "2026-10-04",
+    "derived": false,
+    "result_sha256": "e60b4249affd511ee8e77de13b4fe976dcf819c670424997e9e76f239a3a76f2",
+    "note": "One HTTP 200 zip of 5035347 bytes; this member extracted with the python standard-library zipfile and persisted verbatim. Read cell-wise by parsing xl/sharedStrings.xml and xl/worksheets/sheet1.xml, never as flattened text."
+   }
+  },
+  {
+   "path": "files/supplement/PMID40952239/JCP-240-0-s002.pdf",
+   "sha256": "0c1afa38153aae55d14c921f0c34b4633062de33849caf49d1b25d55ca488154",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12435150/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "europepmc_rest_supplementaryfiles_zip",
+    "user_agent_policy": "browser_like",
+    "acquired_on": "2026-10-04",
+    "derived": false,
+    "result_sha256": "0c1afa38153aae55d14c921f0c34b4633062de33849caf49d1b25d55ca488154"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC JATS body held locally and fingerprinted; both supplements retrieved from the Europe PMC supplementaryFiles archive and fingerprinted. The spreadsheet was read cell-wise from its XML parts rather than as flattened text, so no adjacent-cell concatenation can have occurred.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; the abstract does not mention WWOX. Every entry is a Methods specification, a counted property of the declared artefacts, or a Discussion sentence.",
+  "entries": [
+   {
+    "proposition": "The system is murine throughout and the channel is overexpressed from a lentiviral inducible construct: the proxisome is a mouse pancreatic tumour cell's, not a human one's, and not an endogenous channel's.",
+    "snippet": "KPCY murine Pancreatic Ductal Adenocarcinoma (PDAC) cells (kindly gifted by A. Carrer), HEKT, and HEK293 were cultured in DMEM",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40952239_Carpanese2025_PMC.xml",
+    "anchor": "Materials and Methods, 'Cell Culture'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The database searched is the mouse proteome, which fixes the identification as murine Wwox and not human WWOX.",
+    "snippet": "searched against a UniProt Mus musculus proteome database (UP000000589) containing common contaminants and reversed sequences",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40952239_Carpanese2025_PMC.xml",
+    "anchor": "Materials and Methods, 'MS Data Analysis—IsobarQuant'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The hit criterion for the whole interactome — the only statistical statement that stands behind the WWOX row.",
+    "snippet": "A protein was annotated as a hit with an FDR smaller than 5% and a fold change of at least 100% (1.5‑fold change).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40952239_Carpanese2025_PMC.xml",
+    "anchor": "Materials and Methods, 'Mass Spectrometry Data Analysis'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The control is a free biotin ligase, not a membrane-targeted one — so a protein can be enriched over control for being near the membrane rather than near this channel.",
+    "snippet": "KPCY cells expressing the fusion protein KCa3.1‑FLAG‑TurboID and FLAG‑TurboID (cell line used as control in TurboID experiments)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40952239_Carpanese2025_PMC.xml",
+    "anchor": "Materials and Methods, 'Biotinylation Analysis and Western Blot Analysis'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The size of the interactome, which fixes WWOX's share of the evidence at one of 283.",
+    "snippet": "Overall, we identified 283 KCa3.1‑specific interactor proteins, providing valuable insights into the KCa3.1 interactome and its potential functional network",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40952239_Carpanese2025_PMC.xml",
+    "anchor": "Results, 'Proteomic Analysis: Analysis of the Proximal Protein Environment of KCa3.1'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The supplementary table that carries WWOX is an annotation list with no quantitative column: a header row plus 283 protein rows across exactly four columns, none of which is a fold change, a p value, an FDR or a peptide count.",
+    "snippet": "[spreadsheet attestation — read cell-wise from the workbook XML] sheet1 dimension A1:D284; row 1 cells A-D carry 'Protein', 'Protein Name', 'Subcellular Localization', 'Function / Notes'; 284 rows in total. One row reads 'Wwox' / 'WW domain-containing oxidoreductase' / 'Tumor suppressor; apoptosis and steroid metabolism'. No numeric cell exists anywhere in the sheet.",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID40952239/JCP-240-0-s001.xlsx",
+    "anchor": "Table 1, 'Comprehensive list of proteins identified through the BioID analysis', sheet1",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The entire WWOX content of the article body: a clause inside a list of tumour suppressors, with the causal verb attached to the channel, not to any measurement made here.",
+    "snippet": "The presence of other observed KCa3.1 interactions, such as altered tumor suppressor proteins, including APC, SCRIB, WWOX, PTPN13, and PTPN14, underscores how changes in KCa3.1 expression may trigger the loss of key regulatory mechanisms that normally control cell proliferation, adhesion, and polarity.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40952239_Carpanese2025_PMC.xml",
+    "anchor": "Discussion, 'Cancer‑Relevant KCa3.1 Interactors'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The second and last WWOX sentence is a citation of someone else's pancreatic-cancer result, not a result of this paper.",
+    "snippet": "Loss of tumor suppressor WWOX accelerates pancreatic cancer development through promotion of TGFβ/BMP2 signaling (Husanie et al. 2022).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40952239_Carpanese2025_PMC.xml",
+    "anchor": "Discussion, 'Cancer‑Relevant KCa3.1 Interactors'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Only two of the 283 candidates were validated biochemically, and WWOX was not among them.",
+    "snippet": "STIM1, located in the endoplasmic reticulum was one of the unexpected hits in our BioID analysis, although the IP samples were therefore evaluated using anti‑STIM1 antibody, revealing a strong interaction between the two proteins only in the channel‑expressing cells (Figure 4B).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40952239_Carpanese2025_PMC.xml",
+    "anchor": "Results, 'Biochemical Validation of Some KCa3.1 Interactors Identified by BioID'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The paper measures its own false-positive rate without naming it: five further candidates taken to co-immunoprecipitation failed to confirm, so five of the seven candidates tested in this paper did not reproduce.",
+    "snippet": "we performed correlation analyses (Supporting Information S1: Figure S6B) and Co‑IP for SUCLA2, IARS2, SFXN3, STOM and FKBP8 but could not reveal strong interactions",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40952239_Carpanese2025_PMC.xml",
+    "anchor": "Results, 'Biochemical Validation of Some KCa3.1 Interactors Identified by BioID'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A co-immunoprecipitation in this paper also failed for a protein with strong prior expectation, which is the paper's own demonstration that proxisome membership does not imply a recoverable complex.",
+    "snippet": "However, under our experimental conditions, Co‑IP did not reveal interaction of KCa3.1 with Orai1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40952239_Carpanese2025_PMC.xml",
+    "anchor": "Results, 'Biochemical Validation of Some KCa3.1 Interactors Identified by BioID'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A generative language model was used on the manuscript text — declared by the authors, and relevant because the only WWOX content in the body is prose, not data.",
+    "snippet": "A generative artificial intelligence tool was used for language editing and stylistic improvements of the manuscript, without influencing the scientific content or methodology.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40952239_Carpanese2025_PMC.xml",
+    "anchor": "Materials and Methods, 'Artificial Intelligence Tool'",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}

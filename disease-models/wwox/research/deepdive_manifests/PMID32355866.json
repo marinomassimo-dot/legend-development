@@ -1,0 +1,299 @@
+{
+ "schema_version": 2,
+ "pmid": "32355866",
+ "doi": "10.1016/j.omtm.2020.04.001",
+ "receipt": "FTR-20261004-32355866-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID32355866.md",
+  "disease-models/wwox/research/intake_wave_20261004w9_B.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W9-B-REGISTRY-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261004W9-B-HORDEAUX-ATTRIBUTION-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is a research surface another batch owns; any lead this reading touches is proposed through a commit candidate instead of an edit."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever for the reference genotype class is supplied by this source; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No candidate molecule is proposed for the reference genotype class; the compounds in the source are tested in cells or animals for other purposes."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes are proposed as commit candidates for a later BATCH_COMMIT."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The triples are published in the candidates for an auditor to run; no consolidated baseline claim is narrowed here."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 58,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "PubMed counts 2026-10-04: Colle MA[au] 58 records, 0 intersecting WWOX. First author is Bey (Nantes/Oniris, Moullier/Colle group); Hordeaux J is a mid-list co-author, not first author: the wave-9 selection label 'Hordeaux 2020' for this PMID is wrong."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "AAV AND dorsal root ganglia AND toxicity AND nonhuman primate",
+    "count": 22,
+    "source": "PubMed ESearch 2026-10-04"
+   },
+   {
+    "query": "intrathecal AAV AND dorsal root ganglia AND WWOX",
+    "count": 0,
+    "source": "PubMed ESearch 2026-10-04"
+   }
+  ],
+  "note": "No PubMed record joins intrathecal AAV, DRG and WWOX."
+ },
+ "multihop": {
+  "references_enumerated": 51,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "All 51 references enumerated from the JATS reference list; none names WWOX. The DRG-safety references cited in the DRG paragraph (systemic and cisterna magna AAV9 in NHP; lumbar puncture in mice) are other studies and are not part of this reading."
+ },
+ "corpus_crossquery": {
+  "query": "Does any registry record name this paper? (registry_records.py get --pmid 32355866)",
+  "hits": 0,
+  "note": "No registry record exists for this PMID. The wave-8 DRG reference chain names a Hordeaux 2020 paper; this PMID is Bey 2020."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-04 by PubMed EFetch for PMID 32355866: no RetractionIn, ErratumIn, ExpressionOfConcernIn or UpdateIn link.",
+  "dependencies": {
+   "flagged": [
+    {
+     "citing_relation": "citation only: reference 3 (a 2010 spinal muscular atrophy rescue paper, retracted in 2022) is cited in the Introduction as one of two references for AAV9 outcomes in animal models; no datum, method or reagent of this paper depends on it.",
+     "doi": "10.1038/nbt.1610",
+     "nature": "Retraction",
+     "reason_verbatim": "Error in Data;Unreliable Results and/or Conclusions;",
+     "retraction_date": "10/6/2022 0:00",
+     "retraction_pmid": "36203015",
+     "verdict": "FLAGGED_RETRACTION"
+    }
+   ],
+   "noted": [],
+   "paper_verdict": "FLAGGED_RETRACTION",
+   "reference_source": "cache",
+   "references_declared": 51,
+   "references_screened": 51,
+   "references_with_doi": 51,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 24,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID32355866_Bey2020_PMC.xml",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7184633/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "c67b93339cb5feecea9aaee49a8e75fec09629a82d417caf1e2b5f8cc3de5407"
+   },
+   "sha256": "c67b93339cb5feecea9aaee49a8e75fec09629a82d417caf1e2b5f8cc3de5407"
+  },
+  {
+   "path": "files/fulltext/PMID32355866_Bey2020_supplement/mmc3.pdf",
+   "kind": "article_binary",
+   "note": "Author-manuscript style PDF of the article as served by PMC (instance bin mmc3.pdf); read only to confirm the author list (first author Bey; Hordeaux J mid-list).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/7184633/bin/mmc3.pdf",
+    "http_method": "GET",
+    "tier": "PMC instance bin via pmc_pow_fetch.fetch (proof-of-work page solved)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "15960c10f04e7b112bd1d524aeaa3d020c4072e69f0296de57bc94ca71d713bb"
+   },
+   "sha256": "15960c10f04e7b112bd1d524aeaa3d020c4072e69f0296de57bc94ca71d713bb"
+  },
+  {
+   "path": "files/fulltext/PMID32355866_Bey2020_supplement/mmc1.pdf",
+   "kind": "supplement_binary",
+   "note": "Supplemental Information (13 pages): Figures S1-S8 and legends, including Figure S5 (DRG haematoxylin-eosin-saffron histology of cervical, thoracic and lumbar DRG).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/7184633/bin/mmc1.pdf",
+    "http_method": "GET",
+    "tier": "PMC instance bin via pmc_pow_fetch.fetch (proof-of-work page solved)",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-04",
+    "result_sha256": "9dd1ac44afe9c648b06235c69e415a75d8ebd5be972e2f656cb8a12b5849984f"
+   },
+   "sha256": "9dd1ac44afe9c648b06235c69e415a75d8ebd5be972e2f656cb8a12b5849984f"
+  },
+  {
+   "path": "files/fulltext/PMID32355866_Bey2020_supplement/mmc1.txt",
+   "kind": "supplement_text",
+   "note": "pdftotext -layout -nopgbrk text layer of mmc1.pdf (line-numbered manuscript layout; line numbers precede each legend line).",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID32355866_Bey2020_supplement/mmc1.pdf",
+    "extractor": {
+     "name": "pdftotext",
+     "version": "24.02.0",
+     "call": "pdftotext -layout -nopgbrk mmc1.pdf mmc1.txt",
+     "join": "\n"
+    },
+    "acquired_on": "2026-10-04"
+   },
+   "sha256": "44e757003451891ee6907227e031b8ec2109c5536d1fa38b26dbaeab96360a9a"
+  },
+  {
+   "path": "files/fulltext/PMID32355866_Bey2020_supplement/mmc1_p-09.png",
+   "kind": "figure",
+   "note": "Figure S5 page (PDF page 9) rendered at 80 dpi (pdftoppm) and inspected: six representative H&E panels (Mac 1 thoracic, Mac 2 lumbar, Mac 3 cervical and lumbar, Mac 4 lumbar DRG with arrows; Mac 6 lumbar with arrowheads). No scoring grid or count is on the page.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID32355866_Bey2020_supplement/mmc1.pdf",
+    "extractor": {
+     "name": "pdftoppm",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 80 -f 9 -l 9 -png mmc1.pdf mmc1_p",
+     "join": "\n"
+    },
+    "acquired_on": "2026-10-04"
+   },
+   "sha256": "16c350685c265b0fed3ab59dc1b1bf0c0692550b4fefad41ea275d31e7d30bc7"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Eight male cynomolgus macaques only: six by lumbar intrathecal catheter (LIT-KT), two by intracerebroventricular (ICV) injection; animals with neutralising titres of 1/50 or more were not used.",
+    "snippet": "We selected primates that had no detectable or low titers (<1/50) of neutralizing factors against AAV serotypes 9 and 10 in the serum.",
+    "anchor": "Materials and Methods, Animals",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32355866_Bey2020_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Capsid and cargo: self-complementary AAV9 or AAVrh10 carrying GFP under a CBA-miR142-target promoter, CsCl-purified.",
+    "snippet": "The AAV2 plasmids contain the gene encoding the GFP under the control of a ubiquitous hybrid of the CBA and 4 repeated sequences of miR142.",
+    "anchor": "Materials and Methods, AAV Vectors",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32355866_Bey2020_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "ICV dose: 4.5E+12 vg per animal in 0.5 mL; euthanasia three weeks after dosing.",
+    "snippet": "leading to a dose of 4.5E+12 vg for each AAV9-CBA-GFP ICV-injected NHP (Table 1). 3 weeks after dosing, the animals were euthanized",
+    "anchor": "Results, AAV9 achieved strong MNs and consistent brain transduction, para 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32355866_Bey2020_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "LIT-KT dose was 2.5E+13 vg per animal, which the authors call an inferior dose compared with an earlier study.",
+    "snippet": "An inferior dose (2.5E+13 vg per NHP) was injected by LIT-KT administration in the present study.",
+    "anchor": "Discussion, para on dose",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32355866_Bey2020_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Immunosuppression: sirolimus, prednisolone and mycophenolate mofetil, daily; the Methods give no start day relative to dosing in the sentence.",
+    "snippet": "The injected animals were immunosuppressed with sirolimus 2 mg/kg/day (Rapamune), prednisolone 1 to 2 mg/kg/day (Dermipred), and mycophenolate mofetil 40 mg/kg/day (CellCept)",
+    "anchor": "Materials and Methods, In Vivo AAV Injections",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32355866_Bey2020_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DRG transduction: GFP in the soma of large-diameter neurons and in fibres, mostly cervical and lumbar after LIT-KT and thoracic and lumbar after ICV.",
+    "snippet": "We found robust GFP expression in the soma of large-diameter neurons, mainly, and in fibers within all transduced DRG",
+    "anchor": "Results, AAVrh10 serotype and DRG, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32355866_Bey2020_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Substance P staining showed no co-localisation with GFP in cervical and lumbar DRG for either capsid.",
+    "snippet": "SP immunostaining did not reveal any colocalization with GFP in the cervical and lumbar DRG for either AAV serotype",
+    "anchor": "Results, DRG, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32355866_Bey2020_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DRG histopathology: multifocal mild mononuclear infiltration in thoracic and lumbar DRG of two AAVrh10 animals.",
+    "snippet": "Subsequent histopathological examination revealed multifocal mild mononuclear cell infiltration in thoracic and lumbar DRG for LIT-KT AAVrh10-injected Mac 1 and Mac 2 animals, respectively (Figure S5).",
+    "anchor": "Results, DRG, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32355866_Bey2020_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DRG histopathology: moderate infiltration in cervical and lumbar DRG of one AAV9 animal.",
+    "snippet": "Moderate mononuclear cell infiltration was observed in cervical and lumbar DRG for Mac 3 animals (Figure S5).",
+    "anchor": "Results, DRG, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32355866_Bey2020_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DRG fibres of three AAV9 animals showed infiltration and myelin digestion chambers.",
+    "snippet": "we also found mononuclear cell infiltration and digestion chambers that lead to myelin degradation (Figure S5)",
+    "anchor": "Results, DRG, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32355866_Bey2020_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The brain histopathology reported no lesions.",
+    "snippet": "Histopathological examination of the brain did not reveal any lesions.",
+    "anchor": "Results, DRG, para 1 end",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32355866_Bey2020_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure S5 legend: representative lesions only (no scoring).",
+    "snippet": "Haematoxylin, eosine and saffron staining were performed in cervical, thoracic and lumbar DRGs of all NHPs",
+    "anchor": "Supplemental Information, Figure S5 legend, line 38",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID32355866_Bey2020_supplement/mmc1.txt",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC7184633/fullTextXML returned HTTP 200 with a full JATS body on 2026-10-04; the artefact declared is that response."
+ }
+}

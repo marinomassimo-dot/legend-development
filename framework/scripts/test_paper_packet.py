@@ -307,6 +307,31 @@ def _needs_page_crops(case: unittest.TestCase, pmid: str) -> None:
         case.skipTest(f"gitignored page-adjudication crops absent: {folder.relative_to(ROOT)}/*.png")
 
 
+def _needs_unacquired_paper(case: unittest.TestCase, pmid: str) -> None:
+    """Skip when the "nothing acquired at all" premise has died because the paper was read.
+
+    🔴 Three assertions below describe what the selector says about a paper with no manifest and
+    no artefact, and they name a LIVE PMID to say it. That premise is not a property of the code:
+    it is a property of what the laboratory has not got round to reading yet, and reading the
+    paper is the point of the laboratory. On 2026-10-03 intake wave 4 acquired and read
+    `PMID 33914858` — the fixture below — and three green tests went red on a repository that had
+    done exactly what it exists to do, reporting a completed reading as a code defect.
+
+    So the premise is checked rather than assumed, and a dead one skips with the reason named.
+    The assertions are not weakened: they still run against any fixture that is genuinely
+    unacquired. When this skips, the repair is to re-point the fixture at a paper that still has
+    nothing — not to delete the reading.
+    """
+    manifest = ROOT / f"disease-models/wwox/research/deepdive_manifests/PMID{pmid}.json"
+    corpus = ROOT / "files" / "fulltext"
+    acquired = [p.name for p in corpus.iterdir() if pmid in p.name] if corpus.is_dir() else []
+    if manifest.is_file() or acquired:
+        why = "a deep-dive manifest" if manifest.is_file() else f"{acquired[0]} on disk"
+        case.skipTest(
+            f"the 'nothing acquired' fixture PMID {pmid} has since been read ({why}); "
+            f"re-point the fixture at a paper that still has nothing")
+
+
 class TheProceduresFollowTheFacts(unittest.TestCase):
     """Trigger present, trigger absent with sufficient data, data missing — kept apart."""
 
@@ -321,6 +346,7 @@ class TheProceduresFollowTheFacts(unittest.TestCase):
         self.assertEqual(_states(ERRATUM_PMID)["page_adjudication"]["state"], pp.NOT_NEEDED)
 
     def test_nothing_on_disk_opens_acquisition_and_leaves_the_rest_to_ascertain(self) -> None:
+        _needs_unacquired_paper(self, ABSENT_PMID)
         rows = _states(ABSENT_PMID)
         self.assertEqual(rows["acquisition"]["state"], pp.OPEN)
         self.assertTrue(any("find-fulltext" in f for f in rows["acquisition"]["files"]))
@@ -374,6 +400,7 @@ class TheProceduresFollowTheFacts(unittest.TestCase):
 
     def test_a_clean_retraction_check_is_not_needed_and_an_absent_one_is_unknown(self) -> None:
         self.assertEqual(_states(PDF_ONLY_PMID)["integrity_notice"]["state"], pp.NOT_NEEDED)
+        _needs_unacquired_paper(self, ABSENT_PMID)
         self.assertEqual(_states(ABSENT_PMID)["integrity_notice"]["state"], pp.TO_ASCERTAIN)
 
     def test_multiple_conditions_open_together(self) -> None:
@@ -650,6 +677,7 @@ class TheSurfaceInventory(unittest.TestCase):
         self.assertNotIn("no recipe", joined)
 
     def test_no_surface_at_all_is_not_reported_as_everything_being_fine(self) -> None:
+        _needs_unacquired_paper(self, NO_SURFACE_PMID)
         report = pp.surfaces(ROOT, "wwox", NO_SURFACE_PMID)
         self.assertEqual([], report["surfaces"])
         rendered = pp.render_surfaces(report)

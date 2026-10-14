@@ -1,0 +1,175 @@
+{
+  "schema_version": 2,
+  "pmid": "42558002",
+  "doi": "10.1002/jnr.70148",
+  "receipt": "FTR-20261004-42558002-01",
+  "context_policy": "SOURCE_FIRST",
+  "landing": [
+    "disease-models/wwox/research/fulltext_dossiers/PMID42558002.md",
+    "disease-models/wwox/research/intake_wave_20261004w7_A.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261004W7-A-ASTROCYTE-01.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261004W7-A-REGISTRY-01.md"
+  ],
+  "skills_considered": [
+    {"skill": "find-fulltext", "used": true},
+    {"skill": "legend-study-intake-triage", "used": true},
+    {"skill": "legend-deepdive", "used": true},
+    {"skill": "legend-discovery", "used": false, "reason": "A narrative review carries no new measurement to mine; its consequences are proposed as commit candidates."},
+    {"skill": "legend-hypothesis-forge", "used": false, "reason": "Every WWOX row here re-describes a primary LEGEND already holds."},
+    {"skill": "legend-safety-triage", "used": false, "reason": "No compound is tested against a WWOX readout."},
+    {"skill": "legend-commit", "used": false, "reason": "Scientists do not touch the four current files."},
+    {"skill": "legend-locator-audit", "used": false, "reason": "A reader cannot audit their own locators."}
+  ],
+  "group_assessment": {
+    "total_publications": 1,
+    "publications_on_gene": 0,
+    "research_type": "adjacent_method_expert",
+    "is_primary_group_for_disease": false,
+    "weighting": "UCL/Oxford genetic-epilepsy and astrocyte groups (UK DRI, GOSH ICH). Credible on astrocyte biology in genetic epilepsies; they publish no WWOX primary, so every WWOX sentence here is a re-description of someone else's measurement."
+  },
+  "field_density": {
+    "queries": [
+      {"query": "registry_records.py get --pmid 42558002 (LEGEND)", "count": 0, "source": "LEGEND registries 2026-10-04"},
+      {"query": "fulltext_receipts.py status --pmid 42558002", "count": 0, "source": "receipt ledger 2026-10-04"}
+    ],
+    "note": "LEGEND holds no record of this review. It holds the three WWOX primaries the review re-describes."
+  },
+  "multihop": {
+    "references_enumerated": 269,
+    "gene_direct_refs_in_source": ["30290271", "36828035", "34268881", "33914858"],
+    "resolved": [
+      {"pmid": "34268881", "how": "Steinberg 2021 is held in the corpus as files/fulltext/PMID34268881_Steinberg2021_PMC.xml and was opened here to check the review's two sentences about it; LEGEND holds prior readings of it."},
+      {"pmid": "33914858", "how": "Repudi 2021 is held as files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.txt with a LEGEND reading note (intake_wave_20261003R_33914858.md); its Figure 9 legend was checked here against the review's sentence."}
+    ],
+    "queued": [
+      {"queue": "CC-20261004W7-A-REGISTRY-01", "why": "Hussain 2019 (PMID 30290271) and Hussain 2023 (PMID 36828035) are the two primaries behind the review's neuroinflammation rows; neither is read in this wave, and this reading's conclusions are about what the review says about them, not about their own data."}
+    ],
+    "disposition": "Four gene-direct references; two resolved against artefacts held locally, two queued with a reason."
+  },
+  "corpus_crossquery": {
+    "query": "registry_records.py get --pmid 42558002; themes astrocyte / neuroinflammation after the first pass",
+    "hits": 0,
+    "note": "No registry record names this review."
+  },
+  "retraction_check": {
+    "checked": true,
+    "result": "Checked 2026-10-04 via PubMed metadata (get_article_metadata): publication types ['Journal Article', 'Review']; no retraction, expression of concern or correction listed for PMID 42558002.",
+    "dependencies": {
+      "flagged": [],
+      "noted": [],
+      "paper_verdict": "SCREENED_CLEAN",
+      "reference_source": "network",
+      "references_declared": 269,
+      "references_screened": 262,
+      "references_with_doi": 262,
+      "schema": "retraction_check.dependencies/1",
+      "screened": true,
+      "snapshot": {"date": "2026-09-10", "days_since_fetch": 24, "rows": 72476, "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"},
+      "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+      "unscreenable": {"UNSCREENABLE_NO_DOI": 7}
+    }
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID42558002_Lange2026_PMC.xml",
+      "sha256": "ef25c853b2d6361488279370ca0de9b95b3ca361b30cb393bb008afd8dabcab4",
+      "kind": "article_text",
+      "acquisition_recipe": {
+        "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13444675/fullTextXML",
+        "http_method": "GET",
+        "tier": "Europe PMC REST fullTextXML",
+        "user_agent_policy": "none",
+        "acquired_on": "2026-10-04",
+        "derived": false,
+        "result_sha256": "ef25c853b2d6361488279370ca0de9b95b3ca361b30cb393bb008afd8dabcab4"
+      }
+    }
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC REST PMC13444675/fullTextXML on 2026-10-04 returned HTTP 200 with a <body> of 402,756 bytes; the review is indexed in Europe PMC and PMC (PMC13444675), so every locator below is anchored in the body or in Table 1, never in the abstract.",
+    "entries": [
+      {
+        "proposition": "The review's own inclusion rule is that astrocyte function was investigated in a model carrying a known pathogenic variant; it is a narrative review and reports no new measurement.",
+        "snippet": "Research papers were included on the basis that astrocyte function was investigated in models carrying known pathogenic variants.",
+        "anchor": "Introduction, scope paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42558002_Lange2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The narrative says of the constitutive Wwox null only that no seizure activity was reported — an absence of reporting, not a measured absence.",
+        "snippet": "Wwox−/− mice showed evidence of astrogliosis and upregulation of cytokines TNF‐a and IL‐6 (Hussain et al.",
+        "anchor": "Results, WWOX-related DEE paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42558002_Lange2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Table 1 turns that absence of reporting into a positive table value: the seizure-phenotype cell for the constitutive null reads 'No seizures'.",
+        "snippet": "Evidence of astrogliosis upregulation of cytokines TNF‐a and IL‐6 Unclear No seizures Wwox−/− mice 2 weeks old",
+        "anchor": "Table 1, Hussain et al. (2019) row (re-extracted cell-wise)",
+        "surface": "table",
+        "artifact": "files/fulltext/PMID42558002_Lange2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The review describes the organoid primary as iPSCs edited to carry a patient variant; the primary's own abstract says CRISPR-engineered human ES cells for the knockout and separately patient-derived iPSCs.",
+        "snippet": "Steinberg et al. (2021) generated 3D brain spheroids from induced pluripotent stem cells edited to carry a patient variant.",
+        "anchor": "Results, WWOX-related DEE paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42558002_Lange2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Table 1's model cell for that row does carry both lines and the patient allele, so the error is in the narrative sentence, not in the table.",
+        "snippet": "Human iPSC‐derived organoids WWOX Ko and patient derived (c.517‐2A>G splice site mutation) 7 weeks",
+        "anchor": "Table 1, Steinberg et al. (2021) row (re-extracted cell-wise)",
+        "surface": "table",
+        "artifact": "files/fulltext/PMID42558002_Lange2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The review attributes a four-marker week-24 expression result to the organoid primary.",
+        "snippet": "gene expression of S100b, GFAP, AQP4, and ALDH1A1 was significantly upregulated by week 24 in mutant cerebral spheroids",
+        "anchor": "Results, WWOX-related DEE paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42558002_Lange2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The P47T row is attributed to Hussain 2023, not to the organoid paper, and the review marks its own seizure-onset timing as unclear because the primary does not report it.",
+        "snippet": "Astrocyte reactivity, upregulation of pro‐inflammatory pathways Unclear, as age of seizure onset not reported",
+        "anchor": "Table 1, Hussain et al. (2023) row (re-extracted cell-wise)",
+        "surface": "table",
+        "artifact": "files/fulltext/PMID42558002_Lange2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The only cell-autonomy datum the review carries for WWOX is a negative on three gross organismal measures in the astrocyte conditional knockout.",
+        "snippet": "Whilst Repudi et al. (2021) found WWOX to be expressed in astrocytes, they did not observe developmental delay, weight loss, or postnatal lethality in mice where WWOX was conditionally knocked out in astrocytes.",
+        "anchor": "Results, WWOX-related DEE paragraph",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42558002_Lange2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "From that negative plus GFAP upregulation in the neuronal knockout the review draws a directional causal conclusion for WWOX.",
+        "snippet": "indicating that changes in astrocyte phenotypes occur as a result of neuronal dysfunction and seizure activity",
+        "anchor": "Results, WWOX-related DEE paragraph, final clause",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42558002_Lange2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The review's own conclusion states that the relative contribution of astrocytes is hard to establish in these interdependent networks, which is weaker than the directional sentence it wrote for WWOX.",
+        "snippet": "Due to the complex and interdependent networks between glial cells and neurons, it can be difficult to establish the relative contribution of astrocytes.",
+        "anchor": "Conclusion",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42558002_Lange2026_PMC.xml",
+        "panel_text_relation": "text_only"
+      }
+    ]
+  }
+}

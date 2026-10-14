@@ -153,6 +153,7 @@ Run everything as `python3 <path> --help` first. Paths are repo-relative.
 | when the shared checkout moved, and when it deliberately did not | `framework/scripts/sync_epochs.py` |
 | classify, hand off, resume or sync a laboratory across hosts | `framework/scripts/legend_handoff.py` |
 | what harness work is due at session start | `framework/scripts/harness_session_start.py` |
+| may an assigned mandate's turn end — the verdict of its `AUTHORISED_QUEUE` record, and the bounded Claude Code Stop hook that holds a bound session to it | `framework/scripts/mandate_continuity.py` |
 | the packet that lets a phase start in a new context, derived from artefacts and verified | `framework/scripts/phase_handoff.py` |
 | task display fields derived from every structured queue — never a runtime release decision | `framework/scripts/task_summary.py` |
 | a commit subject that names the surface touched, never the conclusion reached (convention S.6.7) | `framework/scripts/commit_subject.py` |

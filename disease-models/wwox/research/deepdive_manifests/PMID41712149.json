@@ -1,0 +1,232 @@
+{
+ "schema_version": 2,
+ "pmid": "41712149",
+ "doi": "10.1007/s40263-026-01276-x",
+ "receipt": "FTR-20261003-41712149-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID41712149.md",
+  "disease-models/wwox/research/intake_wave_20261003w5_A.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W5-A-REGISTRY-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W5-A-CARGO-CASSETTE-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W5-A-TRANSGENE-IMMUNITY-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W5-A-WINDOW-STATUS-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W5-A-DOSE-TWO-SIDED-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is a research surface owned by other batches; every transferable lesson here is proposed as a commit candidate instead of written into the ledger."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "A gene-replacement lesson from another gene is not a WWOX therapeutic hypothesis; forging one would convert a stated transfer limit into a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No small molecule with a SMILES is proposed, so the BLOCK-1 ADMET gate has nothing to triage."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The triples are published for a blind auditor; a reader cannot audit their own locators."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "No author-level PubMed census was run for this reading: the paper is about another gene entirely and contributes only transferable method, so group standing on WWOX is not the weighting that matters. What was recorded instead is declared competing interest, read from the paper itself and carried in the dossier.",
+  "external_provenance": {
+   "source": "not applicable — no external author census performed",
+   "date": "2026-10-03"
+  }
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND gene therapy",
+    "count": 75,
+    "source": "PubMed ESearch rettype=count 2026-10-03"
+   },
+   {
+    "query": "WWOX AND gene replacement",
+    "count": 2,
+    "source": "PubMed ESearch rettype=count 2026-10-03"
+   },
+   {
+    "query": "WWOX AND neurofilament",
+    "count": 1,
+    "source": "PubMed ESearch rettype=count 2026-10-03"
+   }
+  ]
+ },
+ "multihop": {
+  "references_enumerated": 0,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference lists were not enumerated in this pass and no multi-hop expansion was performed; the coverage key 'references' is declared not_read for that reason."
+ },
+ "corpus_crossquery": {
+  "query": "paper_packet.py packet --pmid 41712149 (run BEFORE the first pass, technical state only)",
+  "hits": 0,
+  "note": "NO RECORD MATCHED on any registry surface (paper_packet.py packet --pmid, 2026-10-03): first reading, no prior receipt. The review does not mention WWOX."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-03 via NCBI E-utilities efetch (db=pubmed, retmode=xml): the publication types carry no retraction, expression of concern or correction notice, and no CommentsCorrections element of any RefType is present for this PMID.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 89,
+   "references_screened": 83,
+   "references_with_doi": 83,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 6
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41712149_Balestrini2026_PMC.xml",
+   "sha256": "2fe8777e950cf88a451326c991d27e4ffbe6109b1a639ba49ffc41d1b341774c",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12989007/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "identified",
+    "acquired_on": "2026-10-03",
+    "result_sha256": "2fe8777e950cf88a451326c991d27e4ffbe6109b1a639ba49ffc41d1b341774c"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The coding sequence of this gene exceeds what one vector can carry, which forced a two-vector architecture.",
+    "snippet": "genome size constraints (~4.7 kb), which preclude packaging the full human ",
+    "anchor": "Gene-based therapies, preclinical gene replacement",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41712149_Balestrini2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The two-vector split-intein approach worked in two disease models.",
+    "snippet": "employing a dual-vector delivery approach",
+    "anchor": "Gene-based therapies, preclinical gene replacement",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41712149_Balestrini2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Restoring the gene in adulthood, after months of seizures, still rescued the phenotype.",
+    "snippet": "reactivation at P90 (adulthood) also restored physiological Na",
+    "anchor": "Gene-regulation strategies",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41712149_Balestrini2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Restoring the gene after symptoms had appeared gave complete rescue of both seizure types.",
+    "snippet": "led to complete rescue of both spontaneous and thermally induced seizures",
+    "anchor": "Gene-regulation strategies",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41712149_Balestrini2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The upregulation strategies act on the intact endogenous allele rather than replacing the gene.",
+    "snippet": "Gene-regulation strategies aim to augment expression of the intact wild type endogenous ",
+    "anchor": "Gene-regulation strategies",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41712149_Balestrini2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Most patients retain one functional allele.",
+    "snippet": "with over 95% of patients carrying de novo pathogenic variants in ",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41712149_Balestrini2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Transient cerebrospinal-fluid protein elevation affected about three-quarters of children on long-term intrathecal dosing.",
+    "snippet": "occurred in approximately three-quarters of patients in the extension studies",
+    "anchor": "RNA therapies, STK-001",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41712149_Balestrini2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Both gene-based routes share a dose-dependent immune and vector toxicity risk and unknown developmental consequences.",
+    "snippet": "including dose-dependent immune responses, vector-related toxicity, and uncertainties regarding long-term expression and neurodevelopmental effects following early-life intervention",
+    "anchor": "Gene-based therapies, closing paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41712149_Balestrini2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Upregulation carries its own overshoot risk.",
+    "snippet": "theoretical risks related to excessive or off-target transcriptional activation",
+    "anchor": "Gene-based therapies, closing paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41712149_Balestrini2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The primate tolerability statement for the clinical-stage programme covers 28 days.",
+    "snippet": "a single intracerebroventricular dose of ETX101 was well tolerated over 28",
+    "anchor": "ETX101",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41712149_Balestrini2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review's own search window closes before the clinical results it reports.",
+    "snippet": "published between January 1, 2017, and March 31, 2025",
+    "anchor": "Introduction, search strategy",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41712149_Balestrini2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST fullTextXML returned HTTP 200 with a full JATS body for PMC12989007 on 2026-10-03; the declared article artefact is that response, byte for byte."
+ }
+}

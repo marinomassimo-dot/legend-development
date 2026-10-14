@@ -1,0 +1,177 @@
+{
+ "schema_version": 2,
+ "pmid": "40217411",
+ "doi": "10.1186/s42494-024-00194-z",
+ "receipt": "FTR-20261003-40217411-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID40217411.md",
+  "disease-models/wwox/research/intake_wave_20261003w6_B.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W6-B-REGISTRY-01.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261003W6-B-MOVEMENT-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery ledger is owned by other batches; what this reading supports is proposed as commit candidates and in the intake note."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "An aggregation or real-world cohort supplies no new therapeutic lever for the reference genotype class; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is newly proposed; cannabidiol is an approved antiseizure medicine and nothing here is sent to BLOCK-1 triage."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "The triples are published in the candidates for a blind auditor; the reader cannot audit their own locators."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "A narrative review with a bibliometric (VOSviewer) step from one paediatric department; WWOX is a top-ten gene with an 18-patient pooled movement row whose primaries are not named. Not a per-author sweep."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (dystonia OR movement disorder OR movement disorders)",
+    "count": 14,
+    "source": "PubMed ESearch rettype=count 2026-10-03"
+   }
+  ],
+  "note": "14 PubMed records; this source is an aggregation, not a primary."
+ },
+ "multihop": {
+  "references_enumerated": 93,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "93 references enumerated by count. The hypokinesia sentence cites refs 8 (PMID 31784983), 10 (PMID 33919646) and 11 (PMID 37748886), all reviews/cohorts not primary WWOX sources; the 18-patient WWOX row names no primary at all."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 40217411 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "No PAPER/LIT identity record and no receipt for this PMID before this reading (paper_packet.py packet: identity none, receipts 0)."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 93,
+   "references_screened": 90,
+   "references_with_doi": 90,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 23,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  },
+  "result": "Checked 2026-10-03 via PubMed metadata (get_article_metadata): publication types ['Journal Article', 'Review']; no retraction, expression of concern or correction listed for PMID 40217411."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID40217411_Yuan2025_PMC.xml",
+   "sha256": "6601909871eecf2ae3c42cf9d4c467de8dc0168ee1376164c0a3a20b4530a34c",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11960234/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-03",
+    "result_sha256": "6601909871eecf2ae3c42cf9d4c467de8dc0168ee1376164c0a3a20b4530a34c"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "OMIM is the stated source for hypokinesia genes, WWOX among them.",
+    "snippet": "A review of the OMIM database revealed that mutations in several genes are associated with hypokinesia, include ATP1A3, PIGP, SCN2A, SCN8A, TBC1D24, and WWOX",
+    "anchor": "Different types of movement disorders, Hypokinesia",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40217411_Yuan2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 1 hypokinesia set lists WWOX among ten genes.",
+    "snippet": "ATP1A3, CACNA1A, SCN2A, SCN8A, STXBP1, TBC1D24, WWOX, PIGP, KCNC2, KCNQ2",
+    "anchor": "Table 1, Hypokinesia row, genes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40217411_Yuan2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 2 includes only articles giving types with proportions.",
+    "snippet": "Only articles that provided specific descriptions of movement disorder types and their corresponding proportions were included in the statistical table (Table 2).",
+    "anchor": "Characteristics of movement disorders, methods",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40217411_Yuan2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Dystonia is the main WWOX movement disorder at 83.3%.",
+    "snippet": "Dystonia is associated with all ten genes, being the main type of movement disorder in GNAO1 (approximately 64.4%), KCNQ2 (62.5%), and WWOX (83.3%) mutations.",
+    "anchor": "Characteristics of movement disorders, results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40217411_Yuan2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "WWOX row (n = 18): stereotypies 0, dystonia 15/18, chorea 0, ataxia 2/18, myoclonus 1/18, tremor 1/18, hypokinesia 5/18.",
+    "snippet": "WWOX 0 15/18 0 2/18 1/18 1/18 5/18",
+    "anchor": "Table 2, row WWOX (all seven cells)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40217411_Yuan2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The text attributes 82.8% myoclonus to CACNA1A, which the CACNA1A row of Table 2 does not show.",
+    "snippet": "Myoclonus is the main type of movement disorder associated with CACNA1A (approximately 82.8%)",
+    "anchor": "Characteristics of movement disorders, results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40217411_Yuan2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC11960234/fullTextXML returned HTTP 200 with a full JATS body on 2026-10-03; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure legend or the supplement."
+ }
+}
