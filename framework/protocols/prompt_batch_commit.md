@@ -220,6 +220,16 @@ For each commit candidate (in the order fixed in Phase 1), apply the changes.
 |---|---|
 | `working_model_current.md` · `claim_registry_current.md` · `literature_tracking_log_current.md` · `paper_registry_current.md` | **record-scoped**: every change of the batch to that file as ONE atomic list of operations — `replace` / `replace-within` a record or range, `insert-after` / `insert-before` / `append` a new record, `delete` — applied with `python3 framework/scripts/batch_commit.py propagate --file <file> --ops <ops.json>` (dry run), then the same with `--apply`. The editor (`record_scoped_edit.py`) proves before writing that every byte outside the addressed records is unchanged, and refuses an ambiguous, fenced or nested anchor or an edit that would re-segment the file. For the working model prefer `replace-within` (a changelog row, a version line, a mirror row). A section heading the file carries twice — the paper registry's two `## Purpose` — is named with `"under"`, the exact text of its enclosing heading (`"heading": "Purpose", "under": "Paper Registry Current"`). |
 
+🔴 **Count the ops before you build the list.** `BATCH_20261004_007` received nineteen candidates in
+three authoring formats, and the integrator's first parser silently produced ZERO ops for two of them: a
+batch that reads `0 ops` propagates nothing and can still report the candidate as processed. So, per
+candidate and before any `--ops` file is written, run
+`python3 framework/scripts/candidate_ops_reconcile.py <candidate.md>`: it prints `ops_parsed` beside the
+count the candidate's own prose declares and exits 3 on `SILENT_ZERO` (op structure present, nothing
+parsed) or `MISMATCH`. A refusal stops THAT candidate — read it by hand, or fix the parser — never the
+batch; `UNDECLARED` is reported, not refused, and `--ops-out` hands the parsed list to
+`record_scoped_edit.py apply --ops`.
+
 🔴 **A byte-conserving move inside a record is not an edit of that record, and one op must not do
 two.** The proof above is about the record's OUTSIDE. `BATCH_20260928_005` op `B2` spliced a new
 `DO_NOT_CITE` statement INSIDE the existing `DO_NOT_INFER` line of `CLAIM 032`, leaving the
