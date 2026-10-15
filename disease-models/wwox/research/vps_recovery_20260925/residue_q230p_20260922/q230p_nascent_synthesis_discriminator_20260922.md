@@ -1,4 +1,4 @@
-> **Recovered record (2026-10-14).** Historical copy of `disease-models/wwox/analysis/q230p_nascent_synthesis_discriminator_20260922.md` from
+> **Recovered record (2026-10-14).** Historical copy of the file the branch kept in the analysis layer as *q230p_nascent_synthesis_discriminator_20260922.md* (not landed there) from
 > the unmerged remote branch `origin/claude/q230p-molecular-state-systemic-yruqvc` (last commit 2026-09-22).
 > Landed under `research/` rather than `analysis/` because LINT finds reasoning-layer citations here without any
 > read receipt, registry full-text declaration or queue entry (UNREAD_PREMISE). It is a record of what that run

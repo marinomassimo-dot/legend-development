@@ -105,7 +105,7 @@ authority, auditor, registry or workflow, and a tool built for any of these thre
 that** — a compliance surface for a thinking move.
 
 **What shipped instead** is
-`framework/instruction/LEGEND_DISCOVERY_METHOD_V0_SHADOW_MODE.md` (never landed on `main`; see [the 2026-09-28 handoff](../../../../governance/candidates/HANDOFF-20260928-DISCOVERY-METHOD-SHADOW-RESIDUE.md)):
+*LEGEND_DISCOVERY_METHOD_V0_SHADOW_MODE.md* under the instruction layer (never landed on `main`; see [the 2026-09-28 handoff](../../../../governance/candidates/HANDOFF-20260928-DISCOVERY-METHOD-SHADOW-RESIDUE.md)):
 **instrumentation with no ledger, no gate and no dependency.** Its §2 records the finding that
 justifies it existing at all — 🔴 **the directive's seven candidate primitives and the scorecard's
 eight are not the same list.** The **two primitives with the most recorded outcome-changing
