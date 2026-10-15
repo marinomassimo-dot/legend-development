@@ -148,3 +148,6 @@ byte-faithful history of what was already concluded.
   root `CLAUDE.md` became a router without losing law.
 - [`sviluppo_lettori.md`](sviluppo_lettori.md) — the cumulative Scientist-development ledger:
   eighteen Tier-1 repository reviews, their pattern states and the open questions they leave.
+- [`cohort_ancestry_descriptors_20261015.md`](cohort_ancestry_descriptors_20261015.md) — why published-cohort
+  ancestry descriptors stay in the public edition: the individual-linkage rule already decides it,
+  measured on `CLAIM 032`; no new gate, no rewrite pass.
