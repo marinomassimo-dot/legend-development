@@ -66,7 +66,8 @@
    "steps": [
     {
      "step": "Operator addition 2026-10-19 (queued behind wave 1, no interruption): selection for effects in WWOX loss of function of (1) red-cell/blood transfusion, (2) plasma/plasma exchange/FFP, (3) adrenaline/epinephrine, (4) oxygen incl. nocturnal helmet/hypoxia-hyperoxia, (5) hypocaloric diet with dextrose solution and high fluid volume at very low calories; class-level, with BLOCK-1 safety framing; read-only selector",
-     "status": "IN_PROGRESS"
+     "status": "DONE",
+     "evidence": "76 studies, research/interventions_batch_selection_20261019.md; wave 2 contracts INTERV-H*-*-20261019"
     },
     {
      "step": "Dispatch wave 2 (up to four Scientists) on that selection; integrate, BATCH_COMMIT, Mirror, battery, push",
