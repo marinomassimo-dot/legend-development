@@ -767,5 +767,17 @@ class TheSurfaceInventory(unittest.TestCase):
             self.assertEqual(png_or_jpeg_size(path), pp.raster_size_from_header(path), path)
 
 
+class ArtifactWorkspacePassthroughTests(unittest.TestCase):
+    """A task worktree holds the manifest but not files/; `check` must be able to name the artifact root."""
+
+    def test_flag_reaches_the_manifest_validator_only_when_given(self):
+        packet = {"applicable_checks": [{"name": "manifest validator"}]}
+        with_flag = dict(pp._runnable(Path("."), "wwox", "1", packet, "/shared/root"))
+        without = dict(pp._runnable(Path("."), "wwox", "1", packet))
+        self.assertIn("--artifact-workspace", with_flag["manifest validator"])
+        self.assertEqual(with_flag["manifest validator"][-1], "/shared/root")
+        self.assertNotIn("--artifact-workspace", without["manifest validator"])
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
