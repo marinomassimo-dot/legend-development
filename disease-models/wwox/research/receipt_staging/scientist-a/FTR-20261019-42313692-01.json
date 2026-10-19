@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-42313692-01",
+ "study_id": {
+  "pmid": "42313692",
+  "doi": "10.1159/000553042"
+ },
+ "analysis_at": "2026-10-19T19:31:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-a (Scientist A), interventions batch 2026-10-19 groups H1/H2, task INTERV-H1-A-20261019 on branch task/INTERV-H1-A-20261019, dispatched by the Orchestrator; context_policy QUESTION_DRIVEN. Route: Europe PMC JATS body (PMC13441262) and the supplementaryFiles container into the root files/ tree; Figures 1-3 opened at native resolution; the supplementary Word file converted to text locally (search strings, GRADE Table 4, PRISMA checklist read) and its two embedded risk-of-bias images (Tables 2 and 3) extracted unchanged and opened. Locators captured into the deep-dive manifest while the document was open and verified by deepdive_manifest.py --verify-artifacts --require-current-schema. Prepared as a staged JSON for the Orchestrator and not appended at preparation time.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID42313692_Bailey2026_PMC.xml",
+ "source_fingerprint": "81ea4041f05fa08862830d7b93495a652ae3a17b26926d48a1774fe82690a7a4",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "read",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID42313692.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID42313692.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-a.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "manifest",
+  "Figures 1-3 and the two supplementary risk-of-bias images inspected as images",
+  "Supplementary Word file read as derived text"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}
