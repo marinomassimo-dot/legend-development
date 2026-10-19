@@ -504,3 +504,49 @@ a complete receipt) and in the Chang laboratory mitochondrial-shuttling papers' 
 MAM stays a vocabulary, if one does, it becomes a testable contact-site question. Transfer verdict:
 vocabulary only; a review that contradicts itself on the direction of the one disease (PD) most
 related to the fragile-site analogue read earlier in this lot.
+
+---
+
+## 11. PMID 25595191 — Lo 2015, Exp Biol Med: "Regulation of cell signaling and apoptosis by tumor suppressor WWOX" (tier 2, new; minireview)
+
+context_policy: SOURCE_FIRST. **Acquisition note (a route, not a result).** The batch selection listed this
+deposit as "PMC page/PDF only" and the queue-style routes all failed: PMC efetch XML returned metadata
+only, the Europe PMC REST full-text endpoint returned HTTP 500, the Europe PMC render and the SAGE
+PDF sat behind a Cloudflare challenge, and the PMC page and PDF returned a reCAPTCHA to both no
+User-Agent and a browser-like one; Unpaywall, OpenAlex and Semantic Scholar all point back to the PMC
+copy. What worked was the Internet Archive Wayback snapshot of the PMC page (2024-04-18) and, from the
+same snapshot, three figure images. It is a lawful free-to-read copy (an author-manuscript PMC
+deposit); the digest of the snapshot is in the manifest.
+
+**What it MEASURES.** Nothing. It is a minireview by the group behind much of the WWOX stress,
+Zfra and mitochondrial-translocation literature.
+
+**First-pass observations (whole article, three figures).**
+- It does consolidate the mitochondrial statements, each as a pointer to a primary: Tyr33-phosphorylated
+  Wwox accumulating in mitochondria and nuclei of rodent photoreceptors under constant light (ref 37);
+  "WWOX is activated via phosphorylation at Tyr33 and translocates to the cell membrane, mitochondria,
+  and nucleus under stress conditions"; Zfra and WWOX translocating to mitochondria after TNF or UV and
+  Zfra blocking WWOX-induced cytochrome c release (refs 55 and 57); and "WWOX deficiency decreases
+  mitochondrial respiration in mouse embryonic fibroblasts" (ref 54), with the mechanism called
+  unexplained. Every context is an acquired stress or a cancer-cell system.
+- It states the whole-body Wwox knock-out mouse dies by four weeks, and that the catalytic function of
+  the SDR domain is uncharacterised. Nothing concerns biallelic-LoF disease, iron or ferroptosis.
+- The one respiration sentence is one the repository can check against its own reading of the cited
+  primary: the primary's dossier records reduced Seahorse OCR, lower ATP and NADH, higher lactate and
+  normoxic HIF1A in null MEFs, so the minireview's sentence is faithful.
+- Housekeeping: a reference (the 2001 tumour-types paper) is listed twice (entries 5 and 30).
+- Dependency screen: the reference list contains the 2005 PNAS lung-cancer WWOX restoration paper
+  that carries a standing expression of concern (a citation-only dependency here; the repository
+  already holds that paper as read).
+- Reference reading debt: 57 gene-direct identifiers were read from the page markup; 13 have complete
+  receipts, 7 partial, 37 none (counts from `fulltext_receipts.py status` run in this session).
+
+FIRST-PASS OBSERVATIONS COMPLETE -> PRIOR KNOWLEDGE ADMITTED FOR COMPARISON: admitted the registry stub (unprocessed, clinical relevance
+LOW) and, by name, the dossier of the primary behind the respiration sentence.
+
+**What it changes in the disease model: no claim; it records that the mitochondrial-localisation
+literature the model cites is a chain of one laboratory's acquired-stress and cancer-cell
+observations, restated.** It is the most convenient map of the unread primaries behind those claims:
+refs 37 (blocked), 39 (MPP+ and Tyr33 phosphorylation), 55 and 57 (the two Zfra papers), 18 (the 2004
+tau paper, one of the three unread primaries the standing brief names). Preserved as a queued block in
+the commit candidate so that a later actor can read them in the order the lot prefers.
