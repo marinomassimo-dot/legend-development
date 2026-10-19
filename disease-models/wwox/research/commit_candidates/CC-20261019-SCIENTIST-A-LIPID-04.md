@@ -13,6 +13,7 @@
 | 3 | PMID 40590574 (Wong 2025, Mov Disord, biallelic ELOVL1 variants: hypomyelinating leukodystrophy, movement disorder, ichthyosis) | `FTR-20261019-40590574-01` (partial: photographs and videos not inspected) | New `PAPER` record (none exists), human genetic comparator, T3, relevance LOW (WWOX absent) |
 | 4 | PMID 32123819 (Isokawa 2019, FASEB BioAdv, Elovl1-deficient mice, myelin sphingolipid chain length, motor coordination) | `FTR-20261019-32123819-01` | New `PAPER` record (none exists), murine comparator, T3, relevance LOW (WWOX absent) |
 | 5 | PMID 41815956 (Eberhart 2026, Front Mol Neurosci, Pex2 knockout Zellweger mice: lipid metabolism and hypomyelination) | `FTR-20261019-41815956-01` | New `PAPER` record (none exists), murine comparator, T3, relevance LOW (WWOX text-absent; WWOX protein is one unchanged row of the deposited proteome) |
+| 6 | PMID 40997116 (Ziegler 2025, PLoS Genet, Drosophila ceramide synthase neuronal defects: chain length versus long-chain bases) | `FTR-20261019-40997116-01` | New `PAPER` record (none exists), invertebrate mechanistic comparator, T3, relevance LOW (WWOX absent) |
 
 ## 2 · Record content (source 1)
 
@@ -100,3 +101,17 @@ Note text to carry:
 17. Nutritional confound named | Postnatal peroxisome-deficient Pex2−/− mice suffer from intestinal lipid malabsorption due to impaired bile acid synthesis (Keane et al., 2007), and the combination of inadequate dietary fat intake and impaired fatty acid processing can lead to severe energy deficits and developmental delays such as hypomyelination. | Discussion, paragraph 4, same
 18. Whole-tissue limitation | A limitation of our study is that we analyzed the entire tissue of different regions of the CNS, so that observed changes in the activity of enzymes, or the expression of genes and proteins cannot be assigned to a specific cell type (neurons, astrocytes, oligodendrocytes, and microglia). | Discussion, paragraph 8, same
 19. WWOX protein unchanged in cerebellum | CBL diff_exp_analysis: Wwox | header cells: ['Gene', 'log2 fold change', 'p.value', 'FDR'] | values: ['-0.26134379502771682', '0.67404861086198831', '0.87760320871459885'] | `files/fulltext/PMID41815956_Eberhart2026_supplement/Table3_wwox_derivation.txt`
+
+## 10 · Source 6 (PMID 40997116, Ziegler 2025): record content
+
+What it measures: Drosophila sensory-neuron dendrites in single-cell cerS null and catalytic-dead clones, and whole-larva lipidomics of a weak hypomorph. WWOX: zero occurrences.
+
+Note text to carry:
+🔴 **A design template for cell-autonomous ceramide-synthase loss, not WWOX evidence.** About 75 percent dendrite-length and 90 percent terminal loss without caspase activation; C18-C24 ceramides fall while long-chain bases rise; complete rescue needs a C18-C26 synthase (mouse CerS2 or CerS4) plus lowered long-chain bases, C16 synthase (mCerS5) is harmful. Lipids and neuron phenotypes come from different alleles (hypomorph versus null), N is 4 pooled samples and 4-8 clones, and the mammalian route is stated as future work. Cell-autonomous neuronal requirement differs from the non-cell-autonomous WWOX hypomyelination of CLAIM 003.
+
+### LOCATOR TRIPLES FOR BLIND AUDIT (source 6)
+
+20. Dendrite loss in null and dead-enzyme clones | In comparison to cerSWT c4da neurons, cerSKO and cerSH215D mutant neurons exhibited approximately a 75% reduction of total dendritic length and almost 90% of their total dendritic terminal endpoints (Fig 1B–1D). | Results, section 1, `files/fulltext/PMID40997116_Ziegler2025_PMC.xml`
+21. Lipids come from a weaker allele | To study the lipidome of a full body cerS mutant, we have therefore used the weaker cerSP61 allele. cerS mRNA is reduced by approximately 60% in this mutant, which allows a low number of slim larvae to reach the LIII stage [24]. | Results, section 2, same
+22. Rescue condition | In summary, a complete rescue of the mutant dendritic phenotype can only be obtained by decreasing toxic LCBs and simultaneously providing C20-C22 ceramides, the most abundant ceramide species. | Results, section 4, same
+23. Vertebrate relevance is future work | We thus envision that as an alternative to the re-expression of CerSs, a combination of reducing the effect of toxic LCBs, such as (dh)S1P, together with a supplementation of long-chain ceramides will be an important path to be tested in future experiments in vertebrate models of PME8. | Discussion, same
