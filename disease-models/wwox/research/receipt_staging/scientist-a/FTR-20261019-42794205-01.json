@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-42794205-01",
+ "study_id": {
+  "pmid": "42794205",
+  "doi": "10.3390/children13091185"
+ },
+ "analysis_at": "2026-10-19T19:35:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-a (Scientist A), interventions batch 2026-10-19 groups H1/H2, task INTERV-H1-A-20261019 on branch task/INTERV-H1-A-20261019, dispatched by the Orchestrator; context_policy QUESTION_DRIVEN. Route: Europe PMC JATS body (PMC13605100) including the floats group (Tables 1-4) and the one figure image (webp) from the Europe PMC supplementaryFiles zip into the root files/ tree; Figure 1 opened at native resolution; no supplementary document. Locators captured into the deep-dive manifest while the document was open and verified by deepdive_manifest.py --verify-artifacts --require-current-schema. Prepared as a staged JSON for the Orchestrator and not appended at preparation time.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID42794205_DeRose2026_PMC.xml",
+ "source_fingerprint": "bea59f4d2fcb01539684f67972b7f7d60287e8bfe8097622abb0ccfee431572b",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "not_present",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID42794205.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID42794205.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-a.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "manifest",
+  "Figure 1 inspected as an image",
+  "Tables 1-4 read from the JATS"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}
