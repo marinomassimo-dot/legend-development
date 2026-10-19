@@ -92,3 +92,37 @@
 - Nothing metabolic; the Introduction lists metabolic disease only as an HCC risk factor.
 
 **System gap and change.** Common-variant association with a tumour in an adult East Asian series; the reference genotype is a biallelic loss of function. No claim moves; it is a small datum that HCC SNP literature on WWOX is internally inconsistent about what the variants do, and it supports the reading of paper 1 that a WWOX SNP association with tumour behaviour has no demonstrated effect on WWOX protein or function.
+
+## Paper 6. Lin 2011, Genes Cancer (PMID 21901168): a WOX1/MEK1 complex in leukaemia T cells (primary behind two mitochondrial sentences)
+
+`context_policy: QUESTION_DRIVEN` (held: the Huang 2018 review, paper 4, which cites this paper for WWOX relocating to mitochondria after the WWOX/MEK1 complex dissociates). Surface: Internet Archive capture of the PMC page plus seven figure images; Figures 1-7 opened as images; whole article read; supplementary Figs S1-S12 not retrieved (`partial_fulltext_read`). Not in any registry identity record.
+
+**What it measures.** Micromolar PMA on Jurkat and Molt-4 T-leukaemia lines with and without the MEK inhibitor U0126: DNA fragmentation and sub-G1, JC-1 mitochondrial polarisation, one anti-MEK1 co-immunoprecipitation series, a dominant-negative WOX1 and an siRNA in Jurkat, confocal co-localisation of WOX1 with a mitochondrial dye and of MEK1 with a lysosomal and a lipid-raft marker, and a FRET series in COS7 cells.
+
+**What it supports.** In Jurkat cells at 10 micromolar PMA, the WOX1 band in a MEK1 precipitate fades within 10 to 60 minutes, U0126 delays that and delays death, and confocal overlap of WOX1 with a mitochondrial dye is visible at 30 minutes and gone by 120. It is the readable primary behind the review sentence "dissociation of the WWOX/MEK1 complex ... leads WWOX to relocate to the mitochondria".
+
+**What it does not support.**
+- *Generality.* No other of eleven lines responds as Jurkat does; the death lacks phosphatidylserine exposure, shrinkage and blebbing (stated; data not shown), so "apoptosis" is the authors' word for a PMA-induced rupture at pharmacological dose.
+- *Causality of WWOX.* The knockdown arm is one siRNA experiment (n = 3): U0126 protection is P = 0.0042, 0.0436 and 0.0465 in control, mock and scramble and P = 0.4403 in WOX1 siRNA, i.e. a significant-versus-non-significant contrast with control and mock themselves borderline; dominant-negative WOX1 lowers fragmentation by about a third (290 to 190). The Methods say every experiment was done three to five times while two bar graphs average two experiments. The authors themselves "do not exclude other possibilities".
+- *Mitochondrial relocation as quantified.* Figure 6C is one confocal field per time point described by colour overlap; there is no co-localisation coefficient and no fractionation. The paper's summary says the death "is probably associated with" the relocation.
+- *The co-immunoprecipitation as strong.* The WOX1 band in the MEK1 precipitate is faint, the non-immune control is shown for MEK1 only, and the experiment is one series per condition.
+- Nothing metabolic; "mitochondrial polarisation-depolarisation" is a JC-1 dye read-out of an acute pharmacological stress.
+
+**System gap and change.** Leukaemia T-cell lines under 10 micromolar PMA; the reference genotype is constitutive biallelic loss. The paper is the primary for one mitochondrial-relocation statement that the repository's secondary sources repeat, and shows that statement is a single-line, single-condition observation with borderline statistics. No claim moves; the mitochondrial-translocation line stays "reported by one laboratory in stressed cell lines" with this primary now read and the retinal (Chen 2005) and MPP+ (Lo 2008) primaries still unread.
+
+## Paper 7. Huang 2016, J Biol Chem (PMID 27339895): IkappaB-alpha, ERK and WWOX in MOLT-4 maturation (primary behind the Ser14 and MOLT-4 mitochondrial statements)
+
+`context_policy: QUESTION_DRIVEN` (held: paper 4, whose pY33/pS14 and MOLT-4 mitochondrial sentences cite this paper). Surface: Internet Archive capture of the PMC page plus nine figure images; Figures 1-9 opened as images; whole article read; supplementary Fig. S1 and Videos S1-S3 not retrieved (`partial_fulltext_read`). Registry holds a corpus placeholder only.
+
+**What it measures.** In MOLT-4 T-ALL cells a nanomolar PMA with ionophore (IoP) induces CD3 and CD8: a 1.2 to 1.4-fold CD3 rise by blot, flow cytometry of surface CD3, cell-cycle shift to S and G2/M, ERK and IkappaB-alpha phosphorylation within minutes, WWOX phospho-site blots (Ser14 up, Tyr33 and Tyr287 down), anti-IkappaB-alpha co-immunoprecipitations, cytosolic and mitochondrial fractions and confocal co-localisation, yeast two-hybrid and FRET mapping of the WWOX WW domain to IkappaB-alpha, and a three-way FRET time course in COS7 cells.
+
+**What it supports.** WWOX, IkappaB-alpha and ERK are detectable in a MOLT-4 mitochondrial fraction, with confocal co-localisation percentages falling after IoP (IkappaB-alpha about 82 to 50 percent, WWOX about 84 to 60 percent, n = 3, unchanged for WWOX with TNF), and WWOX phosphorylation at Ser14 rises while Tyr33 and Tyr287 fall.
+
+**What it does not support.**
+- *A WWOX loss-of-function phenotype.* Every WWOX manipulation is overexpression (EGFP-WWOX, a dominant-negative WW-domain mutant); the WWOX-absent comparator is MDA-MB-231, declared WWOX-negative from a cited reference rather than re-measured, and the rescue shown is one blot pair (IkappaB-alpha degradation 45 to 89 percent against 15 percent).
+- *A purified mitochondrial compartment.* The fractionation blot (Figure 4C) has no mitochondrial or cytosolic purity marker row; cytochrome c appears only in Figure 4D, where it rises in the mitochondrial preparation at 2 to 3 hours while WWOX falls 91 percent at 1 hour and is back to 12 to 25 percent reduction later, a pattern the text calls release and re-uptake.
+- *A strong complex.* In Figure 5A the WWOX band in the IkappaB-alpha precipitate is faint and the stated complex reduction is 0 until 95 percent at 120 minutes; Figure 7F to H (mouse spleen) are cropped single strips.
+- *Ser14 function.* How pS14-WWOX works "is largely unknown" (the authors); the in vivo T-cell peptide experiment is "preliminary" and has no data in the paper. This is the paper behind the review's pS14 model (paper 4), which therefore rests on a blot series in one leukaemia line plus the peptide statement.
+- Metabolism: one sentence ("WWOX is involved in mitochondrial respiration and metabolism") citing a read review and the parked Choo 2015 primary; nothing is measured.
+
+**System gap and change.** T-ALL line under a differentiation stimulus, human and mouse cDNA overexpression; reference genotype is biallelic loss. No claim moves. Together with paper 6 it closes the loop on the review sentences of paper 4: the mitochondrial and pS14 statements resolve to single-line observations by one laboratory.
