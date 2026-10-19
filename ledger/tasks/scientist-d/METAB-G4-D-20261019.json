@@ -30,6 +30,79 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "ASSIGNED",
- "assigned_on": "2026-10-19"
+ "CURRENT_STATE": "COMPLETE",
+ "assigned_on": "2026-10-19",
+ "TASK_ACK": {
+  "TASK_ID": "METAB-G4-D-20261019",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "decision": "ACCEPTED",
+  "at": "2026-10-19T17:56:42Z"
+ },
+ "TASK_CLAIM": {
+  "TASK_ID": "METAB-G4-D-20261019",
+  "GENERATION": 1,
+  "ACTOR_ID": "scientist-d",
+  "timestamp": "2026-10-19T17:56:42Z",
+  "durable_pointer": "branch task/metab-g4-d, worktree .claude/worktrees/metab-g4-d",
+  "note": "scientist-d is a stated assumption of the Orchestrator (task ORCH-METABOLIC-BATCH-20261019)"
+ },
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "legend_commit.sh refused each manifest commit as STALE (pathograph drift triggered by any new manifest) while four Scientists work in parallel",
+   "default": "committed with LEGEND_STALE_SURFACES_BECAUSE naming the parallel batch; pathograph regeneration left to the Orchestrator",
+   "why_safe": "the dispatch brief says shared derived surfaces are regenerated only when all inputs are committed; regenerating mid-wave would bake peers' in-flight manifests into it",
+   "would_have_differed": "a single-actor wave would regenerate the pathograph before committing"
+  },
+  {
+   "condition": "the batch selection file marks the VABAM anchor as read, the ledger holds no receipt",
+   "default": "treated the anchor as unread, said so in the analysis note and the claim-001 candidate; did not try to acquire it (blocked and outside the lot)",
+   "why_safe": "claims about WWOX hormonal co-therapy were withheld rather than inferred",
+   "would_have_differed": "a lawful body would have let the WWOX hormonal-therapy question be answered"
+  },
+  {
+   "condition": "Yuan 2025 and Aqeilan 2007 refused by their publishers on every non-browser route; the session has no working browser",
+   "default": "parked as OA-but-bot-blocked with the cascade recorded; took the extra self-chosen search",
+   "why_safe": "retrieval only; nothing fabricated",
+   "would_have_differed": "an interactive browser or operator-supplied PDF would complete both"
+  },
+  {
+   "condition": "Unpaywall requires an e-mail address",
+   "default": "no Unpaywall call made; OpenAlex and Semantic Scholar gave the same open-access locations",
+   "why_safe": "the operator's address is not to be sent to an unrelated service unasked",
+   "would_have_differed": "an address supplied for this purpose would allow the tier"
+  },
+  {
+   "condition": "no validated writer for the discovery ledger exists outside BATCH_COMMIT",
+   "default": "leads L1-L4 written into the analysis note and the REGISTRY candidate, not appended to the ledger",
+   "why_safe": "the ledger is propagated only by BATCH_COMMIT; scientists propose",
+   "would_have_differed": "none expected"
+  },
+  {
+   "condition": "figures not opened as images",
+   "default": "every receipt states coverage figures=captions_only and depth partial_fulltext_read",
+   "why_safe": "understates rather than overstates, per the brief",
+   "would_have_differed": "opening 17 papers' figures would roughly double the cost for mostly schematic review figures"
+  },
+  {
+   "condition": "task worktree lacks the ignored files/ tree, so validators could not verify artifacts",
+   "default": "copied each XML into the worktree's ignored files/ (same bytes, same SHA-256) and shipped an --artifact-workspace passthrough in paper_packet.py",
+   "why_safe": "ignored by git, not committed; re-run against the shared tree owed at landing",
+   "would_have_differed": "a symlink was tried and refused by the validator (path escapes the workspace)"
+  }
+ ],
+ "STOP_LOG": [],
+ "RESULT": {
+  "read": 17,
+  "parked": 2,
+  "extra_search_found_and_closed": 3,
+  "analysis_note": "disease-models/wwox/research/metabolic_wave_20261019_scientist-d.md",
+  "self_eval": "disease-models/wwox/research/session_evaluations/2026-10-19_metabolic_G4_scientist-d.md",
+  "commit_candidates": [
+   "CC-20261019-SCIENTISTD-G4-REGISTRY-01",
+   "CC-20261019-SCIENTISTD-G4-VABAM-01"
+  ],
+  "staged_receipts": "disease-models/wwox/research/receipt_staging/scientist-d/ (17 JSON files, not appended)",
+  "micro_upgrade": "paper_packet.py check --artifact-workspace"
+ }
 }

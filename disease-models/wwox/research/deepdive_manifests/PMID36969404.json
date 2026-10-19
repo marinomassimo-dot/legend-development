@@ -1,0 +1,287 @@
+{
+ "schema_version": 2,
+ "pmid": "36969404",
+ "doi": "10.1021/acsomega.3c00056",
+ "receipt": "FTR-20261019-36969404-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID36969404.md",
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-a.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-A-LIPID-06.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was selected and deduplicated by the Orchestrator's selector against the registries, queue and receipt ledger (selection file, method step 3); the per-paper M0 packet re-checked it."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Discovery leads, if any, are routed through the commit candidate and the analysis note; no cumulative discovery squeeze was warranted by this paper."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "weighting": "Review by a molecular-diagnostics and pharmacology group (affiliation from the acknowledgments); not a lipid-neurobiology laboratory. Cited primary data weighed above review sentences; the review contains internal inconsistencies (conclusion versus body, one anatomical gloss error)."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "ELOVL1 AND hypomyelination",
+    "count": 8,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND ELOVL",
+    "count": 0,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts; the second query is the WWOX ELOVL intersection."
+ },
+ "multihop": {
+  "references_enumerated": 91,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "91 references enumerated; none concerns WWOX (term search: zero occurrences)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 36969404 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "No record matched."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 91,
+   "references_screened": 88,
+   "references_with_doi": 88,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  },
+  "result": "Checked 2026-10-19 via PubMed esummary/efetch for PMID 36969404: publication types ['Journal Article', 'Review']; corrections/retraction markers in the efetch record: none."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID36969404_Siddiqui2023_PMC.xml",
+   "sha256": "a413399c79ff9812b9675bb88a228aa638ed73591d86ec775394ce8a88692011",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC10034982: abstract, body, Table 1, figure legends, references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10034982/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID36969404/ao3c00056_0001.jpg",
+   "sha256": "4a868dcc44ee728ee4aa276c0cafb1d31526bb8d26268a2195e652df2181af0e",
+   "kind": "figure",
+   "note": "Image file g1 from the Europe PMC supplementaryFiles zip, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10034982/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID36969404/ao3c00056_0002.jpg",
+   "sha256": "d3ed812df39096327df88bf678a02114f4429fcaa856e931b4fff6be44e1d897",
+   "kind": "figure",
+   "note": "Image file g2 from the Europe PMC supplementaryFiles zip, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10034982/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID36969404/ao3c00056_0003.jpg",
+   "sha256": "10de23072bfa4617d0b575ef1bed0c3c4f85eea645ece5e4df9f4a50ce785101",
+   "kind": "figure",
+   "note": "Image file g3 from the Europe PMC supplementaryFiles zip, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10034982/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The conclusion states that disruption of VLC saturated fatty acid synthesis results in seizures and neurodegeneration in both ELOVL1-deficient humans and ELOVL1 mutant models; the body attributes human seizures to ELOVL4 and describes ELOVL1 human disease as hypomyelination, spasticity, ichthyosis, deafness and dyskinesia without seizures.",
+    "snippet": "disruption of VLC-SFA synthesis results to seizures and neurodegeneration in both ELOVL1-deficient humans and ELOVL1 mutant models.",
+    "anchor": "Conclusion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36969404_Siddiqui2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The ELOVL1 mouse paragraph reports lower survival, startle epilepsy deaths, shorter acyl chains, lower galactosylceramide, mild corpus callosum hypomyelination in large axons and poor motor coordination.",
+    "snippet": "The postnatal survival rate of mice was lower than average, and several died from startle epilepsy.",
+    "anchor": "Hypomyelination, High-Frequency Deafness, and Spastic Paraplegia",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36969404_Siddiqui2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review itself says how ELOVL1 deficiency changes brain lipid composition and the pathology remains unknown.",
+    "snippet": "How ELOVL1 deficiency impacts the lipid composition and specific pathological disorders in the brain remains unknown.",
+    "anchor": "Hypomyelination, High-Frequency Deafness, and Spastic Paraplegia",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36969404_Siddiqui2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The dominant ELOVL1 variant syndrome is described with ichthyotic keratoderma, spasticity, dysmorphism and mild hypomyelination in two kindreds; cell data show lower C24 ceramide and sphingomyelin and a transcriptome with myelination genes down.",
+    "snippet": "A transcriptome study revealed the downregulation of genes involved in synaptogenesis, myelination, and neurodevelopment and the upregulation of modules for keratinization and epidermal development.",
+    "anchor": "Neuro-Ichthyotic Syndrome, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36969404_Siddiqui2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A text error: a hippocampal field is glossed as caudate amygdala, which signals the review was not checked at the level of anatomy.",
+    "snippet": "The CA3 (caudate amygdala) and CA4 regions of the hippocampus exhibit the highest levels of ELOVL4 expression in neurons",
+    "anchor": "ELOVL: Additional Family Members, paragraph 7",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36969404_Siddiqui2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Seizures in the recessive human neuro-ichthyotic disease are attributed to ELOVL4, a different elongase.",
+    "snippet": "The seizure activity seen in recessive human ELOVL4 neuro-ichthyotic disease and this pattern are likewise comparable.",
+    "anchor": "ELOVL: Additional Family Members, paragraph 7",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36969404_Siddiqui2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Astrocyte-specific ELOVL1 deletion reduces the toxicity of reactive-astrocyte conditioned medium to oligodendrocytes in vitro, by the review's account of one cited study; the lipidomics were of sorted astrocytes.",
+    "snippet": "In comparison with reactive ACM from wild-type mice, reactive ACM from ELOVL1 cKO mice caused significantly less injury to oligodendrocytes in vitro.",
+    "anchor": "ELOVL1 as a Potent Pharmacological Target, astrocytes subsection",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36969404_Siddiqui2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "ELOVL1 inhibitors are described as lowering C26:0 in X-ALD mouse blood to near wild type and by up to 65 percent in brain, with a 50-75 percent reduction suggested as needed clinically.",
+    "snippet": "a 50–75% reduction in C26:0 VLCFAs may be necessary.",
+    "anchor": "ELOVL1 as a Potent Pharmacological Target, pyrazole amide subsection",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36969404_Siddiqui2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 1 lists ELOVL4 with skin abnormalities, seizures and spinocerebellar ataxia 34, and ELOVL1 with spinocerebellar ataxia 38, hypomyelination, ichthyotic keratoderma, spasticity and dysmorphism, with no seizure entry for ELOVL1.",
+    "snippet": "Skin abnormalities, seizures, spinocerebellar ataxia-34 (SCA34), autosomal dominant Stargardt-like macular dystrophy (STGD3)",
+    "anchor": "Table 1, ELOVL4 row",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36969404_Siddiqui2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review lists no WWOX connection and no WWOX gene in its tables; sphingolipid chain length is tied to CERS2 and ELOVL1 only through the sentence that CERS2 is required for C24 sphingolipid production.",
+    "snippet": "Sphingolipids and ceramide synthase (CERS2) are required for C24 sphingolipid production, which further aids in the regulation of ELOVL1 function.",
+    "anchor": "Expression and Function of ELOVL1, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36969404_Siddiqui2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PANEL READING, Figure 1: cell scheme of ELOVL1 and ELOVL6 elongation of C16:0 to C26:0, ABCD1 and peroxisomal beta-oxidation, VLCFA accumulation, oxidative stress and neuroinflammation of astrocytes and microglia, with arrows to cerebral palsy, spastic paraplegia, hypomyelination, neuro-ichthyotic syndrome and deafness. The scheme has no seizure arrow. No data.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Scheme with five outcome arrows from a neuroinflammation node.",
+    "anchor": "Figure 1, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID36969404/ao3c00056_0001.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "review figure (schematic or structure drawing)",
+     "genotype": "not applicable",
+     "treatment": "not applicable",
+     "comparator": "not applicable",
+     "endpoint": "proposed mechanism"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 2: chemical structures of erucic acid, oleic acid (Lorenzo's oil) and two ELOVL1 inhibitor classes (a pyrimidine ether and a pyrazole amide). No data.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Four structure drawings.",
+    "anchor": "Figure 2, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID36969404/ao3c00056_0002.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "review figure (schematic or structure drawing)",
+     "genotype": "not applicable",
+     "treatment": "not applicable",
+     "comparator": "not applicable",
+     "endpoint": "proposed mechanism"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST search returned inEPMC Y, isOpenAccess Y, license cc by on 2026-10-19; fullTextXML returned HTTP 200 and the declared article_text artefact is that response byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+ }
+}

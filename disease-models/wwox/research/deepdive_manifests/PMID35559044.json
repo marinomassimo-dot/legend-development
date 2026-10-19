@@ -1,0 +1,412 @@
+{
+ "schema_version": 2,
+ "pmid": "35559044",
+ "doi": "10.3389/fgene.2022.843661",
+ "receipt": "FTR-20261019-35559044-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID35559044.md",
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-a.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-A-LIPID-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was selected and deduplicated by the Orchestrator's selector against the registries, queue and receipt ledger (selection file, method step 3); the per-paper M0 packet re-checked it."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Discovery leads, if any, are routed through the commit candidate and the analysis note; no cumulative discovery squeeze was warranted by this paper."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 1,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "A Chinese cardiovascular-genetics group (Guangxi Medical University, from the affiliations) with a series of lipid-SNP interaction papers. Primary for its own cohort; not primary for WWOX or WWOX disease. Observations (genotype counts) weighed above interpretation (gene-gene and gene-environment models, mechanism sentences); the interpretation sentences cite sources that do not match their reference entries."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (coronary OR stroke) AND (polymorphism OR SNP)",
+    "count": 5,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (lipid OR dyslipidemia) AND (polymorphism OR SNP)",
+    "count": 10,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts, not WWOX-direct cardiovascular studies; mostly cancer GWAS papers or Maonan/Guangxi lipid-SNP papers by the same group."
+ },
+ "multihop": {
+  "references_enumerated": 38,
+  "gene_direct_refs_in_source": [
+   "ref 15 Iatan 2014 (WWOX HDL)",
+   "ref 16 Johannsen 2018 (WWOX SDR missense, epileptic encephalopathy case report)",
+   "ref 19 Khawaled 2020 (WWOX pleiotropic review)",
+   "ref 29 Saez 2010 (WWOX HDL association)"
+  ],
+  "resolved": [
+   "Iatan 2014 and Saez 2010: complete receipts / read in this lot",
+   "Johannsen 2018: a WWOX DEE case report; registry presence not checked in this reading"
+  ],
+  "queued": [],
+  "note": "38 references enumerated from the XML. Four are WWOX-direct. Reference 16 is a WWOX epileptic-encephalopathy case report cited in the text for a lipid genotype statement it does not contain; reference 29 (Saez 2010) is cited in the text for a drinking statement."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 35559044 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the dossier."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 38,
+   "references_screened": 38,
+   "references_with_doi": 38,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  },
+  "result": "Checked 2026-10-19 via PubMed esummary/efetch for PMID 35559044: publication types ['Journal Article']; corrections/retraction markers in the efetch record: none."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID35559044_Liu2022_PMC.xml",
+   "sha256": "9e848604465c4ce61659081f26dbb4cb50c7758259aa6a49ed41cfdff64d706b",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC9086287: abstract, body, Tables 1-9, figure legends, 38 references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9086287/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID35559044/fgene-13-843661-g001.jpg",
+   "sha256": "28012d6e72c332b83cef979874ad399d50e1d3466a17167483a0771eb1d6bb29",
+   "kind": "figure",
+   "note": "Figure 1 JPEG from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9086287/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID35559044/fgene-13-843661-g002.jpg",
+   "sha256": "d82a14050dd051941c4bf2b85beafd5f2d8df611f19cbf644c74f61ec4d93391",
+   "kind": "figure",
+   "note": "Figure 2 JPEG from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9086287/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID35559044/fgene-13-843661-g003.jpg",
+   "sha256": "432173e230ee3856266ee1ff6bfb1fb215f0c6855ea5424803d54ad534ccfa15",
+   "kind": "figure",
+   "note": "Figure 3 JPEG from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9086287/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID35559044/fgene-13-843661-g004.jpg",
+   "sha256": "4b10c439c99f6a7d43f189236d24876bc56aa9ce395f9eb2303f06fb7276e492",
+   "kind": "figure",
+   "note": "Figure 4 JPEG from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9086287/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID35559044_Liu2022_supplement/Table1.XLSX",
+   "sha256": "c59cc93ea8943feca44027441f8c681bc2047b432d24fc7cef2aa0d489a285ab",
+   "kind": "supplement_binary",
+   "note": "Authors' Table1.XLSX (genotypes by group, 1853 rows x 6 SNPs), from the Europe PMC supplementaryFiles container; individual rows are not reproduced anywhere in this repository, only aggregates.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9086287/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID35559044_Liu2022_supplement/Table1_aggregate_derivation.txt",
+   "sha256": "85909e436a74784620eede713c0a500755f85cb79d829f19fef47b2b2c93d411",
+   "kind": "supplement_text",
+   "note": "Aggregate derivation of Table1.XLSX by a short Python script (zipfile and regular expressions over the sheet XML): per-group genotype counts, per-column run-length encoding in file order, and the row-wise dosage R-squared of the EHBP1 pair. Aggregate only.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID35559044_Liu2022_supplement/Table1.XLSX",
+    "extractor": {
+     "name": "python3 zipfile+re script (derive_liu2022.py, scratchpad)",
+     "version": "3.12",
+     "call": "read xl/sharedStrings.xml and xl/worksheets/sheet1.xml, tally genotypes per group, itertools.groupby run lengths per column, Pearson r of allele dosage squared",
+     "join": "\\n"
+    },
+    "acquired_on": "2026-10-19",
+    "user_agent_policy": "none"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Design: three hospital-based groups (CAD 622, ischemic stroke 593, controls 638) from one Chinese hospital, Han, unrelated; controls are described as normal subjects without CAD or stroke; this is a case-control association study of common SNPs, not a loss-of-function cohort.",
+    "snippet": "A total of 638 normal subjects without a history of CAD and IS were used as a control group.",
+    "anchor": "Materials and Methods, Study Population",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35559044_Liu2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "SNPs were selected from earlier lipid GWAS and restricted to MAF above 10 percent; WWOX is represented by two common SNPs, rs2222896 and rs2278075.",
+    "snippet": "SNPs with minor allele frequencies (MAFs) > 10% were included.",
+    "anchor": "Materials and Methods, Genotyping",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35559044_Liu2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Genotype counts for the WWOX SNP rs2278075 by group: T allele 15 percent in controls, 21 percent in CAD, 23 percent in stroke.",
+    "snippet": "AA 464 (73) 386 (62) 353 (60) AT 162 (25) 208 (33) 208 (35) TT 12 (2) 28 (5) 32 (5) 0.000 0.000",
+    "anchor": "Table 2, WWOX rs2278075 genotypes",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID35559044_Liu2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "rs2278075 is the only WWOX SNP whose CAD and stroke associations pass the paper's Bonferroni line in Table 3 (dominant model OR 1.63 for CAD and 1.81 for stroke).",
+    "snippet": "Dominant AA AT + TT 1.63 (1.29–2.07) 0.0001 1.81 (1.43–2.30) <0.0001",
+    "anchor": "Table 3, rs2278075 dominant row",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID35559044_Liu2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The paper's Bonferroni significance line for Table 3 is P below 0.00021.",
+    "snippet": "The PCAD or PIS < 0.00021 was considered statistical significance after the Bonferroni correction (6 SNPs × 5 models × 8 factors).",
+    "anchor": "Table 3 footnote",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID35559044_Liu2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The other WWOX SNP, rs2222896, does not pass that line for stroke (dominant OR 0.71, P 0.0025).",
+    "snippet": "Dominant GG AG + AA 1.16 (0.92–1.46) 0.200 0.71 (0.56–0.89) 0.0025",
+    "anchor": "Table 3, rs2222896 dominant row",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID35559044_Liu2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The text says all six SNPs, in three different genes, change TC, TG, HDL-C, LDL-C and ApoA1/ApoB among genotypes in the 638 controls at P below 0.0004.",
+    "snippet": "As shown in Figure 1, the levels of TC, TG, HDL-C, and LDL-C and the ratio of ApoA1/ApoB in the control group were significantly different among the three genotypes of the six SNPs, and the levels of ApoA1 were also significantly different among the three genotypes of five SNPs, except for rs3130685 SNP (p < 0.0004).",
+    "anchor": "Results, Association Between the SNPs and Serum Lipid Levels in Controls",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35559044_Liu2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 4 prints, for rs2222896 AA versus AG on triglyceride, a beta of -0.647 with t -11.274, and a 95 percent interval (-1.053 to -0.741) that does not contain the beta.",
+    "snippet": "rs2222896 AA AG −0.647 −11.274 <0.0004 −1.053 −0.741",
+    "anchor": "Table 4, TG block, rs2222896 AA to AG",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID35559044_Liu2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The only WWOX lipid association printed for rs2278075 in controls is lower HDL-C in the AT genotype (beta -0.312).",
+    "snippet": "rs2278075 AA AT −0.312 −8.601 <0.0004 −0.441 −0.277",
+    "anchor": "Table 4, HDL-C block, rs2278075",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID35559044_Liu2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Introduction attributes a WWOX rs2222896 genotype effect on LDL-C in an offspring cohort to Johannsen et al., 2018.",
+    "snippet": "The correlation between the WWOX rs2222896AA genotype and LDL-C was two times that of the rs2222896AG or rs2222896 GG genotypes (Johannsen et al., 2018).",
+    "anchor": "Introduction, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35559044_Liu2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Reference 16, the Johannsen 2018 entry, is a case report of a WWOX SDR-domain missense variant with complete loss of WWOX protein in epileptic encephalopathy, not a lipid genetics study.",
+    "snippet": "A Novel Missense Variant in the SDR Domain of the WWOX Gene Leads to Complete Loss of WWOX Protein with Early-Onset Epileptic Encephalopathy and Severe Developmental Delay.",
+    "anchor": "Reference 16",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35559044_Liu2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Introduction attributes a WWOX rs2278075 genome-wide association (P 5.0e-9) with CVD to Joseph et al., 2017; reference 17 is an epidemiology review.",
+    "snippet": "Additionally, the WWOX rs2278075 SNP was associated with CVD (p = 5.0 × 10−9) (Joseph et al., 2017).",
+    "anchor": "Introduction, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35559044_Liu2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Reference 17 (Joseph 2017) is a review titled 'Reducing the Global Burden of Cardiovascular Disease, Part 1: The Epidemiology and Risk Factors'.",
+    "snippet": "Reducing the Global Burden of Cardiovascular Disease, Part 1: The Epidemiology and Risk Factors.",
+    "anchor": "Reference 17",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35559044_Liu2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Discussion cites Saez et al. 2010, the WWOX HDL association paper, for the claim that moderate drinking protects arteries.",
+    "snippet": "Many studies have reported that minimal or moderate drinking (≤1 drink/day for women, ≤ 1-2 drink/day for men) is beneficial to protect arteries (Saez et al., 2010; Simino et al., 2013; Sferra et al., 2020).",
+    "anchor": "Discussion, paragraph 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35559044_Liu2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The paper quotes 1000 Genomes CHB frequencies for rs2278075 of T 22.0 percent and says the Guangxi Han minor alleles are similar to CHB; the paper's own control T frequency is 14.6 percent (186 of 1276 chromosomes), the case groups 21.2 and 22.9 percent.",
+    "snippet": "rs2278075AA 68.3%, AT 19.5%, TT 12.2%, and T 22.0%",
+    "anchor": "Discussion, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35559044_Liu2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state that drug effects on lipids in cases cannot be excluded and that lipid-genotype associations could not be examined in the CAD and stroke groups.",
+    "snippet": "Finally, some CAD and IS patients were taking some drugs that may affect serum lipid profiles. Therefore, we could not determine the association between the SNPs and serum lipid levels in CAD and IS groups.",
+    "anchor": "Discussion, limitations paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35559044_Liu2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Deposit check: the authors' Table1.XLSX (1853 rows) reproduces the printed Table 2 genotype counts exactly for all six SNPs in all three groups (rs2278075: controls AA 464 AT 162 TT 12; CAD AA 386 AT 208 TT 28; stroke AA 353 AT 208 TT 32).",
+    "snippet": "COUNTS CAD rs2278075: A/A 386 A/T 208 T/T 28",
+    "anchor": "Derived aggregate of Table1.XLSX (script Table1 derivation, this reading)",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID35559044_Liu2022_supplement/Table1_aggregate_derivation.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Deposit check: in the CAD and stroke groups the genotype columns of Table1.XLSX are laid out in a few long contiguous blocks (rs2278075 in CAD: five runs), not in the mixed order of a patient-level table; the control rows are in a less ordered layout. Joint genotypes within a row therefore cannot be relied on for those two groups.",
+    "snippet": "RUNS CAD rs2278075: 5 runs; A/T x30, T/T x14, A/A x386, T/T x14, A/T x178",
+    "anchor": "Derived aggregate of Table1.XLSX, run-length encoding of the column in file order",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID35559044_Liu2022_supplement/Table1_aggregate_derivation.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Deposit check: the same block layout in the stroke group for rs3130685 (four runs).",
+    "snippet": "RUNS IS rs3130685: 4 runs; C/T x211, C/C x95, T/T x199, C/T x88",
+    "anchor": "Derived aggregate of Table1.XLSX, run-length encoding",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID35559044_Liu2022_supplement/Table1_aggregate_derivation.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Row-wise genotype-dose R-squared between the two EHBP1 SNPs computed from the deposit is 0.811 (controls), 0.941 (CAD) and 0.714 (stroke); the paper prints R-squared of 0.821, 0.938 and 0.690 for the same pair and groups.",
+    "snippet": "ROWWISE_DOSAGE_R2 CAD rs2710642 vs rs10496099: 0.941",
+    "anchor": "Derived aggregate of Table1.XLSX; paper values in Results, Associations Between Haplotypes and CAD/IS",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID35559044_Liu2022_supplement/Table1_aggregate_derivation.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Haplotype analysis: the paper prints R-squared for the EHBP1 pair in each group.",
+    "snippet": "There was strong LD between the EHBP1 rs2710642 and rs10496099 SNPs in the three groups (control, D' = 0.951 or R 2 = 0.821; CAD, D' = 1.000 or R 2 = 0.938; and IS, D' = 1.000 or R 2 = 0.690).",
+    "anchor": "Results, haplotypes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35559044_Liu2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PANEL READING, Figure 1 (lipid levels by genotype in controls, six SNP panels). Every one of the six panels carries asterisks over TC, TG, HDL-C, LDL-C and ApoA1/ApoB groups (significance marks over nearly all bar groups, ApoB unmarked), including the two WWOX panels (rs2222896 and rs2278075); y-axis 'Serum lipid levels' in mixed units on one axis; TG bars in the rs2710642 panel rise stepwise AA to GG.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1 six panels (EHBP1 rs2710642, TUBB rs3132584, WWOX rs2222896, EHBP1 rs10496099, TUBB rs3130685, WWOX rs2278075) with grouped bars TC, TG, HDL-C, LDL-C, ApoA1, ApoB, ApoA1/ApoB per genotype and asterisked brackets over most groups.",
+    "anchor": "Figure 1, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID35559044/fgene-13-843661-g001.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human controls, Guangxi Han, n=638",
+     "genotype": "six common SNPs",
+     "treatment": "none",
+     "comparator": "genotype groups",
+     "endpoint": "serum lipids, mixed units"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST search returned inEPMC Y, isOpenAccess Y, license cc by on 2026-10-19; fullTextXML returned HTTP 200 and the declared article_text artefact is that response byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+ }
+}

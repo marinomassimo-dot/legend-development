@@ -1,0 +1,409 @@
+{
+ "schema_version": 2,
+ "pmid": "40659031",
+ "doi": "10.1088/1741-2552/adef7f",
+ "receipt": "FTR-20261019-40659031-01",
+ "landing": [
+  "CC-20261019-SCIENTIST-B-G2-KD-PRIOR-01",
+  "metabolic_wave_20261019_scientist-b"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: the Europe PMC fullTextXML route returned the body and the PMC OA S3 bucket the figures."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not run: the reading was produced directly under the Scientist brief; a deepdive pass would duplicate the locators."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered: no consolidated baseline claim is narrowed, reversed or removed and no MAJOR change class is declared. Triples are listed in the commit candidate for a later blind audit."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 19,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-19: 'Joshi ND[au]' 19 (surname-initial, ambiguous); 'Joshi ND[au] AND WWOX' 0; 'Joshi SN[au] AND WWOX' 0.",
+  "research_type": "computational",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Computational neural-engineering group with a clinical epileptologist; a hypothesis-generating model, not an observation.",
+  "note": "Not a WWOX group; no WWOX token in the article."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "WWOX tokens in the JATS",
+    "route": "case-insensitive count over the persisted JATS, 2026-10-19",
+    "count": 0
+   }
+  ],
+  "note": "WWOX does not occur."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 109,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "<ref> elements counted in the JATS: 109.",
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-directed reference. The clinical complex I series cited for the mismatch was identified, not read."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "registry_records.py get --theme ketogenic; CLAIM 042",
+  "hits": 2,
+  "finding": "The paper is in no record. CLAIM 042 (three of five WOREE patients reported to improve on KD) has no mechanism attached; the Warburg-reversal rationale sits in the metabolism audit, not in a claim."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-19",
+  "route": "PubMed esummary 2026-10-19 for 40659031; JATS front matter carries is-retracted flag",
+  "result": "No retraction, correction or expression of concern found in the PubMed record or the JATS front matter.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 109,
+   "references_screened": 107,
+   "references_with_doi": 107,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID40659031_Joshi2025_PMC12288115.xml",
+   "sha256": "768c7edc6a5e772c017195a6e4a1ded0bb50cfd90427da1a2131c6928323ec57",
+   "kind": "article_text",
+   "note": "Europe PMC JATS for PMC12288115 (J Neural Eng 2025, CC BY), 236,912 bytes; abstract, introduction, methods, results, discussion, limitations, conclusions, Tables 1-4 and all figure legends present. 109 references. No supplementary-material element in the JATS.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12288115/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "768c7edc6a5e772c017195a6e4a1ded0bb50cfd90427da1a2131c6928323ec57"
+   }
+  },
+  {
+   "path": "files/figures/PMID40659031/jneadef7ff3.jpg",
+   "sha256": "3ceab58044807610d96846c49e2e2e1143f7344896c201db07ca223d9c164acb",
+   "kind": "figure",
+   "note": "Figure 3 ATP-generation rate and glucose-by-ketone phase plane, inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12288115.1/jneadef7ff3.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "3ceab58044807610d96846c49e2e2e1143f7344896c201db07ca223d9c164acb"
+   }
+  },
+  {
+   "path": "files/figures/PMID40659031/jneadef7ff5.jpg",
+   "sha256": "c60da6d2bf0c92ceb453e2eaeb411b0205ad9f8dedf503ec4962022f475903cf",
+   "kind": "figure",
+   "note": "Figure 5 membrane-potential traces for baseline, low glucose, low glucose with ketone, and ATP rate bars, inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12288115.1/jneadef7ff5.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "c60da6d2bf0c92ceb453e2eaeb411b0205ad9f8dedf503ec4962022f475903cf"
+   }
+  },
+  {
+   "path": "files/figures/PMID40659031/jneadef7ff9.jpg",
+   "sha256": "909c12c725bc84251f0e843cd2226ec23d22709bf2b34cc9c5d434b4d5a9709c",
+   "kind": "figure",
+   "note": "Figure 9 complex I deficiency ATP rate and rescue attempt, inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12288115.1/jneadef7ff9.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "909c12c725bc84251f0e843cd2226ec23d22709bf2b34cc9c5d434b4d5a9709c"
+   }
+  },
+  {
+   "path": "files/figures/PMID40659031/jneadef7ff1.jpg",
+   "sha256": "19a1a46eee1ac53f79366b667ac5a8f9b570240bfcbdef5e1da8ae95be6738e5",
+   "kind": "figure",
+   "note": "Figure 1, acquired and fingerprinted; not inspected as an image (legend read).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12288115.1/jneadef7ff1.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "19a1a46eee1ac53f79366b667ac5a8f9b570240bfcbdef5e1da8ae95be6738e5"
+   }
+  },
+  {
+   "path": "files/figures/PMID40659031/jneadef7ff2.jpg",
+   "sha256": "6df5b46ba3404d9375f5996b09be07c99a8a47ff0efbc63fd55f0f137a7ba3f1",
+   "kind": "figure",
+   "note": "Figure 2, acquired and fingerprinted; not inspected as an image (legend read).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12288115.1/jneadef7ff2.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "6df5b46ba3404d9375f5996b09be07c99a8a47ff0efbc63fd55f0f137a7ba3f1"
+   }
+  },
+  {
+   "path": "files/figures/PMID40659031/jneadef7ff4.jpg",
+   "sha256": "6b02af3181ec602b9f11b41cea3d49759ca25486feb6c1219c6af1791b098a6e",
+   "kind": "figure",
+   "note": "Figure 4, acquired and fingerprinted; not inspected as an image (legend read).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12288115.1/jneadef7ff4.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "6b02af3181ec602b9f11b41cea3d49759ca25486feb6c1219c6af1791b098a6e"
+   }
+  },
+  {
+   "path": "files/figures/PMID40659031/jneadef7ff6.jpg",
+   "sha256": "19ac0bfdbbad248e9640c487296d9b2d5a5c419c184048c6dd1299b84fc19e57",
+   "kind": "figure",
+   "note": "Figure 6, acquired and fingerprinted; not inspected as an image (legend read).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12288115.1/jneadef7ff6.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "19ac0bfdbbad248e9640c487296d9b2d5a5c419c184048c6dd1299b84fc19e57"
+   }
+  },
+  {
+   "path": "files/figures/PMID40659031/jneadef7ff7.jpg",
+   "sha256": "0e85683d6c2bfcf8334b67d4bd1c815e89d32f50d78b44fb60a195b51135b371",
+   "kind": "figure",
+   "note": "Figure 7, acquired and fingerprinted; not inspected as an image (legend read).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12288115.1/jneadef7ff7.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "0e85683d6c2bfcf8334b67d4bd1c815e89d32f50d78b44fb60a195b51135b371"
+   }
+  },
+  {
+   "path": "files/figures/PMID40659031/jneadef7ff8.jpg",
+   "sha256": "55d3454835750c624e7885c393c8166b1a741541fcd8076659e2ab418cf04d0f",
+   "kind": "figure",
+   "note": "Figure 8, acquired and fingerprinted; not inspected as an image (legend read).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12288115.1/jneadef7ff8.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "55d3454835750c624e7885c393c8166b1a741541fcd8076659e2ab418cf04d0f"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC JATS, 236,912 bytes; whole article incl. tables and figure legends.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "COVERAGE: whole article read; Figures 3, 5 and 9 inspected as images, Figures 1, 2, 4, 6, 7, 8 acquired and fingerprinted but only their legends read, so figures is captions_only and the receipt is partial. SUPPLEMENTARY UNAVAILABLE: the model reaction list is declared in supplementary materials that no surface reached (JATS carries no supplementary-material element; the PMC OA bucket lists none); the raw simulation outputs are about 50 MATLAB files of roughly 350 MB each in a Harvard Dataverse deposit (listed through the Dataverse API, not downloaded). A model has no data to check, so the negative findings rest on the stated assumptions and the paper's own clinical comparisons.",
+  "entries": [
+   {
+    "proposition": "DESIGN: a deterministic ODE model (159 reactions) of ONE excitatory tripartite synapse; no animal, cell, patient or WWOX datum.",
+    "snippet": "a system of ordinary differential equations representing 159 reactions",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40659031_Joshi2025_PMC12288115.xml",
+    "anchor": "Methods 2.1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The network drive parameters were fixed in every simulation, so the only manipulated inputs are substrate concentrations and single enzyme or transporter rate constants.",
+    "snippet": "The critical parameters ν, ϵ, and ζ were NOT varied for any of the simulations in this work",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40659031_Joshi2025_PMC12288115.xml",
+    "anchor": "Methods 2.1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The pathological readout (Regime E, brief UP/DOWN bursts) is a speculated correlate of seizure activity, not a measured one.",
+    "snippet": "It was speculated that the pattern of rapid bursts of firing and quiescence could represent the synaptic-level equivalent of epileptiform electrical activity",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40659031_Joshi2025_PMC12288115.xml",
+    "anchor": "Methods 2.3",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Glucose threshold for the regime change: below 3.8 mM at normal ketone, below 3.1 mM with 2 mM beta-hydroxybutyrate.",
+    "snippet": "the tripartite synapse system transitioned from Regime D into Regime E at a glucose concentration below 3.8 mM",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40659031_Joshi2025_PMC12288115.xml",
+    "anchor": "Results 3.1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 3a: the whole regime change is a swing of the presynaptic ATP generation rate across a dashed threshold near 1.17 x 10^6 molecules per second, against about 1.34 at baseline glucose 5 mM, a difference of roughly 13 percent. Figure 3b: the boundary is a fitted straight line y = -2.6379x + 10.327 (R squared 0.9905) through about seven points in the glucose-ketone plane.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3, (a) ATP generation rate (10^6 molecules/s) against blood glucose 2.5 to 5 mM for beta-hydroxybutyrate 0.25 mM (blue) and 2 mM (red) with a dashed Regime D/E line; (b) beta-hydroxybutyrate against glucose with Regime D and E arrows, ketogenic-diet and normal-diet markers and a fitted line.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40659031/jneadef7ff3.jpg",
+    "anchor": "Figure 3a and 3b, native JPEG",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "in silico tripartite synapse model",
+     "endpoint": "ATP generation rate; regime"
+    }
+   },
+   {
+    "proposition": "Figure 5: low glucose (3.5 mM) with normal ketone turns long UP/DOWN states into short bursts; 2 mM ketone restores them; panel d shows the ATP rate bars (baseline about 1.34, low glucose about 1.12, low glucose with high ketone about 1.24) around the same dashed threshold. The rescue is a return across a threshold, not a quantified seizure measure.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5, (a) baseline membrane potential trace with UP and DOWN states, (b) low glucose with brief bursts, (c) low glucose with 2 mM beta-hydroxybutyrate, (d) bar chart of ATP generation rate for baseline, low glucose normal beta-hydroxybutyrate, low glucose high beta-hydroxybutyrate with dashed Regime D/E line.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40659031/jneadef7ff5.jpg",
+    "anchor": "Figure 5a-d, native JPEG",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "in silico tripartite synapse model",
+     "endpoint": "membrane potential trace; ATP generation rate"
+    }
+   },
+   {
+    "proposition": "Pyruvate dehydrogenase deficiency is rescued only when ketone reaches 4 mM; 2 mM, the ketogenic-diet level the paper uses elsewhere, does not rescue it.",
+    "snippet": "the system was not rescued by a β-hydroxybutyrate of 2 mM and stayed in Regime E for this concentration of ketone",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40659031_Joshi2025_PMC12288115.xml",
+    "anchor": "Results 3.4",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "MCT1 deficiency is not rescued even at a ketone concentration well above the ketogenic-diet range.",
+    "snippet": "This was not rescued even with a concentration of β-hydroxybutyrate significantly above that typically seen in the ketogenic diet",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40659031_Joshi2025_PMC12288115.xml",
+    "anchor": "Results 3.5",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Complex I at 55 percent of baseline flips the regime and is not rescued by ketone up to 10 mM.",
+    "snippet": "At 55% of the baseline reaction rate constants for mitochondrial complex I",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40659031_Joshi2025_PMC12288115.xml",
+    "anchor": "Results 3.6",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 9b: with complex I at 55 percent, the bars for 3.5 mM glucose with 2, 4 and 10 mM ketone (about 1.11, 1.14, 1.17) end at or just under the dashed threshold; the regime call for 10 mM rests on a bar that touches the line. Figure 9a: the 55 percent value is the point where the curve first meets the threshold.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 9, (a) ATP generation rate against mitochondrial complex I activity 100 to 50 percent of baseline with dashed Regime D/E line; (b) bars for baseline and for complex I at 55 percent under glucose 5 or 3.5 mM and beta-hydroxybutyrate 0.25, 2, 4, 10 mM.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40659031/jneadef7ff9.jpg",
+    "anchor": "Figure 9a and 9b, native JPEG",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "in silico tripartite synapse model",
+     "endpoint": "ATP generation rate"
+    }
+   },
+   {
+    "proposition": "THE MODEL DISAGREES WITH THE CLINIC on the one case where it can be checked: a clinical series reports ketogenic diet effective in all eight studied complex I patients, whereas the model predicts no rescue; the authors explain this by gene-expression and biogenesis changes absent from the model.",
+    "snippet": "another group found that the ketogenic diet was effective for all of their studied patients with complex I deficiency",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40659031_Joshi2025_PMC12288115.xml",
+    "anchor": "Discussion 4.2",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The model assumes the astrocyte-neuron lactate shuttle, so the MCT1 and lactate results depend on that contested hypothesis.",
+    "snippet": "Our model assumes the astrocyte neuronal lactate shuttle hypothesis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40659031_Joshi2025_PMC12288115.xml",
+    "anchor": "Discussion 4.2",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Kinetic parameters of a reduced model are not those of real systems, so thresholds are trends only; the authors say a real system may need 50 percent MCT1 loss where the model needs 99.5.",
+    "snippet": "the kinetic parameters (such as reaction rate parameters) that would result in realistic model behavior cannot be expected to be the same as those that are measured in real systems",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40659031_Joshi2025_PMC12288115.xml",
+    "anchor": "Discussion 4.5 Limitations",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Glucose and ketone are held constant as boundary conditions, which is non-physiological.",
+    "snippet": "the concentration of glucose is held to be a boundary condition",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40659031_Joshi2025_PMC12288115.xml",
+    "anchor": "Discussion 4.5 Limitations",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Competing mechanisms (gene expression, inflammation, astrocyte function, circadian, microbiota) are discussed but are NOT in the model; the model can therefore show that energy repletion is sufficient in silico, not that it is primary.",
+    "snippet": "It is also likely the case that the ketogenic diet has multiple diverse effects on the brain and body",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40659031_Joshi2025_PMC12288115.xml",
+    "anchor": "Discussion 4.3",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state the energy hypothesis is a strong candidate and that other mechanisms are not excluded.",
+    "snippet": "We do not exclude other proposed mechanisms",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40659031_Joshi2025_PMC12288115.xml",
+    "anchor": "Conclusions",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The study states it is computational and proposes in vivo experiments; none has been done.",
+    "snippet": "This remains a computational study",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40659031_Joshi2025_PMC12288115.xml",
+    "anchor": "Discussion 4.6 Future directions",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A serum beta-hydroxybutyrate above about 4 mM is cited as needed for efficacy, double the 2 mM used as the ketogenic-diet value for most simulations.",
+    "snippet": "serum β-hydroxybutyrate levels need to be above approximately 4 mM for the ketogenic diet to be effective",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40659031_Joshi2025_PMC12288115.xml",
+    "anchor": "Discussion 4.4",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}

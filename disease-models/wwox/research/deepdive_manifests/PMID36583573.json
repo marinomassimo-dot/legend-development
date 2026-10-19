@@ -1,0 +1,496 @@
+{
+ "schema_version": 2,
+ "pmid": "36583573",
+ "doi": "10.1002/glia.24329",
+ "receipt": "FTR-20261019-36583573-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID36583573.md",
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-a.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-A-LIPID-04.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was selected and deduplicated by the Orchestrator's selector against the registries, queue and receipt ledger (selection file, method step 3); the per-paper M0 packet re-checked it."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Discovery leads, if any, are routed through the commit candidate and the analysis note; no cumulative discovery squeeze was warranted by this paper."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "A Sydney neurolipid and neuroimmunology consortium (lipid mass-spectrometry, cytometry and electron-microscopy cores, from the contributions). Primary for CerS2 in myelinating cells; WWOX is absent. Observation (lipidomics, EM, cytometry, three or six animals per group) weighed above the microglial-trigger interpretation, which the authors present as untested."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "ceramide synthase 2 AND (myelin OR oligodendrocyte)",
+    "count": 21,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "myelin-responsive microglia OR (CD11c AND microglia AND myelin)",
+    "count": 36,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts; the second query is a broad microglial-marker search, not a defined literature."
+ },
+ "multihop": {
+  "references_enumerated": 63,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "63 references enumerated from the XML. None concerns WWOX (term search over the body: zero occurrences)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 36583573 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the dossier."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 63,
+   "references_screened": 61,
+   "references_with_doi": 61,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  },
+  "result": "Checked 2026-10-19 via PubMed esummary/efetch for PMID 36583573: publication types ['Journal Article', \"Research Support, Non-U.S. Gov't\"]; corrections/retraction markers in the efetch record: none."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID36583573_Teo2023_PMC.xml",
+   "sha256": "cb63c3507edc0219310f8ecec21d95fb3af5e7d590c41095462ecc6c36d97241",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC10952316: abstract, body, Tables 1-2, eight figure legends, 63 references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10952316/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID36583573/GLIA-71-1120-g001.jpg",
+   "sha256": "debeb2104fa120429392f17de6295da58526ca7d7ee3e5f884fc6f1136c8d4a7",
+   "kind": "figure",
+   "note": "Image file g001 from the Europe PMC supplementaryFiles container (g001 Figure 8, g002 graphical abstract, g003 Figure 1, g004 Figure 2, g005 Figure 3, g009 Figure 4, g007 Figure 5, g008 Figure 6, g006 Figure 7), inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10952316/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID36583573/GLIA-71-1120-g002.jpg",
+   "sha256": "c6580056968e02c6d270415d49b376c5cb5ed35ae79c2d221e9787539b150fb6",
+   "kind": "figure",
+   "note": "Image file g002 from the Europe PMC supplementaryFiles container (g001 Figure 8, g002 graphical abstract, g003 Figure 1, g004 Figure 2, g005 Figure 3, g009 Figure 4, g007 Figure 5, g008 Figure 6, g006 Figure 7), inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10952316/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID36583573/GLIA-71-1120-g003.jpg",
+   "sha256": "3b2cf168d249d84a241675f0da7a79c411e1bd5aa8fa37071d77f49c752ea0bb",
+   "kind": "figure",
+   "note": "Image file g003 from the Europe PMC supplementaryFiles container (g001 Figure 8, g002 graphical abstract, g003 Figure 1, g004 Figure 2, g005 Figure 3, g009 Figure 4, g007 Figure 5, g008 Figure 6, g006 Figure 7), inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10952316/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID36583573/GLIA-71-1120-g004.jpg",
+   "sha256": "3fb349565e67562d91e22056bbc40157466520182ef13fbe5f18afea0b7e5287",
+   "kind": "figure",
+   "note": "Image file g004 from the Europe PMC supplementaryFiles container (g001 Figure 8, g002 graphical abstract, g003 Figure 1, g004 Figure 2, g005 Figure 3, g009 Figure 4, g007 Figure 5, g008 Figure 6, g006 Figure 7), inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10952316/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID36583573/GLIA-71-1120-g005.jpg",
+   "sha256": "a1c1cae0b33a9607c77b9be8fbadcea11ef17d8f65bfdf46d458e50dc8c55787",
+   "kind": "figure",
+   "note": "Image file g005 from the Europe PMC supplementaryFiles container (g001 Figure 8, g002 graphical abstract, g003 Figure 1, g004 Figure 2, g005 Figure 3, g009 Figure 4, g007 Figure 5, g008 Figure 6, g006 Figure 7), inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10952316/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID36583573/GLIA-71-1120-g006.jpg",
+   "sha256": "bf99aab5cd8a97ae267cda8b5674e2ca1d918c404057209c8011cff3b057b775",
+   "kind": "figure",
+   "note": "Image file g006 from the Europe PMC supplementaryFiles container (g001 Figure 8, g002 graphical abstract, g003 Figure 1, g004 Figure 2, g005 Figure 3, g009 Figure 4, g007 Figure 5, g008 Figure 6, g006 Figure 7), inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10952316/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID36583573/GLIA-71-1120-g007.jpg",
+   "sha256": "23026cc11b91c6b4ede94da81f2b99b5655c13082b33571a8a627ae5c0de2302",
+   "kind": "figure",
+   "note": "Image file g007 from the Europe PMC supplementaryFiles container (g001 Figure 8, g002 graphical abstract, g003 Figure 1, g004 Figure 2, g005 Figure 3, g009 Figure 4, g007 Figure 5, g008 Figure 6, g006 Figure 7), inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10952316/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID36583573/GLIA-71-1120-g008.jpg",
+   "sha256": "40b8e5ebd93f1f029f4c4615bf318bf6aaec10ce3f8a123f8078c51edc757bc6",
+   "kind": "figure",
+   "note": "Image file g008 from the Europe PMC supplementaryFiles container (g001 Figure 8, g002 graphical abstract, g003 Figure 1, g004 Figure 2, g005 Figure 3, g009 Figure 4, g007 Figure 5, g008 Figure 6, g006 Figure 7), inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10952316/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID36583573/GLIA-71-1120-g009.jpg",
+   "sha256": "80820d44258f6664d0cfcd068736804f243a304ce87d1e70f5756d7ea00726a2",
+   "kind": "figure",
+   "note": "Image file g009 from the Europe PMC supplementaryFiles container (g001 Figure 8, g002 graphical abstract, g003 Figure 1, g004 Figure 2, g005 Figure 3, g009 Figure 4, g007 Figure 5, g008 Figure 6, g006 Figure 7), inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10952316/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID36583573_Teo2023_supplement/GLIA-71-1120-s001.xlsx",
+   "sha256": "f16461ca38b8827c61dce5c9c2a45a38d3c331d5e7e5254a54a02042f9118864",
+   "kind": "supplement_binary",
+   "note": "Supplementary Table 1 (per-animal lipid values; 531 labelled rows).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10952316/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID36583573_Teo2023_supplement/GLIA-71-1120-s002.docx",
+   "sha256": "dc19a2873cb3bc57211a0ba4b07585287b68acbadd60e7fba773054a75284ae0",
+   "kind": "supplement_text",
+   "note": "Supplementary Figures 1-6 (Word, legends plus six embedded images, TIFF or JPEG); the embedded images were extracted with zipfile, converted to PNG with ImageMagick and inspected as a montage.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10952316/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID36583573_Teo2023_supplement/TableS1_check_derivation.txt",
+   "sha256": "91490d065f3dda20f5b9076e5ab3f1b16611fd1b337c4b9bcb9b619b64b3d484",
+   "kind": "supplement_text",
+   "note": "Aggregate derivation from Supplementary Table 1 (four lipid rows, per-group means) by a short Python script.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID36583573_Teo2023_supplement/GLIA-71-1120-s001.xlsx",
+    "extractor": {
+     "name": "python3 zipfile+re script (derive_teo2023.py, scratchpad)",
+     "version": "3.12",
+     "call": "read sharedStrings and sheet1 xml; mean of columns 1-6 (fl/fl) and 7-13 (dO/dO) for four named lipids; row count",
+     "join": "\\n"
+    },
+    "acquired_on": "2026-10-19",
+    "user_agent_policy": "none"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The model deletes CerS2 (exons 2-11 flanked) in myelinating cells with CNP-Cre; WWOX is not in the paper.",
+    "snippet": "To delete CerS2 in myelinating cells, mice homozygous for the floxed CerS2 allele (CerS2fl/fl) were bred to mice with heterozygous expression of Cre recombinase from the CNP gene locus (CNP‐Cre) (Lappe‐Siefke et al., 2003)",
+    "anchor": "Methods, conditional knockout mice",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36583573_Teo2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Untargeted brain lipidomics at 6 weeks: 532 lipids quantified, 107 differing at q below 0.01, led by HexCer and sulfatide species with chains over 20 carbons falling and C16-C18 HexCer rising.",
+    "snippet": "A total of 532 phospholipids, sphingolipids, and neutral lipids were identified, based on both precursor and product ions, and quantified relative to internal standards (Supplementary Table 1). Of these, 20% (107) were differentially expressed between CerS2fl/fl and CerS2ΔO/ΔO mice at a false discovery rate‐adjusted p value of .01",
+    "anchor": "Results, myelin lipid acyl chain length",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36583573_Teo2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 2: ST(d18:1_24:1) is 49,891 in controls and 1,288 in the knockout (units are those of the untargeted run); the C18 hexosylceramide rises about 3.9-fold.",
+    "snippet": "ST(d18:1_24:1)+H 49,891.33 18,253.91 1287.83 441.15 17.39 2.40E−09 5.05E−07",
+    "anchor": "Table 2, row 2",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID36583573_Teo2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 2: Hex1Cer(d18:1_18:0) rises from 3,213.54 to 12,544.07.",
+    "snippet": "Hex1Cer(d18:1_18:0)+H 3213.54 2191.03 12,544.07 4467.91 6.07 8.04E−05 5.61E−04",
+    "anchor": "Table 2",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID36583573_Teo2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The deposited Table S1 reproduces Table 2 for the lipid ST(d18:1_24:1): means 49,891.33 (6 controls) and 1,287.83 (7 knockouts).",
+    "snippet": "ST(d18:1_24:1)+H: fl/fl n=6 mean 49891.33 | dO/dO n=7 mean 1287.83",
+    "anchor": "Supplementary Table 1, derived by script from the deposited xlsx",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID36583573_Teo2023_supplement/TableS1_check_derivation.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In purified myelin the very-long-chain species fall and C16-C18 species rise, and totals of HexCer, sulfatide and ceramide rise while total sphingomyelin is unchanged: chain length, not sphingolipid amount, is the change.",
+    "snippet": "Increased C16‐C18 variants produced an increase in total HexCer, ST and ceramide in myelin from CerS2ΔO/ΔO relative to CerS2fl/fl mice, despite reduced C22‐C24 variants (Figure 3f–h), whereas total SM was not significantly different (Figure 3i).",
+    "anchor": "Results, myelin lipid acyl chain length",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36583573_Teo2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Myelin cholesterol content is unchanged between genotypes.",
+    "snippet": "Myelin cholesterol content did not differ between CerS2fl/fl and CerS2ΔO/ΔO mice (1577 ± 202 vs. 1616 ± 140 nmoles/mg protein), and sphingolipid levels in the liver did not differ between the two genotypes (Figure 3k–n).",
+    "anchor": "Results, myelin lipid acyl chain length",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36583573_Teo2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The increased C18 hexosylceramide is galactosylceramide (HILIC separation), made by oligodendrocytes.",
+    "snippet": "Using hydrophilic interaction (HILIC) chromatography we confirmed that the increased C18 HexCer content of both brain homogenates and purified myelin was GalCer, not GluCer.",
+    "anchor": "Results, myelin lipid acyl chain length",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36583573_Teo2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Death starts at 14-16 weeks and affects 80 percent of the knockouts by 22 weeks; spontaneous tonic seizures were seen.",
+    "snippet": "In our initial characterization of CerS2ΔO/ΔO mice, sudden, unexpected deaths occurred, starting from 14–16 weeks of age and affecting 80% of the mice by 22 weeks (Figure 4a). Spontaneous tonic seizures were also observed in CerS2ΔO/ΔO mice.",
+    "anchor": "Results, myelin degeneration and early lethality",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36583573_Teo2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Myelin loss and protein loss are absent at 6 weeks (except a small PLP reduction) and pronounced at 16 weeks.",
+    "snippet": "Myelin staining (Figure 4d) and protein levels (Figure 4e,f) were not reduced in CerS2ΔO/ΔO relative to CerS2fl/fl mice at 6 weeks of age, apart from a small reduction in total PLP content.",
+    "anchor": "Results, myelin degeneration and early lethality",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36583573_Teo2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Heterozygous deletion in oligodendrocytes (dO/+) causes no myelin loss and a subtle balance-beam deficit only.",
+    "snippet": "No discernible loss of myelin (Figure 4m) or myelin protein markers (Figure 4n,o) was observed in 16‐week‐old mice heterozygous for CerS2 deletion in oligodendrocytes (CerS2ΔO/+).",
+    "anchor": "Results, myelin degeneration and early lethality",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36583573_Teo2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "At 6 weeks electron microscopy shows normal-appearing myelin but a lower percentage of myelinated axons and a higher g-ratio, three mice per group.",
+    "snippet": "However, quantitative analysis revealed a reduction in the percentage of myelinated axons (Figure 5c). Smaller‐caliber axons < 0.5 μm were particularly affected (Figure 5d).",
+    "anchor": "Results, reduced myelin thickness",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36583573_Teo2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Mature oligodendrocyte density is unchanged at 6 and 10 weeks and reduced by 33 percent (corpus callosum) and 56 percent (striatum) at 16 weeks.",
+    "snippet": "By 16 weeks, mature oligodendrocyte density was 33% lower in the corpus callosum and 56% lower in the striatum of CerS2ΔO/ΔO mice, although unchanged in the cerebellum.",
+    "anchor": "Results, gliosis and axon stress",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36583573_Teo2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A distinct microglial population (myelin-responsive microglia, TMEM119 and P2RY12 low, CD68, CD11c, MHC-II high) is about four-fold more abundant at 6 weeks and eight-fold at 10 weeks, from three mice per group.",
+    "snippet": "and was approximately 4‐fold more abundant in 6‐week‐old CerS2ΔO/ΔO compared to CerS2fl/fl mice, increasing to 8‐fold in 10‐week‐old CerS2ΔO/ΔO mice",
+    "anchor": "Results, phagocytic microglial population",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36583573_Teo2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "There was no lymphocyte infiltration and no change in monocyte, macrophage, T, B or NK cell numbers; a modest neutrophil increase was seen.",
+    "snippet": "We observed no significant lymphocyte infiltration in the brains of 6W or 10W CerS2ΔO/ΔO mice that might be suggestive of autoimmunity.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36583573_Teo2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Increased C16-C18 sphingolipid is attributed by the authors to higher dihydrosphingosine substrate, not to increased CerS1 or CerS6 protein; the CerS1 and CerS5 antibodies could not be validated.",
+    "snippet": "however we were unable to reliably identify a band at the expected size with one commercial CerS1 and two commercial CerS5 antibodies.",
+    "anchor": "Results, myelin lipid acyl chain length",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36583573_Teo2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state that earlier CerS2-null reports of HexCer loss reflected older white matter and that chain length, not GalCer and sulfatide loss, is sufficient to destabilise myelin; TREM2 sensing and the denatured-MBP epitope are named as untested possible triggers.",
+    "snippet": "Myelin phagocytosis by microglia can be initiated by interaction of the receptor TREM2 with myelin lipids such as ST and SM, when myelin or cellular debris is present",
+    "anchor": "Discussion, paragraph 9",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36583573_Teo2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The cause of the sudden deaths was not determined.",
+    "snippet": "Death in CerS2ΔO/ΔO mice was sudden and unexpected. This necessitated modification of our ethics protocol such that CerS2ΔO/ΔO mice were only kept up to 4 months of age, and we were unable to determine the exact cause of death.",
+    "anchor": "Discussion, paragraph 8",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36583573_Teo2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PANEL READING, Figure 3a-j. 3a volcano of 6 control versus 7 knockout brain lipidomes with more than 100 species past the q line; 3d-e HexCer and sulfatide species with C22-C24 chains fall by roughly ten- to thirty-fold (log axis, triple asterisks) while C16:0, C18:0 and C18:0-OH species rise; 3f-h totals of HexCer, ceramide and sulfatide are higher in the knockout (single and double asterisks), 3i total SM unchanged, 3j dihydrosphingosine (d18:0) about ten-fold higher.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3 panels a-n: volcano plot; ceramide, SM, HexCer, ST species scatter plots on log axes with control circles and knockout open squares; total HexCer, ceramide, ST bars with asterisks; SM total ns; sphingosine d18:0 about 0.06 vs 1.1 nmol/mg.",
+    "anchor": "Figure 3, read at native resolution (file g005)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID36583573/GLIA-71-1120-g005.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "mouse conditional knockout of CerS2 in myelinating cells (CNP-Cre) on C57BL/6J",
+     "genotype": "CerS2 fl/fl with CNP-Cre (dO/dO) versus fl/fl littermates; dO/+ heterozygotes",
+     "treatment": "none",
+     "comparator": "fl/fl littermates",
+     "endpoint": "as stated per panel"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 5c-e. Percent myelinated axons about 79 (control) versus 66 (knockout), mean g-ratio about 0.72 versus 0.81, three mice per group, one or two asterisks; axon diameter distribution (5g-h) unchanged.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 5c dot plot 'myelinated axons (%)' fl/fl about 79 vs dO/dO about 66 with one asterisk; Fig 5e mean g-ratio 0.72 vs 0.81 two asterisks; 5g-h overlapping axon-diameter curves.",
+    "anchor": "Figure 5c-h, read at native resolution (file g007)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID36583573/GLIA-71-1120-g007.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "mouse conditional knockout of CerS2 in myelinating cells (CNP-Cre) on C57BL/6J",
+     "genotype": "CerS2 fl/fl with CNP-Cre (dO/dO) versus fl/fl littermates; dO/+ heterozygotes",
+     "treatment": "none",
+     "comparator": "fl/fl littermates",
+     "endpoint": "as stated per panel"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 8a-c. Whole-brain counts show equal microglia and a bar for neutrophils with one asterisk; in 8c the MRM subset is about 2x10^4 per brain in 6-week knockouts and about 4x10^4 in 10-week knockouts, near 0.5x10^4 in controls, three mice per group.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 8a cells per brain for microglia, neutrophils, BAMs, monocytes, T, NK, B cells; Fig 8c MRM, CD86- and CD86+ microglia counts per brain with 6W and 10W controls and knockouts.",
+    "anchor": "Figure 8a-c, read at native resolution (file g001)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID36583573/GLIA-71-1120-g001.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "mouse conditional knockout of CerS2 in myelinating cells (CNP-Cre) on C57BL/6J",
+     "genotype": "CerS2 fl/fl with CNP-Cre (dO/dO) versus fl/fl littermates; dO/+ heterozygotes",
+     "treatment": "none",
+     "comparator": "fl/fl littermates",
+     "endpoint": "as stated per panel"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST search returned inEPMC Y, isOpenAccess Y, license cc by-nc-nd on 2026-10-19; fullTextXML returned HTTP 200 and the declared article_text artefact is that response byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+ }
+}

@@ -1,0 +1,43 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-21444760-01",
+ "study_id": {
+  "pmid": "21444760",
+  "doi": "10.1194/jlr.M009175"
+ },
+ "analysis_at": "2026-10-19T18:09:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-a (Scientist A), metabolic batch 2026-10-19 group G1, task METAB-G1-A-20261019 on branch task/METAB-G1-A-20261019, dispatched by the Orchestrator; context_policy QUESTION_DRIVEN. Route: PMC article page HTML (plain article URL; Europe PMC fullTextXML HTTP 500, efetch abstract only, PMC pdf and Europe PMC render interstitials), four figure JPEGs from the PMC blob store, supplementary Word tables S1-S14 and Supplemental Figure S1 through pmc_pow_fetch.py; the Word tables were read through a GNU strings derivation sliced to S4, S10 and S12 for the declared surface; Figures 1-4 and the supplemental figure inspected as images; one sentence of the cross-referenced Aqeilan 2007 paper checked on its rendered page 4. Locators captured into the deep-dive manifest while the document was open and verified by deepdive_manifest.py --verify-artifacts --require-current-schema. Prepared as a staged JSON for the Orchestrator and was not appended at preparation time (the Orchestrator records staged receipts in event-ID order).",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID21444760_Leduc2011_PMC.html",
+ "source_fingerprint": "9e19e0ada61d7e6077bf6f4f4eaf043dd113f0f22e8c18183ef5528fb51ce427",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "read",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID21444760.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID21444760.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-A-LIPID-01.md",
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-a.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "manifest",
+  "Figures 1-4 inspected as images; Supplemental Figure S1 as a rendered page",
+  "Supplemental Tables S4-S7, S10-S12 and S14 read; S1-S3, S8, S9, S13 skimmed by header and Wwox-term count (no Wwox rows in S1, S2, S5, S6, S8, S9, S13, S14; S3 carries the Wwox qPCR primers)",
+  "One sentence of the cited Aqeilan 2007 paper verified on its rendered page 4 (text layer unusable: no ToUnicode map)"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

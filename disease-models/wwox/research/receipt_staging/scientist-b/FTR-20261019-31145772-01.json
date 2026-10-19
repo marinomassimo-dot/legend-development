@@ -1,0 +1,41 @@
+{
+ "analysis_at": "2026-10-19T14:20:00Z",
+ "event_at": "2026-10-19T14:20:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "not_present"
+ },
+ "event_id": "FTR-20261019-31145772-01",
+ "evidence_basis": [
+  "Whole PDF text layer read; Figure 1 inspected as an image on a 130 dpi page render; Tables 1-6 read from the text layer.",
+  "IDENTITY FINDING: the PubMed record for this PMID joins the title and abstract of the 2019 Jamaspishvili article (DOI 10.18388/abp.2018_2632, Acta Biochim Pol 66:159-165) with the authors, DOI and page range of a 2021 Permana article. The DOI recorded in this receipt is the one PubMed carries; the artifact is the article under DOI 10.18388/abp.2018_2632. An identity_correction may be warranted; that decision is the Orchestrator's.",
+  "FIND: WWOX rs17797882 is NOT associated with T2DM here (adjusted OR 1.054, p 0.541); the trait associations (HOMA-beta, TG, HDL-C, p 0.014 to 0.042) are in controls only, uncorrected for about 64 tests.",
+  "No supplement exists. References enumerated and screened for integrity, not read."
+ ],
+ "evidence_depth": "complete_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID31145772.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID31145772.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-B-G2-HUMAN-AXIS-01.md",
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-b.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "31691d5f21a76bbaed5c30ba9dacccbc6fe1084fa83ffde961c66a99db2d3264",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID31145772_Zhang2019_frontierspartnerships.pdf",
+ "study_id": {
+  "doi": "10.18388/abp.2020_5563",
+  "pmid": "31145772"
+ },
+ "workflow": "scientist-b, metabolic batch 2026-10-19 group G2, task branch task/METAB-G2-B-20261019; context_policy SOURCE_FIRST. Route: publisher PDF reached through the DOI redirect (find-fulltext cascade; first attempt retrieved a different article and was discarded, the true DOI was found through Crossref), text layer derived with PyMuPDF 1.28.2, page 6 rendered at 130 dpi and inspected; locators captured into the manifest and verified by deepdive_manifest.py --verify-artifacts --require-current-schema. Prepared as a JSON file for the integrator and was not appended at preparation time."
+}

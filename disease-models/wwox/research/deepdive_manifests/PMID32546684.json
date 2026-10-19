@@ -1,0 +1,196 @@
+{
+ "schema_version": 2,
+ "pmid": "32546684",
+ "doi": "10.1038/s41398-020-00868-5",
+ "pmcid": "PMC7297728",
+ "receipt": "FTR-20261019-32546684-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the batch selection file's abstract-level 'why it matters' line and its per-theme summary of what the repository holds (GABA/vigabatrin modelled; no dopamine, catecholamine, adrenal, serotonin text). No registry record was opened before the first pass.",
+ "landing": [
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/metabolic_batch_selection_20261019.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS XML was available from Europe PMC REST on the first request; no cascade was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline by the Scientist; the reading is the deliverable."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The transfer verdict is in the analysis note; no cumulative-ledger lead is claimed from a comparator paper."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever is matured by this paper; forging a hypothesis from a comparator would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for the reference genotype."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or corroborated by this reading; the triples are exposed in the commit candidate/analysis note for a blind auditor."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "output_kind": "review",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "A narrative review of NRG1-ErbB4 signalling in cortical interneurons and a proposed (not tested) gene-therapy model for adult schizophrenia and ADHD. The system is cortical local circuits in mouse, not developmental epilepsy. WWOX does not appear. It is read for what ErbB4 does in interneurons and dopamine axons and for the direction of the proposed therapeutic manipulation, which is to reduce, not raise, ErbB4 signalling in PV+ cells."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (ERBB4 OR neuregulin)",
+    "count": 12,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "Counts are search hits only."
+ },
+ "multihop": {
+  "references_enumerated": 128,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "The article cites no WWOX-directed reference that this reading could identify; reference list counted, not read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 32546684 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "NO RECORD MATCHED in the seven registry surfaces at commit 718db84f; a statement about that query only."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 128,
+   "references_screened": 123,
+   "references_with_doi": 123,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 5
+   }
+  },
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction (checked 2026-10-19 by the Scientist via the dependency screen and the publisher record in the JATS front matter)."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID32546684_Shi2020_PMC.xml",
+   "sha256": "e7d5e690070d57427130b310dba95289566ccab75eb15b294b29d890e9725864",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7297728/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "e7d5e690070d57427130b310dba95289566ccab75eb15b294b29d890e9725864"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The review develops a gene-therapy model for adults with schizophrenia that has not been tested.",
+    "snippet": "Finally, we develop a model for treating adults with Sz via gene therapies targeting NRG1/ErbB4 signaling in local circuit interneurons.",
+    "anchor": "Introduction, last para",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32546684_Shi2020_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "ErbB4 is found predominantly in interneurons and also in dopamine neuron axons and oligodendrocytes in cortex and hippocampus.",
+    "snippet": "ErbB4 receptors are predominantly expressed in interneurons, but also present in axonal projections of dopamine (DA) neurons as well as in oligodendrocytes",
+    "anchor": "Section 'Crucial role of NRG1', para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32546684_Shi2020_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The NRG1 EGF-like domain peptide is reported to stimulate activity-dependent GABA release, with effects hinging on ErbB4 in PV+ neurons.",
+    "snippet": "a recombinant peptide corresponding to the EGF-like domain of NRG1 stimulates activity-dependent release of the inhibitory transmitter GABA",
+    "anchor": "Section 'Crucial role of NRG1', para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32546684_Shi2020_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The peptide is also reported to suppress seizure activity and long-term potentiation.",
+    "snippet": "The ability of the EGF-like domain peptide to suppress seizure activity and long-term synaptic potentiation (LTP) also implicates NRG1 in homeostatic mechanisms controlling excitatory and inhibitory (E/I) balance in neural circuits",
+    "anchor": "Section 'Crucial role of NRG1', para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32546684_Shi2020_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Dopamine neuron-specific ErbB4 knockout mice show a working-memory phenotype.",
+    "snippet": "Studies with DA neuron-specific ErbB4 knockout mice indicate that dopaminergic expression of this NRG1 receptor is important for working memory",
+    "anchor": "Section 'Crucial role of NRG1', para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32546684_Shi2020_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Reduced ErbB4 signalling in PV+ cells is proposed to reopen plasticity in adults, i.e. the proposed therapeutic direction is inhibition of ErbB4 in PV+ cells.",
+    "snippet": "functional recovery of cortical plasticity in adults can be achieved by blocking NRG1 stimulation of ErbB4 receptors in PV+ neurons",
+    "anchor": "Section 'Developing NRG1-based gene therapies'",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32546684_Shi2020_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Results on ErbB4 knockout and attention are inconsistent between groups.",
+    "snippet": "another group reported no deficits in the performance of the ErbB4 constitutive knockout mice (heart rescued) on the 5-CSRTT relative to controls",
+    "anchor": "Section 'Crucial role of NRG1', para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32546684_Shi2020_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "NRG1 gene variants do not meet genome-wide significance for schizophrenia risk.",
+    "snippet": "none meet genome wide significance for conferring an increased risk for the disorder",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32546684_Shi2020_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state that there is no clinical-trial data on stereotactic injection feasibility for psychiatric illness.",
+    "snippet": "Another concern is the absence of clinical trial data on the feasibility of stereotactic injection into brain of patients with Sz or other type of psychiatric illness.",
+    "anchor": "Concluding remarks, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32546684_Shi2020_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC7297728/fullTextXML returned HTTP 200 with a JATS body on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body or a table."
+ }
+}

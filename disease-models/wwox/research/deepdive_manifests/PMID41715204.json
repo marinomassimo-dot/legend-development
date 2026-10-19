@@ -1,0 +1,501 @@
+{
+ "schema_version": 2,
+ "pmid": "41715204",
+ "doi": "10.1186/s12967-026-07881-0",
+ "receipt": "FTR-20261019-41715204-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID41715204.md",
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-a.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-A-LIPID-04.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was selected and deduplicated by the Orchestrator's selector against the registries, queue and receipt ledger (selection file, method step 3); the per-paper M0 packet re-checked it."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Discovery leads, if any, are routed through the commit candidate and the analysis note; no cumulative discovery squeeze was warranted by this paper."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "A lipidomics group (Chinese Academy of Sciences institute plus a commercial lipidomics company, from the affiliations and a stated employee conflict). Primary for CerS2 and very-long-chain sphingolipid biology in mouse; WWOX is not in the paper. Observation (lipidomics, EM, culture counts) weighed above the mechanistic cascade, which rests on one cholesterol-depletion experiment and a lipid-extract rescue."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "ceramide synthase 2 AND (myelin OR oligodendrocyte)",
+    "count": 21,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (ceramide OR sphingolipid OR sphingomyelin)",
+    "count": 1,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts; the second query is the WWOX sphingolipid literature (the count shows how little exists)."
+ },
+ "multihop": {
+  "references_enumerated": 59,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "59 references enumerated from the XML. None concerns WWOX (WWOX occurs zero times in the article, term search over the body)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 41715204 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the dossier."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 59,
+   "references_screened": 58,
+   "references_with_doi": 58,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  },
+  "result": "Checked 2026-10-19 via PubMed esummary/efetch for PMID 41715204: publication types ['Journal Article', \"Research Support, Non-U.S. Gov't\"]; corrections/retraction markers in the efetch record: none."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41715204_Sun2026_PMC.xml",
+   "sha256": "fc8c26696b5ca08a41acc511499efa2f37eb3d7099770c7266d5a83c882cb7ef",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC13094249: abstract, body, seven figure legends, 59 references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13094249/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID41715204/12967_2026_7881_Fig1_HTML.jpg",
+   "sha256": "d3301d8c5d09fbeb11cc121ea4780d012de0a1c380baaac91318e25b14c82aec",
+   "kind": "figure",
+   "note": "Figure 1 JPEG from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13094249/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID41715204/12967_2026_7881_Fig2_HTML.jpg",
+   "sha256": "027e8a9f88bd5ace858df1be4fdbc47971fac2e2d2773c564958de7f859a564c",
+   "kind": "figure",
+   "note": "Figure 2 JPEG from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13094249/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID41715204/12967_2026_7881_Fig3_HTML.jpg",
+   "sha256": "577b62f73e23de0be1ab71503bbb4839d829d62ed9009a708d641c3f2dcd0d62",
+   "kind": "figure",
+   "note": "Figure 3 JPEG from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13094249/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID41715204/12967_2026_7881_Fig4_HTML.jpg",
+   "sha256": "3aaffe60672370e03c35148e448f9b7d840e7f8622798ebb249e990da6948ed0",
+   "kind": "figure",
+   "note": "Figure 4 JPEG from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13094249/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID41715204/12967_2026_7881_Fig5_HTML.jpg",
+   "sha256": "6f21c8bc71815dcd2df15ef89644cb3d1c2d560faa2d35608ff448bb2bf0c82c",
+   "kind": "figure",
+   "note": "Figure 5 JPEG from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13094249/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID41715204/12967_2026_7881_Fig6_HTML.jpg",
+   "sha256": "cb9e2cc36e073b252d2d35c9e9769dfff7f88a570bed0814430b9fefb9df28a4",
+   "kind": "figure",
+   "note": "Figure 6 JPEG from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13094249/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID41715204/12967_2026_7881_Fig7_HTML.jpg",
+   "sha256": "3aab43eada5edabfad00936bf5e1d506e1ee6d5e8f2443dc64fdac6ab2b35e98",
+   "kind": "figure",
+   "note": "Figure 7 JPEG from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13094249/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID41715204_Sun2026_supplement/12967_2026_7881_MOESM4_ESM.xlsx",
+   "sha256": "88d81b7cb699f050dce7562f6476946a6dae707c75983e5babf61bdd4c4b8b66",
+   "kind": "supplement_binary",
+   "note": "Deposited spreadsheet MOESM4: qPCR primers (titled Table S3).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13094249/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID41715204_Sun2026_supplement/12967_2026_7881_MOESM6_ESM.xlsx",
+   "sha256": "0b293bfb43ceedf6b0c4c477adfb1d8722663fe0b96b41c56ac6d0ec72ba5533",
+   "kind": "supplement_binary",
+   "note": "Deposited spreadsheet MOESM6: brain lipid levels, 7 control and 5 knockout columns (titled Table S1).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13094249/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID41715204_Sun2026_supplement/12967_2026_7881_MOESM8_ESM.xlsx",
+   "sha256": "9c51129ddb5750905efed66670b3d46736f9c43aa1b15a54fe0e708394345b4e",
+   "kind": "supplement_binary",
+   "note": "Deposited spreadsheet MOESM8: whole-brain proteomics LFQ, 4 knockout and 4 control (4485 rows).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13094249/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID41715204_Sun2026_supplement/12967_2026_7881_MOESM9_ESM.xlsx",
+   "sha256": "565a685e9de9f75c5091fb50a724cf50b89a447a5e35f009c8d3f2502dc73851",
+   "kind": "supplement_binary",
+   "note": "Deposited spreadsheet MOESM9: microdomain lipids, control and knockout.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13094249/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID41715204_Sun2026_supplement/Table3_myelin_proteins_derivation.txt",
+   "sha256": "631fb6b5688fa4bea619206c7f9f28d95ce374b0f74a559422683d35b493e18c",
+   "kind": "supplement_text",
+   "note": "Aggregate derivation from the deposited proteomics spreadsheet (per-gene LFQ values in file order and the CKO-over-WT ratio) and the title cells of four spreadsheets, by a short Python script; no other row reproduced.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID41715204_Sun2026_supplement/12967_2026_7881_MOESM8_ESM.xlsx",
+    "extractor": {
+     "name": "python3 zipfile+re script (derive_sun2026.py, scratchpad)",
+     "version": "3.12",
+     "call": "read sharedStrings and sheet1 xml; highest-coverage row per gene; mean of CKO columns over mean of WT columns; title cells read with the same reader for MOESM4, 6, 8, 9",
+     "join": "\\n"
+    },
+    "acquired_on": "2026-10-19",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID41715204_Sun2026_supplement/12967_2026_7881_MOESM10_ESM.mp4",
+   "sha256": "e1d166c0b23da28eb6998da4382d6cecd539b70a05616777618a28d298822dd0",
+   "kind": "supplement_binary",
+   "note": "Supplementary video 1 (44 MB; convulsion footage described in the text). Not inspected: no video decoder is available in this environment.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13094249/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The model is a conditional deletion of CerS2 (exons 2 to 9 flanked) with nestin-Cre (CNS) and olig-Cre (oligodendrocyte lineage) in mouse; CerS2 is a very-long-chain ceramide synthase. WWOX does not occur in the paper.",
+    "snippet": "Briefly, the flanking of the 2nd and 9th exon in CerS2 gene was inserted in two loxp sites.",
+    "anchor": "Methods, Animals",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41715204_Sun2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Brain lipidomics: very-long-chain (C22-C24) ceramides fall and C16-C18 ceramides rise in the CNS knockout.",
+    "snippet": "As expected, we observed significant reductions in the brain levels of CerS2 and its characteristic products – VLC ceramides (C22–C24), accompanied by compensatory increases in C16 and C18 ceramides (Fig. 1A and Supplementary Fig. 1B).",
+    "anchor": "Results, section 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41715204_Sun2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Convulsions start about 4 months and mortality rises from about 5 months in the CNS knockout; the phenotype is late compared with the Wwox-null mouse.",
+    "snippet": "Commencing from approximately 4 months of age, cKO-nestin mice developed convulsions (Supplementary Video 1), with visible damages in the corpus callosum (CC) (Supplementary Fig. 1D). Mortality increased sharply from around 5 months of age (Fig. 1B).",
+    "anchor": "Results, section 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41715204_Sun2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Behavioural testing of the CNS knockout shows spatial-memory impairment in the Y maze and no deficit in locomotion, anxiety, depressive-like behaviour or social dominance.",
+    "snippet": "cKO-nestin mice exhibited significant spatial memory impairment in the Y-maze test (Fig. 1C), with no apparent irregularities in locomotion, general anxiety, depressive-like symptoms or social dominance based on the rotarod, open field, forced swim and tube tests (Supplementary Fig. 1E-I).",
+    "anchor": "Results, section 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41715204_Sun2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Hypomyelination is already present at postnatal day 20 and is oligodendrocyte-lineage deletion sufficient (cKO-OL).",
+    "snippet": "EM images revealed significant reductions in both the number and thickness (g-ratio) of myelin sheaths in cKO-nestin mice as early as P20.",
+    "anchor": "Results, section 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41715204_Sun2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PANEL READING, Figure 2A-C. At P20 the plotted points are two for controls and four for the knockout in the myelin-sheath count (2B) and the g-ratio (2C), whereas the legend states n = 4 for Ctrl and n = 2 for cKO-nestin; the legend and the plotted group sizes are reversed, and one of the groups has two animals.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2B bars Ctrl and cKO-nestin (P20) with two black points and four red points, p = 0.038; Fig 2C g-ratio with two black and four red points, p = 0.007; legend text in the paper reads n = 4 for Ctrl, n = 2 for cKO-nestin mice.",
+    "anchor": "Figure 2A-C read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41715204/12967_2026_7881_Fig2_HTML.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "mouse CNS-conditional CerS2 knockout (nestin-Cre) and primary NPC, OPC, DRG cultures",
+     "genotype": "CerS2 flox/flox with nestin-Cre or olig-Cre versus littermate controls",
+     "treatment": "as stated per panel",
+     "comparator": "littermate controls",
+     "endpoint": "as stated per panel"
+    }
+   },
+   {
+    "proposition": "The legend states n = 4 for controls and n = 2 for the knockout in the P20 electron microscopy panels.",
+    "snippet": "(C) The g-ratio of myelin sheath in P20 mice corpus callosum, n = 4 for Ctrl, n = 2 for cKO-nestin mice.",
+    "anchor": "Figure 2 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41715204_Sun2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Lipid remodelling occurs without change in the mRNA of the relevant biosynthetic enzymes, and the authors read it as substrate-availability shift.",
+    "snippet": "Notably, the substantial remodeling of brain lipidomes occurred without alterations in the mRNA levels of key relevant biosynthetic enzymes, such as UGCG, B4GALT6 (Supplementary Fig. 3D).",
+    "anchor": "Results, section 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41715204_Sun2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PANEL READING, Figure 3A-E. Sulfatide, sphingomyelin, galactosylceramide and glucosylceramide species with C22-C25 chains are strongly reduced (in places by a factor of ten or more, triple asterisks), the C16-C18 species rise, and S1P d18:1 falls from about 0.0075 to about 0.0025 umol/g.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3A-E bar charts for SL, SM, GalCer, GluCer and S1P species, control black and cKO-nestin red, n = 7 and 5, with triple-asterisk reductions across the very-long-chain species and a few C16/C18 species higher.",
+    "anchor": "Figure 3A-E read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41715204/12967_2026_7881_Fig3_HTML.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "mouse CNS-conditional CerS2 knockout (nestin-Cre) and primary NPC, OPC, DRG cultures",
+     "genotype": "CerS2 flox/flox with nestin-Cre or olig-Cre versus littermate controls",
+     "treatment": "as stated per panel",
+     "comparator": "littermate controls",
+     "endpoint": "as stated per panel"
+    }
+   },
+   {
+    "proposition": "Spatial lipidomics places the very-long-chain sphingolipid deficit in white-matter tracts.",
+    "snippet": "These deficiencies were localized precisely to major white matter tracts, including the corpus callosum (a critical region for myelination), as well as external and internal capsules of the brain.",
+    "anchor": "Results, section 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41715204_Sun2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Cholesterol depletion with beta-cyclodextrin is used to disrupt microdomains and is reported to impair myelination 'severely'.",
+    "snippet": "Addition of 50 μM β-CD to wild-type co-cultures severely impaired myelination (Fig. 6C), and a higher dose at 250 μM showed no additive effect (Fig. 6D).",
+    "anchor": "Results, section 6",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41715204_Sun2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PANEL READING, Figure 6D. Relative length of MBP-positive neurite segments: DMSO about 1.3, 50 uM beta-CD about 0.8, 250 uM beta-CD about 0.8 (p 0.02 and 0.03; n = 8, 10, 8). The quantified reduction is about 40 percent and flat across doses, while the 250 uM image panel (6C) shows no MBP-positive segments. Beta-cyclodextrin depletes cholesterol; the experiment does not remove very-long-chain sphingolipids.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 6D scatter-bar panel y-axis 'Relative length of MBP+ NF+ neurite segment' with groups 0, 50, 250 uM beta-CD and p values 0.0226, 0.0297 and NS; Fig 6C three images DMSO, 50 uM, 250 uM.",
+    "anchor": "Figure 6C-D read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41715204/12967_2026_7881_Fig6_HTML.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "mouse CNS-conditional CerS2 knockout (nestin-Cre) and primary NPC, OPC, DRG cultures",
+     "genotype": "CerS2 flox/flox with nestin-Cre or olig-Cre versus littermate controls",
+     "treatment": "as stated per panel",
+     "comparator": "littermate controls",
+     "endpoint": "as stated per panel"
+    }
+   },
+   {
+    "proposition": "The authors state that a definitive causal link needs supplementation with purified individual very-long-chain species.",
+    "snippet": "We acknowledge that a definitive causal link requires supplementation with purified individual VLC species, but this remains technically challenging due to difficulties in isolating specific VLC sphingolipids (e.g., distinct ceramides).",
+    "anchor": "Results, section 7",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41715204_Sun2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PANEL READING, Figure 7B and 7D. 7B: MBP-positive cell rates about 0.030 (control) versus about 0.020 (knockout), p = 0.0256, n = 5 per group, so mature oligodendrocytes are 2 to 3 percent of cells in both. 7D: control-brain lipid extract raises the rate to about 0.085 against about 0.04 without or with knockout-brain extract (p = 0.0001 and 0.0029; n = 29 and 15).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 7B bars 'MBP+ cells rates' Ctrl about 0.03 and cKO-nestin about 0.02 p=0.0256; Fig 7D three groups with and without Ctrl lipids and cKO lipids, p=0.0001 and p=0.0029.",
+    "anchor": "Figure 7B and 7D read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41715204/12967_2026_7881_Fig7_HTML.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "mouse CNS-conditional CerS2 knockout (nestin-Cre) and primary NPC, OPC, DRG cultures",
+     "genotype": "CerS2 flox/flox with nestin-Cre or olig-Cre versus littermate controls",
+     "treatment": "as stated per panel",
+     "comparator": "littermate controls",
+     "endpoint": "as stated per panel"
+    }
+   },
+   {
+    "proposition": "Whole-brain proteomics (Supplementary Table 3) shows GFAP about 3.2 times higher and MAG, MBP, MOBP, CNP and PLP1 lower in the knockout, MOG unchanged; the paper does not discuss the astrocyte marker.",
+    "snippet": "Gfap coverage 74.4: LFQ CKO 18655000000 18549000000 14626000000 15183000000 | WT 6816800000 4273900000 3985400000 5758200000 | ratio CKO over WT 3.22",
+    "anchor": "Supplementary Table 3, derived by script from the deposited xlsx",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID41715204_Sun2026_supplement/Table3_myelin_proteins_derivation.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Same derivation: MOG is unchanged (ratio 1.00) while MBP is at 0.32.",
+    "snippet": "Mog coverage 33.6: LFQ CKO 384190000 342600000 322970000 293700000 | WT 283220000 351550000 436560000 270590000 | ratio CKO over WT 1.00",
+    "anchor": "Supplementary Table 3, derived by script",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID41715204_Sun2026_supplement/Table3_myelin_proteins_derivation.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The deposited table titles do not follow the numbering used in the Methods: the primer table is titled Table S3 and the brain lipid table Table S1.",
+    "snippet": "TITLE MOESM6: sheet '20210526 mouse brain NP', first cell 'Table S1. Brain lipid levels in wt and cko mice'",
+    "anchor": "Supplementary Table 1 title, derived from the deposited xlsx",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID41715204_Sun2026_supplement/Table3_myelin_proteins_derivation.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors name the missing in vivo electrophysiology and the constitutive design as limits.",
+    "snippet": "Furthermore, while our behavioral tests correlate with the structural myelin defects, future studies employing in vivo or slice electrophysiology will be essential to definitively establish the causal conduction deficits resulting from hypomyelination, thereby linking structural defects to functional impairment.",
+    "anchor": "Discussion, paragraph 9",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41715204_Sun2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A human CerS2 case is cited for the clinical connection: progressive myoclonic epilepsy with a heterozygous CerS2 deletion and low very-long-chain sphingolipids.",
+    "snippet": "The clinical significance of CerS2 is highlighted by a case of progressive myoclonic epilepsy in a patient with heterozygous CerS2 deletion, leading to substantially reduced levels of VLC sphingolipids [22].",
+    "anchor": "Introduction, paragraph 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41715204_Sun2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST search returned inEPMC Y, isOpenAccess Y, license cc by on 2026-10-19; fullTextXML returned HTTP 200 and the declared article_text artefact is that response byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+ }
+}

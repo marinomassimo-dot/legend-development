@@ -1,0 +1,39 @@
+{
+ "analysis_at": "2026-10-19T00:00:00Z",
+ "analysis_time_precision": "date_only",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "captions_only",
+  "discussion": "read",
+  "limitations": "not_read",
+  "tables": "read",
+  "figures": "captions_only",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "event_at": "2026-10-19T18:06:26Z",
+ "event_id": "FTR-20261019-41470225-01",
+ "evidence_basis": [
+  "JATS body read from the text rendering for Sections 1, 2, 3.1, 4.3, 4.4, 5, 6, 7; Sections 3.2, 4.1, 4.2 and 4.5 and Figure 1 captions were not read in detail.",
+  "Tables 1 and 2 extracted cell-wise from the XML; WWOX row and the mechanism table read.",
+  "Reference entry 109 read; remaining references not read; no supplement examined."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID41470225.json",
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-d.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "073d659122d00f9a406c8a2d1ac325955d0686fda3cf4ad91c14fbc09ea3e29c",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID41470225_Abdygalyk2025_PMC.xml",
+ "study_id": {
+  "doi": "10.3390/medicina61122223",
+  "pmid": "41470225"
+ },
+ "workflow": "scientist-d (stated assumption of the Orchestrator), metabolic batch 2026-10-19, task METAB-G4-D-20261019, branch task/metab-g4-d; context_policy QUESTION_DRIVEN. Route: Europe PMC REST fullTextXML into the shared checkout files/fulltext/; JATS body and tables read section by section from a text rendering; figures not opened as images (captions only); locators captured into the manifest and verified by deepdive_manifest.py --verify-artifacts. Receipt prepared as staged JSON for the integrator, not appended."
+}

@@ -1,0 +1,299 @@
+{
+ "schema_version": 2,
+ "pmid": "42047543",
+ "doi": "10.1002/epi4.70263",
+ "receipt": "FTR-20261019-42047543-01",
+ "landing": [
+  "CC-20261019-SCIENTIST-B-G2-KD-PRIOR-01",
+  "metabolic_wave_20261019_scientist-b"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: the Europe PMC fullTextXML route returned the body and the PMC OA S3 bucket the figures."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not run: the reading was produced directly under the Scientist brief; a deepdive pass would duplicate the locators."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered: no consolidated baseline claim is narrowed, reversed or removed and no MAJOR change class is declared. Triples are listed in the commit candidate for a later blind audit."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 79,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-19: 'Williams RSB[au]' 79; 'Williams RSB[au] AND WWOX' 0; 'Williams RSB[au] AND decanoic' 13.",
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Academic laboratory with an industrial sponsor and IP interest; transcriptomic cell-culture study. Weigh as hypothesis-generating and sponsor-linked.",
+  "note": "Funding: industrial studentship (Vitaflo); one author employed by the product manufacturer."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "WWOX tokens in the JATS",
+    "route": "case-insensitive count over the persisted JATS, 2026-10-19",
+    "count": 0
+   }
+  ],
+  "note": "WWOX does not occur."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 45,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "<ref> elements counted in the JATS (regular expression).",
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-directed reference."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "registry_records.py get --theme ketogenic (no record of this paper)",
+  "hits": 0,
+  "finding": "Not in the registries. The Hu 2025 and Klepper 2026 readings in this lot give the clinical context."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-19",
+  "route": "PubMed esummary 2026-10-19 for 42047543; JATS front matter carries is-retracted flag",
+  "result": "No retraction, correction or expression of concern found in the PubMed record or the JATS front matter.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 45,
+   "references_screened": 42,
+   "references_with_doi": 42,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42047543_Pain2026_PMC13238624.xml",
+   "sha256": "245c77ded4ff50ac2d898b3e3dbd65097479751f3f80fa90deae69ec713e8221",
+   "kind": "article_text",
+   "note": "Europe PMC JATS for PMC13238624 (Epilepsia Open 2026, CC BY-NC-ND), 110,743 bytes; abstract, introduction, methods, results 3.1-3.3, discussion, limitations, three figure legends. PMC file numbering is reversed: file g003 is Figure 1, g001 is Figure 2, g002 is Figure 3.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13238624/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "245c77ded4ff50ac2d898b3e3dbd65097479751f3f80fa90deae69ec713e8221"
+   }
+  },
+  {
+   "path": "files/figures/PMID42047543/EPI4-11-1036-g003.jpg",
+   "sha256": "3446a2eb520b2da7c4c4d5a3f023f536f8e03dc3dc5db513c7b9b90a976f32ea",
+   "kind": "figure",
+   "note": "Figure 1 (file g003): Venn and KEGG up/down-regulation bars, inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13238624.1/EPI4-11-1036-g003.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "3446a2eb520b2da7c4c4d5a3f023f536f8e03dc3dc5db513c7b9b90a976f32ea"
+   }
+  },
+  {
+   "path": "files/figures/PMID42047543/EPI4-11-1036-g001.jpg",
+   "sha256": "b8a512a007b5feb4983e71039c5951609c8b645e44fcb7db7c205dc95de4930e",
+   "kind": "figure",
+   "note": "Figure 2 (file g001): fatty-acid, TCA and oxidative-phosphorylation gene heatmaps and bars, inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13238624.1/EPI4-11-1036-g001.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "b8a512a007b5feb4983e71039c5951609c8b645e44fcb7db7c205dc95de4930e"
+   }
+  },
+  {
+   "path": "files/figures/PMID42047543/EPI4-11-1036-g002.jpg",
+   "sha256": "2a60c39e25bccad33682817e671c2fcf0f26e7c77abf33b3db22b9bb8a41145b",
+   "kind": "figure",
+   "note": "Figure 3 (file g002): adenosine and glutamate-receptor gene heatmaps and bars, inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13238624.1/EPI4-11-1036-g002.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "2a60c39e25bccad33682817e671c2fcf0f26e7c77abf33b3db22b9bb8a41145b"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42047543_EPI4-11-1036-s001.docx",
+   "sha256": "e1bd4253dbf35f26ac43104b659de0df135d63fce605204217a2ecf33e4ee070",
+   "kind": "supplement_binary",
+   "note": "Supplementary DOCX (abbreviations and legends of Supplementary Figures S1-S7; the figure panels are not in the file); text read from word/document.xml.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13238624.1/PMID42047543_EPI4-11-1036-s001.docx",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "e1bd4253dbf35f26ac43104b659de0df135d63fce605204217a2ecf33e4ee070"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC JATS, 110,743 bytes; whole article; supplementary DOCX text (abbreviations and Figure S1-S7 legends).",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "COVERAGE: whole article; Figures 1 to 3 (main) inspected as images (note the reversed PMC file numbering); supplementary DOCX contains abbreviations and legends only, the Supplementary Figure panels (S1-S7, carrying the p values) are not in the file reached, so supplementary is captions_only and the receipt is partial. SUPPLEMENTARY LEGEND TYPO: the DOCX legend gives the fatty-acid concentration as 150 mM while Methods give 150 uM.",
+  "entries": [
+   {
+    "proposition": "SYSTEM: one patient-derived iPSC line (Coriell GM27896, SLC2A1 P485L), undifferentiated, cultured in 13.5 mM glucose; treatments decanoic acid, octanoic acid or an 80:20 blend at 150 uM for 4 days; RNA-seq of triplicates.",
+    "snippet": "Glut1DS fibroblast‐derived iPSCs (Coriell Institute, GM27896",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42047543_Pain2026_PMC13238624.xml",
+    "anchor": "Methods 2.1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Sample size was justified by an earlier study, not by a power calculation for this experiment.",
+    "snippet": "Sample size requirements were defined from an earlier study.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42047543_Pain2026_PMC13238624.xml",
+    "anchor": "Methods 2.1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "MAGNITUDE: 11,271 genes change significantly (about half of the expressed transcriptome), 84 percent by the decanoic-containing treatments; a change of that breadth is a global cell-state effect rather than a pathway-specific one.",
+    "snippet": "genes were significantly changed in expression (Figure 1A), primarily triggered by DA:OA (9455 ",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42047543_Pain2026_PMC13238624.xml",
+    "anchor": "Results 3.1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1A Venn: DA 7,487 shared with DA:OA, 1,382 DA-only, 1,525 DA:OA-only; octanoic acid alone changes few genes (355 shared with both).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1, (A) Venn diagram of significantly changed genes for DA, OA and DA:OA (7487 shared DA and DA:OA; 1382 DA only; 1525 DA:OA only; 355 shared by all three), (B to E) KEGG up- and down-regulated pathway bars with gene counts.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42047543/EPI4-11-1036-g003.jpg",
+    "anchor": "Figure 1A, native JPEG",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "Glut1DS patient-derived iPSCs, one line",
+     "treatment": "decanoic acid, octanoic acid, 80:20 blend, 150 uM, 4 days",
+     "endpoint": "RNA-seq differential expression"
+    }
+   },
+   {
+    "proposition": "The KEGG paragraph says DA-containing treatments upregulated mTOR and AMPK signalling.",
+    "snippet": "DA‐containing treatments upregulated energy metabolism (TCA cycle and oxidative phosphorylation), mTOR and AMPK signaling, an",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42047543_Pain2026_PMC13238624.xml",
+    "anchor": "Results 3.1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Results 3.3 says AMPK subunit transcripts fall (PRKAA2 down 46 percent), the opposite direction to the 3.1 pathway statement on AMPK signalling.",
+    "snippet": "DA:OA treatment also reduced nutrient sensor AMPK subunit expression (PRKAA2 46%; PRKAB1/2/G1 by 12%/36%/22%), a complex whic",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42047543_Pain2026_PMC13238624.xml",
+    "anchor": "Results 3.3",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The text calls the glucose transporter and hexokinase genes reduced (SLC2A1 and SLC2A3 down, HK1 and HK4 down) and says the treatment mimics KD reprogramming away from glycolysis.",
+    "snippet": "These data suggest that, in Glut1DS cells, DA‐containing treatments in high glucose conditions provide similar effects to that of the c",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42047543_Pain2026_PMC13238624.xml",
+    "anchor": "Results 3.2",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1 panels H and I show most glycolytic genes UP with DA:OA and DA (HK2, ALDOA, GPI, TPI1, GAPDH, ENO1, PGK1, PKM, LDHA, SLC16A1 all positive, log2 fold change about 0.1 to 0.5) and down for HK1, HK4, PFKP, SLC2A1, SLC2A3, LDHD, FBP1; the net direction is mixed, not \"away from glycolysis\".",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1, (F) glucose metabolism schematic, (G) heatmap of glucose transport and glycolysis genes for DA, OA, DA:OA, (H and I) bar plots of log2 fold change for DA:OA and DA with glycolysis, gluconeogenesis and lactate genes colour-coded.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42047543/EPI4-11-1036-g003.jpg",
+    "anchor": "Figure 1G, 1H and 1I, native JPEG",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "Glut1DS patient-derived iPSCs, one line",
+     "endpoint": "log2 fold change of glycolytic genes"
+    }
+   },
+   {
+    "proposition": "Figure 2: the energy-pathway effects are small in magnitude (TCA and oxidative phosphorylation genes mostly +0.2 to +0.6 log2, i.e. 15 to 50 percent), on transcripts only; HMGCS1 (+2) is the single large effect.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2, fatty acid metabolism (A to D), TCA cycle (E to H) and oxidative phosphorylation (I to L) schematics, heatmaps and bars of log2 fold change for DA and DA:OA with HMGCS1 flagged.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42047543/EPI4-11-1036-g001.jpg",
+    "anchor": "Figure 2 panels C, D, G, H, K, L, native JPEG",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "Glut1DS patient-derived iPSCs, one line",
+     "endpoint": "log2 fold change of metabolic genes"
+    }
+   },
+   {
+    "proposition": "The adenosine inference rests on ADA falling; the same paragraph shows NT5E (a source of adenosine) falling 63 percent, so the net adenosine direction is not determined by the transcripts.",
+    "snippet": "However, both treatments reduce 5′‐nucleotidase (NT5E by 63%) expression, where this enzyme can hydrolyze adenosine monophosphates",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42047543_Pain2026_PMC13238624.xml",
+    "anchor": "Results 3.3",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 3: ADA, ENTPD2, NT5E, AK7, AK8, the receptor ADORA2B and AMPK subunits are all lowered; both adenosine-producing and adenosine-degrading steps fall.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3, (A) adenosine signalling schematic, (B to D) heatmap and bars for adenosine-related genes, (E to H) glutamate-receptor genes (NMDA, mGluR, AMPA, kainate subunits).",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42047543/EPI4-11-1036-g002.jpg",
+    "anchor": "Figure 3A to D, native JPEG",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "Glut1DS patient-derived iPSCs, one line",
+     "endpoint": "log2 fold change of adenosine and glutamate-receptor genes"
+    }
+   },
+   {
+    "proposition": "The authors state: no matched healthy control, no independent Glut1DS line, differentiated cell types not tested, and no protein-level validation.",
+    "snippet": "The study does not include matched healthy controls, or independent Glut1DS lines, thus it remains unclear if observed c",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42047543_Pain2026_PMC13238624.xml",
+    "anchor": "Limitations 4.1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "COMPETING INTERESTS: two authors hold IP related to the study and one is employed by the product manufacturer; the first author was funded by an industrial studentship from the manufacturer.",
+    "snippet": "RSBW and MCW have IP related to this study. TR is employed by the company that manufactures the prod",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42047543_Pain2026_PMC13238624.xml",
+    "anchor": "Conflict of interest",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}

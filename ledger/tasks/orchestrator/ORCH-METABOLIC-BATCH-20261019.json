@@ -35,11 +35,13 @@
    "steps": [
     {
      "step": "Dispatch Scientists A, B, C, D (one theme group each) with the wave brief",
-     "status": "IN_PROGRESS"
+     "status": "DONE",
+     "evidence": "four Scientists dispatched 2026-10-19, commit 718db84f"
     },
     {
      "step": "Integrate returns: receipts recorded in event-ID order after a scratch-clone trial, branches landed",
-     "status": "TODO"
+     "status": "IN_PROGRESS",
+     "evidence": "B and D returned and landed (1ca5bf78, 56cb33c5); 33 receipts recorded b968bbd2, ledger 508; A and C pending"
     },
     {
      "step": "BATCH_COMMIT of wave 1 candidates under LINT; Mirror ex-post review",
@@ -59,6 +61,21 @@
      "status": "TODO"
     }
    ]
+  },
+  "OBJ_INTERVENTIONS_QUEUED": {
+   "order": 2.5,
+   "steps": [
+    {
+     "step": "Operator addition 2026-10-19 (queued behind wave 1, no interruption): selection for effects in WWOX loss of function of (1) red-cell/blood transfusion, (2) plasma/plasma exchange/FFP, (3) adrenaline/epinephrine, (4) oxygen incl. nocturnal helmet/hypoxia-hyperoxia, (5) hypocaloric diet with dextrose solution and high fluid volume at very low calories; class-level, with BLOCK-1 safety framing; read-only selector",
+     "status": "DONE",
+     "evidence": "76 studies, research/interventions_batch_selection_20261019.md; wave 2 contracts INTERV-H*-*-20261019"
+    },
+    {
+     "step": "Dispatch wave 2 (up to four Scientists) on that selection; integrate, BATCH_COMMIT, Mirror, battery, push",
+     "status": "IN_PROGRESS",
+     "evidence": "scientist-d on H5 and scientist-b on H3 dispatched; A (H1,H2) and C (H4) dispatch when they return"
+    }
+   ]
   }
  },
  "DECISIONS_TAKEN": [
@@ -68,6 +85,14 @@
    "who_consulted": "operator instruction: at least three, four for important tasks",
    "reversibility": "high",
    "how_to_revert": "retire the scientist-d task contract"
+  }
+ ],
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "11 staged receipts carried analysis_at in the future",
+   "default": "set analysis_at to the date 2026-10-19T00:00:00Z (the form scientist-d used) and event_at not later than the record time; staged copies replaced",
+   "why_safe": "the reading happened that day; no field of content changed; recorded in commit b968bbd2",
+   "different_if": "exact reading times would have been kept"
   }
  ]
 }

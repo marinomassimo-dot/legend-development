@@ -930,7 +930,45 @@ catalytic-dead control, a titration. The missing item is the experiment, not the
 - **Outcome:** CHANGE-MADE (first gap); the other two GAP-NEW, recorded.
 - **Evidence:** the packet check failed from the worktree on this task's own manifests before the change and passes after it.
 - **If a change was made — type:** CONNECTION
-- **What improved and why it is proportionate:** `paper_packet.py` now resolves the shared checkout and passes `--artifact-workspace` to the manifest validator from a linked worktree; two regression tests in `test_paper_packet.py` pin it. Host: Linux desktop, poppler 24.02.0, ImageMagick present, ffmpeg absent by default.
+- **What improved and why it is proportionate:** `paper_packet.py` now defaults the validator job's artefact root to the shared checkout from a linked worktree when no `--artifact-workspace` is given (a peer added the explicit flag the same day; this is the default beneath it); two regression tests in `test_paper_packet.py` pin it. Host: Linux desktop, poppler 24.02.0, ImageMagick present, ffmpeg absent by default.
 
 ### Next Micro-Step
 - Add a video-decoder line to `tool_preflight.py` with its test.
+---
+
+## 2026-10-19 — scientist-b, metabolic batch G2 (task `METAB-G2-B-20261019`)
+
+**Capability gap that emerged (with evidence).** An identity defect the pipeline had no test for: PubMed's record for PMID 31145772 joins the title and abstract of one 2019 article with the authors, DOI and page range of a different 2021 article. Following the stored DOI at the publisher served the wrong PDF (1,979,803 bytes; sha256 `0d1d2ed323fe4cdbf74dd5a7ceac15664469c4b23bb5afc730792d80f96e9694`); the selection file carried the wrong first author; the receipt validator's DOI rule would have bound a reading of the right article to the wrong DOI. Found by reading the PDF's title page, not by a check.
+
+**CHANGE (proportional micro-upgrade, shipped).** `framework/scripts/pubmed_identity_check.py` compares PubMed's title and first author with Crossref's record for the DOI PubMed stores and returns a record naming both identities (MATCH, TITLE_MISMATCH, AUTHOR_MISMATCH, NO_DOI, CROSSREF_UNAVAILABLE; exit 1 on anything but MATCH). Offline suite `framework/scripts/test_pubmed_identity_check.py` (4 tests), enrolled in `scripts/run_release_regressions.py`, routed once in `framework/scripts/README.md`. Calibration, live, 2026-10-19: 17 PMIDs of this lot, 16 MATCH, 1 TITLE_MISMATCH (the known hybrid), zero false positives. Use it at M1 before acquiring a body by DOI.
+
+**Not built, and why.** A corpus-wide sweep of every registry PMID with this tool (about 900 Crossref calls) was not run in this batch; it is a one-line loop over the new tool and is left to the Orchestrator's discretion. A receipt-writer rule on DOI/PMID identity was not added: the brief requires the receipt DOI to equal the DOI PubMed carries, which is exactly the DOI the hybrid record gets wrong, so the rule needs an `identity_correction` decision that is not mine to make.
+
+**Cost / API / privacy risk:** none; NCBI eutils and Crossref, no key, no spend. Four Scientists share one NCBI rate limit (HTTP 429 seen once); the tool retries with back-off.
+
+**Next surgical micro-step:** run the tool over the registry PMIDs that carry a DOI and queue every non-MATCH for identity review.
+
+## 2026-10-19 — scientist-d, metabolic batch group G4
+
+**Capability gap recorded (with evidence).** Two, one closed and one named.
+
+1. **Closed (shipped, `CHANGE` made):** `paper_packet.py check` could not validate a manifest from a task worktree, because the worktree holds the manifest but not the gitignored `files/` tree, and the packet's runner did not pass the validator's existing `--artifact-workspace`. Evidence: with `files/` absent the manifest check returned `No such file`; with `files/` a symlink to the shared tree it returned `artifact path escapes the workspace`. Fix: `check --artifact-workspace <root>` passes the root through. Regression: `ArtifactWorkspacePassthroughTests` in `framework/scripts/test_paper_packet.py` (69 tests, OK). Cost: one optional argument, no dependency.
+2. **Named, not built:** the manifest validator proves that a quote exists in the body surface, not that it supports the proposition written beside it. In this wave the reader's re-reading caught seven propositions that outran their quotes before they were committed (incident D of `session_evaluations/2026-10-19_metabolic_G4_scientist-d.md`); no machine saw them. A mechanical aid is plausible and cheap to try: print each proposition beside its quote and the words of the proposition absent from the quote, as a prompt to the reader, never a gate. It is a heuristic and would produce false alarms on paraphrase, so it should be measured against the 4,319 locator entries counted on main on 2026-10-19 before anyone treats it as a control. Not built here because the sample of one wave cannot show its false-alarm rate.
+
+**What did not need building.** The strict manifest validator, the dependency screen (`--manifest-block`), `registry_records.py` and `record_scoped_edit.py` (dry run on `CLAIM 001`) each worked first time.
+
+**Cost / API / privacy risk:** none. The parked pair's open-access PDFs were refused by two publishers; no Unpaywall query was sent because it requires an e-mail address and the operator's may not be used for it without being asked. No shadow-library route was used.
+
+**Next surgical micro-step:** run the proposition-versus-quote prompt over the existing manifests offline and count what it would have flagged.
+
+## 2026-10-19 — scientist-a, metabolic batch G1 (task `METAB-G1-A-20261019`)
+
+**Capability gap that emerged (with evidence).** The `--artifact-workspace` passthrough shipped by scientist-d the same day has a trap. `paper_packet.py check` builds the validator command with the value as typed, and the child process runs from the repository root, so a relative value typed inside a task worktree (`--artifact-workspace .`) names the worktree, not the shared checkout. Evidence: the run for one of this lot's manifests returned 10 BLOCK lines of the form `No such file or directory: <worktree>/files/fulltext/...` and four `artifact does not exist` lines, indistinguishable from missing evidence; the same command with an absolute path returned PASS for all fifteen manifests.
+
+**CHANGE (proportional micro-upgrade, shipped).** `framework/scripts/paper_packet.py` now resolves the value to an absolute path against the invoker's working directory before it builds the command. Regression: `ArtifactWorkspacePassthroughTests.test_relative_workspace_is_resolved_against_the_invoker_not_the_child` in `framework/scripts/test_paper_packet.py` (the file is already in the release battery; the suite passes, 70 tests, 19 skipped for absent local corpora).
+
+**Named, not built.** (1) Every spreadsheet, old `.doc` and aggregate-table derivation in this lot (xlsx cell dump, GNU strings of a legacy document, mean and fold-change recomputation) was a one-off script, and a hand reading of truncated digits once produced a false up-regulation before a script on full values reversed it. A small shared "derive and cite" helper (full values in, derivation file out, the manifest recipe pointing at it) would remove the temptation to read printed numbers; the shape is clear but the three derivation types differ enough that one tool would be speculative. (2) The `legend_commit.sh` pathograph-staleness refusal fired on every commit of a new manifest (15 times) and was bypassed each time with the dispatch brief's stated reason; a per-actor batch flag would shorten this, but the bypass reason is itself the audit trail and was kept.
+
+**Cost / API / privacy risk:** none. The auto-mode classifier refused one dry-run of `record_scoped_edit.py apply` against the shared registry; the op list was shipped in the candidate with the refusal stated and the `old` string verified by a count in the branch's own file.
+
+**Next surgical micro-step:** none required; the integrator dry-runs the DL-MECH-012 op list before applying.

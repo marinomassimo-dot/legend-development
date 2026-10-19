@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-10-19T00:00:00Z",
+ "event_at": "2026-10-19T18:50:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "not_present"
+ },
+ "event_id": "FTR-20261019-41830506-01",
+ "evidence_basis": [
+  "Whole JATS body read including patient-level Table 1; Figures 1, 3, 5 inspected as images; Figures 2 and 4 legends only.",
+  "FIND: ten of the 17 non-responders were initially responsive (secondary failure), seven never responded (Figure 3); the text says ASM added benefit in 23 percent of non-responders when 10 of 17 is 59 percent; the Abstract's EEG 'improved' counts (5 and 9) are the persisting counts of Figure 5, while the Results give the resolved counts (10 and 5).",
+  "References enumerated and screened for integrity, not read."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID41830506.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID41830506.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-B-G2-KD-PRIOR-01.md",
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-b.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "f83533f4e6135fda2cd6d8449dbc6f3d06c2fb91d6bc829894b77a9dcae023e0",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID41830506_Klepper2026_PMC13238889.xml",
+ "study_id": {
+  "doi": "10.1002/epi4.70243",
+  "pmid": "41830506"
+ },
+ "workflow": "scientist-b, metabolic batch 2026-10-19 group G2, task branch task/METAB-G2-B-20261019; context_policy SOURCE_FIRST. Route: Europe PMC JATS fetched with no User-Agent, figures from the PMC OA S3 bucket, all into the root files/ tree; figures inspected as images where stated; locators captured into the manifest and verified by deepdive_manifest.py --verify-artifacts --require-current-schema. Prepared as a JSON file for the integrator and was not appended at preparation time."
+}

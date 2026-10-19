@@ -1,0 +1,44 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-41715204-01",
+ "study_id": {
+  "pmid": "41715204",
+  "doi": "10.1186/s12967-026-07881-0"
+ },
+ "analysis_at": "2026-10-19T18:27:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-a (Scientist A), metabolic batch 2026-10-19 group G1, task METAB-G1-A-20261019 on branch task/METAB-G1-A-20261019, dispatched by the Orchestrator; context_policy QUESTION_DRIVEN. Route: Europe PMC JATS for PMC13094249, seven figure JPEGs and the supplementary container (13-page source-data PDF, raw-blot PDF, four spreadsheets, one video) from the Europe PMC supplementaryFiles zip into the root files/ tree; Figures 1-7 inspected as images; the 13 supplementary PDF pages rendered and inspected as images in montage; the four spreadsheets read (the whole-brain proteomics through a short aggregate derivation declared as supplement_text); the 44 MB supplementary video was not inspected because no decoder is available, so supplementary coverage is stated as captions_only and the depth is partial. Locators captured into the deep-dive manifest while the document was open and verified by deepdive_manifest.py --verify-artifacts --require-current-schema. Prepared as a staged JSON for the Orchestrator and was not appended at preparation time (the Orchestrator records staged receipts in event-ID order).",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID41715204_Sun2026_PMC.xml",
+ "source_fingerprint": "fc8c26696b5ca08a41acc511499efa2f37eb3d7099770c7266d5a83c882cb7ef",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "captions_only",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID41715204.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID41715204.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-A-LIPID-04.md",
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-a.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "manifest",
+  "Figures 1-7 inspected as images; Supplementary PDF pages 1-13 inspected as rendered montage images",
+  "Spreadsheets MOESM4, MOESM6, MOESM8, MOESM9 read; MOESM8 aggregated by script (ratios computed, not printed in the file)",
+  "Supplementary video 1 (convulsion footage) NOT inspected: no video decoder; raw-blot PDF read as text only",
+  "The paper has no main-text tables"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

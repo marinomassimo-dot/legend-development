@@ -767,8 +767,26 @@ class TheSurfaceInventory(unittest.TestCase):
             self.assertEqual(png_or_jpeg_size(path), pp.raster_size_from_header(path), path)
 
 
+class ArtifactWorkspacePassthroughTests(unittest.TestCase):
+    """A task worktree holds the manifest but not files/; `check` must be able to name the artifact root."""
+
+    def test_flag_reaches_the_manifest_validator_only_when_given(self):
+        packet = {"applicable_checks": [{"name": "manifest validator"}]}
+        with_flag = dict(pp._runnable(Path("."), "wwox", "1", packet, "/shared/root"))
+        without = dict(pp._runnable(Path("."), "wwox", "1", packet))
+        self.assertIn("--artifact-workspace", with_flag["manifest validator"])
+        self.assertEqual(with_flag["manifest validator"][-1], "/shared/root")
+        self.assertNotIn("--artifact-workspace", without["manifest validator"])
+
+    def test_relative_workspace_is_resolved_against_the_invoker_not_the_child(self):
+        packet = {"applicable_checks": [{"name": "manifest validator"}]}
+        got = dict(pp._runnable(Path("."), "wwox", "1", packet, "."))["manifest validator"][-1]
+        self.assertTrue(Path(got).is_absolute(), got)
+        self.assertEqual(Path(got), Path.cwd().resolve())
+
+
 class LinkedWorktreeArtefactRoot(unittest.TestCase):
-    """A task worktree carries manifests, not the gitignored bytes: the validator job must point at the shared checkout."""
+    """A task worktree carries manifests, not the gitignored bytes: with no explicit root the validator job defaults to the shared checkout."""
 
     def _make(self, tmp: Path) -> tuple[Path, Path]:
         main = tmp / "main"
@@ -780,18 +798,16 @@ class LinkedWorktreeArtefactRoot(unittest.TestCase):
         subprocess.run(["git", "-C", str(main), "worktree", "add", "-q", "-b", "task/x", str(wt)], check=True)
         return main, wt
 
-    def test_shared_checkout_found_from_linked_worktree_only(self) -> None:
+    def test_shared_checkout_found_from_linked_worktree(self) -> None:
         with tempfile.TemporaryDirectory() as raw:
             main, wt = self._make(Path(raw))
             self.assertEqual(pp._shared_checkout(wt), main.resolve())
-            self.assertEqual(pp._shared_checkout(main), main.resolve())  # caller compares with root
 
-    def test_validator_job_gets_artifact_workspace_in_worktree(self) -> None:
+    def test_validator_job_defaults_to_shared_checkout_in_worktree(self) -> None:
         packet = {"applicable_checks": [{"name": "manifest validator"}]}
         with tempfile.TemporaryDirectory() as raw:
             main, wt = self._make(Path(raw))
             jobs = dict(pp._runnable(wt, "wwox", "1", packet))
-            self.assertIn("--artifact-workspace", jobs["manifest validator"])
             self.assertIn(str(main.resolve()), jobs["manifest validator"])
             jobs_main = dict(pp._runnable(main, "wwox", "1", packet))
             self.assertNotIn("--artifact-workspace", jobs_main["manifest validator"])

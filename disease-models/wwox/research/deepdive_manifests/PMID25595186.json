@@ -1,0 +1,344 @@
+{
+ "schema_version": 2,
+ "pmid": "25595186",
+ "doi": "10.1177/1535370214565990",
+ "receipt": "FTR-20261019-25595186-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID25595186.md",
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-a.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-A-LIPID-03.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was selected and deduplicated by the Orchestrator's selector against the registries, queue and receipt ledger (selection file, method step 3); the per-paper M0 packet re-checked it."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Discovery leads, if any, are routed through the commit candidate and the analysis note; no cumulative discovery squeeze was warranted by this paper."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 1,
+  "research_type": "primary_disease_group",
+  "is_primary_group_for_disease": false,
+  "weighting": "The Adelaide fragile-site group that cloned the FRA16D region and ran the Drosophila WWOX work. Primary for the fragile-site biology and the fly metabolism data; this is a review, so its statements about mouse, rat and human mutants are relayed from other groups and weighed as secondary."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (SDR OR oxidoreductase OR substrate OR enzymatic)",
+    "count": 491,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (Drosophila OR fly) AND metabolism",
+    "count": 9,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts, not WWOX-enzymology studies; the WWOX enzyme-substrate literature is a handful of papers (the review cites one, reference 11)."
+ },
+ "multihop": {
+  "references_enumerated": 45,
+  "gene_direct_refs_in_source": [
+   "ref 11 Saluda-Gorgul 2011 (WWOX substrate and enzymatic characterization; PMID 21476439)",
+   "ref 12 Aqeilan 2009 (Wwox ablation, impaired steroidogenesis; PMID 18974271)",
+   "ref 24 Aqeilan 2007 (Wwox deletion; PMID 17360458)",
+   "ref 31 Mallaret 2014 (WWOX recessive ataxia)",
+   "ref 32 Abdel-Salam 2014 (WWOX early lethal microcephaly syndrome)",
+   "ref 33 O'Keefe 2011 (Drosophila WWOX; PMID 21075834)",
+   "ref 42 Dayan 2013 (FRA16D/WWOX and metabolic reprogramming)"
+  ],
+  "resolved": [
+   {
+    "pmid": "18974271",
+    "state": "complete receipt in the ledger (read in an earlier wave)"
+   },
+   {
+    "pmid": "21075834",
+    "state": "complete receipt in the ledger (read in an earlier wave)"
+   },
+   {
+    "pmid": "17360458",
+    "state": "local PDF and earlier readings in the repository; one sentence re-checked in this wave on its rendered page"
+   }
+  ],
+  "queued": [
+   {
+    "pmid": "21476439",
+    "queue": "FT-130",
+    "note": "in vitro WWOX substrate paper; the queue records it as unacquirable on two routes"
+   }
+  ],
+  "note": "45 references enumerated from the PMC page. Seven gene-direct references; three are read, one is queued as unacquirable (FT-130). Refs 31, 32 and 42 were not opened in this reading and are not claimed."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 25595186 --hops 1 (run AFTER the first pass); get --theme Saluda --hops 0",
+  "hits": 2,
+  "note": "Identity: CORPUS-STUB-023 and LIT-0050, both placeholders. Theme Saluda reaches FT-130."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 43,
+   "references_screened": 39,
+   "references_with_doi": 39,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 4
+   }
+  },
+  "result": "Checked 2026-10-19 via PubMed esummary/efetch for PMID 25595186: publication types ['Journal Article', \"Research Support, Non-U.S. Gov't\", 'Review']; corrections/retraction markers in the efetch record: none."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID25595186_Richards2015_PMC.html",
+   "sha256": "f22749f1263d7bc19aeed5119566661679b3dd51a267bd1c2e53b659f0f2a7a2",
+   "kind": "article_text",
+   "note": "PMC article page for PMC4935231 (www.ncbi.nlm.nih.gov/pmc/articles/PMC4935231/), body HTML with two summary boxes (as figures) and 45 references. The article is free on PMC (author manuscript) but not in the OA subset: Europe PMC fullTextXML is not available and efetch returns metadata only; the page was reached on one of three attempts, the others returning an interstitial.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4935231/",
+    "http_method": "GET",
+    "tier": "pmc_article_html_page",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false
+   }
+  },
+  {
+   "path": "files/figures/PMID25595186/10.1177_1535370214565990-fig1.jpg",
+   "sha256": "236dcb8dfb9b282da065831652c628b5263f7f72922e672b7e878dcc618ef792",
+   "kind": "figure",
+   "note": "Figure 1 JPEG from the PMC blob store, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/5ec4/4935231/949282fe4803/10.1177_1535370214565990-fig1.jpg",
+    "http_method": "GET",
+    "tier": "pmc cdn blob",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID25595186/10.1177_1535370214565990-fig2.jpg",
+   "sha256": "475876a9e9fdb6aa2038790f7d6c59cb744208ad4ba3edae36028e35a8102bf7",
+   "kind": "figure",
+   "note": "Figure 2 JPEG from the PMC blob store, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/5ec4/4935231/be109f9ece7a/10.1177_1535370214565990-fig2.jpg",
+    "http_method": "GET",
+    "tier": "pmc cdn blob",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID25595186/10.1177_1535370214565990-fig3.jpg",
+   "sha256": "36dfdeafead7810ba25f65735bae45631126b7710acf36b8bcfadd7527ed649b",
+   "kind": "figure",
+   "note": "Figure 3 JPEG from the PMC blob store, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/5ec4/4935231/5aada512d5a0/10.1177_1535370214565990-fig3.jpg",
+    "http_method": "GET",
+    "tier": "pmc cdn blob",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID25595186/10.1177_1535370214565990-fig4.jpg",
+   "sha256": "b741212ad7c0c44616567fd10469a5e751d2114d35d2d2951e2b68ed28a7faa3",
+   "kind": "figure",
+   "note": "Figure 4 JPEG from the PMC blob store, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/5ec4/4935231/ad0ba607fb9c/10.1177_1535370214565990-fig4.jpg",
+    "http_method": "GET",
+    "tier": "pmc cdn blob",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The review states that the in vivo substrate and reaction product of WWOX's SDR activity are unknown, that in vitro targets have been reported, and that Wwox ablation in mice impairs steroidogenesis; steroids are named as likely substrates and Drosophila mutants lack that phenotype.",
+    "snippet": "The in vivo substrate and reaction product for the SDR enzyme activity of WWOX are unknown, although several in vitro targets have been identified11 and ablation of WWOX in mice leads to impaired steroidogenesis.12 Steroids are therefore likely suspects although impaired steroidogenesis is not evident in the Drosophila melanogaster WWOX mutants.",
+    "anchor": "Introduction, Characteristics of the WWOX protein sequence",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25595186_Richards2015_PMC.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The only lipid statement in the review is a generic description of the SDR enzyme family, not a WWOX finding.",
+    "snippet": "These enzymes are NAD(P)(H)-dependent oxidoreductases that catalyze diverse small molecule reactions including those involving lipids, amino acids, carbohydrate, and steroids.16",
+    "anchor": "Introduction, Characteristics of the WWOX protein sequence",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25595186_Richards2015_PMC.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Rodent WWOX mutants die early with metabolic disorders, which the authors say limits what they teach about WWOX protein function.",
+    "snippet": "Rodent WWOX mutants typically exhibit metabolic disorders leading to early death (which may preclude development of some tumors) limiting the utility of rodent models in understanding WWOX protein function.24–29",
+    "anchor": "Introduction, The normal biological function/functions of WWOX",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25595186_Richards2015_PMC.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A WWOX allele lacking exons 6-8 (SDR domain absent, WW domains intact) is described in one family with a disorder of sex development acting dominantly, with haploinsufficiency or a dominant-negative truncated protein as the stated alternatives: a data point where an SDR-lacking allele differs from a whole-gene null carrier.",
+    "snippet": "The resultant encoded protein would have intact WW domains, but absence of the SDR catalytic domain. Only one allele is affected and is therefore acting in a dominant manner. While haploinsufficiency is possible, another explanation is that the mutant WWOX-truncated protein is acting in a dominant negative manner.",
+    "anchor": "Introduction, normal biological functions, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25595186_Richards2015_PMC.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review reports recessive epilepsy from homozygous loss-of-function WWOX alleles in three consanguineous families and no noted excess of spontaneous tumours in humans or the rat.",
+    "snippet": "Three different homozygous WWOX mutations were identified in three consanguineous families.",
+    "anchor": "Introduction, normal biological functions, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25595186_Richards2015_PMC.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Drosophila evidence for a metabolic role is genetic interaction with SOD1 and IDH; Drosophila WWOX loss alone gives no phenotype.",
+    "snippet": "Given the phenotypic consequences of homozygous loss-of-function WWOX mutations in mammals, it is somewhat surprising that loss-of-function WWOX mutations in the D. melanogaster ortholog of WWOX do not exhibit a phenotype.33",
+    "anchor": "Introduction, Insights into the role of WWOX in metabolism",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25595186_Richards2015_PMC.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review states that WWOX expression responds to metabolic state, rising with a switch from glycolysis to oxidative phosphorylation and falling in hypoxia.",
+    "snippet": "Altering metabolism from glycolysis to oxidative phosphorylation causes an increase in the steady-state levels of WWOX mRNA, whereas hypoxic conditions, in which cells rely on glycolysis, cause a decrease in WWOX mRNA.",
+    "anchor": "Introduction, Insights into the role of WWOX in metabolism",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25595186_Richards2015_PMC.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review proposes that the C-terminal putative substrate-binding region is unique to WWOX orthologs and therefore likely binds a unique substrate; it is a sequence-homology inference.",
+    "snippet": "Protein homology searches indicate that the likely “substrate-binding domain” indicated by amino acid sequence homology C-terminal to the enzyme catalytic site (Figure 4) appears to be unique to WWOX orthologs (including those of C. elegans) and therefore likely to have a unique substrate.",
+    "anchor": "Conclusions/future directions",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25595186_Richards2015_PMC.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review concludes that the metabolic role is more likely mediated by the enzyme function than by the WW domains.",
+    "snippet": "However, the role of WWOX in metabolism is more likely to be mediated by the enzyme function of WWOX, as SDR enzymes are known monitors of NAD+/NADP+ through their co-factor binding sites.16",
+    "anchor": "Conclusions/future directions",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25595186_Richards2015_PMC.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review's metabolism section is framed around the Warburg effect in cancer; it presents WWOX perturbation as a clear candidate rather than a demonstrated cause.",
+    "snippet": "Perturbation of WWOX in cancer cells is therefore a clear candidate for contributing to the altered metabolism (Warburg effect35) seen in these cells and associated with poor prognosis, and therefore an ideal target for therapeutic intervention.",
+    "anchor": "Introduction, Insights into the role of WWOX in metabolism",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25595186_Richards2015_PMC.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Reference 11, the cited source for in vitro WWOX substrates, is a 2011 characterisation paper.",
+    "snippet": "WWOX oxidoreductase – substrate and enzymatic characterization.",
+    "anchor": "Reference 11",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25595186_Richards2015_PMC.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Reference 12, the cited source for impaired steroidogenesis in Wwox-null mice, is a 2009 Endocrinology paper.",
+    "snippet": "Targeted ablation of the WW domain-containing oxidoreductase tumor suppressor leads to impaired steroidogenesis.",
+    "anchor": "Reference 12",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25595186_Richards2015_PMC.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PANEL READING, Figure 4 (alignment of WWOX protein sequences from human, chicken, Drosophila, fugu, zebrafish and mouse). Two blue-shaded WW domains near residues 15-95; a pink-shaded SDR enzyme region from about residue 125 to 330; and a green-shaded box marked with a question mark (WWOX substrate binding?) at about residues 345-415 plus a short green block near 400-410. Conservation bars are highest across the SDR region. The question mark is in the figure's own legend.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 4 multiple alignment with legend boxes WW domain (blue), SDR enzyme (pink), 'WWOX substrate binding?' (green); residue numbering 1-420 across rows.",
+    "anchor": "Figure 4, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID25595186/10.1177_1535370214565990-fig4.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "protein sequence alignment, six species",
+     "genotype": "n/a",
+     "treatment": "none",
+     "comparator": "n/a",
+     "endpoint": "domain annotation and conservation"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 3 (phylogeny). WWOX orthologs from human to mosquito cluster apart from other Drosophila oxidoreductases; the two C. elegans homologues sit with the WWOX group; the legend states all species have one WWOX ortholog except C. elegans, which has two lacking WW domains.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3 dendrogram, x-axis 'Amino acid sequence divergence' 0-100; boxed group 'WWOX orthologs in various species' (Human, Mouse, Chicken, Zebrafish, Fugu, Ciona, Drosophila, Mosquito, C elegans T15910 and T33973); lower box 'other Drosophila oxido-reductases'.",
+    "anchor": "Figure 3, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID25595186/10.1177_1535370214565990-fig3.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "protein sequence phylogeny",
+     "genotype": "n/a",
+     "treatment": "none",
+     "comparator": "other Drosophila oxidoreductases",
+     "endpoint": "sequence divergence"
+    }
+   }
+  ],
+  "source_fulltext_indexed": false,
+  "source_fulltext_indexed_evidence": "Not in the Europe PMC open-access subset (isOpenAccess N); fullTextXML is not served for PMC4935231, so the quotes are verifiable only against the declared PMC page HTML artefact, not through Europe PMC full-text indexing.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+ }
+}

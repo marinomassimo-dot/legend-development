@@ -1,0 +1,209 @@
+{
+ "schema_version": 2,
+ "pmid": "39570186",
+ "doi": "10.1002/epi4.13099",
+ "pmcid": "PMC11803263",
+ "receipt": "FTR-20261019-39570186-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the batch selection file's abstract-level 'why it matters' line and its per-theme summary of what the repository holds (GABA/vigabatrin modelled; no dopamine, catecholamine, adrenal, serotonin text). No registry record was opened before the first pass.",
+ "landing": [
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/metabolic_batch_selection_20261019.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS XML was available from Europe PMC REST on the first request; no cascade was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline by the Scientist; the reading is the deliverable."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The transfer verdict is in the analysis note; no cumulative-ledger lead is claimed from a comparator paper."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever is matured by this paper; forging a hypothesis from a comparator would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for the reference genotype."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or corroborated by this reading; the triples are exposed in the commit candidate/analysis note for a blind auditor."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "output_kind": "primary_research",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "A single-centre retrospective chart review of infantile epileptic spasms syndrome (IESS) in a tertiary programme that adopted first-line vigabatrin plus prednisolone. The observation (association of symptomatic VABAM with simultaneous hormonal therapy) is firm within its design; the authors themselves refuse the causal reading and name disease severity as an alternative. No WWOX patient is identified."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (hormon* OR ACTH OR corticosteroid*)",
+    "count": 28,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND vigabatrin",
+    "count": 2,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "Counts are search hits, not WWOX-and-hormonal-therapy patient reports."
+ },
+ "multihop": {
+  "references_enumerated": 17,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "The article cites no WWOX-directed reference that this reading could identify; reference list counted, not read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 39570186 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "NO RECORD MATCHED in the seven registry surfaces at commit 718db84f; a statement about that query only."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 17,
+   "references_screened": 16,
+   "references_with_doi": 16,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  },
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction (checked 2026-10-19 by the Scientist via the dependency screen and the publisher record in the JATS front matter)."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID39570186_Sathe2025_PMC.xml",
+   "sha256": "df1556afdb926e3b62fdc625b032a5a709aeea28df3c8539daebf1e04c436310",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11803263/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "df1556afdb926e3b62fdc625b032a5a709aeea28df3c8539daebf1e04c436310"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Eleven of the 17 VABAM cases were symptomatic, in a cohort of 108 vigabatrin-treated children.",
+    "snippet": "Overall, we identified 17 children with VABAM, of which 11 were symptomatic (sVABAM) and 6 were asymptomatic (aVABAM).",
+    "anchor": "Results 3.1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39570186_Sathe2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "All 11 symptomatic VABAM cases had simultaneous hormonal therapy, against 40 of 91 without identified VABAM.",
+    "snippet": "All 11 children with sVABAM were treated with VBG‐HT, in comparison to 40 of 91 children without identified VABAM (p = 0.001).",
+    "anchor": "Results 3.2, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39570186_Sathe2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Peak vigabatrin dose was not associated with any VABAM category, contrary to the group's earlier cohort.",
+    "snippet": "peak vigabatrin dosage was not associated with aVABAM, sVABAM, or any VABAM (all p >> 0.05, Table 1 and Figure 1B)",
+    "anchor": "Results 3.3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39570186_Sathe2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 1: simultaneous hormonal therapy and vigabatrin by VABAM class.",
+    "snippet": "Simultaneous hormonal therapy and vigabatrin, n (%) | 40 (44%) | 15 (88%) | 0.001 | 4 (67%) | 0.41 | 11 (100%) | 0.001",
+    "anchor": "Table 1, treatment row",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39570186_Sathe2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Of the asymptomatic cases, hormonal exposure did not differ, in an underpowered comparison.",
+    "snippet": "concomitant hormonal therapy was observed in 4 (67%) children with aVABAM and 17 (44%) children without VABAM, with p = 0.40",
+    "anchor": "Results 3.2, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39570186_Sathe2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Genetic etiologies, including CDKL5 deficiency, are among the symptomatic cases; no gene-level association is tested.",
+    "snippet": "In the two patients with CDKL5 and unknown etiology, the timing of symptom onset and offset was closely related to VGB‐HT exposure.",
+    "anchor": "Results 3.1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39570186_Sathe2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state that causation is not established and name disease burden as a rival explanation.",
+    "snippet": "it is possible that our identified associations of VABAM with vigabatrin dosage (prior study) or concomitant hormonal therapy (prior and current study) are proxies for a link between VABAM and disease burden",
+    "anchor": "Discussion, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39570186_Sathe2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Design limits: retrospective, non-uniform MRI, non-random treatment, radiologist not blinded to exposure.",
+    "snippet": "Radiologist's clinical impressions, on which our identification of VABAM was based, were not blinded to vigabatrin exposure.",
+    "anchor": "Discussion, limitations para",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39570186_Sathe2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "No mechanism of harm is identified.",
+    "snippet": "the absence of an identified mechanism of harm",
+    "anchor": "Discussion, final para but one",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39570186_Sathe2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors judge VABAM risk small against the risk of continued spasms.",
+    "snippet": "the risk and consequences of VABAM are small relative to the risk of continued epileptic spasms",
+    "anchor": "Discussion, final para but one",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39570186_Sathe2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC11803263/fullTextXML returned HTTP 200 with a JATS body on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body or a table."
+ }
+}

@@ -110,6 +110,7 @@ PRIORITY_TESTS = (
     # The per-paper work packet and the one-call check run, with the firewall test that asserts
     # no claim, dossier or prior locator reaches a reading through them.
     "framework/scripts/test_paper_packet.py",
+    "framework/scripts/test_pubmed_identity_check.py",
     "framework/scripts/test_phase_handoff.py",
     # Record-level access to the two large registries, with the Aqeilan adverse cases: identifier
     # ambiguity, identity versus incidental mention, a caveat mid-record, expansion by hop, and

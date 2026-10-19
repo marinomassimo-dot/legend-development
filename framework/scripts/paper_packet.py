@@ -941,22 +941,27 @@ def _shared_checkout(root: Path) -> Path | None:
     return top if (top / "files").is_dir() else None
 
 
-def _runnable(root: Path, disease: str, pmid: str, packet: dict[str, Any]) -> list[tuple[str, list[str]]]:
+def _runnable(root: Path, disease: str, pmid: str, packet: dict[str, Any],
+              artifact_workspace: str = "") -> list[tuple[str, list[str]]]:
     """The checks whose command this file can build with no human choice left in it."""
     names = {check["name"] for check in packet["applicable_checks"]}
     jobs: list[tuple[str, list[str]]] = []
     if "manifest validator" in names:
-        # Evidence locality (fulltext_read_receipt.md): a task worktree carries the manifest and
-        # not the gitignored bytes it fingerprints. Without the shared checkout as the artefact
-        # root, every locator of a perfectly good manifest reads "No such file" from the
-        # worktree. Measured 2026-10-19 on a Scientist's task worktree.
-        extra: list[str] = []
-        shared = _shared_checkout(root)
-        if shared is not None and shared != root.resolve() and not (root / "files" / "fulltext").is_dir():
-            extra = ["--artifact-workspace", str(shared)]
+        # No explicit root given: from a linked task worktree that carries no files/fulltext,
+        # default to the shared checkout that holds the gitignored bytes (2026-10-19, scientist-c).
+        if not artifact_workspace and not (root / "files" / "fulltext").is_dir():
+            shared = _shared_checkout(root)
+            if shared is not None and shared != root.resolve():
+                artifact_workspace = str(shared)
         jobs.append(("manifest validator",
                      [sys.executable, str(HERE / "deepdive_manifest.py"), "--disease", disease,
-                      "--pmid", pmid, "--verify-artifacts", "--require-current-schema", *extra]))
+                      "--pmid", pmid, "--verify-artifacts", "--require-current-schema"]
+                     # A task worktree holds the manifest but not the gitignored files/ tree;
+                     # the validator already accepts a separate artifact root (2026-10-19, scientist-d).
+                     # Resolved HERE, against the invoker's cwd: the child process runs from the
+                     # repository root, so a relative value ("." typed inside a worktree) silently
+                     # named the worktree and turned every locator into "No such file" (2026-10-19, scientist-a).
+                     + (["--artifact-workspace", str(Path(artifact_workspace).resolve())] if artifact_workspace else [])))
         jobs.append(("flag drift",
                      [sys.executable, str(HERE / "manifest_flag_drift.py"), "--pmid", pmid]))
         jobs.append(("erratum scope",
@@ -967,7 +972,8 @@ def _runnable(root: Path, disease: str, pmid: str, packet: dict[str, Any]) -> li
     return jobs
 
 
-def run_checks(root: Path, disease: str, pmid: str, out_dir: Path | None = None) -> dict[str, Any]:
+def run_checks(root: Path, disease: str, pmid: str, out_dir: Path | None = None,
+               artifact_workspace: str = "") -> dict[str, Any]:
     packet = build(root, disease, pmid)
     out_dir = out_dir or (root / "files" / "check_runs")
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -975,7 +981,7 @@ def run_checks(root: Path, disease: str, pmid: str, out_dir: Path | None = None)
     started = time.monotonic()
     results = []
     with detail.open("w", encoding="utf-8") as handle:
-        for name, argv in _runnable(root, disease, pmid, packet):
+        for name, argv in _runnable(root, disease, pmid, packet, artifact_workspace):
             began = time.monotonic()
             try:
                 done = subprocess.run(argv, cwd=root, capture_output=True, text=True, timeout=600)
@@ -1042,6 +1048,8 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--pmid", required=True)
     parser.add_argument("--root", default=str(ROOT))
     parser.add_argument("--disease", default="wwox")
+    parser.add_argument("--artifact-workspace", default="",
+                        help="check only: root that holds the gitignored files/ tree when --root is a task worktree")
     parser.add_argument("--json", action="store_true")
     parser.add_argument("--out-dir", default="")
     parser.add_argument("--observed", action="append", default=[],
@@ -1083,7 +1091,8 @@ def main(argv: list[str] | None = None) -> int:
         return 0
 
     report = run_checks(root, args.disease, args.pmid,
-                        Path(args.out_dir).resolve() if args.out_dir else None)
+                        Path(args.out_dir).resolve() if args.out_dir else None,
+                        args.artifact_workspace)
     print(json.dumps(report, indent=1, ensure_ascii=False) if args.json else render_checks(report))
     return 1 if any(row["exit"] != 0 for row in report["results"]) else 0
 

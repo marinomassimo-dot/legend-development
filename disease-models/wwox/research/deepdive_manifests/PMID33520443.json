@@ -1,0 +1,428 @@
+{
+ "schema_version": 2,
+ "pmid": "33520443",
+ "doi": "10.7717/peerj.10604",
+ "receipt": "FTR-20261019-33520443-01",
+ "landing": [
+  "CC-20261019-SCIENTIST-B-G2-HUMAN-AXIS-01",
+  "metabolic_wave_20261019_scientist-b"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: the Europe PMC fullTextXML route returned the body and the PMC OA S3 bucket the figures and the DOCX supplement."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not run: the reading was produced directly under the Scientist brief; a deepdive pass would duplicate the locators."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered: no consolidated baseline claim is narrowed, reversed or removed and no MAJOR change class is declared; the figure-versus-text discrepancy concerns a correlation in a non-baseline association paper. Triples are listed in the commit candidate for a later blind audit."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 80,
+  "publications_on_gene": 38,
+  "counts_measured": "PubMed esearch 2026-10-19: 'Bednarek AK[au]' 80, 'Bednarek AK[au] AND WWOX' 38; 'Baryla I[au] AND WWOX' 6.",
+  "research_type": "mixed",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": true,
+  "weighting": "Primary for the WWOX gene in tumours and for the WWOX/HIF1A ratio idea; not a WWOX-DEE or neural group. The same laboratory authors the 2022 fibroblast paper and the 2022 review, so the three are not independent confirmations of one axis.",
+  "note": "Medical University of Lodz; clinical samples from a diabetology outpatient clinic in the same city."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "WWOX tokens in the JATS",
+    "route": "grep count over the persisted JATS, 2026-10-19",
+    "count": 132
+   }
+  ],
+  "note": "WWOX is the subject variable but it is measured, not manipulated: natural variation in blood leukocytes."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 81,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "<ref> elements counted in the JATS with a regular expression, 81.",
+  "resolved": [],
+  "queued": [],
+  "note": "Gene-direct references of the paper (Abu-Remaileh 2014, 2019, Aqeilan 2008, Bouteille 2009, Saxena 2020) are already in this metabolic lot or in the registry; no further hop was taken in this pass."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "registry_records.py get --pmid for this paper, hops 1; and theme HIF1A for the claim neighbourhood",
+  "hits": 2,
+  "finding": "Only two queue mentions (FT-111 names this paper as the group's own reference 15 of the 2022 review; FT-144 lists it as a singleton imported node). No paper-registry record carries its measurements. CLAIM 009 sits in the HIF1A neighbourhood and is not touched by this reading."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-19",
+  "route": "PubMed esummary 2026-10-19 for the PMID (no comments-corrections entries, publication type Journal Article only); JATS front matter carries is-retracted no",
+  "result": "No retraction, no correction, no expression of concern found.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 81,
+   "references_screened": 71,
+   "references_with_doi": 71,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 10
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID33520443_Baryla2021_PMC7811782.xml",
+   "sha256": "33ce1cbe9f2b7e9a70eb315481c5306cdf1c803c241410113c81e5b54430e45d",
+   "kind": "article_text",
+   "note": "Europe PMC JATS for PMC7811782 (PeerJ 2021, CC BY), 215,371 bytes; abstract, introduction, methods, results, discussion, figure legends, tables 1-2 present in the body. Reference list has 81 entries.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7811782/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "33ce1cbe9f2b7e9a70eb315481c5306cdf1c803c241410113c81e5b54430e45d"
+   }
+  },
+  {
+   "path": "files/figures/PMID33520443/peerj-09-10604-g001.jpg",
+   "sha256": "7dd681c721b8038a80e56a4234559c6ff5b784f79da260f21d780439f76579c6",
+   "kind": "figure",
+   "note": "Figure 1 patient-flow chart, inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7811782.1/peerj-09-10604-g001.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "7dd681c721b8038a80e56a4234559c6ff5b784f79da260f21d780439f76579c6"
+   }
+  },
+  {
+   "path": "files/figures/PMID33520443/peerj-09-10604-g002.jpg",
+   "sha256": "1e08f7d1c141bf3d50ae50f5a49d1099122d34147e13be807d792622f8225a52",
+   "kind": "figure",
+   "note": "Figure 2 twelve boxplots (WWOX, HIF1A, ten comparators, ratio), inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7811782.1/peerj-09-10604-g002.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "1e08f7d1c141bf3d50ae50f5a49d1099122d34147e13be807d792622f8225a52"
+   }
+  },
+  {
+   "path": "files/figures/PMID33520443/peerj-09-10604-g003.jpg",
+   "sha256": "335c41f81accca0fe3e70ed60cbb554ad8e1147910ccdb789d08d747143030c3",
+   "kind": "figure",
+   "note": "Figure 3 postpartum WWOX boxplots, inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7811782.1/peerj-09-10604-g003.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "335c41f81accca0fe3e70ed60cbb554ad8e1147910ccdb789d08d747143030c3"
+   }
+  },
+  {
+   "path": "files/figures/PMID33520443/peerj-09-10604-g004.jpg",
+   "sha256": "8a9ba0057248964df14901ec4d7cd0b77f2351b281aa891746f339cf4159680a",
+   "kind": "figure",
+   "note": "Figure 4 Spearman matrix in the GDM group, inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7811782.1/peerj-09-10604-g004.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "8a9ba0057248964df14901ec4d7cd0b77f2351b281aa891746f339cf4159680a"
+   }
+  },
+  {
+   "path": "files/figures/PMID33520443/peerj-09-10604-g005.jpg",
+   "sha256": "f12282f834d3d27992165149b0c110f57ff788fc6cb70fc710906204b7026490",
+   "kind": "figure",
+   "note": "Figure 5 Spearman matrix in the NGT group, inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7811782.1/peerj-09-10604-g005.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "f12282f834d3d27992165149b0c110f57ff788fc6cb70fc710906204b7026490"
+   }
+  },
+  {
+   "path": "files/figures/PMID33520443/peerj-09-10604-g006.jpg",
+   "sha256": "25b37ee146811eb7c040461afcb45f8b806f6b740e0a6729165cf21e7a6dd2f9",
+   "kind": "figure",
+   "note": "Figure 6 HbA1c scatterplots in the GDM group, inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7811782.1/peerj-09-10604-g006.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "25b37ee146811eb7c040461afcb45f8b806f6b740e0a6729165cf21e7a6dd2f9"
+   }
+  },
+  {
+   "path": "files/figures/PMID33520443/peerj-09-10604-g007.jpg",
+   "sha256": "b87ba02cba52dc4c537b27ea4094fba5306de549044209d7faab2ab721b8258d",
+   "kind": "figure",
+   "note": "Figure 7 proposed model schematic, inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7811782.1/peerj-09-10604-g007.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "b87ba02cba52dc4c537b27ea4094fba5306de549044209d7faab2ab721b8258d"
+   }
+  },
+  {
+   "path": "files/figures/PMID33520443/peerj-09-10604-s001.docx",
+   "sha256": "ca2b4ed1b07bd6f418a2ac4ddcd1cacecb54066baa094fa349dd5e6e32b92571",
+   "kind": "supplement_binary",
+   "note": "Supplemental Information 1 (Table S1, Spearman correlations of expression with maternal metabolic parameters), DOCX from the PMC OA bucket; text read from word/document.xml. Supplemental Information 2-12 (raw qRT-PCR plate XLS files) were not opened.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC7811782.1/peerj-09-10604-s001.docx",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "ca2b4ed1b07bd6f418a2ac4ddcd1cacecb54066baa094fa349dd5e6e32b92571"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC JATS, 215,371 bytes; abstract, introduction, methods, results, discussion, conclusions, tables and all figure legends present.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "COVERAGE: whole article read including Methods, both tables, all seven figures as images (Fig 1-7) and Supplemental Information 1 (Table S1, DOCX). NOT OPENED: Supplemental Information 2-12, eleven raw qRT-PCR plate XLS files. NO MULTIPLE-TESTING CORRECTION is named anywhere in the JATS (searched by term: Bonferroni, false discovery, multiple test, FDR; zero hits) although eleven genes were compared between groups and a WWOX p value of about 0.04 is called a tendency. FIGURE-VERSUS-TEXT: Figure 6C and 6E print statistics that differ from the running text (entries 12 and 13).",
+  "entries": [
+   {
+    "proposition": "DESIGN AND SYSTEM: 135 Caucasian pregnant women, 37 normal glucose tolerance and 98 GDM, third-trimester sampling; the only human glycaemia-state measurement of the WWOX/HIF1A transcript pair, in blood leukocytes, not in any neural or pancreatic tissue.",
+    "snippet": "A total of 135 Caucasian pregnant women consisted of 37 women with normal glucose tolerance (NGT) and 98 women with GDM were enrolled",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33520443_Baryla2021_PMC7811782.xml",
+    "anchor": "Methods, Study participants",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "READOUT: whole-leukocyte total RNA after red-cell lysis; the readout is mRNA only (RT-qPCR), a mixed white-cell population, no protein, no activity, no metabolite.",
+    "snippet": "Total RNA was isolated from leukocytes using a commercially available TRI Reagent",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33520443_Baryla2021_PMC7811782.xml",
+    "anchor": "Methods, Leukocytes separation and RNA extraction",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "WWOX itself is only marginally lower in GDM: the paper calls it a tendency at p about 0.04, while the stated fold changes are 1.4 for WWOX against 3.8 for HIF1A. The headline axis shift is carried by HIF1A.",
+    "snippet": "There was also a tendency for lower leukocyte WWOX expression in the women with GDM vs the controls with NGT",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33520443_Baryla2021_PMC7811782.xml",
+    "anchor": "Results, Gene expression studies during and after pregnancy",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fold changes as stated: WWOX 1.4-fold down, HIF1A 3.8-fold up, ratio about 6.5-fold down.",
+    "snippet": "as evidenced by an 1.4- fold decrease for WWOX and a 3.8-fold increase for HIF1A in the diabetic patients",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33520443_Baryla2021_PMC7811782.xml",
+    "anchor": "Results, Gene expression studies during and after pregnancy",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2A: the WWOX boxplots of GDM and NGT overlap almost entirely; the medians sit near 1 and 1.3 and the NGT upper quartile is much wider; one asterisk only. Figure 2B: HIF1A is clearly higher in GDM (three asterisks). Panel L, the ratio, has most of its spread in a few NGT outliers (axis to 300).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2, twelve boxplots: WWOX (A, one asterisk), HIF1A (B, three asterisks), SLC2A1, SLC2A4, HK2 (E, NS), PKM2, PFK, LDHA, NFKB1, CTNNB1, DVL2, WWOX/HIF1A ratio (L), GDM left and NGT right in each.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID33520443/peerj-09-10604-g002.jpg",
+    "anchor": "Figure 2 panels A, B and L, native JPEG",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "human peripheral blood leukocytes",
+     "genotype": "WWOX untouched, natural variation of expression",
+     "comparator": "NGT pregnant women",
+     "endpoint": "RT-qPCR mRNA, reference-gene normalised"
+    }
+   },
+   {
+    "proposition": "HK2, the first rate-limiting glycolytic step and a canonical HIF1A target, is unchanged between GDM and NGT; the HIF1A-induced programme is therefore partial.",
+    "snippet": "the leukocyte HK2 transcript level remained unchanged between the two groups",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33520443_Baryla2021_PMC7811782.xml",
+    "anchor": "Results, Gene expression studies during and after pregnancy",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In the GDM group the WWOX and HIF1A transcripts are not correlated with each other (rho -0.05, no asterisk), and WWOX has no correlation with HK2, PKM2 or SLC2A1 (rho -0.07, -0.06, 0.04); only PFK reaches a single asterisk (-0.22). The strong correlations of the ratio with HIF1A (-0.79) and with the glycolytic genes are the arithmetic of a ratio with HIF1A in its denominator.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4, triangular Spearman matrix over WWOX, HIF1A, WWOX.HIF1A, SLC2A1, SLC2A4, HK2, PKM2, PFK, LDHA, NFKB1, DVL2, CTNNB1 in the GDM group; cell values and asterisks printed in the cells.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID33520443/peerj-09-10604-g004.jpg",
+    "anchor": "Figure 4, GDM group Spearman matrix, native JPEG",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human peripheral blood leukocytes",
+     "comparator": "within GDM, n 98",
+     "endpoint": "Spearman rho of mRNA levels"
+    },
+    "found_or_sought": "sought: the selection row asked whether the ratio carries information beyond HIF1A"
+   },
+   {
+    "proposition": "The text builds the axis argument on correlations of the ratio, with HIF1A-induced genes, stated as negative and significant.",
+    "snippet": "In the patients with GDM, many correlations were found between WWOX/HIF1A ratio and other genes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33520443_Baryla2021_PMC7811782.xml",
+    "anchor": "Results, Gene expression correlations",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In the NGT group WWOX correlates positively, not negatively, with PFK (0.30) and LDHA (0.32), the glycolytic genes the axis model says WWOX should restrain; WWOX vs HIF1A rho is -0.12, again not significant.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5, triangular Spearman matrix over the same twelve variables in the NGT group.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID33520443/peerj-09-10604-g005.jpg",
+    "anchor": "Figure 5, NGT group Spearman matrix, native JPEG",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human peripheral blood leukocytes",
+     "comparator": "within NGT, n 37",
+     "endpoint": "Spearman rho of mRNA levels"
+    }
+   },
+   {
+    "proposition": "In normal pregnancy more insulin and more insulin resistance go with HIGHER WWOX expression (the direction opposite to loss of WWOX causing insulin resistance); in GDM neither WWOX nor the ratio correlates with any metabolic parameter.",
+    "snippet": "In the NGT group, insulin and HOMA-IR index positively associated with WWOX expression",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33520443_Baryla2021_PMC7811782.xml",
+    "anchor": "Results, Correlations between maternal metabolic parameters and the expression of WWOX/HIF-related genes",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The comparison groups differ in age and, unexpectedly, GDM women have LOWER HbA1c than NGT women, so glycaemic-state confounding of the transcript differences is not excluded by the clinical data.",
+    "snippet": "maternal HbA1c level was significantly lower in the GDM group than NGT controls",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33520443_Baryla2021_PMC7811782.xml",
+    "anchor": "Results, Clinical and biochemical characteristics",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The reported HbA1c correlates, in GDM only, with HIF1A, HK2, PFK and SLC2A1 and inversely with LDHA.",
+    "snippet": "only HbA1C correlated significantly and positively with HIF1A",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33520443_Baryla2021_PMC7811782.xml",
+    "anchor": "Results, Correlations between maternal metabolic parameters and the expression of WWOX/HIF-related genes",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FIGURE CONTRADICTS TEXT in two printed statistics. Panel C prints R 0.35 and p 0.0003 where the text gives p 0.004 for HK2; panel E prints R -0.22 and p 0.036 for LDHA where the text gives R -0.27 and p 0.010 (Table S1 agrees with the text). HbA1c spans only about 4.3 to 6.1 percent and the positive slopes are visibly carried by a few high-expression points.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6, five scatterplots of HbA1c against HIF1A (A), SLC2A1 (B), HK2 (C), PFK (D) and LDHA (E) mRNA with a regression line and the printed R and p.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID33520443/peerj-09-10604-g006.jpg",
+    "anchor": "Figure 6 panels C and E, native JPEG",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "contradicts": "entries[11]",
+    "contradicts_needle": "only HbA1C correlated significantly and positively with HIF1A",
+    "experimental_context": {
+     "system": "human peripheral blood leukocytes",
+     "comparator": "within GDM",
+     "endpoint": "Spearman R of mRNA against HbA1c"
+    }
+   },
+   {
+    "proposition": "Table S1 lists LDHA against HbA1c at R -0.27, p 0.010, the text value; Figure 6E prints -0.22 and 0.036. Table S1 also lists SLC2A4 against HbA1c at R 0.20, p 0.053, not significant and absent from the text.",
+    "snippet": "LDHA PFK HK2 SLC2A SLC2A1 HIF1A WWOX WWOX/HIF1A HbA1C [%] R value -0.27 0.31 0.35 0.20 0.34 0.33 NS NS",
+    "surface": "supplement",
+    "artifact": "files/figures/PMID33520443/peerj-09-10604-s001.docx",
+    "anchor": "Supplemental Information 1 (Table S1), GDM block",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought: reconcile Figure 6E with the text"
+   },
+   {
+    "proposition": "Postpartum, WWOX is about 2-fold higher than in the same women during GDM, in 8 and 12 paired women, and returns to the NGT level.",
+    "snippet": "exhibited a 2-fold increase in leukocyte WWOX gene expression compared to the same women",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33520443_Baryla2021_PMC7811782.xml",
+    "anchor": "Results, Gene expression studies during and after pregnancy",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 3: B and C medians near 1.7 and 2.0 against about 0.9 for A1 and A2 (one asterisk each), but the NGT WWOX box spans 0.5 to 6 and the NGT and GDM unpaired comparison carries only one asterisk; paired n is 8 and 12.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3, boxplots of leukocyte WWOX mRNA for A1, B, A2, C, NGT and GDM with significance brackets.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID33520443/peerj-09-10604-g003.jpg",
+    "anchor": "Figure 3, native JPEG",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "human peripheral blood leukocytes",
+     "comparator": "same women during GDM",
+     "timepoint": "3 months and 1 year postpartum"
+    }
+   },
+   {
+    "proposition": "The postpartum arm is 8 and 12 women of the 98, selected by who returned for follow-up; the authors state the limitation.",
+    "snippet": "there was a relatively small population size of postpartum patients with prior GDM",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33520443_Baryla2021_PMC7811782.xml",
+    "anchor": "Discussion, paragraph on postpartum follow-up",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Leukocytes were examined as a whole population; cell-subset composition, which differs between GDM and NGT, is a named uncontrolled variable.",
+    "snippet": "leukocytes are examined as a whole population of different cells",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33520443_Baryla2021_PMC7811782.xml",
+    "anchor": "Discussion, paragraph on leukocyte heterogeneity",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The functional direction of any association is stated as untested by the authors.",
+    "snippet": "whether these associations have functional relevance for the development of GDM remains to be determined",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33520443_Baryla2021_PMC7811782.xml",
+    "anchor": "Discussion, paragraph on NFKB1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state that protein-level confirmation and larger cohorts are required.",
+    "snippet": "with the analysis of protein expression of the components of the WWOX/HIF1A axis in leukocytes of GDM subjects",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33520443_Baryla2021_PMC7811782.xml",
+    "anchor": "Conclusions",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}

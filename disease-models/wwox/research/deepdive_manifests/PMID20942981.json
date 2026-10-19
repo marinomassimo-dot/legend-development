@@ -1,0 +1,519 @@
+{
+ "schema_version": 2,
+ "pmid": "20942981",
+ "doi": "10.1186/1471-2350-11-148",
+ "receipt": "FTR-20261019-20942981-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID20942981.md",
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-a.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-A-LIPID-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was selected and deduplicated by the Orchestrator's selector against the registries, queue and receipt ledger (selection file, method step 3); the per-paper M0 packet re-checked it."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Discovery leads, if any, are routed through the commit candidate and the analysis note; no cumulative discovery squeeze was warranted by this paper."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 1,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "A genetics group (Madrid and a commercial genotyping company, from the affiliations) reporting one population association. Primary for the WWOX locus in a Spanish general-population sample; not primary for WWOX-related disease. Observation (association table) weighed above interpretation (synthetic-association and LCAT speculation)."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (HDL OR triglyceride OR lipid) AND (polymorphism OR association OR GWAS)",
+    "count": 21,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (cholesterol OR lipoprotein)",
+    "count": 13,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "Counts are PubMed records, not WWOX-direct lipid studies; most are cancer or cardiovascular GWAS papers that list WWOX once."
+ },
+ "multihop": {
+  "references_enumerated": 40,
+  "gene_direct_refs_in_source": [
+   "ref 16 Lee 2008 (HDL, WWOX)",
+   "ref 26 Aqeilan 2008 (Wwox-null mouse, hypotriglyceridemia)",
+   "ref 22 Nunez 2006 (expression in normal tissue)",
+   "ref 34 Del Mare 2009 (genomics review)"
+  ],
+  "resolved": [
+   "Lee 2008 and Aqeilan 2008 already have complete receipts in the ledger (read in earlier waves)"
+  ],
+  "queued": [],
+  "note": "40 reference elements enumerated from the XML back matter. The three non-cancer WWOX references are already read here; ref 27 (Vasan 2009, left-ventricular wall thickness, rs2059238) was not opened and is not a lipid reference."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 20942981 --hops 1 (run AFTER the first pass); registry_records.py get --theme HDL --hops 0",
+  "hits": 2,
+  "note": "Identity records are a corpus placeholder (CORPUS P288) and a tracking-log placeholder (LIT-0288), both triage-only. Theme HDL reaches PAPER 084 (Lee 2008), PAPER 062 (Iatan 2014), PAPER 156 (Dong 2022) and CORPUS-STUB-109 (Liu 2021)."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 40,
+   "references_screened": 38,
+   "references_with_doi": 38,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  },
+  "result": "Checked 2026-10-19 via PubMed esummary/efetch for PMID 20942981: publication types ['Journal Article', \"Research Support, Non-U.S. Gov't\"]; corrections/retraction markers in the efetch record: none."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID20942981_Saez2010_PMC.xml",
+   "sha256": "b6eed51305f312d558b0b9a63282b9260bb47bd51d0f47913b4466bd3c1601f4",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC2967537: abstract, body, Tables 1-2, Figure 1 legend, 40 references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2967537/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID20942981/1471-2350-11-148-1.jpg",
+   "sha256": "128b28bad373697917173dead219ebd208b15a32027e196ccfa538c65ae906d1",
+   "kind": "figure",
+   "note": "Figure 1 (A-C) JPEG as deposited in the Europe PMC supplementaryFiles container, inspected at native 614x870 px.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2967537/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID20942981_Saez2010_supplement/1471-2350-11-148-S3.strings.txt",
+   "sha256": "4488c9c0ba921cf92d9052f6516f652d5d545f8ce1dc9f60206dc13bbb0c9cbe",
+   "kind": "supplement_text",
+   "note": "Text derived from the deposited binary Word file Table S1 (imputation quality) with GNU strings -n 1 (binutils 2.42), lines joined with a single space; table cells in row order.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID20942981_Saez2010_supplement/1471-2350-11-148-S3.DOC",
+    "extractor": {
+     "name": "GNU strings (binutils)",
+     "version": "2.42",
+     "call": "strings -n 1 <file> | sed 's/[[:space:]]*$//' | paste -sd' '",
+     "join": " "
+    },
+    "acquired_on": "2026-10-19",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID20942981_Saez2010_supplement/1471-2350-11-148-S8.strings.txt",
+   "sha256": "fab8b134eaefca12bfead6a74eaaf4fcf3b7fda55e43e1ef8396bce78cf94718",
+   "kind": "supplement_text",
+   "note": "Text derived from the deposited binary Word file Table S2 (HDL association) with GNU strings -n 1 (binutils 2.42), lines joined with a single space; table cells in row order.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID20942981_Saez2010_supplement/1471-2350-11-148-S8.DOC",
+    "extractor": {
+     "name": "GNU strings (binutils)",
+     "version": "2.42",
+     "call": "strings -n 1 <file> | sed 's/[[:space:]]*$//' | paste -sd' '",
+     "join": " "
+    },
+    "acquired_on": "2026-10-19",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID20942981_Saez2010_supplement/1471-2350-11-148-S9.strings.txt",
+   "sha256": "ac5a32a7c8f78e61a121f78f67a9fde27fb2e7906f3b316e3e4538845789740d",
+   "kind": "supplement_text",
+   "note": "Text derived from the deposited binary Word file Table S3 (TG association) with GNU strings -n 1 (binutils 2.42), lines joined with a single space; table cells in row order.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID20942981_Saez2010_supplement/1471-2350-11-148-S9.DOC",
+    "extractor": {
+     "name": "GNU strings (binutils)",
+     "version": "2.42",
+     "call": "strings -n 1 <file> | sed 's/[[:space:]]*$//' | paste -sd' '",
+     "join": " "
+    },
+    "acquired_on": "2026-10-19",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID20942981_Saez2010_supplement/1471-2350-11-148-S10.strings.txt",
+   "sha256": "e9de393bf074ca0418a7870e1820903d96767de59b3fb293147c6c3738d98213",
+   "kind": "supplement_text",
+   "note": "Text derived from the deposited binary Word file Table S4 (TG/HDL association) with GNU strings -n 1 (binutils 2.42), lines joined with a single space; table cells in row order.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID20942981_Saez2010_supplement/1471-2350-11-148-S10.DOC",
+    "extractor": {
+     "name": "GNU strings (binutils)",
+     "version": "2.42",
+     "call": "strings -n 1 <file> | sed 's/[[:space:]]*$//' | paste -sd' '",
+     "join": " "
+    },
+    "acquired_on": "2026-10-19",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID20942981_Saez2010_supplement/1471-2350-11-148-S3.DOC",
+   "sha256": "842e3212a8ce0832745ea51153af00b0816af39e22c6be678c2b1a9931ac96cf",
+   "kind": "supplement_binary",
+   "note": "Deposited Word file Table S1 (container; text reached through the derived strings surface).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2967537/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID20942981_Saez2010_supplement/1471-2350-11-148-S8.DOC",
+   "sha256": "8034024149682fb4eef245673f506aed8661feae1dab44762855aeba8c6b7453",
+   "kind": "supplement_binary",
+   "note": "Deposited Word file Table S2 (container; text reached through the derived strings surface).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2967537/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID20942981_Saez2010_supplement/1471-2350-11-148-S9.DOC",
+   "sha256": "faa774e5e4250ebc4691bab986367ee841b2b245e899e3296f9f4fce6b5c0ed3",
+   "kind": "supplement_binary",
+   "note": "Deposited Word file Table S3 (container; text reached through the derived strings surface).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2967537/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID20942981_Saez2010_supplement/1471-2350-11-148-S10.DOC",
+   "sha256": "e67c4f62e1f9bc9fa3c56ebb6ab4cba7cd439c68b2b8f3433a5d4624a67831cc",
+   "kind": "supplement_binary",
+   "note": "Deposited Word file Table S4 (container; text reached through the derived strings surface).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2967537/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID20942981_Saez2010_supplement/1471-2350-11-148-S1.PDF",
+   "sha256": "0b25cefb0dbe343104037e63aa2123ebbfeefb4114f940a5cc6342143d12a8eb",
+   "kind": "supplement_binary",
+   "note": "Deposited LD-map PDF Figure S1 (Spanish LD map); image-only, inspected as a rendered page (pdftoppm), no text layer.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2967537/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID20942981_Saez2010_supplement/1471-2350-11-148-S2.PDF",
+   "sha256": "e06a5412e605b917ed6138599e99fcf9fe7649d5b3dd1a68dfd0a2420c3d2b6c",
+   "kind": "supplement_binary",
+   "note": "Deposited LD-map PDF Figure S2 (CEU HapMap LD map); image-only, inspected as a rendered page (pdftoppm), no text layer.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2967537/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID20942981_Saez2010_supplement/1471-2350-11-148-S4.PDF",
+   "sha256": "be4f976fae35643270675e0361759322bc373def7e9fda1f17efee2069208f83",
+   "kind": "supplement_binary",
+   "note": "Deposited LD-map PDF Figure S3 (region 1 LD map); image-only, inspected as a rendered page (pdftoppm), no text layer.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2967537/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID20942981_Saez2010_supplement/1471-2350-11-148-S5.PDF",
+   "sha256": "2e95e61a7d9ccc101f5cb35afdfb3b6ef15d18aee76a7e10faf9d91a9056bafb",
+   "kind": "supplement_binary",
+   "note": "Deposited LD-map PDF Figure S4 (region 2 LD map); image-only, inspected as a rendered page (pdftoppm), no text layer.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2967537/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID20942981_Saez2010_supplement/1471-2350-11-148-S6.PDF",
+   "sha256": "7536bdac835ce40853b6f252ed6c4f10d416ec9956c946491421f7917a91aa1b",
+   "kind": "supplement_binary",
+   "note": "Deposited LD-map PDF Figure S5 (region 3 LD map); image-only, inspected as a rendered page (pdftoppm), no text layer.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2967537/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID20942981_Saez2010_supplement/1471-2350-11-148-S7.PDF",
+   "sha256": "dc9951fca80c706e43bbca96ec757b9dcab75a2ba54d085872bec8b805a73e1c",
+   "kind": "supplement_binary",
+   "note": "Deposited LD-map PDF Figure S6 (region 4 LD map); image-only, inspected as a rendered page (pdftoppm), no text layer.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2967537/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The study is one cross-sectional, population-based sample of 801 unrelated Spanish Caucasian adults; this is a quantitative-trait association study in the general population, not a patient or loss-of-function cohort.",
+    "snippet": "This study comprises 801 non related Caucasian men (n = 433, 54.05%) and women (n = 368, 45.95%) who were recruited by a simple random sampling approach from a cross-sectional population-based epidemiological survey in Spain",
+    "anchor": "Methods, Study design",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID20942981_Saez2010_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The analysed variants were 1045 common SNPs, 894 of them imputed from HapMap CEU rather than genotyped.",
+    "snippet": "Finally, 1045 SNPs (151 directly genotyped and 894 imputed, all of them with MAF ≥ 0.10) were analysed for association with HDL, TGs and HDL/TG ratio using the linear regression procedure included in the PLINK software",
+    "anchor": "Methods, Statistical analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID20942981_Saez2010_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors applied no multiple-comparison correction and set the significance threshold at nominal p below 0.05.",
+    "snippet": "We have not applied multiple comparison correction because we consider it over-conservative for the replication of a previously described gene specially given that most genotypes analysed in this report are derived from a small number of observed genotypes; a p value under 0.05 is interpreted as significant.",
+    "anchor": "Methods, Statistical analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID20942981_Saez2010_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The strongest HDL signal in the study is intron-8 rs2047927 at p = 0.003, with a negative beta (lower HDL per allele), in a different LD block from the rs4888865/rs4145518 signals, whose betas are positive.",
+    "snippet": "The strongest associations in the region were observed for the rs4888865 (p = 0.006, β = 0.96) and the rs4145518 (p = 0.007, β = 1.03) polymorphisms.",
+    "anchor": "Results, HDL association (region 2)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID20942981_Saez2010_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Region 3, the second intron-8 HDL region, has its best SNP rs2047927 at p = 0.003 with beta -2.25.",
+    "snippet": "of which the rs2047927 showed the highest significance (p = 0.003, β = -2.25)",
+    "anchor": "Results, HDL association (region 3)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID20942981_Saez2010_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The largest triglyceride signal is at the 5' end of WWOX (promoter to intron 4), rs11645006, p = 0.0002, beta -13.81 (lower TG per allele).",
+    "snippet": "a broad region that extends from the promoter to the 4th intron, with the largest association at rs11645006 (p = 0.0002, β = -13.81).",
+    "anchor": "Results, TG association (region 1)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID20942981_Saez2010_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "No intron-8 region is associated with HDL in the haplotype analysis, so the HDL signal that anchors the WWOX-HDL literature is not carried by a haplotype block here.",
+    "snippet": "Moreover, none of the intron 8 regions are associated with HDL in the haplotypic analysis, although region 2 shows a trend for association (p = 0.07).",
+    "anchor": "Discussion, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID20942981_Saez2010_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Global haplotype test for region 1 (promoter to intron 4): TG p = 0.003, HDL p = 0.018, TG/HDL p = 0.006.",
+    "snippet": "GLOBAL HAPLOTYPIC EFFECT F = 3.13p = 0.003 F = 2.435p = 0.018 F = 2.836p = 0.006",
+    "anchor": "Table 2, region 1 global row",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID20942981_Saez2010_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The study did not replicate the originally reported HDL variant rs2548861, and the authors give three reasons the failure could be technical or power-related.",
+    "snippet": "In our study, we failed to replicate the association of the rs2548861 with HDL.",
+    "anchor": "Discussion, paragraph 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID20942981_Saez2010_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state their study is underpowered below an effect size of 0.14.",
+    "snippet": "We estimate that our study is underpowered for SNPs with effect sizes below 0.14, so we can not rule out power issues.",
+    "anchor": "Discussion, paragraph 5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID20942981_Saez2010_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors themselves state that some associations may be chance and that independent replication is needed.",
+    "snippet": "We cannot rule out that some of the observed associations could have arisen by chance, reason why additional, independent replications are needed.",
+    "anchor": "Discussion, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID20942981_Saez2010_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The introduction records, citing the 2008 knockout-mouse paper, that Wwox-null mice are hypotriglyceridemic and hypocholesterolemic: the direction of the mouse null is stated beside the human association.",
+    "snippet": "In fact, WWOX knockout mouse model exhibits hypotriglyceridemia and hypocholesterolemia among other metabolic disturbances [26].",
+    "anchor": "Background, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID20942981_Saez2010_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The paper's functional step is a suggestion only: it speculates that variation in the 5' region could modify WWOX expression and states that functional analyses are needed.",
+    "snippet": "It is tempting to speculate that genetic variations in this region could modify the expression of the WWOX gene. Functional analyses are needed to answer this hypothesis.",
+    "anchor": "Discussion, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID20942981_Saez2010_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PANEL READING, Figure 1 (Manhattan-style plots of -log10 P along WWOX, three traits). In 1A (HDL) the highest points reach about 2.5-2.6 within shaded region 3; in 1B (TG) the highest points reach about 3.6 within shaded region 1; in 1C (TG/HDL) about 3.0 in region 2 and 2.7 in region 1. No point in any panel reaches the 4.0 axis top. All points are drawn as one series (Chr16) with no marker distinguishing genotyped from imputed SNPs.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1A y-axis -log10(P) 0 to 4.0 with a horizontal blue line at 1.3; shaded zones 2 and 3 carry the highest points (about 2.5); Fig 1B shaded zone 1 carries points up to about 3.6; Fig 1C zones 1 and 2; legend box reads Chr16 only.",
+    "anchor": "Figure 1A-C, read at native 614x870 px",
+    "surface": "figure",
+    "artifact": "files/figures/PMID20942981/1471-2350-11-148-1.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human population sample, 801 Spanish adults",
+     "genotype": "common SNPs, imputed and genotyped",
+     "treatment": "none",
+     "comparator": "linear regression adjusted for sex, age, BMI, smoking, alcohol, activity",
+     "endpoint": "-log10 P per SNP for HDL, TG, TG/HDL"
+    }
+   },
+   {
+    "proposition": "Supplementary Table S2 (HDL) prints BETA 2.67 for rs4888865 and 2.81 for rs4145518, while the body text prints beta 0.96 and 1.03 for the same two SNPs; the table row for rs2047927 does match the body (-2.25). The unit or scaling behind the text betas is not stated.",
+    "snippet": "rs4888865 77434919 C A 0.18 2.67 0.79 4.55 0.006 0.006 Imputed",
+    "anchor": "Additional file 8 (Table S2), row rs4888865, text derived with GNU strings",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID20942981_Saez2010_supplement/1471-2350-11-148-S8.strings.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Table S3 (TG) lists the top triglyceride SNP rs11645006 as an imputed genotype with beta -13.81 and P 2.4E-04.",
+    "snippet": "rs11645006 76710658 G A 0.33 -13.81 -21.16 -6.47 2.4E-04 1.8E-04 Imputed",
+    "anchor": "Additional file 9 (Table S3), row rs11645006, text derived with GNU strings",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID20942981_Saez2010_supplement/1471-2350-11-148-S9.strings.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Table S1 (imputation quality) gives rs11645006 an imputation Rsq of 0.8756, so the strongest TG signal rests on an imputed genotype of good but not perfect quality.",
+    "snippet": "rs11645006 76710658 G A 0.33 0.9330 0.8756",
+    "anchor": "Additional file 3 (Table S1), row rs11645006, text derived with GNU strings",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID20942981_Saez2010_supplement/1471-2350-11-148-S3.strings.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In Table S2 the previously reported HDL SNP rs2548861 shows P 0.299 in this sample, imputed.",
+    "snippet": "rs2548861 77215894 T G 0.37 0.80 -0.71 2.31 0.299 0.269 Imputed",
+    "anchor": "Additional file 8 (Table S2), row rs2548861, text derived with GNU strings",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID20942981_Saez2010_supplement/1471-2350-11-148-S8.strings.txt",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST search (EXT_ID, core) returned inEPMC Y, isOpenAccess Y, license cc by, fullTextId PMC2967537 on 2026-10-19; fullTextXML returned HTTP 200 and the declared article_text artefact is that response byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+ }
+}
