@@ -1,0 +1,467 @@
+{
+ "schema_version": 2,
+ "pmid": "35134125",
+ "doi": "10.1093/brain/awac037",
+ "pmcid": "PMC9337815",
+ "receipt": "FTR-20261019-35134125-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the interventions selection file's one-line 'why it matters' for this row, the group H5 header, and the Yuskaitis and Phillips-Farfan readings of this lot done minutes earlier (fasting lowers seizures in a PTZ mouse and in kindled rats, with the Depdc5 exception). Registry comparison admitted after the first pass: CLAIM 042, DL-MECH-020.",
+ "landing": [
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/interventions_batch_selection_20261019.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS XML was available from Europe PMC REST on the first request; no cascade was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline by the Scientist; the reading is the deliverable."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The transfer verdict is in the analysis note; no cumulative-ledger lead is claimed from a comparator paper."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever is matured by this paper; forging a hypothesis from a non-WWOX comparator would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for the reference genotype; class-level literature only, BLOCK-1 caution carried in the analysis note."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or corroborated by this reading; the load-bearing triples were checked mechanically by locator_audit.py and are exposed in the analysis note for a blind auditor."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "output_kind": "primary_research",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Two rodent absence-epilepsy models (WAG/Rij rat, DBA/2J mouse; 141 rats and 44 mice, both sexes), video-ECoG, glucometry, insulin and thalamic 2-deoxyglucose, slice patch-clamp, AMPK FRET reporter, systemic metformin. Primary for thalamic AMPK-GABAB biology, not for WWOX and not for any neonatal infusion or feeding regimen. The observations (more spike-wave seizures after an 18 h fast, after insulin, after thalamic 2-DG or A-769662; lethal seizures after 200 mg/kg metformin in WAG/Rij only) are firm as reported for those models; the AMPK-GABAB mechanism is the authors' proposed framework and is not measured in vivo (no in vivo p-AMPK, no GABAB antagonist rescue of the in vivo effect)."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (fasting OR \"caloric restriction\" OR \"calorie restriction\" OR \"dietary restriction\")",
+    "count": 4,
+    "source": "PubMed ESearch rettype=count 2026-10-19; the four hits are type 2 diabetes association studies (fasting glucose), none a fasting or restriction intervention"
+   },
+   {
+    "query": "WWOX AND (mTOR OR mTORC1 OR AMPK)",
+    "count": 8,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (hypoglycemia OR hypoglycaemia OR dextrose OR \"glucose infusion\")",
+    "count": 21,
+    "source": "PubMed ESearch rettype=count 2026-10-19; hits are glucose-metabolism, glycolysis and association papers, none an infusion or dextrose intervention"
+   },
+   {
+    "query": "WWOX AND (edema OR oedema OR hyponatremia OR \"fluid overload\")",
+    "count": 2,
+    "source": "PubMed ESearch rettype=count 2026-10-19; the two hits are a high-altitude pulmonary oedema locus list and a zebrafish embryo knockdown paper"
+   }
+  ],
+  "note": "Counts are PubMed search hits only (ESearch rettype=count, 2026-10-19), not a census; none of the WWOX hits tests the intervention of this group."
+ },
+ "multihop": {
+  "references_enumerated": 119,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list counted (119 entries) but not read item by item; the article's own key anchors (Gibbs 1940s absence-hypoglycaemia observation, GLUT1-deficiency absence cohorts) are cited in the Introduction and Discussion. No WWOX-directed reference was seen in the body."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 35134125 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "NO RECORD MATCHED for this PMID in the seven registry surfaces at commit 0c85331b341e; a statement about that query only. CLAIM 042 and DL-MECH-020 admitted for comparison after the first pass."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 119,
+   "references_screened": 114,
+   "references_with_doi": 114,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 5
+   }
+  },
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction (checked 2026-10-19 by the Scientist via the dependency screen and the publisher record in the JATS front matter)."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID35134125_Salvati2022_PMC.xml",
+   "sha256": "e86bf3fe4318c7fb94d4f17afcade857dd94a16dc5f4e2e55c711794f57a7b04",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9337815/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "e86bf3fe4318c7fb94d4f17afcade857dd94a16dc5f4e2e55c711794f57a7b04"
+   }
+  },
+  {
+   "path": "files/figures/PMID35134125/native/awac037f1.jpg",
+   "sha256": "0a014b0ad98bf781af64b7d5daf843e084cbfdea5a33dfaca9e1f9145ec0c31f",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9337815.1/awac037f1.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "0a014b0ad98bf781af64b7d5daf843e084cbfdea5a33dfaca9e1f9145ec0c31f"
+   }
+  },
+  {
+   "path": "files/figures/PMID35134125/native/awac037f2.jpg",
+   "sha256": "abe0347e8dc8a97ca7df03981234ad0c54ae4dfd7d59b08ed4cabdf7f5f59315",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9337815.1/awac037f2.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "abe0347e8dc8a97ca7df03981234ad0c54ae4dfd7d59b08ed4cabdf7f5f59315"
+   }
+  },
+  {
+   "path": "files/figures/PMID35134125/native/awac037f3.jpg",
+   "sha256": "9e0167692a194dab66a647bad4a9b1d0810dfc9144e112b1ac8117074ff731cc",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9337815.1/awac037f3.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "9e0167692a194dab66a647bad4a9b1d0810dfc9144e112b1ac8117074ff731cc"
+   }
+  },
+  {
+   "path": "files/figures/PMID35134125/native/awac037f4.jpg",
+   "sha256": "b3fa5c4c2c46eb9fd5160f5dc0d716dbc65c21d664068b1dbc30ebe7eb4be0c1",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9337815.1/awac037f4.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "b3fa5c4c2c46eb9fd5160f5dc0d716dbc65c21d664068b1dbc30ebe7eb4be0c1"
+   }
+  },
+  {
+   "path": "files/figures/PMID35134125/native/awac037f5.jpg",
+   "sha256": "49e6a1a30f8cbdee3f86936b89bdfbfb9d5dcd5ee48772c90481c2783873b43e",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9337815.1/awac037f5.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "49e6a1a30f8cbdee3f86936b89bdfbfb9d5dcd5ee48772c90481c2783873b43e"
+   }
+  },
+  {
+   "path": "files/supplements/PMID35134125/awac037_supplementary_data.pdf",
+   "sha256": "3e7d7709a461cb8e6f80922f8c2ebac574dee1271ddf0b8614713ed37fbde6d4",
+   "kind": "supplement_binary",
+   "note": "Supplemental Material PDF, 14 pages: Data Tables S1-S6 (read as text and as rendered pages) and Supplemental Figures (rendered at 60 dpi in a contact sheet; legends read, panels not inspected at native resolution).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9337815.1/awac037_supplementary_data.pdf",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "3e7d7709a461cb8e6f80922f8c2ebac574dee1271ddf0b8614713ed37fbde6d4"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The main text gives P = 0.0078 for the WAG/Rij spike-wave count after fasting and calls it nearly 2-fold.",
+    "snippet": "SWS count was nearly 2-fold higher during the fasted versus fed recording sessions for WAG/Rij rats (P = 0.0078, n = 13; Fig. 1F).",
+    "anchor": "Results, first section, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35134125_Salvati2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table S1 gives the WAG/Rij fasted-versus-fed spike-wave count as 21.9 versus 34.9 (ratio about 1.6) with P = 0.0044, n = 13; the value 0.0078 sits in the DBA row (n = 10). The main-text P value belongs to the mouse row.",
+    "snippet": "Visual attestation of Table S1 (supplement PDF page 1): DBA row SWS count 3.2 versus 9.4, N 10, p 0.0078; WAG row SWS count 21.9 versus 34.9, N 13, p 0.0044; WAG blood glucose 114.1 versus 75.4 mg/dL, beta-hydroxybutyrate 1.1 versus 3.3 mM.",
+    "anchor": "Supplement Table S1, WAG and DBA rows",
+    "surface": "figure",
+    "artifact": [
+     "files/supplements/PMID35134125/awac037_supplementary_data.pdf"
+    ],
+    "panel_text_relation": "text_contradicted_by_panel",
+    "experimental_context": {
+     "system": "WAG/Rij rat (Table S1 WAG row) versus DBA/2J mouse (Table S1 DBA row)",
+     "endpoint": "spike-wave seizure count, fed versus 18 h fasted"
+    },
+    "contradicts": "entries[0]",
+    "contradicts_needle": "P = 0.0078, n = 13"
+   },
+   {
+    "proposition": "The fast was set to produce at least a 30% fall in blood glucose.",
+    "snippet": "On Day 3, animals fasted for 18 h, a duration required to achieve at least a 30% drop in blood glucose.",
+    "anchor": "Results, first section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35134125_Salvati2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fasting raised seizure count and burden but not seizure duration.",
+    "snippet": "The increased seizure burden was largely driven by an elevated seizure count, not an increase in SWS duration (P = 0.17, n = 13; Fig. 1G).",
+    "anchor": "Results, first section, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35134125_Salvati2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1I, J panels: fasting glucose about 75 against about 113 mg/dl fed, beta-hydroxybutyrate about 3.3 against about 1.2 mM; panel F count about 39 against 23 per 4 h.",
+    "snippet": "Visual attestation of Figure 1F, I, J: SWS per 4 h about 23 fed and 39 fasted; glucose about 113 fed and 75 mg/dl fasted; beta-hydroxybutyrate about 1.2 fed and 3.3 mM fasted; panel K regression lines not significant.",
+    "anchor": "Figure 1F, I, J, K (image awac037f1)",
+    "surface": "figure",
+    "artifact": [
+     "files/figures/PMID35134125/native/awac037f1.jpg"
+    ],
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "WAG/Rij rat, adult, 18 h fast",
+     "endpoint": "spike-wave count, blood glucose, serum beta-hydroxybutyrate"
+    }
+   },
+   {
+    "proposition": "In WAG/Rij rats, across pooled fed and fasted sessions, correlations of seizure count with glucose (p = 0.094) and beta-hydroxybutyrate (p = 0.49) were not significant (trends only); in DBA/2J mice the beta-hydroxybutyrate correlation was significant (p = 0.020, Table S1).",
+    "snippet": "While correlation coefficients were not statistically significant, SWS count and β-hydroxybutyrate trended towards a positive correlation, whereas SWS count and blood glucose trended towards an inverse correlation (Fig. 1K).",
+    "anchor": "Results, first section, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35134125_Salvati2022_PMC.xml",
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35134125.json",
+     "entry": 5,
+     "what_changed": "scope restricted to rats; mouse result added from Table S1",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ]
+     }
+    }
+   },
+   {
+    "proposition": "Insulin lowered blood glucose and left beta-hydroxybutyrate unchanged; the rise in seizure count is a separate sentence (Figure 2D).",
+    "snippet": "Insulin injection produced a large reduction in blood glucose (P = 0.0039, n = 9; Fig. 2G), whereas β-hydroxybutyrate remained unchanged relative to saline injection (P = 0.36, n = 9; Fig. 2H).",
+    "anchor": "Results, second section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35134125_Salvati2022_PMC.xml",
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35134125.json",
+     "entry": 6,
+     "what_changed": "seizure-count claim removed from this entry",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "UNDERSHOOT"
+      ]
+     }
+    }
+   },
+   {
+    "proposition": "Figure 2G shows insulin-treated rat glucose falling from about 125 to about 45 mg/dl.",
+    "snippet": "Visual attestation of Figure 2D, G, H: SWS per 3 h about 16 after saline and 29 after insulin; glucose about 125 before and 45 mg/dl after insulin; beta-hydroxybutyrate about 1 before and after.",
+    "anchor": "Figure 2D, G, H (image awac037f2)",
+    "surface": "figure",
+    "artifact": [
+     "files/figures/PMID35134125/native/awac037f2.jpg"
+    ],
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "WAG/Rij rat, insulin 3 IU/kg i.p., blood at 90 min",
+     "endpoint": "spike-wave count, glucose, beta-hydroxybutyrate"
+    }
+   },
+   {
+    "proposition": "The authors conclude hypoglycaemia is sufficient to increase spike-wave seizures, inferred from consistency across fasting and insulin and a significant inverse correlation in the mouse insulin data only.",
+    "snippet": "As the inverse relationship between SWS count and blood glucose was consistent across fasting and insulin experiments, we concluded that hypoglycaemia is sufficient to increase SWSs.",
+    "anchor": "Results, second section, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35134125_Salvati2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Intrathalamic 2-deoxyglucose doubled the spike-wave count.",
+    "snippet": "Comparing total SWS count during active delivery (i.e. pump turned on) showed that 2-DG infusion doubled SWS count, relative to saline (P = 0.010, n = 9; Fig. 2L).",
+    "anchor": "Results, third section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35134125_Salvati2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Slice p-AMPK western blots varied between slices; the FRET-reporter rationale follows in the next sentences, not quoted.",
+    "snippet": "However, we also observed significant differences in baseline p-AMPK signal across slices.",
+    "anchor": "Results, AMPK potentiates GABAB section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35134125_Salvati2022_PMC.xml",
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35134125.json",
+     "entry": 10,
+     "what_changed": "rationale attributed to the following sentences",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "UNDERSHOOT"
+      ]
+     }
+    }
+   },
+   {
+    "proposition": "After 200 mg/kg metformin all animals had generalised convulsive status epilepticus and five of six died; the non-epileptic Wistar result is a separate sentence, not quoted.",
+    "snippet": "Within 70 min of metformin injection, all animals experienced generalized tonic-clonic seizures (convulsive status epilepticus, Fig. 5A) for ∼20 min, after which five of six animals died.",
+    "anchor": "Results, metformin section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35134125_Salvati2022_PMC.xml",
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35134125.json",
+     "entry": 11,
+     "what_changed": "Wistar result removed from this entry",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "UNDERSHOOT"
+      ]
+     }
+    }
+   },
+   {
+    "proposition": "The authors state the metformin dose used was roughly twice the human-equivalent dose and that overdose occurs in humans; that it is generally not prescribed to children is the next sentence, not quoted.",
+    "snippet": "First, the high metformin dose used in our study was roughly twice that of the equivalent dose used in humans and therefore may not have a clinical equivalence; however, metformin overdose occurs in humans.",
+    "anchor": "Discussion, Metformin and spike-wave seizures",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35134125_Salvati2022_PMC.xml",
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35134125.json",
+     "entry": 12,
+     "what_changed": "children statement attributed to the next sentence",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "UNDERSHOOT"
+      ]
+     }
+    }
+   },
+   {
+    "proposition": "The authors note the opposite direction to the ketogenic literature: fasting raises ketones and still worsens spike-wave seizures.",
+    "snippet": "And yet, here we report that acute fasting—a manipulation that elevates ketone bodies—exacerbates SWS.",
+    "anchor": "Discussion, Hypoglycaemia and spike-wave seizures",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35134125_Salvati2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state that SLC2A1 mutations account for about 10% of early-onset childhood absence epilepsies; that the ketogenic diet treats GLUT1 deficiency is stated in the next paragraph, not quoted.",
+    "snippet": "Mutations in SLC2A1, the gene encoding GLUT1, are found in 1% of all genetic generalized epilepsy patients and specifically account for 10% of early-onset childhood absence epilepsies.",
+    "anchor": "Discussion, Hypoglycaemia and spike-wave seizures",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35134125_Salvati2022_PMC.xml",
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35134125.json",
+     "entry": 14,
+     "what_changed": "ketogenic-diet statement attributed to the next paragraph",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "UNDERSHOOT"
+      ]
+     }
+    }
+   },
+   {
+    "proposition": "The authors say the mechanisms by which hypoglycaemia regulates spike-wave seizures remain entirely unknown; the sentence presenting their data as support for one hypothesis follows, not quoted.",
+    "snippet": "Despite such conclusions, the mechanisms that enable hypoglycaemia to regulate SWS remain entirely unknown.",
+    "anchor": "Conclusions",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35134125_Salvati2022_PMC.xml",
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35134125.json",
+     "entry": 15,
+     "what_changed": "support-for-hypothesis attributed to the next sentence",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "UNDERSHOOT"
+      ]
+     }
+    }
+   },
+   {
+    "proposition": "The Methods give 44 DBA/2J mice and 141 WAG/Rij rats, both sexes, with food and water ad libitum unless stated; 'adult' appears only for the WAG/Rij ECoG rats, and a separate non-epileptic Wistar group is also used.",
+    "snippet": "In total, 44 DBA/2J mice and 141 WAG/Rij rats were used.",
+    "anchor": "Materials and methods, Animals",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID35134125_Salvati2022_PMC.xml",
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35134125.json",
+     "entry": 16,
+     "what_changed": "'adult' limited to the WAG/Rij rats; Wistar group noted",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ]
+     }
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC9337815/fullTextXML returned HTTP 200 with a JATS body on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure panel."
+ }
+}

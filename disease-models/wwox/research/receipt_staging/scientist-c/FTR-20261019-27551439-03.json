@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-27551439-03",
+ "study_id": {
+  "pmid": "27551439",
+  "doi": "10.1038/cddiscovery.2015.3"
+ },
+ "event_at": "2026-10-19T18:50:58Z",
+ "analysis_at": "2026-10-19T18:50:58Z",
+ "analysis_time_precision": "second",
+ "workflow": "scientist-c, metabolic batch 2026-10-19, task METAB-G3-C-20261019, branch task/METAB-G3-C-20261019; context_policy QUESTION_DRIVEN, resume of a HELD-partial row. Held before reading: the prior receipt FTR-20261003-27551439-02 and its manifest (a complete article reading except the supplement, whose fifteen movies were not decoded for want of a video decoder) and the selection file's statement that the supplement is owed. Stated question: what do the fifteen supplementary time-lapse movies, the two supplementary figures and the four main figures not declared in the first manifest show about nucleolus-mitochondrion shuttling and aggregation of TPC6A-delta, and do the movie numbers cited in the text match the movies. Route: the PMC open-access S3 mirror for the movies (fifteen mp4 files), decoded with a static ffmpeg build installed from the imageio-ffmpeg wheel into the session scratch area (version 7.0.2), six sampled frames per movie tiled into one image and opened; the supplementary Word document's two embedded figures carved unchanged and opened; main figures 1, 4, 5 and 6 opened at native size. Receipt prepared as staged JSON for the integrator and was not appended at preparation time.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID27551439_Chang2015_PMC.xml",
+ "source_fingerprint": "61522f75014460b602cc2f1098d5921fef8bab36caa4314748904c757aea61b8",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "read",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID27551439.json",
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-G3-01.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "verbatim_locators",
+  "The article body, methods and results coverage is carried from FTR-20261003-27551439-02 and the existing locators of the same manifest, which were not re-derived; this event adds the supplement and four main figures. Movies were sampled at six frames each (the first frame and every K-th, K about one sixth of the frame count), not watched frame by frame; they are 0.8 to 9.4 s clips of time-lapses lasting hours, with burned-in clocks on some and none on others, units not printed. The two supplementary figures are the images embedded in the supplementary Word document."
+ ],
+ "prior_receipt": "FTR-20261003-27551439-02",
+ "reread_reason": "inadequate_prior_coverage"
+}

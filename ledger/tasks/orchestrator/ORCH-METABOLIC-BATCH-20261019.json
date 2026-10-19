@@ -40,11 +40,13 @@
     },
     {
      "step": "Integrate returns: receipts recorded in event-ID order after a scratch-clone trial, branches landed",
-     "status": "TODO"
+     "status": "DONE",
+     "evidence": "A,B,C,D landed (8cd800a0,1ca5bf78,56cb33c5,6d4df4cb); 67 receipts recorded, ledger 542, main fe91f386"
     },
     {
      "step": "BATCH_COMMIT of wave 1 candidates under LINT; Mirror ex-post review",
-     "status": "TODO"
+     "status": "IN_PROGRESS",
+     "evidence": "integrator agent running BATCH_20261019_001 (12 candidates, WM_v7.21)"
     },
     {
      "step": "Fresh-clone battery on exact SHA, public_release_gate, receipts verify, safe_push to development",
@@ -71,7 +73,8 @@
     },
     {
      "step": "Dispatch wave 2 (up to four Scientists) on that selection; integrate, BATCH_COMMIT, Mirror, battery, push",
-     "status": "TODO"
+     "status": "IN_PROGRESS",
+     "evidence": "wave 2 running: A (H1,H2), B (H3), C (H4), D (H5); returns to be integrated as BATCH_20261019_002"
     }
    ]
   }
@@ -83,6 +86,14 @@
    "who_consulted": "operator instruction: at least three, four for important tasks",
    "reversibility": "high",
    "how_to_revert": "retire the scientist-d task contract"
+  }
+ ],
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "11 staged receipts carried analysis_at in the future",
+   "default": "set analysis_at to the date 2026-10-19T00:00:00Z (the form scientist-d used) and event_at not later than the record time; staged copies replaced",
+   "why_safe": "the reading happened that day; no field of content changed; recorded in commit b968bbd2",
+   "different_if": "exact reading times would have been kept"
   }
  ]
 }

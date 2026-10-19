@@ -1,0 +1,259 @@
+{
+ "schema_version": 2,
+ "pmid": "41002898",
+ "doi": "10.3390/membranes15090263",
+ "receipt": "FTR-20261019-41002898-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-G3-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery-ledger lead beyond what the manifest and analysis note carry; the ledger is written by its validated writer only where a lead survives."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever for the reference genotype class is matured by this reading; forging from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged; nothing here reaches BLOCK-1."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes go through commit candidates."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; no audit trigger fired."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "weighting": "A biomedical-engineering group writing a narrative review of mitochondria-associated membranes in common neurodegenerative diseases; WWOX is not named. No measurement is made, so it is weighted as a vocabulary and a list of tethers and calcium routes, not as evidence for any claim, and its internal contradictions are recorded."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "mitochondria-associated membranes AND neurodegeneration",
+    "count": 224,
+    "source": "PubMed ESearch 2026-10-19"
+   }
+  ],
+  "note": "Record matches, not measurements."
+ },
+ "multihop": {
+  "references_enumerated": 176,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "The reference list holds 176 reference elements in the JATS artefact (counted in the session); WWOX is not named anywhere in the article (case-insensitive count 0).",
+  "disposition": "No gene-direct references."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 41002898 --hops 1; registry_records.py get --theme for VDAC1, IP3R, ITPR1, MFN2, SIGMAR1, VAPB, HSPA9 (hops 0); paper_packet.py packet; fulltext_receipts.py status --pmid 41002898",
+  "hits": 0,
+  "note": "No record for the PMID and no registry record matched any of the seven MAM tether or calcium-channel terms; each empty result is a statement about that query over the seven surfaces, not about the literature."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn or CommentIn link; publication types Journal Article and Review.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 176,
+   "references_screened": 162,
+   "references_with_doi": 162,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 14
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41002898_Truong2025_PMC.xml",
+   "sha256": "d36cc7f8812c9447d6f91594ff30b9a9bab01aa801210586d7e172c3e0ce4a72",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12471380/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "d36cc7f8812c9447d6f91594ff30b9a9bab01aa801210586d7e172c3e0ce4a72"
+   }
+  },
+  {
+   "path": "files/figures/PMID41002898/membranes-15-00263-g001.jpg",
+   "sha256": "33c6a72f388554b2fc894d7ce713314ca76abc30cca82368f6fb7952bbd96744",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC12471380 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID41002898/membranes-15-00263-g002.jpg",
+   "sha256": "9fb9a8522989b2b044f4189af52266ef1a01fb7488ad457a077369cc2e790f22",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC12471380 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID41002898/membranes-15-00263-g003.jpg",
+   "sha256": "907efb5f0edd372a17eacee37db6831971ce403aa6cbcd7d866ea3a92581f58e",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC12471380 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID41002898/membranes-15-00263-g004.jpg",
+   "sha256": "5f55b7fbb36aa443d453b25d91e37ed042e3bf913cf8534673eda2c75fa61d66",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC12471380 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Scope: a narrative review of MAMs in neurodegeneration, with no search method or appraisal stated.",
+    "snippet": "This review aims to provide a comprehensive overview of the structural and functional characteristics of MAMs and their role in the pathophysiology of neurodegenerative diseases.",
+    "anchor": "1. Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41002898_Truong2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Disease coverage is Alzheimer, Parkinson, ALS and Huntington disease only; no developmental, epileptic or inherited-metabolic disorder is covered (the words epilepsy, seizure, ferroptosis and iron do not occur in the article, counted in this session).",
+    "snippet": "This section highlights how MAM impairment manifests in four major neurodegenerative disorders—AD, PD, ALS, and HD—emphasizing the shared and disease-specific alterations",
+    "anchor": "3. MAM Dysfunction in Neurodegenerative Diseases",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41002898_Truong2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Section 3 summary: MAM changes are increased tethering in AD and reduced connectivity in PD and ALS.",
+    "snippet": "through increased tethering (e.g., in AD), reduced connectivity (e.g., in PD and ALS), or structural interference by mutant proteins (e.g., in HD)",
+    "anchor": "3. MAM Dysfunction in Neurodegenerative Diseases",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41002898_Truong2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Parkinson section, first statement: PINK1 and Parkin loss reduces ER-mitochondria tethering and calcium exchange.",
+    "snippet": "reduce ER–mitochondria tethering and calcium exchange, thereby impairing mitochondrial ATP production",
+    "anchor": "3.2 Parkinson's Disease",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41002898_Truong2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Parkinson section, second statement: PARK2-mutant fibroblasts and Parkin knock-out mice show ER and mitochondria in closer proximity, more calcium flow and more MFN2, the opposite direction from the summary and from the previous sentence.",
+    "snippet": "the ER and mitochondria were in proximity together, Ca2+ flow to the cytosol increased, and MFN2 (which is implicated in ER–mitochondria tethering) increased [62]",
+    "anchor": "3.2 Parkinson's Disease",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41002898_Truong2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Lipid droplets: MAMs described as LD nucleation sites and excess LDs seen in AD, ALS and HD models; no mitochondrial-disease LD material (compare the OXPHOS-deficiency paper in this lot).",
+    "snippet": "Excessive or persistent LD accumulation can signify metabolic dysfunction and is observed in AD, ALS, and HD models",
+    "anchor": "4.3 Role in Lipid Droplet Formation and Turnover",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41002898_Truong2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Therapy: one peptide, small-molecule and natural-compound lists; the clinical trials in Table 3 are curcumin and resveratrol trials with amyloid, atrophy or isoprostane outcomes, not MAM measures.",
+    "snippet": "TAT-MP1Gly, a cell-permeable peptide that disrupts the interaction between PTPIP51 and VAPB, reducing excessive ER–mitochondria tethering in AD models",
+    "anchor": "7.1 Small Molecules and Peptides Targeting MAM Proteins",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41002898_Truong2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 4 legend names three proteins: MFN2, PACS-2 and ATAD3A.",
+    "snippet": "This schematic illustrates the ER–MAM–mitochondria interface, highlighting three key proteins: MFN2 (mitofusin-2), PACS-2 (Phosphofurin Acidic Cluster Sorting Protein 2), and ATAD3A",
+    "anchor": "Figure 4 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41002898_Truong2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 4 as displayed is a different schematic from its legend: it shows donor-mitochondria transfer routes (tunnelling nanotubes, extracellular vesicles, mitoception), current treatments (antioxidants, chelators, respiratory-complex regulators) and a MAM inset labelled VDAC1, GRP75, Sig-1R, IP3R, RyRs and SERCA; MFN2, PACS-2 and ATAD3A are not labelled.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4: left boxes 'Donor healthy mitochondria' with mechanism of mitochondrial transfer (spontaneous: TNT, EVs, connexin, free mitochondria; artificial: mitoception) and incorporation routes; right 'Current treatments: dietary supplements, synthetic compounds' with sub-bullets antioxidants, ion-specific chelators, regulators of respiratory complexes, drugs to restore dynamics; lower right inset of mitochondrion-ER contact with VDAC1, GRP75, Sig-1R, IP3R, RyR, SERCA and a legend listing ER, MAM, RyRs, VDAC, GRP75, Sig-1R, IP3R and SERCA.",
+    "anchor": "Figure 4",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41002898/membranes-15-00263-g004.jpg",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "experimental_context": {
+     "system": "review schematic, no experiment",
+     "endpoint": "labelled components"
+    },
+    "contradicts": "entries[7]",
+    "contradicts_needle": "highlighting three key proteins: MFN2"
+   },
+   {
+    "proposition": "The authors state that whether MAM changes are compensatory or causative remains unclear.",
+    "snippet": "The extent to which MAM changes in neurodegeneration are compensatory or causative remains unclear.",
+    "anchor": "8. Conclusions and Future Perspectives",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41002898_Truong2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Future directions named are cell types, sex and ageing; development is not among them.",
+    "snippet": "future research should examine the differences in MAM remodeling across cell types, sexes, and aging stages",
+    "anchor": "8. Conclusions and Future Perspectives",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41002898_Truong2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1 is declared modified from an earlier article of the same publisher.",
+    "snippet": "Copyrighted and modified by the author and Licensee MDPI, Basel, Switzerland, distributed under Creative Commons Attribution (CC BY) license",
+    "anchor": "Figure 1 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41002898_Truong2025_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC12471380/fullTextXML returned HTTP 200 (285149 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image."
+ }
+}

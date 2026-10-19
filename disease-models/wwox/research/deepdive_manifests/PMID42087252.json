@@ -1,0 +1,284 @@
+{
+ "schema_version": 2,
+ "pmid": "42087252",
+ "doi": "10.1186/s40337-026-01627-5",
+ "pmcid": "PMC13312573",
+ "receipt": "FTR-20261019-42087252-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the interventions selection file's one-line 'why it matters' for this row and the group H5 header, plus the earlier readings of this lot done in this session (Yuskaitis, Phillips-Farfan, Salvati) and the registry theme records CLAIM 042 and DL-MECH-020 admitted after the first pass of the first paper. No registry record about this paper (none exists).",
+ "landing": [
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/interventions_batch_selection_20261019.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS XML was available from Europe PMC REST on the first request; no cascade was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline by the Scientist; the reading is the deliverable."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The transfer verdict is in the analysis note; no cumulative-ledger lead is claimed from a comparator paper."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever is matured by this paper; forging a hypothesis from a non-WWOX comparator would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for the reference genotype; class-level literature only, BLOCK-1 caution carried in the analysis note."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or corroborated by this reading; the load-bearing triples were checked mechanically by locator_audit.py and are exposed in the analysis note for a blind auditor."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "output_kind": "primary_research",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Retrospective single-centre cohort of 208 admissions (98 adults, mean age about 35 years, mean BMI 12.2, 97% female) with route-specific calorie quantification by nursing meal-consumption scores, mixed-effects regression of nadir phosphorus, potassium, magnesium and calcium. The reported fact is an association of parenteral dextrose calories with magnesium and calcium falls after Bonferroni adjustment, not phosphorus; the mechanism offered is untested and confounding by indication is acknowledged. Adults with a psychiatric illness; no children, no encephalopathy, no WWOX, and the text never mentions thiamine (string search over the rendered text returned 0)."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (fasting OR \"caloric restriction\" OR \"calorie restriction\" OR \"dietary restriction\")",
+    "count": 4,
+    "source": "PubMed ESearch rettype=count 2026-10-19; the four hits are type 2 diabetes association studies (fasting glucose), none a fasting or restriction intervention"
+   },
+   {
+    "query": "WWOX AND (mTOR OR mTORC1 OR AMPK)",
+    "count": 8,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (hypoglycemia OR hypoglycaemia OR dextrose OR \"glucose infusion\")",
+    "count": 21,
+    "source": "PubMed ESearch rettype=count 2026-10-19; hits are glucose-metabolism, glycolysis and association papers, none an infusion or dextrose intervention"
+   },
+   {
+    "query": "WWOX AND (edema OR oedema OR hyponatremia OR \"fluid overload\")",
+    "count": 2,
+    "source": "PubMed ESearch rettype=count 2026-10-19; the two hits are a high-altitude pulmonary oedema locus list and a zebrafish embryo knockdown paper"
+   },
+   {
+    "query": "WWOX AND (refeeding OR thiamine OR \"parenteral nutrition\")",
+    "count": 0,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "Counts are PubMed search hits only (ESearch rettype=count, 2026-10-19), not a census; none of the WWOX hits tests the intervention of this group."
+ },
+ "multihop": {
+  "references_enumerated": 76,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list counted (76 entries) from the JATS reference block, not read item by item; no WWOX-directed reference seen in the body."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42087252 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "NO RECORD MATCHED for this PMID in the seven registry surfaces at commit 0c85331b341e; a statement about that query only. CLAIM 042 and DL-MECH-020 (ketogenic-diet lines) admitted for comparison after the first pass."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 76,
+   "references_screened": 72,
+   "references_with_doi": 72,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 4
+   }
+  },
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction (checked 2026-10-19 by the Scientist via the dependency screen and the publisher record in the JATS front matter)."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42087252_Funayama2026_PMC.xml",
+   "sha256": "76d8a754083bbfe372199e5f1f678c1ea2c46ebd4e689b46a5074d0d4e3f734f",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13312573/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "76d8a754083bbfe372199e5f1f678c1ea2c46ebd4e689b46a5074d0d4e3f734f"
+   }
+  },
+  {
+   "path": "files/figures/PMID42087252/native/40337_2026_1627_Fig1_HTML.jpg",
+   "sha256": "2c03ea2c852263193db45998b04edafa297e27b98a32a6b381dd12cd1dbcdbd9",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13312573.1/40337_2026_1627_Fig1_HTML.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "2c03ea2c852263193db45998b04edafa297e27b98a32a6b381dd12cd1dbcdbd9"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Retrospective single-centre analysis of 208 admissions of 98 adults with anorexia nervosa treated over 25 years.",
+    "snippet": "During this period, 208 admissions occurred among 98 patients with anorexia nervosa",
+    "anchor": "Methods, Participants",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42087252_Funayama2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The cohort was severely underweight (mean BMI 12.2).",
+    "snippet": "The mean BMI across all 208 admissions was 12.2 ± 2.2, indicating that the cohort predominantly comprised individuals with extreme malnutrition",
+    "anchor": "Results, para 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42087252_Funayama2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Mean intake over seven days was 1443 kcal/day, of which 334 kcal/day was parenteral; parenteral nutrition was about 81% carbohydrate.",
+    "snippet": "carbohydrate proportions were approximately 60%, 54%, and 81% for the regular diet, enteral formulas, and parenteral nutrition, respectively",
+    "anchor": "Results, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42087252_Funayama2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The non-oral exposure mixed intravenous fluid therapy, peripheral and total parenteral nutrition and was grouped only by whether it contained dextrose.",
+    "snippet": "consisted of a mixture of intravenous fluid therapy, peripheral parenteral nutrition, and total parenteral nutrition",
+    "anchor": "Methods, Assessment of route-specific caloric intake",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42087252_Funayama2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Main result: regular diet, enteral formula and non-dextrose parenteral calories were not associated with nadir electrolytes; higher parenteral dextrose intake was associated with lower nadir magnesium and larger percent falls in magnesium and calcium.",
+    "snippet": "higher parenteral dextrose intake was associated with lower nadir magnesium and greater percent decreases in magnesium and calcium during refeeding (Table 4)",
+    "anchor": "Results, mixed-effects regression",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42087252_Funayama2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "For phosphorus, the electrolyte most often tied to refeeding syndrome, the dextrose coefficient was not significant for nadir level (p 0.0702) and the percent-decrease p 0.0212 was unadjusted.",
+    "snippet": "Parenteral dextrose - - - -1.16 × 10− 2 6.38 × 10− 3 0.0702 0.366 0.157 0.0212*",
+    "anchor": "Table 5, parenteral dextrose row",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42087252_Funayama2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 4 lists the magnesium nadir coefficient for parenteral dextrose as -0.119; Table 7 for the same model gives -0.0119 with standard error 0.00258 (ten-fold difference; a typographical error in one table is likely, not resolvable from the paper).",
+    "snippet": "Parenteral dextrose -0.0116 0.366 -5.38 × 10− 3 0.126 -0.119** 0.468** -0.0134 0.172*",
+    "anchor": "Table 4, parenteral dextrose row",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42087252_Funayama2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 7 gives the magnesium nadir coefficient as -0.0119.",
+    "snippet": "Parenteral dextrose - - - -0.0119 2.58 × 10 − 3 < 0.001** 0.468 0.0945 < 0.001**",
+    "anchor": "Table 7, parenteral dextrose row",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42087252_Funayama2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Only 9 admissions with predominantly parenteral intake had magnesium data in the subgroup analysis.",
+    "snippet": "Participants with parenteral intake (n = 18 for P; 18 for K; 9 for Mg; 15 for Ca)",
+    "anchor": "Table 2, subgroup header",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42087252_Funayama2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Nadir analyses excluded admissions without a V-shaped trajectory, mostly early self-discharge.",
+    "snippet": "trajectory during this period were excluded from",
+    "anchor": "Methods, Outcome indicators",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42087252_Funayama2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors name confounding by indication: parenteral nutrition may have gone to sicker patients.",
+    "snippet": "However, parenteral nutrition may have been preferentially administered to more severely ill patients, and residual confounding by indication cannot be entirely excluded.",
+    "anchor": "Limitations, first paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42087252_Funayama2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Parenteral nutrition was not stratified by continuous versus intermittent infusion, which may change insulin surges.",
+    "snippet": "which may influence the magnitude of insulin surges during refeeding",
+    "anchor": "Limitations, third paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42087252_Funayama2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The route-specific mechanism the authors favour (hepatic first-pass buffering) was not measured.",
+    "snippet": "glucose handling were not directly evaluated in this study",
+    "anchor": "Limitations, third paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42087252_Funayama2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors suggest parenteral nutrition with more lipid and less carbohydrate might have been preferable.",
+    "snippet": "a greater use of lipids in parenteral nutrition might have been preferable",
+    "anchor": "Discussion, route-specific associations, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42087252_Funayama2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1 shows 208 admissions: 203 fed orally, 142 with parenteral nutrition, 137 combined oral and parenteral, and only 5 exclusively parenteral.",
+    "snippet": "Visual attestation of Figure 1: flow diagram, All admissions N=208; oral feeding n=203; parenteral nutrition n=142; combined oral and parenteral n=137; only parenteral nutrition n=5; only regular diet n=122, regular plus enteral formula n=75, enteral formula without regular diet n=6.",
+    "anchor": "Figure 1 (image 40337_2026_1627_Fig1_HTML)",
+    "surface": "figure",
+    "artifact": [
+     "files/figures/PMID42087252/native/40337_2026_1627_Fig1_HTML.jpg"
+    ],
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "adult anorexia nervosa inpatients, single centre",
+     "endpoint": "distribution of nutrition routes in the first 7 days"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC13312573/fullTextXML returned HTTP 200 with a JATS body on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure panel."
+ }
+}

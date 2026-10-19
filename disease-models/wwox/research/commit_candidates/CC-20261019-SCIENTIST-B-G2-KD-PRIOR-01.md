@@ -69,3 +69,17 @@ Receipts for the eight PMIDs above (staged under `receipt_staging/scientist-b/`)
 | 42171828 | entry 1 | TIMING: a HIF-1 alpha inhibitor given 0.5 h after MCAO reduced apoptosis and infarct size. | administration of 2-methoxyestradiol (2ME2), a HIF-1α inhibitor, at 0.5 h after MCAO-induced hypoxia significantly reduced cell apoptosis  | Dual and time-dependent actions |
 | 42171828 | entry 2 | The same inhibitor given 8 h after MCAO increased apoptosis and neuron loss: the sign of a HIF-1 alpha intervention reverses with timing. | Conversely, later administration of 2ME2, 8 h after MCAO, induced greater cell apoptosis and reduced the number of NeuN+ neurons.  | Dual and time-dependent actions |
 | 42171828 | entry 3 | Summary statement: acute-phase HIF-1 alpha upregulation harms and late-phase upregulation protects; the acute and late phases are hours apart (4 to 8 h versus 48 to 72 h). | acute-phase upregulation of HIF-1α induces neuronal loss, behavioral deficits, and animal death, while late-phase upregulation of HIF-1α mediates neuronal prote | Dual and time-dependent actions |
+
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261019_001` · 2026-10-19 · ACTOR_ID `orchestrator` (stated assumption, batch integrator)
+**Working model:** WM_v7.20 -> WM_v7.21 (MINOR)
+**Class re-judged (§7):** MINOR
+**Blind locator audit:** not run — no baseline claim is narrowed and no MAJOR contingency is declared; the candidate's locator triples are carried for a later audit.
+**What landed:** 8 PAPER record(s) (PAPER 268, PAPER 269, PAPER 270, PAPER 271, PAPER 272, PAPER 273, PAPER 274, PAPER 275) with their LIT records. `CLAIM 042` evidence boundary extended with the base-rate paragraph (evidence-boundary text only; status `in observation` unchanged).
+**Status / Type / Summary:** unchanged by this candidate.
+**Not medical advice.** Class level only; no individual-level record is carried.

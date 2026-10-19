@@ -1267,7 +1267,8 @@ def contradiction_audit_is_structured(audit: Any) -> bool:
 
 
 def _contradiction_errors(entry: dict, position: int, root: Path | None,
-                          incomplete: list[str]) -> list[str]:
+                          incomplete: list[str],
+                          manifest_root: Path | None = None) -> list[str]:
     declared = entry.get("contradicts_locator")
     if declared is None:
         return []
@@ -1288,7 +1289,14 @@ def _contradiction_errors(entry: dict, position: int, root: Path | None,
         errors.append(f"{where}.what_changed: say what changed, in a sentence")
     prior = str(declared.get("manifest") or "")
     if root is not None and prior:
+        # The prior manifest is repository content, not evidence: on a task branch it sits in
+        # the branch workspace (`manifest_root`), while `root` may be the shared checkout that
+        # holds only the gitignored evidence. Resolve beside the manifest first and fall back
+        # to `root`; found on 2026-10-19 when 25 declared revisions of this branch's own
+        # manifests were refused as 'not a file under the workspace'.
         prior_path = root / prior
+        if manifest_root is not None and (manifest_root / prior).is_file():
+            prior_path = manifest_root / prior
         if not prior_path.is_file():
             errors.append(f"{where}.manifest: {prior} is not a file under the workspace")
         elif has_entry:
@@ -2179,7 +2187,8 @@ def validate(
                             f"verbatim_locators.entries[{position}].{field}: only a "
                             f"`{owner}` locator may carry one")
 
-                errors.extend(_contradiction_errors(entry, position, root, incomplete))
+                errors.extend(_contradiction_errors(entry, position, root, incomplete,
+                                                    manifest_root=queue_root))
 
                 declared_context = entry.get("experimental_context")
                 if declared_context is not None:

@@ -43,7 +43,7 @@ edition: public
 ## 2. DISEASE-MODEL (WORKING-MODEL) VERSION
 
 ```yaml
-working_model_version: WM_v7.20
+working_model_version: WM_v7.21
 working_model_file: disease-models/wwox/registries/working_model_current.md
 narrative_view: disease-models/wwox/disease_model.md
 notes: "Canonical disease-level working model derived from public literature; disease_model.md is its narrative reader-facing view. The private individual-level record is not part of this edition."
@@ -106,12 +106,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20261004_007
-last_batch_commit_date: 2026-10-04
+last_batch_commit_id: BATCH_20261019_001
+last_batch_commit_date: 2026-10-19
 last_batch_commit_type: MANUAL
-commit_candidates_propagated: 18
-target_wm_version: WM_v7.20
-trigger: MANUAL (operator-dispatched integration of intake wave 13, groups A, B and C, plus the two Mirror repairs of `BATCH_20261004_004`/`_005`; the backlog threshold of 5 was also met). Nineteen candidates in scope: eighteen propagated, one disposed with no ops because its finding was a measurement of registry state (every PMID of the wave already registered), none merged, none superseded, none deferred from the declared scope. No claim was created, none reversed, and no Status, Type or Summary changed anywhere. Four claims gain evidence-boundary text only - `CLAIM 003`, `CLAIM 014` and `CLAIM 047` (consolidated baseline) and `CLAIM 032`/`CLAIM 009` (in observation) - two of them from candidates that declared a MAJOR contingency whose narrowing an independent blind audit confirmed. This was the first wave run end to end under the FIND-X rule, and it paid: three landed negatives were FALSE AS WORDED and are corrected at source (a dismissal headline claiming an interval "does not contain the gene" when the re-mapped interval overlaps the last 358,151 bp of it; a paper record claiming its source never states which intron a fragile element lies in when the source's own figure draws the exon track around it; a research lead claiming none of three association signals reports expression when one ships two developmental expression plot books), and a fourth negative in a gene-therapy safety record was reversed outright - a per-animal antibody-titre table for 13 wild-type primates at four timepoints exists in that paper's appendix, and only the "wild-type animals only" half of the sentence survives. `CLAIM 014`'s unverified independence pointer is now VERIFIED: the transcriptomic component of its two prenatal legs is the same deposited CAGE series, so those legs are not independent - a scope narrowing of a consolidated baseline, with the limit that it covers the transcriptomic leg only and that one paper's local artefacts are absent from this checkout. No new registry record was owed: every candidate targeted an existing record, so no PAPER, CORPUS, LIT, CLAIM, DIS, FT or DL identifier was created. Sixteen independent blind locator audits ran BEFORE the propagation over 92 triples and 24 lettered checks: 85 SUPPORTED, 7 NOT_SUPPORTED_AS_LABELLED, 0 UNVERIFIABLE, 0 artefacts unreadable - and six adverse verdicts corrected a number, a quantifier set or a direction inside a candidate before it landed. Step 0 measured 229 artefacts over the whole scope, found 9 absent, RECOVERED 4 by SHA-256 from a peer worktree and restored them digest-equal before any auditor was dispatched; the remaining 5 belong to one paper whose bytes exist nowhere on this host, which is recorded rather than worked around. One privacy repair landed: a parent-of-origin descriptor inside a control-carrier sentence of `CLAIM 032` was measured by script, removed by an exact op and declared without being reproduced. The DisMech Phase-2 seal drift refused by the resealer was verified by measurement to be exactly the two declared D6 boundary appends of `BATCH_20261004_004` and nothing else, then absorbed by the tool's own route. `public_release_gate` was re-run after the audit amendments and after the privacy op: PASS, 0 BLOCK.
+commit_candidates_propagated: 12
+target_wm_version: WM_v7.21
+trigger: MANUAL (operator-authorised integration of the metabolic batch's wave 1, ACTOR_ID orchestrator by stated assumption, task ORCH-METABOLIC-BATCH-20261019; the backlog threshold of 5 was also met). Metabolic batch 2026-10-19, wave 1, groups G1 to G4 (Scientists A, B, C and D): twelve candidates, all twelve propagated, none merged, none superseded, none deferred. The batch's first duty was a registry debt: 23 complete readings with receipts on main carried no registry record and legend_lint blocked BATCH_COMMIT with ORPHAN_COMPLETE_READ. Every one of the wave's 63 PMIDs now has a landing: 63 PAPER records (PAPER 247 to PAPER 309, seven of them promotions of corpus placeholders that are kept as history and cross-linked), 55 LIT records (LIT-0549 to LIT-0603) and eight existing LIT records re-authored. No claim was created, none reversed, and no Status, Type or Summary changed anywhere: CLAIM 042 gains a ketogenic-diet base-rate paragraph in its evidence boundary (evidence-boundary text only; status stays in observation) and CLAIM 001 gains a wave note on the hormonal-therapy co-factor of vigabatrin MRI changes (status stays conflicting evidence). Three HELD-partial readings were closed at complete depth on their PAPER records (PAPER 097, PAPER 136, PAPER 147). Identity: the PubMed record of PMID 31145772 joins one article's title and abstract with another article's authors, DOI and pages; PAPER 263 carries an identity_correction and cites the DOI printed on the article, and the PubMed fact is not rewritten. A corpus placeholder title was corrected in place (CORPUS-STUB-157, with the superseded wording quoted). Research layer: DL-MECH-117 to DL-MECH-135 and DL-METH-122 to DL-METH-124 added from the candidates' staged leads; source notes corrected or cautions attached to DL-MECH-015, DL-THER-080 and DL-MECH-012; six full-text queue entries added (FT-195 to FT-200), FT-019 closed and FT-167 annotated. Parked: two claim-level support mentions proposed by one candidate (CLAIM 034 and CLAIM 010) for want of op text, and one optional sentence for PAPER 084. No blind locator audit was run: the legend-locator-audit trigger (a baseline-claim narrowing or a MAJOR candidate) is not met; the candidates' locator triples are carried for a later audit.
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -125,8 +125,8 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20261004_BATCH_20261004_007
-last_lint_date: 2026-10-04
+last_lint_id: LINT_20261019_BATCH_20261019_001
+last_lint_date: 2026-10-19
 last_lint_result: WARN
 ```
 
@@ -163,8 +163,8 @@ and a mismatch is `BLOCK_SYSTEM` — reading history you cannot trust is worse t
 
 ```yaml
 fulltext_ledger_path: disease-models/wwox/registries/fulltext_read_receipts.jsonl
-fulltext_ledger_events: 475
-fulltext_ledger_head: 7df7e8dd60104d7f5bab5ec07d67e8d11ee9d334adc4f2618de11efa4cd28fea
+fulltext_ledger_events: 542
+fulltext_ledger_head: 3c6a3a653bc5eb548b0b8a8c9385deb79fa24521dd7521a761264cea7fd3b1fe
 ```
 
 Maintained automatically — `fulltext_receipts.py record` re-anchors after every append.
@@ -212,8 +212,8 @@ to make a suite green — the only way to move it is to have made the change you
 
 ```yaml
 growth_anchor_ledger: framework/state/growth_anchors.jsonl
-growth_anchor_events: 47
-growth_anchor_head: dbf7be11b3644b53d93589483d8dc8d5762bd042ffe39e59e8369d0d28b06a11
+growth_anchor_events: 49
+growth_anchor_head: 99cabc0268146211bc38acac9de6a16dd0ac0b65a719b8633cfe34a4c104c5ed
 ```
 
 ```bash
@@ -261,7 +261,7 @@ baseline below must equal the live count, never preserve historical padding.
 
 ```yaml
 unread_premise_baseline: 0
-unread_premise_measured_on: 2026-10-04
+unread_premise_measured_on: 2026-10-19
 ```
 
 **It is a ratchet, not a wall.** Blocking on the whole legacy backlog would only teach sessions

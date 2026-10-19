@@ -1,0 +1,401 @@
+{
+ "schema_version": 2,
+ "pmid": "25595191",
+ "doi": "10.1177/1535370214566747",
+ "receipt": "FTR-20261019-25595191-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-G3-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery-ledger lead beyond what the manifest and analysis note carry; the ledger is written by its validated writer only where a lead survives."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever for the reference genotype class is matured by this reading; forging from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged; nothing here reaches BLOCK-1."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes go through commit candidates."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; no audit trigger fired."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "A minireview by the National Cheng Kung University group that produced much of the WWOX stress, Zfra and mitochondrial-translocation literature; it summarises, with no new measurement. The group studies the gene in cancer and acquired-stress systems, not biallelic-LoF disease. Its mitochondrial statements are weighted as pointers to the primaries behind them."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND mitochondria",
+    "count": 26,
+    "source": "PubMed ESearch 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (iron OR ferroptosis)",
+    "count": 3,
+    "source": "PubMed ESearch 2026-10-19"
+   }
+  ],
+  "note": "Record matches, not measurements."
+ },
+ "multihop": {
+  "references_enumerated": 63,
+  "gene_direct_refs_in_source": [
+   "10861292",
+   "10786676",
+   "11058590",
+   "17142102",
+   "11572989",
+   "15070730",
+   "15548692",
+   "16061658",
+   "16438931",
+   "15064722",
+   "24550385",
+   "16219768",
+   "12514174",
+   "24308844",
+   "15126504",
+   "22193544",
+   "19465938",
+   "19609013",
+   "20480411",
+   "16818616",
+   "17019711",
+   "22842668",
+   "17289881",
+   "17909041",
+   "17609426",
+   "18452537",
+   "11572989",
+   "16360296",
+   "11896615",
+   "17360458",
+   "17200365",
+   "16223882",
+   "16115915",
+   "15664696",
+   "19918364",
+   "18371080",
+   "19484134",
+   "18460020",
+   "24008736",
+   "15580310",
+   "24127039",
+   "23370280",
+   "17704139",
+   "19130459",
+   "17178850",
+   "21115974",
+   "18487609",
+   "20530675",
+   "24393846",
+   "25012504",
+   "17567906",
+   "15629131",
+   "18403180",
+   "18620777",
+   "19366691",
+   "21499303",
+   "17947476"
+  ],
+  "resolved": [
+   {
+    "pmid": "15070730",
+    "how": "Ref 9 has a complete receipted reading in LEGEND (FTR-20260909-15070730-02); this review restates it."
+   },
+   {
+    "pmid": "15064722",
+    "how": "Ref 13 has a complete receipted reading in LEGEND (FTR-20260913-15064722-01); this review restates it."
+   },
+   {
+    "pmid": "24550385",
+    "how": "Ref 14 has a complete receipted reading in LEGEND (FTR-20260810-24550385-02); this review restates it."
+   },
+   {
+    "pmid": "22193544",
+    "how": "Ref 19 has a complete receipted reading in LEGEND (FTR-20260726-22193544-03); this review restates it."
+   },
+   {
+    "pmid": "18452537",
+    "how": "Ref 29 has a complete receipted reading in LEGEND (FTR-20260914-18452537-01); this review restates it."
+   },
+   {
+    "pmid": "17360458",
+    "how": "Ref 33 has a complete receipted reading in LEGEND (FTR-20260811-17360458-01); this review restates it."
+   },
+   {
+    "pmid": "16223882",
+    "how": "Ref 35 has a complete receipted reading in LEGEND (FTR-20260909-16223882-01); this review restates it."
+   },
+   {
+    "pmid": "18460020",
+    "how": "Ref 41 has a complete receipted reading in LEGEND (FTR-20260909-18460020-01); this review restates it."
+   },
+   {
+    "pmid": "23370280",
+    "how": "Ref 45 has a complete receipted reading in LEGEND (FTR-20260814-23370280-02); this review restates it."
+   },
+   {
+    "pmid": "21115974",
+    "how": "Ref 50 has a complete receipted reading in LEGEND (FTR-20260909-21115974-01); this review restates it."
+   },
+   {
+    "pmid": "18487609",
+    "how": "Ref 51 has a complete receipted reading in LEGEND (FTR-20260811-18487609-01); this review restates it."
+   },
+   {
+    "pmid": "20530675",
+    "how": "Ref 52 has a complete receipted reading in LEGEND (FTR-20260909-20530675-03); this review restates it."
+   },
+   {
+    "pmid": "25012504",
+    "how": "Ref 54 has a complete receipted reading in LEGEND (FTR-20260814-25012504-01); this review restates it."
+   }
+  ],
+  "queued": [
+   {
+    "queue": "CC-20261019-SCIENTIST-C-G3-01",
+    "why": "Fifty-seven gene-direct reference identifiers were read from the link markup of the artefact (references 6, 7, 8, 46, 60 and 61 are WW-domain, p63 and Src-TGF-beta background and are not counted). Thirteen have complete receipted readings (listed under resolved). The others are queued as one block: ref 1 (10861292, none), ref 2 (10786676, none), ref 3 (11058590, none), ref 4 (17142102, none), ref 5 (11572989, partial), ref 10 (15548692, none), ref 11 (16061658, partial), ref 12 (16438931, none), ref 15 (16219768, none), ref 16 (12514174, none), ref 17 (24308844, partial), ref 18 (15126504, none), ref 20 (19465938, none), ref 21 (19609013, none), ref 22 (20480411, none), ref 23 (16818616, none), ref 24 (17019711, none), ref 25 (22842668, none), ref 26 (17289881, none), ref 27 (17909041, none), ref 28 (17609426, none), ref 30 (11572989, partial), ref 31 (16360296, none), ref 32 (11896615, none), ref 34 (17200365, none), ref 36 (16115915, none), ref 37 (15664696, none), ref 38 (19918364, partial), ref 39 (18371080, none), ref 40 (19484134, partial), ref 42 (24008736, partial), ref 43 (15580310, none), ref 44 (24127039, none), ref 47 (17704139, none), ref 48 (19130459, none), ref 49 (17178850, none), ref 53 (24393846, none), ref 55 (17567906, none), ref 56 (15629131, none), ref 57 (18403180, none), ref 58 (18620777, none), ref 59 (19366691, none), ref 62 (21499303, none), ref 63 (17947476, none). Those most relevant to this theme: reference 37 (photoreceptor mitochondrial translocation, a blocked row of the batch selection), references 55 and 57 (the two Zfra papers), reference 39 (MPP+ and Tyr33 phosphorylation, no receipt) and reference 18 (the 2004 tau paper, no receipt). None is read in this task."
+   }
+  ],
+  "disposition": "Fifty-seven gene-direct references; thirteen resolved by existing complete readings, the rest queued with the reason above (the counts come from the receipt ledger status queries of this session)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 25595191 --hops 1; paper_packet.py packet; fulltext_receipts.py status --pmid 25595191 and per reference",
+  "hits": 2,
+  "note": "An unprocessed corpus stub in the paper registry and the tracking log (clinical relevance LOW), and no receipt."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn or CommentIn link; publication types Journal Article, Research Support and Review.",
+  "dependencies": {
+   "flagged": [
+    {
+     "citing_relation": "Citation only: the review cites this paper (reference 35) for the statement that restoring Wwox suppresses tumour growth in lung and breast xenograft models; no reagent, method or data of the review depends on it and no locator in this manifest carries that statement. LEGEND holds the paper as read (complete receipt) with its expression of concern recorded.",
+     "doi": "10.1073/pnas.0505485102",
+     "nature": "Expression of concern",
+     "reason_verbatim": "Concerns/Issues about Data;Duplication of/in Image;Error in Image;Investigation by Company/Institution;Original Data and/or Images not Provided and/or not Available;",
+     "retraction_date": "4/3/2017 0:00",
+     "retraction_pmid": "28373548",
+     "verdict": "FLAGGED_EXPRESSION_OF_CONCERN"
+    }
+   ],
+   "noted": [],
+   "paper_verdict": "FLAGGED_EXPRESSION_OF_CONCERN",
+   "reference_source": "cache",
+   "references_declared": 63,
+   "references_screened": 61,
+   "references_with_doi": 61,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID25595191_Lo2015_PMC4935227_wayback2024.html",
+   "sha256": "a81407677199c42db0c8db02caee81854f10144e381a48e58c7be1cfd7c7f06a",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://web.archive.org/web/20240418224449/https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4935227/",
+    "http_method": "GET",
+    "tier": "Internet Archive Wayback snapshot of the PMC article page (snapshot 2024-04-18)",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "a81407677199c42db0c8db02caee81854f10144e381a48e58c7be1cfd7c7f06a"
+   }
+  },
+  {
+   "path": "files/figures/PMID25595191/10.1177_1535370214566747-fig1.jpg",
+   "sha256": "083191665c630fcaa4ce6ce78c5c6c8ac3a5cee7b475462d53b89bcba256a8dc",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://web.archive.org/web/20240418224449im_/https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4935227/bin/10.1177_1535370214566747-fig1.jpg",
+    "http_method": "GET",
+    "tier": "Internet Archive Wayback copy of the PMC figure image",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "083191665c630fcaa4ce6ce78c5c6c8ac3a5cee7b475462d53b89bcba256a8dc"
+   }
+  },
+  {
+   "path": "files/figures/PMID25595191/10.1177_1535370214566747-fig2.jpg",
+   "sha256": "025a4004153b6d1e6e76e814224c9a943784473177a6b53746ad7d5f973aa7cc",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://web.archive.org/web/20240418224449im_/https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4935227/bin/10.1177_1535370214566747-fig2.jpg",
+    "http_method": "GET",
+    "tier": "Internet Archive Wayback copy of the PMC figure image",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "025a4004153b6d1e6e76e814224c9a943784473177a6b53746ad7d5f973aa7cc"
+   }
+  },
+  {
+   "path": "files/figures/PMID25595191/10.1177_1535370214566747-fig3.jpg",
+   "sha256": "0eba3ffca441dd056c335e51165bcd5cc51bea6ab2aca17b072df1ea9e7bad82",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "resolved_url": "https://web.archive.org/web/20240418224449im_/https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4935227/bin/10.1177_1535370214566747-fig3.jpg",
+    "http_method": "GET",
+    "tier": "Internet Archive Wayback copy of the PMC figure image",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "0eba3ffca441dd056c335e51165bcd5cc51bea6ab2aca17b072df1ea9e7bad82"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Whole-body Wwox knock-out mice die by four weeks, so the review itself says organ-specific ablation is needed; nothing in the review concerns biallelic-LoF disease.",
+    "snippet": "However, all whole-body Wwox gene knockout mice died by four weeks of age.",
+    "anchor": "WWOX functions as a tumor suppressor",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25595191_Lo2015_PMC4935227_wayback2024.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Mitochondrial localisation claim 1: constant-light retinal degeneration with nuclear and mitochondrial accumulation of Tyr33-phosphorylated Wwox in rodent photoreceptors (ref 37).",
+    "snippet": "Constant light-induced retinal degeneration is associated with nuclear and mitochondrial accumulation of Tyr33-phosphorylated Wwox protein in rodent photoreceptors",
+    "anchor": "WWOX regulates cell apoptosis in stress responses",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25595191_Lo2015_PMC4935227_wayback2024.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Consolidating sentence: WWOX is said to be activated by Tyr33 phosphorylation and to translocate to membrane, mitochondria and nucleus under stress; every cited instance is an acquired stress or cancer-cell context.",
+    "snippet": "WWOX is activated via phosphorylation at Tyr33 and translocates to the cell membrane, mitochondria, and nucleus under stress conditions",
+    "anchor": "WWOX regulates cell apoptosis in stress responses",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25595191_Lo2015_PMC4935227_wayback2024.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Respiration claim: WWOX deficiency decreases mitochondrial respiration in mouse embryonic fibroblasts (ref 54), with the mechanism stated as unexplained.",
+    "snippet": "WWOX deficiency decreases mitochondrial respiration in mouse embryonic fibroblasts.",
+    "anchor": "WWOX has been linked to the regulation of many TCF (glucose metabolism paragraph)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25595191_Lo2015_PMC4935227_wayback2024.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review states the mechanism by which WWOX regulates oxidative phosphorylation is not known.",
+    "snippet": "The mechanism by which WWOX regulates oxidative phosphorylation in the mitochondria remains to be further investigated.",
+    "anchor": "WWOX has been linked to the regulation of many TCF (glucose metabolism paragraph)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25595191_Lo2015_PMC4935227_wayback2024.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "HIF-1alpha binding by WWOX and suppression of GLUT1 (ref 54), the glucose-metabolism content of the review.",
+    "snippet": "WWOX physically interacts with hypoxia-inducible transcription factor 1α (HIF-1α) and suppresses HIF-1α-mediated transcriptional activation of downstream targets",
+    "anchor": "WWOX has been linked to the regulation of many TCF (glucose metabolism paragraph)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25595191_Lo2015_PMC4935227_wayback2024.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Zfra: ZFRA and WWOX translocate to mitochondria after TNF or UV and Zfra blocks WWOX-induced cytochrome c release (refs 55, 57); cancer-cell culture contexts.",
+    "snippet": "Zfra also blocks WWOX-induced cytochrome c release from the mitochondria.",
+    "anchor": "WWOX participates in multiple signaling pathways",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25595191_Lo2015_PMC4935227_wayback2024.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The catalytic function of the SDR domain is described as uncharacterised.",
+    "snippet": "Whether WWOX exerts its enzymatic function via binding to its interacting proteins, such as Tau, GSK-3β, and DVL2, for regulating steroid metabolism and redox balance is unclear and remains to be clearly characterized.",
+    "anchor": "Introduction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25595191_Lo2015_PMC4935227_wayback2024.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Closing statement on metabolism: recent studies suggest WWOX is a metabolic regulator, flagged as a future goal.",
+    "snippet": "Recent studies have suggested that WWOX acts as a regulator in metabolic processes.",
+    "anchor": "Conclusions and perspectives",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25595191_Lo2015_PMC4935227_wayback2024.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The reference list carries one entry twice (the 2001 WWOX tumour-types paper appears as references 5 and 30).",
+    "snippet": "WWOX: a candidate tumor suppressor gene involved in multiple tumor types.",
+    "anchor": "References, entries 5 and 30",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25595191_Lo2015_PMC4935227_wayback2024.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2 is a signalling schematic: stress or TNF acting through Src, Tyr33-phosphorylated WWOX with p53 or JNK1 and Zfra, an arrow from WWOX to a mitochondrion with release dots, and WWOX inhibiting GLI1, DVL2, GSK-3beta, Tau and HIF-1alpha; it plots no data.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2: scheme with Hyal-2 and TGF-beta at left, Shh-Ptc1-Smo and GLI1, Wnt and DVL2, and at right Stress via Src and TNF to P-WWOX with p53, JNK1 and Zfra, and an arrow to a mitochondrion icon with release dots; central WWOX box with inhibitory lines to GSK-3b, Tau, HIF-1a and an arrow Ack1 to polyubiquitination and degradation; nucleus below with P-WWOX and p53.",
+    "anchor": "Figure 2",
+    "surface": "figure",
+    "artifact": "files/figures/PMID25595191/10.1177_1535370214566747-fig2.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Figure 3 is a speculative schematic of anticancer-drug-induced WWOX upregulation, mTOR, autophagy and mitochondrial caspase activation; most arrows carry question marks and it plots no data.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3: left chemoresistant cells with autophagosome and survival; right sensitive cells with WWOX, mTOR and p70S6K, LC3, Beclin-1 and ATG5 inhibition, mitochondria with caspase-9 and caspase-3 to apoptosis; several arrows marked with question marks.",
+    "anchor": "Figure 3",
+    "surface": "figure",
+    "artifact": "files/figures/PMID25595191/10.1177_1535370214566747-fig3.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Figure 1 is a domain map (WW1, WW2, NLS, SDR) listing binding partners by domain; HIF-1alpha is listed with the first WW domain group and Tau, GSK-3beta and DVL2 with the SDR domain; no data.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1: WWOX domain cartoon with two WW domains, NLS and SDR; boxes of PPXY-motif partners (p73, AP2g, ErbB-4, ezrin, SIMPLE, DVL1, DVL2, cJun, RUNX2), LPXY partner ITCH, WW1 partners (p53, DeltaNp63a, JNK1, Hyal-2, HIF-1a) and SDR partners (Tau, GSK-3b, DVL2).",
+    "anchor": "Figure 1",
+    "surface": "figure",
+    "artifact": "files/figures/PMID25595191/10.1177_1535370214566747-fig1.jpg",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC search EXT_ID:25595191 on 2026-10-19: inEPMC Y, pmcid PMC4935227; its REST fullTextXML endpoint returned HTTP 500 for this record and the PMC efetch XML carried metadata only, so the full text was reached through a Wayback snapshot of the PMC page.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image."
+ }
+}

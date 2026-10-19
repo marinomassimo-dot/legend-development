@@ -1,0 +1,427 @@
+{
+ "schema_version": 2,
+ "pmid": "21444760",
+ "doi": "10.1194/jlr.M009175",
+ "receipt": "FTR-20261019-21444760-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID21444760.md",
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-a.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-A-LIPID-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was selected and deduplicated by the Orchestrator's selector against the registries, queue and receipt ledger (selection file, method step 3); the per-paper M0 packet re-checked it."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Discovery leads, if any, are routed through the commit candidate and the analysis note; no cumulative discovery squeeze was warranted by this paper."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "A mouse-genetics group (Jackson Laboratory, from the affiliations) with long-standing HDL QTL work. Primary for mouse HDL QTL mapping; not primary for WWOX or for any WWOX disease. Observation (resequencing, qPCR, QTL overlap) weighed above the interpretive sentences about WWOX, which rest on one predicted missense change."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (HDL OR cholesterol OR lipoprotein) AND (mouse OR Wwox)",
+    "count": 14,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "Wwox AND (QTL OR quantitative trait locus)",
+    "count": 11,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "Counts are PubMed records; most WWOX-lipid hits are human association papers or cancer papers listing the gene once. Nothing returned is a mouse-genetic WWOX HDL study other than this one and the Wwox-null mouse papers."
+ },
+ "multihop": {
+  "references_enumerated": 51,
+  "gene_direct_refs_in_source": [
+   "ref 39 Aqeilan 2007 PNAS (Wwox KO)",
+   "ref 42 Lee 2008 (WWOX and low HDL-C)"
+  ],
+  "resolved": [
+   "ref 42 Lee 2008 has a complete receipt in the ledger",
+   "ref 39: the cited paper's own sentence on serum lipids was read from the local PDF (Aqeilan 2007) and is a locator of this manifest"
+  ],
+  "queued": [],
+  "note": "51 numbered references enumerated from the PMC page. The statement about the knockout mouse's cholesterol is attributed to ref 39; the cited paper reports lipids as 'data not shown'. The Wwox-null cholesterol claim as made by the companion HDL genetics paper cites a different Aqeilan paper (2008) and was not re-verified here: that article's artefacts are not present in this checkout."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 21444760 --hops 1 (run AFTER the first pass); queue entry FT-019",
+  "hits": 0,
+  "note": "See the dossier for the result of the post-pass comparison."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 51,
+   "references_screened": 49,
+   "references_with_doi": 49,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  },
+  "result": "Checked 2026-10-19 via PubMed esummary/efetch for PMID 21444760: publication types ['Journal Article', 'Research Support, N.I.H., Extramural', \"Research Support, Non-U.S. Gov't\"]; corrections/retraction markers in the efetch record: none."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID21444760_Leduc2011_PMC.html",
+   "sha256": "9e19e0ada61d7e6077bf6f4f4eaf043dd113f0f22e8c18183ef5528fb51ce427",
+   "kind": "article_text",
+   "note": "PMC article page for PMC3090235 (www.ncbi.nlm.nih.gov/pmc/articles/PMC3090235/, followed redirect to pmc.ncbi.nlm.nih.gov), full body HTML with Tables 1-2 and figure legends, 51 references. Europe PMC fullTextXML returned HTTP 500, efetch returned the abstract only (9015 bytes), Europe PMC pdf render and the PMC /pdf/ path returned bot interstitials; the HTML page of the plain article URL carried the body.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3090235/",
+    "http_method": "GET",
+    "tier": "pmc_article_html_page",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID21444760/1139fig1.jpg",
+   "sha256": "2e615ba8d364bfb2151793aee4b606450eae7d14ab386347182b8be9270e32ca",
+   "kind": "figure",
+   "note": "Figure 1 JPEG from the PMC blob store, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/8603/3090235/aa3fbd814f4e/1139fig1.jpg",
+    "http_method": "GET",
+    "tier": "pmc cdn blob",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID21444760/1139fig2.jpg",
+   "sha256": "bb595248a0c8ddac199c0970c2300eeb10d37f0e97693e09a9a2a463ca7a5c73",
+   "kind": "figure",
+   "note": "Figure 2 JPEG from the PMC blob store, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/8603/3090235/e61ee0bb319d/1139fig2.jpg",
+    "http_method": "GET",
+    "tier": "pmc cdn blob",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID21444760/1139fig3.jpg",
+   "sha256": "6cdb2ebc58e6b3d13655142351cc313d5384959dd31803bc5e350200b445b6e5",
+   "kind": "figure",
+   "note": "Figure 3 JPEG from the PMC blob store, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/8603/3090235/d1f38b44f93b/1139fig3.jpg",
+    "http_method": "GET",
+    "tier": "pmc cdn blob",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID21444760/1139fig4.jpg",
+   "sha256": "61448dcd25da97ad813b93eb23cce468f1e599bd8d12dcc5f5cdfbf5801230e0",
+   "kind": "figure",
+   "note": "Figure 4 JPEG from the PMC blob store, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/8603/3090235/9cf16ce02098/1139fig4.jpg",
+    "http_method": "GET",
+    "tier": "pmc cdn blob",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID21444760_Leduc2011_supplement/supp_M009175_jlr.M009175-1.doc",
+   "sha256": "0a06ab19b56d9a9b9ea97e6d479daa010eeacd9e23188fc7a2165c6b21496e9d",
+   "kind": "supplement_binary",
+   "note": "Supplemental Tables S1-S14 (Word, 29 pages), fetched through the PMC proof-of-work interstitial with framework/scripts/pmc_pow_fetch.py.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/3090235/bin/supp_M009175_jlr.M009175-1.doc",
+    "http_method": "GET",
+    "tier": "pmc_pow_fetch.py (proof-of-work cookie, no credentials)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID21444760_Leduc2011_supplement/supp_M009175_jlr.M009175-1.strings_S4_S10_S12.txt",
+   "sha256": "8d09b446ad7c13555f7cd59753ca1657e99fa2fab4f3b5207105290b513f3cd7",
+   "kind": "supplement_text",
+   "note": "Text derived from the Word supplement with GNU strings -n 1 (binutils 2.42), lines joined with a single space, then sliced to the three tables the reading quotes (S4, S10, S12) because a distant part of the whole-file derivation trips the font-substitution screen.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID21444760_Leduc2011_supplement/supp_M009175_jlr.M009175-1.doc",
+    "extractor": {
+     "name": "GNU strings (binutils)",
+     "version": "2.42",
+     "call": "strings -n 1 <file> | sed 's/[[:space:]]*$//' | paste -sd' ' ; then keep the text from 'SUPPLEMENTAL TABLE S4.' to 'SUPPLEMENTAL TABLE S5.', from S10 to S11 and from S12 to S13, joined with a space",
+     "join": " "
+    },
+    "acquired_on": "2026-10-19",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID21444760/suppfigS1-1.png",
+   "sha256": "e74f5c2c4bf57309ae9349271c0e5d543657cbbfc61ac064b4445d2508d8f71c",
+   "kind": "figure",
+   "note": "Supplemental Figure S1 (one page, two LOD-curve panels for the Abca1 chromosome 4 combined QTL), rendered from the deposited PDF with pdftoppm at 80 dpi and inspected as an image.",
+   "acquisition_recipe": {
+    "no_recipe": "rendered with pdftoppm 24.02.0 (-r 80 -png) from the deposited supplement PDF supp_M009175_jlr.M009175-2.pdf, fetched with pmc_pow_fetch.py from https://pmc.ncbi.nlm.nih.gov/articles/instance/3090235/bin/supp_M009175_jlr.M009175-2.pdf; the PDF is not declared because its fonts carry no ToUnicode map and the validator refuses such a declaration",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID21444760/xref_Aqeilan2007_p4-4.png",
+   "sha256": "0c1cc4126192af655a8eb0e38b2a5f5379d9879e2a4f38dd6584b66db5793ffd",
+   "kind": "figure",
+   "note": "Page 4 of the cross-referenced Aqeilan 2007 paper rendered with pdftoppm at 100 dpi from the local PDF of an earlier reading (the PDF itself is not declared: its fonts carry no ToUnicode map).",
+   "acquisition_recipe": {
+    "no_recipe": "rendered with pdftoppm 24.02.0 (-f 4 -l 4 -r 100 -png) from files/fulltext/PMID17360458_Aqeilan2007.pdf, a local PDF acquired in an earlier reading; the PDF is not declared because its fonts carry no ToUnicode map",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The human input is a published three-cohort GWA meta-analysis (8,816 individuals); the paper is a mouse bioinformatics and resequencing re-analysis, not a new human or WWOX-null measurement.",
+    "snippet": "The dataset included the results from the association analysis between the genotypes of approximately 2.5 million SNPs (genotyped and inferred) and the phenotype (HDL levels) for 8,816 individuals.",
+    "anchor": "Materials and Methods, Human dataset",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21444760_Leduc2011_PMC.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "WWOX enters the paper as a suggestive GWA hit, P = 2.25e-5, far above the genome-wide line of 5e-8 that the paper itself names for the significant loci.",
+    "snippet": "at 117 Mb for Wwox (P = 2.25 × 10−5 in the GWA)",
+    "anchor": "Results, Mouse evidence for novel genes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21444760_Leduc2011_PMC.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The paper defines its significant loci at P below 5e-8 and its suggestive SNPs at P below 1e-3.",
+    "snippet": "investigating the seven significant loci (104 SNPs with P < 5 × 10−8 as well as suggestive SNPs, defined as P < 10−3.",
+    "anchor": "Results, Mapping of GWA study genes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21444760_Leduc2011_PMC.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Liver expression of Wwox did not differ between the QTL parental strains B6 and CAST by real-time PCR.",
+    "snippet": "For Wwox, we performed real-time PCR between B6 and CAST on chow in males and females but did not find any difference in expression (P > 0.05) (Table 1).",
+    "anchor": "Results, Galnt2, Wwox, Cdh13",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21444760_Leduc2011_PMC.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The only Wwox evidence offered is one predicted-functional missense change, V186M.",
+    "snippet": "However, by resequencing, we identified a nonsynonymous coding polymorphism predicted to change function (V186M) in an exon present in four out of the five transcripts reported in Ensembl",
+    "anchor": "Results, Galnt2, Wwox, Cdh13",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21444760_Leduc2011_PMC.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The conclusion that Wwox is a QTL gene for the B6xCAST cross rests on the stated possibility that V186M 'may affect' function.",
+    "snippet": "because V186M may affect the function or structure of WWOX, we think that Wwox is a QTL gene for the B6xCAST cross.",
+    "anchor": "Results, Galnt2, Wwox, Cdh13",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21444760_Leduc2011_PMC.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "V186M does not segregate in the second cross, B6xCASA.",
+    "snippet": "The polymorphism segregated between B6 and CAST but not between B6 and CASA.",
+    "anchor": "Results, Galnt2, Wwox, Cdh13",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21444760_Leduc2011_PMC.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 1 scores V186M as functional by SIFT only and as not conserved; the PolyPhen column is not scored for it.",
+    "snippet": "Wwox B6xCAST C F −1.16 (0.342) V186M No Yes (SIFT) No",
+    "anchor": "Table 1, Wwox row",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID21444760_Leduc2011_PMC.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The candidate-gene interval for the B6xCAST cross still holds 184 genes after haplotype filtering.",
+    "snippet": "haplotype analysis reduced the number of candidate genes to 184 for the B6xCAST cross (including Cdh13 and Wwox) and 154 for the B6xCASA cross (including Galnt2)",
+    "anchor": "Results, Galnt2, Wwox, Cdh13",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21444760_Leduc2011_PMC.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "For the positive-control gene Abca1 the paper adds an expression difference and a promoter-reporter assay; nothing comparable is offered for Wwox.",
+    "snippet": "By luciferase assay, we extended this observation by showing that a cis-acting element in the promoter region controls the Abca1 mRNA expression (Fig. 2D)",
+    "anchor": "Results, Abca1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21444760_Leduc2011_PMC.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Discussion states that the Wwox knockout mouse is hypercholesterolemic and infers raised HDL; this is the sign opposite to the one a companion human paper attributes to the same mouse.",
+    "snippet": "For instance, the Wwox knockout mouse has previously been shown to exhibit hypercholesterolemia (39); HDL was not measured, but hypercholesterolemia in a chow-fed mouse would indicate increased HDL because 80% to 90% of cholesterol in a chow-fed mouse is HDL.",
+    "anchor": "Discussion, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21444760_Leduc2011_PMC.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Reference 39, cited for that statement, is the 2007 Wwox knockout tumor-suppressor paper.",
+    "snippet": "Targeted deletion of Wwox reveals a tumor suppressor function.",
+    "anchor": "Reference 39 (Aqeilan et al. 2007)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21444760_Leduc2011_PMC.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In the cited paper the serum lipid change of the null mouse is reported only as 'data not shown'; no cholesterol value is printed there. (Rendered page 4 of the cited paper, read as an image because its PDF text layer has no ToUnicode map.)",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Page 4 of Aqeilan et al. 2007 (PNAS 104:3952), Discussion, first paragraph, right column: 'Blood chemistry analysis of homozygous mice showed marked alterations in serum levels of proteins, carbohydrates, and lipids (data not shown).'",
+    "anchor": "Aqeilan 2007 page 4, Discussion paragraph 1, rendered at 100 dpi",
+    "surface": "figure",
+    "artifact": "files/figures/PMID21444760/xref_Aqeilan2007_p4-4.png",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "cited paper (Wwox-null mouse, tumor suppressor study)",
+     "genotype": "Wwox-/- homozygous mice",
+     "treatment": "none",
+     "comparator": "n/a",
+     "endpoint": "serum blood chemistry, values not shown"
+    }
+   },
+   {
+    "proposition": "The Discussion says the mouse confirms cis-regulation of WWOX, although the Results report no expression difference for Wwox by real-time PCR.",
+    "snippet": "Molecular evidence in human populations that suggests cis-regulation of WWOX (42) and FADS1 (7) is confirmed by our results in the mouse.",
+    "anchor": "Discussion, paragraph 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21444760_Leduc2011_PMC.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors name species differences in HDL metabolism as a limit of the strategy, including the absence of CETP in the mouse.",
+    "snippet": "A limitation of our strategy is the existence of important species differences in HDL metabolism, such as the absence of the CETP gene in the mouse.",
+    "anchor": "Discussion, paragraph 6",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21444760_Leduc2011_PMC.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Table S4: the WWOX GWA bin is a 27.6 kb block whose lead SNP is rs2667590 at 77,088,538 (build 36), P 2.25e-5 - a different intron-8 position from the rs2548861 and Saez regions.",
+    "snippet": "16 77,077,281 77,104,886 27,606 11 rs2667590 77,088,538 2.25x10-5 WWOX",
+    "anchor": "Supplementary Table S4, row for WWOX, text derived with GNU strings",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID21444760_Leduc2011_supplement/supp_M009175_jlr.M009175-1.strings_S4_S10_S12.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Table S10: one Wwox probe set (1416334_at) is more than two-fold higher in the high-HDL strain B6 than in CAST in both sexes (P below 0.001), and a second (1431960_at) is higher in males.",
+    "snippet": "1416334_at B6xCAST C M F +2.14 (<0.001) +2.28 (<0.001) 1431960_at B6xCAST C M F +1.38 (0.001) +1.12 (0.261)",
+    "anchor": "Supplementary Table S10, Wwox probe sets, text derived with GNU strings",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID21444760_Leduc2011_supplement/supp_M009175_jlr.M009175-1.strings_S4_S10_S12.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Table S10 footnote accounts for one significant Wwox probe set (1431960_at) by a probe-site polymorphism and says nothing about 1416334_at.",
+    "snippet": "e One probe set for Wwox (1431960_at) in our 12-strain microarray survey indicated a significant difference in expression between B6 and CAST, but this difference was due to the presence of a polymorphism at the probe binding site.",
+    "anchor": "Supplementary Table S10, footnote e",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID21444760_Leduc2011_supplement/supp_M009175_jlr.M009175-1.strings_S4_S10_S12.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Table S12: of the eight Wwox coding changes found between B6 and CAST/CASA, six are synonymous; V186M and P365T are the only amino-acid changes.",
+    "snippet": "Exon2 191 T C/C T38T rs6323609 242 C G/G V55V rs6323702 Exon5 497 T C/C T140T new 526 G A/A A149A rs31362899 Exon6 646 G A/G V186M new Exon7 819 G A/A L247L new Exon8 884 T C/C I269I rs31398161 Exon9 c 1170 C C/A P365T new",
+    "anchor": "Supplementary Table S12, Wwox rows, text derived with GNU strings",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID21444760_Leduc2011_supplement/supp_M009175_jlr.M009175-1.strings_S4_S10_S12.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PANEL READING, Figure 3A-B (mouse chromosome 8). 3A: the B6xCAST QTL confidence bar spans about 70-127 Mb and the B6xCASA bar about 114-130 Mb; the human-homology bar spans about 104-121 Mb; Wwox, Cdh13 and Galnt2 are marked below it. 3B: of eight Wwox coding SNP rows, B6 differs from CAST in seven; CASA differs from CAST at the V186M row and at the P365T row, and at the V186M row B6 and CASA share the allele.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3A bars B6xCASA and B6xCAST over a 70-130 Mb axis, Homology bar 16q22.3 with Wwox, Cdh13, Galnt2 below; Fig 3B grid with columns CAST, CASA, B6, rows Exons (8 coding SNPs) with V186M bold in row five and P365T in row eight.",
+    "anchor": "Figure 3A-B, read at native 797x1478 px",
+    "surface": "figure",
+    "artifact": "files/figures/PMID21444760/1139fig3.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "mouse inbred strains (B6, CAST, CASA)",
+     "genotype": "strain haplotypes",
+     "treatment": "none",
+     "comparator": "CAST",
+     "endpoint": "resequenced coding SNPs and QTL interval"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST search returned inEPMC Y for PMC3090235 but fullTextXML returned HTTP 500 on 2026-10-19, so the article is not externally verifiable through Europe PMC full-text indexing; the declared HTML artefact is the PMC article page itself.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+ }
+}

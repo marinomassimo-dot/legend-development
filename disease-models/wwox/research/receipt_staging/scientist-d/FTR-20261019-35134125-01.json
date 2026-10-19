@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-10-19T00:00:00Z",
+ "analysis_time_precision": "date_only",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "tables": "read",
+  "figures": "captions_only",
+  "references": "not_read",
+  "supplementary": "captions_only"
+ },
+ "event_at": "2026-10-19T18:33:44Z",
+ "event_id": "FTR-20261019-35134125-01",
+ "evidence_basis": [
+  "JATS body read section by section from a text rendering; no main-text tables; no separate limitations section.",
+  "Figures 1 and 2 opened at native resolution; Figures 3-5 opened only as a downscaled contact sheet, so figures are declared captions_only.",
+  "Supplement Data Tables S1-S6 read as text and rendered pages; supplemental figures seen only as a 60 dpi contact sheet (legends read), so supplementary is declared captions_only.",
+  "Reference list counted (119), not read."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID35134125.json",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-d.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "e86bf3fe4318c7fb94d4f17afcade857dd94a16dc5f4e2e55c711794f57a7b04",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID35134125_Salvati2022_PMC.xml",
+ "study_id": {
+  "doi": "10.1093/brain/awac037",
+  "pmid": "35134125"
+ },
+ "workflow": "scientist-d (stated assumption of the Orchestrator), interventions wave 2026-10-19, task INTERV-H5-D-20261019, branch task/INTERV-H5-D-20261019; context_policy QUESTION_DRIVEN. Route: Europe PMC REST fullTextXML into the shared checkout files/fulltext/; figures and supplements from the PMC Article Datasets open-data bucket; locators captured into the manifest and verified by deepdive_manifest.py --verify-artifacts."
+}

@@ -1,0 +1,287 @@
+{
+ "schema_version": 2,
+ "pmid": "41704776",
+ "doi": "10.1016/j.isci.2026.114724",
+ "receipt": "FTR-20261019-41704776-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID41704776.md",
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-a.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-A-LIPID-06.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was selected and deduplicated by the Orchestrator's selector against the registries, queue and receipt ledger (selection file, method step 3); the per-paper M0 packet re-checked it."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Discovery leads, if any, are routed through the commit candidate and the analysis note; no cumulative discovery squeeze was warranted by this paper."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "weighting": "Review by a Drosophila lipid-neurobiology group whose own primary work (the fly S1P and ACOX1 papers) is among the cited sources, so the review leans on the authors' own studies. Cited primary data weighed above the review sentences."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "very long-chain fatty acids AND neuroinflammation",
+    "count": 140,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND very long-chain fatty acids",
+    "count": 0,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts; the second query is the WWOX VLCFA intersection."
+ },
+ "multihop": {
+  "references_enumerated": 130,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "130 references enumerated; none concerns WWOX (term search: zero occurrences)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 41704776 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "No record matched."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 130,
+   "references_screened": 120,
+   "references_with_doi": 120,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 10
+   }
+  },
+  "result": "Checked 2026-10-19 via PubMed esummary/efetch for PMID 41704776: publication types ['Journal Article', 'Review']; corrections/retraction markers in the efetch record: none."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41704776_Sahu2026_PMC.xml",
+   "sha256": "10261a6e4f6c860afe3ea60dabcd30256041f9bfdde6b731748649add37cd4ae",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC12907123: abstract, body, boxes, tables, figure legends, references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12907123/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID41704776/gr1.jpg",
+   "sha256": "1922e072d5e89120fe62782620677b35e843545f48072119ea32d6bc2bef992b",
+   "kind": "figure",
+   "note": "Image file g1 from the Europe PMC supplementaryFiles zip, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12907123/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID41704776/gr2.jpg",
+   "sha256": "5d25a5a184acf493c8c6f10fd197f7fc27966458c6fb15b74f3921cc832e0d86",
+   "kind": "figure",
+   "note": "Image file g2 from the Europe PMC supplementaryFiles zip, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12907123/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID41704776/gr3.jpg",
+   "sha256": "4d01e0e847b49cf5b2e9f776f8871961718cf4dcb10b9fe56bf5c0f97dbefb54",
+   "kind": "figure",
+   "note": "Image file g3 from the Europe PMC supplementaryFiles zip, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12907123/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The review states that direct causative evidence linking VLCFA accumulation to neurological disease is still lacking.",
+    "snippet": "Several studies have now consistently demonstrated the relationship between VLCFA accumulation and neurological disorders, although direct causative evidence is still lacking.",
+    "anchor": "Concluding remarks",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41704776_Sahu2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The central inflammatory mechanism comes from fly work: VLCFAs in glia are converted to sphingosine 1-phosphate, which travels to neurons and activates NF-kB signalling in vertebrates and the IMD pathway in Drosophila.",
+    "snippet": "VLCFAs are converted to S1P, and excess S1P is transported to the corresponding insulated axons, where it triggers neuroinflammation by activating the NF",
+    "anchor": "Mechanisms of VLCFA-mediated neuroinflammation, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41704776_Sahu2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Mouse ceramide synthase 2 knockout is cited for myelin containing short-chain ceramide species and progressive loss of CNS and PNS myelin from early adulthood.",
+    "snippet": "These knockout mice harbor myelin with ceramide species containing SCFAs and show progressive loss of CNS and PNS myelin from early adulthood.",
+    "anchor": "Formation and maintenance of myelin sheath, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41704776_Sahu2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review itself says the trigger that turns VLCFA accumulation into runaway neuroinflammation, including the receptors or danger signals microglia sense, is not established.",
+    "snippet": "The precise molecular triggers that convert VLCFA accumulation into runaway neuroinflammation are not fully established, including the specific receptors or danger signals sensed by microglia.",
+    "anchor": "Mechanisms, VLCFA-induced oxidative stress, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41704776_Sahu2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Some X-ALD patients remain asymptomatic despite raised VLCFA, and antioxidant and immunosuppressive treatments had limited efficacy; VLCFA elevation alone does not give the disease.",
+    "snippet": "Although elevated VLCFA levels are observed across all ALD subtypes, some individuals remain asymptomatic despite biochemical abnormalities.",
+    "anchor": "Mechanisms, VLCFA-induced oxidative stress, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41704776_Sahu2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A severe human and fly phenotype with a relatively mild mouse phenotype for ACOX1 loss is stated as unexplained.",
+    "snippet": "The discrepancy between severe human/fly phenotypes and relatively mild mouse phenotypes also remains unexplained, raising the possibility of species-specific compensation by ACOX2/3 or alternative β-oxidation pathways.",
+    "anchor": "Insights from disease models in Drosophila, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41704776_Sahu2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Whether dietary VLCFA can cross the barrier is described as debated; the brain is stated to acquire most long-chain fatty acids from blood.",
+    "snippet": "There is also ongoing debate about whether VLCFAs can cross the BBB.",
+    "anchor": "Nutritional modification, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41704776_Sahu2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Bezafibrate and ELOVL1 inhibition are described as restoring survival in the fly ACOX1 loss model; bezafibrate is called an ELOVL1 inhibitor in the cited work.",
+    "snippet": "Lowering the VLCFA synthesis through bezafibrate or ELOVL1 inhibition restores survival and neurological function, confirming that VLCFA toxicity is the principal pathogenic mechanism.",
+    "anchor": "Insights from disease models in Drosophila, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41704776_Sahu2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Seizure-like behaviour in flies is measured by bang-sensitivity assays, which the review proposes as an epilepsy readout.",
+    "snippet": "Bang-sensitivity assays measure seizure-like activity in response to mechanical stress, providing a model for epilepsy research.",
+    "anchor": "Quantitative behavioral assays",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41704776_Sahu2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review lists peroxisome biogenesis disorders as having hypotonia, intellectual disability and sometimes seizures, and raised brain VLCFA as a possible cause of neuroinflammation.",
+    "snippet": "Affected individuals may exhibit hypotonia, intellectual disabilities, facial abnormalities, and sometimes seizures",
+    "anchor": "Box 1, peroxisome biogenesis disorders",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41704776_Sahu2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PANEL READING, Figure 1: human brain scheme with four input boxes (injury, aging, oxidative stress, altered lipid metabolism), VLCFA accumulation, very-long-chain ceramide and sphingosine 1-phosphate, NF-kB activation, microglia activation, cytokines IL-1b, IL-6, IL-12, TNF-a and a degenerating neuron. A schematic, no data.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Scheme with labelled cell types and an orange arrow from VLCFA accumulation to S1P and NF-kB activation.",
+    "anchor": "Figure 1, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41704776/gr1.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "review figure (schematic)",
+     "genotype": "not applicable",
+     "treatment": "not applicable",
+     "comparator": "not applicable",
+     "endpoint": "proposed mechanism"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 3: summary graphic of fly advantages (life-history, genetic tools, conserved pathways, behaviour, drug screening, disease modelling with X-ALD, Mitchell syndrome and PEX listed). No data.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Hub graphic around a fly with six labelled sectors.",
+    "anchor": "Figure 3, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41704776/gr3.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "review figure (schematic)",
+     "genotype": "not applicable",
+     "treatment": "not applicable",
+     "comparator": "not applicable",
+     "endpoint": "proposed mechanism"
+    }
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST search returned inEPMC Y, isOpenAccess Y, license cc by on 2026-10-19; fullTextXML returned HTTP 200 and the declared article_text artefact is that response byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+ }
+}

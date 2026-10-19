@@ -912,6 +912,28 @@ assay specification that would turn *«nobody outside three laboratories has mea
 a measured null into a testable experiment — purified WW2-SDR, a named substrate and cofactor, a YxxxK
 catalytic-dead control, a titration. The missing item is the experiment, not the tool.
 
+## 2026-10-19 — scientist-c, task METAB-G3-C-20261019 (group G3)
+
+### Session Learning Delta
+- Nineteen manifests built from open copies; panel-versus-text mismatches were common in small-lab primaries.
+- A task worktree carries manifests and not the gitignored artefact bytes, so `paper_packet.py check` reported every artefact missing from the worktree.
+- Movies and webp figures need decoders that the host lacks by default (ffmpeg via pip, ImageMagick).
+
+### Capability Gaps
+| Gap | Why it matters | Priority |
+|---|---|---|
+| To run `paper_packet.py check` from a task worktree we lacked shared-checkout artefact resolution. | Every Scientist in a worktree gets false "missing artefact" findings. | 4 |
+| To read movie supplements we lack a video-decoder entry in `tool_preflight.py`. | A silent absence cost time before a static ffmpeg was installed. | 2 |
+| To reach PMC-challenged open copies we lack a written Wayback-PMC route in the find-fulltext cascade. | Used for two papers; undocumented. | 2 |
+
+### Capability outcome (`CHANGE = NONE` is valid)
+- **Outcome:** CHANGE-MADE (first gap); the other two GAP-NEW, recorded.
+- **Evidence:** the packet check failed from the worktree on this task's own manifests before the change and passes after it.
+- **If a change was made — type:** CONNECTION
+- **What improved and why it is proportionate:** `paper_packet.py` now defaults the validator job's artefact root to the shared checkout from a linked worktree when no `--artifact-workspace` is given (a peer added the explicit flag the same day; this is the default beneath it); two regression tests in `test_paper_packet.py` pin it. Host: Linux desktop, poppler 24.02.0, ImageMagick present, ffmpeg absent by default.
+
+### Next Micro-Step
+- Add a video-decoder line to `tool_preflight.py` with its test.
 ---
 
 ## 2026-10-19 — scientist-b, metabolic batch G2 (task `METAB-G2-B-20261019`)
@@ -950,3 +972,31 @@ catalytic-dead control, a titration. The missing item is the experiment, not the
 **Cost / API / privacy risk:** none; offline.
 
 **Next surgical micro-step:** map PMC image files to figure labels from the JATS `fig` and `graphic` elements and warn when file order differs.
+---
+
+## 2026-10-19 — scientist-d, interventions batch group H5
+
+**Capability gap recorded (with evidence).** Two, one closed and one measured.
+
+1. **Closed (shipped, `CHANGE` made):** `deepdive_manifest.py` refused a well-formed `contradicts_locator` declaration whose prior manifest existed only on the task branch, with "is not a file under the workspace", because the prior manifest was looked up under the artifact root (the shared evidence checkout) alone. Evidence: 25 declared revisions of this branch's own manifests were refused; after the fix (look beside the manifest being validated first, then fall back to the artifact root) all eight affected manifests PASS from the task worktree with `--artifact-workspace` pointing at the shared checkout. Regression: `test_the_prior_manifest_may_live_in_the_branch_workspace_not_the_artifact_root` (205 tests OK).
+2. **Measured, not built:** last wave named "the validator proves a quote exists, not that it supports the proposition". This wave measured it. Two blind auditors over 101 load-bearing triples returned 23 non-SUPPORTED (9 overshoot, 14 undershoot; 23%) while the validator, the receipt validator and the contradiction audit were all green. The pre-commit self re-read caught none of these 23. A plausible cheap aid: print each proposition beside its quote and list the proposition's number-bearing and quantifier words that occur nowhere in the quote or its two neighbouring sentences. A second small gap of my own: the text renderer I used skipped floats placed outside body sections (a 22-row table and figure legends); a `table-wrap` and `fig` count against the rendering would have flagged it at once.
+
+**What did not need building.** `paper_packet.py check --artifact-workspace` (last wave's upgrade), the strict manifest validator, the dependency screen and `locator_contradiction_audit.py` each worked first time; the blind-audit method needed only a triples file and two agents.
+
+**Cost / API / privacy risk:** none. All retrieval was Europe PMC REST and the PMC open-data bucket; no spend, no key, no new dependency; the auditors read local files only.
+
+**Next surgical micro-step:** run the word-overlap aid over the existing manifests offline and compare what it flags against the 23 known cases.
+
+---
+
+## 2026-10-19 — scientist-a, metabolic batch G1 (task `METAB-G1-A-20261019`)
+
+**Capability gap that emerged (with evidence).** The `--artifact-workspace` passthrough shipped by scientist-d the same day has a trap. `paper_packet.py check` builds the validator command with the value as typed, and the child process runs from the repository root, so a relative value typed inside a task worktree (`--artifact-workspace .`) names the worktree, not the shared checkout. Evidence: the run for one of this lot's manifests returned 10 BLOCK lines of the form `No such file or directory: <worktree>/files/fulltext/...` and four `artifact does not exist` lines, indistinguishable from missing evidence; the same command with an absolute path returned PASS for all fifteen manifests.
+
+**CHANGE (proportional micro-upgrade, shipped).** `framework/scripts/paper_packet.py` now resolves the value to an absolute path against the invoker's working directory before it builds the command. Regression: `ArtifactWorkspacePassthroughTests.test_relative_workspace_is_resolved_against_the_invoker_not_the_child` in `framework/scripts/test_paper_packet.py` (the file is already in the release battery; the suite passes, 70 tests, 19 skipped for absent local corpora).
+
+**Named, not built.** (1) Every spreadsheet, old `.doc` and aggregate-table derivation in this lot (xlsx cell dump, GNU strings of a legacy document, mean and fold-change recomputation) was a one-off script, and a hand reading of truncated digits once produced a false up-regulation before a script on full values reversed it. A small shared "derive and cite" helper (full values in, derivation file out, the manifest recipe pointing at it) would remove the temptation to read printed numbers; the shape is clear but the three derivation types differ enough that one tool would be speculative. (2) The `legend_commit.sh` pathograph-staleness refusal fired on every commit of a new manifest (15 times) and was bypassed each time with the dispatch brief's stated reason; a per-actor batch flag would shorten this, but the bypass reason is itself the audit trail and was kept.
+
+**Cost / API / privacy risk:** none. The auto-mode classifier refused one dry-run of `record_scoped_edit.py apply` against the shared registry; the op list was shipped in the candidate with the refusal stated and the `old` string verified by a count in the branch's own file.
+
+**Next surgical micro-step:** none required; the integrator dry-runs the DL-MECH-012 op list before applying.

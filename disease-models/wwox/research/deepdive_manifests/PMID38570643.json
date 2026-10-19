@@ -1,0 +1,348 @@
+{
+ "schema_version": 2,
+ "pmid": "38570643",
+ "doi": "10.1038/s41598-024-58656-w",
+ "receipt": "FTR-20261019-38570643-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-G3-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery-ledger lead beyond what the manifest and analysis note carry; the ledger is written by its validated writer only where a lead survives."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever for the reference genotype class is matured by this reading; forging from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged; nothing here reaches BLOCK-1."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes go through commit candidates."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; no audit trigger fired."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "A stem-cell and radiation-biology laboratory working on replication stress and autophagy in fibroblasts and HEK293A cells; WWOX is not studied by the group and is not named in the text (it appears only as one axis label in Figure 1C and as one row of the RNA-seq table). Observation (blots, MitoSOX overlap, morphology counts) is weighted above interpretation (fragility of the PARK2 locus causing mitochondrial dysfunction), which has no fragility assay behind it."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "PARK2 AND fragile",
+    "count": 129,
+    "source": "PubMed ESearch 2026-10-19"
+   },
+   {
+    "query": "WWOX AND parkin",
+    "count": 4,
+    "source": "PubMed ESearch 2026-10-19"
+   }
+  ],
+  "note": "Record matches, not measurements."
+ },
+ "multihop": {
+  "references_enumerated": 43,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "The reference list holds 43 numbered entries (counted in the session from the artefact); none is WWOX-titled and WWOX is not named in the running text (case-insensitive count 0 over the text rendering), so no gene-direct hop exists. The only WWOX content is figure and supplement content.",
+  "disposition": "No gene-direct references."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 38570643 --hops 1; paper_packet.py packet; fulltext_receipts.py status --pmid 38570643",
+  "hits": 0,
+  "note": "No record in any of the seven searched registry surfaces and no prior receipt; an empty result is a statement about that query over those files."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn or CommentIn link; publication type Journal Article.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 43,
+   "references_screened": 43,
+   "references_with_doi": 43,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID38570643_Kawabata2024_PMC.xml",
+   "sha256": "b81d51c387f43913be07070b9c56f23b12bf142e5ffe3601bf1c50daa27553f5",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10991263/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "b81d51c387f43913be07070b9c56f23b12bf142e5ffe3601bf1c50daa27553f5"
+   }
+  },
+  {
+   "path": "files/figures/PMID38570643/41598_2024_58656_Fig1_HTML.jpg",
+   "sha256": "f7babaddb7e8f489792aef2662bf9c9e7ee6e7c60d02b23c6d046340ffec4329",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC10991263 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID38570643/41598_2024_58656_Fig2_HTML.jpg",
+   "sha256": "0ca7eeab9983b8401039136d43506e073c4531845616ed12c15ebce3491b1162",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC10991263 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID38570643/41598_2024_58656_Fig3_HTML.jpg",
+   "sha256": "b270f7e5aa731234f70a1754faeb8715bc5152f59cdab53e3cdb03f0db64f7e7",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC10991263 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID38570643/41598_2024_58656_Fig4_HTML.jpg",
+   "sha256": "7c94839c86d140c4ec220873c192390f425ac6c46a9437e0eb6dd223d8bd9591",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC10991263 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID38570643/41598_2024_58656_MOESM1_ESM.xlsx",
+   "sha256": "338e99c9068a937fdfd25daa89d4e2f7ba6fdc94cca436631694b46865e4766a",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC10991263 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID38570643/41598_2024_58656_MOESM1_ESM.txt",
+   "sha256": "6d086bf5d51b3e49a9e938d87fa9f71efacce83433bfd729e14f957857457334",
+   "kind": "supplement_text",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID38570643/41598_2024_58656_MOESM1_ESM.xlsx",
+    "extractor": {
+     "name": "python zipfile + regex over sharedStrings and sheet1 XML",
+     "version": "3.12 (system python3)",
+     "call": "cells joined by ' | ' per row; row 1 is the table title, row 2 the header"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "6d086bf5d51b3e49a9e938d87fa9f71efacce83433bfd729e14f957857457334"
+   }
+  },
+  {
+   "path": "files/figures/PMID38570643/41598_2024_58656_MOESM2_ESM.pdf",
+   "sha256": "35d951d8e44940e58276caa3c987583cd637801ceba8f5e61c6fbf061c0cbd97",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC10991263 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "System: hTERT-immortalised neonatal human dermal fibroblasts and HEK293A cells given aphidicolin; no neuron, no WWOX-null background.",
+    "snippet": "human dermal fibroblasts were exposed to aphidicolin (APH), an inhibitor of replicative polymerase, and parkin expression was observed by western blotting",
+    "anchor": "Results, first section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38570643_Kawabata2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Dose and schedule: 300 or 600 nM aphidicolin, which slows but does not arrest forks; parkin was measured immediately and after a 96 h recovery.",
+    "snippet": "We used 300 nM or 600 nM of APH, which does not completely stop the progression of replication forks",
+    "anchor": "Results, first section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38570643_Kawabata2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Parkin protein is reduced only after the recovery period, not immediately after the stress.",
+    "snippet": "However, after an additional 96 h of recovery culture, the protein levels of parkin were significantly reduced in the cells exposed to APH (Fig. 1B).",
+    "anchor": "Results, first section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38570643_Kawabata2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Parkin mRNA in the stressed fibroblasts was not statistically different from control, attributed to variability.",
+    "snippet": "Unexpectedly, we found that parkin mRNA expression in APH-exposed cells was not statistically different from that in untreated controls.",
+    "anchor": "Results, first section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38570643_Kawabata2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Table S1, PRKN row: baseMean about 6.5 normalised reads, log2 fold change +0.78, padj 0.73; per-replicate counts about 4.2, 3.5, 6.6 untreated and 6.9, 2.0, 15.9 treated. The parkin transcript is near the floor of detection in these fibroblasts, so 'not different' is a statement about almost no counts.",
+    "snippet": "ENSG00000185345 | 6.5086071005151496 | 0.783779637457658 | 0.90630917337126904 | 0.86480382245516996 | 0.38714647279415398 | 0.73139542576433503 | chr6",
+    "anchor": "Supplementary Table S1, gene PRKN",
+    "surface": "supplement",
+    "artifact": "files/figures/PMID38570643/41598_2024_58656_MOESM1_ESM.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Table S1, WWOX row (named nowhere in the running text): baseMean about 87 normalised reads, log2 fold change about -0.78 (APH over no treatment), p 0.0024, padj 0.011; replicate counts about 88, 115, 127 untreated and 50, 63, 81 treated.",
+    "snippet": "ENSG00000186153 | 87.473038804983005 | -0.77968000339195997 | 0.25638803609956701 | -3.0410155452385301 | 2.35781657200201E-3 | 1.1134544696201501E-2 | chr16",
+    "anchor": "Supplementary Table S1, gene WWOX",
+    "surface": "supplement",
+    "artifact": "files/figures/PMID38570643/41598_2024_58656_MOESM1_ESM.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1C plots 14 genes of common fragile sites in the stressed fibroblasts; WWOX is one of them, with a bar below zero and three asterisks, while PRKN has a bar above zero with a very large error bar and ns. The text never names WWOX.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1C, CFS genes group (x axis labels left to right: DAB1, DPYD, LRP1B, FHIT, NAALADL2, PDE4D, PRKN (boxed orange), IMMP2L, DLG2, NBEA, GPHN, RORA, WWOX, IL1RAPL1); y axis Log2 fold change (APH/NT) from -7 to 5; WWOX bar about -0.7 with ***; PRKN bar about +0.8 with error bar from about 0 to 1.7 and ns; DAB1 up with ****, DPYD, NAALADL2 and RORA down with ****.",
+    "anchor": "Figure 1C",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38570643/41598_2024_58656_Fig1_HTML.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "hTERT human dermal fibroblasts, RNA-seq",
+     "treatment": "300 nM APH 96 h then 96 h recovery",
+     "comparator": "untreated",
+     "endpoint": "mRNA log2 fold change"
+    }
+   },
+   {
+    "proposition": "mtROS: reported significantly increased after the recovery period.",
+    "snippet": "However, mtROS is significantly increased after 96 h of recovery culture",
+    "anchor": "Results, mtROS section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38570643_Kawabata2024_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "hTERT human dermal fibroblasts, live confocal MitoSOX and MitoTracker",
+     "treatment": "300 nM APH 96 h then recovery",
+     "comparator": "vehicle",
+     "endpoint": "MitoSOX index (Mander coefficient)"
+    }
+   },
+   {
+    "proposition": "Figure 2E, upper: the MitoSOX index under APH is about 0.65 against about 0.57-0.62 for vehicle, with significance marks on some time points only (ns early, ** and * from about 25 to 45 min) while rotenone sits near 0.82; the effect is about a quarter of the rotenone window and is a colocalisation overlap coefficient, not an intensity ratio. Lower (HA-parkin): vehicle and APH overlap with wide error bars and all ns.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2E: two line charts, y axis MitoSox index (Mander's coefficients), x axis time 0 to 45 min; upper chart rotenone about 0.82, APH about 0.65, vehicle about 0.57-0.62 with ns at the first five points and ** or * at later points; lower chart with HA-parkin, rotenone about 0.77, APH and vehicle about 0.55-0.60 with large error bars, ns throughout.",
+    "anchor": "Figure 2E",
+    "surface": "figure",
+    "artifact": "files/figures/PMID38570643/41598_2024_58656_Fig2_HTML.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "hTERT human dermal fibroblasts, live confocal MitoSOX and MitoTracker",
+     "treatment": "300 nM APH 96 h then recovery",
+     "comparator": "vehicle",
+     "endpoint": "MitoSOX index (Mander coefficient)"
+    },
+    "qualifies": "entries[7]",
+    "qualifies_needle": "mtROS is significantly increased"
+   },
+   {
+    "proposition": "Rescue claim: ectopic HA-parkin cells show no mtROS increase after stress; the comparison is a non-significant difference with large error bars in a separate cell population, with no APH x construct interaction test.",
+    "snippet": "We found that HDF with HA-parkin did not cause any increase in mtROS after replication stress even after 96 h of recovery culture (Fig. 2E).",
+    "anchor": "Results, mtROS section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38570643_Kawabata2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The causal conclusion is that the fragile locus is responsible, yet the paper reports no fragility assay (no breakage, FISH, sequencing or allele-specific expression) at PARK2; the mRNA-quality explanation is labelled supposition.",
+    "snippet": "Thus, we supposed that the quality, rather than quantity, of PARK2 mRNA could be more damaged in this condition",
+    "anchor": "Results, first section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38570643_Kawabata2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Discussion summary asserts an irreversible change in endogenous parkin and a mitochondrial dysfunction fully restored by ectopic parkin.",
+    "snippet": "exposure to chronic replication stress causes an irreversible change in endogenous parkin expression, causing mitochondrial dysfunction that is fully restored by ectopic parkin expression",
+    "anchor": "Discussion, final paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38570643_Kawabata2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Mitophagy is not severely compromised; the authors read the dysfunction as parkin-independent of mitophagy capacity.",
+    "snippet": "However, overall mitochondrial degradation was not severely compromised in APH-treated HDFs",
+    "anchor": "Results, mitophagy section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38570643_Kawabata2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Mitochondrial 8-oxoguanine is higher in stressed HEK293A cells, nuclear is not.",
+    "snippet": "8-oxoguanine accumulation in mitochondria, but not in nuclei, is increased in HEK293A cells exposed to chronic replication stress",
+    "anchor": "Results, mitophagy section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38570643_Kawabata2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Donut mitochondria increase in fibroblasts but not in HEK293A cells.",
+    "snippet": "significantly increased under these conditions in HDFs but not in HEK293A cells",
+    "anchor": "Results, morphology section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38570643_Kawabata2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Authors' own limit for neurons: differentiated neurons are not exposed to replication stress, so any effect must act in proliferating progenitors during development.",
+    "snippet": "Although differentiated neurons are not exposed to replication stress due to a lack of proliferation",
+    "anchor": "Discussion, first paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38570643_Kawabata2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Figure S3 and S4 legends declare that the parkin and DRP1 blots are the same membranes as NDUFA9 and p-DRP1, stripped and reused.",
+    "snippet": "Note that the blot of parkin is the same as the blot of NDUF9A, whose antibodies are stripped and reused for parkin immunoblot.",
+    "anchor": "Supplementary Figure S3 legend",
+    "surface": "rendered_text",
+    "artifact": "files/figures/PMID38570643/41598_2024_58656_MOESM2_ESM.pdf",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC10991263/fullTextXML returned HTTP 200 (78037 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image."
+ }
+}

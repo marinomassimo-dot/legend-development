@@ -1,0 +1,231 @@
+{
+ "schema_version": 2,
+ "pmid": "26355344",
+ "doi": "10.1038/cddis.2015.251",
+ "receipt": "FTR-20261019-26355344-02",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-G3-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery-ledger lead beyond what the manifest and analysis note carry; the ledger is written by its validated writer only where a lead survives."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever for the reference genotype class is matured by this reading; forging from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged; nothing here reaches BLOCK-1."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes go through commit candidates."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; no audit trigger fired."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "Senior author is the founding laboratory of the WWOX-mitochondria and TPC6A-delta/TIAF1 aggregation work; this article is that laboratory's own commentary on its own primary paper, so it adds interpretation weight of zero beyond the primary and observation weight of zero (it reports no measurement). The laboratory studies the gene, not the biallelic-LoF disease."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND mitochondria",
+    "count": 26,
+    "source": "PubMed ESearch 2026-10-19"
+   }
+  ],
+  "note": "Count is of title/abstract/MeSH matches on that date; it measures how many records mention the pair, not how many measure it."
+ },
+ "multihop": {
+  "references_enumerated": 10,
+  "gene_direct_refs_in_source": [
+   "25537520",
+   "15126504",
+   "22193544",
+   "25650666",
+   "27551439",
+   "19366691",
+   "18371080"
+  ],
+  "resolved": [
+   {
+    "pmid": "22193544",
+    "how": "Ref 5 (Wang 2011/2012 GSK3B) has complete receipted readings in LEGEND (FTR-20260726-22193544-01)."
+   },
+   {
+    "pmid": "25650666",
+    "how": "Ref 7 (Chang 2015 Oncotarget) has a complete receipted reading (FTR-20261003-25650666-03)."
+   }
+  ],
+  "queued": [
+   {
+    "queue": "CC-20261019-SCIENTIST-C-G3-01",
+    "why": "Ref 4 (Sze 2004 JBC, PMID 15126504) and refs 9 (Hsu 2009 JBC, PMID 19366691) and 10 (Lo 2008, PMID 18371080) have no receipt of any kind; ref 2 (Chang 2014, PMID 25537520) and ref 8 (Chang 2015 Cell Death Discov, PMID 27551439) carry partial receipts only. Ref 6 (Lee 2010 Cell Death Dis) has no PMID in the reference markup of this deposit and is not resolved here. None of these is read in this task; the debt is carried by the candidate."
+   }
+  ],
+  "disposition": "Seven gene-direct references enumerated from the reference markup of the artefact; two resolved by existing complete receipts, five queued."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 26355344 --hops 1; paper_packet.py packet --pmid 26355344; fulltext_receipts.py status --pmid 26355344",
+  "hits": 3,
+  "note": "Run after the first pass. One triage-only placeholder record per registry surface, one discovery-ledger lead citing this deposit as a source, one prior partial receipt."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn or CommentIn link; publication types News and Research Support, Non-U.S. Gov't.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 10,
+   "references_screened": 10,
+   "references_with_doi": 10,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID26355344_PMC4650446_efetch.xml",
+   "sha256": "ef302d02ba39ae21d21e57c6e995952926525aef4e8d0f7b97bafd20c38553fb",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4650446&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "ef302d02ba39ae21d21e57c6e995952926525aef4e8d0f7b97bafd20c38553fb"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID26355344_Sze2015_nature.pdf",
+   "sha256": "e3dc6e83335f26f17d5b0b4dc7b91c64d9f69b0e7a91dc17bf456ba81907dc5f",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.nature.com/articles/cddis2015251.pdf",
+    "http_method": "GET",
+    "tier": "publisher gold open-access PDF",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "e3dc6e83335f26f17d5b0b4dc7b91c64d9f69b0e7a91dc17bf456ba81907dc5f"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID26355344/PMID26355344_nature_page2_200dpi.png",
+   "sha256": "afb6bfc58e5bb15893a9031c44514dc12821b1a36a45721c166b6a6967f2ed25",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID26355344_Sze2015_nature.pdf",
+    "extractor": {
+     "name": "pdftoppm (poppler)",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 200 -png <pdf> (page 2 of 2 pages)"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "afb6bfc58e5bb15893a9031c44514dc12821b1a36a45721c166b6a6967f2ed25"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The deposit is typed News and Commentary, a commentary by the senior author's own laboratory on its own primary paper; it carries no Methods, Results or table.",
+    "snippet": "In an inaugural issue of Cell Death Discovery",
+    "anchor": "main text, paragraph 2 (JATS article-type news)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26355344_PMC4650446_efetch.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The commentary names the primary it discusses as a protein aggregation cascade under TGF-beta or WWOX deficiency (the primary is a separate PMID).",
+    "snippet": "described a protein aggregation cascade, involving TRAPPC6AΔ, TIAF1",
+    "anchor": "main text, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26355344_PMC4650446_efetch.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The commentary states that a portion of WWOX is in mitochondria and that the SDR domain appears to have a key role in mitochondrial homeostasis, citing refs 4-6, with no data in this deposit.",
+    "snippet": "A portion of WWOX is in the mitochondria, so as to maintain the normal cell physiology.",
+    "anchor": "main text, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26355344_PMC4650446_efetch.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Aggregates are said to relocate to mitochondria on WWOX downregulation (restated, citing refs 6 and 7).",
+    "snippet": "This downregulation results in spontaneous relocation of TGF",
+    "anchor": "main text, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26355344_PMC4650446_efetch.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Plaques in 3-week-old Wwox knockout mice are stated as a restatement of ref 7.",
+    "snippet": "-week-old Wwox gene knockout mice, indicating a significant increase in protein aggregation under WWOX deficiency",
+    "anchor": "main text, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26355344_PMC4650446_efetch.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The commentary states restoration of WWOX is expected to help neural survival; this is an expectation, not a result.",
+    "snippet": "Restoration of WWOX is expected to help survival of neural cells by preventing accumulation of protein aggregates in neurons.",
+    "anchor": "main text, closing paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26355344_PMC4650446_efetch.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1 is a two-panel schematic (a: nucleolus-mitochondrion shuttling; b: routes i-iii of the aggregation cascade); it plots no measurement, no axis, no scale bar and no n.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1 (page 2 at 200 dpi): panel a draws four cell cartoons linked by arrows labelled TPC6A translocates into nucleus / into nucleolus / into mitochondrion and binds TIAF1; panel b draws WWOX (WW, WW, SDR with D3 tail), routes i (survival), ii (aggregation to mitochondrion to apoptosis, with caspase activation, APP degradation, Abeta generation, tau aggregation) and iii (Y33-phosphorylated WWOX binding TPC6A-delta in the nucleus); no data axes, error bars or micrographs are present.",
+    "anchor": "Figure 1a-b",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID26355344/PMID26355344_nature_page2_200dpi.png",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC4650446/fullTextXML returned HTTP 200 (22857 bytes) on 2026-10-19 and the PMC efetch deposit declares pmc-prop-in-epmc yes; the declared artefact is the NCBI efetch JATS response.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image."
+ },
+ "context_policy_note": "A deliberate resume of a HELD-partial row. Held before reading: the selection file's statement that the prior receipt covered introduction and discussion only and that results, methods, figures and tables were owed; the prior receipt itself (an extraction that carried a genre finding). Question: does this deposit contain any Results, Methods, table or figure DATA about mitochondria under WWOX loss that the earlier reading missed? No registry record was opened before the first pass."
+}

@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-35984507-03",
+ "study_id": {
+  "pmid": "35984507",
+  "doi": "10.1007/s00018-022-04508-7"
+ },
+ "event_at": "2026-10-19T18:59:17Z",
+ "analysis_at": "2026-10-19T18:59:17Z",
+ "analysis_time_precision": "second",
+ "workflow": "scientist-c, metabolic batch 2026-10-19, task METAB-G3-C-20261019, branch task/METAB-G3-C-20261019; context_policy QUESTION_DRIVEN. Route: Internet Archive Wayback snapshot of the PMC article page (HTML) for the text, the ten Springer media-server figure PNGs and the Springer ESM PDF (three pages, rendered to PNG), all saved to the shared checkout files tree; the whole body, legends, methods and tables read from the HTML text; all ten figures and the three ESM pages opened at native size. Receipt prepared as staged JSON for the integrator and was not appended at preparation time.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID35984507_Carvalho2022_PMC11071800_wayback20240101.html",
+ "source_fingerprint": "c09df1fa15f38207d1ffd399a6dde3c5aab21be48a4fe9c23ebf4c1f3c969cec",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "read",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID35984507.json",
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-G3-01.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "verbatim_locators",
+  "Closes the figures captions_only gap of the two prior partial receipts: every panel of Figures 1 to 10 and the three ESM pages was opened. The artefact is an archived PMC page rather than the publisher PDF the prior receipts used; the two were not diffed beyond the legends and the quantities cited here. Bar sizes quoted from panels are by-eye readings (INFERENZA)."
+ ],
+ "prior_receipt": "FTR-20260921-35984507-02",
+ "reread_reason": "inadequate_prior_coverage"
+}

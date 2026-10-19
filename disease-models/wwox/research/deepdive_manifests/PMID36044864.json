@@ -1,0 +1,439 @@
+{
+ "schema_version": 2,
+ "pmid": "36044864",
+ "doi": "10.1016/j.celrep.2022.111278",
+ "pmcid": "PMC9508617",
+ "receipt": "FTR-20261019-36044864-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the interventions selection file's one-line 'why it matters' for this row and the group H5 header; no registry record about this paper (none exists). After the first pass the comparison admitted CLAIM 042, DL-MECH-020 and HYP-20260709-01 (ketogenic-diet rationale lines).",
+ "landing": [
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/interventions_batch_selection_20261019.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS XML was available from Europe PMC REST on the first request; no cascade was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline by the Scientist; the reading is the deliverable."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The transfer verdict is in the analysis note; no cumulative-ledger lead is claimed from a comparator paper."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever is matured by this paper; forging a hypothesis from a non-WWOX comparator would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for the reference genotype; class-level literature only, BLOCK-1 caution carried in the analysis note."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or corroborated by this reading; the load-bearing triples were checked mechanically by locator_audit.py and are exposed in the analysis note for a blind auditor."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "experimental_lab",
+  "output_kind": "primary_research",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "A neuron-specific Depdc5 conditional knockout mouse (6-9 weeks), rat primary cortical neurons with shRNA knockdown, HEK293T and HeLa lines, and a PTZ seizure assay. Primary for the DEPDC5/GATOR1 mTORC1 axis, not for WWOX and not for any neonatal or encephalopathic-feeding question. The observation (24 h fasting lowers PTZ seizure incidence in control mice and not in Depdc5 knockout mice; fasting lowers cortical pS6) is firm as reported; the interpretation that nutrient sensing upstream of mTORC1 mediates fasting protection is the authors' inference from one knockout. Not a WWOX system."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (fasting OR \"caloric restriction\" OR \"calorie restriction\" OR \"dietary restriction\")",
+    "count": 4,
+    "source": "PubMed ESearch rettype=count 2026-10-19; the four hits are type 2 diabetes association studies (fasting glucose), none a fasting or restriction intervention"
+   },
+   {
+    "query": "WWOX AND (mTOR OR mTORC1 OR AMPK)",
+    "count": 8,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (hypoglycemia OR hypoglycaemia OR dextrose OR \"glucose infusion\")",
+    "count": 21,
+    "source": "PubMed ESearch rettype=count 2026-10-19; hits are glucose-metabolism, glycolysis and association papers, none an infusion or dextrose intervention"
+   },
+   {
+    "query": "WWOX AND (refeeding OR thiamine OR \"parenteral nutrition\")",
+    "count": 0,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "Counts are PubMed search hits only (ESearch rettype=count, 2026-10-19), not a census; none of the WWOX hits tests the intervention of this group."
+ },
+ "multihop": {
+  "references_enumerated": 80,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference list enumerated and read (80 entries, printed in full during the reading); none is WWOX-directed. Several (Hartman 2012, McDaniel 2011, Phillips-Farfan 2015) are fasting or mTOR-inhibition comparators; Phillips-Farfan 2015 is in this lot."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 36044864 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "NO RECORD MATCHED for this PMID in the seven registry surfaces at commit 0c85331b341e; a statement about that query only. Theme query (hypoglyc, ketogenic) returned CLAIM 042, DL-MECH-020 and the ketogenic-diet hypothesis, admitted for comparison after the first pass."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 80,
+   "references_screened": 80,
+   "references_with_doi": 80,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  },
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction (checked 2026-10-19 by the Scientist via the dependency screen and the publisher record in the JATS front matter)."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID36044864_Yuskaitis2022_PMC.xml",
+   "sha256": "c5b7186d590fce5045c79f995877cfc37a07082ad1103dd29ccf4c13a0ec1286",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9508617/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "c5b7186d590fce5045c79f995877cfc37a07082ad1103dd29ccf4c13a0ec1286"
+   }
+  },
+  {
+   "path": "files/figures/PMID36044864/native/nihms-1833562-f0001.jpg",
+   "sha256": "2914f5e522382bbc413dc6c6049e7033eaae7215a362e64deeb4fe856bb62a27",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9508617.1/nihms-1833562-f0001.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "2914f5e522382bbc413dc6c6049e7033eaae7215a362e64deeb4fe856bb62a27"
+   }
+  },
+  {
+   "path": "files/figures/PMID36044864/native/nihms-1833562-f0002.jpg",
+   "sha256": "7c10dccfab1148a09d1bb2ed4580c54330d21eb078659d57584479ac79500f83",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9508617.1/nihms-1833562-f0002.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "7c10dccfab1148a09d1bb2ed4580c54330d21eb078659d57584479ac79500f83"
+   }
+  },
+  {
+   "path": "files/figures/PMID36044864/native/nihms-1833562-f0003.jpg",
+   "sha256": "c0fe2400dd1167f79f550167c80721ff5d7e47fd259e3d469715c748f3c294d6",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9508617.1/nihms-1833562-f0003.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "c0fe2400dd1167f79f550167c80721ff5d7e47fd259e3d469715c748f3c294d6"
+   }
+  },
+  {
+   "path": "files/figures/PMID36044864/native/nihms-1833562-f0004.jpg",
+   "sha256": "db106f1da0503bbc7682c6e2c7818707a0d58645625266adca7a5b16c18caff8",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9508617.1/nihms-1833562-f0004.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "db106f1da0503bbc7682c6e2c7818707a0d58645625266adca7a5b16c18caff8"
+   }
+  },
+  {
+   "path": "files/figures/PMID36044864/native/nihms-1833562-f0005.jpg",
+   "sha256": "fd8af8e1bc8e8dbc7172dbb732cfddbec9c996b760ee36c4c7cb6b7d29dd81d8",
+   "kind": "figure",
+   "note": "Native raster of the published figure from the PMC Article Datasets open-data bucket (pmc-oa-opendata, key PMC id plus version), opened as an image at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9508617.1/nihms-1833562-f0005.jpg",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "fd8af8e1bc8e8dbc7172dbb732cfddbec9c996b760ee36c4c7cb6b7d29dd81d8"
+   }
+  },
+  {
+   "path": "files/supplements/PMID36044864/NIHMS1833562-supplement-1.pdf",
+   "sha256": "971bd3290157fa8f5e4c952733ab29e7db7a041d5166a38a285787c5cff88d26",
+   "kind": "supplement_binary",
+   "note": "Supplemental information PDF (Figures S1-S4 with legends), nine pages, all pages rendered and opened as images.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9508617.1/NIHMS1833562-supplement-1.pdf",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "971bd3290157fa8f5e4c952733ab29e7db7a041d5166a38a285787c5cff88d26"
+   }
+  },
+  {
+   "path": "files/supplements/PMID36044864/NIHMS1833562-supplement-2.xlsx",
+   "sha256": "41b39ca417758b416ef866a8ceb60b56a76084b4dd5467744cf8d212248fe95d",
+   "kind": "supplement_binary",
+   "note": "Table S1 (normalised metabolite peak areas; two sheets). Opened for structure and metabolite list only; not analysed per metabolite. The paper's own analysis of it is the top-20 heatmap of Figure 4A.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9508617.1/NIHMS1833562-supplement-2.xlsx",
+    "http_method": "GET",
+    "tier": "PMC Article Datasets open-data bucket",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "41b39ca417758b416ef866a8ceb60b56a76084b4dd5467744cf8d212248fe95d"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "In wild-type mice, 24 h fasting reduced PTZ-induced generalised seizures from 56% to 22%.",
+    "snippet": "Fasting for 24 h significantly reduced PTZ-induced seizures from 56% having seizures in the fed state to 22% in fasted mice",
+    "anchor": "Results, first section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36044864_Yuskaitis2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1B shows the wild-type fed and fasted cumulative seizure curves (fed plateau near 56%, fasted near 20%); the panel agrees with the text.",
+    "snippet": "Visual attestation of Figure 1B: wild-type mice, PTZ-induced seizures (% of total) against time to 1200 s; the fed curve plateaus near 56% and the fasted curve near 20%, asterisk marking the difference.",
+    "anchor": "Figure 1B (image nihms-1833562-f0002)",
+    "surface": "figure",
+    "artifact": [
+     "files/figures/PMID36044864/native/nihms-1833562-f0002.jpg"
+    ],
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "wild-type mouse, 6-9 weeks, 24 h food withdrawal with water ad lib, PTZ 65 mg/kg i.p.",
+     "endpoint": "generalised tonic-clonic seizure incidence over 20 min"
+    }
+   },
+   {
+    "proposition": "Fasting did not change seizure latency or duration in wild-type mice; the effect is on incidence only.",
+    "snippet": "There was no effect on seizure latency or seizure duration (Figures S1A and S1B).",
+    "anchor": "Results, first section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36044864_Yuskaitis2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Fasting protection was lost in neuron-specific Depdc5 knockout mice.",
+    "snippet": "Fasting for 24 h failed to protect Depdc5cc + mice from PTZ-induced seizures, whereas littermate controls continued to demonstrate a protective effect from fasting (Figure 1E).",
+    "anchor": "Results, second section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36044864_Yuskaitis2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1E: the cKO fed and fasted curves (about 79% and 75%) lie above both control curves and nearly overlap; the control fasted curve is lowest (about 31%).",
+    "snippet": "Visual attestation of Figure 1E: four cumulative seizure curves; Depdc5 cKO fed (about 79%) and fasted (about 75%) nearly overlap above control fed (about 62%) and control fasted (about 31%).",
+    "anchor": "Figure 1E (image nihms-1833562-f0002)",
+    "surface": "figure",
+    "artifact": [
+     "files/figures/PMID36044864/native/nihms-1833562-f0002.jpg"
+    ],
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "neuron-specific Depdc5 conditional knockout versus littermate control, 24 h fast, PTZ 65 mg/kg",
+     "endpoint": "seizure incidence"
+    }
+   },
+   {
+    "proposition": "Fasting lowered blood glucose and raised beta-hydroxybutyrate in the knockout, with beta-hydroxybutyrate higher than in controls (Figure S1I), yet gave it no seizure protection.",
+    "snippet": "Depdc5 neuronal-specific knockout mice had reductions in blood glucose, several amino acids, and increases in ketones upon fasting, yet the mice were not protected from seizures.",
+    "anchor": "Discussion, para 7",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36044864_Yuskaitis2022_PMC.xml",
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36044864.json",
+     "entry": 5,
+     "what_changed": "proposition no longer says the knockout ketosis was 'as in controls'; it was higher",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ]
+     }
+    }
+   },
+   {
+    "proposition": "Fasting-induced ketosis was larger in the knockout than in controls.",
+    "snippet": "Fasting induced ketosis as measured by elevated 3-hydroxybutanonic acid (e.g., beta-hydroxybutyrate) in both genotypes with higher levels in Depdc5cc+ mice compared with controls (Figure S1I).",
+    "anchor": "Results, second section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36044864_Yuskaitis2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Food was removed for 24 h with water available (the age of 6-9 weeks is in the preceding Methods sentence, not quoted). The paper has no calorie-graded, dextrose or fluid-volume arm (reader's inference from the Methods; no quote carries the negative).",
+    "snippet": "Mice were weighed followed by food removal at 1pm for 24hr with ad lib water access.",
+    "anchor": "STAR Methods, Acute fasting paradigm",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36044864_Yuskaitis2022_PMC.xml",
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36044864.json",
+     "entry": 7,
+     "what_changed": "proposition limited to what the quote carries and the negative labelled as inference",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "UNDERSHOOT"
+      ]
+     }
+    }
+   },
+   {
+    "proposition": "Cortical glutamine fell with fasting and was lower again in the knockout in both fed and fasted states (arginine and leucine are in adjacent sentences, not quoted).",
+    "snippet": "Not only was glutamine reduced in the fasted state, but glutamine was further reduced in the Depdc5cc+ brains compared with controls regardless of the fed or fasted state (Figure 4C).",
+    "anchor": "Results, metabolomics section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36044864_Yuskaitis2022_PMC.xml",
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36044864.json",
+     "entry": 8,
+     "what_changed": "cut to the glutamine statement the quote carries",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "UNDERSHOOT"
+      ]
+     }
+    }
+   },
+   {
+    "proposition": "The only deaths after PTZ occurred in knockout mice and fasting did not prevent them (Figure 4H shows death only in the two knockout curves).",
+    "snippet": "Only Depdc5cc+ mice died from PTZ-induced seizures and fasting had no effect on seizure-induced death (Figure 4H).",
+    "anchor": "Results, metabolomics section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36044864_Yuskaitis2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 4H panel: control fed and fasted curves stay at zero deaths; cKO fed plateaus near 26% and cKO fasted near 40%.",
+    "snippet": "Visual attestation of Figure 4H: seizure-induced death (% of total seizures) against latency to death; control fed and control fasted stay at 0%, Depdc5 cKO fed plateaus near 26% and cKO fasted near 40%.",
+    "anchor": "Figure 4H (image nihms-1833562-f0005)",
+    "surface": "figure",
+    "artifact": [
+     "files/figures/PMID36044864/native/nihms-1833562-f0005.jpg"
+    ],
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "neuron-specific Depdc5 conditional knockout versus littermate control",
+     "endpoint": "death within 20 min of PTZ"
+    }
+   },
+   {
+    "proposition": "Figure S1 (supplement) shows the fasted wild-type blood glucose near 100 mg/dL against about 190 fed and weight change near -15%; plasma beta-hydroxybutyrate about 1.4 mM control and about 2 mM knockout after fasting.",
+    "snippet": "Visual attestation of Figure S1 (supplement page 2): panel C weight change about -15% fasted; panel D blood glucose about 190 fed and about 100 mg/dL fasted; panel I plasma 3-hydroxybutyric acid about 0.4 mM fed, about 1.4 (control) and about 2 mM (knockout) fasted.",
+    "anchor": "Supplementary Figure S1C, D, I (supplement PDF page 2)",
+    "surface": "figure",
+    "artifact": [
+     "files/supplements/PMID36044864/NIHMS1833562-supplement-1.pdf"
+    ],
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "mouse, 24 h fast",
+     "endpoint": "weight, blood glucose, plasma beta-hydroxybutyrate"
+    }
+   },
+   {
+    "proposition": "The authors conclude that DEPDC5-related epilepsy may be insensitive to nutrient manipulation and that the pathway may still serve other causes.",
+    "snippet": "While DEPDC5-related epilepsy may be insensitive to nutrient manipulation, the nutrient-sensing pathways through mTOR may be a potential therapeutic strategy for treating seizures of other causes.",
+    "anchor": "Discussion, final paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36044864_Yuskaitis2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state the gap between primary neuronal cultures and the mature brain (the shRNA residual-protein caveat is a separate sentence, not quoted).",
+    "snippet": "While our in vitro data are compelling, there are still large gaps between primary neuronal cultures and the mature brain.",
+    "anchor": "Limitations of the study",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36044864_Yuskaitis2022_PMC.xml",
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36044864.json",
+     "entry": 13,
+     "what_changed": "shRNA clause removed from the proposition",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "UNDERSHOOT"
+      ]
+     }
+    }
+   },
+   {
+    "proposition": "The metabolomics sampled cortex only and could not separate neuron-intrinsic from systemic or behavioural effects.",
+    "snippet": "Finally, a limitation of our metabolomic data is that we only analyzed brain samples.",
+    "anchor": "Limitations of the study",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36044864_Yuskaitis2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Direct rapamycin inhibition does not protect when mTOR is not hyperactive, per the cited work.",
+    "snippet": "However, direct mTOR inhibition by rapamycin is insufficient to protect from seizures when mTOR is not hyperactive (Hartman et al., 2012).",
+    "anchor": "Discussion, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36044864_Yuskaitis2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1 legend: wild-type fed n = 25 (14 M, 11 F) and fasted n = 27 (14 M, 13 F), seizure incidence difference by log-rank p = 0.0126.",
+    "snippet": "(n = 25 fed [14 M, 11 F]; 27 fasted mice [14 M, 13 F]; *p = 0.0126, log rank test)",
+    "anchor": "Figure 1 legend, panel B",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36044864_Yuskaitis2022_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC9508617/fullTextXML returned HTTP 200 with a JATS body on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure panel."
+ }
+}

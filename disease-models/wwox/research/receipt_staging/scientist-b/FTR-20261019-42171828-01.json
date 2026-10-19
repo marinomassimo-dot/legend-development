@@ -1,6 +1,6 @@
 {
- "analysis_at": "2026-10-20T04:00:00Z",
- "event_at": "2026-10-20T04:00:00Z",
+ "analysis_at": "2026-10-19T00:00:00Z",
+ "event_at": "2026-10-19T18:50:00Z",
  "analysis_time_precision": "minute",
  "coverage": {
   "abstract": "read",
