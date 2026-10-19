@@ -411,3 +411,52 @@ stronger defect than anything recorded for WWOX; the sign of WWOX on respiration
 sequestration" title rests on a missing arm and should not be quoted as shown; (2) the MERRF plasma
 PUFA-TG panel is exploratory and not a biomarker precedent for a WWOX disease. Transfer verdict:
 mechanistic template and readout set, no WWOX content, no system match.
+
+---
+
+## 9. PMID 39995090 — Liang 2026, Neural Regen Res: HIF-1a inhibitor PX-478 and hippocampal ferroptosis in PTZ-kindled mice (tier 2, new)
+
+context_policy: SOURCE_FIRST (selection row's line only; registry empty; WWOX is not named in the artefact).
+
+**What it MEASURES.** Eight-week-old wild-type male C57BL/6 mice, 11 PTZ injections (35 mg/kg every
+other day) with or without PX-478 (5 mg/kg i.p. 30 minutes before each PTZ; n = 16 per group for
+behaviour, n = 3 for blots and assays, n = 5 for the mitochondrial measure): Racine seizure scores,
+kindling success and latencies, H&E, DHE staining, SOD/CAT/GSH-Px activities, MDA, Fe2+, qPCR and
+Western for HIF-1a, HO-1, GPX4, PTGS2, FTH1 and transferrin, and mitochondrial length and area by TEM.
+
+**First-pass observations (eight figure images at 394 to 707 px as deposited, Tables 1 and 2).**
+- Table 2 (PTZ against PTZ + PX-478): kindled 75.0 against 56.3 percent; kindling latency 16.00 +- 1.21
+  against 19.11 +- 1.05 d; seizure latency after the last injection 206.00 +- 10.92 against 215.56 +-
+  9.86 s; duration 62.15 +- 3.39 against 48.56 +- 4.72 s. My arithmetic from those values (INFERENZA:
+  group sizes for the kindled fraction are taken as 12 and 9 of 16, i.e. the percentages times 16):
+  Fisher exact for 12/16 against 9/16 gives P of about 0.46; a t from the summary statistics for
+  kindling latency is about 1.9 and for seizure latency about 0.65. So the text's "significantly
+  reduced" kindling success and the abstract's prolonged latency are not supported by the table for
+  success rate and seizure latency; only seizure duration and the per-injection scores (Fig 2, from
+  about the third injection) carry significance marks.
+- Text-versus-panel contradiction: the Results sentence lists GPX4 among markers "significantly
+  elevated" in PTZ and decreased by PX-478; Figure 6B shows GPX4 mRNA (about 0.45) and protein (about
+  0.3) LOWER in PTZ and restored by PX-478 (about 0.9 and 0.8). The Discussion itself says GPX4
+  activity falls during ferroptosis. GPX4 is therefore the opposite of the sentence that lists it, and
+  the wording appears to lump it with PTGS2, FTH-1 and transferrin (recorded as a
+  `text_contradicted_by_panel` locator).
+- DHE images (Fig 4A) have no plotted quantification although the Methods describe ImageJ
+  quantification; the text says ROS "appeared" higher. H&E (Fig 3) is single fields with no count.
+- Ferroptosis is inferred from MDA, Fe2+, marker expression and mitochondrial shape; there is no
+  ferrostatin or chelator arm, no lipid-peroxide probe, and no genetic HIF1A manipulation. PX-478 is a
+  bis(2-chloroethyl)amino compound (alkylating-type chemistry); the paper treats it as a selective
+  HIF-1a inhibitor on the strength of cited work.
+- The abstract names CA1 and CA2; Results and figure use CA1, CA3 and DG (abstract not used as
+  evidence).
+
+FIRST-PASS OBSERVATIONS COMPLETE -> PRIOR KNOWLEDGE ADMITTED FOR COMPARISON: admitted the registry query (empty) and the
+registry-held WWOX/HIF1A readings (glycolytic shift in fibroblasts, hepatic HIF1A).
+
+**What it changes in the disease model: nothing; two connections to name and keep apart.** (a) It is
+the second paper in this lot (with the ferroptosis review) that puts HIF-1a/HO-1 and iron between
+seizure and neuronal injury, always as a consequence of seizures in wild-type acquired-epilepsy models;
+it does not say HIF-1a rises first in a genetic epilepsy. (b) The repository holds HIF1A as raised by
+WWOX loss in non-neural systems; a Wwox-null brain showing high HIF1A and HO-1 would be a first iron
+route to test, but this paper cannot say which way causality runs. PX-478 is named here only as the
+paper's tool: no safety triage was run (BLOCK-1 not reached), and nothing here proposes it for the
+reference genotype; its chemistry is a reason for caution, not a lead.
