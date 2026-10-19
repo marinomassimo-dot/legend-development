@@ -10,6 +10,7 @@
 |---|---|---|---|
 | 1 | PMID 20942981 (Saez 2010, BMC Med Genet, 801 Spanish adults, WWOX region vs HDL-C / TG) | `FTR-20261019-20942981-01` | Promote `CORPUS P288` / `LIT-0288` from "screened — corpus placeholder" to a full `PAPER` record, depth `complete_fulltext_read`, transferability T3, relevance LOW |
 | 2 | PMID 21444760 (Leduc 2011, J Lipid Res, mouse QTL map and human HDL GWA) | `FTR-20261019-21444760-01` | New `PAPER` record (none exists; queue entry `FT-019` only), depth `complete_fulltext_read`, T3, relevance LOW; close `FT-019` |
+| 3 | PMID 35559044 (Liu 2022, Front Genet, EHBP1/TUBB/WWOX SNPs, CAD and ischemic stroke) | `FTR-20261019-35559044-01` | Promote `CORPUS-STUB-157` / `LIT-0174` to a full `PAPER` record; correct the stub title (it reads "... and Hypertension"; the article says "... and Ischemic Stroke") |
 
 ## 2 · Required content of the PAPER record for source 1
 
@@ -56,3 +57,22 @@ Note text to carry:
 8. V186M does not segregate in the second cross | The polymorphism segregated between B6 and CAST but not between B6 and CASA. | same
 9. Probe set 1416334_at differs between the strains in both sexes | 1416334_at B6xCAST C M F +2.14 (<0.001) +2.28 (<0.001) 1431960_at B6xCAST C M F +1.38 (0.001) +1.12 (0.261) | Supplementary Table S10, `files/fulltext/PMID21444760_Leduc2011_supplement/supp_M009175_jlr.M009175-1.strings_S4_S10_S12.txt`
 10. The Discussion states hypercholesterolemia for the Wwox knockout, citing ref 39 | For instance, the Wwox knockout mouse has previously been shown to exhibit hypercholesterolemia (39); HDL was not measured, but hypercholesterolemia in a chow-fed mouse would indicate increased HDL because 80% to 90% of cholesterol in a chow-fed mouse is HDL. | Discussion, paragraph 3
+
+## 7 · Source 3 (PMID 35559044, Liu 2022): record content
+
+What it measures: two common WWOX SNPs (rs2222896, rs2278075) among six in a hospital-based Han case-control study (622 CAD, 593 stroke, 638 controls). No loss-of-function allele, no expression, no WWOX disease subject.
+
+Note text to carry:
+🔴 **DO_NOT_CITE as evidence of a WWOX lipid or vascular dose effect.** (a) Common SNPs only. (b) The one WWOX hit, rs2278075, has a control T frequency of 14.6 percent against 21.2 and 22.9 in the case groups, while the paper's own quoted reference frequency is 22.0: the controls are the outlier. (c) Lipid-by-genotype results (all six SNPs altering nearly every trait in 638 controls; t up to 15.2 for one genotype term on triglyceride; betas outside their own intervals) are not plausible as common-SNP effects. (d) The authors' deposited genotype spreadsheet reproduces Table 2 exactly but its CAD and stroke columns are laid out in a few contiguous blocks in file order, so joint genotypes cannot be relied on for the haplotype and interaction analyses; it carries no covariates. (e) The reference list does not match the in-text citations: a WWOX lipid statement cites a WWOX epileptic-encephalopathy case report; a genome-wide P value cites an epidemiology review; the WWOX HDL paper is cited for alcohol.
+
+## 8 · Registry statements to re-check at integration (source 3)
+
+`CORPUS-STUB-157` title. `CORPUS-STUB-109` (Liu 2021, same group) may share the deposit layout: not checked here. `CORPUS P383` (Johannsen 2018, WWOX SDR missense case report, an unread primary named in the standing brief) is cited by this paper for a statement it does not contain; no change to that record.
+
+### LOCATOR TRIPLES FOR BLIND AUDIT (source 3)
+
+11. The control group's T frequency is below the quoted reference | rs2278075AA 68.3%, AT 19.5%, TT 12.2%, and T 22.0% | Discussion, paragraph 3, `files/fulltext/PMID35559044_Liu2022_PMC.xml` (controls: Table 2, rs2278075, T 186 of 1276 chromosomes)
+12. A lipid statement is cited to a WWOX case report | The correlation between the WWOX rs2222896AA genotype and LDL-C was two times that of the rs2222896AG or rs2222896 GG genotypes (Johannsen et al., 2018). | Introduction, paragraph 2
+13. Reference 16 is the case report | A Novel Missense Variant in the SDR Domain of the WWOX Gene Leads to Complete Loss of WWOX Protein with Early-Onset Epileptic Encephalopathy and Severe Developmental Delay. | Reference 16
+14. A printed beta lies outside its own interval | rs2222896 AA AG −0.647 −11.274 <0.0004 −1.053 −0.741 | Table 4, TG block
+15. CAD genotype column layout in the deposit | RUNS CAD rs2278075: 5 runs; A/T x30, T/T x14, A/A x386, T/T x14, A/T x178 | `files/fulltext/PMID35559044_Liu2022_supplement/Table1_aggregate_derivation.txt` (aggregate derivation of the authors' Table1.XLSX)
