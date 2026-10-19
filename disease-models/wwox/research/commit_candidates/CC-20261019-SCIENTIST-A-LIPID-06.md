@@ -10,6 +10,7 @@
 |---|---|---|---|
 | 1 | PMID 39963730 (Kondo 2025, Epilepsia, review of soticlestat mechanisms; sponsor-authored) | `FTR-20261019-39963730-01` | New `PAPER` record (none exists), narrative review, T3, relevance LOW (WWOX absent) |
 | 2 | PMID 41704776 (Sahu 2026, iScience, review: VLCFA as regulators of neuroinflammatory pathways) | `FTR-20261019-41704776-01` | New `PAPER` record (none exists), narrative review, T3, relevance LOW (WWOX absent); pointer line on DL-MECH-012 (section 4) |
+| 3 | PMID 36969404 (Siddiqui 2023, ACS Omega, review: ELOVL elongases in neurological disease) | `FTR-20261019-36969404-01` | New `PAPER` record (none exists), narrative review with a flagged internal contradiction, T3, relevance LOW (WWOX absent) |
 
 ## 2 · Record content (source 1)
 
@@ -61,3 +62,24 @@ Status, tag, belief and the existing append-only notes of DL-MECH-012 are unchan
 - No statement that WWOX loss changes VLCFA, ceramide or S1P levels in any tissue.
 - No statement that a lipid change explains the glial or cytokine findings recorded for P47T or other models.
 - No medication recommendation (the review's therapeutic classes are listed, untested for WWOX).
+
+## 6 · Record content (source 3)
+
+What it measures: nothing new; a narrative review of the ELOVL elongase family. WWOX: zero occurrences.
+
+Note text to carry:
+🔴 **A map of names, with a conclusion the body does not support.** The conclusion says disruption of very-long-chain saturated fatty acid synthesis causes seizures in ELOVL1-deficient humans and mouse models; the body and Table 1 place human seizures with ELOVL4 and list none for ELOVL1, and the recessive ELOVL1 human series read in this lot records none (the mouse knockout has startle-epilepsy deaths). Do not cite this review for human ELOVL1 epilepsy. It states that the brain lipid consequences of ELOVL1 deficiency are unknown, glosses a hippocampal field as caudate amygdala, and is not a source for quantitative statements.
+
+### LOCATOR TRIPLES FOR BLIND AUDIT (source 3)
+
+9. Conclusion overreaches | disruption of VLC-SFA synthesis results to seizures and neurodegeneration in both ELOVL1-deficient humans and ELOVL1 mutant models. | Conclusion, `files/fulltext/PMID36969404_Siddiqui2023_PMC.xml`
+10. Seizures attributed to ELOVL4 in the human recessive disease | The seizure activity seen in recessive human ELOVL4 neuro-ichthyotic disease and this pattern are likewise comparable. | ELOVL: Additional Family Members, same
+11. Brain lipid consequences unknown | How ELOVL1 deficiency impacts the lipid composition and specific pathological disorders in the brain remains unknown. | Hypomyelination, High-Frequency Deafness, and Spastic Paraplegia, same
+12. Anatomical gloss error | The CA3 (caudate amygdala) and CA4 regions of the hippocampus exhibit the highest levels of ELOVL4 expression in neurons | ELOVL: Additional Family Members, same
+
+## 7 · What must NOT be written (whole file)
+
+- No statement that WWOX loss changes very-long-chain fatty acids, sphingolipid chain length, cholesterol, oxysterols or sphingosine 1-phosphate in any tissue.
+- No statement that human ELOVL1 disease includes epilepsy on the strength of source 3's conclusion.
+- No medication recommendation; the review classes are untested for WWOX.
+- No individual-level content; the human ELOVL1 series are cited at class level only.
