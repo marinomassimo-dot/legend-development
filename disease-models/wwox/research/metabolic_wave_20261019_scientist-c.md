@@ -213,3 +213,63 @@ Wwox-null and control cortex or hippocampus at a pre-lethal age. Counter-evidenc
 non-neural, the null mouse is short-lived, and ref 60 is a seizure-induced response, so it cannot
 separate cause from consequence of seizures. Transfer to the reference genotype: indirect, readout-level
 only; a review, no system match.
+
+---
+
+## 5. PMID 38570643 — Kawabata 2024, Sci Rep: chronic replication stress, parkin and mitochondrial dysfunction (tier 1, new; structural analogue)
+
+context_policy: SOURCE_FIRST (the selection row's one-line why-it-matters was the only thing held; the
+registry returned nothing for this PMID across seven surfaces, an empty result that is a statement
+about the query, not about the laboratory).
+
+**What it MEASURES.** hTERT-immortalised neonatal human dermal fibroblasts and HEK293A cells given
+aphidicolin (300 or 600 nM, 96 h) and then 96 h of recovery: parkin protein by Western blot, parkin
+and other fragile-site mRNAs by RNA-seq in the fibroblasts, parkin stability by cycloheximide chase
+in HEK293A, mitochondrial ROS by live MitoSOX/MitoTracker overlap, mitophagy by NDUFA9 loss and LC3
+colocalisation, 8-oxoguanine, DRP1 phosphorylation and mitochondrial morphology; the rescue is an
+ectopic HA-parkin line. The paper names WWOX nowhere in its text.
+
+**First-pass observations (four figures, the nine-page supplement and Table S1 opened).**
+- Parkin protein falls only after the recovery period (about 40 percent in fibroblasts, nearly
+  absent in HEK293A), with no immediate change; mRNA is "not different" and the degradation rate is
+  unchanged.
+- That mRNA statement rests on almost no reads: in Supplementary Table S1 PRKN has a baseMean of
+  about 6.5 normalised reads (about 4 untreated, 2 to 16 treated), so the reported variability is
+  count noise and the transcript is near the floor of detection in these cells.
+- The mtROS effect is small: APH about 0.65 against vehicle about 0.6 on a Mander overlap index, with
+  rotenone near 0.82 (Fig 2E); significant at some time points only. "Fully restored by ectopic
+  parkin" is a non-significant difference with wide error bars in a separate cell population, with no
+  treatment-by-construct test.
+- The headline attribution to "intrinsic fragility at PARK2" has no fragility assay behind it (no
+  breakage, FISH, sequencing, allele-specific expression); the mRNA-quality explanation is labelled
+  supposition by the authors. An ectopic cDNA is protected from replication stress for reasons that
+  need not involve locus fragility, so the rescue distinguishes "parkin matters" from "replication
+  stress matters" and does not separate fragility from any other cause of reduced endogenous
+  expression.
+- Authors' own limit: post-mitotic neurons are not exposed to replication stress; any effect would
+  act in proliferating progenitors during development.
+- **The WWOX data point the text never mentions.** Figure 1C plots fourteen fragile-site genes and
+  WWOX is one of them: its bar sits below zero with three asterisks. Supplementary Table S1 gives
+  WWOX baseMean about 87, log2 fold change about -0.78 (about 42 percent lower mRNA), p 0.0024, padj
+  0.011, replicate counts about 88, 115, 127 untreated and 50, 63, 81 treated. Four of the fourteen
+  fragile-site genes fell and one rose, the same proportions the text reports, so this is not WWOX
+  specific. WWOX protein, FRA16D integrity and mitochondrial readouts were not measured.
+  (Locators are a table row from the supplement and a panel reading; a text search of the article
+  returns zero WWOX, which is why this was missed by a name search and found by opening the figure.)
+
+FIRST-PASS OBSERVATIONS COMPLETE -> PRIOR KNOWLEDGE ADMITTED FOR COMPARISON: admitted the registry query (empty), the
+selection file's framing (closest structural analogue to WWOX as fragile-site gene with mitochondria)
+and the repository's fragile-site material by theme.
+
+**What it changes in the disease model.** No claim changes. It supplies (a) the first dataset in the
+batch where chronic low-dose replication stress lowers WWOX transcript by roughly 40 percent in
+non-cancer human cells (one cell type, one schedule, mRNA only); it is a hypothesis-grade route to a
+hypomorphic dose of WWOX that does not need a coding variant, bounded by the authors' own point that
+it acts in dividing cells and not neurons; and (b) a methodological template and its flaws for the
+question "does fragility, rather than loss, matter" (a separate tier 3 row): the template cannot
+answer it without a locus-specific assay, which neither this paper nor the repository has. Transfer
+to the reference genotype: none for the biallelic disease; developmental-window relevance only for a
+hypomorph-dose question. No mitochondrial result transfers: parkin is a different pathway and the
+ROS effect is small and unevenly significant. A pre-registered test the repository could state: in
+the same schedule, WWOX protein and mtROS in a donor-derived fibroblast line; a null for protein
+would close the lead.

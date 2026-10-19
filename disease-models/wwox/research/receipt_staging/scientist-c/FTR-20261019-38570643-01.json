@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-38570643-01",
+ "study_id": {
+  "pmid": "38570643",
+  "doi": "10.1038/s41598-024-58656-w"
+ },
+ "event_at": "2026-10-19T18:12:58Z",
+ "analysis_at": "2026-10-19T18:12:58Z",
+ "analysis_time_precision": "second",
+ "workflow": "scientist-c, metabolic batch 2026-10-19, task METAB-G3-C-20261019, branch task/METAB-G3-C-20261019; context_policy SOURCE_FIRST. Route: Europe PMC REST fullTextXML (open access) saved to the shared checkout files/fulltext; whole article and reference list read from a text rendering of the JATS; four main figures opened at native size and the nine-page supplementary PDF opened as page renders; Supplementary Table S1 (the 30 112-row RNA-seq table) read as a derived text dump for the WWOX, PRKN and the other fragile-site gene rows. Receipt prepared as staged JSON for the integrator and was not appended at preparation time.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID38570643_Kawabata2024_PMC.xml",
+ "source_fingerprint": "b81d51c387f43913be07070b9c56f23b12bf142e5ffe3601bf1c50daa27553f5",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "read",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID38570643.json",
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-G3-01.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "verbatim_locators",
+  "The article has no limitations section; its limits are stated in the Discussion. Supplementary Table S1 is a gene-level table of about 30 000 rows: the rows for PRKN, WWOX and the other fourteen fragile-site genes of Figure 1C were read, not every row."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}
