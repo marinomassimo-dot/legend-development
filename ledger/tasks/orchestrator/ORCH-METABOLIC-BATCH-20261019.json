@@ -1,0 +1,63 @@
+{
+ "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Operator directive of 2026-10-19: launch a new multi-hour research batch on metabolic themes in WWOX loss of function while the operator is away; at most four Scientists (registry-read cost); authorised on everything inside the section 21d limits. Identity orchestrator is a stated assumption (AGENTS.md section 4). Standing authorisations (procedi sempre) and the section 21d reserved list still bind.",
+ "TASK_ID": "ORCH-METABOLIC-BATCH-20261019",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Run a metabolic-themes literature batch for WWOX loss of function (lipids, simple carbohydrates and fructose, very-long-chain fatty acids, mitochondria, iron, catecholamines/adrenaline, neurotransmitters) with at most four Scientists: select studies read-only, dispatch, integrate receipts in order, BATCH_COMMIT, Mirror ex-post review, battery, push to development.",
+ "THEMES": [
+  "lipid metabolism",
+  "simple carbohydrates and fructose",
+  "very-long-chain fatty acids",
+  "mitochondrial dysfunction",
+  "iron",
+  "adrenaline and catecholamines",
+  "neurotransmitters"
+ ],
+ "SCIENTIST_CAP": 4,
+ "AUTHORISED_QUEUE_20261019": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_SELECT": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "Read-only selection of studies per theme group (PubMed + Europe PMC body check, dedup against registries), selection record under research/",
+     "status": "TODO"
+    }
+   ]
+  },
+  "OBJ_WAVE1": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "Dispatch Scientists A, B, C, D (one theme group each) with the wave brief",
+     "status": "TODO"
+    },
+    {
+     "step": "Integrate returns: receipts recorded in event-ID order after a scratch-clone trial, branches landed",
+     "status": "TODO"
+    },
+    {
+     "step": "BATCH_COMMIT of wave 1 candidates under LINT; Mirror ex-post review",
+     "status": "TODO"
+    },
+    {
+     "step": "Fresh-clone battery on exact SHA, public_release_gate, receipts verify, safe_push to development",
+     "status": "TODO"
+    }
+   ]
+  },
+  "OBJ_STANDING_NEXT_WAVES": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "While qualifying studies remain: select and dispatch the next wave (same cap of four Scientists), integrate, commit, push; breadth over repetition; say so and stop padding when a wave would have fewer than 12 qualifying studies",
+     "status": "TODO"
+    }
+   ]
+  }
+ }
+}

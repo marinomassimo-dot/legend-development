@@ -1,0 +1,35 @@
+{
+ "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Metabolic batch. Orchestrator assumption: scientist-d is a fourth equivalent Scientist under the shared contract roles/scientist.md (body 32); operator authorised up to four Scientists on 2026-10-19.",
+ "TASK_ID": "METAB-G3-C-20261019",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "scientist-c",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Read, in priority tier order, the studies of group G3 (mitochondria and iron (ferroptosis, iron homeostasis)) listed in disease-models/wwox/research/metabolic_batch_selection_20261019.md, in WWOX loss of function context.",
+ "SCOPE": {
+  "lot": "group G3 table of the selection file; HELD-partial rows only with a stated question; BLOCKED rows excluded",
+  "brief": "disease-models/wwox/research/metabolic_batch_dispatch_brief_20261019.md"
+ },
+ "ACCEPTANCE_CRITERIA": [
+  "per paper: manifest PASS, receipt JSON staged under research/receipt_staging, locators verbatim",
+  "analysis note metabolic_wave_20261019_scientist-c.md",
+  "self-eval diagnosis persisted",
+  "DEFAULTS_TAKEN and STOP_LOG in this JSON"
+ ],
+ "DEPENDENCIES": [],
+ "REVIEW_REQUIREMENT": "Mirror ex post",
+ "INTERACTION_MODE": "AUTONOMOUS",
+ "RETRY_POLICY": "resume idempotently",
+ "MILESTONE_PLAN": [
+  "TASK_ACK/CLAIM",
+  "per-paper M0-M5",
+  "analysis note",
+  "self-eval",
+  "report"
+ ],
+ "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
+ "CURRENT_STATE": "ASSIGNED",
+ "assigned_on": "2026-10-19"
+}
