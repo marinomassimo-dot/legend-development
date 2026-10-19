@@ -1,0 +1,285 @@
+{
+ "schema_version": 2,
+ "pmid": "31145772",
+ "doi": "10.18388/abp.2020_5563",
+ "receipt": "FTR-20261019-31145772-01",
+ "landing": [
+  "CC-20261019-SCIENTIST-B-G2-HUMAN-AXIS-01",
+  "metabolic_wave_20261019_scientist-b"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "Used for the cascade: Europe PMC reported no PMCID and 'subscription required' for the PubMed DOI; following the PubMed-stored DOI at the publisher served a PDF that turned out to be a different article. Crossref and a Europe PMC title search then identified the true DOI, and the publisher PDF for it was served (CC BY-SA 4.0)."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not run: reading produced directly under the Scientist brief."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered: no consolidated baseline claim is narrowed or reversed; the identity finding concerns a metadata record, not a claim. Triples listed in the commit candidate."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 3,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-19: 'Jamaspishvili E[au]' 3; 'Jamaspishvili E[au] AND WWOX' 0.",
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Endocrinology genetic-association replication, genotyping with a commercial multiplex kit; WWOX is one of ten inherited index SNPs, not the subject. Weigh as an independent replication attempt of a published index SNP, not as WWOX biology.",
+  "note": "Harbin Medical University, Second Affiliated Hospital. Not a WWOX group."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "WWOX tokens in the text layer",
+    "route": "regex count over the persisted text, 2026-10-19",
+    "count": 11
+   }
+  ],
+  "note": "WWOX appears 11 times in the whole article; it is one SNP of ten."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 25,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "Numbered by eye in the reference list of the text layer: 25 entries (Alberti to Ziying). The original index-SNP study is the Nature Genetics 2012 East Asian meta-analysis (Cho et al.), cited here as the source of the WWOX locus.",
+  "resolved": [],
+  "queued": [],
+  "note": "The Cho 2012 meta-analysis is the primary for the rs17797882 locus and is not in this lot."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "registry_records.py get --pmid 31145772 --hops 1 (and the selection file's own dedup)",
+  "hits": 0,
+  "finding": "Not in the registries. The selection file listed it as 'Permana 2019 ... Han Chinese'; the article's real first author is Jamaspishvili and PubMed stores another paper's authors and DOI for this PMID."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-19",
+  "route": "PubMed efetch XML for the PMID and Crossref works lookup for both DOIs 2026-10-19",
+  "result": "No retraction or correction found for the 2019 article. NOT a retraction, but a metadata defect: the PubMed record combines the title and abstract of the 2019 Jamaspishvili article with the author list, DOI and page range (679-686) of a 2021 Permana article (volume 68, issue 4).",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "UNSCREENABLE_NO_REFERENCE_LIST",
+   "reference_source": "cache",
+   "references_declared": 0,
+   "references_screened": 0,
+   "references_with_doi": 0,
+   "schema": "retraction_check.dependencies/1",
+   "screened": false,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID31145772_Zhang2019_frontierspartnerships.pdf",
+   "sha256": "31691d5f21a76bbaed5c30ba9dacccbc6fe1084fa83ffde961c66a99db2d3264",
+   "kind": "article_binary",
+   "note": "Publisher PDF (Frontiers Partnerships, Acta Biochimica Polonica, CC BY-SA 4.0), 353,973 bytes, 7 pages, reached by following https://doi.org/10.18388/abp.2018_2632. NOTE: this is the DOI of the article whose title and abstract PubMed shows for this PMID; the DOI PubMed itself stores for this PMID (10.18388/abp.2020_5563) resolves at the same publisher to a different, 2021 article by a different author group (breast-cancer nanoparticle paper; PDF sha256 0d1d2ed323fe4cdbf74dd5a7ceac15664469c4b23bb5afc730792d80f96e9694, 1,979,803 bytes, fetched and discarded unread beyond its title page, abstract and reference-free header).",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.frontierspartnerships.org/journals/acta-biochimica-polonica/articles/10.18388/abp.2018_2632/pdf",
+    "http_method": "GET",
+    "tier": "publisher_pdf_via_doi_redirect",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "31691d5f21a76bbaed5c30ba9dacccbc6fe1084fa83ffde961c66a99db2d3264"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID31145772_Zhang2019_text.txt",
+   "sha256": "b6464bf09952cbb772f24b75769a159de38181167dbdb07a59a558197d66c809",
+   "kind": "article_text",
+   "note": "Text layer of the PDF via PyMuPDF 1.28.2, page.get_text() default mode, pages joined with the empty string; tables come out one cell per line. The screen found no control-character or substitution defect (statistical language with < > = and the minus sign present).",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID31145772_Zhang2019_frontierspartnerships.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_text() default mode",
+     "join": ""
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "b6464bf09952cbb772f24b75769a159de38181167dbdb07a59a558197d66c809"
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID31145772_Zhang2019_p6_130dpi.png",
+   "sha256": "bcc815f09c1c3c1e9f4b1db4305d76670f496d34bfa848f14e658a99f1057961",
+   "kind": "figure",
+   "note": "Page 6 (printed page 164) of the PDF rendered at 130 dpi, carrying Figure 1 and the Results and Discussion paragraphs on the quantitative traits; inspected as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID31145772_Zhang2019_frontierspartnerships.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=130) on page index 5",
+     "join": ""
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "bcc815f09c1c3c1e9f4b1db4305d76670f496d34bfa848f14e658a99f1057961"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PDF text layer via PyMuPDF; abstract, background, methods, results, discussion, conclusions, tables 1-6 and the Figure 1 caption present; Figure 1 pixels inspected on the page render.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "IDENTITY DEFECT: the manifest and receipt carry the DOI PubMed stores for this PMID (10.18388/abp.2020_5563) as the brief requires, but the artifact read bears DOI 10.18388/abp.2018_2632 (entries 0 and 1). The reference-integrity screen in retraction_check.dependencies was run on the article's own DOI. COVERAGE: whole PDF text read including all six tables; Figure 1 inspected as an image on the page render; the one figure is a bar chart. No supplement exists (none declared in the article). NO MULTIPLE-TESTING CORRECTION is stated (entry 12).",
+  "entries": [
+   {
+    "proposition": "IDENTITY: the article behind this PMID is by a Harbin Medical University endocrinology group, not by the Brawijaya authors PubMed lists.",
+    "snippet": "Department of Endocrinology and Metabolism, The Second Affiliated Hospital, Harbin Medical University",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31145772_Zhang2019_text.txt",
+    "anchor": "Title page, affiliations",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "IDENTITY: the DOI printed on the article is 10.18388/abp.2018_2632, volume 66, issue 2, pages 159-165; PubMed stores a different DOI and pages 679-686 for this PMID.",
+    "snippet": "https://doi.org/10.18388/abp.2018_2632",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31145772_Zhang2019_text.txt",
+    "anchor": "Running head, DOI line",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DESIGN: independent replication, in Han Chinese, of the ten loci from the East Asian meta-analysis; WWOX rs17797882 is one of ten tested index SNPs, not a hypothesis-driven WWOX study.",
+    "snippet": "1 000 cases and 1 000 controls by the SNP scan method",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31145772_Zhang2019_text.txt",
+    "anchor": "Background, last paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The WWOX variant enters as one of the ten East Asian GWAS index SNPs.",
+    "snippet": "were identified to be associated with T2DM",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31145772_Zhang2019_text.txt",
+    "anchor": "Background, SNP list",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "CASES AND CONTROLS DIFFER in age (47 versus 42) and BMI (26.67 versus 23.14), the case controls being health-examination attendees; adjustment for age, sex and BMI is stated but the groups are not matched.",
+    "snippet": "Age (year)a 47±18 42±19 <0.0001",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID31145772_Zhang2019_text.txt",
+    "anchor": "Table 1, Age row",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "WWOX rs17797882 shows NO association with type 2 diabetes in this sample: risk allele frequency 0.245 in cases against 0.230 in controls, adjusted OR 1.054 (0.891-1.247), p 0.541.",
+    "snippet": "T 0.245/0.230 0.592 1.042 (0.898-1.208) 0.541 1.054 (0.891-1.247)",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID31145772_Zhang2019_text.txt",
+    "anchor": "Table 3, WWOX row",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The text places WWOX among the six SNPs not associated with T2D (only KCNK16 and GLIS3 are).",
+    "snippet": "were not associated with type 2 diabetes in the present",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31145772_Zhang2019_text.txt",
+    "anchor": "Results, association with T2DM",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The quantitative-trait analysis was run in the CONTROL group only, not in cases or the whole sample.",
+    "snippet": "Table 5. Association of 8 SNPs with quantitative traits related to glucose metabolism in controls.",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID31145772_Zhang2019_text.txt",
+    "anchor": "Table 5 caption",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "HOMA-beta effect of WWOX rs17797882 T allele: -29.231 with standard error 11.877, p 0.014; fasting glucose, HbA1c and HOMA-IR effects are null (p 0.309, 0.373, 0.918).",
+    "snippet": "WWOX rs17797882 T -0.018(0.018) 0.309 0.022(0.025) 0.373 -0.005(0.047) 0.918 -29.231(11.877) 0.014",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID31145772_Zhang2019_text.txt",
+    "anchor": "Table 5, WWOX row",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The text gives the same HOMA-beta coefficient with a different standard error (11.961), which in Table 5 belongs to the CMIP row; and gives TG beta 0.119 and HDL-C beta 0.037 with p 0.014 and 0.042.",
+    "snippet": "(p=0.014, β=–29.231, se=11.961)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31145772_Zhang2019_text.txt",
+    "anchor": "Results, last paragraph (printed page 164)",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Lipid traits in controls: WWOX rs17797882 T allele raises log triglycerides (beta 0.119, p 0.014) and HDL-cholesterol (beta 0.037, p 0.042); total and LDL cholesterol are null. Triglycerides and HDL-C moving up together is the opposite of the usual inverse pairing, and neither would survive a correction for about 64 trait tests.",
+    "snippet": "T 0.019(0.056) 0.739 0.119(0.048) 0.014 0.037(0.018) 0.042 0.016(0.046) 0.731",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID31145772_Zhang2019_text.txt",
+    "anchor": "Table 6, WWOX row",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The footnote states trait values were log-transformed before analysis, yet the HOMA-beta coefficients (-29.231, 8.521, 16.485) are on a raw-unit scale, unlike the fasting glucose coefficients (0.023, -0.045); the HOMA-beta effect size is therefore not interpretable as printed.",
+    "snippet": "bValues are log-transformed before the analysis",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID31145772_Zhang2019_text.txt",
+    "anchor": "Table 5 footnote",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The only significance rule stated is p below 0.05; no correction for the eight SNPs times eight traits (plus GRS) is described anywhere in the article text (searched by term: Bonferroni, multiple test, correct, FDR; zero hits).",
+    "snippet": "A p value < 0.05 was considered significant.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31145772_Zhang2019_text.txt",
+    "anchor": "Methods, Statistical Analysis",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Discussion asserts the loci increased insulin resistance in the Chinese population; Table 5 shows no SNP and not the GRS associated with HOMA-IR (all p 0.347 or higher), so the sentence is not supported by the article's own table.",
+    "snippet": "studied loci had affected the lipid metabolism and in",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31145772_Zhang2019_text.txt",
+    "anchor": "Discussion, paragraph on mechanism",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state the replication result differs from the original reports.",
+    "snippet": "because the present results were different from those previously reported",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31145772_Zhang2019_text.txt",
+    "anchor": "Discussion, limitations",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1 plots \"Prevalence of T2DM (%)\" against GRS from 3 to 15 in a sample built as 1000 cases and 1000 controls, where prevalence is fixed by design and not estimable; the bars are not monotonic (the bar at GRS 4 is below GRS 3), and no per-bar n is shown.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1, bar graph of prevalence of T2DM (percent, y axis 0 to 120) against genetic risk score 2 to 15, with a dotted trend line; caption \"Trend between GRS and prevalence of T2D\".",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID31145772_Zhang2019_p6_130dpi.png",
+    "anchor": "Figure 1, printed page 164, 130 dpi render",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human peripheral blood DNA, Han Chinese case-control sample",
+     "comparator": "T2DM cases versus health-examination controls",
+     "endpoint": "bar height by genetic risk score"
+    }
+   }
+  ]
+ }
+}

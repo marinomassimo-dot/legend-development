@@ -1,0 +1,294 @@
+{
+ "schema_version": 2,
+ "pmid": "24086726",
+ "doi": "10.1371/journal.pone.0076317",
+ "receipt": "FTR-20261019-24086726-01",
+ "landing": [
+  "CC-20261019-SCIENTIST-B-G2-HUMAN-AXIS-01",
+  "metabolic_wave_20261019_scientist-b"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: the Europe PMC fullTextXML route returned the body and the PMC OA S3 bucket the figures."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not run: the reading was produced directly under the Scientist brief; a deepdive pass would duplicate the locators."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered: no consolidated baseline claim is narrowed, reversed or removed and no MAJOR change class is declared. Triples are listed in the commit candidate for a later blind audit."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 4422,
+  "publications_on_gene": 1,
+  "counts_measured": "PubMed esearch 2026-10-19: 'Maeda S[au]' 4422 (ambiguous); 'Maeda S[au] AND type 2 diabetes' 130; 'Maeda S[au] AND WWOX' 1.",
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "RIKEN diabetes genetics consortium; large Japanese cohort; WWOX is one of nine tested loci.",
+  "note": "No competing interests relevant."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "WWOX tokens in the JATS",
+    "route": "case-insensitive count over the persisted JATS, 2026-10-19",
+    "count": 6
+   }
+  ],
+  "note": "WWOX appears six times as one SNP of nine."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 42,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "<ref> elements counted in the JATS: 42.",
+  "resolved": [],
+  "queued": [],
+  "note": "Cho 2012 (Nat Genet) is the originating East Asian meta-analysis for rs17797882; it is a multi-locus GWAS, not a WWOX-directed paper, so no gene-direct debt arises; not read here."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "paper_packet.py packet --pmid 24086726 (no receipt) and registry_records.py get --pmid",
+  "hits": 0,
+  "finding": "No prior receipt and no registry record. Found by the extra WWOX-glucose PubMed search and dedupe after the group G2 lot was exhausted."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-19",
+  "route": "PubMed esummary 2026-10-19 for 24086726; JATS front matter carries is-retracted flag",
+  "result": "No retraction, correction or expression of concern found in the PubMed record or the JATS front matter.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 42,
+   "references_screened": 39,
+   "references_with_doi": 39,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID24086726_Sakai2013_PMC3783369.xml",
+   "sha256": "694f06f3d7e15de850db4d3099181fd7fc2d1573a079f3d6629a73199340a885",
+   "kind": "article_text",
+   "note": "Europe PMC JATS for PMC3783369 (PLoS One 2013, CC BY), 105,547 bytes; abstract, introduction, methods, results, discussion, Tables 1 to 4 present; supplementary tables in four DOCX files. 42 references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3783369/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "694f06f3d7e15de850db4d3099181fd7fc2d1573a079f3d6629a73199340a885"
+   }
+  },
+  {
+   "path": "files/supplement/PMID24086726_pone.0076317.s001.docx",
+   "sha256": "cc2b369056d80e198ad95a3464718ea6c080ff0ceaaecbaaed59a32ca4688d3a",
+   "kind": "supplement_binary",
+   "note": "Table S1 genotype distributions by collection site (not opened).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3783369.1/PMID24086726_pone.0076317.s001.docx",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "cc2b369056d80e198ad95a3464718ea6c080ff0ceaaecbaaed59a32ca4688d3a"
+   }
+  },
+  {
+   "path": "files/supplement/PMID24086726_pone.0076317.s002.docx",
+   "sha256": "e5889951898da36dcdaa060fb2357476ebb414df0778c826dd0cef2a8627db99",
+   "kind": "supplement_binary",
+   "note": "Table S2 association with type 2 diabetes using older controls (age 40, 50, 60 or older), read through derived text.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3783369.1/PMID24086726_pone.0076317.s002.docx",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "e5889951898da36dcdaa060fb2357476ebb414df0778c826dd0cef2a8627db99"
+   }
+  },
+  {
+   "path": "files/supplement/PMID24086726_pone.0076317.s003.docx",
+   "sha256": "7371f697a06745615d3bad2beb929b1a3802a982af10aadb5373efe0f1840a75",
+   "kind": "supplement_binary",
+   "note": "Table S3 power and required sample size per SNP, read through derived text.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3783369.1/PMID24086726_pone.0076317.s003.docx",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "7371f697a06745615d3bad2beb929b1a3802a982af10aadb5373efe0f1840a75"
+   }
+  },
+  {
+   "path": "files/supplement/PMID24086726_pone.0076317.s004.docx",
+   "sha256": "8430ca862d522e436e4ce5b4407d488e76ed888a0d8175025545dd64ed65d745",
+   "kind": "supplement_binary",
+   "note": "Table S4 quantitative-trait power (not opened).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC3783369.1/PMID24086726_pone.0076317.s004.docx",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "8430ca862d522e436e4ce5b4407d488e76ed888a0d8175025545dd64ed65d745"
+   }
+  },
+  {
+   "path": "files/supplement/PMID24086726_s002_text.txt",
+   "sha256": "45c21b077d347f5968f4b7e2b1dd0de9573b8b857ab8ed754bda2adfb37a843a",
+   "kind": "supplement_text",
+   "note": "Text of Table S2 from word/document.xml; digits inside numbers are split by spaces in places (\"age 4 0\").",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID24086726_pone.0076317.s002.docx",
+    "extractor": {
+     "name": "python zipfile and re",
+     "version": "3.12",
+     "call": "zipfile read of word/document.xml, paragraph ends to newlines, tags to spaces, runs of spaces collapsed",
+     "join": ""
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "45c21b077d347f5968f4b7e2b1dd0de9573b8b857ab8ed754bda2adfb37a843a"
+   }
+  },
+  {
+   "path": "files/supplement/PMID24086726_s003_text.txt",
+   "sha256": "a29c8bc9e2aaca586dc8a39e592a29c7061fa05ae0774505d7f47df80e2e3d24",
+   "kind": "supplement_text",
+   "note": "Text of Table S3 from word/document.xml.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID24086726_pone.0076317.s003.docx",
+    "extractor": {
+     "name": "python zipfile and re",
+     "version": "3.12",
+     "call": "zipfile read of word/document.xml, paragraph ends to newlines, tags to spaces, runs of spaces collapsed",
+     "join": ""
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "a29c8bc9e2aaca586dc8a39e592a29c7061fa05ae0774505d7f47df80e2e3d24"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC JATS, 105,547 bytes; whole article; supplementary DOCX tables S2 and S3 read as text.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "COVERAGE: whole article incl. Tables 1 to 4; supplementary Tables S2 and S3 read as derived text; Tables S1 and S4 DOCX not opened, so supplementary is captions_only and the receipt is partial. No figures exist in the article. ALLELE CONVENTION: this paper treats C as the rs17797882 risk allele (frequency about 0.79); PMID 31145772 treats T (frequency about 0.24) as the risk allele; the two analyses are therefore of opposite alleles of the same SNP, a fact neither paper notes.",
+  "entries": [
+   {
+    "proposition": "DESIGN: independent replication of ten East Asian GWAS loci in 7,379 Japanese (5,315 cases, 2,064 controls); WWOX rs17797882 is one of two borderline-significance index SNPs (p below 1e-6, not genome-wide significant) in the original meta-analysis.",
+    "snippet": "We also examined 2 additional SNP loci, that showed a borderline association (p < 10-6) in the East Asian",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24086726_Sakai2013_PMC3783369.xml",
+    "anchor": "Methods, SNP genotyping",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The significance threshold is Bonferroni-corrected for nine tests (p below 0.0055).",
+    "snippet": "The level of significance was determined by the Bonferroni correction for multiple tests, and a p value of <",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24086726_Sakai2013_PMC3783369.xml",
+    "anchor": "Methods, statistics",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "WWOX rs17797882 (risk allele C, risk allele frequency 0.799 in cases and 0.792 in controls): adjusted OR 1.01 (0.91 to 1.12), p 0.7521; no association with type 2 diabetes.",
+    "snippet": "C 0.799/0.792 0.3355 1.04 (0.95–1.14) 0.7521 1.01 (0.91–1.12)",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID24086726_Sakai2013_PMC3783369.xml",
+    "anchor": "Table 3, WWOX row",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Seven of nine SNPs, WWOX included, are not associated with type 2 diabetes (p 0.05 or above); two are nominal and fail Bonferroni.",
+    "snippet": "The remaining 7 SNPs were not associated with type 2 diabetes in the present Japanese population (p≥",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24086726_Sakai2013_PMC3783369.xml",
+    "anchor": "Results",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "WWOX rs17797882 against HOMA-beta (n 893): effect 0.003, p 0.9064; against HOMA-IR 0.0015, p 0.5941; against fasting glucose 0.002, p 0.5919. No glycaemic-trait association, in contrast to the p 0.014 HOMA-beta coefficient in the Harbin sample read earlier in this lot.",
+    "snippet": "C 0.0015 (0.028) 0.5941 0.003 (0.030) 0.9064 0.002 (0.004) 0.5919",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID24086726_Sakai2013_PMC3783369.xml",
+    "anchor": "Table 4, WWOX row",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors conclude that neither individual SNPs nor the GRS are associated with the glycaemic traits after Bonferroni correction.",
+    "snippet": "neither the individual SNPs nor the GRS was significantly associated with these quantitative traits ",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24086726_Sakai2013_PMC3783369.xml",
+    "anchor": "Results",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Power to replicate the original WWOX association is 42 percent (original OR 1.08, risk allele C, frequency 0.792), the lowest of the nine loci.",
+    "snippet": "0.792 1.08 42% 66327 110247 334649",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID24086726_s003_text.txt",
+    "anchor": "Table S3, WWOX row",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "With controls aged 50 or older the WWOX risk-allele (C) OR is 0.94 unadjusted and 0.95 adjusted, below 1 and opposite to the original 1.08; the Discussion says most SNPs keep the original direction except KCNK16.",
+    "snippet": "0.3078 0.94 (0.83−1.06) 0.4617 0.95 (0.84−1.08)",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID24086726_s002_text.txt",
+    "anchor": "Table S2, WWOX row, controls aged 50 or older",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "With controls aged 60 or older the OR is 0.89 unadjusted and 0.88 adjusted (confidence intervals reaching 1.03), again below 1.",
+    "snippet": "0.1256 0.89 (0.76−1.03) 0.1203 0.88 (0.75−1.03)",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID24086726_s002_text.txt",
+    "anchor": "Table S2, WWOX row, controls aged 60 or older",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Insufficient power is offered as the principal explanation; the study states 42 to 79 percent power for individual SNPs.",
+    "snippet": "the estimated power of the present study to replicate an original association for the individual SNPs is between 42% and 79% (Tabl",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24086726_Sakai2013_PMC3783369.xml",
+    "anchor": "Discussion",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}

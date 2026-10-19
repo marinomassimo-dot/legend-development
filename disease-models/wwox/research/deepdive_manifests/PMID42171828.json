@@ -1,0 +1,174 @@
+{
+ "schema_version": 2,
+ "pmid": "42171828",
+ "doi": "10.1007/s11033-026-11966-w",
+ "receipt": "FTR-20261019-42171828-01",
+ "landing": [
+  "CC-20261019-SCIENTIST-B-G2-KD-PRIOR-01",
+  "metabolic_wave_20261019_scientist-b"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: the Europe PMC fullTextXML route returned the body and the PMC OA S3 bucket the figures."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not run: the reading was produced directly under the Scientist brief; a deepdive pass would duplicate the locators."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered: no consolidated baseline claim is narrowed, reversed or removed and no MAJOR change class is declared. Triples are listed in the commit candidate for a later blind audit."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 97,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-19: 'Lagunas-Rangel FA[au]' 97; 'Lagunas-Rangel FA[au] AND neurogenesis' 1; 'Lagunas-Rangel FA[au] AND WWOX' 0; 'Cornelio-Martinez S[au]' 4.",
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Two-author narrative review; weigh as a literature map.",
+  "note": "No datasets generated."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "WWOX tokens in the JATS",
+    "route": "case-insensitive count over the persisted JATS, 2026-10-19",
+    "count": 0
+   }
+  ],
+  "note": "WWOX does not occur."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 99,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "<ref> elements counted in the JATS: 99.",
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-directed reference."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "registry_records.py get --theme HIF1A (no record of this paper)",
+  "hits": 0,
+  "finding": "Not in the registries; the HIF1A neighbourhood (CLAIM 009) is fibroblast, muscle, liver and tumour."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-19",
+  "route": "PubMed esummary 2026-10-19 for 42171828; JATS front matter carries is-retracted flag",
+  "result": "No retraction, correction or expression of concern found in the PubMed record or the JATS front matter.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 99,
+   "references_screened": 98,
+   "references_with_doi": 98,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42171828_CornelioMartinez2026_PMC13197301.xml",
+   "sha256": "fd4489d501bbd92df4b6031fb614a59661e718ab6197715544c2484edbfeda9d",
+   "kind": "article_text",
+   "note": "Europe PMC JATS for PMC13197301 (Mol Biol Rep 2026, CC BY), 217,282 bytes; abstract, introduction, HIF-1 alpha sections, Wnt, Notch, MAPK sections, therapeutic section with Table 1, conclusions and four figure legends present. 99 references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13197301/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "fd4489d501bbd92df4b6031fb614a59661e718ab6197715544c2484edbfeda9d"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC JATS, 217,282 bytes; whole article.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "COVERAGE: abstract, the dual and time-dependent section, the opening of the Wnt section, and the Conclusions read; the hippocampal and SVZ sections, Notch, MAPK, intermittent-hypoxia and therapeutic (Table 1) sections skimmed by heading and first lines only (screening depth), so results is declared captions_only and the receipt is partial; four schematic figures not inspected.",
+  "entries": [
+   {
+    "proposition": "DESIGN: a narrative review of HIF-1 alpha in hypoxic brain and adult neurogenesis (stroke and hypoxia models); no data of its own and no WWOX content.",
+    "snippet": "Hypoxia-inducible factor 1 (HIF-1) is a heterodimeric transcription factor composed of the HIF-1α and HIF-1β subunits th",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42171828_CornelioMartinez2026_PMC13197301.xml",
+    "anchor": "Abstract-level framing, Introduction",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "TIMING: a HIF-1 alpha inhibitor given 0.5 h after MCAO reduced apoptosis and infarct size.",
+    "snippet": "administration of 2-methoxyestradiol (2ME2), a HIF-1α inhibitor, at 0.5 h after MCAO-induced hypoxia significantly reduced cell apoptosis ",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42171828_CornelioMartinez2026_PMC13197301.xml",
+    "anchor": "Dual and time-dependent actions",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The same inhibitor given 8 h after MCAO increased apoptosis and neuron loss: the sign of a HIF-1 alpha intervention reverses with timing.",
+    "snippet": "Conversely, later administration of 2ME2, 8 h after MCAO, induced greater cell apoptosis and reduced the number of NeuN+ neurons. ",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42171828_CornelioMartinez2026_PMC13197301.xml",
+    "anchor": "Dual and time-dependent actions",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Summary statement: acute-phase HIF-1 alpha upregulation harms and late-phase upregulation protects; the acute and late phases are hours apart (4 to 8 h versus 48 to 72 h).",
+    "snippet": "acute-phase upregulation of HIF-1α induces neuronal loss, behavioral deficits, and animal death, while late-phase upregulation of HIF-1α mediates neuronal prote",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42171828_CornelioMartinez2026_PMC13197301.xml",
+    "anchor": "Dual and time-dependent actions",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "GSK3 beta is the beta-catenin destruction-complex kinase in the review's Wnt description; the review states the HIF-1 alpha to Wnt integration in adult neurogenesis is still needed.",
+    "snippet": "The Wnt/β-catenin pathway is well established as a key regulator of neurogenesis in adult mammals; however, a comprehensive integration of current evi",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42171828_CornelioMartinez2026_PMC13197301.xml",
+    "anchor": "Wnt/beta-catenin section",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state the pathways are co-regulated under hypoxia rather than linearly downstream of HIF-1 alpha.",
+    "snippet": "these pathways appear to be co-regulated under hypoxic conditions rather than being strictly organized in a linear hierarchy downstream of HIF-1α, a",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42171828_CornelioMartinez2026_PMC13197301.xml",
+    "anchor": "Conclusions",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "HIF-1 alpha acts differently, often oppositely, in neurons, astrocytes and microglia, and the review warns that ignoring this oversimplifies the biology; none of this is measured in a WWOX model.",
+    "snippet": "HIF-1α exerts distinct—and often opposing—effects on neuronal cell populations, including ",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42171828_CornelioMartinez2026_PMC13197301.xml",
+    "anchor": "Conclusions",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}
