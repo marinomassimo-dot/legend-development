@@ -1,0 +1,306 @@
+{
+ "schema_version": 2,
+ "pmid": "25833766",
+ "doi": "10.1007/s13353-015-0282-9",
+ "receipt": "FTR-20261019-25833766-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-G3-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery-ledger lead beyond what the manifest and analysis note carry; the ledger is written by its validated writer only where a lead survives."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever for the reference genotype class is matured by this reading; forging from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged; nothing here reaches BLOCK-1."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes go through commit candidates."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; no audit trigger fired."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "A Polish medical-genetics and neurology collaboration describing eight rearranged alleles in one Parkinson cohort and their junction sequences; WWOX is not named. Observation (copy-number calls, junction sequences) is weighted above the mechanism inference (NHEJ and FoSTeS/MMBIR), which has no control for chance microhomology."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "PARK2 AND FRA6E",
+    "count": 13,
+    "source": "PubMed ESearch 2026-10-19"
+   },
+   {
+    "query": "WWOX AND breakpoint",
+    "count": 11,
+    "source": "PubMed ESearch 2026-10-19"
+   }
+  ],
+  "note": "Record matches, not measurements."
+ },
+ "multihop": {
+  "references_enumerated": 47,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "The reference list holds 47 reference elements in the JATS artefact (counted in the session); WWOX is not named anywhere in the article (case-insensitive count 0).",
+  "disposition": "No gene-direct references."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 25833766 --hops 1; registry_records.py get --theme microhomology, breakpoint, FoSTeS, MMBIR (hops 0); paper_packet.py packet; fulltext_receipts.py status --pmid 25833766",
+  "hits": 0,
+  "note": "No record for the PMID. The theme queries returned: microhomology 2 records (one a WWOX class-switch junction paper and the claim that cites it), breakpoint 7, FoSTeS and MMBIR none. Each is a statement about that query over the seven surfaces."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn or CommentIn link; publication types Journal Article and Research Support, Non-U.S. Gov't.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 47,
+   "references_screened": 42,
+   "references_with_doi": 42,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 5
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID25833766_Ambroziak2015_PMC.xml",
+   "sha256": "cc7c933d74c45267d0751ca46416deee27d2de6333cd838d827dc2fe9a1f54b9",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4617850/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "cc7c933d74c45267d0751ca46416deee27d2de6333cd838d827dc2fe9a1f54b9"
+   }
+  },
+  {
+   "path": "files/figures/PMID25833766/13353_2015_282_Fig1_HTML.jpg",
+   "sha256": "64c554ba16a8dc73324ea5c4acbc23749762dc0a2733c3578373d0e7a13e8452",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC4617850 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID25833766/13353_2015_282_Fig2_HTML.jpg",
+   "sha256": "18e95397e0b64e449af8c849263431b69fee27d18e4f35ad140df098402aaeca",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC4617850 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID25833766/13353_2015_282_Fig3_HTML.jpg",
+   "sha256": "d8b1c0c4c40847945f7e56c0eda496302e0997fce617de5a4aebf2ef9a15388a",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC4617850 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID25833766/13353_2015_282_Fig4_HTML.jpg",
+   "sha256": "8a9709548c8d69ea096385de16143940189cbe817efef171c1209d6a69228413",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC4617850 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Cohort: 344 Polish Parkinson disease patients, 171 early-onset and 173 late-onset, previously screened for point variants by Sanger sequencing, so copy-number cases are enriched among screen-negative or heterozygous cases.",
+    "snippet": "Analysis was performed using the DNA of 344 patients with EOPD and idiopathic, late-onset form of PD (LOPD)",
+    "anchor": "Materials and methods, Subjects",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25833766_Ambroziak2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "All samples had been screened for point variants before the copy-number analysis.",
+    "snippet": "All the DNA samples were previously screened for point mutations in all 12 exons of PARK2 using Sanger sequencing.",
+    "anchor": "Materials and methods, Subjects",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25833766_Ambroziak2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Yield: eight patients with exon deletions or duplications by MLPA, characterised by aCGH and breakpoint sequencing.",
+    "snippet": "deletions and duplications encompassing different exons were identified in eight subjects",
+    "anchor": "Results, Identification of PARK2 rearrangements",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25833766_Ambroziak2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The yield in the cohort is 8 of 344 patients.",
+    "snippet": "we have identified large rearrangements in 8 of the 344 PD patients examined",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25833766_Ambroziak2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Mechanism claim: most junctions carry 1 to 3 bp of microhomology, read as support for NHEJ and FoSTeS/MMBIR.",
+    "snippet": "7 out of 9 breakpoint junctions contain 1–3-bp homologies",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25833766_Ambroziak2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Conclusion drawn from the junction sequences: microhomology-mediated mechanisms after fork collapse are the major cause of rearrangement in the gene; no comparison with the chance rate of 1 to 3 bp matches at random junctions is made.",
+    "snippet": "These findings strongly support microhomology-mediated mechanisms following replication fork collapses, predominantly NHEJ and FoSTeS/MMBIR, as major mechanisms responsible for genomic rearrangements within the PARK2 gene, the fragility centre of FRA6E.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25833766_Ambroziak2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 3 row for a case of the present study with no microhomology at the junction (the first Ex3del row, followed by the Ex3del row that has a 2 bp microhomology).",
+    "snippet": "Ex3del––1Present studyEx3del–+ (TA)1Present study",
+    "anchor": "Table 3",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID25833766_Ambroziak2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 3 shows junction alignments with bold-underlined homologies of 1 to 3 bases (for example a single T, a two-base TA or CT, three-base TTA), two cases (ID1 and ID8) without a marked homology and inserted bases of unknown origin in three; one-base overlaps are within what random junctions give by chance.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3: eight aligned junction sequences labelled ID1 to ID8 (ID6 as 5' and 3'), each between the normal intron sequences, vertical bars for identity, homologies bold and underlined at the junction, grey boxes for inserted sequence, arrows for palindromes and asterisks for TTTAAA.",
+    "anchor": "Figure 3",
+    "surface": "figure",
+    "artifact": "files/figures/PMID25833766/13353_2015_282_Fig3_HTML.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The text states no repetitive elements were found around the breakpoints and uses that to exclude homology-based recombination.",
+    "snippet": "As no extended homologies or repetitive elements were found within the sequences encompassing the breakpoints (Table 2), the occurrence of homologous recombination-based mechanisms can be excluded.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25833766_Ambroziak2015_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human PARK2 breakpoints, eight patients",
+     "endpoint": "repeat content flanking breakpoints"
+    }
+   },
+   {
+    "proposition": "Table 2 row ID7 lists a repeat class on one side of a breakpoint (the ERVL-MaLR LTR), and the rows for the other cases list LINE-1, SINE/Alu or Unique per side; so one-sided repeats exist in the table.",
+    "snippet": "162,708,056dupUnique/LTR/ERVL-MaLR",
+    "anchor": "Table 2, ID7 row",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID25833766_Ambroziak2015_PMC.xml",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "human PARK2 breakpoints, eight patients",
+     "endpoint": "repeat content flanking breakpoints"
+    },
+    "qualifies": "entries[8]",
+    "qualifies_needle": "no extended homologies or repetitive elements were found"
+   },
+   {
+    "proposition": "The caption of Figure 2 names a presymptomatic double-allele carrier as case 6 III-2.",
+    "snippet": "like in case 6 III-2, on both alleles in the presymptomatic stage at the moment of analysis",
+    "anchor": "Figure 2 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25833766_Ambroziak2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2, case 6: the pedigree has two generations only (I-1, I-2; II-1 affected, II-2, II-3) and the double-allele unaffected relative is labelled II-3, not III-2; case 3 shows three affected siblings carrying both variants and one unaffected sibling with one.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2: four pedigrees (cases 1, 3, 4 and 6); filled symbols affected; case 6 has II-1 (arrow, affected, two variants), II-2 (no variant) and II-3 (two variants, unaffected); no third generation in case 6; case 4 has III-1 as an unaffected diamond.",
+    "anchor": "Figure 2",
+    "surface": "figure",
+    "artifact": "files/figures/PMID25833766/13353_2015_282_Fig2_HTML.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "human pedigrees",
+     "endpoint": "identifier of the presymptomatic carrier"
+    },
+    "qualifies": "entries[10]",
+    "qualifies_needle": "like in case 6 III-2"
+   },
+   {
+    "proposition": "MLPA alone missed the biallelic state in one case; the authors advise parental checks.",
+    "snippet": "it is important not to rely exclusively on this method when identifying genomic rearrangements (Table 2)",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25833766_Ambroziak2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state the cause of fragility is not established and name replication-timing transition zones as a candidate.",
+    "snippet": "Nonetheless, whether this is the primary reason why chromosomes break at CFSs is still to be elucidated.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25833766_Ambroziak2015_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1 maps the eight rearrangements on a 12-exon gene diagram, deletions in black and duplications in grey, all between exons 2 and 7.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1: chromosome 6 ideogram with PARK2 magnified, exon boxes 1 to 12 and horizontal bars under exons 2 to 7 for deletions (black) and duplications (grey).",
+    "anchor": "Figure 1",
+    "surface": "figure",
+    "artifact": "files/figures/PMID25833766/13353_2015_282_Fig1_HTML.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Figure 4 is a mechanism cartoon of one inverted duplication case (fork stalling at exon 1, template switch, inverted exon 2 to 5 copy, then triplication of an intron-1 segment); it is a model, not data.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4: schematic with Ex1 and a dashed fork path numbered 1 and 2, an inverted exon 2-5 block, and the resulting rearranged allele drawn below with exons 1, 5 to 2 inverted, then 2 to 12.",
+    "anchor": "Figure 4",
+    "surface": "figure",
+    "artifact": "files/figures/PMID25833766/13353_2015_282_Fig4_HTML.jpg",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC4617850/fullTextXML returned HTTP 200 (106125 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image."
+ }
+}

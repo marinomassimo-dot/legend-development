@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-25833766-01",
+ "study_id": {
+  "pmid": "25833766",
+  "doi": "10.1007/s13353-015-0282-9"
+ },
+ "event_at": "2026-10-19T18:39:41Z",
+ "analysis_at": "2026-10-19T18:39:41Z",
+ "analysis_time_precision": "second",
+ "workflow": "scientist-c, metabolic batch 2026-10-19, task METAB-G3-C-20261019, branch task/METAB-G3-C-20261019; context_policy SOURCE_FIRST. Route: Europe PMC REST fullTextXML (open access) saved to the shared checkout files/fulltext; whole article, three tables and reference list counted from the JATS and read as text; four figure images opened at native size. Receipt prepared as staged JSON for the integrator and was not appended at preparation time.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID25833766_Ambroziak2015_PMC.xml",
+ "source_fingerprint": "cc7c933d74c45267d0751ca46416deee27d2de6333cd838d827dc2fe9a1f54b9",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID25833766.json",
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-G3-01.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "verbatim_locators",
+  "The article has no limitations section; the authors' caveats are inside the Discussion. The reference list of 47 entries was enumerated, not read entry by entry. Pedigree details are recorded only at the level of the figure's identifiers; no parent is tied to an exact allele in this record."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

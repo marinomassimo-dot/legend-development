@@ -625,3 +625,53 @@ LoF with tumour risk) cannot be asked of the DEE class, whose affected children 
 enough for adult tumour ascertainment; it can be asked only of heterozygous carriers, and this note
 offers no method for it. It is a reminder, not evidence: a single-case two-hit hypothesis for a
 fragile-site gene, with no allele-level or tumour-level data.
+
+---
+
+## 14. PMID 25833766 — Ambroziak 2015, J Appl Genet: PARK2 rearrangement breakpoints in a Polish Parkinson cohort (tier 3, new)
+
+context_policy: SOURCE_FIRST. Read for the one lesson the selection row names (fragile-site instability as a
+neurological risk), and for what a mechanism inference from junction sequences can bear.
+
+**What it MEASURES.** DNA from 344 Polish Parkinson patients (171 early-onset, 173 late-onset),
+previously Sanger-screened for point variants: MLPA for exon dosage, aCGH for ranges, Sanger sequencing
+of breakpoints; eight patients carry deletions or duplications between exons 2 and 7 (2.33 percent of
+patients, 1.31 percent of alleles). Junction sequences are scanned for repeats, homology,
+palindromes and microhomology and compared with published PARK2 junctions.
+
+**First-pass observations (four figures, three tables).**
+- Seven of nine junctions carry 1 to 3 bp of microhomology (two cases carry none); the authors
+  conclude this "strongly supports" microhomology-mediated end joining and FoSTeS/MMBIR. My
+  arithmetic (INFERENZA, crude chance model): at a chance rate of 0.25 to 0.4 per junction, 7 of 9
+  has a binomial probability of about 0.001 to 0.025, so the data do favour microhomology over blunt
+  joining; but 1 to 3 bp is also the ordinary scar of NHEJ, so the two named mechanisms are not
+  discriminated, and no chance comparison is made in the paper.
+- Text against table: the Discussion says no repetitive elements were found within the sequences
+  encompassing the breakpoints, while Table 2 lists a LINE-1, SINE/Alu or LTR element on one side in
+  four of the eight cases (one-sided repeats do not make homologous recombination, which is the
+  authors' point, but the sentence as written is not what the table shows; recorded as a
+  `panel_qualifies_text` locator on a table row).
+- The caption of Figure 2 names the presymptomatic double-allele carrier "case 6 III-2"; the figure
+  has two generations for that case and labels the relative II-3. Recorded as an identifier mismatch
+  only; no parent is tied to an exact allele in this record.
+- The yield figures are conditional on prior point-variant screening of the same samples.
+
+FIRST-PASS OBSERVATIONS COMPLETE -> PRIOR KNOWLEDGE ADMITTED FOR COMPARISON: admitted the registry query (empty for the PMID) and
+the theme queries: "microhomology" returns one WWOX paper and the claim that cites it (the B-cell
+class-switch junction reading in which Wwox-null primary B cells shift from blunt to long-microhomology
+junctions and mutation frequency is unchanged), "FoSTeS" and "MMBIR" return nothing.
+
+**What it changes in the disease model: nothing, and it names one observable that the repository
+could put side by side.** The repository holds a murine WWOX-loss measurement that shifts class-switch
+junctions toward long microhomology (a repair-pathway-choice endpoint in a claim held in
+observation, CLAIM 029) and has no record of the junction structure of human WWOX copy-number
+alleles. IPOTESI, stated so and staged for the Orchestrator: published breakpoint junctions of human
+WWOX exon deletions (the dominant class of WWOX copy-number variants in the epilepsy literature)
+could be scored for microhomology against a chance model, as this paper did for PARK2; a WWOX
+rearrangement spectrum with a microhomology share like PARK2's would say the FRA16D alleles arise as
+other fragile-site alleles do, while a share different from it would be a first hint of a locus- or
+gene-specific repair signature. Falsifier: junction microhomology no different from PARK2 and from
+the chance model. Counter: WWOX copy-number alleles in patients are germline events from earlier
+generations (meiosis or early embryo), the murine measurement is in B cells, and PARK2 shows only what
+a different fragile site does; nothing here tests whether WWOX loss changes the junction type of
+its own gene. Transfer: method and comparator only.
