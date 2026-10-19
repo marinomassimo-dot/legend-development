@@ -1,5 +1,5 @@
 {
- "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
  "_note": "Metabolic batch. Orchestrator assumption: scientist-d is a fourth equivalent Scientist under the shared contract roles/scientist.md (body 32); operator authorised up to four Scientists on 2026-10-19.",
  "TASK_ID": "INTERV-H4-C-20261019",
  "DIRECTIVE_VERSION": 1,
@@ -30,6 +30,26 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "QUEUED_BEHIND_WAVE_1",
- "assigned_on": "2026-10-19"
+ "CURRENT_STATE": "CLAIMED",
+ "assigned_on": "2026-10-19",
+ "TASK_ACK": {
+  "TASK_ID": "INTERV-H4-C-20261019",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "ACTOR_ID": "scientist-c",
+  "DECISION": "ACCEPTED",
+  "acked_at": "2026-10-19T19:00:00Z",
+  "reading_mode": "PRIMARY_EVIDENCE_READ",
+  "duplicate_assignment_check": "Lot is group H4 of the interventions selection file; peer contracts INTERV-H1/H3/H5 carry other groups. Receipt ledger queried per PMID at M0."
+ },
+ "TASK_CLAIM": {
+  "TASK_ID": "INTERV-H4-C-20261019",
+  "GENERATION": 1,
+  "ACTOR_ID": "scientist-c",
+  "claimed_at": "2026-10-19T19:00:00Z",
+  "durable_pointer": "ledger/tasks/scientist-c/INTERV-H4-C-20261019.json on branch task/INTERV-H4-C-20261019, worktree .claude/worktrees/interv-h4-c",
+  "lot": "H4 tier order: 1 (36364214 already receipted in wave 1, not re-read; 42420651), then tier 2 (39087877, 26578889, 38074156, 37726428, 37876811, 41324728, 41039661, 42428241), then tier 3 (28119904, 40022130, 42763430, 42652189, 39965572, 38206902)"
+ },
+ "DEFAULTS_TAKEN": [],
+ "STOP_LOG": []
 }
