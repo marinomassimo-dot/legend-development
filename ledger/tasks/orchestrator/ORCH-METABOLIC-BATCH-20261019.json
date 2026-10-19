@@ -25,7 +25,8 @@
    "steps": [
     {
      "step": "Read-only selection of studies per theme group (PubMed + Europe PMC body check, dedup against registries), selection record under research/",
-     "status": "TODO"
+     "status": "DONE",
+     "evidence": "commit 7921146e; 66 studies in 4 groups; research/metabolic_batch_selection_20261019.md"
     }
    ]
   },
@@ -34,7 +35,7 @@
    "steps": [
     {
      "step": "Dispatch Scientists A, B, C, D (one theme group each) with the wave brief",
-     "status": "TODO"
+     "status": "IN_PROGRESS"
     },
     {
      "step": "Integrate returns: receipts recorded in event-ID order after a scratch-clone trial, branches landed",
@@ -59,5 +60,14 @@
     }
    ]
   }
- }
+ },
+ "DECISIONS_TAKEN": [
+  {
+   "what": "scientist-d named as fourth Scientist",
+   "alternatives_rejected": "three Scientists with G4 folded in",
+   "who_consulted": "operator instruction: at least three, four for important tasks",
+   "reversibility": "high",
+   "how_to_revert": "retire the scientist-d task contract"
+  }
+ ]
 }
