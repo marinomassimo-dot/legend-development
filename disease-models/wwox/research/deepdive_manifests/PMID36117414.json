@@ -209,12 +209,23 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The review concludes that blood-borne fuel is essential for brain energetics and glycogen replenishment.",
+    "proposition": "The review states that, in the 24 h starved rats of one cited study, the effects of preseizure starvation indicate fuel availability from the blood is essential for brain energetics and glycogen replenishment.",
     "snippet": "These effects of preseizure starvation indicate fuel availability from the blood is essential for brain energetics and glycogen replenishment.",
     "anchor": "Brain glycogen levels in epilepsy models and patients, last paragraph",
     "surface": "body",
     "artifact": "files/fulltext/PMID36117414_Dienel2023_PMC.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36117414.json",
+     "entry": 2,
+     "what_changed": "scope limited to the cited starvation experiment",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ]
+     }
+    }
    },
    {
     "proposition": "Interictal brain glucose is not reduced in the studies compiled in Table 1.",

@@ -252,12 +252,23 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Group sizes were five animals per cell and kindled and non-kindled animals were later pooled for the molecular data.",
+    "proposition": "Kindled and non-kindled animals were pooled for the molecular data (AL n = 10, CR n = 10); the four starting groups held five animals each (Methods group-assignment sentence, not quoted).",
     "snippet": "Thus, control and kindled control data were pooled together (hereafter AL, n = 10) and the results for experimental and kindled experimental rats were combined (henceforth CR, n = 10) for all subsequent analysis.",
     "anchor": "Materials and methods, Statistics",
     "surface": "body",
     "artifact": "files/fulltext/PMID25814935_PhillipsFarfan2015_PMC.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID25814935.json",
+     "entry": 1,
+     "what_changed": "five-per-cell attributed to the Methods sentence, not the quote",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "UNDERSHOOT"
+      ]
+     }
+    }
    },
    {
     "proposition": "Restriction raised the after-discharge threshold and shortened after-discharge duration on three days only.",
@@ -268,8 +279,8 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Figure 3A shows the CR threshold about 160% of the ad libitum value (set to 100%) with a wide error bar; Figure 3B shows the ad libitum and CR duration curves overlapping except for days 13-16.",
-    "snippet": "Visual attestation of Figure 3: panel A, after-discharge threshold (%) with ad libitum at 100 and CR near 160 with a wide error bar and two asterisks; panel B, after-discharge duration (s) against day of kindling, the CR points below the ad libitum points only around days 13-16 (asterisks on days 14-16) and overlapping elsewhere.",
+    "proposition": "Figure 3A shows the CR threshold about 160% of the ad libitum value with a wide error bar and two asterisks; Figure 3B shows the duration curves close for days 1-12, CR points below ad libitum on days 13-16 (asterisks on days 14-16) and ad libitum points again higher on days 21-24 without asterisks.",
+    "snippet": "Visual attestation of Figure 3: panel A, after-discharge threshold (%), ad libitum 100 and CR near 160 with a wide error bar and two asterisks; panel B, after-discharge duration (s) against day of kindling, curves close for days 1-12, CR below ad libitum around days 13-16 with asterisks on days 14-16, ad libitum points higher again on days 21-24 without asterisks.",
     "anchor": "Figure 3A, B (image fncel-09-00090-g0003)",
     "surface": "figure",
     "artifact": [
@@ -279,15 +290,37 @@
     "experimental_context": {
      "system": "young male Wistar rat, 15% caloric restriction, amygdala kindling",
      "endpoint": "after-discharge threshold and duration"
+    },
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID25814935.json",
+     "entry": 3,
+     "what_changed": "panel B description corrected: not overlapping after day 16",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ]
+     }
     }
    },
    {
-    "proposition": "Restriction did not alter the kindling rate or any other kindling parameter.",
+    "proposition": "Apart from the after-discharge threshold and the after-discharge duration on days 14-16, restriction did not alter the kindling rate or any other kindling parameter.",
     "snippet": "However, CR did not significantly alter the AD duration in any other day nor did it affect any other kindling parameter",
     "anchor": "Results, Electrical kindling of the amygdala",
     "surface": "body",
     "artifact": "files/fulltext/PMID25814935_PhillipsFarfan2015_PMC.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID25814935.json",
+     "entry": 4,
+     "what_changed": "exceptions (threshold, days 14-16) stated",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ]
+     }
+    }
    },
    {
     "proposition": "The authors read the profile as anti-convulsant, not anti-epileptogenic.",
@@ -320,12 +353,23 @@
     }
    },
    {
-    "proposition": "Restriction reduced pPKB and pS6 in cortex and hippocampus and increased pAMPK in hippocampus.",
+    "proposition": "Restriction significantly reduced pPKB and pS6 in cortex and hippocampus; the hippocampal pAMPK rise (p < 0.05) and the nonsignificant cortical trend (p = 0.16) are in the preceding sentence, not quoted.",
     "snippet": "CR significantly reduced PKB/Akt and S6 phosphorylation in the Cx [PKB: t(1, 18) = 3.03, p < 0.01 and S6: t(1, 18) = 2.13, p < 0.05] and Hp [PKB: t(1, 18) = 3.13, p < 0.01 and S6: t(1, 18) = 2.39, p < 0.05], suggesting that CR inhibited the mTOR cascade.",
     "anchor": "Results, mTOR signaling pathway",
     "surface": "body",
     "artifact": "files/fulltext/PMID25814935_PhillipsFarfan2015_PMC.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID25814935.json",
+     "entry": 8,
+     "what_changed": "proposition restricted to PKB and S6 as quoted; AMPK attributed to the adjacent sentence",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "UNDERSHOOT"
+      ]
+     }
+    }
    },
    {
     "proposition": "Figure 5 shows pPKB/PKB and pS6/S6 lower under restriction in both regions, with pAMPK/AMPK higher in hippocampus only.",
@@ -358,17 +402,47 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "All rats progressed to generalised seizures at the same kindling rate; the authors attribute this to the low degree of restriction.",
+    "proposition": "All rats progressed to generalised seizures at the same kindling rate; the authors say in the next sentence that this was probably due to the low degree of restriction (a hedge, not a finding).",
     "snippet": "In addition, despite the presumed inhibition of the mTOR pathway all the rats progressed to generalized convulsive seizures with the same kindling rate.",
     "anchor": "Discussion, mTOR signaling cascade, last paragraph",
     "surface": "body",
     "artifact": "files/fulltext/PMID25814935_PhillipsFarfan2015_PMC.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID25814935.json",
+     "entry": 12,
+     "what_changed": "hedge 'probably' added and sentence attributed",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "UNDERSHOOT"
+      ]
+     }
+    }
    },
    {
-    "proposition": "The authors conclude that the effect is independent of glucose, beta-hydroxybutyrate, insulin and gene expression, while stating elsewhere that glucose and beta-hydroxybutyrate effects differ with species and duration.",
+    "proposition": "The authors conclude the effects were likely independent of glucose, beta-hydroxybutyrate, insulin and gene expression; the species and duration caveats on glucose and ketone effects are in the Discussion elsewhere, not in the quote.",
     "snippet": "The effects of CR were likely independent from any changes in glucose, β-HB, insulin or gene expression (AMPKα1, AMPKα2, mTOR, S6K, TSC1, or TSC2) since none were modified by CR.",
     "anchor": "Discussion, final paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25814935_PhillipsFarfan2015_PMC.xml",
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID25814935.json",
+     "entry": 13,
+     "what_changed": "'likely independent' restored; second clause attributed elsewhere",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ]
+     }
+    }
+   },
+   {
+    "proposition": "Figure 3B marks day 15 with three asterisks while the text reports p < 0.01 for that day; legend asterisk key ranges up to p ≤ 0.001 (noted by the blind audit of this reading).",
+    "snippet": "CR significantly increased [t(1, 8) = −3.35, p = 0.01] the AD threshold (Figure 3A) and reduced the AD duration in days 14 [t(1, 8) = 2.73, p < 0.05], 15 [t(1, 8) = 4.63, p < 0.01]",
+    "anchor": "Results, Electrical kindling of the amygdala; Figure 3B",
     "surface": "body",
     "artifact": "files/fulltext/PMID25814935_PhillipsFarfan2015_PMC.xml",
     "panel_text_relation": "text_only"

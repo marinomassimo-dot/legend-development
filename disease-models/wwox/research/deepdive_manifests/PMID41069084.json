@@ -181,7 +181,7 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Figure 2 (flow diagram) lists: 101,602 with a sodium; 100,738 excluded electronically, of which 100,549 had sodium above 125; 864 eligible; 12 excluded manually; 852 analysed; 318 severe symptoms (132 imaged), 534 other (67 imaged).",
+    "proposition": "The flow diagram (called Figure 1 in the text; the image file is g002) lists: 101,602 with a sodium; 100,738 excluded electronically, of which 100,549 had sodium above 125; 864 eligible; 12 excluded manually; 852 analysed; 318 severe symptoms (132 imaged), 534 other (67 imaged).",
     "snippet": "Visual attestation of the patient flow diagram (image ACEM-33-0-g002): excluded electronically n = 100,738 with initial plasma sodium > 125 mmol/L (n = 100,549), age < 18 (n = 3), blood glucose > 300 (n = 80), missing sodium follow-up (n = 106); eligible n = 864; excluded manually n = 12; primary analysis group n = 852; severe symptoms 318, emergency imaging 132; no or moderate symptoms 534, emergency imaging 67.",
     "anchor": "Flow diagram (image ACEM-33-0-g002)",
     "surface": "figure",
@@ -194,7 +194,18 @@
      "endpoint": "cohort flow"
     },
     "qualifies": "entries[1]",
-    "qualifies_needle": "1101 patients had an initial plasma sodium"
+    "qualifies_needle": "1101 patients had an initial plasma sodium",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID41069084.json",
+     "entry": 2,
+     "what_changed": "figure numbering corrected",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "SUPPORTED"
+      ]
+     }
+    }
    },
    {
     "proposition": "Cerebral edema attributable to hyponatremia was confirmed in four patients, 0.5% of 852 and 1.3% of those with severe symptoms.",
@@ -237,12 +248,23 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The authors say overly rapid correction mostly followed 5% dextrose in 341 patients (40%); the sentence is ambiguous about whether dextrose was the cause of overcorrection or a rescue.",
+    "proposition": "The authors say overly rapid correction occurred in 341 patients (40%), the majority of whom received 5% dextrose; the sentence does not say whether dextrose caused or followed the overcorrection.",
     "snippet": "Overly rapid sodium correction occurred in 341 patients (40%), the majority of which received 5% dextrose",
     "anchor": "Results, Characteristics of Study Cohort",
     "surface": "body",
     "artifact": "files/fulltext/PMID41069084_Burst2026_PMC.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID41069084.json",
+     "entry": 8,
+     "what_changed": "'followed' replaced by 'received'",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "SUPPORTED"
+      ]
+     }
+    }
    },
    {
     "proposition": "Severe symptoms were frequently accompanied by other brain pathology on imaging (about 38%).",

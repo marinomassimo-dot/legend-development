@@ -237,12 +237,23 @@
     }
    },
    {
-    "proposition": "The enteral protocol was described as safe, with refeeding syndrome in 10.4% (8 of 77) by the ASPEN definition.",
+    "proposition": "Refeeding syndrome by the ASPEN definition occurred in 10.4% (8 of 77); the authors elsewhere (abstract) describe the protocol as appearing safe.",
     "snippet": "According to the ASPEN definition, during the 3‐weeks refeeding period, the prevalence of RS in the total cohort was 10.4% (8/77 children).",
     "anchor": "Results, RS: type, frequency, and delay",
     "surface": "body",
     "artifact": "files/fulltext/PMID39871710_Abbas2025_PMC.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID39871710.json",
+     "entry": 3,
+     "what_changed": "'safe' attributed to the abstract",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "SUPPORTED"
+      ]
+     }
+    }
    },
    {
     "proposition": "Just before, the same paragraph says 19 children had one electrolyte abnormality, six had two and none three; eight with refeeding syndrome do not follow from six with two abnormalities, so the definition applied is not reproducible from the text.",

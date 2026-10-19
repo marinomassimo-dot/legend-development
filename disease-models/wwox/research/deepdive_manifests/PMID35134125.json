@@ -270,20 +270,42 @@
     }
    },
    {
-    "proposition": "Within the fasting data, correlations of seizure count with glucose or beta-hydroxybutyrate were not significant.",
+    "proposition": "In WAG/Rij rats, across pooled fed and fasted sessions, correlations of seizure count with glucose (p = 0.094) and beta-hydroxybutyrate (p = 0.49) were not significant (trends only); in DBA/2J mice the beta-hydroxybutyrate correlation was significant (p = 0.020, Table S1).",
     "snippet": "While correlation coefficients were not statistically significant, SWS count and β-hydroxybutyrate trended towards a positive correlation, whereas SWS count and blood glucose trended towards an inverse correlation (Fig. 1K).",
     "anchor": "Results, first section, para 3",
     "surface": "body",
     "artifact": "files/fulltext/PMID35134125_Salvati2022_PMC.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35134125.json",
+     "entry": 5,
+     "what_changed": "scope restricted to rats; mouse result added from Table S1",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ]
+     }
+    }
    },
    {
-    "proposition": "Insulin lowered glucose, left beta-hydroxybutyrate unchanged and raised seizure count.",
+    "proposition": "Insulin lowered blood glucose and left beta-hydroxybutyrate unchanged; the rise in seizure count is a separate sentence (Figure 2D).",
     "snippet": "Insulin injection produced a large reduction in blood glucose (P = 0.0039, n = 9; Fig. 2G), whereas β-hydroxybutyrate remained unchanged relative to saline injection (P = 0.36, n = 9; Fig. 2H).",
     "anchor": "Results, second section",
     "surface": "body",
     "artifact": "files/fulltext/PMID35134125_Salvati2022_PMC.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35134125.json",
+     "entry": 6,
+     "what_changed": "seizure-count claim removed from this entry",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "UNDERSHOOT"
+      ]
+     }
+    }
    },
    {
     "proposition": "Figure 2G shows insulin-treated rat glucose falling from about 125 to about 45 mg/dl.",
@@ -316,28 +338,61 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Slice p-AMPK western blots were variable, which is why a FRET reporter was used.",
+    "proposition": "Slice p-AMPK western blots varied between slices; the FRET-reporter rationale follows in the next sentences, not quoted.",
     "snippet": "However, we also observed significant differences in baseline p-AMPK signal across slices.",
     "anchor": "Results, AMPK potentiates GABAB section",
     "surface": "body",
     "artifact": "files/fulltext/PMID35134125_Salvati2022_PMC.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35134125.json",
+     "entry": 10,
+     "what_changed": "rationale attributed to the following sentences",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "UNDERSHOOT"
+      ]
+     }
+    }
    },
    {
-    "proposition": "After 200 mg/kg metformin five of six WAG/Rij rats died after convulsive status epilepticus; non-epileptic Wistar rats had no seizures.",
+    "proposition": "After 200 mg/kg metformin all animals had generalised convulsive status epilepticus and five of six died; the non-epileptic Wistar result is a separate sentence, not quoted.",
     "snippet": "Within 70 min of metformin injection, all animals experienced generalized tonic-clonic seizures (convulsive status epilepticus, Fig. 5A) for ∼20 min, after which five of six animals died.",
     "anchor": "Results, metformin section",
     "surface": "body",
     "artifact": "files/fulltext/PMID35134125_Salvati2022_PMC.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35134125.json",
+     "entry": 11,
+     "what_changed": "Wistar result removed from this entry",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "UNDERSHOOT"
+      ]
+     }
+    }
    },
    {
-    "proposition": "The metformin dose was about twice a human-equivalent dose and the drug is not usually given to children.",
+    "proposition": "The authors state the metformin dose used was roughly twice the human-equivalent dose and that overdose occurs in humans; that it is generally not prescribed to children is the next sentence, not quoted.",
     "snippet": "First, the high metformin dose used in our study was roughly twice that of the equivalent dose used in humans and therefore may not have a clinical equivalence; however, metformin overdose occurs in humans.",
     "anchor": "Discussion, Metformin and spike-wave seizures",
     "surface": "body",
     "artifact": "files/fulltext/PMID35134125_Salvati2022_PMC.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35134125.json",
+     "entry": 12,
+     "what_changed": "children statement attributed to the next sentence",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "UNDERSHOOT"
+      ]
+     }
+    }
    },
    {
     "proposition": "The authors note the opposite direction to the ketogenic literature: fasting raises ketones and still worsens spike-wave seizures.",
@@ -348,28 +403,61 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The authors state that GLUT1 mutations account for about 10% of early-onset childhood absence epilepsies and that the ketogenic diet treats GLUT1 deficiency.",
+    "proposition": "The authors state that SLC2A1 mutations account for about 10% of early-onset childhood absence epilepsies; that the ketogenic diet treats GLUT1 deficiency is stated in the next paragraph, not quoted.",
     "snippet": "Mutations in SLC2A1, the gene encoding GLUT1, are found in 1% of all genetic generalized epilepsy patients and specifically account for 10% of early-onset childhood absence epilepsies.",
     "anchor": "Discussion, Hypoglycaemia and spike-wave seizures",
     "surface": "body",
     "artifact": "files/fulltext/PMID35134125_Salvati2022_PMC.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35134125.json",
+     "entry": 14,
+     "what_changed": "ketogenic-diet statement attributed to the next paragraph",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "UNDERSHOOT"
+      ]
+     }
+    }
    },
    {
-    "proposition": "The authors say mechanisms by which hypoglycaemia regulates spike-wave seizures remain unknown and present their data as support for one hypothesis.",
+    "proposition": "The authors say the mechanisms by which hypoglycaemia regulates spike-wave seizures remain entirely unknown; the sentence presenting their data as support for one hypothesis follows, not quoted.",
     "snippet": "Despite such conclusions, the mechanisms that enable hypoglycaemia to regulate SWS remain entirely unknown.",
     "anchor": "Conclusions",
     "surface": "body",
     "artifact": "files/fulltext/PMID35134125_Salvati2022_PMC.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35134125.json",
+     "entry": 15,
+     "what_changed": "support-for-hypothesis attributed to the next sentence",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "UNDERSHOOT"
+      ]
+     }
+    }
    },
    {
-    "proposition": "Animals were adult rodents of both sexes, 141 rats and 44 mice, with food and water ad libitum except for the tested fast.",
+    "proposition": "The Methods give 44 DBA/2J mice and 141 WAG/Rij rats, both sexes, with food and water ad libitum unless stated; 'adult' appears only for the WAG/Rij ECoG rats, and a separate non-epileptic Wistar group is also used.",
     "snippet": "In total, 44 DBA/2J mice and 141 WAG/Rij rats were used.",
     "anchor": "Materials and methods, Animals",
     "surface": "body",
     "artifact": "files/fulltext/PMID35134125_Salvati2022_PMC.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35134125.json",
+     "entry": 16,
+     "what_changed": "'adult' limited to the WAG/Rij rats; Wistar group noted",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ]
+     }
+    }
    }
   ],
   "source_fulltext_indexed": true,

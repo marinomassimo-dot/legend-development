@@ -280,12 +280,23 @@
     }
    },
    {
-    "proposition": "Fasting lowered blood glucose and raised beta-hydroxybutyrate in the knockout as in controls, yet gave it no seizure protection.",
+    "proposition": "Fasting lowered blood glucose and raised beta-hydroxybutyrate in the knockout, with beta-hydroxybutyrate higher than in controls (Figure S1I), yet gave it no seizure protection.",
     "snippet": "Depdc5 neuronal-specific knockout mice had reductions in blood glucose, several amino acids, and increases in ketones upon fasting, yet the mice were not protected from seizures.",
     "anchor": "Discussion, para 7",
     "surface": "body",
     "artifact": "files/fulltext/PMID36044864_Yuskaitis2022_PMC.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36044864.json",
+     "entry": 5,
+     "what_changed": "proposition no longer says the knockout ketosis was 'as in controls'; it was higher",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ]
+     }
+    }
    },
    {
     "proposition": "Fasting-induced ketosis was larger in the knockout than in controls.",
@@ -296,20 +307,42 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The fasting protocol removed food for 24 h with water available, and tested at 6-9 weeks; no calorie, dextrose or fluid-volume arm exists.",
+    "proposition": "Food was removed for 24 h with water available (the age of 6-9 weeks is in the preceding Methods sentence, not quoted). The paper has no calorie-graded, dextrose or fluid-volume arm (reader's inference from the Methods; no quote carries the negative).",
     "snippet": "Mice were weighed followed by food removal at 1pm for 24hr with ad lib water access.",
     "anchor": "STAR Methods, Acute fasting paradigm",
     "surface": "body",
     "artifact": "files/fulltext/PMID36044864_Yuskaitis2022_PMC.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36044864.json",
+     "entry": 7,
+     "what_changed": "proposition limited to what the quote carries and the negative labelled as inference",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "UNDERSHOOT"
+      ]
+     }
+    }
    },
    {
-    "proposition": "Whole-cortex amino acid changes after fasting: glutamine and arginine lower, more so in the knockout; leucine rises less in the knockout.",
+    "proposition": "Cortical glutamine fell with fasting and was lower again in the knockout in both fed and fasted states (arginine and leucine are in adjacent sentences, not quoted).",
     "snippet": "Not only was glutamine reduced in the fasted state, but glutamine was further reduced in the Depdc5cc+ brains compared with controls regardless of the fed or fasted state (Figure 4C).",
     "anchor": "Results, metabolomics section",
     "surface": "body",
     "artifact": "files/fulltext/PMID36044864_Yuskaitis2022_PMC.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36044864.json",
+     "entry": 8,
+     "what_changed": "cut to the glutamine statement the quote carries",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "UNDERSHOOT"
+      ]
+     }
+    }
    },
    {
     "proposition": "The only deaths after PTZ occurred in knockout mice and fasting did not prevent them (Figure 4H shows death only in the two knockout curves).",
@@ -356,12 +389,23 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The authors state the gap between primary neuronal cultures and the mature brain and that shRNA leaves residual protein.",
+    "proposition": "The authors state the gap between primary neuronal cultures and the mature brain (the shRNA residual-protein caveat is a separate sentence, not quoted).",
     "snippet": "While our in vitro data are compelling, there are still large gaps between primary neuronal cultures and the mature brain.",
     "anchor": "Limitations of the study",
     "surface": "body",
     "artifact": "files/fulltext/PMID36044864_Yuskaitis2022_PMC.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36044864.json",
+     "entry": 13,
+     "what_changed": "shRNA clause removed from the proposition",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "UNDERSHOOT"
+      ]
+     }
+    }
    },
    {
     "proposition": "The metabolomics sampled cortex only and could not separate neuron-intrinsic from systemic or behavioural effects.",

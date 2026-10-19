@@ -183,12 +183,23 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Diet-only patients had lower severity scores than patients also on drugs; severity and treatment choice are confounded, so this is not a diet effect.",
+    "proposition": "Diet-only patients had lower Glut1-CSS scores than patients on drugs (median 7 [2-10] versus 13 [11.25-15.75]); the observational retrospective design cannot separate severity from treatment choice, so no diet effect can be inferred (reader's inference; the paper does not discuss confounding).",
     "snippet": "The median Glut1‐CSS was 7 [IQR: 2–10] for the first group, compared to 13 [IQR: 11.25–15.75] for the latter 2 groups.",
     "anchor": "Results, Ketogenic Diet and Severity Assessment",
     "surface": "body",
     "artifact": "files/fulltext/PMID42638834_Sobrinho2026_PMC.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42638834.json",
+     "entry": 4,
+     "what_changed": "confounding statement labelled as reader's inference",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ]
+     }
+    }
    },
    {
     "proposition": "Reported adverse effects of the diet were constipation, irritability and nausea, transient at the start; the Introduction says it is well tolerated with hardly any side effects.",

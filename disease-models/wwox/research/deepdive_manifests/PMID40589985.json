@@ -249,12 +249,23 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The reported t statistics (t = -3.431 and -2.283) are those expected for about 10 animals per group; with the stated n = 25 and the tabulated means and SDs a t test of N versus NH would give t near 7 (derived by the reader, not stated in the paper).",
+    "proposition": "The reported t statistics (-3.431 and -2.283) do not match n = 25 per group with the tabulated means and SDs: they correspond to roughly 5-6 (N versus NH) and 8-9 (NH-V versus NH) animals per group, while a t test on the tabulated values with n = 25 gives about 7 for N versus NH (reader's arithmetic, not stated in the paper).",
     "snippet": "the N group had significantly lower seizure scores compared to the NH group (t = −3.431, p = 0.008)",
     "anchor": "Results, Seizure induction results",
     "surface": "body",
     "artifact": "files/fulltext/PMID40589985_Sun2025_PMC.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40589985.json",
+     "entry": 8,
+     "what_changed": "animals-per-group estimate corrected from about 10 to about 5-9",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ]
+     }
+    }
    },
    {
     "proposition": "The synaptophysin table gives 0.235 in the visual-stimulation group against 0.024 and 0.021 in the other groups, a tenfold step inconsistent with the BDNF column and the text; likely a decimal slip, not resolvable from the paper.",
