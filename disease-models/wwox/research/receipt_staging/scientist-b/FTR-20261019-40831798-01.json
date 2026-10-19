@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-10-19T15:30:00Z",
+ "event_at": "2026-10-19T15:30:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "not_present",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "not_present"
+ },
+ "event_id": "FTR-20261019-40831798-01",
+ "evidence_basis": [
+  "Whole JATS body read section by section; Figure 1 inspected as an image; Table 1 read. Review article: the methodology section stands for methods, sections 3 to 6 stand for the results of the synthesis (results coverage is not_present as a section), the Outlook carries the discussion.",
+  "FIND: WWOX is absent (term count 0). Gene-wise KD responder rates rest on ref 9 with n of 3 to 18.",
+  "References enumerated (89) and screened for integrity; the cited primaries were not read, so no number here is a primary datum."
+ ],
+ "evidence_depth": "complete_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID40831798.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID40831798.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-B-G2-KD-PRIOR-01.md",
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-b.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "9c5f36b5aedb22d4b9f92a9e65bba58698834128b86c762c8717a67febd6d63a",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID40831798_Hu2025_PMC12358386.xml",
+ "study_id": {
+  "doi": "10.3389/fped.2025.1567095",
+  "pmid": "40831798"
+ },
+ "workflow": "scientist-b, metabolic batch 2026-10-19 group G2, task branch task/METAB-G2-B-20261019; context_policy SOURCE_FIRST. Route: Europe PMC JATS fetched with no User-Agent, figures from the PMC OA S3 bucket, all into the root files/ tree; figures inspected as images where stated; locators captured into the manifest and verified by deepdive_manifest.py --verify-artifacts --require-current-schema. Prepared as a JSON file for the integrator and was not appended at preparation time."
+}
