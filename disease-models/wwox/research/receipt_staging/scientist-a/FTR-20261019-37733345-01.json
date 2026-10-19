@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-37733345-01",
+ "study_id": {
+  "pmid": "37733345",
+  "doi": "10.1001/jamanetworkopen.2023.34889"
+ },
+ "analysis_at": "2026-10-19T19:29:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-a (Scientist A), interventions batch 2026-10-19 groups H1/H2, task INTERV-H1-A-20261019 on branch task/INTERV-H1-A-20261019, dispatched by the Orchestrator; context_policy QUESTION_DRIVEN. Route: Europe PMC JATS body (PMC10514737) and the supplementaryFiles container into the root files/ tree; Figures 1-3 opened at native resolution (3892 px wide originals); Supplement 2 (eTables 1-2, eFigure) read by pdftotext; the 144k-character trial protocol (Supplement 1) and the data-sharing and collaborator PDFs were not read. Locators captured into the deep-dive manifest while the document was open and verified by deepdive_manifest.py --verify-artifacts --require-current-schema. Prepared as a staged JSON for the Orchestrator and not appended at preparation time.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID37733345_Chock2023_PMC.xml",
+ "source_fingerprint": "d5cd41796f111a56d538e762cf660fbf28615c7e7c1336438a02fc7c584b99f1",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "not_read",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID37733345.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID37733345.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-a.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "manifest",
+  "Figures 1-3 inspected as images",
+  "Supplement 2 eTables and eFigure read; trial protocol (Supplement 1) not read - declared debt"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

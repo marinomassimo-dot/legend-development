@@ -1,0 +1,425 @@
+{
+ "schema_version": 2,
+ "pmid": "37733345",
+ "doi": "10.1001/jamanetworkopen.2023.34889",
+ "receipt": "FTR-20261019-37733345-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID37733345.md",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-a.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was selected and deduplicated by the Orchestrator's selector against the registries, queue and receipt ledger; the per-paper M0 packet and a scan of staged receipts and peer manifests re-checked it."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery squeeze was warranted: the paper carries no WWOX-deficient datum and its transferable content is carried in the dossier and the analysis note."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from a class-level, non-WWOX paper would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a WWOX lever; the BLOCK-1 caution is carried at class level in the dossier."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "weighting": "The NICHD Neonatal Research Network (multicentre, trial-embedded); primary for neonatal transfusion thresholds and their NIRS correlates, not for genetic encephalopathies. The outcome analysis is exploratory by the authors' own label."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "cerebral oxygenation AND red blood cell transfusion AND preterm",
+    "count": 50,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (anemia OR hemoglobin OR transfusion)",
+    "count": 2,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts at the stated date."
+ },
+ "multihop": {
+  "references_enumerated": 32,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "References enumerated from the XML reference list; none concerns WWOX (term search over the body: zero occurrences)."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 37733345 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "No identity record for this PMID in the registries."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 via PubMed EFetch for PMID 37733345: publication types ['Randomized Controlled Trial', 'Multicenter Study', 'Observational Study', 'Journal Article', 'Research Support, N.I.H., Extramural']; correction/retraction link markers in the efetch record: none.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 32,
+   "references_screened": 32,
+   "references_with_doi": 32,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID37733345_Chock2023_PMC.xml",
+   "sha256": "d5cd41796f111a56d538e762cf660fbf28615c7e7c1336438a02fc7c584b99f1",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC10514737: abstract, body, Tables 1-2, three figure legends, 32 references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10514737/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID37733345/jamanetwopen-e2334889-g001.jpg",
+   "sha256": "37e831aee8b9bfd4fe40486ca6c1b71aa2fbae479b3ca892c25dabde85564b87",
+   "kind": "figure",
+   "note": "Figure 1 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10514737/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID37733345/jamanetwopen-e2334889-g002.jpg",
+   "sha256": "d20cc476ec0672818cf9e1e3ce14ff8db7d1a6e8b30fde6dbf2d2a2f663f323a",
+   "kind": "figure",
+   "note": "Figure 2 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10514737/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID37733345/jamanetwopen-e2334889-g003.jpg",
+   "sha256": "c62bf98adc6078e250976a2b80b9941e3f1e04a48bade4d0318892200595b4c5",
+   "kind": "figure",
+   "note": "Figure 3 from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10514737/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID37733345/jamanetwopen-e2334889-s001.pdf",
+   "sha256": "5cc8c3efaec976af16a086fc1929195eab4d63ab92ef9535f4ccb3195912616e",
+   "kind": "supplement_binary",
+   "note": "Supplement 1 (TOP trial protocol, 144k characters of text layer); not read.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10514737/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID37733345/jamanetwopen-e2334889-s002.pdf",
+   "sha256": "9634bbe74531d3cbbdf99735369232da44840e7633efd2a61b3a87642d835229",
+   "kind": "supplement_binary",
+   "note": "Supplement 2 (eTable 1 thresholds, eTable 2 CART variables, eFigure flow diagram); read by pdftotext in this session.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10514737/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID37733345/jamanetwopen-e2334889-s003.pdf",
+   "sha256": "dc7e20dd78a9640f0e1d973df2eaebd7df9e31d63c1d12a3fcf3344055067ccc",
+   "kind": "supplement_binary",
+   "note": "Supplement 3 (data-sharing statement); skimmed.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10514737/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID37733345/jamanetwopen-e2334889-s004.pdf",
+   "sha256": "9b17880da6a9bd35219c8e528593333b365dc921b5849646d6868b9dc5ed34df",
+   "kind": "supplement_binary",
+   "note": "Supplement 4 (nonauthor collaborators); skimmed.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10514737/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC10514737/fullTextXML returned HTTP 200 (114480 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image.",
+  "entries": [
+   {
+    "proposition": "Study population: TOP trial randomized extremely low birth weight preterm infants to higher or lower haemoglobin thresholds, with thresholds set by postnatal age and respiratory support.",
+    "snippet": "The TOP trial randomized preterm infants of birth weight 1000 g or less and gestational age between 22 weeks 0 days and 28 weeks 6 days within 48 hours of birth to receive RBC transfusions at higher or lower Hgb thresholds.",
+    "anchor": "Methods, Study Population",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37733345_Chock2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human preterm infants 22-28 weeks, birth weight 1000 g or less, 16 US NICUs, NIRS around red-cell transfusion (secondary study of the TOP randomized trial)",
+     "comparator": "high versus low haemoglobin transfusion threshold; pre versus post transfusion",
+     "endpoint": "cerebral and mesenteric tissue oxygen saturation; death or neurodevelopmental impairment at 22-26 months"
+    }
+   },
+   {
+    "proposition": "Data attrition: of 140 transfused infants only 101 had valid pre and post NIRS data; 73 events lacked pre-transfusion and 26 post-transfusion NIRS.",
+    "snippet": "When restricted to transfusions with both valid pretransfusion and posttransfusion NIRS data, there remained 101 infants with a total of 237 transfusion events captured.",
+    "anchor": "Results, first paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37733345_Chock2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human preterm infants 22-28 weeks, birth weight 1000 g or less, 16 US NICUs, NIRS around red-cell transfusion (secondary study of the TOP randomized trial)",
+     "comparator": "high versus low haemoglobin transfusion threshold; pre versus post transfusion",
+     "endpoint": "cerebral and mesenteric tissue oxygen saturation; death or neurodevelopmental impairment at 22-26 months"
+    }
+   },
+   {
+    "proposition": "Primary result: cerebral saturation rose 4.8 points (low threshold) and 2.7 points (high threshold) after transfusion, mesenteric 6.7 and 5.6, with no change in peripheral saturation and no difference between threshold groups.",
+    "snippet": "Mean Csat change in the lower–Hgb threshold group was 4.8% (95% CI, 2.7%-6.9%) compared to 2.7% (95% CI, 1.2%-4.2%) in the higher–Hgb threshold group, while mean change in Msat was 6.7% (95% CI, 2.4%-11.0%) vs 5.6% (95% CI, 2.7%-8.5%).",
+    "anchor": "Results, NIRS changes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37733345_Chock2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human preterm infants 22-28 weeks, birth weight 1000 g or less, 16 US NICUs, NIRS around red-cell transfusion (secondary study of the TOP randomized trial)",
+     "comparator": "high versus low haemoglobin transfusion threshold; pre versus post transfusion",
+     "endpoint": "cerebral and mesenteric tissue oxygen saturation; death or neurodevelopmental impairment at 22-26 months"
+    }
+   },
+   {
+    "proposition": "Primary analysis sample was 80 infants with transfusions in the first 28 days.",
+    "snippet": "Over the first 28 days, 80 infants had NIRS-monitored transfusions and were included in the primary analysis.",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37733345_Chock2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human preterm infants 22-28 weeks, birth weight 1000 g or less, 16 US NICUs, NIRS around red-cell transfusion (secondary study of the TOP randomized trial)",
+     "comparator": "high versus low haemoglobin transfusion threshold; pre versus post transfusion",
+     "endpoint": "cerebral and mesenteric tissue oxygen saturation; death or neurodevelopmental impairment at 22-26 months"
+    }
+   },
+   {
+    "proposition": "Pre-transfusion differences between threshold groups were not significant for cerebral saturation (60 versus 63 percent, P = .11).",
+    "snippet": "Figure 2 demonstrates that mean pretransfusion Csat was lower (60% [95% CI, 55%-64%] vs 63% [95% CI, 59%-67%)]; P = .11)",
+    "anchor": "Results",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37733345_Chock2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human preterm infants 22-28 weeks, birth weight 1000 g or less, 16 US NICUs, NIRS around red-cell transfusion (secondary study of the TOP randomized trial)",
+     "comparator": "high versus low haemoglobin transfusion threshold; pre versus post transfusion",
+     "endpoint": "cerebral and mesenteric tissue oxygen saturation; death or neurodevelopmental impairment at 22-26 months"
+    }
+   },
+   {
+    "proposition": "Exploratory outcome: the number of transfusions with pre-transfusion Csat below 50 percent was associated with death or NDI (OR 2.41, 95% CI 1.08-5.41, P = .03); 36 of 97 had the outcome.",
+    "snippet": "Significant prognostic factors for NDI or death included the total number of transfusions with mean pretransfusion cerebral saturation less than 50% (odds ratio, 2.41; 95% CI, 1.08-5.41; P = .03), total days of mechanical ventilation, and mean study Hgb (Table 2), with a similar c statistic of 0.73.",
+    "anchor": "Results, outcome analysis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37733345_Chock2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human preterm infants 22-28 weeks, birth weight 1000 g or less, 16 US NICUs, NIRS around red-cell transfusion (secondary study of the TOP randomized trial)",
+     "comparator": "high versus low haemoglobin transfusion threshold; pre versus post transfusion",
+     "endpoint": "cerebral and mesenteric tissue oxygen saturation; death or neurodevelopmental impairment at 22-26 months"
+    }
+   },
+   {
+    "proposition": "The authors label the outcome analysis as hypothesis-generating and exploratory.",
+    "snippet": "In pursuing our secondary, hypothesis-generating objective to explore the association of cerebral NIRS measures and other clinical factors with the adverse composite outcome of NDI or death,24 we used different analytical approaches to interrogate this complex question.25",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37733345_Chock2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human preterm infants 22-28 weeks, birth weight 1000 g or less, 16 US NICUs, NIRS around red-cell transfusion (secondary study of the TOP randomized trial)",
+     "comparator": "high versus low haemoglobin transfusion threshold; pre versus post transfusion",
+     "endpoint": "cerebral and mesenteric tissue oxygen saturation; death or neurodevelopmental impairment at 22-26 months"
+    }
+   },
+   {
+    "proposition": "Higher mean haemoglobin was associated with the adverse outcome, which the authors attribute to sicker infants receiving extra transfusions outside protocol.",
+    "snippet": "Although Hgb 12.5 mg/dL or greater was an associated variable from the CART analysis, infants with Hgb 12.5 mg/dL or greater received more transfusions outside of study protocol than other infants and may have intentionally been kept at a higher Hgb level due to severity of illness, inherently placing them at higher risk for adverse outcomes.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37733345_Chock2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human preterm infants 22-28 weeks, birth weight 1000 g or less, 16 US NICUs, NIRS around red-cell transfusion (secondary study of the TOP randomized trial)",
+     "comparator": "high versus low haemoglobin transfusion threshold; pre versus post transfusion",
+     "endpoint": "cerebral and mesenteric tissue oxygen saturation; death or neurodevelopmental impairment at 22-26 months"
+    }
+   },
+   {
+    "proposition": "Confounders of NIRS beyond haemoglobin are acknowledged (patent ductus, blood pressure, carbon dioxide, hypoxia, sepsis, cardiac output, vascular resistance).",
+    "snippet": "Another mechanistic consideration is that after a transfusion, a corresponding change in cardiac output or end-organ vascular resistance may impact NIRS measures beyond the effect of an increase in Hgb.",
+    "anchor": "Limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37733345_Chock2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human preterm infants 22-28 weeks, birth weight 1000 g or less, 16 US NICUs, NIRS around red-cell transfusion (secondary study of the TOP randomized trial)",
+     "comparator": "high versus low haemoglobin transfusion threshold; pre versus post transfusion",
+     "endpoint": "cerebral and mesenteric tissue oxygen saturation; death or neurodevelopmental impairment at 22-26 months"
+    }
+   },
+   {
+    "proposition": "Methods: cerebral fractional tissue oxygen extraction is computed from peripheral and cerebral saturation; outlying values and negative extraction values were excluded.",
+    "snippet": "Outlying values, determined by a greater than 50% change in successive measures and by negative cFTOE or mFTOE measurements, were not included in analysis.",
+    "anchor": "Methods, Data Processing",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37733345_Chock2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human preterm infants 22-28 weeks, birth weight 1000 g or less, 16 US NICUs, NIRS around red-cell transfusion (secondary study of the TOP randomized trial)",
+     "comparator": "high versus low haemoglobin transfusion threshold; pre versus post transfusion",
+     "endpoint": "cerebral and mesenteric tissue oxygen saturation; death or neurodevelopmental impairment at 22-26 months"
+    }
+   },
+   {
+    "proposition": "Table 2 gives stepwise regression results with mean study haemoglobin OR 1.72 (0.98-3.03, P = .06) and gestational age and sex only as adjustment factors.",
+    "snippet": "Mean study Hgb1.72 (0.98-3.03).06Gestational age in wka1.1 (0.79-1.67).48Male sexa0.52 (0.19-1.40).19",
+    "anchor": "Table 2",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID37733345_Chock2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human preterm infants 22-28 weeks, birth weight 1000 g or less, 16 US NICUs, NIRS around red-cell transfusion (secondary study of the TOP randomized trial)",
+     "comparator": "high versus low haemoglobin transfusion threshold; pre versus post transfusion",
+     "endpoint": "cerebral and mesenteric tissue oxygen saturation; death or neurodevelopmental impairment at 22-26 months"
+    }
+   },
+   {
+    "proposition": "Methods point to eTable 1 for thresholds by postnatal week and respiratory support.",
+    "snippet": "Thresholds were aligned with current practice14 and determined by postnatal age (highest in week 1 and lower in week 2 and beyond week 3) and according to degree of respiratory support",
+    "anchor": "Methods, Study Population",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37733345_Chock2023_PMC.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human preterm infants 22-28 weeks, birth weight 1000 g or less, 16 US NICUs, NIRS around red-cell transfusion (secondary study of the TOP randomized trial)",
+     "comparator": "high versus low haemoglobin transfusion threshold; pre versus post transfusion",
+     "endpoint": "cerebral and mesenteric tissue oxygen saturation; death or neurodevelopmental impairment at 22-26 months"
+    }
+   },
+   {
+    "proposition": "Figure 1: change in Csat, cFTOE, Msat and mFTOE after transfusion against postnatal day, two threshold groups; individual points scatter from about -25 to +30 percent for Csat, with confidence bands overlapping between groups throughout, and many individual events at or below zero.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1 four scatter panels with spline fits and bands, orange low and dark high threshold; Csat points range about -25 to 30; bands overlap at all days.",
+    "anchor": "Figure 1, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID37733345/jamanetwopen-e2334889-g001.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human preterm infants 22-28 weeks, birth weight 1000 g or less, 16 US NICUs, NIRS around red-cell transfusion (secondary study of the TOP randomized trial)",
+     "comparator": "high versus low haemoglobin transfusion threshold; pre versus post transfusion",
+     "endpoint": "cerebral and mesenteric tissue oxygen saturation; death or neurodevelopmental impairment at 22-26 months"
+    }
+   },
+   {
+    "proposition": "Figure 2: pre-transfusion Csat falls from about 80 at day 1 in the high-threshold group to about 60 by day 7 and stays; the low-threshold group sits near 57-63 throughout; a few events lie at 15-25 percent in both groups.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 2 panels A Csat and B cFTOE against postnatal day with spline bands.",
+    "anchor": "Figure 2, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID37733345/jamanetwopen-e2334889-g002.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human preterm infants 22-28 weeks, birth weight 1000 g or less, 16 US NICUs, NIRS around red-cell transfusion (secondary study of the TOP randomized trial)",
+     "comparator": "high versus low haemoglobin transfusion threshold; pre versus post transfusion",
+     "endpoint": "cerebral and mesenteric tissue oxygen saturation; death or neurodevelopmental impairment at 22-26 months"
+    }
+   },
+   {
+    "proposition": "Figure 3 (CART): 97 infants, 49 survived without NDI; mean Hgb 12.5 or more split off 22 infants with 17 adverse outcomes; among the 75 below, a pretransfusion Csat of 48.6 or less leaf holds 10 infants (9 adverse); the tree rests on small terminal groups (10, 13, 52, 65, 22).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3 tree: Overall 97 (49 / 48); Hgb <12.5 n=75 (44/31), >=12.5 n=22 (5/17); Csat <=48.6 n=10 (1/9), >48.6 n=65 (43/22); ventilation >=49 d n=13 (4/9), <49 d n=52 (39/13).",
+    "anchor": "Figure 3, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID37733345/jamanetwopen-e2334889-g003.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human preterm infants 22-28 weeks, birth weight 1000 g or less, 16 US NICUs, NIRS around red-cell transfusion (secondary study of the TOP randomized trial)",
+     "comparator": "high versus low haemoglobin transfusion threshold; pre versus post transfusion",
+     "endpoint": "cerebral and mesenteric tissue oxygen saturation; death or neurodevelopmental impairment at 22-26 months"
+    }
+   }
+  ]
+ }
+}
