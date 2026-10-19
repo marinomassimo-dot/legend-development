@@ -1,0 +1,199 @@
+{
+ "schema_version": 2,
+ "pmid": "41584903",
+ "doi": "10.1177/15357597261416723",
+ "receipt": "FTR-20261019-41584903-01",
+ "landing": [
+  "CC-20261019-SCIENTIST-B-H3-AUTONOMIC-HYPOGLYCAEMIA-01",
+  "CC-20261019-SCIENTIST-B-H3-EPINEPHRINE-SAFETY-01",
+  "interventions_wave_20261019_scientist-b"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: the Europe PMC fullTextXML route returned the body and the PMC OA S3 bucket the figures."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not run: the reading was produced directly under the Scientist brief; a deepdive pass would duplicate the locators."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered: no consolidated baseline claim is narrowed, reversed or removed and no MAJOR change class is declared (group H3 has no WWOX evidence to compare against)."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 32,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-19: 'Wenker IC[au]' 32; 'Wenker IC[au] AND WWOX' 0 (surname-initial queries are ambiguous and are not evidence of authorship); last author 'Boychuk CR[au]'.",
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Conference-group narrative report in which each section summarises the writing laboratory own work; the HPA-axis section rests on a 2021 review and a 2025 preprint. Weigh as a map of laboratory positions.",
+  "note": "Not a WWOX group."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "WWOX tokens in the JATS",
+    "route": "case-insensitive count over the persisted JATS, 2026-10-19",
+    "count": 0
+   }
+  ],
+  "note": "WWOX does not occur in the article."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 102,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "dependency_integrity.py screen reference count, confirmed against <ref> elements in the JATS.",
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-directed reference."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "registry_records.py get --theme adrenergic / epinephrine / noradrenaline / catecholamine / autonomic / sympathetic (each exit 1, no record) and --theme SUDEP (2 of 1586 records)",
+  "hits": 0,
+  "finding": "No registry record carries any adrenergic term, so the laboratory holds nothing on catecholamines to compare with; an empty result is a statement about those queries over those files, not about the literature. SUDEP occurs in two records only as a reason to keep seizure control, not as a mechanism."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-19",
+  "route": "PubMed efetch 2026-10-19 for this PMID (no CommentsCorrections element, publication types listed); JATS front matter",
+  "result": "No retraction, correction or expression of concern found in the PubMed record.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 102,
+   "references_screened": 101,
+   "references_with_doi": 101,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41584903_Wenker2026_PMC12823373.xml",
+   "sha256": "be260acadb96bb0886ec6efd3f46755f96b7662f378402445ef91c8172e73449",
+   "kind": "article_text",
+   "note": "Europe PMC JATS for PMC12823373, 136,114 bytes; abstract, introduction and eleven body sections with conclusions present; the article has no figures or tables in the JATS.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12823373/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "be260acadb96bb0886ec6efd3f46755f96b7662f378402445ef91c8172e73449"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC JATS, 136,114 bytes; abstract, introduction and eleven body sections with conclusions present; the article has no figures or tables in the JATS.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "COVERAGE: whole article read; it has no figures or tables. A narrative report: no methods, results or limitations sections of its own. The reference list (102) was screened for integrity and the identities of references 38, 73 and 102 were read from the persisted JATS; the cited primaries were not read, so every number here is a restatement.",
+  "entries": [
+   {
+    "proposition": "DESIGN: the article is the report of a 2025 Special Interest Group; each section summarises the writing laboratory own work.",
+    "snippet": "The goal of the 2025 AES SUDEP Special Interest Group was to examine how seizures and their underlying epilepsy etiology",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41584903_Wenker2026_PMC12823373.xml",
+    "anchor": "Introduction, paragraph 3",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "EPINEPHRINE AS A PROVOCATION IN A DEE MODEL: in Scn8a DEE13 mice resting ECG is normal but arrhythmias can be induced with epinephrine and caffeine to mimic an ictal sympathetic surge; this is a challenge test in a sodium-channel gain-of-function model, not a treatment, and the sentence has no citation of its own (the preceding sentence cites ref 55).",
+    "snippet": "ECGs in these mice are normal at rest, but arrhythmias can be induced with epinephrine and caffeine to mimic an ictal sympathetic surge.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41584903_Wenker2026_PMC12823373.xml",
+    "anchor": "Cardiac Arrhythmias Due to Ion Channel Variants, paragraph 1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "HPA CLAIM: chronically epileptic mice with HPA axis dysfunction have more SUDEP, and chemogenetic or pharmacological suppression of HPA signalling prevented it; the cited source (ref 73) is a 2021 review of HPA targets in epilepsy, so the primary experiment is not identified in the article.",
+    "snippet": "chemogenetic or pharmacological suppression of HPA signaling prevented the vulnerability to SUDEP",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41584903_Wenker2026_PMC12823373.xml",
+    "anchor": "Stress, Seizures, HPA Axis Dysfunction, and Psychiatric Comorbidities in SUDEP Risk, paragraph 1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The reflex-hyperactivity mechanism is called established for the first time on the strength of ref 102, which is a 2025 preprint (bioRxiv identifier in the reference list).",
+    "snippet": "This establishes for the first time a potential trigger for SUDEP and identifies HPA axis dysfunction as a novel pathophysiological mechanism contributing to SUDEP risk.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41584903_Wenker2026_PMC12823373.xml",
+    "anchor": "Potential Mechanisms Mediating HPA Axis Dysfunction and SUDEP Risk, last sentence",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A data set is labelled unpublished: the rabbit simultaneous EEG, ECG and capnography recordings behind the neuro-cardiac-respiratory sequence.",
+    "snippet": "leading up to sudden death (unpublished data)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41584903_Wenker2026_PMC12823373.xml",
+    "anchor": "SUDEP in a Rabbit Model of LQT2, paragraph 2",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "CITATION MISMATCH: the statement that SCN1B may not be a monogenic cause of Brugada syndrome carries ref 38, which in the reference list is a 1994 paper on EAG-related potassium channel genes in Drosophila and mammals.",
+    "snippet": "However, other work suggests that SCN1B may not be a monogenic cause of BrS38.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41584903_Wenker2026_PMC12823373.xml",
+    "anchor": "Cardiac Arrhythmias Due to Ion Channel Variants, paragraph 2",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The human terminal-event series is nine monitored deaths (MORTEMUS), each a convulsive seizure with terminal apnea minutes before asystole; the authors call the data set limited.",
+    "snippet": "In the MORTEMUS study, 9 patients who died in epilepsy monitoring units with sufficient cardiorespiratory monitoring were analyzed.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41584903_Wenker2026_PMC12823373.xml",
+    "anchor": "Seizure-Induced Apnea as a Mechanism of SUDEP, paragraph 1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Stress axis: people with epilepsy are said to have elevated basal cortisol, increased further after a seizure; cortisol, not catecholamines, is the measured hormone in this section.",
+    "snippet": "PWE exhibit elevated basal cortisol levels compared to healthy controls",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41584903_Wenker2026_PMC12823373.xml",
+    "anchor": "Stress, Seizures, the Hypothalamic–Pituitary–Adrenal Axis, and Psychiatric Comorbidities in Epilepsy, paragraph 1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Dravet syndrome carries the highest SUDEP risk (up to 20 percent) with a mean age at SUDEP of 4.6 years, a DEE-class figure from cited sources.",
+    "snippet": "While all PWE are at risk for SUDEP, DS patients have the highest risk: up to 20%.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41584903_Wenker2026_PMC12823373.xml",
+    "anchor": "Channelopathies With a High Incidence of SUDEP, paragraph 1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The report concludes SUDEP is multifactorial and that continued integration of human, genetic and mechanistic studies is needed; it ranks no mechanism above another.",
+    "snippet": "these multidisciplinary findings support the hypothesis that SUDEP results from the intersection of respiratory suppression, cardiac vulnerability, autonomic dysregulation, and stress-responsive physiology",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41584903_Wenker2026_PMC12823373.xml",
+    "anchor": "Conclusions, paragraph 2",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}
