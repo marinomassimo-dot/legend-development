@@ -1,0 +1,174 @@
+{
+ "schema_version": 2,
+ "pmid": "39997753",
+ "doi": "10.3390/metabo15020128",
+ "receipt": "FTR-20261019-39997753-01",
+ "landing": [
+  "CC-20261019-SCIENTIST-B-G2-KD-PRIOR-01",
+  "metabolic_wave_20261019_scientist-b"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: the Europe PMC fullTextXML route returned the body and the PMC OA S3 bucket the figures."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not run: the reading was produced directly under the Scientist brief; a deepdive pass would duplicate the locators."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered: no consolidated baseline claim is narrowed, reversed or removed and no MAJOR change class is declared. Triples are listed in the commit candidate for a later blind audit."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 52,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-19: 'Beltran-Velasco AI[au]' 52; 'Beltran-Velasco AI[au] AND glycogen' 1; 'Beltran-Velasco AI[au] AND WWOX' 0. The PubMed record lists a single author.",
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Narrative review; weigh as a literature map only.",
+  "note": "Single-author narrative review."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "WWOX tokens in the JATS",
+    "route": "case-insensitive count over the persisted JATS, 2026-10-19",
+    "count": 0
+   }
+  ],
+  "note": "WWOX does not occur."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 202,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "<ref> elements counted in the JATS (regular expression).",
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-directed reference."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "registry_records.py get --theme glycogen (no record of this paper); GSK3B arm in the Wang 2012 record is a separate line",
+  "hits": 0,
+  "finding": "Not in the registries; the GSK3B link to WWOX is carried by the Wang 2012 deep-dive, not by this review."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-19",
+  "route": "PubMed esummary 2026-10-19 for 39997753; JATS front matter carries is-retracted flag",
+  "result": "No retraction, correction or expression of concern found in the PubMed record or the JATS front matter.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 202,
+   "references_screened": 199,
+   "references_with_doi": 199,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID39997753_BeltranVelasco2025_PMC11857135.xml",
+   "sha256": "e587f7d0d5dc8753a1b8ef7a862acbcc4887f02276d214c1747c0032e57bafea",
+   "kind": "article_text",
+   "note": "Europe PMC JATS for PMC11857135 (Metabolites 2025, CC BY), 303,240 bytes; abstract, introduction, sections 2 to 8 and three figure legends present.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11857135/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "e587f7d0d5dc8753a1b8ef7a862acbcc4887f02276d214c1747c0032e57bafea"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC JATS, 303,240 bytes; whole article.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "COVERAGE: abstract, introduction, section 2.1, section 3, section 5 (5.1 and 5.3), section 7.1, 7.2 and section 8 read; sections 4 (glycogen biochemistry and methods), 5.2, 6, 7.3 and 7.4 skimmed by heading only, so results is declared captions_only and the receipt is partial. The three figure schematics were not inspected as images.",
+  "entries": [
+   {
+    "proposition": "DESIGN: a narrative review with a keyword search over 2015 to 2025; no appraisal or synthesis method beyond inclusion criteria; no data of its own.",
+    "snippet": "The search was conducted in recognized scientific databases such as ScienceDirec",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39997753_BeltranVelasco2025_PMC11857135.xml",
+    "anchor": "Section 3 Materials and Methods",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "HYPOGLYCAEMIA: during low blood glucose neurons draw on astrocytic glycogen via glycogenolysis and lactate shuttle; stated generally, without a measured quantity.",
+    "snippet": "During episodes of low blood glucose, the brain relies on its glycogen stores to maintain a constant supp",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39997753_BeltranVelasco2025_PMC11857135.xml",
+    "anchor": "2.1 Energy Source During Hypoglycemia",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "EPILEPSY: the review states glycogen accumulation in astrocytes may contribute to hyperexcitability in refractory epilepsy, the opposite direction to a glycogen buffer deficit.",
+    "snippet": "However, recent research suggests that abnormal glycogen accumulation in astrocytes may contribute to the excessive neuronal excitability ob",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39997753_BeltranVelasco2025_PMC11857135.xml",
+    "anchor": "5.1 Epilepsy",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "An internal logic problem: glycogen synthase inhibitors are said to raise brain glycogen and prevent neuronal hypoglycaemia; inhibiting synthesis would be expected to lower glycogen.",
+    "snippet": "the investigation of glycogen synthase inhibitors has emerged as a promising approach to enhance brain glycogen levels and pr",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39997753_BeltranVelasco2025_PMC11857135.xml",
+    "anchor": "7.1 Enzymatic Modulation",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "GSK-3 beta appears once in the whole article, as a small-molecule target in neurodegeneration models; the review does not link GSK3B or glycogen to WWOX.",
+    "snippet": "Innovative small molecules targeting enzymes such as GSK-3β, which are involved in glycogen regulation, have also demonstrated efficacy in p",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39997753_BeltranVelasco2025_PMC11857135.xml",
+    "anchor": "7.2 Gene Therapies and Innovative Molecules",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The one monogenic glycogen epilepsy discussed is Lafora disease (glycogen accumulation), not a deficiency of glycogen mobilisation.",
+    "snippet": "Lafora disease is an inherited disorder characterized by the accumulation of abnormal glycogen ",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39997753_BeltranVelasco2025_PMC11857135.xml",
+    "anchor": "5.3 Congenital Metabolic Disorders",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state their evidence base is mostly animal and human validation is lacking.",
+    "snippet": "current research is often limited to animal models, which raises the n",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39997753_BeltranVelasco2025_PMC11857135.xml",
+    "anchor": "8 Conclusions",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}
