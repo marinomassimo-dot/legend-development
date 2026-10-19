@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-42420651-01",
+ "study_id": {
+  "pmid": "42420651",
+  "doi": "10.1038/s42255-026-01566-0"
+ },
+ "event_at": "2026-10-19T19:21:09Z",
+ "analysis_at": "2026-10-19T19:21:09Z",
+ "analysis_time_precision": "second",
+ "workflow": "scientist-c, interventions batch 2026-10-19, task INTERV-H4-C-20261019, branch task/INTERV-H4-C-20261019; context_policy SOURCE_FIRST. Route: Europe PMC REST fullTextXML (open access) saved to the shared checkout files/fulltext; whole article and Methods read from a text rendering of the JATS; Figures 1 to 4 and Extended Data Figures 1 and 2 converted from webp and opened at native size; the 58 references were counted, not read; the supplementary PDF (Supplementary Figs 1 to 7) was rendered at 90 dpi and its eight pages opened as two four-page montages (legibility is lower than native); the source-data spreadsheets and the reporting summary were not opened. Receipt prepared as staged JSON for the integrator and was not appended at preparation time.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID42420651_Garg2026_PMC.xml",
+ "source_fingerprint": "3228e43a65365c5fa31592c677a8f8f20d8f56db62b80c0870c5f9fa10865387",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "read",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID42420651.json",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-H4-01.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "verbatim_locators",
+  "The supplementary information PDF was opened as 90 dpi page montages; the xlsx source-data files and the reporting summary were not opened. WWOX is absent from the article: this is a substitute paper for the oxygen group, not WWOX evidence."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

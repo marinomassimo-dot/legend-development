@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-28119904-01",
+ "study_id": {
+  "pmid": "28119904",
+  "doi": "10.3389/fped.2016.00143"
+ },
+ "event_at": "2026-10-19T19:31:32Z",
+ "analysis_at": "2026-10-19T19:31:32Z",
+ "analysis_time_precision": "second",
+ "workflow": "scientist-c, interventions batch 2026-10-19, task INTERV-H4-C-20261019, branch task/INTERV-H4-C-20261019; context_policy SOURCE_FIRST. Route: Europe PMC REST fullTextXML (open access) saved to the shared checkout files/fulltext; whole review read from a text rendering of the JATS up to the reference list (79 references counted, not read); no figure or table exists in the deposit; the supplementaryFiles request returned an empty bean and the PMC image route returned a challenge page, so no image was available to open. Receipt prepared as staged JSON for the integrator and was not appended at preparation time.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID28119904_Perrone2016_PMC.xml",
+ "source_fingerprint": "e1411f5bc5f8c9e549755ef56fb8293888c2d9aa3eecf719d5b48bac79a3cfd3",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_present",
+  "results": "not_present",
+  "figures": "not_present",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID28119904.json",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-H4-01.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "verbatim_locators",
+  "The review is a text-only narrative with no Methods, Results, figures or tables; the primary trials it summarises were not opened. Oxygen-in-neonates substitute (preterm infants); not WWOX evidence and not applicable to term or older children without a stated gap."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

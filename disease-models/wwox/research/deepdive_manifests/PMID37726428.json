@@ -1,0 +1,290 @@
+{
+ "schema_version": 2,
+ "pmid": "37726428",
+ "doi": "10.1038/s41598-023-42741-7",
+ "receipt": "FTR-20261019-37726428-01",
+ "context_policy": "SOURCE_FIRST",
+ "landing": [
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-H4-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "No discovery-ledger lead beyond what the manifest and analysis note carry; the ledger is written by its validated writer only where a lead survives."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever for the reference genotype class is matured by this reading; forging from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged; nothing here reaches BLOCK-1."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; changes go through commit candidates."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No proposed change narrows or reverses a consolidated baseline claim; no audit trigger fired."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "is_primary_group_for_disease": false,
+  "weighting": "The Teskey laboratory (Calgary), primary for postictal hypoxia in the kindling model; not a WWOX group. Observation (tissue oxygen traces, behaviour) is weighted above the mitochondrial interpretation, which rests on isolated-mitochondria assays with n = 5."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "postictal hypoxia",
+    "count": 71,
+    "source": "PubMed ESearch 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (oxygen saturation OR oximetry)",
+    "count": 0,
+    "source": "PubMed ESearch 2026-10-19"
+   }
+  ],
+  "note": "Record matches, not measurements."
+ },
+ "multihop": {
+  "references_enumerated": 28,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-direct reference. The founding paper of the postictal hypoxia line is the Farrell 2016 reference (ref 5), not read here.",
+  "disposition": "No gene-direct references."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 37726428 --hops 1; paper_packet.py packet --pmid 37726428; fulltext_receipts.py status --pmid 37726428",
+  "hits": 0,
+  "note": "No record in any of the seven searched registry surfaces and no prior receipt; an empty result is a statement about that query over those files."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-10-19 by PubMed EFetch: no RetractionIn, ErratumIn, ExpressionOfConcernIn or CommentIn link; publication types Journal Article and Research Support, Non-U.S. Gov't.",
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 28,
+   "references_screened": 26,
+   "references_with_doi": 26,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID37726428_Villa2023_PMC.xml",
+   "sha256": "5cb024f576d3ededb9a42efb510a84846a011ca1709ba12bdf410a44e77f45e8",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10509159/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "5cb024f576d3ededb9a42efb510a84846a011ca1709ba12bdf410a44e77f45e8"
+   }
+  },
+  {
+   "path": "files/figures/PMID37726428/41598_2023_42741_Fig1_HTML.jpg",
+   "sha256": "712403385f4a4784826c90a19ba8a2586b0a5dd30bb9b28d49d06fa163f15c6b",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC10509159 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID37726428/41598_2023_42741_Fig2_HTML.jpg",
+   "sha256": "aff771d3a50f3b67696bdf71c9ed073e0d74fedab6a9a4b1b583762f58c048f6",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC10509159 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID37726428/41598_2023_42741_Fig3_HTML.jpg",
+   "sha256": "7d4f5671152123dca071fe3cd4ec7851fe89d9e64de1b5826e32df12a61b35e8",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC10509159 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID37726428/41598_2023_42741_Fig4_HTML.jpg",
+   "sha256": "be19272898ac4c0ff640ece8f776b2e53ec516897d1aa0727c721d1f41d00c27",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC10509159 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID37726428/41598_2023_42741_Fig5_HTML.jpg",
+   "sha256": "e6756a2e95f02b07619ddb79058bfd7bf1abaafd95cee4068f78fb8e8acbc950",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC10509159 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figures/PMID37726428/41598_2023_42741_Fig6_HTML.jpg",
+   "sha256": "acb2ee3eabe6bc183beb5d158faca9da96f955af6f4e98cd336fbedcc12b30b2",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "no_recipe": "Member extracted unchanged from the Europe PMC REST supplementaryFiles bundle for PMC10509159 (HTTP 200, application/zip, 2026-10-19); the bundle is not persisted because it is rebuilt by the service."
+   }
+  },
+  {
+   "path": "files/figure_renders/PMID37726428_m.png",
+   "sha256": "936d416eb84e4b279e7db0129f0d22561559b95761389b937a6d1242a01b65b6",
+   "kind": "figure",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/figures/PMID37726428/41598_2023_42741_Fig1_HTML.jpg",
+    "extractor": {
+     "name": "ImageMagick montage",
+     "version": "system package",
+     "call": "montage 41598_2023_42741_Fig[1-6]_HTML.jpg -tile 3x2 -geometry 800x"
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "936d416eb84e4b279e7db0129f0d22561559b95761389b937a6d1242a01b65b6"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "System: male Long-Evans rats (81) with hippocampal electrical kindling and an implanted oxygen optode; the readout is hippocampal pO2. No WWOX, no human data, and oxygen is measured, not given.",
+    "snippet": "Male Hooded Long-Evans rats (N = 81; 250–300 g at the time of surgery; Charles River, Canada)",
+    "anchor": "Methods, Animals",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37726428_Villa2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Hypoxia threshold: severe hypoxia is quantified as area under 10 mmHg tissue pO2, a threshold taken from earlier work.",
+    "snippet": "Severe hypoxic profiles were quantified by integrating duration and depth of oxygen levels below the critical threshold (10 mmHg)",
+    "anchor": "Results, first section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37726428_Villa2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Core result: repeated seizures produced postictal hypoxia that grew with each seizure in vehicle rats and did not in rats given acetaminophen or nifedipine.",
+    "snippet": "Vehicle-treated rats showed a progressive increase in PIH severity over time",
+    "anchor": "Results, first section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37726428_Villa2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The hypoxia is prevented by blocking the vasoconstriction (cyclooxygenase, L-type calcium channels), not by supplying oxygen; no oxygen-supplementation arm exists.",
+    "snippet": "We adopted acetaminophen and nifedipine as experimental tools to dissociate the contribution of PIH from the contribution of the seizure itself.",
+    "anchor": "Results, kindling section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37726428_Villa2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Seizure progression was unaffected by blocking hypoxia, so hypoxia is not shown to drive epileptogenesis.",
+    "snippet": "While the severity of PIH increases because of repeated seizures, repeated PIH does not contribute to kindling progression.",
+    "anchor": "Results, kindling section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37726428_Villa2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Interictal baseline pO2 fell with repeated seizures and recovered about six days after the final seizure.",
+    "snippet": "rats that exhibited seizures had significantly lower interictal oxygen levels at the end of kindling that recovered back to baseline by 6 days from the final seizure",
+    "anchor": "Results, interictal pO2 section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37726428_Villa2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Memory: seizure-exposed vehicle rats failed the novel object/context task; both drugs prevented it; PIH severity correlated negatively with performance (R2 0.35).",
+    "snippet": "indicating a poorer performance of rats that had more severe hypoxia",
+    "anchor": "Results, memory section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37726428_Villa2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Mitochondrial result: isolated hippocampal mitochondria showed lower calcium retention and lower basal and ATP-linked respiration after seizures; the respiration deficit recovered by two weeks. Only seizure-exposed hypoxic rats were compared with no-seizure controls, with n = 5.",
+    "snippet": "In addition, we found significantly lower basal respiration in mitochondria isolated from seizure exposed hypoxic rats compared to control rats",
+    "anchor": "Results, mitochondrial section",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37726428_Villa2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Timing inconsistency: the Discussion says the deficit was seen 3 days after the last seizure, whereas Results test at 24 hours and 2 weeks.",
+    "snippet": "we still observed seizure-induced deficits in performance 3 days after their last seizure",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37726428_Villa2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Mechanism offered is hypothesis: low mitochondrial metabolism leaves the chain reduced and favours ROS; the paper says clinical interictal hypoperfusion should be tested.",
+    "snippet": "It would be clinically relevant to determine if people with epilepsy have a chronically, but subtly hypoperfused seizure onset zones compared to seizure-free regions.",
+    "anchor": "Discussion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37726428_Villa2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "No limitations section; the sample sizes vary by figure (n 7 to 8 for oxygen traces, n 9 for Figure 4, n 4 to 9 for behaviour, n 5 for mitochondria).",
+    "snippet": "Data are shown as mean ± SEM (n = 9 each group), followed by two-way repeated measure ANOVA and Sidak’s post hoc test",
+    "anchor": "Figure 4 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID37726428_Villa2023_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figures 1 to 6 opened: Fig 1 oxygen traces and area-below-10-mmHg bars (vehicle rises to about 400 mmHg min, drug groups near 0); Fig 2 group comparison; Fig 3 seizure duration and Racine stage unchanged by treatment; Fig 4 interictal pO2 about 27 to 19 mmHg in vehicle versus about 30 in drug groups, and 2-week recovery; Fig 5 discrimination index and regression; Fig 6 calcium threshold and OCR bars.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1c-j hippocampal pO2 traces and bars; Figure 2 bars with daggers; Figure 3 a-d; Figure 4 a-d; Figure 5 a-c; Figure 6 a-e.",
+    "anchor": "Figures 1-6",
+    "surface": "figure",
+    "artifact": "files/figure_renders/PMID37726428_m.png",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC10509159/fullTextXML returned HTTP 200 (76971 bytes) on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table or a figure image."
+ }
+}

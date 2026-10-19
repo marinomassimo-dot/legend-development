@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-39965572-01",
+ "study_id": {
+  "pmid": "39965572",
+  "doi": "10.1016/j.cell.2025.01.029"
+ },
+ "event_at": "2026-10-19T19:36:36Z",
+ "analysis_at": "2026-10-19T19:36:36Z",
+ "analysis_time_precision": "second",
+ "workflow": "scientist-c, interventions batch 2026-10-19, task INTERV-H4-C-20261019, branch task/INTERV-H4-C-20261019; context_policy SOURCE_FIRST. Route: Europe PMC REST fullTextXML (open access) saved to the shared checkout files/fulltext; whole article, STAR Methods and figure legends read from a text rendering of the JATS (30 references counted, not read); the six figures opened in two montages at 800 px per panel; the six-page supplementary PDF rendered at 70 dpi and opened as one montage (legibility is low for the small tables). Receipt prepared as staged JSON for the integrator and was not appended at preparation time.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID39965572_Blume2025_PMC.xml",
+ "source_fingerprint": "c12ae24abfbdeb1825e110913c84d554c5caaeac109f9b1e5d45cf1e8767c2d6",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "read",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID39965572.json",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-c.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-C-H4-01.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "verbatim_locators",
+  "There is no statistics section in the STAR Methods; tests are given only in legends. The supplementary pages were read at 70 dpi montage resolution. A mitochondrial-disease preclinical paper on hypoxia by drug; not WWOX evidence and not safe-use guidance."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}
