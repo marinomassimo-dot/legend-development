@@ -126,3 +126,17 @@
 - Metabolism: one sentence ("WWOX is involved in mitochondrial respiration and metabolism") citing a read review and the parked Choo 2015 primary; nothing is measured.
 
 **System gap and change.** T-ALL line under a differentiation stimulus, human and mouse cDNA overexpression; reference genotype is biallelic loss. No claim moves. Together with paper 6 it closes the loop on the review sentences of paper 4: the mitochondrial and pS14 statements resolve to single-line observations by one laboratory.
+
+## Paper 8. Lee 2021, Cells (PMID 34210081): review of the WWOX gene, FRA16D and WWOX in metabolism (added from the Carvalho/Huang chain; the one metabolic-theme review not yet read)
+
+`context_policy: QUESTION_DRIVEN` (held: papers 4 and 7, which cite the Drosophila respiratory-complex primary, and this repository's knowledge that most mammalian WWOX-metabolism primaries are already read). Surface: Europe PMC JATS plus two figure images (both opened); whole article read; the MDPI PDF returned HTTP 403 and was not used. Written by the Richards laboratory, which produced the Drosophila WWOX metabolism papers.
+
+**What it measures.** Nothing. It narrates the discovery of WWOX at FRA16D, the unusually long introns (Figure 1: human intron 5 of 222570 and the last intron of 778855 bases against 18778 and 63559 in fugu), a "WWOX in Metabolism" section built on its own laboratory's Drosophila work, a section on population-genetic risk, and two open questions (why a fragile site lies in the gene; what the enzyme does).
+
+**What it carries on the metabolic theme, and what it does not support.**
+- *Drosophila.* WWOX-deficient flies show "no phenotypic consequences"; reduced WWOX worsens, and extra WWOX suppresses, tissue phenotypes caused by mitochondrial deficiency, in a way that needs the SDR active-site tyrosine (Y288F in the fly, residue 293 in human). The text then infers that human WWOX-deficiency pathology is "likely to be treatable" through a compensating pathway; no compensating pathway is named, so this is an `IPOTESI`.
+- *Mammalian chain.* HIF1A and glucose, aerobic glycolysis, muscle ablation, HDL and lipids and an interactome enrichment are listed as one sentence of single-laboratory results; I checked that the primaries named there are already read in this repository (Abu-Remaileh 2014, Iatan 2014, Lee 2019 interactome, the muscle paper) except the two subscription items below.
+- *Human risk.* "The genomic region containing the WWOX gene has been identified as a genetic risk factor in each of these metabolic diseases" attributes risk to the region, not the gene, and its twelve references include a lung-cancer copy-number paper and the SCAR12 family paper, neither a metabolic disease. The review mentions human biallelic loss-of-function families only in the enzyme-specificity section, and never links them to a metabolic phenotype.
+- *The enzyme.* The substrate and product are unknown; the build-up-of-a-metabolite model is conjecture with the metabolite unidentified.
+
+**System gap and change.** Flies and cultured cells for mechanism; population GWAS for human risk; nothing in the reference genotype class (constitutive biallelic loss in a developing brain). No claim moves. It is the best single statement that the WWOX-metabolism axis is a Drosophila and mouse-tissue axis without a human biallelic-loss metabolic datum, which is what the repository's own readings concluded; the unread primaries behind its Drosophila arm are Choo 2015 and Dayan 2013, both subscription (parked).
