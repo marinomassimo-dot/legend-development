@@ -1,5 +1,5 @@
 {
- "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
  "_note": "Metabolic batch. Orchestrator assumption: scientist-d is a fourth equivalent Scientist under the shared contract roles/scientist.md (body 32); operator authorised up to four Scientists on 2026-10-19.",
  "TASK_ID": "METAB-G2-B-20261019",
  "DIRECTIVE_VERSION": 1,
@@ -30,6 +30,26 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "ASSIGNED",
- "assigned_on": "2026-10-19"
+ "CURRENT_STATE": "CLAIMED",
+ "assigned_on": "2026-10-19",
+ "TASK_ACK": {
+  "TASK_ID": "METAB-G2-B-20261019",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "DECISION": "ACCEPTED",
+  "ACTOR_ID": "scientist-b",
+  "acked_at": "2026-10-19T17:56:53Z",
+  "reading_mode": "PRIMARY_EVIDENCE_READ",
+  "note": "Dispatch brief, standing brief, roles/scientist.md, state manifest (current_state READY), LEGEND_CORE 21c/21d/21e, fulltext_read_receipt.md (first 400 lines plus validator feedback), epistemic_discipline.md read before the first paper. Working on task branch task/METAB-G2-B-20261019 in .claude/worktrees/metab-g2-b. Receipts staged as JSON under research/receipt_staging/scientist-b, never recorded by this actor."
+ },
+ "TASK_CLAIM": {
+  "TASK_ID": "METAB-G2-B-20261019",
+  "GENERATION": 1,
+  "ACTOR_ID": "scientist-b",
+  "claimed_at": "2026-10-19T17:56:53Z",
+  "durable_pointer": "ledger/tasks/scientist-b/METAB-G2-B-20261019.json on branch task/METAB-G2-B-20261019",
+  "claim_precondition_checked": "No other contract names group G2 papers; groups G1/G3/G4 are separate lots of scientist-a/-c/-d."
+ },
+ "DEFAULTS_TAKEN": [],
+ "STOP_LOG": []
 }
