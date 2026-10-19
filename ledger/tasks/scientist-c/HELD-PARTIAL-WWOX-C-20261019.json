@@ -29,6 +29,26 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "ASSIGNED",
- "assigned_on": "2026-10-19"
+ "CURRENT_STATE": "CLAIMED",
+ "assigned_on": "2026-10-19",
+ "TASK_ACK": {
+  "TASK_ID": "HELD-PARTIAL-WWOX-C-20261019",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "ACTOR_ID": "scientist-c",
+  "DECISION": "ACCEPTED",
+  "acked_at": "2026-10-19T00:00:00Z",
+  "reading_mode": "PRIMARY_EVIDENCE_READ",
+  "duplicate_assignment_check": "Staged receipts of scientist-a/-b/-c/-d listed before any paper was chosen; peers' lots (WWOX-direct debts, legacy-only reconstructions, H1/H2) and this actor's own earlier METAB-G3-C and INTERV-H4-C receipts (26355344, 27551439, 35984507, 41677633) excluded; ledger owed-section census run per PMID."
+ },
+ "TASK_CLAIM": {
+  "TASK_ID": "HELD-PARTIAL-WWOX-C-20261019",
+  "GENERATION": 1,
+  "ACTOR_ID": "scientist-c",
+  "claimed_at": "2026-10-19T00:00:00Z",
+  "durable_pointer": "ledger/tasks/scientist-c/HELD-PARTIAL-WWOX-C-20261019.json on branch task/HELD-PARTIAL-WWOX-C-20261019, worktree .claude/worktrees/held-c",
+  "lot": "WWOX-direct partial receipts with a figure, supplementary or table debt: 35328751, 37897534, 38542478, 33195192, 42589397, 40875931, 36537114, 35460704, 33612478, 31543760, 24308844, 33958783 (max 12); references-only debts skipped"
+ },
+ "DEFAULTS_TAKEN": [],
+ "STOP_LOG": []
 }
