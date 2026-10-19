@@ -32,11 +32,11 @@ annotations is reported below whatever it happens to be.
 | …undirected edges they collapse into | 46 |
 | Edges carrying a declared relation type | 0 |
 | Nodes carrying a biological scale | 0 |
-| Deep-dive manifests read | 353 |
+| Deep-dive manifests read | 367 |
 | …of which bound to at least one claim | 100 |
-| Propositions scanned | 5516 |
-| …carrying a relational connective | 1088 |
-| …locator-backed candidates | 1048 |
+| Propositions scanned | 5674 |
+| …carrying a relational connective | 1139 |
+| …locator-backed candidates | 1099 |
 | …locator-backed and bound to a claim | 353 |
 
 The scanned population is three declared surfaces and no others: every claim
@@ -320,15 +320,15 @@ each side is a reading, and every record carries `endpoints_resolved: false`.
 | Source | Candidates |
 |---|---|
 | claim_title | 21 |
-| locator_proposition | 1048 |
+| locator_proposition | 1099 |
 | working_model_mirror_title | 19 |
 
 | Connective class (lexical) | Candidates |
 |---|---|
-| AMBIGUOUS_LEXICAL_FORM | 731 |
+| AMBIGUOUS_LEXICAL_FORM | 765 |
 | ARROW | 18 |
-| ASSOCIATIVE | 60 |
-| CAUSAL | 206 |
+| ASSOCIATIVE | 64 |
+| CAUSAL | 219 |
 | DEPENDENCY | 73 |
 
 A connective class is a property of the word, not a verdict about the
@@ -375,7 +375,7 @@ carried no connective from the lexicon.
 
 ## Provenance
 
-Derived from 356 input files; digest
-`e81ffceb203b6a99`. Sources: the claim, paper and
+Derived from 370 input files; digest
+`5e0a8e27ed1018df`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 

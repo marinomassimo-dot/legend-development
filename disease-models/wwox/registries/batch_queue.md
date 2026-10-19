@@ -8,16 +8,16 @@
 
 ## ▶ Start here
 
-**316 records have not been processed.** **155** of them have a free full text and can be worked immediately.
+**315 records have not been processed.** **155** of them have a free full text and can be worked immediately.
 
 | Verdict | Records | What it means |
 |---|---:|---|
 | 🟢 **`NEW`** | 53 | never seen by the system — **the front of the queue** |
-| 🟢 **`CORPUS_CATALOGUED`** | 263 | catalogued and deduplicated, never analytically processed |
+| 🟢 **`CORPUS_CATALOGUED`** | 262 | catalogued and deduplicated, never analytically processed |
 | 🟡 `OUT_OF_SCOPE_LIKELY` | 182 | no scope signal in the title — later in the queue, **never discarded** |
 | 🟡 `AMBIGUOUS` | 4 | identifiers must be resolved before ingest |
 | ⏳ `IN_PIPELINE` | 41 | already in flight |
-| ✅ `KNOWN_INTEGRATED` | 163 | done — read depth in the table below |
+| ✅ `KNOWN_INTEGRATED` | 164 | done — read depth in the table below |
 
 The two green rows are the answer to *"where do I start?"*. The table further down lists
 every record in this order, so a second person can take the next unclaimed row without
@@ -639,7 +639,6 @@ for an entirely unprocessed record.
 | [31075076](https://pubmed.ncbi.nlm.nih.gov/31075076/) | 2019 | ✅ | full text | CORPUS P022 | Decoding the link between WWOX and p53 in aggressive breast cancer. |
 | [30619736](https://pubmed.ncbi.nlm.nih.gov/30619736/) | 2018 | ✅ | full text | PAPER 032 | Delineating WWOX Protein Interactome by Tandem Affinity Purification-Mass Spectrometry: Identification of Top Interactors and Key Metabolic Pathways Involved. |
 | [27308504](https://pubmed.ncbi.nlm.nih.gov/27308504/) | 2015 | ✅ | full text | CORPUS P123 | WWOX guards genome stability by activating ATM. |
-| [26355344](https://pubmed.ncbi.nlm.nih.gov/26355344/) | 2015 | ✅ | full text | receipt FTR-20261019-26355344-02 | A cascade of protein aggregation bombards mitochondria for neurodegeneration and apoptosis under WWOX deficiency. |
 | [25024751](https://pubmed.ncbi.nlm.nih.gov/25024751/) | 2014 | ✅ | full text | CORPUS P378 | Impact of decitabine on immunohistochemistry expression of the putative tumor suppressor genes FHIT, WWOX, FUS1 and PTEN in clinical tumor samples. |
 | [24550385](https://pubmed.ncbi.nlm.nih.gov/24550385/) | 2014 | ✅ | full text | CORPUS P272 | Characterizing WW domain interactions of tumor suppressor WWOX reveals its association with multiprotein networks. |
 | [24510053](https://pubmed.ncbi.nlm.nih.gov/24510053/) | 2014 | ✅ | full text | CORPUS P308 | WW domain-containing oxidoreductase's role in myriad cancers: clinical significance and future implications. |
@@ -774,6 +773,7 @@ for an entirely unprocessed record.
 | [27551439](https://pubmed.ncbi.nlm.nih.gov/27551439/) | 2015 | ✅ | full text | PAPER 136 | WWOX dysfunction induces sequential aggregation of TRAPPC6AΔ, TIAF1, tau and amyloid β, and causes apoptosis. |
 | [27308416](https://pubmed.ncbi.nlm.nih.gov/27308416/) | 2015 | ✅ | full text | PAPER 072 | WWOX loss activates aerobic glycolysis. |
 | [26499798](https://pubmed.ncbi.nlm.nih.gov/26499798/) | 2015 | ✅ | full text | PAPER 089 | Pleiotropic Functions of Tumor Suppressor WWOX in Normal and Cancer Cells. |
+| [26355344](https://pubmed.ncbi.nlm.nih.gov/26355344/) | 2015 | ✅ | full text | PAPER 310 | A cascade of protein aggregation bombards mitochondria for neurodegeneration and apoptosis under WWOX deficiency. |
 | [26256646](https://pubmed.ncbi.nlm.nih.gov/26256646/) | 2015 | ✅ | full text | PAPER 074 | Tumor Suppressor WWOX inhibits osteosarcoma metastasis by modulating RUNX2 function. |
 | [25650666](https://pubmed.ncbi.nlm.nih.gov/25650666/) | 2015 | ✅ | full text | PAPER 137 | Trafficking protein particle complex 6A delta (TRAPPC6AΔ) is an extracellular plaque-forming protein in the brain. |
 | [25595191](https://pubmed.ncbi.nlm.nih.gov/25595191/) | 2015 | ✅ | full text | PAPER 292 | Regulation of cell signaling and apoptosis by tumor suppressor WWOX. |
