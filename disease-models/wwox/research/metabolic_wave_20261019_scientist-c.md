@@ -550,3 +550,46 @@ observations, restated.** It is the most convenient map of the unread primaries 
 refs 37 (blocked), 39 (MPP+ and Tyr33 phosphorylation), 55 and 57 (the two Zfra papers), 18 (the 2004
 tau paper, one of the three unread primaries the standing brief names). Preserved as a queued block in
 the commit candidate so that a later actor can read them in the order the lot prefers.
+
+---
+
+## 12. PMID 34354738 — Munk 2021, Front Genet: an 80 kb PRKN intron deletion lowers its fragility without changing expression (tier 3, new)
+
+context_policy: SOURCE_FIRST. Question the selection row poses: does fragility itself, rather than loss of
+expression, matter? Read for what the experiment can and cannot say; WWOX is named nowhere.
+
+**What it MEASURES.** Chicken DT40 lymphoblast cells: PRKN tagged with a tandem Venus-YFP, an 80 kb
+deletion of intron 7 (about 55 percent of that intron, about 12 percent of the gene) made by CRISPR
+with a floxed blasticidin template; one homozygous clone and two heterozygous clones kept the
+full-length allele as an internal control. Readouts: image-cytometry YFP level, RT-qPCR of PRKN and its
+co-regulated neighbour PACRG, FISH breakage or constriction at PRKN after aphidicolin, karyotype of the
+clones.
+
+**First-pass observations (three figures, three one-page supplements and the tables document).**
+- Fragility drops from about 19, 16 and 18 percent of alleles broken (full length, three cell lines)
+  to about 8 and 10 percent for the deleted allele of the same cells (P 0.032 and 0.011; Fisher exact
+  on counts of 167 to 171 paired alleles, so the alleles within a spread are not independent
+  observations; two independent clones only).
+- Expression is reported unchanged (reporter, PRKN mRNA); the reporter histogram of the
+  homozygous clone sits slightly right of the full-length peak in all three replicates, marked n.s.;
+  PACRG is lower in all three clones (about -0.65, -0.27 and -0.17 log2), significant in one and
+  put down to clonal variation. So "no impact on expression" is a three-replicate, one-clone result
+  for the homozygote, with a faint shift in the same direction as no effect would not predict.
+- Two of 14 targeted clones are chromosome 3 trisomic: the targeting itself carries a
+  mis-segregation risk, a caveat for any engineered fragile-site gene.
+- Authors' own limits: replication timing was not measured; the mechanisms for lower fragility are
+  proposed, not tested; the claim to a first controlled experiment on a large intron is theirs.
+
+FIRST-PASS OBSERVATIONS COMPLETE -> PRIOR KNOWLEDGE ADMITTED FOR COMPARISON: admitted the registry query (empty) and the
+sibling comparator read earlier in this lot (the replication-stress and parkin paper).
+
+**What it changes in the disease model: one sentence of vocabulary, no claim.** It shows in one
+system that the breakage frequency of a fragile-site gene and its expression level can be dissociated
+(gene length drives fragility without changing mRNA). That is the discrimination the "fragility or
+loss" question needs, and the repository has no WWOX counterpart: no record tests FRA16D breakage
+against WWOX expression, and the replication-stress paper read earlier shows WWOX transcript falling
+after chronic aphidicolin in human fibroblasts, a case where the two may move together. This paper
+does not touch human cells, neurons, mitochondria, or phenotype; it cannot say that fragility itself
+has a phenotypic consequence, only that it can be changed without changing expression. Transfer: a
+design template (an internal control allele, FISH, an expression reporter) and a reminder that a
+fragility effect needs a locus-specific assay, which the model does not have.
