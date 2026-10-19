@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-19T00:00:00Z",
+ "analysis_time_precision": "date_only",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "tables": "read",
+  "figures": "read",
+  "references": "not_read",
+  "supplementary": "not_present"
+ },
+ "event_at": "2026-10-19T18:36:25Z",
+ "event_id": "FTR-20261019-40589985-01",
+ "evidence_basis": [
+  "JATS body and Tables 1-3 read section by section from a text rendering; the three main-figure images (767 px wide, the native size in the deposit) opened.",
+  "No supplementary material is listed in the deposit; reference list counted (41), not read."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID40589985.json",
+  "disease-models/wwox/research/interventions_wave_20261019_scientist-d.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "1eb59f0f19a6645f6523401f0af5532c679e2040ada2608431b760d90ec775d7",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID40589985_Sun2025_PMC.xml",
+ "study_id": {
+  "doi": "10.3389/fneur.2025.1587200",
+  "pmid": "40589985"
+ },
+ "workflow": "scientist-d (stated assumption of the Orchestrator), interventions wave 2026-10-19, task INTERV-H5-D-20261019, branch task/INTERV-H5-D-20261019; context_policy QUESTION_DRIVEN. Route: Europe PMC REST fullTextXML into the shared checkout files/fulltext/; figures and supplements from the PMC Article Datasets open-data bucket where present; locators captured into the manifest and verified by deepdive_manifest.py --verify-artifacts."
+}
