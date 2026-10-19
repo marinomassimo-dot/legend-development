@@ -1,0 +1,381 @@
+{
+ "schema_version": 2,
+ "pmid": "39000139",
+ "doi": "10.3390/ijms25137029",
+ "receipt": "FTR-20261019-39000139-01",
+ "landing": [
+  "CC-20261019-SCIENTIST-B-H3-EPINEPHRINE-SAFETY-01",
+  "interventions_wave_20261019_scientist-b"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: the Europe PMC fullTextXML route returned the body and the PMC OA S3 bucket the figures."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not run: the reading was produced directly under the Scientist brief; a deepdive pass would duplicate the locators."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered: no consolidated baseline claim is narrowed, reversed or removed and no MAJOR change class is declared (group H3 has no WWOX evidence to compare against)."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 48299,
+  "publications_on_gene": 2,
+  "counts_measured": "PubMed esearch 2026-10-19: 'Zhang R[au]' 48299; 'Zhang R[au] AND WWOX' 2 (surname-initial queries are ambiguous and are not evidence of authorship); last author 'Chen X[au]'.",
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Single cell-line study from a small group; transcriptome n of 3 per arm, Student t-tests, no receptor-specific control. Weigh as a descriptive observation in an insulinoma line.",
+  "note": "Not a WWOX group."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "WWOX tokens in the JATS",
+    "route": "case-insensitive count over the persisted JATS, 2026-10-19",
+    "count": 0
+   }
+  ],
+  "note": "WWOX does not occur in the article."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 44,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "dependency_integrity.py screen reference count, confirmed against <ref> elements in the JATS.",
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-directed reference."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "registry_records.py get --theme adrenergic / epinephrine / catecholamine (no record); --theme MIN6, beta-cell, insulin secretion, UCP2 (0 of 1586 records each); --theme 'ER stress' (4 records, none about insulin cells)",
+  "hits": 0,
+  "finding": "The laboratory holds nothing on beta-cell biology or epinephrine in cells; the four ER-stress records concern WWOX directionality in neurons and a TPC6A cascade, and are unrelated to this system. An empty result is a statement about those queries over those files."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-19",
+  "route": "PubMed efetch 2026-10-19 for this PMID (no CommentsCorrections element, publication types listed); JATS front matter",
+  "result": "No retraction, correction or expression of concern found in the PubMed record.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 44,
+   "references_screened": 44,
+   "references_with_doi": 44,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID39000139_Zhang2024_PMC11241606.xml",
+   "sha256": "7a6f28d031ec21ffc32ea3259de3c0dcd7e3aeb1cfebfc5774d9342081ceba14",
+   "kind": "article_text",
+   "note": "Europe PMC JATS for PMC11241606, 102,012 bytes; abstract, introduction, results, discussion, methods, conclusions, Figures 1 to 9 legends present; the supplementary file (primer table) is not in the JATS.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11241606/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "7a6f28d031ec21ffc32ea3259de3c0dcd7e3aeb1cfebfc5774d9342081ceba14"
+   }
+  },
+  {
+   "path": "files/figures/PMID39000139/ijms-25-07029-g001.jpg",
+   "sha256": "190d67224f94246e1a90fa01fa2a61ee0c701d983ad5894c726f99055da09e68",
+   "kind": "figure",
+   "note": "Figure 1 (file g001): inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11241606.1/ijms-25-07029-g001.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "190d67224f94246e1a90fa01fa2a61ee0c701d983ad5894c726f99055da09e68"
+   }
+  },
+  {
+   "path": "files/figures/PMID39000139/ijms-25-07029-g002.jpg",
+   "sha256": "8aeb26f584cfb130e6c3a91639bd6f5541a2ae28cf535e1e66ecbb468578b0da",
+   "kind": "figure",
+   "note": "Figure 2 (file g002): inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11241606.1/ijms-25-07029-g002.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "8aeb26f584cfb130e6c3a91639bd6f5541a2ae28cf535e1e66ecbb468578b0da"
+   }
+  },
+  {
+   "path": "files/figures/PMID39000139/ijms-25-07029-g003.jpg",
+   "sha256": "0eed968ee03a23e18de9d38b906452f8a89644cf8fe77dcc5ee5d7e5deb7a302",
+   "kind": "figure",
+   "note": "Figure 3 (file g003): inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11241606.1/ijms-25-07029-g003.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "0eed968ee03a23e18de9d38b906452f8a89644cf8fe77dcc5ee5d7e5deb7a302"
+   }
+  },
+  {
+   "path": "files/figures/PMID39000139/ijms-25-07029-g004.jpg",
+   "sha256": "868634c29a130374b8654543b8b3417a8f78832fd6dd4656cbd5ba26387999b7",
+   "kind": "figure",
+   "note": "Figure 4 (file g004): inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11241606.1/ijms-25-07029-g004.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "868634c29a130374b8654543b8b3417a8f78832fd6dd4656cbd5ba26387999b7"
+   }
+  },
+  {
+   "path": "files/figures/PMID39000139/ijms-25-07029-g005.jpg",
+   "sha256": "29abbb001c5acebcf067e9f2c230f5382ce466bdcc2af73eb10a014a72d36bc2",
+   "kind": "figure",
+   "note": "Figure 5 (file g005): inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11241606.1/ijms-25-07029-g005.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "29abbb001c5acebcf067e9f2c230f5382ce466bdcc2af73eb10a014a72d36bc2"
+   }
+  },
+  {
+   "path": "files/figures/PMID39000139/ijms-25-07029-g006.jpg",
+   "sha256": "a87e2bece3ed779af780c90389a72c08d6f4a27f36021d88897a8fd8a7c7b919",
+   "kind": "figure",
+   "note": "Figure 6 (file g006): inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11241606.1/ijms-25-07029-g006.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "a87e2bece3ed779af780c90389a72c08d6f4a27f36021d88897a8fd8a7c7b919"
+   }
+  },
+  {
+   "path": "files/figures/PMID39000139/ijms-25-07029-g007.jpg",
+   "sha256": "6bda04c643c3d15c91710e2893e8ce353b6ee7387e023d074c59833eef1927bd",
+   "kind": "figure",
+   "note": "Figure 7 (file g007): inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11241606.1/ijms-25-07029-g007.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "6bda04c643c3d15c91710e2893e8ce353b6ee7387e023d074c59833eef1927bd"
+   }
+  },
+  {
+   "path": "files/figures/PMID39000139/ijms-25-07029-g008.jpg",
+   "sha256": "295a668abc0f7643ae8120436602a5f058c14fcb7c9b88a5b83fa74e846906c0",
+   "kind": "figure",
+   "note": "Figure 8 (file g008): inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11241606.1/ijms-25-07029-g008.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "295a668abc0f7643ae8120436602a5f058c14fcb7c9b88a5b83fa74e846906c0"
+   }
+  },
+  {
+   "path": "files/figures/PMID39000139/ijms-25-07029-g009.jpg",
+   "sha256": "11d18f293167cf15b6443d10235df1104ec455634715e66902bdae5613bb1a06",
+   "kind": "figure",
+   "note": "Figure 9 (file g009): inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11241606.1/ijms-25-07029-g009.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "11d18f293167cf15b6443d10235df1104ec455634715e66902bdae5613bb1a06"
+   }
+  },
+  {
+   "path": "files/supplement/PMID39000139_ijms-3025480-supplementary.pdf",
+   "sha256": "e1c0fc6b7a954638d43edabc0d5555445110e635ff0383895e9d4a45010c8c51",
+   "kind": "supplement_binary",
+   "note": "Supplementary Table S1 (RT-qPCR primers), 59,918 bytes, extracted from the inner zip of the Europe PMC supplementaryFiles download; read in full; it carries no primers for Bcl2 or Bax, whose expression is plotted in Figure 7E.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11241606/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "europepmc_supplementaryfiles_zip",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "e1c0fc6b7a954638d43edabc0d5555445110e635ff0383895e9d4a45010c8c51"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC JATS, 102,012 bytes; abstract, introduction, results, discussion, methods, conclusions, Figures 1 to 9 legends present; the supplementary file (primer table) is not in the JATS.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "COVERAGE: whole article read including Methods; all nine figures inspected as images; the supplementary primer table read in full. No separate tables in the article. The reference list (44) was screened for integrity, not read.",
+  "entries": [
+   {
+    "proposition": "DESIGN: MIN6 cells exposed to 100 nM epinephrine for 3 days, then 2 days without it; the epinephrine was obtained from an animal hospital; transcriptome n of 3 per group; Student t-tests; no antagonist, no receptor knockdown, no vehicle-matched oxidation control.",
+    "snippet": "Epinephrine for cell culture was obtained from the Animal Hospital of Southwest University, and the concentration used in this study was 100 nM.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39000139_Zhang2024_PMC11241606.xml",
+    "anchor": "4.1 Cell Culture",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "NO ROS ASSAY: the Methods list kits for total antioxidant capacity, SOD, catalase, glutathione peroxidase and ATP; there is no ROS probe, yet the Discussion concludes that prolonged epinephrine leads to increased ROS production.",
+    "snippet": "In conclusion, prolonged exposure to epinephrine leads to increased ROS production.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39000139_Zhang2024_PMC11241606.xml",
+    "anchor": "3 Discussion, last paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The kit list in the Methods: total antioxidant capacity, superoxide dismutase, catalase, glutathione peroxidase and ATP content; nothing that measures reactive oxygen species.",
+    "snippet": "Total antioxidant capacity (T-AOC assay kit, A015-3), superoxide dismutase box (SOD assay kit, A001-3-2), catalase (CAT assay kit, A007-1), glutathione peroxidase (GSH-Px assay kit, A005-1-2), and ATP content",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39000139_Zhang2024_PMC11241606.xml",
+    "anchor": "4.5 Biochemical Parameters Assays",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "NO APOPTOSIS ASSAY: the Introduction says apoptosis was measured; the Methods contain no apoptosis assay, Bax was unchanged and Bcl2 fell by a third in the qPCR.",
+    "snippet": "we measured insulin secretion, cell proliferation, and apoptosis in MIN6 cells",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39000139_Zhang2024_PMC11241606.xml",
+    "anchor": "1 Introduction, last paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DESENSITISATION is inferred from the alpha2A receptor mRNA, which fell by 13 percent at day 3 and about 30 percent at day 5 (Figure 1B); no receptor protein, cAMP or signalling readout is reported.",
+    "snippet": "Despite removal of epinephrine, α2A-AR RNA expression did not show reversible features (Figure 1B).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39000139_Zhang2024_PMC11241606.xml",
+    "anchor": "2.1 Glucose Stimulated Insulin Responsiveness",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "TIMING: glucose-stimulated secretion was measured on day 5, after two days without epinephrine, not during exposure; the Discussion contrasts it with reports that secretion decreased after 72 hours of exposure.",
+    "snippet": "In contrast to the acute epinephrine response mechanism, insulin secretion decreased rather than increased when MIN6 cells were exposed to epinephrine for 72 h [21,22]",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39000139_Zhang2024_PMC11241606.xml",
+    "anchor": "3 Discussion, paragraph 1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "MITOCHONDRIA: the text reads upregulated electron-transport and ATP-synthase subunits as disruption of ATP synthesis, while ATP content doubled at 20 mM glucose in the treated cells (Figure 5A).",
+    "snippet": "the levels of ETC and ATP synthase subunits were upregulated, indicating a disruption in mitochondria ATP synthesis (Figure 4B)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39000139_Zhang2024_PMC11241606.xml",
+    "anchor": "2.4 Impaired Mitochondria Signaling",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PSEUDOREPLICATION RISK: docked insulin granules were counted in at least six random sections per group, a section count and not independent culture replicates.",
+    "snippet": "at least six random sections were used per group, and vesicles with dense bodies within 0.2 μm of the plasma membrane were considered to be docked insulin granules",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39000139_Zhang2024_PMC11241606.xml",
+    "anchor": "4.6 Transmission Electron Microscopy",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Introduction cites an association of elevated fetal catecholamines with neonatal hyperinsulinaemic hypoglycaemia (source 14); the experiment itself uses an adult mouse insulinoma line, not a neonatal system.",
+    "snippet": "elevated fetal catecholamines are associated with neonatal β-cell physiology, suggesting a mechanistic link between prenatal or perinatal stress and subsequent neonatal hyperinsulinemic hypoglycemia",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39000139_Zhang2024_PMC11241606.xml",
+    "anchor": "1 Introduction, paragraph 3",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1: (B) alpha2A receptor mRNA relative fold change about 0.87 at day 3 and 0.70 at day 5; (C) glucose-stimulated insulin secretion rises at 20 mM glucose only (about 6.5 to 9.5); (D) insulin content about 37 to 50.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1 panels B, C and D: bars of alpha2A-AR mRNA fold change (control 1.0, chronic epinephrine about 0.87 and 0.70 with asterisks), insulin secretion at 0, 2.8, 10 and 20 mM glucose with an asterisk only at 20 mM, total insulin content with an asterisk.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39000139/ijms-25-07029-g001.jpg",
+    "anchor": "Figure 1B-D, native JPEG",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "MIN6 mouse insulinoma cell line, passages 32 to 40",
+     "genotype": "wild type cell line",
+     "treatment": "100 nM epinephrine for 3 days then 2 days in standard medium",
+     "comparator": "untreated MIN6 cells",
+     "timepoint": "day 3 and day 5",
+     "endpoint": "receptor mRNA, glucose-stimulated insulin secretion, insulin content"
+    }
+   },
+   {
+    "proposition": "Figure 3A: in the principal component plot the three control and three treated samples separate along the second component, which carries 1.7 percent of the variance, while the first component (97.4 percent) varies within the control group and does not separate the groups.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3A PCA plot: PC1 97.4 percent on the x axis from about -10000 to 15000 and PC2 1.7 percent on the y axis; control points (orange) spread along PC1 near y of -400 to -600; chronic epinephrine points (blue) cluster at y of 350 to 600.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39000139/ijms-25-07029-g003.jpg",
+    "anchor": "Figure 3A, native JPEG",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "MIN6 mouse insulinoma cell line, passages 32 to 40",
+     "genotype": "wild type cell line",
+     "treatment": "100 nM epinephrine for 3 days then 2 days in standard medium",
+     "comparator": "untreated MIN6 cells",
+     "endpoint": "RNA-seq principal components, n 3 per group"
+    }
+   },
+   {
+    "proposition": "Figure 9 (graphical model) draws ROS, apoptosis and a survival gauge; neither ROS nor apoptosis was measured in the article.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 9 schematic: chronic epinephrine, alpha2A-AR desensitization, ER stress with BiP, PERK, IRE1, ATF4, XBP1, CHOP, ROS arrow to mitochondria with UCP2 down and OPA1, PINK, PRKN up, oxidative stress, and a gauge Apoptosis against Survival.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39000139/ijms-25-07029-g009.jpg",
+    "anchor": "Figure 9, native JPEG",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "graphical model, no experimental system",
+     "endpoint": "none"
+    }
+   }
+  ]
+ }
+}
