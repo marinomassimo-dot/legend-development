@@ -1,0 +1,43 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261019-41815956-01",
+ "study_id": {
+  "pmid": "41815956",
+  "doi": "10.3389/fnmol.2026.1636268"
+ },
+ "analysis_at": "2026-10-19T18:45:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-a (Scientist A), metabolic batch 2026-10-19 group G1, task METAB-G1-A-20261019 on branch task/METAB-G1-A-20261019, dispatched by the Orchestrator; context_policy QUESTION_DRIVEN. Route: Europe PMC JATS for PMC12971716, twelve figure JPEGs and the supplementary container (five spreadsheets, a 20-page PDF) from the Europe PMC supplementaryFiles zip into the root files/ tree; Figures 3, 6, 11 and 12 inspected individually and Figures 1, 2, 4, 5, 7-10 in two montages at reduced size; the PDF pages inspected as two montages; Table S3 read for Wwox rows by a short derivation; Tables S4-S7 opened for sheet names and headers only. Locators captured into the deep-dive manifest while the document was open and verified by deepdive_manifest.py --verify-artifacts --require-current-schema. Prepared as a staged JSON for the Orchestrator and was not appended at preparation time (the Orchestrator records staged receipts in event-ID order).",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID41815956_Eberhart2026_PMC.xml",
+ "source_fingerprint": "196817dd334b835ee3c1daa4891a63e45bac06358d771b3f20ada239140f2bea",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "read",
+  "references": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID41815956.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID41815956.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-A-LIPID-04.md",
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-a.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "dossier",
+  "manifest",
+  "Figures 1-12 inspected (four individually, eight in montages)",
+  "Data Sheet 1 pages inspected as montages; Tables S4-S7 spreadsheets opened by sheet name and header only; Table S3 Wwox rows derived",
+  "The paper has no main-text tables"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

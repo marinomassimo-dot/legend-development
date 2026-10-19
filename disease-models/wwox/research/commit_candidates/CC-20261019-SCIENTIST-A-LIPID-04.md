@@ -12,6 +12,7 @@
 | 2 | PMID 36583573 (Teo 2023, Glia, CerS2 deleted in myelinating cells: myelin lipid chain length, microglia, lethality) | `FTR-20261019-36583573-01` | New `PAPER` record (none exists), murine mechanistic comparator, T3, relevance LOW (WWOX absent) |
 | 3 | PMID 40590574 (Wong 2025, Mov Disord, biallelic ELOVL1 variants: hypomyelinating leukodystrophy, movement disorder, ichthyosis) | `FTR-20261019-40590574-01` (partial: photographs and videos not inspected) | New `PAPER` record (none exists), human genetic comparator, T3, relevance LOW (WWOX absent) |
 | 4 | PMID 32123819 (Isokawa 2019, FASEB BioAdv, Elovl1-deficient mice, myelin sphingolipid chain length, motor coordination) | `FTR-20261019-32123819-01` | New `PAPER` record (none exists), murine comparator, T3, relevance LOW (WWOX absent) |
+| 5 | PMID 41815956 (Eberhart 2026, Front Mol Neurosci, Pex2 knockout Zellweger mice: lipid metabolism and hypomyelination) | `FTR-20261019-41815956-01` | New `PAPER` record (none exists), murine comparator, T3, relevance LOW (WWOX text-absent; WWOX protein is one unchanged row of the deposited proteome) |
 
 ## 2 · Record content (source 1)
 
@@ -85,3 +86,17 @@ Note text to carry:
 16. Startle epilepsy deaths | Three more of these mice were lost by the age of eight weeks, and two of them died from startle epilepsy. | Results, section 4, same
 17. EM counts | Average diameters ± SD of myelinated axons: n = 96 [Elovl1 +/+ Tg(IVL‐Elovl1)] and n = 73 [Elovl1 −/− Tg(IVL‐Elovl1)] total axons counted in 13 different fields of view. | Figure 3 legend, same
 18. Wide-beam text | On the wide beam, there were no significant differences between control and Elovl1 −/− Tg(IVL‐Elovl1) mice; however, on the narrow beam, Elovl1 −/− Tg(IVL‐Elovl1) mice moved significantly more slowly and exhibited more paw slips (Figure 4K, L). | Results, section 4, same (panel: `files/figures/PMID32123819/FBA2-1-747-g004.jpg`, Figure 4L wide-beam P .0199)
+
+## 9 · Source 5 (PMID 41815956, Eberhart 2026): record content
+
+Systemic Pex2 knockout at P10: CNP activity down 50-60 percent, myelin mRNAs and proteins down, cholesterol unchanged with desmosterol up, white-matter cholesterol-synthesis enzymes down and cortical up, CERS2/DEGS1/UGT8/FA2H proteins down, p-RPS6 down, Trem2 and cytokines up.
+
+Note text to carry:
+🔴 **A peroxisome-lesion comparator; WWOX is not studied.** Whole-region tissue, one age, knockouts n = 3 to 6, controls pooled from two genotypes; hypomyelination confounded by bile-acid-dependent fat malabsorption; sphingolipid chain length not measured. The deposited proteome lists WWOX protein in spinal cord, brainstem and cerebellum with no change (log2 fold change +0.14, -0.06, -0.26; P 0.40-0.73).
+
+### LOCATOR TRIPLES FOR BLIND AUDIT (source 5)
+
+16. Cholesterol similar, desmosterol up | While cholesterol levels were similar in the brains of control and Pex2−/− mice, desmosterol levels were significantly elevated in the brains of both untreated and BA-fed Pex2−/− mice compared to their control littermates (Figure 3A). | Results, sterol levels, `files/fulltext/PMID41815956_Eberhart2026_PMC.xml`
+17. Nutritional confound named | Postnatal peroxisome-deficient Pex2−/− mice suffer from intestinal lipid malabsorption due to impaired bile acid synthesis (Keane et al., 2007), and the combination of inadequate dietary fat intake and impaired fatty acid processing can lead to severe energy deficits and developmental delays such as hypomyelination. | Discussion, paragraph 4, same
+18. Whole-tissue limitation | A limitation of our study is that we analyzed the entire tissue of different regions of the CNS, so that observed changes in the activity of enzymes, or the expression of genes and proteins cannot be assigned to a specific cell type (neurons, astrocytes, oligodendrocytes, and microglia). | Discussion, paragraph 8, same
+19. WWOX protein unchanged in cerebellum | CBL diff_exp_analysis: Wwox | header cells: ['Gene', 'log2 fold change', 'p.value', 'FDR'] | values: ['-0.26134379502771682', '0.67404861086198831', '0.87760320871459885'] | `files/fulltext/PMID41815956_Eberhart2026_supplement/Table3_wwox_derivation.txt`
