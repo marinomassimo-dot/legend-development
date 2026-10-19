@@ -1,0 +1,35 @@
+{
+ "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Metabolic batch. Orchestrator assumption: scientist-d is a fourth equivalent Scientist under the shared contract roles/scientist.md (body 32); operator authorised up to four Scientists on 2026-10-19.",
+ "TASK_ID": "INTERV-H5-D-20261019",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "scientist-d",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Read, in tier order, the studies of hypocaloric diet with dextrose solution and high fluid volume (group H5) listed in disease-models/wwox/research/interventions_batch_selection_20261019.md, asking what each implies for WWOX loss of function. Most groups have NO WWOX-deficient evidence: state it plainly, label every substitute as not WWOX evidence, class-level only, BLOCK-1 caution, not medical advice.",
+ "SCOPE": {
+  "lot": "groups H5 of the interventions selection file; HELD-partial only with a stated question; BLOCKED excluded",
+  "brief": "disease-models/wwox/research/metabolic_batch_dispatch_brief_20261019.md"
+ },
+ "ACCEPTANCE_CRITERIA": [
+  "per paper: manifest PASS, receipt JSON staged under research/receipt_staging, locators verbatim",
+  "analysis note interventions_wave_20261019_scientist-d.md",
+  "self-eval diagnosis persisted",
+  "DEFAULTS_TAKEN and STOP_LOG in this JSON"
+ ],
+ "DEPENDENCIES": [],
+ "REVIEW_REQUIREMENT": "Mirror ex post",
+ "INTERACTION_MODE": "AUTONOMOUS",
+ "RETRY_POLICY": "resume idempotently",
+ "MILESTONE_PLAN": [
+  "TASK_ACK/CLAIM",
+  "per-paper M0-M5",
+  "analysis note",
+  "self-eval",
+  "report"
+ ],
+ "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
+ "CURRENT_STATE": "QUEUED_BEHIND_WAVE_1",
+ "assigned_on": "2026-10-19"
+}

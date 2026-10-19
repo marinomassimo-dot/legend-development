@@ -1,5 +1,5 @@
 {
- "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
  "_note": "Metabolic batch. Orchestrator assumption: scientist-d is a fourth equivalent Scientist under the shared contract roles/scientist.md (body 32); operator authorised up to four Scientists on 2026-10-19.",
  "TASK_ID": "METAB-G2-B-20261019",
  "DIRECTIVE_VERSION": 1,
@@ -30,6 +30,160 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "ASSIGNED",
- "assigned_on": "2026-10-19"
+ "CURRENT_STATE": "WAVE_1_COMPLETE — lot exhausted, report pending integration",
+ "assigned_on": "2026-10-19",
+ "TASK_ACK": {
+  "TASK_ID": "METAB-G2-B-20261019",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "DECISION": "ACCEPTED",
+  "ACTOR_ID": "scientist-b",
+  "acked_at": "2026-10-19T17:56:53Z",
+  "reading_mode": "PRIMARY_EVIDENCE_READ",
+  "note": "Dispatch brief, standing brief, roles/scientist.md, state manifest (current_state READY), LEGEND_CORE 21c/21d/21e, fulltext_read_receipt.md (first 400 lines plus validator feedback), epistemic_discipline.md read before the first paper. Working on task branch task/METAB-G2-B-20261019 in .claude/worktrees/metab-g2-b. Receipts staged as JSON under research/receipt_staging/scientist-b, never recorded by this actor."
+ },
+ "TASK_CLAIM": {
+  "TASK_ID": "METAB-G2-B-20261019",
+  "GENERATION": 1,
+  "ACTOR_ID": "scientist-b",
+  "claimed_at": "2026-10-19T17:56:53Z",
+  "durable_pointer": "ledger/tasks/scientist-b/METAB-G2-B-20261019.json on branch task/METAB-G2-B-20261019",
+  "claim_precondition_checked": "No other contract names group G2 papers; groups G1/G3/G4 are separate lots of scientist-a/-c/-d."
+ },
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "commit refused with VERDICT STALE because manifests and staged receipts stale five derived surfaces (reading_state, coverage_report, batch_queue, pathograph and the freshness check)",
+   "default_taken": "set LEGEND_STALE_SURFACES_BECAUSE with a written reason on every path-scoped commit",
+   "why_safe": "the brief says the Orchestrator regenerates the shared derived surfaces once receipts are recorded in event-ID order; none of my commits touches a ledger, the state manifest or a current file",
+   "what_would_differ": "waiting would have blocked the whole lot; regenerating would have baked peers' in-flight files into shared surfaces"
+  },
+  {
+   "condition": "no validated discovery-ledger writer exists in framework/scripts",
+   "default_taken": "carried discovery leads as proposed DL entries inside the three commit candidates",
+   "why_safe": "candidates are the sanctioned route to the canonical ledgers via BATCH_COMMIT; nothing is written to the ledger by this actor",
+   "what_would_differ": "a writer would have appended them as open leads at once"
+  },
+  {
+   "condition": "PubMed's stored DOI for PMID 31145772 belongs to a different article than the one PubMed describes",
+   "default_taken": "manifest and receipt carry the DOI PubMed stores (brief rule); the artefact read is the article under DOI 10.18388/abp.2018_2632; the difference is stated in the manifest, receipt basis, dossier and analysis note",
+   "why_safe": "no ledger write; the Orchestrator can issue identity_correction at integration",
+   "what_would_differ": "using the true DOI would have broken the brief's DOI-equals-PubMed rule; using the wrong DOI silently would have hidden the defect"
+  },
+  {
+   "condition": "the receipt-record command rewrites the state manifest under --root and its derived surfaces",
+   "default_taken": "validated staged receipts against a scratch ledger and scratch root outside the repository after one accidental write to the worktree state manifest, restored from HEAD content",
+   "why_safe": "the real ledger and state manifest are untouched; the restoration used git show output, not a checkout",
+   "what_would_differ": "validating against the real ledger would have collided with three other actors"
+  },
+  {
+   "condition": "shared scratchpad overwritten by a peer's helper scripts",
+   "default_taken": "moved my scripts to a private subdirectory and re-derived anything already produced from the artefacts",
+   "why_safe": "no scientific content lived in the scratch scripts; every manifest was re-validated afterwards",
+   "what_would_differ": "stopping to ask the peer"
+  },
+  {
+   "condition": "Teslovich 2018 body unreachable by any lawful route",
+   "default_taken": "parked with the cascade and ran the extra self-chosen search once the lot was exhausted",
+   "why_safe": "the brief prescribes it",
+   "what_would_differ": "an abstract-only read would have been a false read"
+  },
+  {
+   "condition": "time and context budget versus depth on tier-3 reviews",
+   "default_taken": "read four items at screening depth and declared it in the receipt coverage (not_read or captions_only), the loc_note and the dossier header",
+   "why_safe": "coverage is understated, so a receipt cannot be mistaken for a complete read",
+   "what_would_differ": "complete reads would have used about 100,000 tokens each for little model benefit"
+  }
+ ],
+ "STOP_LOG": [
+  {
+   "class": "none",
+   "entry": "No stop was taken or needed: no reserved act arose and every condition had a safe default.",
+   "time_waited": "0"
+  }
+ ],
+ "WAVE_1_RESULT": {
+  "PMIDS_READ": [
+   "33520443",
+   "31145772",
+   "40831798",
+   "40659031",
+   "33854788",
+   "41007296",
+   "41830506",
+   "42047543",
+   "39876842",
+   "36530994",
+   "33363507",
+   "39997753",
+   "37907746",
+   "40500435",
+   "42171828",
+   "24086726"
+  ],
+  "PARKED": {
+   "29481666": "Teslovich 2018, body unreachable; cascade in metabolic_wave_20261019_scientist-b.md section 5"
+  },
+  "EXTRA_ITEM": "24086726",
+  "manifests": "16 strict-validator PASS",
+  "receipts_staged": "disease-models/wwox/research/receipt_staging/scientist-b/",
+  "commit_candidates": [
+   "CC-20261019-SCIENTIST-B-G2-HUMAN-AXIS-01",
+   "CC-20261019-SCIENTIST-B-G2-KD-PRIOR-01",
+   "CC-20261019-SCIENTIST-B-G2-FRUCTOSE-01"
+  ],
+  "analysis_note": "disease-models/wwox/research/metabolic_wave_20261019_scientist-b.md",
+  "self_eval": "disease-models/wwox/research/session_evaluations/2026-10-19_METAB-G2-B-20261019.md",
+  "micro_upgrade": "framework/scripts/pubmed_identity_check.py",
+  "DEFAULTS_TAKEN": [
+   {
+    "condition": "commit refused with VERDICT STALE because manifests and staged receipts stale five derived surfaces (reading_state, coverage_report, batch_queue, pathograph and the freshness check)",
+    "default_taken": "set LEGEND_STALE_SURFACES_BECAUSE with a written reason on every path-scoped commit",
+    "why_safe": "the brief says the Orchestrator regenerates the shared derived surfaces once receipts are recorded in event-ID order; none of my commits touches a ledger, the state manifest or a current file",
+    "what_would_differ": "waiting would have blocked the whole lot; regenerating would have baked peers' in-flight files into shared surfaces"
+   },
+   {
+    "condition": "no validated discovery-ledger writer exists in framework/scripts",
+    "default_taken": "carried discovery leads as proposed DL entries inside the three commit candidates",
+    "why_safe": "candidates are the sanctioned route to the canonical ledgers via BATCH_COMMIT; nothing is written to the ledger by this actor",
+    "what_would_differ": "a writer would have appended them as open leads at once"
+   },
+   {
+    "condition": "PubMed's stored DOI for PMID 31145772 belongs to a different article than the one PubMed describes",
+    "default_taken": "manifest and receipt carry the DOI PubMed stores (brief rule); the artefact read is the article under DOI 10.18388/abp.2018_2632; the difference is stated in the manifest, receipt basis, dossier and analysis note",
+    "why_safe": "no ledger write; the Orchestrator can issue identity_correction at integration",
+    "what_would_differ": "using the true DOI would have broken the brief's DOI-equals-PubMed rule; using the wrong DOI silently would have hidden the defect"
+   },
+   {
+    "condition": "the receipt-record command rewrites the state manifest under --root and its derived surfaces",
+    "default_taken": "validated staged receipts against a scratch ledger and scratch root outside the repository after one accidental write to the worktree state manifest, restored from HEAD content",
+    "why_safe": "the real ledger and state manifest are untouched; the restoration used git show output, not a checkout",
+    "what_would_differ": "validating against the real ledger would have collided with three other actors"
+   },
+   {
+    "condition": "shared scratchpad overwritten by a peer's helper scripts",
+    "default_taken": "moved my scripts to a private subdirectory and re-derived anything already produced from the artefacts",
+    "why_safe": "no scientific content lived in the scratch scripts; every manifest was re-validated afterwards",
+    "what_would_differ": "stopping to ask the peer"
+   },
+   {
+    "condition": "Teslovich 2018 body unreachable by any lawful route",
+    "default_taken": "parked with the cascade and ran the extra self-chosen search once the lot was exhausted",
+    "why_safe": "the brief prescribes it",
+    "what_would_differ": "an abstract-only read would have been a false read"
+   },
+   {
+    "condition": "time and context budget versus depth on tier-3 reviews",
+    "default_taken": "read four items at screening depth and declared it in the receipt coverage (not_read or captions_only), the loc_note and the dossier header",
+    "why_safe": "coverage is understated, so a receipt cannot be mistaken for a complete read",
+    "what_would_differ": "complete reads would have used about 100,000 tokens each for little model benefit"
+   }
+  ],
+  "STOP_LOG": [
+   {
+    "class": "none",
+    "entry": "No stop was taken or needed: no reserved act arose and every condition had a safe default.",
+    "time_waited": "0"
+   }
+  ]
+ }
 }

@@ -911,3 +911,30 @@ retrieval, no spend, no new dependency. Two reserved acquisition routes were nam
 assay specification that would turn *«nobody outside three laboratories has measured a WWOX activity»* from
 a measured null into a testable experiment — purified WW2-SDR, a named substrate and cofactor, a YxxxK
 catalytic-dead control, a titration. The missing item is the experiment, not the tool.
+
+---
+
+## 2026-10-19 — scientist-b, metabolic batch G2 (task `METAB-G2-B-20261019`)
+
+**Capability gap that emerged (with evidence).** An identity defect the pipeline had no test for: PubMed's record for PMID 31145772 joins the title and abstract of one 2019 article with the authors, DOI and page range of a different 2021 article. Following the stored DOI at the publisher served the wrong PDF (1,979,803 bytes; sha256 `0d1d2ed323fe4cdbf74dd5a7ceac15664469c4b23bb5afc730792d80f96e9694`); the selection file carried the wrong first author; the receipt validator's DOI rule would have bound a reading of the right article to the wrong DOI. Found by reading the PDF's title page, not by a check.
+
+**CHANGE (proportional micro-upgrade, shipped).** `framework/scripts/pubmed_identity_check.py` compares PubMed's title and first author with Crossref's record for the DOI PubMed stores and returns a record naming both identities (MATCH, TITLE_MISMATCH, AUTHOR_MISMATCH, NO_DOI, CROSSREF_UNAVAILABLE; exit 1 on anything but MATCH). Offline suite `framework/scripts/test_pubmed_identity_check.py` (4 tests), enrolled in `scripts/run_release_regressions.py`, routed once in `framework/scripts/README.md`. Calibration, live, 2026-10-19: 17 PMIDs of this lot, 16 MATCH, 1 TITLE_MISMATCH (the known hybrid), zero false positives. Use it at M1 before acquiring a body by DOI.
+
+**Not built, and why.** A corpus-wide sweep of every registry PMID with this tool (about 900 Crossref calls) was not run in this batch; it is a one-line loop over the new tool and is left to the Orchestrator's discretion. A receipt-writer rule on DOI/PMID identity was not added: the brief requires the receipt DOI to equal the DOI PubMed carries, which is exactly the DOI the hybrid record gets wrong, so the rule needs an `identity_correction` decision that is not mine to make.
+
+**Cost / API / privacy risk:** none; NCBI eutils and Crossref, no key, no spend. Four Scientists share one NCBI rate limit (HTTP 429 seen once); the tool retries with back-off.
+
+**Next surgical micro-step:** run the tool over the registry PMIDs that carry a DOI and queue every non-MATCH for identity review.
+
+## 2026-10-19 — scientist-d, metabolic batch group G4
+
+**Capability gap recorded (with evidence).** Two, one closed and one named.
+
+1. **Closed (shipped, `CHANGE` made):** `paper_packet.py check` could not validate a manifest from a task worktree, because the worktree holds the manifest but not the gitignored `files/` tree, and the packet's runner did not pass the validator's existing `--artifact-workspace`. Evidence: with `files/` absent the manifest check returned `No such file`; with `files/` a symlink to the shared tree it returned `artifact path escapes the workspace`. Fix: `check --artifact-workspace <root>` passes the root through. Regression: `ArtifactWorkspacePassthroughTests` in `framework/scripts/test_paper_packet.py` (69 tests, OK). Cost: one optional argument, no dependency.
+2. **Named, not built:** the manifest validator proves that a quote exists in the body surface, not that it supports the proposition written beside it. In this wave the reader's re-reading caught seven propositions that outran their quotes before they were committed (incident D of `session_evaluations/2026-10-19_metabolic_G4_scientist-d.md`); no machine saw them. A mechanical aid is plausible and cheap to try: print each proposition beside its quote and the words of the proposition absent from the quote, as a prompt to the reader, never a gate. It is a heuristic and would produce false alarms on paraphrase, so it should be measured against the 4,319 locator entries counted on main on 2026-10-19 before anyone treats it as a control. Not built here because the sample of one wave cannot show its false-alarm rate.
+
+**What did not need building.** The strict manifest validator, the dependency screen (`--manifest-block`), `registry_records.py` and `record_scoped_edit.py` (dry run on `CLAIM 001`) each worked first time.
+
+**Cost / API / privacy risk:** none. The parked pair's open-access PDFs were refused by two publishers; no Unpaywall query was sent because it requires an e-mail address and the operator's may not be used for it without being asked. No shadow-library route was used.
+
+**Next surgical micro-step:** run the proposition-versus-quote prompt over the existing manifests offline and count what it would have flagged.

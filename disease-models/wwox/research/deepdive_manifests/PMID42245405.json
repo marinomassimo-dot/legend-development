@@ -1,0 +1,207 @@
+{
+ "schema_version": 2,
+ "pmid": "42245405",
+ "doi": "10.3389/fgene.2026.1812336",
+ "pmcid": "PMC13233055",
+ "receipt": "FTR-20261019-42245405-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the batch selection file's abstract-level 'why it matters' line and its per-theme summary of what the repository holds (GABA/vigabatrin modelled; no dopamine, catecholamine, adrenal, serotonin text). No registry record was opened before the first pass.",
+ "landing": [
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/metabolic_batch_selection_20261019.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS XML was available from Europe PMC REST on the first request; no cascade was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline by the Scientist; the reading is the deliverable."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The transfer verdict is in the analysis note; no cumulative-ledger lead is claimed from a comparator paper."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever is matured by this paper; forging a hypothesis from a comparator would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for the reference genotype."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or corroborated by this reading; the triples are exposed in the commit candidate/analysis note for a blind auditor."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "descriptive_clinical",
+  "output_kind": "primary_research",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "A retrospective two-sibling case series (consanguineous Saudi family) with a homozygous SLC18A2 canonical splice-donor variant, classified likely pathogenic on PVS1, PM2 and PP1 by in-silico prediction only; CSF neurotransmitters planned but not performed. Treatment response is caregiver and clinician observation without scales. No WWOX content; the two siblings are the useful datum because the same genotype gave different tolerability and course."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (VMAT2 OR SLC18A2 OR SLC6A3)",
+    "count": 0,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND (dopamin* OR catecholamin* OR monoamine*)",
+    "count": 3,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "Counts are search hits only."
+ },
+ "multihop": {
+  "references_enumerated": 8,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "The article cites no WWOX-directed reference that this reading could identify; reference list counted, not read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42245405 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "NO RECORD MATCHED in the seven registry surfaces at commit 718db84f; a statement about that query only."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 8,
+   "references_screened": 8,
+   "references_with_doi": 8,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  },
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction (checked 2026-10-19 by the Scientist via the dependency screen and the publisher record in the JATS front matter)."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42245405_Almutair2026_PMC.xml",
+   "sha256": "64ce8b44ce4c1d74f637554bb5fd62425194e3746d3a8278744fe9a7d9415133",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13233055/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "64ce8b44ce4c1d74f637554bb5fd62425194e3746d3a8278744fe9a7d9415133"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "Both siblings were first treated as epilepsy; EEG captured events without epileptiform activity in the younger and showed slowing without discharges in the older.",
+    "snippet": "Electroencephalogram (EEG) captured the clinical events without associated epileptiform activity, leading to discontinuation of antiseizure therapy.",
+    "anchor": "Case 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42245405_Almutair2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The older sibling received valproate, levetiracetam and clonazepam without benefit before the diagnosis.",
+    "snippet": "the patient was treated sequentially with multiple antiseizure medications, including valproic acid, levetiracetam, and clonazepam; however, no clinical improvement was observed",
+    "anchor": "Case 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42245405_Almutair2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "CSF neurotransmitter analysis was planned but could not be performed for technical reasons.",
+    "snippet": "Although cerebrospinal fluid (CSF) neurotransmitter analysis was planned, it could not be performed due to technical limitations.",
+    "anchor": "Case 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42245405_Almutair2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state CSF profiles may be normal in PKDYS2, limiting diagnostic sensitivity.",
+    "snippet": "prior studies have shown that CSF profiles may be normal in individuals with PKDYS2, thereby limiting its diagnostic sensitivity",
+    "anchor": "Discussion, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42245405_Almutair2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The splice-donor variant was classified likely pathogenic without functional validation.",
+    "snippet": "Although functional validation was not performed, the variant is considered causative based on its canonical splice-site location",
+    "anchor": "Discussion, para 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42245405_Almutair2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors summarise pramipexole as variably tolerated and effective across the two siblings (one improved, the other had dose-limiting dyskinesia and insomnia).",
+    "snippet": "In contrast, pramipexole demonstrated variable tolerability and efficacy.",
+    "anchor": "Discussion, para 7",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42245405_Almutair2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Same homozygous variant, different severity and treatment response in the two siblings.",
+    "snippet": "the two siblings in our report exhibited differential clinical severity and treatment response despite sharing the same homozygous SLC18A2 variant",
+    "anchor": "Discussion, para 9",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42245405_Almutair2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors concede the pramipexole benefit may reflect natural fluctuation.",
+    "snippet": "the observed improvement with pramipexole in one patient may partially reflect natural disease fluctuation",
+    "anchor": "Discussion, para 8",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42245405_Almutair2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Limits named by the authors: no functional validation, no CSF analysis, small sample, short follow-up.",
+    "snippet": "absence of functional validation, lack of cerebrospinal fluid neurotransmitter analysis, small sample size, and relatively short follow-up",
+    "anchor": "Discussion, limitations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42245405_Almutair2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors cite another cohort with a dorsal brainstem and pons T2 hyperintensity with restricted diffusion; their own two patients had normal MRI.",
+    "snippet": "bilateral symmetric T2 hyperintensity and restricted diffusion involving the dorsal brainstem and pons",
+    "anchor": "Discussion, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42245405_Almutair2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC13233055/fullTextXML returned HTTP 200 with a JATS body on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body or a table."
+ }
+}

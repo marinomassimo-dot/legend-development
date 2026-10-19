@@ -1,0 +1,263 @@
+{
+ "schema_version": 2,
+ "pmid": "41007296",
+ "doi": "10.3390/biology14091151",
+ "receipt": "FTR-20261019-41007296-01",
+ "landing": [
+  "CC-20261019-SCIENTIST-B-G2-HUMAN-AXIS-01",
+  "metabolic_wave_20261019_scientist-b"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: the Europe PMC fullTextXML route returned the body and the PMC OA S3 bucket the figures."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not run: the reading was produced directly under the Scientist brief; a deepdive pass would duplicate the locators."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered: no consolidated baseline claim is narrowed, reversed or removed and no MAJOR change class is declared. Triples are listed in the commit candidate for a later blind audit."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 80,
+  "publications_on_gene": 38,
+  "counts_measured": "PubMed esearch 2026-10-19: 'Bednarek AK[au]' 80, 'Bednarek AK[au] AND WWOX' 38; 'Baryla I[au] AND WWOX' 6.",
+  "research_type": "computational",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": true,
+  "weighting": "Same laboratory (Medical University of Lodz) as the 2021 leukocyte paper, the 2022 fibroblast paper and the 2022 review; the four are one arc, not independent confirmations.",
+  "note": "The authors report using an AI writing assistant for style."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "WWOX tokens in the JATS",
+    "route": "case-insensitive count over the persisted JATS, 2026-10-19",
+    "count": 370
+   }
+  ],
+  "note": "WWOX/HIF1A is the subject variable of every analysis, measured as TCGA mRNA."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 189,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "<ref> elements counted in the JATS (regular expression): see receipt basis.",
+  "resolved": [],
+  "queued": [],
+  "note": "The mechanistic WWOX-HIF1A references (Abu-Remaileh 2014 and 2019) are read elsewhere in the repository; no new hop."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "registry_records.py get --pmid 41007296 --hops 1 (via the selection file dedup)",
+  "hits": 0,
+  "finding": "Selection file: 'background_only, abstract-only' in the literature log, no receipt. This reading is the first full-text read."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-19",
+  "route": "PubMed esummary 2026-10-19 for 41007296; JATS front matter carries is-retracted flag",
+  "result": "No retraction, correction or expression of concern found in the PubMed record or the JATS front matter.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 189,
+   "references_screened": 179,
+   "references_with_doi": 179,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 10
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41007296_Baryla2025_PMC12467568.xml",
+   "sha256": "2ab5aebdd0df14721d220ad8ee254eae1f1b7935de0b9dab9c48243406a1d38e",
+   "kind": "article_text",
+   "note": "Europe PMC JATS for PMC12467568 (Biology 2025, CC BY), 406,087 bytes; abstract, introduction, methods, results 3.1-3.7, discussion, conclusions, Table 1 and all 29 figure legends present. 189 references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12467568/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "2ab5aebdd0df14721d220ad8ee254eae1f1b7935de0b9dab9c48243406a1d38e"
+   }
+  },
+  {
+   "path": "files/supplement/PMID41007296_biology-14-01151-s001.zip",
+   "sha256": "e2f3fa086f34f9460892f9d02945027104a0f90e5689f318bd9cdb9d173efea1",
+   "kind": "supplement_binary",
+   "note": "Supplementary ZIP from the PMC OA bucket: one XLSX (Supplementary file 1, DEG tables S2-S8) and one PDF (Tables S1 and Figures S1-S7). The XLSX was not opened.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12467568.1/PMID41007296_biology-14-01151-s001.zip",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "e2f3fa086f34f9460892f9d02945027104a0f90e5689f318bd9cdb9d173efea1"
+   }
+  },
+  {
+   "path": "files/supplement/PMID41007296_suppfig_text.txt",
+   "sha256": "761a6e771931bc8591b2e6dcdb0c440edbbc6b2851d9727b95164fb52b6110e7",
+   "kind": "supplement_text",
+   "note": "Text layer of the PDF inside the supplementary ZIP (biology-3780101_Supplementary tables and figures.pdf, 35 pages) via PyMuPDF 1.28.2, page.get_text() default mode, pages joined with the empty string; extracted with zipfile.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID41007296_biology-14-01151-s001.zip",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_text() default mode over the PDF member of the ZIP",
+     "join": ""
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "761a6e771931bc8591b2e6dcdb0c440edbbc6b2851d9727b95164fb52b6110e7"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC JATS, 406,087 bytes; whole article; supplement text from the PDF inside the ZIP.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "COVERAGE: whole article text read, including all Results subsections, Discussion and Conclusions, Table 1 and the Supplementary Table S1 text. NOT INSPECTED AS IMAGES: all 29 main-text figures (ontology plots, KEGG maps; legends read), the seven supplementary Cox forest plots, and the supplementary XLSX with the DEG tables S2-S8. Figures is therefore captions_only and the receipt is partial. The numbers in the proposition lines come from the text and Supplementary Table S1, not from the plots.",
+  "entries": [
+   {
+    "proposition": "DESIGN: public TCGA bulk RNA-seq, four tumour types, no WWOX manipulation, no protein or metabolite data, no normal tissue.",
+    "snippet": "Gene expression profile data for glioblastoma (159 samples), hepatocellular carcinoma (371 samples), low-grade glioma (515 samples), and breast cancer (505 samp",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41007296_Baryla2025_PMC12467568.xml",
+    "anchor": "Methods 2.1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The high/low ratio groups are defined by an optimised cutpoint; no correction for the cutpoint search or for the seven cohorts is described.",
+    "snippet": "Optimal cutpoints for stratifying patients based on their WWOX/HIF1A expression ratio were identified using the Evaluate Cutpoints appl",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41007296_Baryla2025_PMC12467568.xml",
+    "anchor": "Methods 2.2",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The ratio cutpoint produces very unequal groups (GBM 63 below, 96 above; LGG 40 below, 475 above; HER2 47 below, 11 above) and the GBM disease-status field is extremely skewed between them (below: 53 with tumour, 4 without; above: 9 with tumour, 77 without), which a purity or normal-tissue effect on a WWOX-high, HIF1A-low ratio could produce as readily as biology.",
+    "snippet": "With tumour:53 Without tumour: 4 NA: 6 With tumour:9 Without tumour: 77",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID41007296_suppfig_text.txt",
+    "anchor": "Supplementary Table S1, GBM block",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Basal: in the multivariable Cox model the ratio is not independently prognostic; WWOX expression alone is (HR 1.014 per unit, p 0.034); 95 patients, 11 events; the ratio HR is printed as about 1.18e-13.",
+    "snippet": "Neither patient age (HR = 1.05, 95% CI: 0.98–1.12, p = 0.20) nor the WWOX/HIF1A ratio (HR ≈ 1.18 × 10−13, p = 0.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41007296_Baryla2025_PMC12467568.xml",
+    "anchor": "Results 3.1 Basal",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "HER2: 57 patients and 10 events carry a model with the ratio, age, stage and a gene list; the ratio HR is 3.72e-12 with a confidence interval from 6.4e-31 to 2.2e7.",
+    "snippet": "Multivariate Cox proportional hazards regression (n = 57, events = 10)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41007296_Baryla2025_PMC12467568.xml",
+    "anchor": "Results 3.2 HER2",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Luminal A: the one cohort where the ratio is independently significant, and its sign is opposite to the other tumour types (higher ratio worse, HR 2.76, p 0.047; 216 patients, 18 events).",
+    "snippet": "the WWOX/HIF1A ratio was also independently associated with poor prognosis (HR = 2.76, 95% CI: 1.01–7.52,",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41007296_Baryla2025_PMC12467568.xml",
+    "anchor": "Results 3.3 Luminal A",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Direction reverses between subtypes: higher ratio is good in basal, HER2, HCC, GBM, LGG and bad in luminal A and B.",
+    "snippet": "In the Luminal A subtype, a higher WWOX/HIF1A ratio is paradoxically associated with poor prognosis.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41007296_Baryla2025_PMC12467568.xml",
+    "anchor": "Results 3.3 Luminal A",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "GBM: favourable prognosis group has higher WWOX AND lower HIF1A mRNA; the ratio therefore cannot separate a WWOX effect from a HIF1A effect.",
+    "snippet": "WWOX expression is increased (log2fc = 0.66) and HIF1A expression is decreased (log2fc = −0.79) in cases ",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41007296_Baryla2025_PMC12467568.xml",
+    "anchor": "Results 3.6 GBM",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "GBM multivariable result: the ratio HR is 56.1 with a confidence interval of 0.03 to 99,080; only age (and borderline CDK4 and CDKN1B) are significant.",
+    "snippet": "The WWOX/HIF1A ratio demonstrated a large effect estimate (HR = 56.1, 95% CI: 0.03–99,080)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41007296_Baryla2025_PMC12467568.xml",
+    "anchor": "Results 3.6 GBM",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "LGG multivariable result: ratio HR 0.54, confidence interval 0.03 to 8.51, p 0.66; age is the only significant predictor.",
+    "snippet": "The WWOX/HIF1A ratio showed a substantial estimated protective effect (HR = 0.54, 95% CI: ",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41007296_Baryla2025_PMC12467568.xml",
+    "anchor": "Results 3.7 LGG",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors concede that the independent prognostic value did not reach significance in most cohorts.",
+    "snippet": "its independent prognostic value in multivariate models did not reach statistical significance in most cohor",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41007296_Baryla2025_PMC12467568.xml",
+    "anchor": "Discussion 4.5",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Conclusions call the ratio a robust prognostic biomarker, a statement the Discussion 4.5 sentence and the Cox results contradict.",
+    "snippet": "The WWOX/HIF1A expression ratio serves as a robust prognostic biomarke",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41007296_Baryla2025_PMC12467568.xml",
+    "anchor": "Conclusions",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Conclusions assert that WWOX loss triggers HIF1 alpha stabilisation and metabolic rewiring across the six tumour types; this paper measures transcripts only, with no protein, stabilisation, or metabolite readout.",
+    "snippet": "Critically, WWOX loss triggers HIF1α stabilization, inducing metabolic rewiring that fuels tumour growth and",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41007296_Baryla2025_PMC12467568.xml",
+    "anchor": "Conclusions",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The one stated limitation is bulk RNA-seq without cellular resolution.",
+    "snippet": "A limitation of our study is that we rely solely on bulk RNA-seq data, r",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41007296_Baryla2025_PMC12467568.xml",
+    "anchor": "Conclusions, limitation",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}

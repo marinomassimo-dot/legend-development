@@ -1,0 +1,180 @@
+{
+ "schema_version": 2,
+ "pmid": "41977367",
+ "doi": "10.3390/ijms27073184",
+ "pmcid": "PMC13073762",
+ "receipt": "FTR-20261019-41977367-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the batch selection file's abstract-level 'why it matters' line and its per-theme summary of what the repository holds (GABA/vigabatrin modelled; no dopamine, catecholamine, adrenal, serotonin text). No registry record was opened before the first pass.",
+ "landing": [
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-d.md",
+  "disease-models/wwox/research/metabolic_batch_selection_20261019.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Open-access JATS XML was available from Europe PMC REST on the first request; no cascade was needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline by the Scientist; the reading is the deliverable."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The transfer verdict is in the analysis note; no cumulative-ledger lead is claimed from a comparator paper."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever is matured by this paper; forging a hypothesis from a comparator would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for the reference genotype."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or corroborated by this reading; the triples are exposed in the commit candidate/analysis note for a blind auditor."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "output_kind": "review",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "A conceptual narrative review without a methods section or search strategy; it advances a unifying 'chloride microdomain' hypothesis across epilepsy, neuropathic pain and schizophrenia and states some conclusions as universal. Its own text admits direct characterisation of chloride microdomains in human brain is technically challenging. WWOX does not appear anywhere. Read here only for whether it measures anything that could settle the 'depolarising GABA' question the working model records as unmeasured; it does not."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (GABA OR chloride OR KCC2)",
+    "count": 3,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "Counts are search hits only."
+ },
+ "multihop": {
+  "references_enumerated": 149,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "The article cites no WWOX-directed reference that this reading could identify; reference list counted, not read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 41977367 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "NO RECORD MATCHED in the seven registry surfaces at commit 718db84f; a statement about that query only."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 149,
+   "references_screened": 146,
+   "references_with_doi": 146,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  },
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction (checked 2026-10-19 by the Scientist via the dependency screen and the publisher record in the JATS front matter)."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41977367_Dumitrescu2026_PMC.xml",
+   "sha256": "366f1bba9ccbca3abc829fa7672f930f7e129ac160ded0700a0bbc66a79701e9",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13073762/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "result_sha256": "366f1bba9ccbca3abc829fa7672f930f7e129ac160ded0700a0bbc66a79701e9"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The review has no methods section and no stated search; the Conclusions invite the reader to treat it as a framework.",
+    "snippet": "We intend this review to serve as both a foundation and invitation",
+    "anchor": "Section 8, last para",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41977367_Dumitrescu2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review concedes direct characterisation of chloride microdomains in the human brain is technically challenging.",
+    "snippet": "it remains technically challenging to directly characterize chloride microdomains in the human brain",
+    "anchor": "Section 1, last para",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41977367_Dumitrescu2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The epilepsy section asserts a single mechanism for all epilepsy types, a universal claim not supported by a measurement in the review.",
+    "snippet": "Epilepsy, regardless of type, occurs by the exact same mechanisms.",
+    "anchor": "Section 6.1, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41977367_Dumitrescu2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Immature neurons are described as more seizure-prone because of high NKCC1.",
+    "snippet": "the developing brain has a greater potential for producing seizures due to the high levels of NKCC1",
+    "anchor": "Section 6.1, para 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41977367_Dumitrescu2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "NKCC1 modulation is described as moving toward selective, context-dependent approaches; a string search of the rendered text on 2026-10-19 for 'bumetanide', 'NEMO' and 'trial' returned no hit, so no clinical trial result is cited.",
+    "snippet": "The therapeutic approaches to modulate NKCC1 are transitioning toward selective and context-dependent methods.",
+    "anchor": "Section 7.2, para 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41977367_Dumitrescu2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors acknowledge their conclusions may seem premature.",
+    "snippet": "If our conclusions seem premature, it may be due to the fact that much remains to be learned",
+    "anchor": "Section 8, last para",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41977367_Dumitrescu2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Disease convergence is stated as a hypothesis.",
+    "snippet": "we hypothesize that chloride may play a unifying physiological role in all of these diseases",
+    "anchor": "Section 8, para 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41977367_Dumitrescu2026_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC13073762/fullTextXML returned HTTP 200 with a JATS body on 2026-10-19; the declared artefact is that response, byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body or a table."
+ }
+}

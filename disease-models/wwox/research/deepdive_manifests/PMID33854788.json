@@ -1,0 +1,319 @@
+{
+ "schema_version": 2,
+ "pmid": "33854788",
+ "doi": "10.1002/gch2.202000088",
+ "receipt": "FTR-20261019-33854788-01",
+ "landing": [
+  "CC-20261019-SCIENTIST-B-G2-HUMAN-AXIS-01",
+  "metabolic_wave_20261019_scientist-b"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: the Europe PMC fullTextXML route returned the body and the PMC OA S3 bucket the figures."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not run: the reading was produced directly under the Scientist brief; a deepdive pass would duplicate the locators."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered: no consolidated baseline claim is narrowed, reversed or removed and no MAJOR change class is declared. Triples are listed in the commit candidate for a later blind audit."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 20397,
+  "publications_on_gene": 2,
+  "counts_measured": "PubMed esearch 2026-10-19: 'Xu G[au]' 20397 (surname-initial, ambiguous); 'Xu G[au] AND WWOX' 2; 'Ouyang Y[au] AND WWOX' 1 (also ambiguous).",
+  "research_type": "mixed",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Metabolomics and cohort-epidemiology groups (DICP Dalian, Tongji Wuhan); WWOX is one of three loci reported; no WWOX biology. Weigh as a suggestive locus report.",
+  "note": "Cohort: Dongfeng-Tongji; data are stated as not shared."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "WWOX tokens in the JATS",
+    "route": "case-insensitive count over the persisted JATS, 2026-10-19",
+    "count": 7
+   }
+  ],
+  "note": "WWOX appears 7 times, in one results paragraph, three discussion sentences and the abstract."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 39,
+  "gene_direct_refs_in_source": [
+   "Cho 2012 (Nat Genet), Jamaspishvili 2019 (Acta Biochim Pol), Abu-Remaileh 2019 (Mol Metab)"
+  ],
+  "enumeration_method": "<ref> elements counted in the JATS: 39; the three WWOX-related references identified by reading the reference list.",
+  "resolved": [
+   "Jamaspishvili 2019 is read in this lot (PMID 31145772); Abu-Remaileh 2019 is read elsewhere in the repository"
+  ],
+  "queued": [],
+  "note": "Cho 2012, the origin of the East Asian index SNP, is not in this lot."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "registry_records.py get --pmid 33854788 --hops 1",
+  "hits": 0,
+  "finding": "Not in the registries. Its WWOX statements cite the two other human-genetics and mouse papers the repository already holds."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-19",
+  "route": "PubMed esummary 2026-10-19 for 33854788; JATS front matter carries is-retracted flag",
+  "result": "No retraction, correction or expression of concern found in the PubMed record or the JATS front matter.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 39,
+   "references_screened": 38,
+   "references_with_doi": 38,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID33854788_Ouyang2021_PMC8025395.xml",
+   "sha256": "2a04483eb20f5197bd1dae409bd53b273948c1ca2d74394f5c993b1fe963539b",
+   "kind": "article_text",
+   "note": "Europe PMC JATS for PMC8025395 (Global Challenges 2021, CC BY), 100,291 bytes; abstract, introduction, results, discussion, methods, Table 1 and figure legends present. 39 references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8025395/fullTextXML",
+    "http_method": "GET",
+    "tier": "europepmc_fulltextxml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "2a04483eb20f5197bd1dae409bd53b273948c1ca2d74394f5c993b1fe963539b"
+   }
+  },
+  {
+   "path": "files/figures/PMID33854788/GCH2-5-2000088-g003.jpg",
+   "sha256": "377930909c926ec77a5207eabd7a771e26e9f738d4ebe04f974194223d50767d",
+   "kind": "figure",
+   "note": "Figure 1 (file g003): significant metabolites, odds ratios, pathway analysis, prediction models and ROC curves; inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8025395.1/GCH2-5-2000088-g003.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "377930909c926ec77a5207eabd7a771e26e9f738d4ebe04f974194223d50767d"
+   }
+  },
+  {
+   "path": "files/figures/PMID33854788/GCH2-5-2000088-g001.jpg",
+   "sha256": "b09fa01f8d6e4b909f4f30f02ccfe6d1ad92ecc21b79175f4aba68bbbd9bce02",
+   "kind": "figure",
+   "note": "Figure 2 (file g001): Manhattan and regional plots for FFA 20:4, pipecolinic acid and leucine/isoleucine; inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8025395.1/GCH2-5-2000088-g001.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "b09fa01f8d6e4b909f4f30f02ccfe6d1ad92ecc21b79175f4aba68bbbd9bce02"
+   }
+  },
+  {
+   "path": "files/figures/PMID33854788/GCH2-5-2000088-g004.jpg",
+   "sha256": "03c7a61b1b66d4997ceb1685571a92ce3e4a242c833b656516a6b08cd4664763",
+   "kind": "figure",
+   "note": "Figure 3 (file g004): study flowchart; inspected as an image.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8025395.1/GCH2-5-2000088-g004.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "03c7a61b1b66d4997ceb1685571a92ce3e4a242c833b656516a6b08cd4664763"
+   }
+  },
+  {
+   "path": "files/figures/PMID33854788/GCH2-5-2000088-g002.jpg",
+   "sha256": "fdaf9b3aa47dc266214e199936d2037ae1dab0645cdf978c3d2eba9a3e6083cd",
+   "kind": "figure",
+   "note": "Graphical-abstract thumbnail (file g002, 180 by 31 pixels), not a numbered figure; viewed.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8025395.1/GCH2-5-2000088-g002.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "fdaf9b3aa47dc266214e199936d2037ae1dab0645cdf978c3d2eba9a3e6083cd"
+   }
+  },
+  {
+   "path": "files/supplement/PMID33854788_GCH2-5-2000088-s001.pdf",
+   "sha256": "d6ff0a0628d2232cee80eb5766a426ed5564bdc60bd91a4d8d3f86fc8a24f14b",
+   "kind": "supplement_binary",
+   "note": "Supporting Information PDF (13 pages) from the PMC OA bucket: Tables S1-S3 and Figures S1-S2; Table S3 lists the WWOX SNP row.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC8025395.1/PMID33854788_GCH2-5-2000088-s001.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "result_sha256": "d6ff0a0628d2232cee80eb5766a426ed5564bdc60bd91a4d8d3f86fc8a24f14b"
+   }
+  },
+  {
+   "path": "files/supplement/PMID33854788_supp_text.txt",
+   "sha256": "4aaff156eaa1ebaf92f00e1ed1d1c9fa950363fe3c21b69724ebd7ac326b5582",
+   "kind": "supplement_text",
+   "note": "Text layer of the Supporting Information PDF via PyMuPDF 1.28.2, page.get_text() default mode, pages joined with the empty string; tables come out one cell per line.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID33854788_GCH2-5-2000088-s001.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_text() default mode",
+     "join": ""
+    },
+    "acquired_on": "2026-10-19",
+    "result_sha256": "4aaff156eaa1ebaf92f00e1ed1d1c9fa950363fe3c21b69724ebd7ac326b5582"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC JATS, 100,291 bytes; whole article; supplement text derived from the PMC OA PDF.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "COVERAGE: whole article, Table 1, Figures 1 to 3 as images, and the Supporting Information PDF (Tables S1-S3, Figures S1-S2) read through its text layer; the supplementary Figures S1-S2 raster panels not inspected as images, so supplementary is captions_only. NOT DONE: the summary statistics behind the MR are not available (data not shared). MR result printed with an impossible interval (entry 6). Prospective cohort metabolomics itself is outside WWOX scope.",
+  "entries": [
+   {
+    "proposition": "DESIGN: nested case-control within a Chinese occupational cohort: 500 incident T2D cases and 500 age- and sex-matched controls, serum metabolomics on baseline samples, genotypes on the same 1000 people.",
+    "snippet": "Healthy subjects (n = 500) matched 1:1 by age and sex at baseline were selected as the control group",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33854788_Ouyang2021_PMC8025395.xml",
+    "anchor": "Methods, Study Design",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The WWOX-linked finding: a SNP in the WWOX region associates with the leucine/isoleucine level, at p 2.92e-6, effect 0.411, minor allele frequency 0.03.",
+    "snippet": "allele G of rs72487966 is related to an increased leucine/isoleucine level",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33854788_Ouyang2021_PMC8025395.xml",
+    "anchor": "Results 2.4",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table S3 labels the SNP by NEAREST gene WWOX (chr16:78,432,786, A/G, MAF 0.03, beta 0.411 +/- 0.088, p 2.92e-6): a locus annotation, not a functional link to WWOX. About 60 minor-allele carriers are expected in 1000 people.",
+    "snippet": "rs72487966 | WWOX | 16 | 78432786",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID33854788_supp_text.txt",
+    "anchor": "Table S3, rs72487966 row",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Same row, effect columns: minor allele frequency 0.03, beta 0.411 with standard error 0.088, p 2.92e-6.",
+    "snippet": "0.03 | 0.411 ± 0.088 | 2.92 × 10-6",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID33854788_supp_text.txt",
+    "anchor": "Table S3, rs72487966 row, effect columns",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2E: the leucine/isoleucine Manhattan plot has no point above the red genome-wide line; the WWOX label sits at a point between the blue (suggestive) and red lines. Figure 2F: the regional plot shows a lone peak at about 78.43 Mb (p 2.92e-6) in a wide WWOX intronic region with few supporting SNPs in LD.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2, Manhattan plots (A, C, E) and regional plots (B, D, F) for FFA 20:4 (FADS1, p 2.30e-10), pipecolinic acid (CHRM3, p 5.40e-7) and leucine/isoleucine (WWOX, p 2.92e-6), with suggestive blue and significant red lines.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID33854788/GCH2-5-2000088-g001.jpg",
+    "anchor": "Figure 2E and 2F, native JPEG",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "serum metabolome GWAS, 1000 Chinese adults, nested T2D case-control",
+     "endpoint": "SNP association with leucine/isoleucine"
+    }
+   },
+   {
+    "proposition": "The authors themselves grade the WWOX correlation as suggestive and in need of validation.",
+    "snippet": "However, the correlations were suggestive, and more validation studies are needed.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33854788_Ouyang2021_PMC8025395.xml",
+    "anchor": "Discussion",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The MR result is printed as OR 0.004 with a 95 percent interval of 1.001 to 1.006, a point estimate outside its own interval (an apparent typographical error for 1.004, not corrected by the authors); the MR tests leucine/isoleucine against T2D, with summary statistics from other cohorts, and does not test WWOX.",
+    "snippet": "the relationship between leucine/isoleucine and T2D was proven to be causal (OR = 0.004, 95% CI 1.001–1.006, p = 0.001)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33854788_Ouyang2021_PMC8025395.xml",
+    "anchor": "Results 2.4, Mendelian randomization",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The statement that WWOX is a risk gene for T2D is supported only by a citation to the 2012 East Asian meta-analysis index SNP, which is a different variant (rs17797882).",
+    "snippet": "which is a risk gene for T2D.[ 10 ]",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33854788_Ouyang2021_PMC8025395.xml",
+    "anchor": "Results 2.4",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Discussion cites the 2019 Han Chinese replication (PMID 31145772) for the statement that WWOX is related to HOMA-beta; that paper reports the association in controls only, at nominal p 0.014 without correction, and no association with T2D. The claim is a restatement of a weak datum.",
+    "snippet": "The WWOX gene is related to HOMA‐β",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33854788_Ouyang2021_PMC8025395.xml",
+    "anchor": "Discussion, amino acids paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Internal inconsistency: the same adjusted OR, interval and p (0.731, 0.597 to 0.896, p 0.002) is printed for carnitine C14:0 (said to rise and to be positively associated with T2D) and for pipecolinic acid (said to fall); an OR below 1 contradicts the stated direction for C14:0.",
+    "snippet": "were 0.731 (95% CI 0.597–0.896, p = 0.002) for carnitine C14:0",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33854788_Ouyang2021_PMC8025395.xml",
+    "anchor": "Results 2.3",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1B plots leucine/isoleucine with an adjusted OR per SD above 1 and two asterisks; the metabolite panel (CMB) adds only a small AUC gain to clinical markers (0.755 to 0.773 discovery, 0.772 to 0.797 validation, Figure 1E and 1F).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1, (A) bubble plot of 81 significant metabolites, (B) forest plot of ORs per SD unadjusted and multivariable-adjusted by class, (C) pathway analysis, (D) forest of CMB, CCB and combination, (E) ROC discovery (CMB 0.708, CCB 0.755, combination 0.773), (F) ROC validation (CMB 0.687, CCB 0.772, combination 0.797).",
+    "surface": "figure",
+    "artifact": "files/figures/PMID33854788/GCH2-5-2000088-g003.jpg",
+    "anchor": "Figure 1B, native JPEG",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "serum untargeted metabolomics, incident T2D vs matched controls",
+     "endpoint": "OR per SD; AUC"
+    }
+   },
+   {
+    "proposition": "Population limits stated: Chinese retirees from one city, mean age 63; replication in other centres and ethnic groups required.",
+    "snippet": "The participants were all Chinese individuals from Wuhan and were relatively old",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33854788_Ouyang2021_PMC8025395.xml",
+    "anchor": "Discussion, limitations",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}

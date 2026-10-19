@@ -1,0 +1,42 @@
+{
+ "analysis_at": "2026-10-19T13:10:00Z",
+ "event_at": "2026-10-19T13:10:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "captions_only",
+  "references": "not_read"
+ },
+ "event_id": "FTR-20261019-33520443-01",
+ "evidence_basis": [
+  "Whole JATS body read section by section; all seven figures inspected as images at native resolution (Figures 1-7); Table S1 DOCX read.",
+  "FIND: Figure 6C and 6E print statistics that differ from the running text (HK2 p 0.0003 against 0.004 in the text; LDHA R -0.22, p 0.036 against R -0.27, p 0.010 in text and Table S1).",
+  "FIND: Figure 4 shows WWOX and HIF1A transcripts uncorrelated in GDM leukocytes (rho -0.05); the ratio's correlations with HIF1A-induced genes are carried by HIF1A.",
+  "Supplemental Information 2-12 (eleven raw qRT-PCR plate XLS files) not opened, so supplementary is captions_only and the receipt is partial. References enumerated (81) and screened for integrity, not read."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID33520443.json",
+  "disease-models/wwox/research/fulltext_dossiers/PMID33520443.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-B-G2-HUMAN-AXIS-01.md",
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-b.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "33ce1cbe9f2b7e9a70eb315481c5306cdf1c803c241410113c81e5b54430e45d",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID33520443_Baryla2021_PMC7811782.xml",
+ "study_id": {
+  "doi": "10.7717/peerj.10604",
+  "pmid": "33520443"
+ },
+ "workflow": "scientist-b, metabolic batch 2026-10-19 group G2, task branch task/METAB-G2-B-20261019; context_policy SOURCE_FIRST. Route: Europe PMC JATS for PMC7811782 fetched with no User-Agent, figures and the DOCX supplement from the PMC OA S3 bucket, all into the root files/ tree; seven figures inspected as images; locators captured into the manifest and verified by deepdive_manifest.py --verify-artifacts --require-current-schema. Prepared as a JSON file for the integrator and was not appended at preparation time."
+}
