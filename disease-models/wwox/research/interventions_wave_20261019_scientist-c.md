@@ -68,3 +68,61 @@ until fine-mapped; the authors themselves say its effect on OSA "remains uncerta
 **Changes.** Nothing in the model. It settles the selection-file question 3 only in the negative: no oximetry or sleep-study data
 in a WWOX encephalopathy cohort are provided here, and the gene is not a robust OSA locus on this evidence.
 
+---
+
+## 4. PMID 26578889 — Lopez-Ramos 2015, Front Cell Neurosci (tier 2) — brain glycogen, hypobaric hypoxia and seizure susceptibility
+
+SOURCE_FIRST · FTR-20261019-26578889-01 · manifest PASS · **not WWOX evidence (glycogen-synthase knockout mouse).**
+
+**Measures.** Awake five-month-old male mice lacking brain glycogen synthase versus littermates, hippocampal CA1 field
+recordings at ground level and 405 mmHg (about 5000 m simulated) for 60 minutes, then kainate and train-stimulation seizure
+tests. The knockout showed higher 6-10 Hz power under hypobaric exposure (8.6 and 9.2 against 6.8 and 7.0), a more excitable
+CA3-CA1 synapse at baseline whose paired-pulse difference vanished at 60 minutes and returned, and more kainate and train seizures
+(after-discharges 64.2 versus 25 percent after kainate).
+
+**Does not support.** Any therapeutic oxygen statement: the hypoxia is a 60-minute hypobaric stressor, the glycogen status is
+inferred from the allele (no glycogen assay, no rescue), and the mechanisms offered (astrocytic potassium and glutamate uptake, high-firing
+inhibitory neurons) are untested. The text gives two recovery times (24 h and "2-4 h") for one result and different n between text and legends.
+
+**Changes.** Nothing in claims. It supports only a stated gap: the model's GSK3B arm and the hypoglycaemia lethality of the null mouse
+both point at energy buffering, and this paper shows energy-buffer loss lowers seizure thresholds in a non-WWOX genotype. Hypothesis grade.
+
+---
+
+## 5. PMID 38074156 — Ma 2023, Front Pharmacol (tier 2) — intermittent hypoxia as the OSAS-epilepsy link (narrative review)
+
+SOURCE_FIRST · FTR-20261019-38074156-01 · manifest PASS · **not WWOX evidence; no data generated.**
+
+**Measures.** Nothing: a review with a keyword search and no inclusion rule. It argues that intermittent hypoxia drives HIF-1 alpha, NF-kB,
+IL-6, TNF-alpha, ROS and ER stress, and through them epilepsy. The clinical anchor for oxygen-pressure treatment is a 1994 CPAP series (the
+text gives 7 patients then 4 of 5 improving) and a 2022 study; the authors concede hypoxia-epilepsy research is "insufficient" and
+that neuroinflammation is a modulator, not a cause.
+
+**Does not support.** That nocturnal CPAP or any oxygen route reduces seizures in a developmental and epileptic encephalopathy, or that
+sleep apnoea occurs in WWOX loss of function. The review's own closing call, to first confirm hypoxia during sleep in epilepsy
+patients and then test its correction, is the missing experiment; its pointer to the answer is empty.
+
+**Changes.** Selection-file question 3 stays open: no oximetry or sleep-study data in a WWOX cohort are in this literature, and a review
+cannot supply them. Discovery lead (hypothesis): ask whether any published WWOX encephalopathy case report states overnight oximetry or
+polysomnography ("none stated" is itself the recordable result).
+
+---
+
+## 6. PMID 37726428 — Villa 2023, Sci Rep (tier 2) — repeated postictal hypoxia and interictal cognition
+
+SOURCE_FIRST · FTR-20261019-37726428-01 · manifest PASS · **not WWOX evidence (rat kindling).**
+
+**Measures.** Hippocampal tissue pO2 by implanted optode in 81 male rats over 20 kindled seizures. Vehicle rats' area under 10 mmHg grew from
+about 37 to about 440 mmHg min; acetaminophen (before seizures) or nifedipine (after) held it near zero. Interictal pO2 fell with repeated
+seizures and recovered about six days after the last one; novel object/context memory failed in vehicle rats and was preserved in drug-treated rats (severity
+against performance R2 0.35); isolated mitochondria showed lower calcium retention and lower basal and ATP-linked respiration (n = 5).
+Blocking hypoxia did not change seizure duration or Racine stage.
+
+**Does not support.** That oxygen supplementation helps: **no oxygen was given in any arm**; the hypoxia was prevented by
+blocking vasoconstriction. It does not show hypoxia drives epileptogenesis (kindling progressed unchanged). Mitochondrial dysfunction
+is correlation in a group of five. One timing statement (deficit "3 days" after) conflicts with the Results (24 h, 2 weeks).
+
+**Changes.** Why oxygen is discussed at all in DEE: seizure-linked tissue hypoxia is a measurable harm in this model, but the only
+tested remedy was a drug. For the model it is a transferable negative: ictal hypoxia as a feature of a WWOX phenotype is
+unmeasured. Class-level BLOCK-1 note: acetaminophen at 250 mg/kg and nifedipine at 15 mg/kg i.p. in DMSO are rat experimental doses, not guidance.
+
