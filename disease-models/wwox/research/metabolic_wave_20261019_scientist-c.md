@@ -854,3 +854,52 @@ WWOX-null fibroblast is the surviving cell and the mitochondrial membrane potent
 present); the three panels remove an uncertainty about whether the induction and the non-
 transcriptional reading were visible in the images. The receipt is closed at complete depth with the
 earlier coverage carried and stated as carried.
+
+---
+
+## 19. PMID 35984507 — Carvalho 2022, Cell Mol Life Sci: HELD-partial resume (figures and supplement)
+
+context_policy: QUESTION_DRIVEN. Held before reading: that two prior partial receipts exist (an operator-supplied
+PDF text layer; figures recorded captions_only; no manifest) and the registry revival trigger (a report of
+total WWOX beside pTyr33-WWOX). **Stated question:** what do the panels of Figures 1 to 10 and the three
+supplement pages show about Zfra1-31 and mitochondrial homeostasis under high glucose, and do they match the
+text? The text, all ten figures and the supplement were read and described first; the prior receipts'
+evidence notes and the registry record were opened afterwards.
+
+**What the panels show (bar sizes are by-eye readings, INFERENZA).**
+- Figure 2A-B: pTyr33-WWOX in 6-month GK cortex is about 2.2 against 1.0 and in hippocampus about 3.0 against
+  1.0 (large SEM). The text says about +20% and twofold. At 12 months the cortical value is about 0.9, a fall of
+  about 60% from the young GK group, not about 20%. The cortical beta-actin bands are visibly unequal across
+  lanes, so the ratio leans on the loading control.
+- Figure 2C-D: in cells the 25 mM glucose rise is about +80% at 24 h and 48 h with a starred viability fall only
+  at 48 h; the order claim (activation first) is supported by the panels.
+- Figure 3A: pTyr33-WWOX with early or late Zfra1-31 is about 1.15 against 1.8, each p=0.08. The only starred
+  comparison with glucose is the Zfra1-31-alone control bar (about 0.83). The text's "diminished (~64%)" is not
+  what the by-eye size (about 36% early) or the p values show. Viability recovery is starred in all arms.
+- Figure 3C-D: the p53 reductions are not significant (p=0.09, 0.21); only early caspase 3 is.
+- Figure 4: membrane potential and proton leak recover with stars in the early arm; H2O2 (MitoPY1), ATP and
+  basal respiration changes are not significant; proton leak falls about 38 to 43%, not 65 to 70%.
+- Figure 5: carbonyls fall significantly in the early arm; TBARS fall about 12%, not twofold; the TBARS axis
+  unit (10 to the minus 8 nmol per mg) looks inconsistent with the stated method.
+- Figures 6 to 8: most Zfra1-31 comparisons are not significant (p 0.05 to 0.7); the Discussion lists a Fis1 rise
+  that the Results call non-significant; the Figure 7 magnitudes in the text (ND1 +42%, NRF1 -62%) do not match
+  the bars (about +80% and -36%).
+- Figure 9: pTau against control is p=0.08, Abeta against Zfra1-31 p=0.30 and 0.09; the Abeta 6E10 blot shows
+  bands at 100 to 130 and 40 to 68 kDa, not a peptide-size band.
+- Figure 10 draws the pTyr33-WWOX and p53 complex entering mitochondria; no panel measures it. Supplement:
+  Figure S.1 carries membrane potential and H2O2 only (the caption and text say viability too and use main-figure
+  numbers); Figure S.2 shows p53 rising at 24 h before caspase 3 (48 h); Table S.1 confirms the GK phenotype.
+
+**Comparison with the prior readings (admitted after the first pass).** The two findings carried forward
+by the earlier receipts hold and are now seen in the images: no total-WWOX blot appears in any figure
+although the methods list a total-WWOX antibody, and no genetic WWOX arm or inactive-peptide arm exists. The
+new findings are the panel-level ones above: significance and magnitude in the text are stronger than the
+panels in at least eight places, and the pTyr33 reduction by the peptide is not significant against glucose
+in either arm.
+
+**What it changes.** The WWOX-activation-precedes-damage ordering stands as an observation in a cell line;
+the causal reading (pTyr33-WWOX drives the mitochondrial damage, Zfra1-31 inhibits it) is not established by
+these panels. For the reference genotype (loss of function) the paper is a gain-of-activity result in a cell
+line carrying WWOX and sits on the context side of the WWOX-ROS sign question (loss and gain of activity can
+both raise mitochondrial ROS in different systems); it adds no loss-of-function evidence. The revival trigger
+(total WWOX beside pTyr33) is not met. The receipt closes the row at complete depth for the archived PMC copy.
