@@ -35,3 +35,17 @@ Sixteen of the nineteen lot papers had no registry record at the start (`registr
 
 ## Discovery-ledger proposals (not appended; the ledger is propagated only by `BATCH_COMMIT`)
 Leads L1-L4 of the analysis note (`IPOTESI`), each with a falsifier in the note.
+
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261019_001` · 2026-10-19 · ACTOR_ID `orchestrator` (stated assumption, batch integrator)
+**Working model:** WM_v7.20 -> WM_v7.21 (MINOR)
+**Class re-judged (§7):** MINOR
+**Blind locator audit:** not run — no baseline claim is narrowed and no MAJOR contingency is declared; the candidate's locator triples are carried for a later audit.
+**What landed:** 17 PAPER record(s) (PAPER 293, PAPER 294, PAPER 295, PAPER 296, PAPER 297, PAPER 298, PAPER 299, PAPER 300, PAPER 301, PAPER 302, PAPER 303, PAPER 304, PAPER 305, PAPER 306, PAPER 307, PAPER 308, PAPER 309) with their LIT records. Queue note on `FT-167` applied; parked retrieval items minted as FT-197 to FT-200. The correction of the selection file's description of `PAPER 003` is not a registry edit (the selection file is a research file) and is carried in the `CLAIM 001` wave note.
+**Status / Type / Summary:** unchanged by this candidate.
+**Not medical advice.** Class level only; no individual-level record is carried.

@@ -83,3 +83,17 @@ Note text to carry:
 - No statement that human ELOVL1 disease includes epilepsy on the strength of source 3's conclusion.
 - No medication recommendation; the review classes are untested for WWOX.
 - No individual-level content; the human ELOVL1 series are cited at class level only.
+
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED
+**Batch:** `BATCH_20261019_001` · 2026-10-19 · ACTOR_ID `orchestrator` (stated assumption, batch integrator)
+**Working model:** WM_v7.20 -> WM_v7.21 (MINOR)
+**Class re-judged (§7):** MINOR
+**Blind locator audit:** not run — no baseline claim is narrowed and no MAJOR contingency is declared; the candidate's locator triples are carried for a later audit.
+**What landed:** 3 PAPER record(s) (PAPER 259, PAPER 260, PAPER 261) with their LIT records. The `DL-MECH-012` pointer op, never dry-run by its author, was dry-run by the integrator through `record_scoped_edit.py apply` (no refusal) and applied; `batch_commit.py propagate` does not take the discovery ledger.
+**Status / Type / Summary:** unchanged by this candidate.
+**Not medical advice.** Class level only; no individual-level record is carried.
