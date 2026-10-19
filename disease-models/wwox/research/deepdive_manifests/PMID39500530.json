@@ -1,0 +1,614 @@
+{
+ "schema_version": 2,
+ "pmid": "39500530",
+ "doi": "10.1136/jitc-2024-010422",
+ "receipt": "FTR-20261019-39500530-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID39500530.md",
+  "disease-models/wwox/research/metabolic_wave_20261019_scientist-a.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261019-SCIENTIST-A-LIPID-02.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "The lot was selected and deduplicated by the Orchestrator's selector against the registries, queue and receipt ledger (selection file, method step 3); the per-paper M0 packet re-checked it."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "A candidate lead (oleate and SCD in WWOX-low cells) is recorded in the commit candidate and the dossier; the discovery ledger is not appended by this actor in this wave (shared file, single writer at integration)."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever is matured by this source; forging hypotheses from it would manufacture a lead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed by this source."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files; every change is proposed as a commit candidate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or removed by this reading and no MAJOR bump is declared, so no R4 trigger fires."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 1,
+  "publications_on_gene": 1,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "A liver-cancer immunology group (Zhongshan Hospital, Fudan, from the affiliations) that had earlier reported a WWOX polymorphism and HCC recurrence. Primary for HCC; not primary for WWOX loss of function in neural or developmental settings. Observations (cell-line assays, small patient series) weighed above the pathway narrative."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (oleic acid OR oleate OR SCD OR stearoyl)",
+    "count": 1,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   },
+   {
+    "query": "WWOX AND hepatocellular AND (immun* OR macrophage)",
+    "count": 12,
+    "source": "PubMed ESearch rettype=count 2026-10-19"
+   }
+  ],
+  "note": "PubMed counts; the first set is the WWOX fatty-acid desaturase literature, which this paper dominates."
+ },
+ "multihop": {
+  "references_enumerated": 37,
+  "gene_direct_refs_in_source": [
+   "ref 18 Chen 2018 (WWOX rs9926344, HCC prognosis; PMID 29675105)",
+   "ref 19 Yang 2021 (WWOX activation by toosendanin, HCC; PMID 34015398)",
+   "ref 20 Baryla 2022 (WWOX/HIF1A axis; PMID 35328751)",
+   "ref 23 Aqeilan 2004 (Wwox and AP-2gamma; PMID 15548692)",
+   "ref 30 Abu-Remaileh 2014 (WWOX and HIF1A glucose metabolism; PMID 25012504)",
+   "ref 31 Iatan 2014 (WWOX and HDL; PMID 24871327)"
+  ],
+  "resolved": [
+   {
+    "pmid": "25012504",
+    "state": "complete receipt in the ledger (read in an earlier wave)"
+   },
+   {
+    "pmid": "24871327",
+    "state": "complete receipt in the ledger (read in an earlier wave)"
+   },
+   {
+    "pmid": "35328751",
+    "state": "partial receipt in the ledger; owed figure panels and references (selection file, HELD list)"
+   }
+  ],
+  "queued": [
+   {
+    "pmid": "29675105",
+    "queue": "proposed in CC-20261019-SCIENTIST-A-LIPID-02 section 4; no FT identifier is minted by a Scientist (the queue is a registry surface)",
+    "note": "WWOX rs9926344 and HCC recurrence; not in the receipt ledger, not in the queue as of 2026-10-19"
+   },
+   {
+    "pmid": "34015398",
+    "queue": "proposed in CC-20261019-SCIENTIST-A-LIPID-02 section 4; no FT identifier minted",
+    "note": "toosendanin activation of WWOX in HCC; same group; not in the ledger"
+   },
+   {
+    "pmid": "15548692",
+    "queue": "already listed among surface-absent items in the queue (PDF-font group); no per-paper FT identifier read",
+    "note": "Wwox and AP-2gamma, 2004; unread"
+   }
+  ],
+  "note": "37 references enumerated. Six gene-direct references: three are read or partly read in this repository (resolved), three are unread debts (queued in the commit candidate). The WWOX/NME2 binding claim of this paper is new relative to every reference in its list."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 39500530 --hops 1 (run AFTER the first pass)",
+  "hits": 0,
+  "note": "See the dossier."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 37,
+   "references_screened": 37,
+   "references_with_doi": 37,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-09-10",
+    "days_since_fetch": 39,
+    "rows": 72476,
+    "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  },
+  "result": "Checked 2026-10-19 via PubMed esummary/efetch for PMID 39500530: publication types ['Journal Article']; corrections/retraction markers in the efetch record: none."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID39500530_LiuS2024_PMC.xml",
+   "sha256": "b7496e6b43358d35ea6ff71882f82144f1270ccb4c1f7abb8e85cb2543363c6c",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC11552608: abstract, body, figure legends, 37 references.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11552608/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID39500530/jitc-12-11-g001.jpg",
+   "sha256": "2560af74da41bfeac4b0510684bfe056e3543d251a5018c7ca5e27e0e2110e21",
+   "kind": "figure",
+   "note": "Figure 1 JPEG from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11552608/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID39500530/jitc-12-11-g002.jpg",
+   "sha256": "79934d90f981a395690046e72f85a268a16373b8389896ea147aca29dab1833f",
+   "kind": "figure",
+   "note": "Figure 2 JPEG from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11552608/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID39500530/jitc-12-11-g003.jpg",
+   "sha256": "fd11b3b702fea8d9cb44ec70a8a3e7540c33a9ba2212244786acf203df2a833a",
+   "kind": "figure",
+   "note": "Figure 3 JPEG from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11552608/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID39500530/jitc-12-11-g004.jpg",
+   "sha256": "f721fcf2f41e7169d062e6702b8702315490779702e6bc22ad46e040450b8874",
+   "kind": "figure",
+   "note": "Figure 4 JPEG from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11552608/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID39500530/jitc-12-11-g005.jpg",
+   "sha256": "f37083668517ad23e1e2d84817f78ac44fff3606101f1649b9d09ea715c39552",
+   "kind": "figure",
+   "note": "Figure 5 JPEG from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11552608/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID39500530/jitc-12-11-g006.jpg",
+   "sha256": "395fdd9c89b738ae37b3e45a64fed6f68984fd5448cad71d6fad715aee5d2498",
+   "kind": "figure",
+   "note": "Figure 6 JPEG from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11552608/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID39500530/jitc-12-11-g007.jpg",
+   "sha256": "0d859a9a92affc3bc9f7828a955cded1b1a458ed089690d05aff29d8210624f4",
+   "kind": "figure",
+   "note": "Figure 7 JPEG from the Europe PMC supplementaryFiles container, inspected at native resolution.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11552608/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID39500530/suppfig1.png",
+   "sha256": "40d12f3c2ff6cf9c1b22794fb4e7ab902e92fa58ad9c8db8b5ada1f41ceca3d7",
+   "kind": "figure",
+   "note": "Supplementary Figure 1: the TIFF embedded in supplementary file 1 (word/media/image1.tiff), extracted with zipfile and rendered to a 1100 px wide PNG with ImageMagick convert; inspected as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID39500530_LiuS2024_supplement/jitc-12-11-s001.DOCX",
+    "extractor": {
+     "name": "zipfile (python 3.12) then ImageMagick convert",
+     "version": "convert 6/7 as installed on 2026-10-19",
+     "call": "convert suppfigN.tiff -resize 1100x suppfigN.png",
+     "join": ""
+    },
+    "acquired_on": "2026-10-19",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID39500530/suppfig2.png",
+   "sha256": "cbca089ce8c2a10a8d44f06ba3842839c540024035ae44375220547fcf418848",
+   "kind": "figure",
+   "note": "Supplementary Figure 2: the TIFF embedded in supplementary file 1 (word/media/image2.tiff), extracted with zipfile and rendered to a 1100 px wide PNG with ImageMagick convert; inspected as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID39500530_LiuS2024_supplement/jitc-12-11-s001.DOCX",
+    "extractor": {
+     "name": "zipfile (python 3.12) then ImageMagick convert",
+     "version": "convert 6/7 as installed on 2026-10-19",
+     "call": "convert suppfigN.tiff -resize 1100x suppfigN.png",
+     "join": ""
+    },
+    "acquired_on": "2026-10-19",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID39500530/suppfig3.png",
+   "sha256": "4c92203598786a97d65a7765f8a020e385e3e6805bda656e78c125c5f20f3666",
+   "kind": "figure",
+   "note": "Supplementary Figure 3: the TIFF embedded in supplementary file 1 (word/media/image3.tiff), extracted with zipfile and rendered to a 1100 px wide PNG with ImageMagick convert; inspected as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID39500530_LiuS2024_supplement/jitc-12-11-s001.DOCX",
+    "extractor": {
+     "name": "zipfile (python 3.12) then ImageMagick convert",
+     "version": "convert 6/7 as installed on 2026-10-19",
+     "call": "convert suppfigN.tiff -resize 1100x suppfigN.png",
+     "join": ""
+    },
+    "acquired_on": "2026-10-19",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID39500530/suppfig4.png",
+   "sha256": "db7440bdb342709b8df0d64277db42d0e0629bb4842952721eb0625101dd10a9",
+   "kind": "figure",
+   "note": "Supplementary Figure 4: the TIFF embedded in supplementary file 1 (word/media/image4.tiff), extracted with zipfile and rendered to a 1100 px wide PNG with ImageMagick convert; inspected as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID39500530_LiuS2024_supplement/jitc-12-11-s001.DOCX",
+    "extractor": {
+     "name": "zipfile (python 3.12) then ImageMagick convert",
+     "version": "convert 6/7 as installed on 2026-10-19",
+     "call": "convert suppfigN.tiff -resize 1100x suppfigN.png",
+     "join": ""
+    },
+    "acquired_on": "2026-10-19",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID39500530/suppfig5.png",
+   "sha256": "e72ebf00e90bf649aec30b5b87b21714a07a62b9a1d1c614c3e7426d2ba5d917",
+   "kind": "figure",
+   "note": "Supplementary Figure 5: the TIFF embedded in supplementary file 1 (word/media/image5.tiff), extracted with zipfile and rendered to a 1100 px wide PNG with ImageMagick convert; inspected as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID39500530_LiuS2024_supplement/jitc-12-11-s001.DOCX",
+    "extractor": {
+     "name": "zipfile (python 3.12) then ImageMagick convert",
+     "version": "convert 6/7 as installed on 2026-10-19",
+     "call": "convert suppfigN.tiff -resize 1100x suppfigN.png",
+     "join": ""
+    },
+    "acquired_on": "2026-10-19",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/figures/PMID39500530/suppfig6.png",
+   "sha256": "401db1e046471b944dd2f20bcb9242210a871f22f7ccdf02bb4ce8808876be99",
+   "kind": "figure",
+   "note": "Supplementary Figure 6: the TIFF embedded in supplementary file 1 (word/media/image6.tiff), extracted with zipfile and rendered to a 1100 px wide PNG with ImageMagick convert; inspected as an image.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID39500530_LiuS2024_supplement/jitc-12-11-s001.DOCX",
+    "extractor": {
+     "name": "zipfile (python 3.12) then ImageMagick convert",
+     "version": "convert 6/7 as installed on 2026-10-19",
+     "call": "convert suppfigN.tiff -resize 1100x suppfigN.png",
+     "join": ""
+    },
+    "acquired_on": "2026-10-19",
+    "user_agent_policy": "none"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID39500530_LiuS2024_supplement/jitc-12-11-s001.DOCX",
+   "sha256": "64db47e2f83a08b26141f1898c14fab44d6d8af6eaaf95dc9b93a75b0c57c4ba",
+   "kind": "supplement_text",
+   "note": "Supplementary file 1 (Word): methods, Supplemental Tables 1-8, Supplementary Figure legends; its six embedded figure images are TIFF, extracted and rendered to PNG for inspection.",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11552608/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC REST supplementaryFiles (zip; member extracted unchanged)",
+    "acquired_on": "2026-10-19",
+    "derived": false,
+    "user_agent_policy": "none"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "entries": [
+   {
+    "proposition": "The WWOX-null condition in this paper is an shRNA knockdown or lentiviral overexpression of WWOX in human HCC cell lines, in cells co-cultured with THP-1 macrophages and in humanized NOG mice carrying those cells; no germline Wwox allele, no neural cell and no developmental setting is used.",
+    "snippet": "To further clarify whether WWOX was required to mediate PD-1 resistance in HCC, we constructed a WWOXlow humanized orthotopic HCC mouse model and compared PD-1 treatment responses.",
+    "anchor": "Results, section 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39500530_LiuS2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The human clinical series is small: serum from 57 PD-1-treated HCC patients (28 responders, 29 non-responders); tumour RNA-seq from 4 responders and 4 non-responders.",
+    "snippet": "Among them, tumor tissues from 4 PD-1 responder and 4 PD-1 non-responder were used for RNA sequencing.",
+    "anchor": "Methods, Patients and specimens",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39500530_LiuS2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "WWOX is called the most upregulated fragile-site gene in responders from an 8-sample RNA-seq comparison (4 versus 4).",
+    "snippet": "Differential analysis revealed WWOX was the most upregulated CFS related gene in ICI response HCC patients (figure 1A).",
+    "anchor": "Results, section 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39500530_LiuS2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Serum WWOX measured by ELISA is reported higher in responders.",
+    "snippet": "WWOX was detected in the serum of patients receiving PD-1 antibody treatment using ELISA and was more abundant in the responder group (figure 1B, online supplemental table 2).",
+    "anchor": "Results, section 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39500530_LiuS2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PANEL READING, Figure 1B and 1E. 1B: serum WWOX in ng/mL, non-responders about 1060 and responders about 1250 (means), individual points overlapping widely, one asterisk. 1E: Kaplan-Meier survival split WWOX low (n=28) versus high (n=29), P = 0.02, and recurrence P = 0.007; the two group sizes equal the responder and non-responder counts.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1B dot plot y-axis 'Serum WWOX level (ng/mL)' 0-2000 with Non-responder and Responder columns and one asterisk; Fig 1E two Kaplan-Meier panels with legends 'WWOXlow (n=28)', 'WWOXhigh (n=29)', P=0.02 and P=0.007.",
+    "anchor": "Figure 1B and 1E, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39500530/jitc-12-11-g001.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human HCC cell lines and humanized NOG mice (huPBMC)",
+     "genotype": "shRNA knockdown or lentiviral overexpression of WWOX in HCC lines (no germline Wwox allele)",
+     "treatment": "as stated per panel",
+     "comparator": "vector or control shRNA",
+     "endpoint": "as stated per panel"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Figure 1G. In IgG-treated humanized mice the shWWOX tumours weigh about 0.65 g against about 0.25 g for control tumours (about 2.6-fold larger) with n = 5 per group; under anti-PD-1 the control tumours fall to about 0.03 g and the shWWOX tumours stay near 0.6 g. The PD-1 resistance of shWWOX tumours is therefore measured against a baseline in which the knockdown tumours already grow much larger without PD-1.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 1G upper panel tumour weight (g): Control IgG about 0.25, shWWOX IgG about 0.65, Control PD-1 about 0.03, shWWOX PD-1 about 0.60 with ns between shWWOX IgG and shWWOX PD-1; lower panel tumour volume agrees.",
+    "anchor": "Figure 1G, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39500530/jitc-12-11-g001.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human HCC cell lines and humanized NOG mice (huPBMC)",
+     "genotype": "shRNA knockdown or lentiviral overexpression of WWOX in HCC lines (no germline Wwox allele)",
+     "treatment": "as stated per panel",
+     "comparator": "vector or control shRNA",
+     "endpoint": "as stated per panel"
+    }
+   },
+   {
+    "proposition": "The macrophage-clearance experiment reports only anti-PD-1-treated groups.",
+    "snippet": "Remarkably, PD-1 treatment significantly reduced tumor growth in the huh7-shWWOX group of mice after macrophage clearance compared with the control group (figure 3F,G).",
+    "anchor": "Results, section 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39500530_LiuS2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PANEL READING, Figure 3F. Four groups, all labelled Anti-PD-1: Control, shWWOX, Control+Clophosome, shWWOX+Clophosome; with clophosome the shWWOX tumours drop to about 0.3 g (similar to control about 0.22 g). No IgG-treated clophosome arm is shown, so an effect of macrophage depletion on tumour growth independent of PD-1 is not separated.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 3F tumour weight panel with four bars under 'Anti-PD-1': Control about 0.22, shWWOX about 0.72, Control+Clophosome about 0.22, shWWOX+Clophosome about 0.30; x-axis rows list Control, shWWOX, Clophosome pluses; no IgG column.",
+    "anchor": "Figure 3F, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39500530/jitc-12-11-g003.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human HCC cell lines and humanized NOG mice (huPBMC)",
+     "genotype": "shRNA knockdown or lentiviral overexpression of WWOX in HCC lines (no germline Wwox allele)",
+     "treatment": "as stated per panel",
+     "comparator": "vector or control shRNA",
+     "endpoint": "as stated per panel"
+    }
+   },
+   {
+    "proposition": "OA is named as the most upregulated metabolite in the supernatants of WWOX-knockdown Huh7 cells in an untargeted metabolomics comparison.",
+    "snippet": "The results of difference analysis suggested that OA was most significantly upregulated in the supernatants of HCC cells in the shWWOX group compared with the control group (figure 4B).",
+    "anchor": "Results, section 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39500530_LiuS2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PANEL READING, Figure 4B-C. 4B: oleic acid log2 intensity about 26.9 (control) versus about 27.2 (shWWOX), n = 5 versus 5, one asterisk, about a 1.2-fold difference. 4C: ELISA oleic acid in supernatant, Huh7 about 7.5 (control) versus about 9.8 ng/mL (shWWOX); HCCLM3 about 10.8 (vector) versus about 6.8 ng/mL (WWOX overexpression). The reported shifts are of the order of 1.3-fold up and 0.63-fold down, in conditioned medium.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 4B box plot y-axis 'Log2(intensity)' 26.8 to 27.4 with Control and shWWOX; Fig 4C bars 'oleic acid level (ng/ml)' Huh7 Control, shWWOX; HCCLM3 Vector, WWOX with asterisks.",
+    "anchor": "Figure 4B and 4C, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39500530/jitc-12-11-g004.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human HCC cell lines and humanized NOG mice (huPBMC)",
+     "genotype": "shRNA knockdown or lentiviral overexpression of WWOX in HCC lines (no germline Wwox allele)",
+     "treatment": "as stated per panel",
+     "comparator": "vector or control shRNA",
+     "endpoint": "as stated per panel"
+    }
+   },
+   {
+    "proposition": "Macrophage polarisation by oleate is shown with 'OA' treatment; no oleate concentration appears in this sentence or in the Methods read for this paper.",
+    "snippet": "Stimulation of PMA-treated THP-1 cells with OA significantly increased macrophage CD206 protein expression and M2-like macrophage marker mRNA levels (figure 4D).",
+    "anchor": "Results, section 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39500530_LiuS2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The supplementary Methods name the oleic acid reagent supplier and no concentration.",
+    "snippet": "Oleic acid(A600868) was obtained from Sangon Biotech (Shang Hai).",
+    "anchor": "Supplementary file 1, Cell lines and reagents",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID39500530_LiuS2024_supplement/jitc-12-11-s001.DOCX",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The supplementary ELISA method describes the WWOX serum kit only; no oleic acid ELISA kit, extraction or calibration is described.",
+    "snippet": "We measured WWOX levels in serum from HCC patients using the Human WWOX ELISA Kit (Biorbyt, orb1146837).",
+    "anchor": "Supplementary file 1, ELISA",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID39500530_LiuS2024_supplement/jitc-12-11-s001.DOCX",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "WWOX knockdown raises SCD5 mRNA and protein without changing SCD1.",
+    "snippet": "Western blot assays and qPCR confirmed that WWOX deficiency upregulated SCD5 protein and mRNA levels without affecting SCD1 (figure 4E, online supplemental figure 3C–E).",
+    "anchor": "Results, section 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39500530_LiuS2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The WWOX region needed for binding NME2 is residues 106-414, which contains the SDR domain; the WW-domain region 1-105 is not sufficient.",
+    "snippet": "We mapped the structural domains involved in the interaction between WWOX and NME2 and found that the WWOX (106-414) and NME2 (67-152) domains were necessary for their interaction (figure 5C).",
+    "anchor": "Results, section 6",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39500530_LiuS2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The SCD5 inhibitor experiment is described as Huh7 cell-derived humanized orthotopic models, with no WWOX-knockdown arm stated.",
+    "snippet": "For further drug sensitivity experiments, Huh7 cell-derived humanized orthotopic HCC mouse models were first constructed.",
+    "anchor": "Supplementary file 1, Animal experiments",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID39500530_LiuS2024_supplement/jitc-12-11-s001.DOCX",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The SCD inhibitor used, SCD1/5-IN-1, is named as a dual SCD1/SCD5 compound, given at 5 mg/kg daily for 10 days.",
+    "snippet": "For SCD5 blockage, mice were injected intraperitoneally with 5 mg/kg SCD5 inhibitor SCD1/5-IN-1 (Cat.HY-155403; MedChemExpress) or vehicle control daily for 10 days.",
+    "anchor": "Supplementary file 1, Animal experiments",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID39500530_LiuS2024_supplement/jitc-12-11-s001.DOCX",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PANEL READING, Figure 6C. Four arms: Vehicle+IgG about 0.33 g, SCD1/5-IN-1 about 0.19 g, anti-PD-1 about 0.14 g, combined about 0.02 g (n = 5, 5, 5, 3); the inhibitor lowers tumour weight alone in tumours that are not WWOX-knockdown by the stated methods, and no shWWOX arm is shown, so WWOX dependence of the drug effect is untested. The combined group shows 3 points where the others show 5.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Fig 6C upper panel tumour weight (g) with four groups Vehicle+IgG, SCD1/5-IN-1, Anti-PD-1, Combined; Combined shows three purple points, the others five.",
+    "anchor": "Figure 6C, read at native resolution",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39500530/jitc-12-11-g006.jpg",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human HCC cell lines and humanized NOG mice (huPBMC)",
+     "genotype": "shRNA knockdown or lentiviral overexpression of WWOX in HCC lines (no germline Wwox allele)",
+     "treatment": "as stated per panel",
+     "comparator": "vector or control shRNA",
+     "endpoint": "as stated per panel"
+    }
+   },
+   {
+    "proposition": "Supplementary Table 2 gives, for WWOX expression Low/high, 6/23 in the first column and 22/6 in the second while the header totals are 28 and 29; each pair sums to 29 and 28, the reverse of the header order.",
+    "snippet": "WWOX expression <0.01 Low/high 6/23 22/6",
+    "anchor": "Supplementary Table 2, WWOX expression row",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID39500530_LiuS2024_supplement/jitc-12-11-s001.DOCX",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PANEL READING, Supplementary Figure 3B and 3H. 3B: oleic acid ELISA in supernatants of two further lines, PLC/PRF/5 control about 6.5 versus shWWOX about 8.9 ng/mL, and MHCC97H vector about 7.0 versus WWOX about 5.4 ng/mL (three points per bar). 3H: in Huh7, shWWOX about 9.5 versus control about 6.8 ng/mL, and shSCD5 lowers oleic acid in control cells (about 5.3 ng/mL). The direction repeats across four lines at about 1.3-fold up with knockdown and 0.6 to 0.8-fold with overexpression.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supp Fig 3B bars 'oleic acid level (ng/ml)' PLC/PRF/5 Control, shWWOX; MHCC97H Vector, WWOX with asterisks; Supp Fig 3H Huh7 bars Control/shWWOX/shSCD5 combinations.",
+    "anchor": "Supplementary Figure 3B and 3H, read from the embedded TIFF rendered to PNG",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39500530/suppfig3.png",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human HCC cell lines and humanized NOG mice (huPBMC)",
+     "genotype": "shRNA knockdown or lentiviral overexpression of WWOX in HCC lines (no germline Wwox allele)",
+     "treatment": "as stated per panel",
+     "comparator": "vector or control shRNA",
+     "endpoint": "as stated per panel"
+    }
+   },
+   {
+    "proposition": "PANEL READING, Supplementary Figure 6D-G. IHC scores of CD68, CD206 and SCD5 in the inhibitor groups fall from about 2 to about 0.2 in both SCD1/5-IN-1 and Combined, while anti-PD-1 alone leaves all three at about 2.3; NME2 is unchanged. A small-molecule enzyme inhibitor is reported to lower SCD5 protein staining about ten-fold, and anti-PD-1 alone shrinks tumours (Figure 6C) without changing macrophage staining.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supp Fig 6D-G four bar charts of IHC scores for CD68, CD206, SCD5, NME2 across Control, SCD1/5-IN-1, PD-1, Combined with triple asterisks on the first three and NS on NME2.",
+    "anchor": "Supplementary Figure 6D-G, read from the embedded TIFF rendered to PNG",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39500530/suppfig6.png",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human HCC cell lines and humanized NOG mice (huPBMC)",
+     "genotype": "shRNA knockdown or lentiviral overexpression of WWOX in HCC lines (no germline Wwox allele)",
+     "treatment": "as stated per panel",
+     "comparator": "vector or control shRNA",
+     "endpoint": "as stated per panel"
+    }
+   },
+   {
+    "proposition": "The paper has no limitations paragraph; the Discussion states only that the mechanism of WWOX loss in tumours is multifaceted and needs exploration.",
+    "snippet": "Therefore, the mechanism of WWOX deficiency in tumors is multifaceted and still needs to be further explored.",
+    "anchor": "Discussion, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39500530_LiuS2024_PMC.xml",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST search returned inEPMC Y, isOpenAccess Y, license cc by-nc on 2026-10-19; fullTextXML returned HTTP 200 and the declared article_text artefact is that response byte for byte.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a figure or the supplement."
+ }
+}
